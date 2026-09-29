@@ -30,11 +30,11 @@ public class BattleTeam
     public void /*ctor*/(int teamID)
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d915e0);
-        FUN_18132faf0(uVar1,DAT_181d7f8a8);
+        uVar1 = il2cpp_internal(DAT_181d915f8);
+        FUN_181330100(uVar1,DAT_181d7f8c0);
         this.battleUnits = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d915e0);
-        FUN_18132faf0(uVar1,DAT_181d7f8a8);
+        uVar1 = il2cpp_internal(DAT_181d915f8);
+        FUN_181330100(uVar1,DAT_181d7f8c0);
         this.needProtectUnits = uVar1;
         this.teamSpeAddData = new HeroSpeAddData(0);
         ZhSegment.Initialize(this,0);
@@ -47,10 +47,10 @@ public class BattleTeam
     {
         bool cVar1;
         if (this.needProtectUnits != null) {
-          cVar1 = FUN_18181e400(this.needProtectUnits,battleUnit,DAT_181d7fa28);
+          cVar1 = FUN_18181ea10(this.needProtectUnits,battleUnit,DAT_181d7fa40);
           if (!cVar1) {
             if (this.needProtectUnits == null) throw; // [null/range check failed]
-            FUN_18181e0a0(this.needProtectUnits,battleUnit,DAT_181d7f928);
+            FUN_18181e6b0(this.needProtectUnits,battleUnit,DAT_181d7f940);
           }
           if ((battleUnit != null) && (*(int64 *)(battleUnit + 64) != 0)) {
             *(uint8 *)(*(int64 *)(battleUnit + 64) + 0x244) = 1;
@@ -80,17 +80,17 @@ public class BattleTeam
             return;
           }
           if (this.battleUnits != null) {
-            cVar3 = FUN_18181e400(this.battleUnits,battleUnit,DAT_181d7fa28);
+            cVar3 = FUN_18181ea10(this.battleUnits,battleUnit,DAT_181d7fa40);
             if (cVar3) {
               return;
             }
             if (this.battleUnits != null) {
-              FUN_18181e0a0(this.battleUnits,battleUnit,DAT_181d7f928);
+              FUN_18181e6b0(this.battleUnits,battleUnit,DAT_181d7f940);
               lVar2 = *(int64 *)(battleUnit + 64);
               if (lVar2 != null) {
                 if (*(char *)(lVar2 + 0x244) != false) {
                   if (*(int64 *)(lVar2 + 0x2d0) == 0) throw; // [null/range check failed]
-                  FUN_181833d40(*(int64 *)(lVar2 + 0x2d0),0,1,DAT_181d8fb18);
+                  FUN_181834350(*(int64 *)(lVar2 + 0x2d0),0,1,DAT_181d8fb30);
                   BattleTeam.AddNeedProtectUnit(this,battleUnit,0);
                 }
                 *(int64 *)(battleUnit + 88) = this;
@@ -112,7 +112,7 @@ public class BattleTeam
             cVar2 = (**(code **)(*plVar1 + 0x138))(plVar1,this,*(uint64 *)(*plVar1 + 0x140));
             if (cVar2) {
               if (this.battleUnits != null) {
-                FUN_1817eee00(this.battleUnits,battleUnit,DAT_181d7faa0);
+                FUN_1817ef410(this.battleUnits,battleUnit,DAT_181d7fab8);
                 *(uint64 *)(battleUnit + 88) = 0;
                 return;
               }
@@ -187,7 +187,7 @@ public class BattleTeam
             lVar5 = this.battleUnits;
             if (lVar5 == null) throw; // [null/range check failed]
           }
-          FUN_1812f9a10(lVar5,DAT_181d7f9a8);
+          FUN_1812fa020(lVar5,DAT_181d7f9c0);
           return;
         }
     }
@@ -201,14 +201,14 @@ public class BattleTeam
         if (obj != (int64 *)0) {
           lVar1 = *obj;
           in_RAX = 0;
-          if ((*(byte *)(DAT_181db06c8 + 300) <= *(byte *)(lVar1 + 300)) &&
+          if ((*(byte *)(DAT_181db06e0 + 300) <= *(byte *)(lVar1 + 300)) &&
              (in_RAX = *(uint64 *)(lVar1 + 200),
-             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(DAT_181db06c8 + 300) * 8) == DAT_181db06c8)
+             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(DAT_181db06e0 + 300) * 8) == DAT_181db06e0)
              ) {
-            if ((*(byte *)(DAT_181db06c8 + 300) <= *(byte *)(lVar1 + 300)) &&
+            if ((*(byte *)(DAT_181db06e0 + 300) <= *(byte *)(lVar1 + 300)) &&
                (*(int64 *)
-                 (*(int64 *)(lVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db06c8 + 300) * 8) ==
-                DAT_181db06c8)) {
+                 (*(int64 *)(lVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db06e0 + 300) * 8) ==
+                DAT_181db06e0)) {
               return CONCAT71((int7)((uint64)*(int64 *)(lVar1 + 200) >> 8),
                               this.ID == (int)obj[2]);
             }

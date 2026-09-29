@@ -6,19 +6,19 @@
 public class <Start>d__4
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FCA
+    // Token: 0x4001FCB
     private int <>1__state;
 
-    // Token: 0x4001FCB
+    // Token: 0x4001FCC
     private object <>2__current;
 
-    // Token: 0x4001FCC
+    // Token: 0x4001FCD
     public TeleType <>4__this;
 
-    // Token: 0x4001FCD
+    // Token: 0x4001FCE
     private int <totalVisibleCharacters>5__2;
 
-    // Token: 0x4001FCE
+    // Token: 0x4001FCF
     private int <counter>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ public class <Start>d__4
     }
 
     // Token : 0x60024F3
-    // RVA   : 0x8F4BB0   Offset: 0x8F3FB0   Length: 0x29D
+    // RVA   : 0x927850   Offset: 0x926C50   Length: 0x29D
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -87,7 +87,7 @@ public class <Start>d__4
           }
           if (iVar1 == 3) {
             this.<>1__state = 0xffffffff;
-            goto LAB_1808f4db1;
+            goto LAB_180927a51;
           }
           if (iVar1 != 4) {
             return false;
@@ -105,7 +105,7 @@ public class <Start>d__4
             this.<>1__state = 1;
             return true;
           }
-        LAB_1808f4db1:
+        LAB_180927a51:
           this.<counter>5__3 = this.<counter>5__3 + 1;
           uVar6 = new WaitForSeconds(0x3d4ccccd,0);
           this.<>2__current = uVar6;
@@ -122,15 +122,15 @@ public class <Start>d__4
     }
 
     // Token : 0x60024F5
-    // RVA   : 0x8F4E50   Offset: 0x8F4250   Length: 0x3E
+    // RVA   : 0x927AF0   Offset: 0x926EF0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db5fc0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db6170);
     }
 
     // Token : 0x60024F6

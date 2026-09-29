@@ -6,21 +6,21 @@
 public class SkillRangeUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BB4
+    // Token: 0x4001BB5
     public GameObject SkillRangeOneGridPrefab;
 
-    // Token: 0x4001BB5
+    // Token: 0x4001BB6
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001BB6
+    // Token: 0x4001BB7
     private GameObject newObj;
 
-    // Token: 0x4001BB7
+    // Token: 0x4001BB8
     private List<List<int>> findGrid;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600212F
-    // RVA   : 0x988600   Offset: 0x987A00   Length: 0x74A
+    // RVA   : 0x988C90   Offset: 0x988090   Length: 0x74A
     public void RefreshSkillRange(KungfuSkillLvData _targetSkill)
     {
         long lVar1;
@@ -33,12 +33,12 @@ public class SkillRangeUIController
         lVar2 = Component.get_transform(this,0);
         uVar3 = Int32.ToString(local_res8,0);
         if (lVar2 == null) {
-        LAB_180988d39:
+        LAB_1809893c9:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         lVar2 = Transform.Find(lVar2,uVar3,0);
-        if (lVar2 == null) goto LAB_180988d39;
+        if (lVar2 == null) goto LAB_1809893c9;
         lVar2 = Transform.Find(lVar2,"Grid",0);
         if (lVar2 == null) throw; // [null/range check failed]
         uVar3 = Component.get_gameObject(lVar2,0);
@@ -47,12 +47,12 @@ public class SkillRangeUIController
         lVar2 = Component.get_transform(this,0);
         uVar3 = Int32.ToString(local_res8,0);
         if (lVar2 == null) {
-        LAB_180988d3f:
+        LAB_1809893cf:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         lVar2 = Transform.Find(lVar2,uVar3,0);
-        if (lVar2 == null) goto LAB_180988d3f;
+        if (lVar2 == null) goto LAB_1809893cf;
         lVar2 = Transform.Find(lVar2,"Grid",0);
         if (lVar2 == null) throw; // [null/range check failed]
         uVar3 = Component.get_gameObject(lVar2,0);
@@ -61,7 +61,7 @@ public class SkillRangeUIController
         lVar2 = KungfuSkillLvData.DataBase(this.targetSkill,0);
         if (lVar2 == null) throw; // [null/range check failed]
         if (*(int *)(lVar2 + 48) == 0) {
-        LAB_180988ca2:
+        LAB_180989332:
           lVar2 = Component.get_transform(this,0);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"0",0);
@@ -74,7 +74,7 @@ public class SkillRangeUIController
           if (this.targetSkill == null) throw; // [null/range check failed]
           lVar2 = KungfuSkillLvData.DataBase(this.targetSkill,0);
           if (lVar2 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar2 + 48) == 2) goto LAB_180988ca2;
+          if (*(int *)(lVar2 + 48) == 2) goto LAB_180989332;
           if (this.targetSkill == null) throw; // [null/range check failed]
           lVar2 = KungfuSkillLvData.DataBase(this.targetSkill,0);
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 112)) == null) throw; // [null/range check failed]
@@ -84,7 +84,7 @@ public class SkillRangeUIController
           lVar2 = *(int64 *)(*(int64 *)(lVar2 + 16) + 32);
           if (lVar2 == null) throw; // [null/range check failed]
           if (*(int *)(lVar2 + 16) == 4) {
-        LAB_180988ab1:
+        LAB_180989141:
             lVar2 = Component.get_transform(this,0);
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"0",0);
@@ -105,7 +105,7 @@ public class SkillRangeUIController
                           if (lVar2 != null) {
                             lVar2 = Transform.Find(lVar2,"Title",0);
                             if (lVar2 != null) {
-                              uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                               LTLocalization.SetText(uVar3,"作用范围",0);
                               if (this.targetSkill != null) {
                                 lVar2 = KungfuSkillLvData.DataBase(this.targetSkill,0);
@@ -123,7 +123,7 @@ public class SkillRangeUIController
                                         if (lVar2 != null) {
                                           uVar3 = 0;
                                           iVar4 = *(int *)(lVar2 + 24) * 2 + 1;
-                                          goto LAB_180988a9a;
+                                          goto LAB_18098912a;
                                         }
                                       }
                                     }
@@ -133,7 +133,7 @@ public class SkillRangeUIController
                                     if ((lVar2 != null) && (*(int64 *)(lVar2 + 120) != 0)) {
                                       iVar4 = *(int *)(*(int64 *)(lVar2 + 120) + 24) * 2 + 1;
                                       uVar3 = 0;
-        LAB_180988a9a:
+        LAB_18098912a:
                                       SkillRangeUIController.RefreshSkillRangeGrid(this,uVar3,iVar4,0)
                                       ;
                                       return;
@@ -155,7 +155,7 @@ public class SkillRangeUIController
           if (this.targetSkill == null) throw; // [null/range check failed]
           lVar2 = KungfuSkillLvData.DataBase(this.targetSkill,0);
           if ((lVar2 == null) || (*(int64 *)(lVar2 + 120) == 0)) throw; // [null/range check failed]
-          if (*(int *)(*(int64 *)(lVar2 + 120) + 16) == 7) goto LAB_180988ab1;
+          if (*(int *)(*(int64 *)(lVar2 + 120) + 16) == 7) goto LAB_180989141;
           lVar2 = Component.get_transform(this,0);
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"0",0);
@@ -169,7 +169,7 @@ public class SkillRangeUIController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"Title",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
           LTLocalization.SetText(uVar3,"释放范围",0);
           if (this.targetSkill == null) throw; // [null/range check failed]
           lVar2 = KungfuSkillLvData.DataBase(this.targetSkill,0);
@@ -196,7 +196,7 @@ public class SkillRangeUIController
             if ((lVar2 == null) || (*(int64 *)(lVar2 + 120) == 0)) throw; // [null/range check failed]
             iVar4 = *(int *)(*(int64 *)(lVar2 + 120) + 24) * 2 + 1;
             uVar3 = 1;
-            goto LAB_180988a9a;
+            goto LAB_18098912a;
           }
         }
         lVar2 = Component.get_transform(this,0);
@@ -213,7 +213,7 @@ public class SkillRangeUIController
     }
 
     // Token : 0x6002130
-    // RVA   : 0x987BB0   Offset: 0x986FB0   Length: 0x76
+    // RVA   : 0x988240   Offset: 0x987640   Length: 0x76
     public Transform GetGrid(int id)
     {
         long lVar1;
@@ -232,7 +232,7 @@ public class SkillRangeUIController
     }
 
     // Token : 0x6002131
-    // RVA   : 0x987C30   Offset: 0x987030   Length: 0x9C2
+    // RVA   : 0x9882C0   Offset: 0x9876C0   Length: 0x9C2
     public void RefreshSkillRangeGrid(int id, int gridLineNum)
     {
         long lVar1;
@@ -283,7 +283,7 @@ public class SkillRangeUIController
                || (*(int64 *)(lVar4 + 120) == 0)) throw; // [null/range check failed]
             iVar2 = *(int *)(*(int64 *)(lVar4 + 120) + 16);
             if (iVar2 == 4) {
-        LAB_180988085:
+        LAB_180988715:
               uVar18 = 2;
             }
             else if (iVar2 == 5) {
@@ -293,7 +293,7 @@ public class SkillRangeUIController
               uVar18 = 3;
             }
             else {
-              if ((iVar2 == 7) || (iVar2 != 8)) goto LAB_180988085;
+              if ((iVar2 == 7) || (iVar2 != 8)) goto LAB_180988715;
               uVar18 = 5;
             }
             if (((this.targetSkill == null) ||
@@ -354,7 +354,7 @@ public class SkillRangeUIController
                (*(int64 *)(lVar4 + 120) == 0)) throw; // [null/range check failed]
             if (*(int *)(*(int64 *)(lVar4 + 120) + 16) != 7) {
               puVar8 = (uint32 *)Color.get_red(&local_a8,0);
-              goto LAB_1809881fe;
+              goto LAB_18098888e;
             }
             local_b8 = 0;
             uStack_b0 = 0;
@@ -378,7 +378,7 @@ public class SkillRangeUIController
             }
             else {
               puVar8 = (uint32 *)Color.get_green(&local_a8,0);
-        LAB_1809881fe:
+        LAB_18098888e:
               uVar17 = *puVar8;
               uVar18 = puVar8[1];
               uVar19 = puVar8[2];
@@ -428,17 +428,17 @@ public class SkillRangeUIController
         fVar12 = (float)Mathf.Min();
         iVar2 = Mathf.Min((int)(fVar12 / (float)gridLineNum),20);
         lVar4 = SkillRangeUIController.GetGrid(this,id,0);
-        if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) != null) {
+        if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96978)) != null) {
           fVar12 = (float)iVar2;
           lVar4.speEquipData = fVar12;
           lVar4 = SkillRangeUIController.GetGrid(this,id,0);
-          if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) != null) {
+          if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96978)) != null) {
             *(float *)(lVar4 + 44) = fVar12;
             lVar4 = SkillRangeUIController.GetGrid(this,id,0);
-            if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) != null) {
+            if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96978)) != null) {
               lVar4.belongHeroID = gridLineNum;
               lVar4 = SkillRangeUIController.GetGrid(this,id,0);
-              if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) != null) {
+              if ((lVar4 != null) && (lVar4 = Component.GetComponent(lVar4,DAT_181d96978)) != null) {
                 UIGrid.set_repositionNow(lVar4,1,0);
                 iVar2 = iVar11;
                 iVar10 = iVar11;
@@ -446,7 +446,7 @@ public class SkillRangeUIController
                   do {
                     lVar4 = SkillRangeUIController.GetGrid(this,id,0);
                     if (lVar4 == null) {
-        LAB_1809885ed:
+        LAB_180988c7d:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
@@ -456,30 +456,30 @@ public class SkillRangeUIController
                     this.newObj = uVar5;
                     lVar4 = this.newObj;
                     local_c8 = iVar10;
-                    uVar5 = il2cpp_value_box(DAT_181d80418,&local_c8);
+                    uVar5 = il2cpp_value_box(DAT_181d80430,&local_c8);
                     local_c4 = iVar2;
-                    uVar6 = il2cpp_value_box(DAT_181d80418,&local_c4);
+                    uVar6 = il2cpp_value_box(DAT_181d80430,&local_c4);
                     uVar5 = String.Format("{0}_{1}",uVar5,uVar6,0);
-                    if (lVar4 == null) goto LAB_1809885ed;
+                    if (lVar4 == null) goto LAB_180988c7d;
                     Object.set_name(lVar4,uVar5,0);
-                    if (this.newObj == null) goto LAB_1809885ed;
+                    if (this.newObj == null) goto LAB_180988c7d;
                     lVar4 = GameObject.GetComponent(this.newObj,DAT_181d72bc8);
                     local_b8 = CONCAT44(fVar12,fVar12);
-                    if (lVar4 == null) goto LAB_1809885ed;
+                    if (lVar4 == null) goto LAB_180988c7d;
                     RectTransform.set_sizeDelta(lVar4,local_b8,0);
-                    if (this.newObj == null) goto LAB_1809885ed;
+                    if (this.newObj == null) goto LAB_180988c7d;
                     plVar7 = (int64 *)
                              GameObject.GetComponent(this.newObj,DAT_181d71e80);
                     if ((this.findGrid == null) ||
-                       (lVar4 = FUN_180002f80(this.findGrid,iVar10,DAT_181d789a8),
-                       lVar4 == null)) goto LAB_1809885ed;
-                    iVar3 = FUN_1800d6760(lVar4,iVar2,DAT_181d8fa18);
+                       (lVar4 = FUN_180002f80(this.findGrid,iVar10,DAT_181d789c0),
+                       lVar4 == null)) goto LAB_180988c7d;
+                    iVar3 = FUN_1800d6760(lVar4,iVar2,DAT_181d8fa30);
                     if (iVar3 < 1) {
                       if ((iVar2 == local_c0) && (iVar10 == local_c0)) {
-                        puVar8 = (uint32 *)FUN_1810d33f0(local_98,0);
+                        puVar8 = (uint32 *)FUN_1810d3a00(local_98,0);
                       }
                       else {
-                        puVar8 = (uint32 *)FUN_1810d3570(local_88,0);
+                        puVar8 = (uint32 *)FUN_1810d3b80(local_88,0);
                       }
                       uVar13 = *puVar8;
                       uVar14 = puVar8[1];
@@ -488,9 +488,9 @@ public class SkillRangeUIController
                     }
                     else {
                       if ((this.findGrid == null) ||
-                         (lVar4 = FUN_180002f80(this.findGrid,iVar10,DAT_181d789a8),
+                         (lVar4 = FUN_180002f80(this.findGrid,iVar10,DAT_181d789c0),
                          lVar4 == null)) throw; // [null/range check failed]
-                      iVar3 = FUN_1800d6760(lVar4,iVar2,DAT_181d8fa18);
+                      iVar3 = FUN_1800d6760(lVar4,iVar2,DAT_181d8fa30);
                       uVar13 = uVar17;
                       uVar14 = uVar18;
                       uVar15 = uVar19;
@@ -532,10 +532,10 @@ public class SkillRangeUIController
     }
 
     // Token : 0x6002132
-    // RVA   : 0x987B80   Offset: 0x986F80   Length: 0x2F
+    // RVA   : 0x988210   Offset: 0x987610   Length: 0x2F
     public int GetDirectionDamageType(DamageRangeType damageRangeType)
     {
-        uint32 FUN_180987b80(uint64 this,int damageRangeType)
+        uint32 FUN_180988210(uint64 this,int damageRangeType)
         {
         if (damageRangeType != 4) {
           if (damageRangeType == 5) {
@@ -552,7 +552,7 @@ public class SkillRangeUIController
     }
 
     // Token : 0x6002133
-    // RVA   : 0x987350   Offset: 0x986750   Length: 0x818
+    // RVA   : 0x9879E0   Offset: 0x986DE0   Length: 0x818
     public List<List<int>> FindRangeGrids(int type, int gridLineNum, int minRange, int maxRange, bool direction)
     {
         int64 SkillRangeUIController.FindRangeGrids
@@ -573,20 +573,20 @@ public class SkillRangeUIController
         uint32 uVar12;
         uint64 uVar13;
         uVar13 = (uint64)minRange;
-        lVar5 = il2cpp_internal(DAT_181d90160);
-        FUN_18132faf0(lVar5,DAT_181d787a8);
+        lVar5 = il2cpp_internal(DAT_181d90178);
+        FUN_181330100(lVar5,DAT_181d787c0);
         iVar11 = 0;
         if (0 < gridLineNum) {
           do {
-            uVar6 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(uVar6,DAT_181d8f098);
-            if (lVar5 == null) goto LAB_180987b5f;
-            FUN_18181e0a0(lVar5,uVar6,DAT_181d78828);
+            uVar6 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(uVar6,DAT_181d8f0b0);
+            if (lVar5 == null) goto LAB_1809881ef;
+            FUN_18181e6b0(lVar5,uVar6,DAT_181d78840);
             iVar9 = 0;
             do {
-              lVar7 = FUN_180002f80(lVar5,*(int *)(lVar5 + 24) + -1,DAT_181d789a8);
-              if (lVar7 == null) goto LAB_180987b5f;
-              FUN_18182a0b0(lVar7,0,DAT_181d8f218);
+              lVar7 = FUN_180002f80(lVar5,*(int *)(lVar5 + 24) + -1,DAT_181d789c0);
+              if (lVar7 == null) goto LAB_1809881ef;
+              FUN_18182a6c0(lVar7,0,DAT_181d8f230);
               iVar9 = iVar9 + 1;
             } while (iVar9 < gridLineNum);
             iVar11 = iVar11 + 1;
@@ -603,9 +603,9 @@ public class SkillRangeUIController
                 iVar10 = Mathf.Abs(-uVar1 + iVar9,0);
                 iVar2 = Mathf.Abs(-uVar1 + iVar11);
                 if ((minRange <= iVar2 + iVar10) && (iVar2 + iVar10 <= maxRange)) {
-                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789a8)) == null)
-                  goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar9,1,DAT_181d8fb18);
+                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789c0)) == null)
+                  goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar9,1,DAT_181d8fb30);
                 }
                 iVar9 = iVar9 + 1;
               } while (iVar9 < gridLineNum);
@@ -623,9 +623,9 @@ public class SkillRangeUIController
                 uVar4 = Mathf.Abs(-uVar1 + iVar11,0);
                 iVar10 = Mathf.Max(uVar3,uVar4,0);
                 if ((minRange <= iVar10) && (iVar10 <= maxRange)) {
-                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789a8)) == null)
-                  goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar9,1,DAT_181d8fb18);
+                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789c0)) == null)
+                  goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar9,1,DAT_181d8fb30);
                 }
                 iVar9 = iVar9 + 1;
               } while (iVar9 < gridLineNum);
@@ -638,7 +638,7 @@ public class SkillRangeUIController
             minRange = uVar1 - minRange;
             do {
               if (lVar5 == null) {
-        LAB_180987b5f:
+        LAB_1809881ef:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -646,19 +646,19 @@ public class SkillRangeUIController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar7 = lVar5[uVar1];
-              if (lVar7 == null) goto LAB_180987b5f;
+              if (lVar7 == null) goto LAB_1809881ef;
               iVar11 = (int)uVar13;
-              FUN_181833d40(lVar7,iVar11 + uVar1,direction + 1,DAT_181d8fb18);
+              FUN_181834350(lVar7,iVar11 + uVar1,direction + 1,DAT_181d8fb30);
               if (0 < iVar11) {
-                lVar7 = FUN_180002f80(lVar5,iVar11 + uVar1,DAT_181d789a8);
-                if (lVar7 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar7,uVar1,1,DAT_181d8fb18);
-                lVar7 = FUN_180002f80(lVar5,minRange,DAT_181d789a8);
-                if (lVar7 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar7,uVar1,1,DAT_181d8fb18);
-                lVar7 = FUN_180002f80(lVar5,uVar1,DAT_181d789a8);
-                if (lVar7 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar7,minRange,1,DAT_181d8fb18);
+                lVar7 = FUN_180002f80(lVar5,iVar11 + uVar1,DAT_181d789c0);
+                if (lVar7 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar7,uVar1,1,DAT_181d8fb30);
+                lVar7 = FUN_180002f80(lVar5,minRange,DAT_181d789c0);
+                if (lVar7 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar7,uVar1,1,DAT_181d8fb30);
+                lVar7 = FUN_180002f80(lVar5,uVar1,DAT_181d789c0);
+                if (lVar7 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar7,minRange,1,DAT_181d8fb30);
               }
               uVar13 = (uint64)(iVar11 + 1U);
               minRange = minRange + -1;
@@ -671,23 +671,23 @@ public class SkillRangeUIController
             uVar12 = uVar1 - minRange;
             lVar7 = ((int64)(int)uVar1 - uVar13) * 8 + 32;
             do {
-              if (lVar5 == null) goto LAB_180987b5f;
+              if (lVar5 == null) goto LAB_1809881ef;
               if (*(uint32 *)(lVar5 + 24) <= uVar12) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar8 = *(int64 *)(lVar7 + *(int64 *)(lVar5 + 16));
-              if (lVar8 == null) goto LAB_180987b5f;
-              FUN_181833d40(lVar8,iVar11,direction + 1,DAT_181d8fb18);
+              if (lVar8 == null) goto LAB_1809881ef;
+              FUN_181834350(lVar8,iVar11,direction + 1,DAT_181d8fb30);
               if (0 < (int)(iVar11 + -uVar1)) {
-                lVar8 = FUN_180002f80(lVar5,uVar12,DAT_181d789a8);
-                if (lVar8 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar8,uVar12,1,DAT_181d8fb18);
-                lVar8 = FUN_180002f80(lVar5,iVar11,DAT_181d789a8);
-                if (lVar8 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar8,iVar11,1,DAT_181d8fb18);
-                lVar8 = FUN_180002f80(lVar5,iVar11,DAT_181d789a8);
-                if (lVar8 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar8,uVar12,1,DAT_181d8fb18);
+                lVar8 = FUN_180002f80(lVar5,uVar12,DAT_181d789c0);
+                if (lVar8 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar8,uVar12,1,DAT_181d8fb30);
+                lVar8 = FUN_180002f80(lVar5,iVar11,DAT_181d789c0);
+                if (lVar8 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar8,iVar11,1,DAT_181d8fb30);
+                lVar8 = FUN_180002f80(lVar5,iVar11,DAT_181d789c0);
+                if (lVar8 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar8,uVar12,1,DAT_181d8fb30);
               }
               iVar11 = iVar11 + 1;
               uVar12 = uVar12 - 1;
@@ -704,18 +704,18 @@ public class SkillRangeUIController
                 iVar10 = minRange + uVar1;
                 iVar9 = minRange;
                 do {
-                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789a8)) == null)
-                  goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar11,direction + 1,DAT_181d8fb18);
-                  lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789a8);
-                  if (lVar7 == null) goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,minRange + uVar1 + -1,1,DAT_181d8fb18);
-                  lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789a8);
-                  if (lVar7 == null) goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar10,1,DAT_181d8fb18);
-                  lVar7 = FUN_180002f80(lVar5,minRange + uVar1 + -1,DAT_181d789a8);
-                  if (lVar7 == null) goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar10,1,DAT_181d8fb18);
+                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789c0)) == null)
+                  goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar11,direction + 1,DAT_181d8fb30);
+                  lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789c0);
+                  if (lVar7 == null) goto LAB_1809881ef;
+                  FUN_181834350(lVar7,minRange + uVar1 + -1,1,DAT_181d8fb30);
+                  lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789c0);
+                  if (lVar7 == null) goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar10,1,DAT_181d8fb30);
+                  lVar7 = FUN_180002f80(lVar5,minRange + uVar1 + -1,DAT_181d789c0);
+                  if (lVar7 == null) goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar10,1,DAT_181d8fb30);
                   iVar9 = iVar9 + 1;
                   iVar10 = iVar10 + 1;
                 } while (iVar9 <= (int)((-1 - uVar1) + iVar11));
@@ -734,34 +734,34 @@ public class SkillRangeUIController
             do {
               iVar9 = (int)uVar13;
               if ((iVar9 == 1) || (iVar9 == maxRange)) {
-                if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,uVar1,DAT_181d789a8)) == null)
-                goto LAB_180987b5f;
-                FUN_181833d40(lVar7,iVar11,direction + 1,DAT_181d8fb18);
-                lVar7 = FUN_180002f80(lVar5,uVar1,DAT_181d789a8);
-                if (lVar7 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar7,minRange,1,DAT_181d8fb18);
-                lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789a8);
-                if (lVar7 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar7,uVar1,1,DAT_181d8fb18);
-                lVar7 = FUN_180002f80(lVar5,minRange,DAT_181d789a8);
-                if (lVar7 == null) goto LAB_180987b5f;
-                FUN_181833d40(lVar7,uVar1,1,DAT_181d8fb18);
+                if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,uVar1,DAT_181d789c0)) == null)
+                goto LAB_1809881ef;
+                FUN_181834350(lVar7,iVar11,direction + 1,DAT_181d8fb30);
+                lVar7 = FUN_180002f80(lVar5,uVar1,DAT_181d789c0);
+                if (lVar7 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar7,minRange,1,DAT_181d8fb30);
+                lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789c0);
+                if (lVar7 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar7,uVar1,1,DAT_181d8fb30);
+                lVar7 = FUN_180002f80(lVar5,minRange,DAT_181d789c0);
+                if (lVar7 == null) goto LAB_1809881ef;
+                FUN_181834350(lVar7,uVar1,1,DAT_181d8fb30);
               }
               else {
                 iVar10 = uVar1 - 1;
                 do {
-                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789a8)) == null)
-                  goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar11,direction + 1,DAT_181d8fb18);
-                  lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789a8);
-                  if (lVar7 == null) goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,minRange,1,DAT_181d8fb18);
-                  lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789a8);
-                  if (lVar7 == null) goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar10,1,DAT_181d8fb18);
-                  lVar7 = FUN_180002f80(lVar5,minRange,DAT_181d789a8);
-                  if (lVar7 == null) goto LAB_180987b5f;
-                  FUN_181833d40(lVar7,iVar10,1,DAT_181d8fb18);
+                  if ((lVar5 == null) || (lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789c0)) == null)
+                  goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar11,direction + 1,DAT_181d8fb30);
+                  lVar7 = FUN_180002f80(lVar5,iVar10,DAT_181d789c0);
+                  if (lVar7 == null) goto LAB_1809881ef;
+                  FUN_181834350(lVar7,minRange,1,DAT_181d8fb30);
+                  lVar7 = FUN_180002f80(lVar5,iVar11,DAT_181d789c0);
+                  if (lVar7 == null) goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar10,1,DAT_181d8fb30);
+                  lVar7 = FUN_180002f80(lVar5,minRange,DAT_181d789c0);
+                  if (lVar7 == null) goto LAB_1809881ef;
+                  FUN_181834350(lVar7,iVar10,1,DAT_181d8fb30);
                   iVar10 = iVar10 + 1;
                 } while ((int)(iVar10 - uVar1) < 2);
               }

@@ -7,7 +7,7 @@ public class SpeEffectController
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600214F
-    // RVA   : 0x98E730   Offset: 0x98DB30   Length: 0xDB
+    // RVA   : 0x98EDC0   Offset: 0x98E1C0   Length: 0xDB
     public void SmoothStart()
     {
         int iVar1;
@@ -24,7 +24,7 @@ public class SpeEffectController
           }
           lVar2 = Component.get_transform(this,0);
           if (((lVar2 == null) || (lVar2 = Transform.GetChild(lVar2,iVar3,0)) == null) ||
-             (lVar2 = Component.GetComponent(lVar2,DAT_181d94b60)) == null) break;
+             (lVar2 = Component.GetComponent(lVar2,DAT_181d94b78)) == null) break;
           local_res18[0] = FUN_1804651e0(lVar2,0);
           FUN_180464730(local_res18);
           iVar3 = iVar3 + 1;
@@ -33,7 +33,7 @@ public class SpeEffectController
     }
 
     // Token : 0x6002150
-    // RVA   : 0x98E650   Offset: 0x98DA50   Length: 0xDB
+    // RVA   : 0x98ECE0   Offset: 0x98E0E0   Length: 0xDB
     public void SmoothEnd()
     {
         int iVar1;

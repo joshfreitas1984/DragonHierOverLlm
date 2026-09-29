@@ -20,15 +20,15 @@ public class FightMatchCouple
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600145B
-    // RVA   : 0xB2D600   Offset: 0xB2CA00   Length: 0xAA
+    // RVA   : 0xB2DCC0   Offset: 0xB2D0C0   Length: 0xAA
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(uVar1,DAT_181d8b418);
+        uVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(uVar1,DAT_181d8b430);
         this.heroList0 = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(uVar1,DAT_181d8b418);
+        uVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(uVar1,DAT_181d8b430);
         this.heroList1 = uVar1;
         this.winTeam = 0xffffffff;
         ZhSegment.Initialize(this,0);
@@ -37,15 +37,15 @@ public class FightMatchCouple
     }
 
     // Token : 0x600145C
-    // RVA   : 0xB2D6B0   Offset: 0xB2CAB0   Length: 0x10F
+    // RVA   : 0xB2DD70   Offset: 0xB2D170   Length: 0x10F
     public void /*ctor*/(HeroData hero0, HeroData hero1)
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(uVar1,DAT_181d8b418);
+        uVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(uVar1,DAT_181d8b430);
         this.heroList0 = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(uVar1,DAT_181d8b418);
+        uVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(uVar1,DAT_181d8b430);
         this.heroList1 = uVar1;
         this.winTeam = 0xffffffff;
         ZhSegment.Initialize(this,0);
@@ -54,15 +54,15 @@ public class FightMatchCouple
     }
 
     // Token : 0x600145D
-    // RVA   : 0xB2D510   Offset: 0xB2C910   Length: 0xEE
+    // RVA   : 0xB2DBD0   Offset: 0xB2CFD0   Length: 0xEE
     public void /*ctor*/(List<HeroData> _heroLise0, List<HeroData> _heroLise1)
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(uVar1,DAT_181d8b418);
+        uVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(uVar1,DAT_181d8b430);
         this.heroList0 = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(uVar1,DAT_181d8b418);
+        uVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(uVar1,DAT_181d8b430);
         this.heroList1 = uVar1;
         this.winTeam = 0xffffffff;
         ZhSegment.Initialize(this,0);

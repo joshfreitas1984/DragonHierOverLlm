@@ -20,18 +20,18 @@ public class MartialClubDataBase
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000ECE
-    // RVA   : 0xA8D940   Offset: 0xA8CD40   Length: 0x76
+    // RVA   : 0xA8E000   Offset: 0xA8D400   Length: 0x76
     public void /*ctor*/()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(uVar1,DAT_181d8f098);
+        uVar1 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(uVar1,DAT_181d8f0b0);
         this.skillID = uVar1;
     }
 
     // Token : 0x6000ECF
-    // RVA   : 0xA8D790   Offset: 0xA8CB90   Length: 0x1A7
+    // RVA   : 0xA8DE50   Offset: 0xA8D250   Length: 0x1A7
     public static MartialClubDataBase FindMartialClub(string areaName)
     {
         bool cVar1;
@@ -47,15 +47,15 @@ public class MartialClubDataBase
           }
           lVar2 = FUN_18046c100(0);
           if ((lVar2 == null) || (*(int64 *)(lVar2 + 0x1d0) == 0)) throw; // [null/range check failed]
-          lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x1d0),iVar4,DAT_181d93988);
+          lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x1d0),iVar4,DAT_181d939a0);
           if (lVar2 == null) throw; // [null/range check failed]
-          cVar1 = FUN_18171e540(*(uint64 *)(lVar2 + 24),areaName,0);
+          cVar1 = FUN_18171eb50(*(uint64 *)(lVar2 + 24),areaName,0);
           if (cVar1) break;
           iVar4 = iVar4 + 1;
         }
         lVar2 = FUN_18046c100(0);
         if ((lVar2 != null) && (*(int64 *)(lVar2 + 0x1d0) != 0)) {
-          uVar3 = FUN_180002f80(*(int64 *)(lVar2 + 0x1d0),iVar4,DAT_181d93988);
+          uVar3 = FUN_180002f80(*(int64 *)(lVar2 + 0x1d0),iVar4,DAT_181d939a0);
           return uVar3;
         }
     }

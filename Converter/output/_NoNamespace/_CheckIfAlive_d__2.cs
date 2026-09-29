@@ -6,13 +6,13 @@
 public class <CheckIfAlive>d__2
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E3D
+    // Token: 0x4001E3E
     private int <>1__state;
 
-    // Token: 0x4001E3E
+    // Token: 0x4001E3F
     private object <>2__current;
 
-    // Token: 0x4001E3F
+    // Token: 0x4001E40
     public CFX_AutoDestructShuriken <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,7 +31,7 @@ public class <CheckIfAlive>d__2
     }
 
     // Token : 0x60023E6
-    // RVA   : 0x92DF60   Offset: 0x92D360   Length: 0x14C
+    // RVA   : 0x92E5C0   Offset: 0x92D9C0   Length: 0x14C
     private virtual bool MoveNext()
     {
         bool cVar1;
@@ -44,9 +44,9 @@ public class <CheckIfAlive>d__2
             return false;
           }
           this.<>1__state = 0xffffffff;
-          if ((lVar4 != null) && (lVar2 = Component.GetComponent(lVar4,DAT_181d94b60)) != null) {
+          if ((lVar4 != null) && (lVar2 = Component.GetComponent(lVar4,DAT_181d94b78)) != null) {
             cVar1 = ParticleSystem.IsAlive(lVar2,1,0);
-            if (cVar1) goto LAB_18092dff7;
+            if (cVar1) goto LAB_18092e657;
             if (*(char *)(lVar4 + 24) == false) {
               uVar3 = Component.get_gameObject(lVar4);
               Object.Destroy(uVar3,0);
@@ -62,7 +62,7 @@ public class <CheckIfAlive>d__2
           FUN_1800d6620();
         }
         this.<>1__state = 0xffffffff;
-        LAB_18092dff7:
+        LAB_18092e657:
         uVar3 = new WaitForSeconds(0x3f000000,0);
         this.<>2__current = uVar3;
         this.<>1__state = 1;
@@ -77,15 +77,15 @@ public class <CheckIfAlive>d__2
     }
 
     // Token : 0x60023E8
-    // RVA   : 0x92E0B0   Offset: 0x92D4B0   Length: 0x3E
+    // RVA   : 0x92E710   Offset: 0x92DB10   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d98bb8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d98d50);
     }
 
     // Token : 0x60023E9

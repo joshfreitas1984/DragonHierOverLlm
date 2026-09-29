@@ -6,13 +6,13 @@
 public class SaveLoadType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B3E
+    // Token: 0x4001B3F
     public int value__;
 
-    // Token: 0x4001B3F
+    // Token: 0x4001B40
     public const SaveLoadType Save;
 
-    // Token: 0x4001B40
+    // Token: 0x4001B41
     public const SaveLoadType Load;
 
 }

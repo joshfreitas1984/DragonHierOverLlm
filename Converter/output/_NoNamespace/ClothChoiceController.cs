@@ -14,7 +14,7 @@ public class ClothChoiceController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001326
-    // RVA   : 0x99EC80   Offset: 0x99E080   Length: 0x54
+    // RVA   : 0x99F310   Offset: 0x99E710   Length: 0x54
     public void OnClick()
     {
         var pStatics = *(int64*)(DAT_181d75f40 + 184);

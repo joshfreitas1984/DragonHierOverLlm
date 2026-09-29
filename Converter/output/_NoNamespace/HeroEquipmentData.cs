@@ -56,7 +56,7 @@ public class HeroEquipmentData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001230
-    // RVA   : 0xAF23C0   Offset: 0xAF17C0   Length: 0x1CF
+    // RVA   : 0xAF2A80   Offset: 0xAF1E80   Length: 0x1CF
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -67,30 +67,30 @@ public class HeroEquipmentData
         this.maxShoesCount = 1;
         this.maxDecorationCount = 2;
         ZhSegment.Initialize(this,0);
-        uVar1 = FUN_1800d60b0(DAT_181da3920,this.maxWeaponCount);
-        uVar2 = il2cpp_internal(DAT_181d940d0);
-        FUN_181827480(uVar2,uVar1,DAT_181d90a18);
+        uVar1 = FUN_1800d60b0(DAT_181da3938,this.maxWeaponCount);
+        uVar2 = il2cpp_internal(DAT_181d940e8);
+        FUN_181827a90(uVar2,uVar1,DAT_181d90a30);
         this.weapon = uVar2;
-        uVar1 = FUN_1800d60b0(DAT_181da3920,this.maxArmorCount);
-        uVar2 = il2cpp_internal(DAT_181d940d0);
-        FUN_181827480(uVar2,uVar1,DAT_181d90a18);
+        uVar1 = FUN_1800d60b0(DAT_181da3938,this.maxArmorCount);
+        uVar2 = il2cpp_internal(DAT_181d940e8);
+        FUN_181827a90(uVar2,uVar1,DAT_181d90a30);
         this.armor = uVar2;
-        uVar1 = FUN_1800d60b0(DAT_181da3920,this.maxHelmetCount);
-        uVar2 = il2cpp_internal(DAT_181d940d0);
-        FUN_181827480(uVar2,uVar1,DAT_181d90a18);
+        uVar1 = FUN_1800d60b0(DAT_181da3938,this.maxHelmetCount);
+        uVar2 = il2cpp_internal(DAT_181d940e8);
+        FUN_181827a90(uVar2,uVar1,DAT_181d90a30);
         this.helmet = uVar2;
-        uVar1 = FUN_1800d60b0(DAT_181da3920,this.maxShoesCount);
-        uVar2 = il2cpp_internal(DAT_181d940d0);
-        FUN_181827480(uVar2,uVar1,DAT_181d90a18);
+        uVar1 = FUN_1800d60b0(DAT_181da3938,this.maxShoesCount);
+        uVar2 = il2cpp_internal(DAT_181d940e8);
+        FUN_181827a90(uVar2,uVar1,DAT_181d90a30);
         this.shoes = uVar2;
-        uVar1 = FUN_1800d60b0(DAT_181da3920,this.maxDecorationCount);
-        uVar2 = il2cpp_internal(DAT_181d940d0);
-        FUN_181827480(uVar2,uVar1,DAT_181d90a18);
+        uVar1 = FUN_1800d60b0(DAT_181da3938,this.maxDecorationCount);
+        uVar2 = il2cpp_internal(DAT_181d940e8);
+        FUN_181827a90(uVar2,uVar1,DAT_181d90a30);
         this.decoration = uVar2;
     }
 
     // Token : 0x6001231
-    // RVA   : 0xAF20A0   Offset: 0xAF14A0   Length: 0x319
+    // RVA   : 0xAF2760   Offset: 0xAF1B60   Length: 0x319
     public void RecountEquipWeight()
     {
         float fVar1;
@@ -114,7 +114,7 @@ public class HeroEquipmentData
             if (*(int64 *)(lVar5 + lVar2._items) != 0) {
               fVar1 = this.equipmentWeight;
               if ((this.weapon == null) ||
-                 (lVar2 = FUN_180002f80(this.weapon,uVar4,DAT_181d90f18)) == null)
+                 (lVar2 = FUN_180002f80(this.weapon,uVar4,DAT_181d90f30)) == null)
               throw; // [null/range check failed]
               this.equipmentWeight = fVar1 + *(float *)(lVar2 + 68);
             }
@@ -127,17 +127,17 @@ public class HeroEquipmentData
           if (lVar2 != null) {
             lVar5 = 32;
             uVar4 = uVar3;
-            goto LAB_180af2197;
+            goto LAB_180af2857;
           }
         }
         throw; // [null/range check failed]
-        LAB_180af2197:
+        LAB_180af2857:
         if (lVar2.Count <= (int)uVar4) {
           lVar2 = this.helmet;
           if (lVar2 != null) {
             lVar5 = 32;
             uVar4 = uVar3;
-            goto LAB_180af2220;
+            goto LAB_180af28e0;
           }
           throw; // [null/range check failed]
         }
@@ -148,7 +148,7 @@ public class HeroEquipmentData
         if (*(int64 *)(lVar5 + lVar2._items) != 0) {
           fVar1 = this.equipmentWeight;
           if ((this.armor == null) ||
-             (lVar2 = FUN_180002f80(this.armor,uVar4,DAT_181d90f18)) == null)
+             (lVar2 = FUN_180002f80(this.armor,uVar4,DAT_181d90f30)) == null)
           throw; // [null/range check failed]
           this.equipmentWeight = fVar1 + *(float *)(lVar2 + 68);
         }
@@ -156,14 +156,14 @@ public class HeroEquipmentData
         uVar4 = uVar4 + 1;
         lVar5 = lVar5 + 8;
         if (lVar2 == null) throw; // [null/range check failed]
-        goto LAB_180af2197;
-        LAB_180af2220:
+        goto LAB_180af2857;
+        LAB_180af28e0:
         if (lVar2.Count <= (int)uVar4) {
           lVar2 = this.shoes;
           if (lVar2 != null) {
             lVar5 = 32;
             uVar4 = uVar3;
-            goto LAB_180af22a7;
+            goto LAB_180af2967;
           }
           throw; // [null/range check failed]
         }
@@ -174,7 +174,7 @@ public class HeroEquipmentData
         if (*(int64 *)(lVar5 + lVar2._items) != 0) {
           fVar1 = this.equipmentWeight;
           if ((this.helmet == null) ||
-             (lVar2 = FUN_180002f80(this.helmet,uVar4,DAT_181d90f18)) == null)
+             (lVar2 = FUN_180002f80(this.helmet,uVar4,DAT_181d90f30)) == null)
           throw; // [null/range check failed]
           this.equipmentWeight = fVar1 + *(float *)(lVar2 + 68);
         }
@@ -182,11 +182,11 @@ public class HeroEquipmentData
         uVar4 = uVar4 + 1;
         lVar5 = lVar5 + 8;
         if (lVar2 == null) throw; // [null/range check failed]
-        goto LAB_180af2220;
-        LAB_180af22a7:
+        goto LAB_180af28e0;
+        LAB_180af2967:
         if (lVar2.Count <= (int)uVar4) {
           lVar2 = this.decoration;
-          if (lVar2 != null) goto LAB_180af2330;
+          if (lVar2 != null) goto LAB_180af29f0;
           throw; // [null/range check failed]
         }
         if (lVar2 == null) throw; // [null/range check failed]
@@ -196,7 +196,7 @@ public class HeroEquipmentData
         if (*(int64 *)(lVar5 + lVar2._items) != 0) {
           fVar1 = this.equipmentWeight;
           if ((this.shoes == null) ||
-             (lVar2 = FUN_180002f80(this.shoes,uVar4,DAT_181d90f18)) == null)
+             (lVar2 = FUN_180002f80(this.shoes,uVar4,DAT_181d90f30)) == null)
           throw; // [null/range check failed]
           this.equipmentWeight = fVar1 + *(float *)(lVar2 + 68);
         }
@@ -204,7 +204,7 @@ public class HeroEquipmentData
         uVar4 = uVar4 + 1;
         lVar5 = lVar5 + 8;
         if (lVar2 == null) throw; // [null/range check failed]
-        goto LAB_180af22a7;
+        goto LAB_180af2967;
         while( true ) {
           if (lVar2.Count <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -212,7 +212,7 @@ public class HeroEquipmentData
           if (*(int64 *)(lVar6 + lVar2._items) != 0) {
             fVar1 = this.equipmentWeight;
             if ((this.decoration == null) ||
-               (lVar2 = FUN_180002f80(this.decoration,uVar3,DAT_181d90f18)) == null)
+               (lVar2 = FUN_180002f80(this.decoration,uVar3,DAT_181d90f30)) == null)
             break;
             this.equipmentWeight = fVar1 + *(float *)(lVar2 + 68);
           }
@@ -220,7 +220,7 @@ public class HeroEquipmentData
           uVar3 = uVar3 + 1;
           lVar6 = lVar6 + 8;
           if (lVar2 == null) break;
-        LAB_180af2330:
+        LAB_180af29f0:
           if (lVar2.Count <= (int)uVar3) {
             return;
           }
@@ -229,7 +229,7 @@ public class HeroEquipmentData
     }
 
     // Token : 0x6001232
-    // RVA   : 0xAF1E80   Offset: 0xAF1280   Length: 0x21D
+    // RVA   : 0xAF2540   Offset: 0xAF1940   Length: 0x21D
     public bool HaveEmptyEquipment()
     {
         ulong uVar1;
@@ -250,7 +250,7 @@ public class HeroEquipmentData
               if (lVar2 != null) {
                 lVar3 = 32;
                 uVar4 = uVar5;
-                goto LAB_180af1f40;
+                goto LAB_180af2600;
               }
               break;
             }
@@ -259,7 +259,7 @@ public class HeroEquipmentData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar2 = lVar2._items;
-            if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af207a;
+            if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af273a;
             lVar2 = this.weapon;
             uVar4 = uVar4 + 1;
             lVar3 = lVar3 + 8;
@@ -272,18 +272,18 @@ public class HeroEquipmentData
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items;
-          if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af207a;
+          if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af273a;
           lVar2 = this.armor;
           uVar4 = uVar4 + 1;
           lVar3 = lVar3 + 8;
           if (lVar2 == null) break;
-        LAB_180af1f40:
+        LAB_180af2600:
           if (lVar2.Count <= (int)uVar4) {
             lVar2 = this.helmet;
             if (lVar2 != null) {
               lVar3 = 32;
               uVar4 = uVar5;
-              goto LAB_180af1f98;
+              goto LAB_180af2658;
             }
             break;
           }
@@ -295,24 +295,24 @@ public class HeroEquipmentData
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items;
-          if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af207a;
+          if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af273a;
           lVar2 = this.helmet;
           uVar4 = uVar4 + 1;
           lVar3 = lVar3 + 8;
           if (lVar2 == null) break;
-        LAB_180af1f98:
+        LAB_180af2658:
           if (lVar2.Count <= (int)uVar4) {
             lVar2 = this.shoes;
             if (lVar2 != null) {
               lVar3 = 32;
               uVar4 = uVar5;
-              goto LAB_180af1ff0;
+              goto LAB_180af26b0;
             }
             break;
           }
         }
         throw; // [null/range check failed]
-        joined_r0x000180af2036:
+        joined_r0x000180af26f6:
         if (uVar1 == 0) throw; // [null/range check failed]
         if (uVar1.Count <= (int)uVar5) {
           return uVar1 & 0xffffffffffffff00;
@@ -323,34 +323,34 @@ public class HeroEquipmentData
         }
         lVar2 = uVar1._items;
         if (*(int64 *)(lVar6 + lVar2) == 0) {
-        LAB_180af207a:
+        LAB_180af273a:
           return CONCAT71((int7)((uint64)lVar2 >> 8),1);
         }
         uVar1 = this.decoration;
         uVar5 = uVar5 + 1;
         lVar6 = lVar6 + 8;
-        goto joined_r0x000180af2036;
+        goto joined_r0x000180af26f6;
         while( true ) {
           if (lVar2.Count <= uVar4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = lVar2._items;
-          if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af207a;
+          if (*(int64 *)(lVar2 + lVar3) == 0) goto LAB_180af273a;
           lVar2 = this.shoes;
           uVar4 = uVar4 + 1;
           lVar3 = lVar3 + 8;
           if (lVar2 == null) break;
-        LAB_180af1ff0:
+        LAB_180af26b0:
           if (lVar2.Count <= (int)uVar4) {
             uVar1 = this.decoration;
-            goto joined_r0x000180af2036;
+            goto joined_r0x000180af26f6;
           }
           if (lVar2 == null) break;
         }
     }
 
     // Token : 0x6001233
-    // RVA   : 0xAF1D00   Offset: 0xAF1100   Length: 0x175
+    // RVA   : 0xAF23C0   Offset: 0xAF17C0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -361,13 +361,13 @@ public class HeroEquipmentData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -379,7 +379,7 @@ public class HeroEquipmentData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

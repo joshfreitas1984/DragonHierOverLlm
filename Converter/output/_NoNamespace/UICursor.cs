@@ -26,25 +26,25 @@ public class UICursor
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000021
-    // RVA   : 0x12B12A0   Offset: 0x12B06A0   Length: 0x43
+    // RVA   : 0x12B18B0   Offset: 0x12B0CB0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181daf7f8 + 184);
+        puVar1 = *(uint64 **)(DAT_181daf810 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6000022
-    // RVA   : 0x12B1560   Offset: 0x12B0960   Length: 0x40
+    // RVA   : 0x12B1B70   Offset: 0x12B0F70   Length: 0x40
     private void OnDestroy()
     {
-        puVar1 = *(uint64 **)(DAT_181daf7f8 + 184);
+        puVar1 = *(uint64 **)(DAT_181daf810 + 184);
         *puVar1 = 0;
         il2cpp_internal(puVar1,0);
     }
 
     // Token : 0x6000023
-    // RVA   : 0x12B1730   Offset: 0x12B0B30   Length: 0x1B2
+    // RVA   : 0x12B1D40   Offset: 0x12B1140   Length: 0x1B2
     private void Start()
     {
         bool cVar1;
@@ -53,7 +53,7 @@ public class UICursor
         long lVar4;
         uVar3 = Component.get_transform(this,0);
         this.mTrans = uVar3;
-        uVar3 = Component.GetComponentInChildren(this,DAT_181d97760);
+        uVar3 = Component.GetComponentInChildren(this,DAT_181d97778);
         this.mSprite = uVar3;
         uVar3 = this.uiCamera;
         cVar1 = Object.op_Equality(uVar3,0,0);
@@ -87,7 +87,7 @@ public class UICursor
     }
 
     // Token : 0x6000024
-    // RVA   : 0x12B18F0   Offset: 0x12B0CF0   Length: 0x21D
+    // RVA   : 0x12B1F00   Offset: 0x12B1300   Length: 0x21D
     private void Update()
     {
         ulong uVar1;
@@ -153,16 +153,16 @@ public class UICursor
     }
 
     // Token : 0x6000025
-    // RVA   : 0x12B12F0   Offset: 0x12B06F0   Length: 0x266
+    // RVA   : 0x12B1900   Offset: 0x12B0D00   Length: 0x266
     public static void Clear()
     {
-        var pStatics = *(int64*)(DAT_181daf7f8 + 184);
+        var pStatics = *(int64*)(DAT_181daf810 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         bool cVar6;
-        uVar1 = **(uint64 **)(DAT_181daf7f8 + 184);
+        uVar1 = **(uint64 **)(DAT_181daf810 + 184);
         cVar6 = Object.op_Inequality(uVar1,0,0);
         if (!cVar6) {
           return;
@@ -177,7 +177,7 @@ public class UICursor
           if (lVar2 != null) {
             uVar1 = *(uint64 *)(lVar2 + 48);
             uVar3 = *(uint64 *)(lVar2 + 56);
-            uVar4 = **(uint64 **)(DAT_181daf7f8 + 184);
+            uVar4 = **(uint64 **)(DAT_181daf810 + 184);
             cVar6 = Object.op_Inequality(uVar4,0,0);
             if (!cVar6) {
               return;
@@ -211,14 +211,14 @@ public class UICursor
     }
 
     // Token : 0x6000026
-    // RVA   : 0x12B15A0   Offset: 0x12B09A0   Length: 0x18C
+    // RVA   : 0x12B1BB0   Offset: 0x12B0FB0   Length: 0x18C
     public static void Set(INGUIAtlas atlas, string sprite)
     {
-        var pStatics = *(int64*)(DAT_181daf7f8 + 184);
+        var pStatics = *(int64*)(DAT_181daf810 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar4;
-        uVar1 = **(uint64 **)(DAT_181daf7f8 + 184);
+        uVar1 = **(uint64 **)(DAT_181daf810 + 184);
         cVar4 = Object.op_Inequality(uVar1,0,0);
         if (!cVar4) {
           return;

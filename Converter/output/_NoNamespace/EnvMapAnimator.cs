@@ -6,22 +6,22 @@
 public class EnvMapAnimator
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EEB
+    // Token: 0x4001EEC
     public Vector3 RotationSpeeds;
 
-    // Token: 0x4001EEC
+    // Token: 0x4001EED
     private TMP_Text m_textMeshPro;
 
-    // Token: 0x4001EED
+    // Token: 0x4001EEE
     private Material m_material;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002456
-    // RVA   : 0x9443D0   Offset: 0x9437D0   Length: 0x7F
+    // RVA   : 0x944A60   Offset: 0x943E60   Length: 0x7F
     private void Awake()
     {
         ulong uVar2;
-        uVar2 = Component.GetComponent(this,DAT_181d96060);
+        uVar2 = Component.GetComponent(this,DAT_181d96078);
         this.m_textMeshPro = uVar2;
         plVar1 = this.m_textMeshPro;
         if (plVar1 != (int64 *)0) {
@@ -32,7 +32,7 @@ public class EnvMapAnimator
     }
 
     // Token : 0x6002457
-    // RVA   : 0x944450   Offset: 0x943850   Length: 0x6C
+    // RVA   : 0x944AE0   Offset: 0x943EE0   Length: 0x6C
     private IEnumerator Start()
     {
         long lVar1;

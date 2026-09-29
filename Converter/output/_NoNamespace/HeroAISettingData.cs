@@ -19,12 +19,12 @@ public class HeroAISettingData
         bool cVar4;
         int iVar5;
         ZhSegment.Initialize(this,0);
-        lVar2 = il2cpp_internal(DAT_181d7f878);
-        FUN_1808b1370(lVar2,DAT_181db27f8);
+        lVar2 = il2cpp_internal(DAT_181d7f890);
+        FUN_1808b1370(lVar2,DAT_181db2810);
         this.heroAISettingDatas = lVar2;
         iVar5 = 0;
         while( true ) {
-          uVar3 = DAT_181db2fe8;
+          uVar3 = DAT_181db3000;
           uVar3 = Type.GetTypeFromHandle(uVar3,0);
           lVar2 = Enum.GetNames(uVar3,0);
           if (lVar2 == null) break;
@@ -40,7 +40,7 @@ public class HeroAISettingData
           }
           uVar3 = new AISettingData(cVar4,0);
           if (lVar2 == null) break;
-          FUN_1808ab370(lVar2,iVar5,uVar3,DAT_181db2880);
+          FUN_1808ab370(lVar2,iVar5,uVar3,DAT_181db2898);
           iVar5 = iVar5 + 1;
         }
     }
@@ -55,7 +55,7 @@ public class HeroAISettingData
         int iVar4;
         iVar4 = 0;
         while( true ) {
-          uVar1 = DAT_181db2fe8;
+          uVar1 = DAT_181db3000;
           uVar1 = Type.GetTypeFromHandle(uVar1,0);
           lVar2 = Enum.GetNames(uVar1,0);
           if (lVar2 == null) break;
@@ -71,7 +71,7 @@ public class HeroAISettingData
           }
           uVar1 = new AISettingData(cVar3,0);
           if (lVar2 == null) break;
-          FUN_1808b2160(lVar2,iVar4,uVar1,DAT_181db2a18);
+          FUN_1808b2160(lVar2,iVar4,uVar1,DAT_181db2a30);
           iVar4 = iVar4 + 1;
         }
     }
@@ -86,14 +86,14 @@ public class HeroAISettingData
         ulong uVar3;
         long lVar4;
         if ((this.heroAISettingDatas != null) &&
-           (lVar1 = FUN_1817d9a50(this.heroAISettingDatas,AISettingID,DAT_181db2990)) != null) {
+           (lVar1 = FUN_1817da060(this.heroAISettingDatas,AISettingID,DAT_181db29a8)) != null) {
           if (*(int *)(lVar1 + 20) < 0) {
             return "";
           }
           if (AISettingID == 1) {
             lVar1 = FUN_18046c100(0);
             if (((this.heroAISettingDatas != null) &&
-                (lVar2 = FUN_1817d9a50(this.heroAISettingDatas,1,DAT_181db2990)) != null) &&
+                (lVar2 = FUN_1817da060(this.heroAISettingDatas,1,DAT_181db29a8)) != null) &&
                (lVar1 != null)) {
               lVar1 = GameDataController.GetSkillDataBase(lVar1,*(uint32 *)(lVar2 + 20),0);
               if (lVar1 != null) {
@@ -105,7 +105,7 @@ public class HeroAISettingData
           else if (AISettingID == 2) {
             lVar1 = *(int64 *)(pStatics + 0x4b0);
             if (((this.heroAISettingDatas != null) &&
-                (lVar2 = FUN_1817d9a50(this.heroAISettingDatas,2,DAT_181db2990)) != null) &&
+                (lVar2 = FUN_1817da060(this.heroAISettingDatas,2,DAT_181db29a8)) != null) &&
                (lVar1 != null)) {
               lVar4 = (int64)(int)*(uint32 *)(lVar2 + 20);
               if (*(uint32 *)(lVar1 + 24) <= *(uint32 *)(lVar2 + 20)) {
@@ -118,7 +118,7 @@ public class HeroAISettingData
           else if (AISettingID == 3) {
             lVar1 = *(int64 *)(pStatics + 0x438);
             if (((this.heroAISettingDatas != null) &&
-                (lVar2 = FUN_1817d9a50(this.heroAISettingDatas,3,DAT_181db2990)) != null) &&
+                (lVar2 = FUN_1817da060(this.heroAISettingDatas,3,DAT_181db29a8)) != null) &&
                (lVar1 != null)) {
               lVar4 = (int64)(int)*(uint32 *)(lVar2 + 20);
               if (*(uint32 *)(lVar1 + 24) <= *(uint32 *)(lVar2 + 20)) {
@@ -135,7 +135,7 @@ public class HeroAISettingData
             if (lVar1 != null) {
               lVar1 = *(int64 *)(lVar1 + 32);
               if ((((this.heroAISettingDatas != null) &&
-                   (lVar2 = FUN_1817d9a50(this.heroAISettingDatas,AISettingID,DAT_181db2990), lVar2 != null
+                   (lVar2 = FUN_1817da060(this.heroAISettingDatas,AISettingID,DAT_181db29a8), lVar2 != null
                    )) && (lVar1 != null)) &&
                  (lVar1 = WorldData.GetArea(lVar1,*(uint32 *)(lVar2 + 20),0)) != null) {
                 uVar3 = AreaData.GetAreaName(lVar1,0);

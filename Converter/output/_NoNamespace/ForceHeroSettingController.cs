@@ -26,23 +26,23 @@ public class ForceHeroSettingController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60014BC
-    // RVA   : 0xB3DB10   Offset: 0xB3CF10   Length: 0x36
+    // RVA   : 0xB3E1D0   Offset: 0xB3D5D0   Length: 0x36
     public static ForceHeroSettingController get_Instance()
     {
-        return **(uint64 **)(DAT_181dc7e98 + 184);
+        return **(uint64 **)(DAT_181dc7eb0 + 184);
     }
 
     // Token : 0x60014BD
-    // RVA   : 0xB3D710   Offset: 0xB3CB10   Length: 0x43
+    // RVA   : 0xB3DDD0   Offset: 0xB3D1D0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181dc7e98 + 184);
+        puVar1 = *(uint64 **)(DAT_181dc7eb0 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x60014BE
-    // RVA   : 0xB3D760   Offset: 0xB3CB60   Length: 0x80
+    // RVA   : 0xB3DE20   Offset: 0xB3D220   Length: 0x80
     public void HideForceHeroSettingUI()
     {
         ulong uVar1;
@@ -56,7 +56,7 @@ public class ForceHeroSettingController
     }
 
     // Token : 0x60014BF
-    // RVA   : 0xB3D7F0   Offset: 0xB3CBF0   Length: 0x318
+    // RVA   : 0xB3DEB0   Offset: 0xB3D2B0   Length: 0x318
     public void ShowForceHeroSettingUI(ForceData _targetForce)
     {
         ulong uVar1;
@@ -70,7 +70,7 @@ public class ForceHeroSettingController
         local_res10[0] = 0;
         this.targetForce = _targetForce;
         if (this.forceSettingUIPanel == null) {
-        LAB_180b3db03:
+        LAB_180b3e1c3:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -79,19 +79,19 @@ public class ForceHeroSettingController
         local_res8[0] = 0;
         plVar5 = plVar7;
         do {
-          if ((lVar2 == null) || (lVar2.ownHeros == null)) goto LAB_180b3db03;
+          if ((lVar2 == null) || (lVar2.ownHeros == null)) goto LAB_180b3e1c3;
           uVar6 = (uint32)plVar5;
           if (*(int *)(lVar2.ownHeros + 24) <= (int)uVar6) {
             uVar1 = this.forceAISettingHeroList;
             GlobalData.SortChild(uVar1,0);
             plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
-            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
               plVar7 = plVar5;
             }
             NGUITools.PlaySound(plVar7,0);
             return;
           }
-          if ((lVar2 = lVar2?.ownHeros) == null) goto LAB_180b3db03;
+          if ((lVar2 = lVar2?.ownHeros) == null) goto LAB_180b3e1c3;
           if (lVar2.forceName <= uVar6) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -100,25 +100,25 @@ public class ForceHeroSettingController
             uVar4 = this.HeroAISettingTabPrefab;
             uVar1 = GlobalData.AddChild(uVar1,uVar4,0);
             this.temp = uVar1;
-            if (this.temp == null) goto LAB_180b3db03;
+            if (this.temp == null) goto LAB_180b3e1c3;
             lVar2 = GameObject.GetComponent(this.temp,DAT_181d718a8);
             if ((this.targetForce == null) ||
                (uVar1 = ForceData.GetOwnHero(this.targetForce,local_res8[0],0), lVar2 == null))
-            goto LAB_180b3db03;
+            goto LAB_180b3e1c3;
             lVar2.forceName = uVar1;
             if ((this.temp == null) ||
                (lVar2 = GameObject.GetComponent(this.temp,DAT_181d718a8)) == null
-               ) goto LAB_180b3db03;
+               ) goto LAB_180b3e1c3;
             HeroAISettingTabController.Generate(lVar2,0);
             lVar2 = this.temp;
             if ((this.targetForce == null) ||
                (lVar3 = ForceData.GetOwnHero(this.targetForce,local_res8[0],0)) == null)
-            goto LAB_180b3db03;
+            goto LAB_180b3e1c3;
             local_res10[0] = 5 - *(int *)(lVar3 + 184);
             uVar1 = Int32.ToString(local_res10,0);
             uVar4 = Int32.ToString(local_res8,"0000",0);
             uVar1 = String.Concat(uVar1,"_",uVar4,0);
-            if (lVar2 == null) goto LAB_180b3db03;
+            if (lVar2 == null) goto LAB_180b3e1c3;
             Object.set_name(lVar2,uVar1);
           }
           lVar2 = this.targetForce;

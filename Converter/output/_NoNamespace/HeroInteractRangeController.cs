@@ -11,7 +11,7 @@ public class HeroInteractRangeController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60017DF
-    // RVA   : 0xAF6AE0   Offset: 0xAF5EE0   Length: 0x39
+    // RVA   : 0xAF71A0   Offset: 0xAF65A0   Length: 0x39
     public void OnTriggerStay(Collider other)
     {
         long lVar1;

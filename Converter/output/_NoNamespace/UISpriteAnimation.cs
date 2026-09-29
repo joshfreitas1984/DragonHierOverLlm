@@ -35,7 +35,7 @@ public class UISpriteAnimation
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600091D
-    // RVA   : 0x17071D0   Offset: 0x17065D0   Length: 0x3C
+    // RVA   : 0x17077E0   Offset: 0x1706BE0   Length: 0x3C
     public int get_frames()
     {
         if (this.mSpriteNames != null) {
@@ -69,7 +69,7 @@ public class UISpriteAnimation
     }
 
     // Token : 0x6000921
-    // RVA   : 0x1707210   Offset: 0x1706610   Length: 0x4F
+    // RVA   : 0x1707820   Offset: 0x1706C20   Length: 0x4F
     public void set_namePrefix(string value)
     {
         bool cVar1;
@@ -99,25 +99,25 @@ public class UISpriteAnimation
     }
 
     // Token : 0x6000924
-    // RVA   : 0xD5AC20   Offset: 0xD5A020   Length: 0x5
+    // RVA   : 0xD5B230   Offset: 0xD5A630   Length: 0x5
     public bool get_isPlaying()
     {
-        uint8 FUN_180d5ac20(int64 this)
+        uint8 FUN_180d5b230(int64 this)
         {
         return this.mActive;
     }
 
     // Token : 0x6000925
-    // RVA   : 0x1706F90   Offset: 0x1706390   Length: 0x7
+    // RVA   : 0x17075A0   Offset: 0x17069A0   Length: 0x7
     protected virtual void Start()
     {
-        void FUN_181706f90(uint64 this)
+        void FUN_1817075a0(uint64 this)
         {
         UISpriteAnimation.RebuildSpriteList(this,0);
     }
 
     // Token : 0x6000926
-    // RVA   : 0x1706FA0   Offset: 0x17063A0   Length: 0x176
+    // RVA   : 0x17075B0   Offset: 0x17069B0   Length: 0x176
     protected virtual void Update()
     {
         long lVar1;
@@ -129,7 +129,7 @@ public class UISpriteAnimation
         float fVar8;
         if (this.mActive) {
           if (this.mSpriteNames == null) {
-        LAB_181707111:
+        LAB_181707721:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -153,7 +153,7 @@ public class UISpriteAnimation
                 lVar1 = this.mSpriteNames;
                 iVar6 = this.frameIndex + 1;
                 this.frameIndex = iVar6;
-                if (lVar1 == null) goto LAB_181707111;
+                if (lVar1 == null) goto LAB_181707721;
                 if (iVar6 < lVar1.Count) {
                   cVar4 = this.mActive;
                 }
@@ -165,12 +165,12 @@ public class UISpriteAnimation
                 }
                 if (cVar4) {
                   lVar2 = this.mSprite;
-                  uVar5 = FUN_180002f80(lVar1,iVar6,DAT_181da4358);
-                  if (lVar2 == null) goto LAB_181707111;
+                  uVar5 = FUN_180002f80(lVar1,iVar6,DAT_181da4370);
+                  if (lVar2 == null) goto LAB_181707721;
                   UISprite.set_spriteName(lVar2,uVar5,0);
                   if (this.mSnap) {
                     plVar3 = this.mSprite;
-                    if (plVar3 == (int64 *)0) goto LAB_181707111;
+                    if (plVar3 == (int64 *)0) goto LAB_181707721;
                     (**(code **)(*plVar3 + 0x348))(plVar3,*(uint64 *)(*plVar3 + 0x350));
                   }
                 }
@@ -182,7 +182,7 @@ public class UISpriteAnimation
     }
 
     // Token : 0x6000927
-    // RVA   : 0x1706C30   Offset: 0x1706030   Length: 0x254
+    // RVA   : 0x1707240   Offset: 0x1706640   Length: 0x254
     public void RebuildSpriteList()
     {
         int iVar1;
@@ -196,11 +196,11 @@ public class UISpriteAnimation
         uVar4 = this.mSprite;
         cVar3 = Object.op_Equality(uVar4,0,0);
         if (cVar3) {
-          uVar4 = Component.GetComponent(this,DAT_181d96ee0);
+          uVar4 = Component.GetComponent(this,DAT_181d96ef8);
           this.mSprite = uVar4;
         }
         if (this.mSpriteNames != null) {
-          FUN_1812f9a10(this.mSpriteNames,DAT_181da3dd8);
+          FUN_1812fa020(this.mSpriteNames,DAT_181da3df0);
           uVar4 = this.mSprite;
           cVar3 = Object.op_Inequality(uVar4,0,0);
           if (!cVar3) {
@@ -208,11 +208,11 @@ public class UISpriteAnimation
           }
           lVar5 = this.mSprite;
           if (lVar5 != null) {
-            lVar5 = il2cpp_internal(lVar5.mAtlas,DAT_181d7a788);
+            lVar5 = il2cpp_internal(lVar5.mAtlas,DAT_181d7a7a0);
             if (lVar5 == null) {
               return;
             }
-            lVar5 = FUN_180002970(2,DAT_181d7a788,lVar5);
+            lVar5 = FUN_180002970(2,DAT_181d7a7a0,lVar5);
             uVar7 = 0;
             if (lVar5 != null) {
               iVar1 = *(int *)(lVar5 + 24);
@@ -224,7 +224,7 @@ public class UISpriteAnimation
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar2 = *(int64 *)(lVar8 + *(int64 *)(lVar5 + 16));
-                  cVar3 = FUN_180d755b0(this.mPrefix,0);
+                  cVar3 = FUN_180d75bc0(this.mPrefix,0);
                   if (!cVar3) {
                     if ((lVar2 == null) || (*(int64 *)(lVar2 + 16) == 0)) throw; // [null/range check failed]
                     cVar3 = String.StartsWith(*(int64 *)(lVar2 + 16),this.mPrefix
@@ -235,7 +235,7 @@ public class UISpriteAnimation
                       else {
                     }
                     if ((lVar2 == null) || (this.mSpriteNames == null)) throw; // [null/range check failed]
-                    FUN_18181e0a0();
+                    FUN_18181e6b0();
                   }
                   uVar7 = uVar7 + 1;
                   lVar6 = lVar6 + 1;
@@ -243,7 +243,7 @@ public class UISpriteAnimation
                 } while (lVar6 < iVar1);
               }
               if (this.mSpriteNames != null) {
-                List_1.Sort(this.mSpriteNames,DAT_181da41d8);
+                List_1.Sort(this.mSpriteNames,DAT_181da41f0);
                 return;
               }
             }
@@ -252,25 +252,25 @@ public class UISpriteAnimation
     }
 
     // Token : 0x6000928
-    // RVA   : 0x1706C20   Offset: 0x1706020   Length: 0x5
+    // RVA   : 0x1707230   Offset: 0x1706630   Length: 0x5
     public void Play()
     {
-        void FUN_181706c20(int64 this)
+        void FUN_181707230(int64 this)
         {
         this.mActive = 1;
     }
 
     // Token : 0x6000929
-    // RVA   : 0x1706C10   Offset: 0x1706010   Length: 0x5
+    // RVA   : 0x1707220   Offset: 0x1706620   Length: 0x5
     public void Pause()
     {
-        void FUN_181706c10(int64 this)
+        void FUN_181707220(int64 this)
         {
         this.mActive = 0;
     }
 
     // Token : 0x600092A
-    // RVA   : 0x1706E90   Offset: 0x1706290   Length: 0xFE
+    // RVA   : 0x17074A0   Offset: 0x17068A0   Length: 0xFE
     public void ResetToBeginning()
     {
         uint uVar1;
@@ -285,7 +285,7 @@ public class UISpriteAnimation
         if (cVar6) {
           lVar3 = this.mSpriteNames;
           if (lVar3 == null) {
-        LAB_181706f89:
+        LAB_181707599:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -295,13 +295,13 @@ public class UISpriteAnimation
             if (lVar3.Count <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            if (lVar4 == null) goto LAB_181706f89;
+            if (lVar4 == null) goto LAB_181707599;
             UISprite.set_spriteName
                       (lVar4,*(uint64 *)
                               (lVar3._items + 32 + (int64)(int)uVar1 * 8),0);
             if (this.mSnap) {
               plVar5 = this.mSprite;
-              if (plVar5 == (int64 *)0) goto LAB_181706f89;
+              if (plVar5 == (int64 *)0) goto LAB_181707599;
               (**(code **)(*plVar5 + 0x348))(plVar5,*(uint64 *)(*plVar5 + 0x350));
             }
           }
@@ -309,7 +309,7 @@ public class UISpriteAnimation
     }
 
     // Token : 0x600092B
-    // RVA   : 0x1707120   Offset: 0x1706520   Length: 0xA6
+    // RVA   : 0x1707730   Offset: 0x1706B30   Length: 0xA6
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -317,8 +317,8 @@ public class UISpriteAnimation
         this.mPrefix = "";
         this.mLoop = 0x101;
         this.mActive = 1;
-        uVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(uVar1,DAT_181da3bd8);
+        uVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(uVar1,DAT_181da3bf0);
         this.mSpriteNames = uVar1;
         FUN_18044ef50(this,0);
     }

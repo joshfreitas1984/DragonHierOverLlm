@@ -6,18 +6,18 @@
 public class MissionIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018F6
+    // Token: 0x40018F7
     public MissionData missionData;
 
-    // Token: 0x40018F7
+    // Token: 0x40018F8
     public bool inited;
 
-    // Token: 0x40018F8
+    // Token: 0x40018F9
     private float refreshTime;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600192A
-    // RVA   : 0xE69A50   Offset: 0xE68E50   Length: 0x41C
+    // RVA   : 0xE6A060   Offset: 0xE69460   Length: 0x41C
     private void Update()
     {
         uint uVar1;
@@ -37,7 +37,7 @@ public class MissionIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"HighLight",0)) == null)
           throw; // [null/range check failed]
-          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
           lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x468);
           if ((this.missionData == null) || (lVar3 == null)) throw; // [null/range check failed]
           uVar1 = this.missionData.missionSourceType;
@@ -56,7 +56,7 @@ public class MissionIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"RareLv",0)) == null)
           throw; // [null/range check failed]
-          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
           if ((this.missionData == null) ||
              (puVar5 = (uint32 *)
                        GlobalData.GetDifficultyColor
@@ -78,7 +78,7 @@ public class MissionIconController
         this.refreshTime = 0x3dcccccd;
         lVar3 = Component.get_transform(this,0);
         if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Title",0)) != null) {
-          uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar6 = Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = this.missionData;
           if (lVar3 != null) {
             uVar8 = lVar3.name;
@@ -106,7 +106,7 @@ public class MissionIconController
                 LTLocalization.SetText(uVar6,uVar8,0);
                 lVar3 = Component.get_transform(this,0);
                 if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"LeftTime",0)) != null) {
-                  uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
+                  uVar6 = Component.GetComponent(lVar3,DAT_181d96178);
                   if (this.missionData != null) {
                     piVar9 = &this.missionData.leftTime;
                     uVar8 = "";
@@ -125,7 +125,7 @@ public class MissionIconController
     }
 
     // Token : 0x600192B
-    // RVA   : 0xE696A0   Offset: 0xE68AA0   Length: 0x3A7
+    // RVA   : 0xE69CB0   Offset: 0xE690B0   Length: 0x3A7
     public void OnClick()
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
@@ -171,18 +171,18 @@ public class MissionIconController
                       if (((this.missionData != null) &&
                           (uVar3 = MissionData.GetTargetInnID(this.missionData,0),
                           lVar5 != null)) &&
-                         ((lVar5 = FUN_1817d9e10(lVar5,uVar3,DAT_181db9ed0), lVar5 != null &&
+                         ((lVar5 = FUN_1817da420(lVar5,uVar3,DAT_181db9ee8), lVar5 != null &&
                           (lVar5 = GameObject.get_transform(lVar5,0)) != null))) {
                         puVar6 = (uint64 *)Transform.get_localPosition(local_18,lVar5,0);
                         if (lVar4 != null) {
                           local_38 = (uint32)*puVar6;
                           uStack_24 = (uint32)((uint64)*puVar6 >> 32);
-        LAB_180e6990d:
+        LAB_180e69f1d:
                           *(uint32 *)(lVar4 + 168) = local_38;
                           *(uint32 *)(lVar4 + 172) = uStack_24;
                           plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                           plVar9 = (int64 *)0;
-                          if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
+                          if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf360)) {
                             plVar9 = plVar7;
                           }
                           NGUITools.PlaySound(plVar9,0);
@@ -204,8 +204,8 @@ public class MissionIconController
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       if (((lVar5 != null) &&
-                          (lVar5 = FUN_1817d9e10(lVar5,*(uint32 *)(*(int64 *)(lVar8 + 16) + 32)
-                                                 ,DAT_181db9ed0), lVar5 != null)) &&
+                          (lVar5 = FUN_1817da420(lVar5,*(uint32 *)(*(int64 *)(lVar8 + 16) + 32)
+                                                 ,DAT_181db9ee8), lVar5 != null)) &&
                          (lVar5 = GameObject.get_transform(lVar5,0)) != null) {
                         puVar6 = (uint64 *)Transform.get_localPosition(local_18,lVar5,0);
                         if (lVar4 != null) {
@@ -213,7 +213,7 @@ public class MissionIconController
                           uStack_34 = (uint32)((uint64)*puVar6 >> 32);
                           uStack_24 = uStack_34;
                           local_38 = local_28;
-                          goto LAB_180e6990d;
+                          goto LAB_180e69f1d;
                         }
                       }
                     }

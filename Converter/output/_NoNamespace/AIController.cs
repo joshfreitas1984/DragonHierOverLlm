@@ -35,17 +35,17 @@ public class AIController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009E2
-    // RVA   : 0x13EC8E0   Offset: 0x13EBCE0   Length: 0x58
+    // RVA   : 0x13ECEF0   Offset: 0x13EC2F0   Length: 0x58
     public static AIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181da9de0 + 184) + 40);
+        return *(uint64 *)(*(int64 *)(DAT_181da9df8 + 184) + 40);
     }
 
     // Token : 0x60009E3
-    // RVA   : 0x13DD3D0   Offset: 0x13DC7D0   Length: 0x11E
+    // RVA   : 0x13DD9E0   Offset: 0x13DCDE0   Length: 0x11E
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181da9de0 + 184);
+        var pStatics = *(int64*)(DAT_181da9df8 + 184);
         bool cVar1;
         ulong uVar2;
         uVar2 = *(uint64 *)(pStatics + 40);
@@ -61,7 +61,7 @@ public class AIController
     }
 
     // Token : 0x60009E4
-    // RVA   : 0x13EBDA0   Offset: 0x13EB1A0   Length: 0x323
+    // RVA   : 0x13EC3B0   Offset: 0x13EB7B0   Length: 0x323
     private void Update()
     {
         bool cVar1;
@@ -81,7 +81,7 @@ public class AIController
           do {
             uVar7 = (uint32)plVar9;
             if (lVar2.Count <= (int)uVar7) {
-              FUN_1812f9a10(lVar2,DAT_181d8b618);
+              FUN_1812fa020(lVar2,DAT_181d8b630);
               return;
             }
             if (lVar2 == null) break;
@@ -90,21 +90,21 @@ public class AIController
             }
             if (*(int64 *)(lVar10 + lVar2._items) != 0) {
               if (((this.needLeaveHero == null) ||
-                  (lVar2 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bb98)) == null)
+                  (lVar2 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bbb0)) == null)
                  || (*(int64 *)(lVar2 + 64) == 0)) break;
               if (*(int *)(*(int64 *)(lVar2 + 64) + 16) == 1) {
                 if ((this.needLeaveHero == null) ||
-                   (lVar2 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bb98)) == null
+                   (lVar2 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bbb0)) == null
                    ) break;
                 cVar1 = HeroData.HaveArea(lVar2,0);
                 if (cVar1) {
                   if (this.needLeaveHero == null) break;
-                  lVar2 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bb98);
+                  lVar2 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bbb0);
                   lVar3 = FUN_18046c0a0(0);
                   if (lVar3 == null) break;
                   lVar3 = *(int64 *)(lVar3 + 32);
                   if (((((this.needLeaveHero == null) ||
-                        (lVar4 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bb98),
+                        (lVar4 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bbb0),
                         lVar4 == null)) || (lVar3 == null)) ||
                       ((lVar3 = WorldData.GetArea(lVar3,*(uint32 *)(lVar4 + 192),0), lVar3 == null ||
                        (*(int64 *)(lVar3 + 64) == 0)))) ||
@@ -116,12 +116,12 @@ public class AIController
                   *(int64 **)(lVar2 + 200) = plVar8;
                   lVar2 = FUN_18046c0a0(0);
                   if ((this.needLeaveHero == null) ||
-                     (uVar6 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bb98),
+                     (uVar6 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bbb0),
                      lVar2 == null)) break;
                   GameController.HeroLeaveArea(lVar2,uVar6,0);
                   lVar2 = FUN_18046bbe0(0);
                   if ((this.needLeaveHero == null) ||
-                     (uVar6 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bb98),
+                     (uVar6 = FUN_180002f80(this.needLeaveHero,plVar9,DAT_181d8bbb0),
                      lVar2 == null)) break;
                   BigMapController.CreateBigMapNpc(lVar2,uVar6,0);
                 }
@@ -135,7 +135,7 @@ public class AIController
     }
 
     // Token : 0x60009E5
-    // RVA   : 0x13DC3C0   Offset: 0x13DB7C0   Length: 0x415
+    // RVA   : 0x13DC9D0   Offset: 0x13DBDD0   Length: 0x415
     public void AICheckSpeMed(HeroData hero)
     {
         long lVar1;
@@ -178,7 +178,7 @@ public class AIController
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
                     lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 40);
-                    if (((lVar1 == null) || (lVar1 = FUN_180002f80(lVar1,uVar3,DAT_181d90f18)) == null)
+                    if (((lVar1 == null) || (lVar1 = FUN_180002f80(lVar1,uVar3,DAT_181d90f30)) == null)
                        || ((*(int64 *)(lVar1 + 104) == 0 ||
                            (lVar1 = MedFoodData.GetChangeHeroStateData(*(int64 *)(lVar1 + 104),0),
                            lVar1 == null)))) throw; // [null/range check failed]
@@ -195,7 +195,7 @@ public class AIController
                     }
                     lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 40);
                     if (lVar1 == null) throw; // [null/range check failed]
-                    uVar2 = FUN_180002f80(lVar1,uVar3,DAT_181d90f18);
+                    uVar2 = FUN_180002f80(lVar1,uVar3,DAT_181d90f30);
                     HeroData.UseMedFood(hero,uVar2,0,0,0,0);
                   }
                   lVar4 = lVar4 + -8;
@@ -237,7 +237,7 @@ public class AIController
                         }
                         lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 48);
                         if (((lVar1 == null) ||
-                            (lVar1 = FUN_180002f80(lVar1,uVar3,DAT_181d90f18)) == null) ||
+                            (lVar1 = FUN_180002f80(lVar1,uVar3,DAT_181d90f30)) == null) ||
                            ((*(int64 *)(lVar1 + 104) == 0 ||
                             (lVar1 = MedFoodData.GetChangeHeroStateData(*(int64 *)(lVar1 + 104),0),
                             lVar1 == null)))) throw; // [null/range check failed]
@@ -254,7 +254,7 @@ public class AIController
                         }
                         lVar1 = *(int64 *)(*(int64 *)(lVar1 + 16) + 48);
                         if (lVar1 == null) throw; // [null/range check failed]
-                        uVar2 = FUN_180002f80(lVar1,uVar3,DAT_181d90f18);
+                        uVar2 = FUN_180002f80(lVar1,uVar3,DAT_181d90f30);
                         HeroData.UseMedFood(hero,uVar2,0,0,0,0);
                       }
                       lVar4 = lVar4 + -8;
@@ -270,7 +270,7 @@ public class AIController
     }
 
     // Token : 0x60009E6
-    // RVA   : 0x13DA290   Offset: 0x13D9690   Length: 0xD19
+    // RVA   : 0x13DA8A0   Offset: 0x13D9CA0   Length: 0xD19
     public void AICheckEquipment(HeroData hero)
     {
         int iVar1;
@@ -302,7 +302,7 @@ public class AIController
             uVar8 = (uint32)uVar12;
             if (*(int *)(lVar4 + 24) <= (int)uVar8) {
               lVar4 = 32;
-              goto LAB_1813dacd0;
+              goto LAB_1813db2e0;
             }
             if ((*(int64 *)(hero + 0x220) == 0) ||
                (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) break;
@@ -316,34 +316,34 @@ public class AIController
             }
             lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32 + uVar11 * 8);
             if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 96)) == null) break;
-            if (*(char *)(lVar4 + 48) != false) goto LAB_1813dacaa;
+            if (*(char *)(lVar4 + 48) != false) goto LAB_1813db2ba;
             if ((*(int64 *)(hero + 0x220) == 0) ||
                (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) break;
             if (*(int *)(lVar4 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-            if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18)) == null) break;
+            if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30)) == null) break;
             iVar1 = *(int *)(lVar4 + 24);
             uVar7 = uVar10;
             if (iVar1 == 0) {
               while( true ) {
                 if ((*(int64 *)(hero + 0x1f8) == 0) ||
                    (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 32)) == null)
-                goto LAB_1813dafa4;
-                if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813dacaa;
-                lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18);
+                goto LAB_1813db5b4;
+                if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813db2ba;
+                lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30);
                 if (lVar4 == null) break;
                 if (((*(int64 *)(hero + 0x1f8) == 0) ||
                     (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 32)) == null) ||
-                   (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18)) == null) goto LAB_1813dafa4;
+                   (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30)) == null) goto LAB_1813db5b4;
                 iVar1 = *(int *)(lVar4 + 56);
                 lVar4 = *(int64 *)(hero + 0x108);
                 if (((*(int64 *)(hero + 0x1f8) == 0) ||
                     (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 32)) == null) ||
-                   ((lVar6 = FUN_180002f80(lVar6,uVar7,DAT_181d90f18), lVar6 == null ||
-                    ((*(int64 *)(lVar6 + 96) == 0 || (lVar4 == null)))))) goto LAB_1813dafa4;
-                cVar3 = FUN_18182a3a0(lVar4,*(int *)(*(int64 *)(lVar6 + 96) + 20) + 3,DAT_181d8f398
+                   ((lVar6 = FUN_180002f80(lVar6,uVar7,DAT_181d90f30), lVar6 == null ||
+                    ((*(int64 *)(lVar6 + 96) == 0 || (lVar4 == null)))))) goto LAB_1813db5b4;
+                cVar3 = FUN_18182a9b0(lVar4,*(int *)(*(int64 *)(lVar6 + 96) + 20) + 3,DAT_181d8f3b0
                                      );
                 if (!cVar3) {
                   fVar14 = 1.0;
@@ -353,25 +353,25 @@ public class AIController
                 }
                 if ((*(int64 *)(hero + 0x220) == 0) ||
                    (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-                goto LAB_1813dafa4;
+                goto LAB_1813db5b4;
                 if (*(int *)(lVar4 + 24) == 0) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-                if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18)) == null)
-                goto LAB_1813dafa4;
+                if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30)) == null)
+                goto LAB_1813db5b4;
                 iVar2 = *(int *)(lVar4 + 56);
                 lVar4 = *(int64 *)(hero + 0x108);
                 if ((*(int64 *)(hero + 0x220) == 0) ||
                    (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-                goto LAB_1813dafa4;
+                goto LAB_1813db5b4;
                 if (*(int *)(lVar6 + 24) == 0) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 32);
-                if ((((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar12,DAT_181d90f18)) == null) ||
-                    (*(int64 *)(lVar6 + 96) == 0)) || (lVar4 == null)) goto LAB_1813dafa4;
-                cVar3 = FUN_18182a3a0(lVar4,*(int *)(*(int64 *)(lVar6 + 96) + 20) + 3,DAT_181d8f398
+                if ((((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar12,DAT_181d90f30)) == null) ||
+                    (*(int64 *)(lVar6 + 96) == 0)) || (lVar4 == null)) goto LAB_1813db5b4;
+                cVar3 = FUN_18182a9b0(lVar4,*(int *)(*(int64 *)(lVar6 + 96) + 20) + 3,DAT_181d8f3b0
                                      );
                 if (!cVar3) {
                   fVar13 = 1.0;
@@ -384,8 +384,8 @@ public class AIController
               }
               if ((*(int64 *)(hero + 0x1f8) == 0) ||
                  (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 32)) == null) break;
-        LAB_1813dac28:
-              uVar5 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18);
+        LAB_1813db238:
+              uVar5 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30);
               HeroData.UnequipItem(hero,uVar5,0,0,0);
               if ((*(int64 *)(hero + 0x220) == 0) ||
                  (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) break;
@@ -394,7 +394,7 @@ public class AIController
               }
               lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
               if (lVar4 == null) break;
-              uVar5 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18);
+              uVar5 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30);
               HeroData.EquipItem(hero,uVar5,0,0,0);
             }
             else {
@@ -402,30 +402,30 @@ public class AIController
                 while( true ) {
                   if ((*(int64 *)(hero + 0x1f8) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 56)) == null)
-                  goto LAB_1813dafa4;
-                  if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813dacaa;
-                  lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18);
+                  goto LAB_1813db5b4;
+                  if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813db2ba;
+                  lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30);
                   if (lVar4 == null) break;
                   if (((*(int64 *)(hero + 0x1f8) == 0) ||
                       (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 56)) == null) ||
-                     (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18)) == null) goto LAB_1813dafa4;
+                     (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30)) == null) goto LAB_1813db5b4;
                   iVar1 = *(int *)(lVar4 + 56);
                   if ((*(int64 *)(hero + 0x220) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-                  goto LAB_1813dafa4;
+                  goto LAB_1813db5b4;
                   if (*(int *)(lVar4 + 24) == 0) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18)) == null)
-                  goto LAB_1813dafa4;
+                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30)) == null)
+                  goto LAB_1813db5b4;
                   if (iVar1 < *(int *)(lVar4 + 56)) break;
                   uVar7 = (uint64)((int)uVar7 + 1);
                 }
                 if (*(int64 *)(hero + 0x1f8) != 0) {
                   lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 56);
-        joined_r0x0001813da9fa:
-                  if (lVar4 != null) goto LAB_1813dac28;
+        joined_r0x0001813db00a:
+                  if (lVar4 != null) goto LAB_1813db238;
                 }
                 break;
               }
@@ -433,29 +433,29 @@ public class AIController
                 while( true ) {
                   if ((*(int64 *)(hero + 0x1f8) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 80)) == null)
-                  goto LAB_1813dafa4;
-                  if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813dacaa;
-                  lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18);
+                  goto LAB_1813db5b4;
+                  if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813db2ba;
+                  lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30);
                   if (lVar4 == null) break;
                   if (((*(int64 *)(hero + 0x1f8) == 0) ||
                       (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 80)) == null) ||
-                     (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18)) == null) goto LAB_1813dafa4;
+                     (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30)) == null) goto LAB_1813db5b4;
                   iVar1 = *(int *)(lVar4 + 56);
                   if ((*(int64 *)(hero + 0x220) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-                  goto LAB_1813dafa4;
+                  goto LAB_1813db5b4;
                   if (*(int *)(lVar4 + 24) == 0) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18)) == null)
-                  goto LAB_1813dafa4;
+                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30)) == null)
+                  goto LAB_1813db5b4;
                   if (iVar1 < *(int *)(lVar4 + 56)) break;
                   uVar7 = (uint64)((int)uVar7 + 1);
                 }
                 if (*(int64 *)(hero + 0x1f8) != 0) {
                   lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 80);
-                  goto joined_r0x0001813da9fa;
+                  goto joined_r0x0001813db00a;
                 }
                 break;
               }
@@ -463,29 +463,29 @@ public class AIController
                 while( true ) {
                   if ((*(int64 *)(hero + 0x1f8) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 104)) == null)
-                  goto LAB_1813dafa4;
-                  if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813dacaa;
-                  lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18);
+                  goto LAB_1813db5b4;
+                  if (*(int *)(lVar4 + 24) <= (int)uVar7) goto LAB_1813db2ba;
+                  lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30);
                   if (lVar4 == null) break;
                   if (((*(int64 *)(hero + 0x1f8) == 0) ||
                       (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 104)) == null) ||
-                     (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18)) == null) goto LAB_1813dafa4;
+                     (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30)) == null) goto LAB_1813db5b4;
                   iVar1 = *(int *)(lVar4 + 56);
                   if ((*(int64 *)(hero + 0x220) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-                  goto LAB_1813dafa4;
+                  goto LAB_1813db5b4;
                   if (*(int *)(lVar4 + 24) == 0) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18)) == null)
-                  goto LAB_1813dafa4;
+                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30)) == null)
+                  goto LAB_1813db5b4;
                   if (iVar1 < *(int *)(lVar4 + 56)) break;
                   uVar7 = (uint64)((int)uVar7 + 1);
                 }
                 if (*(int64 *)(hero + 0x1f8) != 0) {
                   lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 104);
-                  goto joined_r0x0001813da9fa;
+                  goto joined_r0x0001813db00a;
                 }
                 break;
               }
@@ -495,34 +495,34 @@ public class AIController
                 while( true ) {
                   if ((*(int64 *)(hero + 0x1f8) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null)
-                  goto LAB_1813dafa4;
-                  if (*(int *)(lVar4 + 24) <= (int)uVar9) goto LAB_1813da66d;
-                  lVar4 = FUN_180002f80(lVar4,uVar9,DAT_181d90f18);
+                  goto LAB_1813db5b4;
+                  if (*(int *)(lVar4 + 24) <= (int)uVar9) goto LAB_1813dac7d;
+                  lVar4 = FUN_180002f80(lVar4,uVar9,DAT_181d90f30);
                   if (lVar4 == null) break;
                   if (((*(int64 *)(hero + 0x1f8) == 0) ||
                       (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null) ||
-                     (lVar4 = FUN_180002f80(lVar4,uVar9,DAT_181d90f18)) == null) goto LAB_1813dafa4;
+                     (lVar4 = FUN_180002f80(lVar4,uVar9,DAT_181d90f30)) == null) goto LAB_1813db5b4;
                   iVar1 = *(int *)(lVar4 + 56);
                   if ((*(int64 *)(hero + 0x220) == 0) ||
                      (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-                  goto LAB_1813dafa4;
+                  goto LAB_1813db5b4;
                   if (*(int *)(lVar4 + 24) == 0) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18)) == null)
-                  goto LAB_1813dafa4;
+                  if ((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30)) == null)
+                  goto LAB_1813db5b4;
                   if (iVar1 < *(int *)(lVar4 + 56)) {
                     if ((int)uVar7 != -1) {
                       if (((*(int64 *)(hero + 0x1f8) == 0) ||
                           (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null) ||
-                         (lVar4 = FUN_180002f80(lVar4,uVar9,DAT_181d90f18)) == null)
-                      goto LAB_1813dafa4;
+                         (lVar4 = FUN_180002f80(lVar4,uVar9,DAT_181d90f30)) == null)
+                      goto LAB_1813db5b4;
                       iVar1 = *(int *)(lVar4 + 56);
                       if (((*(int64 *)(hero + 0x1f8) == 0) ||
                           (lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null) ||
-                         (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f18)) == null)
-                      goto LAB_1813dafa4;
+                         (lVar4 = FUN_180002f80(lVar4,uVar7,DAT_181d90f30)) == null)
+                      goto LAB_1813db5b4;
                       if (*(int *)(lVar4 + 56) > iVar1)
                       {
                         }
@@ -538,121 +538,121 @@ public class AIController
                 }
                 lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
                 if (lVar4 == null) break;
-                uVar5 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18);
+                uVar5 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30);
                 HeroData.EquipItem(hero,uVar5,0,0,0);
-        LAB_1813da66d:
+        LAB_1813dac7d:
                 if ((*(int64 *)(hero + 0x220) == 0) ||
                    (lVar4 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) break;
                 if (*(int *)(lVar4 + 24) == 0) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-                if (((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f18)) == null) ||
+                if (((lVar4 == null) || (lVar4 = FUN_180002f80(lVar4,uVar12,DAT_181d90f30)) == null) ||
                    (*(int64 *)(lVar4 + 96) == 0)) break;
                 if ((*(char *)(*(int64 *)(lVar4 + 96) + 48) == false) && (-1 < (int)uVar7)) {
                   if (*(int64 *)(hero + 0x1f8) != 0) {
                     lVar4 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128);
-                    goto joined_r0x0001813da9fa;
+                    goto joined_r0x0001813db00a;
                   }
                   break;
                 }
               }
             }
-        LAB_1813dacaa:
+        LAB_1813db2ba:
             uVar12 = (uint64)(uVar8 + 1);
             uVar11 = uVar11 + 1;
           }
         }
-        LAB_1813dafa4:
+        LAB_1813db5b4:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_1813dacd0:
+        LAB_1813db2e0:
         if ((*(int64 *)(hero + 0x220) == 0) ||
-           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) goto LAB_1813dafa4;
+           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) goto LAB_1813db5b4;
         if (*(uint32 *)(lVar6 + 24) < 7) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 80);
-        if (lVar6 == null) goto LAB_1813dafa4;
+        if (lVar6 == null) goto LAB_1813db5b4;
         uVar8 = (uint32)uVar10;
         if (*(int *)(lVar6 + 24) <= (int)uVar8) {
           return;
         }
         if ((*(int64 *)(hero + 0x220) == 0) ||
-           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) goto LAB_1813dafa4;
+           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) goto LAB_1813db5b4;
         if (*(uint32 *)(lVar6 + 24) < 7) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 80);
-        if (lVar6 == null) goto LAB_1813dafa4;
+        if (lVar6 == null) goto LAB_1813db5b4;
         if (*(uint32 *)(lVar6 + 24) <= uVar8) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar6 = *(int64 *)(lVar4 + *(int64 *)(lVar6 + 16));
-        if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 136)) == null) goto LAB_1813dafa4;
+        if ((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 136)) == null) goto LAB_1813db5b4;
         if (*(char *)(lVar6 + 16) == false) {
           if ((*(int64 *)(hero + 0x220) == 0) ||
              (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-          goto LAB_1813dafa4;
+          goto LAB_1813db5b4;
           if (*(uint32 *)(lVar6 + 24) < 7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 80);
-          if ((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar10,DAT_181d90f18)) == null)
-          goto LAB_1813dafa4;
+          if ((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar10,DAT_181d90f30)) == null)
+          goto LAB_1813db5b4;
           if (*(int *)(lVar6 + 24) == 0) {
             if (*(int64 *)(hero + 0x208) != 0) {
               iVar1 = *(int *)(*(int64 *)(hero + 0x208) + 56);
               if ((*(int64 *)(hero + 0x220) == 0) ||
                  (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-              goto LAB_1813dafa4;
+              goto LAB_1813db5b4;
               if (*(uint32 *)(lVar6 + 24) < 7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 80);
-              if ((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar10,DAT_181d90f18)) == null)
-              goto LAB_1813dafa4;
-              if (*(int *)(lVar6 + 56) <= iVar1) goto LAB_1813daf3a;
+              if ((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar10,DAT_181d90f30)) == null)
+              goto LAB_1813db5b4;
+              if (*(int *)(lVar6 + 56) <= iVar1) goto LAB_1813db54a;
             }
             uVar5 = *(uint64 *)(hero + 0x208);
           }
           else {
-            if (*(int *)(lVar6 + 24) != 1) goto LAB_1813daf3a;
+            if (*(int *)(lVar6 + 24) != 1) goto LAB_1813db54a;
             if (*(int64 *)(hero + 0x218) != 0) {
               iVar1 = *(int *)(*(int64 *)(hero + 0x218) + 56);
               if ((*(int64 *)(hero + 0x220) == 0) ||
                  (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-              goto LAB_1813dafa4;
+              goto LAB_1813db5b4;
               if (*(uint32 *)(lVar6 + 24) < 7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 80);
-              if ((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar10,DAT_181d90f18)) == null)
-              goto LAB_1813dafa4;
-              if (*(int *)(lVar6 + 56) <= iVar1) goto LAB_1813daf3a;
+              if ((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,uVar10,DAT_181d90f30)) == null)
+              goto LAB_1813db5b4;
+              if (*(int *)(lVar6 + 56) <= iVar1) goto LAB_1813db54a;
             }
             uVar5 = *(uint64 *)(hero + 0x218);
           }
           HeroData.UnequipItem(hero,uVar5,0,0,0);
           if ((*(int64 *)(hero + 0x220) == 0) ||
              (lVar6 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-          goto LAB_1813dafa4;
+          goto LAB_1813db5b4;
           if (*(uint32 *)(lVar6 + 24) < 7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar6 = *(int64 *)(*(int64 *)(lVar6 + 16) + 80);
-          if (lVar6 == null) goto LAB_1813dafa4;
-          uVar5 = FUN_180002f80(lVar6,uVar10,DAT_181d90f18);
+          if (lVar6 == null) goto LAB_1813db5b4;
+          uVar5 = FUN_180002f80(lVar6,uVar10,DAT_181d90f30);
           HeroData.EquipItem(hero,uVar5,0,0,0);
         }
-        LAB_1813daf3a:
+        LAB_1813db54a:
         uVar10 = (uint64)(uVar8 + 1);
         lVar4 = lVar4 + 8;
-        goto LAB_1813dacd0;
+        goto LAB_1813db2e0;
     }
 
     // Token : 0x60009E7
-    // RVA   : 0x13E5B90   Offset: 0x13E4F90   Length: 0x1C0
+    // RVA   : 0x13E61A0   Offset: 0x13E55A0   Length: 0x1C0
     public float GetSkillScore(HeroData targetHero, KungfuSkillLvData targetSkill)
     {
         int iVar1;
@@ -667,8 +667,8 @@ public class AIController
           lVar5 = KungfuSkillLvData.DataBase(targetSkill,0);
           if ((lVar5 != null) && (this.speSkillIDList != null)) {
             iVar3 = *(int *)(lVar5 + 52);
-            cVar2 = FUN_18182a3a0(this.speSkillIDList,*(uint32 *)(targetSkill + 16),
-                                  DAT_181d8f398);
+            cVar2 = FUN_18182a9b0(this.speSkillIDList,*(uint32 *)(targetSkill + 16),
+                                  DAT_181d8f3b0);
             if (!cVar2) {
               fVar8 = 1.0;
             }
@@ -680,7 +680,7 @@ public class AIController
               lVar5 = *(int64 *)(targetHero + 0x118);
               uVar6 = KungfuSkillLvData.Name(targetSkill,0,0);
               if (lVar5 != null) {
-                cVar2 = FUN_18181e400(lVar5,uVar6,DAT_181da3e58);
+                cVar2 = FUN_18181ea10(lVar5,uVar6,DAT_181da3e70);
                 if (!cVar2) {
                   fVar7 = 0.0;
                 }
@@ -697,7 +697,7 @@ public class AIController
                   lVar5 = *(int64 *)(targetHero + 0x108);
                   uVar4 = KungfuSkillLvData.Type(targetSkill,0);
                   if (lVar5 == null) throw; // [null/range check failed]
-                  cVar2 = FUN_18182a3a0(lVar5,uVar4,DAT_181d8f398);
+                  cVar2 = FUN_18182a9b0(lVar5,uVar4,DAT_181d8f3b0);
                   if (cVar2) {
                     fVar8 = fVar8 * 1.5;
                   }
@@ -710,7 +710,7 @@ public class AIController
     }
 
     // Token : 0x60009E8
-    // RVA   : 0x13DBA20   Offset: 0x13DAE20   Length: 0x997
+    // RVA   : 0x13DC030   Offset: 0x13DB430   Length: 0x997
     public void AICheckSkill(HeroData hero)
     {
         uint uVar1;
@@ -740,21 +740,21 @@ public class AIController
         long local_res20;
         if ((hero != null) && (*(int64 *)(hero + 64) != 0)) {
           *(uint8 *)(*(int64 *)(hero + 64) + 45) = 0;
-          lVar4 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar4,DAT_181d8f098);
+          lVar4 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar4,DAT_181d8f0b0);
           fVar20 = -999999.0;
-          lVar5 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar5,DAT_181d8f098);
+          lVar5 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar5,DAT_181d8f0b0);
           fVar21 = -999999.0;
-          lVar6 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar6,DAT_181d8f098);
+          lVar6 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar6,DAT_181d8f0b0);
           fVar22 = -999999.0;
-          lVar7 = il2cpp_internal(DAT_181d945d0);
-          FUN_18132faf0(lVar7,DAT_181d92110);
-          lVar8 = il2cpp_internal(DAT_181d945d0);
-          FUN_18132faf0(lVar8,DAT_181d92110);
-          lVar9 = il2cpp_internal(DAT_181d96ed0);
-          FUN_18132faf0(lVar9,DAT_181da0cf8);
+          lVar7 = il2cpp_internal(DAT_181d945e8);
+          FUN_181330100(lVar7,DAT_181d92128);
+          lVar8 = il2cpp_internal(DAT_181d945e8);
+          FUN_181330100(lVar8,DAT_181d92128);
+          lVar9 = il2cpp_internal(DAT_181d96ee8);
+          FUN_181330100(lVar9,DAT_181da0d10);
           uVar17 = 0;
           local_res10 = 0;
           uVar14 = uVar17;
@@ -763,7 +763,7 @@ public class AIController
             if (*(int *)(*(int64 *)(hero + 0x2a0) + 24) <= (int)uVar14) {
               local_res20 = 32;
               uVar14 = uVar17;
-              goto LAB_1813dbcd0;
+              goto LAB_1813dc2e0;
             }
             cVar2 = HeroData.AttackSkillSlotUnlocked(hero,uVar14,0);
             if (cVar2) {
@@ -773,10 +773,10 @@ public class AIController
             uVar14 = (uint64)((int)uVar14 + 1);
           }
         }
-        LAB_1813dc3b2:
+        LAB_1813dc9c2:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_1813dbcd0:
+        LAB_1813dc2e0:
         lVar10 = *(int64 *)(hero + 0x260);
         if (lVar10 != null) {
           uVar3 = (uint32)uVar14;
@@ -785,7 +785,7 @@ public class AIController
                (fVar18 = (float)AIController.GetSkillScore
                                           (this,hero,*(int64 *)(hero + 0x270),0),
                fVar18 < fVar20)) {
-              if (lVar4 == null) goto LAB_1813dc3b2;
+              if (lVar4 == null) goto LAB_1813dc9c2;
               if (0 < *(int *)(lVar4 + 24)) {
                 HeroData.UnequipSkill(hero,*(uint64 *)(hero + 0x270),0,0);
                 lVar9 = *(int64 *)(hero + 0x260);
@@ -794,7 +794,7 @@ public class AIController
                 if (*(uint32 *)(lVar4 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (lVar9 == null) goto LAB_1813dc3b2;
+                if (lVar9 == null) goto LAB_1813dc9c2;
                 uVar3 = lVar4[uVar3];
                 if (*(uint32 *)(lVar9 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -808,7 +808,7 @@ public class AIController
                (fVar20 = (float)AIController.GetSkillScore
                                           (this,hero,*(int64 *)(hero + 0x280),0),
                fVar20 < fVar21)) {
-              if (lVar5 == null) goto LAB_1813dc3b2;
+              if (lVar5 == null) goto LAB_1813dc9c2;
               if (0 < *(int *)(lVar5 + 24)) {
                 HeroData.UnequipSkill(hero,*(uint64 *)(hero + 0x280),0,0);
                 lVar4 = *(int64 *)(hero + 0x260);
@@ -817,7 +817,7 @@ public class AIController
                 if (*(uint32 *)(lVar5 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (lVar4 == null) goto LAB_1813dc3b2;
+                if (lVar4 == null) goto LAB_1813dc9c2;
                 uVar3 = lVar5[uVar3];
                 if (*(uint32 *)(lVar4 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -831,7 +831,7 @@ public class AIController
                (fVar20 = (float)AIController.GetSkillScore
                                           (this,hero,*(int64 *)(hero + 0x290),0),
                fVar20 < fVar22)) {
-              if (lVar6 == null) goto LAB_1813dc3b2;
+              if (lVar6 == null) goto LAB_1813dc9c2;
               if (0 < *(int *)(lVar6 + 24)) {
                 HeroData.UnequipSkill(hero,*(uint64 *)(hero + 0x290),0,0);
                 lVar4 = *(int64 *)(hero + 0x260);
@@ -840,7 +840,7 @@ public class AIController
                 if (*(uint32 *)(lVar6 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (lVar4 == null) goto LAB_1813dc3b2;
+                if (lVar4 == null) goto LAB_1813dc9c2;
                 uVar3 = lVar6[uVar3];
                 if (*(uint32 *)(lVar4 + 24) <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -851,11 +851,11 @@ public class AIController
               }
             }
             uVar14 = uVar17;
-            if ((int)local_res10 < 1) goto LAB_1813dc230;
+            if ((int)local_res10 < 1) goto LAB_1813dc840;
             lVar4 = 32;
             uVar15 = uVar17;
             uVar16 = uVar17;
-            goto LAB_1813dc1e0;
+            goto LAB_1813dc7f0;
           }
           if (*(uint32 *)(lVar10 + 24) <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -864,89 +864,89 @@ public class AIController
                                     (this,hero,
                                      *(uint64 *)(local_res20 + *(int64 *)(lVar10 + 16)));
           lVar10 = *(int64 *)(hero + 0x260);
-          if (lVar10 == null) goto LAB_1813dc3b2;
+          if (lVar10 == null) goto LAB_1813dc9c2;
           if (*(uint32 *)(lVar10 + 24) <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar10 = *(int64 *)(local_res20 + *(int64 *)(lVar10 + 16));
           if ((lVar10 == null) || (lVar10 = KungfuSkillLvData.DataBase(lVar10,0)) == null)
-          goto LAB_1813dc3b2;
+          goto LAB_1813dc9c2;
           iVar12 = *(int *)(lVar10 + 48);
           if (iVar12 == 0) {
             lVar10 = lVar4;
             if (fVar20 < fVar18) {
-              if (lVar4 == null) goto LAB_1813dc3b2;
-              FUN_1812f9a10(lVar4,DAT_181d8f318);
+              if (lVar4 == null) goto LAB_1813dc9c2;
+              FUN_1812fa020(lVar4,DAT_181d8f330);
               fVar20 = fVar18;
             }
             else {
-              if (fVar18 != fVar20) goto LAB_1813dbf40;
-        joined_r0x0001813dbf0c:
-              if (lVar10 == null) goto LAB_1813dc3b2;
+              if (fVar18 != fVar20) goto LAB_1813dc550;
+        joined_r0x0001813dc51c:
+              if (lVar10 == null) goto LAB_1813dc9c2;
             }
-        LAB_1813dbf32:
-            FUN_18182a0b0(lVar10,uVar14,DAT_181d8f218);
-            goto LAB_1813dbf40;
+        LAB_1813dc542:
+            FUN_18182a6c0(lVar10,uVar14,DAT_181d8f230);
+            goto LAB_1813dc550;
           }
           if (iVar12 == 1) {
             lVar10 = lVar5;
             fVar19 = fVar18;
             fVar23 = fVar22;
             if (fVar18 <= fVar21) {
-              if (fVar18 == fVar21) goto joined_r0x0001813dbf0c;
-              goto LAB_1813dbf40;
+              if (fVar18 == fVar21) goto joined_r0x0001813dc51c;
+              goto LAB_1813dc550;
             }
-        LAB_1813dbeb4:
+        LAB_1813dc4c4:
             if (lVar10 != null) {
-              FUN_1812f9a10(lVar10,DAT_181d8f318);
+              FUN_1812fa020(lVar10,DAT_181d8f330);
               fVar21 = fVar19;
               fVar22 = fVar23;
-              goto LAB_1813dbf32;
+              goto LAB_1813dc542;
             }
-            goto LAB_1813dc3b2;
+            goto LAB_1813dc9c2;
           }
           if (iVar12 == 2) {
             lVar10 = lVar6;
             fVar19 = fVar21;
             fVar23 = fVar18;
-            if (fVar22 < fVar18) goto LAB_1813dbeb4;
-            if (fVar18 != fVar22) goto LAB_1813dbf40;
-            if (lVar6 != null) goto LAB_1813dbf32;
-            goto LAB_1813dc3b2;
+            if (fVar22 < fVar18) goto LAB_1813dc4c4;
+            if (fVar18 != fVar22) goto LAB_1813dc550;
+            if (lVar6 != null) goto LAB_1813dc542;
+            goto LAB_1813dc9c2;
           }
-          if (lVar9 == null) goto LAB_1813dc3b2;
+          if (lVar9 == null) goto LAB_1813dc9c2;
           iVar12 = *(int *)(lVar9 + 24);
           uVar15 = uVar17;
-          if (iVar12 != 0) goto LAB_1813dbd95;
-        LAB_1813dbe22:
+          if (iVar12 != 0) goto LAB_1813dc3a5;
+        LAB_1813dc432:
           if ((*(int64 *)(hero + 0x260) == 0) ||
-             (uVar11 = FUN_180002f80(*(int64 *)(hero + 0x260),uVar14,DAT_181d92590), lVar7 == null))
-          goto LAB_1813dc3b2;
-          FUN_18181e0a0(lVar7,uVar11,DAT_181d92190);
-          FUN_18181de10(lVar9,fVar18,DAT_181da0df8);
+             (uVar11 = FUN_180002f80(*(int64 *)(hero + 0x260),uVar14,DAT_181d925a8), lVar7 == null))
+          goto LAB_1813dc9c2;
+          FUN_18181e6b0(lVar7,uVar11,DAT_181d921a8);
+          FUN_18181e420(lVar9,fVar18,DAT_181da0e10);
           uVar14 = (uint64)(uVar3 + 1);
           local_res20 = local_res20 + 8;
-          goto LAB_1813dbcd0;
+          goto LAB_1813dc2e0;
         }
-        goto LAB_1813dc3b2;
+        goto LAB_1813dc9c2;
         while( true ) {
           if (*(uint32 *)(lVar7 + 24) <= uVar3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (lVar8 == null) goto LAB_1813dc3b2;
-          FUN_18181e0a0(lVar8,*(uint64 *)(*(int64 *)(lVar7 + 16) + lVar4),DAT_181d92190);
+          if (lVar8 == null) goto LAB_1813dc9c2;
+          FUN_18181e6b0(lVar8,*(uint64 *)(*(int64 *)(lVar7 + 16) + lVar4),DAT_181d921a8);
           uVar15 = (uint64)(uVar3 + 1);
           uVar16 = uVar16 + 1;
           lVar4 = lVar4 + 8;
           if ((int64)(int)local_res10 <= (int64)uVar16) break;
-        LAB_1813dc1e0:
-          if (lVar7 == null) goto LAB_1813dc3b2;
+        LAB_1813dc7f0:
+          if (lVar7 == null) goto LAB_1813dc9c2;
           uVar3 = (uint32)uVar15;
           if ((int)*(uint32 *)(lVar7 + 24) <= (int)uVar3) break;
         }
-        LAB_1813dc230:
+        LAB_1813dc840:
         do {
-          if (*(int64 *)(hero + 0x2a0) == 0) goto LAB_1813dc3b2;
+          if (*(int64 *)(hero + 0x2a0) == 0) goto LAB_1813dc9c2;
           if (*(int *)(*(int64 *)(hero + 0x2a0) + 24) <= (int)uVar14) {
             if (lVar8 != null) {
               lVar4 = 32;
@@ -961,26 +961,26 @@ public class AIController
                 lVar5 = *(int64 *)(lVar4 + *(int64 *)(lVar8 + 16));
                 if (lVar5 == null) break;
                 if (*(char *)(lVar5 + 32) == false) {
-                  uVar11 = FUN_180002f80(lVar8,uVar17,DAT_181d92590);
+                  uVar11 = FUN_180002f80(lVar8,uVar17,DAT_181d925a8);
                   HeroData.EquipSkill(hero,uVar11,0,0);
                 }
                 uVar17 = (uint64)(uVar3 + 1);
                 lVar4 = lVar4 + 8;
               }
             }
-            goto LAB_1813dc3b2;
+            goto LAB_1813dc9c2;
           }
           cVar2 = HeroData.AttackSkillSlotUnlocked(hero,uVar14,0);
           if (cVar2) {
-            if (*(int64 *)(hero + 0x2a0) == 0) goto LAB_1813dc3b2;
+            if (*(int64 *)(hero + 0x2a0) == 0) goto LAB_1813dc9c2;
             lVar4 = FUN_180002f80(*(int64 *)(hero + 0x2a0),uVar14);
             if (lVar4 != null) {
               if ((*(int64 *)(hero + 0x2a0) == 0) ||
-                 (uVar11 = FUN_180002f80(*(int64 *)(hero + 0x2a0),uVar14,DAT_181d92590), lVar8 == null)
-                 ) goto LAB_1813dc3b2;
-              cVar2 = FUN_18181e400(lVar8,uVar11);
+                 (uVar11 = FUN_180002f80(*(int64 *)(hero + 0x2a0),uVar14,DAT_181d925a8), lVar8 == null)
+                 ) goto LAB_1813dc9c2;
+              cVar2 = FUN_18181ea10(lVar8,uVar11);
               if (!cVar2) {
-                if (*(int64 *)(hero + 0x2a0) == 0) goto LAB_1813dc3b2;
+                if (*(int64 *)(hero + 0x2a0) == 0) goto LAB_1813dc9c2;
                 uVar11 = FUN_180002f80(*(int64 *)(hero + 0x2a0),uVar14);
                 HeroData.UnequipSkill(hero,uVar11);
               }
@@ -988,31 +988,31 @@ public class AIController
           }
           uVar14 = (uint64)((int)uVar14 + 1);
         } while( true );
-        LAB_1813dbd95:
+        LAB_1813dc3a5:
         while (iVar13 = (int)uVar15, iVar13 < iVar12) {
-          fVar19 = (float)FUN_1800d6790(lVar9,uVar15,DAT_181da1078);
+          fVar19 = (float)FUN_1800d6790(lVar9,uVar15,DAT_181da1090);
           if (fVar19 <= fVar18) {
             if ((*(int64 *)(hero + 0x260) == 0) ||
-               (uVar11 = FUN_180002f80(*(int64 *)(hero + 0x260),uVar14,DAT_181d92590), lVar7 == null))
-            goto LAB_1813dc3b2;
-            FUN_181822520(lVar7,uVar15,uVar11,DAT_181d92390);
-            FUN_181822250(lVar9,uVar15,fVar18);
+               (uVar11 = FUN_180002f80(*(int64 *)(hero + 0x260),uVar14,DAT_181d925a8), lVar7 == null))
+            goto LAB_1813dc9c2;
+            FUN_181822b30(lVar7,uVar15,uVar11,DAT_181d923a8);
+            FUN_181822860(lVar9,uVar15,fVar18);
             uVar14 = (uint64)(uVar3 + 1);
             local_res20 = local_res20 + 8;
-            goto LAB_1813dbcd0;
+            goto LAB_1813dc2e0;
           }
           iVar12 = *(int *)(lVar9 + 24);
-          if (iVar13 == iVar12 + -1) goto LAB_1813dbe22;
+          if (iVar13 == iVar12 + -1) goto LAB_1813dc432;
           uVar15 = (uint64)(iVar13 + 1);
         }
-        LAB_1813dbf40:
+        LAB_1813dc550:
         uVar14 = (uint64)(uVar3 + 1);
         local_res20 = local_res20 + 8;
-        goto LAB_1813dbcd0;
+        goto LAB_1813dc2e0;
     }
 
     // Token : 0x60009E9
-    // RVA   : 0x13E6940   Offset: 0x13E5D40   Length: 0x78A
+    // RVA   : 0x13E6F50   Offset: 0x13E6350   Length: 0x78A
     public void ManageAIOneDay(HeroData hero)
     {
         int iVar2;
@@ -1030,7 +1030,7 @@ public class AIController
         if (*(char *)(hero + 0x2f0) == false) {
           cVar3 = HeroData.HaveForce(hero,0);
           if (!cVar3) {
-        LAB_1813e6a12:
+        LAB_1813e7022:
             if (*(int64 *)(hero + 64) == 0) throw; // [null/range check failed]
             *(uint32 *)(*(int64 *)(hero + 64) + 40) = 0;
           }
@@ -1038,7 +1038,7 @@ public class AIController
             iVar2 = *(int *)(hero + 192);
             lVar5 = HeroData.GetForce(hero,0,0);
             if (lVar5 == null) throw; // [null/range check failed]
-            if (iVar2 == *(int *)(lVar5 + 56)) goto LAB_1813e6a12;
+            if (iVar2 == *(int *)(lVar5 + 56)) goto LAB_1813e7022;
             lVar5 = *(int64 *)(hero + 64);
             if (lVar5 == null) throw; // [null/range check failed]
             *(float *)(lVar5 + 40) = *(float *)(lVar5 + 40) + 1.0;
@@ -1053,7 +1053,7 @@ public class AIController
                 *(uint8 *)(hero + 0x1e8) = 1;
                 cVar3 = HeroData.FullState(hero,0);
                 if (cVar3) {
-        LAB_1813e6a9c:
+        LAB_1813e70ac:
                   if (*(int64 *)(hero + 64) == 0) throw; // [null/range check failed]
                   *(uint32 *)(*(int64 *)(hero + 64) + 32) = 0;
                 }
@@ -1061,7 +1061,7 @@ public class AIController
               else if ((((iVar2 == 4) &&
                         (HeroData.AutoCureSelfInjury(hero,0), *(float *)(hero + 0x1a8) <= 0.0)) &&
                        (*(float *)(hero + 0x1a4) <= 0.0)) && (*(float *)(hero + 0x1a0) <= 0.0))
-              goto LAB_1813e6a9c;
+              goto LAB_1813e70ac;
               cVar3 = HeroData.HaveArea(hero,0);
               if (!cVar3) {
                 if (*(int64 *)(hero + 64) == 0) throw; // [null/range check failed]
@@ -1077,10 +1077,10 @@ public class AIController
                   if (-1 < *(int *)(lVar5 + 48)) {
                     uVar7 = Int32.ToString(lVar5 + 48,0);
                     uVar6 = new HeroAIData(1,uVar7,99,0);
-                    goto LAB_1813e6f19;
+                    goto LAB_1813e7529;
                   }
                   uVar6 = new HeroAIData(1,"-1",99,0);
-                  goto LAB_1813e6ec8;
+                  goto LAB_1813e74d8;
                 }
               }
               else {
@@ -1107,7 +1107,7 @@ public class AIController
                         if (*(float *)(lVar5 + 32) <= *(float *)(lVar5 + 28) &&
                             *(float *)(lVar5 + 28) != *(float *)(lVar5 + 32)) {
                           uVar6 = new HeroAIData(9,1);
-                          goto LAB_1813e6f19;
+                          goto LAB_1813e7529;
                         }
                       }
                       if (*(int64 *)(hero + 64) == 0) throw; // [null/range check failed]
@@ -1115,7 +1115,7 @@ public class AIController
                          (cVar3 = AIController.FinishAIStuff(this,hero,0), !cVar3)) {
                         cVar3 = HeroData.HaveForce(hero,0);
                         if (!cVar3) {
-        LAB_1813e6d46:
+        LAB_1813e7356:
                           cVar3 = AIController.CanLeaveArea(this,0);
                           if (cVar3) {
                             dVar9 = (double)GlobalData.RandomRangeDouble(0,0);
@@ -1127,12 +1127,12 @@ public class AIController
                                 if (lVar5 == null) throw; // [null/range check failed]
                                 if (iVar2 != *(int *)(lVar5 + 56)) {
                                   dVar9 = (double)GlobalData.RandomRangeDouble(0,0);
-                                  if (dVar9 < 0.20000000298023224) goto LAB_1813e6d19;
+                                  if (dVar9 < 0.20000000298023224) goto LAB_1813e7329;
                                 }
                               }
                               uVar4 = AIController.GetRandomMoveTargetArea(this,hero,0);
                               AIController.StartMoveToAnotherArea(this,hero,uVar4,0);
-                              goto LAB_1813e6f73;
+                              goto LAB_1813e7583;
                             }
                           }
                           AIController.ManageAIUsePoison(this,hero,0);
@@ -1143,7 +1143,7 @@ public class AIController
                           iVar2 = *(int *)(hero + 192);
                           lVar5 = HeroData.GetForce(hero,0,0);
                           if (lVar5 == null) throw; // [null/range check failed]
-                          if (iVar2 == *(int *)(lVar5 + 56)) goto LAB_1813e6d46;
+                          if (iVar2 == *(int *)(lVar5 + 56)) goto LAB_1813e7356;
                           dVar9 = (double)GlobalData.RandomRangeDouble(0,0);
                           if (*(char *)(hero + 180) != false) {
                             fVar10 = 0.005;
@@ -1151,8 +1151,8 @@ public class AIController
                           if (*(int64 *)(hero + 64) == 0) throw; // [null/range check failed]
                           if ((double)(((float)*(int *)(hero + 184) * 0.001 + 0.02 + fVar10) *
                                       *(float *)(*(int64 *)(hero + 64) + 40)) < dVar9)
-                          goto LAB_1813e6d46;
-        LAB_1813e6d19:
+                          goto LAB_1813e7356;
+        LAB_1813e7329:
                           lVar5 = HeroData.GetForce(hero,0,0);
                           if (lVar5 == null) throw; // [null/range check failed]
                           AIController.StartMoveToAnotherArea
@@ -1163,13 +1163,13 @@ public class AIController
                     else {
                       uVar4 = HeroData.GetFullRecoverTime(hero);
                       uVar6 = new HeroAIData(3,uVar4);
-        LAB_1813e6f19:
+        LAB_1813e7529:
                       AIController.SetAIStuff(this,hero,uVar6,0,0);
                     }
                   }
                   else {
                     uVar6 = new HeroAIData(4,99);
-        LAB_1813e6ec8:
+        LAB_1813e74d8:
                     AIController.SetAIStuff(this,hero,uVar6,0,0);
                   }
                 }
@@ -1185,7 +1185,7 @@ public class AIController
               *(int *)(lVar5 + 36) = *(int *)(lVar5 + 36) + 1;
             }
           }
-        LAB_1813e6f73:
+        LAB_1813e7583:
           lVar5 = *(int64 *)(hero + 64);
           if (lVar5 == null) throw; // [null/range check failed]
           if (*(char *)(lVar5 + 46) != false) {
@@ -1216,16 +1216,16 @@ public class AIController
     }
 
     // Token : 0x60009EA
-    // RVA   : 0x13DD960   Offset: 0x13DCD60   Length: 0x1FF
+    // RVA   : 0x13DDF70   Offset: 0x13DD370   Length: 0x1FF
     public void CheckInteractTarget(HeroData hero)
     {
         bool cVar1;
         uint uVar2;
         long lVar3;
         long lVar4;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 8);
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 8);
         if (((hero != null) && (*(int64 *)(hero + 64) != 0)) && (lVar3 != null)) {
-          cVar1 = FUN_18182a3a0(lVar3,*(uint32 *)(*(int64 *)(hero + 64) + 16),DAT_181d7ae88)
+          cVar1 = FUN_18182a9b0(lVar3,*(uint32 *)(*(int64 *)(hero + 64) + 16),DAT_181d7aea0)
           ;
           if (!cVar1) {
             return;
@@ -1237,13 +1237,13 @@ public class AIController
                ) {
               lVar3 = WorldData.GetHero(lVar3,uVar2,0);
               if (lVar3 == null) {
-        LAB_1813ddb40:
+        LAB_1813de150:
                 HeroData.ResetAI(hero,0);
                 return;
               }
               if ((lVar3.ResourcePoints != null) && (*(int64 *)(hero + 64) != 0)) {
                 if (*(int *)(lVar3.ResourcePoints + 16) !=
-                    *(int *)(*(int64 *)(hero + 64) + 16)) goto LAB_1813ddb40;
+                    *(int *)(*(int64 *)(hero + 64) + 16)) goto LAB_1813de150;
                 lVar4 = FUN_18046c0a0(0);
                 if (lVar4 != null) {
                   lVar4 = *(int64 *)(lVar4 + 32);
@@ -1254,7 +1254,7 @@ public class AIController
                     if (lVar3 == hero) {
                       return;
                     }
-                    goto LAB_1813ddb40;
+                    goto LAB_1813de150;
                   }
                 }
               }
@@ -1264,7 +1264,7 @@ public class AIController
     }
 
     // Token : 0x60009EB
-    // RVA   : 0x13E55F0   Offset: 0x13E49F0   Length: 0x59F
+    // RVA   : 0x13E5C00   Offset: 0x13E5000   Length: 0x59F
     public int GetRandomMoveTargetArea(HeroData hero)
     {
         bool cVar1;
@@ -1275,8 +1275,8 @@ public class AIController
         long lVar6;
         int iVar7;
         if (PlotController.fightSkillIndexCache == 1) {
-          lVar4 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar4,DAT_181d8f098);
+          lVar4 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar4,DAT_181d8f0b0);
           iVar7 = 0;
           while( true ) {
             if ((((GameController._instance == null) || (hero == null)) ||
@@ -1289,18 +1289,18 @@ public class AIController
                  (lVar6 = GameController._instance.worldData) == null) ||
                 (lVar6 = WorldData.GetArea(lVar6,*(uint32 *)(hero + 192),0)) == null) ||
                ((lVar6.gameDifficulty == null ||
-                (uVar3 = FUN_1800d6760(lVar6.gameDifficulty,iVar7,DAT_181d8fa18), lVar5 == null))))
+                (uVar3 = FUN_1800d6760(lVar6.gameDifficulty,iVar7,DAT_181d8fa30), lVar5 == null))))
             throw; // [null/range check failed]
-            cVar1 = FUN_18182a3a0(lVar5,uVar3);
+            cVar1 = FUN_18182a9b0(lVar5,uVar3);
             if (cVar1) {
               lVar5 = FUN_18046c0a0(0);
               if ((((lVar5 == null) || (lVar5.villageAreaID == null)) ||
                   (lVar5 = WorldData.GetArea(lVar5.villageAreaID,*(uint32 *)(hero + 192),
                                               0), lVar5 == null)) ||
                  ((lVar5.gameDifficulty == null ||
-                  (uVar3 = FUN_1800d6760(lVar5.gameDifficulty,iVar7,DAT_181d8fa18), lVar4 == null))))
+                  (uVar3 = FUN_1800d6760(lVar5.gameDifficulty,iVar7,DAT_181d8fa30), lVar4 == null))))
               throw; // [null/range check failed]
-              FUN_18182a0b0(lVar4,uVar3);
+              FUN_18182a6c0(lVar4,uVar3);
             }
             iVar7 = iVar7 + 1;
           }
@@ -1316,7 +1316,7 @@ public class AIController
             lVar4 = PlotController._instance;
             if (lVar4 != null) {
               uVar2 = GlobalData.RandomRange(0,lVar4.cityAreaID,0,0);
-              goto LAB_1813e5b1b;
+              goto LAB_1813e612b;
             }
           }
         }
@@ -1332,7 +1332,7 @@ public class AIController
               uVar3 = *(uint32 *)(lVar5.gameDifficulty + 24);
               uVar2 = GlobalData.RandomRange(0,uVar3,0,0);
               if (lVar4 != null) {
-        LAB_1813e5b1b:
+        LAB_1813e612b:
                 if (lVar4.cityAreaID <= uVar2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
@@ -1344,7 +1344,7 @@ public class AIController
     }
 
     // Token : 0x60009EC
-    // RVA   : 0x13DD4F0   Offset: 0x13DC8F0   Length: 0x157
+    // RVA   : 0x13DDB00   Offset: 0x13DCF00   Length: 0x157
     public bool CanLeaveArea()
     {
         long lVar1;
@@ -1364,7 +1364,7 @@ public class AIController
     }
 
     // Token : 0x60009ED
-    // RVA   : 0x13EAC80   Offset: 0x13EA080   Length: 0x908
+    // RVA   : 0x13EB290   Offset: 0x13EA690   Length: 0x908
     public void ManageAIUsePoison(HeroData hero)
     {
         bool cVar2;
@@ -1386,8 +1386,8 @@ public class AIController
           if ((double)fVar13 <= dVar14) {
             return;
           }
-          lVar5 = il2cpp_internal(DAT_181d940d0);
-          FUN_18132faf0(lVar5,DAT_181d90998);
+          lVar5 = il2cpp_internal(DAT_181d940e8);
+          FUN_181330100(lVar5,DAT_181d909b0);
           uVar10 = 0;
           lVar11 = 32;
           lVar8 = 32;
@@ -1398,13 +1398,13 @@ public class AIController
             if ((int)*(uint32 *)(lVar6 + 24) <= (int)uVar9) {
               lVar8 = 32;
               uVar9 = uVar10;
-              goto LAB_1813eaed0;
+              goto LAB_1813eb4e0;
             }
             if (*(uint32 *)(lVar6 + 24) <= uVar9) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (*(int64 *)(*(int64 *)(lVar6 + 16) + lVar8) == 0) {
-        LAB_1813eaeaf:
+        LAB_1813eb4bf:
               uVar9 = uVar9 + 1;
               lVar8 = lVar8 + 8;
             }
@@ -1416,33 +1416,33 @@ public class AIController
                   (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 96) + 64)) == null))) break;
               if (0.0 < *(float *)(lVar6 + 16)) {
                 uVar12 = uVar12 + 1;
-                goto LAB_1813eaeaf;
+                goto LAB_1813eb4bf;
               }
               if (((*(int64 *)(hero + 0x1f8) == 0) ||
                   (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 32)) == null) ||
-                 (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f18), lVar5 == null)) break;
-              FUN_18181e0a0(lVar5,uVar7);
+                 (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f30), lVar5 == null)) break;
+              FUN_18181e6b0(lVar5,uVar7);
               uVar9 = uVar9 + 1;
               lVar8 = lVar8 + 8;
             }
           }
         }
-        LAB_1813eb583:
+        LAB_1813ebb93:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_1813eaed0:
+        LAB_1813eb4e0:
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
-           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 56)) == null) goto LAB_1813eb583;
+           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 56)) == null) goto LAB_1813ebb93;
         if ((int)*(uint32 *)(lVar6 + 24) <= (int)uVar9) {
           lVar8 = 32;
           uVar9 = uVar10;
-          goto LAB_1813eafe0;
+          goto LAB_1813eb5f0;
         }
         if (*(uint32 *)(lVar6 + 24) <= uVar9) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         if (*(int64 *)(*(int64 *)(lVar6 + 16) + lVar8) == 0) {
-        LAB_1813eafbf:
+        LAB_1813eb5cf:
           uVar9 = uVar9 + 1;
           lVar8 = lVar8 + 8;
         }
@@ -1452,32 +1452,32 @@ public class AIController
               (lVar6 = FUN_180002f80(lVar6,uVar9)) == null) ||
              ((*(int64 *)(lVar6 + 96) == 0 ||
               (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 96) + 64)) == null)))
-          goto LAB_1813eb583;
+          goto LAB_1813ebb93;
           if (0.0 < *(float *)(lVar6 + 16)) {
             uVar12 = uVar12 + 1;
-            goto LAB_1813eafbf;
+            goto LAB_1813eb5cf;
           }
           if (((*(int64 *)(hero + 0x1f8) == 0) ||
               (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 56)) == null) ||
-             (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f18), lVar5 == null)) goto LAB_1813eb583;
-          FUN_18181e0a0(lVar5,uVar7);
+             (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f30), lVar5 == null)) goto LAB_1813ebb93;
+          FUN_18181e6b0(lVar5,uVar7);
           uVar9 = uVar9 + 1;
           lVar8 = lVar8 + 8;
         }
-        goto LAB_1813eaed0;
-        LAB_1813eafe0:
+        goto LAB_1813eb4e0;
+        LAB_1813eb5f0:
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
-           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 80)) == null) goto LAB_1813eb583;
+           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 80)) == null) goto LAB_1813ebb93;
         if ((int)*(uint32 *)(lVar6 + 24) <= (int)uVar9) {
           lVar8 = 32;
           uVar9 = uVar10;
-          goto LAB_1813eb0f0;
+          goto LAB_1813eb700;
         }
         if (*(uint32 *)(lVar6 + 24) <= uVar9) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         if (*(int64 *)(*(int64 *)(lVar6 + 16) + lVar8) == 0) {
-        LAB_1813eb0cf:
+        LAB_1813eb6df:
           uVar9 = uVar9 + 1;
           lVar8 = lVar8 + 8;
         }
@@ -1487,28 +1487,28 @@ public class AIController
               (lVar6 = FUN_180002f80(lVar6,uVar9)) == null) ||
              ((*(int64 *)(lVar6 + 96) == 0 ||
               (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 96) + 64)) == null)))
-          goto LAB_1813eb583;
+          goto LAB_1813ebb93;
           if (0.0 < *(float *)(lVar6 + 16)) {
             uVar12 = uVar12 + 1;
-            goto LAB_1813eb0cf;
+            goto LAB_1813eb6df;
           }
           if (((*(int64 *)(hero + 0x1f8) == 0) ||
               (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 80)) == null) ||
-             (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f18), lVar5 == null)) goto LAB_1813eb583;
-          FUN_18181e0a0(lVar5,uVar7);
+             (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f30), lVar5 == null)) goto LAB_1813ebb93;
+          FUN_18181e6b0(lVar5,uVar7);
           uVar9 = uVar9 + 1;
           lVar8 = lVar8 + 8;
         }
-        goto LAB_1813eafe0;
-        LAB_1813eb0f0:
+        goto LAB_1813eb5f0;
+        LAB_1813eb700:
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
-           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 104)) == null) goto LAB_1813eb583;
-        if ((int)*(uint32 *)(lVar6 + 24) <= (int)uVar9) goto LAB_1813eb200;
+           (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 104)) == null) goto LAB_1813ebb93;
+        if ((int)*(uint32 *)(lVar6 + 24) <= (int)uVar9) goto LAB_1813eb810;
         if (*(uint32 *)(lVar6 + 24) <= uVar9) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         if (*(int64 *)(*(int64 *)(lVar6 + 16) + lVar8) == 0) {
-        LAB_1813eb1df:
+        LAB_1813eb7ef:
           uVar9 = uVar9 + 1;
           lVar8 = lVar8 + 8;
         }
@@ -1518,25 +1518,25 @@ public class AIController
               (lVar6 = FUN_180002f80(lVar6,uVar9)) == null) ||
              ((*(int64 *)(lVar6 + 96) == 0 ||
               (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 96) + 64)) == null)))
-          goto LAB_1813eb583;
+          goto LAB_1813ebb93;
           if (0.0 < *(float *)(lVar6 + 16)) {
             uVar12 = uVar12 + 1;
-            goto LAB_1813eb1df;
+            goto LAB_1813eb7ef;
           }
           if (((*(int64 *)(hero + 0x1f8) == 0) ||
               (lVar6 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 104)) == null) ||
-             (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f18), lVar5 == null)) goto LAB_1813eb583;
-          FUN_18181e0a0(lVar5,uVar7);
+             (uVar7 = FUN_180002f80(lVar6,uVar9,DAT_181d90f30), lVar5 == null)) goto LAB_1813ebb93;
+          FUN_18181e6b0(lVar5,uVar7);
           uVar9 = uVar9 + 1;
           lVar8 = lVar8 + 8;
         }
-        goto LAB_1813eb0f0;
-        LAB_1813eb200:
+        goto LAB_1813eb700;
+        LAB_1813eb810:
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
-           (lVar8 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null) goto LAB_1813eb583;
+           (lVar8 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null) goto LAB_1813ebb93;
         if ((int)*(uint32 *)(lVar8 + 24) <= (int)uVar10) {
           if ((int)uVar12 <= *(int *)(hero + 184)) {
-            if (lVar5 == null) goto LAB_1813eb583;
+            if (lVar5 == null) goto LAB_1813ebb93;
             iVar3 = *(int *)(lVar5 + 24);
             if (0 < iVar3) {
               uVar9 = GlobalData.RandomRange(0,iVar3,0,0);
@@ -1544,56 +1544,56 @@ public class AIController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar5 = lVar5[uVar9];
-              goto LAB_1813eb36c;
+              goto LAB_1813eb97c;
             }
           }
-          lVar5 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 48);
-          if (lVar5 == null) goto LAB_1813eb583;
+          lVar5 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 48);
+          if (lVar5 == null) goto LAB_1813ebb93;
           uVar4 = *(uint32 *)(lVar5 + 24);
           uVar9 = GlobalData.RandomRange(0,uVar4,0,0);
           if (*(uint32 *)(lVar5 + 24) <= uVar9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (*(int64 *)(hero + 0x220) == 0) goto LAB_1813eb583;
+          if (*(int64 *)(hero + 0x220) == 0) goto LAB_1813ebb93;
           lVar8 = *(int64 *)(*(int64 *)(hero + 0x220) + 48);
           uVar9 = lVar5[uVar9];
           lVar5 = (int64)(int)uVar9;
-          if (lVar8 == null) goto LAB_1813eb583;
+          if (lVar8 == null) goto LAB_1813ebb93;
           if (*(uint32 *)(lVar8 + 24) <= uVar9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar8 = *(int64 *)(*(int64 *)(lVar8 + 16) + 32 + lVar5 * 8);
-          if (lVar8 == null) goto LAB_1813eb583;
+          if (lVar8 == null) goto LAB_1813ebb93;
           if (*(int *)(lVar8 + 24) < 1) {
             return;
           }
           lVar8 = *(int64 *)(hero + 0x220);
-          if ((lVar8 == null) || (lVar11 = *(int64 *)(lVar8 + 48)) == null) goto LAB_1813eb583;
+          if ((lVar8 == null) || (lVar11 = *(int64 *)(lVar8 + 48)) == null) goto LAB_1813ebb93;
           if (*(uint32 *)(lVar11 + 24) <= uVar9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
             lVar8 = *(int64 *)(hero + 0x220);
           }
           lVar11 = *(int64 *)(*(int64 *)(lVar11 + 16) + 32 + lVar5 * 8);
-          if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 48)) == null) goto LAB_1813eb583;
+          if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 48)) == null) goto LAB_1813ebb93;
           if (*(uint32 *)(lVar8 + 24) <= uVar9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar5 = *(int64 *)(*(int64 *)(lVar8 + 16) + 32 + lVar5 * 8);
-          if (lVar5 == null) goto LAB_1813eb583;
+          if (lVar5 == null) goto LAB_1813ebb93;
           uVar4 = *(uint32 *)(lVar5 + 24);
           uVar9 = GlobalData.RandomRange(0,uVar4,0,0);
-          if (lVar11 == null) goto LAB_1813eb583;
+          if (lVar11 == null) goto LAB_1813ebb93;
           if (*(uint32 *)(lVar11 + 24) <= uVar9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar5 = lVar11[uVar9];
-          if (lVar5 == null) goto LAB_1813eb583;
+          if (lVar5 == null) goto LAB_1813ebb93;
           if (*(int *)(lVar5 + 20) == 0) {
             lVar8 = *(int64 *)(lVar5 + 96);
-            if ((lVar8 == null) || (*(int64 *)(lVar8 + 64) == 0)) goto LAB_1813eb583;
+            if ((lVar8 == null) || (*(int64 *)(lVar8 + 64) == 0)) goto LAB_1813ebb93;
             pfVar1 = (float *)(*(int64 *)(lVar8 + 64) + 16);
             if (*pfVar1 <= 0.0 && *pfVar1 != 0.0) {
-        LAB_1813eb36c:
+        LAB_1813eb97c:
               HeroData.ManagePoisonEquipment(hero,lVar5,0);
               return;
             }
@@ -1602,7 +1602,7 @@ public class AIController
           else {
             if (*(int *)(lVar5 + 20) == 6)
             {
-              if (*(int64 *)(lVar5 + 136) == 0) goto LAB_1813eb583;
+              if (*(int64 *)(lVar5 + 136) == 0) goto LAB_1813ebb93;
               cVar2 = *(char *)(*(int64 *)(lVar5 + 136) + 16);
               }
               if (cVar2) {
@@ -1616,7 +1616,7 @@ public class AIController
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         if (*(int64 *)(lVar11 + *(int64 *)(lVar8 + 16)) == 0) {
-        LAB_1813eb2f8:
+        LAB_1813eb908:
           uVar10 = uVar10 + 1;
           lVar11 = lVar11 + 8;
         }
@@ -1626,23 +1626,23 @@ public class AIController
               (lVar8 = FUN_180002f80(lVar8,uVar10)) == null) ||
              ((*(int64 *)(lVar8 + 96) == 0 ||
               (lVar8 = *(int64 *)(*(int64 *)(lVar8 + 96) + 64)) == null)))
-          goto LAB_1813eb583;
+          goto LAB_1813ebb93;
           if (0.0 < *(float *)(lVar8 + 16)) {
             uVar12 = uVar12 + 1;
-            goto LAB_1813eb2f8;
+            goto LAB_1813eb908;
           }
           if (((*(int64 *)(hero + 0x1f8) == 0) ||
               (lVar8 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null) ||
-             (uVar7 = FUN_180002f80(lVar8,uVar10,DAT_181d90f18), lVar5 == null)) goto LAB_1813eb583;
-          FUN_18181e0a0(lVar5,uVar7);
+             (uVar7 = FUN_180002f80(lVar8,uVar10,DAT_181d90f30), lVar5 == null)) goto LAB_1813ebb93;
+          FUN_18181e6b0(lVar5,uVar7);
           uVar10 = uVar10 + 1;
           lVar11 = lVar11 + 8;
         }
-        goto LAB_1813eb200;
+        goto LAB_1813eb810;
     }
 
     // Token : 0x60009EE
-    // RVA   : 0x13DD870   Offset: 0x13DCC70   Length: 0xE3
+    // RVA   : 0x13DDE80   Offset: 0x13DD280   Length: 0xE3
     public bool CheckHeroNeedMove(HeroData hero)
     {
         long lVar1;
@@ -1664,7 +1664,7 @@ public class AIController
     }
 
     // Token : 0x60009EF
-    // RVA   : 0x13E5360   Offset: 0x13E4760   Length: 0x143
+    // RVA   : 0x13E5970   Offset: 0x13E4D70   Length: 0x143
     public bool ForceHaveResourceRateLessThan(HeroData hero, float rate)
     {
         uint64 AIController.ForceHaveResourceRateLessThan
@@ -1678,14 +1678,14 @@ public class AIController
         if (hero != null) {
           uVar2 = HeroData.HaveForce(hero,0);
           if ((char)!uVar2) {
-        LAB_1813e549a:
+        LAB_1813e5aaa:
             return uVar2 & 0xffffffffffffff00;
           }
           uVar4 = 0;
           lVar5 = 32;
           while ((lVar3 = HeroData.GetForce(hero,0,0), lVar3 != null &&
                  (uVar2 = *(uint64 *)(lVar3 + 136)) != null)) {
-            if (*(int *)(uVar2 + 24) <= (int)uVar4) goto LAB_1813e549a;
+            if (*(int *)(uVar2 + 24) <= (int)uVar4) goto LAB_1813e5aaa;
             lVar3 = HeroData.GetForce(hero,0,0);
             if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 136)) == null) break;
             if (*(uint32 *)(lVar3 + 24) <= uVar4) {
@@ -1707,7 +1707,7 @@ public class AIController
     }
 
     // Token : 0x60009F0
-    // RVA   : 0x13E70D0   Offset: 0x13E64D0   Length: 0x14E8
+    // RVA   : 0x13E76E0   Offset: 0x13E6AE0   Length: 0x14E8
     public void ManageAIStuff(HeroData hero)
     {
         var plVar13 = *(int64*)(lVar13 + 184);
@@ -1750,9 +1750,9 @@ public class AIController
         local_res20[0] = 0;
         uVar8 = new HeroAIData(0,0,0);
         AIController.SetAIStuff(this,hero,uVar8,0,0);
-        lVar9 = il2cpp_internal(DAT_181d90960);
+        lVar9 = il2cpp_internal(DAT_181d90978);
         local_e8 = lVar9;
-        FUN_18132faf0(lVar9,DAT_181d7ad88);
+        FUN_181330100(lVar9,DAT_181d7ada0);
         if (hero != null) {
           lVar10 = HeroData.GetForce(hero,0,0);
           cVar3 = HeroData.NoLoyal(hero,0);
@@ -1764,7 +1764,7 @@ public class AIController
                 uVar18 = uVar19;
                 do {
                   if (lVar9 == null) throw; // [null/range check failed]
-                  FUN_18182a0b0(lVar9,2,DAT_181d7ae08);
+                  FUN_18182a6c0(lVar9,2,DAT_181d7ae20);
                   uVar18 = uVar18 + 1;
                 } while ((int)uVar18 < 1);
               }
@@ -1775,7 +1775,7 @@ public class AIController
               if (0 < iVar4) {
                 do {
                   if (lVar9 == null) throw; // [null/range check failed]
-                  FUN_18182a0b0(lVar9,2,DAT_181d7ae08);
+                  FUN_18182a6c0(lVar9,2,DAT_181d7ae20);
                   uVar18 = uVar18 + 1;
                 } while ((int)uVar18 < iVar4);
               }
@@ -1785,7 +1785,7 @@ public class AIController
             uVar18 = uVar19;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,2,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,2,DAT_181d7ae20);
               uVar18 = uVar18 + 1;
             } while ((int)uVar18 < 1);
           }
@@ -1798,7 +1798,7 @@ public class AIController
             if (0 < iVar5) {
               do {
                 if (lVar9 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar9,3,DAT_181d7ae08);
+                FUN_18182a6c0(lVar9,3,DAT_181d7ae20);
                 uVar18 = uVar18 + 1;
               } while ((int)uVar18 < iVar5);
             }
@@ -1815,7 +1815,7 @@ public class AIController
             if (0 < iVar5) {
               do {
                 if (lVar9 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar9,4,DAT_181d7ae08);
+                FUN_18182a6c0(lVar9,4,DAT_181d7ae20);
                 uVar18 = uVar18 + 1;
               } while ((int)uVar18 < iVar5);
             }
@@ -1853,9 +1853,9 @@ public class AIController
                 auVar1._0_4_ = (fVar26 + 1.0) * (float)iVar5;
                 iVar5 = Mathf.RoundToInt(auVar1._0_8_,0);
                 lVar9 = local_e8;
-                if (iVar5 < 1) goto LAB_1813e78b8;
+                if (iVar5 < 1) goto LAB_1813e7ec8;
                 iVar4 = 0;
-                goto LAB_1813e7895;
+                goto LAB_1813e7ea5;
               }
               if (*(uint32 *)(lVar11 + 24) <= uVar19) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1874,20 +1874,20 @@ public class AIController
         }
         throw; // [null/range check failed]
         while( true ) {
-          FUN_18182a0b0(lVar9,5,DAT_181d7ae08);
+          FUN_18182a6c0(lVar9,5,DAT_181d7ae20);
           iVar4 = iVar4 + 1;
           if (iVar5 <= iVar4) break;
-        LAB_1813e7895:
+        LAB_1813e7ea5:
           if (lVar9 == null) throw; // [null/range check failed]
         }
-        LAB_1813e78b8:
+        LAB_1813e7ec8:
         iVar5 = HeroData.GetAISettingPriorityLv(hero,1);
         iVar5 = Mathf.RoundToInt((2.0 - fVar26) * (float)iVar5,0);
         if (0 < iVar5) {
           iVar4 = 0;
           do {
             if (lVar9 == null) throw; // [null/range check failed]
-            FUN_18182a0b0(lVar9,18,DAT_181d7ae08);
+            FUN_18182a6c0(lVar9,18,DAT_181d7ae20);
             iVar4 = iVar4 + 1;
           } while (iVar4 < iVar5);
         }
@@ -1896,7 +1896,7 @@ public class AIController
           iVar4 = 0;
           do {
             if (lVar9 == null) throw; // [null/range check failed]
-            FUN_18182a0b0(lVar9,6,DAT_181d7ae08);
+            FUN_18182a6c0(lVar9,6,DAT_181d7ae20);
             iVar4 = iVar4 + 1;
           } while (iVar4 < iVar5);
         }
@@ -1909,7 +1909,7 @@ public class AIController
           iVar4 = 0;
           do {
             if (lVar9 == null) throw; // [null/range check failed]
-            FUN_18182a0b0(lVar9,8,DAT_181d7ae08);
+            FUN_18182a6c0(lVar9,8,DAT_181d7ae20);
             iVar4 = iVar4 + 1;
           } while (iVar4 < iVar5);
         }
@@ -1938,7 +1938,7 @@ public class AIController
             iVar20 = 0;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,9,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,9,DAT_181d7ae20);
               iVar20 = iVar20 + 1;
             } while (iVar20 < iVar4 * iVar5);
           }
@@ -1947,7 +1947,7 @@ public class AIController
             iVar4 = 0;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,10,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,10,DAT_181d7ae20);
               iVar4 = iVar4 + 1;
             } while (iVar4 < iVar5);
           }
@@ -1956,7 +1956,7 @@ public class AIController
             iVar4 = 0;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,11,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,11,DAT_181d7ae20);
               iVar4 = iVar4 + 1;
             } while (iVar4 < iVar5);
           }
@@ -1965,7 +1965,7 @@ public class AIController
             iVar4 = 0;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,12,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,12,DAT_181d7ae20);
               iVar4 = iVar4 + 1;
             } while (iVar4 < iVar5);
           }
@@ -1974,7 +1974,7 @@ public class AIController
             iVar4 = 0;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,14,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,14,DAT_181d7ae20);
               iVar4 = iVar4 + 1;
             } while (iVar4 < iVar5);
           }
@@ -1983,7 +1983,7 @@ public class AIController
             iVar4 = 0;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,15,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,15,DAT_181d7ae20);
               iVar4 = iVar4 + 1;
             } while (iVar4 < iVar5);
           }
@@ -2000,7 +2000,7 @@ public class AIController
             iVar4 = 0;
             do {
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,17,DAT_181d7ae08);
+              FUN_18182a6c0(lVar9,17,DAT_181d7ae20);
               iVar4 = iVar4 + 1;
             } while (iVar4 < iVar5);
           }
@@ -2022,7 +2022,7 @@ public class AIController
               iVar20 = 0;
               do {
                 if (lVar9 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar9,7,DAT_181d7ae08);
+                FUN_18182a6c0(lVar9,7,DAT_181d7ae20);
                 iVar20 = iVar20 + 1;
               } while (iVar20 < iVar5 * iVar4);
             }
@@ -2033,7 +2033,7 @@ public class AIController
                 iVar4 = 0;
                 do {
                   if (lVar9 == null) throw; // [null/range check failed]
-                  FUN_18182a0b0(lVar9,19,DAT_181d7ae08);
+                  FUN_18182a6c0(lVar9,19,DAT_181d7ae20);
                   iVar4 = iVar4 + 1;
                 } while (iVar4 < iVar5);
               }
@@ -2042,7 +2042,7 @@ public class AIController
                 iVar4 = 0;
                 do {
                   if (lVar9 == null) throw; // [null/range check failed]
-                  FUN_18182a0b0(lVar9,20,DAT_181d7ae08);
+                  FUN_18182a6c0(lVar9,20,DAT_181d7ae20);
                   iVar4 = iVar4 + 1;
                 } while (iVar4 < iVar5);
               }
@@ -2080,14 +2080,14 @@ public class AIController
             Mathf.Max();
             if (lVar10 != null) {
               if (*(int64 *)(lVar10 + 248) == 0) throw; // [null/range check failed]
-              FUN_18182a3a0(*(int64 *)(lVar10 + 248),8,DAT_181d8f398);
+              FUN_18182a9b0(*(int64 *)(lVar10 + 248),8,DAT_181d8f3b0);
             }
             iVar5 = Mathf.RoundToInt();
             if (0 < iVar5) {
               iVar4 = 0;
               do {
                 if (lVar9 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar9,21,DAT_181d7ae08);
+                FUN_18182a6c0(lVar9,21,DAT_181d7ae20);
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar5);
             }
@@ -2124,14 +2124,14 @@ public class AIController
             Mathf.Max();
             if (lVar10 != null) {
               if (*(int64 *)(lVar10 + 248) == 0) throw; // [null/range check failed]
-              FUN_18182a3a0(*(int64 *)(lVar10 + 248),7,DAT_181d8f398);
+              FUN_18182a9b0(*(int64 *)(lVar10 + 248),7,DAT_181d8f3b0);
             }
             iVar5 = Mathf.RoundToInt();
             if (0 < iVar5) {
               iVar4 = 0;
               do {
                 if (lVar9 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar9,22,DAT_181d7ae08);
+                FUN_18182a6c0(lVar9,22,DAT_181d7ae20);
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar5);
             }
@@ -2154,7 +2154,7 @@ public class AIController
             if (*(uint32 *)(lVar12 + 24) < 3) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            if (fVar26 / *(float *)(*(int64 *)(lVar12 + 16) + 40) < 0.5) goto LAB_1813e84b9;
+            if (fVar26 / *(float *)(*(int64 *)(lVar12 + 16) + 40) < 0.5) goto LAB_1813e8ac9;
             lVar11 = *(int64 *)(lVar10 + 136);
             if (lVar11 == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar11 + 24) < 4) {
@@ -2180,25 +2180,25 @@ public class AIController
             Mathf.Max();
             if (lVar10 != null) {
               if (*(int64 *)(lVar10 + 248) == 0) throw; // [null/range check failed]
-              FUN_18182a3a0(*(int64 *)(lVar10 + 248),6,DAT_181d8f398);
+              FUN_18182a9b0(*(int64 *)(lVar10 + 248),6,DAT_181d8f3b0);
             }
             iVar5 = Mathf.RoundToInt();
             if (0 < iVar5) {
               iVar4 = 0;
               do {
                 if (lVar9 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar9,23,DAT_181d7ae08);
+                FUN_18182a6c0(lVar9,23,DAT_181d7ae20);
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar5);
             }
           }
-        LAB_1813e84b9:
+        LAB_1813e8ac9:
           local_100 = 0;
-          lVar11 = il2cpp_internal(DAT_181d97750);
+          lVar11 = il2cpp_internal(DAT_181d97768);
           local_f8 = lVar11;
-          FUN_18132faf0(lVar11,DAT_181da3bd8);
+          FUN_181330100(lVar11,DAT_181da3bf0);
           do {
-            lVar12 = il2cpp_internal(DAT_181dc0cd8);
+            lVar12 = il2cpp_internal(DAT_181dc0cf0);
             local_f0 = lVar12;
             c__DisplayClass9_0.ctor(lVar12,0);
             if (lVar9 == null) throw; // [null/range check failed]
@@ -2207,7 +2207,7 @@ public class AIController
             uVar6 = FUN_1800d6760(lVar9,uVar6);
             if ((lVar12 == null) || (*(uint32 *)(lVar12 + 16) = uVar6, lVar11 == null))
             throw; // [null/range check failed]
-            FUN_1812f9a10(lVar11);
+            FUN_1812fa020(lVar11);
             switch(*(uint32 *)(lVar12 + 16)) {
             case 2:
               GlobalData.RandomRange(2,5,0);
@@ -2223,7 +2223,7 @@ public class AIController
             case 5:
               iVar5 = HeroData.GetAISettingFocus(hero,1);
               if (iVar5 < 0) {
-        LAB_1813e8779:
+        LAB_1813e8d89:
                 iVar5 = 0;
                 while( true ) {
                   lVar12 = *(int64 *)(hero + 0x260);
@@ -2234,51 +2234,51 @@ public class AIController
                   if (*(int *)(lVar12 + 20) < 10) {
                     lVar12 = *(int64 *)(hero + 0x108);
                     if (((*(int64 *)(hero + 0x260) == 0) ||
-                        (lVar13 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                        (lVar13 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                         lVar13 == null)) || (uVar6 = KungfuSkillLvData.Type(lVar13,0), lVar12 == null))
                     throw; // [null/range check failed]
-                    cVar3 = FUN_18182a3a0(lVar12,uVar6,DAT_181d8f398);
+                    cVar3 = FUN_18182a9b0(lVar12,uVar6,DAT_181d8f3b0);
                     if ((!cVar3) && (lVar12 = HeroData.GetForce(hero,0,0)) != null) {
                       lVar12 = HeroData.GetForce(hero,0,0);
                       if (lVar12 == null) throw; // [null/range check failed]
                       lVar12 = *(int64 *)(lVar12 + 240);
                       if (((*(int64 *)(hero + 0x260) == 0) ||
-                          (lVar13 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                          (lVar13 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                           lVar13 == null)) || (uVar6 = KungfuSkillLvData.Type(lVar13,0), lVar12 == null))
                       throw; // [null/range check failed]
-                      FUN_18182a3a0(lVar12,uVar6,DAT_181d8f398);
+                      FUN_18182a9b0(lVar12,uVar6,DAT_181d8f3b0);
                     }
                     if (((((*(int64 *)(hero + 0x260) == 0) ||
-                          (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                          (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                           lVar12 == null)) || (lVar12 = KungfuSkillLvData.DataBase(lVar12,0)) == null)
                         || ((*(int *)(lVar12 + 52) != *(int *)(hero + 184) &&
                             (((*(int64 *)(hero + 0x260) == 0 ||
-                              (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                              (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                               lVar12 == null)) ||
                              (lVar12 = KungfuSkillLvData.DataBase(lVar12,0)) == null))))) ||
                        (((cVar3 = HeroData.HaveSkillForce(hero,0), cVar3 &&
                          (((*(int64 *)(hero + 0x260) == 0 ||
-                           (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                           (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                            lVar12 == null)) || (lVar12 = KungfuSkillLvData.DataBase(lVar12,0)) == null)
                          )) || (((((*(int64 *)(hero + 0x260) == 0 ||
                                    (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,
-                                                           DAT_181d92590), lVar12 == null)) ||
+                                                           DAT_181d925a8), lVar12 == null)) ||
                                   (*(int64 *)(hero + 0x260) == 0)) ||
                                  ((lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,
-                                                          DAT_181d92590), lVar12 == null ||
+                                                          DAT_181d925a8), lVar12 == null ||
                                   (*(int64 *)(hero + 0x260) == 0)))) ||
-                                (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590
+                                (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8
                                                        ), lVar12 == null)))))) throw; // [null/range check failed]
                     Mathf.Max(0,4 - *(int *)(lVar12 + 20),0);
                     lVar12 = *(int64 *)(hero + 0x118);
                     if (((*(int64 *)(hero + 0x260) == 0) ||
-                        (lVar13 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                        (lVar13 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                         lVar13 == null)) ||
                        ((lVar13 = KungfuSkillLvData.DataBase(lVar13,0), lVar13 == null || (lVar12 == null))))
                     throw; // [null/range check failed]
-                    FUN_18181e400(lVar12,*(uint64 *)(lVar13 + 32),DAT_181da3e58);
+                    FUN_18181ea10(lVar12,*(uint64 *)(lVar13 + 32),DAT_181da3e70);
                     if ((*(int64 *)(hero + 0x260) == 0) ||
-                       (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                       (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                        lVar12 == null)) throw; // [null/range check failed]
                     KungfuSkillLvData.GetSkillNeedExpRate(lVar12,hero,0);
                     if ((*(int64 *)(hero + 0x260) == 0) ||
@@ -2291,10 +2291,10 @@ public class AIController
                     if (0.0 < fVar26) {
                       do {
                         if ((*(int64 *)(hero + 0x260) == 0) ||
-                           (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d92590),
+                           (lVar12 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5,DAT_181d925a8),
                            lVar12 == null)) throw; // [null/range check failed]
                         uVar8 = Int32.ToString(lVar12 + 16,0);
-                        FUN_18181e0a0(lVar11,uVar8);
+                        FUN_18181e6b0(lVar11,uVar8);
                         iVar4 = iVar4 + 1;
                       } while ((float)iVar4 < fVar26);
                     }
@@ -2303,30 +2303,30 @@ public class AIController
                 }
                 iVar5 = *(int *)(lVar11 + 24);
                 if (iVar5 < 1) {
-                  uVar17 = il2cpp_internal(DAT_181d9b7d0);
+                  uVar17 = il2cpp_internal(DAT_181d9b7e8);
                   lVar12 = local_f0;
-                  uVar8 = DAT_181d949b8;
-                  goto LAB_1813e8be8;
+                  uVar8 = DAT_181d94b50;
+                  goto LAB_1813e91f8;
                 }
                 uVar6 = GlobalData.RandomRange(0,iVar5,0,0);
-                uVar8 = FUN_180002f80(lVar11,uVar6,DAT_181da4358);
+                uVar8 = FUN_180002f80(lVar11,uVar6,DAT_181da4370);
               }
               else {
                 uVar6 = HeroData.GetAISettingFocus(hero,1);
                 lVar12 = HeroData.FindSkill(hero,uVar6,0);
                 if (lVar12 == null) throw; // [null/range check failed]
-                if (9 < *(int *)(lVar12 + 20)) goto LAB_1813e8779;
+                if (9 < *(int *)(lVar12 + 20)) goto LAB_1813e8d89;
                 local_res10[0] = HeroData.GetAISettingFocus(hero,1);
                 uVar8 = Int32.ToString(local_res10,0);
               }
               uVar6 = GlobalData.RandomRange(4,7,0);
               local_100 = il2cpp_internal(DAT_181d75da8);
               uVar17 = 5;
-              goto LAB_1813e875e;
+              goto LAB_1813e8d6e;
             case 6:
               iVar5 = HeroData.GetAISettingFocus(hero,2);
               if (iVar5 < 0) {
-        LAB_1813e8d2a:
+        LAB_1813e933a:
                 local_108[0] = 0;
                 while( true ) {
                   lVar13 = *(int64 *)(hero + 0x158);
@@ -2342,7 +2342,7 @@ public class AIController
                     uVar21 = (uint64)uVar19;
                     if (lVar10 != null) {
                       if (*(int64 *)(lVar10 + 248) == 0) throw; // [null/range check failed]
-                      cVar3 = FUN_18182a3a0(*(int64 *)(lVar10 + 248),local_108[0]);
+                      cVar3 = FUN_18182a9b0(*(int64 *)(lVar10 + 248),local_108[0]);
                       if (cVar3) {
                         uVar21 = (uint64)(uVar19 + 3);
                       }
@@ -2350,7 +2350,7 @@ public class AIController
                     if (0 < (int)uVar21) {
                       do {
                         Int32.ToString(local_108,0);
-                        FUN_18181e0a0(lVar11);
+                        FUN_18181e6b0(lVar11);
                         uVar21 = uVar21 - 1;
                       } while (uVar21 != 0);
                     }
@@ -2359,67 +2359,67 @@ public class AIController
                 }
                 iVar5 = *(int *)(lVar11 + 24);
                 if (iVar5 < 1) {
-                  uVar17 = il2cpp_internal(DAT_181d9b7d0);
-                  uVar8 = DAT_181d94ab8;
-                  goto LAB_1813e8be8;
+                  uVar17 = il2cpp_internal(DAT_181d9b7e8);
+                  uVar8 = DAT_181d94c50;
+                  goto LAB_1813e91f8;
                 }
                 uVar6 = GlobalData.RandomRange(0,iVar5,0,0);
-                uVar8 = FUN_180002f80(lVar11,uVar6,DAT_181da4358);
+                uVar8 = FUN_180002f80(lVar11,uVar6,DAT_181da4370);
               }
               else {
                 lVar13 = *(int64 *)(hero + 0x158);
                 uVar6 = HeroData.GetAISettingFocus(hero,2);
                 if (lVar13 == null) throw; // [null/range check failed]
-                fVar26 = (float)FUN_1800d6790(lVar13,uVar6,DAT_181da1078);
+                fVar26 = (float)FUN_1800d6790(lVar13,uVar6,DAT_181da1090);
                 uVar6 = HeroData.GetAISettingFocus(hero,2);
                 fVar24 = (float)HeroData.GetMaxLivingSkill(hero,uVar6,0);
-                if (fVar24 <= fVar26) goto LAB_1813e8d2a;
+                if (fVar24 <= fVar26) goto LAB_1813e933a;
                 local_res10[0] = HeroData.GetAISettingFocus(hero,2);
                 uVar8 = Int32.ToString(local_res10,0);
               }
               uVar6 = GlobalData.RandomRange(4,7,0);
               local_100 = il2cpp_internal(DAT_181d75da8);
               uVar17 = 6;
-              goto LAB_1813e875e;
+              goto LAB_1813e8d6e;
             case 7:
               iVar5 = HeroData.GetAISettingFocus(hero,3,0);
               if (iVar5 < 0) {
-        LAB_1813e8f8e:
+        LAB_1813e959e:
                 local_res20[0] = 0;
                 while( true ) {
                   if ((lVar10 == null) || (lVar13 = *(int64 *)(lVar10 + 136)) == null)
                   throw; // [null/range check failed]
                   if (*(int *)(lVar13 + 24) <= local_res20[0]) break;
-                  fVar26 = (float)FUN_1800d6790(lVar13,local_res20[0],DAT_181da1078);
+                  fVar26 = (float)FUN_1800d6790(lVar13,local_res20[0],DAT_181da1090);
                   if (*(int64 *)(lVar10 + 144) == 0) throw; // [null/range check failed]
                   fVar24 = (float)FUN_1800d6790(*(int64 *)(lVar10 + 144),local_res20[0]);
                   if (fVar26 / fVar24 < 0.95) {
                     uVar8 = Int32.ToString(local_res20,0);
-                    FUN_18181e0a0(lVar11,uVar8,DAT_181da3d58);
+                    FUN_18181e6b0(lVar11,uVar8,DAT_181da3d70);
                     if (*(int64 *)(lVar10 + 136) == 0) throw; // [null/range check failed]
                     fVar26 = (float)FUN_1800d6790(*(int64 *)(lVar10 + 136),local_res20[0],
-                                                  DAT_181da1078);
+                                                  DAT_181da1090);
                     if (*(int64 *)(lVar10 + 144) == 0) throw; // [null/range check failed]
                     fVar24 = (float)FUN_1800d6790(*(int64 *)(lVar10 + 144),local_res20[0],
-                                                  DAT_181da1078);
+                                                  DAT_181da1090);
                     if (fVar26 / fVar24 <= 0.15) {
                       lVar13 = 5;
                       do {
                         uVar8 = Int32.ToString(local_res20,0);
-                        FUN_18181e0a0(lVar11,uVar8,DAT_181da3d58);
+                        FUN_18181e6b0(lVar11,uVar8,DAT_181da3d70);
                         lVar13 = lVar13 + -1;
                       } while (lVar13 != null);
                     }
                     if (*(int64 *)(lVar10 + 136) == 0) throw; // [null/range check failed]
                     fVar26 = (float)FUN_1800d6790(*(int64 *)(lVar10 + 136),local_res20[0],
-                                                  DAT_181da1078);
+                                                  DAT_181da1090);
                     if (*(int64 *)(lVar10 + 152) == 0) throw; // [null/range check failed]
                     fVar24 = (float)FUN_1800d6790(*(int64 *)(lVar10 + 152),local_res20[0]);
                     if (fVar24 + fVar26 < 0.0) {
                       lVar13 = 5;
                       do {
                         Int32.ToString(local_res20,0);
-                        FUN_18181e0a0(lVar11);
+                        FUN_18181e6b0(lVar11);
                         lVar13 = lVar13 + -1;
                       } while (lVar13 != null);
                     }
@@ -2428,31 +2428,31 @@ public class AIController
                 }
                 iVar5 = *(int *)(lVar11 + 24);
                 if (iVar5 < 1) {
-                  uVar17 = il2cpp_internal(DAT_181d9b7d0);
-                  uVar8 = DAT_181d94b38;
-                  goto LAB_1813e8be8;
+                  uVar17 = il2cpp_internal(DAT_181d9b7e8);
+                  uVar8 = DAT_181d94cd0;
+                  goto LAB_1813e91f8;
                 }
                 uVar6 = GlobalData.RandomRange(0,iVar5,0,0);
-                uVar8 = FUN_180002f80(lVar11,uVar6,DAT_181da4358);
+                uVar8 = FUN_180002f80(lVar11,uVar6,DAT_181da4370);
               }
               else {
                 if (lVar10 == null) throw; // [null/range check failed]
                 lVar13 = *(int64 *)(lVar10 + 136);
                 uVar6 = HeroData.GetAISettingFocus(hero,3,0);
                 if (lVar13 == null) throw; // [null/range check failed]
-                fVar26 = (float)FUN_1800d6790(lVar13,uVar6,DAT_181da1078);
+                fVar26 = (float)FUN_1800d6790(lVar13,uVar6,DAT_181da1090);
                 lVar13 = *(int64 *)(lVar10 + 144);
                 uVar6 = HeroData.GetAISettingFocus(hero,3,0);
                 if (lVar13 == null) throw; // [null/range check failed]
-                fVar24 = (float)FUN_1800d6790(lVar13,uVar6,DAT_181da1078);
-                if (0.95 <= fVar26 / fVar24) goto LAB_1813e8f8e;
+                fVar24 = (float)FUN_1800d6790(lVar13,uVar6,DAT_181da1090);
+                if (0.95 <= fVar26 / fVar24) goto LAB_1813e959e;
                 local_res10[0] = HeroData.GetAISettingFocus(hero,3,0);
                 uVar8 = Int32.ToString(local_res10,0);
               }
               uVar6 = GlobalData.RandomRange(4,7,0);
               local_100 = il2cpp_internal(DAT_181d75da8);
               uVar17 = 7;
-        LAB_1813e875e:
+        LAB_1813e8d6e:
               HeroAIData.ctor(local_100,uVar17,uVar8,uVar6,0);
               break;
             case 8:
@@ -2469,8 +2469,8 @@ public class AIController
               break;
             case 11:
             case 12:
-              lVar12 = il2cpp_internal(DAT_181d93350);
-              FUN_18132faf0(lVar12,DAT_181d8b418);
+              lVar12 = il2cpp_internal(DAT_181d93368);
+              FUN_181330100(lVar12,DAT_181d8b430);
               iVar5 = 0;
               while( true ) {
                 lVar13 = FUN_18046c0a0(0);
@@ -2506,7 +2506,7 @@ public class AIController
                                                        *(uint32 *)(hero + 192),0), lVar13 == null ||
                           (uVar8 = AreaData.GetInsideHero(lVar13,iVar5,0), lVar12 == null))))
                       throw; // [null/range check failed]
-                      FUN_18181e0a0(lVar12,uVar8);
+                      FUN_18181e6b0(lVar12,uVar8);
                     }
                   }
                 }
@@ -2516,23 +2516,23 @@ public class AIController
               if (*(int *)(lVar12 + 24) < 1) {
                 lVar12 = AIController.InteractOtherHeroAiStuffType;
                 if (lVar12 == null) {
-                  uVar8 = **(uint64 **)(DAT_181dc0c50 + 184);
-                  lVar12 = new OnTooltipCB(uVar8,DAT_181d94838);
+                  uVar8 = **(uint64 **)(DAT_181dc0c68 + 184);
+                  lVar12 = new OnTooltipCB(uVar8,DAT_181d949d0);
                   AIController.InteractOtherHeroAiStuffType = lVar12;
                 }
-                FUN_18182e030(lVar9,lVar12,DAT_181d7af08);
+                FUN_18182e640(lVar9,lVar12,DAT_181d7af20);
                 if (AIController.NeedBigMapMoveAiStuffType == null) {
-                  uVar8 = **(uint64 **)(DAT_181dc0c50 + 184);
-                  uVar17 = new OnTooltipCB(uVar8,DAT_181d948b8);
+                  uVar8 = **(uint64 **)(DAT_181dc0c68 + 184);
+                  uVar17 = new OnTooltipCB(uVar8,DAT_181d94a50);
                   AIController.NeedBigMapMoveAiStuffType = uVar17;
                 }
-                FUN_18182e030(lVar9);
+                FUN_18182e640(lVar9);
               }
               else {
-                lVar9 = il2cpp_internal(DAT_181d93cd0);
-                FUN_18132faf0(lVar9,DAT_181d8f098);
+                lVar9 = il2cpp_internal(DAT_181d93ce8);
+                FUN_181330100(lVar9,DAT_181d8f0b0);
                 for (iVar5 = 0; iVar5 < *(int *)(lVar12 + 24); iVar5 = iVar5 + 1) {
-                  uVar8 = FUN_180002f80(lVar12,iVar5,DAT_181d8bb98);
+                  uVar8 = FUN_180002f80(lVar12,iVar5,DAT_181d8bbb0);
                   fVar26 = (float)HeroData.GetStartFavor(hero,uVar8,0);
                   lVar11 = FUN_180002f80(lVar12,iVar5);
                   if (lVar11 == null) throw; // [null/range check failed]
@@ -2550,7 +2550,7 @@ public class AIController
                         else {
                       }
                     fVar26 = (float)Mathf.Min();
-                    lVar11 = FUN_180002f80(lVar12,iVar5,DAT_181d8bb98);
+                    lVar11 = FUN_180002f80(lVar12,iVar5,DAT_181d8bbb0);
                     if (lVar11 == null) throw; // [null/range check failed]
                     cVar3 = HeroData.HaveHater(hero,*(uint32 *)(lVar11 + 88),0);
                     if (!cVar3) {
@@ -2573,7 +2573,7 @@ public class AIController
                     if (0.0 < fVar27) {
                       do {
                         if (lVar9 == null) throw; // [null/range check failed]
-                        FUN_18182a0b0(lVar9,iVar5);
+                        FUN_18182a6c0(lVar9,iVar5);
                         iVar4 = iVar4 + 1;
                       } while ((float)iVar4 < fVar27);
                     }
@@ -2583,8 +2583,8 @@ public class AIController
                 iVar5 = *(int *)(lVar9 + 24);
                 if (0 < iVar5) {
                   uVar6 = GlobalData.RandomRange(0,iVar5,0,0);
-                  uVar6 = FUN_1800d6760(lVar9,uVar6,DAT_181d8fa18);
-                  lVar9 = FUN_180002f80(lVar12,uVar6,DAT_181d8bb98);
+                  uVar6 = FUN_1800d6760(lVar9,uVar6,DAT_181d8fa30);
+                  lVar9 = FUN_180002f80(lVar12,uVar6,DAT_181d8bbb0);
                   HeroData.GetStartFavor(hero,lVar9,0);
                   dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
                   fVar26 = (float)Mathf.Min();
@@ -2610,11 +2610,11 @@ public class AIController
                     local_100 = new HeroAIData(13,uVar8,uVar6,0);
                   }
                 }
-                if (local_100 != 0) goto LAB_1813eab8d;
+                if (local_100 != 0) goto LAB_1813eb19d;
                 uVar6 = *(uint32 *)(lVar12 + 24);
                 uVar7 = *(uint32 *)(local_f0 + 16);
                 uVar6 = GlobalData.RandomRange(0,uVar6,0,0);
-                lVar9 = FUN_180002f80(lVar12,uVar6,DAT_181d8bb98);
+                lVar9 = FUN_180002f80(lVar12,uVar6,DAT_181d8bbb0);
                 if (lVar9 == null) throw; // [null/range check failed]
                 uVar8 = Int32.ToString(lVar9 + 88,0);
                 uVar6 = GlobalData.RandomRange(3,5,0);
@@ -2653,15 +2653,15 @@ public class AIController
               }
               cVar3 = HeroData.IsPlayerSameForce(hero,0);
               if ((!cVar3) || (*(int *)(hero + 0x374) != 2)) {
-                lVar14 = il2cpp_internal(DAT_181d917d8);
-                FUN_18132faf0(lVar14,DAT_181d804a0);
+                lVar14 = il2cpp_internal(DAT_181d917f0);
+                FUN_181330100(lVar14,DAT_181d804b8);
                 if (lVar14 == null) throw; // [null/range check failed]
-                FUN_1817e98e0(lVar14,1,DAT_181d80520);
-                FUN_1817e98e0(lVar14,1,DAT_181d80520);
-                FUN_1817e98e0(lVar14,1,DAT_181d80520);
-                FUN_1817e98e0(lVar14,1,DAT_181d80520);
-                FUN_1817e98e0(lVar14,1,DAT_181d80520);
-                FUN_1817e98e0(lVar14,1,DAT_181d80520);
+                FUN_1817e9ef0(lVar14,1,DAT_181d80538);
+                FUN_1817e9ef0(lVar14,1,DAT_181d80538);
+                FUN_1817e9ef0(lVar14,1,DAT_181d80538);
+                FUN_1817e9ef0(lVar14,1,DAT_181d80538);
+                FUN_1817e9ef0(lVar14,1,DAT_181d80538);
+                FUN_1817e9ef0(lVar14,1,DAT_181d80538);
                 iVar5 = 0;
                 while( true ) {
                   if (*(int64 *)(hero + 0x260) == 0) throw; // [null/range check failed]
@@ -2672,7 +2672,7 @@ public class AIController
                     if (((*(int64 *)(hero + 0x260) == 0) ||
                         (lVar9 = FUN_180002f80(*(int64 *)(hero + 0x260),iVar5)) == null) ||
                        (lVar9 = KungfuSkillLvData.DataBase(lVar9,0)) == null) throw; // [null/range check failed]
-                    FUN_1817f42f0(lVar14);
+                    FUN_1817f4900(lVar14);
                   }
                   iVar5 = iVar5 + 1;
                 }
@@ -2696,7 +2696,7 @@ public class AIController
                           (*(int64 *)(lVar9 + 112) == 0)))) throw; // [null/range check failed]
                       lVar9 = HeroData.FindSkill(hero);
                       if (lVar9 == null) {
-                        cVar3 = FUN_180133a50(lVar14,iVar4,DAT_181d806a0);
+                        cVar3 = FUN_180133a50(lVar14,iVar4,DAT_181d806b8);
                         if (!cVar3) {
                           dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
                           if (*(int64 *)(hero + 600) == 0) throw; // [null/range check failed]
@@ -2704,17 +2704,17 @@ public class AIController
                           fVar26 = (float)HeroData.GetMaxSkillNum(hero,iVar4);
                           fVar24 = (float)HeroData.GetMaxSkillNum(hero);
                           if (dVar25 <= (double)((((float)iVar20 - fVar26) + ((float)iVar20 - fVar26)) /
-                                                fVar24)) goto LAB_1813e9eb5;
+                                                fVar24)) goto LAB_1813ea4c5;
                         }
                         if ((((plVar13 == 0) ||
                              (lVar9 = *(int64 *)(plVar13 + 40)) == null) ||
-                            (lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f18)) == null) ||
+                            (lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f30)) == null) ||
                            (*(int64 *)(lVar9 + 112) == 0)) throw; // [null/range check failed]
                         Int32.ToString(*(int64 *)(lVar9 + 112) + 16,0);
-                        FUN_18181e0a0(local_f8);
+                        FUN_18181e6b0(local_f8);
                       }
                     }
-        LAB_1813e9eb5:
+        LAB_1813ea4c5:
                     iVar5 = iVar5 + 1;
                   }
                 }
@@ -2724,23 +2724,23 @@ public class AIController
                   while( true ) {
                     if (((*(int64 *)(hero + 0x220) == 0) ||
                         (lVar9 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) ||
-                       (lVar13 = FUN_180002f80(lVar9,3,DAT_181d78ba8)) == null) throw; // [null/range check failed]
+                       (lVar13 = FUN_180002f80(lVar9,3,DAT_181d78bc0)) == null) throw; // [null/range check failed]
                     lVar11 = local_f8;
                     lVar12 = local_f0;
                     lVar9 = local_e8;
                     if (*(int *)(lVar13 + 24) <= iVar5) break;
                     if ((((*(int64 *)(hero + 0x220) == 0) ||
                          (lVar9 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) ||
-                        (lVar9 = FUN_180002f80(lVar9,3,DAT_181d78ba8)) == null) ||
-                       ((lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f18), lVar9 == null ||
+                        (lVar9 = FUN_180002f80(lVar9,3,DAT_181d78bc0)) == null) ||
+                       ((lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f30), lVar9 == null ||
                         (*(int64 *)(lVar9 + 112) == 0)))) throw; // [null/range check failed]
                     lVar9 = HeroData.FindSkill(hero,*(uint32 *)
                                                          (*(int64 *)(lVar9 + 112) + 16),0);
                     if (lVar9 == null) {
                       if (((*(int64 *)(hero + 0x220) == 0) ||
                           (lVar9 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null) ||
-                         ((lVar9 = FUN_180002f80(lVar9,3,DAT_181d78ba8), lVar9 == null ||
-                          (((lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f18), lVar9 == null ||
+                         ((lVar9 = FUN_180002f80(lVar9,3,DAT_181d78bc0), lVar9 == null ||
+                          (((lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f30), lVar9 == null ||
                             (*(int64 *)(lVar9 + 112) == 0)) ||
                            (lVar9 = BookData.DataBase(*(int64 *)(lVar9 + 112),0)) == null)))))
                       throw; // [null/range check failed]
@@ -2748,26 +2748,26 @@ public class AIController
                       dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
                       fVar26 = (float)Mathf.Max();
                       if (dVar25 <= (double)(1.0 / (fVar26 + fVar26))) {
-                        cVar3 = FUN_180133a50(lVar14,uVar6,DAT_181d806a0);
+                        cVar3 = FUN_180133a50(lVar14,uVar6,DAT_181d806b8);
                         if (!cVar3) {
                           dVar25 = (double)GlobalData.RandomRangeDouble(0,0);
                           if (*(int64 *)(hero + 600) == 0) throw; // [null/range check failed]
-                          iVar4 = FUN_1800d6760(*(int64 *)(hero + 600),uVar6,DAT_181d8fa18);
+                          iVar4 = FUN_1800d6760(*(int64 *)(hero + 600),uVar6,DAT_181d8fa30);
                           fVar26 = (float)HeroData.GetMaxSkillNum(hero,uVar6,0);
                           fVar24 = (float)HeroData.GetMaxSkillNum(hero,uVar6,0);
                           if (dVar25 <= (double)((((float)iVar4 - fVar26) + ((float)iVar4 - fVar26)) /
-                                                fVar24)) goto LAB_1813ea17e;
+                                                fVar24)) goto LAB_1813ea78e;
                         }
                         if ((((*(int64 *)(hero + 0x220) == 0) ||
                              (lVar9 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-                            || (lVar9 = FUN_180002f80(lVar9,3,DAT_181d78ba8)) == null) ||
-                           ((lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f18), lVar9 == null ||
+                            || (lVar9 = FUN_180002f80(lVar9,3,DAT_181d78bc0)) == null) ||
+                           ((lVar9 = FUN_180002f80(lVar9,iVar5,DAT_181d90f30), lVar9 == null ||
                             (*(int64 *)(lVar9 + 112) == 0)))) throw; // [null/range check failed]
                         uVar8 = Int32.ToString(*(int64 *)(lVar9 + 112) + 16,0);
-                        FUN_18181e0a0(local_f8,uVar8,DAT_181da3d58);
+                        FUN_18181e6b0(local_f8,uVar8,DAT_181da3d70);
                       }
                     }
-        LAB_1813ea17e:
+        LAB_1813ea78e:
                     iVar5 = iVar5 + 1;
                   }
                 }
@@ -2776,16 +2776,16 @@ public class AIController
               iVar5 = *(int *)(lVar11 + 24);
               if (0 < iVar5) {
                 uVar7 = GlobalData.RandomRange(0,iVar5,0,0);
-                uVar8 = FUN_180002f80(lVar11,uVar7,DAT_181da4358);
+                uVar8 = FUN_180002f80(lVar11,uVar7,DAT_181da4370);
                 local_100 = il2cpp_internal(DAT_181d75da8);
                 uVar17 = 18;
-                goto LAB_1813e875e;
+                goto LAB_1813e8d6e;
               }
-              uVar17 = il2cpp_internal(DAT_181d9b7d0);
-              uVar8 = DAT_181d94a38;
-        LAB_1813e8be8:
+              uVar17 = il2cpp_internal(DAT_181d9b7e8);
+              uVar8 = DAT_181d94bd0;
+        LAB_1813e91f8:
               OnTooltipCB.ctor(uVar17,lVar12,uVar8);
-              FUN_18182e030(lVar9);
+              FUN_18182e640(lVar9);
               break;
             case 19:
               iVar5 = HeroData.GetAISettingFocus(hero,4,0);
@@ -2803,11 +2803,11 @@ public class AIController
                   uVar6 = GlobalData.RandomRange(4,7,0);
                   local_100 = il2cpp_internal(DAT_181d75da8);
                   uVar17 = 19;
-                  goto LAB_1813e875e;
+                  goto LAB_1813e8d6e;
                 }
               }
-              lVar11 = il2cpp_internal(DAT_181d93cd0);
-              FUN_18132faf0(lVar11,DAT_181d8f098);
+              lVar11 = il2cpp_internal(DAT_181d93ce8);
+              FUN_181330100(lVar11,DAT_181d8f0b0);
               iVar5 = 0;
               while( true ) {
                 if ((lVar10 == null) || (*(int64 *)(lVar10 + 96) == 0)) throw; // [null/range check failed]
@@ -2816,41 +2816,41 @@ public class AIController
                 if (lVar12 == null) throw; // [null/range check failed]
                 lVar12 = *(int64 *)(lVar12 + 32);
                 if (((*(int64 *)(lVar10 + 96) == 0) ||
-                    (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa18), lVar12 == null)
+                    (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa30), lVar12 == null)
                     ) || (lVar12 = WorldData.GetArea(lVar12,uVar6,0)) == null) throw; // [null/range check failed]
                 if (*(int *)(lVar12 + 72) != 2) {
                   lVar12 = FUN_18046c0a0(0);
                   if (lVar12 == null) throw; // [null/range check failed]
                   lVar12 = *(int64 *)(lVar12 + 32);
                   if (((*(int64 *)(lVar10 + 96) == 0) ||
-                      (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa18),
+                      (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa30),
                       lVar12 == null)) || (lVar12 = WorldData.GetArea(lVar12,uVar6,0)) == null)
                   throw; // [null/range check failed]
                   cVar3 = AreaData.CanAddState(lVar12,0);
                   if (cVar3) {
                     if ((*(int64 *)(lVar10 + 96) == 0) ||
-                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa18),
+                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa30),
                        lVar11 == null)) throw; // [null/range check failed]
-                    FUN_18182a0b0(lVar11,uVar6,DAT_181d8f218);
+                    FUN_18182a6c0(lVar11,uVar6,DAT_181d8f230);
                   }
                 }
                 iVar5 = iVar5 + 1;
               }
               if (lVar11 == null) throw; // [null/range check failed]
               if (*(int *)(lVar11 + 24) < 1) {
-                uVar8 = new OnTooltipCB(local_f0,DAT_181d94bb8);
-                FUN_18182e030(lVar9);
+                uVar8 = new OnTooltipCB(local_f0,DAT_181d94d50);
+                FUN_18182e640(lVar9);
                 lVar11 = local_f8;
               }
               else {
                 lVar9 = AIController.FightHeroAiStuffType;
                 if (lVar9 == null) {
-                  uVar8 = **(uint64 **)(DAT_181dc0c50 + 184);
-                  lVar9 = new OnTooltipCB(uVar8,DAT_181d94938,DAT_181dab3b8);
+                  uVar8 = **(uint64 **)(DAT_181dc0c68 + 184);
+                  lVar9 = new OnTooltipCB(uVar8,DAT_181d94ad0,DAT_181dab3d0);
                   AIController.FightHeroAiStuffType = lVar9;
                 }
-                List_1.Sort(lVar11,lVar9,DAT_181d8f818);
-                local_res10[0] = FUN_1800d6760(lVar11,0,DAT_181d8fa18);
+                List_1.Sort(lVar11,lVar9,DAT_181d8f830);
+                local_res10[0] = FUN_1800d6760(lVar11,0,DAT_181d8fa30);
                 uVar8 = Int32.ToString(local_res10,0);
                 uVar6 = GlobalData.RandomRange(4,7,0);
                 local_100 = new HeroAIData(19,uVar8,uVar6,0);
@@ -2873,11 +2873,11 @@ public class AIController
                   uVar6 = GlobalData.RandomRange(4,7,0);
                   local_100 = il2cpp_internal(DAT_181d75da8);
                   uVar17 = 20;
-                  goto LAB_1813e875e;
+                  goto LAB_1813e8d6e;
                 }
               }
-              lVar9 = il2cpp_internal(DAT_181d93cd0);
-              FUN_18132faf0(lVar9);
+              lVar9 = il2cpp_internal(DAT_181d93ce8);
+              FUN_181330100(lVar9);
               iVar5 = 0;
               while( true ) {
                 if ((lVar10 == null) || (*(int64 *)(lVar10 + 96) == 0)) {
@@ -2892,7 +2892,7 @@ public class AIController
                   if (lVar11 == null) throw; // [null/range check failed]
                   lVar11 = *(int64 *)(lVar11 + 32);
                   if ((((*(int64 *)(lVar10 + 96) == 0) ||
-                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa18),
+                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa30),
                        lVar11 == null)) ||
                       (lVar12 = WorldData.GetArea(lVar11,uVar6,0), lVar11 = local_f0) == null) ||
                      (*(int64 *)(lVar12 + 152) == 0)) throw; // [null/range check failed]
@@ -2904,10 +2904,10 @@ public class AIController
                   if (lVar12 == null) throw; // [null/range check failed]
                   lVar12 = *(int64 *)(lVar12 + 32);
                   if ((((*(int64 *)(lVar10 + 96) == 0) ||
-                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa18),
+                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar10 + 96),iVar5,DAT_181d8fa30),
                        lVar12 == null)) || (lVar12 = WorldData.GetArea(lVar12,uVar6,0)) == null) ||
                      (((*(int64 *)(lVar12 + 152) == 0 ||
-                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar12 + 152),iVar4,DAT_181d8fa18),
+                       (uVar6 = FUN_1800d6760(*(int64 *)(lVar12 + 152),iVar4,DAT_181d8fa30),
                        lVar11 == null)) || (lVar11 = WorldData.GetArea(lVar11,uVar6,0)) == null)))
                   throw; // [null/range check failed]
                   if (((*(int *)(lVar11 + 72) != 2) &&
@@ -2920,7 +2920,7 @@ public class AIController
                     if (((double)((fVar26 - 30.0) / 50.0) < dVar25) &&
                        (cVar3 = AreaData.CanReduceState(lVar11,0), cVar3)) {
                       if (lVar9 == null) throw; // [null/range check failed]
-                      FUN_18182a0b0(lVar9,*(uint32 *)(lVar11 + 16),DAT_181d8f218);
+                      FUN_18182a6c0(lVar9,*(uint32 *)(lVar11 + 16),DAT_181d8f230);
                     }
                   }
                   iVar4 = iVar4 + 1;
@@ -2929,15 +2929,15 @@ public class AIController
                 iVar4 = *(int *)(lVar9 + 24);
                 if (iVar4 < 1) {
                   if (*(int64 *)(local_f0 + 24) == 0) {
-                    uVar8 = new OnTooltipCB(lVar11,DAT_181d94c38);
+                    uVar8 = new OnTooltipCB(lVar11,DAT_181d94dd0);
                     *(uint64 *)(lVar11 + 24) = uVar8;
                   }
-                  FUN_18182e030(local_e8);
+                  FUN_18182e640(local_e8);
                   iVar5 = iVar5 + 1;
                 }
                 else {
                   uVar6 = GlobalData.RandomRange(0,iVar4,0,0);
-                  local_res10[0] = FUN_1800d6760(lVar9,uVar6,DAT_181d8fa18);
+                  local_res10[0] = FUN_1800d6760(lVar9,uVar6,DAT_181d8fa30);
                   uVar8 = Int32.ToString(local_res10,0);
                   uVar6 = GlobalData.RandomRange(4,7,0);
                   local_100 = new HeroAIData(20,uVar8,uVar6,0);
@@ -2959,14 +2959,14 @@ public class AIController
             }
             lVar9 = local_e8;
           } while (local_100 == 0);
-        LAB_1813eab8d:
+        LAB_1813eb19d:
           AIController.SetAIStuff(this,hero,local_100,0,0);
           return;
         }
     }
 
     // Token : 0x60009F1
-    // RVA   : 0x13DC7E0   Offset: 0x13DBBE0   Length: 0x76
+    // RVA   : 0x13DCDF0   Offset: 0x13DC1F0   Length: 0x76
     public void AddAvailableStuffType(List<AIStuffType> availableStuffType, AIStuffType newAIStuffType, int num)
     {
         void AIController.AddAvailableStuffType
@@ -2980,14 +2980,14 @@ public class AIController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18182a0b0(availableStuffType,newAIStuffType,DAT_181d7ae08);
+            FUN_18182a6c0(availableStuffType,newAIStuffType,DAT_181d7ae20);
             iVar1 = iVar1 + 1;
           } while (iVar1 < num);
         }
     }
 
     // Token : 0x60009F2
-    // RVA   : 0x13EB7D0   Offset: 0x13EABD0   Length: 0x4F1
+    // RVA   : 0x13EBDE0   Offset: 0x13EB1E0   Length: 0x4F1
     public void SetAIStuff(HeroData hero, HeroAIData aiData, bool setInteractTarget)
     {
         uint uVar1;
@@ -3010,16 +3010,16 @@ public class AIController
           if (cVar2) {
             return;
           }
-          if (aiData == null) goto LAB_1813ebcbc;
+          if (aiData == null) goto LAB_1813ec2cc;
           if (*(int *)(aiData + 16) == 13) {
-            if (hero == null) goto LAB_1813ebcbc;
+            if (hero == null) goto LAB_1813ec2cc;
             fVar12 = (float)HeroData.Favor(hero,0,0);
             if (40.0 <= fVar12) {
               iVar3 = *(int *)(hero + 184);
               lVar5 = FUN_18046c0a0(0);
               if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                  (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null)
-              goto LAB_1813ebcbc;
+              goto LAB_1813ec2cc;
               iVar3 = Mathf.Abs(iVar3 - *(int *)(lVar5 + 184),0);
               if (iVar3 < 3) {
                 lVar5 = HeroData.GetBigMapPos(hero,0);
@@ -3027,7 +3027,7 @@ public class AIController
                 if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
                    ((lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0), lVar6 == null ||
                     (uVar7 = HeroData.GetBigMapPos(lVar6,0), lVar5 == null)))) {
-        LAB_1813ebcbc:
+        LAB_1813ec2cc:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
@@ -3043,10 +3043,10 @@ public class AIController
                     uVar11 = "寻得仇家踪迹";
                   }
                   local_res10[0] = *(int *)(aiData + 32) + -1;
-                  uVar9 = il2cpp_value_box(DAT_181d80418,local_res10);
+                  uVar9 = il2cpp_value_box(DAT_181d80430,local_res10);
                   uVar13 = 0;
                   uVar10 = String.Format(uVar10,uVar8,uVar11,uVar9,0);
-                  uVar11 = il2cpp_internal(DAT_181d87918);
+                  uVar11 = il2cpp_internal(DAT_181d87930);
                   MailData.ctor(uVar11,uVar7,uVar10,0,uVar13 & 0xffffffffffffff00,
                                  in_stack_ffffffffffffff80 & 0xffffffffffffff00,0);
                   if (lVar5 == null) {
@@ -3061,32 +3061,32 @@ public class AIController
           if (setInteractTarget) {
             *(uint32 *)(aiData + 32) = 99;
           }
-          if (hero == null) goto LAB_1813ebcbc;
+          if (hero == null) goto LAB_1813ec2cc;
           HeroData.SetHeroAIData(hero,aiData,0);
           if (setInteractTarget) {
             return;
           }
-          lVar5 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 8);
-          if ((*(int64 *)(hero + 64) == 0) || (lVar5 == null)) goto LAB_1813ebcbc;
-          cVar2 = FUN_18182a3a0(lVar5,*(uint32 *)(*(int64 *)(hero + 64) + 16),DAT_181d7ae88)
+          lVar5 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 8);
+          if ((*(int64 *)(hero + 64) == 0) || (lVar5 == null)) goto LAB_1813ec2cc;
+          cVar2 = FUN_18182a9b0(lVar5,*(uint32 *)(*(int64 *)(hero + 64) + 16),DAT_181d7aea0)
           ;
           if (!cVar2) {
             return;
           }
           lVar5 = FUN_18046c0a0(0);
-          if (lVar5 == null) goto LAB_1813ebcbc;
+          if (lVar5 == null) goto LAB_1813ec2cc;
           lVar5 = *(int64 *)(lVar5 + 32);
           uVar4 = Int32.Parse(*(uint64 *)(aiData + 24),0);
-          if (lVar5 == null) goto LAB_1813ebcbc;
+          if (lVar5 == null) goto LAB_1813ec2cc;
           lVar5 = WorldData.GetHero(lVar5,uVar4,0);
           if (lVar5 == null) {
             return;
           }
           lVar5 = FUN_18046c0a0(0);
-          if (lVar5 == null) goto LAB_1813ebcbc;
+          if (lVar5 == null) goto LAB_1813ec2cc;
           lVar5 = *(int64 *)(lVar5 + 32);
           uVar4 = Int32.Parse(*(uint64 *)(aiData + 24),0);
-          if (lVar5 == null) goto LAB_1813ebcbc;
+          if (lVar5 == null) goto LAB_1813ec2cc;
           lVar5 = WorldData.GetHero(lVar5,uVar4,0);
           uVar4 = *(uint32 *)(aiData + 16);
           uVar7 = Int32.ToString(hero + 88,0);
@@ -3100,7 +3100,7 @@ public class AIController
     }
 
     // Token : 0x60009F3
-    // RVA   : 0x13DC860   Offset: 0x13DBC60   Length: 0xB63
+    // RVA   : 0x13DCE70   Offset: 0x13DC270   Length: 0xB63
     public void AutoManageTag(HeroData targetHero)
     {
         ulong uVar2;
@@ -3132,24 +3132,24 @@ public class AIController
         lVar9 = new c.DisplayClass9_0(0);
         if (lVar9 != null) {
           *(uint64 *)(lVar9 + 16) = targetHero;
-          lVar10 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar10,DAT_181d8f098);
-          lVar11 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar11,DAT_181d8f098);
+          lVar10 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar10,DAT_181d8f0b0);
+          lVar11 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar11,DAT_181d8f0b0);
           lVar12 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
           if (((lVar12 != null) && (lVar12 = *(int64 *)(lVar12 + 0x198)) != null) &&
-             (lVar12 = FUN_1808ae5b0(lVar12,DAT_181dba4a8)) != null) {
-            ValueCollection.GetEnumerator(&local_50,lVar12,DAT_181d7e7e8);
+             (lVar12 = FUN_1808ae5b0(lVar12,DAT_181dba4c0)) != null) {
+            ValueCollection.GetEnumerator(&local_50,lVar12,DAT_181d7e800);
             local_68 = local_50;
             uStack_64 = uStack_4c;
             uStack_60 = uStack_48;
             uStack_5c = uStack_44;
             local_58 = local_40;
-        LAB_1813dcb21:
-            cVar3 = FUN_1811c3f80(&local_68,DAT_181d988d8);
+        LAB_1813dd131:
+            cVar3 = FUN_1811c4590(&local_68,DAT_181d988f0);
             lVar12 = local_58;
             if (cVar3) {
-              lVar13 = *(int64 *)(*(int64 *)(DAT_181d87a18 + 184) + 8);
+              lVar13 = *(int64 *)(*(int64 *)(DAT_181d87a30 + 184) + 8);
               if (lVar12 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -3158,7 +3158,7 @@ public class AIController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar3 = FUN_18181e400(lVar13,*(uint64 *)(lVar12 + 80));
+              cVar3 = FUN_18181ea10(lVar13,*(uint64 *)(lVar12 + 80));
               if ((cVar3) && (0 < *(int *)(lVar12 + 32))) {
                 bVar1 = true;
                 if (*(int64 *)(lVar9 + 16) == 0) {
@@ -3178,7 +3178,7 @@ public class AIController
                   }
                   iVar4 = *(int *)(*(int64 *)(lVar12 + 72) + 24);
                   bVar1 = 0 < iVar4;
-                  if (iVar4 < 1) goto LAB_1813dcb21;
+                  if (iVar4 < 1) goto LAB_1813dd131;
                 }
                 iVar4 = 0;
                 while( true ) {
@@ -3198,7 +3198,7 @@ public class AIController
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (iVar5 == *(int *)(lVar13 + 16)) goto LAB_1813dcb21;
+                  if (iVar5 == *(int *)(lVar13 + 16)) goto LAB_1813dd131;
                   cVar3 = String.op_Inequality(*(uint64 *)(lVar12 + 40),"");
                   if (cVar3) {
                     if (*(int64 *)(lVar9 + 16) == 0) {
@@ -3220,8 +3220,8 @@ public class AIController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    cVar3 = FUN_18171e540(*(uint64 *)(lVar13 + 48),*(uint64 *)(lVar12 + 40));
-                    if (cVar3) goto LAB_1813dcb21;
+                    cVar3 = FUN_18171eb50(*(uint64 *)(lVar13 + 48),*(uint64 *)(lVar12 + 40));
+                    if (cVar3) goto LAB_1813dd131;
                     if (*(int64 *)(lVar9 + 16) == 0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
@@ -3241,7 +3241,7 @@ public class AIController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    cVar3 = FUN_18171e540(*(uint64 *)(lVar13 + 40),*(uint64 *)(lVar12 + 40));
+                    cVar3 = FUN_18171eb50(*(uint64 *)(lVar13 + 40),*(uint64 *)(lVar12 + 40));
                     if (cVar3) {
                       if (*(int64 *)(lVar9 + 16) == 0) {
                           // WARNING: Subroutine does not return
@@ -3264,7 +3264,7 @@ public class AIController
                       }
                       iVar5 = Mathf.Abs(*(uint32 *)(lVar13 + 32),0);
                       iVar6 = Mathf.Abs(*(uint32 *)(lVar12 + 32),0);
-                      if (iVar6 <= iVar5) goto LAB_1813dcb21;
+                      if (iVar6 <= iVar5) goto LAB_1813dd131;
                     }
                   }
                   iVar4 = iVar4 + 1;
@@ -3286,21 +3286,21 @@ public class AIController
                           // WARNING: Subroutine does not return
                         FUN_1800d6620(extraout_XMM0_Da,*(uint32 *)(lVar12 + 16));
                       }
-                      FUN_18182a0b0(lVar11);
+                      FUN_18182a6c0(lVar11);
                     }
                     else {
                       if (lVar10 == null) {
                           // WARNING: Subroutine does not return
                         FUN_1800d6620(extraout_XMM0_Da,*(uint32 *)(lVar12 + 16));
                       }
-                      FUN_18182a0b0(lVar10);
+                      FUN_18182a6c0(lVar10);
                     }
                   }
                 }
               }
-              goto LAB_1813dcb21;
+              goto LAB_1813dd131;
             }
-            ZhSegment.Initialize(&local_68,DAT_181d98858);
+            ZhSegment.Initialize(&local_68,DAT_181d98870);
             if (lVar10 != null) {
               iVar4 = *(int *)(lVar10 + 24);
               if (iVar4 < 1) {
@@ -3308,29 +3308,29 @@ public class AIController
                 if (*(int *)(lVar11 + 24) < 1) {
                   return;
                 }
-                lVar10 = il2cpp_internal(DAT_181d93cd0);
-                FUN_18132faf0(lVar10,DAT_181d8f098);
+                lVar10 = il2cpp_internal(DAT_181d93ce8);
+                FUN_181330100(lVar10,DAT_181d8f0b0);
                 for (iVar4 = 0; iVar4 < *(int *)(lVar11 + 24); iVar4 = iVar4 + 1) {
                   lVar12 = FUN_18046c100(0);
                   if (lVar12 == null) throw; // [null/range check failed]
                   lVar12 = *(int64 *)(lVar12 + 0x198);
-                  uVar7 = FUN_1800d6760(lVar11,iVar4,DAT_181d8fa18);
+                  uVar7 = FUN_1800d6760(lVar11,iVar4,DAT_181d8fa30);
                   if (lVar12 == null) throw; // [null/range check failed]
-                  lVar12 = FUN_1817d9e10(lVar12,uVar7);
+                  lVar12 = FUN_1817da420(lVar12,uVar7);
                   iVar5 = 1;
                   if ((lVar12 == null) || (*(int64 *)(lVar12 + 88) == 0)) throw; // [null/range check failed]
                   fVar16 = (float)HeroSpeAddData.Get(*(int64 *)(lVar12 + 88),208);
                   if (0.0 < fVar16) {
-        LAB_1813dd186:
+        LAB_1813dd796:
                     lVar13 = *(int64 *)(lVar9 + 16);
                     if (lVar13 == null) throw; // [null/range check failed]
                     if ((*(int *)(lVar13 + 132) == 16) || (*(int *)(lVar13 + 136) == 16)) {
                       iVar6 = 40;
-        LAB_1813dd1aa:
+        LAB_1813dd7ba:
                       iVar5 = 0;
                       do {
                         if (lVar10 == null) throw; // [null/range check failed]
-                        FUN_18182a0b0(lVar10,*(uint32 *)(lVar12 + 16));
+                        FUN_18182a6c0(lVar10,*(uint32 *)(lVar12 + 16));
                         iVar5 = iVar5 + 1;
                       } while (iVar5 < iVar6);
                     }
@@ -3338,25 +3338,25 @@ public class AIController
                   else {
                     if (*(int64 *)(lVar12 + 88) == 0) throw; // [null/range check failed]
                     fVar16 = (float)HeroSpeAddData.Get(*(int64 *)(lVar12 + 88),210);
-                    if (0.0 < fVar16) goto LAB_1813dd186;
+                    if (0.0 < fVar16) goto LAB_1813dd796;
                     if (*(int64 *)(lVar12 + 88) == 0) throw; // [null/range check failed]
                     fVar16 = (float)HeroSpeAddData.Get(*(int64 *)(lVar12 + 88),209);
-                    if (0.0 < fVar16) goto LAB_1813dd186;
-                    lVar13 = il2cpp_internal(DAT_181d93cd0);
-                    FUN_18132faf0(lVar13,DAT_181d8f098);
+                    if (0.0 < fVar16) goto LAB_1813dd796;
+                    lVar13 = il2cpp_internal(DAT_181d93ce8);
+                    FUN_181330100(lVar13,DAT_181d8f0b0);
                     if (lVar13 == null) throw; // [null/range check failed]
-                    FUN_18182a0b0(lVar13,0,DAT_181d8f218);
-                    FUN_18182a0b0(lVar13,1,DAT_181d8f218);
-                    FUN_18182a0b0(lVar13,2,DAT_181d8f218);
-                    FUN_18182a0b0(lVar13,3,DAT_181d8f218);
-                    FUN_18182a0b0(lVar13,4,DAT_181d8f218);
-                    FUN_18182a0b0(lVar13,5,DAT_181d8f218);
+                    FUN_18182a6c0(lVar13,0,DAT_181d8f230);
+                    FUN_18182a6c0(lVar13,1,DAT_181d8f230);
+                    FUN_18182a6c0(lVar13,2,DAT_181d8f230);
+                    FUN_18182a6c0(lVar13,3,DAT_181d8f230);
+                    FUN_18182a6c0(lVar13,4,DAT_181d8f230);
+                    FUN_18182a6c0(lVar13,5,DAT_181d8f230);
                     lVar14 = *(int64 *)(lVar9 + 24);
                     if (lVar14 == null) {
-                      lVar14 = new OnTooltipCB(lVar9,DAT_181d94cb8);
+                      lVar14 = new OnTooltipCB(lVar9,DAT_181d94e50);
                       *(int64 *)(lVar9 + 24) = lVar14;
                     }
-                    List_1.Sort(lVar13,lVar14,DAT_181d8f818);
+                    List_1.Sort(lVar13,lVar14,DAT_181d8f830);
                     iVar15 = 0;
                     iVar6 = 10;
                     do {
@@ -3365,9 +3365,9 @@ public class AIController
                       if (lVar14 == null) throw; // [null/range check failed]
                       fVar16 = (float)HeroSpeAddData.Get(lVar14,uVar7);
                       if ((0.0 < fVar16) &&
-                         (cVar3 = FUN_18171e540(*(uint64 *)(lVar12 + 80),"战法"),
+                         (cVar3 = FUN_18171eb50(*(uint64 *)(lVar12 + 80),"战法"),
                          !cVar3)) {
-                        cVar3 = FUN_18171e540(*(uint64 *)(lVar12 + 80),"天生");
+                        cVar3 = FUN_18171eb50(*(uint64 *)(lVar12 + 80),"天生");
                         if (!cVar3) {
                           iVar5 = iVar5 + 15;
                         }
@@ -3393,13 +3393,13 @@ public class AIController
                         iVar5 = iVar6;
                       }
                     }
-                    if (0 < iVar6) goto LAB_1813dd1aa;
+                    if (0 < iVar6) goto LAB_1813dd7ba;
                   }
                 }
                 if (lVar10 == null) throw; // [null/range check failed]
                 uVar7 = *(uint32 *)(lVar10 + 24);
                 uVar7 = GlobalData.RandomRange(0,uVar7,0,0);
-                iVar4 = FUN_1800d6760(lVar10,uVar7,DAT_181d8fa18);
+                iVar4 = FUN_1800d6760(lVar10,uVar7,DAT_181d8fa30);
               }
               else {
                 uVar8 = GlobalData.RandomRange(0,iVar4,0,0);
@@ -3414,7 +3414,7 @@ public class AIController
               lVar10 = *(int64 *)(lVar9 + 16);
               lVar11 = FUN_18046c100(0);
               if ((((lVar11 != null) && (*(int64 *)(lVar11 + 0x198) != 0)) &&
-                  (lVar11 = FUN_1817d9e10(*(int64 *)(lVar11 + 0x198),iVar4,DAT_181dba420)) != null
+                  (lVar11 = FUN_1817da420(*(int64 *)(lVar11 + 0x198),iVar4,DAT_181dba438)) != null
                   ) && (uVar2 = HeroTagDataBase.GetCostValue(lVar11,0,0), lVar10 != null)) {
                 HeroData.ChangeTagPoint(lVar10,uVar2 ^ 0x8000000080000000,0,0);
                 if (*(int64 *)(lVar9 + 16) != 0) {
@@ -3428,7 +3428,7 @@ public class AIController
     }
 
     // Token : 0x60009F4
-    // RVA   : 0x13DDB60   Offset: 0x13DCF60   Length: 0x779C
+    // RVA   : 0x13DE170   Offset: 0x13DD570   Length: 0x779C
     public bool FinishAIStuff(HeroData hero)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -3512,7 +3512,7 @@ public class AIController
         local_13c = 0;
         local_148 = 0;
         local_140 = 0.0;
-        if ((hero == null) || (lVar14 = *(int64 *)(hero + 64)) == null) goto LAB_1813e5276;
+        if ((hero == null) || (lVar14 = *(int64 *)(hero + 64)) == null) goto LAB_1813e5886;
         if (*(int *)(lVar14 + 16) == 16) {
           HeroData.GoOutPrison(hero,0);
           uVar6 = HeroData.Name(hero,1,0);
@@ -3526,24 +3526,24 @@ public class AIController
         local_154 = 0;
         bVar2 = false;
         local_158 = 0;
-        if (lVar14 == null) goto LAB_1813e5276;
-        if (*(int *)(lVar14 + 36) < 1) goto switchD_1813de14e_caseD_0;
+        if (lVar14 == null) goto LAB_1813e5886;
+        if (*(int *)(lVar14 + 36) < 1) goto switchD_1813de75e_caseD_0;
         lVar8 = new c.DisplayClass9_0(0);
         uVar9 = "";
         uVar4 = (uint32)((uint64)in_stack_fffffffffffffe88 >> 32);
         uVar5 = (uint32)((uint64)in_stack_fffffffffffffe90 >> 32);
         uVar41 = (uint32)((uint64)in_stack_fffffffffffffe98 >> 32);
         lVar14 = *(int64 *)(hero + 64);
-        if (lVar14 == null) goto LAB_1813e5276;
+        if (lVar14 == null) goto LAB_1813e5886;
         switch(*(uint32 *)(lVar14 + 16)) {
         default:
-          goto switchD_1813de14e_caseD_0;
+          goto switchD_1813de75e_caseD_0;
         case 2:
           dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
           if (dVar30 < 0.5) {
             dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
             fVar29 = (float)FUN_1801f8ab0();
-            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
             uVar4 = Mathf.RoundToInt(((float)dVar30 + (float)dVar30 + 1.0) * fVar29 *
                                       (float)*(int *)(*(int64 *)(hero + 64) + 36),0);
             local_158 = Mathf.Max(1,uVar4);
@@ -3551,24 +3551,24 @@ public class AIController
             uVar7 = HeroData.Name(hero,1,0);
             uVar40 = HeroData.AtAreaName(hero,0);
             local_130 = local_158;
-            uVar42 = il2cpp_value_box(DAT_181d80418,&local_130);
+            uVar42 = il2cpp_value_box(DAT_181d80430,&local_130);
             uVar6 = "{0}在{1}闲逛之时，意外获取了{2}两银钱。";
           }
           else {
             lVar8 = FUN_18046c0a0(0);
             lVar14 = *(int64 *)(hero + 64);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             Mathf.Min(lVar14,(float)*(int *)(lVar14 + 36) * 0.2,0);
             GlobalData.RandomRange();
             HeroData.GetHeroItemLv(hero,0,0);
-            if (lVar8 == null) goto LAB_1813e5276;
+            if (lVar8 == null) goto LAB_1813e5886;
             uVar6 = 0;
             lVar14 = hero;
             lVar8 = GameController.GenerateRandomItem(lVar8);
             HeroData.GetItem(hero,lVar8,0,0,lVar14,uVar6);
             uVar7 = HeroData.Name(hero,1,0);
             uVar40 = HeroData.AtAreaName(hero,0);
-            if (lVar8 == null) goto LAB_1813e5276;
+            if (lVar8 == null) goto LAB_1813e5886;
             uVar42 = ItemData.Name(lVar8,1,0);
             uVar6 = "{0}在{1}闲逛之时，意外获取了一件{2}。";
           }
@@ -3581,13 +3581,13 @@ public class AIController
           lVar14 = HeroData.FindSkill(hero,uVar4,0);
           if (lVar14 != null) {
             GlobalData.RandomRange(15,26,0);
-            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
             KungfuSkillLvData.FightExpFull(lVar14,0);
             HeroData.GetLoyalExpRate(hero,0);
             uVar6 = 0;
             HeroData.AddSkillBookExp(hero);
             GlobalData.RandomRange(15,26,0,0,uVar6);
-            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
             KungfuSkillLvData.BookExpFull(lVar14,0);
             HeroData.GetLoyalExpRate(hero,0);
             HeroData.AddSkillFightExp(hero);
@@ -3601,23 +3601,23 @@ public class AIController
           lVar14 = FUN_18046c0a0(0);
           if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
              (lVar14 = *(int64 *)(*(int64 *)(lVar14 + 32) + 168)) == null)
-          goto LAB_1813e5276;
+          goto LAB_1813e5886;
           if (((3 < *(int *)(lVar14 + 16)) &&
               (cVar3 = HeroData.IsPlayerSameForce(hero,0), !cVar3)) &&
              (4.0 <= *(float *)(hero + 0x364))) {
             dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
             lVar14 = FUN_18046c0a0(0);
-            if ((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) goto LAB_1813e5276;
+            if ((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) goto LAB_1813e5886;
             fVar28 = (float)WorldData.GetAIForceDevelopSpeed(*(int64 *)(lVar14 + 32),0);
             if (dVar30 < (double)((fVar28 * 0.05 + 1.0) * 0.1)) {
               AIController.AutoManageTag(this,hero,0);
             }
           }
-          goto LAB_1813e515f;
+          goto LAB_1813e576f;
         case 6:
           uVar4 = Int32.Parse(*(uint64 *)(lVar14 + 24),0);
           iVar21 = GlobalData.RandomRange(30,41,0);
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           iVar19 = *(int *)(*(int64 *)(hero + 64) + 36);
           iVar1 = *(int *)(hero + 184);
           fVar29 = (float)HeroData.GetLoyalExpRate(hero,0);
@@ -3628,29 +3628,29 @@ public class AIController
           lVar14 = *(int64 *)(pStatics + 0x4b0);
           if ((*(int64 *)(hero + 64) == 0) ||
              (uVar4 = Int32.Parse(*(uint64 *)(*(int64 *)(hero + 64) + 24),0), lVar14 == null))
-          goto LAB_1813e5276;
-          uVar40 = FUN_180002f80(lVar14,uVar4,DAT_181da4358);
+          goto LAB_1813e5886;
+          uVar40 = FUN_180002f80(lVar14,uVar4,DAT_181da4370);
           uVar6 = String.Format("{0}在{1}修习了{2}技艺。",uVar6,uVar7,uVar40,0);
-          goto LAB_1813de7d8;
+          goto LAB_1813dede8;
         case 7:
           cVar3 = HeroData.HaveForce(hero,0);
           if (cVar3) {
-            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
             uVar4 = Int32.Parse(*(uint64 *)(*(int64 *)(hero + 64) + 24),0);
             lVar14 = *(int64 *)(pStatics + 0x440);
-            if (lVar14 == null) goto LAB_1813e5276;
-            uVar5 = FUN_1800d6760(lVar14,uVar4,DAT_181d93190);
+            if (lVar14 == null) goto LAB_1813e5886;
+            uVar5 = FUN_1800d6760(lVar14,uVar4,DAT_181d931a0);
             lVar14 = *(int64 *)(pStatics + 0x448);
-            if (lVar14 == null) goto LAB_1813e5276;
-            fVar28 = (float)FUN_1800d6790(lVar14,uVar4,DAT_181da1078);
-            if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5276;
-            FUN_1800d6790(*(int64 *)(hero + 0x168),uVar5,DAT_181da1078);
+            if (lVar14 == null) goto LAB_1813e5886;
+            fVar28 = (float)FUN_1800d6790(lVar14,uVar4,DAT_181da1090);
+            if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5886;
+            FUN_1800d6790(*(int64 *)(hero + 0x168),uVar5,DAT_181da1090);
             HeroData.GetLoyalWorkRate(hero,0);
-            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
             fVar29 = 1.0;
             fVar26 = (float)Mathf.Max();
             lVar14 = HeroData.GetForce(hero,0,0);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             uVar6 = 0;
             ForceData.ChangeResource(lVar14,uVar4);
             HeroData.ChangeLivingSkillExp
@@ -3660,7 +3660,7 @@ public class AIController
             uVar6 = HeroData.Name(hero,1,0);
             uVar7 = HeroData.AtAreaName(hero,0);
             lVar14 = new PlotChoiceRequirement(uVar4);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             uVar40 = ResourceData.GetDescribe(lVar14,0);
             uVar6 = String.Format("{0}在{1}辛勤劳作，为门派收获了{2}。",uVar6,uVar7,uVar40,0);
             HeroData.AddLog(hero,uVar6,0);
@@ -3668,29 +3668,29 @@ public class AIController
             lVar14 = FUN_18046c0a0(0);
             if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
                (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
-            goto LAB_1813e5276;
+            goto LAB_1813e5886;
             if (iVar21 == *(int *)(lVar14 + 132)) {
               lVar14 = FUN_18046c2c0(0);
               uVar7 = new InfoData(1,uVar6);
-              if (lVar14 == null) goto LAB_1813e5276;
+              if (lVar14 == null) goto LAB_1813e5886;
               InfoController.AddInfo(lVar14,uVar7,0);
             }
             break;
           }
-          goto switchD_1813de14e_caseD_0;
+          goto switchD_1813de75e_caseD_0;
         case 8:
           dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
           fVar29 = (float)FUN_1801f8ab0();
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           local_158 = Mathf.RoundToInt(((float)dVar30 + (float)dVar30 + 4.0) * fVar29 *
                                         (float)*(int *)(*(int64 *)(hero + 64) + 36),0);
           HeroData.ChangeMoney(hero,local_158,0,0);
           uVar6 = HeroData.Name(hero,1,0);
           uVar7 = HeroData.AtAreaName(hero,0);
           local_12c = local_158;
-          uVar40 = il2cpp_value_box(DAT_181d80418,&local_12c);
+          uVar40 = il2cpp_value_box(DAT_181d80430,&local_12c);
           uVar6 = String.Format("{0}在{1}打工赚钱，获取了{2}两银钱。",uVar6,uVar7,uVar40,0);
-          goto LAB_1813deb88;
+          goto LAB_1813df198;
         case 9:
           local_res10 = "";
           local_150 = "";
@@ -3699,49 +3699,49 @@ public class AIController
           uVar12 = uVar17;
           if (lVar14 != null) {
             lVar14 = HeroData.GetArea(hero,0);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             if (*(int *)(lVar14 + 72) == 2) {
               lVar14 = HeroData.GetArea(hero,0);
               if ((lVar14 == null) || (lVar14 = AreaData.GetForce(lVar14,0)) == null)
-              goto LAB_1813e5276;
+              goto LAB_1813e5886;
               uVar12 = *(uint64 *)(lVar14 + 160);
             }
           }
           iVar21 = 1;
           fVar28 = 0.75;
-        LAB_1813dec60:
+        LAB_1813df270:
           lVar14 = *(int64 *)(hero + 0x220);
           if (lVar14 != null) {
             if (*(float *)(lVar14 + 28) / *(float *)(lVar14 + 32) <= 0.7) {
               GlobalData.RandomRange();
               cVar3 = AIController.CheckHeroItemNumBiggerThanMax(this,hero);
-              if (cVar3) goto LAB_1813ded06;
+              if (cVar3) goto LAB_1813df316;
               dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
-              if (dVar30 < (double)fVar28) goto LAB_1813ded06;
-        LAB_1813df224:
+              if (dVar30 < (double)fVar28) goto LAB_1813df316;
+        LAB_1813df834:
               cVar3 = HeroData.HaveForce(hero,0);
               if (!cVar3) {
-        LAB_1813df24e:
-                if (*(int64 *)(hero + 0x1f8) == 0) goto LAB_1813e5276;
+        LAB_1813df85e:
+                if (*(int64 *)(hero + 0x1f8) == 0) goto LAB_1813e5886;
                 cVar3 = HeroEquipmentData.HaveEmptyEquipment(*(int64 *)(hero + 0x1f8),0);
                 if (!cVar3) {
                   dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
                   uVar17 = local_150;
-                  if (0.20000000298023224 <= dVar30) goto LAB_1813df70a;
+                  if (0.20000000298023224 <= dVar30) goto LAB_1813dfd1a;
                 }
               }
               else {
                 lVar14 = HeroData.GetForce(hero,0,0);
-                if (lVar14 == null) goto LAB_1813e5276;
-                if (*(int *)(lVar14 + 88) != 0) goto LAB_1813df24e;
+                if (lVar14 == null) goto LAB_1813e5886;
+                if (*(int *)(lVar14 + 88) != 0) goto LAB_1813df85e;
               }
               uVar18 = 0;
               uVar17 = local_150;
-              goto LAB_1813df2b0;
+              goto LAB_1813df8c0;
             }
-        LAB_1813ded06:
+        LAB_1813df316:
             uVar4 = (uint32)(in_stack_fffffffffffffe78 >> 32);
-            if (5 < (int)uVar17) goto LAB_1813df224;
+            if (5 < (int)uVar17) goto LAB_1813df834;
             dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
             if (0.4000000059604645 < dVar30) {
               dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
@@ -3760,7 +3760,7 @@ public class AIController
             lVar14 = HeroData.FindRandomItem
                                (hero,uVar17,iVar19 + (int)uVar17,0,in_stack_fffffffffffffe78,0);
             while (lVar14 == null) {
-              if (5 < (int)uVar17) goto LAB_1813dec60;
+              if (5 < (int)uVar17) goto LAB_1813df270;
               uVar18 = (int)uVar17 + 1;
               uVar17 = (uint64)uVar18;
               in_stack_fffffffffffffe80 = 0;
@@ -3768,12 +3768,12 @@ public class AIController
               lVar14 = HeroData.FindRandomItem
                                  (hero,uVar17,uVar18 + iVar19,0,in_stack_fffffffffffffe78,0);
             }
-            cVar3 = FUN_18171e540(uVar9,"",0);
+            cVar3 = FUN_18171eb50(uVar9,"",0);
             uVar20 = "/";
             if (cVar3) {
               uVar20 = "";
             }
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             uVar6 = ItemData.Name(lVar14,1,0);
             uVar9 = String.Concat(uVar9,uVar20,uVar6);
             local_res10 = uVar9;
@@ -3788,51 +3788,51 @@ public class AIController
               lVar14 = HeroData.GetArea(hero);
               if (lVar14 != null) {
                 lVar14 = HeroData.GetArea(hero);
-                if (lVar14 == null) goto LAB_1813e5276;
+                if (lVar14 == null) goto LAB_1813e5886;
                 if (*(int *)(lVar14 + 72) != 2) {
-                  lVar14 = il2cpp_internal(DAT_181d90ce0);
-                  FUN_18132faf0(lVar14);
+                  lVar14 = il2cpp_internal(DAT_181d90cf8);
+                  FUN_181330100(lVar14);
                   iVar19 = 0;
                   while( true ) {
                     lVar8 = HeroData.GetArea(hero);
-                    if ((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) goto LAB_1813e5276;
+                    if ((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) goto LAB_1813e5886;
                     if (*(int *)(*(int64 *)(lVar8 + 192) + 24) <= iVar19) break;
                     lVar8 = HeroData.GetArea(hero,0);
-                    if ((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) goto LAB_1813e5276;
+                    if ((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) goto LAB_1813e5886;
                     lVar8 = FUN_180002f80();
                     if (lVar8 != null) {
                       lVar8 = HeroData.GetArea(hero,0);
                       if (((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) ||
-                         (lVar8 = FUN_180002f80()) == null) goto LAB_1813e5276;
+                         (lVar8 = FUN_180002f80()) == null) goto LAB_1813e5886;
                       if (*(int64 *)(lVar8 + 40) != 0) {
                         lVar8 = HeroData.GetArea(hero,0);
                         if (((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) ||
                            ((lVar8 = FUN_180002f80(), lVar8 == null || (*(int64 *)(lVar8 + 40) == 0))))
-                        goto LAB_1813e5276;
+                        goto LAB_1813e5886;
                         lVar8 = AreaBuildingData.DataBase();
                         if (lVar8 != null) {
                           lVar8 = HeroData.GetArea(hero,0);
                           if (((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) ||
                              ((lVar8 = FUN_180002f80(), lVar8 == null ||
                               ((*(int64 *)(lVar8 + 40) == 0 ||
-                               (lVar8 = AreaBuildingData.DataBase()) == null))))) goto LAB_1813e5276;
+                               (lVar8 = AreaBuildingData.DataBase()) == null))))) goto LAB_1813e5886;
                           if (*(int64 *)(lVar8 + 136) != 0) {
                             lVar8 = HeroData.GetArea(hero,0);
                             if ((((((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) ||
-                                  (lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 192),iVar19,DAT_181d7ca60)
+                                  (lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 192),iVar19,DAT_181d7ca78)
                                   , lVar8 == null)) ||
                                  ((*(int64 *)(lVar8 + 40) == 0 ||
                                   (lVar8 = AreaBuildingData.DataBase(*(int64 *)(lVar8 + 40),0),
                                   lVar8 == null)))) || (*(int64 *)(lVar8 + 136) == 0)) ||
                                (*(int64 *)(*(int64 *)(lVar8 + 136) + 32) == 0))
-                            goto LAB_1813e5276;
-                            cVar3 = FUN_18182a3a0();
+                            goto LAB_1813e5886;
+                            cVar3 = FUN_18182a9b0();
                             if (cVar3) {
                               lVar8 = HeroData.GetArea(hero,0);
                               if (((lVar8 == null) || (*(int64 *)(lVar8 + 192) == 0)) ||
-                                 ((lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 192),iVar19,DAT_181d7ca60)
-                                  , lVar8 == null || (lVar14 == null)))) goto LAB_1813e5276;
-                              FUN_18181e0a0(lVar14);
+                                 ((lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 192),iVar19,DAT_181d7ca78)
+                                  , lVar8 == null || (lVar14 == null)))) goto LAB_1813e5886;
+                              FUN_18181e6b0(lVar14);
                             }
                           }
                         }
@@ -3840,12 +3840,12 @@ public class AIController
                     }
                     iVar19 = iVar19 + 1;
                   }
-                  if (lVar14 == null) goto LAB_1813e5276;
+                  if (lVar14 == null) goto LAB_1813e5886;
                   iVar19 = *(int *)(lVar14 + 24);
                   if (0 < iVar19) {
                     uVar4 = GlobalData.RandomRange(0,iVar19,0);
                     lVar14 = FUN_180002f80(lVar14,uVar4);
-                    if ((lVar14 == null) || (*(int64 *)(lVar14 + 40) == 0)) goto LAB_1813e5276;
+                    if ((lVar14 == null) || (*(int64 *)(lVar14 + 40) == 0)) goto LAB_1813e5886;
                     ItemListData.GetItem();
                   }
                 }
@@ -3857,24 +3857,24 @@ public class AIController
               AIController.HeroDonateItemToForceStorage(this,hero,lVar14,uVar12,0);
               fVar28 = fVar28 * 0.75;
             }
-            goto LAB_1813dec60;
+            goto LAB_1813df270;
           }
-          goto LAB_1813e5276;
+          goto LAB_1813e5886;
         case 10:
           lVar8 = FUN_18046c0a0(0);
           lVar14 = *(int64 *)(hero + 64);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           Mathf.Min(lVar14,(float)*(int *)(lVar14 + 36) * 0.25,0);
           GlobalData.RandomRange();
           HeroData.GetHeroItemLv(hero,0,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar6 = 0;
           lVar14 = hero;
           lVar8 = GameController.GenerateRandomItem(lVar8);
           HeroData.GetItem(hero,lVar8,0,0,lVar14,uVar6);
           uVar6 = HeroData.Name(hero,1,0);
           uVar7 = HeroData.AtAreaName(hero,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar40 = ItemData.Name(lVar8,1,0);
           uVar6 = String.Format("{0}在{1}四下探索之时，意外发现了{2}。",uVar6,uVar7,uVar40,0);
           HeroData.AddLog(hero,uVar6,0);
@@ -3882,17 +3882,17 @@ public class AIController
           break;
         case 11:
           lVar14 = FUN_18046c0a0(0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           lVar14 = *(int64 *)(lVar14 + 32);
           if ((*(int64 *)(hero + 64) == 0) ||
              (uVar4 = Int32.Parse(*(uint64 *)(*(int64 *)(hero + 64) + 24),0), lVar14 == null))
-          goto LAB_1813e5276;
+          goto LAB_1813e5886;
           lVar14 = WorldData.GetHero(lVar14,uVar4,0);
-          if (lVar14 == null) goto switchD_1813de14e_caseD_0;
+          if (lVar14 == null) goto switchD_1813de75e_caseD_0;
           HeroData.ResetAI(lVar14,0);
-          if (*(int64 *)(hero + 0x2b8) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 0x2b8) == 0) goto LAB_1813e5886;
           fVar29 = (float)HeroSpeAddData.Get(*(int64 *)(hero + 0x2b8),212,0);
-          if (*(int64 *)(lVar14 + 0x2b8) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(lVar14 + 0x2b8) == 0) goto LAB_1813e5886;
           fVar28 = (float)HeroSpeAddData.Get(*(int64 *)(lVar14 + 0x2b8),212,0);
           fVar26 = 1.0;
           fVar28 = fVar28 + fVar29 + 1.0;
@@ -3906,7 +3906,7 @@ public class AIController
               if (!cVar3) {
                 dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
                 fVar29 = (float)HeroData.GetStartFavor(hero,lVar14,0);
-                if (dVar30 < (double)((fVar29 * 0.005 + 0.1) * fVar28)) goto LAB_1813e0b60;
+                if (dVar30 < (double)((fVar29 * 0.005 + 0.1) * fVar28)) goto LAB_1813e1170;
                 AIController.AICheckRemoveFriend(this,hero,0);
                 AIController.AICheckRemoveFriend(this,lVar14,0);
                 HeroData.AddFriend(hero,*(uint32 *)(lVar14 + 88),0,0);
@@ -3916,7 +3916,7 @@ public class AIController
                 uVar6 = "{0}在{1}与{2}相谈甚欢，一见如故，结为知己好友。";
               }
               else {
-        LAB_1813e0b60:
+        LAB_1813e1170:
                 AIController.AICheckRemoveBrother(this,hero,0);
                 AIController.AICheckRemoveBrother(this,lVar14,0);
                 HeroData.AddBrother(hero,*(uint32 *)(lVar14 + 88),0,0);
@@ -3987,11 +3987,11 @@ public class AIController
               if (iVar21 == 0) {
                 if (bVar22) {
                   HeroData.ChangeBadFame(lVar16);
-                  if (*(int64 *)(lVar16 + 0x168) == 0) goto LAB_1813e5276;
-                  FUN_1800d6790(*(int64 *)(lVar16 + 0x168),1,DAT_181da1078);
-                  if (*(int64 *)(lVar8 + 0x168) == 0) goto LAB_1813e5276;
-                  FUN_1800d6790(*(int64 *)(lVar8 + 0x168),1,DAT_181da1078);
-                  fVar29 = (float)FUN_1810e36c0();
+                  if (*(int64 *)(lVar16 + 0x168) == 0) goto LAB_1813e5886;
+                  FUN_1800d6790(*(int64 *)(lVar16 + 0x168),1,DAT_181da1090);
+                  if (*(int64 *)(lVar8 + 0x168) == 0) goto LAB_1813e5886;
+                  FUN_1800d6790(*(int64 *)(lVar8 + 0x168),1,DAT_181da1090);
+                  fVar29 = (float)FUN_1810e3cd0();
                   uVar6 = 0;
                   HeroData.ChangePoisonInjury(lVar8);
                   HeroData.ChangeLivingSkillExp
@@ -4001,9 +4001,9 @@ public class AIController
                 else {
                   HeroData.ChangeBadFame(lVar16);
                 }
-                lVar15 = FUN_1800d60b0(DAT_181da4120,4);
+                lVar15 = FUN_1800d60b0(DAT_181da4138,4);
                 uVar6 = HeroData.GetHeroName(lVar16,0,0);
-                if (lVar15 == null) goto LAB_1813e5276;
+                if (lVar15 == null) goto LAB_1813e5886;
                 FUN_180002070(lVar15,uVar6);
                 FUN_180002fd0(lVar15,0,uVar6);
                 uVar6 = HeroData.AtAreaName(lVar16,0);
@@ -4016,7 +4016,7 @@ public class AIController
                 uVar7 = "最终未能得逞";
                 if (bVar22) {
                   local_118 = Mathf.RoundToInt();
-                  uVar7 = il2cpp_value_box(DAT_181d80418,&local_118);
+                  uVar7 = il2cpp_value_box(DAT_181d80430,&local_118);
                   uVar7 = String.Format("使其中毒加深{0}点",uVar7,0);
                 }
                 FUN_180002070(lVar15,uVar7);
@@ -4039,7 +4039,7 @@ public class AIController
                   lVar15 = HeroData.FindRandomItem(lVar8,0xffffffff,uVar4,0,uVar6,0);
                   local_138 = lVar15;
                 }
-                if (*(int64 *)(lVar8 + 0x220) == 0) goto LAB_1813e5276;
+                if (*(int64 *)(lVar8 + 0x220) == 0) goto LAB_1813e5886;
                 local_150 = CONCAT44(local_150._4_4_,*(uint32 *)(*(int64 *)(lVar8 + 0x220) + 24))
                 ;
                 fVar29 = (float)GlobalData.RandomRange();
@@ -4068,9 +4068,9 @@ public class AIController
                 else {
                   HeroData.ChangeBadFame(lVar16);
                 }
-                lVar15 = FUN_1800d60b0(DAT_181da4120,6);
+                lVar15 = FUN_1800d60b0(DAT_181da4138,6);
                 uVar6 = HeroData.GetHeroName(lVar16,0,0);
-                if (lVar15 == null) goto LAB_1813e5276;
+                if (lVar15 == null) goto LAB_1813e5886;
                 FUN_180002070(lVar15,uVar6);
                 FUN_180002fd0(lVar15,0,uVar6);
                 uVar6 = HeroData.AtAreaName(lVar16,0);
@@ -4082,7 +4082,7 @@ public class AIController
                 uVar6 = "{0}在{1}欲{5}{2}的{3}，{4}。";
                 if (local_138 == 0) {
                   local_11c = local_158;
-                  uVar7 = il2cpp_value_box(DAT_181d80418,&local_11c);
+                  uVar7 = il2cpp_value_box(DAT_181d80430,&local_11c);
                   uVar7 = String.Format("{0}银两",uVar7,0);
                 }
                 else {
@@ -4104,7 +4104,7 @@ public class AIController
                 uVar40 = 5;
               }
               else {
-                if (iVar21 != 3) goto LAB_1813e19c6;
+                if (iVar21 != 3) goto LAB_1813e1fd6;
                 dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
                 uVar4 = 999999;
                 if (0.05000000074505806 <= dVar30) {
@@ -4114,7 +4114,7 @@ public class AIController
                 local_138 = lVar15;
                 if ((bVar22) && (lVar15 != null)) {
                   lVar13 = KungfuSkillLvData.DataBase(lVar15,0);
-                  if (lVar13 == null) goto LAB_1813e5276;
+                  if (lVar13 == null) goto LAB_1813e5886;
                   uVar7 = 0;
                   HeroData.ChangeBadFame(lVar16);
                   uVar4 = *(uint32 *)(lVar15 + 16);
@@ -4125,9 +4125,9 @@ public class AIController
                   bVar22 = false;
                   HeroData.ChangeBadFame(lVar16);
                 }
-                lVar15 = FUN_1800d60b0(DAT_181da4120,5);
+                lVar15 = FUN_1800d60b0(DAT_181da4138,5);
                 uVar6 = HeroData.GetHeroName(lVar16,0,0);
-                if (lVar15 == null) goto LAB_1813e5276;
+                if (lVar15 == null) goto LAB_1813e5886;
                 FUN_180002070(lVar15,uVar6);
                 FUN_180002fd0(lVar15,0,uVar6);
                 uVar6 = HeroData.AtAreaName(lVar16,0);
@@ -4153,7 +4153,7 @@ public class AIController
               FUN_180002fd0(lVar15,uVar40,uVar7);
               uVar12 = String.Format(uVar6,lVar15,0);
             }
-        LAB_1813e19c6:
+        LAB_1813e1fd6:
             cVar3 = HeroData.HaveHater(hero,*(uint32 *)(lVar14 + 88),0);
             if ((!cVar3) &&
                ((*(char *)(hero + 92) == false || (*(char *)(lVar14 + 92) == false)))) {
@@ -4179,7 +4179,7 @@ public class AIController
             lVar14 = FUN_18046c2c0(0);
             uVar6 = String.Format("传闻{0}",uVar12,0);
             uVar7 = new InfoData(3,uVar6);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             InfoController.AddInfo(lVar14,uVar7,0);
             fVar29 = 0.4;
           }
@@ -4233,7 +4233,7 @@ public class AIController
                 }
                 uVar17 = HeroData.FindRandomItem(lVar8,0xffffffff,uVar5,0,CONCAT44(uVar4,0xffffffff),0);
               }
-              if (*(int64 *)(lVar8 + 0x220) == 0) goto LAB_1813e5276;
+              if (*(int64 *)(lVar8 + 0x220) == 0) goto LAB_1813e5886;
               uVar4 = *(uint32 *)(*(int64 *)(lVar8 + 0x220) + 24);
               fVar29 = (float)GlobalData.RandomRange();
               auVar31._0_8_ = FUN_1801f8ab0();
@@ -4255,7 +4255,7 @@ public class AIController
               uVar7 = "二人相谈甚欢，离别之际{0}向{1}赠送了{2}。";
               if (uVar17 == 0) {
                 local_120 = local_158;
-                uVar11 = il2cpp_value_box(DAT_181d80418,&local_120);
+                uVar11 = il2cpp_value_box(DAT_181d80430,&local_120);
                 uVar11 = String.Format("{0}银两",uVar11,0);
               }
               else {
@@ -4271,24 +4271,24 @@ public class AIController
           break;
         case 12:
           lVar14 = FUN_18046c0a0(0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           lVar14 = *(int64 *)(lVar14 + 32);
           if ((*(int64 *)(hero + 64) == 0) ||
              (uVar4 = Int32.Parse(*(uint64 *)(*(int64 *)(hero + 64) + 24),0), lVar14 == null))
-          goto LAB_1813e5276;
+          goto LAB_1813e5886;
           lVar14 = WorldData.GetHero(lVar14,uVar4,0);
-          if (lVar14 == null) goto switchD_1813de14e_caseD_0;
+          if (lVar14 == null) goto switchD_1813de75e_caseD_0;
           HeroData.ResetAI(lVar14,0);
-          if (*(int64 *)(hero + 0x2b8) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 0x2b8) == 0) goto LAB_1813e5886;
           fVar29 = (float)HeroSpeAddData.Get(*(int64 *)(hero + 0x2b8),212,0);
-          if (*(int64 *)(lVar14 + 0x2b8) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(lVar14 + 0x2b8) == 0) goto LAB_1813e5886;
           fVar28 = (float)HeroSpeAddData.Get(*(int64 *)(lVar14 + 0x2b8),212,0);
           fVar28 = fVar28 + fVar29 + 1.0;
           uVar6 = new FightMatchCouple(hero,lVar14,0);
           iVar21 = GlobalData.ManageHeroAutoFight(uVar6,0);
-          lVar8 = FUN_1800d60b0(DAT_181da4120,4);
+          lVar8 = FUN_1800d60b0(DAT_181da4138,4);
           uVar6 = HeroData.GetHeroName(hero,0,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           FUN_180002070(lVar8,uVar6);
           FUN_180002fd0(lVar8,0,uVar6);
           uVar6 = HeroData.AtAreaName(hero,0);
@@ -4313,7 +4313,7 @@ public class AIController
              ((*(char *)(hero + 92) == false || (*(char *)(lVar14 + 92) == false)))) {
             dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
             fVar26 = (float)HeroData.GetStartFavor(hero,lVar14,0);
-            if ((double)((fVar26 * 0.005 + 0.15) * fVar28) <= dVar30) goto LAB_1813e1f8e;
+            if ((double)((fVar26 * 0.005 + 0.15) * fVar28) <= dVar30) goto LAB_1813e259e;
             cVar3 = HeroData.HaveFriend(hero,*(uint32 *)(lVar14 + 88),0);
             if (!cVar3) {
               dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
@@ -4338,7 +4338,7 @@ public class AIController
             }
           }
           else {
-        LAB_1813e1f8e:
+        LAB_1813e259e:
             dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
             fVar26 = (float)HeroData.GetStartFavor(hero,lVar14,0);
             cVar3 = HeroData.HaveHater(hero,*(uint32 *)(lVar14 + 88),0);
@@ -4370,8 +4370,8 @@ public class AIController
               fVar25 = 2.0;
             }
             if (dVar30 < (double)(fVar25 * fVar37 * (fVar26 * 0.005 + 0.15) * fVar28 * fVar27 * fVar24)) {
-              lVar8 = il2cpp_internal(DAT_181d93cd0);
-              FUN_18132faf0(lVar8,DAT_181d8f098);
+              lVar8 = il2cpp_internal(DAT_181d93ce8);
+              FUN_181330100(lVar8,DAT_181d8f0b0);
               dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
               fVar26 = (float)HeroData.GetStartFavor(hero,lVar14,0);
               if (dVar30 < (double)((fVar26 * 0.005 + 0.15) * fVar28)) {
@@ -4391,9 +4391,9 @@ public class AIController
                       if ((int)*(uint32 *)(lVar13 + 24) <= (int)uVar18) {
                         if (lVar8 != null) {
                           iVar19 = *(int *)(lVar8 + 24);
-                          if (iVar19 < 1) goto LAB_1813e2494;
+                          if (iVar19 < 1) goto LAB_1813e2aa4;
                           uVar4 = GlobalData.RandomRange(0,iVar19,0,0);
-                          uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
+                          uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa30);
                           lVar8 = new KungfuSkillLvData(uVar4,0);
                           HeroData.GetSkill(lVar15,lVar8,0,0,0);
                           uVar6 = HeroData.Name(lVar16,1,0);
@@ -4409,7 +4409,7 @@ public class AIController
                             uVar7 = new InfoData(3,uVar6,0);
                             if (lVar14 != null) {
                               InfoController.AddInfo(lVar14,uVar7,0);
-                              goto LAB_1813e26e2;
+                              goto LAB_1813e2cf2;
                             }
                           }
                         }
@@ -4436,19 +4436,19 @@ public class AIController
                           if (dVar30 < (double)(1.0 - (float)(*(int *)(lVar13 + 52) -
                                                              *(int *)(lVar15 + 184)) * 0.3)) {
                             if (((*(int64 *)(lVar16 + 0x260) == 0) ||
-                                (lVar13 = FUN_180002f80(*(int64 *)(lVar16 + 0x260),uVar18,DAT_181d92590
+                                (lVar13 = FUN_180002f80(*(int64 *)(lVar16 + 0x260),uVar18,DAT_181d925a8
                                                        ), lVar13 == null)) || (lVar8 == null)) break;
-                            FUN_18182a0b0(lVar8);
+                            FUN_18182a6c0(lVar8);
                           }
                         }
                       }
                       uVar18 = uVar18 + 1;
                     }
                   }
-                  goto LAB_1813e5276;
+                  goto LAB_1813e5886;
                 }
               }
-        LAB_1813e2494:
+        LAB_1813e2aa4:
               dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
               lVar16 = hero;
               lVar15 = lVar14;
@@ -4463,10 +4463,10 @@ public class AIController
                   if (lVar8 != null) {
                     iVar19 = *(int *)(lVar8 + 24);
                     uVar17 = local_150;
-                    if (iVar19 < 1) goto LAB_1813e26c5;
+                    if (iVar19 < 1) goto LAB_1813e2cd5;
                     uVar4 = GlobalData.RandomRange(0,iVar19,0,0);
-                    uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
-                    lVar8 = FUN_180002f80(lVar13,uVar4,DAT_181d92590);
+                    uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa30);
+                    lVar8 = FUN_180002f80(lVar13,uVar4,DAT_181d925a8);
                     if ((((lVar8 != null) && (lVar13 = KungfuSkillLvData.DataBase(lVar8,0)) != null) &&
                         (lVar16 != null)) && (lVar13 = KungfuSkillLvData.DataBase(lVar8,0)) != null) {
                       Mathf.Max();
@@ -4477,7 +4477,7 @@ public class AIController
                       uVar40 = KungfuSkillLvData.Name(lVar8,1,0);
                       uVar6 = String.Format("二人颇为投缘，{0}指点了{1}一些{2}的运用法门。",uVar6,uVar7,uVar40,0);
                       uVar17 = String.Concat(local_150,uVar6,0);
-                      goto LAB_1813e26c5;
+                      goto LAB_1813e2cd5;
                     }
                   }
                   break;
@@ -4486,31 +4486,31 @@ public class AIController
                 if (lVar13 == null) break;
                 if (*(int *)(lVar13 + 20) < 10) {
                   if (lVar8 == null) break;
-                  FUN_18182a0b0(lVar8,iVar19);
+                  FUN_18182a6c0(lVar8,iVar19);
                 }
                 iVar19 = iVar19 + 1;
               }
-              goto LAB_1813e5276;
+              goto LAB_1813e5886;
             }
-        LAB_1813e26c5:
+        LAB_1813e2cd5:
             HeroData.AddLog(hero,uVar17,0);
             HeroData.AddLog(lVar14,uVar17,0);
           }
-        LAB_1813e26e2:
+        LAB_1813e2cf2:
           if (iVar21 == 0) {
             fVar29 = 0.75;
           }
-          goto LAB_1813e515f;
+          goto LAB_1813e576f;
         case 13:
           lVar14 = FUN_18046c0a0(0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           lVar14 = *(int64 *)(lVar14 + 32);
           if ((*(int64 *)(hero + 64) == 0) ||
              (uVar4 = Int32.Parse(*(uint64 *)(*(int64 *)(hero + 64) + 24),0), lVar14 == null))
-          goto LAB_1813e5276;
+          goto LAB_1813e5886;
           lVar14 = WorldData.GetHero(lVar14,uVar4,0);
-          if (lVar14 == null) goto switchD_1813de14e_caseD_0;
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (lVar14 == null) goto switchD_1813de75e_caseD_0;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           lVar8 = hero;
           lVar16 = lVar14;
           if (*(char *)(*(int64 *)(hero + 64) + 20) == false) {
@@ -4519,18 +4519,18 @@ public class AIController
           }
           local_138 = lVar8;
           HeroData.ResetAI(lVar14,0);
-          if (*(int64 *)(hero + 0x2b8) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 0x2b8) == 0) goto LAB_1813e5886;
           fVar28 = (float)HeroSpeAddData.Get(*(int64 *)(hero + 0x2b8),212,0);
-          if (*(int64 *)(lVar14 + 0x2b8) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(lVar14 + 0x2b8) == 0) goto LAB_1813e5886;
           fVar26 = (float)HeroSpeAddData.Get(*(int64 *)(lVar14 + 0x2b8),212,0);
           fVar29 = 1.0;
           uVar6 = new FightMatchCouple(hero,lVar14,0);
           uVar4 = 0;
           iVar21 = GlobalData.ManageHeroAutoFight(uVar6,2);
           bVar22 = iVar21 == 0;
-          lVar15 = FUN_1800d60b0(DAT_181da4120,4);
+          lVar15 = FUN_1800d60b0(DAT_181da4138,4);
           uVar6 = HeroData.GetHeroName(lVar16,0,0);
-          if (lVar15 == null) goto LAB_1813e5276;
+          if (lVar15 == null) goto LAB_1813e5886;
           FUN_180002070(lVar15,uVar6);
           FUN_180002fd0(lVar15,0,uVar6);
           uVar6 = HeroData.AtAreaName(lVar16,0);
@@ -4554,14 +4554,14 @@ public class AIController
             dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
             fVar27 = (float)HeroData.GetStartFavor(hero,lVar14,0);
             if ((double)((0.6 - fVar27 * 0.02) * (1.0 / (fVar26 + fVar28 + 1.0))) <= dVar30)
-            goto LAB_1813e2a31;
+            goto LAB_1813e3041;
             AIController.AICheckRemoveHater(this,hero,0);
             AIController.AICheckRemoveHater(this,lVar14,0);
             HeroData.AddHater(hero,*(uint32 *)(lVar14 + 88),0,0);
             uVar6 = String.Concat(uVar6,"两人因此结下了深仇大恨。",0);
           }
           else {
-        LAB_1813e2a31:
+        LAB_1813e3041:
             lVar8 = hero;
             lVar15 = lVar14;
             if (!bVar22) {
@@ -4583,7 +4583,7 @@ public class AIController
                 }
                 lVar13 = HeroData.FindRandomItem(lVar15,0xffffffff,uVar5,0,CONCAT44(uVar4,0xffffffff),0);
               }
-              if (*(int64 *)(lVar15 + 0x220) == 0) goto LAB_1813e5276;
+              if (*(int64 *)(lVar15 + 0x220) == 0) goto LAB_1813e5886;
               local_150 = CONCAT44(local_150._4_4_,*(uint32 *)(*(int64 *)(lVar15 + 0x220) + 24));
               fVar28 = (float)GlobalData.RandomRange();
               auVar35._0_8_ = FUN_1801f8ab0();
@@ -4606,7 +4606,7 @@ public class AIController
               uVar7 = "{0}乘机抢夺了{1}的{2}。";
               if (lVar13 == null) {
                 local_114 = local_158;
-                uVar42 = il2cpp_value_box(DAT_181d80418,&local_114);
+                uVar42 = il2cpp_value_box(DAT_181d80430,&local_114);
                 uVar42 = String.Format("{0}银两",uVar42,0);
               }
               else {
@@ -4650,33 +4650,33 @@ public class AIController
           lVar14 = FUN_18046c2c0(0);
           uVar6 = String.Format("传闻{0}",uVar6,0);
           uVar7 = new InfoData(3,uVar6);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           InfoController.AddInfo(lVar14,uVar7,0);
-          goto LAB_1813e515f;
+          goto LAB_1813e576f;
         case 14:
           GlobalData.RandomRangeDouble(0,0);
           local_144 = Mathf.RoundToInt();
           HeroData.ChangeFame(hero);
           dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
           fVar29 = (float)FUN_1801f8ab0();
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           local_158 = Mathf.RoundToInt(((float)dVar30 + (float)dVar30 + 2.0) * fVar29 *
                                         (float)*(int *)(*(int64 *)(hero + 64) + 36),0);
           HeroData.ChangeMoney(hero,local_158,0,0);
           lVar8 = FUN_18046c0a0(0);
           lVar14 = *(int64 *)(hero + 64);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           Mathf.Min(lVar14,(float)*(int *)(lVar14 + 36) * 0.3,0);
           GlobalData.RandomRange();
           HeroData.GetHeroItemLv(hero,0,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar6 = 0;
           lVar14 = hero;
           lVar8 = GameController.GenerateRandomItem(lVar8);
           HeroData.GetItem(hero,lVar8,0,0,lVar14,uVar6);
-          lVar14 = FUN_1800d60b0(DAT_181da4120,5);
+          lVar14 = FUN_1800d60b0(DAT_181da4138,5);
           uVar6 = HeroData.Name(hero,1,0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,0,uVar6);
           uVar6 = HeroData.AtAreaName(hero,0);
@@ -4688,18 +4688,18 @@ public class AIController
           uVar6 = Int32.ToString(&local_158,"+0;-0;+0",0);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,3,uVar6);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar6 = ItemData.Name(lVar8,1,0);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,4,uVar6);
           uVar6 = String.Format("{0}在{1}完成了重要委托，名望{2}，银两{3}，并获得了{4}。",lVar14,0);
-        LAB_1813de7d8:
+        LAB_1813dede8:
           HeroData.AddLog(hero,uVar6,0);
           fVar29 = 0.5;
           break;
         case 15:
           lVar14 = FUN_18046c0a0(0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           iVar21 = GameController.RandomRareLvByBossLv(lVar14,(float)*(int *)(hero + 184) * 0.06,0,0)
           ;
           fVar29 = (float)GlobalData.RandomRange();
@@ -4708,24 +4708,24 @@ public class AIController
           HeroData.ChangeFame(hero);
           dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
           fVar28 = (float)FUN_1801f8ab0();
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           local_158 = Mathf.RoundToInt((float)dVar30 * 8.0 * (fVar29 + (float)iVar21 * 0.25) * fVar28 *
                                         (float)*(int *)(*(int64 *)(hero + 64) + 36),0);
           HeroData.ChangeMoney(hero,local_158,0,0);
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           Mathf.Min();
           GlobalData.RandomRange();
           HeroData.GetHeroItemLv(hero,0,0);
           Mathf.Min();
           lVar14 = FUN_18046c0a0(0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           uVar6 = 0;
           lVar8 = hero;
           lVar14 = GameController.GenerateRandomItem(lVar14);
           HeroData.GetItem(hero,lVar14,0,0,lVar8,uVar6);
-          lVar8 = FUN_1800d60b0(DAT_181da4120,6);
+          lVar8 = FUN_1800d60b0(DAT_181da4138,6);
           uVar6 = HeroData.Name(hero,1,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           FUN_180002070(lVar8,uVar6);
           FUN_180002fd0(lVar8,0,uVar6);
           uVar6 = HeroData.AtAreaName(hero,0);
@@ -4737,13 +4737,13 @@ public class AIController
           uVar6 = Int32.ToString(&local_158,"+0;-0;+0",0);
           FUN_180002070(lVar8,uVar6);
           FUN_180002fd0(lVar8,3,uVar6);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           uVar6 = ItemData.Name(lVar14,1,0);
           FUN_180002070(lVar8,uVar6);
           FUN_180002fd0(lVar8,4,uVar6);
           lVar14 = *(int64 *)(pStatics + 0x4f8);
-          if (lVar14 == null) goto LAB_1813e5276;
-          uVar6 = FUN_180002f80(lVar14,iVar21,DAT_181da4358);
+          if (lVar14 == null) goto LAB_1813e5886;
+          uVar6 = FUN_180002f80(lVar14,iVar21,DAT_181da4370);
           uVar6 = GlobalData.GenerateRareLvColorText(uVar6,iVar21,0);
           FUN_180002070(lVar8,uVar6);
           FUN_180002fd0(lVar8,5,uVar6);
@@ -4753,7 +4753,7 @@ public class AIController
           break;
         case 17:
           iVar21 = Mathf.Max(1,*(uint32 *)(lVar14 + 36),0);
-          if (*(int64 *)(hero + 0x220) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 0x220) == 0) goto LAB_1813e5886;
           uVar4 = Mathf.FloorToInt((float)*(int *)(*(int64 *)(hero + 0x220) + 24) * 0.02,0);
           iVar21 = Mathf.Min(iVar21 * 4,uVar4,0);
           uVar4 = Mathf.RoundToInt((float)-iVar21 * 50.0,0);
@@ -4761,24 +4761,24 @@ public class AIController
           in_stack_fffffffffffffe78 = in_stack_fffffffffffffe78 & 0xffffffffffffff00;
           HeroData.ChangeBadFame(hero);
           HeroData.ChangeMoney(hero,uVar4,0,0,in_stack_fffffffffffffe78,uVar6);
-          lVar14 = FUN_1800d60b0(DAT_181da4120,4);
+          lVar14 = FUN_1800d60b0(DAT_181da4138,4);
           uVar6 = HeroData.Name(hero,1,0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,0,uVar6);
           uVar6 = HeroData.AtAreaName(hero,0);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,1,uVar6);
           local_110 = Mathf.Abs(-iVar21,0);
-          uVar6 = il2cpp_value_box(DAT_181d80418,&local_110);
+          uVar6 = il2cpp_value_box(DAT_181d80430,&local_110);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,2,uVar6);
           local_10c = Mathf.Abs(uVar4,0);
-          uVar6 = il2cpp_value_box(DAT_181d80418,&local_10c);
+          uVar6 = il2cpp_value_box(DAT_181d80430,&local_10c);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,3,uVar6);
           uVar6 = String.Format("{0}在{1}上下打点，花费{3}银两降低了{2}点恶名。",lVar14,0);
-        LAB_1813deb88:
+        LAB_1813df198:
           HeroData.AddLog(hero,uVar6,0);
           fVar29 = 0.1;
           break;
@@ -4788,7 +4788,7 @@ public class AIController
           lVar14 = HeroData.GetSkill(hero,uVar6,0,0,0);
           uVar6 = HeroData.Name(hero,1,0);
           uVar7 = HeroData.AtAreaName(hero,0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           uVar40 = KungfuSkillLvData.Name(lVar14,1,0);
           uVar6 = String.Format("{0}在{1}习得了新武功{2}。",uVar6,uVar7,uVar40,0);
           HeroData.AddLog(hero,uVar6,0);
@@ -4796,48 +4796,48 @@ public class AIController
           break;
         case 19:
           lVar14 = FUN_18046c0a0(0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           lVar14 = *(int64 *)(lVar14 + 32);
           if (((*(int64 *)(hero + 64) == 0) ||
               (uVar4 = Int32.Parse(*(uint64 *)(*(int64 *)(hero + 64) + 24),0), lVar14 == null)
-              ) || (lVar14 = WorldData.GetArea(lVar14,uVar4,0), lVar8 == null)) goto LAB_1813e5276;
+              ) || (lVar14 = WorldData.GetArea(lVar14,uVar4,0), lVar8 == null)) goto LAB_1813e5886;
           plVar10 = (int64 *)(lVar8 + 16);
           *plVar10 = lVar14;
           il2cpp_internal(plVar10,lVar14);
-          lVar14 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar14,DAT_181d8f098);
-          if (lVar14 == null) goto LAB_1813e5276;
-          FUN_18182a0b0(lVar14,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar14,1,DAT_181d8f218);
-          FUN_18182a0b0(lVar14,2,DAT_181d8f218);
-          FUN_18182a0b0(lVar14,3,DAT_181d8f218);
-          uVar6 = new OnTooltipCB(lVar8,DAT_181d94d38,DAT_181dab3b8);
-          List_1.Sort(lVar14,uVar6,DAT_181d8f818);
-          uVar4 = FUN_1800d6760(lVar14,0,DAT_181d8fa18);
+          lVar14 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar14,DAT_181d8f0b0);
+          if (lVar14 == null) goto LAB_1813e5886;
+          FUN_18182a6c0(lVar14,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar14,1,DAT_181d8f230);
+          FUN_18182a6c0(lVar14,2,DAT_181d8f230);
+          FUN_18182a6c0(lVar14,3,DAT_181d8f230);
+          uVar6 = new OnTooltipCB(lVar8,DAT_181d94ed0,DAT_181dab3d0);
+          List_1.Sort(lVar14,uVar6,DAT_181d8f830);
+          uVar4 = FUN_1800d6760(lVar14,0,DAT_181d8fa30);
           lVar14 = *(int64 *)(pStatics + 0x610);
-          if (lVar14 == null) goto LAB_1813e5276;
-          uVar5 = FUN_1800d6760(lVar14,uVar4,DAT_181d93190);
-          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5276;
-          FUN_1800d6790(*(int64 *)(hero + 0x168),uVar5,DAT_181da1078);
+          if (lVar14 == null) goto LAB_1813e5886;
+          uVar5 = FUN_1800d6760(lVar14,uVar4,DAT_181d931a0);
+          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5886;
+          FUN_1800d6790(*(int64 *)(hero + 0x168),uVar5,DAT_181da1090);
           HeroData.GetLoyalWorkRate(hero,0);
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           fVar29 = (float)Mathf.Max();
-          if (*plVar10 == 0) goto LAB_1813e5276;
+          if (*plVar10 == 0) goto LAB_1813e5886;
           AreaData.ChangeAreaState(*plVar10,uVar4);
           HeroData.ChangeLivingSkillExp
                     (hero,uVar5,((float)*(int *)(hero + 184) * 0.25 + 1.0) * fVar29 * 20.0,0,0);
-          lVar14 = FUN_1800d60b0(DAT_181da4120,4);
+          lVar14 = FUN_1800d60b0(DAT_181da4138,4);
           uVar6 = HeroData.Name(hero,1,0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,0,uVar6);
-          if (*plVar10 == 0) goto LAB_1813e5276;
+          if (*plVar10 == 0) goto LAB_1813e5886;
           uVar6 = AreaData.GetAreaName(*plVar10,0);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,1,uVar6);
           lVar16 = *(int64 *)(pStatics + 0x608);
-          if (lVar16 == null) goto LAB_1813e5276;
-          uVar6 = FUN_180002f80(lVar16,uVar4,DAT_181da4358);
+          if (lVar16 == null) goto LAB_1813e5886;
+          uVar6 = FUN_180002f80(lVar16,uVar4,DAT_181da4370);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,2,uVar6);
           local_140 = ABS(fVar29);
@@ -4845,51 +4845,51 @@ public class AIController
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,3,uVar6);
           uVar6 = "{0}在{1}加强管理，使该地{2}提升{3}点。";
-          goto LAB_1813e3b58;
+          goto LAB_1813e4168;
         case 20:
           lVar14 = FUN_18046c0a0(0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           lVar14 = *(int64 *)(lVar14 + 32);
           if (((*(int64 *)(hero + 64) == 0) ||
               (uVar4 = Int32.Parse(*(uint64 *)(*(int64 *)(hero + 64) + 24),0), lVar14 == null)
-              ) || (lVar14 = WorldData.GetArea(lVar14,uVar4,0), lVar8 == null)) goto LAB_1813e5276;
+              ) || (lVar14 = WorldData.GetArea(lVar14,uVar4,0), lVar8 == null)) goto LAB_1813e5886;
           plVar10 = (int64 *)(lVar8 + 16);
           *plVar10 = lVar14;
           il2cpp_internal(plVar10,lVar14);
-          lVar14 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar14,DAT_181d8f098);
-          if (lVar14 == null) goto LAB_1813e5276;
-          FUN_18182a0b0(lVar14,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar14,1,DAT_181d8f218);
-          FUN_18182a0b0(lVar14,2,DAT_181d8f218);
-          FUN_18182a0b0(lVar14,3,DAT_181d8f218);
-          uVar6 = new OnTooltipCB(lVar8,DAT_181d94db8,DAT_181dab3b8);
-          List_1.Sort(lVar14,uVar6,DAT_181d8f818);
-          uVar4 = FUN_1800d6760(lVar14,0,DAT_181d8fa18);
+          lVar14 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar14,DAT_181d8f0b0);
+          if (lVar14 == null) goto LAB_1813e5886;
+          FUN_18182a6c0(lVar14,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar14,1,DAT_181d8f230);
+          FUN_18182a6c0(lVar14,2,DAT_181d8f230);
+          FUN_18182a6c0(lVar14,3,DAT_181d8f230);
+          uVar6 = new OnTooltipCB(lVar8,DAT_181d94f50,DAT_181dab3d0);
+          List_1.Sort(lVar14,uVar6,DAT_181d8f830);
+          uVar4 = FUN_1800d6760(lVar14,0,DAT_181d8fa30);
           lVar14 = *(int64 *)(pStatics + 0x618);
-          if (lVar14 == null) goto LAB_1813e5276;
-          uVar5 = FUN_1800d6760(lVar14,uVar4,DAT_181d93190);
-          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5276;
-          FUN_1800d6790(*(int64 *)(hero + 0x168),uVar5,DAT_181da1078);
+          if (lVar14 == null) goto LAB_1813e5886;
+          uVar5 = FUN_1800d6760(lVar14,uVar4,DAT_181d931a0);
+          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5886;
+          FUN_1800d6790(*(int64 *)(hero + 0x168),uVar5,DAT_181da1090);
           HeroData.GetLoyalWorkRate(hero,0);
-          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5276;
+          if (*(int64 *)(hero + 64) == 0) goto LAB_1813e5886;
           fVar29 = (float)Mathf.Max();
-          if (*plVar10 == 0) goto LAB_1813e5276;
+          if (*plVar10 == 0) goto LAB_1813e5886;
           AreaData.ChangeAreaState(*plVar10,uVar4);
           HeroData.ChangeLivingSkillExp
                     (hero,uVar5,((float)*(int *)(hero + 184) * 0.25 + 1.0) * -fVar29 * 20.0,0,0);
-          lVar14 = FUN_1800d60b0(DAT_181da4120,4);
+          lVar14 = FUN_1800d60b0(DAT_181da4138,4);
           uVar6 = HeroData.Name(hero,1,0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,0,uVar6);
-          if (*plVar10 == 0) goto LAB_1813e5276;
+          if (*plVar10 == 0) goto LAB_1813e5886;
           uVar6 = AreaData.GetAreaName(*plVar10,0);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,1,uVar6);
           lVar16 = *(int64 *)(pStatics + 0x608);
-          if (lVar16 == null) goto LAB_1813e5276;
-          uVar6 = FUN_180002f80(lVar16,uVar4,DAT_181da4358);
+          if (lVar16 == null) goto LAB_1813e5886;
+          uVar6 = FUN_180002f80(lVar16,uVar4,DAT_181da4370);
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,2,uVar6);
           local_140 = ABS(-fVar29);
@@ -4897,11 +4897,11 @@ public class AIController
           FUN_180002070(lVar14,uVar6);
           FUN_180002fd0(lVar14,3,uVar6);
           uVar6 = "{0}在{1}暗中破坏，使该地{2}降低{3}点。";
-        LAB_1813e3b58:
+        LAB_1813e4168:
           uVar6 = String.Format(uVar6,lVar14,0);
           HeroData.AddLog(hero,uVar6,0);
           if (*(int64 *)(lVar8 + 16) == 0) {
-        LAB_1813e5276:
+        LAB_1813e5886:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -4910,23 +4910,23 @@ public class AIController
           lVar14 = FUN_18046c0a0(0);
           if (((lVar14 == null) || (*(int64 *)(lVar14 + 32) == 0)) ||
              (lVar14 = WorldData.Player(*(int64 *)(lVar14 + 32),0)) == null)
-          goto LAB_1813e5276;
+          goto LAB_1813e5886;
           if (iVar21 == *(int *)(lVar14 + 132)) {
             lVar14 = FUN_18046c2c0(0);
             uVar7 = new InfoData(1,uVar6,0);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             InfoController.AddInfo(lVar14,uVar7,0);
           }
           fVar29 = 2.0;
           break;
         case 21:
-          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5276;
-          FUN_1800d6790(*(int64 *)(hero + 0x168),8,DAT_181da1078);
+          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5886;
+          FUN_1800d6790(*(int64 *)(hero + 0x168),8,DAT_181da1090);
           uVar43 = (uint32)(in_stack_fffffffffffffe78 >> 32);
           lVar14 = *(int64 *)(hero + 0x220);
-          lVar8 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar8,DAT_181d8f098);
-          if ((lVar8 == null) || (FUN_18182a0b0(lVar8,3,DAT_181d8f218), lVar14 == null)) goto LAB_1813e5276;
+          lVar8 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar8,DAT_181d8f0b0);
+          if ((lVar8 == null) || (FUN_18182a6c0(lVar8,3,DAT_181d8f230), lVar14 == null)) goto LAB_1813e5886;
           lVar14 = ItemListData.FindRandomItem
                              (lVar14,0,5,0,CONCAT44(uVar43,5),lVar8,CONCAT44(uVar4,0xffffffff),
                               CONCAT44(uVar5,0xbf800000),CONCAT44(uVar41,0xbf800000),0);
@@ -4938,14 +4938,14 @@ public class AIController
           }
           lVar8 = FUN_18046c0a0(0);
           GlobalData.RandomRange();
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar42 = 0;
           uVar40 = 0;
           uVar7 = CONCAT44(uVar4,0xffffffff);
           uVar6 = 1;
           lVar16 = hero;
           lVar8 = GameController.GenerateRandomItem(lVar8,2);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           fVar28 = 2.0;
           fVar29 = (float)FUN_1801f8ab0();
           iVar21 = (int)(fVar29 * 25.0);
@@ -4953,61 +4953,61 @@ public class AIController
           if (lVar15 == null) {
             HeroData.ChangeMoney(hero,-iVar21,0,0,uVar6,uVar7,lVar16,uVar40,uVar42);
             HeroData.GetItem(hero,lVar8,0);
-            lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+            lVar16 = FUN_1800d60b0(DAT_181da4138,4);
             uVar6 = HeroData.Name(hero,1,0);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,0,uVar6);
             uVar6 = ItemData.Name(lVar8,1,0);
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,1,uVar6);
             local_100 = iVar21;
-            uVar6 = il2cpp_value_box(DAT_181d80418,&local_100);
+            uVar6 = il2cpp_value_box(DAT_181d80430,&local_100);
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,2,uVar6);
             uVar6 = "{0}烹饪了{1}并放入行囊(消耗{2}银钱{3})";
           }
           else {
             lVar16 = HeroData.GetForce(hero,0,0);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             uVar7 = 0;
             uVar6 = 1;
             ForceData.ChangeResource(lVar16,1);
             lVar16 = HeroData.GetForce(hero,0,0);
-            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
             fVar29 = *(float *)(*(int64 *)(lVar16 + 160) + 28);
             lVar16 = HeroData.GetForce(hero,0,0);
-            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
             if (fVar29 < *(float *)(*(int64 *)(lVar16 + 160) + 32)) {
               lVar16 = HeroData.GetForce(hero,0,0);
-              if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+              if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
               ItemListData.GetItem(*(int64 *)(lVar16 + 160),lVar8,0,0,uVar6,uVar7);
-              lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+              lVar16 = FUN_1800d60b0(DAT_181da4138,4);
               uVar6 = HeroData.Name(hero,1,0);
-              if (lVar16 == null) goto LAB_1813e5276;
+              if (lVar16 == null) goto LAB_1813e5886;
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,0,uVar6);
               uVar6 = ItemData.Name(lVar8,1,0);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,1,uVar6);
               local_104 = iVar21;
-              uVar6 = il2cpp_value_box(DAT_181d80418,&local_104);
+              uVar6 = il2cpp_value_box(DAT_181d80430,&local_104);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,2,uVar6);
               uVar6 = "{0}烹饪了{1}并放入门派仓库(消耗{2}粮食{3})";
             }
             else {
               HeroData.GetItem(hero,lVar8,0);
-              lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+              lVar16 = FUN_1800d60b0(DAT_181da4138,4);
               uVar6 = HeroData.Name(hero,1,0);
-              if (lVar16 == null) goto LAB_1813e5276;
+              if (lVar16 == null) goto LAB_1813e5886;
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,0,uVar6);
               uVar6 = ItemData.Name(lVar8,1,0);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,1,uVar6);
               local_108 = iVar21;
-              uVar6 = il2cpp_value_box(DAT_181d80418,&local_108);
+              uVar6 = il2cpp_value_box(DAT_181d80430,&local_108);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,2,uVar6);
               uVar6 = "{0}烹饪了{1}，由于门派仓库已满只得放入行囊(消耗{2}粮食{3})";
@@ -5026,7 +5026,7 @@ public class AIController
           if (cVar3) {
             lVar16 = FUN_18046c2c0(0);
             uVar7 = new InfoData(1,uVar6);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             InfoController.AddInfo(lVar16,uVar7,0);
           }
           iVar21 = *(int *)(lVar8 + 56);
@@ -5034,15 +5034,15 @@ public class AIController
             fVar28 = 1.0;
           }
           uVar6 = 8;
-          goto LAB_1813e453b;
+          goto LAB_1813e4b4b;
         case 22:
-          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5276;
-          FUN_1800d6790(*(int64 *)(hero + 0x168),7,DAT_181da1078);
+          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5886;
+          FUN_1800d6790(*(int64 *)(hero + 0x168),7,DAT_181da1090);
           uVar43 = (uint32)(in_stack_fffffffffffffe78 >> 32);
           lVar14 = *(int64 *)(hero + 0x220);
-          lVar8 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar8,DAT_181d8f098);
-          if ((lVar8 == null) || (FUN_18182a0b0(lVar8,2,DAT_181d8f218), lVar14 == null)) goto LAB_1813e5276;
+          lVar8 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar8,DAT_181d8f0b0);
+          if ((lVar8 == null) || (FUN_18182a6c0(lVar8,2,DAT_181d8f230), lVar14 == null)) goto LAB_1813e5886;
           lVar14 = ItemListData.FindRandomItem
                              (lVar14,0,5,0,CONCAT44(uVar43,5),lVar8,CONCAT44(uVar4,0xffffffff),
                               CONCAT44(uVar5,0xbf800000),CONCAT44(uVar41,0xbf800000),0);
@@ -5054,14 +5054,14 @@ public class AIController
           }
           lVar8 = FUN_18046c0a0(0);
           GlobalData.RandomRange();
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar42 = 0;
           uVar40 = 0;
           uVar7 = CONCAT44(uVar4,0xffffffff);
           uVar6 = 1;
           lVar16 = hero;
           lVar8 = GameController.GenerateRandomItem(lVar8,1);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           fVar28 = 2.0;
           fVar29 = (float)FUN_1801f8ab0();
           iVar21 = (int)(fVar29 * 25.0);
@@ -5069,61 +5069,61 @@ public class AIController
           if (lVar15 == null) {
             HeroData.ChangeMoney(hero,-iVar21,0,0,uVar6,uVar7,lVar16,uVar40,uVar42);
             HeroData.GetItem(hero,lVar8,0);
-            lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+            lVar16 = FUN_1800d60b0(DAT_181da4138,4);
             uVar6 = HeroData.Name(hero,1,0);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,0,uVar6);
             uVar6 = ItemData.Name(lVar8,1,0);
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,1,uVar6);
             local_f4 = iVar21;
-            uVar6 = il2cpp_value_box(DAT_181d80418,&local_f4);
+            uVar6 = il2cpp_value_box(DAT_181d80430,&local_f4);
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,2,uVar6);
             uVar6 = "{0}炼制了{1}并放入行囊(消耗{2}银钱{3})";
           }
           else {
             lVar16 = HeroData.GetForce(hero,0,0);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             uVar7 = 0;
             uVar6 = 1;
             ForceData.ChangeResource(lVar16,4);
             lVar16 = HeroData.GetForce(hero,0,0);
-            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
             fVar29 = *(float *)(*(int64 *)(lVar16 + 160) + 28);
             lVar16 = HeroData.GetForce(hero,0,0);
-            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
             if (fVar29 < *(float *)(*(int64 *)(lVar16 + 160) + 32)) {
               lVar16 = HeroData.GetForce(hero,0,0);
-              if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+              if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
               ItemListData.GetItem(*(int64 *)(lVar16 + 160),lVar8,0,0,uVar6,uVar7);
-              lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+              lVar16 = FUN_1800d60b0(DAT_181da4138,4);
               uVar6 = HeroData.Name(hero,1,0);
-              if (lVar16 == null) goto LAB_1813e5276;
+              if (lVar16 == null) goto LAB_1813e5886;
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,0,uVar6);
               uVar6 = ItemData.Name(lVar8,1,0);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,1,uVar6);
               local_f8 = iVar21;
-              uVar6 = il2cpp_value_box(DAT_181d80418,&local_f8);
+              uVar6 = il2cpp_value_box(DAT_181d80430,&local_f8);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,2,uVar6);
               uVar6 = "{0}炼制了{1}并放入门派仓库(消耗{2}药材{3})";
             }
             else {
               HeroData.GetItem(hero,lVar8,0);
-              lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+              lVar16 = FUN_1800d60b0(DAT_181da4138,4);
               uVar6 = HeroData.Name(hero,1,0);
-              if (lVar16 == null) goto LAB_1813e5276;
+              if (lVar16 == null) goto LAB_1813e5886;
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,0,uVar6);
               uVar6 = ItemData.Name(lVar8,1,0);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,1,uVar6);
               local_fc = iVar21;
-              uVar6 = il2cpp_value_box(DAT_181d80418,&local_fc);
+              uVar6 = il2cpp_value_box(DAT_181d80430,&local_fc);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,2,uVar6);
               uVar6 = "{0}炼制了{1}，由于门派仓库已满只得放入行囊(消耗{2}药材{3})";
@@ -5142,7 +5142,7 @@ public class AIController
           if (cVar3) {
             lVar16 = FUN_18046c2c0(0);
             uVar7 = new InfoData(1,uVar6);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             InfoController.AddInfo(lVar16,uVar7,0);
           }
           iVar21 = *(int *)(lVar8 + 56);
@@ -5150,21 +5150,21 @@ public class AIController
             fVar28 = 1.0;
           }
           uVar6 = 7;
-        LAB_1813e453b:
+        LAB_1813e4b4b:
           HeroData.ChangeLivingSkillExp(hero,uVar6,((float)iVar21 + (float)iVar21) * fVar28,0,0);
           fVar29 = (float)*(int *)(lVar8 + 60) * 0.5 + 0.5;
-          goto LAB_1813e515f;
+          goto LAB_1813e576f;
         case 23:
-          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5276;
-          FUN_1800d6790(*(int64 *)(hero + 0x168),6,DAT_181da1078);
+          if (*(int64 *)(hero + 0x168) == 0) goto LAB_1813e5886;
+          FUN_1800d6790(*(int64 *)(hero + 0x168),6,DAT_181da1090);
           uVar43 = (uint32)(in_stack_fffffffffffffe78 >> 32);
           lVar14 = *(int64 *)(hero + 0x220);
-          lVar8 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar8,DAT_181d8f098);
-          if (lVar8 == null) goto LAB_1813e5276;
-          FUN_18182a0b0(lVar8,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar8,1,DAT_181d8f218);
-          if (lVar14 == null) goto LAB_1813e5276;
+          lVar8 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar8,DAT_181d8f0b0);
+          if (lVar8 == null) goto LAB_1813e5886;
+          FUN_18182a6c0(lVar8,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar8,1,DAT_181d8f230);
+          if (lVar14 == null) goto LAB_1813e5886;
           uVar6 = CONCAT44(uVar43,5);
           lVar14 = ItemListData.FindRandomItem
                              (lVar14,0,5,0,uVar6,lVar8,CONCAT44(uVar4,0xffffffff),
@@ -5177,79 +5177,79 @@ public class AIController
           }
           lVar8 = FUN_18046c0a0(0);
           GlobalData.RandomRange();
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar42 = 0;
           uVar40 = 0;
           uVar7 = CONCAT44(uVar4,0xffffffff);
           uVar6 = CONCAT71((int7)((uint64)uVar6 >> 8),1);
           lVar16 = hero;
           lVar8 = GameController.GenerateRandomItem(lVar8,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           fVar29 = (float)FUN_1801f8ab0();
           iVar21 = (int)(fVar29 * 25.0);
           lVar15 = HeroData.GetForce(hero,0,0);
           if (lVar15 == null) {
             HeroData.ChangeMoney(hero,iVar21 * -2,0,0,uVar6,uVar7,lVar16,uVar40,uVar42);
             HeroData.GetItem(hero,lVar8,0,0);
-            lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+            lVar16 = FUN_1800d60b0(DAT_181da4138,4);
             uVar6 = HeroData.Name(hero,1,0);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,0,uVar6);
             uVar6 = ItemData.Name(lVar8,1,0);
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,1,uVar6);
             local_e8[0] = iVar21;
-            uVar6 = il2cpp_value_box(DAT_181d80418,local_e8);
+            uVar6 = il2cpp_value_box(DAT_181d80430,local_e8);
             FUN_180002070(lVar16,uVar6);
             FUN_180002fd0(lVar16,2,uVar6);
             uVar6 = "{0}制造了{1}并放入行囊(消耗{2}银钱{3})";
           }
           else {
             lVar16 = HeroData.GetForce(hero,0,0);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             uVar39 = (undefined7)((uint64)uVar6 >> 8);
             ForceData.ChangeResource(lVar16,2);
             lVar16 = HeroData.GetForce(hero,0,0);
-            if (lVar16 == null) goto LAB_1813e5276;
+            if (lVar16 == null) goto LAB_1813e5886;
             uVar7 = 0;
             uVar6 = CONCAT71(uVar39,1);
             ForceData.ChangeResource(lVar16,3);
             lVar16 = HeroData.GetForce(hero,0,0);
-            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
             fVar29 = *(float *)(*(int64 *)(lVar16 + 160) + 28);
             lVar16 = HeroData.GetForce(hero,0,0);
-            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+            if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
             if (fVar29 < *(float *)(*(int64 *)(lVar16 + 160) + 32)) {
               lVar16 = HeroData.GetForce(hero,0,0);
-              if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5276;
+              if ((lVar16 == null) || (*(int64 *)(lVar16 + 160) == 0)) goto LAB_1813e5886;
               ItemListData.GetItem(*(int64 *)(lVar16 + 160),lVar8,0,0,uVar6,uVar7);
-              lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+              lVar16 = FUN_1800d60b0(DAT_181da4138,4);
               uVar6 = HeroData.Name(hero,1,0);
-              if (lVar16 == null) goto LAB_1813e5276;
+              if (lVar16 == null) goto LAB_1813e5886;
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,0,uVar6);
               uVar6 = ItemData.Name(lVar8,1,0);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,1,uVar6);
               local_ec = iVar21;
-              uVar6 = il2cpp_value_box(DAT_181d80418,&local_ec);
+              uVar6 = il2cpp_value_box(DAT_181d80430,&local_ec);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,2,uVar6);
               uVar6 = "{0}制造了{1}并放入门派仓库(消耗{2}木料矿石{3})";
             }
             else {
               HeroData.GetItem(hero,lVar8,0,0);
-              lVar16 = FUN_1800d60b0(DAT_181da4120,4);
+              lVar16 = FUN_1800d60b0(DAT_181da4138,4);
               uVar6 = HeroData.Name(hero,1,0);
-              if (lVar16 == null) goto LAB_1813e5276;
+              if (lVar16 == null) goto LAB_1813e5886;
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,0,uVar6);
               uVar6 = ItemData.Name(lVar8,1,0);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,1,uVar6);
               local_f0 = iVar21;
-              uVar6 = il2cpp_value_box(DAT_181d80418,&local_f0);
+              uVar6 = il2cpp_value_box(DAT_181d80430,&local_f0);
               FUN_180002070(lVar16,uVar6);
               FUN_180002fd0(lVar16,2,uVar6);
               uVar6 = "{0}制造了{1}，由于门派仓库已满只得放入行囊(消耗{2}木料矿石{3})";
@@ -5268,14 +5268,14 @@ public class AIController
           if (cVar3) {
             lVar14 = FUN_18046c2c0(0);
             uVar7 = new InfoData(1,uVar6,0);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             InfoController.AddInfo(lVar14,uVar7,0);
           }
           HeroData.ChangeLivingSkillExp(hero,6);
           fVar29 = (float)*(int *)(lVar8 + 60) + 1.0;
-        LAB_1813e515f:
+        LAB_1813e576f:
           if (0.0 < fVar29) break;
-          goto LAB_1813e51d8;
+          goto LAB_1813e57e8;
         }
         cVar3 = HeroData.HaveForce(hero,0);
         if (cVar3) {
@@ -5284,20 +5284,20 @@ public class AIController
                     (hero,((float)dVar30 * 4.0 + 4.0 + (float)*(int *)(hero + 184)) * fVar29,0,
                      0xffffffff,0);
         }
-        LAB_1813e51d8:
+        LAB_1813e57e8:
         if (!bVar2) {
-        switchD_1813de14e_caseD_0:
+        switchD_1813de75e_caseD_0:
           HeroData.ResetAI(hero,0);
         }
         return local_154;
-        LAB_1813df2b0:
+        LAB_1813df8c0:
         uVar4 = (uint32)((uint64)in_stack_fffffffffffffe80 >> 32);
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 32)) == null)
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         if ((int)*(uint32 *)(lVar14 + 24) <= (int)uVar18) {
           uVar18 = 0;
-          goto LAB_1813df390;
+          goto LAB_1813df9a0;
         }
         if (*(uint32 *)(lVar14 + 24) <= uVar18) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5311,22 +5311,22 @@ public class AIController
                            (this,hero,uVar12,uVar6,in_stack_fffffffffffffe78,
                             in_stack_fffffffffffffe80,0);
         if (lVar14 != null) {
-          FUN_18171e540(uVar17,"",0);
+          FUN_18171eb50(uVar17,"",0);
           ItemData.Name(lVar14,1,0);
           uVar17 = String.Concat(uVar17);
           fVar29 = fVar29 + (float)*(int *)(lVar14 + 56);
         }
         uVar18 = uVar18 + 1;
-        goto LAB_1813df2b0;
-        LAB_1813df390:
+        goto LAB_1813df8c0;
+        LAB_1813df9a0:
         uVar4 = (uint32)(in_stack_fffffffffffffe78 >> 32);
         uVar5 = (uint32)((uint64)in_stack_fffffffffffffe80 >> 32);
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 56)) == null)
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         if ((int)*(uint32 *)(lVar14 + 24) <= (int)uVar18) {
           uVar18 = 0;
-          goto LAB_1813df470;
+          goto LAB_1813dfa80;
         }
         if (*(uint32 *)(lVar14 + 24) <= uVar18) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5340,22 +5340,22 @@ public class AIController
                              (*(int64 *)(lVar14 + 16) + 32 + (int64)(int)uVar18 * 8),
                             in_stack_fffffffffffffe78,in_stack_fffffffffffffe80,0);
         if (lVar14 != null) {
-          FUN_18171e540(uVar17,"",0);
+          FUN_18171eb50(uVar17,"",0);
           ItemData.Name(lVar14,1,0);
           uVar17 = String.Concat(uVar17);
           fVar29 = fVar29 + (float)*(int *)(lVar14 + 56);
         }
         uVar18 = uVar18 + 1;
-        goto LAB_1813df390;
-        LAB_1813df470:
+        goto LAB_1813df9a0;
+        LAB_1813dfa80:
         uVar4 = (uint32)(in_stack_fffffffffffffe78 >> 32);
         uVar5 = (uint32)((uint64)in_stack_fffffffffffffe80 >> 32);
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 80)) == null)
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         if ((int)*(uint32 *)(lVar14 + 24) <= (int)uVar18) {
           uVar18 = 0;
-          goto LAB_1813df550;
+          goto LAB_1813dfb60;
         }
         if (*(uint32 *)(lVar14 + 24) <= uVar18) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5369,22 +5369,22 @@ public class AIController
                              (*(int64 *)(lVar14 + 16) + 32 + (int64)(int)uVar18 * 8),
                             in_stack_fffffffffffffe78,in_stack_fffffffffffffe80,0);
         if (lVar14 != null) {
-          FUN_18171e540(uVar17,"",0);
+          FUN_18171eb50(uVar17,"",0);
           ItemData.Name(lVar14,1,0);
           uVar17 = String.Concat(uVar17);
           fVar29 = fVar29 + (float)*(int *)(lVar14 + 56);
         }
         uVar18 = uVar18 + 1;
-        goto LAB_1813df470;
-        LAB_1813df550:
+        goto LAB_1813dfa80;
+        LAB_1813dfb60:
         uVar4 = (uint32)(in_stack_fffffffffffffe78 >> 32);
         uVar5 = (uint32)((uint64)in_stack_fffffffffffffe80 >> 32);
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 104)) == null)
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         if ((int)*(uint32 *)(lVar14 + 24) <= (int)uVar18) {
           uVar18 = 0;
-          goto LAB_1813df630;
+          goto LAB_1813dfc40;
         }
         if (*(uint32 *)(lVar14 + 24) <= uVar18) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5398,20 +5398,20 @@ public class AIController
                              (*(int64 *)(lVar14 + 16) + 32 + (int64)(int)uVar18 * 8),
                             in_stack_fffffffffffffe78,in_stack_fffffffffffffe80,0);
         if (lVar14 != null) {
-          FUN_18171e540(uVar17,"",0);
+          FUN_18171eb50(uVar17,"",0);
           ItemData.Name(lVar14,1,0);
           uVar17 = String.Concat(uVar17);
           fVar29 = fVar29 + (float)*(int *)(lVar14 + 56);
         }
         uVar18 = uVar18 + 1;
-        goto LAB_1813df550;
-        LAB_1813df630:
+        goto LAB_1813dfb60;
+        LAB_1813dfc40:
         uVar4 = (uint32)(in_stack_fffffffffffffe78 >> 32);
         uVar5 = (uint32)((uint64)in_stack_fffffffffffffe80 >> 32);
         if ((*(int64 *)(hero + 0x1f8) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x1f8) + 128)) == null)
-        goto LAB_1813e5276;
-        if ((int)*(uint32 *)(lVar14 + 24) <= (int)uVar18) goto LAB_1813df70a;
+        goto LAB_1813e5886;
+        if ((int)*(uint32 *)(lVar14 + 24) <= (int)uVar18) goto LAB_1813dfd1a;
         if (*(uint32 *)(lVar14 + 24) <= uVar18) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -5424,17 +5424,17 @@ public class AIController
                              (*(int64 *)(lVar14 + 16) + 32 + (int64)(int)uVar18 * 8),
                             in_stack_fffffffffffffe78,in_stack_fffffffffffffe80,0);
         if (lVar14 != null) {
-          FUN_18171e540(uVar17,"",0);
+          FUN_18171eb50(uVar17,"",0);
           ItemData.Name(lVar14,1,0);
           uVar17 = String.Concat(uVar17);
           fVar29 = fVar29 + (float)*(int *)(lVar14 + 56);
         }
         uVar18 = uVar18 + 1;
-        goto LAB_1813df630;
-        LAB_1813df70a:
+        goto LAB_1813dfc40;
+        LAB_1813dfd1a:
         if ((*(int64 *)(hero + 0x220) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         if (*(uint32 *)(lVar14 + 24) < 2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -5443,16 +5443,16 @@ public class AIController
         uVar41 = (uint32)((uint64)in_stack_fffffffffffffe90 >> 32);
         uVar43 = (uint32)((uint64)in_stack_fffffffffffffe98 >> 32);
         lVar14 = *(int64 *)(*(int64 *)(lVar14 + 16) + 40);
-        if (lVar14 == null) goto LAB_1813e5276;
+        if (lVar14 == null) goto LAB_1813e5886;
         if ((float)*(int *)(lVar14 + 24) < (float)*(int *)(hero + 184) * 0.5 + 1.5) {
           if (uVar12 == 0) {
-        LAB_1813df811:
+        LAB_1813dfe21:
             lVar14 = FUN_18046c0a0(0);
             HeroData.GetMaxBuyValue(hero);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             in_stack_fffffffffffffe78 = 0;
             lVar14 = GameController.GenerateMedData(lVar14);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             iVar19 = *(int *)(lVar14 + 56);
             fVar28 = (float)HeroData.GetTradeValueRate(hero,1,0);
             HeroData.ChangeMoney(hero,-(int)((float)iVar19 * fVar28),0,0,in_stack_fffffffffffffe78);
@@ -5467,11 +5467,11 @@ public class AIController
             lVar14 = ItemListData.FindRandomItem
                                (uVar12,0xffffffff,999999,0,CONCAT44(uVar4,1),0,in_stack_fffffffffffffe88,
                                 in_stack_fffffffffffffe90,in_stack_fffffffffffffe98,0);
-            if (lVar14 == null) goto LAB_1813df811;
+            if (lVar14 == null) goto LAB_1813dfe21;
             in_stack_fffffffffffffe78 = 0;
             AIController.HeroBuyItemFromForceStorage(this,hero,lVar14,uVar12,0);
           }
-          cVar3 = FUN_18171e540(uVar17,"",0);
+          cVar3 = FUN_18171eb50(uVar17,"",0);
           uVar9 = "/";
           if (cVar3) {
             uVar9 = "";
@@ -5482,7 +5482,7 @@ public class AIController
         }
         if ((*(int64 *)(hero + 0x220) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         if (*(uint32 *)(lVar14 + 24) < 6) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -5491,10 +5491,10 @@ public class AIController
         uVar41 = (uint32)((uint64)in_stack_fffffffffffffe90 >> 32);
         uVar43 = (uint32)((uint64)in_stack_fffffffffffffe98 >> 32);
         lVar14 = *(int64 *)(*(int64 *)(lVar14 + 16) + 72);
-        if (lVar14 == null) goto LAB_1813e5276;
+        if (lVar14 == null) goto LAB_1813e5886;
         if ((float)*(int *)(lVar14 + 24) < (float)*(int *)(hero + 184) * 0.5) {
           if (uVar12 == 0) {
-        LAB_1813df9f8:
+        LAB_1813e0008:
             lVar14 = FUN_18046c0a0(0);
             iVar19 = *(int *)(hero + 184);
             uVar6 = GlobalData.RandomRange((float)iVar19 - 1.5);
@@ -5502,7 +5502,7 @@ public class AIController
             if ((lVar14 == null) ||
                (lVar14 = GameController.GenerateMaterial
                                    (lVar14,uVar4,(float)*(int *)(hero + 184) * 0.3,0), lVar14 == null))
-            goto LAB_1813e5276;
+            goto LAB_1813e5886;
             iVar19 = *(int *)(lVar14 + 56);
             fVar28 = (float)HeroData.GetTradeValueRate(hero,1,0);
             HeroData.ChangeMoney(hero,-(int)((float)iVar19 * fVar28),0,0);
@@ -5519,11 +5519,11 @@ public class AIController
                                (uVar12,0xffffffff,999999,0,in_stack_fffffffffffffe78,0,
                                 in_stack_fffffffffffffe88,in_stack_fffffffffffffe90,
                                 in_stack_fffffffffffffe98,0);
-            if (lVar14 == null) goto LAB_1813df9f8;
+            if (lVar14 == null) goto LAB_1813e0008;
             in_stack_fffffffffffffe78 = 0;
             AIController.HeroBuyItemFromForceStorage(this,hero,lVar14,uVar12,0);
           }
-          cVar3 = FUN_18171e540(uVar17,"",0);
+          cVar3 = FUN_18171eb50(uVar17,"",0);
           uVar9 = "/";
           if (cVar3) {
             uVar9 = "";
@@ -5534,7 +5534,7 @@ public class AIController
         }
         if ((*(int64 *)(hero + 0x220) == 0) ||
            (lVar14 = *(int64 *)(*(int64 *)(hero + 0x220) + 48)) == null)
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         if (*(uint32 *)(lVar14 + 24) < 3) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -5543,17 +5543,17 @@ public class AIController
         uVar41 = (uint32)((uint64)in_stack_fffffffffffffe90 >> 32);
         uVar43 = (uint32)((uint64)in_stack_fffffffffffffe98 >> 32);
         lVar14 = *(int64 *)(*(int64 *)(lVar14 + 16) + 48);
-        if (lVar14 == null) goto LAB_1813e5276;
+        if (lVar14 == null) goto LAB_1813e5886;
         if ((float)*(int *)(lVar14 + 24) < (float)*(int *)(hero + 184) * 0.5 - 0.5) {
           if (uVar12 == 0) {
-        LAB_1813dfc11:
+        LAB_1813e0221:
             lVar14 = FUN_18046c0a0(0);
             HeroData.GetMaxBuyValue(hero);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             uVar6 = 0;
             in_stack_fffffffffffffe78 = CONCAT44(uVar4,0xffffffff);
             lVar14 = GameController.GenerateFoodData(lVar14);
-            if (lVar14 == null) goto LAB_1813e5276;
+            if (lVar14 == null) goto LAB_1813e5886;
             iVar19 = *(int *)(lVar14 + 56);
             fVar28 = (float)HeroData.GetTradeValueRate(hero,1,0);
             HeroData.ChangeMoney
@@ -5571,11 +5571,11 @@ public class AIController
                                (uVar12,0xffffffff,999999,0,uVar6,0,in_stack_fffffffffffffe88,
                                 in_stack_fffffffffffffe90,in_stack_fffffffffffffe98,0);
             uVar4 = (uint32)((uint64)uVar6 >> 32);
-            if (lVar14 == null) goto LAB_1813dfc11;
+            if (lVar14 == null) goto LAB_1813e0221;
             in_stack_fffffffffffffe78 = 0;
             AIController.HeroBuyItemFromForceStorage(this,hero,lVar14,uVar12,0);
           }
-          cVar3 = FUN_18171e540(uVar17,"",0);
+          cVar3 = FUN_18171eb50(uVar17,"",0);
           uVar9 = "/";
           if (cVar3) {
             uVar9 = "";
@@ -5590,8 +5590,8 @@ public class AIController
           lVar14 = *(int64 *)(hero + 0x220);
           if (lVar14 == null) break;
           if (0.7 < *(float *)(lVar14 + 28) / *(float *)(lVar14 + 32)) {
-        LAB_1813dff9f:
-            plVar10 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+        LAB_1813e05af:
+            plVar10 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
             lVar14 = HeroData.Name(hero,1,0);
             if (plVar10 != (int64 *)0) {
               if ((lVar14 != null) &&
@@ -5635,7 +5635,7 @@ public class AIController
               }
               plVar10[6] = local_res10;
               il2cpp_internal(plVar10 + 6,local_res10);
-              cVar3 = FUN_18171e540(uVar17,"",0);
+              cVar3 = FUN_18171eb50(uVar17,"",0);
               uVar6 = "{0}在{1}买卖交易，出售了闲置物品{2}{3}。";
               uVar12 = "";
               if (!cVar3) {
@@ -5660,22 +5660,22 @@ public class AIController
               HeroData.ChangeLivingSkillExp
                         (hero,3,((float)*(int *)(hero + 184) * 0.25 + 1.0) * (fVar29 + fVar29),0,0)
               ;
-              if (*(char *)(hero + 180) == false) goto switchD_1813de14e_caseD_0;
+              if (*(char *)(hero + 180) == false) goto switchD_1813de75e_caseD_0;
               lVar14 = HeroData.GetForce(hero,0,0);
               if (lVar14 != null) {
                 fVar29 = (float)ForceData.GetResourcePercent(lVar14,0,0);
                 if (0.9 < fVar29) {
-                  lVar14 = il2cpp_internal(DAT_181d93cd0);
-                  FUN_18132faf0(lVar14,DAT_181d8f098);
-                  goto LAB_1813e0510;
+                  lVar14 = il2cpp_internal(DAT_181d93ce8);
+                  FUN_181330100(lVar14,DAT_181d8f0b0);
+                  goto LAB_1813e0b20;
                 }
                 lVar14 = HeroData.GetForce(hero,0,0);
                 if (lVar14 != null) {
                   fVar29 = (float)ForceData.GetResourcePercent(lVar14,0,0);
-                  if (0.3 <= fVar29) goto switchD_1813de14e_caseD_0;
-                  lVar14 = il2cpp_internal(DAT_181d93cd0);
-                  FUN_18132faf0(lVar14,DAT_181d8f098);
-                  goto LAB_1813e01e0;
+                  if (0.3 <= fVar29) goto switchD_1813de75e_caseD_0;
+                  lVar14 = il2cpp_internal(DAT_181d93ce8);
+                  FUN_181330100(lVar14,DAT_181d8f0b0);
+                  goto LAB_1813e07f0;
                 }
               }
             }
@@ -5683,18 +5683,18 @@ public class AIController
           }
           GlobalData.RandomRange();
           cVar3 = AIController.CheckHeroItemNumBiggerThanMax(this,hero);
-          if (cVar3) goto LAB_1813dff9f;
+          if (cVar3) goto LAB_1813e05af;
           if (*(int64 *)(hero + 0x220) == 0) break;
           iVar19 = *(int *)(*(int64 *)(hero + 0x220) + 24);
           fVar26 = (float)FUN_1801f8ab0();
-          if ((float)iVar19 < fVar26 * 200.0) goto LAB_1813dff9f;
+          if ((float)iVar19 < fVar26 * 200.0) goto LAB_1813e05af;
           dVar30 = (double)GlobalData.RandomRangeDouble(0,0);
           uVar5 = (uint32)((uint64)in_stack_fffffffffffffe88 >> 32);
           uVar41 = (uint32)((uint64)in_stack_fffffffffffffe90 >> 32);
           uVar43 = (uint32)((uint64)in_stack_fffffffffffffe98 >> 32);
-          if ((double)fVar28 <= dVar30) goto LAB_1813dff9f;
+          if ((double)fVar28 <= dVar30) goto LAB_1813e05af;
           if (uVar12 == 0) {
-        LAB_1813dfeb6:
+        LAB_1813e04c6:
             lVar14 = FUN_18046c0a0(0);
             HeroData.GetMaxBuyValue(hero);
             if (lVar14 == null) break;
@@ -5712,11 +5712,11 @@ public class AIController
                                (uVar12,0xffffffff,999999,0,CONCAT44(uVar4,0xffffffff),0,
                                 in_stack_fffffffffffffe88,in_stack_fffffffffffffe90,
                                 in_stack_fffffffffffffe98,0);
-            if (lVar14 == null) goto LAB_1813dfeb6;
+            if (lVar14 == null) goto LAB_1813e04c6;
             in_stack_fffffffffffffe78 = 0;
             AIController.HeroBuyItemFromForceStorage(this,hero,lVar14,uVar12,0);
           }
-          cVar3 = FUN_18171e540(uVar17,"",0);
+          cVar3 = FUN_18171eb50(uVar17,"",0);
           uVar9 = "/";
           if (cVar3) {
             uVar9 = "";
@@ -5727,33 +5727,33 @@ public class AIController
           fVar28 = fVar28 * 0.7;
           fVar29 = fVar29 + (float)*(int *)(lVar14 + 56);
         }
-        goto LAB_1813e5276;
+        goto LAB_1813e5886;
         while( true ) {
           fVar29 = (float)ForceData.GetResourcePercent(lVar8);
           if (fVar29 < 0.3) {
-            if (lVar14 == null) goto LAB_1813e5276;
-            FUN_18182a0b0(lVar14);
+            if (lVar14 == null) goto LAB_1813e5886;
+            FUN_18182a6c0(lVar14);
           }
           iVar21 = iVar21 + 1;
           if (4 < iVar21) break;
-        LAB_1813e0510:
+        LAB_1813e0b20:
           lVar8 = HeroData.GetForce(hero,0,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
         }
-        if (lVar14 == null) goto LAB_1813e5276;
+        if (lVar14 == null) goto LAB_1813e5886;
         if (0 < *(int *)(lVar14 + 24)) {
           lVar8 = HeroData.GetForce(hero,0,0);
-          if ((lVar8 == null) || (*(int64 *)(lVar8 + 136) == 0)) goto LAB_1813e5276;
+          if ((lVar8 == null) || (*(int64 *)(lVar8 + 136) == 0)) goto LAB_1813e5886;
           if (*(int *)(*(int64 *)(lVar8 + 136) + 24) == 0) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar8 = HeroData.GetForce(hero,0,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           ForceData.GetResourcePercent(lVar8,0,0);
           GlobalData.RandomRange();
           iVar21 = Mathf.RoundToInt();
           lVar8 = HeroData.GetForce(hero,0,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
           uVar6 = 0;
           ForceData.ChangeResource(lVar8,0);
           local_13c = Mathf.RoundToInt(((float)iVar21 * 0.9) / (float)*(int *)(lVar14 + 24),0);
@@ -5764,48 +5764,48 @@ public class AIController
               uVar9 = "";
             }
             lVar8 = *(int64 *)(pStatics + 0x438);
-            uVar4 = FUN_1800d6760(lVar14,uVar17,DAT_181d8fa18);
-            if (lVar8 == null) goto LAB_1813e5276;
-            uVar6 = FUN_180002f80(lVar8,uVar4,DAT_181da4358);
+            uVar4 = FUN_1800d6760(lVar14,uVar17,DAT_181d8fa30);
+            if (lVar8 == null) goto LAB_1813e5886;
+            uVar6 = FUN_180002f80(lVar8,uVar4,DAT_181da4370);
             uVar7 = Int32.ToString(&local_13c,0);
             uVar12 = String.Concat(uVar12,uVar9,uVar6,uVar7,0);
             lVar8 = HeroData.GetForce(hero,0,0);
             uVar4 = FUN_1800d6760(lVar14,uVar17);
-            if (lVar8 == null) goto LAB_1813e5276;
+            if (lVar8 == null) goto LAB_1813e5886;
             uVar6 = 0;
             ForceData.ChangeResource(lVar8,uVar4);
             uVar17 = (uint64)(iVar19 + 1);
           }
           uVar40 = HeroData.Name(hero,CONCAT71((int7)(uVar17 >> 8),1),0);
           local_124 = iVar21;
-          uVar9 = il2cpp_value_box(DAT_181d80418,&local_124);
+          uVar9 = il2cpp_value_box(DAT_181d80430,&local_124);
           uVar7 = "{0}使用门派银钱{1}两，购买{2}。";
-          goto LAB_1813e04cf;
+          goto LAB_1813e0adf;
         }
-        goto switchD_1813de14e_caseD_0;
+        goto switchD_1813de75e_caseD_0;
         while( true ) {
           fVar29 = (float)ForceData.GetResourcePercent(lVar8);
           if (0.8 < fVar29) {
-            if (lVar14 == null) goto LAB_1813e5276;
-            FUN_18182a0b0(lVar14);
+            if (lVar14 == null) goto LAB_1813e5886;
+            FUN_18182a6c0(lVar14);
           }
           iVar21 = iVar21 + 1;
           if (4 < iVar21) break;
-        LAB_1813e01e0:
+        LAB_1813e07f0:
           lVar8 = HeroData.GetForce(hero,0,0);
-          if (lVar8 == null) goto LAB_1813e5276;
+          if (lVar8 == null) goto LAB_1813e5886;
         }
-        if (lVar14 == null) goto LAB_1813e5276;
+        if (lVar14 == null) goto LAB_1813e5886;
         if (0 < *(int *)(lVar14 + 24)) {
           uVar9 = "";
           for (uVar18 = 0; (int)uVar18 < *(int *)(lVar14 + 24); uVar18 = uVar18 + 1) {
             lVar8 = HeroData.GetForce(hero);
-            if (lVar8 == null) goto LAB_1813e5276;
+            if (lVar8 == null) goto LAB_1813e5886;
             lVar8 = *(int64 *)(lVar8 + 136);
             if (*(uint32 *)(lVar14 + 24) <= uVar18) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            if (lVar8 == null) goto LAB_1813e5276;
+            if (lVar8 == null) goto LAB_1813e5886;
             if (*(uint32 *)(lVar8 + 24) <=
                 lVar14[uVar18]) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -5814,7 +5814,7 @@ public class AIController
             if (*(uint32 *)(lVar14 + 24) <= uVar18) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            if (lVar8 == null) goto LAB_1813e5276;
+            if (lVar8 == null) goto LAB_1813e5886;
             ForceData.GetResourcePercent
                       (lVar8,*(uint32 *)
                               (*(int64 *)(lVar14 + 16) + 32 + (int64)(int)uVar18 * 4),0);
@@ -5825,35 +5825,35 @@ public class AIController
               uVar12 = "";
             }
             lVar8 = *(int64 *)(pStatics + 0x438);
-            uVar4 = FUN_1800d6760(lVar14,uVar18,DAT_181d8fa18);
-            if (lVar8 == null) goto LAB_1813e5276;
-            uVar6 = FUN_180002f80(lVar8,uVar4,DAT_181da4358);
+            uVar4 = FUN_1800d6760(lVar14,uVar18,DAT_181d8fa30);
+            if (lVar8 == null) goto LAB_1813e5886;
+            uVar6 = FUN_180002f80(lVar8,uVar4,DAT_181da4370);
             uVar7 = Int32.ToString(&local_148,0);
             uVar9 = String.Concat(uVar9,uVar12,uVar6,uVar7,0);
             iVar21 = Mathf.RoundToInt((float)local_148 * 0.9,0);
             uVar17 = (uint64)(uint32)((int)uVar17 + iVar21);
             lVar8 = HeroData.GetForce(hero,0,0);
             FUN_1800d6760(lVar14,uVar18);
-            if (lVar8 == null) goto LAB_1813e5276;
+            if (lVar8 == null) goto LAB_1813e5886;
             ForceData.ChangeResource(lVar8);
           }
           lVar14 = HeroData.GetForce(hero,0,0);
-          if (lVar14 == null) goto LAB_1813e5276;
+          if (lVar14 == null) goto LAB_1813e5886;
           uVar6 = 0;
           ForceData.ChangeResource(lVar14,0);
           uVar40 = HeroData.Name(hero,1,0);
           local_128 = (int)uVar17;
-          uVar12 = il2cpp_value_box(DAT_181d80418,&local_128);
+          uVar12 = il2cpp_value_box(DAT_181d80430,&local_128);
           uVar7 = "{0}出售门派{1}，换取门派银钱{2}两。";
-        LAB_1813e04cf:
+        LAB_1813e0adf:
           uVar6 = String.Format(uVar7,uVar40,uVar9,uVar12,0,uVar6);
           HeroData.AddLog(hero,uVar6,0);
         }
-        goto switchD_1813de14e_caseD_0;
+        goto switchD_1813de75e_caseD_0;
     }
 
     // Token : 0x60009F5
-    // RVA   : 0x13DAFB0   Offset: 0x13DA3B0   Length: 0x38C
+    // RVA   : 0x13DB5C0   Offset: 0x13DA9C0   Length: 0x38C
     public void AICheckRemoveBrother(HeroData hero)
     {
         bool cVar1;
@@ -5881,8 +5881,8 @@ public class AIController
           if ((double)((float)iVar2 * 0.35) < dVar10) {
             return;
           }
-          lVar4 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar4,DAT_181d8f098);
+          lVar4 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar4,DAT_181d8f0b0);
           uVar8 = 0;
           lVar9 = 32;
           while (lVar5 = *(int64 *)(hero + 0x340)) != null {
@@ -5935,9 +5935,9 @@ public class AIController
                 {
                   }
                   if ((*(int64 *)(hero + 0x340) == 0) ||
-                  (uVar3 = FUN_1800d6760(*(int64 *)(hero + 0x340),uVar8,DAT_181d8fa18), lVar4 == null))
+                  (uVar3 = FUN_1800d6760(*(int64 *)(hero + 0x340),uVar8,DAT_181d8fa30), lVar4 == null))
                   break;
-                  FUN_18182a0b0(lVar4,uVar3);
+                  FUN_18182a6c0(lVar4,uVar3);
                   }
                 }
             uVar8 = uVar8 + 1;
@@ -5947,7 +5947,7 @@ public class AIController
     }
 
     // Token : 0x60009F6
-    // RVA   : 0x13DB340   Offset: 0x13DA740   Length: 0x367
+    // RVA   : 0x13DB950   Offset: 0x13DAD50   Length: 0x367
     public void AICheckRemoveFriend(HeroData hero)
     {
         int iVar1;
@@ -5964,8 +5964,8 @@ public class AIController
           if ((double)((float)(*(int *)(*(int64 *)(hero + 0x348) + 24) + -2) * 0.2) < dVar9) {
             return;
           }
-          lVar3 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar3,DAT_181d8f098);
+          lVar3 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar3,DAT_181d8f0b0);
           uVar7 = 0;
           lVar8 = 32;
           while (lVar4 = *(int64 *)(hero + 0x348)) != null {
@@ -6018,9 +6018,9 @@ public class AIController
                 {
                   }
                   if ((*(int64 *)(hero + 0x348) == 0) ||
-                  (uVar2 = FUN_1800d6760(*(int64 *)(hero + 0x348),uVar7,DAT_181d8fa18), lVar3 == null))
+                  (uVar2 = FUN_1800d6760(*(int64 *)(hero + 0x348),uVar7,DAT_181d8fa30), lVar3 == null))
                   break;
-                  FUN_18182a0b0(lVar3,uVar2);
+                  FUN_18182a6c0(lVar3,uVar2);
                   }
                 }
             uVar7 = uVar7 + 1;
@@ -6030,7 +6030,7 @@ public class AIController
     }
 
     // Token : 0x60009F7
-    // RVA   : 0x13DB6B0   Offset: 0x13DAAB0   Length: 0x36E
+    // RVA   : 0x13DBCC0   Offset: 0x13DB0C0   Length: 0x36E
     public void AICheckRemoveHater(HeroData hero)
     {
         uint uVar1;
@@ -6051,8 +6051,8 @@ public class AIController
             if ((double)((float)*(int *)(*(int64 *)(hero + 0x350) + 24) * 0.25) < dVar9) {
               return;
             }
-            lVar3 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(lVar3,DAT_181d8f098);
+            lVar3 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(lVar3,DAT_181d8f0b0);
             uVar7 = 0;
             lVar8 = 32;
             while (lVar4 = *(int64 *)(hero + 0x350)) != null {
@@ -6063,7 +6063,7 @@ public class AIController
                     return;
                   }
                   uVar1 = GlobalData.RandomRange(0,iVar2,0,0);
-                  iVar2 = FUN_1800d6760(lVar3,uVar1,DAT_181d8fa18);
+                  iVar2 = FUN_1800d6760(lVar3,uVar1,DAT_181d8fa30);
                   if (iVar2 == -1) {
                     return;
                   }
@@ -6100,9 +6100,9 @@ public class AIController
                   {
                     }
                     if ((*(int64 *)(hero + 0x350) == 0) ||
-                    (uVar1 = FUN_1800d6760(*(int64 *)(hero + 0x350),uVar7,DAT_181d8fa18), lVar3 == null)
+                    (uVar1 = FUN_1800d6760(*(int64 *)(hero + 0x350),uVar7,DAT_181d8fa30), lVar3 == null)
                     ) break;
-                    FUN_18182a0b0(lVar3,uVar1);
+                    FUN_18182a6c0(lVar3,uVar1);
                     }
                   }
               uVar7 = uVar7 + 1;
@@ -6113,7 +6113,7 @@ public class AIController
     }
 
     // Token : 0x60009F8
-    // RVA   : 0x13EB590   Offset: 0x13EA990   Length: 0x231
+    // RVA   : 0x13EBBA0   Offset: 0x13EAFA0   Length: 0x231
     public void NPCGoInPrison(HeroData targetHero, HeroData sourceHero)
     {
         long lVar1;
@@ -6136,7 +6136,7 @@ public class AIController
             fVar5 = (float)HeroData.Favor(targetHero,0,0);
             if ((50.0 <= fVar5) && (*(int *)(sourceHero + 88) != 0)) {
               uVar2 = *(uint64 *)(targetHero + 104);
-              lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+              lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
               uVar3 = HeroData.Name(sourceHero,1,0);
               uVar4 = HeroData.AtAreaName(targetHero,0);
               uVar3 = String.Format("#PlayerName#，说来惭愧。近日我一时失手，被{0}抓入狱中，眼下正关押在{1}。\n你若得空不妨来探望一番，也好一解我困坐囹圄之苦。",uVar3,uVar4,0);
@@ -6153,29 +6153,29 @@ public class AIController
     }
 
     // Token : 0x60009F9
-    // RVA   : 0x13E6440   Offset: 0x13E5840   Length: 0x1F9
+    // RVA   : 0x13E6A50   Offset: 0x13E5E50   Length: 0x1F9
     public void HeroLoseFightOnBigMap(HeroData hero)
     {
         bool cVar1;
         uint uVar2;
         long lVar3;
         long lVar4;
-        if (hero == null) goto LAB_1813e6634;
+        if (hero == null) goto LAB_1813e6c44;
         cVar1 = HeroData.HaveArea(hero,0);
         if (!cVar1) {
           if (*(char *)(hero + 0x3cc) == false) {
-            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e6634;
+            if (*(int64 *)(hero + 64) == 0) goto LAB_1813e6c44;
             if (*(int *)(*(int64 *)(hero + 64) + 48) < 0) {
               lVar3 = FUN_18046c0a0(0);
               lVar4 = FUN_18046bbe0(0);
-              if (lVar4 == null) goto LAB_1813e6634;
+              if (lVar4 == null) goto LAB_1813e6c44;
               uVar2 = BigMapController.GetNearAreaID(lVar4,*(uint64 *)(hero + 200),0);
-              if (lVar3 == null) goto LAB_1813e6634;
+              if (lVar3 == null) goto LAB_1813e6c44;
               GameController.HeroEnterArea(lVar3,hero,uVar2,0);
             }
             else {
               lVar3 = FUN_18046c0a0(0);
-              if ((*(int64 *)(hero + 64) == 0) || (lVar3 == null)) goto LAB_1813e6634;
+              if ((*(int64 *)(hero + 64) == 0) || (lVar3 == null)) goto LAB_1813e6c44;
               GameController.HeroEnterArea
                         (lVar3,hero,*(uint32 *)(*(int64 *)(hero + 64) + 48),0);
             }
@@ -6183,18 +6183,18 @@ public class AIController
           else {
             HeroData.SetNeedRemove(hero,0);
           }
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181db0bc8 + 184) + 16);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
           if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 152)) == null) {
-        LAB_1813e6634:
+        LAB_1813e6c44:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_18181e0a0(lVar3,hero,DAT_181d8b518);
+          FUN_18181e6b0(lVar3,hero,DAT_181d8b530);
         }
     }
 
     // Token : 0x60009FA
-    // RVA   : 0x13DD800   Offset: 0x13DCC00   Length: 0x68
+    // RVA   : 0x13DDE10   Offset: 0x13DD210   Length: 0x68
     public bool CheckHeroMoneyBiggerThanMin(HeroData hero, float rate)
     {
         int iVar1;
@@ -6207,7 +6207,7 @@ public class AIController
     }
 
     // Token : 0x60009FB
-    // RVA   : 0x13E5590   Offset: 0x13E4990   Length: 0x58
+    // RVA   : 0x13E5BA0   Offset: 0x13E4FA0   Length: 0x58
     public float GetHeroMoneyRate(HeroData hero)
     {
         int iVar1;
@@ -6220,7 +6220,7 @@ public class AIController
     }
 
     // Token : 0x60009FC
-    // RVA   : 0x13DD7C0   Offset: 0x13DCBC0   Length: 0x33
+    // RVA   : 0x13DDDD0   Offset: 0x13DD1D0   Length: 0x33
     public bool CheckHeroItemWeightBiggerThanMax(HeroData hero)
     {
         long lVar1;
@@ -6231,7 +6231,7 @@ public class AIController
     }
 
     // Token : 0x60009FD
-    // RVA   : 0x13DD650   Offset: 0x13DCA50   Length: 0x167
+    // RVA   : 0x13DDC60   Offset: 0x13DD060   Length: 0x167
     public bool CheckHeroItemNumBiggerThanMax(HeroData hero, float rate)
     {
         int iVar1;
@@ -6251,7 +6251,7 @@ public class AIController
     }
 
     // Token : 0x60009FE
-    // RVA   : 0x13E54B0   Offset: 0x13E48B0   Length: 0xDC
+    // RVA   : 0x13E5AC0   Offset: 0x13E4EC0   Length: 0xDC
     public float GetHeroItemNumTimeChange()
     {
         long lVar1;
@@ -6265,7 +6265,7 @@ public class AIController
     }
 
     // Token : 0x60009FF
-    // RVA   : 0x13E6130   Offset: 0x13E5530   Length: 0x30A
+    // RVA   : 0x13E6740   Offset: 0x13E5B40   Length: 0x30A
     public void HeroDonateItemToForceStorage(HeroData hero, ItemData targetItem, ItemListData targetStorage)
     {
         void AIController.HeroDonateItemToForceStorage
@@ -6288,7 +6288,7 @@ public class AIController
               lVar1 = ItemListData.GetForce(targetStorage,0);
               if (lVar1 != null) {
                 lVar1 = ForceData.MainArea(lVar1,0);
-                plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+                plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
                 lVar3 = HeroData.GetHeroName(hero,1,0);
                 if (plVar2 != (int64 *)0) {
                   if (lVar3 != null) {
@@ -6323,7 +6323,7 @@ public class AIController
                   plVar2[5] = lVar3;
                   il2cpp_internal(plVar2 + 5,lVar3);
                   local_res10[0] = (int)fVar6;
-                  lVar3 = il2cpp_value_box(DAT_181d80418,local_res10);
+                  lVar3 = il2cpp_value_box(DAT_181d80430,local_res10);
                   if (lVar3 != null) {
                     lVar4 = il2cpp_internal(lVar3,*(uint64 *)(*plVar2 + 64));
                     if (lVar4 == null) {
@@ -6371,7 +6371,7 @@ public class AIController
     }
 
     // Token : 0x6000A00
-    // RVA   : 0x13E5D60   Offset: 0x13E5160   Length: 0x34B
+    // RVA   : 0x13E6370   Offset: 0x13E5770   Length: 0x34B
     public void HeroBuyItemFromForceStorage(HeroData hero, ItemData targetItem, ItemListData targetStorage)
     {
         void AIController.HeroBuyItemFromForceStorage
@@ -6403,7 +6403,7 @@ public class AIController
               lVar1 = ItemListData.GetForce(targetStorage,0);
               if (lVar1 != null) {
                 lVar1 = ForceData.MainArea(lVar1,0);
-                plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+                plVar2 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
                 lVar3 = HeroData.GetHeroName(hero,1,0);
                 if (plVar2 != (int64 *)0) {
                   if (lVar3 != null) {
@@ -6438,7 +6438,7 @@ public class AIController
                   plVar2[5] = lVar3;
                   il2cpp_internal(plVar2 + 5,lVar3);
                   local_res18[0] = iVar5;
-                  lVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
+                  lVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
                   if (lVar3 != null) {
                     lVar4 = il2cpp_internal(lVar3,*(uint64 *)(*plVar2 + 64));
                     if (lVar4 == null) {
@@ -6486,7 +6486,7 @@ public class AIController
     }
 
     // Token : 0x6000A01
-    // RVA   : 0x13E60B0   Offset: 0x13E54B0   Length: 0x74
+    // RVA   : 0x13E66C0   Offset: 0x13E5AC0   Length: 0x74
     public void HeroBuyItem(HeroData hero, ItemData targetItem)
     {
         int iVar1;
@@ -6500,7 +6500,7 @@ public class AIController
     }
 
     // Token : 0x6000A02
-    // RVA   : 0x13E68C0   Offset: 0x13E5CC0   Length: 0x72
+    // RVA   : 0x13E6ED0   Offset: 0x13E62D0   Length: 0x72
     public void HeroSellItem(HeroData hero, ItemData targetItem)
     {
         int iVar1;
@@ -6514,7 +6514,7 @@ public class AIController
     }
 
     // Token : 0x6000A03
-    // RVA   : 0x13E6640   Offset: 0x13E5A40   Length: 0x27B
+    // RVA   : 0x13E6C50   Offset: 0x13E6050   Length: 0x27B
     public ItemData HeroManageEquipmentTrade(HeroData hero, ItemListData targetForceStorage, ItemData nowEquip, int subType, int littleType)
     {
         int64 AIController.HeroManageEquipmentTrade
@@ -6553,10 +6553,10 @@ public class AIController
           HeroData.GetForceStorageDiscount(hero,targetForceStorage,0);
           fVar4 = (float)HeroData.GetMaxBuyValue(hero);
           if (fVar6 < fVar4) {
-            lVar2 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(lVar2,DAT_181d8f098);
+            lVar2 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(lVar2,DAT_181d8f0b0);
             if (lVar2 == null) throw; // [null/range check failed]
-            FUN_18182a0b0(lVar2,subType,DAT_181d8f218);
+            FUN_18182a6c0(lVar2,subType,DAT_181d8f230);
             HeroData.GetForceStorageDiscount(hero,targetForceStorage,0);
             uVar5 = HeroData.GetMaxBuyValue(hero);
             lVar7 = (uint64)uVar9 << 32;
@@ -6594,7 +6594,7 @@ public class AIController
     }
 
     // Token : 0x6000A04
-    // RVA   : 0x13EBCD0   Offset: 0x13EB0D0   Length: 0xCF
+    // RVA   : 0x13EC2E0   Offset: 0x13EB6E0   Length: 0xCF
     public void StartMoveToAnotherArea(HeroData hero, int targetID)
     {
         ulong uVar1;
@@ -6605,27 +6605,27 @@ public class AIController
         uVar2 = new HeroAIData(1,uVar1,99,0);
         AIController.SetAIStuff(this,hero,uVar2,0,0);
         if (this.needLeaveHero != null) {
-          FUN_18181e0a0(this.needLeaveHero,hero,DAT_181d8b518);
+          FUN_18181e6b0(this.needLeaveHero,hero,DAT_181d8b530);
           return;
         }
     }
 
     // Token : 0x6000A05
-    // RVA   : 0x13EC7B0   Offset: 0x13EBBB0   Length: 0x121
+    // RVA   : 0x13ECDC0   Offset: 0x13EC1C0   Length: 0x121
     public void /*ctor*/()
     {
         ulong uVar1;
         long lVar2;
-        uVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(uVar1,DAT_181d8b418);
+        uVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(uVar1,DAT_181d8b430);
         this.needLeaveHero = uVar1;
-        lVar2 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar2,DAT_181d8f098);
+        lVar2 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar2,DAT_181d8f0b0);
         if (lVar2 != null) {
-          FUN_18182a0b0(lVar2,0x3e0,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,0x3e1,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,0x3e2,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,0x3e3,DAT_181d8f218);
+          FUN_18182a6c0(lVar2,0x3e0,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,0x3e1,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,0x3e2,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,0x3e3,DAT_181d8f230);
           this.speSkillIDList = lVar2;
           FUN_18044ef50(this,0);
           return;
@@ -6633,77 +6633,77 @@ public class AIController
     }
 
     // Token : 0x6000A06
-    // RVA   : 0x13EC0D0   Offset: 0x13EB4D0   Length: 0x6D1
+    // RVA   : 0x13EC6E0   Offset: 0x13EBAE0   Length: 0x6D1
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181da9de0 + 184);
+        var pStatics = *(int64*)(DAT_181da9df8 + 184);
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar1,DAT_181da3bd8);
+        lVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar1,DAT_181da3bf0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,"无所事事",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"前往",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"闲逛",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"休息",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"治疗",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"修炼",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"学习",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"获取",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"赚钱",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"交易",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"探索",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"交友",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"切磋",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"战斗",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"完成委托",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"经历奇遇",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"被囚禁",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"降低恶名",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"初习",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"加强管理",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"暗中破坏",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"烹饪",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"炼药",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"锻造",DAT_181da3d58);
+          FUN_18181e6b0(lVar1,"无所事事",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"前往",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"闲逛",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"休息",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"治疗",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"修炼",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"学习",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"获取",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"赚钱",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"交易",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"探索",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"交友",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"切磋",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"战斗",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"完成委托",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"经历奇遇",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"被囚禁",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"降低恶名",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"初习",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"加强管理",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"暗中破坏",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"烹饪",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"炼药",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"锻造",DAT_181da3d70);
           plVar2 = pStatics;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
-          lVar1 = il2cpp_internal(DAT_181d90960);
-          FUN_18132faf0(lVar1,DAT_181d7ad88);
+          lVar1 = il2cpp_internal(DAT_181d90978);
+          FUN_181330100(lVar1,DAT_181d7ada0);
           if (lVar1 != null) {
-            FUN_18182a0b0(lVar1,11,DAT_181d7ae08);
-            FUN_18182a0b0(lVar1,12,DAT_181d7ae08);
-            FUN_18182a0b0(lVar1,13,DAT_181d7ae08);
+            FUN_18182a6c0(lVar1,11,DAT_181d7ae20);
+            FUN_18182a6c0(lVar1,12,DAT_181d7ae20);
+            FUN_18182a6c0(lVar1,13,DAT_181d7ae20);
             PlotController.fightSkillIndexCache = lVar1;
-            lVar1 = il2cpp_internal(DAT_181d90960);
-            FUN_18132faf0(lVar1,DAT_181d7ad88);
+            lVar1 = il2cpp_internal(DAT_181d90978);
+            FUN_181330100(lVar1,DAT_181d7ada0);
             if (lVar1 != null) {
-              FUN_18182a0b0(lVar1,1,DAT_181d7ae08);
-              FUN_18182a0b0(lVar1,19,DAT_181d7ae08);
-              FUN_18182a0b0(lVar1,20,DAT_181d7ae08);
+              FUN_18182a6c0(lVar1,1,DAT_181d7ae20);
+              FUN_18182a6c0(lVar1,19,DAT_181d7ae20);
+              FUN_18182a6c0(lVar1,20,DAT_181d7ae20);
               PlotController.livingSkillIndexCache = lVar1;
-              lVar1 = il2cpp_internal(DAT_181d90960);
-              FUN_18132faf0(lVar1,DAT_181d7ad88);
+              lVar1 = il2cpp_internal(DAT_181d90978);
+              FUN_181330100(lVar1,DAT_181d7ada0);
               if (lVar1 != null) {
-                FUN_18182a0b0(lVar1,12,DAT_181d7ae08);
-                FUN_18182a0b0(lVar1,13,DAT_181d7ae08);
+                FUN_18182a6c0(lVar1,12,DAT_181d7ae20);
+                FUN_18182a6c0(lVar1,13,DAT_181d7ae20);
                 PlotController._instance = lVar1;
-                lVar1 = il2cpp_internal(DAT_181d908e0);
-                FUN_18132faf0(lVar1,DAT_181d7ac08);
+                lVar1 = il2cpp_internal(DAT_181d908f8);
+                FUN_181330100(lVar1,DAT_181d7ac20);
                 if (lVar1 != null) {
-                  FUN_18182a0b0(lVar1,1,DAT_181d7ac88);
-                  FUN_18182a0b0(lVar1,2,DAT_181d7ac88);
-                  FUN_18182a0b0(lVar1,3,DAT_181d7ac88);
-                  FUN_18182a0b0(lVar1,4,DAT_181d7ac88);
-                  FUN_18182a0b0(lVar1,5,DAT_181d7ac88);
+                  FUN_18182a6c0(lVar1,1,DAT_181d7aca0);
+                  FUN_18182a6c0(lVar1,2,DAT_181d7aca0);
+                  FUN_18182a6c0(lVar1,3,DAT_181d7aca0);
+                  FUN_18182a6c0(lVar1,4,DAT_181d7aca0);
+                  FUN_18182a6c0(lVar1,5,DAT_181d7aca0);
                   PlotController.LeftFaceHideOffset = lVar1;
-                  lVar1 = il2cpp_internal(DAT_181d941d0);
-                  FUN_18132faf0(lVar1,DAT_181d91218);
+                  lVar1 = il2cpp_internal(DAT_181d941e8);
+                  FUN_181330100(lVar1,DAT_181d91230);
                   if (lVar1 != null) {
-                    FUN_18182a0b0(lVar1,0,DAT_181d91298);
-                    FUN_18182a0b0(lVar1,3,DAT_181d91298);
-                    FUN_18182a0b0(lVar1,4,DAT_181d91298);
-                    FUN_18182a0b0(lVar1,5,DAT_181d91298);
+                    FUN_18182a6c0(lVar1,0,DAT_181d912b0);
+                    FUN_18182a6c0(lVar1,3,DAT_181d912b0);
+                    FUN_18182a6c0(lVar1,4,DAT_181d912b0);
+                    FUN_18182a6c0(lVar1,5,DAT_181d912b0);
                     PlotController.CheckHideChoice = lVar1;
                     return;
                   }

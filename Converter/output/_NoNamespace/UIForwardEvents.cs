@@ -38,7 +38,7 @@ public class UIForwardEvents
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600015F
-    // RVA   : 0x12C19B0   Offset: 0x12C0DB0   Length: 0xD7
+    // RVA   : 0x12C1FC0   Offset: 0x12C13C0   Length: 0xD7
     private void OnHover(bool isOver)
     {
         ulong uVar1;
@@ -51,7 +51,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = isOver;
-            uVar1 = il2cpp_value_box(DAT_181db2ac8,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db2ae0,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -62,7 +62,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000160
-    // RVA   : 0x12C1A90   Offset: 0x12C0E90   Length: 0xD7
+    // RVA   : 0x12C20A0   Offset: 0x12C14A0   Length: 0xD7
     private void OnPress(bool pressed)
     {
         ulong uVar1;
@@ -75,7 +75,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = pressed;
-            uVar1 = il2cpp_value_box(DAT_181db2ac8,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db2ae0,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -86,7 +86,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000161
-    // RVA   : 0x12C16B0   Offset: 0x12C0AB0   Length: 0xA0
+    // RVA   : 0x12C1CC0   Offset: 0x12C10C0   Length: 0xA0
     private void OnClick()
     {
         ulong uVar1;
@@ -106,7 +106,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000162
-    // RVA   : 0x12C1760   Offset: 0x12C0B60   Length: 0xA0
+    // RVA   : 0x12C1D70   Offset: 0x12C1170   Length: 0xA0
     private void OnDoubleClick()
     {
         ulong uVar1;
@@ -126,7 +126,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000163
-    // RVA   : 0x12C1C50   Offset: 0x12C1050   Length: 0xD7
+    // RVA   : 0x12C2260   Offset: 0x12C1660   Length: 0xD7
     private void OnSelect(bool selected)
     {
         ulong uVar1;
@@ -139,7 +139,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = selected;
-            uVar1 = il2cpp_value_box(DAT_181db2ac8,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db2ae0,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -150,7 +150,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000164
-    // RVA   : 0x12C1810   Offset: 0x12C0C10   Length: 0xDB
+    // RVA   : 0x12C1E20   Offset: 0x12C1220   Length: 0xDB
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -163,7 +163,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8 = delta;
-            uVar1 = il2cpp_value_box(DAT_181db3950,&local_res8);
+            uVar1 = il2cpp_value_box(DAT_181db3968,&local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -174,7 +174,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000165
-    // RVA   : 0x12C18F0   Offset: 0x12C0CF0   Length: 0xB2
+    // RVA   : 0x12C1F00   Offset: 0x12C1300   Length: 0xB2
     private void OnDrop(GameObject go)
     {
         ulong uVar1;
@@ -193,7 +193,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000166
-    // RVA   : 0x12C1D30   Offset: 0x12C1130   Length: 0xA0
+    // RVA   : 0x12C2340   Offset: 0x12C1740   Length: 0xA0
     private void OnSubmit()
     {
         ulong uVar1;
@@ -213,7 +213,7 @@ public class UIForwardEvents
     }
 
     // Token : 0x6000167
-    // RVA   : 0x12C1B70   Offset: 0x12C0F70   Length: 0xD9
+    // RVA   : 0x12C2180   Offset: 0x12C1580   Length: 0xD9
     private void OnScroll(float delta)
     {
         ulong uVar1;
@@ -226,7 +226,7 @@ public class UIForwardEvents
           if (cVar3) {
             lVar2 = this.target;
             local_res8[0] = delta;
-            uVar1 = il2cpp_value_box(DAT_181da22d8,local_res8);
+            uVar1 = il2cpp_value_box(DAT_181da22f0,local_res8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();

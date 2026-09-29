@@ -17,7 +17,7 @@ public class DownloadTexture
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000062
-    // RVA   : 0x93B450   Offset: 0x93A850   Length: 0x6C
+    // RVA   : 0x93BAE0   Offset: 0x93AEE0   Length: 0x6C
     private IEnumerator Start()
     {
         long lVar1;
@@ -29,7 +29,7 @@ public class DownloadTexture
     }
 
     // Token : 0x6000063
-    // RVA   : 0x93B3B0   Offset: 0x93A7B0   Length: 0x93
+    // RVA   : 0x93BA40   Offset: 0x93AE40   Length: 0x93
     private void OnDestroy()
     {
         ulong uVar1;
@@ -43,7 +43,7 @@ public class DownloadTexture
     }
 
     // Token : 0x6000064
-    // RVA   : 0x93B4C0   Offset: 0x93A8C0   Length: 0x4B
+    // RVA   : 0x93BB50   Offset: 0x93AF50   Length: 0x4B
     public void /*ctor*/()
     {
         this.url = "http://www.yourwebsite.com/logo.png";

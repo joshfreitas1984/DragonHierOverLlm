@@ -44,7 +44,7 @@ public class SpeGridObjData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000CA3
-    // RVA   : 0xC555D0   Offset: 0xC549D0   Length: 0xE
+    // RVA   : 0xC55BE0   Offset: 0xC54FE0   Length: 0xE
     public void /*ctor*/()
     {
         this.teamID = 0xffffffff;
@@ -52,7 +52,7 @@ public class SpeGridObjData
     }
 
     // Token : 0x6000CA4
-    // RVA   : 0xC555C0   Offset: 0xC549C0   Length: 0x10
+    // RVA   : 0xC55BD0   Offset: 0xC54FD0   Length: 0x10
     public float GetValueRate()
     {
         if (this.teamID == -1) {
@@ -62,7 +62,7 @@ public class SpeGridObjData
     }
 
     // Token : 0x6000CA5
-    // RVA   : 0xC553E0   Offset: 0xC547E0   Length: 0x1DD
+    // RVA   : 0xC559F0   Offset: 0xC54DF0   Length: 0x1DD
     public virtual object Clone()
     {
         long lVar2;
@@ -76,13 +76,13 @@ public class SpeGridObjData
         uint32 uStack_1c;
         uint64 uVar6;
         uVar6 = 0;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar7 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -103,18 +103,18 @@ public class SpeGridObjData
         lVar2 = *plVar1;
         if (*(uint16 *)(lVar2 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d78da0) {
+            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d78db8) {
               puVar4 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + uVar6 * 16) * 16 + 0x138
                        + lVar2);
-              goto LAB_180c55564;
+              goto LAB_180c55b74;
             }
             uVar5 = (short)uVar6 + 1;
             uVar6 = (uint64)uVar5;
           } while (uVar5 < *(uint16 *)(lVar2 + 0x12a));
         }
-        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d78da0,0);
-        LAB_180c55564:
+        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d78db8,0);
+        LAB_180c55b74:
         (*(code *)*puVar4)(plVar1,puVar4[1]);
         return uVar3;
     }

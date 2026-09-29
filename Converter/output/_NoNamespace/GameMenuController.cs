@@ -23,14 +23,14 @@ public class GameMenuController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001691
-    // RVA   : 0xC2EDB0   Offset: 0xC2E1B0   Length: 0x15E
+    // RVA   : 0xC2F3C0   Offset: 0xC2E7C0   Length: 0x15E
     public static GameMenuController get_Instance()
     {
         return **(uint64 **)(DAT_181d72dd8 + 184);
     }
 
     // Token : 0x6001692
-    // RVA   : 0xC2D040   Offset: 0xC2C440   Length: 0x99
+    // RVA   : 0xC2D650   Offset: 0xC2CA50   Length: 0x99
     private void Awake()
     {
         ulong uVar1;
@@ -45,7 +45,7 @@ public class GameMenuController
     }
 
     // Token : 0x6001693
-    // RVA   : 0xC2DA10   Offset: 0xC2CE10   Length: 0x107C
+    // RVA   : 0xC2E020   Offset: 0xC2D420   Length: 0x107C
     public void ShowGameMenu()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -76,12 +76,12 @@ public class GameMenuController
                (lVar3 = GameObject.get_transform(this.gameMenu,0)) != null) {
               uVar4 = Transform.Find(lVar3,"GameMenu",0);
               uVar4 = ShortcutExtensions.DOScale(uVar4,0x3f800000,0x3e800000,0);
-              TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1db0);
+              TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1f60);
               if ((this.gameMenu != null) &&
                  ((lVar3 = GameObject.get_transform(this.gameMenu,0), lVar3 != null &&
                   (lVar3 = Transform.Find(lVar3,"BlackBack",0)) != null))) {
-                plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-                puVar6 = (uint32 *)FUN_180d98fe0(&local_28,0);
+                plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+                puVar6 = (uint32 *)FUN_180d995f0(&local_28,0);
                 if (plVar5 != (int64 *)0) {
                   local_28 = *puVar6;
                   uStack_24 = puVar6[1];
@@ -91,20 +91,20 @@ public class GameMenuController
                   if (((this.gameMenu != null) &&
                       (lVar3 = GameObject.get_transform(this.gameMenu,0)) != null) &&
                      (lVar3 = Transform.Find(lVar3,"BlackBack",0)) != null) {
-                    uVar4 = Component.GetComponent(lVar3,DAT_181d94460);
+                    uVar4 = Component.GetComponent(lVar3,DAT_181d94478);
                     uVar4 = DOTweenModuleUI.DOFade(uVar4,0x3f000000,0x3e800000,0);
-                    TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1c20);
+                    TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1dc8);
                     if (((this.gameMenu != null) &&
                         (lVar3 = GameObject.get_transform(this.gameMenu,0)) != null)
                        && ((lVar3 = Transform.Find(lVar3,"GameInfoBack",0), lVar3 != null &&
-                           (lVar3 = Component.GetComponent(lVar3,DAT_181d938e0)) != null))) {
+                           (lVar3 = Component.GetComponent(lVar3,DAT_181d938f8)) != null))) {
                       CanvasGroup.set_alpha(lVar3,0,0);
                       if (((this.gameMenu != null) &&
                           (lVar3 = GameObject.get_transform(this.gameMenu,0)) != null
                           ) && (lVar3 = Transform.Find(lVar3,"GameInfoBack",0)) != null) {
-                        uVar4 = Component.GetComponent(lVar3,DAT_181d938e0);
+                        uVar4 = Component.GetComponent(lVar3,DAT_181d938f8);
                         uVar4 = DOTweenModuleUI.DOFade(uVar4,0x3f800000,0x3e800000,0);
-                        TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1ca8);
+                        TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1e50);
                         if (((this.gameMenu != null) &&
                             (lVar3 = GameObject.get_transform(this.gameMenu,0),
                             lVar3 != null)) && (lVar3 = Transform.Find(lVar3,"GameInfoBack",0)) != null)
@@ -121,7 +121,7 @@ public class GameMenuController
                                   (lVar3 = Transform.Find(lVar3,"GameInfoBack",0)) == null) ||
                                  (lVar3 = Transform.Find(lVar3,"GameInfo",0)) == null)
                               throw; // [null/range check failed]
-                              uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                              uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                               lVar3 = *(int64 *)(pStatics_3d40 + 184);
                               if (((GameController._instance == null) ||
                                   (lVar9 = GameController._instance.worldData,
@@ -143,7 +143,7 @@ public class GameMenuController
                                  ((lVar3 = Transform.Find(lVar3,"GameInfoBack",0), lVar3 == null ||
                                   (lVar3 = Transform.Find(lVar3,"GameInfo",0)) == null)))
                               throw; // [null/range check failed]
-                              lVar9 = Component.GetComponent(lVar3,DAT_181d95560);
+                              lVar9 = Component.GetComponent(lVar3,DAT_181d95578);
                               lVar3 = *(int64 *)(pStatics_3d40 + 200);
                               if ((GameController._instance == null) ||
                                  (lVar10 = GameController._instance.worldData,
@@ -184,7 +184,7 @@ public class GameMenuController
                                       (lVar3 = Transform.Find(lVar3,"GameInfoBack",0)) == null) ||
                                      (lVar3 = Transform.Find(lVar3,"ChapterInfo",0)) == null)
                                   throw; // [null/range check failed]
-                                  uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                                  uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                                   lVar3 = FUN_18046bd00(0);
                                   if (lVar3 == null) throw; // [null/range check failed]
                                   uVar8 = ChapterController.GetChapterDescribe(lVar3,"\n",0);
@@ -200,10 +200,10 @@ public class GameMenuController
                                        ((lVar3 = Transform.Find(lVar3,"GameInfoBack",0), lVar3 == null ||
                                         (lVar3 = Transform.Find(lVar3,"ChapterInfo",0)) == null)))
                                     throw; // [null/range check failed]
-                                    uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                                    uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                                     uVar8 = "";
-                                    if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) &&
-                                       (*(int *)(DAT_181d84898 + 224) == 0)) {
+                                    if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) &&
+                                       (*(int *)(DAT_181d848b0 + 224) == 0)) {
                                       il2cpp_runtime_class_init();
                                       uVar8 = "";
                                     }
@@ -214,7 +214,7 @@ public class GameMenuController
                                         (lVar3 = Transform.Find(lVar3,"GameInfoBack",0)) == null) ||
                                        (lVar3 = Transform.Find(lVar3,"ChapterInfo",0)) == null)
                                     throw; // [null/range check failed]
-                                    uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                                    uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                                     lVar3 = FUN_18046c0a0(0);
                                     if ((lVar3 == null) || (lVar3.villageAreaID == null))
                                     throw; // [null/range check failed]
@@ -226,7 +226,7 @@ public class GameMenuController
                                                   (GameController._instance + 32),
                                         lVar9 == null)) || (lVar3 == null)) throw; // [null/range check failed]
                                     uVar7 = FUN_180002f80(lVar3,lVar9.chapter,
-                                                          DAT_181da4358);
+                                                          DAT_181da4370);
                                     lVar3 = FUN_18046bd00(0);
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     uVar11 = ChapterController.GetChapterDescribe(lVar3,"\n",0);
@@ -258,7 +258,7 @@ public class GameMenuController
                                     (lVar3 = Transform.Find(lVar3,"GameInfoBack",0)) == null) ||
                                    (lVar3 = Transform.Find(lVar3,"CustomDifficultyIcon",0)) == null)
                                 throw; // [null/range check failed]
-                                lVar3 = Component.GetComponent(lVar3,DAT_181d95560);
+                                lVar3 = Component.GetComponent(lVar3,DAT_181d95578);
                                 if ((((GameController._instance == null) ||
                                      (lVar9 = GameController._instance.worldData,
                                      lVar9 == null)) || (lVar9 = lVar9.customDifficultyData) == null)
@@ -268,7 +268,7 @@ public class GameMenuController
                               }
                               plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
                               plVar13 = (int64 *)0;
-                              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+                              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                                 plVar13 = plVar5;
                               }
                               NGUITools.PlaySound(plVar13,0);
@@ -291,7 +291,7 @@ public class GameMenuController
     }
 
     // Token : 0x6001694
-    // RVA   : 0xC2EAF0   Offset: 0xC2DEF0   Length: 0x2B3
+    // RVA   : 0xC2F100   Offset: 0xC2E500   Length: 0x2B3
     public void UnshowGameMenu()
     {
         long lVar1;
@@ -308,28 +308,28 @@ public class GameMenuController
             local_14 = 0x3f800000;
             local_10 = 0x3f800000;
             uVar2 = ShortcutExtensions.DOScale(uVar2,&local_18,0x3e4ccccd,0);
-            uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1db0);
-            uVar3 = new OnTooltipCB(this,DAT_181dc4a98,0);
-            TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc01d0);
+            uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
+            uVar3 = new OnTooltipCB(this,DAT_181dc4ab0,0);
+            TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0380);
             if (this.gameMenu != null) {
               lVar1 = GameObject.get_transform(this.gameMenu,0);
               if (lVar1 != null) {
                 lVar1 = Transform.Find(lVar1,"BlackBack",0);
                 if (lVar1 != null) {
-                  uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+                  uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
                   uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
-                  TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1c20);
+                  TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
                   if (this.gameMenu != null) {
                     lVar1 = GameObject.get_transform(this.gameMenu,0);
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"GameInfoBack",0);
                       if (lVar1 != null) {
-                        uVar2 = Component.GetComponent(lVar1,DAT_181d938e0);
+                        uVar2 = Component.GetComponent(lVar1,DAT_181d938f8);
                         uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
-                        TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1ca8);
+                        TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1e50);
                         plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
                         plVar5 = (int64 *)0;
-                        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                           plVar5 = plVar4;
                         }
                         NGUITools.PlaySound(plVar5,0);
@@ -345,7 +345,7 @@ public class GameMenuController
     }
 
     // Token : 0x6001695
-    // RVA   : 0xC2D3C0   Offset: 0xC2C7C0   Length: 0x62D
+    // RVA   : 0xC2D9D0   Offset: 0xC2CDD0   Length: 0x62D
     public void SaveButtonClicked()
     {
         bool cVar1;
@@ -357,11 +357,11 @@ public class GameMenuController
         if (!cVar1) {
           if (lVar2.enterAreaHateAttackHero == null) throw; // [null/range check failed]
           cVar1 = GameSaveData.CheckAllFinished(lVar2.enterAreaHateAttackHero,0);
-          if (!cVar1) goto LAB_180c2d909;
+          if (!cVar1) goto LAB_180c2df19;
           uVar3 = BattleController.AttackAreaTypeStartMovePower;
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (!cVar1) {
-        LAB_180c2d69d:
+        LAB_180c2dcad:
             uVar3 = PlotController.LaBaFestivelResultTalkText;
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
@@ -370,7 +370,7 @@ public class GameMenuController
               if (*(int *)(lVar2 + 36) != 0) {
                 lVar2 = FUN_18046c0a0(0);
                 uVar3 = "战斗中无法存档！";
-                goto joined_r0x000180c2d688;
+                goto joined_r0x000180c2dc98;
               }
             }
             uVar3 = FUN_18046c360(0);
@@ -382,7 +382,7 @@ public class GameMenuController
               if (cVar1) {
                 lVar2 = FUN_18046c0a0(0);
                 uVar3 = "会议中无法存档！";
-                goto joined_r0x000180c2d688;
+                goto joined_r0x000180c2dc98;
               }
             }
             if (this.saveLoadMenuController != null) {
@@ -394,21 +394,21 @@ public class GameMenuController
           lVar2 = BattleController.AttackAreaTypeStartMovePower;
           if (lVar2 == null) throw; // [null/range check failed]
           cVar1 = ExploreController.IsExploring(lVar2,0);
-          if (!cVar1) goto LAB_180c2d69d;
+          if (!cVar1) goto LAB_180c2dcad;
           lVar2 = FUN_18046c0a0(0);
           uVar3 = "探索中无法存档！";
         }
         else {
-        LAB_180c2d909:
+        LAB_180c2df19:
           lVar2 = GameController._instance;
           uVar3 = "演算中无法存档！";
         }
-        joined_r0x000180c2d688:
+        joined_r0x000180c2dc98:
         if (lVar2 != null) {
           GameController.ShowTextOnMouse(lVar2,uVar3,0);
           plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
           plVar5 = (int64 *)0;
-          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
             plVar5 = plVar4;
           }
           NGUITools.PlaySound(plVar5,0);
@@ -417,7 +417,7 @@ public class GameMenuController
     }
 
     // Token : 0x6001696
-    // RVA   : 0xC2D100   Offset: 0xC2C500   Length: 0x1F6
+    // RVA   : 0xC2D710   Offset: 0xC2CB10   Length: 0x1F6
     public void LoadButtonClicked()
     {
         long lVar1;
@@ -430,7 +430,7 @@ public class GameMenuController
               GameController.ShowTextOnMouse(GameController._instance,"存档中无法读档！",0);
               plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar4 = (int64 *)0;
-              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                 plVar4 = plVar3;
               }
               NGUITools.PlaySound(plVar4,0);
@@ -445,7 +445,7 @@ public class GameMenuController
     }
 
     // Token : 0x6001697
-    // RVA   : 0xC2D9F0   Offset: 0xC2CDF0   Length: 0x1D
+    // RVA   : 0xC2E000   Offset: 0xC2D400   Length: 0x1D
     public void SettingButtonClicked()
     {
         if (this.settingMenuController != null) {
@@ -455,7 +455,7 @@ public class GameMenuController
     }
 
     // Token : 0x6001698
-    // RVA   : 0xC2D0E0   Offset: 0xC2C4E0   Length: 0x1D
+    // RVA   : 0xC2D6F0   Offset: 0xC2CAF0   Length: 0x1D
     public void HandBookButtonClicked()
     {
         if (this.handBookMenuController != null) {
@@ -465,12 +465,12 @@ public class GameMenuController
     }
 
     // Token : 0x6001699
-    // RVA   : 0xC2D300   Offset: 0xC2C700   Length: 0xB9
+    // RVA   : 0xC2D910   Offset: 0xC2CD10   Length: 0xB9
     public void QuitButtonClicked()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = **(int64 **)(DAT_181da8710 + 184);
+        lVar1 = **(int64 **)(DAT_181da8728 + 184);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           SureMenu.CallSureMenu(lVar1,"确认退出游戏吗？\n<color=red>未保存的进度将会丢失！</color>","SureQuitGame",0,uVar2,1,0,0,0,0);
@@ -479,7 +479,7 @@ public class GameMenuController
     }
 
     // Token : 0x600169A
-    // RVA   : 0xC2EA90   Offset: 0xC2DE90   Length: 0x5C
+    // RVA   : 0xC2F0A0   Offset: 0xC2E4A0   Length: 0x5C
     public void SureQuitGame()
     {
         SceneManager.LoadScene("TitleScene",0);

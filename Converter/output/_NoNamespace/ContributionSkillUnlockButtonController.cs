@@ -7,17 +7,17 @@ public class ContributionSkillUnlockButtonController
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001332
-    // RVA   : 0xA3B770   Offset: 0xA3AB70   Length: 0x101
+    // RVA   : 0xA3BE00   Offset: 0xA3B200   Length: 0x101
     public void OnClick()
     {
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8f490 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8f4a8 + 184) + 16);
         lVar2 = Component.get_transform(this,0);
         if (lVar2 != null) {
-          lVar2 = FUN_180da9a20(lVar2,0);
+          lVar2 = FUN_180daa030(lVar2,0);
           if (lVar2 != null) {
-            lVar2 = Component.GetComponent(lVar2,DAT_181d95ae0);
+            lVar2 = Component.GetComponent(lVar2,DAT_181d95af8);
             if ((lVar2 != null) && (lVar1 != null)) {
               OtherForceContributionExchangeController.ExchangeSkillClicked
                         (lVar1,*(uint64 *)(lVar2 + 32),0);

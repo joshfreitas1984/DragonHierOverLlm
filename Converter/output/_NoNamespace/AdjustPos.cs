@@ -23,7 +23,7 @@ public class AdjustPos
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000A2D
-    // RVA   : 0xA1E1C0   Offset: 0xA1D5C0   Length: 0x40C
+    // RVA   : 0xA1E850   Offset: 0xA1DC50   Length: 0x40C
     private void Update()
     {
         ulong uVar1;
@@ -56,13 +56,13 @@ public class AdjustPos
           cVar3 = Vector3.op_Equality(&local_78,&local_68,0);
           if (cVar3) {
             lVar5 = Component.get_transform(this,0);
-            if (lVar5 == null) goto LAB_180a1e5c7;
+            if (lVar5 == null) goto LAB_180a1ec57;
             puVar4 = (uint64 *)Transform.get_position(local_48,lVar5,0);
             local_78 = *puVar4;
             local_70 = *(float *)(puVar4 + 1);
             if ((this.followTarget == null) ||
                (lVar5 = GameObject.get_transform(this.followTarget,0)) == null)
-            goto LAB_180a1e5c7;
+            goto LAB_180a1ec57;
             puVar4 = (uint64 *)Transform.get_position(local_48,lVar5,0);
             local_68 = *puVar4;
             local_60 = *(float *)(puVar4 + 1);
@@ -129,7 +129,7 @@ public class AdjustPos
                 }
               }
             }
-        LAB_180a1e5c7:
+        LAB_180a1ec57:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -139,7 +139,7 @@ public class AdjustPos
     }
 
     // Token : 0x6000A2E
-    // RVA   : 0xA1E5D0   Offset: 0xA1D9D0   Length: 0x70
+    // RVA   : 0xA1EC60   Offset: 0xA1E060   Length: 0x70
     public void /*ctor*/()
     {
         float fVar1;

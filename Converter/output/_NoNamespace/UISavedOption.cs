@@ -20,12 +20,12 @@ public class UISavedOption
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600023E
-    // RVA   : 0x1700C80   Offset: 0x1700080   Length: 0x5F
+    // RVA   : 0x1701290   Offset: 0x1700690   Length: 0x5F
     private string get_key()
     {
         bool cVar1;
         ulong uVar2;
-        cVar1 = FUN_180d755b0(this.keyName,0);
+        cVar1 = FUN_180d75bc0(this.keyName,0);
         if (cVar1) {
           uVar2 = Object.get_name(this,0);
           uVar2 = String.Concat("NGUI State: ",uVar2,0);
@@ -35,20 +35,20 @@ public class UISavedOption
     }
 
     // Token : 0x600023F
-    // RVA   : 0x1700250   Offset: 0x16FF650   Length: 0x9C
+    // RVA   : 0x1700860   Offset: 0x16FFC60   Length: 0x9C
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96be0);
+        uVar1 = Component.GetComponent(this,DAT_181d96bf8);
         this.mList = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96fe0);
+        uVar1 = Component.GetComponent(this,DAT_181d96ff8);
         this.mCheck = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96c60);
+        uVar1 = Component.GetComponent(this,DAT_181d96c78);
         this.mSlider = uVar1;
     }
 
     // Token : 0x6000240
-    // RVA   : 0x1700580   Offset: 0x16FF980   Length: 0x453
+    // RVA   : 0x1700B90   Offset: 0x16FFF90   Length: 0x453
     private void OnEnable()
     {
         long lVar1;
@@ -71,7 +71,7 @@ public class UISavedOption
             if (!cVar3) {
               uVar5 = UISavedOption.get_key(this,0);
               uVar5 = PlayerPrefs.GetString(uVar5,0);
-              lVar6 = FUN_180967490(this,1,DAT_181d98be0);
+              lVar6 = FUN_180967b20(this,1,DAT_181d98bf8);
               uVar8 = 0;
               if (lVar6 != null) {
                 iVar4 = lVar6.group;
@@ -87,7 +87,7 @@ public class UISavedOption
                   lVar1 = lVar6[uVar8];
                   if (lVar1 == null) break;
                   uVar7 = Object.get_name(lVar1,0);
-                  FUN_18171e540(uVar7,uVar5,0);
+                  FUN_18171eb50(uVar7,uVar5,0);
                   UIToggle.set_isChecked(lVar1);
                   uVar8 = uVar8 + 1;
                   if (iVar4 <= (int)uVar8) {
@@ -98,7 +98,7 @@ public class UISavedOption
             }
             else if (this.mSlider != null) {
               uVar5 = this.mSlider.onChange;
-              uVar7 = new OnTooltipCB(this,DAT_181dc62b0,0);
+              uVar7 = new OnTooltipCB(this,DAT_181dc6460,0);
               EventDelegate.Add(uVar5,uVar7,0);
               lVar6 = this.mSlider;
               uVar5 = UISavedOption.get_key(this,0);
@@ -119,7 +119,7 @@ public class UISavedOption
           }
           else if (this.mCheck != null) {
             uVar5 = this.mCheck.onChange;
-            uVar7 = new OnTooltipCB(this,DAT_181dc63c0,0);
+            uVar7 = new OnTooltipCB(this,DAT_181dc6570,0);
             EventDelegate.Add(uVar5,uVar7,0);
             lVar6 = this.mCheck;
             uVar5 = UISavedOption.get_key(this,0);
@@ -135,9 +135,9 @@ public class UISavedOption
         }
         else if (this.mList != null) {
           uVar5 = this.mList.onChange;
-          uVar7 = new OnTooltipCB(this,DAT_181dc6338,0);
+          uVar7 = new OnTooltipCB(this,DAT_181dc64e8,0);
           EventDelegate.Add(uVar5,uVar7,0);
-          cVar3 = FUN_180d755b0(this.keyName,0);
+          cVar3 = FUN_180d75bc0(this.keyName,0);
           if (!cVar3) {
             uVar5 = this.keyName;
           }
@@ -146,7 +146,7 @@ public class UISavedOption
             uVar5 = String.Concat("NGUI State: ",uVar5,0);
           }
           uVar5 = PlayerPrefs.GetString(uVar5,0);
-          cVar3 = FUN_180d755b0(uVar5,0);
+          cVar3 = FUN_180d75bc0(uVar5,0);
           if (!cVar3) {
             plVar2 = this.mList;
             if (plVar2 == (int64 *)0) throw; // [null/range check failed]
@@ -157,7 +157,7 @@ public class UISavedOption
     }
 
     // Token : 0x6000241
-    // RVA   : 0x17002F0   Offset: 0x16FF6F0   Length: 0x282
+    // RVA   : 0x1700900   Offset: 0x16FFD00   Length: 0x282
     private void OnDisable()
     {
         int iVar1;
@@ -177,7 +177,7 @@ public class UISavedOption
             uVar5 = this.mSlider;
             cVar3 = Object.op_Inequality(uVar5,0,0);
             if (!cVar3) {
-              lVar4 = FUN_180967490(this,1,DAT_181d98be0);
+              lVar4 = FUN_180967b20(this,1,DAT_181d98bf8);
               uVar8 = 0;
               if (lVar4 != null) {
                 iVar1 = *(int *)(lVar4 + 24);
@@ -209,22 +209,22 @@ public class UISavedOption
             else if (this.mSlider != null) {
               uVar5 = this.mSlider.onChange;
               uVar7 = il2cpp_internal(DAT_181d76190);
-              uVar6 = DAT_181dc62b0;
-              goto LAB_18170051b;
+              uVar6 = DAT_181dc6460;
+              goto LAB_181700b2b;
             }
           }
           else if (this.mList != null) {
             uVar5 = this.mList.onChange;
             uVar7 = il2cpp_internal(DAT_181d76190);
-            uVar6 = DAT_181dc6338;
-            goto LAB_18170051b;
+            uVar6 = DAT_181dc64e8;
+            goto LAB_181700b2b;
           }
         }
         else if (this.mCheck != null) {
           uVar5 = this.mCheck.onChange;
           uVar7 = il2cpp_internal(DAT_181d76190);
-          uVar6 = DAT_181dc63c0;
-        LAB_18170051b:
+          uVar6 = DAT_181dc6570;
+        LAB_181700b2b:
           OnTooltipCB.ctor(uVar7,this,uVar6,0);
           EventDelegate.Remove(uVar5,uVar7,0);
           return;
@@ -232,13 +232,13 @@ public class UISavedOption
     }
 
     // Token : 0x6000242
-    // RVA   : 0x1700AC0   Offset: 0x16FFEC0   Length: 0xD4
+    // RVA   : 0x17010D0   Offset: 0x17004D0   Length: 0xD4
     public void SaveSelection()
     {
         bool cVar2;
         ulong uVar3;
         ulong uVar4;
-        cVar2 = FUN_180d755b0(this.keyName,0);
+        cVar2 = FUN_180d75bc0(this.keyName,0);
         if (!cVar2) {
           uVar3 = this.keyName;
         }
@@ -255,13 +255,13 @@ public class UISavedOption
     }
 
     // Token : 0x6000243
-    // RVA   : 0x1700BA0   Offset: 0x16FFFA0   Length: 0xD0
+    // RVA   : 0x17011B0   Offset: 0x17005B0   Length: 0xD0
     public void SaveState()
     {
         long lVar1;
         bool cVar2;
         ulong uVar3;
-        cVar2 = FUN_180d755b0(this.keyName,0);
+        cVar2 = FUN_180d75bc0(this.keyName,0);
         if (!cVar2) {
           uVar3 = this.keyName;
         }
@@ -269,7 +269,7 @@ public class UISavedOption
           uVar3 = Object.get_name(this,0);
           uVar3 = String.Concat("NGUI State: ",uVar3,0);
         }
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db04f8 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0510 + 184) + 8);
         if (lVar1 != null) {
           cVar2 = UIToggle.get_isChecked(lVar1,0);
           PlayerPrefs.SetInt(uVar3,cVar2,0);
@@ -278,14 +278,14 @@ public class UISavedOption
     }
 
     // Token : 0x6000244
-    // RVA   : 0x17009E0   Offset: 0x16FFDE0   Length: 0xDC
+    // RVA   : 0x1700FF0   Offset: 0x17003F0   Length: 0xDC
     public void SaveProgress()
     {
         long lVar1;
         bool cVar2;
         ulong uVar3;
         float fVar4;
-        cVar2 = FUN_180d755b0(this.keyName,0);
+        cVar2 = FUN_180d75bc0(this.keyName,0);
         if (!cVar2) {
           uVar3 = this.keyName;
         }
@@ -293,7 +293,7 @@ public class UISavedOption
           uVar3 = Object.get_name(this,0);
           uVar3 = String.Concat("NGUI State: ",uVar3,0);
         }
-        lVar1 = **(int64 **)(DAT_181db0078 + 184);
+        lVar1 = **(int64 **)(DAT_181db0090 + 184);
         if (lVar1 != null) {
           fVar4 = *(float *)(lVar1 + 56);
           if (1 < *(int *)(lVar1 + 100)) {

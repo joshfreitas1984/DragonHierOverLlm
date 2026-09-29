@@ -6,24 +6,24 @@
 public class <GetEnumerator>d__19
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002060
+    // Token: 0x4002061
     private int <>1__state;
 
-    // Token: 0x4002061
+    // Token: 0x4002062
     private T <>2__current;
 
-    // Token: 0x4002062
+    // Token: 0x4002063
     public CircularBuffer<T> <>4__this;
 
-    // Token: 0x4002063
+    // Token: 0x4002064
     private long <version>5__2;
 
-    // Token: 0x4002064
+    // Token: 0x4002065
     private int <i>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002588
-    // RVA   : 0xCBC470   Offset: 0xCBB870   Length: 0x2E
+    // RVA   : 0xCBCA80   Offset: 0xCBBE80   Length: 0x2E
     public void /*ctor*/(int <>1__state)
     {
         if (this != 0) {
@@ -40,7 +40,7 @@ public class <GetEnumerator>d__19
     }
 
     // Token : 0x600258A
-    // RVA   : 0xCBC4A0   Offset: 0xCBB8A0   Length: 0x11C
+    // RVA   : 0xCBCAB0   Offset: 0xCBBEB0   Length: 0x11C
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -52,7 +52,7 @@ public class <GetEnumerator>d__19
         if (*(int *)(this + 16) == 0) {
           *(uint32 *)(this + 16) = 0xffffffff;
           if (lVar1 == null) {
-        LAB_180cbc5b7:
+        LAB_180cbcbc7:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -67,7 +67,7 @@ public class <GetEnumerator>d__19
           *(int *)(this + 48) = *(int *)(this + 48) + 1;
           iVar6 = *(int *)(this + 48);
           *(uint32 *)(this + 16) = 0xffffffff;
-          if (lVar1 == null) goto LAB_180cbc5b7;
+          if (lVar1 == null) goto LAB_180cbcbc7;
         }
         puVar2 = *(uint64 **)(*(int64 *)(*(int64 *)(param_2 + 24) + 192) + 8);
         iVar3 = (*(code *)*puVar2)(lVar1,puVar2);
@@ -75,11 +75,11 @@ public class <GetEnumerator>d__19
           return false;
         }
         if (*(int64 *)(this + 40) != *(int64 *)(lVar1 + 32)) {
-          uVar4 = il2cpp_runtime_class_init(&DAT_181d81998);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181d819b0);
           uVar4 = il2cpp_internal(uVar4);
           uVar5 = il2cpp_internal(&"Collection changed");
           InvalidOperationException.ctor(uVar4,uVar5,0);
-          uVar5 = il2cpp_runtime_class_init(&DAT_181d93b28);
+          uVar5 = il2cpp_runtime_class_init(&DAT_181d93b40);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar4,uVar5);
         }
@@ -98,15 +98,15 @@ public class <GetEnumerator>d__19
     }
 
     // Token : 0x600258C
-    // RVA   : 0xCBC5C0   Offset: 0xCBB9C0   Length: 0x3E
+    // RVA   : 0xCBCBD0   Offset: 0xCBBFD0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d93ba8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d93bc0);
     }
 
     // Token : 0x600258D

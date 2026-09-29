@@ -18,7 +18,7 @@ public class BookData
     }
 
     // Token : 0x60012EE
-    // RVA   : 0xC835D0   Offset: 0xC829D0   Length: 0xB6
+    // RVA   : 0xC83BE0   Offset: 0xC82FE0   Length: 0xB6
     public KungfuSkillData DataBase()
     {
         long lVar1;
@@ -30,7 +30,7 @@ public class BookData
     }
 
     // Token : 0x60012EF
-    // RVA   : 0xC83690   Offset: 0xC82A90   Length: 0xD5
+    // RVA   : 0xC83CA0   Offset: 0xC830A0   Length: 0xD5
     public int ReadDayCost()
     {
         int iVar1;
@@ -46,7 +46,7 @@ public class BookData
     }
 
     // Token : 0x60012F0
-    // RVA   : 0xC83770   Offset: 0xC82B70   Length: 0xDB
+    // RVA   : 0xC83D80   Offset: 0xC83180   Length: 0xDB
     public int ReadMoneyCost()
     {
         int iVar1;

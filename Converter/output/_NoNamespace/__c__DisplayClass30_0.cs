@@ -6,7 +6,7 @@
 public class <>c__DisplayClass30_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400212D
+    // Token: 0x400212E
     public ScrollRect target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass30_0
     }
 
     // Token : 0x6002724
-    // RVA   : 0x939310   Offset: 0x938710   Length: 0x4C
+    // RVA   : 0x9399A0   Offset: 0x938DA0   Length: 0x4C
     internal Vector2 <DONormalizedPos>b__0()
     {
         uint uVar1;
@@ -33,17 +33,17 @@ public class <>c__DisplayClass30_0
     }
 
     // Token : 0x6002725
-    // RVA   : 0x939360   Offset: 0x938760   Length: 0x46
+    // RVA   : 0x9399F0   Offset: 0x938DF0   Length: 0x46
     internal void <DONormalizedPos>b__1(Vector2 x)
     {
         uint local_res8;
         uint32 uStackX_c;
         if (this.target != null) {
           local_res8 = (uint32)x;
-          FUN_1813baf00(this.target,local_res8,0);
+          FUN_1813bb510(this.target,local_res8,0);
           if (this.target != null) {
             uStackX_c = (uint32)((uint64)x >> 32);
-            FUN_1813bba50(this.target,uStackX_c,0);
+            FUN_1813bc060(this.target,uStackX_c,0);
             return;
           }
         }

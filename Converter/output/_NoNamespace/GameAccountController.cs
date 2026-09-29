@@ -111,16 +111,16 @@ public class GameAccountController
     // RVA   : 0x78C2B0   Offset: 0x78B6B0   Length: 0x202
     public void SureRegisterButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181db5190 + 184);
+        var pStatics = *(int64*)(DAT_181db51a8 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
         ulong uVar4;
         if (this.userNameRegisterInputField == null) throw; // [null/range check failed]
-        cVar3 = FUN_180d755b0(*(uint64 *)(this.userNameRegisterInputField + 0x170),0);
+        cVar3 = FUN_180d75bc0(*(uint64 *)(this.userNameRegisterInputField + 0x170),0);
         if (!cVar3) {
           if (this.passWordRegisterInputField == null) throw; // [null/range check failed]
-          cVar3 = FUN_180d755b0(*(uint64 *)(this.passWordRegisterInputField + 0x170),0);
+          cVar3 = FUN_180d75bc0(*(uint64 *)(this.passWordRegisterInputField + 0x170),0);
           if (!cVar3) {
             if (this.CoverBlack != null) {
               GameObject.SetActive(this.CoverBlack,1,0);
@@ -134,7 +134,7 @@ public class GameAccountController
                     uVar1 = *(uint64 *)(this.userNameRegisterInputField + 0x170);
                     if (this.passWordRegisterInputField != null) {
                       uVar2 = *(uint64 *)(this.passWordRegisterInputField + 0x170);
-                      uVar4 = new OnTooltipCB(this,DAT_181dc46e0,DAT_181d96928);
+                      uVar4 = new OnTooltipCB(this,DAT_181dc4700,DAT_181d96940);
                       CISAuthSDK.Account_Signup(uVar1,uVar2,uVar4,0);
                       return;
                     }
@@ -155,16 +155,16 @@ public class GameAccountController
     // RVA   : 0x78C4C0   Offset: 0x78B8C0   Length: 0x202
     public void SureSigninButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181db5190 + 184);
+        var pStatics = *(int64*)(DAT_181db51a8 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
         ulong uVar4;
         if (this.userNameInputField == null) throw; // [null/range check failed]
-        cVar3 = FUN_180d755b0(*(uint64 *)(this.userNameInputField + 0x170),0);
+        cVar3 = FUN_180d75bc0(*(uint64 *)(this.userNameInputField + 0x170),0);
         if (!cVar3) {
           if (this.passWordInputField == null) throw; // [null/range check failed]
-          cVar3 = FUN_180d755b0(*(uint64 *)(this.passWordInputField + 0x170),0);
+          cVar3 = FUN_180d75bc0(*(uint64 *)(this.passWordInputField + 0x170),0);
           if (!cVar3) {
             if (this.CoverBlack != null) {
               GameObject.SetActive(this.CoverBlack,1,0);
@@ -178,7 +178,7 @@ public class GameAccountController
                     uVar1 = *(uint64 *)(this.userNameInputField + 0x170);
                     if (this.passWordInputField != null) {
                       uVar2 = *(uint64 *)(this.passWordInputField + 0x170);
-                      uVar4 = new OnTooltipCB(this,DAT_181dc4768,DAT_181d96828);
+                      uVar4 = new OnTooltipCB(this,DAT_181dc4780,DAT_181d96840);
                       CISAuthSDK.Account_Signin(uVar1,uVar2,uVar4,0);
                       return;
                     }
@@ -202,7 +202,7 @@ public class GameAccountController
         ulong uVar1;
         if (this.CoverBlack != null) {
           GameObject.SetActive(this.CoverBlack,1,0);
-          uVar1 = new OnTooltipCB(this,DAT_181dc4658,DAT_181d96a28);
+          uVar1 = new OnTooltipCB(this,DAT_181dc4678,DAT_181d96a40);
           CISAuthSDK.Account_SigninFast(uVar1,0);
           return;
         }
@@ -212,7 +212,7 @@ public class GameAccountController
     // RVA   : 0x78BFA0   Offset: 0x78B3A0   Length: 0x176
     private void LoginSuccess()
     {
-        var pStatics = *(int64*)(DAT_181db5108 + 184);
+        var pStatics = *(int64*)(DAT_181db5120 + 184);
         long lVar1;
         lVar1 = *(int64 *)(pStatics + 40);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
@@ -248,7 +248,7 @@ public class GameAccountController
             uVar1 = *(uint64 *)(this.verifyIDNameInputField + 0x170);
             if (this.verifyIDCardInputField != null) {
               uVar2 = *(uint64 *)(this.verifyIDCardInputField + 0x170);
-              uVar3 = new OnTooltipCB(this,DAT_181dc47f0,DAT_181d96ca8);
+              uVar3 = new OnTooltipCB(this,DAT_181dc4808,DAT_181d96cc0);
               CISAuthSDK.Account_VerifyUserIdentity(uVar1,uVar2,uVar3,0);
               return;
             }
@@ -277,7 +277,7 @@ public class GameAccountController
         if (lVar1 != null) {
           *(uint64 *)(lVar1 + 16) = this;
           *(uint8 *)(lVar1 + 24) = firstVerify;
-          uVar2 = new OnTooltipCB(lVar1,DAT_181da4108,DAT_181d96a28);
+          uVar2 = new OnTooltipCB(lVar1,DAT_181da42a0,DAT_181d96a40);
           CISAuthSDK.Account_Refresh(uVar2,0);
           return;
         }
@@ -288,12 +288,12 @@ public class GameAccountController
     public void LoginFinalFinishReal(bool firstVerify)
     {
         var pStatics_34c0 = *(int64*)(DAT_181d734c0 + 184);
-        var pStatics_5190 = *(int64*)(DAT_181db5190 + 184);
+        var pStatics_51a8 = *(int64*)(DAT_181db51a8 + 184);
         long lVar1;
-        if (*pStatics_5190 != 0) {
-          *(uint8 *)(*pStatics_5190 + 24) = 1;
-          if (*pStatics_5190 != 0) {
-            lVar1 = CISAuthSDKController.CheckFCMState(*pStatics_5190,1,0);
+        if (*pStatics_51a8 != 0) {
+          *(uint8 *)(*pStatics_51a8 + 24) = 1;
+          if (*pStatics_51a8 != 0) {
+            lVar1 = CISAuthSDKController.CheckFCMState(*pStatics_51a8,1,0);
             if (firstVerify) {
               if (lVar1 == null) throw; // [null/range check failed]
               if ((*(int *)(lVar1 + 28) == 0) && (*(int *)(lVar1 + 48) < 18)) {
@@ -326,7 +326,7 @@ public class GameAccountController
     // RVA   : 0x78C830   Offset: 0x78BC30   Length: 0x23B
     private void <SureRegisterButtonClicked>b__16_0(APIResult<APISignupRespData> result)
     {
-        var pStatics = *(int64*)(DAT_181db5190 + 184);
+        var pStatics = *(int64*)(DAT_181db51a8 + 184);
         long lVar1;
         ulong uVar2;
         if (result == null) throw; // [null/range check failed]
@@ -372,7 +372,7 @@ public class GameAccountController
     // RVA   : 0x78CA70   Offset: 0x78BE70   Length: 0x1C9
     private void <SureSigninButtonClicked>b__17_0(APIResult<APISigninRespData> result)
     {
-        var pStatics = *(int64*)(DAT_181db5190 + 184);
+        var pStatics = *(int64*)(DAT_181db51a8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -386,7 +386,7 @@ public class GameAccountController
           }
           else {
             if (!DAT_181e9acda) {
-              il2cpp_runtime_class_init(&DAT_181db5190);
+              il2cpp_runtime_class_init(&DAT_181db51a8);
               DAT_181e9acda = true;
               lVar3 = *(int64 *)(result + 16);
             }
@@ -415,7 +415,7 @@ public class GameAccountController
     // RVA   : 0x78C6D0   Offset: 0x78BAD0   Length: 0x158
     private void <FastLoginButtonClicked>b__18_0(APIResult<CISAccountData> result)
     {
-        var pStatics = *(int64*)(DAT_181db5190 + 184);
+        var pStatics = *(int64*)(DAT_181db51a8 + 184);
         long lVar1;
         ulong uVar2;
         if (result == null) throw; // [null/range check failed]
@@ -444,7 +444,7 @@ public class GameAccountController
     // RVA   : 0x78CC40   Offset: 0x78C040   Length: 0x2D6
     private void <VerifyIDButtonClicked>b__20_0(APIResult<int> resp)
     {
-        var pStatics = *(int64*)(DAT_181db5190 + 184);
+        var pStatics = *(int64*)(DAT_181db51a8 + 184);
         int iVar1;
         ulong uVar2;
         long lVar3;
@@ -459,7 +459,7 @@ public class GameAccountController
           }
           else {
             if (!DAT_181e9acda) {
-              il2cpp_runtime_class_init(&DAT_181db5190);
+              il2cpp_runtime_class_init(&DAT_181db51a8);
               DAT_181e9acda = true;
               lVar4 = *(int64 *)(resp + 16);
             }

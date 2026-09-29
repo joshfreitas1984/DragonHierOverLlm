@@ -6,12 +6,12 @@
 public class LookAtTarget
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E81
+    // Token: 0x4001E82
     public Transform Target;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600241B
-    // RVA   : 0xA86730   Offset: 0xA85B30   Length: 0x2E
+    // RVA   : 0xA86DF0   Offset: 0xA861F0   Length: 0x2E
     private void Update()
     {
         long lVar1;

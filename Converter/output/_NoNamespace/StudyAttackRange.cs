@@ -7,17 +7,17 @@ public class StudyAttackRange
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002217
-    // RVA   : 0xFD3010   Offset: 0xFD2410   Length: 0x151
+    // RVA   : 0xFD3620   Offset: 0xFD2A20   Length: 0x151
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var pStatics = *(int64*)(DAT_181da7f10 + 184);
+        var pStatics = *(int64*)(DAT_181da7f28 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
         if (((*pStatics != 0) &&
             (lVar1 = *(int64 *)(*pStatics + 72), other != null)) &&
            (uVar3 = Component.get_gameObject(other,0), lVar1 != null)) {
-          cVar2 = FUN_18181e400(lVar1,uVar3,DAT_181d89498);
+          cVar2 = FUN_18181ea10(lVar1,uVar3,DAT_181d894b0);
           if (cVar2) {
             return;
           }
@@ -30,7 +30,7 @@ public class StudyAttackRange
             lVar1 = *(int64 *)(*pStatics + 72);
             uVar3 = Component.get_gameObject(other,0);
             if (lVar1 != null) {
-              FUN_18181e0a0(lVar1,uVar3,DAT_181d89398);
+              FUN_18181e6b0(lVar1,uVar3,DAT_181d893b0);
               return;
             }
           }
@@ -38,10 +38,10 @@ public class StudyAttackRange
     }
 
     // Token : 0x6002218
-    // RVA   : 0xFD3170   Offset: 0xFD2570   Length: 0xDE
+    // RVA   : 0xFD3780   Offset: 0xFD2B80   Length: 0xDE
     private void OnTriggerExit2D(Collider2D other)
     {
-        var pStatics = *(int64*)(DAT_181da7f10 + 184);
+        var pStatics = *(int64*)(DAT_181da7f28 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -55,7 +55,7 @@ public class StudyAttackRange
             lVar1 = *(int64 *)(*pStatics + 72);
             uVar3 = Component.get_gameObject(other,0);
             if (lVar1 != null) {
-              FUN_1817eee00(lVar1,uVar3,DAT_181d89618);
+              FUN_1817ef410(lVar1,uVar3,DAT_181d89630);
               return;
             }
           }

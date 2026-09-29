@@ -6,7 +6,7 @@
 public class <>c__DisplayClass32_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400212F
+    // Token: 0x4002130
     public ScrollRect target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass32_0
     }
 
     // Token : 0x600272A
-    // RVA   : 0x9394A0   Offset: 0x9388A0   Length: 0x1D
+    // RVA   : 0x939B30   Offset: 0x938F30   Length: 0x1D
     internal float <DOVerticalNormalizedPos>b__0()
     {
         if (this.target != null) {
@@ -28,11 +28,11 @@ public class <>c__DisplayClass32_0
     }
 
     // Token : 0x600272B
-    // RVA   : 0x9394C0   Offset: 0x9388C0   Length: 0x1E
+    // RVA   : 0x939B50   Offset: 0x938F50   Length: 0x1E
     internal void <DOVerticalNormalizedPos>b__1(float x)
     {
         if (this.target != null) {
-          FUN_1813bba50(this.target,x,0);
+          FUN_1813bc060(this.target,x,0);
           return;
         }
     }

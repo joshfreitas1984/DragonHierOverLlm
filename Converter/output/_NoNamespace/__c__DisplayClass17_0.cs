@@ -6,7 +6,7 @@
 public class <>c__DisplayClass17_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400211B
+    // Token: 0x400211C
     public RectTransform target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass17_0
     }
 
     // Token : 0x60026F9
-    // RVA   : 0x937920   Offset: 0x936D20   Length: 0x3B
+    // RVA   : 0x937FB0   Offset: 0x9373B0   Length: 0x3B
     internal Vector3 <DOAnchorPos3DX>b__0()
     {
         uint uVar1;
@@ -34,7 +34,7 @@ public class <>c__DisplayClass17_0
     }
 
     // Token : 0x60026FA
-    // RVA   : 0x937960   Offset: 0x936D60   Length: 0x35
+    // RVA   : 0x937FF0   Offset: 0x9373F0   Length: 0x35
     internal void <DOAnchorPos3DX>b__1(Vector3 x)
     {
         ulong local_18;

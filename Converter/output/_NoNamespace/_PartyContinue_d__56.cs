@@ -6,16 +6,16 @@
 public class <PartyContinue>d__56
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001974
+    // Token: 0x4001975
     private int <>1__state;
 
-    // Token: 0x4001975
+    // Token: 0x4001976
     private object <>2__current;
 
-    // Token: 0x4001976
+    // Token: 0x4001977
     public PartyController <>4__this;
 
-    // Token: 0x4001977
+    // Token: 0x4001978
     private int <i>5__2;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,7 +34,7 @@ public class <PartyContinue>d__56
     }
 
     // Token : 0x60019A8
-    // RVA   : 0x8F0890   Offset: 0x8EFC90   Length: 0xA9C
+    // RVA   : 0x923710   Offset: 0x922B10   Length: 0xA9C
     private virtual bool MoveNext()
     {
         var plVar2 = *(int64*)(lVar2 + 184);
@@ -76,7 +76,7 @@ public class <PartyContinue>d__56
                (lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0)) == null) ||
               (lVar4 = Transform.Find(lVar4,"ProgressBar",0)) == null) ||
              ((lVar4 = Transform.Find(lVar4,"Bar",0), lVar4 == null ||
-              (lVar4 = Component.GetComponent(lVar4,DAT_181d94460)) == null))) throw; // [null/range check failed]
+              (lVar4 = Component.GetComponent(lVar4,DAT_181d94478)) == null))) throw; // [null/range check failed]
           Image.set_fillAmount(lVar4);
           if (((*(int64 *)(lVar2 + 32) == 0) ||
               ((lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0), lVar4 == null ||
@@ -93,9 +93,9 @@ public class <PartyContinue>d__56
             }
             this.<>1__state = 0xffffffff;
             lVar4 = FUN_18046c400(0);
-            lVar5 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar5,DAT_181da3bd8);
-            if (((lVar5 != null) && (FUN_18181e0a0(lVar5,"客人离席;FinishParty",DAT_181da3d58), lVar2 != null)) &&
+            lVar5 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar5,DAT_181da3bf0);
+            if (((lVar5 != null) && (FUN_18181e6b0(lVar5,"客人离席;FinishParty",DAT_181da3d70), lVar2 != null)) &&
                (*(int64 *)(lVar2 + 168) != 0)) {
               uVar6 = Int32.ToString(*(int64 *)(lVar2 + 168) + 88,0);
               uVar7 = new SinglePlotData("宴会持续良久，肴核既尽，杯盘狼籍。相与枕藉，不觉天色昏沉。",lVar5,1,0,CONCAT44(uVar15,3),uVar6,3,0,0);
@@ -111,7 +111,7 @@ public class <PartyContinue>d__56
              ((lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0), lVar4 == null ||
               ((lVar4 = Transform.Find(lVar4,"ProgressBar",0), lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"Bar",0)) == null))))) throw; // [null/range check failed]
-          lVar4 = Component.GetComponent(lVar4,DAT_181d94460);
+          lVar4 = Component.GetComponent(lVar4,DAT_181d94478);
           if ((*(int64 *)(lVar2 + 192) == 0) || (lVar4 == null)) throw; // [null/range check failed]
           Image.set_fillAmount
                     (lVar4,((float)this.<i>5__2 + 1.0) /
@@ -205,16 +205,16 @@ public class <PartyContinue>d__56
             if (0.5 <= fVar12) {
               lVar4 = DrinkUIController.DrinkPoemText;
               if (lVar4 == null) throw; // [null/range check failed]
-              uVar3 = FUN_180d95a30(0,*(uint32 *)(lVar4 + 24),0);
-              lVar4 = FUN_180002f80(lVar4,uVar3,DAT_181da4358);
+              uVar3 = FUN_180d96040(0,*(uint32 *)(lVar4 + 24),0);
+              lVar4 = FUN_180002f80(lVar4,uVar3,DAT_181da4370);
               if (lVar4 == null) throw; // [null/range check failed]
               uVar7 = String.Replace(lVar4,"，","\n",0);
             }
             else {
               lVar4 = DrinkUIController.DrinkTalkText;
               if (lVar4 == null) throw; // [null/range check failed]
-              uVar3 = FUN_180d95a30(0,*(uint32 *)(lVar4 + 24),0);
-              uVar7 = FUN_180002f80(lVar4,uVar3,DAT_181da4358);
+              uVar3 = FUN_180d96040(0,*(uint32 *)(lVar4 + 24),0);
+              uVar7 = FUN_180002f80(lVar4,uVar3,DAT_181da4370);
             }
             if ((((*(int64 *)(lVar2 + 32) == 0) ||
                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0)) == null) ||
@@ -233,8 +233,8 @@ public class <PartyContinue>d__56
           }
           else {
             uVar6 = DOTweenModuleAudio.DOFade(*(uint64 *)(lVar2 + 48));
-            uVar7 = new OnTooltipCB(lVar2,DAT_181d96090,0);
-            TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181dc0038);
+            uVar7 = new OnTooltipCB(lVar2,DAT_181d95f28,0);
+            TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181dc01e8);
             uVar6 = new WaitForSeconds();
             this.<>2__current = uVar6;
             this.<>1__state = 2;
@@ -251,15 +251,15 @@ public class <PartyContinue>d__56
     }
 
     // Token : 0x60019AA
-    // RVA   : 0x8F1330   Offset: 0x8F0730   Length: 0x3E
+    // RVA   : 0x9241B0   Offset: 0x9235B0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da9a48);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da9be0);
     }
 
     // Token : 0x60019AB

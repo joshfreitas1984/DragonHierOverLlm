@@ -50,10 +50,10 @@ public class UIDraggableCamera
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000149
-    // RVA   : 0x12B8770   Offset: 0x12B7B70   Length: 0x13
+    // RVA   : 0x12B8D80   Offset: 0x12B8180   Length: 0x13
     public Vector2 get_currentMomentum()
     {
-        uint64 FUN_1812b8770(int64 this)
+        uint64 FUN_1812b8d80(int64 this)
         {
         return this.mMomentum;
     }
@@ -68,17 +68,17 @@ public class UIDraggableCamera
     }
 
     // Token : 0x600014B
-    // RVA   : 0x12B8290   Offset: 0x12B7690   Length: 0x1AA
+    // RVA   : 0x12B88A0   Offset: 0x12B7CA0   Length: 0x1AA
     private void Start()
     {
         bool cVar1;
         ulong uVar2;
-        uVar2 = Component.GetComponent(this,DAT_181d937e0);
+        uVar2 = Component.GetComponent(this,DAT_181d937f8);
         this.mCam = uVar2;
         uVar2 = Component.get_transform(this,0);
         this.mTrans = uVar2;
         uVar2 = Component.get_gameObject(this,0);
-        uVar2 = NGUITools.FindInParents(uVar2,DAT_181d8f820);
+        uVar2 = NGUITools.FindInParents(uVar2,DAT_181d8f6b8);
         this.mRoot = uVar2;
         uVar2 = this.rootForBounds;
         cVar1 = Object.op_Equality(uVar2,0,0);
@@ -92,7 +92,7 @@ public class UIDraggableCamera
     }
 
     // Token : 0x600014C
-    // RVA   : 0x12B77E0   Offset: 0x12B6BE0   Length: 0x36A
+    // RVA   : 0x12B7DF0   Offset: 0x12B71F0   Length: 0x36A
     private Vector3 CalculateConstrainOffset()
     {
         uint uVar1;
@@ -116,45 +116,45 @@ public class UIDraggableCamera
         uVar10 = *(uint64 *)(param_2 + 24);
         cVar4 = Object.op_Equality(uVar10,0,0);
         if (!cVar4) {
-          if (*(int64 *)(param_2 + 24) == 0) goto LAB_1812b7b45;
+          if (*(int64 *)(param_2 + 24) == 0) goto LAB_1812b8155;
           iVar5 = Transform.get_childCount(*(int64 *)(param_2 + 24),0);
           if (iVar5 != 0) {
             if (*(int64 *)(param_2 + 56) == 0) {
-        LAB_1812b7b45:
+        LAB_1812b8155:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             puVar8 = (uint64 *)Camera.get_rect(local_68,*(int64 *)(param_2 + 56),0);
             local_58 = *puVar8;
             uStack_50 = puVar8[1];
-            fVar11 = (float)FUN_180d98fc0(&local_58,0);
+            fVar11 = (float)FUN_180d995d0(&local_58,0);
             iVar5 = Screen.get_width(0);
-            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b7b45;
+            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b8155;
             puVar8 = (uint64 *)Camera.get_rect(local_68,*(int64 *)(param_2 + 56),0);
             local_58 = *puVar8;
             uStack_50 = puVar8[1];
             fVar12 = (float)FUN_18044df60(&local_58,0);
             iVar6 = Screen.get_height(0);
             local_98 = CONCAT44((float)iVar6 * fVar12,(float)iVar5 * fVar11);
-            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b7b45;
+            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b8155;
             puVar8 = (uint64 *)Camera.get_rect(local_68,*(int64 *)(param_2 + 56),0);
             local_58 = *puVar8;
             uStack_50 = puVar8[1];
             fVar11 = (float)Rect.get_xMax(&local_58,0);
             iVar5 = Screen.get_width(0);
-            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b7b45;
+            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b8155;
             puVar8 = (uint64 *)Camera.get_rect(local_68,*(int64 *)(param_2 + 56),0);
             local_58 = *puVar8;
             uStack_50 = puVar8[1];
             fVar12 = (float)Rect.get_yMax(&local_58,0);
             iVar6 = Screen.get_height(0);
-            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b7b45;
+            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b8155;
             local_78 = local_98;
             local_70 = 0;
             puVar8 = (uint64 *)
                      Camera.ScreenToWorldPoint(local_68,*(int64 *)(param_2 + 56),&local_78,0);
             uVar10 = *puVar8;
-            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b7b45;
+            if (*(int64 *)(param_2 + 56) == 0) goto LAB_1812b8155;
             local_78 = CONCAT44((float)iVar6 * fVar12,(float)iVar5 * fVar11);
             local_70 = 0;
             puVar8 = (uint64 *)
@@ -176,21 +176,21 @@ public class UIDraggableCamera
             uStackX_c = (uint32)((uint64)uVar10 >> 32);
             local_res8 = (uint32)uVar10;
             uVar7 = 0;
-            goto LAB_1812b7b12;
+            goto LAB_1812b8122;
           }
         }
         puVar8 = (uint64 *)Vector3.get_zero(local_68,0);
         local_res8 = (uint32)*puVar8;
         uStackX_c = (uint32)((uint64)*puVar8 >> 32);
         uVar7 = *(uint32 *)(puVar8 + 1);
-        LAB_1812b7b12:
+        LAB_1812b8122:
         *this = CONCAT44(uStackX_c,local_res8);
         *(uint32 *)(this + 1) = uVar7;
         return this;
     }
 
     // Token : 0x600014D
-    // RVA   : 0x12B7B50   Offset: 0x12B6F50   Length: 0x241
+    // RVA   : 0x12B8160   Offset: 0x12B7560   Length: 0x241
     public bool ConstrainToBounds(bool immediate)
     {
         ulong uVar1;
@@ -262,7 +262,7 @@ public class UIDraggableCamera
     }
 
     // Token : 0x600014E
-    // RVA   : 0x12B8060   Offset: 0x12B7460   Length: 0x15B
+    // RVA   : 0x12B8670   Offset: 0x12B7A70   Length: 0x15B
     public void Press(bool isPressed)
     {
         long lVar1;
@@ -303,7 +303,7 @@ public class UIDraggableCamera
             this.mMomentum = local_res8;
             *(uint32 *)(this + 80) = uStackX_c;
             this.mScroll = 0;
-            lVar1 = Component.GetComponent(this,DAT_181d95d60);
+            lVar1 = Component.GetComponent(this,DAT_181d95d78);
             cVar5 = Object.op_Inequality(lVar1,0,0);
             if (cVar5) {
               if (lVar1 != null) {
@@ -318,7 +318,7 @@ public class UIDraggableCamera
     }
 
     // Token : 0x600014F
-    // RVA   : 0x12B7DA0   Offset: 0x12B71A0   Length: 0x2BE
+    // RVA   : 0x12B83B0   Offset: 0x12B77B0   Length: 0x2BE
     public void Drag(Vector2 delta)
     {
         float fVar1;
@@ -340,7 +340,7 @@ public class UIDraggableCamera
           this.mDragStarted = 1;
           return;
         }
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181daf678 + 184) + 224);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181daf690 + 184) + 224);
         if (lVar2 != null) {
           *(uint32 *)(lVar2 + 112) = 2;
           uVar5 = this.mRoot;
@@ -384,7 +384,7 @@ public class UIDraggableCamera
     }
 
     // Token : 0x6000150
-    // RVA   : 0x12B81C0   Offset: 0x12B75C0   Length: 0xCF
+    // RVA   : 0x12B87D0   Offset: 0x12B7BD0   Length: 0xCF
     public void Scroll(float delta)
     {
         ulong uVar1;
@@ -410,7 +410,7 @@ public class UIDraggableCamera
     }
 
     // Token : 0x6000151
-    // RVA   : 0x12B8440   Offset: 0x12B7840   Length: 0x2B3
+    // RVA   : 0x12B8A50   Offset: 0x12B7E50   Length: 0x2B3
     private void Update()
     {
         ulong uVar2;
@@ -465,7 +465,7 @@ public class UIDraggableCamera
               if (cVar4) {
                 return;
               }
-              lVar8 = Component.GetComponent(this,DAT_181d95d60);
+              lVar8 = Component.GetComponent(this,DAT_181d95d78);
               cVar4 = Object.op_Inequality(lVar8,0,0);
               if (!cVar4) {
                 return;
@@ -475,16 +475,16 @@ public class UIDraggableCamera
                 return;
               }
             }
-        LAB_1812b86ee:
+        LAB_1812b8cfe:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
         else {
-          lVar8 = Component.GetComponent(this,DAT_181d95d60);
+          lVar8 = Component.GetComponent(this,DAT_181d95d78);
           cVar4 = Object.op_Inequality(lVar8,0,0);
           if (cVar4) {
-            if (lVar8 == null) goto LAB_1812b86ee;
+            if (lVar8 == null) goto LAB_1812b8cfe;
             Behaviour.set_enabled(lVar8,0,0);
           }
         }
@@ -493,7 +493,7 @@ public class UIDraggableCamera
     }
 
     // Token : 0x6000152
-    // RVA   : 0x12B8700   Offset: 0x12B7B00   Length: 0x6E
+    // RVA   : 0x12B8D10   Offset: 0x12B8110   Length: 0x6E
     public void /*ctor*/()
     {
         ulong uVar1;

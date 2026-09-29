@@ -716,7 +716,7 @@ public class GlobalData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60016E1
-    // RVA   : 0xA64A90   Offset: 0xA63E90   Length: 0x77
+    // RVA   : 0xA65120   Offset: 0xA64520   Length: 0x77
     public static char GetChineseNumText(int id)
     {
         long lVar1;
@@ -728,7 +728,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E2
-    // RVA   : 0xA65720   Offset: 0xA64B20   Length: 0x95
+    // RVA   : 0xA65DB0   Offset: 0xA651B0   Length: 0x95
     public static string GetInjuryIconName(int id)
     {
         long lVar1;
@@ -742,7 +742,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E3
-    // RVA   : 0xA646C0   Offset: 0xA63AC0   Length: 0x110
+    // RVA   : 0xA64D50   Offset: 0xA64150   Length: 0x110
     public static int GetAttriLv(float targetNum)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -759,7 +759,7 @@ public class GlobalData
             }
             lVar2 = *(int64 *)(pStatics + 0x568);
             if (lVar2 == null) break;
-            iVar3 = FUN_1800d6760(lVar2,iVar1,DAT_181d8fa18);
+            iVar3 = FUN_1800d6760(lVar2,iVar1,DAT_181d8fa30);
             if ((float)iVar3 <= targetNum) {
               return iVar1;
             }
@@ -768,7 +768,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E4
-    // RVA   : 0xA65280   Offset: 0xA64680   Length: 0x107
+    // RVA   : 0xA65910   Offset: 0xA64D10   Length: 0x107
     public static string GetFavorText(float favor)
     {
         long lVar1;
@@ -789,7 +789,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E5
-    // RVA   : 0xA65F20   Offset: 0xA65320   Length: 0x214
+    // RVA   : 0xA665B0   Offset: 0xA659B0   Length: 0x214
     public static string GetNumText(int num)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -833,7 +833,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E6
-    // RVA   : 0xA6C110   Offset: 0xA6B510   Length: 0x58
+    // RVA   : 0xA6C7A0   Offset: 0xA6BBA0   Length: 0x58
     public static string StringReplace(string origin, int index, char replaceChar)
     {
         long lVar1;
@@ -854,7 +854,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E7
-    // RVA   : 0xA651C0   Offset: 0xA645C0   Length: 0xBC
+    // RVA   : 0xA65850   Offset: 0xA64C50   Length: 0xBC
     public static string GetEvilText(float evil)
     {
         long lVar1;
@@ -870,7 +870,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E8
-    // RVA   : 0xA649D0   Offset: 0xA63DD0   Length: 0xBC
+    // RVA   : 0xA65060   Offset: 0xA64460   Length: 0xBC
     public static string GetChaosText(float chaos)
     {
         long lVar1;
@@ -886,7 +886,7 @@ public class GlobalData
     }
 
     // Token : 0x60016E9
-    // RVA   : 0xA67670   Offset: 0xA66A70   Length: 0x131
+    // RVA   : 0xA67D00   Offset: 0xA67100   Length: 0x131
     public static void ListAddTo(List<float> a, List<float> b)
     {
         float fVar1;
@@ -903,8 +903,8 @@ public class GlobalData
               if (*(uint32 *)(b + 24) <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              FUN_181829d40(a,uVar2,fVar1 + *(float *)(*(int64 *)(b + 16) + lVar3),
-                            DAT_181da10f8);
+              FUN_18182a350(a,uVar2,fVar1 + *(float *)(*(int64 *)(b + 16) + lVar3),
+                            DAT_181da1110);
               lVar3 = lVar3 + 4;
             }
             return;
@@ -915,7 +915,7 @@ public class GlobalData
     }
 
     // Token : 0x60016EA
-    // RVA   : 0xA67CE0   Offset: 0xA670E0   Length: 0x131
+    // RVA   : 0xA68370   Offset: 0xA67770   Length: 0x131
     public static void ListMinusTo(List<float> a, List<float> b)
     {
         float fVar1;
@@ -932,8 +932,8 @@ public class GlobalData
               if (*(uint32 *)(b + 24) <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              FUN_181829d40(a,uVar2,fVar1 - *(float *)(*(int64 *)(b + 16) + lVar3),
-                            DAT_181da10f8);
+              FUN_18182a350(a,uVar2,fVar1 - *(float *)(*(int64 *)(b + 16) + lVar3),
+                            DAT_181da1110);
               lVar3 = lVar3 + 4;
             }
             return;
@@ -944,7 +944,7 @@ public class GlobalData
     }
 
     // Token : 0x60016EB
-    // RVA   : 0xA677B0   Offset: 0xA66BB0   Length: 0x176
+    // RVA   : 0xA67E40   Offset: 0xA67240   Length: 0x176
     public static List<float> ListAdd(List<float> a, List<float> b)
     {
         float fVar1;
@@ -953,8 +953,8 @@ public class GlobalData
         long lVar4;
         if ((a != null) && (b != null)) {
           if (*(int *)(a + 24) == *(int *)(b + 24)) {
-            lVar2 = il2cpp_internal(DAT_181d96ed0);
-            FUN_18132faf0(lVar2,DAT_181da0cf8);
+            lVar2 = il2cpp_internal(DAT_181d96ee8);
+            FUN_181330100(lVar2,DAT_181da0d10);
             lVar4 = 32;
             for (uVar3 = 0; (int)uVar3 < (int)*(uint32 *)(a + 24); uVar3 = uVar3 + 1) {
               if (*(uint32 *)(a + 24) <= uVar3) {
@@ -965,7 +965,7 @@ public class GlobalData
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar2 == null) throw; // [null/range check failed]
-              FUN_18181de10(lVar2,fVar1 + *(float *)(*(int64 *)(b + 16) + lVar4),DAT_181da0df8)
+              FUN_18181e420(lVar2,fVar1 + *(float *)(*(int64 *)(b + 16) + lVar4),DAT_181da0e10)
               ;
               lVar4 = lVar4 + 4;
             }
@@ -979,7 +979,7 @@ public class GlobalData
     }
 
     // Token : 0x60016EC
-    // RVA   : 0xA67E20   Offset: 0xA67220   Length: 0x176
+    // RVA   : 0xA684B0   Offset: 0xA678B0   Length: 0x176
     public static List<float> ListMinus(List<float> a, List<float> b)
     {
         float fVar1;
@@ -988,8 +988,8 @@ public class GlobalData
         long lVar4;
         if ((a != null) && (b != null)) {
           if (*(int *)(a + 24) == *(int *)(b + 24)) {
-            lVar2 = il2cpp_internal(DAT_181d96ed0);
-            FUN_18132faf0(lVar2,DAT_181da0cf8);
+            lVar2 = il2cpp_internal(DAT_181d96ee8);
+            FUN_181330100(lVar2,DAT_181da0d10);
             lVar4 = 32;
             for (uVar3 = 0; (int)uVar3 < (int)*(uint32 *)(a + 24); uVar3 = uVar3 + 1) {
               if (*(uint32 *)(a + 24) <= uVar3) {
@@ -1000,7 +1000,7 @@ public class GlobalData
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar2 == null) throw; // [null/range check failed]
-              FUN_18181de10(lVar2,fVar1 - *(float *)(*(int64 *)(b + 16) + lVar4),DAT_181da0df8)
+              FUN_18181e420(lVar2,fVar1 - *(float *)(*(int64 *)(b + 16) + lVar4),DAT_181da0e10)
               ;
               lVar4 = lVar4 + 4;
             }
@@ -1014,14 +1014,14 @@ public class GlobalData
     }
 
     // Token : 0x60016ED
-    // RVA   : 0xA67FA0   Offset: 0xA673A0   Length: 0xF3
+    // RVA   : 0xA68630   Offset: 0xA67A30   Length: 0xF3
     public static List<float> ListMulti(List<float> a, float b)
     {
         long lVar1;
         uint uVar2;
         long lVar3;
-        lVar1 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar1,DAT_181da0cf8);
+        lVar1 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar1,DAT_181da0d10);
         uVar2 = 0;
         if (a != null) {
           lVar3 = 32;
@@ -1033,7 +1033,7 @@ public class GlobalData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar1 == null) break;
-            FUN_18181de10(lVar1,b * *(float *)(*(int64 *)(a + 16) + lVar3),DAT_181da0df8)
+            FUN_18181e420(lVar1,b * *(float *)(*(int64 *)(a + 16) + lVar3),DAT_181da0e10)
             ;
             uVar2 = uVar2 + 1;
             lVar3 = lVar3 + 4;
@@ -1042,7 +1042,7 @@ public class GlobalData
     }
 
     // Token : 0x60016EE
-    // RVA   : 0xA67C10   Offset: 0xA67010   Length: 0xC5
+    // RVA   : 0xA682A0   Offset: 0xA676A0   Length: 0xC5
     public static bool ListEqual(List<int> list1, List<int> list2)
     {
         ulong uVar1;
@@ -1051,14 +1051,14 @@ public class GlobalData
           if (*(int *)(list1 + 24) != (int)list2[3]) {
             return (uint64)(uint3)((uint32)(int)list2[3] >> 8) << 8;
           }
-          uVar1 = new OnTooltipCB(list2,*(uint64 *)(*list2 + 0x210),DAT_181dbdb08);
-          lVar2 = FUN_181830e10(list1,uVar1,DAT_181d8f918);
+          uVar1 = new OnTooltipCB(list2,*(uint64 *)(*list2 + 0x210),DAT_181dbdb20);
+          lVar2 = FUN_181831420(list1,uVar1,DAT_181d8f930);
           return lVar2;
         }
     }
 
     // Token : 0x60016EF
-    // RVA   : 0xA62B90   Offset: 0xA61F90   Length: 0x100
+    // RVA   : 0xA63220   Offset: 0xA62620   Length: 0x100
     public static void DeleteAllChild(GameObject targetObj)
     {
         ulong uVar1;
@@ -1068,7 +1068,7 @@ public class GlobalData
         cVar2 = Object.op_Equality(targetObj,0,0);
         if (!cVar2) {
           if ((targetObj == null) || (lVar4 = GameObject.get_transform(targetObj,0)) == null) {
-        LAB_180a62c8b:
+        LAB_180a6331b:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1076,7 +1076,7 @@ public class GlobalData
           while (iVar3 = iVar3 + -1, -1 < iVar3) {
             lVar4 = GameObject.get_transform(targetObj,0);
             if ((lVar4 == null) || (lVar4 = Transform.GetChild(lVar4,iVar3,0)) == null)
-            goto LAB_180a62c8b;
+            goto LAB_180a6331b;
             uVar1 = Component.get_gameObject(lVar4);
             Object.Destroy(uVar1);
           }
@@ -1084,7 +1084,7 @@ public class GlobalData
     }
 
     // Token : 0x60016F0
-    // RVA   : 0xA62D90   Offset: 0xA62190   Length: 0xDD
+    // RVA   : 0xA63420   Offset: 0xA62820   Length: 0xDD
     public static void DestroyAll(List<GameObject> targetObj)
     {
         ulong uVar1;
@@ -1104,12 +1104,12 @@ public class GlobalData
               uVar2 = uVar2 - 1;
             } while (-1 < (int)uVar2);
           }
-          FUN_1812f9a10(targetObj,DAT_181d89418);
+          FUN_1812fa020(targetObj,DAT_181d89430);
         }
     }
 
     // Token : 0x60016F1
-    // RVA   : 0xA62CA0   Offset: 0xA620A0   Length: 0xE6
+    // RVA   : 0xA63330   Offset: 0xA62730   Length: 0xE6
     public static void DeleteAllNull(List<GameObject> targetObj)
     {
         ulong uVar1;
@@ -1125,7 +1125,7 @@ public class GlobalData
             uVar1 = *(uint64 *)(lVar4 + *(int64 *)(targetObj + 16));
             cVar2 = Object.op_Equality(uVar1,0,0);
             if (cVar2) {
-              FUN_181823590();
+              FUN_181823ba0();
             }
             lVar4 = lVar4 + -8;
             uVar3 = uVar3 - 1;
@@ -1134,11 +1134,11 @@ public class GlobalData
     }
 
     // Token : 0x60016F2
-    // RVA   : 0xA692C0   Offset: 0xA686C0   Length: 0x1E81
+    // RVA   : 0xA69950   Offset: 0xA68D50   Length: 0x1E81
     public static string ReplaceSpeString(string targetText, int sourceHeroID)
     {
-        var pStatics_1b88 = *(int64*)(DAT_181d91b88 + 184);
-        var pStatics_c758 = *(int64*)(DAT_181dac758 + 184);
+        var pStatics_1ba0 = *(int64*)(DAT_181d91ba0 + 184);
+        var pStatics_c770 = *(int64*)(DAT_181dac770 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -1265,7 +1265,7 @@ public class GlobalData
                                           if (*(int64 *)(lVar5 + 112) != 0) {
                                             lVar5 = GameController._instance;
                                             lVar1 = *(int64 *)
-                                                     (pStatics_1b88 + 24);
+                                                     (pStatics_1ba0 + 24);
                                             if (((lVar1 == null) ||
                                                 (lVar1 = *(int64 *)(lVar1 + 112)) == null) ||
                                                (lVar5 == null)) throw; // [null/range check failed]
@@ -1277,12 +1277,12 @@ public class GlobalData
                                             lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                             uVar3 = "#$SourceInteractName#";
                                             lVar5 = *(int64 *)
-                                                     (pStatics_1b88 + 24);
+                                                     (pStatics_1ba0 + 24);
                                             if (lVar5 != null) {
                                               uVar6 = "";
                                               if (*(int64 *)(lVar5 + 104) != 0) {
                                                 lVar5 = *(int64 *)
-                                                         (pStatics_1b88 + 24);
+                                                         (pStatics_1ba0 + 24);
                                                 if ((lVar5 == null) ||
                                                    (lVar5 = *(int64 *)(lVar5 + 104)) == null)
                                                 throw; // [null/range check failed]
@@ -1292,12 +1292,12 @@ public class GlobalData
                                                 lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                                 uVar3 = "#$TargetInteractName#";
                                                 lVar5 = *(int64 *)
-                                                         (pStatics_1b88 + 24);
+                                                         (pStatics_1ba0 + 24);
                                                 if (lVar5 != null) {
                                                   uVar6 = "";
                                                   if (*(int64 *)(lVar5 + 112) != 0) {
                                                     lVar5 = *(int64 *)
-                                                             (pStatics_1b88 + 24);
+                                                             (pStatics_1ba0 + 24);
                                                     if ((lVar5 == null) ||
                                                        (lVar5 = *(int64 *)(lVar5 + 112)) == null)
                                                     throw; // [null/range check failed]
@@ -1307,12 +1307,12 @@ public class GlobalData
                                                     lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                                     uVar3 = "#AreaForceName#";
                                                     lVar5 = *(int64 *)
-                                                             (pStatics_c758 + 56);
+                                                             (pStatics_c770 + 56);
                                                     if (lVar5 != null) {
                                                       uVar6 = "";
                                                       if (*(int64 *)(lVar5 + 88) != 0) {
                                                         lVar5 = *(int64 *)
-                                                                 (pStatics_c758 +
+                                                                 (pStatics_c770 +
                                                                  56);
                                                         if ((lVar5 == null) ||
                                                            (lVar5 = *(int64 *)(lVar5 + 88),
@@ -1334,13 +1334,13 @@ public class GlobalData
                                                         lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                                         uVar3 = "#AreaName#";
                                                         lVar5 = *(int64 *)
-                                                                 (pStatics_c758 +
+                                                                 (pStatics_c770 +
                                                                  56);
                                                         if (lVar5 != null) {
                                                           uVar6 = "";
                                                           if (*(int64 *)(lVar5 + 88) != 0) {
                                                             lVar5 = *(int64 *)
-                                                                     (pStatics_c758
+                                                                     (pStatics_c770
                                                                      + 56);
                                                             if ((lVar5 == null) ||
                                                                (lVar5 = *(int64 *)(lVar5 + 88),
@@ -1351,26 +1351,26 @@ public class GlobalData
                                                             lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                                             uVar3 = "#PlotInteractItemName#";
                                                             lVar5 = *(int64 *)
-                                                                     (pStatics_1b88
+                                                                     (pStatics_1ba0
                                                                      + 24);
                                                             if (lVar5 != null) {
                                                               uVar6 = "";
                                                               if (*(int64 *)(lVar5 + 224) != 0) {
-                                                                if (((*(byte *)(DAT_181d91b88 + 0x133) & 4
+                                                                if (((*(byte *)(DAT_181d91ba0 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181d91b88 + 224) == 0))
+                                                                   (*(int *)(DAT_181d91ba0 + 224) == 0))
                                                                 {
                                                                   il2cpp_runtime_class_init();
                                                                 }
-                                                                if (((*(byte *)(DAT_181d91b88 + 0x133) & 4
+                                                                if (((*(byte *)(DAT_181d91ba0 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181d91b88 + 224) == 0))
+                                                                   (*(int *)(DAT_181d91ba0 + 224) == 0))
                                                                 {
                                                                   il2cpp_runtime_class_init();
                                                                 }
                                                                 lVar5 = *(int64 *)
                                                                          (*(int64 *)
-                                                                           (DAT_181d91b88 + 184) + 24);
+                                                                           (DAT_181d91ba0 + 184) + 24);
                                                                 if ((lVar5 == null) ||
                                                                    (lVar5 = *(int64 *)(lVar5 + 224),
                                                                    lVar5 == null)) throw; // [null/range check failed]
@@ -1379,40 +1379,40 @@ public class GlobalData
                                                               if (lVar4 != null) {
                                                                 lVar4 = String.Replace(lVar4,uVar3,uVar6,
                                                                                         0);
-                                                                if (((*(byte *)(DAT_181d91b88 + 0x133) & 4
+                                                                if (((*(byte *)(DAT_181d91ba0 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181d91b88 + 224) == 0))
+                                                                   (*(int *)(DAT_181d91ba0 + 224) == 0))
                                                                 {
                                                                   il2cpp_runtime_class_init();
                                                                 }
-                                                                if (((*(byte *)(DAT_181d91b88 + 0x133) & 4
+                                                                if (((*(byte *)(DAT_181d91ba0 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181d91b88 + 224) == 0))
+                                                                   (*(int *)(DAT_181d91ba0 + 224) == 0))
                                                                 {
                                                                   il2cpp_runtime_class_init();
                                                                 }
                                                                 uVar3 = "#PlotInteractSkillName#";
                                                                 lVar5 = *(int64 *)
                                                                          (*(int64 *)
-                                                                           (DAT_181d91b88 + 184) + 24);
+                                                                           (DAT_181d91ba0 + 184) + 24);
                                                                 if (lVar5 != null) {
                                                                   uVar6 = "";
                                                                   if (*(int64 *)(lVar5 + 240) != 0) {
-                                                                    if (((*(byte *)(DAT_181d91b88 + 0x133)
+                                                                    if (((*(byte *)(DAT_181d91ba0 + 0x133)
                                                                          & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d91b88 + 224) ==
+                                                                       (*(int *)(DAT_181d91ba0 + 224) ==
                                                                         0)) {
                                                                       il2cpp_runtime_class_init();
                                                                     }
-                                                                    if (((*(byte *)(DAT_181d91b88 + 0x133)
+                                                                    if (((*(byte *)(DAT_181d91ba0 + 0x133)
                                                                          & 4) != 0) &&
-                                                                       (*(int *)(DAT_181d91b88 + 224) ==
+                                                                       (*(int *)(DAT_181d91ba0 + 224) ==
                                                                         0)) {
                                                                       il2cpp_runtime_class_init();
                                                                     }
                                                                     lVar5 = *(int64 *)
                                                                              (*(int64 *)
-                                                                               (DAT_181d91b88 + 184) +
+                                                                               (DAT_181d91ba0 + 184) +
                                                                              24);
                                                                     if ((lVar5 == null) ||
                                                                        (lVar5 = *(int64 *)
@@ -1572,14 +1572,14 @@ public class GlobalData
                                                         uVar7 = 0;
                                                         while( true ) {
                                                           lVar5 = *(int64 *)
-                                                                   (pStatics_1b88 +
+                                                                   (pStatics_1ba0 +
                                                                    24);
                                                           if ((lVar5 == null) ||
                                                              (lVar5 = *(int64 *)(lVar5 + 120),
                                                              lVar5 == null)) throw; // [null/range check failed]
                                                           if (lVar5.TestBuildPlayer <= (int)uVar7) break;
                                                           local_res10[0] = uVar7;
-                                                          uVar3 = il2cpp_value_box(DAT_181d80418,
+                                                          uVar3 = il2cpp_value_box(DAT_181d80430,
                                                                                    local_res10);
                                                           uVar3 = String.Format("#PlotTargetInteractDescribe{0}#",uVar3,0);
                                                           lVar5 = FUN_18046c400(0);
@@ -1590,7 +1590,7 @@ public class GlobalData
                                                           }
                                                           lVar5 = FUN_180002f80(*(int64 *)
                                                                                  (lVar5 + 120),uVar7,
-                                                                                DAT_181d8bb98);
+                                                                                DAT_181d8bbb0);
                                                           uVar6 = "";
                                                           if (lVar5 != null) {
                                                             lVar5 = FUN_18046c400(0);
@@ -1599,28 +1599,28 @@ public class GlobalData
                                                             throw; // [null/range check failed]
                                                             lVar5 = FUN_180002f80(*(int64 *)
                                                                                    (lVar5 + 120),uVar7,
-                                                                                  DAT_181d8bb98);
+                                                                                  DAT_181d8bbb0);
                                                             if (lVar5 == null) throw; // [null/range check failed]
                                                             uVar6 = HeroData.GetHeroForceLvDescribe
                                                                               (lVar5,1,0);
                                                           }
                                                           if (lVar4 == null) {
-        LAB_180a6b136:
+        LAB_180a6b7c6:
                           // WARNING: Subroutine does not return
                                                             FUN_1800d6620();
                                                           }
                                                           lVar4 = String.Replace(lVar4,uVar3,uVar6,0);
                                                           local_res8[0] = uVar7;
-                                                          uVar3 = il2cpp_value_box(DAT_181d80418,
+                                                          uVar3 = il2cpp_value_box(DAT_181d80430,
                                                                                    local_res8);
                                                           uVar3 = String.Format("#PlotTargetInteractName{0}#",uVar3,0);
                                                           lVar5 = FUN_18046c400(0);
                                                           if ((lVar5 == null) ||
                                                              (*(int64 *)(lVar5 + 120) == 0))
-                                                          goto LAB_180a6b136;
+                                                          goto LAB_180a6b7c6;
                                                           lVar5 = FUN_180002f80(*(int64 *)
                                                                                  (lVar5 + 120),uVar7,
-                                                                                DAT_181d8bb98);
+                                                                                DAT_181d8bbb0);
                                                           uVar6 = "";
                                                           if (lVar5 != null) {
                                                             lVar5 = FUN_18046c400(0);
@@ -1628,7 +1628,7 @@ public class GlobalData
                                                                 (*(int64 *)(lVar5 + 120) == 0)) ||
                                                                (lVar5 = FUN_180002f80(*(int64 *)
                                                                                        (lVar5 + 120),
-                                                                                      uVar7,DAT_181d8bb98)
+                                                                                      uVar7,DAT_181d8bbb0)
                                                                , lVar5 == null)) throw; // [null/range check failed]
                                                             uVar6 = HeroData.HeroName(lVar5,0,0);
                                                           }
@@ -1644,9 +1644,9 @@ public class GlobalData
                                                             if (lVar5 == null) throw; // [null/range check failed]
                                                             uVar6 = "";
                                                             if (*(int64 *)(lVar5 + 144) != 0) {
-                                                              if (((*(byte *)(DAT_181d91b88 + 0x133) & 4)
+                                                              if (((*(byte *)(DAT_181d91ba0 + 0x133) & 4)
                                                                    != 0) &&
-                                                                 (*(int *)(DAT_181d91b88 + 224) == 0)) {
+                                                                 (*(int *)(DAT_181d91ba0 + 224) == 0)) {
                                                                 il2cpp_runtime_class_init();
                                                               }
                                                               lVar5 = FUN_18046c400(0);
@@ -1698,7 +1698,7 @@ public class GlobalData
     }
 
     // Token : 0x60016F3
-    // RVA   : 0xA63200   Offset: 0xA62600   Length: 0x182
+    // RVA   : 0xA63890   Offset: 0xA62C90   Length: 0x182
     public static string GenerateChangeColorText(string name, float num)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -1715,7 +1715,7 @@ public class GlobalData
     }
 
     // Token : 0x60016F4
-    // RVA   : 0xA63390   Offset: 0xA62790   Length: 0x14C
+    // RVA   : 0xA63A20   Offset: 0xA62E20   Length: 0x14C
     public static string GenerateChangeColorText(string name, float num, bool reverse)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -1732,7 +1732,7 @@ public class GlobalData
     }
 
     // Token : 0x60016F5
-    // RVA   : 0xA63130   Offset: 0xA62530   Length: 0xCC
+    // RVA   : 0xA637C0   Offset: 0xA62BC0   Length: 0xCC
     public static string GenerateChangeColorText(string name, bool positive)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -1749,7 +1749,7 @@ public class GlobalData
     }
 
     // Token : 0x60016F6
-    // RVA   : 0xA63A20   Offset: 0xA62E20   Length: 0x1A4
+    // RVA   : 0xA640B0   Offset: 0xA634B0   Length: 0x1A4
     public static string GenerateRareLvColorText(string text, int rareLv)
     {
         long lVar1;
@@ -1786,77 +1786,77 @@ public class GlobalData
     }
 
     // Token : 0x60016F7
-    // RVA   : 0xA66AA0   Offset: 0xA65EA0   Length: 0x3AC
+    // RVA   : 0xA67130   Offset: 0xA66530   Length: 0x3AC
     public static string GetResourceDescribe(List<ResourceData> resourceDatas, ResourceDescribeType describeType, bool newLine, bool toInt)
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d969d0);
-        FUN_18132faf0(lVar1,DAT_181d9f778);
+        lVar1 = il2cpp_internal(DAT_181d969e8);
+        FUN_181330100(lVar1,DAT_181d9f790);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,resourceDatas,DAT_181d9f7f8);
+          FUN_18181e6b0(lVar1,resourceDatas,DAT_181d9f810);
           GlobalData.GetResourceDescribe(lVar1,0,1,0,0);
           return;
         }
     }
 
     // Token : 0x60016F8
-    // RVA   : 0xA665B0   Offset: 0xA659B0   Length: 0x62
+    // RVA   : 0xA66C40   Offset: 0xA66040   Length: 0x62
     public static string GetResourceDescribe(List<ResourceData> resourceDatas)
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d969d0);
-        FUN_18132faf0(lVar1,DAT_181d9f778);
+        lVar1 = il2cpp_internal(DAT_181d969e8);
+        FUN_181330100(lVar1,DAT_181d9f790);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,resourceDatas,DAT_181d9f7f8);
+          FUN_18181e6b0(lVar1,resourceDatas,DAT_181d9f810);
           GlobalData.GetResourceDescribe(lVar1,0,1,0,0);
           return;
         }
     }
 
     // Token : 0x60016F9
-    // RVA   : 0xA668F0   Offset: 0xA65CF0   Length: 0x1A6
+    // RVA   : 0xA66F80   Offset: 0xA66380   Length: 0x1A6
     public static string GetResourceDescribe(List<float> resourceDatas, ResourceDescribeType describeType, bool newLine, bool toInt)
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d969d0);
-        FUN_18132faf0(lVar1,DAT_181d9f778);
+        lVar1 = il2cpp_internal(DAT_181d969e8);
+        FUN_181330100(lVar1,DAT_181d9f790);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,resourceDatas,DAT_181d9f7f8);
+          FUN_18181e6b0(lVar1,resourceDatas,DAT_181d9f810);
           GlobalData.GetResourceDescribe(lVar1,0,1,0,0);
           return;
         }
     }
 
     // Token : 0x60016FA
-    // RVA   : 0xA66620   Offset: 0xA65A20   Length: 0x1B8
+    // RVA   : 0xA66CB0   Offset: 0xA660B0   Length: 0x1B8
     public static string GetResourceDescribe(List<float> resourceDatas)
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d969d0);
-        FUN_18132faf0(lVar1,DAT_181d9f778);
+        lVar1 = il2cpp_internal(DAT_181d969e8);
+        FUN_181330100(lVar1,DAT_181d9f790);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,resourceDatas,DAT_181d9f7f8);
+          FUN_18181e6b0(lVar1,resourceDatas,DAT_181d9f810);
           GlobalData.GetResourceDescribe(lVar1,0,1,0,0);
           return;
         }
     }
 
     // Token : 0x60016FB
-    // RVA   : 0xA667E0   Offset: 0xA65BE0   Length: 0x10E
+    // RVA   : 0xA66E70   Offset: 0xA66270   Length: 0x10E
     public static string GetResourceDescribe(ResourceData resourceData)
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d969d0);
-        FUN_18132faf0(lVar1,DAT_181d9f778);
+        lVar1 = il2cpp_internal(DAT_181d969e8);
+        FUN_181330100(lVar1,DAT_181d9f790);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,resourceData,DAT_181d9f7f8);
+          FUN_18181e6b0(lVar1,resourceData,DAT_181d9f810);
           GlobalData.GetResourceDescribe(lVar1,0,1,0,0);
           return;
         }
     }
 
     // Token : 0x60016FC
-    // RVA   : 0xA62B50   Offset: 0xA61F50   Length: 0x37
+    // RVA   : 0xA631E0   Offset: 0xA625E0   Length: 0x37
     public static float CountArmorDamageRate(float armor)
     {
         float fVar1;
@@ -1865,7 +1865,7 @@ public class GlobalData
     }
 
     // Token : 0x60016FD
-    // RVA   : 0xA671E0   Offset: 0xA665E0   Length: 0xB4
+    // RVA   : 0xA67870   Offset: 0xA66C70   Length: 0xB4
     public static string InsertEnter(string input)
     {
         ulong uVar1;
@@ -1883,7 +1883,7 @@ public class GlobalData
     }
 
     // Token : 0x60016FE
-    // RVA   : 0xA672A0   Offset: 0xA666A0   Length: 0x5A
+    // RVA   : 0xA67930   Offset: 0xA66D30   Length: 0x5A
     public static string InsertFormat(string input, int interval, string value)
     {
         int iVar1;
@@ -1901,7 +1901,7 @@ public class GlobalData
     }
 
     // Token : 0x60016FF
-    // RVA   : 0xA65410   Offset: 0xA64810   Length: 0x116
+    // RVA   : 0xA65AA0   Offset: 0xA64EA0   Length: 0x116
     public static string GetForceFavorLvText(float favorNum)
     {
         ulong uVar1;
@@ -1928,7 +1928,7 @@ public class GlobalData
     }
 
     // Token : 0x6001700
-    // RVA   : 0xA65390   Offset: 0xA64790   Length: 0x7B
+    // RVA   : 0xA65A20   Offset: 0xA64E20   Length: 0x7B
     public static Color GetForceFavorLvColor(float favorNum)
     {
         ulong uVar1;
@@ -1962,7 +1962,7 @@ public class GlobalData
     }
 
     // Token : 0x6001701
-    // RVA   : 0xA60D50   Offset: 0xA60150   Length: 0x112
+    // RVA   : 0xA613E0   Offset: 0xA607E0   Length: 0x112
     public static GameObject AddChild(GameObject parent, GameObject prefab)
     {
         int64 GlobalData.AddChild
@@ -1973,13 +1973,13 @@ public class GlobalData
         uint64 uVar3;
         uint64 local_18;
         uint32 local_10;
-        lVar1 = Object.Instantiate(prefab,DAT_181d92a18);
+        lVar1 = Object.Instantiate(prefab,DAT_181d928b0);
         if (lVar1 != null) {
           lVar2 = GameObject.get_transform(lVar1,0);
           if (parent != null) {
             uVar3 = GameObject.get_transform(parent,0);
             if (lVar2 != null) {
-              FUN_180daa820(lVar2,uVar3,0);
+              FUN_180daae30(lVar2,uVar3,0);
               lVar2 = GameObject.get_transform(lVar1,0);
               if (lVar2 != null) {
                 local_10 = *(uint32 *)(param_3 + 1);
@@ -1999,7 +1999,7 @@ public class GlobalData
     }
 
     // Token : 0x6001702
-    // RVA   : 0xA60E70   Offset: 0xA60270   Length: 0x1D0
+    // RVA   : 0xA61500   Offset: 0xA60900   Length: 0x1D0
     public static GameObject AddChild(GameObject parent, GameObject prefab, bool autoAbove)
     {
         int64 GlobalData.AddChild
@@ -2010,13 +2010,13 @@ public class GlobalData
         uint64 uVar3;
         uint64 local_18;
         uint32 local_10;
-        lVar1 = Object.Instantiate(prefab,DAT_181d92a18);
+        lVar1 = Object.Instantiate(prefab,DAT_181d928b0);
         if (lVar1 != null) {
           lVar2 = GameObject.get_transform(lVar1,0);
           if (parent != null) {
             uVar3 = GameObject.get_transform(parent,0);
             if (lVar2 != null) {
-              FUN_180daa820(lVar2,uVar3,0);
+              FUN_180daae30(lVar2,uVar3,0);
               lVar2 = GameObject.get_transform(lVar1,0);
               if (lVar2 != null) {
                 local_10 = *(uint32 *)(autoAbove + 1);
@@ -2036,7 +2036,7 @@ public class GlobalData
     }
 
     // Token : 0x6001703
-    // RVA   : 0xA60A80   Offset: 0xA5FE80   Length: 0x17D
+    // RVA   : 0xA61110   Offset: 0xA60510   Length: 0x17D
     public static GameObject AddChild(GameObject parent, GameObject prefab, Vector3 localScale, bool autoAbove)
     {
         int64 GlobalData.AddChild
@@ -2047,13 +2047,13 @@ public class GlobalData
         uint64 uVar3;
         uint64 local_18;
         uint32 local_10;
-        lVar1 = Object.Instantiate(prefab,DAT_181d92a18);
+        lVar1 = Object.Instantiate(prefab,DAT_181d928b0);
         if (lVar1 != null) {
           lVar2 = GameObject.get_transform(lVar1,0);
           if (parent != null) {
             uVar3 = GameObject.get_transform(parent,0);
             if (lVar2 != null) {
-              FUN_180daa820(lVar2,uVar3,0);
+              FUN_180daae30(lVar2,uVar3,0);
               lVar2 = GameObject.get_transform(lVar1,0);
               if (lVar2 != null) {
                 local_10 = *(uint32 *)(localScale + 1);
@@ -2073,7 +2073,7 @@ public class GlobalData
     }
 
     // Token : 0x6001704
-    // RVA   : 0xA609B0   Offset: 0xA5FDB0   Length: 0xC4
+    // RVA   : 0xA61040   Offset: 0xA60440   Length: 0xC4
     public static GameObject AddChild(GameObject parent, GameObject prefab, Vector3 localPosition)
     {
         int64 GlobalData.AddChild
@@ -2084,13 +2084,13 @@ public class GlobalData
         uint64 uVar3;
         uint64 local_18;
         uint32 local_10;
-        lVar1 = Object.Instantiate(prefab,DAT_181d92a18);
+        lVar1 = Object.Instantiate(prefab,DAT_181d928b0);
         if (lVar1 != null) {
           lVar2 = GameObject.get_transform(lVar1,0);
           if (parent != null) {
             uVar3 = GameObject.get_transform(parent,0);
             if (lVar2 != null) {
-              FUN_180daa820(lVar2,uVar3,0);
+              FUN_180daae30(lVar2,uVar3,0);
               lVar2 = GameObject.get_transform(lVar1,0);
               if (lVar2 != null) {
                 local_10 = *(uint32 *)(localPosition + 1);
@@ -2110,7 +2110,7 @@ public class GlobalData
     }
 
     // Token : 0x6001705
-    // RVA   : 0xA60C00   Offset: 0xA60000   Length: 0x144
+    // RVA   : 0xA61290   Offset: 0xA60690   Length: 0x144
     public static GameObject AddChild(GameObject parent, GameObject prefab, Vector3 localPosition, Vector3 localScale)
     {
         int64 GlobalData.AddChild
@@ -2121,13 +2121,13 @@ public class GlobalData
         uint64 uVar3;
         uint64 local_18;
         uint32 local_10;
-        lVar1 = Object.Instantiate(prefab,DAT_181d92a18);
+        lVar1 = Object.Instantiate(prefab,DAT_181d928b0);
         if (lVar1 != null) {
           lVar2 = GameObject.get_transform(lVar1,0);
           if (parent != null) {
             uVar3 = GameObject.get_transform(parent,0);
             if (lVar2 != null) {
-              FUN_180daa820(lVar2,uVar3,0);
+              FUN_180daae30(lVar2,uVar3,0);
               lVar2 = GameObject.get_transform(lVar1,0);
               if (lVar2 != null) {
                 local_10 = *(uint32 *)(localPosition + 1);
@@ -2147,7 +2147,7 @@ public class GlobalData
     }
 
     // Token : 0x6001706
-    // RVA   : 0xA61300   Offset: 0xA60700   Length: 0x2AC
+    // RVA   : 0xA61990   Offset: 0xA60D90   Length: 0x2AC
     public static GameObject AddSprite(GameObject parent, string objName, Sprite sprite, Nullable<Vector3> localPosition, Nullable<Vector3> localScale)
     {
         int64 GlobalData.AddSprite
@@ -2165,7 +2165,7 @@ public class GlobalData
         uint32 local_20;
         var lVar2 = new GameObject(0);
         if (lVar2 != null) {
-          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc6280);
+          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc6298);
           if (lVar2 != null) {
             lVar2 = Component.get_gameObject(lVar2,0);
             if (lVar2 != null) {
@@ -2173,7 +2173,7 @@ public class GlobalData
               if (parent != null) {
                 uVar4 = GameObject.get_transform(parent,0);
                 if (lVar3 != null) {
-                  FUN_180daa820(lVar3,uVar4,0);
+                  FUN_180daae30(lVar3,uVar4,0);
                   if (objName != null) {
                     Object.set_name(lVar2,objName,0);
                   }
@@ -2183,28 +2183,28 @@ public class GlobalData
                     if (lVar3 == null) throw; // [null/range check failed]
                     SpriteRenderer.set_sprite(lVar3,sprite,0);
                   }
-                  uVar4 = DAT_181dba8c0;
+                  uVar4 = DAT_181dbaa70;
                   if (*(char *)(localPosition + 12) == false) {
                     puVar5 = (uint64 *)Vector3.get_zero(&local_28,0);
                     local_38 = *puVar5;
                     local_30 = *(uint32 *)(puVar5 + 1);
-                    FUN_181308660(localPosition,&local_38,uVar4);
+                    FUN_181308c70(localPosition,&local_38,uVar4);
                   }
-                  uVar4 = DAT_181dba8c0;
+                  uVar4 = DAT_181dbaa70;
                   if (*(char *)(localScale + 12) == false) {
                     puVar5 = (uint64 *)Vector3.get_one(&local_28,0);
                     local_38 = *puVar5;
                     local_30 = *(uint32 *)(puVar5 + 1);
-                    FUN_181308660(localScale,&local_38,uVar4);
+                    FUN_181308c70(localScale,&local_38,uVar4);
                   }
                   lVar3 = GameObject.get_transform(lVar2,0);
-                  FUN_181308e60(&local_38,localPosition,DAT_181dbaa58);
+                  FUN_181309470(&local_38,localPosition,DAT_181dba9e8);
                   if (lVar3 != null) {
                     local_20 = local_30;
                     local_28 = local_38;
                     Transform.set_localPosition(lVar3,&local_28,0);
                     lVar3 = GameObject.get_transform(lVar2,0);
-                    FUN_181308e60(&local_28,localScale,DAT_181dbaa58);
+                    FUN_181309470(&local_28,localScale,DAT_181dba9e8);
                     if (lVar3 != null) {
                       local_30 = local_20;
                       local_38 = local_28;
@@ -2220,7 +2220,7 @@ public class GlobalData
     }
 
     // Token : 0x6001707
-    // RVA   : 0xA61050   Offset: 0xA60450   Length: 0x2AC
+    // RVA   : 0xA616E0   Offset: 0xA60AE0   Length: 0x2AC
     public static GameObject AddImage(GameObject parent, string objName, Sprite sprite, Nullable<Vector3> localPosition, Nullable<Vector3> localScale)
     {
         int64 GlobalData.AddImage
@@ -2238,7 +2238,7 @@ public class GlobalData
         uint32 local_20;
         var lVar2 = new GameObject(0);
         if (lVar2 != null) {
-          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc5428);
+          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc5440);
           if (lVar2 != null) {
             lVar2 = Component.get_gameObject(lVar2,0);
             if (lVar2 != null) {
@@ -2246,7 +2246,7 @@ public class GlobalData
               if (parent != null) {
                 uVar4 = GameObject.get_transform(parent,0);
                 if (lVar3 != null) {
-                  FUN_180daa820(lVar3,uVar4,0);
+                  FUN_180daae30(lVar3,uVar4,0);
                   if (objName != null) {
                     Object.set_name(lVar2,objName,0);
                   }
@@ -2256,28 +2256,28 @@ public class GlobalData
                     if (lVar3 == null) throw; // [null/range check failed]
                     Image.set_sprite(lVar3,sprite,0);
                   }
-                  uVar4 = DAT_181dba8c0;
+                  uVar4 = DAT_181dbaa70;
                   if (*(char *)(localPosition + 12) == false) {
                     puVar5 = (uint64 *)Vector3.get_zero(&local_28,0);
                     local_38 = *puVar5;
                     local_30 = *(uint32 *)(puVar5 + 1);
-                    FUN_181308660(localPosition,&local_38,uVar4);
+                    FUN_181308c70(localPosition,&local_38,uVar4);
                   }
-                  uVar4 = DAT_181dba8c0;
+                  uVar4 = DAT_181dbaa70;
                   if (*(char *)(localScale + 12) == false) {
                     puVar5 = (uint64 *)Vector3.get_one(&local_28,0);
                     local_38 = *puVar5;
                     local_30 = *(uint32 *)(puVar5 + 1);
-                    FUN_181308660(localScale,&local_38,uVar4);
+                    FUN_181308c70(localScale,&local_38,uVar4);
                   }
                   lVar3 = GameObject.get_transform(lVar2,0);
-                  FUN_181308e60(&local_38,localPosition,DAT_181dbaa58);
+                  FUN_181309470(&local_38,localPosition,DAT_181dba9e8);
                   if (lVar3 != null) {
                     local_20 = local_30;
                     local_28 = local_38;
                     Transform.set_localPosition(lVar3,&local_28,0);
                     lVar3 = GameObject.get_transform(lVar2,0);
-                    FUN_181308e60(&local_28,localScale,DAT_181dbaa58);
+                    FUN_181309470(&local_28,localScale,DAT_181dba9e8);
                     if (lVar3 != null) {
                       local_30 = local_20;
                       local_38 = local_28;
@@ -2293,7 +2293,7 @@ public class GlobalData
     }
 
     // Token : 0x6001708
-    // RVA   : 0xA634E0   Offset: 0xA628E0   Length: 0x53F
+    // RVA   : 0xA63B70   Offset: 0xA62F70   Length: 0x53F
     public static void GenerateFlyIcon(Sprite targetSprite, Vector3 startPos, Vector3 endPos, int num)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -2326,47 +2326,47 @@ public class GlobalData
           do {
             var lVar2 = new c.DisplayClass9_0(0);
             var lVar3 = new GameObject(0);
-            if (((lVar3 == null) || (lVar3 = GameObject.AddComponent(lVar3,DAT_181dc5428)) == null) ||
+            if (((lVar3 == null) || (lVar3 = GameObject.AddComponent(lVar3,DAT_181dc5440)) == null) ||
                (uVar4 = Component.get_gameObject(lVar3,0), lVar2 == null)) {
-        LAB_180a63a1a:
+        LAB_180a640aa:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             *(uint64 *)(lVar2 + 16) = uVar4;
-            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a63a1a;
+            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a640aa;
             lVar3 = GameObject.get_transform(*(int64 *)(lVar2 + 16),0);
             if (((*pStatics == 0) ||
                 (lVar1 = *(int64 *)(*pStatics + 64)) == null) ||
-               (uVar4 = GameObject.get_transform(lVar1,0), lVar3 == null)) goto LAB_180a63a1a;
-            FUN_180daa820(lVar3,uVar4,0);
+               (uVar4 = GameObject.get_transform(lVar1,0), lVar3 == null)) goto LAB_180a640aa;
+            FUN_180daae30(lVar3,uVar4,0);
             if ((*(int64 *)(lVar2 + 16) == 0) ||
                (lVar3 = GameObject.GetComponent(*(int64 *)(lVar2 + 16),DAT_181d71e80)) == null)
-            goto LAB_180a63a1a;
+            goto LAB_180a640aa;
             Image.set_sprite(lVar3,targetSprite,0);
             if ((*(int64 *)(lVar2 + 16) == 0) ||
                (lVar3 = GameObject.get_transform(*(int64 *)(lVar2 + 16),0)) == null)
-            goto LAB_180a63a1a;
+            goto LAB_180a640aa;
             local_130 = *(uint32 *)(startPos + 1);
             local_138 = *startPos;
             Transform.set_position(lVar3,&local_138,0);
-            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a63a1a;
+            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a640aa;
             lVar3 = GameObject.get_transform(*(int64 *)(lVar2 + 16),0);
             puVar5 = (uint64 *)Vector3.get_zero(local_c8,0);
-            if (lVar3 == null) goto LAB_180a63a1a;
+            if (lVar3 == null) goto LAB_180a640aa;
             local_120 = *(uint32 *)(puVar5 + 1);
             local_128 = *puVar5;
             Transform.set_localScale(lVar3,&local_128,0);
-            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a63a1a;
+            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a640aa;
             uVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 16),0);
             ShortcutExtensions.DOScale(uVar4,0x3ecccccd,0x3e4ccccd,0);
             fVar7 = (float)GlobalData.RandomRange(0xbdcccccd,0x3dcccccd,0);
             fVar8 = (float)GlobalData.RandomRange(0xbdcccccd,0x3dcccccd,0);
-            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a63a1a;
+            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a640aa;
             uVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 16),0);
             local_118 = CONCAT44(fVar8,fVar7);
             local_110 = 0;
             ShortcutExtensions.DOBlendableMoveBy(uVar4,&local_118,0x3f000000,0,0);
-            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a63a1a;
+            if (*(int64 *)(lVar2 + 16) == 0) goto LAB_180a640aa;
             uVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 16),0);
             local_f0 = *(float *)(startPos + 1);
             local_100 = *(float *)(endPos + 1);
@@ -2376,8 +2376,8 @@ public class GlobalData
                                 ((float)*endPos - (float)*startPos) - fVar7);
             local_d0 = local_e0;
             uVar4 = ShortcutExtensions.DOBlendableMoveBy(uVar4,&local_e8,0x3f800000,0,0);
-            uVar4 = TweenSettingsExtensions.SetEase(uVar4,8,DAT_181dc1088);
-            var uVar6 = new OnTooltipCB(lVar2,DAT_181da4d88);
+            uVar4 = TweenSettingsExtensions.SetEase(uVar4,8,DAT_181dc1238);
+            var uVar6 = new OnTooltipCB(lVar2,DAT_181da4f10);
             TweenSettingsExtensions.OnComplete(uVar4);
             local_res20 = local_res20 + 1;
           } while (local_res20 < num);
@@ -2385,7 +2385,7 @@ public class GlobalData
     }
 
     // Token : 0x6001709
-    // RVA   : 0xA6B860   Offset: 0xA6AC60   Length: 0x48
+    // RVA   : 0xA6BEF0   Offset: 0xA6B2F0   Length: 0x48
     public static int SortByName(Transform a, Transform b)
     {
         ulong uVar1;
@@ -2401,7 +2401,7 @@ public class GlobalData
     }
 
     // Token : 0x600170A
-    // RVA   : 0xA6B8B0   Offset: 0xA6ACB0   Length: 0x280
+    // RVA   : 0xA6BF40   Offset: 0xA6B340   Length: 0x280
     public static void SortChild(GameObject parent)
     {
         bool cVar1;
@@ -2422,22 +2422,22 @@ public class GlobalData
         if (!cVar1) {
           return;
         }
-        lVar3 = il2cpp_internal(DAT_181d981d0);
-        FUN_18132faf0(lVar3,DAT_181da7c18);
+        lVar3 = il2cpp_internal(DAT_181d981e8);
+        FUN_181330100(lVar3,DAT_181da7c30);
         iVar6 = 0;
         if (parent != null) {
           while (lVar4 = GameObject.get_transform(parent,0)) != null {
             iVar2 = Transform.get_childCount(lVar4,0);
             if (iVar2 <= iVar6) {
-              uVar5 = new OnTooltipCB(0,DAT_181d76fc0,DAT_181dab838);
+              uVar5 = new OnTooltipCB(0,DAT_181d76fc8,DAT_181dab850);
               if (lVar3 != null) {
-                List_1.Sort(lVar3,uVar5,DAT_181da7f98);
-                FUN_1817eb420(local_28,lVar3,DAT_181da7e18);
+                List_1.Sort(lVar3,uVar5,DAT_181da7fb0);
+                FUN_1817eba30(local_28,lVar3,DAT_181da7e30);
                 local_30 = local_18;
                 while( true ) {
-                  cVar1 = FUN_180c74f00(&local_40,DAT_181d929e0);
+                  cVar1 = FUN_180c75510(&local_40,DAT_181d929f8);
                   if (!cVar1) {
-                    ZhSegment.Initialize(&local_40,DAT_181d92960);
+                    ZhSegment.Initialize(&local_40,DAT_181d92978);
                     return;
                   }
                   if (local_30 == 0) break;
@@ -2450,20 +2450,20 @@ public class GlobalData
             }
             lVar4 = GameObject.get_transform(parent,0);
             if ((lVar4 == null) || (Transform.GetChild(lVar4,iVar6,0), lVar3 == null)) break;
-            FUN_18181e0a0(lVar3);
+            FUN_18181e6b0(lVar3);
             iVar6 = iVar6 + 1;
           }
         }
     }
 
     // Token : 0x600170B
-    // RVA   : 0xA6B150   Offset: 0xA6A550   Length: 0x46
+    // RVA   : 0xA6B7E0   Offset: 0xA6ABE0   Length: 0x46
     public static Color SetColorAlpha(Color target, float alpha)
     {
         uint uVar1;
         uint uVar2;
         uint uVar3;
-        uVar3 = FUN_1810e36c0(param_3,0,0x3f800000,0);
+        uVar3 = FUN_1810e3cd0(param_3,0,0x3f800000,0);
         uVar1 = alpha[1];
         uVar2 = alpha[2];
         *target = *alpha;
@@ -2474,7 +2474,7 @@ public class GlobalData
     }
 
     // Token : 0x600170C
-    // RVA   : 0xA65020   Offset: 0xA64420   Length: 0x19E
+    // RVA   : 0xA656B0   Offset: 0xA64AB0   Length: 0x19E
     public static Color GetEventColor(int colorLv)
     {
         long lVar1;
@@ -2490,7 +2490,7 @@ public class GlobalData
         uint64 uStack_30;
         uint8 local_28 [32];
         if (param_2 == 0) {
-          puVar4 = (uint64 *)FUN_1810d3570(&local_38,0);
+          puVar4 = (uint64 *)FUN_1810d3b80(&local_38,0);
           uVar2 = puVar4[1];
           *colorLv = *puVar4;
           colorLv[1] = uVar2;
@@ -2514,7 +2514,7 @@ public class GlobalData
             uStack_3c = uStack_50._4_4_;
             local_38 = uVar2;
             uStack_30 = uVar3;
-            puVar4 = (uint64 *)FUN_1810d35b0(local_28,&local_38,&local_48,0);
+            puVar4 = (uint64 *)FUN_1810d3bc0(local_28,&local_38,&local_48,0);
             uVar2 = puVar4[1];
             *colorLv = *puVar4;
             colorLv[1] = uVar2;
@@ -2524,7 +2524,7 @@ public class GlobalData
     }
 
     // Token : 0x600170D
-    // RVA   : 0xA68380   Offset: 0xA67780   Length: 0x68
+    // RVA   : 0xA68A10   Offset: 0xA67E10   Length: 0x119
     public static void MakeUIPixelPerfect(GameObject target)
     {
         long lVar1;
@@ -2545,7 +2545,7 @@ public class GlobalData
             uStack_34 = puVar3[1];
             uStack_30 = puVar3[2];
             uStack_2c = puVar3[3];
-            uVar4 = FUN_180d98fa0(&local_38,0);
+            uVar4 = FUN_180d995b0(&local_38,0);
             lVar2 = GameObject.GetComponent(target,DAT_181d71e80);
             if ((lVar2 != null) && (*(int64 *)(lVar2 + 216) != 0)) {
               puVar3 = (uint32 *)Sprite.get_rect(local_28,*(int64 *)(lVar2 + 216),0);
@@ -2564,7 +2564,7 @@ public class GlobalData
     }
 
     // Token : 0x600170E
-    // RVA   : 0xA6B7B0   Offset: 0xA6ABB0   Length: 0x85
+    // RVA   : 0xA6BE40   Offset: 0xA6B240   Length: 0x85
     public static Vector3 SetZToZero(Vector3 target)
     {
         *target = *param_2;
@@ -2573,7 +2573,7 @@ public class GlobalData
     }
 
     // Token : 0x600170F
-    // RVA   : 0xA6B840   Offset: 0xA6AC40   Length: 0x1F
+    // RVA   : 0xA6BED0   Offset: 0xA6B2D0   Length: 0x1F
     public static Vector3 SetZ(Vector3 target, float zPos)
     {
         uint uVar1;
@@ -2585,7 +2585,7 @@ public class GlobalData
     }
 
     // Token : 0x6001710
-    // RVA   : 0xA66F70   Offset: 0xA66370   Length: 0x129
+    // RVA   : 0xA67600   Offset: 0xA66A00   Length: 0x129
     public static float GetResourceTotalValue(List<ResourceData> resources)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -2604,16 +2604,16 @@ public class GlobalData
           }
           lVar1 = *(int64 *)(pStatics + 0x448);
           if (lVar1 == null) break;
-          fVar3 = (float)FUN_1800d6790(lVar1,iVar2,DAT_181da1078);
+          fVar3 = (float)FUN_1800d6790(lVar1,iVar2,DAT_181da1090);
           if (resources == null) break;
-          fVar4 = (float)FUN_1800d6790(resources,iVar2,DAT_181da1078);
+          fVar4 = (float)FUN_1800d6790(resources,iVar2,DAT_181da1090);
           iVar2 = iVar2 + 1;
           fVar5 = fVar5 + fVar4 * fVar3;
         }
     }
 
     // Token : 0x6001711
-    // RVA   : 0xA66E50   Offset: 0xA66250   Length: 0x115
+    // RVA   : 0xA674E0   Offset: 0xA668E0   Length: 0x115
     public static float GetResourceTotalValue(List<float> resources)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -2632,16 +2632,16 @@ public class GlobalData
           }
           lVar1 = *(int64 *)(pStatics + 0x448);
           if (lVar1 == null) break;
-          fVar3 = (float)FUN_1800d6790(lVar1,iVar2,DAT_181da1078);
+          fVar3 = (float)FUN_1800d6790(lVar1,iVar2,DAT_181da1090);
           if (resources == null) break;
-          fVar4 = (float)FUN_1800d6790(resources,iVar2,DAT_181da1078);
+          fVar4 = (float)FUN_1800d6790(resources,iVar2,DAT_181da1090);
           iVar2 = iVar2 + 1;
           fVar5 = fVar5 + fVar4 * fVar3;
         }
     }
 
     // Token : 0x6001712
-    // RVA   : 0xA63D20   Offset: 0xA63120   Length: 0x227
+    // RVA   : 0xA643B0   Offset: 0xA637B0   Length: 0x227
     public static SkeletonAnimation GenerateSkeletonAnimation(GameObject _parent, string _resourceName, Vector3 _scale, string _anim, bool _loop, string _skin)
     {
         int64 GlobalData.GenerateSkeletonAnimation
@@ -2661,7 +2661,7 @@ public class GlobalData
           if (_parent != null) {
             uVar3 = GameObject.get_transform(_parent,0);
             if (lVar2 != null) {
-              FUN_180daa820(lVar2,uVar3,0);
+              FUN_180daae30(lVar2,uVar3,0);
               lVar2 = Component.get_transform(lVar1,0);
               puVar4 = (uint64 *)Vector3.get_zero(local_18,0);
               if (lVar2 != null) {
@@ -2688,7 +2688,7 @@ public class GlobalData
     }
 
     // Token : 0x6001713
-    // RVA   : 0xA63BD0   Offset: 0xA62FD0   Length: 0x144
+    // RVA   : 0xA64260   Offset: 0xA63660   Length: 0x144
     public static SkeletonAnimation GenerateSkeletonAnimation(GameObject _parent, SkeletonDataAsset _skeletonDataAsset, Vector3 _scale, string _anim, bool _loop, string _skin)
     {
         int64 GlobalData.GenerateSkeletonAnimation
@@ -2708,7 +2708,7 @@ public class GlobalData
           if (_parent != null) {
             uVar3 = GameObject.get_transform(_parent,0);
             if (lVar2 != null) {
-              FUN_180daa820(lVar2,uVar3,0);
+              FUN_180daae30(lVar2,uVar3,0);
               lVar2 = Component.get_transform(lVar1,0);
               puVar4 = (uint64 *)Vector3.get_zero(local_18,0);
               if (lVar2 != null) {
@@ -2735,7 +2735,7 @@ public class GlobalData
     }
 
     // Token : 0x6001714
-    // RVA   : 0xA640F0   Offset: 0xA634F0   Length: 0x282
+    // RVA   : 0xA64780   Offset: 0xA63B80   Length: 0x282
     public static SkeletonGraphic GenerateSkeletonGraphic(GameObject _parent, string _resourceName, Vector3 _scale, string _anim, bool _loop, string _skin)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -2760,7 +2760,7 @@ public class GlobalData
               lVar3 = Component.get_transform(lVar2,0);
               uVar1 = GameObject.get_transform(_parent,0);
               if (lVar3 != null) {
-                FUN_180daa820(lVar3,uVar1,0);
+                FUN_180daae30(lVar3,uVar1,0);
                 lVar3 = Component.get_transform(lVar2,0);
                 puVar4 = (uint64 *)Vector3.get_zero(local_18,0);
                 if (lVar3 != null) {
@@ -2788,7 +2788,7 @@ public class GlobalData
     }
 
     // Token : 0x6001715
-    // RVA   : 0xA63F50   Offset: 0xA63350   Length: 0x19C
+    // RVA   : 0xA645E0   Offset: 0xA639E0   Length: 0x19C
     public static SkeletonGraphic GenerateSkeletonGraphic(GameObject _parent, SkeletonDataAsset _skeletonDataAsset, Vector3 _scale, string _anim, bool _loop, string _skin)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -2813,7 +2813,7 @@ public class GlobalData
               lVar3 = Component.get_transform(lVar2,0);
               uVar1 = GameObject.get_transform(_parent,0);
               if (lVar3 != null) {
-                FUN_180daa820(lVar3,uVar1,0);
+                FUN_180daae30(lVar3,uVar1,0);
                 lVar3 = Component.get_transform(lVar2,0);
                 puVar4 = (uint64 *)Vector3.get_zero(local_18,0);
                 if (lVar3 != null) {
@@ -2841,7 +2841,7 @@ public class GlobalData
     }
 
     // Token : 0x6001716
-    // RVA   : 0xA64BE0   Offset: 0xA63FE0   Length: 0x1A5
+    // RVA   : 0xA65270   Offset: 0xA64670   Length: 0x1A5
     public static Color GetDifficultyColor(float difficulty)
     {
         long lVar1;
@@ -2873,7 +2873,7 @@ public class GlobalData
     }
 
     // Token : 0x6001717
-    // RVA   : 0xA64D90   Offset: 0xA64190   Length: 0x28E
+    // RVA   : 0xA65420   Offset: 0xA64820   Length: 0x28E
     public static string GetDifficultyStarString(float difficulty)
     {
         long lVar1;
@@ -2930,7 +2930,7 @@ public class GlobalData
     }
 
     // Token : 0x6001718
-    // RVA   : 0xA67B10   Offset: 0xA66F10   Length: 0xFC
+    // RVA   : 0xA681A0   Offset: 0xA675A0   Length: 0xFC
     public static bool ListContain(List<int> ListFather, List<int> ListSon)
     {
         byte uVar1;
@@ -2946,15 +2946,15 @@ public class GlobalData
             uVar1 = 0;
           }
           else {
-            uVar3 = new OnTooltipCB(lVar2,DAT_181da4e00,DAT_181dbdb08);
-            uVar1 = FUN_181830e10(ListSon,uVar3,DAT_181d8f918);
+            uVar3 = new OnTooltipCB(lVar2,DAT_181da4f88,DAT_181dbdb20);
+            uVar1 = FUN_181831420(ListSon,uVar3,DAT_181d8f930);
           }
           return uVar1;
         }
     }
 
     // Token : 0x6001719
-    // RVA   : 0xA62510   Offset: 0xA61910   Length: 0xE5
+    // RVA   : 0xA62BA0   Offset: 0xA61FA0   Length: 0xE5
     public static float CaculateWinRate(HeroData hero0, HeroData hero1, bool includeTeamMate)
     {
         float fVar1;
@@ -2963,7 +2963,7 @@ public class GlobalData
     }
 
     // Token : 0x600171A
-    // RVA   : 0xA62600   Offset: 0xA61A00   Length: 0x31
+    // RVA   : 0xA62C90   Offset: 0xA62090   Length: 0x31
     public static float CaculateWinRate(float team0FightScore, float team1FightScore)
     {
         float fVar1;
@@ -2972,7 +2972,7 @@ public class GlobalData
     }
 
     // Token : 0x600171B
-    // RVA   : 0xA62640   Offset: 0xA61A40   Length: 0x115
+    // RVA   : 0xA62CD0   Offset: 0xA620D0   Length: 0x115
     public static int CaculateWinTeam(float team0FightScore, float team1FightScore)
     {
         float fVar2;
@@ -2986,7 +2986,7 @@ public class GlobalData
     }
 
     // Token : 0x600171C
-    // RVA   : 0xA67120   Offset: 0xA66520   Length: 0xB1
+    // RVA   : 0xA677B0   Offset: 0xA66BB0   Length: 0xB1
     public static float GetTotalFightScore(List<HeroData> heroList, bool includeTeamMate)
     {
         long lVar1;
@@ -3016,7 +3016,7 @@ public class GlobalData
     }
 
     // Token : 0x600171D
-    // RVA   : 0xA684A0   Offset: 0xA678A0   Length: 0x90
+    // RVA   : 0xA68B30   Offset: 0xA67F30   Length: 0x90
     public static int ManageHeroAutoFight(FightMatchCouple fightMatchCouple, BattleType battleType, float attackTeamScoreRate, float injuryRate)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -3056,7 +3056,7 @@ public class GlobalData
             bVar2 = dVar15 <= dVar14;
             uVar5 = uVar6;
             while (lVar4 = *(int64 *)(fightMatchCouple + 24)) != null {
-              if ((int)*(uint32 *)(lVar4 + 24) <= (int)uVar5) goto LAB_180a68900;
+              if ((int)*(uint32 *)(lVar4 + 24) <= (int)uVar5) goto LAB_180a68f90;
               if (*(uint32 *)(lVar4 + 24) <= uVar5) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -3068,16 +3068,16 @@ public class GlobalData
                 fVar11 = 2.0;
               }
               lVar1 = *(int64 *)(pStatics + 0x6a0);
-              if ((lVar1 == null) || (fVar12 = (float)FUN_1800d6790(lVar1,battleType,DAT_181da1078), lVar4 == null)
+              if ((lVar1 == null) || (fVar12 = (float)FUN_1800d6790(lVar1,battleType,DAT_181da1090), lVar4 == null)
                  ) break;
               HeroData.AutoGetFightExp(lVar4,fVar12 * fVar11,0);
               if (battleType != null) {
                 if ((*(int64 *)(fightMatchCouple + 24) == 0) ||
-                   (lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bb98)) == null)
+                   (lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bbb0)) == null)
                 break;
                 HeroData.AutoManageEquipPoison(lVar4,0);
                 if (*(int64 *)(fightMatchCouple + 24) == 0) break;
-                lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bb98);
+                lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bbb0);
                 fVar11 = (float)Mathf.Min(fVar9,uVar13,0);
                 if (bVar2) {
                   fVar12 = -0.6;
@@ -3085,7 +3085,7 @@ public class GlobalData
                 else {
                   fVar12 = -0.4;
                 }
-                uVar16 = FUN_1810e36c0(((fVar9 - fVar10) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0)
+                uVar16 = FUN_1810e3cd0(((fVar9 - fVar10) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0)
                 ;
                 if (lVar4 == null) break;
                 HeroData.AutoFightQuickChangeState(lVar4,uVar16,param_5,0,0);
@@ -3095,12 +3095,12 @@ public class GlobalData
             }
           }
         }
-        LAB_180a68aef:
+        LAB_180a6917f:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180a68900:
+        LAB_180a68f90:
         lVar8 = *(int64 *)(fightMatchCouple + 32);
-        if (lVar8 == null) goto LAB_180a68aef;
+        if (lVar8 == null) goto LAB_180a6917f;
         if ((int)*(uint32 *)(lVar8 + 24) <= (int)uVar6) {
           return bVar2;
         }
@@ -3115,16 +3115,16 @@ public class GlobalData
           fVar11 = 2.0;
         }
         lVar4 = *(int64 *)(pStatics + 0x6a0);
-        if ((lVar4 == null) || (fVar12 = (float)FUN_1800d6790(lVar4,battleType,DAT_181da1078), lVar8 == null))
-        goto LAB_180a68aef;
+        if ((lVar4 == null) || (fVar12 = (float)FUN_1800d6790(lVar4,battleType,DAT_181da1090), lVar8 == null))
+        goto LAB_180a6917f;
         HeroData.AutoGetFightExp(lVar8,fVar12 * fVar11,0);
         if (battleType != null) {
           if ((*(int64 *)(fightMatchCouple + 32) == 0) ||
-             (lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bb98)) == null)
-          goto LAB_180a68aef;
+             (lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bbb0)) == null)
+          goto LAB_180a6917f;
           HeroData.AutoManageEquipPoison(lVar8,0);
-          if (*(int64 *)(fightMatchCouple + 32) == 0) goto LAB_180a68aef;
-          lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bb98);
+          if (*(int64 *)(fightMatchCouple + 32) == 0) goto LAB_180a6917f;
+          lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bbb0);
           fVar11 = (float)Mathf.Min(fVar9,uVar13,0);
           if (dVar14 < dVar15) {
             fVar12 = -0.6;
@@ -3132,17 +3132,17 @@ public class GlobalData
           else {
             fVar12 = -0.4;
           }
-          uVar16 = FUN_1810e36c0(((fVar10 - fVar9) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0);
-          if (lVar8 == null) goto LAB_180a68aef;
+          uVar16 = FUN_1810e3cd0(((fVar10 - fVar9) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0);
+          if (lVar8 == null) goto LAB_180a6917f;
           HeroData.AutoFightQuickChangeState(lVar8,uVar16,param_5,0,0);
         }
         uVar6 = uVar6 + 1;
         lVar7 = lVar7 + 8;
-        goto LAB_180a68900;
+        goto LAB_180a68f90;
     }
 
     // Token : 0x600171E
-    // RVA   : 0xA68530   Offset: 0xA67930   Length: 0x5C4
+    // RVA   : 0xA68BC0   Offset: 0xA67FC0   Length: 0x5C4
     public static int ManageHeroAutoFight(FightMatchCouple fightMatchCouple, BattleType battleType, bool includeTeamMate, float attackTeamScoreRate, float injuryRate)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -3182,7 +3182,7 @@ public class GlobalData
             bVar2 = dVar15 <= dVar14;
             uVar5 = uVar6;
             while (lVar4 = *(int64 *)(fightMatchCouple + 24)) != null {
-              if ((int)*(uint32 *)(lVar4 + 24) <= (int)uVar5) goto LAB_180a68900;
+              if ((int)*(uint32 *)(lVar4 + 24) <= (int)uVar5) goto LAB_180a68f90;
               if (*(uint32 *)(lVar4 + 24) <= uVar5) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -3194,16 +3194,16 @@ public class GlobalData
                 fVar11 = 2.0;
               }
               lVar1 = *(int64 *)(pStatics + 0x6a0);
-              if ((lVar1 == null) || (fVar12 = (float)FUN_1800d6790(lVar1,battleType,DAT_181da1078), lVar4 == null)
+              if ((lVar1 == null) || (fVar12 = (float)FUN_1800d6790(lVar1,battleType,DAT_181da1090), lVar4 == null)
                  ) break;
               HeroData.AutoGetFightExp(lVar4,fVar12 * fVar11,0);
               if (battleType != null) {
                 if ((*(int64 *)(fightMatchCouple + 24) == 0) ||
-                   (lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bb98)) == null)
+                   (lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bbb0)) == null)
                 break;
                 HeroData.AutoManageEquipPoison(lVar4,0);
                 if (*(int64 *)(fightMatchCouple + 24) == 0) break;
-                lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bb98);
+                lVar4 = FUN_180002f80(*(int64 *)(fightMatchCouple + 24),uVar5,DAT_181d8bbb0);
                 fVar11 = (float)Mathf.Min(fVar9,uVar13,0);
                 if (bVar2) {
                   fVar12 = -0.6;
@@ -3211,7 +3211,7 @@ public class GlobalData
                 else {
                   fVar12 = -0.4;
                 }
-                uVar16 = FUN_1810e36c0(((fVar9 - fVar10) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0)
+                uVar16 = FUN_1810e3cd0(((fVar9 - fVar10) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0)
                 ;
                 if (lVar4 == null) break;
                 HeroData.AutoFightQuickChangeState(lVar4,uVar16,injuryRate,0,0);
@@ -3221,12 +3221,12 @@ public class GlobalData
             }
           }
         }
-        LAB_180a68aef:
+        LAB_180a6917f:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180a68900:
+        LAB_180a68f90:
         lVar8 = *(int64 *)(fightMatchCouple + 32);
-        if (lVar8 == null) goto LAB_180a68aef;
+        if (lVar8 == null) goto LAB_180a6917f;
         if ((int)*(uint32 *)(lVar8 + 24) <= (int)uVar6) {
           return bVar2;
         }
@@ -3241,16 +3241,16 @@ public class GlobalData
           fVar11 = 2.0;
         }
         lVar4 = *(int64 *)(pStatics + 0x6a0);
-        if ((lVar4 == null) || (fVar12 = (float)FUN_1800d6790(lVar4,battleType,DAT_181da1078), lVar8 == null))
-        goto LAB_180a68aef;
+        if ((lVar4 == null) || (fVar12 = (float)FUN_1800d6790(lVar4,battleType,DAT_181da1090), lVar8 == null))
+        goto LAB_180a6917f;
         HeroData.AutoGetFightExp(lVar8,fVar12 * fVar11,0);
         if (battleType != null) {
           if ((*(int64 *)(fightMatchCouple + 32) == 0) ||
-             (lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bb98)) == null)
-          goto LAB_180a68aef;
+             (lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bbb0)) == null)
+          goto LAB_180a6917f;
           HeroData.AutoManageEquipPoison(lVar8,0);
-          if (*(int64 *)(fightMatchCouple + 32) == 0) goto LAB_180a68aef;
-          lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bb98);
+          if (*(int64 *)(fightMatchCouple + 32) == 0) goto LAB_180a6917f;
+          lVar8 = FUN_180002f80(*(int64 *)(fightMatchCouple + 32),uVar6,DAT_181d8bbb0);
           fVar11 = (float)Mathf.Min(fVar9,uVar13,0);
           if (dVar14 < dVar15) {
             fVar12 = -0.6;
@@ -3258,17 +3258,17 @@ public class GlobalData
           else {
             fVar12 = -0.4;
           }
-          uVar16 = FUN_1810e36c0(((fVar10 - fVar9) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0);
-          if (lVar8 == null) goto LAB_180a68aef;
+          uVar16 = FUN_1810e3cd0(((fVar10 - fVar9) * 0.2) / fVar11 + fVar12,0xbf800000,0xbdcccccd,0);
+          if (lVar8 == null) goto LAB_180a6917f;
           HeroData.AutoFightQuickChangeState(lVar8,uVar16,injuryRate,0,0);
         }
         uVar6 = uVar6 + 1;
         lVar7 = lVar7 + 8;
-        goto LAB_180a68900;
+        goto LAB_180a68f90;
     }
 
     // Token : 0x600171F
-    // RVA   : 0xA6B630   Offset: 0xA6AA30   Length: 0x17A
+    // RVA   : 0xA6BCC0   Offset: 0xA6B0C0   Length: 0x17A
     public static void SetSkeletonAnimationFromRandomStart(SkeletonAnimation skeletonAnimation, int trackID, string animationName, bool loop)
     {
         void GlobalData.SetSkeletonAnimationFromRandomStart
@@ -3306,7 +3306,7 @@ public class GlobalData
     }
 
     // Token : 0x6001720
-    // RVA   : 0xA6B4B0   Offset: 0xA6A8B0   Length: 0x17D
+    // RVA   : 0xA6BB40   Offset: 0xA6AF40   Length: 0x17D
     public static void SetSkeletonAnimationFromRandomStart(SkeletonGraphic skeletonAnimation, int trackID, string animationName, bool loop)
     {
         void GlobalData.SetSkeletonAnimationFromRandomStart
@@ -3344,17 +3344,17 @@ public class GlobalData
     }
 
     // Token : 0x6001721
-    // RVA   : 0xA65D30   Offset: 0xA65130   Length: 0x1E5
+    // RVA   : 0xA663C0   Offset: 0xA657C0   Length: 0x1E5
     public static List<HeroData> GetMaxForceLvHero(List<HeroData> source, int maxNum)
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
         int iVar4;
-        lVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(lVar1,DAT_181d8b418);
+        lVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(lVar1,DAT_181d8b430);
         if (lVar1 == null) {
-        LAB_180a65d20:
+        LAB_180a663b0:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -3364,22 +3364,22 @@ public class GlobalData
           }
           iVar4 = 0;
           while( true ) {
-            if (source == null) goto LAB_180a65d20;
+            if (source == null) goto LAB_180a663b0;
             if (*(int *)(source + 24) <= iVar4) break;
-            lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-            if (lVar2 == null) goto LAB_180a65d20;
+            lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+            if (lVar2 == null) goto LAB_180a663b0;
             if (*(int *)(lVar2 + 88) != 0) {
-              lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-              if (lVar2 == null) goto LAB_180a65d20;
+              lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+              if (lVar2 == null) goto LAB_180a663b0;
               if (*(char *)(lVar2 + 96) == false) {
-                lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-                if (lVar2 == null) goto LAB_180a65d20;
+                lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+                if (lVar2 == null) goto LAB_180a663b0;
                 if (*(char *)(lVar2 + 209) == false) {
-                  lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-                  if (lVar2 == null) goto LAB_180a65d20;
+                  lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+                  if (lVar2 == null) goto LAB_180a663b0;
                   if (*(int *)(lVar2 + 184) == param_3) {
-                    uVar3 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-                    FUN_18181e0a0(lVar1,uVar3,DAT_181d8b518);
+                    uVar3 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+                    FUN_18181e6b0(lVar1,uVar3,DAT_181d8b530);
                     if ((maxNum <= *(int *)(lVar1 + 24)) && (0 < maxNum)) break;
                   }
                 }
@@ -3392,17 +3392,17 @@ public class GlobalData
     }
 
     // Token : 0x6001722
-    // RVA   : 0xA65B80   Offset: 0xA64F80   Length: 0x1A5
+    // RVA   : 0xA66210   Offset: 0xA65610   Length: 0x1A5
     public static List<HeroData> GetMaxForceLvHero(List<HeroData> source, int maxNum, int maxLv)
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
         int iVar4;
-        lVar1 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(lVar1,DAT_181d8b418);
+        lVar1 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(lVar1,DAT_181d8b430);
         if (lVar1 == null) {
-        LAB_180a65d20:
+        LAB_180a663b0:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -3412,22 +3412,22 @@ public class GlobalData
           }
           iVar4 = 0;
           while( true ) {
-            if (source == null) goto LAB_180a65d20;
+            if (source == null) goto LAB_180a663b0;
             if (*(int *)(source + 24) <= iVar4) break;
-            lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-            if (lVar2 == null) goto LAB_180a65d20;
+            lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+            if (lVar2 == null) goto LAB_180a663b0;
             if (*(int *)(lVar2 + 88) != 0) {
-              lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-              if (lVar2 == null) goto LAB_180a65d20;
+              lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+              if (lVar2 == null) goto LAB_180a663b0;
               if (*(char *)(lVar2 + 96) == false) {
-                lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-                if (lVar2 == null) goto LAB_180a65d20;
+                lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+                if (lVar2 == null) goto LAB_180a663b0;
                 if (*(char *)(lVar2 + 209) == false) {
-                  lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-                  if (lVar2 == null) goto LAB_180a65d20;
+                  lVar2 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+                  if (lVar2 == null) goto LAB_180a663b0;
                   if (*(int *)(lVar2 + 184) == maxLv) {
-                    uVar3 = FUN_180002f80(source,iVar4,DAT_181d8bb98);
-                    FUN_18181e0a0(lVar1,uVar3,DAT_181d8b518);
+                    uVar3 = FUN_180002f80(source,iVar4,DAT_181d8bbb0);
+                    FUN_18181e6b0(lVar1,uVar3,DAT_181d8b530);
                     if ((maxNum <= *(int *)(lVar1 + 24)) && (0 < maxNum)) break;
                   }
                 }
@@ -3440,27 +3440,27 @@ public class GlobalData
     }
 
     // Token : 0x6001723
-    // RVA   : 0xA67600   Offset: 0xA66A00   Length: 0x6A
+    // RVA   : 0xA67C90   Offset: 0xA67090   Length: 0x6A
     public static void LimitHeroList(List<HeroData> source, int maxNum)
     {
         if (source != null) {
           while (maxNum < *(int *)(source + 24)) {
-            FUN_181823590(source,*(int *)(source + 24) + -1,DAT_181d8b998);
+            FUN_181823ba0(source,*(int *)(source + 24) + -1,DAT_181d8b9b0);
           }
           return;
         }
     }
 
     // Token : 0x6001724
-    // RVA   : 0xA6BB40   Offset: 0xA6AF40   Length: 0x5A8
+    // RVA   : 0xA6C1D0   Offset: 0xA6B5D0   Length: 0x5A8
     public static List<HeroData> SortHeroList(List<HeroData> source, HeroListSortType sortType)
     {
         int iVar1;
         uint uVar2;
         long lVar3;
         ulong uVar4;
-        lVar3 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(lVar3,DAT_181d8b418);
+        lVar3 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(lVar3,DAT_181d8b430);
         switch(sortType) {
         case 0:
           if (source != null) {
@@ -3470,20 +3470,20 @@ public class GlobalData
                 return lVar3;
               }
               uVar2 = GlobalData.RandomRange(0,iVar1,0,0);
-              uVar4 = FUN_180002f80(source,uVar2,DAT_181d8bb98);
+              uVar4 = FUN_180002f80(source,uVar2,DAT_181d8bbb0);
               if (lVar3 == null) break;
-              FUN_18181e0a0(lVar3,uVar4,DAT_181d8b518);
-              FUN_181823590(source,uVar2);
+              FUN_18181e6b0(lVar3,uVar4,DAT_181d8b530);
+              FUN_181823ba0(source,uVar2);
             }
           }
           throw; // [null/range check failed]
         case 1:
           lVar3 = GlobalData.DemoVersion;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
-            lVar3 = new OnTooltipCB(uVar4,DAT_181da4a88,DAT_181dab2b8);
+            uVar4 = **(uint64 **)(DAT_181d77ee8 + 184);
+            lVar3 = new OnTooltipCB(uVar4,DAT_181da4c20,DAT_181dab2d0);
             plVar5 = &GlobalData.DemoVersion;
-        LAB_180a6bd8f:
+        LAB_180a6c41f:
             *plVar5 = lVar3;
             il2cpp_internal(plVar5,lVar3);
           }
@@ -3491,61 +3491,61 @@ public class GlobalData
         case 2:
           lVar3 = GlobalData.DisableAutoSave;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
-            lVar3 = new OnTooltipCB(uVar4,DAT_181da4b08,DAT_181dab2b8);
+            uVar4 = **(uint64 **)(DAT_181d77ee8 + 184);
+            lVar3 = new OnTooltipCB(uVar4,DAT_181da4ca0,DAT_181dab2d0);
             plVar5 = &GlobalData.DisableAutoSave;
-            goto LAB_180a6bd8f;
+            goto LAB_180a6c41f;
           }
           break;
         case 3:
           lVar3 = GlobalData.PlayTestAvailableAreaID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
-            lVar3 = new OnTooltipCB(uVar4,DAT_181da4b88,DAT_181dab2b8);
+            uVar4 = **(uint64 **)(DAT_181d77ee8 + 184);
+            lVar3 = new OnTooltipCB(uVar4,DAT_181da4d20,DAT_181dab2d0);
             plVar5 = &GlobalData.PlayTestAvailableAreaID;
-            goto LAB_180a6bd8f;
+            goto LAB_180a6c41f;
           }
           break;
         case 4:
           lVar3 = GlobalData.PlayTestAvailableForceID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
-            lVar3 = new OnTooltipCB(uVar4,DAT_181da4c08,DAT_181dab2b8);
+            uVar4 = **(uint64 **)(DAT_181d77ee8 + 184);
+            lVar3 = new OnTooltipCB(uVar4,DAT_181da4da0,DAT_181dab2d0);
             plVar5 = &GlobalData.PlayTestAvailableForceID;
-            goto LAB_180a6bd8f;
+            goto LAB_180a6c41f;
           }
           break;
         case 5:
           lVar3 = GlobalData.PlayTestAvailableInnID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
-            lVar3 = new OnTooltipCB(uVar4,DAT_181da4c88,DAT_181dab2b8);
+            uVar4 = **(uint64 **)(DAT_181d77ee8 + 184);
+            lVar3 = new OnTooltipCB(uVar4,DAT_181da4e18,DAT_181dab2d0);
             plVar5 = &GlobalData.PlayTestAvailableInnID;
-            goto LAB_180a6bd8f;
+            goto LAB_180a6c41f;
           }
           break;
         case 6:
           lVar3 = GlobalData.SteamAppID;
           if (lVar3 == null) {
-            uVar4 = **(uint64 **)(DAT_181d77ec8 + 184);
-            lVar3 = new OnTooltipCB(uVar4,DAT_181da4d08,DAT_181dab2b8);
+            uVar4 = **(uint64 **)(DAT_181d77ee8 + 184);
+            lVar3 = new OnTooltipCB(uVar4,DAT_181da4e98,DAT_181dab2d0);
             plVar5 = &GlobalData.SteamAppID;
-            goto LAB_180a6bd8f;
+            goto LAB_180a6c41f;
           }
           break;
         default:
-          goto switchD_180a6bc6d_default;
+          goto switchD_180a6c2fd_default;
         }
         if (source != null) {
-          List_1.Sort(source,lVar3,DAT_181d8ba18);
+          List_1.Sort(source,lVar3,DAT_181d8ba30);
           lVar3 = source;
-        switchD_180a6bc6d_default:
+        switchD_180a6c2fd_default:
           return lVar3;
         }
     }
 
     // Token : 0x6001725
-    // RVA   : 0xA6B370   Offset: 0xA6A770   Length: 0x13A
+    // RVA   : 0xA6BA00   Offset: 0xA6AE00   Length: 0x13A
     public static void SetResolution(int width, int height, bool fullScreen)
     {
         long lVar1;
@@ -3566,7 +3566,7 @@ public class GlobalData
     }
 
     // Token : 0x6001726
-    // RVA   : 0xA6B1A0   Offset: 0xA6A5A0   Length: 0x98
+    // RVA   : 0xA6B830   Offset: 0xA6AC30   Length: 0x98
     public static void SetFullScreen(bool fullScreen)
     {
         long lVar1;
@@ -3579,7 +3579,7 @@ public class GlobalData
     }
 
     // Token : 0x6001727
-    // RVA   : 0xA615B0   Offset: 0xA609B0   Length: 0xF56
+    // RVA   : 0xA61C40   Offset: 0xA61040   Length: 0xF56
     public static void AutoSetWindowResolution()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -3599,39 +3599,39 @@ public class GlobalData
         uint uVar14;
         uint[] local_res10 = new uint[2];
         lVar7 = GameController.difficultyExtraPoint;
-        if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
+        if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a62951;
         cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"ScreenWidth",0);
         if (cVar1) {
           lVar7 = GameController.difficultyExtraPoint;
-          if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
+          if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a62951;
           iVar2 = PlayerPrefDictionary.GetInt(lVar7,"ScreenWidth",0);
           if (iVar2 != 0) {
             lVar7 = GameController.difficultyExtraPoint;
-            if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
+            if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a62951;
             cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"ScreenHeight",0);
             if (cVar1) {
               lVar7 = GameController.difficultyExtraPoint;
-              if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
+              if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a62951;
               iVar2 = PlayerPrefDictionary.GetInt(lVar7,"ScreenHeight",0);
               if (iVar2 != 0) {
                 lVar7 = GameController.difficultyExtraPoint;
-                if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a622c1;
+                if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null) goto LAB_180a62951;
                 cVar1 = PlayerPrefDictionary.ContainsKey(lVar7,"FullScreen",0);
                 if (cVar1) {
                   lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
-                  goto LAB_180a622c1;
+                  goto LAB_180a62951;
                   uVar3 = PlayerPrefDictionary.GetInt(lVar7,"ScreenWidth",0);
                   lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
-                  goto LAB_180a622c1;
+                  goto LAB_180a62951;
                   uVar4 = PlayerPrefDictionary.GetInt(lVar7,"ScreenHeight",0);
                   lVar7 = GameController.difficultyExtraPoint;
                   if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 16)) == null)
-                  goto LAB_180a622c1;
+                  goto LAB_180a62951;
                   iVar2 = PlayerPrefDictionary.GetInt(lVar7,"FullScreen",0);
                   bVar15 = iVar2 == 1;
-                  goto LAB_180a62222;
+                  goto LAB_180a628b2;
                 }
               }
             }
@@ -3640,7 +3640,7 @@ public class GlobalData
         lVar7 = Screen.get_resolutions(0);
         lVar11 = *(int64 *)(pStatics_3d40 + 176);
         if (lVar7 == null) {
-        LAB_180a622c1:
+        LAB_180a62951:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -3658,11 +3658,11 @@ public class GlobalData
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar8,0);
         }
-        local_res10[0] = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+        local_res10[0] = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
         uVar9 = Int32.ToString(local_res10,0);
         uVar8 = String.Concat(uVar8,"x",uVar9,0);
-        if (lVar11 == null) goto LAB_180a622c1;
-        cVar1 = FUN_18181e400(lVar11,uVar8,DAT_181da3e58);
+        if (lVar11 == null) goto LAB_180a62951;
+        cVar1 = FUN_18181ea10(lVar11,uVar8,DAT_181da3e70);
         if (!cVar1) {
           uVar14 = *(uint32 *)(lVar7 + 24) - 1;
           if (*(uint32 *)(lVar7 + 24) <= uVar14) {
@@ -3677,23 +3677,23 @@ public class GlobalData
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar8,0);
           }
-          iVar5 = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+          iVar5 = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
           if (iVar2 / iVar5 != 1) {
             lVar11 = *(int64 *)(pStatics_3d40 + 176);
-            if (lVar11 == null) goto LAB_180a622c1;
+            if (lVar11 == null) goto LAB_180a62951;
             if (*(int *)(lVar11 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar11 = *(int64 *)(*(int64 *)(lVar11 + 16) + 32);
-            lVar10 = FUN_1800d60b0(DAT_181da1040,1);
-            if (lVar10 == null) goto LAB_180a622c1;
+            lVar10 = FUN_1800d60b0(DAT_181da1058,1);
+            if (lVar10 == null) goto LAB_180a62951;
             if (*(int *)(lVar10 + 24) == 0) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar8,0);
             }
             *(uint16 *)(lVar10 + 32) = 120;
-            if (lVar11 == null) goto LAB_180a622c1;
+            if (lVar11 == null) goto LAB_180a62951;
             lVar11 = String.Split(lVar11,lVar10,0);
             uVar14 = *(uint32 *)(lVar7 + 24) - 1;
             if (*(uint32 *)(lVar7 + 24) <= uVar14) {
@@ -3708,7 +3708,7 @@ public class GlobalData
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar8,0);
             }
-            iVar5 = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+            iVar5 = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
             uVar14 = *(uint32 *)(lVar7 + 24);
             uVar13 = uVar14 - 1;
             if (iVar2 / iVar5 < 2) {
@@ -3718,7 +3718,7 @@ public class GlobalData
                 FUN_1800d65f0(uVar8,0);
               }
               iVar2 = FUN_18044e2c0(lVar7 + (int64)(int)uVar13 * 12 + 32,0);
-              if (lVar11 == null) goto LAB_180a622c1;
+              if (lVar11 == null) goto LAB_180a62951;
               if (*(int *)(lVar11 + 24) == 0) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3729,33 +3729,33 @@ public class GlobalData
                 iVar2 = 1;
                 do {
                   lVar11 = *(int64 *)(pStatics_3d40 + 176);
-                  if (lVar11 == null) goto LAB_180a622c1;
-                  if (*(int *)(lVar11 + 24) <= iVar2) goto LAB_180a62150;
+                  if (lVar11 == null) goto LAB_180a62951;
+                  if (*(int *)(lVar11 + 24) <= iVar2) goto LAB_180a627e0;
                   lVar11 = *(int64 *)(pStatics_3d40 + 176);
-                  if (lVar11 == null) goto LAB_180a622c1;
-                  lVar11 = FUN_180002f80(lVar11,iVar2 + -1,DAT_181da4358);
-                  lVar10 = FUN_1800d60b0(DAT_181da1040,1);
-                  if (lVar10 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
+                  lVar11 = FUN_180002f80(lVar11,iVar2 + -1,DAT_181da4370);
+                  lVar10 = FUN_1800d60b0(DAT_181da1058,1);
+                  if (lVar10 == null) goto LAB_180a62951;
                   if (*(int *)(lVar10 + 24) == 0) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                     FUN_1800d65f0(uVar8,0);
                   }
                   *(uint16 *)(lVar10 + 32) = 120;
-                  if (lVar11 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
                   lVar10 = String.Split(lVar11,lVar10,0);
                   lVar11 = *(int64 *)(pStatics_3d40 + 176);
-                  if (lVar11 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
                   lVar11 = FUN_180002f80(lVar11,iVar2);
-                  lVar12 = FUN_1800d60b0(DAT_181da1040,1);
-                  if (lVar12 == null) goto LAB_180a622c1;
+                  lVar12 = FUN_1800d60b0(DAT_181da1058,1);
+                  if (lVar12 == null) goto LAB_180a62951;
                   if (*(int *)(lVar12 + 24) == 0) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                     FUN_1800d65f0(uVar8,0);
                   }
                   *(uint16 *)(lVar12 + 32) = 120;
-                  if (lVar11 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
                   lVar11 = String.Split(lVar11,lVar12,0);
                   uVar14 = *(uint32 *)(lVar7 + 24) - 1;
                   if (*(uint32 *)(lVar7 + 24) <= uVar14) {
@@ -3764,7 +3764,7 @@ public class GlobalData
                     FUN_1800d65f0(uVar8,0);
                   }
                   iVar5 = FUN_18044e2c0(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
-                  if (lVar10 == null) goto LAB_180a622c1;
+                  if (lVar10 == null) goto LAB_180a62951;
                   if (*(int *)(lVar10 + 24) == 0) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3779,14 +3779,14 @@ public class GlobalData
                       FUN_1800d65f0(uVar8,0);
                     }
                     iVar5 = FUN_18044e2c0(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
-                    if (lVar11 == null) goto LAB_180a622c1;
+                    if (lVar11 == null) goto LAB_180a62951;
                     if (*(int *)(lVar11 + 24) == 0) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                       FUN_1800d65f0(uVar8,0);
                     }
                     iVar6 = Int32.Parse(*(uint64 *)(lVar11 + 32),0);
-                    if (iVar5 < iVar6) goto LAB_180a61d9c;
+                    if (iVar5 < iVar6) goto LAB_180a6242c;
                   }
                   iVar2 = iVar2 + 1;
                 } while( true );
@@ -3813,8 +3813,8 @@ public class GlobalData
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar8,0);
               }
-              iVar2 = FUN_180d96220(lVar7 + (int64)(int)uVar13 * 12 + 32,0);
-              if (lVar11 == null) goto LAB_180a622c1;
+              iVar2 = FUN_180d96830(lVar7 + (int64)(int)uVar13 * 12 + 32,0);
+              if (lVar11 == null) goto LAB_180a62951;
               if (*(uint32 *)(lVar11 + 24) < 2) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3825,33 +3825,33 @@ public class GlobalData
                 iVar2 = 1;
                 do {
                   lVar11 = *(int64 *)(pStatics_3d40 + 176);
-                  if (lVar11 == null) goto LAB_180a622c1;
-                  if (*(int *)(lVar11 + 24) <= iVar2) goto LAB_180a62150;
+                  if (lVar11 == null) goto LAB_180a62951;
+                  if (*(int *)(lVar11 + 24) <= iVar2) goto LAB_180a627e0;
                   lVar11 = *(int64 *)(pStatics_3d40 + 176);
-                  if (lVar11 == null) goto LAB_180a622c1;
-                  lVar11 = FUN_180002f80(lVar11,iVar2 + -1,DAT_181da4358);
-                  lVar10 = FUN_1800d60b0(DAT_181da1040,1);
-                  if (lVar10 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
+                  lVar11 = FUN_180002f80(lVar11,iVar2 + -1,DAT_181da4370);
+                  lVar10 = FUN_1800d60b0(DAT_181da1058,1);
+                  if (lVar10 == null) goto LAB_180a62951;
                   if (*(int *)(lVar10 + 24) == 0) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                     FUN_1800d65f0(uVar8,0);
                   }
                   *(uint16 *)(lVar10 + 32) = 120;
-                  if (lVar11 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
                   lVar10 = String.Split(lVar11,lVar10,0);
                   lVar11 = *(int64 *)(pStatics_3d40 + 176);
-                  if (lVar11 == null) goto LAB_180a622c1;
-                  lVar11 = FUN_180002f80(lVar11,iVar2,DAT_181da4358);
-                  lVar12 = FUN_1800d60b0(DAT_181da1040,1);
-                  if (lVar12 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
+                  lVar11 = FUN_180002f80(lVar11,iVar2,DAT_181da4370);
+                  lVar12 = FUN_1800d60b0(DAT_181da1058,1);
+                  if (lVar12 == null) goto LAB_180a62951;
                   if (*(int *)(lVar12 + 24) == 0) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                     FUN_1800d65f0(uVar8,0);
                   }
                   *(uint16 *)(lVar12 + 32) = 120;
-                  if (lVar11 == null) goto LAB_180a622c1;
+                  if (lVar11 == null) goto LAB_180a62951;
                   lVar11 = String.Split(lVar11,lVar12,0);
                   uVar14 = *(uint32 *)(lVar7 + 24) - 1;
                   if (*(uint32 *)(lVar7 + 24) <= uVar14) {
@@ -3859,8 +3859,8 @@ public class GlobalData
                           // WARNING: Subroutine does not return
                     FUN_1800d65f0(uVar8,0);
                   }
-                  iVar5 = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
-                  if (lVar10 == null) goto LAB_180a622c1;
+                  iVar5 = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+                  if (lVar10 == null) goto LAB_180a62951;
                   if (*(uint32 *)(lVar10 + 24) < 2) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3874,15 +3874,15 @@ public class GlobalData
                           // WARNING: Subroutine does not return
                       FUN_1800d65f0(uVar8,0);
                     }
-                    iVar5 = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
-                    if (lVar11 == null) goto LAB_180a622c1;
+                    iVar5 = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+                    if (lVar11 == null) goto LAB_180a62951;
                     if (*(uint32 *)(lVar11 + 24) < 2) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
                       FUN_1800d65f0(uVar8,0);
                     }
                     iVar6 = Int32.Parse(*(uint64 *)(lVar11 + 40),0);
-                    if (iVar5 < iVar6) goto LAB_180a6208c;
+                    if (iVar5 < iVar6) goto LAB_180a6271c;
                   }
                   iVar2 = iVar2 + 1;
                 } while( true );
@@ -3893,7 +3893,7 @@ public class GlobalData
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar8,0);
               }
-              iVar2 = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+              iVar2 = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
               uVar3 = Mathf.RoundToInt(((float)iVar2 * 16.0) / 9.0,0);
               uVar14 = *(uint32 *)(lVar7 + 24) - 1;
               if (*(uint32 *)(lVar7 + 24) <= uVar14) {
@@ -3901,26 +3901,26 @@ public class GlobalData
                           // WARNING: Subroutine does not return
                 FUN_1800d65f0(uVar8,0);
               }
-              uVar4 = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+              uVar4 = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
             }
             GlobalData.SetResolution(uVar3,uVar4,0,0);
-        LAB_180a62150:
+        LAB_180a627e0:
             lVar7 = *(int64 *)(pStatics_3d40 + 176);
-            if (lVar7 == null) goto LAB_180a622c1;
+            if (lVar7 == null) goto LAB_180a62951;
             uVar14 = *(uint32 *)(lVar7 + 24);
             if (uVar14 <= uVar14 - 1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 24 + (int64)(int)uVar14 * 8);
-            lVar11 = FUN_1800d60b0(DAT_181da1040,1);
-            if (lVar11 == null) goto LAB_180a622c1;
+            lVar11 = FUN_1800d60b0(DAT_181da1058,1);
+            if (lVar11 == null) goto LAB_180a62951;
             if (*(int *)(lVar11 + 24) == 0) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar8,0);
             }
             *(uint16 *)(lVar11 + 32) = 120;
-            if ((lVar7 == null) || (lVar7 = String.Split(lVar7,lVar11,0)) == null) goto LAB_180a622c1;
+            if ((lVar7 == null) || (lVar7 = String.Split(lVar7,lVar11,0)) == null) goto LAB_180a62951;
             if (*(int *)(lVar7 + 24) == 0) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3934,7 +3934,7 @@ public class GlobalData
             }
             uVar4 = Int32.Parse(*(uint64 *)(lVar7 + 40),0);
             bVar15 = false;
-            goto LAB_180a62222;
+            goto LAB_180a628b2;
           }
         }
         uVar14 = *(uint32 *)(lVar7 + 24) - 1;
@@ -3950,10 +3950,10 @@ public class GlobalData
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar8,0);
         }
-        uVar4 = FUN_180d96220(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
+        uVar4 = FUN_180d96830(lVar7 + (int64)(int)uVar14 * 12 + 32,0);
         bVar15 = true;
-        goto LAB_180a62222;
-        LAB_180a6208c:
+        goto LAB_180a628b2;
+        LAB_180a6271c:
         if (*(int *)(lVar10 + 24) == 0) {
           uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3965,8 +3965,8 @@ public class GlobalData
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar8,0);
         }
-        goto LAB_180a61dbd;
-        LAB_180a61d9c:
+        goto LAB_180a6244d;
+        LAB_180a6242c:
         if (*(int *)(lVar10 + 24) == 0) {
           uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3978,15 +3978,15 @@ public class GlobalData
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar8,0);
         }
-        LAB_180a61dbd:
+        LAB_180a6244d:
         uVar4 = Int32.Parse(*(uint64 *)(lVar10 + 40),0);
         bVar15 = false;
-        LAB_180a62222:
+        LAB_180a628b2:
         GlobalData.SetResolution(uVar3,uVar4,bVar15,0);
     }
 
     // Token : 0x6001728
-    // RVA   : 0xA62800   Offset: 0xA61C00   Length: 0x343
+    // RVA   : 0xA62E90   Offset: 0xA62290   Length: 0x343
     public static string ConvertNumToChinese(int input)
     {
         int iVar1;
@@ -4017,7 +4017,7 @@ public class GlobalData
               uVar8 = Int32.ToString(local_res8,0);
               uVar9 = il2cpp_internal(&"input num too big, input: ");
               uVar8 = String.Concat(uVar9,uVar8,0);
-              uVar9 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+              uVar9 = il2cpp_runtime_class_init(&DAT_181dc54b8);
               uVar9 = il2cpp_internal(uVar9);
               Exception.ctor(uVar9,uVar8,0);
               uVar8 = il2cpp_runtime_class_init(&DAT_181d76f40);
@@ -4026,18 +4026,18 @@ public class GlobalData
             }
             lVar7 = GlobalData.WegameAppID;
             if (lVar7 == null) {
-              uVar8 = **(uint64 **)(DAT_181d77ec8 + 184);
-              lVar7 = new OnTooltipCB(uVar8,DAT_181da4a08,DAT_181db1958);
+              uVar8 = **(uint64 **)(DAT_181d77ee8 + 184);
+              lVar7 = new OnTooltipCB(uVar8,DAT_181da4ba0,DAT_181db1970);
               GlobalData.WegameAppID = lVar7;
-              lVar6 = new OnTooltipCB(lVar5,DAT_181da4e80,DAT_181db0950);
+              lVar6 = new OnTooltipCB(lVar5,DAT_181da5000,DAT_181db0968);
               if (lVar7 == null) throw; // [null/range check failed]
             }
             else {
-              lVar6 = new OnTooltipCB(lVar5,DAT_181da4e80,DAT_181db0950);
+              lVar6 = new OnTooltipCB(lVar5,DAT_181da5000,DAT_181db0968);
             }
-            uVar8 = GetTouchCallback.Invoke(lVar7,(uVar2 ^ uVar11) - uVar11,DAT_181db19e0);
+            uVar8 = GetTouchCallback.Invoke(lVar7,(uVar2 ^ uVar11) - uVar11,DAT_181db19f8);
             if (lVar6 != null) {
-              uVar8 = FUN_180d180e0(lVar6,uVar8,DAT_181db09d0);
+              uVar8 = FUN_180d186f0(lVar6,uVar8,DAT_181db09e8);
               if ((int)local_res8[0] < 0) {
                 String.Concat("-",uVar8,0);
               }
@@ -4048,7 +4048,7 @@ public class GlobalData
     }
 
     // Token : 0x6001729
-    // RVA   : 0xA65600   Offset: 0xA64A00   Length: 0x3C
+    // RVA   : 0xA65C90   Offset: 0xA65090   Length: 0x3C
     public static int GetGovernSalary(int lv)
     {
         float fVar1;
@@ -4060,7 +4060,7 @@ public class GlobalData
     }
 
     // Token : 0x600172A
-    // RVA   : 0xA68D60   Offset: 0xA68160   Length: 0x2C5
+    // RVA   : 0xA693F0   Offset: 0xA687F0   Length: 0x2C5
     public static AudioSource PlayHeroSound(AudioClip clip, float volume, float pitch)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4076,7 +4076,7 @@ public class GlobalData
         if (cVar1) {
           lVar2 = new GameObject(0);
           if (lVar2 == null) throw; // [null/range check failed]
-          uVar3 = GameObject.AddComponent(lVar2,DAT_181dc4cb8);
+          uVar3 = GameObject.AddComponent(lVar2,DAT_181dc4cd0);
           puVar4 = (uint64 *)(pStatics + 0x6b0);
           *puVar4 = uVar3;
           il2cpp_internal(puVar4,uVar3);
@@ -4102,7 +4102,7 @@ public class GlobalData
     }
 
     // Token : 0x600172B
-    // RVA   : 0xA64B10   Offset: 0xA63F10   Length: 0xCE
+    // RVA   : 0xA651A0   Offset: 0xA645A0   Length: 0xCE
     public static string GetChinese(string targetText)
     {
         ushort uVar1;
@@ -4129,7 +4129,7 @@ public class GlobalData
     }
 
     // Token : 0x600172C
-    // RVA   : 0xA66140   Offset: 0xA65540   Length: 0x46E
+    // RVA   : 0xA667D0   Offset: 0xA65BD0   Length: 0x46E
     public static string GetRequireTypeText(ChoiceRequirementType targetType)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4142,12 +4142,12 @@ public class GlobalData
         uVar2 = "好感";
         if (local_res8[0] != 0) {
           if (local_res8[0] - 1U < 6) {
-            uVar2 = DAT_181db44a0;
+            uVar2 = DAT_181db44b8;
             lVar7 = *(int64 *)(pStatics + 0x498);
             uVar2 = Type.GetTypeFromHandle(uVar2,0);
-            plVar3 = (int64 *)il2cpp_value_box(DAT_181db7490,local_res8);
+            plVar3 = (int64 *)il2cpp_value_box(DAT_181db74a8,local_res8);
             if (plVar3 == (int64 *)0) {
-        LAB_180a665a9:
+        LAB_180a66c39:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -4155,24 +4155,24 @@ public class GlobalData
             piVar5 = (int *)il2cpp_object_unbox(plVar3);
             local_res8[0] = *piVar5;
             plVar3 = (int64 *)Enum.Parse(uVar2,uVar4,0);
-            if ((lVar7 == null) || (plVar3 == (int64 *)0)) goto LAB_180a665a9;
-            if (*(int64 *)(*plVar3 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if ((lVar7 == null) || (plVar3 == (int64 *)0)) goto LAB_180a66c39;
+            if (*(int64 *)(*plVar3 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
               FUN_1800d6070(plVar3);
             }
           }
           else if (local_res8[0] - 7U < 9) {
-            uVar2 = DAT_181db8998;
+            uVar2 = DAT_181db89b0;
             lVar7 = *(int64 *)(pStatics + 0x4a0);
             uVar2 = Type.GetTypeFromHandle(uVar2,0);
-            plVar3 = (int64 *)il2cpp_value_box(DAT_181db7490,local_res8);
-            if (plVar3 == (int64 *)0) goto LAB_180a665a9;
+            plVar3 = (int64 *)il2cpp_value_box(DAT_181db74a8,local_res8);
+            if (plVar3 == (int64 *)0) goto LAB_180a66c39;
             uVar4 = (**(code **)(*plVar3 + 0x168))(plVar3,*(uint64 *)(*plVar3 + 0x170));
             piVar5 = (int *)il2cpp_object_unbox(plVar3);
             local_res8[0] = *piVar5;
             plVar3 = (int64 *)Enum.Parse(uVar2,uVar4,0);
-            if ((lVar7 == null) || (plVar3 == (int64 *)0)) goto LAB_180a665a9;
-            if (*(int64 *)(*plVar3 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if ((lVar7 == null) || (plVar3 == (int64 *)0)) goto LAB_180a66c39;
+            if (*(int64 *)(*plVar3 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
               FUN_1800d6070(plVar3);
             }
@@ -4184,17 +4184,17 @@ public class GlobalData
               }
               return "守卫熟络";
             }
-            uVar2 = DAT_181dbd198;
+            uVar2 = DAT_181dbd1b0;
             lVar7 = *(int64 *)(pStatics + 0x4b0);
             uVar2 = Type.GetTypeFromHandle(uVar2,0);
-            plVar3 = (int64 *)il2cpp_value_box(DAT_181db7490,local_res8);
-            if (plVar3 == (int64 *)0) goto LAB_180a665a9;
+            plVar3 = (int64 *)il2cpp_value_box(DAT_181db74a8,local_res8);
+            if (plVar3 == (int64 *)0) goto LAB_180a66c39;
             uVar4 = (**(code **)(*plVar3 + 0x168))(plVar3,*(uint64 *)(*plVar3 + 0x170));
             piVar5 = (int *)il2cpp_object_unbox(plVar3);
             local_res8[0] = *piVar5;
             plVar3 = (int64 *)Enum.Parse(uVar2,uVar4,0);
-            if ((lVar7 == null) || (plVar3 == (int64 *)0)) goto LAB_180a665a9;
-            if (*(int64 *)(*plVar3 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if ((lVar7 == null) || (plVar3 == (int64 *)0)) goto LAB_180a66c39;
+            if (*(int64 *)(*plVar3 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
               FUN_1800d6070(plVar3);
             }
@@ -4210,14 +4210,14 @@ public class GlobalData
     }
 
     // Token : 0x600172D
-    // RVA   : 0xA65640   Offset: 0xA64A40   Length: 0xD5
+    // RVA   : 0xA65CD0   Offset: 0xA650D0   Length: 0xD5
     public static string GetHobbyString(int hobby)
     {
         GlobalData.GetItemTypeString((int)((float)hobby / 10.0),hobby % 10,0);
     }
 
     // Token : 0x600172E
-    // RVA   : 0xA657C0   Offset: 0xA64BC0   Length: 0x5E
+    // RVA   : 0xA65E50   Offset: 0xA65250   Length: 0x5E
     public static string GetItemTypeString(int type, int littleType)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4234,7 +4234,7 @@ public class GlobalData
             lVar2 = *(int64 *)(pStatics + 0x4d8);
             break;
           default:
-            goto switchD_180a658d4_caseD_1;
+            goto switchD_180a65f64_caseD_1;
           case 2:
             lVar2 = *(int64 *)(pStatics + 0x4e8);
             break;
@@ -4248,15 +4248,15 @@ public class GlobalData
             lVar2 = *(int64 *)(pStatics + 0x540);
           }
           if (lVar2 != null) {
-            uVar1 = FUN_180002f80(lVar2,littleType,DAT_181da4358);
-        switchD_180a658d4_caseD_1:
+            uVar1 = FUN_180002f80(lVar2,littleType,DAT_181da4370);
+        switchD_180a65f64_caseD_1:
             return uVar1;
           }
         }
     }
 
     // Token : 0x600172F
-    // RVA   : 0xA65820   Offset: 0xA64C20   Length: 0x1E8
+    // RVA   : 0xA65EB0   Offset: 0xA652B0   Length: 0x1E8
     public static string GetItemTypeString(ItemType type, int littleType)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4273,7 +4273,7 @@ public class GlobalData
             lVar2 = *(int64 *)(pStatics + 0x4d8);
             break;
           default:
-            goto switchD_180a658d4_caseD_1;
+            goto switchD_180a65f64_caseD_1;
           case 2:
             lVar2 = *(int64 *)(pStatics + 0x4e8);
             break;
@@ -4287,15 +4287,15 @@ public class GlobalData
             lVar2 = *(int64 *)(pStatics + 0x540);
           }
           if (lVar2 != null) {
-            uVar1 = FUN_180002f80(lVar2,littleType,DAT_181da4358);
-        switchD_180a658d4_caseD_1:
+            uVar1 = FUN_180002f80(lVar2,littleType,DAT_181da4370);
+        switchD_180a65f64_caseD_1:
             return uVar1;
           }
         }
     }
 
     // Token : 0x6001730
-    // RVA   : 0xA680A0   Offset: 0xA674A0   Length: 0xBD
+    // RVA   : 0xA68730   Offset: 0xA67B30   Length: 0xBD
     public static void ListRandomRemove(List<int> targetList, int num)
     {
         int iVar1;
@@ -4313,14 +4313,14 @@ public class GlobalData
               return;
             }
             uVar2 = GlobalData.RandomRange(0,iVar1,0,0);
-            FUN_1817eed70(targetList,uVar2);
+            FUN_1817ef380(targetList,uVar2);
             iVar3 = iVar3 + 1;
           } while (iVar3 < num);
         }
     }
 
     // Token : 0x6001731
-    // RVA   : 0xA67A20   Offset: 0xA66E20   Length: 0xE8
+    // RVA   : 0xA680B0   Offset: 0xA674B0   Length: 0xE8
     public static float ListAverage(List<int> targetList)
     {
         uint uVar1;
@@ -4343,7 +4343,7 @@ public class GlobalData
     }
 
     // Token : 0x6001732
-    // RVA   : 0xA67930   Offset: 0xA66D30   Length: 0xE1
+    // RVA   : 0xA67FC0   Offset: 0xA673C0   Length: 0xE1
     public static float ListAverage(List<float> targetList)
     {
         uint uVar1;
@@ -4366,7 +4366,7 @@ public class GlobalData
     }
 
     // Token : 0x6001733
-    // RVA   : 0xA68160   Offset: 0xA67560   Length: 0x99
+    // RVA   : 0xA687F0   Offset: 0xA67BF0   Length: 0x99
     public static float ListTotal(List<int> targetList)
     {
         uint uVar1;
@@ -4388,7 +4388,7 @@ public class GlobalData
     }
 
     // Token : 0x6001734
-    // RVA   : 0xA68200   Offset: 0xA67600   Length: 0x92
+    // RVA   : 0xA68890   Offset: 0xA67C90   Length: 0x92
     public static float ListTotal(List<float> targetList)
     {
         uint uVar1;
@@ -4410,7 +4410,7 @@ public class GlobalData
     }
 
     // Token : 0x6001735
-    // RVA   : 0xA647E0   Offset: 0xA63BE0   Length: 0x1ED
+    // RVA   : 0xA64E70   Offset: 0xA64270   Length: 0x1ED
     public static string GetBaseAttriName(BaseAttriType targetAttri)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4455,7 +4455,7 @@ public class GlobalData
     }
 
     // Token : 0x6001736
-    // RVA   : 0xA6B240   Offset: 0xA6A640   Length: 0x125
+    // RVA   : 0xA6B8D0   Offset: 0xA6ACD0   Length: 0x125
     public static void SetParticleColor(GameObject particle, Color targetColor)
     {
         ulong uVar1;
@@ -4504,7 +4504,7 @@ public class GlobalData
     }
 
     // Token : 0x6001737
-    // RVA   : 0xA64380   Offset: 0xA63780   Length: 0x330
+    // RVA   : 0xA64A10   Offset: 0xA63E10   Length: 0x330
     public static Color GetAmountColor(float val, float alpha)
     {
         var plVar7 = *(int64*)(lVar7 + 184);
@@ -4634,19 +4634,19 @@ public class GlobalData
     }
 
     // Token : 0x6001738
-    // RVA   : 0xA670A0   Offset: 0xA664A0   Length: 0x7C
+    // RVA   : 0xA67730   Offset: 0xA66B30   Length: 0x7C
     public static Random GetThreadRandom()
     {
         long lVar1;
         lVar1 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x6c8);
         if (lVar1 != null) {
-          ThreadLocal_1.get_Value(lVar1,DAT_181d77cd8);
+          ThreadLocal_1.get_Value(lVar1,DAT_181d77cf0);
           return;
         }
     }
 
     // Token : 0x6001739
-    // RVA   : 0xA69150   Offset: 0xA68550   Length: 0xAC
+    // RVA   : 0xA697E0   Offset: 0xA68BE0   Length: 0xAC
     public static float RandomRange(float minValue, float maxValue, Random randomTarget)
     {
         int iVar1;
@@ -4662,13 +4662,13 @@ public class GlobalData
           iVar1 = minValue;
           minValue = maxValue;
         }
-                          // WARNING: Could not recover jumptable at 0x000180a69138. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180a697c8. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*randomTarget + 0x188))(randomTarget,iVar1,minValue,*(uint64 *)(*randomTarget + 400));
     }
 
     // Token : 0x600173A
-    // RVA   : 0xA690B0   Offset: 0xA684B0   Length: 0x9B
+    // RVA   : 0xA69740   Offset: 0xA68B40   Length: 0x9B
     public static int RandomRange(int minValue, int maxValue, Random randomTarget)
     {
         int iVar1;
@@ -4684,13 +4684,13 @@ public class GlobalData
           iVar1 = minValue;
           minValue = maxValue;
         }
-                          // WARNING: Could not recover jumptable at 0x000180a69138. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180a697c8. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*randomTarget + 0x188))(randomTarget,iVar1,minValue,*(uint64 *)(*randomTarget + 400));
     }
 
     // Token : 0x600173B
-    // RVA   : 0xA69030   Offset: 0xA68430   Length: 0x74
+    // RVA   : 0xA696C0   Offset: 0xA68AC0   Length: 0x74
     public static double RandomRangeDouble(Random randomTarget)
     {
         if (randomTarget == (int64 *)0) {
@@ -4700,13 +4700,13 @@ public class GlobalData
             FUN_1800d6620();
           }
         }
-                          // WARNING: Could not recover jumptable at 0x000180a69098. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180a69728. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*randomTarget + 0x1a8))(randomTarget,*(uint64 *)(*randomTarget + 0x1b0));
     }
 
     // Token : 0x600173C
-    // RVA   : 0xA6C350   Offset: 0xA6B750   Length: 0x172
+    // RVA   : 0xA6C9E0   Offset: 0xA6BDE0   Length: 0x172
     public static Vector3 TransformScreenDeltaToLocalDelta(Vector2 delta, GameObject targetObj)
     {
         uint64 *
@@ -4770,7 +4770,7 @@ public class GlobalData
     }
 
     // Token : 0x600173D
-    // RVA   : 0xA6C170   Offset: 0xA6B570   Length: 0x1D7
+    // RVA   : 0xA6C800   Offset: 0xA6BC00   Length: 0x1D7
     public static Vector3 TransformScreenDeltaToLocalDelta(Vector2 delta, GameObject targetObj, Vector3 deltaPos)
     {
         uint64 *
@@ -4834,7 +4834,7 @@ public class GlobalData
     }
 
     // Token : 0x600173E
-    // RVA   : 0xA62FC0   Offset: 0xA623C0   Length: 0x16C
+    // RVA   : 0xA63650   Offset: 0xA62A50   Length: 0x16C
     public static void DoTweenTextValue(Text targetText, float targetValue, float time)
     {
         uint uVar2;
@@ -4849,7 +4849,7 @@ public class GlobalData
           if (plVar1 != (int64 *)0) {
             uVar4 = (**(code **)(*plVar1 + 0x5d8))(plVar1,*(uint64 *)(*plVar1 + 0x5e0));
             Single.TryParse(uVar4,local_res8,0);
-            uVar4 = new OnTooltipCB(lVar3,DAT_181da4ef8,DAT_181db15f8);
+            uVar4 = new OnTooltipCB(lVar3,DAT_181da5078,DAT_181db1610);
             uVar2 = local_res8[0];
             DOTween.To(uVar4,uVar2,targetValue,time,0);
             return;
@@ -4858,7 +4858,7 @@ public class GlobalData
     }
 
     // Token : 0x600173F
-    // RVA   : 0xA62E70   Offset: 0xA62270   Length: 0x141
+    // RVA   : 0xA63500   Offset: 0xA62900   Length: 0x141
     public static void DoTweenSkeletonAlpha(SkeletonAnimation targetSkeleton, float startAlpha, float targetAlpha, float time)
     {
         void GlobalData.DoTweenSkeletonAlpha
@@ -4869,22 +4869,22 @@ public class GlobalData
         var lVar1 = new c.DisplayClass9_0(0);
         if (lVar1 != null) {
           *(uint64 *)(lVar1 + 16) = targetSkeleton;
-          var uVar2 = new OnTooltipCB(lVar1,DAT_181da4f70,DAT_181db15f8);
+          var uVar2 = new OnTooltipCB(lVar1,DAT_181da50f0,DAT_181db1610);
           uVar2 = DOTween.To(uVar2,startAlpha,targetAlpha,time,0);
-          TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1ec0);
+          TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc2070);
           return;
         }
     }
 
     // Token : 0x6001740
-    // RVA   : 0xA682A0   Offset: 0xA676A0   Length: 0xDA
+    // RVA   : 0xA68930   Offset: 0xA67D30   Length: 0xDA
     public static Vector2 LoadVector2(string vector2String)
     {
         long lVar1;
         ulong uVar2;
         uint uVar3;
         uint uVar4;
-        lVar1 = FUN_1800d60b0(DAT_181da1040,1);
+        lVar1 = FUN_1800d60b0(DAT_181da1058,1);
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 24) == 0) {
             uVar2 = il2cpp_internal();
@@ -4914,7 +4914,7 @@ public class GlobalData
     }
 
     // Token : 0x6001741
-    // RVA   : 0xA65530   Offset: 0xA64930   Length: 0xCB
+    // RVA   : 0xA65BC0   Offset: 0xA64FC0   Length: 0xCB
     public static string GetForceIconName(int id)
     {
         long lVar1;
@@ -4929,7 +4929,7 @@ public class GlobalData
     }
 
     // Token : 0x6001742
-    // RVA   : 0xA69200   Offset: 0xA68600   Length: 0xB1
+    // RVA   : 0xA69890   Offset: 0xA68C90   Length: 0xB1
     public static List<string> RemoveEmptyString(List<string> targetList)
     {
         bool cVar1;
@@ -4946,9 +4946,9 @@ public class GlobalData
             if (*(uint32 *)(targetList + 24) <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            cVar1 = FUN_180d755b0(*(uint64 *)(lVar3 + *(int64 *)(targetList + 16)),0);
+            cVar1 = FUN_180d75bc0(*(uint64 *)(lVar3 + *(int64 *)(targetList + 16)),0);
             if (cVar1) {
-              FUN_181823590(targetList,uVar2,DAT_181da4158);
+              FUN_181823ba0(targetList,uVar2,DAT_181da4170);
             }
             lVar3 = lVar3 + -8;
             uVar2 = uVar2 - 1;
@@ -4958,7 +4958,7 @@ public class GlobalData
     }
 
     // Token : 0x6001743
-    // RVA   : 0xA673A0   Offset: 0xA667A0   Length: 0x25E
+    // RVA   : 0xA67A30   Offset: 0xA66E30   Length: 0x25E
     public static bool IsInputing()
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4981,19 +4981,19 @@ public class GlobalData
         cVar1 = Object.op_Implicit(uVar5,0);
         if (cVar1) {
           lVar6 = EventSystem.get_current(0);
-          if (lVar6 == null) goto LAB_180a675f9;
+          if (lVar6 == null) goto LAB_180a67c89;
           lVar6 = *(int64 *)(lVar6 + 56);
         }
         cVar1 = Object.op_Inequality(lVar6,0,0);
         if (cVar1) {
           if (lVar6 == null) {
-        LAB_180a675f9:
+        LAB_180a67c89:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           cVar1 = GameObject.TryGetComponent(lVar6,local_res10,DAT_181d75a88);
           if (cVar1) {
-            if (local_res10[0] == (int64 *)0) goto LAB_180a675f9;
+            if (local_res10[0] == (int64 *)0) goto LAB_180a67c89;
             cVar2 = (**(code **)(*local_res10[0] + 0x1c8))
                               (local_res10[0],*(uint64 *)(*local_res10[0] + 0x1d0));
           }
@@ -5003,7 +5003,7 @@ public class GlobalData
     }
 
     // Token : 0x6001744
-    // RVA   : 0xA65A30   Offset: 0xA64E30   Length: 0x63
+    // RVA   : 0xA660C0   Offset: 0xA654C0   Length: 0x63
     public static bool GetKeyDown(KeyCode key)
     {
         bool cVar1;
@@ -5017,7 +5017,7 @@ public class GlobalData
     }
 
     // Token : 0x6001745
-    // RVA   : 0xA65B10   Offset: 0xA64F10   Length: 0x63
+    // RVA   : 0xA661A0   Offset: 0xA655A0   Length: 0x63
     public static bool GetKey(KeyCode key)
     {
         bool cVar1;
@@ -5031,7 +5031,7 @@ public class GlobalData
     }
 
     // Token : 0x6001746
-    // RVA   : 0xA65AA0   Offset: 0xA64EA0   Length: 0x63
+    // RVA   : 0xA66130   Offset: 0xA65530   Length: 0x63
     public static bool GetKeyUp(KeyCode key)
     {
         bool cVar1;
@@ -5045,7 +5045,7 @@ public class GlobalData
     }
 
     // Token : 0x6001747
-    // RVA   : 0xA68BF0   Offset: 0xA67FF0   Length: 0x162
+    // RVA   : 0xA69280   Offset: 0xA68680   Length: 0x162
     public static Vector3 Parabola(Vector3 start, Vector3 end, float height, float t)
     {
         float fVar1;
@@ -5065,7 +5065,7 @@ public class GlobalData
     }
 
     // Token : 0x6001748
-    // RVA   : 0xA68B00   Offset: 0xA67F00   Length: 0xE5
+    // RVA   : 0xA69190   Offset: 0xA68590   Length: 0xE5
     public static Vector2 Parabola(Vector2 start, Vector2 end, float height, float t)
     {
         float fVar1;
@@ -5085,7 +5085,7 @@ public class GlobalData
     }
 
     // Token : 0x6001749
-    // RVA   : 0xA67300   Offset: 0xA66700   Length: 0x9B
+    // RVA   : 0xA67990   Offset: 0xA66D90   Length: 0x9B
     public static bool IsCheckVersion(bool includeSimpleCheckVersion)
     {
         uVar1 = (uint7)((uint64)*(int **)(DAT_181d73d40 + 184) >> 8);
@@ -5100,7 +5100,7 @@ public class GlobalData
     }
 
     // Token : 0x600174A
-    // RVA   : 0xA62760   Offset: 0xA61B60   Length: 0x9F
+    // RVA   : 0xA62DF0   Offset: 0xA621F0   Length: 0x9F
     public static void CheckAllHeroDetailDirty(List<HeroData> heroList, bool _forceCount)
     {
         long lVar1;
@@ -5133,30 +5133,30 @@ public class GlobalData
     }
 
     // Token : 0x600174C
-    // RVA   : 0xA6C500   Offset: 0xA6B900   Length: 0xB1A7
+    // RVA   : 0xA6CB90   Offset: 0xA6BF90   Length: 0xB1A7
     private static void /*cctor*/()
     {
         // Decompilation failed
         // Type: GlobalData
         // Member: .cctor
-        // RVA: 0xA6C500
-        // Error: Exception while decompiling 180a6c500: process: timeout
+        // RVA: 0xA6CB90
+        // Error: Exception while decompiling 180a6cb90: process: timeout
     }
 
     // Token : 0x600174D
-    // RVA   : 0xA6C4D0   Offset: 0xA6B8D0   Length: 0x2A
+    // RVA   : 0xA6CB60   Offset: 0xA6BF60   Length: 0x2A
     internal static float <Parabola>g__Func|338_0(float x, ref <>c__DisplayClass338_0 )
     {
-        uint64 FUN_180a6c4d0(float x,float *param_2)
+        uint64 FUN_180a6cb60(float x,float *param_2)
         {
         return CONCAT44(0x80000000,(-*param_2 * x * x + *param_2 * x) * 4.0);
     }
 
     // Token : 0x600174E
-    // RVA   : 0xA6C4D0   Offset: 0xA6B8D0   Length: 0x2A
+    // RVA   : 0xA6CB60   Offset: 0xA6BF60   Length: 0x2A
     internal static float <Parabola>g__Func|339_0(float x, ref <>c__DisplayClass339_0 )
     {
-        uint64 FUN_180a6c4d0(float x,float *param_2)
+        uint64 FUN_180a6cb60(float x,float *param_2)
         {
         return CONCAT44(0x80000000,(-*param_2 * x * x + *param_2 * x) * 4.0);
     }

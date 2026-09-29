@@ -6,45 +6,45 @@
 public class StartGameSettingController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C0E
+    // Token: 0x4001C0F
     public HeroData Player;
 
-    // Token: 0x4001C0F
+    // Token: 0x4001C10
     public List<int> BirthSetting;
 
-    // Token: 0x4001C10
+    // Token: 0x4001C11
     public int gameDifficulty;
 
-    // Token: 0x4001C11
+    // Token: 0x4001C12
     public int gameMode;
 
-    // Token: 0x4001C12
+    // Token: 0x4001C13
     public int endingTag;
 
-    // Token: 0x4001C13
+    // Token: 0x4001C14
     public AudioSource startBgm;
 
-    // Token: 0x4001C14
+    // Token: 0x4001C15
     public CustomDifficultyData customDifficultyData;
 
-    // Token: 0x4001C15
+    // Token: 0x4001C16
     private static StartGameSettingController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60021BC
-    // RVA   : 0xC60A00   Offset: 0xC5FE00   Length: 0x36
+    // RVA   : 0xC61010   Offset: 0xC60410   Length: 0x36
     public static StartGameSettingController get_Instance()
     {
-        return **(uint64 **)(DAT_181da6790 + 184);
+        return **(uint64 **)(DAT_181da67a8 + 184);
     }
 
     // Token : 0x60021BD
-    // RVA   : 0xC5F2F0   Offset: 0xC5E6F0   Length: 0x155
+    // RVA   : 0xC5F900   Offset: 0xC5ED00   Length: 0x155
     private void Awake()
     {
         ulong uVar2;
         long lVar3;
-        plVar1 = *(int64 **)(DAT_181da6790 + 184);
+        plVar1 = *(int64 **)(DAT_181da67a8 + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         uVar2 = Component.get_gameObject(this,0);
@@ -63,7 +63,7 @@ public class StartGameSettingController
     }
 
     // Token : 0x60021BE
-    // RVA   : 0xC60850   Offset: 0xC5FC50   Length: 0xA2
+    // RVA   : 0xC60E60   Offset: 0xC60260   Length: 0xA2
     private void Update()
     {
         long lVar1;
@@ -81,7 +81,7 @@ public class StartGameSettingController
     }
 
     // Token : 0x60021BF
-    // RVA   : 0xC60770   Offset: 0xC5FB70   Length: 0xDF
+    // RVA   : 0xC60D80   Offset: 0xC60180   Length: 0xDF
     public void StartSettingPlayerData()
     {
         long lVar1;
@@ -99,7 +99,7 @@ public class StartGameSettingController
     }
 
     // Token : 0x60021C0
-    // RVA   : 0xC5F450   Offset: 0xC5E850   Length: 0x12B0
+    // RVA   : 0xC5FA60   Offset: 0xC5EE60   Length: 0x12B0
     public void BirthSettingPlayerData()
     {
         int iVar1;
@@ -115,7 +115,7 @@ public class StartGameSettingController
         ulong in_stack_ffffffffffffffa8;
         ulong in_stack_ffffffffffffffb0;
         lVar4 = this.BirthSetting;
-        if (lVar4 == null) goto LAB_180c606f9;
+        if (lVar4 == null) goto LAB_180c60d09;
         if (lVar4.summonLv == null) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -125,14 +125,14 @@ public class StartGameSettingController
         case 0:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,3,*(float *)(lVar4.isSummon + 44) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,3,*(float *)(lVar4.isSummon + 44) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 6) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -142,14 +142,14 @@ public class StartGameSettingController
         case 1:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,8,*(float *)(lVar4.isSummon + 64) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,8,*(float *)(lVar4.isSummon + 64) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -159,14 +159,14 @@ public class StartGameSettingController
         case 2:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,2,*(float *)(lVar4.isSummon + 40) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,2,*(float *)(lVar4.isSummon + 40) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -176,14 +176,14 @@ public class StartGameSettingController
         case 3:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,6,*(float *)(lVar4.isSummon + 56) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,6,*(float *)(lVar4.isSummon + 56) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 5) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -193,14 +193,14 @@ public class StartGameSettingController
         case 4:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,0,*(float *)(lVar4.isSummon + 32) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,0,*(float *)(lVar4.isSummon + 32) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -210,14 +210,14 @@ public class StartGameSettingController
         case 5:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 5) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,4,*(float *)(lVar4.isSummon + 48) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,4,*(float *)(lVar4.isSummon + 48) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -227,14 +227,14 @@ public class StartGameSettingController
         case 6:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 6) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,5,*(float *)(lVar4.isSummon + 52) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,5,*(float *)(lVar4.isSummon + 52) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -244,14 +244,14 @@ public class StartGameSettingController
         case 7:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,1,*(float *)(lVar4.isSummon + 36) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,1,*(float *)(lVar4.isSummon + 36) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -261,14 +261,14 @@ public class StartGameSettingController
         case 8:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseFightSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 8) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,7,*(float *)(lVar4.isSummon + 60) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,7,*(float *)(lVar4.isSummon + 60) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 8) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -284,52 +284,52 @@ public class StartGameSettingController
               if (*(int *)(lVar4.baseFightSkill + 24) <= (int)uVar8) {
                 lVar6 = lVar9;
                 uVar8 = uVar7;
-                if (lVar4 != null) goto LAB_180c5f5e0;
+                if (lVar4 != null) goto LAB_180c5fbf0;
                 break;
               }
               if ((lVar4 = lVar4?.baseFightSkill) == null) break;
               if (lVar4.summonLv <= uVar8) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              FUN_181829d40(lVar4,uVar8,*(float *)(lVar4.isSummon + lVar6) + 1.0,
-                            DAT_181da10f8);
+              FUN_18182a350(lVar4,uVar8,*(float *)(lVar4.isSummon + lVar6) + 1.0,
+                            DAT_181da1110);
               lVar4 = this.Player;
               uVar8 = uVar8 + 1;
               lVar6 = lVar6 + 4;
               if (lVar4 == null) break;
             }
           }
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
         default:
-          goto switchD_180c5f52d_default;
+          goto switchD_180c5fb3d_default;
         }
-        FUN_181829d40(lVar4,uVar5,fVar10 + 5.0,DAT_181da10f8);
-        switchD_180c5f52d_default:
+        FUN_18182a350(lVar4,uVar5,fVar10 + 5.0,DAT_181da1110);
+        switchD_180c5fb3d_default:
         lVar4 = this.BirthSetting;
         lVar6 = this.Player;
-        if (lVar4 == null) goto LAB_180c606f9;
+        if (lVar4 == null) goto LAB_180c60d09;
         if (lVar4.summonLv == null) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        if (lVar6 == null) goto LAB_180c606f9;
+        if (lVar6 == null) goto LAB_180c60d09;
         lVar6.defaultSkinID = -2 - *(int *)(lVar4.isSummon + 32);
-        if (this.Player == null) goto LAB_180c606f9;
+        if (this.Player == null) goto LAB_180c60d09;
         lVar4 = this.BirthSetting;
         lVar6 = this.Player.baseAttri;
-        if (lVar4 == null) goto LAB_180c606f9;
+        if (lVar4 == null) goto LAB_180c60d09;
         if (lVar4.summonLv < 2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         uVar8 = *(uint32 *)(lVar4.isSummon + 36);
-        if (lVar6 == null) goto LAB_180c606f9;
+        if (lVar6 == null) goto LAB_180c60d09;
         if (lVar6.summonLv <= uVar8) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        FUN_181829d40(lVar6,uVar8,
+        FUN_18182a350(lVar6,uVar8,
                       lVar6.isSummon[uVar8] + 5.0,
-                      DAT_181da10f8);
+                      DAT_181da1110);
         lVar4 = this.BirthSetting;
-        if (lVar4 == null) goto LAB_180c606f9;
+        if (lVar4 == null) goto LAB_180c60d09;
         if (lVar4.summonLv < 3) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -337,14 +337,14 @@ public class StartGameSettingController
         case 0:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,0,*(float *)(lVar4.isSummon + 32) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,0,*(float *)(lVar4.isSummon + 32) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 5) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -354,14 +354,14 @@ public class StartGameSettingController
         case 1:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,0,*(float *)(lVar4.isSummon + 32) + 5.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,0,*(float *)(lVar4.isSummon + 32) + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -371,37 +371,37 @@ public class StartGameSettingController
         case 2:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar5 = 2;
           fVar10 = *(float *)(lVar4.isSummon + 40);
-          goto LAB_180c5fe44;
+          goto LAB_180c60454;
         case 3:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar5 = 2;
           fVar10 = *(float *)(lVar4.isSummon + 40);
-          goto LAB_180c5fd7f;
+          goto LAB_180c6038f;
         case 4:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 5) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar5 = 4;
           fVar10 = *(float *)(lVar4.isSummon + 48);
-        LAB_180c5fd7f:
-          FUN_181829d40(lVar4,uVar5,fVar10 + 5.0,DAT_181da10f8);
+        LAB_180c6038f:
+          FUN_18182a350(lVar4,uVar5,fVar10 + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -411,17 +411,17 @@ public class StartGameSettingController
         case 5:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar5 = 1;
           fVar10 = *(float *)(lVar4.isSummon + 36);
-        LAB_180c5fe44:
-          FUN_181829d40(lVar4,uVar5,fVar10 + 5.0,DAT_181da10f8);
+        LAB_180c60454:
+          FUN_18182a350(lVar4,uVar5,fVar10 + 5.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseAttri) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 6) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -429,28 +429,28 @@ public class StartGameSettingController
           fVar10 = *(float *)(lVar4.isSummon + 52);
           break;
         default:
-          goto switchD_180c5fbfe_default;
+          goto switchD_180c6020e_default;
         }
-        FUN_181829d40(lVar4,uVar5,fVar10 + 5.0,DAT_181da10f8);
-        switchD_180c5fbfe_default:
-        if (this.Player == null) goto LAB_180c606f9;
+        FUN_18182a350(lVar4,uVar5,fVar10 + 5.0,DAT_181da1110);
+        switchD_180c6020e_default:
+        if (this.Player == null) goto LAB_180c60d09;
         lVar4 = this.BirthSetting;
         lVar6 = this.Player.baseFightSkill;
-        if (lVar4 == null) goto LAB_180c606f9;
+        if (lVar4 == null) goto LAB_180c60d09;
         if (lVar4.summonLv < 4) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         iVar1 = *(int *)(lVar4.isSummon + 44);
         uVar8 = iVar1 + 3;
-        if (lVar6 == null) goto LAB_180c606f9;
+        if (lVar6 == null) goto LAB_180c60d09;
         if (lVar6.summonLv <= uVar8) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        FUN_181829d40(lVar6,uVar8,
+        FUN_18182a350(lVar6,uVar8,
                       *(float *)(lVar6.isSummon + 44 + (int64)iVar1 * 4) + 5.0,
-                      DAT_181da10f8);
+                      DAT_181da1110);
         lVar4 = this.BirthSetting;
-        if (lVar4 == null) goto LAB_180c606f9;
+        if (lVar4 == null) goto LAB_180c60d09;
         if (lVar4.summonLv < 5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -458,14 +458,14 @@ public class StartGameSettingController
         case 0:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,0,*(float *)(lVar4.isSummon + 32) + 10.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,0,*(float *)(lVar4.isSummon + 32) + 10.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 8) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -475,14 +475,14 @@ public class StartGameSettingController
         case 1:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 3) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,2,*(float *)(lVar4.isSummon + 40) + 10.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,2,*(float *)(lVar4.isSummon + 40) + 10.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -492,14 +492,14 @@ public class StartGameSettingController
         case 2:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 5) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,4,*(float *)(lVar4.isSummon + 48) + 10.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,4,*(float *)(lVar4.isSummon + 48) + 10.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 6) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -509,14 +509,14 @@ public class StartGameSettingController
         case 3:
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 7) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          FUN_181829d40(lVar4,6,*(float *)(lVar4.isSummon + 56) + 10.0,DAT_181da10f8);
+          FUN_18182a350(lVar4,6,*(float *)(lVar4.isSummon + 56) + 10.0,DAT_181da1110);
           if ((this.Player == null) ||
              (lVar4 = this.Player.baseLivingSkill) == null)
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
           if (lVar4.summonLv < 9) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -528,46 +528,46 @@ public class StartGameSettingController
           if (lVar4 != null) {
             while (lVar4.baseLivingSkill != null) {
               if (*(int *)(lVar4.baseLivingSkill + 24) <= (int)uVar7)
-              goto switchD_180c5ff45_default;
+              goto switchD_180c60555_default;
               if ((lVar4 = lVar4?.baseLivingSkill) == null) break;
               if (lVar4.summonLv <= uVar7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              FUN_181829d40(lVar4,uVar7,*(float *)(lVar4.isSummon + lVar9) + 3.0,
-                            DAT_181da10f8);
+              FUN_18182a350(lVar4,uVar7,*(float *)(lVar4.isSummon + lVar9) + 3.0,
+                            DAT_181da1110);
               lVar4 = this.Player;
               uVar7 = uVar7 + 1;
               lVar9 = lVar9 + 4;
               if (lVar4 == null) break;
             }
           }
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
         case 5:
           lVar4 = this.Player;
           if (lVar4 != null) {
             while (lVar4.baseLivingSkill != null) {
               if (*(int *)(lVar4.baseLivingSkill + 24) <= (int)uVar7)
-              goto switchD_180c5ff45_default;
+              goto switchD_180c60555_default;
               if ((lVar4 = lVar4?.maxLivingSkill) == null) break;
               if (lVar4.summonLv <= uVar7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              FUN_181829d40(lVar4,uVar7,*(float *)(lVar4.isSummon + lVar9) + 1.0,
-                            DAT_181da10f8);
+              FUN_18182a350(lVar4,uVar7,*(float *)(lVar4.isSummon + lVar9) + 1.0,
+                            DAT_181da1110);
               lVar4 = this.Player;
               uVar7 = uVar7 + 1;
               lVar9 = lVar9 + 4;
               if (lVar4 == null) break;
             }
           }
-          goto LAB_180c606f9;
+          goto LAB_180c60d09;
         default:
-          goto switchD_180c5ff45_default;
+          goto switchD_180c60555_default;
         }
-        FUN_181829d40(lVar4,uVar5,fVar10,DAT_181da10f8);
-        switchD_180c5ff45_default:
+        FUN_18182a350(lVar4,uVar5,fVar10,DAT_181da1110);
+        switchD_180c60555_default:
         lVar4 = this.BirthSetting;
-        if (lVar4 == null) goto LAB_180c606f9;
+        if (lVar4 == null) goto LAB_180c60d09;
         if (lVar4.summonLv < 6) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -576,64 +576,64 @@ public class StartGameSettingController
           lVar4 = this.Player;
           lVar9 = this.BirthSetting;
           lVar6 = GameController._instance;
-          if (lVar9 == null) goto LAB_180c606f9;
+          if (lVar9 == null) goto LAB_180c60d09;
           if (lVar9.Count < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar3 = *(uint32 *)(lVar9._items + 44);
-          uVar2 = FUN_180d95a30(0,6);
-          if (lVar6 == null) goto LAB_180c606f9;
+          uVar2 = FUN_180d96040(0,6);
+          if (lVar6 == null) goto LAB_180c60d09;
           in_stack_ffffffffffffffb0 = 0;
           in_stack_ffffffffffffffa8 = in_stack_ffffffffffffffa8 & 0xffffffff00000000;
           uVar5 = GameController.GenerateWeapon(lVar6,1,uVar3,uVar2,in_stack_ffffffffffffffa8,0,0);
-          goto LAB_180c603ee;
+          goto LAB_180c609fe;
         case 1:
           lVar4 = this.Player;
           lVar9 = GameController._instance;
-          uVar3 = FUN_180d95a30(0,6);
-          if (lVar9 == null) goto LAB_180c606f9;
+          uVar3 = FUN_180d96040(0,6);
+          if (lVar9 == null) goto LAB_180c60d09;
           in_stack_ffffffffffffffb0 = 0;
           in_stack_ffffffffffffffa8 = 0;
           uVar5 = GameController.GenerateArmor(lVar9,1,uVar3,0,0,0);
-          if (lVar4 == null) goto LAB_180c606f9;
+          if (lVar4 == null) goto LAB_180c60d09;
           HeroData.GetItem(lVar4,uVar5,0,0);
           break;
         case 2:
           lVar4 = this.Player;
           lVar9 = this.BirthSetting;
           lVar6 = GameController._instance;
-          if (lVar9 == null) goto LAB_180c606f9;
+          if (lVar9 == null) goto LAB_180c60d09;
           if (lVar9.Count < 4) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (lVar6 == null) goto LAB_180c606f9;
+          if (lVar6 == null) goto LAB_180c60d09;
           in_stack_ffffffffffffffb0 = 0;
           in_stack_ffffffffffffffa8 = 0;
           uVar5 = GameController.GenerateBookSkillType
                             (lVar6,0,0,*(int *)(lVar9._items + 44) + 3,0,0);
-        LAB_180c603ee:
-          if (lVar4 == null) goto LAB_180c606f9;
+        LAB_180c609fe:
+          if (lVar4 == null) goto LAB_180c60d09;
           HeroData.GetItem(lVar4,uVar5,0,0);
           break;
         case 3:
           lVar4 = this.Player;
-          if (GameController._instance == null) goto LAB_180c606f9;
+          if (GameController._instance == null) goto LAB_180c60d09;
           in_stack_ffffffffffffffa8 = 0;
           uVar5 = GameController.GenerateHorseData(GameController._instance,1,1,0,0);
-          if (lVar4 == null) goto LAB_180c606f9;
+          if (lVar4 == null) goto LAB_180c60d09;
           HeroData.GetItem(lVar4,uVar5,0,0);
           break;
         case 4:
-          if (this.Player == null) goto LAB_180c606f9;
+          if (this.Player == null) goto LAB_180c60d09;
           HeroData.ChangeMoney(this.Player,500,1,0);
           break;
         case 5:
-          if (this.Player == null) goto LAB_180c606f9;
+          if (this.Player == null) goto LAB_180c60d09;
           HeroData.ChangeFame(this.Player,0x42480000,1,0);
         }
         if (0 < this.endingTag) {
           if (this.Player == null) {
-        LAB_180c606f9:
+        LAB_180c60d09:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -642,35 +642,35 @@ public class StartGameSettingController
                            in_stack_ffffffffffffffb0 & 0xffffffffffffff00,0);
         }
         return;
-        LAB_180c5f5e0:
-        if (lVar4.baseLivingSkill == null) goto LAB_180c606f9;
-        if (*(int *)(lVar4.baseLivingSkill + 24) <= (int)uVar8) goto switchD_180c5f52d_default;
-        if ((lVar4 = lVar4?.baseLivingSkill) == null) goto LAB_180c606f9;
+        LAB_180c5fbf0:
+        if (lVar4.baseLivingSkill == null) goto LAB_180c60d09;
+        if (*(int *)(lVar4.baseLivingSkill + 24) <= (int)uVar8) goto switchD_180c5fb3d_default;
+        if ((lVar4 = lVar4?.baseLivingSkill) == null) goto LAB_180c60d09;
         if (lVar4.summonLv <= uVar8) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        FUN_181829d40(lVar4,uVar8,*(float *)(lVar4.isSummon + lVar6) + 1.0,DAT_181da10f8);
+        FUN_18182a350(lVar4,uVar8,*(float *)(lVar4.isSummon + lVar6) + 1.0,DAT_181da1110);
         lVar4 = this.Player;
         lVar6 = lVar6 + 4;
         uVar8 = uVar8 + 1;
-        if (lVar4 == null) goto LAB_180c606f9;
-        goto LAB_180c5f5e0;
+        if (lVar4 == null) goto LAB_180c60d09;
+        goto LAB_180c5fbf0;
     }
 
     // Token : 0x60021C1
-    // RVA   : 0xC60900   Offset: 0xC5FD00   Length: 0xF9
+    // RVA   : 0xC60F10   Offset: 0xC60310   Length: 0xF9
     public void /*ctor*/()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar1,DAT_181d8f098);
+        lVar1 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar1,DAT_181d8f0b0);
         if (lVar1 != null) {
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0,DAT_181d8f218);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0,DAT_181d8f230);
           this.BirthSetting = lVar1;
           FUN_18044ef50(this,0);
           return;

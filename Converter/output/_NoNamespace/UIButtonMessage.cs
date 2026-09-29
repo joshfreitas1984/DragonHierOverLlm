@@ -23,16 +23,16 @@ public class UIButtonMessage
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60000DB
-    // RVA   : 0x1530BE0   Offset: 0x152FFE0   Length: 0x5
+    // RVA   : 0x15311F0   Offset: 0x15305F0   Length: 0x5
     private void Start()
     {
-        void FUN_181530be0(int64 this)
+        void FUN_1815311f0(int64 this)
         {
         this.mStarted = 1;
     }
 
     // Token : 0x60000DC
-    // RVA   : 0x1530830   Offset: 0x152FC30   Length: 0xA7
+    // RVA   : 0x1530E40   Offset: 0x1530240   Length: 0xA7
     private void OnEnable()
     {
         ulong uVar1;
@@ -57,7 +57,7 @@ public class UIButtonMessage
     }
 
     // Token : 0x60000DD
-    // RVA   : 0x15308E0   Offset: 0x152FCE0   Length: 0x4C
+    // RVA   : 0x1530EF0   Offset: 0x15302F0   Length: 0x4C
     private void OnHover(bool isOver)
     {
         bool cVar1;
@@ -76,7 +76,7 @@ public class UIButtonMessage
     }
 
     // Token : 0x60000DE
-    // RVA   : 0x1530930   Offset: 0x152FD30   Length: 0x4C
+    // RVA   : 0x1530F40   Offset: 0x1530340   Length: 0x4C
     private void OnPress(bool isPressed)
     {
         bool cVar1;
@@ -95,7 +95,7 @@ public class UIButtonMessage
     }
 
     // Token : 0x60000DF
-    // RVA   : 0x1530980   Offset: 0x152FD80   Length: 0xA8
+    // RVA   : 0x1530F90   Offset: 0x1530390   Length: 0xA8
     private void OnSelect(bool isSelected)
     {
         bool cVar1;
@@ -124,7 +124,7 @@ public class UIButtonMessage
     }
 
     // Token : 0x60000E0
-    // RVA   : 0x15307D0   Offset: 0x152FBD0   Length: 0x2F
+    // RVA   : 0x1530DE0   Offset: 0x15301E0   Length: 0x2F
     private void OnClick()
     {
         bool cVar1;
@@ -136,7 +136,7 @@ public class UIButtonMessage
     }
 
     // Token : 0x60000E1
-    // RVA   : 0x1530800   Offset: 0x152FC00   Length: 0x2F
+    // RVA   : 0x1530E10   Offset: 0x1530210   Length: 0x2F
     private void OnDoubleClick()
     {
         bool cVar1;
@@ -148,7 +148,7 @@ public class UIButtonMessage
     }
 
     // Token : 0x60000E2
-    // RVA   : 0x1530A30   Offset: 0x152FE30   Length: 0x1A9
+    // RVA   : 0x1531040   Offset: 0x1530440   Length: 0x1A9
     private void Send()
     {
         int iVar1;
@@ -158,7 +158,7 @@ public class UIButtonMessage
         long lVar5;
         long lVar6;
         uint uVar7;
-        cVar2 = FUN_180d755b0(this.functionName,0);
+        cVar2 = FUN_180d75bc0(this.functionName,0);
         if (cVar2) {
           return;
         }
@@ -178,7 +178,7 @@ public class UIButtonMessage
           }
         }
         else if (lVar5 != null) {
-          lVar5 = FUN_1809674e0(lVar5,DAT_181d753a0);
+          lVar5 = FUN_180967b70(lVar5,DAT_181d753a0);
           uVar7 = 0;
           if (lVar5 != null) {
             iVar1 = *(int *)(lVar5 + 24);

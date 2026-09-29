@@ -20,19 +20,19 @@ public class UISliderColors
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000096
-    // RVA   : 0x1705860   Offset: 0x1704C60   Length: 0x7C
+    // RVA   : 0x1705E70   Offset: 0x1705270   Length: 0x7C
     private void Start()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96c60);
+        uVar1 = Component.GetComponent(this,DAT_181d96c78);
         this.mBar = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d966e0);
+        uVar1 = Component.GetComponent(this,DAT_181d966f8);
         this.mSprite = uVar1;
         UISliderColors.Update(this,0);
     }
 
     // Token : 0x6000097
-    // RVA   : 0x17058E0   Offset: 0x1704CE0   Length: 0x292
+    // RVA   : 0x1705EF0   Offset: 0x17052F0   Length: 0x292
     private void Update()
     {
         int iVar1;
@@ -146,7 +146,7 @@ public class UISliderColors
     }
 
     // Token : 0x6000098
-    // RVA   : 0x1705B80   Offset: 0x1704F80   Length: 0xE5
+    // RVA   : 0x1706190   Offset: 0x1705590   Length: 0xE5
     public void /*ctor*/()
     {
         uint uVar1;
@@ -155,7 +155,7 @@ public class UISliderColors
         long lVar4;
         ulong uVar6;
         byte[] local_18 = new byte[16];
-        lVar4 = FUN_1800d60b0(DAT_181da1140,3);
+        lVar4 = FUN_1800d60b0(DAT_181da1158,3);
         puVar5 = (uint32 *)Color.get_red(local_18,0);
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return

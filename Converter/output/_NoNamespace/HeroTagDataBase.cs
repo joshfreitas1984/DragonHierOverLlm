@@ -47,21 +47,21 @@ public class HeroTagDataBase
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60012B6
-    // RVA   : 0xAFDDD0   Offset: 0xAFD1D0   Length: 0xA3
+    // RVA   : 0xAFE490   Offset: 0xAFD890   Length: 0xA3
     public void /*ctor*/()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(uVar1,DAT_181da3bd8);
+        uVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(uVar1,DAT_181da3bf0);
         this.requirement = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(uVar1,DAT_181da3bd8);
+        uVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(uVar1,DAT_181da3bf0);
         this.replaceTag = uVar1;
     }
 
     // Token : 0x60012B7
-    // RVA   : 0xAFDCA0   Offset: 0xAFD0A0   Length: 0x125
+    // RVA   : 0xAFE360   Offset: 0xAFD760   Length: 0x125
     public string Name()
     {
         ulong uVar1;
@@ -78,7 +78,7 @@ public class HeroTagDataBase
     }
 
     // Token : 0x60012B8
-    // RVA   : 0xAFDBA0   Offset: 0xAFCFA0   Length: 0xF4
+    // RVA   : 0xAFE260   Offset: 0xAFD660   Length: 0xF4
     public string GetDescribe(bool showEffectTarget)
     {
         int iVar1;
@@ -100,7 +100,7 @@ public class HeroTagDataBase
     }
 
     // Token : 0x60012B9
-    // RVA   : 0xAFDB70   Offset: 0xAFCF70   Length: 0x2D
+    // RVA   : 0xAFE230   Offset: 0xAFD630   Length: 0x2D
     public float GetCostValue(bool startCost)
     {
         if (this.value < 0) {
@@ -109,7 +109,7 @@ public class HeroTagDataBase
     }
 
     // Token : 0x60012BA
-    // RVA   : 0xAFDB30   Offset: 0xAFCF30   Length: 0x3E
+    // RVA   : 0xAFE1F0   Offset: 0xAFD5F0   Length: 0x3E
     public int GetCostTime()
     {
         int iVar1;
@@ -126,7 +126,7 @@ public class HeroTagDataBase
     }
 
     // Token : 0x60012BB
-    // RVA   : 0xAFDAE0   Offset: 0xAFCEE0   Length: 0x42
+    // RVA   : 0xAFE1A0   Offset: 0xAFD5A0   Length: 0x42
     public int GetCostMoney()
     {
         int iVar1;
@@ -144,7 +144,7 @@ public class HeroTagDataBase
     }
 
     // Token : 0x60012BC
-    // RVA   : 0xAFD960   Offset: 0xAFCD60   Length: 0x175
+    // RVA   : 0xAFE020   Offset: 0xAFD420   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -155,13 +155,13 @@ public class HeroTagDataBase
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -173,7 +173,7 @@ public class HeroTagDataBase
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

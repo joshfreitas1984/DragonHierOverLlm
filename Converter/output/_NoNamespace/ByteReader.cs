@@ -30,7 +30,7 @@ public class ByteReader
     }
 
     // Token : 0x6000307
-    // RVA   : 0xB7DF70   Offset: 0xB7D370   Length: 0x44
+    // RVA   : 0xB7E630   Offset: 0xB7DA30   Length: 0x44
     public void /*ctor*/(TextAsset asset)
     {
         ulong uVar1;
@@ -43,7 +43,7 @@ public class ByteReader
     }
 
     // Token : 0x6000308
-    // RVA   : 0xB7D560   Offset: 0xB7C960   Length: 0x126
+    // RVA   : 0xB7DC20   Offset: 0xB7D020   Length: 0x126
     public static ByteReader Open(string path)
     {
         uint uVar1;
@@ -55,7 +55,7 @@ public class ByteReader
         }
         (**(code **)(*plVar2 + 0x2c8))(plVar2,0,2,*(uint64 *)(*plVar2 + 0x2d0));
         uVar1 = (**(code **)(*plVar2 + 0x1e8))(plVar2,*(uint64 *)(*plVar2 + 0x1f0));
-        lVar3 = FUN_1800d60b0(DAT_181da0cc0,uVar1);
+        lVar3 = FUN_1800d60b0(DAT_181da0cd8,uVar1);
         (**(code **)(*plVar2 + 0x2c8))(plVar2,0,0,*(uint64 *)(*plVar2 + 0x2d0));
         if (lVar3 != null) {
           (**(code **)(*plVar2 + 0x2d8))
@@ -68,10 +68,10 @@ public class ByteReader
     }
 
     // Token : 0x6000309
-    // RVA   : 0xB7DFC0   Offset: 0xB7D3C0   Length: 0x14
+    // RVA   : 0xB7E680   Offset: 0xB7DA80   Length: 0x14
     public bool get_canRead()
     {
-        uint32 FUN_180b7dfc0(int64 this)
+        uint32 FUN_180b7e680(int64 this)
         {
         int iVar1;
         if (this.mBuffer == null) {
@@ -82,7 +82,7 @@ public class ByteReader
     }
 
     // Token : 0x600030A
-    // RVA   : 0xB7DE90   Offset: 0xB7D290   Length: 0x5A
+    // RVA   : 0xB7E550   Offset: 0xB7D950   Length: 0x5A
     private static string ReadLine(byte[] buffer, int start, int count)
     {
         bool cVar1;
@@ -94,7 +94,7 @@ public class ByteReader
         uint uVar8;
         lVar3 = *(int64 *)(buffer + 16);
         if (lVar3 == null) {
-        LAB_180b7de5f:
+        LAB_180b7e51f:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -130,7 +130,7 @@ public class ByteReader
               uVar8 = uVar7 + 2;
             }
           plVar5 = (int64 *)Encoding.get_UTF8(0);
-          if (plVar5 == (int64 *)0) goto LAB_180b7de5f;
+          if (plVar5 == (int64 *)0) goto LAB_180b7e51f;
           uVar6 = (**(code **)(*plVar5 + 0x348))
                             (plVar5,lVar3,uVar4,(uVar8 - uVar4) + -1,*(uint64 *)(*plVar5 + 0x350));
           *(uint32 *)(buffer + 24) = uVar8;
@@ -143,7 +143,7 @@ public class ByteReader
     }
 
     // Token : 0x600030B
-    // RVA   : 0xB7DD40   Offset: 0xB7D140   Length: 0xA
+    // RVA   : 0xB7E400   Offset: 0xB7D800   Length: 0xA
     public string ReadLine()
     {
         bool cVar1;
@@ -155,7 +155,7 @@ public class ByteReader
         uint uVar8;
         lVar3 = this.mBuffer;
         if (lVar3 == null) {
-        LAB_180b7de5f:
+        LAB_180b7e51f:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -191,7 +191,7 @@ public class ByteReader
               uVar8 = uVar7 + 2;
             }
           plVar5 = (int64 *)Encoding.get_UTF8(0);
-          if (plVar5 == (int64 *)0) goto LAB_180b7de5f;
+          if (plVar5 == (int64 *)0) goto LAB_180b7e51f;
           uVar6 = (**(code **)(*plVar5 + 0x348))
                             (plVar5,lVar3,uVar4,(uVar8 - uVar4) + -1,*(uint64 *)(*plVar5 + 0x350));
           this.mOffset = uVar8;
@@ -204,7 +204,7 @@ public class ByteReader
     }
 
     // Token : 0x600030C
-    // RVA   : 0xB7DD50   Offset: 0xB7D150   Length: 0x134
+    // RVA   : 0xB7E410   Offset: 0xB7D810   Length: 0x134
     public string ReadLine(bool skipEmptyLines)
     {
         bool cVar1;
@@ -216,7 +216,7 @@ public class ByteReader
         uint uVar8;
         lVar3 = this.mBuffer;
         if (lVar3 == null) {
-        LAB_180b7de5f:
+        LAB_180b7e51f:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -252,7 +252,7 @@ public class ByteReader
               uVar8 = uVar7 + 2;
             }
           plVar5 = (int64 *)Encoding.get_UTF8(0);
-          if (plVar5 == (int64 *)0) goto LAB_180b7de5f;
+          if (plVar5 == (int64 *)0) goto LAB_180b7e51f;
           uVar6 = (**(code **)(*plVar5 + 0x348))
                             (plVar5,lVar3,uVar4,(uVar8 - uVar4) + -1,*(uint64 *)(*plVar5 + 0x350));
           this.mOffset = uVar8;
@@ -265,7 +265,7 @@ public class ByteReader
     }
 
     // Token : 0x600030D
-    // RVA   : 0xB7DB50   Offset: 0xB7CF50   Length: 0x1EF
+    // RVA   : 0xB7E210   Offset: 0xB7D610   Length: 0x1EF
     public Dictionary<string, string> ReadDictionary()
     {
         bool cVar1;
@@ -274,9 +274,9 @@ public class ByteReader
         long lVar4;
         ulong uVar5;
         ulong uVar6;
-        lVar2 = il2cpp_internal(DAT_181d83368);
+        lVar2 = il2cpp_internal(DAT_181d83380);
         FUN_1808b1370(lVar2,DAT_181d75830);
-        lVar3 = FUN_1800d60b0(DAT_181da1040,1);
+        lVar3 = FUN_1800d60b0(DAT_181da1058,1);
         if (lVar3 != null) {
           if (*(int *)(lVar3 + 24) == 0) {
             uVar5 = il2cpp_internal();
@@ -316,10 +316,10 @@ public class ByteReader
     }
 
     // Token : 0x600030E
-    // RVA   : 0xB7D690   Offset: 0xB7CA90   Length: 0x4B3
+    // RVA   : 0xB7DD50   Offset: 0xB7D150   Length: 0x4B3
     public BetterList<string> ReadCSV()
     {
-        var pStatics = *(int64*)(DAT_181db4558 + 184);
+        var pStatics = *(int64*)(DAT_181db4570 + 184);
         int iVar1;
         long lVar5;
         long lVar6;
@@ -330,7 +330,7 @@ public class ByteReader
         int iVar12;
         int iVar10;
         if (*pStatics != 0) {
-          BetterList_1.Clear(*pStatics,DAT_181da65b8);
+          BetterList_1.Clear(*pStatics,DAT_181da65d0);
           bVar2 = false;
           iVar11 = 0;
           lVar5 = "";
@@ -367,7 +367,7 @@ public class ByteReader
                   lVar6 = *pStatics;
                   String.Substring(lVar5,iVar11,iVar9 - iVar11);
                   if (lVar6 == null) throw; // [null/range check failed]
-                  FUN_181583c60(lVar6);
+                  FUN_181584270(lVar6);
                   iVar11 = iVar9 + 1;
                 }
               }
@@ -380,8 +380,8 @@ public class ByteReader
                     if ((lVar5 == null) ||
                        (uVar8 = String.Replace(lVar5,"\"\"","\"",0), lVar6 == null))
                     throw; // [null/range check failed]
-                    FUN_181583c60(lVar6,uVar8,DAT_181da6538);
-                    goto LAB_180b7da90;
+                    FUN_181584270(lVar6,uVar8,DAT_181da6550);
+                    goto LAB_180b7e150;
                   }
                   sVar4 = String.get_Chars(lVar5,iVar1,0);
                   iVar10 = iVar1;
@@ -391,7 +391,7 @@ public class ByteReader
                     if ((lVar7 == null) ||
                        (uVar8 = String.Replace(lVar7,"\"\"","\""), lVar6 == null))
                     throw; // [null/range check failed]
-                    FUN_181583c60(lVar6,uVar8);
+                    FUN_181584270(lVar6,uVar8);
                     bVar3 = false;
                     sVar4 = String.get_Chars(lVar5,iVar1,0);
                     iVar10 = iVar9;
@@ -412,32 +412,32 @@ public class ByteReader
             if (iVar12 <= iVar11) {
               lVar6 = *pStatics;
               lVar5 = "";
-              goto joined_r0x000180b7daf4;
+              goto joined_r0x000180b7e1b4;
             }
             bVar2 = true;
           } while (bVar3);
-          if (((*(byte *)(DAT_181db4558 + 0x133) & 4) != 0) && (*(int *)(DAT_181db4558 + 224) == 0)) {
-            il2cpp_runtime_class_init(DAT_181db4558);
+          if (((*(byte *)(DAT_181db4570 + 0x133) & 4) != 0) && (*(int *)(DAT_181db4570 + 224) == 0)) {
+            il2cpp_runtime_class_init(DAT_181db4570);
             iVar12 = *(int *)(lVar5 + 16);
           }
           lVar6 = *pStatics;
           lVar5 = String.Substring(lVar5,iVar11,iVar12 - iVar11,0);
-        joined_r0x000180b7daf4:
+        joined_r0x000180b7e1b4:
           if (lVar6 != null) {
-            FUN_181583c60(lVar6,lVar5,DAT_181da6538);
-        LAB_180b7da90:
-            return **(uint64 **)(DAT_181db4558 + 184);
+            FUN_181584270(lVar6,lVar5,DAT_181da6550);
+        LAB_180b7e150:
+            return **(uint64 **)(DAT_181db4570 + 184);
           }
         }
     }
 
     // Token : 0x600030F
-    // RVA   : 0xB7DEF0   Offset: 0xB7D2F0   Length: 0x76
+    // RVA   : 0xB7E5B0   Offset: 0xB7D9B0   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = new BetterList_1(DAT_181da64b8);
-        puVar1 = *(uint64 **)(DAT_181db4558 + 184);
+        uVar2 = new BetterList_1(DAT_181da64d0);
+        puVar1 = *(uint64 **)(DAT_181db4570 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

@@ -6,7 +6,7 @@
 public class <>c__DisplayClass14_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002118
+    // Token: 0x4002119
     public RectTransform target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass14_0
     }
 
     // Token : 0x60026F0
-    // RVA   : 0x9378E0   Offset: 0x936CE0   Length: 0x1D
+    // RVA   : 0x937F70   Offset: 0x937370   Length: 0x1D
     internal Vector2 <DOAnchorPosX>b__0()
     {
         if (this.target != null) {
@@ -28,7 +28,7 @@ public class <>c__DisplayClass14_0
     }
 
     // Token : 0x60026F1
-    // RVA   : 0x937900   Offset: 0x936D00   Length: 0x1E
+    // RVA   : 0x937F90   Offset: 0x937390   Length: 0x1E
     internal void <DOAnchorPosX>b__1(Vector2 x)
     {
         if (this.target != null) {

@@ -6,58 +6,58 @@
 public class TutorialController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DC2
+    // Token: 0x4001DC3
     public GameObject tutorialPanel;
 
-    // Token: 0x4001DC3
+    // Token: 0x4001DC4
     public RectTransform highLightRect;
 
-    // Token: 0x4001DC4
+    // Token: 0x4001DC5
     public GameObject arrow;
 
-    // Token: 0x4001DC5
+    // Token: 0x4001DC6
     public GameObject tutorialTextUI;
 
-    // Token: 0x4001DC6
+    // Token: 0x4001DC7
     public bool inTutorial;
 
-    // Token: 0x4001DC7
+    // Token: 0x4001DC8
     private TutorialData nowTutorial;
 
-    // Token: 0x4001DC8
+    // Token: 0x4001DC9
     public int nowTutorialPlotCount;
 
-    // Token: 0x4001DC9
+    // Token: 0x4001DCA
     public List<TutorialData> tutorialDatas;
 
-    // Token: 0x4001DCA
+    // Token: 0x4001DCB
     public bool textShowing;
 
-    // Token: 0x4001DCB
+    // Token: 0x4001DCC
     public bool tutorialNoLeaveBuilding;
 
-    // Token: 0x4001DCC
+    // Token: 0x4001DCD
     private static TutorialController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600231D
-    // RVA   : 0xAE81E0   Offset: 0xAE75E0   Length: 0x36
+    // RVA   : 0xAE88A0   Offset: 0xAE7CA0   Length: 0x36
     public static TutorialController get_Instance()
     {
-        return **(uint64 **)(DAT_181dadcf8 + 184);
+        return **(uint64 **)(DAT_181dadd10 + 184);
     }
 
     // Token : 0x600231E
-    // RVA   : 0xADFF90   Offset: 0xADF390   Length: 0x43
+    // RVA   : 0xAE0650   Offset: 0xADFA50   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181dadcf8 + 184);
+        puVar1 = *(uint64 **)(DAT_181dadd10 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x600231F
-    // RVA   : 0xAE16A0   Offset: 0xAE0AA0   Length: 0x4C3
+    // RVA   : 0xAE1D60   Offset: 0xAE1160   Length: 0x4C3
     public void StartTutorial(string tutorialName)
     {
         bool cVar1;
@@ -80,13 +80,13 @@ public class TutorialController
             if (((GameController._instance != null) &&
                 (lVar4 = GameController._instance.worldData) != null) &&
                (lVar4 = lVar4.tutorialFinished) != null) {
-              cVar1 = FUN_18181e400(lVar4,tutorialName,DAT_181da3e58);
+              cVar1 = FUN_18181ea10(lVar4,tutorialName,DAT_181da3e70);
               if (!cVar1) {
                 lVar4 = FUN_18046c0a0(0);
                 if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
                    (lVar4 = *(int64 *)(lVar4.villageAreaID + 0x100)) == null)
                 throw; // [null/range check failed]
-                FUN_18181e0a0(lVar4,tutorialName,DAT_181da3d58);
+                FUN_18181e6b0(lVar4,tutorialName,DAT_181da3d70);
               }
               return;
             }
@@ -95,7 +95,7 @@ public class TutorialController
             if (((GameController._instance != null) &&
                 (lVar4 = GameController._instance.worldData) != null) &&
                (lVar4 = lVar4.tutorialFinished) != null) {
-              cVar1 = FUN_18181e400(lVar4,tutorialName,DAT_181da3e58);
+              cVar1 = FUN_18181ea10(lVar4,tutorialName,DAT_181da3e70);
               if (cVar1) {
                 return;
               }
@@ -108,7 +108,7 @@ public class TutorialController
                 lVar5 = 32;
                 do {
                   if (lVar4.Count <= (int)uVar6) {
-        LAB_180ae19c6:
+        LAB_180ae2086:
                     if (this.nowTutorial == null) {
                       uVar3 = String.Concat("Tutorial Not Found: ",tutorialName,0);
                       Debug.Log(uVar3,0);
@@ -117,7 +117,7 @@ public class TutorialController
                     if (this.tutorialPanel != null) {
                       GameObject.SetActive(this.tutorialPanel,1,0);
                       this.nowTutorialPlotCount = 0;
-                      lVar4 = FUN_18092a390(0);
+                      lVar4 = FUN_18092a9f0(0);
                       if (lVar4 != null) {
                         lVar4.Count = 1;
                         this.inTutorial = 1;
@@ -133,13 +133,13 @@ public class TutorialController
                   }
                   lVar4 = *(int64 *)(lVar5 + lVar4._items);
                   if (lVar4 == null) break;
-                  cVar1 = FUN_18171e540(lVar4._items,tutorialName,0);
+                  cVar1 = FUN_18171eb50(lVar4._items,tutorialName,0);
                   lVar4 = this.tutorialDatas;
                   if (cVar1) {
                     if (lVar4 != null) {
-                      uVar3 = FUN_180002f80(lVar4,uVar6,DAT_181da8198);
+                      uVar3 = FUN_180002f80(lVar4,uVar6,DAT_181da81b0);
                       this.nowTutorial = uVar3;
-                      goto LAB_180ae19c6;
+                      goto LAB_180ae2086;
                     }
                     break;
                   }
@@ -153,10 +153,10 @@ public class TutorialController
     }
 
     // Token : 0x6002320
-    // RVA   : 0xAE0540   Offset: 0xADF940   Length: 0x1150
+    // RVA   : 0xAE0C00   Offset: 0xAE0000   Length: 0x1150
     public void ShowNextTutorialPlot(bool firstPlot)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         uint uVar1;
         bool cVar2;
         float fVar3;
@@ -202,8 +202,8 @@ public class TutorialController
             uVar4 = EventSystem.get_current(0);
             uVar5 = new PointerEventData(uVar4,0);
             ExecuteEvents.Execute
-                      (uVar8,uVar5,*(uint64 *)(*(int64 *)(DAT_181dc59f0 + 184) + 32),
-                       DAT_181db8e18);
+                      (uVar8,uVar5,*(uint64 *)(*(int64 *)(DAT_181dc5a08 + 184) + 32),
+                       DAT_181db8e30);
           }
           if ((this.nowTutorial == null) ||
              (lVar6 = this.nowTutorial.tutorialPlotDatas) == null)
@@ -250,7 +250,7 @@ public class TutorialController
                 (this.nowTutorial == null)) ||
                (lVar6 = *(int64 *)(lVar6.tutorialPlotDatas + 0x100)) == null)
             throw; // [null/range check failed]
-            FUN_18181e0a0(lVar6,this.nowTutorial.tutorialName,DAT_181da3d58);
+            FUN_18181e6b0(lVar6,this.nowTutorial.tutorialName,DAT_181da3d70);
           }
           this.nowTutorial = 0;
           if (this.tutorialPanel != null) {
@@ -314,7 +314,7 @@ public class TutorialController
           cVar2 = Object.op_Inequality(uVar8,0,0);
           if (cVar2) {
             if (this.highLightRect == null) throw; // [null/range check failed]
-            lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60);
+            lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78);
             if ((this.nowTutorial == null) ||
                (lVar7 = this.nowTutorial.tutorialPlotDatas) == null)
             throw; // [null/range check failed]
@@ -328,7 +328,7 @@ public class TutorialController
                (uVar8 = RectTransform.get_pivot(lVar7,0), lVar6 == null)) throw; // [null/range check failed]
             RectTransform.set_pivot(lVar6,uVar8,0);
             if (this.highLightRect == null) throw; // [null/range check failed]
-            lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60);
+            lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78);
             if ((this.nowTutorial == null) ||
                (lVar7 = this.nowTutorial.tutorialPlotDatas) == null)
             throw; // [null/range check failed]
@@ -345,7 +345,7 @@ public class TutorialController
             local_60 = *(uint32 *)(puVar9 + 1);
             Transform.set_position(lVar6,&local_68,0);
             if (this.highLightRect == null) throw; // [null/range check failed]
-            lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60);
+            lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78);
             if ((this.nowTutorial == null) ||
                (lVar7 = this.nowTutorial.tutorialPlotDatas) == null)
             throw; // [null/range check failed]
@@ -357,12 +357,12 @@ public class TutorialController
             if (((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 32)) == null) ||
                (lVar7 = GameObject.GetComponent(lVar7,DAT_181d72bc8)) == null) throw; // [null/range check failed]
             uVar8 = RectTransform.get_sizeDelta(lVar7,0);
-            goto joined_r0x000180ae0e2f;
+            goto joined_r0x000180ae14ef;
           }
         }
         else {
           if (this.highLightRect == null) throw; // [null/range check failed]
-          lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60);
+          lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78);
           uVar8 = Vector2.get_one(0);
           local_res20._0_4_ = (float)uVar8;
           local_res20._4_4_ = (float)((uint64)uVar8 >> 32);
@@ -370,7 +370,7 @@ public class TutorialController
           if (lVar6 == null) throw; // [null/range check failed]
           RectTransform.set_pivot(lVar6,local_res20,0);
           if (this.highLightRect == null) throw; // [null/range check failed]
-          lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60);
+          lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78);
           if ((this.nowTutorial == null) ||
              (lVar7 = this.nowTutorial.tutorialPlotDatas) == null)
           throw; // [null/range check failed]
@@ -384,7 +384,7 @@ public class TutorialController
           local_60 = *(uint32 *)(lVar7 + 52);
           Transform.set_localPosition(lVar6,&local_68,0);
           if (this.highLightRect == null) throw; // [null/range check failed]
-          lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60);
+          lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78);
           if ((this.nowTutorial == null) ||
              (lVar7 = this.nowTutorial.tutorialPlotDatas) == null)
           throw; // [null/range check failed]
@@ -397,16 +397,16 @@ public class TutorialController
           uVar8 = *(uint64 *)(lVar7 + 56);
           local_60 = *(uint32 *)(lVar7 + 64);
           local_68 = uVar8;
-        joined_r0x000180ae0e2f:
+        joined_r0x000180ae14ef:
           if (lVar6 == null) throw; // [null/range check failed]
           RectTransform.set_sizeDelta(lVar6,uVar8,0);
         }
         if ((this.highLightRect == null) ||
-           (lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60)) == null)
+           (lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78)) == null)
         throw; // [null/range check failed]
         fVar3 = (float)RectTransform.get_sizeDelta(lVar6,0);
         if (fVar3 == 0.0) {
-        LAB_180ae0ebf:
+        LAB_180ae157f:
           if ((this.nowTutorial == null) ||
              (lVar6 = this.nowTutorial.tutorialPlotDatas) == null)
           throw; // [null/range check failed]
@@ -420,15 +420,15 @@ public class TutorialController
         }
         else {
           if ((this.highLightRect == null) ||
-             (lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f60)) == null)
+             (lVar6 = Component.GetComponent(this.highLightRect,DAT_181d94f78)) == null)
           throw; // [null/range check failed]
           RectTransform.get_sizeDelta(lVar6,0);
-          if (extraout_var == 0.0) goto LAB_180ae0ebf;
+          if (extraout_var == 0.0) goto LAB_180ae157f;
         }
         if (this.arrow != null) {
           lVar6 = GameObject.GetComponent(this.arrow,DAT_181d72bc8);
           if (((this.highLightRect != null) &&
-              (lVar7 = Component.GetComponent(this.highLightRect,DAT_181d94f60)) != null)
+              (lVar7 = Component.GetComponent(this.highLightRect,DAT_181d94f78)) != null)
              && (puVar9 = (uint64 *)Transform.get_position(local_58,lVar7,0), lVar6 != null)) {
             local_68 = *puVar9;
             local_60 = *(uint32 *)(puVar9 + 1);
@@ -446,7 +446,7 @@ public class TutorialController
                 if ((this.tutorialTextUI != null) &&
                    ((lVar6 = GameObject.get_transform(this.tutorialTextUI,0), lVar6 != null &&
                     (lVar6 = Transform.Find(lVar6,"Text",0)) != null))) {
-                  uVar8 = Component.GetComponent(lVar6,DAT_181d96160);
+                  uVar8 = Component.GetComponent(lVar6,DAT_181d96178);
                   if ((this.nowTutorial != null) &&
                      (lVar6 = this.nowTutorial.tutorialPlotDatas) != null) {
                     uVar1 = this.nowTutorialPlotCount;
@@ -460,19 +460,19 @@ public class TutorialController
                       if (this.tutorialTextUI != null) {
                         uVar8 = GameObject.GetComponent(this.tutorialTextUI,DAT_181d72bc8);
                         LayoutRebuilder.ForceRebuildLayoutImmediate(uVar8,0);
-                        lVar6 = FUN_1800d60b0(DAT_181da6d60,4);
+                        lVar6 = FUN_1800d60b0(DAT_181da6d78,4);
                         if ((this.highLightRect != null) &&
-                           (lVar7 = Component.GetComponent(this.highLightRect,DAT_181d94f60),
+                           (lVar7 = Component.GetComponent(this.highLightRect,DAT_181d94f78),
                            lVar7 != null)) {
                           RectTransform.GetWorldCorners(lVar7,lVar6,0);
                           if ((this.highLightRect != null) &&
-                             (lVar7 = Component.GetComponent(this.highLightRect,DAT_181d94f60)
+                             (lVar7 = Component.GetComponent(this.highLightRect,DAT_181d94f78)
                              , lVar7 != null)) {
                             pfVar10 = (float *)Transform.get_position(local_58,lVar7,0);
                             lVar7 = this.highLightRect;
                             if (0.0 < *pfVar10) {
                               if ((lVar7 == null) ||
-                                 (lVar7 = Component.GetComponent(lVar7,DAT_181d94f60)) == null)
+                                 (lVar7 = Component.GetComponent(lVar7,DAT_181d94f78)) == null)
                               throw; // [null/range check failed]
                               puVar9 = (uint64 *)Transform.get_position(local_58,lVar7,0);
                               uVar8 = *puVar9;
@@ -513,7 +513,7 @@ public class TutorialController
                             }
                             else {
                               if ((lVar7 == null) ||
-                                 (lVar7 = Component.GetComponent(lVar7,DAT_181d94f60)) == null)
+                                 (lVar7 = Component.GetComponent(lVar7,DAT_181d94f78)) == null)
                               throw; // [null/range check failed]
                               puVar9 = (uint64 *)Transform.get_position(local_58,lVar7,0);
                               uVar8 = *puVar9;
@@ -588,12 +588,12 @@ public class TutorialController
                                           uVar8 = ShortcutExtensions.DOScale
                                                             (uVar8,0x3f800000,0x3e99999a,0);
                                           uVar8 = TweenSettingsExtensions.SetUpdate
-                                                            (uVar8,1,DAT_181dc1db0);
-                                          uVar4 = new OnTooltipCB(this,DAT_181dbfe18,0);
-                                          TweenSettingsExtensions.OnComplete(uVar8,uVar4,DAT_181dc01d0);
+                                                            (uVar8,1,DAT_181dc1f60);
+                                          uVar4 = new OnTooltipCB(this,DAT_181dbffc8,0);
+                                          TweenSettingsExtensions.OnComplete(uVar8,uVar4,DAT_181dc0380);
                                           plVar11 = (int64 *)Resources.Load("Sound/SoundEffect/NoticeLittle",0);
                                           plVar12 = (int64 *)0;
-                                          if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181daf348))
+                                          if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181daf360))
                                           {
                                             plVar12 = plVar11;
                                           }
@@ -619,13 +619,13 @@ public class TutorialController
     }
 
     // Token : 0x6002321
-    // RVA   : 0xAE21B0   Offset: 0xAE15B0   Length: 0xE4
+    // RVA   : 0xAE2870   Offset: 0xAE1C70   Length: 0xE4
     public void TutorialCallPlot(string fucText)
     {
         uint uVar1;
         long lVar2;
         ulong uVar3;
-        lVar2 = FUN_1800d60b0(DAT_181da1040,1);
+        lVar2 = FUN_1800d60b0(DAT_181da1058,1);
         if (lVar2 != null) {
           if (*(int *)(lVar2 + 24) == 0) {
             uVar3 = il2cpp_internal();
@@ -660,10 +660,10 @@ public class TutorialController
     }
 
     // Token : 0x6002322
-    // RVA   : 0xAE03C0   Offset: 0xADF7C0   Length: 0x11
+    // RVA   : 0xAE0A80   Offset: 0xADFE80   Length: 0x11
     public void HightLightRectClicked()
     {
-        void FUN_180ae03c0(int64 this)
+        void FUN_180ae0a80(int64 this)
         {
         if (!this.textShowing) {
           TutorialController.ShowNextTutorialPlot(this,0,0);
@@ -672,7 +672,7 @@ public class TutorialController
     }
 
     // Token : 0x6002323
-    // RVA   : 0xADFFE0   Offset: 0xADF3E0   Length: 0x8D
+    // RVA   : 0xAE06A0   Offset: 0xADFAA0   Length: 0x8D
     public void BlackBackClicked()
     {
         uint uVar1;
@@ -698,7 +698,7 @@ public class TutorialController
     }
 
     // Token : 0x6002324
-    // RVA   : 0xAE3F90   Offset: 0xAE3390   Length: 0xB3B
+    // RVA   : 0xAE4650   Offset: 0xAE3A50   Length: 0xB3B
     public void TutorialSkillPowerSpeFuc()
     {
         float fVar1;
@@ -730,7 +730,7 @@ public class TutorialController
         if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
            (lVar5 = *(int64 *)(lVar5 + 64)) == null) throw; // [null/range check failed]
         if (*(int64 *)(lVar5 + 0x270) == 0) {
-        LAB_180ae440a:
+        LAB_180ae4aca:
           lVar5 = PlotController.LaBaFestivelResultTalkText;
           if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 0x110)) == null) ||
              (lVar5 = *(int64 *)(lVar5 + 64)) == null) throw; // [null/range check failed]
@@ -752,7 +752,7 @@ public class TutorialController
                  (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 0x110) + 64)) == null)
               throw; // [null/range check failed]
               lVar4 = *(int64 *)(lVar4 + 0x280);
-              goto LAB_180ae47d9;
+              goto LAB_180ae4e99;
             }
           }
           lVar5 = PlotController.LaBaFestivelResultTalkText;
@@ -790,13 +790,13 @@ public class TutorialController
              ((lVar5 = *(int64 *)(lVar5 + 64), lVar5 == null ||
               (lVar5 = *(int64 *)(lVar5 + 0x270)) == null))) throw; // [null/range check failed]
           fVar10 = (float)KungfuSkillLvData.MaxPower(lVar5,0);
-          if (fVar1 < fVar10) goto LAB_180ae440a;
+          if (fVar1 < fVar10) goto LAB_180ae4aca;
           lVar4 = FUN_18046bb80(0);
           if (((lVar4 == null) || (*(int64 *)(lVar4 + 0x110) == 0)) ||
              (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 0x110) + 64)) == null) throw; // [null/range check failed]
           lVar4 = *(int64 *)(lVar4 + 0x270);
         }
-        LAB_180ae47d9:
+        LAB_180ae4e99:
         lVar5 = PlotController.LaBaFestivelResultTalkText;
         if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x130)) != null) {
           lVar5 = Transform.Find(lVar5,"BaseSkillGrid",0);
@@ -881,7 +881,7 @@ public class TutorialController
     }
 
     // Token : 0x6002325
-    // RVA   : 0xAE22A0   Offset: 0xAE16A0   Length: 0x2DC
+    // RVA   : 0xAE2960   Offset: 0xAE1D60   Length: 0x2DC
     public GameObject TutorialFindBuildingButton(string targetBuilding)
     {
         bool cVar1;
@@ -891,7 +891,7 @@ public class TutorialController
         int iVar6;
         iVar6 = 0;
         while( true ) {
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
           if ((((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 128)) == null) ||
               (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"BuildQuickButtonGrid",0)) == null) throw; // [null/range check failed]
@@ -906,11 +906,11 @@ public class TutorialController
                (lVar3 = Transform.GetChild(lVar3,iVar6,0)) == null))))) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"Text",0);
           if ((lVar3 == null) ||
-             (plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160), plVar4 == (int64 *)0
+             (plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178), plVar4 == (int64 *)0
              )) throw; // [null/range check failed]
           uVar5 = (**(code **)(*plVar4 + 0x5d8))(plVar4,*(uint64 *)(*plVar4 + 0x5e0));
           LTLocalization.GetText(targetBuilding,0,1,0);
-          cVar1 = FUN_18171e540(uVar5);
+          cVar1 = FUN_18171eb50(uVar5);
           if (cVar1) break;
           iVar6 = iVar6 + 1;
         }
@@ -925,7 +925,7 @@ public class TutorialController
     }
 
     // Token : 0x6002326
-    // RVA   : 0xAE2580   Offset: 0xAE1980   Length: 0x276
+    // RVA   : 0xAE2C40   Offset: 0xAE2040   Length: 0x276
     public GameObject TutorialFindBuildingChoiceButton(string targetBuilding)
     {
         uint64
@@ -939,7 +939,7 @@ public class TutorialController
         int iVar6;
         iVar6 = 0;
         while( true ) {
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 8);
           if (((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 32)) == null) ||
              (lVar3 = GameObject.get_transform(lVar3,0)) == null) throw; // [null/range check failed]
           iVar2 = Transform.get_childCount(lVar3,0);
@@ -952,11 +952,11 @@ public class TutorialController
               (lVar3 = Transform.GetChild(lVar3,iVar6,0)) == null))) throw; // [null/range check failed]
           lVar3 = Transform.Find(lVar3,"Text",0);
           if ((lVar3 == null) ||
-             (plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160), plVar4 == (int64 *)0
+             (plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178), plVar4 == (int64 *)0
              )) throw; // [null/range check failed]
           uVar5 = (**(code **)(*plVar4 + 0x5d8))(plVar4,*(uint64 *)(*plVar4 + 0x5e0));
           LTLocalization.GetText(targetBuilding,0,1,0);
-          cVar1 = FUN_18171e540(uVar5);
+          cVar1 = FUN_18171eb50(uVar5);
           if (cVar1) break;
           iVar6 = iVar6 + 1;
         }
@@ -970,16 +970,16 @@ public class TutorialController
     }
 
     // Token : 0x6002327
-    // RVA   : 0xAE03E0   Offset: 0xADF7E0   Length: 0x4C
+    // RVA   : 0xAE0AA0   Offset: 0xADFEA0   Length: 0x4C
     public void SetTutorialNoLeaveBuilding(string param)
     {
         byte uVar1;
-        uVar1 = FUN_18171e540(param,"true",0);
+        uVar1 = FUN_18171eb50(param,"true",0);
         this.tutorialNoLeaveBuilding = uVar1;
     }
 
     // Token : 0x6002328
-    // RVA   : 0xAE6550   Offset: 0xAE5950   Length: 0x16B
+    // RVA   : 0xAE6C10   Offset: 0xAE6010   Length: 0x16B
     public void TutorialStartReadBookFindBuilding()
     {
         uint uVar1;
@@ -1032,7 +1032,7 @@ public class TutorialController
     }
 
     // Token : 0x6002329
-    // RVA   : 0xAE5B50   Offset: 0xAE4F50   Length: 0xDE
+    // RVA   : 0xAE6210   Offset: 0xAE5610   Length: 0xDE
     public void TutorialStartLeaderFindBuilding()
     {
         uint uVar1;
@@ -1061,7 +1061,7 @@ public class TutorialController
     }
 
     // Token : 0x600232A
-    // RVA   : 0xAE63E0   Offset: 0xAE57E0   Length: 0x16B
+    // RVA   : 0xAE6AA0   Offset: 0xAE5EA0   Length: 0x16B
     public void TutorialStartReadBookFindBuildingChoice()
     {
         uint uVar1;
@@ -1114,7 +1114,7 @@ public class TutorialController
     }
 
     // Token : 0x600232B
-    // RVA   : 0xAE66C0   Offset: 0xAE5AC0   Length: 0x16B
+    // RVA   : 0xAE6D80   Offset: 0xAE6180   Length: 0x16B
     public void TutorialStartReadSelfBookFindBuildingChoice()
     {
         uint uVar1;
@@ -1167,7 +1167,7 @@ public class TutorialController
     }
 
     // Token : 0x600232C
-    // RVA   : 0xAE7F50   Offset: 0xAE7350   Length: 0x16B
+    // RVA   : 0xAE8610   Offset: 0xAE7A10   Length: 0x16B
     public void TutorialStartWriteBookFindBuildingChoice()
     {
         uint uVar1;
@@ -1220,10 +1220,10 @@ public class TutorialController
     }
 
     // Token : 0x600232D
-    // RVA   : 0xAE5ED0   Offset: 0xAE52D0   Length: 0x50A
+    // RVA   : 0xAE6590   Offset: 0xAE5990   Length: 0x50A
     public void TutorialStartReadBookFindBook()
     {
-        var pStatics = *(int64*)(DAT_181db2820 + 184);
+        var pStatics = *(int64*)(DAT_181db2838 + 184);
         uint uVar1;
         bool cVar2;
         int iVar3;
@@ -1243,7 +1243,7 @@ public class TutorialController
               ((lVar4 = Transform.Find(lVar4,"Viewport",0), lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"Content",0)) == null))))) throw; // [null/range check failed]
           iVar3 = Transform.get_childCount(lVar4,0);
-          if (iVar3 <= (int)uVar7) goto LAB_180ae62cf;
+          if (iVar3 <= (int)uVar7) goto LAB_180ae698f;
           if ((((((*pStatics == 0) ||
                  (lVar4 = *(int64 *)(*pStatics + 40)) == null) ||
                 (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
@@ -1255,13 +1255,13 @@ public class TutorialController
               ((lVar4 = Transform.GetChild(lVar4,uVar7), lVar4 == null ||
                (((lVar4 = Transform.Find(lVar4,"BookIcon",0), lVar4 == null ||
                  (lVar4 = Transform.GetChild(lVar4,0)) == null) ||
-                (lVar4 = Component.GetComponent(lVar4,DAT_181d945e0)) == null))))) ||
+                (lVar4 = Component.GetComponent(lVar4,DAT_181d945f8)) == null))))) ||
              (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
-          cVar2 = FUN_18171e540(*(uint64 *)(*(int64 *)(lVar4 + 32) + 32));
+          cVar2 = FUN_18171eb50(*(uint64 *)(*(int64 *)(lVar4 + 32) + 32));
           if (cVar2) break;
           uVar7 = (uint64)((int)uVar7 + 1);
         }
-        lVar4 = FUN_180adbc70(0);
+        lVar4 = FUN_180adc330(0);
         if (((lVar4 != null) && (*(int64 *)(lVar4 + 40) != 0)) &&
            ((((lVar4 = GameObject.get_transform(*(int64 *)(lVar4 + 40),0), lVar4 != null &&
               ((lVar4 = Transform.Find(lVar4,"Grid",0), lVar4 != null &&
@@ -1273,7 +1273,7 @@ public class TutorialController
              ((lVar4 = Transform.Find(lVar4,"BookIcon",0), lVar4 != null &&
               (lVar4 = Transform.GetChild(lVar4,0,0)) != null))))))) {
           uVar5 = Component.get_gameObject(lVar4,0);
-        LAB_180ae62cf:
+        LAB_180ae698f:
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (!cVar2) {
             return;
@@ -1320,7 +1320,7 @@ public class TutorialController
     }
 
     // Token : 0x600232E
-    // RVA   : 0xAE7180   Offset: 0xAE6580   Length: 0x16B
+    // RVA   : 0xAE7840   Offset: 0xAE6C40   Length: 0x16B
     public void TutorialStartStudyFightFindBuilding()
     {
         uint uVar1;
@@ -1373,7 +1373,7 @@ public class TutorialController
     }
 
     // Token : 0x600232F
-    // RVA   : 0xAE7010   Offset: 0xAE6410   Length: 0x16F
+    // RVA   : 0xAE76D0   Offset: 0xAE6AD0   Length: 0x16F
     public void TutorialStartStudyFightFindBuildingChoice()
     {
         uint uVar1;
@@ -1427,7 +1427,7 @@ public class TutorialController
     }
 
     // Token : 0x6002330
-    // RVA   : 0xAE72F0   Offset: 0xAE66F0   Length: 0x1AF
+    // RVA   : 0xAE79B0   Offset: 0xAE6DB0   Length: 0x1AF
     public void TutorialStartStudyFightFindPlotChoice()
     {
         uint uVar2;
@@ -1451,7 +1451,7 @@ public class TutorialController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar3 = lVar3[uVar2];
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
               if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 32)) != null) {
                 lVar4 = GameObject.get_transform(lVar4,0);
                 if (lVar4 != null) {
@@ -1476,10 +1476,10 @@ public class TutorialController
     }
 
     // Token : 0x6002331
-    // RVA   : 0xAE74A0   Offset: 0xAE68A0   Length: 0x43E
+    // RVA   : 0xAE7B60   Offset: 0xAE6F60   Length: 0x43E
     public void TutorialStartStudyFightFindSkillChoice()
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         uint uVar1;
         bool cVar2;
         int iVar3;
@@ -1501,18 +1501,18 @@ public class TutorialController
                 ((lVar4 = Transform.Find(lVar4,"Viewport",0), lVar4 == null ||
                  (lVar4 = Transform.Find(lVar4,"Content",0)) == null))))) throw; // [null/range check failed]
             iVar3 = Transform.get_childCount(lVar4,0);
-            if (iVar3 <= (int)uVar8) goto LAB_180ae77d3;
+            if (iVar3 <= (int)uVar8) goto LAB_180ae7e93;
             if ((((((*pStatics == 0) ||
                    (lVar4 = *(int64 *)(*pStatics + 32)) == null) ||
                   (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
                  ((lVar4 = Transform.Find(lVar4,"Viewport",0), lVar4 == null ||
                   (lVar4 = Transform.Find(lVar4,"Content",0)) == null))) ||
                 ((lVar4 = Transform.GetChild(lVar4,uVar8), lVar4 == null ||
-                 ((lVar4 = Component.GetComponent(lVar4,DAT_181d95ae0), lVar4 == null ||
+                 ((lVar4 = Component.GetComponent(lVar4,DAT_181d95af8), lVar4 == null ||
                   (*(int64 *)(lVar4 + 32) == 0)))))) ||
                (lVar4 = KungfuSkillLvData.DataBase(*(int64 *)(lVar4 + 32),0)) == null)
             throw; // [null/range check failed]
-            cVar2 = FUN_18171e540(*(uint64 *)(lVar4 + 32));
+            cVar2 = FUN_18171eb50(*(uint64 *)(lVar4 + 32));
             if (cVar2) break;
             uVar8 = (uint64)((int)uVar8 + 1);
           }
@@ -1523,7 +1523,7 @@ public class TutorialController
                (lVar4 = Transform.Find(lVar4,"Content",0)) != null))) &&
              (lVar4 = Transform.GetChild(lVar4,uVar8,0)) != null) {
             uVar6 = Component.get_gameObject(lVar4,0);
-        LAB_180ae77d3:
+        LAB_180ae7e93:
             cVar2 = Object.op_Inequality(uVar6,0,0);
             if (!cVar2) {
               return;
@@ -1572,7 +1572,7 @@ public class TutorialController
     }
 
     // Token : 0x6002332
-    // RVA   : 0xAE3880   Offset: 0xAE2C80   Length: 0x180
+    // RVA   : 0xAE3F40   Offset: 0xAE3340   Length: 0x180
     public void TutorialForceMissionFindBuilding()
     {
         bool cVar1;
@@ -1600,11 +1600,11 @@ public class TutorialController
           if (iVar5 == 1) {
             if (((this.nowTutorial != null) &&
                 (lVar3 = this.nowTutorial.tutorialPlotDatas) != null) &&
-               (lVar3 = FUN_180002f80(lVar3,this.nowTutorialPlotCount + 1,DAT_181da8298)) != null) {
+               (lVar3 = FUN_180002f80(lVar3,this.nowTutorialPlotCount + 1,DAT_181da82b0)) != null) {
               *(uint8 *)(lVar3 + 68) = 1;
               if (((this.nowTutorial != null) &&
                   (lVar3 = this.nowTutorial.tutorialPlotDatas) != null) &&
-                 (lVar3 = FUN_180002f80(lVar3,this.nowTutorialPlotCount + 1,DAT_181da8298)) != null) {
+                 (lVar3 = FUN_180002f80(lVar3,this.nowTutorialPlotCount + 1,DAT_181da82b0)) != null) {
                 *(uint64 *)(lVar3 + 72) = uVar2;
                 return;
               }
@@ -1619,7 +1619,7 @@ public class TutorialController
     }
 
     // Token : 0x6002333
-    // RVA   : 0xAE3750   Offset: 0xAE2B50   Length: 0x124
+    // RVA   : 0xAE3E10   Offset: 0xAE3210   Length: 0x124
     public void TutorialForceMissionFindBuildingChoice()
     {
         uint uVar1;
@@ -1659,7 +1659,7 @@ public class TutorialController
     }
 
     // Token : 0x6002334
-    // RVA   : 0xAE4EE0   Offset: 0xAE42E0   Length: 0x124
+    // RVA   : 0xAE55A0   Offset: 0xAE49A0   Length: 0x124
     public void TutorialStartBreakThroughFindBuildingChoice()
     {
         uint uVar1;
@@ -1699,7 +1699,7 @@ public class TutorialController
     }
 
     // Token : 0x6002335
-    // RVA   : 0xAE5010   Offset: 0xAE4410   Length: 0x1AF
+    // RVA   : 0xAE56D0   Offset: 0xAE4AD0   Length: 0x1AF
     public void TutorialStartBreakThroughFindPlotChoice()
     {
         uint uVar2;
@@ -1723,7 +1723,7 @@ public class TutorialController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar3 = lVar3[uVar2];
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
               if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 32)) != null) {
                 lVar4 = GameObject.get_transform(lVar4,0);
                 if (lVar4 != null) {
@@ -1748,10 +1748,10 @@ public class TutorialController
     }
 
     // Token : 0x6002336
-    // RVA   : 0xAE51C0   Offset: 0xAE45C0   Length: 0x5CF
+    // RVA   : 0xAE5880   Offset: 0xAE4C80   Length: 0x5CF
     public void TutorialStartBreakThroughFindSkillChoice()
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         uint uVar1;
         bool cVar2;
         int iVar3;
@@ -1785,7 +1785,7 @@ public class TutorialController
                 (*(int64 *)(lVar4 + 32) == 0)) ||
                (lVar4 = KungfuSkillLvData.DataBase(*(int64 *)(lVar4 + 32),0)) == null)
             throw; // [null/range check failed]
-            cVar2 = FUN_18171e540(*(uint64 *)(lVar4 + 32));
+            cVar2 = FUN_18171eb50(*(uint64 *)(lVar4 + 32));
             if (cVar2) {
               lVar4 = FUN_18046bd60(0);
               if (((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
@@ -1861,7 +1861,7 @@ public class TutorialController
     }
 
     // Token : 0x6002337
-    // RVA   : 0xAE7A10   Offset: 0xAE6E10   Length: 0x16B
+    // RVA   : 0xAE80D0   Offset: 0xAE74D0   Length: 0x16B
     public void TutorialStartStudyInternalFindBuilding()
     {
         uint uVar1;
@@ -1914,7 +1914,7 @@ public class TutorialController
     }
 
     // Token : 0x6002338
-    // RVA   : 0xAE78E0   Offset: 0xAE6CE0   Length: 0x124
+    // RVA   : 0xAE7FA0   Offset: 0xAE73A0   Length: 0x124
     public void TutorialStartStudyInternalFindBuildingChoice()
     {
         uint uVar1;
@@ -1954,7 +1954,7 @@ public class TutorialController
     }
 
     // Token : 0x6002339
-    // RVA   : 0xAE3A60   Offset: 0xAE2E60   Length: 0x7C
+    // RVA   : 0xAE4120   Offset: 0xAE3520   Length: 0x7C
     public void TutorialQuickShowPlot()
     {
         DOTween.Complete("PlotTextDoText",0,0);
@@ -1962,7 +1962,7 @@ public class TutorialController
     }
 
     // Token : 0x600233A
-    // RVA   : 0xAE3520   Offset: 0xAE2920   Length: 0x10A
+    // RVA   : 0xAE3BE0   Offset: 0xAE2FE0   Length: 0x10A
     public void TutorialFocusOnMazePlayer()
     {
         long lVar1;
@@ -1976,7 +1976,7 @@ public class TutorialController
     }
 
     // Token : 0x600233B
-    // RVA   : 0xAE3410   Offset: 0xAE2810   Length: 0x10A
+    // RVA   : 0xAE3AD0   Offset: 0xAE2ED0   Length: 0x10A
     public void TutorialFocusOnMazeEnd()
     {
         long lVar1;
@@ -1990,7 +1990,7 @@ public class TutorialController
     }
 
     // Token : 0x600233C
-    // RVA   : 0xAE2CB0   Offset: 0xAE20B0   Length: 0x189
+    // RVA   : 0xAE3370   Offset: 0xAE2770   Length: 0x189
     public void TutorialFocusOnAreaCenter()
     {
         long lVar1;
@@ -2013,7 +2013,7 @@ public class TutorialController
     }
 
     // Token : 0x600233D
-    // RVA   : 0xAE3CD0   Offset: 0xAE30D0   Length: 0xD7
+    // RVA   : 0xAE4390   Offset: 0xAE3790   Length: 0xD7
     public void TutorialShowHeroDetailItem()
     {
         var pStatics = *(int64*)(DAT_181d75f40 + 184);
@@ -2026,7 +2026,7 @@ public class TutorialController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"ItemTab",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d962e0);
+                lVar1 = Component.GetComponent(lVar1,DAT_181d962f8);
                 if (lVar1 != null) {
                   Toggle.set_isOn(lVar1,1,0);
                   return;
@@ -2038,10 +2038,10 @@ public class TutorialController
     }
 
     // Token : 0x600233E
-    // RVA   : 0xAE3DB0   Offset: 0xAE31B0   Length: 0xEB
+    // RVA   : 0xAE4470   Offset: 0xAE3870   Length: 0xEB
     public void TutorialShowMission()
     {
-        var pStatics = *(int64*)(DAT_181d8ab90 + 184);
+        var pStatics = *(int64*)(DAT_181d8aba8 + 184);
         long lVar1;
         if ((*pStatics != 0) &&
            (lVar1 = *(int64 *)(*pStatics + 104)) != null) {
@@ -2063,10 +2063,10 @@ public class TutorialController
     }
 
     // Token : 0x600233F
-    // RVA   : 0xAE3EA0   Offset: 0xAE32A0   Length: 0xEB
+    // RVA   : 0xAE4560   Offset: 0xAE3960   Length: 0xEB
     public void TutorialShowWorldNews()
     {
-        var pStatics = *(int64*)(DAT_181d8ab90 + 184);
+        var pStatics = *(int64*)(DAT_181d8aba8 + 184);
         long lVar1;
         if ((*pStatics != 0) &&
            (lVar1 = *(int64 *)(*pStatics + 104)) != null) {
@@ -2088,10 +2088,10 @@ public class TutorialController
     }
 
     // Token : 0x6002340
-    // RVA   : 0xAE3A10   Offset: 0xAE2E10   Length: 0x49
+    // RVA   : 0xAE40D0   Offset: 0xAE34D0   Length: 0x49
     public void TutorialHideMission()
     {
-        var pStatics = *(int64*)(DAT_181d8ab90 + 184);
+        var pStatics = *(int64*)(DAT_181d8aba8 + 184);
         if (*pStatics != 0) {
           MissionUIController.ShowMissionUI(*pStatics,0,0);
           return;
@@ -2099,7 +2099,7 @@ public class TutorialController
     }
 
     // Token : 0x6002341
-    // RVA   : 0xAE2E40   Offset: 0xAE2240   Length: 0x298
+    // RVA   : 0xAE3500   Offset: 0xAE2900   Length: 0x298
     public void TutorialFocusOnArea(string _areaName)
     {
         long lVar1;
@@ -2117,7 +2117,7 @@ public class TutorialController
           lVar1 = GameController.CheckShowSpeHero;
           lVar2 = GameController.CheckShowSpeHero;
           if ((((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 96)) != null) &&
-              (lVar3 = FUN_1817d9e10(lVar2,lVar3.chapter,DAT_181db9ed0)) != null) &&
+              (lVar3 = FUN_1817da420(lVar2,lVar3.chapter,DAT_181db9ee8)) != null) &&
              (lVar3 = GameObject.get_transform(lVar3,0)) != null) {
             puVar4 = (uint64 *)Transform.get_localPosition(local_18,lVar3,0);
             if (lVar1 != null) {
@@ -2136,7 +2136,7 @@ public class TutorialController
     }
 
     // Token : 0x6002342
-    // RVA   : 0xAE3AE0   Offset: 0xAE2EE0   Length: 0x1E7
+    // RVA   : 0xAE41A0   Offset: 0xAE35A0   Length: 0x1E7
     public void TutorialSetMoveTargetArea(string _areaName)
     {
         long lVar1;
@@ -2152,7 +2152,7 @@ public class TutorialController
           lVar1 = GameController.CheckShowSpeHero;
           lVar2 = GameController.CheckShowSpeHero;
           if (((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 96)) != null) &&
-             (uVar4 = FUN_1817d9e10(lVar2,lVar3.chapter,DAT_181db9ed0), lVar1 != null)) {
+             (uVar4 = FUN_1817da420(lVar2,lVar3.chapter,DAT_181db9ee8), lVar1 != null)) {
             BigMapController.SetPlayerMoveTargetArea(lVar1,uVar4,0);
             return;
           }
@@ -2160,10 +2160,10 @@ public class TutorialController
     }
 
     // Token : 0x6002343
-    // RVA   : 0xAE2800   Offset: 0xAE1C00   Length: 0x18E
+    // RVA   : 0xAE2EC0   Offset: 0xAE22C0   Length: 0x18E
     public GameObject TutorialFindMissionButton(string missionName)
     {
-        var pStatics = *(int64*)(DAT_181d8ab90 + 184);
+        var pStatics = *(int64*)(DAT_181d8aba8 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -2187,9 +2187,9 @@ public class TutorialController
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = Transform.GetChild(lVar3,iVar5,0);
           if (lVar3 == null) throw; // [null/range check failed]
-          lVar3 = Component.GetComponent(lVar3,DAT_181d94a60);
+          lVar3 = Component.GetComponent(lVar3,DAT_181d94a78);
           if ((lVar3 == null) || (*(int64 *)(lVar3 + 24) == 0)) throw; // [null/range check failed]
-          cVar1 = FUN_18171e540(*(uint64 *)(*(int64 *)(lVar3 + 24) + 24));
+          cVar1 = FUN_18171eb50(*(uint64 *)(*(int64 *)(lVar3 + 24) + 24));
           if (cVar1) break;
           iVar5 = iVar5 + 1;
         }
@@ -2207,7 +2207,7 @@ public class TutorialController
     }
 
     // Token : 0x6002344
-    // RVA   : 0xAE4DB0   Offset: 0xAE41B0   Length: 0x124
+    // RVA   : 0xAE5470   Offset: 0xAE4870   Length: 0x124
     public void TutorialStartBigMapFindMission()
     {
         uint uVar1;
@@ -2247,7 +2247,7 @@ public class TutorialController
     }
 
     // Token : 0x6002345
-    // RVA   : 0xAE7DE0   Offset: 0xAE71E0   Length: 0x16B
+    // RVA   : 0xAE84A0   Offset: 0xAE78A0   Length: 0x16B
     public void TutorialStartUpgradeForceLvFindBuilding()
     {
         uint uVar1;
@@ -2300,7 +2300,7 @@ public class TutorialController
     }
 
     // Token : 0x6002346
-    // RVA   : 0xAE7CB0   Offset: 0xAE70B0   Length: 0x124
+    // RVA   : 0xAE8370   Offset: 0xAE7770   Length: 0x124
     public void TutorialStartUpgradeForceLvFindBuildingChoice()
     {
         uint uVar1;
@@ -2340,7 +2340,7 @@ public class TutorialController
     }
 
     // Token : 0x6002347
-    // RVA   : 0xAE5790   Offset: 0xAE4B90   Length: 0x16B
+    // RVA   : 0xAE5E50   Offset: 0xAE5250   Length: 0x16B
     public void TutorialStartCureInjuryFindBuilding()
     {
         uint uVar1;
@@ -2393,7 +2393,7 @@ public class TutorialController
     }
 
     // Token : 0x6002348
-    // RVA   : 0xAE6960   Offset: 0xAE5D60   Length: 0x16B
+    // RVA   : 0xAE7020   Offset: 0xAE6420   Length: 0x16B
     public void TutorialStartRestFindBuilding()
     {
         uint uVar1;
@@ -2446,7 +2446,7 @@ public class TutorialController
     }
 
     // Token : 0x6002349
-    // RVA   : 0xAE6830   Offset: 0xAE5C30   Length: 0x124
+    // RVA   : 0xAE6EF0   Offset: 0xAE62F0   Length: 0x124
     public void TutorialStartRestFindBuildingChoice()
     {
         uint uVar1;
@@ -2486,7 +2486,7 @@ public class TutorialController
     }
 
     // Token : 0x600234A
-    // RVA   : 0xAE6AD0   Offset: 0xAE5ED0   Length: 0x1AF
+    // RVA   : 0xAE7190   Offset: 0xAE6590   Length: 0x1AF
     public void TutorialStartRestFindPlotChoice()
     {
         uint uVar2;
@@ -2510,7 +2510,7 @@ public class TutorialController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar3 = lVar3[uVar2];
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
               if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 32)) != null) {
                 lVar4 = GameObject.get_transform(lVar4,0);
                 if (lVar4 != null) {
@@ -2535,7 +2535,7 @@ public class TutorialController
     }
 
     // Token : 0x600234B
-    // RVA   : 0xAE6C80   Offset: 0xAE6080   Length: 0x124
+    // RVA   : 0xAE7340   Offset: 0xAE6740   Length: 0x124
     public void TutorialStartSelfStorageFindBuildingChoice()
     {
         uint uVar1;
@@ -2575,7 +2575,7 @@ public class TutorialController
     }
 
     // Token : 0x600234C
-    // RVA   : 0xAE7B80   Offset: 0xAE6F80   Length: 0x124
+    // RVA   : 0xAE8240   Offset: 0xAE7640   Length: 0x124
     public void TutorialStartStudyPracticeFightFindBuildingChoice()
     {
         uint uVar1;
@@ -2615,7 +2615,7 @@ public class TutorialController
     }
 
     // Token : 0x600234D
-    // RVA   : 0xAE1B70   Offset: 0xAE0F70   Length: 0x31A
+    // RVA   : 0xAE2230   Offset: 0xAE1630   Length: 0x31A
     public void TutorialAskForItemFindPlotChoice()
     {
         uint uVar2;
@@ -2708,7 +2708,7 @@ public class TutorialController
     }
 
     // Token : 0x600234E
-    // RVA   : 0xAE1E90   Offset: 0xAE1290   Length: 0x31A
+    // RVA   : 0xAE2550   Offset: 0xAE1950   Length: 0x31A
     public void TutorialAskForSkillFindPlotChoice()
     {
         uint uVar2;
@@ -2801,7 +2801,7 @@ public class TutorialController
     }
 
     // Token : 0x600234F
-    // RVA   : 0xAE2990   Offset: 0xAE1D90   Length: 0x313
+    // RVA   : 0xAE3050   Offset: 0xAE2450   Length: 0x313
     public void TutorialFindPlotChoice(string choiceString)
     {
         uint uVar2;
@@ -2894,7 +2894,7 @@ public class TutorialController
     }
 
     // Token : 0x6002350
-    // RVA   : 0xAE01F0   Offset: 0xADF5F0   Length: 0x1C4
+    // RVA   : 0xAE08B0   Offset: 0xADFCB0   Length: 0x1C4
     public void HighLightPlotChoiceIncludeText(string targetString)
     {
         uint uVar2;
@@ -2909,7 +2909,7 @@ public class TutorialController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar3 = lVar3[uVar2];
-          lVar5 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+          lVar5 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
           if ((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 32)) != null) {
             lVar5 = GameObject.get_transform(lVar5,0);
             if (lVar5 != null) {
@@ -2945,7 +2945,7 @@ public class TutorialController
     }
 
     // Token : 0x6002351
-    // RVA   : 0xAE0070   Offset: 0xADF470   Length: 0x175
+    // RVA   : 0xAE0730   Offset: 0xADFB30   Length: 0x175
     public int FindPlotChoiceIncludeText(string targetString)
     {
         bool cVar1;
@@ -2953,7 +2953,7 @@ public class TutorialController
         int iVar3;
         iVar3 = 0;
         while( true ) {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
           if (((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 168)) == null) ||
              (lVar2 = *(int64 *)(lVar2 + 56)) == null) break;
           if (*(int *)(lVar2 + 24) <= iVar3) {
@@ -2962,7 +2962,7 @@ public class TutorialController
           lVar2 = FUN_18046c400(0);
           if (((lVar2 == null) || (*(int64 *)(lVar2 + 168) == 0)) ||
              (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 168) + 56)) == null) break;
-          lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181da12f8);
+          lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181da1310);
           if ((lVar2 == null) || (*(int64 *)(lVar2 + 16) == 0)) break;
           cVar1 = String.Contains(*(int64 *)(lVar2 + 16),targetString,0);
           if (cVar1) {
@@ -2973,7 +2973,7 @@ public class TutorialController
     }
 
     // Token : 0x6002352
-    // RVA   : 0xAE5D60   Offset: 0xAE5160   Length: 0x16B
+    // RVA   : 0xAE6420   Offset: 0xAE5820   Length: 0x16B
     public void TutorialStartManageForceFindBuilding()
     {
         uint uVar1;
@@ -3026,7 +3026,7 @@ public class TutorialController
     }
 
     // Token : 0x6002353
-    // RVA   : 0xAE5C30   Offset: 0xAE5030   Length: 0x124
+    // RVA   : 0xAE62F0   Offset: 0xAE56F0   Length: 0x124
     public void TutorialStartManageForceFindBuildingChoice()
     {
         uint uVar1;
@@ -3066,7 +3066,7 @@ public class TutorialController
     }
 
     // Token : 0x6002354
-    // RVA   : 0xAE4AD0   Offset: 0xAE3ED0   Length: 0x2D9
+    // RVA   : 0xAE5190   Offset: 0xAE4590   Length: 0x2D9
     public void TutorialStartAttackForceFindBuildingChoice()
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -3079,7 +3079,7 @@ public class TutorialController
              (lVar3 = GameObject.get_transform(lVar3,0)) != null) &&
             ((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 != null &&
              (lVar3 = Transform.Find(lVar3,"BuildingButtonScrollView",0)) != null))) &&
-           (lVar3 = Component.GetComponent(lVar3,DAT_181d951e0)) != null) {
+           (lVar3 = Component.GetComponent(lVar3,DAT_181d951f8)) != null) {
           Behaviour.set_enabled(lVar3,1,0);
           if ((((*pStatics != 0) &&
                (lVar3 = *(int64 *)(*pStatics + 72)) != null) &&
@@ -3087,7 +3087,7 @@ public class TutorialController
                (((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 != null &&
                  (lVar3 = Transform.Find(lVar3,"BuildingButtonScrollView",0)) != null) &&
                 (lVar3 = Transform.Find(lVar3,"Scrollbar Vertical",0)) != null))))) &&
-             (lVar3 = Component.GetComponent(lVar3,DAT_181d95260)) != null) {
+             (lVar3 = Component.GetComponent(lVar3,DAT_181d95278)) != null) {
             Scrollbar.set_value(lVar3,0,0);
             uVar4 = TutorialController.TutorialFindBuildingChoiceButton(this,"挥师出征",0);
             cVar2 = Object.op_Inequality(uVar4,0,0);
@@ -3124,7 +3124,7 @@ public class TutorialController
     }
 
     // Token : 0x6002355
-    // RVA   : 0xAE6EE0   Offset: 0xAE62E0   Length: 0x124
+    // RVA   : 0xAE75A0   Offset: 0xAE69A0   Length: 0x124
     public void TutorialStartServantForceFindBuildingChoice()
     {
         uint uVar1;
@@ -3164,7 +3164,7 @@ public class TutorialController
     }
 
     // Token : 0x6002356
-    // RVA   : 0xAE6DB0   Offset: 0xAE61B0   Length: 0x124
+    // RVA   : 0xAE7470   Offset: 0xAE6870   Length: 0x124
     public void TutorialStartServantForceExchangeFindBuildingChoice()
     {
         uint uVar1;
@@ -3204,7 +3204,7 @@ public class TutorialController
     }
 
     // Token : 0x6002357
-    // RVA   : 0xAE5900   Offset: 0xAE4D00   Length: 0xDE
+    // RVA   : 0xAE5FC0   Offset: 0xAE53C0   Length: 0xDE
     public void TutorialStartFreeModeFindBuilding()
     {
         uint uVar1;
@@ -3233,7 +3233,7 @@ public class TutorialController
     }
 
     // Token : 0x6002358
-    // RVA   : 0xAE30E0   Offset: 0xAE24E0   Length: 0x324
+    // RVA   : 0xAE37A0   Offset: 0xAE2BA0   Length: 0x324
     public void TutorialFocusOnBattleUnit(string _targetName)
     {
         bool cVar1;
@@ -3244,43 +3244,43 @@ public class TutorialController
         uVar3 = 0;
         iVar5 = 0;
         while( true ) {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
-          if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 112)) == null) goto LAB_180ae33ff;
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
+          if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 112)) == null) goto LAB_180ae3abf;
           if (*(int *)(lVar2 + 24) <= iVar5) break;
           iVar4 = 0;
           while( true ) {
             lVar2 = FUN_18046bb80(0);
-            if ((lVar2 == null) || (*(int64 *)(lVar2 + 112) == 0)) goto LAB_180ae33ff;
+            if ((lVar2 == null) || (*(int64 *)(lVar2 + 112) == 0)) goto LAB_180ae3abf;
             lVar2 = FUN_180002f80();
-            if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_180ae33ff;
-            if (*(int *)(*(int64 *)(lVar2 + 24) + 24) <= iVar4) goto LAB_180ae337c;
+            if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_180ae3abf;
+            if (*(int *)(*(int64 *)(lVar2 + 24) + 24) <= iVar4) goto LAB_180ae3a3c;
             lVar2 = FUN_18046bb80(0);
-            if ((lVar2 == null) || (*(int64 *)(lVar2 + 112) == 0)) goto LAB_180ae33ff;
-            lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 112),iVar5,DAT_181d7f830);
-            if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_180ae33ff;
-            lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 24),iVar4,DAT_181d7fc20);
+            if ((lVar2 == null) || (*(int64 *)(lVar2 + 112) == 0)) goto LAB_180ae3abf;
+            lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 112),iVar5,DAT_181d7f848);
+            if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_180ae3abf;
+            lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 24),iVar4,DAT_181d7fc38);
             if (((lVar2 == null) || (*(int64 *)(lVar2 + 64) == 0)) ||
                (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 64) + 104)) == null)
-            goto LAB_180ae33ff;
+            goto LAB_180ae3abf;
             cVar1 = String.Contains(lVar2,_targetName,0);
             if (cVar1) break;
             iVar4 = iVar4 + 1;
           }
           lVar2 = FUN_18046bb80(0);
-          if ((lVar2 == null) || (*(int64 *)(lVar2 + 112) == 0)) goto LAB_180ae33ff;
-          lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 112),iVar5,DAT_181d7f830);
-          if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_180ae33ff;
+          if ((lVar2 == null) || (*(int64 *)(lVar2 + 112) == 0)) goto LAB_180ae3abf;
+          lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 112),iVar5,DAT_181d7f848);
+          if ((lVar2 == null) || (*(int64 *)(lVar2 + 24) == 0)) goto LAB_180ae3abf;
           lVar2 = FUN_180002f80();
-          if (lVar2 == null) goto LAB_180ae33ff;
+          if (lVar2 == null) goto LAB_180ae3abf;
           uVar3 = Component.get_gameObject(lVar2);
-        LAB_180ae337c:
+        LAB_180ae3a3c:
           iVar5 = iVar5 + 1;
         }
         cVar1 = Object.op_Inequality(uVar3,0,0);
         if (cVar1) {
           lVar2 = FUN_18046bb80(0);
           if (lVar2 == null) {
-        LAB_180ae33ff:
+        LAB_180ae3abf:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -3289,7 +3289,7 @@ public class TutorialController
     }
 
     // Token : 0x6002359
-    // RVA   : 0xAE3630   Offset: 0xAE2A30   Length: 0x119
+    // RVA   : 0xAE3CF0   Offset: 0xAE30F0   Length: 0x119
     public void TutorialFocusOnNowActive()
     {
         long lVar1;
@@ -3307,7 +3307,7 @@ public class TutorialController
     }
 
     // Token : 0x600235A
-    // RVA   : 0xAE0430   Offset: 0xADF830   Length: 0x103
+    // RVA   : 0xAE0AF0   Offset: 0xADFEF0   Length: 0x103
     public void ShowComboUI()
     {
         long lVar1;
@@ -3318,7 +3318,7 @@ public class TutorialController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180da9a20(lVar1,0);
+            lVar1 = FUN_180daa030(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_one(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -3331,7 +3331,7 @@ public class TutorialController
     }
 
     // Token : 0x600235B
-    // RVA   : 0xAE80D0   Offset: 0xAE74D0   Length: 0x103
+    // RVA   : 0xAE8790   Offset: 0xAE7B90   Length: 0x103
     public void UnshowComboUI()
     {
         long lVar1;
@@ -3342,7 +3342,7 @@ public class TutorialController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180da9a20(lVar1,0);
+            lVar1 = FUN_180daa030(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_zero(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -3355,7 +3355,7 @@ public class TutorialController
     }
 
     // Token : 0x600235C
-    // RVA   : 0xAE59E0   Offset: 0xAE4DE0   Length: 0x16B
+    // RVA   : 0xAE60A0   Offset: 0xAE54A0   Length: 0x16B
     public void TutorialStartGovernFindBuilding()
     {
         uint uVar1;
@@ -3415,10 +3415,10 @@ public class TutorialController
     }
 
     // Token : 0x600235E
-    // RVA   : 0xAE80C0   Offset: 0xAE74C0   Length: 0x5
+    // RVA   : 0xAE8780   Offset: 0xAE7B80   Length: 0x5
     private void <ShowNextTutorialPlot>b__15_0()
     {
-        void FUN_180ae80c0(int64 this)
+        void FUN_180ae8780(int64 this)
         {
         this.textShowing = 0;
     }

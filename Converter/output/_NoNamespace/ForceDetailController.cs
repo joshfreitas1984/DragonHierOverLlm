@@ -47,32 +47,32 @@ public class ForceDetailController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60014A4
-    // RVA   : 0xB3C2C0   Offset: 0xB3B6C0   Length: 0x36
+    // RVA   : 0xB3C980   Offset: 0xB3BD80   Length: 0x36
     public static ForceDetailController get_Instance()
     {
-        return **(uint64 **)(DAT_181dc7d00 + 184);
+        return **(uint64 **)(DAT_181dc7d18 + 184);
     }
 
     // Token : 0x60014A5
-    // RVA   : 0xB38C30   Offset: 0xB38030   Length: 0xD7
+    // RVA   : 0xB392F0   Offset: 0xB386F0   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181dc7d00 + 184);
+        uVar3 = **(uint64 **)(DAT_181dc7d18 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181dc7d00 + 184);
+        puVar1 = *(uint64 **)(DAT_181dc7d18 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x60014A6
-    // RVA   : 0xB38EB0   Offset: 0xB382B0   Length: 0x434
+    // RVA   : 0xB39570   Offset: 0xB38970   Length: 0x434
     public void InitForceDetailTab()
     {
         ulong uVar1;
@@ -101,7 +101,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_1817eb420(&local_38,lVar6,DAT_181d88020);
+        FUN_1817eba30(&local_38,lVar6,DAT_181d88038);
         local_20 = local_38;
         uStack_1c = uStack_34;
         uStack_18 = uStack_30;
@@ -110,10 +110,10 @@ public class ForceDetailController
         while( true ) {
           do {
             do {
-              cVar2 = FUN_180c74f00(&local_20,DAT_181d8c5e8);
+              cVar2 = FUN_180c75510(&local_20,DAT_181d8c600);
               lVar6 = local_10;
               if (!cVar2) {
-                ZhSegment.Initialize(&local_20,DAT_181d8c568);
+                ZhSegment.Initialize(&local_20,DAT_181d8c580);
                 return;
               }
               uVar4 = this.forceDetailTabGrid;
@@ -141,9 +141,9 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            cVar2 = FUN_18182a3a0(lVar5,lVar6.chapter);
+            cVar2 = FUN_18182a9b0(lVar5,lVar6.chapter);
           } while (cVar2);
-          lVar6 = GameObject.GetComponent(lVar3,DAT_181dc7c00);
+          lVar6 = GameObject.GetComponent(lVar3,DAT_181dc7c18);
           if (lVar6 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -159,7 +159,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar4 = Component.GetComponent(lVar6,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar6,DAT_181d96178);
           LTLocalization.SetText(uVar4,"???",0);
           lVar6 = GameObject.get_transform(lVar3,0);
           if (lVar6 == null) break;
@@ -168,7 +168,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar7 = (int64 *)Component.GetComponent(lVar6,DAT_181d94460);
+          plVar7 = (int64 *)Component.GetComponent(lVar6,DAT_181d94478);
           puVar8 = (uint32 *)Color.get_black(&local_38,0);
           if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
@@ -183,7 +183,7 @@ public class ForceDetailController
     }
 
     // Token : 0x60014A7
-    // RVA   : 0xB39610   Offset: 0xB38A10   Length: 0xBF7
+    // RVA   : 0xB39CD0   Offset: 0xB390D0   Length: 0xBF7
     public void RefreshForceDetailTab()
     {
         bool cVar1;
@@ -215,18 +215,18 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_1817eb420(&local_68,lVar8,DAT_181d88020);
+        FUN_1817eba30(&local_68,lVar8,DAT_181d88038);
         local_50 = local_68;
         uStack_4c = uStack_64;
         uStack_48 = uStack_60;
         uStack_44 = uStack_5c;
         local_40 = local_58;
-        LAB_180b397c0:
+        LAB_180b39e80:
         do {
-          cVar1 = FUN_180c74f00(&local_50,DAT_181d8c5e8);
+          cVar1 = FUN_180c75510(&local_50,DAT_181d8c600);
           lVar8 = local_40;
           if (!cVar1) {
-            ZhSegment.Initialize(&local_50,DAT_181d8c568);
+            ZhSegment.Initialize(&local_50,DAT_181d8c580);
             return;
           }
           if (this.forceDetailTabGrid == null) {
@@ -258,8 +258,8 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar3 = Component.GetComponent(lVar4,DAT_181d96160);
-          cVar1 = FUN_180d755b0(lVar8.totalBadFame,0);
+          uVar3 = Component.GetComponent(lVar4,DAT_181d96178);
+          cVar1 = FUN_180d75bc0(lVar8.totalBadFame,0);
           if (!cVar1) {
             uVar7 = lVar8.totalBadFame;
           }
@@ -277,7 +277,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          lVar4 = Component.GetComponent(lVar4,DAT_181d94460);
+          lVar4 = Component.GetComponent(lVar4,DAT_181d94478);
           uVar3 = ForceData.GetForceIcon(lVar8,0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -322,7 +322,7 @@ public class ForceDetailController
                 FUN_1800d6620();
               }
               uVar3 = 1;
-              goto LAB_180b399e2;
+              goto LAB_180b3a0a2;
             }
           }
           else {
@@ -349,7 +349,7 @@ public class ForceDetailController
                 FUN_1800d6620();
               }
               uVar3 = 0;
-        LAB_180b399e2:
+        LAB_180b3a0a2:
               GameObject.SetActive(lVar4,uVar3);
             }
           }
@@ -369,7 +369,7 @@ public class ForceDetailController
           }
           cVar1 = HeroData.HaveForce(lVar4,0);
           if (!cVar1) {
-        LAB_180b39f66:
+        LAB_180b3a626:
             lVar4 = Transform.Find(lVar2,"Favor",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -410,7 +410,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            if (*(int *)(lVar4 + 132) == lVar8.chapter) goto LAB_180b39f66;
+            if (*(int *)(lVar4 + 132) == lVar8.chapter) goto LAB_180b3a626;
             lVar4 = Transform.Find(lVar2,"Favor",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -445,7 +445,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+            plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
             lVar4 = FUN_18046c0a0(0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -481,7 +481,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar3 = Component.GetComponent(lVar4,DAT_181d96160);
+            uVar3 = Component.GetComponent(lVar4,DAT_181d96178);
             lVar4 = FUN_18046c0a0(0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
@@ -582,9 +582,9 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                 LTLocalization.SetText(uVar3,lVar8);
-                goto LAB_180b397c0;
+                goto LAB_180b39e80;
               }
             }
           }
@@ -616,7 +616,7 @@ public class ForceDetailController
     }
 
     // Token : 0x60014A8
-    // RVA   : 0xB392F0   Offset: 0xB386F0   Length: 0x315
+    // RVA   : 0xB399B0   Offset: 0xB38DB0   Length: 0x315
     public void OpenForceDetail()
     {
         long lVar1;
@@ -636,13 +636,13 @@ public class ForceDetailController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                 if (this.forceDetailPanel != null) {
                   lVar1 = GameObject.get_transform(this.forceDetailPanel,0);
                   if (lVar1 != null) {
                     lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                     if (lVar1 != null) {
-                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                       if (plVar3 != (int64 *)0) {
                         puVar4 = (uint64 *)
                                  (**(code **)(*plVar3 + 0x298))
@@ -660,9 +660,9 @@ public class ForceDetailController
                             if (lVar1 != null) {
                               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                               if (lVar1 != null) {
-                                uVar5 = Component.GetComponent(lVar1,DAT_181d94460);
+                                uVar5 = Component.GetComponent(lVar1,DAT_181d94478);
                                 uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f000000,0x3e800000,0);
-                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1c20);
+                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1dc8);
                                 if (this.forceDetailPanel != null) {
                                   lVar1 = GameObject.get_transform(this.forceDetailPanel,0);
                                   if (lVar1 != null) {
@@ -678,7 +678,7 @@ public class ForceDetailController
                                           uVar5 = Transform.Find(lVar1,"ForceDetailRoot",0);
                                           uVar5 = ShortcutExtensions.DOScaleX
                                                             (uVar5,0x3f800000,0x3e800000,0);
-                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1db0);
+                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
                                           if (this.forceDetail != null) {
                                             GameObject.SetActive(this.forceDetail,0,0);
                                             this.nowShowForceID = 0xffffffff;
@@ -705,7 +705,7 @@ public class ForceDetailController
     }
 
     // Token : 0x60014A9
-    // RVA   : 0xB38D10   Offset: 0xB38110   Length: 0x194
+    // RVA   : 0xB393D0   Offset: 0xB387D0   Length: 0x194
     public void HideForceDetail()
     {
         long lVar1;
@@ -716,17 +716,17 @@ public class ForceDetailController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"BlackBackground",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
               uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1c20);
+              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
               if (this.forceDetailPanel != null) {
                 lVar1 = GameObject.get_transform(this.forceDetailPanel,0);
                 if (lVar1 != null) {
                   uVar2 = Transform.Find(lVar1,"ForceDetailRoot",0);
                   uVar2 = ShortcutExtensions.DOScaleX(uVar2,0,0x3e4ccccd,0);
-                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1db0);
-                  uVar3 = new OnTooltipCB(this,DAT_181dc1168,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc01d0);
+                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
+                  uVar3 = new OnTooltipCB(this,DAT_181dc1180,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0380);
                   return;
                 }
               }
@@ -736,7 +736,7 @@ public class ForceDetailController
     }
 
     // Token : 0x60014AA
-    // RVA   : 0xB3A430   Offset: 0xB39830   Length: 0x37
+    // RVA   : 0xB3AAF0   Offset: 0xB39EF0   Length: 0x37
     public void ResetForceDetail()
     {
         if (this.forceDetail != null) {
@@ -748,7 +748,7 @@ public class ForceDetailController
     }
 
     // Token : 0x60014AB
-    // RVA   : 0xB3A210   Offset: 0xB39610   Length: 0x21B
+    // RVA   : 0xB3A8D0   Offset: 0xB39CD0   Length: 0x21B
     public void RefreshForceTab()
     {
         long lVar1;
@@ -767,20 +767,20 @@ public class ForceDetailController
             if ((((this.forceDetailTabGrid == null) ||
                  (lVar3 = GameObject.get_transform(this.forceDetailTabGrid,0)) == null) ||
                 (lVar3 = Transform.GetChild(lVar3,iVar5,0)) == null) ||
-               (lVar3 = Component.GetComponent(lVar3,DAT_181d93ee0)) == null) break;
+               (lVar3 = Component.GetComponent(lVar3,DAT_181d93ef8)) == null) break;
             lVar1 = this.forceDetailTabGrid;
             if (*(int *)(lVar3 + 24) == this.nowShowForceID) {
               if (((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
                  (lVar3 = Transform.GetChild(lVar3,iVar5,0)) == null) break;
-              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
               if (plVar4 == (int64 *)0) break;
               (**(code **)(*plVar4 + 0x2a8))(plVar4);
             }
             else {
               if (((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
                  (lVar3 = Transform.GetChild(lVar3,iVar5,0)) == null) break;
-              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-              FUN_1810d3570(local_18,0);
+              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+              FUN_1810d3b80(local_18,0);
               if (plVar4 == (int64 *)0) break;
               (**(code **)(*plVar4 + 0x2a8))(plVar4);
             }
@@ -792,7 +792,7 @@ public class ForceDetailController
     }
 
     // Token : 0x60014AC
-    // RVA   : 0xB3A470   Offset: 0xB39870   Length: 0x1E49
+    // RVA   : 0xB3AB30   Offset: 0xB39F30   Length: 0x1E49
     public void ShowForceDetail(int targetForceID)
     {
         var plVar4 = lVar4.forceMeetingStarted;
@@ -844,8 +844,8 @@ public class ForceDetailController
             if ((this.forceDetail != null) &&
                (((lVar5 = GameObject.get_transform(this.forceDetail,0), lVar5 != null &&
                  (lVar5 = Transform.Find(lVar5,"ForceName")) != null) &&
-                (uVar6 = Component.GetComponent(lVar5,DAT_181d96160), lVar4 != null)))) {
-              cVar2 = FUN_180d755b0(lVar4.totalBadFame,0);
+                (uVar6 = Component.GetComponent(lVar5,DAT_181d96178), lVar4 != null)))) {
+              cVar2 = FUN_180d75bc0(lVar4.totalBadFame,0);
               if (!cVar2) {
                 uVar9 = lVar4.totalBadFame;
               }
@@ -854,7 +854,7 @@ public class ForceDetailController
               }
               LTLocalization.SetText(uVar6,uVar9);
               uVar6 = this.baseDetailText;
-              plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+              plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
               if (plVar7 != (int64 *)0) {
                 if (("等级 " != 0) &&
                    (lVar5 = il2cpp_internal("等级 ",*(uint64 *)(*plVar7 + 64)), lVar5 == null
@@ -941,7 +941,7 @@ public class ForceDetailController
                     LTLocalization.AddText(uVar6,lVar8,0);
                     uVar16 = 0;
                     uVar15 = uVar16;
-                    goto LAB_180b3ab50;
+                    goto LAB_180b3b210;
                   }
                   lVar12 = "/";
                   if (iVar14 == 0) {
@@ -953,9 +953,9 @@ public class ForceDetailController
                     lVar5 = lVar4.worldPlotEventStartData;
                   }
                   lVar1 = *(int64 *)(pStatics_3d40 + 0x4a0);
-                  if ((lVar5 == null) || (uVar3 = FUN_1800d6760(lVar5,iVar14,DAT_181d8fa18), lVar1 == null))
+                  if ((lVar5 == null) || (uVar3 = FUN_1800d6760(lVar5,iVar14,DAT_181d8fa30), lVar1 == null))
                   break;
-                  uVar9 = FUN_180002f80(lVar1,uVar3,DAT_181da4358);
+                  uVar9 = FUN_180002f80(lVar1,uVar3,DAT_181da4370);
                   lVar8 = String.Concat(lVar8,lVar12,uVar9);
                   iVar14 = iVar14 + 1;
                   lVar5 = lVar4.worldPlotEventStartData;
@@ -965,7 +965,7 @@ public class ForceDetailController
           }
         }
         throw; // [null/range check failed]
-        LAB_180b3ab50:
+        LAB_180b3b210:
         lVar5 = lVar4.worldPlotEventStartTime;
         if (lVar5 == null) throw; // [null/range check failed]
         uVar6 = this.baseDetailText;
@@ -989,14 +989,14 @@ public class ForceDetailController
             uVar6 = this.baseDetailText;
             lVar5 = FUN_18046c100(0);
             if (((lVar5 == null) || (*(int64 *)(lVar5 + 224) == 0)) ||
-               (lVar5 = FUN_1817d9e10(*(int64 *)(lVar5 + 224),*(uint32 *)(lVar4 + 0x17c),
-                                      DAT_181db7bd8), lVar5 == null)) throw; // [null/range check failed]
+               (lVar5 = FUN_1817da420(*(int64 *)(lVar5 + 224),*(uint32 *)(lVar4 + 0x17c),
+                                      DAT_181db7bf0), lVar5 == null)) throw; // [null/range check failed]
             uVar9 = *(uint64 *)(lVar5 + 24);
             lVar5 = FUN_18046c0a0(0);
             if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x180)) == null)
             throw; // [null/range check failed]
-            cVar2 = FUN_18182a3a0(lVar5,*(uint32 *)(lVar4 + 0x17c),DAT_181d8f398);
+            cVar2 = FUN_18182a9b0(lVar5,*(uint32 *)(lVar4 + 0x17c),DAT_181d8f3b0);
             uVar11 = "\n特殊建筑 {0}({1}</color>)";
             uVar10 = "<color=grey>未解锁";
             if (cVar2) {
@@ -1023,7 +1023,7 @@ public class ForceDetailController
                 uVar9 = String.Concat("\n弟子 ",uVar9,"/",uVar11,0);
                 LTLocalization.AddText(uVar6,uVar9,0);
                 uVar15 = uVar16;
-                goto LAB_180b3af70;
+                goto LAB_180b3b630;
               }
             }
           }
@@ -1034,14 +1034,14 @@ public class ForceDetailController
           lVar5 = lVar4.worldPlotEventStartTime;
         }
         lVar8 = *(int64 *)(pStatics_3d40 + 0x4b0);
-        if ((lVar5 == null) || (uVar3 = FUN_1800d6760(lVar5,uVar15,DAT_181d8fa18), lVar8 == null))
+        if ((lVar5 == null) || (uVar3 = FUN_1800d6760(lVar5,uVar15,DAT_181d8fa30), lVar8 == null))
         throw; // [null/range check failed]
         uVar9 = FUN_180002f80(lVar8,uVar3);
         String.Concat("/",uVar9);
         LTLocalization.AddText(uVar6);
         uVar15 = uVar15 + 1;
-        goto LAB_180b3ab50;
-        LAB_180b3af70:
+        goto LAB_180b3b210;
+        LAB_180b3b630:
         if (lVar4.WorldNewsDatas == null) throw; // [null/range check failed]
         if (*(int *)(lVar4.WorldNewsDatas + 24) <= (int)uVar15) {
           lVar5 = FUN_18046c0a0(0);
@@ -1049,12 +1049,12 @@ public class ForceDetailController
           if (*(int *)(*(int64 *)(lVar5 + 32) + 156) == 1) {
             lVar5 = *(int64 *)(pStatics_3d40 + 0x3a8);
             if (lVar5 == null) throw; // [null/range check failed]
-            cVar2 = FUN_18182a3a0(lVar5,targetForceID,DAT_181d8f398);
+            cVar2 = FUN_18182a9b0(lVar5,targetForceID,DAT_181d8f3b0);
             if (!cVar2) {
               uVar6 = this.baseDetailText;
               lVar5 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
               if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 208)) == null) ||
-                 (lVar5 = FUN_1817d9e10(lVar5,lVar4.chapter,DAT_181db9760)) == null)
+                 (lVar5 = FUN_1817da420(lVar5,lVar4.chapter,DAT_181db9778)) == null)
               throw; // [null/range check failed]
               uVar9 = *(uint64 *)(lVar5 + 0x180);
               uVar9 = String.Format("\n\n<b>门派特性</b>\n{1}{0}</color>",uVar9,
@@ -1065,10 +1065,10 @@ public class ForceDetailController
           uVar6 = this.areaText;
           LTLocalization.SetText(uVar6,"",0);
           lVar5 = 32;
-          goto LAB_180b3b570;
+          goto LAB_180b3bc30;
         }
         uVar6 = this.baseDetailText;
-        plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,9);
+        plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,9);
         if (plVar7 == (int64 *)0) throw; // [null/range check failed]
         if (("\n" != 0) &&
            (lVar5 = il2cpp_internal("\n",*(uint64 *)(*plVar7 + 64))) == null) {
@@ -1086,7 +1086,7 @@ public class ForceDetailController
         il2cpp_internal(plVar7 + 4,lVar5);
         lVar5 = *(int64 *)(pStatics_3d40 + 0x438);
         if (lVar5 == null) throw; // [null/range check failed]
-        lVar5 = FUN_180002f80(lVar5,uVar15,DAT_181da4358);
+        lVar5 = FUN_180002f80(lVar5,uVar15,DAT_181da4370);
         if ((lVar5 != null) &&
            (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
@@ -1115,7 +1115,7 @@ public class ForceDetailController
         plVar7[6] = " ";
         il2cpp_internal(plVar7 + 6,lVar5);
         if (lVar4.WorldNewsDatas == null) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6790(lVar4.WorldNewsDatas,uVar15,DAT_181da1078);
+        local_res20[0] = FUN_1800d6790(lVar4.WorldNewsDatas,uVar15,DAT_181da1090);
         lVar5 = Single.ToString(local_res20,"f0",0);
         if ((lVar5 != null) &&
            (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
@@ -1145,7 +1145,7 @@ public class ForceDetailController
         plVar7[8] = "/";
         il2cpp_internal(plVar7 + 8,lVar5);
         if (lVar4.MailDatas == null) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6790(lVar4.MailDatas,uVar15,DAT_181da1078);
+        local_res20[0] = FUN_1800d6790(lVar4.MailDatas,uVar15,DAT_181da1090);
         lVar5 = Single.ToString(local_res20,"f0",0);
         if ((lVar5 != null) &&
            (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
@@ -1207,13 +1207,13 @@ public class ForceDetailController
         uVar9 = String.Concat(plVar7,0);
         LTLocalization.AddText(uVar6,uVar9);
         uVar15 = uVar15 + 1;
-        goto LAB_180b3af70;
-        LAB_180b3b570:
+        goto LAB_180b3b630;
+        LAB_180b3bc30:
         lVar8 = lVar4.BigMapRandomEventDatas;
         if (lVar8 == null) throw; // [null/range check failed]
         if ((int)*(uint32 *)(lVar8 + 24) <= (int)uVar16) {
           iVar14 = 0;
-          goto LAB_180b3b6b0;
+          goto LAB_180b3bd70;
         }
         if (*(uint32 *)(lVar8 + 24) <= uVar16) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1222,7 +1222,7 @@ public class ForceDetailController
           plVar7 = this.areaText;
           if (plVar7 == (int64 *)0) throw; // [null/range check failed]
           uVar6 = (**(code **)(*plVar7 + 0x5d8))(plVar7,*(uint64 *)(*plVar7 + 0x5e0));
-          cVar2 = FUN_18171e540(uVar6,"",0);
+          cVar2 = FUN_18171eb50(uVar6,"",0);
           lVar8 = "\n";
           if (cVar2) {
             lVar8 = "";
@@ -1239,8 +1239,8 @@ public class ForceDetailController
         }
         uVar16 = uVar16 + 1;
         lVar5 = lVar5 + 4;
-        goto LAB_180b3b570;
-        LAB_180b3b6b0:
+        goto LAB_180b3bc30;
+        LAB_180b3bd70:
         if (lVar4.AreaMapRandomEventDatas == null) throw; // [null/range check failed]
         if (*(int *)(lVar4.AreaMapRandomEventDatas + 24) <= iVar14) {
           uVar6 = this.favorText;
@@ -1248,18 +1248,18 @@ public class ForceDetailController
           lVar5 = FUN_18046c0a0(0);
           if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
              (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 72)) != null) {
-            FUN_1817eb420(&local_68,lVar5,DAT_181d88020);
+            FUN_1817eba30(&local_68,lVar5,DAT_181d88038);
             local_a0 = CONCAT44(uStack_64,local_68);
             uStack_98 = CONCAT44(uStack_5c,uStack_60);
             local_90 = local_58;
-            goto LAB_180b3b870;
+            goto LAB_180b3bf30;
           }
           throw; // [null/range check failed]
         }
         plVar7 = this.areaText;
         if (plVar7 == (int64 *)0) throw; // [null/range check failed]
         uVar6 = (**(code **)(*plVar7 + 0x5d8))(plVar7,*(uint64 *)(*plVar7 + 0x5e0));
-        cVar2 = FUN_18171e540(uVar6,"",0);
+        cVar2 = FUN_18171eb50(uVar6,"",0);
         lVar5 = "\n";
         if (cVar2) {
           lVar5 = "";
@@ -1274,8 +1274,8 @@ public class ForceDetailController
         uVar6 = String.Concat(lVar5,uVar6);
         LTLocalization.AddText(plVar7,uVar6);
         iVar14 = iVar14 + 1;
-        goto LAB_180b3b6b0;
-        joined_r0x000180b3be78:
+        goto LAB_180b3bd70;
+        joined_r0x000180b3c538:
         iVar14 = iVar14 + -1;
         if (iVar14 < 0) {
           uVar6 = this.forceSkillGrid;
@@ -1302,21 +1302,21 @@ public class ForceDetailController
         lVar5 = GameObject.GetComponent(lVar5,DAT_181d720a0);
         if (lVar5 == null) throw; // [null/range check failed]
         ItemIconController.AutoSetName(lVar5,1);
-        goto joined_r0x000180b3be78;
-        LAB_180b3b870:
-        cVar2 = FUN_180c74f00(&local_a0,DAT_181d8c5e8);
+        goto joined_r0x000180b3c538;
+        LAB_180b3bf30:
+        cVar2 = FUN_180c75510(&local_a0,DAT_181d8c600);
         lVar5 = local_90;
         if (cVar2) {
           if (local_90 != lVar4) {
             uVar6 = this.favorText;
-            plVar13 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,8);
+            plVar13 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,8);
             plVar7 = this.favorText;
             if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             uVar9 = (**(code **)(*plVar7 + 0x5d8))(plVar7,*(uint64 *)(*plVar7 + 0x5e0));
-            cVar2 = FUN_18171e540(uVar9,"",0);
+            cVar2 = FUN_18171eb50(uVar9,"",0);
             lVar8 = "\n";
             if (cVar2) {
               lVar8 = "";
@@ -1342,7 +1342,7 @@ public class ForceDetailController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar2 = FUN_18182a3a0(lVar8,*(uint32 *)(lVar5 + 16),DAT_181d8f398);
+              cVar2 = FUN_18182a9b0(lVar8,*(uint32 *)(lVar5 + 16),DAT_181d8f3b0);
               lVar8 = "???";
               if (!(cVar2))
               {
@@ -1353,7 +1353,7 @@ public class ForceDetailController
                 FUN_1800d6620();
                 }
               }
-              cVar2 = FUN_180d755b0(*(uint64 *)(lVar5 + 0x198),0);
+              cVar2 = FUN_180d75bc0(*(uint64 *)(lVar5 + 0x198),0);
               if (!cVar2) {
                 lVar8 = *(int64 *)(lVar5 + 0x198);
               }
@@ -1460,9 +1460,9 @@ public class ForceDetailController
             uVar9 = String.Concat(plVar13,0);
             LTLocalization.AddText(uVar6,uVar9);
           }
-          goto LAB_180b3b870;
+          goto LAB_180b3bf30;
         }
-        ZhSegment.Initialize(&local_a0,DAT_181d8c568);
+        ZhSegment.Initialize(&local_a0,DAT_181d8c580);
         uVar6 = this.detailText;
         if (lVar4.monthBreakEquipTime != null) {
           uVar9 = ForceSpeAddData.GetDescribe(lVar4.monthBreakEquipTime,1,0);
@@ -1484,7 +1484,7 @@ public class ForceDetailController
                 lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 56);
                 if (lVar5 != null) {
                   iVar14 = *(int *)(lVar5 + 24);
-                  goto joined_r0x000180b3be78;
+                  goto joined_r0x000180b3c538;
                 }
               }
               break;

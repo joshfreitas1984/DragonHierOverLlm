@@ -18,7 +18,7 @@ public class <>c__DisplayClass301_0
     }
 
     // Token : 0x600175E
-    // RVA   : 0x938E00   Offset: 0x938200   Length: 0x50A
+    // RVA   : 0x939490   Offset: 0x938890   Length: 0x50A
     internal string <ConvertNumToChinese>b__1(List<List<int>> data)
     {
         ushort uVar1;
@@ -33,8 +33,8 @@ public class <>c__DisplayClass301_0
         uint uVar12;
         long lVar13;
         int iVar14;
-        lVar5 = il2cpp_internal(DAT_181d977d0);
-        FUN_18132faf0(lVar5,DAT_181da4458);
+        lVar5 = il2cpp_internal(DAT_181d977e8);
+        FUN_181330100(lVar5,DAT_181da4470);
         iVar14 = 0;
         uVar12 = 0;
         if (data != null) {
@@ -74,55 +74,55 @@ public class <>c__DisplayClass301_0
               }
             }
             if (lVar6 == null) throw; // [null/range check failed]
-            iVar11 = FUN_181259800(lVar6,0);
+            iVar11 = FUN_181259e10(lVar6,0);
             sVar2 = StringBuilder.get_Chars(lVar6,iVar11 + -1,0);
-            if ((sVar2 == -0x690a) && (iVar11 = FUN_181259800(lVar6,0), 1 < iVar11)) {
-        LAB_1809390b8:
-              iVar11 = FUN_181259800(lVar6,0);
+            if ((sVar2 == -0x690a) && (iVar11 = FUN_181259e10(lVar6,0), 1 < iVar11)) {
+        LAB_180939748:
+              iVar11 = FUN_181259e10(lVar6,0);
               StringBuilder.Remove(lVar6,iVar11 + -1,1);
             }
             else {
-              iVar11 = FUN_181259800(lVar6,0);
+              iVar11 = FUN_181259e10(lVar6,0);
               sVar2 = StringBuilder.get_Chars(lVar6,iVar11 + -1,0);
-              if (sVar2 == 0x4e2a) goto LAB_1809390b8;
+              if (sVar2 == 0x4e2a) goto LAB_180939748;
             }
-            if ((((uVar12 == 0) && (iVar11 = FUN_181259800(lVar6,0), 1 < iVar11)) &&
+            if ((((uVar12 == 0) && (iVar11 = FUN_181259e10(lVar6,0), 1 < iVar11)) &&
                 (sVar2 = StringBuilder.get_Chars(lVar6,0,0), sVar2 == 0x4e00)) &&
                (sVar2 = StringBuilder.get_Chars(lVar6,1,0), sVar2 == 0x5341)) {
               StringBuilder.Remove(lVar6,0,1);
             }
             if (lVar5 == null) throw; // [null/range check failed]
-            FUN_18181e0a0(lVar5);
+            FUN_18181e6b0(lVar5);
             lVar13 = lVar13 + 8;
           }
-          plVar8 = (int64 *)il2cpp_internal(DAT_181da7710);
+          plVar8 = (int64 *)il2cpp_internal(DAT_181da7728);
           StringBuilder.ctor(plVar8,0);
           if (lVar5 != null) {
             while (iVar11 = *(int *)(lVar5 + 24), iVar14 < iVar11) {
               if (iVar11 == 1) {
-        LAB_1809392aa:
-                uVar9 = FUN_180002f80(lVar5,iVar14,DAT_181da45d8);
+        LAB_18093993a:
+                uVar9 = FUN_180002f80(lVar5,iVar14,DAT_181da45f0);
                 if (plVar8 == (int64 *)0) throw; // [null/range check failed]
                 StringBuilder.Append(plVar8,uVar9,0);
-        LAB_1809392c2:
+        LAB_180939952:
                 iVar14 = iVar14 + 1;
               }
               else {
                 if (iVar14 == iVar11 + -1) {
-                  lVar13 = FUN_180002f80(lVar5,iVar14,DAT_181da45d8);
-                  lVar10 = FUN_180002f80(lVar5,iVar14,DAT_181da45d8);
-                  if ((lVar10 != null) && (iVar11 = FUN_181259800(lVar10,0), lVar13 != null)) {
+                  lVar13 = FUN_180002f80(lVar5,iVar14,DAT_181da45f0);
+                  lVar10 = FUN_180002f80(lVar5,iVar14,DAT_181da45f0);
+                  if ((lVar10 != null) && (iVar11 = FUN_181259e10(lVar10,0), lVar13 != null)) {
                     sVar2 = StringBuilder.get_Chars(lVar13,iVar11 + -1,0);
-                    if (sVar2 != -0x690a) goto LAB_1809392aa;
-                    goto LAB_1809392c2;
+                    if (sVar2 != -0x690a) goto LAB_18093993a;
+                    goto LAB_180939952;
                   }
                   throw; // [null/range check failed]
                 }
                 lVar13 = FUN_180002f80(lVar5,iVar14);
                 if (lVar13 == null) throw; // [null/range check failed]
                 sVar2 = StringBuilder.get_Chars(lVar13,0,0);
-                if (sVar2 == -0x690a) goto LAB_1809392c2;
-                uVar9 = FUN_180002f80(lVar5,iVar14,DAT_181da45d8);
+                if (sVar2 == -0x690a) goto LAB_180939952;
+                uVar9 = FUN_180002f80(lVar5,iVar14,DAT_181da45f0);
                 if (plVar8 == (int64 *)0) throw; // [null/range check failed]
                 lVar10 = StringBuilder.Append(plVar8,uVar9,0);
                 lVar13 = this.unit;
@@ -135,7 +135,7 @@ public class <>c__DisplayClass301_0
               }
             }
             if (plVar8 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x0001809392fe. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018093998e. Too many branches
                           // WARNING: Treating indirect jump as call
               (**(code **)(*plVar8 + 0x168))(plVar8,*(uint64 *)(*plVar8 + 0x170));
               return;

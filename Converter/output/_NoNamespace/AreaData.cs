@@ -160,89 +160,89 @@ public class AreaData
         this.branchLeaderID = 0xffffffff;
         ZhSegment.Initialize(this,0);
         this.bigMapPos = new c.DisplayClass9_0(0);
-        lVar2 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar2,DAT_181da0cf8);
+        lVar2 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar2,DAT_181da0d10);
         if (lVar2 != null) {
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
           this.changeResource = lVar2;
-          lVar2 = il2cpp_internal(DAT_181d96ed0);
-          FUN_18132faf0(lVar2,DAT_181da0cf8);
+          lVar2 = il2cpp_internal(DAT_181d96ee8);
+          FUN_181330100(lVar2,DAT_181da0d10);
           if (lVar2 != null) {
-            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
-            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
-            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
-            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
-            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
-            FUN_18181de10(lVar2,0x3f800000,DAT_181da0df8);
+            FUN_18181e420(lVar2,0x3f800000,DAT_181da0e10);
+            FUN_18181e420(lVar2,0x3f800000,DAT_181da0e10);
+            FUN_18181e420(lVar2,0x3f800000,DAT_181da0e10);
+            FUN_18181e420(lVar2,0x3f800000,DAT_181da0e10);
+            FUN_18181e420(lVar2,0x3f800000,DAT_181da0e10);
+            FUN_18181e420(lVar2,0x3f800000,DAT_181da0e10);
             this.resourceValueRateBase = lVar2;
-            lVar2 = il2cpp_internal(DAT_181d96ed0);
-            FUN_18132faf0(lVar2,DAT_181da0cf8);
+            lVar2 = il2cpp_internal(DAT_181d96ee8);
+            FUN_181330100(lVar2,DAT_181da0d10);
             if (lVar2 != null) {
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
               this.resourceValueRateTemp = lVar2;
-              lVar2 = il2cpp_internal(DAT_181d96ed0);
-              FUN_18132faf0(lVar2,DAT_181da0cf8);
+              lVar2 = il2cpp_internal(DAT_181d96ee8);
+              FUN_181330100(lVar2,DAT_181da0d10);
               if (lVar2 != null) {
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
                 this.changeAreaState = lVar2;
-                lVar2 = il2cpp_internal(DAT_181d96ed0);
-                FUN_18132faf0(lVar2,DAT_181da0cf8);
+                lVar2 = il2cpp_internal(DAT_181d96ee8);
+                FUN_181330100(lVar2,DAT_181da0d10);
                 if (lVar2 != null) {
-                  FUN_18181de10(lVar2,0,DAT_181da0df8);
-                  FUN_18181de10(lVar2,0,DAT_181da0df8);
-                  FUN_18181de10(lVar2,0,DAT_181da0df8);
-                  FUN_18181de10(lVar2,0,DAT_181da0df8);
+                  FUN_18181e420(lVar2,0,DAT_181da0e10);
+                  FUN_18181e420(lVar2,0,DAT_181da0e10);
+                  FUN_18181e420(lVar2,0,DAT_181da0e10);
+                  FUN_18181e420(lVar2,0,DAT_181da0e10);
                   this.changeAllAreaState = lVar2;
-                  uVar1 = il2cpp_internal(DAT_181d93cd0);
-                  FUN_18132faf0(uVar1,DAT_181d8f098);
+                  uVar1 = il2cpp_internal(DAT_181d93ce8);
+                  FUN_181330100(uVar1,DAT_181d8f0b0);
                   this.connectAreaID = uVar1;
-                  uVar1 = il2cpp_internal(DAT_181d93cd0);
-                  FUN_18132faf0(uVar1,DAT_181d8f098);
+                  uVar1 = il2cpp_internal(DAT_181d93ce8);
+                  FUN_181330100(uVar1,DAT_181d8f0b0);
                   this.nearAreaID = uVar1;
-                  uVar1 = il2cpp_internal(DAT_181d93cd0);
-                  FUN_18132faf0(uVar1,DAT_181d8f098);
+                  uVar1 = il2cpp_internal(DAT_181d93ce8);
+                  FUN_181330100(uVar1,DAT_181d8f0b0);
                   this.connectResourcePointID = uVar1;
                   this.areaSpeAddData = new ForceSpeAddData(0);
-                  lVar2 = il2cpp_internal(DAT_181d93cd0);
-                  FUN_18132faf0(lVar2,DAT_181d8f098);
+                  lVar2 = il2cpp_internal(DAT_181d93ce8);
+                  FUN_181330100(lVar2,DAT_181d8f0b0);
                   if (lVar2 != null) {
-                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                    FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                    FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                    FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                    FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                    FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                    FUN_18182a6c0(lVar2,0,DAT_181d8f230);
                     this.areaBranchDefenceLv = lVar2;
-                    lVar2 = il2cpp_internal(DAT_181d93cd0);
-                    FUN_18132faf0(lVar2,DAT_181d8f098);
+                    lVar2 = il2cpp_internal(DAT_181d93ce8);
+                    FUN_181330100(lVar2,DAT_181d8f0b0);
                     if (lVar2 != null) {
-                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-                      FUN_18182a0b0(lVar2,0,DAT_181d8f218);
+                      FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                      FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                      FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                      FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+                      FUN_18182a6c0(lVar2,0,DAT_181d8f230);
                       this.areaBranchDefenceUpgradeLeftTime = lVar2;
-                      uVar1 = il2cpp_internal(DAT_181d90ee0);
-                      FUN_18132faf0(uVar1,DAT_181d7cae0);
+                      uVar1 = il2cpp_internal(DAT_181d90ef8);
+                      FUN_181330100(uVar1,DAT_181d7caf8);
                       this.areaTreasurePriceData = uVar1;
                       lVar2 = new ZhSegment(0);
                       *(uint32 *)(lVar2 + 16) = 1;
                       *(uint32 *)(lVar2 + 20) = 1;
                       this.areaInteractionTimeData = lVar2;
-                      uVar1 = il2cpp_internal(DAT_181d97750);
-                      FUN_18132faf0(uVar1,DAT_181da3bd8);
+                      uVar1 = il2cpp_internal(DAT_181d97768);
+                      FUN_181330100(uVar1,DAT_181da3bf0);
                       this.recordLog = uVar1;
                       return;
                     }
@@ -261,7 +261,7 @@ public class AreaData
         long lVar1;
         lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 200)) != null) {
-          FUN_1817d9e10(lVar1,this.areaID,DAT_181db7df8);
+          FUN_1817da420(lVar1,this.areaID,DAT_181db7e10);
           return;
         }
     }
@@ -276,7 +276,7 @@ public class AreaData
         long lVar4;
         ulong uVar5;
         float fVar6;
-        lVar4 = **(int64 **)(DAT_181dac7d8 + 184);
+        lVar4 = **(int64 **)(DAT_181dac7f0 + 184);
         if (lVar4 != null) {
           if (*(uint32 *)(lVar4 + 24) <= defenceType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -334,7 +334,7 @@ public class AreaData
         lVar5 = AreaData.GetForce(this,0);
         if (lVar5 != null) {
           lVar5 = AreaData.GetForce(this,0);
-          lVar6 = **(int64 **)(DAT_181dac7d8 + 184);
+          lVar6 = **(int64 **)(DAT_181dac7f0 + 184);
           if (lVar6 == null) throw; // [null/range check failed]
           if (lVar6.Count <= defenceType) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -371,9 +371,9 @@ public class AreaData
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (lVar5 != null) {
-            FUN_181833d40(lVar5,defenceType,*(int *)(lVar6._items + 32 + lVar9 * 4) * 2 + 5,
-                          DAT_181d8fb18);
-            plVar8 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+            FUN_181834350(lVar5,defenceType,*(int *)(lVar6._items + 32 + lVar9 * 4) * 2 + 5,
+                          DAT_181d8fb30);
+            plVar8 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
             lVar5 = AreaData.GetForce(this,0);
             if (lVar5 != null) {
               lVar5 = ForceData.GetForceName(lVar5,1,0);
@@ -393,7 +393,7 @@ public class AreaData
                 }
                 plVar8[4] = lVar5;
                 il2cpp_internal(plVar8 + 4,lVar5);
-                cVar4 = FUN_180d755b0(this.setAreaName,0);
+                cVar4 = FUN_180d75bc0(this.setAreaName,0);
                 if (!cVar4) {
                   lVar5 = this.setAreaName;
                 }
@@ -460,7 +460,7 @@ public class AreaData
                     il2cpp_internal(plVar8 + 7,lVar9);
                     uVar7 = String.Format("{0}近日开始加强{1}分舵之{2}防御等级({3}级)",plVar8,0);
                     AreaData.AddLog(this,uVar7,0);
-                    lVar9 = **(int64 **)(DAT_181d7f6a8 + 184);
+                    lVar9 = **(int64 **)(DAT_181d7f6c0 + 184);
                     iVar2 = this.belongForceID;
                     if (iVar2 == -1) {
                       bVar10 = false;
@@ -517,9 +517,9 @@ public class AreaData
             }
             uVar2 = Mathf.CeilToInt((float)*(int *)(lVar7 + lVar6._items) / 5.0,0);
             iVar3 = Mathf.Clamp(uVar2,0,3);
-            FUN_181833d40(lVar4,uVar5,iVar1 - iVar3,DAT_181d8fb18);
+            FUN_181834350(lVar4,uVar5,iVar1 - iVar3,DAT_181d8fb30);
             if (this.areaBranchDefenceUpgradeLeftTime == null) break;
-            FUN_181833d40(this.areaBranchDefenceUpgradeLeftTime,uVar5,0);
+            FUN_181834350(this.areaBranchDefenceUpgradeLeftTime,uVar5,0);
             lVar4 = this.areaBranchDefenceLv;
             uVar5 = uVar5 + 1;
             lVar7 = lVar7 + 4;
@@ -548,22 +548,22 @@ public class AreaData
               }
               if (*(int64 *)(lVar2._items + lVar3) != 0) {
                 if ((this.areaTiles == null) ||
-                   (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60)) == null)
+                   (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca78)) == null)
                 break;
                 if (*(int64 *)(lVar2 + 40) != 0) {
                   if (((this.areaTiles == null) ||
-                      (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60),
+                      (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca78),
                       lVar2 == null)) || (*(int64 *)(lVar2 + 40) == 0)) break;
                   if (-1 < *(int *)(*(int64 *)(lVar2 + 40) + 16)) {
                     if (((this.areaTiles == null) ||
-                        (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60),
+                        (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca78),
                         lVar2 == null)) ||
                        ((*(int64 *)(lVar2 + 40) == 0 ||
                         (lVar2 = AreaBuildingData.DataBase(*(int64 *)(lVar2 + 40),0)) == null)))
                     break;
                     if (*(char *)(lVar2 + 53) != false) {
                       if (((this.areaTiles != null) &&
-                          (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca60),
+                          (lVar2 = FUN_180002f80(this.areaTiles,uVar4,DAT_181d7ca78),
                           lVar2 != null)) && (*(int64 *)(lVar2 + 40) != 0)) goto LAB_1807e8925;
                       break;
                     }
@@ -603,14 +603,14 @@ public class AreaData
                 if (lVar2 == null) break;
                 lVar2 = *(int64 *)(lVar2 + 32);
                 if (((this.connectResourcePointID == null) ||
-                    (uVar1 = FUN_1800d6760(this.connectResourcePointID,iVar5,DAT_181d8fa18), lVar2 == null)
+                    (uVar1 = FUN_1800d6760(this.connectResourcePointID,iVar5,DAT_181d8fa30), lVar2 == null)
                     ) || (lVar2 = WorldData.GetResourcePoint(lVar2,uVar1,0)) == null) break;
                 if (*(int *)(lVar2 + 48) == this.belongForceID) {
                   lVar2 = FUN_18046c0a0(0);
                   if (lVar2 == null) break;
                   lVar2 = *(int64 *)(lVar2 + 32);
                   if (((this.connectResourcePointID == null) ||
-                      (uVar1 = FUN_1800d6760(this.connectResourcePointID,iVar5,DAT_181d8fa18),
+                      (uVar1 = FUN_1800d6760(this.connectResourcePointID,iVar5,DAT_181d8fa30),
                       lVar2 == null)) ||
                      ((lVar2 = WorldData.GetResourcePoint(lVar2,uVar1,0), lVar2 == null ||
                       (lVar2 = ResourcePointData.GetDefenceSpeAddData(lVar2,0)) == null))) break;
@@ -678,8 +678,8 @@ public class AreaData
                   (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) != null) &&
                  ((lVar4 = HeroData.GetForce(lVar4,0,0), lVar4 != null && (lVar4.ResourcePoints != null)
                   ))) {
-                cVar2 = FUN_18182a3a0(lVar4.ResourcePoints,this.belongForceID,
-                                      DAT_181d8f398);
+                cVar2 = FUN_18182a9b0(lVar4.ResourcePoints,this.belongForceID,
+                                      DAT_181d8f3b0);
                 if (cVar2) {
                   return true;
                 }
@@ -701,7 +701,7 @@ public class AreaData
     public string GetAreaName()
     {
         bool cVar1;
-        cVar1 = FUN_180d755b0(this.setAreaName,0);
+        cVar1 = FUN_180d75bc0(this.setAreaName,0);
         if (cVar1) {
           return this.areaName;
         }
@@ -728,9 +728,9 @@ public class AreaData
           lVar2 = FUN_18046c0a0(0);
           if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
              (lVar2 = *(int64 *)(lVar2.villageAreaID + 104)) == null) break;
-          lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181d85e20);
+          lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181d85e38);
           if ((lVar2 == null) || (lVar2.ResourcePoints == null)) break;
-          cVar1 = FUN_18182a3a0(lVar2.ResourcePoints,this.areaID,DAT_181d8f398)
+          cVar1 = FUN_18182a9b0(lVar2.ResourcePoints,this.areaID,DAT_181d8f3b0)
           ;
           if (cVar1) {
             iVar4 = iVar4 + 1;
@@ -762,15 +762,15 @@ public class AreaData
             }
             if (*(int64 *)(lVar4 + lVar1._items) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca60)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca78)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca60)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca78)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca60),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar3,DAT_181d7ca78),
                       lVar1 == null)) ||
                      ((*(int64 *)(lVar1 + 40) == 0 ||
                       (lVar1 = AreaBuildingData.DataBase(*(int64 *)(lVar1 + 40),0)) == null)))
@@ -809,22 +809,22 @@ public class AreaData
             }
             if (*(int64 *)(lVar1._items + lVar3) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78),
                       lVar1 == null)) ||
                      ((*(int64 *)(lVar1 + 40) == 0 ||
                       (lVar1 = AreaBuildingData.DataBase(*(int64 *)(lVar1 + 40),0)) == null)))
                   break;
                   if (*(char *)(lVar1 + 53) != false) {
                     if ((this.areaTiles != null) &&
-                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
+                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78),
                        lVar1 != null)) {
                       return *(uint64 *)(lVar1 + 40);
                     }
@@ -850,8 +850,8 @@ public class AreaData
         long lVar4;
         uint uVar5;
         long lVar6;
-        lVar2 = il2cpp_internal(DAT_181d93350);
-        FUN_18132faf0(lVar2,DAT_181d8b418);
+        lVar2 = il2cpp_internal(DAT_181d93368);
+        FUN_181330100(lVar2,DAT_181d8b430);
         lVar4 = this.insideHeros;
         uVar5 = 0;
         if (lVar4 != null) {
@@ -870,7 +870,7 @@ public class AreaData
             if ((lVar1 == null) ||
                (uVar3 = WorldData.GetHero(lVar1,*(uint32 *)(lVar6 + lVar4._items),0),
                lVar2 == null)) break;
-            FUN_18181e0a0(lVar2,uVar3);
+            FUN_18181e6b0(lVar2,uVar3);
             lVar4 = this.insideHeros;
             uVar5 = uVar5 + 1;
             lVar6 = lVar6 + 4;
@@ -1010,12 +1010,12 @@ public class AreaData
         uint[] local_res20 = new uint[2];
         uint[] local_28 = new uint[4];
         lVar2 = this.recordLog;
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
         if (((GameController._instance != null) &&
             (lVar4 = GameController._instance.worldData) != null) &&
            (lVar4 = lVar4.worldTime) != null) {
           local_res8[0] = lVar4.chapter;
-          lVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
+          lVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
           if (plVar3 != (int64 *)0) {
             if ((lVar4 != null) &&
                (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
@@ -1034,7 +1034,7 @@ public class AreaData
                 (lVar4 = GameController._instance.worldData) != null) &&
                (lVar4 = lVar4.worldTime) != null) {
               local_res20[0] = *(uint32 *)(lVar4 + 20);
-              lVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
+              lVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
               if ((lVar4 != null) &&
                  (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                 uVar6 = il2cpp_internal();
@@ -1052,7 +1052,7 @@ public class AreaData
                   (lVar4 = GameController._instance.worldData) != null) &&
                  (lVar4 = lVar4.worldTime) != null) {
                 local_28[0] = lVar4.cityAreaID;
-                lVar4 = il2cpp_value_box(DAT_181d80418,local_28);
+                lVar4 = il2cpp_value_box(DAT_181d80430,local_28);
                 if ((lVar4 != null) &&
                    (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                   uVar6 = il2cpp_internal();
@@ -1081,7 +1081,7 @@ public class AreaData
                 il2cpp_internal(plVar3 + 7,newLog);
                 uVar6 = String.Format("[{0}.{1}.{2}]{3}",plVar3,0);
                 if (lVar2 != null) {
-                  FUN_18181e0a0(lVar2,uVar6,DAT_181da3d58);
+                  FUN_18181e6b0(lVar2,uVar6,DAT_181da3d70);
                   lVar2 = this.recordLog;
                   while (lVar2 != null) {
                     iVar1 = lVar2.Count;
@@ -1090,7 +1090,7 @@ public class AreaData
                       return;
                     }
                     if (this.recordLog == null) break;
-                    FUN_181823590(this.recordLog,0,DAT_181da4158);
+                    FUN_181823ba0(this.recordLog,0,DAT_181da4170);
                     lVar2 = this.recordLog;
                   }
                           // WARNING: Subroutine does not return
@@ -1213,19 +1213,19 @@ public class AreaData
             }
             if (*(int64 *)(lVar1._items + lVar3) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78),
                       lVar1 == null)) || (*(int64 *)(lVar1 + 40) == 0)) break;
                   if (*(int *)(*(int64 *)(lVar1 + 40) + 16) == buildingName) {
                     if ((this.areaTiles != null) &&
-                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
+                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78),
                        lVar1 != null)) {
                       return *(uint64 *)(lVar1 + 40);
                     }
@@ -1262,19 +1262,19 @@ public class AreaData
             }
             if (*(int64 *)(lVar1._items + lVar3) != 0) {
               if ((this.areaTiles == null) ||
-                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null)
+                 (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78)) == null)
               break;
               if (*(int64 *)(lVar1 + 40) != 0) {
                 if (((this.areaTiles == null) ||
-                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60)) == null
+                    (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78)) == null
                     ) || (*(int64 *)(lVar1 + 40) == 0)) break;
                 if (-1 < *(int *)(*(int64 *)(lVar1 + 40) + 16)) {
                   if (((this.areaTiles == null) ||
-                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
+                      (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78),
                       lVar1 == null)) || (*(int64 *)(lVar1 + 40) == 0)) break;
                   if (*(int *)(*(int64 *)(lVar1 + 40) + 16) == buildingID) {
                     if ((this.areaTiles != null) &&
-                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca60),
+                       (lVar1 = FUN_180002f80(this.areaTiles,uVar2,DAT_181d7ca78),
                        lVar1 != null)) {
                       return *(uint64 *)(lVar1 + 40);
                     }
@@ -1362,7 +1362,7 @@ public class AreaData
         local_28 = 0;
         uStack_20 = 0;
         if (*(int *)(param_2 + 112) == -1) {
-          puVar1 = (uint64 *)FUN_180d98fe0(local_18);
+          puVar1 = (uint64 *)FUN_180d995f0(local_18);
           uVar4 = puVar1[1];
           *this = *puVar1;
           this[1] = uVar4;
@@ -1442,13 +1442,13 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.people + local_res10[0],0,
+          uVar5 = FUN_1810e3cd0(this.people + local_res10[0],0,
                                 this.maxPeople,0);
           this.people = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1484,12 +1484,12 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.support + local_res10[0],0,0x42c80000,0);
+          uVar5 = FUN_1810e3cd0(this.support + local_res10[0],0,0x42c80000,0);
           this.support = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1525,12 +1525,12 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.safe + local_res10[0],0,0x42c80000,0);
+          uVar5 = FUN_1810e3cd0(this.safe + local_res10[0],0,0x42c80000,0);
           this.safe = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1566,12 +1566,12 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.defence + local_res10[0],0,0x42c80000,0);
+          uVar5 = FUN_1810e3cd0(this.defence + local_res10[0],0,0x42c80000,0);
           this.defence = uVar5;
           this.areaDetailDirty = 1;
           if (param_3) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1607,13 +1607,13 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.people + local_res10[0],0,
+          uVar5 = FUN_1810e3cd0(this.people + local_res10[0],0,
                                 this.maxPeople,0);
           this.people = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1649,12 +1649,12 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.support + local_res10[0],0,0x42c80000,0);
+          uVar5 = FUN_1810e3cd0(this.support + local_res10[0],0,0x42c80000,0);
           this.support = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1690,12 +1690,12 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.safe + local_res10[0],0,0x42c80000,0);
+          uVar5 = FUN_1810e3cd0(this.safe + local_res10[0],0,0x42c80000,0);
           this.safe = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1731,12 +1731,12 @@ public class AreaData
         ulong uStack_10;
         local_res10[0] = num;
         if (local_res10[0] != 0.0) {
-          uVar5 = FUN_1810e36c0(this.defence + local_res10[0],0,0x42c80000,0);
+          uVar5 = FUN_1810e3cd0(this.defence + local_res10[0],0,0x42c80000,0);
           this.defence = uVar5;
           this.areaDetailDirty = 1;
           if (showInfo) {
-            lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
-            cVar2 = FUN_180d755b0(this.setAreaName,0);
+            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+            cVar2 = FUN_180d75bc0(this.setAreaName,0);
             if (!cVar2) {
               uVar4 = this.setAreaName;
             }
@@ -1773,15 +1773,15 @@ public class AreaData
         uint uVar2;
         uVar2 = this.safe;
         GlobalData.RandomRange(25,36,0);
-        uVar1 = FUN_1810e36c0(uVar2);
+        uVar1 = FUN_1810e3cd0(uVar2);
         uVar2 = this.support;
         this.safe = uVar1;
         GlobalData.RandomRange(25,36,0);
-        uVar1 = FUN_1810e36c0(uVar2);
+        uVar1 = FUN_1810e3cd0(uVar2);
         uVar2 = this.defence;
         this.support = uVar1;
         GlobalData.RandomRange(25,36,0);
-        uVar2 = FUN_1810e36c0(uVar2);
+        uVar2 = FUN_1810e3cd0(uVar2);
         this.defence = uVar2;
     }
 
@@ -1811,18 +1811,18 @@ public class AreaData
             }
             if (0.0 < *(float *)(lVar4 + lVar1._items)) {
               if (lVar3 == null) break;
-              fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
+              fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
               uVar6 = Mathf.Max(0,fVar5 * 0.8 - 0.1,0);
         LAB_1807e9690:
-              FUN_181829d40(lVar3,uVar2,uVar6,DAT_181da10f8);
+              FUN_18182a350(lVar3,uVar2,uVar6,DAT_181da1110);
             }
             else {
               if (lVar3 == null) break;
-              fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
+              fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
               if (fVar5 < 0.0) {
                 lVar3 = this.resourceValueRateTemp;
                 if (lVar3 != null) {
-                  fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
+                  fVar5 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
                   uVar6 = Mathf.Min(0,fVar5 * 0.8 + 0.1,0);
                   goto LAB_1807e9690;
                 }
@@ -1883,8 +1883,8 @@ public class AreaData
         int iVar7;
         int iVar8;
         int iVar9;
-        lVar3 = il2cpp_internal(DAT_181d90e60);
-        FUN_18132faf0(lVar3,DAT_181d7c7e0);
+        lVar3 = il2cpp_internal(DAT_181d90e78);
+        FUN_181330100(lVar3,DAT_181d7c7f8);
         iVar6 = this.mapWidth;
         uVar1 = (int64)tileID / (int64)iVar6;
         uVar2 = (int64)tileID % (int64)iVar6;
@@ -1893,7 +1893,7 @@ public class AreaData
         if (-1 < iVar7 + -1) {
           uVar4 = AreaData.GetTile(this,iVar7 + -1,uVar1 & 0xffffffff,0);
           if (lVar3 == null) goto LAB_1807e83bb;
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d7c860);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d7c878);
           iVar6 = this.mapWidth;
         }
         iVar8 = iVar7 + 1;
@@ -1904,15 +1904,15 @@ public class AreaData
              (iVar9 < this.mapHeight)) {
             if (this.areaTiles == null) goto LAB_1807e83bb;
             uVar5 = FUN_180002f80(this.areaTiles,this.mapWidth * iVar9 + iVar8,
-                                  DAT_181d7ca60);
+                                  DAT_181d7ca78);
           }
           if (lVar3 == null) goto LAB_1807e83bb;
-          FUN_18181e0a0(lVar3,uVar5,DAT_181d7c860);
+          FUN_18181e6b0(lVar3,uVar5,DAT_181d7c878);
         }
         if (-1 < iVar9 + -1) {
           uVar5 = AreaData.GetTile(this,uVar2 & 0xffffffff,iVar9 + -1,0);
           if (lVar3 == null) goto LAB_1807e83bb;
-          FUN_18181e0a0(lVar3,uVar5,DAT_181d7c860);
+          FUN_18181e6b0(lVar3,uVar5,DAT_181d7c878);
         }
         iVar9 = iVar9 + 1;
         if (iVar9 < this.mapHeight) {
@@ -1920,14 +1920,14 @@ public class AreaData
              ((-1 < iVar9 && (uVar4 = 0, iVar9 < this.mapHeight)))) {
             if (this.areaTiles == null) goto LAB_1807e83bb;
             uVar4 = FUN_180002f80(this.areaTiles,this.mapWidth * iVar9 + iVar7,
-                                  DAT_181d7ca60);
+                                  DAT_181d7ca78);
           }
           if (lVar3 == null) {
         LAB_1807e83bb:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d7c860);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d7c878);
         }
         return lVar3;
     }
@@ -1942,7 +1942,7 @@ public class AreaData
              (row < this.mapHeight)) {
             if (this.areaTiles != null) {
               uVar1 = FUN_180002f80(this.areaTiles,
-                                    this.mapWidth * row + column,DAT_181d7ca60);
+                                    this.mapWidth * row + column,DAT_181d7ca78);
               return uVar1;
             }
                           // WARNING: Subroutine does not return
@@ -1964,13 +1964,13 @@ public class AreaData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -1982,7 +1982,7 @@ public class AreaData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
@@ -1995,15 +1995,15 @@ public class AreaData
     private static void /*cctor*/()
     {
         long lVar2;
-        lVar2 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar2,DAT_181d8f098);
+        lVar2 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar2,DAT_181d8f0b0);
         if (lVar2 != null) {
-          FUN_18182a0b0(lVar2,0,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,1,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,2,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,3,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,4,DAT_181d8f218);
-          plVar1 = *(int64 **)(DAT_181dac7d8 + 184);
+          FUN_18182a6c0(lVar2,0,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,1,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,2,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,3,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,4,DAT_181d8f230);
+          plVar1 = *(int64 **)(DAT_181dac7f0 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;

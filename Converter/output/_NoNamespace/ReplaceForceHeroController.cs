@@ -11,7 +11,7 @@ public class ReplaceForceHeroController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009CD
-    // RVA   : 0xD12A40   Offset: 0xD11E40   Length: 0x147
+    // RVA   : 0xD13050   Offset: 0xD12450   Length: 0x147
     public void Init()
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -44,23 +44,23 @@ public class ReplaceForceHeroController
     }
 
     // Token : 0x60009CE
-    // RVA   : 0xD12B90   Offset: 0xD11F90   Length: 0x10D
+    // RVA   : 0xD131A0   Offset: 0xD125A0   Length: 0x10D
     public void ToggleValueChanged(Toggle targetToggle)
     {
-        var pStatics = *(int64*)(DAT_181d87998 + 184);
+        var pStatics = *(int64*)(DAT_181d879b0 + 184);
         long lVar1;
         if (targetToggle != null) {
           if (*(char *)(targetToggle + 0x118) == false) {
             if (((*pStatics != 0) && (this.targetHero != null)) &&
                (lVar1 = *(int64 *)(*pStatics + 112)) != null) {
-              FUN_18182a0b0(lVar1,this.targetHero.heroID,DAT_181d8f218);
+              FUN_18182a6c0(lVar1,this.targetHero.heroID,DAT_181d8f230);
               return;
             }
           }
           else {
             if (((*pStatics != 0) && (this.targetHero != null)) &&
                (lVar1 = *(int64 *)(*pStatics + 112)) != null) {
-              FUN_1817eee00(lVar1,this.targetHero.heroID,DAT_181d8f618);
+              FUN_1817ef410(lVar1,this.targetHero.heroID,DAT_181d8f630);
               return;
             }
           }

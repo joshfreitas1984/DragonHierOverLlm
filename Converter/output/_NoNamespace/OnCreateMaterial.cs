@@ -26,7 +26,7 @@ public class OnCreateMaterial
     }
 
     // Token : 0x60008E7
-    // RVA   : 0x8E71A0   Offset: 0x8E65A0   Length: 0x49B
+    // RVA   : 0x9197E0   Offset: 0x918BE0   Length: 0x49B
     public virtual Material Invoke(UIWidget widget, Material mat)
     {
         long lVar1;
@@ -66,7 +66,7 @@ public class OnCreateMaterial
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e75f7;
+              goto LAB_180919c37;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -90,7 +90,7 @@ public class OnCreateMaterial
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(plVar3,widget,mat,puVar7[1]);
-                        goto LAB_1808e7605;
+                        goto LAB_180919c45;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -119,13 +119,13 @@ public class OnCreateMaterial
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_1808e74c6;
+                        goto LAB_180919b06;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                   }
                   lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_1808e74c6:
+        LAB_180919b06:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                   uVar5 = (*(code *)*puVar7)(plVar3,widget,mat,puVar7);
                 }
@@ -133,7 +133,7 @@ public class OnCreateMaterial
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e7247;
+              goto LAB_180919887;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -157,7 +157,7 @@ public class OnCreateMaterial
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(widget,mat,puVar7[1]);
-                        goto LAB_1808e7605;
+                        goto LAB_180919c45;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -186,13 +186,13 @@ public class OnCreateMaterial
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_1808e72e6;
+                        goto LAB_180919926;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                   }
                   lVar6 = FUN_1800914f0(widget,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_1808e72e6:
+        LAB_180919926:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                   uVar5 = (*(code *)*puVar7)(widget,mat,puVar7);
                 }
@@ -200,14 +200,14 @@ public class OnCreateMaterial
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_1808e7247:
+        LAB_180919887:
             uVar5 = (*pcVar2)(widget,mat,lVar1);
           }
           else {
-        LAB_1808e75f7:
+        LAB_180919c37:
             uVar5 = (*pcVar2)(plVar3,widget,mat,lVar1);
           }
-        LAB_1808e7605:
+        LAB_180919c45:
           uVar13 = uVar13 + 1;
           if (uVar12 <= uVar13) {
             return uVar5;

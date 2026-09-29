@@ -18,7 +18,7 @@ public class <>c__DisplayClass328_0
     }
 
     // Token : 0x6001762
-    // RVA   : 0x939460   Offset: 0x938860   Length: 0x35
+    // RVA   : 0x939AF0   Offset: 0x938EF0   Length: 0x35
     internal void <DoTweenSkeletonAlpha>b__0(float value)
     {
         long lVar1;

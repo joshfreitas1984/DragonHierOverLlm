@@ -6,16 +6,16 @@
 public class <FinishStudyUniqueSkill>d__34
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D59
+    // Token: 0x4001D5A
     private int <>1__state;
 
-    // Token: 0x4001D5A
+    // Token: 0x4001D5B
     private object <>2__current;
 
-    // Token: 0x4001D5B
+    // Token: 0x4001D5C
     public StudyUniqueSkillController <>4__this;
 
-    // Token: 0x4001D5C
+    // Token: 0x4001D5D
     public StudySkillResult studyUniqueResult;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,7 +34,7 @@ public class <FinishStudyUniqueSkill>d__34
     }
 
     // Token : 0x60022C8
-    // RVA   : 0x8ED1D0   Offset: 0x8EC5D0   Length: 0x692
+    // RVA   : 0x920050   Offset: 0x91F450   Length: 0x692
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -178,7 +178,7 @@ public class <FinishStudyUniqueSkill>d__34
             }
             uVar7 = *(uint64 *)(lVar8 + 96);
             GlobalData.DeleteAllChild(uVar7,0);
-            if (**(int64 **)(DAT_181da8210 + 184) != 0) {
+            if (**(int64 **)(DAT_181da8228 + 184) != 0) {
               StudyUniquePlayer.SetShieldTime();
               uVar7 = new WaitForSecondsRealtime();
               this.<>2__current = uVar7;
@@ -217,15 +217,15 @@ public class <FinishStudyUniqueSkill>d__34
     }
 
     // Token : 0x60022CA
-    // RVA   : 0x8ED870   Offset: 0x8ECC70   Length: 0x3E
+    // RVA   : 0x9206F0   Offset: 0x91FAF0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4d38);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4ee8);
     }
 
     // Token : 0x60022CB

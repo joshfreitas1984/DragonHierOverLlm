@@ -29,7 +29,7 @@ public class UIDragScrollView
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000140
-    // RVA   : 0x12B7330   Offset: 0x12B6730   Length: 0x134
+    // RVA   : 0x12B7940   Offset: 0x12B6D40   Length: 0x134
     private void OnEnable()
     {
         bool cVar1;
@@ -59,24 +59,24 @@ public class UIDragScrollView
     }
 
     // Token : 0x6000141
-    // RVA   : 0x12B77D0   Offset: 0x12B6BD0   Length: 0xB
+    // RVA   : 0x12B7DE0   Offset: 0x12B71E0   Length: 0xB
     private void Start()
     {
-        void FUN_1812b77d0(int64 this)
+        void FUN_1812b7de0(int64 this)
         {
         this.mStarted = 1;
         UIDragScrollView.FindScrollView(this,0);
     }
 
     // Token : 0x6000142
-    // RVA   : 0x12B7010   Offset: 0x12B6410   Length: 0x159
+    // RVA   : 0x12B7620   Offset: 0x12B6A20   Length: 0x159
     private void FindScrollView()
     {
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
         uVar1 = this.mTrans;
-        uVar2 = NGUITools.FindInParents(uVar1,DAT_181d8f9a0);
+        uVar2 = NGUITools.FindInParents(uVar1,DAT_181d8f838);
         uVar1 = this.scrollView;
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (!cVar3) {
@@ -88,19 +88,19 @@ public class UIDragScrollView
               }
               uVar1 = this.scrollView;
               cVar3 = Object.op_Equality(uVar1,uVar2,0);
-              if (!cVar3) goto LAB_1812b7145;
+              if (!cVar3) goto LAB_1812b7755;
               }
               else {
             }
           this.scrollView = uVar2;
         }
         this.mAutoFind = 1;
-        LAB_1812b7145:
+        LAB_1812b7755:
         this.mScroll = this.scrollView;
     }
 
     // Token : 0x6000143
-    // RVA   : 0x12B7170   Offset: 0x12B6570   Length: 0xF0
+    // RVA   : 0x12B7780   Offset: 0x12B6B80   Length: 0xF0
     private void OnDisable()
     {
         ulong uVar1;
@@ -110,14 +110,14 @@ public class UIDragScrollView
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (cVar2) {
             if (this.mScroll == null) {
-        LAB_1812b725b:
+        LAB_1812b786b:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar1 = Component.GetComponentInChildren(this.mScroll,DAT_181d97860);
+            uVar1 = Component.GetComponentInChildren(this.mScroll,DAT_181d97878);
             cVar2 = Object.op_Equality(uVar1,0,0);
             if (cVar2) {
-              if (this.mScroll == null) goto LAB_1812b725b;
+              if (this.mScroll == null) goto LAB_1812b786b;
               UIScrollView.Press(this.mScroll,0,0);
               this.mScroll = 0;
             }
@@ -126,7 +126,7 @@ public class UIDragScrollView
     }
 
     // Token : 0x6000144
-    // RVA   : 0x12B7540   Offset: 0x12B6940   Length: 0x1B9
+    // RVA   : 0x12B7B50   Offset: 0x12B6F50   Length: 0x1B9
     private void OnPress(bool pressed)
     {
         ulong uVar1;
@@ -157,7 +157,7 @@ public class UIDragScrollView
               UIScrollView.Press(this.scrollView,pressed,0);
               if ((!pressed) && (this.mAutoFind)) {
                 uVar3 = this.mTrans;
-                uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f9a0);
+                uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f838);
                 this.scrollView = uVar3;
                 this.mScroll = this.scrollView;
               }
@@ -167,7 +167,7 @@ public class UIDragScrollView
     }
 
     // Token : 0x6000145
-    // RVA   : 0x12B7270   Offset: 0x12B6670   Length: 0xB1
+    // RVA   : 0x12B7880   Offset: 0x12B6C80   Length: 0xB1
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -187,7 +187,7 @@ public class UIDragScrollView
     }
 
     // Token : 0x6000146
-    // RVA   : 0x12B7700   Offset: 0x12B6B00   Length: 0xC2
+    // RVA   : 0x12B7D10   Offset: 0x12B7110   Length: 0xC2
     private void OnScroll(float delta)
     {
         ulong uVar1;
@@ -207,7 +207,7 @@ public class UIDragScrollView
     }
 
     // Token : 0x6000147
-    // RVA   : 0x12B7470   Offset: 0x12B6870   Length: 0xC6
+    // RVA   : 0x12B7A80   Offset: 0x12B6E80   Length: 0xC6
     public void OnPan(Vector2 delta)
     {
         ulong uVar1;

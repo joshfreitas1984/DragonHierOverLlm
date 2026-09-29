@@ -6,12 +6,12 @@
 public class ResourcePointUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B3D
+    // Token: 0x4001B3E
     public ResourcePointData resourcePointData;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60020CA
-    // RVA   : 0x9781F0   Offset: 0x9775F0   Length: 0x2E4
+    // RVA   : 0x978880   Offset: 0x977C80   Length: 0x2E4
     private void Start()
     {
         long lVar1;
@@ -29,8 +29,8 @@ public class ResourcePointUIController
               if (lVar1 == null) throw; // [null/range check failed]
               lVar1 = Transform.Find(lVar1,"Circle",0);
               if (lVar1 == null) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
-              puVar3 = (uint32 *)FUN_180d98fe0(&local_18,0);
+              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
+              puVar3 = (uint32 *)FUN_180d995f0(&local_18,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_18 = *puVar3;
               uStack_14 = puVar3[1];
@@ -43,7 +43,7 @@ public class ResourcePointUIController
               if (lVar1 == null) throw; // [null/range check failed]
               lVar1 = Transform.Find(lVar1,"Circle",0);
               if (lVar1 == null) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
               lVar1 = *(int64 *)(DAT_181d73d40 + 184);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_18 = *(uint32 *)(lVar1 + 0x2f0);
@@ -56,8 +56,8 @@ public class ResourcePointUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Icon",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d94460);
-                lVar5 = **(int64 **)(DAT_181dab490 + 184);
+                lVar1 = Component.GetComponent(lVar1,DAT_181d94478);
+                lVar5 = **(int64 **)(DAT_181dab4a8 + 184);
                 if (this.resourcePointData != null) {
                   uVar4 = Int32.ToString(this.resourcePointData + 20,0);
                   if (lVar5 != null) {
@@ -68,7 +68,7 @@ public class ResourcePointUIController
                       if (lVar1 != null) {
                         lVar1 = Transform.Find(lVar1,"Force",0);
                         if (lVar1 != null) {
-                          lVar1 = Component.GetComponent(lVar1,DAT_181d94460);
+                          lVar1 = Component.GetComponent(lVar1,DAT_181d94478);
                           if (this.resourcePointData != null) {
                             lVar5 = ResourcePointData.GetForce(this.resourcePointData,0);
                             if (lVar5 != null) {

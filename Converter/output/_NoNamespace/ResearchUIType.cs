@@ -6,13 +6,13 @@
 public class ResearchUIType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B19
+    // Token: 0x4001B1A
     public int value__;
 
-    // Token: 0x4001B1A
+    // Token: 0x4001B1B
     public const ResearchUIType Show;
 
-    // Token: 0x4001B1B
+    // Token: 0x4001B1C
     public const ResearchUIType Manage;
 
 }

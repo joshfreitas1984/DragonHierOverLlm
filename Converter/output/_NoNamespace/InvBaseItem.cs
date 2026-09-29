@@ -41,7 +41,7 @@ public class InvBaseItem
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600003E
-    // RVA   : 0xC9B570   Offset: 0xC9A970   Length: 0xB6
+    // RVA   : 0xC9BB80   Offset: 0xC9AF80   Length: 0xB6
     public void /*ctor*/()
     {
         uint uVar1;
@@ -51,10 +51,10 @@ public class InvBaseItem
         byte[] local_18 = new byte[16];
         this.minItemLevel = 1;
         this.maxItemLevel = 50;
-        uVar4 = il2cpp_internal(DAT_181d94050);
-        FUN_18132faf0(uVar4,DAT_181d90718);
+        uVar4 = il2cpp_internal(DAT_181d94068);
+        FUN_181330100(uVar4,DAT_181d90730);
         this.stats = uVar4;
-        puVar5 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar5 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar5[1];
         uVar2 = puVar5[2];
         uVar3 = puVar5[3];

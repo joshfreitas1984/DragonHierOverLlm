@@ -24,7 +24,7 @@ public class <>c__DisplayClass257_0
     }
 
     // Token : 0x6000BF3
-    // RVA   : 0x9C67E0   Offset: 0x9C5BE0   Length: 0x8D
+    // RVA   : 0x9C6E70   Offset: 0x9C6270   Length: 0x8D
     internal void <BattleUnitAttackHappen>b__2()
     {
         long lVar1;
@@ -34,13 +34,13 @@ public class <>c__DisplayClass257_0
         lVar1 = this.<>4__this;
         if (lVar1 != null) {
           uVar2 = BattleController.BattleUnitAttackHit(lVar1,this.targetGrid,0,0);
-          FUN_180d8c2e0(lVar1,uVar2,0);
+          FUN_180d8c8f0(lVar1,uVar2,0);
           return;
         }
     }
 
     // Token : 0x6000BF4
-    // RVA   : 0x9C6750   Offset: 0x9C5B50   Length: 0x8D
+    // RVA   : 0x9C6DE0   Offset: 0x9C61E0   Length: 0x8D
     internal void <BattleUnitAttackHappen>b__0()
     {
         long lVar1;
@@ -50,7 +50,7 @@ public class <>c__DisplayClass257_0
         lVar1 = this.<>4__this;
         if (lVar1 != null) {
           uVar2 = BattleController.BattleUnitAttackHit(lVar1,this.targetGrid,0,0);
-          FUN_180d8c2e0(lVar1,uVar2,0);
+          FUN_180d8c8f0(lVar1,uVar2,0);
           return;
         }
     }

@@ -21,7 +21,7 @@ public class <>c__DisplayClass43_0
     }
 
     // Token : 0x6001522
-    // RVA   : 0x9398A0   Offset: 0x938CA0   Length: 0x24
+    // RVA   : 0x939F30   Offset: 0x939330   Length: 0x24
     internal void <RerollButtonClicked>b__1()
     {
         if (this.<>4__this != 0) {
@@ -32,7 +32,7 @@ public class <>c__DisplayClass43_0
     }
 
     // Token : 0x6001523
-    // RVA   : 0x9398D0   Offset: 0x938CD0   Length: 0x1D
+    // RVA   : 0x939F60   Offset: 0x939360   Length: 0x1D
     internal void <RerollButtonClicked>b__2()
     {
         if (this.<>4__this != 0) {
@@ -42,7 +42,7 @@ public class <>c__DisplayClass43_0
     }
 
     // Token : 0x6001524
-    // RVA   : 0x9398A0   Offset: 0x938CA0   Length: 0x24
+    // RVA   : 0x939F30   Offset: 0x939330   Length: 0x24
     internal void <RerollButtonClicked>b__4()
     {
         if (this.<>4__this != 0) {
@@ -53,7 +53,7 @@ public class <>c__DisplayClass43_0
     }
 
     // Token : 0x6001525
-    // RVA   : 0x9398D0   Offset: 0x938CD0   Length: 0x1D
+    // RVA   : 0x939F60   Offset: 0x939360   Length: 0x1D
     internal void <RerollButtonClicked>b__5()
     {
         if (this.<>4__this != 0) {

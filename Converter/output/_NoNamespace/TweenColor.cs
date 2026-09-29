@@ -29,34 +29,34 @@ public class TweenColor
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000599
-    // RVA   : 0xAE8FB0   Offset: 0xAE83B0   Length: 0x227
+    // RVA   : 0xAE9670   Offset: 0xAE8A70   Length: 0x227
     private void Cache()
     {
         long lVar1;
         bool cVar2;
         ulong uVar3;
         this.mCached = 1;
-        uVar3 = Component.GetComponent(this,DAT_181d97060);
+        uVar3 = Component.GetComponent(this,DAT_181d97078);
         this.mWidget = uVar3;
         uVar3 = this.mWidget;
         cVar2 = Object.op_Inequality(uVar3,0,0);
         if (!cVar2) {
-          uVar3 = Component.GetComponent(this,DAT_181d95de0);
+          uVar3 = Component.GetComponent(this,DAT_181d95df8);
           this.mSr = uVar3;
           uVar3 = this.mSr;
           cVar2 = Object.op_Inequality(uVar3,0,0);
           if (!cVar2) {
-            lVar1 = Component.GetComponent(this,DAT_181d94fe0);
+            lVar1 = Component.GetComponent(this,DAT_181d94ff8);
             cVar2 = Object.op_Inequality(lVar1,0,0);
             if (!cVar2) {
-              uVar3 = Component.GetComponent(this,DAT_181d947e0);
+              uVar3 = Component.GetComponent(this,DAT_181d947f8);
               this.mLight = uVar3;
               uVar3 = this.mLight;
               cVar2 = Object.op_Equality(uVar3,0,0);
               if (!cVar2) {
                 return;
               }
-              uVar3 = Component.GetComponentInChildren(this,DAT_181d977e0);
+              uVar3 = Component.GetComponentInChildren(this,DAT_181d977f8);
               this.mWidget = uVar3;
               puVar4 = &this.mWidget;
             }
@@ -65,7 +65,7 @@ public class TweenColor
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              uVar3 = FUN_180d9d700(lVar1,0);
+              uVar3 = FUN_180d9dd10(lVar1,0);
               this.mMat = uVar3;
             }
             il2cpp_internal(puVar4,uVar3);
@@ -74,7 +74,7 @@ public class TweenColor
     }
 
     // Token : 0x600059A
-    // RVA   : 0xAE9340   Offset: 0xAE8740   Length: 0x25
+    // RVA   : 0xAE9A00   Offset: 0xAE8E00   Length: 0x25
     public Color get_color()
     {
         ulong uVar1;
@@ -87,7 +87,7 @@ public class TweenColor
     }
 
     // Token : 0x600059B
-    // RVA   : 0xAE9530   Offset: 0xAE8930   Length: 0x1E
+    // RVA   : 0xAE9BF0   Offset: 0xAE8FF0   Length: 0x1E
     public void set_color(Color value)
     {
         uint local_18;
@@ -102,7 +102,7 @@ public class TweenColor
     }
 
     // Token : 0x600059C
-    // RVA   : 0xAE9370   Offset: 0xAE8770   Length: 0x1B4
+    // RVA   : 0xAE9A30   Offset: 0xAE8E30   Length: 0x1B4
     public Color get_value()
     {
         var pparam_2 = *(int64*)(param_2 + 184);
@@ -132,17 +132,17 @@ public class TweenColor
                 puVar4 = (uint32 *)Color.get_black(local_18,0);
               }
               else {
-                if (*(int64 *)(param_2 + 176) == 0) goto LAB_180ae951f;
+                if (*(int64 *)(param_2 + 176) == 0) goto LAB_180ae9bdf;
                 puVar4 = (uint32 *)Light.get_color(local_18,*(int64 *)(param_2 + 176),0);
               }
             }
             else {
-              if (pparam_2 == 0) goto LAB_180ae951f;
+              if (pparam_2 == 0) goto LAB_180ae9bdf;
               puVar4 = (uint32 *)SpriteRenderer.get_color(local_18,pparam_2,0);
             }
           }
           else {
-            if (*(int64 *)(param_2 + 168) == 0) goto LAB_180ae951f;
+            if (*(int64 *)(param_2 + 168) == 0) goto LAB_180ae9bdf;
             puVar4 = (uint32 *)Material.get_color(local_18,*(int64 *)(param_2 + 168),0);
           }
           uVar5 = *puVar4;
@@ -153,7 +153,7 @@ public class TweenColor
         else {
           lVar2 = *(int64 *)(param_2 + 160);
           if (lVar2 == null) {
-        LAB_180ae951f:
+        LAB_180ae9bdf:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -170,7 +170,7 @@ public class TweenColor
     }
 
     // Token : 0x600059D
-    // RVA   : 0xAE9550   Offset: 0xAE8950   Length: 0x238
+    // RVA   : 0xAE9C10   Offset: 0xAE9010   Length: 0x238
     public void set_value(Color value)
     {
         ulong uVar1;
@@ -250,7 +250,7 @@ public class TweenColor
     }
 
     // Token : 0x600059E
-    // RVA   : 0xAE91E0   Offset: 0xAE85E0   Length: 0x5C
+    // RVA   : 0xAE98A0   Offset: 0xAE8CA0   Length: 0x5C
     protected override void OnUpdate(float factor, bool isFinished)
     {
         uint local_38;
@@ -279,7 +279,7 @@ public class TweenColor
     }
 
     // Token : 0x600059F
-    // RVA   : 0xAE8EF0   Offset: 0xAE82F0   Length: 0xBF
+    // RVA   : 0xAE95B0   Offset: 0xAE89B0   Length: 0xBF
     public static TweenColor Begin(GameObject go, float duration, Color color)
     {
         uint uVar1;
@@ -288,7 +288,7 @@ public class TweenColor
         ulong uVar4;
         long lVar5;
         byte[] local_38 = new byte[48];
-        lVar5 = UITweener.Begin(go,duration,0,DAT_181dc6b30);
+        lVar5 = UITweener.Begin(go,duration,0,DAT_181dc6ce0);
         if (lVar5 != null) {
           puVar6 = (uint64 *)TweenColor.get_value(local_38,lVar5,0);
           uVar4 = puVar6[1];
@@ -310,7 +310,7 @@ public class TweenColor
     }
 
     // Token : 0x60005A0
-    // RVA   : 0xAE92C0   Offset: 0xAE86C0   Length: 0x26
+    // RVA   : 0xAE9980   Offset: 0xAE8D80   Length: 0x26
     public override void SetStartToCurrentValue()
     {
         ulong uVar1;
@@ -322,7 +322,7 @@ public class TweenColor
     }
 
     // Token : 0x60005A1
-    // RVA   : 0xAE9290   Offset: 0xAE8690   Length: 0x29
+    // RVA   : 0xAE9950   Offset: 0xAE8D50   Length: 0x29
     public override void SetEndToCurrentValue()
     {
         ulong uVar1;
@@ -334,7 +334,7 @@ public class TweenColor
     }
 
     // Token : 0x60005A2
-    // RVA   : 0xAE9270   Offset: 0xAE8670   Length: 0x1F
+    // RVA   : 0xAE9930   Offset: 0xAE8D30   Length: 0x1F
     private void SetCurrentValueToStart()
     {
         uint local_18;
@@ -349,7 +349,7 @@ public class TweenColor
     }
 
     // Token : 0x60005A3
-    // RVA   : 0xAE9240   Offset: 0xAE8640   Length: 0x22
+    // RVA   : 0xAE9900   Offset: 0xAE8D00   Length: 0x22
     private void SetCurrentValueToEnd()
     {
         uint local_18;
@@ -364,14 +364,14 @@ public class TweenColor
     }
 
     // Token : 0x60005A4
-    // RVA   : 0xAE92F0   Offset: 0xAE86F0   Length: 0x41
+    // RVA   : 0xAE99B0   Offset: 0xAE8DB0   Length: 0x41
     public void /*ctor*/()
     {
         uint uVar1;
         uint uVar2;
         uint uVar3;
         byte[] local_18 = new byte[16];
-        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];
@@ -379,7 +379,7 @@ public class TweenColor
         *(uint32 *)(this + 124) = uVar1;
         *(uint32 *)(this + 128) = uVar2;
         *(uint32 *)(this + 132) = uVar3;
-        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];

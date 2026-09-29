@@ -6,118 +6,118 @@
 public class StudyInternalSkillController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CF1
+    // Token: 0x4001CF2
     public bool inStudy;
 
-    // Token: 0x4001CF2
+    // Token: 0x4001CF3
     public float totalExp;
 
-    // Token: 0x4001CF3
+    // Token: 0x4001CF4
     public int internalPointFinished;
 
-    // Token: 0x4001CF4
+    // Token: 0x4001CF5
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001CF5
+    // Token: 0x4001CF6
     public GameObject pointUIPrefab;
 
-    // Token: 0x4001CF6
+    // Token: 0x4001CF7
     public GameObject pointHighLightPrefab;
 
-    // Token: 0x4001CF7
+    // Token: 0x4001CF8
     public GameObject lineRendererPrefab;
 
-    // Token: 0x4001CF8
+    // Token: 0x4001CF9
     public GameObject studyInternalSkillRoot;
 
-    // Token: 0x4001CF9
+    // Token: 0x4001CFA
     public GameObject studyInternalSkillObjRoot;
 
-    // Token: 0x4001CFA
+    // Token: 0x4001CFB
     public GameObject studyInternalSkillUIRoot;
 
-    // Token: 0x4001CFB
+    // Token: 0x4001CFC
     public GameObject internalUI;
 
-    // Token: 0x4001CFC
+    // Token: 0x4001CFD
     public GameObject internalPercentUI;
 
-    // Token: 0x4001CFD
+    // Token: 0x4001CFE
     public Button finishButton;
 
-    // Token: 0x4001CFE
+    // Token: 0x4001CFF
     public GameObject startPoint;
 
-    // Token: 0x4001CFF
+    // Token: 0x4001D00
     public bool crashing;
 
-    // Token: 0x4001D00
+    // Token: 0x4001D01
     public bool waitChoosing;
 
-    // Token: 0x4001D01
+    // Token: 0x4001D02
     public GameObject crashingPoint;
 
-    // Token: 0x4001D02
+    // Token: 0x4001D03
     public float nextCrashTime;
 
-    // Token: 0x4001D03
+    // Token: 0x4001D04
     private float manaCost;
 
-    // Token: 0x4001D04
+    // Token: 0x4001D05
     private float crashTimeSpan;
 
-    // Token: 0x4001D05
+    // Token: 0x4001D06
     public GameObject studyInternalPointPrefab;
 
-    // Token: 0x4001D06
+    // Token: 0x4001D07
     public int mapWidth;
 
-    // Token: 0x4001D07
+    // Token: 0x4001D08
     public int mapHeight;
 
-    // Token: 0x4001D08
+    // Token: 0x4001D09
     public GameObject[] gridUnits;
 
-    // Token: 0x4001D09
+    // Token: 0x4001D0A
     public List<GameObject> gridPool;
 
-    // Token: 0x4001D0A
+    // Token: 0x4001D0B
     public const int LittleSuccessPointNum;
 
-    // Token: 0x4001D0B
+    // Token: 0x4001D0C
     public const int BigSuccessPointNum;
 
-    // Token: 0x4001D0C
+    // Token: 0x4001D0D
     public int leftAutoCrashPoint;
 
-    // Token: 0x4001D0D
+    // Token: 0x4001D0E
     private GameObject newObj;
 
-    // Token: 0x4001D0E
+    // Token: 0x4001D0F
     private bool inited;
 
-    // Token: 0x4001D0F
+    // Token: 0x4001D10
     private static StudyInternalSkillController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002286
-    // RVA   : 0xFE28F0   Offset: 0xFE1CF0   Length: 0x36
+    // RVA   : 0xFE2F00   Offset: 0xFE2300   Length: 0x36
     public static StudyInternalSkillController get_Instance()
     {
-        return **(uint64 **)(DAT_181da8110 + 184);
+        return **(uint64 **)(DAT_181da8128 + 184);
     }
 
     // Token : 0x6002287
-    // RVA   : 0xFDF250   Offset: 0xFDE650   Length: 0x43
+    // RVA   : 0xFDF860   Offset: 0xFDEC60   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da8110 + 184);
+        puVar1 = *(uint64 **)(DAT_181da8128 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6002288
-    // RVA   : 0xFE1FF0   Offset: 0xFE13F0   Length: 0x8D9
+    // RVA   : 0xFE2600   Offset: 0xFE1A00   Length: 0x8D9
     private void Update()
     {
         bool cVar1;
@@ -141,7 +141,7 @@ public class StudyInternalSkillController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"Exp",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
           uVar4 = Single.ToString(this + 28,"f0",0);
           uVar4 = String.Concat("经验 ",uVar4,0);
           LTLocalization.SetText(uVar3,uVar4,0);
@@ -150,7 +150,7 @@ public class StudyInternalSkillController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"InternalBar",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
+          lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
           if ((GameController._instance == null) ||
              (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
@@ -167,7 +167,7 @@ public class StudyInternalSkillController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"InternalInjuryBar",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
+          lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
           if ((GameController._instance == null) ||
              (lVar5 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
@@ -185,7 +185,7 @@ public class StudyInternalSkillController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"InternalNum",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
           if ((GameController._instance == null) ||
              (lVar2 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
@@ -198,7 +198,7 @@ public class StudyInternalSkillController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"Bar",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
+          lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
           if (lVar2 == null) throw; // [null/range check failed]
           Image.set_fillAmount(lVar2,(float)this.internalPointFinished / 18.0,0);
           if (this.internalPercentUI == null) throw; // [null/range check failed]
@@ -206,9 +206,9 @@ public class StudyInternalSkillController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"LittleSuccess",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d96160);
+          plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
           if (this.internalPointFinished < 9) {
-            puVar7 = (uint32 *)FUN_1810d33f0(&local_38,0);
+            puVar7 = (uint32 *)FUN_1810d3a00(&local_38,0);
             uVar10 = *puVar7;
             uVar12 = puVar7[1];
             uVar13 = puVar7[2];
@@ -232,9 +232,9 @@ public class StudyInternalSkillController
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"BigSuccess",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d96160);
+          plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
           if (this.internalPointFinished < 18) {
-            puVar8 = (uint64 *)FUN_1810d33f0(&local_38,0);
+            puVar8 = (uint64 *)FUN_1810d3a00(&local_38,0);
           }
           else {
             puVar8 = (uint64 *)Color.get_red();
@@ -269,7 +269,7 @@ public class StudyInternalSkillController
                   if (lVar2 == null) throw; // [null/range check failed]
                   if (lVar2.totalWinFightCount <= 0.0) {
                     uVar3 = StudyInternalSkillController.FinishStudyInternalSkill(this,0,0);
-                    FUN_180d8c2e0(this,uVar3,0);
+                    FUN_180d8c8f0(this,uVar3,0);
                   }
                   else {
                     StudyInternalSkillController.ChangeMana();
@@ -293,7 +293,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x6002289
-    // RVA   : 0xFDF2A0   Offset: 0xFDE6A0   Length: 0x261
+    // RVA   : 0xFDF8B0   Offset: 0xFDECB0   Length: 0x261
     public void ChangeMana(float changeNum)
     {
         ulong uVar1;
@@ -349,7 +349,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x600228A
-    // RVA   : 0xFE1280   Offset: 0xFE0680   Length: 0x377
+    // RVA   : 0xFE1890   Offset: 0xFE0C90   Length: 0x377
     public void Init()
     {
         long lVar2;
@@ -371,10 +371,10 @@ public class StudyInternalSkillController
         this.inited = 1;
         local_58 = 11;
         local_50 = 11;
-        lVar2 = FUN_1800d6020(DAT_181da99e0,&local_58);
+        lVar2 = FUN_1800d6020(DAT_181da99f8,&local_58);
         this.gridUnits = lVar2;
-        uVar3 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(uVar3,DAT_181d89298);
+        uVar3 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(uVar3,DAT_181d892b0);
         this.gridPool = uVar3;
         iVar9 = 0;
         do {
@@ -385,55 +385,55 @@ public class StudyInternalSkillController
             uVar5 = this.studyInternalPointPrefab;
             uVar3 = GlobalData.AddChild(uVar3,uVar5,0);
             if (lVar2 == null) {
-        LAB_180fe15f2:
+        LAB_180fe1c02:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             lVar8 = (int64)iVar9;
             lVar7 = (int64)iVar6;
             FUN_180128020(lVar2,lVar7,lVar8,uVar3);
-            if (*plVar1 == 0) goto LAB_180fe15f2;
+            if (*plVar1 == 0) goto LAB_180fe1c02;
             lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             lVar2 = GameObject.get_transform(lVar2,0);
             puVar4 = (uint64 *)Vector3.get_one(&local_58,0);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             local_60 = *(uint32 *)(puVar4 + 1);
             local_68 = *puVar4;
             Transform.set_localScale(lVar2,&local_68,0);
-            if (*plVar1 == 0) goto LAB_180fe15f2;
+            if (*plVar1 == 0) goto LAB_180fe1c02;
             lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             lVar2 = GameObject.get_transform(lVar2,0);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             local_70 = 0;
             local_78 = (float)iVar6 * 0.85;
             local_74 = (float)iVar9 * 0.85;
             Transform.set_localPosition(lVar2,&local_78,0);
-            if (*plVar1 == 0) goto LAB_180fe15f2;
+            if (*plVar1 == 0) goto LAB_180fe1c02;
             lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
             local_res8[0] = iVar9;
-            uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+            uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
             local_res18[0] = iVar6;
-            uVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
+            uVar5 = il2cpp_value_box(DAT_181d80430,local_res18);
             uVar3 = String.Format("{0}_{1}",uVar3,uVar5,0);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             Object.set_name(lVar2,uVar3,0);
-            if (*plVar1 == 0) goto LAB_180fe15f2;
+            if (*plVar1 == 0) goto LAB_180fe1c02;
             lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             GameObject.SetActive(lVar2,0,0);
-            if (*plVar1 == 0) goto LAB_180fe15f2;
+            if (*plVar1 == 0) goto LAB_180fe1c02;
             lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             lVar2 = GameObject.GetComponent(lVar2,DAT_181d73e60);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             *(int *)(lVar2 + 60) = iVar6;
-            if (*plVar1 == 0) goto LAB_180fe15f2;
+            if (*plVar1 == 0) goto LAB_180fe1c02;
             lVar2 = FUN_180127f90(*plVar1,lVar7);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             lVar2 = GameObject.GetComponent(lVar2,DAT_181d73e60);
-            if (lVar2 == null) goto LAB_180fe15f2;
+            if (lVar2 == null) goto LAB_180fe1c02;
             iVar6 = iVar6 + 1;
             *(int *)(lVar2 + 64) = iVar9;
           } while (iVar6 < 11);
@@ -445,7 +445,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x600228B
-    // RVA   : 0xFE1130   Offset: 0xFE0530   Length: 0xF1
+    // RVA   : 0xFE1740   Offset: 0xFE0B40   Length: 0xF1
     public GameObject GetPointDirection(int row, int column, int direction)
     {
         uint64
@@ -513,7 +513,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x600228C
-    // RVA   : 0xFE1230   Offset: 0xFE0630   Length: 0x47
+    // RVA   : 0xFE1840   Offset: 0xFE0C40   Length: 0x47
     public GameObject GetPoint(int row, int column)
     {
         ulong uVar1;
@@ -530,7 +530,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x600228D
-    // RVA   : 0xFE1D80   Offset: 0xFE1180   Length: 0x261
+    // RVA   : 0xFE2390   Offset: 0xFE1790   Length: 0x261
     public void StartStudyInternalSkill(KungfuSkillLvData target)
     {
         int iVar1;
@@ -558,10 +558,10 @@ public class StudyInternalSkillController
               if (this.studyInternalSkillObjRoot != null) {
                 uVar4 = GameObject.get_transform(this.studyInternalSkillObjRoot,0);
                 uVar4 = ShortcutExtensions.DOScale(uVar4);
-                uVar4 = TweenSettingsExtensions.SetEase(uVar4,8,DAT_181dc0f80);
-                uVar5 = new OnTooltipCB(this,DAT_181db7090,0);
-                uVar4 = TweenSettingsExtensions.OnComplete(uVar4,uVar5,DAT_181dc01d0);
-                TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1db0);
+                uVar4 = TweenSettingsExtensions.SetEase(uVar4,8,DAT_181dc1128);
+                uVar5 = new OnTooltipCB(this,DAT_181db7240,0);
+                uVar4 = TweenSettingsExtensions.OnComplete(uVar4,uVar5,DAT_181dc0380);
+                TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1f60);
                 this.totalExp = 0;
                 if (this.targetSkill != null) {
                   lVar2 = KungfuSkillLvData.DataBase(this.targetSkill,0);
@@ -593,7 +593,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x600228E
-    // RVA   : 0xFDF760   Offset: 0xFDEB60   Length: 0x19CA
+    // RVA   : 0xFDFD70   Offset: 0xFDF170   Length: 0x19CA
     public void GenerateStudyInternalPanel()
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -624,15 +624,15 @@ public class StudyInternalSkillController
             local_78 = CONCAT44((float)(this.mapHeight + -1) * -0.5 * 0.85,
                                 (float)(this.mapWidth + -1) * -0.5 * 0.85);
             Transform.set_localPosition(lVar5,&local_78,0);
-            lVar5 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(lVar5,DAT_181d8f098);
+            lVar5 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(lVar5,DAT_181d8f0b0);
             iVar12 = 0;
             while( true ) {
               lVar6 = *(int64 *)(pStatics + 0x550);
               if (lVar6 == null) throw; // [null/range check failed]
               if (*(int *)(lVar6 + 24) <= iVar12) break;
               if (lVar5 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar5,iVar12);
+              FUN_18182a6c0(lVar5,iVar12);
               iVar12 = iVar12 + 1;
             }
             iVar12 = 0;
@@ -644,7 +644,7 @@ public class StudyInternalSkillController
                     if (((this.gridUnits == null) ||
                         (lVar6 = FUN_180127f90(this.gridUnits,(int64)iVar14,
                                                (int64)iVar12), lVar6 == null)) ||
-                       (lVar7 = FUN_180f92a00(lVar6,0)) == null) throw; // [null/range check failed]
+                       (lVar7 = FUN_180f93010(lVar6,0)) == null) throw; // [null/range check failed]
                     GameObject.SetActive(lVar7,1,0);
                     lVar7 = GameObject.get_transform(lVar6,0);
                     puVar8 = (uint64 *)Vector3.get_zero(&local_68,0);
@@ -654,7 +654,7 @@ public class StudyInternalSkillController
                     Transform.set_localScale(lVar7,&local_78,0);
                     lVar7 = GameObject.GetComponent(lVar6,DAT_181d73e60);
                     if ((lVar7 == null) || (*(int64 *)(lVar7 + 104) == 0)) throw; // [null/range check failed]
-                    FUN_1812f9a10(*(int64 *)(lVar7 + 104),DAT_181d89418);
+                    FUN_1812fa020(*(int64 *)(lVar7 + 104),DAT_181d89430);
                     lVar7 = GameObject.GetComponent(lVar6,DAT_181d73e60);
                     if (lVar7 == null) throw; // [null/range check failed]
                     StudyInternalPointController.ResetLineRenderer(lVar7,0);
@@ -662,7 +662,7 @@ public class StudyInternalSkillController
                     if (lVar7 == null) throw; // [null/range check failed]
                     *(uint32 *)(lVar7 + 52) = 0;
                     if (this.gridPool == null) throw; // [null/range check failed]
-                    FUN_18181e0a0(this.gridPool,lVar6,DAT_181d89398);
+                    FUN_18181e6b0(this.gridPool,lVar6,DAT_181d893b0);
                     lVar7 = GameObject.GetComponent(lVar6,DAT_181d73e60);
                     if ((this.gridPool == null) || (lVar7 == null)) throw; // [null/range check failed]
                     *(int *)(lVar7 + 68) = this.gridPool.Count + -1;
@@ -675,14 +675,14 @@ public class StudyInternalSkillController
                     }
                     else {
                       if (lVar5 == null) throw; // [null/range check failed]
-                      uVar4 = FUN_180d95a30(0,lVar5.Count,0);
-                      uVar4 = FUN_1800d6760(lVar5,uVar4,DAT_181d8fa18);
+                      uVar4 = FUN_180d96040(0,lVar5.Count,0);
+                      uVar4 = FUN_1800d6760(lVar5,uVar4,DAT_181d8fa30);
                       lVar6 = GameObject.GetComponent(lVar6,DAT_181d73e60);
                       lVar7 = *(int64 *)(pStatics + 0x550);
-                      if ((lVar7 == null) || (uVar9 = FUN_180002f80(lVar7,uVar4,DAT_181da4358), lVar6 == null))
+                      if ((lVar7 == null) || (uVar9 = FUN_180002f80(lVar7,uVar4,DAT_181da4370), lVar6 == null))
                       throw; // [null/range check failed]
                       *(uint64 *)(lVar6 + 24) = uVar9;
-                      FUN_1817eee00(lVar5,uVar4,DAT_181d8f618);
+                      FUN_1817ef410(lVar5,uVar4,DAT_181d8f630);
                     }
                     iVar14 = iVar14 + 1;
                   } while (iVar14 < this.mapWidth);
@@ -707,7 +707,7 @@ public class StudyInternalSkillController
                         if ((this.gridUnits == null) ||
                            (uVar9 = FUN_180127f90(this.gridUnits,(int64)(iVar13 + -1),
                                                   (int64)iVar12), lVar5 == null)) throw; // [null/range check failed]
-                        FUN_18181e0a0(lVar5,uVar9,DAT_181d89398);
+                        FUN_18181e6b0(lVar5,uVar9,DAT_181d893b0);
                         iVar14 = this.mapWidth;
                       }
                       lVar5 = (int64)iVar12;
@@ -721,7 +721,7 @@ public class StudyInternalSkillController
                         if ((this.gridUnits == null) ||
                            (uVar9 = FUN_180127f90(this.gridUnits,(int64)(iVar13 + 1),
                                                   lVar5), lVar6 == null)) throw; // [null/range check failed]
-                        FUN_18181e0a0(lVar6,uVar9,DAT_181d89398);
+                        FUN_18181e6b0(lVar6,uVar9,DAT_181d893b0);
                       }
                       if (0 < iVar12) {
                         if (this.gridUnits == null) throw; // [null/range check failed]
@@ -734,7 +734,7 @@ public class StudyInternalSkillController
                            (uVar9 = FUN_180127f90(this.gridUnits,(int64)iVar13,
                                                   (int64)(iVar12 + -1)), lVar6 == null))
                         throw; // [null/range check failed]
-                        FUN_18181e0a0(lVar6,uVar9,DAT_181d89398);
+                        FUN_18181e6b0(lVar6,uVar9,DAT_181d893b0);
                       }
                       if (iVar12 < this.mapHeight + -1) {
                         if (((this.gridUnits == null) ||
@@ -747,7 +747,7 @@ public class StudyInternalSkillController
                            (uVar9 = FUN_180127f90(this.gridUnits,(int64)iVar13,
                                                   (int64)(iVar12 + 1)), lVar5 == null))
                         throw; // [null/range check failed]
-                        FUN_18181e0a0(lVar5,uVar9,DAT_181d89398);
+                        FUN_18181e6b0(lVar5,uVar9,DAT_181d893b0);
                       }
                       iVar14 = this.mapWidth;
                       iVar13 = iVar13 + 1;
@@ -797,7 +797,7 @@ public class StudyInternalSkillController
                 lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60);
                 if ((lVar5 == null) || (lVar7 == null)) throw; // [null/range check failed]
                 iVar12 = iVar12 + -1;
-        LAB_180fe0234:
+        LAB_180fe0844:
                 uVar9 = FUN_180127f90(lVar7,(int64)iVar12);
                 if (lVar10 == null) throw; // [null/range check failed]
                 StudyInternalPointController.RemoveConnect(lVar10,uVar9);
@@ -827,7 +827,7 @@ public class StudyInternalSkillController
                   iVar12 = *(int *)(lVar11 + 60);
                   lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60);
                   if ((lVar5 == null) || (lVar7 == null)) throw; // [null/range check failed]
-                  goto LAB_180fe0234;
+                  goto LAB_180fe0844;
                 }
               }
               lVar5 = this.startPoint;
@@ -837,14 +837,14 @@ public class StudyInternalSkillController
             }
             Random.Range();
             iVar12 = Mathf.RoundToInt();
-            lVar6 = il2cpp_internal(DAT_181d953d0);
-            FUN_18132faf0(lVar6);
+            lVar6 = il2cpp_internal(DAT_181d953e8);
+            FUN_181330100(lVar6);
             lVar5 = this.gridPool;
             uVar15 = 0;
             if (lVar5 == null) throw; // [null/range check failed]
             lVar7 = 32;
             while( true ) {
-              if (lVar5.Count <= (int)uVar15) goto joined_r0x000180fe068b;
+              if (lVar5.Count <= (int)uVar15) goto joined_r0x000180fe0c9b;
               if (lVar5 == null) break;
               if (lVar5.Count <= uVar15) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -866,50 +866,50 @@ public class StudyInternalSkillController
                        (*(int64 *)(lVar5 + 104) == 0)) throw; // [null/range check failed]
                     if (*(int *)(*(int64 *)(lVar5 + 104) + 24) <= iVar14) break;
                     if (((this.gridPool == null) ||
-                        (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89918),
+                        (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89930),
                         lVar5 == null)) ||
                        ((((lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60), lVar5 == null ||
                           ((*(int64 *)(lVar5 + 104) == 0 ||
-                           (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 104),iVar14,DAT_181d89918),
+                           (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 104),iVar14,DAT_181d89930),
                            lVar5 == null)))) ||
                          (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60)) == null) ||
                         (*(int64 *)(lVar5 + 104) == 0)))) throw; // [null/range check failed]
                     if (2 < *(int *)(*(int64 *)(lVar5 + 104) + 24)) {
                       if (((this.gridPool == null) ||
-                          (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89918),
+                          (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89930),
                           lVar5 == null)) ||
                          (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60)) == null)
                       throw; // [null/range check failed]
                       iVar13 = *(int *)(lVar5 + 68);
                       if ((((this.gridPool == null) ||
-                           (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89918),
+                           (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89930),
                            lVar5 == null)) ||
                           ((lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60), lVar5 == null ||
                            ((*(int64 *)(lVar5 + 104) == 0 ||
-                            (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 104),iVar14,DAT_181d89918),
+                            (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 104),iVar14,DAT_181d89930),
                             lVar5 == null)))))) ||
                          (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60)) == null)
                       throw; // [null/range check failed]
                       if (iVar13 < *(int *)(lVar5 + 68)) {
                         if (((this.gridPool == null) ||
-                            (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89918),
+                            (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89930),
                             lVar5 == null)) ||
                            (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60)) == null)
                         throw; // [null/range check failed]
                         uVar4 = *(uint32 *)(lVar5 + 68);
                         if (((this.gridPool == null) ||
-                            (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89918),
+                            (lVar5 = FUN_180002f80(this.gridPool,uVar15,DAT_181d89930),
                             lVar5 == null)) ||
                            (((lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60), lVar5 == null ||
                              ((*(int64 *)(lVar5 + 104) == 0 ||
-                              (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 104),iVar14,DAT_181d89918),
+                              (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 104),iVar14,DAT_181d89930),
                               lVar5 == null)))) ||
                             (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60)) == null)))
                         throw; // [null/range check failed]
                         uVar1 = *(uint32 *)(lVar5 + 68);
                         uVar9 = new PointConnection(uVar4,uVar1);
                         if (lVar6 == null) throw; // [null/range check failed]
-                        FUN_18181e0a0(lVar6,uVar9,DAT_181d97b08);
+                        FUN_18181e6b0(lVar6,uVar9,DAT_181d97b20);
                       }
                     }
                     iVar14 = iVar14 + 1;
@@ -924,8 +924,8 @@ public class StudyInternalSkillController
           }
         }
         throw; // [null/range check failed]
-        LAB_180fe0f40:
-        uVar9 = DAT_181dc2868;
+        LAB_180fe1550:
+        uVar9 = DAT_181dc2880;
         uVar9 = Type.GetTypeFromHandle(uVar9,0);
         lVar5 = Enum.GetNames(uVar9);
         if (lVar5 == null) throw; // [null/range check failed]
@@ -941,12 +941,12 @@ public class StudyInternalSkillController
         if (0 < iVar14 + 2) {
           do {
             if (lVar6 == null) throw; // [null/range check failed]
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar6 + 24),0);
-            lVar5 = FUN_180002f80(lVar6,uVar4,DAT_181d89918);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar6 + 24),0);
+            lVar5 = FUN_180002f80(lVar6,uVar4,DAT_181d89930);
             if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60)) == null)
             throw; // [null/range check failed]
             *(int *)(lVar5 + 52) = iVar12;
-            lVar5 = FUN_180002f80(lVar6,uVar4,DAT_181d89918);
+            lVar5 = FUN_180002f80(lVar6,uVar4,DAT_181d89930);
             if (lVar5 == null) throw; // [null/range check failed]
             lVar5 = GameObject.GetComponent(lVar5,DAT_181d73e60);
             if (iVar13 < 2) {
@@ -958,64 +958,64 @@ public class StudyInternalSkillController
             }
             if (lVar5 == null) throw; // [null/range check failed]
             *(bool *)(lVar5 + 56) = bVar16;
-            FUN_181823590();
+            FUN_181823ba0();
             iVar13 = iVar13 + 1;
           } while (iVar13 < iVar14 + 2);
         }
         iVar12 = iVar12 + 1;
-        goto LAB_180fe0f40;
-        joined_r0x000180fe068b:
+        goto LAB_180fe1550;
+        joined_r0x000180fe0c9b:
         if (0 < iVar12) {
           if (lVar6 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar6 + 24) < 1) goto LAB_180fe09e8;
-          uVar15 = FUN_180d95a30(0,*(int *)(lVar6 + 24),0);
+          if (*(int *)(lVar6 + 24) < 1) goto LAB_180fe0ff8;
+          uVar15 = FUN_180d96040(0,*(int *)(lVar6 + 24),0);
           if (*(uint32 *)(lVar6 + 24) <= uVar15) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar5 = lVar6[uVar15];
-          FUN_1817eee00(lVar6,lVar5,DAT_181d97b88);
+          FUN_1817ef410(lVar6,lVar5,DAT_181d97ba0);
           lVar7 = this.gridPool;
           if (lVar5 == null) {
-        LAB_180fe1125:
+        LAB_180fe1735:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar15 = lVar5._items;
-          if (lVar7 == null) goto LAB_180fe1125;
+          if (lVar7 == null) goto LAB_180fe1735;
           if (lVar7.Count <= uVar15) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar7 = lVar7._items[uVar15];
-          if (lVar7 == null) goto LAB_180fe1125;
+          if (lVar7 == null) goto LAB_180fe1735;
           lVar10 = GameObject.GetComponent(lVar7,DAT_181d73e60);
           lVar7 = this.gridPool;
           uVar15 = *(uint32 *)(lVar5 + 20);
-          if (lVar7 == null) goto LAB_180fe1125;
+          if (lVar7 == null) goto LAB_180fe1735;
           if (lVar7.Count <= uVar15) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar7 = lVar7._items[uVar15];
-          if (lVar10 == null) goto LAB_180fe1125;
+          if (lVar10 == null) goto LAB_180fe1735;
           if (((*(int64 *)(lVar10 + 104) == 0) ||
-              (FUN_1817eee00(*(int64 *)(lVar10 + 104),lVar7,DAT_181d89618), lVar7 == null)) ||
-             (lVar7 = GameObject.GetComponent(lVar7,DAT_181d73e60)) == null) goto LAB_180fe1125;
+              (FUN_1817ef410(*(int64 *)(lVar10 + 104),lVar7,DAT_181d89630), lVar7 == null)) ||
+             (lVar7 = GameObject.GetComponent(lVar7,DAT_181d73e60)) == null) goto LAB_180fe1735;
           lVar7 = *(int64 *)(lVar7 + 104);
           uVar9 = Component.get_gameObject(lVar10,0);
-          if (lVar7 == null) goto LAB_180fe1125;
-          FUN_1817eee00(lVar7,uVar9,DAT_181d89618);
+          if (lVar7 == null) goto LAB_180fe1735;
+          FUN_1817ef410(lVar7,uVar9,DAT_181d89630);
           local_68 = (int64)this.mapWidth;
           local_60 = (int64)this.mapHeight;
-          lVar7 = FUN_1800d6020(DAT_181da9860,&local_68);
-          if (this.startPoint == null) goto LAB_180fe1125;
+          lVar7 = FUN_1800d6020(DAT_181da9878,&local_68);
+          if (this.startPoint == null) goto LAB_180fe1735;
           uVar9 = GameObject.GetComponent(this.startPoint,DAT_181d73e60);
           StudyInternalSkillController.FindConnectedPoint(this,lVar7,uVar9,0);
           iVar14 = 0;
           bVar16 = true;
           if (this.mapWidth < 1) {
-        LAB_180fe0910:
+        LAB_180fe0f20:
             if (((this.gridPool == null) ||
                 (lVar7 = FUN_180002f80(this.gridPool,lVar5._items,
-                                       DAT_181d89918), lVar7 == null)) ||
+                                       DAT_181d89930), lVar7 == null)) ||
                ((lVar7 = GameObject.GetComponent(lVar7,DAT_181d73e60), lVar7 == null ||
                 (*(int64 *)(lVar7 + 104) == 0)))) throw; // [null/range check failed]
             if (*(int *)(*(int64 *)(lVar7 + 104) + 24) < 3) {
@@ -1047,23 +1047,23 @@ public class StudyInternalSkillController
               }
               iVar14 = iVar14 + 1;
             } while (iVar14 < this.mapWidth);
-            if (bVar16) goto LAB_180fe0910;
+            if (bVar16) goto LAB_180fe0f20;
             if ((this.gridPool == null) ||
                (lVar7 = FUN_180002f80(this.gridPool,lVar5._items,
-                                      DAT_181d89918), lVar7 == null)) throw; // [null/range check failed]
+                                      DAT_181d89930), lVar7 == null)) throw; // [null/range check failed]
             lVar7 = GameObject.GetComponent(lVar7,DAT_181d73e60);
             if ((this.gridPool == null) ||
                (uVar9 = FUN_180002f80(this.gridPool,*(uint32 *)(lVar5 + 20)),
                lVar7 == null)) throw; // [null/range check failed]
             StudyInternalPointController.AddConnect(lVar7,uVar9);
           }
-          goto joined_r0x000180fe068b;
+          goto joined_r0x000180fe0c9b;
         }
-        LAB_180fe09e8:
+        LAB_180fe0ff8:
         Random.Range();
         iVar12 = Mathf.RoundToInt();
-        lVar5 = il2cpp_internal(DAT_181d953d0);
-        FUN_18132faf0(lVar5,DAT_181d97a88);
+        lVar5 = il2cpp_internal(DAT_181d953e8);
+        FUN_181330100(lVar5,DAT_181d97aa0);
         local_res8 = 0;
         if (0 < this.mapWidth) {
           do {
@@ -1094,7 +1094,7 @@ public class StudyInternalSkillController
                       uVar1 = *(uint32 *)(lVar10 + 68);
                       uVar9 = new PointConnection(uVar4,uVar1,0);
                       if (lVar5 == null) throw; // [null/range check failed]
-                      FUN_18181e0a0(lVar5,uVar9,DAT_181d97b08);
+                      FUN_18181e6b0(lVar5,uVar9,DAT_181d97b20);
                     }
                   }
                   if (iVar14 < this.mapWidth + -1) {
@@ -1115,7 +1115,7 @@ public class StudyInternalSkillController
                       uVar1 = *(uint32 *)(lVar6 + 68);
                       uVar9 = new PointConnection(uVar4,uVar1,0);
                       if (lVar5 == null) throw; // [null/range check failed]
-                      FUN_18181e0a0(lVar5,uVar9,DAT_181d97b08);
+                      FUN_18181e6b0(lVar5,uVar9,DAT_181d97b20);
                     }
                   }
                 }
@@ -1128,7 +1128,7 @@ public class StudyInternalSkillController
         for (; 0 < iVar12; iVar12 = iVar12 + -1) {
           if (lVar5 == null) throw; // [null/range check failed]
           if (lVar5.Count < 1) break;
-          uVar15 = FUN_180d95a30(0,lVar5.Count,0);
+          uVar15 = FUN_180d96040(0,lVar5.Count,0);
           if (lVar5.Count <= uVar15) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -1152,22 +1152,22 @@ public class StudyInternalSkillController
           lVar7 = lVar7._items[uVar15];
           if (lVar10 == null) throw; // [null/range check failed]
           if (((*(int64 *)(lVar10 + 104) == 0) ||
-              (FUN_18181e0a0(*(int64 *)(lVar10 + 104),lVar7,DAT_181d89398), lVar7 == null)) ||
+              (FUN_18181e6b0(*(int64 *)(lVar10 + 104),lVar7,DAT_181d893b0), lVar7 == null)) ||
              (lVar7 = GameObject.GetComponent(lVar7,DAT_181d73e60)) == null) throw; // [null/range check failed]
           lVar7 = *(int64 *)(lVar7 + 104);
           uVar9 = Component.get_gameObject(lVar10,0);
           if (lVar7 == null) throw; // [null/range check failed]
-          FUN_18181e0a0(lVar7,uVar9,DAT_181d89398);
-          FUN_1817eee00(lVar5,lVar6);
+          FUN_18181e6b0(lVar7,uVar9,DAT_181d893b0);
+          FUN_1817ef410(lVar5,lVar6);
         }
-        lVar6 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(lVar6,DAT_181d89298);
+        lVar6 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(lVar6,DAT_181d892b0);
         uVar15 = 0;
         lVar5 = this.gridPool;
         while (lVar5 != null) {
           if (lVar5.Count <= (int)uVar15) {
             iVar12 = 0;
-            goto LAB_180fe0f40;
+            goto LAB_180fe1550;
           }
           if (lVar5 == null) break;
           if (lVar5.Count <= uVar15) {
@@ -1176,8 +1176,8 @@ public class StudyInternalSkillController
           cVar3 = StudyInternalSkillController.StartOrNearStartPoint(this);
           if (!cVar3) {
             if ((this.gridPool == null) ||
-               (FUN_180002f80(this.gridPool,uVar15,DAT_181d89918), lVar6 == null)) break;
-            FUN_18181e0a0(lVar6);
+               (FUN_180002f80(this.gridPool,uVar15,DAT_181d89930), lVar6 == null)) break;
+            FUN_18181e6b0(lVar6);
           }
           uVar15 = uVar15 + 1;
           lVar5 = this.gridPool;
@@ -1185,7 +1185,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x600228F
-    // RVA   : 0xFE1CA0   Offset: 0xFE10A0   Length: 0xD5
+    // RVA   : 0xFE22B0   Offset: 0xFE16B0   Length: 0xD5
     private bool StartOrNearStartPoint(GameObject targetPoint)
     {
         ulong uVar1;
@@ -1200,14 +1200,14 @@ public class StudyInternalSkillController
         if (this.startPoint != null) {
           lVar4 = GameObject.GetComponent(this.startPoint,DAT_181d73e60);
           if ((lVar4 != null) && (*(int64 *)(lVar4 + 104) != 0)) {
-            uVar3 = FUN_18181e400(*(int64 *)(lVar4 + 104),targetPoint,DAT_181d89498);
+            uVar3 = FUN_18181ea10(*(int64 *)(lVar4 + 104),targetPoint,DAT_181d894b0);
             return uVar3;
           }
         }
     }
 
     // Token : 0x6002290
-    // RVA   : 0xFE1600   Offset: 0xFE0A00   Length: 0xD3
+    // RVA   : 0xFE1C10   Offset: 0xFE1010   Length: 0xD3
     private void RemoveRandomRange(List<PointConnection> randomRange, int targetID)
     {
         void StudyInternalSkillController.RemoveRandomRange
@@ -1227,13 +1227,13 @@ public class StudyInternalSkillController
               lVar1 = *(int64 *)(lVar3 + *(int64 *)(randomRange + 16));
               if (lVar1 == null) throw; // [null/range check failed]
               if (*(int *)(lVar1 + 16) == targetID) {
-        LAB_180fe169f:
-                FUN_181823590(randomRange,uVar2,DAT_181d97c08);
+        LAB_180fe1caf:
+                FUN_181823ba0(randomRange,uVar2,DAT_181d97c20);
               }
               else {
-                lVar1 = FUN_180002f80(randomRange,uVar2,DAT_181d97d08);
+                lVar1 = FUN_180002f80(randomRange,uVar2,DAT_181d97d20);
                 if (lVar1 == null) throw; // [null/range check failed]
-                if (*(int *)(lVar1 + 20) == targetID) goto LAB_180fe169f;
+                if (*(int *)(lVar1 + 20) == targetID) goto LAB_180fe1caf;
               }
               lVar3 = lVar3 + -8;
               uVar2 = uVar2 - 1;
@@ -1244,7 +1244,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x6002291
-    // RVA   : 0xFDF510   Offset: 0xFDE910   Length: 0x195
+    // RVA   : 0xFDFB20   Offset: 0xFDEF20   Length: 0x195
     private void FindConnectedPoint(bool[] vis, StudyInternalPointController targetPoint)
     {
         void StudyInternalSkillController.FindConnectedPoint
@@ -1297,7 +1297,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x6002292
-    // RVA   : 0xFE1850   Offset: 0xFE0C50   Length: 0x38C
+    // RVA   : 0xFE1E60   Offset: 0xFE1260   Length: 0x38C
     public void ShowPoint()
     {
         uint uVar1;
@@ -1333,26 +1333,26 @@ public class StudyInternalSkillController
                                     (lVar3,(float)*(int *)(lVar4 + 52) * 0.3,0), lVar2 == null)) break;
               *(uint32 *)(lVar2 + 36) = uVar1;
               if ((this.gridPool == null) ||
-                 (lVar2 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89918)) == null)
+                 (lVar2 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89930)) == null)
               break;
               lVar2 = GameObject.GetComponent(lVar2,DAT_181d73e60);
               if (((this.gridPool == null) ||
-                  ((lVar3 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89918), lVar3 == null
+                  ((lVar3 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89930), lVar3 == null
                    || (lVar3 = GameObject.GetComponent(lVar3,DAT_181d73e60)) == null))) ||
                  (lVar2 == null)) break;
               *(float *)(lVar2 + 48) = (float)((*(int *)(lVar3 + 36) + 1) * 5);
               if (((this.gridPool == null) ||
-                  (lVar2 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89918)) == null)
+                  (lVar2 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89930)) == null)
                  || (lVar2 = GameObject.GetComponent(lVar2,DAT_181d73e60)) == null) break;
               StudyInternalPointController.Init(lVar2,0);
               if ((this.gridPool == null) ||
-                 (lVar2 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89918)) == null)
+                 (lVar2 = FUN_180002f80(this.gridPool,uVar6,DAT_181d89930)) == null)
               break;
               uVar5 = GameObject.get_transform(lVar2,0);
               uVar5 = ShortcutExtensions.DOScale(uVar5);
               Random.Range();
               uVar5 = TweenSettingsExtensions.SetDelay(uVar5);
-              uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc0f80);
+              uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc1128);
               TweenSettingsExtensions.SetUpdate(uVar5,1);
               lVar2 = this.gridPool;
               uVar6 = uVar6 + 1;
@@ -1364,10 +1364,10 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x6002293
-    // RVA   : 0xFE1BE0   Offset: 0xFE0FE0   Length: 0xB3
+    // RVA   : 0xFE21F0   Offset: 0xFE15F0   Length: 0xB3
     public void ShowStartPoint()
     {
-        var pStatics = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics = *(int64*)(DAT_181dadd10 + 184);
         long lVar1;
         this.crashingPoint = this.startPoint;
         if (this.startPoint != null) {
@@ -1383,7 +1383,7 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x6002294
-    // RVA   : 0xFE16E0   Offset: 0xFE0AE0   Length: 0x16B
+    // RVA   : 0xFE1CF0   Offset: 0xFE10F0   Length: 0x16B
     public void SetCrashingPoint(GameObject targetPoint)
     {
         long lVar1;
@@ -1394,7 +1394,7 @@ public class StudyInternalSkillController
         lVar1 = this.crashingPoint;
         cVar3 = Object.op_Inequality(lVar1,0,0);
         if (cVar3) {
-          if (*plVar4 == 0) goto LAB_180fe1846;
+          if (*plVar4 == 0) goto LAB_180fe1e56;
           uVar2 = GameObject.get_transform(*plVar4,0);
           ShortcutExtensions.DOKill(uVar2,1,0);
         }
@@ -1404,7 +1404,7 @@ public class StudyInternalSkillController
         cVar3 = Object.op_Inequality(lVar1,0,0);
         if (cVar3) {
           if (*plVar4 == 0) {
-        LAB_180fe1846:
+        LAB_180fe1e56:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1412,22 +1412,22 @@ public class StudyInternalSkillController
           local_10 = 0xc3b40000;
           local_18 = 0;
           uVar2 = ShortcutExtensions.DOLocalRotate(uVar2,&local_18,0x40000000,1,0);
-          uVar2 = TweenSettingsExtensions.SetLoops(uVar2,0xffffffff,0,DAT_181dc12a8);
-          TweenSettingsExtensions.SetEase(uVar2,1,DAT_181dc0d70);
+          uVar2 = TweenSettingsExtensions.SetLoops(uVar2,0xffffffff,0,DAT_181dc1458);
+          TweenSettingsExtensions.SetEase(uVar2,1,DAT_181dc0f10);
         }
     }
 
     // Token : 0x6002295
-    // RVA   : 0xFDF6B0   Offset: 0xFDEAB0   Length: 0x28
+    // RVA   : 0xFDFCC0   Offset: 0xFDF0C0   Length: 0x28
     public void FinishButtonClicked()
     {
         ulong uVar1;
         uVar1 = StudyInternalSkillController.FinishStudyInternalSkill(this,1);
-        FUN_180d8c2e0(this,uVar1,0);
+        FUN_180d8c8f0(this,uVar1,0);
     }
 
     // Token : 0x6002296
-    // RVA   : 0xFDF6E0   Offset: 0xFDEAE0   Length: 0x7B
+    // RVA   : 0xFDFCF0   Offset: 0xFDF0F0   Length: 0x7B
     public IEnumerator FinishStudyInternalSkill(StudyInternalResult studyInternalResult)
     {
         int64 StudyInternalSkillController.FinishStudyInternalSkill
@@ -1443,10 +1443,10 @@ public class StudyInternalSkillController
     }
 
     // Token : 0x6002297
-    // RVA   : 0xFE28D0   Offset: 0xFE1CD0   Length: 0x11
+    // RVA   : 0xFE2EE0   Offset: 0xFE22E0   Length: 0x11
     public void /*ctor*/()
     {
-        void FUN_180fe28d0(int64 this)
+        void FUN_180fe2ee0(int64 this)
         {
         this.crashTimeSpan = 0x3e4ccccd;
         FUN_18044ef50(this,0);

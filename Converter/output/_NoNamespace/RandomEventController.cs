@@ -6,58 +6,58 @@
 public class RandomEventController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001AAE
+    // Token: 0x4001AAF
     public List<EventData> RandomEventDataBase;
 
-    // Token: 0x4001AAF
+    // Token: 0x4001AB0
     public List<PlotData> EventPlotDataBase;
 
-    // Token: 0x4001AB0
+    // Token: 0x4001AB1
     public List<WorldEventDataBase> worldEventDataBase;
 
-    // Token: 0x4001AB1
+    // Token: 0x4001AB2
     private Dictionary<int, EventData> RandomEventDict;
 
-    // Token: 0x4001AB2
+    // Token: 0x4001AB3
     private Dictionary<int, WorldEventDataBase> WorldEventDict;
 
-    // Token: 0x4001AB3
+    // Token: 0x4001AB4
     public List<int> exploreRandomEventID;
 
-    // Token: 0x4001AB4
+    // Token: 0x4001AB5
     public List<int> bigMapRandomEventID;
 
-    // Token: 0x4001AB5
+    // Token: 0x4001AB6
     public List<int> selfForceAreaRandomEventID;
 
-    // Token: 0x4001AB6
+    // Token: 0x4001AB7
     public List<int> otherForceAreaRandomEventID;
 
-    // Token: 0x4001AB7
+    // Token: 0x4001AB8
     public List<int> cityAreaRandomEventID;
 
-    // Token: 0x4001AB8
+    // Token: 0x4001AB9
     public List<int> villageAreaRandomEventID;
 
-    // Token: 0x4001AB9
+    // Token: 0x4001ABA
     public List<int> innRandomEventID;
 
-    // Token: 0x4001ABA
+    // Token: 0x4001ABB
     public EventData startExternalStorageEventDataBase;
 
-    // Token: 0x4001ABB
+    // Token: 0x4001ABC
     private static RandomEventController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002055
-    // RVA   : 0xD09000   Offset: 0xD08400   Length: 0x36
+    // RVA   : 0xD09610   Offset: 0xD08A10   Length: 0x36
     public static RandomEventController get_Instance()
     {
-        return **(uint64 **)(DAT_181d99700 + 184);
+        return **(uint64 **)(DAT_181d99718 + 184);
     }
 
     // Token : 0x6002056
-    // RVA   : 0xD087F0   Offset: 0xD07BF0   Length: 0x128
+    // RVA   : 0xD08E00   Offset: 0xD08200   Length: 0x128
     private void AutoSetEventID()
     {
         long lVar1;
@@ -74,7 +74,7 @@ public class RandomEventController
           do {
             if (lVar1.Count <= (int)uVar2) {
               lVar1 = this.worldEventDataBase;
-              if (lVar1 != null) goto LAB_180d088c0;
+              if (lVar1 != null) goto LAB_180d08ed0;
               break;
             }
             if (lVar1 == null) break;
@@ -101,7 +101,7 @@ public class RandomEventController
           lVar1 = this.worldEventDataBase;
           uVar3 = uVar3 + 1;
           if (lVar1 == null) break;
-        LAB_180d088c0:
+        LAB_180d08ed0:
           if (lVar1.Count <= (int)uVar3) {
             return;
           }
@@ -110,7 +110,7 @@ public class RandomEventController
     }
 
     // Token : 0x6002057
-    // RVA   : 0xD08920   Offset: 0xD07D20   Length: 0x290
+    // RVA   : 0xD08F30   Offset: 0xD08330   Length: 0x290
     private void Awake()
     {
         bool cVar2;
@@ -120,14 +120,14 @@ public class RandomEventController
         long lVar6;
         int iVar7;
         int iVar8;
-        uVar4 = **(uint64 **)(DAT_181d99700 + 184);
+        uVar4 = **(uint64 **)(DAT_181d99718 + 184);
         cVar2 = Object.op_Equality(uVar4,0,0);
         if (!cVar2) {
           uVar4 = Component.get_gameObject(this,0);
           Object.Destroy(uVar4,0);
           return;
         }
-        plVar1 = *(int64 **)(DAT_181d99700 + 184);
+        plVar1 = *(int64 **)(DAT_181d99718 + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         uVar4 = Component.get_gameObject(this,0);
@@ -141,13 +141,13 @@ public class RandomEventController
           iVar8 = 0;
           while( true ) {
             if (((this.RandomEventDataBase == null) ||
-                (lVar5 = FUN_180002f80(this.RandomEventDataBase,iVar7,DAT_181d85e20)) == null) ||
+                (lVar5 = FUN_180002f80(this.RandomEventDataBase,iVar7,DAT_181d85e38)) == null) ||
                (*(int64 *)(lVar5 + 40) == 0)) throw; // [null/range check failed]
             lVar6 = this.RandomEventDataBase;
             if (*(int *)(*(int64 *)(lVar5 + 40) + 24) <= iVar8) break;
-            if (((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,iVar7,DAT_181d85e20)) == null) ||
+            if (((lVar6 == null) || (lVar6 = FUN_180002f80(lVar6,iVar7,DAT_181d85e38)) == null) ||
                (*(int64 *)(lVar6 + 40) == 0)) throw; // [null/range check failed]
-            uVar3 = FUN_1800d6760(*(int64 *)(lVar6 + 40),iVar8,DAT_181d85a20);
+            uVar3 = FUN_1800d6760(*(int64 *)(lVar6 + 40),iVar8,DAT_181d85a38);
             switch(uVar3) {
             case 0:
               lVar6 = this.exploreRandomEventID;
@@ -171,13 +171,13 @@ public class RandomEventController
               lVar6 = this.innRandomEventID;
               break;
             default:
-              goto switchD_180d08b1e_default;
+              goto switchD_180d0912e_default;
             }
             if (((this.RandomEventDataBase == null) ||
-                (lVar5 = FUN_180002f80(this.RandomEventDataBase,iVar7,DAT_181d85e20)) == null) ||
+                (lVar5 = FUN_180002f80(this.RandomEventDataBase,iVar7,DAT_181d85e38)) == null) ||
                (lVar6 == null)) throw; // [null/range check failed]
-            FUN_18182a0b0(lVar6,*(uint32 *)(lVar5 + 16),DAT_181d8f218);
-        switchD_180d08b1e_default:
+            FUN_18182a6c0(lVar6,*(uint32 *)(lVar5 + 16),DAT_181d8f230);
+        switchD_180d0912e_default:
             iVar8 = iVar8 + 1;
           }
           iVar7 = iVar7 + 1;
@@ -185,7 +185,7 @@ public class RandomEventController
     }
 
     // Token : 0x6002058
-    // RVA   : 0xD08BD0   Offset: 0xD07FD0   Length: 0xE3
+    // RVA   : 0xD091E0   Offset: 0xD085E0   Length: 0xE3
     public EventData GetRandomEventDataBase(string eventName)
     {
         uint uVar1;
@@ -196,15 +196,15 @@ public class RandomEventController
         uint uVar6;
         long lVar7;
         if (this.RandomEventDict == null) {
-          uVar4 = il2cpp_internal(DAT_181d80c68);
-          FUN_1808b1370(uVar4,DAT_181db94b8);
+          uVar4 = il2cpp_internal(DAT_181d80c80);
+          FUN_1808b1370(uVar4,DAT_181db94d0);
           this.RandomEventDict = uVar4;
           lVar5 = this.RandomEventDataBase;
           uVar6 = 0;
           if (lVar5 != null) {
             lVar7 = 32;
             do {
-              if (lVar5.Count <= (int)uVar6) goto LAB_180d08e16;
+              if (lVar5.Count <= (int)uVar6) goto LAB_180d09426;
               lVar2 = this.RandomEventDict;
               if (lVar5 == null) break;
               if (lVar5.Count <= uVar6) {
@@ -219,7 +219,7 @@ public class RandomEventController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar2 == null) break;
-              FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db9540
+              FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db9558
                            );
               lVar5 = this.RandomEventDataBase;
               uVar6 = uVar6 + 1;
@@ -228,16 +228,16 @@ public class RandomEventController
           }
         }
         else {
-        LAB_180d08e16:
+        LAB_180d09426:
           if (this.RandomEventDict != null) {
-            FUN_1817d9e10(this.RandomEventDict,eventName,DAT_181db95c8);
+            FUN_1817da420(this.RandomEventDict,eventName,DAT_181db95e0);
             return;
           }
         }
     }
 
     // Token : 0x6002059
-    // RVA   : 0xD08CC0   Offset: 0xD080C0   Length: 0x195
+    // RVA   : 0xD092D0   Offset: 0xD086D0   Length: 0x195
     public EventData GetRandomEventDataBase(int id)
     {
         uint uVar1;
@@ -248,15 +248,15 @@ public class RandomEventController
         uint uVar6;
         long lVar7;
         if (this.RandomEventDict == null) {
-          uVar4 = il2cpp_internal(DAT_181d80c68);
-          FUN_1808b1370(uVar4,DAT_181db94b8);
+          uVar4 = il2cpp_internal(DAT_181d80c80);
+          FUN_1808b1370(uVar4,DAT_181db94d0);
           this.RandomEventDict = uVar4;
           lVar5 = this.RandomEventDataBase;
           uVar6 = 0;
           if (lVar5 != null) {
             lVar7 = 32;
             do {
-              if (lVar5.Count <= (int)uVar6) goto LAB_180d08e16;
+              if (lVar5.Count <= (int)uVar6) goto LAB_180d09426;
               lVar2 = this.RandomEventDict;
               if (lVar5 == null) break;
               if (lVar5.Count <= uVar6) {
@@ -271,7 +271,7 @@ public class RandomEventController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar2 == null) break;
-              FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db9540
+              FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181db9558
                            );
               lVar5 = this.RandomEventDataBase;
               uVar6 = uVar6 + 1;
@@ -280,16 +280,16 @@ public class RandomEventController
           }
         }
         else {
-        LAB_180d08e16:
+        LAB_180d09426:
           if (this.RandomEventDict != null) {
-            FUN_1817d9e10(this.RandomEventDict,id,DAT_181db95c8);
+            FUN_1817da420(this.RandomEventDict,id,DAT_181db95e0);
             return;
           }
         }
     }
 
     // Token : 0x600205A
-    // RVA   : 0xD08E60   Offset: 0xD08260   Length: 0x195
+    // RVA   : 0xD09470   Offset: 0xD08870   Length: 0x195
     public WorldEventDataBase GetWorldEventDataBase(int id)
     {
         uint uVar1;
@@ -300,15 +300,15 @@ public class RandomEventController
         uint uVar6;
         long lVar7;
         if (this.WorldEventDict == null) {
-          uVar4 = il2cpp_internal(DAT_181d81c68);
-          FUN_1808b1370(uVar4,DAT_181dc0058);
+          uVar4 = il2cpp_internal(DAT_181d81c80);
+          FUN_1808b1370(uVar4,DAT_181dc0070);
           this.WorldEventDict = uVar4;
           lVar5 = this.worldEventDataBase;
           uVar6 = 0;
           if (lVar5 != null) {
             lVar7 = 32;
             do {
-              if (lVar5.Count <= (int)uVar6) goto LAB_180d08fb6;
+              if (lVar5.Count <= (int)uVar6) goto LAB_180d095c6;
               lVar2 = this.WorldEventDict;
               if (lVar5 == null) break;
               if (lVar5.Count <= uVar6) {
@@ -323,7 +323,7 @@ public class RandomEventController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar2 == null) break;
-              FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181dc00e0
+              FUN_1808ab370(lVar2,uVar1,*(uint64 *)(lVar3._items + lVar7),DAT_181dc00f8
                            );
               lVar5 = this.worldEventDataBase;
               uVar6 = uVar6 + 1;
@@ -332,9 +332,9 @@ public class RandomEventController
           }
         }
         else {
-        LAB_180d08fb6:
+        LAB_180d095c6:
           if (this.WorldEventDict != null) {
-            FUN_1817d9e10(this.WorldEventDict,id,DAT_181dc0168);
+            FUN_1817da420(this.WorldEventDict,id,DAT_181dc0180);
             return;
           }
         }

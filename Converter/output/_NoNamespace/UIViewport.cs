@@ -23,12 +23,12 @@ public class UIViewport
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009A1
-    // RVA   : 0xC09BF0   Offset: 0xC08FF0   Length: 0xA8
+    // RVA   : 0xC0A260   Offset: 0xC09660   Length: 0xA8
     private void Start()
     {
         bool cVar1;
         ulong uVar2;
-        uVar2 = Component.GetComponent(this,DAT_181d937e0);
+        uVar2 = Component.GetComponent(this,DAT_181d937f8);
         this.mCam = uVar2;
         uVar2 = this.sourceCamera;
         cVar1 = Object.op_Equality(uVar2,0,0);
@@ -39,7 +39,7 @@ public class UIViewport
     }
 
     // Token : 0x60009A2
-    // RVA   : 0xC098D0   Offset: 0xC08CD0   Length: 0x31A
+    // RVA   : 0xC09F40   Offset: 0xC09340   Length: 0x31A
     private void LateUpdate()
     {
         ulong uVar1;
@@ -70,11 +70,11 @@ public class UIViewport
           if (cVar2) {
             if ((this.topLeft == null) ||
                (lVar7 = Component.get_gameObject(this.topLeft,0)) == null)
-            goto LAB_180c09be5;
+            goto LAB_180c0a255;
             cVar2 = GameObject.get_activeInHierarchy(lVar7,0);
             if (!cVar2) {
               lVar7 = this.mCam;
-              if (lVar7 == null) goto LAB_180c09be5;
+              if (lVar7 == null) goto LAB_180c0a255;
               uVar9 = 0;
             }
             else {
@@ -83,7 +83,7 @@ public class UIViewport
                  (puVar8 = (uint64 *)
                            Transform.get_position(&local_58,this.topLeft,0), lVar7 == null)
                  ) {
-        LAB_180c09be5:
+        LAB_180c0a255:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -95,7 +95,7 @@ public class UIViewport
               if ((this.bottomRight == null) ||
                  (puVar8 = (uint64 *)
                            Transform.get_position(&local_48,this.bottomRight,0), lVar7 == null)
-                 ) goto LAB_180c09be5;
+                 ) goto LAB_180c0a255;
               local_58 = *puVar8;
               uStack_50._0_4_ = *(uint32 *)(puVar8 + 1);
               puVar8 = (uint64 *)Camera.WorldToScreenPoint(&local_48,lVar7,&local_58,0);
@@ -109,14 +109,14 @@ public class UIViewport
               local_58._0_4_ = (float)uVar9;
               fVar11 = (float)local_58 - (float)local_68;
               local_58 = uVar9;
-              FUN_1809dc910(&local_38,(float)local_68 / (float)iVar3,fVar10 / (float)iVar4,
+              FUN_1809dcfa0(&local_38,(float)local_68 / (float)iVar3,fVar10 / (float)iVar4,
                             fVar11 / (float)iVar5,(local_68._4_4_ - fVar10) / (float)iVar6,0);
               fVar11 = this.fullSize;
               fVar10 = (float)FUN_18044e2b0(&local_38,0);
               uVar1 = uStack_30;
               uVar9 = local_38;
               fVar10 = fVar10 * fVar11;
-              if (this.mCam == null) goto LAB_180c09be5;
+              if (this.mCam == null) goto LAB_180c0a255;
               puVar8 = (uint64 *)Camera.get_rect(&local_48,this.mCam,0);
               local_58 = uVar9;
               uStack_50 = uVar1;
@@ -124,19 +124,19 @@ public class UIViewport
               uStack_40 = puVar8[1];
               cVar2 = Rect.op_Inequality(&local_58,&local_48,0);
               if (cVar2) {
-                if (this.mCam == null) goto LAB_180c09be5;
+                if (this.mCam == null) goto LAB_180c0a255;
                 local_48 = local_38;
                 uStack_40 = uStack_30;
                 Camera.set_rect(this.mCam,&local_48,0);
               }
-              if (this.mCam == null) goto LAB_180c09be5;
+              if (this.mCam == null) goto LAB_180c0a255;
               fVar11 = (float)Camera.get_orthographicSize(this.mCam,0);
               if (fVar11 != fVar10) {
-                if (this.mCam == null) goto LAB_180c09be5;
+                if (this.mCam == null) goto LAB_180c0a255;
                 Camera.set_orthographicSize(this.mCam,fVar10,0);
               }
               lVar7 = this.mCam;
-              if (lVar7 == null) goto LAB_180c09be5;
+              if (lVar7 == null) goto LAB_180c0a255;
               uVar9 = 1;
             }
             Behaviour.set_enabled(lVar7,uVar9,0);
@@ -145,10 +145,10 @@ public class UIViewport
     }
 
     // Token : 0x60009A3
-    // RVA   : 0xC09CA0   Offset: 0xC090A0   Length: 0xE
+    // RVA   : 0xC0A310   Offset: 0xC09710   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180c09ca0(int64 this)
+        void FUN_180c0a310(int64 this)
         {
         this.fullSize = 0x3f800000;
         FUN_18044ef50(this,0);

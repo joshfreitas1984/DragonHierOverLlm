@@ -6,16 +6,16 @@
 public class <>c__DisplayClass35_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002132
+    // Token: 0x4002133
     public int v;
 
-    // Token: 0x4002133
+    // Token: 0x4002134
     public Text target;
 
-    // Token: 0x4002134
+    // Token: 0x4002135
     public bool addThousandsSeparator;
 
-    // Token: 0x4002135
+    // Token: 0x4002136
     public CultureInfo cInfo;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,7 +34,7 @@ public class <>c__DisplayClass35_0
     }
 
     // Token : 0x6002734
-    // RVA   : 0x939540   Offset: 0x938940   Length: 0x82
+    // RVA   : 0x939BD0   Offset: 0x938FD0   Length: 0x82
     internal void <DOCounter>b__1(int x)
     {
         ulong uVar3;
@@ -47,7 +47,7 @@ public class <>c__DisplayClass35_0
           uVar3 = Int32.ToString(puVar1,"N0",this.cInfo,0);
         }
         if (plVar2 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x0001809395b6. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180939c46. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*plVar2 + 0x5e8))(plVar2,uVar3,*(uint64 *)(*plVar2 + 0x5f0));
           return;

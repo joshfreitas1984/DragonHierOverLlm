@@ -6,16 +6,16 @@
 public class <ShowHighLightLine>d__40
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CDD
+    // Token: 0x4001CDE
     private int <>1__state;
 
-    // Token: 0x4001CDE
+    // Token: 0x4001CDF
     private object <>2__current;
 
-    // Token: 0x4001CDF
+    // Token: 0x4001CE0
     public StudyInternalPointController <>4__this;
 
-    // Token: 0x4001CE0
+    // Token: 0x4001CE1
     private int <i>5__2;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,10 +34,10 @@ public class <ShowHighLightLine>d__40
     }
 
     // Token : 0x6002281
-    // RVA   : 0x8F2120   Offset: 0x8F1520   Length: 0x5BB
+    // RVA   : 0x924FA0   Offset: 0x9243A0   Length: 0x5BB
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181da8110 + 184);
+        var pStatics = *(int64*)(DAT_181da8128 + 184);
         ulong uVar1;
         float fVar2;
         float fVar3;
@@ -120,7 +120,7 @@ public class <ShowHighLightLine>d__40
                     }
                     if (lVar4 != null) {
                       uVar9 = StudyInternalSkillController.FinishStudyInternalSkill(lVar4,cVar5,0);
-                      FUN_180d8c2e0(lVar8,uVar9,0);
+                      FUN_180d8c8f0(lVar8,uVar9,0);
                       return false;
                     }
                   }
@@ -188,15 +188,15 @@ public class <ShowHighLightLine>d__40
     }
 
     // Token : 0x6002283
-    // RVA   : 0x8F26E0   Offset: 0x8F1AE0   Length: 0x3E
+    // RVA   : 0x925560   Offset: 0x924960   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4a90);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4c40);
     }
 
     // Token : 0x6002284

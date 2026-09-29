@@ -17,7 +17,7 @@ public class UIScrollBar
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000246
-    // RVA   : 0x16FBF80   Offset: 0x16FB380   Length: 0x47
+    // RVA   : 0x16FC590   Offset: 0x16FB990   Length: 0x47
     public float get_scrollValue()
     {
         byte[] auVar1 = new byte[16];
@@ -34,23 +34,23 @@ public class UIScrollBar
     }
 
     // Token : 0x6000247
-    // RVA   : 0x16FC690   Offset: 0x16FBA90   Length: 0xB
+    // RVA   : 0x16FCCA0   Offset: 0x16FC0A0   Length: 0xB
     public void set_scrollValue(float value)
     {
         UIProgressBar.Set(this,value,1,0);
     }
 
     // Token : 0x6000248
-    // RVA   : 0x15EF4E0   Offset: 0x15EE8E0   Length: 0x9
+    // RVA   : 0x15EFAF0   Offset: 0x15EEEF0   Length: 0x9
     public float get_barSize()
     {
-        uint32 FUN_1815ef4e0(int64 this)
+        uint32 FUN_1815efaf0(int64 this)
         {
         return this.mSize;
     }
 
     // Token : 0x6000249
-    // RVA   : 0x1701660   Offset: 0x1700A60   Length: 0x17A
+    // RVA   : 0x1701C70   Offset: 0x1701070   Length: 0x17A
     public void set_barSize(float value)
     {
         ulong uVar1;
@@ -63,15 +63,15 @@ public class UIScrollBar
           *(uint8 *)(this + 10) = 1;
           cVar4 = NGUITools.GetActive(this,0);
           if (cVar4) {
-            uVar1 = **(uint64 **)(DAT_181db0078 + 184);
+            uVar1 = **(uint64 **)(DAT_181db0090 + 184);
             cVar4 = Object.op_Equality(uVar1,0,0);
             if ((cVar4) && (this[13] != 0)) {
-              puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+              puVar2 = *(uint64 **)(DAT_181db0090 + 184);
               *puVar2 = this;
               il2cpp_internal(puVar2,this);
               lVar3 = this[13];
               EventDelegate.Execute(lVar3,0);
-              puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+              puVar2 = *(uint64 **)(DAT_181db0090 + 184);
               *puVar2 = 0;
               il2cpp_internal(puVar2,0);
             }
@@ -81,10 +81,10 @@ public class UIScrollBar
     }
 
     // Token : 0x600024A
-    // RVA   : 0x1701570   Offset: 0x1700970   Length: 0x4C
+    // RVA   : 0x1701B80   Offset: 0x1700F80   Length: 0x4C
     protected override void Upgrade()
     {
-        void FUN_181701570(int64 this)
+        void FUN_181701b80(int64 this)
         {
         if (this.mDir != 2) {
           *(uint32 *)(this + 56) = this.mScroll;
@@ -99,7 +99,7 @@ public class UIScrollBar
     }
 
     // Token : 0x600024B
-    // RVA   : 0x1701280   Offset: 0x1700680   Length: 0x2E8
+    // RVA   : 0x1701890   Offset: 0x1700C90   Length: 0x2E8
     protected override void OnStart()
     {
         bool cVar1;
@@ -120,11 +120,11 @@ public class UIScrollBar
             return;
           }
           if (*(int64 *)(this + 48) != 0) {
-            uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d93b60);
+            uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d93b78);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (!cVar1) {
               if (*(int64 *)(this + 48) == 0) throw; // [null/range check failed]
-              uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d93be0);
+              uVar2 = Component.GetComponent(*(int64 *)(this + 48),DAT_181d93bf8);
               cVar1 = Object.op_Inequality(uVar2,0,0);
               if (!cVar1) {
                 return;
@@ -135,25 +135,25 @@ public class UIScrollBar
               lVar4 = UIEventListener.Get(uVar2,0);
               if (lVar4 != null) {
                 uVar2 = *(uint64 *)(lVar4 + 64);
-                uVar3 = new OnTooltipCB(this,DAT_181dc66f0,0);
+                uVar3 = new OnTooltipCB(this,DAT_181dc68a0,0);
                 plVar5 = (int64 *)Delegate.Combine(uVar2,uVar3,0);
                 plVar7 = (int64 *)0;
                 plVar6 = plVar7;
                 if (plVar5 != (int64 *)0) {
-                  if (*plVar5 == DAT_181d8d938) {
+                  if (*plVar5 == DAT_181d8d950) {
                     plVar6 = plVar5;
                   }
                   if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar5,DAT_181d8d938);
+                    FUN_1800d6070(plVar5,DAT_181d8d950);
                   }
                 }
                 *(int64 **)(lVar4 + 64) = plVar6;
                 uVar2 = *(uint64 *)(lVar4 + 96);
-                uVar3 = new OnTooltipCB(this,DAT_181dc65e0,0);
+                uVar3 = new OnTooltipCB(this,DAT_181dc6790,0);
                 plVar6 = (int64 *)Delegate.Combine(uVar2,uVar3,0);
                 if (plVar6 != (int64 *)0) {
-                  if (*plVar6 == DAT_181d8d9b8) {
+                  if (*plVar6 == DAT_181d8d9d0) {
                     plVar7 = plVar6;
                   }
                   if (plVar7 == (int64 *)0) {
@@ -173,7 +173,7 @@ public class UIScrollBar
     }
 
     // Token : 0x600024C
-    // RVA   : 0x1700FB0   Offset: 0x17003B0   Length: 0x2CC
+    // RVA   : 0x17015C0   Offset: 0x17009C0   Length: 0x2CC
     protected override float LocalToValue(Vector2 localPos)
     {
         void UIScrollBar.LocalToValue
@@ -252,7 +252,7 @@ public class UIScrollBar
     }
 
     // Token : 0x600024D
-    // RVA   : 0x1700CE0   Offset: 0x17000E0   Length: 0x2C3
+    // RVA   : 0x17012F0   Offset: 0x17006F0   Length: 0x2C3
     public override void ForceUpdate()
     {
         int iVar1;
@@ -298,7 +298,7 @@ public class UIScrollBar
             else {
               fVar7 = 0.0;
             }
-            goto LAB_181700e67;
+            goto LAB_181701477;
           }
           fVar7 = 1.0 - fVar11;
           fVar11 = 1.0 - fVar8;
@@ -306,10 +306,10 @@ public class UIScrollBar
         fVar8 = 0.0;
         fVar10 = fVar11;
         fVar11 = 1.0;
-        LAB_181700e67:
+        LAB_181701477:
         uStack_30 = 0;
         local_38 = 0;
-        FUN_1809dc910(&local_38,fVar7,fVar8,fVar10,fVar11,0);
+        FUN_1809dcfa0(&local_38,fVar7,fVar8,fVar10,fVar11,0);
         if (lVar5 != null) {
           UIWidget.set_drawRegion(lVar5,&local_38,0);
           uVar2 = *(uint64 *)(this + 32);
@@ -338,23 +338,23 @@ public class UIScrollBar
     }
 
     // Token : 0x600024E
-    // RVA   : 0x17015C0   Offset: 0x17009C0   Length: 0x9F
+    // RVA   : 0x1701BD0   Offset: 0x1700FD0   Length: 0x9F
     public void /*ctor*/()
     {
         ulong uVar1;
-        bVar2 = !DAT_181ea3d22;
+        bVar2 = !DAT_181ea3d2a;
         this.mSize = 0x3f800000;
         this.mDir = 2;
         *(uint32 *)(this + 120) = 0x3f800000;
         *(uint32 *)(this + 124) = 2;
         if (bVar2) {
-          il2cpp_runtime_class_init(&DAT_181d85ea0);
-          il2cpp_runtime_class_init(&DAT_181d92658);
-          DAT_181ea3d22 = true;
+          il2cpp_runtime_class_init(&DAT_181d85eb8);
+          il2cpp_runtime_class_init(&DAT_181d92670);
+          DAT_181ea3d2a = true;
         }
         *(uint32 *)(this + 56) = 0x3f800000;
-        uVar1 = il2cpp_internal(DAT_181d92658);
-        FUN_18132faf0(uVar1,DAT_181d85ea0);
+        uVar1 = il2cpp_internal(DAT_181d92670);
+        FUN_181330100(uVar1,DAT_181d85eb8);
         *(uint64 *)(this + 104) = uVar1;
         TrailRenderer_Base.ctor(this,0);
     }

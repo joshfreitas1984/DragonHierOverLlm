@@ -6,7 +6,7 @@
 public class <>c__DisplayClass24_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002122
+    // Token: 0x4002123
     public RectTransform target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass24_0
     }
 
     // Token : 0x600270E
-    // RVA   : 0x937BC0   Offset: 0x936FC0   Length: 0x1D
+    // RVA   : 0x938250   Offset: 0x937650   Length: 0x1D
     internal Vector2 <DOPivotY>b__0()
     {
         if (this.target != null) {
@@ -28,7 +28,7 @@ public class <>c__DisplayClass24_0
     }
 
     // Token : 0x600270F
-    // RVA   : 0x937BE0   Offset: 0x936FE0   Length: 0x1E
+    // RVA   : 0x938270   Offset: 0x937670   Length: 0x1E
     internal void <DOPivotY>b__1(Vector2 x)
     {
         if (this.target != null) {

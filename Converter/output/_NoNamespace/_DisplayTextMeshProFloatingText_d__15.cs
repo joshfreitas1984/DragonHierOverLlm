@@ -6,34 +6,34 @@
 public class <DisplayTextMeshProFloatingText>d__15
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FEC
+    // Token: 0x4001FED
     private int <>1__state;
 
-    // Token: 0x4001FED
+    // Token: 0x4001FEE
     private object <>2__current;
 
-    // Token: 0x4001FEE
+    // Token: 0x4001FEF
     public TextMeshProFloatingText <>4__this;
 
-    // Token: 0x4001FEF
+    // Token: 0x4001FF0
     private float <CountDuration>5__2;
 
-    // Token: 0x4001FF0
+    // Token: 0x4001FF1
     private float <starting_Count>5__3;
 
-    // Token: 0x4001FF1
+    // Token: 0x4001FF2
     private float <current_Count>5__4;
 
-    // Token: 0x4001FF2
+    // Token: 0x4001FF3
     private Vector3 <start_pos>5__5;
 
-    // Token: 0x4001FF3
+    // Token: 0x4001FF4
     private Color32 <start_color>5__6;
 
-    // Token: 0x4001FF4
+    // Token: 0x4001FF5
     private float <alpha>5__7;
 
-    // Token: 0x4001FF5
+    // Token: 0x4001FF6
     private float <fadeDuration>5__8;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -52,7 +52,7 @@ public class <DisplayTextMeshProFloatingText>d__15
     }
 
     // Token : 0x6002513
-    // RVA   : 0x8E9B00   Offset: 0x8E8F00   Length: 0x59C
+    // RVA   : 0x91C980   Offset: 0x91BD80   Length: 0x59C
     private virtual bool MoveNext()
     {
         ulong uVar1;
@@ -112,7 +112,7 @@ public class <DisplayTextMeshProFloatingText>d__15
               local_80 = *(float *)(this + 60);
               Transform.set_position(*(int64 *)(lVar3 + 64),&local_88,0);
               uVar10 = TextMeshProFloatingText.DisplayTextMeshProFloatingText(lVar3,0);
-              FUN_180d8c2e0(lVar3,uVar10,0);
+              FUN_180d8c8f0(lVar3,uVar10,0);
             }
             return false;
           }
@@ -120,8 +120,8 @@ public class <DisplayTextMeshProFloatingText>d__15
         }
         fVar16 = this.<current_Count>5__4;
         if (fVar16 <= 0.0) {
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181dab010 + 184) + 8);
-          uVar9 = FUN_180d95a30(0,19);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181dab028 + 184) + 8);
+          uVar9 = FUN_180d96040(0,19);
           if (lVar3 != null) {
             if (uVar9 < *(uint32 *)(lVar3 + 24)) {
               this.<>2__current = lVar3[uVar9];
@@ -140,33 +140,33 @@ public class <DisplayTextMeshProFloatingText>d__15
           if (fVar16 <= 3.0) {
             fVar16 = this.<alpha>5__7;
             fVar14 = (float)Time.get_deltaTime(0);
-            uVar15 = FUN_1810e36c0(fVar16 - (fVar14 / this.<fadeDuration>5__8) * 255.0,0,0x437f0000,0);
+            uVar15 = FUN_1810e3cd0(fVar16 - (fVar14 / this.<fadeDuration>5__8) * 255.0,0,0x437f0000,0);
             fVar16 = this.<current_Count>5__4;
             this.<alpha>5__7 = uVar15;
           }
           local_res8[0] = (int)fVar16;
           if (lVar3 == null) {
-        LAB_1808ea087:
+        LAB_18091cf07:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           plVar4 = *(int64 **)(lVar3 + 40);
           uVar10 = Int32.ToString(local_res8,0);
-          if (plVar4 == (int64 *)0) goto LAB_1808ea087;
+          if (plVar4 == (int64 *)0) goto LAB_18091cf07;
           (**(code **)(*plVar4 + 0x558))(plVar4,uVar10,*(uint64 *)(*plVar4 + 0x560));
           plVar4 = *(int64 **)(lVar3 + 40);
           local_res18[0] = 0;
           Color32.ctor(local_res18,this.<start_color>5__6,*(uint8 *)(this + 65),
                         *(uint8 *)(this + 66),(char)(int)this.<alpha>5__7,0);
           puVar11 = (uint32 *)Color32.op_Implicit(&local_68,local_res18[0],0);
-          if (plVar4 == (int64 *)0) goto LAB_1808ea087;
+          if (plVar4 == (int64 *)0) goto LAB_18091cf07;
           local_68 = *puVar11;
           uStack_64 = puVar11[1];
           uStack_60 = puVar11[2];
           uStack_5c = puVar11[3];
           (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_68,*(uint64 *)(*plVar4 + 0x2b0));
           lVar5 = *(int64 *)(lVar3 + 64);
-          if (lVar5 == null) goto LAB_1808ea087;
+          if (lVar5 == null) goto LAB_18091cf07;
           puVar12 = (uint64 *)Transform.get_position(&local_68,lVar5,0);
           fVar16 = this.<starting_Count>5__3;
           uVar10 = *puVar12;
@@ -178,7 +178,7 @@ public class <DisplayTextMeshProFloatingText>d__15
           Transform.set_position(lVar5,&local_88,0);
           uVar1 = *(uint64 *)(lVar3 + 80);
           uVar15 = *(uint32 *)(lVar3 + 88);
-          if (*(int64 *)(lVar3 + 72) == 0) goto LAB_1808ea087;
+          if (*(int64 *)(lVar3 + 72) == 0) goto LAB_18091cf07;
           puVar13 = (uint64 *)Transform.get_position(&local_68,*(int64 *)(lVar3 + 72),0);
           uStack_70 = CONCAT44(uStack_70._4_4_,uVar15);
           local_88 = *puVar13;
@@ -197,7 +197,7 @@ public class <DisplayTextMeshProFloatingText>d__15
             local_78 = uVar1;
             uStack_70 = uVar10;
             cVar8 = TMPro_ExtensionMethods.Compare(&local_78,&local_68,1000,0);
-            if (cVar8) goto LAB_1808e9fa6;
+            if (cVar8) goto LAB_18091ce26;
           }
           if (*(int64 *)(lVar3 + 72) != 0) {
             puVar12 = (uint64 *)Transform.get_position(&local_68,*(int64 *)(lVar3 + 72),0);
@@ -228,8 +228,8 @@ public class <DisplayTextMeshProFloatingText>d__15
                     local_78 = local_88;
                     uStack_70 = CONCAT44(uStack_70._4_4_,local_80);
                     Transform.set_forward(*(int64 *)(lVar3 + 56),&local_78,0);
-        LAB_1808e9fa6:
-                    this.<>2__current = **(uint64 **)(DAT_181dab010 + 184);
+        LAB_18091ce26:
+                    this.<>2__current = **(uint64 **)(DAT_181dab028 + 184);
                     this.<>1__state = 1;
                     return true;
                   }
@@ -248,15 +248,15 @@ public class <DisplayTextMeshProFloatingText>d__15
     }
 
     // Token : 0x6002515
-    // RVA   : 0x8EA0A0   Offset: 0x8E94A0   Length: 0x3E
+    // RVA   : 0x91CF20   Offset: 0x91C320   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db62f0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db64a0);
     }
 
     // Token : 0x6002516

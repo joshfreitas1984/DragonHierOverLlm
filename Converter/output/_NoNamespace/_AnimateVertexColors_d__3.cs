@@ -6,19 +6,19 @@
 public class <AnimateVertexColors>d__3
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002005
+    // Token: 0x4002006
     private int <>1__state;
 
-    // Token: 0x4002006
+    // Token: 0x4002007
     private object <>2__current;
 
-    // Token: 0x4002007
+    // Token: 0x4002008
     public VertexColorCycler <>4__this;
 
-    // Token: 0x4002008
+    // Token: 0x4002009
     private TMP_TextInfo <textInfo>5__2;
 
-    // Token: 0x4002009
+    // Token: 0x400200A
     private int <currentCharacter>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ public class <AnimateVertexColors>d__3
     }
 
     // Token : 0x6002525
-    // RVA   : 0x1843160   Offset: 0x1842560   Length: 0x36A
+    // RVA   : 0x1843200   Offset: 0x1842600   Length: 0x36A
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -115,16 +115,16 @@ public class <AnimateVertexColors>d__3
               lVar15 = (int64)(int)uVar3;
               lVar5 = *(int64 *)(lVar5 + 88 + (int64)(int)uVar2 * 80);
               if (*(char *)(lVar14 + 0x194 + lVar6) == false) {
-        LAB_1818433c7:
+        LAB_181843467:
                 this.<currentCharacter>5__3 = (int)(uVar13 + 1) % iVar1;
                 uVar12 = new WaitForSeconds(0x3d4ccccd,0);
                 this.<>2__current = uVar12;
                 this.<>1__state = 2;
                 return true;
               }
-              uVar8 = FUN_180d95a30(0,255,0);
-              uVar9 = FUN_180d95a30(0,255,0);
-              uVar10 = FUN_180d95a30(0,255,0);
+              uVar8 = FUN_180d96040(0,255,0);
+              uVar9 = FUN_180d96040(0,255,0);
+              uVar10 = FUN_180d96040(0,255,0);
               Color32.ctor(local_res8,uVar8,uVar9,uVar10,255,0);
               if (lVar5 != null) {
                 if (*(uint32 *)(lVar5 + 24) <= uVar3) {
@@ -154,7 +154,7 @@ public class <AnimateVertexColors>d__3
                 if ((lVar4 != null) && (plVar7 = *(int64 **)(lVar4 + 24), plVar7 != (int64 *)0)) {
                   (**(code **)(*plVar7 + 0x7f8))(plVar7,16,*(uint64 *)(*plVar7 + 0x800));
                   uVar13 = this.<currentCharacter>5__3;
-                  goto LAB_1818433c7;
+                  goto LAB_181843467;
                 }
               }
             }
@@ -170,15 +170,15 @@ public class <AnimateVertexColors>d__3
     }
 
     // Token : 0x6002527
-    // RVA   : 0x18434D0   Offset: 0x18428D0   Length: 0x3E
+    // RVA   : 0x1843570   Offset: 0x1842970   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db8248);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db83f8);
     }
 
     // Token : 0x6002528

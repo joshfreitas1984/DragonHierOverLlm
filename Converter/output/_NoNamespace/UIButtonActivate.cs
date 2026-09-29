@@ -17,7 +17,7 @@ public class UIButtonActivate
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60000C3
-    // RVA   : 0x152F200   Offset: 0x152E600   Length: 0xC3
+    // RVA   : 0x152F810   Offset: 0x152EC10   Length: 0xC3
     public void OnClick()
     {
         byte uVar1;
@@ -36,10 +36,10 @@ public class UIButtonActivate
     }
 
     // Token : 0x60000C4
-    // RVA   : 0x152F2D0   Offset: 0x152E6D0   Length: 0xB
+    // RVA   : 0x152F8E0   Offset: 0x152ECE0   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_18152f2d0(int64 this)
+        void FUN_18152f8e0(int64 this)
         {
         this.state = 1;
         FUN_18044ef50(this,0);

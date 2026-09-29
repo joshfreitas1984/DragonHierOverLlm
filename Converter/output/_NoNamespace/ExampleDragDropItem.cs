@@ -11,10 +11,10 @@ public class ExampleDragDropItem
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600006B
-    // RVA   : 0x9485B0   Offset: 0x9479B0   Length: 0x337
+    // RVA   : 0x948C40   Offset: 0x948040   Length: 0x337
     protected override void OnDragDropRelease(GameObject surface)
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
+        var pStatics = *(int64*)(DAT_181daf690 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -31,14 +31,14 @@ public class ExampleDragDropItem
         uint8 local_28 [32];
         cVar1 = Object.op_Inequality(surface,0,0);
         if (!cVar1) {
-        LAB_1809488b6:
+        LAB_180948f46:
           UIDragDropItem.OnDragDropRelease(this,surface,0);
           return;
         }
         if (surface != null) {
-          lVar2 = GameObject.GetComponent(surface,DAT_181dc8370);
+          lVar2 = GameObject.GetComponent(surface,DAT_181dc8388);
           cVar1 = Object.op_Inequality(lVar2,0,0);
-          if (!cVar1) goto LAB_1809488b6;
+          if (!cVar1) goto LAB_180948f46;
           if (lVar2 != null) {
             uVar3 = Component.get_gameObject(lVar2,0);
             uVar9 = this.prefab;
@@ -90,7 +90,7 @@ public class ExampleDragDropItem
     }
 
     // Token : 0x600006C
-    // RVA   : 0x9488F0   Offset: 0x947CF0   Length: 0x52
+    // RVA   : 0x948F80   Offset: 0x948380   Length: 0x52
     public void /*ctor*/()
     {
         UIDragDropItem.ctor(this,0);

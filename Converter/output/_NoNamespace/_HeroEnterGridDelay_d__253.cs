@@ -37,7 +37,7 @@ public class <HeroEnterGridDelay>d__253
     }
 
     // Token : 0x6000BEE
-    // RVA   : 0x92F850   Offset: 0x92EC50   Length: 0xC1
+    // RVA   : 0x92FEB0   Offset: 0x92F2B0   Length: 0xC1
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -69,15 +69,15 @@ public class <HeroEnterGridDelay>d__253
     }
 
     // Token : 0x6000BF0
-    // RVA   : 0x92F920   Offset: 0x92ED20   Length: 0x3E
+    // RVA   : 0x92FF80   Offset: 0x92F380   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97938);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97ad0);
     }
 
     // Token : 0x6000BF1

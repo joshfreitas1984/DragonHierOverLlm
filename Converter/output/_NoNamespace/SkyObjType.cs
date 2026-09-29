@@ -6,13 +6,13 @@
 public class SkyObjType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BB8
+    // Token: 0x4001BB9
     public int value__;
 
-    // Token: 0x4001BB9
+    // Token: 0x4001BBA
     public const SkyObjType BigMap;
 
-    // Token: 0x4001BBA
+    // Token: 0x4001BBB
     public const SkyObjType Area;
 
 }

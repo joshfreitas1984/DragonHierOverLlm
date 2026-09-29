@@ -29,7 +29,7 @@ public class TweenTransform
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000602
-    // RVA   : 0xAECFF0   Offset: 0xAEC3F0   Length: 0x681
+    // RVA   : 0xAED6B0   Offset: 0xAECAB0   Length: 0x681
     protected override void OnUpdate(float factor, bool isFinished)
     {
         ulong uVar2;
@@ -65,12 +65,12 @@ public class TweenTransform
           *plVar1 = lVar6;
           il2cpp_internal(plVar1,lVar6);
           fVar4 = local_80;
-          if (*plVar1 == 0) goto LAB_180aed66c;
+          if (*plVar1 == 0) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_position(&local_78,*plVar1,0);
           this.mPos = *puVar7;
           *(uint32 *)(this + 160) = *(uint32 *)(puVar7 + 1);
           fVar4 = local_80;
-          if (*plVar1 == 0) goto LAB_180aed66c;
+          if (*plVar1 == 0) goto LAB_180aedd2c;
           puVar8 = (uint32 *)Transform.get_rotation(&local_68,*plVar1,0);
           uVar10 = puVar8[1];
           uVar11 = puVar8[2];
@@ -80,7 +80,7 @@ public class TweenTransform
           *(uint32 *)(this + 172) = uVar11;
           *(uint32 *)(this + 176) = uVar12;
           fVar4 = local_80;
-          if (*plVar1 == 0) goto LAB_180aed66c;
+          if (*plVar1 == 0) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_localScale(&local_78,*plVar1,0);
           this.mScale = *puVar7;
           *(uint32 *)(this + 188) = *(uint32 *)(puVar7 + 1);
@@ -96,7 +96,7 @@ public class TweenTransform
           fVar9 = 1.0 - factor;
           fVar14 = local_80 * fVar9;
           fVar4 = local_80;
-          if (this.to == null) goto LAB_180aed66c;
+          if (this.to == null) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_position(&local_68,this.to,0);
           fStack_70 = *(float *)(puVar7 + 1);
           local_78 = *puVar7;
@@ -105,7 +105,7 @@ public class TweenTransform
           local_80 = fStack_70 * factor + fVar14;
           local_88 = local_78;
           fVar4 = fStack_70;
-          if (lVar6 == null) goto LAB_180aed66c;
+          if (lVar6 == null) goto LAB_180aedd2c;
           local_88 = local_98;
           Transform.set_position(lVar6,&local_88,0);
           local_88 = this.mScale;
@@ -117,7 +117,7 @@ public class TweenTransform
           fVar4 = local_80;
           local_78 = local_88;
           fStack_70 = local_80;
-          if (this.to == null) goto LAB_180aed66c;
+          if (this.to == null) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_localScale(&local_68,this.to,0);
           fStack_70 = *(float *)(puVar7 + 1);
           local_78 = *puVar7;
@@ -126,7 +126,7 @@ public class TweenTransform
           local_80 = fStack_70 * factor + fVar14;
           local_88 = local_78;
           fVar4 = fStack_70;
-          if (lVar6 == null) goto LAB_180aed66c;
+          if (lVar6 == null) goto LAB_180aedd2c;
           local_88 = local_98;
           Transform.set_localScale(lVar6,&local_88,0);
           lVar6 = *plVar1;
@@ -137,7 +137,7 @@ public class TweenTransform
         }
         else {
           fVar4 = local_80;
-          if (this.from == null) goto LAB_180aed66c;
+          if (this.from == null) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_position(&local_68,this.from,0);
           fVar9 = 1.0 - factor;
           local_88 = *puVar7;
@@ -148,7 +148,7 @@ public class TweenTransform
           fVar4 = local_80;
           local_78 = local_88;
           fStack_70 = local_80;
-          if (this.to == null) goto LAB_180aed66c;
+          if (this.to == null) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_position(&local_68,this.to,0);
           fStack_70 = *(float *)(puVar7 + 1);
           local_78 = *puVar7;
@@ -157,12 +157,12 @@ public class TweenTransform
           local_80 = fStack_70 * factor + fVar14;
           local_88 = local_78;
           fVar4 = fStack_70;
-          if (lVar6 == null) goto LAB_180aed66c;
+          if (lVar6 == null) goto LAB_180aedd2c;
           local_88 = local_98;
           Transform.set_position(lVar6,&local_88,0);
           lVar6 = *plVar1;
           fVar4 = local_80;
-          if (this.from == null) goto LAB_180aed66c;
+          if (this.from == null) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_localScale(&local_68,this.from,0);
           local_88 = *puVar7;
           fVar13 = (float)local_88;
@@ -172,7 +172,7 @@ public class TweenTransform
           fVar4 = local_80;
           local_78 = local_88;
           fStack_70 = local_80;
-          if (this.to == null) goto LAB_180aed66c;
+          if (this.to == null) goto LAB_180aedd2c;
           puVar7 = (uint64 *)Transform.get_localScale(&local_68,this.to,0);
           fStack_70 = *(float *)(puVar7 + 1);
           local_78 = *puVar7;
@@ -181,12 +181,12 @@ public class TweenTransform
           local_80 = fStack_70 * factor + fVar14;
           local_88 = local_78;
           fVar4 = fStack_70;
-          if (lVar6 == null) goto LAB_180aed66c;
+          if (lVar6 == null) goto LAB_180aedd2c;
           local_88 = local_98;
           Transform.set_localScale(lVar6,&local_88,0);
           lVar6 = *plVar1;
           fVar4 = local_80;
-          if (this.from == null) goto LAB_180aed66c;
+          if (this.from == null) goto LAB_180aedd2c;
           puVar8 = (uint32 *)Transform.get_rotation(&local_68,this.from,0);
           uVar10 = *puVar8;
           uVar11 = puVar8[1];
@@ -213,25 +213,25 @@ public class TweenTransform
             Transform.set_rotation(lVar6,&local_68,0);
             if ((this.parentWhenFinished & isFinished) != 0) {
               fVar4 = local_80;
-              if (*plVar1 == 0) goto LAB_180aed66c;
+              if (*plVar1 == 0) goto LAB_180aedd2c;
               Transform.set_parent(*plVar1,this.to,0);
             }
             return;
           }
         }
-        LAB_180aed66c:
+        LAB_180aedd2c:
         local_80 = fVar4;
     }
 
     // Token : 0x6000603
-    // RVA   : 0xAECF20   Offset: 0xAEC320   Length: 0xC2
+    // RVA   : 0xAED5E0   Offset: 0xAEC9E0   Length: 0xC2
     public static TweenTransform Begin(GameObject go, float duration, Transform to)
     {
         int64 TweenTransform.Begin
                          (uint64 go,float duration,uint64 to,uint64 param_4)
         {
         int64 lVar1;
-        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc6f70);
+        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc7120);
         if (lVar1 != null) {
           *(uint64 *)(lVar1 + 120) = to;
           *(uint64 *)(lVar1 + 128) = param_4;
@@ -244,14 +244,14 @@ public class TweenTransform
     }
 
     // Token : 0x6000604
-    // RVA   : 0xAECE50   Offset: 0xAEC250   Length: 0xCC
+    // RVA   : 0xAED510   Offset: 0xAEC910   Length: 0xCC
     public static TweenTransform Begin(GameObject go, float duration, Transform from, Transform to)
     {
         int64 TweenTransform.Begin
                          (uint64 go,float duration,uint64 from,uint64 to)
         {
         int64 lVar1;
-        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc6f70);
+        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc7120);
         if (lVar1 != null) {
           *(uint64 *)(lVar1 + 120) = from;
           *(uint64 *)(lVar1 + 128) = to;
@@ -264,10 +264,10 @@ public class TweenTransform
     }
 
     // Token : 0x6000605
-    // RVA   : 0xAEBF00   Offset: 0xAEB300   Length: 0x7
+    // RVA   : 0xAEC5C0   Offset: 0xAEB9C0   Length: 0x7
     public void /*ctor*/()
     {
-        void FUN_180aebf00(uint64 this)
+        void FUN_180aec5c0(uint64 this)
         {
         UITweener.ctor(this,0);
     }

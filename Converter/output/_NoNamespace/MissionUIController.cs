@@ -6,88 +6,88 @@
 public class MissionUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018F9
+    // Token: 0x40018FA
     public bool showUI;
 
-    // Token: 0x40018FA
+    // Token: 0x40018FB
     public GameObject missionUI;
 
-    // Token: 0x40018FB
+    // Token: 0x40018FC
     public GameObject missionIconPrefab;
 
-    // Token: 0x40018FC
+    // Token: 0x40018FD
     public GameObject missionTable;
 
-    // Token: 0x40018FD
+    // Token: 0x40018FE
     public GameObject worldEventIconPrefab;
 
-    // Token: 0x40018FE
+    // Token: 0x40018FF
     public GameObject worldEventTable;
 
-    // Token: 0x40018FF
+    // Token: 0x4001900
     public GameObject worldEventNewNumIcon;
 
-    // Token: 0x4001900
+    // Token: 0x4001901
     public GameObject mailIconPrefab;
 
-    // Token: 0x4001901
+    // Token: 0x4001902
     public GameObject mailTable;
 
-    // Token: 0x4001902
+    // Token: 0x4001903
     public GameObject mailNewNumIcon;
 
-    // Token: 0x4001903
+    // Token: 0x4001904
     public List<GameObject> toggleButton;
 
-    // Token: 0x4001904
+    // Token: 0x4001905
     public GameObject forceMission;
 
-    // Token: 0x4001905
+    // Token: 0x4001906
     public int nowShowType;
 
-    // Token: 0x4001906
+    // Token: 0x4001907
     public GameObject pigeon;
 
-    // Token: 0x4001907
+    // Token: 0x4001908
     public Transform pigeonPathParent;
 
-    // Token: 0x4001908
+    // Token: 0x4001909
     public Vector3[] pigeonPath;
 
-    // Token: 0x4001909
+    // Token: 0x400190A
     public Tween pigeonTween;
 
-    // Token: 0x400190A
+    // Token: 0x400190B
     public bool worldEventTableDirty;
 
-    // Token: 0x400190B
+    // Token: 0x400190C
     private GameObject temp;
 
-    // Token: 0x400190C
+    // Token: 0x400190D
     private bool inited;
 
-    // Token: 0x400190D
+    // Token: 0x400190E
     private static MissionUIController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600192D
-    // RVA   : 0xE6E0F0   Offset: 0xE6D4F0   Length: 0x36
+    // RVA   : 0xE6E700   Offset: 0xE6DB00   Length: 0x36
     public static MissionUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181d8ab90 + 184);
+        return **(uint64 **)(DAT_181d8aba8 + 184);
     }
 
     // Token : 0x600192E
-    // RVA   : 0xE6A390   Offset: 0xE69790   Length: 0x43
+    // RVA   : 0xE6A9A0   Offset: 0xE69DA0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d8ab90 + 184);
+        puVar1 = *(uint64 **)(DAT_181d8aba8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x600192F
-    // RVA   : 0xE6D770   Offset: 0xE6CB70   Length: 0x117
+    // RVA   : 0xE6DD80   Offset: 0xE6D180   Length: 0x117
     private void Start()
     {
         long lVar1;
@@ -98,7 +98,7 @@ public class MissionUIController
         byte[] local_18 = new byte[16];
         if (this.pigeonPathParent != null) {
           uVar2 = Transform.get_childCount(this.pigeonPathParent,0);
-          uVar3 = FUN_1800d60b0(DAT_181da6d60,uVar2);
+          uVar3 = FUN_1800d60b0(DAT_181da6d78,uVar2);
           this.pigeonPath = uVar3;
           uVar6 = 0;
           lVar1 = this.pigeonPath;
@@ -124,10 +124,10 @@ public class MissionUIController
     }
 
     // Token : 0x6001930
-    // RVA   : 0xE6DF60   Offset: 0xE6D360   Length: 0x18E
+    // RVA   : 0xE6E570   Offset: 0xE6D970   Length: 0x18E
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics = *(int64*)(DAT_181dadd10 + 184);
         bool cVar1;
         if (!this.inited) {
           this.inited = 1;
@@ -143,18 +143,18 @@ public class MissionUIController
         cVar1 = GlobalData.GetKeyDown(9);
         if (cVar1) {
           if (this.missionUI == null) {
-        LAB_180e6e0e9:
+        LAB_180e6e6f9:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           cVar1 = GameObject.get_activeInHierarchy(this.missionUI,0);
           if (cVar1) {
-            if (*pStatics == 0) goto LAB_180e6e0e9;
+            if (*pStatics == 0) goto LAB_180e6e6f9;
             if (*(char *)(*pStatics + 56) == false) {
               MissionUIController.ShowMissionUI(this,!this.showUI,0);
               plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
               plVar3 = (int64 *)0;
-              if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+              if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
                 plVar3 = plVar2;
               }
               NGUITools.PlaySound(plVar3,0);
@@ -165,10 +165,10 @@ public class MissionUIController
     }
 
     // Token : 0x6001931
-    // RVA   : 0xE6AB80   Offset: 0xE69F80   Length: 0x156F
+    // RVA   : 0xE6B190   Offset: 0xE6A590   Length: 0x156F
     public void RefreshForceMission()
     {
-        var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
+        var pStatics_b4a8 = *(int64*)(DAT_181dab4a8 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
@@ -183,15 +183,15 @@ public class MissionUIController
         uint32 uStack_1c;
         if (((GameController._instance == null) ||
             (lVar3 = GameController._instance.worldData) == null) ||
-           (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
+           (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c6d6;
         cVar2 = HeroData.HaveForce(lVar3,0);
         if (!cVar2) {
-        LAB_180e6ae33:
+        LAB_180e6b443:
           if (((GameController._instance == null) ||
               (lVar3 = GameController._instance.worldData) == null) ||
-             (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
-          if (*(int64 *)(lVar3 + 0x2e0) != 0) goto LAB_180e6aedd;
-        LAB_180e6c096:
+             (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c6d6;
+          if (*(int64 *)(lVar3 + 0x2e0) != 0) goto LAB_180e6b4ed;
+        LAB_180e6c6a6:
           if (this.forceMission != null) {
             cVar2 = GameObject.get_activeSelf(this.forceMission,0);
             if (!cVar2) {
@@ -202,54 +202,54 @@ public class MissionUIController
               return;
             }
           }
-        LAB_180e6c0c6:
+        LAB_180e6c6d6:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (((GameController._instance == null) ||
             (lVar3 = GameController._instance.worldData) == null) ||
-           (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
-        if (lVar3.hour) goto LAB_180e6ae33;
-        LAB_180e6aedd:
+           (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c6d6;
+        if (lVar3.hour) goto LAB_180e6b443;
+        LAB_180e6b4ed:
         if (((GameController._instance == null) ||
             (lVar3 = GameController._instance.worldData) == null) ||
-           (lVar3 = lVar3.worldTime) == null) goto LAB_180e6c0c6;
+           (lVar3 = lVar3.worldTime) == null) goto LAB_180e6c6d6;
         if (lVar3.chapter < 2) {
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0c6;
-          if (*(int *)(lVar3 + 20) < 3) goto LAB_180e6c096;
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c6d6;
+          if (*(int *)(lVar3 + 20) < 3) goto LAB_180e6c6a6;
         }
-        if (this.forceMission == null) goto LAB_180e6c0c6;
+        if (this.forceMission == null) goto LAB_180e6c6d6;
         cVar2 = GameObject.get_activeSelf(this.forceMission,0);
         if (!cVar2) {
-          if (this.forceMission == null) goto LAB_180e6c0c6;
+          if (this.forceMission == null) goto LAB_180e6c6d6;
           GameObject.SetActive(this.forceMission,1,0);
         }
         if (((GameController._instance == null) ||
             (lVar3 = GameController._instance.worldData) == null) ||
-           (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c0c6;
+           (lVar3 = WorldData.Player(lVar3,0)) == null) goto LAB_180e6c6d6;
         if (*(int64 *)(lVar3 + 0x2e0) != 0) {
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
              ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 == null ||
-              (*(int64 *)(lVar3 + 0x2e0) == 0)))) goto LAB_180e6c0c6;
-          cVar2 = FUN_18171e540(*(uint64 *)(*(int64 *)(lVar3 + 0x2e0) + 24),"",0);
+              (*(int64 *)(lVar3 + 0x2e0) == 0)))) goto LAB_180e6c6d6;
+          cVar2 = FUN_18171eb50(*(uint64 *)(*(int64 *)(lVar3 + 0x2e0) + 24),"",0);
           if (!cVar2) {
             if (((this.forceMission != null) &&
                 (lVar3 = GameObject.get_transform(this.forceMission,0)) != null) &&
                (lVar3 = Transform.Find(lVar3,"Icon",0)) != null) {
-              lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
-              if ((*pStatics_b490 != 0) &&
+              lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
+              if ((*pStatics_b4a8 != 0) &&
                  (uVar4 = TextureController.LoadAtlasSprite
-                                    (*pStatics_b490,"UIAtlas","门派任务",0),
+                                    (*pStatics_b4a8,"UIAtlas","门派任务",0),
                  lVar3 != null)) {
                 Image.set_sprite(lVar3,uVar4,0);
                 if ((this.forceMission != null) &&
                    ((lVar3 = GameObject.get_transform(this.forceMission,0), lVar3 != null &&
                     (lVar3 = Transform.Find(lVar3,"Icon",0)) != null))) {
-                  plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-                  puVar6 = (uint32 *)FUN_1810d3570(&local_28,0);
+                  plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+                  puVar6 = (uint32 *)FUN_1810d3b80(&local_28,0);
                   if (plVar5 != (int64 *)0) {
                     local_28 = *puVar6;
                     uStack_24 = puVar6[1];
@@ -259,7 +259,7 @@ public class MissionUIController
                     if (((this.forceMission != null) &&
                         (lVar3 = GameObject.get_transform(this.forceMission,0)) != null)
                        && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                      uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                      uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                       lVar3 = FUN_18046c0a0(0);
                       if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
                          ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 != null &&
@@ -271,7 +271,7 @@ public class MissionUIController
                             (lVar3 = GameObject.get_transform(this.forceMission,0),
                             lVar3 != null)) && (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) != null)
                         {
-                          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                           lVar3 = FUN_18046c0a0(0);
                           if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
                              (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) {
@@ -280,7 +280,7 @@ public class MissionUIController
                               lVar3 = FUN_18046c0a0(0);
                               if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                                   (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null)
-                                 || (*(int64 *)(lVar3 + 0x2e0) == 0)) goto LAB_180e6c0c6;
+                                 || (*(int64 *)(lVar3 + 0x2e0) == 0)) goto LAB_180e6c6d6;
                               if (*(int *)(*(int64 *)(lVar3 + 0x2e0) + 36) < 0) {
                                 uVar7 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d0);
                                 if ((((GameController._instance == null) ||
@@ -291,7 +291,7 @@ public class MissionUIController
                                   FUN_1800d6620();
                                 }
                                 local_res20[0] = -*(int *)(*(int64 *)(lVar3 + 0x2e0) + 36);
-                                uVar8 = il2cpp_value_box(DAT_181d80418,local_res20);
+                                uVar8 = il2cpp_value_box(DAT_181d80430,local_res20);
                                 uVar7 = String.Format("{0}{1}日</color>",uVar7,uVar8,0);
                               }
                               else {
@@ -303,7 +303,7 @@ public class MissionUIController
                                   FUN_1800d6620();
                                 }
                                 local_res18[0] = *(int *)(*(int64 *)(lVar3 + 0x2e0) + 36);
-                                uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
+                                uVar7 = il2cpp_value_box(DAT_181d80430,local_res18);
                                 uVar7 = String.Format("{0}日",uVar7,0);
                               }
                             }
@@ -312,7 +312,7 @@ public class MissionUIController
                                 (lVar3 = GameObject.get_transform(this.forceMission,0),
                                 lVar3 != null)) &&
                                (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) != null) {
-                              plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+                              plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
                               puVar6 = (uint32 *)Color.get_black(&local_28,0);
                               if (plVar5 != (int64 *)0) {
                                 local_28 = *puVar6;
@@ -330,23 +330,23 @@ public class MissionUIController
                                     if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                                         (lVar3 = WorldData.Player(lVar3.villageAreaID,0),
                                         lVar3 == null)) || (*(int64 *)(lVar3 + 0x2e0) == 0))
-                                    goto LAB_180e6c0c6;
+                                    goto LAB_180e6c6d6;
                                     cVar2 = MissionData.MissionNeedFinished
                                                       (*(int64 *)(lVar3 + 0x2e0),0,0);
                                     lVar3 = this.forceMission;
                                     if (!cVar2) {
-                                      if (lVar3 == null) goto LAB_180e6c0c6;
+                                      if (lVar3 == null) goto LAB_180e6c6d6;
                                       lVar3 = GameObject.GetComponent(lVar3,DAT_181d73448);
                                       uVar4 = "<i>请在时限内完成任务\n然后返回门派正厅复命</i>";
                                     }
                                     else {
-                                      if (lVar3 == null) goto LAB_180e6c0c6;
+                                      if (lVar3 == null) goto LAB_180e6c6d6;
                                       lVar3 = GameObject.GetComponent(lVar3,DAT_181d73448);
                                       uVar4 = "<i>目标已满足\n返回门派正厅复命</i>";
                                     }
                                   }
                                   else {
-                                    if (this.forceMission == null) goto LAB_180e6c0c6;
+                                    if (this.forceMission == null) goto LAB_180e6c6d6;
                                     lVar3 = GameObject.GetComponent
                                                       (this.forceMission,DAT_181d73448);
                                     uVar4 = "";
@@ -366,36 +366,36 @@ public class MissionUIController
                 }
               }
             }
-            goto LAB_180e6c0c6;
+            goto LAB_180e6c6d6;
           }
         }
         if (((this.forceMission == null) ||
             (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
-           (lVar3 = Transform.Find(lVar3,"Icon",0)) == null) goto LAB_180e6c0c6;
-        lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
-        if ((*pStatics_b490 == 0) ||
+           (lVar3 = Transform.Find(lVar3,"Icon",0)) == null) goto LAB_180e6c6d6;
+        lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
+        if ((*pStatics_b4a8 == 0) ||
            (uVar4 = TextureController.LoadAtlasSprite
-                              (*pStatics_b490,"UIAtlas","门派会议",0),
-           lVar3 == null)) goto LAB_180e6c0c6;
+                              (*pStatics_b4a8,"UIAtlas","门派会议",0),
+           lVar3 == null)) goto LAB_180e6c6d6;
         Image.set_sprite(lVar3,uVar4,0);
         if ((this.forceMission == null) ||
            (lVar3 = GameObject.GetComponent(this.forceMission,DAT_181d73448)) == null)
-        goto LAB_180e6c0c6;
+        goto LAB_180e6c6d6;
         lVar3.cityAreaID = "<i>每月一日门派正厅召开会议\n持续五日</i>";
         if ((GameController._instance == null) ||
            (lVar3 = GameController._instance.worldData) == null)
-        goto LAB_180e6c0c6;
+        goto LAB_180e6c6d6;
         lVar1 = this.forceMission;
         if (!lVar3.forceMeetingStarted) {
           if (((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Icon",0)) == null) {
-        LAB_180e6c0d8:
+        LAB_180e6c6e8:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-          puVar6 = (uint32 *)FUN_1810d33f0(&local_28,0);
-          if (plVar5 == (int64 *)0) goto LAB_180e6c0d8;
+          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+          puVar6 = (uint32 *)FUN_1810d3a00(&local_28,0);
+          if (plVar5 == (int64 *)0) goto LAB_180e6c6e8;
           local_28 = *puVar6;
           uStack_24 = puVar6[1];
           uStack_20 = puVar6[2];
@@ -403,35 +403,35 @@ public class MissionUIController
           (**(code **)(*plVar5 + 0x2a8))(plVar5,&local_28,*(uint64 *)(*plVar5 + 0x2b0));
           if (((this.forceMission == null) ||
               (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180e6c0d8;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
-          uVar7 = FUN_180004500(DAT_181d8b140);
+             (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180e6c6e8;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
+          uVar7 = FUN_180004500(DAT_181d8b158);
           uVar7 = String.Format("等待下次门派会议",uVar7,0);
           LTLocalization.SetText(uVar4,uVar7,0);
           if (((this.forceMission == null) ||
               (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) == null) goto LAB_180e6c0d8;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) == null) goto LAB_180e6c6e8;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0d8;
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c6e8;
           local_res18[0] = TimeData.NextMeetingTime(lVar3,0);
-          uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
+          uVar7 = il2cpp_value_box(DAT_181d80430,local_res18);
           uVar7 = String.Format("{0}日",uVar7,0);
           LTLocalization.SetText(uVar4,uVar7,0);
           if (((this.forceMission == null) ||
               (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) == null) goto LAB_180e6c0d8;
-          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) == null) goto LAB_180e6c6e8;
+          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
           puVar6 = (uint32 *)Color.get_black(&local_28,0);
-          if (plVar5 == (int64 *)0) goto LAB_180e6c0d8;
-          goto LAB_180e6c072;
+          if (plVar5 == (int64 *)0) goto LAB_180e6c6e8;
+          goto LAB_180e6c682;
         }
         if (((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
-           (lVar3 = Transform.Find(lVar3,"Icon",0)) == null) goto LAB_180e6c0c6;
-        plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-        puVar6 = (uint32 *)FUN_1810d3570(&local_28,0);
-        if (plVar5 == (int64 *)0) goto LAB_180e6c0c6;
+           (lVar3 = Transform.Find(lVar3,"Icon",0)) == null) goto LAB_180e6c6d6;
+        plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+        puVar6 = (uint32 *)FUN_1810d3b80(&local_28,0);
+        if (plVar5 == (int64 *)0) goto LAB_180e6c6d6;
         local_28 = *puVar6;
         uStack_24 = puVar6[1];
         uStack_20 = puVar6[2];
@@ -439,51 +439,51 @@ public class MissionUIController
         (**(code **)(*plVar5 + 0x2a8))(plVar5,&local_28,*(uint64 *)(*plVar5 + 0x2b0));
         if (((this.forceMission == null) ||
             (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
-           (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180e6c0c6;
-        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+           (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180e6c6d6;
+        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
         LTLocalization.SetText(uVar4,"门派会议已召开\n",0);
         lVar3 = FUN_18046c0a0(0);
         if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-           (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180e6c0c6;
+           (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180e6c6d6;
         if (lVar3.forceMeetingStarted < 2) {
-        LAB_180e6be39:
+        LAB_180e6c449:
           if (((this.forceMission == null) ||
               (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Text",0)) == null) {
-        LAB_180e6c0ea:
+        LAB_180e6c6fa:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0ea;
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c6fa;
           local_res18[0] = 6 - lVar3.cityAreaID;
-          uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
+          uVar8 = il2cpp_value_box(DAT_181d80430,local_res18);
           uVar7 = "尽快返回门派正厅！";
         }
         else {
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180e6c0c6;
+             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180e6c6d6;
           if (lVar3.forceMeetingStarted < 4) {
             lVar3 = FUN_18046c0a0(0);
-            if ((lVar3 == null) || (lVar3.villageAreaID == null)) goto LAB_180e6c0c6;
-            if (0 < *(int *)(lVar3.villageAreaID + 188)) goto LAB_180e6be39;
+            if ((lVar3 == null) || (lVar3.villageAreaID == null)) goto LAB_180e6c6d6;
+            if (0 < *(int *)(lVar3.villageAreaID + 188)) goto LAB_180e6c449;
           }
           if (((this.forceMission == null) ||
               (lVar3 = GameObject.get_transform(this.forceMission,0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"Text",0)) == null) {
-        LAB_180e6c0de:
+        LAB_180e6c6ee:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c0de;
+             (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) == null) goto LAB_180e6c6ee;
           local_res18[0] = 6 - lVar3.cityAreaID;
-          uVar8 = il2cpp_value_box(DAT_181d80418,local_res18);
+          uVar8 = il2cpp_value_box(DAT_181d80430,local_res18);
           uVar7 = "可以不参加";
         }
         uVar7 = String.Format(uVar7,uVar8,0);
@@ -491,21 +491,21 @@ public class MissionUIController
         if (((this.forceMission != null) &&
             (lVar3 = GameObject.get_transform(this.forceMission,0)) != null) &&
            (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) != null) {
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
              (lVar3 = *(int64 *)(lVar3.villageAreaID + 168)) != null) {
             local_res18[0] = 6 - lVar3.cityAreaID;
-            uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
+            uVar7 = il2cpp_value_box(DAT_181d80430,local_res18);
             uVar7 = String.Format("{0}日",uVar7,0);
             LTLocalization.SetText(uVar4,uVar7,0);
             if (((this.forceMission != null) &&
                 (lVar3 = GameObject.get_transform(this.forceMission,0)) != null) &&
                (lVar3 = Transform.Find(lVar3,"ForceMissionTime",0)) != null) {
-              plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+              plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
               puVar6 = (uint32 *)Color.get_red(&local_28,0);
               if (plVar5 != (int64 *)0) {
-        LAB_180e6c072:
+        LAB_180e6c682:
                 local_28 = *puVar6;
                 uStack_24 = puVar6[1];
                 uStack_20 = puVar6[2];
@@ -519,7 +519,7 @@ public class MissionUIController
     }
 
     // Token : 0x6001932
-    // RVA   : 0xE6A640   Offset: 0xE69A40   Length: 0x1FC
+    // RVA   : 0xE6AC50   Offset: 0xE6A050   Length: 0x1FC
     public void PlayPigeonAnim()
     {
         bool cVar1;
@@ -553,18 +553,18 @@ public class MissionUIController
           local_28 = 0;
           uStack_20 = 0;
           uVar3 = TweenSettingsExtensions.SetLookAt(uVar3,0,&local_28,&local_38,0);
-          uVar3 = TweenSettingsExtensions.SetEase(uVar3,10,DAT_181dc0ef8);
-          uVar2 = new OnTooltipCB(this,DAT_181d8cb20,0);
-          uVar3 = TweenSettingsExtensions.OnPlay(uVar3,uVar2,DAT_181dc0368);
-          uVar2 = new OnTooltipCB(this,DAT_181d8cba0,0);
-          uVar3 = TweenSettingsExtensions.OnComplete(uVar3,uVar2,DAT_181dc0148);
+          uVar3 = TweenSettingsExtensions.SetEase(uVar3,10,DAT_181dc10a0);
+          uVar2 = new OnTooltipCB(this,DAT_181d8c9b8,0);
+          uVar3 = TweenSettingsExtensions.OnPlay(uVar3,uVar2,DAT_181dc0518);
+          uVar2 = new OnTooltipCB(this,DAT_181d8ca38,0);
+          uVar3 = TweenSettingsExtensions.OnComplete(uVar3,uVar2,DAT_181dc02f8);
           this.pigeonTween = uVar3;
           return;
         }
     }
 
     // Token : 0x6001933
-    // RVA   : 0xE6D6D0   Offset: 0xE6CAD0   Length: 0x96
+    // RVA   : 0xE6DCE0   Offset: 0xE6D0E0   Length: 0x96
     public void ShowMissionUI(bool showState)
     {
         long lVar1;
@@ -592,7 +592,7 @@ public class MissionUIController
     }
 
     // Token : 0x6001934
-    // RVA   : 0xE6D890   Offset: 0xE6CC90   Length: 0x3EB
+    // RVA   : 0xE6DEA0   Offset: 0xE6D2A0   Length: 0x3EB
     public void ToggleButtonClicked(GameObject buttonClicked)
     {
         int iVar1;
@@ -618,7 +618,7 @@ public class MissionUIController
           }
           else {
             if (this.toggleButton == null) throw; // [null/range check failed]
-            iVar1 = FUN_1817eb4e0(this.toggleButton,buttonClicked,DAT_181d89518);
+            iVar1 = FUN_1817ebaf0(this.toggleButton,buttonClicked,DAT_181d89530);
             if (iVar1 == this.nowShowType) {
               this.showUI = 0;
               if ((this.missionUI == null) ||
@@ -628,11 +628,11 @@ public class MissionUIController
             }
           }
           if (this.toggleButton == null) throw; // [null/range check failed]
-          iVar1 = FUN_1817eb4e0(this.toggleButton,buttonClicked,DAT_181d89518);
+          iVar1 = FUN_1817ebaf0(this.toggleButton,buttonClicked,DAT_181d89530);
           this.nowShowType = iVar1;
           if (iVar1 == 2) {
             uVar3 = MissionUIController.RebuildMailTable(this,0);
-            FUN_180d8c2e0(this,uVar3,0);
+            FUN_180d8c8f0(this,uVar3,0);
           }
         }
         lVar2 = GameObject.get_transform(buttonClicked,0);
@@ -665,7 +665,7 @@ public class MissionUIController
                 }
                 local_28 = 0;
                 uStack_20 = 0;
-                FUN_1809dc910(&local_28,0x3f800000,0x3f800000,0x3f800000,uVar7,0);
+                FUN_1809dcfa0(&local_28,0x3f800000,0x3f800000,0x3f800000,uVar7,0);
                 if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -679,23 +679,23 @@ public class MissionUIController
                   lVar2 = GameObject.get_transform(buttonClicked,0);
                   if (lVar2 == null) throw; // [null/range check failed]
                   lVar2 = Transform.Find(lVar2,"Pigeon",0);
-                  uVar3 = DAT_181d956e0;
+                  uVar3 = DAT_181d956f8;
                 }
                 else {
                   lVar2 = GameObject.get_transform(buttonClicked,0);
                   if (lVar2 == null) throw; // [null/range check failed]
                   lVar2 = Transform.Find(lVar2,"Mark",0);
-                  uVar3 = DAT_181d94460;
+                  uVar3 = DAT_181d94478;
                 }
                 if (lVar2 != null) {
                   plVar6 = (int64 *)Component.GetComponent(lVar2,uVar3);
                   lVar2 = GameObject.GetComponent(buttonClicked);
                   if (lVar2 != null) {
                     if (*(char *)(lVar2 + 0x118) == false) {
-                      puVar5 = (uint64 *)FUN_1810d33f0(&local_28);
+                      puVar5 = (uint64 *)FUN_1810d3a00(&local_28);
                     }
                     else {
-                      puVar5 = (uint64 *)FUN_1810d3570();
+                      puVar5 = (uint64 *)FUN_1810d3b80();
                     }
                     if (plVar6 != (int64 *)0) {
                       local_28 = *puVar5;
@@ -712,7 +712,7 @@ public class MissionUIController
     }
 
     // Token : 0x6001935
-    // RVA   : 0xE6AB10   Offset: 0xE69F10   Length: 0x6C
+    // RVA   : 0xE6B120   Offset: 0xE6A520   Length: 0x6C
     public IEnumerator RebuildMailTable()
     {
         long lVar1;
@@ -724,7 +724,7 @@ public class MissionUIController
     }
 
     // Token : 0x6001936
-    // RVA   : 0xE6A3E0   Offset: 0xE697E0   Length: 0x25D
+    // RVA   : 0xE6A9F0   Offset: 0xE69DF0   Length: 0x25D
     public void ClearMailButtonClicked()
     {
         int iVar1;
@@ -740,7 +740,7 @@ public class MissionUIController
               if (iVar1 < 0) {
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
                 plVar5 = (int64 *)0;
-                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                   plVar5 = plVar4;
                 }
                 NGUITools.PlaySound(plVar5,0);
@@ -752,19 +752,19 @@ public class MissionUIController
               lVar3 = FUN_18046c0a0(0);
               if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                   (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) ||
-                 (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null) throw; // [null/range check failed]
+                 (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93820)) == null) throw; // [null/range check failed]
             } while (*(char *)(lVar3 + 41) == false);
             lVar3 = FUN_18046c0a0(0);
             if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) break;
-            FUN_181823590(lVar3,iVar1,DAT_181d93708);
+            FUN_181823ba0(lVar3,iVar1,DAT_181d93720);
             bVar2 = true;
           }
         }
     }
 
     // Token : 0x6001937
-    // RVA   : 0xE6A840   Offset: 0xE69C40   Length: 0x2C6
+    // RVA   : 0xE6AE50   Offset: 0xE6A250   Length: 0x2C6
     public void ReadAllMailButtonClicked()
     {
         int iVar1;
@@ -781,7 +781,7 @@ public class MissionUIController
                 if (iVar1 < 0) {
                   plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
                   plVar5 = (int64 *)0;
-                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                     plVar5 = plVar4;
                   }
                   NGUITools.PlaySound(plVar5,0);
@@ -793,17 +793,17 @@ public class MissionUIController
                 lVar3 = FUN_18046c0a0(0);
                 if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                     (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) ||
-                   (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null) throw; // [null/range check failed]
+                   (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93820)) == null) throw; // [null/range check failed]
               } while (*(char *)(lVar3 + 41) != false);
               lVar3 = FUN_18046c0a0(0);
               if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                  ((lVar3 = *(int64 *)(lVar3.villageAreaID + 144), lVar3 == null ||
-                  (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null))) throw; // [null/range check failed]
+                  (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93820)) == null))) throw; // [null/range check failed]
             } while (lVar3.forceAreaID);
             lVar3 = FUN_18046c0a0(0);
             if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                 (lVar3 = *(int64 *)(lVar3.villageAreaID + 144)) == null) ||
-               (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93808)) == null) break;
+               (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181d93820)) == null) break;
             *(uint8 *)(lVar3 + 41) = 1;
             bVar2 = true;
           }
@@ -811,7 +811,7 @@ public class MissionUIController
     }
 
     // Token : 0x6001938
-    // RVA   : 0xE6C0F0   Offset: 0xE6B4F0   Length: 0x344
+    // RVA   : 0xE6C700   Offset: 0xE6BB00   Length: 0x344
     public void RefreshMailNewIcon()
     {
         long lVar1;
@@ -859,7 +859,7 @@ public class MissionUIController
           if (((this.mailNewNumIcon != null) &&
               (lVar2 = GameObject.get_transform(this.mailNewNumIcon,0)) != null) &&
              (lVar2 = Transform.Find(lVar2,"NewNum",0)) != null) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+            uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
             uVar4 = "⋯";
             if (local_res18[0] < 10) {
               uVar4 = Int32.ToString(local_res18,0);
@@ -876,7 +876,7 @@ public class MissionUIController
     }
 
     // Token : 0x6001939
-    // RVA   : 0xE6C440   Offset: 0xE6B840   Length: 0x6F1
+    // RVA   : 0xE6CA50   Offset: 0xE6BE50   Length: 0x6F1
     public void RefreshMailTable()
     {
         ulong uVar1;
@@ -896,9 +896,9 @@ public class MissionUIController
             if (((this.mailTable == null) ||
                 (((lVar6 = GameObject.get_transform(this.mailTable,0), lVar6 == null ||
                   (lVar6 = Transform.GetChild(lVar6,iVar3,0)) == null) ||
-                 (lVar6 = Component.GetComponent(lVar6,DAT_181d948e0)) == null))) || (lVar5 == null))
+                 (lVar6 = Component.GetComponent(lVar6,DAT_181d948f8)) == null))) || (lVar5 == null))
             throw; // [null/range check failed]
-            cVar2 = FUN_18181e400(lVar5,*(uint64 *)(lVar6 + 24));
+            cVar2 = FUN_18181ea10(lVar5,*(uint64 *)(lVar6 + 24));
             lVar5 = this.mailTable;
             if (!cVar2) {
               if (((lVar5 == null) || (lVar5 = GameObject.get_transform(lVar5,0)) == null) ||
@@ -946,7 +946,7 @@ public class MissionUIController
               if (((this.mailTable == null) ||
                   (lVar5 = GameObject.get_transform(this.mailTable,0)) == null) ||
                  ((lVar5 = Transform.GetChild(lVar5,iVar4,0), lVar5 == null ||
-                  (lVar5 = Component.GetComponent(lVar5,DAT_181d948e0)) == null)))
+                  (lVar5 = Component.GetComponent(lVar5,DAT_181d948f8)) == null)))
               throw; // [null/range check failed]
               lVar5 = lVar5.cityAreaID;
               lVar6 = FUN_18046c0a0(0);
@@ -963,31 +963,31 @@ public class MissionUIController
             if (lVar5.cityAreaID == null) {
               if ((((lVar6 != null) && (lVar5 = GameObject.get_transform(lVar6,0)) != null) &&
                   (lVar5 = Transform.Find(lVar5,"ClearMailButton",0)) != null) &&
-                 (lVar5 = Component.GetComponent(lVar5,DAT_181d93760)) != null) {
+                 (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) != null) {
                 Selectable.set_interactable(lVar5,0,0);
                 if (((this.mailTable != null) &&
                     (lVar5 = GameObject.get_transform(this.mailTable,0)) != null) &&
                    ((lVar5 = Transform.Find(lVar5,"ReadAllMailButton",0), lVar5 != null &&
-                    (lVar5 = Component.GetComponent(lVar5,DAT_181d93760)) != null))) {
+                    (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) != null))) {
                   uVar7 = 0;
-                  goto LAB_180e6caeb;
+                  goto LAB_180e6d0fb;
                 }
               }
             }
             else if (((lVar6 != null) && (lVar5 = GameObject.get_transform(lVar6,0)) != null) &&
                     ((lVar5 = Transform.Find(lVar5,"ClearMailButton",0), lVar5 != null &&
-                     (lVar5 = Component.GetComponent(lVar5,DAT_181d93760)) != null))) {
+                     (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) != null))) {
               Selectable.set_interactable(lVar5,1,0);
               if ((((this.mailTable != null) &&
                    (lVar5 = GameObject.get_transform(this.mailTable,0)) != null) &&
                   (lVar5 = Transform.Find(lVar5,"ReadAllMailButton",0)) != null) &&
-                 (lVar5 = Component.GetComponent(lVar5,DAT_181d93760)) != null) {
+                 (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) != null) {
                 uVar7 = 1;
-        LAB_180e6caeb:
+        LAB_180e6d0fb:
                 Selectable.set_interactable(lVar5,uVar7,0);
                 MissionUIController.RefreshMailNewIcon(this,0);
                 uVar7 = MissionUIController.RebuildMailTable(this,0);
-                FUN_180d8c2e0(this,uVar7,0);
+                FUN_180d8c8f0(this,uVar7,0);
                 return;
               }
             }
@@ -996,7 +996,7 @@ public class MissionUIController
     }
 
     // Token : 0x600193A
-    // RVA   : 0xE6CFF0   Offset: 0xE6C3F0   Length: 0x260
+    // RVA   : 0xE6D600   Offset: 0xE6CA00   Length: 0x260
     public void RefreshWorldEventNewIcon()
     {
         long lVar1;
@@ -1033,7 +1033,7 @@ public class MissionUIController
           if (((this.worldEventNewNumIcon != null) &&
               (lVar2 = GameObject.get_transform(this.worldEventNewNumIcon,0)) != null) &&
              (lVar2 = Transform.Find(lVar2,"NewNum",0)) != null) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+            uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
             uVar4 = "⋯";
             if (local_res18[0] < 10) {
               uVar4 = Int32.ToString(local_res18,0);
@@ -1045,7 +1045,7 @@ public class MissionUIController
     }
 
     // Token : 0x600193B
-    // RVA   : 0xE6D260   Offset: 0xE6C660   Length: 0x46E
+    // RVA   : 0xE6D870   Offset: 0xE6CC70   Length: 0x46E
     public void RefreshWorldEventTable()
     {
         ulong uVar1;
@@ -1065,9 +1065,9 @@ public class MissionUIController
             if (((this.worldEventTable == null) ||
                 (((lVar6 = GameObject.get_transform(this.worldEventTable,0), lVar6 == null ||
                   (lVar6 = Transform.GetChild(lVar6,iVar3,0)) == null) ||
-                 (lVar6 = Component.GetComponent(lVar6,DAT_181d97260)) == null))) || (lVar5 == null))
+                 (lVar6 = Component.GetComponent(lVar6,DAT_181d97278)) == null))) || (lVar5 == null))
             throw; // [null/range check failed]
-            cVar2 = FUN_18181e400(lVar5);
+            cVar2 = FUN_18181ea10(lVar5);
             if (!cVar2) {
               if (((this.worldEventTable == null) ||
                   (lVar5 = GameObject.get_transform(this.worldEventTable,0)) == null) ||
@@ -1107,7 +1107,7 @@ public class MissionUIController
               if (((this.worldEventTable == null) ||
                   (lVar5 = GameObject.get_transform(this.worldEventTable,0)) == null) ||
                  ((lVar5 = Transform.GetChild(lVar5,iVar4,0), lVar5 == null ||
-                  (lVar5 = Component.GetComponent(lVar5,DAT_181d97260)) == null)))
+                  (lVar5 = Component.GetComponent(lVar5,DAT_181d97278)) == null)))
               throw; // [null/range check failed]
               lVar5 = lVar5.cityAreaID;
               lVar6 = FUN_18046c0a0(0);
@@ -1121,7 +1121,7 @@ public class MissionUIController
     }
 
     // Token : 0x600193C
-    // RVA   : 0xE6CB40   Offset: 0xE6BF40   Length: 0x4A1
+    // RVA   : 0xE6D150   Offset: 0xE6C550   Length: 0x4A1
     public void RefreshMissionTable()
     {
         ulong uVar1;
@@ -1142,9 +1142,9 @@ public class MissionUIController
             if (((this.missionTable == null) ||
                 (lVar6 = GameObject.get_transform(this.missionTable,0)) == null) ||
                ((lVar6 = Transform.GetChild(lVar6,iVar3,0), lVar6 == null ||
-                ((lVar6 = Component.GetComponent(lVar6,DAT_181d94a60), lVar6 == null || (lVar5 == null))))))
+                ((lVar6 = Component.GetComponent(lVar6,DAT_181d94a78), lVar6 == null || (lVar5 == null))))))
             throw; // [null/range check failed]
-            cVar2 = FUN_18181e400(lVar5);
+            cVar2 = FUN_18181ea10(lVar5);
             if (!cVar2) {
               if (((this.missionTable == null) ||
                   (lVar5 = GameObject.get_transform(this.missionTable,0)) == null) ||
@@ -1186,7 +1186,7 @@ public class MissionUIController
               if (((this.missionTable == null) ||
                   (lVar5 = GameObject.get_transform(this.missionTable,0)) == null) ||
                  ((lVar5 = Transform.GetChild(lVar5,iVar4,0), lVar5 == null ||
-                  (lVar5 = Component.GetComponent(lVar5,DAT_181d94a60)) == null)))
+                  (lVar5 = Component.GetComponent(lVar5,DAT_181d94a78)) == null)))
               throw; // [null/range check failed]
               lVar5 = lVar5.cityAreaID;
               lVar6 = FUN_18046c0a0(0);
@@ -1208,7 +1208,7 @@ public class MissionUIController
     }
 
     // Token : 0x600193E
-    // RVA   : 0xE6DC80   Offset: 0xE6D080   Length: 0x1B3
+    // RVA   : 0xE6E290   Offset: 0xE6D690   Length: 0x1B3
     private void <PlayPigeonAnim>b__27_0()
     {
         long lVar1;
@@ -1228,11 +1228,11 @@ public class MissionUIController
                     if (this.pigeon != null) {
                       uVar2 = GameObject.get_transform(this.pigeon,0);
                       uVar2 = ShortcutExtensions.DOScale(uVar2,0x3f400000,0x3f400000,0);
-                      uVar2 = TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc1330);
-                      TweenSettingsExtensions.SetEase(uVar2,7,DAT_181dc0f80);
+                      uVar2 = TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc14d8);
+                      TweenSettingsExtensions.SetEase(uVar2,7,DAT_181dc1128);
                       plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/鸽子",0);
                       plVar4 = (int64 *)0;
-                      if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                      if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                         plVar4 = plVar3;
                       }
                       NGUITools.PlaySound(plVar4,0);
@@ -1247,7 +1247,7 @@ public class MissionUIController
     }
 
     // Token : 0x600193F
-    // RVA   : 0xE6DE40   Offset: 0xE6D240   Length: 0x11C
+    // RVA   : 0xE6E450   Offset: 0xE6D850   Length: 0x11C
     private void <PlayPigeonAnim>b__27_1()
     {
         long lVar1;

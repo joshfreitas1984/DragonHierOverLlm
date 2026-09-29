@@ -6,19 +6,19 @@
 public class <ShowItemAnim>d__32
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BF2
+    // Token: 0x4001BF3
     private int <>1__state;
 
-    // Token: 0x4001BF3
+    // Token: 0x4001BF4
     private object <>2__current;
 
-    // Token: 0x4001BF4
+    // Token: 0x4001BF5
     public SpeShowController <>4__this;
 
-    // Token: 0x4001BF5
+    // Token: 0x4001BF6
     public float delayTime;
 
-    // Token: 0x4001BF6
+    // Token: 0x4001BF7
     private float <CountDelayTime>5__2;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,10 +37,10 @@ public class <ShowItemAnim>d__32
     }
 
     // Token : 0x6002193
-    // RVA   : 0x8F2720   Offset: 0x8F1B20   Length: 0x8A7
+    // RVA   : 0x9255A0   Offset: 0x9249A0   Length: 0x8A7
     private virtual bool MoveNext()
     {
-        var pStatics_4450 = *(int64*)(DAT_181da4450 + 184);
+        var pStatics_4468 = *(int64*)(DAT_181da4468 + 184);
         float fVar1;
         float fVar2;
         long lVar3;
@@ -61,11 +61,11 @@ public class <ShowItemAnim>d__32
              (lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0)) != null) {
             Transform.get_childCount(lVar6,0);
             Mathf.Max();
-            uVar10 = FUN_1810e36c0();
+            uVar10 = FUN_1810e3cd0();
             fVar11 = this.delayTime;
             this.<CountDelayTime>5__2 = uVar10;
             fVar1 = this.<CountDelayTime>5__2;
-            fVar2 = *(float *)(pStatics_4450 + 8);
+            fVar2 = *(float *)(pStatics_4468 + 8);
             if ((*(int64 *)(lVar3 + 64) != 0) &&
                (lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0)) != null) {
               iVar4 = Transform.get_childCount(lVar6,0);
@@ -85,7 +85,7 @@ public class <ShowItemAnim>d__32
           if (lVar3 != null) {
             iVar4 = 0;
             if (*(char *)(lVar3 + 24) != false) {
-              lVar6 = **(int64 **)(DAT_181d7f6a8 + 184);
+              lVar6 = **(int64 **)(DAT_181d7f6c0 + 184);
               if (((GameController._instance == null) ||
                   (lVar8 = GameController._instance.worldData) == null) ||
                  (lVar8 = WorldData.Player(lVar8,0)) == null) throw; // [null/range check failed]
@@ -122,23 +122,23 @@ public class <ShowItemAnim>d__32
               uVar9 = ShortcutExtensions.DOScale(uVar9);
               fVar11 = (float)iVar4;
               uVar9 = TweenSettingsExtensions.SetDelay
-                                (uVar9,this.<CountDelayTime>5__2 * fVar11,DAT_181dc0c60);
-              uVar9 = TweenSettingsExtensions.SetEase(uVar9,27,DAT_181dc0f80);
+                                (uVar9,this.<CountDelayTime>5__2 * fVar11,DAT_181dc0e10);
+              uVar9 = TweenSettingsExtensions.SetEase(uVar9,27,DAT_181dc1128);
               TweenSettingsExtensions.Append(uVar7,uVar9,0);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
                  (lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0)) == null) break;
               uVar9 = Transform.GetChild(lVar6,iVar4,0);
               uVar9 = ShortcutExtensions.DOScale
-                                (uVar9,pStatics_4450,
-                                 *(float *)(pStatics_4450 + 8) * 0.2,0);
-              uVar9 = TweenSettingsExtensions.SetEase(uVar9,4,DAT_181dc0f80);
+                                (uVar9,pStatics_4468,
+                                 *(float *)(pStatics_4468 + 8) * 0.2,0);
+              uVar9 = TweenSettingsExtensions.SetEase(uVar9,4,DAT_181dc1128);
               TweenSettingsExtensions.Append(uVar7,uVar9,0);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
                  ((lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0), lVar6 == null ||
                   (lVar6 = Transform.GetChild(lVar6,iVar4,0)) == null))) break;
               uVar7 = Component.get_gameObject(lVar6,0);
               uVar7 = SpeShowController.PlayItemSound(lVar3,uVar7,this.<CountDelayTime>5__2 * fVar11);
-              FUN_180d8c2e0(lVar3,uVar7,0);
+              FUN_180d8c8f0(lVar3,uVar7,0);
               uVar7 = *(uint64 *)(lVar3 + 128);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
                  ((lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0), lVar6 == null ||
@@ -146,7 +146,7 @@ public class <ShowItemAnim>d__32
               uVar9 = Component.get_gameObject(lVar6,0);
               uVar7 = SpeShowController.ShowItemParticle
                                 (lVar3,uVar7,uVar9,this.<CountDelayTime>5__2 * fVar11,0);
-              FUN_180d8c2e0(lVar3,uVar7,0);
+              FUN_180d8c8f0(lVar3,uVar7,0);
               uVar7 = *(uint64 *)(lVar3 + 136);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
                  ((lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0), lVar6 == null ||
@@ -154,7 +154,7 @@ public class <ShowItemAnim>d__32
               uVar9 = Component.get_gameObject(lVar6,0);
               uVar7 = SpeShowController.ShowItemParticle
                                 (lVar3,uVar7,uVar9,this.<CountDelayTime>5__2 * fVar11,0);
-              FUN_180d8c2e0(lVar3,uVar7,0);
+              FUN_180d8c8f0(lVar3,uVar7,0);
               uVar7 = *(uint64 *)(lVar3 + 152);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
                  ((lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0), lVar6 == null ||
@@ -163,8 +163,8 @@ public class <ShowItemAnim>d__32
               uVar7 = SpeShowController.ShowItemParticle
                                 (lVar3,uVar7,uVar9,
                                  this.<CountDelayTime>5__2 * fVar11 +
-                                 *(float *)(pStatics_4450 + 8),0);
-              FUN_180d8c2e0(lVar3,uVar7);
+                                 *(float *)(pStatics_4468 + 8),0);
+              FUN_180d8c8f0(lVar3,uVar7);
               if ((*(int64 *)(lVar3 + 64) == 0) ||
                  ((((lVar6 = GameObject.get_transform(*(int64 *)(lVar3 + 64),0), lVar6 == null ||
                     (lVar6 = Transform.GetChild(lVar6,iVar4,0)) == null) ||
@@ -178,7 +178,7 @@ public class <ShowItemAnim>d__32
                 uVar9 = Component.get_gameObject(lVar6,0);
                 SpeShowController.ShowItemParticle
                           (lVar3,uVar7,uVar9,this.<CountDelayTime>5__2 * fVar11,0);
-                FUN_180d8c2e0(lVar3);
+                FUN_180d8c8f0(lVar3);
               }
               iVar4 = iVar4 + 1;
             }
@@ -194,15 +194,15 @@ public class <ShowItemAnim>d__32
     }
 
     // Token : 0x6002195
-    // RVA   : 0x8F2FD0   Offset: 0x8F23D0   Length: 0x3E
+    // RVA   : 0x925E50   Offset: 0x925250   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db3a18);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db3bc8);
     }
 
     // Token : 0x6002196

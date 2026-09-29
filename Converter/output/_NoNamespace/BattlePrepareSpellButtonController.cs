@@ -44,7 +44,7 @@ public class BattlePrepareSpellButtonController
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"Text",0);
           if (lVar2 != null) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+            uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
             if ((this.targetSpellData != null) &&
                (lVar2 = this.targetSpellData.spellName) != null) {
               local_res18[0] = String.get_Chars(lVar2,0,0);
@@ -54,7 +54,7 @@ public class BattlePrepareSpellButtonController
               if (lVar2 != null) {
                 lVar2 = Transform.Find(lVar2,"Text",0);
                 if (lVar2 != null) {
-                  plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d96160);
+                  plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
                   lVar2 = GameController.lockObj;
                   if (lVar2 != null) {
                     lVar2 = *(int64 *)(lVar2 + 56);
@@ -78,7 +78,7 @@ public class BattlePrepareSpellButtonController
                                     (plVar5,&local_48,*(uint64 *)(*plVar5 + 0x2b0));
                           lVar2 = Component.get_transform(this,0);
                           if (lVar2 != null) {
-                            lVar2 = Component.GetComponent(lVar2,DAT_181d95560);
+                            lVar2 = Component.GetComponent(lVar2,DAT_181d95578);
                             if (this.targetSpellData != null) {
                               uVar3 = this.targetSpellData.spellName;
                               if ((GameController._instance != null) &&
@@ -108,7 +108,7 @@ public class BattlePrepareSpellButtonController
                                       FUN_1800d6620();
                                     }
                                     local_58[0] = this.targetSpellData.costSpellNum;
-                                    uVar7 = il2cpp_value_box(DAT_181d80418,local_58);
+                                    uVar7 = il2cpp_value_box(DAT_181d80430,local_58);
                                     if ((this.targetSpellData == null) ||
                                        (lVar6 = this.targetSpellData.spellSpeAddData,
                                        lVar6 == null)) goto LAB_1808cb1a0;
@@ -134,7 +134,7 @@ public class BattlePrepareSpellButtonController
                                   uVar3 = String.Format(uVar4,uVar3,uVar7,0);
                                   if (lVar2 != null) {
                                     *(uint64 *)(lVar2 + 24) = uVar3;
-                                    lVar2 = Component.GetComponent(this,DAT_181d93760);
+                                    lVar2 = Component.GetComponent(this,DAT_181d93778);
                                     if ((GameController._instance != null) &&
                                        (lVar6 = *(int64 *)
                                                  (GameController._instance + 32),
@@ -170,25 +170,25 @@ public class BattlePrepareSpellButtonController
     // RVA   : 0x8CBA50   Offset: 0x8CAE50   Length: 0x139
     public void Update()
     {
-        var pStatics = *(int64*)(DAT_181db05c8 + 184);
+        var pStatics = *(int64*)(DAT_181db05e0 + 184);
         long lVar1;
         uint local_18;
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar1 = Component.GetComponent(this,DAT_181d93760);
+        lVar1 = Component.GetComponent(this,DAT_181d93778);
         if (lVar1 != null) {
           if ((*(char *)(lVar1 + 208) == false) || (this.cancel)) {
             return;
           }
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94478);
           if ((*pStatics != 0) && (this.targetSpellData != null)) {
             if (*(int *)(*pStatics + 48) <
                 this.targetSpellData.costSpellNum) {
-              puVar3 = *(uint32 **)(DAT_181db0548 + 184);
+              puVar3 = *(uint32 **)(DAT_181db0560 + 184);
             }
             else {
-              puVar3 = (uint32 *)FUN_1810d3570(&local_18,0);
+              puVar3 = (uint32 *)FUN_1810d3b80(&local_18,0);
             }
             local_18 = *puVar3;
             uStack_14 = puVar3[1];
@@ -206,7 +206,7 @@ public class BattlePrepareSpellButtonController
     // RVA   : 0x8CA9B0   Offset: 0x8C9DB0   Length: 0x59
     public bool CanUse()
     {
-        var pStatics = *(int64*)(DAT_181db05c8 + 184);
+        var pStatics = *(int64*)(DAT_181db05e0 + 184);
         int iVar1;
         if ((*pStatics != 0) && (this.targetSpellData != null)) {
           iVar1 = this.targetSpellData.costSpellNum;
@@ -219,7 +219,7 @@ public class BattlePrepareSpellButtonController
     // RVA   : 0x8CB1B0   Offset: 0x8CA5B0   Length: 0x62B
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181db05c8 + 184);
+        var pStatics = *(int64*)(DAT_181db05e0 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -234,7 +234,7 @@ public class BattlePrepareSpellButtonController
                 GameController.ShowTextOnMouse(lVar1,"符法点不足！",0);
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar7 = (int64 *)0;
-                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                   plVar7 = plVar4;
                 }
                 NGUITools.PlaySound(plVar7,0);
@@ -242,8 +242,8 @@ public class BattlePrepareSpellButtonController
               }
             }
             else {
-              lVar1 = il2cpp_internal(DAT_181d93350);
-              FUN_18132faf0(lVar1,DAT_181d8b418);
+              lVar1 = il2cpp_internal(DAT_181d93368);
+              FUN_181330100(lVar1,DAT_181d8b430);
               if (this.targetSpellData != null) {
                 iVar8 = 0;
                 if (!this.targetSpellData.toEnemy) {
@@ -259,7 +259,7 @@ public class BattlePrepareSpellButtonController
                   uVar6 = (uint32)(*(int *)(lVar2 + 16) == 0);
                 }
                 while( true ) {
-                  lVar2 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+                  lVar2 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
                   if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 80)) == null)
                   throw; // [null/range check failed]
                   if (*(uint32 *)(lVar2 + 24) <= uVar6) {
@@ -270,21 +270,21 @@ public class BattlePrepareSpellButtonController
                   if (*(int *)(lVar2 + 24) <= iVar8) break;
                   lVar2 = FUN_18046bb80(0);
                   if ((((lVar2 == null) || (*(int64 *)(lVar2 + 80) == 0)) ||
-                      (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 80),uVar6,DAT_181d79628)) == null
-                      ) || ((lVar2 = FUN_180002f80(lVar2,iVar8,DAT_181da6898), lVar2 == null ||
+                      (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 80),uVar6,DAT_181d79640)) == null
+                      ) || ((lVar2 = FUN_180002f80(lVar2,iVar8,DAT_181da68b0), lVar2 == null ||
                             (*(int64 *)(lVar2 + 24) == 0)))) throw; // [null/range check failed]
                   if (*(int64 *)(*(int64 *)(lVar2 + 24) + 0x248) == 0) {
                     lVar2 = FUN_18046bb80(0);
                     if ((((lVar2 == null) || (*(int64 *)(lVar2 + 80) == 0)) ||
-                        (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 80),uVar6,DAT_181d79628),
+                        (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 80),uVar6,DAT_181d79640),
                         lVar2 == null)) ||
-                       ((lVar2 = FUN_180002f80(lVar2,iVar8,DAT_181da6898), lVar2 == null || (lVar1 == null))))
+                       ((lVar2 = FUN_180002f80(lVar2,iVar8,DAT_181da68b0), lVar2 == null || (lVar1 == null))))
                     throw; // [null/range check failed]
-                    FUN_18181e0a0(lVar1,*(uint64 *)(lVar2 + 24),DAT_181d8b518);
+                    FUN_18181e6b0(lVar1,*(uint64 *)(lVar2 + 24),DAT_181d8b530);
                   }
                   iVar8 = iVar8 + 1;
                 }
-                lVar2 = **(int64 **)(DAT_181db7518 + 184);
+                lVar2 = **(int64 **)(DAT_181db7530 + 184);
                 uVar3 = Component.get_gameObject(this,0);
                 if (lVar2 != null) {
                   ChooseController.ShowChoosePanel(lVar2,2,lVar1,uVar3,"TargetHeroChoosen",0,0,0,0);
@@ -297,7 +297,7 @@ public class BattlePrepareSpellButtonController
         else {
           if (((*pStatics != 0) && (this.targetSpellData != null)) &&
              (lVar1 = *(int64 *)(*pStatics + 56)) != null) {
-            FUN_1817eee00(lVar1,this.targetSpellData.id,DAT_181d8f618);
+            FUN_1817ef410(lVar1,this.targetSpellData.id,DAT_181d8f630);
             lVar1 = *pStatics;
             if ((this.targetSpellData != null) && (lVar1 != null)) {
               *(int *)(lVar1 + 48) =
@@ -324,8 +324,8 @@ public class BattlePrepareSpellButtonController
     // RVA   : 0x8CB7E0   Offset: 0x8CABE0   Length: 0x269
     public void TargetHeroChoosen()
     {
-        var pStatics_05c8 = *(int64*)(DAT_181db05c8 + 184);
-        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
+        var pStatics_05e0 = *(int64*)(DAT_181db05e0 + 184);
+        var pStatics_7530 = *(int64*)(DAT_181db7530 + 184);
         ulong uVar1;
         long lVar3;
         if (this.targetSpellData != null) {
@@ -337,25 +337,25 @@ public class BattlePrepareSpellButtonController
           plVar2 = (int64 *)Resources.Load(uVar1,0);
           plVar5 = (int64 *)0;
           plVar4 = plVar5;
-          if ((plVar2 != (int64 *)0) && (plVar4 = (int64 *)0, *plVar2 == DAT_181daf348)) {
+          if ((plVar2 != (int64 *)0) && (plVar4 = (int64 *)0, *plVar2 == DAT_181daf360)) {
             plVar4 = plVar2;
           }
           NGUITools.PlaySound(plVar4,0);
           plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/PencilWriting",0);
-          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
             plVar5 = plVar2;
           }
           NGUITools.PlaySound(plVar5,0);
-          if (((*pStatics_05c8 != 0) && (this.targetSpellData != null)) &&
-             (lVar3 = *(int64 *)(*pStatics_05c8 + 56)) != null) {
-            FUN_18182a0b0(lVar3,this.targetSpellData.id,DAT_181d8f218);
-            lVar3 = *pStatics_05c8;
+          if (((*pStatics_05e0 != 0) && (this.targetSpellData != null)) &&
+             (lVar3 = *(int64 *)(*pStatics_05e0 + 56)) != null) {
+            FUN_18182a6c0(lVar3,this.targetSpellData.id,DAT_181d8f230);
+            lVar3 = *pStatics_05e0;
             if ((this.targetSpellData != null) && (lVar3 != null)) {
               *(int *)(lVar3 + 48) =
                    *(int *)(lVar3 + 48) - this.targetSpellData.costSpellNum;
               BattlePrepareSpellController.RefreshUI(lVar3,0);
-              if ((*pStatics_7518 != 0) &&
-                 (lVar3 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+              if ((*pStatics_7530 != 0) &&
+                 (lVar3 = *(int64 *)(*pStatics_7530 + 72)) != null) {
                 lVar3 = GameObject.GetComponent(lVar3,DAT_181d71b50);
                 if (lVar3 != null) {
                   lVar3 = *(int64 *)(lVar3 + 32);
@@ -388,7 +388,7 @@ public class BattlePrepareSpellButtonController
         local_18 = 0;
         uStack_10 = 0;
         Color.ctor(&local_18,0x3f800000,0x3f4ccccd,0x3f4ccccd,0);
-        puVar1 = *(uint64 **)(DAT_181db0548 + 184);
+        puVar1 = *(uint64 **)(DAT_181db0560 + 184);
         *puVar1 = local_18;
         puVar1[1] = uStack_10;
     }

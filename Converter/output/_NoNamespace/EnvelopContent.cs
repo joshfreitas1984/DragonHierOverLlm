@@ -29,20 +29,20 @@ public class EnvelopContent
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60000A0
-    // RVA   : 0x944810   Offset: 0x943C10   Length: 0xB
+    // RVA   : 0x944EA0   Offset: 0x9442A0   Length: 0xB
     private void Start()
     {
-        void FUN_180944810(int64 this)
+        void FUN_180944ea0(int64 this)
         {
         this.mStarted = 1;
         EnvelopContent.Execute(this,0);
     }
 
     // Token : 0x60000A1
-    // RVA   : 0x944800   Offset: 0x943C00   Length: 0xE
+    // RVA   : 0x944E90   Offset: 0x944290   Length: 0xE
     private void OnEnable()
     {
-        void FUN_180944800(int64 this)
+        void FUN_180944e90(int64 this)
         {
         if (this.mStarted) {
           EnvelopContent.Execute(this,0);
@@ -51,7 +51,7 @@ public class EnvelopContent
     }
 
     // Token : 0x60000A2
-    // RVA   : 0x9444C0   Offset: 0x9438C0   Length: 0x339
+    // RVA   : 0x944B50   Offset: 0x943F50   Length: 0x339
     public void Execute()
     {
         float fVar1;
@@ -79,7 +79,7 @@ public class EnvelopContent
           if (!cVar4) {
             lVar6 = Component.get_transform(this,0);
             if (lVar6 != null) {
-              uVar7 = FUN_180da9a20(lVar6,0);
+              uVar7 = FUN_180daa030(lVar6,0);
               puVar8 = (uint64 *)
                        NGUIMath.CalculateRelativeWidgetBounds
                                  (local_68,uVar7,this.targetRoot,
@@ -99,7 +99,7 @@ public class EnvelopContent
               puVar8 = (uint64 *)Bounds.get_max(local_68,&local_50,0);
               iVar3 = this.padTop;
               local_78 = *puVar8;
-              plVar10 = (int64 *)Component.GetComponent(this,DAT_181d97060);
+              plVar10 = (int64 *)Component.GetComponent(this,DAT_181d97078);
               if (plVar10 != (int64 *)0) {
                 (**(code **)(*plVar10 + 0x268))
                           (plVar10,fVar11,fVar12,((float)iVar2 + fVar1) - fVar11,
@@ -121,10 +121,10 @@ public class EnvelopContent
     }
 
     // Token : 0x60000A3
-    // RVA   : 0x944820   Offset: 0x943C20   Length: 0xB
+    // RVA   : 0x944EB0   Offset: 0x9442B0   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_180944820(int64 this)
+        void FUN_180944eb0(int64 this)
         {
         this.ignoreDisabled = 1;
         FUN_18044ef50(this,0);

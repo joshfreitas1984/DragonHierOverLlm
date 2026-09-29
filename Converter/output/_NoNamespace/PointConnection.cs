@@ -6,10 +6,10 @@
 public class PointConnection
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CEF
+    // Token: 0x4001CF0
     public int pointID;
 
-    // Token: 0x4001CF0
+    // Token: 0x4001CF1
     public int nextPoint;
 
     // ── Methods ──────────────────────────────────────────────────

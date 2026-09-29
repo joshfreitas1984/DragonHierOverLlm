@@ -32,14 +32,14 @@ public class ForceSettingController
     // RVA   : 0x77EBE0   Offset: 0x77DFE0   Length: 0x36
     public static ForceSettingController get_Instance()
     {
-        return **(uint64 **)(DAT_181dc80b8 + 184);
+        return **(uint64 **)(DAT_181dc80d0 + 184);
     }
 
     // Token : 0x60014CF
     // RVA   : 0x77BDA0   Offset: 0x77B1A0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181dc80b8 + 184);
+        puVar1 = *(uint64 **)(DAT_181dc80d0 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -74,7 +74,7 @@ public class ForceSettingController
               if (lVar1.forceName <= (int)plVar2) {
                 ForceSettingController.RegenerateBranchSettings(this,0);
                 plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
-                if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+                if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
                   plVar4 = plVar2;
                 }
                 NGUITools.PlaySound(plVar4,0);
@@ -84,7 +84,7 @@ public class ForceSettingController
                 if ((((this.targetForce == null) ||
                      (lVar1 = this.targetForce.forceJobSettingData) == null) ||
                     (lVar1 = lVar1.forceName) == null) ||
-                   (lVar1 = FUN_180002f80(lVar1,plVar2,DAT_181d789a8)) == null) throw; // [null/range check failed]
+                   (lVar1 = FUN_180002f80(lVar1,plVar2,DAT_181d789c0)) == null) throw; // [null/range check failed]
                 if (lVar1.forceName <= (int)plVar3) break;
                 ForceSettingController.RefreshForceJob(this,plVar2,plVar3,0);
                 plVar3 = (int64 *)(uint64)((int)plVar3 + 1);
@@ -123,26 +123,26 @@ public class ForceSettingController
           lVar4 = lVar4.defaultSkinID;
           if ((((this.targetForce == null) ||
                (lVar5 = this.targetForce.ownAreasID) == null) ||
-              (uVar3 = FUN_1800d6760(lVar5,iVar8,DAT_181d8fa18), lVar4 == null)) ||
+              (uVar3 = FUN_1800d6760(lVar5,iVar8,DAT_181d8fa30), lVar4 == null)) ||
              (lVar4 = WorldData.GetArea(lVar4,uVar3,0)) == null) break;
           if (lVar4.startSkillBookID != 2) {
             uVar7 = this.branchLeaderSettingList;
             uVar1 = this.branchLeaderSettingTabPrefab;
             lVar4 = GlobalData.AddChild(uVar7,uVar1,0);
             if (lVar4 == null) break;
-            lVar5 = GameObject.GetComponent(lVar4,DAT_181dc7958);
+            lVar5 = GameObject.GetComponent(lVar4,DAT_181dc7970);
             lVar6 = FUN_18046c0a0(0);
             if (lVar6 == null) break;
             lVar6 = *(int64 *)(lVar6 + 32);
             if ((((this.targetForce == null) ||
                  (lVar2 = this.targetForce.ownAreasID) == null) ||
-                (uVar3 = FUN_1800d6760(lVar2,iVar8,DAT_181d8fa18), lVar6 == null)) ||
+                (uVar3 = FUN_1800d6760(lVar2,iVar8,DAT_181d8fa30), lVar6 == null)) ||
                (uVar7 = WorldData.GetArea(lVar6,uVar3,0), lVar5 == null)) break;
             *(uint64 *)(lVar5 + 32) = uVar7;
-            lVar5 = GameObject.GetComponent(lVar4,DAT_181dc7958);
+            lVar5 = GameObject.GetComponent(lVar4,DAT_181dc7970);
             if (lVar5 == null) break;
             *(uint64 *)(lVar5 + 40) = this.targetForce;
-            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7958);
+            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7970);
             if (lVar4 == null) break;
             lVar4.forceName = 1;
           }
@@ -176,7 +176,7 @@ public class ForceSettingController
               if ((((this.targetForce == null) ||
                    (lVar2 = this.targetForce.forceJobSettingData) == null) ||
                   (lVar2 = lVar2.forceName) == null) ||
-                 (lVar2 = FUN_180002f80(lVar2,local_res18[0],DAT_181d789a8)) == null)
+                 (lVar2 = FUN_180002f80(lVar2,local_res18[0],DAT_181d789c0)) == null)
               throw; // [null/range check failed]
               if (lVar2.forceName <= iVar1) break;
               if (this.forceJobSettingList == null) throw; // [null/range check failed]
@@ -217,7 +217,7 @@ public class ForceSettingController
               if ((((this.targetForce == null) ||
                    (lVar1 = this.targetForce.forceJobSettingData) == null) ||
                   (lVar1 = lVar1.forceName) == null) ||
-                 (lVar1 = FUN_180002f80(lVar1,iVar3,DAT_181d789a8)) == null) throw; // [null/range check failed]
+                 (lVar1 = FUN_180002f80(lVar1,iVar3,DAT_181d789c0)) == null) throw; // [null/range check failed]
               if (lVar1.forceName <= iVar2) break;
               ForceSettingController.RefreshForceJob(this,iVar3,iVar2,0);
               iVar2 = iVar2 + 1;
@@ -255,7 +255,7 @@ public class ForceSettingController
           uVar3 = String.Concat(uVar3,"_",uVar4,0);
           if (((lVar2 != null) && (lVar2 = Transform.Find(lVar2,uVar3,0)) != null) &&
              (lVar2 = Transform.Find(lVar2,"Text",0)) != null) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+            uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
             lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
             if (lVar2 != null) {
               lVar2 = *(int64 *)(lVar2 + 96);
@@ -283,7 +283,7 @@ public class ForceSettingController
                         uVar3 = String.Concat(uVar3,"_",uVar4,0);
                         if (((lVar2 != null) && (lVar2 = Transform.Find(lVar2,uVar3,0)) != null) &&
                            (lVar2 = Transform.Find(lVar2,"TextBack",0)) != null) {
-                          lVar2 = Component.GetComponent(lVar2,DAT_181d95560);
+                          lVar2 = Component.GetComponent(lVar2,DAT_181d95578);
                           uVar3 = ForceSettingController.GetForceJobDescribe
                                             (this,local_res10[0],local_res18[0],0);
                           if (lVar2 != null) {
@@ -323,7 +323,7 @@ public class ForceSettingController
                                           if ((((lVar2 != null) &&
                                                (lVar2 = Transform.Find(lVar2,uVar3,0)) != null) &&
                                               (lVar2 = Transform.Find(lVar2,"HeroBack",0)) != null
-                                              ) && (lVar2 = Component.GetComponent(lVar2,DAT_181d93760),
+                                              ) && (lVar2 = Component.GetComponent(lVar2,DAT_181d93778),
                                                    lVar2 != null)) {
                                             Selectable.set_interactable(lVar2,1,0);
                                             if (this.forceJobSettingList != null) {
@@ -421,7 +421,7 @@ public class ForceSettingController
                                                                   (lVar2 = Transform.Find(lVar2,
                                                         "HeroBack",0), lVar2 != null)) &&
                                                         (lVar2 = Component.GetComponent
-                                                                           (lVar2,DAT_181d93760),
+                                                                           (lVar2,DAT_181d93778),
                                                         lVar2 != null)) {
                                                           Selectable.set_interactable(lVar2,0,0);
                                                           if (this.forceJobSettingList != null) {
@@ -458,7 +458,7 @@ public class ForceSettingController
                                                            (lVar2 = Transform.Find(lVar2,"ClearButton",0)
                                                            , lVar2 != null)) {
                                                           lVar2 = Component.GetComponent
-                                                                            (lVar2,DAT_181d93760);
+                                                                            (lVar2,DAT_181d93778);
                                                           if (GameController._instance != null)
                                                           {
                                                             lVar6 = *(int64 *)
@@ -506,7 +506,7 @@ public class ForceSettingController
                                                                (lVar2 = Transform.Find(lVar2,
                                                         "ClearButton",0), lVar2 != null)) {
                                                           lVar2 = Component.GetComponent
-                                                                            (lVar2,DAT_181d95560);
+                                                                            (lVar2,DAT_181d95578);
                                                           if (GameController._instance != null)
                                                           {
                                                             lVar6 = *(int64 *)
@@ -575,7 +575,7 @@ public class ForceSettingController
                                                         int64 *)(lVar1 + 16) + 32 + lVar7 * 4),0),
                                                         lVar6 == null)) goto LAB_18077e755;
                                                         local_res8[0] = *(uint32 *)(lVar6 + 152);
-                                                        uVar3 = il2cpp_value_box(DAT_181d80418,local_res8)
+                                                        uVar3 = il2cpp_value_box(DAT_181d80430,local_res8)
                                                         ;
                                                         uVar3 = String.Format("撤除职位\n冷却{0}天",uVar3,0);
                                                         }
@@ -697,16 +697,16 @@ public class ForceSettingController
                             uVar5 = "";
                             if (lVar7 != null) {
                               while (iVar8 < *(int *)(lVar7 + 24)) {
-                                cVar2 = FUN_18171e540(uVar5,"",0);
+                                cVar2 = FUN_18171eb50(uVar5,"",0);
                                 uVar4 = "/";
                                 if (cVar2) {
                                   uVar4 = "";
                                 }
                                 lVar7 = *(int64 *)(pStatics_3d40 + 0x4b0);
                                 if ((*(int64 *)(lVar6 + 32) == 0) ||
-                                   (uVar3 = FUN_1800d6760(*(int64 *)(lVar6 + 32),iVar8,DAT_181d93190)
+                                   (uVar3 = FUN_1800d6760(*(int64 *)(lVar6 + 32),iVar8,DAT_181d931a0)
                                    , lVar7 == null)) throw; // [null/range check failed]
-                                FUN_180002f80(lVar7,uVar3,DAT_181da4358);
+                                FUN_180002f80(lVar7,uVar3,DAT_181da4370);
                                 uVar5 = String.Concat(uVar5,uVar4);
                                 iVar8 = iVar8 + 1;
                                 lVar7 = *(int64 *)(lVar6 + 32);
@@ -869,7 +869,7 @@ public class ForceSettingController
           if (*(int *)(lVar5 + 24) <= iVar9) {
             return uVar7;
           }
-          cVar1 = FUN_18171e540(uVar7,"",0);
+          cVar1 = FUN_18171eb50(uVar7,"",0);
           uVar10 = "/";
           if (cVar1) {
             uVar10 = "";
@@ -879,38 +879,38 @@ public class ForceSettingController
           lVar5 = *(int64 *)(lVar5 + 152);
           lVar6 = FUN_18046c100(0);
           if ((lVar6 == null) || (*(int64 *)(lVar6 + 96) == 0)) break;
-          lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 96),jobType,DAT_181d88598);
+          lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 96),jobType,DAT_181d885b0);
           if ((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) break;
-          lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 24),jobID,DAT_181d88618);
+          lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 24),jobID,DAT_181d88630);
           if ((lVar6 == null) || (*(int64 *)(lVar6 + 40) == 0)) break;
-          uVar2 = FUN_1800d6760(*(int64 *)(lVar6 + 40),iVar9,DAT_181d88998);
+          uVar2 = FUN_1800d6760(*(int64 *)(lVar6 + 40),iVar9,DAT_181d889b0);
           if (lVar5 == null) break;
-          lVar5 = FUN_180002f80(lVar5,uVar2,DAT_181d88898);
+          lVar5 = FUN_180002f80(lVar5,uVar2,DAT_181d888b0);
           if (lVar5 == null) break;
           uVar7 = String.Concat(uVar7,uVar10,*(uint64 *)(lVar5 + 16),0);
           if (((this.targetForce == null) ||
               (lVar5 = this.targetForce.forceJobSettingData) == null) ||
              (lVar5 = *(int64 *)(lVar5 + 24)) == null) break;
-          lVar5 = FUN_180002f80(lVar5,jobType,DAT_181d789a8);
+          lVar5 = FUN_180002f80(lVar5,jobType,DAT_181d789c0);
           if (lVar5 == null) break;
           iVar3 = FUN_1800d6760(lVar5,jobID);
           if (iVar3 != -1) {
             lVar5 = FUN_18046c100(0);
             if ((lVar5 == null) || (*(int64 *)(lVar5 + 96) == 0)) break;
-            lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 96),jobType,DAT_181d88598);
+            lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 96),jobType,DAT_181d885b0);
             if ((lVar5 == null) || (*(int64 *)(lVar5 + 24) == 0)) break;
-            lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 24),jobID,DAT_181d88618);
+            lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 24),jobID,DAT_181d88630);
             if ((lVar5 == null) || (*(int64 *)(lVar5 + 40) == 0)) break;
-            uVar2 = FUN_1800d6760(*(int64 *)(lVar5 + 40),iVar9,DAT_181d88998);
+            uVar2 = FUN_1800d6760(*(int64 *)(lVar5 + 40),iVar9,DAT_181d889b0);
             lVar5 = FUN_18046c0a0(0);
             if (lVar5 == null) break;
             lVar5 = *(int64 *)(lVar5 + 32);
             if (((this.targetForce == null) ||
                 (lVar6 = this.targetForce.forceJobSettingData) == null) ||
                (lVar6 = *(int64 *)(lVar6 + 24)) == null) break;
-            lVar6 = FUN_180002f80(lVar6,jobType,DAT_181d789a8);
+            lVar6 = FUN_180002f80(lVar6,jobType,DAT_181d789c0);
             if (lVar6 == null) break;
-            uVar4 = FUN_1800d6760(lVar6,jobID,DAT_181d8fa18);
+            uVar4 = FUN_1800d6760(lVar6,jobID,DAT_181d8fa30);
             if (lVar5 == null) break;
             lVar5 = WorldData.GetHero(lVar5,uVar4,0);
             if (lVar5 == null) break;
@@ -953,10 +953,10 @@ public class ForceSettingController
         if (buttonClicked != null) {
           lVar5 = GameObject.get_transform(buttonClicked,0);
           if (lVar5 != null) {
-            lVar5 = FUN_180da9a20(lVar5,0);
+            lVar5 = FUN_180daa030(lVar5,0);
             if (lVar5 != null) {
               lVar5 = Object.get_name(lVar5,0);
-              lVar6 = FUN_1800d60b0(DAT_181da1040,1);
+              lVar6 = FUN_1800d60b0(DAT_181da1058,1);
               if (lVar6 != null) {
                 if (lVar6.forceName == null) {
                   uVar7 = il2cpp_internal();
@@ -967,7 +967,7 @@ public class ForceSettingController
                 if (lVar5 != null) {
                   lVar5 = String.Split(lVar5,lVar6,0);
                   lVar6 = this.targetForce;
-                  lVar2 = **(int64 **)(DAT_181db7518 + 184);
+                  lVar2 = **(int64 **)(DAT_181db7530 + 184);
                   lVar3 = GameController.lockObj;
                   if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 96), lVar5 != null)) {
                     if (*(int *)(lVar5 + 24) == 0) {
@@ -1008,7 +1008,7 @@ public class ForceSettingController
                               uVar8 = Component.get_gameObject(this,0);
                               lVar5 = GameObject.get_transform(buttonClicked,0);
                               if (lVar5 != null) {
-                                lVar5 = FUN_180da9a20(lVar5,0);
+                                lVar5 = FUN_180daa030(lVar5,0);
                                 if (lVar5 != null) {
                                   uVar9 = Object.get_name(lVar5,0);
                                   if (lVar2 != null) {
@@ -1016,7 +1016,7 @@ public class ForceSettingController
                                               (lVar2,2,uVar7,uVar8,"ForceJobHeroChoosen",uVar9,0,0,0);
                                     plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
                                     plVar11 = (int64 *)0;
-                                    if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                                    if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                                       plVar11 = plVar10;
                                     }
                                     NGUITools.PlaySound(plVar11,0);
@@ -1041,13 +1041,13 @@ public class ForceSettingController
     // RVA   : 0x77C5E0   Offset: 0x77B9E0   Length: 0x212
     public void ForceJobHeroChoosen(string param)
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
         long lVar4;
         ulong uVar6;
-        lVar3 = FUN_1800d60b0(DAT_181da1040,1);
+        lVar3 = FUN_1800d60b0(DAT_181da1058,1);
         if (lVar3 != null) {
           if (lVar3.forceName == null) {
             uVar6 = il2cpp_internal();
@@ -1079,7 +1079,7 @@ public class ForceSettingController
                   ForceSettingController.RefreshForceJob(this,uVar1,uVar2,0);
                   plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
                   plVar7 = (int64 *)0;
-                  if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+                  if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                     plVar7 = plVar5;
                   }
                   NGUITools.PlaySound(plVar7,0);
@@ -1103,10 +1103,10 @@ public class ForceSettingController
         if (buttonClicked != null) {
           lVar3 = GameObject.get_transform(buttonClicked,0);
           if (lVar3 != null) {
-            lVar3 = FUN_180da9a20(lVar3,0);
+            lVar3 = FUN_180daa030(lVar3,0);
             if (lVar3 != null) {
               lVar3 = Object.get_name(lVar3,0);
-              lVar4 = FUN_1800d60b0(DAT_181da1040,1);
+              lVar4 = FUN_1800d60b0(DAT_181da1058,1);
               if (lVar4 != null) {
                 if (*(int *)(lVar4 + 24) == 0) {
                   uVar6 = il2cpp_internal();
@@ -1134,7 +1134,7 @@ public class ForceSettingController
                       ForceSettingController.RefreshForceJob(this,uVar1,uVar2,0);
                       plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                       plVar7 = (int64 *)0;
-                      if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+                      if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                         plVar7 = plVar5;
                       }
                       NGUITools.PlaySound(plVar7,0);

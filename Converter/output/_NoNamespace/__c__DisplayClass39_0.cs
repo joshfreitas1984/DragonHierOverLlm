@@ -6,10 +6,10 @@
 public class <>c__DisplayClass39_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400213A
+    // Token: 0x400213B
     public Color to;
 
-    // Token: 0x400213B
+    // Token: 0x400213C
     public Image target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,7 +34,7 @@ public class <>c__DisplayClass39_0
     }
 
     // Token : 0x6002740
-    // RVA   : 0x939630   Offset: 0x938A30   Length: 0xBF
+    // RVA   : 0x939CC0   Offset: 0x9390C0   Length: 0xBF
     internal void <DOBlendableColor>b__1(Color x)
     {
         uint uVar2;
@@ -55,7 +55,7 @@ public class <>c__DisplayClass39_0
         uStack_3c = *(uint32 *)(this + 28);
         local_38 = *x;
         uStack_30 = x[1];
-        puVar7 = (uint64 *)FUN_1810d38f0(local_28,&local_38,&local_48,0);
+        puVar7 = (uint64 *)FUN_1810d3f00(local_28,&local_38,&local_48,0);
         uVar2 = *(uint32 *)((int64)x + 4);
         uVar3 = *(uint32 *)(x + 1);
         uVar4 = *(uint32 *)((int64)x + 12);
@@ -75,7 +75,7 @@ public class <>c__DisplayClass39_0
           uStack_3c = puVar8[3];
           local_38 = uVar5;
           uStack_30 = uVar6;
-          puVar7 = (uint64 *)FUN_1810d35b0(local_28,&local_48,&local_38,0);
+          puVar7 = (uint64 *)FUN_1810d3bc0(local_28,&local_48,&local_38,0);
           local_38 = *puVar7;
           uStack_30 = puVar7[1];
           (**(code **)(*plVar1 + 0x2a8))(plVar1,&local_38,*(uint64 *)(*plVar1 + 0x2b0));

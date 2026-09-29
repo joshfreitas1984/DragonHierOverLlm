@@ -6,13 +6,13 @@
 public class <NpcInteractTutorial>d__950
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A31
+    // Token: 0x4001A32
     private int <>1__state;
 
-    // Token: 0x4001A32
+    // Token: 0x4001A33
     private object <>2__current;
 
-    // Token: 0x4001A33
+    // Token: 0x4001A34
     public PlotController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,10 +31,10 @@ public class <NpcInteractTutorial>d__950
     }
 
     // Token : 0x6001FC9
-    // RVA   : 0x8F0480   Offset: 0x8EF880   Length: 0x3C7
+    // RVA   : 0x923300   Offset: 0x922700   Length: 0x3C7
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics = *(int64*)(DAT_181dadd10 + 184);
         bool cVar1;
         int iVar2;
         ulong uVar3;
@@ -46,7 +46,7 @@ public class <NpcInteractTutorial>d__950
         if (this.<>1__state == 0) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 1;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar3;
           this.<>1__state = 1;
           return true;
@@ -125,15 +125,15 @@ public class <NpcInteractTutorial>d__950
     }
 
     // Token : 0x6001FCB
-    // RVA   : 0x8F0850   Offset: 0x8EFC50   Length: 0x3E
+    // RVA   : 0x9236D0   Offset: 0x922AD0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181daa1c8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181daa360);
     }
 
     // Token : 0x6001FCC

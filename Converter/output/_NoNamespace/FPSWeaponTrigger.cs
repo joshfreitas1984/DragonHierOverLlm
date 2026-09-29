@@ -41,7 +41,7 @@ public class FPSWeaponTrigger
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009AD
-    // RVA   : 0xB2A030   Offset: 0xB29430   Length: 0x6E
+    // RVA   : 0xB2A6F0   Offset: 0xB29AF0   Length: 0x6E
     private void Update()
     {
         float fVar1;
@@ -69,7 +69,7 @@ public class FPSWeaponTrigger
     }
 
     // Token : 0x60009AE
-    // RVA   : 0xB29CA0   Offset: 0xB290A0   Length: 0x35E
+    // RVA   : 0xB2A360   Offset: 0xB29760   Length: 0x35E
     public void Fire()
     {
         ulong uVar1;
@@ -103,7 +103,7 @@ public class FPSWeaponTrigger
                 uStack_40 = puVar6[1];
                 local_88 = uVar1;
                 local_80 = fVar2;
-                lVar7 = Object.Instantiate(uVar5,&local_88,&local_48,DAT_181d92e18);
+                lVar7 = Object.Instantiate(uVar5,&local_88,&local_48,DAT_181d92cb0);
                 if (lVar7 != null) {
                   lVar7 = GameObject.GetComponent(lVar7,DAT_181d73008);
                   if (this.ShellEjectionTransform != null) {
@@ -138,7 +138,7 @@ public class FPSWeaponTrigger
                         lVar7 = Component.get_transform(this.Muzzle,0);
                         if (lVar7 != null) {
                           puVar6 = (uint64 *)Transform.get_position(&local_48,lVar7,0);
-                          uVar4 = DAT_181d92e18;
+                          uVar4 = DAT_181d92cb0;
                           uVar1 = *puVar6;
                           uVar3 = *(uint32 *)(puVar6 + 1);
                           if (this.Muzzle != null) {
@@ -163,7 +163,7 @@ public class FPSWeaponTrigger
     }
 
     // Token : 0x60009AF
-    // RVA   : 0xB2A000   Offset: 0xB29400   Length: 0x20
+    // RVA   : 0xB2A6C0   Offset: 0xB29AC0   Length: 0x20
     private void LightsOff()
     {
         if (this.MuzzleFlashObject != null) {

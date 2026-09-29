@@ -41,25 +41,25 @@ public class MissionTargetData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600130A
-    // RVA   : 0xE6A2B0   Offset: 0xE696B0   Length: 0xD4
+    // RVA   : 0xE6A8C0   Offset: 0xE69CC0   Length: 0xD4
     public void /*ctor*/()
     {
         long lVar1;
         ulong uVar2;
         this.missionTargetFinishCallPlotID = 0xffffffff;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d94bd0);
-        FUN_18132faf0(lVar1,DAT_181d94d08);
+        lVar1 = il2cpp_internal(DAT_181d94be8);
+        FUN_181330100(lVar1,DAT_181d94d20);
         uVar2 = new ZhSegment(0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,uVar2,DAT_181d94d88);
+          FUN_18181e6b0(lVar1,uVar2,DAT_181d94da0);
           this.missionNeedDatas = lVar1;
           return;
         }
     }
 
     // Token : 0x600130B
-    // RVA   : 0xE6A170   Offset: 0xE69570   Length: 0x139
+    // RVA   : 0xE6A780   Offset: 0xE69B80   Length: 0x139
     public bool MissionNumMeetRequire()
     {
         float fVar1;
@@ -84,11 +84,11 @@ public class MissionTargetData
               return false;
             }
             if ((this.missionNeedDatas == null) ||
-               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d94e88)) == null)
+               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d94ea0)) == null)
             break;
             fVar1 = *(float *)(lVar2 + 36);
             if ((this.missionNeedDatas == null) ||
-               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d94e88)) == null)
+               (lVar2 = FUN_180002f80(this.missionNeedDatas,uVar3,DAT_181d94ea0)) == null)
             break;
             if (fVar1 < *(float *)(lVar2 + 40)) {
               return false;
@@ -102,7 +102,7 @@ public class MissionTargetData
     }
 
     // Token : 0x600130C
-    // RVA   : 0xE69FF0   Offset: 0xE693F0   Length: 0x175
+    // RVA   : 0xE6A600   Offset: 0xE69A00   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -113,13 +113,13 @@ public class MissionTargetData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -131,7 +131,7 @@ public class MissionTargetData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

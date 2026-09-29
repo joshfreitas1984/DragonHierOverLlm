@@ -20,7 +20,7 @@ public class FPSText
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001459
-    // RVA   : 0xB29B50   Offset: 0xB28F50   Length: 0x142
+    // RVA   : 0xB2A210   Offset: 0xB29610   Length: 0x142
     private void Update()
     {
         float fVar1;

@@ -17,7 +17,7 @@ public class FPSController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009AB
-    // RVA   : 0xB29960   Offset: 0xB28D60   Length: 0x1ED
+    // RVA   : 0xB2A020   Offset: 0xB29420   Length: 0x1ED
     private void Update()
     {
         float fVar1;

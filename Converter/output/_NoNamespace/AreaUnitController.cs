@@ -121,7 +121,7 @@ public class AreaUnitController
     // RVA   : 0x7EEAE0   Offset: 0x7EDEE0   Length: 0x25D
     public void RefreshUnitColor()
     {
-        var pStatics = *(int64*)(DAT_181dacad0 + 184);
+        var pStatics = *(int64*)(DAT_181dacae8 + 184);
         long lVar2;
         uint uVar3;
         uint uVar4;
@@ -129,7 +129,7 @@ public class AreaUnitController
         uint uVar6;
         ulong local_18;
         ulong uStack_10;
-        puVar1 = (uint32 *)FUN_1810d3570(&local_18,0);
+        puVar1 = (uint32 *)FUN_1810d3b80(&local_18,0);
         uVar3 = puVar1[1];
         uVar4 = puVar1[2];
         uVar5 = puVar1[3];
@@ -137,7 +137,7 @@ public class AreaUnitController
         *(uint32 *)(this + 68) = uVar3;
         *(uint32 *)(this + 72) = uVar4;
         *(uint32 *)(this + 76) = uVar5;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
         if (lVar2 != null) {
           if (lVar2.tileType) {
             lVar2 = this.areaTileData;
@@ -150,7 +150,7 @@ public class AreaUnitController
               uVar6 = *(uint32 *)(lVar2 + 60);
             }
             else if (lVar2.building == null) {
-              puVar1 = *(uint32 **)(DAT_181dacad0 + 184);
+              puVar1 = *(uint32 **)(DAT_181dacae8 + 184);
               uVar3 = *puVar1;
               uVar4 = puVar1[1];
               uVar5 = puVar1[2];
@@ -178,14 +178,14 @@ public class AreaUnitController
           if (this.isOver) {
             local_18 = 0;
             uStack_10 = 0;
-            FUN_1809dc910(&local_18,this.targetColor * 0.6,*(float *)(this + 68) * 0.6,
+            FUN_1809dcfa0(&local_18,this.targetColor * 0.6,*(float *)(this + 68) * 0.6,
                           *(float *)(this + 72) * 0.6,0x3f800000,0);
             this.targetColor = (uint32)local_18;
             *(uint32 *)(this + 68) = local_18._4_4_;
             *(uint32 *)(this + 72) = (uint32)uStack_10;
             *(uint32 *)(this + 76) = uStack_10._4_4_;
           }
-          lVar2 = Component.GetComponent(this,DAT_181d95de0);
+          lVar2 = Component.GetComponent(this,DAT_181d95df8);
           if (lVar2 != null) {
             local_18 = this.targetColor;
             uStack_10 = *(uint64 *)(this + 72);
@@ -231,7 +231,7 @@ public class AreaUnitController
                   GameController.ShowTextOnMouse(lVar1,"只能移动到空地上",0);
                   plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                   plVar4 = (int64 *)0;
-                  if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                  if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                     plVar4 = plVar3;
                   }
                   NGUITools.PlaySound(plVar4,0);
@@ -261,7 +261,7 @@ public class AreaUnitController
             if (cVar2) {
               lVar3 = Component.get_gameObject(this,0);
               if (lVar3 == null) goto LAB_1807eea17;
-              uVar4 = GameObject.AddComponent(lVar3,DAT_181dc5d30);
+              uVar4 = GameObject.AddComponent(lVar3,DAT_181dc5d48);
               this.detailText = uVar4;
               if (this.detailText == null) goto LAB_1807eea17;
               this.detailText.forceUp = 1;
@@ -294,7 +294,7 @@ public class AreaUnitController
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           AreaController.OnDrag(lVar1,delta,0);
           return;
@@ -306,7 +306,7 @@ public class AreaUnitController
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           AreaController.OnScroll(lVar1,delta,0);
           return;
@@ -324,7 +324,7 @@ public class AreaUnitController
     // RVA   : 0x7EEED0   Offset: 0x7EE2D0   Length: 0x13F
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181dacad0 + 184);
+        var pStatics = *(int64*)(DAT_181dacae8 + 184);
         long lVar2;
         ulong local_68;
         ulong uStack_60;
@@ -337,7 +337,7 @@ public class AreaUnitController
         local_68 = 0;
         uStack_60 = 0;
         Color.ctor(&local_68,0x3f733333,0x3f800000,0x3f733333,0);
-        puVar1 = *(uint32 **)(DAT_181dacad0 + 184);
+        puVar1 = *(uint32 **)(DAT_181dacae8 + 184);
         *puVar1 = (uint32)local_68;
         puVar1[1] = local_68._4_4_;
         puVar1[2] = (uint32)uStack_60;

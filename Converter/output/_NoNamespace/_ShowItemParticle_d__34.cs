@@ -6,22 +6,22 @@
 public class <ShowItemParticle>d__34
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BFB
+    // Token: 0x4001BFC
     private int <>1__state;
 
-    // Token: 0x4001BFC
+    // Token: 0x4001BFD
     private object <>2__current;
 
-    // Token: 0x4001BFD
+    // Token: 0x4001BFE
     public float delayTime;
 
-    // Token: 0x4001BFE
+    // Token: 0x4001BFF
     public SpeShowController <>4__this;
 
-    // Token: 0x4001BFF
+    // Token: 0x4001C00
     public GameObject targetParticle;
 
-    // Token: 0x4001C00
+    // Token: 0x4001C01
     public GameObject targetItemIcon;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -40,7 +40,7 @@ public class <ShowItemParticle>d__34
     }
 
     // Token : 0x600219F
-    // RVA   : 0x8F3010   Offset: 0x8F2410   Length: 0x2C8
+    // RVA   : 0x925E90   Offset: 0x925290   Length: 0x2C8
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -121,15 +121,15 @@ public class <ShowItemParticle>d__34
     }
 
     // Token : 0x60021A1
-    // RVA   : 0x8F32E0   Offset: 0x8F26E0   Length: 0x3E
+    // RVA   : 0x926160   Offset: 0x925560   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db3aa0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db3c50);
     }
 
     // Token : 0x60021A2

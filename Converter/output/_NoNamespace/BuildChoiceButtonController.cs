@@ -7,12 +7,12 @@ public class BuildChoiceButtonController
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000DC4
-    // RVA   : 0xB5EA90   Offset: 0xB5DE90   Length: 0xCC
+    // RVA   : 0xB5F150   Offset: 0xB5E550   Length: 0xCC
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           AreaBuildController.BuildChoiceButtonClicked(lVar1,uVar2,0);

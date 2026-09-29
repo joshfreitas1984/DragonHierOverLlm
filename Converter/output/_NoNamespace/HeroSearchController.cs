@@ -44,14 +44,14 @@ public class HeroSearchController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60017F7
-    // RVA   : 0xAFA6D0   Offset: 0xAF9AD0   Length: 0x36
+    // RVA   : 0xAFAD90   Offset: 0xAFA190   Length: 0x36
     public static HeroSearchController get_Instance()
     {
         return **(uint64 **)(DAT_181d76270 + 184);
     }
 
     // Token : 0x60017F8
-    // RVA   : 0xAF8210   Offset: 0xAF7610   Length: 0xD7
+    // RVA   : 0xAF88D0   Offset: 0xAF7CD0   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
@@ -69,7 +69,7 @@ public class HeroSearchController
     }
 
     // Token : 0x60017F9
-    // RVA   : 0xAFA3C0   Offset: 0xAF97C0   Length: 0x158
+    // RVA   : 0xAFAA80   Offset: 0xAF9E80   Length: 0x158
     private void Start()
     {
         bool cVar1;
@@ -82,7 +82,7 @@ public class HeroSearchController
             return;
           }
           lVar2 = RailCallBackHelper.get_Instance(0);
-          uVar3 = new OnTooltipCB(this,DAT_181d79130,0);
+          uVar3 = new OnTooltipCB(this,DAT_181d79148,0);
           if (lVar2 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -92,7 +92,7 @@ public class HeroSearchController
     }
 
     // Token : 0x60017FA
-    // RVA   : 0xAF91F0   Offset: 0xAF85F0   Length: 0x2ED
+    // RVA   : 0xAF98B0   Offset: 0xAF8CB0   Length: 0x2ED
     public void OpenHeroSearch()
     {
         long lVar1;
@@ -110,13 +110,13 @@ public class HeroSearchController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                 if (this.heroSearchPanel != null) {
                   lVar1 = GameObject.get_transform(this.heroSearchPanel,0);
                   if (lVar1 != null) {
                     lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                     if (lVar1 != null) {
-                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                       if (plVar3 != (int64 *)0) {
                         puVar4 = (uint64 *)
                                  (**(code **)(*plVar3 + 0x298))
@@ -134,9 +134,9 @@ public class HeroSearchController
                             if (lVar1 != null) {
                               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                               if (lVar1 != null) {
-                                uVar5 = Component.GetComponent(lVar1,DAT_181d94460);
+                                uVar5 = Component.GetComponent(lVar1,DAT_181d94478);
                                 uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f000000,0x3e800000,0);
-                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1c20);
+                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1dc8);
                                 if (this.heroSearchPanel != null) {
                                   lVar1 = GameObject.get_transform(this.heroSearchPanel,0);
                                   if (lVar1 != null) {
@@ -152,7 +152,7 @@ public class HeroSearchController
                                           uVar5 = Transform.Find(lVar1,"HeroSearchRoot",0);
                                           uVar5 = ShortcutExtensions.DOScaleX
                                                             (uVar5,0x3f800000,0x3e800000,0);
-                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1db0);
+                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
                                           HeroSearchController.RefreshFliter(this,0);
                                           return;
                                         }
@@ -175,7 +175,7 @@ public class HeroSearchController
     }
 
     // Token : 0x60017FB
-    // RVA   : 0xAF8830   Offset: 0xAF7C30   Length: 0x194
+    // RVA   : 0xAF8EF0   Offset: 0xAF82F0   Length: 0x194
     public void HideHeroSearch()
     {
         long lVar1;
@@ -186,17 +186,17 @@ public class HeroSearchController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"BlackBackground",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
               uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1c20);
+              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
               if (this.heroSearchPanel != null) {
                 lVar1 = GameObject.get_transform(this.heroSearchPanel,0);
                 if (lVar1 != null) {
                   uVar2 = Transform.Find(lVar1,"HeroSearchRoot",0);
                   uVar2 = ShortcutExtensions.DOScaleX(uVar2,0,0x3e4ccccd,0);
-                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1db0);
-                  uVar3 = new OnTooltipCB(this,DAT_181d790b0,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc01d0);
+                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
+                  uVar3 = new OnTooltipCB(this,DAT_181d790c8,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0380);
                   return;
                 }
               }
@@ -206,7 +206,7 @@ public class HeroSearchController
     }
 
     // Token : 0x60017FC
-    // RVA   : 0xAF89D0   Offset: 0xAF7DD0   Length: 0x559
+    // RVA   : 0xAF9090   Offset: 0xAF8490   Length: 0x559
     public void Init()
     {
         bool cVar1;
@@ -228,38 +228,38 @@ public class HeroSearchController
         if (this.forceIDFliterObj != null) {
           lVar2 = GameObject.get_transform(this.forceIDFliterObj,0);
           if (lVar2 != null) {
-            lVar2 = Component.GetComponent(lVar2,DAT_181d93d60);
+            lVar2 = Component.GetComponent(lVar2,DAT_181d93d78);
             if (lVar2 != null) {
               lVar2 = Dropdown.get_options(lVar2,0);
               uVar3 = LTLocalization.GetText("所有门派",0,1,0);
               uVar4 = new ByteReader(uVar3,0);
               if (lVar2 != null) {
-                FUN_18181e0a0(lVar2,uVar4,DAT_181daf280);
+                FUN_18181e6b0(lVar2,uVar4,DAT_181daf298);
                 if (this.forceIDFliterObj != null) {
                   lVar2 = GameObject.get_transform(this.forceIDFliterObj,0);
                   if (lVar2 != null) {
-                    lVar2 = Component.GetComponent(lVar2,DAT_181d93d60);
+                    lVar2 = Component.GetComponent(lVar2,DAT_181d93d78);
                     if (lVar2 != null) {
                       lVar2 = Dropdown.get_options(lVar2,0);
                       uVar3 = LTLocalization.GetText("江湖散人",0,1,0);
                       uVar4 = new ByteReader(uVar3,0);
                       if (lVar2 != null) {
-                        FUN_18181e0a0(lVar2,uVar4,DAT_181daf280);
+                        FUN_18181e6b0(lVar2,uVar4,DAT_181daf298);
                         if (((GameController._instance != null) &&
                             (lVar2 = GameController._instance.worldData,
                             lVar2 != null)) && (lVar2 = lVar2.Forces) != null) {
-                          FUN_1817eb420(&local_28,lVar2,DAT_181d88020);
+                          FUN_1817eba30(&local_28,lVar2,DAT_181d88038);
                           local_40 = local_28;
                           uStack_3c = uStack_24;
                           uStack_38 = uStack_20;
                           uStack_34 = uStack_1c;
                           local_30 = local_18;
-        LAB_180af8cb0:
+        LAB_180af9370:
                           do {
-                            cVar1 = FUN_180c74f00(&local_40,DAT_181d8c5e8);
+                            cVar1 = FUN_180c75510(&local_40,DAT_181d8c600);
                             lVar2 = local_30;
                             if (!cVar1) {
-                              ZhSegment.Initialize(&local_40,DAT_181d8c568);
+                              ZhSegment.Initialize(&local_40,DAT_181d8c580);
                               return;
                             }
                             if (PlotController.fightSkillIndexCache == 1) {
@@ -272,7 +272,7 @@ public class HeroSearchController
                           // WARNING: Subroutine does not return
                                 FUN_1800d6620();
                               }
-                              cVar1 = FUN_18182a3a0(lVar5,lVar2.chapter,DAT_181d8f398);
+                              cVar1 = FUN_18182a9b0(lVar5,lVar2.chapter,DAT_181d8f3b0);
                               if (!cVar1) {
                                 if (this.forceIDFliterObj == null) {
                           // WARNING: Subroutine does not return
@@ -283,7 +283,7 @@ public class HeroSearchController
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
                                 }
-                                lVar2 = Component.GetComponent(lVar2,DAT_181d93d60);
+                                lVar2 = Component.GetComponent(lVar2,DAT_181d93d78);
                                 if (lVar2 == null) {
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
@@ -294,8 +294,8 @@ public class HeroSearchController
                           // WARNING: Subroutine does not return
                                   FUN_1800d6620();
                                 }
-                                FUN_18181e0a0(lVar2,uVar3);
-                                goto LAB_180af8cb0;
+                                FUN_18181e6b0(lVar2,uVar3);
+                                goto LAB_180af9370;
                               }
                             }
                             if (this.forceIDFliterObj == null) {
@@ -307,7 +307,7 @@ public class HeroSearchController
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
                             }
-                            lVar5 = Component.GetComponent(lVar5,DAT_181d93d60);
+                            lVar5 = Component.GetComponent(lVar5,DAT_181d93d78);
                             if (lVar5 == null) {
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
@@ -324,7 +324,7 @@ public class HeroSearchController
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
                             }
-                            FUN_18181e0a0(lVar5,uVar4);
+                            FUN_18181e6b0(lVar5,uVar4);
                           } while( true );
                         }
                       }
@@ -338,7 +338,7 @@ public class HeroSearchController
     }
 
     // Token : 0x60017FD
-    // RVA   : 0xAF80E0   Offset: 0xAF74E0   Length: 0x12D
+    // RVA   : 0xAF87A0   Offset: 0xAF7BA0   Length: 0x12D
     public void AddHeroIcon(HeroData target)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -368,7 +368,7 @@ public class HeroSearchController
     }
 
     // Token : 0x60017FE
-    // RVA   : 0xAF82F0   Offset: 0xAF76F0   Length: 0x2B4
+    // RVA   : 0xAF89B0   Offset: 0xAF7DB0   Length: 0x2B4
     public void EditHeroName()
     {
         long lVar1;
@@ -389,18 +389,18 @@ public class HeroSearchController
                 uVar6 = uVar7;
                 do {
                   if (*(int64 *)(*(int64 *)(lVar4 + 176) + (uint64)uVar6 * 16) ==
-                      DAT_181d7b780) {
+                      DAT_181d7b798) {
                     puVar3 = (uint64 *)
                              ((int64)
                               *(int *)(*(int64 *)(lVar4 + 176) + 8 + (uint64)uVar6 * 16) * 16 +
                               0x248 + lVar4);
-                    goto LAB_180af848f;
+                    goto LAB_180af8b4f;
                   }
                   uVar6 = uVar6 + 1;
                 } while (uVar6 < *(uint16 *)(lVar4 + 0x12a));
               }
-              puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7b780,17);
-        LAB_180af848f:
+              puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7b798,17);
+        LAB_180af8b4f:
               plVar2 = (int64 *)(*(code *)*puVar3)(plVar2,puVar3[1]);
               uVar5 = "";
               if (plVar2 != (int64 *)0) {
@@ -408,19 +408,19 @@ public class HeroSearchController
                 if (*(uint16 *)(lVar4 + 0x12a) != 0) {
                   do {
                     if (*(int64 *)(*(int64 *)(lVar4 + 176) + (uint64)uVar7 * 16) ==
-                        DAT_181d7cdd8) {
+                        DAT_181d7cdf0) {
                       puVar3 = (uint64 *)
                                ((int64)
                                 *(int *)(*(int64 *)(lVar4 + 176) + 8 + (uint64)uVar7 * 16) * 16
                                 + 0x1f8 + lVar4);
-                      goto LAB_180af84f7;
+                      goto LAB_180af8bb7;
                     }
                     uVar7 = uVar7 + 1;
                   } while (uVar7 < *(uint16 *)(lVar4 + 0x12a));
                 }
-                puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7cdd8,12);
-        LAB_180af84f7:
-                          // WARNING: Could not recover jumptable at 0x000180af8518. Too many branches
+                puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7cdf0,12);
+        LAB_180af8bb7:
+                          // WARNING: Could not recover jumptable at 0x000180af8bd8. Too many branches
                           // WARNING: Treating indirect jump as call
                 (*(code *)*puVar3)(plVar2,lVar1,uVar5,puVar3[1]);
                 return;
@@ -443,7 +443,7 @@ public class HeroSearchController
     }
 
     // Token : 0x60017FF
-    // RVA   : 0xAF9140   Offset: 0xAF8540   Length: 0xA0
+    // RVA   : 0xAF9800   Offset: 0xAF8C00   Length: 0xA0
     public void OnEditHeroNameFliterResult(RAILEventID id, EventBase data)
     {
         void HeroSearchController.OnEditHeroNameFliterResult
@@ -459,16 +459,16 @@ public class HeroSearchController
     }
 
     // Token : 0x6001800
-    // RVA   : 0xAF85B0   Offset: 0xAF79B0   Length: 0x7
+    // RVA   : 0xAF8C70   Offset: 0xAF8070   Length: 0x7
     public void FinishEditSearchHeroName()
     {
-        void FUN_180af85b0(uint64 this)
+        void FUN_180af8c70(uint64 this)
         {
         HeroSearchController.RegenerateHeroIcon(this,0);
     }
 
     // Token : 0x6001801
-    // RVA   : 0xAF8F30   Offset: 0xAF8330   Length: 0x201
+    // RVA   : 0xAF95F0   Offset: 0xAF89F0   Length: 0x201
     public void InterestingStarFliterButtonClicked()
     {
         long lVar1;
@@ -483,9 +483,9 @@ public class HeroSearchController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"InterestingStarFliter",0);
               if (lVar2 != null) {
-                lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
+                lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
                 uVar4 = "UIAtlas";
-                lVar1 = **(int64 **)(DAT_181dab490 + 184);
+                lVar1 = **(int64 **)(DAT_181dab4a8 + 184);
                 uVar3 = "已收藏";
                 if (!this.interestingStarFliter) {
                   uVar3 = "未收藏";
@@ -498,7 +498,7 @@ public class HeroSearchController
                     HeroSearchController.RegenerateHeroIcon(this,0);
                     plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
                     plVar6 = (int64 *)0;
-                    if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+                    if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                       plVar6 = plVar5;
                     }
                     NGUITools.PlaySound(plVar6,0);
@@ -512,7 +512,7 @@ public class HeroSearchController
     }
 
     // Token : 0x6001802
-    // RVA   : 0xAF85C0   Offset: 0xAF79C0   Length: 0x12F
+    // RVA   : 0xAF8C80   Offset: 0xAF8080   Length: 0x12F
     public void ForceIDFliterChanged()
     {
         long lVar1;
@@ -523,13 +523,13 @@ public class HeroSearchController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"ForceIDFliter",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d93d60);
+                lVar1 = Component.GetComponent(lVar1,DAT_181d93d78);
                 if (lVar1 != null) {
                   this.forceIDFliter = *(int *)(lVar1 + 0x120) + -2;
                   HeroSearchController.RegenerateHeroIcon(this,0);
                   plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
                   plVar3 = (int64 *)0;
-                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
                     plVar3 = plVar2;
                   }
                   NGUITools.PlaySound(plVar3,0);
@@ -542,7 +542,7 @@ public class HeroSearchController
     }
 
     // Token : 0x6001803
-    // RVA   : 0xAFA140   Offset: 0xAF9540   Length: 0x131
+    // RVA   : 0xAFA800   Offset: 0xAF9C00   Length: 0x131
     public void SexFliterClicked(GameObject buttonClicked)
     {
         long lVar1;
@@ -555,11 +555,11 @@ public class HeroSearchController
           uVar2 = Int32.Parse(uVar3,0);
           lVar4 = GameObject.GetComponent(buttonClicked,DAT_181d743b0);
           if ((lVar4 != null) && (lVar1 != null)) {
-            FUN_1817f42f0(lVar1,uVar2,*(uint8 *)(lVar4 + 0x118),DAT_181d80720);
+            FUN_1817f4900(lVar1,uVar2,*(uint8 *)(lVar4 + 0x118),DAT_181d80738);
             HeroSearchController.RefreshFliter(this,0);
             plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
             plVar6 = (int64 *)0;
-            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
               plVar6 = plVar5;
             }
             NGUITools.PlaySound(plVar6,0);
@@ -569,7 +569,7 @@ public class HeroSearchController
     }
 
     // Token : 0x6001804
-    // RVA   : 0xAF86F0   Offset: 0xAF7AF0   Length: 0x131
+    // RVA   : 0xAF8DB0   Offset: 0xAF81B0   Length: 0x131
     public void ForceLvFliterClicked(GameObject buttonClicked)
     {
         long lVar1;
@@ -582,11 +582,11 @@ public class HeroSearchController
           uVar2 = Int32.Parse(uVar3,0);
           lVar4 = GameObject.GetComponent(buttonClicked,DAT_181d743b0);
           if ((lVar4 != null) && (lVar1 != null)) {
-            FUN_1817f42f0(lVar1,uVar2,*(uint8 *)(lVar4 + 0x118),DAT_181d80720);
+            FUN_1817f4900(lVar1,uVar2,*(uint8 *)(lVar4 + 0x118),DAT_181d80738);
             HeroSearchController.RefreshFliter(this,0);
             plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
             plVar6 = (int64 *)0;
-            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
               plVar6 = plVar5;
             }
             NGUITools.PlaySound(plVar6,0);
@@ -596,7 +596,7 @@ public class HeroSearchController
     }
 
     // Token : 0x6001805
-    // RVA   : 0xAFA280   Offset: 0xAF9680   Length: 0x131
+    // RVA   : 0xAFA940   Offset: 0xAF9D40   Length: 0x131
     public void SpeFliterClicked(GameObject buttonClicked)
     {
         long lVar1;
@@ -609,11 +609,11 @@ public class HeroSearchController
           uVar2 = Int32.Parse(uVar3,0);
           lVar4 = GameObject.GetComponent(buttonClicked,DAT_181d743b0);
           if ((lVar4 != null) && (lVar1 != null)) {
-            FUN_1817f42f0(lVar1,uVar2,*(uint8 *)(lVar4 + 0x118),DAT_181d80720);
+            FUN_1817f4900(lVar1,uVar2,*(uint8 *)(lVar4 + 0x118),DAT_181d80738);
             HeroSearchController.RefreshFliter(this,0);
             plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
             plVar6 = (int64 *)0;
-            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+            if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
               plVar6 = plVar5;
             }
             NGUITools.PlaySound(plVar6,0);
@@ -623,7 +623,7 @@ public class HeroSearchController
     }
 
     // Token : 0x6001806
-    // RVA   : 0xAF9C40   Offset: 0xAF9040   Length: 0x4F8
+    // RVA   : 0xAFA300   Offset: 0xAF9700   Length: 0x4F8
     public void RegenerateHeroIcon()
     {
         bool cVar1;
@@ -633,7 +633,7 @@ public class HeroSearchController
         uVar3 = this.heroSearchList;
         GlobalData.DeleteAllChild(uVar3,0);
         if (this.heroSearchNameInputField != null) {
-          cVar1 = FUN_18171e540(*(uint64 *)(this.heroSearchNameInputField + 0x170),"",0);
+          cVar1 = FUN_18171eb50(*(uint64 *)(this.heroSearchNameInputField + 0x170),"",0);
           if ((!cVar1) || (this.interestingStarFliter)) {
             iVar4 = 0;
             bVar5 = false;
@@ -653,18 +653,18 @@ public class HeroSearchController
             lVar2 = FUN_18046c0a0(0);
             if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
-            lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bb98);
+            lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bbb0);
             if (lVar2 != null) {
               lVar2 = FUN_18046c0a0(0);
               if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                  (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
-              lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bb98);
+              lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bbb0);
               if (lVar2 == null) break;
               if ((!lVar2.BigMapRandomEventDatas) && (!bVar5)) {
                 lVar2 = FUN_18046c0a0(0);
                 if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                    (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
-                lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bb98);
+                lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bbb0);
                 if (((lVar2 == null) || (this.heroSearchNameInputField == null)) ||
                    (lVar2.AreaMapRandomEventDatas == null)) break;
                 cVar1 = String.Contains(lVar2.AreaMapRandomEventDatas,
@@ -673,46 +673,46 @@ public class HeroSearchController
                   lVar2 = FUN_18046c0a0(0);
                   if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                      (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
-                  lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bb98);
+                  lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bbb0);
                   if (lVar2 == null) break;
                   uVar3 = lVar2.AreaMapRandomEventDatas;
                   lVar2 = LTLocalization.GetText(uVar3,0,1,0);
                   if ((this.heroSearchNameInputField == null) || (lVar2 == null)) break;
                   cVar1 = String.Contains(lVar2,*(uint64 *)(this.heroSearchNameInputField + 0x170),0)
                   ;
-                  if (!cVar1) goto LAB_180afa10e;
+                  if (!cVar1) goto LAB_180afa7ce;
                 }
                 if (this.interestingStarFliter) {
                   lVar2 = FUN_18046c0a0(0);
                   if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                      (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
-                  lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bb98);
+                  lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bbb0);
                   if (lVar2 == null) break;
-                  if (!lVar2.Areas) goto LAB_180afa10e;
+                  if (!lVar2.Areas) goto LAB_180afa7ce;
                 }
                 if (this.forceIDFliter != -2) {
                   lVar2 = FUN_18046c0a0(0);
                   if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                      (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
-                  lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bb98);
+                  lVar2 = FUN_180002f80(lVar2,iVar4,DAT_181d8bbb0);
                   if (lVar2 == null) break;
-                  if (*(int *)(lVar2 + 132) != this.forceIDFliter) goto LAB_180afa10e;
+                  if (*(int *)(lVar2 + 132) != this.forceIDFliter) goto LAB_180afa7ce;
                 }
                 lVar2 = FUN_18046c0a0(0);
                 if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                    (lVar2 = *(int64 *)(lVar2.villageAreaID + 80)) == null) break;
-                uVar3 = FUN_180002f80(lVar2,iVar4,DAT_181d8bb98);
+                uVar3 = FUN_180002f80(lVar2,iVar4,DAT_181d8bbb0);
                 HeroSearchController.AddHeroIcon(this,uVar3,0);
               }
             }
-        LAB_180afa10e:
+        LAB_180afa7ce:
             iVar4 = iVar4 + 1;
           } while( true );
         }
     }
 
     // Token : 0x6001807
-    // RVA   : 0xAF94E0   Offset: 0xAF88E0   Length: 0x756
+    // RVA   : 0xAF9BA0   Offset: 0xAF8FA0   Length: 0x756
     public void RefreshFliter()
     {
         bool cVar1;
@@ -721,7 +721,7 @@ public class HeroSearchController
         long lVar4;
         ulong uVar5;
         if (this.heroSearchNameInputField != null) {
-          cVar1 = FUN_18171e540(*(uint64 *)(this.heroSearchNameInputField + 0x170),"",0);
+          cVar1 = FUN_18171eb50(*(uint64 *)(this.heroSearchNameInputField + 0x170),"",0);
           if ((!cVar1) || (this.interestingStarFliter)) {
             bVar6 = false;
           }
@@ -731,7 +731,7 @@ public class HeroSearchController
           if ((this.heroSearchList != null) &&
              (lVar3 = GameObject.get_transform(this.heroSearchList,0)) != null) {
             iVar2 = Transform.get_childCount(lVar3,0);
-        joined_r0x000180af95a9:
+        joined_r0x000180af9c69:
             while( true ) {
               iVar2 = iVar2 + -1;
               if (iVar2 < 0) {
@@ -740,7 +740,7 @@ public class HeroSearchController
               if ((((this.heroSearchList == null) ||
                    (lVar3 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                   (lVar3 = Transform.GetChild(lVar3,iVar2,0)) == null) ||
-                 (lVar3 = Component.GetComponent(lVar3,DAT_181d940e0)) == null) throw; // [null/range check failed]
+                 (lVar3 = Component.GetComponent(lVar3,DAT_181d940f8)) == null) throw; // [null/range check failed]
               lVar4 = this.heroSearchList;
               if (*(int64 *)(lVar3 + 32) != 0) break;
               if (((lVar4 == null) || (lVar3 = GameObject.get_transform(lVar4,0)) == null) ||
@@ -750,13 +750,13 @@ public class HeroSearchController
             }
             if ((((lVar4 == null) || (lVar3 = GameObject.get_transform(lVar4,0)) == null) ||
                 (lVar3 = Transform.GetChild(lVar3,iVar2,0)) == null) ||
-               ((lVar3 = Component.GetComponent(lVar3,DAT_181d940e0), lVar3 == null ||
+               ((lVar3 = Component.GetComponent(lVar3,DAT_181d940f8), lVar3 == null ||
                 (*(int64 *)(lVar3 + 32) == 0)))) throw; // [null/range check failed]
             if ((*(char *)(*(int64 *)(lVar3 + 32) + 96) == false) && (!bVar6)) {
               if ((((this.heroSearchList == null) ||
                    (lVar3 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                   (lVar3 = Transform.GetChild(lVar3,iVar2,0)) == null) ||
-                 ((((lVar3 = Component.GetComponent(lVar3,DAT_181d940e0), lVar3 == null ||
+                 ((((lVar3 = Component.GetComponent(lVar3,DAT_181d940f8), lVar3 == null ||
                     (*(int64 *)(lVar3 + 32) == 0)) || (this.heroSearchNameInputField == null)) ||
                   (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 32) + 104)) == null)))
               throw; // [null/range check failed]
@@ -767,35 +767,35 @@ public class HeroSearchController
                 throw; // [null/range check failed]
                 lVar3 = Transform.GetChild(lVar3,iVar2,0);
                 if ((lVar3 == null) ||
-                   ((lVar3 = Component.GetComponent(lVar3,DAT_181d940e0), lVar3 == null ||
+                   ((lVar3 = Component.GetComponent(lVar3,DAT_181d940f8), lVar3 == null ||
                     (*(int64 *)(lVar3 + 32) == 0)))) throw; // [null/range check failed]
                 uVar5 = *(uint64 *)(*(int64 *)(lVar3 + 32) + 104);
                 lVar3 = LTLocalization.GetText(uVar5,0,1,0);
                 if ((this.heroSearchNameInputField == null) || (lVar3 == null)) throw; // [null/range check failed]
                 cVar1 = String.Contains(lVar3,*(uint64 *)(this.heroSearchNameInputField + 0x170));
-                if (!cVar1) goto LAB_180af9b0e;
+                if (!cVar1) goto LAB_180afa1ce;
               }
               if (this.interestingStarFliter) {
                 if ((((this.heroSearchList == null) ||
                      (lVar3 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                     (lVar3 = Transform.GetChild(lVar3,iVar2,0)) == null) ||
-                   ((lVar3 = Component.GetComponent(lVar3,DAT_181d940e0), lVar3 == null ||
+                   ((lVar3 = Component.GetComponent(lVar3,DAT_181d940f8), lVar3 == null ||
                     (*(int64 *)(lVar3 + 32) == 0)))) throw; // [null/range check failed]
-                if (*(char *)(*(int64 *)(lVar3 + 32) + 48) == false) goto LAB_180af9b0e;
+                if (*(char *)(*(int64 *)(lVar3 + 32) + 48) == false) goto LAB_180afa1ce;
               }
               if (this.forceIDFliter != -2) {
                 if (((this.heroSearchList == null) ||
                     (lVar3 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                    ((lVar3 = Transform.GetChild(lVar3,iVar2,0), lVar3 == null ||
-                    ((lVar3 = Component.GetComponent(lVar3,DAT_181d940e0), lVar3 == null ||
+                    ((lVar3 = Component.GetComponent(lVar3,DAT_181d940f8), lVar3 == null ||
                      (*(int64 *)(lVar3 + 32) == 0)))))) throw; // [null/range check failed]
                 if (*(int *)(*(int64 *)(lVar3 + 32) + 132) != this.forceIDFliter)
-                goto LAB_180af9b0e;
+                goto LAB_180afa1ce;
               }
               if ((((this.heroSearchList == null) ||
                    (lVar3 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                   (lVar3 = Transform.GetChild(lVar3,iVar2,0)) == null) ||
-                 ((lVar3 = Component.GetComponent(lVar3,DAT_181d940e0), lVar3 == null ||
+                 ((lVar3 = Component.GetComponent(lVar3,DAT_181d940f8), lVar3 == null ||
                   (*(int64 *)(lVar3 + 32) == 0)))) throw; // [null/range check failed]
               lVar4 = this.sexFliter;
               if (*(char *)(*(int64 *)(lVar3 + 32) + 128) == false) {
@@ -817,14 +817,14 @@ public class HeroSearchController
                 if (((this.heroSearchList == null) ||
                     (lVar4 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                    ((lVar4 = Transform.GetChild(lVar4,iVar2,0), lVar4 == null ||
-                    (((lVar4 = Component.GetComponent(lVar4,DAT_181d940e0), lVar4 == null ||
+                    (((lVar4 = Component.GetComponent(lVar4,DAT_181d940f8), lVar4 == null ||
                       (*(int64 *)(lVar4 + 32) == 0)) || (lVar3 == null)))))) throw; // [null/range check failed]
                 cVar1 = FUN_180133a50(lVar3,*(uint32 *)(*(int64 *)(lVar4 + 32) + 184));
                 if (cVar1) {
                   if (((this.heroSearchList == null) ||
                       (lVar3 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                      ((lVar3 = Transform.GetChild(lVar3,iVar2,0), lVar3 == null ||
-                      ((lVar3 = Component.GetComponent(lVar3,DAT_181d940e0), lVar3 == null ||
+                      ((lVar3 = Component.GetComponent(lVar3,DAT_181d940f8), lVar3 == null ||
                        (*(int64 *)(lVar3 + 32) == 0)))))) throw; // [null/range check failed]
                   lVar4 = this.speFliter;
                   if (*(char *)(*(int64 *)(lVar3 + 32) + 92) == false) {
@@ -855,12 +855,12 @@ public class HeroSearchController
                       throw; // [null/range check failed]
                       GameObject.SetActive(lVar3);
                     }
-                    goto joined_r0x000180af95a9;
+                    goto joined_r0x000180af9c69;
                   }
                 }
               }
             }
-        LAB_180af9b0e:
+        LAB_180afa1ce:
             if (((this.heroSearchList == null) ||
                 (lVar3 = GameObject.get_transform(this.heroSearchList,0)) == null) ||
                ((lVar3 = Transform.GetChild(lVar3,iVar2,0), lVar3 == null ||
@@ -873,38 +873,38 @@ public class HeroSearchController
                  (lVar3 = Component.get_gameObject(lVar3)) == null) throw; // [null/range check failed]
               GameObject.SetActive(lVar3);
             }
-            goto joined_r0x000180af95a9;
+            goto joined_r0x000180af9c69;
           }
         }
     }
 
     // Token : 0x6001808
-    // RVA   : 0xAFA520   Offset: 0xAF9920   Length: 0x1AD
+    // RVA   : 0xAFABE0   Offset: 0xAF9FE0   Length: 0x1AD
     public void /*ctor*/()
     {
         long lVar1;
         this.forceIDFliter = 0xfffffffe;
-        lVar1 = il2cpp_internal(DAT_181d917d8);
-        FUN_18132faf0(lVar1,DAT_181d804a0);
+        lVar1 = il2cpp_internal(DAT_181d917f0);
+        FUN_181330100(lVar1,DAT_181d804b8);
         if (lVar1 != null) {
-          FUN_1817e98e0(lVar1,1,DAT_181d80520);
-          FUN_1817e98e0(lVar1,1,DAT_181d80520);
+          FUN_1817e9ef0(lVar1,1,DAT_181d80538);
+          FUN_1817e9ef0(lVar1,1,DAT_181d80538);
           this.speFliter = lVar1;
-          lVar1 = il2cpp_internal(DAT_181d917d8);
-          FUN_18132faf0(lVar1,DAT_181d804a0);
+          lVar1 = il2cpp_internal(DAT_181d917f0);
+          FUN_181330100(lVar1,DAT_181d804b8);
           if (lVar1 != null) {
-            FUN_1817e98e0(lVar1,1,DAT_181d80520);
-            FUN_1817e98e0(lVar1,1,DAT_181d80520);
+            FUN_1817e9ef0(lVar1,1,DAT_181d80538);
+            FUN_1817e9ef0(lVar1,1,DAT_181d80538);
             this.sexFliter = lVar1;
-            lVar1 = il2cpp_internal(DAT_181d917d8);
-            FUN_18132faf0(lVar1,DAT_181d804a0);
+            lVar1 = il2cpp_internal(DAT_181d917f0);
+            FUN_181330100(lVar1,DAT_181d804b8);
             if (lVar1 != null) {
-              FUN_1817e98e0(lVar1,1,DAT_181d80520);
-              FUN_1817e98e0(lVar1,1,DAT_181d80520);
-              FUN_1817e98e0(lVar1,1,DAT_181d80520);
-              FUN_1817e98e0(lVar1,1,DAT_181d80520);
-              FUN_1817e98e0(lVar1,1,DAT_181d80520);
-              FUN_1817e98e0(lVar1,1,DAT_181d80520);
+              FUN_1817e9ef0(lVar1,1,DAT_181d80538);
+              FUN_1817e9ef0(lVar1,1,DAT_181d80538);
+              FUN_1817e9ef0(lVar1,1,DAT_181d80538);
+              FUN_1817e9ef0(lVar1,1,DAT_181d80538);
+              FUN_1817e9ef0(lVar1,1,DAT_181d80538);
+              FUN_1817e9ef0(lVar1,1,DAT_181d80538);
               this.forceLvFliter = lVar1;
               FUN_18044ef50(this,0);
               return;

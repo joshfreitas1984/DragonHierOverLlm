@@ -70,12 +70,12 @@ public class BGMController
         if (BGMController.audioCache != null) {
           cVar1 = FUN_1808ab490(BGMController.audioCache,path,DAT_181d728e8);
           if (!cVar1) {
-            uVar2 = Resources.Load(path,DAT_181d9ff80);
+            uVar2 = Resources.Load(path,DAT_181d9fe18);
             if (BGMController.audioCache == null) throw; // [null/range check failed]
             FUN_1808b2160(BGMController.audioCache,path,uVar2,DAT_181d729f8);
           }
           if (BGMController.audioCache != null) {
-            FUN_1817c63a0(BGMController.audioCache,path,DAT_181d72970);
+            FUN_1817c69b0(BGMController.audioCache,path,DAT_181d72970);
             return;
           }
         }
@@ -85,7 +85,7 @@ public class BGMController
     // RVA   : 0x7F66A0   Offset: 0x7F5AA0   Length: 0x58
     public static BGMController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181dafac8 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181dafae0 + 184) + 8);
     }
 
     // Token : 0x6000AE3
@@ -96,7 +96,7 @@ public class BGMController
         long lVar2;
         uint uVar4;
         long lVar5;
-        plVar3 = (int64 *)(*(int64 *)(DAT_181dafac8 + 184) + 8);
+        plVar3 = (int64 *)(*(int64 *)(DAT_181dafae0 + 184) + 8);
         *plVar3 = this;
         il2cpp_internal(plVar3,this);
         lVar2 = this.AllBGM;
@@ -116,39 +116,39 @@ public class BGMController
             if (lVar2._version) {
               lVar2 = this.bigMapBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
               break;
-              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
+              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50)) == null)
+               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68)) == null)
             break;
             if (*(char *)(lVar2 + 29) != false) {
               lVar2 = this.areaBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
               break;
-              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
+              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50)) == null)
+               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68)) == null)
             break;
             if (*(char *)(lVar2 + 40) != false) {
               lVar2 = this.fightBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
               break;
-              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
+              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50)) == null)
+               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68)) == null)
             break;
             if (*(char *)(lVar2 + 41) != false) {
               lVar2 = this.bossBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd50), lVar2 == null))
+                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
               break;
-              FUN_18181e0a0(lVar2,uVar1,DAT_181d7dbd8);
+              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
             }
             lVar2 = this.AllBGM;
             uVar4 = uVar4 + 1;
@@ -193,7 +193,7 @@ public class BGMController
           AudioSource.Play(this.gameBGM,0);
         }
         else {
-          cVar1 = FUN_180d755b0(this.plotBgm.audioClip,0);
+          cVar1 = FUN_180d75bc0(this.plotBgm.audioClip,0);
           if (cVar1) goto LAB_1807f4e56;
         }
         lVar2 = this.environmentSound;
@@ -223,7 +223,7 @@ public class BGMController
           if (!cVar2) {
             return this.bigMapEnvironmentSoundClip;
           }
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 8);
           if (lVar3 == null) throw; // [null/range check failed]
           if (lVar3.cityAreaID != null) {
             lVar3 = FUN_18046bca0(0);
@@ -339,7 +339,7 @@ public class BGMController
                  (lVar5 = AreaBuildingData.DataBase(lVar5.Count,0)) == null)
               throw; // [null/range check failed]
               if (lVar5.MailDatas != -1) goto LAB_1807f5a42;
-              fVar9 = **(float **)(DAT_181db4008 + 184);
+              fVar9 = **(float **)(DAT_181db4020 + 184);
             }
             fVar9 = fVar9 * GameController.CheckShowSpeHero;
             if (this.environmentSound == null) throw; // [null/range check failed]
@@ -386,7 +386,7 @@ public class BGMController
           goto LAB_1807f65a5;
         }
         if ((this.plotBgm != null) &&
-           (cVar1 = FUN_180d755b0(this.plotBgm.audioClip,0), !cVar1)
+           (cVar1 = FUN_180d75bc0(this.plotBgm.audioClip,0), !cVar1)
            ) {
           lVar5 = this.gameBGM;
           if (this.nowBgm == this.plotBgm) {
@@ -450,11 +450,11 @@ public class BGMController
         lVar5 = this.fightBGM;
         if (!bVar8) {
           if (lVar5 == null) throw; // [null/range check failed]
-          cVar1 = FUN_18181e400(lVar5,this.nowBgm,DAT_181d7dc50);
+          cVar1 = FUN_18181ea10(lVar5,this.nowBgm,DAT_181d7dc68);
           if (!cVar1) {
             if (this.bossBGM == null) throw; // [null/range check failed]
-            cVar1 = FUN_18181e400(this.bossBGM,this.nowBgm,
-                                  DAT_181d7dc50);
+            cVar1 = FUN_18181ea10(this.bossBGM,this.nowBgm,
+                                  DAT_181d7dc68);
             if (!cVar1) goto LAB_1807f5f58;
           }
           if (this.gameBGM == null) throw; // [null/range check failed]
@@ -503,11 +503,11 @@ public class BGMController
           throw; // [null/range check failed]
         }
         if (lVar5 == null) throw; // [null/range check failed]
-        cVar1 = FUN_18181e400(lVar5,this.nowBgm,DAT_181d7dc50);
+        cVar1 = FUN_18181ea10(lVar5,this.nowBgm,DAT_181d7dc68);
         if (!cVar1) {
           if (this.bossBGM == null) throw; // [null/range check failed]
-          cVar1 = FUN_18181e400(this.bossBGM,this.nowBgm,
-                                DAT_181d7dc50);
+          cVar1 = FUN_18181ea10(this.bossBGM,this.nowBgm,
+                                DAT_181d7dc68);
           if (!cVar1) {
             if (this.gameBGM == null) throw; // [null/range check failed]
             fVar9 = (float)AudioSource.get_volume(this.gameBGM,0);
@@ -865,13 +865,13 @@ public class BGMController
         int iVar4;
         int iVar5;
         int iVar6;
-        lVar2 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar2,DAT_181d8f098);
+        lVar2 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar2,DAT_181d8f0b0);
         iVar5 = 0;
         if (BGMList != null) {
           for (; iVar5 < *(int *)(BGMList + 24); iVar5 = iVar5 + 1) {
             if (BGMList == this.areaBGM) {
-              lVar3 = FUN_180002f80(BGMList,iVar5,DAT_181d7dd50);
+              lVar3 = FUN_180002f80(BGMList,iVar5,DAT_181d7dd68);
               if (lVar3 == null) throw; // [null/range check failed]
               if (*(int *)(lVar3 + 32) == -1) goto LAB_1807f4d6f;
               lVar3 = FUN_180002f80(BGMList,iVar5);
@@ -895,13 +895,13 @@ public class BGMController
               iVar4 = 0;
               do {
                 if (lVar2 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar2,iVar5);
+                FUN_18182a6c0(lVar2,iVar5);
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar6);
             }
           }
           if (lVar2 != null) {
-            uVar1 = FUN_180d95a30(0,*(uint32 *)(lVar2 + 24),0);
+            uVar1 = FUN_180d96040(0,*(uint32 *)(lVar2 + 24),0);
             if (*(uint32 *)(lVar2 + 24) <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -927,9 +927,9 @@ public class BGMController
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d82a68);
+        uVar2 = il2cpp_internal(DAT_181d82a80);
         FUN_1808b1370(uVar2,DAT_181d72860);
-        puVar1 = *(uint64 **)(DAT_181dafac8 + 184);
+        puVar1 = *(uint64 **)(DAT_181dafae0 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

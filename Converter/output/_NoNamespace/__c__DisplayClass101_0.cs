@@ -6,13 +6,13 @@
 public class <>c__DisplayClass101_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A28
+    // Token: 0x4001A29
     public bool hightLight;
 
-    // Token: 0x4001A29
+    // Token: 0x4001A2A
     public GameObject targetSkeleton;
 
-    // Token: 0x4001A2A
+    // Token: 0x4001A2B
     public TweenCallback <>9__0;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -24,7 +24,7 @@ public class <>c__DisplayClass101_0
     }
 
     // Token : 0x6001FBF
-    // RVA   : 0x8F5E80   Offset: 0x8F5280   Length: 0xD0
+    // RVA   : 0x928B20   Offset: 0x927F20   Length: 0xD0
     internal void <ManageHeroFace>b__0()
     {
         ulong uVar1;
@@ -38,14 +38,14 @@ public class <>c__DisplayClass101_0
             Color.ctor(&local_18,0x3ecccccd,0x3ecccccd,0x3ecccccd,0);
           }
           else {
-            puVar2 = (uint32 *)FUN_1810d3570(&local_18,0);
+            puVar2 = (uint32 *)FUN_1810d3b80(&local_18,0);
             local_18._0_4_ = *puVar2;
             local_18._4_4_ = puVar2[1];
             uStack_10._0_4_ = puVar2[2];
             uStack_10._4_4_ = puVar2[3];
           }
           uVar1 = DOTweenModuleUI.DOColor(uVar1,&local_18,0x3e99999a,0);
-          TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+          TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
           return;
         }
     }

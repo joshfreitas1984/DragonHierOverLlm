@@ -29,7 +29,7 @@ public class TweenHeight
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60005B9
-    // RVA   : 0xAEA330   Offset: 0xAE9730   Length: 0xAC
+    // RVA   : 0xAEA9F0   Offset: 0xAE9DF0   Length: 0xAC
     public UIWidget get_cachedWidget()
     {
         bool cVar1;
@@ -37,14 +37,14 @@ public class TweenHeight
         uVar2 = this.mWidget;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (cVar1) {
-          uVar2 = Component.GetComponent(this,DAT_181d97060);
+          uVar2 = Component.GetComponent(this,DAT_181d97078);
           this.mWidget = uVar2;
         }
         return this.mWidget;
     }
 
     // Token : 0x60005BA
-    // RVA   : 0xAEA3E0   Offset: 0xAE97E0   Length: 0x20
+    // RVA   : 0xAEAAA0   Offset: 0xAE9EA0   Length: 0x20
     public int get_height()
     {
         long lVar1;
@@ -55,7 +55,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005BB
-    // RVA   : 0xAEA410   Offset: 0xAE9810   Length: 0x2B
+    // RVA   : 0xAEAAD0   Offset: 0xAE9ED0   Length: 0x2B
     public void set_height(int value)
     {
         long lVar1;
@@ -67,7 +67,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005BC
-    // RVA   : 0xAEA3E0   Offset: 0xAE97E0   Length: 0x20
+    // RVA   : 0xAEAAA0   Offset: 0xAE9EA0   Length: 0x20
     public int get_value()
     {
         long lVar1;
@@ -78,7 +78,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005BD
-    // RVA   : 0xAEA410   Offset: 0xAE9810   Length: 0x2B
+    // RVA   : 0xAEAAD0   Offset: 0xAE9ED0   Length: 0x2B
     public void set_value(int value)
     {
         long lVar1;
@@ -90,7 +90,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005BE
-    // RVA   : 0xAEA010   Offset: 0xAE9410   Length: 0x23D
+    // RVA   : 0xAEA6D0   Offset: 0xAE9AD0   Length: 0x23D
     protected override void OnUpdate(float factor, bool isFinished)
     {
         bool cVar1;
@@ -100,20 +100,20 @@ public class TweenHeight
         uVar4 = this.fromTarget;
         cVar1 = Object.op_Implicit(uVar4,0);
         if (cVar1) {
-          if (this.fromTarget == null) goto LAB_180aea248;
+          if (this.fromTarget == null) goto LAB_180aea908;
           this.from = this.fromTarget.mWidth;
         }
         uVar4 = this.toTarget;
         cVar1 = Object.op_Implicit(uVar4,0);
         if (cVar1) {
-          if (this.toTarget == null) goto LAB_180aea248;
+          if (this.toTarget == null) goto LAB_180aea908;
           this.to = this.toTarget.mWidth;
         }
         uVar2 = Mathf.RoundToInt((1.0 - factor) * (float)this.from +
                                   (float)this.to * factor,0);
         lVar3 = TweenHeight.get_cachedWidget(this,0);
         if (lVar3 == null) {
-        LAB_180aea248:
+        LAB_180aea908:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -123,7 +123,7 @@ public class TweenHeight
           cVar1 = Object.op_Equality(uVar4,0,0);
           if (cVar1) {
             uVar4 = Component.get_gameObject(this,0);
-            uVar4 = NGUITools.FindInParents(uVar4,DAT_181d8fa20);
+            uVar4 = NGUITools.FindInParents(uVar4,DAT_181d8f8b8);
             this.mTable = uVar4;
             uVar4 = this.mTable;
             cVar1 = Object.op_Equality(uVar4,0,0);
@@ -132,20 +132,20 @@ public class TweenHeight
               return;
             }
           }
-          if (this.mTable == null) goto LAB_180aea248;
+          if (this.mTable == null) goto LAB_180aea908;
           UITable.set_repositionNow(this.mTable,1,0);
         }
     }
 
     // Token : 0x60005BF
-    // RVA   : 0xAE9F40   Offset: 0xAE9340   Length: 0xC3
+    // RVA   : 0xAEA600   Offset: 0xAE9A00   Length: 0xC3
     public static TweenHeight Begin(UIWidget widget, float duration, int height)
     {
         ulong uVar1;
         long lVar2;
         if (widget != null) {
           uVar1 = Component.get_gameObject(widget,0);
-          lVar2 = UITweener.Begin(uVar1,duration,0,DAT_181dc6cc8);
+          lVar2 = UITweener.Begin(uVar1,duration,0,DAT_181dc6e78);
           if (lVar2 != null) {
             *(uint32 *)(lVar2 + 120) = *(uint32 *)(widget + 168);
             *(uint32 *)(lVar2 + 124) = height;
@@ -159,7 +159,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005C0
-    // RVA   : 0xAEA2E0   Offset: 0xAE96E0   Length: 0x29
+    // RVA   : 0xAEA9A0   Offset: 0xAE9DA0   Length: 0x29
     public override void SetStartToCurrentValue()
     {
         long lVar1;
@@ -171,7 +171,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005C1
-    // RVA   : 0xAEA2B0   Offset: 0xAE96B0   Length: 0x29
+    // RVA   : 0xAEA970   Offset: 0xAE9D70   Length: 0x29
     public override void SetEndToCurrentValue()
     {
         long lVar1;
@@ -183,7 +183,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005C2
-    // RVA   : 0xAEA280   Offset: 0xAE9680   Length: 0x2C
+    // RVA   : 0xAEA940   Offset: 0xAE9D40   Length: 0x2C
     private void SetCurrentValueToStart()
     {
         uint uVar1;
@@ -197,7 +197,7 @@ public class TweenHeight
     }
 
     // Token : 0x60005C3
-    // RVA   : 0xAEA250   Offset: 0xAE9650   Length: 0x2C
+    // RVA   : 0xAEA910   Offset: 0xAE9D10   Length: 0x2C
     private void SetCurrentValueToEnd()
     {
         uint uVar1;
@@ -211,10 +211,10 @@ public class TweenHeight
     }
 
     // Token : 0x60005C4
-    // RVA   : 0xAEA310   Offset: 0xAE9710   Length: 0x15
+    // RVA   : 0xAEA9D0   Offset: 0xAE9DD0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180aea310(int64 this)
+        void FUN_180aea9d0(int64 this)
         {
         this.from = 100;
         this.to = 100;

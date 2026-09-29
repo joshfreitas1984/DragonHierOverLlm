@@ -6,30 +6,30 @@
 public class _ObjectsMakeBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EB3
+    // Token: 0x4001EB4
     public GameObject[] m_makeObjs;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002433
-    // RVA   : 0x9D8E20   Offset: 0x9D8220   Length: 0x12
+    // RVA   : 0x9D94B0   Offset: 0x9D88B0   Length: 0x12
     public float GetRandomValue(float value)
     {
-        void FUN_1809d8e20(uint64 this,uint32 value)
+        void FUN_1809d94b0(uint64 this,uint32 value)
         {
         Random.Range(value ^ 0x80000000,value,0);
     }
 
     // Token : 0x6002434
-    // RVA   : 0x9D8E10   Offset: 0x9D8210   Length: 0xB
+    // RVA   : 0x9D94A0   Offset: 0x9D88A0   Length: 0xB
     public float GetRandomValue2(float value)
     {
-        void FUN_1809d8e10(uint64 this,uint64 value)
+        void FUN_1809d94a0(uint64 this,uint64 value)
         {
         Random.Range(0,value,0);
     }
 
     // Token : 0x6002435
-    // RVA   : 0x9D8EC0   Offset: 0x9D82C0   Length: 0xF3
+    // RVA   : 0x9D9550   Offset: 0x9D8950   Length: 0xF3
     public Vector3 GetRandomVector(Vector3 value)
     {
         ulong uVar1;
@@ -51,7 +51,7 @@ public class _ObjectsMakeBase
     }
 
     // Token : 0x6002436
-    // RVA   : 0x9D8E40   Offset: 0x9D8240   Length: 0x72
+    // RVA   : 0x9D94D0   Offset: 0x9D88D0   Length: 0x72
     public Vector3 GetRandomVector2(Vector3 value)
     {
         uint64 *

@@ -23,7 +23,7 @@ public class ResourceData
     }
 
     // Token : 0x6000EB9
-    // RVA   : 0xD159A0   Offset: 0xD14DA0   Length: 0xCF
+    // RVA   : 0xD15FB0   Offset: 0xD153B0   Length: 0xCF
     public string GetDescribe()
     {
         uint uVar1;
@@ -44,7 +44,7 @@ public class ResourceData
     }
 
     // Token : 0x6000EBA
-    // RVA   : 0xD15A70   Offset: 0xD14E70   Length: 0x8B
+    // RVA   : 0xD16080   Offset: 0xD15480   Length: 0x8B
     public static ResourceData op_Multiply(ResourceData a, int b)
     {
         float fVar1;
@@ -61,7 +61,7 @@ public class ResourceData
     }
 
     // Token : 0x6000EBB
-    // RVA   : 0xD15820   Offset: 0xD14C20   Length: 0x175
+    // RVA   : 0xD15E30   Offset: 0xD15230   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -72,13 +72,13 @@ public class ResourceData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -90,7 +90,7 @@ public class ResourceData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

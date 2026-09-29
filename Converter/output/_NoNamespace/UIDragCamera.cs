@@ -11,7 +11,7 @@ public class UIDragCamera
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600010B
-    // RVA   : 0x12B1B10   Offset: 0x12B0F10   Length: 0xD4
+    // RVA   : 0x12B2120   Offset: 0x12B1520   Length: 0xD4
     private void Awake()
     {
         bool cVar2;
@@ -20,14 +20,14 @@ public class UIDragCamera
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (cVar2) {
           uVar3 = Component.get_gameObject(this,0);
-          uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f4a0);
+          uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f338);
           *puVar1 = uVar3;
           il2cpp_internal(puVar1,uVar3);
         }
     }
 
     // Token : 0x600010C
-    // RVA   : 0x12B1CF0   Offset: 0x12B10F0   Length: 0x232
+    // RVA   : 0x12B2300   Offset: 0x12B1700   Length: 0x232
     private void OnPress(bool isPressed)
     {
         long lVar1;
@@ -48,14 +48,14 @@ public class UIDragCamera
             cVar5 = Object.op_Inequality(uVar7,0,0);
             if (cVar5) {
               if (this.draggableCamera == null) {
-        LAB_1812b1f1d:
+        LAB_1812b252d:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               cVar5 = Behaviour.get_enabled(this.draggableCamera,0);
               if (cVar5) {
                 lVar1 = this.draggableCamera;
-                if (lVar1 == null) goto LAB_1812b1f1d;
+                if (lVar1 == null) goto LAB_1812b252d;
                 if (isPressed) {
                   lVar1.mDragStarted = 0;
                 }
@@ -86,14 +86,14 @@ public class UIDragCamera
                     lVar1.mMomentum = local_res20;
                     *(uint32 *)(lVar1 + 80) = uStackX_24;
                     lVar1.mScroll = 0;
-                    lVar1 = Component.GetComponent(lVar1,DAT_181d95d60);
+                    lVar1 = Component.GetComponent(lVar1,DAT_181d95d78);
                     cVar5 = Object.op_Inequality(lVar1,0,0);
                     if (cVar5) {
                       if (lVar1 != null) {
                         Behaviour.set_enabled(lVar1,0,0);
                         return;
                       }
-                      goto LAB_1812b1f1d;
+                      goto LAB_1812b252d;
                     }
                   }
                 }
@@ -104,7 +104,7 @@ public class UIDragCamera
     }
 
     // Token : 0x600010D
-    // RVA   : 0x12B1BF0   Offset: 0x12B0FF0   Length: 0xFD
+    // RVA   : 0x12B2200   Offset: 0x12B1600   Length: 0xFD
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -118,13 +118,13 @@ public class UIDragCamera
             cVar2 = Object.op_Inequality(uVar1,0,0);
             if (cVar2) {
               if (this.draggableCamera == null) {
-        LAB_1812b1ce8:
+        LAB_1812b22f8:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               cVar2 = Behaviour.get_enabled(this.draggableCamera,0);
               if (cVar2) {
-                if (this.draggableCamera == null) goto LAB_1812b1ce8;
+                if (this.draggableCamera == null) goto LAB_1812b22f8;
                 UIDraggableCamera.Drag(this.draggableCamera,delta,0);
               }
             }
@@ -133,7 +133,7 @@ public class UIDragCamera
     }
 
     // Token : 0x600010E
-    // RVA   : 0x12B1F30   Offset: 0x12B1330   Length: 0x1A7
+    // RVA   : 0x12B2540   Offset: 0x12B1940   Length: 0x1A7
     private void OnScroll(float delta)
     {
         long lVar1;
@@ -150,14 +150,14 @@ public class UIDragCamera
             cVar3 = Object.op_Inequality(uVar2,0,0);
             if (cVar3) {
               if (this.draggableCamera == null) {
-        LAB_1812b20d2:
+        LAB_1812b26e2:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               cVar3 = Behaviour.get_enabled(this.draggableCamera,0);
               if (cVar3) {
                 lVar1 = this.draggableCamera;
-                if (lVar1 == null) goto LAB_1812b20d2;
+                if (lVar1 == null) goto LAB_1812b26e2;
                 cVar3 = Behaviour.get_enabled(lVar1,0);
                 if (cVar3) {
                   uVar2 = Component.get_gameObject(lVar1,0);

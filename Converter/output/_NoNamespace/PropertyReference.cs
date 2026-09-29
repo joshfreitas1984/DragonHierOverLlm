@@ -30,7 +30,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000443
-    // RVA   : 0xB137C0   Offset: 0xB12BC0   Length: 0x3F
+    // RVA   : 0xB13E80   Offset: 0xB13280   Length: 0x3F
     public void set_target(Component value)
     {
         this.mTarget = value;
@@ -46,7 +46,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000445
-    // RVA   : 0xB13780   Offset: 0xB12B80   Length: 0x3F
+    // RVA   : 0xB13E40   Offset: 0xB13240   Length: 0x3F
     public void set_name(string value)
     {
         this.mName = value;
@@ -55,7 +55,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000446
-    // RVA   : 0xB136F0   Offset: 0xB12AF0   Length: 0x82
+    // RVA   : 0xB13DB0   Offset: 0xB131B0   Length: 0x82
     public bool get_isValid()
     {
         ulong uVar1;
@@ -65,12 +65,12 @@ public class PropertyReference
         if (!cVar2) {
           return false;
         }
-        cVar2 = FUN_180d755b0(this.mName,0);
+        cVar2 = FUN_180d75bc0(this.mName,0);
         return !cVar2;
     }
 
     // Token : 0x6000447
-    // RVA   : 0xB135D0   Offset: 0xB129D0   Length: 0x116
+    // RVA   : 0xB13C90   Offset: 0xB13090   Length: 0x116
     public bool get_isEnabled()
     {
         bool cVar3;
@@ -116,7 +116,7 @@ public class PropertyReference
     }
 
     // Token : 0x600044A
-    // RVA   : 0xB12C90   Offset: 0xB12090   Length: 0x108
+    // RVA   : 0xB13350   Offset: 0xB12750   Length: 0x108
     public Type GetPropertyType()
     {
         ulong uVar2;
@@ -134,14 +134,14 @@ public class PropertyReference
         cVar3 = FUN_180303780(this.mProperty,0,0);
         if (!cVar3) {
           cVar3 = FUN_180303780(this.mField,0,0);
-          uVar2 = DAT_181dc4ae0;
+          uVar2 = DAT_181dc4af8;
           if (!cVar3) {
             Type.GetTypeFromHandle(uVar2,0);
             return;
           }
           plVar1 = this.mField;
           if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180b12d6d. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180b1342d. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*plVar1 + 0x268))(plVar1,*(uint64 *)(*plVar1 + 0x270));
             return;
@@ -150,7 +150,7 @@ public class PropertyReference
         else {
           plVar1 = this.mProperty;
           if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180b12d8c. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180b1344c. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*plVar1 + 0x278))(plVar1,*(uint64 *)(*plVar1 + 0x280));
             return;
@@ -159,7 +159,7 @@ public class PropertyReference
     }
 
     // Token : 0x600044B
-    // RVA   : 0xB12B30   Offset: 0xB11F30   Length: 0xF8
+    // RVA   : 0xB131F0   Offset: 0xB125F0   Length: 0xF8
     public override bool Equals(object obj)
     {
         long lVar1;
@@ -170,15 +170,15 @@ public class PropertyReference
           cVar3 = PropertyReference.get_isValid(this,0);
           return !cVar3;
         }
-        if (*(byte *)(DAT_181d93288 + 300) <= *(byte *)(*obj + 300)) {
+        if (*(byte *)(DAT_181d93298 + 300) <= *(byte *)(*obj + 300)) {
           if (*(int64 *)
-               (*(int64 *)(*obj + 200) + -8 + (uint64)*(byte *)(DAT_181d93288 + 300) * 8) ==
-              DAT_181d93288) {
+               (*(int64 *)(*obj + 200) + -8 + (uint64)*(byte *)(DAT_181d93298 + 300) * 8) ==
+              DAT_181d93298) {
             lVar1 = obj[2];
             uVar2 = this.mTarget;
             cVar3 = Object.op_Equality(uVar2,lVar1,0);
             if (cVar3) {
-              uVar4 = FUN_18171e540(this.mName,obj[3],0);
+              uVar4 = FUN_18171eb50(this.mName,obj[3],0);
               return (bool)uVar4;
             }
           }
@@ -187,14 +187,14 @@ public class PropertyReference
     }
 
     // Token : 0x600044C
-    // RVA   : 0xB12C30   Offset: 0xB12030   Length: 0x56
+    // RVA   : 0xB132F0   Offset: 0xB126F0   Length: 0x56
     public override int GetHashCode()
     {
-        return **(uint32 **)(DAT_181d93288 + 184);
+        return **(uint32 **)(DAT_181d93298 + 184);
     }
 
     // Token : 0x600044D
-    // RVA   : 0xB13280   Offset: 0xB12680   Length: 0x36
+    // RVA   : 0xB13940   Offset: 0xB12D40   Length: 0x36
     public void Set(Component target, string methodName)
     {
         ulong uVar1;
@@ -252,7 +252,7 @@ public class PropertyReference
             if (lVar3 == null) throw; // [null/range check failed]
             cVar2 = Type.get_IsClass(lVar3,0);
             lVar4 = lVar3;
-            if (!cVar2) goto LAB_180b1318e;
+            if (!cVar2) goto LAB_180b1384e;
           }
           else {
             lVar4 = Object.GetType(local_res10,0);
@@ -282,7 +282,7 @@ public class PropertyReference
             throw; // [null/range check failed]
           }
         }
-        LAB_180b1318e:
+        LAB_180b1384e:
         cVar2 = Application.get_isPlaying(0);
         if (!cVar2) {
           return 0;
@@ -309,7 +309,7 @@ public class PropertyReference
     }
 
     // Token : 0x600044E
-    // RVA   : 0xB12020   Offset: 0xB11420   Length: 0x33
+    // RVA   : 0xB126E0   Offset: 0xB11AE0   Length: 0x33
     public void Clear()
     {
         this.mTarget = 0;
@@ -317,7 +317,7 @@ public class PropertyReference
     }
 
     // Token : 0x600044F
-    // RVA   : 0xB12E80   Offset: 0xB12280   Length: 0x33
+    // RVA   : 0xB13540   Offset: 0xB12940   Length: 0x33
     public void Reset()
     {
         this.mField = 0;
@@ -325,7 +325,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000450
-    // RVA   : 0xB132C0   Offset: 0xB126C0   Length: 0x167
+    // RVA   : 0xB13980   Offset: 0xB12D80   Length: 0x167
     public override string ToString()
     {
         bool cVar1;
@@ -345,7 +345,7 @@ public class PropertyReference
               if (0 < iVar2) {
                 lVar4 = String.Substring(lVar4,iVar2 + 1,0);
               }
-              cVar1 = FUN_180d755b0(param_2,0);
+              cVar1 = FUN_180d75bc0(param_2,0);
               if (cVar1) {
                 uVar5 = String.Concat(lVar4,".[property]",0);
                 return uVar5;
@@ -358,7 +358,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000451
-    // RVA   : 0xB13430   Offset: 0xB12830   Length: 0x128
+    // RVA   : 0xB13AF0   Offset: 0xB12EF0   Length: 0x128
     public static string ToString(Component comp, string property)
     {
         bool cVar1;
@@ -378,7 +378,7 @@ public class PropertyReference
               if (0 < iVar2) {
                 lVar4 = String.Substring(lVar4,iVar2 + 1,0);
               }
-              cVar1 = FUN_180d755b0(property,0);
+              cVar1 = FUN_180d75bc0(property,0);
               if (cVar1) {
                 uVar5 = String.Concat(lVar4,".[property]",0);
                 return uVar5;
@@ -391,7 +391,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000452
-    // RVA   : 0xB12DA0   Offset: 0xB121A0   Length: 0xDC
+    // RVA   : 0xB13460   Offset: 0xB12860   Length: 0xDC
     public object Get()
     {
         bool cVar2;
@@ -410,7 +410,7 @@ public class PropertyReference
           }
           plVar1 = this.mField;
           if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180b12e25. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180b134e5. Too many branches
                           // WARNING: Treating indirect jump as call
             uVar3 = (**(code **)(*plVar1 + 0x278))
                               (plVar1,this.mTarget,*(uint64 *)(*plVar1 + 0x280));
@@ -426,7 +426,7 @@ public class PropertyReference
             }
             plVar1 = this.mProperty;
             if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180b12e70. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180b13530. Too many branches
                           // WARNING: Treating indirect jump as call
               uVar3 = (**(code **)(*plVar1 + 0x2e8))
                                 (plVar1,this.mTarget,0,*(uint64 *)(*plVar1 + 0x2f0)
@@ -438,7 +438,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000453
-    // RVA   : 0xB12EC0   Offset: 0xB122C0   Length: 0x3B0
+    // RVA   : 0xB13580   Offset: 0xB12980   Length: 0x3B0
     public bool Set(object value)
     {
         ulong uVar1;
@@ -496,7 +496,7 @@ public class PropertyReference
             if (lVar3 == null) throw; // [null/range check failed]
             cVar2 = Type.get_IsClass(lVar3,0);
             lVar4 = lVar3;
-            if (!cVar2) goto LAB_180b1318e;
+            if (!cVar2) goto LAB_180b1384e;
           }
           else {
             lVar4 = Object.GetType(local_res10,0);
@@ -526,7 +526,7 @@ public class PropertyReference
             throw; // [null/range check failed]
           }
         }
-        LAB_180b1318e:
+        LAB_180b1384e:
         cVar2 = Application.get_isPlaying(0);
         if (!cVar2) {
           return false;
@@ -553,7 +553,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000454
-    // RVA   : 0xB11EF0   Offset: 0xB112F0   Length: 0x12D
+    // RVA   : 0xB125B0   Offset: 0xB119B0   Length: 0x12D
     private bool Cache()
     {
         bool cVar1;
@@ -563,24 +563,24 @@ public class PropertyReference
         uVar4 = this.mTarget;
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (cVar1) {
-          cVar1 = FUN_180d755b0(this.mName,0);
+          cVar1 = FUN_180d75bc0(this.mName,0);
           if (!cVar1) {
             if (this.mTarget == null) {
-        LAB_180b12018:
+        LAB_180b126d8:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             lVar3 = Object.GetType(this.mTarget,0);
-            if (lVar3 == null) goto LAB_180b12018;
+            if (lVar3 == null) goto LAB_180b126d8;
             uVar4 = Type.GetField(lVar3,this.mName,0);
             this.mField = uVar4;
             uVar4 = Type.GetProperty(lVar3,this.mName,0);
-            goto LAB_180b11fc8;
+            goto LAB_180b12688;
           }
         }
         uVar4 = 0;
         this.mField = 0;
-        LAB_180b11fc8:
+        LAB_180b12688:
         this.mProperty = uVar4;
         cVar1 = FUN_180303780(this.mField,0,0);
         if (cVar1) {
@@ -591,7 +591,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000455
-    // RVA   : 0xB129B0   Offset: 0xB11DB0   Length: 0xFC
+    // RVA   : 0xB13070   Offset: 0xB12470   Length: 0xFC
     private bool Convert(ref object value)
     {
         double dVar1;
@@ -614,49 +614,49 @@ public class PropertyReference
           FUN_1800d6620();
         }
         cVar4 = (**(code **)(*param_3 + 0x868))(param_3,value,*(uint64 *)(*param_3 + 0x870));
-        uVar5 = DAT_181dc26d0;
+        uVar5 = DAT_181dc26e8;
         if (cVar4) {
           return true;
         }
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         cVar4 = FUN_180295d70(param_3,uVar5,0);
-        uVar5 = DAT_181dbc1b8;
+        uVar5 = DAT_181dbc1d0;
         plVar2 = (int64 *)*this;
         if (!cVar4) {
-          if (plVar2 == (int64 *)0) goto LAB_180b12391;
+          if (plVar2 == (int64 *)0) goto LAB_180b12a51;
           uVar5 = Type.GetTypeFromHandle(uVar5,0);
           cVar4 = FUN_180295d70(param_3,uVar5,0);
-          uVar3 = DAT_181dc26d0;
-          uVar5 = DAT_181dc0e10;
+          uVar3 = DAT_181dc26e8;
+          uVar5 = DAT_181dc0e28;
           if (!cVar4) {
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             cVar4 = FUN_180295d70(param_3,uVar5,0);
-            uVar3 = DAT_181dc26d0;
-            uVar5 = DAT_181db7708;
+            uVar3 = DAT_181dc26e8;
+            uVar5 = DAT_181db7720;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(param_3,uVar5,0);
-              uVar5 = DAT_181dc26d0;
+              uVar5 = DAT_181dc26e8;
               if (cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(value,uVar5,0);
-                uVar5 = DAT_181dc0e10;
+                uVar5 = DAT_181dc0e28;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(value,uVar5,0);
-                  uVar5 = DAT_181dbc1b8;
+                  uVar5 = DAT_181dbc1d0;
                   if (!cVar4) {
                     uVar5 = Type.GetTypeFromHandle(uVar5,0);
                     cVar4 = FUN_180295d70(value,uVar5,0);
-                    if (!cVar4) goto LAB_180b12391;
+                    if (!cVar4) goto LAB_180b12a51;
                     plVar10 = (int64 *)*this;
                     if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181d80418);
+                      FUN_1800d6070(plVar10,DAT_181d80430);
                     }
                     piVar6 = (int *)il2cpp_object_unbox();
                     local_60 = (double)*piVar6;
@@ -667,20 +667,20 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181da22d8);
+                      FUN_1800d6070(plVar10,DAT_181da22f0);
                     }
                     pfVar8 = (float *)il2cpp_object_unbox();
                     local_60 = (double)*pfVar8;
                   }
                   pdVar9 = &local_60;
-                  lVar7 = DAT_181dc20a0;
-                  goto LAB_180b1237e;
+                  lVar7 = DAT_181dc20b8;
+                  goto LAB_180b12a3e;
                 }
                 plVar2 = (int64 *)*this;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -691,31 +691,31 @@ public class PropertyReference
                 cVar4 = Double.TryParse(plVar10,local_58,0);
                 if (cVar4) {
                   local_60 = local_58[0];
-                  lVar7 = il2cpp_value_box(DAT_181dc20a0,&local_60);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181dc20b8,&local_60);
+                  goto LAB_180b12f02;
                 }
               }
             }
             else {
               uVar5 = Type.GetTypeFromHandle(uVar3,0);
               cVar4 = FUN_180295d70(value,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (!cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(value,uVar5,0);
-                uVar5 = DAT_181dbc1b8;
+                uVar5 = DAT_181dbc1d0;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(value,uVar5,0);
-                  if (!cVar4) goto LAB_180b12391;
+                  if (!cVar4) goto LAB_180b12a51;
                   plVar10 = (int64 *)*this;
                   if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181d80418);
+                    FUN_1800d6070(plVar10,DAT_181d80430);
                   }
                   piVar6 = (int *)il2cpp_object_unbox();
                   local_68[0] = (float)*piVar6;
@@ -726,16 +726,16 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181dc20a0);
+                    FUN_1800d6070(plVar10,DAT_181dc20b8);
                   }
                   pdVar9 = (double *)il2cpp_object_unbox();
                   local_68[0] = (float)*pdVar9;
                 }
                 pdVar9 = (double *)local_68;
-                lVar7 = DAT_181da22d8;
-        LAB_180b1237e:
+                lVar7 = DAT_181da22f0;
+        LAB_180b12a3e:
                 lVar7 = il2cpp_value_box(lVar7,pdVar9);
                 *this = lVar7;
                 il2cpp_internal(this,lVar7);
@@ -743,7 +743,7 @@ public class PropertyReference
               else {
                 plVar2 = (int64 *)*this;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -754,8 +754,8 @@ public class PropertyReference
                 cVar4 = Single.TryParse(plVar10,local_res10,0);
                 if (cVar4) {
                   local_68[0] = local_res10[0];
-                  lVar7 = il2cpp_value_box(DAT_181da22d8,local_68);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181da22f0,local_68);
+                  goto LAB_180b12f02;
                 }
               }
             }
@@ -763,26 +763,26 @@ public class PropertyReference
           else {
             uVar5 = Type.GetTypeFromHandle(uVar3,0);
             cVar4 = FUN_180295d70(value,uVar5,0);
-            uVar5 = DAT_181dc0e10;
+            uVar5 = DAT_181dc0e28;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(value,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (cVar4) {
                 plVar10 = (int64 *)*this;
                 if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181da22d8);
+                  FUN_1800d6070(plVar10,DAT_181da22f0);
                 }
                 il2cpp_object_unbox();
                 local_68[0] = (float)Mathf.RoundToInt();
-        LAB_180b1280f:
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
-                goto LAB_180b12842;
+        LAB_180b12ecf:
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
+                goto LAB_180b12f02;
               }
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(value,uVar5,0);
@@ -792,9 +792,9 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181dc20a0);
+                  FUN_1800d6070(plVar10,DAT_181dc20b8);
                 }
                 pdVar9 = (double *)il2cpp_object_unbox(plVar10);
                 dVar1 = *pdVar9;
@@ -818,7 +818,7 @@ public class PropertyReference
                   local_60 = floor(dVar1 + 0.5);
                 }
                 local_68[0] = (float)(int)local_60;
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
                 *this = lVar7;
                 il2cpp_internal(this,lVar7);
               }
@@ -826,7 +826,7 @@ public class PropertyReference
             else {
               plVar2 = (int64 *)*this;
               if (plVar2 != (int64 *)0) {
-                if (*plVar2 == DAT_181da7690) {
+                if (*plVar2 == DAT_181da76a8) {
                   plVar10 = plVar2;
                 }
                 if (plVar10 == (int64 *)0) {
@@ -836,10 +836,10 @@ public class PropertyReference
               }
               cVar4 = Int32.TryParse(plVar10,local_res18,0);
               local_68[0] = local_res18[0];
-              if (cVar4) goto LAB_180b1280f;
+              if (cVar4) goto LAB_180b12ecf;
             }
           }
-        LAB_180b12391:
+        LAB_180b12a51:
           uVar5 = 0;
         }
         else {
@@ -847,7 +847,7 @@ public class PropertyReference
           if (plVar2 != (int64 *)0) {
             lVar7 = (**(code **)(*plVar2 + 0x168))(plVar2,*(uint64 *)(*plVar2 + 0x170));
           }
-        LAB_180b12842:
+        LAB_180b12f02:
           *this = lVar7;
           il2cpp_internal(this,lVar7);
           uVar5 = 1;
@@ -856,7 +856,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000456
-    // RVA   : 0xB12AB0   Offset: 0xB11EB0   Length: 0x71
+    // RVA   : 0xB13170   Offset: 0xB12570   Length: 0x71
     public static bool Convert(Type from, Type to)
     {
         double dVar1;
@@ -879,49 +879,49 @@ public class PropertyReference
           FUN_1800d6620();
         }
         cVar4 = (**(code **)(*param_3 + 0x868))(param_3,to,*(uint64 *)(*param_3 + 0x870));
-        uVar5 = DAT_181dc26d0;
+        uVar5 = DAT_181dc26e8;
         if (cVar4) {
           return true;
         }
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         cVar4 = FUN_180295d70(param_3,uVar5,0);
-        uVar5 = DAT_181dbc1b8;
+        uVar5 = DAT_181dbc1d0;
         plVar2 = (int64 *)*from;
         if (!cVar4) {
-          if (plVar2 == (int64 *)0) goto LAB_180b12391;
+          if (plVar2 == (int64 *)0) goto LAB_180b12a51;
           uVar5 = Type.GetTypeFromHandle(uVar5,0);
           cVar4 = FUN_180295d70(param_3,uVar5,0);
-          uVar3 = DAT_181dc26d0;
-          uVar5 = DAT_181dc0e10;
+          uVar3 = DAT_181dc26e8;
+          uVar5 = DAT_181dc0e28;
           if (!cVar4) {
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             cVar4 = FUN_180295d70(param_3,uVar5,0);
-            uVar3 = DAT_181dc26d0;
-            uVar5 = DAT_181db7708;
+            uVar3 = DAT_181dc26e8;
+            uVar5 = DAT_181db7720;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(param_3,uVar5,0);
-              uVar5 = DAT_181dc26d0;
+              uVar5 = DAT_181dc26e8;
               if (cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(to,uVar5,0);
-                uVar5 = DAT_181dc0e10;
+                uVar5 = DAT_181dc0e28;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(to,uVar5,0);
-                  uVar5 = DAT_181dbc1b8;
+                  uVar5 = DAT_181dbc1d0;
                   if (!cVar4) {
                     uVar5 = Type.GetTypeFromHandle(uVar5,0);
                     cVar4 = FUN_180295d70(to,uVar5,0);
-                    if (!cVar4) goto LAB_180b12391;
+                    if (!cVar4) goto LAB_180b12a51;
                     plVar10 = (int64 *)*from;
                     if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181d80418);
+                      FUN_1800d6070(plVar10,DAT_181d80430);
                     }
                     piVar6 = (int *)il2cpp_object_unbox();
                     local_60 = (double)*piVar6;
@@ -932,20 +932,20 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181da22d8);
+                      FUN_1800d6070(plVar10,DAT_181da22f0);
                     }
                     pfVar8 = (float *)il2cpp_object_unbox();
                     local_60 = (double)*pfVar8;
                   }
                   pdVar9 = &local_60;
-                  lVar7 = DAT_181dc20a0;
-                  goto LAB_180b1237e;
+                  lVar7 = DAT_181dc20b8;
+                  goto LAB_180b12a3e;
                 }
                 plVar2 = (int64 *)*from;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -956,31 +956,31 @@ public class PropertyReference
                 cVar4 = Double.TryParse(plVar10,local_58,0);
                 if (cVar4) {
                   local_60 = local_58[0];
-                  lVar7 = il2cpp_value_box(DAT_181dc20a0,&local_60);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181dc20b8,&local_60);
+                  goto LAB_180b12f02;
                 }
               }
             }
             else {
               uVar5 = Type.GetTypeFromHandle(uVar3,0);
               cVar4 = FUN_180295d70(to,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (!cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(to,uVar5,0);
-                uVar5 = DAT_181dbc1b8;
+                uVar5 = DAT_181dbc1d0;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(to,uVar5,0);
-                  if (!cVar4) goto LAB_180b12391;
+                  if (!cVar4) goto LAB_180b12a51;
                   plVar10 = (int64 *)*from;
                   if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181d80418);
+                    FUN_1800d6070(plVar10,DAT_181d80430);
                   }
                   piVar6 = (int *)il2cpp_object_unbox();
                   local_68[0] = (float)*piVar6;
@@ -991,16 +991,16 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181dc20a0);
+                    FUN_1800d6070(plVar10,DAT_181dc20b8);
                   }
                   pdVar9 = (double *)il2cpp_object_unbox();
                   local_68[0] = (float)*pdVar9;
                 }
                 pdVar9 = (double *)local_68;
-                lVar7 = DAT_181da22d8;
-        LAB_180b1237e:
+                lVar7 = DAT_181da22f0;
+        LAB_180b12a3e:
                 lVar7 = il2cpp_value_box(lVar7,pdVar9);
                 *from = lVar7;
                 il2cpp_internal(from,lVar7);
@@ -1008,7 +1008,7 @@ public class PropertyReference
               else {
                 plVar2 = (int64 *)*from;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -1019,8 +1019,8 @@ public class PropertyReference
                 cVar4 = Single.TryParse(plVar10,local_res10,0);
                 if (cVar4) {
                   local_68[0] = local_res10[0];
-                  lVar7 = il2cpp_value_box(DAT_181da22d8,local_68);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181da22f0,local_68);
+                  goto LAB_180b12f02;
                 }
               }
             }
@@ -1028,26 +1028,26 @@ public class PropertyReference
           else {
             uVar5 = Type.GetTypeFromHandle(uVar3,0);
             cVar4 = FUN_180295d70(to,uVar5,0);
-            uVar5 = DAT_181dc0e10;
+            uVar5 = DAT_181dc0e28;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(to,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (cVar4) {
                 plVar10 = (int64 *)*from;
                 if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181da22d8);
+                  FUN_1800d6070(plVar10,DAT_181da22f0);
                 }
                 il2cpp_object_unbox();
                 local_68[0] = (float)Mathf.RoundToInt();
-        LAB_180b1280f:
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
-                goto LAB_180b12842;
+        LAB_180b12ecf:
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
+                goto LAB_180b12f02;
               }
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(to,uVar5,0);
@@ -1057,9 +1057,9 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181dc20a0);
+                  FUN_1800d6070(plVar10,DAT_181dc20b8);
                 }
                 pdVar9 = (double *)il2cpp_object_unbox(plVar10);
                 dVar1 = *pdVar9;
@@ -1083,7 +1083,7 @@ public class PropertyReference
                   local_60 = floor(dVar1 + 0.5);
                 }
                 local_68[0] = (float)(int)local_60;
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
                 *from = lVar7;
                 il2cpp_internal(from,lVar7);
               }
@@ -1091,7 +1091,7 @@ public class PropertyReference
             else {
               plVar2 = (int64 *)*from;
               if (plVar2 != (int64 *)0) {
-                if (*plVar2 == DAT_181da7690) {
+                if (*plVar2 == DAT_181da76a8) {
                   plVar10 = plVar2;
                 }
                 if (plVar10 == (int64 *)0) {
@@ -1101,10 +1101,10 @@ public class PropertyReference
               }
               cVar4 = Int32.TryParse(plVar10,local_res18,0);
               local_68[0] = local_res18[0];
-              if (cVar4) goto LAB_180b1280f;
+              if (cVar4) goto LAB_180b12ecf;
             }
           }
-        LAB_180b12391:
+        LAB_180b12a51:
           uVar5 = 0;
         }
         else {
@@ -1112,7 +1112,7 @@ public class PropertyReference
           if (plVar2 != (int64 *)0) {
             lVar7 = (**(code **)(*plVar2 + 0x168))(plVar2,*(uint64 *)(*plVar2 + 0x170));
           }
-        LAB_180b12842:
+        LAB_180b12f02:
           *from = lVar7;
           il2cpp_internal(from,lVar7);
           uVar5 = 1;
@@ -1121,7 +1121,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000457
-    // RVA   : 0xB128F0   Offset: 0xB11CF0   Length: 0xBE
+    // RVA   : 0xB12FB0   Offset: 0xB123B0   Length: 0xBE
     public static bool Convert(object value, Type to)
     {
         double dVar1;
@@ -1144,49 +1144,49 @@ public class PropertyReference
           FUN_1800d6620();
         }
         cVar4 = (**(code **)(*param_3 + 0x868))(param_3,to,*(uint64 *)(*param_3 + 0x870));
-        uVar5 = DAT_181dc26d0;
+        uVar5 = DAT_181dc26e8;
         if (cVar4) {
           return true;
         }
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         cVar4 = FUN_180295d70(param_3,uVar5,0);
-        uVar5 = DAT_181dbc1b8;
+        uVar5 = DAT_181dbc1d0;
         plVar2 = (int64 *)*value;
         if (!cVar4) {
-          if (plVar2 == (int64 *)0) goto LAB_180b12391;
+          if (plVar2 == (int64 *)0) goto LAB_180b12a51;
           uVar5 = Type.GetTypeFromHandle(uVar5,0);
           cVar4 = FUN_180295d70(param_3,uVar5,0);
-          uVar3 = DAT_181dc26d0;
-          uVar5 = DAT_181dc0e10;
+          uVar3 = DAT_181dc26e8;
+          uVar5 = DAT_181dc0e28;
           if (!cVar4) {
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             cVar4 = FUN_180295d70(param_3,uVar5,0);
-            uVar3 = DAT_181dc26d0;
-            uVar5 = DAT_181db7708;
+            uVar3 = DAT_181dc26e8;
+            uVar5 = DAT_181db7720;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(param_3,uVar5,0);
-              uVar5 = DAT_181dc26d0;
+              uVar5 = DAT_181dc26e8;
               if (cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(to,uVar5,0);
-                uVar5 = DAT_181dc0e10;
+                uVar5 = DAT_181dc0e28;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(to,uVar5,0);
-                  uVar5 = DAT_181dbc1b8;
+                  uVar5 = DAT_181dbc1d0;
                   if (!cVar4) {
                     uVar5 = Type.GetTypeFromHandle(uVar5,0);
                     cVar4 = FUN_180295d70(to,uVar5,0);
-                    if (!cVar4) goto LAB_180b12391;
+                    if (!cVar4) goto LAB_180b12a51;
                     plVar10 = (int64 *)*value;
                     if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181d80418);
+                      FUN_1800d6070(plVar10,DAT_181d80430);
                     }
                     piVar6 = (int *)il2cpp_object_unbox();
                     local_60 = (double)*piVar6;
@@ -1197,20 +1197,20 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181da22d8);
+                      FUN_1800d6070(plVar10,DAT_181da22f0);
                     }
                     pfVar8 = (float *)il2cpp_object_unbox();
                     local_60 = (double)*pfVar8;
                   }
                   pdVar9 = &local_60;
-                  lVar7 = DAT_181dc20a0;
-                  goto LAB_180b1237e;
+                  lVar7 = DAT_181dc20b8;
+                  goto LAB_180b12a3e;
                 }
                 plVar2 = (int64 *)*value;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -1221,31 +1221,31 @@ public class PropertyReference
                 cVar4 = Double.TryParse(plVar10,local_58,0);
                 if (cVar4) {
                   local_60 = local_58[0];
-                  lVar7 = il2cpp_value_box(DAT_181dc20a0,&local_60);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181dc20b8,&local_60);
+                  goto LAB_180b12f02;
                 }
               }
             }
             else {
               uVar5 = Type.GetTypeFromHandle(uVar3,0);
               cVar4 = FUN_180295d70(to,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (!cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(to,uVar5,0);
-                uVar5 = DAT_181dbc1b8;
+                uVar5 = DAT_181dbc1d0;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(to,uVar5,0);
-                  if (!cVar4) goto LAB_180b12391;
+                  if (!cVar4) goto LAB_180b12a51;
                   plVar10 = (int64 *)*value;
                   if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181d80418);
+                    FUN_1800d6070(plVar10,DAT_181d80430);
                   }
                   piVar6 = (int *)il2cpp_object_unbox();
                   local_68[0] = (float)*piVar6;
@@ -1256,16 +1256,16 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181dc20a0);
+                    FUN_1800d6070(plVar10,DAT_181dc20b8);
                   }
                   pdVar9 = (double *)il2cpp_object_unbox();
                   local_68[0] = (float)*pdVar9;
                 }
                 pdVar9 = (double *)local_68;
-                lVar7 = DAT_181da22d8;
-        LAB_180b1237e:
+                lVar7 = DAT_181da22f0;
+        LAB_180b12a3e:
                 lVar7 = il2cpp_value_box(lVar7,pdVar9);
                 *value = lVar7;
                 il2cpp_internal(value,lVar7);
@@ -1273,7 +1273,7 @@ public class PropertyReference
               else {
                 plVar2 = (int64 *)*value;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -1284,8 +1284,8 @@ public class PropertyReference
                 cVar4 = Single.TryParse(plVar10,local_res10,0);
                 if (cVar4) {
                   local_68[0] = local_res10[0];
-                  lVar7 = il2cpp_value_box(DAT_181da22d8,local_68);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181da22f0,local_68);
+                  goto LAB_180b12f02;
                 }
               }
             }
@@ -1293,26 +1293,26 @@ public class PropertyReference
           else {
             uVar5 = Type.GetTypeFromHandle(uVar3,0);
             cVar4 = FUN_180295d70(to,uVar5,0);
-            uVar5 = DAT_181dc0e10;
+            uVar5 = DAT_181dc0e28;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(to,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (cVar4) {
                 plVar10 = (int64 *)*value;
                 if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181da22d8);
+                  FUN_1800d6070(plVar10,DAT_181da22f0);
                 }
                 il2cpp_object_unbox();
                 local_68[0] = (float)Mathf.RoundToInt();
-        LAB_180b1280f:
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
-                goto LAB_180b12842;
+        LAB_180b12ecf:
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
+                goto LAB_180b12f02;
               }
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(to,uVar5,0);
@@ -1322,9 +1322,9 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181dc20a0);
+                  FUN_1800d6070(plVar10,DAT_181dc20b8);
                 }
                 pdVar9 = (double *)il2cpp_object_unbox(plVar10);
                 dVar1 = *pdVar9;
@@ -1348,7 +1348,7 @@ public class PropertyReference
                   local_60 = floor(dVar1 + 0.5);
                 }
                 local_68[0] = (float)(int)local_60;
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
                 *value = lVar7;
                 il2cpp_internal(value,lVar7);
               }
@@ -1356,7 +1356,7 @@ public class PropertyReference
             else {
               plVar2 = (int64 *)*value;
               if (plVar2 != (int64 *)0) {
-                if (*plVar2 == DAT_181da7690) {
+                if (*plVar2 == DAT_181da76a8) {
                   plVar10 = plVar2;
                 }
                 if (plVar10 == (int64 *)0) {
@@ -1366,10 +1366,10 @@ public class PropertyReference
               }
               cVar4 = Int32.TryParse(plVar10,local_res18,0);
               local_68[0] = local_res18[0];
-              if (cVar4) goto LAB_180b1280f;
+              if (cVar4) goto LAB_180b12ecf;
             }
           }
-        LAB_180b12391:
+        LAB_180b12a51:
           uVar5 = 0;
         }
         else {
@@ -1377,7 +1377,7 @@ public class PropertyReference
           if (plVar2 != (int64 *)0) {
             lVar7 = (**(code **)(*plVar2 + 0x168))(plVar2,*(uint64 *)(*plVar2 + 0x170));
           }
-        LAB_180b12842:
+        LAB_180b12f02:
           *value = lVar7;
           il2cpp_internal(value,lVar7);
           uVar5 = 1;
@@ -1386,7 +1386,7 @@ public class PropertyReference
     }
 
     // Token : 0x6000458
-    // RVA   : 0xB12060   Offset: 0xB11460   Length: 0x881
+    // RVA   : 0xB12720   Offset: 0xB11B20   Length: 0x881
     public static bool Convert(ref object value, Type from, Type to)
     {
         double dVar1;
@@ -1409,49 +1409,49 @@ public class PropertyReference
           FUN_1800d6620();
         }
         cVar4 = (**(code **)(*to + 0x868))(to,from,*(uint64 *)(*to + 0x870));
-        uVar5 = DAT_181dc26d0;
+        uVar5 = DAT_181dc26e8;
         if (cVar4) {
           return true;
         }
         uVar5 = Type.GetTypeFromHandle(uVar5,0);
         cVar4 = FUN_180295d70(to,uVar5,0);
-        uVar5 = DAT_181dbc1b8;
+        uVar5 = DAT_181dbc1d0;
         plVar2 = (int64 *)*value;
         if (!cVar4) {
-          if (plVar2 == (int64 *)0) goto LAB_180b12391;
+          if (plVar2 == (int64 *)0) goto LAB_180b12a51;
           uVar5 = Type.GetTypeFromHandle(uVar5,0);
           cVar4 = FUN_180295d70(to,uVar5,0);
-          uVar3 = DAT_181dc26d0;
-          uVar5 = DAT_181dc0e10;
+          uVar3 = DAT_181dc26e8;
+          uVar5 = DAT_181dc0e28;
           if (!cVar4) {
             uVar5 = Type.GetTypeFromHandle(uVar5,0);
             cVar4 = FUN_180295d70(to,uVar5,0);
-            uVar3 = DAT_181dc26d0;
-            uVar5 = DAT_181db7708;
+            uVar3 = DAT_181dc26e8;
+            uVar5 = DAT_181db7720;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(to,uVar5,0);
-              uVar5 = DAT_181dc26d0;
+              uVar5 = DAT_181dc26e8;
               if (cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(from,uVar5,0);
-                uVar5 = DAT_181dc0e10;
+                uVar5 = DAT_181dc0e28;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(from,uVar5,0);
-                  uVar5 = DAT_181dbc1b8;
+                  uVar5 = DAT_181dbc1d0;
                   if (!cVar4) {
                     uVar5 = Type.GetTypeFromHandle(uVar5,0);
                     cVar4 = FUN_180295d70(from,uVar5,0);
-                    if (!cVar4) goto LAB_180b12391;
+                    if (!cVar4) goto LAB_180b12a51;
                     plVar10 = (int64 *)*value;
                     if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181d80418);
+                      FUN_1800d6070(plVar10,DAT_181d80430);
                     }
                     piVar6 = (int *)il2cpp_object_unbox();
                     local_60 = (double)*piVar6;
@@ -1462,20 +1462,20 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                    if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6070(plVar10,DAT_181da22d8);
+                      FUN_1800d6070(plVar10,DAT_181da22f0);
                     }
                     pfVar8 = (float *)il2cpp_object_unbox();
                     local_60 = (double)*pfVar8;
                   }
                   pdVar9 = &local_60;
-                  lVar7 = DAT_181dc20a0;
-                  goto LAB_180b1237e;
+                  lVar7 = DAT_181dc20b8;
+                  goto LAB_180b12a3e;
                 }
                 plVar2 = (int64 *)*value;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -1486,31 +1486,31 @@ public class PropertyReference
                 cVar4 = Double.TryParse(plVar10,local_58,0);
                 if (cVar4) {
                   local_60 = local_58[0];
-                  lVar7 = il2cpp_value_box(DAT_181dc20a0,&local_60);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181dc20b8,&local_60);
+                  goto LAB_180b12f02;
                 }
               }
             }
             else {
               uVar5 = Type.GetTypeFromHandle(uVar3,0);
               cVar4 = FUN_180295d70(from,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (!cVar4) {
                 uVar5 = Type.GetTypeFromHandle(uVar5,0);
                 cVar4 = FUN_180295d70(from,uVar5,0);
-                uVar5 = DAT_181dbc1b8;
+                uVar5 = DAT_181dbc1d0;
                 if (!cVar4) {
                   uVar5 = Type.GetTypeFromHandle(uVar5,0);
                   cVar4 = FUN_180295d70(from,uVar5,0);
-                  if (!cVar4) goto LAB_180b12391;
+                  if (!cVar4) goto LAB_180b12a51;
                   plVar10 = (int64 *)*value;
                   if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181d80418);
+                    FUN_1800d6070(plVar10,DAT_181d80430);
                   }
                   piVar6 = (int *)il2cpp_object_unbox();
                   local_68[0] = (float)*piVar6;
@@ -1521,16 +1521,16 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                  if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar10,DAT_181dc20a0);
+                    FUN_1800d6070(plVar10,DAT_181dc20b8);
                   }
                   pdVar9 = (double *)il2cpp_object_unbox();
                   local_68[0] = (float)*pdVar9;
                 }
                 pdVar9 = (double *)local_68;
-                lVar7 = DAT_181da22d8;
-        LAB_180b1237e:
+                lVar7 = DAT_181da22f0;
+        LAB_180b12a3e:
                 lVar7 = il2cpp_value_box(lVar7,pdVar9);
                 *value = lVar7;
                 il2cpp_internal(value,lVar7);
@@ -1538,7 +1538,7 @@ public class PropertyReference
               else {
                 plVar2 = (int64 *)*value;
                 if (plVar2 != (int64 *)0) {
-                  if (*plVar2 == DAT_181da7690) {
+                  if (*plVar2 == DAT_181da76a8) {
                     plVar10 = plVar2;
                   }
                   if (plVar10 == (int64 *)0) {
@@ -1549,8 +1549,8 @@ public class PropertyReference
                 cVar4 = Single.TryParse(plVar10,local_res10,0);
                 if (cVar4) {
                   local_68[0] = local_res10[0];
-                  lVar7 = il2cpp_value_box(DAT_181da22d8,local_68);
-                  goto LAB_180b12842;
+                  lVar7 = il2cpp_value_box(DAT_181da22f0,local_68);
+                  goto LAB_180b12f02;
                 }
               }
             }
@@ -1558,26 +1558,26 @@ public class PropertyReference
           else {
             uVar5 = Type.GetTypeFromHandle(uVar3,0);
             cVar4 = FUN_180295d70(from,uVar5,0);
-            uVar5 = DAT_181dc0e10;
+            uVar5 = DAT_181dc0e28;
             if (!cVar4) {
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(from,uVar5,0);
-              uVar5 = DAT_181db7708;
+              uVar5 = DAT_181db7720;
               if (cVar4) {
                 plVar10 = (int64 *)*value;
                 if (plVar10 == (int64 *)0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22d8 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181da22f0 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181da22d8);
+                  FUN_1800d6070(plVar10,DAT_181da22f0);
                 }
                 il2cpp_object_unbox();
                 local_68[0] = (float)Mathf.RoundToInt();
-        LAB_180b1280f:
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
-                goto LAB_180b12842;
+        LAB_180b12ecf:
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
+                goto LAB_180b12f02;
               }
               uVar5 = Type.GetTypeFromHandle(uVar5,0);
               cVar4 = FUN_180295d70(from,uVar5,0);
@@ -1587,9 +1587,9 @@ public class PropertyReference
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20a0 + 64)) {
+                if (*(int64 *)(*plVar10 + 64) != *(int64 *)(DAT_181dc20b8 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar10,DAT_181dc20a0);
+                  FUN_1800d6070(plVar10,DAT_181dc20b8);
                 }
                 pdVar9 = (double *)il2cpp_object_unbox(plVar10);
                 dVar1 = *pdVar9;
@@ -1613,7 +1613,7 @@ public class PropertyReference
                   local_60 = floor(dVar1 + 0.5);
                 }
                 local_68[0] = (float)(int)local_60;
-                lVar7 = il2cpp_value_box(DAT_181d80418,local_68);
+                lVar7 = il2cpp_value_box(DAT_181d80430,local_68);
                 *value = lVar7;
                 il2cpp_internal(value,lVar7);
               }
@@ -1621,7 +1621,7 @@ public class PropertyReference
             else {
               plVar2 = (int64 *)*value;
               if (plVar2 != (int64 *)0) {
-                if (*plVar2 == DAT_181da7690) {
+                if (*plVar2 == DAT_181da76a8) {
                   plVar10 = plVar2;
                 }
                 if (plVar10 == (int64 *)0) {
@@ -1631,10 +1631,10 @@ public class PropertyReference
               }
               cVar4 = Int32.TryParse(plVar10,local_res18,0);
               local_68[0] = local_res18[0];
-              if (cVar4) goto LAB_180b1280f;
+              if (cVar4) goto LAB_180b12ecf;
             }
           }
-        LAB_180b12391:
+        LAB_180b12a51:
           uVar5 = 0;
         }
         else {
@@ -1642,7 +1642,7 @@ public class PropertyReference
           if (plVar2 != (int64 *)0) {
             lVar7 = (**(code **)(*plVar2 + 0x168))(plVar2,*(uint64 *)(*plVar2 + 0x170));
           }
-        LAB_180b12842:
+        LAB_180b12f02:
           *value = lVar7;
           il2cpp_internal(value,lVar7);
           uVar5 = 1;
@@ -1651,14 +1651,14 @@ public class PropertyReference
     }
 
     // Token : 0x6000459
-    // RVA   : 0xB13560   Offset: 0xB12960   Length: 0x62
+    // RVA   : 0xB13C20   Offset: 0xB13020   Length: 0x62
     private static void /*cctor*/()
     {
         uint uVar1;
         if ("PropertyBinding" != (int64 *)0) {
           uVar1 = (**(code **)(*"PropertyBinding" + 0x158))
                             ("PropertyBinding",*(uint64 *)(*"PropertyBinding" + 0x160));
-          **(uint32 **)(DAT_181d93288 + 184) = uVar1;
+          **(uint32 **)(DAT_181d93298 + 184) = uVar1;
           return;
         }
     }

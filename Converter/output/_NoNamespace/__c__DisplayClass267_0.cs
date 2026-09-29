@@ -18,7 +18,7 @@ public class <>c__DisplayClass267_0
     }
 
     // Token : 0x6001750
-    // RVA   : 0x937CD0   Offset: 0x9370D0   Length: 0x56
+    // RVA   : 0x938360   Offset: 0x937760   Length: 0x56
     internal void <GenerateFlyIcon>b__0()
     {
         ulong uVar1;

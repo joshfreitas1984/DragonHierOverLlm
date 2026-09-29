@@ -17,13 +17,13 @@ public class InvStat
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600005A
-    // RVA   : 0xC9D090   Offset: 0xC9C490   Length: 0x75
+    // RVA   : 0xC9D6A0   Offset: 0xC9CAA0   Length: 0x75
     public static string GetName(Identifier i)
     {
         ulong uVar2;
         uint[] local_res8 = new uint[2];
         local_res8[0] = i;
-        plVar1 = (int64 *)il2cpp_value_box(DAT_181d7afa8,local_res8);
+        plVar1 = (int64 *)il2cpp_value_box(DAT_181d7afc0,local_res8);
         if (plVar1 != (int64 *)0) {
           uVar2 = (**(code **)(*plVar1 + 0x168))(plVar1,*(uint64 *)(*plVar1 + 0x170));
           il2cpp_object_unbox(plVar1);
@@ -32,7 +32,7 @@ public class InvStat
     }
 
     // Token : 0x600005B
-    // RVA   : 0xC9CF40   Offset: 0xC9C340   Length: 0x98
+    // RVA   : 0xC9D550   Offset: 0xC9C950   Length: 0x98
     public static string GetDescription(Identifier i)
     {
         switch(i) {
@@ -60,7 +60,7 @@ public class InvStat
     }
 
     // Token : 0x600005C
-    // RVA   : 0xC9CDC0   Offset: 0xC9C1C0   Length: 0xB1
+    // RVA   : 0xC9D3D0   Offset: 0xC9C7D0   Length: 0xB1
     public static int CompareArmor(InvStat a, InvStat b)
     {
         int iVar1;
@@ -107,7 +107,7 @@ public class InvStat
     }
 
     // Token : 0x600005D
-    // RVA   : 0xC9CE80   Offset: 0xC9C280   Length: 0xB1
+    // RVA   : 0xC9D490   Offset: 0xC9C890   Length: 0xB1
     public static int CompareWeapon(InvStat a, InvStat b)
     {
         int iVar1;

@@ -35,29 +35,29 @@ public class ForceAttackAreaResultController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001496
-    // RVA   : 0xB30D80   Offset: 0xB30180   Length: 0x36
+    // RVA   : 0xB31440   Offset: 0xB30840   Length: 0x36
     public static ForceAttackAreaResultController get_Instance()
     {
-        return **(uint64 **)(DAT_181dc7bf0 + 184);
+        return **(uint64 **)(DAT_181dc7c08 + 184);
     }
 
     // Token : 0x6001497
-    // RVA   : 0xB2FFC0   Offset: 0xB2F3C0   Length: 0x99
+    // RVA   : 0xB30680   Offset: 0xB2FA80   Length: 0x99
     private void Awake()
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181dc7bf0 + 184);
+        uVar1 = **(uint64 **)(DAT_181dc7c08 + 184);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
-          puVar2 = *(uint64 **)(DAT_181dc7bf0 + 184);
+          puVar2 = *(uint64 **)(DAT_181dc7c08 + 184);
           *puVar2 = this;
           il2cpp_internal(puVar2,this);
         }
     }
 
     // Token : 0x6001498
-    // RVA   : 0xB30CE0   Offset: 0xB300E0   Length: 0x95
+    // RVA   : 0xB313A0   Offset: 0xB307A0   Length: 0x95
     private void Update()
     {
         bool cVar1;
@@ -65,11 +65,11 @@ public class ForceAttackAreaResultController
         if ((this.showing) && (!this.animing)) {
           cVar1 = Input.GetMouseButtonDown(0,0);
           if (cVar1) {
-            bVar3 = !DAT_181e9dd59;
+            bVar3 = !DAT_181e9dd5b;
             this.animing = 1;
             if (bVar3) {
-              il2cpp_runtime_class_init(&DAT_181d77458);
-              DAT_181e9dd59 = true;
+              il2cpp_runtime_class_init(&DAT_181d77470);
+              DAT_181e9dd5b = true;
             }
             lVar2 = new WarpText_d__8(0,0);
             if (lVar2 == null) {
@@ -77,13 +77,13 @@ public class ForceAttackAreaResultController
               FUN_1800d6620();
             }
             *(int64 *)(lVar2 + 32) = this;
-            FUN_180d8c2e0(this,lVar2,0);
+            FUN_180d8c8f0(this,lVar2,0);
           }
         }
     }
 
     // Token : 0x6001499
-    // RVA   : 0xB30060   Offset: 0xB2F460   Length: 0x6C
+    // RVA   : 0xB30720   Offset: 0xB2FB20   Length: 0x6C
     public IEnumerator ManageForceAttackReduceDefence()
     {
         long lVar1;
@@ -95,7 +95,7 @@ public class ForceAttackAreaResultController
     }
 
     // Token : 0x600149A
-    // RVA   : 0xB300D0   Offset: 0xB2F4D0   Length: 0x493
+    // RVA   : 0xB30790   Offset: 0xB2FB90   Length: 0x493
     public void RefreshUI()
     {
         uint uVar1;
@@ -108,7 +108,7 @@ public class ForceAttackAreaResultController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"Support",0);
             if (lVar2 != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
               if (this.targetArea != null) {
                 uVar1 = this.targetArea.support;
                 GlobalData.DoTweenTextValue(uVar3,uVar1,0x3e4ccccd,0);
@@ -117,7 +117,7 @@ public class ForceAttackAreaResultController
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Safe",0);
                     if (lVar2 != null) {
-                      uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                       if (this.targetArea != null) {
                         GlobalData.DoTweenTextValue
                                   (uVar3,this.targetArea.safe,0x3e4ccccd,
@@ -127,7 +127,7 @@ public class ForceAttackAreaResultController
                           if (lVar2 != null) {
                             lVar2 = Transform.Find(lVar2,"DefenceText",0);
                             if (lVar2 != null) {
-                              uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                               if (this.targetArea != null) {
                                 GlobalData.DoTweenTextValue
                                           (uVar3,this.targetArea.defence,
@@ -137,7 +137,7 @@ public class ForceAttackAreaResultController
                                   if (lVar2 != null) {
                                     lVar2 = Transform.Find(lVar2,"LeftFightScore",0);
                                     if (lVar2 != null) {
-                                      uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                                      uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                                       GlobalData.DoTweenTextValue
                                                 (uVar3,this.deltaFightScore,0x3e4ccccd,0);
                                       if (this.forceAttackAreaResultUIPanel != null) {
@@ -146,7 +146,7 @@ public class ForceAttackAreaResultController
                                         if (lVar2 != null) {
                                           lVar2 = Transform.Find(lVar2,"DefenceBar",0);
                                           if (lVar2 != null) {
-                                            lVar2 = Component.GetComponent(lVar2,DAT_181d94460);
+                                            lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
                                             if ((this.targetArea != null) && (lVar2 != null)) {
                                               Image.set_fillAmount
                                                         (lVar2,*(float *)(this.targetArea +
@@ -157,7 +157,7 @@ public class ForceAttackAreaResultController
                                                 if (lVar2 != null) {
                                                   lVar2 = Transform.Find(lVar2,"SupportDefenceRate",0);
                                                   if (lVar2 != null) {
-                                                    uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                                                    uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                                                     if (this.targetArea != null) {
                                                       local_res8[0] =
                                                            *(float *)(*(int64 *)(DAT_181d73d40 + 184)
@@ -176,7 +176,7 @@ public class ForceAttackAreaResultController
                                                           lVar2 = Transform.Find(lVar2,"SafeDefenceRate",0);
                                                           if (lVar2 != null) {
                                                             uVar3 = Component.GetComponent
-                                                                              (lVar2,DAT_181d96160);
+                                                                              (lVar2,DAT_181d96178);
                                                             if (this.targetArea != null) {
                                                               local_res8[0] =
                                                                    *(float *)(*(int64 *)
@@ -220,10 +220,10 @@ public class ForceAttackAreaResultController
     }
 
     // Token : 0x600149B
-    // RVA   : 0xB30570   Offset: 0xB2F970   Length: 0x46D
+    // RVA   : 0xB30C30   Offset: 0xB30030   Length: 0x46D
     public void ShowForceAttackAreaResultUI(ForceData _attackForce, ForceData _defenceForce, AreaData _targetArea, float _deltaFightScore)
     {
-        var pStatics = *(int64*)(DAT_181dab490 + 184);
+        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
         void ForceAttackAreaResultController.ShowForceAttackAreaResultUI
                      (int64 this,uint64 _attackForce,uint64 _defenceForce,uint64 _targetArea,
                      uint32 _deltaFightScore)
@@ -242,7 +242,7 @@ public class ForceAttackAreaResultController
           if (lVar3 != null) {
             lVar3 = Transform.Find(lVar3,"AreaName",0);
             if (lVar3 != null) {
-              uVar1 = Component.GetComponent(lVar3,DAT_181d96160);
+              uVar1 = Component.GetComponent(lVar3,DAT_181d96178);
               if (this.targetArea != null) {
                 uVar4 = AreaData.GetAreaName(this.targetArea,0);
                 uVar4 = String.Concat(uVar4,"攻防战",0);
@@ -252,7 +252,7 @@ public class ForceAttackAreaResultController
                   if (lVar3 != null) {
                     lVar3 = Transform.Find(lVar3,"AreaIcon",0);
                     if (lVar3 != null) {
-                      lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
+                      lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
                       if ((this.targetArea != null) &&
                          (*pStatics != 0)) {
                         uVar1 = TextureController.LoadAtlasSprite
@@ -265,10 +265,10 @@ public class ForceAttackAreaResultController
                             if (lVar3 != null) {
                               lVar3 = Transform.Find(lVar3,"AttackForceName",0);
                               if (lVar3 != null) {
-                                uVar1 = Component.GetComponent(lVar3,DAT_181d96160);
+                                uVar1 = Component.GetComponent(lVar3,DAT_181d96178);
                                 lVar3 = this.attackForce;
                                 if (lVar3 != null) {
-                                  cVar2 = FUN_180d755b0(lVar3.forceSetName,0);
+                                  cVar2 = FUN_180d75bc0(lVar3.forceSetName,0);
                                   if (!cVar2) {
                                     uVar4 = lVar3.forceSetName;
                                   }
@@ -281,7 +281,7 @@ public class ForceAttackAreaResultController
                                     if (lVar3 != null) {
                                       lVar3 = Transform.Find(lVar3,"AttackForceIcon",0);
                                       if (lVar3 != null) {
-                                        lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
+                                        lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
                                         if (this.attackForce != null) {
                                           uVar1 = ForceData.GetForceIcon(this.attackForce,0)
                                           ;
@@ -293,10 +293,10 @@ public class ForceAttackAreaResultController
                                               if (lVar3 != null) {
                                                 lVar3 = Transform.Find(lVar3,"DefenceForceName",0);
                                                 if (lVar3 != null) {
-                                                  uVar1 = Component.GetComponent(lVar3,DAT_181d96160);
+                                                  uVar1 = Component.GetComponent(lVar3,DAT_181d96178);
                                                   lVar3 = this.defenceForce;
                                                   if (lVar3 != null) {
-                                                    cVar2 = FUN_180d755b0(lVar3.forceSetName,0
+                                                    cVar2 = FUN_180d75bc0(lVar3.forceSetName,0
                                                                          );
                                                     if (!cVar2) {
                                                       uVar4 = lVar3.forceSetName;
@@ -312,7 +312,7 @@ public class ForceAttackAreaResultController
                                                         lVar3 = Transform.Find(lVar3,"DefenceForceIcon",0);
                                                         if (lVar3 != null) {
                                                           lVar3 = Component.GetComponent
-                                                                            (lVar3,DAT_181d94460);
+                                                                            (lVar3,DAT_181d94478);
                                                           if (this.defenceForce != null) {
                                                             uVar1 = ForceData.GetForceIcon
                                                                               (*(int64 *)
@@ -357,7 +357,7 @@ public class ForceAttackAreaResultController
     }
 
     // Token : 0x600149C
-    // RVA   : 0xB309E0   Offset: 0xB2FDE0   Length: 0x2FE
+    // RVA   : 0xB310A0   Offset: 0xB304A0   Length: 0x2FE
     public void UnshowForceAttackAreaResultUI()
     {
         byte uVar1;
@@ -392,7 +392,7 @@ public class ForceAttackAreaResultController
                     uVar6 = 0;
                     uVar4 = this.defenceForce;
                     uVar7 = 1;
-        LAB_180b30c7c:
+        LAB_180b3133c:
                     PlotController.StartPlayerAttackAreaFightResultPlot
                               (lVar3,uVar4,uVar5,uVar6,uVar7,0,0);
                     return;
@@ -413,7 +413,7 @@ public class ForceAttackAreaResultController
                       uVar6 = 1;
                       uVar4 = this.attackForce;
                       uVar7 = 0;
-                      goto LAB_180b30c7c;
+                      goto LAB_180b3133c;
                     }
                   }
                 }

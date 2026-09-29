@@ -11,7 +11,7 @@ public class CheckPlayerAgeButtonController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000E81
-    // RVA   : 0x9961C0   Offset: 0x9955C0   Length: 0x33
+    // RVA   : 0x996850   Offset: 0x995C50   Length: 0x33
     public void OnClick()
     {
         long lVar1;

@@ -6,25 +6,25 @@
 public class ToggleTargetColor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D7F
+    // Token: 0x4001D80
     public GameObject target;
 
-    // Token: 0x4001D80
+    // Token: 0x4001D81
     public Color onColor;
 
-    // Token: 0x4001D81
+    // Token: 0x4001D82
     public Color offColor;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60022FB
-    // RVA   : 0xAA5A20   Offset: 0xAA4E20   Length: 0x3E
+    // RVA   : 0xAA60E0   Offset: 0xAA54E0   Length: 0x3E
     public void /*ctor*/()
     {
         uint uVar1;
         uint uVar2;
         uint uVar3;
         byte[] local_18 = new byte[16];
-        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];
@@ -32,7 +32,7 @@ public class ToggleTargetColor
         *(uint32 *)(this + 28) = uVar1;
         *(uint32 *)(this + 32) = uVar2;
         *(uint32 *)(this + 36) = uVar3;
-        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];

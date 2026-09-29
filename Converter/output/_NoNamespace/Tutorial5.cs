@@ -7,16 +7,16 @@ public class Tutorial5
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000094
-    // RVA   : 0xADFE90   Offset: 0xADF290   Length: 0xF3
+    // RVA   : 0xAE0550   Offset: 0xADF950   Length: 0xF3
     public void SetDurationToCurrentProgress()
     {
-        var pStatics = *(int64*)(DAT_181db0078 + 184);
+        var pStatics = *(int64*)(DAT_181db0090 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         uint uVar4;
         uint uVar5;
-        lVar2 = FUN_1809674e0(this,DAT_181d989e0);
+        lVar2 = FUN_180967b70(this,DAT_181d989f8);
         uVar4 = 0;
         if (lVar2 != null) {
           while( true ) {

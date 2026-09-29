@@ -6,7 +6,7 @@
 public class <>c__DisplayClass31_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400212E
+    // Token: 0x400212F
     public ScrollRect target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass31_0
     }
 
     // Token : 0x6002727
-    // RVA   : 0x9393B0   Offset: 0x9387B0   Length: 0x1D
+    // RVA   : 0x939A40   Offset: 0x938E40   Length: 0x1D
     internal float <DOHorizontalNormalizedPos>b__0()
     {
         if (this.target != null) {
@@ -28,11 +28,11 @@ public class <>c__DisplayClass31_0
     }
 
     // Token : 0x6002728
-    // RVA   : 0x9393D0   Offset: 0x9387D0   Length: 0x1E
+    // RVA   : 0x939A60   Offset: 0x938E60   Length: 0x1E
     internal void <DOHorizontalNormalizedPos>b__1(float x)
     {
         if (this.target != null) {
-          FUN_1813baf00(this.target,x,0);
+          FUN_1813bb510(this.target,x,0);
           return;
         }
     }

@@ -6,22 +6,22 @@
 public class <WarpText>d__7
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001F7B
+    // Token: 0x4001F7C
     private int <>1__state;
 
-    // Token: 0x4001F7C
+    // Token: 0x4001F7D
     private object <>2__current;
 
-    // Token: 0x4001F7D
+    // Token: 0x4001F7E
     public SkewTextExample <>4__this;
 
-    // Token: 0x4001F7E
+    // Token: 0x4001F7F
     private float <old_CurveScale>5__2;
 
-    // Token: 0x4001F7F
+    // Token: 0x4001F80
     private float <old_ShearValue>5__3;
 
-    // Token: 0x4001F80
+    // Token: 0x4001F81
     private AnimationCurve <old_curve>5__4;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -40,7 +40,7 @@ public class <WarpText>d__7
     }
 
     // Token : 0x60024C1
-    // RVA   : 0x8F6990   Offset: 0x8F5D90   Length: 0xF5E
+    // RVA   : 0x929630   Offset: 0x928A30   Length: 0xF5E
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -181,7 +181,7 @@ public class <WarpText>d__7
           if ((*(char *)(*(int64 *)(lVar5 + 24) + 0x370) == false) &&
              (this.<old_CurveScale>5__2 == *(float *)(lVar5 + 40))) {
             if ((this.<old_curve>5__4 == 0) ||
-               (lVar9 = FUN_1810ccc30(this.<old_curve>5__4,0)) == null) throw; // [null/range check failed]
+               (lVar9 = FUN_1810cd240(this.<old_curve>5__4,0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar9 + 24) < 2) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -189,7 +189,7 @@ public class <WarpText>d__7
             }
             fVar21 = (float)FUN_18044df60(lVar9 + 60,0);
             if ((*(int64 *)(lVar5 + 32) == 0) ||
-               (lVar9 = FUN_1810ccc30(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+               (lVar9 = FUN_1810cd240(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar9 + 24) < 2) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -559,15 +559,15 @@ public class <WarpText>d__7
     }
 
     // Token : 0x60024C3
-    // RVA   : 0x8F78F0   Offset: 0x8F6CF0   Length: 0x3E
+    // RVA   : 0x92A590   Offset: 0x929990   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db24d8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db2688);
     }
 
     // Token : 0x60024C4

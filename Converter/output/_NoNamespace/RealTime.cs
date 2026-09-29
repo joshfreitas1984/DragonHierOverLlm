@@ -7,14 +7,14 @@ public class RealTime
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600045A
-    // RVA   : 0xD11AF0   Offset: 0xD10EF0   Length: 0x7
+    // RVA   : 0xD12100   Offset: 0xD11500   Length: 0x7
     public static float get_time()
     {
         Time.get_unscaledTime(0);
     }
 
     // Token : 0x600045B
-    // RVA   : 0xD11AE0   Offset: 0xD10EE0   Length: 0x7
+    // RVA   : 0xD120F0   Offset: 0xD114F0   Length: 0x7
     public static float get_deltaTime()
     {
         Time.get_unscaledDeltaTime(0);

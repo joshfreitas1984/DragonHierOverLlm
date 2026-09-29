@@ -23,16 +23,16 @@ public class LagRotation
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000076
-    // RVA   : 0xA7FB80   Offset: 0xA7EF80   Length: 0x10
+    // RVA   : 0xA80210   Offset: 0xA7F610   Length: 0x10
     public void OnRepositionEnd()
     {
-        void FUN_180a7fb80(uint64 this)
+        void FUN_180a80210(uint64 this)
         {
         LagRotation.Interpolate(this,0x447a0000,0);
     }
 
     // Token : 0x6000077
-    // RVA   : 0xA7F9F0   Offset: 0xA7EDF0   Length: 0x18F
+    // RVA   : 0xA80080   Offset: 0xA7F480   Length: 0x18F
     private void Interpolate(float delta)
     {
         float fVar1;
@@ -54,7 +54,7 @@ public class LagRotation
         cVar8 = Object.op_Inequality(uVar2,0,0);
         if (cVar8) {
           if (this.mTrans != null) {
-            lVar3 = FUN_180da9a20(this.mTrans,0);
+            lVar3 = FUN_180daa030(this.mTrans,0);
             cVar8 = Object.op_Inequality(lVar3,0,0);
             if (!cVar8) {
               return;
@@ -101,7 +101,7 @@ public class LagRotation
     }
 
     // Token : 0x6000078
-    // RVA   : 0xA7FB90   Offset: 0xA7EF90   Length: 0x6E
+    // RVA   : 0xA80220   Offset: 0xA7F620   Length: 0x6E
     private void Start()
     {
         uint uVar1;
@@ -131,7 +131,7 @@ public class LagRotation
     }
 
     // Token : 0x6000079
-    // RVA   : 0xA7FC00   Offset: 0xA7F000   Length: 0x32
+    // RVA   : 0xA80290   Offset: 0xA7F690   Length: 0x32
     private void Update()
     {
         uint uVar1;
@@ -145,10 +145,10 @@ public class LagRotation
     }
 
     // Token : 0x600007A
-    // RVA   : 0xA7FC40   Offset: 0xA7F040   Length: 0xE
+    // RVA   : 0xA802D0   Offset: 0xA7F6D0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180a7fc40(int64 this)
+        void FUN_180a802d0(int64 this)
         {
         this.speed = 0x41200000;
         FUN_18044ef50(this,0);

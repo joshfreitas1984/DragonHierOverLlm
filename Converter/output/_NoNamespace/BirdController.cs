@@ -17,10 +17,10 @@ public class BirdController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D58
-    // RVA   : 0xC83230   Offset: 0xC82630   Length: 0x398
+    // RVA   : 0xC83840   Offset: 0xC82C40   Length: 0x398
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181da35d0 + 184);
+        var pStatics = *(int64*)(DAT_181da35e8 + 184);
         ulong uVar1;
         long lVar2;
         long lVar4;
@@ -54,8 +54,8 @@ public class BirdController
           local_38 = CONCAT44(local_48._4_4_ * fVar9 * fVar7 + local_38._4_4_,
                               (float)local_48 * fVar9 * fVar7 + (float)local_38);
           Transform.set_localPosition(lVar2,&local_38,0);
-          lVar2 = Component.GetComponent(this,DAT_181d95de0);
-          lVar4 = Component.GetComponent(this,DAT_181d95de0);
+          lVar2 = Component.GetComponent(this,DAT_181d95df8);
+          lVar4 = Component.GetComponent(this,DAT_181d95df8);
           if (lVar4 != null) {
             puVar3 = (uint64 *)SpriteRenderer.get_color(&local_38,lVar4,0);
             uVar6 = *puVar3;

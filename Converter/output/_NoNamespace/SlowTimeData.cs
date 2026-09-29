@@ -6,15 +6,15 @@
 public class SlowTimeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D79
+    // Token: 0x4001D7A
     public float slowTime;
 
-    // Token: 0x4001D7A
+    // Token: 0x4001D7B
     public float slowTimeScale;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60022F5
-    // RVA   : 0x98AEE0   Offset: 0x98A2E0   Length: 0x3A
+    // RVA   : 0x98B570   Offset: 0x98A970   Length: 0x3A
     public void /*ctor*/(float _slowTime, float _slowTimeScale)
     {
         ZhSegment.Initialize(this,0);

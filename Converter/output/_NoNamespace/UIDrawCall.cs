@@ -140,37 +140,37 @@ public class UIDrawCall
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000485
-    // RVA   : 0x12BC7C0   Offset: 0x12BBBC0   Length: 0x57
+    // RVA   : 0x12BCDD0   Offset: 0x12BC1D0   Length: 0x57
     public static BetterList<UIDrawCall> get_list()
     {
-        return **(uint64 **)(DAT_181daf978 + 184);
+        return **(uint64 **)(DAT_181daf990 + 184);
     }
 
     // Token : 0x6000486
-    // RVA   : 0x12BC5B0   Offset: 0x12BB9B0   Length: 0x57
+    // RVA   : 0x12BCBC0   Offset: 0x12BBFC0   Length: 0x57
     public static BetterList<UIDrawCall> get_activeList()
     {
-        return **(uint64 **)(DAT_181daf978 + 184);
+        return **(uint64 **)(DAT_181daf990 + 184);
     }
 
     // Token : 0x6000487
-    // RVA   : 0x12BC750   Offset: 0x12BBB50   Length: 0x58
+    // RVA   : 0x12BCD60   Offset: 0x12BC160   Length: 0x58
     public static BetterList<UIDrawCall> get_inactiveList()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181daf978 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181daf990 + 184) + 8);
     }
 
     // Token : 0x6000488
-    // RVA   : 0x12BC820   Offset: 0x12BBC20   Length: 0x7
+    // RVA   : 0x12BCE30   Offset: 0x12BC230   Length: 0x7
     public int get_renderQueue()
     {
-        uint32 FUN_1812bc820(int64 this)
+        uint32 FUN_1812bce30(int64 this)
         {
         return this.mRenderQueue;
     }
 
     // Token : 0x6000489
-    // RVA   : 0x12BCB40   Offset: 0x12BBF40   Length: 0x9F
+    // RVA   : 0x12BD150   Offset: 0x12BC550   Length: 0x9F
     public void set_renderQueue(int value)
     {
         ulong uVar1;
@@ -190,16 +190,16 @@ public class UIDrawCall
     }
 
     // Token : 0x600048A
-    // RVA   : 0x12BC900   Offset: 0x12BBD00   Length: 0x7
+    // RVA   : 0x12BCF10   Offset: 0x12BC310   Length: 0x7
     public int get_sortingOrder()
     {
-        uint32 FUN_1812bc900(int64 this)
+        uint32 FUN_1812bcf10(int64 this)
         {
         return this.mSortingOrder;
     }
 
     // Token : 0x600048B
-    // RVA   : 0x12BCE40   Offset: 0x12BC240   Length: 0x9F
+    // RVA   : 0x12BD450   Offset: 0x12BC850   Length: 0x9F
     public void set_sortingOrder(int value)
     {
         ulong uVar1;
@@ -219,12 +219,12 @@ public class UIDrawCall
     }
 
     // Token : 0x600048C
-    // RVA   : 0x12BC830   Offset: 0x12BBC30   Length: 0xC8
+    // RVA   : 0x12BCE40   Offset: 0x12BC240   Length: 0xC8
     public string get_sortingLayerName()
     {
         bool cVar1;
         ulong uVar2;
-        cVar1 = FUN_180d755b0(this.mSortingLayerName,0);
+        cVar1 = FUN_180d75bc0(this.mSortingLayerName,0);
         if (cVar1) {
           uVar2 = this.mRenderer;
           cVar1 = Object.op_Equality(uVar2,0,0);
@@ -242,7 +242,7 @@ public class UIDrawCall
     }
 
     // Token : 0x600048D
-    // RVA   : 0x12BCD80   Offset: 0x12BC180   Length: 0xBF
+    // RVA   : 0x12BD390   Offset: 0x12BC790   Length: 0xBF
     public void set_sortingLayerName(string value)
     {
         ulong uVar1;
@@ -263,7 +263,7 @@ public class UIDrawCall
     }
 
     // Token : 0x600048E
-    // RVA   : 0x12BC6B0   Offset: 0x12BBAB0   Length: 0x92
+    // RVA   : 0x12BCCC0   Offset: 0x12BC0C0   Length: 0x92
     public int get_finalRenderQueue()
     {
         ulong uVar1;
@@ -283,7 +283,7 @@ public class UIDrawCall
     }
 
     // Token : 0x600048F
-    // RVA   : 0x12BC610   Offset: 0x12BBA10   Length: 0x9B
+    // RVA   : 0x12BCC20   Offset: 0x12BC020   Length: 0x9B
     public Transform get_cachedTransform()
     {
         bool cVar1;
@@ -305,7 +305,7 @@ public class UIDrawCall
     }
 
     // Token : 0x6000491
-    // RVA   : 0x12BC990   Offset: 0x12BBD90   Length: 0x96
+    // RVA   : 0x12BCFA0   Offset: 0x12BC3A0   Length: 0x96
     public void set_baseMaterial(Material value)
     {
         ulong uVar1;
@@ -335,7 +335,7 @@ public class UIDrawCall
     }
 
     // Token : 0x6000494
-    // RVA   : 0x12BCA30   Offset: 0x12BBE30   Length: 0x107
+    // RVA   : 0x12BD040   Offset: 0x12BC440   Length: 0x107
     public void set_mainTexture(Texture value)
     {
         bool cVar1;
@@ -368,7 +368,7 @@ public class UIDrawCall
     }
 
     // Token : 0x6000496
-    // RVA   : 0x12BCBE0   Offset: 0x12BBFE0   Length: 0x9F
+    // RVA   : 0x12BD1F0   Offset: 0x12BC5F0   Length: 0x9F
     public void set_shader(Shader value)
     {
         ulong uVar1;
@@ -391,7 +391,7 @@ public class UIDrawCall
     }
 
     // Token : 0x6000498
-    // RVA   : 0x12BCC80   Offset: 0x12BC080   Length: 0xF7
+    // RVA   : 0x12BD290   Offset: 0x12BC690   Length: 0xF7
     public void set_shadowMode(ShadowMode value)
     {
         long lVar1;
@@ -414,11 +414,11 @@ public class UIDrawCall
             }
             else {
               if (*(int *)(this + 200) == 1) {
-                if (lVar1 == null) goto LAB_1812bcd72;
+                if (lVar1 == null) goto LAB_1812bd382;
                 uVar3 = 0;
               }
               else {
-                if (lVar1 == null) goto LAB_1812bcd72;
+                if (lVar1 == null) goto LAB_1812bd382;
                 uVar3 = 1;
               }
               Renderer.set_shadowCastingMode(lVar1,uVar3,0);
@@ -427,7 +427,7 @@ public class UIDrawCall
                 return;
               }
             }
-        LAB_1812bcd72:
+        LAB_1812bd382:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -435,7 +435,7 @@ public class UIDrawCall
     }
 
     // Token : 0x6000499
-    // RVA   : 0x12BC910   Offset: 0x12BBD10   Length: 0x7D
+    // RVA   : 0x12BCF20   Offset: 0x12BC320   Length: 0x7D
     public int get_triangles()
     {
         ulong uVar1;
@@ -449,16 +449,16 @@ public class UIDrawCall
     }
 
     // Token : 0x600049A
-    // RVA   : 0x12BC7B0   Offset: 0x12BBBB0   Length: 0xB
+    // RVA   : 0x12BCDC0   Offset: 0x12BC1C0   Length: 0xB
     public bool get_isClipped()
     {
-        bool FUN_1812bc7b0(int64 this)
+        bool FUN_1812bcdc0(int64 this)
         {
         return this.mClipCount != null;
     }
 
     // Token : 0x600049B
-    // RVA   : 0x12B8EE0   Offset: 0x12B82E0   Length: 0x740
+    // RVA   : 0x12B94F0   Offset: 0x12B88F0   Length: 0x740
     private void CreateMaterial()
     {
         bool cVar3;
@@ -503,9 +503,9 @@ public class UIDrawCall
         uVar9 = this.panel;
         cVar3 = Object.op_Inequality(uVar9,0,0);
         if (!cVar3) {
-        LAB_1812b91ff:
+        LAB_1812b980f:
           uVar9 = uVar8;
-          if (this.mClipCount == null) goto LAB_1812b9317;
+          if (this.mClipCount == null) goto LAB_1812b9927;
           uVar9 = Int32.ToString(piVar1);
           uVar9 = String.Concat("Hidden/",uVar8," ",uVar9,0);
           uVar9 = Shader.Find(uVar9,0);
@@ -523,15 +523,15 @@ public class UIDrawCall
           if ((cVar3) && (this.mClipCount == 1)) {
             this.mLegacyShader = 1;
             uVar9 = String.Concat(uVar8," (SoftClip)",0);
-            goto LAB_1812b9317;
+            goto LAB_1812b9927;
           }
         }
         else {
           if (this.panel == null) throw; // [null/range check failed]
-          if (this.panel.mClipping != 1) goto LAB_1812b91ff;
+          if (this.panel.mClipping != 1) goto LAB_1812b980f;
           this.mTextureClip = 1;
           uVar9 = String.Concat("Hidden/",uVar8," (TextureClip)",0);
-        LAB_1812b9317:
+        LAB_1812b9927:
           uVar9 = Shader.Find(uVar9,0);
           UIDrawCall.set_shader(this,uVar9,0);
         }
@@ -576,7 +576,7 @@ public class UIDrawCall
                 if (this.mDynamicMat != null) {
                   Material.CopyPropertiesFromMaterial(this.mDynamicMat,this.mMaterial,0);
                   if (this.mMaterial != null) {
-                    lVar7 = FUN_1810e18d0(this.mMaterial,0);
+                    lVar7 = FUN_1810e1ee0(this.mMaterial,0);
                     uVar10 = 0;
                     if (lVar7 != null) {
                       for (; (int)uVar10 < (int)*(uint32 *)(lVar7 + 24); uVar10 = uVar10 + 1) {
@@ -612,7 +612,7 @@ public class UIDrawCall
     }
 
     // Token : 0x600049C
-    // RVA   : 0x12BAE40   Offset: 0x12BA240   Length: 0x1C6
+    // RVA   : 0x12BB450   Offset: 0x12BA850   Length: 0x1C6
     private Material RebuildMaterial()
     {
         long lVar1;
@@ -628,11 +628,11 @@ public class UIDrawCall
           uVar6 = this.mRenderer;
           cVar3 = Object.op_Inequality(uVar6,0,0);
           if (!cVar3) {
-        LAB_1812bafc5:
+        LAB_1812bb5d5:
             return this.mDynamicMat;
           }
           lVar1 = this.mRenderer;
-          plVar4 = (int64 *)FUN_1800d60b0(DAT_181da3e20,1);
+          plVar4 = (int64 *)FUN_1800d60b0(DAT_181da3e38,1);
           lVar2 = this.mDynamicMat;
           if (plVar4 != (int64 *)0) {
             if (lVar2 != null) {
@@ -651,14 +651,14 @@ public class UIDrawCall
             plVar4[4] = lVar2;
             il2cpp_internal(plVar4 + 4,lVar2);
             if (lVar1 != null) {
-              FUN_180d9da80(lVar1,plVar4,0);
+              FUN_180d9e090(lVar1,plVar4,0);
               if (this.mRenderer != null) {
                 Renderer.set_sortingLayerName
                           (this.mRenderer,this.mSortingLayerName,0);
                 if (this.mRenderer != null) {
                   Renderer.set_sortingOrder
                             (this.mRenderer,this.mSortingOrder,0);
-                  goto LAB_1812bafc5;
+                  goto LAB_1812bb5d5;
                 }
               }
             }
@@ -667,7 +667,7 @@ public class UIDrawCall
     }
 
     // Token : 0x600049D
-    // RVA   : 0x12BC170   Offset: 0x12BB570   Length: 0xF9
+    // RVA   : 0x12BC780   Offset: 0x12BBB80   Length: 0xF9
     private void UpdateMaterials()
     {
         int iVar1;
@@ -683,13 +683,13 @@ public class UIDrawCall
             if (!cVar3) {
               iVar1 = this.mClipCount;
               if (this.panel == null) {
-        LAB_1812bc264:
+        LAB_1812bc874:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
               iVar4 = UIPanel.get_clipCount(this.panel,0);
               if (iVar1 == iVar4) {
-                if (this.panel == null) goto LAB_1812bc264;
+                if (this.panel == null) goto LAB_1812bc874;
                 if ((bool)this.mTextureClip ==
                     (this.panel.mClipping == 1)) {
                   return;
@@ -703,7 +703,7 @@ public class UIDrawCall
     }
 
     // Token : 0x600049E
-    // RVA   : 0x12BB510   Offset: 0x12BA910   Length: 0xC5A
+    // RVA   : 0x12BBB20   Offset: 0x12BAF20   Length: 0xC5A
     public void UpdateGeometry(int widgetCount, bool needsBounds)
     {
         int iVar4;
@@ -727,16 +727,16 @@ public class UIDrawCall
         this.widgetCount = widgetCount;
         if (this.verts == null) throw; // [null/range check failed]
         local_res10[0] = this.verts.Count;
-        if ((int)local_res10[0] < 1) goto LAB_1812bbfcb;
+        if ((int)local_res10[0] < 1) goto LAB_1812bc5db;
         if (this.uvs == null) throw; // [null/range check failed]
-        if (local_res10[0] != this.uvs.Count) goto LAB_1812bbfcb;
+        if (local_res10[0] != this.uvs.Count) goto LAB_1812bc5db;
         if (this.cols == null) throw; // [null/range check failed]
         if (local_res10[0] == this.cols.Count) {
           uVar6 = local_res10[0] & 0x80000003;
           if ((int)uVar6 < 0) {
             uVar6 = (uVar6 - 1 | 0xfffffffc) + 1;
           }
-          if (uVar6 != 0) goto LAB_1812bbfcb;
+          if (uVar6 != 0) goto LAB_1812bc5db;
           if (UIDrawCall.mColorSpace == -1) {
             uVar7 = QualitySettings.get_activeColorSpace(0);
             UIDrawCall.mColorSpace = uVar7;
@@ -763,7 +763,7 @@ public class UIDrawCall
               uStack_84 = uVar7;
               uStack_80 = uVar15;
               uStack_7c = uVar16;
-              FUN_1817f4530(this.cols,uVar6,&local_88,DAT_181d83020);
+              FUN_1817f4b40(this.cols,uVar6,&local_88,DAT_181d83038);
               uVar6 = uVar6 + 1;
               lVar11 = lVar11 + 16;
             } while ((int)uVar6 < (int)local_res10[0]);
@@ -782,7 +782,7 @@ public class UIDrawCall
           if (cVar5) {
             lVar11 = Component.get_gameObject(this,0);
             if (lVar11 == null) throw; // [null/range check failed]
-            lVar11 = GameObject.AddComponent(lVar11,DAT_181dc5648);
+            lVar11 = GameObject.AddComponent(lVar11,DAT_181dc5660);
             *plVar1 = lVar11;
             il2cpp_internal(plVar1,lVar11);
           }
@@ -820,16 +820,16 @@ public class UIDrawCall
             if (this.uvs == null) throw; // [null/range check failed]
             if (this.uvs.Count == local_res10[0]) {
               if (this.cols == null) throw; // [null/range check failed]
-              if (this.cols.Count != local_res10[0]) goto LAB_1812bbba9;
+              if (this.cols.Count != local_res10[0]) goto LAB_1812bc1b9;
               if (this.uv2 == null) throw; // [null/range check failed]
-              if (this.uv2.Count != local_res10[0]) goto LAB_1812bbba9;
+              if (this.uv2.Count != local_res10[0]) goto LAB_1812bc1b9;
               if (this.norms == null) throw; // [null/range check failed]
-              if (this.norms.Count != local_res10[0]) goto LAB_1812bbba9;
+              if (this.norms.Count != local_res10[0]) goto LAB_1812bc1b9;
               if (this.tans == null) throw; // [null/range check failed]
               bVar13 = this.tans.Count != local_res10[0];
             }
             else {
-        LAB_1812bbba9:
+        LAB_1812bc1b9:
               bVar13 = true;
             }
             if (!bVar13) {
@@ -938,7 +938,7 @@ public class UIDrawCall
           if (cVar5) {
             lVar11 = Component.get_gameObject(this,0);
             if (lVar11 == null) throw; // [null/range check failed]
-            lVar11 = GameObject.AddComponent(lVar11,DAT_181dc56d0);
+            lVar11 = GameObject.AddComponent(lVar11,DAT_181dc56e8);
             *plVar2 = lVar11;
             il2cpp_internal(plVar2,lVar11);
             lVar11 = *plVar2;
@@ -974,7 +974,7 @@ public class UIDrawCall
           UIDrawCall.UpdateMaterials(this,0);
         }
         else {
-        LAB_1812bbfcb:
+        LAB_1812bc5db:
           if (this.mFilter == null) throw; // [null/range check failed]
           uVar9 = MeshFilter.get_mesh(this.mFilter,0);
           cVar5 = Object.op_Inequality(uVar9,0,0);
@@ -989,17 +989,17 @@ public class UIDrawCall
           Debug.LogError(uVar9,0);
         }
         if (this.verts != null) {
-          FUN_1812f9a10(this.verts,DAT_181dabd18);
+          FUN_1812fa020(this.verts,DAT_181dabd30);
           if (this.uvs != null) {
-            FUN_1812f9a10(this.uvs,DAT_181dab998);
+            FUN_1812fa020(this.uvs,DAT_181dab9b0);
             if (this.uv2 != null) {
-              FUN_1812f9a10(this.uv2,DAT_181dac090);
+              FUN_1812fa020(this.uv2,DAT_181dac0a8);
               if (this.cols != null) {
-                FUN_1812f9a10(this.cols,DAT_181d82ea0);
+                FUN_1812fa020(this.cols,DAT_181d82eb8);
                 if (this.norms != null) {
-                  FUN_1812f9a10(this.norms,DAT_181dabd18);
+                  FUN_1812fa020(this.norms,DAT_181dabd30);
                   if (this.tans != null) {
-                    FUN_1812f9a10(this.tans,DAT_181dac090);
+                    FUN_1812fa020(this.tans,DAT_181dac0a8);
                     return;
                   }
                 }
@@ -1010,7 +1010,7 @@ public class UIDrawCall
     }
 
     // Token : 0x600049F
-    // RVA   : 0x12B9F10   Offset: 0x12B9310   Length: 0x317
+    // RVA   : 0x12BA520   Offset: 0x12B9920   Length: 0x317
     private int[] GenerateCachedIndexBuffer(int vertexCount, int indexCount)
     {
         int iVar1;
@@ -1029,14 +1029,14 @@ public class UIDrawCall
             do {
               lVar2 = UIDrawCall.mCache;
               if (lVar2 == null) throw; // [null/range check failed]
-              lVar2 = FUN_180002f80(lVar2,iVar5,DAT_181d79e28);
+              lVar2 = FUN_180002f80(lVar2,iVar5,DAT_181d79e40);
               if ((lVar2 != null) && (*(int *)(lVar2 + 24) == indexCount)) {
                 return lVar2;
               }
               iVar5 = iVar5 + 1;
             } while (iVar5 < iVar1);
           }
-          lVar2 = FUN_1800d60b0(DAT_181da35a0,indexCount);
+          lVar2 = FUN_1800d60b0(DAT_181da35b8,indexCount);
           if (0 < vertexCount) {
             iVar5 = 2;
             do {
@@ -1091,11 +1091,11 @@ public class UIDrawCall
             if (10 < *(int *)(lVar3 + 24)) {
               lVar3 = UIDrawCall.mCache;
               if (lVar3 == null) throw; // [null/range check failed]
-              FUN_181823590(lVar3,0,DAT_181d79ca8);
+              FUN_181823ba0(lVar3,0,DAT_181d79cc0);
             }
             lVar3 = UIDrawCall.mCache;
             if (lVar3 != null) {
-              FUN_18181e0a0(lVar3,lVar2,DAT_181d79ba8);
+              FUN_18181e6b0(lVar3,lVar2,DAT_181d79bc0);
               return lVar2;
             }
           }
@@ -1103,7 +1103,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004A0
-    // RVA   : 0x12BA730   Offset: 0x12B9B30   Length: 0x70B
+    // RVA   : 0x12BAD40   Offset: 0x12BA140   Length: 0x70B
     private void OnWillRenderObject()
     {
         bool cVar1;
@@ -1141,7 +1141,7 @@ public class UIDrawCall
         UIDrawCall.UpdateMaterials(this,0);
         if (this.mBlock != null) {
           if (this.mRenderer == null) throw; // [null/range check failed]
-          FUN_180d9da30(this.mRenderer,this.mBlock,0);
+          FUN_180d9e040(this.mRenderer,this.mBlock,0);
         }
         lVar7 = this.onRender;
         if (lVar7 != null) {
@@ -1277,7 +1277,7 @@ public class UIDrawCall
             fStack_120 = *(float *)(lVar7 + 0x108);
             fStack_11c = *(float *)(lVar7 + 0x10c);
             lVar7 = this.mDynamicMat;
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181daf978 + 184) + 32);
+            lVar3 = *(int64 *)(*(int64 *)(DAT_181daf990 + 184) + 32);
             if (lVar3 != null) {
               if (*(int *)(lVar3 + 24) == 0) {
                 uVar6 = il2cpp_internal();
@@ -1287,7 +1287,7 @@ public class UIDrawCall
               uVar13 = *(uint32 *)(lVar3 + 32);
               local_c8 = 0;
               uStack_c0 = 0;
-              FUN_1809dc910(&local_c8,CONCAT44(0x80000000,-local_128 / fStack_120),
+              FUN_1809dcfa0(&local_c8,CONCAT44(0x80000000,-local_128 / fStack_120),
                             CONCAT44(0x80000000,-fStack_124 / fStack_11c),1.0 / fStack_120,
                             1.0 / fStack_11c,0);
               if (lVar7 != null) {
@@ -1311,7 +1311,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004A1
-    // RVA   : 0x12BB230   Offset: 0x12BA630   Length: 0x2DC
+    // RVA   : 0x12BB840   Offset: 0x12BAC40   Length: 0x2DC
     private void SetClipping(int index, Vector4 cr, Vector2 soft, float angle)
     {
         void UIDrawCall.SetClipping
@@ -1361,7 +1361,7 @@ public class UIDrawCall
           uVar1 = lVar3[index];
           local_98 = 0;
           uStack_90 = 0;
-          FUN_1809dc910(&local_98,-*cr / cr[2],-cr[1] / cr[3],1.0 / cr[2],
+          FUN_1809dcfa0(&local_98,-*cr / cr[2],-cr[1] / cr[3],1.0 / cr[2],
                         1.0 / cr[3],0);
           if (lVar2 != null) {
             local_78 = (float)local_98;
@@ -1382,7 +1382,7 @@ public class UIDrawCall
               uStack_80 = 0;
               uVar5 = FUN_1801e7370(angle * -0.017453292);
               uVar6 = FUN_1801e7e70(angle * -0.017453292);
-              FUN_1809dc910(&local_88,fVar7,fVar8,uVar6,uVar5,0);
+              FUN_1809dcfa0(&local_88,fVar7,fVar8,uVar6,uVar5,0);
               if (lVar2 != null) {
                 local_78 = (uint32)local_88;
                 uStack_74 = local_88._4_4_;
@@ -1397,7 +1397,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004A2
-    // RVA   : 0x12B8790   Offset: 0x12B7B90   Length: 0x3E4
+    // RVA   : 0x12B8DA0   Offset: 0x12B81A0   Length: 0x3E4
     private void Awake()
     {
         bool cVar1;
@@ -1408,22 +1408,22 @@ public class UIDrawCall
         if (UIDrawCall.dx9BugWorkaround == -1) {
           iVar2 = Application.get_platform(0);
           if (iVar2 == 2) {
-            iVar2 = FUN_180da4570(0);
-            if (39 < iVar2) goto LAB_1812b88ac;
-            lVar4 = FUN_180da4500(0);
+            iVar2 = FUN_180da4b80(0);
+            if (39 < iVar2) goto LAB_1812b8ebc;
+            lVar4 = FUN_180da4b10(0);
             if (lVar4 == null) throw; // [null/range check failed]
             cVar1 = String.Contains(lVar4,"Direct3D",0);
-            if (!cVar1) goto LAB_1812b88ac;
+            if (!cVar1) goto LAB_1812b8ebc;
             uVar3 = 1;
           }
           else {
-        LAB_1812b88ac:
+        LAB_1812b8ebc:
             uVar3 = 0;
           }
           UIDrawCall.dx9BugWorkaround = uVar3;
         }
         if (UIDrawCall.ClipRange == null) {
-          lVar4 = FUN_1800d60b0(DAT_181da35a0,4);
+          lVar4 = FUN_1800d60b0(DAT_181da35b8,4);
           uVar3 = Shader.PropertyToID("_ClipRange0",0);
           if (lVar4 == null) throw; // [null/range check failed]
           if (*(int *)(lVar4 + 24) == 0) {
@@ -1458,7 +1458,7 @@ public class UIDrawCall
         if (UIDrawCall.ClipArgs != null) {
           return;
         }
-        lVar4 = FUN_1800d60b0(DAT_181da35a0,4);
+        lVar4 = FUN_1800d60b0(DAT_181da35b8,4);
         uVar3 = Shader.PropertyToID("_ClipArgs0",0);
         if (lVar4 != null) {
           if (*(int *)(lVar4 + 24) == 0) {
@@ -1494,16 +1494,16 @@ public class UIDrawCall
     }
 
     // Token : 0x60004A3
-    // RVA   : 0x12BA720   Offset: 0x12B9B20   Length: 0x8
+    // RVA   : 0x12BAD30   Offset: 0x12BA130   Length: 0x8
     private void OnEnable()
     {
-        void FUN_1812ba720(int64 this)
+        void FUN_1812bad30(int64 this)
         {
         this.mRebuildMat = 1;
     }
 
     // Token : 0x60004A4
-    // RVA   : 0x12BA5C0   Offset: 0x12B99C0   Length: 0x153
+    // RVA   : 0x12BABD0   Offset: 0x12B9FD0   Length: 0x153
     private void OnDisable()
     {
         ulong uVar1;
@@ -1520,12 +1520,12 @@ public class UIDrawCall
         cVar3 = Object.op_Inequality(uVar1,0,0);
         if (cVar3) {
           lVar2 = this.mRenderer;
-          uVar1 = FUN_1800d60b0(DAT_181da3e20,0);
+          uVar1 = FUN_1800d60b0(DAT_181da3e38,0);
           if (lVar2 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_180d9da80(lVar2,uVar1,0);
+          FUN_180d9e090(lVar2,uVar1,0);
         }
         uVar1 = this.mDynamicMat;
         NGUITools.DestroyImmediate(uVar1,0);
@@ -1533,7 +1533,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004A5
-    // RVA   : 0x12BA540   Offset: 0x12B9940   Length: 0x7B
+    // RVA   : 0x12BAB50   Offset: 0x12B9F50   Length: 0x7B
     private void OnDestroy()
     {
         ulong uVar1;
@@ -1543,7 +1543,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004A6
-    // RVA   : 0x12B9630   Offset: 0x12B8A30   Length: 0x8D
+    // RVA   : 0x12B9C40   Offset: 0x12B9040   Length: 0x8D
     public static UIDrawCall Create(UIPanel panel, Material mat, Texture tex, Shader shader)
     {
         bool cVar1;
@@ -1551,15 +1551,15 @@ public class UIDrawCall
         ulong uVar3;
         while( true ) {
           lVar2 = UIDrawCall.mInactiveList;
-          if (lVar2 == null) goto LAB_1812b9950;
+          if (lVar2 == null) goto LAB_1812b9f60;
           if (*(int *)(lVar2 + 24) < 1) break;
           lVar2 = UIDrawCall.mInactiveList;
-          if (lVar2 == null) goto LAB_1812b9950;
-          lVar2 = FUN_181585510(lVar2,DAT_181da6b38);
+          if (lVar2 == null) goto LAB_1812b9f60;
+          lVar2 = FUN_181585b20(lVar2,DAT_181da6b50);
           cVar1 = Object.op_Inequality(lVar2,0);
           if (cVar1) {
             if ((UIDrawCall.mActiveList != null) &&
-               (FUN_181583c60(UIDrawCall.mActiveList,lVar2,DAT_181da6938), lVar2 != null)) {
+               (FUN_181584270(UIDrawCall.mActiveList,lVar2,DAT_181da6950), lVar2 != null)) {
               if (panel != null) {
                 Object.set_name(lVar2,panel,0);
               }
@@ -1567,7 +1567,7 @@ public class UIDrawCall
               NGUITools.SetActive(uVar3,1,0);
               return lVar2;
             }
-        LAB_1812b9950:
+        LAB_1812b9f60:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1575,17 +1575,17 @@ public class UIDrawCall
         lVar2 = new GameObject(panel,0);
         Object.DontDestroyOnLoad(lVar2,0);
         if (lVar2 != null) {
-          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc69f0);
+          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc6a08);
           if (UIDrawCall.mActiveList != null) {
-            FUN_181583c60(UIDrawCall.mActiveList,lVar2,DAT_181da6938);
+            FUN_181584270(UIDrawCall.mActiveList,lVar2,DAT_181da6950);
             return lVar2;
           }
         }
-        goto LAB_1812b9950;
+        goto LAB_1812b9f60;
     }
 
     // Token : 0x60004A7
-    // RVA   : 0x12B9960   Offset: 0x12B8D60   Length: 0x340
+    // RVA   : 0x12B9F70   Offset: 0x12B9370   Length: 0x340
     private static UIDrawCall Create(string name, UIPanel pan, Material mat, Texture tex, Shader shader)
     {
         bool cVar1;
@@ -1593,15 +1593,15 @@ public class UIDrawCall
         ulong uVar3;
         while( true ) {
           lVar2 = UIDrawCall.mInactiveList;
-          if (lVar2 == null) goto LAB_1812b9950;
+          if (lVar2 == null) goto LAB_1812b9f60;
           if (*(int *)(lVar2 + 24) < 1) break;
           lVar2 = UIDrawCall.mInactiveList;
-          if (lVar2 == null) goto LAB_1812b9950;
-          lVar2 = FUN_181585510(lVar2,DAT_181da6b38);
+          if (lVar2 == null) goto LAB_1812b9f60;
+          lVar2 = FUN_181585b20(lVar2,DAT_181da6b50);
           cVar1 = Object.op_Inequality(lVar2,0);
           if (cVar1) {
             if ((UIDrawCall.mActiveList != null) &&
-               (FUN_181583c60(UIDrawCall.mActiveList,lVar2,DAT_181da6938), lVar2 != null)) {
+               (FUN_181584270(UIDrawCall.mActiveList,lVar2,DAT_181da6950), lVar2 != null)) {
               if (name != null) {
                 Object.set_name(lVar2,name,0);
               }
@@ -1609,7 +1609,7 @@ public class UIDrawCall
               NGUITools.SetActive(uVar3,1,0);
               return lVar2;
             }
-        LAB_1812b9950:
+        LAB_1812b9f60:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1617,17 +1617,17 @@ public class UIDrawCall
         lVar2 = new GameObject(name,0);
         Object.DontDestroyOnLoad(lVar2,0);
         if (lVar2 != null) {
-          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc69f0);
+          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc6a08);
           if (UIDrawCall.mActiveList != null) {
-            FUN_181583c60(UIDrawCall.mActiveList,lVar2,DAT_181da6938);
+            FUN_181584270(UIDrawCall.mActiveList,lVar2,DAT_181da6950);
             return lVar2;
           }
         }
-        goto LAB_1812b9950;
+        goto LAB_1812b9f60;
     }
 
     // Token : 0x60004A8
-    // RVA   : 0x12B96C0   Offset: 0x12B8AC0   Length: 0x295
+    // RVA   : 0x12B9CD0   Offset: 0x12B90D0   Length: 0x295
     private static UIDrawCall Create(string name)
     {
         bool cVar1;
@@ -1635,15 +1635,15 @@ public class UIDrawCall
         ulong uVar3;
         while( true ) {
           lVar2 = UIDrawCall.mInactiveList;
-          if (lVar2 == null) goto LAB_1812b9950;
+          if (lVar2 == null) goto LAB_1812b9f60;
           if (*(int *)(lVar2 + 24) < 1) break;
           lVar2 = UIDrawCall.mInactiveList;
-          if (lVar2 == null) goto LAB_1812b9950;
-          lVar2 = FUN_181585510(lVar2,DAT_181da6b38);
+          if (lVar2 == null) goto LAB_1812b9f60;
+          lVar2 = FUN_181585b20(lVar2,DAT_181da6b50);
           cVar1 = Object.op_Inequality(lVar2,0);
           if (cVar1) {
             if ((UIDrawCall.mActiveList != null) &&
-               (FUN_181583c60(UIDrawCall.mActiveList,lVar2,DAT_181da6938), lVar2 != null)) {
+               (FUN_181584270(UIDrawCall.mActiveList,lVar2,DAT_181da6950), lVar2 != null)) {
               if (name != null) {
                 Object.set_name(lVar2,name,0);
               }
@@ -1651,7 +1651,7 @@ public class UIDrawCall
               NGUITools.SetActive(uVar3,1,0);
               return lVar2;
             }
-        LAB_1812b9950:
+        LAB_1812b9f60:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1659,17 +1659,17 @@ public class UIDrawCall
         lVar2 = new GameObject(name,0);
         Object.DontDestroyOnLoad(lVar2,0);
         if (lVar2 != null) {
-          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc69f0);
+          lVar2 = GameObject.AddComponent(lVar2,DAT_181dc6a08);
           if (UIDrawCall.mActiveList != null) {
-            FUN_181583c60(UIDrawCall.mActiveList,lVar2,DAT_181da6938);
+            FUN_181584270(UIDrawCall.mActiveList,lVar2,DAT_181da6950);
             return lVar2;
           }
         }
-        goto LAB_1812b9950;
+        goto LAB_1812b9f60;
     }
 
     // Token : 0x60004A9
-    // RVA   : 0x12B8B80   Offset: 0x12B7F80   Length: 0x201
+    // RVA   : 0x12B9190   Offset: 0x12B8590   Length: 0x201
     public static void ClearAll()
     {
         long lVar1;
@@ -1706,14 +1706,14 @@ public class UIDrawCall
             }
           }
           if (UIDrawCall.mActiveList != null) {
-            BetterList_1.Clear(UIDrawCall.mActiveList,DAT_181da69b8);
+            BetterList_1.Clear(UIDrawCall.mActiveList,DAT_181da69d0);
             return;
           }
         }
     }
 
     // Token : 0x60004AA
-    // RVA   : 0x12BB010   Offset: 0x12BA410   Length: 0x50
+    // RVA   : 0x12BB620   Offset: 0x12BAA20   Length: 0x50
     public static void ReleaseAll()
     {
         UIDrawCall.ClearAll(0);
@@ -1721,7 +1721,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004AB
-    // RVA   : 0x12BB060   Offset: 0x12BA460   Length: 0x1CC
+    // RVA   : 0x12BB670   Offset: 0x12BAA70   Length: 0x1CC
     public static void ReleaseInactive()
     {
         long lVar1;
@@ -1754,14 +1754,14 @@ public class UIDrawCall
           }
           lVar1 = UIDrawCall.mInactiveList;
           if (lVar1 != null) {
-            BetterList_1.Clear(lVar1,DAT_181da69b8);
+            BetterList_1.Clear(lVar1,DAT_181da69d0);
             return;
           }
         }
     }
 
     // Token : 0x60004AC
-    // RVA   : 0x12B8D90   Offset: 0x12B8190   Length: 0x142
+    // RVA   : 0x12B93A0   Offset: 0x12B87A0   Length: 0x142
     public static int Count(UIPanel panel)
     {
         long lVar1;
@@ -1795,7 +1795,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004AD
-    // RVA   : 0x12B9CB0   Offset: 0x12B90B0   Length: 0x25F
+    // RVA   : 0x12BA2C0   Offset: 0x12B96C0   Length: 0x25F
     public static void Destroy(UIDrawCall dc)
     {
         long lVar1;
@@ -1815,7 +1815,7 @@ public class UIDrawCall
           cVar2 = Application.get_isPlaying(0);
           if (!cVar2) {
             if (UIDrawCall.mActiveList != null) {
-              FUN_181585c70(UIDrawCall.mActiveList,dc,DAT_181da6bb8);
+              FUN_181586280(UIDrawCall.mActiveList,dc,DAT_181da6bd0);
               uVar3 = Component.get_gameObject(dc,0);
               NGUITools.DestroyImmediate(uVar3,0);
               return;
@@ -1823,7 +1823,7 @@ public class UIDrawCall
           }
           else {
             if (UIDrawCall.mActiveList != null) {
-              cVar2 = FUN_181585c70(UIDrawCall.mActiveList,dc,DAT_181da6bb8);
+              cVar2 = FUN_181586280(UIDrawCall.mActiveList,dc,DAT_181da6bd0);
               if (!cVar2) {
                 return;
               }
@@ -1831,7 +1831,7 @@ public class UIDrawCall
               NGUITools.SetActive(uVar3,0,0);
               lVar1 = UIDrawCall.mInactiveList;
               if (lVar1 != null) {
-                FUN_181583c60(lVar1,dc,DAT_181da6938);
+                FUN_181584270(lVar1,dc,DAT_181da6950);
                 *(uint8 *)(dc + 218) = 1;
                 return;
               }
@@ -1841,7 +1841,7 @@ public class UIDrawCall
     }
 
     // Token : 0x60004AE
-    // RVA   : 0x12BA230   Offset: 0x12B9630   Length: 0x30F
+    // RVA   : 0x12BA840   Offset: 0x12B9C40   Length: 0x30F
     public static void MoveToScene(Scene scene)
     {
         bool cVar1;
@@ -1849,15 +1849,15 @@ public class UIDrawCall
         long lVar3;
         ulong uVar4;
         if (UIDrawCall.mActiveList != null) {
-          lVar2 = OrderedEnumerable_1.GetEnumerator(UIDrawCall.mActiveList,DAT_181da6ab8);
+          lVar2 = OrderedEnumerable_1.GetEnumerator(UIDrawCall.mActiveList,DAT_181da6ad0);
           while( true ) {
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            cVar1 = FUN_180002970(0,DAT_181d79620,lVar2);
+            cVar1 = FUN_180002970(0,DAT_181d79638,lVar2);
             if (!cVar1) break;
-            lVar3 = FUN_180002970(0,DAT_181d8e2e0,lVar2);
+            lVar3 = FUN_180002970(0,DAT_181d8e2f8,lVar2);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -1865,18 +1865,18 @@ public class UIDrawCall
             uVar4 = Component.get_gameObject(lVar3,0);
             SceneManager.MoveGameObjectToScene(uVar4,scene,0);
           }
-          FUN_180002970(0,DAT_181d78da0,lVar2);
+          FUN_180002970(0,DAT_181d78db8,lVar2);
           lVar2 = UIDrawCall.mInactiveList;
           if (lVar2 != null) {
-            lVar2 = OrderedEnumerable_1.GetEnumerator(lVar2,DAT_181da6ab8);
+            lVar2 = OrderedEnumerable_1.GetEnumerator(lVar2,DAT_181da6ad0);
             while( true ) {
               if (lVar2 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar1 = FUN_180002970(0,DAT_181d79620,lVar2);
+              cVar1 = FUN_180002970(0,DAT_181d79638,lVar2);
               if (!cVar1) break;
-              lVar3 = FUN_180002970(0,DAT_181d8e2e0,lVar2);
+              lVar3 = FUN_180002970(0,DAT_181d8e2f8,lVar2);
               if (lVar3 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -1884,36 +1884,36 @@ public class UIDrawCall
               uVar4 = Component.get_gameObject(lVar3,0);
               SceneManager.MoveGameObjectToScene(uVar4,scene,0);
             }
-            FUN_180002970(0,DAT_181d78da0,lVar2);
+            FUN_180002970(0,DAT_181d78db8,lVar2);
             return;
           }
         }
     }
 
     // Token : 0x60004AF
-    // RVA   : 0x12BC3E0   Offset: 0x12BB7E0   Length: 0x1C5
+    // RVA   : 0x12BC9F0   Offset: 0x12BBDF0   Length: 0x1C5
     public void /*ctor*/()
     {
         ulong uVar1;
         this.depthStart = 0x7fffffff;
         this.depthEnd = 0x80000000;
-        uVar1 = il2cpp_internal(DAT_181d98bd0);
-        FUN_18132faf0(uVar1,DAT_181dabb98);
+        uVar1 = il2cpp_internal(DAT_181d98be8);
+        FUN_181330100(uVar1,DAT_181dabbb0);
         this.verts = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98bd0);
-        FUN_18132faf0(uVar1,DAT_181dabb98);
+        uVar1 = il2cpp_internal(DAT_181d98be8);
+        FUN_181330100(uVar1,DAT_181dabbb0);
         this.norms = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98c50);
-        FUN_18132faf0(uVar1,DAT_181dabf10);
+        uVar1 = il2cpp_internal(DAT_181d98c68);
+        FUN_181330100(uVar1,DAT_181dabf28);
         this.tans = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98b50);
-        FUN_18132faf0(uVar1,DAT_181dab898);
+        uVar1 = il2cpp_internal(DAT_181d98b68);
+        FUN_181330100(uVar1,DAT_181dab8b0);
         this.uvs = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98c50);
-        FUN_18132faf0(uVar1,DAT_181dabf10);
+        uVar1 = il2cpp_internal(DAT_181d98c68);
+        FUN_181330100(uVar1,DAT_181dabf28);
         this.uv2 = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d91dd8);
-        FUN_18132faf0(uVar1,DAT_181d82da0);
+        uVar1 = il2cpp_internal(DAT_181d91df0);
+        FUN_181330100(uVar1,DAT_181d82db8);
         this.cols = uVar1;
         this.mRebuildMat = 1;
         this.mRenderQueue = 3000;
@@ -1922,18 +1922,18 @@ public class UIDrawCall
     }
 
     // Token : 0x60004B0
-    // RVA   : 0x12BC270   Offset: 0x12BB670   Length: 0x16E
+    // RVA   : 0x12BC880   Offset: 0x12BBC80   Length: 0x16E
     private static void /*cctor*/()
     {
         ulong uVar1;
-        uVar1 = new BetterList_1(DAT_181da68b8);
-        puVar2 = *(uint64 **)(DAT_181daf978 + 184);
+        uVar1 = new BetterList_1(DAT_181da68d0);
+        puVar2 = *(uint64 **)(DAT_181daf990 + 184);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
-        uVar1 = new BetterList_1(DAT_181da68b8);
+        uVar1 = new BetterList_1(DAT_181da68d0);
         UIDrawCall.mInactiveList = uVar1;
         UIDrawCall.mColorSpace = 0xffffffff;
-        uVar1 = new List_1(10,DAT_181d79b28);
+        uVar1 = new List_1(10,DAT_181d79b40);
         UIDrawCall.mCache = uVar1;
         UIDrawCall.ClipRange = 0;
         UIDrawCall.ClipArgs = 0;

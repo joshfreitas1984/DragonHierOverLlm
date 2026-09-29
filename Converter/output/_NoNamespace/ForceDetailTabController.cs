@@ -11,10 +11,10 @@ public class ForceDetailTabController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60014AF
-    // RVA   : 0xB3C300   Offset: 0xB3B700   Length: 0x50
+    // RVA   : 0xB3C9C0   Offset: 0xB3BDC0   Length: 0x50
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181dc7d00 + 184);
+        var pStatics = *(int64*)(DAT_181dc7d18 + 184);
         if (*pStatics != 0) {
           ForceDetailController.ShowForceDetail
                     (*pStatics,this.forceID,0);

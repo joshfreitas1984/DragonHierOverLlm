@@ -31,7 +31,7 @@ public class AnchorPoint
     }
 
     // Token : 0x600051B
-    // RVA   : 0x8E44D0   Offset: 0x8E38D0   Length: 0x28
+    // RVA   : 0x916B10   Offset: 0x915F10   Length: 0x28
     public void /*ctor*/(float relative)
     {
         ZhSegment.Initialize(this,0);
@@ -39,7 +39,7 @@ public class AnchorPoint
     }
 
     // Token : 0x600051C
-    // RVA   : 0x8E44A0   Offset: 0x8E38A0   Length: 0x29
+    // RVA   : 0x916AE0   Offset: 0x915EE0   Length: 0x29
     public void Set(float relative, float absolute)
     {
         uint uVar1;
@@ -50,7 +50,7 @@ public class AnchorPoint
     }
 
     // Token : 0x600051D
-    // RVA   : 0x8E4450   Offset: 0x8E3850   Length: 0x4F
+    // RVA   : 0x916A90   Offset: 0x915E90   Length: 0x4F
     public void Set(Transform target, float relative, float absolute)
     {
         uint uVar1;
@@ -61,7 +61,7 @@ public class AnchorPoint
     }
 
     // Token : 0x600051E
-    // RVA   : 0x8E41A0   Offset: 0x8E35A0   Length: 0x7B
+    // RVA   : 0x9167E0   Offset: 0x915BE0   Length: 0x7B
     public void SetToNearest(float abs0, float abs1, float abs2)
     {
         void AnchorPoint.SetToNearest
@@ -84,7 +84,7 @@ public class AnchorPoint
     }
 
     // Token : 0x600051F
-    // RVA   : 0x8E4220   Offset: 0x8E3620   Length: 0x98
+    // RVA   : 0x916860   Offset: 0x915C60   Length: 0x98
     public void SetToNearest(float rel0, float rel1, float rel2, float abs0, float abs1, float abs2)
     {
         void AnchorPoint.SetToNearest
@@ -107,7 +107,7 @@ public class AnchorPoint
     }
 
     // Token : 0x6000520
-    // RVA   : 0x8E3FF0   Offset: 0x8E33F0   Length: 0x1A0
+    // RVA   : 0x916630   Offset: 0x915A30   Length: 0x1A0
     public void SetHorizontal(Transform parent, float localPos)
     {
         bool cVar2;
@@ -133,7 +133,7 @@ public class AnchorPoint
               puVar4 = (uint64 *)Transform.InverseTransformPoint(local_38,parent,&local_48,0);
               local_58 = *puVar4;
             }
-        LAB_1808e413a:
+        LAB_18091677a:
             uVar3 = Mathf.FloorToInt((localPos - (float)local_58) + 0.5,0);
             this.absolute = uVar3;
             return;
@@ -157,14 +157,14 @@ public class AnchorPoint
               local_58._0_4_ =
                    (float)Mathf.Lerp(*(uint32 *)(lVar5 + 32),*(uint32 *)(lVar5 + 56),
                                       this.relative,0);
-              goto LAB_1808e413a;
+              goto LAB_18091677a;
             }
           }
         }
     }
 
     // Token : 0x6000521
-    // RVA   : 0x8E42C0   Offset: 0x8E36C0   Length: 0x18A
+    // RVA   : 0x916900   Offset: 0x915D00   Length: 0x18A
     public void SetVertical(Transform parent, float localPos)
     {
         bool cVar2;
@@ -190,7 +190,7 @@ public class AnchorPoint
               puVar4 = (uint64 *)Transform.InverseTransformPoint(local_38,parent,&local_48,0);
               local_58 = *puVar4;
             }
-        LAB_1808e4404:
+        LAB_180916a44:
             uVar3 = Mathf.FloorToInt((localPos - local_58._4_4_) + 0.5,0);
             this.absolute = uVar3;
             return;
@@ -209,14 +209,14 @@ public class AnchorPoint
               local_58._4_4_ =
                    (float)Mathf.Lerp(*(uint32 *)(lVar5 + 72),*(uint32 *)(lVar5 + 48),
                                       this.relative,0);
-              goto LAB_1808e4404;
+              goto LAB_180916a44;
             }
           }
         }
     }
 
     // Token : 0x6000522
-    // RVA   : 0x8E3E60   Offset: 0x8E3260   Length: 0x180
+    // RVA   : 0x9164A0   Offset: 0x9158A0   Length: 0x180
     public Vector3[] GetSides(Transform relativeTo)
     {
         bool cVar2;
@@ -230,7 +230,7 @@ public class AnchorPoint
         cVar2 = Object.op_Inequality(uVar3,0,0);
         if (!cVar2) {
           if (this.target != null) {
-            uVar3 = Component.GetComponent(this.target,DAT_181d937e0);
+            uVar3 = Component.GetComponent(this.target,DAT_181d937f8);
             cVar2 = Object.op_Inequality(uVar3,0,0);
             if (!cVar2) {
               return 0;
@@ -242,7 +242,7 @@ public class AnchorPoint
         else {
           plVar1 = this.rect;
           if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x0001808e3fc2. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180916602. Too many branches
                           // WARNING: Treating indirect jump as call
             uVar3 = (**(code **)(*plVar1 + 0x208))(plVar1,relativeTo,*(uint64 *)(*plVar1 + 0x210));
             return uVar3;

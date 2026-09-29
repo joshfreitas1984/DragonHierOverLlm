@@ -6,24 +6,24 @@
 public class CFX_Demo_RandomDirectionTranslate
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E34
+    // Token: 0x4001E35
     public float speed;
 
-    // Token: 0x4001E35
+    // Token: 0x4001E36
     public Vector3 baseDir;
 
-    // Token: 0x4001E36
+    // Token: 0x4001E37
     public Vector3 axis;
 
-    // Token: 0x4001E37
+    // Token: 0x4001E38
     public bool gravity;
 
-    // Token: 0x4001E38
+    // Token: 0x4001E39
     private Vector3 dir;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60023DB
-    // RVA   : 0xB7EE20   Offset: 0xB7E220   Length: 0x137
+    // RVA   : 0xB7F4E0   Offset: 0xB7E8E0   Length: 0x137
     private void Start()
     {
         uint uVar2;
@@ -51,7 +51,7 @@ public class CFX_Demo_RandomDirectionTranslate
     }
 
     // Token : 0x60023DC
-    // RVA   : 0xB7EF60   Offset: 0xB7E360   Length: 0x16E
+    // RVA   : 0xB7F620   Offset: 0xB7EA20   Length: 0x16E
     private void Update()
     {
         ulong uVar1;
@@ -95,7 +95,7 @@ public class CFX_Demo_RandomDirectionTranslate
     }
 
     // Token : 0x60023DD
-    // RVA   : 0xB7F0D0   Offset: 0xB7E4D0   Length: 0x55
+    // RVA   : 0xB7F790   Offset: 0xB7EB90   Length: 0x55
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];

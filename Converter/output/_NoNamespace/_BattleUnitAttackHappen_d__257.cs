@@ -31,7 +31,7 @@ public class <BattleUnitAttackHappen>d__257
     }
 
     // Token : 0x6000BF9
-    // RVA   : 0x9C3720   Offset: 0x9C2B20   Length: 0x190B
+    // RVA   : 0x9C3DB0   Offset: 0x9C31B0   Length: 0x190B
     private virtual bool MoveNext()
     {
         int iVar2;
@@ -141,9 +141,9 @@ public class <BattleUnitAttackHappen>d__257
             return false;
           }
           if (*(int64 *)(lVar3 + 0x310) != 0) {
-            FUN_1812f9a10(*(int64 *)(lVar3 + 0x310),DAT_181d8af98);
+            FUN_1812fa020(*(int64 *)(lVar3 + 0x310),DAT_181d8afb0);
             if (*(int64 *)(lVar3 + 0x308) != 0) {
-              FUN_1812f9a10(*(int64 *)(lVar3 + 0x308),DAT_181d7f9a8);
+              FUN_1812fa020(*(int64 *)(lVar3 + 0x308),DAT_181d7f9c0);
               *(uint8 *)(lVar3 + 0x318) = 0;
               if (*(int64 *)(lVar3 + 0x110) != 0) {
                 BattleController.ManageSkillSpeEffect
@@ -156,7 +156,7 @@ public class <BattleUnitAttackHappen>d__257
                 while (lVar7 = *(int64 *)(lVar3 + 0x208)) != null {
                   if ((int)*(uint32 *)(lVar7 + 24) <= (int)uVar14) {
                     iVar6 = 0;
-                    goto LAB_1809c3c10;
+                    goto LAB_1809c42a0;
                   }
                   if (*(uint32 *)(lVar7 + 24) <= uVar14) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -204,7 +204,7 @@ public class <BattleUnitAttackHappen>d__257
           }
         }
         throw; // [null/range check failed]
-        LAB_1809c3c10:
+        LAB_1809c42a0:
         if (*(int64 *)(lVar3 + 0x208) != 0) {
           lVar15 = *(int64 *)(lVar3 + 0x110);
           if (*(int *)(*(int64 *)(lVar3 + 0x208) + 24) <= iVar6) {
@@ -222,12 +222,12 @@ public class <BattleUnitAttackHappen>d__257
              (lVar15 = KungfuSkillLvData.DataBase(lVar15,0)) == null) throw; // [null/range check failed]
           if (*(int64 *)(lVar15 + 168) == 0) {
             if (*(int64 *)(lVar3 + 0x208) == 0) throw; // [null/range check failed]
-            uVar9 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398);
+            uVar9 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0);
             if (*(int64 *)(lVar3 + 0x208) == 0) throw; // [null/range check failed]
             uVar10 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6);
             uVar10 = BattleController.GetBattleUnitAttackHitDelay(lVar3,uVar10);
             BattleController.BattleUnitAttackHit(lVar3,uVar9,uVar10);
-            FUN_180d8c2e0(lVar3);
+            FUN_180d8c8f0(lVar3);
             iVar6 = iVar6 + 1;
           }
           else {
@@ -272,7 +272,7 @@ public class <BattleUnitAttackHappen>d__257
             local_240 = fVar16 * fVar18;
             Transform.set_localScale(lVar7,&local_248,0);
             if (*(int64 *)(lVar3 + 0x208) == 0) throw; // [null/range check failed]
-            uVar9 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398);
+            uVar9 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0);
             *(uint64 *)(lVar15 + 24) = uVar9;
             if ((((*(int64 *)(lVar3 + 0x110) == 0) ||
                  (lVar7 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64)) == null) ||
@@ -313,7 +313,7 @@ public class <BattleUnitAttackHappen>d__257
                                   );
               puVar8 = &local_2a8;
               local_2a0 = fVar16 + local_2b0;
-        LAB_1809c460f:
+        LAB_1809c4c9f:
               Transform.set_localPosition(lVar7,puVar8,0);
             }
             else {
@@ -349,7 +349,7 @@ public class <BattleUnitAttackHappen>d__257
                                              local_488 + (float)uVar9);
                         puVar8 = &local_2e8;
                         local_2e0 = fVar16 + local_2f0;
-                        goto LAB_1809c460f;
+                        goto LAB_1809c4c9f;
                       }
                     }
                   }
@@ -360,7 +360,7 @@ public class <BattleUnitAttackHappen>d__257
                 if (*plVar1 != 0) {
                   lVar7 = GameObject.get_transform(*plVar1,0);
                   if ((((*(int64 *)(lVar3 + 0x208) != 0) &&
-                       (lVar11 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398),
+                       (lVar11 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0),
                        lVar11 != null)) && (lVar11 = GridUnitData.get_GridObj(lVar11,0)) != null) &&
                      (lVar11 = GameObject.get_transform(lVar11,0)) != null) {
                     puVar8 = (uint64 *)Transform.get_localPosition(local_1e8,lVar11,0);
@@ -379,7 +379,7 @@ public class <BattleUnitAttackHappen>d__257
                                            (float)uVar13 + (float)uVar10 * 5.0 + (float)uVar9);
                       puVar8 = &local_328;
                       local_320 = local_330 + fVar16;
-                      goto LAB_1809c460f;
+                      goto LAB_1809c4c9f;
                     }
                   }
                 }
@@ -389,7 +389,7 @@ public class <BattleUnitAttackHappen>d__257
                 if (*plVar1 != 0) {
                   lVar7 = GameObject.get_transform(*plVar1,0);
                   if (((*(int64 *)(lVar3 + 0x208) != 0) &&
-                      (lVar11 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398),
+                      (lVar11 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0),
                       lVar11 != null)) &&
                      ((lVar11 = GridUnitData.get_GridObj(lVar11,0), lVar11 != null &&
                       (lVar11 = GameObject.get_transform(lVar11,0)) != null))) {
@@ -409,7 +409,7 @@ public class <BattleUnitAttackHappen>d__257
                                            (float)uVar9 + local_res8 * 5.0 + (float)uVar10);
                       puVar8 = &local_368;
                       local_360 = local_370 + fVar16;
-                      goto LAB_1809c460f;
+                      goto LAB_1809c4c9f;
                     }
                   }
                 }
@@ -426,7 +426,7 @@ public class <BattleUnitAttackHappen>d__257
               if (*plVar1 == 0) throw; // [null/range check failed]
               lVar7 = GameObject.get_transform(*plVar1,0);
               if ((((*(int64 *)(lVar3 + 0x208) == 0) ||
-                   (lVar11 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398)) == null
+                   (lVar11 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0)) == null
                    ) || (lVar11 = GridUnitData.get_GridObj(lVar11,0)) == null) ||
                  (lVar11 = GameObject.get_transform(lVar11,0)) == null) throw; // [null/range check failed]
               puVar8 = (uint64 *)Transform.get_localPosition(local_168,lVar11,0);
@@ -455,7 +455,7 @@ public class <BattleUnitAttackHappen>d__257
                                 (uVar9,&local_388,*(uint32 *)(*(int64 *)(lVar7 + 168) + 36),1,0)
               ;
               uVar9 = TweenSettingsExtensions.SetLoops(uVar9,0xffffffff);
-              TweenSettingsExtensions.SetEase(uVar9,1,DAT_181dc0d70);
+              TweenSettingsExtensions.SetEase(uVar9,1,DAT_181dc0f10);
             }
             fVar16 = 0.0;
             uVar4 = 0;
@@ -475,14 +475,14 @@ public class <BattleUnitAttackHappen>d__257
             if (iVar2 == 0) {
               fVar16 = *(float *)(lVar3 + 0x324);
               uVar4 = 0;
-        LAB_1809c4b00:
+        LAB_1809c5190:
               fVar16 = fVar16 / fVar17;
             }
             else if (iVar2 == 1) {
               fVar16 = *(float *)(lVar3 + 0x324);
               uVar4 = 0;
               if (((*(int64 *)(lVar3 + 0x208) == 0) ||
-                  (lVar7 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398)) == null)
+                  (lVar7 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0)) == null)
                  || ((lVar7 = GridUnitData.get_GridObj(lVar7,0), lVar7 == null ||
                      (lVar7 = GameObject.get_transform(lVar7,0)) == null))) throw; // [null/range check failed]
               puVar8 = (uint64 *)Transform.get_localPosition(local_128,lVar7,0);
@@ -496,7 +496,7 @@ public class <BattleUnitAttackHappen>d__257
             else if (iVar2 == 2) {
               fVar16 = (float)Random.Range(0x3f333333,0x3fa66666,0);
               if ((((*(int64 *)(lVar3 + 0x208) != 0) &&
-                   (lVar7 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398)) != null)
+                   (lVar7 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0)) != null)
                   && (lVar7 = GridUnitData.get_GridObj(lVar7,0)) != null) &&
                  (lVar7 = GameObject.get_transform(lVar7,0)) != null) {
                 puVar8 = (uint64 *)Transform.get_localPosition(local_148,lVar7,0);
@@ -507,7 +507,7 @@ public class <BattleUnitAttackHappen>d__257
                   uVar9 = Vector2.Distance(CONCAT44(uStackX_24,local_res20),*puVar8,0);
                   uVar4 = (uint32)((uint64)uVar9 >> 32);
                   fVar16 = (float)uVar9 * fVar16;
-                  goto LAB_1809c4b00;
+                  goto LAB_1809c5190;
                 }
               }
               throw; // [null/range check failed]
@@ -528,7 +528,7 @@ public class <BattleUnitAttackHappen>d__257
               *(uint64 *)(lVar7 + 16) = *puVar8;
               *(uint32 *)(lVar7 + 24) = *(uint32 *)(puVar8 + 1);
               if (((*(int64 *)(lVar3 + 0x208) == 0) ||
-                  (lVar15 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398)) == null)
+                  (lVar15 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0)) == null)
                  || ((lVar15 = GridUnitData.get_GridObj(lVar15,0), lVar15 == null ||
                      (lVar15 = GameObject.get_transform(lVar15,0)) == null))) throw; // [null/range check failed]
               puVar8 = (uint64 *)Transform.get_localPosition(local_e8,lVar15,0);
@@ -545,18 +545,18 @@ public class <BattleUnitAttackHappen>d__257
               fVar18 = (float)Vector2.Distance(*(uint64 *)(lVar7 + 16),
                                                 CONCAT44(fStack_3a4,local_3a8),0);
               *(float *)(lVar7 + 40) = fVar18 * 0.3;
-              uVar9 = new OnTooltipCB(lVar7,DAT_181d97438);
+              uVar9 = new OnTooltipCB(lVar7,DAT_181d975d0);
               uVar9 = DOTween.To(uVar9,0,0x3f800000,fVar16,0);
-              uVar10 = TweenSettingsExtensions.SetEase(uVar9,1,DAT_181dc1088);
+              uVar10 = TweenSettingsExtensions.SetEase(uVar9,1,DAT_181dc1238);
               uVar9 = *(uint64 *)(lVar7 + 48);
-              uVar13 = new OnTooltipCB(uVar9,DAT_181d973b8);
-              uVar9 = DAT_181dc02e0;
+              uVar13 = new OnTooltipCB(uVar9,DAT_181d97550);
+              uVar9 = DAT_181dc0490;
             }
             else {
               if (*plVar1 == 0) throw; // [null/range check failed]
               uVar9 = GameObject.get_transform(*plVar1,0);
               if ((((*(int64 *)(lVar3 + 0x208) == 0) ||
-                   (lVar7 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b398)) == null)
+                   (lVar7 = FUN_180002f80(*(int64 *)(lVar3 + 0x208),iVar6,DAT_181d8b3b0)) == null)
                   || (lVar7 = GridUnitData.get_GridObj(lVar7,0)) == null) ||
                  (lVar7 = GameObject.get_transform(lVar7,0)) == null) throw; // [null/range check failed]
               puVar8 = (uint64 *)Transform.get_localPosition(local_108,lVar7,0);
@@ -571,16 +571,16 @@ public class <BattleUnitAttackHappen>d__257
                                    (float)uVar13 + local_418);
               local_220 = local_250;
               uVar9 = ShortcutExtensions.DOLocalMove(uVar9,&local_258,CONCAT44(uVar4,fVar16),0,0);
-              uVar10 = TweenSettingsExtensions.SetEase(uVar9,1,DAT_181dc0f80);
-              uVar13 = new OnTooltipCB(lVar15,DAT_181d97338);
-              uVar9 = DAT_181dc01d0;
+              uVar10 = TweenSettingsExtensions.SetEase(uVar9,1,DAT_181dc1128);
+              uVar13 = new OnTooltipCB(lVar15,DAT_181d974d0);
+              uVar9 = DAT_181dc0380;
             }
             TweenSettingsExtensions.OnComplete(uVar10,uVar13,uVar9);
             if (*(int64 *)(lVar3 + 248) == 0) throw; // [null/range check failed]
-            FUN_18181e0a0();
+            FUN_18181e6b0();
             iVar6 = iVar6 + 1;
           }
-          goto LAB_1809c3c10;
+          goto LAB_1809c42a0;
         }
     }
 
@@ -592,15 +592,15 @@ public class <BattleUnitAttackHappen>d__257
     }
 
     // Token : 0x6000BFB
-    // RVA   : 0x9C5030   Offset: 0x9C4430   Length: 0x3E
+    // RVA   : 0x9C56C0   Offset: 0x9C4AC0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97638);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d977d0);
     }
 
     // Token : 0x6000BFC

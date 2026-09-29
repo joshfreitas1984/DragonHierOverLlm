@@ -47,7 +47,7 @@ public class UISpriteData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000962
-    // RVA   : 0x1709D30   Offset: 0x1709130   Length: 0x10
+    // RVA   : 0x170A340   Offset: 0x1709740   Length: 0x10
     public bool get_hasBorder()
     {
         uint uVar1;
@@ -57,7 +57,7 @@ public class UISpriteData
     }
 
     // Token : 0x6000963
-    // RVA   : 0x1709D40   Offset: 0x1709140   Length: 0x10
+    // RVA   : 0x170A350   Offset: 0x1709750   Length: 0x10
     public bool get_hasPadding()
     {
         uint uVar1;
@@ -67,10 +67,10 @@ public class UISpriteData
     }
 
     // Token : 0x6000964
-    // RVA   : 0x1709CC0   Offset: 0x17090C0   Length: 0x13
+    // RVA   : 0x170A2D0   Offset: 0x17096D0   Length: 0x13
     public void SetRect(int x, int y, int width, int height)
     {
-        void FUN_181709cc0(int64 this,uint32 x,uint32 y,uint32 width,
+        void FUN_18170a2d0(int64 this,uint32 x,uint32 y,uint32 width,
                         uint32 height)
         {
         this.height = height;
@@ -80,10 +80,10 @@ public class UISpriteData
     }
 
     // Token : 0x6000965
-    // RVA   : 0x1709CA0   Offset: 0x17090A0   Length: 0x13
+    // RVA   : 0x170A2B0   Offset: 0x17096B0   Length: 0x13
     public void SetPadding(int left, int bottom, int right, int top)
     {
-        void FUN_181709ca0(int64 this,uint32 left,uint32 bottom,uint32 right,
+        void FUN_18170a2b0(int64 this,uint32 left,uint32 bottom,uint32 right,
                         uint32 top)
         {
         this.paddingTop = top;
@@ -93,10 +93,10 @@ public class UISpriteData
     }
 
     // Token : 0x6000966
-    // RVA   : 0x1709C80   Offset: 0x1709080   Length: 0x13
+    // RVA   : 0x170A290   Offset: 0x1709690   Length: 0x13
     public void SetBorder(int left, int bottom, int right, int top)
     {
-        void FUN_181709c80(int64 this,uint32 left,uint32 bottom,uint32 right,
+        void FUN_18170a290(int64 this,uint32 left,uint32 bottom,uint32 right,
                         uint32 top)
         {
         this.borderTop = top;
@@ -106,7 +106,7 @@ public class UISpriteData
     }
 
     // Token : 0x6000967
-    // RVA   : 0x1709C00   Offset: 0x1709000   Length: 0x7D
+    // RVA   : 0x170A210   Offset: 0x1709610   Length: 0x7D
     public void CopyFrom(UISpriteData sd)
     {
         if (sd != null) {
@@ -128,7 +128,7 @@ public class UISpriteData
     }
 
     // Token : 0x6000968
-    // RVA   : 0x1709BD0   Offset: 0x1708FD0   Length: 0x2B
+    // RVA   : 0x170A1E0   Offset: 0x17095E0   Length: 0x2B
     public void CopyBorderFrom(UISpriteData sd)
     {
         if (sd != null) {
@@ -141,7 +141,7 @@ public class UISpriteData
     }
 
     // Token : 0x6000969
-    // RVA   : 0x1709CE0   Offset: 0x17090E0   Length: 0x47
+    // RVA   : 0x170A2F0   Offset: 0x17096F0   Length: 0x47
     public void /*ctor*/()
     {
         this.name = "Sprite";

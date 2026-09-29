@@ -6,12 +6,12 @@
 public class WaitForStart
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002164
+    // Token: 0x4002165
     private readonly Tween t;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002773
-    // RVA   : 0x93B0E0   Offset: 0x93A4E0   Length: 0x31
+    // RVA   : 0x93B770   Offset: 0x93AB70   Length: 0x31
     public override bool get_keepWaiting()
     {
         long lVar1;

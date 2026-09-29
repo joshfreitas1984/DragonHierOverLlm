@@ -6,25 +6,25 @@
 public class <AnimateVertexColors>d__10
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002035
+    // Token: 0x4002036
     private int <>1__state;
 
-    // Token: 0x4002036
+    // Token: 0x4002037
     private object <>2__current;
 
-    // Token: 0x4002037
+    // Token: 0x4002038
     public VertexZoom <>4__this;
 
-    // Token: 0x4002038
+    // Token: 0x4002039
     private <>c__DisplayClass10_0 <>8__1;
 
-    // Token: 0x4002039
+    // Token: 0x400203A
     private TMP_TextInfo <textInfo>5__2;
 
-    // Token: 0x400203A
+    // Token: 0x400203B
     private TMP_MeshInfo[] <cachedMeshInfoVertexData>5__3;
 
-    // Token: 0x400203B
+    // Token: 0x400203C
     private List<int> <scaleSortingOrder>5__4;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -43,7 +43,7 @@ public class <AnimateVertexColors>d__10
     }
 
     // Token : 0x600255B
-    // RVA   : 0x183FC90   Offset: 0x183F090   Length: 0x131B
+    // RVA   : 0x183FD30   Offset: 0x183F130   Length: 0x131B
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -149,14 +149,14 @@ public class <AnimateVertexColors>d__10
           uVar8 = TMP_TextInfo.CopyMeshInfoVertexData(this.<textInfo>5__2,0);
           this.<cachedMeshInfoVertexData>5__3 = uVar8;
           lVar14 = this.<>8__1;
-          uVar8 = il2cpp_internal(DAT_181d96ed0);
-          FUN_18132faf0(uVar8,DAT_181da0cf8);
+          uVar8 = il2cpp_internal(DAT_181d96ee8);
+          FUN_181330100(uVar8,DAT_181da0d10);
           if (lVar14 == null) throw; // [null/range check failed]
           puVar10 = (uint64 *)(lVar14 + 16);
           *puVar10 = uVar8;
           il2cpp_internal(puVar10,uVar8);
-          uVar8 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(uVar8,DAT_181d8f098);
+          uVar8 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(uVar8,DAT_181d8f0b0);
           this.<scaleSortingOrder>5__4 = uVar8;
           *(uint8 *)(lVar15 + 48) = 1;
         }
@@ -184,9 +184,9 @@ public class <AnimateVertexColors>d__10
           }
           if ((this.<>8__1 != 0) &&
              (lVar14 = *(int64 *)(this.<>8__1 + 16)) != null) {
-            FUN_1812f9a10(lVar14,DAT_181da0e78);
+            FUN_1812fa020(lVar14,DAT_181da0e90);
             if (this.<scaleSortingOrder>5__4 != 0) {
-              FUN_1812f9a10(this.<scaleSortingOrder>5__4,DAT_181d8f318);
+              FUN_1812fa020(this.<scaleSortingOrder>5__4,DAT_181d8f330);
               local_res18 = 0;
               if (0 < iVar4) {
                 do {
@@ -321,11 +321,11 @@ public class <AnimateVertexColors>d__10
                     if ((this.<>8__1 == 0) ||
                        (lVar11 = *(int64 *)(this.<>8__1 + 16)) == null)
                     throw; // [null/range check failed]
-                    FUN_18181de10(lVar11,fVar18,DAT_181da0df8);
+                    FUN_18181e420(lVar11,fVar18,DAT_181da0e10);
                     if ((this.<>8__1 == 0) ||
                        ((lVar11 = *(int64 *)(this.<>8__1 + 16), lVar11 == null ||
                         (this.<scaleSortingOrder>5__4 == 0)))) throw; // [null/range check failed]
-                    FUN_18182a0b0(this.<scaleSortingOrder>5__4,*(int *)(lVar11 + 24) + -1,DAT_181d8f218
+                    FUN_18182a6c0(this.<scaleSortingOrder>5__4,*(int *)(lVar11 + 24) + -1,DAT_181d8f230
                                  );
                     puVar10 = (uint64 *)Quaternion.get_identity(local_288,0);
                     uVar8 = *puVar10;
@@ -629,11 +629,11 @@ public class <AnimateVertexColors>d__10
                   if (lVar14 == null) break;
                   lVar9 = *(int64 *)(lVar14 + 24);
                   if (lVar9 == null) {
-                    lVar9 = new OnTooltipCB(lVar14,DAT_181db8468,DAT_181dab3b8);
+                    lVar9 = new OnTooltipCB(lVar14,DAT_181db8610,DAT_181dab3d0);
                     *(int64 *)(lVar14 + 24) = lVar9;
                   }
                   if (lVar11 == null) break;
-                  List_1.Sort(lVar11,lVar9,DAT_181d8f818);
+                  List_1.Sort(lVar11,lVar9,DAT_181d8f830);
                   if ((this.<textInfo>5__2 == 0) ||
                      (lVar14 = *(int64 *)(this.<textInfo>5__2 + 96)) == null) break;
                   if (*(uint32 *)(lVar14 + 24) <= uVar13) {
@@ -703,15 +703,15 @@ public class <AnimateVertexColors>d__10
     }
 
     // Token : 0x600255D
-    // RVA   : 0x1840FF0   Offset: 0x18403F0   Length: 0x3E
+    // RVA   : 0x1841090   Offset: 0x1840490   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db84f0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db8698);
     }
 
     // Token : 0x600255E

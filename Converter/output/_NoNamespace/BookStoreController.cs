@@ -23,23 +23,23 @@ public class BookStoreController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D5A
-    // RVA   : 0xC84EE0   Offset: 0xC842E0   Length: 0x36
+    // RVA   : 0xC854F0   Offset: 0xC848F0   Length: 0x36
     public static BookStoreController get_Instance()
     {
-        return **(uint64 **)(DAT_181db2820 + 184);
+        return **(uint64 **)(DAT_181db2838 + 184);
     }
 
     // Token : 0x6000D5B
-    // RVA   : 0xC83850   Offset: 0xC82C50   Length: 0x43
+    // RVA   : 0xC83E60   Offset: 0xC83260   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db2820 + 184);
+        puVar1 = *(uint64 **)(DAT_181db2838 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6000D5C
-    // RVA   : 0xC838A0   Offset: 0xC82CA0   Length: 0x1CB
+    // RVA   : 0xC83EB0   Offset: 0xC832B0   Length: 0x1CB
     public void HideBookStoreUI()
     {
         long lVar1;
@@ -78,7 +78,7 @@ public class BookStoreController
     }
 
     // Token : 0x6000D5D
-    // RVA   : 0xC83A70   Offset: 0xC82E70   Length: 0x146D
+    // RVA   : 0xC84080   Offset: 0xC83480   Length: 0x146D
     public void ShowBookStoreUI(BookStoreUIType targetType, ForceData targetForce)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -115,7 +115,7 @@ public class BookStoreController
         local_a8 = 0;
         plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
         plVar11 = plVar14;
-        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
           plVar11 = plVar6;
         }
         NGUITools.PlaySound(plVar11,0);
@@ -134,7 +134,7 @@ public class BookStoreController
               uVar13 = (uint32)plVar14;
               if (lVar7.Count <= (int)uVar13) {
                 iVar12 = 0;
-                goto LAB_180c842b0;
+                goto LAB_180c848c0;
               }
               if ((this.bookStoreUI == null) ||
                  (lVar7 = GameObject.get_transform(this.bookStoreUI,0)) == null) break;
@@ -162,7 +162,7 @@ public class BookStoreController
               lVar15 = GlobalData.AddChild(uVar9,uVar8,0);
               if (((lVar15 == null) || (lVar7 = GameObject.get_transform(lVar15,0)) == null) ||
                  (lVar7 = Transform.Find(lVar7,"Back",0)) == null) break;
-              plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d94460);
+              plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d94478);
               lVar7 = this.bookStoreCaseBackColor;
               if ((ptargetForce == 0) ||
                  (lVar10 = *(int64 *)(ptargetForce + 48)) == null) break;
@@ -170,7 +170,7 @@ public class BookStoreController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar10 = *(int64 *)(*(int64 *)(lVar10 + 16) + 56);
-              if (((lVar10 == null) || (lVar10 = FUN_180002f80(lVar10,plVar14,DAT_181d90f18)) == null)
+              if (((lVar10 == null) || (lVar10 = FUN_180002f80(lVar10,plVar14,DAT_181d90f30)) == null)
                  || ((*(int64 *)(lVar10 + 112) == 0 ||
                      (lVar10 = BookData.DataBase(*(int64 *)(lVar10 + 112),0)) == null))) break;
               uVar2 = *(uint32 *)(lVar10 + 52);
@@ -188,14 +188,14 @@ public class BookStoreController
               lVar7 = GameObject.get_transform(lVar15,0);
               if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,"BookName",0)) == null) ||
                  (lVar7 = Transform.Find(lVar7,"Text",0)) == null) break;
-              uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+              uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
               if ((ptargetForce == 0) ||
                  (lVar7 = *(int64 *)(ptargetForce + 48)) == null) break;
               if (lVar7.Count < 4) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar7 = *(int64 *)(lVar7._items + 56);
-              if ((lVar7 == null) || (lVar7 = FUN_180002f80(lVar7,plVar14,DAT_181d90f18)) == null) break;
+              if ((lVar7 == null) || (lVar7 = FUN_180002f80(lVar7,plVar14,DAT_181d90f30)) == null) break;
               uVar9 = ItemData.Name(lVar7,0,0);
               LTLocalization.SetText(uVar8,uVar9,0);
               lVar15 = GameObject.get_transform(lVar15,0);
@@ -236,7 +236,7 @@ public class BookStoreController
           }
         }
         throw; // [null/range check failed]
-        LAB_180c842b0:
+        LAB_180c848c0:
         lVar7 = "";
         lVar15 = *(int64 *)(pStatics + 0x4f8);
         if (lVar15 == null) throw; // [null/range check failed]
@@ -255,18 +255,18 @@ public class BookStoreController
           GlobalData.SortChild(uVar8);
           iVar12 = local_a4 + 1;
           local_a4 = iVar12;
-          goto LAB_180c842b0;
+          goto LAB_180c848c0;
         }
         local_98 = "";
         if ((*(int64 *)(targetForce + 200) == 0) ||
-           (lVar15 = Dictionary_2.get_Keys(*(int64 *)(targetForce + 200),DAT_181dbb0d8)) == null)
+           (lVar15 = Dictionary_2.get_Keys(*(int64 *)(targetForce + 200),DAT_181dbb0f0)) == null)
         throw; // [null/range check failed]
-        FUN_180ecbf30(&local_88,lVar15,DAT_181dc2928);
+        FUN_180ecc540(&local_88,lVar15,DAT_181dc2940);
         local_68 = CONCAT44(uStack_84,local_88);
         uStack_60 = CONCAT44(uStack_7c,uStack_80);
         local_58 = local_78;
-        while (cVar4 = FUN_1811c41d0(&local_68,DAT_181d98ed8), uVar3 = local_58, cVar4) {
-          plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,6);
+        while (cVar4 = FUN_1811c47e0(&local_68,DAT_181d98ef0), uVar3 = local_58, cVar4) {
+          plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
           if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -284,7 +284,7 @@ public class BookStoreController
           }
           plVar6[4] = lVar7;
           il2cpp_internal(plVar6 + 4,lVar7);
-          cVar4 = FUN_18171e540(lVar7,"",0);
+          cVar4 = FUN_18171eb50(lVar7,"",0);
           lVar15 = "\n";
           if (cVar4) {
             lVar15 = "";
@@ -339,7 +339,7 @@ public class BookStoreController
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar5 = FUN_181467530(*(int64 *)(targetForce + 200),uVar3 & 0xffffffff,DAT_181dbb050);
+          uVar5 = FUN_181467b40(*(int64 *)(targetForce + 200),uVar3 & 0xffffffff,DAT_181dbb068);
           if (lVar15 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -377,14 +377,14 @@ public class BookStoreController
           lVar7 = String.Concat(plVar6,0);
           local_98 = lVar7;
         }
-        ZhSegment.Initialize(&local_68,DAT_181d98e58);
+        ZhSegment.Initialize(&local_68,DAT_181d98e70);
         if ((((this.bookStoreUI == null) ||
              (lVar15 = GameObject.get_transform(this.bookStoreUI,0)) == null) ||
             (lVar15 = Transform.Find(lVar15,"SpeAdd",0)) == null) ||
            (((lVar15 = Transform.Find(lVar15,"Viewport",0), lVar15 == null ||
              (lVar15 = Transform.Find(lVar15,"Content",0)) == null) ||
             (lVar15 = Transform.Find(lVar15,"Text",0)) == null))) throw; // [null/range check failed]
-        uVar8 = Component.GetComponent(lVar15,DAT_181d96160);
+        uVar8 = Component.GetComponent(lVar15,DAT_181d96178);
         LTLocalization.SetText(uVar8,lVar7,0);
         local_a8 = 0;
         while( true ) {
@@ -402,10 +402,10 @@ public class BookStoreController
              (((lVar15 = Transform.Find(lVar15,uVar8,0), lVar15 == null ||
                (lVar15 = Transform.Find(lVar15,"Label",0)) == null) ||
               (lVar15 = Transform.Find(lVar15,"Icon",0)) == null))) break;
-          plVar6 = (int64 *)Component.GetComponent(lVar15,DAT_181d94460);
+          plVar6 = (int64 *)Component.GetComponent(lVar15,DAT_181d94478);
           lVar15 = FUN_18046c100(0);
           if (((lVar15 == null) || (*(int64 *)(lVar15 + 56) == 0)) ||
-             ((lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),local_a8,DAT_181d9e108), lVar15 == null ||
+             ((lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),local_a8,DAT_181d9e120), lVar15 == null ||
               (plVar6 == (int64 *)0)))) break;
           local_88 = *(uint32 *)(lVar15 + 24);
           uStack_84 = *(uint32 *)(lVar15 + 28);
@@ -419,7 +419,7 @@ public class BookStoreController
           if ((lVar15 == null) ||
              ((lVar15 = Transform.Find(lVar15,uVar8,0), lVar15 == null ||
               (lVar15 = Transform.Find(lVar15,"Label",0)) == null))) break;
-          uVar8 = Component.GetComponent(lVar15,DAT_181d96160);
+          uVar8 = Component.GetComponent(lVar15,DAT_181d96178);
           lVar15 = *(int64 *)(pStatics + 0x4f8);
           if (lVar15 == null) break;
           uVar9 = FUN_180002f80(lVar15,local_a8);
@@ -433,7 +433,7 @@ public class BookStoreController
              (((lVar15 = Transform.Find(lVar15,uVar8,0), lVar15 == null ||
                (lVar15 = Transform.Find(lVar15,"Label",0)) == null) ||
               (lVar15 = Transform.Find(lVar15,"Describe",0)) == null))) break;
-          uVar8 = Component.GetComponent(lVar15,DAT_181d96160);
+          uVar8 = Component.GetComponent(lVar15,DAT_181d96178);
           iVar12 = local_a8;
           lVar15 = FUN_18046c0a0(0);
           if (((lVar15 == null) || (*(int64 *)(lVar15 + 32) == 0)) ||
@@ -453,7 +453,7 @@ public class BookStoreController
           if ((lVar15 == null) ||
              ((((lVar15 = Transform.Find(lVar15,uVar8,0), lVar15 == null ||
                 (lVar15 = Transform.Find(lVar15,"Scroll View",0)) == null) ||
-               (lVar15 = Component.GetComponent(lVar15,DAT_181d951e0)) == null) ||
+               (lVar15 = Component.GetComponent(lVar15,DAT_181d951f8)) == null) ||
               (*(int64 *)(lVar15 + 64) == 0)))) break;
           Scrollbar.set_value(*(int64 *)(lVar15 + 64),0);
           if ((this.bookStoreUI == null) ||

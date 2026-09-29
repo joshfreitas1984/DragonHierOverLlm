@@ -6,34 +6,34 @@
 public class AttriPresetData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C16
+    // Token: 0x4001C17
     public Sprite sprite;
 
-    // Token: 0x4001C17
+    // Token: 0x4001C18
     public string name;
 
-    // Token: 0x4001C18
+    // Token: 0x4001C19
     public string describe;
 
-    // Token: 0x4001C19
+    // Token: 0x4001C1A
     public bool recommend;
 
-    // Token: 0x4001C1A
+    // Token: 0x4001C1B
     public int leftAttriPoint;
 
-    // Token: 0x4001C1B
+    // Token: 0x4001C1C
     public int leftFightSkillPoint;
 
-    // Token: 0x4001C1C
+    // Token: 0x4001C1D
     public int leftLivingSkillPoint;
 
-    // Token: 0x4001C1D
+    // Token: 0x4001C1E
     public List<float> maxAttri;
 
-    // Token: 0x4001C1E
+    // Token: 0x4001C1F
     public List<float> maxFightSkill;
 
-    // Token: 0x4001C1F
+    // Token: 0x4001C20
     public List<float> maxLivingSkill;
 
     // ── Methods ──────────────────────────────────────────────────

@@ -20,7 +20,7 @@ public class UIShowControlScheme
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000276
-    // RVA   : 0x1705570   Offset: 0x1704970   Length: 0x1D2
+    // RVA   : 0x1705B80   Offset: 0x1704F80   Length: 0x1D2
     private void OnEnable()
     {
         ulong uVar1;
@@ -30,11 +30,11 @@ public class UIShowControlScheme
         long lVar7;
         byte uVar8;
         uVar1 = UICamera.onSchemeChange;
-        uVar4 = new OnTooltipCB(this,DAT_181dc64d0,0);
+        uVar4 = new OnTooltipCB(this,DAT_181dc6680,0);
         plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4);
         plVar9 = (int64 *)0;
         if (plVar5 != (int64 *)0) {
-          if (*plVar5 == DAT_181d8d6b8) {
+          if (*plVar5 == DAT_181d8d6d0) {
             plVar9 = plVar5;
           }
           if (plVar9 == (int64 *)0) {
@@ -49,12 +49,12 @@ public class UIShowControlScheme
           iVar3 = UICamera.get_currentScheme(0);
           if (iVar3 == 0) {
             lVar7 = this.target;
-            if (lVar7 == null) goto LAB_18170573d;
+            if (lVar7 == null) goto LAB_181705d4d;
             uVar8 = this.mouse;
           }
           else if (iVar3 == 1) {
             lVar7 = this.target;
-            if (lVar7 == null) goto LAB_18170573d;
+            if (lVar7 == null) goto LAB_181705d4d;
             uVar8 = this.touch;
           }
           else {
@@ -63,7 +63,7 @@ public class UIShowControlScheme
             }
             lVar7 = this.target;
             if (lVar7 == null) {
-        LAB_18170573d:
+        LAB_181705d4d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -74,29 +74,29 @@ public class UIShowControlScheme
     }
 
     // Token : 0x6000277
-    // RVA   : 0x1705470   Offset: 0x1704870   Length: 0xFF
+    // RVA   : 0x1705A80   Offset: 0x1704E80   Length: 0xFF
     private void OnDisable()
     {
         ulong uVar1;
         ulong uVar2;
         uVar1 = UICamera.onSchemeChange;
-        uVar2 = new OnTooltipCB(this,DAT_181dc64d0,0);
+        uVar2 = new OnTooltipCB(this,DAT_181dc6680,0);
         plVar3 = (int64 *)Delegate.Remove(uVar1,uVar2,0);
         plVar4 = (int64 *)0;
         if (plVar3 != (int64 *)0) {
-          if (*plVar3 == DAT_181d8d6b8) {
+          if (*plVar3 == DAT_181d8d6d0) {
             plVar4 = plVar3;
           }
           if (plVar4 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar3,DAT_181d8d6b8);
+            FUN_1800d6070(plVar3,DAT_181d8d6d0);
           }
         }
         UICamera.onSchemeChange = plVar4;
     }
 
     // Token : 0x6000278
-    // RVA   : 0x1705750   Offset: 0x1704B50   Length: 0xFE
+    // RVA   : 0x1705D60   Offset: 0x1705160   Length: 0xFE
     private void OnScheme()
     {
         ulong uVar1;
@@ -130,10 +130,10 @@ public class UIShowControlScheme
     }
 
     // Token : 0x6000279
-    // RVA   : 0x1705850   Offset: 0x1704C50   Length: 0xB
+    // RVA   : 0x1705E60   Offset: 0x1705260   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_181705850(int64 this)
+        void FUN_181705e60(int64 this)
         {
         this.controller = 1;
         FUN_18044ef50(this,0);

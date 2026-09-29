@@ -11,12 +11,12 @@ public class ReplaceForceSkillController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009D0
-    // RVA   : 0xD12CA0   Offset: 0xD120A0   Length: 0x66
+    // RVA   : 0xD132B0   Offset: 0xD126B0   Length: 0x66
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = **(int64 **)(DAT_181d87998 + 184);
+        lVar1 = **(int64 **)(DAT_181d879b0 + 184);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           ManageReplaceForceController.RemoveForceSkill(lVar1,uVar2,0);

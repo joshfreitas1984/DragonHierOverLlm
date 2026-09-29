@@ -26,7 +26,7 @@ public class Validate
     }
 
     // Token : 0x60002A6
-    // RVA   : 0xFB2EC0   Offset: 0xFB22C0   Length: 0x2BE
+    // RVA   : 0xFB34D0   Offset: 0xFB28D0   Length: 0x2BE
     public virtual bool Invoke(bool choice)
     {
         long lVar1;
@@ -66,7 +66,7 @@ public class Validate
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_180fb3141;
+            goto LAB_180fb3751;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
               cVar4 = FUN_1800d65c0(lVar1);
@@ -89,7 +89,7 @@ public class Validate
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar6);
                       uVar5 = (*(code *)*puVar7)(plVar3,choice,puVar7[1]);
-                      goto LAB_180fb314d;
+                      goto LAB_180fb375d;
                     }
                     uVar10 = uVar10 + 1;
                   } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -118,13 +118,13 @@ public class Validate
                               (int)((uint32)uVar10 +
                                    *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)) *
                               16 + 0x138 + lVar6;
-                      goto LAB_180fb3016;
+                      goto LAB_180fb3626;
                     }
                     uVar9 = uVar9 + 1;
                   } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
                 lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180fb3016:
+        LAB_180fb3626:
                 puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                 uVar5 = (*(code *)*puVar7)(plVar3,choice,puVar7);
               }
@@ -134,10 +134,10 @@ public class Validate
             uVar5 = (*pcVar2)(choice,lVar1);
           }
           else {
-        LAB_180fb3141:
+        LAB_180fb3751:
             uVar5 = (*pcVar2)(plVar3,choice,lVar1);
           }
-        LAB_180fb314d:
+        LAB_180fb375d:
           uVar12 = uVar12 + 1;
           if (uVar13 <= uVar12) {
             return uVar5;
@@ -146,7 +146,7 @@ public class Validate
     }
 
     // Token : 0x60002A7
-    // RVA   : 0x1844850   Offset: 0x1843C50   Length: 0x7A
+    // RVA   : 0x18448F0   Offset: 0x1843CF0   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(bool choice, AsyncCallback callback, object object)
     {
         void Validate.BeginInvoke
@@ -157,7 +157,7 @@ public class Validate
         uint64 local_10;
         local_res10[0] = choice;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181db2ac8,local_res10);
+        local_18 = il2cpp_value_box(DAT_181db2ae0,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 

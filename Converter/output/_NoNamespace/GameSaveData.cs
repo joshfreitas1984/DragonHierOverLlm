@@ -38,7 +38,7 @@ public class GameSaveData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000E95
-    // RVA   : 0xA5CB90   Offset: 0xA5BF90   Length: 0x14
+    // RVA   : 0xA5D220   Offset: 0xA5C620   Length: 0x14
     public bool CheckAllFinished()
     {
         ulong in_RAX;
@@ -49,7 +49,7 @@ public class GameSaveData
     }
 
     // Token : 0x6000E96
-    // RVA   : 0xA5CBB0   Offset: 0xA5BFB0   Length: 0x19
+    // RVA   : 0xA5D240   Offset: 0xA5C640   Length: 0x19
     public void SetAllUnfinish(bool _loading)
     {
         this.loading = _loading;
@@ -60,7 +60,7 @@ public class GameSaveData
     }
 
     // Token : 0x6000E97
-    // RVA   : 0xA5CBD0   Offset: 0xA5BFD0   Length: 0x16
+    // RVA   : 0xA5D260   Offset: 0xA5C660   Length: 0x16
     public void SetSaveFailed()
     {
         this.saveTimeCount = 0;
@@ -70,7 +70,7 @@ public class GameSaveData
     }
 
     // Token : 0x6000E98
-    // RVA   : 0xA5CBF0   Offset: 0xA5BFF0   Length: 0x11
+    // RVA   : 0xA5D280   Offset: 0xA5C680   Length: 0x11
     public void /*ctor*/()
     {
         this.worldDataFinished = 0x101;

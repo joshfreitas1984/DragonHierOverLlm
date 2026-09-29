@@ -20,7 +20,7 @@ public class UIToggledObjects
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60002AC
-    // RVA   : 0xC075A0   Offset: 0xC069A0   Length: 0x180
+    // RVA   : 0xC07C10   Offset: 0xC07010   Length: 0x180
     private void Awake()
     {
         ulong uVar1;
@@ -38,28 +38,28 @@ public class UIToggledObjects
             if (lVar2 == null) throw; // [null/range check failed]
             if (lVar2.Count == null) {
               if (!this.inverse) {
-                FUN_18181e0a0(lVar4,this.target,DAT_181d89398);
+                FUN_18181e6b0(lVar4,this.target,DAT_181d893b0);
               }
               else {
-                FUN_18181e0a0(lVar2,this.target,DAT_181d89398);
+                FUN_18181e6b0(lVar2,this.target,DAT_181d893b0);
               }
-              goto LAB_180c076a4;
+              goto LAB_180c07d14;
             }
           }
           this.target = 0;
         }
-        LAB_180c076a4:
-        lVar4 = Component.GetComponent(this,DAT_181d96fe0);
+        LAB_180c07d14:
+        lVar4 = Component.GetComponent(this,DAT_181d96ff8);
         if (lVar4 != null) {
           uVar1 = *(uint64 *)(lVar4 + 80);
-          uVar5 = new OnTooltipCB(this,DAT_181dc6a20,0);
+          uVar5 = new OnTooltipCB(this,DAT_181dc6bd0,0);
           EventDelegate.Add(uVar1,uVar5,0);
           return;
         }
     }
 
     // Token : 0x60002AD
-    // RVA   : 0xC077D0   Offset: 0xC06BD0   Length: 0x2AA
+    // RVA   : 0xC07E40   Offset: 0xC07240   Length: 0x2AA
     public void Toggle()
     {
         ulong uVar1;
@@ -69,7 +69,7 @@ public class UIToggledObjects
         uint uVar5;
         long lVar6;
         long lVar7;
-        if (*(int64 *)(*(int64 *)(DAT_181db04f8 + 184) + 8) != 0) {
+        if (*(int64 *)(*(int64 *)(DAT_181db0510 + 184) + 8) != 0) {
           cVar2 = Behaviour.get_enabled(this,0);
           if (!cVar2) {
             return;
@@ -83,7 +83,7 @@ public class UIToggledObjects
             do {
               if (lVar3.Count <= (int)uVar5) {
                 lVar3 = this.deactivate;
-                if (lVar3 != null) goto LAB_180c07987;
+                if (lVar3 != null) goto LAB_180c07ff7;
                 break;
               }
               if (lVar3 == null) break;
@@ -115,7 +115,7 @@ public class UIToggledObjects
           uVar4 = uVar4 + 1;
           lVar7 = lVar7 + 8;
           if (lVar3 == null) break;
-        LAB_180c07987:
+        LAB_180c07ff7:
           if (lVar3.Count <= (int)uVar4) {
             return;
           }
@@ -124,7 +124,7 @@ public class UIToggledObjects
     }
 
     // Token : 0x60002AE
-    // RVA   : 0xC07730   Offset: 0xC06B30   Length: 0xA0
+    // RVA   : 0xC07DA0   Offset: 0xC071A0   Length: 0xA0
     private void Set(GameObject go, bool state)
     {
         bool cVar1;

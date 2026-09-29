@@ -26,7 +26,7 @@ public class OnCenterCallback
     }
 
     // Token : 0x6000106
-    // RVA   : 0x8E6F30   Offset: 0x8E6330   Length: 0x26A
+    // RVA   : 0x919570   Offset: 0x918970   Length: 0x26A
     public virtual void Invoke(GameObject centeredObject)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class OnCenterCallback
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e715e;
+              goto LAB_18091979e;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -94,7 +94,7 @@ public class OnCenterCallback
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e6fc8;
+              goto LAB_180919608;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -125,11 +125,11 @@ public class OnCenterCallback
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_1808e6fc8:
+        LAB_180919608:
             (*pcVar2)(centeredObject,lVar1);
           }
           else {
-        LAB_1808e715e:
+        LAB_18091979e:
             (*pcVar2)(plVar3,centeredObject,lVar1);
           }
           uVar9 = uVar9 + 1;

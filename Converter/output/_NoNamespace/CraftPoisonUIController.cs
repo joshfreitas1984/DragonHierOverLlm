@@ -50,32 +50,32 @@ public class CraftPoisonUIController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001334
-    // RVA   : 0xA3DE80   Offset: 0xA3D280   Length: 0x36
+    // RVA   : 0xA3E510   Offset: 0xA3D910   Length: 0x36
     public static CraftPoisonUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181dba778 + 184);
+        return **(uint64 **)(DAT_181dba790 + 184);
     }
 
     // Token : 0x6001335
-    // RVA   : 0xA3B880   Offset: 0xA3AC80   Length: 0xD7
+    // RVA   : 0xA3BF10   Offset: 0xA3B310   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181dba778 + 184);
+        uVar3 = **(uint64 **)(DAT_181dba790 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181dba778 + 184);
+        puVar1 = *(uint64 **)(DAT_181dba790 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6001336
-    // RVA   : 0xA3C3E0   Offset: 0xA3B7E0   Length: 0x30
+    // RVA   : 0xA3CA70   Offset: 0xA3BE70   Length: 0x30
     public void HideCraftPoisonUI()
     {
         if (this.poisonUIPanel != null) {
@@ -86,7 +86,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001337
-    // RVA   : 0xA3C420   Offset: 0xA3B820   Length: 0xE6
+    // RVA   : 0xA3CAB0   Offset: 0xA3BEB0   Length: 0xE6
     public void OpenCraftPoisonUI(AreaBuildingData _targetBuilding, bool _useMoney)
     {
         void CraftPoisonUIController.OpenCraftPoisonUI
@@ -96,7 +96,7 @@ public class CraftPoisonUIController
         int64 *plVar2;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Med",0);
         plVar2 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
           plVar2 = plVar1;
         }
         NGUITools.PlaySound(plVar2,0);
@@ -110,7 +110,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001338
-    // RVA   : 0xA3B960   Offset: 0xA3AD60   Length: 0x11F
+    // RVA   : 0xA3BFF0   Offset: 0xA3B3F0   Length: 0x11F
     public void ChangeCraftPoisonTypeClicked(GameObject buttonClicked)
     {
         int iVar1;
@@ -130,7 +130,7 @@ public class CraftPoisonUIController
               CraftPoisonUIController.ClearPoisonTarget(this,0);
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
               plVar7 = (int64 *)0;
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
                 plVar7 = plVar6;
               }
               NGUITools.PlaySound(plVar7,0);
@@ -141,10 +141,10 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001339
-    // RVA   : 0xA3D170   Offset: 0xA3C570   Length: 0x325
+    // RVA   : 0xA3D800   Offset: 0xA3CC00   Length: 0x325
     public void PoisonTargetButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -159,37 +159,37 @@ public class CraftPoisonUIController
           iVar1 = this.craftPoisonType;
           if (iVar1 == 0) {
             lVar5 = *pStatics;
-            lVar3 = il2cpp_internal(DAT_181d94e50);
-            FUN_18132faf0(lVar3,DAT_181d95788);
+            lVar3 = il2cpp_internal(DAT_181d94e68);
+            FUN_181330100(lVar3,DAT_181d957a0);
             local_res8[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
             if (lVar3 == null) {
-        LAB_180a3d484:
+        LAB_180a3db14:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+            FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
             local_res18[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d80418,local_res18);
-            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+            uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+            FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
             uVar4 = Component.get_gameObject(this,0);
-            if (lVar5 == null) goto LAB_180a3d484;
+            if (lVar5 == null) goto LAB_180a3db14;
             uVar6 = 16;
           }
           else if (iVar1 == 1) {
             lVar5 = *pStatics;
-            lVar3 = il2cpp_internal(DAT_181d94e50);
-            FUN_18132faf0(lVar3,DAT_181d95788);
+            lVar3 = il2cpp_internal(DAT_181d94e68);
+            FUN_181330100(lVar3,DAT_181d957a0);
             local_res8[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
             if (lVar3 == null) {
-        LAB_180a3d490:
+        LAB_180a3db20:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+            FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
             uVar4 = Component.get_gameObject(this,0);
-            if (lVar5 == null) goto LAB_180a3d490;
+            if (lVar5 == null) goto LAB_180a3db20;
             uVar6 = 0;
           }
           else {
@@ -197,18 +197,18 @@ public class CraftPoisonUIController
               return;
             }
             lVar5 = *pStatics;
-            lVar3 = il2cpp_internal(DAT_181d94e50);
-            FUN_18132faf0(lVar3,DAT_181d95788);
+            lVar3 = il2cpp_internal(DAT_181d94e68);
+            FUN_181330100(lVar3,DAT_181d957a0);
             local_res8[0] = 0;
-            uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
             if (lVar3 == null) {
-        LAB_180a3d48a:
+        LAB_180a3db1a:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+            FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
             uVar4 = Component.get_gameObject(this,0);
-            if (lVar5 == null) goto LAB_180a3d48a;
+            if (lVar5 == null) goto LAB_180a3db1a;
             uVar6 = 17;
           }
           ChooseController.ShowChoosePanel(lVar5,1,lVar3,uVar4,"PoisonTargetChoosen",0,uVar6,0,0,0);
@@ -216,11 +216,11 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x600133A
-    // RVA   : 0xA3D4A0   Offset: 0xA3C8A0   Length: 0x202
+    // RVA   : 0xA3DB30   Offset: 0xA3CF30   Length: 0x202
     public void PoisonTargetChoosen()
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
+        var pStatics_7530 = *(int64*)(DAT_181db7530 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -237,8 +237,8 @@ public class CraftPoisonUIController
                 this.poisonTargetItemIcon = uVar3;
                 if (this.poisonTargetItemIcon != null) {
                   lVar2 = GameObject.GetComponent(this.poisonTargetItemIcon,DAT_181d720a0);
-                  if ((*pStatics_7518 != 0) &&
-                     (lVar4 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+                  if ((*pStatics_7530 != 0) &&
+                     (lVar4 = *(int64 *)(*pStatics_7530 + 72)) != null) {
                     lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0);
                     if ((lVar4 != null) && (lVar2 != null)) {
                       *(uint64 *)(lVar2 + 32) = *(uint64 *)(lVar4 + 32);
@@ -268,7 +268,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x600133B
-    // RVA   : 0xA3BC60   Offset: 0xA3B060   Length: 0x226
+    // RVA   : 0xA3C2F0   Offset: 0xA3B6F0   Length: 0x226
     public void ClearPoisonTarget()
     {
         long lVar1;
@@ -311,7 +311,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x600133C
-    // RVA   : 0xA3C9D0   Offset: 0xA3BDD0   Length: 0x2BF
+    // RVA   : 0xA3D060   Offset: 0xA3C460   Length: 0x2BF
     public void PoisonMaterialButtonClicked()
     {
         bool cVar1;
@@ -328,16 +328,16 @@ public class CraftPoisonUIController
         uVar3 = this.poisonTargetItemIcon;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (!cVar1) {
-          lVar4 = **(int64 **)(DAT_181db7518 + 184);
-          lVar2 = il2cpp_internal(DAT_181d94e50);
-          FUN_18132faf0(lVar2,DAT_181d95788);
+          lVar4 = **(int64 **)(DAT_181db7530 + 184);
+          lVar2 = il2cpp_internal(DAT_181d94e68);
+          FUN_181330100(lVar2,DAT_181d957a0);
           local_res8[0] = 0;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
           if (lVar2 != null) {
-            FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+            FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
             local_res18[0] = 5;
-            uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
-            FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+            uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+            FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
             uVar3 = Component.get_gameObject(this,0);
             if (lVar4 != null) {
               ChooseController.ShowChoosePanel(lVar4,1,lVar2,uVar3,"PoisonMaterialChoosen",0,15,0,0,0);
@@ -355,18 +355,18 @@ public class CraftPoisonUIController
         GameController.ShowTextOnMouse(lVar4,"需要先选择用毒目标！",0);
         plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
         plVar6 = (int64 *)0;
-        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
           plVar6 = plVar5;
         }
         NGUITools.PlaySound(plVar6,0);
     }
 
     // Token : 0x600133D
-    // RVA   : 0xA3CF00   Offset: 0xA3C300   Length: 0x26E
+    // RVA   : 0xA3D590   Offset: 0xA3C990   Length: 0x26E
     public void PoisonMaterialChoosen()
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
+        var pStatics_7530 = *(int64*)(DAT_181db7530 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -383,8 +383,8 @@ public class CraftPoisonUIController
                 this.poisonMaterialItemIcon = uVar3;
                 if (this.poisonMaterialItemIcon != null) {
                   lVar2 = GameObject.GetComponent(this.poisonMaterialItemIcon,DAT_181d720a0);
-                  if ((*pStatics_7518 != 0) &&
-                     (lVar4 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+                  if ((*pStatics_7530 != 0) &&
+                     (lVar4 = *(int64 *)(*pStatics_7530 + 72)) != null) {
                     lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0);
                     if ((lVar4 != null) && (lVar2 != null)) {
                       *(uint64 *)(lVar2 + 32) = *(uint64 *)(lVar4 + 32);
@@ -422,7 +422,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x600133E
-    // RVA   : 0xA3BB70   Offset: 0xA3AF70   Length: 0xE7
+    // RVA   : 0xA3C200   Offset: 0xA3B600   Length: 0xE7
     public void ClearPoisonMaterial()
     {
         long lVar1;
@@ -445,7 +445,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x600133F
-    // RVA   : 0xA3C710   Offset: 0xA3BB10   Length: 0x2BF
+    // RVA   : 0xA3CDA0   Offset: 0xA3C1A0   Length: 0x2BF
     public void PoisonMaterialButtonClickedSub()
     {
         bool cVar1;
@@ -462,16 +462,16 @@ public class CraftPoisonUIController
         uVar3 = this.poisonTargetItemIcon;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (!cVar1) {
-          lVar4 = **(int64 **)(DAT_181db7518 + 184);
-          lVar2 = il2cpp_internal(DAT_181d94e50);
-          FUN_18132faf0(lVar2,DAT_181d95788);
+          lVar4 = **(int64 **)(DAT_181db7530 + 184);
+          lVar2 = il2cpp_internal(DAT_181d94e68);
+          FUN_181330100(lVar2,DAT_181d957a0);
           local_res8[0] = 0;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
           if (lVar2 != null) {
-            FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+            FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
             local_res18[0] = 5;
-            uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
-            FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+            uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+            FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
             uVar3 = Component.get_gameObject(this,0);
             if (lVar4 != null) {
               ChooseController.ShowChoosePanel(lVar4,1,lVar2,uVar3,"PoisonMaterialChoosenSub",0,15,0,0,0);
@@ -489,18 +489,18 @@ public class CraftPoisonUIController
         GameController.ShowTextOnMouse(lVar4,"需要先选择用毒目标！",0);
         plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
         plVar6 = (int64 *)0;
-        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
           plVar6 = plVar5;
         }
         NGUITools.PlaySound(plVar6,0);
     }
 
     // Token : 0x6001340
-    // RVA   : 0xA3CC90   Offset: 0xA3C090   Length: 0x26E
+    // RVA   : 0xA3D320   Offset: 0xA3C720   Length: 0x26E
     public void PoisonMaterialChoosenSub()
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
+        var pStatics_7530 = *(int64*)(DAT_181db7530 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -517,8 +517,8 @@ public class CraftPoisonUIController
                 this.poisonMaterialItemIconSub = uVar3;
                 if (this.poisonMaterialItemIconSub != null) {
                   lVar2 = GameObject.GetComponent(this.poisonMaterialItemIconSub,DAT_181d720a0);
-                  if ((*pStatics_7518 != 0) &&
-                     (lVar4 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+                  if ((*pStatics_7530 != 0) &&
+                     (lVar4 = *(int64 *)(*pStatics_7530 + 72)) != null) {
                     lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0);
                     if ((lVar4 != null) && (lVar2 != null)) {
                       *(uint64 *)(lVar2 + 32) = *(uint64 *)(lVar4 + 32);
@@ -556,7 +556,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001341
-    // RVA   : 0xA3BA80   Offset: 0xA3AE80   Length: 0xE7
+    // RVA   : 0xA3C110   Offset: 0xA3B510   Length: 0xE7
     public void ClearPoisonMaterialSub()
     {
         long lVar1;
@@ -579,7 +579,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001342
-    // RVA   : 0xA3C270   Offset: 0xA3B670   Length: 0x16F
+    // RVA   : 0xA3C900   Offset: 0xA3BD00   Length: 0x16F
     public HeroSpeAddData GetTotalPoisonSpeAddData()
     {
         bool cVar1;
@@ -611,7 +611,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001343
-    // RVA   : 0xA3D6B0   Offset: 0xA3CAB0   Length: 0x7CF
+    // RVA   : 0xA3DD40   Offset: 0xA3D140   Length: 0x7CF
     public void RefreshCraftPoisonInfo()
     {
         int iVar1;
@@ -633,21 +633,21 @@ public class CraftPoisonUIController
         local_res18[0] = 0;
         if (((GameController._instance == null) ||
             (lVar4 = GameController._instance.worldData) == null) ||
-           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180a3de74;
+           (lVar4 = WorldData.Player(lVar4,0)) == null) goto LAB_180a3e504;
         cVar3 = HeroData.HaveForceFunction(lVar4,7);
         lVar4 = this.poisonUIPanel;
         if (!cVar3) {
           if (((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
-             (lVar4 = Transform.Find(lVar4,"PoisonMaterialSub",0)) == null) goto LAB_180a3de74;
+             (lVar4 = Transform.Find(lVar4,"PoisonMaterialSub",0)) == null) goto LAB_180a3e504;
           lVar4 = Component.get_gameObject(lVar4,0);
-          if (lVar4 == null) goto LAB_180a3de74;
+          if (lVar4 == null) goto LAB_180a3e504;
           uVar10 = 0;
         }
         else {
           if (((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
-             (lVar4 = Transform.Find(lVar4,"PoisonMaterialSub",0)) == null) goto LAB_180a3de74;
+             (lVar4 = Transform.Find(lVar4,"PoisonMaterialSub",0)) == null) goto LAB_180a3e504;
           lVar4 = Component.get_gameObject(lVar4,0);
-          if (lVar4 == null) goto LAB_180a3de74;
+          if (lVar4 == null) goto LAB_180a3e504;
           uVar10 = 1;
         }
         GameObject.SetActive(lVar4,uVar10,0);
@@ -659,7 +659,7 @@ public class CraftPoisonUIController
           if (cVar3) {
             uVar10 = this.poisonMaterialItemIconSub;
             cVar3 = Object.op_Equality(uVar10,0,0);
-            if (cVar3) goto LAB_180a3de1d;
+            if (cVar3) goto LAB_180a3e4ad;
           }
           plVar2 = this.PoisonExtraAdd;
           puVar5 = (uint32 *)Color.get_black(&local_38,0);
@@ -674,7 +674,7 @@ public class CraftPoisonUIController
           (**(code **)(*plVar2 + 0x2a8))(plVar2,&local_38,*(uint64 *)(*plVar2 + 0x2b0));
           uVar10 = this.CostTime;
           local_res20[0] = CraftPoisonUIController.GetCostTime(this,0);
-          uVar6 = il2cpp_value_box(DAT_181d80418,local_res20);
+          uVar6 = il2cpp_value_box(DAT_181d80430,local_res20);
           uVar6 = String.Format("消耗时间：{0}天",uVar6,0);
           LTLocalization.SetText(uVar10,uVar6,0);
           LTLocalization.SetText(this.PoisonExtraAdd,"",0);
@@ -691,7 +691,7 @@ public class CraftPoisonUIController
                    (lVar4 = GameObject.GetComponent(this.poisonMaterialItemIcon,DAT_181d720a0),
                    lVar4 == null)) || (lVar4.villageAreaID == null)) ||
                  (lVar4 = *(int64 *)(lVar4.villageAreaID + 128)) == null)
-              goto LAB_180a3de74;
+              goto LAB_180a3e504;
               uVar9 = HeroSpeAddData.op_Addition(uVar9,lVar4.chapter,0);
             }
             uVar7 = this.poisonMaterialItemIconSub;
@@ -702,12 +702,12 @@ public class CraftPoisonUIController
                   lVar4 == null)) ||
                  ((lVar4.villageAreaID == null ||
                   (lVar4 = *(int64 *)(lVar4.villageAreaID + 128)) == null)))
-              goto LAB_180a3de74;
+              goto LAB_180a3e504;
               uVar9 = HeroSpeAddData.op_Addition(uVar9,lVar4.chapter,0);
             }
             fVar11 = (float)CraftPoisonUIController.GetChangePoisonNum(this,0);
             lVar4 = HeroSpeAddData.op_Multiply(uVar9,fVar11 * 0.01,0);
-            if (lVar4 == null) goto LAB_180a3de74;
+            if (lVar4 == null) goto LAB_180a3e504;
             uVar7 = HeroSpeAddData.GetDescribe
                               (lVar4,1,1,1,in_stack_ffffffffffffffb8 & 0xffffffffffffff00,0);
             uVar6 = String.Concat("淬毒 ",uVar6,"\n\n淬毒加成\n",uVar7,0);
@@ -735,7 +735,7 @@ public class CraftPoisonUIController
             fVar11 = (float)CraftPoisonUIController.GetChangePoisonNum(this,0);
             if (((this.poisonTargetItemIcon == null) ||
                 (lVar8 = GameObject.GetComponent(this.poisonTargetItemIcon,DAT_181d720a0), lVar8 == null
-                )) || (*(int64 *)(lVar8 + 32) == 0)) goto LAB_180a3de74;
+                )) || (*(int64 *)(lVar8 + 32) == 0)) goto LAB_180a3e504;
             lVar4 = this.craftPoisonButton;
             if (fVar11 < *(float *)(*(int64 *)(lVar8 + 32) + 76)) {
               if (lVar4 != null) {
@@ -751,30 +751,30 @@ public class CraftPoisonUIController
                   return;
                 }
               }
-              goto LAB_180a3de74;
+              goto LAB_180a3e504;
             }
           }
           if (lVar4 == null) {
-        LAB_180a3de74:
+        LAB_180a3e504:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar10 = 1;
         }
         else {
-        LAB_180a3de1d:
+        LAB_180a3e4ad:
           uVar10 = this.CostTime;
           LTLocalization.SetText(uVar10,"",0);
           LTLocalization.SetText(this.PoisonExtraAdd,"",0);
           lVar4 = this.craftPoisonButton;
-          if (lVar4 == null) goto LAB_180a3de74;
+          if (lVar4 == null) goto LAB_180a3e504;
           uVar10 = 0;
         }
         Selectable.set_interactable(lVar4,uVar10,0);
     }
 
     // Token : 0x6001344
-    // RVA   : 0xA3C140   Offset: 0xA3B540   Length: 0x126
+    // RVA   : 0xA3C7D0   Offset: 0xA3BBD0   Length: 0x126
     public float GetMaterialTotalCraftRate()
     {
         bool cVar1;
@@ -788,9 +788,9 @@ public class CraftPoisonUIController
         uVar4 = this.poisonMaterialItemIcon;
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (cVar1) {
-          if (this.poisonMaterialItemIcon == null) goto LAB_180a3c261;
+          if (this.poisonMaterialItemIcon == null) goto LAB_180a3c8f1;
           lVar2 = GameObject.GetComponent(this.poisonMaterialItemIcon,DAT_181d720a0);
-          if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) goto LAB_180a3c261;
+          if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) goto LAB_180a3c8f1;
           uVar4 = ItemData.GetMaterialExtraCraftRate(*(int64 *)(lVar2 + 32),0);
           uVar6 = (uint32)((uint64)uVar4 >> 32);
           fVar5 = (float)uVar4 + 0.0;
@@ -803,19 +803,19 @@ public class CraftPoisonUIController
             if ((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) {
               fVar3 = (float)ItemData.GetMaterialExtraCraftRate(*(int64 *)(lVar2 + 32),0);
               fVar5 = fVar5 + fVar3;
-              goto LAB_180a3c24e;
+              goto LAB_180a3c8de;
             }
           }
-        LAB_180a3c261:
+        LAB_180a3c8f1:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180a3c24e:
+        LAB_180a3c8de:
         return CONCAT44(uVar6,fVar5);
     }
 
     // Token : 0x6001345
-    // RVA   : 0xA3BE90   Offset: 0xA3B290   Length: 0x227
+    // RVA   : 0xA3C520   Offset: 0xA3B920   Length: 0x227
     public float GetChangePoisonNum()
     {
         float fVar1;
@@ -848,7 +848,7 @@ public class CraftPoisonUIController
             uVar5 = this.poisonMaterialItemIconSub;
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (!cVar2) {
-        LAB_180a3c08e:
+        LAB_180a3c71e:
               return CONCAT44(uVar7,(fVar6 + 1.0) * fVar1);
             }
             if (this.poisonMaterialItemIconSub != null) {
@@ -856,7 +856,7 @@ public class CraftPoisonUIController
               if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
                 fVar4 = (float)ItemData.GetMaterialExtraCraftRate(lVar3.villageAreaID,0);
                 fVar6 = fVar6 + fVar4;
-                goto LAB_180a3c08e;
+                goto LAB_180a3c71e;
               }
             }
           }
@@ -864,7 +864,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001346
-    // RVA   : 0xA3C0C0   Offset: 0xA3B4C0   Length: 0x7F
+    // RVA   : 0xA3C750   Offset: 0xA3BB50   Length: 0x7F
     public int GetCostTime()
     {
         long lVar1;
@@ -880,7 +880,7 @@ public class CraftPoisonUIController
     }
 
     // Token : 0x6001347
-    // RVA   : 0xA3C510   Offset: 0xA3B910   Length: 0x1FA
+    // RVA   : 0xA3CBA0   Offset: 0xA3BFA0   Length: 0x1FA
     public void PoisonButtonClicked()
     {
         uint uVar1;
@@ -890,11 +890,11 @@ public class CraftPoisonUIController
         uint uVar5;
         plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/毒气",0);
         plVar7 = (int64 *)0;
-        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
           plVar7 = plVar6;
         }
         NGUITools.PlaySound(plVar7,0);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181db5de8 + 184) + 8);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
         lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x588);
         if (lVar3 != null) {
           uVar1 = this.craftPoisonType;

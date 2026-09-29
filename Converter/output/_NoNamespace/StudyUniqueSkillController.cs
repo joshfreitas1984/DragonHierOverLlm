@@ -6,101 +6,101 @@
 public class StudyUniqueSkillController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D41
+    // Token: 0x4001D42
     public bool inStudy;
 
-    // Token: 0x4001D42
+    // Token: 0x4001D43
     public bool finishing;
 
-    // Token: 0x4001D43
+    // Token: 0x4001D44
     public float totalExp;
 
-    // Token: 0x4001D44
+    // Token: 0x4001D45
     public int combo;
 
-    // Token: 0x4001D45
+    // Token: 0x4001D46
     public int hit;
 
-    // Token: 0x4001D46
+    // Token: 0x4001D47
     public int leftBulletCount;
 
-    // Token: 0x4001D47
+    // Token: 0x4001D48
     public float flyTime;
 
-    // Token: 0x4001D48
+    // Token: 0x4001D49
     public float baseDamage;
 
-    // Token: 0x4001D49
+    // Token: 0x4001D4A
     public bool nowClick;
 
-    // Token: 0x4001D4A
+    // Token: 0x4001D4B
     public StudyUniqueDefenceType studyUniqueDefenceType;
 
-    // Token: 0x4001D4B
+    // Token: 0x4001D4C
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001D4C
+    // Token: 0x4001D4D
     public GameObject studyUniqueSkillRoot;
 
-    // Token: 0x4001D4D
+    // Token: 0x4001D4E
     public GameObject studyUniqueUIPanel;
 
-    // Token: 0x4001D4E
+    // Token: 0x4001D4F
     public GameObject selfObj;
 
-    // Token: 0x4001D4F
+    // Token: 0x4001D50
     public GameObject bulletObjs;
 
-    // Token: 0x4001D50
+    // Token: 0x4001D51
     public GameObject dartPrefab;
 
-    // Token: 0x4001D51
+    // Token: 0x4001D52
     public GameObject arrowPrefab;
 
-    // Token: 0x4001D52
+    // Token: 0x4001D53
     public GameObject bombPrefab;
 
-    // Token: 0x4001D53
+    // Token: 0x4001D54
     public List<GameObject> defencePoint;
 
-    // Token: 0x4001D54
+    // Token: 0x4001D55
     public List<Sprite> uniqueUnitSprites;
 
-    // Token: 0x4001D55
+    // Token: 0x4001D56
     public List<Vector3> directionPos;
 
-    // Token: 0x4001D56
+    // Token: 0x4001D57
     private GameObject newObj;
 
-    // Token: 0x4001D57
+    // Token: 0x4001D58
     private static StudyUniqueSkillController _instance;
 
-    // Token: 0x4001D58
+    // Token: 0x4001D59
     private float generateTime;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60022B9
-    // RVA   : 0xFE9160   Offset: 0xFE8560   Length: 0x36
+    // RVA   : 0xFE9770   Offset: 0xFE8B70   Length: 0x36
     public static StudyUniqueSkillController get_Instance()
     {
-        return **(uint64 **)(DAT_181da8290 + 184);
+        return **(uint64 **)(DAT_181da82a8 + 184);
     }
 
     // Token : 0x60022BA
-    // RVA   : 0xFE6780   Offset: 0xFE5B80   Length: 0x43
+    // RVA   : 0xFE6D90   Offset: 0xFE6190   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da8290 + 184);
+        puVar1 = *(uint64 **)(DAT_181da82a8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x60022BB
-    // RVA   : 0xFE8250   Offset: 0xFE7650   Length: 0xDA8
+    // RVA   : 0xFE8860   Offset: 0xFE7C60   Length: 0xDA8
     private void Update()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_8210 = *(int64*)(DAT_181da8210 + 184);
+        var pStatics_8228 = *(int64*)(DAT_181da8228 + 184);
         bool cVar2;
         ulong uVar3;
         long lVar4;
@@ -147,12 +147,12 @@ public class StudyUniqueSkillController
           if (cVar2) {
             this.studyUniqueDefenceType = 1;
             this.nowClick = 1;
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if (((lVar4 == null) || (lVar4.Count == null)) ||
                (lVar4 = SkeletonAnimation.get_AnimationState(lVar4.Count,0)) == null)
             throw; // [null/range check failed]
             AnimationState.SetAnimation(lVar4,1,"defence",0,0);
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if (((lVar4 == null) || (lVar4.Count == null)) ||
                (lVar4 = SkeletonAnimation.get_AnimationState(lVar4.Count,0)) == null)
             throw; // [null/range check failed]
@@ -164,7 +164,7 @@ public class StudyUniqueSkillController
             }
             lVar4 = *(int64 *)(lVar4._items + 40);
             if (lVar4 == null) throw; // [null/range check failed]
-            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
+            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7310);
             if (lVar4 == null) throw; // [null/range check failed]
             AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
             lVar4 = this.defencePoint;
@@ -173,11 +173,11 @@ public class StudyUniqueSkillController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = *(int64 *)(lVar4._items + 40);
-            goto LAB_180fe8e04;
+            goto LAB_180fe9414;
           }
           cVar2 = GlobalData.GetKeyDown(97);
           if (cVar2) {
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if ((lVar4 == null) || (lVar4.Count == null)) throw; // [null/range check failed]
             lVar4 = Component.get_transform(lVar4.Count,0);
             local_58 = *(uint64 *)(pStatics_3d40 + 0x154);
@@ -192,12 +192,12 @@ public class StudyUniqueSkillController
             Transform.set_localScale(lVar4,&local_68,0);
             this.studyUniqueDefenceType = 2;
             this.nowClick = 1;
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if (((lVar4 == null) || (lVar4.Count == null)) ||
                (lVar4 = SkeletonAnimation.get_AnimationState(lVar4.Count,0)) == null)
             throw; // [null/range check failed]
             AnimationState.SetAnimation(lVar4,1,"defence",0,0);
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if (((lVar4 == null) || (lVar4.Count == null)) ||
                (lVar4 = SkeletonAnimation.get_AnimationState(lVar4.Count,0)) == null)
             throw; // [null/range check failed]
@@ -209,7 +209,7 @@ public class StudyUniqueSkillController
             }
             lVar4 = *(int64 *)(lVar4._items + 48);
             if (lVar4 == null) throw; // [null/range check failed]
-            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
+            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7310);
             if (lVar4 == null) throw; // [null/range check failed]
             AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
             lVar4 = this.defencePoint;
@@ -218,11 +218,11 @@ public class StudyUniqueSkillController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = *(int64 *)(lVar4._items + 48);
-            goto LAB_180fe8e04;
+            goto LAB_180fe9414;
           }
           cVar2 = GlobalData.GetKeyDown(100);
           if (cVar2) {
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if ((lVar4 == null) || (lVar4.Count == null)) throw; // [null/range check failed]
             lVar4 = Component.get_transform(lVar4.Count,0);
             local_78 = 0x3f0000003f000000;
@@ -233,12 +233,12 @@ public class StudyUniqueSkillController
             Transform.set_localScale(lVar4,&local_68,0);
             this.studyUniqueDefenceType = 3;
             this.nowClick = 1;
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if (((lVar4 == null) || (lVar4.Count == null)) ||
                (lVar4 = SkeletonAnimation.get_AnimationState(lVar4.Count,0)) == null)
             throw; // [null/range check failed]
             AnimationState.SetAnimation(lVar4,1,"defence",0,0);
-            lVar4 = FUN_1808e3e20(0);
+            lVar4 = FUN_180916460(0);
             if (((lVar4 == null) || (lVar4.Count == null)) ||
                (lVar4 = SkeletonAnimation.get_AnimationState(lVar4.Count,0)) == null)
             throw; // [null/range check failed]
@@ -250,7 +250,7 @@ public class StudyUniqueSkillController
             }
             lVar4 = *(int64 *)(lVar4._items + 56);
             if (lVar4 == null) throw; // [null/range check failed]
-            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
+            lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7310);
             if (lVar4 == null) throw; // [null/range check failed]
             AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
             lVar4 = this.defencePoint;
@@ -259,33 +259,33 @@ public class StudyUniqueSkillController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar4 = *(int64 *)(lVar4._items + 56);
-            goto LAB_180fe8e04;
+            goto LAB_180fe9414;
           }
           cVar2 = GlobalData.GetKey(119);
           if ((!cVar2) || (this.studyUniqueDefenceType != null)) {
             cVar2 = GlobalData.GetKey(115);
-            if ((cVar2) && (this.studyUniqueDefenceType == 1)) goto LAB_180fe8718;
+            if ((cVar2) && (this.studyUniqueDefenceType == 1)) goto LAB_180fe8d28;
             cVar2 = GlobalData.GetKey(97);
-            if ((cVar2) && (this.studyUniqueDefenceType == 2)) goto LAB_180fe8718;
+            if ((cVar2) && (this.studyUniqueDefenceType == 2)) goto LAB_180fe8d28;
             cVar2 = GlobalData.GetKey(100);
-            if ((cVar2) && (this.studyUniqueDefenceType == 3)) goto LAB_180fe8718;
+            if ((cVar2) && (this.studyUniqueDefenceType == 3)) goto LAB_180fe8d28;
             this.studyUniqueDefenceType = -1;
             this.nowClick = 0;
           }
           else {
-        LAB_180fe8718:
+        LAB_180fe8d28:
             this.nowClick = 0;
           }
         }
         else {
           this.nowClick = 1;
           this.studyUniqueDefenceType = 0;
-          if (((*pStatics_8210 == 0) ||
-              (lVar4 = *(int64 *)(*pStatics_8210 + 24)) == null) ||
+          if (((*pStatics_8228 == 0) ||
+              (lVar4 = *(int64 *)(*pStatics_8228 + 24)) == null) ||
              (lVar4 = SkeletonAnimation.get_AnimationState(lVar4,0)) == null) throw; // [null/range check failed]
           AnimationState.SetAnimation(lVar4,1,"defence",0,0);
-          if (((*pStatics_8210 == 0) ||
-              (lVar4 = *(int64 *)(*pStatics_8210 + 24)) == null) ||
+          if (((*pStatics_8228 == 0) ||
+              (lVar4 = *(int64 *)(*pStatics_8228 + 24)) == null) ||
              (lVar4 = SkeletonAnimation.get_AnimationState(lVar4,0)) == null) throw; // [null/range check failed]
           AnimationState.AddEmptyAnimation(lVar4,1,0x3dcccccd,0,0);
           lVar4 = this.defencePoint;
@@ -295,7 +295,7 @@ public class StudyUniqueSkillController
           }
           lVar4 = *(int64 *)(lVar4._items + 32);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7310);
           if (lVar4 == null) throw; // [null/range check failed]
           AudioSource.set_volume(lVar4,GameController.CheckShowSpeHero * 0.2,0);
           lVar4 = this.defencePoint;
@@ -304,8 +304,8 @@ public class StudyUniqueSkillController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = *(int64 *)(lVar4._items + 32);
-        LAB_180fe8e04:
-          if ((lVar4 == null) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181dc72f8)) == null)
+        LAB_180fe9414:
+          if ((lVar4 == null) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7310)) == null)
           throw; // [null/range check failed]
           AudioSource.Play(lVar4,0);
         }
@@ -324,7 +324,7 @@ public class StudyUniqueSkillController
                 return;
               }
               uVar7 = StudyUniqueSkillController.FinishStudyUniqueSkill(this,2);
-              FUN_180d8c2e0(this,uVar7,0);
+              FUN_180d8c8f0(this,uVar7,0);
               return;
             }
             break;
@@ -367,10 +367,10 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022BC
-    // RVA   : 0xFE69B0   Offset: 0xFE5DB0   Length: 0x730
+    // RVA   : 0xFE6FC0   Offset: 0xFE63C0   Length: 0x730
     public void ClearDefencePoint()
     {
-        var pStatics = *(int64*)(DAT_181da8210 + 184);
+        var pStatics = *(int64*)(DAT_181da8228 + 184);
         uint uVar1;
         ulong uVar2;
         bool cVar3;
@@ -440,12 +440,12 @@ public class StudyUniqueSkillController
                   StudyUniqueSkillController.ChangeCombo(this,1);
                   uVar9 = this.bulletObjs;
                   if (((lVar4.Count == null) ||
-                      (lVar5 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89918), lVar5 == null
+                      (lVar5 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89930), lVar5 == null
                       )) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73c40)) == null) break;
                   uVar6 = String.Concat("SpeEffect/",*(uint64 *)(lVar5 + 40),0);
                   plVar7 = (int64 *)Resources.Load(uVar6,0);
                   if (((lVar4.Count == null) ||
-                      (lVar5 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89918), lVar5 == null
+                      (lVar5 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89930), lVar5 == null
                       )) || (lVar5 = GameObject.get_transform(lVar5,0)) == null) break;
                   puVar8 = (uint64 *)Transform.get_localPosition(local_c8,lVar5,0);
                   uVar6 = *puVar8;
@@ -468,11 +468,11 @@ public class StudyUniqueSkillController
                   uVar9 = GlobalData.AddChild(uVar9,plVar11,&local_108,&local_118,0);
                   this.newObj = uVar9;
                   if (this.newObj == null) break;
-                  uVar9 = GameObject.GetComponent(this.newObj,DAT_181dc72f8);
+                  uVar9 = GameObject.GetComponent(this.newObj,DAT_181dc7310);
                   cVar3 = Object.op_Inequality(uVar9,0,0);
                   if (cVar3) {
                     if ((this.newObj == null) ||
-                       (lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc72f8),
+                       (lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc7310),
                        lVar5 == null)) break;
                     fVar14 = (float)AudioSource.get_volume(lVar5,0);
                     AudioSource.set_volume
@@ -494,7 +494,7 @@ public class StudyUniqueSkillController
                   fVar14 = (float)Vector3.Distance(&local_e8);
                   if (0.2 < fVar14) {
                     if (((lVar4.Count == null) ||
-                        (lVar5 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89918),
+                        (lVar5 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89930),
                         lVar5 == null)) ||
                        (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73c40)) == null) break;
                     local_res8[0] = *(float *)(lVar5 + 24) * -10.0 * this.baseDamage;
@@ -506,7 +506,7 @@ public class StudyUniqueSkillController
                     lVar5 = FUN_18046c0a0(0);
                     uVar9 = Single.ToString(local_res8,0);
                     if (((lVar4.Count == null) ||
-                        (lVar10 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89918),
+                        (lVar10 = FUN_180002f80(lVar4.Count,uVar12,DAT_181d89930),
                         lVar10 == null)) || (lVar10 = GameObject.get_transform(lVar10,0)) == null)
                     break;
                     puVar8 = (uint64 *)Transform.get_position(local_88,lVar10,0);
@@ -531,7 +531,7 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022BD
-    // RVA   : 0xFE7600   Offset: 0xFE6A00   Length: 0x3EE
+    // RVA   : 0xFE7C10   Offset: 0xFE7010   Length: 0x3EE
     public void ManageBulletGenerate()
     {
         uint uVar1;
@@ -561,7 +561,7 @@ public class StudyUniqueSkillController
             uVar5 = this.bulletObjs;
             lVar4 = FUN_18046c620(0);
             fVar10 = local_40;
-            if (lVar4 == null) goto LAB_180fe79e9;
+            if (lVar4 == null) goto LAB_180fe7ff9;
             fVar10 = (float)Random.get_value(0);
             if (fVar10 < 0.6) {
               uVar8 = *(uint64 *)(lVar4 + 104);
@@ -575,12 +575,12 @@ public class StudyUniqueSkillController
             uVar5 = GlobalData.AddChild(uVar5,uVar8,0);
             this.newObj = uVar5;
             fVar10 = local_40;
-            if (this.newObj == null) goto LAB_180fe79e9;
+            if (this.newObj == null) goto LAB_180fe7ff9;
             lVar6 = GameObject.get_transform(this.newObj,0);
             lVar4 = this.directionPos;
             fVar10 = local_40;
-            if (lVar4 == null) goto LAB_180fe79e9;
-            uVar3 = FUN_180d95a30(0,lVar4.Count,0);
+            if (lVar4 == null) goto LAB_180fe7ff9;
+            uVar3 = FUN_180d96040(0,lVar4.Count,0);
             if (lVar4.Count <= uVar3) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -590,18 +590,18 @@ public class StudyUniqueSkillController
             local_58 = CONCAT44((float)((uint64)local_38 >> 32) * 10.0,(float)local_38 * 10.0);
             local_48 = local_38;
             fVar10 = local_30;
-            if (lVar6 == null) goto LAB_180fe79e9;
+            if (lVar6 == null) goto LAB_180fe7ff9;
             local_48 = local_58;
             Transform.set_localPosition(lVar6,&local_48,0);
             fVar10 = local_40;
-            if (this.newObj == null) goto LAB_180fe79e9;
+            if (this.newObj == null) goto LAB_180fe7ff9;
             uVar5 = GameObject.get_transform(this.newObj,0);
             uVar1 = this.flyTime;
             puVar7 = (uint64 *)Vector3.get_zero(&local_38,0);
             local_40 = *(float *)(puVar7 + 1);
             local_48 = *puVar7;
             uVar5 = ShortcutExtensions.DOMove(uVar5,&local_48,uVar1,0,0);
-            TweenSettingsExtensions.SetEase(uVar5,1,DAT_181dc0f80);
+            TweenSettingsExtensions.SetEase(uVar5,1,DAT_181dc1128);
           }
           else {
             this.leftBulletCount = this.leftBulletCount + -1;
@@ -609,7 +609,7 @@ public class StudyUniqueSkillController
             fVar10 = local_40;
             if ((this.targetSkill == null) ||
                (lVar4 = KungfuSkillLvData.DataBase(this.targetSkill,0), fVar10 = local_40,
-               lVar4 == null)) goto LAB_180fe79e9;
+               lVar4 == null)) goto LAB_180fe7ff9;
             if (fVar9 < (float)*(int *)(lVar4 + 52) * 0.1 + 0.15) {
               fVar10 = (float)Random.get_value(0);
               if (fVar10 < 0.75) {
@@ -629,7 +629,7 @@ public class StudyUniqueSkillController
           if ((this.targetSkill == null) ||
              (lVar4 = KungfuSkillLvData.DataBase(this.targetSkill,0), fVar10 = local_40,
              lVar4 == null)) {
-        LAB_180fe79e9:
+        LAB_180fe7ff9:
             local_40 = fVar10;
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -641,7 +641,7 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022BE
-    // RVA   : 0xFE70F0   Offset: 0xFE64F0   Length: 0x458
+    // RVA   : 0xFE7700   Offset: 0xFE6B00   Length: 0x458
     public GameObject CreateStudyUniqueBullet(GameObject targetPrefab)
     {
         uint uVar1;
@@ -668,7 +668,7 @@ public class StudyUniqueSkillController
           lVar9 = this.directionPos;
           fVar10 = local_60;
           if (lVar9 != null) {
-            uVar4 = FUN_180d95a30(0,lVar9.Count,0);
+            uVar4 = FUN_180d96040(0,lVar9.Count,0);
             if (lVar9.Count <= uVar4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -687,7 +687,7 @@ public class StudyUniqueSkillController
               local_60 = *(float *)(puVar8 + 1);
               local_68 = *puVar8;
               uVar7 = ShortcutExtensions.DOMove(uVar7,&local_68,uVar1,0,0);
-              TweenSettingsExtensions.SetEase(uVar7,1,DAT_181dc0f80);
+              TweenSettingsExtensions.SetEase(uVar7,1,DAT_181dc1128);
               lVar9 = GameObject.GetComponent(lVar5,DAT_181d73c40);
               fVar10 = local_60;
               if (lVar9 != null) {
@@ -695,12 +695,12 @@ public class StudyUniqueSkillController
                   uVar7 = GameObject.get_transform(lVar5,0);
                   lVar9 = GameObject.GetComponent(lVar5,DAT_181d73c40);
                   fVar10 = local_60;
-                  if (lVar9 == null) goto LAB_180fe7543;
+                  if (lVar9 == null) goto LAB_180fe7b53;
                   local_60 = 360.0;
                   local_68 = 0;
                   uVar7 = ShortcutExtensions.DORotate(uVar7,&local_68,*(uint32 *)(lVar9 + 32),1,0);
-                  uVar7 = TweenSettingsExtensions.SetLoops(uVar7,0xffffffff,0,DAT_181dc12a8);
-                  TweenSettingsExtensions.SetEase(uVar7,1,DAT_181dc0d70);
+                  uVar7 = TweenSettingsExtensions.SetLoops(uVar7,0xffffffff,0,DAT_181dc1458);
+                  TweenSettingsExtensions.SetEase(uVar7,1,DAT_181dc0f10);
                 }
                 lVar9 = GameObject.GetComponent(lVar5,DAT_181d73c40);
                 fVar10 = local_60;
@@ -712,7 +712,7 @@ public class StudyUniqueSkillController
                     uVar7 = *puVar8;
                     lVar6 = GameObject.get_transform(lVar5,0);
                     fVar10 = local_60;
-                    if (lVar6 == null) goto LAB_180fe7543;
+                    if (lVar6 == null) goto LAB_180fe7b53;
                     puVar8 = (uint64 *)Transform.get_localPosition(local_38,lVar6,0);
                     local_78._0_4_ = (float)uVar7;
                     local_78._4_4_ = (float)((uint64)uVar7 >> 32);
@@ -722,17 +722,17 @@ public class StudyUniqueSkillController
                     local_68 = CONCAT44(local_78._4_4_ - (float)((uint64)local_58 >> 32),
                                         (float)local_78 - (float)local_58);
                     fVar10 = local_60;
-                    if (lVar9 == null) goto LAB_180fe7543;
+                    if (lVar9 == null) goto LAB_180fe7b53;
                     local_58 = local_68;
                     local_50 = local_60;
                     Transform.set_right(lVar9,&local_58,0);
                   }
-                  uVar7 = GameObject.GetComponent(lVar5,DAT_181dc72f8);
+                  uVar7 = GameObject.GetComponent(lVar5,DAT_181dc7310);
                   cVar3 = Object.op_Inequality(uVar7,0,0);
                   if (cVar3) {
-                    lVar9 = GameObject.GetComponent(lVar5,DAT_181dc72f8);
+                    lVar9 = GameObject.GetComponent(lVar5,DAT_181dc7310);
                     fVar10 = local_60;
-                    if (lVar9 == null) goto LAB_180fe7543;
+                    if (lVar9 == null) goto LAB_180fe7b53;
                     fVar10 = (float)AudioSource.get_volume(lVar9,0);
                     AudioSource.set_volume
                               (lVar9,fVar10 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
@@ -743,15 +743,15 @@ public class StudyUniqueSkillController
             }
           }
         }
-        LAB_180fe7543:
+        LAB_180fe7b53:
         local_60 = fVar10;
     }
 
     // Token : 0x60022BF
-    // RVA   : 0xFE7B00   Offset: 0xFE6F00   Length: 0x6D8
+    // RVA   : 0xFE8110   Offset: 0xFE7510   Length: 0x6D8
     public void StartStudyUniqueSkill(KungfuSkillLvData target)
     {
-        var pStatics_8210 = *(int64*)(DAT_181da8210 + 184);
+        var pStatics_8228 = *(int64*)(DAT_181da8228 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -773,26 +773,26 @@ public class StudyUniqueSkillController
               GameObject.SetActive(lVar3,1,0);
               this.inStudy = 1;
               this.targetSkill = target;
-              if (*pStatics_8210 != 0) {
-                uVar5 = *(uint64 *)(*pStatics_8210 + 24);
+              if (*pStatics_8228 != 0) {
+                uVar5 = *(uint64 *)(*pStatics_8228 + 24);
                 cVar2 = Object.op_Equality(uVar5,0,0);
                 if (!cVar2) {
                   if ((GameController._instance == null) ||
                      (lVar3 = GameController._instance.worldData) == null)
                   throw; // [null/range check failed]
                   lVar3 = WorldData.Player(lVar3,0);
-                  if ((*pStatics_8210 == 0) || (lVar3 == null)) throw; // [null/range check failed]
+                  if ((*pStatics_8228 == 0) || (lVar3 == null)) throw; // [null/range check failed]
                   HeroData.RefreshHeroSkeleton
-                            (lVar3,*(uint64 *)(*pStatics_8210 + 24),0);
+                            (lVar3,*(uint64 *)(*pStatics_8228 + 24),0);
                 }
                 else {
-                  lVar3 = *pStatics_8210;
+                  lVar3 = *pStatics_8228;
                   if ((GameController._instance == null) ||
                      (lVar4 = GameController._instance.worldData) == null)
                   throw; // [null/range check failed]
                   lVar4 = WorldData.Player(lVar4,0);
-                  if (*pStatics_8210 == 0) throw; // [null/range check failed]
-                  uVar5 = Component.get_gameObject(*pStatics_8210,0);
+                  if (*pStatics_8228 == 0) throw; // [null/range check failed]
+                  uVar5 = Component.get_gameObject(*pStatics_8228,0);
                   puVar6 = (uint64 *)Vector3.get_one(local_38,0);
                   local_58 = *puVar6;
                   local_50 = *(float *)(puVar6 + 1);
@@ -806,8 +806,8 @@ public class StudyUniqueSkillController
                   puVar6 = (uint64 *)(lVar3 + 24);
                   *puVar6 = uVar5;
                   il2cpp_internal(puVar6,uVar5);
-                  if ((*pStatics_8210 == 0) ||
-                     (lVar3 = *(int64 *)(*pStatics_8210 + 24)) == null)
+                  if ((*pStatics_8228 == 0) ||
+                     (lVar3 = *(int64 *)(*pStatics_8228 + 24)) == null)
                   throw; // [null/range check failed]
                   lVar3 = Component.get_transform(lVar3,0);
                   if (lVar3 == null) throw; // [null/range check failed]
@@ -815,14 +815,14 @@ public class StudyUniqueSkillController
                   local_68 = 0;
                   Transform.set_localPosition(lVar3,&local_68,0);
                 }
-                if ((*pStatics_8210 != 0) &&
-                   (lVar3 = *(int64 *)(*pStatics_8210 + 24)) != null) {
+                if ((*pStatics_8228 != 0) &&
+                   (lVar3 = *(int64 *)(*pStatics_8228 + 24)) != null) {
                   lVar3 = SkeletonAnimation.get_AnimationState(lVar3,0);
                   if (lVar3 != null) {
                     uVar8 = 0;
                     AnimationState.SetAnimation(lVar3,0,"cure",0,0);
-                    if ((*pStatics_8210 != 0) &&
-                       (lVar3 = *(int64 *)(*pStatics_8210 + 24)) != null)
+                    if ((*pStatics_8228 != 0) &&
+                       (lVar3 = *(int64 *)(*pStatics_8228 + 24)) != null)
                     {
                       lVar3 = SkeletonAnimation.get_AnimationState(lVar3,0);
                       if (lVar3 != null) {
@@ -866,10 +866,10 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022C0
-    // RVA   : 0xFE81E0   Offset: 0xFE75E0   Length: 0x6A
+    // RVA   : 0xFE87F0   Offset: 0xFE7BF0   Length: 0x6A
     public void StartUniqueTutorial()
     {
-        var pStatics = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics = *(int64*)(DAT_181dadd10 + 184);
         if (*pStatics != 0) {
           TutorialController.StartTutorial(*pStatics,"修炼绝技",0);
           return;
@@ -877,16 +877,16 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022C1
-    // RVA   : 0xFE7550   Offset: 0xFE6950   Length: 0x28
+    // RVA   : 0xFE7B60   Offset: 0xFE6F60   Length: 0x28
     public void FinishButtonClicked()
     {
         ulong uVar1;
         uVar1 = StudyUniqueSkillController.FinishStudyUniqueSkill(this,1);
-        FUN_180d8c2e0(this,uVar1,0);
+        FUN_180d8c8f0(this,uVar1,0);
     }
 
     // Token : 0x60022C2
-    // RVA   : 0xFE7580   Offset: 0xFE6980   Length: 0x7B
+    // RVA   : 0xFE7B90   Offset: 0xFE6F90   Length: 0x7B
     public IEnumerator FinishStudyUniqueSkill(StudySkillResult studyUniqueResult)
     {
         long lVar1;
@@ -899,7 +899,7 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022C3
-    // RVA   : 0xFE67D0   Offset: 0xFE5BD0   Length: 0x1DB
+    // RVA   : 0xFE6DE0   Offset: 0xFE61E0   Length: 0x1DB
     public void ChangeCombo(int num)
     {
         long lVar1;
@@ -913,7 +913,7 @@ public class StudyUniqueSkillController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180da9a20(lVar1,0);
+            lVar1 = FUN_180daa030(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_one(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -923,7 +923,7 @@ public class StudyUniqueSkillController
                  (lVar1 = StudySkillController._instance.comboText) != null) {
                 lVar1 = Component.get_transform(lVar1,0);
                 if (lVar1 != null) {
-                  uVar3 = FUN_180da9a20(lVar1,0);
+                  uVar3 = FUN_180daa030(lVar1,0);
                   if (num < 1) {
                     uVar4 = 0x3f333333;
                   }
@@ -931,7 +931,7 @@ public class StudyUniqueSkillController
                     uVar4 = 0x3fa66666;
                   }
                   uVar3 = ShortcutExtensions.DOScale(uVar3,uVar4,0x3dcccccd,0);
-                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc1330);
+                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
                   return;
                 }
               }
@@ -941,7 +941,7 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022C4
-    // RVA   : 0xFE79F0   Offset: 0xFE6DF0   Length: 0x106
+    // RVA   : 0xFE8000   Offset: 0xFE7400   Length: 0x106
     public void ResetCombo()
     {
         long lVar1;
@@ -953,7 +953,7 @@ public class StudyUniqueSkillController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180da9a20(lVar1,0);
+            lVar1 = FUN_180daa030(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_zero(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -966,32 +966,32 @@ public class StudyUniqueSkillController
     }
 
     // Token : 0x60022C5
-    // RVA   : 0xFE9000   Offset: 0xFE8400   Length: 0x157
+    // RVA   : 0xFE9610   Offset: 0xFE8A10   Length: 0x157
     public void /*ctor*/()
     {
         long lVar1;
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        lVar1 = il2cpp_internal(DAT_181d98bd0);
-        FUN_18132faf0(lVar1,DAT_181dabb98);
+        lVar1 = il2cpp_internal(DAT_181d98be8);
+        FUN_181330100(lVar1,DAT_181dabbb0);
         puVar2 = (uint64 *)Vector3.get_up(local_18,0);
         if (lVar1 != null) {
           local_20 = *(uint32 *)(puVar2 + 1);
           local_28 = *puVar2;
-          FUN_181816b80(lVar1,&local_28,DAT_181dabc18);
+          FUN_181817190(lVar1,&local_28,DAT_181dabc30);
           puVar2 = (uint64 *)Vector3.get_down(local_18,0);
           local_28 = *puVar2;
           local_20 = *(uint32 *)(puVar2 + 1);
-          FUN_181816b80(lVar1,&local_28,DAT_181dabc18);
+          FUN_181817190(lVar1,&local_28,DAT_181dabc30);
           puVar2 = (uint64 *)Vector3.get_left(local_18,0);
           local_28 = *puVar2;
           local_20 = *(uint32 *)(puVar2 + 1);
-          FUN_181816b80(lVar1,&local_28,DAT_181dabc18);
+          FUN_181817190(lVar1,&local_28,DAT_181dabc30);
           puVar2 = (uint64 *)Vector3.get_right(local_18,0);
           local_28 = *puVar2;
           local_20 = *(uint32 *)(puVar2 + 1);
-          FUN_181816b80(lVar1,&local_28,DAT_181dabc18);
+          FUN_181817190(lVar1,&local_28,DAT_181dabc30);
           this.directionPos = lVar1;
           FUN_18044ef50(this,0);
           return;

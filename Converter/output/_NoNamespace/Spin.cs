@@ -20,18 +20,18 @@ public class Spin
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600008C
-    // RVA   : 0xC5DA90   Offset: 0xC5CE90   Length: 0x61
+    // RVA   : 0xC5E0A0   Offset: 0xC5D4A0   Length: 0x61
     private void Start()
     {
         ulong uVar1;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d950e0);
+        uVar1 = Component.GetComponent(this,DAT_181d950f8);
         this.mRb = uVar1;
     }
 
     // Token : 0x600008D
-    // RVA   : 0xC5DB00   Offset: 0xC5CF00   Length: 0x88
+    // RVA   : 0xC5E110   Offset: 0xC5D510   Length: 0x88
     private void Update()
     {
         ulong uVar1;
@@ -51,7 +51,7 @@ public class Spin
     }
 
     // Token : 0x600008E
-    // RVA   : 0xC5DA10   Offset: 0xC5CE10   Length: 0x7C
+    // RVA   : 0xC5E020   Offset: 0xC5D420   Length: 0x7C
     private void FixedUpdate()
     {
         ulong uVar1;
@@ -66,7 +66,7 @@ public class Spin
     }
 
     // Token : 0x600008F
-    // RVA   : 0xC5D870   Offset: 0xC5CC70   Length: 0x194
+    // RVA   : 0xC5DE80   Offset: 0xC5D280   Length: 0x194
     public void ApplyDelta(float delta)
     {
         ulong uVar1;
@@ -93,7 +93,7 @@ public class Spin
         if (!cVar5) {
           lVar2 = this.mRb;
           if (lVar2 == null) {
-        LAB_180c5d9ff:
+        LAB_180c5e00f:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -110,7 +110,7 @@ public class Spin
         }
         else {
           lVar2 = this.mTrans;
-          if (lVar2 == null) goto LAB_180c5d9ff;
+          if (lVar2 == null) goto LAB_180c5e00f;
           local_38 = uVar3;
           uStack_30 = uVar4;
           puVar6 = (uint64 *)Transform.get_rotation(local_28,lVar2,0);
@@ -125,7 +125,7 @@ public class Spin
     }
 
     // Token : 0x6000090
-    // RVA   : 0xC5DB90   Offset: 0xC5CF90   Length: 0x31
+    // RVA   : 0xC5E1A0   Offset: 0xC5D5A0   Length: 0x31
     public void /*ctor*/()
     {
         this.rotationsPerSecond = 0x3dcccccd00000000;

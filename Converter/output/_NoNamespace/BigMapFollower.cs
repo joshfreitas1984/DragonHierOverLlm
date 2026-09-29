@@ -14,7 +14,7 @@ public class BigMapFollower
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D2B
-    // RVA   : 0xA2C180   Offset: 0xA2B580   Length: 0x43
+    // RVA   : 0xA2C810   Offset: 0xA2BC10   Length: 0x43
     public void /*ctor*/(GameObject _targetObj, float _range)
     {
         ZhSegment.Initialize(this,0);

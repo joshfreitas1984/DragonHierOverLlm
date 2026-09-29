@@ -29,16 +29,16 @@ public class UI2DSprite
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60006B6
-    // RVA   : 0xAF0850   Offset: 0xAEFC50   Length: 0x8
+    // RVA   : 0xAF0F10   Offset: 0xAF0310   Length: 0x8
     public Sprite get_sprite2D()
     {
-        uint64 FUN_180af0850(int64 this)
+        uint64 FUN_180af0f10(int64 this)
         {
         return this.mSprite;
     }
 
     // Token : 0x60006B7
-    // RVA   : 0xAF0B20   Offset: 0xAEFF20   Length: 0xC1
+    // RVA   : 0xAF11E0   Offset: 0xAF05E0   Length: 0xC1
     public void set_sprite2D(Sprite value)
     {
         ulong uVar1;
@@ -61,7 +61,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006B9
-    // RVA   : 0xAF0960   Offset: 0xAEFD60   Length: 0xBF
+    // RVA   : 0xAF1020   Offset: 0xAF0420   Length: 0xBF
     public override void set_material(Material value)
     {
         long lVar1;
@@ -78,7 +78,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006BA
-    // RVA   : 0xAF0750   Offset: 0xAEFB50   Length: 0xF9
+    // RVA   : 0xAF0E10   Offset: 0xAF0210   Length: 0xF9
     public override Shader get_shader()
     {
         bool cVar1;
@@ -101,7 +101,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006BB
-    // RVA   : 0xAF0A20   Offset: 0xAEFE20   Length: 0xF5
+    // RVA   : 0xAF10E0   Offset: 0xAF04E0   Length: 0xF5
     public override void set_shader(Shader value)
     {
         long lVar1;
@@ -122,7 +122,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006BC
-    // RVA   : 0xAF0570   Offset: 0xAEF970   Length: 0xE1
+    // RVA   : 0xAF0C30   Offset: 0xAF0030   Length: 0xE1
     public override Texture get_mainTexture()
     {
         bool cVar1;
@@ -147,16 +147,16 @@ public class UI2DSprite
     }
 
     // Token : 0x60006BD
-    // RVA   : 0xAF0560   Offset: 0xAEF960   Length: 0x8
+    // RVA   : 0xAF0C20   Offset: 0xAF0020   Length: 0x8
     public bool get_fixedAspect()
     {
-        uint8 FUN_180af0560(int64 this)
+        uint8 FUN_180af0c20(int64 this)
         {
         return this.mFixedAspect;
     }
 
     // Token : 0x60006BE
-    // RVA   : 0xAF08F0   Offset: 0xAEFCF0   Length: 0x6B
+    // RVA   : 0xAF0FB0   Offset: 0xAF03B0   Length: 0x6B
     public void set_fixedAspect(bool value)
     {
         ulong local_18;
@@ -165,7 +165,7 @@ public class UI2DSprite
           *(char *)(this + 67) = value;
           local_18 = 0;
           uStack_10 = 0;
-          FUN_1809dc910(&local_18,0,0,0x3f800000,0x3f800000,0);
+          FUN_1809dcfa0(&local_18,0,0,0x3f800000,0x3f800000,0);
           *(uint32 *)((int64)this + 252) = (uint32)local_18;
           *(uint32 *)(this + 32) = local_18._4_4_;
           *(uint32 *)((int64)this + 0x104) = (uint32)uStack_10;
@@ -175,48 +175,48 @@ public class UI2DSprite
     }
 
     // Token : 0x60006BF
-    // RVA   : 0xAF0670   Offset: 0xAEFA70   Length: 0xD5
+    // RVA   : 0xAF0D30   Offset: 0xAF0130   Length: 0xD5
     public override bool get_premultipliedAlpha()
     {
         bool cVar1;
         long lVar2;
         ulong uVar3;
         uVar3 = (uint64)*(uint32 *)(this + 69);
-        if (*(uint32 *)(this + 69) != 0xffffffff) goto LAB_180af072f;
+        if (*(uint32 *)(this + 69) != 0xffffffff) goto LAB_180af0def;
         lVar2 = (**(code **)(*this + 0x308))(this,*(uint64 *)(*this + 0x310));
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (!cVar1) {
-        LAB_180af0727:
+        LAB_180af0de7:
           uVar3 = 0;
         }
         else {
           if (lVar2 == null) {
-        LAB_180af0740:
+        LAB_180af0e00:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar2 = Object.get_name(lVar2,0);
-          if (lVar2 == null) goto LAB_180af0740;
+          if (lVar2 == null) goto LAB_180af0e00;
           cVar1 = String.Contains(lVar2,"Premultiplied",0);
-          if (!cVar1) goto LAB_180af0727;
+          if (!cVar1) goto LAB_180af0de7;
           uVar3 = 1;
         }
         *(int *)(this + 69) = (int)uVar3;
-        LAB_180af072f:
+        LAB_180af0def:
         return CONCAT71((int7)(uVar3 >> 8),(int)uVar3 == 1);
     }
 
     // Token : 0x60006C0
-    // RVA   : 0xAF0660   Offset: 0xAEFA60   Length: 0x9
+    // RVA   : 0xAF0D20   Offset: 0xAF0120   Length: 0x9
     public override float get_pixelSize()
     {
-        uint32 FUN_180af0660(int64 this)
+        uint32 FUN_180af0d20(int64 this)
         {
         return this.mPixelSize;
     }
 
     // Token : 0x60006C1
-    // RVA   : 0xAEFFA0   Offset: 0xAEF3A0   Length: 0x5BA
+    // RVA   : 0xAF0660   Offset: 0xAEFA60   Length: 0x5BA
     public override Vector4 get_drawingDimensions()
     {
         long lVar1;
@@ -236,7 +236,7 @@ public class UI2DSprite
             puVar3 = (uint64 *)Sprite.get_rect(&local_b8,param_2[63],0);
             local_c8 = *puVar3;
             uStack_c0 = puVar3[1];
-            uVar4 = FUN_180d98fa0(&local_c8,0);
+            uVar4 = FUN_180d995b0(&local_c8,0);
             Mathf.RoundToInt(uVar4,0);
             if (param_2[63] != 0) {
               puVar3 = (uint64 *)Sprite.get_rect(&local_b8,param_2[63],0);
@@ -254,12 +254,12 @@ public class UI2DSprite
                     puVar3 = (uint64 *)Sprite.get_rect(&local_b8,param_2[63],0);
                     local_c8 = *puVar3;
                     uStack_c0 = puVar3[1];
-                    FUN_180d98fa0(&local_c8,0);
+                    FUN_180d995b0(&local_c8,0);
                     if (param_2[63] != 0) {
                       puVar3 = (uint64 *)Sprite.get_textureRect(&local_b8,param_2[63],0);
                       local_c8 = *puVar3;
                       uStack_c0 = puVar3[1];
-                      FUN_180d98fa0(&local_c8,0);
+                      FUN_180d995b0(&local_c8,0);
                       if (param_2[63] != 0) {
                         Sprite.get_textureRectOffset(param_2[63],0);
                         Mathf.RoundToInt();
@@ -276,7 +276,7 @@ public class UI2DSprite
                             if (param_2[63] != 0) {
                               Sprite.get_textureRectOffset(param_2[63],0);
                               Mathf.RoundToInt();
-                              goto LAB_180af0380;
+                              goto LAB_180af0a40;
                             }
                           }
                         }
@@ -290,13 +290,13 @@ public class UI2DSprite
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180af0380:
+        LAB_180af0a40:
         if ((char)param_2[67] == false) {
           (**(code **)(*param_2 + 0x378))(&local_b8,param_2,*(uint64 *)(*param_2 + 0x380));
           (**(code **)(*param_2 + 0x3d8))(param_2,*(uint64 *)(*param_2 + 0x3e0));
           local_b8 = 0;
           uStack_b0 = 0;
-          FUN_1809dc910(&local_b8);
+          FUN_1809dcfa0(&local_b8);
         }
         Mathf.Lerp();
         Mathf.Lerp();
@@ -304,15 +304,15 @@ public class UI2DSprite
         Mathf.Lerp();
         *this = 0;
         this[1] = 0;
-        FUN_1809dc910(this);
+        FUN_1809dcfa0(this);
         return this;
     }
 
     // Token : 0x60006C2
-    // RVA   : 0xAEFF90   Offset: 0xAEF390   Length: 0xE
+    // RVA   : 0xAF0650   Offset: 0xAEFA50   Length: 0xE
     public override Vector4 get_border()
     {
-        uint64 * FUN_180aeff90(uint64 *this,int64 param_2)
+        uint64 * FUN_180af0650(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x210);
@@ -322,10 +322,10 @@ public class UI2DSprite
     }
 
     // Token : 0x60006C3
-    // RVA   : 0xAF0860   Offset: 0xAEFC60   Length: 0x86
+    // RVA   : 0xAF0F20   Offset: 0xAF0320   Length: 0x86
     public override void set_border(Vector4 value)
     {
-        void FUN_180af0860(int64 *this,float *value)
+        void FUN_180af0f20(int64 *this,float *value)
         {
         float fVar1;
         float fVar2;
@@ -346,7 +346,7 @@ public class UI2DSprite
           *(float *)((int64)this + 0x20c) = fVar4;
           *(float *)(this + 66) = fVar1;
           *(float *)((int64)this + 0x214) = fVar2;
-                          // WARNING: Could not recover jumptable at 0x000180af08de. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180af0f9e. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(fVar3,*(uint64 *)(*this + 0x330));
           return;
@@ -354,7 +354,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006C4
-    // RVA   : 0xAEFA50   Offset: 0xAEEE50   Length: 0x4B1
+    // RVA   : 0xAF0110   Offset: 0xAEF510   Length: 0x4B1
     protected override void OnUpdate()
     {
         long lVar2;
@@ -407,7 +407,7 @@ public class UI2DSprite
               puVar12 = (uint64 *)Sprite.get_rect(&local_58,this[63],0);
               local_78 = *puVar12;
               uStack_70 = puVar12[1];
-              uVar11 = FUN_180d98fa0(&local_78,0);
+              uVar11 = FUN_180d995b0(&local_78,0);
               iVar5 = Mathf.RoundToInt(uVar11,0);
               if (this[63] != 0) {
                 puVar12 = (uint64 *)Sprite.get_rect(&local_58,this[63],0);
@@ -425,12 +425,12 @@ public class UI2DSprite
                       puVar12 = (uint64 *)Sprite.get_rect(&local_58,this[63],0);
                       local_78 = *puVar12;
                       uStack_70 = puVar12[1];
-                      FUN_180d98fa0(&local_78,0);
+                      FUN_180d995b0(&local_78,0);
                       if (this[63] != 0) {
                         puVar12 = (uint64 *)Sprite.get_textureRect(&local_58,this[63],0);
                         local_78 = *puVar12;
                         uStack_70 = puVar12[1];
-                        FUN_180d98fa0(&local_78,0);
+                        FUN_180d995b0(&local_78,0);
                         if (this[63] != 0) {
                           Sprite.get_textureRectOffset(this[63],0);
                           iVar9 = Mathf.RoundToInt();
@@ -457,7 +457,7 @@ public class UI2DSprite
                                 else {
                                   fVar13 = 0.0;
                                 }
-                                FUN_1809dc910(&local_68,fVar13);
+                                FUN_1809dcfa0(&local_68,fVar13);
                                 local_58 = local_68;
                                 uStack_50 = uStack_60;
                                 UIWidget.set_drawRegion(this,&local_58,0);
@@ -479,7 +479,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006C5
-    // RVA   : 0xAEF470   Offset: 0xAEE870   Length: 0x1B0
+    // RVA   : 0xAEFB30   Offset: 0xAEEF30   Length: 0x1B0
     public override void MakePixelPerfect()
     {
         bool cVar1;
@@ -512,7 +512,7 @@ public class UI2DSprite
               uStack_30 = puVar5[2];
               uStack_2c = puVar5[3];
               fVar6 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
-              fVar7 = (float)FUN_180d98fa0(&local_38,0);
+              fVar7 = (float)FUN_180d995b0(&local_38,0);
               uVar2 = Mathf.RoundToInt(fVar7 * fVar6,0);
               fVar6 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
               fVar7 = (float)FUN_18044e2b0(&local_38,0);
@@ -531,7 +531,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006C6
-    // RVA   : 0xAEF630   Offset: 0xAEEA30   Length: 0x416
+    // RVA   : 0xAEFCF0   Offset: 0xAEF0F0   Length: 0x416
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         uint uVar1;
@@ -567,7 +567,7 @@ public class UI2DSprite
           (**(code **)(*plVar5 + 0x198))(plVar5,*(uint64 *)(*plVar5 + 0x1a0));
           local_58 = 0;
           uStack_50 = 0;
-          FUN_1809dc910(&local_58);
+          FUN_1809dcfa0(&local_58);
           local_78 = local_58;
           uStack_70 = uStack_50;
         }
@@ -583,7 +583,7 @@ public class UI2DSprite
                   (**(code **)(*this + 0x378))(&local_48,this,*(uint64 *)(*this + 0x380));
         auVar9 = *pauVar7;
         fVar3 = auVar9._4_4_;
-        fVar8 = (float)FUN_180d98fc0(&local_78,0);
+        fVar8 = (float)FUN_180d995d0(&local_78,0);
         auVar9._0_4_ = auVar9._0_4_ + fVar8;
         Rect.set_xMin(&local_78,auVar9._0_8_,0);
         fVar8 = (float)FUN_18044df60(&local_78,0);
@@ -601,7 +601,7 @@ public class UI2DSprite
         if (plVar5 != (int64 *)0) {
           (**(code **)(*plVar5 + 0x178))(plVar5,*(uint64 *)(*plVar5 + 0x180));
           (**(code **)(*plVar5 + 0x198))(plVar5,*(uint64 *)(*plVar5 + 0x1a0));
-          FUN_180d98fc0(&local_68,0);
+          FUN_180d995d0(&local_68,0);
           Rect.set_xMin(&local_68);
           Rect.get_xMax(&local_68,0);
           Rect.set_xMax(&local_68);
@@ -609,7 +609,7 @@ public class UI2DSprite
           Rect.set_yMin(&local_68);
           Rect.get_yMax(&local_68,0);
           Rect.set_yMax(&local_68);
-          FUN_180d98fc0(&local_78,0);
+          FUN_180d995d0(&local_78,0);
           Rect.set_xMin(&local_78);
           Rect.get_xMax(&local_78,0);
           Rect.set_xMax(&local_78);
@@ -634,7 +634,7 @@ public class UI2DSprite
     }
 
     // Token : 0x60006C7
-    // RVA   : 0xAEFF10   Offset: 0xAEF310   Length: 0x7C
+    // RVA   : 0xAF05D0   Offset: 0xAEF9D0   Length: 0x7C
     public void /*ctor*/()
     {
         uint uVar1;

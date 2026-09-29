@@ -26,7 +26,7 @@ public class VectorDelegate
     }
 
     // Token : 0x6000773
-    // RVA   : 0x8F7A50   Offset: 0x8F6E50   Length: 0x2BB
+    // RVA   : 0x92A6F0   Offset: 0x929AF0   Length: 0x2BB
     public virtual void Invoke(GameObject go, Vector2 delta)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class VectorDelegate
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808f7cbf;
+              goto LAB_18092a95f;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -88,13 +88,13 @@ public class VectorDelegate
                   (*(code *)*puVar5)(plVar3,go,delta,puVar5);
                 }
                 else {
-                  FUN_1801330f0(lVar1,plVar3,go,delta);
+                  FUN_180133150(lVar1,plVar3,go,delta);
                 }
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808f7af8;
+              goto LAB_18092a798;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -106,7 +106,7 @@ public class VectorDelegate
                 }
                 else {
                   uVar6 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180133320(*(uint16 *)(lVar1 + 72),uVar6,go,delta);
+                  FUN_180133380(*(uint16 *)(lVar1 + 72),uVar6,go,delta);
                 }
               }
               else {
@@ -120,17 +120,17 @@ public class VectorDelegate
                   (*(code *)*puVar5)(go,delta,puVar5);
                 }
                 else {
-                  FUN_180132eb0(lVar1,go,delta);
+                  FUN_180132f10(lVar1,go,delta);
                 }
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_1808f7af8:
+        LAB_18092a798:
             (*pcVar2)(go,delta,lVar1);
           }
           else {
-        LAB_1808f7cbf:
+        LAB_18092a95f:
             (*pcVar2)(plVar3,go,delta,lVar1);
           }
           uVar9 = uVar9 + 1;
@@ -141,7 +141,7 @@ public class VectorDelegate
     }
 
     // Token : 0x6000774
-    // RVA   : 0x8F7930   Offset: 0x8F6D30   Length: 0x82
+    // RVA   : 0x92A5D0   Offset: 0x9299D0   Length: 0x82
     public virtual IAsyncResult BeginInvoke(GameObject go, Vector2 delta, AsyncCallback callback, object object)
     {
         void VectorDelegate.BeginInvoke
@@ -155,7 +155,7 @@ public class VectorDelegate
         local_28 = delta;
         local_10 = 0;
         local_20 = go;
-        local_18 = il2cpp_value_box(DAT_181db3950,&local_28);
+        local_18 = il2cpp_value_box(DAT_181db3968,&local_28);
         il2cpp_internal(this,&local_20,callback,object);
     }
 

@@ -139,7 +139,7 @@ public class BMSymbol
         }
         else {
           if (!this.mIsValid) {
-            cVar4 = FUN_180d755b0(this.spriteName,0);
+            cVar4 = FUN_180d75bc0(this.spriteName,0);
             if (cVar4) goto LAB_1807f71f4;
             lVar1 = *atlas;
             uVar8 = this.spriteName;
@@ -147,7 +147,7 @@ public class BMSymbol
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               uVar11 = uVar12;
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar11 * 16) == DAT_181d7a788
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar11 * 16) == DAT_181d7a7a0
                    ) {
                   puVar7 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar11 * 16)
@@ -157,14 +157,14 @@ public class BMSymbol
                 uVar11 = uVar11 + 1;
               } while (uVar11 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar7 = (uint64 *)FUN_1800914f0(atlas,DAT_181d7a788,10);
+            puVar7 = (uint64 *)FUN_1800914f0(atlas,DAT_181d7a7a0,10);
         LAB_1807f6fff:
             uVar8 = (*(code *)*puVar7)(atlas,uVar8,puVar7[1]);
             this.mSprite = uVar8;
             lVar1 = *atlas;
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar12 * 16) == DAT_181d7a788
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar12 * 16) == DAT_181d7a7a0
                    ) {
                   puVar7 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar12 * 16)
@@ -174,7 +174,7 @@ public class BMSymbol
                 uVar12 = uVar12 + 1;
               } while (uVar12 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar7 = (uint64 *)FUN_1800914f0(atlas,DAT_181d7a788,4);
+            puVar7 = (uint64 *)FUN_1800914f0(atlas,DAT_181d7a7a0,4);
         LAB_1807f706c:
             plVar9 = (int64 *)(*(code *)*puVar7)(atlas,puVar7[1]);
             if (this.mSprite != null) {
@@ -184,7 +184,7 @@ public class BMSymbol
                   uVar14 = 0;
                   local_48 = 0;
                   uStack_40 = 0;
-                  FUN_1809dc910(&local_48);
+                  FUN_1809dcfa0(&local_48);
                   uVar3 = uStack_40;
                   uVar8 = local_48;
                   this.mUV = local_48;

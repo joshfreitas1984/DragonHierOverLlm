@@ -14,7 +14,7 @@ public class AlwaysForward
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009A4
-    // RVA   : 0xA1E640   Offset: 0xA1DA40   Length: 0x152
+    // RVA   : 0xA1ECD0   Offset: 0xA1E0D0   Length: 0x152
     private void Update()
     {
         long lVar1;

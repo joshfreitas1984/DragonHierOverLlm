@@ -6,32 +6,32 @@
 public class Water2DScript
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EF2
+    // Token: 0x4001EF3
     public Vector2 speed;
 
-    // Token: 0x4001EF3
+    // Token: 0x4001EF4
     private Renderer rend;
 
-    // Token: 0x4001EF4
+    // Token: 0x4001EF5
     private Material mat;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600245F
-    // RVA   : 0xC132D0   Offset: 0xC126D0   Length: 0x76
+    // RVA   : 0xC13940   Offset: 0xC12D40   Length: 0x76
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d94fe0);
+        uVar1 = Component.GetComponent(this,DAT_181d94ff8);
         this.rend = uVar1;
         if (this.rend != null) {
-          uVar1 = FUN_180d9d700(this.rend,0);
+          uVar1 = FUN_180d9dd10(this.rend,0);
           this.mat = uVar1;
           return;
         }
     }
 
     // Token : 0x6002460
-    // RVA   : 0xC13350   Offset: 0xC12750   Length: 0x7E
+    // RVA   : 0xC139C0   Offset: 0xC12DC0   Length: 0x7E
     private void LateUpdate()
     {
         float fVar1;
@@ -56,10 +56,10 @@ public class Water2DScript
     }
 
     // Token : 0x6002461
-    // RVA   : 0xC133D0   Offset: 0xC127D0   Length: 0xF
+    // RVA   : 0xC13A40   Offset: 0xC12E40   Length: 0xF
     public void /*ctor*/()
     {
-        void FUN_180c133d0(int64 this)
+        void FUN_180c13a40(int64 this)
         {
         this.speed = 0x3c23d70a;
         FUN_18044ef50(this,0);

@@ -38,7 +38,7 @@ public class Sprite
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600094D
-    // RVA   : 0x183DE80   Offset: 0x183D280   Length: 0x25C
+    // RVA   : 0x183DF20   Offset: 0x183D320   Length: 0x25C
     public Vector4 GetDrawingDimensions(float pixelSize)
     {
         int iVar1;
@@ -63,7 +63,7 @@ public class Sprite
         }
         *this = 0;
         this[1] = 0;
-        FUN_1809dc910(this);
+        FUN_1809dcfa0(this);
         return this;
     }
 

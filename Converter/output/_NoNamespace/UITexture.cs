@@ -26,7 +26,7 @@ public class UITexture
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000984
-    // RVA   : 0xC05770   Offset: 0xC04B70   Length: 0xD6
+    // RVA   : 0xC05DE0   Offset: 0xC051E0   Length: 0xD6
     public override Texture get_mainTexture()
     {
         bool cVar1;
@@ -50,7 +50,7 @@ public class UITexture
     }
 
     // Token : 0x6000985
-    // RVA   : 0xC05BA0   Offset: 0xC04FA0   Length: 0x179
+    // RVA   : 0xC06210   Offset: 0xC05610   Length: 0x179
     public override void set_mainTexture(Texture value)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class UITexture
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (cVar2) {
             if (this[43] == 0) {
-        LAB_180c05d14:
+        LAB_180c06384:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -76,7 +76,7 @@ public class UITexture
                   UIDrawCall.set_mainTexture(this[43],value,0);
                   return;
                 }
-                goto LAB_180c05d14;
+                goto LAB_180c06384;
               }
             }
           }
@@ -96,7 +96,7 @@ public class UITexture
     }
 
     // Token : 0x6000987
-    // RVA   : 0xC05D20   Offset: 0xC05120   Length: 0xD4
+    // RVA   : 0xC06390   Offset: 0xC05790   Length: 0xD4
     public override void set_material(Material value)
     {
         long lVar1;
@@ -115,7 +115,7 @@ public class UITexture
     }
 
     // Token : 0x6000988
-    // RVA   : 0xC05990   Offset: 0xC04D90   Length: 0xF9
+    // RVA   : 0xC06000   Offset: 0xC05400   Length: 0xF9
     public override Shader get_shader()
     {
         bool cVar1;
@@ -138,7 +138,7 @@ public class UITexture
     }
 
     // Token : 0x6000989
-    // RVA   : 0xC05E00   Offset: 0xC05200   Length: 0x18E
+    // RVA   : 0xC06470   Offset: 0xC05870   Length: 0x18E
     public override void set_shader(Shader value)
     {
         long lVar1;
@@ -150,7 +150,7 @@ public class UITexture
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (cVar2) {
             if (this[43] == 0) {
-        LAB_180c05f89:
+        LAB_180c065f9:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -164,7 +164,7 @@ public class UITexture
                   UIDrawCall.set_shader(this[43],value,0);
                   return;
                 }
-                goto LAB_180c05f89;
+                goto LAB_180c065f9;
               }
             }
           }
@@ -179,7 +179,7 @@ public class UITexture
     }
 
     // Token : 0x600098A
-    // RVA   : 0xC05850   Offset: 0xC04C50   Length: 0x136
+    // RVA   : 0xC05EC0   Offset: 0xC052C0   Length: 0x136
     public override bool get_premultipliedAlpha()
     {
         bool cVar1;
@@ -187,40 +187,40 @@ public class UITexture
         ulong uVar3;
         ulong uVar4;
         uVar4 = (uint64)*(uint32 *)((int64)this + 0x22c);
-        if (*(uint32 *)((int64)this + 0x22c) != 0xffffffff) goto LAB_180c05970;
+        if (*(uint32 *)((int64)this + 0x22c) != 0xffffffff) goto LAB_180c05fe0;
         lVar2 = (**(code **)(*this + 0x2c8))(this,*(uint64 *)(*this + 0x2d0));
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (!cVar1) {
-        LAB_180c05968:
+        LAB_180c05fd8:
           uVar4 = 0;
         }
         else {
-          if (lVar2 == null) goto LAB_180c05981;
+          if (lVar2 == null) goto LAB_180c05ff1;
           uVar3 = Material.get_shader(lVar2,0);
           cVar1 = Object.op_Inequality(uVar3,0,0);
-          if (!cVar1) goto LAB_180c05968;
+          if (!cVar1) goto LAB_180c05fd8;
           lVar2 = Material.get_shader(lVar2,0);
           if (lVar2 == null) {
-        LAB_180c05981:
+        LAB_180c05ff1:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar2 = Object.get_name(lVar2,0);
-          if (lVar2 == null) goto LAB_180c05981;
+          if (lVar2 == null) goto LAB_180c05ff1;
           cVar1 = String.Contains(lVar2,"Premultiplied",0);
-          if (!cVar1) goto LAB_180c05968;
+          if (!cVar1) goto LAB_180c05fd8;
           uVar4 = 1;
         }
         *(int *)((int64)this + 0x22c) = (int)uVar4;
-        LAB_180c05970:
+        LAB_180c05fe0:
         return CONCAT71((int7)(uVar4 >> 8),(int)uVar4 == 1);
     }
 
     // Token : 0x600098B
-    // RVA   : 0xC05410   Offset: 0xC04810   Length: 0xE
+    // RVA   : 0xC05A80   Offset: 0xC04E80   Length: 0xE
     public override Vector4 get_border()
     {
-        uint64 * FUN_180c05410(uint64 *this,int64 param_2)
+        uint64 * FUN_180c05a80(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x220);
@@ -230,10 +230,10 @@ public class UITexture
     }
 
     // Token : 0x600098C
-    // RVA   : 0xC05AA0   Offset: 0xC04EA0   Length: 0x86
+    // RVA   : 0xC06110   Offset: 0xC05510   Length: 0x86
     public override void set_border(Vector4 value)
     {
-        void FUN_180c05aa0(int64 *this,float *value)
+        void FUN_180c06110(int64 *this,float *value)
         {
         float fVar1;
         float fVar2;
@@ -254,7 +254,7 @@ public class UITexture
           *(float *)((int64)this + 0x21c) = fVar4;
           *(float *)(this + 68) = fVar1;
           *(float *)((int64)this + 0x224) = fVar2;
-                          // WARNING: Could not recover jumptable at 0x000180c05b1e. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180c0618e. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(fVar3,*(uint64 *)(*this + 0x330));
           return;
@@ -262,10 +262,10 @@ public class UITexture
     }
 
     // Token : 0x600098D
-    // RVA   : 0xC05A90   Offset: 0xC04E90   Length: 0xE
+    // RVA   : 0xC06100   Offset: 0xC05500   Length: 0xE
     public Rect get_uvRect()
     {
-        uint64 * FUN_180c05a90(uint64 *this,int64 param_2)
+        uint64 * FUN_180c06100(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x200);
@@ -275,7 +275,7 @@ public class UITexture
     }
 
     // Token : 0x600098E
-    // RVA   : 0xC05F90   Offset: 0xC05390   Length: 0x62
+    // RVA   : 0xC06600   Offset: 0xC05A00   Length: 0x62
     public void set_uvRect(Rect value)
     {
         uint uVar1;
@@ -308,7 +308,7 @@ public class UITexture
     }
 
     // Token : 0x600098F
-    // RVA   : 0xC05420   Offset: 0xC04820   Length: 0x347
+    // RVA   : 0xC05A90   Offset: 0xC04E90   Length: 0x347
     public override Vector4 get_drawingDimensions()
     {
         long lVar1;
@@ -324,13 +324,13 @@ public class UITexture
             plVar2 = (int64 *)param_2[65];
             if (plVar2 != (int64 *)0) {
               (**(code **)(*plVar2 + 0x198))(plVar2,*(uint64 *)(*plVar2 + 0x1a0));
-              goto LAB_180c05603;
+              goto LAB_180c05c73;
             }
           }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180c05603:
+        LAB_180c05c73:
         if ((char)param_2[69] == false) {
           (**(code **)(*param_2 + 0x378))(local_98,param_2,*(uint64 *)(*param_2 + 0x380));
         }
@@ -340,7 +340,7 @@ public class UITexture
         Mathf.Lerp();
         *this = 0;
         this[1] = 0;
-        FUN_1809dc910(this);
+        FUN_1809dcfa0(this);
         return this;
     }
 
@@ -354,7 +354,7 @@ public class UITexture
     }
 
     // Token : 0x6000991
-    // RVA   : 0xC05B30   Offset: 0xC04F30   Length: 0x6B
+    // RVA   : 0xC061A0   Offset: 0xC055A0   Length: 0x6B
     public void set_fixedAspect(bool value)
     {
         ulong local_18;
@@ -363,7 +363,7 @@ public class UITexture
           *(char *)(this + 69) = value;
           local_18 = 0;
           uStack_10 = 0;
-          FUN_1809dc910(&local_18,0,0,0x3f800000,0x3f800000,0);
+          FUN_1809dcfa0(&local_18,0,0,0x3f800000,0x3f800000,0);
           *(uint32 *)((int64)this + 252) = (uint32)local_18;
           *(uint32 *)(this + 32) = local_18._4_4_;
           *(uint32 *)((int64)this + 0x104) = (uint32)uStack_10;
@@ -373,7 +373,7 @@ public class UITexture
     }
 
     // Token : 0x6000992
-    // RVA   : 0xC04A60   Offset: 0xC03E60   Length: 0x285
+    // RVA   : 0xC050D0   Offset: 0xC044D0   Length: 0x285
     public override void MakePixelPerfect()
     {
         ulong uVar1;
@@ -452,7 +452,7 @@ public class UITexture
     }
 
     // Token : 0x6000993
-    // RVA   : 0xC05160   Offset: 0xC04560   Length: 0x1FF
+    // RVA   : 0xC057D0   Offset: 0xC04BD0   Length: 0x1FF
     protected override void OnUpdate()
     {
         long lVar1;
@@ -495,7 +495,7 @@ public class UITexture
             else {
               fVar6 = 0.0;
             }
-            FUN_1809dc910(&local_28,fVar6);
+            FUN_1809dcfa0(&local_28,fVar6);
             local_18 = local_28;
             uStack_10 = uStack_20;
             UIWidget.set_drawRegion(this,&local_18,0);
@@ -504,7 +504,7 @@ public class UITexture
     }
 
     // Token : 0x6000994
-    // RVA   : 0xC04CF0   Offset: 0xC040F0   Length: 0x467
+    // RVA   : 0xC05360   Offset: 0xC04760   Length: 0x467
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         bool cVar1;
@@ -536,16 +536,16 @@ public class UITexture
         plVar6 = (int64 *)(**(code **)(*this + 0x2e8))(this,*(uint64 *)(*this + 0x2f0));
         cVar1 = Object.op_Equality(plVar6,0,0);
         if (!cVar1) {
-          fVar8 = (float)FUN_180d98fc0(this + 63,0);
+          fVar8 = (float)FUN_180d995d0(this + 63,0);
           if (plVar6 != (int64 *)0) {
             iVar2 = (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
             fVar9 = (float)FUN_18044df60(this + 63,0);
             iVar3 = (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
             iVar4 = (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
-            fVar10 = (float)FUN_180d98fa0(this + 63,0);
+            fVar10 = (float)FUN_180d995b0(this + 63,0);
             iVar5 = (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
             fVar11 = (float)FUN_18044e2b0(this + 63,0);
-            FUN_1809dc910(&local_98,(float)iVar2 * fVar8,(float)iVar3 * fVar9,(float)iVar4 * fVar10,
+            FUN_1809dcfa0(&local_98,(float)iVar2 * fVar8,(float)iVar3 * fVar9,(float)iVar4 * fVar10,
                           CONCAT44(uVar15,(float)iVar5 * fVar11),0);
             local_a8 = local_98;
             uStack_a0 = uStack_90;
@@ -554,7 +554,7 @@ public class UITexture
             ;
             auVar12 = *pauVar7;
             fVar8 = auVar12._4_4_;
-            fVar9 = (float)FUN_180d98fc0(&local_a8,0);
+            fVar9 = (float)FUN_180d995d0(&local_a8,0);
             auVar12._0_4_ = auVar12._0_4_ + fVar9;
             Rect.set_xMin(&local_a8,auVar12._0_8_,0);
             fVar9 = (float)FUN_18044df60(&local_a8,0);
@@ -571,7 +571,7 @@ public class UITexture
             Rect.set_yMax(&local_a8);
             (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
             (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
-            FUN_180d98fc0(&local_98,0);
+            FUN_180d995d0(&local_98,0);
             Rect.set_xMin(&local_98);
             Rect.get_xMax(&local_98,0);
             Rect.set_xMax(&local_98);
@@ -579,7 +579,7 @@ public class UITexture
             Rect.set_yMin(&local_98);
             Rect.get_yMax(&local_98,0);
             Rect.set_yMax(&local_98);
-            FUN_180d98fc0(&local_a8,0);
+            FUN_180d995d0(&local_a8,0);
             Rect.set_xMin(&local_a8);
             Rect.get_xMax(&local_a8,0);
             Rect.set_xMax(&local_a8);
@@ -607,7 +607,7 @@ public class UITexture
     }
 
     // Token : 0x6000995
-    // RVA   : 0xC05360   Offset: 0xC04760   Length: 0xAE
+    // RVA   : 0xC059D0   Offset: 0xC04DD0   Length: 0xAE
     public void /*ctor*/()
     {
         uint uVar1;
@@ -619,7 +619,7 @@ public class UITexture
         byte[] local_18 = new byte[16];
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dc910(&local_28,0,0,0x3f800000,0x3f800000,0);
+        FUN_1809dcfa0(&local_28,0,0,0x3f800000,0x3f800000,0);
         this.mRect = (uint32)local_28;
         *(uint32 *)(this + 0x1fc) = local_28._4_4_;
         *(uint32 *)(this + 0x200) = (uint32)uStack_20;

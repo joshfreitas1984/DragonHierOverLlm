@@ -6,10 +6,10 @@
 public class <>c__DisplayClass6_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002102
+    // Token: 0x4002103
     public Transform trans;
 
-    // Token: 0x4002103
+    // Token: 0x4002104
     public Rigidbody2D target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -36,7 +36,7 @@ public class <>c__DisplayClass6_0
     }
 
     // Token : 0x6002689
-    // RVA   : 0x939D20   Offset: 0x939120   Length: 0x111
+    // RVA   : 0x93A3B0   Offset: 0x9397B0   Length: 0x111
     internal void <DOLocalPath>b__1(Vector3 x)
     {
         long lVar1;
@@ -48,11 +48,11 @@ public class <>c__DisplayClass6_0
         byte[] local_18 = new byte[16];
         lVar1 = this.target;
         if (this.trans == null) throw; // [null/range check failed]
-        uVar2 = FUN_180da9a20(this.trans,0);
+        uVar2 = FUN_180daa030(this.trans,0);
         cVar4 = Object.op_Equality(uVar2,0,0);
         if (!cVar4) {
           if (this.trans == null) throw; // [null/range check failed]
-          lVar5 = FUN_180da9a20(this.trans,0);
+          lVar5 = FUN_180daa030(this.trans,0);
           if (lVar5 == null) throw; // [null/range check failed]
           local_20 = *(uint32 *)(x + 1);
           local_28 = *x;

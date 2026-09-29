@@ -18,10 +18,10 @@ public class <>c__DisplayClass52_0
     }
 
     // Token : 0x6000DB9
-    // RVA   : 0x937880   Offset: 0x936C80   Length: 0x7
+    // RVA   : 0x937F10   Offset: 0x937310   Length: 0x7
     internal bool <StartShowBreakChoice>b__0(int n)
     {
-        bool FUN_180937880(int64 this,int n)
+        bool FUN_180937f10(int64 this,int n)
         {
         return n == this.randomSpeAddTypeID;
     }

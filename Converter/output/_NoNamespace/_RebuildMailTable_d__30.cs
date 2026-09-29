@@ -6,13 +6,13 @@
 public class <RebuildMailTable>d__30
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400190E
+    // Token: 0x400190F
     private int <>1__state;
 
-    // Token: 0x400190F
+    // Token: 0x4001910
     private object <>2__current;
 
-    // Token: 0x4001910
+    // Token: 0x4001911
     public MissionUIController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,7 +31,7 @@ public class <RebuildMailTable>d__30
     }
 
     // Token : 0x6001942
-    // RVA   : 0x8F16F0   Offset: 0x8F0AF0   Length: 0xE4
+    // RVA   : 0x924570   Offset: 0x923970   Length: 0xE4
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -40,7 +40,7 @@ public class <RebuildMailTable>d__30
         if (this.<>1__state == 0) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 1;
-          uVar2 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar2 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar2;
           this.<>1__state = 1;
           return true;
@@ -66,15 +66,15 @@ public class <RebuildMailTable>d__30
     }
 
     // Token : 0x6001944
-    // RVA   : 0x8F17E0   Offset: 0x8F0BE0   Length: 0x3E
+    // RVA   : 0x924660   Offset: 0x923A60   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da7e48);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da7fe0);
     }
 
     // Token : 0x6001945

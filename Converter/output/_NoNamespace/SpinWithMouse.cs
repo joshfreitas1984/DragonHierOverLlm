@@ -17,7 +17,7 @@ public class SpinWithMouse
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000091
-    // RVA   : 0xA7F5C0   Offset: 0xA7E9C0   Length: 0x24
+    // RVA   : 0xA7FC50   Offset: 0xA7F050   Length: 0x24
     private void Start()
     {
         ulong uVar1;
@@ -26,7 +26,7 @@ public class SpinWithMouse
     }
 
     // Token : 0x6000092
-    // RVA   : 0xC5D6B0   Offset: 0xC5CAB0   Length: 0x1AA
+    // RVA   : 0xC5DCC0   Offset: 0xC5D0C0   Length: 0x1AA
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -39,7 +39,7 @@ public class SpinWithMouse
         ulong local_38;
         ulong uStack_30;
         byte[] local_28 = new byte[32];
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181daf678 + 184) + 224);
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181daf690 + 184) + 224);
         if (lVar7 != null) {
           *(uint32 *)(lVar7 + 112) = 0;
           uVar1 = this.target;
@@ -85,10 +85,10 @@ public class SpinWithMouse
     }
 
     // Token : 0x6000093
-    // RVA   : 0xC5D860   Offset: 0xC5CC60   Length: 0xE
+    // RVA   : 0xC5DE70   Offset: 0xC5D270   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180c5d860(int64 this)
+        void FUN_180c5de70(int64 this)
         {
         this.speed = 0x3f800000;
         FUN_18044ef50(this,0);

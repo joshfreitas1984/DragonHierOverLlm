@@ -28,7 +28,7 @@ public class ForceMissionIconController
         LAB_18077bd38:
           plVar6 = (int64 *)Resources.Load(uVar7,0);
           plVar8 = (int64 *)0;
-          if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+          if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
             plVar8 = plVar6;
           }
           NGUITools.PlaySound(plVar8,0);
@@ -64,8 +64,8 @@ public class ForceMissionIconController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 if (((lVar3 != null) &&
-                    (lVar3 = FUN_1817d9e10(lVar3,*(uint32 *)(*(int64 *)(lVar4 + 16) + 32),
-                                           DAT_181db9ed0), lVar3 != null)) &&
+                    (lVar3 = FUN_1817da420(lVar3,*(uint32 *)(*(int64 *)(lVar4 + 16) + 32),
+                                           DAT_181db9ee8), lVar3 != null)) &&
                    (lVar3 = GameObject.get_transform(lVar3,0)) != null) {
                   puVar5 = (uint64 *)Transform.get_localPosition(local_18,lVar3,0);
                   if (lVar2 != null) {
@@ -97,7 +97,7 @@ public class ForceMissionIconController
             if ((((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
                 (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) != null) &&
                (((lVar4 = HeroData.GetForce(lVar4,0,0), lVar4 != null && (lVar3 != null)) &&
-                ((lVar3 = FUN_1817d9e10(lVar3,*(uint32 *)(lVar4 + 56),DAT_181db9ed0), lVar3 != null &&
+                ((lVar3 = FUN_1817da420(lVar3,*(uint32 *)(lVar4 + 56),DAT_181db9ee8), lVar3 != null &&
                  (lVar3 = GameObject.get_transform(lVar3,0)) != null))))) {
               puVar5 = (uint64 *)Transform.get_localPosition(local_18,lVar3,0);
               if (lVar2 != null) {

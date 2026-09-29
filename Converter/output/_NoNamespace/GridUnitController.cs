@@ -148,7 +148,7 @@ public class GridUnitController
         else if (iVar5 == 5) {
         LAB_1808715e1:
           lVar8 = this.coverRenderer;
-          puVar10 = (uint32 *)FUN_180d98fe0(&local_28,0);
+          puVar10 = (uint32 *)FUN_180d995f0(&local_28,0);
           if (lVar8 == null) throw; // [null/range check failed]
           uVar11 = *puVar10;
           uVar12 = puVar10[1];
@@ -303,7 +303,7 @@ public class GridUnitController
             uVar14 = puVar10[3];
           }
           else {
-            puVar10 = (uint32 *)FUN_180d98fe0(&local_28,0);
+            puVar10 = (uint32 *)FUN_180d995f0(&local_28,0);
             uVar11 = *puVar10;
             uVar12 = puVar10[1];
             uVar13 = puVar10[2];
@@ -319,10 +319,10 @@ public class GridUnitController
           lVar8 = this.tileRenderer;
           if (this.gridData != null) {
             if (this.gridData.gridType == 2) {
-              puVar10 = (uint32 *)FUN_180d98fe0();
+              puVar10 = (uint32 *)FUN_180d995f0();
             }
             else {
-              puVar10 = (uint32 *)FUN_1810d3570(&local_28,0);
+              puVar10 = (uint32 *)FUN_1810d3b80(&local_28,0);
             }
             if (lVar8 != null) {
               local_28 = *puVar10;
@@ -333,7 +333,7 @@ public class GridUnitController
               lVar8 = this.lineRenderer;
               if (this.gridData != null) {
                 if (this.gridData.gridType == 2) {
-                  puVar10 = (uint32 *)FUN_180d98fe0();
+                  puVar10 = (uint32 *)FUN_180d995f0();
                 }
                 else {
                   puVar10 = (uint32 *)Color.get_black(&local_28,0);
@@ -375,7 +375,7 @@ public class GridUnitController
             uVar2 = String.Concat("Sound/SoundEffect/",lVar4.tempRef,0);
             plVar3 = (int64 *)Resources.Load(uVar2,0);
             plVar6 = (int64 *)0;
-            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
               plVar6 = plVar3;
             }
             NGUITools.PlaySound(plVar6,0x3f000000,0);
@@ -394,7 +394,7 @@ public class GridUnitController
                 if (this.speGridObj == null) throw; // [null/range check failed]
                 uVar2 = GameObject.get_transform(this.speGridObj,0);
                 uVar2 = ShortcutExtensions.DOScale(uVar2,0x3f3bbbbc,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc1330);
+                TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc14d8);
                 if (((this.speGridObj == null) ||
                     (lVar4 = GameObject.GetComponent(this.speGridObj,DAT_181d734d0),
                     lVar4 == null)) || (lVar4 = SkeletonAnimation.get_AnimationState(lVar4,0)) == null)
@@ -419,12 +419,12 @@ public class GridUnitController
                   if (this.speGridObj == null) throw; // [null/range check failed]
                   uVar2 = GameObject.get_transform(this.speGridObj,0);
                   uVar2 = ShortcutExtensions.DOLocalMoveZ
-                                    (uVar2,*(uint32 *)(*(int64 *)(DAT_181db0248 + 184) + 24),
+                                    (uVar2,*(uint32 *)(*(int64 *)(DAT_181db0260 + 184) + 24),
                                      0x3e4ccccd,0,0);
-                  uVar2 = TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc1330);
-                  uVar2 = TweenSettingsExtensions.SetEase(uVar2,27,DAT_181dc0f80);
-                  uVar5 = new OnTooltipCB(this,DAT_181d77ab8,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar5,DAT_181dc01d0);
+                  uVar2 = TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc14d8);
+                  uVar2 = TweenSettingsExtensions.SetEase(uVar2,27,DAT_181dc1128);
+                  uVar5 = new OnTooltipCB(this,DAT_181d77ad0,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar5,DAT_181dc0380);
                 }
                 return;
               }
@@ -437,7 +437,7 @@ public class GridUnitController
     // RVA   : 0x870AD0   Offset: 0x86FED0   Length: 0x612
     public void RefreshSpeObj()
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
+        var pStatics = *(int64*)(DAT_181db0260 + 184);
         uint uVar2;
         bool cVar3;
         ulong uVar4;
@@ -473,7 +473,7 @@ public class GridUnitController
           FUN_1800d6620();
         }
         local_res8[0] = *(uint32 *)(lVar7 + 16);
-        uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
+        uVar5 = il2cpp_value_box(DAT_181d80430,local_res8);
         uVar5 = String.Format("Skeleton/Battle/SpeObj/{0}/skeleton_SkeletonData",uVar5,0);
         puVar6 = (uint64 *)Vector3.get_one(&local_58,0);
         local_48 = *puVar6;
@@ -611,7 +611,7 @@ public class GridUnitController
     // RVA   : 0x86F7E0   Offset: 0x86EBE0   Length: 0x7D8
     public void InitObstacle()
     {
-        var pStatics = *(int64*)(DAT_181db0248 + 184);
+        var pStatics = *(int64*)(DAT_181db0260 + 184);
         int iVar1;
         long lVar2;
         ulong uVar3;
@@ -738,7 +738,7 @@ public class GridUnitController
                       (lVar9 = lVar9.passes) == null))) throw; // [null/range check failed]
                   local_res8[0] = *(uint32 *)(lVar9 + 72);
                 }
-                uVar10 = il2cpp_value_box(DAT_181d80418,local_res8);
+                uVar10 = il2cpp_value_box(DAT_181d80430,local_res8);
                 lVar9 = FUN_18046bb80(0);
                 if ((lVar9 == null) || (lVar9.battleUnit == null)) {
         LAB_18086ffb3:
@@ -747,7 +747,7 @@ public class GridUnitController
                 }
                 fVar13 = (float)BattleMapData.GetAreaWallSkinLv(lVar9.battleUnit,0);
                 local_res18[0] = Mathf.Clamp((int)(fVar13 / 3.0),0,3);
-                uVar11 = il2cpp_value_box(DAT_181d80418,local_res18);
+                uVar11 = il2cpp_value_box(DAT_181d80430,local_res18);
                 uVar6 = String.Format(uVar6,uVar10,uVar11,0);
                 local_68 = local_78;
                 local_60 = local_70;
@@ -847,12 +847,12 @@ public class GridUnitController
         if ((this.gridData != null) &&
            (lVar7 = this.gridData.speGridObjData) != null) {
           if (*(int *)(lVar7 + 16) == 0) {
-            iVar2 = FUN_180d95a30(0xfffffff5);
+            iVar2 = FUN_180d96040(0xfffffff5);
             iVar11 = 0;
             if (0 < iVar2) {
               do {
                 uVar3 = Component.get_gameObject(this,0);
-                local_res8[0] = FUN_180d95a30(0,4);
+                local_res8[0] = FUN_180d96040(0,4);
                 uVar4 = Int32.ToString(local_res8,0);
                 uVar5 = String.Concat("Skeleton/Battle/Plane/装饰_",uVar4,"/skeleton_SkeletonData",0);
                 puVar6 = (uint64 *)Vector3.get_one(local_120,0);
@@ -867,7 +867,7 @@ public class GridUnitController
                 if ((lVar7 == null) || (lVar7 = Component.get_gameObject(lVar7,0)) == null)
                 throw; // [null/range check failed]
                 lVar8 = GameObject.get_transform(lVar7,0);
-                lVar9 = Component.GetComponent(this,DAT_181d95de0);
+                lVar9 = Component.GetComponent(this,DAT_181d95df8);
                 if ((lVar9 == null) || (lVar9 = SpriteRenderer.get_sprite(lVar9,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Sprite.get_bounds(&local_138,lVar9,0);
@@ -877,7 +877,7 @@ public class GridUnitController
                 pfVar10 = (float *)Bounds.get_size(local_110,&local_198,0);
                 fVar12 = *pfVar10;
                 fVar13 = (float)Random.Range(0xbf000000,0x3f000000,0);
-                lVar9 = Component.GetComponent(this,DAT_181d95de0);
+                lVar9 = Component.GetComponent(this,DAT_181d95df8);
                 if ((lVar9 == null) || (lVar9 = SpriteRenderer.get_sprite(lVar9,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Sprite.get_bounds(&local_138,lVar9,0);
@@ -900,7 +900,7 @@ public class GridUnitController
                 puVar6 = (uint64 *)Transform.get_localPosition(local_f0,lVar9,0);
                 uVar4 = *puVar6;
                 uVar1 = *(uint32 *)(puVar6 + 1);
-                fVar12 = *(float *)(*(int64 *)(DAT_181db0248 + 184) + 48);
+                fVar12 = *(float *)(*(int64 *)(DAT_181db0260 + 184) + 48);
                 lVar7 = GameObject.get_transform(lVar7,0);
                 if (lVar7 == null) throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_localPosition(local_e0,lVar7,0);
@@ -916,7 +916,7 @@ public class GridUnitController
                 local_140 = *(uint32 *)(puVar6 + 1);
                 Transform.set_localPosition(lVar8,&local_148,0);
                 if (this.decorations == null) throw; // [null/range check failed]
-                FUN_18181e0a0();
+                FUN_18181e6b0();
                 iVar11 = iVar11 + 1;
               } while (iVar11 < iVar2);
             }
@@ -1049,7 +1049,7 @@ public class GridUnitController
                   uVar3 = String.Concat("Sound/SoundEffect/",*(uint64 *)(lVar2 + 64),0);
                   plVar4 = (int64 *)Resources.Load(uVar3,0);
                   plVar5 = (int64 *)0;
-                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                     plVar5 = plVar4;
                   }
                   NGUITools.PlaySound(plVar5,0x3ecccccd,0);
@@ -1094,7 +1094,7 @@ public class GridUnitController
                   (lVar1 = *(int64 *)(lVar1 + 32)) == null))) throw; // [null/range check failed]
               local_res8[0] = *(uint32 *)(lVar1 + 72);
             }
-            uVar2 = il2cpp_value_box(DAT_181d80418,local_res8);
+            uVar2 = il2cpp_value_box(DAT_181d80430,local_res8);
             if ((this.gridData == null) ||
                (lVar1 = this.gridData.obstale) == null) {
                           // WARNING: Subroutine does not return
@@ -1103,7 +1103,7 @@ public class GridUnitController
             local_res18[0] =
                  Mathf.Clamp(~(int)((1.0 - *(float *)(lVar1 + 36) / *(float *)(lVar1 + 40)) * -5.0),0
                               ,3);
-            uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
+            uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
             uVar4 = String.Format(uVar4,uVar2,uVar3,0);
           }
           if (this.obstacleObj != null) {
@@ -1179,7 +1179,7 @@ public class GridUnitController
                   uVar5 = String.Concat("Sound/SoundEffect/",lVar4.tempRef,0);
                   plVar6 = (int64 *)Resources.Load(uVar5,0);
                   plVar12 = plVar13;
-                  if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+                  if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
                     plVar12 = plVar6;
                   }
                   NGUITools.PlaySound(plVar12,0);
@@ -1243,7 +1243,7 @@ public class GridUnitController
                       lVar14 = lVar14 + 8;
                     }
                     else {
-                      lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b398);
+                      lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b3b0);
                       if (lVar7 == null) throw; // [null/range check failed]
                       lVar7 = *(int64 *)(lVar7 + 24);
                       if ((this.gridData == null) ||
@@ -1269,7 +1269,7 @@ public class GridUnitController
                          (lVar7 = ObstacleData.GetObstacleDataBase()) == null) throw; // [null/range check failed]
                       local_res8[0] = *(int *)(lVar7 + 92);
                       if (local_res8[0] == 0) {
-                        lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b398);
+                        lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b3b0);
                         if (lVar7 != null) {
                           lVar7 = *(int64 *)(lVar7 + 24);
                           if ((this.gridData != null) &&
@@ -1289,7 +1289,7 @@ public class GridUnitController
                         throw; // [null/range check failed]
                       }
                       if (local_res8[0] == 1) {
-                        lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b398);
+                        lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b3b0);
                         if (lVar7 == null) throw; // [null/range check failed]
                         lVar7 = *(int64 *)(lVar7 + 24);
                         if ((this.gridData == null) ||
@@ -1306,7 +1306,7 @@ public class GridUnitController
                       }
                       else {
                         if (local_res8[0] != 2) goto LAB_18086eceb;
-                        lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b398);
+                        lVar7 = FUN_180002f80(lVar4,plVar6,DAT_181d8b3b0);
                         if (lVar7 == null) throw; // [null/range check failed]
                         lVar7 = *(int64 *)(lVar7 + 24);
                         if ((this.gridData == null) ||
@@ -1347,7 +1347,7 @@ public class GridUnitController
                     GlobalData.AddChild(uVar5,plVar12,&local_98,&local_88,0);
                     plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/TearDown",0);
                     plVar12 = plVar13;
-                    if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+                    if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
                       plVar12 = plVar6;
                     }
                     NGUITools.PlaySound(plVar12,0);
@@ -1356,7 +1356,7 @@ public class GridUnitController
                   else {
                     lVar4 = ObstacleData.GetObstacleDataBase();
                     if (lVar4 == null) throw; // [null/range check failed]
-                    cVar3 = FUN_180d755b0(*(uint64 *)(lVar4 + 80),0);
+                    cVar3 = FUN_180d75bc0(*(uint64 *)(lVar4 + 80),0);
                     if (!cVar3) {
                       uVar5 = this.obstacleObj;
                       if (((this.gridData == null) ||
@@ -1415,7 +1415,7 @@ public class GridUnitController
                         uVar5 = String.Concat("Sound/SoundEffect/",*(uint64 *)(lVar4 + 72),0);
                         plVar6 = (int64 *)Resources.Load(uVar5,0);
                         plVar12 = plVar13;
-                        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+                        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
                           plVar12 = plVar6;
                         }
                         NGUITools.PlaySound(plVar12,0);
@@ -1452,7 +1452,7 @@ public class GridUnitController
                         throw; // [null/range check failed]
                         uVar9 = "0";
                         if (*(char *)(lVar4 + 66) == false) {
-                          local_res8[0] = FUN_180d95a30(0,4);
+                          local_res8[0] = FUN_180d96040(0,4);
                           uVar9 = Int32.ToString(local_res8,0);
                         }
                         plVar6 = (int64 *)String.Concat(uVar5,uVar9,0);
@@ -1486,8 +1486,8 @@ public class GridUnitController
                       uVar5 = ShortcutExtensions.DOLocalMoveZ
                                         (uVar5,PlotController.CheckHideChoice
                                          ,fVar16 * 0.2,0,0);
-                      uVar5 = TweenSettingsExtensions.SetEase(uVar5,17,DAT_181dc0f80);
-                      TweenSettingsExtensions.SetDelay(uVar5,fVar16 * 0.8,DAT_181dc0c60);
+                      uVar5 = TweenSettingsExtensions.SetEase(uVar5,17,DAT_181dc1128);
+                      TweenSettingsExtensions.SetDelay(uVar5,fVar16 * 0.8,DAT_181dc0e10);
                     }
                     lVar4 = this.gridData;
                     if (lVar4 != null) {
@@ -1509,11 +1509,11 @@ public class GridUnitController
                         lVar14 = PlotController.LaBaFestivelResultTalkText;
                         if (((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 24)) == null) ||
                            (lVar14 = *(int64 *)(lVar14 + 72)) == null) break;
-                        FUN_1817eee00(lVar14,lVar4,DAT_181d8b098);
+                        FUN_1817ef410(lVar14,lVar4,DAT_181d8b0b0);
                         lVar14 = PlotController.LaBaFestivelResultTalkText;
                         if (((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 24)) == null) ||
                            (lVar14 = *(int64 *)(lVar14 + 64)) == null) break;
-                        FUN_18181e0a0(lVar14,lVar4,DAT_181d8af18);
+                        FUN_18181e6b0(lVar14,lVar4,DAT_181d8af30);
                         lVar4 = GridUnitData.get_GridObj(lVar4,0);
                         if ((lVar4 == null) ||
                            (lVar4 = GameObject.GetComponent(lVar4,DAT_181d71820)) == null) break;
@@ -1544,8 +1544,8 @@ public class GridUnitController
         int iVar6;
         int iVar7;
         int iVar8;
-        lVar3 = il2cpp_internal(DAT_181d932d0);
-        FUN_18132faf0(lVar3,DAT_181d8ae18);
+        lVar3 = il2cpp_internal(DAT_181d932e8);
+        FUN_181330100(lVar3,DAT_181d8ae30);
         lVar4 = this.gridData;
         iVar7 = 0;
         if (lVar4 != null) {
@@ -1565,12 +1565,12 @@ public class GridUnitController
                   if ((((this.gridData == null) ||
                        (lVar5 = this.gridData.obstale) == null) ||
                       (lVar5 = *(int64 *)(lVar5 + 56)) == null) ||
-                     (lVar5 = FUN_180002f80(lVar5,iVar7,DAT_181d8b398)) == null) throw; // [null/range check failed]
+                     (lVar5 = FUN_180002f80(lVar5,iVar7,DAT_181d8b3b0)) == null) throw; // [null/range check failed]
                   iVar1 = *(int *)(lVar5 + 36);
                   if (((this.gridData == null) ||
                       (lVar5 = this.gridData.obstale) == null) ||
                      ((lVar5 = *(int64 *)(lVar5 + 56), lVar5 == null ||
-                      ((lVar5 = FUN_180002f80(lVar5,iVar7,DAT_181d8b398), lVar5 == null || (lVar4 == null))))))
+                      ((lVar5 = FUN_180002f80(lVar5,iVar7,DAT_181d8b3b0), lVar5 == null || (lVar4 == null))))))
                   throw; // [null/range check failed]
                   lVar4 = BattleMapData.GetGridData(lVar4,iVar1 + iVar6,*(int *)(lVar5 + 40) + iVar8,0)
                   ;
@@ -1578,12 +1578,12 @@ public class GridUnitController
                     if (((this.gridData == null) ||
                         (lVar5 = this.gridData.obstale) == null) ||
                        (lVar5 = *(int64 *)(lVar5 + 56)) == null) throw; // [null/range check failed]
-                    cVar2 = FUN_18181e400(lVar5,lVar4,DAT_181d8b018);
+                    cVar2 = FUN_18181ea10(lVar5,lVar4,DAT_181d8b030);
                     if (!cVar2) {
                       if (lVar3 == null) throw; // [null/range check failed]
-                      cVar2 = FUN_18181e400(lVar3,lVar4,DAT_181d8b018);
+                      cVar2 = FUN_18181ea10(lVar3,lVar4,DAT_181d8b030);
                       if (!cVar2) {
-                        FUN_18181e0a0(lVar3,lVar4,DAT_181d8af18);
+                        FUN_18181e6b0(lVar3,lVar4,DAT_181d8af30);
                       }
                     }
                   }
@@ -1610,11 +1610,11 @@ public class GridUnitController
           lVar1 = PlotController.LaBaFestivelResultTalkText;
           if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 24)) != null) &&
              (lVar1 = *(int64 *)(lVar1 + 72)) != null) {
-            FUN_1817eee00(lVar1,targetGrid,DAT_181d8b098);
+            FUN_1817ef410(lVar1,targetGrid,DAT_181d8b0b0);
             lVar1 = PlotController.LaBaFestivelResultTalkText;
             if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 24)) != null) &&
                (lVar1 = *(int64 *)(lVar1 + 64)) != null) {
-              FUN_18181e0a0(lVar1,targetGrid,DAT_181d8af18);
+              FUN_18181e6b0(lVar1,targetGrid,DAT_181d8af30);
               lVar1 = GridUnitData.get_GridObj(targetGrid,0);
               if (lVar1 != null) {
                 lVar1 = GameObject.GetComponent(lVar1,DAT_181d71820);
@@ -1650,16 +1650,16 @@ public class GridUnitController
         }
         uVar6 = Time.get_frameCount(0);
         GridUnitController.gridCacheFrame = uVar6;
-        lVar8 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+        lVar8 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
         lVar10 = GridUnitController.pathGridSet;
-        if ((lVar10 != null) && (HashSet_1.Clear(lVar10,DAT_181db4ab0), lVar8 != null)) {
+        if ((lVar10 != null) && (HashSet_1.Clear(lVar10,DAT_181db4ac8), lVar8 != null)) {
           uVar9 = 0;
           uVar12 = uVar9;
           if (*(int64 *)(lVar8 + 0x1e0) == 0) {
         LAB_1808708ec:
             lVar10 = GridUnitController.damageRangeGridSet;
             if (lVar10 != null) {
-              HashSet_1.Clear(lVar10,DAT_181db4ab0);
+              HashSet_1.Clear(lVar10,DAT_181db4ac8);
               uVar12 = uVar9;
               if (*(int64 *)(lVar8 + 0x208) == 0) {
         LAB_1808709dc:
@@ -1682,8 +1682,8 @@ public class GridUnitController
                   lVar10 = *(int64 *)(lVar8 + 0x208);
                 }
                 lVar2 = GridUnitController.damageRangeGridSet;
-                if ((lVar10 == null) || (FUN_180002f80(lVar10,uVar12,DAT_181d8b398), lVar2 == null)) break;
-                FUN_180d1ced0(lVar2);
+                if ((lVar10 == null) || (FUN_180002f80(lVar10,uVar12,DAT_181d8b3b0), lVar2 == null)) break;
+                FUN_180d1d4e0(lVar2);
                 uVar12 = (uint64)((int)uVar12 + 1);
               }
             }
@@ -1697,9 +1697,9 @@ public class GridUnitController
                 lVar10 = *(int64 *)(lVar8 + 0x1e0);
               }
               lVar2 = GridUnitController.pathGridSet;
-              if ((lVar10 == null) || (uVar7 = FUN_180002f80(lVar10,uVar12,DAT_181d8b398), lVar2 == null))
+              if ((lVar10 == null) || (uVar7 = FUN_180002f80(lVar10,uVar12,DAT_181d8b3b0), lVar2 == null))
               break;
-              FUN_180d1ced0(lVar2,uVar7);
+              FUN_180d1d4e0(lVar2,uVar7);
               uVar12 = (uint64)((int)uVar12 + 1);
             }
           }
@@ -1762,14 +1762,14 @@ public class GridUnitController
         }
         lVar8 = GridUnitController.pathGridSet;
         if (lVar8 == null) throw; // [null/range check failed]
-        cVar3 = HashSet_1.Contains(lVar8,this.gridData,DAT_181db4b38);
+        cVar3 = HashSet_1.Contains(lVar8,this.gridData,DAT_181db4b50);
         if (!cVar3) {
-          lVar8 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+          lVar8 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
           if (lVar8 == null) throw; // [null/range check failed]
           if (*(int *)(lVar8 + 0x124) == 10) {
             lVar8 = GridUnitController.damageRangeGridSet;
             if (lVar8 == null) throw; // [null/range check failed]
-            cVar3 = HashSet_1.Contains(lVar8,this.gridData,DAT_181db4b38);
+            cVar3 = HashSet_1.Contains(lVar8,this.gridData,DAT_181db4b50);
             if (cVar3) {
               lVar8 = FUN_18046bb80(0);
               if ((lVar8 == null) || (*(int64 *)(lVar8 + 0x110) == 0)) throw; // [null/range check failed]
@@ -1801,8 +1801,8 @@ public class GridUnitController
               if (*(int64 *)(lVar8 + 0x1f8) == 0) goto LAB_18087301e;
               lVar8 = FUN_18046bb80(0);
               if ((lVar8 == null) || (*(int64 *)(lVar8 + 0x1f8) == 0)) throw; // [null/range check failed]
-              cVar3 = FUN_18181e400(*(int64 *)(lVar8 + 0x1f8),this.gridData,
-                                    DAT_181d8b018);
+              cVar3 = FUN_18181ea10(*(int64 *)(lVar8 + 0x1f8),this.gridData,
+                                    DAT_181d8b030);
               uVar7 = 3;
               if (!cVar3) goto LAB_18087301e;
             }
@@ -1825,7 +1825,7 @@ public class GridUnitController
             uStack_3c = *(uint32 *)(lVar10 + 44);
             SpriteRenderer.set_color(lVar8,&local_48,0);
             if ((this.highlightRenderer == null) ||
-               (lVar8 = Component.GetComponent(this.highlightRenderer,DAT_181d96560)) == null)
+               (lVar8 = Component.GetComponent(this.highlightRenderer,DAT_181d96578)) == null)
             throw; // [null/range check failed]
             Behaviour.set_enabled(lVar8,0,0);
             if (this.highlightRenderer == null) throw; // [null/range check failed]
@@ -1877,13 +1877,13 @@ public class GridUnitController
                       if ((((this.gridData == null) ||
                            (lVar10 = this.gridData.obstale) == null) ||
                           (lVar10 = *(int64 *)(lVar10 + 56)) == null) ||
-                         (lVar10 = FUN_180002f80(lVar10,iVar12,DAT_181d8b398)) == null)
+                         (lVar10 = FUN_180002f80(lVar10,iVar12,DAT_181d8b3b0)) == null)
                       throw; // [null/range check failed]
                       iVar2 = *(int *)(lVar10 + 36);
                       if (((this.gridData == null) ||
                           (lVar10 = this.gridData.obstale) == null) ||
                          ((lVar10 = *(int64 *)(lVar10 + 56), lVar10 == null ||
-                          ((lVar10 = FUN_180002f80(lVar10,iVar12,DAT_181d8b398), lVar10 == null ||
+                          ((lVar10 = FUN_180002f80(lVar10,iVar12,DAT_181d8b3b0), lVar10 == null ||
                            (lVar8 == null)))))) throw; // [null/range check failed]
                       lVar8 = BattleMapData.GetGridData
                                         (lVar8,iVar2 + iVar11,*(uint32 *)(lVar10 + 40),0);
@@ -1961,7 +1961,7 @@ public class GridUnitController
           lVar2 = this.highlightRenderer;
           local_18 = 0;
           uStack_10 = 0;
-          FUN_1809dc910(&local_18,0,0,0,0,0);
+          FUN_1809dcfa0(&local_18,0,0,0,0,0);
           if (lVar2 == null) {
         LAB_180872198:
                           // WARNING: Subroutine does not return
@@ -1973,7 +1973,7 @@ public class GridUnitController
           uStack_1c = uStack_10._4_4_;
           SpriteRenderer.set_color(lVar2,&local_28,0);
           if ((this.highlightRenderer == null) ||
-             (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96560)) == null)
+             (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96578)) == null)
           goto LAB_180872198;
           Behaviour.set_enabled(lVar2,0,0);
           if (this.highlightRenderer == null) goto LAB_180872198;
@@ -1995,7 +1995,7 @@ public class GridUnitController
           uStack_10 = CONCAT44(uVar7,uVar6);
           SpriteRenderer.set_color(lVar2,&local_18,0);
           if ((this.highlightRenderer != null) &&
-             (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96560)) != null) {
+             (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96578)) != null) {
             Behaviour.set_enabled(lVar2,0,0);
             if (this.highlightRenderer != null) {
               lVar2 = Component.get_transform(this.highlightRenderer,0);
@@ -2013,7 +2013,7 @@ public class GridUnitController
         else {
           if (targetType == 2) {
             if (this.highlightRenderer == null) throw; // [null/range check failed]
-            lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d95de0);
+            lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d95df8);
             lVar1 = pStatics;
             if (lVar2 == null) throw; // [null/range check failed]
             uVar4 = *(uint32 *)(lVar1 + 144);
@@ -2036,7 +2036,7 @@ public class GridUnitController
               goto LAB_180871ec3;
             }
             if (this.highlightRenderer == null) throw; // [null/range check failed]
-            lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d95de0);
+            lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d95df8);
             lVar1 = pStatics;
             if (lVar2 == null) throw; // [null/range check failed]
             uVar4 = *(uint32 *)(lVar1 + 160);
@@ -2048,14 +2048,14 @@ public class GridUnitController
           uStack_10 = CONCAT44(uVar7,uVar6);
           SpriteRenderer.set_color(lVar2,&local_18,0);
           if ((this.highlightRenderer != null) &&
-             (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96560)) != null) {
+             (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96578)) != null) {
             Behaviour.set_enabled(lVar2,1,0);
             if ((this.highlightRenderer != null) &&
-               (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96560)) != null)
+               (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96578)) != null)
             {
               UITweener.PlayForward(lVar2,0);
               if ((this.highlightRenderer != null) &&
-                 (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96560), lVar2 != null
+                 (lVar2 = Component.GetComponent(this.highlightRenderer,DAT_181d96578), lVar2 != null
                  )) {
                 UITweener.ResetToBeginning(lVar2,0);
                 return;
@@ -2071,7 +2071,7 @@ public class GridUnitController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           BattleController.BattleGridClicked(lVar1,uVar2,0);
@@ -2090,7 +2090,7 @@ public class GridUnitController
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
         if (lVar1 != null) {
           BattleController.OnDrag(lVar1,delta,0);
           return;
@@ -2102,7 +2102,7 @@ public class GridUnitController
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
         if (lVar1 != null) {
           BattleController.OnScroll(lVar1,delta,0);
           return;
@@ -2156,7 +2156,7 @@ public class GridUnitController
         uint64 uStack_60;
         local_128 = 0;
         uStack_120 = 0;
-        FUN_1809dc910(&local_128,0,0x3eb4b4b5,0x3eb4b4b5,0x3e99999a,0);
+        FUN_1809dcfa0(&local_128,0,0x3eb4b4b5,0x3eb4b4b5,0x3e99999a,0);
         puVar3 = *(uint32 **)(DAT_181d74868 + 184);
         *puVar3 = (uint32)local_128;
         puVar3[1] = local_128._4_4_;
@@ -2164,7 +2164,7 @@ public class GridUnitController
         puVar3[3] = uStack_120._4_4_;
         local_118 = 0;
         uStack_110 = 0;
-        FUN_1809dc910(&local_118,0,0x3f5ededf,0x3f800000,0x3e99999a,0);
+        FUN_1809dcfa0(&local_118,0,0x3f5ededf,0x3f800000,0x3e99999a,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 16) = (uint32)local_118;
         *(uint32 *)(lVar2 + 20) = local_118._4_4_;
@@ -2172,13 +2172,13 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 28) = uStack_110._4_4_;
         local_108 = 0;
         uStack_100 = 0;
-        FUN_1809dc910(&local_108,0,0x3f5ededf,0x3f800000,0x3f19999a,0);
+        FUN_1809dcfa0(&local_108,0,0x3f5ededf,0x3f800000,0x3f19999a,0);
         lVar2 = pStatics;
         *(uint64 *)(lVar2 + 32) = local_108;
         *(uint64 *)(lVar2 + 40) = uStack_100;
         local_f8 = 0;
         uStack_f0 = 0;
-        FUN_1809dc910(&local_f8,0x3e4ccccd,0x3e4ccccd,0x3e4ccccd,0x3f000000,0);
+        FUN_1809dcfa0(&local_f8,0x3e4ccccd,0x3e4ccccd,0x3e4ccccd,0x3f000000,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 48) = (uint32)local_f8;
         *(uint32 *)(lVar2 + 52) = local_f8._4_4_;
@@ -2186,7 +2186,7 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 60) = uStack_f0._4_4_;
         local_e8 = 0;
         uStack_e0 = 0;
-        FUN_1809dc910(&local_e8,0x3f2aaaab,0,0,0x3ecccccd,0);
+        FUN_1809dcfa0(&local_e8,0x3f2aaaab,0,0,0x3ecccccd,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 64) = (uint32)local_e8;
         *(uint32 *)(lVar2 + 68) = local_e8._4_4_;
@@ -2194,7 +2194,7 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 76) = uStack_e0._4_4_;
         local_d8 = 0;
         uStack_d0 = 0;
-        FUN_1809dc910(&local_d8,0x3f2aaaab,0,0,0x3f19999a,0);
+        FUN_1809dcfa0(&local_d8,0x3f2aaaab,0,0,0x3f19999a,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 80) = (uint32)local_d8;
         *(uint32 *)(lVar2 + 84) = local_d8._4_4_;
@@ -2202,7 +2202,7 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 92) = uStack_d0._4_4_;
         local_c8 = 0;
         uStack_c0 = 0;
-        FUN_1809dc910(&local_c8,0,0x3f2aaaab,0,0x3ecccccd,0);
+        FUN_1809dcfa0(&local_c8,0,0x3f2aaaab,0,0x3ecccccd,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 96) = (uint32)local_c8;
         *(uint32 *)(lVar2 + 100) = local_c8._4_4_;
@@ -2210,7 +2210,7 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 108) = uStack_c0._4_4_;
         local_b8 = 0;
         uStack_b0 = 0;
-        FUN_1809dc910(&local_b8,0,0x3f2aaaab,0,0x3f19999a,0);
+        FUN_1809dcfa0(&local_b8,0,0x3f2aaaab,0,0x3f19999a,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 112) = (uint32)local_b8;
         *(uint32 *)(lVar2 + 116) = local_b8._4_4_;
@@ -2218,7 +2218,7 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 124) = uStack_b0._4_4_;
         local_a8 = 0;
         uStack_a0 = 0;
-        FUN_1809dc910(&local_a8,0x3f64e4e5,0x3f800000,0x3f7afafb,0x3f800000,0);
+        FUN_1809dcfa0(&local_a8,0x3f64e4e5,0x3f800000,0x3f7afafb,0x3f800000,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 128) = (uint32)local_a8;
         *(uint32 *)(lVar2 + 132) = local_a8._4_4_;
@@ -2226,7 +2226,7 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 140) = uStack_a0._4_4_;
         local_98 = 0;
         uStack_90 = 0;
-        FUN_1809dc910(&local_98,0x3f800000,0,0,0x3f800000,0);
+        FUN_1809dcfa0(&local_98,0x3f800000,0,0,0x3f800000,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 144) = (uint32)local_98;
         *(uint32 *)(lVar2 + 148) = local_98._4_4_;
@@ -2234,44 +2234,44 @@ public class GridUnitController
         *(uint32 *)(lVar2 + 156) = uStack_90._4_4_;
         local_88 = 0;
         uStack_80 = 0;
-        FUN_1809dc910(&local_88,0,0x3f800000,0x3ed8d8d9,0x3f800000,0);
+        FUN_1809dcfa0(&local_88,0,0x3f800000,0x3ed8d8d9,0x3f800000,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 160) = (uint32)local_88;
         *(uint32 *)(lVar2 + 164) = local_88._4_4_;
         *(uint32 *)(lVar2 + 168) = (uint32)uStack_80;
         *(uint32 *)(lVar2 + 172) = uStack_80._4_4_;
-        lVar2 = il2cpp_internal(DAT_181d91dd8);
-        FUN_18132faf0(lVar2,DAT_181d82da0);
-        puVar3 = (uint32 *)FUN_180d98fe0(&local_138,0);
+        lVar2 = il2cpp_internal(DAT_181d91df0);
+        FUN_181330100(lVar2,DAT_181d82db8);
+        puVar3 = (uint32 *)FUN_180d995f0(&local_138,0);
         if (lVar2 != null) {
           local_138 = *puVar3;
           uStack_134 = puVar3[1];
           uStack_130 = puVar3[2];
           uStack_12c = puVar3[3];
-          FUN_1817e9a90(lVar2,&local_138,DAT_181d82e20);
+          FUN_1817ea0a0(lVar2,&local_138,DAT_181d82e38);
           local_78 = 0;
           uStack_70 = 0;
-          FUN_1809dc910(&local_78,0x3f800000,0x3f6b851f,0x3e23d70a,0x3e4ccccd,0);
+          FUN_1809dcfa0(&local_78,0x3f800000,0x3f6b851f,0x3e23d70a,0x3e4ccccd,0);
           local_138 = (uint32)local_78;
           uStack_134 = local_78._4_4_;
           uStack_130 = (uint32)uStack_70;
           uStack_12c = uStack_70._4_4_;
-          FUN_1817e9a90(lVar2,&local_138,DAT_181d82e20);
+          FUN_1817ea0a0(lVar2,&local_138,DAT_181d82e38);
           local_68 = 0;
           uStack_60 = 0;
-          FUN_1809dc910(&local_68,0x3f800000,0,0,0x3e4ccccd,0);
+          FUN_1809dcfa0(&local_68,0x3f800000,0,0,0x3e4ccccd,0);
           local_138 = (uint32)local_68;
           uStack_134 = local_68._4_4_;
           uStack_130 = (uint32)uStack_60;
           uStack_12c = uStack_60._4_4_;
-          FUN_1817e9a90(lVar2,&local_138,DAT_181d82e20);
+          FUN_1817ea0a0(lVar2,&local_138,DAT_181d82e38);
           GridUnitController.AttackDirectionColor = lVar2;
           GridUnitController.gridCacheFrame = 0xffffffff;
-          uVar1 = **(uint64 **)(DAT_181d78d48 + 184);
-          uVar4 = new HashSet_1(uVar1,DAT_181db49a0);
+          uVar1 = **(uint64 **)(DAT_181d78d60 + 184);
+          uVar4 = new HashSet_1(uVar1,DAT_181db49b8);
           GridUnitController.pathGridSet = uVar4;
-          uVar1 = **(uint64 **)(DAT_181d78d48 + 184);
-          uVar4 = new HashSet_1(uVar1,DAT_181db49a0);
+          uVar1 = **(uint64 **)(DAT_181d78d60 + 184);
+          uVar4 = new HashSet_1(uVar1,DAT_181db49b8);
           GridUnitController.damageRangeGridSet = uVar4;
           return;
         }

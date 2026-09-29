@@ -6,15 +6,15 @@
 public class MoveWithMouse
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001935
+    // Token: 0x4001936
     public float range;
 
-    // Token: 0x4001936
+    // Token: 0x4001937
     private Vector2 mRot;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600196A
-    // RVA   : 0xDF40C0   Offset: 0xDF34C0   Length: 0x1F8
+    // RVA   : 0xDF46D0   Offset: 0xDF3AD0   Length: 0x1F8
     private void Update()
     {
         float fVar1;
@@ -40,12 +40,12 @@ public class MoveWithMouse
         fVar13 = (float)iVar4 * 0.5;
         iVar4 = Screen.get_height(0);
         Screen.get_width(0);
-        fVar7 = (float)FUN_1810e36c0(uVar3,0);
-        fVar8 = (float)FUN_1810e36c0((fVar7 - fVar13) / fVar13,0xbf800000);
+        fVar7 = (float)FUN_1810e3cd0(uVar3,0);
+        fVar8 = (float)FUN_1810e3cd0((fVar7 - fVar13) / fVar13,0xbf800000);
         Screen.get_height(0);
         local_88 = uVar3;
-        fVar7 = (float)FUN_1810e36c0(CONCAT44(uVar12,uVar12),0);
-        fVar9 = (float)FUN_1810e36c0((fVar7 - (float)iVar4 * 0.5) / fVar13,0xbf800000);
+        fVar7 = (float)FUN_1810e3cd0(CONCAT44(uVar12,uVar12),0);
+        fVar9 = (float)FUN_1810e3cd0((fVar7 - (float)iVar4 * 0.5) / fVar13,0xbf800000);
         fVar7 = this.range;
         fVar13 = this.mRot;
         fVar1 = *(float *)(this + 32);
@@ -63,7 +63,7 @@ public class MoveWithMouse
     }
 
     // Token : 0x600196B
-    // RVA   : 0xDF42C0   Offset: 0xDF36C0   Length: 0x41
+    // RVA   : 0xDF48D0   Offset: 0xDF3CD0   Length: 0x41
     public void /*ctor*/()
     {
         ulong uVar1;

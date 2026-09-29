@@ -26,23 +26,23 @@ public class ItemUseMenuController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60018A3
-    // RVA   : 0xCAB030   Offset: 0xCAA430   Length: 0x36
+    // RVA   : 0xCAB640   Offset: 0xCAAA40   Length: 0x36
     public static ItemUseMenuController get_Instance()
     {
-        return **(uint64 **)(DAT_181d82398 + 184);
+        return **(uint64 **)(DAT_181d823b0 + 184);
     }
 
     // Token : 0x60018A4
-    // RVA   : 0xCAAB60   Offset: 0xCA9F60   Length: 0x43
+    // RVA   : 0xCAB170   Offset: 0xCAA570   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d82398 + 184);
+        puVar1 = *(uint64 **)(DAT_181d823b0 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x60018A5
-    // RVA   : 0xCAAC60   Offset: 0xCAA060   Length: 0x3C6
+    // RVA   : 0xCAB270   Offset: 0xCAA670   Length: 0x3C6
     public void Show(HeroData _sourceHero, GameObject _targetItemIcon)
     {
         uint uVar1;
@@ -85,8 +85,8 @@ public class ItemUseMenuController
                       if ((this.itemUseMenuPanel != null) &&
                          ((lVar2 = GameObject.get_transform(this.itemUseMenuPanel,0), lVar2 != null
                           && (lVar2 = Transform.Find(lVar2,"Back",0)) != null))) {
-                        plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
-                        puVar7 = (uint32 *)FUN_180d98fe0(&local_18,0);
+                        plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
+                        puVar7 = (uint32 *)FUN_180d995f0(&local_18,0);
                         if (plVar6 != (int64 *)0) {
                           local_18 = *puVar7;
                           uStack_14 = puVar7[1];
@@ -98,7 +98,7 @@ public class ItemUseMenuController
                               (lVar2 = GameObject.get_transform(this.itemUseMenuPanel,0),
                               lVar2 != null)) && (lVar2 = Transform.Find(lVar2,"Back",0)) != null
                              ) {
-                            uVar5 = Component.GetComponent(lVar2,DAT_181d94460);
+                            uVar5 = Component.GetComponent(lVar2,DAT_181d94478);
                             DOTweenModuleUI.DOFade(uVar5,0x3e800000,0x3e19999a,0);
                             ItemUseMenuController.AddChoiceButton
                                       (this,this.sourceHero,0);
@@ -115,7 +115,7 @@ public class ItemUseMenuController
                                 if (((this.sourceHero == null) ||
                                     (lVar3 = this.sourceHero.teamMates,
                                     lVar3 == null)) ||
-                                   (uVar1 = FUN_1800d6760(lVar3,iVar8,DAT_181d8fa18), lVar2 == null)) break;
+                                   (uVar1 = FUN_1800d6760(lVar3,iVar8,DAT_181d8fa30), lVar2 == null)) break;
                                 uVar5 = WorldData.GetHero(lVar2,uVar1,0);
                                 ItemUseMenuController.AddChoiceButton(this,uVar5,0);
                                 lVar2 = this.sourceHero;
@@ -136,7 +136,7 @@ public class ItemUseMenuController
     }
 
     // Token : 0x60018A6
-    // RVA   : 0xCAA970   Offset: 0xCA9D70   Length: 0x1E6
+    // RVA   : 0xCAAF80   Offset: 0xCAA380   Length: 0x1E6
     public void AddChoiceButton(HeroData buttonTargetHero)
     {
         long lVar1;
@@ -160,7 +160,7 @@ public class ItemUseMenuController
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"Text",0);
                       if (lVar1 != null) {
-                        uVar3 = Component.GetComponent(lVar1,DAT_181d96160);
+                        uVar3 = Component.GetComponent(lVar1,DAT_181d96178);
                         if (buttonTargetHero != null) {
                           uVar2 = HeroData.Name(buttonTargetHero,0,0);
                           uVar2 = String.Format("{0}使用",uVar2,0);
@@ -178,7 +178,7 @@ public class ItemUseMenuController
     }
 
     // Token : 0x60018A7
-    // RVA   : 0xCAABB0   Offset: 0xCA9FB0   Length: 0xAF
+    // RVA   : 0xCAB1C0   Offset: 0xCAA5C0   Length: 0xAF
     public void Hide()
     {
         long lVar1;

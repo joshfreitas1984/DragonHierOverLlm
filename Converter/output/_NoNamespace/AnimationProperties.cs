@@ -35,7 +35,7 @@ public class AnimationProperties
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60005D1
-    // RVA   : 0x8E4500   Offset: 0x8E3900   Length: 0xAE
+    // RVA   : 0x916B40   Offset: 0x915F40   Length: 0xAE
     public void /*ctor*/()
     {
         ulong uVar1;

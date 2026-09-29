@@ -77,53 +77,53 @@ public class AreaBuildingDataBase
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000F4F
-    // RVA   : 0xA27490   Offset: 0xA26890   Length: 0x35B
+    // RVA   : 0xA27B20   Offset: 0xA26F20   Length: 0x35B
     public void /*ctor*/()
     {
         ulong uVar1;
         long lVar2;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d90c60);
-        FUN_18132faf0(uVar1,DAT_181d7be70);
+        uVar1 = il2cpp_internal(DAT_181d90c78);
+        FUN_181330100(uVar1,DAT_181d7be88);
         this.areaBuildingChoices = uVar1;
-        lVar2 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar2,DAT_181da0cf8);
+        lVar2 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar2,DAT_181da0d10);
         if (lVar2 != null) {
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
           this.changeResource = lVar2;
-          lVar2 = il2cpp_internal(DAT_181d96ed0);
-          FUN_18132faf0(lVar2,DAT_181da0cf8);
+          lVar2 = il2cpp_internal(DAT_181d96ee8);
+          FUN_181330100(lVar2,DAT_181da0d10);
           if (lVar2 != null) {
-            FUN_18181de10(lVar2,0,DAT_181da0df8);
-            FUN_18181de10(lVar2,0,DAT_181da0df8);
-            FUN_18181de10(lVar2,0,DAT_181da0df8);
-            FUN_18181de10(lVar2,0,DAT_181da0df8);
-            FUN_18181de10(lVar2,0,DAT_181da0df8);
-            FUN_18181de10(lVar2,0,DAT_181da0df8);
+            FUN_18181e420(lVar2,0,DAT_181da0e10);
+            FUN_18181e420(lVar2,0,DAT_181da0e10);
+            FUN_18181e420(lVar2,0,DAT_181da0e10);
+            FUN_18181e420(lVar2,0,DAT_181da0e10);
+            FUN_18181e420(lVar2,0,DAT_181da0e10);
+            FUN_18181e420(lVar2,0,DAT_181da0e10);
             this.upgradeResource = lVar2;
-            lVar2 = il2cpp_internal(DAT_181d96ed0);
-            FUN_18132faf0(lVar2,DAT_181da0cf8);
+            lVar2 = il2cpp_internal(DAT_181d96ee8);
+            FUN_181330100(lVar2,DAT_181da0d10);
             if (lVar2 != null) {
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
-              FUN_18181de10(lVar2,0,DAT_181da0df8);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
+              FUN_18181e420(lVar2,0,DAT_181da0e10);
               this.changeAreaState = lVar2;
-              lVar2 = il2cpp_internal(DAT_181d96ed0);
-              FUN_18132faf0(lVar2,DAT_181da0cf8);
+              lVar2 = il2cpp_internal(DAT_181d96ee8);
+              FUN_181330100(lVar2,DAT_181da0d10);
               if (lVar2 != null) {
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
-                FUN_18181de10(lVar2,0,DAT_181da0df8);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
+                FUN_18181e420(lVar2,0,DAT_181da0e10);
                 this.changeAllAreaState = lVar2;
-                uVar1 = il2cpp_internal(DAT_181d90d60);
-                FUN_18132faf0(uVar1,DAT_181d7c368);
+                uVar1 = il2cpp_internal(DAT_181d90d78);
+                FUN_181330100(uVar1,DAT_181d7c380);
                 this.aroundBuildingRateChange = uVar1;
                 this.buildingSpeAddData = new ForceSpeAddData(0);
                 return;
@@ -134,7 +134,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F50
-    // RVA   : 0xA261B0   Offset: 0xA255B0   Length: 0x67
+    // RVA   : 0xA26840   Offset: 0xA25C40   Length: 0x67
     public List<float> GetBuildCostResource(float rate)
     {
         ulong uVar1;
@@ -143,7 +143,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F51
-    // RVA   : 0xA26370   Offset: 0xA25770   Length: 0x8D
+    // RVA   : 0xA26A00   Offset: 0xA25E00   Length: 0x8D
     public ForceSpeAddData GetBuildingSpeAddData(int targetLv)
     {
         ulong uVar1;
@@ -154,7 +154,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F52
-    // RVA   : 0xA26400   Offset: 0xA25800   Length: 0xDA0
+    // RVA   : 0xA26A90   Offset: 0xA25E90   Length: 0xDA0
     public string GetBuildingText(int targetLv, bool detail, bool showBuildCost, float produceRate, bool showBuildingName, AreaData targetArea)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -180,8 +180,8 @@ public class AreaBuildingDataBase
         local_78[0] = 0.0;
         lVar4 = "";
         if ((char)showBuildingName) {
-          plVar3 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
-          if (plVar3 == (int64 *)0) goto LAB_180a27055;
+          plVar3 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+          if (plVar3 == (int64 *)0) goto LAB_180a276e5;
           if (("<size=17>" != 0) &&
              (lVar4 = il2cpp_internal("<size=17>",*(uint64 *)(*plVar3 + 64))) == null) {
             uVar6 = il2cpp_internal();
@@ -263,17 +263,17 @@ public class AreaBuildingDataBase
           local_70 = "";
           lVar10 = 32;
           lVar7 = "";
-        LAB_180a26770:
+        LAB_180a26e00:
           do {
-            if ((int)*(uint32 *)(lVar5 + 24) <= (int)uVar11) goto LAB_180a268de;
+            if ((int)*(uint32 *)(lVar5 + 24) <= (int)uVar11) goto LAB_180a26f6e;
             if (*(uint32 *)(lVar5 + 24) <= uVar11) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (0.0 < *(float *)(*(int64 *)(lVar5 + 16) + lVar10)) {
               lVar1 = *(int64 *)(pStatics + 0x438);
               if (lVar1 == null) break;
-              uVar6 = FUN_180002f80(lVar1,uVar11,DAT_181da4358);
-              uVar13 = FUN_1800d6790(lVar5,uVar11,DAT_181da1078);
+              uVar6 = FUN_180002f80(lVar1,uVar11,DAT_181da4370);
+              uVar13 = FUN_1800d6790(lVar5,uVar11,DAT_181da1090);
               GlobalData.GenerateChangeColorText(uVar6,uVar13,0);
               lVar7 = String.Concat(lVar7,"\n");
             }
@@ -282,29 +282,29 @@ public class AreaBuildingDataBase
               if (fVar12 < 0.0) {
                 lVar1 = *(int64 *)(pStatics + 0x438);
                 if (lVar1 == null) break;
-                uVar6 = FUN_180002f80(lVar1,uVar11,DAT_181da4358);
-                uVar13 = FUN_1800d6790(lVar5,uVar11,DAT_181da1078);
+                uVar6 = FUN_180002f80(lVar1,uVar11,DAT_181da4370);
+                uVar13 = FUN_1800d6790(lVar5,uVar11,DAT_181da1090);
                 GlobalData.GenerateChangeColorText(uVar6,uVar13,0);
                 local_70 = String.Concat(local_70,"\n");
                 uVar11 = uVar11 + 1;
                 lVar10 = lVar10 + 4;
-                goto LAB_180a26770;
+                goto LAB_180a26e00;
               }
             }
             uVar11 = uVar11 + 1;
             lVar10 = lVar10 + 4;
           } while( true );
         }
-        LAB_180a27055:
+        LAB_180a276e5:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180a268de:
+        LAB_180a26f6e:
         iVar9 = 0;
         lVar5 = local_70;
-        LAB_180a268f0:
+        LAB_180a26f80:
         do {
           lVar10 = *(int64 *)(pStatics + 0x608);
-          if (lVar10 == null) goto LAB_180a27055;
+          if (lVar10 == null) goto LAB_180a276e5;
           if (*(int *)(lVar10 + 24) <= iVar9) {
             cVar2 = String.op_Inequality(lVar7,"",0);
             if (cVar2) {
@@ -312,8 +312,8 @@ public class AreaBuildingDataBase
             }
             lVar7 = "";
             if (this.changeMaxPeople != null.0) {
-              plVar3 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
-              if (plVar3 == (int64 *)0) goto LAB_180a27055;
+              plVar3 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+              if (plVar3 == (int64 *)0) goto LAB_180a276e5;
               if ((lVar7 != null) &&
                  (lVar10 = il2cpp_internal(lVar7,*(uint64 *)(*plVar3 + 64))) == null) {
                 uVar6 = il2cpp_internal();
@@ -398,7 +398,7 @@ public class AreaBuildingDataBase
               uVar6 = ForceSpeAddData.GetDescribe(lVar10,0);
               cVar2 = String.op_Inequality(uVar6,"",0);
               if (cVar2) {
-                cVar2 = FUN_18171e540(lVar7,"",0);
+                cVar2 = FUN_18171eb50(lVar7,"",0);
                 lVar10 = "\n";
                 if (cVar2) {
                   lVar10 = "";
@@ -425,7 +425,7 @@ public class AreaBuildingDataBase
               if (showBuildCost) {
                 if (targetArea != null) {
                   if (*(int64 *)(targetArea + 176) == 0) {
-        LAB_180a2719b:
+        LAB_180a2782b:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
@@ -433,12 +433,12 @@ public class AreaBuildingDataBase
                   cVar2 = AreaData.HaveForce(lVar5,0);
                   if (cVar2) {
                     lVar5 = AreaData.GetForce(lVar5,0);
-                    if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x148) == 0)) goto LAB_180a2719b;
+                    if ((lVar5 == null) || (*(int64 *)(lVar5 + 0x148) == 0)) goto LAB_180a2782b;
                     ForceSpeAddData.Get(*(int64 *)(lVar5 + 0x148),12);
                   }
                 }
                 showBuildingName = Mathf.RoundToInt();
-                uVar6 = il2cpp_value_box(DAT_181d80418,&showBuildingName);
+                uVar6 = il2cpp_value_box(DAT_181d80430,&showBuildingName);
                 uVar8 = AreaBuildingDataBase.GetBuildCostResource(this,0x3f800000,0);
                 uVar8 = GlobalData.GetResourceDescribe(uVar8,0);
                 uVar6 = String.Format("\n\n建造消耗 ({0}天)\n{1}",uVar6,uVar8,0);
@@ -446,48 +446,48 @@ public class AreaBuildingDataBase
               }
               return lVar4;
             }
-            goto LAB_180a27055;
+            goto LAB_180a276e5;
           }
           fVar12 = (float)AreaBuildingDataBase.GetChangeAreaState(this,iVar9,targetLv,produceRate,0);
           if (0.0 < fVar12) {
             lVar10 = *(int64 *)(pStatics + 0x608);
-            if (lVar10 == null) goto LAB_180a27055;
-            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4358);
+            if (lVar10 == null) goto LAB_180a276e5;
+            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4370);
             uVar6 = GlobalData.GenerateChangeColorText(uVar6,fVar12,0);
             lVar7 = String.Concat(lVar7,"\n",uVar6);
           }
           else if (fVar12 < 0.0) {
             lVar10 = *(int64 *)(pStatics + 0x608);
-            if (lVar10 == null) goto LAB_180a27055;
-            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4358);
+            if (lVar10 == null) goto LAB_180a276e5;
+            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4370);
             uVar6 = GlobalData.GenerateChangeColorText(uVar6,fVar12,0);
             lVar5 = String.Concat(lVar5,"\n",uVar6);
           }
           fVar12 = (float)AreaBuildingDataBase.GetChangeAllAreaState(this,iVar9,targetLv,produceRate,0);
           if (0.0 < fVar12) {
             lVar10 = *(int64 *)(pStatics + 0x608);
-            if (lVar10 == null) goto LAB_180a27055;
-            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4358);
+            if (lVar10 == null) goto LAB_180a276e5;
+            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4370);
             uVar6 = String.Concat("全域",uVar6,0);
             GlobalData.GenerateChangeColorText(uVar6,fVar12,0);
             lVar7 = String.Concat(lVar7,"\n");
           }
           else if (fVar12 < 0.0) {
             lVar10 = *(int64 *)(pStatics + 0x608);
-            if (lVar10 == null) goto LAB_180a27055;
-            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4358);
+            if (lVar10 == null) goto LAB_180a276e5;
+            uVar6 = FUN_180002f80(lVar10,iVar9,DAT_181da4370);
             uVar6 = String.Concat("全域",uVar6,0);
             GlobalData.GenerateChangeColorText(uVar6,fVar12,0);
             lVar5 = String.Concat(lVar5,"\n");
             iVar9 = iVar9 + 1;
-            goto LAB_180a268f0;
+            goto LAB_180a26f80;
           }
           iVar9 = iVar9 + 1;
         } while( true );
     }
 
     // Token : 0x6000F53
-    // RVA   : 0xA262C0   Offset: 0xA256C0   Length: 0xA5
+    // RVA   : 0xA26950   Offset: 0xA25D50   Length: 0xA5
     public int GetBuildTime(AreaData targetArea)
     {
         float fVar1;
@@ -501,7 +501,7 @@ public class AreaBuildingDataBase
         }
         else {
           if (*(int64 *)(targetArea + 176) == 0) {
-        LAB_180a26360:
+        LAB_180a269f0:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -510,7 +510,7 @@ public class AreaBuildingDataBase
           cVar2 = AreaData.HaveForce(targetArea,0);
           if (cVar2) {
             lVar3 = AreaData.GetForce(targetArea,0);
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x148) == 0)) goto LAB_180a26360;
+            if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x148) == 0)) goto LAB_180a269f0;
             fVar5 = (float)ForceSpeAddData.Get(*(int64 *)(lVar3 + 0x148),12);
             fVar4 = fVar4 + fVar5;
           }
@@ -519,7 +519,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F54
-    // RVA   : 0xA26220   Offset: 0xA25620   Length: 0x90
+    // RVA   : 0xA268B0   Offset: 0xA25CB0   Length: 0x90
     public float GetBuildSpeedRate(AreaData targetArea)
     {
         bool cVar1;
@@ -544,7 +544,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F55
-    // RVA   : 0xA25CD0   Offset: 0xA250D0   Length: 0x327
+    // RVA   : 0xA26360   Offset: 0xA25760   Length: 0x327
     public string GetAreaBuildRateChangeText(List<AreaBuildingRateChange> target)
     {
         bool cVar1;
@@ -561,7 +561,7 @@ public class AreaBuildingDataBase
             if (*(int *)(target + 24) <= iVar6) {
               return lVar4;
             }
-            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+            plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
             if (plVar2 == (int64 *)0) break;
             if ((lVar4 != null) &&
                (lVar3 = il2cpp_internal(lVar4,*(uint64 *)(*plVar2 + 64))) == null) {
@@ -576,7 +576,7 @@ public class AreaBuildingDataBase
             }
             plVar2[4] = lVar4;
             il2cpp_internal(plVar2 + 4,lVar4);
-            cVar1 = FUN_18171e540(lVar4,"",0);
+            cVar1 = FUN_18171eb50(lVar4,"",0);
             lVar4 = "\n";
             if (cVar1) {
               lVar4 = "";
@@ -588,7 +588,7 @@ public class AreaBuildingDataBase
               FUN_1800d65f0(uVar5,0);
             }
             FUN_180002fd0(plVar2,1,lVar4);
-            lVar4 = FUN_180002f80(target,iVar6,DAT_181d7c4e0);
+            lVar4 = FUN_180002f80(target,iVar6,DAT_181d7c4f8);
             if (lVar4 == null) break;
             lVar4 = *(int64 *)(lVar4 + 16);
             if ((lVar4 != null) &&
@@ -642,7 +642,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F56
-    // RVA   : 0xA26000   Offset: 0xA25400   Length: 0x1AE
+    // RVA   : 0xA26690   Offset: 0xA25A90   Length: 0x1AE
     public List<AreaBuildingRateChange> GetAreaBuildingRateChange(int lv)
     {
         float fVar1;
@@ -652,8 +652,8 @@ public class AreaBuildingDataBase
         long lVar5;
         long lVar6;
         uint uVar7;
-        lVar4 = il2cpp_internal(DAT_181d90d60);
-        FUN_18132faf0(lVar4,DAT_181d7c368);
+        lVar4 = il2cpp_internal(DAT_181d90d78);
+        FUN_181330100(lVar4,DAT_181d7c380);
         lVar5 = this.aroundBuildingRateChange;
         uVar7 = 0;
         if (lVar5 != null) {
@@ -681,7 +681,7 @@ public class AreaBuildingDataBase
             lVar5._items = uVar3;
             lVar5.Count = (float)(lv + 1) * fVar1;
             if (lVar4 == null) break;
-            FUN_18181e0a0(lVar4,lVar5,DAT_181d7c3e8);
+            FUN_18181e6b0(lVar4,lVar5,DAT_181d7c400);
             lVar5 = this.aroundBuildingRateChange;
             uVar7 = uVar7 + 1;
             lVar6 = lVar6 + 8;
@@ -690,16 +690,16 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F57
-    // RVA   : 0xA27370   Offset: 0xA26770   Length: 0x10
+    // RVA   : 0xA27A00   Offset: 0xA26E00   Length: 0x10
     public float GetChangeMaxPeople(int lv)
     {
-        float FUN_180a27370(int64 this,int lv)
+        float FUN_180a27a00(int64 this,int lv)
         {
         return (float)(lv + 1) * this.changeMaxPeople;
     }
 
     // Token : 0x6000F58
-    // RVA   : 0xA27290   Offset: 0xA26690   Length: 0xDD
+    // RVA   : 0xA27920   Offset: 0xA26D20   Length: 0xDD
     public float GetChangeAreaState(AreaStateType areaStateType, int lv, float produceRate)
     {
         float AreaBuildingDataBase.GetChangeAreaState
@@ -719,7 +719,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F59
-    // RVA   : 0xA271B0   Offset: 0xA265B0   Length: 0xDD
+    // RVA   : 0xA27840   Offset: 0xA26C40   Length: 0xDD
     public float GetChangeAllAreaState(AreaStateType areaStateType, int lv, float produceRate)
     {
         float AreaBuildingDataBase.GetChangeAllAreaState
@@ -739,7 +739,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F5A
-    // RVA   : 0xA27380   Offset: 0xA26780   Length: 0x9B
+    // RVA   : 0xA27A10   Offset: 0xA26E10   Length: 0x9B
     public List<float> GetTotalChangeResource(int lv, float produceRate)
     {
         ulong uVar1;
@@ -750,7 +750,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F5B
-    // RVA   : 0xA27420   Offset: 0xA26820   Length: 0x6C
+    // RVA   : 0xA27AB0   Offset: 0xA26EB0   Length: 0x6C
     public List<float> GetUpgradeCostResource(int lv)
     {
         ulong uVar1;
@@ -759,7 +759,7 @@ public class AreaBuildingDataBase
     }
 
     // Token : 0x6000F5C
-    // RVA   : 0xA25B50   Offset: 0xA24F50   Length: 0x175
+    // RVA   : 0xA261E0   Offset: 0xA255E0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -770,13 +770,13 @@ public class AreaBuildingDataBase
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -788,7 +788,7 @@ public class AreaBuildingDataBase
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

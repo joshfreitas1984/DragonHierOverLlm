@@ -20,7 +20,7 @@ public class WindowAutoYaw
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000099
-    // RVA   : 0x9C9670   Offset: 0x9C8A70   Length: 0x3E
+    // RVA   : 0x9C9D00   Offset: 0x9C9100   Length: 0x3E
     private void OnDisable()
     {
         long lVar1;
@@ -41,7 +41,7 @@ public class WindowAutoYaw
     }
 
     // Token : 0x600009A
-    // RVA   : 0x9C96B0   Offset: 0x9C8AB0   Length: 0xEC
+    // RVA   : 0x9C9D40   Offset: 0x9C9140   Length: 0xEC
     private void OnEnable()
     {
         bool cVar1;
@@ -65,7 +65,7 @@ public class WindowAutoYaw
     }
 
     // Token : 0x600009B
-    // RVA   : 0x9C97A0   Offset: 0x9C8BA0   Length: 0x113
+    // RVA   : 0x9C9E30   Offset: 0x9C9230   Length: 0x113
     private void Update()
     {
         ulong uVar1;
@@ -105,10 +105,10 @@ public class WindowAutoYaw
     }
 
     // Token : 0x600009C
-    // RVA   : 0x9C98C0   Offset: 0x9C8CC0   Length: 0xE
+    // RVA   : 0x9C9F50   Offset: 0x9C9350   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1809c98c0(int64 this)
+        void FUN_1809c9f50(int64 this)
         {
         this.yawAmount = 0x41a00000;
         FUN_18044ef50(this,0);

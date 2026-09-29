@@ -67,9 +67,9 @@ public class PlayerInteractionTimeData
             this.releaseHateTime = 1;
             this.attackPlayerTime = 1;
             if (lVar1 != null) {
-              FUN_181833d40(lVar1,20,3,DAT_181d8fb18);
+              FUN_181834350(lVar1,20,3,DAT_181d8fb30);
               if (this.playerInteractTimeList != null) {
-                FUN_181833d40(this.playerInteractTimeList,7,0,DAT_181d8fb18);
+                FUN_181834350(this.playerInteractTimeList,7,0,DAT_181d8fb30);
                 this.selfBountyMission = 0;
                 this.selfBountyType = 0xffffffff;
                 return;
@@ -78,7 +78,7 @@ public class PlayerInteractionTimeData
             goto LAB_18046d45b;
           }
           if (lVar1 == null) goto LAB_18046d45b;
-          FUN_181833d40(lVar1,iVar2,1,DAT_181d8fb18);
+          FUN_181834350(lVar1,iVar2,1,DAT_181d8fb30);
           lVar1 = this.playerInteractTimeList;
           iVar2 = iVar2 + 1;
         } while( true );
@@ -93,14 +93,14 @@ public class PlayerInteractionTimeData
         long lVar3;
         ulong uVar4;
         int iVar5;
-        uVar2 = DAT_181dbef50;
+        uVar2 = DAT_181dbef68;
         uVar2 = Type.GetTypeFromHandle(uVar2,0);
         lVar3 = Enum.GetValues(uVar2,0);
         if (lVar3 != null) {
-          uVar1 = FUN_1812fe680(lVar3,0);
-          uVar2 = FUN_1800d60b0(DAT_181da35a0,uVar1);
-          uVar4 = il2cpp_internal(DAT_181d93cd0);
-          FUN_1818399e0(uVar4,uVar2,DAT_181d8f118);
+          uVar1 = FUN_1812fec90(lVar3,0);
+          uVar2 = FUN_1800d60b0(DAT_181da35b8,uVar1);
+          uVar4 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181839ff0(uVar4,uVar2,DAT_181d8f130);
           this.playerInteractTimeList = uVar4;
           ZhSegment.Initialize(this);
           iVar5 = 0;
@@ -110,9 +110,9 @@ public class PlayerInteractionTimeData
               this.releaseHateTime = 1;
               this.attackPlayerTime = 1;
               if (lVar3 != null) {
-                FUN_181833d40(lVar3,20,3,DAT_181d8fb18);
+                FUN_181834350(lVar3,20,3,DAT_181d8fb30);
                 if (this.playerInteractTimeList != null) {
-                  FUN_181833d40(this.playerInteractTimeList,7,0,DAT_181d8fb18);
+                  FUN_181834350(this.playerInteractTimeList,7,0,DAT_181d8fb30);
                   this.selfBountyMission = 0;
                   this.selfBountyType = 0xffffffff;
                   return;
@@ -121,7 +121,7 @@ public class PlayerInteractionTimeData
               break;
             }
             if (lVar3 == null) break;
-            FUN_181833d40(lVar3,iVar5,1,DAT_181d8fb18);
+            FUN_181834350(lVar3,iVar5,1,DAT_181d8fb30);
             iVar5 = iVar5 + 1;
             lVar3 = this.playerInteractTimeList;
           }
@@ -137,19 +137,19 @@ public class PlayerInteractionTimeData
         ulong uVar3;
         long lVar4;
         lVar4 = this.playerInteractTimeList;
-        uVar3 = DAT_181dbef50;
-        while (DAT_181dbef50 = uVar3, lVar4 != null) {
+        uVar3 = DAT_181dbef68;
+        while (DAT_181dbef68 = uVar3, lVar4 != null) {
           iVar1 = lVar4.Count;
           uVar3 = Type.GetTypeFromHandle(uVar3,0);
           lVar4 = Enum.GetValues(uVar3,0);
           if (lVar4 == null) break;
-          iVar2 = FUN_1812fe680(lVar4,0);
+          iVar2 = FUN_1812fec90(lVar4,0);
           if (iVar2 <= iVar1) {
             return;
           }
           if (this.playerInteractTimeList == null) break;
-          FUN_18182a0b0(this.playerInteractTimeList,1,DAT_181d8f218);
-          uVar3 = DAT_181dbef50;
+          FUN_18182a6c0(this.playerInteractTimeList,1,DAT_181d8f230);
+          uVar3 = DAT_181dbef68;
           lVar4 = this.playerInteractTimeList;
         }
     }
@@ -166,13 +166,13 @@ public class PlayerInteractionTimeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -184,7 +184,7 @@ public class PlayerInteractionTimeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

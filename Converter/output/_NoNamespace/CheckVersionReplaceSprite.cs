@@ -11,12 +11,12 @@ public class CheckVersionReplaceSprite
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000E83
-    // RVA   : 0x996200   Offset: 0x995600   Length: 0xC6
+    // RVA   : 0x996890   Offset: 0x995C90   Length: 0xC6
     private void Start()
     {
         long lVar1;
         if (**(int **)(DAT_181d73d40 + 184) == 2) {
-          lVar1 = Component.GetComponent(this,DAT_181d94460);
+          lVar1 = Component.GetComponent(this,DAT_181d94478);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();

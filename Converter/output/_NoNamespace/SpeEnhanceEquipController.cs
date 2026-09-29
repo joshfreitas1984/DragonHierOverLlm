@@ -6,49 +6,49 @@
 public class SpeEnhanceEquipController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BCD
+    // Token: 0x4001BCE
     public GameObject speEnhanceEquipUI;
 
-    // Token: 0x4001BCE
+    // Token: 0x4001BCF
     public GameObject speEnhanceEquipChoicePrefab;
 
-    // Token: 0x4001BCF
+    // Token: 0x4001BD0
     public GameObject enhanceChoiceGrid;
 
-    // Token: 0x4001BD0
+    // Token: 0x4001BD1
     public GameObject enhanceTargetItemIcon;
 
-    // Token: 0x4001BD1
+    // Token: 0x4001BD2
     public GameObject enhanceTargetClearButton;
 
-    // Token: 0x4001BD2
+    // Token: 0x4001BD3
     public GameObject nowChoice;
 
-    // Token: 0x4001BD3
+    // Token: 0x4001BD4
     public bool needRefresh;
 
-    // Token: 0x4001BD4
+    // Token: 0x4001BD5
     private static SpeEnhanceEquipController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002154
-    // RVA   : 0x9907A0   Offset: 0x98FBA0   Length: 0xB6
+    // RVA   : 0x990E30   Offset: 0x990230   Length: 0xB6
     public static SpeEnhanceEquipController get_Instance()
     {
-        return **(uint64 **)(DAT_181da4250 + 184);
+        return **(uint64 **)(DAT_181da4268 + 184);
     }
 
     // Token : 0x6002155
-    // RVA   : 0x98E880   Offset: 0x98DC80   Length: 0x43
+    // RVA   : 0x98EF10   Offset: 0x98E310   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da4250 + 184);
+        puVar1 = *(uint64 **)(DAT_181da4268 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6002156
-    // RVA   : 0x990760   Offset: 0x98FB60   Length: 0x3D
+    // RVA   : 0x990DF0   Offset: 0x9901F0   Length: 0x3D
     private void Update()
     {
         bool cVar1;
@@ -64,7 +64,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002157
-    // RVA   : 0x98FD80   Offset: 0x98F180   Length: 0x102
+    // RVA   : 0x990410   Offset: 0x98F810   Length: 0x102
     public void HideSpeEnhanceEquipUI()
     {
         ulong uVar1;
@@ -85,7 +85,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002158
-    // RVA   : 0x9906B0   Offset: 0x98FAB0   Length: 0xAF
+    // RVA   : 0x990D40   Offset: 0x990140   Length: 0xAF
     public void ShowSpeEnhanceEquipUI()
     {
         if (this.speEnhanceEquipUI != null) {
@@ -93,7 +93,7 @@ public class SpeEnhanceEquipController
           SpeEnhanceEquipController.RefreshUI(this,0);
           plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
           plVar2 = (int64 *)0;
-          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
             plVar2 = plVar1;
           }
           NGUITools.PlaySound(plVar2,0);
@@ -102,7 +102,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002159
-    // RVA   : 0x990020   Offset: 0x98F420   Length: 0x427
+    // RVA   : 0x9906B0   Offset: 0x98FAB0   Length: 0x427
     public void RefreshUI()
     {
         int iVar1;
@@ -125,7 +125,7 @@ public class SpeEnhanceEquipController
              (lVar3 = GameObject.get_transform(this.speEnhanceEquipUI,0)) == null) ||
             (lVar3 = Transform.Find(lVar3,"EnhanceChoice",0)) == null) ||
            (lVar3 = Transform.Find(lVar3,"Back",0)) == null) throw; // [null/range check failed]
-        plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+        plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
         uVar6 = this.enhanceTargetItemIcon;
         cVar2 = Object.op_Equality(uVar6,0,0);
         if (!cVar2) {
@@ -136,9 +136,9 @@ public class SpeEnhanceEquipController
         }
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dc910(&local_28,0x3f800000,0x3f800000,0x3f800000,uVar7,0);
+        FUN_1809dcfa0(&local_28,0x3f800000,0x3f800000,0x3f800000,uVar7,0);
         if (plVar4 == (int64 *)0) {
-        LAB_180990442:
+        LAB_180990ad2:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -149,8 +149,8 @@ public class SpeEnhanceEquipController
         (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_18,*(uint64 *)(*plVar4 + 0x2b0));
         if (((this.speEnhanceEquipUI == null) ||
             (lVar3 = GameObject.get_transform(this.speEnhanceEquipUI,0)) == null) ||
-           (lVar3 = Transform.Find(lVar3,"CostStone",0)) == null) goto LAB_180990442;
-        uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
+           (lVar3 = Transform.Find(lVar3,"CostStone",0)) == null) goto LAB_180990ad2;
+        uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
         uVar6 = this.enhanceTargetItemIcon;
         cVar2 = Object.op_Equality(uVar6,0,0);
         uVar6 = "0";
@@ -171,13 +171,13 @@ public class SpeEnhanceEquipController
         if (((this.speEnhanceEquipUI != null) &&
             (lVar3 = GameObject.get_transform(this.speEnhanceEquipUI,0)) != null) &&
            (lVar3 = Transform.Find(lVar3,"CostTime",0)) != null) {
-          uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
           uVar6 = this.enhanceTargetItemIcon;
           cVar2 = Object.op_Equality(uVar6,0,0);
           uVar6 = "";
           if (!cVar2) {
             local_res18[0] = SpeEnhanceEquipController.GetTimeNeed(this,0);
-            uVar6 = il2cpp_value_box(DAT_181d80418,local_res18);
+            uVar6 = il2cpp_value_box(DAT_181d80430,local_res18);
             uVar6 = String.Format("消耗时间：{0}天",uVar6,0);
           }
           LTLocalization.SetText(uVar5,uVar6,0);
@@ -187,7 +187,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x600215A
-    // RVA   : 0x98E9E0   Offset: 0x98DDE0   Length: 0x56
+    // RVA   : 0x98F070   Offset: 0x98E470   Length: 0x56
     public void ClearAllChoice()
     {
         ulong uVar1;
@@ -196,7 +196,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x600215B
-    // RVA   : 0x98F880   Offset: 0x98EC80   Length: 0x39F
+    // RVA   : 0x98FF10   Offset: 0x98F310   Length: 0x39F
     public void GenerateChoice()
     {
         bool cVar1;
@@ -222,18 +222,18 @@ public class SpeEnhanceEquipController
             while ((((*(int64 *)(lVar4 + 96) != 0 &&
                      (lVar5 = *(int64 *)(*(int64 *)(lVar4 + 96) + 32)) != null) &&
                     (lVar5 = *(int64 *)(lVar5 + 16)) != null) &&
-                   (lVar5 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4b8)) != null)) {
-              iVar2 = FUN_180cd6140(lVar5,DAT_181dc3998);
-              if (iVar2 <= iVar9) goto LAB_18098fabe;
+                   (lVar5 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4d0)) != null)) {
+              iVar2 = FUN_180cd6750(lVar5,DAT_181dc39b0);
+              if (iVar2 <= iVar9) goto LAB_18099014e;
               if (((*(int64 *)(lVar4 + 96) == 0) ||
                   (lVar5 = *(int64 *)(*(int64 *)(lVar4 + 96) + 32)) == null) ||
                  (lVar5 = *(int64 *)(lVar5 + 16)) == null) break;
-              uVar6 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4b8);
-              uVar3 = FUN_18096eb40(uVar6,iVar9,DAT_181db2e90);
+              uVar6 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4d0);
+              uVar3 = FUN_18096f1d0(uVar6,iVar9,DAT_181db2ea8);
               lVar5 = new HeroSpeAddData(0);
               lVar7 = FUN_18046c100(0);
               if ((((lVar7 == null) || (*(int64 *)(lVar7 + 144) == 0)) ||
-                  (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar3,DAT_181d8c018)) == null) ||
+                  (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar3,DAT_181d8c030)) == null) ||
                  (lVar5 == null)) break;
               uVar6 = HeroSpeAddData.Set(lVar5,uVar3,*(uint32 *)(lVar7 + 32));
               SpeEnhanceEquipController.CreateEnhanceChoiceButton(this,uVar6,1,0);
@@ -241,37 +241,37 @@ public class SpeEnhanceEquipController
             }
           }
         }
-        LAB_18098fc1a:
+        LAB_1809902aa:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_18098fabe:
+        LAB_18099014e:
         if (((*(int64 *)(lVar4 + 96) == 0) ||
             (lVar5 = *(int64 *)(*(int64 *)(lVar4 + 96) + 40)) == null) ||
            ((lVar5 = *(int64 *)(lVar5 + 16), lVar5 == null ||
-            (lVar5 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4b8)) == null))) goto LAB_18098fc1a;
-        iVar9 = FUN_180cd6140(lVar5,DAT_181dc3998);
+            (lVar5 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4d0)) == null))) goto LAB_1809902aa;
+        iVar9 = FUN_180cd6750(lVar5,DAT_181dc39b0);
         if (iVar9 <= iVar8) {
           SpeEnhanceEquipController.CreateEnhanceChoiceButton(this,0,1,0);
           return;
         }
         if (((*(int64 *)(lVar4 + 96) == 0) ||
             (lVar5 = *(int64 *)(*(int64 *)(lVar4 + 96) + 40)) == null) ||
-           (lVar5 = *(int64 *)(lVar5 + 16)) == null) goto LAB_18098fc1a;
-        uVar6 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4b8);
-        uVar3 = FUN_18096eb40(uVar6,iVar8,DAT_181db2e90);
+           (lVar5 = *(int64 *)(lVar5 + 16)) == null) goto LAB_1809902aa;
+        uVar6 = Dictionary_2.get_Keys(lVar5,DAT_181dbe4d0);
+        uVar3 = FUN_18096f1d0(uVar6,iVar8,DAT_181db2ea8);
         lVar5 = new HeroSpeAddData(0);
         lVar7 = FUN_18046c100(0);
         if ((((lVar7 == null) || (*(int64 *)(lVar7 + 144) == 0)) ||
-            (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar3,DAT_181d8c018)) == null) ||
-           (lVar5 == null)) goto LAB_18098fc1a;
+            (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar3,DAT_181d8c030)) == null) ||
+           (lVar5 == null)) goto LAB_1809902aa;
         uVar6 = HeroSpeAddData.Set(lVar5,uVar3,*(float *)(lVar7 + 32) + *(float *)(lVar7 + 32));
         SpeEnhanceEquipController.CreateEnhanceChoiceButton(this,uVar6,0,0);
         iVar8 = iVar8 + 1;
-        goto LAB_18098fabe;
+        goto LAB_18099014e;
     }
 
     // Token : 0x600215C
-    // RVA   : 0x98E8D0   Offset: 0x98DCD0   Length: 0x104
+    // RVA   : 0x98EF60   Offset: 0x98E360   Length: 0x104
     public bool CanEnhance()
     {
         int iVar1;
@@ -299,7 +299,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x600215D
-    // RVA   : 0x98FC20   Offset: 0x98F020   Length: 0x93
+    // RVA   : 0x9902B0   Offset: 0x98F6B0   Length: 0x93
     public int GetStoneNeed()
     {
         int iVar1;
@@ -320,7 +320,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x600215E
-    // RVA   : 0x990450   Offset: 0x98F850   Length: 0x25F
+    // RVA   : 0x990AE0   Offset: 0x98FEE0   Length: 0x25F
     public void SetNowChoice(GameObject target)
     {
         ulong uVar1;
@@ -350,15 +350,15 @@ public class SpeEnhanceEquipController
             if (!cVar2) {
               if (((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
                  (lVar4 = Transform.GetChild(lVar4,iVar7,0)) == null) break;
-              plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-              FUN_1810d3570(local_18,0);
+              plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+              FUN_1810d3b80(local_18,0);
               if (plVar6 == (int64 *)0) break;
               (**(code **)(*plVar6 + 0x2a8))(plVar6);
             }
             else {
               if (((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
                  (lVar4 = Transform.GetChild(lVar4,iVar7,0)) == null) break;
-              plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+              plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
               if (plVar6 == (int64 *)0) break;
               (**(code **)(*plVar6 + 0x2a8))(plVar6);
             }
@@ -370,7 +370,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x600215F
-    // RVA   : 0x98FE90   Offset: 0x98F290   Length: 0x183
+    // RVA   : 0x990520   Offset: 0x98F920   Length: 0x183
     public void RefreshEnhanceButtonState()
     {
         int iVar1;
@@ -384,17 +384,17 @@ public class SpeEnhanceEquipController
         if (lVar5 == null) throw; // [null/range check failed]
         lVar5 = Transform.Find(lVar5,"EnhanceButton",0);
         if (lVar5 == null) throw; // [null/range check failed]
-        lVar5 = Component.GetComponent(lVar5,DAT_181d93760);
+        lVar5 = Component.GetComponent(lVar5,DAT_181d93778);
         uVar2 = this.enhanceTargetItemIcon;
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (!cVar3) {
-        LAB_18098ffed:
+        LAB_18099067d:
           bVar7 = false;
         }
         else {
           uVar2 = this.nowChoice;
           cVar3 = Object.op_Inequality(uVar2,0,0);
-          if (!cVar3) goto LAB_18098ffed;
+          if (!cVar3) goto LAB_18099067d;
           lVar6 = FUN_18046c0a0(0);
           if ((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) throw; // [null/range check failed]
           iVar1 = *(int *)(*(int64 *)(lVar6 + 32) + 0x230);
@@ -408,7 +408,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002160
-    // RVA   : 0x98FCC0   Offset: 0x98F0C0   Length: 0xBF
+    // RVA   : 0x990350   Offset: 0x98F750   Length: 0xBF
     public int GetTimeNeed()
     {
         int iVar1;
@@ -429,7 +429,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002161
-    // RVA   : 0x98EB30   Offset: 0x98DF30   Length: 0x254
+    // RVA   : 0x98F1C0   Offset: 0x98E5C0   Length: 0x254
     public GameObject CreateEnhanceChoiceButton(HeroSpeAddData _speAddData, bool _isBaseAdd)
     {
         int64 SpeEnhanceEquipController.CreateEnhanceChoiceButton
@@ -449,7 +449,7 @@ public class SpeEnhanceEquipController
             *(byte *)(lVar2 + 32) = _isBaseAdd;
             lVar2 = GameObject.get_transform(lVar1,0);
             if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Text",0)) != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
               uVar4 = "重量-10%";
               if (_speAddData != null) {
                 uVar4 = HeroSpeAddData.GetDescribe(_speAddData,_isBaseAdd ^ 1,1,1,0,0);
@@ -457,7 +457,7 @@ public class SpeEnhanceEquipController
               LTLocalization.SetText(uVar3,uVar4,0);
               lVar2 = GameObject.get_transform(lVar1,0);
               if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Type",0)) != null) {
-                uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                 uVar4 = "额外";
                 if (_isBaseAdd != null) {
                   uVar4 = "基础";
@@ -471,7 +471,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002162
-    // RVA   : 0x98ED90   Offset: 0x98E190   Length: 0x12A
+    // RVA   : 0x98F420   Offset: 0x98E820   Length: 0x12A
     public GameObject CreateEnhanceTargetIcon(GameObject parent, ItemData targetItemData)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -503,7 +503,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002163
-    // RVA   : 0x98F090   Offset: 0x98E490   Length: 0x1A6
+    // RVA   : 0x98F720   Offset: 0x98EB20   Length: 0x1A6
     public void EnhanceTargetButtonClicked()
     {
         long lVar1;
@@ -517,16 +517,16 @@ public class SpeEnhanceEquipController
         if (cVar2) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7518 + 184);
-        lVar3 = il2cpp_internal(DAT_181d94e50);
-        FUN_18132faf0(lVar3,DAT_181d95788);
+        lVar1 = **(int64 **)(DAT_181db7530 + 184);
+        lVar3 = il2cpp_internal(DAT_181d94e68);
+        FUN_181330100(lVar3,DAT_181d957a0);
         local_res8[0] = 0;
-        uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
+        uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
         if (lVar3 != null) {
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           local_res18[0] = 0;
-          uVar4 = il2cpp_value_box(DAT_181d80418,local_res18);
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           uVar4 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar3,uVar4,"EnhanceTargetChoosen",0,0,0,0,0);
@@ -536,11 +536,11 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002164
-    // RVA   : 0x98F240   Offset: 0x98E640   Length: 0x230
+    // RVA   : 0x98F8D0   Offset: 0x98ECD0   Length: 0x230
     public void EnhanceTargetChoosen()
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
+        var pStatics_7530 = *(int64*)(DAT_181db7530 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -552,8 +552,8 @@ public class SpeEnhanceEquipController
             lVar3 = Transform.Find(lVar3,"EnhanceTarget",0);
             if (lVar3 != null) {
               uVar4 = Component.get_gameObject(lVar3,0);
-              if ((*pStatics_7518 != 0) &&
-                 (lVar3 = *(int64 *)(*pStatics_7518 + 72)) != null) {
+              if ((*pStatics_7530 != 0) &&
+                 (lVar3 = *(int64 *)(*pStatics_7530 + 72)) != null) {
                 lVar3 = GameObject.GetComponent(lVar3,DAT_181d720a0);
                 if (lVar3 != null) {
                   uVar1 = *(uint64 *)(lVar3 + 32);
@@ -590,7 +590,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002165
-    // RVA   : 0x98EA40   Offset: 0x98DE40   Length: 0xEC
+    // RVA   : 0x98F0D0   Offset: 0x98E4D0   Length: 0xEC
     public void ClearEnhanceTarget()
     {
         ulong uVar1;
@@ -608,24 +608,24 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002166
-    // RVA   : 0x98EEC0   Offset: 0x98E2C0   Length: 0x1C3
+    // RVA   : 0x98F550   Offset: 0x98E950   Length: 0x1C3
     public void EnhanceButtonClicked()
     {
         long lVar1;
         uint uVar2;
         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/修理升级",0);
         plVar4 = (int64 *)0;
-        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
           plVar4 = plVar3;
         }
         NGUITools.PlaySound(plVar4,0);
         plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Button/CraftButton",0);
         plVar3 = (int64 *)0;
-        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
           plVar3 = plVar4;
         }
         NGUITools.PlaySound(plVar3,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db5de8 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
         uVar2 = SpeEnhanceEquipController.GetTimeNeed(this,0);
         if (lVar1 != null) {
           WorkingUIController.StartWorking
@@ -635,7 +635,7 @@ public class SpeEnhanceEquipController
     }
 
     // Token : 0x6002167
-    // RVA   : 0x98F480   Offset: 0x98E880   Length: 0x3F8
+    // RVA   : 0x98FB10   Offset: 0x98EF10   Length: 0x3F8
     public void FinishSpeEnhance()
     {
         int iVar2;
@@ -698,7 +698,7 @@ public class SpeEnhanceEquipController
                       lVar3 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
                       if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
                         ItemData.CountValueAndWeight(lVar3.villageAreaID,0);
-                        lVar3 = **(int64 **)(DAT_181da4450 + 184);
+                        lVar3 = **(int64 **)(DAT_181da4468 + 184);
                         if (this.enhanceTargetItemIcon != null) {
                           lVar5 = GameObject.GetComponent(this.enhanceTargetItemIcon,DAT_181d720a0);
                           if ((lVar5 != null) && (lVar3 != null)) {

@@ -50,7 +50,7 @@ public class UIProgressBar
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000220
-    // RVA   : 0x16FBEC0   Offset: 0x16FB2C0   Length: 0x8F
+    // RVA   : 0x16FC4D0   Offset: 0x16FB8D0   Length: 0x8F
     public Transform get_cachedTransform()
     {
         bool cVar1;
@@ -65,7 +65,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000221
-    // RVA   : 0x16FBDE0   Offset: 0x16FB1E0   Length: 0xD8
+    // RVA   : 0x16FC3F0   Offset: 0x16FB7F0   Length: 0xD8
     public Camera get_cachedCamera()
     {
         bool cVar2;
@@ -96,7 +96,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000223
-    // RVA   : 0x16FC5F0   Offset: 0x16FB9F0   Length: 0x93
+    // RVA   : 0x16FCC00   Offset: 0x16FC000   Length: 0x93
     public void set_foregroundWidget(UIWidget value)
     {
         ulong uVar1;
@@ -117,7 +117,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000225
-    // RVA   : 0x16FC530   Offset: 0x16FB930   Length: 0x93
+    // RVA   : 0x16FCB40   Offset: 0x16FBF40   Length: 0x93
     public void set_backgroundWidget(UIWidget value)
     {
         ulong uVar1;
@@ -140,14 +140,14 @@ public class UIProgressBar
     }
 
     // Token : 0x6000227
-    // RVA   : 0x16FC5D0   Offset: 0x16FB9D0   Length: 0x20
+    // RVA   : 0x16FCBE0   Offset: 0x16FBFE0   Length: 0x20
     public void set_fillDirection(FillDirection value)
     {
-        void FUN_1816fc5d0(int64 *this,int value)
+        void FUN_1816fcbe0(int64 *this,int value)
         {
         if ((*(int *)((int64)this + 60) != value) &&
            (*(int *)((int64)this + 60) = value, (char)this[8] != false)) {
-                          // WARNING: Could not recover jumptable at 0x0001816fc5e8. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001816fcbf8. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x1a8))(this,*(uint64 *)(*this + 0x1b0));
           return;
@@ -155,7 +155,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000228
-    // RVA   : 0x16FBF80   Offset: 0x16FB380   Length: 0x47
+    // RVA   : 0x16FC590   Offset: 0x16FB990   Length: 0x47
     public float get_value()
     {
         byte[] auVar1 = new byte[16];
@@ -172,14 +172,14 @@ public class UIProgressBar
     }
 
     // Token : 0x6000229
-    // RVA   : 0x16FC690   Offset: 0x16FBA90   Length: 0xB
+    // RVA   : 0x16FCCA0   Offset: 0x16FC0A0   Length: 0xB
     public void set_value(float value)
     {
         UIProgressBar.Set(this,value,1,0);
     }
 
     // Token : 0x600022A
-    // RVA   : 0x16FBD00   Offset: 0x16FB100   Length: 0xD1
+    // RVA   : 0x16FC310   Offset: 0x16FB710   Length: 0xD1
     public float get_alpha()
     {
         bool cVar1;
@@ -198,7 +198,7 @@ public class UIProgressBar
           plVar2 = this.mFG;
         }
         if (plVar2 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x0001816fbdc5. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001816fc3d5. Too many branches
                           // WARNING: Treating indirect jump as call
           uVar3 = (**(code **)(*plVar2 + 0x1a8))(plVar2,*(uint64 *)(*plVar2 + 0x1b0));
           return uVar3;
@@ -206,7 +206,7 @@ public class UIProgressBar
     }
 
     // Token : 0x600022B
-    // RVA   : 0x16FBFD0   Offset: 0x16FB3D0   Length: 0x554
+    // RVA   : 0x16FC5E0   Offset: 0x16FB9E0   Length: 0x554
     public void set_alpha(float value)
     {
         bool cVar1;
@@ -217,33 +217,33 @@ public class UIProgressBar
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           plVar4 = this.mFG;
-          if (plVar4 == (int64 *)0) goto LAB_1816fc51f;
+          if (plVar4 == (int64 *)0) goto LAB_1816fcb2f;
           (**(code **)(*plVar4 + 0x1b8))(plVar4,value,*(uint64 *)(*plVar4 + 0x1c0));
-          if (this.mFG == null) goto LAB_1816fc51f;
-          uVar2 = Component.GetComponent(this.mFG,DAT_181d93b60);
+          if (this.mFG == null) goto LAB_1816fcb2f;
+          uVar2 = Component.GetComponent(this.mFG,DAT_181d93b78);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           lVar3 = this.mFG;
           if (!cVar1) {
-            if (lVar3 == null) goto LAB_1816fc51f;
-            uVar2 = Component.GetComponent(lVar3,DAT_181d93be0);
+            if (lVar3 == null) goto LAB_1816fcb2f;
+            uVar2 = Component.GetComponent(lVar3,DAT_181d93bf8);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (cVar1) {
-              if (this.mFG == null) goto LAB_1816fc51f;
-              lVar3 = Component.GetComponent(this.mFG,DAT_181d93be0);
+              if (this.mFG == null) goto LAB_1816fcb2f;
+              lVar3 = Component.GetComponent(this.mFG,DAT_181d93bf8);
               plVar4 = this.mFG;
-              if (plVar4 == (int64 *)0) goto LAB_1816fc51f;
+              if (plVar4 == (int64 *)0) goto LAB_1816fcb2f;
               fVar5 = (float)(**(code **)(*plVar4 + 0x1a8))(plVar4,*(uint64 *)(*plVar4 + 0x1b0));
-              if (lVar3 == null) goto LAB_1816fc51f;
+              if (lVar3 == null) goto LAB_1816fcb2f;
               Behaviour.set_enabled(lVar3,0.001 < fVar5,0);
             }
           }
           else {
-            if (lVar3 == null) goto LAB_1816fc51f;
-            lVar3 = Component.GetComponent(lVar3,DAT_181d93b60);
+            if (lVar3 == null) goto LAB_1816fcb2f;
+            lVar3 = Component.GetComponent(lVar3,DAT_181d93b78);
             plVar4 = this.mFG;
-            if (plVar4 == (int64 *)0) goto LAB_1816fc51f;
+            if (plVar4 == (int64 *)0) goto LAB_1816fcb2f;
             fVar5 = (float)(**(code **)(*plVar4 + 0x1a8))(plVar4,*(uint64 *)(*plVar4 + 0x1b0));
-            if (lVar3 == null) goto LAB_1816fc51f;
+            if (lVar3 == null) goto LAB_1816fcb2f;
             Collider.set_enabled(lVar3,0.001 < fVar5,0);
           }
         }
@@ -251,33 +251,33 @@ public class UIProgressBar
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           plVar4 = this.mBG;
-          if (plVar4 == (int64 *)0) goto LAB_1816fc51f;
+          if (plVar4 == (int64 *)0) goto LAB_1816fcb2f;
           (**(code **)(*plVar4 + 0x1b8))(plVar4,value,*(uint64 *)(*plVar4 + 0x1c0));
-          if (this.mBG == null) goto LAB_1816fc51f;
-          uVar2 = Component.GetComponent(this.mBG,DAT_181d93b60);
+          if (this.mBG == null) goto LAB_1816fcb2f;
+          uVar2 = Component.GetComponent(this.mBG,DAT_181d93b78);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           lVar3 = this.mBG;
           if (!cVar1) {
-            if (lVar3 == null) goto LAB_1816fc51f;
-            uVar2 = Component.GetComponent(lVar3,DAT_181d93be0);
+            if (lVar3 == null) goto LAB_1816fcb2f;
+            uVar2 = Component.GetComponent(lVar3,DAT_181d93bf8);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (cVar1) {
-              if (this.mBG == null) goto LAB_1816fc51f;
-              lVar3 = Component.GetComponent(this.mBG,DAT_181d93be0);
+              if (this.mBG == null) goto LAB_1816fcb2f;
+              lVar3 = Component.GetComponent(this.mBG,DAT_181d93bf8);
               plVar4 = this.mBG;
-              if (plVar4 == (int64 *)0) goto LAB_1816fc51f;
+              if (plVar4 == (int64 *)0) goto LAB_1816fcb2f;
               fVar5 = (float)(**(code **)(*plVar4 + 0x1a8))(plVar4,*(uint64 *)(*plVar4 + 0x1b0));
-              if (lVar3 == null) goto LAB_1816fc51f;
+              if (lVar3 == null) goto LAB_1816fcb2f;
               Behaviour.set_enabled(lVar3,0.001 < fVar5,0);
             }
           }
           else {
-            if (lVar3 == null) goto LAB_1816fc51f;
-            lVar3 = Component.GetComponent(lVar3,DAT_181d93b60);
+            if (lVar3 == null) goto LAB_1816fcb2f;
+            lVar3 = Component.GetComponent(lVar3,DAT_181d93b78);
             plVar4 = this.mBG;
-            if (plVar4 == (int64 *)0) goto LAB_1816fc51f;
+            if (plVar4 == (int64 *)0) goto LAB_1816fcb2f;
             fVar5 = (float)(**(code **)(*plVar4 + 0x1a8))(plVar4,*(uint64 *)(*plVar4 + 0x1b0));
-            if (lVar3 == null) goto LAB_1816fc51f;
+            if (lVar3 == null) goto LAB_1816fcb2f;
             Collider.set_enabled(lVar3,0.001 < fVar5,0);
           }
         }
@@ -285,31 +285,31 @@ public class UIProgressBar
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           if (this.thumb == null) {
-        LAB_1816fc51f:
+        LAB_1816fcb2f:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          plVar4 = (int64 *)Component.GetComponent(this.thumb,DAT_181d97060);
+          plVar4 = (int64 *)Component.GetComponent(this.thumb,DAT_181d97078);
           cVar1 = Object.op_Inequality(plVar4,0,0);
           if (cVar1) {
-            if (plVar4 == (int64 *)0) goto LAB_1816fc51f;
+            if (plVar4 == (int64 *)0) goto LAB_1816fcb2f;
             (**(code **)(*plVar4 + 0x1b8))(plVar4,value,*(uint64 *)(*plVar4 + 0x1c0));
-            uVar2 = Component.GetComponent(plVar4,DAT_181d93b60);
+            uVar2 = Component.GetComponent(plVar4,DAT_181d93b78);
             cVar1 = Object.op_Inequality(uVar2,0,0);
             if (!cVar1) {
-              uVar2 = Component.GetComponent(plVar4,DAT_181d93be0);
+              uVar2 = Component.GetComponent(plVar4,DAT_181d93bf8);
               cVar1 = Object.op_Inequality(uVar2,0,0);
               if (cVar1) {
-                lVar3 = Component.GetComponent(plVar4,DAT_181d93be0);
+                lVar3 = Component.GetComponent(plVar4,DAT_181d93bf8);
                 fVar5 = (float)(**(code **)(*plVar4 + 0x1a8))(plVar4,*(uint64 *)(*plVar4 + 0x1b0));
-                if (lVar3 == null) goto LAB_1816fc51f;
+                if (lVar3 == null) goto LAB_1816fcb2f;
                 Behaviour.set_enabled(lVar3,0.001 < fVar5,0);
               }
             }
             else {
-              lVar3 = Component.GetComponent(plVar4,DAT_181d93b60);
+              lVar3 = Component.GetComponent(plVar4,DAT_181d93b78);
               fVar5 = (float)(**(code **)(*plVar4 + 0x1a8))(plVar4,*(uint64 *)(*plVar4 + 0x1b0));
-              if (lVar3 == null) goto LAB_1816fc51f;
+              if (lVar3 == null) goto LAB_1816fcb2f;
               Collider.set_enabled(lVar3,0.001 < fVar5,0);
             }
           }
@@ -317,10 +317,10 @@ public class UIProgressBar
     }
 
     // Token : 0x600022C
-    // RVA   : 0x16FBF50   Offset: 0x16FB350   Length: 0x11
+    // RVA   : 0x16FC560   Offset: 0x16FB960   Length: 0x11
     protected bool get_isHorizontal()
     {
-        uint32 FUN_1816fbf50(int64 this)
+        uint32 FUN_1816fc560(int64 this)
         {
         int iVar1;
         iVar1 = this.mFill;
@@ -331,10 +331,10 @@ public class UIProgressBar
     }
 
     // Token : 0x600022D
-    // RVA   : 0x16FBF70   Offset: 0x16FB370   Length: 0x10
+    // RVA   : 0x16FC580   Offset: 0x16FB980   Length: 0x10
     protected bool get_isInverted()
     {
-        uint32 FUN_1816fbf70(int64 this)
+        uint32 FUN_1816fc580(int64 this)
         {
         int iVar1;
         iVar1 = this.mFill;
@@ -345,7 +345,7 @@ public class UIProgressBar
     }
 
     // Token : 0x600022E
-    // RVA   : 0x16FB8E0   Offset: 0x16FACE0   Length: 0x1D5
+    // RVA   : 0x16FBEF0   Offset: 0x16FB2F0   Length: 0x1D5
     public void Set(float val, bool notify)
     {
         long lVar1;
@@ -375,12 +375,12 @@ public class UIProgressBar
                   lVar1 = this[13];
                   cVar3 = EventDelegate.IsValid(lVar1,0);
                   if (cVar3) {
-                    puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                    puVar2 = *(uint64 **)(DAT_181db0090 + 184);
                     *puVar2 = this;
                     il2cpp_internal(puVar2,this);
                     lVar1 = this[13];
                     EventDelegate.Execute(lVar1,0);
-                    puVar2 = *(uint64 **)(DAT_181db0078 + 184);
+                    puVar2 = *(uint64 **)(DAT_181db0090 + 184);
                     *puVar2 = 0;
                     il2cpp_internal(puVar2,0);
                   }
@@ -393,7 +393,7 @@ public class UIProgressBar
     }
 
     // Token : 0x600022F
-    // RVA   : 0x16FBAC0   Offset: 0x16FAEC0   Length: 0x197
+    // RVA   : 0x16FC0D0   Offset: 0x16FB4D0   Length: 0x197
     public void Start()
     {
         long lVar1;
@@ -414,15 +414,15 @@ public class UIProgressBar
               *(uint8 *)(this[5] + 208) = 1;
             }
             (**(code **)(*this + 0x188))(this,*(uint64 *)(*this + 400));
-            uVar2 = **(uint64 **)(DAT_181db0078 + 184);
+            uVar2 = **(uint64 **)(DAT_181db0090 + 184);
             cVar4 = Object.op_Equality(uVar2,0,0);
             if ((cVar4) && (this[13] != 0)) {
-              puVar3 = *(uint64 **)(DAT_181db0078 + 184);
+              puVar3 = *(uint64 **)(DAT_181db0090 + 184);
               *puVar3 = this;
               il2cpp_internal(puVar3,this);
               lVar1 = this[13];
               EventDelegate.Execute(lVar1,0);
-              puVar3 = *(uint64 **)(DAT_181db0078 + 184);
+              puVar3 = *(uint64 **)(DAT_181db0090 + 184);
               *puVar3 = 0;
               il2cpp_internal(puVar3,0);
             }
@@ -444,13 +444,13 @@ public class UIProgressBar
     }
 
     // Token : 0x6000232
-    // RVA   : 0x16FBC60   Offset: 0x16FB060   Length: 0x18
+    // RVA   : 0x16FC270   Offset: 0x16FB670   Length: 0x18
     protected void Update()
     {
-        void FUN_1816fbc60(int64 *this)
+        void FUN_1816fc270(int64 *this)
         {
         if ((char)this[10] != false) {
-                          // WARNING: Could not recover jumptable at 0x0001816fbc70. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001816fc280. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x1a8))(this,*(uint64 *)(*this + 0x1b0));
           return;
@@ -458,7 +458,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000233
-    // RVA   : 0x16FB2A0   Offset: 0x16FA6A0   Length: 0x107
+    // RVA   : 0x16FB8B0   Offset: 0x16FACB0   Length: 0x107
     protected void OnValidate()
     {
         bool cVar1;
@@ -491,13 +491,13 @@ public class UIProgressBar
         else if (21 < *(int *)((int64)this + 100)) {
           *(uint32 *)((int64)this + 100) = 21;
         }
-                          // WARNING: Could not recover jumptable at 0x0001816fb39a. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001816fb9aa. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x1a8))(this,*(uint64 *)(*this + 0x1b0));
     }
 
     // Token : 0x6000234
-    // RVA   : 0x16FB3B0   Offset: 0x16FA7B0   Length: 0x329
+    // RVA   : 0x16FB9C0   Offset: 0x16FADC0   Length: 0x329
     protected float ScreenToValue(Vector2 screenPos)
     {
         ulong uVar1;
@@ -591,7 +591,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000235
-    // RVA   : 0x16FB090   Offset: 0x16FA490   Length: 0x17D
+    // RVA   : 0x16FB6A0   Offset: 0x16FAAA0   Length: 0x17D
     protected virtual float LocalToValue(Vector2 localPos)
     {
         int iVar1;
@@ -644,7 +644,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000236
-    // RVA   : 0x16FA5B0   Offset: 0x16F99B0   Length: 0xADB
+    // RVA   : 0x16FABC0   Offset: 0x16F9FC0   Length: 0xADB
     public virtual void ForceUpdate()
     {
         ulong uVar1;
@@ -680,17 +680,17 @@ public class UIProgressBar
           if ((this.mFill == null) || (this.mFill == 1)) {
             cVar3 = Object.op_Inequality(plVar13,0,0);
             if (cVar3) {
-              if (plVar13 == (int64 *)0) goto LAB_1816fafa6;
+              if (plVar13 == (int64 *)0) goto LAB_1816fb5b6;
               iVar4 = (**(code **)(*plVar13 + 0x3a8))(plVar13,*(uint64 *)(*plVar13 + 0x3b0));
               if (iVar4 == 3) {
                 if (*(uint32 *)((int64)plVar13 + 0x18c) < 2) {
                   UIBasicSprite.set_fillDirection(plVar13,0,0);
                   iVar4 = this.mFill;
-                  if (iVar4 != 1) goto LAB_1816fa749;
+                  if (iVar4 != 1) goto LAB_1816fad59;
                   bVar14 = true;
-                  goto LAB_1816fa74f;
+                  goto LAB_1816fad5f;
                 }
-                goto LAB_1816fa75a;
+                goto LAB_1816fad6a;
               }
             }
             lVar5 = this.mFG;
@@ -704,7 +704,7 @@ public class UIProgressBar
           else {
             cVar3 = Object.op_Inequality(plVar13,0,0);
             if (cVar3) {
-              if (plVar13 == (int64 *)0) goto LAB_1816fafa6;
+              if (plVar13 == (int64 *)0) goto LAB_1816fb5b6;
               iVar4 = (**(code **)(*plVar13 + 0x3a8))(plVar13,*(uint64 *)(*plVar13 + 0x3b0));
               if (iVar4 == 3) {
                 if (*(uint32 *)((int64)plVar13 + 0x18c) < 2) {
@@ -714,16 +714,16 @@ public class UIProgressBar
                     bVar14 = true;
                   }
                   else {
-        LAB_1816fa749:
+        LAB_1816fad59:
                     bVar14 = iVar4 == 3;
                   }
-        LAB_1816fa74f:
+        LAB_1816fad5f:
                   UIBasicSprite.set_invert(plVar13,bVar14,0);
                 }
-        LAB_1816fa75a:
+        LAB_1816fad6a:
                 UISlider.get_sliderValue(this,0);
                 UIBasicSprite.set_fillAmount(plVar13);
-                goto LAB_1816fa937;
+                goto LAB_1816faf47;
               }
             }
             lVar5 = this.mFG;
@@ -736,10 +736,10 @@ public class UIProgressBar
           }
           uStack_90 = 0;
           local_98 = 0;
-          FUN_1809dc910(&local_98);
-          if (lVar5 == null) goto LAB_1816fafa6;
+          FUN_1809dcfa0(&local_98);
+          if (lVar5 == null) goto LAB_1816fb5b6;
           UIWidget.set_drawRegion(lVar5,&local_98,0);
-          if (this.mFG == null) goto LAB_1816fafa6;
+          if (this.mFG == null) goto LAB_1816fb5b6;
           Behaviour.set_enabled(this.mFG,1,0);
           fVar15 = this.mValue;
           if (1 < *(int *)(this + 100)) {
@@ -748,7 +748,7 @@ public class UIProgressBar
           }
           bVar2 = fVar15 < 0.001;
         }
-        LAB_1816fa937:
+        LAB_1816faf47:
         uVar8 = this.thumb;
         cVar3 = Object.op_Inequality(uVar8,0,0);
         if (cVar3) {
@@ -757,7 +757,7 @@ public class UIProgressBar
           if (!cVar3) {
             uVar8 = this.mBG;
             cVar3 = Object.op_Inequality(uVar8,0,0);
-            if (!cVar3) goto LAB_1816fadd4;
+            if (!cVar3) goto LAB_1816fb3e4;
           }
           uVar8 = this.mFG;
           cVar3 = Object.op_Inequality(uVar8,0,0);
@@ -767,7 +767,7 @@ public class UIProgressBar
           else {
             plVar9 = this.mFG;
           }
-          if (plVar9 == (int64 *)0) goto LAB_1816fafa6;
+          if (plVar9 == (int64 *)0) goto LAB_1816fb5b6;
           lVar5 = (**(code **)(*plVar9 + 0x1d8))(plVar9,*(uint64 *)(*plVar9 + 0x1e0));
           uVar8 = this.mFG;
           cVar3 = Object.op_Inequality(uVar8,0,0);
@@ -777,12 +777,12 @@ public class UIProgressBar
           else {
             plVar9 = this.mFG;
           }
-          if (plVar9 == (int64 *)0) goto LAB_1816fafa6;
+          if (plVar9 == (int64 *)0) goto LAB_1816fb5b6;
           puVar6 = (uint64 *)
                    (**(code **)(*plVar9 + 0x378))(&local_98,plVar9,*(uint64 *)(*plVar9 + 0x380));
           local_98 = *puVar6;
           uStack_90 = puVar6[1];
-          if (lVar5 == null) goto LAB_1816fafa6;
+          if (lVar5 == null) goto LAB_1816fb5b6;
           uVar11 = *(uint32 *)(lVar5 + 24);
           if (uVar11 == 0) {
             uVar8 = il2cpp_internal();
@@ -822,7 +822,7 @@ public class UIProgressBar
           else {
             lVar7 = this.mFG;
           }
-          if (lVar7 == null) goto LAB_1816fafa6;
+          if (lVar7 == null) goto LAB_1816fb5b6;
           lVar7 = UIRect.get_cachedTransform(lVar7,0);
           do {
             uVar11 = (uint32)plVar12;
@@ -832,7 +832,7 @@ public class UIProgressBar
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar8,0);
             }
-            if (lVar7 == null) goto LAB_1816fafa6;
+            if (lVar7 == null) goto LAB_1816fb5b6;
             local_a8 = *(uint64 *)(lVar5 + 32 + lVar10 * 12);
             local_a0 = *(float *)(lVar5 + 40 + lVar10 * 12);
             puVar6 = (uint64 *)Transform.TransformPoint(&local_98,lVar7,&local_a8,0);
@@ -890,7 +890,7 @@ public class UIProgressBar
             fVar16 = this.mValue;
             local_a8 = uVar1;
             local_98 = uVar8;
-            if ((this.mFill == 1) || (this.mFill == 3)) goto LAB_1816fad15;
+            if ((this.mFill == 1) || (this.mFill == 3)) goto LAB_1816fb325;
             if (1 < iVar4) {
               FUN_18000d7c0((float)(iVar4 + -1) * fVar16);
             }
@@ -941,7 +941,7 @@ public class UIProgressBar
             local_a8 = uVar1;
             local_98 = uVar8;
             if ((this.mFill == 1) || (this.mFill == 3)) {
-        LAB_1816fad15:
+        LAB_1816fb325:
               if (1 < iVar4) {
                 FUN_18000d7c0((float)(iVar4 + -1) * fVar16);
               }
@@ -956,10 +956,10 @@ public class UIProgressBar
           local_98 = CONCAT44((fVar17 - fVar15) * fVar16 + fVar15,(fVar19 - fVar20) * fVar16 + fVar20);
           UIProgressBar.SetThumbPosition(this,&local_98,0);
         }
-        LAB_1816fadd4:
+        LAB_1816fb3e4:
         if (bVar2) {
           if (this.mFG == null) {
-        LAB_1816fafa6:
+        LAB_1816fb5b6:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -968,7 +968,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000237
-    // RVA   : 0x16FB6E0   Offset: 0x16FAAE0   Length: 0x1FF
+    // RVA   : 0x16FBCF0   Offset: 0x16FB0F0   Length: 0x1FF
     protected void SetThumbPosition(Vector3 worldPos)
     {
         bool cVar1;
@@ -982,7 +982,7 @@ public class UIProgressBar
         uint local_20;
         byte[] local_18 = new byte[16];
         if (this.thumb != null) {
-          lVar2 = FUN_180da9a20(this.thumb,0);
+          lVar2 = FUN_180daa030(this.thumb,0);
           cVar1 = Object.op_Inequality(lVar2,0,0);
           if (!cVar1) {
             if (this.thumb != null) {
@@ -1039,7 +1039,7 @@ public class UIProgressBar
     }
 
     // Token : 0x6000238
-    // RVA   : 0x16FB210   Offset: 0x16FA610   Length: 0x8C
+    // RVA   : 0x16FB820   Offset: 0x16FAC20   Length: 0x8C
     public virtual void OnPan(Vector2 delta)
     {
         int iVar1;
@@ -1056,7 +1056,7 @@ public class UIProgressBar
         if (iVar1 != 0) {
           if (iVar1 == 1) {
             fStack_24 = this.mValue - local_28;
-            goto LAB_1816fb271;
+            goto LAB_1816fb881;
           }
           fStack_24 = (float)((uint64)delta >> 32);
           local_28 = fStack_24;
@@ -1065,24 +1065,24 @@ public class UIProgressBar
               return;
             }
             fStack_24 = this.mValue - fStack_24;
-            goto LAB_1816fb271;
+            goto LAB_1816fb881;
           }
         }
         fStack_24 = local_28 + this.mValue;
-        LAB_1816fb271:
+        LAB_1816fb881:
         uVar3 = Mathf.Clamp01(fStack_24,0);
         UIProgressBar.Set(this,uVar3,1,0);
         this.mValue = uVar3;
     }
 
     // Token : 0x6000239
-    // RVA   : 0x16FBC80   Offset: 0x16FB080   Length: 0x7D
+    // RVA   : 0x16FC290   Offset: 0x16FB690   Length: 0x7D
     public void /*ctor*/()
     {
         ulong uVar1;
         this.mValue = 0x3f800000;
-        uVar1 = il2cpp_internal(DAT_181d92658);
-        FUN_18132faf0(uVar1,DAT_181d85ea0);
+        uVar1 = il2cpp_internal(DAT_181d92670);
+        FUN_181330100(uVar1,DAT_181d85eb8);
         this.onChange = uVar1;
         TrailRenderer_Base.ctor(this,0);
     }

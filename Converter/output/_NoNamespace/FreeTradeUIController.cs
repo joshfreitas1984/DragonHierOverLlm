@@ -63,7 +63,7 @@ public class FreeTradeUIController
         ulong uVar3;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Deal",0);
         plVar4 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
           plVar4 = plVar1;
         }
         NGUITools.PlaySound(plVar4,0);
@@ -120,7 +120,7 @@ public class FreeTradeUIController
               GameController.ShowTextOnMouse(lVar4,"银钱不足！",0);
               plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar8 = (int64 *)0;
-              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                 plVar8 = plVar5;
               }
               NGUITools.PlaySound(plVar8,0);
@@ -144,14 +144,14 @@ public class FreeTradeUIController
               if ((this.playerForce == null) ||
                  (lVar4 = this.playerForce.resourceStore) == null)
               goto LAB_1807853c7;
-              fVar11 = (float)FUN_1800d6790(lVar4,uVar9,DAT_181da1078);
+              fVar11 = (float)FUN_1800d6790(lVar4,uVar9,DAT_181da1090);
               if (this.resourceNum == null) goto LAB_1807853c7;
-              fVar12 = (float)FUN_1800d6790(this.resourceNum,uVar9,DAT_181da1078);
+              fVar12 = (float)FUN_1800d6790(this.resourceNum,uVar9,DAT_181da1090);
               if (fVar12 + fVar11 < 0.0) {
                 lVar4 = FUN_18046c0a0(0);
                 lVar10 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x438);
                 if (lVar10 != null) {
-                  uVar6 = FUN_180002f80(lVar10,uVar9,DAT_181da4358);
+                  uVar6 = FUN_180002f80(lVar10,uVar9,DAT_181da4370);
                   uVar6 = String.Concat("门派",uVar6,"不足！",0);
                   if (lVar4 != null) {
                     GameController.ShowTextOnMouse(lVar4,uVar6,0);
@@ -221,7 +221,7 @@ public class FreeTradeUIController
              (lVar4 = WorldData.Player(lVar4,0)) != null) {
             HeroData.ChangeResource
                       (lVar4,this.resourceNum,1,this.freeTradeUIType != 1,0);
-            lVar4 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+            lVar4 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
             if (lVar4 != null) {
               if (lVar4.leader == null) goto LAB_1807853b8;
               lVar4 = this.resourceNum;
@@ -233,10 +233,10 @@ public class FreeTradeUIController
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
         while( true ) {
-          fVar11 = (float)FUN_1800d6790(lVar4,uVar7,DAT_181da1078);
+          fVar11 = (float)FUN_1800d6790(lVar4,uVar7,DAT_181da1090);
           if (this.resourceValueRateChange == null) break;
-          fVar12 = (float)FUN_1800d6790(this.resourceValueRateChange,uVar7,DAT_181da1078);
-          FUN_181829d40(lVar4,uVar7,fVar12 + fVar11,DAT_181da10f8);
+          fVar12 = (float)FUN_1800d6790(this.resourceValueRateChange,uVar7,DAT_181da1090);
+          FUN_18182a350(lVar4,uVar7,fVar12 + fVar11,DAT_181da1110);
           lVar4 = this.resourceNum;
           uVar7 = uVar7 + 1;
           if (lVar4 == null) break;
@@ -268,9 +268,9 @@ public class FreeTradeUIController
             return;
           }
           if (lVar1 == null) break;
-          FUN_181829d40(lVar1,iVar2,0,DAT_181da10f8);
+          FUN_18182a350(lVar1,iVar2,0,DAT_181da1110);
           if (this.resourceValueRateChange == null) break;
-          FUN_181829d40(this.resourceValueRateChange,iVar2,0,DAT_181da10f8);
+          FUN_18182a350(this.resourceValueRateChange,iVar2,0,DAT_181da1110);
           iVar2 = iVar2 + 1;
           lVar1 = this.resourceNum;
         }
@@ -347,7 +347,7 @@ public class FreeTradeUIController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"Money",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
               uVar3 = Single.ToString(this + 48,"+0;-0;0",0);
               LTLocalization.SetText(uVar2,uVar3,0);
               local_res8[0] = 1;
@@ -359,7 +359,7 @@ public class FreeTradeUIController
                 if (lVar1 == null) break;
                 lVar1 = Transform.Find(lVar1,"Num",0);
                 if (lVar1 == null) break;
-                uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                 lVar1 = this.resourceNum;
                 lVar5 = (int64)(int)local_res8[0];
                 if (lVar1 == null) break;
@@ -378,7 +378,7 @@ public class FreeTradeUIController
                 if (lVar1 == null) break;
                 lVar1 = Transform.Find(lVar1,"ValueRate",0);
                 if (lVar1 == null) break;
-                uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                 if (1.0 < fVar6) {
                   uVar3 = *(uint64 *)(pStatics + 0x2d0);
                 }
@@ -411,11 +411,11 @@ public class FreeTradeUIController
         float fVar8;
         float fVar9;
         if (((buttonClicked != null) && (lVar3 = GameObject.get_transform(buttonClicked,0)) != null) &&
-           (lVar3 = FUN_180da9a20(lVar3,0)) != null) {
+           (lVar3 = FUN_180daa030(lVar3,0)) != null) {
           uVar4 = Object.get_name(lVar3,0);
           uVar2 = Int32.Parse(uVar4,0);
           uVar4 = Object.get_name(buttonClicked,0);
-          cVar1 = FUN_18171e540(uVar4,"Plus",0);
+          cVar1 = FUN_18171eb50(uVar4,"Plus",0);
           plVar7 = (int64 *)0;
           plVar5 = plVar7;
           if (!cVar1) {
@@ -440,7 +440,7 @@ public class FreeTradeUIController
         LAB_18078492e:
                   GameController.ShowTextOnMouse(lVar3,uVar4,0);
                   plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
-                  if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+                  if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                     plVar7 = plVar5;
                   }
                   NGUITools.PlaySound(plVar7,0);
@@ -449,7 +449,7 @@ public class FreeTradeUIController
                   return;
                 }
                 if (this.resourceNum == null) throw; // [null/range check failed]
-                fVar8 = (float)FUN_1800d6790(this.resourceNum,uVar2,DAT_181da1078);
+                fVar8 = (float)FUN_1800d6790(this.resourceNum,uVar2,DAT_181da1090);
                 if (fVar8 <= -10000.0) {
                   lVar3 = FUN_18046c0a0(0);
                   uVar4 = "已达出售上限";
@@ -461,14 +461,14 @@ public class FreeTradeUIController
                 lVar3 = this.resourceValueRateChange;
                 this.money = fVar9 * 100.0 + fVar8;
                 if (lVar3 == null) throw; // [null/range check failed]
-                fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
-                FUN_181829d40(lVar3,uVar2,fVar8 - 0.1,DAT_181da10f8);
+                fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
+                FUN_18182a350(lVar3,uVar2,fVar8 - 0.1,DAT_181da1110);
               }
               else {
                 lVar3 = this.resourceValueRateChange;
                 if (lVar3 == null) throw; // [null/range check failed]
-                fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
-                FUN_181829d40(lVar3,uVar2,fVar8 - 0.1,DAT_181da10f8);
+                fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
+                FUN_18182a350(lVar3,uVar2,fVar8 - 0.1,DAT_181da1110);
                 fVar8 = this.money;
                 fVar9 = (float)FreeTradeUIController.GetResourceValueRate(this,uVar2,0);
                 this.money = fVar9 * 100.0 + fVar8;
@@ -476,7 +476,7 @@ public class FreeTradeUIController
               lVar3 = this.resourceNum;
               if (lVar3 == null) throw; // [null/range check failed]
               fVar8 = (float)FUN_1800d6790(lVar3,uVar2);
-              FUN_181829d40(lVar3,uVar2,fVar8 - 100.0,DAT_181da10f8);
+              FUN_18182a350(lVar3,uVar2,fVar8 - 100.0,DAT_181da1110);
               plVar5 = (int64 *)(uint64)((int)plVar5 + 1);
             } while( true );
           }
@@ -494,7 +494,7 @@ public class FreeTradeUIController
             }
             if (0.0 <= lVar3._items[uVar2]) {
               if (this.resourceNum == null) break;
-              fVar8 = (float)FUN_1800d6790(this.resourceNum,uVar2,DAT_181da1078);
+              fVar8 = (float)FUN_1800d6790(this.resourceNum,uVar2,DAT_181da1090);
               if (10000.0 <= fVar8) {
                 lVar3 = FUN_18046c0a0(0);
                 uVar4 = "已达购买上限";
@@ -505,22 +505,22 @@ public class FreeTradeUIController
               lVar3 = this.resourceValueRateChange;
               this.money = fVar8 - fVar9 * 100.0;
               if (lVar3 == null) break;
-              fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
-              FUN_181829d40(lVar3,uVar2,fVar8 + 0.1,DAT_181da10f8);
+              fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
+              FUN_18182a350(lVar3,uVar2,fVar8 + 0.1,DAT_181da1110);
             }
             else {
               lVar3 = this.resourceValueRateChange;
               if (lVar3 == null) break;
-              fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
-              FUN_181829d40(lVar3,uVar2,fVar8 + 0.1,DAT_181da10f8);
+              fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
+              FUN_18182a350(lVar3,uVar2,fVar8 + 0.1,DAT_181da1110);
               fVar8 = this.money;
               fVar9 = (float)FreeTradeUIController.GetResourceValueRate(this,uVar2,0);
               this.money = fVar8 - fVar9 * 100.0;
             }
             lVar3 = this.resourceNum;
             if (lVar3 == null) break;
-            fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1078);
-            FUN_181829d40(lVar3,uVar2,fVar8 + 100.0,DAT_181da10f8);
+            fVar8 = (float)FUN_1800d6790(lVar3,uVar2,DAT_181da1090);
+            FUN_18182a350(lVar3,uVar2,fVar8 + 100.0,DAT_181da1110);
             plVar5 = (int64 *)(uint64)((int)plVar5 + 1);
           }
         }
@@ -531,25 +531,25 @@ public class FreeTradeUIController
     public void /*ctor*/()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar1,DAT_181da0cf8);
+        lVar1 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar1,DAT_181da0d10);
         if (lVar1 != null) {
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
           this.resourceNum = lVar1;
-          lVar1 = il2cpp_internal(DAT_181d96ed0);
-          FUN_18132faf0(lVar1,DAT_181da0cf8);
+          lVar1 = il2cpp_internal(DAT_181d96ee8);
+          FUN_181330100(lVar1,DAT_181da0d10);
           if (lVar1 != null) {
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
             this.resourceValueRateChange = lVar1;
             FUN_18044ef50(this,0);
             return;

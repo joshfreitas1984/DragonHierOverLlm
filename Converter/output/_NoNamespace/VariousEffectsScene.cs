@@ -6,39 +6,39 @@
 public class VariousEffectsScene
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EC5
+    // Token: 0x4001EC6
     public Transform[] m_effects;
 
-    // Token: 0x4001EC6
+    // Token: 0x4001EC7
     public GameObject scaleform;
 
-    // Token: 0x4001EC7
+    // Token: 0x4001EC8
     public GameObject[] m_destroyObjects;
 
-    // Token: 0x4001EC8
+    // Token: 0x4001EC9
     public GameObject FriendlyEnemyObject;
 
-    // Token: 0x4001EC9
+    // Token: 0x4001ECA
     private GameObject gm;
 
-    // Token: 0x4001ECA
+    // Token: 0x4001ECB
     public int inputLocation;
 
-    // Token: 0x4001ECB
+    // Token: 0x4001ECC
     public Text m_scalefactor;
 
-    // Token: 0x4001ECC
+    // Token: 0x4001ECD
     public static float m_gaph_scenesizefactor;
 
-    // Token: 0x4001ECD
+    // Token: 0x4001ECE
     public Text m_effectName;
 
-    // Token: 0x4001ECE
+    // Token: 0x4001ECF
     private int index;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600243E
-    // RVA   : 0xC0FFF0   Offset: 0xC0F3F0   Length: 0x99
+    // RVA   : 0xC10660   Offset: 0xC0FA60   Length: 0x99
     private void Awake()
     {
         long lVar2;
@@ -68,7 +68,7 @@ public class VariousEffectsScene
     }
 
     // Token : 0x600243F
-    // RVA   : 0xC107C0   Offset: 0xC0FBC0   Length: 0xC3
+    // RVA   : 0xC10E30   Offset: 0xC10230   Length: 0xC3
     private void Update()
     {
         long lVar1;
@@ -114,7 +114,7 @@ public class VariousEffectsScene
     }
 
     // Token : 0x6002440
-    // RVA   : 0xC10250   Offset: 0xC0F650   Length: 0x99
+    // RVA   : 0xC108C0   Offset: 0xC0FCC0   Length: 0x99
     private void InputKey()
     {
         bool cVar1;
@@ -152,7 +152,7 @@ public class VariousEffectsScene
     }
 
     // Token : 0x6002441
-    // RVA   : 0xC102F0   Offset: 0xC0F6F0   Length: 0x4CA
+    // RVA   : 0xC10960   Offset: 0xC0FD60   Length: 0x4CA
     private void MakeObject()
     {
         long lVar2;
@@ -209,7 +209,7 @@ public class VariousEffectsScene
                 uStack_30 = puVar3[1];
                 local_48 = uVar5;
                 local_40 = fVar9;
-                lVar4 = Object.Instantiate(lVar4,&local_48,&local_38,DAT_181d92f18);
+                lVar4 = Object.Instantiate(lVar4,&local_48,&local_38,DAT_181d92db0);
                 if (lVar4 != null) {
                   uVar5 = Component.get_gameObject(lVar4,0);
                   this.gm = uVar5;
@@ -252,7 +252,7 @@ public class VariousEffectsScene
                                   local_48 = 0x3f8000003f800000;
                                   local_40 = 1.0;
                                   Transform.set_localScale(lVar4,&local_48,0);
-                                  fVar9 = **(float **)(DAT_181db38c8 + 184);
+                                  fVar9 = **(float **)(DAT_181db38e0 + 184);
                                   if (this.index < 70) {
                                     fVar9 = fVar9 * 0.5;
                                   }
@@ -301,7 +301,7 @@ public class VariousEffectsScene
     }
 
     // Token : 0x6002442
-    // RVA   : 0xC10090   Offset: 0xC0F490   Length: 0xA6
+    // RVA   : 0xC10700   Offset: 0xC0FB00   Length: 0xA6
     private void DestroyGameObject()
     {
         long lVar1;
@@ -329,7 +329,7 @@ public class VariousEffectsScene
     }
 
     // Token : 0x6002443
-    // RVA   : 0xC10140   Offset: 0xC0F540   Length: 0x10B
+    // RVA   : 0xC107B0   Offset: 0xC0FBB0   Length: 0x10B
     public void GetSizeFactor()
     {
         ulong uVar2;
@@ -345,8 +345,8 @@ public class VariousEffectsScene
           if (plVar1 != (int64 *)0) {
             uVar2 = (**(code **)(*plVar1 + 0x168))(plVar1,*(uint64 *)(*plVar1 + 0x170));
             uVar4 = Single.Parse(uVar2,0);
-            **(uint32 **)(DAT_181db38c8 + 184) = uVar4;
-            fVar5 = **(float **)(DAT_181db38c8 + 184);
+            **(uint32 **)(DAT_181db38e0 + 184) = uVar4;
+            fVar5 = **(float **)(DAT_181db38e0 + 184);
             if (this.index < 70) {
               fVar5 = fVar5 * 0.5;
             }
@@ -365,20 +365,20 @@ public class VariousEffectsScene
     }
 
     // Token : 0x6002444
-    // RVA   : 0xC108D0   Offset: 0xC0FCD0   Length: 0x54
+    // RVA   : 0xC10F40   Offset: 0xC10340   Length: 0x54
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = FUN_1800d60b0(DAT_181da2a20,30);
+        uVar1 = FUN_1800d60b0(DAT_181da2a38,30);
         this.m_destroyObjects = uVar1;
         FUN_18044ef50(this,0);
     }
 
     // Token : 0x6002445
-    // RVA   : 0xC10890   Offset: 0xC0FC90   Length: 0x39
+    // RVA   : 0xC10F00   Offset: 0xC10300   Length: 0x39
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181db38c8 + 184) = 0x3f800000;
+        **(uint32 **)(DAT_181db38e0 + 184) = 0x3f800000;
     }
 
 }

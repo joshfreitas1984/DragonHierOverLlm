@@ -6,15 +6,15 @@
 public class ShakeCamStarter
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B6B
+    // Token: 0x4001B6C
     public ShakeStrengthType shakeStrength;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60020FF
-    // RVA   : 0x97D8B0   Offset: 0x97CCB0   Length: 0x53
+    // RVA   : 0x97DF40   Offset: 0x97D340   Length: 0x53
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181da1be0 + 184);
+        var pStatics = *(int64*)(DAT_181da1bf8 + 184);
         if (*pStatics != 0) {
           ShakeCam.StartShake(*pStatics,this.shakeStrength,0,0);
           return;

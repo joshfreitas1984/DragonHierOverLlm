@@ -26,7 +26,7 @@ public class GetAxisFunc
     }
 
     // Token : 0x6000743
-    // RVA   : 0x8E5030   Offset: 0x8E4430   Length: 0x44A
+    // RVA   : 0x917670   Offset: 0x916A70   Length: 0x44A
     public virtual float Invoke(string name)
     {
         long lVar1;
@@ -66,7 +66,7 @@ public class GetAxisFunc
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e543e;
+              goto LAB_180917a7e;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -89,7 +89,7 @@ public class GetAxisFunc
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
                         uVar13 = (*(code *)*puVar6)(plVar3,name,puVar6[1]);
-                        goto LAB_1808e5449;
+                        goto LAB_180917a89;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
@@ -118,13 +118,13 @@ public class GetAxisFunc
                                 (int)((uint32)uVar9 +
                                      *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16))
                                 * 16 + 0x138 + lVar5;
-                        goto LAB_1808e5316;
+                        goto LAB_180917956;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
                   }
                   lVar5 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar9);
-        LAB_1808e5316:
+        LAB_180917956:
                   puVar6 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar5 + 8),lVar1);
                   uVar13 = (*(code *)*puVar6)(plVar3,name,puVar6);
                 }
@@ -132,7 +132,7 @@ public class GetAxisFunc
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e50ca;
+              goto LAB_18091770a;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -155,7 +155,7 @@ public class GetAxisFunc
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
                         uVar13 = (*(code *)*puVar6)(name,puVar6[1]);
-                        goto LAB_1808e5449;
+                        goto LAB_180917a89;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
@@ -182,7 +182,7 @@ public class GetAxisFunc
                                    (int)((uint32)uVar9 +
                                         *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16
                                                 )) * 16 + lVar5 + 0x140);
-                        goto LAB_1808e5199;
+                        goto LAB_1809177d9;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
@@ -190,21 +190,21 @@ public class GetAxisFunc
                   lVar5 = FUN_1800914f0(name,*(int64 *)(lVar1 + 24),uVar9);
                   uVar13 = *(uint64 *)(lVar5 + 8);
                 }
-        LAB_1808e5199:
+        LAB_1809177d9:
                 puVar6 = (uint64 *)il2cpp_internal(uVar13,lVar1);
                 uVar13 = (*(code *)*puVar6)(name,puVar6);
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_1808e50ca:
+        LAB_18091770a:
             uVar13 = (*pcVar2)(name,lVar1);
           }
           else {
-        LAB_1808e543e:
+        LAB_180917a7e:
             uVar13 = (*pcVar2)(plVar3,name,lVar1);
           }
-        LAB_1808e5449:
+        LAB_180917a89:
           uVar12 = uVar12 + 1;
           if (uVar10 <= uVar12) {
             return uVar13;

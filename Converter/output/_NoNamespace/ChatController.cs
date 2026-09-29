@@ -6,50 +6,50 @@
 public class ChatController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EE5
+    // Token: 0x4001EE6
     public TMP_InputField ChatInputField;
 
-    // Token: 0x4001EE6
+    // Token: 0x4001EE7
     public TMP_Text ChatDisplayOutput;
 
-    // Token: 0x4001EE7
+    // Token: 0x4001EE8
     public Scrollbar ChatScrollbar;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002450
-    // RVA   : 0x995E60   Offset: 0x995260   Length: 0xB6
+    // RVA   : 0x9964F0   Offset: 0x9958F0   Length: 0xB6
     private void OnEnable()
     {
         long lVar1;
         ulong uVar2;
         if (this.ChatInputField != null) {
           lVar1 = *(int64 *)(this.ChatInputField + 0x1b0);
-          uVar2 = new OnTooltipCB(this,DAT_181d90870,DAT_181d7c018);
+          uVar2 = new OnTooltipCB(this,DAT_181d90888,DAT_181d7c030);
           if (lVar1 != null) {
-            FUN_180feab20(lVar1,uVar2,DAT_181d7ce08);
+            FUN_180feb130(lVar1,uVar2,DAT_181d7ce20);
             return;
           }
         }
     }
 
     // Token : 0x6002451
-    // RVA   : 0x995DA0   Offset: 0x9951A0   Length: 0xB6
+    // RVA   : 0x996430   Offset: 0x995830   Length: 0xB6
     private void OnDisable()
     {
         long lVar1;
         ulong uVar2;
         if (this.ChatInputField != null) {
           lVar1 = *(int64 *)(this.ChatInputField + 0x1b0);
-          uVar2 = new OnTooltipCB(this,DAT_181d90870,DAT_181d7c018);
+          uVar2 = new OnTooltipCB(this,DAT_181d90888,DAT_181d7c030);
           if (lVar1 != null) {
-            FUN_180fec6d0(lVar1,uVar2,DAT_181d7cf08);
+            FUN_180fecce0(lVar1,uVar2,DAT_181d7cf20);
             return;
           }
         }
     }
 
     // Token : 0x6002452
-    // RVA   : 0x995810   Offset: 0x994C10   Length: 0x581
+    // RVA   : 0x995EA0   Offset: 0x9952A0   Length: 0x581
     private void AddToChatOutput(string newText)
     {
         bool cVar1;
@@ -61,9 +61,9 @@ public class ChatController
         ulong local_res20;
         if (this.ChatInputField != null) {
           TMP_InputField.set_text
-                    (this.ChatInputField,**(uint64 **)(DAT_181da7690 + 184),0);
+                    (this.ChatInputField,**(uint64 **)(DAT_181da76a8 + 184),0);
           local_res20 = DateTime.get_Now(0);
-          plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,8);
+          plVar2 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,8);
           if (plVar2 != (int64 *)0) {
             if (("[<#FFFF80>" != 0) &&
                (lVar3 = il2cpp_internal("[<#FFFF80>",*(uint64 *)(*plVar2 + 64))) == null) {
@@ -186,7 +186,7 @@ public class ChatController
               plVar2 = this.ChatDisplayOutput;
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               uVar6 = (**(code **)(*plVar2 + 0x548))(plVar2,*(uint64 *)(*plVar2 + 0x550));
-              cVar1 = FUN_18171e540(uVar6,**(uint64 **)(DAT_181da7690 + 184),0);
+              cVar1 = FUN_18171eb50(uVar6,**(uint64 **)(DAT_181da76a8 + 184),0);
               plVar2 = this.ChatDisplayOutput;
               if (!cVar1) {
                 if (plVar2 == (int64 *)0) throw; // [null/range check failed]

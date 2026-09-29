@@ -62,10 +62,10 @@ public class UIDragObject
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600012E
-    // RVA   : 0x12B6950   Offset: 0x12B5D50   Length: 0x13
+    // RVA   : 0x12B6F60   Offset: 0x12B6360   Length: 0x13
     public Vector3 get_dragMovement()
     {
-        uint64 * FUN_1812b6950(uint64 *this,int64 param_2)
+        uint64 * FUN_1812b6f60(uint64 *this,int64 param_2)
         {
         uint32 uVar1;
         uVar1 = *(uint32 *)(param_2 + 80);
@@ -75,10 +75,10 @@ public class UIDragObject
     }
 
     // Token : 0x600012F
-    // RVA   : 0x12B6970   Offset: 0x12B5D70   Length: 0x10
+    // RVA   : 0x12B6F80   Offset: 0x12B6380   Length: 0x10
     public void set_dragMovement(Vector3 value)
     {
-        void FUN_1812b6970(int64 this,uint64 *value)
+        void FUN_1812b6f80(int64 this,uint64 *value)
         {
         uint32 uVar1;
         uVar1 = *(uint32 *)(value + 1);
@@ -87,7 +87,7 @@ public class UIDragObject
     }
 
     // Token : 0x6000130
-    // RVA   : 0x12B5EA0   Offset: 0x12B52A0   Length: 0x1EF
+    // RVA   : 0x12B64B0   Offset: 0x12B58B0   Length: 0x1EF
     private void OnEnable()
     {
         float fVar1;
@@ -111,8 +111,8 @@ public class UIDragObject
           uVar4 = this.target;
           cVar3 = Object.op_Inequality(uVar4,0,0);
           if ((cVar3) && (cVar3 = Application.get_isPlaying(0), cVar3)) {
-            if (this.target == null) goto LAB_1812b608a;
-            uVar4 = Component.GetComponent(this.target,DAT_181d97060);
+            if (this.target == null) goto LAB_1812b669a;
+            uVar4 = Component.GetComponent(this.target,DAT_181d97078);
             cVar3 = Object.op_Inequality(uVar4,0,0);
             if (cVar3) {
               this.contentRect = uVar4;
@@ -126,7 +126,7 @@ public class UIDragObject
         }
         else {
           if (this.target == null) {
-        LAB_1812b608a:
+        LAB_1812b669a:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -138,16 +138,16 @@ public class UIDragObject
     }
 
     // Token : 0x6000131
-    // RVA   : 0x12B57A0   Offset: 0x12B4BA0   Length: 0x8
+    // RVA   : 0x12B5DB0   Offset: 0x12B51B0   Length: 0x8
     private void OnDisable()
     {
-        void FUN_1812b57a0(int64 this)
+        void FUN_1812b5db0(int64 this)
         {
         this.mStarted = 0;
     }
 
     // Token : 0x6000132
-    // RVA   : 0x12B4EB0   Offset: 0x12B42B0   Length: 0x115
+    // RVA   : 0x12B54C0   Offset: 0x12B48C0   Length: 0x115
     private void FindPanel()
     {
         bool cVar1;
@@ -159,16 +159,16 @@ public class UIDragObject
           if (this.target != null) {
             lVar2 = Component.get_transform(this.target,0);
             if (lVar2 != null) {
-              uVar3 = FUN_180da9a20(lVar2,0);
+              uVar3 = FUN_180daa030(lVar2,0);
               uVar3 = UIPanel.Find(uVar3,0);
-              goto LAB_1812b4f6e;
+              goto LAB_1812b557e;
             }
           }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         uVar3 = 0;
-        LAB_1812b4f6e:
+        LAB_1812b557e:
         this.panelRegion = uVar3;
         uVar3 = this.panelRegion;
         cVar1 = Object.op_Equality(uVar3,0,0);
@@ -178,7 +178,7 @@ public class UIDragObject
     }
 
     // Token : 0x6000133
-    // RVA   : 0x12B6600   Offset: 0x12B5A00   Length: 0x297
+    // RVA   : 0x12B6C10   Offset: 0x12B6010   Length: 0x297
     private void UpdateBounds()
     {
         long lVar1;
@@ -303,10 +303,10 @@ public class UIDragObject
     }
 
     // Token : 0x6000134
-    // RVA   : 0x12B6090   Offset: 0x12B5490   Length: 0x44F
+    // RVA   : 0x12B66A0   Offset: 0x12B5AA0   Length: 0x44F
     private void OnPress(bool pressed)
     {
-        var pStatics = *(int64*)(DAT_181daf678 + 184);
+        var pStatics = *(int64*)(DAT_181daf690 + 184);
         int iVar1;
         ulong uVar2;
         bool cVar3;
@@ -337,7 +337,7 @@ public class UIDragObject
                     if (((iVar1 == UICamera.currentTouchID) &&
                         (this.mPressed = 0, this.restrictWithinPanel)) &&
                        (this.dragEffect == 2)) {
-                      if (this.panelRegion == null) goto LAB_1812b64da;
+                      if (this.panelRegion == null) goto LAB_1812b6aea;
                       cVar3 = UIPanel.ConstrainTargetToBounds
                                         (this.panelRegion,this.target,
                                          this + 152,0,0);
@@ -369,7 +369,7 @@ public class UIDragObject
                     uVar4 = this.panelRegion;
                     cVar3 = Object.op_Inequality(uVar4,0,0);
                     if (cVar3) {
-                      if (this.panelRegion == null) goto LAB_1812b64da;
+                      if (this.panelRegion == null) goto LAB_1812b6aea;
                       lVar5 = UIRect.get_cachedTransform(this.panelRegion,0);
                     }
                     if (lVar5 != null) {
@@ -394,7 +394,7 @@ public class UIDragObject
                       return;
                     }
                   }
-        LAB_1812b64da:
+        LAB_1812b6aea:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
@@ -405,7 +405,7 @@ public class UIDragObject
     }
 
     // Token : 0x6000135
-    // RVA   : 0x12B57B0   Offset: 0x12B4BB0   Length: 0x6E0
+    // RVA   : 0x12B5DC0   Offset: 0x12B51C0   Length: 0x6E0
     private void OnDrag(Vector2 delta)
     {
         int iVar1;
@@ -492,7 +492,7 @@ public class UIDragObject
                     }
                     if ((fVar13 != 0.0) || (fVar12 != 0.0)) {
                       fVar8 = local_e0;
-                      if (this.target == null) goto LAB_1812b5e8b;
+                      if (this.target == null) goto LAB_1812b649b;
                       local_e8 = CONCAT44(fVar12,fVar13);
                       local_e0 = local_f0;
                       puVar7 = (uint64 *)
@@ -506,7 +506,7 @@ public class UIDragObject
                       local_e0 = local_d0 * *(float *)(puVar7 + 1);
                       local_e8 = local_d8;
                       fVar8 = local_d0;
-                      if (this.target == null) goto LAB_1812b5e8b;
+                      if (this.target == null) goto LAB_1812b649b;
                       local_e8 = local_f8;
                       puVar7 = (uint64 *)
                                Transform.TransformDirection
@@ -578,7 +578,7 @@ public class UIDragObject
                     }
                   }
                 }
-        LAB_1812b5e8b:
+        LAB_1812b649b:
                 local_e0 = fVar8;
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -589,7 +589,7 @@ public class UIDragObject
     }
 
     // Token : 0x6000136
-    // RVA   : 0x12B5320   Offset: 0x12B4720   Length: 0x479
+    // RVA   : 0x12B5930   Offset: 0x12B4D30   Length: 0x479
     private void Move(Vector3 worldDelta)
     {
         float fVar1;
@@ -638,7 +638,7 @@ public class UIDragObject
             Transform.set_position(lVar5,&local_c8,0);
             return;
           }
-          goto LAB_1812b5794;
+          goto LAB_1812b5da4;
         }
         local_c8 = this.mTargetPos;
         local_b8 = *worldDelta;
@@ -650,31 +650,31 @@ public class UIDragObject
                       (float)local_b8 + (float)local_c8);
         *(float *)(this + 112) = local_b0;
         local_a8 = local_b8;
-        if (lVar5 == null) goto LAB_1812b5794;
-        lVar5 = FUN_180da9a20(lVar5,0);
-        if (this.target == null) goto LAB_1812b5794;
-        lVar6 = Component.GetComponent(this.target,DAT_181d950e0);
+        if (lVar5 == null) goto LAB_1812b5da4;
+        lVar5 = FUN_180daa030(lVar5,0);
+        if (this.target == null) goto LAB_1812b5da4;
+        lVar6 = Component.GetComponent(this.target,DAT_181d950f8);
         cVar3 = Object.op_Inequality(lVar5,0,0);
         if (!cVar3) {
           cVar3 = Object.op_Inequality(lVar6,0,0);
           if (!cVar3) {
-            if (this.target == null) goto LAB_1812b5794;
+            if (this.target == null) goto LAB_1812b5da4;
             local_c8 = this.mTargetPos;
             local_c0 = *(float *)(this + 112);
             Transform.set_position(this.target,&local_c8,0);
           }
           else {
-            if (lVar6 == null) goto LAB_1812b5794;
+            if (lVar6 == null) goto LAB_1812b5da4;
             uVar8 = (uint32)this.mTargetPos;
             uVar9 = (uint32)((uint64)this.mTargetPos >> 32);
             local_c0 = *(float *)(this + 112);
-        LAB_1812b5713:
+        LAB_1812b5d23:
             local_c8 = CONCAT44(uVar9,uVar8);
             Rigidbody.set_position(lVar6,&local_c8,0);
           }
         }
         else {
-          if (lVar5 == null) goto LAB_1812b5794;
+          if (lVar5 == null) goto LAB_1812b5da4;
           puVar4 = (uint64 *)Transform.get_worldToLocalMatrix(local_58,lVar5,0);
           local_98 = *puVar4;
           uStack_90 = puVar4[1];
@@ -707,32 +707,32 @@ public class UIDragObject
             local_c8 = local_a8;
             local_c0 = fVar1;
             puVar4 = (uint64 *)Matrix4x4.MultiplyPoint3x4(&local_b8,&local_98,&local_c8,0);
-            if (lVar6 == null) goto LAB_1812b5794;
+            if (lVar6 == null) goto LAB_1812b5da4;
             uVar8 = (uint32)*puVar4;
             uVar9 = (uint32)((uint64)*puVar4 >> 32);
             local_c0 = *(float *)(puVar4 + 1);
-            goto LAB_1812b5713;
+            goto LAB_1812b5d23;
           }
-          if (this.target == null) goto LAB_1812b5794;
+          if (this.target == null) goto LAB_1812b5da4;
           local_c8 = local_a8;
           local_c0 = fVar1;
           Transform.set_localPosition(this.target,&local_c8,0);
         }
         if (this.panelRegion == null) {
-        LAB_1812b5794:
+        LAB_1812b5da4:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        plVar7 = (int64 *)Component.GetComponent(this.panelRegion,DAT_181d96de0);
+        plVar7 = (int64 *)Component.GetComponent(this.panelRegion,DAT_181d96df8);
         cVar3 = Object.op_Inequality(plVar7,0,0);
         if (cVar3) {
-          if (plVar7 == (int64 *)0) goto LAB_1812b5794;
+          if (plVar7 == (int64 *)0) goto LAB_1812b5da4;
           (**(code **)(*plVar7 + 0x1b8))(plVar7,1,*(uint64 *)(*plVar7 + 0x1c0));
         }
     }
 
     // Token : 0x6000137
-    // RVA   : 0x12B4FD0   Offset: 0x12B43D0   Length: 0x348
+    // RVA   : 0x12B55E0   Offset: 0x12B49E0   Length: 0x348
     private void LateUpdate()
     {
         uint uVar2;
@@ -819,7 +819,7 @@ public class UIDragObject
     }
 
     // Token : 0x6000138
-    // RVA   : 0x12B4C50   Offset: 0x12B4050   Length: 0x1BC
+    // RVA   : 0x12B5260   Offset: 0x12B4660   Length: 0x1BC
     public void CancelMovement()
     {
         uint uVar1;
@@ -833,13 +833,13 @@ public class UIDragObject
         uVar2 = this.target;
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (cVar3) {
-          if (this.target == null) goto LAB_1812b4e07;
+          if (this.target == null) goto LAB_1812b5417;
           Transform.get_localPosition(&local_18,this.target,0);
           iVar4 = Mathf.RoundToInt();
           iVar5 = Mathf.RoundToInt();
           local_28 = CONCAT44((float)iVar5,(float)iVar4);
           iVar4 = Mathf.RoundToInt();
-          if (this.target == null) goto LAB_1812b4e07;
+          if (this.target == null) goto LAB_1812b5417;
           local_18 = local_28;
           local_10 = (float)iVar4;
           Transform.set_localPosition(this.target,&local_18,0);
@@ -851,7 +851,7 @@ public class UIDragObject
         }
         else {
           if (this.target == null) {
-        LAB_1812b4e07:
+        LAB_1812b5417:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -869,13 +869,13 @@ public class UIDragObject
     }
 
     // Token : 0x6000139
-    // RVA   : 0x12B4E10   Offset: 0x12B4210   Length: 0x9A
+    // RVA   : 0x12B5420   Offset: 0x12B4820   Length: 0x9A
     public void CancelSpring()
     {
         long lVar1;
         bool cVar2;
         if (this.target != null) {
-          lVar1 = Component.GetComponent(this.target,DAT_181d95d60);
+          lVar1 = Component.GetComponent(this.target,DAT_181d95d78);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
             return;
@@ -888,7 +888,7 @@ public class UIDragObject
     }
 
     // Token : 0x600013A
-    // RVA   : 0x12B64E0   Offset: 0x12B58E0   Length: 0x117
+    // RVA   : 0x12B6AF0   Offset: 0x12B5EF0   Length: 0x117
     private void OnScroll(float delta)
     {
         bool cVar1;
@@ -911,7 +911,7 @@ public class UIDragObject
     }
 
     // Token : 0x600013B
-    // RVA   : 0x12B68A0   Offset: 0x12B5CA0   Length: 0xA6
+    // RVA   : 0x12B6EB0   Offset: 0x12B62B0   Length: 0xA6
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[8];

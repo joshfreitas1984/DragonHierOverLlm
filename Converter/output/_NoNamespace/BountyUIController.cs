@@ -26,23 +26,23 @@ public class BountyUIController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D77
-    // RVA   : 0xC8C850   Offset: 0xC8BC50   Length: 0x36
+    // RVA   : 0xC8CE60   Offset: 0xC8C260   Length: 0x36
     public static BountyUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181db30a0 + 184);
+        return **(uint64 **)(DAT_181db30b8 + 184);
     }
 
     // Token : 0x6000D78
-    // RVA   : 0xC8BC40   Offset: 0xC8B040   Length: 0x43
+    // RVA   : 0xC8C250   Offset: 0xC8B650   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db30a0 + 184);
+        puVar1 = *(uint64 **)(DAT_181db30b8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6000D79
-    // RVA   : 0xC8C660   Offset: 0xC8BA60   Length: 0x6E
+    // RVA   : 0xC8CC70   Offset: 0xC8C070   Length: 0x6E
     public void HideBountyUI()
     {
         ulong uVar1;
@@ -55,7 +55,7 @@ public class BountyUIController
     }
 
     // Token : 0x6000D7A
-    // RVA   : 0xC8C6D0   Offset: 0xC8BAD0   Length: 0x175
+    // RVA   : 0xC8CCE0   Offset: 0xC8C0E0   Length: 0x175
     public void ShowBountyUI(AreaBuildingData _targetBuildingData, string _title)
     {
         long lVar1;
@@ -68,11 +68,11 @@ public class BountyUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Title",0);
               if (lVar1 != null) {
-                uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                 LTLocalization.SetText(uVar2,_title,0);
                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
                 plVar4 = (int64 *)0;
-                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                   plVar4 = plVar3;
                 }
                 NGUITools.PlaySound(plVar4,0);
@@ -85,7 +85,7 @@ public class BountyUIController
     }
 
     // Token : 0x6000D7B
-    // RVA   : 0xC8C210   Offset: 0xC8B610   Length: 0x445
+    // RVA   : 0xC8C820   Offset: 0xC8BC20   Length: 0x445
     public void FreshBounty()
     {
         ulong uVar1;
@@ -104,7 +104,7 @@ public class BountyUIController
               if ((((this.bountyUIPanel == null) ||
                    (lVar4 = GameObject.get_transform(this.bountyUIPanel,0)) == null) ||
                   (lVar4 = Transform.Find(lVar4,"Grid",0)) == null) ||
-                 (lVar4 = Component.GetComponent(lVar4,DAT_181d96960)) == null) break;
+                 (lVar4 = Component.GetComponent(lVar4,DAT_181d96978)) == null) break;
               UIGrid.set_repositionNow(lVar4,1,0);
               BountyUIController.FreshBountyNum(this,0);
               if (this.targetBuildingData == null) break;
@@ -130,7 +130,7 @@ public class BountyUIController
                       if (((this.bountyUIPanel != null) &&
                           (lVar4 = GameObject.get_transform(this.bountyUIPanel,0)) != null
                           ) && (lVar4 = Transform.Find(lVar4,"FreshButton",0)) != null) {
-                        lVar4 = Component.GetComponent(lVar4,DAT_181d93760);
+                        lVar4 = Component.GetComponent(lVar4,DAT_181d93778);
                         lVar5 = FUN_18046c0a0(0);
                         if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) && (lVar4 != null)) {
                           Selectable.set_interactable
@@ -157,7 +157,7 @@ public class BountyUIController
             uVar3 = GlobalData.AddChild(uVar3,uVar1,0);
             this.newObj = uVar3;
             if (this.newObj == null) break;
-            lVar4 = GameObject.GetComponent(this.newObj,DAT_181dc77c0);
+            lVar4 = GameObject.GetComponent(this.newObj,DAT_181dc77d8);
             if (((this.targetBuildingData == null) ||
                 (lVar5 = this.targetBuildingData.missionDatas) == null) ||
                (uVar3 = FUN_180002f80(lVar5,iVar6), lVar4 == null)) break;
@@ -170,7 +170,7 @@ public class BountyUIController
     }
 
     // Token : 0x6000D7C
-    // RVA   : 0xC8BE30   Offset: 0xC8B230   Length: 0x3DB
+    // RVA   : 0xC8C440   Offset: 0xC8B840   Length: 0x3DB
     public void FreshBountyNum()
     {
         int iVar1;
@@ -189,7 +189,7 @@ public class BountyUIController
           if (lVar3 != null) {
             lVar3 = Transform.Find(lVar3,"BountyNum",0);
             if (lVar3 != null) {
-              uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+              uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
               if ((GameController._instance != null) &&
                  (lVar3 = GameController._instance.worldData) != null) {
                 lVar3 = WorldData.Player(lVar3,0);
@@ -209,7 +209,7 @@ public class BountyUIController
                         if (lVar3 != null) {
                           lVar3 = Transform.Find(lVar3,"BountyNum",0);
                           if (lVar3 != null) {
-                            plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+                            plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
                             if ((GameController._instance != null) &&
                                (lVar3 = GameController._instance.worldData,
                                lVar3 != null)) {
@@ -254,7 +254,7 @@ public class BountyUIController
     }
 
     // Token : 0x6000D7D
-    // RVA   : 0xC8BC90   Offset: 0xC8B090   Length: 0x198
+    // RVA   : 0xC8C2A0   Offset: 0xC8B6A0   Length: 0x198
     public void FreshBountyButtonClicked()
     {
         long lVar2;
@@ -268,7 +268,7 @@ public class BountyUIController
             BountyUIController.FreshBounty(this,0);
             plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
             plVar4 = (int64 *)0;
-            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
               plVar4 = plVar3;
             }
             NGUITools.PlaySound(plVar4,0);

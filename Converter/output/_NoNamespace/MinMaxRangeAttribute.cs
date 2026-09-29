@@ -14,7 +14,7 @@ public class MinMaxRangeAttribute
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000361
-    // RVA   : 0xE63130   Offset: 0xE62530   Length: 0x3A
+    // RVA   : 0xE63740   Offset: 0xE62B40   Length: 0x3A
     public void /*ctor*/(float minLimit, float maxLimit)
     {
         SmokeTrailPoint.ctor(this,0);

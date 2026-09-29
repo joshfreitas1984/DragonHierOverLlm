@@ -33,10 +33,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_18171e540(lVar2._items,key,0);
+            cVar1 = FUN_18171eb50(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d970a0)) != null) {
                 uVar5 = Single.Parse(lVar2.Count,0);
                 return uVar5;
               }
@@ -71,10 +71,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar4 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_18171e540(lVar2._items,key,0);
+            cVar1 = FUN_18171eb50(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181d97088)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar5,DAT_181d970a0)) != null) {
                 uVar3 = Int32.Parse(lVar2.Count,0);
                 return uVar3;
               }
@@ -108,10 +108,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_18171e540(lVar2._items,key,0);
+            cVar1 = FUN_18171eb50(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d970a0)) != null) {
                 return lVar2.Count;
               }
               break;
@@ -140,7 +140,7 @@ public class PlayerPrefDictionary
               *(uint64 *)(lVar3 + 16) = key;
               *(uint64 *)(lVar3 + 24) = value;
               if (lVar2 != null) {
-                FUN_18181e0a0(lVar2,lVar3,DAT_181d96e88);
+                FUN_18181e6b0(lVar2,lVar3,DAT_181d96ea0);
                 return;
               }
               break;
@@ -151,10 +151,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_18171e540(lVar2._items,key,0);
+            cVar1 = FUN_18171eb50(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d970a0)) != null) {
                 lVar2.Count = value;
                 return;
               }
@@ -184,7 +184,7 @@ public class PlayerPrefDictionary
               *(uint64 *)(lVar3 + 16) = key;
               *(uint64 *)(lVar3 + 24) = value;
               if (lVar2 != null) {
-                FUN_18181e0a0(lVar2,lVar3,DAT_181d96e88);
+                FUN_18181e6b0(lVar2,lVar3,DAT_181d96ea0);
                 return;
               }
               break;
@@ -195,10 +195,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_18171e540(lVar2._items,key,0);
+            cVar1 = FUN_18171eb50(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d970a0)) != null) {
                 lVar2.Count = value;
                 return;
               }
@@ -228,7 +228,7 @@ public class PlayerPrefDictionary
               *(uint64 *)(lVar3 + 16) = key;
               *(uint64 *)(lVar3 + 24) = value;
               if (lVar2 != null) {
-                FUN_18181e0a0(lVar2,lVar3,DAT_181d96e88);
+                FUN_18181e6b0(lVar2,lVar3,DAT_181d96ea0);
                 return;
               }
               break;
@@ -239,10 +239,10 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_18171e540(lVar2._items,key,0);
+            cVar1 = FUN_18171eb50(lVar2._items,key,0);
             lVar2 = this.playerPrefDictionary;
             if (cVar1) {
-              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d97088)) != null) {
+              if ((lVar2 != null) && (lVar2 = FUN_180002f80(lVar2,uVar4,DAT_181d970a0)) != null) {
                 lVar2.Count = value;
                 return;
               }
@@ -276,7 +276,7 @@ public class PlayerPrefDictionary
             }
             lVar2 = *(int64 *)(lVar3 + lVar2._items);
             if (lVar2 == null) break;
-            cVar1 = FUN_18171e540(lVar2._items,key,0);
+            cVar1 = FUN_18171eb50(lVar2._items,key,0);
             if (cVar1) {
               return true;
             }
@@ -310,12 +310,12 @@ public class PlayerPrefDictionary
             }
             lVar3 = *(int64 *)(lVar5 + lVar3._items);
             if (lVar3 == null) break;
-            cVar1 = FUN_18171e540(lVar3._items,key,0);
+            cVar1 = FUN_18171eb50(lVar3._items,key,0);
             lVar3 = this.playerPrefDictionary;
             if (cVar1) {
               if (lVar3 != null) {
-                uVar2 = FUN_180002f80(lVar3,uVar4,DAT_181d97088);
-                FUN_1817eee00(lVar3,uVar2,DAT_181d96f88);
+                uVar2 = FUN_180002f80(lVar3,uVar4,DAT_181d970a0);
+                FUN_1817ef410(lVar3,uVar2,DAT_181d96fa0);
                 return;
               }
               break;
@@ -331,7 +331,7 @@ public class PlayerPrefDictionary
     public void Clear()
     {
         if (this.playerPrefDictionary != null) {
-          FUN_1812f9a10(this.playerPrefDictionary,DAT_181d96f08);
+          FUN_1812fa020(this.playerPrefDictionary,DAT_181d96f20);
           return;
         }
     }
@@ -342,8 +342,8 @@ public class PlayerPrefDictionary
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d951d0);
-        FUN_18132faf0(uVar1,DAT_181d96e08);
+        uVar1 = il2cpp_internal(DAT_181d951e8);
+        FUN_181330100(uVar1,DAT_181d96e20);
         this.playerPrefDictionary = uVar1;
     }
 

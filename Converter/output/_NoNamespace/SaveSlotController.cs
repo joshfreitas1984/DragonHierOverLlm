@@ -7,14 +7,14 @@ public class SaveSlotController
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60020DD
-    // RVA   : 0x97AE30   Offset: 0x97A230   Length: 0xE4
+    // RVA   : 0x97B4C0   Offset: 0x97A8C0   Length: 0xE4
     public void OnClick()
     {
         long lVar1;
         uint uVar2;
         long lVar3;
         ulong uVar4;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d9ecf0 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d9ed08 + 184) + 8);
         lVar3 = Component.get_gameObject(this,0);
         if (lVar3 != null) {
           uVar4 = Object.get_name(lVar3,0);

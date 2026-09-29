@@ -6,13 +6,13 @@
 public class <StartShowText>d__32
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001AE7
+    // Token: 0x4001AE8
     private int <>1__state;
 
-    // Token: 0x4001AE8
+    // Token: 0x4001AE9
     private object <>2__current;
 
-    // Token: 0x4001AE9
+    // Token: 0x4001AEA
     public ReadBookController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,10 +31,10 @@ public class <StartShowText>d__32
     }
 
     // Token : 0x600207C
-    // RVA   : 0x8F4550   Offset: 0x8F3950   Length: 0x611
+    // RVA   : 0x9271F0   Offset: 0x9265F0   Length: 0x611
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics = *(int64*)(DAT_181dadd10 + 184);
         int iVar1;
         int iVar2;
         ulong uVar3;
@@ -59,9 +59,9 @@ public class <StartShowText>d__32
         }
         this.<>1__state = 0xffffffff;
         if (lVar6 == null) throw; // [null/range check failed]
-        iVar1 = FUN_180d95a30(0,(int)((float)*(int *)(lVar6 + 112) * 0.5),0);
+        iVar1 = FUN_180d96040(0,(int)((float)*(int *)(lVar6 + 112) * 0.5),0);
         lVar7 = (int64)iVar1;
-        iVar2 = FUN_180d95a30(0,(int)((float)*(int *)(lVar6 + 116) * 0.5),0);
+        iVar2 = FUN_180d96040(0,(int)((float)*(int *)(lVar6 + 116) * 0.5),0);
         lVar8 = (int64)iVar2;
         fVar9 = (float)Random.get_value(0);
         lVar4 = *(int64 *)(lVar6 + 72);
@@ -131,7 +131,7 @@ public class <StartShowText>d__32
                 local_40 = *(uint32 *)(puVar5 + 1);
                 local_48 = *puVar5;
                 uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
+                TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
                 if (*(int64 *)(lVar6 + 48) != 0) {
                   lVar4 = GameObject.get_transform(*(int64 *)(lVar6 + 48),0);
                   if (lVar4 != null) {
@@ -140,7 +140,7 @@ public class <StartShowText>d__32
                     local_40 = *(uint32 *)(puVar5 + 1);
                     local_48 = *puVar5;
                     uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                    TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
+                    TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
                     if (*(int64 *)(lVar6 + 48) != 0) {
                       lVar4 = GameObject.get_transform(*(int64 *)(lVar6 + 48),0);
                       if (lVar4 != null) {
@@ -149,7 +149,7 @@ public class <StartShowText>d__32
                         local_40 = *(uint32 *)(puVar5 + 1);
                         local_48 = *puVar5;
                         uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                        TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
+                        TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
                         if (*(int64 *)(lVar6 + 48) != 0) {
                           lVar6 = GameObject.get_transform(*(int64 *)(lVar6 + 48),0);
                           if (lVar6 != null) {
@@ -158,7 +158,7 @@ public class <StartShowText>d__32
                             local_40 = *(uint32 *)(puVar5 + 1);
                             local_48 = *puVar5;
                             uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                            TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
+                            TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
                             if (*pStatics != 0) {
                               TutorialController.StartTutorial
                                         (*pStatics,"读书系统",0);
@@ -184,15 +184,15 @@ public class <StartShowText>d__32
     }
 
     // Token : 0x600207E
-    // RVA   : 0x8F4B70   Offset: 0x8F3F70   Length: 0x3E
+    // RVA   : 0x927810   Offset: 0x926C10   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181dab4c8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181dab660);
     }
 
     // Token : 0x600207F

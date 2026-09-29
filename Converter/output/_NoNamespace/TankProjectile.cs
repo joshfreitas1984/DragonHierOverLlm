@@ -14,14 +14,14 @@ public class TankProjectile
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009C4
-    // RVA   : 0xA9CD60   Offset: 0xA9C160   Length: 0x41
+    // RVA   : 0xA9D420   Offset: 0xA9C820   Length: 0x41
     private void Start()
     {
         MonoBehaviour.Invoke(this,"DestroySelf",this.Lifetime,0);
     }
 
     // Token : 0x60009C5
-    // RVA   : 0xA9CD00   Offset: 0xA9C100   Length: 0x5F
+    // RVA   : 0xA9D3C0   Offset: 0xA9C7C0   Length: 0x5F
     private void DestroySelf()
     {
         ulong uVar1;
@@ -30,7 +30,7 @@ public class TankProjectile
     }
 
     // Token : 0x60009C6
-    // RVA   : 0xA9CDB0   Offset: 0xA9C1B0   Length: 0x156
+    // RVA   : 0xA9D470   Offset: 0xA9C870   Length: 0x156
     private void Update()
     {
         float fVar1;

@@ -11,7 +11,7 @@ public class UIDragDropContainer
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000110
-    // RVA   : 0x12B20E0   Offset: 0x12B14E0   Length: 0x8B
+    // RVA   : 0x12B26F0   Offset: 0x12B1AF0   Length: 0x8B
     protected virtual void Start()
     {
         bool cVar1;

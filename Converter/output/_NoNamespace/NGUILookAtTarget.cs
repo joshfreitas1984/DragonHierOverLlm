@@ -20,7 +20,7 @@ public class NGUILookAtTarget
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600007D
-    // RVA   : 0xDFABC0   Offset: 0xDF9FC0   Length: 0x24
+    // RVA   : 0xDFB1D0   Offset: 0xDFA5D0   Length: 0x24
     private void Start()
     {
         ulong uVar1;
@@ -29,7 +29,7 @@ public class NGUILookAtTarget
     }
 
     // Token : 0x600007E
-    // RVA   : 0xDFA9B0   Offset: 0xDF9DB0   Length: 0x202
+    // RVA   : 0xDFAFC0   Offset: 0xDFA3C0   Length: 0x202
     private void LateUpdate()
     {
         ulong uVar1;
@@ -97,10 +97,10 @@ public class NGUILookAtTarget
     }
 
     // Token : 0x600007F
-    // RVA   : 0xDFABF0   Offset: 0xDF9FF0   Length: 0xE
+    // RVA   : 0xDFB200   Offset: 0xDFA600   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180dfabf0(int64 this)
+        void FUN_180dfb200(int64 this)
         {
         this.speed = 0x41000000;
         FUN_18044ef50(this,0);

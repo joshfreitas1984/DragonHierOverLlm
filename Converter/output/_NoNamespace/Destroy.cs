@@ -6,12 +6,12 @@
 public class Destroy
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E5E
+    // Token: 0x4001E5F
     public float lifetime;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600240A
-    // RVA   : 0x93B320   Offset: 0x93A720   Length: 0x7B
+    // RVA   : 0x93B9B0   Offset: 0x93ADB0   Length: 0x7B
     private void Awake()
     {
         uint uVar1;
@@ -22,10 +22,10 @@ public class Destroy
     }
 
     // Token : 0x600240B
-    // RVA   : 0x93B3A0   Offset: 0x93A7A0   Length: 0xE
+    // RVA   : 0x93BA30   Offset: 0x93AE30   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_18093b3a0(int64 this)
+        void FUN_18093ba30(int64 this)
         {
         this.lifetime = 0x40000000;
         FUN_18044ef50(this,0);

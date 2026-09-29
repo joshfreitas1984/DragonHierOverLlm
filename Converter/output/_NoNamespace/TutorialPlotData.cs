@@ -6,39 +6,39 @@
 public class TutorialPlotData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DB8
+    // Token: 0x4001DB9
     public string tutorialText;
 
-    // Token: 0x4001DB9
+    // Token: 0x4001DBA
     public string tutorialPic;
 
-    // Token: 0x4001DBA
+    // Token: 0x4001DBB
     public GameObject highLightTarget;
 
-    // Token: 0x4001DBB
+    // Token: 0x4001DBC
     public bool useSpeHightLightPos;
 
-    // Token: 0x4001DBC
+    // Token: 0x4001DBD
     public Vector3 hightLightPos;
 
-    // Token: 0x4001DBD
+    // Token: 0x4001DBE
     public Vector3 hightLightSize;
 
-    // Token: 0x4001DBE
+    // Token: 0x4001DBF
     public bool needClickHighLightArea;
 
-    // Token: 0x4001DBF
+    // Token: 0x4001DC0
     public GameObject autoClickTarget;
 
-    // Token: 0x4001DC0
+    // Token: 0x4001DC1
     public string tutorialSpeFuc;
 
-    // Token: 0x4001DC1
+    // Token: 0x4001DC2
     public string tutorialEndSpeFuc;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600231B
-    // RVA   : 0xAE83A0   Offset: 0xAE77A0   Length: 0x175
+    // RVA   : 0xAE8A60   Offset: 0xAE7E60   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -49,13 +49,13 @@ public class TutorialPlotData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -67,7 +67,7 @@ public class TutorialPlotData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

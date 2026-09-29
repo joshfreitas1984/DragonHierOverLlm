@@ -23,7 +23,7 @@ public class TweenScale
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60005F6
-    // RVA   : 0xAECD10   Offset: 0xAEC110   Length: 0x9B
+    // RVA   : 0xAED3D0   Offset: 0xAEC7D0   Length: 0x9B
     public Transform get_cachedTransform()
     {
         bool cVar1;
@@ -38,7 +38,7 @@ public class TweenScale
     }
 
     // Token : 0x60005F7
-    // RVA   : 0xAECDB0   Offset: 0xAEC1B0   Length: 0x47
+    // RVA   : 0xAED470   Offset: 0xAEC870   Length: 0x47
     public Vector3 get_value()
     {
         uint uVar1;
@@ -55,7 +55,7 @@ public class TweenScale
     }
 
     // Token : 0x60005F8
-    // RVA   : 0xAECE00   Offset: 0xAEC200   Length: 0x41
+    // RVA   : 0xAED4C0   Offset: 0xAEC8C0   Length: 0x41
     public void set_value(Vector3 value)
     {
         long lVar1;
@@ -71,7 +71,7 @@ public class TweenScale
     }
 
     // Token : 0x60005F9
-    // RVA   : 0xAECDB0   Offset: 0xAEC1B0   Length: 0x47
+    // RVA   : 0xAED470   Offset: 0xAEC870   Length: 0x47
     public Vector3 get_scale()
     {
         uint uVar1;
@@ -88,7 +88,7 @@ public class TweenScale
     }
 
     // Token : 0x60005FA
-    // RVA   : 0xAECE00   Offset: 0xAEC200   Length: 0x41
+    // RVA   : 0xAED4C0   Offset: 0xAEC8C0   Length: 0x41
     public void set_scale(Vector3 value)
     {
         long lVar1;
@@ -104,7 +104,7 @@ public class TweenScale
     }
 
     // Token : 0x60005FB
-    // RVA   : 0xAEC920   Offset: 0xAEBD20   Length: 0x235
+    // RVA   : 0xAECFE0   Offset: 0xAEC3E0   Length: 0x235
     protected override void OnUpdate(float factor, bool isFinished)
     {
         bool cVar1;
@@ -124,7 +124,7 @@ public class TweenScale
         fVar5 = *(float *)(this + 128) * fVar5 + local_30 * factor;
         lVar2 = TweenScale.get_cachedTransform(this,0,(float)local_38,fVar4,uVar3,fVar5);
         if (lVar2 == null) {
-        LAB_180aecb50:
+        LAB_180aed210:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -136,7 +136,7 @@ public class TweenScale
           cVar1 = Object.op_Equality(uVar3,0,0);
           if (cVar1) {
             uVar3 = Component.get_gameObject(this,0);
-            uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8fa20);
+            uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f8b8);
             this.mTable = uVar3;
             uVar3 = this.mTable;
             cVar1 = Object.op_Equality(uVar3,0,0);
@@ -145,13 +145,13 @@ public class TweenScale
               return;
             }
           }
-          if (this.mTable == null) goto LAB_180aecb50;
+          if (this.mTable == null) goto LAB_180aed210;
           UITable.set_repositionNow(this.mTable,1,0);
         }
     }
 
     // Token : 0x60005FC
-    // RVA   : 0xAEC830   Offset: 0xAEBC30   Length: 0xE8
+    // RVA   : 0xAECEF0   Offset: 0xAEC2F0   Length: 0xE8
     public static TweenScale Begin(GameObject go, float duration, Vector3 scale)
     {
         ulong uVar1;
@@ -159,7 +159,7 @@ public class TweenScale
         long lVar3;
         long lVar4;
         byte[] local_38 = new byte[48];
-        lVar3 = UITweener.Begin(go,duration,0,DAT_181dc6ee8);
+        lVar3 = UITweener.Begin(go,duration,0,DAT_181dc7098);
         if (lVar3 != null) {
           lVar4 = TweenScale.get_cachedTransform(lVar3,0);
           if (lVar4 != null) {
@@ -180,7 +180,7 @@ public class TweenScale
     }
 
     // Token : 0x60005FD
-    // RVA   : 0xAECC60   Offset: 0xAEC060   Length: 0x42
+    // RVA   : 0xAED320   Offset: 0xAEC720   Length: 0x42
     public override void SetStartToCurrentValue()
     {
         long lVar1;
@@ -195,7 +195,7 @@ public class TweenScale
     }
 
     // Token : 0x60005FE
-    // RVA   : 0xAECC10   Offset: 0xAEC010   Length: 0x45
+    // RVA   : 0xAED2D0   Offset: 0xAEC6D0   Length: 0x45
     public override void SetEndToCurrentValue()
     {
         long lVar1;
@@ -210,7 +210,7 @@ public class TweenScale
     }
 
     // Token : 0x60005FF
-    // RVA   : 0xAECBC0   Offset: 0xAEBFC0   Length: 0x4E
+    // RVA   : 0xAED280   Offset: 0xAEC680   Length: 0x4E
     private void SetCurrentValueToStart()
     {
         ulong uVar1;
@@ -230,7 +230,7 @@ public class TweenScale
     }
 
     // Token : 0x6000600
-    // RVA   : 0xAECB60   Offset: 0xAEBF60   Length: 0x51
+    // RVA   : 0xAED220   Offset: 0xAEC620   Length: 0x51
     private void SetCurrentValueToEnd()
     {
         ulong uVar1;
@@ -250,7 +250,7 @@ public class TweenScale
     }
 
     // Token : 0x6000601
-    // RVA   : 0xAECCB0   Offset: 0xAEC0B0   Length: 0x57
+    // RVA   : 0xAED370   Offset: 0xAEC770   Length: 0x57
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];

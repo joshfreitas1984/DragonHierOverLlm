@@ -29,7 +29,7 @@ public class UIKeyBinding
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000189
-    // RVA   : 0x118DE90   Offset: 0x118D290   Length: 0xEE
+    // RVA   : 0x118E4A0   Offset: 0x118D8A0   Length: 0xEE
     public string get_captionText()
     {
         uint uVar1;
@@ -38,7 +38,7 @@ public class UIKeyBinding
         uVar1 = this.keyCode;
         uVar2 = NGUITools.KeyToCaption(uVar1,0);
         if ((this.modifier & 0xfffffffb) != 0) {
-          plVar3 = (int64 *)il2cpp_value_box(DAT_181d8dab8,(uint32 *)(this + 28));
+          plVar3 = (int64 *)il2cpp_value_box(DAT_181d8dad0,(uint32 *)(this + 28));
           if (plVar3 == (int64 *)0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
@@ -51,10 +51,10 @@ public class UIKeyBinding
     }
 
     // Token : 0x600018A
-    // RVA   : 0x118CFD0   Offset: 0x118C3D0   Length: 0x149
+    // RVA   : 0x118D5E0   Offset: 0x118C9E0   Length: 0x149
     public static bool IsBound(KeyCode key)
     {
-        var pStatics = *(int64*)(DAT_181dafc78 + 184);
+        var pStatics = *(int64*)(DAT_181dafc90 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -65,7 +65,7 @@ public class UIKeyBinding
           if (0 < iVar1) {
             do {
               if (*pStatics == 0) throw; // [null/range check failed]
-              lVar3 = FUN_180002f80(*pStatics,iVar4,DAT_181da9b98);
+              lVar3 = FUN_180002f80(*pStatics,iVar4,DAT_181da9bb0);
               cVar2 = Object.op_Inequality(lVar3,0,0);
               if (cVar2) {
                 if (lVar3 == null) throw; // [null/range check failed]
@@ -81,10 +81,10 @@ public class UIKeyBinding
     }
 
     // Token : 0x600018B
-    // RVA   : 0x118C870   Offset: 0x118BC70   Length: 0x16E
+    // RVA   : 0x118CE80   Offset: 0x118C280   Length: 0x16E
     public static UIKeyBinding Find(string name)
     {
-        var pStatics = *(int64*)(DAT_181dafc78 + 184);
+        var pStatics = *(int64*)(DAT_181dafc90 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -92,7 +92,7 @@ public class UIKeyBinding
         int iVar5;
         iVar5 = 0;
         if (*pStatics == 0) {
-        LAB_18118c9d9:
+        LAB_18118cfe9:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -100,16 +100,16 @@ public class UIKeyBinding
         if (0 < iVar1) {
           do {
             if ((*pStatics == 0) ||
-               (lVar3 = FUN_180002f80(*pStatics,iVar5,DAT_181da9b98),
-               lVar3 == null)) goto LAB_18118c9d9;
+               (lVar3 = FUN_180002f80(*pStatics,iVar5,DAT_181da9bb0),
+               lVar3 == null)) goto LAB_18118cfe9;
             uVar4 = Object.get_name(lVar3,0);
-            cVar2 = FUN_18171e540(uVar4,name,0);
+            cVar2 = FUN_18171eb50(uVar4,name,0);
             if (cVar2) {
               if (*pStatics != 0) {
-                uVar4 = FUN_180002f80(*pStatics,iVar5,DAT_181da9b98);
+                uVar4 = FUN_180002f80(*pStatics,iVar5,DAT_181da9bb0);
                 return uVar4;
               }
-              goto LAB_18118c9d9;
+              goto LAB_18118cfe9;
             }
             iVar5 = iVar5 + 1;
           } while (iVar5 < iVar1);
@@ -118,29 +118,29 @@ public class UIKeyBinding
     }
 
     // Token : 0x600018C
-    // RVA   : 0x118D760   Offset: 0x118CB60   Length: 0x81
+    // RVA   : 0x118DD70   Offset: 0x118D170   Length: 0x81
     protected virtual void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181dafc78 + 184);
+        var pStatics = *(int64*)(DAT_181dafc90 + 184);
         if (*pStatics != 0) {
-          FUN_18181e0a0(*pStatics,this,DAT_181da9a18);
+          FUN_18181e6b0(*pStatics,this,DAT_181da9a30);
           return;
         }
     }
 
     // Token : 0x600018D
-    // RVA   : 0x118D6D0   Offset: 0x118CAD0   Length: 0x81
+    // RVA   : 0x118DCE0   Offset: 0x118D0E0   Length: 0x81
     protected virtual void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181dafc78 + 184);
+        var pStatics = *(int64*)(DAT_181dafc90 + 184);
         if (*pStatics != 0) {
-          FUN_1817eee00(*pStatics,this,DAT_181da9a98);
+          FUN_1817ef410(*pStatics,this,DAT_181da9ab0);
           return;
         }
     }
 
     // Token : 0x600018E
-    // RVA   : 0x118D8B0   Offset: 0x118CCB0   Length: 0x114
+    // RVA   : 0x118DEC0   Offset: 0x118D2C0   Length: 0x114
     protected virtual void Start()
     {
         ulong uVar1;
@@ -148,7 +148,7 @@ public class UIKeyBinding
         byte uVar3;
         bool cVar4;
         ulong uVar5;
-        lVar2 = Component.GetComponent(this,DAT_181d969e0);
+        lVar2 = Component.GetComponent(this,DAT_181d969f8);
         uVar3 = Object.op_Inequality(lVar2,0,0);
         *(uint8 *)((int64)this + 37) = uVar3;
         cVar4 = Object.op_Inequality(lVar2,0,0);
@@ -164,11 +164,11 @@ public class UIKeyBinding
     }
 
     // Token : 0x600018F
-    // RVA   : 0x118D7F0   Offset: 0x118CBF0   Length: 0xBE
+    // RVA   : 0x118DE00   Offset: 0x118D200   Length: 0xBE
     protected virtual void OnSubmit()
     {
         bool cVar1;
-        if (*(int *)(*(int64 *)(DAT_181daf678 + 184) + 216) == (int)this[3]) {
+        if (*(int *)(*(int64 *)(DAT_181daf690 + 184) + 216) == (int)this[3]) {
           cVar1 = (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
           if (cVar1) {
             *(uint8 *)((int64)this + 36) = 1;
@@ -177,7 +177,7 @@ public class UIKeyBinding
     }
 
     // Token : 0x6000190
-    // RVA   : 0x118D540   Offset: 0x118C940   Length: 0x54
+    // RVA   : 0x118DB50   Offset: 0x118CF50   Length: 0x54
     protected virtual bool IsModifierActive()
     {
         bool cVar1;
@@ -187,7 +187,7 @@ public class UIKeyBinding
           if (this == 3) {
             lVar2 = UICamera.GetKey;
             if (lVar2 == null) {
-        LAB_18118d536:
+        LAB_18118db46:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -196,19 +196,19 @@ public class UIKeyBinding
               return true;
             }
             lVar2 = UICamera.GetKey;
-            if (lVar2 == null) goto LAB_18118d536;
+            if (lVar2 == null) goto LAB_18118db46;
             cVar1 = GetKeyStateFunc.Invoke(lVar2,0x133,0);
           }
           else {
             if (this == 2) {
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x132,0);
               if (cVar1) {
                 return true;
               }
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               uVar3 = 0x131;
             }
             else {
@@ -256,16 +256,16 @@ public class UIKeyBinding
                     }
                   }
                 }
-                goto LAB_18118d536;
+                goto LAB_18118db46;
               }
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x130,0);
               if (cVar1) {
                 return true;
               }
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               uVar3 = 0x12f;
             }
             cVar1 = GetKeyStateFunc.Invoke(lVar2,uVar3,0);
@@ -278,7 +278,7 @@ public class UIKeyBinding
     }
 
     // Token : 0x6000191
-    // RVA   : 0x118D120   Offset: 0x118C520   Length: 0x41B
+    // RVA   : 0x118D730   Offset: 0x118CB30   Length: 0x41B
     public static bool IsModifierActive(Modifier modifier)
     {
         bool cVar1;
@@ -288,7 +288,7 @@ public class UIKeyBinding
           if (modifier == 3) {
             lVar2 = UICamera.GetKey;
             if (lVar2 == null) {
-        LAB_18118d536:
+        LAB_18118db46:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -297,19 +297,19 @@ public class UIKeyBinding
               return true;
             }
             lVar2 = UICamera.GetKey;
-            if (lVar2 == null) goto LAB_18118d536;
+            if (lVar2 == null) goto LAB_18118db46;
             cVar1 = GetKeyStateFunc.Invoke(lVar2,0x133,0);
           }
           else {
             if (modifier == 2) {
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x132,0);
               if (cVar1) {
                 return true;
               }
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               uVar3 = 0x131;
             }
             else {
@@ -357,16 +357,16 @@ public class UIKeyBinding
                     }
                   }
                 }
-                goto LAB_18118d536;
+                goto LAB_18118db46;
               }
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               cVar1 = GetKeyStateFunc.Invoke(lVar2,0x130,0);
               if (cVar1) {
                 return true;
               }
               lVar2 = UICamera.GetKey;
-              if (lVar2 == null) goto LAB_18118d536;
+              if (lVar2 == null) goto LAB_18118db46;
               uVar3 = 0x12f;
             }
             cVar1 = GetKeyStateFunc.Invoke(lVar2,uVar3,0);
@@ -379,7 +379,7 @@ public class UIKeyBinding
     }
 
     // Token : 0x6000192
-    // RVA   : 0x118DB30   Offset: 0x118CF30   Length: 0x2D6
+    // RVA   : 0x118E140   Offset: 0x118D540   Length: 0x2D6
     protected virtual void Update()
     {
         long lVar1;
@@ -400,13 +400,13 @@ public class UIKeyBinding
         }
         lVar1 = UICamera.GetKeyDown;
         if (lVar1 == null) {
-        LAB_18118de01:
+        LAB_18118e411:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         cVar2 = GetKeyStateFunc.Invoke(lVar1,(int)this[3],0);
         lVar1 = UICamera.GetKeyUp;
-        if (lVar1 == null) goto LAB_18118de01;
+        if (lVar1 == null) goto LAB_18118e411;
         bVar3 = GetKeyStateFunc.Invoke(lVar1,(int)this[3],0);
         if (cVar2) {
           *(uint8 *)((int64)this + 38) = 1;
@@ -428,7 +428,7 @@ public class UIKeyBinding
           if (bVar3 == 0) {
             return;
           }
-          goto LAB_18118dded;
+          goto LAB_18118e3fd;
         }
         if (bVar3 == 0) {
           return;
@@ -438,7 +438,7 @@ public class UIKeyBinding
             uVar4 = Component.get_gameObject(this,0);
             UICamera.set_hoveredObject(uVar4,0);
           }
-          goto LAB_18118dded;
+          goto LAB_18118e3fd;
         }
         if (*(char *)((int64)this + 36) == false) {
           if ((int)this[3] != 300) {
@@ -453,12 +453,12 @@ public class UIKeyBinding
               }
             }
         *(uint8 *)((int64)this + 36) = 0;
-        LAB_18118dded:
+        LAB_18118e3fd:
         *(uint8 *)((int64)this + 38) = 0;
     }
 
     // Token : 0x6000193
-    // RVA   : 0x118D620   Offset: 0x118CA20   Length: 0xA7
+    // RVA   : 0x118DC30   Offset: 0x118D030   Length: 0xA7
     protected virtual void OnBindingPress(bool pressed)
     {
         ulong uVar1;
@@ -466,12 +466,12 @@ public class UIKeyBinding
         byte[] local_res10 = new byte[24];
         uVar1 = Component.get_gameObject(this,0);
         local_res10[0] = pressed;
-        uVar2 = il2cpp_value_box(DAT_181db2ac8,local_res10);
+        uVar2 = il2cpp_value_box(DAT_181db2ae0,local_res10);
         UICamera.Notify(uVar1,"OnPress",uVar2,0);
     }
 
     // Token : 0x6000194
-    // RVA   : 0x118D5A0   Offset: 0x118C9A0   Length: 0x76
+    // RVA   : 0x118DBB0   Offset: 0x118CFB0   Length: 0x76
     protected virtual void OnBindingClick()
     {
         ulong uVar1;
@@ -480,7 +480,7 @@ public class UIKeyBinding
     }
 
     // Token : 0x6000195
-    // RVA   : 0x118D9D0   Offset: 0x118CDD0   Length: 0x15C
+    // RVA   : 0x118DFE0   Offset: 0x118D3E0   Length: 0x15C
     public override string ToString()
     {
         uint uVar1;
@@ -492,7 +492,7 @@ public class UIKeyBinding
         iVar2 = this.modifier;
         local_res8[0] = iVar2;
         if (local_res8[0] != 4) {
-          plVar3 = (int64 *)il2cpp_value_box(DAT_181d8dab8,local_res8);
+          plVar3 = (int64 *)il2cpp_value_box(DAT_181d8dad0,local_res8);
           if (plVar3 != (int64 *)0) {
             uVar4 = (**(code **)(*plVar3 + 0x168))(plVar3,*(uint64 *)(*plVar3 + 0x170));
             piVar5 = (int *)il2cpp_object_unbox(plVar3);
@@ -508,7 +508,7 @@ public class UIKeyBinding
     }
 
     // Token : 0x6000196
-    // RVA   : 0x118CEB0   Offset: 0x118C2B0   Length: 0x116
+    // RVA   : 0x118D4C0   Offset: 0x118C8C0   Length: 0x116
     public static string GetString(KeyCode keyCode, Modifier modifier)
     {
         ulong uVar2;
@@ -516,7 +516,7 @@ public class UIKeyBinding
         int[] local_res10 = new int[2];
         local_res10[0] = modifier;
         if (local_res10[0] != 4) {
-          plVar1 = (int64 *)il2cpp_value_box(DAT_181d8dab8,local_res10);
+          plVar1 = (int64 *)il2cpp_value_box(DAT_181d8dad0,local_res10);
           if (plVar1 != (int64 *)0) {
             uVar2 = (**(code **)(*plVar1 + 0x168))(plVar1,*(uint64 *)(*plVar1 + 0x170));
             piVar3 = (int *)il2cpp_object_unbox(plVar1);
@@ -532,7 +532,7 @@ public class UIKeyBinding
     }
 
     // Token : 0x6000197
-    // RVA   : 0x118CC10   Offset: 0x118C010   Length: 0x297
+    // RVA   : 0x118D220   Offset: 0x118C620   Length: 0x297
     public static bool GetKeyCode(string text, ref KeyCode key, ref Modifier modifier)
     {
         ulong uVar1;
@@ -542,7 +542,7 @@ public class UIKeyBinding
         ulong uVar6;
         *key = 0;
         *modifier = 4;
-        cVar2 = FUN_180d755b0(text,0);
+        cVar2 = FUN_180d75bc0(text,0);
         if (cVar2) {
           return true;
         }
@@ -555,7 +555,7 @@ public class UIKeyBinding
             *key = uVar4;
             return true;
           }
-          lVar5 = FUN_1800d60b0(DAT_181da1040,1);
+          lVar5 = FUN_1800d60b0(DAT_181da1058,1);
           if (lVar5 != null) {
             if (*(int *)(lVar5 + 24) == 0) {
               uVar6 = il2cpp_internal();
@@ -573,7 +573,7 @@ public class UIKeyBinding
               uVar6 = *(uint64 *)(lVar5 + 40);
               uVar4 = NGUITools.CaptionToKey(uVar6,0);
               *key = uVar4;
-              uVar6 = DAT_181d78970;
+              uVar6 = DAT_181d78988;
               uVar6 = Type.GetTypeFromHandle(uVar6,0);
               if (*(int *)(lVar5 + 24) == 0) {
                 uVar6 = il2cpp_internal();
@@ -586,9 +586,9 @@ public class UIKeyBinding
                           // WARNING: Subroutine does not return
                 FUN_1800d6620(0);
               }
-              if (*(int64 *)(*plVar7 + 64) != *(int64 *)(DAT_181d8dab8 + 64)) {
+              if (*(int64 *)(*plVar7 + 64) != *(int64 *)(DAT_181d8dad0 + 64)) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6070(plVar7,DAT_181d8dab8);
+                FUN_1800d6070(plVar7,DAT_181d8dad0);
               }
               puVar8 = (uint32 *)il2cpp_object_unbox();
               *modifier = *puVar8;
@@ -599,7 +599,7 @@ public class UIKeyBinding
     }
 
     // Token : 0x6000198
-    // RVA   : 0x118C9E0   Offset: 0x118BDE0   Length: 0x227
+    // RVA   : 0x118CFF0   Offset: 0x118C3F0   Length: 0x227
     public static Modifier GetActiveModifier()
     {
         long lVar1;
@@ -657,13 +657,13 @@ public class UIKeyBinding
     }
 
     // Token : 0x600019A
-    // RVA   : 0x118DE10   Offset: 0x118D210   Length: 0x76
+    // RVA   : 0x118E420   Offset: 0x118D820   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d98650);
-        FUN_18132faf0(uVar2,DAT_181da9998);
-        puVar1 = *(uint64 **)(DAT_181dafc78 + 184);
+        uVar2 = il2cpp_internal(DAT_181d98668);
+        FUN_181330100(uVar2,DAT_181da99b0);
+        puVar1 = *(uint64 **)(DAT_181dafc90 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

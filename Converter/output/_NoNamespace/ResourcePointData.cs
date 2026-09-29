@@ -44,7 +44,7 @@ public class ResourcePointData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000F95
-    // RVA   : 0xD17730   Offset: 0xD16B30   Length: 0x137
+    // RVA   : 0xD17D40   Offset: 0xD17140   Length: 0x137
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -52,29 +52,29 @@ public class ResourcePointData
         this.connectAreaID = 0xffffffff;
         ZhSegment.Initialize(this,0);
         this.bigMapPos = new c.DisplayClass9_0(0);
-        lVar2 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar2,DAT_181da0cf8);
+        lVar2 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar2,DAT_181da0d10);
         if (lVar2 != null) {
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
-          FUN_18181de10(lVar2,0,DAT_181da0df8);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
+          FUN_18181e420(lVar2,0,DAT_181da0e10);
           this.changeResource = lVar2;
           return;
         }
     }
 
     // Token : 0x6000F96
-    // RVA   : 0xD176D0   Offset: 0xD16AD0   Length: 0x8
+    // RVA   : 0xD17CE0   Offset: 0xD170E0   Length: 0x8
     public bool HaveForce()
     {
         return this.belongForceID != -1;
     }
 
     // Token : 0x6000F97
-    // RVA   : 0xD174F0   Offset: 0xD168F0   Length: 0xDC
+    // RVA   : 0xD17B00   Offset: 0xD16F00   Length: 0xDC
     public string GetResourcePointFullName()
     {
         long lVar1;
@@ -91,19 +91,19 @@ public class ResourcePointData
     }
 
     // Token : 0x6000F98
-    // RVA   : 0xD17070   Offset: 0xD16470   Length: 0xD2
+    // RVA   : 0xD17680   Offset: 0xD16A80   Length: 0xD2
     public ResourcePointTypeData DataBase()
     {
         long lVar1;
         lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 0x188)) != null) {
-          FUN_1817d9e10(lVar1,this.resourcePointTypeID,DAT_181dbdaa8);
+          FUN_1817da420(lVar1,this.resourcePointTypeID,DAT_181dbdac0);
           return;
         }
     }
 
     // Token : 0x6000F99
-    // RVA   : 0xD17220   Offset: 0xD16620   Length: 0x1E
+    // RVA   : 0xD17830   Offset: 0xD16C30   Length: 0x1E
     public HeroSpeAddData GetDefenceSpeAddData()
     {
         long lVar1;
@@ -114,7 +114,7 @@ public class ResourcePointData
     }
 
     // Token : 0x6000F9A
-    // RVA   : 0xD176E0   Offset: 0xD16AE0   Length: 0x4E
+    // RVA   : 0xD17CF0   Offset: 0xD170F0   Length: 0x4E
     public void RefreshData()
     {
         long lVar1;
@@ -130,7 +130,7 @@ public class ResourcePointData
     }
 
     // Token : 0x6000F9B
-    // RVA   : 0xD175D0   Offset: 0xD169D0   Length: 0xF8
+    // RVA   : 0xD17BE0   Offset: 0xD16FE0   Length: 0xF8
     public List<float> GetTotalChangeResource()
     {
         ulong uVar1;
@@ -168,7 +168,7 @@ public class ResourcePointData
     }
 
     // Token : 0x6000F9D
-    // RVA   : 0xD17450   Offset: 0xD16850   Length: 0x9C
+    // RVA   : 0xD17A60   Offset: 0xD16E60   Length: 0x9C
     public float GetProduceRate()
     {
         long lVar1;
@@ -197,7 +197,7 @@ public class ResourcePointData
     }
 
     // Token : 0x6000F9E
-    // RVA   : 0xD17240   Offset: 0xD16640   Length: 0x133
+    // RVA   : 0xD17850   Offset: 0xD16C50   Length: 0x133
     public Color GetForceColor()
     {
         long lVar2;
@@ -209,7 +209,7 @@ public class ResourcePointData
         local_28 = 0;
         uStack_20 = 0;
         if (*(int *)(param_2 + 48) == -1) {
-          puVar1 = (uint64 *)FUN_180d98fe0(local_18);
+          puVar1 = (uint64 *)FUN_180d995f0(local_18);
           uVar4 = puVar1[1];
           *this = *puVar1;
           this[1] = uVar4;
@@ -239,7 +239,7 @@ public class ResourcePointData
     }
 
     // Token : 0x6000F9F
-    // RVA   : 0xD17380   Offset: 0xD16780   Length: 0xCC
+    // RVA   : 0xD17990   Offset: 0xD16D90   Length: 0xCC
     public ForceData GetForce()
     {
         long lVar1;
@@ -255,7 +255,7 @@ public class ResourcePointData
     }
 
     // Token : 0x6000FA0
-    // RVA   : 0xD17150   Offset: 0xD16550   Length: 0xCC
+    // RVA   : 0xD17760   Offset: 0xD16B60   Length: 0xCC
     public AreaData GetArea()
     {
         long lVar1;
@@ -271,7 +271,7 @@ public class ResourcePointData
     }
 
     // Token : 0x6000FA1
-    // RVA   : 0xD16EF0   Offset: 0xD162F0   Length: 0x175
+    // RVA   : 0xD17500   Offset: 0xD16900   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -282,13 +282,13 @@ public class ResourcePointData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -300,7 +300,7 @@ public class ResourcePointData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

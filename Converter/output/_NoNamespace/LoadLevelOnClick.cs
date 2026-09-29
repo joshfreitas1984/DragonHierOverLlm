@@ -11,12 +11,12 @@ public class LoadLevelOnClick
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600007B
-    // RVA   : 0xA80940   Offset: 0xA7FD40   Length: 0x6B
+    // RVA   : 0xA80FD0   Offset: 0xA803D0   Length: 0x6B
     private void OnClick()
     {
         ulong uVar1;
         bool cVar2;
-        cVar2 = FUN_180d755b0(this.levelName,0);
+        cVar2 = FUN_180d75bc0(this.levelName,0);
         if (!cVar2) {
           uVar1 = this.levelName;
           SceneManager.LoadScene(uVar1,0);

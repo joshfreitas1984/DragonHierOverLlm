@@ -6,32 +6,32 @@
 public class SpriteAnimationController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C06
+    // Token: 0x4001C07
     public List<Sprite> spriteSheet;
 
-    // Token: 0x4001C07
+    // Token: 0x4001C08
     public float framePerSecond;
 
-    // Token: 0x4001C08
+    // Token: 0x4001C09
     public bool finishAutoDestroy;
 
-    // Token: 0x4001C09
+    // Token: 0x4001C0A
     public bool useRealTime;
 
-    // Token: 0x4001C0A
+    // Token: 0x4001C0B
     private int nowSpriteID;
 
-    // Token: 0x4001C0B
+    // Token: 0x4001C0C
     private float nextTime;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60021AF
-    // RVA   : 0xC5EA50   Offset: 0xC5DE50   Length: 0x84
+    // RVA   : 0xC5F060   Offset: 0xC5E460   Length: 0x84
     private void Start()
     {
         long lVar1;
         long lVar2;
-        lVar2 = Component.GetComponent(this,DAT_181d95de0);
+        lVar2 = Component.GetComponent(this,DAT_181d95df8);
         lVar1 = this.spriteSheet;
         if (lVar1 != null) {
           if (lVar1.Count == null) {
@@ -45,7 +45,7 @@ public class SpriteAnimationController
     }
 
     // Token : 0x60021B0
-    // RVA   : 0xC5EAE0   Offset: 0xC5DEE0   Length: 0x154
+    // RVA   : 0xC5F0F0   Offset: 0xC5E4F0   Length: 0x154
     private void Update()
     {
         uint uVar1;
@@ -80,7 +80,7 @@ public class SpriteAnimationController
             }
             this.nowSpriteID = 0;
           }
-          lVar4 = Component.GetComponent(this,DAT_181d95de0);
+          lVar4 = Component.GetComponent(this,DAT_181d95df8);
           lVar2 = this.spriteSheet;
           if (lVar2 != null) {
             uVar1 = this.nowSpriteID;

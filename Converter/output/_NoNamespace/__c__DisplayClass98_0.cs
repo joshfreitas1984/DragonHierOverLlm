@@ -21,7 +21,7 @@ public class <>c__DisplayClass98_0
     }
 
     // Token : 0x6001641
-    // RVA   : 0x93A250   Offset: 0x939650   Length: 0x472
+    // RVA   : 0x93A8E0   Offset: 0x939CE0   Length: 0x472
     internal void <ManageAllAI>b__0()
     {
         ulong uVar1;
@@ -133,7 +133,7 @@ public class <>c__DisplayClass98_0
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              uVar4 = FUN_1800d6760(*(int64 *)(lVar6 + 120),uVar8,DAT_181d8fa18);
+              uVar4 = FUN_1800d6760(*(int64 *)(lVar6 + 120),uVar8,DAT_181d8fa30);
               uVar7 = WorldData.GetHero(lVar2,uVar4,0);
               GameController.ManageOneAI(lVar5,uVar7,this.considerAIHour,0);
             }

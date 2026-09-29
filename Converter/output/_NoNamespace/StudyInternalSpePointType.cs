@@ -6,28 +6,28 @@
 public class StudyInternalSpePointType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CE7
+    // Token: 0x4001CE8
     public int value__;
 
-    // Token: 0x4001CE8
+    // Token: 0x4001CE9
     public const StudyInternalSpePointType None;
 
-    // Token: 0x4001CE9
+    // Token: 0x4001CEA
     public const StudyInternalSpePointType ChangeMana;
 
-    // Token: 0x4001CEA
+    // Token: 0x4001CEB
     public const StudyInternalSpePointType ChangeAroundExp;
 
-    // Token: 0x4001CEB
+    // Token: 0x4001CEC
     public const StudyInternalSpePointType ChangeAroundSuccessRate;
 
-    // Token: 0x4001CEC
+    // Token: 0x4001CED
     public const StudyInternalSpePointType ChangeNextRoad;
 
-    // Token: 0x4001CED
+    // Token: 0x4001CEE
     public const StudyInternalSpePointType See;
 
-    // Token: 0x4001CEE
+    // Token: 0x4001CEF
     public const StudyInternalSpePointType RandomNextPoint;
 
 }

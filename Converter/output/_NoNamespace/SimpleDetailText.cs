@@ -6,19 +6,19 @@
 public class SimpleDetailText
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B8F
+    // Token: 0x4001B90
     public string text;
 
-    // Token: 0x4001B90
+    // Token: 0x4001B91
     public bool needChangeXPos;
 
-    // Token: 0x4001B91
+    // Token: 0x4001B92
     public int resizeHeightWidth;
 
-    // Token: 0x4001B92
+    // Token: 0x4001B93
     public bool forceUp;
 
-    // Token: 0x4001B93
+    // Token: 0x4001B94
     public bool needAutoTranslate;
 
     // ── Methods ──────────────────────────────────────────────────

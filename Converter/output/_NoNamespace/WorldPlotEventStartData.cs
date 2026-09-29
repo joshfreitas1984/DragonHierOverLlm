@@ -60,7 +60,7 @@ public class WorldPlotEventStartData
     }
 
     // Token : 0x6000FF2
-    // RVA   : 0x9D5F20   Offset: 0x9D5320   Length: 0x83
+    // RVA   : 0x9D65B0   Offset: 0x9D59B0   Length: 0x83
     public void /*ctor*/(int _plotID, PlotTriggerType _triggerType, string _triggerTargetID, int _startLeftDay, string _name, float _difficulty, EventData _targetEvent)
     {
         ZhSegment.Initialize(this,0);
@@ -79,7 +79,7 @@ public class WorldPlotEventStartData
     }
 
     // Token : 0x6000FF3
-    // RVA   : 0x9D5E90   Offset: 0x9D5290   Length: 0x88
+    // RVA   : 0x9D6520   Offset: 0x9D5920   Length: 0x88
     public void /*ctor*/(WorldPlotEventData worldPlotEventData)
     {
         ZhSegment.Initialize(this,0);
@@ -98,7 +98,7 @@ public class WorldPlotEventStartData
     }
 
     // Token : 0x6000FF4
-    // RVA   : 0x9D5D10   Offset: 0x9D5110   Length: 0x175
+    // RVA   : 0x9D63A0   Offset: 0x9D57A0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -109,13 +109,13 @@ public class WorldPlotEventStartData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -127,7 +127,7 @@ public class WorldPlotEventStartData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

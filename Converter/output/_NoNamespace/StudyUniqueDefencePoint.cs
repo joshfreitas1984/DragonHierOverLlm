@@ -6,12 +6,12 @@
 public class StudyUniqueDefencePoint
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D33
+    // Token: 0x4001D34
     public List<GameObject> insideObjs;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60022AD
-    // RVA   : 0xFE5040   Offset: 0xFE4440   Length: 0x65
+    // RVA   : 0xFE5650   Offset: 0xFE4A50   Length: 0x65
     public void OnTriggerEnter2D(Collider2D other)
     {
         long lVar1;
@@ -20,14 +20,14 @@ public class StudyUniqueDefencePoint
         if (other != null) {
           uVar2 = Component.get_gameObject(other,0);
           if (lVar1 != null) {
-            FUN_18181e0a0(lVar1,uVar2,DAT_181d89398);
+            FUN_18181e6b0(lVar1,uVar2,DAT_181d893b0);
             return;
           }
         }
     }
 
     // Token : 0x60022AE
-    // RVA   : 0xFE50B0   Offset: 0xFE44B0   Length: 0x65
+    // RVA   : 0xFE56C0   Offset: 0xFE4AC0   Length: 0x65
     public void OnTriggerExit2D(Collider2D other)
     {
         long lVar1;
@@ -36,7 +36,7 @@ public class StudyUniqueDefencePoint
         if (other != null) {
           uVar2 = Component.get_gameObject(other,0);
           if (lVar1 != null) {
-            FUN_1817eee00(lVar1,uVar2,DAT_181d89618);
+            FUN_1817ef410(lVar1,uVar2,DAT_181d89630);
             return;
           }
         }

@@ -6,22 +6,22 @@
 public class <TweenLine>d__39
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CD7
+    // Token: 0x4001CD8
     private int <>1__state;
 
-    // Token: 0x4001CD8
+    // Token: 0x4001CD9
     private object <>2__current;
 
-    // Token: 0x4001CD9
+    // Token: 0x4001CDA
     public LineRenderer targetRenderer;
 
-    // Token: 0x4001CDA
+    // Token: 0x4001CDB
     public StudyInternalPointController <>4__this;
 
-    // Token: 0x4001CDB
+    // Token: 0x4001CDC
     public GameObject targetPoint;
 
-    // Token: 0x4001CDC
+    // Token: 0x4001CDD
     private int <i>5__2;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -40,7 +40,7 @@ public class <TweenLine>d__39
     }
 
     // Token : 0x600227B
-    // RVA   : 0x8F4E90   Offset: 0x8F4290   Length: 0x3F0
+    // RVA   : 0x927B30   Offset: 0x926F30   Length: 0x3F0
     private virtual bool MoveNext()
     {
         ulong uVar1;
@@ -158,15 +158,15 @@ public class <TweenLine>d__39
     }
 
     // Token : 0x600227D
-    // RVA   : 0x8F5290   Offset: 0x8F4690   Length: 0x3E
+    // RVA   : 0x927F30   Offset: 0x927330   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4ba0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4d50);
     }
 
     // Token : 0x600227E

@@ -21,41 +21,41 @@ public class ForceJobSettingData
         long lVar2;
         ZhSegment.Initialize(this,0);
         this.emptyNum = 16;
-        lVar1 = il2cpp_internal(DAT_181d90160);
-        FUN_18132faf0(lVar1,DAT_181d787a8);
-        lVar2 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar2,DAT_181d8f098);
+        lVar1 = il2cpp_internal(DAT_181d90178);
+        FUN_181330100(lVar1,DAT_181d787c0);
+        lVar2 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar2,DAT_181d8f0b0);
         if (lVar2 != null) {
-          FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
+          FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
           if (lVar1 != null) {
-            FUN_18181e0a0(lVar1,lVar2,DAT_181d78828);
-            lVar2 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(lVar2,DAT_181d8f098);
+            FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
+            lVar2 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(lVar2,DAT_181d8f0b0);
             if (lVar2 != null) {
-              FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-              FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-              FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-              FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-              FUN_18181e0a0(lVar1,lVar2,DAT_181d78828);
-              lVar2 = il2cpp_internal(DAT_181d93cd0);
-              FUN_18132faf0(lVar2,DAT_181d8f098);
+              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+              FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
+              lVar2 = il2cpp_internal(DAT_181d93ce8);
+              FUN_181330100(lVar2,DAT_181d8f0b0);
               if (lVar2 != null) {
-                FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                FUN_18181e0a0(lVar1,lVar2,DAT_181d78828);
-                lVar2 = il2cpp_internal(DAT_181d93cd0);
-                FUN_18132faf0(lVar2,DAT_181d8f098);
+                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
+                lVar2 = il2cpp_internal(DAT_181d93ce8);
+                FUN_181330100(lVar2,DAT_181d8f0b0);
                 if (lVar2 != null) {
-                  FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                  FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                  FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                  FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                  FUN_18182a0b0(lVar2,0xffffffff,DAT_181d8f218);
-                  FUN_18181e0a0(lVar1,lVar2,DAT_181d78828);
+                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+                  FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
                   this.ForceJobs = lVar1;
                   return;
                 }
@@ -87,7 +87,7 @@ public class ForceJobSettingData
             }
             if ((targetHero == null) || (lVar2 = *(int64 *)(lVar3 + lVar2._items)) == null
                ) break;
-            cVar1 = FUN_18182a3a0(lVar2,*(uint32 *)(targetHero + 88),DAT_181d8f398);
+            cVar1 = FUN_18182a9b0(lVar2,*(uint32 *)(targetHero + 88),DAT_181d8f3b0);
             if (cVar1) {
               return true;
             }

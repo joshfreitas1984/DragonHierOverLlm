@@ -11,7 +11,7 @@ public class FightResultContributionHeroController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600148E
-    // RVA   : 0xB2E0C0   Offset: 0xB2D4C0   Length: 0x234
+    // RVA   : 0xB2E780   Offset: 0xB2DB80   Length: 0x234
     public void Init(string extraAddText)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -39,7 +39,7 @@ public class FightResultContributionHeroController
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"Text",0);
                       if (lVar1 != null) {
-                        uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                        uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                         if (this.targetHero != null) {
                           local_res20[0] = (int)this.targetHero.lastFightContribution;
                           uVar4 = Int32.ToString(local_res20,0);

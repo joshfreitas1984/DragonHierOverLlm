@@ -6,24 +6,24 @@
 public class PanWithMouse
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001942
+    // Token: 0x4001943
     public Vector2 degrees;
 
-    // Token: 0x4001943
+    // Token: 0x4001944
     public float range;
 
-    // Token: 0x4001944
+    // Token: 0x4001945
     private Transform mTrans;
 
-    // Token: 0x4001945
+    // Token: 0x4001946
     private Quaternion mStart;
 
-    // Token: 0x4001946
+    // Token: 0x4001947
     private Vector2 mRot;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600197C
-    // RVA   : 0xB957B0   Offset: 0xB94BB0   Length: 0x51
+    // RVA   : 0xB95E70   Offset: 0xB95270   Length: 0x51
     private void Start()
     {
         ulong uVar1;
@@ -40,7 +40,7 @@ public class PanWithMouse
     }
 
     // Token : 0x600197D
-    // RVA   : 0xB95810   Offset: 0xB94C10   Length: 0x1E8
+    // RVA   : 0xB95ED0   Offset: 0xB952D0   Length: 0x1E8
     private void Update()
     {
         long lVar1;
@@ -71,9 +71,9 @@ public class PanWithMouse
           this.range = 0x3dcccccd;
           fVar12 = 0.1;
         }
-        fVar9 = (float)FUN_1810e36c0((((float)local_88 - (float)iVar4 * 0.5) / ((float)iVar4 * 0.5)) /
+        fVar9 = (float)FUN_1810e3cd0((((float)local_88 - (float)iVar4 * 0.5) / ((float)iVar4 * 0.5)) /
                                      fVar12,0xbf800000,0x3f800000,0);
-        uVar10 = FUN_1810e36c0(((local_88._4_4_ - (float)iVar5 * 0.5) / ((float)iVar5 * 0.5)) /
+        uVar10 = FUN_1810e3cd0(((local_88._4_4_ - (float)iVar5 * 0.5) / ((float)iVar5 * 0.5)) /
                                this.range,0xbf800000,0x3f800000,0);
         fVar12 = this.mRot;
         fVar11 = *(float *)(this + 68);
@@ -108,7 +108,7 @@ public class PanWithMouse
     }
 
     // Token : 0x600197E
-    // RVA   : 0xB95A00   Offset: 0xB94E00   Length: 0x4F
+    // RVA   : 0xB960C0   Offset: 0xB954C0   Length: 0x4F
     public void /*ctor*/()
     {
         ulong uVar1;

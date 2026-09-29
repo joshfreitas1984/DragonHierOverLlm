@@ -6,16 +6,16 @@
 public class StudySkillResult
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D14
+    // Token: 0x4001D15
     public int value__;
 
-    // Token: 0x4001D15
+    // Token: 0x4001D16
     public const StudySkillResult Fail;
 
-    // Token: 0x4001D16
+    // Token: 0x4001D17
     public const StudySkillResult Stop;
 
-    // Token: 0x4001D17
+    // Token: 0x4001D18
     public const StudySkillResult Finished;
 
 }

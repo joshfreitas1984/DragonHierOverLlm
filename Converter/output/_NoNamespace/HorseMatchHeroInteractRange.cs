@@ -11,7 +11,7 @@ public class HorseMatchHeroInteractRange
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001837
-    // RVA   : 0xB078E0   Offset: 0xB06CE0   Length: 0x39
+    // RVA   : 0xB07FA0   Offset: 0xB073A0   Length: 0x39
     public void OnTriggerStay(Collider other)
     {
         long lVar1;

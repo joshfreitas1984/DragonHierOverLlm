@@ -20,7 +20,7 @@ public class SkinDataBase
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000ECA
-    // RVA   : 0x989210   Offset: 0x988610   Length: 0x34
+    // RVA   : 0x9898A0   Offset: 0x988CA0   Length: 0x34
     public HeroSpeAddData GetSkinSpeAdd(int lv)
     {
         ulong uVar1;
@@ -30,7 +30,7 @@ public class SkinDataBase
     }
 
     // Token : 0x6000ECB
-    // RVA   : 0x989250   Offset: 0x988650   Length: 0xE
+    // RVA   : 0x9898E0   Offset: 0x988CE0   Length: 0xE
     public void /*ctor*/()
     {
         this.DLC = 0xffffffff;
@@ -38,7 +38,7 @@ public class SkinDataBase
     }
 
     // Token : 0x6000ECC
-    // RVA   : 0x988F30   Offset: 0x988330   Length: 0x2DF
+    // RVA   : 0x9895C0   Offset: 0x9889C0   Length: 0x2DF
     public string GetSkinFullName(int _skinLv, bool changeLine, bool changeColor)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -58,7 +58,7 @@ public class SkinDataBase
             uVar3 = String.Concat(*(uint64 *)
                                     (lVar1.chapter + 32 + (int64)(int)_skinLv * 8),
                                    uVar3,0);
-            goto LAB_1809891aa;
+            goto LAB_18098983a;
           }
         }
         else {
@@ -90,7 +90,7 @@ public class SkinDataBase
                 }
                 uVar3 = String.Concat(uVar2,uVar3,*(uint64 *)(lVar1.chapter + 80),0);
               }
-        LAB_1809891aa:
+        LAB_18098983a:
               uVar3 = String.Concat(uVar3,this.skinName,0);
               if (changeColor) {
                 GlobalData.GenerateRareLvColorText(uVar3,_skinLv,0);

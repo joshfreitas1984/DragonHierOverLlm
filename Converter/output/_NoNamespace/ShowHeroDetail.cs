@@ -6,21 +6,21 @@
 public class ShowHeroDetail
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B6D
+    // Token: 0x4001B6E
     public HeroData heroData;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002102
-    // RVA   : 0x97E410   Offset: 0x97D810   Length: 0x11E
+    // RVA   : 0x97EAA0   Offset: 0x97DEA0   Length: 0x11E
     public void OnClick()
     {
         var pStatics_5f40 = *(int64*)(DAT_181d75f40 + 184);
-        var pStatics_b428 = *(int64*)(DAT_181dbb428 + 184);
-        if (*pStatics_b428 != 0) {
-          if (*(int *)(*pStatics_b428 + 24) != 0) {
+        var pStatics_b440 = *(int64*)(DAT_181dbb440 + 184);
+        if (*pStatics_b440 != 0) {
+          if (*(int *)(*pStatics_b440 + 24) != 0) {
             plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar2 = (int64 *)0;
-            if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+            if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
               plVar2 = plVar1;
             }
             NGUITools.PlaySound(plVar2,0);

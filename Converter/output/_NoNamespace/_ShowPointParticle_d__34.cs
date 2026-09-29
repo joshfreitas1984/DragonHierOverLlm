@@ -6,19 +6,19 @@
 public class <ShowPointParticle>d__34
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CD2
+    // Token: 0x4001CD3
     private int <>1__state;
 
-    // Token: 0x4001CD3
+    // Token: 0x4001CD4
     private object <>2__current;
 
-    // Token: 0x4001CD4
+    // Token: 0x4001CD5
     public float delayTime;
 
-    // Token: 0x4001CD5
+    // Token: 0x4001CD6
     public StudyInternalPointController <>4__this;
 
-    // Token: 0x4001CD6
+    // Token: 0x4001CD7
     public GameObject targetParticle;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ public class <ShowPointParticle>d__34
     }
 
     // Token : 0x6002275
-    // RVA   : 0x8F3320   Offset: 0x8F2720   Length: 0x2C2
+    // RVA   : 0x9261A0   Offset: 0x9255A0   Length: 0x2C2
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -72,7 +72,7 @@ public class <ShowPointParticle>d__34
         if (lVar3 != null) {
           lVar5 = Component.get_transform(lVar3,0);
           if (lVar5 != null) {
-            lVar5 = FUN_180da9a20(lVar5,0);
+            lVar5 = FUN_180daa030(lVar5,0);
             if (lVar5 != null) {
               uVar6 = Component.get_gameObject(lVar5,0);
               uVar4 = this.targetParticle;
@@ -127,15 +127,15 @@ public class <ShowPointParticle>d__34
     }
 
     // Token : 0x6002277
-    // RVA   : 0x8F35F0   Offset: 0x8F29F0   Length: 0x3E
+    // RVA   : 0x926470   Offset: 0x925870   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4b18);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4cc8);
     }
 
     // Token : 0x6002278

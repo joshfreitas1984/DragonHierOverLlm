@@ -6,13 +6,13 @@
 public class <FinishParty>d__58
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001978
+    // Token: 0x4001979
     private int <>1__state;
 
-    // Token: 0x4001979
+    // Token: 0x400197A
     private object <>2__current;
 
-    // Token: 0x400197A
+    // Token: 0x400197B
     public PartyController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,11 +31,11 @@ public class <FinishParty>d__58
     }
 
     // Token : 0x60019AE
-    // RVA   : 0x8EA710   Offset: 0x8E9B10   Length: 0xEBE
+    // RVA   : 0x91D590   Offset: 0x91C990   Length: 0xEBE
     private virtual bool MoveNext()
     {
         var plVar11 = *(int64*)(lVar11 + 184);
-        var pStatics = *(int64*)(DAT_181d90290 + 184);
+        var pStatics = *(int64*)(DAT_181d902a8 + 184);
         uint uVar1;
         uint uVar2;
         int iVar3;
@@ -86,7 +86,7 @@ public class <FinishParty>d__58
               lVar9 = FUN_18046c400(0);
               lVar4 = plVar11;
               if ((lVar4 == null) ||
-                 (uVar5 = FUN_180002f80(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8bb98), lVar9 == null))
+                 (uVar5 = FUN_180002f80(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8bbb0), lVar9 == null))
               throw; // [null/range check failed]
               in_stack_ffffffffffffff80 = in_stack_ffffffffffffff80 & 0xffffff00;
               in_stack_ffffffffffffff78 = in_stack_ffffffffffffff78 & 0xffffffff00000000;
@@ -111,14 +111,14 @@ public class <FinishParty>d__58
                          in_stack_ffffffffffffff80 & 0xffffff00,0);
               lVar4 = plVar11;
               if ((lVar4 == null) ||
-                 (lVar4 = FUN_180002f80(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8bb98)) == null)
+                 (lVar4 = FUN_180002f80(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8bbb0)) == null)
               throw; // [null/range check failed]
               HeroData.ChangeFame(lVar4,fVar12,1,0);
             }
             if (*(int *)(lVar11 + 24) == 1) {
               lVar4 = plVar11;
               if ((lVar4 == null) ||
-                 (lVar4 = FUN_180002f80(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8bb98)) == null)
+                 (lVar4 = FUN_180002f80(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8bbb0)) == null)
               throw; // [null/range check failed]
               HeroData.ChangeLoyal(lVar4,fVar12,1,0);
             }
@@ -141,8 +141,8 @@ public class <FinishParty>d__58
                   if (((*(int64 *)(lVar11 + 192) == 0) || (plVar11 == 0)) ||
                      (lVar4 = FUN_180002f80(plVar11,
                                             *(int *)(*(int64 *)(lVar11 + 192) + 24) + -1,
-                                            DAT_181d8bb98), lVar4 == null)) throw; // [null/range check failed]
-                  if (*(int *)(lVar4 + 88) != 0) goto LAB_1808eae6b;
+                                            DAT_181d8bbb0), lVar4 == null)) throw; // [null/range check failed]
+                  if (*(int *)(lVar4 + 88) != 0) goto LAB_18091dceb;
                 }
               }
               lVar4 = FUN_18046c400(0);
@@ -152,11 +152,11 @@ public class <FinishParty>d__58
               if ((lVar10 == null) ||
                  (uVar2 = Mathf.Clamp(uVar2,0,*(int *)(lVar10 + 24) + -1,0), lVar9 == null))
               throw; // [null/range check failed]
-              uVar5 = FUN_180002f80(lVar9,uVar2,DAT_181da4358);
+              uVar5 = FUN_180002f80(lVar9,uVar2,DAT_181da4370);
               if ((*(int64 *)(lVar11 + 192) == 0) ||
                  ((plVar11 == 0 ||
                   (lVar9 = FUN_180002f80(plVar11,
-                                         *(int *)(*(int64 *)(lVar11 + 192) + 24) + -1,DAT_181d8bb98)
+                                         *(int *)(*(int64 *)(lVar11 + 192) + 24) + -1,DAT_181d8bbb0)
                   , lVar9 == null)))) throw; // [null/range check failed]
               uVar6 = Int32.ToString(lVar9 + 88,0);
               if (*(int64 *)(lVar11 + 168) == 0) throw; // [null/range check failed]
@@ -165,10 +165,10 @@ public class <FinishParty>d__58
               if (lVar4 == null) throw; // [null/range check failed]
               PlotController.ChangePlot(lVar4,uVar7,0);
             }
-        LAB_1808eae6b:
+        LAB_18091dceb:
             lVar4 = plVar11;
             if (lVar4 == null) throw; // [null/range check failed]
-            FUN_181823590(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8b998);
+            FUN_181823ba0(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d8b9b0);
             lVar4 = *(int64 *)(lVar11 + 192);
             if (lVar4 == null) throw; // [null/range check failed]
             uVar1 = *(uint32 *)(lVar4 + 24);
@@ -179,7 +179,7 @@ public class <FinishParty>d__58
             Object.Destroy(uVar5,0);
             lVar4 = *(int64 *)(lVar11 + 192);
             if (lVar4 == null) throw; // [null/range check failed]
-            FUN_181823590(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d89698);
+            FUN_181823ba0(lVar4,*(int *)(lVar4 + 24) + -1,DAT_181d896b0);
           }
           else if (lVar11 == null) throw; // [null/range check failed]
         }
@@ -195,7 +195,7 @@ public class <FinishParty>d__58
             lVar4 = new PlotData(0);
             if (lVar4 != null) {
               lVar9 = *(int64 *)(lVar4 + 64);
-              uVar5 = FUN_180004500(DAT_181d8b140);
+              uVar5 = FUN_180004500(DAT_181d8b158);
               uVar5 = String.Format("宾客皆已离场，婚礼终于结束了。\n能和#TargetInteractName#一路走来，最终结为夫妻，回头看真如同做梦一般。",uVar5,0);
               if (*(int64 *)(lVar11 + 176) != 0) {
                 uVar6 = Int32.ToString(*(int64 *)(lVar11 + 176) + 88,0);
@@ -203,9 +203,9 @@ public class <FinishParty>d__58
                   uVar8 = Int32.ToString(*(int64 *)(lVar11 + 168) + 88,0);
                   uVar7 = new SinglePlotData(uVar5,0,3,uVar6,3,uVar8,1,0,0);
                   if (lVar9 != null) {
-                    FUN_18181e0a0(lVar9,uVar7,DAT_181da13f0);
+                    FUN_18181e6b0(lVar9,uVar7,DAT_181da1408);
                     lVar9 = *(int64 *)(lVar4 + 64);
-                    uVar5 = FUN_180004500(DAT_181d8b140);
+                    uVar5 = FUN_180004500(DAT_181d8b158);
                     uVar5 = String.Format("哈哈......我也是如同做梦一般呢......\n#PlayerName#再喝上一杯吧......哈哈哈哈",uVar5,0);
                     if (*(int64 *)(lVar11 + 176) != 0) {
                       uVar6 = Int32.ToString(*(int64 *)(lVar11 + 176) + 88,0);
@@ -213,9 +213,9 @@ public class <FinishParty>d__58
                         uVar8 = Int32.ToString(*(int64 *)(lVar11 + 168) + 88,0);
                         uVar7 = new SinglePlotData(uVar5,0,3,uVar6,3,uVar8,0,0,0);
                         if (lVar9 != null) {
-                          FUN_18181e0a0(lVar9,uVar7,DAT_181da13f0);
+                          FUN_18181e6b0(lVar9,uVar7,DAT_181da1408);
                           lVar9 = *(int64 *)(lVar4 + 64);
-                          uVar5 = FUN_180004500(DAT_181d8b140);
+                          uVar5 = FUN_180004500(DAT_181d8b158);
                           uVar5 = String.Format("哎呀呀，新婚之夜却醉成这个样子，都让你少喝点了。\n来吧我扶你躺着去。",uVar5,0);
                           if (*(int64 *)(lVar11 + 176) != 0) {
                             uVar6 = Int32.ToString(*(int64 *)(lVar11 + 176) + 88,0);
@@ -223,9 +223,9 @@ public class <FinishParty>d__58
                               uVar8 = Int32.ToString(*(int64 *)(lVar11 + 168) + 88,0);
                               uVar7 = new SinglePlotData(uVar5,0,3,uVar6,3,uVar8,1,0,0);
                               if (lVar9 != null) {
-                                FUN_18181e0a0(lVar9,uVar7,DAT_181da13f0);
+                                FUN_18181e6b0(lVar9,uVar7,DAT_181da1408);
                                 lVar9 = *(int64 *)(lVar4 + 64);
-                                uVar5 = FUN_180004500(DAT_181d8b140);
+                                uVar5 = FUN_180004500(DAT_181d8b158);
                                 uVar5 = String.Format("........................",uVar5,0);
                                 if (*(int64 *)(lVar11 + 176) != 0) {
                                   uVar6 = Int32.ToString(*(int64 *)(lVar11 + 176) + 88,0);
@@ -233,24 +233,24 @@ public class <FinishParty>d__58
                                     uVar8 = Int32.ToString(*(int64 *)(lVar11 + 168) + 88,0);
                                     uVar7 = new SinglePlotData(uVar5,0,3,uVar6,3,uVar8,0,0,0);
                                     if (lVar9 != null) {
-                                      FUN_18181e0a0(lVar9,uVar7,DAT_181da13f0);
+                                      FUN_18181e6b0(lVar9,uVar7,DAT_181da1408);
                                       lVar9 = *(int64 *)(lVar4 + 64);
-                                      uVar5 = FUN_180004500(DAT_181d8b140);
+                                      uVar5 = FUN_180004500(DAT_181d8b158);
                                       uVar5 = String.Format("睡着了？好吧好吧，真拿你没办法。",uVar5,0);
-                                      lVar10 = il2cpp_internal(DAT_181d97750);
-                                      FUN_18132faf0(lVar10,DAT_181da3bd8);
+                                      lVar10 = il2cpp_internal(DAT_181d97768);
+                                      FUN_181330100(lVar10,DAT_181da3bf0);
                                       if (lVar10 != null) {
-                                        FUN_18181e0a0(lVar10,"结束宴会;EndParty",DAT_181da3d58);
+                                        FUN_18181e6b0(lVar10,"结束宴会;EndParty",DAT_181da3d70);
                                         if (*(int64 *)(lVar11 + 176) != 0) {
                                           uVar6 = Int32.ToString(*(int64 *)(lVar11 + 176) + 88,0);
                                           if (*(int64 *)(lVar11 + 168) != 0) {
                                             uVar8 = Int32.ToString(*(int64 *)(lVar11 + 168) + 88,0)
                                             ;
-                                            uVar7 = il2cpp_internal(DAT_181da24d8);
+                                            uVar7 = il2cpp_internal(DAT_181da24f0);
                                             SinglePlotData.ctor(uVar7,uVar5,lVar10,3,uVar6,3,uVar8,1,0,0)
                                             ;
                                             if (lVar9 != null) {
-                                              FUN_18181e0a0(lVar9,uVar7,DAT_181da13f0);
+                                              FUN_18181e6b0(lVar9,uVar7,DAT_181da1408);
                                               lVar11 = FUN_18046c400(0);
                                               if (lVar11 != null) {
                                                 PlotController.AddPlot(lVar11,lVar4,0);
@@ -293,10 +293,10 @@ public class <FinishParty>d__58
             }
             uVar8 = String.Concat(uVar8,uVar7,0);
             uVar5 = String.Format(uVar5,uVar6,uVar8,0);
-            lVar9 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar9,DAT_181da3bd8);
+            lVar9 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar9,DAT_181da3bf0);
             if (lVar9 != null) {
-              FUN_18181e0a0(lVar9,"结束宴会;EndParty",DAT_181da3d58);
+              FUN_18181e6b0(lVar9,"结束宴会;EndParty",DAT_181da3d70);
               if (*(int64 *)(lVar11 + 168) != 0) {
                 uVar6 = Int32.ToString(*(int64 *)(lVar11 + 168) + 88,0);
                 uVar8 = new SinglePlotData(uVar5,lVar9,1,0,3,uVar6,1,0,0);
@@ -318,15 +318,15 @@ public class <FinishParty>d__58
     }
 
     // Token : 0x60019B0
-    // RVA   : 0x8EB5D0   Offset: 0x8EA9D0   Length: 0x3E
+    // RVA   : 0x91E450   Offset: 0x91D850   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da9948);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da9ae0);
     }
 
     // Token : 0x60019B1

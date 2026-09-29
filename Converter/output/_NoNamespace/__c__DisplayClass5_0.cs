@@ -6,7 +6,7 @@
 public class <>c__DisplayClass5_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002110
+    // Token: 0x4002111
     public Image target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass5_0
     }
 
     // Token : 0x60026D8
-    // RVA   : 0x939B20   Offset: 0x938F20   Length: 0x1F
+    // RVA   : 0x93A1B0   Offset: 0x9395B0   Length: 0x1F
     internal float <DOFillAmount>b__0()
     {
         if (this.target != null) {
@@ -27,7 +27,7 @@ public class <>c__DisplayClass5_0
     }
 
     // Token : 0x60026D9
-    // RVA   : 0x939B40   Offset: 0x938F40   Length: 0x1E
+    // RVA   : 0x93A1D0   Offset: 0x9395D0   Length: 0x1E
     internal void <DOFillAmount>b__1(float x)
     {
         if (this.target != null) {

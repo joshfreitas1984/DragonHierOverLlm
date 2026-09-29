@@ -23,7 +23,7 @@ public class HollowOutMask
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001819
-    // RVA   : 0xB002C0   Offset: 0xAFF6C0   Length: 0x2E
+    // RVA   : 0xB00980   Offset: 0xAFFD80   Length: 0x2E
     public void SetTarget(RectTransform target)
     {
         long lVar1;
@@ -59,7 +59,7 @@ public class HollowOutMask
     }
 
     // Token : 0x600181A
-    // RVA   : 0xB001D0   Offset: 0xAFF5D0   Length: 0xE3
+    // RVA   : 0xB00890   Offset: 0xAFFC90   Length: 0xE3
     private void SetTarget(Vector3 tarMin, Vector3 tarMax)
     {
         long lVar1;
@@ -95,7 +95,7 @@ public class HollowOutMask
     }
 
     // Token : 0x600181B
-    // RVA   : 0xAFFFE0   Offset: 0xAFF3E0   Length: 0x1E6
+    // RVA   : 0xB006A0   Offset: 0xAFFAA0   Length: 0x1E6
     private void RefreshView()
     {
         ulong uVar1;
@@ -151,7 +151,7 @@ public class HollowOutMask
     }
 
     // Token : 0x600181C
-    // RVA   : 0xAFF970   Offset: 0xAFED70   Length: 0x666
+    // RVA   : 0xB00030   Offset: 0xAFF430   Length: 0x666
     protected override void OnPopulateMesh(VertexHelper vh)
     {
         ulong uVar1;
@@ -229,7 +229,7 @@ public class HollowOutMask
         }
         if (vh != null) {
           VertexHelper.Clear(vh,0);
-          lVar17 = *(int64 *)(DAT_181db0678 + 184);
+          lVar17 = *(int64 *)(DAT_181db0690 + 184);
           local_128 = *(uint64 *)(lVar17 + 20);
           uStack_120 = *(uint64 *)(lVar17 + 28);
           uVar2 = *(uint32 *)(lVar17 + 124);
@@ -261,11 +261,11 @@ public class HollowOutMask
               uStack_134 = puVar19[1];
               uStack_130 = puVar19[2];
               uStack_12c = puVar19[3];
-              fVar20 = (float)FUN_180d98fa0(&local_138,0);
+              fVar20 = (float)FUN_180d995b0(&local_138,0);
               local_res8 = (float)uVar18;
               fVar21 = (float)FUN_18044e2b0(&local_138,0);
               fStackX_c = (float)((uint64)uVar18 >> 32);
-              fVar22 = (float)FUN_180d98fa0(&local_138,0);
+              fVar22 = (float)FUN_180d995b0(&local_138,0);
               fVar22 = fVar22 * (1.0 - local_res8);
               fVar23 = (float)FUN_18044e2b0(&local_138,0);
               uVar12 = uStack_100;
@@ -423,7 +423,7 @@ public class HollowOutMask
     }
 
     // Token : 0x600181D
-    // RVA   : 0xB002F0   Offset: 0xAFF6F0   Length: 0xD3
+    // RVA   : 0xB009B0   Offset: 0xAFFDB0   Length: 0xD3
     private virtual bool UnityEngine.ICanvasRaycastFilter.IsRaycastLocationValid(Vector2 screenPos, Camera eventCamera)
     {
         bool HollowOutMask.UnityEngine_ICanvasRaycastFilter_IsRaycastLocationValid
@@ -446,27 +446,27 @@ public class HollowOutMask
     }
 
     // Token : 0x600181E
-    // RVA   : 0xAFF910   Offset: 0xAFED10   Length: 0x55
+    // RVA   : 0xAFFFD0   Offset: 0xAFF3D0   Length: 0x55
     protected override void Awake()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = Component.GetComponent(this,DAT_181d94f60);
+        uVar1 = Component.GetComponent(this,DAT_181d94f78);
         this._cacheTrans = uVar1;
     }
 
     // Token : 0x600181F
-    // RVA   : 0xB003D0   Offset: 0xAFF7D0   Length: 0xE
+    // RVA   : 0xB00A90   Offset: 0xAFFE90   Length: 0xE
     private void Update()
     {
-        void FUN_180b003d0(int64 this)
+        void FUN_180b00a90(int64 this)
         {
         this._canRefresh = 1;
         HollowOutMask.RefreshView(this,0);
     }
 
     // Token : 0x6001820
-    // RVA   : 0xB003E0   Offset: 0xAFF7E0   Length: 0x61
+    // RVA   : 0xB00AA0   Offset: 0xAFFEA0   Length: 0x61
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];

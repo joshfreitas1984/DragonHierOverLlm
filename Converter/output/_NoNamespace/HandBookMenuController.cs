@@ -91,11 +91,11 @@ public class HandBookMenuController
           if (((this.handBookMenu != null) &&
               (lVar5 = GameObject.get_transform(this.handBookMenu,0)) != null) &&
              (lVar5 = Transform.Find(lVar5,"BlackBackground",0)) != null) {
-            plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460);
+            plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d94478);
             if (((this.handBookMenu != null) &&
                 (lVar5 = GameObject.get_transform(this.handBookMenu,0)) != null) &&
                ((lVar5 = Transform.Find(lVar5,"BlackBackground",0), lVar5 != null &&
-                (plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460),
+                (plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d94478),
                 plVar7 != (int64 *)0)))) {
               puVar8 = (uint64 *)
                        (**(code **)(*plVar7 + 0x298))(&local_88,plVar7,*(uint64 *)(*plVar7 + 0x2a0));
@@ -109,9 +109,9 @@ public class HandBookMenuController
                 if (((this.handBookMenu != null) &&
                     (lVar5 = GameObject.get_transform(this.handBookMenu,0)) != null) &&
                    (lVar5 = Transform.Find(lVar5,"BlackBackground",0)) != null) {
-                  uVar9 = Component.GetComponent(lVar5,DAT_181d94460);
+                  uVar9 = Component.GetComponent(lVar5,DAT_181d94478);
                   uVar9 = DOTweenModuleUI.DOFade(uVar9,0x3f000000,0x3e800000,0);
-                  TweenSettingsExtensions.SetUpdate(uVar9,1,DAT_181dc1c20);
+                  TweenSettingsExtensions.SetUpdate(uVar9,1,DAT_181dc1dc8);
                   if (((this.handBookMenu != null) &&
                       (lVar5 = GameObject.get_transform(this.handBookMenu,0)) != null) &&
                      (lVar5 = Transform.Find(lVar5,"HandBookRoot",0)) != null) {
@@ -122,15 +122,15 @@ public class HandBookMenuController
                        (lVar5 = GameObject.get_transform(this.handBookMenu,0)) != null) {
                       uVar9 = Transform.Find(lVar5,"HandBookRoot",0);
                       uVar9 = ShortcutExtensions.DOScale(uVar9,0x3f800000,0x3e800000,0);
-                      TweenSettingsExtensions.SetUpdate(uVar9,1,DAT_181dc1db0);
+                      TweenSettingsExtensions.SetUpdate(uVar9,1,DAT_181dc1f60);
                       if (!this.inited) {
                         HandBookMenuController.Init(this,0);
                       }
                       bVar2 = true;
                       lVar5 = GameController.lockObj;
                       if (((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 0x150)) != null) &&
-                         (lVar5 = FUN_1808ae5b0(lVar5,DAT_181dba200)) != null) {
-                        ValueCollection.GetEnumerator(&local_60,lVar5,DAT_181d7e770);
+                         (lVar5 = FUN_1808ae5b0(lVar5,DAT_181dba218)) != null) {
+                        ValueCollection.GetEnumerator(&local_60,lVar5,DAT_181d7e788);
                         local_48 = local_60;
                         uStack_44 = uStack_5c;
                         uStack_40 = uStack_58;
@@ -138,10 +138,10 @@ public class HandBookMenuController
                         local_38 = local_50;
                         do {
                           do {
-                            cVar3 = FUN_1811c3f80(&local_48,DAT_181d98758);
+                            cVar3 = FUN_1811c4590(&local_48,DAT_181d98770);
                             lVar5 = local_38;
                             if (!cVar3) {
-                              ZhSegment.Initialize(&local_48,DAT_181d986d8);
+                              ZhSegment.Initialize(&local_48,DAT_181d986f0);
                               goto LAB_18087587c;
                             }
                             if (local_38 == 0) {
@@ -164,7 +164,7 @@ public class HandBookMenuController
                           iVar4 = PlayerPrefDictionary.GetInt(lVar1,uVar9);
                         } while (iVar4 != 0);
                         bVar2 = false;
-                        ZhSegment.Initialize(&local_48,DAT_181d986d8);
+                        ZhSegment.Initialize(&local_48,DAT_181d986f0);
         LAB_18087587c:
                         if (bVar2) {
                           lVar5 = FUN_18046c100(0);
@@ -173,13 +173,13 @@ public class HandBookMenuController
                         }
                         lVar5 = FUN_18046c100(0);
                         if (((lVar5 != null) && (*(int64 *)(lVar5 + 0x128) != 0)) &&
-                           (lVar5 = FUN_1808ae5b0(*(int64 *)(lVar5 + 0x128),DAT_181dbc468)) != null
+                           (lVar5 = FUN_1808ae5b0(*(int64 *)(lVar5 + 0x128),DAT_181dbc480)) != null
                            ) {
-                          ValueCollection.GetEnumerator(&local_60,lVar5,DAT_181d7f258);
+                          ValueCollection.GetEnumerator(&local_60,lVar5,DAT_181d7f270);
                           local_78 = CONCAT44(uStack_5c,local_60);
                           uStack_70 = CONCAT44(uStack_54,uStack_58);
                           local_68 = local_50;
-                          while (cVar3 = FUN_1811c3f80(&local_78,DAT_181d9a058), lVar5 = local_68,
+                          while (cVar3 = FUN_1811c4590(&local_78,DAT_181d9a070), lVar5 = local_68,
                                 cVar3) {
                             lVar1 = GameController.difficultyExtraPoint;
                             if (lVar1 == null) {
@@ -199,11 +199,11 @@ public class HandBookMenuController
                             }
                             iVar4 = PlayerPrefDictionary.GetInt(lVar1,uVar9);
                             if (iVar4 == 0) {
-                              ZhSegment.Initialize(&local_78,DAT_181d99fd8);
+                              ZhSegment.Initialize(&local_78,DAT_181d99ff0);
                               return;
                             }
                           }
-                          ZhSegment.Initialize(&local_78,DAT_181d99fd8);
+                          ZhSegment.Initialize(&local_78,DAT_181d99ff0);
                           lVar5 = FUN_18046c100(0);
                           if (lVar5 != null) {
                             GameDataController.ChangeAchStats(lVar5,48,0x3f800000);
@@ -242,7 +242,7 @@ public class HandBookMenuController
               if (lVar1 != null) {
                 lVar1 = Transform.Find(lVar1,"0",0);
                 if (lVar1 != null) {
-                  lVar1 = Component.GetComponent(lVar1,DAT_181d962e0);
+                  lVar1 = Component.GetComponent(lVar1,DAT_181d962f8);
                   if (lVar1 != null) {
                     Toggle.set_isOn(lVar1,1,0);
                     if (this.handBookMenu != null) {
@@ -250,9 +250,9 @@ public class HandBookMenuController
                       if (lVar1 != null) {
                         lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                         if (lVar1 != null) {
-                          uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+                          uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
                           uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
-                          TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1c20);
+                          TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
                           if (this.handBookMenu != null) {
                             lVar1 = GameObject.get_transform(this.handBookMenu,0);
                             if (lVar1 != null) {
@@ -261,12 +261,12 @@ public class HandBookMenuController
                               local_14 = 0x3f800000;
                               local_10 = 0x3f800000;
                               uVar2 = ShortcutExtensions.DOScale(uVar2,&local_18,0x3e4ccccd,0);
-                              uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1db0);
-                              uVar3 = new OnTooltipCB(this,DAT_181d78330,0);
-                              TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc01d0);
+                              uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
+                              uVar3 = new OnTooltipCB(this,DAT_181d78348,0);
+                              TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0380);
                               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
                               plVar5 = (int64 *)0;
-                              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                                 plVar5 = plVar4;
                               }
                               NGUITools.PlaySound(plVar5,0);
@@ -323,15 +323,15 @@ public class HandBookMenuController
                 if (lVar3 != null) {
                   lVar3 = Transform.Find(lVar3,"Name",0);
                   if (lVar3 != null) {
-                    uVar2 = Component.GetComponent(lVar3,DAT_181d96160);
+                    uVar2 = Component.GetComponent(lVar3,DAT_181d96178);
                     LTLocalization.SetText(uVar2,"江湖",0);
                     if (this.temp != null) {
                       lVar3 = GameObject.get_transform(this.temp,0);
                       if (lVar3 != null) {
                         lVar3 = Transform.Find(lVar3,"Icon",0);
                         if (lVar3 != null) {
-                          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-                          puVar5 = (uint32 *)FUN_180d98fe0(&local_58,0);
+                          plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+                          puVar5 = (uint32 *)FUN_180d995f0(&local_58,0);
                           if (plVar4 != (int64 *)0) {
                             local_58 = *puVar5;
                             uStack_54 = puVar5[1];
@@ -341,9 +341,9 @@ public class HandBookMenuController
                                       (plVar4,&local_58,*(uint64 *)(*plVar4 + 0x2b0));
                             lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
                             if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 208)) != null) {
-                              lVar3 = FUN_1808ae5b0(lVar3,DAT_181db97e8);
+                              lVar3 = FUN_1808ae5b0(lVar3,DAT_181db9800);
                               if (lVar3 != null) {
-                                ValueCollection.GetEnumerator(&local_48,lVar3,DAT_181d7e670);
+                                ValueCollection.GetEnumerator(&local_48,lVar3,DAT_181d7e688);
                                 local_30 = local_48;
                                 uStack_2c = uStack_44;
                                 uStack_28 = uStack_40;
@@ -353,10 +353,10 @@ public class HandBookMenuController
                                   do {
                                     do {
                                       do {
-                                        cVar1 = FUN_1811c3f80(&local_30,DAT_181d98158);
+                                        cVar1 = FUN_1811c4590(&local_30,DAT_181d98170);
                                         lVar3 = local_20;
                                         if (!cVar1) {
-                                          ZhSegment.Initialize(&local_30,DAT_181d980d8);
+                                          ZhSegment.Initialize(&local_30,DAT_181d980f0);
                                           return;
                                         }
                                         if (local_20 == 0) {
@@ -400,7 +400,7 @@ public class HandBookMenuController
                           // WARNING: Subroutine does not return
                                         FUN_1800d6620();
                                       }
-                                      uVar2 = Component.GetComponent(lVar6,DAT_181d96160);
+                                      uVar2 = Component.GetComponent(lVar6,DAT_181d96178);
                                       uVar7 = ForceData.GetForceName(lVar3,1);
                                       LTLocalization.SetText(uVar2,uVar7);
                                       if (this.temp == null) {
@@ -417,7 +417,7 @@ public class HandBookMenuController
                           // WARNING: Subroutine does not return
                                         FUN_1800d6620();
                                       }
-                                      lVar6 = Component.GetComponent(lVar6,DAT_181d94460);
+                                      lVar6 = Component.GetComponent(lVar6,DAT_181d94478);
                                       uVar2 = ForceData.GetForceIcon(lVar3,0);
                                       if (lVar6 == null) {
                           // WARNING: Subroutine does not return
@@ -430,14 +430,14 @@ public class HandBookMenuController
                           // WARNING: Subroutine does not return
                                       FUN_1800d6620();
                                     }
-                                    cVar1 = FUN_18182a3a0(lVar6,*(uint32 *)(lVar3 + 16));
+                                    cVar1 = FUN_18182a9b0(lVar6,*(uint32 *)(lVar3 + 16));
                                   } while (cVar1);
                                   if (this.temp == null) {
                           // WARNING: Subroutine does not return
                                     FUN_1800d6620();
                                   }
                                   lVar3 = GameObject.GetComponent
-                                                    (this.temp,DAT_181dc7c00);
+                                                    (this.temp,DAT_181dc7c18);
                                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
                                     FUN_1800d6620();
@@ -457,7 +457,7 @@ public class HandBookMenuController
                           // WARNING: Subroutine does not return
                                     FUN_1800d6620();
                                   }
-                                  uVar2 = Component.GetComponent(lVar3,DAT_181d96160);
+                                  uVar2 = Component.GetComponent(lVar3,DAT_181d96178);
                                   LTLocalization.SetText(uVar2,"???",0);
                                   if (this.temp == null) {
                           // WARNING: Subroutine does not return
@@ -470,7 +470,7 @@ public class HandBookMenuController
                                   }
                                   lVar3 = Transform.Find(lVar3,"Icon",0);
                                   if (lVar3 == null) break;
-                                  plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+                                  plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
                                   puVar5 = (uint32 *)Color.get_black(&local_48,0);
                                   if (plVar4 == (int64 *)0) {
                           // WARNING: Subroutine does not return
@@ -523,7 +523,7 @@ public class HandBookMenuController
             (lVar4 = Transform.Find(lVar4,"HandBookRoot",0)) != null) &&
            (((lVar4 = Transform.Find(lVar4,"Tabs",0), lVar4 != null &&
              (lVar4 = Transform.Find(lVar4,"1",0)) != null) &&
-            (lVar4 = Component.GetComponent(lVar4,DAT_181d962e0)) != null))) {
+            (lVar4 = Component.GetComponent(lVar4,DAT_181d962f8)) != null))) {
           if (*(char *)(lVar4 + 0x118) == false) {
             return;
           }
@@ -535,8 +535,8 @@ public class HandBookMenuController
             }
             lVar4 = FUN_18046c100(0);
             if (((lVar4 != null) && (*(int64 *)(lVar4 + 0x150) != 0)) &&
-               (lVar4 = FUN_1808ae5b0(*(int64 *)(lVar4 + 0x150),DAT_181dba200)) != null) {
-              ValueCollection.GetEnumerator(&local_28,lVar4,DAT_181d7e770);
+               (lVar4 = FUN_1808ae5b0(*(int64 *)(lVar4 + 0x150),DAT_181dba218)) != null) {
+              ValueCollection.GetEnumerator(&local_28,lVar4,DAT_181d7e788);
               local_40 = local_28;
               uStack_3c = uStack_24;
               uStack_38 = uStack_20;
@@ -544,10 +544,10 @@ public class HandBookMenuController
               local_30 = local_18;
               while( true ) {
                 do {
-                  cVar2 = FUN_1811c3f80(&local_40,DAT_181d98758);
+                  cVar2 = FUN_1811c4590(&local_40,DAT_181d98770);
                   lVar4 = local_30;
                   if (!cVar2) {
-                    ZhSegment.Initialize(&local_40,DAT_181d986d8);
+                    ZhSegment.Initialize(&local_40,DAT_181d986f0);
                     return;
                   }
                   if (local_30 == 0) {
@@ -620,9 +620,9 @@ public class HandBookMenuController
         GlobalData.DeleteAllChild(uVar6,0);
         lVar4 = GameController.lockObj;
         if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 0x128)) != null) {
-          lVar4 = FUN_1808ae5b0(lVar4,DAT_181dbc468);
+          lVar4 = FUN_1808ae5b0(lVar4,DAT_181dbc480);
           if (lVar4 != null) {
-            ValueCollection.GetEnumerator(&local_70,lVar4,DAT_181d7f258);
+            ValueCollection.GetEnumerator(&local_70,lVar4,DAT_181d7f270);
             local_58 = local_70;
             uStack_54 = uStack_6c;
             uStack_50 = uStack_68;
@@ -631,10 +631,10 @@ public class HandBookMenuController
             while( true ) {
               while( true ) {
                 do {
-                  cVar2 = FUN_1811c3f80(&local_58,DAT_181d9a058);
+                  cVar2 = FUN_1811c4590(&local_58,DAT_181d9a070);
                   lVar4 = local_48;
                   if (!cVar2) {
-                    ZhSegment.Initialize(&local_58,DAT_181d99fd8);
+                    ZhSegment.Initialize(&local_58,DAT_181d99ff0);
                     uVar6 = this.skillHandBookSkillIconList;
                     GlobalData.SortChild(uVar6,0);
                     return;
@@ -723,7 +723,7 @@ public class HandBookMenuController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              plVar8 = (int64 *)Component.GetComponent(lVar7,DAT_181d94460);
+              plVar8 = (int64 *)Component.GetComponent(lVar7,DAT_181d94478);
               lVar7 = FUN_18046c100(0);
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -734,7 +734,7 @@ public class HandBookMenuController
                 FUN_1800d6620();
               }
               lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),*(uint32 *)(lVar4 + 52),
-                                    DAT_181d9e108);
+                                    DAT_181d9e120);
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
@@ -767,14 +767,14 @@ public class HandBookMenuController
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar10 = Component.GetComponent(lVar7,DAT_181d94460);
+              lVar10 = Component.GetComponent(lVar7,DAT_181d94478);
               lVar11 = FUN_18046c680(0);
               lVar7 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4a0);
               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              uVar6 = FUN_180002f80(lVar7,*(uint32 *)(lVar4 + 48),DAT_181da4358);
+              uVar6 = FUN_180002f80(lVar7,*(uint32 *)(lVar4 + 48),DAT_181da4370);
               if (lVar11 == null) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();

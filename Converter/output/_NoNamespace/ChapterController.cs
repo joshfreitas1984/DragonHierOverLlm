@@ -20,23 +20,23 @@ public class ChapterController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000E76
-    // RVA   : 0x9957B0   Offset: 0x994BB0   Length: 0x58
+    // RVA   : 0x995E40   Offset: 0x995240   Length: 0x58
     public static ChapterController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181db6e30 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181db6e48 + 184) + 8);
     }
 
     // Token : 0x6000E77
-    // RVA   : 0x993940   Offset: 0x992D40   Length: 0x68
+    // RVA   : 0x993FD0   Offset: 0x9933D0   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181db6e30 + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181db6e48 + 184) + 8);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6000E78
-    // RVA   : 0x9939B0   Offset: 0x992DB0   Length: 0xDA5
+    // RVA   : 0x994040   Offset: 0x993440   Length: 0xDA5
     public void ChangeChapter(int targetChapter)
     {
         uint uVar1;
@@ -83,7 +83,7 @@ public class ChapterController
           lVar3 = FUN_18046c0a0(0);
           if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
           *(uint8 *)(lVar3.villageAreaID + 0x10a) = 0;
-        LAB_180993dfa:
+        LAB_18099448a:
           lVar3 = FUN_18046c0a0(0);
           if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
           *(uint8 *)(lVar3.villageAreaID + 0x10b) = 0;
@@ -93,7 +93,7 @@ public class ChapterController
             lVar3 = FUN_18046c0a0(0);
             if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
             *(uint8 *)(lVar3.villageAreaID + 0x10a) = 1;
-            goto LAB_180993dfa;
+            goto LAB_18099448a;
           }
           if (uVar1 != 2) {
             if (uVar1 == 3) {
@@ -111,14 +111,14 @@ public class ChapterController
                         (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 232)) != null) &&
                        (iVar2 = PlotEventLogData.GetInt(lVar4,"FinalChapterPlotEnd",0), lVar3 != null)) {
                       lVar3.openForceAttackBasement = iVar2 == 1;
-                      goto LAB_180993e42;
+                      goto LAB_1809944d2;
                     }
                   }
                 }
               }
               throw; // [null/range check failed]
             }
-            goto LAB_180993e42;
+            goto LAB_1809944d2;
           }
           lVar3 = FUN_18046c0a0(0);
           if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
@@ -130,14 +130,14 @@ public class ChapterController
         lVar3 = FUN_18046c0a0(0);
         if ((lVar3 != null) && (lVar3.villageAreaID != null)) {
           *(uint8 *)(lVar3.villageAreaID + 0x10c) = 0;
-        LAB_180993e42:
+        LAB_1809944d2:
           if (this.chapterUIPanel != null) {
             GameObject.SetActive(this.chapterUIPanel,1,0);
             if (((this.chapterUIPanel != null) &&
                 (lVar3 = GameObject.get_transform(this.chapterUIPanel,0)) != null) &&
                (lVar3 = Transform.Find(lVar3,"BlackBackground",0)) != null) {
-              plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-              puVar6 = (uint32 *)FUN_180d98fe0(&local_68,0);
+              plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+              puVar6 = (uint32 *)FUN_180d995f0(&local_68,0);
               if (plVar5 != (int64 *)0) {
                 local_68 = *puVar6;
                 uStack_64 = puVar6[1];
@@ -147,17 +147,17 @@ public class ChapterController
                 if (((this.chapterUIPanel != null) &&
                     (lVar3 = GameObject.get_transform(this.chapterUIPanel,0)) != null) &&
                    (lVar3 = Transform.Find(lVar3,"BlackBackground",0)) != null) {
-                  uVar7 = Component.GetComponent(lVar3,DAT_181d94460);
+                  uVar7 = Component.GetComponent(lVar3,DAT_181d94478);
                   uVar7 = DOTweenModuleUI.DOFade(uVar7,0x3f733333,0x40000000,0);
-                  uVar8 = new OnTooltipCB(this,DAT_181d8fbf0,0);
-                  TweenSettingsExtensions.OnComplete(uVar7,uVar8,DAT_181dbffb0);
+                  uVar8 = new OnTooltipCB(this,DAT_181d8fc08,0);
+                  TweenSettingsExtensions.OnComplete(uVar7,uVar8,DAT_181dc0160);
                   if (((this.chapterUIPanel != null) &&
                       (lVar3 = GameObject.get_transform(this.chapterUIPanel,0)) != null) &&
                      (lVar3 = Transform.Find(lVar3,"Back",0)) != null) {
-                    plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+                    plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
                     local_58 = 0;
                     uStack_50 = 0;
-                    FUN_1809dc910(&local_58,0x3f800000,0x3f800000,0x3f800000,0,0);
+                    FUN_1809dcfa0(&local_58,0x3f800000,0x3f800000,0x3f800000,0,0);
                     if (plVar5 != (int64 *)0) {
                       local_68 = (uint32)local_58;
                       uStack_64 = local_58._4_4_;
@@ -167,10 +167,10 @@ public class ChapterController
                       if (((this.chapterUIPanel != null) &&
                           (lVar3 = GameObject.get_transform(this.chapterUIPanel,0)) != null
                           ) && (lVar3 = Transform.Find(lVar3,"TitleBack",0)) != null) {
-                        plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+                        plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
                         local_48 = 0;
                         uStack_40 = 0;
-                        FUN_1809dc910(&local_48,0x3f800000,0x3f800000,0x3f800000,0,0);
+                        FUN_1809dcfa0(&local_48,0x3f800000,0x3f800000,0x3f800000,0,0);
                         if (plVar5 != (int64 *)0) {
                           local_68 = (uint32)local_48;
                           uStack_64 = local_48._4_4_;
@@ -190,7 +190,7 @@ public class ChapterController
                                 (lVar3 = GameObject.get_transform(this.chapterUIPanel,0),
                                 lVar3 != null)) &&
                                (lVar3 = Transform.Find(lVar3,"Chapter",0)) != null) {
-                              uVar7 = Component.GetComponent(lVar3,DAT_181d96160);
+                              uVar7 = Component.GetComponent(lVar3,DAT_181d96178);
                               uVar8 = GlobalData.GetNumText(uVar1 + 1,0);
                               uVar8 = String.Format("第{0}章",uVar8,0);
                               LTLocalization.SetText(uVar7,uVar8,0);
@@ -198,12 +198,12 @@ public class ChapterController
                                   (lVar3 = GameObject.get_transform(this.chapterUIPanel,0),
                                   lVar3 != null)) &&
                                  (lVar3 = Transform.Find(lVar3,"Chapter",0)) != null) {
-                                plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+                                plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
                                 if (((this.chapterUIPanel != null) &&
                                     (lVar3 = GameObject.get_transform(this.chapterUIPanel,0),
                                     lVar3 != null)) &&
                                    ((lVar3 = Transform.Find(lVar3,"Chapter",0), lVar3 != null &&
-                                    (plVar9 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160),
+                                    (plVar9 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178),
                                     plVar9 != (int64 *)0)))) {
                                   puVar6 = (uint32 *)
                                            (**(code **)(*plVar9 + 0x298))
@@ -225,7 +225,7 @@ public class ChapterController
                                         (lVar3 = GameObject.get_transform
                                                            (this.chapterUIPanel,0), lVar3 != null))
                                        && (lVar3 = Transform.Find(lVar3,"Title",0)) != null) {
-                                      uVar7 = Component.GetComponent(lVar3,DAT_181d96160);
+                                      uVar7 = Component.GetComponent(lVar3,DAT_181d96178);
                                       lVar3 = ChapterController.chapterTitles;
                                       if (lVar3 != null) {
                                         if (lVar3.cityAreaID <= uVar1) {
@@ -241,14 +241,14 @@ public class ChapterController
                                             lVar3 != null)) &&
                                            (lVar3 = Transform.Find(lVar3,"Title",0)) != null) {
                                           plVar5 = (int64 *)
-                                                   Component.GetComponent(lVar3,DAT_181d96160);
+                                                   Component.GetComponent(lVar3,DAT_181d96178);
                                           if (((this.chapterUIPanel != null) &&
                                               (lVar3 = GameObject.get_transform
                                                                  (this.chapterUIPanel,0),
                                               lVar3 != null)) &&
                                              ((lVar3 = Transform.Find(lVar3,"Title",0), lVar3 != null
                                               && (plVar9 = (int64 *)
-                                                           Component.GetComponent(lVar3,DAT_181d96160),
+                                                           Component.GetComponent(lVar3,DAT_181d96178),
                                                  plVar9 != (int64 *)0)))) {
                                             puVar6 = (uint32 *)
                                                      (**(code **)(*plVar9 + 0x298))
@@ -274,7 +274,7 @@ public class ChapterController
                                                   lVar3 != null)) &&
                                                  (lVar3 = Transform.Find(lVar3,"Describe",0),
                                                  lVar3 != null)) {
-                                                uVar7 = Component.GetComponent(lVar3,DAT_181d96160);
+                                                uVar7 = Component.GetComponent(lVar3,DAT_181d96178);
                                                 uVar8 = ChapterController.GetChapterDescribe
                                                                   (this,"\n\n",0);
                                                 LTLocalization.SetText(uVar7,uVar8,0);
@@ -285,7 +285,7 @@ public class ChapterController
                                                    (lVar3 = Transform.Find(lVar3,"Describe",0),
                                                    lVar3 != null)) {
                                                   plVar5 = (int64 *)
-                                                           Component.GetComponent(lVar3,DAT_181d96160);
+                                                           Component.GetComponent(lVar3,DAT_181d96178);
                                                   if (((this.chapterUIPanel != null) &&
                                                       (lVar3 = GameObject.get_transform
                                                                          (this.chapterUIPanel,0)
@@ -294,7 +294,7 @@ public class ChapterController
                                                       lVar3 != null &&
                                                       (plVar9 = (int64 *)
                                                                 Component.GetComponent
-                                                                          (lVar3,DAT_181d96160),
+                                                                          (lVar3,DAT_181d96178),
                                                       plVar9 != (int64 *)0)))) {
                                                     puVar6 = (uint32 *)
                                                              (**(code **)(*plVar9 + 0x298))
@@ -345,7 +345,7 @@ public class ChapterController
     }
 
     // Token : 0x6000E79
-    // RVA   : 0x994760   Offset: 0x993B60   Length: 0x5D4
+    // RVA   : 0x994DF0   Offset: 0x9941F0   Length: 0x5D4
     public string GetChapterDescribe(string newLine)
     {
         ulong uVar2;
@@ -355,7 +355,7 @@ public class ChapterController
         float fVar6;
         float[] local_res20 = new float[2];
         local_res20[0] = 0.0;
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
         uVar5 = "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵";
         if ((GameController._instance != null) &&
            (lVar4 = GameController._instance.worldData) != null) {
@@ -463,7 +463,7 @@ public class ChapterController
     }
 
     // Token : 0x6000E7A
-    // RVA   : 0x995650   Offset: 0x994A50   Length: 0x35
+    // RVA   : 0x995CE0   Offset: 0x9950E0   Length: 0x35
     public void Update()
     {
         bool cVar1;
@@ -478,13 +478,13 @@ public class ChapterController
     }
 
     // Token : 0x6000E7B
-    // RVA   : 0x994E10   Offset: 0x994210   Length: 0x45F
+    // RVA   : 0x9954A0   Offset: 0x9948A0   Length: 0x45F
     public void ShowChaperUI()
     {
         long lVar1;
         ulong uVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dafac8 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dafae0 + 184) + 8);
         if (lVar1 != null) {
           BGMController.SetPlotBgm(lVar1,"MainTheme",0);
           if (this.chapterUIPanel != null) {
@@ -492,53 +492,53 @@ public class ChapterController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Chapter",0);
               if (lVar1 != null) {
-                uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                 DOTweenModuleUI.DOFade(uVar2,0x3f800000,0x40400000,0);
                 if (this.chapterUIPanel != null) {
                   lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                   if (lVar1 != null) {
                     lVar1 = Transform.Find(lVar1,"Title",0);
                     if (lVar1 != null) {
-                      uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                      uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                       uVar2 = DOTweenModuleUI.DOFade(uVar2,0x3f800000,0x40400000,0);
-                      TweenSettingsExtensions.SetDelay(uVar2,0x40800000,DAT_181dc0ac8);
+                      TweenSettingsExtensions.SetDelay(uVar2,0x40800000,DAT_181dc0c78);
                       if (this.chapterUIPanel != null) {
                         lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                         if (lVar1 != null) {
                           lVar1 = Transform.Find(lVar1,"Back",0);
                           if (lVar1 != null) {
-                            uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+                            uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
                             uVar2 = DOTweenModuleUI.DOFade(uVar2,0x3f800000,0x40400000,0);
-                            TweenSettingsExtensions.SetDelay(uVar2,0x40800000,DAT_181dc0ac8);
+                            TweenSettingsExtensions.SetDelay(uVar2,0x40800000,DAT_181dc0c78);
                             if (this.chapterUIPanel != null) {
                               lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                               if (lVar1 != null) {
                                 lVar1 = Transform.Find(lVar1,"TitleBack",0);
                                 if (lVar1 != null) {
-                                  uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+                                  uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
                                   uVar2 = DOTweenModuleUI.DOFade(uVar2,0x3f800000,0x40400000,0);
-                                  TweenSettingsExtensions.SetDelay(uVar2,0x40800000,DAT_181dc0ac8);
+                                  TweenSettingsExtensions.SetDelay(uVar2,0x40800000,DAT_181dc0c78);
                                   if (this.chapterUIPanel != null) {
                                     lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                                     if (lVar1 != null) {
                                       uVar2 = Transform.Find(lVar1,"TitleBack",0);
                                       uVar2 = ShortcutExtensions.DOScaleX(uVar2,0x3f800000,0x40400000,0);
                                       uVar2 = TweenSettingsExtensions.SetDelay
-                                                        (uVar2,0x40800000,DAT_181dc0c60);
-                                      TweenSettingsExtensions.SetEase(uVar2,9,DAT_181dc0f80);
+                                                        (uVar2,0x40800000,DAT_181dc0e10);
+                                      TweenSettingsExtensions.SetEase(uVar2,9,DAT_181dc1128);
                                       if (this.chapterUIPanel != null) {
                                         lVar1 = GameObject.get_transform(this.chapterUIPanel,0)
                                         ;
                                         if (lVar1 != null) {
                                           lVar1 = Transform.Find(lVar1,"Describe",0);
                                           if (lVar1 != null) {
-                                            uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                                            uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                                             uVar2 = DOTweenModuleUI.DOFade(uVar2,0x3f800000,0x40400000,0)
                                             ;
                                             uVar2 = TweenSettingsExtensions.SetDelay
-                                                              (uVar2,0x41100000,DAT_181dc0ac8);
-                                            uVar3 = new OnTooltipCB(this,DAT_181d8faf0,0);
-                                            TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dbffb0)
+                                                              (uVar2,0x41100000,DAT_181dc0c78);
+                                            uVar3 = new OnTooltipCB(this,DAT_181d8fb08,0);
+                                            TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0160)
                                             ;
                                             return;
                                           }
@@ -562,7 +562,7 @@ public class ChapterController
     }
 
     // Token : 0x6000E7C
-    // RVA   : 0x995280   Offset: 0x994680   Length: 0x3C0
+    // RVA   : 0x995910   Offset: 0x994D10   Length: 0x3C0
     public void UnshowChapterUI()
     {
         long lVar1;
@@ -573,41 +573,41 @@ public class ChapterController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"Chapter",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
               DOTweenModuleUI.DOFade(uVar2,0,0x40400000,0);
               if (this.chapterUIPanel != null) {
                 lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                 if (lVar1 != null) {
                   lVar1 = Transform.Find(lVar1,"Title",0);
                   if (lVar1 != null) {
-                    uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                    uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                     DOTweenModuleUI.DOFade(uVar2,0,0x40400000,0);
                     if (this.chapterUIPanel != null) {
                       lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                       if (lVar1 != null) {
                         lVar1 = Transform.Find(lVar1,"Back",0);
                         if (lVar1 != null) {
-                          uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+                          uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
                           DOTweenModuleUI.DOFade(uVar2,0,0x40400000,0);
                           if (this.chapterUIPanel != null) {
                             lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                             if (lVar1 != null) {
                               lVar1 = Transform.Find(lVar1,"TitleBack",0);
                               if (lVar1 != null) {
-                                uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+                                uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
                                 DOTweenModuleUI.DOFade(uVar2,0,0x40400000,0);
                                 if (this.chapterUIPanel != null) {
                                   lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                                   if (lVar1 != null) {
                                     uVar2 = Transform.Find(lVar1,"TitleBack",0);
                                     uVar2 = ShortcutExtensions.DOScaleX(uVar2,0,0x40400000,0);
-                                    TweenSettingsExtensions.SetEase(uVar2,9,DAT_181dc0f80);
+                                    TweenSettingsExtensions.SetEase(uVar2,9,DAT_181dc1128);
                                     if (this.chapterUIPanel != null) {
                                       lVar1 = GameObject.get_transform(this.chapterUIPanel,0);
                                       if (lVar1 != null) {
                                         lVar1 = Transform.Find(lVar1,"Describe",0);
                                         if (lVar1 != null) {
-                                          uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+                                          uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
                                           DOTweenModuleUI.DOFade(uVar2,0,0x40400000,0);
                                           if (this.chapterUIPanel != null) {
                                             lVar1 = GameObject.get_transform
@@ -615,14 +615,14 @@ public class ChapterController
                                             if (lVar1 != null) {
                                               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                                               if (lVar1 != null) {
-                                                uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+                                                uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
                                                 uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x40000000,0);
                                                 uVar2 = TweenSettingsExtensions.SetDelay
-                                                                  (uVar2,0x40000000,DAT_181dc0ac8);
-                                                uVar3 = new OnTooltipCB(this,DAT_181d8fb70,0);
+                                                                  (uVar2,0x40000000,DAT_181dc0c78);
+                                                uVar3 = new OnTooltipCB(this,DAT_181d8fb88,0);
                                                 uVar2 = TweenSettingsExtensions.OnComplete
-                                                                  (uVar2,uVar3,DAT_181dbffb0);
-                                                TweenSettingsExtensions.SetEase(uVar2,8,DAT_181dc0ce8);
+                                                                  (uVar2,uVar3,DAT_181dc0160);
+                                                TweenSettingsExtensions.SetEase(uVar2,8,DAT_181dc0e88);
                                                 return;
                                               }
                                             }
@@ -647,11 +647,11 @@ public class ChapterController
     }
 
     // Token : 0x6000E7D
-    // RVA   : 0x994D40   Offset: 0x994140   Length: 0xCA
+    // RVA   : 0x9953D0   Offset: 0x9947D0   Length: 0xCA
     public void HideChapterUI()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dafac8 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dafae0 + 184) + 8);
         if (lVar1 != null) {
           BGMController.SetPlotBgm(lVar1,0xffffffff);
           if (this.chapterUIPanel != null) {
@@ -669,18 +669,18 @@ public class ChapterController
     }
 
     // Token : 0x6000E7F
-    // RVA   : 0x995690   Offset: 0x994A90   Length: 0x114
+    // RVA   : 0x995D20   Offset: 0x995120   Length: 0x114
     private static void /*cctor*/()
     {
         long lVar2;
-        lVar2 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar2,DAT_181da3bd8);
+        lVar2 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar2,DAT_181da3bf0);
         if (lVar2 != null) {
-          FUN_18181e0a0(lVar2,"蜀中仙云映霞光",DAT_181da3d58);
-          FUN_18181e0a0(lVar2,"峨眉夜雨打苍茫",DAT_181da3d58);
-          FUN_18181e0a0(lVar2,"江湖翻沸壮士死",DAT_181da3d58);
-          FUN_18181e0a0(lVar2,"山河泣血战未央",DAT_181da3d58);
-          plVar1 = *(int64 **)(DAT_181db6e30 + 184);
+          FUN_18181e6b0(lVar2,"蜀中仙云映霞光",DAT_181da3d70);
+          FUN_18181e6b0(lVar2,"峨眉夜雨打苍茫",DAT_181da3d70);
+          FUN_18181e6b0(lVar2,"江湖翻沸壮士死",DAT_181da3d70);
+          FUN_18181e6b0(lVar2,"山河泣血战未央",DAT_181da3d70);
+          plVar1 = *(int64 **)(DAT_181db6e48 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;
@@ -688,10 +688,10 @@ public class ChapterController
     }
 
     // Token : 0x6000E80
-    // RVA   : 0x995270   Offset: 0x994670   Length: 0x5
+    // RVA   : 0x995900   Offset: 0x994D00   Length: 0x5
     private void <ShowChaperUI>b__10_0()
     {
-        void FUN_180995270(int64 this)
+        void FUN_180995900(int64 this)
         {
         this.showFinished = 1;
     }

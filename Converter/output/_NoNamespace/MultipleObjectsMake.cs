@@ -6,56 +6,56 @@
 public class MultipleObjectsMake
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E82
+    // Token: 0x4001E83
     public float m_startDelay;
 
-    // Token: 0x4001E83
+    // Token: 0x4001E84
     public int m_makeCount;
 
-    // Token: 0x4001E84
+    // Token: 0x4001E85
     public float m_makeDelay;
 
-    // Token: 0x4001E85
+    // Token: 0x4001E86
     public Vector3 m_randomPos;
 
-    // Token: 0x4001E86
+    // Token: 0x4001E87
     public Vector3 m_randomRot;
 
-    // Token: 0x4001E87
+    // Token: 0x4001E88
     public Vector3 m_randomScale;
 
-    // Token: 0x4001E88
+    // Token: 0x4001E89
     private float m_Time;
 
-    // Token: 0x4001E89
+    // Token: 0x4001E8A
     private float m_Time2;
 
-    // Token: 0x4001E8A
+    // Token: 0x4001E8B
     private float m_delayTime;
 
-    // Token: 0x4001E8B
+    // Token: 0x4001E8C
     private float m_count;
 
-    // Token: 0x4001E8C
+    // Token: 0x4001E8D
     private float m_scalefactor;
 
-    // Token: 0x4001E8D
+    // Token: 0x4001E8E
     public float setObjVolumn;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600241D
-    // RVA   : 0xDF4310   Offset: 0xDF3710   Length: 0x70
+    // RVA   : 0xDF4920   Offset: 0xDF3D20   Length: 0x70
     private void Start()
     {
         uint uVar1;
         uVar1 = Time.get_time(0);
         this.m_Time2 = uVar1;
         this.m_Time = uVar1;
-        this.m_scalefactor = **(uint32 **)(DAT_181db38c8 + 184);
+        this.m_scalefactor = **(uint32 **)(DAT_181db38e0 + 184);
     }
 
     // Token : 0x600241E
-    // RVA   : 0xDF4380   Offset: 0xDF3780   Length: 0x4D0
+    // RVA   : 0xDF4990   Offset: 0xDF3D90   Length: 0x4D0
     private void Update()
     {
         ulong uVar1;
@@ -150,7 +150,7 @@ public class MultipleObjectsMake
                 local_d0 = fVar10;
                 local_c8 = uVar8;
                 uStack_c0 = uVar1;
-                lVar6 = Object.Instantiate(uVar7,&local_d8,&local_c8,DAT_181d92e18);
+                lVar6 = Object.Instantiate(uVar7,&local_d8,&local_c8,DAT_181d92cb0);
                 lVar4 = *(int64 *)(this + 24);
                 if (lVar4 == null) break;
                 if (*(uint32 *)(lVar4 + 24) <= uVar9) {
@@ -182,10 +182,10 @@ public class MultipleObjectsMake
                 local_b0 = local_e0;
                 local_b8 = local_e8;
                 Transform.set_localScale(lVar4,&local_b8,0);
-                uVar7 = GameObject.GetComponent(lVar6,DAT_181dc72f8);
+                uVar7 = GameObject.GetComponent(lVar6,DAT_181dc7310);
                 cVar3 = Object.op_Inequality(uVar7,0,0);
                 if ((cVar3) && (*(float *)(this + 100) != -1.0)) {
-                  lVar4 = GameObject.GetComponent(lVar6,DAT_181dc72f8);
+                  lVar4 = GameObject.GetComponent(lVar6,DAT_181dc7310);
                   if (lVar4 == null) break;
                   AudioSource.set_volume(lVar4,*(uint32 *)(this + 100),0);
                 }
@@ -199,10 +199,10 @@ public class MultipleObjectsMake
     }
 
     // Token : 0x600241F
-    // RVA   : 0xDF4860   Offset: 0xDF3C60   Length: 0xE
+    // RVA   : 0xDF4E70   Offset: 0xDF4270   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180df4860(int64 this)
+        void FUN_180df4e70(int64 this)
         {
         *(uint32 *)(this + 100) = 0xbf800000;
         TrailRenderer_Base.ctor(this,0);

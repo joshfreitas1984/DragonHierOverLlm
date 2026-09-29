@@ -23,14 +23,14 @@ public class EnterSceneController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60013F5
-    // RVA   : 0x944100   Offset: 0x943500   Length: 0x121
+    // RVA   : 0x944790   Offset: 0x943B90   Length: 0x121
     private void Start()
     {
         long lVar1;
         ulong uVar2;
         GlobalData.AutoSetWindowResolution(0);
         lVar1 = this.logoVideo;
-        uVar2 = new OnTooltipCB(this,DAT_181dafc58,0);
+        uVar2 = new OnTooltipCB(this,DAT_181dafc70,0);
         if (lVar1 != null) {
           VideoPlayer.add_loopPointReached(lVar1,uVar2,0);
           uVar2 = SceneManager.LoadSceneAsync("TitleScene",0);
@@ -43,7 +43,7 @@ public class EnterSceneController
     }
 
     // Token : 0x60013F6
-    // RVA   : 0x944240   Offset: 0x943640   Length: 0x9A
+    // RVA   : 0x9448D0   Offset: 0x943CD0   Length: 0x9A
     private void Update()
     {
         long lVar1;
@@ -64,7 +64,7 @@ public class EnterSceneController
     }
 
     // Token : 0x60013F7
-    // RVA   : 0x9442E0   Offset: 0x9436E0   Length: 0xE8
+    // RVA   : 0x944970   Offset: 0x943D70   Length: 0xE8
     private void VideoPlayFinished(VideoPlayer vp)
     {
         ulong uVar1;
@@ -72,9 +72,9 @@ public class EnterSceneController
         this.videoPlayFinished = 1;
         DOTweenModuleUI.DOFade(this.noiseLogo,0x3f800000,0x3f000000,0);
         uVar1 = DOTweenModuleUI.DOFade(this.noiseLogo,0,0x3f000000,0);
-        uVar1 = TweenSettingsExtensions.SetDelay(uVar1,0x40000000,DAT_181dc0ac8);
-        uVar2 = new OnTooltipCB(this,DAT_181dafbd8,0);
-        TweenSettingsExtensions.OnComplete(uVar1,uVar2,DAT_181dbffb0);
+        uVar1 = TweenSettingsExtensions.SetDelay(uVar1,0x40000000,DAT_181dc0c78);
+        uVar2 = new OnTooltipCB(this,DAT_181dafbf0,0);
+        TweenSettingsExtensions.OnComplete(uVar1,uVar2,DAT_181dc0160);
     }
 
     // Token : 0x60013F8
@@ -85,10 +85,10 @@ public class EnterSceneController
     }
 
     // Token : 0x60013F9
-    // RVA   : 0x944230   Offset: 0x943630   Length: 0x5
+    // RVA   : 0x9448C0   Offset: 0x943CC0   Length: 0x5
     private void <VideoPlayFinished>b__7_0()
     {
-        void FUN_180944230(int64 this)
+        void FUN_1809448c0(int64 this)
         {
         this.noiseLogFinished = 1;
     }

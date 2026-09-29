@@ -17,7 +17,7 @@ public class ButtonClick
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000E61
-    // RVA   : 0xB7D510   Offset: 0xB7C910   Length: 0x47
+    // RVA   : 0xB7DBD0   Offset: 0xB7CFD0   Length: 0x47
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         int iVar1;

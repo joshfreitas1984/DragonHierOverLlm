@@ -26,7 +26,7 @@ public class GetTouchCallback
     }
 
     // Token : 0x6000784
-    // RVA   : 0x8E5870   Offset: 0x8E4C70   Length: 0x286
+    // RVA   : 0x917EB0   Offset: 0x9172B0   Length: 0x286
     public virtual Touch Invoke(int index)
     {
         long lVar1;
@@ -65,7 +65,7 @@ public class GetTouchCallback
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_1808e5abb;
+            goto LAB_1809180fb;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
               cVar4 = FUN_1800d65c0(lVar1);
@@ -88,7 +88,7 @@ public class GetTouchCallback
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar6);
                       uVar5 = (*(code *)*puVar7)(plVar3,index,puVar7[1]);
-                      goto LAB_1808e5ac5;
+                      goto LAB_180918105;
                     }
                     uVar10 = uVar10 + 1;
                   } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
@@ -114,13 +114,13 @@ public class GetTouchCallback
                               (int)((uint32)uVar10 +
                                    *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)) *
                               16 + 0x138 + lVar6;
-                      goto LAB_1808e59b6;
+                      goto LAB_180917ff6;
                     }
                     uVar9 = uVar9 + 1;
                   } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
                 lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_1808e59b6:
+        LAB_180917ff6:
                 uVar5 = *(uint64 *)(lVar6 + 8);
               }
               puVar7 = (uint64 *)il2cpp_internal(uVar5,lVar1);
@@ -131,10 +131,10 @@ public class GetTouchCallback
             uVar5 = (*pcVar2)(index,lVar1);
           }
           else {
-        LAB_1808e5abb:
+        LAB_1809180fb:
             uVar5 = (*pcVar2)(plVar3,index,lVar1);
           }
-        LAB_1808e5ac5:
+        LAB_180918105:
           uVar12 = uVar12 + 1;
           if (uVar13 <= uVar12) {
             return uVar5;
@@ -143,7 +143,7 @@ public class GetTouchCallback
     }
 
     // Token : 0x6000785
-    // RVA   : 0x8E5B00   Offset: 0x8E4F00   Length: 0x7A
+    // RVA   : 0x918140   Offset: 0x917540   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(int index, AsyncCallback callback, object object)
     {
         void GetTouchCallback.BeginInvoke
@@ -154,7 +154,7 @@ public class GetTouchCallback
         uint64 local_10;
         local_res10[0] = index;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d80418,local_res10);
+        local_18 = il2cpp_value_box(DAT_181d80430,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 

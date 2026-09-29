@@ -6,121 +6,121 @@
 public class ReadBookController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001AC8
+    // Token: 0x4001AC9
     public List<ReadBookTextTypeData> readBookTextTypeDataBase;
 
-    // Token: 0x4001AC9
+    // Token: 0x4001ACA
     public GameObject readBookTextPrefab;
 
-    // Token: 0x4001ACA
+    // Token: 0x4001ACB
     public GameObject readBookGridRoot;
 
-    // Token: 0x4001ACB
+    // Token: 0x4001ACC
     public GameObject readBookUIPanel;
 
-    // Token: 0x4001ACC
+    // Token: 0x4001ACD
     public List<Color> ScrollRareColor;
 
-    // Token: 0x4001ACD
+    // Token: 0x4001ACE
     public List<Sprite> RareIconSprite;
 
-    // Token: 0x4001ACE
+    // Token: 0x4001ACF
     public GameObject[] gridUnits;
 
-    // Token: 0x4001ACF
+    // Token: 0x4001AD0
     public List<GameObject> gridPool;
 
-    // Token: 0x4001AD0
+    // Token: 0x4001AD1
     public List<GameObject> actingGrid;
 
-    // Token: 0x4001AD1
+    // Token: 0x4001AD2
     public bool reading;
 
-    // Token: 0x4001AD2
+    // Token: 0x4001AD3
     public ItemData targetBook;
 
-    // Token: 0x4001AD3
+    // Token: 0x4001AD4
     public int mapWidth;
 
-    // Token: 0x4001AD4
+    // Token: 0x4001AD5
     public int mapHeight;
 
-    // Token: 0x4001AD5
+    // Token: 0x4001AD6
     public float totalExp;
 
-    // Token: 0x4001AD6
+    // Token: 0x4001AD7
     public int patientNum;
 
-    // Token: 0x4001AD7
+    // Token: 0x4001AD8
     public int inspirationNum;
 
-    // Token: 0x4001AD8
+    // Token: 0x4001AD9
     public int textReaded;
 
-    // Token: 0x4001AD9
+    // Token: 0x4001ADA
     public GameObject readTextExpIcon;
 
-    // Token: 0x4001ADA
+    // Token: 0x4001ADB
     private GameObject newObj;
 
-    // Token: 0x4001ADB
+    // Token: 0x4001ADC
     private bool inited;
 
-    // Token: 0x4001ADC
+    // Token: 0x4001ADD
     private int maxWidth;
 
-    // Token: 0x4001ADD
+    // Token: 0x4001ADE
     private int maxHeight;
 
-    // Token: 0x4001ADE
+    // Token: 0x4001ADF
     private HeroData targetHero;
 
-    // Token: 0x4001ADF
+    // Token: 0x4001AE0
     private SkillMaxPracticeExpData targetPracticeExpData;
 
-    // Token: 0x4001AE0
+    // Token: 0x4001AE1
     private KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001AE1
+    // Token: 0x4001AE2
     private static ReadBookController _instance;
 
-    // Token: 0x4001AE2
+    // Token: 0x4001AE3
     private ItemData tempBookData;
 
-    // Token: 0x4001AE3
+    // Token: 0x4001AE4
     private bool costContribution;
 
-    // Token: 0x4001AE4
+    // Token: 0x4001AE5
     private bool costMoeny;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002061
-    // RVA   : 0xD0D9D0   Offset: 0xD0CDD0   Length: 0x36
+    // RVA   : 0xD0DFE0   Offset: 0xD0D3E0   Length: 0x36
     public static ReadBookController get_Instance()
     {
-        return **(uint64 **)(DAT_181d99c80 + 184);
+        return **(uint64 **)(DAT_181d99c98 + 184);
     }
 
     // Token : 0x6002062
-    // RVA   : 0xD09350   Offset: 0xD08750   Length: 0xD7
+    // RVA   : 0xD09960   Offset: 0xD08D60   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d99c80 + 184);
+        uVar3 = **(uint64 **)(DAT_181d99c98 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181d99c80 + 184);
+        puVar1 = *(uint64 **)(DAT_181d99c98 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6002063
-    // RVA   : 0xD0D7A0   Offset: 0xD0CBA0   Length: 0x19F
+    // RVA   : 0xD0DDB0   Offset: 0xD0D1B0   Length: 0x19F
     private void Update()
     {
         long lVar1;
@@ -133,14 +133,14 @@ public class ReadBookController
              (lVar1 = GameObject.get_transform(this.readBookUIPanel,0)) != null) &&
             (lVar1 = Transform.Find(lVar1,"TotalExp",0)) != null) &&
            (lVar1 = Transform.Find(lVar1,"Text",0)) != null) {
-          uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+          uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
           uVar3 = Single.ToString(this + 120,"+0;-0;0",0);
           LTLocalization.SetText(uVar2,uVar3,0);
           if (((this.readBookUIPanel != null) &&
               (lVar1 = GameObject.get_transform(this.readBookUIPanel,0)) != null) &&
              ((lVar1 = Transform.Find(lVar1,"Patient",0), lVar1 != null &&
               (lVar1 = Transform.Find(lVar1,"Text",0)) != null))) {
-            uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+            uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
             uVar3 = Int32.ToString(this + 124,0);
             LTLocalization.SetText(uVar2,uVar3,0);
             return;
@@ -149,7 +149,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002064
-    // RVA   : 0xD0A790   Offset: 0xD09B90   Length: 0x480
+    // RVA   : 0xD0ADA0   Offset: 0xD0A1A0   Length: 0x480
     private void InitReadBookText()
     {
         ulong uVar1;
@@ -179,10 +179,10 @@ public class ReadBookController
         local_90 = (int64)this.maxHeight;
         local_88 = 0;
         uStack_80 = 0;
-        uVar1 = FUN_1800d6020(DAT_181da99e0,&local_98);
+        uVar1 = FUN_1800d6020(DAT_181da99f8,&local_98);
         this.gridUnits = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(uVar1,DAT_181d89298);
+        uVar1 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(uVar1,DAT_181d892b0);
         this.gridPool = uVar1;
         iVar9 = 0;
         if (0 < this.maxHeight) {
@@ -195,7 +195,7 @@ public class ReadBookController
                 uVar5 = this.readBookTextPrefab;
                 uVar1 = GlobalData.AddChild(uVar1,uVar5,0);
                 if (lVar2 == null) {
-        LAB_180d0ac0b:
+        LAB_180d0b21b:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
@@ -204,58 +204,58 @@ public class ReadBookController
                 FUN_180128020(lVar2,lVar7,lVar8,uVar1);
                 if ((this.gridUnits == null) ||
                    (lVar2 = FUN_180127f90(this.gridUnits,lVar7,lVar8)) == null)
-                goto LAB_180d0ac0b;
+                goto LAB_180d0b21b;
                 lVar2 = GameObject.get_transform(lVar2,0);
                 puVar3 = (uint64 *)Vector3.get_one(&local_98,0);
-                if (lVar2 == null) goto LAB_180d0ac0b;
+                if (lVar2 == null) goto LAB_180d0b21b;
                 local_a0 = *(uint32 *)(puVar3 + 1);
                 local_a8 = *puVar3;
                 Transform.set_localScale(lVar2,&local_a8,0);
                 if ((this.gridUnits == null) ||
                    (lVar2 = FUN_180127f90(this.gridUnits,lVar7,lVar8)) == null)
-                goto LAB_180d0ac0b;
+                goto LAB_180d0b21b;
                 lVar2 = GameObject.get_transform(lVar2,0);
                 if ((this.readBookTextPrefab == null) ||
                    (lVar4 = GameObject.GetComponent(this.readBookTextPrefab,DAT_181d72bc8),
-                   lVar4 == null)) goto LAB_180d0ac0b;
+                   lVar4 == null)) goto LAB_180d0b21b;
                 puVar3 = (uint64 *)RectTransform.get_rect(local_78,lVar4,0);
                 local_88 = *puVar3;
                 uStack_80 = puVar3[1];
-                fVar10 = (float)FUN_180d98fa0(&local_88,0);
+                fVar10 = (float)FUN_180d995b0(&local_88,0);
                 if ((this.readBookTextPrefab == null) ||
                    (lVar4 = GameObject.GetComponent(this.readBookTextPrefab,DAT_181d72bc8),
-                   lVar4 == null)) goto LAB_180d0ac0b;
+                   lVar4 == null)) goto LAB_180d0b21b;
                 puVar3 = (uint64 *)RectTransform.get_rect(local_68,lVar4,0);
                 local_88 = *puVar3;
                 uStack_80 = puVar3[1];
                 fVar11 = (float)FUN_18044e2b0(&local_88,0);
-                if (lVar2 == null) goto LAB_180d0ac0b;
+                if (lVar2 == null) goto LAB_180d0b21b;
                 local_b0 = 0;
                 local_b8 = (float)iVar6 * fVar10;
                 local_b4 = fVar11 * (float)iVar9;
                 Transform.set_localPosition(lVar2,&local_b8,0);
-                if (this.gridUnits == null) goto LAB_180d0ac0b;
+                if (this.gridUnits == null) goto LAB_180d0b21b;
                 lVar2 = FUN_180127f90(this.gridUnits,lVar7,lVar8);
                 local_res8[0] = iVar9;
-                uVar1 = il2cpp_value_box(DAT_181d80418,local_res8);
+                uVar1 = il2cpp_value_box(DAT_181d80430,local_res8);
                 local_res18[0] = iVar6;
-                uVar5 = il2cpp_value_box(DAT_181d80418,local_res18);
+                uVar5 = il2cpp_value_box(DAT_181d80430,local_res18);
                 uVar1 = String.Format("{0}_{1}",uVar1,uVar5,0);
-                if (lVar2 == null) goto LAB_180d0ac0b;
+                if (lVar2 == null) goto LAB_180d0b21b;
                 Object.set_name(lVar2,uVar1,0);
                 if ((this.gridUnits == null) ||
                    (lVar2 = FUN_180127f90(this.gridUnits,lVar7,lVar8)) == null)
-                goto LAB_180d0ac0b;
+                goto LAB_180d0b21b;
                 GameObject.SetActive(lVar2,0,0);
                 if ((this.gridUnits == null) ||
                    ((lVar2 = FUN_180127f90(this.gridUnits,lVar7,lVar8), lVar2 == null ||
                     (lVar2 = GameObject.GetComponent(lVar2,DAT_181d72ab8)) == null)))
-                goto LAB_180d0ac0b;
+                goto LAB_180d0b21b;
                 *(int *)(lVar2 + 24) = iVar6;
                 if ((this.gridUnits == null) ||
                    ((lVar2 = FUN_180127f90(this.gridUnits,lVar7), lVar2 == null ||
                     (lVar2 = GameObject.GetComponent(lVar2,DAT_181d72ab8)) == null)))
-                goto LAB_180d0ac0b;
+                goto LAB_180d0b21b;
                 iVar6 = iVar6 + 1;
                 *(int *)(lVar2 + 28) = iVar9;
               } while (iVar6 < this.maxWidth);
@@ -266,7 +266,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002065
-    // RVA   : 0xD0B650   Offset: 0xD0AA50   Length: 0xB9F
+    // RVA   : 0xD0BC60   Offset: 0xD0B060   Length: 0xB9F
     public void ShowReadBookPanel()
     {
         float fVar1;
@@ -326,7 +326,7 @@ public class ReadBookController
                                   if (lVar4 != null) {
                                     lVar4 = Transform.Find(lVar4,"Scroll",0);
                                     if (lVar4 != null) {
-                                      plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+                                      plVar6 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
                                       if ((this.targetBook != null) &&
                                          (lVar4 = this.ScrollRareColor) != null) {
                                         uVar2 = this.targetBook.itemLv;
@@ -349,7 +349,7 @@ public class ReadBookController
                                               if (lVar4 != null) {
                                                 lVar4 = Transform.Find(lVar4,"BookName",0);
                                                 if (lVar4 != null) {
-                                                  uVar7 = Component.GetComponent(lVar4,DAT_181d96160);
+                                                  uVar7 = Component.GetComponent(lVar4,DAT_181d96178);
                                                   if (this.targetBook != null) {
                                                     uVar8 = ItemData.Name(this.targetBook,0
                                                                            ,0);
@@ -363,7 +363,7 @@ public class ReadBookController
                                                           lVar4 = Transform.Find(lVar4,"BookRare",0);
                                                           if (lVar4 != null) {
                                                             uVar7 = Component.GetComponent
-                                                                              (lVar4,DAT_181d96160);
+                                                                              (lVar4,DAT_181d96178);
                                                             lVar4 = *(int64 *)
                                                                      (*(int64 *)(DAT_181d73d40 + 184)
                                                                      + 0x500);
@@ -392,7 +392,7 @@ public class ReadBookController
                                                                                       0);
                                                               if (lVar4 != null) {
                                                                 lVar4 = Component.GetComponent
-                                                                                  (lVar4,DAT_181d94460);
+                                                                                  (lVar4,DAT_181d94478);
                                                                 if ((this.targetBook != null)
                                                                    && (lVar9 = *(int64 *)
                                                                                 (this + 64),
@@ -415,28 +415,28 @@ public class ReadBookController
                                                                       (this.readBookUIPanel,1,0);
                                                             this.reading = 1;
                                                             lVar4 = *(int64 *)
-                                                                     (*(int64 *)(DAT_181db4008 + 184)
+                                                                     (*(int64 *)(DAT_181db4020 + 184)
                                                                      + 8);
                                                             if (lVar4 != null) {
                                                               if (*(int64 *)(lVar4 + 24) == 0) {
                                                                 iVar3 = 0;
                                                               }
                                                               else {
-                                                                if (((*(byte *)(DAT_181db4008 + 0x133) & 4
+                                                                if (((*(byte *)(DAT_181db4020 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181db4008 + 224) == 0))
+                                                                   (*(int *)(DAT_181db4020 + 224) == 0))
                                                                 {
                                                                   il2cpp_runtime_class_init();
                                                                 }
-                                                                if (((*(byte *)(DAT_181db4008 + 0x133) & 4
+                                                                if (((*(byte *)(DAT_181db4020 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181db4008 + 224) == 0))
+                                                                   (*(int *)(DAT_181db4020 + 224) == 0))
                                                                 {
                                                                   il2cpp_runtime_class_init();
                                                                 }
                                                                 lVar4 = *(int64 *)
                                                                          (*(int64 *)
-                                                                           (DAT_181db4008 + 184) + 8);
+                                                                           (DAT_181db4020 + 184) + 8);
                                                                 if ((lVar4 == null) ||
                                                                    (lVar4 = *(int64 *)(lVar4 + 24),
                                                                    lVar4 == null)) throw; // [null/range check failed]
@@ -532,40 +532,40 @@ public class ReadBookController
                                                                                 (uVar7,0xc402c000,
                                                                                  0x3f800000,0,0);
                                                               uVar7 = TweenSettingsExtensions.SetEase
-                                                                                (uVar7,15,DAT_181dc0f80);
+                                                                                (uVar7,15,DAT_181dc1128);
                                                               uVar7 = TweenSettingsExtensions.SetDelay
                                                                                 (uVar7,0x3e4ccccd,
-                                                                                 DAT_181dc0c60);
-                                                              if (((*(byte *)(DAT_181d82a40 + 0x133) & 4)
+                                                                                 DAT_181dc0e10);
+                                                              if (((*(byte *)(DAT_181d82a58 + 0x133) & 4)
                                                                    != 0) &&
-                                                                 (*(int *)(DAT_181d82a40 + 224) == 0)) {
-                                                                il2cpp_runtime_class_init(DAT_181d82a40);
+                                                                 (*(int *)(DAT_181d82a58 + 224) == 0)) {
+                                                                il2cpp_runtime_class_init(DAT_181d82a58);
                                                               }
                                                               lVar4 = *(int64 *)
                                                                        (*(int64 *)
-                                                                         (DAT_181d82a40 + 184) + 8);
+                                                                         (DAT_181d82a58 + 184) + 8);
                                                               if (lVar4 == null) {
-                                                                if (((*(byte *)(DAT_181d82a40 + 0x133) & 4
+                                                                if (((*(byte *)(DAT_181d82a58 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181d82a40 + 224) == 0))
+                                                                   (*(int *)(DAT_181d82a58 + 224) == 0))
                                                                 {
-                                                                  il2cpp_runtime_class_init(DAT_181d82a40)
+                                                                  il2cpp_runtime_class_init(DAT_181d82a58)
                                                                   ;
                                                                 }
                                                                 uVar8 = **(uint64 **)
-                                                                          (DAT_181d82a40 + 184);
-                                                                lVar4 = il2cpp_internal(DAT_181daddf8)
+                                                                          (DAT_181d82a58 + 184);
+                                                                lVar4 = il2cpp_internal(DAT_181dade10)
                                                                 ;
                                                                 OnTooltipCB.ctor(lVar4,uVar8,
-                                                                                  DAT_181dab3c8,0);
+                                                                                  DAT_181dab560,0);
                                                                 plVar6 = (int64 *)
                                                                          (*(int64 *)
-                                                                           (DAT_181d82a40 + 184) + 8);
+                                                                           (DAT_181d82a58 + 184) + 8);
                                                                 *plVar6 = lVar4;
                                                                 il2cpp_internal(plVar6,lVar4);
                                                               }
                                                               TweenSettingsExtensions.OnStart
-                                                                        (uVar7,lVar4,DAT_181dc0500);
+                                                                        (uVar7,lVar4,DAT_181dc06b0);
                                                               if (this.readBookUIPanel != null) {
                                                                 lVar4 = GameObject.get_transform
                                                                                   (*(int64 *)
@@ -576,13 +576,13 @@ public class ReadBookController
                                                         uVar7 = ShortcutExtensions.DOScaleX
                                                                           (uVar7,0x3f800000,0x3f800000,0);
                                                         uVar7 = TweenSettingsExtensions.SetEase
-                                                                          (uVar7,15,DAT_181dc0f80);
+                                                                          (uVar7,15,DAT_181dc1128);
                                                         uVar7 = TweenSettingsExtensions.SetDelay
-                                                                          (uVar7,0x3e4ccccd,DAT_181dc0c60)
+                                                                          (uVar7,0x3e4ccccd,DAT_181dc0e10)
                                                         ;
-                                                        uVar8 = new OnTooltipCB(this,DAT_181d9b210,0);
+                                                        uVar8 = new OnTooltipCB(this,DAT_181d9b0a8,0);
                                                         TweenSettingsExtensions.OnComplete
-                                                                  (uVar7,uVar8,DAT_181dc01d0);
+                                                                  (uVar7,uVar8,DAT_181dc0380);
                                                         return;
                                                         }
                                                         }
@@ -641,7 +641,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002066
-    // RVA   : 0xD0CA00   Offset: 0xD0BE00   Length: 0x6C
+    // RVA   : 0xD0D010   Offset: 0xD0C410   Length: 0x6C
     public IEnumerator StartShowText()
     {
         long lVar1;
@@ -653,7 +653,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002067
-    // RVA   : 0xD0B580   Offset: 0xD0A980   Length: 0xC6
+    // RVA   : 0xD0BB90   Offset: 0xD0AF90   Length: 0xC6
     public void ShowNearText(ReadBookTextController targetText)
     {
         long lVar1;
@@ -687,25 +687,25 @@ public class ReadBookController
     }
 
     // Token : 0x6002068
-    // RVA   : 0xD09430   Offset: 0xD08830   Length: 0x4
+    // RVA   : 0xD09A40   Offset: 0xD08E40   Length: 0x4
     public void ChangePatient(int changeNum)
     {
-        void FUN_180d09430(int64 this,int changeNum)
+        void FUN_180d09a40(int64 this,int changeNum)
         {
         this.patientNum = this.patientNum + changeNum;
     }
 
     // Token : 0x6002069
-    // RVA   : 0xD09440   Offset: 0xD08840   Length: 0xB
+    // RVA   : 0xD09A50   Offset: 0xD08E50   Length: 0xB
     public void ChangeTotalExp(float changeExp)
     {
-        void FUN_180d09440(int64 this,float changeExp)
+        void FUN_180d09a50(int64 this,float changeExp)
         {
         this.totalExp = changeExp + this.totalExp;
     }
 
     // Token : 0x600206A
-    // RVA   : 0xD094F0   Offset: 0xD088F0   Length: 0xA43
+    // RVA   : 0xD09B00   Offset: 0xD08F00   Length: 0xA43
     public void GenerateReadBookPanel()
     {
         int iVar1;
@@ -740,14 +740,14 @@ public class ReadBookController
         plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/BigSkill0",0);
         plVar16 = (int64 *)0;
         plVar13 = plVar16;
-        if ((plVar4 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar4 == DAT_181daf348)) {
+        if ((plVar4 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar4 == DAT_181daf360)) {
           plVar13 = plVar4;
         }
         NGUITools.PlaySound(plVar13,0);
         if (this.gridPool != null) {
-          FUN_1812f9a10(this.gridPool,DAT_181d89418);
+          FUN_1812fa020(this.gridPool,DAT_181d89430);
           if (this.actingGrid != null) {
-            FUN_1812f9a10(this.actingGrid,DAT_181d89418);
+            FUN_1812fa020(this.actingGrid,DAT_181d89430);
             if (this.readBookGridRoot != null) {
               lVar5 = GameObject.get_transform(this.readBookGridRoot,0);
               if ((this.readBookTextPrefab != null) &&
@@ -756,7 +756,7 @@ public class ReadBookController
                 puVar7 = (uint64 *)RectTransform.get_rect(local_f8,lVar6,0);
                 local_108 = *puVar7;
                 uStack_100 = puVar7[1];
-                fVar18 = (float)FUN_180d98fa0(&local_108,0);
+                fVar18 = (float)FUN_180d995b0(&local_108,0);
                 iVar3 = this.mapWidth;
                 if ((this.readBookTextPrefab != null) &&
                    (lVar6 = GameObject.GetComponent(this.readBookTextPrefab,DAT_181d72bc8),
@@ -779,7 +779,7 @@ public class ReadBookController
                             if (this.gridUnits == null) throw; // [null/range check failed]
                             lVar5 = FUN_180127f90(this.gridUnits,(int64)(int)plVar13,
                                                   (int64)(int)plVar4);
-                            if ((lVar5 == null) || (lVar6 = FUN_180f92a00(lVar5,0)) == null)
+                            if ((lVar5 == null) || (lVar6 = FUN_180f93010(lVar5,0)) == null)
                             throw; // [null/range check failed]
                             GameObject.SetActive(lVar6,1,0);
                             lVar8 = GameObject.GetComponent(lVar5,DAT_181d72ab8);
@@ -830,7 +830,7 @@ public class ReadBookController
                             uVar10 = ShortcutExtensions.DOLocalMove(uVar11,&local_118);
                             TweenSettingsExtensions.SetDelay(uVar10);
                             if (this.gridPool == null) throw; // [null/range check failed]
-                            FUN_18181e0a0(this.gridPool,lVar5,DAT_181d89398);
+                            FUN_18181e6b0(this.gridPool,lVar5,DAT_181d893b0);
                             uVar17 = (int)plVar13 + 1;
                             plVar13 = (int64 *)(uint64)uVar17;
                           } while ((int)uVar17 < this.mapWidth);
@@ -839,8 +839,8 @@ public class ReadBookController
                         plVar4 = (int64 *)(uint64)uVar17;
                       } while ((int)uVar17 < this.mapHeight);
                     }
-                    lVar6 = il2cpp_internal(DAT_181d93cd0);
-                    FUN_18132faf0(lVar6,DAT_181d8f098);
+                    lVar6 = il2cpp_internal(DAT_181d93ce8);
+                    FUN_181330100(lVar6,DAT_181d8f0b0);
                     lVar5 = this.readBookTextTypeDataBase;
                     uVar17 = 1;
                     if (lVar5 != null) {
@@ -856,7 +856,7 @@ public class ReadBookController
                         if (lVar5 == null) throw; // [null/range check failed]
                         if (*(int *)(lVar5 + 44) <= iVar3) {
                           if ((this.readBookTextTypeDataBase == null) ||
-                             (lVar5 = FUN_180002f80(this.readBookTextTypeDataBase,uVar17,DAT_181d9e508),
+                             (lVar5 = FUN_180002f80(this.readBookTextTypeDataBase,uVar17,DAT_181d9e520),
                              lVar5 == null)) throw; // [null/range check failed]
                           fVar18 = *(float *)(lVar5 + 64);
                           iVar3 = this.mapHeight;
@@ -882,7 +882,7 @@ public class ReadBookController
                           if (0 < iVar3) {
                             do {
                               if (lVar6 == null) throw; // [null/range check failed]
-                              FUN_18182a0b0(lVar6,uVar17);
+                              FUN_18182a6c0(lVar6,uVar17);
                               uVar15 = (int)plVar4 + 1;
                               plVar4 = (int64 *)(uint64)uVar15;
                             } while ((int)uVar15 < iVar3);
@@ -893,11 +893,11 @@ public class ReadBookController
                         lVar8 = lVar8 + 8;
                         if (lVar5 == null) throw; // [null/range check failed]
                       }
-                      lVar8 = il2cpp_internal(DAT_181d93cd0);
-                      FUN_18132faf0(lVar8,DAT_181d8f098);
+                      lVar8 = il2cpp_internal(DAT_181d93ce8);
+                      FUN_181330100(lVar8,DAT_181d8f0b0);
                       lVar5 = this.gridPool;
                       plVar4 = plVar16;
-                      if (lVar5 != null) goto LAB_180d09d14;
+                      if (lVar5 != null) goto LAB_180d0a324;
                     }
                   }
                 }
@@ -906,7 +906,7 @@ public class ReadBookController
           }
         }
         throw; // [null/range check failed]
-        LAB_180d09d51:
+        LAB_180d0a361:
         if (*(int *)(lVar8 + 24) < 1) {
           return;
         }
@@ -914,7 +914,7 @@ public class ReadBookController
         if (lVar6.Count < 1) {
           return;
         }
-        uVar17 = FUN_180d95a30(0,*(int *)(lVar8 + 24),0);
+        uVar17 = FUN_180d96040(0,*(int *)(lVar8 + 24),0);
         if (*(uint32 *)(lVar8 + 24) <= uVar17) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -943,25 +943,25 @@ public class ReadBookController
         if (plVar4 != (int64 *)0) {
         }
         lVar12.name = plVar13;
-        FUN_1817eee00(lVar8,uVar17,DAT_181d8f618);
-        FUN_1817eed70(lVar6,0);
-        goto LAB_180d09d51;
+        FUN_1817ef410(lVar8,uVar17,DAT_181d8f630);
+        FUN_1817ef380(lVar6,0);
+        goto LAB_180d0a361;
         while( true ) {
           if (lVar8 == null) break;
-          FUN_18182a0b0(lVar8,plVar4);
+          FUN_18182a6c0(lVar8,plVar4);
           lVar5 = this.gridPool;
           plVar4 = (int64 *)(uint64)((int)plVar4 + 1);
           if (lVar5 == null) break;
-        LAB_180d09d14:
+        LAB_180d0a324:
           if (lVar5.Count <= (int)plVar4) {
-            if (lVar8 != null) goto LAB_180d09d51;
+            if (lVar8 != null) goto LAB_180d0a361;
             break;
           }
         }
     }
 
     // Token : 0x600206B
-    // RVA   : 0xD0B3C0   Offset: 0xD0A7C0   Length: 0x12E
+    // RVA   : 0xD0B9D0   Offset: 0xD0ADD0   Length: 0x12E
     public void ResetAll()
     {
         long lVar1;
@@ -975,7 +975,7 @@ public class ReadBookController
           lVar2 = 32;
           while( true ) {
             if (lVar1.Count <= (int)uVar3) {
-              FUN_1812f9a10(lVar1,DAT_181d89418);
+              FUN_1812fa020(lVar1,DAT_181d89430);
               return;
             }
             if (lVar1 == null) break;
@@ -1002,10 +1002,10 @@ public class ReadBookController
     }
 
     // Token : 0x600206C
-    // RVA   : 0xD09450   Offset: 0xD08850   Length: 0x9F
+    // RVA   : 0xD09A60   Offset: 0xD08E60   Length: 0x9F
     public void FinishRead()
     {
-        var pStatics = *(int64*)(DAT_181da8710 + 184);
+        var pStatics = *(int64*)(DAT_181da8728 + 184);
         if (*pStatics != 0) {
           SureMenu.CallSureMenu
                     (*pStatics,"确认结束阅读吗？","SureFinishRead",0,"ReadBookController",0);
@@ -1014,7 +1014,7 @@ public class ReadBookController
     }
 
     // Token : 0x600206D
-    // RVA   : 0xD0CA70   Offset: 0xD0BE70   Length: 0x91D
+    // RVA   : 0xD0D080   Offset: 0xD0C480   Length: 0x91D
     public void SureFinishRead()
     {
         uint uVar1;
@@ -1041,7 +1041,7 @@ public class ReadBookController
         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
         plVar12 = (int64 *)0;
         plVar10 = plVar12;
-        if ((plVar3 != (int64 *)0) && (plVar10 = (int64 *)0, *plVar3 == DAT_181daf348)) {
+        if ((plVar3 != (int64 *)0) && (plVar10 = (int64 *)0, *plVar3 == DAT_181daf360)) {
           plVar10 = plVar3;
         }
         NGUITools.PlaySound(plVar10,0);
@@ -1053,14 +1053,14 @@ public class ReadBookController
           il2cpp_internal(plVar3,lVar7);
           if (((this.targetPracticeExpData == null) || (this.targetBook == null)) ||
              (lVar7 = this.targetPracticeExpData.maxReadExp) == null) throw; // [null/range check failed]
-          FUN_181829d40(lVar7,this.targetBook.rareLv,
-                        this.totalExp,DAT_181da10f8);
+          FUN_18182a350(lVar7,this.targetBook.rareLv,
+                        this.totalExp,DAT_181da1110);
           if (((GameController._instance == null) ||
               (lVar7 = GameController._instance.worldData) == null) ||
              (lVar7 = WorldData.Player(lVar7,0)) == null) throw; // [null/range check failed]
           HeroData.AddSkillMaxPracticeExp(lVar7,this.targetPracticeExpData,0);
-        LAB_180d0cdf1:
-          lVar7 = **(int64 **)(DAT_181d7f6a8 + 184);
+        LAB_180d0d401:
+          lVar7 = **(int64 **)(DAT_181d7f6c0 + 184);
           if (this.targetBook == null) throw; // [null/range check failed]
           uVar4 = ItemData.Name(this.targetBook,1,0);
           uVar5 = Single.ToString(this + 120,"f0",0);
@@ -1087,13 +1087,13 @@ public class ReadBookController
           if (*pfVar11 <= fVar14 && fVar14 != *pfVar11) {
             if (((this.targetPracticeExpData == null) || (this.targetBook == null)) ||
                (lVar7 = this.targetPracticeExpData.maxReadExp) == null) throw; // [null/range check failed]
-            FUN_181829d40(lVar7,this.targetBook.rareLv,fVar14,DAT_181da10f8
+            FUN_18182a350(lVar7,this.targetBook.rareLv,fVar14,DAT_181da1110
                          );
-            goto LAB_180d0cdf1;
+            goto LAB_180d0d401;
           }
         }
         pfVar11 = &this.totalExp;
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if ((lVar7 != null) && (lVar7 = PlotController.GetAreaAvailableHelpHero(lVar7,0)) != null) {
           if (0 < lVar7.Count) {
             fVar14 = (float)Random.get_value(0);
@@ -1128,7 +1128,7 @@ public class ReadBookController
                     }
                     local_res8[0] =
                          lVar13[uVar2];
-                    uVar4 = il2cpp_value_box(DAT_181da22d8,local_res8);
+                    uVar4 = il2cpp_value_box(DAT_181da22f0,local_res8);
                     lVar13 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4a0);
                     if (((this.targetSkill != null) &&
                         (lVar9 = KungfuSkillLvData.DataBase(this.targetSkill,0)) != null
@@ -1140,10 +1140,10 @@ public class ReadBookController
                       local_res18[0] = fVar14 * 100.0;
                       uVar5 = *(uint64 *)
                                (*(int64 *)(lVar13 + 16) + 32 + (int64)(int)uVar2 * 8);
-                      uVar6 = il2cpp_value_box(DAT_181da22d8,local_res18);
+                      uVar6 = il2cpp_value_box(DAT_181da22f0,local_res18);
                       uVar4 = String.Format("这秘籍中有些晦涩难懂之处，我来给#PlayerName#讲解讲解好了。\n(对方{0}点{1}技能，经验额外增加{2}%)",uVar4,uVar5,uVar6,0);
                       uVar5 = Int32.ToString(lVar7 + 88,0);
-                      uVar6 = il2cpp_internal(DAT_181da24d8);
+                      uVar6 = il2cpp_internal(DAT_181da24f0);
                       SinglePlotData.ctor
                                 (uVar6,uVar4,0,3,uVar5,3,"0",
                                  (uint64)in_stack_ffffffffffffff60 & 0xffffffff00000000,"PlotGetReadTotalExp",0
@@ -1169,7 +1169,7 @@ public class ReadBookController
             while( true ) {
               uVar2 = (uint32)plVar12;
               if (lVar7.Count <= (int)uVar2) {
-                FUN_1812f9a10(lVar7,DAT_181d89418);
+                FUN_1812fa020(lVar7,DAT_181d89430);
                 return;
               }
               if (lVar7 == null) break;
@@ -1197,7 +1197,7 @@ public class ReadBookController
     }
 
     // Token : 0x600206E
-    // RVA   : 0xD0A650   Offset: 0xD09A50   Length: 0x13B
+    // RVA   : 0xD0AC60   Offset: 0xD0A060   Length: 0x13B
     public void GetTotalExp()
     {
         long lVar1;
@@ -1212,7 +1212,7 @@ public class ReadBookController
           lVar2 = 32;
           while( true ) {
             if (lVar1.Count <= (int)uVar3) {
-              FUN_1812f9a10(lVar1,DAT_181d89418);
+              FUN_1812fa020(lVar1,DAT_181d89430);
               return;
             }
             if (lVar1 == null) break;
@@ -1239,7 +1239,7 @@ public class ReadBookController
     }
 
     // Token : 0x600206F
-    // RVA   : 0xD09F40   Offset: 0xD09340   Length: 0x70F
+    // RVA   : 0xD0A550   Offset: 0xD09950   Length: 0x70F
     public void GetReadExp(float targetExp)
     {
         long lVar1;
@@ -1249,7 +1249,7 @@ public class ReadBookController
         ulong uVar5;
         long lVar6;
         int iVar7;
-        lVar6 = **(int64 **)(DAT_181da4450 + 184);
+        lVar6 = **(int64 **)(DAT_181da4468 + 184);
         if ((GameController._instance == null) ||
            (lVar4 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
@@ -1266,7 +1266,7 @@ public class ReadBookController
         uVar5 = Int32.ToString(lVar4 + 16,0);
         if (lVar6 == null) throw; // [null/range check failed]
         GameController.CheckPlotTrigger(lVar6,6,uVar5,999999,0);
-        lVar6 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar6 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if (lVar6 == null) throw; // [null/range check failed]
         cVar2 = PlotController.HaveNoPlotWait(lVar6,0);
         if (cVar2) {
@@ -1282,7 +1282,7 @@ public class ReadBookController
             if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
             lVar6 = WorldData.Player(lVar6.villageAreaID,0);
             if ((lVar6 == null) || (*(int64 *)(lVar6 + 0x2e8) == 0)) throw; // [null/range check failed]
-            lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 0x2e8),iVar7,DAT_181d94c88);
+            lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 0x2e8),iVar7,DAT_181d94ca0);
             if ((lVar6 = lVar6?.WorldEventDatasSaveRecord) == null) throw; // [null/range check failed]
             if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1294,7 +1294,7 @@ public class ReadBookController
               if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
               lVar6 = WorldData.Player(lVar6.villageAreaID,0);
               if ((lVar6 == null) || (*(int64 *)(lVar6 + 0x2e8) == 0)) throw; // [null/range check failed]
-              lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 0x2e8),iVar7,DAT_181d94c88);
+              lVar6 = FUN_180002f80(*(int64 *)(lVar6 + 0x2e8),iVar7,DAT_181d94ca0);
               if ((lVar6 = lVar6?.WorldEventDatasSaveRecord) == null) throw; // [null/range check failed]
               if (lVar6.cityAreaID == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1305,19 +1305,19 @@ public class ReadBookController
               if ((this.targetBook == null) ||
                  (lVar6 = this.targetBook.bookData) == null)
               throw; // [null/range check failed]
-              if (iVar3 == lVar6.chapter) goto LAB_180d0a46a;
+              if (iVar3 == lVar6.chapter) goto LAB_180d0aa7a;
             }
             iVar7 = iVar7 + 1;
           } while( true );
         }
-        goto LAB_180d0a547;
-        LAB_180d0a46a:
+        goto LAB_180d0ab57;
+        LAB_180d0aa7a:
         lVar6 = FUN_18046c400(0);
         lVar4 = FUN_18046c0a0(0);
         if ((lVar4 == null) || (lVar4.villageAreaID == null)) throw; // [null/range check failed]
         lVar4 = WorldData.Player(lVar4.villageAreaID,0);
         if ((lVar4 == null) || (*(int64 *)(lVar4 + 0x2e8) == 0)) throw; // [null/range check failed]
-        lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 0x2e8),iVar7,DAT_181d94c88);
+        lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 0x2e8),iVar7,DAT_181d94ca0);
         if ((lVar4 = lVar4?.WorldEventDatasSaveRecord) == null) throw; // [null/range check failed]
         if (lVar4.cityAreaID == null) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1325,7 +1325,7 @@ public class ReadBookController
         lVar4 = *(int64 *)(lVar4.chapter + 32);
         if ((lVar4 == null) || (lVar6 == null)) throw; // [null/range check failed]
         PlotController.AddPlotEvent(lVar6,lVar4.villageAreaID,0);
-        LAB_180d0a547:
+        LAB_180d0ab57:
         if ((GameController._instance != null) &&
            (lVar6 = GameController._instance.worldData) != null) {
           lVar6 = WorldData.Player(lVar6,0);
@@ -1341,7 +1341,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002070
-    // RVA   : 0xD0B4F0   Offset: 0xD0A8F0   Length: 0x88
+    // RVA   : 0xD0BB00   Offset: 0xD0AF00   Length: 0x88
     public IEnumerator SeeAndReadText(GameObject target)
     {
         long lVar1;
@@ -1354,7 +1354,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002071
-    // RVA   : 0xD0C1F0   Offset: 0xD0B5F0   Length: 0x80F
+    // RVA   : 0xD0C800   Offset: 0xD0BC00   Length: 0x80F
     public void StartReadBook(HeroData _targetHero, ItemData _targetBookData, bool targetCostContribution, bool readCostMoney)
     {
         void ReadBookController.StartReadBook
@@ -1390,11 +1390,11 @@ public class ReadBookController
           lVar6 = *plVar1;
           if ((lVar6 == null) || (*(int *)(lVar6 + 20) < 10)) {
             if (*(char *)(this + 200) == false) {
-        LAB_180d0c582:
-              lVar6 = **(int64 **)(DAT_181da8710 + 184);
-              plVar7 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
+        LAB_180d0cb92:
+              lVar6 = **(int64 **)(DAT_181da8728 + 184);
+              plVar7 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
               if ((*plVar12 == 0) || (lVar8 = ItemData.Name(*plVar12,1,0), plVar7 == (int64 *)0)) {
-        LAB_180d0c9fa:
+        LAB_180d0d00a:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -1411,7 +1411,7 @@ public class ReadBookController
               }
               plVar7[4] = lVar8;
               il2cpp_internal(plVar7 + 4,lVar8);
-              if (*plVar12 == 0) goto LAB_180d0c9fa;
+              if (*plVar12 == 0) goto LAB_180d0d00a;
               lVar8 = ItemData.GetBookRareLvName(*plVar12,0);
               if ((lVar8 != null) &&
                  (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar7 + 64))) == null) {
@@ -1427,9 +1427,9 @@ public class ReadBookController
               plVar7[5] = lVar8;
               il2cpp_internal(plVar7 + 5,lVar8);
               if ((*plVar12 == 0) || (lVar8 = *(int64 *)(*plVar12 + 112)) == null)
-              goto LAB_180d0c9fa;
+              goto LAB_180d0d00a;
               local_38 = BookData.ReadDayCost(lVar8,0);
-              lVar8 = il2cpp_value_box(DAT_181d80418,&local_38);
+              lVar8 = il2cpp_value_box(DAT_181d80430,&local_38);
               if ((lVar8 != null) &&
                  (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar7 + 64))) == null) {
                 uVar11 = il2cpp_internal();
@@ -1451,7 +1451,7 @@ public class ReadBookController
                   FUN_1800d6620();
                 }
                 local_34[0] = BookData.ReadMoneyCost(lVar8,0);
-                uVar10 = il2cpp_value_box(DAT_181d80418,local_34);
+                uVar10 = il2cpp_value_box(DAT_181d80430,local_34);
                 lVar8 = String.Format("和{0}银钱",uVar10,0);
               }
               if ((lVar8 != null) &&
@@ -1500,7 +1500,7 @@ public class ReadBookController
                 SureMenu.CallSureMenu(lVar6,uVar11,"SureStartReadBook",0,"ReadBookController",1,0);
                 plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
                 plVar12 = (int64 *)0;
-                if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
+                if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf360)) {
                   plVar12 = plVar7;
                 }
                 NGUITools.PlaySound(plVar12,0);
@@ -1526,7 +1526,7 @@ public class ReadBookController
               if ((lVar6 != null) ||
                  (fVar2 = *(float *)(lVar8 + 0x1c0),
                  iVar5 = ItemData.GetReadBookContributionCost(lVar9,0), (float)iVar5 <= fVar2))
-              goto LAB_180d0c582;
+              goto LAB_180d0cb92;
               lVar6 = FUN_18046c0a0(0);
               uVar11 = "功绩不足！";
             }
@@ -1547,7 +1547,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002072
-    // RVA   : 0xD0D390   Offset: 0xD0C790   Length: 0x388
+    // RVA   : 0xD0D9A0   Offset: 0xD0CDA0   Length: 0x388
     public void SureStartReadBook()
     {
         long lVar1;
@@ -1573,7 +1573,7 @@ public class ReadBookController
               GameController.ShowTextOnMouse(lVar5,"银钱不足！",0);
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar8 = (int64 *)0;
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
                 plVar8 = plVar6;
               }
               NGUITools.PlaySound(plVar8,0);
@@ -1591,7 +1591,7 @@ public class ReadBookController
           if (lVar5 == null) throw; // [null/range check failed]
           HeroData.ChangeMoney(lVar5,-iVar3,1,0);
         }
-        lVar5 = *(int64 *)(*(int64 *)(DAT_181db5de8 + 184) + 8);
+        lVar5 = *(int64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
         if (this.tempBookData != null) {
           uVar7 = ItemData.Name(this.tempBookData,1,0);
           uVar7 = String.Format("阅读《{0}》",uVar7,0);
@@ -1607,7 +1607,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002073
-    // RVA   : 0xD0AC20   Offset: 0xD0A020   Length: 0x79D
+    // RVA   : 0xD0B230   Offset: 0xD0A630   Length: 0x79D
     public void RealStartReadBook()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -1619,7 +1619,7 @@ public class ReadBookController
         long lVar7;
         float[] local_res18 = new float[2];
         float[] local_res20 = new float[2];
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181db5de8 + 184) + 8);
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
         if (lVar3 != null) {
           if (!lVar3.activeTimeLeft) {
             return;
@@ -1660,8 +1660,8 @@ public class ReadBookController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 if (0.0 < lVar3.skillID[uVar2]) {
-                  lVar3 = **(int64 **)(DAT_181da8710 + 184);
-                  plVar5 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
+                  lVar3 = **(int64 **)(DAT_181da8728 + 184);
+                  plVar5 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
                   if ((this.tempBookData != null) &&
                      (lVar6 = ItemData.Name(this.tempBookData,1,0), plVar5 != (int64 *)0
                      )) {
@@ -1702,7 +1702,7 @@ public class ReadBookController
                       plVar5[5] = lVar6;
                       il2cpp_internal(plVar5 + 5,lVar6);
                       local_res20[0] = *(float *)(pStatics_3d40 + 0x160) * 100.0;
-                      lVar6 = il2cpp_value_box(DAT_181da22d8,local_res20);
+                      lVar6 = il2cpp_value_box(DAT_181da22f0,local_res20);
                       if ((lVar6 != null) &&
                          (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null)
                       {
@@ -1779,7 +1779,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002074
-    // RVA   : 0xD09250   Offset: 0xD08650   Length: 0xF1
+    // RVA   : 0xD09860   Offset: 0xD08C60   Length: 0xF1
     public void AutoReadBook()
     {
         float fVar1;
@@ -1800,12 +1800,12 @@ public class ReadBookController
     }
 
     // Token : 0x6002075
-    // RVA   : 0xD0D940   Offset: 0xD0CD40   Length: 0x8A
+    // RVA   : 0xD0DF50   Offset: 0xD0D350   Length: 0x8A
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(uVar1,DAT_181d89298);
+        uVar1 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(uVar1,DAT_181d892b0);
         this.actingGrid = uVar1;
         this.maxWidth = 17;
         this.maxHeight = 11;
@@ -1813,7 +1813,7 @@ public class ReadBookController
     }
 
     // Token : 0x6002076
-    // RVA   : 0xD0D720   Offset: 0xD0CB20   Length: 0x7D
+    // RVA   : 0xD0DD30   Offset: 0xD0D130   Length: 0x7D
     private void <ShowReadBookPanel>b__31_1()
     {
         long lVar1;
@@ -1821,7 +1821,7 @@ public class ReadBookController
         lVar1 = new WarpText_d__8(0,0);
         if (lVar1 != null) {
           *(uint64 *)(lVar1 + 32) = this;
-          FUN_180d8c2e0(this,lVar1,0);
+          FUN_180d8c8f0(this,lVar1,0);
           return;
         }
     }

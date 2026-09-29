@@ -26,31 +26,35 @@ public class OnHoverCB
     }
 
     // Token : 0x600094F
-    // RVA   : 0x8E46D0   Offset: 0x8E3AD0   Length: 0x2AF
+    // RVA   : 0x91A6E0   Offset: 0x919AE0   Length: 0x39F
     public virtual void Invoke(object obj, bool isOver)
     {
         long lVar1;
         bool cVar4;
         ulong uVar7;
-        ulong uVar8;
-        ulong uVar9;
+        long lVar8;
+        long lVar9;
+        ushort uVar10;
+        ushort uVar11;
+        ulong uVar12;
+        ulong uVar13;
         long local_res8;
         local_res8 = this;
         lVar1 = *(int64 *)(this + 104);
         if (lVar1 == null) {
           plVar5 = &local_res8;
-          uVar8 = 1;
+          uVar12 = 1;
         }
         else {
-          uVar8 = *(uint64 *)(lVar1 + 24);
+          uVar12 = *(uint64 *)(lVar1 + 24);
           plVar5 = (int64 *)(lVar1 + 32);
-          if (uVar8 == 0) {
+          if (uVar12 == 0) {
             return;
           }
         }
-        uVar9 = 0;
+        uVar13 = 0;
         do {
-          lVar1 = plVar5[uVar9];
+          lVar1 = plVar5[uVar13];
           pcVar2 = *(code **)(lVar1 + 16);
           plVar3 = *(int64 **)(lVar1 + 32);
           lVar1 = *(int64 *)(lVar1 + 40);
@@ -62,7 +66,7 @@ public class OnHoverCB
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e4935;
+              goto LAB_18091aa3a;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -73,28 +77,63 @@ public class OnHoverCB
                               (*plVar3 + 0x140 + (uint64)*(uint16 *)(lVar1 + 72) * 16));
                 }
                 else {
-                  uVar7 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180133470(*(uint16 *)(lVar1 + 72),uVar7,plVar3,obj,isOver);
+                  lVar9 = il2cpp_class_get_namespace(lVar1);
+                  lVar8 = *plVar3;
+                  uVar11 = 0;
+                  if (*(uint16 *)(lVar8 + 0x12a) != 0) {
+                    do {
+                      if (*(int64 *)(*(int64 *)(lVar8 + 176) + (uint64)uVar11 * 16) == lVar9)
+                      {
+                        puVar6 = (uint64 *)
+                                 ((int64)
+                                  (int)((uint32)*(uint16 *)(lVar1 + 72) +
+                                       *(int *)(*(int64 *)(lVar8 + 176) + 8 + (uint64)uVar11 * 16
+                                               )) * 16 + 0x138 + lVar8);
+                        (*(code *)*puVar6)(plVar3,obj,isOver,puVar6[1]);
+                        goto LAB_18091aa4a;
+                      }
+                      uVar11 = uVar11 + 1;
+                    } while (uVar11 < *(uint16 *)(lVar8 + 0x12a));
+                  }
+                  puVar6 = (uint64 *)FUN_1800914f0(plVar3,lVar9,*(uint16 *)(lVar1 + 72));
+                  (*(code *)*puVar6)(plVar3,obj,isOver,puVar6[1]);
                 }
               }
               else {
                 cVar4 = FUN_1800d65c0(lVar1);
+                uVar11 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   puVar6 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
-                                                (*plVar3 +
-                                                ((uint64)*(uint16 *)(lVar1 + 72) + 20) * 16),
-                                               lVar1);
+                                                (*plVar3 + ((uint64)uVar11 + 20) * 16),lVar1);
                   (*(code *)*puVar6)(plVar3,obj,isOver,puVar6);
                 }
                 else {
-                  FUN_1801331b0(lVar1,plVar3,obj,isOver);
+                  lVar8 = *plVar3;
+                  uVar10 = 0;
+                  if (*(uint16 *)(lVar8 + 0x12a) != 0) {
+                    do {
+                      if (*(int64 *)(*(int64 *)(lVar8 + 176) + (uint64)uVar10 * 16) ==
+                          *(int64 *)(lVar1 + 24)) {
+                        lVar8 = (int64)
+                                (int)((uint32)uVar11 +
+                                     *(int *)(*(int64 *)(lVar8 + 176) + 8 + (uint64)uVar10 * 16))
+                                * 16 + 0x138 + lVar8;
+                        goto LAB_18091a906;
+                      }
+                      uVar10 = uVar10 + 1;
+                    } while (uVar10 < *(uint16 *)(lVar8 + 0x12a));
+                  }
+                  lVar8 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),(uint64)uVar11);
+        LAB_18091a906:
+                  puVar6 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar8 + 8),lVar1);
+                  (*(code *)*puVar6)(plVar3,obj,isOver,puVar6);
                 }
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e4777;
+              goto LAB_18091a787;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -126,22 +165,23 @@ public class OnHoverCB
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_1808e4777:
+        LAB_18091a787:
             (*pcVar2)(obj,isOver,lVar1);
           }
           else {
-        LAB_1808e4935:
+        LAB_18091aa3a:
             (*pcVar2)(plVar3,obj,isOver,lVar1);
           }
-          uVar9 = uVar9 + 1;
-          if (uVar8 <= uVar9) {
+        LAB_18091aa4a:
+          uVar13 = uVar13 + 1;
+          if (uVar12 <= uVar13) {
             return;
           }
         } while( true );
     }
 
     // Token : 0x6000950
-    // RVA   : 0x183D670   Offset: 0x183CA70   Length: 0x82
+    // RVA   : 0x91A650   Offset: 0x919A50   Length: 0x82
     public virtual IAsyncResult BeginInvoke(object obj, bool isOver, AsyncCallback callback, object object)
     {
         void OnHoverCB.BeginInvoke
@@ -155,7 +195,7 @@ public class OnHoverCB
         local_res18[0] = isOver;
         local_18 = 0;
         local_28 = obj;
-        local_20 = il2cpp_value_box(DAT_181db2ac8,local_res18);
+        local_20 = il2cpp_value_box(DAT_181db2ae0,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 

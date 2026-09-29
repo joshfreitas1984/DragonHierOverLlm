@@ -6,7 +6,7 @@
 public class ShowAreaQuickDetail
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B6C
+    // Token: 0x4001B6D
     public AreaData areaData;
 
     // ── Methods ──────────────────────────────────────────────────

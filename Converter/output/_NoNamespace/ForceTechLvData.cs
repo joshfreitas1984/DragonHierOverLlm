@@ -79,7 +79,7 @@ public class ForceTechLvData
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               fVar2 = lVar6[uVar5];
-              uVar8 = il2cpp_internal(DAT_181d9c700);
+              uVar8 = il2cpp_internal(DAT_181d9c718);
               PlotChoiceRequirement.ctor
                         (uVar8,uVar3,(((float)iVar4 + 1.0) * fVar1 * 500.0 * costRate) / fVar2,0);
               return uVar8;
@@ -243,7 +243,7 @@ public class ForceTechLvData
         long lVar1;
         lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 160)) != null) {
-          FUN_1817d9e10(lVar1,this.techID,DAT_181db9a08);
+          FUN_1817da420(lVar1,this.techID,DAT_181db9a20);
           return;
         }
     }
@@ -260,13 +260,13 @@ public class ForceTechLvData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -278,7 +278,7 @@ public class ForceTechLvData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

@@ -23,7 +23,7 @@ public class WindowDragTilt
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600009D
-    // RVA   : 0x9C98D0   Offset: 0x9C8CD0   Length: 0x59
+    // RVA   : 0x9C9F60   Offset: 0x9C9360   Length: 0x59
     private void OnEnable()
     {
         ulong uVar1;
@@ -39,7 +39,7 @@ public class WindowDragTilt
     }
 
     // Token : 0x600009E
-    // RVA   : 0x9C9930   Offset: 0x9C8D30   Length: 0x110
+    // RVA   : 0x9C9FC0   Offset: 0x9C93C0   Length: 0x110
     private void Update()
     {
         ulong uVar1;
@@ -82,10 +82,10 @@ public class WindowDragTilt
     }
 
     // Token : 0x600009F
-    // RVA   : 0x9C9A50   Offset: 0x9C8E50   Length: 0xE
+    // RVA   : 0x9CA0E0   Offset: 0x9C94E0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1809c9a50(int64 this)
+        void FUN_1809ca0e0(int64 this)
         {
         this.degrees = 0x41f00000;
         FUN_18044ef50(this,0);

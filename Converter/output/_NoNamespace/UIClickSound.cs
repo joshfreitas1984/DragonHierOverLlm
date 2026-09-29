@@ -6,18 +6,18 @@
 public class UIClickSound
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DCF
+    // Token: 0x4001DD0
     public AudioClip audioClip;
 
-    // Token: 0x4001DD0
+    // Token: 0x4001DD1
     public float volume;
 
-    // Token: 0x4001DD1
+    // Token: 0x4001DD2
     public float pitch;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002362
-    // RVA   : 0x12AF4C0   Offset: 0x12AE8C0   Length: 0x84
+    // RVA   : 0x12AFAD0   Offset: 0x12AEED0   Length: 0x84
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         uint uVar1;
@@ -30,10 +30,10 @@ public class UIClickSound
     }
 
     // Token : 0x6002363
-    // RVA   : 0x12AF550   Offset: 0x12AE950   Length: 0x15
+    // RVA   : 0x12AFB60   Offset: 0x12AEF60   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_1812af550(int64 this)
+        void FUN_1812afb60(int64 this)
         {
         this.volume = 0x3f800000;
         this.pitch = 0x3f800000;

@@ -6,10 +6,10 @@
 public class ControlPoint
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400207C
+    // Token: 0x400207D
     public Vector3 p;
 
-    // Token: 0x400207D
+    // Token: 0x400207E
     public Vector3 forward;
 
     // ── Methods ──────────────────────────────────────────────────

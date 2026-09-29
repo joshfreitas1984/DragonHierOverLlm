@@ -6,13 +6,13 @@
 public class <RandomSpawnsCoroutine>d__15
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E2F
+    // Token: 0x4001E30
     private int <>1__state;
 
-    // Token: 0x4001E30
+    // Token: 0x4001E31
     private object <>2__current;
 
-    // Token: 0x4001E31
+    // Token: 0x4001E32
     public CFX_Demo <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,7 +31,7 @@ public class <RandomSpawnsCoroutine>d__15
     }
 
     // Token : 0x60023D5
-    // RVA   : 0x932B60   Offset: 0x931F60   Length: 0x31B
+    // RVA   : 0x9331C0   Offset: 0x9325C0   Length: 0x31B
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -78,7 +78,7 @@ public class <RandomSpawnsCoroutine>d__15
                   local_68 = local_78;
                   local_60 = local_70;
                   Transform.set_position(lVar3,&local_68,0);
-        LAB_180932df1:
+        LAB_180933451:
                   uVar9 = Single.Parse(*(uint64 *)(lVar1 + 80),0);
                   uVar6 = new WaitForSeconds(uVar9,0);
                   this.<>2__current = uVar6;
@@ -110,7 +110,7 @@ public class <RandomSpawnsCoroutine>d__15
                   if (fVar7 < -*(float *)(lVar1 + 32)) {
                     *(float *)(lVar1 + 36) = *(float *)(lVar1 + 32);
                   }
-                  goto LAB_180932df1;
+                  goto LAB_180933451;
                 }
               }
             }
@@ -126,15 +126,15 @@ public class <RandomSpawnsCoroutine>d__15
     }
 
     // Token : 0x60023D7
-    // RVA   : 0x932E80   Offset: 0x932280   Length: 0x3E
+    // RVA   : 0x9334E0   Offset: 0x9328E0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d98c38);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d98dd0);
     }
 
     // Token : 0x60023D8

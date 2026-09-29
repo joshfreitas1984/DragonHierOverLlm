@@ -6,18 +6,18 @@
 public class TextFit
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D6B
+    // Token: 0x4001D6C
     private readonly string strRegex;
 
-    // Token: 0x4001D6C
+    // Token: 0x4001D6D
     private StringBuilder MExplainText;
 
-    // Token: 0x4001D6D
+    // Token: 0x4001D6E
     private IList<UILineInfo> MExpalinTextLine;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60022E6
-    // RVA   : 0xA9EDC0   Offset: 0xA9E1C0   Length: 0xBC
+    // RVA   : 0xA9F480   Offset: 0xA9E880   Length: 0xBC
     protected override void OnPopulateMesh(VertexHelper toFill)
     {
         ulong uVar1;
@@ -29,13 +29,13 @@ public class TextFit
           *(uint64 *)(lVar2 + 48) = this;
           *(uint64 *)(lVar2 + 32) = this;
           *(uint64 *)(lVar2 + 40) = uVar1;
-          FUN_180d8c2e0(this,lVar2,0);
+          FUN_180d8c8f0(this,lVar2,0);
           return;
         }
     }
 
     // Token : 0x60022E7
-    // RVA   : 0xA9ED10   Offset: 0xA9E110   Length: 0xA4
+    // RVA   : 0xA9F3D0   Offset: 0xA9E7D0   Length: 0xA4
     private IEnumerator MClearUpExplainMode(Text _component, string _text)
     {
         long lVar1;
@@ -49,7 +49,7 @@ public class TextFit
     }
 
     // Token : 0x60022E8
-    // RVA   : 0xA9EE80   Offset: 0xA9E280   Length: 0x74
+    // RVA   : 0xA9F540   Offset: 0xA9E940   Length: 0x74
     public void /*ctor*/()
     {
         this.strRegex = "\\p{P}(?<![《“(])";

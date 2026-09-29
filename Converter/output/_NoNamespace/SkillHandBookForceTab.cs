@@ -6,12 +6,12 @@
 public class SkillHandBookForceTab
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B9D
+    // Token: 0x4001B9E
     public int targetForceID;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002127
-    // RVA   : 0x984F50   Offset: 0x984350   Length: 0x50
+    // RVA   : 0x9855E0   Offset: 0x9849E0   Length: 0x50
     public void OnClick()
     {
         var pStatics = *(int64*)(DAT_181d757d0 + 184);

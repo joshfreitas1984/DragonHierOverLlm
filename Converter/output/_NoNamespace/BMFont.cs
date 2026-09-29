@@ -161,9 +161,9 @@ public class BMFont
     public void Clear()
     {
         if (this.mDict != null) {
-          Dictionary_2.Clear(this.mDict,DAT_181db8018);
+          Dictionary_2.Clear(this.mDict,DAT_181db8030);
           if (this.mSaved != null) {
-            FUN_1812f9a10(this.mSaved,DAT_181d7e1c8);
+            FUN_1812fa020(this.mSaved,DAT_181d7e1e0);
             return;
           }
         }
@@ -210,11 +210,11 @@ public class BMFont
     {
         ulong uVar1;
         this.mSize = 16;
-        uVar1 = il2cpp_internal(DAT_181d91260);
-        FUN_18132faf0(uVar1,DAT_181d7e0d0);
+        uVar1 = il2cpp_internal(DAT_181d91278);
+        FUN_181330100(uVar1,DAT_181d7e0e8);
         this.mSaved = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d80a68);
-        FUN_1808b1370(uVar1,DAT_181db7f08);
+        uVar1 = il2cpp_internal(DAT_181d80a80);
+        FUN_1808b1370(uVar1,DAT_181db7f20);
         this.mDict = uVar1;
         ZhSegment.Initialize(this,0);
     }

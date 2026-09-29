@@ -27,7 +27,7 @@ public class <>c__DisplayClass257_1
     }
 
     // Token : 0x6000BF6
-    // RVA   : 0x9C6870   Offset: 0x9C5C70   Length: 0x15C
+    // RVA   : 0x9C6F00   Offset: 0x9C6300   Length: 0x15C
     internal void <BattleUnitAttackHappen>b__1(float value)
     {
         uint uVar1;

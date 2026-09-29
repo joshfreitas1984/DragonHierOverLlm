@@ -47,7 +47,7 @@ public class UIDragResize
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600013C
-    // RVA   : 0x12B6990   Offset: 0x12B5D90   Length: 0x254
+    // RVA   : 0x12B6FA0   Offset: 0x12B63A0   Length: 0x254
     private void OnDragStart()
     {
         uint uVar1;
@@ -141,7 +141,7 @@ public class UIDragResize
     }
 
     // Token : 0x600013D
-    // RVA   : 0x12B6BF0   Offset: 0x12B5FF0   Length: 0x3E1
+    // RVA   : 0x12B7200   Offset: 0x12B6600   Length: 0x3E1
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -251,19 +251,19 @@ public class UIDragResize
     }
 
     // Token : 0x600013E
-    // RVA   : 0x12B6980   Offset: 0x12B5D80   Length: 0x5
+    // RVA   : 0x12B6F90   Offset: 0x12B6390   Length: 0x5
     private void OnDragEnd()
     {
-        void FUN_1812b6980(int64 this)
+        void FUN_1812b6f90(int64 this)
         {
         this.mDragging = 0;
     }
 
     // Token : 0x600013F
-    // RVA   : 0x12B6FE0   Offset: 0x12B63E0   Length: 0x2A
+    // RVA   : 0x12B75F0   Offset: 0x12B69F0   Length: 0x2A
     public void /*ctor*/()
     {
-        void FUN_1812b6fe0(int64 this)
+        void FUN_1812b75f0(int64 this)
         {
         this.pivot = 8;
         this.minWidth = 100;

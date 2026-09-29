@@ -41,10 +41,10 @@ public class UIRoot
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60008EA
-    // RVA   : 0x1700110   Offset: 0x16FF510   Length: 0x27
+    // RVA   : 0x1700720   Offset: 0x16FFB20   Length: 0x27
     public Constraint get_constraint()
     {
-        uint64 FUN_181700110(int64 this)
+        uint64 FUN_181700720(int64 this)
         {
         uint64 uVar1;
         if (!this.fitWidth) {
@@ -62,10 +62,10 @@ public class UIRoot
     }
 
     // Token : 0x60008EB
-    // RVA   : 0x1700100   Offset: 0x16FF500   Length: 0xB
+    // RVA   : 0x1700710   Offset: 0x16FFB10   Length: 0xB
     public Scaling get_activeScaling()
     {
-        uint32 FUN_181700100(int64 this)
+        uint32 FUN_181700710(int64 this)
         {
         uint32 uVar1;
         uVar1 = 0;
@@ -76,7 +76,7 @@ public class UIRoot
     }
 
     // Token : 0x60008EC
-    // RVA   : 0x16FFF60   Offset: 0x16FF360   Length: 0x19A
+    // RVA   : 0x1700570   Offset: 0x16FF970   Length: 0x19A
     public int get_activeHeight()
     {
         int iVar1;
@@ -137,7 +137,7 @@ public class UIRoot
     }
 
     // Token : 0x60008ED
-    // RVA   : 0x1700140   Offset: 0x16FF540   Length: 0x102
+    // RVA   : 0x1700750   Offset: 0x16FFB50   Length: 0x102
     public float get_pixelSizeAdjustment()
     {
         int iVar1;
@@ -162,7 +162,7 @@ public class UIRoot
     }
 
     // Token : 0x60008EE
-    // RVA   : 0x16FF9A0   Offset: 0x16FEDA0   Length: 0xC3
+    // RVA   : 0x16FFFB0   Offset: 0x16FF3B0   Length: 0xC3
     public static float GetPixelSizeAdjustment(GameObject go)
     {
         int iVar1;
@@ -185,7 +185,7 @@ public class UIRoot
     }
 
     // Token : 0x60008EF
-    // RVA   : 0x16FF920   Offset: 0x16FED20   Length: 0x73
+    // RVA   : 0x16FFF30   Offset: 0x16FF330   Length: 0x73
     public float GetPixelSizeAdjustment(int height)
     {
         int iVar1;
@@ -208,7 +208,7 @@ public class UIRoot
     }
 
     // Token : 0x60008F0
-    // RVA   : 0xDFABC0   Offset: 0xDF9FC0   Length: 0x24
+    // RVA   : 0xDFB1D0   Offset: 0xDFA5D0   Length: 0x24
     protected virtual void Awake()
     {
         ulong uVar1;
@@ -217,40 +217,40 @@ public class UIRoot
     }
 
     // Token : 0x60008F1
-    // RVA   : 0x16FFB00   Offset: 0x16FEF00   Length: 0x81
+    // RVA   : 0x1700110   Offset: 0x16FF510   Length: 0x81
     protected virtual void OnEnable()
     {
-        var pStatics = *(int64*)(DAT_181db0178 + 184);
+        var pStatics = *(int64*)(DAT_181db0190 + 184);
         if (*pStatics != 0) {
-          FUN_18181e0a0(*pStatics,this,DAT_181daa518);
+          FUN_18181e6b0(*pStatics,this,DAT_181daa530);
           return;
         }
     }
 
     // Token : 0x60008F2
-    // RVA   : 0x16FFA70   Offset: 0x16FEE70   Length: 0x81
+    // RVA   : 0x1700080   Offset: 0x16FF480   Length: 0x81
     protected virtual void OnDisable()
     {
-        var pStatics = *(int64*)(DAT_181db0178 + 184);
+        var pStatics = *(int64*)(DAT_181db0190 + 184);
         if (*pStatics != 0) {
-          FUN_1817eee00(*pStatics,this,DAT_181daa618);
+          FUN_1817ef410(*pStatics,this,DAT_181daa630);
           return;
         }
     }
 
     // Token : 0x60008F3
-    // RVA   : 0x16FFB90   Offset: 0x16FEF90   Length: 0x173
+    // RVA   : 0x17001A0   Offset: 0x16FF5A0   Length: 0x173
     protected virtual void Start()
     {
         long lVar1;
         bool cVar2;
         long lVar3;
-        lVar1 = Component.GetComponentInChildren(this,DAT_181d975e0);
+        lVar1 = Component.GetComponentInChildren(this,DAT_181d975f8);
         cVar2 = Object.op_Inequality(lVar1,0,0);
         if (cVar2) {
           Debug.LogWarning("UIRoot should not be active at the same time as UIOrthoCamera. Disabling UIOrthoCamera.",lVar1,0);
           if ((lVar1 != null) && (lVar3 = Component.get_gameObject(lVar1,0)) != null) {
-            lVar3 = GameObject.GetComponent(lVar3,DAT_181dc7d10);
+            lVar3 = GameObject.GetComponent(lVar3,DAT_181dc7d28);
             Behaviour.set_enabled(lVar1,0,0);
             cVar2 = Object.op_Inequality(lVar3,0,0);
             if (!cVar2) {
@@ -268,16 +268,16 @@ public class UIRoot
     }
 
     // Token : 0x60008F4
-    // RVA   : 0x16FFEA0   Offset: 0x16FF2A0   Length: 0xA
+    // RVA   : 0x17004B0   Offset: 0x16FF8B0   Length: 0xA
     private void Update()
     {
-        void FUN_1816ffea0(uint64 this)
+        void FUN_1817004b0(uint64 this)
         {
         UIRoot.UpdateScale(this,1,0);
     }
 
     // Token : 0x60008F5
-    // RVA   : 0x16FFD10   Offset: 0x16FF110   Length: 0x183
+    // RVA   : 0x1700320   Offset: 0x16FF720   Length: 0x183
     public void UpdateScale(bool updateAnchors)
     {
         ulong uVar1;
@@ -294,7 +294,7 @@ public class UIRoot
           if (0.0 < (float)iVar3) {
             fVar5 = 2.0 / (float)iVar3;
             if (this.mTrans == null) {
-        LAB_1816ffe8e:
+        LAB_18170049e:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -304,7 +304,7 @@ public class UIRoot
             if (((1.4013e-45 < ABS((float)local_38 - fVar5)) ||
                 (local_38 = *puVar4, 1.4013e-45 < ABS((float)((uint64)local_38 >> 32) - fVar5))) ||
                (1.4013e-45 < ABS(local_30 - fVar5))) {
-              if (this.mTrans == null) goto LAB_1816ffe8e;
+              if (this.mTrans == null) goto LAB_18170049e;
               local_38 = CONCAT44(fVar5,fVar5);
               local_30 = fVar5;
               Transform.set_localScale(this.mTrans,&local_38,0);
@@ -317,10 +317,10 @@ public class UIRoot
     }
 
     // Token : 0x60008F6
-    // RVA   : 0x16FF5F0   Offset: 0x16FE9F0   Length: 0x150
+    // RVA   : 0x16FFC00   Offset: 0x16FF000   Length: 0x150
     public static void Broadcast(string funcName)
     {
-        var pStatics = *(int64*)(DAT_181db0178 + 184);
+        var pStatics = *(int64*)(DAT_181db0190 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -331,18 +331,18 @@ public class UIRoot
         }
         iVar4 = 0;
         if (*pStatics == 0) {
-        LAB_1816ff910:
+        LAB_1816fff20:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         iVar1 = *(int *)(*pStatics + 24);
         if (0 < iVar1) {
           do {
-            if (*pStatics == 0) goto LAB_1816ff910;
-            lVar3 = FUN_180002f80(*pStatics,iVar4,DAT_181daa718);
+            if (*pStatics == 0) goto LAB_1816fff20;
+            lVar3 = FUN_180002f80(*pStatics,iVar4,DAT_181daa730);
             cVar2 = Object.op_Inequality(lVar3,0,0);
             if (cVar2) {
-              if (lVar3 == null) goto LAB_1816ff910;
+              if (lVar3 == null) goto LAB_1816fff20;
               Component.BroadcastMessage(lVar3,funcName,param_2,1,0);
             }
             iVar4 = iVar4 + 1;
@@ -351,10 +351,10 @@ public class UIRoot
     }
 
     // Token : 0x60008F7
-    // RVA   : 0x16FF750   Offset: 0x16FEB50   Length: 0x1C5
+    // RVA   : 0x16FFD60   Offset: 0x16FF160   Length: 0x1C5
     public static void Broadcast(string funcName, object param)
     {
-        var pStatics = *(int64*)(DAT_181db0178 + 184);
+        var pStatics = *(int64*)(DAT_181db0190 + 184);
         int iVar1;
         bool cVar2;
         long lVar3;
@@ -365,18 +365,18 @@ public class UIRoot
         }
         iVar4 = 0;
         if (*pStatics == 0) {
-        LAB_1816ff910:
+        LAB_1816fff20:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         iVar1 = *(int *)(*pStatics + 24);
         if (0 < iVar1) {
           do {
-            if (*pStatics == 0) goto LAB_1816ff910;
-            lVar3 = FUN_180002f80(*pStatics,iVar4,DAT_181daa718);
+            if (*pStatics == 0) goto LAB_1816fff20;
+            lVar3 = FUN_180002f80(*pStatics,iVar4,DAT_181daa730);
             cVar2 = Object.op_Inequality(lVar3,0,0);
             if (cVar2) {
-              if (lVar3 == null) goto LAB_1816ff910;
+              if (lVar3 == null) goto LAB_1816fff20;
               Component.BroadcastMessage(lVar3,funcName,param,1,0);
             }
             iVar4 = iVar4 + 1;
@@ -385,10 +385,10 @@ public class UIRoot
     }
 
     // Token : 0x60008F8
-    // RVA   : 0x16FFF30   Offset: 0x16FF330   Length: 0x27
+    // RVA   : 0x1700540   Offset: 0x16FF940   Length: 0x27
     public void /*ctor*/()
     {
-        void FUN_1816fff30(int64 this)
+        void FUN_181700540(int64 this)
         {
         this.manualWidth = 0x500;
         this.manualHeight = 0x2d0;
@@ -399,13 +399,13 @@ public class UIRoot
     }
 
     // Token : 0x60008F9
-    // RVA   : 0x16FFEB0   Offset: 0x16FF2B0   Length: 0x76
+    // RVA   : 0x17004C0   Offset: 0x16FF8C0   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d98850);
-        FUN_18132faf0(uVar2,DAT_181daa498);
-        puVar1 = *(uint64 **)(DAT_181db0178 + 184);
+        uVar2 = il2cpp_internal(DAT_181d98868);
+        FUN_181330100(uVar2,DAT_181daa4b0);
+        puVar1 = *(uint64 **)(DAT_181db0190 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

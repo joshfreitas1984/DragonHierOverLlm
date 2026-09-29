@@ -26,16 +26,16 @@ public class EFX_Slash
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60013D8
-    // RVA   : 0x9409B0   Offset: 0x93FDB0   Length: 0x7
+    // RVA   : 0x941040   Offset: 0x940440   Length: 0x7
     private void Start()
     {
-        void FUN_1809409b0(uint64 this)
+        void FUN_180941040(uint64 this)
         {
         EFX_Slash.ResetToBeginning(this,0);
     }
 
     // Token : 0x60013D9
-    // RVA   : 0x9409C0   Offset: 0x93FDC0   Length: 0x1E3
+    // RVA   : 0x941050   Offset: 0x940450   Length: 0x1E3
     private void Update()
     {
         uint uVar1;
@@ -53,7 +53,7 @@ public class EFX_Slash
         if (-1 < this.countTime) {
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) {
-        LAB_180940b9e:
+        LAB_18094122e:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -95,7 +95,7 @@ public class EFX_Slash
                   }
                 }
               }
-              goto LAB_180940b9e;
+              goto LAB_18094122e;
             }
             EFX_Slash.ResetToBeginning(this);
           }
@@ -103,7 +103,7 @@ public class EFX_Slash
     }
 
     // Token : 0x60013DA
-    // RVA   : 0x9408F0   Offset: 0x93FCF0   Length: 0xB4
+    // RVA   : 0x940F80   Offset: 0x940380   Length: 0xB4
     private void ResetToBeginning()
     {
         long lVar1;
@@ -132,7 +132,7 @@ public class EFX_Slash
     }
 
     // Token : 0x60013DB
-    // RVA   : 0x940870   Offset: 0x93FC70   Length: 0x74
+    // RVA   : 0x940F00   Offset: 0x940300   Length: 0x74
     private void RandomRotation()
     {
         long lVar1;
@@ -158,7 +158,7 @@ public class EFX_Slash
     }
 
     // Token : 0x60013DC
-    // RVA   : 0x940BB0   Offset: 0x93FFB0   Length: 0x4E
+    // RVA   : 0x941240   Offset: 0x940640   Length: 0x4E
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];

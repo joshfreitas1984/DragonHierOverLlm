@@ -11,14 +11,14 @@ public class DestroyAfterTime
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009A8
-    // RVA   : 0x93B2D0   Offset: 0x93A6D0   Length: 0x41
+    // RVA   : 0x93B960   Offset: 0x93AD60   Length: 0x41
     private void Start()
     {
         MonoBehaviour.Invoke(this,"DestroyMe",this.lifetime,0);
     }
 
     // Token : 0x60009A9
-    // RVA   : 0x93B270   Offset: 0x93A670   Length: 0x5F
+    // RVA   : 0x93B900   Offset: 0x93AD00   Length: 0x5F
     private void DestroyMe()
     {
         ulong uVar1;

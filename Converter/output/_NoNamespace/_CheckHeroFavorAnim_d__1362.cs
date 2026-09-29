@@ -6,19 +6,19 @@
 public class <CheckHeroFavorAnim>d__1362
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A34
+    // Token: 0x4001A35
     private int <>1__state;
 
-    // Token: 0x4001A35
+    // Token: 0x4001A36
     private object <>2__current;
 
-    // Token: 0x4001A36
+    // Token: 0x4001A37
     public HeroData targetHero;
 
-    // Token: 0x4001A37
+    // Token: 0x4001A38
     public PlotController <>4__this;
 
-    // Token: 0x4001A38
+    // Token: 0x4001A39
     public float favorChange;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ public class <CheckHeroFavorAnim>d__1362
     }
 
     // Token : 0x6001FCF
-    // RVA   : 0x8E86C0   Offset: 0x8E7AC0   Length: 0x4F6
+    // RVA   : 0x91B540   Offset: 0x91A940   Length: 0x4F6
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -60,7 +60,7 @@ public class <CheckHeroFavorAnim>d__1362
         lVar8 = this.<>4__this;
         if (local_res8[0] == 0) {
           this.<>1__state = 0xffffffff;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar3;
           this.<>1__state = 1;
           return true;
@@ -157,15 +157,15 @@ public class <CheckHeroFavorAnim>d__1362
     }
 
     // Token : 0x6001FD1
-    // RVA   : 0x8E8BC0   Offset: 0x8E7FC0   Length: 0x3E
+    // RVA   : 0x91BA40   Offset: 0x91AE40   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181daa0c8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181daa260);
     }
 
     // Token : 0x6001FD2

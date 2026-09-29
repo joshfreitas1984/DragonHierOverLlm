@@ -26,7 +26,7 @@ public class NavigationData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000CC0
-    // RVA   : 0x8E6C10   Offset: 0x8E6010   Length: 0x6D
+    // RVA   : 0x919250   Offset: 0x918650   Length: 0x6D
     public void /*ctor*/()
     {
         this.open = 1;
@@ -42,7 +42,7 @@ public class NavigationData
     }
 
     // Token : 0x6000CC1
-    // RVA   : 0x8E6BA0   Offset: 0x8E5FA0   Length: 0x62
+    // RVA   : 0x9191E0   Offset: 0x9185E0   Length: 0x62
     public void Reset()
     {
         this.open = 1;

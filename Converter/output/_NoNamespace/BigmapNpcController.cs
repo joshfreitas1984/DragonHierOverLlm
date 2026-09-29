@@ -146,7 +146,7 @@ public class BigmapNpcController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D2C
-    // RVA   : 0xC82810   Offset: 0xC81C10   Length: 0xFC
+    // RVA   : 0xC82E20   Offset: 0xC82220   Length: 0xFC
     private Transform get_ArrowTrans()
     {
         bool cVar1;
@@ -163,19 +163,19 @@ public class BigmapNpcController
               if (lVar2 != null) {
                 uVar3 = Transform.Find(lVar2,"Arrow",0);
                 this.arrowTrans = uVar3;
-                goto LAB_180c828f0;
+                goto LAB_180c82f00;
               }
             }
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
-        LAB_180c828f0:
+        LAB_180c82f00:
         return this.arrowTrans;
     }
 
     // Token : 0x6000D2D
-    // RVA   : 0xC82910   Offset: 0xC81D10   Length: 0xEA
+    // RVA   : 0xC82F20   Offset: 0xC82320   Length: 0xEA
     private TweenRotation get_CircleTweenRotation()
     {
         bool cVar1;
@@ -198,7 +198,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D2E
-    // RVA   : 0xC82A00   Offset: 0xC81E00   Length: 0xEA
+    // RVA   : 0xC83010   Offset: 0xC82410   Length: 0xEA
     private SpriteRenderer get_HeroMissionRenderer()
     {
         bool cVar1;
@@ -221,7 +221,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D2F
-    // RVA   : 0xC82AF0   Offset: 0xC81EF0   Length: 0xEA
+    // RVA   : 0xC83100   Offset: 0xC82500   Length: 0xEA
     private SkeletonAnimation get_SelfSkeletonAnim()
     {
         bool cVar1;
@@ -244,7 +244,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D30
-    // RVA   : 0xC7EEA0   Offset: 0xC7E2A0   Length: 0x170
+    // RVA   : 0xC7F4B0   Offset: 0xC7E8B0   Length: 0x170
     private SkeletonAnimation GetSkeletonAnim(GameObject targetSkeleton)
     {
         bool cVar1;
@@ -256,7 +256,7 @@ public class BigmapNpcController
             uVar2 = GameObject.GetComponent(targetSkeleton,DAT_181d734d0);
             return uVar2;
           }
-        LAB_180c7f00b:
+        LAB_180c7f61b:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -266,7 +266,7 @@ public class BigmapNpcController
           uVar2 = this.selfSkeleton;
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (this.selfSkeleton == null) goto LAB_180c7f00b;
+            if (this.selfSkeleton == null) goto LAB_180c7f61b;
             uVar2 = GameObject.GetComponent(this.selfSkeleton,DAT_181d734d0);
             this.selfSkeletonAnim = uVar2;
           }
@@ -275,7 +275,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D31
-    // RVA   : 0xC82250   Offset: 0xC81650   Length: 0x1F6
+    // RVA   : 0xC82860   Offset: 0xC81C60   Length: 0x1F6
     private void Start()
     {
         long lVar1;
@@ -296,17 +296,17 @@ public class BigmapNpcController
               if (this.hoverRangeCollider != null) {
                 puVar3 = (uint64 *)
                          CapsuleCollider.get_center(local_18,this.hoverRangeCollider,0);
-                bVar6 = !DAT_181e9e5ea;
+                bVar6 = !DAT_181e9e5ec;
                 this.originCapsuleColliderCenter = *puVar3;
                 *(uint32 *)(this + 244) = *(uint32 *)(puVar3 + 1);
                 if (bVar6) {
-                  il2cpp_runtime_class_init(&DAT_181d93e60);
-                  il2cpp_runtime_class_init(&DAT_181dc5290);
+                  il2cpp_runtime_class_init(&DAT_181d93e78);
+                  il2cpp_runtime_class_init(&DAT_181dc52a8);
                   il2cpp_runtime_class_init(&DAT_181d734d0);
-                  il2cpp_runtime_class_init(&DAT_181da0df8);
-                  il2cpp_runtime_class_init(&DAT_181da0cf8);
-                  il2cpp_runtime_class_init(&DAT_181d96ed0);
-                  DAT_181e9e5ea = true;
+                  il2cpp_runtime_class_init(&DAT_181da0e10);
+                  il2cpp_runtime_class_init(&DAT_181da0d10);
+                  il2cpp_runtime_class_init(&DAT_181d96ee8);
+                  DAT_181e9e5ec = true;
                 }
                 if (*(char *)(this + 300) != false) {
                   return;
@@ -314,7 +314,7 @@ public class BigmapNpcController
                 *(uint8 *)(this + 300) = 1;
                 lVar1 = Component.get_gameObject(this,0);
                 if (lVar1 != null) {
-                  lVar1 = GameObject.AddComponent(lVar1,DAT_181dc5290);
+                  lVar1 = GameObject.AddComponent(lVar1,DAT_181dc52a8);
                   if ((this.selfSkeleton != null) &&
                      (uVar4 = GameObject.GetComponent(this.selfSkeleton,DAT_181d734d0),
                      lVar1 != null)) {
@@ -323,12 +323,12 @@ public class BigmapNpcController
                       if (this.heroData.heroID == null) {
                         return;
                       }
-                      lVar1 = Component.GetComponent(this,DAT_181d93e60);
-                      lVar5 = il2cpp_internal(DAT_181d96ed0);
-                      FUN_18132faf0(lVar5,DAT_181da0cf8);
+                      lVar1 = Component.GetComponent(this,DAT_181d93e78);
+                      lVar5 = il2cpp_internal(DAT_181d96ee8);
+                      FUN_181330100(lVar5,DAT_181da0d10);
                       if (lVar5 != null) {
-                        FUN_18181de10(lVar5,0,DAT_181da0df8);
-                        FUN_18181de10(lVar5,0,DAT_181da0df8);
+                        FUN_18181e420(lVar5,0,DAT_181da0e10);
+                        FUN_18181e420(lVar5,0,DAT_181da0e10);
                         if (lVar1 != null) {
                           *(int64 *)(lVar1 + 32) = lVar5;
                           return;
@@ -344,7 +344,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D32
-    // RVA   : 0xC7F230   Offset: 0xC7E630   Length: 0x15B
+    // RVA   : 0xC7F840   Offset: 0xC7EC40   Length: 0x15B
     private void Init()
     {
         long lVar1;
@@ -354,7 +354,7 @@ public class BigmapNpcController
           *(uint8 *)(this + 300) = 1;
           lVar1 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
-            lVar1 = GameObject.AddComponent(lVar1,DAT_181dc5290);
+            lVar1 = GameObject.AddComponent(lVar1,DAT_181dc52a8);
             if ((this.selfSkeleton != null) &&
                (uVar2 = GameObject.GetComponent(this.selfSkeleton,DAT_181d734d0), lVar1 != null)
                ) {
@@ -363,12 +363,12 @@ public class BigmapNpcController
                 if (this.heroData.heroID == null) {
                   return;
                 }
-                lVar1 = Component.GetComponent(this,DAT_181d93e60);
-                lVar3 = il2cpp_internal(DAT_181d96ed0);
-                FUN_18132faf0(lVar3,DAT_181da0cf8);
+                lVar1 = Component.GetComponent(this,DAT_181d93e78);
+                lVar3 = il2cpp_internal(DAT_181d96ee8);
+                FUN_181330100(lVar3,DAT_181da0d10);
                 if (lVar3 != null) {
-                  FUN_18181de10(lVar3,0,DAT_181da0df8);
-                  FUN_18181de10(lVar3,0,DAT_181da0df8);
+                  FUN_18181e420(lVar3,0,DAT_181da0e10);
+                  FUN_18181e420(lVar3,0,DAT_181da0e10);
                   if (lVar1 != null) {
                     *(int64 *)(lVar1 + 32) = lVar3;
                     return;
@@ -383,10 +383,10 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D33
-    // RVA   : 0xC7D340   Offset: 0xC7C740   Length: 0x15DF
+    // RVA   : 0xC7D950   Offset: 0xC7CD50   Length: 0x15DF
     private void FixedUpdate()
     {
-        var pStatics = *(int64*)(DAT_181dab490 + 184);
+        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
         uint uVar2;
         uint uVar3;
         uint uVar4;
@@ -418,7 +418,7 @@ public class BigmapNpcController
         if (!this.heroData.inTeam) {
           lVar7 = BigmapNpcController.GetHeroTargetPos(this,0);
           if (lVar7 == null) throw; // [null/range check failed]
-          if ((lVar7.isSummon == null.0) && (lVar7.summonID == null.0)) goto LAB_180c7d845;
+          if ((lVar7.isSummon == null.0) && (lVar7.summonID == null.0)) goto LAB_180c7de55;
           lVar7 = Component.get_transform(this,0);
           if (lVar7 == null) throw; // [null/range check failed]
           puVar8 = (uint64 *)Transform.get_localPosition(&local_c8,lVar7,0);
@@ -431,7 +431,7 @@ public class BigmapNpcController
           local_d8 = uVar12;
           local_d0 = fVar16;
           cVar6 = Vector3.op_Inequality(&local_d8,&local_e8,0);
-          if (!cVar6) goto LAB_180c7d845;
+          if (!cVar6) goto LAB_180c7de55;
           lVar7 = BigmapNpcController.get_ArrowTrans(this,0);
           puVar8 = (uint64 *)Vector3.get_one(&local_b8,0);
           local_c8 = *puVar8;
@@ -510,7 +510,7 @@ public class BigmapNpcController
           }
         }
         else {
-        LAB_180c7d845:
+        LAB_180c7de55:
           lVar7 = BigmapNpcController.get_ArrowTrans(this,0);
           puVar8 = (uint64 *)Vector3.get_zero(&local_b8,0);
           if (lVar7 == null) throw; // [null/range check failed]
@@ -528,12 +528,12 @@ public class BigmapNpcController
           fStack_c0 = *(float *)(puVar8 + 1);
           local_c8 = uVar12;
           if (((*plVar1 == 0) || (lVar7 = GameObject.get_transform(*plVar1,0)) == null) ||
-             (lVar7 = FUN_180da9a20(lVar7,0)) == null) throw; // [null/range check failed]
+             (lVar7 = FUN_180daa030(lVar7,0)) == null) throw; // [null/range check failed]
           puVar8 = (uint64 *)Transform.get_localPosition(&local_b8,lVar7,0);
           local_c8 = *puVar8;
           fStack_c0 = *(float *)(puVar8 + 1);
           fVar16 = (float)Vector2.Distance(uVar12,local_c8,0);
-          if ((*plVar1 == 0) || (lVar7 = GameObject.GetComponent(*plVar1,DAT_181dc7f30)) == null)
+          if ((*plVar1 == 0) || (lVar7 = GameObject.GetComponent(*plVar1,DAT_181dc7f48)) == null)
           throw; // [null/range check failed]
           fVar17 = (float)CapsuleCollider.get_radius(lVar7,0);
           if ((*plVar1 == 0) || (lVar7 = GameObject.get_transform(*plVar1,0)) == null)
@@ -552,7 +552,7 @@ public class BigmapNpcController
         cVar6 = Object.op_Inequality(uVar12,0,0);
         if (cVar6) {
           if (this.heroFollowTarget == null) throw; // [null/range check failed]
-          uVar12 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76b0);
+          uVar12 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76c8);
           cVar6 = BigmapNpcController.HeroCanFollow
                             (this,uVar12,this.heroFollowType,
                              this.followRangeRate,0);
@@ -631,10 +631,10 @@ public class BigmapNpcController
           if (!this.inWaterBuff) {
             if (this.heroData == null) throw; // [null/range check failed]
             this.heroData.inWater = 0;
-            uVar12 = Component.GetComponent(this,DAT_181d93e60);
+            uVar12 = Component.GetComponent(this,DAT_181d93e78);
             cVar6 = Object.op_Inequality(uVar12,0,0);
             if (cVar6) {
-              lVar7 = Component.GetComponent(this,DAT_181d93e60);
+              lVar7 = Component.GetComponent(this,DAT_181d93e78);
               if (lVar7 == null) throw; // [null/range check failed]
               lVar7.summonSourceHero = 0;
             }
@@ -651,11 +651,11 @@ public class BigmapNpcController
           }
           this.inHillBuff = 0;
         }
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 24);
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 24);
         if (((this.heroData == null) ||
             (lVar10 = this.heroData.heroAIData) == null) || (lVar7 == null))
         throw; // [null/range check failed]
-        cVar6 = FUN_18182a3a0(lVar7,*(uint32 *)(lVar10 + 16),DAT_181d7ae88);
+        cVar6 = FUN_18182a9b0(lVar7,*(uint32 *)(lVar10 + 16),DAT_181d7aea0);
         lVar7 = this.BigMapFightIcon;
         if (!cVar6) {
           cVar6 = Object.op_Inequality(lVar7,0,0);
@@ -679,7 +679,7 @@ public class BigmapNpcController
             if (!cVar6) {
               if (*plVar1 == 0) throw; // [null/range check failed]
               GameObject.SetActive(*plVar1,1,0);
-              goto LAB_180c7dfac;
+              goto LAB_180c7e5bc;
             }
           }
           else {
@@ -690,11 +690,11 @@ public class BigmapNpcController
             lVar7 = GlobalData.AddChild(uVar12,uVar13,0);
             *plVar1 = lVar7;
             il2cpp_internal(plVar1,lVar7);
-        LAB_180c7dfac:
+        LAB_180c7e5bc:
             if (*plVar1 == 0) throw; // [null/range check failed]
             uVar12 = GameObject.get_transform(*plVar1,0);
             uVar12 = ShortcutExtensions.DOScale(uVar12,0x3f99999a,0x3f000000,0);
-            TweenSettingsExtensions.SetLoops(uVar12,0xffffffff,1,DAT_181dc1330);
+            TweenSettingsExtensions.SetLoops(uVar12,0xffffffff,1,DAT_181dc14d8);
           }
           if (*plVar1 == 0) throw; // [null/range check failed]
           lVar7 = GameObject.get_transform(*plVar1,0);
@@ -742,7 +742,7 @@ public class BigmapNpcController
               BigmapNpcController.SetSkeletonRunAnim
                         (this,uVar12,lVar7,&local_d8,
                          CONCAT44(*(float *)(lVar10 + 20) * 0.01,*(float *)(lVar10 + 16) * 0.01),0);
-              goto LAB_180c7e190;
+              goto LAB_180c7e7a0;
             }
           }
           else {
@@ -750,12 +750,12 @@ public class BigmapNpcController
           }
           BigmapNpcController.SetSkeletonIdleAnim(this,uVar12,lVar7,0);
         }
-        LAB_180c7e190:
+        LAB_180c7e7a0:
         BigmapNpcController.ManageFollowerMove(this,0);
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181db0bc8 + 184) + 16);
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
         if (lVar7 == null) throw; // [null/range check failed]
         fVar16 = (float)BigMapController.BigMapNowScale(lVar7,0);
-        if (fVar16 < **(float **)(DAT_181db0bc8 + 184)) {
+        if (fVar16 < **(float **)(DAT_181db0be0 + 184)) {
           BigmapNpcController.SetAllSkeletonActive(this,0,0);
           if (this.heroSimpleSprite == null) throw; // [null/range check failed]
           cVar6 = GameObject.get_activeSelf(this.heroSimpleSprite,0);
@@ -822,7 +822,7 @@ public class BigmapNpcController
           local_e0 = fVar16;
           local_d8 = uVar12;
           if (lVar7 == null) throw; // [null/range check failed]
-        LAB_180c7e5bb:
+        LAB_180c7ebcb:
           local_d8 = CONCAT44(fVar17,fVar18);
           local_d0 = fVar16;
           CapsuleCollider.set_center(lVar7,&local_d8,0);
@@ -843,7 +843,7 @@ public class BigmapNpcController
             fVar18 = (float)this.originCapsuleColliderCenter;
             fVar17 = (float)((uint64)this.originCapsuleColliderCenter >> 32);
             fVar16 = *(float *)(this + 244);
-            goto LAB_180c7e5bb;
+            goto LAB_180c7ebcb;
           }
         }
         if (this.heroMissionTarget != null) {
@@ -867,12 +867,12 @@ public class BigmapNpcController
                 iVar14 = 2;
               }
               if (this.missionState != iVar14) {
-                bVar15 = !DAT_181e9e5e7;
+                bVar15 = !DAT_181e9e5e9;
                 this.missionState = iVar14;
                 if (bVar15) {
                   il2cpp_runtime_class_init(&DAT_181d73bb8);
-                  il2cpp_runtime_class_init(&DAT_181d8e210);
-                  DAT_181e9e5e7 = true;
+                  il2cpp_runtime_class_init(&DAT_181d8e228);
+                  DAT_181e9e5e9 = true;
                 }
                 uVar12 = this.heroMissionRenderer;
                 cVar6 = Object.op_Equality(uVar12,0,0);
@@ -900,10 +900,10 @@ public class BigmapNpcController
                                          (*pStatics,"BigMapAtlas",
                                           "任务目标",0), lVar7 == null)) throw; // [null/range check failed]
                   SpriteRenderer.set_sprite(lVar7,uVar12,0);
-                  puVar8 = (uint64 *)FUN_1810d3570(&local_b8,0);
+                  puVar8 = (uint64 *)FUN_1810d3b80(&local_b8,0);
                 }
                 else {
-                  puVar8 = (uint64 *)FUN_180d98fe0(&local_b8,0);
+                  puVar8 = (uint64 *)FUN_180d995f0(&local_b8,0);
                   if (lVar7 == null) throw; // [null/range check failed]
                 }
                 local_b8 = *puVar8;
@@ -917,7 +917,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D34
-    // RVA   : 0xC7FCC0   Offset: 0xC7F0C0   Length: 0x5C
+    // RVA   : 0xC802D0   Offset: 0xC7F6D0   Length: 0x5C
     public bool IsMoving()
     {
         long lVar1;
@@ -940,7 +940,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D35
-    // RVA   : 0xC813C0   Offset: 0xC807C0   Length: 0x167
+    // RVA   : 0xC819D0   Offset: 0xC80DD0   Length: 0x167
     public void RefreshSkeletonAnim()
     {
         ulong uVar1;
@@ -952,7 +952,7 @@ public class BigmapNpcController
         ulong local_28;
         uint local_20;
         lVar6 = this.heroData;
-        if ((lVar6 == null) || (lVar6.heroAIData == null)) goto LAB_180c81522;
+        if ((lVar6 == null) || (lVar6.heroAIData == null)) goto LAB_180c81b32;
         iVar2 = *(int *)(lVar6.heroAIData + 16);
         if (iVar2 == 13) {
           uVar4 = this.selfSkeleton;
@@ -963,7 +963,7 @@ public class BigmapNpcController
           if ((lVar6.heroID == null) || (iVar2 == 1)) {
             lVar6 = BigmapNpcController.GetHeroTargetPos(this,0);
             if (lVar6 == null) {
-        LAB_180c81522:
+        LAB_180c81b32:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -991,7 +991,7 @@ public class BigmapNpcController
                   return;
                 }
               }
-              goto LAB_180c81522;
+              goto LAB_180c81b32;
             }
           }
           BigmapNpcController.SetSkeletonIdleAnim
@@ -1000,18 +1000,18 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D36
-    // RVA   : 0xC7E920   Offset: 0xC7DD20   Length: 0x176
+    // RVA   : 0xC7EF30   Offset: 0xC7E330   Length: 0x176
     public float GetBigMapExtraScale(float extraScale)
     {
         float fVar1;
         float fVar2;
         long lVar3;
         float fVar4;
-        fVar1 = **(float **)(DAT_181db0bc8 + 184);
+        fVar1 = **(float **)(DAT_181db0be0 + 184);
         lVar3 = GameController.CheckShowSpeHero;
         if (lVar3 != null) {
           fVar4 = (float)BigMapController.BigMapNowScale(lVar3,0);
-          fVar2 = **(float **)(DAT_181db0bc8 + 184);
+          fVar2 = **(float **)(DAT_181db0be0 + 184);
           lVar3 = GameController.CheckShowSpeHero;
           if (lVar3 != null) {
             Mathf.Max(lVar3,((fVar1 - fVar4) * extraScale) / (fVar2 - *(float *)(lVar3 + 28)) + 1.0,0);
@@ -1021,7 +1021,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D37
-    // RVA   : 0xC819E0   Offset: 0xC80DE0   Length: 0x13A
+    // RVA   : 0xC81FF0   Offset: 0xC813F0   Length: 0x13A
     public void SetAllSkeletonActive(bool isActive)
     {
         bool cVar1;
@@ -1051,7 +1051,7 @@ public class BigmapNpcController
               cVar1 = GameObject.get_activeSelf(lVar2,0);
               if (cVar1 != isActive) {
                 if (((this.followers == null) ||
-                    (lVar2 = FUN_180002f80(this.followers,uVar3,DAT_181d7fea0)) == null
+                    (lVar2 = FUN_180002f80(this.followers,uVar3,DAT_181d7feb8)) == null
                     ) || (lVar2._items == null)) break;
                 GameObject.SetActive(lVar2._items,isActive,0);
               }
@@ -1065,7 +1065,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D38
-    // RVA   : 0xC7F020   Offset: 0xC7E420   Length: 0x207
+    // RVA   : 0xC7F630   Offset: 0xC7EA30   Length: 0x207
     public bool HeroCanFollow(BigmapNpcController targetHero, HeroFollowType followType, float rangeRate)
     {
         ulong uVar1;
@@ -1077,7 +1077,7 @@ public class BigmapNpcController
         cVar2 = Object.op_Inequality(targetHero,0,0);
         if (cVar2) {
           if ((targetHero == null) || (lVar3 = Component.get_gameObject(targetHero,0)) == null)
-          goto LAB_180c7f222;
+          goto LAB_180c7f832;
           cVar2 = GameObject.get_activeSelf(lVar3,0);
           if (cVar2) {
             cVar2 = Object.op_Inequality(targetHero,this,0);
@@ -1088,7 +1088,7 @@ public class BigmapNpcController
                 lVar3 = *(int64 *)(targetHero + 24);
                 if (lVar3 != null) {
                   if (*(int *)(lVar3 + 88) != 0) {
-                    if (*(int64 *)(lVar3 + 64) == 0) goto LAB_180c7f222;
+                    if (*(int64 *)(lVar3 + 64) == 0) goto LAB_180c7f832;
                     if (*(int *)(*(int64 *)(lVar3 + 64) + 16) != 1) {
                       return false;
                     }
@@ -1108,7 +1108,7 @@ public class BigmapNpcController
                     }
                   }
                 }
-        LAB_180c7f222:
+        LAB_180c7f832:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -1119,7 +1119,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D39
-    // RVA   : 0xC7EAE0   Offset: 0xC7DEE0   Length: 0x3B0
+    // RVA   : 0xC7F0F0   Offset: 0xC7E4F0   Length: 0x3B0
     public BigMapPos GetHeroTargetPos()
     {
         long lVar1;
@@ -1138,30 +1138,30 @@ public class BigmapNpcController
                               (this.heroData.bigMapPos,0x40000000,0);
             if (((*(int64 *)(this + 200) != 0) &&
                 (lVar3 = GameObject.get_transform(*(int64 *)(this + 200),0)) != null) &&
-               (lVar3 = FUN_180da9a20(lVar3,0)) != null) {
+               (lVar3 = FUN_180daa030(lVar3,0)) != null) {
               puVar7 = (uint64 *)Transform.get_localPosition(local_28,lVar3,0);
               uVar4 = *puVar7;
               lVar3 = new ZhSegment(0);
-              bVar8 = !DAT_181e9e5d8;
+              bVar8 = !DAT_181e9e5da;
               *(float *)(lVar3 + 20) = (float)((uint64)uVar4 >> 32) * 100.0;
               *(float *)(lVar3 + 16) = (float)uVar4 * 100.0;
               if (bVar8) {
-                il2cpp_runtime_class_init(&DAT_181db0cc8);
-                DAT_181e9e5d8 = true;
+                il2cpp_runtime_class_init(&DAT_181db0ce0);
+                DAT_181e9e5da = true;
               }
               if ((lVar5 != null) &&
                  (plVar6 = (int64 *)BigMapPos.Clone(lVar5,0), plVar6 != (int64 *)0)) {
-                if ((*(byte *)(DAT_181db0cc8 + 300) <= *(byte *)(*plVar6 + 300)) &&
+                if ((*(byte *)(DAT_181db0ce0 + 300) <= *(byte *)(*plVar6 + 300)) &&
                    (*(int64 *)
-                     (*(int64 *)(*plVar6 + 200) + -8 + (uint64)*(byte *)(DAT_181db0cc8 + 300) * 8)
-                    == DAT_181db0cc8)) {
+                     (*(int64 *)(*plVar6 + 200) + -8 + (uint64)*(byte *)(DAT_181db0ce0 + 300) * 8)
+                    == DAT_181db0ce0)) {
                   *(float *)(plVar6 + 2) = *(float *)(plVar6 + 2) - *(float *)(lVar3 + 16);
                   *(float *)((int64)plVar6 + 20) =
                        *(float *)((int64)plVar6 + 20) - *(float *)(lVar3 + 20);
                   return plVar6;
                 }
                           // WARNING: Subroutine does not return
-                FUN_1800d6070(plVar6,DAT_181db0cc8);
+                FUN_1800d6070(plVar6,DAT_181db0ce0);
               }
             }
           }
@@ -1176,7 +1176,7 @@ public class BigmapNpcController
         else {
           if (this.heroFollowType == 1) {
             if (((this.heroFollowTarget != null) &&
-                (lVar5 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76b0), lVar5 != null
+                (lVar5 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76c8), lVar5 != null
                 )) && (*(int64 *)(lVar5 + 24) != 0)) {
               return *(int64 **)(*(int64 *)(lVar5 + 24) + 200);
             }
@@ -1185,7 +1185,7 @@ public class BigmapNpcController
           if (this.heroData == null) throw; // [null/range check failed]
           lVar5 = this.heroData.bigMapPos;
           if (((this.heroFollowTarget == null) ||
-              (lVar3 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76b0)) == null)
+              (lVar3 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76c8)) == null)
              || ((*(int64 *)(lVar3 + 24) == 0 ||
                  ((lVar5 == null || (lVar3 = *(int64 *)(*(int64 *)(lVar3 + 24) + 200)) == null)))
                 )) throw; // [null/range check failed]
@@ -1203,7 +1203,7 @@ public class BigmapNpcController
             if (lVar1 != null) {
               uVar4 = BigMapPos.op_Multiply(lVar1.bigMapPos,0x40000000,0);
               if (((this.heroFollowTarget != null) &&
-                  (lVar5 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76b0),
+                  (lVar5 = GameObject.GetComponent(this.heroFollowTarget,DAT_181dc76c8),
                   lVar5 != null)) && (*(int64 *)(lVar5 + 24) != 0)) {
                 plVar6 = (int64 *)
                          BigMapPos.op_Subtraction
@@ -1222,7 +1222,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D3A
-    // RVA   : 0xC7D230   Offset: 0xC7C630   Length: 0x10B
+    // RVA   : 0xC7D840   Offset: 0xC7CC40   Length: 0x10B
     public HeroFollowType ConsiderHeroFollowType(BigmapNpcController target)
     {
         bool cVar1;
@@ -1253,7 +1253,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D3B
-    // RVA   : 0xC7EAC0   Offset: 0xC7DEC0   Length: 0x1D
+    // RVA   : 0xC7F0D0   Offset: 0xC7E4D0   Length: 0x1D
     public float GetBigMapTravelSpeed()
     {
         if (param_2 != 0) {
@@ -1263,7 +1263,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D3C
-    // RVA   : 0xC7EAA0   Offset: 0xC7DEA0   Length: 0x1F
+    // RVA   : 0xC7F0B0   Offset: 0xC7E4B0   Length: 0x1F
     public float GetBigMapTravelSpeed(HeroData targetHero)
     {
         if (targetHero != null) {
@@ -1273,7 +1273,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D3D
-    // RVA   : 0xC81E00   Offset: 0xC81200   Length: 0x2EE
+    // RVA   : 0xC82410   Offset: 0xC81810   Length: 0x2EE
     public void SetSkeletonRunAnim(GameObject targetSkeleton, HeroData targetHero, Vector3 originPos, Vector2 nextPos)
     {
         void BigmapNpcController.SetSkeletonRunAnim
@@ -1309,7 +1309,7 @@ public class BigmapNpcController
           uStack_34 = puVar5[1];
           uStack_30 = puVar5[2];
           uStack_2c = puVar5[3];
-        LAB_180c81f48:
+        LAB_180c82558:
           Transform.set_localRotation(lVar4,&local_38,0);
         }
         else if (nextPos < *originPos) {
@@ -1321,7 +1321,7 @@ public class BigmapNpcController
           uStack_34 = *(uint32 *)(lVar1 + 0x694);
           uStack_30 = *(uint32 *)(lVar1 + 0x698);
           uStack_2c = *(uint32 *)(lVar1 + 0x69c);
-          goto LAB_180c81f48;
+          goto LAB_180c82558;
         }
         fVar8 = (float)HeroData.GetFinalTravelSpeed(targetHero,0);
         fVar9 = 1.0;
@@ -1359,7 +1359,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D3E
-    // RVA   : 0xC7FD20   Offset: 0xC7F120   Length: 0x9AF
+    // RVA   : 0xC80330   Offset: 0xC7F730   Length: 0x9AF
     public void ManageFollowerMove()
     {
         uint uVar1;
@@ -1434,14 +1434,14 @@ public class BigmapNpcController
             if (lVar5 == null) break;
             if (lVar5.Count + 0.0001 < fVar14) {
               if (((this.followers == null) ||
-                  (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null)
+                  (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null)
                  || ((lVar5._items == null ||
                      (lVar5 = GameObject.get_transform(lVar5._items,0)) == null)))
               break;
               pfVar11 = (float *)Transform.get_localPosition(local_c8,lVar5,0);
               fVar15 = *pfVar11;
               if (((this.followers == null) ||
-                  (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null)
+                  (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null)
                  || ((lVar5._items == null ||
                      (lVar5 = GameObject.get_transform(lVar5._items,0)) == null)))
               break;
@@ -1449,7 +1449,7 @@ public class BigmapNpcController
               fVar2 = *(float *)(lVar5 + 4);
               local_1c8 = CONCAT44(fVar2,fVar15);
               if ((((this.followers == null) ||
-                   (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null
+                   (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null
                    ) || (lVar5._items == null)) ||
                  (lVar5 = GameObject.get_transform(lVar5._items,0)) == null) break;
               puVar6 = (uint64 *)Transform.get_localPosition(local_a8,lVar5,0);
@@ -1464,20 +1464,20 @@ public class BigmapNpcController
               puVar6 = (uint64 *)Vector3.get_normalized(local_88,&local_1a8,0);
               local_188 = *puVar6;
               if ((this.followers == null) ||
-                 (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null)
+                 (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null)
               break;
               fVar14 = fVar14 - lVar5.Count;
               fVar15 = (float)local_188 * fVar14 + (float)local_178;
               fVar14 = local_188._4_4_ * fVar14 + local_178._4_4_;
               if ((this.followers == null) ||
-                 (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null)
+                 (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null)
               break;
               uVar8 = lVar5._items;
               lVar5 = FUN_18046c0a0(0);
               if (lVar5 == null) break;
               lVar5 = *(int64 *)(lVar5 + 32);
               if (((this.followers == null) ||
-                  (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null)
+                  (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null)
                  || (*(int64 *)(lVar7 + 16) == 0)) break;
               uVar9 = Object.get_name(*(int64 *)(lVar7 + 16),0);
               uVar4 = Int32.Parse(uVar9,0);
@@ -1488,7 +1488,7 @@ public class BigmapNpcController
               BigmapNpcController.SetSkeletonRunAnim
                         (this,uVar8,uVar9,&local_148,CONCAT44(fVar14,fVar15),0);
               if (((this.followers == null) ||
-                  (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null)
+                  (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null)
                  || (lVar5._items == null)) break;
               lVar5 = GameObject.get_transform(lVar5._items,0);
               local_190 = 0;
@@ -1510,14 +1510,14 @@ public class BigmapNpcController
                  (lVar5 = this.heroData.heroAIData) == null) break;
               if (lVar5._items == 13) {
                 if ((this.followers == null) ||
-                   (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0)) == null
+                   (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8)) == null
                    ) break;
                 uVar8 = lVar5._items;
                 lVar5 = FUN_18046c0a0(0);
                 if (lVar5 == null) break;
                 lVar5 = *(int64 *)(lVar5 + 32);
                 if (((this.followers == null) ||
-                    (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0), lVar7 == null
+                    (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8), lVar7 == null
                     )) || (*(int64 *)(lVar7 + 16) == 0)) break;
                 uVar9 = Object.get_name(*(int64 *)(lVar7 + 16),0);
                 uVar4 = Int32.Parse(uVar9,0);
@@ -1529,13 +1529,13 @@ public class BigmapNpcController
                 cVar3 = BigmapNpcController.IsMoving(this,0);
                 lVar5 = this.followers;
                 if (!cVar3) {
-                  if ((lVar5 == null) || (lVar5 = FUN_180002f80(lVar5,uVar12,DAT_181d7fea0)) == null)
+                  if ((lVar5 == null) || (lVar5 = FUN_180002f80(lVar5,uVar12,DAT_181d7feb8)) == null)
                   break;
                   lVar5 = FUN_18046c0a0(0);
                   if (lVar5 == null) break;
                   lVar5 = *(int64 *)(lVar5 + 32);
                   if (((this.followers == null) ||
-                      (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0),
+                      (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8),
                       lVar7 == null)) || (*(int64 *)(lVar7 + 16) == 0)) break;
                   uVar8 = Object.get_name(*(int64 *)(lVar7 + 16),0);
                   uVar4 = Int32.Parse(uVar8,0);
@@ -1544,21 +1544,21 @@ public class BigmapNpcController
                   BigmapNpcController.SetSkeletonIdleAnim(this);
                 }
                 else {
-                  if ((lVar5 == null) || (lVar5 = FUN_180002f80(lVar5,uVar12,DAT_181d7fea0)) == null)
+                  if ((lVar5 == null) || (lVar5 = FUN_180002f80(lVar5,uVar12,DAT_181d7feb8)) == null)
                   break;
                   uVar8 = lVar5._items;
                   lVar5 = FUN_18046c0a0(0);
                   if (lVar5 == null) break;
                   lVar5 = *(int64 *)(lVar5 + 32);
                   if (((this.followers == null) ||
-                      (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0),
+                      (lVar7 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8),
                       lVar7 == null)) || (*(int64 *)(lVar7 + 16) == 0)) break;
                   uVar9 = Object.get_name(*(int64 *)(lVar7 + 16),0);
                   uVar4 = Int32.Parse(uVar9,0);
                   if (lVar5 == null) break;
                   uVar9 = WorldData.GetHero(lVar5,uVar4,0);
                   if (((this.followers == null) ||
-                      (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0),
+                      (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8),
                       lVar5 == null)) ||
                      ((lVar5._items == null ||
                       (lVar5 = GameObject.get_transform(lVar5._items,0)) == null)))
@@ -1566,7 +1566,7 @@ public class BigmapNpcController
                   puVar10 = (uint32 *)Transform.get_localPosition(local_f8,lVar5,0);
                   uVar4 = *puVar10;
                   if (((this.followers == null) ||
-                      (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7fea0),
+                      (lVar5 = FUN_180002f80(this.followers,uVar12,DAT_181d7feb8),
                       lVar5 == null)) ||
                      ((lVar5._items == null ||
                       (lVar5 = GameObject.get_transform(lVar5._items,0)) == null)))
@@ -1590,7 +1590,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D3F
-    // RVA   : 0xC81C80   Offset: 0xC81080   Length: 0x17E
+    // RVA   : 0xC82290   Offset: 0xC81690   Length: 0x17E
     public void SetSkeletonIdleAnim(GameObject targetSkeleton, HeroData targetHero)
     {
         ulong uVar1;
@@ -1640,7 +1640,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D40
-    // RVA   : 0xC81B20   Offset: 0xC80F20   Length: 0x157
+    // RVA   : 0xC82130   Offset: 0xC81530   Length: 0x157
     public void SetSkeletonAttackAnim(GameObject targetSkeleton, string targetAnim)
     {
         void BigmapNpcController.SetSkeletonAttackAnim
@@ -1686,7 +1686,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D41
-    // RVA   : 0xC80AE0   Offset: 0xC7FEE0   Length: 0x8D6
+    // RVA   : 0xC810F0   Offset: 0xC804F0   Length: 0x8D6
     public void RefreshHeroSkeleton()
     {
         long lVar2;
@@ -1732,15 +1732,15 @@ public class BigmapNpcController
                 uVar5 = Object.get_name(lVar6,0);
                 uVar4 = Int32.Parse(uVar5,0);
                 if (lVar2 == null) throw; // [null/range check failed]
-                cVar3 = FUN_18182a3a0(lVar2,uVar4,DAT_181d8f398);
+                cVar3 = FUN_18182a9b0(lVar2,uVar4,DAT_181d8f3b0);
                 if (!cVar3) {
                   if ((this.followers == null) ||
-                     (lVar6 = FUN_180002f80(this.followers,uVar9,DAT_181d7fea0), lVar6 == null
+                     (lVar6 = FUN_180002f80(this.followers,uVar9,DAT_181d7feb8), lVar6 == null
                      )) throw; // [null/range check failed]
                   uVar5 = lVar6._items;
                   Object.Destroy(uVar5,0);
                   if (this.followers == null) throw; // [null/range check failed]
-                  FUN_181823590(this.followers,uVar9,DAT_181d7fda0);
+                  FUN_181823ba0(this.followers,uVar9,DAT_181d7fdb8);
                 }
                 lVar12 = lVar12 + -8;
                 uVar9 = uVar9 - 1;
@@ -1781,28 +1781,28 @@ public class BigmapNpcController
                 while( true ) {
                   lVar6 = this.followers;
                   if (lVar6 == null) throw; // [null/range check failed]
-                  if (lVar6.Count <= iVar10) goto LAB_180c80e88;
-                  lVar6 = FUN_180002f80(lVar6,iVar10,DAT_181d7fea0);
+                  if (lVar6.Count <= iVar10) goto LAB_180c81498;
+                  lVar6 = FUN_180002f80(lVar6,iVar10,DAT_181d7feb8);
                   if ((lVar6 == null) || (lVar6._items == null)) throw; // [null/range check failed]
                   uVar5 = Object.get_name(lVar6._items,0);
                   if ((this.heroData == null) ||
                      (lVar6 = this.heroData.teamMates) == null)
                   throw; // [null/range check failed]
-                  local_res8[0] = FUN_1800d6760(lVar6,iVar11,DAT_181d8fa18);
+                  local_res8[0] = FUN_1800d6760(lVar6,iVar11,DAT_181d8fa30);
                   uVar7 = Int32.ToString(local_res8,0);
-                  cVar3 = FUN_18171e540(uVar5,uVar7,0);
+                  cVar3 = FUN_18171eb50(uVar5,uVar7,0);
                   if (cVar3) break;
                   iVar10 = iVar10 + 1;
                 }
                 if ((this.followers == null) ||
-                   (lVar12 = FUN_180002f80(this.followers,iVar10,DAT_181d7fea0),
+                   (lVar12 = FUN_180002f80(this.followers,iVar10,DAT_181d7feb8),
                    lVar12 == null)) break;
                 lVar12 = lVar12.isSummon;
                 if ((this.followers == null) ||
-                   (lVar6 = FUN_180002f80(this.followers,iVar10,DAT_181d7fea0)) == null
+                   (lVar6 = FUN_180002f80(this.followers,iVar10,DAT_181d7feb8)) == null
                    ) break;
                 lVar6.Count = fVar14;
-        LAB_180c80e88:
+        LAB_180c81498:
                 cVar3 = Object.op_Equality(lVar12,0,0);
                 if (!cVar3) {
                   lVar6 = FUN_18046c0a0(0);
@@ -1821,10 +1821,10 @@ public class BigmapNpcController
                   lVar12 = lVar12.summonControlable;
                   if (((this.heroData == null) ||
                       (lVar6 = this.heroData.teamMates) == null) ||
-                     (uVar4 = FUN_1800d6760(lVar6,iVar11,DAT_181d8fa18), lVar12 == null)) break;
+                     (uVar4 = FUN_1800d6760(lVar6,iVar11,DAT_181d8fa30), lVar12 == null)) break;
                   lVar12 = WorldData.GetHero(lVar12,uVar4,0);
                   lVar6 = Component.get_transform(this,0);
-                  if ((lVar6 == null) || (lVar6 = FUN_180da9a20(lVar6,0)) == null) break;
+                  if ((lVar6 == null) || (lVar6 = FUN_180daa030(lVar6,0)) == null) break;
                   uVar7 = Component.get_gameObject(lVar6,0);
                   puVar8 = (uint64 *)Vector3.get_one(local_78,0);
                   uVar5 = *puVar8;
@@ -1837,14 +1837,14 @@ public class BigmapNpcController
                   lVar12 = Component.get_gameObject(lVar12,0);
                   this.newObj = lVar12;
                   if (*plVar1 == 0) break;
-                  lVar12 = GameObject.AddComponent(*plVar1,DAT_181dc5db8);
+                  lVar12 = GameObject.AddComponent(*plVar1,DAT_181dc5dd0);
                   if ((*plVar1 == 0) ||
                      (uVar5 = GameObject.GetComponent(*plVar1,DAT_181d734d0), lVar12 == null)) break;
                   lVar12.summonLv = uVar5;
                   lVar12 = *plVar1;
                   if ((this.heroData == null) ||
                      (lVar6 = this.heroData.teamMates) == null) break;
-                  local_res8[0] = FUN_1800d6760(lVar6,iVar11,DAT_181d8fa18);
+                  local_res8[0] = FUN_1800d6760(lVar6,iVar11,DAT_181d8fa30);
                   uVar5 = Int32.ToString(local_res8,0);
                   if (lVar12 == null) break;
                   Object.set_name(lVar12,uVar5,0);
@@ -1865,7 +1865,7 @@ public class BigmapNpcController
                   lVar6 = *plVar1;
                   uVar5 = new AreaBuildingRateChange(lVar6,fVar14);
                   if (lVar12 == null) break;
-                  FUN_18181e0a0(lVar12,uVar5);
+                  FUN_18181e6b0(lVar12,uVar5);
                 }
                 lVar12 = this.heroData;
                 iVar11 = iVar11 + 1;
@@ -1877,7 +1877,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D42
-    // RVA   : 0xC80840   Offset: 0xC7FC40   Length: 0x141
+    // RVA   : 0xC80E50   Offset: 0xC80250   Length: 0x141
     private void OnDestroy()
     {
         ulong uVar1;
@@ -1914,7 +1914,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D43
-    // RVA   : 0xC80990   Offset: 0xC7FD90   Length: 0x14B
+    // RVA   : 0xC80FA0   Offset: 0xC803A0   Length: 0x14B
     private void OnEnable()
     {
         long lVar1;
@@ -1939,14 +1939,14 @@ public class BigmapNpcController
           local_20 = *(uint32 *)(puVar2 + 1);
           local_28 = *puVar2;
           uVar3 = ShortcutExtensions.DOScale(uVar3,&local_28,0x3e99999a,0);
-          uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
-          uVar4 = new OnTooltipCB(this,DAT_181d8a670,0);
-          TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc01d0);
+          uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
+          uVar4 = new OnTooltipCB(this,DAT_181d8a688,0);
+          TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc0380);
         }
     }
 
     // Token : 0x6000D44
-    // RVA   : 0xC80990   Offset: 0xC7FD90   Length: 0x14B
+    // RVA   : 0xC80FA0   Offset: 0xC803A0   Length: 0x14B
     public void StartSelfShow()
     {
         long lVar1;
@@ -1971,14 +1971,14 @@ public class BigmapNpcController
           local_20 = *(uint32 *)(puVar2 + 1);
           local_28 = *puVar2;
           uVar3 = ShortcutExtensions.DOScale(uVar3,&local_28,0x3e99999a,0);
-          uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
-          uVar4 = new OnTooltipCB(this,DAT_181d8a670,0);
-          TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc01d0);
+          uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
+          uVar4 = new OnTooltipCB(this,DAT_181d8a688,0);
+          TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc0380);
         }
     }
 
     // Token : 0x6000D45
-    // RVA   : 0xC820F0   Offset: 0xC814F0   Length: 0x15F
+    // RVA   : 0xC82700   Offset: 0xC81B00   Length: 0x15F
     public void StartSelfDestroy()
     {
         long lVar1;
@@ -2002,16 +2002,16 @@ public class BigmapNpcController
             local_20 = *(uint32 *)(puVar3 + 1);
             local_28 = *puVar3;
             uVar2 = ShortcutExtensions.DOScale(uVar2,&local_28,0x3e99999a,0);
-            uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1db0);
-            uVar4 = new OnTooltipCB(this,DAT_181d8a5f0,0);
-            TweenSettingsExtensions.OnComplete(uVar2,uVar4,DAT_181dc01d0);
+            uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
+            uVar4 = new OnTooltipCB(this,DAT_181d8a608,0);
+            TweenSettingsExtensions.OnComplete(uVar2,uVar4,DAT_181dc0380);
             return;
           }
         }
     }
 
     // Token : 0x6000D46
-    // RVA   : 0xC806D0   Offset: 0xC7FAD0   Length: 0x16E
+    // RVA   : 0xC80CE0   Offset: 0xC800E0   Length: 0x16E
     public void OnClick()
     {
         long lVar1;
@@ -2039,7 +2039,7 @@ public class BigmapNpcController
     // RVA   : 0x7EBBC0   Offset: 0x7EAFC0   Length: 0x5B
     public void OnDrag(Vector2 delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnDrag(*pStatics,delta,0);
           return;
@@ -2050,7 +2050,7 @@ public class BigmapNpcController
     // RVA   : 0x7EBC20   Offset: 0x7EB020   Length: 0x57
     public void OnScroll(float delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnScroll(*pStatics,delta,0);
           return;
@@ -2058,7 +2058,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D49
-    // RVA   : 0xC7F390   Offset: 0xC7E790   Length: 0x927
+    // RVA   : 0xC7F9A0   Offset: 0xC7EDA0   Length: 0x927
     public void InteractRangeObjStay(GameObject target)
     {
         bool cVar1;
@@ -2210,7 +2210,7 @@ public class BigmapNpcController
                                       return;
                                     }
                                     uVar8 = this.heroData;
-                                    lVar3 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 40);
+                                    lVar3 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 40);
                                     lVar5 = GameObject.GetComponent(target,DAT_181d71bd8);
                                     if (((lVar5 != null) && (lVar5.summonLv != null)) &&
                                        (lVar5 = *(int64 *)(lVar5.summonLv + 24),
@@ -2227,7 +2227,7 @@ public class BigmapNpcController
                                         if (lVar3 != null) {
                                           AIController.SetAIStuff(lVar3,uVar8,uVar7,0,0);
                                           this.heroFollowTarget = 0;
-                                          goto LAB_180c7f813;
+                                          goto LAB_180c7fe23;
                                         }
                                       }
                                     }
@@ -2256,7 +2256,7 @@ public class BigmapNpcController
                         }
                         *(uint64 *)(this + 200) = this.areaSafeRange;
                         this.heroFollowTarget = 0;
-        LAB_180c7f813:
+        LAB_180c7fe23:
                         il2cpp_internal(this + 48,0);
                         this.heroChaseTime = 0;
                         return;
@@ -2278,10 +2278,10 @@ public class BigmapNpcController
             }
             else if (this.heroData != null) {
               this.heroData.inWater = 1;
-              uVar8 = Component.GetComponent(this,DAT_181d93e60);
+              uVar8 = Component.GetComponent(this,DAT_181d93e78);
               cVar1 = Object.op_Inequality(uVar8,0,0);
               if (cVar1) {
-                lVar3 = Component.GetComponent(this,DAT_181d93e60);
+                lVar3 = Component.GetComponent(this,DAT_181d93e78);
                 if (lVar3 == null) throw; // [null/range check failed]
                 lVar3.summonSourceHero = 1;
               }
@@ -2290,7 +2290,7 @@ public class BigmapNpcController
             }
           }
           else {
-            lVar3 = GameObject.GetComponent(target,DAT_181dc7628);
+            lVar3 = GameObject.GetComponent(target,DAT_181dc7640);
             if (lVar3 != null) {
               this.inBigMapSpeEffectType = lVar3.summonLv;
               this.inBigMapSpeEffectBuff = 1;
@@ -2301,7 +2301,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D4A
-    // RVA   : 0xC7D200   Offset: 0xC7C600   Length: 0x29
+    // RVA   : 0xC7D810   Offset: 0xC7CC10   Length: 0x29
     public void ClearHeroFollowTarget()
     {
         this.heroFollowTarget = 0;
@@ -2309,7 +2309,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D4B
-    // RVA   : 0xC82450   Offset: 0xC81850   Length: 0x1AF
+    // RVA   : 0xC82A60   Offset: 0xC81E60   Length: 0x1AF
     public bool TargetHeroIsEnemy(HeroData targetHeroData)
     {
         bool cVar1;
@@ -2357,7 +2357,7 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D4C
-    // RVA   : 0xC81530   Offset: 0xC80930   Length: 0x4AF
+    // RVA   : 0xC81B40   Offset: 0xC80F40   Length: 0x4AF
     public void SeeRangeObjStay(GameObject target)
     {
         bool cVar1;
@@ -2378,8 +2378,8 @@ public class BigmapNpcController
                 return;
               }
               lVar2 = GameObject.get_transform(target,0);
-              if ((((lVar2 != null) && (lVar2 = FUN_180da9a20(lVar2,0)) != null) &&
-                  (lVar2 = Component.GetComponent(lVar2,DAT_181d93560)) != null) &&
+              if ((((lVar2 != null) && (lVar2 = FUN_180daa030(lVar2,0)) != null) &&
+                  (lVar2 = Component.GetComponent(lVar2,DAT_181d93578)) != null) &&
                  (lVar2.summonLv != null)) {
                 *(uint8 *)(lVar2.summonLv + 96) = 1;
                 return;
@@ -2493,12 +2493,12 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D4D
-    // RVA   : 0xC82770   Offset: 0xC81B70   Length: 0x94
+    // RVA   : 0xC82D80   Offset: 0xC82180   Length: 0x94
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d91658);
-        FUN_18132faf0(uVar1,DAT_181d7fca0);
+        uVar1 = il2cpp_internal(DAT_181d91678);
+        FUN_181330100(uVar1,DAT_181d7fcb8);
         this.followers = uVar1;
         this.areaSafeRangeRefreshTime = 0x3e4ccccd;
         this.inBigMapSpeEffectType = 0xffffffff;
@@ -2507,17 +2507,17 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D4E
-    // RVA   : 0xC82670   Offset: 0xC81A70   Length: 0xF2
+    // RVA   : 0xC82C80   Offset: 0xC82080   Length: 0xF2
     private static void /*cctor*/()
     {
         long lVar2;
-        lVar2 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar2,DAT_181da3bd8);
+        lVar2 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar2,DAT_181da3bf0);
         if (lVar2 != null) {
-          FUN_18181e0a0(lVar2,"",DAT_181da3d58);
-          FUN_18181e0a0(lVar2,"追击",DAT_181da3d58);
-          FUN_18181e0a0(lVar2,"逃离",DAT_181da3d58);
-          plVar1 = *(int64 **)(DAT_181db0e48 + 184);
+          FUN_18181e6b0(lVar2,"",DAT_181da3d70);
+          FUN_18181e6b0(lVar2,"追击",DAT_181da3d70);
+          FUN_18181e6b0(lVar2,"逃离",DAT_181da3d70);
+          plVar1 = *(int64 **)(DAT_181db0e60 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;
@@ -2525,16 +2525,16 @@ public class BigmapNpcController
     }
 
     // Token : 0x6000D4F
-    // RVA   : 0xC82660   Offset: 0xC81A60   Length: 0x8
+    // RVA   : 0xC82C70   Offset: 0xC82070   Length: 0x8
     private void <StartSelfShow>b__73_0()
     {
-        void FUN_180c82660(int64 this)
+        void FUN_180c82c70(int64 this)
         {
         this.selfShowing = 0;
     }
 
     // Token : 0x6000D50
-    // RVA   : 0xC82600   Offset: 0xC81A00   Length: 0x5F
+    // RVA   : 0xC82C10   Offset: 0xC82010   Length: 0x5F
     private void <StartSelfDestroy>b__75_0()
     {
         ulong uVar1;

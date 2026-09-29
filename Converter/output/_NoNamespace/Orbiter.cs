@@ -23,7 +23,7 @@ public class Orbiter
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009B7
-    // RVA   : 0xB90E10   Offset: 0xB90210   Length: 0x2A
+    // RVA   : 0xB914D0   Offset: 0xB908D0   Length: 0x2A
     private void Start()
     {
         byte[] local_18 = new byte[16];
@@ -33,7 +33,7 @@ public class Orbiter
     }
 
     // Token : 0x60009B8
-    // RVA   : 0xB90E40   Offset: 0xB90240   Length: 0x3BC
+    // RVA   : 0xB91500   Offset: 0xB90900   Length: 0x3BC
     private void Update()
     {
         float fVar2;
@@ -69,7 +69,7 @@ public class Orbiter
         lVar7 = Camera.get_main(0);
         puVar8 = (uint64 *)Input.get_mousePosition(local_88,0);
         fVar2 = local_c0;
-        if (lVar7 == null) goto LAB_180b911f7;
+        if (lVar7 == null) goto LAB_180b918b7;
         local_b0 = *(float *)(puVar8 + 1);
         local_b8 = *puVar8;
         puVar9 = (uint32 *)Camera.ScreenPointToRay(local_88,lVar7,&local_b8,0);
@@ -83,14 +83,14 @@ public class Orbiter
           lVar7 = RaycastHit.get_collider(&local_70,0);
           fVar2 = local_c0;
           if (((lVar7 == null) || (lVar7 = Component.get_transform(lVar7,0), fVar2 = local_c0) == null)
-             || (lVar7 = FUN_180da9a60(lVar7,0), fVar2 = local_c0) == null) goto LAB_180b911f7;
-          lVar7 = Component.GetComponent(lVar7,DAT_181d960e0);
+             || (lVar7 = FUN_180daa070(lVar7,0), fVar2 = local_c0) == null) goto LAB_180b918b7;
+          lVar7 = Component.GetComponent(lVar7,DAT_181d960f8);
           cVar6 = Object.op_Equality(lVar7,0,0);
           if (!cVar6) {
             fVar2 = local_c0;
             if ((lVar7 == null) ||
                (lVar10 = Component.get_transform(lVar7,0), fVar2 = local_c0) == null)
-            goto LAB_180b911f7;
+            goto LAB_180b918b7;
             puVar8 = (uint64 *)Transform.get_position(local_88,lVar10,0);
             this._pos = *puVar8;
             *(uint32 *)(this + 56) = *(uint32 *)(puVar8 + 1);
@@ -98,7 +98,7 @@ public class Orbiter
             cVar6 = Object.op_Inequality(lVar10,lVar7,0);
             if (cVar6) {
               fVar2 = local_c0;
-              if (this.Trail == null) goto LAB_180b911f7;
+              if (this.Trail == null) goto LAB_180b918b7;
               *(uint8 *)(this.Trail + 32) = 1;
               lVar10 = Component.get_transform(this,0);
               fVar2 = this.TankCollisionOrbitRadius;
@@ -108,7 +108,7 @@ public class Orbiter
               local_b8 = CONCAT44((float)((uint64)local_c8 >> 32) * fVar2,(float)local_c8 * fVar2);
               fVar2 = *(float *)(puVar8 + 1);
               local_b0 = local_c0;
-              if (lVar10 == null) goto LAB_180b911f7;
+              if (lVar10 == null) goto LAB_180b918b7;
               local_c8 = local_b8;
               Transform.set_localScale(lVar10,&local_c8,0);
               lVar10 = Component.get_transform(this,0);
@@ -118,13 +118,13 @@ public class Orbiter
               fVar5 = *(float *)(puVar8 + 1);
               fVar11 = (float)Time.get_deltaTime(0);
               fVar2 = local_c0;
-              if (lVar10 == null) goto LAB_180b911f7;
+              if (lVar10 == null) goto LAB_180b918b7;
               local_c8 = uVar4;
               local_c0 = fVar5;
               Transform.Rotate(lVar10,&local_c8,fVar11 * fVar3,0);
               lVar10 = Component.get_transform(this,0);
               fVar2 = local_c0;
-              if (lVar10 == null) goto LAB_180b911f7;
+              if (lVar10 == null) goto LAB_180b918b7;
               local_c0 = *(float *)(this + 56);
               local_c8 = this._pos;
               Transform.set_position(lVar10,&local_c8,0);
@@ -136,7 +136,7 @@ public class Orbiter
             lVar10 = *plVar1;
             cVar6 = Object.op_Inequality(lVar10,0,0);
             if (!cVar6) {
-        LAB_180b91184:
+        LAB_180b91844:
               *(uint8 *)(lVar7 + 96) = 1;
               *plVar1 = lVar7;
               il2cpp_internal(plVar1,lVar7);
@@ -145,9 +145,9 @@ public class Orbiter
             fVar2 = local_c0;
             if (*plVar1 != 0) {
               *(uint8 *)(*plVar1 + 96) = 0;
-              goto LAB_180b91184;
+              goto LAB_180b91844;
             }
-            goto LAB_180b911f7;
+            goto LAB_180b918b7;
           }
           puVar8 = (uint64 *)FUN_18045e0a0(&local_a8,&local_70,0);
           this._pos = *puVar8;
@@ -158,15 +158,15 @@ public class Orbiter
           *(uint8 *)(this.Trail + 32) = 0;
           return;
         }
-        LAB_180b911f7:
+        LAB_180b918b7:
         local_c0 = fVar2;
     }
 
     // Token : 0x60009B9
-    // RVA   : 0xB91200   Offset: 0xB90600   Length: 0x15
+    // RVA   : 0xB918C0   Offset: 0xB90CC0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180b91200(int64 this)
+        void FUN_180b918c0(int64 this)
         {
         this.TankCollisionOrbitRadius = 0x3fc00000;
         this.TankCollisionRotationSpeed = 0x3f800000;

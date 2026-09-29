@@ -6,7 +6,7 @@
 public class <>c__DisplayClass41_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400213E
+    // Token: 0x400213F
     public RectTransform target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass41_0
     }
 
     // Token : 0x6002745
-    // RVA   : 0x9378E0   Offset: 0x936CE0   Length: 0x1D
+    // RVA   : 0x937F70   Offset: 0x937370   Length: 0x1D
     internal Vector2 <DOShapeCircle>b__0()
     {
         if (this.target != null) {
@@ -28,7 +28,7 @@ public class <>c__DisplayClass41_0
     }
 
     // Token : 0x6002746
-    // RVA   : 0x937900   Offset: 0x936D00   Length: 0x1E
+    // RVA   : 0x937F90   Offset: 0x937390   Length: 0x1E
     internal void <DOShapeCircle>b__1(Vector2 x)
     {
         if (this.target != null) {

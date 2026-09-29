@@ -6,7 +6,7 @@
 public class <>c__DisplayClass4_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400210F
+    // Token: 0x4002110
     public Image target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass4_0
     }
 
     // Token : 0x60026D5
-    // RVA   : 0x937A60   Offset: 0x936E60   Length: 0x3B
+    // RVA   : 0x9380F0   Offset: 0x9374F0   Length: 0x3B
     internal Color <DOFade>b__0()
     {
         ulong uVar2;
@@ -35,7 +35,7 @@ public class <>c__DisplayClass4_0
     }
 
     // Token : 0x60026D6
-    // RVA   : 0x937AA0   Offset: 0x936EA0   Length: 0x34
+    // RVA   : 0x938130   Offset: 0x937530   Length: 0x34
     internal void <DOFade>b__1(Color x)
     {
         uint local_18;

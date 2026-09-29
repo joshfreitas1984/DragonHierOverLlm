@@ -32,14 +32,14 @@ public class BattlePrepareSpellController
     // RVA   : 0x8CC780   Offset: 0x8CBB80   Length: 0x36
     public static BattlePrepareSpellController get_Instance()
     {
-        return **(uint64 **)(DAT_181db05c8 + 184);
+        return **(uint64 **)(DAT_181db05e0 + 184);
     }
 
     // Token : 0x6000CD9
     // RVA   : 0x8CBC00   Offset: 0x8CB000   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db05c8 + 184);
+        puVar1 = *(uint64 **)(DAT_181db05e0 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -80,7 +80,7 @@ public class BattlePrepareSpellController
           }
           this.spellNum = iVar5;
           if (this.spellUsedID != null) {
-            FUN_1812f9a10(this.spellUsedID,DAT_181d8f318);
+            FUN_1812fa020(this.spellUsedID,DAT_181d8f330);
             if (this.battlePrepareSpellUI != null) {
               GameObject.SetActive(this.battlePrepareSpellUI,1,0);
               if (this.battlePrepareSpellUI != null) {
@@ -145,7 +145,7 @@ public class BattlePrepareSpellController
             uVar4 = this.battlePrepareSpellButtonPrefab;
             lVar2 = GlobalData.AddChild(uVar3,uVar4,0);
             if (lVar2 == null) throw; // [null/range check failed]
-            lVar2 = GameObject.GetComponent(lVar2,DAT_181dc7408);
+            lVar2 = GameObject.GetComponent(lVar2,DAT_181dc7420);
             if ((this.BattlePrepareSpellDataBase == null) ||
                (uVar4 = FUN_180002f80(this.BattlePrepareSpellDataBase,iVar5), lVar2 == null))
             throw; // [null/range check failed]
@@ -156,10 +156,10 @@ public class BattlePrepareSpellController
           }
           if ((((lVar1 != null) && (lVar2 = GameObject.get_transform(lVar1,0)) != null) &&
               (lVar2 = Transform.Find(lVar2,"SpellGrid",0)) != null) &&
-             (lVar2 = Component.GetComponent(lVar2,DAT_181d96960)) != null) {
+             (lVar2 = Component.GetComponent(lVar2,DAT_181d96978)) != null) {
             UIGrid.set_repositionNow(lVar2,1,0);
-            uVar4 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(uVar4,DAT_181d8f098);
+            uVar4 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(uVar4,DAT_181d8f0b0);
             this.spellUsedID = uVar4;
             return;
           }
@@ -186,7 +186,7 @@ public class BattlePrepareSpellController
             if ((lVar1 == null) || (*(int64 *)(lVar1 + 32) == 0)) break;
             lVar1 = WorldData.Player(*(int64 *)(lVar1 + 32),0);
             if ((this.BattlePrepareSpellDataBase == null) ||
-               ((lVar2 = FUN_180002f80(this.BattlePrepareSpellDataBase,iVar3,DAT_181d7f5b0), lVar2 == null ||
+               ((lVar2 = FUN_180002f80(this.BattlePrepareSpellDataBase,iVar3,DAT_181d7f5c8), lVar2 == null ||
                 (lVar1 == null)))) break;
             lVar1 = HeroData.FindSkill(lVar1,*(uint32 *)(lVar2 + 32),0);
             if (lVar1 != null) {
@@ -214,7 +214,7 @@ public class BattlePrepareSpellController
         if (((this.battlePrepareSpellUI != null) &&
             (lVar2 = GameObject.get_transform(this.battlePrepareSpellUI,0)) != null) &&
            (lVar2 = Transform.Find(lVar2,"SpellNum",0)) != null) {
-          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
           uVar4 = Int32.ToString(this + 48,0);
           LTLocalization.SetText(uVar3,uVar4,0);
           lVar2 = this.BattlePrepareSpellDataBase;
@@ -232,13 +232,13 @@ public class BattlePrepareSpellController
               lVar2 = *(int64 *)(lVar8 + lVar2._items);
               lVar5 = FUN_18046c100(0);
               if (((this.BattlePrepareSpellDataBase == null) ||
-                  (lVar6 = FUN_180002f80(this.BattlePrepareSpellDataBase,uVar7,DAT_181d7f5b0)) == null)
+                  (lVar6 = FUN_180002f80(this.BattlePrepareSpellDataBase,uVar7,DAT_181d7f5c8)) == null)
                  || (lVar5 == null)) break;
               uVar3 = GameDataController.StringToSpeAddData(lVar5,*(uint64 *)(lVar6 + 48),0);
               lVar5 = FUN_18046c0a0(0);
               if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                  (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x238)) == null) break;
-              fVar9 = (float)FUN_1800d6790(lVar5,uVar7,DAT_181da1078);
+              fVar9 = (float)FUN_1800d6790(lVar5,uVar7,DAT_181da1090);
               uVar3 = HeroSpeAddData.op_Multiply(uVar3,fVar9 + 1.0,0);
               if (lVar2 == null) break;
               puVar1 = (uint64 *)(lVar2 + 56);
@@ -248,7 +248,7 @@ public class BattlePrepareSpellController
                    (lVar2 = GameObject.get_transform(this.battlePrepareSpellUI,0)) == null) ||
                   (lVar2 = Transform.Find(lVar2,"SpellGrid",0)) == null) ||
                  ((lVar2 = Transform.GetChild(lVar2,uVar7,0), lVar2 == null ||
-                  (lVar2 = Component.GetComponent(lVar2,DAT_181d93460)) == null))) break;
+                  (lVar2 = Component.GetComponent(lVar2,DAT_181d93478)) == null))) break;
               BattlePrepareSpellButtonController.Init(lVar2,0);
               lVar2 = this.BattlePrepareSpellDataBase;
               uVar7 = uVar7 + 1;
@@ -290,20 +290,20 @@ public class BattlePrepareSpellController
             if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) break;
             lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 0x238);
             if (this.spellUsedID == null) break;
-            uVar1 = FUN_1800d6760(this.spellUsedID,iVar6,DAT_181d8fa18);
+            uVar1 = FUN_1800d6760(this.spellUsedID,iVar6,DAT_181d8fa30);
             lVar5 = FUN_18046c0a0(0);
             if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) break;
             lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x238);
             if ((this.spellUsedID == null) ||
-               (uVar2 = FUN_1800d6760(this.spellUsedID,iVar6,DAT_181d8fa18), lVar5 == null))
+               (uVar2 = FUN_1800d6760(this.spellUsedID,iVar6,DAT_181d8fa30), lVar5 == null))
             break;
-            FUN_1800d6790(lVar5,uVar2,DAT_181da1078);
+            FUN_1800d6790(lVar5,uVar2,DAT_181da1090);
             if (this.spellUsedID == null) break;
-            iVar3 = FUN_1800d6760(this.spellUsedID,iVar6,DAT_181d8fa18);
+            iVar3 = FUN_1800d6760(this.spellUsedID,iVar6,DAT_181d8fa30);
             Mathf.FloorToInt((float)iVar3 * 0.5,0);
-            uVar2 = FUN_1810e36c0();
+            uVar2 = FUN_1810e3cd0();
             if (lVar4 == null) break;
-            FUN_181829d40(lVar4,uVar1,uVar2);
+            FUN_18182a350(lVar4,uVar1,uVar2);
             lVar4 = this.spellUsedID;
             iVar6 = iVar6 + 1;
             if (lVar4 == null) break;

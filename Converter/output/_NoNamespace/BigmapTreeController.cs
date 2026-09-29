@@ -20,7 +20,7 @@ public class BigmapTreeController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D51
-    // RVA   : 0xC82DB0   Offset: 0xC821B0   Length: 0x37E
+    // RVA   : 0xC833C0   Offset: 0xC827C0   Length: 0x37E
     private void Update()
     {
         long lVar1;
@@ -44,7 +44,7 @@ public class BigmapTreeController
           lVar8 = this.colliders;
           this.refreshTime = 0x3e4ccccd;
           if (lVar8 == null) {
-        LAB_180c83129:
+        LAB_180c83739:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -53,29 +53,29 @@ public class BigmapTreeController
             lVar8 = (int64)(int)uVar7 * 8 + 32;
             do {
               lVar1 = this.colliders;
-              if (lVar1 == null) goto LAB_180c83129;
+              if (lVar1 == null) goto LAB_180c83739;
               if (lVar1.Count <= uVar7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               uVar4 = *(uint64 *)(lVar8 + lVar1._items);
               cVar2 = Object.op_Equality(uVar4,0,0);
               if (cVar2) {
-                if (this.colliders == null) goto LAB_180c83129;
-                FUN_181823590();
+                if (this.colliders == null) goto LAB_180c83739;
+                FUN_181823ba0();
               }
               lVar8 = lVar8 + -8;
               uVar7 = uVar7 - 1;
             } while (-1 < (int)uVar7);
             lVar8 = this.colliders;
-            if (lVar8 == null) goto LAB_180c83129;
+            if (lVar8 == null) goto LAB_180c83739;
           }
           if (lVar8.Count < 1) {
-            lVar8 = Component.GetComponent(this,DAT_181d95de0);
-            if (lVar8 == null) goto LAB_180c83129;
+            lVar8 = Component.GetComponent(this,DAT_181d95df8);
+            if (lVar8 == null) goto LAB_180c83739;
             puVar3 = (uint64 *)SpriteRenderer.get_color(&local_28,lVar8,0);
             uVar4 = *puVar3;
             uVar5 = puVar3[1];
-            puVar3 = (uint64 *)FUN_1810d3570(&local_28,0);
+            puVar3 = (uint64 *)FUN_1810d3b80(&local_28,0);
             local_38 = *puVar3;
             uStack_30 = puVar3[1];
             local_28 = uVar4;
@@ -88,22 +88,22 @@ public class BigmapTreeController
               return;
             }
             this.tweening = 1;
-            uVar4 = Component.GetComponent(this,DAT_181d95de0);
-            puVar3 = (uint64 *)FUN_1810d3570(&local_28,0);
+            uVar4 = Component.GetComponent(this,DAT_181d95df8);
+            puVar3 = (uint64 *)FUN_1810d3b80(&local_28,0);
             local_28 = *puVar3;
             uStack_20 = puVar3[1];
             uVar5 = DOTweenModuleSprite.DOColor(uVar4,&local_28,0x3e4ccccd,0);
-            uVar6 = il2cpp_internal(DAT_181daddf8);
-            uVar4 = DAT_181d8a770;
+            uVar6 = il2cpp_internal(DAT_181dade10);
+            uVar4 = DAT_181d8a788;
           }
           else {
-            lVar8 = Component.GetComponent(this,DAT_181d95de0);
-            if (lVar8 == null) goto LAB_180c83129;
+            lVar8 = Component.GetComponent(this,DAT_181d95df8);
+            if (lVar8 == null) goto LAB_180c83739;
             puVar3 = (uint64 *)SpriteRenderer.get_color(&local_28,lVar8,0);
             local_38 = *puVar3;
             uStack_30 = puVar3[1];
-            local_28 = **(uint64 **)(DAT_181db0ec8 + 184);
-            uStack_20 = (*(uint64 **)(DAT_181db0ec8 + 184))[1];
+            local_28 = **(uint64 **)(DAT_181db0ee0 + 184);
+            uStack_20 = (*(uint64 **)(DAT_181db0ee0 + 184))[1];
             cVar2 = Color.op_Inequality(&local_38,&local_28,0);
             if (!cVar2) {
               return;
@@ -112,20 +112,20 @@ public class BigmapTreeController
               return;
             }
             this.tweening = 1;
-            uVar4 = Component.GetComponent(this,DAT_181d95de0);
-            local_28 = **(uint64 **)(DAT_181db0ec8 + 184);
-            uStack_20 = (*(uint64 **)(DAT_181db0ec8 + 184))[1];
+            uVar4 = Component.GetComponent(this,DAT_181d95df8);
+            local_28 = **(uint64 **)(DAT_181db0ee0 + 184);
+            uStack_20 = (*(uint64 **)(DAT_181db0ee0 + 184))[1];
             uVar5 = DOTweenModuleSprite.DOColor(uVar4,&local_28,0x3e4ccccd,0);
-            uVar6 = il2cpp_internal(DAT_181daddf8);
-            uVar4 = DAT_181d8a6f0;
+            uVar6 = il2cpp_internal(DAT_181dade10);
+            uVar4 = DAT_181d8a708;
           }
           OnTooltipCB.ctor(uVar6,this,uVar4,0);
-          TweenSettingsExtensions.OnComplete(uVar5,uVar6,DAT_181dbffb0);
+          TweenSettingsExtensions.OnComplete(uVar5,uVar6,DAT_181dc0160);
         }
     }
 
     // Token : 0x6000D52
-    // RVA   : 0xC82BE0   Offset: 0xC81FE0   Length: 0x111
+    // RVA   : 0xC831F0   Offset: 0xC825F0   Length: 0x111
     private void OnTriggerEnter(Collider other)
     {
         bool cVar1;
@@ -139,10 +139,10 @@ public class BigmapTreeController
               return;
             }
             if (this.colliders != null) {
-              cVar1 = FUN_18181e400(this.colliders,other,DAT_181d828a0);
+              cVar1 = FUN_18181ea10(this.colliders,other,DAT_181d828b8);
               if (!cVar1) {
                 if (this.colliders == null) throw; // [null/range check failed]
-                FUN_18181e0a0(this.colliders,other,DAT_181d827a0);
+                FUN_18181e6b0(this.colliders,other,DAT_181d827b8);
               }
               return;
             }
@@ -158,7 +158,7 @@ public class BigmapTreeController
     }
 
     // Token : 0x6000D53
-    // RVA   : 0xC82D00   Offset: 0xC82100   Length: 0x9D
+    // RVA   : 0xC83310   Offset: 0xC82710   Length: 0x9D
     private void OnTriggerExit(Collider other)
     {
         bool cVar1;
@@ -169,51 +169,51 @@ public class BigmapTreeController
             return;
           }
           if (this.colliders != null) {
-            FUN_1817eee00(this.colliders,other,DAT_181d829a0);
+            FUN_1817ef410(this.colliders,other,DAT_181d829b8);
             return;
           }
         }
     }
 
     // Token : 0x6000D54
-    // RVA   : 0xC831B0   Offset: 0xC825B0   Length: 0x76
+    // RVA   : 0xC837C0   Offset: 0xC82BC0   Length: 0x76
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d91cd8);
-        FUN_18132faf0(uVar1,DAT_181d826a0);
+        uVar1 = il2cpp_internal(DAT_181d91cf0);
+        FUN_181330100(uVar1,DAT_181d826b8);
         this.colliders = uVar1;
         FUN_18044ef50(this,0);
     }
 
     // Token : 0x6000D55
-    // RVA   : 0xC83130   Offset: 0xC82530   Length: 0x72
+    // RVA   : 0xC83740   Offset: 0xC82B40   Length: 0x72
     private static void /*cctor*/()
     {
         ulong local_18;
         ulong uStack_10;
         local_18 = 0;
         uStack_10 = 0;
-        FUN_1809dc910(&local_18,0x3f800000,0x3f800000,0x3f800000,0x3e99999a,0);
-        puVar1 = *(uint64 **)(DAT_181db0ec8 + 184);
+        FUN_1809dcfa0(&local_18,0x3f800000,0x3f800000,0x3f800000,0x3e99999a,0);
+        puVar1 = *(uint64 **)(DAT_181db0ee0 + 184);
         *puVar1 = local_18;
         puVar1[1] = uStack_10;
     }
 
     // Token : 0x6000D56
-    // RVA   : 0xC82DA0   Offset: 0xC821A0   Length: 0x5
+    // RVA   : 0xC833B0   Offset: 0xC827B0   Length: 0x5
     private void <Update>b__4_0()
     {
-        void FUN_180c82da0(int64 this)
+        void FUN_180c833b0(int64 this)
         {
         this.tweening = 0;
     }
 
     // Token : 0x6000D57
-    // RVA   : 0xC82DA0   Offset: 0xC821A0   Length: 0x5
+    // RVA   : 0xC833B0   Offset: 0xC827B0   Length: 0x5
     private void <Update>b__4_1()
     {
-        void FUN_180c82da0(int64 this)
+        void FUN_180c833b0(int64 this)
         {
         this.tweening = 0;
     }

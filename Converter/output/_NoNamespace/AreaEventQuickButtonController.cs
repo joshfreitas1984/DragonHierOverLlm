@@ -39,7 +39,7 @@ public class AreaEventQuickButtonController
     // RVA   : 0x7EABF0   Offset: 0x7E9FF0   Length: 0x24F
     public void RefreshColor()
     {
-        var pStatics = *(int64*)(DAT_181dab490 + 184);
+        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
         long lVar1;
         ulong uVar3;
         uint local_18;
@@ -51,7 +51,7 @@ public class AreaEventQuickButtonController
         plVar4 = this.missionTarget;
         if (lVar1.plotTargetEvent == false) {
           if (!lVar1.missionTargetEvent) {
-            puVar2 = (uint32 *)FUN_180d98fe0(&local_18,0);
+            puVar2 = (uint32 *)FUN_180d995f0(&local_18,0);
             if (plVar4 != (int64 *)0) {
               local_18 = *puVar2;
               uStack_14 = puVar2[1];
@@ -61,10 +61,10 @@ public class AreaEventQuickButtonController
               plVar4 = this.isNew;
               if (this.targetEventData != null) {
                 if (this.targetEventData.hovered == false) {
-                  puVar2 = (uint32 *)FUN_1810d3570(&local_18);
+                  puVar2 = (uint32 *)FUN_1810d3b80(&local_18);
                 }
                 else {
-                  puVar2 = (uint32 *)FUN_180d98fe0();
+                  puVar2 = (uint32 *)FUN_180d995f0();
                 }
                 if (plVar4 != (int64 *)0) {
                   local_18 = *puVar2;
@@ -84,7 +84,7 @@ public class AreaEventQuickButtonController
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           Image.set_sprite(plVar4,uVar3,0);
           plVar4 = this.missionTarget;
-          puVar2 = (uint32 *)FUN_1810d3570(&local_18,0);
+          puVar2 = (uint32 *)FUN_1810d3b80(&local_18,0);
         }
         else {
           if (*pStatics == 0) throw; // [null/range check failed]
@@ -102,7 +102,7 @@ public class AreaEventQuickButtonController
           uStack_c = puVar2[3];
           (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_18,*(uint64 *)(*plVar4 + 0x2b0));
           plVar4 = this.isNew;
-          puVar2 = (uint32 *)FUN_180d98fe0(&local_18,0);
+          puVar2 = (uint32 *)FUN_180d995f0(&local_18,0);
           if (plVar4 != (int64 *)0) {
             local_18 = *puVar2;
             uStack_14 = puVar2[1];
@@ -119,21 +119,21 @@ public class AreaEventQuickButtonController
     public void OnClick()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 48) != false) {
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar3 = (int64 *)0;
-            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
               plVar3 = plVar2;
             }
             NGUITools.PlaySound(plVar3,0);
             return;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
           if (lVar1 != null) {
             PlotController.StartPlotEvent(lVar1,this.targetEventData,0);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
             if (lVar1 != null) {
               *(uint8 *)(lVar1 + 225) = 1;
               return;
@@ -146,7 +146,7 @@ public class AreaEventQuickButtonController
     // RVA   : 0x7EAA70   Offset: 0x7E9E70   Length: 0x17C
     public void OnPointerEnter()
     {
-        var pStatics = *(int64*)(DAT_181dac758 + 184);
+        var pStatics = *(int64*)(DAT_181dac770 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -176,7 +176,7 @@ public class AreaEventQuickButtonController
     public GameObject EventObj()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           AreaController.GetEventObj(lVar1,this.targetEventData,0);
           return;

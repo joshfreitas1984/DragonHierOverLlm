@@ -6,19 +6,19 @@
 public class <AnimateVertexColors>d__11
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400201F
+    // Token: 0x4002020
     private int <>1__state;
 
-    // Token: 0x4002020
+    // Token: 0x4002021
     private object <>2__current;
 
-    // Token: 0x4002021
+    // Token: 0x4002022
     public VertexShakeA <>4__this;
 
-    // Token: 0x4002022
+    // Token: 0x4002023
     private TMP_TextInfo <textInfo>5__2;
 
-    // Token: 0x4002023
+    // Token: 0x4002024
     private Vector3[][] <copyOfVertices>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ public class <AnimateVertexColors>d__11
     }
 
     // Token : 0x600253F
-    // RVA   : 0x1841F00   Offset: 0x1841300   Length: 0x11D3
+    // RVA   : 0x1841FA0   Offset: 0x18413A0   Length: 0x11D3
     private virtual bool MoveNext()
     {
         int iVar2;
@@ -144,7 +144,7 @@ public class <AnimateVertexColors>d__11
           (**(code **)(*plVar10 + 0x7d8))(plVar10,0,0,*(uint64 *)(*plVar10 + 0x7e0));
           if (*(int64 *)(lVar8 + 40) == 0) throw; // [null/range check failed]
           this.<textInfo>5__2 = *(uint64 *)(*(int64 *)(lVar8 + 40) + 0x368);
-          uVar7 = FUN_1800d60b0(DAT_181da01c0,0);
+          uVar7 = FUN_1800d60b0(DAT_181da01d8,0);
           this.<copyOfVertices>5__3 = uVar7;
           *(uint8 *)(lVar8 + 48) = 1;
         }
@@ -157,7 +157,7 @@ public class <AnimateVertexColors>d__11
         }
         uVar14 = 0;
         if (*(char *)(lVar8 + 48) == false) {
-        LAB_1818421c2:
+        LAB_181842262:
           lVar9 = this.<textInfo>5__2;
           if (lVar9 != null) {
             if (*(int *)(lVar9 + 24) == 0) {
@@ -629,7 +629,7 @@ public class <AnimateVertexColors>d__11
                 (*(int64 *)(lVar8 + 96) != 0)) {
           if (*(int *)(this.<copyOfVertices>5__3 + 24) <
               *(int *)(*(int64 *)(lVar8 + 96) + 24)) {
-            uVar7 = FUN_1800d60b0(DAT_181da01c0);
+            uVar7 = FUN_1800d60b0(DAT_181da01d8);
             this.<copyOfVertices>5__3 = uVar7;
             lVar8 = this.<textInfo>5__2;
           }
@@ -638,7 +638,7 @@ public class <AnimateVertexColors>d__11
               if (*(int *)(*(int64 *)(lVar8 + 96) + 24) <= (int)uVar14) {
                 *(uint8 *)(local_370 + 48) = 0;
                 lVar8 = local_370;
-                goto LAB_1818421c2;
+                goto LAB_181842262;
               }
               if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 96)) == null) break;
               if (*(uint32 *)(lVar8 + 24) <= uVar14) {
@@ -649,7 +649,7 @@ public class <AnimateVertexColors>d__11
               lVar8 = *(int64 *)(lVar8 + 48 + (int64)(int)uVar14 * 80);
               if (lVar8 == null) break;
               plVar10 = this.<copyOfVertices>5__3;
-              lVar8 = FUN_1800d60b0(DAT_181da6d60,*(uint32 *)(lVar8 + 24));
+              lVar8 = FUN_1800d60b0(DAT_181da6d78,*(uint32 *)(lVar8 + 24));
               if (plVar10 == (int64 *)0) break;
               if ((lVar8 != null) &&
                  (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar10 + 64))) == null) {
@@ -674,15 +674,15 @@ public class <AnimateVertexColors>d__11
     }
 
     // Token : 0x6002541
-    // RVA   : 0x1843120   Offset: 0x1842520   Length: 0x3E
+    // RVA   : 0x18431C0   Offset: 0x18425C0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db8358);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db8508);
     }
 
     // Token : 0x6002542

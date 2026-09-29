@@ -38,14 +38,14 @@ public class ForceHeroUIController
     // RVA   : 0x77AF40   Offset: 0x77A340   Length: 0x36
     public static ForceHeroUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181dc7f20 + 184);
+        return **(uint64 **)(DAT_181dc7f38 + 184);
     }
 
     // Token : 0x60014C2
     // RVA   : 0x778B20   Offset: 0x777F20   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181dc7f20 + 184);
+        puVar1 = *(uint64 **)(DAT_181dc7f38 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -85,7 +85,7 @@ public class ForceHeroUIController
         plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
         plVar15 = (int64 *)0;
         plVar13 = plVar15;
-        if ((plVar6 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar6 == DAT_181daf348)) {
+        if ((plVar6 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar6 == DAT_181daf360)) {
           plVar13 = plVar6;
         }
         NGUITools.PlaySound(plVar13,0);
@@ -120,13 +120,13 @@ public class ForceHeroUIController
           uVar9 = String.Concat("入门需要:\n",uVar9,0);
           LTLocalization.SetText(uVar8,uVar9,0);
           if (this.upgradeButton == null) throw; // [null/range check failed]
-          lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c00);
+          lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c18);
           if ((this.targetForce == null) ||
              (uVar3 = ForceData.PlayerMeetForceJoinRequire(this.targetForce,0), lVar7 == null))
           throw; // [null/range check failed]
           Selectable.set_interactable(lVar7,uVar3,0);
           if (this.servantButton == null) throw; // [null/range check failed]
-          lVar7 = GameObject.GetComponent(this.servantButton,DAT_181dc7c00);
+          lVar7 = GameObject.GetComponent(this.servantButton,DAT_181dc7c18);
           if ((this.targetForce == null) ||
              (uVar3 = ForceData.PlayerMeetForceJoinRequire(this.targetForce,0), lVar7 == null))
           throw; // [null/range check failed]
@@ -134,7 +134,7 @@ public class ForceHeroUIController
           if ((this.upgradeButton == null) ||
              ((lVar7 = GameObject.get_transform(this.upgradeButton,0), lVar7 == null ||
               (lVar7 = Transform.Find(lVar7,"Text",0)) == null))) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+          uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
           LTLocalization.SetText(uVar8,"拜入",0);
         }
         else {
@@ -175,19 +175,19 @@ public class ForceHeroUIController
                 iVar5 = lVar7.forceMeetingStarted;
                 if (PlotController.StopWarCostFavor <= iVar5) {
                   if ((this.upgradeButton == null) ||
-                     (lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c00),
+                     (lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c18),
                      lVar7 == null)) throw; // [null/range check failed]
                   Selectable.set_interactable(lVar7,0,0);
                   if ((this.upgradeButton == null) ||
                      ((lVar7 = GameObject.get_transform(this.upgradeButton,0), lVar7 == null ||
                       (lVar7 = Transform.Find(lVar7,"Text",0)) == null))) throw; // [null/range check failed]
-                  uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+                  uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
                   LTLocalization.SetText(uVar8,"已达试玩版上限",0);
                   goto LAB_180779f39;
                 }
               }
               if (this.upgradeButton == null) throw; // [null/range check failed]
-              lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c00);
+              lVar7 = GameObject.GetComponent(this.upgradeButton,DAT_181dc7c18);
               lVar11 = FUN_18046c0a0(0);
               if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
                  (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
@@ -208,7 +208,7 @@ public class ForceHeroUIController
                 if (((lVar10 == null) || (*(int64 *)(lVar10 + 32) == 0)) ||
                    ((lVar10 = WorldData.Player(*(int64 *)(lVar10 + 32),0), lVar10 == null ||
                     (lVar11 == null)))) throw; // [null/range check failed]
-                iVar5 = FUN_1800d6760(lVar11,*(uint32 *)(lVar10 + 184),DAT_181d8fa18);
+                iVar5 = FUN_1800d6760(lVar11,*(uint32 *)(lVar10 + 184),DAT_181d8fa30);
                 lVar11 = FUN_18046c0a0(0);
                 if (((lVar11 == null) || (lVar11.villageAreaID == null)) ||
                    (lVar11 = WorldData.Player(lVar11.villageAreaID,0)) == null)
@@ -224,7 +224,7 @@ public class ForceHeroUIController
               if (((this.upgradeButton == null) ||
                   (lVar7 = GameObject.get_transform(this.upgradeButton,0)) == null) ||
                  (lVar7 = Transform.Find(lVar7,"Text",0)) == null) throw; // [null/range check failed]
-              uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+              uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
               LTLocalization.SetText(uVar8,"晋升",0);
               goto LAB_180779f39;
             }
@@ -257,7 +257,7 @@ public class ForceHeroUIController
           if (this.leaveButton == null) throw; // [null/range check failed]
           GameObject.SetActive(this.leaveButton,1,0);
           if ((this.leaveButton == null) ||
-             (lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181dc7c00)) == null)
+             (lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181dc7c18)) == null)
           throw; // [null/range check failed]
           Selectable.set_interactable(lVar7,1,0);
           if (this.leaveButton == null) throw; // [null/range check failed]
@@ -274,7 +274,7 @@ public class ForceHeroUIController
               FUN_1800d6620();
             }
             local_48 = *(uint32 *)(lVar11.villageAreaID + 200);
-            uVar9 = il2cpp_value_box(DAT_181d80418,&local_48);
+            uVar9 = il2cpp_value_box(DAT_181d80430,&local_48);
             uVar9 = String.Format("\n还需任职{0}日",uVar9,0);
           }
           uVar8 = String.Format(uVar8,uVar9,0);
@@ -283,7 +283,7 @@ public class ForceHeroUIController
           if (((this.leaveButton == null) ||
               (lVar7 = GameObject.get_transform(this.leaveButton,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"Text",0)) == null) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+          uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
           LTLocalization.SetText(uVar8,"解聘",0);
         }
         else {
@@ -310,7 +310,7 @@ public class ForceHeroUIController
             if ((this.leaveButton == null) ||
                ((lVar7 = GameObject.get_transform(this.leaveButton,0), lVar7 == null ||
                 (lVar7 = Transform.Find(lVar7,"Text",0)) == null))) throw; // [null/range check failed]
-            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
             LTLocalization.SetText(uVar8,"出师",0);
             lVar7 = FUN_18046c0a0(0);
             if (((lVar7 == null) || (lVar7.villageAreaID == null)) ||
@@ -328,14 +328,14 @@ public class ForceHeroUIController
               iVar5 = HeroData.GetUpgradeForceLvNeedContribution(lVar7,0x3f800000,0);
               if ((float)iVar5 <= fVar1) {
                 if ((this.leaveButton == null) ||
-                   (lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181dc7c00),
+                   (lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181dc7c18),
                    lVar7 == null)) throw; // [null/range check failed]
                 Selectable.set_interactable(lVar7,1,0);
                 goto LAB_18077a57f;
               }
             }
             if ((this.leaveButton == null) ||
-               (lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181dc7c00)) == null
+               (lVar7 = GameObject.GetComponent(this.leaveButton,DAT_181dc7c18)) == null
                ) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7,0,0);
           }
@@ -349,8 +349,8 @@ public class ForceHeroUIController
         LAB_18077a57f:
         if ((((this.upgradeButton != null) &&
              (lVar7 = GameObject.get_transform(this.upgradeButton,0)) != null) &&
-            (lVar7 = FUN_180da9a20(lVar7,0)) != null) &&
-           (lVar7 = Component.GetComponent(lVar7,DAT_181d96960)) != null) {
+            (lVar7 = FUN_180daa030(lVar7,0)) != null) &&
+           (lVar7 = Component.GetComponent(lVar7,DAT_181d96978)) != null) {
           UIGrid.set_repositionNow(lVar7,1,0);
           local_res8[0] = 0;
           do {
@@ -362,13 +362,13 @@ public class ForceHeroUIController
               if (lVar7.gameMode == 1) {
                 lVar7 = *(int64 *)(pStatics_3d40 + 0x3a8);
                 if ((this.targetForce == null) || (lVar7 == null)) break;
-                cVar2 = FUN_18182a3a0(lVar7,this.targetForce.forceID,
-                                      DAT_181d8f398);
+                cVar2 = FUN_18182a9b0(lVar7,this.targetForce.forceID,
+                                      DAT_181d8f3b0);
                 if (!cVar2) {
                   if (((this.forceHeroUIPanel != null) &&
                       (lVar7 = GameObject.get_transform(this.forceHeroUIPanel,0)) != null) &&
                      (lVar7 = Transform.Find(lVar7,"SpeFunctionText",0)) != null) {
-                    uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+                    uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
                     if ((this.targetForce != null) &&
                        (lVar7 = ForceData.DataBase(this.targetForce,0)) != null) {
                       uVar9 = lVar7.speBuildingUnlocked;
@@ -384,9 +384,9 @@ public class ForceHeroUIController
               if (((this.forceHeroUIPanel != null) &&
                   (lVar7 = GameObject.get_transform(this.forceHeroUIPanel,0)) != null) &&
                  (lVar7 = Transform.Find(lVar7,"SpeFunctionText",0)) != null) {
-                uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+                uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
                 uVar9 = "";
-                if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84898 + 224) == 0)
+                if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d848b0 + 224) == 0)
                    ) {
                   il2cpp_runtime_class_init();
                   uVar9 = "";
@@ -416,10 +416,10 @@ public class ForceHeroUIController
             if ((lVar7 == null) ||
                ((lVar7 = Transform.Find(lVar7,uVar8,0), lVar7 == null ||
                 (lVar7 = Transform.Find(lVar7,"Label",0)) == null))) break;
-            plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
+            plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d96178);
             lVar7 = FUN_18046c100(0);
             if ((((lVar7 == null) || (lVar7.Inns == null)) ||
-                (lVar7 = FUN_180002f80(lVar7.Inns,local_res8[0],DAT_181d9e108),
+                (lVar7 = FUN_180002f80(lVar7.Inns,local_res8[0],DAT_181d9e120),
                 lVar7 == null)) || (plVar6 == (int64 *)0)) break;
             local_38 = lVar7.cityAreaID;
             uStack_30 = lVar7.villageAreaID;
@@ -431,7 +431,7 @@ public class ForceHeroUIController
             if ((lVar7 == null) ||
                ((lVar7 = Transform.Find(lVar7,uVar8,0), lVar7 == null ||
                 (lVar7 = Transform.Find(lVar7,"Label",0)) == null))) break;
-            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
             if (local_res8[0] == 5) {
               lVar7 = *(int64 *)(pStatics_3d40 + 0x3d8);
               if (lVar7 == null) break;
@@ -442,7 +442,7 @@ public class ForceHeroUIController
               uVar14 = local_res8[0];
               if (lVar7 == null) break;
             }
-            uVar9 = FUN_180002f80(lVar7,uVar14,DAT_181da4358);
+            uVar9 = FUN_180002f80(lVar7,uVar14,DAT_181da4370);
             LTLocalization.SetText(uVar8,uVar9,0);
             if ((this.forceHeroUIPanel == null) ||
                (lVar7 = GameObject.get_transform(this.forceHeroUIPanel,0)) == null) {
@@ -455,11 +455,11 @@ public class ForceHeroUIController
             if ((lVar7 == null) ||
                ((lVar7 = Transform.Find(lVar7,uVar8,0), lVar7 == null ||
                 (lVar7 = Transform.Find(lVar7,"Label",0)) == null))) goto LAB_18077acf7;
-            lVar7 = Component.GetComponent(lVar7,DAT_181d95560);
+            lVar7 = Component.GetComponent(lVar7,DAT_181d95578);
             local_48 = HeroData.GetHeroSalary(local_res8[0],0);
-            uVar8 = il2cpp_value_box(DAT_181d80418,&local_48);
+            uVar8 = il2cpp_value_box(DAT_181d80430,&local_48);
             local_44[0] = HeroData.GetHeroPopulation(local_res8[0],0);
-            uVar9 = il2cpp_value_box(DAT_181d80418,local_44);
+            uVar9 = il2cpp_value_box(DAT_181d80430,local_44);
             uVar8 = String.Format("月俸 {0}\n人口 {1}",uVar8,uVar9,0);
             if (lVar7 == null) goto LAB_18077acf7;
             lVar7.cityAreaID = uVar8;
@@ -591,7 +591,7 @@ public class ForceHeroUIController
             if (this.forceHeroUIType != 1) {
               return;
             }
-            lVar2 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+            lVar2 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
             if ((GameController._instance != null) &&
                (lVar1 = GameController._instance.worldData) != null) {
               uVar3 = WorldData.Player(lVar1,0);
@@ -609,7 +609,7 @@ public class ForceHeroUIController
     public void BetrayButtonClicked()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ManagePlayerBetrayForcePlot(lVar1,0);
           return;
@@ -621,7 +621,7 @@ public class ForceHeroUIController
     public void LeaveButtonClicked()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ManagePlayerLeaveForcePlot(lVar1,this.targetForce,0);
           return;
@@ -633,7 +633,7 @@ public class ForceHeroUIController
     public void ServantButtonClicked()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ManagePlayerServantForcePlot(lVar1,this.targetForce,0);
           return;

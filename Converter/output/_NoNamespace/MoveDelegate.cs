@@ -26,7 +26,7 @@ public class MoveDelegate
     }
 
     // Token : 0x6000763
-    // RVA   : 0x8E69B0   Offset: 0x8E5DB0   Length: 0x1F0
+    // RVA   : 0x918FF0   Offset: 0x9183F0   Length: 0x1F0
     public virtual void Invoke(Vector2 delta)
     {
         long lVar1;
@@ -64,7 +64,7 @@ public class MoveDelegate
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0)) {
-              if (*(char *)(lVar1 + 74) != false) goto LAB_1808e6b5b;
+              if (*(char *)(lVar1 + 74) != false) goto LAB_18091919b;
               (*pcVar2)(auStack_68,lVar1);
             }
             else {
@@ -79,7 +79,7 @@ public class MoveDelegate
                 }
                 else {
                   uVar6 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180133320(*(uint16 *)(lVar1 + 72),uVar6,plVar3,local_58);
+                  FUN_180133380(*(uint16 *)(lVar1 + 72),uVar6,plVar3,local_58);
                 }
               }
               else {
@@ -94,7 +94,7 @@ public class MoveDelegate
                   (*(code *)*puVar5)(plVar3,uVar6,puVar5);
                 }
                 else {
-                  FUN_180132eb0(lVar1,plVar3,local_58);
+                  FUN_180132f10(lVar1,plVar3,local_58);
                 }
               }
             }
@@ -103,7 +103,7 @@ public class MoveDelegate
             (*pcVar2)(local_58,lVar1);
           }
           else {
-        LAB_1808e6b5b:
+        LAB_18091919b:
             (*pcVar2)(plVar3,local_58,lVar1);
           }
           uVar7 = uVar7 + 1;
@@ -114,7 +114,7 @@ public class MoveDelegate
     }
 
     // Token : 0x6000764
-    // RVA   : 0x8E6930   Offset: 0x8E5D30   Length: 0x7B
+    // RVA   : 0x918F70   Offset: 0x918370   Length: 0x7B
     public virtual IAsyncResult BeginInvoke(Vector2 delta, AsyncCallback callback, object object)
     {
         void MoveDelegate.BeginInvoke
@@ -125,7 +125,7 @@ public class MoveDelegate
         uint64 local_18;
         local_28 = delta;
         local_18 = 0;
-        local_20 = il2cpp_value_box(DAT_181db3950,&local_28);
+        local_20 = il2cpp_value_box(DAT_181db3968,&local_28);
         il2cpp_internal(this,&local_20,callback,object);
     }
 

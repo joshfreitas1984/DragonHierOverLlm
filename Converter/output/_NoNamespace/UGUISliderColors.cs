@@ -6,15 +6,15 @@
 public class UGUISliderColors
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DCD
+    // Token: 0x4001DCE
     public Image image;
 
-    // Token: 0x4001DCE
+    // Token: 0x4001DCF
     public Color[] colors;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600235F
-    // RVA   : 0xAEEBE0   Offset: 0xAEDFE0   Length: 0xE6
+    // RVA   : 0xAEF2A0   Offset: 0xAEE6A0   Length: 0xE6
     private void Start()
     {
         bool cVar1;
@@ -22,10 +22,10 @@ public class UGUISliderColors
         uVar2 = this.image;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (cVar1) {
-          uVar2 = Component.GetComponent(this,DAT_181d94460);
+          uVar2 = Component.GetComponent(this,DAT_181d94478);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            uVar2 = Component.GetComponent(this,DAT_181d94460);
+            uVar2 = Component.GetComponent(this,DAT_181d94478);
             this.image = uVar2;
           }
         }
@@ -33,7 +33,7 @@ public class UGUISliderColors
     }
 
     // Token : 0x6002360
-    // RVA   : 0xAEECD0   Offset: 0xAEE0D0   Length: 0x22E
+    // RVA   : 0xAEF390   Offset: 0xAEE790   Length: 0x22E
     private void Update()
     {
         float fVar1;
@@ -139,7 +139,7 @@ public class UGUISliderColors
     }
 
     // Token : 0x6002361
-    // RVA   : 0xAEEF00   Offset: 0xAEE300   Length: 0xE5
+    // RVA   : 0xAEF5C0   Offset: 0xAEE9C0   Length: 0xE5
     public void /*ctor*/()
     {
         uint uVar1;
@@ -148,7 +148,7 @@ public class UGUISliderColors
         long lVar4;
         ulong uVar6;
         byte[] local_18 = new byte[16];
-        lVar4 = FUN_1800d60b0(DAT_181da1140,3);
+        lVar4 = FUN_1800d60b0(DAT_181da1158,3);
         puVar5 = (uint32 *)Color.get_red(local_18,0);
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return

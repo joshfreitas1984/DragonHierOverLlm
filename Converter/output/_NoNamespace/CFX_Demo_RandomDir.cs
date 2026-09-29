@@ -6,15 +6,15 @@
 public class CFX_Demo_RandomDir
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E32
+    // Token: 0x4001E33
     public Vector3 min;
 
-    // Token: 0x4001E33
+    // Token: 0x4001E34
     public Vector3 max;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60023D9
-    // RVA   : 0xB7ED20   Offset: 0xB7E120   Length: 0xA5
+    // RVA   : 0xB7F3E0   Offset: 0xB7E7E0   Length: 0xA5
     private void Awake()
     {
         void CFX_Demo_RandomDir.Awake
@@ -38,7 +38,7 @@ public class CFX_Demo_RandomDir
     }
 
     // Token : 0x60023DA
-    // RVA   : 0xB7EDD0   Offset: 0xB7E1D0   Length: 0x4E
+    // RVA   : 0xB7F490   Offset: 0xB7E890   Length: 0x4E
     public void /*ctor*/()
     {
         this.min = 0;

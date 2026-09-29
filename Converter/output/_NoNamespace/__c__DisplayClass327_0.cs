@@ -18,7 +18,7 @@ public class <>c__DisplayClass327_0
     }
 
     // Token : 0x6001760
-    // RVA   : 0x9393F0   Offset: 0x9387F0   Length: 0x69
+    // RVA   : 0x939A80   Offset: 0x938E80   Length: 0x69
     internal void <DoTweenTextValue>b__0(float value)
     {
         ulong uVar2;

@@ -6,21 +6,21 @@
 public class QuickTravelAreaIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A77
+    // Token: 0x4001A78
     public AreaData areaData;
 
-    // Token: 0x4001A78
+    // Token: 0x4001A79
     public QuickTravelAreaIconType quickTravelAreaIconType;
 
-    // Token: 0x4001A79
+    // Token: 0x4001A7A
     public Image missionTarget;
 
-    // Token: 0x4001A7A
+    // Token: 0x4001A7B
     private bool hightLight;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002012
-    // RVA   : 0xB24140   Offset: 0xB23540   Length: 0x7F
+    // RVA   : 0xB24800   Offset: 0xB23C00   Length: 0x7F
     private void Start()
     {
         long lVar1;
@@ -29,7 +29,7 @@ public class QuickTravelAreaIconController
         if (lVar1 != null) {
           lVar1 = Transform.Find(lVar1,"MissionTarget",0);
           if (lVar1 != null) {
-            uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+            uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
             this.missionTarget = uVar2;
             return;
           }
@@ -37,10 +37,10 @@ public class QuickTravelAreaIconController
     }
 
     // Token : 0x6002013
-    // RVA   : 0xB241C0   Offset: 0xB235C0   Length: 0x922
+    // RVA   : 0xB24880   Offset: 0xB23C80   Length: 0x922
     private void Update()
     {
-        var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
+        var pStatics_b4a8 = *(int64*)(DAT_181dab4a8 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -53,163 +53,163 @@ public class QuickTravelAreaIconController
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           lVar3 = MouseController.hoveredUI;
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           uVar2 = GameObject.GetComponent(lVar3,DAT_181d725f0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
             lVar3 = MouseController.hoveredUI;
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d725f0);
-            if (lVar3 == null) goto LAB_180b24add;
-            if (lVar3.areaName == null) goto LAB_180b24496;
+            if (lVar3 == null) goto LAB_180b2519d;
+            if (lVar3.areaName == null) goto LAB_180b24b56;
             lVar3 = MouseController.hoveredUI;
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d725f0);
-            if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
-            if (*(char *)(lVar3.areaName + 97) != false) goto LAB_180b24496;
+            if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b2519d;
+            if (*(char *)(lVar3.areaName + 97) != false) goto LAB_180b24b56;
             lVar3 = MouseController.hoveredUI;
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d725f0);
-            if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
+            if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b2519d;
             lVar3 = MissionData.GetTargetAreaID(lVar3.areaName,0);
-            if ((this.areaData == null) || (lVar3 == null)) goto LAB_180b24add;
-            cVar1 = FUN_18182a3a0(lVar3,this.areaData.areaID,
-                                  DAT_181d8f398);
-            if (!cVar1) goto LAB_180b24496;
-            goto LAB_180b24845;
+            if ((this.areaData == null) || (lVar3 == null)) goto LAB_180b2519d;
+            cVar1 = FUN_18182a9b0(lVar3,this.areaData.areaID,
+                                  DAT_181d8f3b0);
+            if (!cVar1) goto LAB_180b24b56;
+            goto LAB_180b24f05;
           }
-        LAB_180b24496:
+        LAB_180b24b56:
           lVar3 = MouseController.hoveredUI;
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           uVar2 = GameObject.GetComponent(lVar3,DAT_181d72568);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
             lVar3 = MouseController.hoveredUI;
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = GameObject.GetComponent(lVar3,DAT_181d72568);
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             if (lVar3.areaName != null) {
               lVar3 = MouseController.hoveredUI;
-              if (lVar3 == null) goto LAB_180b24add;
+              if (lVar3 == null) goto LAB_180b2519d;
               lVar3 = GameObject.GetComponent(lVar3,DAT_181d72568);
-              if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
+              if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b2519d;
               if (*(char *)(lVar3.areaName + 97) == false) {
                 lVar3 = MouseController.hoveredUI;
-                if (lVar3 == null) goto LAB_180b24add;
+                if (lVar3 == null) goto LAB_180b2519d;
                 lVar3 = GameObject.GetComponent(lVar3,DAT_181d72568);
-                if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b24add;
+                if ((lVar3 == null) || (lVar3.areaName == null)) goto LAB_180b2519d;
                 lVar3 = MissionData.GetTargetAreaID(lVar3.areaName,0);
-                if ((this.areaData == null) || (lVar3 == null)) goto LAB_180b24add;
-                cVar1 = FUN_18182a3a0(lVar3,this.areaData.areaID,
-                                      DAT_181d8f398);
-                if (cVar1) goto LAB_180b24845;
+                if ((this.areaData == null) || (lVar3 == null)) goto LAB_180b2519d;
+                cVar1 = FUN_18182a9b0(lVar3,this.areaData.areaID,
+                                      DAT_181d8f3b0);
+                if (cVar1) goto LAB_180b24f05;
               }
             }
           }
-          if (MouseController.hoveredUI == null) goto LAB_180b24add;
+          if (MouseController.hoveredUI == null) goto LAB_180b2519d;
           uVar2 = GameObject.GetComponent();
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (MouseController.hoveredUI == null) goto LAB_180b24add;
+            if (MouseController.hoveredUI == null) goto LAB_180b2519d;
             lVar3 = GameObject.GetComponent();
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             if (lVar3.areaName != null) {
               lVar3 = MouseController.hoveredUI;
-              if (lVar3 == null) goto LAB_180b24add;
+              if (lVar3 == null) goto LAB_180b2519d;
               lVar3 = GameObject.GetComponent(lVar3,DAT_181d74cb8);
               if ((((lVar3 == null) || (lVar3.areaName == null)) ||
                   (this.areaData == null)) ||
                  (lVar3 = *(int64 *)(lVar3.areaName + 64)) == null)
-              goto LAB_180b24add;
-              cVar1 = FUN_18182a3a0(lVar3,this.areaData.areaID,
-                                    DAT_181d8f398);
+              goto LAB_180b2519d;
+              cVar1 = FUN_18182a9b0(lVar3,this.areaData.areaID,
+                                    DAT_181d8f3b0);
               if (!cVar1) {
-                if (MouseController.hoveredUI == null) goto LAB_180b24add;
+                if (MouseController.hoveredUI == null) goto LAB_180b2519d;
                 lVar3 = GameObject.GetComponent();
                 if (((lVar3 == null) || (lVar3.areaName == null)) ||
-                   (this.areaData == null)) goto LAB_180b24add;
+                   (this.areaData == null)) goto LAB_180b2519d;
                 if (*(int *)(lVar3.areaName + 88) !=
-                    this.areaData.areaID) goto LAB_180b24849;
+                    this.areaData.areaID) goto LAB_180b24f09;
               }
-        LAB_180b24845:
+        LAB_180b24f05:
               this.hightLight = 1;
             }
           }
         }
-        LAB_180b24849:
+        LAB_180b24f09:
         if (!this.hightLight) {
           lVar3 = Component.get_transform(this);
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           lVar3 = Transform.Find(lVar3,"HighLight",0);
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           lVar3 = Component.get_gameObject(lVar3,0);
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           cVar1 = GameObject.get_activeSelf(lVar3,0);
           if (cVar1) {
             lVar3 = Component.get_transform(this,0);
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = Transform.Find(lVar3,"HighLight",0);
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = Component.get_gameObject(lVar3,0);
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             uVar2 = 0;
-        LAB_180b2497a:
+        LAB_180b2503a:
             GameObject.SetActive(lVar3,uVar2,0);
           }
         }
         else {
           lVar3 = Component.get_transform(this);
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           lVar3 = Transform.Find(lVar3,"HighLight",0);
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           lVar3 = Component.get_gameObject(lVar3,0);
-          if (lVar3 == null) goto LAB_180b24add;
+          if (lVar3 == null) goto LAB_180b2519d;
           cVar1 = GameObject.get_activeSelf(lVar3,0);
           if (!cVar1) {
             lVar3 = Component.get_transform(this,0);
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = Transform.Find(lVar3,"HighLight",0);
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             lVar3 = Component.get_gameObject(lVar3,0);
-            if (lVar3 == null) goto LAB_180b24add;
+            if (lVar3 == null) goto LAB_180b2519d;
             uVar2 = 1;
-            goto LAB_180b2497a;
+            goto LAB_180b2503a;
           }
         }
         lVar3 = this.areaData;
-        if (lVar3 == null) goto LAB_180b24add;
+        if (lVar3 == null) goto LAB_180b2519d;
         plVar5 = this.missionTarget;
         if (lVar3.plotNumCount < 1) {
           if (lVar3.missionNumCount < 1) {
-            puVar4 = (uint32 *)FUN_180d98fe0(&local_18,0);
-            if (plVar5 == (int64 *)0) goto LAB_180b24add;
+            puVar4 = (uint32 *)FUN_180d995f0(&local_18,0);
+            if (plVar5 == (int64 *)0) goto LAB_180b2519d;
             lVar3 = *plVar5;
-            goto LAB_180b24ab7;
+            goto LAB_180b25177;
           }
-          if (*pStatics_b490 == 0) goto LAB_180b24add;
+          if (*pStatics_b4a8 == 0) goto LAB_180b2519d;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics_b490,"WorldMapAtlas","任务目标",0);
-          if (plVar5 == (int64 *)0) goto LAB_180b24add;
+                            (*pStatics_b4a8,"WorldMapAtlas","任务目标",0);
+          if (plVar5 == (int64 *)0) goto LAB_180b2519d;
           Image.set_sprite(plVar5,uVar2,0);
           plVar5 = this.missionTarget;
-          puVar4 = (uint32 *)FUN_1810d3570(&local_18,0);
+          puVar4 = (uint32 *)FUN_1810d3b80(&local_18,0);
         }
         else {
-          if (*pStatics_b490 == 0) goto LAB_180b24add;
+          if (*pStatics_b4a8 == 0) goto LAB_180b2519d;
           uVar2 = TextureController.LoadAtlasSprite
-                            (*pStatics_b490,"WorldMapAtlas","问号",0);
-          if (plVar5 == (int64 *)0) goto LAB_180b24add;
+                            (*pStatics_b4a8,"WorldMapAtlas","问号",0);
+          if (plVar5 == (int64 *)0) goto LAB_180b2519d;
           Image.set_sprite(plVar5,uVar2,0);
           plVar5 = this.missionTarget;
           puVar4 = (uint32 *)Color.get_yellow(&local_18,0);
         }
         if (plVar5 == (int64 *)0) {
-        LAB_180b24add:
+        LAB_180b2519d:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         lVar3 = *plVar5;
-        LAB_180b24ab7:
+        LAB_180b25177:
         local_18 = *puVar4;
         uStack_14 = puVar4[1];
         uStack_10 = puVar4[2];
@@ -218,10 +218,10 @@ public class QuickTravelAreaIconController
     }
 
     // Token : 0x6002014
-    // RVA   : 0xB23BF0   Offset: 0xB22FF0   Length: 0x50
+    // RVA   : 0xB242B0   Offset: 0xB236B0   Length: 0x50
     public virtual void OnDrag(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181d93f80 + 184);
+        var pStatics = *(int64*)(DAT_181d93f98 + 184);
         if (*pStatics != 0) {
           QuickTravelBigMapSpriteController.OnDrag(*pStatics,eventData,0);
           return;
@@ -229,10 +229,10 @@ public class QuickTravelAreaIconController
     }
 
     // Token : 0x6002015
-    // RVA   : 0xB23C50   Offset: 0xB23050   Length: 0x50
+    // RVA   : 0xB24310   Offset: 0xB23710   Length: 0x50
     public virtual void OnScroll(PointerEventData eventData)
     {
-        var pStatics = *(int64*)(DAT_181d93f80 + 184);
+        var pStatics = *(int64*)(DAT_181d93f98 + 184);
         if (*pStatics != 0) {
           QuickTravelBigMapSpriteController.OnScroll(*pStatics,eventData,0);
           return;
@@ -240,10 +240,10 @@ public class QuickTravelAreaIconController
     }
 
     // Token : 0x6002016
-    // RVA   : 0xB23DD0   Offset: 0xB231D0   Length: 0x369
+    // RVA   : 0xB24490   Offset: 0xB23890   Length: 0x369
     public void RefreshState()
     {
-        var pStatics = *(int64*)(DAT_181d94000 + 184);
+        var pStatics = *(int64*)(DAT_181d94018 + 184);
         uint uVar1;
         bool cVar2;
         long lVar4;
@@ -253,11 +253,11 @@ public class QuickTravelAreaIconController
         uint uStack_30;
         uint32 uStack_2c;
         uint8 local_28 [32];
-        plVar3 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+        plVar3 = (int64 *)Component.GetComponent(this,DAT_181d94478);
         if (plVar3 == (int64 *)0) throw; // [null/range check failed]
         cVar2 = (**(code **)(*plVar3 + 0x2b8))(plVar3,*(uint64 *)(*plVar3 + 0x2c0));
         if (!cVar2) {
-        LAB_180b2402e:
+        LAB_180b246ee:
           lVar4 = Component.get_transform(this,0);
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4 = Transform.Find(lVar4,"AreaNameBack",0);
@@ -274,8 +274,8 @@ public class QuickTravelAreaIconController
             if (lVar4 == null) throw; // [null/range check failed]
             GameObject.SetActive(lVar4,0,0);
           }
-          plVar3 = (int64 *)Component.GetComponent(this,DAT_181d94460);
-          plVar5 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          plVar3 = (int64 *)Component.GetComponent(this,DAT_181d94478);
+          plVar5 = (int64 *)Component.GetComponent(this,DAT_181d94478);
           if (plVar5 == (int64 *)0) throw; // [null/range check failed]
           puVar6 = (uint32 *)
                    (**(code **)(*plVar5 + 0x298))(local_28,plVar5,*(uint64 *)(*plVar5 + 0x2a0));
@@ -294,7 +294,7 @@ public class QuickTravelAreaIconController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (*(char *)(*(int64 *)(lVar4 + 16) + 32 + (int64)(int)uVar1) == false)
-          goto LAB_180b2402e;
+          goto LAB_180b246ee;
           lVar4 = Component.get_transform(this,0);
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4 = Transform.Find(lVar4,"AreaNameBack",0);
@@ -311,8 +311,8 @@ public class QuickTravelAreaIconController
             if (lVar4 == null) throw; // [null/range check failed]
             GameObject.SetActive(lVar4,1,0);
           }
-          plVar3 = (int64 *)Component.GetComponent(this,DAT_181d94460);
-          plVar5 = (int64 *)Component.GetComponent(this,DAT_181d94460);
+          plVar3 = (int64 *)Component.GetComponent(this,DAT_181d94478);
+          plVar5 = (int64 *)Component.GetComponent(this,DAT_181d94478);
           if (plVar5 == (int64 *)0) throw; // [null/range check failed]
           puVar6 = (uint32 *)
                    (**(code **)(*plVar5 + 0x298))(&local_38,plVar5,*(uint64 *)(*plVar5 + 0x2a0));
@@ -334,10 +334,10 @@ public class QuickTravelAreaIconController
     }
 
     // Token : 0x6002017
-    // RVA   : 0xB23CB0   Offset: 0xB230B0   Length: 0x118
+    // RVA   : 0xB24370   Offset: 0xB23770   Length: 0x118
     public void RefreshNameScale()
     {
-        var pStatics = *(int64*)(DAT_181d94000 + 184);
+        var pStatics = *(int64*)(DAT_181d94018 + 184);
         long lVar1;
         ulong local_28;
         float local_20;
@@ -366,7 +366,7 @@ public class QuickTravelAreaIconController
     }
 
     // Token : 0x6002018
-    // RVA   : 0xB23000   Offset: 0xB22400   Length: 0xBCC
+    // RVA   : 0xB236C0   Offset: 0xB22AC0   Length: 0xBCC
     public void OnClick()
     {
         int iVar1;
@@ -392,7 +392,7 @@ public class QuickTravelAreaIconController
               GameController.ShowTextOnMouse(lVar10,"马车只能前往城市区域！",0);
               plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar11 = (int64 *)0;
-              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                 plVar11 = plVar9;
               }
               NGUITools.PlaySound(plVar11,0);
@@ -423,7 +423,7 @@ public class QuickTravelAreaIconController
                        (lVar4 != null)) {
                       local_res8[0] = BigMapPos.QuickTravelTime(lVar4,*(uint64 *)(lVar5 + 200),0);
                       local_res8[0] = local_res8[0] * 10;
-                      uVar7 = il2cpp_value_box(DAT_181d80418,local_res8);
+                      uVar7 = il2cpp_value_box(DAT_181d80430,local_res8);
                       uVar7 = String.Format("需支付车费{0}银两",uVar7,0);
                       if (lVar10 != null) {
                         GameController.ShowTextOnMouse(lVar10,uVar7,0);
@@ -444,7 +444,7 @@ public class QuickTravelAreaIconController
                         (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) != null) &&
                        (lVar4 != null)) {
                       local_res8[0] = BigMapPos.QuickTravelTime(lVar4,*(uint64 *)(lVar5 + 200),0);
-                      uVar8 = il2cpp_value_box(DAT_181d80418,local_res8);
+                      uVar8 = il2cpp_value_box(DAT_181d80430,local_res8);
                       if (this.areaData != null) {
                         lVar4 = this.areaData.bigMapPos;
                         lVar5 = FUN_18046c0a0(0);
@@ -454,7 +454,7 @@ public class QuickTravelAreaIconController
                           local_res18[0] =
                                BigMapPos.QuickTravelTime(lVar4,*(uint64 *)(lVar5 + 200),0);
                           local_res18[0] = local_res18[0] * 10;
-                          uVar6 = il2cpp_value_box(DAT_181d80418,local_res18);
+                          uVar6 = il2cpp_value_box(DAT_181d80430,local_res18);
                           uVar7 = String.Format("乘坐马车前往{0}吗？\n耗时{1}天，车费{2}银两",uVar7,uVar8,uVar6,0);
                           if ((this.areaData != null) &&
                              (uVar8 = Int32.ToString(this.areaData + 16,0), lVar10 != null
@@ -498,7 +498,7 @@ public class QuickTravelAreaIconController
               GameController.ShowTextOnMouse(lVar10,"无法进攻附庸门派！",0);
               plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar11 = (int64 *)0;
-              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                 plVar11 = plVar9;
               }
               NGUITools.PlaySound(plVar11,0);
@@ -516,7 +516,7 @@ public class QuickTravelAreaIconController
                 GameController.ShowTextOnMouse(lVar10,"当前不可进攻门派总舵！",0);
                 plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar11 = (int64 *)0;
-                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                   plVar11 = plVar9;
                 }
                 NGUITools.PlaySound(plVar11,0);
@@ -536,7 +536,7 @@ public class QuickTravelAreaIconController
                 GameController.ShowTextOnMouse(lVar10,"当前不可进攻京城！",0);
                 plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar11 = (int64 *)0;
-                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                   plVar11 = plVar9;
                 }
                 NGUITools.PlaySound(plVar11,0);
@@ -560,7 +560,7 @@ public class QuickTravelAreaIconController
                 GameController.ShowTextOnMouse(lVar10,"无法进攻有其他据点的门派！",0);
                 plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar11 = (int64 *)0;
-                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                   plVar11 = plVar9;
                 }
                 NGUITools.PlaySound(plVar11,0);
@@ -582,7 +582,7 @@ public class QuickTravelAreaIconController
                 GameController.ShowTextOnMouse(lVar10,"门派占领区域已达上限！",0);
                 plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar11 = (int64 *)0;
-                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                   plVar11 = plVar9;
                 }
                 NGUITools.PlaySound(plVar11,0);
@@ -605,7 +605,7 @@ public class QuickTravelAreaIconController
           lVar10 = FUN_18046c400(0);
           if (lVar10 == null) break;
           PlotController.ForceAttackAreaChoosen(lVar10,this.areaData,0);
-          goto LAB_180b23b9e;
+          goto LAB_180b2425e;
         case 4:
         case 5:
           lVar10 = FUN_18046c400(0);
@@ -614,16 +614,16 @@ public class QuickTravelAreaIconController
           AISettingTabController.SetFocus
                     (*(int64 *)(lVar10 + 0x1e0),this.areaData.areaID,0
                     );
-        LAB_180b23b9e:
+        LAB_180b2425e:
           lVar10 = FUN_18046c4c0(0);
           if (lVar10 != null) {
             QuickTravelUIController.HideQuickTravelUI(lVar10,0);
-        switchD_180b2313a_default:
+        switchD_180b237fa_default:
             return;
           }
           break;
         default:
-          goto switchD_180b2313a_default;
+          goto switchD_180b237fa_default;
         }
     }
 

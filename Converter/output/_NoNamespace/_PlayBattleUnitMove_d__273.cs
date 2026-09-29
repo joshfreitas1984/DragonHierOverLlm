@@ -31,7 +31,7 @@ public class <PlayBattleUnitMove>d__273
     }
 
     // Token : 0x6000C11
-    // RVA   : 0x930EF0   Offset: 0x9302F0   Length: 0x4EC
+    // RVA   : 0x931550   Offset: 0x930950   Length: 0x4EC
     private virtual bool MoveNext()
     {
         float fVar2;
@@ -56,7 +56,7 @@ public class <PlayBattleUnitMove>d__273
           if (*(char *)(lVar9 + 16) != false) {
             plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/WoodenSummon",0);
             plVar10 = (int64 *)0;
-            if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
+            if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf360)) {
               plVar10 = plVar7;
             }
             NGUITools.PlaySound(plVar10,0);
@@ -82,7 +82,7 @@ public class <PlayBattleUnitMove>d__273
           }
           this.<>1__state = 0xffffffff;
           if ((lVar4 == null) || (lVar4.tempTagDataBase == null)) throw; // [null/range check failed]
-          FUN_181823590(lVar4.tempTagDataBase,0,DAT_181d8b118);
+          FUN_181823ba0(lVar4.tempTagDataBase,0,DAT_181d8b130);
         }
         lVar9 = lVar4.tempTagDataBase;
         if (lVar9 != null) {
@@ -115,7 +115,7 @@ public class <PlayBattleUnitMove>d__273
                 if ((lVar4.monthCatchBadFamePlayerTime != null) &&
                    (lVar4 = *(int64 *)(lVar4.monthCatchBadFamePlayerTime + 64)) != null) {
                   HeroData.ChangeSkillPower(lVar4,1,0x3f000000);
-                  fVar2 = *(float *)(*(int64 *)(DAT_181db07c8 + 184) + 24);
+                  fVar2 = *(float *)(*(int64 *)(DAT_181db07e0 + 184) + 24);
                   if ((GameController._instance != null) &&
                      (lVar4 = GameController._instance.worldData) != null) {
                     fVar3 = lVar4.battleTimeScale;
@@ -139,15 +139,15 @@ public class <PlayBattleUnitMove>d__273
     }
 
     // Token : 0x6000C13
-    // RVA   : 0x9313E0   Offset: 0x9307E0   Length: 0x3E
+    // RVA   : 0x931A40   Offset: 0x930E40   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97a38);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97bd0);
     }
 
     // Token : 0x6000C14

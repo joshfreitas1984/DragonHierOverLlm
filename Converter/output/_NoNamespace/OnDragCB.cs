@@ -26,16 +26,16 @@ public class OnDragCB
     }
 
     // Token : 0x600095B
-    // RVA   : 0x183D220   Offset: 0x183C620   Length: 0x442
+    // RVA   : 0x91A2D0   Offset: 0x9196D0   Length: 0x372
     public virtual void Invoke(object obj, Vector2 delta)
     {
         long lVar1;
         bool cVar4;
-        long lVar5;
+        ulong uVar6;
         long lVar7;
-        ushort uVar8;
+        long lVar8;
         ushort uVar9;
-        ulong uVar10;
+        ushort uVar10;
         ulong uVar11;
         ulong uVar13;
         long local_res8;
@@ -66,7 +66,7 @@ public class OnDragCB
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18183d61c;
+              goto LAB_18091a5fc;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -77,60 +77,61 @@ public class OnDragCB
                               (*plVar3 + 0x140 + (uint64)*(uint16 *)(lVar1 + 72) * 16));
                 }
                 else {
-                  lVar7 = il2cpp_class_get_namespace(lVar1);
-                  lVar5 = *plVar3;
-                  uVar9 = 0;
-                  if (*(uint16 *)(lVar5 + 0x12a) != 0) {
+                  lVar8 = il2cpp_class_get_namespace(lVar1);
+                  lVar7 = *plVar3;
+                  uVar10 = 0;
+                  if (*(uint16 *)(lVar7 + 0x12a) != 0) {
                     do {
-                      if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar9 * 16) == lVar7) {
-                        puVar6 = (uint64 *)
+                      if (*(int64 *)(*(int64 *)(lVar7 + 176) + (uint64)uVar10 * 16) == lVar8)
+                      {
+                        puVar5 = (uint64 *)
                                  ((int64)
                                   (int)((uint32)*(uint16 *)(lVar1 + 72) +
-                                       *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
-                                       ) * 16 + 0x138 + lVar5);
-                        goto LAB_18183d5c6;
+                                       *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16
+                                               )) * 16 + 0x138 + lVar7);
+                        goto LAB_18091a5a6;
                       }
-                      uVar9 = uVar9 + 1;
-                    } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
+                      uVar10 = uVar10 + 1;
+                    } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  puVar6 = (uint64 *)FUN_1800914f0(plVar3,lVar7,*(uint16 *)(lVar1 + 72));
-        LAB_18183d5c6:
-                  (*(code *)*puVar6)(plVar3,obj,delta,puVar6[1]);
+                  puVar5 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
+        LAB_18091a5a6:
+                  (*(code *)*puVar5)(plVar3,obj,delta,puVar5[1]);
                 }
               }
               else {
                 cVar4 = FUN_1800d65c0(lVar1);
-                uVar9 = *(uint16 *)(lVar1 + 72);
+                uVar10 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
-                  uVar10 = *(uint64 *)(*plVar3 + ((uint64)uVar9 + 20) * 16);
+                  uVar6 = *(uint64 *)(*plVar3 + ((uint64)uVar10 + 20) * 16);
                 }
                 else {
-                  lVar5 = *plVar3;
-                  uVar8 = 0;
-                  if (*(uint16 *)(lVar5 + 0x12a) != 0) {
+                  lVar7 = *plVar3;
+                  uVar9 = 0;
+                  if (*(uint16 *)(lVar7 + 0x12a) != 0) {
                     do {
-                      if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar8 * 16) ==
+                      if (*(int64 *)(*(int64 *)(lVar7 + 176) + (uint64)uVar9 * 16) ==
                           *(int64 *)(lVar1 + 24)) {
-                        lVar5 = (int64)
-                                (int)((uint32)uVar9 +
-                                     *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16))
-                                * 16 + 0x138 + lVar5;
-                        goto LAB_18183d516;
+                        lVar7 = (int64)
+                                (int)((uint32)uVar10 +
+                                     *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar9 * 16))
+                                * 16 + 0x138 + lVar7;
+                        goto LAB_18091a4f6;
                       }
-                      uVar8 = uVar8 + 1;
-                    } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
+                      uVar9 = uVar9 + 1;
+                    } while (uVar9 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  lVar5 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar9);
-        LAB_18183d516:
-                  uVar10 = *(uint64 *)(lVar5 + 8);
+                  lVar7 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_18091a4f6:
+                  uVar6 = *(uint64 *)(lVar7 + 8);
                 }
-                puVar6 = (uint64 *)il2cpp_internal(uVar10,lVar1);
-                (*(code *)*puVar6)(plVar3,obj,delta,puVar6);
+                puVar5 = (uint64 *)il2cpp_internal(uVar6,lVar1);
+                (*(code *)*puVar5)(plVar3,obj,delta,puVar5);
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18183d2bb;
+              goto LAB_18091a36b;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -141,68 +142,34 @@ public class OnDragCB
                               (*obj + 0x140 + (uint64)*(uint16 *)(lVar1 + 72) * 16));
                 }
                 else {
-                  lVar7 = il2cpp_class_get_namespace(lVar1);
-                  lVar5 = *obj;
-                  uVar9 = 0;
-                  if (*(uint16 *)(lVar5 + 0x12a) != 0) {
-                    do {
-                      if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar9 * 16) == lVar7) {
-                        puVar6 = (uint64 *)
-                                 ((int64)
-                                  (int)((uint32)*(uint16 *)(lVar1 + 72) +
-                                       *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
-                                       ) * 16 + 0x138 + lVar5);
-                        (*(code *)*puVar6)(obj,delta,puVar6[1]);
-                        goto LAB_18183d62c;
-                      }
-                      uVar9 = uVar9 + 1;
-                    } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
-                  }
-                  puVar6 = (uint64 *)FUN_1800914f0(obj,lVar7,*(uint16 *)(lVar1 + 72));
-                  (*(code *)*puVar6)(obj,delta,puVar6[1]);
+                  uVar6 = il2cpp_class_get_namespace(lVar1);
+                  FUN_180133380(*(uint16 *)(lVar1 + 72),uVar6,obj,delta);
                 }
               }
               else {
                 cVar4 = FUN_1800d65c0(lVar1);
-                uVar9 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
-                  uVar10 = *(uint64 *)(*obj + ((uint64)uVar9 + 20) * 16);
+                  puVar5 = (uint64 *)
+                           il2cpp_internal(*(uint64 *)
+                                                (*obj +
+                                                ((uint64)*(uint16 *)(lVar1 + 72) + 20) * 16),
+                                               lVar1);
+                  (*(code *)*puVar5)(obj,delta,puVar5);
                 }
                 else {
-                  lVar5 = *obj;
-                  uVar8 = 0;
-                  if (*(uint16 *)(lVar5 + 0x12a) != 0) {
-                    do {
-                      if (*(int64 *)(*(int64 *)(lVar5 + 176) + (uint64)uVar8 * 16) ==
-                          *(int64 *)(lVar1 + 24)) {
-                        uVar10 = *(uint64 *)
-                                  ((int64)
-                                   (int)((uint32)uVar9 +
-                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16
-                                                )) * 16 + lVar5 + 0x140);
-                        goto LAB_18183d389;
-                      }
-                      uVar8 = uVar8 + 1;
-                    } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
-                  }
-                  lVar5 = FUN_1800914f0(obj,*(int64 *)(lVar1 + 24),uVar9);
-                  uVar10 = *(uint64 *)(lVar5 + 8);
+                  FUN_180132f10(lVar1,obj,delta);
                 }
-        LAB_18183d389:
-                puVar6 = (uint64 *)il2cpp_internal(uVar10,lVar1);
-                (*(code *)*puVar6)(obj,delta,puVar6);
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_18183d2bb:
+        LAB_18091a36b:
             (*pcVar2)(obj,delta,lVar1);
           }
           else {
-        LAB_18183d61c:
+        LAB_18091a5fc:
             (*pcVar2)(plVar3,obj,delta,lVar1);
           }
-        LAB_18183d62c:
           uVar13 = uVar13 + 1;
           if (uVar11 <= uVar13) {
             return;
@@ -211,7 +178,7 @@ public class OnDragCB
     }
 
     // Token : 0x600095C
-    // RVA   : 0x183D190   Offset: 0x183C590   Length: 0x82
+    // RVA   : 0x91A240   Offset: 0x919640   Length: 0x82
     public virtual IAsyncResult BeginInvoke(object obj, Vector2 delta, AsyncCallback callback, object object)
     {
         void OnDragCB.BeginInvoke
@@ -225,7 +192,7 @@ public class OnDragCB
         local_28 = delta;
         local_10 = 0;
         local_20 = obj;
-        local_18 = il2cpp_value_box(DAT_181db3950,&local_28);
+        local_18 = il2cpp_value_box(DAT_181db3968,&local_28);
         il2cpp_internal(this,&local_20,callback,object);
     }
 

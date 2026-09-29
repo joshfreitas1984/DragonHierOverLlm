@@ -6,23 +6,23 @@
 public class NonBreakingSpaceTextComponent
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001937
+    // Token: 0x4001938
     public static readonly string no_breaking_space;
 
-    // Token: 0x4001938
+    // Token: 0x4001939
     protected Text text;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600196C
-    // RVA   : 0xB8EDD0   Offset: 0xB8E1D0   Length: 0xB4
+    // RVA   : 0xB8F490   Offset: 0xB8E890   Length: 0xB4
     private void Awake()
     {
         long lVar1;
         ulong uVar2;
-        uVar2 = Component.GetComponent(this,DAT_181d96160);
+        uVar2 = Component.GetComponent(this,DAT_181d96178);
         this.text = uVar2;
         lVar1 = this.text;
-        uVar2 = new OnTooltipCB(this,DAT_181d91a18,0);
+        uVar2 = new OnTooltipCB(this,DAT_181d918b0,0);
         if (lVar1 != null) {
           Graphic.RegisterDirtyVerticesCallback(lVar1,uVar2,0);
           return;
@@ -30,7 +30,7 @@ public class NonBreakingSpaceTextComponent
     }
 
     // Token : 0x600196D
-    // RVA   : 0xB8EE90   Offset: 0xB8E290   Length: 0xFE
+    // RVA   : 0xB8F550   Offset: 0xB8E950   Length: 0xFE
     public void OnTextChange()
     {
         bool cVar2;
@@ -48,7 +48,7 @@ public class NonBreakingSpaceTextComponent
           if (plVar1 != (int64 *)0) {
             lVar3 = (**(code **)(*plVar1 + 0x5d8))(plVar1,*(uint64 *)(*plVar1 + 0x5e0));
             if (lVar3 != null) {
-              uVar4 = String.Replace(lVar3," ",**(uint64 **)(DAT_181d8d110 + 184),0);
+              uVar4 = String.Replace(lVar3," ",**(uint64 **)(DAT_181d8d128 + 184),0);
               (**(code **)(*plVar1 + 0x5e8))(plVar1,uVar4,*(uint64 *)(*plVar1 + 0x5f0));
               return;
             }
@@ -64,10 +64,10 @@ public class NonBreakingSpaceTextComponent
     }
 
     // Token : 0x600196F
-    // RVA   : 0xB8EF90   Offset: 0xB8E390   Length: 0x4D
+    // RVA   : 0xB8F650   Offset: 0xB8EA50   Length: 0x4D
     private static void /*cctor*/()
     {
-        **(uint64 **)(DAT_181d8d110 + 184) = " ";
+        **(uint64 **)(DAT_181d8d128 + 184) = " ";
         il2cpp_internal();
     }
 

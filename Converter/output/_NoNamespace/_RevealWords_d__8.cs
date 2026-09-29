@@ -6,25 +6,25 @@
 public class <RevealWords>d__8
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FD8
+    // Token: 0x4001FD9
     private int <>1__state;
 
-    // Token: 0x4001FD9
+    // Token: 0x4001FDA
     private object <>2__current;
 
-    // Token: 0x4001FDA
+    // Token: 0x4001FDB
     public TMP_Text textComponent;
 
-    // Token: 0x4001FDB
+    // Token: 0x4001FDC
     private int <totalWordCount>5__2;
 
-    // Token: 0x4001FDC
+    // Token: 0x4001FDD
     private int <totalVisibleCharacters>5__3;
 
-    // Token: 0x4001FDD
+    // Token: 0x4001FDE
     private int <counter>5__4;
 
-    // Token: 0x4001FDE
+    // Token: 0x4001FDF
     private int <visibleCount>5__5;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -43,7 +43,7 @@ public class <RevealWords>d__8
     }
 
     // Token : 0x6002507
-    // RVA   : 0x8F1B20   Offset: 0x8F0F20   Length: 0x1F6
+    // RVA   : 0x9249A0   Offset: 0x923DA0   Length: 0x1F6
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -68,7 +68,7 @@ public class <RevealWords>d__8
         else {
           if (iVar1 == 1) {
             this.<>1__state = 0xffffffff;
-            goto LAB_1808f1c74;
+            goto LAB_180924af4;
           }
           if (iVar1 != 2) {
             return false;
@@ -104,7 +104,7 @@ public class <RevealWords>d__8
             this.<>1__state = 1;
             return true;
           }
-        LAB_1808f1c74:
+        LAB_180924af4:
           this.<counter>5__4 = this.<counter>5__4 + 1;
           uVar4 = new WaitForSeconds(0x3dcccccd,0);
           this.<>2__current = uVar4;
@@ -121,15 +121,15 @@ public class <RevealWords>d__8
     }
 
     // Token : 0x6002509
-    // RVA   : 0x8F1D20   Offset: 0x8F1120   Length: 0x3E
+    // RVA   : 0x924BA0   Offset: 0x923FA0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db6158);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db6308);
     }
 
     // Token : 0x600250A

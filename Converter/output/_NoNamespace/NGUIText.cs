@@ -119,19 +119,19 @@ public class NGUIText
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60003A1
-    // RVA   : 0xE0AD00   Offset: 0xE0A100   Length: 0x5B
+    // RVA   : 0xE0B310   Offset: 0xE0A710   Length: 0x5B
     public static bool get_isDynamic()
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         return CONCAT71((int7)((uint64)pStatics >> 8),
                         NGUIText.bitmapFont == null);
     }
 
     // Token : 0x60003A2
-    // RVA   : 0xE084B0   Offset: 0xE078B0   Length: 0x4B
+    // RVA   : 0xE08AC0   Offset: 0xE07EC0   Length: 0x4B
     public static void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -150,13 +150,13 @@ public class NGUIText
         uVar2 = NGUIText.dynamicFont;
         cVar4 = Object.op_Inequality(uVar2,0,0);
         if (!cVar4) {
-          if (NGUIText.bitmapFont != null) goto LAB_180e08664;
-        LAB_180e0868f:
+          if (NGUIText.bitmapFont != null) goto LAB_180e08c74;
+        LAB_180e08c9f:
           bVar9 = false;
         }
         else {
-        LAB_180e08664:
-          if (!NGUIText.encoding) goto LAB_180e0868f;
+        LAB_180e08c74:
+          if (!NGUIText.encoding) goto LAB_180e08c9f;
           bVar9 = NGUIText.symbolStyle != null;
         }
         NGUIText.useSymbols = bVar9;
@@ -179,7 +179,7 @@ public class NGUIText
                            CONCAT44(uVar6,*(uint32 *)(lVar3 + 36)),0);
         if (cVar4) {
           iVar7 = CharacterInfo.get_maxY(pStatics + 188,0);
-          if ((float)iVar7 != 0.0) goto LAB_180e088ad;
+          if ((float)iVar7 != 0.0) goto LAB_180e08ebd;
         }
         uVar6 = 0;
         Font.RequestCharactersInTexture
@@ -193,7 +193,7 @@ public class NGUIText
           NGUIText.baseline = 0;
           return;
         }
-        LAB_180e088ad:
+        LAB_180e08ebd:
         iVar7 = CharacterInfo.get_maxY(pStatics + 188,0);
         iVar8 = CharacterInfo.get_minY(pStatics + 188,0);
         uVar6 = FUN_18000d7c0((((float)NGUIText.finalSize - (float)iVar7
@@ -202,10 +202,10 @@ public class NGUIText
     }
 
     // Token : 0x60003A3
-    // RVA   : 0xE08500   Offset: 0xE07900   Length: 0x4B3
+    // RVA   : 0xE08B10   Offset: 0xE07F10   Length: 0x4B3
     public static void Update(bool request)
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -224,13 +224,13 @@ public class NGUIText
         uVar2 = NGUIText.dynamicFont;
         cVar4 = Object.op_Inequality(uVar2,0,0);
         if (!cVar4) {
-          if (NGUIText.bitmapFont != null) goto LAB_180e08664;
-        LAB_180e0868f:
+          if (NGUIText.bitmapFont != null) goto LAB_180e08c74;
+        LAB_180e08c9f:
           bVar9 = false;
         }
         else {
-        LAB_180e08664:
-          if (!NGUIText.encoding) goto LAB_180e0868f;
+        LAB_180e08c74:
+          if (!NGUIText.encoding) goto LAB_180e08c9f;
           bVar9 = NGUIText.symbolStyle != null;
         }
         NGUIText.useSymbols = bVar9;
@@ -253,7 +253,7 @@ public class NGUIText
                            CONCAT44(uVar6,*(uint32 *)(lVar3 + 36)),0);
         if (cVar4) {
           iVar7 = CharacterInfo.get_maxY(pStatics + 188,0);
-          if ((float)iVar7 != 0.0) goto LAB_180e088ad;
+          if ((float)iVar7 != 0.0) goto LAB_180e08ebd;
         }
         uVar6 = 0;
         Font.RequestCharactersInTexture
@@ -267,7 +267,7 @@ public class NGUIText
           NGUIText.baseline = 0;
           return;
         }
-        LAB_180e088ad:
+        LAB_180e08ebd:
         iVar7 = CharacterInfo.get_maxY(pStatics + 188,0);
         iVar8 = CharacterInfo.get_minY(pStatics + 188,0);
         uVar6 = FUN_18000d7c0((((float)NGUIText.finalSize - (float)iVar7
@@ -276,16 +276,16 @@ public class NGUIText
     }
 
     // Token : 0x60003A4
-    // RVA   : 0xE03530   Offset: 0xE02930   Length: 0x132
+    // RVA   : 0xE03B40   Offset: 0xE02F40   Length: 0x132
     public static void Prepare(string text)
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
         lVar1 = NGUIText.mColors;
         if (lVar1 != null) {
-          BetterList_1.Clear(lVar1,DAT_181da6238);
+          BetterList_1.Clear(lVar1,DAT_181da6250);
           uVar2 = NGUIText.dynamicFont;
           cVar3 = Object.op_Inequality(uVar2,0,0);
           if (cVar3) {
@@ -300,7 +300,7 @@ public class NGUIText
     }
 
     // Token : 0x60003A5
-    // RVA   : 0xE01DC0   Offset: 0xE011C0   Length: 0xE1
+    // RVA   : 0xE023D0   Offset: 0xE017D0   Length: 0xE1
     public static BMSymbol GetSymbol(string text, int index, int textLength)
     {
         ulong uVar1;
@@ -308,14 +308,14 @@ public class NGUIText
           return 0;
         }
         if (NGUIText.bitmapFont != null) {
-          uVar1 = FUN_1800028c0(36,DAT_181d7a800,NGUIText.bitmapFont,text,index,
+          uVar1 = FUN_1800028c0(36,DAT_181d7a818,NGUIText.bitmapFont,text,index,
                                 textLength);
           return uVar1;
         }
     }
 
     // Token : 0x60003A6
-    // RVA   : 0xE01130   Offset: 0xE00530   Length: 0x294
+    // RVA   : 0xE01740   Offset: 0xE00B40   Length: 0x294
     public static float GetGlyphWidth(int ch, int prev, float fontScale)
     {
         ulong uVar1;
@@ -323,24 +323,24 @@ public class NGUIText
         long lVar4;
         uint uVar5;
         uint uVar6;
-        if (((*(byte *)((int64)DAT_181d8bc90 + 0x133) & 4) != 0) && ((int)DAT_181d8bc90[28] == 0)) {
+        if (((*(byte *)((int64)DAT_181d8bca8 + 0x133) & 4) != 0) && ((int)DAT_181d8bca8[28] == 0)) {
           il2cpp_runtime_class_init();
         }
-        if (*(int64 *)DAT_181d8bc90[23] == 0) {
-          if (((*(byte *)((int64)DAT_181d8bc90 + 0x133) & 4) != 0) && ((int)DAT_181d8bc90[28] == 0))
+        if (*(int64 *)DAT_181d8bca8[23] == 0) {
+          if (((*(byte *)((int64)DAT_181d8bca8 + 0x133) & 4) != 0) && ((int)DAT_181d8bca8[28] == 0))
           {
             il2cpp_runtime_class_init();
           }
-          uVar1 = *(uint64 *)(DAT_181d8bc90[23] + 8);
+          uVar1 = *(uint64 *)(DAT_181d8bca8[23] + 8);
           plVar3 = (int64 *)Object.op_Inequality(uVar1,0,0);
           if ((char)plVar3) {
-            if (((*(byte *)((int64)DAT_181d8bc90 + 0x133) & 4) != 0) && ((int)DAT_181d8bc90[28] == 0)
+            if (((*(byte *)((int64)DAT_181d8bca8 + 0x133) & 4) != 0) && ((int)DAT_181d8bca8[28] == 0)
                ) {
-              il2cpp_runtime_class_init(DAT_181d8bc90);
+              il2cpp_runtime_class_init(DAT_181d8bca8);
             }
-            lVar4 = DAT_181d8bc90[23];
+            lVar4 = DAT_181d8bca8[23];
             if (*(int64 *)(lVar4 + 8) == 0) {
-        LAB_180e013bf:
+        LAB_180e019cf:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -349,12 +349,12 @@ public class NGUIText
                                (*(int64 *)(lVar4 + 8),ch & 0xffff,lVar4 + 188,
                                 *(uint32 *)(lVar4 + 136),*(uint32 *)(lVar4 + 36),0);
             if ((char)plVar3) {
-              if (((*(byte *)((int64)DAT_181d8bc90 + 0x133) & 4) != 0) &&
-                 ((int)DAT_181d8bc90[28] == 0)) {
+              if (((*(byte *)((int64)DAT_181d8bca8 + 0x133) & 4) != 0) &&
+                 ((int)DAT_181d8bca8[28] == 0)) {
                 il2cpp_runtime_class_init();
               }
-              CharacterInfo.get_advance(DAT_181d8bc90[23] + 188,0);
-              plVar3 = DAT_181d8bc90;
+              CharacterInfo.get_advance(DAT_181d8bca8[23] + 188,0);
+              plVar3 = DAT_181d8bca8;
             }
           }
         }
@@ -363,18 +363,18 @@ public class NGUIText
           if (ch != 0x2009) {
             uVar6 = ch;
           }
-          if (((*(byte *)((int64)DAT_181d8bc90 + 0x133) & 4) != 0) && ((int)DAT_181d8bc90[28] == 0))
+          if (((*(byte *)((int64)DAT_181d8bca8 + 0x133) & 4) != 0) && ((int)DAT_181d8bca8[28] == 0))
           {
             il2cpp_runtime_class_init();
           }
-          plVar3 = (int64 *)DAT_181d8bc90[23];
+          plVar3 = (int64 *)DAT_181d8bca8[23];
           if (*plVar3 != 0) {
-            if (((*(byte *)((int64)DAT_181d8bc90 + 0x133) & 4) != 0) && ((int)DAT_181d8bc90[28] == 0)
+            if (((*(byte *)((int64)DAT_181d8bca8 + 0x133) & 4) != 0) && ((int)DAT_181d8bca8[28] == 0)
                ) {
               il2cpp_runtime_class_init();
             }
-            if ((*(int64 *)DAT_181d8bc90[23] == 0) ||
-               (lVar4 = FUN_180002970(0,DAT_181d7a800)) == null) goto LAB_180e013bf;
+            if ((*(int64 *)DAT_181d8bca8[23] == 0) ||
+               (lVar4 = FUN_180002970(0,DAT_181d7a818)) == null) goto LAB_180e019cf;
             lVar4 = BMFont.GetGlyph(lVar4,uVar6,0);
             plVar3 = (int64 *)0;
             if (lVar4 != null) {
@@ -397,10 +397,10 @@ public class NGUIText
     }
 
     // Token : 0x60003A7
-    // RVA   : 0xE013D0   Offset: 0xE007D0   Length: 0x9E8
+    // RVA   : 0xE019E0   Offset: 0xE00DE0   Length: 0x9E8
     public static GlyphInfo GetGlyph(int ch, int prev, float fontScale)
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -496,9 +496,9 @@ public class NGUIText
                                           uVar8 = FUN_18000d7c0();
                                           *(uint32 *)(lVar6 + 28) = uVar8;
                                           fontScale = fontScale * *(float *)(*(int64 *)
-                                                                          (DAT_181d8bc90 + 184) + 32);
+                                                                          (DAT_181d8bca8 + 184) + 32);
                                           if (fontScale == 1.0) {
-        LAB_180e0191c:
+        LAB_180e01f2c:
                                             return *(uint64 *)
                                                     (pStatics + 16);
                                           }
@@ -519,7 +519,7 @@ public class NGUIText
                                               if (lVar6 != null) {
                                                 lVar6.advance =
                                                      fontScale * lVar6.advance;
-                                                goto LAB_180e0191c;
+                                                goto LAB_180e01f2c;
                                               }
                                             }
                                           }
@@ -538,7 +538,7 @@ public class NGUIText
                 }
               }
             }
-        LAB_180e01db3:
+        LAB_180e023c3:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -550,7 +550,7 @@ public class NGUIText
           }
           if (NGUIText.bitmapFont != null) {
             if ((NGUIText.bitmapFont != null) &&
-               (lVar6 = FUN_180002970(0,DAT_181d7a800)) != null) {
+               (lVar6 = FUN_180002970(0,DAT_181d7a818)) != null) {
               lVar6 = BMFont.GetGlyph(lVar6,uVar7,0);
               if (lVar6 == null) {
                 return 0;
@@ -614,7 +614,7 @@ public class NGUIText
                                         if (lVar1 != null) {
                                           lVar1.channel = lVar6.u2;
                                           if (fontScale == 1.0) {
-        LAB_180e01d62:
+        LAB_180e02372:
                                             return *(uint64 *)
                                                     (pStatics + 16);
                                           }
@@ -635,7 +635,7 @@ public class NGUIText
                                               if (lVar6 != null) {
                                                 lVar6.advance =
                                                      fontScale * lVar6.advance;
-                                                goto LAB_180e01d62;
+                                                goto LAB_180e02372;
                                               }
                                             }
                                           }
@@ -654,14 +654,14 @@ public class NGUIText
                 }
               }
             }
-            goto LAB_180e01db3;
+            goto LAB_180e023c3;
           }
         }
         return 0;
     }
 
     // Token : 0x60003A8
-    // RVA   : 0xE02290   Offset: 0xE01690   Length: 0x76
+    // RVA   : 0xE028A0   Offset: 0xE01CA0   Length: 0x76
     public static float ParseAlpha(string text, int index)
     {
         ushort uVar1;
@@ -678,7 +678,7 @@ public class NGUIText
     }
 
     // Token : 0x60003A9
-    // RVA   : 0xE02620   Offset: 0xE01A20   Length: 0x7E
+    // RVA   : 0xE02C30   Offset: 0xE02030   Length: 0x7E
     public static Color ParseColor(string text, int offset)
     {
         ulong uVar1;
@@ -691,7 +691,7 @@ public class NGUIText
     }
 
     // Token : 0x60003AA
-    // RVA   : 0xE02310   Offset: 0xE01710   Length: 0x155
+    // RVA   : 0xE02920   Offset: 0xE01D20   Length: 0x155
     public static Color ParseColor24(string text, int offset)
     {
         ushort uVar1;
@@ -724,7 +724,7 @@ public class NGUIText
     }
 
     // Token : 0x60003AB
-    // RVA   : 0xE02470   Offset: 0xE01870   Length: 0x1AE
+    // RVA   : 0xE02A80   Offset: 0xE01E80   Length: 0x1AE
     public static Color ParseColor32(string text, int offset)
     {
         ushort uVar1;
@@ -755,7 +755,7 @@ public class NGUIText
           uVar9 = NGUIMath.HexToDecimal(uVar1,0);
           *text = 0;
           text[1] = 0;
-          FUN_1809dc910(text,(float)(int)(iVar2 << 4 | uVar3) * 0.003921569,
+          FUN_1809dcfa0(text,(float)(int)(iVar2 << 4 | uVar3) * 0.003921569,
                         (float)(int)(iVar4 << 4 | uVar5) * 0.003921569,
                         (float)(int)(iVar6 << 4 | uVar7) * 0.003921569,
                         (float)(int)(uVar9 | iVar8 << 4) * 0.003921569,0);
@@ -764,7 +764,7 @@ public class NGUIText
     }
 
     // Token : 0x60003AC
-    // RVA   : 0xE00C30   Offset: 0xE00030   Length: 0x5D
+    // RVA   : 0xE01240   Offset: 0xE00640   Length: 0x5D
     public static string EncodeColor(Color c)
     {
         long lVar2;
@@ -774,7 +774,7 @@ public class NGUIText
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
         if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -856,7 +856,7 @@ public class NGUIText
     }
 
     // Token : 0x60003AD
-    // RVA   : 0xE00980   Offset: 0xDFFD80   Length: 0x2A9
+    // RVA   : 0xE00F90   Offset: 0xE00390   Length: 0x2A9
     public static string EncodeColor(string text, Color c)
     {
         long lVar2;
@@ -866,7 +866,7 @@ public class NGUIText
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
         if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -948,7 +948,7 @@ public class NGUIText
     }
 
     // Token : 0x60003AE
-    // RVA   : 0xE00760   Offset: 0xDFFB60   Length: 0x69
+    // RVA   : 0xE00D70   Offset: 0xE00170   Length: 0x69
     public static string EncodeAlpha(float a)
     {
         uint uVar1;
@@ -960,7 +960,7 @@ public class NGUIText
     }
 
     // Token : 0x60003AF
-    // RVA   : 0xE007D0   Offset: 0xDFFBD0   Length: 0xDD
+    // RVA   : 0xE00DE0   Offset: 0xE001E0   Length: 0xDD
     public static string EncodeColor24(Color c)
     {
         float fVar1;
@@ -984,7 +984,7 @@ public class NGUIText
     }
 
     // Token : 0x60003B0
-    // RVA   : 0xE008B0   Offset: 0xDFFCB0   Length: 0xCB
+    // RVA   : 0xE00EC0   Offset: 0xE002C0   Length: 0xCB
     public static string EncodeColor32(Color c)
     {
         float fVar1;
@@ -1006,10 +1006,10 @@ public class NGUIText
     }
 
     // Token : 0x60003B1
-    // RVA   : 0xE03440   Offset: 0xE02840   Length: 0xE1
+    // RVA   : 0xE03A50   Offset: 0xE02E50   Length: 0xE1
     public static bool ParseSymbol(string text, ref int index)
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         uint64
         NGUIText.ParseSymbol
                 (int64 text,int *index,int64 param_3,char param_4,uint32 *param_5,
@@ -1049,7 +1049,7 @@ public class NGUIText
         uint64 local_88;
         uint64 uStack_80;
         uint8 local_78 [64];
-        if (text == null) goto LAB_180e0341c;
+        if (text == null) goto LAB_180e03a2c;
         iVar9 = *(int *)(text + 16);
         if (iVar9 < *index + 3) {
           return false;
@@ -1063,9 +1063,9 @@ public class NGUIText
           sVar5 = String.get_Chars(text,*index + 1,0);
           if (sVar5 == 45) {
             if ((param_3 != 0) && (1 < *(int *)(param_3 + 24))) {
-              BetterList_1.RemoveAt(param_3,*(int *)(param_3 + 24) + -1,DAT_181da62b8);
+              BetterList_1.RemoveAt(param_3,*(int *)(param_3 + 24) + -1,DAT_181da62d0);
             }
-            goto LAB_180e02bc8;
+            goto LAB_180e031d8;
           }
           lVar11 = String.Substring(text,*index,3);
           if (lVar11 != null) {
@@ -1074,60 +1074,60 @@ public class NGUIText
             if (uVar8 < 0x7affcd23) {
               if (uVar8 < 0x76d678d0) {
                 if (uVar8 == 0x76bf1f80) {
-                  cVar4 = FUN_18171e540(lVar11,"[u]",0);
+                  cVar4 = FUN_18171eb50(lVar11,"[u]",0);
                   puVar3 = param_8;
                 }
                 else {
-                  if (uVar8 != 0x76d678cf) goto LAB_180e02952;
-                  cVar4 = FUN_18171e540(lVar11,"[b]",0);
+                  if (uVar8 != 0x76d678cf) goto LAB_180e02f62;
+                  cVar4 = FUN_18171eb50(lVar11,"[b]",0);
                   puVar3 = param_6;
                 }
               }
               else if (uVar8 == 0x77195ebc) {
-                cVar4 = FUN_18171e540(lVar11,"[I]",0);
+                cVar4 = FUN_18171eb50(lVar11,"[I]",0);
                 puVar3 = param_7;
               }
               else if (uVar8 == 0x7ad8bdb2) {
-                cVar4 = FUN_18171e540(lVar11,"[c]",0);
+                cVar4 = FUN_18171eb50(lVar11,"[c]",0);
               }
               else {
-                if (uVar8 != 0x7affcd22) goto LAB_180e02952;
-                cVar4 = FUN_18171e540(lVar11,"[S]",0);
+                if (uVar8 != 0x7affcd22) goto LAB_180e02f62;
+                cVar4 = FUN_18171eb50(lVar11,"[S]",0);
                 puVar3 = param_9;
               }
             }
             else if (uVar8 < 0xb70f3621) {
               if (uVar8 == 0xb6ca119c) {
-                cVar4 = FUN_18171e540(lVar11,"[i]",0);
+                cVar4 = FUN_18171eb50(lVar11,"[i]",0);
                 puVar3 = param_7;
               }
               else {
-                if (uVar8 != 0xb70f3620) goto LAB_180e02952;
-                cVar4 = FUN_18171e540(lVar11,"[U]",0);
+                if (uVar8 != 0xb70f3620) goto LAB_180e02f62;
+                cVar4 = FUN_18171eb50(lVar11,"[U]",0);
                 puVar3 = param_8;
               }
             }
             else if (uVar8 == 0xb724fc6f) {
-              cVar4 = FUN_18171e540(lVar11,"[B]",0);
+              cVar4 = FUN_18171eb50(lVar11,"[B]",0);
               puVar3 = param_6;
             }
             else if (uVar8 == 0xbab08002) {
-              cVar4 = FUN_18171e540(lVar11,"[s]",0);
+              cVar4 = FUN_18171eb50(lVar11,"[s]",0);
               puVar3 = param_9;
             }
             else {
-              if (uVar8 != 0xbb274152) goto LAB_180e02952;
-              cVar4 = FUN_18171e540(lVar11,"[C]",0);
+              if (uVar8 != 0xbb274152) goto LAB_180e02f62;
+              cVar4 = FUN_18171eb50(lVar11,"[C]",0);
             }
             if (cVar4) {
               *puVar3 = 1;
-        LAB_180e02bc8:
+        LAB_180e031d8:
               *index = *index + 3;
               return true;
             }
           }
         }
-        LAB_180e02952:
+        LAB_180e02f62:
         if (iVar9 < *index + 4) {
           return false;
         }
@@ -1139,8 +1139,8 @@ public class NGUIText
             if (uVar8 < 0x258a062a) {
               if (uVar8 < 0x21676d9c) {
                 if (uVar8 == 0x213ecb2b) {
-                  cVar4 = FUN_18171e540(lVar11,"[/S]",0);
-        joined_r0x000180e02e3f:
+                  cVar4 = FUN_18171eb50(lVar11,"[/S]",0);
+        joined_r0x000180e0344f:
                   if (cVar4) {
                     *param_9 = 0;
                     *index = *index + 4;
@@ -1148,29 +1148,29 @@ public class NGUIText
                   }
                 }
                 else if (uVar8 == 0x21676d9b) {
-                  cVar4 = FUN_18171e540(lVar11,"[/c]",0);
-                  goto joined_r0x000180e02e74;
+                  cVar4 = FUN_18171eb50(lVar11,"[/c]",0);
+                  goto joined_r0x000180e03484;
                 }
               }
               else {
                 if (uVar8 == 0x2558695d) {
-                  cVar4 = FUN_18171e540(lVar11,"[/i]",0);
-                  goto joined_r0x000180e02da8;
+                  cVar4 = FUN_18171eb50(lVar11,"[/i]",0);
+                  goto joined_r0x000180e033b8;
                 }
                 if (uVar8 == 0x2569b27e) {
-                  cVar4 = FUN_18171e540(lVar11,"[/b]",0);
-                  goto joined_r0x000180e02dd9;
+                  cVar4 = FUN_18171eb50(lVar11,"[/b]",0);
+                  goto joined_r0x000180e033e9;
                 }
                 if (uVar8 == 0x258a0629) {
-                  cVar4 = FUN_18171e540(lVar11,"[/u]",0);
-                  goto joined_r0x000180e02e0e;
+                  cVar4 = FUN_18171eb50(lVar11,"[/u]",0);
+                  goto joined_r0x000180e0341e;
                 }
               }
             }
             else if (uVar8 < 0x618ee1cc) {
               if (uVar8 == 0x6118207b) {
-                cVar4 = FUN_18171e540(lVar11,"[/C]",0);
-        joined_r0x000180e02e74:
+                cVar4 = FUN_18171eb50(lVar11,"[/C]",0);
+        joined_r0x000180e03484:
                 if (cVar4) {
                   *param_10 = 0;
                   *index = *index + 4;
@@ -1178,13 +1178,13 @@ public class NGUIText
                 }
               }
               else if (uVar8 == 0x618ee1cb) {
-                cVar4 = FUN_18171e540(lVar11,"[/s]",0);
-                goto joined_r0x000180e02e3f;
+                cVar4 = FUN_18171eb50(lVar11,"[/s]",0);
+                goto joined_r0x000180e0344f;
               }
             }
             else if (uVar8 == 0x65091c3d) {
-              cVar4 = FUN_18171e540(lVar11,"[/I]",0);
-        joined_r0x000180e02da8:
+              cVar4 = FUN_18171eb50(lVar11,"[/I]",0);
+        joined_r0x000180e033b8:
               if (cVar4) {
                 *param_7 = 0;
                 *index = *index + 4;
@@ -1192,8 +1192,8 @@ public class NGUIText
               }
             }
             else if (uVar8 == 0x651a655e) {
-              cVar4 = FUN_18171e540(lVar11,"[/B]",0);
-        joined_r0x000180e02dd9:
+              cVar4 = FUN_18171eb50(lVar11,"[/B]",0);
+        joined_r0x000180e033e9:
               if (cVar4) {
                 *param_6 = 0;
                 *index = *index + 4;
@@ -1201,8 +1201,8 @@ public class NGUIText
               }
             }
             else if (uVar8 == 0x653ab909) {
-              cVar4 = FUN_18171e540(lVar11,"[/U]",0);
-        joined_r0x000180e02e0e:
+              cVar4 = FUN_18171eb50(lVar11,"[/U]",0);
+        joined_r0x000180e0341e:
               if (cVar4) {
                 *param_8 = 0;
                 *index = *index + 4;
@@ -1214,14 +1214,14 @@ public class NGUIText
           uVar7 = String.get_Chars(text,*index + 2,0);
           if ((((uint16)(uVar6 - 48) < 10) || ((uint16)(uVar6 - 97) < 6)) ||
              ((64 < uVar6 && (uVar6 < 71)))) {
-            lVar11 = DAT_181d8bc90;
+            lVar11 = DAT_181d8bca8;
             if ((((uint16)(uVar7 - 48) < 10) || ((uint16)(uVar7 - 97) < 6)) ||
                ((64 < uVar7 && (uVar7 < 71)))) {
               iVar9 = NGUIMath.HexToDecimal(uVar6,0);
               uVar8 = NGUIMath.HexToDecimal(uVar7,0);
               if (((*(byte *)(lVar11 + 0x133) & 4) != 0) && (*(int *)(lVar11 + 224) == 0)) {
                 il2cpp_runtime_class_init(lVar11);
-                lVar11 = DAT_181d8bc90;
+                lVar11 = DAT_181d8bca8;
               }
               *(float *)(*(int64 *)(lVar11 + 184) + 184) = (float)(int)(iVar9 << 4 | uVar8) / 255.0;
               *index = *index + 4;
@@ -1232,14 +1232,14 @@ public class NGUIText
         if (*index + 5 <= iVar9) {
           sVar5 = String.get_Chars(text,*index + 4,0);
           if ((sVar5 == 93) && (lVar11 = String.Substring(text,*index,5)) != null) {
-            cVar4 = FUN_18171e540(lVar11,"[sub]",0);
-            if ((cVar4) || (cVar4 = FUN_18171e540(lVar11,"[SUB]",0), cVar4)) {
+            cVar4 = FUN_18171eb50(lVar11,"[sub]",0);
+            if ((cVar4) || (cVar4 = FUN_18171eb50(lVar11,"[SUB]",0), cVar4)) {
               *param_5 = 1;
               *index = *index + 5;
               return true;
             }
-            cVar4 = FUN_18171e540(lVar11,"[sup]",0);
-            if ((cVar4) || (cVar4 = FUN_18171e540(lVar11,"[SUP]",0), cVar4)) {
+            cVar4 = FUN_18171eb50(lVar11,"[sup]",0);
+            if ((cVar4) || (cVar4 = FUN_18171eb50(lVar11,"[SUP]",0), cVar4)) {
               *param_5 = 2;
               *index = *index + 5;
               return true;
@@ -1250,17 +1250,17 @@ public class NGUIText
           }
           sVar5 = String.get_Chars(text,*index + 5,0);
           if ((sVar5 == 93) && (lVar11 = String.Substring(text,*index,6)) != null) {
-            cVar4 = FUN_18171e540(lVar11,"[/sub]",0);
+            cVar4 = FUN_18171eb50(lVar11,"[/sub]",0);
             if ((cVar4) ||
-               (((cVar4 = FUN_18171e540(lVar11,"[/SUB]",0), cVar4 ||
-                 (cVar4 = FUN_18171e540(lVar11,"[/sup]",0), cVar4)) ||
-                (cVar4 = FUN_18171e540(lVar11,"[/SUP]",0), cVar4)))) {
+               (((cVar4 = FUN_18171eb50(lVar11,"[/SUB]",0), cVar4 ||
+                 (cVar4 = FUN_18171eb50(lVar11,"[/sup]",0), cVar4)) ||
+                (cVar4 = FUN_18171eb50(lVar11,"[/SUP]",0), cVar4)))) {
               *param_5 = 0;
               *index = *index + 6;
               return true;
             }
-            cVar4 = FUN_18171e540(lVar11,"[/url]",0);
-            if ((cVar4) || (cVar4 = FUN_18171e540(lVar11,"[/URL]",0), cVar4)) {
+            cVar4 = FUN_18171eb50(lVar11,"[/url]",0);
+            if ((cVar4) || (cVar4 = FUN_18171eb50(lVar11,"[/URL]",0), cVar4)) {
               *index = *index + 6;
               return true;
             }
@@ -1289,7 +1289,7 @@ public class NGUIText
               uVar13 = NGUIText.EncodeColor24(&local_88,0);
               lVar11 = String.Substring(text,*index + 1,6);
               if (lVar11 == null) {
-        LAB_180e0341c:
+        LAB_180e03a2c:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -1299,7 +1299,7 @@ public class NGUIText
               if (!cVar4) {
                 if ((param_3 != 0) && (0 < *(int *)(param_3 + 24))) {
                   lVar11 = *(int64 *)(param_3 + 16);
-                  if (lVar11 == null) goto LAB_180e0341c;
+                  if (lVar11 == null) goto LAB_180e03a2c;
                   lVar16 = (int64)*(int *)(param_3 + 24) + -1;
                   if (*(uint32 *)(lVar11 + 24) <= (uint32)lVar16) {
                     uVar13 = il2cpp_internal();
@@ -1324,7 +1324,7 @@ public class NGUIText
                     local_88 = *puVar17;
                     uStack_80 = puVar17[1];
                   }
-                  BetterList_1.Add(param_3,&local_88,DAT_181da61b8);
+                  BetterList_1.Add(param_3,&local_88,DAT_181da61d0);
                 }
                 *index = *index + 8;
                 return true;
@@ -1366,7 +1366,7 @@ public class NGUIText
               local_res8[0] = local_res8[0] | ((iVar9 << 8 | uVar8) << 8 | uVar10) << 8;
               uVar13 = Int32.ToString(local_res8,"X8",0);
               lVar11 = String.Substring(text,*index + 1,8);
-              if (lVar11 == null) goto LAB_180e0341c;
+              if (lVar11 == null) goto LAB_180e03a2c;
               uVar14 = String.ToUpper(lVar11,0);
               cVar4 = String.op_Inequality(uVar13,uVar14,0);
               if (!cVar4) {
@@ -1383,7 +1383,7 @@ public class NGUIText
                   }
                   local_88 = CONCAT44(fVar26,fVar25);
                   uStack_80 = CONCAT44(fVar28,fVar27);
-                  BetterList_1.Add(param_3,&local_88,DAT_181da61b8);
+                  BetterList_1.Add(param_3,&local_88,DAT_181da61d0);
                 }
                 *index = *index + 10;
                 return true;
@@ -1395,10 +1395,10 @@ public class NGUIText
     }
 
     // Token : 0x60003B2
-    // RVA   : 0xE02240   Offset: 0xE01640   Length: 0x26
+    // RVA   : 0xE02850   Offset: 0xE01C50   Length: 0x26
     public static bool IsHex(char ch)
     {
-        uint64 FUN_180e02240(int ch)
+        uint64 FUN_180e02850(int ch)
         {
         uint3 uVar1;
         int iVar2;
@@ -1414,10 +1414,10 @@ public class NGUIText
     }
 
     // Token : 0x60003B3
-    // RVA   : 0xE026A0   Offset: 0xE01AA0   Length: 0xD91
+    // RVA   : 0xE02CB0   Offset: 0xE020B0   Length: 0xD91
     public static bool ParseSymbol(string text, ref int index, BetterList<Color> colors, bool premultiply, ref int sub, ref bool bold, ref bool italic, ref bool underline, ref bool strike, ref bool ignoreColor)
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         uint64
         NGUIText.ParseSymbol
                 (int64 text,int *index,int64 colors,char premultiply,uint32 *sub,
@@ -1457,7 +1457,7 @@ public class NGUIText
         uint64 local_88;
         uint64 uStack_80;
         uint8 local_78 [64];
-        if (text == null) goto LAB_180e0341c;
+        if (text == null) goto LAB_180e03a2c;
         iVar9 = *(int *)(text + 16);
         if (iVar9 < *index + 3) {
           return false;
@@ -1471,9 +1471,9 @@ public class NGUIText
           sVar5 = String.get_Chars(text,*index + 1,0);
           if (sVar5 == 45) {
             if ((colors != null) && (1 < *(int *)(colors + 24))) {
-              BetterList_1.RemoveAt(colors,*(int *)(colors + 24) + -1,DAT_181da62b8);
+              BetterList_1.RemoveAt(colors,*(int *)(colors + 24) + -1,DAT_181da62d0);
             }
-            goto LAB_180e02bc8;
+            goto LAB_180e031d8;
           }
           lVar11 = String.Substring(text,*index,3);
           if (lVar11 != null) {
@@ -1482,60 +1482,60 @@ public class NGUIText
             if (uVar8 < 0x7affcd23) {
               if (uVar8 < 0x76d678d0) {
                 if (uVar8 == 0x76bf1f80) {
-                  cVar4 = FUN_18171e540(lVar11,"[u]",0);
+                  cVar4 = FUN_18171eb50(lVar11,"[u]",0);
                   puVar3 = underline;
                 }
                 else {
-                  if (uVar8 != 0x76d678cf) goto LAB_180e02952;
-                  cVar4 = FUN_18171e540(lVar11,"[b]",0);
+                  if (uVar8 != 0x76d678cf) goto LAB_180e02f62;
+                  cVar4 = FUN_18171eb50(lVar11,"[b]",0);
                   puVar3 = bold;
                 }
               }
               else if (uVar8 == 0x77195ebc) {
-                cVar4 = FUN_18171e540(lVar11,"[I]",0);
+                cVar4 = FUN_18171eb50(lVar11,"[I]",0);
                 puVar3 = italic;
               }
               else if (uVar8 == 0x7ad8bdb2) {
-                cVar4 = FUN_18171e540(lVar11,"[c]",0);
+                cVar4 = FUN_18171eb50(lVar11,"[c]",0);
               }
               else {
-                if (uVar8 != 0x7affcd22) goto LAB_180e02952;
-                cVar4 = FUN_18171e540(lVar11,"[S]",0);
+                if (uVar8 != 0x7affcd22) goto LAB_180e02f62;
+                cVar4 = FUN_18171eb50(lVar11,"[S]",0);
                 puVar3 = strike;
               }
             }
             else if (uVar8 < 0xb70f3621) {
               if (uVar8 == 0xb6ca119c) {
-                cVar4 = FUN_18171e540(lVar11,"[i]",0);
+                cVar4 = FUN_18171eb50(lVar11,"[i]",0);
                 puVar3 = italic;
               }
               else {
-                if (uVar8 != 0xb70f3620) goto LAB_180e02952;
-                cVar4 = FUN_18171e540(lVar11,"[U]",0);
+                if (uVar8 != 0xb70f3620) goto LAB_180e02f62;
+                cVar4 = FUN_18171eb50(lVar11,"[U]",0);
                 puVar3 = underline;
               }
             }
             else if (uVar8 == 0xb724fc6f) {
-              cVar4 = FUN_18171e540(lVar11,"[B]",0);
+              cVar4 = FUN_18171eb50(lVar11,"[B]",0);
               puVar3 = bold;
             }
             else if (uVar8 == 0xbab08002) {
-              cVar4 = FUN_18171e540(lVar11,"[s]",0);
+              cVar4 = FUN_18171eb50(lVar11,"[s]",0);
               puVar3 = strike;
             }
             else {
-              if (uVar8 != 0xbb274152) goto LAB_180e02952;
-              cVar4 = FUN_18171e540(lVar11,"[C]",0);
+              if (uVar8 != 0xbb274152) goto LAB_180e02f62;
+              cVar4 = FUN_18171eb50(lVar11,"[C]",0);
             }
             if (cVar4) {
               *puVar3 = 1;
-        LAB_180e02bc8:
+        LAB_180e031d8:
               *index = *index + 3;
               return true;
             }
           }
         }
-        LAB_180e02952:
+        LAB_180e02f62:
         if (iVar9 < *index + 4) {
           return false;
         }
@@ -1547,8 +1547,8 @@ public class NGUIText
             if (uVar8 < 0x258a062a) {
               if (uVar8 < 0x21676d9c) {
                 if (uVar8 == 0x213ecb2b) {
-                  cVar4 = FUN_18171e540(lVar11,"[/S]",0);
-        joined_r0x000180e02e3f:
+                  cVar4 = FUN_18171eb50(lVar11,"[/S]",0);
+        joined_r0x000180e0344f:
                   if (cVar4) {
                     *strike = 0;
                     *index = *index + 4;
@@ -1556,29 +1556,29 @@ public class NGUIText
                   }
                 }
                 else if (uVar8 == 0x21676d9b) {
-                  cVar4 = FUN_18171e540(lVar11,"[/c]",0);
-                  goto joined_r0x000180e02e74;
+                  cVar4 = FUN_18171eb50(lVar11,"[/c]",0);
+                  goto joined_r0x000180e03484;
                 }
               }
               else {
                 if (uVar8 == 0x2558695d) {
-                  cVar4 = FUN_18171e540(lVar11,"[/i]",0);
-                  goto joined_r0x000180e02da8;
+                  cVar4 = FUN_18171eb50(lVar11,"[/i]",0);
+                  goto joined_r0x000180e033b8;
                 }
                 if (uVar8 == 0x2569b27e) {
-                  cVar4 = FUN_18171e540(lVar11,"[/b]",0);
-                  goto joined_r0x000180e02dd9;
+                  cVar4 = FUN_18171eb50(lVar11,"[/b]",0);
+                  goto joined_r0x000180e033e9;
                 }
                 if (uVar8 == 0x258a0629) {
-                  cVar4 = FUN_18171e540(lVar11,"[/u]",0);
-                  goto joined_r0x000180e02e0e;
+                  cVar4 = FUN_18171eb50(lVar11,"[/u]",0);
+                  goto joined_r0x000180e0341e;
                 }
               }
             }
             else if (uVar8 < 0x618ee1cc) {
               if (uVar8 == 0x6118207b) {
-                cVar4 = FUN_18171e540(lVar11,"[/C]",0);
-        joined_r0x000180e02e74:
+                cVar4 = FUN_18171eb50(lVar11,"[/C]",0);
+        joined_r0x000180e03484:
                 if (cVar4) {
                   *ignoreColor = 0;
                   *index = *index + 4;
@@ -1586,13 +1586,13 @@ public class NGUIText
                 }
               }
               else if (uVar8 == 0x618ee1cb) {
-                cVar4 = FUN_18171e540(lVar11,"[/s]",0);
-                goto joined_r0x000180e02e3f;
+                cVar4 = FUN_18171eb50(lVar11,"[/s]",0);
+                goto joined_r0x000180e0344f;
               }
             }
             else if (uVar8 == 0x65091c3d) {
-              cVar4 = FUN_18171e540(lVar11,"[/I]",0);
-        joined_r0x000180e02da8:
+              cVar4 = FUN_18171eb50(lVar11,"[/I]",0);
+        joined_r0x000180e033b8:
               if (cVar4) {
                 *italic = 0;
                 *index = *index + 4;
@@ -1600,8 +1600,8 @@ public class NGUIText
               }
             }
             else if (uVar8 == 0x651a655e) {
-              cVar4 = FUN_18171e540(lVar11,"[/B]",0);
-        joined_r0x000180e02dd9:
+              cVar4 = FUN_18171eb50(lVar11,"[/B]",0);
+        joined_r0x000180e033e9:
               if (cVar4) {
                 *bold = 0;
                 *index = *index + 4;
@@ -1609,8 +1609,8 @@ public class NGUIText
               }
             }
             else if (uVar8 == 0x653ab909) {
-              cVar4 = FUN_18171e540(lVar11,"[/U]",0);
-        joined_r0x000180e02e0e:
+              cVar4 = FUN_18171eb50(lVar11,"[/U]",0);
+        joined_r0x000180e0341e:
               if (cVar4) {
                 *underline = 0;
                 *index = *index + 4;
@@ -1622,14 +1622,14 @@ public class NGUIText
           uVar7 = String.get_Chars(text,*index + 2,0);
           if ((((uint16)(uVar6 - 48) < 10) || ((uint16)(uVar6 - 97) < 6)) ||
              ((64 < uVar6 && (uVar6 < 71)))) {
-            lVar11 = DAT_181d8bc90;
+            lVar11 = DAT_181d8bca8;
             if ((((uint16)(uVar7 - 48) < 10) || ((uint16)(uVar7 - 97) < 6)) ||
                ((64 < uVar7 && (uVar7 < 71)))) {
               iVar9 = NGUIMath.HexToDecimal(uVar6,0);
               uVar8 = NGUIMath.HexToDecimal(uVar7,0);
               if (((*(byte *)(lVar11 + 0x133) & 4) != 0) && (*(int *)(lVar11 + 224) == 0)) {
                 il2cpp_runtime_class_init(lVar11);
-                lVar11 = DAT_181d8bc90;
+                lVar11 = DAT_181d8bca8;
               }
               *(float *)(*(int64 *)(lVar11 + 184) + 184) = (float)(int)(iVar9 << 4 | uVar8) / 255.0;
               *index = *index + 4;
@@ -1640,14 +1640,14 @@ public class NGUIText
         if (*index + 5 <= iVar9) {
           sVar5 = String.get_Chars(text,*index + 4,0);
           if ((sVar5 == 93) && (lVar11 = String.Substring(text,*index,5)) != null) {
-            cVar4 = FUN_18171e540(lVar11,"[sub]",0);
-            if ((cVar4) || (cVar4 = FUN_18171e540(lVar11,"[SUB]",0), cVar4)) {
+            cVar4 = FUN_18171eb50(lVar11,"[sub]",0);
+            if ((cVar4) || (cVar4 = FUN_18171eb50(lVar11,"[SUB]",0), cVar4)) {
               *sub = 1;
               *index = *index + 5;
               return true;
             }
-            cVar4 = FUN_18171e540(lVar11,"[sup]",0);
-            if ((cVar4) || (cVar4 = FUN_18171e540(lVar11,"[SUP]",0), cVar4)) {
+            cVar4 = FUN_18171eb50(lVar11,"[sup]",0);
+            if ((cVar4) || (cVar4 = FUN_18171eb50(lVar11,"[SUP]",0), cVar4)) {
               *sub = 2;
               *index = *index + 5;
               return true;
@@ -1658,17 +1658,17 @@ public class NGUIText
           }
           sVar5 = String.get_Chars(text,*index + 5,0);
           if ((sVar5 == 93) && (lVar11 = String.Substring(text,*index,6)) != null) {
-            cVar4 = FUN_18171e540(lVar11,"[/sub]",0);
+            cVar4 = FUN_18171eb50(lVar11,"[/sub]",0);
             if ((cVar4) ||
-               (((cVar4 = FUN_18171e540(lVar11,"[/SUB]",0), cVar4 ||
-                 (cVar4 = FUN_18171e540(lVar11,"[/sup]",0), cVar4)) ||
-                (cVar4 = FUN_18171e540(lVar11,"[/SUP]",0), cVar4)))) {
+               (((cVar4 = FUN_18171eb50(lVar11,"[/SUB]",0), cVar4 ||
+                 (cVar4 = FUN_18171eb50(lVar11,"[/sup]",0), cVar4)) ||
+                (cVar4 = FUN_18171eb50(lVar11,"[/SUP]",0), cVar4)))) {
               *sub = 0;
               *index = *index + 6;
               return true;
             }
-            cVar4 = FUN_18171e540(lVar11,"[/url]",0);
-            if ((cVar4) || (cVar4 = FUN_18171e540(lVar11,"[/URL]",0), cVar4)) {
+            cVar4 = FUN_18171eb50(lVar11,"[/url]",0);
+            if ((cVar4) || (cVar4 = FUN_18171eb50(lVar11,"[/URL]",0), cVar4)) {
               *index = *index + 6;
               return true;
             }
@@ -1697,7 +1697,7 @@ public class NGUIText
               uVar13 = NGUIText.EncodeColor24(&local_88,0);
               lVar11 = String.Substring(text,*index + 1,6);
               if (lVar11 == null) {
-        LAB_180e0341c:
+        LAB_180e03a2c:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -1707,7 +1707,7 @@ public class NGUIText
               if (!cVar4) {
                 if ((colors != null) && (0 < *(int *)(colors + 24))) {
                   lVar11 = *(int64 *)(colors + 16);
-                  if (lVar11 == null) goto LAB_180e0341c;
+                  if (lVar11 == null) goto LAB_180e03a2c;
                   lVar16 = (int64)*(int *)(colors + 24) + -1;
                   if (*(uint32 *)(lVar11 + 24) <= (uint32)lVar16) {
                     uVar13 = il2cpp_internal();
@@ -1732,7 +1732,7 @@ public class NGUIText
                     local_88 = *puVar17;
                     uStack_80 = puVar17[1];
                   }
-                  BetterList_1.Add(colors,&local_88,DAT_181da61b8);
+                  BetterList_1.Add(colors,&local_88,DAT_181da61d0);
                 }
                 *index = *index + 8;
                 return true;
@@ -1774,7 +1774,7 @@ public class NGUIText
               local_res8[0] = local_res8[0] | ((iVar9 << 8 | uVar8) << 8 | uVar10) << 8;
               uVar13 = Int32.ToString(local_res8,"X8",0);
               lVar11 = String.Substring(text,*index + 1,8);
-              if (lVar11 == null) goto LAB_180e0341c;
+              if (lVar11 == null) goto LAB_180e03a2c;
               uVar14 = String.ToUpper(lVar11,0);
               cVar4 = String.op_Inequality(uVar13,uVar14,0);
               if (!cVar4) {
@@ -1791,7 +1791,7 @@ public class NGUIText
                   }
                   local_88 = CONCAT44(fVar26,fVar25);
                   uStack_80 = CONCAT44(fVar28,fVar27);
-                  BetterList_1.Add(colors,&local_88,DAT_181da61b8);
+                  BetterList_1.Add(colors,&local_88,DAT_181da61d0);
                 }
                 *index = *index + 10;
                 return true;
@@ -1803,7 +1803,7 @@ public class NGUIText
     }
 
     // Token : 0x60003B4
-    // RVA   : 0xE08340   Offset: 0xE07740   Length: 0x160
+    // RVA   : 0xE08950   Offset: 0xE07D50   Length: 0x160
     public static string StripSymbols(string text)
     {
         bool cVar1;
@@ -1852,7 +1852,7 @@ public class NGUIText
     }
 
     // Token : 0x60003B5
-    // RVA   : 0xDFF010   Offset: 0xDFE410   Length: 0x983
+    // RVA   : 0xDFF620   Offset: 0xDFEA20   Length: 0x983
     public static void Align(List<Vector3> verts, int indexOffset, float printedWidth, int elements)
     {
         ulong uVar1;
@@ -1905,12 +1905,12 @@ public class NGUIText
           if (0.0 <= fVar15) {
             bVar2 = Mathf.RoundToInt((float)NGUIText.rectWidth -
                                       printedWidth,0);
-            bVar3 = Mathf.RoundToInt(DAT_181d8bc90,0);
+            bVar3 = Mathf.RoundToInt(DAT_181d8bca8,0);
             if ((((bVar2 & 1) != 0) && ((bVar3 & 1) == 0)) || ((bVar3 & 1 & (bVar2 & 1 ^ 1)) != 0)) {
               fVar15 = fVar15 + NGUIText.fontScale * 0.5;
             }
             if (verts == null) {
-        LAB_180dff98e:
+        LAB_180dfff9e:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -1924,7 +1924,7 @@ public class NGUIText
                 uVar16 = *(uint64 *)(*(int64 *)(verts + 16) + 32 + lVar6);
                 local_1d0 = *(uint32 *)(*(int64 *)(verts + 16) + 40 + lVar6);
                 local_1d8 = CONCAT44((int)((uint64)uVar16 >> 32),(float)uVar16 + fVar15);
-                FUN_18181dd90(verts,uVar9 & 0xffffffff,&local_1d8,DAT_181dabe90);
+                FUN_18181e3a0(verts,uVar9 & 0xffffffff,&local_1d8,DAT_181dabea8);
                 uVar9 = (uint64)((uint32)uVar9 + 1);
                 lVar6 = lVar6 + 12;
                 lVar5 = lVar5 + -1;
@@ -1935,7 +1935,7 @@ public class NGUIText
         else if (iVar4 == 3) {
           printedWidth = (float)NGUIText.rectWidth - printedWidth;
           if (0.0 <= printedWidth) {
-            if (verts == null) goto LAB_180dff98e;
+            if (verts == null) goto LAB_180dfff9e;
             if (indexOffset < *(int *)(verts + 24)) {
               lVar6 = uVar9 * 12;
               lVar5 = (int64)*(int *)(verts + 24) - uVar9;
@@ -1946,7 +1946,7 @@ public class NGUIText
                 uVar1 = *(uint64 *)(*(int64 *)(verts + 16) + 32 + lVar6);
                 local_1d0 = *(uint32 *)(*(int64 *)(verts + 16) + 40 + lVar6);
                 local_1d8 = CONCAT44((int)((uint64)uVar1 >> 32),(float)uVar1 + printedWidth);
-                FUN_18181dd90(verts,uVar9 & 0xffffffff,&local_1d8,DAT_181dabe90,uVar16,uVar17);
+                FUN_18181e3a0(verts,uVar9 & 0xffffffff,&local_1d8,DAT_181dabea8,uVar16,uVar17);
                 uVar9 = (uint64)((uint32)uVar9 + 1);
                 lVar6 = lVar6 + 12;
                 lVar5 = lVar5 + -1;
@@ -1957,16 +1957,16 @@ public class NGUIText
         else if (iVar4 == 4) {
           if ((float)NGUIText.rectWidth * 0.65 <= printedWidth) {
             if (1.0 <= ((float)NGUIText.rectWidth - printedWidth) * 0.5) {
-              if (verts == null) goto LAB_180dff98e;
+              if (verts == null) goto LAB_180dfff9e;
               local_1e8 = *(int *)(verts + 24);
               iVar4 = (local_1e8 - indexOffset) / elements;
               if (0 < iVar4) {
                 fVar15 = 1.0 / (float)(iVar4 + -1);
                 local_1c4 = fVar15;
-                if (((*(byte *)(DAT_181d8bc90 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8bc90 + 224) == 0)
+                if (((*(byte *)(DAT_181d8bca8 + 0x133) & 4) != 0) && (*(int *)(DAT_181d8bca8 + 224) == 0)
                    ) {
                   il2cpp_runtime_class_init
-                            (DAT_181d8bc90,
+                            (DAT_181d8bca8,
                              (int64)(local_1e8 - indexOffset) % (int64)elements & 0xffffffff);
                   local_1e8 = *(int *)(verts + 24);
                 }
@@ -2048,7 +2048,7 @@ public class NGUIText
                                              32),fVar12);
                       local_128 = uVar16;
                       local_120 = local_130;
-                      FUN_18181dd90(verts,uVar7,&local_128,DAT_181dabe90,uVar16);
+                      FUN_18181e3a0(verts,uVar7,&local_128,DAT_181dabea8,uVar16);
                       uVar17 = (uint32)uVar16;
                       if (*(uint32 *)(verts + 24) <= uVar7 + 1) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2059,7 +2059,7 @@ public class NGUIText
                                                   (*(int64 *)(verts + 16) + 44 + lVar5 * 12) >>
                                                 32),uVar17);
                       local_100 = local_110;
-                      FUN_18181dd90(verts,uVar7 + 1,&local_108,DAT_181dabe90,local_108);
+                      FUN_18181e3a0(verts,uVar7 + 1,&local_108,DAT_181dabea8,local_108);
                       if (*(uint32 *)(verts + 24) <= uVar7 + 2) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
@@ -2071,7 +2071,7 @@ public class NGUIText
                                              32),fVar15);
                       local_e8 = uVar16;
                       local_e0 = local_f0;
-                      FUN_18181dd90(verts,uVar7 + 2,&local_e8,DAT_181dabe90,uVar16);
+                      FUN_18181e3a0(verts,uVar7 + 2,&local_e8,DAT_181dabea8,uVar16);
                       uVar17 = (uint32)uVar16;
                       if (*(uint32 *)(verts + 24) <= uVar8) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2085,9 +2085,9 @@ public class NGUIText
                                              32),uVar17);
                       local_1d8 = uVar16;
                       local_d0 = local_1d0;
-        LAB_180dff6c1:
+        LAB_180dffcd1:
                       uVar7 = uVar8 + 1;
-                      FUN_18181dd90(verts,uVar8,puVar10,DAT_181dabe90,uVar16);
+                      FUN_18181e3a0(verts,uVar8,puVar10,DAT_181dabea8,uVar16);
                     }
                     else {
                       if (elements == 2) {
@@ -2101,7 +2101,7 @@ public class NGUIText
                                                     (*(int64 *)(verts + 16) + 32 + lVar5 * 12)
                                                   >> 32),fVar12);
                         local_160 = local_170;
-                        FUN_18181dd90(verts,uVar7,&local_168,DAT_181dabe90);
+                        FUN_18181e3a0(verts,uVar7,&local_168,DAT_181dabea8);
                         if (*(uint32 *)(verts + 24) <= uVar8) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
@@ -2113,7 +2113,7 @@ public class NGUIText
                                                     (*(int64 *)(verts + 16) + 44 + lVar5 * 12)
                                                   >> 32),fVar15);
                         local_140 = local_150;
-                        goto LAB_180dff6c1;
+                        goto LAB_180dffcd1;
                       }
                       if (elements == 1) {
                         if (*(uint32 *)(verts + 24) <= uVar7) {
@@ -2128,7 +2128,7 @@ public class NGUIText
                                                   >> 32),fVar12);
                         uVar8 = uVar7;
                         local_180 = local_18c;
-                        goto LAB_180dff6c1;
+                        goto LAB_180dffcd1;
                       }
                     }
                     iVar4 = iVar4 + 1;
@@ -2142,7 +2142,7 @@ public class NGUIText
     }
 
     // Token : 0x60003B6
-    // RVA   : 0xE00FA0   Offset: 0xE003A0   Length: 0x182
+    // RVA   : 0xE015B0   Offset: 0xE009B0   Length: 0x182
     public static int GetExactCharacterIndex(List<Vector3> verts, List<int> indices, Vector2 pos)
     {
         int iVar2;
@@ -2155,7 +2155,7 @@ public class NGUIText
         float fStack_74;
         iVar6 = 0;
         if (indices == null) {
-        LAB_180e0111d:
+        LAB_180e0172d:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -2165,7 +2165,7 @@ public class NGUIText
           local_78 = (float)pos;
           do {
             uVar3 = iVar6 * 2;
-            if (verts == null) goto LAB_180e0111d;
+            if (verts == null) goto LAB_180e0172d;
             if (*(uint32 *)(verts + 24) <= uVar3) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -2188,7 +2188,7 @@ public class NGUIText
                   }
                   pfVar1 = (float *)(lVar5 + 48 + lVar7 * 12);
                   if (fStack_74 < *pfVar1 || fStack_74 == *pfVar1) {
-                    uVar4 = FUN_1800d6760(indices,iVar6,DAT_181d8fa18);
+                    uVar4 = FUN_1800d6760(indices,iVar6,DAT_181d8fa30);
                     return uVar4;
                   }
                 }
@@ -2201,7 +2201,7 @@ public class NGUIText
     }
 
     // Token : 0x60003B7
-    // RVA   : 0xE00D80   Offset: 0xE00180   Length: 0x19A
+    // RVA   : 0xE01390   Offset: 0xE00790   Length: 0x19A
     public static int GetApproximateCharacterIndex(List<Vector3> verts, List<int> indices, Vector2 pos)
     {
         uint32
@@ -2264,10 +2264,10 @@ public class NGUIText
     }
 
     // Token : 0x60003B8
-    // RVA   : 0xE02270   Offset: 0xE01670   Length: 0x1D
+    // RVA   : 0xE02880   Offset: 0xE01C80   Length: 0x1D
     public static bool IsSpace(int ch)
     {
-        bool FUN_180e02270(int ch)
+        bool FUN_180e02880(int ch)
         {
         if (ch != 32) {
           if (1 < ch - 0x200aU) {
@@ -2278,14 +2278,14 @@ public class NGUIText
     }
 
     // Token : 0x60003B9
-    // RVA   : 0xE00C90   Offset: 0xE00090   Length: 0xE5
+    // RVA   : 0xE012A0   Offset: 0xE006A0   Length: 0xE5
     public static void EndLine(ref StringBuilder s)
     {
         ushort uVar1;
         int iVar2;
         uint uVar3;
         if (*s == null) throw; // [null/range check failed]
-        iVar2 = FUN_181259800(*s,0);
+        iVar2 = FUN_181259e10(*s,0);
         iVar2 = iVar2 + -1;
         if (0 < iVar2) {
           if (*s == null) throw; // [null/range check failed]
@@ -2306,14 +2306,14 @@ public class NGUIText
     }
 
     // Token : 0x60003BA
-    // RVA   : 0xE08270   Offset: 0xE07670   Length: 0xC3
+    // RVA   : 0xE08880   Offset: 0xE07C80   Length: 0xC3
     private static void ReplaceSpaceWithNewline(ref StringBuilder s)
     {
         ushort uVar1;
         int iVar2;
         uint uVar3;
         if (*s != null) {
-          iVar2 = FUN_181259800(*s,0);
+          iVar2 = FUN_181259e10(*s,0);
           iVar2 = iVar2 + -1;
           if (0 < iVar2) {
             if (*s == null) throw; // [null/range check failed]
@@ -2329,7 +2329,7 @@ public class NGUIText
     }
 
     // Token : 0x60003BB
-    // RVA   : 0xDFFFA0   Offset: 0xDFF3A0   Length: 0x7B3
+    // RVA   : 0xE005B0   Offset: 0xDFF9B0   Length: 0x7B3
     public static Vector2 CalculatePrintedSize(string text)
     {
         int iVar1;
@@ -2361,7 +2361,7 @@ public class NGUIText
         local_res8._4_4_ = (float)(uVar5 >> 32);
         fVar14 = local_res8._4_4_;
         local_res8 = uVar5;
-        cVar2 = FUN_180d755b0(text,0);
+        cVar2 = FUN_180d75bc0(text,0);
         if (!cVar2) {
           NGUIText.Prepare(text,0);
           uVar9 = 0;
@@ -2392,7 +2392,7 @@ public class NGUIText
                 }
                 fVar12 = 0.0;
                 fVar15 = fVar15 + NGUIText.finalLineHeight;
-        LAB_180e00616:
+        LAB_180e00c26:
                 uVar10 = 0;
               }
               else {
@@ -2409,7 +2409,7 @@ public class NGUIText
                     iVar7 = local_e4;
                     if (cVar2) {
                       iVar7 = local_e4 + -1;
-                      goto LAB_180e00619;
+                      goto LAB_180e00c29;
                     }
                   }
                   if (!NGUIText.useSymbols) {
@@ -2441,7 +2441,7 @@ public class NGUIText
                     fVar12 = fVar12 + fVar13 + NGUIText.finalSpacingX;
                     iVar4 = BMSymbol.get_length(lVar6,0);
                     iVar7 = iVar7 + -1 + iVar4;
-                    goto LAB_180e00616;
+                    goto LAB_180e00c26;
                   }
                   lVar6 = NGUIText.GetGlyph(uVar3,uVar9);
                   if (lVar6 != null) {
@@ -2464,7 +2464,7 @@ public class NGUIText
                     fVar13 = fVar13 + NGUIText.finalSpacingX + fVar12;
                     if (fVar16 < fVar13) {
                       uVar10 = uVar3;
-                      if (fVar12 == 0.0) goto LAB_180e00619;
+                      if (fVar12 == 0.0) goto LAB_180e00c29;
                       fVar15 = fVar15 + NGUIText.finalLineHeight;
                     }
                     else if (fVar14 < fVar13) {
@@ -2478,7 +2478,7 @@ public class NGUIText
                   }
                 }
               }
-        LAB_180e00619:
+        LAB_180e00c29:
               local_e4 = iVar7 + 1;
               uVar9 = uVar10;
             } while (local_e4 < iVar1);
@@ -2486,11 +2486,11 @@ public class NGUIText
               fVar14 = fVar12 - NGUIText.finalSpacingX;
             }
           }
-          lVar6 = DAT_181d8bc90;
+          lVar6 = DAT_181d8bca8;
           fVar12 = ceilf(fVar14);
           if (((*(byte *)(lVar6 + 0x133) & 4) != 0) && (*(int *)(lVar6 + 224) == 0)) {
             il2cpp_runtime_class_init(lVar6);
-            lVar6 = DAT_181d8bc90;
+            lVar6 = DAT_181d8bca8;
           }
           fVar14 = ceilf(fVar15 + *(float *)(*(int64 *)(lVar6 + 184) + 144));
         }
@@ -2498,7 +2498,7 @@ public class NGUIText
     }
 
     // Token : 0x60003BC
-    // RVA   : 0xDFF9A0   Offset: 0xDFEDA0   Length: 0x5F9
+    // RVA   : 0xDFFFB0   Offset: 0xDFF3B0   Length: 0x5F9
     public static int CalculateOffsetToFit(string text)
     {
         var plVar8 = *(int64*)(lVar8 + 184);
@@ -2524,7 +2524,7 @@ public class NGUIText
         byte[] local_77 = new byte[3];
         uint local_74;
         int[] local_70 = new int[14];
-        cVar4 = FUN_180d755b0(text,0);
+        cVar4 = FUN_180d75bc0(text,0);
         if (!cVar4) {
           if (0 < NGUIText.regionWidth) {
             NGUIText.Prepare(text,0);
@@ -2553,36 +2553,36 @@ public class NGUIText
                     uVar6 = NGUIText.GetSymbol(text,uVar13,iVar1,0);
                   }
                   if (!NGUIText.encoding) {
-        LAB_180dffc8d:
+        LAB_180e0029d:
                     iVar12 = (int)uVar13;
                     if (uVar6 == 0) {
                       uVar5 = String.get_Chars(text,uVar13,0);
                       fVar15 = (float)NGUIText.GetGlyphWidth(uVar5,uVar10,fVar15);
                       if (fVar15 != 0.0) {
                         if (NGUIText.mSizes == null)
-                        goto LAB_180dfff94;
-                        FUN_181583bd0();
+                        goto LAB_180e005a4;
+                        FUN_1815841e0();
                       }
                       uVar10 = (uint64)uVar5;
                     }
                     else {
                       lVar8 = NGUIText.mSizes;
-                      if (lVar8 == null) goto LAB_180dfff94;
-                      FUN_181583bd0(lVar8,(float)*(int *)(uVar6 + 64) * fVar15 +
+                      if (lVar8 == null) goto LAB_180e005a4;
+                      FUN_1815841e0(lVar8,(float)*(int *)(uVar6 + 64) * fVar15 +
                                           NGUIText.finalSpacingX);
-                      if (*(int64 *)(uVar6 + 16) == 0) goto LAB_180dfff94;
+                      if (*(int64 *)(uVar6 + 16) == 0) goto LAB_180e005a4;
                       iVar11 = *(int *)(*(int64 *)(uVar6 + 16) + 16) + -1;
                       uVar10 = uVar14;
                       if (0 < iVar11) {
                         do {
                           if (NGUIText.mSizes == null)
-                          goto LAB_180dfff94;
-                          FUN_181583bd0();
+                          goto LAB_180e005a4;
+                          FUN_1815841e0();
                           uVar9 = (int)uVar10 + 1;
                           uVar10 = (uint64)uVar9;
                         } while ((int)uVar9 < iVar11);
                       }
-                      if (*(int64 *)(uVar6 + 16) == 0) goto LAB_180dfff94;
+                      if (*(int64 *)(uVar6 + 16) == 0) goto LAB_180e005a4;
                       iVar12 = iVar12 + -1 + *(int *)(*(int64 *)(uVar6 + 16) + 16);
                       uVar10 = uVar14;
                     }
@@ -2594,7 +2594,7 @@ public class NGUIText
                                        NGUIText.premultiply,
                                        local_70,local_77,&local_78,local_res20,local_res18,local_res8,0);
                     uVar13 = (uint64)local_74;
-                    if (!cVar4) goto LAB_180dffc8d;
+                    if (!cVar4) goto LAB_180e0029d;
                     iVar12 = local_74 - 1;
                   }
                   local_74 = iVar12 + 1;
@@ -2605,18 +2605,18 @@ public class NGUIText
               fVar15 = (float)NGUIText.regionWidth;
               if (lVar8 != null) {
                 uVar9 = *(uint32 *)(lVar8 + 24);
-                lVar8 = DAT_181d8bc90;
+                lVar8 = DAT_181d8bca8;
                 for (; (0 < (int)uVar9 && (uVar10 = (uint64)uVar9, 0.0 < fVar15));
                     fVar15 = fVar15 - *(float *)(lVar2 + 28 + uVar10 * 4)) {
                   if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (*(int *)(lVar8 + 224) == 0)) {
                     il2cpp_runtime_class_init();
-                    lVar8 = DAT_181d8bc90;
+                    lVar8 = DAT_181d8bca8;
                   }
                   lVar2 = *(int64 *)(plVar8 + 240);
-                  if (lVar2 == null) goto LAB_180dfff94;
+                  if (lVar2 == null) goto LAB_180e005a4;
                   lVar2 = *(int64 *)(lVar2 + 16);
                   uVar9 = uVar9 - 1;
-                  if (lVar2 == null) goto LAB_180dfff94;
+                  if (lVar2 == null) goto LAB_180e005a4;
                   if (*(uint32 *)(lVar2 + 24) <= uVar9) {
                     uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2625,11 +2625,11 @@ public class NGUIText
                 }
                 if (((*(byte *)(lVar8 + 0x133) & 4) != 0) && (*(int *)(lVar8 + 224) == 0)) {
                   il2cpp_runtime_class_init();
-                  lVar8 = DAT_181d8bc90;
+                  lVar8 = DAT_181d8bca8;
                 }
                 lVar8 = *(int64 *)(plVar8 + 240);
                 if (lVar8 != null) {
-                  BetterList_1.Clear(lVar8,DAT_181da6438);
+                  BetterList_1.Clear(lVar8,DAT_181da6450);
                   uVar3 = uVar9 + 1;
                   if (0.0 <= fVar15) {
                     uVar3 = uVar9;
@@ -2638,7 +2638,7 @@ public class NGUIText
                 }
               }
             }
-        LAB_180dfff94:
+        LAB_180e005a4:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -2647,7 +2647,7 @@ public class NGUIText
     }
 
     // Token : 0x60003BD
-    // RVA   : 0xE00F20   Offset: 0xE00320   Length: 0x7B
+    // RVA   : 0xE01530   Offset: 0xE00930   Length: 0x7B
     public static string GetEndOfLineThatFits(string text)
     {
         int iVar1;
@@ -2661,11 +2661,11 @@ public class NGUIText
     }
 
     // Token : 0x60003BE
-    // RVA   : 0xE089C0   Offset: 0xE07DC0   Length: 0x83
+    // RVA   : 0xE08FD0   Offset: 0xE083D0   Length: 0x83
     public static bool WrapText(string text, ref string finalText, bool wrapLineColors)
     {
         var plVar14 = *(int64*)(lVar14 + 184);
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         int iVar2;
         long lVar3;
         long lVar4;
@@ -2714,12 +2714,12 @@ public class NGUIText
               if (NGUIText.maxLines < 1) {
               }
               else {
-                Mathf.Min(DAT_181d8bc90,
+                Mathf.Min(DAT_181d8bca8,
                            (float)NGUIText.maxLines *
                            NGUIText.finalLineHeight);
               }
               if (((0 < NGUIText.maxLines) &&
-                  ((*(byte *)(DAT_181d8bc90 + 0x133) & 4) != 0)) && (*(int *)(DAT_181d8bc90 + 224) == 0))
+                  ((*(byte *)(DAT_181d8bca8 + 0x133) & 4) != 0)) && (*(int *)(DAT_181d8bca8 + 224) == 0))
               {
                 il2cpp_runtime_class_init();
               }
@@ -2733,7 +2733,7 @@ public class NGUIText
                 il2cpp_internal(finalText,"");
                 return false;
               }
-              cVar10 = FUN_180d755b0(text,0);
+              cVar10 = FUN_180d75bc0(text,0);
               if (cVar10) {
                 text = " ";
               }
@@ -2746,7 +2746,7 @@ public class NGUIText
                 }
                 else {
                   lVar14 = NGUIText.mSB;
-                  if (lVar14 == null) goto LAB_180e0a931;
+                  if (lVar14 == null) goto LAB_180e0af41;
                   StringBuilder.set_Length(lVar14,0);
                 }
                 iVar20 = 0;
@@ -2782,22 +2782,22 @@ public class NGUIText
                 lVar14 = NGUIText.mColors;
                 if (lVar14 != null) {
                   local_c8 = auVar26;
-                  BetterList_1.Add(lVar14,local_c8,DAT_181da61b8);
+                  BetterList_1.Add(lVar14,local_c8,DAT_181da61d0);
                   local_ec = 0;
                   if (NGUIText.useSymbols) {
                     local_ec = param_4 & 255;
                   }
                   if ((char)local_ec) {
                     lVar14 = NGUIText.mSB;
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     StringBuilder.Append(lVar14,"[",0);
                     lVar14 = NGUIText.mSB;
                     local_c8 = auVar26;
                     uVar13 = NGUIText.EncodeColor24(local_c8,0);
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     StringBuilder.Append(lVar14,uVar13,0);
                     lVar14 = NGUIText.mSB;
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     StringBuilder.Append(lVar14,"]",0);
                   }
                   bVar7 = false;
@@ -2813,43 +2813,43 @@ public class NGUIText
                         bVar22 = uVar16 == 0x2009;
                       }
                       if (uVar11 < 0x3000) {
-                        if (uVar11 != 10) goto LAB_180e0918e;
+                        if (uVar11 != 10) goto LAB_180e0979e;
                         if (local_114 == local_104) break;
                         if (iVar20 < local_110) {
                           lVar14 = NGUIText.mSB;
                           uVar13 = String.Substring(text,iVar20,(local_110 - iVar20) + 1,0);
-                          if (lVar14 == null) goto LAB_180e0a931;
+                          if (lVar14 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar14,uVar13);
                         }
                         else {
                           lVar14 = NGUIText.mSB;
-                          if (lVar14 == null) goto LAB_180e0a931;
+                          if (lVar14 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar14,10);
                         }
                         if ((char)local_ec) {
                           iVar20 = 0;
                           while( true ) {
                             lVar14 = NGUIText.mColors;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             if (*(int *)(lVar14 + 24) <= iVar20) break;
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
-                            iVar18 = FUN_181259800(lVar14,0);
+                            if (lVar14 == null) goto LAB_180e0af41;
+                            iVar18 = FUN_181259e10(lVar14,0);
                             StringBuilder.Insert(lVar14,iVar18 + -1);
                             iVar20 = iVar20 + 1;
                           }
                           uVar16 = 0;
                           while( true ) {
                             lVar14 = NGUIText.mColors;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             if (*(int *)(lVar14 + 24) <= (int)uVar16) break;
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"[");
                             lVar14 = NGUIText.mColors;
                             lVar3 = NGUIText.mSB;
                             if ((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 16)) == null)
-                            goto LAB_180e0a931;
+                            goto LAB_180e0af41;
                             if (*(uint32 *)(lVar14 + 24) <= uVar16) {
                               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2858,10 +2858,10 @@ public class NGUIText
                             auVar26 = *(uint8 (*) [16])(lVar14 + ((int64)(int)uVar16 + 2) * 16);
                             local_d8 = auVar26;
                             uVar13 = NGUIText.EncodeColor24(local_d8,0);
-                            if (lVar3 == null) goto LAB_180e0a931;
+                            if (lVar3 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar3,uVar13);
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"]");
                             uVar16 = uVar16 + 1;
                           }
@@ -2874,7 +2874,7 @@ public class NGUIText
                       }
                       else {
                         bVar7 = true;
-        LAB_180e0918e:
+        LAB_180e0979e:
                         bVar23 = local_114 == local_104;
                         iVar18 = local_114;
                         if (NGUIText.encoding) {
@@ -2896,17 +2896,17 @@ public class NGUIText
                               if (local_f0 < local_100 + 1) {
                                 lVar14 = NGUIText.mSB;
                                 uVar13 = String.Substring(text,iVar20,iVar9 - iVar20,0);
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 StringBuilder.Append(lVar14,uVar13);
                                 iVar20 = iVar9;
                               }
                               uVar16 = 0;
-                              lVar14 = DAT_181d8bc90;
+                              lVar14 = DAT_181d8bca8;
                               if ((char)local_ec) {
                                 if (local_108[0] == false) {
                                   lVar14 = NGUIText.mColors;
                                   if ((lVar14 == null) || (lVar3 = *(int64 *)(lVar14 + 16)) == null)
-                                  goto LAB_180e0a931;
+                                  goto LAB_180e0af41;
                                   if (*(uint32 *)(lVar3 + 24) <= *(int *)(lVar14 + 24) - 1U) {
                                     uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2921,7 +2921,7 @@ public class NGUIText
                                 else {
                                   lVar14 = NGUIText.mColors;
                                   if ((lVar14 == null) || (*(int64 *)(lVar14 + 16) == 0))
-                                  goto LAB_180e0a931;
+                                  goto LAB_180e0af41;
                                   if (*(uint32 *)(*(int64 *)(lVar14 + 16) + 24) <=
                                       *(int *)(lVar14 + 24) - 1U) {
                                     uVar13 = il2cpp_internal();
@@ -2930,19 +2930,19 @@ public class NGUIText
                                   }
                                 }
                                 lVar14 = NGUIText.mColors;
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 iVar18 = *(int *)(lVar14 + 24) + -2;
-                                lVar14 = DAT_181d8bc90;
+                                lVar14 = DAT_181d8bca8;
                                 if (0 < iVar18) {
                                   do {
                                     if (((*(byte *)(lVar14 + 0x133) & 4) != 0) &&
                                        (*(int *)(lVar14 + 224) == 0)) {
                                       il2cpp_runtime_class_init();
-                                      lVar14 = DAT_181d8bc90;
+                                      lVar14 = DAT_181d8bca8;
                                     }
                                     lVar3 = *(int64 *)(plVar14 + 176);
                                     if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null)
-                                    goto LAB_180e0a931;
+                                    goto LAB_180e0af41;
                                     if (*(uint32 *)(lVar3 + 24) <= uVar16) {
                                       uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2956,43 +2956,43 @@ public class NGUIText
                                 if (((*(byte *)(lVar14 + 0x133) & 4) != 0) &&
                                    (*(int *)(lVar14 + 224) == 0)) {
                                   il2cpp_runtime_class_init();
-                                  lVar14 = DAT_181d8bc90;
+                                  lVar14 = DAT_181d8bca8;
                                 }
                                 lVar14 = *(int64 *)(plVar14 + 248);
                                 uVar13 = String.Substring(text,iVar20,iVar9 - iVar20,0);
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 StringBuilder.Append(lVar14,uVar13);
                               }
                               else {
                                 if (((*(byte *)(lVar14 + 0x133) & 4) != 0) &&
                                    (*(int *)(lVar14 + 224) == 0)) {
                                   il2cpp_runtime_class_init();
-                                  lVar14 = DAT_181d8bc90;
+                                  lVar14 = DAT_181d8bca8;
                                 }
                                 lVar14 = *(int64 *)(plVar14 + 248);
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 StringBuilder.Append(lVar14,uVar11);
                               }
                               local_110 = iVar9 + -1;
                               local_100 = iVar9;
                               local_f4 = local_e8;
                               iVar20 = iVar9;
-                              goto LAB_180e0956f;
+                              goto LAB_180e09b7f;
                             }
                             lVar14 = NGUIText.mSB;
                             uVar13 = String.Substring(text,iVar20,(iVar8 - iVar20) + 1,0);
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,uVar13,0);
                             if (local_f4 != 0) {
                               lVar14 = NGUIText.mSB;
-                              if (lVar14 == null) goto LAB_180e0a931;
+                              if (lVar14 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar14,"[/sub]",0);
                             }
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"...",0);
                             local_110 = local_f0;
-                            goto LAB_180e0a438;
+                            goto LAB_180e0aa48;
                           }
                           local_110 = local_f0;
                           local_f4 = local_e8;
@@ -3012,7 +3012,7 @@ public class NGUIText
                         }
                         if (lVar14 == null) {
                           fVar25 = (float)NGUIText.GetGlyphWidth(uVar11,local_f8,fVar25);
-                          if ((fVar25 == 0.0) && (!bVar22)) goto LAB_180e0956f;
+                          if ((fVar25 == 0.0) && (!bVar22)) goto LAB_180e09b7f;
                         }
                         else {
                           fVar25 = (float)*(int *)(lVar14 + 64) * fVar25;
@@ -3035,11 +3035,11 @@ public class NGUIText
                             uVar11 = String.get_Chars(text,local_110,0);
                             if (31 < uVar11) {
                               if (((uVar11 != 32) && (1 < uVar11 - 0x200a)) && (uVar11 != 0x2009))
-                              goto LAB_180e097da;
+                              goto LAB_180e09dea;
                             }
                             iVar19 = iVar19 + -1;
                           }
-        LAB_180e097da:
+        LAB_180e09dea:
                           iVar8 = local_100;
                           if (((bVar17 == 0) || (local_100 <= iVar20)) ||
                              ((fVar30 <= fVar29 || (fVar29 <= fVar28)))) {
@@ -3049,27 +3049,27 @@ public class NGUIText
                               StringBuilder.Append(lVar3,uVar13);
                               iVar20 = local_110 + 1;
                               bVar6 = false;
-                              goto LAB_180e0987c;
+                              goto LAB_180e09e8c;
                             }
-                            goto LAB_180e0a931;
+                            goto LAB_180e0af41;
                           }
                           lVar14 = NGUIText.mSB;
                           uVar13 = String.Substring(text,iVar20,(iVar8 - iVar20) + 1,0);
-                          if (lVar14 == null) goto LAB_180e0a931;
+                          if (lVar14 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar14,uVar13,0);
                           if (local_f4 != 0) {
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"[/sub]",0);
                           }
                           lVar14 = pStatics;
-        LAB_180e0a639:
-                          if (*(int64 *)(lVar14 + 248) == 0) goto LAB_180e0a931;
+        LAB_180e0ac49:
+                          if (*(int64 *)(lVar14 + 248) == 0) goto LAB_180e0af41;
                           StringBuilder.Append(*(int64 *)(lVar14 + 248),"...",0);
                           iVar19 = local_104;
-                          goto LAB_180e0a438;
+                          goto LAB_180e0aa48;
                         }
-        LAB_180e0987c:
+        LAB_180e09e8c:
                         if (((param_5 != 0) && (!bVar22)) && (fVar29 < fVar28)) {
                           local_100 = local_110;
                         }
@@ -3100,28 +3100,28 @@ public class NGUIText
                                 iVar18 = 0;
                                 while( true ) {
                                   lVar14 = NGUIText.mColors;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   if (*(int *)(lVar14 + 24) <= iVar18) break;
                                   lVar14 = NGUIText.mSB;
-                                  if (lVar14 == null) goto LAB_180e0a931;
-                                  iVar19 = FUN_181259800(lVar14,0);
+                                  if (lVar14 == null) goto LAB_180e0af41;
+                                  iVar19 = FUN_181259e10(lVar14,0);
                                   StringBuilder.Insert(lVar14,iVar19 + -1);
                                   iVar18 = iVar18 + 1;
                                 }
                                 uVar16 = 0;
                                 while( true ) {
                                   lVar14 = NGUIText.mColors;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   fVar29 = 0.0;
                                   if (*(int *)(lVar14 + 24) <= (int)uVar16) break;
                                   lVar14 = NGUIText.mSB;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   StringBuilder.Append(lVar14,"[");
                                   lVar14 = NGUIText.mColors;
                                   lVar3 = NGUIText.mSB;
                                   if ((lVar14 == null) ||
                                      (lVar14 = *(int64 *)(lVar14 + 16)) == null)
-                                  goto LAB_180e0a931;
+                                  goto LAB_180e0af41;
                                   if (*(uint32 *)(lVar14 + 24) <= uVar16) {
                                     uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3131,15 +3131,15 @@ public class NGUIText
                                              (lVar14 + ((int64)(int)uVar16 + 2) * 16);
                                   local_d8 = auVar26;
                                   uVar13 = NGUIText.EncodeColor24(local_d8,0);
-                                  if (lVar3 == null) goto LAB_180e0a931;
+                                  if (lVar3 == null) goto LAB_180e0af41;
                                   StringBuilder.Append(lVar3,uVar13);
                                   lVar14 = NGUIText.mSB;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   StringBuilder.Append(lVar14,"]");
                                   uVar16 = uVar16 + 1;
                                 }
                               }
-                              goto LAB_180e0956f;
+                              goto LAB_180e09b7f;
                             }
                             break;
                           }
@@ -3147,21 +3147,21 @@ public class NGUIText
                             if (iVar20 < local_100) {
                               lVar14 = NGUIText.mSB;
                               uVar13 = String.Substring(text,iVar20,(iVar19 - iVar20) + 1,0);
-                              if (lVar14 == null) goto LAB_180e0a931;
+                              if (lVar14 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar14,uVar13,0);
                             }
                             if (local_f4 != 0) {
                               lVar14 = NGUIText.mSB;
-                              if (lVar14 == null) goto LAB_180e0a931;
+                              if (lVar14 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar14,"[/sub]",0);
                             }
                             lVar14 = pStatics;
-                            goto LAB_180e0a639;
+                            goto LAB_180e0ac49;
                           }
                           lVar3 = NGUIText.mSB;
                           uVar12 = Mathf.Max(0,local_110 - iVar20,0);
                           uVar13 = String.Substring(text,iVar20,uVar12,0);
-                          if (lVar3 == null) goto LAB_180e0a931;
+                          if (lVar3 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar3,uVar13);
                           if ((!bVar22) && (local_e4 = local_e4 & 255, !bVar7)) {
                             local_e4 = 0;
@@ -3169,16 +3169,16 @@ public class NGUIText
                           cVar10 = (char)local_ec;
                           if (cVar10) {
                             lVar3 = NGUIText.mColors;
-                            if (lVar3 == null) goto LAB_180e0a931;
+                            if (lVar3 == null) goto LAB_180e0af41;
                             if (0 < *(int *)(lVar3 + 24)) {
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar3,"[-]");
                             }
                           }
                           iVar18 = local_114 + 1;
                           iVar19 = local_104;
-                          if (local_114 == local_104) goto LAB_180e0a438;
+                          if (local_114 == local_104) goto LAB_180e0aa48;
                           if (!wrapLineColors) {
                             NGUIText.EndLine(pStatics + 248,0);
                           }
@@ -3191,25 +3191,25 @@ public class NGUIText
                           if (cVar10) {
                             while( true ) {
                               lVar3 = NGUIText.mColors;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               if (*(int *)(lVar3 + 24) <= (int)uVar16) break;
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
-                              iVar20 = FUN_181259800(lVar3,0);
+                              if (lVar3 == null) goto LAB_180e0af41;
+                              iVar20 = FUN_181259e10(lVar3,0);
                               StringBuilder.Insert(lVar3,iVar20 + -1);
                               uVar16 = uVar16 + 1;
                             }
                             while( true ) {
                               lVar3 = NGUIText.mColors;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               if (*(int *)(lVar3 + 24) <= (int)uVar21) break;
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar3,"[");
                               lVar3 = NGUIText.mColors;
                               lVar4 = NGUIText.mSB;
                               if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null)
-                              goto LAB_180e0a931;
+                              goto LAB_180e0af41;
                               if (*(uint32 *)(lVar3 + 24) <= uVar21) {
                                 uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3219,10 +3219,10 @@ public class NGUIText
                               ;
                               local_d8 = auVar26;
                               uVar13 = NGUIText.EncodeColor24(local_d8,0);
-                              if (lVar4 == null) goto LAB_180e0a931;
+                              if (lVar4 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar4,uVar13);
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar3,"]");
                               uVar21 = uVar21 + 1;
                             }
@@ -3249,7 +3249,7 @@ public class NGUIText
                           local_f8 = 0;
                         }
                       }
-        LAB_180e0956f:
+        LAB_180e09b7f:
                       local_110 = local_110 + 1;
                       local_f0 = local_110;
                     } while (local_110 < iVar2);
@@ -3258,17 +3258,17 @@ public class NGUIText
                     if (iVar20 < local_110) {
                       lVar14 = NGUIText.mSB;
                       uVar13 = String.Substring(text,iVar20,local_110 - iVar20,0);
-                      if (lVar14 == null) goto LAB_180e0a931;
+                      if (lVar14 == null) goto LAB_180e0af41;
                       StringBuilder.Append(lVar14,uVar13,0);
                     }
                   }
-        LAB_180e0a438:
+        LAB_180e0aa48:
                   if ((char)local_ec) {
                     lVar14 = NGUIText.mColors;
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     if (0 < *(int *)(lVar14 + 24)) {
                       lVar14 = NGUIText.mSB;
-                      if (lVar14 == null) goto LAB_180e0a931;
+                      if (lVar14 == null) goto LAB_180e0af41;
                       StringBuilder.Append(lVar14,"[-]",0);
                     }
                   }
@@ -3279,7 +3279,7 @@ public class NGUIText
                     il2cpp_internal(finalText,uVar13);
                     lVar14 = NGUIText.mColors;
                     if (lVar14 != null) {
-                      BetterList_1.Clear(lVar14,DAT_181da6238);
+                      BetterList_1.Clear(lVar14,DAT_181da6250);
                       if ((char)!local_e4) {
                         return false;
                       }
@@ -3294,7 +3294,7 @@ public class NGUIText
                   }
                 }
               }
-        LAB_180e0a931:
+        LAB_180e0af41:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -3306,11 +3306,11 @@ public class NGUIText
     }
 
     // Token : 0x60003BF
-    // RVA   : 0xE08A50   Offset: 0xE07E50   Length: 0x548
+    // RVA   : 0xE09060   Offset: 0xE08460   Length: 0x548
     public static bool WrapText(string text, ref string finalText, bool keepCharCount, bool wrapLineColors, bool useEllipsis)
     {
         var plVar14 = *(int64*)(lVar14 + 184);
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         int iVar2;
         long lVar3;
         long lVar4;
@@ -3359,12 +3359,12 @@ public class NGUIText
               if (NGUIText.maxLines < 1) {
               }
               else {
-                Mathf.Min(DAT_181d8bc90,
+                Mathf.Min(DAT_181d8bca8,
                            (float)NGUIText.maxLines *
                            NGUIText.finalLineHeight);
               }
               if (((0 < NGUIText.maxLines) &&
-                  ((*(byte *)(DAT_181d8bc90 + 0x133) & 4) != 0)) && (*(int *)(DAT_181d8bc90 + 224) == 0))
+                  ((*(byte *)(DAT_181d8bca8 + 0x133) & 4) != 0)) && (*(int *)(DAT_181d8bca8 + 224) == 0))
               {
                 il2cpp_runtime_class_init();
               }
@@ -3378,7 +3378,7 @@ public class NGUIText
                 il2cpp_internal(finalText,"");
                 return false;
               }
-              cVar10 = FUN_180d755b0(text,0);
+              cVar10 = FUN_180d75bc0(text,0);
               if (cVar10) {
                 text = " ";
               }
@@ -3391,7 +3391,7 @@ public class NGUIText
                 }
                 else {
                   lVar14 = NGUIText.mSB;
-                  if (lVar14 == null) goto LAB_180e0a931;
+                  if (lVar14 == null) goto LAB_180e0af41;
                   StringBuilder.set_Length(lVar14,0);
                 }
                 iVar20 = 0;
@@ -3427,22 +3427,22 @@ public class NGUIText
                 lVar14 = NGUIText.mColors;
                 if (lVar14 != null) {
                   local_c8 = auVar26;
-                  BetterList_1.Add(lVar14,local_c8,DAT_181da61b8);
+                  BetterList_1.Add(lVar14,local_c8,DAT_181da61d0);
                   local_ec = 0;
                   if (NGUIText.useSymbols) {
                     local_ec = wrapLineColors & 255;
                   }
                   if ((char)local_ec) {
                     lVar14 = NGUIText.mSB;
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     StringBuilder.Append(lVar14,"[",0);
                     lVar14 = NGUIText.mSB;
                     local_c8 = auVar26;
                     uVar13 = NGUIText.EncodeColor24(local_c8,0);
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     StringBuilder.Append(lVar14,uVar13,0);
                     lVar14 = NGUIText.mSB;
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     StringBuilder.Append(lVar14,"]",0);
                   }
                   bVar7 = false;
@@ -3458,43 +3458,43 @@ public class NGUIText
                         bVar22 = uVar16 == 0x2009;
                       }
                       if (uVar11 < 0x3000) {
-                        if (uVar11 != 10) goto LAB_180e0918e;
+                        if (uVar11 != 10) goto LAB_180e0979e;
                         if (local_114 == local_104) break;
                         if (iVar20 < local_110) {
                           lVar14 = NGUIText.mSB;
                           uVar13 = String.Substring(text,iVar20,(local_110 - iVar20) + 1,0);
-                          if (lVar14 == null) goto LAB_180e0a931;
+                          if (lVar14 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar14,uVar13);
                         }
                         else {
                           lVar14 = NGUIText.mSB;
-                          if (lVar14 == null) goto LAB_180e0a931;
+                          if (lVar14 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar14,10);
                         }
                         if ((char)local_ec) {
                           iVar20 = 0;
                           while( true ) {
                             lVar14 = NGUIText.mColors;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             if (*(int *)(lVar14 + 24) <= iVar20) break;
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
-                            iVar18 = FUN_181259800(lVar14,0);
+                            if (lVar14 == null) goto LAB_180e0af41;
+                            iVar18 = FUN_181259e10(lVar14,0);
                             StringBuilder.Insert(lVar14,iVar18 + -1);
                             iVar20 = iVar20 + 1;
                           }
                           uVar16 = 0;
                           while( true ) {
                             lVar14 = NGUIText.mColors;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             if (*(int *)(lVar14 + 24) <= (int)uVar16) break;
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"[");
                             lVar14 = NGUIText.mColors;
                             lVar3 = NGUIText.mSB;
                             if ((lVar14 == null) || (lVar14 = *(int64 *)(lVar14 + 16)) == null)
-                            goto LAB_180e0a931;
+                            goto LAB_180e0af41;
                             if (*(uint32 *)(lVar14 + 24) <= uVar16) {
                               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3503,10 +3503,10 @@ public class NGUIText
                             auVar26 = *(uint8 (*) [16])(lVar14 + ((int64)(int)uVar16 + 2) * 16);
                             local_d8 = auVar26;
                             uVar13 = NGUIText.EncodeColor24(local_d8,0);
-                            if (lVar3 == null) goto LAB_180e0a931;
+                            if (lVar3 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar3,uVar13);
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"]");
                             uVar16 = uVar16 + 1;
                           }
@@ -3519,7 +3519,7 @@ public class NGUIText
                       }
                       else {
                         bVar7 = true;
-        LAB_180e0918e:
+        LAB_180e0979e:
                         bVar23 = local_114 == local_104;
                         iVar18 = local_114;
                         if (NGUIText.encoding) {
@@ -3541,17 +3541,17 @@ public class NGUIText
                               if (local_f0 < local_100 + 1) {
                                 lVar14 = NGUIText.mSB;
                                 uVar13 = String.Substring(text,iVar20,iVar9 - iVar20,0);
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 StringBuilder.Append(lVar14,uVar13);
                                 iVar20 = iVar9;
                               }
                               uVar16 = 0;
-                              lVar14 = DAT_181d8bc90;
+                              lVar14 = DAT_181d8bca8;
                               if ((char)local_ec) {
                                 if (local_108[0] == false) {
                                   lVar14 = NGUIText.mColors;
                                   if ((lVar14 == null) || (lVar3 = *(int64 *)(lVar14 + 16)) == null)
-                                  goto LAB_180e0a931;
+                                  goto LAB_180e0af41;
                                   if (*(uint32 *)(lVar3 + 24) <= *(int *)(lVar14 + 24) - 1U) {
                                     uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3566,7 +3566,7 @@ public class NGUIText
                                 else {
                                   lVar14 = NGUIText.mColors;
                                   if ((lVar14 == null) || (*(int64 *)(lVar14 + 16) == 0))
-                                  goto LAB_180e0a931;
+                                  goto LAB_180e0af41;
                                   if (*(uint32 *)(*(int64 *)(lVar14 + 16) + 24) <=
                                       *(int *)(lVar14 + 24) - 1U) {
                                     uVar13 = il2cpp_internal();
@@ -3575,19 +3575,19 @@ public class NGUIText
                                   }
                                 }
                                 lVar14 = NGUIText.mColors;
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 iVar18 = *(int *)(lVar14 + 24) + -2;
-                                lVar14 = DAT_181d8bc90;
+                                lVar14 = DAT_181d8bca8;
                                 if (0 < iVar18) {
                                   do {
                                     if (((*(byte *)(lVar14 + 0x133) & 4) != 0) &&
                                        (*(int *)(lVar14 + 224) == 0)) {
                                       il2cpp_runtime_class_init();
-                                      lVar14 = DAT_181d8bc90;
+                                      lVar14 = DAT_181d8bca8;
                                     }
                                     lVar3 = *(int64 *)(plVar14 + 176);
                                     if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null)
-                                    goto LAB_180e0a931;
+                                    goto LAB_180e0af41;
                                     if (*(uint32 *)(lVar3 + 24) <= uVar16) {
                                       uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3601,43 +3601,43 @@ public class NGUIText
                                 if (((*(byte *)(lVar14 + 0x133) & 4) != 0) &&
                                    (*(int *)(lVar14 + 224) == 0)) {
                                   il2cpp_runtime_class_init();
-                                  lVar14 = DAT_181d8bc90;
+                                  lVar14 = DAT_181d8bca8;
                                 }
                                 lVar14 = *(int64 *)(plVar14 + 248);
                                 uVar13 = String.Substring(text,iVar20,iVar9 - iVar20,0);
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 StringBuilder.Append(lVar14,uVar13);
                               }
                               else {
                                 if (((*(byte *)(lVar14 + 0x133) & 4) != 0) &&
                                    (*(int *)(lVar14 + 224) == 0)) {
                                   il2cpp_runtime_class_init();
-                                  lVar14 = DAT_181d8bc90;
+                                  lVar14 = DAT_181d8bca8;
                                 }
                                 lVar14 = *(int64 *)(plVar14 + 248);
-                                if (lVar14 == null) goto LAB_180e0a931;
+                                if (lVar14 == null) goto LAB_180e0af41;
                                 StringBuilder.Append(lVar14,uVar11);
                               }
                               local_110 = iVar9 + -1;
                               local_100 = iVar9;
                               local_f4 = local_e8;
                               iVar20 = iVar9;
-                              goto LAB_180e0956f;
+                              goto LAB_180e09b7f;
                             }
                             lVar14 = NGUIText.mSB;
                             uVar13 = String.Substring(text,iVar20,(iVar8 - iVar20) + 1,0);
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,uVar13,0);
                             if (local_f4 != 0) {
                               lVar14 = NGUIText.mSB;
-                              if (lVar14 == null) goto LAB_180e0a931;
+                              if (lVar14 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar14,"[/sub]",0);
                             }
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"...",0);
                             local_110 = local_f0;
-                            goto LAB_180e0a438;
+                            goto LAB_180e0aa48;
                           }
                           local_110 = local_f0;
                           local_f4 = local_e8;
@@ -3657,7 +3657,7 @@ public class NGUIText
                         }
                         if (lVar14 == null) {
                           fVar25 = (float)NGUIText.GetGlyphWidth(uVar11,local_f8,fVar25);
-                          if ((fVar25 == 0.0) && (!bVar22)) goto LAB_180e0956f;
+                          if ((fVar25 == 0.0) && (!bVar22)) goto LAB_180e09b7f;
                         }
                         else {
                           fVar25 = (float)*(int *)(lVar14 + 64) * fVar25;
@@ -3680,11 +3680,11 @@ public class NGUIText
                             uVar11 = String.get_Chars(text,local_110,0);
                             if (31 < uVar11) {
                               if (((uVar11 != 32) && (1 < uVar11 - 0x200a)) && (uVar11 != 0x2009))
-                              goto LAB_180e097da;
+                              goto LAB_180e09dea;
                             }
                             iVar19 = iVar19 + -1;
                           }
-        LAB_180e097da:
+        LAB_180e09dea:
                           iVar8 = local_100;
                           if (((bVar17 == 0) || (local_100 <= iVar20)) ||
                              ((fVar30 <= fVar29 || (fVar29 <= fVar28)))) {
@@ -3694,27 +3694,27 @@ public class NGUIText
                               StringBuilder.Append(lVar3,uVar13);
                               iVar20 = local_110 + 1;
                               bVar6 = false;
-                              goto LAB_180e0987c;
+                              goto LAB_180e09e8c;
                             }
-                            goto LAB_180e0a931;
+                            goto LAB_180e0af41;
                           }
                           lVar14 = NGUIText.mSB;
                           uVar13 = String.Substring(text,iVar20,(iVar8 - iVar20) + 1,0);
-                          if (lVar14 == null) goto LAB_180e0a931;
+                          if (lVar14 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar14,uVar13,0);
                           if (local_f4 != 0) {
                             lVar14 = NGUIText.mSB;
-                            if (lVar14 == null) goto LAB_180e0a931;
+                            if (lVar14 == null) goto LAB_180e0af41;
                             StringBuilder.Append(lVar14,"[/sub]",0);
                           }
                           lVar14 = pStatics;
-        LAB_180e0a639:
-                          if (*(int64 *)(lVar14 + 248) == 0) goto LAB_180e0a931;
+        LAB_180e0ac49:
+                          if (*(int64 *)(lVar14 + 248) == 0) goto LAB_180e0af41;
                           StringBuilder.Append(*(int64 *)(lVar14 + 248),"...",0);
                           iVar19 = local_104;
-                          goto LAB_180e0a438;
+                          goto LAB_180e0aa48;
                         }
-        LAB_180e0987c:
+        LAB_180e09e8c:
                         if (((useEllipsis != null) && (!bVar22)) && (fVar29 < fVar28)) {
                           local_100 = local_110;
                         }
@@ -3745,28 +3745,28 @@ public class NGUIText
                                 iVar18 = 0;
                                 while( true ) {
                                   lVar14 = NGUIText.mColors;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   if (*(int *)(lVar14 + 24) <= iVar18) break;
                                   lVar14 = NGUIText.mSB;
-                                  if (lVar14 == null) goto LAB_180e0a931;
-                                  iVar19 = FUN_181259800(lVar14,0);
+                                  if (lVar14 == null) goto LAB_180e0af41;
+                                  iVar19 = FUN_181259e10(lVar14,0);
                                   StringBuilder.Insert(lVar14,iVar19 + -1);
                                   iVar18 = iVar18 + 1;
                                 }
                                 uVar16 = 0;
                                 while( true ) {
                                   lVar14 = NGUIText.mColors;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   fVar29 = 0.0;
                                   if (*(int *)(lVar14 + 24) <= (int)uVar16) break;
                                   lVar14 = NGUIText.mSB;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   StringBuilder.Append(lVar14,"[");
                                   lVar14 = NGUIText.mColors;
                                   lVar3 = NGUIText.mSB;
                                   if ((lVar14 == null) ||
                                      (lVar14 = *(int64 *)(lVar14 + 16)) == null)
-                                  goto LAB_180e0a931;
+                                  goto LAB_180e0af41;
                                   if (*(uint32 *)(lVar14 + 24) <= uVar16) {
                                     uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3776,15 +3776,15 @@ public class NGUIText
                                              (lVar14 + ((int64)(int)uVar16 + 2) * 16);
                                   local_d8 = auVar26;
                                   uVar13 = NGUIText.EncodeColor24(local_d8,0);
-                                  if (lVar3 == null) goto LAB_180e0a931;
+                                  if (lVar3 == null) goto LAB_180e0af41;
                                   StringBuilder.Append(lVar3,uVar13);
                                   lVar14 = NGUIText.mSB;
-                                  if (lVar14 == null) goto LAB_180e0a931;
+                                  if (lVar14 == null) goto LAB_180e0af41;
                                   StringBuilder.Append(lVar14,"]");
                                   uVar16 = uVar16 + 1;
                                 }
                               }
-                              goto LAB_180e0956f;
+                              goto LAB_180e09b7f;
                             }
                             break;
                           }
@@ -3792,21 +3792,21 @@ public class NGUIText
                             if (iVar20 < local_100) {
                               lVar14 = NGUIText.mSB;
                               uVar13 = String.Substring(text,iVar20,(iVar19 - iVar20) + 1,0);
-                              if (lVar14 == null) goto LAB_180e0a931;
+                              if (lVar14 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar14,uVar13,0);
                             }
                             if (local_f4 != 0) {
                               lVar14 = NGUIText.mSB;
-                              if (lVar14 == null) goto LAB_180e0a931;
+                              if (lVar14 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar14,"[/sub]",0);
                             }
                             lVar14 = pStatics;
-                            goto LAB_180e0a639;
+                            goto LAB_180e0ac49;
                           }
                           lVar3 = NGUIText.mSB;
                           uVar12 = Mathf.Max(0,local_110 - iVar20,0);
                           uVar13 = String.Substring(text,iVar20,uVar12,0);
-                          if (lVar3 == null) goto LAB_180e0a931;
+                          if (lVar3 == null) goto LAB_180e0af41;
                           StringBuilder.Append(lVar3,uVar13);
                           if ((!bVar22) && (local_e4 = local_e4 & 255, !bVar7)) {
                             local_e4 = 0;
@@ -3814,16 +3814,16 @@ public class NGUIText
                           cVar10 = (char)local_ec;
                           if (cVar10) {
                             lVar3 = NGUIText.mColors;
-                            if (lVar3 == null) goto LAB_180e0a931;
+                            if (lVar3 == null) goto LAB_180e0af41;
                             if (0 < *(int *)(lVar3 + 24)) {
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar3,"[-]");
                             }
                           }
                           iVar18 = local_114 + 1;
                           iVar19 = local_104;
-                          if (local_114 == local_104) goto LAB_180e0a438;
+                          if (local_114 == local_104) goto LAB_180e0aa48;
                           if (!keepCharCount) {
                             NGUIText.EndLine(pStatics + 248,0);
                           }
@@ -3836,25 +3836,25 @@ public class NGUIText
                           if (cVar10) {
                             while( true ) {
                               lVar3 = NGUIText.mColors;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               if (*(int *)(lVar3 + 24) <= (int)uVar16) break;
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
-                              iVar20 = FUN_181259800(lVar3,0);
+                              if (lVar3 == null) goto LAB_180e0af41;
+                              iVar20 = FUN_181259e10(lVar3,0);
                               StringBuilder.Insert(lVar3,iVar20 + -1);
                               uVar16 = uVar16 + 1;
                             }
                             while( true ) {
                               lVar3 = NGUIText.mColors;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               if (*(int *)(lVar3 + 24) <= (int)uVar21) break;
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar3,"[");
                               lVar3 = NGUIText.mColors;
                               lVar4 = NGUIText.mSB;
                               if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 16)) == null)
-                              goto LAB_180e0a931;
+                              goto LAB_180e0af41;
                               if (*(uint32 *)(lVar3 + 24) <= uVar21) {
                                 uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3864,10 +3864,10 @@ public class NGUIText
                               ;
                               local_d8 = auVar26;
                               uVar13 = NGUIText.EncodeColor24(local_d8,0);
-                              if (lVar4 == null) goto LAB_180e0a931;
+                              if (lVar4 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar4,uVar13);
                               lVar3 = NGUIText.mSB;
-                              if (lVar3 == null) goto LAB_180e0a931;
+                              if (lVar3 == null) goto LAB_180e0af41;
                               StringBuilder.Append(lVar3,"]");
                               uVar21 = uVar21 + 1;
                             }
@@ -3894,7 +3894,7 @@ public class NGUIText
                           local_f8 = 0;
                         }
                       }
-        LAB_180e0956f:
+        LAB_180e09b7f:
                       local_110 = local_110 + 1;
                       local_f0 = local_110;
                     } while (local_110 < iVar2);
@@ -3903,17 +3903,17 @@ public class NGUIText
                     if (iVar20 < local_110) {
                       lVar14 = NGUIText.mSB;
                       uVar13 = String.Substring(text,iVar20,local_110 - iVar20,0);
-                      if (lVar14 == null) goto LAB_180e0a931;
+                      if (lVar14 == null) goto LAB_180e0af41;
                       StringBuilder.Append(lVar14,uVar13,0);
                     }
                   }
-        LAB_180e0a438:
+        LAB_180e0aa48:
                   if ((char)local_ec) {
                     lVar14 = NGUIText.mColors;
-                    if (lVar14 == null) goto LAB_180e0a931;
+                    if (lVar14 == null) goto LAB_180e0af41;
                     if (0 < *(int *)(lVar14 + 24)) {
                       lVar14 = NGUIText.mSB;
-                      if (lVar14 == null) goto LAB_180e0a931;
+                      if (lVar14 == null) goto LAB_180e0af41;
                       StringBuilder.Append(lVar14,"[-]",0);
                     }
                   }
@@ -3924,7 +3924,7 @@ public class NGUIText
                     il2cpp_internal(finalText,uVar13);
                     lVar14 = NGUIText.mColors;
                     if (lVar14 != null) {
-                      BetterList_1.Clear(lVar14,DAT_181da6238);
+                      BetterList_1.Clear(lVar14,DAT_181da6250);
                       if ((char)!local_e4) {
                         return false;
                       }
@@ -3939,7 +3939,7 @@ public class NGUIText
                   }
                 }
               }
-        LAB_180e0a931:
+        LAB_180e0af41:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -3951,11 +3951,11 @@ public class NGUIText
     }
 
     // Token : 0x60003C0
-    // RVA   : 0xE057E0   Offset: 0xE04BE0   Length: 0x2261
+    // RVA   : 0xE05DF0   Offset: 0xE051F0   Length: 0x2261
     public static void Print(string text, List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         var plVar12 = *(int64*)(lVar12 + 184);
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         ulong uVar2;
         ulong uVar3;
         ulong uVar4;
@@ -4119,7 +4119,7 @@ public class NGUIText
         uint8 local_d8 [176];
         local_2e8 = 0;
         uStack_2e0 = 0;
-        cVar5 = FUN_180d755b0(text,0);
+        cVar5 = FUN_180d75bc0(text,0);
         if (cVar5) {
           return;
         }
@@ -4128,11 +4128,11 @@ public class NGUIText
           local_3b8 = iVar18;
           NGUIText.Prepare(text,0);
           lVar12 = NGUIText.mColors;
-          puVar9 = (uint64 *)FUN_1810d3570(local_3c8,0);
+          puVar9 = (uint64 *)FUN_1810d3b80(local_3c8,0);
           if (lVar12 != null) {
             local_328 = *puVar9;
             uStack_320 = puVar9[1];
-            BetterList_1.Add(lVar12,&local_328,DAT_181da61b8);
+            BetterList_1.Add(lVar12,&local_328,DAT_181da61d0);
             cVar5 = false;
             fVar29 = 0.0;
             uVar30 = 0;
@@ -4184,20 +4184,20 @@ public class NGUIText
               local_378 = fVar36;
               if (*plVar1 != 0) {
                 if (NGUIText.bitmapFont == null) throw; // [null/range check failed]
-                puVar9 = (uint64 *)FUN_180007830(local_3c8,17,DAT_181d7a800);
+                puVar9 = (uint64 *)FUN_180007830(local_3c8,17,DAT_181d7a818);
                 local_370 = *puVar9;
                 uStack_368 = puVar9[1];
-                fVar20 = (float)FUN_180d98fa0(&local_370,0);
+                fVar20 = (float)FUN_180d995b0(&local_370,0);
                 if (NGUIText.bitmapFont == null) throw; // [null/range check failed]
-                iVar8 = FUN_180002970(2,DAT_181d7a800);
+                iVar8 = FUN_180002970(2,DAT_181d7a818);
                 local_38c = fVar20 / (float)iVar8;
                 fVar20 = (float)FUN_18044e2b0(&local_370,0);
                 if (NGUIText.bitmapFont == null) throw; // [null/range check failed]
-                iVar8 = FUN_180002970(4,DAT_181d7a800);
+                iVar8 = FUN_180002970(4,DAT_181d7a818);
                 local_388 = fVar20 / (float)iVar8;
               }
               local_390 = 0;
-              lVar12 = DAT_181d8bc90;
+              lVar12 = DAT_181d8bca8;
               if (0 < local_380) {
                 _local_360 = ZEXT416((uint32)uStack_3a0._4_4_);
                 fVar20 = 0.0;
@@ -4215,7 +4215,7 @@ public class NGUIText
                     local_3d4 = 0.0;
                     local_398 = 0;
                     local_3cc = fVar20 + NGUIText.finalLineHeight;
-                    lVar12 = DAT_181d8bc90;
+                    lVar12 = DAT_181d8bca8;
                     fVar29 = 0.0;
                     uVar30 = 0;
                     uVar31 = 0;
@@ -4224,7 +4224,7 @@ public class NGUIText
                     uVar19 = local_398;
                   }
                   else {
-                    lVar12 = DAT_181d8bc90;
+                    lVar12 = DAT_181d8bca8;
                     fVar35 = fVar20;
                     uVar19 = (uint32)uVar7;
                     if (31 < uVar7) {
@@ -4283,13 +4283,13 @@ public class NGUIText
                           lVar12 = NGUIText.mColors;
                           if (lVar12 != null) {
                             iVar18 = *(int *)(lVar12 + 24) + -2;
-                            lVar12 = DAT_181d8bc90;
+                            lVar12 = DAT_181d8bca8;
                             if (0 < iVar18) {
                               do {
                                 if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                    (*(int *)(lVar12 + 224) == 0)) {
                                   il2cpp_runtime_class_init();
-                                  lVar12 = DAT_181d8bc90;
+                                  lVar12 = DAT_181d8bca8;
                                 }
                                 lVar13 = *(int64 *)(plVar12 + 176);
                                 if ((lVar13 == null) || (lVar13 = *(int64 *)(lVar13 + 16)) == null)
@@ -4309,7 +4309,7 @@ public class NGUIText
                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) && (*(int *)(lVar12 + 224) == 0))
                             {
                               il2cpp_runtime_class_init();
-                              lVar12 = DAT_181d8bc90;
+                              lVar12 = DAT_181d8bca8;
                             }
                             auVar23 = _local_3a8;
                             auVar27 = local_3a8;
@@ -4324,7 +4324,7 @@ public class NGUIText
                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) && (*(int *)(lVar12 + 224) == 0)
                                  ) {
                                 il2cpp_runtime_class_init();
-                                lVar12 = DAT_181d8bc90;
+                                lVar12 = DAT_181d8bca8;
                               }
                               local_338 = *(uint8 (*) [16])(plVar12 + 84);
                               local_328 = uVar14;
@@ -4337,12 +4337,12 @@ public class NGUIText
                                             (pStatics + 100);
                               pauVar10 = (uint8 (*) [16])Color.op_Multiply(local_138,local_3a8);
                               local_338 = *pauVar10;
-                              lVar12 = DAT_181d8bc90;
+                              lVar12 = DAT_181d8bca8;
                             }
                             iVar18 = local_390 + -1;
                             uVar19 = local_398;
                             cVar5 = local_3d8;
-                            goto LAB_180e070ba;
+                            goto LAB_180e076ca;
                           }
                           throw; // [null/range check failed]
                         }
@@ -4361,7 +4361,7 @@ public class NGUIText
                       }
                       if (lVar12 == null) {
                         lVar13 = NGUIText.GetGlyph((uint32)uVar7,local_398);
-                        lVar12 = DAT_181d8bc90;
+                        lVar12 = DAT_181d8bca8;
                         fVar35 = local_3cc;
                         uVar19 = local_398;
                         if (lVar13 != null) {
@@ -4440,11 +4440,11 @@ public class NGUIText
                           if (((uVar16 != 32) && (1 < uVar16 - 0x200a)) && (uVar16 != 0x2009)) {
                             if (uvs != null) {
                               if (NGUIText.bitmapFont != null) {
-                                fVar36 = (float)FUN_180d98fc0(&local_370,0);
+                                fVar36 = (float)FUN_180d995d0(&local_370,0);
                                 fVar29 = local_38c;
                                 *(float *)(lVar13 + 32) = local_38c * *(float *)(lVar13 + 32) + fVar36
                                 ;
-                                fVar36 = (float)FUN_180d98fc0(&local_370,0);
+                                fVar36 = (float)FUN_180d995d0(&local_370,0);
                                 *(float *)(lVar13 + 48) = fVar29 * *(float *)(lVar13 + 48) + fVar36;
                                 fVar36 = (float)Rect.get_yMax(&local_370,0);
                                 fVar29 = local_388;
@@ -4463,10 +4463,10 @@ public class NGUIText
                                 lVar12 = 4;
                               }
                               do {
-                                FUN_181829f90(uvs,*(uint64 *)(lVar13 + 32),DAT_181dab918);
-                                FUN_181829f90(uvs,*(uint64 *)(lVar13 + 40),DAT_181dab918);
-                                FUN_181829f90(uvs,*(uint64 *)(lVar13 + 48),DAT_181dab918);
-                                FUN_181829f90(uvs,*(uint64 *)(lVar13 + 56),DAT_181dab918);
+                                FUN_18182a5a0(uvs,*(uint64 *)(lVar13 + 32),DAT_181dab930);
+                                FUN_18182a5a0(uvs,*(uint64 *)(lVar13 + 40),DAT_181dab930);
+                                FUN_18182a5a0(uvs,*(uint64 *)(lVar13 + 48),DAT_181dab930);
+                                FUN_18182a5a0(uvs,*(uint64 *)(lVar13 + 56),DAT_181dab930);
                                 lVar12 = lVar12 + -1;
                               } while (lVar12 != null);
                             }
@@ -4482,7 +4482,7 @@ public class NGUIText
                                     local_3c8._0_4_ = auVar27;
                                     local_3c8._8_4_ = uVar21;
                                     local_3c8._12_4_ = uVar22;
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     lVar12 = lVar12 + -1;
                                   } while (lVar12 != null);
                                 }
@@ -4499,7 +4499,7 @@ public class NGUIText
                                   puVar9 = (uint64 *)
                                            Color.Lerp(local_118,local_3a8,local_3c8,
                                                        (fVar29 / *(float *)(*(int64 *)
-                                                                             (DAT_181d8bc90 + 184) + 28
+                                                                             (DAT_181d8bca8 + 184) + 28
                                                                            ) + local_37c) / local_37c,0);
                                   uStack_3a0 = uVar3;
                                   _local_3a8 = uVar14;
@@ -4524,20 +4524,20 @@ public class NGUIText
                                          NGUIText.s_c0;
                                     local_3c8._8_8_ =
                                          *(uint64 *)(pStatics + 0x108);
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     local_3c8._0_8_ =
                                          NGUIText.s_c1;
                                     local_3c8._8_8_ =
                                          *(uint64 *)(pStatics + 0x118);
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     local_3c8._0_8_ =
                                          NGUIText.s_c1;
                                     local_3c8._8_8_ =
                                          *(uint64 *)(pStatics + 0x118);
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     local_3c8 = *(uint8 (*) [16])
                                                  (pStatics + 0x100);
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     lVar13 = lVar13 + -1;
                                   } while (lVar13 != null);
                                 }
@@ -4547,7 +4547,7 @@ public class NGUIText
                                 local_3a8 = auVar27;
                                 uStack_3a0._0_4_ = (float)uVar21;
                                 uStack_3a0._4_4_ = (float)uVar22;
-                                pauVar10 = (uint8 (*) [16])FUN_1810d3880(local_128,local_3a8);
+                                pauVar10 = (uint8 (*) [16])FUN_1810d3e90(local_128,local_3a8);
                                 iVar8 = *(int *)(lVar13 + 68);
                                 _local_3a8 = *pauVar10;
                                 if (iVar8 == 1) {
@@ -4574,7 +4574,7 @@ public class NGUIText
                                 }
                                 do {
                                   local_3c8 = _local_3a8;
-                                  FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                  FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                   lVar12 = lVar12 + -1;
                                 } while (lVar12 != null);
                               }
@@ -4584,15 +4584,15 @@ public class NGUIText
                                 local_160 = 0;
                                 local_168 = fVar38;
                                 local_164 = fVar34;
-                                FUN_181816b80(verts,&local_168,DAT_181dabc18);
+                                FUN_181817190(verts,&local_168,DAT_181dabc30);
                                 local_2d0 = 0;
                                 local_2d8 = fVar38;
                                 local_2d4 = fVar35;
-                                FUN_181816b80(verts,&local_2d8,DAT_181dabc18);
+                                FUN_181817190(verts,&local_2d8,DAT_181dabc30);
                                 local_2c0 = 0;
                                 local_2c8 = fVar37;
                                 local_2c4 = fVar35;
-                                FUN_181816b80(verts,&local_2c8,DAT_181dabc18);
+                                FUN_181817190(verts,&local_2c8,DAT_181dabc30);
                                 pfVar15 = &local_2b8;
                                 local_2b0 = 0;
                                 local_2b8 = fVar37;
@@ -4604,21 +4604,21 @@ public class NGUIText
                                 fVar29 = ((fVar35 - fVar34) / fVar29) * fVar29 * 0.1;
                                 local_1a8 = fVar38 - fVar29;
                                 local_1a4 = fVar34;
-                                FUN_181816b80(verts,&local_1a8,DAT_181dabc18);
+                                FUN_181817190(verts,&local_1a8,DAT_181dabc30);
                                 local_198 = fVar29 + fVar38;
                                 local_190 = 0;
                                 local_194 = fVar35;
-                                FUN_181816b80(verts,&local_198,DAT_181dabc18);
+                                FUN_181817190(verts,&local_198,DAT_181dabc30);
                                 local_188 = fVar29 + fVar37;
                                 local_180 = 0;
                                 local_184 = fVar35;
-                                FUN_181816b80(verts,&local_188,DAT_181dabc18);
+                                FUN_181817190(verts,&local_188,DAT_181dabc30);
                                 local_178 = fVar37 - fVar29;
                                 local_170 = 0;
                                 pfVar15 = &local_178;
                                 local_174 = fVar34;
                               }
-                              FUN_181816b80(verts,pfVar15);
+                              FUN_181817190(verts,pfVar15);
                             }
                             else {
                               uVar16 = 0;
@@ -4650,21 +4650,21 @@ public class NGUIText
                                 fVar26 = fVar36 + fVar34;
                                 local_1e8 = fVar25 - fVar20;
                                 local_1e4 = fVar26;
-                                FUN_181816b80(verts,&local_1e8,DAT_181dabc18);
+                                FUN_181817190(verts,&local_1e8,DAT_181dabc30);
                                 fVar36 = fVar36 + fVar35;
                                 local_1d8 = fVar25 + fVar20;
                                 local_1d0 = 0;
                                 local_1d4 = fVar36;
-                                FUN_181816b80(verts,&local_1d8,DAT_181dabc18);
+                                FUN_181817190(verts,&local_1d8,DAT_181dabc30);
                                 fVar29 = fVar29 + fVar37;
                                 local_1c0 = 0;
                                 local_1c8 = fVar29 + fVar20;
                                 local_1c4 = fVar36;
-                                FUN_181816b80(verts,&local_1c8,DAT_181dabc18);
+                                FUN_181817190(verts,&local_1c8,DAT_181dabc30);
                                 local_1b8 = fVar29 - fVar20;
                                 local_1b0 = 0;
                                 local_1b4 = fVar26;
-                                FUN_181816b80(verts,&local_1b8);
+                                FUN_181817190(verts,&local_1b8);
                                 uVar16 = uVar16 + 2;
                                 fVar20 = local_3cc;
                               } while ((int)uVar16 < 8);
@@ -4678,11 +4678,11 @@ public class NGUIText
                               if (lVar12 != null) {
                                 if (uvs != null) {
                                   if (NGUIText.bitmapFont != null) {
-                                    fVar36 = (float)FUN_180d98fc0(&local_370,0);
+                                    fVar36 = (float)FUN_180d995d0(&local_370,0);
                                     fVar29 = local_38c;
                                     *(float *)(lVar12 + 32) =
                                          local_38c * *(float *)(lVar12 + 32) + fVar36;
-                                    fVar36 = (float)FUN_180d98fc0(&local_370,0);
+                                    fVar36 = (float)FUN_180d995d0(&local_370,0);
                                     *(float *)(lVar12 + 48) =
                                          fVar29 * *(float *)(lVar12 + 48) + fVar36;
                                     fVar36 = (float)Rect.get_yMax(&local_370,0);
@@ -4704,13 +4704,13 @@ public class NGUIText
                                   local_2f0 = local_308;
                                   do {
                                     uStack_304 = *(uint32 *)(lVar12 + 36);
-                                    FUN_181829f90(uvs,CONCAT44(uStack_304,local_308),DAT_181dab918);
+                                    FUN_18182a5a0(uvs,CONCAT44(uStack_304,local_308),DAT_181dab930);
                                     uStack_2fc = *(uint32 *)(lVar12 + 52);
-                                    FUN_181829f90(uvs,CONCAT44(uStack_2fc,local_300),DAT_181dab918);
+                                    FUN_18182a5a0(uvs,CONCAT44(uStack_2fc,local_300),DAT_181dab930);
                                     uStack_2f4 = *(uint32 *)(lVar12 + 52);
-                                    FUN_181829f90(uvs,CONCAT44(uStack_2f4,local_2f8),DAT_181dab918);
+                                    FUN_18182a5a0(uvs,CONCAT44(uStack_2f4,local_2f8),DAT_181dab930);
                                     uStack_2ec = *(uint32 *)(lVar12 + 36);
-                                    FUN_181829f90(uvs,CONCAT44(uStack_2ec,local_2f0),DAT_181dab918);
+                                    FUN_18182a5a0(uvs,CONCAT44(uStack_2ec,local_2f0),DAT_181dab930);
                                     lVar13 = lVar13 + -1;
                                   } while (lVar13 != null);
                                 }
@@ -4722,20 +4722,20 @@ public class NGUIText
                                   local_2a8 = local_384;
                                   local_2a0 = 0;
                                   local_2a4 = fVar35;
-                                  FUN_181816b80(verts,&local_2a8,DAT_181dabc18);
+                                  FUN_181817190(verts,&local_2a8,DAT_181dabc30);
                                   local_298 = fVar34;
                                   local_290 = 0;
                                   local_294 = fVar20;
-                                  FUN_181816b80(verts,&local_298,DAT_181dabc18);
+                                  FUN_181817190(verts,&local_298,DAT_181dabc30);
                                   fVar29 = local_3d4;
                                   local_288 = local_3d4;
                                   local_280 = 0;
                                   local_284 = fVar20;
-                                  FUN_181816b80(verts,&local_288,DAT_181dabc18);
+                                  FUN_181817190(verts,&local_288,DAT_181dabc30);
                                   local_278 = fVar29;
                                   local_270 = 0;
                                   local_274 = fVar35;
-                                  FUN_181816b80(verts,&local_278,DAT_181dabc18);
+                                  FUN_181817190(verts,&local_278,DAT_181dabc30);
                                 }
                                 else {
                                   uVar16 = 0;
@@ -4760,21 +4760,21 @@ public class NGUIText
                                     fVar38 = fVar29 + fVar34;
                                     local_268 = fVar38;
                                     local_264 = fVar25;
-                                    FUN_181816b80(verts,&local_268,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_268,DAT_181dabc30);
                                     fVar37 = fVar37 + fVar20;
                                     local_250 = 0;
                                     local_258 = fVar38;
                                     local_254 = fVar37;
-                                    FUN_181816b80(verts,&local_258,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_258,DAT_181dabc30);
                                     fVar29 = fVar29 + fVar36;
                                     local_240 = 0;
                                     local_248 = fVar29;
                                     local_244 = fVar37;
-                                    FUN_181816b80(verts,&local_248,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_248,DAT_181dabc30);
                                     local_230 = 0;
                                     local_238 = fVar29;
                                     local_234 = fVar25;
-                                    FUN_181816b80(verts,&local_238,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_238,DAT_181dabc30);
                                     uVar16 = uVar16 + 2;
                                     fVar29 = local_3d4;
                                   } while ((int)uVar16 < 8);
@@ -4802,7 +4802,7 @@ public class NGUIText
                                     local_3c8._8_4_ = uVar21;
                                     local_3c8._0_8_ = uVar14;
                                     local_3c8._12_4_ = uVar22;
-                                    FUN_1817e9a90(cols,local_3c8);
+                                    FUN_1817ea0a0(cols,local_3c8);
                                     iVar17 = iVar17 + 1;
                                     fVar20 = local_3cc;
                                   } while (iVar17 < iVar8);
@@ -4841,20 +4841,20 @@ public class NGUIText
                                          NGUIText.s_c0;
                                     local_3c8._8_8_ =
                                          *(uint64 *)(pStatics + 0x108);
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     local_3c8._0_8_ =
                                          NGUIText.s_c1;
                                     local_3c8._8_8_ =
                                          *(uint64 *)(pStatics + 0x118);
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     local_3c8._0_8_ =
                                          NGUIText.s_c1;
                                     local_3c8._8_8_ =
                                          *(uint64 *)(pStatics + 0x118);
-                                    FUN_1817e9a90(cols,local_3c8,DAT_181d82e20);
+                                    FUN_1817ea0a0(cols,local_3c8,DAT_181d82e38);
                                     local_3c8 = *(uint8 (*) [16])
                                                  (pStatics + 0x100);
-                                    FUN_1817e9a90(cols,local_3c8);
+                                    FUN_1817ea0a0(cols,local_3c8);
                                     iVar8 = iVar8 + 1;
                                   } while (iVar8 < iVar17);
                                   auVar27 = (uint8  [4])(uint32)local_348;
@@ -4863,15 +4863,15 @@ public class NGUIText
                                   uVar22 = uStack_340._4_4_;
                                   fVar20 = local_3cc;
                                 }
-                                goto LAB_180e070ae;
+                                goto LAB_180e076be;
                               }
                             }
                             fVar29 = local_3d4;
                             fVar34 = (float)local_360._0_4_;
-                            goto LAB_180e077a4;
+                            goto LAB_180e07db4;
                           }
-        LAB_180e070ae:
-                          lVar12 = DAT_181d8bc90;
+        LAB_180e076be:
+                          lVar12 = DAT_181d8bca8;
                           fVar35 = fVar20;
                           fVar34 = (float)local_360._0_4_;
                           uVar19 = local_398;
@@ -4909,19 +4909,19 @@ public class NGUIText
                         local_220 = 0;
                         local_228 = fVar29;
                         local_224 = fVar38;
-                        FUN_181816b80(verts,&local_228,DAT_181dabc18);
+                        FUN_181817190(verts,&local_228,DAT_181dabc30);
                         local_210 = 0;
                         local_218 = fVar29;
                         local_214 = fVar20;
-                        FUN_181816b80(verts,&local_218,DAT_181dabc18);
+                        FUN_181817190(verts,&local_218,DAT_181dabc30);
                         local_200 = 0;
                         local_208 = fVar35;
                         local_204 = fVar20;
-                        FUN_181816b80(verts,&local_208,DAT_181dabc18);
+                        FUN_181817190(verts,&local_208,DAT_181dabc30);
                         local_1f0 = 0;
                         local_1f8 = fVar35;
                         local_1f4 = fVar38;
-                        FUN_181816b80(verts,&local_1f8);
+                        FUN_181817190(verts,&local_1f8);
                         fVar29 = local_3d4 +
                                  fVar33 + NGUIText.finalSpacingX;
                         local_3d4 = fVar29;
@@ -4931,25 +4931,25 @@ public class NGUIText
                         if (uvs != null) {
                           local_2e8 = *(uint64 *)(lVar12 + 68);
                           uStack_2e0 = *(uint64 *)(lVar12 + 76);
-                          uVar21 = FUN_180d98fc0(&local_2e8,0);
+                          uVar21 = FUN_180d995d0(&local_2e8,0);
                           uVar22 = FUN_18044df60(&local_2e8,0);
                           uVar30 = Rect.get_xMax(&local_2e8,0);
                           uVar31 = Rect.get_yMax(&local_2e8,0);
-                          FUN_181829f90(uvs,CONCAT44(uVar22,uVar21),DAT_181dab918);
-                          FUN_181829f90(uvs,CONCAT44(uVar31,uVar21),DAT_181dab918);
-                          FUN_181829f90(uvs,CONCAT44(uVar31,uVar30),DAT_181dab918);
-                          FUN_181829f90(uvs,CONCAT44(uVar22,uVar30));
+                          FUN_18182a5a0(uvs,CONCAT44(uVar22,uVar21),DAT_181dab930);
+                          FUN_18182a5a0(uvs,CONCAT44(uVar31,uVar21),DAT_181dab930);
+                          FUN_18182a5a0(uvs,CONCAT44(uVar31,uVar30),DAT_181dab930);
+                          FUN_18182a5a0(uvs,CONCAT44(uVar22,uVar30));
                           fVar29 = local_3d4;
                         }
                         uVar32 = 0;
                         uVar31 = 0;
                         uVar30 = 0;
                         if (cols == null) {
-        LAB_180e077a4:
+        LAB_180e07db4:
                           uVar32 = 0;
                           uVar31 = 0;
                           uVar30 = 0;
-                          lVar12 = DAT_181d8bc90;
+                          lVar12 = DAT_181d8bca8;
                           auVar27 = (uint8  [4])(uint32)local_348;
                           auVar28 = (uint8  [4])local_348._4_4_;
                           uVar21 = (uint32)uStack_340;
@@ -4969,15 +4969,15 @@ public class NGUIText
                               local_3c8._8_4_ = uVar21;
                               local_3c8._0_8_ = uVar14;
                               local_3c8._12_4_ = uVar22;
-                              FUN_1817e9a90(cols,local_3c8);
+                              FUN_1817ea0a0(cols,local_3c8);
                               lVar13 = lVar13 + -1;
-                              lVar12 = DAT_181d8bc90;
+                              lVar12 = DAT_181d8bca8;
                               fVar35 = local_3cc;
                               uVar19 = local_398;
                             } while (lVar13 != null);
                           }
                           else {
-                            pauVar10 = (uint8 (*) [16])FUN_1810d3570(local_d8,0);
+                            pauVar10 = (uint8 (*) [16])FUN_1810d3b80(local_d8,0);
                             _local_3a8 = *pauVar10;
                             if (NGUIText.symbolStyle == 3) {
                               auVar27 = (uint8  [4])0xbf800000;
@@ -4997,10 +4997,10 @@ public class NGUIText
                               local_3c8._0_4_ = auVar27;
                               local_3c8._8_4_ = uVar21;
                               local_3c8._12_4_ = fVar36;
-                              FUN_1817e9a90(cols,local_3c8);
+                              FUN_1817ea0a0(cols,local_3c8);
                               lVar12 = lVar12 + -1;
                             } while (lVar12 != null);
-                            lVar12 = DAT_181d8bc90;
+                            lVar12 = DAT_181d8bca8;
                             auVar27 = (uint8  [4])(uint32)local_348;
                             auVar28 = (uint8  [4])local_348._4_4_;
                             uVar21 = (uint32)uStack_340;
@@ -5012,7 +5012,7 @@ public class NGUIText
                       }
                     }
                   }
-        LAB_180e070ba:
+        LAB_180e076ca:
                   local_398 = uVar19;
                   local_390 = iVar18 + 1;
                   fVar20 = fVar35;
@@ -5022,7 +5022,7 @@ public class NGUIText
               }
               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) && (*(int *)(lVar12 + 224) == 0)) {
                 il2cpp_runtime_class_init();
-                lVar12 = DAT_181d8bc90;
+                lVar12 = DAT_181d8bca8;
               }
               if ((*(int *)(plVar12 + 40) != 1) &&
                  (iVar18 < *(int *)(verts + 24))) {
@@ -5030,15 +5030,15 @@ public class NGUIText
                   il2cpp_runtime_class_init();
                 }
                 NGUIText.Align(verts,iVar18);
-                lVar12 = DAT_181d8bc90;
+                lVar12 = DAT_181d8bca8;
               }
               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) && (*(int *)(lVar12 + 224) == 0)) {
                 il2cpp_runtime_class_init();
-                lVar12 = DAT_181d8bc90;
+                lVar12 = DAT_181d8bca8;
               }
               lVar12 = *(int64 *)(plVar12 + 176);
               if (lVar12 != null) {
-                BetterList_1.Clear(lVar12,DAT_181da6238);
+                BetterList_1.Clear(lVar12,DAT_181da6250);
                 return;
               }
             }
@@ -5047,7 +5047,7 @@ public class NGUIText
     }
 
     // Token : 0x60003C1
-    // RVA   : 0xE03670   Offset: 0xE02A70   Length: 0x8C8
+    // RVA   : 0xE03C80   Offset: 0xE03080   Length: 0x8C8
     public static void PrintApproximateCharacterPositions(string text, List<Vector3> verts, List<int> indices)
     {
         void NGUIText.PrintApproximateCharacterPositions
@@ -5083,7 +5083,7 @@ public class NGUIText
         float local_e8;
         float local_e4;
         uint32 local_e0;
-        cVar2 = FUN_180d755b0(text,0);
+        cVar2 = FUN_180d75bc0(text,0);
         if (cVar2) {
           text = " ";
         }
@@ -5115,9 +5115,9 @@ public class NGUIText
               fVar12 = fVar10 * 0.5;
               local_104 = -fVar11 - fVar12;
               local_108 = fVar9;
-              FUN_181816b80(verts,&local_108,DAT_181dabc18);
+              FUN_181817190(verts,&local_108,DAT_181dabc30);
               if (indices == null) throw; // [null/range check failed]
-              FUN_18182a0b0(indices,iVar5);
+              FUN_18182a6c0(indices,iVar5);
               if (uVar3 == 10) {
                 if (NGUIText.alignment != 1) {
                   NGUIText.Align(verts,iVar7,
@@ -5126,15 +5126,15 @@ public class NGUIText
                 }
                 fVar8 = 0.0;
                 fVar11 = fVar11 + NGUIText.finalLineHeight;
-        LAB_180e03e21:
+        LAB_180e04431:
                 fVar9 = fVar8;
                 uVar6 = 0;
               }
               else {
                 fVar8 = fVar9;
-                if (uVar3 < 32) goto LAB_180e03e21;
+                if (uVar3 < 32) goto LAB_180e04431;
                 if (!NGUIText.encoding) {
-        LAB_180e039e2:
+        LAB_180e03ff2:
                   if (NGUIText.useSymbols) {
                     lVar4 = NGUIText.GetSymbol(text,iVar5,local_10c,0);
                     if (lVar4 != null) {
@@ -5159,11 +5159,11 @@ public class NGUIText
                       local_f0 = 0;
                       local_f4 = -fVar11 - fVar12;
                       local_f8 = fVar8;
-                      FUN_181816b80(verts,&local_f8,DAT_181dabc18);
-                      FUN_18182a0b0(indices,iVar5 + 1);
+                      FUN_181817190(verts,&local_f8,DAT_181dabc30);
+                      FUN_18182a6c0(indices,iVar5 + 1);
                       if (*(int64 *)(lVar4 + 16) != 0) {
                         iVar5 = iVar5 + *(int *)(*(int64 *)(lVar4 + 16) + 16) + -1;
-                        goto LAB_180e03e21;
+                        goto LAB_180e04431;
                       }
                       throw; // [null/range check failed]
                     }
@@ -5189,8 +5189,8 @@ public class NGUIText
                     local_e0 = 0;
                     local_e4 = -fVar11 - fVar12;
                     local_e8 = fVar8;
-                    FUN_181816b80(verts,&local_e8,DAT_181dabc18);
-                    FUN_18182a0b0(indices,iVar5 + 1);
+                    FUN_181817190(verts,&local_e8,DAT_181dabc30);
+                    FUN_18182a6c0(indices,iVar5 + 1);
                     fVar9 = fVar8;
                     uVar6 = uVar3;
                   }
@@ -5202,7 +5202,7 @@ public class NGUIText
                                      NGUIText.premultiply,
                                      &local_110,&local_115,&local_116,&local_117,&local_118,local_res8,0);
                   iVar5 = local_114;
-                  if (!cVar2) goto LAB_180e039e2;
+                  if (!cVar2) goto LAB_180e03ff2;
                   iVar5 = local_114 + -1;
                 }
               }
@@ -5219,10 +5219,10 @@ public class NGUIText
     }
 
     // Token : 0x60003C2
-    // RVA   : 0xE04FE0   Offset: 0xE043E0   Length: 0x7FE
+    // RVA   : 0xE055F0   Offset: 0xE049F0   Length: 0x7FE
     public static void PrintExactCharacterPositions(string text, List<Vector3> verts, List<int> indices)
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         int iVar1;
         bool cVar2;
         ushort uVar3;
@@ -5256,7 +5256,7 @@ public class NGUIText
         float local_d8;
         float local_d4;
         uint32 local_d0;
-        cVar2 = FUN_180d755b0(text,0);
+        cVar2 = FUN_180d75bc0(text,0);
         if (cVar2) {
           text = " ";
         }
@@ -5267,7 +5267,7 @@ public class NGUIText
         fVar12 = (float)*(int *)(lVar4 + 68) + 0.01;
         fVar13 = (float)*(int *)(lVar4 + 24) * *(float *)(lVar4 + 28);
         if ((text == null) || (local_10c = *(int *)(text + 16), verts == null)) {
-        LAB_180e057d9:
+        LAB_180e05de9:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -5298,60 +5298,60 @@ public class NGUIText
               }
               fVar9 = 0.0;
               fVar11 = fVar11 + NGUIText.finalLineHeight;
-        LAB_180e056d3:
+        LAB_180e05ce3:
               fVar10 = fVar9;
               uVar6 = 0;
             }
             else {
               fVar9 = fVar10;
-              if (uVar3 < 32) goto LAB_180e056d3;
+              if (uVar3 < 32) goto LAB_180e05ce3;
               if (!NGUIText.encoding) {
-        LAB_180e052eb:
+        LAB_180e058fb:
                 if (!NGUIText.useSymbols) {
-        LAB_180e05449:
+        LAB_180e05a59:
                   fVar8 = (float)NGUIText.GetGlyphWidth(uVar3,uVar6,fVar8);
                   if (fVar8 != 0.0) {
                     fVar8 = fVar8 + NGUIText.finalSpacingX + fVar10;
-                    if (fVar12 < fVar8) goto LAB_180e05550;
-                    if (indices == null) goto LAB_180e057d9;
-                    FUN_18182a0b0(indices,iVar5,DAT_181d8f218);
+                    if (fVar12 < fVar8) goto LAB_180e05b60;
+                    if (indices == null) goto LAB_180e05de9;
+                    FUN_18182a6c0(indices,iVar5,DAT_181d8f230);
                     local_e0 = 0;
                     local_e4 = -fVar11 - fVar13;
                     local_e8 = fVar10;
-                    FUN_181816b80(verts,&local_e8,DAT_181dabc18);
+                    FUN_181817190(verts,&local_e8,DAT_181dabc30);
                     local_d0 = 0;
                     local_d8 = fVar8;
                     local_d4 = -fVar11;
-                    FUN_181816b80(verts,&local_d8);
+                    FUN_181817190(verts,&local_d8);
                     fVar10 = fVar8;
                     uVar6 = uVar3;
                   }
                 }
                 else {
                   lVar4 = NGUIText.GetSymbol(text,iVar5,local_10c,0);
-                  if (lVar4 == null) goto LAB_180e05449;
+                  if (lVar4 == null) goto LAB_180e05a59;
                   iVar1 = *(int *)(lVar4 + 64);
                   fVar9 = (float)iVar1 * fVar8 + NGUIText.finalSpacingX +
                           fVar10;
                   if (fVar9 <= fVar12) {
                     if (indices != null) {
-                      FUN_18182a0b0(indices,iVar5,DAT_181d8f218);
+                      FUN_18182a6c0(indices,iVar5,DAT_181d8f230);
                       local_100 = 0;
                       local_104 = -fVar11 - fVar13;
                       local_108 = fVar10;
-                      FUN_181816b80(verts,&local_108,DAT_181dabc18);
+                      FUN_181817190(verts,&local_108,DAT_181dabc30);
                       local_f0 = 0;
                       local_f8 = fVar9;
                       local_f4 = -fVar11;
-                      FUN_181816b80(verts,&local_f8);
+                      FUN_181817190(verts,&local_f8);
                       if (*(int64 *)(lVar4 + 16) != 0) {
                         iVar5 = iVar5 + *(int *)(*(int64 *)(lVar4 + 16) + 16) + -1;
-                        goto LAB_180e056d3;
+                        goto LAB_180e05ce3;
                       }
                     }
-                    goto LAB_180e057d9;
+                    goto LAB_180e05de9;
                   }
-        LAB_180e05550:
+        LAB_180e05b60:
                   if (fVar10 == 0.0) {
                     return;
                   }
@@ -5374,7 +5374,7 @@ public class NGUIText
                                    NGUIText.premultiply,&local_110,
                                    &local_115,&local_116,&local_117,&local_118,local_res8,0);
                 iVar5 = local_114;
-                if (!cVar2) goto LAB_180e052eb;
+                if (!cVar2) goto LAB_180e058fb;
                 iVar5 = local_114 + -1;
               }
             }
@@ -5389,7 +5389,7 @@ public class NGUIText
     }
 
     // Token : 0x60003C3
-    // RVA   : 0xE03F40   Offset: 0xE03340   Length: 0x1090
+    // RVA   : 0xE04550   Offset: 0xE03950   Length: 0x1090
     public static void PrintCaretAndSelection(string text, int start, int end, List<Vector3> caret, List<Vector3> highlight)
     {
         void NGUIText.PrintCaretAndSelection
@@ -5490,7 +5490,7 @@ public class NGUIText
         uint32 local_110;
         uint32 local_100;
         uint32 local_f0;
-        cVar4 = FUN_180d755b0(text,0);
+        cVar4 = FUN_180d75bc0(text,0);
         if (cVar4) {
           text = " ";
         }
@@ -5559,19 +5559,19 @@ public class NGUIText
               local_250 = 0;
               local_258 = fVar17 - 1.0;
               local_254 = fVar16 - fVar21;
-              FUN_181816b80(caret,&local_258,DAT_181dabc18);
+              FUN_181817190(caret,&local_258,DAT_181dabc30);
               local_240 = 0;
               local_248 = fVar17 - 1.0;
               local_244 = fVar16;
-              FUN_181816b80(caret,&local_248,DAT_181dabc18);
+              FUN_181817190(caret,&local_248,DAT_181dabc30);
               local_230 = 0;
               local_238 = fVar17 + 1.0;
               local_234 = fVar16;
-              FUN_181816b80(caret,&local_238,DAT_181dabc18);
+              FUN_181817190(caret,&local_238,DAT_181dabc30);
               local_220 = 0;
               local_228 = fVar17 + 1.0;
               local_224 = fVar16 - fVar21;
-              FUN_181816b80(caret,&local_228,DAT_181dabc18);
+              FUN_181817190(caret,&local_228,DAT_181dabc30);
               fVar16 = local_29c;
               fVar19 = local_2a0;
             }
@@ -5593,33 +5593,33 @@ public class NGUIText
                   local_f0 = 0;
                   local_148 = CONCAT44(fVar15,fVar22);
                   local_140 = 0;
-                  FUN_181816b80(highlight,&local_148,DAT_181dabc18);
+                  FUN_181817190(highlight,&local_148,DAT_181dabc30);
                   local_260 = 0;
                   pfVar9 = (float *)&local_278;
                   local_278 = CONCAT44(fVar19,fVar16);
                   local_270 = 0;
-        LAB_180e04ad3:
-                  FUN_181816b80(highlight,pfVar9);
+        LAB_180e050e3:
+                  FUN_181817190(highlight,pfVar9);
                 }
                 else if (((int)local_290 <= iVar10) && (iVar10 < (int)start)) {
                   fVar16 = -fVar20;
                   local_1e0 = 0;
                   local_1e8 = fVar17;
                   local_1e4 = fVar16 - fVar21;
-                  FUN_181816b80(highlight,&local_1e8,DAT_181dabc18);
+                  FUN_181817190(highlight,&local_1e8,DAT_181dabc30);
                   local_1d0 = 0;
                   local_1d8 = fVar17;
                   local_1d4 = fVar16;
-                  FUN_181816b80(highlight,&local_1d8,DAT_181dabc18);
+                  FUN_181817190(highlight,&local_1d8,DAT_181dabc30);
                   local_1c0 = 0;
                   local_1c8 = fVar17 + 2.0;
                   local_1c4 = fVar16;
-                  FUN_181816b80(highlight,&local_1c8,DAT_181dabc18);
+                  FUN_181817190(highlight,&local_1c8,DAT_181dabc30);
                   pfVar9 = &local_2b8;
                   local_2b0 = 0;
                   local_2b8 = fVar17 + 2.0;
                   local_2b4 = fVar16 - fVar21;
-                  goto LAB_180e04ad3;
+                  goto LAB_180e050e3;
                 }
                 if ((NGUIText.alignment != 1) &&
                    ((int)uVar13 < *(int *)(highlight + 24))) {
@@ -5646,17 +5646,17 @@ public class NGUIText
                 uVar8 = (uint64)local_298;
                 if (cVar4) {
                   iVar10 = local_298 - 1;
-                  goto LAB_180e04bb1;
+                  goto LAB_180e051c1;
                 }
               }
               iVar10 = (int)uVar8;
               if (!NGUIText.useSymbols) {
-        LAB_180e0446d:
+        LAB_180e04a7d:
                 fVar14 = (float)NGUIText.GetGlyphWidth((uint32)uVar5,uVar12,fVar14);
               }
               else {
                 lVar7 = NGUIText.GetSymbol(text,uVar8,local_284,0);
-                if (lVar7 == null) goto LAB_180e0446d;
+                if (lVar7 == null) goto LAB_180e04a7d;
                 fVar14 = (float)*(int *)(lVar7 + 64) * fVar14;
               }
               fVar19 = local_2a0;
@@ -5685,32 +5685,32 @@ public class NGUIText
                       local_130 = 0;
                       local_188 = CONCAT44((float)local_28c,fVar22);
                       local_180 = 0;
-                      FUN_181816b80(highlight,&local_188,DAT_181dabc18);
+                      FUN_181817190(highlight,&local_188,DAT_181dabc30);
                       local_120 = 0;
                       pfVar9 = (float *)&local_178;
                       local_178 = CONCAT44(local_2a0,local_29c);
                       local_170 = 0;
-        LAB_180e046d9:
-                      FUN_181816b80(highlight,pfVar9);
+        LAB_180e04ce9:
+                      FUN_181817190(highlight,pfVar9);
                     }
                     else if (((int)local_290 <= iVar10) && (iVar10 < (int)start)) {
                       local_1a0 = 0;
                       local_1a8 = fVar17;
                       local_1a4 = fVar19;
-                      FUN_181816b80(highlight,&local_1a8,DAT_181dabc18);
+                      FUN_181817190(highlight,&local_1a8,DAT_181dabc30);
                       local_1b0 = 0;
                       local_1b8 = fVar17;
                       local_1b4 = fVar15;
-                      FUN_181816b80(highlight,&local_1b8,DAT_181dabc18);
+                      FUN_181817190(highlight,&local_1b8,DAT_181dabc30);
                       local_190 = 0;
                       local_198 = fVar17 + 2.0;
                       local_194 = fVar15;
-                      FUN_181816b80(highlight,&local_198,DAT_181dabc18);
+                      FUN_181817190(highlight,&local_198,DAT_181dabc30);
                       local_210 = 0;
                       pfVar9 = &local_218;
                       local_218 = fVar17 + 2.0;
                       local_214 = fVar19;
-                      goto LAB_180e046d9;
+                      goto LAB_180e04ce9;
                     }
                     if ((NGUIText.alignment != 1) &&
                        ((int)uVar13 < *(int *)(highlight + 24))) {
@@ -5736,12 +5736,12 @@ public class NGUIText
                       local_110 = 0;
                       local_168 = CONCAT44((float)local_28c,fVar22);
                       local_160 = 0;
-                      FUN_181816b80(highlight,&local_168,DAT_181dabc18);
+                      FUN_181817190(highlight,&local_168,DAT_181dabc30);
                       local_100 = 0;
                       pfVar9 = (float *)&local_158;
                       local_158 = CONCAT44(local_2a0,local_29c);
                       local_150 = 0;
-                      goto LAB_180e048dd;
+                      goto LAB_180e04eed;
                     }
                   }
                   else if (!bVar2) {
@@ -5749,13 +5749,13 @@ public class NGUIText
                     local_200 = 0;
                     local_208 = fVar17;
                     local_204 = fVar19;
-                    FUN_181816b80(highlight,&local_208,DAT_181dabc18);
+                    FUN_181817190(highlight,&local_208,DAT_181dabc30);
                     pfVar9 = &local_1f8;
                     local_1f0 = 0;
                     local_1f8 = fVar17;
                     local_1f4 = fVar15;
-        LAB_180e048dd:
-                    FUN_181816b80(highlight,pfVar9);
+        LAB_180e04eed:
+                    FUN_181817190(highlight,pfVar9);
                   }
                 }
                 local_28c = CONCAT44(local_28c._4_4_,fVar15);
@@ -5767,7 +5767,7 @@ public class NGUIText
                 local_29c = fVar16;
               }
             }
-        LAB_180e04bb1:
+        LAB_180e051c1:
             uVar11 = iVar10 + 1;
             uVar8 = (uint64)uVar11;
             local_298 = uVar11;
@@ -5779,19 +5779,19 @@ public class NGUIText
             fVar16 = -fVar20;
             local_2b8 = fVar17 - 1.0;
             local_2b4 = fVar16 - fVar21;
-            FUN_181816b80(caret,&local_2b8,DAT_181dabc18);
+            FUN_181817190(caret,&local_2b8,DAT_181dabc30);
             local_2b0 = 0;
             local_2b8 = fVar17 - 1.0;
             local_2b4 = fVar16;
-            FUN_181816b80(caret,&local_2b8,DAT_181dabc18);
+            FUN_181817190(caret,&local_2b8,DAT_181dabc30);
             local_2b0 = 0;
             local_2b8 = fVar17 + 1.0;
             local_2b4 = fVar16;
-            FUN_181816b80(caret,&local_2b8,DAT_181dabc18);
+            FUN_181817190(caret,&local_2b8,DAT_181dabc30);
             local_2b0 = 0;
             local_2b8 = fVar17 + 1.0;
             local_2b4 = fVar16 - fVar21;
-            FUN_181816b80(caret,&local_2b8,DAT_181dabc18);
+            FUN_181817190(caret,&local_2b8,DAT_181dabc30);
           }
           if (NGUIText.alignment != 1) {
             NGUIText.Align(caret,local_294,
@@ -5803,33 +5803,33 @@ public class NGUIText
             local_260 = 0;
             local_278 = CONCAT44(fVar15,fVar22);
             local_270 = 0;
-            FUN_181816b80(highlight,&local_278,DAT_181dabc18);
+            FUN_181817190(highlight,&local_278,DAT_181dabc30);
             local_260 = 0;
             pfVar9 = (float *)&local_278;
             local_278 = CONCAT44(local_2a0,local_29c);
             local_270 = 0;
-        LAB_180e04e68:
-            FUN_181816b80(highlight,pfVar9,DAT_181dabc18);
+        LAB_180e05478:
+            FUN_181817190(highlight,pfVar9,DAT_181dabc30);
           }
           else if (((int)local_290 < (int)uVar11) && (start == uVar11)) {
             fVar20 = -fVar20;
             local_2b0 = 0;
             local_2b8 = fVar17;
             local_2b4 = fVar20 - fVar21;
-            FUN_181816b80(highlight,&local_2b8,DAT_181dabc18);
+            FUN_181817190(highlight,&local_2b8,DAT_181dabc30);
             local_2b0 = 0;
             local_2b8 = fVar17;
             local_2b4 = fVar20;
-            FUN_181816b80(highlight,&local_2b8,DAT_181dabc18);
+            FUN_181817190(highlight,&local_2b8,DAT_181dabc30);
             local_2b0 = 0;
             local_2b8 = fVar17 + 2.0;
             local_2b4 = fVar20;
-            FUN_181816b80(highlight,&local_2b8,DAT_181dabc18);
+            FUN_181817190(highlight,&local_2b8,DAT_181dabc30);
             pfVar9 = &local_2b8;
             local_2b0 = 0;
             local_2b8 = fVar17 + 2.0;
             local_2b4 = fVar20 - fVar21;
-            goto LAB_180e04e68;
+            goto LAB_180e05478;
           }
           if ((NGUIText.alignment != 1) &&
              ((int)uVar13 < *(int *)(highlight + 24))) {
@@ -5839,13 +5839,13 @@ public class NGUIText
         }
         lVar7 = NGUIText.mColors;
         if (lVar7 != null) {
-          BetterList_1.Clear(lVar7,DAT_181da6238);
+          BetterList_1.Clear(lVar7,DAT_181da6250);
           return;
         }
     }
 
     // Token : 0x60003C4
-    // RVA   : 0xE07A50   Offset: 0xE06E50   Length: 0x6D6
+    // RVA   : 0xE08060   Offset: 0xE07460   Length: 0x6D6
     public static bool ReplaceLink(ref string text, ref int index, string type, string prefix, string suffix)
     {
         uint64
@@ -5924,8 +5924,8 @@ public class NGUIText
           if (type != null) {
             iVar3 = *index + *(int *)(type + 16);
             lVar7 = *text;
-            uVar5 = FUN_1800d60b0(DAT_181da1040,5);
-            RuntimeHelpers.InitializeArray(uVar5,DAT_181dbafd8,0);
+            uVar5 = FUN_1800d60b0(DAT_181da1058,5);
+            RuntimeHelpers.InitializeArray(uVar5,DAT_181dbb188,0);
             if (lVar7 != null) {
               iVar11 = String.IndexOfAny(lVar7,uVar5,iVar3,0);
               if (iVar11 == -1) {
@@ -5933,7 +5933,7 @@ public class NGUIText
                 iVar11 = *(int *)(*text + 16);
               }
               lVar7 = *text;
-              lVar6 = FUN_1800d60b0(DAT_181da1040,2);
+              lVar6 = FUN_1800d60b0(DAT_181da1058,2);
               if (lVar6 != null) {
                 if (*(uint32 *)(lVar6 + 24) == 0) {
                   uVar5 = il2cpp_internal();
@@ -5961,11 +5961,11 @@ public class NGUIText
                         uVar5 = String.Substring(*text,iVar11,0);
                         if (*text != null) {
                           lVar8 = String.Substring(*text,iVar3,iVar4 - iVar3,0);
-                          cVar1 = FUN_180d755b0(prefix,0);
+                          cVar1 = FUN_180d75bc0(prefix,0);
                           if (!cVar1) {
                             lVar7 = String.Concat(lVar7,prefix,0);
                           }
-                          plVar9 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,6);
+                          plVar9 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
                           if (plVar9 != (int64 *)0) {
                             if ((lVar7 != null) &&
                                (lVar10 = il2cpp_internal(lVar7,*(uint64 *)(*plVar9 + 64)),
@@ -6059,7 +6059,7 @@ public class NGUIText
                             il2cpp_internal(text,lVar7);
                             if (*text != null) {
                               *index = *(int *)(*text + 16);
-                              cVar1 = FUN_180d755b0(suffix,0);
+                              cVar1 = FUN_180d75bc0(suffix,0);
                               if (!cVar1) {
                                 lVar7 = String.Concat(*text,suffix,uVar5,0);
                               }
@@ -6083,7 +6083,7 @@ public class NGUIText
     }
 
     // Token : 0x60003C5
-    // RVA   : 0xE01EB0   Offset: 0xE012B0   Length: 0x384
+    // RVA   : 0xE024C0   Offset: 0xE018C0   Length: 0x384
     public static bool InsertHyperlink(ref string text, ref int index, string keyword, string link, string prefix, string suffix)
     {
         uint64
@@ -6161,11 +6161,11 @@ public class NGUIText
             uVar5 = String.Concat("[url=",link,"][u]",0);
             if ((keyword != null) && (*text != null)) {
               uVar6 = String.Substring(*text,iVar3,*(uint32 *)(keyword + 16),0);
-              cVar1 = FUN_180d755b0(prefix,0);
+              cVar1 = FUN_180d75bc0(prefix,0);
               if (!cVar1) {
                 uVar6 = String.Concat(prefix,uVar6,0);
               }
-              cVar1 = FUN_180d755b0(suffix,0);
+              cVar1 = FUN_180d75bc0(suffix,0);
               if (!cVar1) {
                 uVar6 = String.Concat(uVar6,suffix,0);
               }
@@ -6188,7 +6188,7 @@ public class NGUIText
     }
 
     // Token : 0x60003C6
-    // RVA   : 0xE08130   Offset: 0xE07530   Length: 0x13F
+    // RVA   : 0xE08740   Offset: 0xE07B40   Length: 0x13F
     public static void ReplaceLinks(ref string text, string prefix, string suffix)
     {
         long lVar1;
@@ -6222,10 +6222,10 @@ public class NGUIText
     }
 
     // Token : 0x60003C7
-    // RVA   : 0xE0A940   Offset: 0xE09D40   Length: 0x3B7
+    // RVA   : 0xE0AF50   Offset: 0xE0A350   Length: 0x3B7
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8bc90 + 184);
+        var pStatics = *(int64*)(DAT_181d8bca8 + 184);
         long lVar1;
         uint uVar2;
         uint uVar3;
@@ -6241,7 +6241,7 @@ public class NGUIText
         NGUIText.pixelDensity = 0x3f800000;
         NGUIText.fontStyle = 0;
         NGUIText.alignment = 1;
-        puVar6 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar6 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar2 = puVar6[1];
         uVar3 = puVar6[2];
         uVar4 = puVar6[3];
@@ -6256,7 +6256,7 @@ public class NGUIText
         NGUIText.regionHeight = 1000000;
         NGUIText.maxLines = 0;
         NGUIText.gradient = 0;
-        puVar6 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar6 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar2 = puVar6[1];
         uVar3 = puVar6[2];
         uVar4 = puVar6[3];
@@ -6265,7 +6265,7 @@ public class NGUIText
         *(uint32 *)(lVar1 + 88) = uVar2;
         *(uint32 *)(lVar1 + 92) = uVar3;
         *(uint32 *)(lVar1 + 96) = uVar4;
-        puVar7 = (uint64 *)FUN_1810d3570(local_18,0);
+        puVar7 = (uint64 *)FUN_1810d3b80(local_18,0);
         uVar5 = puVar7[1];
         lVar1 = pStatics;
         *(uint64 *)(lVar1 + 100) = *puVar7;
@@ -6281,19 +6281,19 @@ public class NGUIText
         NGUIText.useSymbols = 0;
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dc910(&local_28,lVar1,0,0,0,0);
+        FUN_1809dcfa0(&local_28,lVar1,0,0,0,0);
         lVar1 = pStatics;
         *(uint32 *)(lVar1 + 156) = (uint32)local_28;
         *(uint32 *)(lVar1 + 160) = local_28._4_4_;
         *(uint32 *)(lVar1 + 164) = (uint32)uStack_20;
         *(uint32 *)(lVar1 + 168) = uStack_20._4_4_;
-        uVar5 = new BetterList_1(DAT_181da6138);
+        uVar5 = new BetterList_1(DAT_181da6150);
         NGUIText.mColors = uVar5;
         NGUIText.mAlpha = 0x3f800000;
-        uVar5 = new BetterList_1(DAT_181da6338);
+        uVar5 = new BetterList_1(DAT_181da6350);
         NGUIText.mSizes = uVar5;
-        uVar5 = FUN_1800d60b0(DAT_181da5360,8);
-        RuntimeHelpers.InitializeArray(uVar5,DAT_181dbaf50,0);
+        uVar5 = FUN_1800d60b0(DAT_181da5378,8);
+        RuntimeHelpers.InitializeArray(uVar5,DAT_181dbb100,0);
         NGUIText.mBoldOffset = uVar5;
     }
 

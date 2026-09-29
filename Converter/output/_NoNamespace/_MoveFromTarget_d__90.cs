@@ -37,7 +37,7 @@ public class <MoveFromTarget>d__90
     }
 
     // Token : 0x6000C82
-    // RVA   : 0x930070   Offset: 0x92F470   Length: 0x60A
+    // RVA   : 0x9306D0   Offset: 0x92FAD0   Length: 0x60A
     private virtual bool MoveNext()
     {
         float fVar1;
@@ -61,7 +61,7 @@ public class <MoveFromTarget>d__90
               lVar11 = lVar2.BigMapRandomEventDatas;
               while( true ) {
                 if ((lVar11 == null) || (lVar7 = this.targetGrid) == null)
-                goto LAB_180930675;
+                goto LAB_180930cd5;
                 iVar12 = *(int *)(lVar11 + 40) - *(int *)(lVar7 + 40);
                 iVar13 = *(int *)(lVar11 + 36) - *(int *)(lVar7 + 36);
                 if ((iVar12 == 0) && (iVar13 == 0)) break;
@@ -70,48 +70,48 @@ public class <MoveFromTarget>d__90
                 if (iVar5 < iVar6) {
                   if (this.num < 1) {
                     lVar7 = FUN_18046bb80(0);
-                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930675;
+                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930cd5;
                     lVar7 = BattleMapData.GetGridDataByDir
                                       (*(int64 *)(lVar7 + 24),*(uint32 *)(lVar11 + 36),
                                        *(uint32 *)(lVar11 + 40),(iVar13 < 1) + '\x02',0);
                     lVar8 = FUN_18046bb80(0);
                     if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 24)) == null)
-                    goto LAB_180930675;
+                    goto LAB_180930cd5;
                     cVar4 = iVar12 < 1;
                   }
                   else {
                     lVar7 = FUN_18046bb80(0);
-                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930675;
+                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930cd5;
                     lVar7 = BattleMapData.GetGridDataByDir
                                       (*(int64 *)(lVar7 + 24),*(uint32 *)(lVar11 + 36),
                                        *(uint32 *)(lVar11 + 40),(0 < iVar13) + '\x02',0);
                     lVar8 = FUN_18046bb80(0);
                     if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 24)) == null)
-                    goto LAB_180930675;
+                    goto LAB_180930cd5;
                     cVar4 = 0 < iVar12;
                   }
                 }
                 else {
                   if (this.num < 1) {
                     lVar7 = FUN_18046bb80(0);
-                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930675;
+                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930cd5;
                     lVar7 = BattleMapData.GetGridDataByDir
                                       (*(int64 *)(lVar7 + 24),*(uint32 *)(lVar11 + 36),
                                        *(uint32 *)(lVar11 + 40),iVar12 < 1,0);
                     lVar8 = FUN_18046bb80(0);
                     if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 24)) == null)
-                    goto LAB_180930675;
+                    goto LAB_180930cd5;
                     bVar3 = iVar13 < 1;
                   }
                   else {
                     lVar7 = FUN_18046bb80(0);
-                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930675;
+                    if ((lVar7 == null) || (*(int64 *)(lVar7 + 24) == 0)) goto LAB_180930cd5;
                     lVar7 = BattleMapData.GetGridDataByDir
                                       (*(int64 *)(lVar7 + 24),*(uint32 *)(lVar11 + 36),
                                        *(uint32 *)(lVar11 + 40),0 < iVar12,0);
                     lVar8 = FUN_18046bb80(0);
                     if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 24)) == null)
-                    goto LAB_180930675;
+                    goto LAB_180930cd5;
                     bVar3 = 0 < iVar13;
                   }
                   cVar4 = bVar3 + '\x02';
@@ -140,7 +140,7 @@ public class <MoveFromTarget>d__90
                 if (iVar12 == 0) break;
               }
               BattleUnit.EnterGrid(lVar2,lVar11,1,0,0);
-              fVar14 = *(float *)(*(int64 *)(DAT_181db07c8 + 184) + 24);
+              fVar14 = *(float *)(*(int64 *)(DAT_181db07e0 + 184) + 24);
               if ((GameController._instance != null) &&
                  (lVar2 = GameController._instance.worldData) != null) {
                 fVar1 = lVar2.battleTimeScale;
@@ -150,7 +150,7 @@ public class <MoveFromTarget>d__90
                 return true;
               }
             }
-        LAB_180930675:
+        LAB_180930cd5:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -158,7 +158,7 @@ public class <MoveFromTarget>d__90
         else if (this.<>1__state == 1) {
           this.<>1__state = 0xffffffff;
           lVar11 = FUN_18046bb80(0);
-          if (lVar11 == null) goto LAB_180930675;
+          if (lVar11 == null) goto LAB_180930cd5;
           BattleController.ManageUnitStaySpeGrid(lVar11,lVar2,0);
         }
         return false;
@@ -172,15 +172,15 @@ public class <MoveFromTarget>d__90
     }
 
     // Token : 0x6000C84
-    // RVA   : 0x930680   Offset: 0x92FA80   Length: 0x3E
+    // RVA   : 0x930CE0   Offset: 0x9300E0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97e38);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97fd0);
     }
 
     // Token : 0x6000C85

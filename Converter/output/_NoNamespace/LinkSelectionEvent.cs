@@ -7,10 +7,10 @@ public class LinkSelectionEvent
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002482
-    // RVA   : 0x8E6300   Offset: 0x8E5700   Length: 0x39
+    // RVA   : 0x918940   Offset: 0x917D40   Length: 0x39
     public void /*ctor*/()
     {
-        FUN_180fec720(this,DAT_181d7d688);
+        FUN_180fecd30(this,DAT_181d7d6a0);
     }
 
 }

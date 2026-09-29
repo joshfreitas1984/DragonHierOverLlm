@@ -6,12 +6,12 @@
 public class StaffMenuController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C0D
+    // Token: 0x4001C0E
     public GameObject staffMenu;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60021B5
-    // RVA   : 0xC5EC50   Offset: 0xC5E050   Length: 0x342
+    // RVA   : 0xC5F260   Offset: 0xC5E660   Length: 0x342
     public void ShowStaffMenu()
     {
         long lVar2;
@@ -23,7 +23,7 @@ public class StaffMenuController
           GameObject.SetActive(this.staffMenu,1,0);
           plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
           plVar3 = (int64 *)0;
-          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
             plVar3 = plVar1;
           }
           NGUITools.PlaySound(plVar3,0);
@@ -32,13 +32,13 @@ public class StaffMenuController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"BlackBackground",0);
               if (lVar2 != null) {
-                plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
+                plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
                 if (this.staffMenu != null) {
                   lVar2 = GameObject.get_transform(this.staffMenu,0);
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                     if (lVar2 != null) {
-                      plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
+                      plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
                       if (plVar3 != (int64 *)0) {
                         puVar4 = (uint64 *)
                                  (**(code **)(*plVar3 + 0x298))
@@ -56,9 +56,9 @@ public class StaffMenuController
                             if (lVar2 != null) {
                               lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                               if (lVar2 != null) {
-                                uVar5 = Component.GetComponent(lVar2,DAT_181d94460);
+                                uVar5 = Component.GetComponent(lVar2,DAT_181d94478);
                                 uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f000000,0x3e800000,0);
-                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1c20);
+                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1dc8);
                                 if (this.staffMenu != null) {
                                   lVar2 = GameObject.get_transform(this.staffMenu,0);
                                   if (lVar2 != null) {
@@ -74,7 +74,7 @@ public class StaffMenuController
                                           uVar5 = Transform.Find(lVar2,"StaffRoot",0);
                                           uVar5 = ShortcutExtensions.DOScale
                                                             (uVar5,0x3f800000,0x3e800000,0);
-                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1db0);
+                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
                                           return;
                                         }
                                       }
@@ -96,7 +96,7 @@ public class StaffMenuController
     }
 
     // Token : 0x60021B6
-    // RVA   : 0xC5EFA0   Offset: 0xC5E3A0   Length: 0x220
+    // RVA   : 0xC5F5B0   Offset: 0xC5E9B0   Length: 0x220
     public void UnshowStaffMenu()
     {
         long lVar2;
@@ -107,7 +107,7 @@ public class StaffMenuController
         uint local_10;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
         plVar5 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
           plVar5 = plVar1;
         }
         NGUITools.PlaySound(plVar5,0);
@@ -116,9 +116,9 @@ public class StaffMenuController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"BlackBackground",0);
             if (lVar2 != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d94460);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d94478);
               uVar3 = DOTweenModuleUI.DOFade(uVar3,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1c20);
+              TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1dc8);
               if (this.staffMenu != null) {
                 lVar2 = GameObject.get_transform(this.staffMenu,0);
                 if (lVar2 != null) {
@@ -127,9 +127,9 @@ public class StaffMenuController
                   local_14 = 0x3f800000;
                   local_10 = 0x3f800000;
                   uVar3 = ShortcutExtensions.DOScale(uVar3,&local_18,0x3e4ccccd,0);
-                  uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
-                  uVar4 = new OnTooltipCB(this,DAT_181db1908,0);
-                  TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc01d0);
+                  uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
+                  uVar4 = new OnTooltipCB(this,DAT_181db1ab8,0);
+                  TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc0380);
                   return;
                 }
               }

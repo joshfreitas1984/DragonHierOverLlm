@@ -6,16 +6,16 @@
 public class <FinishStudyFightSkill>d__28
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C77
+    // Token: 0x4001C78
     private int <>1__state;
 
-    // Token: 0x4001C78
+    // Token: 0x4001C79
     private object <>2__current;
 
-    // Token: 0x4001C79
+    // Token: 0x4001C7A
     public StudyAttackSkillController <>4__this;
 
-    // Token: 0x4001C7A
+    // Token: 0x4001C7B
     public StudySkillResult studyDodgeResult;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,7 +34,7 @@ public class <FinishStudyFightSkill>d__28
     }
 
     // Token : 0x6002226
-    // RVA   : 0x8EC020   Offset: 0x8EB420   Length: 0x5D7
+    // RVA   : 0x91EEA0   Offset: 0x91E2A0   Length: 0x5D7
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -89,10 +89,10 @@ public class <FinishStudyFightSkill>d__28
           uVar9 = *(uint32 *)(puVar4 + 1);
           puVar5 = (uint32 *)Color.get_red(&local_28,0);
           uVar7 = "生命耗尽！";
-        joined_r0x0001808ec492:
+        joined_r0x00018091f312:
           if (lVar2 == null) throw; // [null/range check failed]
           uVar8 = 25;
-        LAB_1808ec4a5:
+        LAB_18091f325:
           local_28 = *puVar5;
           uStack_24 = puVar5[1];
           uStack_20 = puVar5[2];
@@ -113,7 +113,7 @@ public class <FinishStudyFightSkill>d__28
             uVar9 = *(uint32 *)(puVar4 + 1);
             puVar5 = (uint32 *)Color.get_yellow(&local_28,0);
             uVar7 = "修炼终止！";
-            goto joined_r0x0001808ec492;
+            goto joined_r0x00018091f312;
           }
           if (iVar1 == 2) {
             iVar1 = *(int *)(lVar6 + 36);
@@ -169,7 +169,7 @@ public class <FinishStudyFightSkill>d__28
                   puVar5 = (uint32 *)Color.get_green(&local_28,0);
                   uVar7 = "表现不佳！";
                 }
-                goto joined_r0x0001808ec492;
+                goto joined_r0x00018091f312;
               }
               lVar2 = FUN_18046c0a0(0);
               if ((*(int64 *)(lVar6 + 80) == 0) ||
@@ -184,7 +184,7 @@ public class <FinishStudyFightSkill>d__28
               uVar8 = 26;
               uVar7 = "表现优秀！";
             }
-            goto LAB_1808ec4a5;
+            goto LAB_18091f325;
           }
         }
         uVar7 = *(uint64 *)(lVar6 + 72);
@@ -207,15 +207,15 @@ public class <FinishStudyFightSkill>d__28
     }
 
     // Token : 0x6002228
-    // RVA   : 0x8EC600   Offset: 0x8EBA00   Length: 0x3E
+    // RVA   : 0x91F480   Offset: 0x91E880   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db47e8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4998);
     }
 
     // Token : 0x6002229

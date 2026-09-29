@@ -6,60 +6,60 @@
 public class TextureController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D75
+    // Token: 0x4001D76
     private Dictionary<string, SpriteAtlas> AtlasData;
 
-    // Token: 0x4001D76
+    // Token: 0x4001D77
     public int GrassTileNum;
 
-    // Token: 0x4001D77
+    // Token: 0x4001D78
     public int RoadTileNum;
 
-    // Token: 0x4001D78
+    // Token: 0x4001D79
     private static TextureController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60022EF
-    // RVA   : 0xAA4E90   Offset: 0xAA4290   Length: 0x36
+    // RVA   : 0xAA5550   Offset: 0xAA4950   Length: 0x36
     public static TextureController get_Instance()
     {
-        return **(uint64 **)(DAT_181dab490 + 184);
+        return **(uint64 **)(DAT_181dab4a8 + 184);
     }
 
     // Token : 0x60022F0
-    // RVA   : 0xAA4AB0   Offset: 0xAA3EB0   Length: 0x124
+    // RVA   : 0xAA5170   Offset: 0xAA4570   Length: 0x124
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181dab490 + 184);
+        uVar3 = **(uint64 **)(DAT_181dab4a8 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
         }
         else {
-          plVar1 = *(int64 **)(DAT_181dab490 + 184);
+          plVar1 = *(int64 **)(DAT_181dab4a8 + 184);
           *plVar1 = this;
           il2cpp_internal(plVar1,this);
         }
-        uVar3 = il2cpp_internal(DAT_181d832e8);
+        uVar3 = il2cpp_internal(DAT_181d83300);
         FUN_1808b1370(uVar3,DAT_181d75610);
         this.AtlasData = uVar3;
     }
 
     // Token : 0x60022F1
-    // RVA   : 0xAA4C90   Offset: 0xAA4090   Length: 0x6C
+    // RVA   : 0xAA5350   Offset: 0xAA4750   Length: 0x6C
     private void Init()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d832e8);
+        uVar1 = il2cpp_internal(DAT_181d83300);
         FUN_1808b1370(uVar1,DAT_181d75610);
         this.AtlasData = uVar1;
     }
 
     // Token : 0x60022F2
-    // RVA   : 0xAA4D00   Offset: 0xAA4100   Length: 0x18E
+    // RVA   : 0xAA53C0   Offset: 0xAA47C0   Length: 0x18E
     public Sprite LoadAtlasSprite(string atlasPath, string spriteName)
     {
         uint64
@@ -95,7 +95,7 @@ public class TextureController
                 return 0;
               }
               if ((this.AtlasData != null) &&
-                 (lVar5 = FUN_1817c63a0(this.AtlasData,atlasPath,DAT_181d757a8)) != null)
+                 (lVar5 = FUN_1817c69b0(this.AtlasData,atlasPath,DAT_181d757a8)) != null)
               {
                 uVar4 = SpriteAtlas.GetSprite(lVar5,spriteName,0);
                 return uVar4;
@@ -106,7 +106,7 @@ public class TextureController
     }
 
     // Token : 0x60022F3
-    // RVA   : 0xAA4BE0   Offset: 0xAA3FE0   Length: 0xAD
+    // RVA   : 0xAA52A0   Offset: 0xAA46A0   Length: 0xAD
     private Sprite FindSpriteFromBuffer(string atlasPath, string spriteName)
     {
         uint64
@@ -121,7 +121,7 @@ public class TextureController
             return 0;
           }
           if (this.AtlasData != null) {
-            lVar2 = FUN_1817c63a0(this.AtlasData,atlasPath,DAT_181d757a8);
+            lVar2 = FUN_1817c69b0(this.AtlasData,atlasPath,DAT_181d757a8);
             if (lVar2 != null) {
               uVar3 = SpriteAtlas.GetSprite(lVar2,spriteName,0);
               return uVar3;

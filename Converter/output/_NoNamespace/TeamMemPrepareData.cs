@@ -26,7 +26,7 @@ public class TeamMemPrepareData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000AF6
-    // RVA   : 0xA9D610   Offset: 0xA9CA10   Length: 0x76
+    // RVA   : 0xA9DCD0   Offset: 0xA9D0D0   Length: 0x76
     public void /*ctor*/(int _teamID, HeroData _heroData, bool _enterBattle, float _enterBattleTime, float _startMovePower, int _enterSide)
     {
         void TeamMemPrepareData.ctor
@@ -44,7 +44,7 @@ public class TeamMemPrepareData
     }
 
     // Token : 0x6000AF7
-    // RVA   : 0xA9D2D0   Offset: 0xA9C6D0   Length: 0x336
+    // RVA   : 0xA9D990   Offset: 0xA9CD90   Length: 0x336
     public bool PrepareControlable()
     {
         uint uVar1;
@@ -60,35 +60,35 @@ public class TeamMemPrepareData
             if (((GameController._instance == null) ||
                 (lVar4 = GameController._instance.worldData) == null) ||
                (lVar4 = WorldData.Player(lVar4,0)) == null) throw; // [null/range check failed]
-            if (lVar4.isLeader) goto LAB_180a9d3ed;
+            if (lVar4.isLeader) goto LAB_180a9daad;
           }
-        LAB_180a9d4c1:
-          uVar5 = *(uint64 *)(DAT_181db0248 + 184);
+        LAB_180a9db81:
+          uVar5 = *(uint64 *)(DAT_181db0260 + 184);
           if (uVar5.heroAISettingData == null) throw; // [null/range check failed]
-          if (*(int *)(uVar5.heroAISettingData + 140) < 0) goto LAB_180a9d5f4;
+          if (*(int *)(uVar5.heroAISettingData + 140) < 0) goto LAB_180a9dcb4;
           iVar2 = this.teamID;
-          uVar5 = *(uint64 *)(DAT_181db0248 + 184);
+          uVar5 = *(uint64 *)(DAT_181db0260 + 184);
           if (uVar5.heroAISettingData == null) throw; // [null/range check failed]
-          if (iVar2 != *(int *)(uVar5.heroAISettingData + 140)) goto LAB_180a9d5f4;
+          if (iVar2 != *(int *)(uVar5.heroAISettingData + 140)) goto LAB_180a9dcb4;
         }
         else {
-        LAB_180a9d3ed:
+        LAB_180a9daad:
 
-          if ((lVar4 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80)?.heroFamilyName) == null) throw; // [null/range check failed]
+          if ((lVar4 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80)?.heroFamilyName) == null) throw; // [null/range check failed]
           uVar1 = this.teamID;
           if (lVar4.summonLv <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = lVar4.isSummon[uVar1];
           if (lVar4 == null) throw; // [null/range check failed]
-          if (!lVar4.summonID) goto LAB_180a9d4c1;
+          if (!lVar4.summonID) goto LAB_180a9db81;
         }
         uVar5 = this.heroData;
         if (uVar5 != 0) {
           if ((uVar5.heroID != null) && (!uVar5.fightProtectTarget)) {
             return CONCAT71((int7)(uVar5 >> 8),!uVar5.fightForceEnter);
           }
-        LAB_180a9d5f4:
+        LAB_180a9dcb4:
           return uVar5 & 0xffffffffffffff00;
         }
     }

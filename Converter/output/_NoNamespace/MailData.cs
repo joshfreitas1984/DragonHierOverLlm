@@ -53,7 +53,7 @@ public class MailData
     }
 
     // Token : 0x6001085
-    // RVA   : 0xA868E0   Offset: 0xA85CE0   Length: 0x18B
+    // RVA   : 0xA86FA0   Offset: 0xA863A0   Length: 0x18B
     public void /*ctor*/(string _mailTitle, string _mailText, TimeData _mailTime, bool _important, bool _notImportant)
     {
                          uint8 _important,uint8 _notImportant)
@@ -77,7 +77,7 @@ public class MailData
     }
 
     // Token : 0x6001086
-    // RVA   : 0xA86760   Offset: 0xA85B60   Length: 0x175
+    // RVA   : 0xA86E20   Offset: 0xA86220   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -88,13 +88,13 @@ public class MailData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -106,7 +106,7 @@ public class MailData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

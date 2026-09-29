@@ -50,10 +50,10 @@ public class TankController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009BE
-    // RVA   : 0xA9C5F0   Offset: 0xA9B9F0   Length: 0x709
+    // RVA   : 0xA9CCB0   Offset: 0xA9C0B0   Length: 0x709
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8b138 + 184);
+        var pStatics = *(int64*)(DAT_181d8b150 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -155,25 +155,25 @@ public class TankController
         if (0.0 < ABS(this._moveSpeed)) {
           lVar5 = *(int64 *)(pStatics + 8);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(DAT_181d8b138 + 184);
-            lVar5 = new OnTooltipCB(uVar1,DAT_181db5a80,DAT_181d986a8);
+            uVar1 = **(uint64 **)(DAT_181d8b150 + 184);
+            lVar5 = new OnTooltipCB(uVar1,DAT_181db5c28,DAT_181d986c0);
             plVar8 = (int64 *)(pStatics + 8);
-            goto LAB_180a9ca27;
+            goto LAB_180a9d0e7;
           }
         }
         else {
           lVar5 = *(int64 *)(pStatics + 16);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(DAT_181d8b138 + 184);
-            lVar5 = new OnTooltipCB(uVar1,DAT_181db5b00,DAT_181d986a8);
+            uVar1 = **(uint64 **)(DAT_181d8b150 + 184);
+            lVar5 = new OnTooltipCB(uVar1,DAT_181db5cb0,DAT_181d986c0);
             plVar8 = (int64 *)(pStatics + 16);
-        LAB_180a9ca27:
+        LAB_180a9d0e7:
             *plVar8 = lVar5;
             il2cpp_internal(plVar8,lVar5);
           }
         }
         if (lVar6 != null) {
-          FUN_18181f150(lVar6,lVar5,DAT_181da7b18);
+          FUN_18181f760(lVar6,lVar5,DAT_181da7b30);
           lVar6 = Component.get_transform(this,0);
           if (lVar6 != null) {
             puVar7 = (uint64 *)Transform.get_position(local_78,lVar6,0);

@@ -23,7 +23,7 @@ public class BigMapRandomEventController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D1B
-    // RVA   : 0xC7BF90   Offset: 0xC7B390   Length: 0x4A3
+    // RVA   : 0xC7C5A0   Offset: 0xC7B9A0   Length: 0x4A3
     private void Update()
     {
         bool cVar1;
@@ -42,15 +42,15 @@ public class BigMapRandomEventController
         if (lVar3 != null) {
           if (!lVar3.happened) {
             if (!lVar3.seen) {
-              lVar3 = Component.GetComponent(this,DAT_181d95de0);
-              pfVar6 = (float *)FUN_180d98fe0(&local_28,0);
+              lVar3 = Component.GetComponent(this,DAT_181d95df8);
+              pfVar6 = (float *)FUN_180d995f0(&local_28,0);
               if (lVar3 != null) {
                 local_28 = *pfVar6;
                 fStack_24 = pfVar6[1];
                 fStack_20 = pfVar6[2];
                 fStack_1c = pfVar6[3];
                 SpriteRenderer.set_color(lVar3,&local_28,0);
-                lVar3 = Component.GetComponent(this,DAT_181d935e0);
+                lVar3 = Component.GetComponent(this,DAT_181d935f8);
                 if (lVar3 != null) {
                   Collider.set_enabled(lVar3,0,0);
                   lVar3 = Component.get_transform(this,0);
@@ -87,14 +87,14 @@ public class BigMapRandomEventController
                   local_30 = fStack_20;
                   Transform.set_localScale(lVar3,&local_38,0);
                   if (this.showed) {
-        LAB_180c7c2a4:
+        LAB_180c7c8b4:
                     if (!this.inited) {
                       BigMapRandomEventController.Init(this,0);
                     }
                     return;
                   }
                   this.showed = 1;
-                  lVar3 = Component.GetComponent(this,DAT_181d95de0);
+                  lVar3 = Component.GetComponent(this,DAT_181d95df8);
                   if (this.bigMapRandomEventData != null) {
                     uVar2 = EventData.GetEventRareLv(this.bigMapRandomEventData,0);
                     pfVar6 = (float *)GlobalData.GetEventColor(&local_28,uVar2,0);
@@ -109,9 +109,9 @@ public class BigMapRandomEventController
                       fStack_20 = pfVar6[2];
                       fStack_1c = pfVar6[3];
                       SpriteRenderer.set_color(lVar3,&local_28,0);
-                      uVar7 = Component.GetComponent(this,DAT_181d95de0);
+                      uVar7 = Component.GetComponent(this,DAT_181d95df8);
                       DOTweenModuleSprite.DOFade(uVar7,0x3f800000,0x3f800000,0);
-                      lVar3 = Component.GetComponent(this,DAT_181d935e0);
+                      lVar3 = Component.GetComponent(this,DAT_181d935f8);
                       if (lVar3 != null) {
                         Collider.set_enabled(lVar3,1,0);
                         lVar3 = Component.get_transform(this,0);
@@ -125,7 +125,7 @@ public class BigMapRandomEventController
                                 (lVar3 = Transform.Find(lVar3,"SeeRange",0)) != null) &&
                                (lVar3 = Component.get_gameObject(lVar3,0)) != null) {
                               GameObject.SetActive(lVar3,0,0);
-                              goto LAB_180c7c2a4;
+                              goto LAB_180c7c8b4;
                             }
                           }
                         }
@@ -149,10 +149,10 @@ public class BigMapRandomEventController
     }
 
     // Token : 0x6000D1C
-    // RVA   : 0xC7BB40   Offset: 0xC7AF40   Length: 0x34A
+    // RVA   : 0xC7C150   Offset: 0xC7B550   Length: 0x34A
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181dab490 + 184);
+        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
         long lVar1;
         float fVar2;
         bool cVar3;
@@ -168,7 +168,7 @@ public class BigMapRandomEventController
         lVar4 = this.bigMapRandomEventData;
         this.inited = 1;
         fVar2 = local_30;
-        if (lVar4 == null) goto LAB_180c7be85;
+        if (lVar4 == null) goto LAB_180c7c495;
         if (lVar4.plotTargetEvent == false) {
           if (!lVar4.missionTargetEvent) {
             lVar1 = this.isNewIcon;
@@ -177,37 +177,37 @@ public class BigMapRandomEventController
                 cVar3 = GameObject.get_activeSelf(lVar1,0);
                 if (!cVar3) {
                   fVar2 = local_30;
-                  if (this.isNewIcon == null) goto LAB_180c7be85;
+                  if (this.isNewIcon == null) goto LAB_180c7c495;
                   GameObject.SetActive(this.isNewIcon,1,0);
                 }
                 return;
               }
-              goto LAB_180c7be85;
+              goto LAB_180c7c495;
             }
-            if (lVar1 == null) goto LAB_180c7be85;
+            if (lVar1 == null) goto LAB_180c7c495;
             cVar3 = GameObject.get_activeSelf(lVar1,0);
             if (!cVar3) {
               return;
             }
           }
           else {
-            if (this.isMissionTarget == null) goto LAB_180c7be85;
+            if (this.isMissionTarget == null) goto LAB_180c7c495;
             GameObject.SetActive(this.isMissionTarget,1,0);
             fVar2 = local_30;
-            if (this.isMissionTarget == null) goto LAB_180c7be85;
+            if (this.isMissionTarget == null) goto LAB_180c7c495;
             lVar4 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
             fVar2 = local_30;
             if ((*pStatics == 0) ||
                (uVar5 = TextureController.LoadAtlasSprite
                                   (*pStatics,"BigMapAtlas","任务目标",0),
-               fVar2 = local_30, lVar4 == null)) goto LAB_180c7be85;
+               fVar2 = local_30, lVar4 == null)) goto LAB_180c7c495;
             SpriteRenderer.set_sprite(lVar4,uVar5,0);
             fVar2 = local_30;
-            if (this.isMissionTarget == null) goto LAB_180c7be85;
+            if (this.isMissionTarget == null) goto LAB_180c7c495;
             lVar4 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
-            puVar6 = (uint32 *)FUN_1810d3570(&local_18,0);
+            puVar6 = (uint32 *)FUN_1810d3b80(&local_18,0);
             fVar2 = local_30;
-            if (lVar4 == null) goto LAB_180c7be85;
+            if (lVar4 == null) goto LAB_180c7c495;
             local_18 = *puVar6;
             uStack_14 = puVar6[1];
             uStack_10 = puVar6[2];
@@ -216,37 +216,37 @@ public class BigMapRandomEventController
           }
         }
         else {
-          if (this.isMissionTarget == null) goto LAB_180c7be85;
+          if (this.isMissionTarget == null) goto LAB_180c7c495;
           GameObject.SetActive(this.isMissionTarget,1,0);
           fVar2 = local_30;
-          if (this.isMissionTarget == null) goto LAB_180c7be85;
+          if (this.isMissionTarget == null) goto LAB_180c7c495;
           lVar4 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
           fVar2 = local_30;
           if ((*pStatics == 0) ||
              (uVar5 = TextureController.LoadAtlasSprite
                                 (*pStatics,"BigMapAtlas","问号",0),
-             fVar2 = local_30, lVar4 == null)) goto LAB_180c7be85;
+             fVar2 = local_30, lVar4 == null)) goto LAB_180c7c495;
           SpriteRenderer.set_sprite(lVar4,uVar5,0);
           fVar2 = local_30;
-          if (this.isMissionTarget == null) goto LAB_180c7be85;
+          if (this.isMissionTarget == null) goto LAB_180c7c495;
           lVar4 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
           puVar6 = (uint32 *)Color.get_yellow(&local_18,0);
           fVar2 = local_30;
-          if (lVar4 == null) goto LAB_180c7be85;
+          if (lVar4 == null) goto LAB_180c7c495;
           local_18 = *puVar6;
           uStack_14 = puVar6[1];
           uStack_10 = puVar6[2];
           uStack_c = puVar6[3];
           SpriteRenderer.set_color(lVar4,&local_18,0);
           fVar2 = local_30;
-          if (this.isMissionTarget == null) goto LAB_180c7be85;
+          if (this.isMissionTarget == null) goto LAB_180c7c495;
           lVar4 = GameObject.get_transform(this.isMissionTarget,0);
           puVar7 = (uint64 *)Vector3.get_one(&local_18,0);
           local_38 = *puVar7;
           local_30 = *(float *)(puVar7 + 1) * 0.4;
           local_48 = CONCAT44((float)((uint64)local_38 >> 32) * 0.4,(float)local_38 * 0.4);
           fVar2 = *(float *)(puVar7 + 1);
-          if (lVar4 == null) goto LAB_180c7be85;
+          if (lVar4 == null) goto LAB_180c7c495;
           local_38 = local_48;
           Transform.set_localScale(lVar4,&local_38,0);
         }
@@ -255,17 +255,17 @@ public class BigMapRandomEventController
           GameObject.SetActive(this.isNewIcon,0,0);
           return;
         }
-        LAB_180c7be85:
+        LAB_180c7c495:
         local_30 = fVar2;
     }
 
     // Token : 0x6000D1D
-    // RVA   : 0xC7BE90   Offset: 0xC7B290   Length: 0xCC
+    // RVA   : 0xC7C4A0   Offset: 0xC7B8A0   Length: 0xCC
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0bc8 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           BigMapController.SetPlayerMoveTargetArea(lVar1,uVar2,0);
@@ -277,7 +277,7 @@ public class BigMapRandomEventController
     // RVA   : 0x7EBBC0   Offset: 0x7EAFC0   Length: 0x5B
     public void OnDrag(Vector2 delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnDrag(*pStatics,delta,0);
           return;
@@ -288,7 +288,7 @@ public class BigMapRandomEventController
     // RVA   : 0x7EBC20   Offset: 0x7EB020   Length: 0x57
     public void OnScroll(float delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnScroll(*pStatics,delta,0);
           return;
@@ -296,7 +296,7 @@ public class BigMapRandomEventController
     }
 
     // Token : 0x6000D20
-    // RVA   : 0xC7BF60   Offset: 0xC7B360   Length: 0x2D
+    // RVA   : 0xC7C570   Offset: 0xC7B970   Length: 0x2D
     public void OnHover()
     {
         if (this.bigMapRandomEventData != null) {

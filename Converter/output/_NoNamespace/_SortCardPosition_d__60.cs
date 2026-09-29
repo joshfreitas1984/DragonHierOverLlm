@@ -34,7 +34,7 @@ public class <SortCardPosition>d__60
     }
 
     // Token : 0x60013B4
-    // RVA   : 0x933610   Offset: 0x932A10   Length: 0x26B
+    // RVA   : 0x933C70   Offset: 0x933070   Length: 0x26B
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -49,7 +49,7 @@ public class <SortCardPosition>d__60
         if (this.<>1__state == 0) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 1;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar3;
           this.<>1__state = 1;
           return true;
@@ -95,15 +95,15 @@ public class <SortCardPosition>d__60
     }
 
     // Token : 0x60013B6
-    // RVA   : 0x933880   Offset: 0x932C80   Length: 0x3E
+    // RVA   : 0x933EE0   Offset: 0x9332E0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d9fea8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da0040);
     }
 
     // Token : 0x60013B7

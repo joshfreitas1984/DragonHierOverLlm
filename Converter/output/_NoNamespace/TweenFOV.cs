@@ -17,7 +17,7 @@ public class TweenFOV
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60005A5
-    // RVA   : 0xAE99D0   Offset: 0xAE8DD0   Length: 0xAC
+    // RVA   : 0xAEA090   Offset: 0xAE9490   Length: 0xAC
     public Camera get_cachedCamera()
     {
         bool cVar1;
@@ -25,14 +25,14 @@ public class TweenFOV
         uVar2 = this.mCam;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (cVar1) {
-          uVar2 = Component.GetComponent(this,DAT_181d937e0);
+          uVar2 = Component.GetComponent(this,DAT_181d937f8);
           this.mCam = uVar2;
         }
         return this.mCam;
     }
 
     // Token : 0x60005A6
-    // RVA   : 0xAE9A80   Offset: 0xAE8E80   Length: 0x23
+    // RVA   : 0xAEA140   Offset: 0xAE9540   Length: 0x23
     public float get_fov()
     {
         long lVar1;
@@ -44,7 +44,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005A7
-    // RVA   : 0xAE9AB0   Offset: 0xAE8EB0   Length: 0x34
+    // RVA   : 0xAEA170   Offset: 0xAE9570   Length: 0x34
     public void set_fov(float value)
     {
         long lVar1;
@@ -56,7 +56,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005A8
-    // RVA   : 0xAE9A80   Offset: 0xAE8E80   Length: 0x23
+    // RVA   : 0xAEA140   Offset: 0xAE9540   Length: 0x23
     public float get_value()
     {
         long lVar1;
@@ -68,7 +68,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005A9
-    // RVA   : 0xAE9AB0   Offset: 0xAE8EB0   Length: 0x34
+    // RVA   : 0xAEA170   Offset: 0xAE9570   Length: 0x34
     public void set_value(float value)
     {
         long lVar1;
@@ -80,7 +80,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005AA
-    // RVA   : 0xAE9860   Offset: 0xAE8C60   Length: 0x6B
+    // RVA   : 0xAE9F20   Offset: 0xAE9320   Length: 0x6B
     protected override void OnUpdate(float factor, bool isFinished)
     {
         float fVar1;
@@ -96,13 +96,13 @@ public class TweenFOV
     }
 
     // Token : 0x60005AB
-    // RVA   : 0xAE9790   Offset: 0xAE8B90   Length: 0xC6
+    // RVA   : 0xAE9E50   Offset: 0xAE9250   Length: 0xC6
     public static TweenFOV Begin(GameObject go, float duration, float to)
     {
         long lVar1;
         long lVar2;
         uint uVar3;
-        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc6bb8);
+        lVar1 = UITweener.Begin(go,duration,0,DAT_181dc6d68);
         if (lVar1 != null) {
           lVar2 = TweenFOV.get_cachedCamera(lVar1,0);
           if (lVar2 != null) {
@@ -119,7 +119,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005AC
-    // RVA   : 0xAE9980   Offset: 0xAE8D80   Length: 0x2F
+    // RVA   : 0xAEA040   Offset: 0xAE9440   Length: 0x2F
     public override void SetStartToCurrentValue()
     {
         long lVar1;
@@ -133,7 +133,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005AD
-    // RVA   : 0xAE9950   Offset: 0xAE8D50   Length: 0x2F
+    // RVA   : 0xAEA010   Offset: 0xAE9410   Length: 0x2F
     public override void SetEndToCurrentValue()
     {
         long lVar1;
@@ -147,7 +147,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005AE
-    // RVA   : 0xAE9910   Offset: 0xAE8D10   Length: 0x36
+    // RVA   : 0xAE9FD0   Offset: 0xAE93D0   Length: 0x36
     private void SetCurrentValueToStart()
     {
         uint uVar1;
@@ -161,7 +161,7 @@ public class TweenFOV
     }
 
     // Token : 0x60005AF
-    // RVA   : 0xAE98D0   Offset: 0xAE8CD0   Length: 0x36
+    // RVA   : 0xAE9F90   Offset: 0xAE9390   Length: 0x36
     private void SetCurrentValueToEnd()
     {
         uint uVar1;
@@ -175,10 +175,10 @@ public class TweenFOV
     }
 
     // Token : 0x60005B0
-    // RVA   : 0xAE99B0   Offset: 0xAE8DB0   Length: 0x15
+    // RVA   : 0xAEA070   Offset: 0xAE9470   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180ae99b0(int64 this)
+        void FUN_180aea070(int64 this)
         {
         this.from = 0x42340000;
         this.to = 0x42340000;

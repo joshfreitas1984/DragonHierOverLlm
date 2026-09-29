@@ -110,14 +110,14 @@ public class AuctionController
     // RVA   : 0x7F4600   Offset: 0x7F3A00   Length: 0x58
     public static AuctionController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181daf2c8 + 184) + 24);
+        return *(uint64 *)(*(int64 *)(DAT_181daf2e0 + 184) + 24);
     }
 
     // Token : 0x6000AAF
     // RVA   : 0x7F1880   Offset: 0x7F0C80   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181daf2c8 + 184) + 24);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181daf2e0 + 184) + 24);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
@@ -149,11 +149,11 @@ public class AuctionController
         lVar1 = this.timeBar;
         fVar13 = this.offerRoundLeftTime;
         if (lVar1 != null) {
-          Image.set_fillAmount(lVar1,fVar13 / **(float **)(DAT_181daf2c8 + 184),0);
+          Image.set_fillAmount(lVar1,fVar13 / **(float **)(DAT_181daf2e0 + 184),0);
           if (((this.auctionPanel != null) &&
               (lVar1 = GameObject.get_transform(this.auctionPanel,0)) != null) &&
              (lVar1 = Transform.Find(lVar1,"Round",0)) != null) {
-            uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+            uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
             uVar8 = this.round;
             uVar3 = GlobalData.GetNumText(uVar8,0);
             uVar3 = String.Format("第{0}件",uVar3,0);
@@ -162,7 +162,7 @@ public class AuctionController
               if (((this.playerAuctionUI == null) ||
                   (lVar1 = GameObject.get_transform(this.playerAuctionUI,0)) == null) ||
                  (lVar1 = Transform.Find(lVar1,"PlayerOfferMoney",0)) == null) throw; // [null/range check failed]
-              uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
               local_res8[0] = (int)this.playerOfferMoney;
               uVar3 = Int32.ToString(local_res8,0);
               lVar1 = FUN_18046c0a0(0);
@@ -175,7 +175,7 @@ public class AuctionController
               if (((this.playerAuctionUI == null) ||
                   (lVar1 = GameObject.get_transform(this.playerAuctionUI,0)) == null) ||
                  (lVar1 = Transform.Find(lVar1,"PlayerOfferMoney",0)) == null) throw; // [null/range check failed]
-              plVar5 = (int64 *)Component.GetComponent(lVar1,DAT_181d96160);
+              plVar5 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
               fVar13 = this.playerOfferMoney;
               lVar1 = FUN_18046c0a0(0);
               if (((lVar1 == null) || (*(int64 *)(lVar1 + 32) == 0)) ||
@@ -204,18 +204,18 @@ public class AuctionController
               if ((((this.playerAuctionUI == null) ||
                    (lVar1 = GameObject.get_transform(this.playerAuctionUI,0)) == null) ||
                   (lVar1 = Transform.Find(lVar1,"AddButton",0)) == null) ||
-                 (lVar1 = Component.GetComponent(lVar1,DAT_181d93760)) == null) throw; // [null/range check failed]
+                 (lVar1 = Component.GetComponent(lVar1,DAT_181d93778)) == null) throw; // [null/range check failed]
               Selectable.set_interactable(lVar1,this.auctionStep == 2,0);
               if (((this.playerAuctionUI == null) ||
                   (lVar1 = GameObject.get_transform(this.playerAuctionUI,0)) == null) ||
                  ((lVar1 = Transform.Find(lVar1,"MinusButton",0), lVar1 == null ||
-                  (lVar1 = Component.GetComponent(lVar1,DAT_181d93760)) == null)))
+                  (lVar1 = Component.GetComponent(lVar1,DAT_181d93778)) == null)))
               throw; // [null/range check failed]
               Selectable.set_interactable(lVar1,this.auctionStep == 2,0);
               if (((this.playerAuctionUI == null) ||
                   (lVar1 = GameObject.get_transform(this.playerAuctionUI,0)) == null) ||
                  ((lVar1 = Transform.Find(lVar1,"OfferButton",0), lVar1 == null ||
-                  (lVar1 = Component.GetComponent(lVar1,DAT_181d93760)) == null)))
+                  (lVar1 = Component.GetComponent(lVar1,DAT_181d93778)) == null)))
               throw; // [null/range check failed]
               Selectable.set_interactable(lVar1,this.auctionStep == 2,0);
             }
@@ -243,7 +243,7 @@ public class AuctionController
                 lVar1 = AuctionController.RefreshOfferMoney
                                   (this,uVar8,this.nextOfferHero,0);
               }
-              FUN_180d8c2e0(this,lVar1,0);
+              FUN_180d8c8f0(this,lVar1,0);
             }
             return;
           }
@@ -273,7 +273,7 @@ public class AuctionController
               uVar2 = Component.get_gameObject(lVar1,0);
               GlobalData.DeleteAllChild(uVar2,0);
               if (this.auctionItemList != null) {
-                FUN_1812f9a10(this.auctionItemList,DAT_181d90b18);
+                FUN_1812fa020(this.auctionItemList,DAT_181d90b30);
                 if (this.auctionPanel != null) {
                   lVar1 = GameObject.get_transform(this.auctionPanel,0);
                   if (lVar1 != null) {
@@ -282,7 +282,7 @@ public class AuctionController
                       uVar2 = Component.get_gameObject(lVar1,0);
                       GlobalData.DeleteAllChild(uVar2,0);
                       if (this.heroList != null) {
-                        FUN_1812f9a10(this.heroList,DAT_181d8b618);
+                        FUN_1812fa020(this.heroList,DAT_181d8b630);
                         if (this.auctionPanel != null) {
                           lVar1 = GameObject.get_transform(this.auctionPanel,0);
                           if (lVar1 != null) {
@@ -293,7 +293,7 @@ public class AuctionController
                               if (this.auctionPanel != null) {
                                 GameObject.SetActive(this.auctionPanel,0,0);
                                 lVar1 = this.endMatchCallPlot;
-                                lVar3 = FUN_1800d60b0(DAT_181da1040,1);
+                                lVar3 = FUN_1800d60b0(DAT_181da1058,1);
                                 if (lVar3 != null) {
                                   if (*(int *)(lVar3 + 24) == 0) {
                                     uVar2 = il2cpp_internal();
@@ -369,37 +369,37 @@ public class AuctionController
         lVar6 = this.auctionItemList;
         lVar4 = AuctionController.offerHeroTalk;
         if (lVar4 == null) {
-          uVar5 = **(uint64 **)(DAT_181dc28c8 + 184);
-          lVar4 = new OnTooltipCB(uVar5,DAT_181d96eb8,DAT_181dab4b8);
+          uVar5 = **(uint64 **)(DAT_181dc28e0 + 184);
+          lVar4 = new OnTooltipCB(uVar5,DAT_181d97050,DAT_181dab4d0);
           AuctionController.offerHeroTalk = lVar4;
         }
         if (lVar6 == null) throw; // [null/range check failed]
-        List_1.Sort(lVar6,lVar4,DAT_181d90e18);
+        List_1.Sort(lVar6,lVar4,DAT_181d90e30);
         if (this.playerSellItem != null) {
           if (this.auctionItemList == null) throw; // [null/range check failed]
-          cVar1 = FUN_18181e400(this.auctionItemList,this.playerSellItem,DAT_181d90b98)
+          cVar1 = FUN_18181ea10(this.auctionItemList,this.playerSellItem,DAT_181d90bb0)
           ;
           if (cVar1) {
             if (this.auctionItemList == null) throw; // [null/range check failed]
-            FUN_1817eee00(this.auctionItemList,this.playerSellItem,DAT_181d90d18);
+            FUN_1817ef410(this.auctionItemList,this.playerSellItem,DAT_181d90d30);
             if (this.auctionItemList == null) throw; // [null/range check failed]
-            FUN_181822520(this.auctionItemList,0,this.playerSellItem,DAT_181d90c98);
+            FUN_181822b30(this.auctionItemList,0,this.playerSellItem,DAT_181d90cb0);
           }
         }
         lVar6 = this.heroList;
         if (((GameController._instance != null) &&
             (lVar4 = GameController._instance.worldData) != null) &&
            (uVar5 = WorldData.Player(lVar4,0), lVar6 != null)) {
-          FUN_1817eee00(lVar6,uVar5,DAT_181d8b898);
+          FUN_1817ef410(lVar6,uVar5,DAT_181d8b8b0);
           lVar6 = this.heroList;
           lVar4 = AuctionController.dealHeroTalk;
           if (lVar4 == null) {
-            uVar5 = **(uint64 **)(DAT_181dc28c8 + 184);
-            lVar4 = new OnTooltipCB(uVar5,DAT_181d96f38,DAT_181dab2b8);
+            uVar5 = **(uint64 **)(DAT_181dc28e0 + 184);
+            lVar4 = new OnTooltipCB(uVar5,DAT_181d970d0,DAT_181dab2d0);
             AuctionController.dealHeroTalk = lVar4;
           }
           if (lVar6 != null) {
-            List_1.Sort(lVar6,lVar4,DAT_181d8ba18);
+            List_1.Sort(lVar6,lVar4,DAT_181d8ba30);
             lVar6 = this.auctionItemList;
             iVar8 = 0;
             if (lVar6 != null) {
@@ -413,23 +413,23 @@ public class AuctionController
                 }
                 fVar9 = (float)GlobalData.RandomRange();
                 if ((this.auctionItemList == null) ||
-                   (lVar6 = FUN_180002f80(this.auctionItemList,iVar8,DAT_181d90f18)) == null)
+                   (lVar6 = FUN_180002f80(this.auctionItemList,iVar8,DAT_181d90f30)) == null)
                 break;
                 uVar2 = Mathf.RoundToInt((float)*(int *)(lVar6 + 56) * fVar9,0);
                 if ((this.heroList == null) ||
-                   ((lVar6 = FUN_180002f80(this.heroList,iVar8,DAT_181d8bb98), lVar6 == null
+                   ((lVar6 = FUN_180002f80(this.heroList,iVar8,DAT_181d8bbb0), lVar6 == null
                     || (*(int64 *)(lVar6 + 0x220) == 0)))) break;
                 iVar3 = Mathf.Min(uVar2,*(uint32 *)(*(int64 *)(lVar6 + 0x220) + 24),0);
                 if (this.heroList == null) break;
-                lVar6 = FUN_180002f80(this.heroList,iVar8,DAT_181d8bb98);
+                lVar6 = FUN_180002f80(this.heroList,iVar8,DAT_181d8bbb0);
                 if ((this.auctionItemList == null) ||
-                   (lVar4 = FUN_180002f80(this.auctionItemList,iVar8,DAT_181d90f18), lVar6 == null))
+                   (lVar4 = FUN_180002f80(this.auctionItemList,iVar8,DAT_181d90f30), lVar6 == null))
                 break;
                 HeroData.ChangeMoney(lVar6,-iVar3,lVar4 == this.playerSellItem);
                 if (this.heroList == null) break;
-                lVar6 = FUN_180002f80(this.heroList,iVar8,DAT_181d8bb98);
+                lVar6 = FUN_180002f80(this.heroList,iVar8,DAT_181d8bbb0);
                 if ((this.auctionItemList == null) ||
-                   (uVar5 = FUN_180002f80(this.auctionItemList,iVar8,DAT_181d90f18), lVar6 == null))
+                   (uVar5 = FUN_180002f80(this.auctionItemList,iVar8,DAT_181d90f30), lVar6 == null))
                 break;
                 HeroData.GetItem(lVar6,uVar5,1);
                 if (this.auctionItemList == null) break;
@@ -480,7 +480,7 @@ public class AuctionController
               this.playerSellItem = _playerSellItem;
               if (this.playerSellItem != null) {
                 if (this.auctionItemList == null) throw; // [null/range check failed]
-                FUN_181822520(this.auctionItemList,0,this.playerSellItem,DAT_181d90c98)
+                FUN_181822b30(this.auctionItemList,0,this.playerSellItem,DAT_181d90cb0)
                 ;
               }
               AuctionController.GenerateAucitonItemIcon(this,0);
@@ -488,7 +488,7 @@ public class AuctionController
               if (((this.auctionPanel != null) &&
                   (lVar3 = GameObject.get_transform(this.auctionPanel,0)) != null) &&
                  (lVar3 = Transform.Find(lVar3,"Title",0)) != null) {
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                 lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x508);
                 uVar2 = Mathf.RoundToInt(this.auctionDifficulty * 0.5,0);
                 if (lVar3 != null) {
@@ -500,7 +500,7 @@ public class AuctionController
                                          "拍卖大会",0);
                   LTLocalization.SetText(uVar4,uVar5,0);
                   if (this.heroIconList != null) {
-                    FUN_1812f9a10(this.heroIconList,DAT_181d89418);
+                    FUN_1812fa020(this.heroIconList,DAT_181d89430);
                     this.nowOfferHero = 0;
                     lVar3 = this.heroList;
                     if (lVar3 != null) {
@@ -520,7 +520,7 @@ public class AuctionController
                         if (*plVar1 == 0) break;
                         lVar3 = GameObject.GetComponent(*plVar1,DAT_181d71b50);
                         if ((this.heroList == null) ||
-                           (uVar4 = FUN_180002f80(this.heroList,iVar6,DAT_181d8bb98),
+                           (uVar4 = FUN_180002f80(this.heroList,iVar6,DAT_181d8bbb0),
                            lVar3 == null)) break;
                         *(uint64 *)(lVar3 + 32) = uVar4;
                         if ((*plVar1 == 0) ||
@@ -529,7 +529,7 @@ public class AuctionController
                         if (((*plVar1 == 0) ||
                             (lVar3 = GameObject.GetComponent(*plVar1,DAT_181d71b50)) == null) ||
                            (*(uint8 *)(lVar3 + 88) = 1, this.heroIconList == null)) break;
-                        FUN_18181e0a0();
+                        FUN_18181e6b0();
                         lVar3 = this.heroList;
                         iVar6 = iVar6 + 1;
                         if (lVar3 == null) break;
@@ -553,7 +553,7 @@ public class AuctionController
         long lVar4;
         int iVar5;
         if (this.auctionItemIconList != null) {
-          FUN_1812f9a10(this.auctionItemIconList,DAT_181d89418);
+          FUN_1812fa020(this.auctionItemIconList,DAT_181d89430);
           lVar1 = this.auctionItemList;
           iVar5 = 0;
           if (lVar1 != null) {
@@ -575,13 +575,13 @@ public class AuctionController
                  (lVar1 = NGUITools.AddChild(uVar3,*(uint64 *)(lVar1 + 160),0)) == null) break;
               lVar4 = GameObject.GetComponent(lVar1,DAT_181d720a0);
               if ((this.auctionItemList == null) ||
-                 (uVar3 = FUN_180002f80(this.auctionItemList,iVar5,DAT_181d90f18), lVar4 == null))
+                 (uVar3 = FUN_180002f80(this.auctionItemList,iVar5,DAT_181d90f30), lVar4 == null))
               break;
               *(uint64 *)(lVar4 + 32) = uVar3;
               lVar1 = GameObject.GetComponent(lVar1,DAT_181d720a0);
               if ((lVar1 == null) || (*(uint32 *)(lVar1 + 40) = 1, this.auctionItemIconList == null))
               break;
-              FUN_18181e0a0();
+              FUN_18181e6b0();
               lVar1 = this.auctionItemList;
               iVar5 = iVar5 + 1;
               if (lVar1 == null) break;
@@ -606,12 +606,12 @@ public class AuctionController
         this.round = this.round + 1;
         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/紧张",0);
         plVar9 = (int64 *)0;
-        if ((plVar3 != (int64 *)0) && (plVar9 = (int64 *)0, *plVar3 == DAT_181daf348)) {
+        if ((plVar3 != (int64 *)0) && (plVar9 = (int64 *)0, *plVar3 == DAT_181daf360)) {
           plVar9 = plVar3;
         }
         NGUITools.PlaySound(plVar9,0);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4120,5);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
         uVar1 = this.round;
         lVar4 = GlobalData.GetNumText(uVar1,0);
         if (plVar3 != (int64 *)0) {
@@ -767,7 +767,7 @@ public class AuctionController
             GameObject.SetActive(this.leaveAuctionButton,0,0);
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/开场锣",0);
             plVar4 = (int64 *)0;
-            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
               plVar4 = plVar2;
             }
             NGUITools.PlaySound(plVar4);
@@ -780,7 +780,7 @@ public class AuctionController
               if (lVar1 != null) {
                 uVar3 = AuctionController.RefreshOfferMoney
                                   (this,(float)*(int *)(lVar1 + 56) * 0.5,0,0);
-                FUN_180d8c2e0(this,uVar3,0);
+                FUN_180d8c8f0(this,uVar3,0);
                 return;
               }
             }
@@ -794,7 +794,7 @@ public class AuctionController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = **(int64 **)(DAT_181da8710 + 184);
+        lVar1 = **(int64 **)(DAT_181da8728 + 184);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           SureMenu.CallSureMenu(lVar1,"确认离开本场拍卖大会吗？","SureLeaveAuction",0,uVar2,1,0,0,0,0);
@@ -873,7 +873,7 @@ public class AuctionController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"NowOfferMoney",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
               local_res10[0] = (int)this.nowOfferMoney;
               uVar3 = Int32.ToString(local_res10,0);
               LTLocalization.SetText(uVar2,uVar3,0);
@@ -946,8 +946,8 @@ public class AuctionController
                   lVar5 = GameObject.get_transform(*(int64 *)(this + 200),0);
                   lVar3 = this.heroIconList;
                   if (this.heroList != null) {
-                    uVar2 = FUN_1817eb4e0(this.heroList,this.nowOfferHero,
-                                          DAT_181d8b798);
+                    uVar2 = FUN_1817ebaf0(this.heroList,this.nowOfferHero,
+                                          DAT_181d8b7b0);
                     if (lVar3 != null) {
                       if (lVar3.Count <= uVar2) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -976,8 +976,8 @@ public class AuctionController
                             lVar5 = GameObject.get_transform(this.highLightCover,0);
                             lVar3 = this.heroIconList;
                             if (this.heroList != null) {
-                              uVar2 = FUN_1817eb4e0(this.heroList,
-                                                    this.nowOfferHero,DAT_181d8b798);
+                              uVar2 = FUN_1817ebaf0(this.heroList,
+                                                    this.nowOfferHero,DAT_181d8b7b0);
                               if (lVar3 != null) {
                                 if (lVar3.Count <= uVar2) {
                                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1058,7 +1058,7 @@ public class AuctionController
                   GameController.ShowTextOnMouse(GameController._instance,"银钱不足！",0);
                   plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                   plVar5 = (int64 *)0;
-                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                     plVar5 = plVar4;
                   }
                   NGUITools.PlaySound(plVar5,0);
@@ -1143,7 +1143,7 @@ public class AuctionController
                 GameController.ShowTextOnMouse(GameController._instance,"银钱不足！",0);
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar5 = (int64 *)0;
-                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                   plVar5 = plVar4;
                 }
                 NGUITools.PlaySound(plVar5,0);
@@ -1155,7 +1155,7 @@ public class AuctionController
                  (lVar2 = GameController._instance.worldData) != null) {
                 uVar3 = WorldData.Player(lVar2,0);
                 uVar3 = AuctionController.RefreshOfferMoney(this,fVar1,uVar3,0);
-                FUN_180d8c2e0(this,uVar3,0);
+                FUN_180d8c8f0(this,uVar3,0);
                 return;
               }
             }
@@ -1178,7 +1178,7 @@ public class AuctionController
     {
         long lVar1;
         if (this.skipButton != null) {
-          lVar1 = GameObject.GetComponent(this.skipButton,DAT_181dc7c00);
+          lVar1 = GameObject.GetComponent(this.skipButton,DAT_181dc7c18);
           if (lVar1 != null) {
             Selectable.set_interactable(lVar1,state,0);
             if (!state) {
@@ -1206,7 +1206,7 @@ public class AuctionController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Icon",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                 lVar1 = *(int64 *)(DAT_181d73d40 + 184);
                 if (plVar2 != (int64 *)0) {
                   local_18 = *(uint32 *)(lVar1 + 0x398);
@@ -1225,7 +1225,7 @@ public class AuctionController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"Icon",0);
             if (lVar1 != null) {
-              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
               puVar3 = (uint32 *)Color.get_red(&local_18,0);
               if (plVar2 != (int64 *)0) {
                 local_18 = *puVar3;
@@ -1252,36 +1252,36 @@ public class AuctionController
     private static void /*cctor*/()
     {
         long lVar1;
-        **(uint32 **)(DAT_181daf2c8 + 184) = 0x40a00000;
-        lVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar1,DAT_181da3bd8);
+        **(uint32 **)(DAT_181daf2e0 + 184) = 0x40a00000;
+        lVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar1,DAT_181da3bf0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,"我出{0}两！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"{0}两！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"便是{0}两，我也要将这{1}拿下！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"那就{0}两好了",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"这{1}，非得值{0}两不可",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"我一见这{1}便喜欢得紧，花上{0}两又何妨？",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"此{1}深得我心，愿以{0}两拿下！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"若能以{0}两拿下此{1}，也是一件美事",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"{0}两！今日不拿下此{1}誓不罢休！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"虽不想与同道相争，奈何这{1}着实诱人，我出{0}两！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"{0}两虽不是小数目，但为了此{1}也是值得",DAT_181da3d58);
+          FUN_18181e6b0(lVar1,"我出{0}两！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"{0}两！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"便是{0}两，我也要将这{1}拿下！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"那就{0}两好了",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"这{1}，非得值{0}两不可",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"我一见这{1}便喜欢得紧，花上{0}两又何妨？",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"此{1}深得我心，愿以{0}两拿下！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"若能以{0}两拿下此{1}，也是一件美事",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"{0}两！今日不拿下此{1}誓不罢休！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"虽不想与同道相争，奈何这{1}着实诱人，我出{0}两！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"{0}两虽不是小数目，但为了此{1}也是值得",DAT_181da3d70);
           AuctionController.offerHeroTalk = lVar1;
-          lVar1 = il2cpp_internal(DAT_181d97750);
-          FUN_18132faf0(lVar1,DAT_181da3bd8);
+          lVar1 = il2cpp_internal(DAT_181d97768);
+          FUN_181330100(lVar1,DAT_181da3bf0);
           if (lVar1 != null) {
-            FUN_18181e0a0(lVar1,"承让承让",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"不好意思，这件{1}我就笑纳了",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"得了这{1}，定能叫我如虎添翼",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"这{1}虽不便宜，但终究还是被我拿下",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"各位既囊中羞涩，又何必与我一争高下",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"被看上的宝物，自是逃不出我手掌心",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"收获颇丰，真是不虚此行",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"物有所值，算是捡了个便宜",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"一分价钱一分货",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"今日真是吉星高照，助我拿下此{1}",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"回去后定要将此{1}好好收藏起来",DAT_181da3d58);
+            FUN_18181e6b0(lVar1,"承让承让",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"不好意思，这件{1}我就笑纳了",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"得了这{1}，定能叫我如虎添翼",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"这{1}虽不便宜，但终究还是被我拿下",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"各位既囊中羞涩，又何必与我一争高下",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"被看上的宝物，自是逃不出我手掌心",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"收获颇丰，真是不虚此行",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"物有所值，算是捡了个便宜",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"一分价钱一分货",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"今日真是吉星高照，助我拿下此{1}",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"回去后定要将此{1}好好收藏起来",DAT_181da3d70);
             AuctionController.dealHeroTalk = lVar1;
             return;
           }

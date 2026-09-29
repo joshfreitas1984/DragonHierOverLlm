@@ -6,92 +6,92 @@
 public class MouseController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001913
+    // Token: 0x4001914
     private static GameObject mRayHitObject;
 
-    // Token: 0x4001914
+    // Token: 0x4001915
     private static GameObject mHover;
 
-    // Token: 0x4001915
+    // Token: 0x4001916
     private static GameObject mSelected;
 
-    // Token: 0x4001916
+    // Token: 0x4001917
     public static Camera currentCamera;
 
-    // Token: 0x4001917
+    // Token: 0x4001918
     private static MouseOrTouch[] mMouse;
 
-    // Token: 0x4001918
+    // Token: 0x4001919
     public static MouseOrTouch controller;
 
-    // Token: 0x4001919
+    // Token: 0x400191A
     public static MouseOrTouch currentTouch;
 
-    // Token: 0x400191A
+    // Token: 0x400191B
     private static bool mInputFocus;
 
-    // Token: 0x400191B
+    // Token: 0x400191C
     private static Vector2 mLastPos;
 
-    // Token: 0x400191C
+    // Token: 0x400191D
     private float mNextRaycast;
 
-    // Token: 0x400191D
+    // Token: 0x400191E
     public static bool isDragging;
 
-    // Token: 0x400191E
+    // Token: 0x400191F
     public static GameObject hoveredUI;
 
-    // Token: 0x400191F
+    // Token: 0x4001920
     public static int currentTouchID;
 
-    // Token: 0x4001920
+    // Token: 0x4001921
     private static KeyCode mCurrentKey;
 
-    // Token: 0x4001921
+    // Token: 0x4001922
     public static Vector3 lastWorldPosition;
 
-    // Token: 0x4001922
+    // Token: 0x4001923
     public static Ray lastWorldRay;
 
-    // Token: 0x4001923
+    // Token: 0x4001924
     public static RaycastHit lastHit;
 
-    // Token: 0x4001924
+    // Token: 0x4001925
     private readonly List<RaycastResult> uiRaycastResults;
 
-    // Token: 0x4001925
+    // Token: 0x4001926
     private PointerEventData cachedPointerData;
 
-    // Token: 0x4001926
+    // Token: 0x4001927
     private bool cachedOverUI;
 
-    // Token: 0x4001927
+    // Token: 0x4001928
     private GameObject cachedTopUI;
 
-    // Token: 0x4001928
+    // Token: 0x4001929
     private static int mNotifying;
 
-    // Token: 0x4001929
+    // Token: 0x400192A
     private static RaycastHit[] mRayHits;
 
-    // Token: 0x400192A
+    // Token: 0x400192B
     private static Collider2D[] mOverlap;
 
-    // Token: 0x400192B
+    // Token: 0x400192C
     public float mouseDragThreshold;
 
-    // Token: 0x400192C
+    // Token: 0x400192D
     public float mouseClickThreshold;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001949
-    // RVA   : 0xDF3630   Offset: 0xDF2A30   Length: 0x7C
+    // RVA   : 0xDF3C40   Offset: 0xDF3040   Length: 0x7C
     public static MouseOrTouch get_mouse0()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b790 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 32);
         if (lVar1 != null) {
           if (*(int *)(lVar1 + 24) != 0) {
             return *(uint64 *)(lVar1 + 32);
@@ -103,12 +103,12 @@ public class MouseController
     }
 
     // Token : 0x600194A
-    // RVA   : 0xDF36B0   Offset: 0xDF2AB0   Length: 0x7C
+    // RVA   : 0xDF3CC0   Offset: 0xDF30C0   Length: 0x7C
     public static MouseOrTouch get_mouse1()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b790 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 32);
         if (lVar1 != null) {
           if (1 < *(uint32 *)(lVar1 + 24)) {
             return *(uint64 *)(lVar1 + 40);
@@ -120,12 +120,12 @@ public class MouseController
     }
 
     // Token : 0x600194B
-    // RVA   : 0xDF3730   Offset: 0xDF2B30   Length: 0x7C
+    // RVA   : 0xDF3D40   Offset: 0xDF3140   Length: 0x7C
     public static MouseOrTouch get_mouse2()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b790 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 32);
         if (lVar1 != null) {
           if (2 < *(uint32 *)(lVar1 + 24)) {
             return *(uint64 *)(lVar1 + 48);
@@ -137,7 +137,7 @@ public class MouseController
     }
 
     // Token : 0x600194C
-    // RVA   : 0xDF34D0   Offset: 0xDF28D0   Length: 0x15F
+    // RVA   : 0xDF3AE0   Offset: 0xDF2EE0   Length: 0x15F
     public static GameObject get_hoveredObject()
     {
         ulong uVar1;
@@ -161,7 +161,7 @@ public class MouseController
     }
 
     // Token : 0x600194D
-    // RVA   : 0xDF3840   Offset: 0xDF2C40   Length: 0x256
+    // RVA   : 0xDF3E50   Offset: 0xDF3250   Length: 0x256
     public static void set_hoveredObject(GameObject value)
     {
         ulong uVar1;
@@ -176,7 +176,7 @@ public class MouseController
           if (cVar2) {
             uVar1 = MouseController.mHover;
             local_res8[0] = 0;
-            uVar3 = il2cpp_value_box(DAT_181db2ac8,local_res8);
+            uVar3 = il2cpp_value_box(DAT_181db2ae0,local_res8);
             MouseController.Notify(uVar1,"OnHover",uVar3,0);
           }
           MouseController.mHover = value;
@@ -185,21 +185,21 @@ public class MouseController
           if (cVar2) {
             uVar1 = MouseController.mHover;
             local_res8[0] = 1;
-            uVar3 = il2cpp_value_box(DAT_181db2ac8,local_res8);
+            uVar3 = il2cpp_value_box(DAT_181db2ae0,local_res8);
             MouseController.Notify(uVar1,"OnHover",uVar3,0);
           }
         }
     }
 
     // Token : 0x600194E
-    // RVA   : 0xDF3470   Offset: 0xDF2870   Length: 0x57
+    // RVA   : 0xDF3A80   Offset: 0xDF2E80   Length: 0x57
     public static KeyCode get_currentKey()
     {
-        return *(uint32 *)(*(int64 *)(DAT_181d8b790 + 184) + 84);
+        return *(uint32 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 84);
     }
 
     // Token : 0x600194F
-    // RVA   : 0xDF37B0   Offset: 0xDF2BB0   Length: 0x83
+    // RVA   : 0xDF3DC0   Offset: 0xDF31C0   Length: 0x83
     public static void set_currentKey(KeyCode value)
     {
         if (MouseController.mCurrentKey != value) {
@@ -208,7 +208,7 @@ public class MouseController
     }
 
     // Token : 0x6001950
-    // RVA   : 0xDF3440   Offset: 0xDF2840   Length: 0x29
+    // RVA   : 0xDF3A50   Offset: 0xDF2E50   Length: 0x29
     private static bool get_IsMobilePlatform()
     {
         int iVar1;
@@ -221,7 +221,7 @@ public class MouseController
     }
 
     // Token : 0x6001951
-    // RVA   : 0xDF3050   Offset: 0xDF2450   Length: 0x29
+    // RVA   : 0xDF3660   Offset: 0xDF2A60   Length: 0x29
     private void Update()
     {
         bool cVar1;
@@ -233,7 +233,7 @@ public class MouseController
     }
 
     // Token : 0x6001952
-    // RVA   : 0xDEF890   Offset: 0xDEEC90   Length: 0x13A
+    // RVA   : 0xDEFEA0   Offset: 0xDEF2A0   Length: 0x13A
     public static void Notify(GameObject go, string funcName, object obj)
     {
         bool cVar2;
@@ -255,10 +255,10 @@ public class MouseController
     }
 
     // Token : 0x6001953
-    // RVA   : 0xDF2C20   Offset: 0xDF2020   Length: 0x14F
+    // RVA   : 0xDF3230   Offset: 0xDF2630   Length: 0x14F
     public static void Raycast(MouseOrTouch touch)
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
+        var pStatics = *(int64*)(DAT_181d8b7a8 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -321,7 +321,7 @@ public class MouseController
                     lVar6 = RaycastHit.get_collider(pStatics + 124,0);
                     if (lVar6 != null) {
                       uVar9 = Component.get_gameObject(lVar6,0);
-                      puVar8 = *(uint64 **)(DAT_181d8b790 + 184);
+                      puVar8 = *(uint64 **)(DAT_181d8b7a8 + 184);
                       *puVar8 = uVar9;
                       il2cpp_internal(puVar8,uVar9);
                       return 1;
@@ -337,10 +337,10 @@ public class MouseController
     }
 
     // Token : 0x6001954
-    // RVA   : 0xDF2950   Offset: 0xDF1D50   Length: 0x2CE
+    // RVA   : 0xDF2F60   Offset: 0xDF2360   Length: 0x2CE
     public static bool Raycast(Vector3 inPos)
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
+        var pStatics = *(int64*)(DAT_181d8b7a8 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -403,7 +403,7 @@ public class MouseController
                     lVar6 = RaycastHit.get_collider(pStatics + 124,0);
                     if (lVar6 != null) {
                       uVar9 = Component.get_gameObject(lVar6,0);
-                      puVar8 = *(uint64 **)(DAT_181d8b790 + 184);
+                      puVar8 = *(uint64 **)(DAT_181d8b7a8 + 184);
                       *puVar8 = uVar9;
                       il2cpp_internal(puVar8,uVar9);
                       return true;
@@ -419,7 +419,7 @@ public class MouseController
     }
 
     // Token : 0x6001955
-    // RVA   : 0xDF2D70   Offset: 0xDF2170   Length: 0x2DA
+    // RVA   : 0xDF3380   Offset: 0xDF2780   Length: 0x2DA
     private bool UpdateUIHover()
     {
         uint uVar1;
@@ -434,7 +434,7 @@ public class MouseController
         lVar5 = EventSystem.get_current(0);
         cVar2 = Object.op_Equality(lVar5,0,0);
         if (cVar2) {
-        LAB_180df3006:
+        LAB_180df3616:
           this.cachedOverUI = 0;
           this.cachedTopUI = 0;
           return false;
@@ -443,7 +443,7 @@ public class MouseController
         if ((iVar4 != 8) && (iVar4 = Application.get_platform(0), iVar4 != 11)) {
           if (lVar5 == null) throw; // [null/range check failed]
           cVar2 = EventSystem.IsPointerOverGameObject(lVar5,0);
-          if (!cVar2) goto LAB_180df3006;
+          if (!cVar2) goto LAB_180df3616;
         }
         lVar9 = this.cachedPointerData;
         if (lVar9 == null) {
@@ -459,7 +459,7 @@ public class MouseController
           *(uint32 *)(lVar9 + 0x104) = local_88._4_4_;
           *(uint32 *)(lVar9 + 0x100) = uVar1;
           if ((this.uiRaycastResults != null) &&
-             (FUN_1812f9a10(this.uiRaycastResults,DAT_181d9e288), lVar5 != null)) {
+             (FUN_1812fa020(this.uiRaycastResults,DAT_181d9e2a0), lVar5 != null)) {
             EventSystem.RaycastAll
                       (lVar5,this.cachedPointerData,this.uiRaycastResults,0);
             lVar5 = this.uiRaycastResults;
@@ -489,16 +489,16 @@ public class MouseController
     }
 
     // Token : 0x6001956
-    // RVA   : 0xDEF880   Offset: 0xDEEC80   Length: 0x7
+    // RVA   : 0xDEFE90   Offset: 0xDEF290   Length: 0x7
     public bool IsPointerOverGameUI()
     {
-        void FUN_180def880(uint64 this)
+        void FUN_180defe90(uint64 this)
         {
         MouseController.UpdateUIHover(this,0);
     }
 
     // Token : 0x6001957
-    // RVA   : 0xDEF9D0   Offset: 0xDEEDD0   Length: 0x484
+    // RVA   : 0xDEFFE0   Offset: 0xDEF3E0   Length: 0x484
     private void ProcessEvents()
     {
         bool cVar2;
@@ -530,7 +530,7 @@ public class MouseController
           if ((cVar2) && (fVar9 = (float)Input.GetAxis("Mouse ScrollWheel",0), fVar9 != 0.0)) {
             uVar3 = MouseController.mHover;
             local_res18[0] = fVar9;
-            uVar5 = il2cpp_value_box(DAT_181da22d8,local_res18);
+            uVar5 = il2cpp_value_box(DAT_181da22f0,local_res18);
             MouseController.Notify(uVar3,"OnScroll",uVar5,0);
           }
           MouseController.currentTouchID = 0xffffff9c;
@@ -564,7 +564,7 @@ public class MouseController
     }
 
     // Token : 0x6001958
-    // RVA   : 0xDEF640   Offset: 0xDEEA40   Length: 0xE4
+    // RVA   : 0xDEFC50   Offset: 0xDEF050   Length: 0xE4
     public void ClearMouse()
     {
         long lVar2;
@@ -573,7 +573,7 @@ public class MouseController
         int iVar5;
         iVar5 = 0;
         do {
-          plVar1 = *(int64 **)(*(int64 *)(DAT_181d8b790 + 184) + 32);
+          plVar1 = *(int64 **)(*(int64 *)(DAT_181d8b7a8 + 184) + 32);
           lVar2 = new MouseOrTouch(0);
           if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
@@ -593,10 +593,10 @@ public class MouseController
     }
 
     // Token : 0x6001959
-    // RVA   : 0xDEFE60   Offset: 0xDEF260   Length: 0xDFC
+    // RVA   : 0xDF0470   Offset: 0xDEF870   Length: 0xDFC
     public void ProcessMouse()
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
+        var pStatics = *(int64*)(DAT_181d8b7a8 + 184);
         long lVar2;
         long lVar3;
         ulong uVar4;
@@ -724,12 +724,12 @@ public class MouseController
                   local_68 = uVar14;
                   cVar9 = MouseController.Raycast(&local_68,0);
                   if (!cVar9) {
-                    puVar13 = *(uint64 **)(DAT_181d8b790 + 184);
+                    puVar13 = *(uint64 **)(DAT_181d8b7a8 + 184);
                     *puVar13 = 0;
                     il2cpp_internal(puVar13,0);
                   }
                   lVar2.last = lVar2.current;
-                  lVar2.current = **(uint64 **)(DAT_181d8b790 + 184);
+                  lVar2.current = **(uint64 **)(DAT_181d8b7a8 + 184);
                   uVar20 = *(uint32 *)(lVar2 + 24);
                   lVar3 = pStatics;
                   *(uint32 *)(lVar3 + 60) = lVar2.pos;
@@ -929,7 +929,7 @@ public class MouseController
     }
 
     // Token : 0x600195A
-    // RVA   : 0xDF26A0   Offset: 0xDF1AA0   Length: 0x2AD
+    // RVA   : 0xDF2CB0   Offset: 0xDF20B0   Length: 0x2AD
     public void ProcessTouch(bool pressed, bool released)
     {
         long lVar1;
@@ -980,10 +980,10 @@ public class MouseController
     }
 
     // Token : 0x600195B
-    // RVA   : 0xDF0C60   Offset: 0xDF0060   Length: 0x10A9
+    // RVA   : 0xDF1270   Offset: 0xDF0670   Length: 0x10A9
     private void ProcessPress(bool pressed, float click, float drag)
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
+        var pStatics = *(int64*)(DAT_181d8b7a8 + 184);
         int iVar1;
         long lVar2;
         bool cVar4;
@@ -997,18 +997,18 @@ public class MouseController
         ulong local_58;
         if (!pressed) {
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           uVar8 = lVar7.pressed;
           cVar4 = Object.op_Inequality(uVar8,0,0);
           if (!cVar4) {
             return;
           }
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           fVar11 = (float)Vector2.get_sqrMagnitude(lVar7 + 36,0);
           if (fVar11 == 0.0) {
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             uVar8 = lVar7.current;
             uVar6 = lVar7.last;
             cVar4 = Object.op_Inequality(uVar8,uVar6,0);
@@ -1017,107 +1017,107 @@ public class MouseController
             }
           }
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           lVar7.totalDelta = lVar7.delta + lVar7.totalDelta;
           *(float *)(lVar7 + 48) = *(float *)(lVar7 + 48) + *(float *)(lVar7 + 40);
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           fVar11 = (float)Vector2.get_sqrMagnitude(lVar7 + 44,0);
           bVar3 = false;
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           if (!lVar7.dragStarted) {
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             uVar8 = lVar7.last;
             uVar6 = lVar7.current;
             cVar4 = Object.op_Inequality(uVar8,uVar6,0);
-            if (!cVar4) goto LAB_180df10ba;
+            if (!cVar4) goto LAB_180df16ca;
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             lVar7.dragStarted = 1;
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             lVar7.delta = lVar7.totalDelta;
             *(uint32 *)(lVar7 + 40) = *(uint32 *)(lVar7 + 48);
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             lVar7.clickNotification = 0;
             MouseController.isDragging = 1;
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             MouseController.Notify(lVar7.dragged,"OnDragStart",0,0);
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             MouseController.Notify
                       (lVar7.last,"OnDragOver",lVar7.dragged,0);
             MouseController.isDragging = 0;
           }
           else {
-        LAB_180df10ba:
+        LAB_180df16ca:
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             bVar3 = false;
             if ((!lVar7.dragStarted) && (drag < fVar11)) {
               bVar3 = true;
               lVar7 = MouseController.currentTouch;
-              if (lVar7 == null) goto LAB_180df1cfe;
+              if (lVar7 == null) goto LAB_180df230e;
               lVar7.dragStarted = 1;
               lVar7 = MouseController.currentTouch;
-              if (lVar7 == null) goto LAB_180df1cfe;
+              if (lVar7 == null) goto LAB_180df230e;
               lVar7.delta = lVar7.totalDelta;
               *(uint32 *)(lVar7 + 40) = *(uint32 *)(lVar7 + 48);
             }
           }
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           if (!lVar7.dragStarted) {
             return;
           }
           MouseController.isDragging = 1;
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           iVar1 = lVar7.clickNotification;
           if (bVar3) {
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             uVar8 = 0;
             uVar6 = lVar7.dragged;
             uVar10 = "OnDragStart";
-        LAB_180df12e6:
+        LAB_180df18f6:
             MouseController.Notify(uVar6,uVar10,uVar8,0);
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             MouseController.Notify
                       (lVar7.current,"OnDragOver",lVar7.dragged,0);
           }
           else {
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             uVar8 = lVar7.last;
             uVar6 = lVar7.current;
             cVar4 = Object.op_Inequality(uVar8,uVar6,0);
             if (cVar4) {
               lVar7 = MouseController.currentTouch;
-              if (lVar7 == null) goto LAB_180df1cfe;
+              if (lVar7 == null) goto LAB_180df230e;
               uVar8 = lVar7.dragged;
               uVar6 = lVar7.last;
               uVar10 = "OnDragOut";
-              goto LAB_180df12e6;
+              goto LAB_180df18f6;
             }
           }
           lVar7 = MouseController.currentTouch;
           if (lVar7 == null) {
-        LAB_180df1cf8:
+        LAB_180df2308:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar8 = lVar7.dragged;
           local_58 = lVar7.delta;
-          uVar6 = il2cpp_value_box(DAT_181db3950,&local_58);
+          uVar6 = il2cpp_value_box(DAT_181db3968,&local_58);
           MouseController.Notify(uVar8,"OnDrag",uVar6,0);
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cf8;
+          if (lVar7 == null) goto LAB_180df2308;
           lVar7.last = lVar7.current;
           MouseController.isDragging = 0;
           if (iVar1 == 0) {
@@ -1125,7 +1125,7 @@ public class MouseController
           }
           else {
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             if (lVar7.clickNotification != 2) {
               return;
             }
@@ -1138,44 +1138,44 @@ public class MouseController
             *(uint32 *)(*(int64 *)(lVar7 + 48) + 112) = 0;
             return;
           }
-          goto LAB_180df1cfe;
+          goto LAB_180df230e;
         }
         lVar7 = MouseController.currentTouch;
         if (lVar7 == null) {
-        LAB_180df1cf2:
+        LAB_180df2302:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         lVar7.pressStarted = 1;
         lVar7 = MouseController.currentTouch;
-        if (lVar7 == null) goto LAB_180df1cf2;
+        if (lVar7 == null) goto LAB_180df2302;
         uVar8 = lVar7.pressed;
         local_res10[0] = 0;
-        uVar6 = il2cpp_value_box(DAT_181db2ac8,local_res10);
+        uVar6 = il2cpp_value_box(DAT_181db2ae0,local_res10);
         MouseController.Notify(uVar8,"OnPress",uVar6,0);
         uVar8 = MouseController.mHover;
         cVar4 = Object.op_Implicit(uVar8,0);
         if (!cVar4) {
-        LAB_180df163a:
+        LAB_180df1c4a:
           uVar8 = 0;
           MouseController.mHover = 0;
         }
         else {
           lVar7 = MouseController.mHover;
-          if (lVar7 == null) goto LAB_180df1cf2;
+          if (lVar7 == null) goto LAB_180df2302;
           cVar4 = GameObject.get_activeInHierarchy(lVar7,0);
-          if (!cVar4) goto LAB_180df163a;
+          if (!cVar4) goto LAB_180df1c4a;
           uVar8 = MouseController.mHover;
         }
         cVar4 = Object.op_Equality(uVar8,0,0);
         if (cVar4) {
           lVar7 = MouseController.currentTouch;
-          if (lVar7 == null) goto LAB_180df1cfe;
+          if (lVar7 == null) goto LAB_180df230e;
           uVar8 = lVar7.current;
           cVar4 = Object.op_Inequality(uVar8,0,0);
           if (cVar4) {
             lVar7 = MouseController.currentTouch;
-            if (lVar7 == null) goto LAB_180df1cfe;
+            if (lVar7 == null) goto LAB_180df230e;
             MouseController.set_hoveredObject(lVar7.current,0);
           }
         }
@@ -1201,7 +1201,7 @@ public class MouseController
                   if (lVar7 != null) {
                     uVar8 = lVar7.pressed;
                     local_res10[0] = 1;
-                    uVar6 = il2cpp_value_box(DAT_181db2ac8,local_res10);
+                    uVar6 = il2cpp_value_box(DAT_181db2ae0,local_res10);
                     MouseController.Notify(uVar8,"OnPress",uVar6,0);
                     lVar7 = MouseController.currentTouch;
                     uVar8 = MouseController.mSelected;
@@ -1217,7 +1217,7 @@ public class MouseController
                       if (cVar4) {
                         uVar8 = MouseController.mSelected;
                         local_res10[0] = 0;
-                        uVar6 = il2cpp_value_box(DAT_181db2ac8,local_res10);
+                        uVar6 = il2cpp_value_box(DAT_181db2ae0,local_res10);
                         MouseController.Notify(uVar8,"OnSelect",uVar6,0);
                       }
                       lVar7 = MouseController.currentTouch;
@@ -1232,13 +1232,13 @@ public class MouseController
                           if (cVar4) {
 
                             if ((lVar7 = MouseController.currentTouch?.pressed) == null)
-                            goto LAB_180df1cfe;
+                            goto LAB_180df230e;
                             uVar8 = GameObject.GetComponent(lVar7,DAT_181d74a10);
                             cVar4 = Object.op_Inequality(uVar8,0,0);
                             if (cVar4) {
                               lVar7 = MouseController.currentTouch;
                               lVar2 = MouseController.controller;
-                              if ((lVar7 == null) || (lVar2 == null)) goto LAB_180df1cfe;
+                              if ((lVar7 == null) || (lVar2 == null)) goto LAB_180df230e;
                               lVar2.current = lVar7.pressed;
                             }
                           }
@@ -1255,20 +1255,20 @@ public class MouseController
                             }
                             else {
                               lVar7 = MouseController.mSelected;
-                              if (lVar7 == null) goto LAB_180df1cfe;
+                              if (lVar7 == null) goto LAB_180df230e;
                               uVar8 = GameObject.GetComponent(lVar7,DAT_181d74988);
                               uVar5 = Object.op_Inequality(uVar8,0,0);
                             }
                             MouseController.mInputFocus = uVar5;
                             uVar8 = MouseController.mSelected;
                             local_res10[0] = 1;
-                            uVar6 = il2cpp_value_box(DAT_181db2ac8,local_res10);
+                            uVar6 = il2cpp_value_box(DAT_181db2ae0,local_res10);
                             MouseController.Notify(uVar8,"OnSelect",uVar6,0);
                             return;
                           }
                         }
                       }
-        LAB_180df1cfe:
+        LAB_180df230e:
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
@@ -1281,7 +1281,7 @@ public class MouseController
     }
 
     // Token : 0x600195C
-    // RVA   : 0xDF1D10   Offset: 0xDF1110   Length: 0x986
+    // RVA   : 0xDF2320   Offset: 0xDF1720   Length: 0x986
     private void ProcessRelease(float drag)
     {
         ulong uVar1;
@@ -1315,31 +1315,31 @@ public class MouseController
           }
           lVar5 = MouseController.currentTouch;
           if (lVar5 == null) {
-        LAB_180df2691:
+        LAB_180df2ca1:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           uVar1 = lVar5.pressed;
           local_res20[0] = 0;
-          uVar3 = il2cpp_value_box(DAT_181db2ac8,local_res20);
+          uVar3 = il2cpp_value_box(DAT_181db2ae0,local_res20);
           MouseController.Notify(uVar1,"OnPress",uVar3,0);
           lVar5 = MouseController.currentTouch;
-          if (lVar5 == null) goto LAB_180df2691;
+          if (lVar5 == null) goto LAB_180df2ca1;
           lVar5 = lVar5.pressed;
           cVar2 = Object.op_Equality(lVar5,0,0);
           if (!cVar2) {
-            if (lVar5 == null) goto LAB_180df2691;
-            lVar4 = GameObject.GetComponent(lVar5,DAT_181dc80c8);
+            if (lVar5 == null) goto LAB_180df2ca1;
+            lVar4 = GameObject.GetComponent(lVar5,DAT_181dc80e0);
             cVar2 = Object.op_Inequality(lVar4,0,0);
             if (!cVar2) {
-              lVar5 = GameObject.GetComponent(lVar5,DAT_181dc8150);
+              lVar5 = GameObject.GetComponent(lVar5,DAT_181dc8168);
               cVar2 = Object.op_Inequality(lVar5,0,0);
-              if (!cVar2) goto LAB_180df2196;
-              if (lVar5 == null) goto LAB_180df2691;
+              if (!cVar2) goto LAB_180df27a6;
+              if (lVar5 == null) goto LAB_180df2ca1;
               cVar2 = Behaviour.get_enabled(lVar5,0);
             }
             else {
-              if (lVar4 == null) goto LAB_180df2691;
+              if (lVar4 == null) goto LAB_180df2ca1;
               cVar2 = Collider.get_enabled(lVar4,0);
             }
             if (cVar2) {
@@ -1361,12 +1361,12 @@ public class MouseController
                 }
                 uVar1 = lVar5.current;
                 local_res20[0] = 1;
-                uVar3 = il2cpp_value_box(DAT_181db2ac8,local_res20);
+                uVar3 = il2cpp_value_box(DAT_181db2ae0,local_res20);
                 MouseController.Notify(uVar1,"OnHover",uVar3,0);
               }
             }
           }
-        LAB_180df2196:
+        LAB_180df27a6:
           lVar5 = MouseController.currentTouch;
           if (lVar5 == null) throw; // [null/range check failed]
           uVar1 = lVar5.dragged;
@@ -1379,7 +1379,7 @@ public class MouseController
               lVar5 = MouseController.currentTouch;
               if (lVar5 == null) throw; // [null/range check failed]
               fVar7 = (float)Vector2.get_sqrMagnitude(lVar5 + 44,0);
-              if (fVar7 < drag) goto LAB_180df2429;
+              if (fVar7 < drag) goto LAB_180df2a39;
             }
             lVar5 = MouseController.currentTouch;
             if (lVar5 == null) throw; // [null/range check failed]
@@ -1391,7 +1391,7 @@ public class MouseController
             }
           }
           else {
-        LAB_180df2429:
+        LAB_180df2a39:
             lVar5 = MouseController.currentTouch;
             if (lVar5 == null) throw; // [null/range check failed]
             if (lVar5.clickNotification != null) {
@@ -1449,7 +1449,7 @@ public class MouseController
     }
 
     // Token : 0x600195D
-    // RVA   : 0xDEF730   Offset: 0xDEEB30   Length: 0x14A
+    // RVA   : 0xDEFD40   Offset: 0xDEF140   Length: 0x14A
     private bool HasCollider(GameObject go)
     {
         long lVar1;
@@ -1460,10 +1460,10 @@ public class MouseController
           return false;
         }
         if (go != null) {
-          lVar1 = GameObject.GetComponent(go,DAT_181dc80c8);
+          lVar1 = GameObject.GetComponent(go,DAT_181dc80e0);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
-            lVar1 = GameObject.GetComponent(go,DAT_181dc8150);
+            lVar1 = GameObject.GetComponent(go,DAT_181dc8168);
             cVar2 = Object.op_Inequality(lVar1,0,0);
             if (!cVar2) {
               return false;
@@ -1481,12 +1481,12 @@ public class MouseController
     }
 
     // Token : 0x600195E
-    // RVA   : 0xDF33B0   Offset: 0xDF27B0   Length: 0x84
+    // RVA   : 0xDF39C0   Offset: 0xDF2DC0   Length: 0x84
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d965d0);
-        FUN_18132faf0(uVar1,DAT_181d9e188);
+        uVar1 = il2cpp_internal(DAT_181d965e8);
+        FUN_181330100(uVar1,DAT_181d9e1a0);
         this.uiRaycastResults = uVar1;
         this.mouseDragThreshold = 0x40800000;
         this.mouseClickThreshold = 0x41200000;
@@ -1494,10 +1494,10 @@ public class MouseController
     }
 
     // Token : 0x600195F
-    // RVA   : 0xDF3080   Offset: 0xDF2480   Length: 0x325
+    // RVA   : 0xDF3690   Offset: 0xDF2A90   Length: 0x325
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8b790 + 184);
+        var pStatics = *(int64*)(DAT_181d8b7a8 + 184);
         long lVar2;
         long lVar3;
         ulong uVar4;
@@ -1505,7 +1505,7 @@ public class MouseController
         uint uStackX_14;
         byte[] local_18 = new byte[16];
         MouseController.currentCamera = 0;
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da88e0,3);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da88f8,3);
         lVar2 = new MouseOrTouch(0);
         if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return

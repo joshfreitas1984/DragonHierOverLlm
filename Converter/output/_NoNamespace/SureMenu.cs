@@ -6,58 +6,58 @@
 public class SureMenu
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D5D
+    // Token: 0x4001D5E
     public GameObject sureMenu;
 
-    // Token: 0x4001D5E
+    // Token: 0x4001D5F
     public Image blackBackground;
 
-    // Token: 0x4001D5F
+    // Token: 0x4001D60
     public bool pause;
 
-    // Token: 0x4001D60
+    // Token: 0x4001D61
     public string fucName;
 
-    // Token: 0x4001D61
+    // Token: 0x4001D62
     public string fucParam;
 
-    // Token: 0x4001D62
+    // Token: 0x4001D63
     public string cancelFucName;
 
-    // Token: 0x4001D63
+    // Token: 0x4001D64
     public string cancelFucParam;
 
-    // Token: 0x4001D64
+    // Token: 0x4001D65
     public GameObject objToSendMessage;
 
-    // Token: 0x4001D65
+    // Token: 0x4001D66
     private static SureMenu _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60022CC
-    // RVA   : 0xA94D10   Offset: 0xA94110   Length: 0x36
+    // RVA   : 0xA953D0   Offset: 0xA947D0   Length: 0x36
     public static SureMenu get_Instance()
     {
-        return **(uint64 **)(DAT_181da8710 + 184);
+        return **(uint64 **)(DAT_181da8728 + 184);
     }
 
     // Token : 0x60022CD
-    // RVA   : 0xA939D0   Offset: 0xA92DD0   Length: 0x99
+    // RVA   : 0xA94090   Offset: 0xA93490   Length: 0x99
     private void Awake()
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181da8710 + 184);
+        uVar1 = **(uint64 **)(DAT_181da8728 + 184);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
-          puVar2 = *(uint64 **)(DAT_181da8710 + 184);
+          puVar2 = *(uint64 **)(DAT_181da8728 + 184);
           *puVar2 = this;
           il2cpp_internal(puVar2,this);
         }
     }
 
     // Token : 0x60022CE
-    // RVA   : 0xA94AE0   Offset: 0xA93EE0   Length: 0x22B
+    // RVA   : 0xA951A0   Offset: 0xA945A0   Length: 0x22B
     private void Update()
     {
         ulong uVar1;
@@ -65,7 +65,7 @@ public class SureMenu
         bool cVar3;
         long lVar4;
         ulong uVar5;
-        if (this.sureMenu == null) goto LAB_180a94d06;
+        if (this.sureMenu == null) goto LAB_180a953c6;
         cVar3 = GameObject.get_activeSelf(this.sureMenu,0);
         if (cVar3) {
           cVar3 = GlobalData.GetKeyDown(32);
@@ -76,19 +76,19 @@ public class SureMenu
             }
             if ((this.sureMenu == null) ||
                (lVar4 = GameObject.get_transform(this.sureMenu,0)) == null)
-            goto LAB_180a94d06;
+            goto LAB_180a953c6;
             lVar4 = Transform.Find(lVar4,"ButtonGrid",0);
             uVar1 = "Cancel";
           }
           else {
             if ((this.sureMenu == null) ||
                (lVar4 = GameObject.get_transform(this.sureMenu,0)) == null)
-            goto LAB_180a94d06;
+            goto LAB_180a953c6;
             lVar4 = Transform.Find(lVar4,"ButtonGrid",0);
             uVar1 = "Sure";
           }
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,uVar1,0)) == null) {
-        LAB_180a94d06:
+        LAB_180a953c6:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -96,12 +96,12 @@ public class SureMenu
           uVar2 = EventSystem.get_current(0);
           uVar5 = new PointerEventData(uVar2,0);
           uVar2 = FUN_1807e6470(0);
-          ExecuteEvents.Execute(uVar1,uVar5,uVar2,DAT_181db8e18);
+          ExecuteEvents.Execute(uVar1,uVar5,uVar2,DAT_181db8e30);
         }
     }
 
     // Token : 0x60022CF
-    // RVA   : 0xA94770   Offset: 0xA93B70   Length: 0xE3
+    // RVA   : 0xA94E30   Offset: 0xA94230   Length: 0xE3
     public void SetExtraButton(bool active)
     {
         long lVar1;
@@ -133,7 +133,7 @@ public class SureMenu
     }
 
     // Token : 0x60022D0
-    // RVA   : 0xA94630   Offset: 0xA93A30   Length: 0x13B
+    // RVA   : 0xA94CF0   Offset: 0xA940F0   Length: 0x13B
     public void SetButtonState(bool state)
     {
         long lVar1;
@@ -144,7 +144,7 @@ public class SureMenu
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Sure",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d93760);
+                lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
                 if (lVar1 != null) {
                   Selectable.set_interactable(lVar1,state,0);
                   if (this.sureMenu != null) {
@@ -154,7 +154,7 @@ public class SureMenu
                       if (lVar1 != null) {
                         lVar1 = Transform.Find(lVar1,"Cancel",0);
                         if (lVar1 != null) {
-                          lVar1 = Component.GetComponent(lVar1,DAT_181d93760);
+                          lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
                           if (lVar1 != null) {
                             Selectable.set_interactable(lVar1,state,0);
                             return;
@@ -171,10 +171,10 @@ public class SureMenu
     }
 
     // Token : 0x60022D1
-    // RVA   : 0xA94860   Offset: 0xA93C60   Length: 0x116
+    // RVA   : 0xA94F20   Offset: 0xA94320   Length: 0x116
     public void SureButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         long lVar1;
         if (this.sureMenu != null) {
           lVar1 = GameObject.get_transform(this.sureMenu,0);
@@ -183,7 +183,7 @@ public class SureMenu
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Sure",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d93760);
+                lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
                 if (lVar1 != null) {
                   if (*(char *)(lVar1 + 208) == false) {
                     return;
@@ -204,10 +204,10 @@ public class SureMenu
     }
 
     // Token : 0x60022D2
-    // RVA   : 0xA94330   Offset: 0xA93730   Length: 0x116
+    // RVA   : 0xA949F0   Offset: 0xA93DF0   Length: 0x116
     public void CancelButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         long lVar1;
         if (this.sureMenu != null) {
           lVar1 = GameObject.get_transform(this.sureMenu,0);
@@ -216,7 +216,7 @@ public class SureMenu
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Cancel",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d93760);
+                lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
                 if (lVar1 != null) {
                   if (*(char *)(lVar1 + 208) == false) {
                     return;
@@ -237,7 +237,7 @@ public class SureMenu
     }
 
     // Token : 0x60022D3
-    // RVA   : 0xA94980   Offset: 0xA93D80   Length: 0x15A
+    // RVA   : 0xA95040   Offset: 0xA94440   Length: 0x15A
     public void TryCallFuc(string targetFucName, string targetFucParam)
     {
         bool cVar1;
@@ -271,7 +271,7 @@ public class SureMenu
     }
 
     // Token : 0x60022D4
-    // RVA   : 0xA94450   Offset: 0xA93850   Length: 0x1DE
+    // RVA   : 0xA94B10   Offset: 0xA93F10   Length: 0x1DE
     private void HideSelf()
     {
         ulong uVar1;
@@ -281,19 +281,19 @@ public class SureMenu
         if (this.sureMenu != null) {
           uVar1 = GameObject.get_transform(this.sureMenu,0);
           uVar1 = ShortcutExtensions.DOScale(uVar1,0,0x3e4ccccd,0);
-          uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-          uVar1 = TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
-          uVar2 = new OnTooltipCB(this,DAT_181db7228,0);
-          TweenSettingsExtensions.OnComplete(uVar1,uVar2,DAT_181dc01d0);
+          uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+          uVar1 = TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
+          uVar2 = new OnTooltipCB(this,DAT_181db73d8,0);
+          TweenSettingsExtensions.OnComplete(uVar1,uVar2,DAT_181dc0380);
           if (this.blackBackground != null) {
             lVar3 = Component.get_gameObject(this.blackBackground,0);
             if (lVar3 != null) {
               GameObject.SetActive(lVar3,0,0);
               uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+              TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
               plVar5 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0x3f000000,0);
@@ -304,10 +304,10 @@ public class SureMenu
     }
 
     // Token : 0x60022D5
-    // RVA   : 0xA94010   Offset: 0xA93410   Length: 0x9A
+    // RVA   : 0xA946D0   Offset: 0xA93AD0   Length: 0x9A
     public void CallSureMenu(string text, string fuc)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         void SureMenu.CallSureMenu
                      (int64 this,uint64 text,uint64 fuc,uint64 param_4,
                      uint64 param_5,uint8 param_6,char param_7,uint64 param_8,
@@ -326,14 +326,14 @@ public class SureMenu
           if (this.sureMenu != null) {
             uVar1 = GameObject.get_transform(this.sureMenu,0);
             uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f800000,0x3e4ccccd,0);
-            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
+            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
             if (this.blackBackground != null) {
               lVar2 = Component.get_gameObject(this.blackBackground,0);
               if (lVar2 != null) {
                 GameObject.SetActive(lVar2,1,0);
                 uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0x3f400000,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
                 this.fucName = fuc;
                 this.pause = param_7;
                 this.fucParam = param_4;
@@ -346,7 +346,7 @@ public class SureMenu
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Text",0);
                     if (lVar2 != null) {
-                      uVar1 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar1 = Component.GetComponent(lVar2,DAT_181d96178);
                       LTLocalization.SetText(uVar1,text,0);
                       if (this.sureMenu != null) {
                         lVar2 = GameObject.get_transform(this.sureMenu,0);
@@ -360,7 +360,7 @@ public class SureMenu
                                 GameObject.SetActive(lVar2,param_6,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f000000,0);
@@ -380,10 +380,10 @@ public class SureMenu
     }
 
     // Token : 0x60022D6
-    // RVA   : 0xA941A0   Offset: 0xA935A0   Length: 0x77
+    // RVA   : 0xA94860   Offset: 0xA93C60   Length: 0x77
     public void CallSureMenu(string text, string fuc, string param)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         void SureMenu.CallSureMenu
                      (int64 this,uint64 text,uint64 fuc,uint64 param,
                      uint64 param_5,uint8 param_6,char param_7,uint64 param_8,
@@ -402,14 +402,14 @@ public class SureMenu
           if (this.sureMenu != null) {
             uVar1 = GameObject.get_transform(this.sureMenu,0);
             uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f800000,0x3e4ccccd,0);
-            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
+            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
             if (this.blackBackground != null) {
               lVar2 = Component.get_gameObject(this.blackBackground,0);
               if (lVar2 != null) {
                 GameObject.SetActive(lVar2,1,0);
                 uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0x3f400000,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
                 this.fucName = fuc;
                 this.pause = param_7;
                 this.fucParam = param;
@@ -422,7 +422,7 @@ public class SureMenu
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Text",0);
                     if (lVar2 != null) {
-                      uVar1 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar1 = Component.GetComponent(lVar2,DAT_181d96178);
                       LTLocalization.SetText(uVar1,text,0);
                       if (this.sureMenu != null) {
                         lVar2 = GameObject.get_transform(this.sureMenu,0);
@@ -436,7 +436,7 @@ public class SureMenu
                                 GameObject.SetActive(lVar2,param_6,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f000000,0);
@@ -456,10 +456,10 @@ public class SureMenu
     }
 
     // Token : 0x60022D7
-    // RVA   : 0xA93F10   Offset: 0xA93310   Length: 0xFF
+    // RVA   : 0xA945D0   Offset: 0xA939D0   Length: 0xFF
     public void CallSureMenu(string text, string fuc, string param, string tagToSendMessage)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         void SureMenu.CallSureMenu
                      (int64 this,uint64 text,uint64 fuc,uint64 param,
                      uint64 tagToSendMessage,uint8 param_6,char param_7,uint64 param_8,
@@ -478,14 +478,14 @@ public class SureMenu
           if (this.sureMenu != null) {
             uVar1 = GameObject.get_transform(this.sureMenu,0);
             uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f800000,0x3e4ccccd,0);
-            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
+            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
             if (this.blackBackground != null) {
               lVar2 = Component.get_gameObject(this.blackBackground,0);
               if (lVar2 != null) {
                 GameObject.SetActive(lVar2,1,0);
                 uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0x3f400000,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
                 this.fucName = fuc;
                 this.pause = param_7;
                 this.fucParam = param;
@@ -498,7 +498,7 @@ public class SureMenu
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Text",0);
                     if (lVar2 != null) {
-                      uVar1 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar1 = Component.GetComponent(lVar2,DAT_181d96178);
                       LTLocalization.SetText(uVar1,text,0);
                       if (this.sureMenu != null) {
                         lVar2 = GameObject.get_transform(this.sureMenu,0);
@@ -512,7 +512,7 @@ public class SureMenu
                                 GameObject.SetActive(lVar2,param_6,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f000000,0);
@@ -532,10 +532,10 @@ public class SureMenu
     }
 
     // Token : 0x60022D8
-    // RVA   : 0xA93E00   Offset: 0xA93200   Length: 0x106
+    // RVA   : 0xA944C0   Offset: 0xA938C0   Length: 0x106
     public void CallSureMenu(string text, string fuc, string param, string tagToSendMessage, bool canCancel)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         void SureMenu.CallSureMenu
                      (int64 this,uint64 text,uint64 fuc,uint64 param,
                      uint64 tagToSendMessage,uint8 canCancel,char param_7,uint64 param_8,
@@ -554,14 +554,14 @@ public class SureMenu
           if (this.sureMenu != null) {
             uVar1 = GameObject.get_transform(this.sureMenu,0);
             uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f800000,0x3e4ccccd,0);
-            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
+            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
             if (this.blackBackground != null) {
               lVar2 = Component.get_gameObject(this.blackBackground,0);
               if (lVar2 != null) {
                 GameObject.SetActive(lVar2,1,0);
                 uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0x3f400000,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
                 this.fucName = fuc;
                 this.pause = param_7;
                 this.fucParam = param;
@@ -574,7 +574,7 @@ public class SureMenu
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Text",0);
                     if (lVar2 != null) {
-                      uVar1 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar1 = Component.GetComponent(lVar2,DAT_181d96178);
                       LTLocalization.SetText(uVar1,text,0);
                       if (this.sureMenu != null) {
                         lVar2 = GameObject.get_transform(this.sureMenu,0);
@@ -588,7 +588,7 @@ public class SureMenu
                                 GameObject.SetActive(lVar2,canCancel,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f000000,0);
@@ -608,10 +608,10 @@ public class SureMenu
     }
 
     // Token : 0x60022D9
-    // RVA   : 0xA94220   Offset: 0xA93620   Length: 0x10D
+    // RVA   : 0xA948E0   Offset: 0xA93CE0   Length: 0x10D
     public void CallSureMenu(string text, string fuc, string param, string tagToSendMessage, bool canCancel, bool pause)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         void SureMenu.CallSureMenu
                      (int64 this,uint64 text,uint64 fuc,uint64 param,
                      uint64 tagToSendMessage,uint8 canCancel,char pause,uint64 param_8,
@@ -630,14 +630,14 @@ public class SureMenu
           if (this.sureMenu != null) {
             uVar1 = GameObject.get_transform(this.sureMenu,0);
             uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f800000,0x3e4ccccd,0);
-            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
+            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
             if (this.blackBackground != null) {
               lVar2 = Component.get_gameObject(this.blackBackground,0);
               if (lVar2 != null) {
                 GameObject.SetActive(lVar2,1,0);
                 uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0x3f400000,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
                 this.fucName = fuc;
                 this.pause = pause;
                 this.fucParam = param;
@@ -650,7 +650,7 @@ public class SureMenu
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Text",0);
                     if (lVar2 != null) {
-                      uVar1 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar1 = Component.GetComponent(lVar2,DAT_181d96178);
                       LTLocalization.SetText(uVar1,text,0);
                       if (this.sureMenu != null) {
                         lVar2 = GameObject.get_transform(this.sureMenu,0);
@@ -664,7 +664,7 @@ public class SureMenu
                                 GameObject.SetActive(lVar2,canCancel,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f000000,0);
@@ -684,10 +684,10 @@ public class SureMenu
     }
 
     // Token : 0x60022DA
-    // RVA   : 0xA940B0   Offset: 0xA934B0   Length: 0xE9
+    // RVA   : 0xA94770   Offset: 0xA93B70   Length: 0xE9
     public void CallSureMenu(string text, string fuc, string param, string tagToSendMessage, bool canCancel, bool pause, string cancelCallFuc, string cancelCallParam)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         void SureMenu.CallSureMenu
                      (int64 this,uint64 text,uint64 fuc,uint64 param,
                      uint64 tagToSendMessage,uint8 canCancel,char pause,uint64 cancelCallFuc,
@@ -706,14 +706,14 @@ public class SureMenu
           if (this.sureMenu != null) {
             uVar1 = GameObject.get_transform(this.sureMenu,0);
             uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f800000,0x3e4ccccd,0);
-            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
+            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
             if (this.blackBackground != null) {
               lVar2 = Component.get_gameObject(this.blackBackground,0);
               if (lVar2 != null) {
                 GameObject.SetActive(lVar2,1,0);
                 uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0x3f400000,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
                 this.fucName = fuc;
                 this.pause = pause;
                 this.fucParam = param;
@@ -726,7 +726,7 @@ public class SureMenu
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Text",0);
                     if (lVar2 != null) {
-                      uVar1 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar1 = Component.GetComponent(lVar2,DAT_181d96178);
                       LTLocalization.SetText(uVar1,text,0);
                       if (this.sureMenu != null) {
                         lVar2 = GameObject.get_transform(this.sureMenu,0);
@@ -740,7 +740,7 @@ public class SureMenu
                                 GameObject.SetActive(lVar2,canCancel,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f000000,0);
@@ -760,10 +760,10 @@ public class SureMenu
     }
 
     // Token : 0x60022DB
-    // RVA   : 0xA93A70   Offset: 0xA92E70   Length: 0x381
+    // RVA   : 0xA94130   Offset: 0xA93530   Length: 0x381
     public void CallSureMenu(string text, string fuc, string param, GameObject objToSendMessage, bool canCancel, bool pause, string cancelCallFuc, string cancelCallParam)
     {
-        var pStatics = *(int64*)(DAT_181dabe88 + 184);
+        var pStatics = *(int64*)(DAT_181dabea0 + 184);
         void SureMenu.CallSureMenu
                      (int64 this,uint64 text,uint64 fuc,uint64 param,
                      uint64 objToSendMessage,uint8 canCancel,char pause,uint64 cancelCallFuc,
@@ -782,14 +782,14 @@ public class SureMenu
           if (this.sureMenu != null) {
             uVar1 = GameObject.get_transform(this.sureMenu,0);
             uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f800000,0x3e4ccccd,0);
-            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
+            uVar1 = TweenSettingsExtensions.SetEase(uVar1,8,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
             if (this.blackBackground != null) {
               lVar2 = Component.get_gameObject(this.blackBackground,0);
               if (lVar2 != null) {
                 GameObject.SetActive(lVar2,1,0);
                 uVar1 = DOTweenModuleUI.DOFade(this.blackBackground,0x3f400000,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+                TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
                 this.fucName = fuc;
                 this.pause = pause;
                 this.fucParam = param;
@@ -802,7 +802,7 @@ public class SureMenu
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"Text",0);
                     if (lVar2 != null) {
-                      uVar1 = Component.GetComponent(lVar2,DAT_181d96160);
+                      uVar1 = Component.GetComponent(lVar2,DAT_181d96178);
                       LTLocalization.SetText(uVar1,text,0);
                       if (this.sureMenu != null) {
                         lVar2 = GameObject.get_transform(this.sureMenu,0);
@@ -816,7 +816,7 @@ public class SureMenu
                                 GameObject.SetActive(lVar2,canCancel,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f000000,0);

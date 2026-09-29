@@ -29,7 +29,7 @@ public class UIButtonOffset
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60000E4
-    // RVA   : 0x15311F0   Offset: 0x15305F0   Length: 0xC4
+    // RVA   : 0x1531800   Offset: 0x1530C00   Length: 0xC4
     private void Start()
     {
         bool cVar1;
@@ -54,7 +54,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000E5
-    // RVA   : 0x1530E20   Offset: 0x1530220   Length: 0x7E
+    // RVA   : 0x1531430   Offset: 0x1530830   Length: 0x7E
     private void OnEnable()
     {
         ulong uVar1;
@@ -67,7 +67,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000E6
-    // RVA   : 0x1530BF0   Offset: 0x152FFF0   Length: 0xFE
+    // RVA   : 0x1531200   Offset: 0x1530600   Length: 0xFE
     private void OnDisable()
     {
         ulong uVar1;
@@ -80,14 +80,14 @@ public class UIButtonOffset
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (cVar2) {
             if (this.tweenTarget == null) {
-        LAB_181530ce9:
+        LAB_1815312f9:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = Component.GetComponent(this.tweenTarget,DAT_181d96460);
+            lVar3 = Component.GetComponent(this.tweenTarget,DAT_181d96478);
             cVar2 = Object.op_Inequality(lVar3,0,0);
             if (cVar2) {
-              if (lVar3 == null) goto LAB_181530ce9;
+              if (lVar3 == null) goto LAB_1815312f9;
               local_18 = this.mPos;
               local_10 = *(uint32 *)(this + 68);
               TweenPosition.set_value(lVar3,&local_18,0);
@@ -98,7 +98,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000E7
-    // RVA   : 0x1530FA0   Offset: 0x15303A0   Length: 0x1BF
+    // RVA   : 0x15315B0   Offset: 0x15309B0   Length: 0x1BF
     private void OnPress(bool isPressed)
     {
         uint uVar1;
@@ -130,7 +130,7 @@ public class UIButtonOffset
             uVar4 = this.hover;
             fVar7 = (float)((uint64)uVar6 >> 32) + (float)((uint64)uVar4 >> 32);
             local_30 = *(float *)(this + 68) + *(float *)(this + 40);
-            goto LAB_18153106b;
+            goto LAB_18153167b;
           }
           local_38 = this.mPos;
           local_30 = *(float *)(this + 68);
@@ -140,7 +140,7 @@ public class UIButtonOffset
           uVar6 = this.mPos;
           fVar7 = (float)((uint64)uVar6 >> 32) + (float)((uint64)uVar4 >> 32);
           local_30 = *(float *)(this + 68) + *(float *)(this + 52);
-        LAB_18153106b:
+        LAB_18153167b:
           local_38 = CONCAT44(fVar7,(float)uVar6 + (float)uVar4);
           local_20 = local_30;
         }
@@ -152,7 +152,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000E8
-    // RVA   : 0x1530EA0   Offset: 0x15302A0   Length: 0xF3
+    // RVA   : 0x15314B0   Offset: 0x15308B0   Length: 0xF3
     private void OnHover(bool isOver)
     {
         bool cVar1;
@@ -191,7 +191,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000E9
-    // RVA   : 0x1530D50   Offset: 0x1530150   Length: 0xC6
+    // RVA   : 0x1531360   Offset: 0x1530760   Length: 0xC6
     private void OnDragOver()
     {
         ulong uVar1;
@@ -219,7 +219,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000EA
-    // RVA   : 0x1530CF0   Offset: 0x15300F0   Length: 0x5D
+    // RVA   : 0x1531300   Offset: 0x1530700   Length: 0x5D
     private void OnDragOut()
     {
         ulong uVar1;
@@ -242,7 +242,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000EB
-    // RVA   : 0x1531160   Offset: 0x1530560   Length: 0x81
+    // RVA   : 0x1531770   Offset: 0x1530B70   Length: 0x81
     private void OnSelect(bool isSelected)
     {
         bool cVar1;
@@ -260,7 +260,7 @@ public class UIButtonOffset
     }
 
     // Token : 0x60000EC
-    // RVA   : 0x15312C0   Offset: 0x15306C0   Length: 0x62
+    // RVA   : 0x15318D0   Offset: 0x1530CD0   Length: 0x62
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[8];

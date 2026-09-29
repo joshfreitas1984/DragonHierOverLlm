@@ -44,7 +44,7 @@ public class UIWrapContent
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60002B1
-    // RVA   : 0xC0F3F0   Offset: 0xC0E7F0   Length: 0x10E
+    // RVA   : 0xC0FA60   Offset: 0xC0EE60   Length: 0x10E
     protected virtual void Start()
     {
         bool cVar1;
@@ -56,17 +56,17 @@ public class UIWrapContent
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (cVar1) {
           if (this[9] != 0) {
-            lVar2 = Component.GetComponent(this[9],DAT_181d96b60);
+            lVar2 = Component.GetComponent(this[9],DAT_181d96b78);
             uVar3 = new OnTooltipCB(this,*(uint64 *)(*this + 400),0);
             if (lVar2 != null) {
               *(uint64 *)(lVar2 + 0x110) = uVar3;
-              goto LAB_180c0f4e5;
+              goto LAB_180c0fb55;
             }
           }
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180c0f4e5:
+        LAB_180c0fb55:
         *(uint8 *)((int64)this + 81) = 0;
     }
 
@@ -82,7 +82,7 @@ public class UIWrapContent
     }
 
     // Token : 0x60002B3
-    // RVA   : 0xC0F230   Offset: 0xC0E630   Length: 0x1BB
+    // RVA   : 0xC0F8A0   Offset: 0xC0ECA0   Length: 0x1BB
     public virtual void SortBasedOnScrollMovement()
     {
         bool cVar1;
@@ -96,7 +96,7 @@ public class UIWrapContent
           return;
         }
         if (this[11] != 0) {
-          FUN_1812f9a10(this[11],DAT_181da7d98);
+          FUN_1812fa020(this[11],DAT_181da7db0);
           lVar3 = this[7];
           iVar5 = 0;
           if (lVar3 != null) {
@@ -104,15 +104,15 @@ public class UIWrapContent
               if (this[7] == 0) throw; // [null/range check failed]
               lVar3 = Transform.GetChild(this[7],iVar5,0);
               if ((char)this[5] == false) {
-        LAB_180c0f33b:
+        LAB_180c0f9ab:
                 if (this[11] == 0) throw; // [null/range check failed]
-                FUN_18181e0a0();
+                FUN_18181e6b0();
               }
               else {
                 if ((lVar3 == null) || (lVar3 = Component.get_gameObject(lVar3)) == null)
                 throw; // [null/range check failed]
                 cVar1 = GameObject.get_activeInHierarchy(lVar3);
-                if (cVar1) goto LAB_180c0f33b;
+                if (cVar1) goto LAB_180c0f9ab;
               }
               lVar3 = this[7];
               iVar5 = iVar5 + 1;
@@ -120,16 +120,16 @@ public class UIWrapContent
             }
             lVar3 = this[11];
             if ((char)this[10] == false) {
-              uVar4 = il2cpp_internal(DAT_181d7e390);
-              uVar6 = DAT_181dc5de8;
+              uVar4 = il2cpp_internal(DAT_181d7e3a8);
+              uVar6 = DAT_181dc5f98;
             }
             else {
-              uVar4 = il2cpp_internal(DAT_181d7e390);
-              uVar6 = DAT_181dc5d60;
+              uVar4 = il2cpp_internal(DAT_181d7e3a8);
+              uVar6 = DAT_181dc5f10;
             }
-            OnTooltipCB.ctor(uVar4,0,uVar6,DAT_181dab838);
+            OnTooltipCB.ctor(uVar4,0,uVar6,DAT_181dab850);
             if (lVar3 != null) {
-              List_1.Sort(lVar3,uVar4,DAT_181da7f98);
+              List_1.Sort(lVar3,uVar4,DAT_181da7fb0);
               (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
               return;
             }
@@ -138,7 +138,7 @@ public class UIWrapContent
     }
 
     // Token : 0x60002B4
-    // RVA   : 0xC0F080   Offset: 0xC0E480   Length: 0x1A0
+    // RVA   : 0xC0F6F0   Offset: 0xC0EAF0   Length: 0x1A0
     public virtual void SortAlphabetically()
     {
         bool cVar1;
@@ -151,7 +151,7 @@ public class UIWrapContent
           return;
         }
         if (this[11] != 0) {
-          FUN_1812f9a10(this[11],DAT_181da7d98);
+          FUN_1812fa020(this[11],DAT_181da7db0);
           lVar3 = this[7];
           iVar5 = 0;
           if (lVar3 != null) {
@@ -159,24 +159,24 @@ public class UIWrapContent
               if (this[7] == 0) throw; // [null/range check failed]
               lVar3 = Transform.GetChild(this[7],iVar5,0);
               if ((char)this[5] == false) {
-        LAB_180c0f188:
+        LAB_180c0f7f8:
                 if (this[11] == 0) throw; // [null/range check failed]
-                FUN_18181e0a0();
+                FUN_18181e6b0();
               }
               else {
                 if ((lVar3 == null) || (lVar3 = Component.get_gameObject(lVar3)) == null)
                 throw; // [null/range check failed]
                 cVar1 = GameObject.get_activeInHierarchy(lVar3);
-                if (cVar1) goto LAB_180c0f188;
+                if (cVar1) goto LAB_180c0f7f8;
               }
               lVar3 = this[7];
               iVar5 = iVar5 + 1;
               if (lVar3 == null) throw; // [null/range check failed]
             }
             lVar3 = this[11];
-            uVar4 = new OnTooltipCB(0,DAT_181dc5cd8,DAT_181dab838);
+            uVar4 = new OnTooltipCB(0,DAT_181dc5e88,DAT_181dab850);
             if (lVar3 != null) {
-              List_1.Sort(lVar3,uVar4,DAT_181da7f98);
+              List_1.Sort(lVar3,uVar4,DAT_181da7fb0);
               (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
               return;
             }
@@ -185,7 +185,7 @@ public class UIWrapContent
     }
 
     // Token : 0x60002B5
-    // RVA   : 0xC0EDB0   Offset: 0xC0E1B0   Length: 0x15F
+    // RVA   : 0xC0F420   Offset: 0xC0E820   Length: 0x15F
     protected bool CacheScrollView()
     {
         uint uVar1;
@@ -194,10 +194,10 @@ public class UIWrapContent
         uVar2 = Component.get_transform(this,0);
         this.mTrans = uVar2;
         uVar2 = Component.get_gameObject(this,0);
-        uVar2 = NGUITools.FindInParents(uVar2,DAT_181d8f620);
+        uVar2 = NGUITools.FindInParents(uVar2,DAT_181d8f4b8);
         this.mPanel = uVar2;
         if (this.mPanel != null) {
-          uVar2 = Component.GetComponent(this.mPanel,DAT_181d96de0);
+          uVar2 = Component.GetComponent(this.mPanel,DAT_181d96df8);
           this.mScroll = uVar2;
           uVar2 = this.mScroll;
           uVar3 = Object.op_Equality(uVar2,0,0);
@@ -219,7 +219,7 @@ public class UIWrapContent
     }
 
     // Token : 0x60002B6
-    // RVA   : 0xC0EF20   Offset: 0xC0E320   Length: 0x158
+    // RVA   : 0xC0F590   Offset: 0xC0E990   Length: 0x158
     protected virtual void ResetChildPositions()
     {
         long lVar1;
@@ -275,7 +275,7 @@ public class UIWrapContent
     }
 
     // Token : 0x60002B7
-    // RVA   : 0xC0F5E0   Offset: 0xC0E9E0   Length: 0x8C3
+    // RVA   : 0xC0FC50   Offset: 0xC0F050   Length: 0x8C3
     public virtual void WrapContent()
     {
         float fVar1;
@@ -406,9 +406,9 @@ public class UIWrapContent
                       puVar11 = &local_128;
                       local_128 = local_108;
                       local_120 = uVar3;
-        LAB_180c0f9b9:
+        LAB_180c10029:
                       Transform.set_localPosition(lVar5,puVar11,0);
-        LAB_180c0f9c4:
+        LAB_180c10034:
                       (**(code **)(*this + 0x1d8))
                                 (this,lVar5,uVar15,*(uint64 *)(*this + 0x1e0));
                     }
@@ -429,11 +429,11 @@ public class UIWrapContent
                       puVar11 = &local_118;
                       local_118 = local_138;
                       local_110 = uVar3;
-                      goto LAB_180c0f9b9;
+                      goto LAB_180c10029;
                     }
                     bVar6 = false;
                   }
-                  else if (*(char *)((int64)this + 81) != false) goto LAB_180c0f9c4;
+                  else if (*(char *)((int64)this + 81) != false) goto LAB_180c10034;
                   if (*(char *)((int64)this + 28) != false) {
                     if ((this[8] == 0) || (fVar19 = *(float *)(this[8] + 0x168), this[7] == 0))
                     throw; // [null/range check failed]
@@ -498,9 +498,9 @@ public class UIWrapContent
                       puVar11 = &local_138;
                       local_138 = local_118;
                       local_130 = uVar3;
-                      goto LAB_180c0fc71;
+                      goto LAB_180c102e1;
                     }
-        LAB_180c0fc54:
+        LAB_180c102c4:
                     bVar6 = false;
                   }
                   else {
@@ -513,23 +513,23 @@ public class UIWrapContent
                       fVar22 = fVar19 - fVar18;
                       iVar8 = Mathf.RoundToInt(CONCAT44(uVar20,fVar19 / (float)(int)this[3]),0);
                       if ((int)this[4] != *(int *)((int64)this + 36)) {
-                        if (iVar8 < (int)this[4]) goto LAB_180c0fc54;
+                        if (iVar8 < (int)this[4]) goto LAB_180c102c4;
                         if (*(int *)((int64)this + 36) < iVar8) {
                           bVar6 = false;
-                          goto LAB_180c0fc95;
+                          goto LAB_180c10305;
                         }
                       }
                       puVar11 = &local_108;
                       local_108 = local_128;
                       local_100 = uVar3;
-        LAB_180c0fc71:
+        LAB_180c102e1:
                       Transform.set_localPosition(lVar5,puVar11,0);
                     }
-                    else if (*(char *)((int64)this + 81) == false) goto LAB_180c0fc95;
+                    else if (*(char *)((int64)this + 81) == false) goto LAB_180c10305;
                     (**(code **)(*this + 0x1d8))
                               (this,lVar5,uVar15,*(uint64 *)(*this + 0x1e0));
                   }
-        LAB_180c0fc95:
+        LAB_180c10305:
                   if (*(char *)((int64)this + 28) != false) {
                     if ((this[8] == 0) || (fVar19 = *(float *)(this[8] + 0x164), this[7] == 0))
                     throw; // [null/range check failed]
@@ -562,10 +562,10 @@ public class UIWrapContent
     }
 
     // Token : 0x60002B8
-    // RVA   : 0xC0EF10   Offset: 0xC0E310   Length: 0xC
+    // RVA   : 0xC0F580   Offset: 0xC0E980   Length: 0xC
     private void OnValidate()
     {
-        void FUN_180c0ef10(int64 this)
+        void FUN_180c0f580(int64 this)
         {
         if (this.maxIndex < this.minIndex) {
           this.maxIndex = this.minIndex;
@@ -573,7 +573,7 @@ public class UIWrapContent
     }
 
     // Token : 0x60002B9
-    // RVA   : 0xC0F500   Offset: 0xC0E900   Length: 0xD2
+    // RVA   : 0xC0FB70   Offset: 0xC0EF70   Length: 0xD2
     protected virtual void UpdateItem(Transform item, int index)
     {
         long lVar1;
@@ -601,15 +601,15 @@ public class UIWrapContent
     }
 
     // Token : 0x60002BA
-    // RVA   : 0xC0FEB0   Offset: 0xC0F2B0   Length: 0x85
+    // RVA   : 0xC10520   Offset: 0xC0F920   Length: 0x85
     public void /*ctor*/()
     {
         ulong uVar1;
         this.itemSize = 100;
         this.cullContent = 1;
         this.mFirstTime = 1;
-        uVar1 = il2cpp_internal(DAT_181d981d0);
-        FUN_18132faf0(uVar1,DAT_181da7c18);
+        uVar1 = il2cpp_internal(DAT_181d981e8);
+        FUN_181330100(uVar1,DAT_181da7c30);
         this.mChildren = uVar1;
         FUN_18044ef50(this,0);
     }

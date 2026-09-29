@@ -6,16 +6,16 @@
 public class <SelfDestroy>d__5
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001931
+    // Token: 0x4001932
     private int <>1__state;
 
-    // Token: 0x4001932
+    // Token: 0x4001933
     private object <>2__current;
 
-    // Token: 0x4001933
+    // Token: 0x4001934
     public float delay;
 
-    // Token: 0x4001934
+    // Token: 0x4001935
     public MoveTowardTarget <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,7 +34,7 @@ public class <SelfDestroy>d__5
     }
 
     // Token : 0x6001966
-    // RVA   : 0x8F1FF0   Offset: 0x8F13F0   Length: 0xEC
+    // RVA   : 0x924E70   Offset: 0x924270   Length: 0xEC
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -67,15 +67,15 @@ public class <SelfDestroy>d__5
     }
 
     // Token : 0x6001968
-    // RVA   : 0x8F20E0   Offset: 0x8F14E0   Length: 0x3E
+    // RVA   : 0x924F60   Offset: 0x924360   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da8348);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da84e0);
     }
 
     // Token : 0x6001969

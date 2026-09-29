@@ -34,7 +34,7 @@ public class <EndFightRound>d__45
     }
 
     // Token : 0x6001480
-    // RVA   : 0x92E850   Offset: 0x92DC50   Length: 0x9B4
+    // RVA   : 0x92EEB0   Offset: 0x92E2B0   Length: 0x9B4
     private virtual bool MoveNext()
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -55,13 +55,13 @@ public class <EndFightRound>d__45
           this.<>1__state = 0xffffffff;
           plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/NoticeLittle",0);
           plVar8 = (int64 *)0;
-          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
             plVar8 = plVar2;
           }
           NGUITools.PlaySound(plVar8,0);
           if ((lVar1 != null) && (lVar3 = *(int64 *)(lVar1 + 96)) != null) {
             if (*(int *)(lVar3 + 40) != -1) {
-        LAB_18092f137:
+        LAB_18092f797:
               if (*(char *)(lVar1 + 136) == false) {
                 uVar9 = 0x3f000000;
               }
@@ -86,7 +86,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)) ||
                    (lVar3 = Transform.Find(lVar3,"LeftHeroPos",0)) == null) ||
                   (lVar3 = Transform.GetChild(lVar3,0,0)) == null))) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
               puVar6 = (uint32 *)Color.get_green(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_28 = *puVar6;
@@ -119,7 +119,7 @@ public class <EndFightRound>d__45
                       local_38 = uVar7;
                       uStack_30 = uVar9;
                       GameController.ShowTextAtPos(lVar3,"轮空",&local_38,30,&local_28,0);
-                      goto LAB_18092f137;
+                      goto LAB_18092f797;
                     }
                   }
                 }
@@ -157,7 +157,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)) ||
                    (lVar3 = Transform.Find(lVar3,"RightHeroPos",0)) == null) ||
                   (lVar3 = Transform.GetChild(lVar3,0,0)) == null))) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
               puVar6 = (uint32 *)Color.get_red(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_28 = *puVar6;
@@ -179,7 +179,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)))) ||
                   (lVar3 = Transform.Find(lVar3,"LeftHeroPos",0)) == null) ||
                  (lVar3 = Transform.GetChild(lVar3,0,0)) == null) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
               puVar4 = (uint64 *)Color.get_red(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_38 = *puVar4;
@@ -196,7 +196,7 @@ public class <EndFightRound>d__45
                                                  ,0), lVar3 == null)) ||
                    (lVar3 = Transform.Find(lVar3,"RightHeroPos",0)) == null))) ||
                  (lVar3 = Transform.GetChild(lVar3,0,0)) == null) throw; // [null/range check failed]
-              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+              plVar2 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
               puVar4 = (uint64 *)Color.get_green(&local_28,0);
               if (plVar2 == (int64 *)0) throw; // [null/range check failed]
               local_38 = *puVar4;
@@ -234,8 +234,8 @@ public class <EndFightRound>d__45
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar3 != null) {
-                FUN_181822520(lVar3,0,*(uint64 *)(*(int64 *)(lVar5 + 16) + 32),DAT_181d8b818);
-                goto LAB_18092f137;
+                FUN_181822b30(lVar3,0,*(uint64 *)(*(int64 *)(lVar5 + 16) + 32),DAT_181d8b830);
+                goto LAB_18092f797;
               }
             }
           }
@@ -246,7 +246,7 @@ public class <EndFightRound>d__45
           }
           this.<>1__state = 0xffffffff;
           if (((lVar1 != null) && (*(int64 *)(lVar1 + 40) != 0)) &&
-             (lVar3 = GameObject.GetComponent(*(int64 *)(lVar1 + 40),DAT_181dc7c00)) != null) {
+             (lVar3 = GameObject.GetComponent(*(int64 *)(lVar1 + 40),DAT_181dc7c18)) != null) {
             Selectable.set_interactable(lVar3,1,0);
             if (*(int64 *)(lVar1 + 96) != 0) {
               FightMatchController.RefreshNextButton
@@ -265,15 +265,15 @@ public class <EndFightRound>d__45
     }
 
     // Token : 0x6001482
-    // RVA   : 0x92F210   Offset: 0x92E610   Length: 0x3E
+    // RVA   : 0x92F870   Offset: 0x92EC70   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da3688);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da3820);
     }
 
     // Token : 0x6001483

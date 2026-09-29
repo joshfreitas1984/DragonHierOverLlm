@@ -43,7 +43,7 @@ public class <ShowItemParticle>d__55
     }
 
     // Token : 0x6001372
-    // RVA   : 0x9332F0   Offset: 0x9326F0   Length: 0x2DB
+    // RVA   : 0x933950   Offset: 0x932D50   Length: 0x2DB
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -128,15 +128,15 @@ public class <ShowItemParticle>d__55
     }
 
     // Token : 0x6001374
-    // RVA   : 0x9335D0   Offset: 0x9329D0   Length: 0x3E
+    // RVA   : 0x933C30   Offset: 0x933030   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d9a6b8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d9a850);
     }
 
     // Token : 0x6001375

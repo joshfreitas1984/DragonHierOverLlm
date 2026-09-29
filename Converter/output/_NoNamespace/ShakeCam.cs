@@ -6,43 +6,43 @@
 public class ShakeCam
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B65
+    // Token: 0x4001B66
     public Camera[] cam;
 
-    // Token: 0x4001B66
+    // Token: 0x4001B67
     public Tweener[] camTweener;
 
-    // Token: 0x4001B67
+    // Token: 0x4001B68
     public ShakeStrengthType shakeStrengthType;
 
-    // Token: 0x4001B68
+    // Token: 0x4001B69
     private float shakeDelta;
 
-    // Token: 0x4001B69
+    // Token: 0x4001B6A
     private float shakeTime;
 
-    // Token: 0x4001B6A
+    // Token: 0x4001B6B
     private static ShakeCam _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60020FA
-    // RVA   : 0x97DD60   Offset: 0x97D160   Length: 0x36
+    // RVA   : 0x97E3F0   Offset: 0x97D7F0   Length: 0x36
     public static ShakeCam get_Instance()
     {
-        return **(uint64 **)(DAT_181da1be0 + 184);
+        return **(uint64 **)(DAT_181da1bf8 + 184);
     }
 
     // Token : 0x60020FB
-    // RVA   : 0x97D910   Offset: 0x97CD10   Length: 0x43
+    // RVA   : 0x97DFA0   Offset: 0x97D3A0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da1be0 + 184);
+        puVar1 = *(uint64 **)(DAT_181da1bf8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x60020FC
-    // RVA   : 0x97D960   Offset: 0x97CD60   Length: 0x3C2
+    // RVA   : 0x97DFF0   Offset: 0x97D3F0   Length: 0x3C2
     public void StartShake(ShakeStrengthType targetShakeStrength, bool shakeUI)
     {
         long lVar1;
@@ -91,8 +91,8 @@ public class ShakeCam
                   uVar4 = ShortcutExtensions.DOShakePosition
                                     (*(uint64 *)(lVar1 + 32),this.shakeTime,
                                      this.shakeDelta,30,0x42b40000,1,0);
-                  uVar3 = new OnTooltipCB(this,DAT_181da7ba0,0);
-                  TweenSettingsExtensions.OnComplete(uVar4,uVar3,DAT_181dc02e0);
+                  uVar3 = new OnTooltipCB(this,DAT_181da7d38,0);
+                  TweenSettingsExtensions.OnComplete(uVar4,uVar3,DAT_181dc0490);
                   if (!shakeUI) {
                     return;
                   }
@@ -122,10 +122,10 @@ public class ShakeCam
     }
 
     // Token : 0x60020FD
-    // RVA   : 0x97DD40   Offset: 0x97D140   Length: 0x15
+    // RVA   : 0x97E3D0   Offset: 0x97D7D0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_18097dd40(int64 this)
+        void FUN_18097e3d0(int64 this)
         {
         this.shakeDelta = 0x3e19999a;
         this.shakeTime = 0x3dcccccd;
@@ -133,10 +133,10 @@ public class ShakeCam
     }
 
     // Token : 0x60020FE
-    // RVA   : 0x97DD30   Offset: 0x97D130   Length: 0x8
+    // RVA   : 0x97E3C0   Offset: 0x97D7C0   Length: 0x8
     private void <StartShake>b__9_0()
     {
-        void FUN_18097dd30(int64 this)
+        void FUN_18097e3c0(int64 this)
         {
         this.shakeStrengthType = 0;
     }

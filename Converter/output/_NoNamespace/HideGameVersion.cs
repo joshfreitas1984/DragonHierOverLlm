@@ -14,7 +14,7 @@ public class HideGameVersion
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001817
-    // RVA   : 0xAFF880   Offset: 0xAFEC80   Length: 0x86
+    // RVA   : 0xAFFF40   Offset: 0xAFF340   Length: 0x86
     private void Awake()
     {
         long lVar1;

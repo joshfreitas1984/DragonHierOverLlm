@@ -6,25 +6,25 @@
 public class <MClearUpExplainMode>d__4
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D6E
+    // Token: 0x4001D6F
     private int <>1__state;
 
-    // Token: 0x4001D6F
+    // Token: 0x4001D70
     private object <>2__current;
 
-    // Token: 0x4001D70
+    // Token: 0x4001D71
     public Text _component;
 
-    // Token: 0x4001D71
+    // Token: 0x4001D72
     public string _text;
 
-    // Token: 0x4001D72
+    // Token: 0x4001D73
     public TextFit <>4__this;
 
-    // Token: 0x4001D73
+    // Token: 0x4001D74
     private StringBuilder <MExplainText>5__2;
 
-    // Token: 0x4001D74
+    // Token: 0x4001D75
     private int <i>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -43,7 +43,7 @@ public class <MClearUpExplainMode>d__4
     }
 
     // Token : 0x60022EB
-    // RVA   : 0x8EFF10   Offset: 0x8EF310   Length: 0x529
+    // RVA   : 0x922D90   Offset: 0x922190   Length: 0x529
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -103,7 +103,7 @@ public class <MClearUpExplainMode>d__4
             iVar13 = this.<i>5__3;
           }
           while (plVar14 = (int64 *)(lVar1 + 0x118), *plVar14 != 0) {
-            iVar5 = FUN_180002970(0,DAT_181d8bde0);
+            iVar5 = FUN_180002970(0,DAT_181d8bdf8);
             if (iVar5 <= iVar13) {
               plVar14 = this.<MExplainText>5__2;
               plVar2 = this._component;
@@ -122,27 +122,27 @@ public class <MClearUpExplainMode>d__4
             uVar12 = 0;
             if (*(uint16 *)(lVar6 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar12 * 16) == DAT_181d8eee0
+                if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar12 * 16) == DAT_181d8eef8
                    ) {
                   puVar8 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar12 * 16)
                             * 16 + 0x138 + lVar6);
-                  goto LAB_1808f0139;
+                  goto LAB_180922fb9;
                 }
                 uVar12 = uVar12 + 1;
               } while (uVar12 < *(uint16 *)(lVar6 + 0x12a));
             }
-            puVar8 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d8eee0,0);
-        LAB_1808f0139:
+            puVar8 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d8eef8,0);
+        LAB_180922fb9:
             piVar9 = (int *)(*(code *)*puVar8)(local_38,plVar2,uVar4,puVar8[1]);
             iVar13 = *piVar9;
             if (this.<MExplainText>5__2 == 0) break;
-            iVar5 = FUN_181259800(this.<MExplainText>5__2,0);
+            iVar5 = FUN_181259e10(this.<MExplainText>5__2,0);
             if (iVar13 < iVar5) {
               lVar6 = this.<MExplainText>5__2;
               if ((*plVar14 == 0) ||
                  (puVar10 = (uint32 *)
-                            FUN_1801335b0(local_28,0,DAT_181d8eee0,*plVar14,
+                            FUN_180133610(local_28,0,DAT_181d8eef8,*plVar14,
                                           this.<i>5__3), lVar6 == null)) break;
               local_res8[0] = StringBuilder.get_Chars(lVar6,*puVar10,0);
               uVar11 = Char.ToString(local_res8,0);
@@ -150,11 +150,11 @@ public class <MClearUpExplainMode>d__4
               cVar3 = Regex.IsMatch(uVar11,uVar7,0);
               if (cVar3) {
                 if (*plVar14 != 0) {
-                  piVar9 = (int *)FUN_1801335b0(local_28,0,DAT_181d8eee0,*plVar14,
+                  piVar9 = (int *)FUN_180133610(local_28,0,DAT_181d8eef8,*plVar14,
                                                 this.<i>5__3);
                   iVar13 = *piVar9 + -1;
                   iVar5 = iVar13;
-                  goto joined_r0x0001808f0253;
+                  goto joined_r0x0001809230d3;
                 }
                 break;
               }
@@ -164,18 +164,18 @@ public class <MClearUpExplainMode>d__4
           }
         }
         throw; // [null/range check failed]
-        joined_r0x0001808f0253:
-        if (iVar5 < 1) goto LAB_1808f02d0;
+        joined_r0x0001809230d3:
+        if (iVar5 < 1) goto LAB_180923150;
         if (this.<MExplainText>5__2 == 0) throw; // [null/range check failed]
         local_res8[0] = StringBuilder.get_Chars(this.<MExplainText>5__2,iVar5,0);
         uVar11 = Char.ToString(local_res8,0);
         uVar7 = *(uint64 *)(lVar1 + 0x108);
         cVar3 = Regex.IsMatch(uVar11,uVar7);
-        if (!cVar3) goto LAB_1808f02d0;
+        if (!cVar3) goto LAB_180923150;
         iVar13 = iVar13 + -1;
         iVar5 = iVar5 + -1;
-        goto joined_r0x0001808f0253;
-        LAB_1808f02d0:
+        goto joined_r0x0001809230d3;
+        LAB_180923150:
         if (this.<MExplainText>5__2 != 0) {
           StringBuilder.Insert(this.<MExplainText>5__2,iVar13,"\n",0);
           plVar14 = this.<MExplainText>5__2;
@@ -200,15 +200,15 @@ public class <MClearUpExplainMode>d__4
     }
 
     // Token : 0x60022ED
-    // RVA   : 0x8F0440   Offset: 0x8EF840   Length: 0x3E
+    // RVA   : 0x9232C0   Offset: 0x9226C0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db61e0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db6390);
     }
 
     // Token : 0x60022EE

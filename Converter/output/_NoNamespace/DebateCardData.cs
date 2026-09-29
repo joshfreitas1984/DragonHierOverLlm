@@ -32,7 +32,7 @@ public class DebateCardData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001388
-    // RVA   : 0xA50560   Offset: 0xA4F960   Length: 0x55
+    // RVA   : 0xA50BF0   Offset: 0xA4FFF0   Length: 0x55
     public void /*ctor*/(bool _isPlayerCard, bool _isSpeCard, int _rareLv, int _targetAttriID, int _attriLv)
     {
         void DebateCardData.ctor
@@ -48,39 +48,39 @@ public class DebateCardData
     }
 
     // Token : 0x6001389
-    // RVA   : 0xA50240   Offset: 0xA4F640   Length: 0x31A
+    // RVA   : 0xA508D0   Offset: 0xA4FCD0   Length: 0x31A
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181dbfbb8 + 184);
+        var pStatics = *(int64*)(DAT_181dbfbd0 + 184);
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar1,DAT_181da3bd8);
+        lVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar1,DAT_181da3bf0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,"道破",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"怒骂",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"反论",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"无视",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"冷静",DAT_181da3d58);
+          FUN_18181e6b0(lVar1,"道破",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"怒骂",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"反论",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"无视",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"冷静",DAT_181da3d70);
           plVar2 = pStatics;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
-          lVar1 = il2cpp_internal(DAT_181d97750);
-          FUN_18132faf0(lVar1,DAT_181da3bd8);
+          lVar1 = il2cpp_internal(DAT_181d97768);
+          FUN_181330100(lVar1,DAT_181da3bf0);
           if (lVar1 != null) {
-            FUN_18181e0a0(lVar1,"无视普通卡牌并造成15伤害",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"对方下回合无法出牌",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"使对方出牌反作用于自身",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"无视对方卡牌对我方效果",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"恢复自身30耐心\n抵消愤怒效果",DAT_181da3d58);
+            FUN_18181e6b0(lVar1,"无视普通卡牌并造成15伤害",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"对方下回合无法出牌",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"使对方出牌反作用于自身",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"无视对方卡牌对我方效果",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"恢复自身30耐心\n抵消愤怒效果",DAT_181da3d70);
             DebateCardData.SpeCardDescribe = lVar1;
-            lVar1 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar1,DAT_181da3bd8);
+            lVar1 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar1,DAT_181da3bf0);
             if (lVar1 != null) {
-              FUN_18181e0a0(lVar1,"这些言语不过诡辩而已，我早已看破！",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"吞吞吐吐，瞻前顾后，真乃无胆鼠辈！",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"若将你所说的话如数奉还，又该如何应对？",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"你在说什么？我好像没听清...",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"事已至此，需先冷静下来，稳住阵脚。",DAT_181da3d58);
+              FUN_18181e6b0(lVar1,"这些言语不过诡辩而已，我早已看破！",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"吞吞吐吐，瞻前顾后，真乃无胆鼠辈！",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"若将你所说的话如数奉还，又该如何应对？",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"你在说什么？我好像没听清...",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"事已至此，需先冷静下来，稳住阵脚。",DAT_181da3d70);
               DebateCardData.SpeCardTalk = lVar1;
               return;
             }

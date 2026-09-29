@@ -6,18 +6,18 @@
 public class CFX_Demo_RotateCamera
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E39
+    // Token: 0x4001E3A
     public static bool rotating;
 
-    // Token: 0x4001E3A
+    // Token: 0x4001E3B
     public float speed;
 
-    // Token: 0x4001E3B
+    // Token: 0x4001E3C
     public Transform rotationCenter;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60023DE
-    // RVA   : 0xB7F1A0   Offset: 0xB7E5A0   Length: 0x148
+    // RVA   : 0xB7F860   Offset: 0xB7EC60   Length: 0x148
     private void Update()
     {
         float fVar1;
@@ -31,7 +31,7 @@ public class CFX_Demo_RotateCamera
         uint local_50;
         ulong local_48;
         uint local_40;
-        if (**(char **)(DAT_181db4ee8 + 184) == false) {
+        if (**(char **)(DAT_181db4f00 + 184) == false) {
           return;
         }
         lVar6 = Component.get_transform(this,0);
@@ -56,20 +56,20 @@ public class CFX_Demo_RotateCamera
     }
 
     // Token : 0x60023DF
-    // RVA   : 0xB7F330   Offset: 0xB7E730   Length: 0xE
+    // RVA   : 0xB7F9F0   Offset: 0xB7EDF0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180b7f330(int64 this)
+        void FUN_180b7f9f0(int64 this)
         {
         this.speed = 0x41f00000;
         FUN_18044ef50(this,0);
     }
 
     // Token : 0x60023E0
-    // RVA   : 0xB7F2F0   Offset: 0xB7E6F0   Length: 0x36
+    // RVA   : 0xB7F9B0   Offset: 0xB7EDB0   Length: 0x36
     private static void /*cctor*/()
     {
-        **(uint8 **)(DAT_181db4ee8 + 184) = 1;
+        **(uint8 **)(DAT_181db4f00 + 184) = 1;
     }
 
 }

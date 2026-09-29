@@ -158,7 +158,7 @@ public class UIPopupList
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60001DD
-    // RVA   : 0x11A5D00   Offset: 0x11A5100   Length: 0xF2
+    // RVA   : 0x11A6310   Offset: 0x11A5710   Length: 0xF2
     public INGUIFont get_font()
     {
         bool cVar2;
@@ -187,12 +187,12 @@ public class UIPopupList
             FUN_1800d6620();
           }
         }
-        uVar4 = il2cpp_internal(plVar1,DAT_181d7a800);
+        uVar4 = il2cpp_internal(plVar1,DAT_181d7a818);
         return uVar4;
     }
 
     // Token : 0x60001DE
-    // RVA   : 0x11A62B0   Offset: 0x11A56B0   Length: 0x92
+    // RVA   : 0x11A68C0   Offset: 0x11A5CC0   Length: 0x92
     public void set_font(INGUIFont value)
     {
         if (value == (int64 *)0) {
@@ -206,7 +206,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001DF
-    // RVA   : 0x11A5880   Offset: 0x11A4C80   Length: 0x115
+    // RVA   : 0x11A5E90   Offset: 0x11A5290   Length: 0x115
     public object get_ambigiousFont()
     {
         ulong uVar1;
@@ -240,22 +240,22 @@ public class UIPopupList
     }
 
     // Token : 0x60001E0
-    // RVA   : 0x11A61C0   Offset: 0x11A55C0   Length: 0xEE
+    // RVA   : 0x11A67D0   Offset: 0x11A5BD0   Length: 0xEE
     public void set_ambigiousFont(object value)
     {
         long lVar1;
         if (value != (int64 *)0) {
           plVar2 = (int64 *)0;
-          if (*value == DAT_181dc79d0) {
+          if (*value == DAT_181dc79e8) {
             plVar2 = value;
           }
           if (plVar2 != (int64 *)0) {
             this.trueTypeFont = plVar2;
             puVar3 = &this.bitmapFont;
-            goto LAB_1811a6295;
+            goto LAB_1811a68a5;
           }
         }
-        lVar1 = il2cpp_internal(value,DAT_181d7a800);
+        lVar1 = il2cpp_internal(value,DAT_181d7a818);
         if (lVar1 == null) {
           if (value == (int64 *)0) {
             return;
@@ -275,38 +275,38 @@ public class UIPopupList
         }
         il2cpp_internal(this + 32,value);
         puVar3 = &this.trueTypeFont;
-        LAB_1811a6295:
+        LAB_1811a68a5:
         this.trueTypeFont = 0;
         il2cpp_internal(puVar3,0);
     }
 
     // Token : 0x60001E1
-    // RVA   : 0x11A61B0   Offset: 0x11A55B0   Length: 0x8
+    // RVA   : 0x11A67C0   Offset: 0x11A5BC0   Length: 0x8
     public LegacyEvent get_onSelectionChange()
     {
-        uint64 FUN_1811a61b0(int64 this)
+        uint64 FUN_1811a67c0(int64 this)
         {
         return this.mLegacyEvent;
     }
 
     // Token : 0x60001E2
-    // RVA   : 0x11A6470   Offset: 0x11A5870   Length: 0xF
+    // RVA   : 0x11A6A80   Offset: 0x11A5E80   Length: 0xF
     public void set_onSelectionChange(LegacyEvent value)
     {
-        void FUN_1811a6470(int64 this,uint64 value)
+        void FUN_1811a6a80(int64 this,uint64 value)
         {
         this.mLegacyEvent = value;
     }
 
     // Token : 0x60001E3
-    // RVA   : 0x11A5F10   Offset: 0x11A5310   Length: 0x150
+    // RVA   : 0x11A6520   Offset: 0x11A5920   Length: 0x150
     public static bool get_isOpen()
     {
         float fVar1;
         ulong uVar2;
         bool cVar3;
         float extraout_XMM0_Da;
-        uVar2 = **(uint64 **)(DAT_181dafff8 + 184);
+        uVar2 = **(uint64 **)(DAT_181db0010 + 184);
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (!cVar3) {
           return false;
@@ -329,7 +329,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001E5
-    // RVA   : 0x11A6480   Offset: 0x11A5880   Length: 0x73
+    // RVA   : 0x11A6A90   Offset: 0x11A5E90   Length: 0x73
     public virtual void set_value(string value)
     {
         bool cVar2;
@@ -349,14 +349,14 @@ public class UIPopupList
     }
 
     // Token : 0x60001E6
-    // RVA   : 0x11A5A50   Offset: 0x11A4E50   Length: 0xA3
+    // RVA   : 0x11A6060   Offset: 0x11A5460   Length: 0xA3
     public virtual object get_data()
     {
         long lVar1;
         uint uVar2;
         if (this.items != null) {
-          uVar2 = FUN_1817eb4e0(this.items,this.mSelectedItem,
-                                DAT_181da3fd8);
+          uVar2 = FUN_1817ebaf0(this.items,this.mSelectedItem,
+                                DAT_181da3ff0);
           if (-1 < (int)uVar2) {
             lVar1 = this.itemData;
             if (lVar1 == null) throw; // [null/range check failed]
@@ -372,14 +372,14 @@ public class UIPopupList
     }
 
     // Token : 0x60001E7
-    // RVA   : 0x11A59A0   Offset: 0x11A4DA0   Length: 0xA3
+    // RVA   : 0x11A5FB0   Offset: 0x11A53B0   Length: 0xA3
     public Action get_callback()
     {
         long lVar1;
         uint uVar2;
         if (this.items != null) {
-          uVar2 = FUN_1817eb4e0(this.items,this.mSelectedItem,
-                                DAT_181da3fd8);
+          uVar2 = FUN_1817ebaf0(this.items,this.mSelectedItem,
+                                DAT_181da3ff0);
           if (-1 < (int)uVar2) {
             lVar1 = this.itemCallbacks;
             if (lVar1 == null) throw; // [null/range check failed]
@@ -395,15 +395,15 @@ public class UIPopupList
     }
 
     // Token : 0x60001E8
-    // RVA   : 0x11A5E00   Offset: 0x11A5200   Length: 0x105
+    // RVA   : 0x11A6410   Offset: 0x11A5810   Length: 0x105
     public bool get_isColliderEnabled()
     {
         long lVar1;
         bool cVar2;
-        lVar1 = Component.GetComponent(this,DAT_181d93b60);
+        lVar1 = Component.GetComponent(this,DAT_181d93b78);
         cVar2 = Object.op_Inequality(lVar1,0,0);
         if (!cVar2) {
-          lVar1 = Component.GetComponent(this,DAT_181d93be0);
+          lVar1 = Component.GetComponent(this,DAT_181d93bf8);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
             return;
@@ -420,15 +420,15 @@ public class UIPopupList
     }
 
     // Token : 0x60001E9
-    // RVA   : 0x11A6350   Offset: 0x11A5750   Length: 0x117
+    // RVA   : 0x11A6960   Offset: 0x11A5D60   Length: 0x117
     public void set_isColliderEnabled(bool value)
     {
         long lVar1;
         bool cVar2;
-        lVar1 = Component.GetComponent(this,DAT_181d93b60);
+        lVar1 = Component.GetComponent(this,DAT_181d93b78);
         cVar2 = Object.op_Inequality(lVar1,0,0);
         if (!cVar2) {
-          lVar1 = Component.GetComponent(this,DAT_181d93be0);
+          lVar1 = Component.GetComponent(this,DAT_181d93bf8);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (cVar2) {
             if (lVar1 == null) throw; // [null/range check failed]
@@ -443,7 +443,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001EA
-    // RVA   : 0x11A6060   Offset: 0x11A5460   Length: 0x143
+    // RVA   : 0x11A6670   Offset: 0x11A5A70   Length: 0x143
     protected bool get_isValid()
     {
         ulong uVar1;
@@ -480,7 +480,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001EB
-    // RVA   : 0x11A57C0   Offset: 0x11A4BC0   Length: 0xB5
+    // RVA   : 0x11A5DD0   Offset: 0x11A51D0   Length: 0xB5
     protected int get_activeFontSize()
     {
         ulong uVar1;
@@ -491,14 +491,14 @@ public class UIPopupList
         uVar1 = this.trueTypeFont;
         cVar2 = Object.op_Inequality(uVar1,0,0);
         if ((!cVar2) && (lVar3 != null)) {
-          uVar4 = FUN_180002970(22,DAT_181d7a800,lVar3);
+          uVar4 = FUN_180002970(22,DAT_181d7a818,lVar3);
           return uVar4;
         }
         return (uint64)this.fontSize;
     }
 
     // Token : 0x60001EC
-    // RVA   : 0x11A56E0   Offset: 0x11A4AE0   Length: 0xD6
+    // RVA   : 0x11A5CF0   Offset: 0x11A50F0   Length: 0xD6
     protected float get_activeFontScale()
     {
         int iVar1;
@@ -511,14 +511,14 @@ public class UIPopupList
         cVar4 = Object.op_Inequality(uVar2,0,0);
         if ((!cVar4) && (lVar3 != null)) {
           iVar1 = this.fontSize;
-          iVar5 = FUN_180002970(22,DAT_181d7a800,lVar3);
+          iVar5 = FUN_180002970(22,DAT_181d7a818,lVar3);
           return (float)iVar1 / (float)iVar5;
         }
         return 1.0;
     }
 
     // Token : 0x60001ED
-    // RVA   : 0x11A5B00   Offset: 0x11A4F00   Length: 0x1F8
+    // RVA   : 0x11A6110   Offset: 0x11A5510   Length: 0x1F8
     protected float get_fitScale()
     {
         float fVar1;
@@ -554,24 +554,24 @@ public class UIPopupList
                     if (fVar5 <= extraout_var) {
                       return 1.0;
                     }
-                    goto LAB_1811a5c65;
+                    goto LAB_1811a6275;
                   }
                 }
               }
             }
-        LAB_1811a5cf3:
+        LAB_1811a6303:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
         else {
-          if (this.items == null) goto LAB_1811a5cf3;
+          if (this.items == null) goto LAB_1811a6303;
           fVar5 = ((float)this.fontSize + *(float *)(this + 132)) *
                   (float)this.items.Count + *(float *)(this + 132);
           NGUITools.get_screenSize(0);
           fVar1 = extraout_var_00;
           if (extraout_var_00 < fVar5) {
-        LAB_1811a5c65:
+        LAB_1811a6275:
             return fVar1 / fVar5;
           }
         }
@@ -579,7 +579,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001EE
-    // RVA   : 0x11A2A90   Offset: 0x11A1E90   Length: 0x86
+    // RVA   : 0x11A30A0   Offset: 0x11A24A0   Length: 0x86
     public void Set(string value, bool notify)
     {
         bool cVar2;
@@ -601,15 +601,15 @@ public class UIPopupList
     }
 
     // Token : 0x60001EF
-    // RVA   : 0x11A12F0   Offset: 0x11A06F0   Length: 0x86
+    // RVA   : 0x11A1900   Offset: 0x11A0D00   Length: 0x86
     public virtual void Clear()
     {
         if (this.items != null) {
-          FUN_1812f9a10(this.items,DAT_181da3dd8);
+          FUN_1812fa020(this.items,DAT_181da3df0);
           if (this.itemData != null) {
-            FUN_1812f9a10(this.itemData,DAT_181d95908);
+            FUN_1812fa020(this.itemData,DAT_181d95920);
             if (this.itemCallbacks != null) {
-              FUN_1812f9a10(this.itemCallbacks,DAT_181d7b308);
+              FUN_1812fa020(this.itemCallbacks,DAT_181d7b320);
               return;
             }
           }
@@ -617,15 +617,15 @@ public class UIPopupList
     }
 
     // Token : 0x60001F0
-    // RVA   : 0x11A0C80   Offset: 0x11A0080   Length: 0x9A
+    // RVA   : 0x11A1290   Offset: 0x11A0690   Length: 0x9A
     public virtual void AddItem(string text)
     {
         if (this.items != null) {
-          FUN_18181e0a0(this.items,text,DAT_181da3d58);
+          FUN_18181e6b0(this.items,text,DAT_181da3d70);
           if (this.itemData != null) {
-            FUN_18181e0a0(this.itemData,param_3,DAT_181d95888);
+            FUN_18181e6b0(this.itemData,param_3,DAT_181d958a0);
             if (this.itemCallbacks != null) {
-              FUN_18181e0a0(this.itemCallbacks,param_4,DAT_181d7b288);
+              FUN_18181e6b0(this.itemCallbacks,param_4,DAT_181d7b2a0);
               return;
             }
           }
@@ -633,15 +633,15 @@ public class UIPopupList
     }
 
     // Token : 0x60001F1
-    // RVA   : 0x11A0D20   Offset: 0x11A0120   Length: 0x84
+    // RVA   : 0x11A1330   Offset: 0x11A0730   Length: 0x84
     public virtual void AddItem(string text, Action del)
     {
         if (this.items != null) {
-          FUN_18181e0a0(this.items,text,DAT_181da3d58);
+          FUN_18181e6b0(this.items,text,DAT_181da3d70);
           if (this.itemData != null) {
-            FUN_18181e0a0(this.itemData,del,DAT_181d95888);
+            FUN_18181e6b0(this.itemData,del,DAT_181d958a0);
             if (this.itemCallbacks != null) {
-              FUN_18181e0a0(this.itemCallbacks,param_4,DAT_181d7b288);
+              FUN_18181e6b0(this.itemCallbacks,param_4,DAT_181d7b2a0);
               return;
             }
           }
@@ -649,15 +649,15 @@ public class UIPopupList
     }
 
     // Token : 0x60001F2
-    // RVA   : 0x11A0DB0   Offset: 0x11A01B0   Length: 0xB5
+    // RVA   : 0x11A13C0   Offset: 0x11A07C0   Length: 0xB5
     public virtual void AddItem(string text, object data, Action del)
     {
         if (this.items != null) {
-          FUN_18181e0a0(this.items,text,DAT_181da3d58);
+          FUN_18181e6b0(this.items,text,DAT_181da3d70);
           if (this.itemData != null) {
-            FUN_18181e0a0(this.itemData,data,DAT_181d95888);
+            FUN_18181e6b0(this.itemData,data,DAT_181d958a0);
             if (this.itemCallbacks != null) {
-              FUN_18181e0a0(this.itemCallbacks,del,DAT_181d7b288);
+              FUN_18181e6b0(this.itemCallbacks,del,DAT_181d7b2a0);
               return;
             }
           }
@@ -665,26 +665,26 @@ public class UIPopupList
     }
 
     // Token : 0x60001F3
-    // RVA   : 0x11A2990   Offset: 0x11A1D90   Length: 0xD5
+    // RVA   : 0x11A2FA0   Offset: 0x11A23A0   Length: 0xD5
     public virtual void RemoveItem(string text)
     {
         long lVar1;
         int iVar2;
         if (this.items != null) {
-          iVar2 = FUN_1817eb4e0(this.items,text,DAT_181da3fd8);
+          iVar2 = FUN_1817ebaf0(this.items,text,DAT_181da3ff0);
           if (iVar2 == -1) {
             return;
           }
           if (this.items != null) {
-            FUN_181823590(this.items,iVar2,DAT_181da4158);
+            FUN_181823ba0(this.items,iVar2,DAT_181da4170);
             if (this.itemData != null) {
-              FUN_181823590(this.itemData,iVar2,DAT_181d95c88);
+              FUN_181823ba0(this.itemData,iVar2,DAT_181d95ca0);
               lVar1 = this.itemCallbacks;
               if (lVar1 != null) {
                 if (lVar1.Count <= iVar2) {
                   return;
                 }
-                FUN_181823590(lVar1,iVar2,DAT_181d7b388);
+                FUN_181823ba0(lVar1,iVar2,DAT_181d7b3a0);
                 return;
               }
             }
@@ -693,26 +693,26 @@ public class UIPopupList
     }
 
     // Token : 0x60001F4
-    // RVA   : 0x11A28B0   Offset: 0x11A1CB0   Length: 0xD5
+    // RVA   : 0x11A2EC0   Offset: 0x11A22C0   Length: 0xD5
     public virtual void RemoveItemByData(object data)
     {
         long lVar1;
         int iVar2;
         if (this.itemData != null) {
-          iVar2 = FUN_1817eb4e0(this.itemData,data,DAT_181d95b08);
+          iVar2 = FUN_1817ebaf0(this.itemData,data,DAT_181d95b20);
           if (iVar2 == -1) {
             return;
           }
           if (this.items != null) {
-            FUN_181823590(this.items,iVar2,DAT_181da4158);
+            FUN_181823ba0(this.items,iVar2,DAT_181da4170);
             if (this.itemData != null) {
-              FUN_181823590(this.itemData,iVar2,DAT_181d95c88);
+              FUN_181823ba0(this.itemData,iVar2,DAT_181d95ca0);
               lVar1 = this.itemCallbacks;
               if (lVar1 != null) {
                 if (lVar1.Count <= iVar2) {
                   return;
                 }
-                FUN_181823590(lVar1,iVar2,DAT_181d7b388);
+                FUN_181823ba0(lVar1,iVar2,DAT_181d7b3a0);
                 return;
               }
             }
@@ -721,10 +721,10 @@ public class UIPopupList
     }
 
     // Token : 0x60001F5
-    // RVA   : 0x11A5190   Offset: 0x11A4590   Length: 0x273
+    // RVA   : 0x11A57A0   Offset: 0x11A4BA0   Length: 0x273
     protected void TriggerCallbacks()
     {
-        var pStatics = *(int64*)(DAT_181dafff8 + 184);
+        var pStatics = *(int64*)(DAT_181db0010 + 184);
         long lVar2;
         ulong uVar3;
         long lVar4;
@@ -745,9 +745,9 @@ public class UIPopupList
             uVar3 = this.eventReceiver;
             cVar5 = Object.op_Inequality(uVar3,0,0);
             if (cVar5) {
-              cVar5 = FUN_180d755b0(this.functionName,0);
+              cVar5 = FUN_180d75bc0(this.functionName,0);
               if (!cVar5) {
-                if (this.eventReceiver == null) goto LAB_1811a53fe;
+                if (this.eventReceiver == null) goto LAB_1811a5a0e;
                 GameObject.SendMessage
                           (this.eventReceiver,this.functionName,
                            this.mSelectedItem,1,0);
@@ -759,15 +759,15 @@ public class UIPopupList
             EventDelegate.Execute(uVar3,0);
           }
           if (this.items == null) {
-        LAB_1811a53fe:
+        LAB_1811a5a0e:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar6 = FUN_1817eb4e0(this.items,this.mSelectedItem,
-                                DAT_181da3fd8);
+          uVar6 = FUN_1817ebaf0(this.items,this.mSelectedItem,
+                                DAT_181da3ff0);
           if (-1 < (int)uVar6) {
             lVar4 = this.itemCallbacks;
-            if (lVar4 == null) goto LAB_1811a53fe;
+            if (lVar4 == null) goto LAB_1811a5a0e;
             if ((int)uVar6 < (int)lVar4.Count) {
               if (lVar4.Count <= uVar6) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -786,7 +786,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001F6
-    // RVA   : 0x11A1F00   Offset: 0x11A1300   Length: 0x1BC
+    // RVA   : 0x11A2510   Offset: 0x11A1910   Length: 0x1BC
     protected virtual void OnEnable()
     {
         bool cVar1;
@@ -807,7 +807,7 @@ public class UIPopupList
             uVar3 = 16;
           }
           else {
-            iVar2 = FUN_180002970(22,DAT_181d7a800,lVar4);
+            iVar2 = FUN_180002970(22,DAT_181d7a818,lVar4);
             uVar3 = Mathf.RoundToInt((float)iVar2 * this.textScale,0);
           }
           this.fontSize = uVar3;
@@ -816,16 +816,16 @@ public class UIPopupList
         uVar6 = this.trueTypeFont;
         cVar1 = Object.op_Equality(uVar6,0,0);
         if ((((cVar1) && (lVar4 != null)) &&
-            (cVar1 = FUN_180002970(28,DAT_181d7a800,lVar4), cVar1)) &&
-           (lVar5 = FUN_180002970(25,DAT_181d7a800,lVar4)) == null) {
-          uVar6 = FUN_180002970(29,DAT_181d7a800,lVar4);
+            (cVar1 = FUN_180002970(28,DAT_181d7a818,lVar4), cVar1)) &&
+           (lVar5 = FUN_180002970(25,DAT_181d7a818,lVar4)) == null) {
+          uVar6 = FUN_180002970(29,DAT_181d7a818,lVar4);
           this.trueTypeFont = uVar6;
           this.bitmapFont = 0;
         }
     }
 
     // Token : 0x60001F7
-    // RVA   : 0x11A5020   Offset: 0x11A4420   Length: 0x165
+    // RVA   : 0x11A5630   Offset: 0x11A4A30   Length: 0x165
     public virtual void Start()
     {
         long lVar2;
@@ -851,7 +851,7 @@ public class UIPopupList
           if (cVar4) {
             lVar2 = *plVar1;
             lVar3 = this[26];
-            uVar5 = new OnTooltipCB(lVar2,DAT_181dc5ef8,0);
+            uVar5 = new OnTooltipCB(lVar2,DAT_181dc60a8,0);
             EventDelegate.Add(lVar3,uVar5,0);
             *plVar1 = 0;
             il2cpp_internal(plVar1,0);
@@ -860,10 +860,10 @@ public class UIPopupList
     }
 
     // Token : 0x60001F8
-    // RVA   : 0x11A24A0   Offset: 0x11A18A0   Length: 0x11
+    // RVA   : 0x11A2AB0   Offset: 0x11A1EB0   Length: 0x11
     protected virtual void OnLocalize()
     {
-        void FUN_1811a24a0(int64 this)
+        void FUN_1811a2ab0(int64 this)
         {
         if (this.isLocalized) {
           UIPopupList.TriggerCallbacks(this,0);
@@ -872,7 +872,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001F9
-    // RVA   : 0x11A1BB0   Offset: 0x11A0FB0   Length: 0x186
+    // RVA   : 0x11A21C0   Offset: 0x11A15C0   Length: 0x186
     protected virtual void Highlight(UILabel lbl, bool instant)
     {
         ulong uVar1;
@@ -921,7 +921,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001FA
-    // RVA   : 0x11A19B0   Offset: 0x11A0DB0   Length: 0x1F7
+    // RVA   : 0x11A1FC0   Offset: 0x11A13C0   Length: 0x1F7
     protected virtual Vector3 GetHighlightPosition()
     {
         float fVar1;
@@ -950,9 +950,9 @@ public class UIPopupList
               fStack_24 = pfVar6[1];
               fStack_20 = pfVar6[2];
               fStack_1c = pfVar6[3];
-              lVar7 = il2cpp_internal(*(uint64 *)(param_2 + 24),DAT_181d7a788);
+              lVar7 = il2cpp_internal(*(uint64 *)(param_2 + 24),DAT_181d7a7a0);
               if (lVar7 != null) {
-                fVar9 = (float)FUN_180133520(5,DAT_181d7a788,lVar7);
+                fVar9 = (float)FUN_180133580(5,DAT_181d7a7a0,lVar7);
               }
               if (*(int64 *)(param_2 + 248) != 0) {
                 lVar7 = UIRect.get_cachedTransform(*(int64 *)(param_2 + 248),0);
@@ -978,7 +978,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001FB
-    // RVA   : 0x11A5410   Offset: 0x11A4810   Length: 0x6C
+    // RVA   : 0x11A5A20   Offset: 0x11A4E20   Length: 0x6C
     protected virtual IEnumerator UpdateTweenPosition()
     {
         long lVar1;
@@ -990,7 +990,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001FC
-    // RVA   : 0x11A2290   Offset: 0x11A1690   Length: 0x7D
+    // RVA   : 0x11A28A0   Offset: 0x11A1CA0   Length: 0x7D
     protected virtual void OnItemHover(GameObject go, bool isOver)
     {
         ulong uVar1;
@@ -1005,13 +1005,13 @@ public class UIPopupList
     }
 
     // Token : 0x60001FD
-    // RVA   : 0x11A2310   Offset: 0x11A1710   Length: 0x1D
+    // RVA   : 0x11A2920   Offset: 0x11A1D20   Length: 0x1D
     protected virtual void OnItemPress(GameObject go, bool isPressed)
     {
-        void FUN_1811a2310(int64 *this,uint64 go,char isPressed)
+        void FUN_1811a2920(int64 *this,uint64 go,char isPressed)
         {
         if ((isPressed) && (*(int *)((int64)this + 92) == 0)) {
-                          // WARNING: Could not recover jumptable at 0x0001811a2325. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811a2935. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x288))(this,go,*(uint64 *)(*this + 0x290));
           return;
@@ -1019,7 +1019,7 @@ public class UIPopupList
     }
 
     // Token : 0x60001FE
-    // RVA   : 0x11A20C0   Offset: 0x11A14C0   Length: 0x1CB
+    // RVA   : 0x11A26D0   Offset: 0x11A1AD0   Length: 0x1CB
     protected virtual void OnItemClick(GameObject go)
     {
         uint uVar1;
@@ -1036,11 +1036,11 @@ public class UIPopupList
             plVar3 = *(int64 **)(lVar6 + 24);
             plVar9 = (int64 *)0;
             plVar7 = plVar9;
-            if ((plVar3 != (int64 *)0) && (plVar7 = (int64 *)0, *plVar3 == DAT_181da7690)) {
+            if ((plVar3 != (int64 *)0) && (plVar7 = (int64 *)0, *plVar3 == DAT_181da76a8)) {
               plVar7 = plVar3;
             }
             (**(code **)(*this + 0x188))(this,plVar7,*(uint64 *)(*this + 400));
-            lVar6 = Component.GetComponents(this,DAT_181d98160);
+            lVar6 = Component.GetComponents(this,DAT_181d98178);
             if (lVar6 != null) {
               iVar2 = *(int *)(lVar6 + 24);
               if (0 < iVar2) {
@@ -1061,7 +1061,7 @@ public class UIPopupList
                   plVar9 = (int64 *)(uint64)(uVar8 + 1);
                 } while ((int)(uVar8 + 1) < iVar2);
               }
-                          // WARNING: Could not recover jumptable at 0x0001811a226f. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811a287f. Too many branches
                           // WARNING: Treating indirect jump as call
               (**(code **)(*this + 0x2d8))(this,*(uint64 *)(*this + 0x2e0));
               return;
@@ -1071,18 +1071,18 @@ public class UIPopupList
     }
 
     // Token : 0x60001FF
-    // RVA   : 0x11A2A70   Offset: 0x11A1E70   Length: 0x11
+    // RVA   : 0x11A3080   Offset: 0x11A2480   Length: 0x11
     private void Select(UILabel lbl, bool instant)
     {
-        void FUN_1811a2a70(int64 *this)
+        void FUN_1811a3080(int64 *this)
         {
-                          // WARNING: Could not recover jumptable at 0x0001811a2a7a. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811a308a. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x238))();
     }
 
     // Token : 0x6000200
-    // RVA   : 0x11A24C0   Offset: 0x11A18C0   Length: 0x173
+    // RVA   : 0x11A2AD0   Offset: 0x11A1ED0   Length: 0x173
     protected virtual void OnNavigate(KeyCode key)
     {
         bool cVar1;
@@ -1091,15 +1091,15 @@ public class UIPopupList
         long lVar4;
         cVar1 = Behaviour.get_enabled(this,0);
         if (cVar1) {
-          uVar3 = **(uint64 **)(DAT_181dafff8 + 184);
+          uVar3 = **(uint64 **)(DAT_181db0010 + 184);
           cVar1 = Object.op_Equality(uVar3,this,0);
           if (cVar1) {
             if (this[32] == 0) {
-        LAB_1811a262e:
+        LAB_1811a2c3e:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            iVar2 = FUN_1817eb4e0(this[32],this[31],DAT_181da9d98);
+            iVar2 = FUN_1817ebaf0(this[32],this[31],DAT_181da9db0);
             if (iVar2 == -1) {
               iVar2 = 0;
             }
@@ -1108,7 +1108,7 @@ public class UIPopupList
                 return;
               }
               lVar4 = this[32];
-              if (lVar4 == null) goto LAB_1811a262e;
+              if (lVar4 == null) goto LAB_1811a2c3e;
               iVar2 = iVar2 + -1;
             }
             else {
@@ -1116,20 +1116,20 @@ public class UIPopupList
                 return;
               }
               lVar4 = this[32];
-              if (lVar4 == null) goto LAB_1811a262e;
+              if (lVar4 == null) goto LAB_1811a2c3e;
               iVar2 = iVar2 + 1;
               if (*(int *)(lVar4 + 24) <= iVar2) {
                 return;
               }
             }
-            uVar3 = FUN_180002f80(lVar4,iVar2,DAT_181da9e98);
+            uVar3 = FUN_180002f80(lVar4,iVar2,DAT_181da9eb0);
             (**(code **)(*this + 0x238))(this,uVar3,0,*(uint64 *)(*this + 0x240));
           }
         }
     }
 
     // Token : 0x6000201
-    // RVA   : 0x11A2330   Offset: 0x11A1730   Length: 0x163
+    // RVA   : 0x11A2940   Offset: 0x11A1D40   Length: 0x163
     protected virtual void OnKey(KeyCode key)
     {
         ulong uVar1;
@@ -1137,18 +1137,18 @@ public class UIPopupList
         bool cVar3;
         cVar3 = Behaviour.get_enabled(this,0);
         if (cVar3) {
-          uVar1 = **(uint64 **)(DAT_181dafff8 + 184);
+          uVar1 = **(uint64 **)(DAT_181db0010 + 184);
           cVar3 = Object.op_Equality(uVar1,this,0);
           if (cVar3) {
             lVar2 = UICamera.current;
             if (lVar2 == null) {
-        LAB_1811a248e:
+        LAB_1811a2a9e:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             if (key != lVar2.cancelKey0) {
               lVar2 = UICamera.current;
-              if (lVar2 == null) goto LAB_1811a248e;
+              if (lVar2 == null) goto LAB_1811a2a9e;
               if (key != lVar2.cancelKey1) {
                 return;
               }
@@ -1159,18 +1159,18 @@ public class UIPopupList
     }
 
     // Token : 0x6000202
-    // RVA   : 0xFCDA30   Offset: 0xFCCE30   Length: 0x11
+    // RVA   : 0xFCE040   Offset: 0xFCD440   Length: 0x11
     protected virtual void OnDisable()
     {
-        void FUN_180fcda30(int64 *this)
+        void FUN_180fce040(int64 *this)
         {
-                          // WARNING: Could not recover jumptable at 0x000180fcda3a. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180fce04a. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x2d8))(this,*(uint64 *)(*this + 0x2e0));
     }
 
     // Token : 0x6000203
-    // RVA   : 0x11A2640   Offset: 0x11A1A40   Length: 0x264
+    // RVA   : 0x11A2C50   Offset: 0x11A2050   Length: 0x264
     protected virtual void OnSelect(bool isSelected)
     {
         long lVar1;
@@ -1210,18 +1210,18 @@ public class UIPopupList
     }
 
     // Token : 0x6000204
-    // RVA   : 0x11A18A0   Offset: 0x11A0CA0   Length: 0x102
+    // RVA   : 0x11A1EB0   Offset: 0x11A12B0   Length: 0x102
     public static void Close()
     {
         ulong uVar1;
         bool cVar4;
-        uVar1 = **(uint64 **)(DAT_181dafff8 + 184);
+        uVar1 = **(uint64 **)(DAT_181db0010 + 184);
         cVar4 = Object.op_Inequality(uVar1,0,0);
         if (cVar4) {
           plVar2 = (int64 *)UIPopupList.current;
           if (plVar2 != (int64 *)0) {
             (**(code **)(*plVar2 + 0x2d8))(plVar2,*(uint64 *)(*plVar2 + 0x2e0));
-            puVar3 = *(uint64 **)(DAT_181dafff8 + 184);
+            puVar3 = *(uint64 **)(DAT_181db0010 + 184);
             *puVar3 = 0;
             il2cpp_internal(puVar3,0);
             return;
@@ -1232,7 +1232,7 @@ public class UIPopupList
     }
 
     // Token : 0x6000205
-    // RVA   : 0x11A13F0   Offset: 0x11A07F0   Length: 0x4A6
+    // RVA   : 0x11A1A00   Offset: 0x11A0E00   Length: 0x4A6
     public virtual void CloseSelf()
     {
         int iVar1;
@@ -1251,14 +1251,14 @@ public class UIPopupList
         uVar4 = UIPopupList.mChild;
         cVar2 = Object.op_Inequality(uVar4,0,0);
         if (cVar2) {
-          uVar4 = **(uint64 **)(DAT_181dafff8 + 184);
+          uVar4 = **(uint64 **)(DAT_181db0010 + 184);
           cVar2 = Object.op_Equality(uVar4,this,0);
           if (cVar2) {
             MonoBehaviour.StopCoroutine(this,"CloseIfUnselected",0);
             uVar8 = 0;
             this.mSelection = 0;
-            if (this.mLabelList == null) goto LAB_1811a1871;
-            FUN_1812f9a10(this.mLabelList,DAT_181da9d18);
+            if (this.mLabelList == null) goto LAB_1811a1e81;
+            FUN_1812fa020(this.mLabelList,DAT_181da9d30);
             if (!this.isAnimated) {
               uVar4 = UIPopupList.mChild;
               Object.Destroy(uVar4,0);
@@ -1268,12 +1268,12 @@ public class UIPopupList
             else {
               lVar3 = UIPopupList.mChild;
               if (lVar3 == null) {
-        LAB_1811a1871:
+        LAB_1811a1e81:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              lVar3 = FUN_1809674e0(lVar3,DAT_181d755c0);
-              if (lVar3 == null) goto LAB_1811a1871;
+              lVar3 = FUN_180967b70(lVar3,DAT_181d755c0);
+              if (lVar3 == null) goto LAB_1811a1e81;
               iVar1 = *(int *)(lVar3 + 24);
               uVar7 = uVar8;
               if (0 < iVar1) {
@@ -1284,22 +1284,22 @@ public class UIPopupList
                     FUN_1800d65f0(uVar4,0);
                   }
                   lVar5 = lVar3[uVar7];
-                  if (lVar5 == null) goto LAB_1811a1871;
+                  if (lVar5 == null) goto LAB_1811a1e81;
                   local_38 = *(uint32 *)(lVar5 + 144);
                   uStack_34 = *(uint32 *)(lVar5 + 148);
                   uStack_30 = *(uint32 *)(lVar5 + 152);
                   uStack_2c = 0;
                   uVar4 = Component.get_gameObject();
                   lVar5 = TweenColor.Begin(uVar4,0x3e19999a,&local_38,0);
-                  if (lVar5 == null) goto LAB_1811a1871;
+                  if (lVar5 == null) goto LAB_1811a1e81;
                   uVar7 = uVar7 + 1;
                   *(uint32 *)(lVar5 + 24) = 2;
                 } while ((int)uVar7 < iVar1);
               }
               lVar3 = UIPopupList.mChild;
-              if (lVar3 == null) goto LAB_1811a1871;
-              lVar3 = FUN_1809674e0(lVar3,DAT_181d750f8);
-              if (lVar3 == null) goto LAB_1811a1871;
+              if (lVar3 == null) goto LAB_1811a1e81;
+              lVar3 = FUN_180967b70(lVar3,DAT_181d750f8);
+              if (lVar3 == null) goto LAB_1811a1e81;
               iVar1 = *(int *)(lVar3 + 24);
               if (0 < iVar1) {
                 do {
@@ -1309,7 +1309,7 @@ public class UIPopupList
                     FUN_1800d65f0(uVar4,0);
                   }
                   lVar5 = lVar3[uVar8];
-                  if (lVar5 == null) goto LAB_1811a1871;
+                  if (lVar5 == null) goto LAB_1811a1e81;
                   Collider.set_enabled(lVar5,0,0);
                   uVar8 = uVar8 + 1;
                 } while ((int)uVar8 < iVar1);
@@ -1324,7 +1324,7 @@ public class UIPopupList
             this.mBackground = 0;
             this.mHighlight = 0;
             UIPopupList.mChild = 0;
-            puVar6 = *(uint64 **)(DAT_181dafff8 + 184);
+            puVar6 = *(uint64 **)(DAT_181db0010 + 184);
             *puVar6 = 0;
             il2cpp_internal(puVar6,0);
           }
@@ -1332,7 +1332,7 @@ public class UIPopupList
     }
 
     // Token : 0x6000206
-    // RVA   : 0x11A0E70   Offset: 0x11A0270   Length: 0xEE
+    // RVA   : 0x11A1480   Offset: 0x11A0880   Length: 0xEE
     protected virtual void AnimateColor(UIWidget widget)
     {
         uint uVar1;
@@ -1354,7 +1354,7 @@ public class UIPopupList
           uVar4 = *(uint32 *)(widget + 156);
           local_48 = 0;
           uStack_40 = 0;
-          FUN_1809dc910(&local_48,uVar1,uVar2,uVar3,0,0);
+          FUN_1809dcfa0(&local_48,uVar1,uVar2,uVar3,0,0);
           local_58 = (uint32)local_48;
           uStack_54 = local_48._4_4_;
           uStack_50 = (uint32)uStack_40;
@@ -1374,7 +1374,7 @@ public class UIPopupList
     }
 
     // Token : 0x6000207
-    // RVA   : 0x11A0F60   Offset: 0x11A0360   Length: 0x111
+    // RVA   : 0x11A1570   Offset: 0x11A0970   Length: 0x111
     protected virtual void AnimatePosition(UIWidget widget, bool placeAbove, float bottom)
     {
         void UIPopupList.AnimatePosition
@@ -1417,7 +1417,7 @@ public class UIPopupList
     }
 
     // Token : 0x6000208
-    // RVA   : 0x11A1080   Offset: 0x11A0480   Length: 0x1FA
+    // RVA   : 0x11A1690   Offset: 0x11A0A90   Length: 0x1FA
     protected virtual void AnimateScale(UIWidget widget, bool placeAbove, float bottom)
     {
         ulong uVar1;
@@ -1473,20 +1473,20 @@ public class UIPopupList
     }
 
     // Token : 0x6000209
-    // RVA   : 0x11A1280   Offset: 0x11A0680   Length: 0x68
+    // RVA   : 0x11A1890   Offset: 0x11A0C90   Length: 0x68
     protected void Animate(UIWidget widget, bool placeAbove, float bottom)
     {
         void UIPopupList.Animate
                      (int64 *this,uint64 widget,uint8 placeAbove,uint32 bottom)
         {
         (**(code **)(*this + 0x2e8))(this,widget,*(uint64 *)(*this + 0x2f0));
-                          // WARNING: Could not recover jumptable at 0x0001811a12e1. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811a18f1. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x2f8))(this,widget,placeAbove,bottom);
     }
 
     // Token : 0x600020A
-    // RVA   : 0x11A1D40   Offset: 0x11A1140   Length: 0x19B
+    // RVA   : 0x11A2350   Offset: 0x11A1750   Length: 0x19B
     protected virtual void OnClick()
     {
         long lVar1;
@@ -1496,7 +1496,7 @@ public class UIPopupList
         lVar1 = this[35];
         iVar3 = Time.get_frameCount(0);
         if ((int)lVar1 != iVar3) {
-          uVar4 = *(uint64 *)(*(int64 *)(DAT_181dafff8 + 184) + 8);
+          uVar4 = *(uint64 *)(*(int64 *)(DAT_181db0010 + 184) + 8);
           cVar2 = Object.op_Equality(uVar4,0,0);
           if (!cVar2) {
             lVar1 = this[31];
@@ -1507,7 +1507,7 @@ public class UIPopupList
                 FUN_1800d6620();
               }
               uVar4 = Component.get_gameObject(this[31],0);
-                          // WARNING: Could not recover jumptable at 0x0001811a1e66. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811a2476. Too many branches
                           // WARNING: Treating indirect jump as call
               (**(code **)(*this + 0x278))(this,uVar4,1,*(uint64 *)(*this + 0x280));
               return;
@@ -1515,7 +1515,7 @@ public class UIPopupList
           }
           else if (1 < (int)this[25] - 2U) {
             if ((int)this[25] == 1) {
-              if (*(int *)(*(int64 *)(DAT_181daf678 + 184) + 212) != -2) {
+              if (*(int *)(*(int64 *)(DAT_181daf690 + 184) + 212) != -2) {
                 return;
               }
             }
@@ -1525,13 +1525,13 @@ public class UIPopupList
     }
 
     // Token : 0x600020B
-    // RVA   : 0x11A1EE0   Offset: 0x11A12E0   Length: 0x1B
+    // RVA   : 0x11A24F0   Offset: 0x11A18F0   Length: 0x1B
     protected virtual void OnDoubleClick()
     {
-        void FUN_1811a1ee0(int64 *this)
+        void FUN_1811a24f0(int64 *this)
         {
         if ((int)this[25] == 2) {
-                          // WARNING: Could not recover jumptable at 0x0001811a1ef3. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001811a2503. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x338))(this,*(uint64 *)(*this + 0x340));
           return;
@@ -1539,7 +1539,7 @@ public class UIPopupList
     }
 
     // Token : 0x600020C
-    // RVA   : 0x11A1380   Offset: 0x11A0780   Length: 0x6C
+    // RVA   : 0x11A1990   Offset: 0x11A0D90   Length: 0x6C
     private IEnumerator CloseIfUnselected()
     {
         long lVar1;
@@ -1551,10 +1551,10 @@ public class UIPopupList
     }
 
     // Token : 0x600020D
-    // RVA   : 0x11A2B20   Offset: 0x11A1F20   Length: 0x24FC
+    // RVA   : 0x11A3130   Offset: 0x11A2530   Length: 0x24FC
     public virtual void Show()
     {
-        var pStatics_0178 = *(int64*)(DAT_181db0178 + 184);
+        var pStatics_0190 = *(int64*)(DAT_181db0190 + 184);
         ulong uVar1;
         ulong uVar2;
         byte[] auVar4 = new byte[12];
@@ -1634,16 +1634,16 @@ public class UIPopupList
         local_res20[0] = 0;
         cVar8 = Behaviour.get_enabled(this,0);
         if (!cVar8) {
-        LAB_1811a4f76:
+        LAB_1811a5586:
           (**(code **)(*this + 0x2c8))(this,0,*(uint64 *)(*this + 0x2d0));
           return;
         }
         uVar12 = Component.get_gameObject(this,0);
         cVar8 = NGUITools.GetActive(uVar12,0);
-        if (!cVar8) goto LAB_1811a4f76;
+        if (!cVar8) goto LAB_1811a5586;
         uVar12 = UIPopupList.mChild;
         cVar8 = Object.op_Equality(uVar12,0,0);
-        if (!cVar8) goto LAB_1811a4f76;
+        if (!cVar8) goto LAB_1811a5586;
         lVar13 = this[5];
         cVar8 = Object.op_Inequality(lVar13,0,0);
         if (!cVar8) {
@@ -1668,11 +1668,11 @@ public class UIPopupList
           plVar24 = (int64 *)this[5];
         }
         cVar8 = Object.op_Inequality(plVar24,0,0);
-        if (!cVar8) goto LAB_1811a4f76;
+        if (!cVar8) goto LAB_1811a5586;
         if (this[13] == 0) throw; // [null/range check failed]
-        if (*(int *)(this[13] + 24) < 1) goto LAB_1811a4f76;
+        if (*(int *)(this[13] + 24) < 1) goto LAB_1811a5586;
         if (this[32] == 0) throw; // [null/range check failed]
-        FUN_1812f9a10(this[32],DAT_181da9d18);
+        FUN_1812fa020(this[32],DAT_181da9d30);
         MonoBehaviour.StopCoroutine(this,"CloseIfUnselected",0);
         lVar13 = UICamera.get_hoveredObject(0);
         if (lVar13 == null) {
@@ -1697,11 +1697,11 @@ public class UIPopupList
         cVar8 = Object.op_Equality(lVar13,0,0);
         if (cVar8) {
           lVar13 = Component.get_transform(this,0);
-          plVar14 = (int64 *)NGUITools.FindInParents(lVar13,DAT_181d8f6a0);
+          plVar14 = (int64 *)NGUITools.FindInParents(lVar13,DAT_181d8f538);
           cVar8 = Object.op_Inequality(plVar14,0,0);
           if (!cVar8) {
-            for (; lVar13 != null; lVar13 = FUN_180da9a20(lVar13,0)) {
-              uVar12 = FUN_180da9a20(lVar13,0);
+            for (; lVar13 != null; lVar13 = FUN_180daa030(lVar13,0)) {
+              uVar12 = FUN_180daa030(lVar13,0);
               cVar8 = Object.op_Inequality(uVar12,0,0);
               plVar14 = plVar21;
               if (!(!cVar8))
@@ -1726,44 +1726,44 @@ public class UIPopupList
         if ((lVar15 == null) || (uVar9 = GameObject.get_layer(lVar15,0), lVar13 == null)) throw; // [null/range check failed]
         GameObject.set_layer(lVar13,uVar9,0);
         if ((char)this[24] != false) {
-          uVar12 = Component.GetComponent(this,DAT_181d93b60);
+          uVar12 = Component.GetComponent(this,DAT_181d93b78);
           cVar8 = Object.op_Inequality(uVar12,0,0);
           if (!cVar8) {
-            uVar12 = Component.GetComponent(this,DAT_181d93be0);
+            uVar12 = Component.GetComponent(this,DAT_181d93bf8);
             cVar8 = Object.op_Inequality(uVar12,0,0);
             if (cVar8) {
               lVar13 = UIPopupList.mChild;
-              if ((lVar13 == null) || (lVar13 = GameObject.AddComponent(lVar13,DAT_181dc5b98)) == null)
+              if ((lVar13 == null) || (lVar13 = GameObject.AddComponent(lVar13,DAT_181dc5bb0)) == null)
               throw; // [null/range check failed]
               Rigidbody2D.set_isKinematic(lVar13,1,0);
             }
           }
           else {
             lVar13 = UIPopupList.mChild;
-            if ((lVar13 == null) || (lVar13 = GameObject.AddComponent(lVar13,DAT_181dc5b10)) == null)
+            if ((lVar13 == null) || (lVar13 = GameObject.AddComponent(lVar13,DAT_181dc5b28)) == null)
             throw; // [null/range check failed]
             Rigidbody.set_isKinematic(lVar13,1,0);
           }
           lVar13 = UIPopupList.mChild;
-          if ((lVar13 == null) || (lVar13 = GameObject.AddComponent(lVar13,DAT_181dc6c10)) == null)
+          if ((lVar13 == null) || (lVar13 = GameObject.AddComponent(lVar13,DAT_181dc6c28)) == null)
           throw; // [null/range check failed]
           if (*(int *)(lVar13 + 0x150) != 1000000) {
             *(uint32 *)(lVar13 + 0x150) = 1000000;
             lVar15 = UIPanel.list;
-            uVar12 = new OnTooltipCB(0,DAT_181dc5f80,DAT_181dab8b8);
+            uVar12 = new OnTooltipCB(0,DAT_181dc6130,DAT_181dab8d0);
             if (lVar15 == null) throw; // [null/range check failed]
-            List_1.Sort(lVar15,uVar12,DAT_181daa218);
+            List_1.Sort(lVar15,uVar12,DAT_181daa230);
           }
           if (*plVar24 == 0) throw; // [null/range check failed]
           iVar10 = *(int *)(*plVar24 + 0x154);
           if (*(int *)(lVar13 + 0x154) != iVar10) {
             *(int *)(lVar13 + 0x154) = iVar10;
             if (UIPanel.list == null) throw; // [null/range check failed]
-            uVar9 = FUN_1817eb4e0(UIPanel.list,lVar13,DAT_181daa118);
+            uVar9 = FUN_1817ebaf0(UIPanel.list,lVar13,DAT_181daa130);
             UIPanel.UpdateDrawCalls(lVar13,uVar9,0);
           }
         }
-        puVar22 = *(uint64 **)(DAT_181dafff8 + 184);
+        puVar22 = *(uint64 **)(DAT_181db0010 + 184);
         *puVar22 = this;
         il2cpp_internal(puVar22,this);
         if (*plVar24 == 0) throw; // [null/range check failed]
@@ -1777,12 +1777,12 @@ public class UIPopupList
         local_118 = lVar15;
         if ((char)this[24] != false) {
           if (*plVar24 == 0) throw; // [null/range check failed]
-          lVar16 = Component.GetComponentInParent(*plVar24,DAT_181d97e60);
+          lVar16 = Component.GetComponentInParent(*plVar24,DAT_181d97e78);
           cVar8 = Object.op_Equality(lVar16,0,0);
           if (cVar8) {
-            if (*pStatics_0178 == 0) throw; // [null/range check failed]
-            if (*(int *)(*pStatics_0178 + 24) != 0) {
-              lVar16 = *pStatics_0178;
+            if (*pStatics_0190 == 0) throw; // [null/range check failed]
+            if (*(int *)(*pStatics_0190 + 24) != 0) {
+              lVar16 = *pStatics_0190;
               if (lVar16 == null) throw; // [null/range check failed]
               if (*(int *)(lVar16 + 24) == 0) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1801,7 +1801,7 @@ public class UIPopupList
           uVar12 = Component.get_gameObject(this,0);
           cVar8 = Object.op_Inequality(lVar13,uVar12,0);
           lVar13 = local_1d8;
-          if (!cVar8) goto LAB_1811a3a20;
+          if (!cVar8) goto LAB_1811a4030;
           lVar13 = UICamera.get_lastEventPosition(0);
           local_210 = 0.0;
           this[40] = lVar13;
@@ -1833,7 +1833,7 @@ public class UIPopupList
           this[40] = *plVar14;
         }
         else {
-        LAB_1811a3a20:
+        LAB_1811a4030:
           uVar12 = Component.get_transform(this,0);
           puVar22 = (uint64 *)
                     NGUIMath.CalculateRelativeWidgetBounds
@@ -1891,12 +1891,12 @@ public class UIPopupList
           lVar13 = this[3];
           lVar15 = this[7];
           uVar12 = UIPopupList.mChild;
-          uVar18 = il2cpp_internal(lVar13,DAT_181d7a788);
+          uVar18 = il2cpp_internal(lVar13,DAT_181d7a7a0);
           lVar13 = NGUITools.AddSprite(uVar12,uVar18,lVar15,plVar14,0);
         }
         else {
           uVar12 = UIPopupList.mChild;
-          lVar13 = NGUITools.AddWidget(uVar12,plVar14,DAT_181d8eca0);
+          lVar13 = NGUITools.AddWidget(uVar12,plVar14,DAT_181d8eb38);
           if (lVar13 == null) throw; // [null/range check failed]
           UI2DSprite.set_sprite2D(lVar13,this[9],0);
         }
@@ -1954,12 +1954,12 @@ public class UIPopupList
                     lVar13 = this[3];
                     lVar15 = this[8];
                     uVar12 = UIPopupList.mChild;
-                    uVar18 = il2cpp_internal(lVar13,DAT_181d7a788);
+                    uVar18 = il2cpp_internal(lVar13,DAT_181d7a7a0);
                     lVar13 = NGUITools.AddSprite(uVar12,uVar18,lVar15,(int)plVar14 + 1,0);
                   }
                   else {
                     uVar12 = UIPopupList.mChild;
-                    lVar13 = NGUITools.AddWidget(uVar12,(int)plVar14 + 1,DAT_181d8eca0);
+                    lVar13 = NGUITools.AddWidget(uVar12,(int)plVar14 + 1,DAT_181d8eb38);
                     if (lVar13 == null) throw; // [null/range check failed]
                     UI2DSprite.set_sprite2D(lVar13,this[10],0);
                   }
@@ -2003,10 +2003,10 @@ public class UIPopupList
                         else {
                           fVar27 = (fVar5 - fVar27) - (float)*(int *)((int64)this + 196);
                         }
-                        lVar13 = il2cpp_internal(DAT_181d986d0);
-                        FUN_18132faf0(lVar13,DAT_181da9c18);
+                        lVar13 = il2cpp_internal(DAT_181d986e8);
+                        FUN_181330100(lVar13,DAT_181da9c30);
                         if (this[13] != 0) {
-                          cVar8 = FUN_18181e400(this[13],this[27],DAT_181da3e58);
+                          cVar8 = FUN_18181ea10(this[13],this[27],DAT_181da3e70);
                           if (!cVar8) {
                             this[27] = 0;
                             il2cpp_internal(this + 27,0);
@@ -2027,12 +2027,12 @@ public class UIPopupList
                                 uVar18 = UIPopupList.mChild;
                                 if (this[29] == 0) throw; // [null/range check failed]
                                 iVar10 = *(int *)(this[29] + 172);
-                                lVar15 = NGUITools.AddWidget(uVar18,iVar10 + 2,DAT_181d8ed20);
+                                lVar15 = NGUITools.AddWidget(uVar18,iVar10 + 2,DAT_181d8ebb8);
                                 uVar18 = Int32.ToString(local_res20,0);
                                 if (lVar15 == null) throw; // [null/range check failed]
                                 Object.set_name(lVar15,uVar18,0);
                                 UIWidget.set_pivot(lVar15,0,0);
-                                uVar18 = il2cpp_internal(this[4],DAT_181d7a800);
+                                uVar18 = il2cpp_internal(this[4],DAT_181d7a818);
                                 UILabel.set_bitmapFont(lVar15,uVar18,0);
                                 UILabel.set_trueTypeFont(lVar15,this[5],0);
                                 UILabel.set_fontSize(lVar15,(int)this[6],0);
@@ -2075,7 +2075,7 @@ public class UIPopupList
                                   *(uint8 *)(lVar15 + 0x24c) = 1;
                                 }
                                 if (lVar13 == null) throw; // [null/range check failed]
-                                FUN_18181e0a0(lVar13,lVar15,DAT_181da9c98);
+                                FUN_18181e6b0(lVar13,lVar15,DAT_181da9cb0);
                                 fVar27 = fVar27 - fVar28;
                                 local_1c8 = UILabel.get_printedSize(lVar15,0);
                                 Mathf.Max();
@@ -2089,14 +2089,14 @@ public class UIPopupList
                                 uVar18 = new OnTooltipCB(this,*(uint64 *)(*this + 0x290));
                                 *(uint64 *)(lVar16 + 40) = uVar18;
                                 *(uint64 *)(lVar16 + 24) = uVar12;
-                                cVar8 = FUN_18171e540(this[27],uVar12,0);
+                                cVar8 = FUN_18171eb50(this[27],uVar12,0);
                                 if ((cVar8) ||
                                    ((local_res20[0] == 0 &&
-                                    (cVar8 = FUN_180d755b0(this[27],0), cVar8)))) {
+                                    (cVar8 = FUN_180d75bc0(this[27],0), cVar8)))) {
                                   (**(code **)(*this + 0x238))(this,lVar15,1);
                                 }
                                 if (this[32] == 0) throw; // [null/range check failed]
-                                FUN_18181e0a0(this[32],lVar15,DAT_181da9c98);
+                                FUN_18181e6b0(this[32],lVar15,DAT_181da9cb0);
                                 local_res20[0] = local_res20[0] + 1;
                                 plVar24 = (int64 *)(uint64)local_res20[0];
                               } while ((int)local_res20[0] < (int)local_158);
@@ -2123,10 +2123,10 @@ public class UIPopupList
                                   uVar18 = Component.get_gameObject(lVar16,0);
                                   NGUITools.AddWidgetCollider(uVar18,0);
                                   *(uint8 *)(lVar16 + 208) = 0;
-                                  lVar20 = Component.GetComponent(lVar16,DAT_181d935e0);
+                                  lVar20 = Component.GetComponent(lVar16,DAT_181d935f8);
                                   cVar8 = Object.op_Inequality(lVar20,0,0);
                                   if (!cVar8) {
-                                    lVar16 = Component.GetComponent(lVar16,DAT_181d93660);
+                                    lVar16 = Component.GetComponent(lVar16,DAT_181d93678);
                                     local_158 = fVar29;
                                     fStack_154 = fVar28;
                                     if (lVar16 == null) throw; // [null/range check failed]
@@ -2183,9 +2183,9 @@ public class UIPopupList
                                     } while (lVar15 < iVar10);
                                   }
                                   uVar23 = 0;
-                                  lVar15 = il2cpp_internal(this[3],DAT_181d7a788);
+                                  lVar15 = il2cpp_internal(this[3],DAT_181d7a7a0);
                                   if (lVar15 != null) {
-                                    FUN_180133520(5,DAT_181d7a788,lVar15);
+                                    FUN_180133580(5,DAT_181d7a7a0,lVar15);
                                   }
                                   lVar15 = this[30];
                                   uVar9 = Mathf.RoundToInt();
@@ -2271,7 +2271,7 @@ public class UIPopupList
                                         local_1d8 = CONCAT44(fVar27,fVar26);
                                         local_res18 = CONCAT44(fVar28,fVar29);
                                         if (plVar24 != (int64 *)0) {
-        LAB_1811a4e88:
+        LAB_1811a5498:
                                           puVar17 = (uint64 *)
                                                     (**(code **)(*plVar24 + 0x2a8))
                                                               (&local_198,plVar24,local_1d8,local_res18,
@@ -2332,7 +2332,7 @@ public class UIPopupList
                                                                  (float)local_1f8 / fVar26);
                                             local_res18 = CONCAT44(local_1e8._4_4_ / fVar26,
                                                                    (float)local_1e8 / fVar26);
-                                            goto LAB_1811a4e88;
+                                            goto LAB_1811a5498;
                                           }
                                         }
                                       }
@@ -2354,7 +2354,7 @@ public class UIPopupList
     }
 
     // Token : 0x600020E
-    // RVA   : 0x11A5480   Offset: 0x11A4880   Length: 0x260
+    // RVA   : 0x11A5A90   Offset: 0x11A4E90   Length: 0x260
     public void /*ctor*/()
     {
         uint uVar1;
@@ -2366,18 +2366,18 @@ public class UIPopupList
         byte[] local_18 = new byte[16];
         this.fontSize = 16;
         this.alignment = 1;
-        uVar4 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(uVar4,DAT_181da3bd8);
+        uVar4 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(uVar4,DAT_181da3bf0);
         this.items = uVar4;
-        uVar4 = il2cpp_internal(DAT_181d94e50);
-        FUN_18132faf0(uVar4,DAT_181d95788);
+        uVar4 = il2cpp_internal(DAT_181d94e68);
+        FUN_181330100(uVar4,DAT_181d957a0);
         this.itemData = uVar4;
-        uVar4 = il2cpp_internal(DAT_181d909e0);
-        FUN_18132faf0(uVar4,DAT_181d7b208);
+        uVar4 = il2cpp_internal(DAT_181d909f8);
+        FUN_181330100(uVar4,DAT_181d7b220);
         this.itemCallbacks = uVar4;
         this.padding = 0x40800000;
         *(uint32 *)(this + 132) = 0x40800000;
-        puVar5 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar5 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar5[1];
         uVar2 = puVar5[2];
         uVar3 = puVar5[3];
@@ -2385,24 +2385,24 @@ public class UIPopupList
         *(uint32 *)(this + 140) = uVar1;
         *(uint32 *)(this + 144) = uVar2;
         *(uint32 *)(this + 148) = uVar3;
-        puVar6 = (uint64 *)FUN_1810d3570(local_18,0);
+        puVar6 = (uint64 *)FUN_1810d3b80(local_18,0);
         uVar4 = puVar6[1];
         local_28 = 0;
         uStack_20 = 0;
         this.backgroundColor = *puVar6;
         *(uint64 *)(this + 160) = uVar4;
-        FUN_1809dc910(&local_28,0x3f61e1e2,0x3f48c8c9,0x3f169697,0x3f800000,0);
+        FUN_1809dcfa0(&local_28,0x3f61e1e2,0x3f48c8c9,0x3f169697,0x3f800000,0);
         this.isAnimated = 1;
         this.separatePanel = 1;
         this.highlightColor = (uint32)local_28;
         *(uint32 *)(this + 172) = local_28._4_4_;
         *(uint32 *)(this + 176) = (uint32)uStack_20;
         *(uint32 *)(this + 180) = uStack_20._4_4_;
-        uVar4 = il2cpp_internal(DAT_181d92658);
-        FUN_18132faf0(uVar4,DAT_181d85ea0);
+        uVar4 = il2cpp_internal(DAT_181d92670);
+        FUN_181330100(uVar4,DAT_181d85eb8);
         this.onChange = uVar4;
-        uVar4 = il2cpp_internal(DAT_181d986d0);
-        FUN_18132faf0(uVar4,DAT_181da9c18);
+        uVar4 = il2cpp_internal(DAT_181d986e8);
+        FUN_181330100(uVar4,DAT_181da9c30);
         this.mLabelList = uVar4;
         this.functionName = "OnSelectionChange";
         TrailRenderer_Base.ctor(this,0);

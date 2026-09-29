@@ -20,7 +20,7 @@ public class AttriPresetButtonController
           StartMenuController.SetAttriPreset(lVar1,uVar2,0);
           plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
           plVar5 = (int64 *)0;
-          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
             plVar5 = plVar4;
           }
           NGUITools.PlaySound(plVar5,0);

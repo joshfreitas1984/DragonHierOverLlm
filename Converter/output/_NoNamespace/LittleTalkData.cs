@@ -14,12 +14,12 @@ public class LittleTalkData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60017E1
-    // RVA   : 0xA808A0   Offset: 0xA7FCA0   Length: 0x92
+    // RVA   : 0xA80F30   Offset: 0xA80330   Length: 0x92
     public void /*ctor*/(GameObject _target)
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(uVar1,DAT_181d89298);
+        uVar1 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(uVar1,DAT_181d892b0);
         this.littleTalks = uVar1;
         ZhSegment.Initialize(this,0);
         this.target = _target;

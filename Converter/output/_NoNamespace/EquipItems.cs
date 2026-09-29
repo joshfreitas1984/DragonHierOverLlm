@@ -11,7 +11,7 @@ public class EquipItems
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600001D
-    // RVA   : 0x944830   Offset: 0x943C30   Length: 0x2B9
+    // RVA   : 0x944EC0   Offset: 0x9442C0   Length: 0x2B9
     private void Start()
     {
         int iVar1;
@@ -28,15 +28,15 @@ public class EquipItems
         local_res8[0] = 0;
         if ((this.itemIDs != null) &&
            (*(int64 *)(this.itemIDs + 24) != 0)) {
-          lVar5 = Component.GetComponent(this,DAT_181d94560);
+          lVar5 = Component.GetComponent(this,DAT_181d94578);
           cVar3 = Object.op_Equality(lVar5,0,0);
           if (cVar3) {
             lVar5 = Component.get_gameObject(this,0);
-            if (lVar5 == null) goto LAB_180944ad4;
-            lVar5 = GameObject.AddComponent(lVar5,DAT_181dc54b0);
+            if (lVar5 == null) goto LAB_180945164;
+            lVar5 = GameObject.AddComponent(lVar5,DAT_181dc54c8);
           }
           if (this.itemIDs == null) {
-        LAB_180944ad4:
+        LAB_180945164:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -44,7 +44,7 @@ public class EquipItems
           if (0 < iVar1) {
             do {
               lVar6 = this.itemIDs;
-              if (lVar6 == null) goto LAB_180944ad4;
+              if (lVar6 == null) goto LAB_180945164;
               if (*(uint32 *)(lVar6 + 24) <= uVar9) {
                 uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -61,14 +61,14 @@ public class EquipItems
               }
               else {
                 lVar8 = new InvGameItem(uVar4,lVar6,0);
-                uVar4 = FUN_180d95a30(0,12);
-                if (lVar8 == null) goto LAB_180944ad4;
+                uVar4 = FUN_180d96040(0,12);
+                if (lVar8 == null) goto LAB_180945164;
                 *(uint32 *)(lVar8 + 20) = uVar4;
                 uVar4 = *(uint32 *)(lVar6 + 44);
                 uVar2 = *(uint32 *)(lVar6 + 48);
                 uVar4 = NGUITools.RandomRange(uVar4,uVar2,0);
                 *(uint32 *)(lVar8 + 24) = uVar4;
-                if (lVar5 == null) goto LAB_180944ad4;
+                if (lVar5 == null) goto LAB_180945164;
                 InvEquipment.Equip(lVar5,lVar8,0);
               }
               uVar9 = uVar9 + 1;

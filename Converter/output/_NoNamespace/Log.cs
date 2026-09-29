@@ -6,13 +6,13 @@
 public class Log
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002058
+    // Token: 0x4002059
     public string message;
 
-    // Token: 0x4002059
+    // Token: 0x400205A
     public string stackTrace;
 
-    // Token: 0x400205A
+    // Token: 0x400205B
     public LogType type;
 
 }

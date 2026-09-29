@@ -34,7 +34,7 @@ public class <BattleUnitAttackEnd>d__267
     }
 
     // Token : 0x6000C0B
-    // RVA   : 0x9C21C0   Offset: 0x9C15C0   Length: 0x2E9
+    // RVA   : 0x9C2850   Offset: 0x9C1C50   Length: 0x2E9
     private virtual bool MoveNext()
     {
         float fVar1;
@@ -92,7 +92,7 @@ public class <BattleUnitAttackEnd>d__267
               *(uint32 *)(lVar3 + 88) = uVar7;
               BattleController.ResetGridUnitsToNormal(lVar5,*(uint64 *)(lVar5 + 0x208),0);
               if (*(int64 *)(lVar5 + 0x208) != 0) {
-                FUN_1812f9a10(*(int64 *)(lVar5 + 0x208),DAT_181d8af98);
+                FUN_1812fa020(*(int64 *)(lVar5 + 0x208),DAT_181d8afb0);
                 *(uint8 *)(lVar5 + 0x128) = 0;
                 *(uint8 *)(lVar5 + 0x121) = 1;
                 *(uint32 *)(lVar5 + 0x124) = 12;
@@ -118,15 +118,15 @@ public class <BattleUnitAttackEnd>d__267
     }
 
     // Token : 0x6000C0D
-    // RVA   : 0x9C24B0   Offset: 0x9C18B0   Length: 0x3E
+    // RVA   : 0x9C2B40   Offset: 0x9C1F40   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97538);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d976d0);
     }
 
     // Token : 0x6000C0E

@@ -50,7 +50,7 @@ public class UIButton
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60000B4
-    // RVA   : 0x1532C60   Offset: 0x1532060   Length: 0x138
+    // RVA   : 0x1533270   Offset: 0x1532670   Length: 0x138
     public override bool get_isEnabled()
     {
         bool cVar1;
@@ -62,7 +62,7 @@ public class UIButton
         }
         lVar3 = Component.get_gameObject(this,0);
         if (lVar3 != null) {
-          lVar3 = GameObject.GetComponent(lVar3,DAT_181dc80c8);
+          lVar3 = GameObject.GetComponent(lVar3,DAT_181dc80e0);
           cVar1 = Object.op_Implicit(lVar3,0);
           if (cVar1) {
             if (lVar3 == null) throw; // [null/range check failed]
@@ -71,7 +71,7 @@ public class UIButton
               return true;
             }
           }
-          lVar3 = Component.GetComponent(this,DAT_181d93be0);
+          lVar3 = Component.GetComponent(this,DAT_181d93bf8);
           cVar1 = Object.op_Implicit(lVar3,0);
           if (!cVar1) {
             return false;
@@ -84,7 +84,7 @@ public class UIButton
     }
 
     // Token : 0x60000B5
-    // RVA   : 0x1532E20   Offset: 0x1532220   Length: 0x245
+    // RVA   : 0x1533430   Offset: 0x1532830   Length: 0x245
     public override void set_isEnabled(bool value)
     {
         bool cVar2;
@@ -97,10 +97,10 @@ public class UIButton
         }
         lVar3 = Component.get_gameObject(this,0);
         if (lVar3 != null) {
-          lVar3 = GameObject.GetComponent(lVar3,DAT_181dc80c8);
+          lVar3 = GameObject.GetComponent(lVar3,DAT_181dc80e0);
           cVar2 = Object.op_Inequality(lVar3,0,0);
           if (!cVar2) {
-            lVar3 = Component.GetComponent(this,DAT_181d93be0);
+            lVar3 = Component.GetComponent(this,DAT_181d93bf8);
             cVar2 = Object.op_Inequality(lVar3,0,0);
             if (!cVar2) {
               Behaviour.set_enabled(this,value,0);
@@ -108,7 +108,7 @@ public class UIButton
             }
             if (lVar3 != null) {
               Behaviour.set_enabled(lVar3,value,0);
-              lVar3 = Component.GetComponents(this,DAT_181d980e0);
+              lVar3 = Component.GetComponents(this,DAT_181d980f8);
               uVar5 = 0;
               if (lVar3 != null) {
                 while( true ) {
@@ -134,7 +134,7 @@ public class UIButton
           }
           else if (lVar3 != null) {
             Collider.set_enabled(lVar3,value,0);
-            lVar3 = Component.GetComponents(this,DAT_181d980e0);
+            lVar3 = Component.GetComponents(this,DAT_181d980f8);
             uVar5 = 0;
             if (lVar3 != null) {
               while( true ) {
@@ -161,7 +161,7 @@ public class UIButton
     }
 
     // Token : 0x60000B6
-    // RVA   : 0x1532DE0   Offset: 0x15321E0   Length: 0x39
+    // RVA   : 0x15333F0   Offset: 0x15327F0   Length: 0x39
     public string get_normalSprite()
     {
         if (*(char *)((int64)this + 116) == false) {
@@ -172,7 +172,7 @@ public class UIButton
     }
 
     // Token : 0x60000B7
-    // RVA   : 0x1533210   Offset: 0x1532610   Length: 0x184
+    // RVA   : 0x1533820   Offset: 0x1532C20   Length: 0x184
     public void set_normalSprite(string value)
     {
         long lVar1;
@@ -183,13 +183,13 @@ public class UIButton
         lVar1 = this[26];
         cVar2 = Object.op_Inequality(lVar1,0,0);
         if (cVar2) {
-          cVar2 = FUN_180d755b0(this[28],0);
+          cVar2 = FUN_180d75bc0(this[28],0);
           if (!cVar2) {
             if (this[26] == 0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            cVar2 = FUN_18171e540(this[28],*(uint64 *)(this[26] + 0x200),0);
+            cVar2 = FUN_18171eb50(this[28],*(uint64 *)(this[26] + 0x200),0);
             if (cVar2) {
               this[28] = value;
               il2cpp_internal(this + 28,value);
@@ -208,7 +208,7 @@ public class UIButton
     }
 
     // Token : 0x60000B8
-    // RVA   : 0x1532DA0   Offset: 0x15321A0   Length: 0x39
+    // RVA   : 0x15333B0   Offset: 0x15327B0   Length: 0x39
     public Sprite get_normalSprite2D()
     {
         if (*(char *)((int64)this + 116) == false) {
@@ -219,7 +219,7 @@ public class UIButton
     }
 
     // Token : 0x60000B9
-    // RVA   : 0x1533070   Offset: 0x1532470   Length: 0x199
+    // RVA   : 0x1533680   Offset: 0x1532A80   Length: 0x199
     public void set_normalSprite2D(Sprite value)
     {
         long lVar1;
@@ -255,7 +255,7 @@ public class UIButton
     }
 
     // Token : 0x60000BA
-    // RVA   : 0x1532500   Offset: 0x1531900   Length: 0x1D1
+    // RVA   : 0x1532B10   Offset: 0x1531F10   Length: 0x1D1
     protected override void OnInit()
     {
         ulong uVar2;
@@ -272,10 +272,10 @@ public class UIButton
         plVar1 = *(int64 **)(this + 120);
         plVar5 = (int64 *)0;
         if (plVar1 != (int64 *)0) {
-          if ((*(byte *)(*plVar1 + 300) < *(byte *)(DAT_181daf478 + 300)) ||
+          if ((*(byte *)(*plVar1 + 300) < *(byte *)(DAT_181daf490 + 300)) ||
              (*(int64 *)
-               (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181daf478 + 300) * 8) !=
-              DAT_181daf478)) {
+               (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181daf490 + 300) * 8) !=
+              DAT_181daf490)) {
             bVar3 = false;
           }
           else {
@@ -306,7 +306,7 @@ public class UIButton
     }
 
     // Token : 0x60000BB
-    // RVA   : 0x15323F0   Offset: 0x15317F0   Length: 0x105
+    // RVA   : 0x1532A00   Offset: 0x1531E00   Length: 0x105
     protected override void OnEnable()
     {
         bool cVar1;
@@ -315,7 +315,7 @@ public class UIButton
         ulong uVar4;
         cVar1 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
         if (!cVar1) {
-                          // WARNING: Could not recover jumptable at 0x000181532452. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181532a62. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x208))(this,3,1,*(uint64 *)(*this + 0x210));
           return;
@@ -329,7 +329,7 @@ public class UIButton
     }
 
     // Token : 0x60000BC
-    // RVA   : 0x1532250   Offset: 0x1531650   Length: 0x195
+    // RVA   : 0x1532860   Offset: 0x1531C60   Length: 0x195
     protected override void OnDragOver()
     {
         long lVar1;
@@ -339,7 +339,7 @@ public class UIButton
         cVar3 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
         if (cVar3) {
           if ((char)this[17] == false) {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181daf678 + 184) + 224);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181daf690 + 184) + 224);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -366,7 +366,7 @@ public class UIButton
     }
 
     // Token : 0x60000BD
-    // RVA   : 0x15320B0   Offset: 0x15314B0   Length: 0x193
+    // RVA   : 0x15326C0   Offset: 0x1531AC0   Length: 0x193
     protected override void OnDragOut()
     {
         long lVar1;
@@ -376,7 +376,7 @@ public class UIButton
         cVar3 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
         if (cVar3) {
           if ((char)this[17] == false) {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181daf678 + 184) + 224);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181daf690 + 184) + 224);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -403,25 +403,25 @@ public class UIButton
     }
 
     // Token : 0x60000BE
-    // RVA   : 0x1531F20   Offset: 0x1531320   Length: 0x182
+    // RVA   : 0x1532530   Offset: 0x1531930   Length: 0x182
     protected virtual void OnClick()
     {
         ulong uVar1;
         long lVar3;
         bool cVar4;
-        uVar1 = **(uint64 **)(DAT_181daf5f8 + 184);
+        uVar1 = **(uint64 **)(DAT_181daf610 + 184);
         cVar4 = Object.op_Equality(uVar1,0,0);
         if (cVar4) {
           cVar4 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
           if (cVar4) {
             if (UICamera.currentTouchID != -2) {
               if (UICamera.currentTouchID != -3) {
-                puVar2 = *(uint64 **)(DAT_181daf5f8 + 184);
+                puVar2 = *(uint64 **)(DAT_181daf610 + 184);
                 *puVar2 = this;
                 il2cpp_internal(puVar2,this);
                 lVar3 = this[25];
                 EventDelegate.Execute(lVar3,0);
-                puVar2 = *(uint64 **)(DAT_181daf5f8 + 184);
+                puVar2 = *(uint64 **)(DAT_181daf610 + 184);
                 *puVar2 = 0;
                 il2cpp_internal(puVar2,0);
               }
@@ -431,7 +431,7 @@ public class UIButton
     }
 
     // Token : 0x60000BF
-    // RVA   : 0x1532910   Offset: 0x1531D10   Length: 0x211
+    // RVA   : 0x1532F20   Offset: 0x1532320   Length: 0x211
     public override void SetState(State state, bool immediate)
     {
         bool cVar1;
@@ -480,21 +480,21 @@ public class UIButton
               }
               uVar2 = this.disabledSprite;
             }
-            goto LAB_181532b06;
+            goto LAB_181533116;
           }
-          cVar1 = FUN_180d755b0(this.hoverSprite,0);
+          cVar1 = FUN_180d75bc0(this.hoverSprite,0);
           if (!cVar1) {
             uVar2 = this.hoverSprite;
-            goto LAB_181532b06;
+            goto LAB_181533116;
           }
         }
         uVar2 = this.mNormalSprite;
-        LAB_181532b06:
+        LAB_181533116:
         UIButton.SetSprite(this,uVar2,0);
     }
 
     // Token : 0x60000C0
-    // RVA   : 0x15326E0   Offset: 0x1531AE0   Length: 0xE8
+    // RVA   : 0x1532CF0   Offset: 0x15320F0   Length: 0xE8
     protected void SetSprite(string sp)
     {
         ulong uVar1;
@@ -505,18 +505,18 @@ public class UIButton
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
             if (this.mSprite2D == null) {
-        LAB_181532901:
+        LAB_181532f11:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             uVar1 = this.mSprite2D.mSprite;
             cVar3 = Object.op_Inequality(uVar1,sp,0);
             if (cVar3) {
-              if (this.mSprite2D == null) goto LAB_181532901;
+              if (this.mSprite2D == null) goto LAB_181532f11;
               UI2DSprite.set_sprite2D(this.mSprite2D,sp,0);
               if (this.pixelSnap) {
                 plVar2 = this.mSprite2D;
-                if (plVar2 == (int64 *)0) goto LAB_181532901;
+                if (plVar2 == (int64 *)0) goto LAB_181532f11;
                 (**(code **)(*plVar2 + 0x348))(plVar2,*(uint64 *)(*plVar2 + 0x350));
               }
             }
@@ -525,7 +525,7 @@ public class UIButton
     }
 
     // Token : 0x60000C1
-    // RVA   : 0x15327D0   Offset: 0x1531BD0   Length: 0x136
+    // RVA   : 0x1532DE0   Offset: 0x15321E0   Length: 0x136
     protected void SetSprite(Sprite sp)
     {
         ulong uVar1;
@@ -536,18 +536,18 @@ public class UIButton
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
             if (this.mSprite2D == null) {
-        LAB_181532901:
+        LAB_181532f11:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             uVar1 = this.mSprite2D.mSprite;
             cVar3 = Object.op_Inequality(uVar1,sp,0);
             if (cVar3) {
-              if (this.mSprite2D == null) goto LAB_181532901;
+              if (this.mSprite2D == null) goto LAB_181532f11;
               UI2DSprite.set_sprite2D(this.mSprite2D,sp,0);
               if (this.pixelSnap) {
                 plVar2 = this.mSprite2D;
-                if (plVar2 == (int64 *)0) goto LAB_181532901;
+                if (plVar2 == (int64 *)0) goto LAB_181532f11;
                 (**(code **)(*plVar2 + 0x348))(plVar2,*(uint64 *)(*plVar2 + 0x350));
               }
             }
@@ -556,7 +556,7 @@ public class UIButton
     }
 
     // Token : 0x60000C2
-    // RVA   : 0x1532B30   Offset: 0x1531F30   Length: 0x127
+    // RVA   : 0x1533140   Offset: 0x1532540   Length: 0x127
     public void /*ctor*/()
     {
         uint uVar1;
@@ -569,24 +569,24 @@ public class UIButton
         ulong local_38;
         ulong uStack_30;
         byte[] local_28 = new byte[32];
-        uVar5 = il2cpp_internal(DAT_181d92658);
-        FUN_18132faf0(uVar5,DAT_181d85ea0);
+        uVar5 = il2cpp_internal(DAT_181d92670);
+        FUN_181330100(uVar5,DAT_181d85eb8);
         *(uint64 *)(this + 200) = uVar5;
         local_48 = 0;
         uStack_40 = 0;
-        FUN_1809dc910(&local_48,0x3f61e1e2,0x3f48c8c9,0x3f169697,0x3f800000,0);
+        FUN_1809dcfa0(&local_48,0x3f61e1e2,0x3f48c8c9,0x3f169697,0x3f800000,0);
         local_38 = 0;
         uStack_30 = 0;
         *(uint32 *)(this + 32) = (uint32)local_48;
         *(uint32 *)(this + 36) = local_48._4_4_;
         *(uint32 *)(this + 40) = (uint32)uStack_40;
         *(uint32 *)(this + 44) = uStack_40._4_4_;
-        FUN_1809dc910(&local_38,0x3f37b7b8,0x3f23a3a4,0x3ef6f6f7,0x3f800000,0);
+        FUN_1809dcfa0(&local_38,0x3f37b7b8,0x3f23a3a4,0x3ef6f6f7,0x3f800000,0);
         *(uint32 *)(this + 48) = (uint32)local_38;
         *(uint32 *)(this + 52) = local_38._4_4_;
         *(uint32 *)(this + 56) = (uint32)uStack_30;
         *(uint32 *)(this + 60) = uStack_30._4_4_;
-        puVar6 = (uint32 *)FUN_1810d33f0(local_28,0);
+        puVar6 = (uint32 *)FUN_1810d3a00(local_28,0);
         uVar1 = *puVar6;
         uVar2 = puVar6[1];
         uVar3 = puVar6[2];

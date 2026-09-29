@@ -43,7 +43,7 @@ public class <TeamEnterBattleField>d__160
     }
 
     // Token : 0x6000BB8
-    // RVA   : 0x935F40   Offset: 0x935340   Length: 0x479
+    // RVA   : 0x936780   Offset: 0x935B80   Length: 0x479
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -63,7 +63,7 @@ public class <TeamEnterBattleField>d__160
             return false;
           }
           this.<>1__state = 0xffffffff;
-          goto LAB_180936042;
+          goto LAB_180936882;
         }
         this.<>1__state = 0xffffffff;
         if (lVar1 != null) {
@@ -85,12 +85,12 @@ public class <TeamEnterBattleField>d__160
             lVar4 = lVar4._items[uVar2];
             lVar3 = BattleController.upHeroLayerOffset;
             if (lVar3 == null) {
-              uVar7 = **(uint64 **)(DAT_181dc2bf8 + 184);
-              lVar3 = new OnTooltipCB(uVar7,DAT_181d972b8,DAT_181dab7b8);
+              uVar7 = **(uint64 **)(DAT_181dc2c10 + 184);
+              lVar3 = new OnTooltipCB(uVar7,DAT_181d97450,DAT_181dab7d0);
               BattleController.upHeroLayerOffset = lVar3;
             }
             if (lVar4 == null) break;
-            List_1.Sort(lVar4,lVar3,DAT_181da6798);
+            List_1.Sort(lVar4,lVar3,DAT_181da67b0);
             this.<heroID>5__3 = 0;
             iVar10 = 0;
             while( true ) {
@@ -120,13 +120,13 @@ public class <TeamEnterBattleField>d__160
               if (*(char *)(lVar4 + 32) != false) {
                 if ((((this.targetTeamMemPrepareData == null) ||
                      (lVar4 = FUN_180002f80(this.targetTeamMemPrepareData,this.<teamID>5__2,
-                                            DAT_181d79628), lVar4 == null)) ||
-                    (lVar4 = FUN_180002f80(lVar4,this.<heroID>5__3,DAT_181da6898),
+                                            DAT_181d79640), lVar4 == null)) ||
+                    (lVar4 = FUN_180002f80(lVar4,this.<heroID>5__3,DAT_181da68b0),
                     lVar4 == null)) ||
                    ((uVar7 = lVar4.Count, lVar1 == null ||
                     (*(int64 *)(lVar1 + 112) == 0)))) throw; // [null/range check failed]
                 uVar5 = FUN_180002f80(*(int64 *)(lVar1 + 112),this.<teamID>5__2,
-                                      DAT_181d7f830);
+                                      DAT_181d7f848);
                 if (*(int64 *)(lVar1 + 24) == 0) throw; // [null/range check failed]
                 uVar6 = BattleMapData.GetRandomBornGrid
                                   (*(int64 *)(lVar1 + 24),this.<teamID>5__2,0);
@@ -134,7 +134,7 @@ public class <TeamEnterBattleField>d__160
                   fVar11 = (float)Random.get_value(0);
                   if ((this.targetTeamMemPrepareData == null) ||
                      (lVar4 = FUN_180002f80(this.targetTeamMemPrepareData,this.<teamID>5__2,
-                                            DAT_181d79628), lVar4 == null)) throw; // [null/range check failed]
+                                            DAT_181d79640), lVar4 == null)) throw; // [null/range check failed]
                   uVar8 = fVar11 <= 1.0 / (float)lVar4.Count;
                 }
                 else {
@@ -143,7 +143,7 @@ public class <TeamEnterBattleField>d__160
                 BattleController.HeroEnterBattleField(lVar1,uVar7,uVar5,uVar6,uVar8,0,0);
                 if ((this.targetTeamMemPrepareData != null) &&
                    (lVar4 = FUN_180002f80(this.targetTeamMemPrepareData,this.<teamID>5__2,
-                                          DAT_181d79628), lVar4 != null)) {
+                                          DAT_181d79640), lVar4 != null)) {
                   Mathf.Max();
                   BattleController.GetHalfBattleTimeScale(lVar1,0);
                   uVar7 = new WaitForSeconds();
@@ -153,7 +153,7 @@ public class <TeamEnterBattleField>d__160
                 }
                 throw; // [null/range check failed]
               }
-        LAB_180936042:
+        LAB_180936882:
               this.<heroID>5__3 = this.<heroID>5__3 + 1;
               iVar10 = this.<heroID>5__3;
             }
@@ -170,15 +170,15 @@ public class <TeamEnterBattleField>d__160
     }
 
     // Token : 0x6000BBA
-    // RVA   : 0x9363C0   Offset: 0x9357C0   Length: 0x3E
+    // RVA   : 0x936C00   Offset: 0x936000   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97d38);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97ed0);
     }
 
     // Token : 0x6000BBB

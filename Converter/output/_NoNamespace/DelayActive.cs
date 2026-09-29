@@ -6,18 +6,18 @@
 public class DelayActive
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E7E
+    // Token: 0x4001E7F
     public GameObject[] m_activeObj;
 
-    // Token: 0x4001E7F
+    // Token: 0x4001E80
     public float m_delayTime;
 
-    // Token: 0x4001E80
+    // Token: 0x4001E81
     private float m_time;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002418
-    // RVA   : 0x93B120   Offset: 0x93A520   Length: 0x1B
+    // RVA   : 0x93B7B0   Offset: 0x93ABB0   Length: 0x1B
     private void Start()
     {
         uint uVar1;
@@ -26,7 +26,7 @@ public class DelayActive
     }
 
     // Token : 0x6002419
-    // RVA   : 0x93B140   Offset: 0x93A540   Length: 0x125
+    // RVA   : 0x93B7D0   Offset: 0x93ABD0   Length: 0x125
     private void Update()
     {
         long lVar1;

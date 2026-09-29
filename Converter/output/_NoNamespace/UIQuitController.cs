@@ -6,15 +6,15 @@
 public class UIQuitController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DD4
+    // Token: 0x4001DD5
     public List<UIQuitTarget> QuitTargets;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002365
-    // RVA   : 0x16FCAB0   Offset: 0x16FBEB0   Length: 0x77
+    // RVA   : 0x16FD0C0   Offset: 0x16FC4C0   Length: 0x77
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181dbb428 + 184);
+        var pStatics = *(int64*)(DAT_181dbb440 + 184);
         bool cVar1;
         cVar1 = FUN_1804625b0(27);
         if (!cVar1) {
@@ -34,7 +34,7 @@ public class UIQuitController
     }
 
     // Token : 0x6002366
-    // RVA   : 0x16FC6A0   Offset: 0x16FBAA0   Length: 0x40B
+    // RVA   : 0x16FCCB0   Offset: 0x16FC0B0   Length: 0x40B
     public void OnExcapeButtonClicked()
     {
         var pStatics_2dd8 = *(int64*)(DAT_181d72dd8 + 184);
@@ -64,24 +64,24 @@ public class UIQuitController
               cVar1 = GameObject.get_activeInHierarchy();
               if (cVar1) {
                 if ((this.QuitTargets != null) &&
-                   (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa418)) != null
+                   (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa430)) != null
                    ) {
                   if (lVar3.Count == null) {
                     return;
                   }
                   if (((this.QuitTargets != null) &&
-                      (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa418),
+                      (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa430),
                       lVar3 != null)) && (lVar3.Count != null)) {
                     iVar2 = UnityEventBase.GetPersistentEventCount(lVar3.Count,0);
                     if (iVar2 < 1) {
                       return;
                     }
                     if (((this.QuitTargets != null) &&
-                        (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa418),
+                        (lVar3 = FUN_180002f80(this.QuitTargets,plVar4,DAT_181daa430),
                         lVar3 != null)) && (lVar3.Count != null)) {
                       UnityEvent.Invoke(lVar3.Count,0);
                       uVar6 = "Sound/SoundEffect/Woosh";
-                      goto LAB_1816fc9ea;
+                      goto LAB_1816fcffa;
                     }
                   }
                 }
@@ -102,9 +102,9 @@ public class UIQuitController
             cVar1 = GameController.CanSaveLoad(GameController._instance,1,0);
             uVar6 = "Sound/SoundEffect/WrongClick";
             if (!cVar1) {
-        LAB_1816fc9ea:
+        LAB_1816fcffa:
               plVar4 = (int64 *)Resources.Load(uVar6,0);
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                 plVar7 = plVar4;
               }
               NGUITools.PlaySound(plVar7,0);

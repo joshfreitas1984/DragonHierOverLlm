@@ -7,7 +7,7 @@ public class UICenterOnClick
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000109
-    // RVA   : 0x12AF040   Offset: 0x12AE440   Length: 0x47C
+    // RVA   : 0x12AF650   Offset: 0x12AEA50   Length: 0x47C
     private void OnClick()
     {
         ulong uVar1;
@@ -24,9 +24,9 @@ public class UICenterOnClick
         byte[] local_18 = new byte[8];
         float local_10;
         uVar4 = Component.get_gameObject(this,0);
-        lVar5 = NGUITools.FindInParents(uVar4,DAT_181d8f3a0);
+        lVar5 = NGUITools.FindInParents(uVar4,DAT_181d8f238);
         uVar4 = Component.get_gameObject(this,0);
-        lVar6 = NGUITools.FindInParents(uVar4,DAT_181d8f620);
+        lVar6 = NGUITools.FindInParents(uVar4,DAT_181d8f4b8);
         cVar3 = Object.op_Inequality(lVar5,0,0);
         if (!cVar3) {
           cVar3 = Object.op_Inequality(lVar6,0,0);
@@ -37,7 +37,7 @@ public class UICenterOnClick
             if (*(int *)(lVar6 + 0x134) == 0) {
               return;
             }
-            lVar5 = Component.GetComponent(lVar6,DAT_181d96de0);
+            lVar5 = Component.GetComponent(lVar6,DAT_181d96df8);
             lVar7 = UIRect.get_cachedTransform(lVar6,0);
             lVar8 = Component.get_transform(this,0);
             if ((lVar8 != null) &&

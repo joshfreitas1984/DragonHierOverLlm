@@ -6,115 +6,115 @@
 public class QuickDetail
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A4F
+    // Token: 0x4001A50
     public GameObject Back;
 
-    // Token: 0x4001A50
+    // Token: 0x4001A51
     public GameObject equipDetail;
 
-    // Token: 0x4001A51
+    // Token: 0x4001A52
     public List<GameObject> equipDetailCompare;
 
-    // Token: 0x4001A52
+    // Token: 0x4001A53
     public GameObject medfoodDetail;
 
-    // Token: 0x4001A53
+    // Token: 0x4001A54
     public GameObject bookDetail;
 
-    // Token: 0x4001A54
+    // Token: 0x4001A55
     public GameObject treasureDetail;
 
-    // Token: 0x4001A55
+    // Token: 0x4001A56
     public GameObject materialDetail;
 
-    // Token: 0x4001A56
+    // Token: 0x4001A57
     public GameObject horseDetail;
 
-    // Token: 0x4001A57
+    // Token: 0x4001A58
     public GameObject horseDetailCompare;
 
-    // Token: 0x4001A58
+    // Token: 0x4001A59
     public GameObject skillDetail;
 
-    // Token: 0x4001A59
+    // Token: 0x4001A5A
     public GameObject heroDetail;
 
-    // Token: 0x4001A5A
+    // Token: 0x4001A5B
     public GameObject obstacleDetail;
 
-    // Token: 0x4001A5B
+    // Token: 0x4001A5C
     public GameObject areaDetail;
 
-    // Token: 0x4001A5C
+    // Token: 0x4001A5D
     public GameObject resourcePointDetail;
 
-    // Token: 0x4001A5D
+    // Token: 0x4001A5E
     public GameObject eventDetail;
 
-    // Token: 0x4001A5E
+    // Token: 0x4001A5F
     public GameObject missionDetail;
 
-    // Token: 0x4001A5F
+    // Token: 0x4001A60
     public GameObject exploreTileDetail;
 
-    // Token: 0x4001A60
+    // Token: 0x4001A61
     public GameObject tagDetail;
 
-    // Token: 0x4001A61
+    // Token: 0x4001A62
     public GameObject describeGrid;
 
-    // Token: 0x4001A62
+    // Token: 0x4001A63
     public GameObject skillRangeUI;
 
-    // Token: 0x4001A63
+    // Token: 0x4001A64
     public GameObject nowShowObject;
 
-    // Token: 0x4001A64
+    // Token: 0x4001A65
     public bool detailDirty;
 
-    // Token: 0x4001A65
+    // Token: 0x4001A66
     public bool describePosDirty;
 
-    // Token: 0x4001A66
+    // Token: 0x4001A67
     public bool forceUp;
 
-    // Token: 0x4001A67
+    // Token: 0x4001A68
     public float refreshTimeLeft;
 
-    // Token: 0x4001A68
+    // Token: 0x4001A69
     public GameObject skillDetailLittleDescrbePrefab;
 
-    // Token: 0x4001A69
+    // Token: 0x4001A6A
     public GameObject canvasRoot;
 
-    // Token: 0x4001A6A
+    // Token: 0x4001A6B
     private GameObject newObj;
 
-    // Token: 0x4001A6B
+    // Token: 0x4001A6C
     private static QuickDetail _instance;
 
-    // Token: 0x4001A6C
+    // Token: 0x4001A6D
     private static readonly List<float> SummonFollowDetailOffset;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001FED
-    // RVA   : 0xB22FA0   Offset: 0xB223A0   Length: 0x57
+    // RVA   : 0xB23660   Offset: 0xB22A60   Length: 0x57
     public static QuickDetail get_Instance()
     {
-        return **(uint64 **)(DAT_181d93f00 + 184);
+        return **(uint64 **)(DAT_181d93f18 + 184);
     }
 
     // Token : 0x6001FEE
-    // RVA   : 0xB13A90   Offset: 0xB12E90   Length: 0x61
+    // RVA   : 0xB14150   Offset: 0xB13550   Length: 0x61
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d93f00 + 184);
+        puVar1 = *(uint64 **)(DAT_181d93f18 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6001FEF
-    // RVA   : 0xB1F9C0   Offset: 0xB1EDC0   Length: 0x395
+    // RVA   : 0xB20080   Offset: 0xB1F480   Length: 0x395
     private void Start()
     {
         ulong uVar1;
@@ -130,8 +130,8 @@ public class QuickDetail
         uStack_30 = 0;
         uVar1 = GameObject.FindGameObjectWithTag("UICanvas",0);
         this.canvasRoot = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(uVar1,DAT_181d89298);
+        uVar1 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(uVar1,DAT_181d892b0);
         this.equipDetailCompare = uVar1;
         iVar5 = 0;
         do {
@@ -139,8 +139,8 @@ public class QuickDetail
           if (lVar3 == null) throw; // [null/range check failed]
           lVar2 = GameObject.get_transform(lVar3,0);
           if (lVar2 == null) throw; // [null/range check failed]
-          uVar1 = FUN_180da9a20(lVar2,0);
-          uVar1 = Object.Instantiate(lVar3,uVar1,DAT_181d92d98);
+          uVar1 = FUN_180daa030(lVar2,0);
+          uVar1 = Object.Instantiate(lVar3,uVar1,DAT_181d92c30);
           this.newObj = uVar1;
           if (this.newObj == null) throw; // [null/range check failed]
           lVar3 = GameObject.get_transform(this.newObj,0);
@@ -149,27 +149,27 @@ public class QuickDetail
           if (lVar2 == null) throw; // [null/range check failed]
           lVar2 = Transform.Find(lVar2,"Back",0);
           if (lVar2 == null) throw; // [null/range check failed]
-          lVar2 = Component.GetComponent(lVar2,DAT_181d94f60);
+          lVar2 = Component.GetComponent(lVar2,DAT_181d94f78);
           if (lVar2 == null) throw; // [null/range check failed]
           puVar4 = (uint64 *)RectTransform.get_rect(local_28,lVar2,0);
           iVar5 = iVar5 + 1;
           local_38 = *puVar4;
           uStack_30 = puVar4[1];
-          fVar6 = (float)FUN_180d98fa0(&local_38,0);
+          fVar6 = (float)FUN_180d995b0(&local_38,0);
           if (lVar3 == null) throw; // [null/range check failed]
           local_48[1] = 0.0;
           local_48[2] = 0.0;
           local_48[0] = -fVar6 * (float)iVar5;
           Transform.set_localPosition(lVar3,local_48,0);
           if (this.equipDetailCompare == null) throw; // [null/range check failed]
-          FUN_18181e0a0(this.equipDetailCompare,this.newObj,DAT_181d89398);
+          FUN_18181e6b0(this.equipDetailCompare,this.newObj,DAT_181d893b0);
         } while (iVar5 < 2);
         lVar3 = this.horseDetail;
         if (lVar3 != null) {
           lVar2 = GameObject.get_transform(lVar3,0);
           if (lVar2 != null) {
-            uVar1 = FUN_180da9a20(lVar2,0);
-            uVar1 = Object.Instantiate(lVar3,uVar1,DAT_181d92d98);
+            uVar1 = FUN_180daa030(lVar2,0);
+            uVar1 = Object.Instantiate(lVar3,uVar1,DAT_181d92c30);
             this.horseDetailCompare = uVar1;
             if (this.horseDetailCompare != null) {
               lVar3 = GameObject.get_transform(this.horseDetailCompare,0);
@@ -178,12 +178,12 @@ public class QuickDetail
                 if (lVar2 != null) {
                   lVar2 = Transform.Find(lVar2,"Back",0);
                   if (lVar2 != null) {
-                    lVar2 = Component.GetComponent(lVar2,DAT_181d94f60);
+                    lVar2 = Component.GetComponent(lVar2,DAT_181d94f78);
                     if (lVar2 != null) {
                       puVar4 = (uint64 *)RectTransform.get_rect(local_28,lVar2,0);
                       local_38 = *puVar4;
                       uStack_30 = puVar4[1];
-                      fVar6 = (float)FUN_180d98fa0(&local_38,0);
+                      fVar6 = (float)FUN_180d995b0(&local_38,0);
                       if (lVar3 != null) {
                         local_48[1] = 0.0;
                         local_48[2] = 0.0;
@@ -201,7 +201,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF0
-    // RVA   : 0xB1FD60   Offset: 0xB1F160   Length: 0x30D4
+    // RVA   : 0xB20420   Offset: 0xB1F820   Length: 0x30D4
     private void Update()
     {
         bool cVar2;
@@ -231,7 +231,7 @@ public class QuickDetail
             this.refreshTimeLeft = fVar15 + 0.01;
             lVar3 = Component.get_transform(this,0);
             puVar4 = (uint64 *)Vector3.get_one(local_48,0);
-            if (lVar3 == null) goto LAB_180b22e2c;
+            if (lVar3 == null) goto LAB_180b234ec;
             local_50 = *(uint32 *)(puVar4 + 1);
             local_58 = *puVar4;
             Transform.set_localScale(lVar3,&local_58,0);
@@ -263,24 +263,24 @@ public class QuickDetail
           lVar3 = *plVar1;
           this.detailDirty = 0;
           lVar6 = MouseController.hoveredUI;
-          if (lVar6 == null) goto LAB_180b22e2c;
+          if (lVar6 == null) goto LAB_180b234ec;
           uVar5 = GameObject.GetComponent(lVar6,DAT_181d720a0);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (!cVar2) {
-        LAB_180b207a3:
+        LAB_180b20e63:
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d71d70);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71d70)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71d70)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 24) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -288,26 +288,26 @@ public class QuickDetail
                   uVar5 = this.horseDetail;
                   if ((*plVar1 == 0) ||
                      (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d71d70)) == null)
-                  goto LAB_180b22e2c;
+                  goto LAB_180b234ec;
                   QuickDetail.ShowHorseQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0,0,0);
                   this.describePosDirty = 1;
-                  goto LAB_180b22d58;
+                  goto LAB_180b23418;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d73800);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d73800)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d73800)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 32) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -315,30 +315,30 @@ public class QuickDetail
                   uVar5 = this.skillDetail;
                   if ((*plVar1 == 0) ||
                      (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d73800)) == null)
-                  goto LAB_180b22e2c;
+                  goto LAB_180b234ec;
                   uVar11 = *(uint64 *)(lVar6 + 32);
                   if ((*plVar1 == 0) ||
                      (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d73800)) == null)
-                  goto LAB_180b22e2c;
+                  goto LAB_180b234ec;
                   QuickDetail.ShowSkillQuickDetail(this,uVar5,uVar11,*(int *)(lVar6 + 40) == 3,0);
                   this.describePosDirty = 1;
-                  goto LAB_180b22d58;
+                  goto LAB_180b23418;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d736f0);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d736f0)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d736f0)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 24) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -346,26 +346,26 @@ public class QuickDetail
                   uVar5 = this.skillDetail;
                   if ((*plVar1 == 0) ||
                      (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d736f0)) == null)
-                  goto LAB_180b22e2c;
+                  goto LAB_180b234ec;
                   QuickDetail.ShowSkillQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0,0);
                   this.describePosDirty = 1;
-                  goto LAB_180b22d58;
+                  goto LAB_180b23418;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d71b50);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71b50)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71b50)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 32) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -373,40 +373,40 @@ public class QuickDetail
                   uVar5 = this.heroDetail;
                   if ((*plVar1 == 0) ||
                      (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d71b50)) == null)
-                  goto LAB_180b22e2c;
+                  goto LAB_180b234ec;
                   QuickDetail.ShowHeroQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 32),0);
                   this.describePosDirty = 1;
-                  goto LAB_180b22d58;
+                  goto LAB_180b23418;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d719b8);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d719b8)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d719b8)) == null)
-                goto LAB_180b22e2c;
-                cVar2 = FUN_180d755b0(*(uint64 *)(lVar6 + 24),0);
+                goto LAB_180b234ec;
+                cVar2 = FUN_180d75bc0(*(uint64 *)(lVar6 + 24),0);
                 if (!cVar2) {
                   lVar6 = MouseController.hoveredUI;
                   if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d719b8)) == null)
-                  goto LAB_180b22e2c;
+                  goto LAB_180b234ec;
                   cVar2 = String.op_Inequality(*(uint64 *)(lVar6 + 24),"掌门亲启",0);
                   if (cVar2) {
                     lVar6 = FUN_18046c0a0(0);
-                    if (lVar6 == null) goto LAB_180b22e2c;
+                    if (lVar6 == null) goto LAB_180b234ec;
                     lVar6 = *(int64 *)(lVar6 + 32);
                     lVar10 = MouseController.hoveredUI;
                     if (((lVar10 == null) ||
                         (lVar10 = GameObject.GetComponent(lVar10,DAT_181d719b8)) == null) ||
-                       (lVar6 == null)) goto LAB_180b22e2c;
+                       (lVar6 == null)) goto LAB_180b234ec;
                     lVar6 = WorldData.GetHero(lVar6,*(uint64 *)(lVar10 + 24),0);
                     if (lVar6 != null) {
                       *plVar1 = MouseController.hoveredUI;
@@ -414,62 +414,62 @@ public class QuickDetail
                       QuickDetail.SetAllDisactive(this,0);
                       uVar5 = this.heroDetail;
                       lVar6 = FUN_18046c0a0(0);
-                      if (lVar6 == null) goto LAB_180b22e2c;
+                      if (lVar6 == null) goto LAB_180b234ec;
                       lVar6 = *(int64 *)(lVar6 + 32);
                       lVar10 = MouseController.hoveredUI;
                       if (((lVar10 == null) ||
                           (lVar10 = GameObject.GetComponent(lVar10,DAT_181d719b8)) == null) ||
-                         (lVar6 == null)) goto LAB_180b22e2c;
+                         (lVar6 == null)) goto LAB_180b234ec;
                       uVar11 = WorldData.GetHero(lVar6,*(uint64 *)(lVar10 + 24),0);
                       QuickDetail.ShowHeroQuickDetail(this,uVar5,uVar11,0);
                       this.describePosDirty = 1;
-                      goto LAB_180b22d58;
+                      goto LAB_180b23418;
                     }
                   }
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d72898);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d72898)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
-              if (!cVar2) goto LAB_180b213de;
+              if (!cVar2) goto LAB_180b21a9e;
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d72898)) == null)
-              goto LAB_180b22e2c;
-              if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b213de;
+              goto LAB_180b234ec;
+              if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b21a9e;
               *plVar1 = MouseController.hoveredUI;
               il2cpp_internal(plVar1);
               QuickDetail.SetAllDisactive(this,0);
               lVar6 = *plVar1;
               uVar5 = this.areaDetail;
               uVar11 = DAT_181d72898;
-        joined_r0x000180b213cc:
+        joined_r0x000180b21a8c:
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,uVar11)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               QuickDetail.ShowAreaQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
               this.describePosDirty = 1;
-              goto LAB_180b22d58;
+              goto LAB_180b23418;
             }
-        LAB_180b213de:
+        LAB_180b21a9e:
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d732b0);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d732b0)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d732b0)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 24) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -477,23 +477,23 @@ public class QuickDetail
                   lVar6 = *plVar1;
                   uVar5 = this.areaDetail;
                   uVar11 = DAT_181d732b0;
-                  goto joined_r0x000180b213cc;
+                  goto joined_r0x000180b21a8c;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d729a8);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d729a8)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d729a8)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 24) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -501,23 +501,23 @@ public class QuickDetail
                   lVar6 = *plVar1;
                   uVar5 = this.resourcePointDetail;
                   uVar11 = DAT_181d729a8;
-                  goto joined_r0x000180b226f4;
+                  goto joined_r0x000180b22db4;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d72f80);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d72f80)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d72f80)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 24) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -525,23 +525,23 @@ public class QuickDetail
                   lVar6 = *plVar1;
                   uVar5 = this.resourcePointDetail;
                   uVar11 = DAT_181d72f80;
-                  goto joined_r0x000180b226f4;
+                  goto joined_r0x000180b22db4;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d72568);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d72568)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d72568)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 24) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
@@ -549,100 +549,100 @@ public class QuickDetail
                   uVar5 = this.missionDetail;
                   if ((*plVar1 == 0) ||
                      (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d72568)) == null)
-                  goto LAB_180b22e2c;
+                  goto LAB_180b234ec;
                   QuickDetail.ShowMissionQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
                   this.describePosDirty = 1;
-                  goto LAB_180b22d58;
+                  goto LAB_180b23418;
                 }
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
-            uVar5 = GameObject.GetComponent(lVar6,DAT_181dc70d8);
+            if (lVar6 == null) goto LAB_180b234ec;
+            uVar5 = GameObject.GetComponent(lVar6,DAT_181dc70f0);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
-              if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc70d8)) == null)
-              goto LAB_180b22e2c;
+              if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc70f0)) == null)
+              goto LAB_180b234ec;
               if (*(int64 *)(lVar6 + 24) != 0) {
                 *plVar1 = MouseController.hoveredUI;
                 il2cpp_internal(plVar1);
                 QuickDetail.SetAllDisactive(this,0);
                 uVar5 = this.eventDetail;
                 lVar6 = MouseController.hoveredUI;
-                uVar11 = DAT_181dc70d8;
-        joined_r0x000180b22992:
+                uVar11 = DAT_181dc70f0;
+        joined_r0x000180b23052:
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,uVar11)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 QuickDetail.ShowEventQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
                 this.describePosDirty = 0x101;
-                goto LAB_180b22d58;
+                goto LAB_180b23418;
               }
             }
             lVar6 = MouseController.hoveredUI;
-            if (lVar6 == null) goto LAB_180b22e2c;
+            if (lVar6 == null) goto LAB_180b234ec;
             uVar5 = GameObject.GetComponent(lVar6,DAT_181d71ce8);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
               lVar6 = MouseController.hoveredUI;
               if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71ce8)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               cVar2 = Behaviour.get_enabled(lVar6,0);
               if (cVar2) {
                 lVar6 = MouseController.hoveredUI;
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71ce8)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (*(int64 *)(lVar6 + 32) != 0) {
                   *plVar1 = MouseController.hoveredUI;
                   il2cpp_internal(plVar1);
                   QuickDetail.SetAllDisactive(this,0);
                   uVar5 = this.tagDetail;
-                  if (*plVar1 == 0) goto LAB_180b22e2c;
+                  if (*plVar1 == 0) goto LAB_180b234ec;
                   uVar11 = GameObject.GetComponent(*plVar1,DAT_181d71ce8);
                   QuickDetail.ShowTagQuickDetail(this,uVar5,uVar11,0);
                   this.describePosDirty = 0x101;
-                  goto LAB_180b22d58;
+                  goto LAB_180b23418;
                 }
               }
             }
-            goto LAB_180b22d41;
+            goto LAB_180b23401;
           }
           lVar6 = MouseController.hoveredUI;
           if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d720a0)) == null)
-          goto LAB_180b22e2c;
+          goto LAB_180b234ec;
           cVar2 = Behaviour.get_enabled(lVar6,0);
-          if (!cVar2) goto LAB_180b207a3;
+          if (!cVar2) goto LAB_180b20e63;
           lVar6 = MouseController.hoveredUI;
           if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d720a0)) == null)
-          goto LAB_180b22e2c;
-          if (*(int64 *)(lVar6 + 32) == 0) goto LAB_180b207a3;
+          goto LAB_180b234ec;
+          if (*(int64 *)(lVar6 + 32) == 0) goto LAB_180b20e63;
           *plVar1 = MouseController.hoveredUI;
           il2cpp_internal(plVar1);
           QuickDetail.SetAllDisactive(this,0);
           lVar6 = MouseController.hoveredUI;
           if (((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d720a0)) == null) ||
-             (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180b22e2c;
+             (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180b234ec;
           switch(*(uint32 *)(*(int64 *)(lVar6 + 32) + 20)) {
           case 0:
             uVar5 = this.equipDetail;
             if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             uVar11 = *(uint64 *)(lVar6 + 32);
-            if (*plVar1 == 0) goto LAB_180b22e2c;
+            if (*plVar1 == 0) goto LAB_180b234ec;
             uVar9 = GameObject.GetComponent(*plVar1,DAT_181d720a0);
             uVar12 = 0;
             QuickDetail.ShowEquipmentQuickDetail(this,uVar5,uVar11,0,uVar9,0);
             cVar2 = FUN_1804625f0(0x130,0);
-            if (!cVar2) goto switchD_180b20381_default;
+            if (!cVar2) goto switchD_180b20a41_default;
             if ((((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
                 || (*(int64 *)(lVar6 + 32) == 0)) ||
                (lVar6 = QuickDetail.FindPlayerEquipment
                                   (this,*(uint32 *)(*(int64 *)(lVar6 + 32) + 24),0),
-               lVar6 == null)) goto LAB_180b22e2c;
+               lVar6 == null)) goto LAB_180b234ec;
             lVar10 = 32;
             uVar13 = uVar12;
             for (; (int)uVar12 < (int)*(uint32 *)(lVar6 + 24); uVar12 = uVar12 + 1) {
-              if (this.equipDetailCompare == null) goto LAB_180b22e2c;
+              if (this.equipDetailCompare == null) goto LAB_180b234ec;
               if (this.equipDetailCompare.Count <= (int)uVar13) break;
               if (*(uint32 *)(lVar6 + 24) <= uVar12) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -651,11 +651,11 @@ public class QuickDetail
                 lVar7 = FUN_180002f80(lVar6,uVar12);
                 lVar8 = MouseController.hoveredUI;
                 if ((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181d720a0)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (lVar7 != *(int64 *)(lVar8 + 32)) {
-                  if (this.equipDetailCompare == null) goto LAB_180b22e2c;
-                  uVar5 = FUN_180002f80(this.equipDetailCompare,uVar13,DAT_181d89918);
-                  uVar11 = FUN_180002f80(lVar6,uVar12,DAT_181d90f18);
+                  if (this.equipDetailCompare == null) goto LAB_180b234ec;
+                  uVar5 = FUN_180002f80(this.equipDetailCompare,uVar13,DAT_181d89930);
+                  uVar11 = FUN_180002f80(lVar6,uVar12,DAT_181d90f30);
                   QuickDetail.ShowEquipmentQuickDetail(this,uVar5,uVar11,1,0,0);
                   uVar13 = uVar13 + 1;
                 }
@@ -668,57 +668,57 @@ public class QuickDetail
           case 2:
             uVar5 = this.medfoodDetail;
             if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             QuickDetail.ShowMedFoodQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 32),0);
             this.describePosDirty = 1;
             break;
           case 3:
             uVar5 = this.bookDetail;
             if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             QuickDetail.ShowBookQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 32),0);
             this.describePosDirty = 1;
             break;
           case 4:
             uVar5 = this.treasureDetail;
             if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             QuickDetail.ShowTreasureQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 32),0);
             this.describePosDirty = 1;
             break;
           case 5:
             uVar5 = this.materialDetail;
             if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             QuickDetail.ShowMaterialQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 32),0);
             this.describePosDirty = 1;
             break;
           case 6:
             uVar5 = this.horseDetail;
             if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             uVar11 = *(uint64 *)(lVar6 + 32);
-            if (*plVar1 == 0) goto LAB_180b22e2c;
+            if (*plVar1 == 0) goto LAB_180b234ec;
             uVar9 = GameObject.GetComponent(*plVar1,DAT_181d720a0);
             QuickDetail.ShowHorseQuickDetail(this,uVar5,uVar11,0,uVar9,0);
             cVar2 = FUN_1804625f0(0x130,0);
             if (cVar2) {
               if (((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null
-                  ) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180b22e2c;
+                  ) || (*(int64 *)(lVar6 + 32) == 0)) goto LAB_180b234ec;
               if (*(int *)(*(int64 *)(lVar6 + 32) + 24) == 0) {
                 lVar6 = QuickDetail.GetTargetHero(this,0);
-                if (lVar6 == null) goto LAB_180b22e2c;
+                if (lVar6 == null) goto LAB_180b234ec;
                 lVar6 = *(int64 *)(lVar6 + 0x208);
               }
               else {
                 lVar6 = QuickDetail.GetTargetHero(this,0);
-                if (lVar6 == null) goto LAB_180b22e2c;
+                if (lVar6 == null) goto LAB_180b234ec;
                 lVar6 = *(int64 *)(lVar6 + 0x218);
               }
               if (lVar6 != null) {
                 if ((*plVar1 == 0) ||
                    (lVar10 = GameObject.GetComponent(*plVar1,DAT_181d720a0)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 if (lVar6 != *(int64 *)(lVar10 + 32)) {
                   QuickDetail.ShowHorseQuickDetail(this,this.horseDetailCompare,lVar6,1,0,0);
                   this.describePosDirty = 1;
@@ -727,7 +727,7 @@ public class QuickDetail
               }
             }
           default:
-        switchD_180b20381_default:
+        switchD_180b20a41_default:
             this.describePosDirty = 1;
           }
         }
@@ -743,41 +743,41 @@ public class QuickDetail
           lVar3 = *plVar1;
           this.detailDirty = 0;
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
-          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc76b0);
+          if (lVar6 == null) goto LAB_180b234ec;
+          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc76c8);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
-            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc76b0)) == null)
-            goto LAB_180b22e2c;
+            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc76c8)) == null)
+            goto LAB_180b234ec;
             cVar2 = Behaviour.get_enabled(lVar6,0);
-            if (!cVar2) goto LAB_180b21fb5;
+            if (!cVar2) goto LAB_180b22675;
             lVar6 = MouseController.get_hoveredObject(0);
-            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc76b0)) == null)
-            goto LAB_180b22e2c;
-            if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b21fb5;
+            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc76c8)) == null)
+            goto LAB_180b234ec;
+            if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b22675;
             lVar6 = MouseController.get_hoveredObject(0);
             *plVar1 = lVar6;
             il2cpp_internal(plVar1,lVar6);
             QuickDetail.SetAllDisactive(this,0);
             uVar5 = this.heroDetail;
-            if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181dc76b0)) == null)
-            goto LAB_180b22e2c;
+            if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181dc76c8)) == null)
+            goto LAB_180b234ec;
             uVar11 = *(uint64 *)(lVar6 + 24);
-        LAB_180b22139:
+        LAB_180b227f9:
             QuickDetail.ShowHeroQuickDetail(this,uVar5,uVar11,0);
             this.describePosDirty = 1;
-            goto LAB_180b22d58;
+            goto LAB_180b23418;
           }
-        LAB_180b21fb5:
+        LAB_180b22675:
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
+          if (lVar6 == null) goto LAB_180b234ec;
           uVar5 = GameObject.GetComponent(lVar6,DAT_181d71820);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
             if (((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71820)) == null) ||
-               (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b22e2c;
+               (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b234ec;
             uVar5 = *(uint64 *)(*(int64 *)(lVar6 + 24) + 24);
             cVar2 = Object.op_Inequality(uVar5,0,0);
             if (cVar2) {
@@ -790,48 +790,48 @@ public class QuickDetail
               if ((((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71820)) == null)
                   || (*(int64 *)(lVar6 + 24) == 0)) ||
                  (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 24)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               uVar11 = *(uint64 *)(lVar6 + 64);
-              goto LAB_180b22139;
+              goto LAB_180b227f9;
             }
           }
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
+          if (lVar6 == null) goto LAB_180b234ec;
           uVar5 = GameObject.GetComponent(lVar6,DAT_181d71820);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
             if (((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71820)) == null) ||
-               (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b22e2c;
+               (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b234ec;
             if (*(int *)(*(int64 *)(lVar6 + 24) + 20) != 2) {
               lVar6 = MouseController.get_hoveredObject(0);
               if (((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71820)) == null) ||
                  ((*(int64 *)(lVar6 + 24) == 0 ||
                   (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 56)) == null)))
-              goto LAB_180b22e2c;
-              if (*(int *)(lVar6 + 16) == 0) goto LAB_180b22497;
+              goto LAB_180b234ec;
+              if (*(int *)(lVar6 + 16) == 0) goto LAB_180b22b57;
               lVar6 = MouseController.get_hoveredObject(0);
               if ((((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71820)) == null)
                   || (*(int64 *)(lVar6 + 24) == 0)) ||
                  (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 56)) == null)
-              goto LAB_180b22e2c;
+              goto LAB_180b234ec;
               if (-1 < *(int *)(lVar6 + 48)) {
-                lVar6 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
-                if (lVar6 == null) goto LAB_180b22e2c;
+                lVar6 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
+                if (lVar6 == null) goto LAB_180b234ec;
                 lVar6 = *(int64 *)(lVar6 + 112);
                 lVar10 = MouseController.get_hoveredObject(0);
                 if ((((lVar10 == null) ||
                      (lVar10 = GameObject.GetComponent(lVar10,DAT_181d71820)) == null) ||
                     (*(int64 *)(lVar10 + 24) == 0)) ||
                    ((lVar10 = *(int64 *)(*(int64 *)(lVar10 + 24) + 56), lVar10 == null ||
-                    (lVar6 == null)))) goto LAB_180b22e2c;
+                    (lVar6 == null)))) goto LAB_180b234ec;
                 uVar12 = *(uint32 *)(lVar10 + 48);
                 if (*(uint32 *)(lVar6 + 24) <= uVar12) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar6 = lVar6[uVar12];
-                if (lVar6 == null) goto LAB_180b22e2c;
-                if (*(char *)(lVar6 + 20) == false) goto LAB_180b22497;
+                if (lVar6 == null) goto LAB_180b234ec;
+                if (*(char *)(lVar6 + 20) == false) goto LAB_180b22b57;
               }
             }
             lVar6 = MouseController.get_hoveredObject(0);
@@ -841,20 +841,20 @@ public class QuickDetail
             uVar5 = this.obstacleDetail;
             lVar6 = MouseController.get_hoveredObject(0);
             if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71820)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             QuickDetail.ShowBattleGridQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
             this.describePosDirty = 1;
-            goto LAB_180b22d58;
+            goto LAB_180b23418;
           }
-        LAB_180b22497:
+        LAB_180b22b57:
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
-          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc7160);
+          if (lVar6 == null) goto LAB_180b234ec;
+          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc7178);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
-            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc7160)) == null)
-            goto LAB_180b22e2c;
+            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc7178)) == null)
+            goto LAB_180b234ec;
             if (*(int64 *)(lVar6 + 24) != 0) {
               lVar6 = MouseController.get_hoveredObject(0);
               *plVar1 = lVar6;
@@ -862,22 +862,22 @@ public class QuickDetail
               QuickDetail.SetAllDisactive(this,0);
               uVar5 = this.areaDetail;
               lVar6 = MouseController.get_hoveredObject(0);
-              if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc7160)) == null)
-              goto LAB_180b22e2c;
+              if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc7178)) == null)
+              goto LAB_180b234ec;
               QuickDetail.ShowAreaQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
               this.describePosDirty = 1;
-              goto LAB_180b22d58;
+              goto LAB_180b23418;
             }
           }
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
+          if (lVar6 == null) goto LAB_180b234ec;
           uVar5 = GameObject.GetComponent(lVar6,DAT_181d72ef8);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
             if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d72ef8)) == null)
-            goto LAB_180b22e2c;
-            if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b22730;
+            goto LAB_180b234ec;
+            if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b22df0;
             lVar6 = MouseController.get_hoveredObject(0);
             *plVar1 = lVar6;
             il2cpp_internal(plVar1,lVar6);
@@ -885,21 +885,21 @@ public class QuickDetail
             uVar5 = this.resourcePointDetail;
             lVar6 = MouseController.get_hoveredObject(0);
             uVar11 = DAT_181d72ef8;
-        joined_r0x000180b226f4:
+        joined_r0x000180b22db4:
             if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,uVar11)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             QuickDetail.ShowResourcePointQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
-            goto switchD_180b20381_default;
+            goto switchD_180b20a41_default;
           }
-        LAB_180b22730:
+        LAB_180b22df0:
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
-          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc75a0);
+          if (lVar6 == null) goto LAB_180b234ec;
+          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc75b8);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
-            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc75a0)) == null)
-            goto LAB_180b22e2c;
+            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc75b8)) == null)
+            goto LAB_180b234ec;
             if (*(int64 *)(lVar6 + 24) != 0) {
               lVar6 = MouseController.get_hoveredObject(0);
               *plVar1 = lVar6;
@@ -907,44 +907,44 @@ public class QuickDetail
               QuickDetail.SetAllDisactive(this,0);
               uVar5 = this.eventDetail;
               lVar6 = MouseController.get_hoveredObject(0);
-              if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc75a0)) == null)
-              goto LAB_180b22e2c;
+              if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc75b8)) == null)
+              goto LAB_180b234ec;
               QuickDetail.ShowEventQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
               this.describePosDirty = 0x101;
-              goto LAB_180b22d58;
+              goto LAB_180b23418;
             }
           }
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
-          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc71e8);
+          if (lVar6 == null) goto LAB_180b234ec;
+          uVar5 = GameObject.GetComponent(lVar6,DAT_181dc7200);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
-            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc71e8)) == null)
-            goto LAB_180b22e2c;
-            if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b229d0;
+            if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181dc7200)) == null)
+            goto LAB_180b234ec;
+            if (*(int64 *)(lVar6 + 24) == 0) goto LAB_180b23090;
             lVar6 = MouseController.get_hoveredObject(0);
             *plVar1 = lVar6;
             il2cpp_internal(plVar1,lVar6);
             QuickDetail.SetAllDisactive(this,0);
             uVar5 = this.eventDetail;
             lVar6 = MouseController.get_hoveredObject(0);
-            uVar11 = DAT_181dc71e8;
-            goto joined_r0x000180b22992;
+            uVar11 = DAT_181dc7200;
+            goto joined_r0x000180b23052;
           }
-        LAB_180b229d0:
+        LAB_180b23090:
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
+          if (lVar6 == null) goto LAB_180b234ec;
           uVar5 = GameObject.GetComponent(lVar6,DAT_181d71df8);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
             if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71df8)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             if (*(int64 *)(lVar6 + 24) != 0) {
               lVar6 = MouseController.get_hoveredObject(0);
               if (((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71df8)) == null) ||
-                 (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b22e2c;
+                 (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b234ec;
               if (*(int64 *)(*(int64 *)(lVar6 + 24) + 0x208) != 0) {
                 lVar6 = MouseController.get_hoveredObject(0);
                 *plVar1 = lVar6;
@@ -953,26 +953,26 @@ public class QuickDetail
                 uVar5 = this.horseDetail;
                 lVar6 = MouseController.get_hoveredObject(0);
                 if (((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71df8)) == null)
-                   || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b22e2c;
+                   || (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b234ec;
                 QuickDetail.ShowHorseQuickDetail
                           (this,uVar5,*(uint64 *)(*(int64 *)(lVar6 + 24) + 0x208),0,0,0);
                 this.describePosDirty = 1;
-                goto LAB_180b22d58;
+                goto LAB_180b23418;
               }
             }
           }
           lVar6 = MouseController.get_hoveredObject(0);
-          if (lVar6 == null) goto LAB_180b22e2c;
+          if (lVar6 == null) goto LAB_180b234ec;
           uVar5 = GameObject.GetComponent(lVar6,DAT_181d71578);
           cVar2 = Object.op_Inequality(uVar5,0,0);
           if (cVar2) {
             lVar6 = MouseController.get_hoveredObject(0);
             if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71578)) == null)
-            goto LAB_180b22e2c;
+            goto LAB_180b234ec;
             if (*(int64 *)(lVar6 + 24) != 0) {
               lVar6 = MouseController.get_hoveredObject(0);
               if (((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71578)) == null) ||
-                 (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b22e2c;
+                 (*(int64 *)(lVar6 + 24) == 0)) goto LAB_180b234ec;
               if (*(char *)(*(int64 *)(lVar6 + 24) + 88) != false) {
                 lVar6 = MouseController.get_hoveredObject(0);
                 *plVar1 = lVar6;
@@ -981,20 +981,20 @@ public class QuickDetail
                 uVar5 = this.exploreTileDetail;
                 lVar6 = MouseController.get_hoveredObject(0);
                 if ((lVar6 == null) || (lVar6 = GameObject.GetComponent(lVar6,DAT_181d71578)) == null)
-                goto LAB_180b22e2c;
+                goto LAB_180b234ec;
                 QuickDetail.ShowExploreTileQuickDetail(this,uVar5,*(uint64 *)(lVar6 + 24),0);
                 this.describePosDirty = 1;
-                goto LAB_180b22d58;
+                goto LAB_180b23418;
               }
             }
           }
-        LAB_180b22d41:
+        LAB_180b23401:
           QuickDetail.DisableDescribe(this,0);
           if (!this.describePosDirty) {
             return;
           }
         }
-        LAB_180b22d58:
+        LAB_180b23418:
         lVar6 = *plVar1;
         cVar2 = Object.op_Inequality(lVar6,lVar3,0);
         if (cVar2) {
@@ -1003,7 +1003,7 @@ public class QuickDetail
           if (cVar2) {
             lVar3 = FUN_18046c100(0);
             if (lVar3 == null) {
-        LAB_180b22e2c:
+        LAB_180b234ec:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -1014,7 +1014,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF1
-    // RVA   : 0xB13B80   Offset: 0xB12F80   Length: 0x171
+    // RVA   : 0xB14240   Offset: 0xB13640   Length: 0x171
     private List<ItemData> FindPlayerEquipment(int type)
     {
         ulong uVar1;
@@ -1045,8 +1045,8 @@ public class QuickDetail
         }
         else {
           if (type != 4) {
-            uVar1 = il2cpp_internal(DAT_181d940d0);
-            FUN_18132faf0(uVar1,DAT_181d90998);
+            uVar1 = il2cpp_internal(DAT_181d940e8);
+            FUN_181330100(uVar1,DAT_181d909b0);
             return uVar1;
           }
           lVar2 = QuickDetail.GetTargetHero(this,0);
@@ -1057,7 +1057,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF2
-    // RVA   : 0xB13E50   Offset: 0xB13250   Length: 0xA8
+    // RVA   : 0xB14510   Offset: 0xB13910   Length: 0xA8
     private bool HavePlayerEquipment(int type)
     {
         ulong uVar1;
@@ -1086,7 +1086,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF3
-    // RVA   : 0xB13F00   Offset: 0xB13300   Length: 0x45
+    // RVA   : 0xB145C0   Offset: 0xB139C0   Length: 0x45
     private bool HavePlayerHorse(int type)
     {
         long lVar1;
@@ -1105,7 +1105,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF4
-    // RVA   : 0xB13D00   Offset: 0xB13100   Length: 0x141
+    // RVA   : 0xB143C0   Offset: 0xB137C0   Length: 0x141
     public HeroData GetTargetHero()
     {
         var pStatics_5f40 = *(int64*)(DAT_181d75f40 + 184);
@@ -1131,7 +1131,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF5
-    // RVA   : 0xB13FC0   Offset: 0xB133C0   Length: 0x12CA
+    // RVA   : 0xB14680   Offset: 0xB13A80   Length: 0x12CA
     private void RefreshPosition()
     {
         bool cVar1;
@@ -1168,9 +1168,9 @@ public class QuickDetail
         uVar3 = GameObject.GetComponent(this.nowShowObject,DAT_181d71820);
         cVar1 = Object.op_Inequality(uVar3,0,0);
         if (!cVar1) {
-        LAB_180b14309:
+        LAB_180b149c9:
           if (this.nowShowObject == null) throw; // [null/range check failed]
-          uVar3 = GameObject.GetComponent(this.nowShowObject,DAT_181dc76b0);
+          uVar3 = GameObject.GetComponent(this.nowShowObject,DAT_181dc76c8);
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (cVar1) {
             if ((this.nowShowObject == null) ||
@@ -1181,7 +1181,7 @@ public class QuickDetail
             local_f0 = *(uint32 *)(puVar5 + 1);
             if ((float)((uint64)local_f8 >> 32) <= 0.0) {
               fVar15 = 1.0;
-              goto LAB_180b14696;
+              goto LAB_180b14d56;
             }
           }
           if (this.nowShowObject == null) throw; // [null/range check failed]
@@ -1196,7 +1196,7 @@ public class QuickDetail
             local_f0 = *(uint32 *)(puVar5 + 1);
             if ((float)((uint64)local_f8 >> 32) <= 0.0) {
               fVar15 = 1.3;
-              goto LAB_180b14696;
+              goto LAB_180b14d56;
             }
           }
           if (this.nowShowObject == null) throw; // [null/range check failed]
@@ -1205,12 +1205,12 @@ public class QuickDetail
           lVar4 = this.nowShowObject;
           if (!cVar1) {
             if (lVar4 == null) throw; // [null/range check failed]
-            uVar3 = GameObject.GetComponent(lVar4,DAT_181dc7848);
+            uVar3 = GameObject.GetComponent(lVar4,DAT_181dc7860);
             cVar1 = Object.op_Inequality(uVar3,0,0);
             lVar4 = this.nowShowObject;
             if (!cVar1) {
               if (lVar4 == null) throw; // [null/range check failed]
-              uVar3 = GameObject.GetComponent(lVar4,DAT_181dc78d0);
+              uVar3 = GameObject.GetComponent(lVar4,DAT_181dc78e8);
               cVar1 = Object.op_Inequality(uVar3,0,0);
               lVar4 = this.nowShowObject;
               if (!cVar1) {
@@ -1225,14 +1225,14 @@ public class QuickDetail
                 }
               }
               else {
-                if ((lVar4 == null) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181dc78d0)) == null)
+                if ((lVar4 == null) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181dc78e8)) == null)
                 throw; // [null/range check failed]
                 BoxCollider2D.get_size(lVar4,0);
                 fVar15 = extraout_var;
               }
             }
             else {
-              if ((lVar4 == null) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7848)) == null)
+              if ((lVar4 == null) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181dc7860)) == null)
               throw; // [null/range check failed]
               puVar5 = (uint64 *)BoxCollider.get_size(&local_f8,lVar4,0);
               local_f8 = *puVar5;
@@ -1255,14 +1255,14 @@ public class QuickDetail
              || (lVar4.Count == null)) throw; // [null/range check failed]
           uVar3 = *(uint64 *)(lVar4.Count + 24);
           cVar1 = Object.op_Inequality(uVar3,0,0);
-          if (!cVar1) goto LAB_180b14309;
+          if (!cVar1) goto LAB_180b149c9;
           if ((this.nowShowObject == null) ||
              (lVar4 = GameObject.get_transform(this.nowShowObject,0)) == null)
           throw; // [null/range check failed]
           puVar5 = (uint64 *)Transform.get_position(&local_f8,lVar4,0);
           local_f8 = *puVar5;
           local_f0 = *(uint32 *)(puVar5 + 1);
-          if (0.0 < (float)((uint64)local_f8 >> 32)) goto LAB_180b14309;
+          if (0.0 < (float)((uint64)local_f8 >> 32)) goto LAB_180b149c9;
           fVar15 = 3.0;
           if ((((this.nowShowObject == null) ||
                (lVar4 = GameObject.GetComponent(this.nowShowObject,DAT_181d71820)) == null
@@ -1270,17 +1270,17 @@ public class QuickDetail
              ((lVar4 = *(int64 *)(lVar4.Count + 24), lVar4 == null ||
               (lVar4 = *(int64 *)(lVar4 + 64)) == null))) throw; // [null/range check failed]
           if (lVar4._items) {
-            lVar4 = *(int64 *)(*(int64 *)(DAT_181d93f00 + 184) + 8);
+            lVar4 = *(int64 *)(*(int64 *)(DAT_181d93f18 + 184) + 8);
             if ((((this.nowShowObject == null) ||
                  (lVar6 = GameObject.GetComponent(this.nowShowObject,DAT_181d71820),
                  lVar6 == null)) || (*(int64 *)(lVar6 + 24) == 0)) ||
                (((lVar6 = *(int64 *)(*(int64 *)(lVar6 + 24) + 24), lVar6 == null ||
                  (lVar6 = *(int64 *)(lVar6 + 64)) == null) || (lVar4 == null)))) throw; // [null/range check failed]
-            fVar15 = (float)FUN_1800d6790(lVar4,*(uint32 *)(lVar6 + 20),DAT_181da1078);
+            fVar15 = (float)FUN_1800d6790(lVar4,*(uint32 *)(lVar6 + 20),DAT_181da1090);
             fVar15 = fVar15 + 3.0;
           }
         }
-        LAB_180b14696:
+        LAB_180b14d56:
         if ((this.Back != null) &&
            (lVar4 = GameObject.GetComponent(this.Back,DAT_181d72bc8)) != null) {
           puVar5 = (uint64 *)RectTransform.get_rect(local_d8,lVar4,0);
@@ -1316,7 +1316,7 @@ public class QuickDetail
                 puVar5 = (uint64 *)RectTransform.get_rect(local_d8,lVar4,0);
                 local_c8 = *puVar5;
                 uStack_c0 = puVar5[1];
-                fVar11 = (float)FUN_180d98fa0(&local_c8,0);
+                fVar11 = (float)FUN_180d995b0(&local_c8,0);
                 if ((this.canvasRoot != null) &&
                    (lVar4 = GameObject.GetComponent(this.canvasRoot,DAT_181d72bc8),
                    lVar4 != null)) {
@@ -1328,7 +1328,7 @@ public class QuickDetail
                     puVar5 = (uint64 *)RectTransform.get_rect(local_d8,lVar4,0);
                     local_c8 = *puVar5;
                     uStack_c0 = puVar5[1];
-                    fVar12 = (float)FUN_180d98fa0(&local_c8,0);
+                    fVar12 = (float)FUN_180d995b0(&local_c8,0);
                     lVar4 = Component.get_transform(this,0);
                     if (lVar4 != null) {
                       pfVar7 = (float *)Transform.get_lossyScale(&local_f8,lVar4,0);
@@ -1342,12 +1342,12 @@ public class QuickDetail
                           if ((((this.describeGrid == null) ||
                                (lVar4 = GameObject.get_transform(this.describeGrid,0),
                                lVar4 == null)) || (lVar4 = Transform.GetChild(lVar4,0,0)) == null) ||
-                             (lVar4 = Component.GetComponent(lVar4,DAT_181d94f60)) == null)
+                             (lVar4 = Component.GetComponent(lVar4,DAT_181d94f78)) == null)
                           throw; // [null/range check failed]
                           puVar5 = (uint64 *)RectTransform.get_rect(local_d8,lVar4,0);
                           local_c8 = *puVar5;
                           uStack_c0 = puVar5[1];
-                          fVar12 = (float)FUN_180d98fa0(&local_c8,0);
+                          fVar12 = (float)FUN_180d995b0(&local_c8,0);
                           lVar4 = Component.get_transform(this,0);
                           if (lVar4 == null) throw; // [null/range check failed]
                           pfVar7 = (float *)Transform.get_lossyScale(&local_f8,lVar4,0);
@@ -1360,12 +1360,12 @@ public class QuickDetail
                                 (lVar4 = GameObject.get_transform(this.skillRangeUI,0),
                                 lVar4 == null)) ||
                                ((lVar4 = Transform.GetChild(lVar4,0,0), lVar4 == null ||
-                                (lVar4 = Component.GetComponent(lVar4,DAT_181d94f60)) == null)))
+                                (lVar4 = Component.GetComponent(lVar4,DAT_181d94f78)) == null)))
                             throw; // [null/range check failed]
                             puVar5 = (uint64 *)RectTransform.get_rect(local_d8,lVar4,0);
                             local_c8 = *puVar5;
                             uStack_c0 = puVar5[1];
-                            fVar12 = (float)FUN_180d98fa0(&local_c8,0);
+                            fVar12 = (float)FUN_180d995b0(&local_c8,0);
                             lVar4 = Component.get_transform(this,0);
                             if (lVar4 == null) throw; // [null/range check failed]
                             pfVar7 = (float *)Transform.get_lossyScale(&local_f8,lVar4,0);
@@ -1406,7 +1406,7 @@ public class QuickDetail
                                      (lVar6 = GameObject.get_transform(this.nowShowObject,0),
                                      lVar6 != null)) {
                                     pfVar7 = (float *)Transform.get_position(&local_f8,lVar6,0);
-                                    uVar14 = FUN_1810e36c0(*pfVar7 + 0.0,CONCAT44(0x80000000,fVar16),
+                                    uVar14 = FUN_1810e3cd0(*pfVar7 + 0.0,CONCAT44(0x80000000,fVar16),
                                                            fVar11,0);
                                     if ((this.nowShowObject != null) &&
                                        (lVar6 = GameObject.get_transform(this.nowShowObject,0)
@@ -1415,7 +1415,7 @@ public class QuickDetail
                                       local_108 = CONCAT44(local_108._4_4_,uVar14);
                                       local_f8 = *puVar5;
                                       local_f0 = *(uint32 *)(puVar5 + 1);
-                                      uVar14 = FUN_1810e36c0((float)((uint64)local_f8 >> 32) + fVar15
+                                      uVar14 = FUN_1810e3cd0((float)((uint64)local_f8 >> 32) + fVar15
                                                              ,CONCAT44(0x80000000,-fVar12),fVar12,0);
                                       local_108 = CONCAT44(uVar14,(uint32)local_108);
                                       local_100 = 0;
@@ -1501,13 +1501,13 @@ public class QuickDetail
                                                              ((((lVar4 = FUN_180002f80(*(int64 *)
                                                                                         (this + 40),
                                                                                        uVar10,
-                                                        DAT_181d89918), lVar4 == null ||
+                                                        DAT_181d89930), lVar4 == null ||
                                                         (lVar4 = GameObject.get_transform(lVar4,0),
                                                         lVar4 == null)) ||
                                                         (lVar4 = Transform.Find(lVar4,"Back",0),
                                                         lVar4 == null)) ||
                                                         (lVar4 = Component.GetComponent
-                                                                           (lVar4,DAT_181d94f60),
+                                                                           (lVar4,DAT_181d94f78),
                                                         lVar4 == null)))) throw; // [null/range check failed]
                                                         puVar5 = (uint64 *)
                                                                  RectTransform.get_rect(local_a8,lVar4,0)
@@ -1518,7 +1518,7 @@ public class QuickDetail
                                                         if ((this.equipDetailCompare == null) ||
                                                            (lVar4 = FUN_180002f80(*(int64 *)
                                                                                    (this + 40),uVar10
-                                                                                  ,DAT_181d89918),
+                                                                                  ,DAT_181d89930),
                                                            lVar4 == null)) throw; // [null/range check failed]
                                                         lVar4 = GameObject.get_transform(lVar4,0);
                                                         if ((this.equipDetailCompare == null) ||
@@ -1581,7 +1581,7 @@ public class QuickDetail
                                                                  (lVar4 = Transform.Find(lVar4,
                                                         "Back",0), lVar4 != null)) &&
                                                         (lVar4 = Component.GetComponent
-                                                                           (lVar4,DAT_181d94f60),
+                                                                           (lVar4,DAT_181d94f78),
                                                         lVar4 != null)))) {
                                                           puVar5 = (uint64 *)
                                                                    RectTransform.get_rect
@@ -1653,7 +1653,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF6
-    // RVA   : 0xB15470   Offset: 0xB14870   Length: 0x28F
+    // RVA   : 0xB15B30   Offset: 0xB14F30   Length: 0x28F
     public void SetAllDisactive()
     {
         ulong uVar1;
@@ -1738,7 +1738,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF7
-    // RVA   : 0xB19A50   Offset: 0xB18E50   Length: 0x2F0
+    // RVA   : 0xB1A110   Offset: 0xB19510   Length: 0x2F0
     public void ShowEventQuickDetail(GameObject target, EventData eventData)
     {
         uint uVar2;
@@ -1754,12 +1754,12 @@ public class QuickDetail
             if ((*plVar1 != 0) &&
                (((lVar3 = GameObject.get_transform(*plVar1,0), lVar3 != null &&
                  (lVar3 = Transform.Find(lVar3,"Text",0)) != null) &&
-                (uVar4 = Component.GetComponent(lVar3,DAT_181d96160), eventData != null)))) {
+                (uVar4 = Component.GetComponent(lVar3,DAT_181d96178), eventData != null)))) {
               uVar5 = String.Concat("<size=17>",*(uint64 *)(eventData + 24),"</size>",0);
               LTLocalization.SetText(uVar4,uVar5,0);
               if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null) &&
                  (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                 uVar2 = *(uint32 *)(eventData + 108);
                 uVar5 = GlobalData.GetDifficultyStarString(uVar2,0);
                 uVar5 = String.Concat("\n",uVar5,0);
@@ -1769,7 +1769,7 @@ public class QuickDetail
                 }
                 if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null) &&
                    (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                  uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                  uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                   uVar5 = Int32.ToString(eventData + 104,0);
                   uVar5 = String.Concat("\n",uVar5,"天",0);
                   LTLocalization.AddText(uVar4,uVar5,0);
@@ -1782,7 +1782,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF8
-    // RVA   : 0xB1D4C0   Offset: 0xB1C8C0   Length: 0x2C6
+    // RVA   : 0xB1DB80   Offset: 0xB1CF80   Length: 0x2C6
     public void ShowMissionQuickDetail(GameObject target, MissionData missionData)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -1805,11 +1805,11 @@ public class QuickDetail
             if ((this.Back != null) &&
                (((lVar4 = GameObject.get_transform(this.Back,0), lVar4 != null &&
                  (lVar4 = Transform.Find(lVar4,"Text",0)) != null) &&
-                (uVar5 = Component.GetComponent(lVar4,DAT_181d96160), missionData != null)))) {
+                (uVar5 = Component.GetComponent(lVar4,DAT_181d96178), missionData != null)))) {
               iVar2 = *(int *)(missionData + 76);
               uVar7 = "";
               if (iVar2 < 0) {
-        LAB_180b1d716:
+        LAB_180b1ddd6:
                 uVar6 = MissionData.GetMissionDescribe(missionData,0);
                 uVar7 = String.Concat(uVar7,uVar6,0);
                 LTLocalization.SetText(uVar5,uVar7,0);
@@ -1818,7 +1818,7 @@ public class QuickDetail
               lVar4 = *(int64 *)(pStatics + 0x460);
               if (lVar4 != null) {
                 uVar7 = "";
-                if (*(int *)(lVar4 + 24) <= iVar2) goto LAB_180b1d716;
+                if (*(int *)(lVar4 + 24) <= iVar2) goto LAB_180b1ddd6;
                 lVar4 = *(int64 *)(pStatics + 0x460);
                 if (lVar4 != null) {
                   uVar3 = *(uint32 *)(missionData + 76);
@@ -1841,7 +1841,7 @@ public class QuickDetail
                     uStack_c = puVar1[3];
                     uVar6 = ColorUtility.ToHtmlStringRGB(&local_18,0);
                     uVar7 = String.Format("<color=#{1}><b>[{0}任务]</b></color>\n",uVar7,uVar6,0);
-                    goto LAB_180b1d716;
+                    goto LAB_180b1ddd6;
                   }
                 }
               }
@@ -1851,7 +1851,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FF9
-    // RVA   : 0xB1E7D0   Offset: 0xB1DBD0   Length: 0x355
+    // RVA   : 0xB1EE90   Offset: 0xB1E290   Length: 0x355
     public void ShowTagQuickDetail(GameObject target, HeroTagIconController tagIconController)
     {
         long lVar1;
@@ -1868,7 +1868,7 @@ public class QuickDetail
             if ((this.Back != null) &&
                (((lVar1 = GameObject.get_transform(this.Back,0), lVar1 != null &&
                  (lVar1 = Transform.Find(lVar1,"Text",0)) != null) &&
-                (uVar2 = Component.GetComponent(lVar1,DAT_181d96160), tagIconController != null)))) {
+                (uVar2 = Component.GetComponent(lVar1,DAT_181d96178), tagIconController != null)))) {
               uVar3 = HeroTagIconController.GetDescribe(tagIconController,0);
               LTLocalization.SetText(uVar2,uVar3,0);
               iVar4 = 0;
@@ -1880,7 +1880,7 @@ public class QuickDetail
                 }
                 lVar1 = FUN_18046c100(0);
                 if (((lVar1 == null) || (*(int64 *)(lVar1 + 144) == 0)) ||
-                   (lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 144),iVar4,DAT_181d8c018)) == null)
+                   (lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 144),iVar4,DAT_181d8c030)) == null)
                 break;
                 if (*(char *)(lVar1 + 89) != false) {
                   if ((*(int64 *)(tagIconController + 32) == 0) ||
@@ -1893,7 +1893,7 @@ public class QuickDetail
                     if (fVar5 != 0.0) {
                       lVar1 = FUN_18046c100(0);
                       if (((lVar1 == null) || (*(int64 *)(lVar1 + 144) == 0)) ||
-                         (lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 144),iVar4,DAT_181d8c018),
+                         (lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 144),iVar4,DAT_181d8c030),
                          lVar1 == null)) break;
                       uVar2 = HeroSpeAddDataBase.GetDescribe(lVar1,0);
                       QuickDetail.AddDescribeTab(this,uVar2,0);
@@ -1908,7 +1908,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FFA
-    // RVA   : 0xB1D790   Offset: 0xB1CB90   Length: 0x6C9
+    // RVA   : 0xB1DE50   Offset: 0xB1D250   Length: 0x6C9
     public void ShowResourcePointQuickDetail(GameObject target, ResourcePointData resourcePointData)
     {
         int iVar2;
@@ -1940,7 +1940,7 @@ public class QuickDetail
                 uVar6 = String.Concat("\n势力 ",uVar6,0);
               }
               lVar4 = String.Concat(uVar10,uVar5,uVar9,uVar6,0);
-              plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,9);
+              plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,9);
               if (plVar7 != (int64 *)0) {
                 if ((lVar4 != null) &&
                    (lVar8 = il2cpp_internal(lVar4,*(uint64 *)(*plVar7 + 64))) == null) {
@@ -2091,7 +2091,7 @@ public class QuickDetail
                     uVar9 = String.Concat(plVar7,0);
                     if (((*plVar1 != 0) && (lVar4 = GameObject.get_transform(*plVar1,0)) != null) &&
                        (lVar4 = Transform.Find(lVar4,"Text",0)) != null) {
-                      uVar10 = Component.GetComponent(lVar4,DAT_181d96160);
+                      uVar10 = Component.GetComponent(lVar4,DAT_181d96178);
                       LTLocalization.SetText(uVar10,uVar9,0);
                       return;
                     }
@@ -2104,7 +2104,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FFB
-    // RVA   : 0xB15700   Offset: 0xB14B00   Length: 0x1FD5
+    // RVA   : 0xB15DC0   Offset: 0xB151C0   Length: 0x1FD5
     public void ShowAreaQuickDetail(GameObject target, AreaData areaData)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -2136,15 +2136,15 @@ public class QuickDetail
         local_84[0] = 0;
         local_res10[0] = 0;
         local_88 = 0;
-        if (target == null) goto LAB_180b1736a;
+        if (target == null) goto LAB_180b17a2a;
         GameObject.SetActive(target,1,0);
         lVar3 = GameObject.get_transform(target,0);
         if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Back",0)) == null)
-        goto LAB_180b1736a;
+        goto LAB_180b17a2a;
         uVar4 = Component.get_gameObject(lVar3,0);
         this.Back = uVar4;
-        plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
-        if (plVar5 == (int64 *)0) goto LAB_180b1736a;
+        plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+        if (plVar5 == (int64 *)0) goto LAB_180b17a2a;
         if (("<size=18>" != 0) &&
            (lVar3 = il2cpp_internal("<size=18>",*(uint64 *)(*plVar5 + 64))) == null) {
           uVar4 = il2cpp_internal();
@@ -2160,7 +2160,7 @@ public class QuickDetail
         plVar5[4] = "<size=18>";
         il2cpp_internal(plVar5 + 4,lVar3);
         lVar3 = *(int64 *)(pStatics_3d40 + 0x428);
-        if ((areaData == null) || (lVar3 == null)) goto LAB_180b1736a;
+        if ((areaData == null) || (lVar3 == null)) goto LAB_180b17a2a;
         uVar14 = *(uint32 *)(areaData + 72);
         if (*(uint32 *)(lVar3 + 24) <= uVar14) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2223,15 +2223,15 @@ public class QuickDetail
         il2cpp_internal(plVar5 + 8,lVar3);
         lVar3 = String.Concat(plVar5,0);
         if (*(int *)(areaData + 72) == 2) {
-        LAB_180b15c46:
+        LAB_180b16306:
           if (((GameController._instance == null) ||
               (lVar6 = GameController._instance.worldData) == null) ||
-             (lVar6 = WorldData.Player(lVar6,0)) == null) goto LAB_180b1736a;
+             (lVar6 = WorldData.Player(lVar6,0)) == null) goto LAB_180b17a2a;
           cVar2 = HeroData.HaveForce(lVar6,0);
           if (cVar2) {
             lVar6 = FUN_18046c0a0(0);
             if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
-               (lVar6 = WorldData.Player(lVar6.villageAreaID,0)) == null) goto LAB_180b1736a;
+               (lVar6 = WorldData.Player(lVar6.villageAreaID,0)) == null) goto LAB_180b17a2a;
             if (*(int *)(lVar6 + 132) != *(int *)(areaData + 112)) {
               lVar6 = FUN_18046c0a0(0);
               if ((((lVar6 == null) || (lVar6.villageAreaID == null)) ||
@@ -2242,7 +2242,7 @@ public class QuickDetail
               }
               fVar15 = (float)ForceData.GetForceFavor(lVar6,*(uint32 *)(areaData + 112),0);
               local_78 = CONCAT44(local_78._4_4_,(int)fVar15);
-              uVar4 = il2cpp_value_box(DAT_181d80418,&local_78);
+              uVar4 = il2cpp_value_box(DAT_181d80430,&local_78);
               uVar4 = String.Format(" ♥{0}",uVar4,0);
               lVar3 = String.Concat(lVar3,uVar4,0);
             }
@@ -2254,28 +2254,28 @@ public class QuickDetail
           uVar8 = "无";
           if (cVar2) {
             lVar6 = AreaData.GetForce(areaData,0);
-            if (lVar6 == null) goto LAB_180b1736a;
+            if (lVar6 == null) goto LAB_180b17a2a;
             uVar8 = ForceData.GetForceName(lVar6,1,0);
           }
           uVar4 = String.Format(uVar4,uVar8,0);
           lVar3 = String.Concat(lVar3,uVar4,0);
-          if (*(int *)(areaData + 72) == 2) goto LAB_180b15c46;
+          if (*(int *)(areaData + 72) == 2) goto LAB_180b16306;
         }
         if (((GameController._instance == null) ||
             (lVar6 = GameController._instance.worldData) == null) ||
-           (lVar6 = WorldData.Player(lVar6,0)) == null) goto LAB_180b1736a;
+           (lVar6 = WorldData.Player(lVar6,0)) == null) goto LAB_180b17a2a;
         cVar2 = HeroData.HaveForce(lVar6,0);
         if (cVar2) {
           if ((((GameController._instance == null) ||
                (lVar6 = GameController._instance.worldData) == null) ||
               (lVar6 = WorldData.Player(lVar6,0)) == null) ||
-             (lVar6 = HeroData.GetForce(lVar6,0,0)) == null) goto LAB_180b1736a;
+             (lVar6 = HeroData.GetForce(lVar6,0,0)) == null) goto LAB_180b17a2a;
           lVar6 = ForceData.GetForceRelationshipText(lVar6,*(uint32 *)(areaData + 112),1,0);
           if (lVar6 != null) {
             lVar6 = FUN_18046c0a0(0);
             if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
                ((lVar6 = WorldData.Player(lVar6.villageAreaID,0), lVar6 == null ||
-                (lVar6 = HeroData.GetForce(lVar6,0,0)) == null))) goto LAB_180b1736a;
+                (lVar6 = HeroData.GetForce(lVar6,0,0)) == null))) goto LAB_180b17a2a;
             uVar4 = ForceData.GetForceRelationshipText(lVar6,*(uint32 *)(areaData + 112),1,0);
             uVar4 = String.Format("\n<b>{0}</b>",uVar4,0);
             lVar3 = String.Concat(lVar3,uVar4,0);
@@ -2284,7 +2284,7 @@ public class QuickDetail
         lVar6 = AreaData.GetCenterBuilding(areaData,0);
         if (lVar6 != null) {
           lVar6 = AreaData.GetCenterBuilding(areaData,0);
-          if (lVar6 == null) goto LAB_180b1736a;
+          if (lVar6 == null) goto LAB_180b17a2a;
           uVar16 = *(uint32 *)(lVar6 + 20);
           uVar4 = GlobalData.GetNumText(uVar16,0);
           lVar3 = String.Concat(lVar3,"\n等级 ",uVar4,0);
@@ -2293,35 +2293,35 @@ public class QuickDetail
         local_68 = 32;
         if (*(int *)(areaData + 72) == 2) {
           lVar7 = AreaData.GetForce(areaData,0);
-          if (lVar7 == null) goto LAB_180b1736a;
+          if (lVar7 == null) goto LAB_180b17a2a;
           lVar7 = ForceData.GetLeader(lVar7,0);
           uVar4 = "\n掌门 ";
           uVar8 = "无";
           if (lVar7 != null) {
             lVar7 = AreaData.GetForce(areaData,0);
-            if ((lVar7 == null) || (lVar7 = ForceData.GetLeader(lVar7,0)) == null) goto LAB_180b1736a;
+            if ((lVar7 == null) || (lVar7 = ForceData.GetLeader(lVar7,0)) == null) goto LAB_180b17a2a;
             uVar8 = HeroData.HeroName(lVar7,0,0);
           }
           uVar4 = String.Concat(lVar3,uVar4,uVar8,0);
           lVar3 = AreaData.GetForce(areaData,0);
-          if ((lVar3 == null) || (*(int64 *)(lVar3 + 96) == 0)) goto LAB_180b1736a;
+          if ((lVar3 == null) || (*(int64 *)(lVar3 + 96) == 0)) goto LAB_180b17a2a;
           local_84[0] = *(int *)(*(int64 *)(lVar3 + 96) + 24);
           uVar8 = Int32.ToString(local_84,"f0",0);
           uVar4 = String.Concat(uVar4,"\n领地 ",uVar8,0);
           lVar3 = AreaData.GetForce(areaData,0);
-          if (lVar3 == null) goto LAB_180b1736a;
+          if (lVar3 == null) goto LAB_180b17a2a;
           uVar8 = Int32.ToString(lVar3 + 132,"f0",0);
           uVar4 = String.Concat(uVar4,"\n弟子 ",uVar8,0);
         }
         else {
           lVar7 = AreaData.DataBase();
-          if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x108) == 0)) goto LAB_180b1736a;
+          if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x108) == 0)) goto LAB_180b17a2a;
           if (0 < *(int *)(*(int64 *)(lVar7 + 0x108) + 24)) {
             lVar3 = String.Concat(lVar3,"\n特产",0);
             uVar14 = 0;
             while ((lVar7 = AreaData.DataBase(areaData,0), lVar7 != null &&
                    (*(int64 *)(lVar7 + 0x108) != 0))) {
-              if (*(int *)(*(int64 *)(lVar7 + 0x108) + 24) <= (int)uVar14) goto LAB_180b16151;
+              if (*(int *)(*(int64 *)(lVar7 + 0x108) + 24) <= (int)uVar14) goto LAB_180b16811;
               lVar7 = AreaData.DataBase(areaData,0);
               if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x108) == 0)) break;
               if (*(uint32 *)(*(int64 *)(lVar7 + 0x108) + 24) <= uVar14) {
@@ -2330,11 +2330,11 @@ public class QuickDetail
               lVar3 = String.Concat(lVar3);
               uVar14 = uVar14 + 1;
             }
-            goto LAB_180b1736a;
+            goto LAB_180b17a2a;
           }
-        LAB_180b16151:
-          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,7);
-          if (plVar5 == (int64 *)0) goto LAB_180b1736a;
+        LAB_180b16811:
+          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,7);
+          if (plVar5 == (int64 *)0) goto LAB_180b17a2a;
           if ((lVar3 != null) &&
              (lVar7 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar4 = il2cpp_internal();
@@ -2434,8 +2434,8 @@ public class QuickDetail
           plVar5[10] = lVar3;
           il2cpp_internal(plVar5 + 10,lVar3);
           lVar3 = String.Concat(plVar5,0);
-          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
-          if (plVar5 == (int64 *)0) goto LAB_180b1736a;
+          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+          if (plVar5 == (int64 *)0) goto LAB_180b17a2a;
           if ((lVar3 != null) &&
              (lVar7 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar4 = il2cpp_internal();
@@ -2507,8 +2507,8 @@ public class QuickDetail
           plVar5[8] = lVar3;
           il2cpp_internal(plVar5 + 8,lVar3);
           lVar3 = String.Concat(plVar5,0);
-          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
-          if (plVar5 == (int64 *)0) goto LAB_180b1736a;
+          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+          if (plVar5 == (int64 *)0) goto LAB_180b17a2a;
           if ((lVar3 != null) &&
              (lVar7 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar4 = il2cpp_internal();
@@ -2580,8 +2580,8 @@ public class QuickDetail
           plVar5[8] = lVar3;
           il2cpp_internal(plVar5 + 8,lVar3);
           lVar3 = String.Concat(plVar5,0);
-          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
-          if (plVar5 == (int64 *)0) goto LAB_180b1736a;
+          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+          if (plVar5 == (int64 *)0) goto LAB_180b17a2a;
           if ((lVar3 != null) &&
              (lVar7 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar4 = il2cpp_internal();
@@ -2660,79 +2660,79 @@ public class QuickDetail
             if (((this.Back != null) &&
                 (lVar3 = GameObject.get_transform(this.Back,0)) != null) &&
                (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-              uVar8 = Component.GetComponent(lVar3,DAT_181d96160);
+              uVar8 = Component.GetComponent(lVar3,DAT_181d96178);
               LTLocalization.SetText(uVar8,uVar4,0);
               uVar14 = 0;
-              goto LAB_180b16a20;
+              goto LAB_180b170e0;
             }
             break;
           }
-          lVar3 = FUN_180002f80(lVar3,iVar13,DAT_181d7cce0);
+          lVar3 = FUN_180002f80(lVar3,iVar13,DAT_181d7ccf8);
           if (lVar3 == null) break;
           AreaTreasurePriceData.GetDescribe(lVar3,0);
           uVar4 = String.Concat(uVar4);
           iVar13 = iVar13 + 1;
         }
-        LAB_180b1736a:
+        LAB_180b17a2a:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180b16a20:
-        if (*(int64 *)(areaData + 128) == 0) goto LAB_180b1736a;
+        LAB_180b170e0:
+        if (*(int64 *)(areaData + 128) == 0) goto LAB_180b17a2a;
         lVar3 = this.Back;
         if (*(int *)(*(int64 *)(areaData + 128) + 24) <= (int)uVar14) {
           lVar7 = new WarpText_d__8(0,0);
           if (lVar7 != null) {
             *(int64 *)(lVar7 + 32) = lVar3;
-            FUN_180d8c2e0(this,lVar7,0);
+            FUN_180d8c8f0(this,lVar7,0);
             uVar14 = 0;
             local_78 = 0;
-            goto LAB_180b16da0;
+            goto LAB_180b17460;
           }
-          goto LAB_180b1736a;
+          goto LAB_180b17a2a;
         }
-        if (lVar3 == null) goto LAB_180b1736a;
+        if (lVar3 == null) goto LAB_180b17a2a;
         lVar3 = GameObject.get_transform(lVar3,0);
         local_84[0] = (int)local_88 / 2;
         uVar4 = Int32.ToString(local_84,0);
         uVar4 = String.Concat("Line",uVar4,0);
-        if (lVar3 == null) goto LAB_180b1736a;
+        if (lVar3 == null) goto LAB_180b17a2a;
         lVar3 = Transform.Find(lVar3,uVar4,0);
         uVar4 = Int32.ToString(&local_88,0);
         if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
-           (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180b1736a;
-        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+           (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180b17a2a;
+        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
         lVar3 = *(int64 *)(areaData + 128);
         lVar7 = (int64)(int)local_88;
-        if (lVar3 == null) goto LAB_180b1736a;
+        if (lVar3 == null) goto LAB_180b17a2a;
         if (*(uint32 *)(lVar3 + 24) <= local_88) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         local_res10[0] = *(uint32 *)(*(int64 *)(lVar3 + 16) + 32 + lVar7 * 4);
         uVar8 = Single.ToString(local_res10,"+0;-0;0",0);
         LTLocalization.SetText(uVar4,uVar8,0);
-        if (this.Back == null) goto LAB_180b1736a;
+        if (this.Back == null) goto LAB_180b17a2a;
         lVar3 = GameObject.get_transform(this.Back,0);
         local_84[0] = (int)local_88 / 2;
         uVar4 = Int32.ToString(local_84,0);
         uVar4 = String.Concat("Line",uVar4,0);
-        if (lVar3 == null) goto LAB_180b1736a;
+        if (lVar3 == null) goto LAB_180b17a2a;
         lVar3 = Transform.Find(lVar3,uVar4,0);
         uVar4 = Int32.ToString(&local_88,0);
         if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,uVar4,0)) == null) ||
-           (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180b1736a;
-        plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
-        if (*(int64 *)(areaData + 128) == 0) goto LAB_180b1736a;
-        fVar15 = (float)FUN_1800d6790(*(int64 *)(areaData + 128),local_88,DAT_181da1078);
+           (lVar3 = Transform.Find(lVar3,"Text",0)) == null) goto LAB_180b17a2a;
+        plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
+        if (*(int64 *)(areaData + 128) == 0) goto LAB_180b17a2a;
+        fVar15 = (float)FUN_1800d6790(*(int64 *)(areaData + 128),local_88,DAT_181da1090);
         if (fVar15 == 0.0) {
-          puVar9 = (uint32 *)FUN_1810d33f0(local_60,0);
+          puVar9 = (uint32 *)FUN_1810d3a00(local_60,0);
           uVar16 = *puVar9;
           uVar17 = puVar9[1];
           uVar18 = puVar9[2];
           uVar19 = puVar9[3];
         }
         else {
-          if (*(int64 *)(areaData + 128) == 0) goto LAB_180b1736a;
-          fVar15 = (float)FUN_1800d6790(*(int64 *)(areaData + 128),local_88,DAT_181da1078);
+          if (*(int64 *)(areaData + 128) == 0) goto LAB_180b17a2a;
+          fVar15 = (float)FUN_1800d6790(*(int64 *)(areaData + 128),local_88,DAT_181da1090);
           if (fVar15 <= 0.0) {
             lVar3 = pStatics_3d40;
             uVar16 = *(uint32 *)(lVar3 + 0x300);
@@ -2748,15 +2748,15 @@ public class QuickDetail
             uVar19 = *(uint32 *)(lVar3 + 0x2a4);
           }
         }
-        if (plVar5 == (int64 *)0) goto LAB_180b1736a;
+        if (plVar5 == (int64 *)0) goto LAB_180b17a2a;
         local_78 = CONCAT44(uVar17,uVar16);
         uStack_70 = uVar18;
         uStack_6c = uVar19;
         (**(code **)(*plVar5 + 0x2a8))(plVar5);
         uVar14 = local_88 + 1;
         local_88 = uVar14;
-        goto LAB_180b16a20;
-        LAB_180b16da0:
+        goto LAB_180b170e0;
+        LAB_180b17460:
         lVar7 = local_78;
         lVar3 = *(int64 *)(areaData + 192);
         if (lVar3 != null) {
@@ -2784,105 +2784,105 @@ public class QuickDetail
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (*(int64 *)(*(int64 *)(lVar3 + 16) + lVar6) == 0) {
-        LAB_180b17229:
+        LAB_180b178e9:
             uVar14 = uVar14 + 1;
             lVar6 = lVar6 + 8;
             local_68 = lVar6;
           }
           else {
             if ((*(int64 *)(areaData + 192) == 0) || (lVar3 = FUN_180002f80()) == null)
-            goto LAB_180b1736a;
-            if (*(int64 *)(lVar3 + 40) == 0) goto LAB_180b17229;
+            goto LAB_180b17a2a;
+            if (*(int64 *)(lVar3 + 40) == 0) goto LAB_180b178e9;
             if (((*(int64 *)(areaData + 192) == 0) || (lVar3 = FUN_180002f80()) == null) ||
-               (*(int64 *)(lVar3 + 40) == 0)) goto LAB_180b1736a;
-            if (*(int *)(*(int64 *)(lVar3 + 40) + 16) < 0) goto LAB_180b17229;
+               (*(int64 *)(lVar3 + 40) == 0)) goto LAB_180b17a2a;
+            if (*(int *)(*(int64 *)(lVar3 + 40) + 16) < 0) goto LAB_180b178e9;
             if (((*(int64 *)(areaData + 192) == 0) ||
-                (lVar3 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca60)) == null)
+                (lVar3 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca78)) == null)
                || ((*(int64 *)(lVar3 + 40) == 0 ||
                    (lVar3 = AreaBuildingData.DataBase(*(int64 *)(lVar3 + 40),0)) == null)))
-            goto LAB_180b1736a;
+            goto LAB_180b17a2a;
             if (*(int *)(lVar3 + 48) == 6) {
               iVar13 = 0;
               lVar3 = "";
               while( true ) {
                 if (((*(int64 *)(areaData + 192) == 0) ||
-                    (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca60), lVar6 == null
+                    (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca78), lVar6 == null
                     )) || ((lVar6.forceAreaID == null ||
                            ((lVar6 = AreaBuildingData.DataBase(lVar6.forceAreaID,0), lVar6 == null
-                            || (lVar6.ResourcePoints == null)))))) goto LAB_180b1736a;
+                            || (lVar6.ResourcePoints == null)))))) goto LAB_180b17a2a;
                 lVar7 = *(int64 *)(areaData + 192);
                 if (*(int *)(lVar6.ResourcePoints + 24) <= iVar13) break;
-                if (((((lVar7 == null) || (lVar6 = FUN_180002f80(lVar7,uVar14,DAT_181d7ca60)) == null) ||
+                if (((((lVar7 == null) || (lVar6 = FUN_180002f80(lVar7,uVar14,DAT_181d7ca78)) == null) ||
                      (lVar6.forceAreaID == null)) ||
                     ((lVar6 = AreaBuildingData.DataBase(lVar6.forceAreaID,0), lVar6 == null ||
                      (lVar6.ResourcePoints == null)))) ||
-                   (lVar6 = FUN_180002f80(lVar6.ResourcePoints,iVar13,DAT_181d7bff0)) == null)
-                goto LAB_180b1736a;
+                   (lVar6 = FUN_180002f80(lVar6.ResourcePoints,iVar13,DAT_181d7c008)) == null)
+                goto LAB_180b17a2a;
                 uVar4 = lVar6.forceAreaID;
                 if (((*(int64 *)(areaData + 192) == 0) ||
-                    (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca60), lVar6 == null
+                    (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca78), lVar6 == null
                     )) || ((lVar6.forceAreaID == null ||
                            (((lVar6 = AreaBuildingData.DataBase(lVar6.forceAreaID,0),
                              lVar6 == null || (lVar6.ResourcePoints == null)) ||
-                            (lVar6 = FUN_180002f80(lVar6.ResourcePoints,iVar13,DAT_181d7bff0),
-                            lVar6 == null)))))) goto LAB_180b1736a;
+                            (lVar6 = FUN_180002f80(lVar6.ResourcePoints,iVar13,DAT_181d7c008),
+                            lVar6 == null)))))) goto LAB_180b17a2a;
                 uVar1 = lVar6.villageAreaID;
                 if ((*(int64 *)(areaData + 192) == 0) ||
-                   (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca60)) == null
-                   ) goto LAB_180b1736a;
+                   (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca78)) == null
+                   ) goto LAB_180b17a2a;
                 uVar8 = lVar6.forceAreaID;
                 cVar2 = GameController.MeetCondition(uVar4,uVar1,uVar8,0);
                 if (cVar2) {
-                  cVar2 = FUN_18171e540(lVar3,"",0);
+                  cVar2 = FUN_18171eb50(lVar3,"",0);
                   lVar6 = "/";
                   if (cVar2) {
                     lVar6 = "";
                   }
                   if (((*(int64 *)(areaData + 192) == 0) ||
-                      (lVar7 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca60),
+                      (lVar7 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca78),
                       lVar7 == null)) ||
                      ((*(int64 *)(lVar7 + 40) == 0 ||
                       (((lVar7 = AreaBuildingData.DataBase(*(int64 *)(lVar7 + 40),0), lVar7 == null ||
                         (*(int64 *)(lVar7 + 64) == 0)) ||
-                       (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 64),iVar13,DAT_181d7bff0),
-                       lVar7 == null)))))) goto LAB_180b1736a;
+                       (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 64),iVar13,DAT_181d7c008),
+                       lVar7 == null)))))) goto LAB_180b17a2a;
                   lVar3 = String.Concat(lVar3,lVar6,*(uint64 *)(lVar7 + 16));
                 }
                 iVar13 = iVar13 + 1;
               }
-              if (((lVar7 != null) && (lVar6 = FUN_180002f80(lVar7,uVar14,DAT_181d7ca60)) != null) &&
+              if (((lVar7 != null) && (lVar6 = FUN_180002f80(lVar7,uVar14,DAT_181d7ca78)) != null) &&
                  (lVar6.forceAreaID != null)) {
                 uVar4 = AreaBuildingData.Name(lVar6.forceAreaID,0,0);
                 if (((*(int64 *)(areaData + 192) != 0) &&
-                    (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca60), lVar6 != null
+                    (lVar6 = FUN_180002f80(*(int64 *)(areaData + 192),uVar14,DAT_181d7ca78), lVar6 != null
                     )) && (lVar6.forceAreaID != null)) {
                   uVar16 = *(uint32 *)(lVar6.forceAreaID + 20);
                   uVar8 = GlobalData.GetNumText(uVar16,0);
                   String.Format("<b>{0}</b>[{1}级]\n{2}",uVar4,uVar8,lVar3,0);
                   QuickDetail.AddDescribeTab(this);
                   lVar6 = local_68;
-                  goto LAB_180b17229;
+                  goto LAB_180b178e9;
                 }
               }
-              goto LAB_180b1736a;
+              goto LAB_180b17a2a;
             }
             if (((*(int64 *)(areaData + 192) == 0) || (lVar3 = FUN_180002f80()) == null) ||
-               (*(int64 *)(lVar3 + 40) == 0)) goto LAB_180b1736a;
-            if (*(int *)(*(int64 *)(lVar3 + 40) + 16) != 73) goto LAB_180b17229;
+               (*(int64 *)(lVar3 + 40) == 0)) goto LAB_180b17a2a;
+            if (*(int *)(*(int64 *)(lVar3 + 40) + 16) != 73) goto LAB_180b178e9;
             if ((*(int64 *)(areaData + 192) == 0) || (lVar3 = FUN_180002f80()) == null)
-            goto LAB_180b1736a;
+            goto LAB_180b17a2a;
             local_78 = *(int64 *)(lVar3 + 40);
             uVar14 = uVar14 + 1;
             lVar6 = lVar6 + 8;
             local_68 = lVar6;
           }
-          goto LAB_180b16da0;
+          goto LAB_180b17460;
         }
-        goto LAB_180b1736a;
+        goto LAB_180b17a2a;
     }
 
     // Token : 0x6001FFC
-    // RVA   : 0xB13F50   Offset: 0xB13350   Length: 0x6C
+    // RVA   : 0xB14610   Offset: 0xB13A10   Length: 0x6C
     public static IEnumerator RebuildTargetLayout(GameObject target)
     {
         long lVar1;
@@ -2894,7 +2894,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FFD
-    // RVA   : 0xB176E0   Offset: 0xB16AE0   Length: 0x5BE
+    // RVA   : 0xB17DA0   Offset: 0xB171A0   Length: 0x5BE
     public void ShowBattleGridQuickDetail(GameObject target, GridUnitData gridUnitData)
     {
         uint uVar2;
@@ -2920,7 +2920,7 @@ public class QuickDetail
               if (*(int *)(gridUnitData + 20) == 2) {
                 if (((lVar3 != null) && (lVar3 = GameObject.get_transform(lVar3,0)) != null) &&
                    (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                  uVar7 = Component.GetComponent(lVar3,DAT_181d96160);
+                  uVar7 = Component.GetComponent(lVar3,DAT_181d96178);
                   uVar4 = "\n";
                   lVar3 = *(int64 *)(gridUnitData + 48);
                   if (lVar3 != null) {
@@ -2944,7 +2944,7 @@ public class QuickDetail
                       }
                       if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null)
                          && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                         if (*(int64 *)(gridUnitData + 48) != 0) {
                           fVar11 = (float)ObstacleData.GetExtraExplodeRate
                                                     (*(int64 *)(gridUnitData + 48),0);
@@ -2952,7 +2952,7 @@ public class QuickDetail
                              (lVar3 = ObstacleData.GetObstacleDataBase(*(int64 *)(gridUnitData + 48),0),
                              lVar3 != null)) {
                             local_res10[0] = fVar11 * *(float *)(lVar3 + 88) * 100.0;
-                            uVar7 = il2cpp_value_box(DAT_181da22d8,local_res10);
+                            uVar7 = il2cpp_value_box(DAT_181da22f0,local_res10);
                             lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3b8);
                             if (((*(int64 *)(gridUnitData + 48) != 0) &&
                                 (lVar10 = ObstacleData.GetObstacleDataBase
@@ -2971,7 +2971,7 @@ public class QuickDetail
                                    (lVar3 = ObstacleData.GetObstacleDataBase
                                                       (*(int64 *)(gridUnitData + 48),0), lVar3 != null)) {
                                   local_48[0] = local_48[0] * *(float *)(lVar3 + 96);
-                                  uVar6 = il2cpp_value_box(DAT_181da22d8,local_48);
+                                  uVar6 = il2cpp_value_box(DAT_181da22f0,local_48);
                                   uVar7 = String.Format("\n摧毁时伤害周围\n生命-{0}% {1}+{2}",uVar7,uVar5,uVar6,0);
                                   LTLocalization.AddText(uVar4,uVar7,0);
                                   return;
@@ -2989,7 +2989,7 @@ public class QuickDetail
               }
               else if (((lVar3 != null) && (lVar3 = GameObject.get_transform(lVar3,0)) != null) &&
                       (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                 lVar3 = *(int64 *)(gridUnitData + 56);
                 if (lVar3 != null) {
                   uVar7 = *(uint64 *)(lVar3 + 24);
@@ -3017,12 +3017,12 @@ public class QuickDetail
     }
 
     // Token : 0x6001FFE
-    // RVA   : 0xB1A940   Offset: 0xB19D40   Length: 0xA50
+    // RVA   : 0xB1B000   Offset: 0xB1A400   Length: 0xA50
     public void ShowHeroQuickDetail(GameObject target, HeroData heroData)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_7518 = *(int64*)(DAT_181db7518 + 184);
-        var pStatics_7f20 = *(int64*)(DAT_181dc7f20 + 184);
+        var pStatics_7530 = *(int64*)(DAT_181db7530 + 184);
+        var pStatics_7f38 = *(int64*)(DAT_181dc7f38 + 184);
         ulong uVar1;
         byte uVar2;
         byte uVar3;
@@ -3057,24 +3057,24 @@ public class QuickDetail
               if ((this.Back != null) &&
                  ((lVar7 = GameObject.get_transform(this.Back,0), lVar7 != null &&
                   (lVar7 = Transform.Find(lVar7,"Text",0)) != null))) {
-                uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+                uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
                 uVar2 = FUN_1804625f0(0x130,0);
-                if ((*pStatics_7f20 != 0) &&
-                   (lVar7 = *(int64 *)(*pStatics_7f20 + 32)) != null) {
+                if ((*pStatics_7f38 != 0) &&
+                   (lVar7 = *(int64 *)(*pStatics_7f38 + 32)) != null) {
                   uVar3 = GameObject.get_activeSelf(lVar7,0);
-                  if ((*pStatics_7518 != 0) &&
-                     (lVar7 = *(int64 *)(*pStatics_7518 + 24)) != null) {
+                  if ((*pStatics_7530 != 0) &&
+                     (lVar7 = *(int64 *)(*pStatics_7530 + 24)) != null) {
                     cVar4 = GameObject.get_activeInHierarchy(lVar7,0);
                     if (!cVar4) {
                       uVar5 = 0;
                     }
                     else {
-                      if (*pStatics_7518 == 0) throw; // [null/range check failed]
-                      uVar5 = FUN_18171e540(*(uint64 *)(*pStatics_7518 + 88),
+                      if (*pStatics_7530 == 0) throw; // [null/range check failed]
+                      uVar5 = FUN_18171eb50(*(uint64 *)(*pStatics_7530 + 88),
                                             "ChooseManageTagTargetResult",0);
                     }
-                    if ((*pStatics_7518 != 0) &&
-                       (lVar7 = *(int64 *)(*pStatics_7518 + 24)) != null)
+                    if ((*pStatics_7530 != 0) &&
+                       (lVar7 = *(int64 *)(*pStatics_7530 + 24)) != null)
                     {
                       uVar6 = GameObject.get_activeInHierarchy(lVar7,0);
                       uVar9 = HeroData.GetQuickDetail(heroData,uVar2,uVar3,uVar5,uVar6,0);
@@ -3085,13 +3085,13 @@ public class QuickDetail
                            ((lVar7 = GameObject.get_transform(this.Back,0),
                             lVar7 == null || (lVar7 = Transform.Find(lVar7,"Text",0)) == null)))
                         throw; // [null/range check failed]
-                        uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+                        uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
                         LTLocalization.AddText(uVar8,"\n<i><color=grey>左Shift查看详情</color></i>",0);
                       }
                       if ((*(int64 *)(heroData + 0x2c0) != 0) &&
                          (lVar7 = HeroSpeAddData.GetKeys(*(int64 *)(heroData + 0x2c0),0)) != null)
                       {
-                        FUN_1817eb460(&local_60,lVar7,DAT_181d8f498);
+                        FUN_1817eba70(&local_60,lVar7,DAT_181d8f4b0);
                         local_78 = local_60;
                         uStack_74 = uStack_5c;
                         uStack_70 = uStack_58;
@@ -3100,10 +3100,10 @@ public class QuickDetail
                         while( true ) {
                           do {
                             do {
-                              cVar4 = FUN_180c75190(&local_78,DAT_181d8da68);
+                              cVar4 = FUN_180c757a0(&local_78,DAT_181d8da80);
                               uVar1 = local_68;
                               if (!cVar4) {
-                                ZhSegment.Initialize(&local_78,DAT_181d8d9e8);
+                                ZhSegment.Initialize(&local_78,DAT_181d8da00);
                                 return;
                               }
                               lVar7 = FUN_18046c100(0);
@@ -3116,7 +3116,7 @@ public class QuickDetail
                                 FUN_1800d6620();
                               }
                               lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar1 & 0xffffffff,
-                                                    DAT_181d8c018);
+                                                    DAT_181d8c030);
                               if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                                 FUN_1800d6620();
@@ -3129,7 +3129,7 @@ public class QuickDetail
                             fVar12 = (float)HeroSpeAddData.Get(*(int64 *)(heroData + 0x2c0),
                                                                 uVar1 & 0xffffffff,0);
                           } while (fVar12 <= 0.0);
-                          plVar10 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,6);
+                          plVar10 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
                           lVar7 = FUN_18046c100(0);
                           if (lVar7 == null) {
                           // WARNING: Subroutine does not return
@@ -3140,7 +3140,7 @@ public class QuickDetail
                             FUN_1800d6620();
                           }
                           lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar1 & 0xffffffff,
-                                                DAT_181d8c018);
+                                                DAT_181d8c030);
                           if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
@@ -3173,7 +3173,7 @@ public class QuickDetail
                             FUN_1800d6620();
                           }
                           lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar1 & 0xffffffff,
-                                                DAT_181d8c018);
+                                                DAT_181d8c030);
                           if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                             FUN_1800d6620();
@@ -3226,7 +3226,7 @@ public class QuickDetail
                               FUN_1800d6620();
                             }
                             lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar1 & 0xffffffff,
-                                                  DAT_181d8c018);
+                                                  DAT_181d8c030);
                             if (lVar7 == null) {
                           // WARNING: Subroutine does not return
                               FUN_1800d6620();
@@ -3277,7 +3277,7 @@ public class QuickDetail
                             FUN_1800d6620();
                           }
                           lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 144),uVar1 & 0xffffffff,
-                                                DAT_181d8c018);
+                                                DAT_181d8c030);
                           if (lVar7 == null) break;
                           lVar7 = *(int64 *)(lVar7 + 24);
                           if ((lVar7 != null) &&
@@ -3314,7 +3314,7 @@ public class QuickDetail
     }
 
     // Token : 0x6001FFF
-    // RVA   : 0xB13800   Offset: 0xB12C00   Length: 0x287
+    // RVA   : 0xB13EC0   Offset: 0xB132C0   Length: 0x287
     private void AddDescribeTab(string _text)
     {
         ulong uVar1;
@@ -3342,7 +3342,7 @@ public class QuickDetail
               uStack_24 = puVar4[1];
               uStack_20 = puVar4[2];
               uStack_1c = puVar4[3];
-              fVar7 = (float)FUN_180d98fa0(&local_28,0);
+              fVar7 = (float)FUN_180d995b0(&local_28,0);
               if (this.describeGrid != null) {
                 lVar3 = GameObject.get_transform(this.describeGrid,0);
                 if (lVar3 != null) {
@@ -3369,7 +3369,7 @@ public class QuickDetail
                           if (lVar2 != null) {
                             lVar2 = Transform.Find(lVar2,"Text",0);
                             if (lVar2 != null) {
-                              uVar6 = Component.GetComponent(lVar2,DAT_181d96160);
+                              uVar6 = Component.GetComponent(lVar2,DAT_181d96178);
                               LTLocalization.SetText(uVar6,_text,0);
                               return;
                             }
@@ -3386,7 +3386,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002000
-    // RVA   : 0xB15290   Offset: 0xB14690   Length: 0x1D7
+    // RVA   : 0xB15950   Offset: 0xB14D50   Length: 0x1D7
     private void RefreshSkillRangeUI(KungfuSkillLvData skillLvData)
     {
         long lVar1;
@@ -3414,7 +3414,7 @@ public class QuickDetail
                 uStack_24 = puVar3[1];
                 uStack_20 = puVar3[2];
                 uStack_1c = puVar3[3];
-                fVar5 = (float)FUN_180d98fa0(&local_28,0);
+                fVar5 = (float)FUN_180d995b0(&local_28,0);
                 if (this.skillRangeUI != null) {
                   lVar2 = GameObject.get_transform(this.skillRangeUI,0);
                   if (lVar2 != null) {
@@ -3451,7 +3451,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002001
-    // RVA   : 0xB1DE60   Offset: 0xB1D260   Length: 0x968
+    // RVA   : 0xB1E520   Offset: 0xB1D920   Length: 0x968
     private void ShowSkillQuickDetail(GameObject target, KungfuSkillLvData skillLvData, bool showUseTime)
     {
         uint uVar1;
@@ -3473,8 +3473,8 @@ public class QuickDetail
         if ((this.Back == null) ||
            ((lVar4 = GameObject.get_transform(this.Back,0), lVar4 == null ||
             (lVar4 = Transform.Find(lVar4,"Text",0)) == null))) throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
-        plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,6);
+        uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+        plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
         if (plVar6 == (int64 *)0) throw; // [null/range check failed]
         if (("<size=18>" != 0) &&
            (lVar4 = il2cpp_internal("<size=18>",*(uint64 *)(*plVar6 + 64))) == null) {
@@ -3575,11 +3575,11 @@ public class QuickDetail
             if ((!cVar2) ||
                (cVar2 = KungfuSkillLvData.SkillMeetObstacleLv(skillLvData,0), !cVar2)) {
               cVar2 = FUN_1804625f0(0x130,0);
-              if (!cVar2) goto LAB_180b1e3d2;
+              if (!cVar2) goto LAB_180b1ea92;
               if (((this.Back == null) ||
                   (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
                  (lVar4 = Transform.Find(lVar4,"Text",0)) == null) throw; // [null/range check failed]
-              uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+              uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
               uVar8 = KungfuSkillLvData.GetExpDescribe(skillLvData,0);
               uVar8 = String.Concat("\n",uVar8,0);
             }
@@ -3587,19 +3587,19 @@ public class QuickDetail
               if (((this.Back == null) ||
                   (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
                  (lVar4 = Transform.Find(lVar4,"Text",0)) == null) throw; // [null/range check failed]
-              uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+              uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
               uVar8 = String.Concat(*(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d0),
                                      "\n(抵达瓶颈 需要突破)</color>",0);
             }
             LTLocalization.AddText(uVar5,uVar8,0);
           }
         }
-        LAB_180b1e3d2:
+        LAB_180b1ea92:
         if ((this.Back != null) &&
            (lVar4 = GameObject.get_transform(this.Back,0)) != null) {
           lVar4 = Transform.Find(lVar4,"Text",0);
           if (lVar4 != null) {
-            uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+            uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
             uVar3 = FUN_1804625f0(0x130,0);
             iVar9 = 0;
             uVar8 = KungfuSkillLvData.GetSkillDescribe(skillLvData,uVar3,1,0,0);
@@ -3613,47 +3613,47 @@ public class QuickDetail
               }
               lVar4 = FUN_18046c100(0);
               if (((lVar4 == null) || (*(int64 *)(lVar4 + 144) == 0)) ||
-                 (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),iVar9,DAT_181d8c018)) == null)
+                 (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),iVar9,DAT_181d8c030)) == null)
               break;
-              if (*(char *)(lVar4 + 89) == false) goto LAB_180b1e6df;
+              if (*(char *)(lVar4 + 89) == false) goto LAB_180b1ed9f;
               lVar4 = KungfuSkillLvData.DataBase(skillLvData,0);
               if (lVar4 == null) break;
               if (*(int64 *)(lVar4 + 104) == 0) {
-        LAB_180b1e5be:
+        LAB_180b1ec7e:
                 lVar4 = KungfuSkillLvData.DataBase(skillLvData,0);
                 if (lVar4 == null) break;
                 if (*(int64 *)(lVar4 + 96) != 0) {
                   lVar4 = KungfuSkillLvData.DataBase(skillLvData,0);
                   if ((lVar4 == null) || (*(int64 *)(lVar4 + 96) == 0)) break;
                   fVar10 = (float)HeroSpeAddData.Get(*(int64 *)(lVar4 + 96),iVar9,0);
-                  if (fVar10 != 0.0) goto LAB_180b1e672;
+                  if (fVar10 != 0.0) goto LAB_180b1ed32;
                 }
                 if ((*(int64 *)(skillLvData + 80) != 0) &&
                    (fVar10 = (float)HeroSpeAddData.Get(*(int64 *)(skillLvData + 80),iVar9,0),
-                   fVar10 != 0.0)) goto LAB_180b1e672;
+                   fVar10 != 0.0)) goto LAB_180b1ed32;
                 lVar4 = KungfuSkillLvData.DataBase(skillLvData,0);
                 if (lVar4 == null) break;
                 if (*(int64 *)(lVar4 + 88) != 0) {
                   lVar4 = KungfuSkillLvData.DataBase(skillLvData,0);
                   if ((lVar4 == null) || (*(int64 *)(lVar4 + 88) == 0)) break;
                   fVar10 = (float)HeroSpeAddData.Get(*(int64 *)(lVar4 + 88),iVar9,0);
-                  if (fVar10 != 0.0) goto LAB_180b1e672;
+                  if (fVar10 != 0.0) goto LAB_180b1ed32;
                 }
               }
               else {
                 lVar4 = KungfuSkillLvData.DataBase(skillLvData,0);
                 if ((lVar4 == null) || (*(int64 *)(lVar4 + 104) == 0)) break;
                 fVar10 = (float)HeroSpeAddData.Get(*(int64 *)(lVar4 + 104),iVar9,0);
-                if (fVar10 == 0.0) goto LAB_180b1e5be;
-        LAB_180b1e672:
+                if (fVar10 == 0.0) goto LAB_180b1ec7e;
+        LAB_180b1ed32:
                 lVar4 = FUN_18046c100(0);
                 if (((lVar4 == null) || (*(int64 *)(lVar4 + 144) == 0)) ||
-                   (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),iVar9,DAT_181d8c018)) == null)
+                   (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),iVar9,DAT_181d8c030)) == null)
                 break;
                 uVar5 = HeroSpeAddDataBase.GetDescribe(lVar4,0);
                 QuickDetail.AddDescribeTab(this,uVar5,0);
               }
-        LAB_180b1e6df:
+        LAB_180b1ed9f:
               iVar9 = iVar9 + 1;
             } while( true );
           }
@@ -3661,7 +3661,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002002
-    // RVA   : 0xB17CA0   Offset: 0xB170A0   Length: 0xBD7
+    // RVA   : 0xB18360   Offset: 0xB17760   Length: 0xBD7
     private void ShowBookQuickDetail(GameObject target, ItemData bookData)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -3694,7 +3694,7 @@ public class QuickDetail
         lVar6 = BookData.DataBase(*(int64 *)(bookData + 112),0);
         if (((*plVar1 == 0) || (lVar7 = GameObject.get_transform(*plVar1,0)) == null) ||
            (lVar7 = Transform.Find(lVar7,"Text",0)) == null) throw; // [null/range check failed]
-        uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+        uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
         uVar9 = ItemData.Name(bookData,0,0);
         uVar9 = String.Format("<size=18>《{0}》</size>",uVar9,0);
         uVar10 = ItemData.GetItemTypeDescribe(bookData,1,0);
@@ -3704,18 +3704,18 @@ public class QuickDetail
         if (lVar5 == null) {
           if (((lVar7 == null) || (lVar5 = GameObject.get_transform(lVar7,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"Text",0)) == null) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar5,DAT_181d96160);
+          uVar8 = Component.GetComponent(lVar5,DAT_181d96178);
           uVar9 = String.Format("\n{0}({1})</color>",
                                  *(uint64 *)(pStatics_3d40 + 0x2d0),
                                  "未习得",0);
-        LAB_180b18091:
-        LAB_180b182ce:
+        LAB_180b18751:
+        LAB_180b1898e:
           LTLocalization.AddText(uVar8,uVar9,0);
         }
         else {
           if (((lVar7 == null) || (lVar7 = GameObject.get_transform(lVar7,0)) == null) ||
              (lVar7 = Transform.Find(lVar7,"Text",0)) == null) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+          uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
           uVar9 = *(uint64 *)(pStatics_3d40 + 0x268);
           uVar10 = GlobalData.GetNumText(*(uint32 *)(lVar5 + 20),0);
           uVar9 = String.Format("\n{0}(已习得 第{1}重)</color>",uVar9,uVar10,0);
@@ -3727,22 +3727,22 @@ public class QuickDetail
               if ((*plVar1 == 0) ||
                  ((lVar5 = GameObject.get_transform(*plVar1,0), lVar5 == null ||
                   (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) throw; // [null/range check failed]
-              uVar8 = Component.GetComponent(lVar5,DAT_181d96160);
+              uVar8 = Component.GetComponent(lVar5,DAT_181d96178);
               uVar9 = String.Concat(*(uint64 *)(pStatics_3d40 + 0x2d0),
                                      "\n(抵达瓶颈 需要突破)</color>",0);
-              goto LAB_180b18091;
+              goto LAB_180b18751;
             }
             if (((*plVar1 == 0) || (lVar7 = GameObject.get_transform(*plVar1,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"Text",0)) == null) throw; // [null/range check failed]
-            uVar8 = Component.GetComponent(lVar7,DAT_181d96160);
+            uVar8 = Component.GetComponent(lVar7,DAT_181d96178);
             uVar9 = KungfuSkillLvData.GetExpDescribe(lVar5,0);
             uVar9 = String.Concat("\n",uVar9,0);
-            goto LAB_180b182ce;
+            goto LAB_180b1898e;
           }
         }
         if ((((*plVar1 != 0) && (lVar5 = GameObject.get_transform(*plVar1,0)) != null) &&
             (lVar5 = Transform.Find(lVar5,"Text",0)) != null) &&
-           (uVar8 = Component.GetComponent(lVar5,DAT_181d96160), lVar6 != null)) {
+           (uVar8 = Component.GetComponent(lVar5,DAT_181d96178), lVar6 != null)) {
           uVar2 = *(uint32 *)(lVar6 + 20);
           lVar5 = new KungfuSkillLvData(uVar2,0);
           uVar3 = FUN_1804625f0(0x130,0);
@@ -3755,13 +3755,13 @@ public class QuickDetail
               if ((*plVar1 == 0) ||
                  ((lVar5 = GameObject.get_transform(*plVar1,0), lVar5 == null ||
                   (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) throw; // [null/range check failed]
-              uVar8 = Component.GetComponent(lVar5,DAT_181d96160);
+              uVar8 = Component.GetComponent(lVar5,DAT_181d96178);
               LTLocalization.AddText(uVar8,"\n",0);
             }
             else {
               if (((*plVar1 == 0) || (lVar5 = GameObject.get_transform(*plVar1,0)) == null) ||
                  (lVar5 = Transform.Find(lVar5,"Text",0)) == null) throw; // [null/range check failed]
-              uVar8 = Component.GetComponent(lVar5,DAT_181d96160);
+              uVar8 = Component.GetComponent(lVar5,DAT_181d96178);
               lVar5 = FUN_18046c0a0(0);
               if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
                  ((lVar5 = WorldData.Player(lVar5.villageAreaID,0), lVar5 == null ||
@@ -3783,11 +3783,11 @@ public class QuickDetail
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar8 = Component.GetComponent(lVar5,DAT_181d96160);
+            uVar8 = Component.GetComponent(lVar5,DAT_181d96178);
             local_res10[0] = *(uint32 *)(bookData + 68);
-            uVar9 = il2cpp_value_box(DAT_181da22d8,local_res10);
+            uVar9 = il2cpp_value_box(DAT_181da22f0,local_res10);
             local_58[0] = *(uint32 *)(bookData + 56);
-            uVar10 = il2cpp_value_box(DAT_181d80418,local_58);
+            uVar10 = il2cpp_value_box(DAT_181d80430,local_58);
             uVar9 = String.Format("\n重量{0}\n价值{1}",uVar9,uVar10,0);
             LTLocalization.AddText(uVar8,uVar9,0);
             uVar2 = *(uint32 *)(lVar6 + 20);
@@ -3801,7 +3801,7 @@ public class QuickDetail
               }
               lVar5 = FUN_18046c100(0);
               if (((lVar5 == null) || (lVar5.MailDatas == null)) ||
-                 (lVar5 = FUN_180002f80(lVar5.MailDatas,iVar11,DAT_181d8c018)) == null)
+                 (lVar5 = FUN_180002f80(lVar5.MailDatas,iVar11,DAT_181d8c030)) == null)
               break;
               if ((*(char *)(lVar5 + 89) != false) &&
                  ((((*(int64 *)(lVar6 + 104) != 0 &&
@@ -3815,7 +3815,7 @@ public class QuickDetail
                    fVar12 != 0.0)))))) {
                 lVar5 = FUN_18046c100(0);
                 if (((lVar5 == null) || (lVar5.MailDatas == null)) ||
-                   (lVar5 = FUN_180002f80(lVar5.MailDatas,iVar11,DAT_181d8c018)) == null)
+                   (lVar5 = FUN_180002f80(lVar5.MailDatas,iVar11,DAT_181d8c030)) == null)
                 break;
                 uVar8 = HeroSpeAddDataBase.GetDescribe(lVar5,0);
                 QuickDetail.AddDescribeTab(this,uVar8,0);
@@ -3827,7 +3827,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002003
-    // RVA   : 0xB19D50   Offset: 0xB19150   Length: 0xBEB
+    // RVA   : 0xB1A410   Offset: 0xB19810   Length: 0xBEB
     private void ShowExploreTileQuickDetail(GameObject target, ExploreTileData exploreTileData)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -3842,22 +3842,22 @@ public class QuickDetail
         ulong uVar9;
         uint[] local_res10 = new uint[2];
         if (target == null) {
-        LAB_180b1a924:
+        LAB_180b1afe4:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         GameObject.SetActive(target,1,0);
         lVar4 = GameObject.get_transform(target,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"Back",0)) == null)
-        goto LAB_180b1a924;
+        goto LAB_180b1afe4;
         uVar5 = Component.get_gameObject(lVar4,0);
         this.Back = uVar5;
-        if (exploreTileData == null) goto LAB_180b1a924;
+        if (exploreTileData == null) goto LAB_180b1afe4;
         lVar4 = this.Back;
         if (*(int *)(exploreTileData + 48) == 2) {
           if (((lVar4 != null) && (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
              (lVar4 = Transform.Find(lVar4,"Text",0)) != null) {
-            uVar7 = Component.GetComponent(lVar4,DAT_181d96160);
+            uVar7 = Component.GetComponent(lVar4,DAT_181d96178);
             uVar5 = "大门\n{0}";
             uVar6 = "已开启";
             if (*(char *)(exploreTileData + 52) == false) {
@@ -3867,64 +3867,64 @@ public class QuickDetail
                 FUN_1800d6620();
               }
               local_res10[0] = ExploreController.GetOpenLockCost(lVar4,0);
-              uVar6 = il2cpp_value_box(DAT_181d80418,local_res10);
+              uVar6 = il2cpp_value_box(DAT_181d80430,local_res10);
               uVar6 = String.Format("钥匙-1/耐力-{0}",uVar6,0);
             }
             uVar5 = String.Format(uVar5,uVar6,0);
             LTLocalization.SetText(uVar7,uVar5,0);
             return;
           }
-          goto LAB_180b1a924;
+          goto LAB_180b1afe4;
         }
         if (*(int *)(exploreTileData + 48) == 1) {
           if (((lVar4 != null) && (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
              (lVar4 = Transform.Find(lVar4,"Text",0)) != null) {
-            uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+            uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
             LTLocalization.SetText(uVar5,"墙壁",0);
             return;
           }
-          goto LAB_180b1a924;
+          goto LAB_180b1afe4;
         }
         if (((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
-           (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1a924;
-        uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+           (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1afe4;
+        uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
         lVar4 = FUN_18046be80(0);
-        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 32)) == null) goto LAB_180b1a924;
+        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 32)) == null) goto LAB_180b1afe4;
         uVar2 = *(uint32 *)(exploreTileData + 72);
         if (*(uint32 *)(lVar4 + 24) <= uVar2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar4 = lVar4[uVar2];
-        if (lVar4 == null) goto LAB_180b1a924;
+        if (lVar4 == null) goto LAB_180b1afe4;
         uVar6 = *(uint64 *)(lVar4 + 16);
         LTLocalization.SetText(uVar5,uVar6,0);
         lVar4 = FUN_18046be80(0);
-        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 32)) == null) goto LAB_180b1a924;
+        if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 32)) == null) goto LAB_180b1afe4;
         uVar2 = *(uint32 *)(exploreTileData + 72);
         if (*(uint32 *)(lVar4 + 24) <= uVar2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar4 = lVar4[uVar2];
-        if (lVar4 == null) goto LAB_180b1a924;
+        if (lVar4 == null) goto LAB_180b1afe4;
         if (*(int *)(lVar4 + 24) != 0) {
           if (((this.Back == null) ||
               (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
              (lVar4 = Transform.Find(lVar4,"Text",0)) == null) {
-        LAB_180b1a92a:
+        LAB_180b1afea:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
           lVar4 = FUN_18046be80(0);
-          if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 32)) == null) goto LAB_180b1a92a;
+          if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 32)) == null) goto LAB_180b1afea;
           uVar2 = *(uint32 *)(exploreTileData + 72);
           if (*(uint32 *)(lVar4 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = lVar4[uVar2];
-          if (lVar4 == null) goto LAB_180b1a92a;
+          if (lVar4 == null) goto LAB_180b1afea;
           local_res10[0] = *(uint32 *)(lVar4 + 24);
-          uVar6 = il2cpp_value_box(DAT_181d80418,local_res10);
+          uVar6 = il2cpp_value_box(DAT_181d80430,local_res10);
           uVar6 = String.Format(" (耐力-{0})",uVar6,0);
           LTLocalization.AddText(uVar5,uVar6,0);
         }
@@ -3936,27 +3936,27 @@ public class QuickDetail
             }
             if (((this.Back == null) ||
                 (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
-               (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1a924;
-            uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+               (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1afe4;
+            uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
             uVar6 = String.Format("\n{0}终点</color>",
                                    *(uint64 *)(pStatics_3d40 + 0x2d0),0);
-            goto LAB_180b1a3a5;
+            goto LAB_180b1aa65;
           }
           if (((this.Back == null) ||
               (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
-             (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1a924;
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+             (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1afe4;
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
           lVar4 = FUN_18046be80(0);
           if (((lVar4 == null) || (*(int64 *)(lVar4 + 40) == 0)) ||
              (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 40),*(uint32 *)(exploreTileData + 56),
-                                    DAT_181d87720), lVar4 == null)) goto LAB_180b1a924;
+                                    DAT_181d87738), lVar4 == null)) goto LAB_180b1afe4;
           uVar6 = String.Format("\n{0}",*(uint64 *)(lVar4 + 16),0);
           LTLocalization.AddText(uVar5,uVar6,0);
           lVar4 = FUN_18046be80(0);
           if (((lVar4 == null) || (*(int64 *)(lVar4 + 40) == 0)) ||
              (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 40),*(uint32 *)(exploreTileData + 56),
-                                    DAT_181d87720), lVar4 == null)) goto LAB_180b1a924;
-          cVar3 = FUN_18171e540(*(uint64 *)(lVar4 + 16),"凶险",0);
+                                    DAT_181d87738), lVar4 == null)) goto LAB_180b1afe4;
+          cVar3 = FUN_18171eb50(*(uint64 *)(lVar4 + 16),"凶险",0);
           if (cVar3) {
             if (((this.Back == null) ||
                 (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
@@ -3964,53 +3964,53 @@ public class QuickDetail
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+            uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
             uVar1 = *(uint32 *)(exploreTileData + 60);
             uVar6 = GlobalData.GetDifficultyStarString(uVar1,0);
             local_res10[0] = *(uint32 *)(exploreTileData + 64);
-            uVar7 = il2cpp_value_box(DAT_181d80418,local_res10);
+            uVar7 = il2cpp_value_box(DAT_181d80430,local_res10);
             uVar6 = String.Format("\n<size=17>{0}\n<b>敌人x{1}</b></size>",uVar6,uVar7,0);
             LTLocalization.AddText(uVar5,uVar6,0);
           }
           lVar4 = FUN_18046be80(0);
           if (((lVar4 == null) || (*(int64 *)(lVar4 + 40) == 0)) ||
              (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 40),*(uint32 *)(exploreTileData + 56),
-                                    DAT_181d87720), lVar4 == null)) goto LAB_180b1a924;
-          cVar3 = FUN_18171e540(*(uint64 *)(lVar4 + 16),"采集",0);
+                                    DAT_181d87738), lVar4 == null)) goto LAB_180b1afe4;
+          cVar3 = FUN_18171eb50(*(uint64 *)(lVar4 + 16),"采集",0);
           if (!cVar3) {
             return;
           }
           if (((this.Back == null) ||
               (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
-             (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1a924;
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+             (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1afe4;
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
           lVar4 = *(int64 *)(pStatics_3d40 + 0x438);
-          if (lVar4 == null) goto LAB_180b1a924;
-          uVar6 = FUN_180002f80(lVar4,*(uint32 *)(exploreTileData + 68),DAT_181da4358);
+          if (lVar4 == null) goto LAB_180b1afe4;
+          uVar6 = FUN_180002f80(lVar4,*(uint32 *)(exploreTileData + 68),DAT_181da4370);
         }
         else {
           if (((this.Back == null) ||
               (lVar4 = GameObject.get_transform(this.Back,0)) == null) ||
-             (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1a924;
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+             (lVar4 = Transform.Find(lVar4,"Text",0)) == null) goto LAB_180b1afe4;
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
           if ((*(int64 *)(exploreTileData + 80) == 0) || (BattleController.BattleMaxTime == null))
-          goto LAB_180b1a924;
+          goto LAB_180b1afe4;
           uVar6 = FUN_180002f80(BattleController.BattleMaxTime,
-                                *(uint32 *)(*(int64 *)(exploreTileData + 80) + 16),DAT_181da4358);
+                                *(uint32 *)(*(int64 *)(exploreTileData + 80) + 16),DAT_181da4370);
           lVar4 = *(int64 *)(pStatics_3d40 + 0x4a0);
-          if ((*(int64 *)(exploreTileData + 80) == 0) || (lVar4 == null)) goto LAB_180b1a924;
-          uVar7 = FUN_180002f80(lVar4,*(uint32 *)(*(int64 *)(exploreTileData + 80) + 16),DAT_181da4358)
+          if ((*(int64 *)(exploreTileData + 80) == 0) || (lVar4 == null)) goto LAB_180b1afe4;
+          uVar7 = FUN_180002f80(lVar4,*(uint32 *)(*(int64 *)(exploreTileData + 80) + 16),DAT_181da4370)
           ;
-          if (*(int64 *)(exploreTileData + 80) == 0) goto LAB_180b1a924;
+          if (*(int64 *)(exploreTileData + 80) == 0) goto LAB_180b1afe4;
           uVar8 = Int32.ToString(*(int64 *)(exploreTileData + 80) + 20,0);
           uVar7 = String.Concat(uVar7,uVar8,0);
           lVar4 = FUN_18046be80(0);
-          if (lVar4 == null) goto LAB_180b1a924;
+          if (lVar4 == null) goto LAB_180b1afe4;
           cVar3 = ExploreController.PlayerCanPassObstacle(lVar4,exploreTileData,0,0);
           uVar8 = "\n{0}\n通行{2}{1}</color>";
           if (!cVar3) {
             lVar4 = FUN_18046be80(0);
-            if (lVar4 == null) goto LAB_180b1a924;
+            if (lVar4 == null) goto LAB_180b1afe4;
             cVar3 = ExploreController.PlayerCanPassObstacle(lVar4,exploreTileData,1,0);
             if (!cVar3) {
               uVar9 = *(uint64 *)(pStatics_3d40 + 0x2d0);
@@ -4024,12 +4024,12 @@ public class QuickDetail
           }
           uVar6 = String.Format(uVar8,uVar6,uVar7,uVar9,0);
         }
-        LAB_180b1a3a5:
+        LAB_180b1aa65:
         LTLocalization.AddText(uVar5,uVar6,0);
     }
 
     // Token : 0x6002004
-    // RVA   : 0xB1B3A0   Offset: 0xB1A7A0   Length: 0xAE5
+    // RVA   : 0xB1BA60   Offset: 0xB1AE60   Length: 0xAE5
     private void ShowHorseQuickDetail(GameObject target, ItemData horseData, bool isCompare, ItemIconController targetItemIconController)
     {
         void QuickDetail.ShowHorseQuickDetail
@@ -4063,7 +4063,7 @@ public class QuickDetail
              (lVar2 = Component.get_gameObject(lVar2,0)) == null) ||
             ((lVar4 = GameObject.get_transform(lVar2,0), lVar4 == null ||
              (lVar4 = Transform.Find(lVar4,"Text",0)) == null))) ||
-           (uVar3 = Component.GetComponent(lVar4,DAT_181d96160), horseData == null)) throw; // [null/range check failed]
+           (uVar3 = Component.GetComponent(lVar4,DAT_181d96178), horseData == null)) throw; // [null/range check failed]
         uVar5 = ItemData.Name(horseData,0,0);
         uVar6 = ItemData.GetItemTypeDescribe(horseData,1,0);
         uVar5 = String.Concat("<size=18>",uVar5,"</size>\n",uVar6,0);
@@ -4071,7 +4071,7 @@ public class QuickDetail
         lVar4 = GameObject.get_transform(lVar2,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"Text",0)) == null)
         throw; // [null/range check failed]
-        uVar6 = Component.GetComponent(lVar4,DAT_181d96160);
+        uVar6 = Component.GetComponent(lVar4,DAT_181d96178);
         uVar3 = "\n\n";
         uVar5 = "";
         if (*(int *)(horseData + 24) == 0) {
@@ -4081,7 +4081,7 @@ public class QuickDetail
           uVar5 = String.Concat("驯服 ",uVar5,"%\n\n",0);
         }
         if (*(int64 *)(horseData + 136) == 0) {
-        LAB_180b1be74:
+        LAB_180b1c534:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -4090,17 +4090,17 @@ public class QuickDetail
         LTLocalization.AddText(uVar6,uVar3,0);
         lVar4 = GameObject.get_transform(lVar2,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"Text",0)) == null)
-        goto LAB_180b1be74;
-        uVar3 = Component.GetComponent(lVar4,DAT_181d96160);
+        goto LAB_180b1c534;
+        uVar3 = Component.GetComponent(lVar4,DAT_181d96178);
         uVar8 = ItemData.GetHorseMaxWeightAdd(horseData,0);
         local_38 = Mathf.RoundToInt(uVar8,0);
-        uVar5 = il2cpp_value_box(DAT_181d80418,&local_38);
+        uVar5 = il2cpp_value_box(DAT_181d80430,&local_38);
         fVar9 = (float)ItemData.GetHorseStepAddRate(horseData,0);
         local_34 = Mathf.RoundToInt(fVar9 * 100.0,0);
-        uVar6 = il2cpp_value_box(DAT_181d80418,&local_34);
+        uVar6 = il2cpp_value_box(DAT_181d80430,&local_34);
         fVar9 = (float)ItemData.GetHorseSeeRange(horseData,0);
         local_30[0] = Mathf.RoundToInt(fVar9 * 100.0,0);
-        uVar7 = il2cpp_value_box(DAT_181d80418,local_30);
+        uVar7 = il2cpp_value_box(DAT_181d80430,local_30);
         uVar5 = String.Format("\n\n负重上限+{0}\n视野范围+{2}%\n探索耐力+{1}%",uVar5,uVar6,uVar7,0);
         LTLocalization.AddText(uVar3,uVar5,0);
         if ((*(float *)(horseData + 76) <= 0.0) ||
@@ -4108,9 +4108,9 @@ public class QuickDetail
           lVar4 = GameObject.get_transform(lVar2,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"Text",0)) == null)
           throw; // [null/range check failed]
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
           uVar3 = "\n";
-          if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84898 + 224) == 0)) {
+          if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d848b0 + 224) == 0)) {
             il2cpp_runtime_class_init();
             uVar3 = "\n";
           }
@@ -4119,7 +4119,7 @@ public class QuickDetail
           lVar4 = GameObject.get_transform(lVar2,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"Text",0)) == null)
           throw; // [null/range check failed]
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
           lVar4 = FUN_18046c0a0(0);
           if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
               (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) ||
@@ -4141,11 +4141,11 @@ public class QuickDetail
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        uVar3 = Component.GetComponent(lVar4,DAT_181d96160);
+        uVar3 = Component.GetComponent(lVar4,DAT_181d96178);
         local_30[0] = *(uint32 *)(horseData + 68);
-        uVar5 = il2cpp_value_box(DAT_181da22d8,local_30);
+        uVar5 = il2cpp_value_box(DAT_181da22f0,local_30);
         local_34 = *(uint32 *)(horseData + 56);
-        uVar6 = il2cpp_value_box(DAT_181d80418,&local_34);
+        uVar6 = il2cpp_value_box(DAT_181d80430,&local_34);
         uVar5 = String.Format("\n重量{0}\n价值{1}",uVar5,uVar6,0);
         LTLocalization.AddText(uVar3,uVar5,0);
         cVar1 = String.op_Inequality(*(uint64 *)(horseData + 48),"",0);
@@ -4153,7 +4153,7 @@ public class QuickDetail
           lVar4 = GameObject.get_transform(lVar2,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"Text",0)) == null)
           throw; // [null/range check failed]
-          uVar3 = Component.GetComponent(lVar4,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar4,DAT_181d96178);
           uVar5 = String.Concat("\n\n<color=grey><i>",*(uint64 *)(horseData + 48),"</i></color>",0);
           LTLocalization.AddText(uVar3,uVar5,0);
         }
@@ -4181,33 +4181,33 @@ public class QuickDetail
               lVar2 = GameObject.get_transform(lVar2,0);
               if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Text",0)) == null)
               throw; // [null/range check failed]
-              uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
               cVar1 = FUN_1804625f0(0x130,0);
               if (!cVar1) {
-        LAB_180b1bd20:
+        LAB_180b1c3e0:
                 uVar5 = "\n<i><color=grey>左Shift对比当前装备</color></i>";
               }
               else {
                 cVar1 = Object.op_Inequality(targetItemIconController,0,0);
-                if (!cVar1) goto LAB_180b1bd20;
+                if (!cVar1) goto LAB_180b1c3e0;
                 if (targetItemIconController == null) throw; // [null/range check failed]
                 uVar5 = "\n<i><color=grey>单击替换装备</color></i>";
-                if (*(int *)(targetItemIconController + 40) != 0) goto LAB_180b1bd20;
+                if (*(int *)(targetItemIconController + 40) != 0) goto LAB_180b1c3e0;
               }
-              goto LAB_180b1bde9;
+              goto LAB_180b1c4a9;
             }
           }
           lVar2 = GameObject.get_transform(lVar2,0);
           if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Text",0)) == null)
           throw; // [null/range check failed]
-          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
           lVar2 = QuickDetail.GetTargetHero(this,0);
         }
         else {
           lVar2 = GameObject.get_transform(lVar2);
           if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Text",0)) == null)
           throw; // [null/range check failed]
-          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
           if ((this.nowShowObject == null) ||
              (lVar2 = GameObject.GetComponent(this.nowShowObject,DAT_181d71df8)) == null)
           throw; // [null/range check failed]
@@ -4216,14 +4216,14 @@ public class QuickDetail
         if (lVar2 != null) {
           uVar5 = HeroData.HeroName(lVar2,0,0);
           uVar5 = String.Format("\n<i><color=grey>{0}当前装备</color></i>",uVar5,0);
-        LAB_180b1bde9:
+        LAB_180b1c4a9:
           LTLocalization.AddText(uVar3,uVar5,0);
           return;
         }
     }
 
     // Token : 0x6002005
-    // RVA   : 0xB1BE90   Offset: 0xB1B290   Length: 0x877
+    // RVA   : 0xB1C550   Offset: 0xB1B950   Length: 0x877
     private void ShowMaterialQuickDetail(GameObject target, ItemData materialData)
     {
         bool cVar2;
@@ -4246,7 +4246,7 @@ public class QuickDetail
             if ((*plVar1 != 0) &&
                (((lVar3 = GameObject.get_transform(*plVar1,0), lVar3 != null &&
                  (lVar3 = Transform.Find(lVar3,"Text",0)) != null) &&
-                (uVar4 = Component.GetComponent(lVar3,DAT_181d96160), materialData != null)))) {
+                (uVar4 = Component.GetComponent(lVar3,DAT_181d96178), materialData != null)))) {
               uVar5 = ItemData.Name(materialData,0,0);
               uVar6 = ItemData.GetItemTypeDescribe(materialData,1,0);
               iVar7 = 0;
@@ -4255,7 +4255,7 @@ public class QuickDetail
               LTLocalization.SetText(uVar4,uVar5,0);
               if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null) &&
                  (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                 local_res10[0] = (float)ItemData.GetMaterialExtraCraftRate(materialData,0);
                 local_res10[0] = local_res10[0] * 100.0;
                 uVar5 = Single.ToString(local_res10,"f0",0);
@@ -4267,7 +4267,7 @@ public class QuickDetail
                   if (!cVar2) {
                     if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null) &&
                        (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                      uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                      uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                       if ((*(int64 *)(materialData + 128) != 0) &&
                          (lVar3 = *(int64 *)(*(int64 *)(materialData + 128) + 16)) != null) {
                         uVar5 = HeroSpeAddData.GetDescribe(lVar3,1,1,1,uVar9 & 0xffffffffffffff00,0);
@@ -4276,7 +4276,7 @@ public class QuickDetail
                         while( true ) {
                           lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
                           if ((lVar3 == null) || (lVar3 = *(int64 *)(lVar3 + 144)) == null) break;
-                          if (*(int *)(lVar3 + 24) <= iVar7) goto LAB_180b1c429;
+                          if (*(int *)(lVar3 + 24) <= iVar7) goto LAB_180b1cae9;
                           lVar3 = FUN_18046c100(0);
                           if (((lVar3 == null) || (*(int64 *)(lVar3 + 144) == 0)) ||
                              (lVar3 = FUN_180002f80()) == null) break;
@@ -4298,28 +4298,28 @@ public class QuickDetail
                     }
                   }
                   else {
-        LAB_180b1c429:
+        LAB_180b1cae9:
                     if ((*(float *)(materialData + 76) <= 0.0) ||
                        (cVar2 = ItemData.DetectPoisonNum(materialData,0), !cVar2)) {
                       if ((*plVar1 != 0) &&
                          ((lVar3 = GameObject.get_transform(*plVar1,0), lVar3 != null &&
                           (lVar3 = Transform.Find(lVar3,"Text",0)) != null))) {
-                        uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
+                        uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
                         uVar4 = "\n";
-                        if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) &&
-                           (*(int *)(DAT_181d84898 + 224) == 0)) {
+                        if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) &&
+                           (*(int *)(DAT_181d848b0 + 224) == 0)) {
                           il2cpp_runtime_class_init();
                           uVar4 = "\n";
                         }
-        LAB_180b1c60d:
+        LAB_180b1cccd:
                         LTLocalization.AddText(uVar5,uVar4,0);
                         if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null)
                            && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                           local_38 = *(uint32 *)(materialData + 68);
-                          uVar5 = il2cpp_value_box(DAT_181da22d8,&local_38);
+                          uVar5 = il2cpp_value_box(DAT_181da22f0,&local_38);
                           local_34[0] = *(uint32 *)(materialData + 56);
-                          uVar6 = il2cpp_value_box(DAT_181d80418,local_34);
+                          uVar6 = il2cpp_value_box(DAT_181d80430,local_34);
                           uVar5 = String.Format("\n重量{0}\n价值{1}",uVar5,uVar6,0);
                           LTLocalization.AddText(uVar4,uVar5,0);
                           return;
@@ -4330,7 +4330,7 @@ public class QuickDetail
                     }
                     else if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null
                              ) && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                      uVar5 = Component.GetComponent(lVar3,DAT_181d96160);
+                      uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
                       lVar3 = FUN_18046c0a0(0);
                       if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
                          ((lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0), lVar3 != null &&
@@ -4347,7 +4347,7 @@ public class QuickDetail
                         uVar4 = String.Format(uVar4,uVar6,
                                                *(uint64 *)
                                                 (*(int64 *)(DAT_181d73d40 + 184) + 0x2d0),0);
-                        goto LAB_180b1c60d;
+                        goto LAB_180b1cccd;
                       }
                     }
                   }
@@ -4359,7 +4359,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002006
-    // RVA   : 0xB1EB30   Offset: 0xB1DF30   Length: 0xE85
+    // RVA   : 0xB1F1F0   Offset: 0xB1E5F0   Length: 0xE85
     private void ShowTreasureQuickDetail(GameObject target, ItemData treasureData)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -4390,8 +4390,8 @@ public class QuickDetail
               ItemData.ManagePlayerGuessTreasureLv(treasureData,uVar14,0);
               if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null) &&
                  (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
-                plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
+                plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
                 if (plVar5 != (int64 *)0) {
                   if (("<size=18>" != 0) &&
                      (lVar3 = il2cpp_internal("<size=18>",*(uint64 *)(*plVar5 + 64)),
@@ -4473,7 +4473,7 @@ public class QuickDetail
                       if (((*plVar1 == 0) || (lVar3 = GameObject.get_transform(*plVar1,0)) == null)
                          || (lVar3 = Transform.Find(lVar3,"Text",0)) == null)
                       throw; // [null/range check failed]
-                      uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                      uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                       if (*(int64 *)(treasureData + 120) == 0) throw; // [null/range check failed]
                       uVar7 = Single.ToString(*(int64 *)(treasureData + 120) + 20,0);
                       uVar7 = String.Concat("鉴定学识 ",uVar7,"\n",0);
@@ -4497,10 +4497,10 @@ public class QuickDetail
                         if (((lVar6 == null) || (lVar3 = GameObject.get_transform(lVar6,0)) == null) ||
                            (lVar3 = Transform.Find(lVar3,"Text",0)) == null)
                         throw; // [null/range check failed]
-                        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                         lVar3 = *(int64 *)(pStatics_3d40 + 0x520);
                         if (lVar3 == null) throw; // [null/range check failed]
-                        uVar7 = FUN_180002f80(lVar3,uVar11,DAT_181da4358);
+                        uVar7 = FUN_180002f80(lVar3,uVar11,DAT_181da4370);
                         uVar7 = String.Concat("\n",uVar7," ?(");
                         LTLocalization.AddText(uVar4,uVar7,0);
                         uVar10 = uVar13;
@@ -4513,26 +4513,26 @@ public class QuickDetail
                           if (((lVar6 == null) || (lVar3 = GameObject.get_transform(lVar6,0)) == null)
                              || (lVar3 = Transform.Find(lVar3,"Text",0)) == null)
                           throw; // [null/range check failed]
-                          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                           lVar3 = *(int64 *)(pStatics_3d40 + 0x528);
                           if (((*(int64 *)(treasureData + 120) == 0) ||
                               (lVar6 = *(int64 *)(*(int64 *)(treasureData + 120) + 48)) == null)
-                             || ((lVar6 = FUN_180002f80(lVar6,uVar11,DAT_181d789a8), lVar6 == null ||
-                                 (uVar14 = FUN_1800d6760(lVar6,uVar10,DAT_181d8fa18), lVar3 == null))))
+                             || ((lVar6 = FUN_180002f80(lVar6,uVar11,DAT_181d789c0), lVar6 == null ||
+                                 (uVar14 = FUN_1800d6760(lVar6,uVar10,DAT_181d8fa30), lVar3 == null))))
                           throw; // [null/range check failed]
-                          uVar7 = FUN_180002f80(lVar3,uVar14,DAT_181da4358);
+                          uVar7 = FUN_180002f80(lVar3,uVar14,DAT_181da4370);
                           if (((*(int64 *)(treasureData + 120) == 0) ||
                               (lVar3 = *(int64 *)(*(int64 *)(treasureData + 120) + 48)) == null)
-                             || (lVar3 = FUN_180002f80(lVar3,uVar11,DAT_181d789a8)) == null)
+                             || (lVar3 = FUN_180002f80(lVar3,uVar11,DAT_181d789c0)) == null)
                           throw; // [null/range check failed]
-                          uVar14 = FUN_1800d6760(lVar3,uVar10,DAT_181d8fa18);
+                          uVar14 = FUN_1800d6760(lVar3,uVar10,DAT_181d8fa30);
                           uVar7 = GlobalData.GenerateRareLvColorText(uVar7,uVar14,0);
                           LTLocalization.AddText(uVar4,uVar7,0);
                           uVar10 = (uint64)((int)uVar10 + 1);
                         }
                         if (((lVar6 == null) || (lVar3 = GameObject.get_transform(lVar6,0)) == null) ||
                            (lVar3 = Transform.Find(lVar3,"Text")) == null) throw; // [null/range check failed]
-                        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                         LTLocalization.AddText(uVar4);
                         uVar11 = (uint64)(uVar9 + 1);
                         uVar12 = uVar12 + 1;
@@ -4541,20 +4541,20 @@ public class QuickDetail
                         if (((lVar6 == null) || (lVar3 = GameObject.get_transform(lVar6,0)) == null) ||
                            (lVar3 = Transform.Find(lVar3,"Text",0)) == null)
                         throw; // [null/range check failed]
-                        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                         lVar3 = *(int64 *)(pStatics_3d40 + 0x520);
                         if (lVar3 == null) throw; // [null/range check failed]
-                        uVar7 = FUN_180002f80(lVar3,uVar11,DAT_181da4358);
+                        uVar7 = FUN_180002f80(lVar3,uVar11,DAT_181da4370);
                         lVar3 = *(int64 *)(pStatics_3d40 + 0x528);
                         if (((*(int64 *)(treasureData + 120) == 0) ||
                             (lVar6 = *(int64 *)(*(int64 *)(treasureData + 120) + 24)) == null) ||
-                           (uVar14 = FUN_1800d6760(lVar6,uVar11,DAT_181d8fa18), lVar3 == null))
+                           (uVar14 = FUN_1800d6760(lVar6,uVar11,DAT_181d8fa30), lVar3 == null))
                         throw; // [null/range check failed]
-                        uVar8 = FUN_180002f80(lVar3,uVar14,DAT_181da4358);
+                        uVar8 = FUN_180002f80(lVar3,uVar14,DAT_181da4370);
                         if ((*(int64 *)(treasureData + 120) == 0) ||
                            (lVar3 = *(int64 *)(*(int64 *)(treasureData + 120) + 24)) == null)
                         throw; // [null/range check failed]
-                        uVar14 = FUN_1800d6760(lVar3,uVar11,DAT_181d8fa18);
+                        uVar14 = FUN_1800d6760(lVar3,uVar11,DAT_181d8fa30);
                         uVar8 = GlobalData.GenerateRareLvColorText(uVar8,uVar14,0);
                         String.Concat("\n",uVar7," ",uVar8,0);
                         LTLocalization.AddText(uVar4);
@@ -4567,22 +4567,22 @@ public class QuickDetail
                       if ((*plVar1 != 0) &&
                          ((lVar3 = GameObject.get_transform(*plVar1,0), lVar3 != null &&
                           (lVar3 = Transform.Find(lVar3,"Text",0)) != null))) {
-                        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                         lVar3 = "\n";
-                        if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) &&
-                           (*(int *)(DAT_181d84898 + 224) == 0)) {
+                        if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) &&
+                           (*(int *)(DAT_181d848b0 + 224) == 0)) {
                           il2cpp_runtime_class_init();
                           lVar3 = "\n";
                         }
-        LAB_180b1f74e:
+        LAB_180b1fe0e:
                         LTLocalization.AddText(uVar4,lVar3,0);
                         if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null)
                            && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                           local_res10[0] = *(uint32 *)(treasureData + 68);
-                          uVar7 = il2cpp_value_box(DAT_181da22d8,local_res10);
+                          uVar7 = il2cpp_value_box(DAT_181da22f0,local_res10);
                           local_38[0] = *(uint32 *)(treasureData + 56);
-                          uVar8 = il2cpp_value_box(DAT_181d80418,local_38);
+                          uVar8 = il2cpp_value_box(DAT_181d80430,local_38);
                           uVar7 = String.Format("\n重量{0}\n价值{1}",uVar7,uVar8,0);
                           LTLocalization.AddText(uVar4,uVar7,0);
                           if (*(int64 *)(treasureData + 120) != 0) {
@@ -4593,9 +4593,9 @@ public class QuickDetail
                           // WARNING: Subroutine does not return
                                 FUN_1800d6620();
                               }
-                              uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                              uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                               local_res10[0] = ItemData.GetTreasureValue(treasureData,1,0);
-                              uVar7 = il2cpp_value_box(DAT_181d80418,local_res10);
+                              uVar7 = il2cpp_value_box(DAT_181d80430,local_res10);
                               uVar7 = String.Format("({0}?)",uVar7,0);
                               LTLocalization.AddText(uVar4,uVar7,0);
                             }
@@ -4608,7 +4608,7 @@ public class QuickDetail
                     }
                     else if (((*plVar1 != 0) && (lVar3 = GameObject.get_transform(*plVar1,0)) != null
                              ) && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                      uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                      uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                       lVar3 = FUN_18046c0a0(0);
                       if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
                          ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 != null &&
@@ -4625,7 +4625,7 @@ public class QuickDetail
                         lVar3 = String.Format(uVar7,uVar8,
                                                *(uint64 *)
                                                 (pStatics_3d40 + 0x2d0),0);
-                        goto LAB_180b1f74e;
+                        goto LAB_180b1fe0e;
                       }
                     }
                   }
@@ -4637,7 +4637,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002007
-    // RVA   : 0xB1C710   Offset: 0xB1BB10   Length: 0xDA0
+    // RVA   : 0xB1CDD0   Offset: 0xB1C1D0   Length: 0xDA0
     private void ShowMedFoodQuickDetail(GameObject target, ItemData medFoodData)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4663,7 +4663,7 @@ public class QuickDetail
             if ((this.Back != null) &&
                (((lVar2 = GameObject.get_transform(this.Back,0), lVar2 != null &&
                  (lVar2 = Transform.Find(lVar2,"Text",0)) != null) &&
-                (uVar3 = Component.GetComponent(lVar2,DAT_181d96160), medFoodData != null)))) {
+                (uVar3 = Component.GetComponent(lVar2,DAT_181d96178), medFoodData != null)))) {
               uVar4 = ItemData.Name(medFoodData,0,0);
               uVar7 = "<size=18>";
               uVar6 = "</size>";
@@ -4680,14 +4680,14 @@ public class QuickDetail
                 if (((this.Back != null) &&
                     (lVar2 = GameObject.get_transform(this.Back,0)) != null) &&
                    (lVar2 = Transform.Find(lVar2,"Text",0)) != null) {
-                  uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                  uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                   uVar6 = ItemData.GetItemTypeDescribe(medFoodData,1,0);
                   uVar6 = String.Concat("\n",uVar6,0);
                   LTLocalization.AddText(uVar3,uVar6,0);
                   if (((this.Back != null) &&
                       (lVar2 = GameObject.get_transform(this.Back,0)) != null) &&
                      (lVar2 = Transform.Find(lVar2,"Text",0)) != null) {
-                    uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                    uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                     if ((*(int64 *)(medFoodData + 104) != 0) &&
                        (lVar2 = MedFoodData.GetChangeHeroStateData(*(int64 *)(medFoodData + 104),0),
                        lVar2 != null)) {
@@ -4702,7 +4702,7 @@ public class QuickDetail
                               (lVar2 = GameObject.get_transform(this.Back,0),
                               lVar2 == null)) || (lVar2 = Transform.Find(lVar2,"Text",0)) == null
                              ) throw; // [null/range check failed]
-                          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                           if ((*(int64 *)(medFoodData + 104) == 0) ||
                              (lVar2 = *(int64 *)(*(int64 *)(medFoodData + 104) + 40)) == null)
                           throw; // [null/range check failed]
@@ -4716,10 +4716,10 @@ public class QuickDetail
                              ((lVar2 = GameObject.get_transform(this.Back,0),
                               lVar2 == null || (lVar2 = Transform.Find(lVar2,"Text",0)) == null))
                              ) throw; // [null/range check failed]
-                          uVar6 = Component.GetComponent(lVar2,DAT_181d96160);
+                          uVar6 = Component.GetComponent(lVar2,DAT_181d96178);
                           uVar3 = "\n";
-                          if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) &&
-                             (*(int *)(DAT_181d84898 + 224) == 0)) {
+                          if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) &&
+                             (*(int *)(DAT_181d848b0 + 224) == 0)) {
                             il2cpp_runtime_class_init();
                             uVar3 = "\n";
                           }
@@ -4729,7 +4729,7 @@ public class QuickDetail
                               (lVar2 = GameObject.get_transform(this.Back,0),
                               lVar2 == null)) || (lVar2 = Transform.Find(lVar2,"Text",0)) == null
                              ) throw; // [null/range check failed]
-                          uVar6 = Component.GetComponent(lVar2,DAT_181d96160);
+                          uVar6 = Component.GetComponent(lVar2,DAT_181d96178);
                           lVar2 = FUN_18046c0a0(0);
                           if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
                              ((lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0), lVar2 == null ||
@@ -4752,11 +4752,11 @@ public class QuickDetail
                             (lVar2 = GameObject.get_transform(this.Back,0),
                             lVar2 != null)) && (lVar2 = Transform.Find(lVar2,"Text",0)) != null)
                         {
-                          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                           local_res10[0] = *(int *)(medFoodData + 68);
-                          uVar6 = il2cpp_value_box(DAT_181da22d8,local_res10);
+                          uVar6 = il2cpp_value_box(DAT_181da22f0,local_res10);
                           local_58[0] = *(uint32 *)(medFoodData + 56);
-                          uVar7 = il2cpp_value_box(DAT_181d80418,local_58);
+                          uVar7 = il2cpp_value_box(DAT_181d80430,local_58);
                           uVar6 = String.Format("\n重量{0}\n价值{1}",uVar6,uVar7,0);
                           LTLocalization.AddText(uVar3,uVar6,0);
                           if ((*(int64 *)(medFoodData + 104) != 0) &&
@@ -4785,7 +4785,7 @@ public class QuickDetail
                               }
                               fVar10 = (float)ChangeHeroStateData.GetMaxChangeMaxHp(lVar2,0);
                               local_res10[0] = (int)fVar10;
-                              uVar6 = il2cpp_value_box(DAT_181d80418,local_res10);
+                              uVar6 = il2cpp_value_box(DAT_181d80430,local_res10);
                               uVar6 = String.Format("额外生命>{0}时\n提升效果-90%",uVar6,0);
                               uVar3 = String.Format(uVar3,uVar6,0);
                               QuickDetail.AddDescribeTab(this,uVar3,0);
@@ -4817,7 +4817,7 @@ public class QuickDetail
                               }
                               fVar10 = (float)ChangeHeroStateData.GetMaxChangeMaxMp(lVar2,0);
                               local_res10[0] = (int)fVar10;
-                              uVar6 = il2cpp_value_box(DAT_181d80418,local_res10);
+                              uVar6 = il2cpp_value_box(DAT_181d80430,local_res10);
                               uVar6 = String.Format("额外内力>{0}时\n提升效果-90%",uVar6,0);
                               uVar3 = String.Format(uVar3,uVar6,0);
                               QuickDetail.AddDescribeTab(this,uVar3,0);
@@ -4833,7 +4833,7 @@ public class QuickDetail
                                   FUN_1800d6620();
                                 }
                                 local_res10[0] = -(int)*(float *)(lVar2 + 40);
-                                uVar3 = il2cpp_value_box(DAT_181d80418,local_res10);
+                                uVar3 = il2cpp_value_box(DAT_181d80430,local_res10);
                                 uVar3 = String.Format("外伤超过{0}时，治疗效果-75%",uVar3,0);
                                 QuickDetail.AddDescribeTab(this,uVar3,0);
                               }
@@ -4848,7 +4848,7 @@ public class QuickDetail
                                     FUN_1800d6620();
                                   }
                                   local_res10[0] = -(int)*(float *)(lVar2 + 44);
-                                  uVar3 = il2cpp_value_box(DAT_181d80418,local_res10);
+                                  uVar3 = il2cpp_value_box(DAT_181d80430,local_res10);
                                   uVar3 = String.Format("内伤超过{0}时，治疗效果-75%",uVar3,0);
                                   QuickDetail.AddDescribeTab(this,uVar3,0);
                                 }
@@ -4865,7 +4865,7 @@ public class QuickDetail
                                       FUN_1800d6620();
                                     }
                                     local_res10[0] = -(int)*(float *)(lVar2 + 48);
-                                    uVar3 = il2cpp_value_box(DAT_181d80418,local_res10);
+                                    uVar3 = il2cpp_value_box(DAT_181d80430,local_res10);
                                     uVar3 = String.Format("中毒超过{0}时，治疗效果-75%",uVar3,0);
                                     QuickDetail.AddDescribeTab(this,uVar3,0);
                                   }
@@ -4879,7 +4879,7 @@ public class QuickDetail
                                     lVar2 = FUN_18046c100(0);
                                     if (((lVar2 == null) || (*(int64 *)(lVar2 + 144) == 0)) ||
                                        (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 144),iVar9,
-                                                              DAT_181d8c018), lVar2 == null)) break;
+                                                              DAT_181d8c030), lVar2 == null)) break;
                                     if (*(char *)(lVar2 + 89) != false) {
                                       if (*(int64 *)(medFoodData + 104) == 0) break;
                                       lVar2 = *(int64 *)(*(int64 *)(medFoodData + 104) + 40);
@@ -4889,7 +4889,7 @@ public class QuickDetail
                                         lVar2 = FUN_18046c100(0);
                                         if (((lVar2 == null) || (*(int64 *)(lVar2 + 144) == 0)) ||
                                            (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 144),iVar9,
-                                                                  DAT_181d8c018), lVar2 == null)) break;
+                                                                  DAT_181d8c030), lVar2 == null)) break;
                                         uVar3 = HeroSpeAddDataBase.GetDescribe(lVar2,0);
                                         QuickDetail.AddDescribeTab(this,uVar3,0);
                                       }
@@ -4915,7 +4915,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002008
-    // RVA   : 0xB18880   Offset: 0xB17C80   Length: 0x11C4
+    // RVA   : 0xB18F40   Offset: 0xB18340   Length: 0x11C4
     private void ShowEquipmentQuickDetail(GameObject target, ItemData equipmentData, bool isCompare, ItemIconController targetItemIconController)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -4952,8 +4952,8 @@ public class QuickDetail
                (lVar3 = Component.get_gameObject(lVar3,0)) != null) &&
               ((lVar5 = GameObject.get_transform(lVar3,0), lVar5 != null &&
                (lVar5 = Transform.Find(lVar5,"Text",0)) != null))) &&
-             (uVar4 = Component.GetComponent(lVar5,DAT_181d96160), equipmentData != null)) {
-            cVar2 = FUN_180d755b0(*(uint64 *)(equipmentData + 88),0);
+             (uVar4 = Component.GetComponent(lVar5,DAT_181d96178), equipmentData != null)) {
+            cVar2 = FUN_180d75bc0(*(uint64 *)(equipmentData + 88),0);
             uVar9 = "<size=18>";
             if (!cVar2) {
               uVar6 = ItemData.Name(equipmentData,0,0);
@@ -4979,20 +4979,20 @@ public class QuickDetail
                 if (0 < *(int *)(*(int64 *)(equipmentData + 96) + 72)) {
                   lVar5 = GameObject.get_transform(lVar3,0);
                   if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null) {
-        LAB_180b199a3:
+        LAB_180b1a063:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
-                  uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
-                  if (*(int64 *)(equipmentData + 96) == 0) goto LAB_180b199a3;
+                  uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
+                  if (*(int64 *)(equipmentData + 96) == 0) goto LAB_180b1a063;
                   local_res10[0] = *(uint32 *)(*(int64 *)(equipmentData + 96) + 72);
-                  uVar9 = il2cpp_value_box(DAT_181d80418,local_res10);
+                  uVar9 = il2cpp_value_box(DAT_181d80430,local_res10);
                   uVar9 = String.Format("\n[天工+{0}]",uVar9,0);
                   LTLocalization.AddText(uVar4,uVar9,0);
                 }
                 lVar5 = GameObject.get_transform(lVar3,0);
                 if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null) {
-                  uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+                  uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
                   uVar9 = ItemData.GetItemTypeDescribe(equipmentData,1,0);
                   uVar9 = String.Concat("\n",uVar9,0);
                   LTLocalization.AddText(uVar4,uVar9,0);
@@ -5003,7 +5003,7 @@ public class QuickDetail
                       lVar5 = GameObject.get_transform(lVar3,0);
                       if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
                       throw; // [null/range check failed]
-                      uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+                      uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
                       if ((*(int64 *)(equipmentData + 96) == 0) ||
                          (lVar5 = EquipmentData.GetBaseAddData(*(int64 *)(equipmentData + 96),0),
                          lVar5 == null)) throw; // [null/range check failed]
@@ -5019,7 +5019,7 @@ public class QuickDetail
                         lVar5 = GameObject.get_transform(lVar3,0);
                         if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
                         throw; // [null/range check failed]
-                        uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+                        uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
                         if ((*(int64 *)(equipmentData + 96) == 0) ||
                            (lVar5 = *(int64 *)(*(int64 *)(equipmentData + 96) + 40)) == null)
                         throw; // [null/range check failed]
@@ -5034,8 +5034,8 @@ public class QuickDetail
                           lVar5 = GameObject.get_transform(lVar3,0);
                           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null
                              ) throw; // [null/range check failed]
-                          uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
-                          plVar10 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,5);
+                          uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
+                          plVar10 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
                           if (plVar10 == (int64 *)0) throw; // [null/range check failed]
                           if (("\n\n" != 0) &&
                              (lVar5 = il2cpp_internal("\n\n",*(uint64 *)(*plVar10 + 64)),
@@ -5126,7 +5126,7 @@ public class QuickDetail
                             if ((lVar5 == null) ||
                                (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
                             throw; // [null/range check failed]
-                            uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+                            uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
                             if ((*(int64 *)(equipmentData + 96) == 0) ||
                                ((lVar5 = *(int64 *)(*(int64 *)(equipmentData + 96) + 64), lVar5 == null
                                 || (lVar5 = EquipPoisonData.GetPoisonBuffData(lVar5,0)) == null)))
@@ -5142,22 +5142,22 @@ public class QuickDetail
                           lVar5 = GameObject.get_transform(lVar3,0);
                           if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null
                              ) {
-                            uVar9 = Component.GetComponent(lVar5,DAT_181d96160);
+                            uVar9 = Component.GetComponent(lVar5,DAT_181d96178);
                             uVar4 = "\n";
-                            if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) &&
-                               (*(int *)(DAT_181d84898 + 224) == 0)) {
+                            if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) &&
+                               (*(int *)(DAT_181d848b0 + 224) == 0)) {
                               il2cpp_runtime_class_init();
                               uVar4 = "\n";
                             }
-        LAB_180b19472:
+        LAB_180b19b32:
                             LTLocalization.AddText(uVar9,uVar4,0);
                             lVar5 = GameObject.get_transform(lVar3,0);
                             if ((lVar5 != null) &&
                                (lVar5 = Transform.Find(lVar5,"Text",0)) != null) {
-                              uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+                              uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
                               uVar9 = Single.ToString(equipmentData + 68,"0.#",0);
                               local_res10[0] = *(uint32 *)(equipmentData + 56);
-                              uVar6 = il2cpp_value_box(DAT_181d80418,local_res10);
+                              uVar6 = il2cpp_value_box(DAT_181d80430,local_res10);
                               uVar9 = String.Format("\n重量{0}\n价值{1}",uVar9,uVar6,0);
                               LTLocalization.AddText(uVar4,uVar9,0);
                               uVar1 = *(uint32 *)(equipmentData + 24);
@@ -5173,32 +5173,32 @@ public class QuickDetail
                                     if (!isCompare) {
                                       uVar4 = QuickDetail.GetTargetHero(this,0);
                                       cVar2 = ItemData.IsHeroEquip(equipmentData,uVar4,0);
-                                      if (cVar2) goto LAB_180b196ae;
+                                      if (cVar2) goto LAB_180b19d6e;
                                       lVar3 = GameObject.get_transform(lVar3,0);
                                       if ((lVar3 == null) ||
                                          (lVar3 = Transform.Find(lVar3,"Text",0)) == null)
                                       throw; // [null/range check failed]
-                                      uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                                      uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                                       cVar2 = FUN_1804625f0(0x130,0);
                                       if (!cVar2) {
-        LAB_180b1967f:
+        LAB_180b19d3f:
                                         uVar9 = "\n<i><color=grey>左Shift对比当前装备</color></i>";
                                       }
                                       else {
                                         cVar2 = Object.op_Inequality(targetItemIconController,0,0);
-                                        if (!cVar2) goto LAB_180b1967f;
+                                        if (!cVar2) goto LAB_180b19d3f;
                                         if (targetItemIconController == null) throw; // [null/range check failed]
                                         uVar9 = "\n<i><color=grey>单击替换装备</color></i>";
-                                        if (*(int *)(targetItemIconController + 40) != 0) goto LAB_180b1967f;
+                                        if (*(int *)(targetItemIconController + 40) != 0) goto LAB_180b19d3f;
                                       }
                                     }
                                     else {
-        LAB_180b196ae:
+        LAB_180b19d6e:
                                       lVar3 = GameObject.get_transform(lVar3,0);
                                       if ((lVar3 == null) ||
                                          (lVar3 = Transform.Find(lVar3,"Text",0)) == null)
                                       throw; // [null/range check failed]
-                                      uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                                      uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                                       lVar3 = QuickDetail.GetTargetHero(this,0);
                                       if (lVar3 == null) throw; // [null/range check failed]
                                       uVar9 = HeroData.HeroName(lVar3,0,0);
@@ -5219,9 +5219,9 @@ public class QuickDetail
                                   lVar3 = FUN_18046c100(0);
                                   if (((lVar3 == null) || (*(int64 *)(lVar3 + 144) == 0)) ||
                                      (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar13,
-                                                            DAT_181d8c018), lVar3 == null))
+                                                            DAT_181d8c030), lVar3 == null))
                                   throw; // [null/range check failed]
-                                  if (*(char *)(lVar3 + 89) == false) goto LAB_180b19966;
+                                  if (*(char *)(lVar3 + 89) == false) goto LAB_180b1a026;
                                   if (*(int64 *)(equipmentData + 96) == 0) throw; // [null/range check failed]
                                   lVar3 = *(int64 *)(*(int64 *)(equipmentData + 96) + 32);
                                   if ((lVar3 == null) ||
@@ -5231,7 +5231,7 @@ public class QuickDetail
                                     lVar3 = *(int64 *)(*(int64 *)(equipmentData + 96) + 40);
                                     if ((lVar3 != null) &&
                                        (fVar14 = (float)HeroSpeAddData.Get(lVar3,uVar13,0), fVar14 != 0.0
-                                       )) goto LAB_180b198f9;
+                                       )) goto LAB_180b19fb9;
                                     if ((*(int64 *)(equipmentData + 96) == 0) ||
                                        (lVar3 = *(int64 *)(*(int64 *)(equipmentData + 96) + 64),
                                        lVar3 == null)) throw; // [null/range check failed]
@@ -5243,20 +5243,20 @@ public class QuickDetail
                                          (lVar3 = EquipPoisonData.GetPoisonBuffData(lVar3,0)) == null
                                          ) throw; // [null/range check failed]
                                       fVar14 = (float)HeroSpeAddData.Get(lVar3,uVar13,0);
-                                      if (fVar14 != 0.0) goto LAB_180b198f9;
+                                      if (fVar14 != 0.0) goto LAB_180b19fb9;
                                     }
                                   }
                                   else {
-        LAB_180b198f9:
+        LAB_180b19fb9:
                                     lVar3 = FUN_18046c100(0);
                                     if (((lVar3 == null) || (*(int64 *)(lVar3 + 144) == 0)) ||
                                        (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar13,
-                                                              DAT_181d8c018), lVar3 == null))
+                                                              DAT_181d8c030), lVar3 == null))
                                     throw; // [null/range check failed]
                                     uVar4 = HeroSpeAddDataBase.GetDescribe(lVar3,0);
                                     QuickDetail.AddDescribeTab(this,uVar4,0);
                                   }
-        LAB_180b19966:
+        LAB_180b1a026:
                                   uVar13 = uVar13 + 1;
                                 } while( true );
                               }
@@ -5269,7 +5269,7 @@ public class QuickDetail
                           lVar5 = GameObject.get_transform(lVar3,0);
                           if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null
                              ) {
-                            uVar9 = Component.GetComponent(lVar5,DAT_181d96160);
+                            uVar9 = Component.GetComponent(lVar5,DAT_181d96178);
                             lVar5 = FUN_18046c0a0(0);
                             if ((((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                                 (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) != null) &&
@@ -5286,7 +5286,7 @@ public class QuickDetail
                               uVar4 = String.Format(uVar4,uVar6,
                                                      *(uint64 *)
                                                       (pStatics + 0x2d0),0);
-                              goto LAB_180b19472;
+                              goto LAB_180b19b32;
                             }
                           }
                         }
@@ -5301,7 +5301,7 @@ public class QuickDetail
     }
 
     // Token : 0x6002009
-    // RVA   : 0xB13B00   Offset: 0xB12F00   Length: 0x78
+    // RVA   : 0xB141C0   Offset: 0xB135C0   Length: 0x78
     public void DisableDescribe()
     {
         long lVar1;
@@ -5328,24 +5328,24 @@ public class QuickDetail
     }
 
     // Token : 0x600200B
-    // RVA   : 0xB22E50   Offset: 0xB22250   Length: 0x14D
+    // RVA   : 0xB23510   Offset: 0xB22910   Length: 0x14D
     private static void /*cctor*/()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar1,DAT_181da0cf8);
+        lVar1 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar1,DAT_181da0d10);
         if (lVar1 != null) {
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0xbf800000,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181d93f00 + 184) + 8);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0xbf800000,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          plVar2 = (int64 *)(*(int64 *)(DAT_181d93f18 + 184) + 8);
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           return;

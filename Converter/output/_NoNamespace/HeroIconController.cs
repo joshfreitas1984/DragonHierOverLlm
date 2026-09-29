@@ -44,10 +44,10 @@ public class HeroIconController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60017D3
-    // RVA   : 0xAF50B0   Offset: 0xAF44B0   Length: 0xE
+    // RVA   : 0xAF5770   Offset: 0xAF4B70   Length: 0xE
     private void OnEnable()
     {
-        void FUN_180af50b0(int64 this)
+        void FUN_180af5770(int64 this)
         {
         if (this.inited) {
           HeroIconController.RefreshHeroIcon(this,0);
@@ -56,10 +56,10 @@ public class HeroIconController
     }
 
     // Token : 0x60017D4
-    // RVA   : 0xAF6A60   Offset: 0xAF5E60   Length: 0xE
+    // RVA   : 0xAF7120   Offset: 0xAF6520   Length: 0xE
     private void Update()
     {
-        void FUN_180af6a60(int64 this)
+        void FUN_180af7120(int64 this)
         {
         if (!this.inited) {
           HeroIconController.Init(this,0);
@@ -68,7 +68,7 @@ public class HeroIconController
     }
 
     // Token : 0x60017D5
-    // RVA   : 0xAF4E10   Offset: 0xAF4210   Length: 0x40
+    // RVA   : 0xAF54D0   Offset: 0xAF48D0   Length: 0x40
     private void LateUpdate()
     {
         long lVar1;
@@ -88,10 +88,10 @@ public class HeroIconController
     }
 
     // Token : 0x60017D6
-    // RVA   : 0xAF6890   Offset: 0xAF5C90   Length: 0x10D
+    // RVA   : 0xAF6F50   Offset: 0xAF6350   Length: 0x10D
     public void SetImageSprite(Image targetImage, string spriteName)
     {
-        var pStatics = *(int64*)(DAT_181dab490 + 184);
+        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -117,10 +117,10 @@ public class HeroIconController
     }
 
     // Token : 0x60017D7
-    // RVA   : 0xAF50C0   Offset: 0xAF44C0   Length: 0x17C6
+    // RVA   : 0xAF5780   Offset: 0xAF4B80   Length: 0x17C6
     public void RefreshHeroIcon()
     {
-        var pStatics_05c8 = *(int64*)(DAT_181db05c8 + 184);
+        var pStatics_05e0 = *(int64*)(DAT_181db05e0 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         bool cVar1;
         int iVar2;
@@ -146,14 +146,14 @@ public class HeroIconController
         lVar4 = Component.get_transform(this,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"HeroName",0)) == null)
         throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+        uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
         if (this.heroData == null) throw; // [null/range check failed]
         uVar6 = HeroData.HeroName(this.heroData,1,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         lVar4 = Component.get_transform(this,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"HeroName",0)) == null)
         throw; // [null/range check failed]
-        lVar4 = Component.GetComponent(lVar4,DAT_181d96160);
+        lVar4 = Component.GetComponent(lVar4,DAT_181d96178);
         if (this.heroData == null) throw; // [null/range check failed]
         cVar1 = HeroData.HaveSetName(this.heroData,0);
         if (lVar4 == null) throw; // [null/range check failed]
@@ -161,7 +161,7 @@ public class HeroIconController
         lVar4 = Component.get_transform(this,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"HeroName",0)) == null)
         throw; // [null/range check failed]
-        plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d96160);
+        plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d96178);
         if (this.heroData == null) throw; // [null/range check failed]
         iVar2 = HeroData.GetBountyPirce(this.heroData,0);
         if (iVar2 < 1) {
@@ -227,7 +227,7 @@ public class HeroIconController
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"HeroForceIcon",0)) == null)
           throw; // [null/range check failed]
-          uVar5 = Component.GetComponent(lVar4,DAT_181d94460);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d94478);
           if ((this.heroData == null) ||
              (lVar4 = HeroData.GetForce(this.heroData,0,0)) == null)
           throw; // [null/range check failed]
@@ -237,24 +237,24 @@ public class HeroIconController
         lVar4 = Component.get_transform(this,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"HeroForce",0)) == null)
         throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+        uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
         if (this.heroData == null) throw; // [null/range check failed]
         uVar6 = HeroData.GetHeroForceLvDescribeSimplify(this.heroData,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         lVar4 = Component.get_transform(this,0);
         if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"PrisonCover",0)) == null)
         throw; // [null/range check failed]
-        plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+        plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
         if (this.heroData == null) throw; // [null/range check failed]
         if (!this.heroData.inPrison) {
-        LAB_180af58aa:
-          puVar9 = (uint32 *)FUN_180d98fe0(&local_18,0);
+        LAB_180af5f6a:
+          puVar9 = (uint32 *)FUN_180d995f0(&local_18,0);
         }
         else {
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+          lVar4 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
           if (lVar4 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar4 + 36) != 0) goto LAB_180af58aa;
-          puVar9 = (uint32 *)FUN_1810d3570(&local_18,0);
+          if (*(int *)(lVar4 + 36) != 0) goto LAB_180af5f6a;
+          puVar9 = (uint32 *)FUN_1810d3b80(&local_18,0);
         }
         if (plVar7 == (int64 *)0) throw; // [null/range check failed]
         local_18 = *puVar9;
@@ -278,8 +278,8 @@ public class HeroIconController
                 lVar4 = Component.get_transform(this,0);
                 if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
                 throw; // [null/range check failed]
-                plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-                puVar9 = (uint32 *)FUN_1810d3570(&local_18,0);
+                plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+                puVar9 = (uint32 *)FUN_1810d3b80(&local_18,0);
                 if (plVar7 == (int64 *)0) throw; // [null/range check failed]
                 local_18 = *puVar9;
                 uStack_14 = puVar9[1];
@@ -289,27 +289,27 @@ public class HeroIconController
                 lVar4 = Component.get_transform(this,0);
                 if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
                 throw; // [null/range check failed]
-                uVar5 = Component.GetComponent(lVar4,DAT_181d94460);
+                uVar5 = Component.GetComponent(lVar4,DAT_181d94478);
                 HeroIconController.SetImageSprite(this,uVar5,"问号",0);
                 lVar4 = Component.get_transform(this,0);
                 if ((lVar4 == null) ||
                    ((lVar4 = Transform.Find(lVar4,"MissionIcon",0), lVar4 == null ||
-                    (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460),
+                    (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478),
                     plVar7 == (int64 *)0)))) throw; // [null/range check failed]
                 (**(code **)(*plVar7 + 0x2c8))(plVar7,1,*(uint64 *)(*plVar7 + 0x2d0));
                 lVar4 = Component.get_transform(this,0);
                 if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
                 throw; // [null/range check failed]
-                lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+                lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
                 uVar5 = "个人委托";
-                goto joined_r0x000180af5ebe;
+                goto joined_r0x000180af657e;
               }
             }
             lVar4 = Component.get_transform(this,0);
             if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
             throw; // [null/range check failed]
-            plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-            puVar9 = (uint32 *)FUN_180d98fe0(&local_18,0);
+            plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+            puVar9 = (uint32 *)FUN_180d995f0(&local_18,0);
             if (plVar7 == (int64 *)0) throw; // [null/range check failed]
             local_18 = *puVar9;
             uStack_14 = puVar9[1];
@@ -318,21 +318,21 @@ public class HeroIconController
             (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_18,*(uint64 *)(*plVar7 + 0x2b0));
             lVar4 = Component.get_transform(this,0);
             if (((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null) ||
-               (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460),
+               (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478),
                plVar7 == (int64 *)0)) throw; // [null/range check failed]
             (**(code **)(*plVar7 + 0x2c8))(plVar7,0,*(uint64 *)(*plVar7 + 0x2d0));
             lVar4 = Component.get_transform(this,0);
             if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
             throw; // [null/range check failed]
-            lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+            lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
             uVar5 = "";
           }
           else {
             lVar4 = Component.get_transform(this,0);
             if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
             throw; // [null/range check failed]
-            plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-            puVar9 = (uint32 *)FUN_1810d3570(&local_18,0);
+            plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+            puVar9 = (uint32 *)FUN_1810d3b80(&local_18,0);
             if (plVar7 == (int64 *)0) throw; // [null/range check failed]
             local_18 = *puVar9;
             uStack_14 = puVar9[1];
@@ -342,18 +342,18 @@ public class HeroIconController
             lVar4 = Component.get_transform(this,0);
             if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
             throw; // [null/range check failed]
-            uVar5 = Component.GetComponent(lVar4,DAT_181d94460);
+            uVar5 = Component.GetComponent(lVar4,DAT_181d94478);
             HeroIconController.SetImageSprite(this,uVar5,"任务目标",0);
             lVar4 = Component.get_transform(this,0);
             if ((lVar4 == null) ||
                ((lVar4 = Transform.Find(lVar4,"MissionIcon",0), lVar4 == null ||
-                (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460),
+                (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478),
                 plVar7 == (int64 *)0)))) throw; // [null/range check failed]
             (**(code **)(*plVar7 + 0x2c8))(plVar7,1,*(uint64 *)(*plVar7 + 0x2d0));
             lVar4 = Component.get_transform(this,0);
             if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
             throw; // [null/range check failed]
-            lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+            lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
             uVar5 = "任务目标";
           }
         }
@@ -361,7 +361,7 @@ public class HeroIconController
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
           throw; // [null/range check failed]
-          plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+          plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
           puVar9 = (uint32 *)Color.get_yellow(&local_18,0);
           if (plVar7 == (int64 *)0) throw; // [null/range check failed]
           local_18 = *puVar9;
@@ -372,21 +372,21 @@ public class HeroIconController
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
           throw; // [null/range check failed]
-          uVar5 = Component.GetComponent(lVar4,DAT_181d94460);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d94478);
           HeroIconController.SetImageSprite(this,uVar5,"问号",0);
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) ||
              ((lVar4 = Transform.Find(lVar4,"MissionIcon",0), lVar4 == null ||
-              (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460),
+              (plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478),
               plVar7 == (int64 *)0)))) throw; // [null/range check failed]
           (**(code **)(*plVar7 + 0x2c8))(plVar7,1,*(uint64 *)(*plVar7 + 0x2d0));
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"MissionIcon",0)) == null)
           throw; // [null/range check failed]
-          lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+          lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
           uVar5 = "剧情事件";
         }
-        joined_r0x000180af5ebe:
+        joined_r0x000180af657e:
         if (lVar4 == null) throw; // [null/range check failed]
         lVar4.summonLv = uVar5;
         if (this.showForceLvUpgrade) {
@@ -394,7 +394,7 @@ public class HeroIconController
           cVar1 = Object.op_Inequality(uVar5,0,0);
           if (cVar1) {
             if (this.upgradeForceLvButton == null) throw; // [null/range check failed]
-            lVar8 = GameObject.GetComponent(this.upgradeForceLvButton,DAT_181dc7c00);
+            lVar8 = GameObject.GetComponent(this.upgradeForceLvButton,DAT_181dc7c18);
             lVar4 = this.heroData;
             if (lVar4 == null) throw; // [null/range check failed]
             bVar11 = false;
@@ -434,8 +434,8 @@ public class HeroIconController
                 lVar4 = Component.get_transform(this,0);
                 if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null)
                 throw; // [null/range check failed]
-                plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-                puVar9 = (uint32 *)FUN_1810d3570(&local_18,0);
+                plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+                puVar9 = (uint32 *)FUN_1810d3b80(&local_18,0);
                 if (plVar7 == (int64 *)0) throw; // [null/range check failed]
                 local_18 = *puVar9;
                 uStack_14 = puVar9[1];
@@ -444,11 +444,11 @@ public class HeroIconController
                 (**(code **)(*plVar7 + 0x2a8))(plVar7,&local_18,*(uint64 *)(*plVar7 + 0x2b0));
                 lVar4 = Component.get_transform(this,0);
                 if (((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null) ||
-                   (lVar4 = Component.GetComponent(lVar4,DAT_181d94ae0)) == null) throw; // [null/range check failed]
+                   (lVar4 = Component.GetComponent(lVar4,DAT_181d94af8)) == null) throw; // [null/range check failed]
                 Behaviour.set_enabled(lVar4,0,0);
                 lVar4 = Component.get_transform(this,0);
                 if (((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null) ||
-                   (lVar4 = Component.GetComponent(lVar4,DAT_181d94460)) == null) throw; // [null/range check failed]
+                   (lVar4 = Component.GetComponent(lVar4,DAT_181d94478)) == null) throw; // [null/range check failed]
                 lVar4 = Component.get_transform(lVar4,0);
                 puVar10 = (uint64 *)Vector3.get_one(local_28,0);
                 if (lVar4 == null) throw; // [null/range check failed]
@@ -462,35 +462,35 @@ public class HeroIconController
                   lVar4 = Component.get_transform(this,0);
                   if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null)
                   throw; // [null/range check failed]
-                  uVar6 = Component.GetComponent(lVar4,DAT_181d94460);
+                  uVar6 = Component.GetComponent(lVar4,DAT_181d94478);
                   lVar4 = *(int64 *)(pStatics_3d40 + 0x438);
                   if (((this.heroData == null) ||
                       (lVar8 = this.heroData.heroAIData) == null) ||
                      (uVar3 = Int32.Parse(*(uint64 *)(lVar8 + 24),0), lVar4 == null))
                   throw; // [null/range check failed]
-                  uVar5 = FUN_180002f80(lVar4,uVar3,DAT_181da4358);
+                  uVar5 = FUN_180002f80(lVar4,uVar3,DAT_181da4370);
                 }
                 else {
                   lVar4 = Component.get_transform(this,0);
                   if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null)
                   throw; // [null/range check failed]
-                  uVar6 = Component.GetComponent(lVar4,DAT_181d94460);
+                  uVar6 = Component.GetComponent(lVar4,DAT_181d94478);
                   if (((this.heroData == null) ||
                       (lVar4 = this.heroData.heroAIData) == null) ||
                      (PlotController.attriIndexCache == null)) throw; // [null/range check failed]
                   uVar5 = FUN_180002f80(PlotController.attriIndexCache,
-                                        lVar4.isSummon,DAT_181da4358);
+                                        lVar4.isSummon,DAT_181da4370);
                   uVar5 = String.Concat("从事工作_",uVar5,0);
                 }
-                goto LAB_180af6485;
+                goto LAB_180af6b45;
               }
             }
           }
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null)
           throw; // [null/range check failed]
-          plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-          puVar9 = (uint32 *)FUN_180d98fe0(&local_18,0);
+          plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+          puVar9 = (uint32 *)FUN_180d995f0(&local_18,0);
           if (plVar7 == (int64 *)0) throw; // [null/range check failed]
           local_18 = *puVar9;
           uStack_14 = puVar9[1];
@@ -502,8 +502,8 @@ public class HeroIconController
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null)
           throw; // [null/range check failed]
-          plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-          puVar9 = (uint32 *)FUN_1810d3570(&local_18,0);
+          plVar7 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+          puVar9 = (uint32 *)FUN_1810d3b80(&local_18,0);
           if (plVar7 == (int64 *)0) throw; // [null/range check failed]
           local_18 = *puVar9;
           uStack_14 = puVar9[1];
@@ -513,9 +513,9 @@ public class HeroIconController
           lVar4 = Component.get_transform(this,0);
           if ((lVar4 == null) || (lVar4 = Transform.Find(lVar4,"AIStuff",0)) == null)
           throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar4,DAT_181d94460);
+          uVar6 = Component.GetComponent(lVar4,DAT_181d94478);
           uVar5 = "墓碑";
-        LAB_180af6485:
+        LAB_180af6b45:
           HeroIconController.SetImageSprite(this,uVar6,uVar5,0);
         }
         if (this.heroData == null) throw; // [null/range check failed]
@@ -531,8 +531,8 @@ public class HeroIconController
           cVar1 = Object.op_Equality(uVar5,0,0);
           if (cVar1) {
             uVar5 = Component.get_gameObject(this,0);
-            if (*pStatics_05c8 == 0) throw; // [null/range check failed]
-            uVar6 = *(uint64 *)(*pStatics_05c8 + 40);
+            if (*pStatics_05e0 == 0) throw; // [null/range check failed]
+            uVar6 = *(uint64 *)(*pStatics_05e0 + 40);
             uVar5 = GlobalData.AddChild(uVar5,uVar6,0);
             this.battlePrepareSpellIcon = uVar5;
             if ((this.battlePrepareSpellIcon == null) ||
@@ -555,22 +555,22 @@ public class HeroIconController
             if (this.battlePrepareSpellIcon == null) throw; // [null/range check failed]
             uVar5 = GameObject.get_transform(this.battlePrepareSpellIcon,0);
             uVar5 = ShortcutExtensions.DOScale(uVar5,0x3f800000,0x3e800000,0);
-            TweenSettingsExtensions.SetEase(uVar5,9,DAT_181dc0f80);
+            TweenSettingsExtensions.SetEase(uVar5,9,DAT_181dc1128);
           }
           if (this.battlePrepareSpellIcon == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7408);
+          lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7420);
           if ((this.heroData == null) || (lVar4 == null)) throw; // [null/range check failed]
           lVar4.summonLv = this.heroData.battlePrepareSpellData;
           if (this.battlePrepareSpellIcon == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7408);
+          lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7420);
           if (lVar4 == null) throw; // [null/range check failed]
           lVar4.summonSourceHero = this.heroData;
           if ((this.battlePrepareSpellIcon == null) ||
-             (lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7408)) == null)
+             (lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7420)) == null)
           throw; // [null/range check failed]
           lVar4.summonControlable = 1;
           if ((this.battlePrepareSpellIcon == null) ||
-             (lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7408)) == null)
+             (lVar4 = GameObject.GetComponent(this.battlePrepareSpellIcon,DAT_181dc7420)) == null)
           throw; // [null/range check failed]
           BattlePrepareSpellButtonController.Init(lVar4,0);
         }
@@ -581,7 +581,7 @@ public class HeroIconController
           lVar4 = this.heroData;
           if (lVar4 != null) {
             if (cVar1 == lVar4.interestingStar) {
-        LAB_180af6858:
+        LAB_180af6f18:
               HeroData.set_HeroIconDirty(lVar4,0,0);
               return;
             }
@@ -591,7 +591,7 @@ public class HeroIconController
               if ((this.heroData != null) && (lVar4 != null)) {
                 GameObject.SetActive(lVar4,this.heroData.interestingStar,0);
                 lVar4 = this.heroData;
-                if (lVar4 != null) goto LAB_180af6858;
+                if (lVar4 != null) goto LAB_180af6f18;
               }
             }
           }
@@ -599,7 +599,7 @@ public class HeroIconController
     }
 
     // Token : 0x60017D8
-    // RVA   : 0xAF4890   Offset: 0xAF3C90   Length: 0x147
+    // RVA   : 0xAF4F50   Offset: 0xAF4350   Length: 0x147
     public void AutoSetName()
     {
         long lVar1;
@@ -630,7 +630,7 @@ public class HeroIconController
     }
 
     // Token : 0x60017D9
-    // RVA   : 0xAF49E0   Offset: 0xAF3DE0   Length: 0x425
+    // RVA   : 0xAF50A0   Offset: 0xAF44A0   Length: 0x425
     public void Init()
     {
         bool cVar1;
@@ -644,9 +644,9 @@ public class HeroIconController
         uint32 uStack_c;
         this.inited = 1;
         if (this.hideBack) {
-          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94460);
-          puVar3 = (uint32 *)FUN_180d98fe0(&local_18,0);
-          if (plVar2 == (int64 *)0) goto LAB_180af4e00;
+          plVar2 = (int64 *)Component.GetComponent(this,DAT_181d94478);
+          puVar3 = (uint32 *)FUN_180d995f0(&local_18,0);
+          if (plVar2 == (int64 *)0) goto LAB_180af54c0;
           local_18 = *puVar3;
           uStack_14 = puVar3[1];
           uStack_10 = puVar3[2];
@@ -655,30 +655,30 @@ public class HeroIconController
         }
         lVar7 = this.heroData;
         lVar4 = Component.get_transform(this,0);
-        if (lVar4 == null) goto LAB_180af4e00;
+        if (lVar4 == null) goto LAB_180af54c0;
         uVar5 = Transform.Find(lVar4,"Back",0);
-        if (lVar7 == null) goto LAB_180af4e00;
+        if (lVar7 == null) goto LAB_180af54c0;
         HeroData.SetSkeletonGraphic(lVar7,uVar5,0xffffff9d,0xffffffff,0);
         lVar7 = this.heroData;
         lVar4 = Component.get_transform(this,0);
-        if (lVar4 == null) goto LAB_180af4e00;
+        if (lVar4 == null) goto LAB_180af54c0;
         uVar5 = Transform.Find(lVar4,"Back",0);
-        if (lVar7 == null) goto LAB_180af4e00;
+        if (lVar7 == null) goto LAB_180af54c0;
         plVar2 = (int64 *)HeroData.GetSkeletonGraphic(lVar7,uVar5,0);
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
-        if (lVar7 == null) goto LAB_180af4e00;
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
+        if (lVar7 == null) goto LAB_180af54c0;
         if (*(int *)(lVar7 + 36) == 0) {
           lVar7 = this.heroData;
-          if (lVar7 == null) goto LAB_180af4e00;
+          if (lVar7 == null) goto LAB_180af54c0;
           if (!((!lVar7.dead) && (!lVar7.hide)))
           {
-            puVar3 = (uint32 *)FUN_1810d33f0(&local_18,0);
+            puVar3 = (uint32 *)FUN_1810d3a00(&local_18,0);
             }
             else {
           }
-          puVar3 = (uint32 *)FUN_1810d3570(&local_18,0);
+          puVar3 = (uint32 *)FUN_1810d3b80(&local_18,0);
         }
-        if (plVar2 == (int64 *)0) goto LAB_180af4e00;
+        if (plVar2 == (int64 *)0) goto LAB_180af54c0;
         local_18 = *puVar3;
         uStack_14 = puVar3[1];
         uStack_10 = puVar3[2];
@@ -692,16 +692,16 @@ public class HeroIconController
             uVar5 = this.upgradeForceLvButtonPrefab;
             uVar5 = GlobalData.AddChild(uVar6,uVar5,0);
             this.upgradeForceLvButton = uVar5;
-            if (this.upgradeForceLvButton == null) goto LAB_180af4e00;
-            lVar7 = GameObject.GetComponent(this.upgradeForceLvButton,DAT_181dc7c00);
-            if (lVar7 == null) goto LAB_180af4e00;
+            if (this.upgradeForceLvButton == null) goto LAB_180af54c0;
+            lVar7 = GameObject.GetComponent(this.upgradeForceLvButton,DAT_181dc7c18);
+            if (lVar7 == null) goto LAB_180af54c0;
             lVar7 = lVar7.changeSkinCd;
-            uVar5 = new OnTooltipCB(this,DAT_181d78fb0,0);
-            if (lVar7 == null) goto LAB_180af4e00;
+            uVar5 = new OnTooltipCB(this,DAT_181d78fc8,0);
+            if (lVar7 == null) goto LAB_180af54c0;
             UnityEvent.AddListener(lVar7,uVar5,0);
-            if (this.upgradeForceLvButton == null) goto LAB_180af4e00;
+            if (this.upgradeForceLvButton == null) goto LAB_180af54c0;
             lVar7 = GameObject.get_transform(this.upgradeForceLvButton,0);
-            if (lVar7 == null) goto LAB_180af4e00;
+            if (lVar7 == null) goto LAB_180af54c0;
             uStack_14 = 0xc2000000;
             local_18 = 0;
             uStack_10 = 0;
@@ -717,23 +717,23 @@ public class HeroIconController
             lVar7 = GameObject.get_transform(this.highLight,0);
             if (lVar7 != null) {
               Transform.SetSiblingIndex(lVar7,0,0);
-              goto LAB_180af4de2;
+              goto LAB_180af54a2;
             }
           }
-        LAB_180af4e00:
+        LAB_180af54c0:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180af4de2:
+        LAB_180af54a2:
         HeroIconController.RefreshHeroIcon(this,0);
     }
 
     // Token : 0x60017DA
-    // RVA   : 0xAF69A0   Offset: 0xAF5DA0   Length: 0xB7
+    // RVA   : 0xAF7060   Offset: 0xAF6460   Length: 0xB7
     public void UpgradeForceLvButtonClicked()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ManageHeroForceLvPlot(lVar1,this.heroData,0);
           return;
@@ -741,19 +741,19 @@ public class HeroIconController
     }
 
     // Token : 0x60017DB
-    // RVA   : 0xAF4E60   Offset: 0xAF4260   Length: 0x244
+    // RVA   : 0xAF5520   Offset: 0xAF4920   Length: 0x244
     public void OnClick()
     {
         var pStatics_5f40 = *(int64*)(DAT_181d75f40 + 184);
-        var pStatics_b428 = *(int64*)(DAT_181dbb428 + 184);
+        var pStatics_b440 = *(int64*)(DAT_181dbb440 + 184);
         int iVar1;
         ulong uVar2;
         long lVar3;
-        if (*pStatics_b428 == 0) throw; // [null/range check failed]
-        if (*(int *)(*pStatics_b428 + 24) != 0) {
+        if (*pStatics_b440 == 0) throw; // [null/range check failed]
+        if (*(int *)(*pStatics_b440 + 24) != 0) {
           plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
           plVar5 = (int64 *)0;
-          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
             plVar5 = plVar4;
           }
           NGUITools.PlaySound(plVar5,0);
@@ -768,7 +768,7 @@ public class HeroIconController
           if (iVar1 != 1) {
             if (iVar1 != 2) {
               if (iVar1 == 3) {
-                lVar3 = **(int64 **)(DAT_181db7518 + 184);
+                lVar3 = **(int64 **)(DAT_181db7530 + 184);
                 uVar2 = Component.get_gameObject(this,0);
                 if (lVar3 == null) throw; // [null/range check failed]
                 ChooseController.ChooseObj(lVar3,uVar2,0);
@@ -799,7 +799,7 @@ public class HeroIconController
     }
 
     // Token : 0x60017DD
-    // RVA   : 0xAF6A70   Offset: 0xAF5E70   Length: 0x6E
+    // RVA   : 0xAF7130   Offset: 0xAF6530   Length: 0x6E
     private static void /*cctor*/()
     {
         ulong local_18;
@@ -813,11 +813,11 @@ public class HeroIconController
     }
 
     // Token : 0x60017DE
-    // RVA   : 0xAF69A0   Offset: 0xAF5DA0   Length: 0xB7
+    // RVA   : 0xAF7060   Offset: 0xAF6460   Length: 0xB7
     private void <Init>b__18_0()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ManageHeroForceLvPlot(lVar1,this.heroData,0);
           return;

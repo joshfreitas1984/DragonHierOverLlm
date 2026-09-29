@@ -17,7 +17,7 @@ public class TankAlwaysForward
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009BC
-    // RVA   : 0xA9C470   Offset: 0xA9B870   Length: 0x17E
+    // RVA   : 0xA9CB30   Offset: 0xA9BF30   Length: 0x17E
     private void FixedUpdate()
     {
         float fVar1;

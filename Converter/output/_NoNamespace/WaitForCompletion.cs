@@ -6,12 +6,12 @@
 public class WaitForCompletion
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400215D
+    // Token: 0x400215E
     private readonly Tween t;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002769
-    // RVA   : 0x93AF20   Offset: 0x93A320   Length: 0x33
+    // RVA   : 0x93B5B0   Offset: 0x93A9B0   Length: 0x33
     public override bool get_keepWaiting()
     {
         long lVar1;

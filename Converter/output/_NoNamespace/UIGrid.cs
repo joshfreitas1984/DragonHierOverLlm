@@ -53,7 +53,7 @@ public class UIGrid
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000169
-    // RVA   : 0x12C3960   Offset: 0x12C2D60   Length: 0x13
+    // RVA   : 0x12C3F70   Offset: 0x12C3370   Length: 0x13
     public void set_repositionNow(bool value)
     {
         if (value) {
@@ -64,7 +64,7 @@ public class UIGrid
     }
 
     // Token : 0x600016A
-    // RVA   : 0x12C2AA0   Offset: 0x12C1EA0   Length: 0x2B7
+    // RVA   : 0x12C30B0   Offset: 0x12C24B0   Length: 0x2B7
     public List<Transform> GetChildList()
     {
         bool cVar1;
@@ -76,20 +76,20 @@ public class UIGrid
         ulong uVar7;
         int iVar8;
         lVar3 = Component.get_transform(this,0);
-        lVar4 = il2cpp_internal(DAT_181d981d0);
-        FUN_18132faf0(lVar4,DAT_181da7c18);
+        lVar4 = il2cpp_internal(DAT_181d981e8);
+        FUN_181330100(lVar4,DAT_181da7c30);
         iVar8 = 0;
         if (lVar3 == null) throw; // [null/range check failed]
         for (; iVar2 = Transform.get_childCount(lVar3,0), iVar8 < iVar2; iVar8 = iVar8 + 1) {
           lVar5 = Transform.GetChild(lVar3,iVar8,0);
           if (*(char *)((int64)this + 49) == false) {
-        LAB_1812c2c13:
+        LAB_1812c3223:
             if (lVar5 == null) throw; // [null/range check failed]
             uVar7 = Component.get_gameObject(lVar5);
             cVar1 = UIDragDropItem.IsDragged(uVar7);
             if (!cVar1) {
               if (lVar4 == null) throw; // [null/range check failed]
-              FUN_18181e0a0(lVar4);
+              FUN_18181e6b0(lVar4);
             }
           }
           else {
@@ -98,7 +98,7 @@ public class UIGrid
               if ((lVar5 == null) || (lVar6 = Component.get_gameObject(lVar5)) == null)
               throw; // [null/range check failed]
               cVar1 = GameObject.get_activeSelf(lVar6);
-              if (cVar1) goto LAB_1812c2c13;
+              if (cVar1) goto LAB_1812c3223;
             }
           }
         }
@@ -110,21 +110,21 @@ public class UIGrid
           return lVar4;
         }
         if (iVar8 == 1) {
-          lVar3 = il2cpp_internal(DAT_181d7e390);
-          uVar7 = DAT_181dc5cd8;
-        LAB_1812c2d0b:
-          OnTooltipCB.ctor(lVar3,0,uVar7,DAT_181dab838);
+          lVar3 = il2cpp_internal(DAT_181d7e3a8);
+          uVar7 = DAT_181dc5e88;
+        LAB_1812c331b:
+          OnTooltipCB.ctor(lVar3,0,uVar7,DAT_181dab850);
         }
         else {
           if (iVar8 == 2) {
-            lVar3 = il2cpp_internal(DAT_181d7e390);
-            uVar7 = DAT_181dc5d60;
-            goto LAB_1812c2d0b;
+            lVar3 = il2cpp_internal(DAT_181d7e3a8);
+            uVar7 = DAT_181dc5f10;
+            goto LAB_1812c331b;
           }
           if (iVar8 == 3) {
-            lVar3 = il2cpp_internal(DAT_181d7e390);
-            uVar7 = DAT_181dc5de8;
-            goto LAB_1812c2d0b;
+            lVar3 = il2cpp_internal(DAT_181d7e3a8);
+            uVar7 = DAT_181dc5f98;
+            goto LAB_1812c331b;
           }
           lVar3 = this[8];
           if (lVar3 == null) {
@@ -133,13 +133,13 @@ public class UIGrid
           }
         }
         if (lVar4 != null) {
-          List_1.Sort(lVar4,lVar3,DAT_181da7f98);
+          List_1.Sort(lVar4,lVar3,DAT_181da7fb0);
           return lVar4;
         }
     }
 
     // Token : 0x600016B
-    // RVA   : 0x12C2D60   Offset: 0x12C2160   Length: 0x7E
+    // RVA   : 0x12C3370   Offset: 0x12C2770   Length: 0x7E
     public Transform GetChild(int index)
     {
         long lVar1;
@@ -156,19 +156,19 @@ public class UIGrid
     }
 
     // Token : 0x600016C
-    // RVA   : 0x12C2DE0   Offset: 0x12C21E0   Length: 0x5C
+    // RVA   : 0x12C33F0   Offset: 0x12C27F0   Length: 0x5C
     public int GetIndex(Transform trans)
     {
         long lVar1;
         lVar1 = UIGrid.GetChildList(this,0);
         if (lVar1 != null) {
-          FUN_1817eb4e0(lVar1,trans,DAT_181da7e98);
+          FUN_1817ebaf0(lVar1,trans,DAT_181da7eb0);
           return;
         }
     }
 
     // Token : 0x600016D
-    // RVA   : 0x12C28E0   Offset: 0x12C1CE0   Length: 0xA9
+    // RVA   : 0x12C2EF0   Offset: 0x12C22F0   Length: 0xA9
     public void AddChild(Transform trans)
     {
         ulong uVar1;
@@ -187,7 +187,7 @@ public class UIGrid
     }
 
     // Token : 0x600016E
-    // RVA   : 0x12C2830   Offset: 0x12C1C30   Length: 0xA9
+    // RVA   : 0x12C2E40   Offset: 0x12C2240   Length: 0xA9
     public void AddChild(Transform trans, bool sort)
     {
         ulong uVar1;
@@ -206,14 +206,14 @@ public class UIGrid
     }
 
     // Token : 0x600016F
-    // RVA   : 0x12C2F50   Offset: 0x12C2350   Length: 0x96
+    // RVA   : 0x12C3560   Offset: 0x12C2960   Length: 0x96
     public bool RemoveChild(Transform t)
     {
         bool cVar1;
         long lVar2;
         lVar2 = UIGrid.GetChildList(this,0);
         if (lVar2 != null) {
-          cVar1 = FUN_1817eee00(lVar2,t,DAT_181da7f18);
+          cVar1 = FUN_1817ef410(lVar2,t,DAT_181da7f30);
           if (!cVar1) {
             return false;
           }
@@ -223,18 +223,18 @@ public class UIGrid
     }
 
     // Token : 0x6000170
-    // RVA   : 0x12C2E40   Offset: 0x12C2240   Length: 0x8C
+    // RVA   : 0x12C3450   Offset: 0x12C2850   Length: 0x8C
     protected virtual void Init()
     {
         ulong uVar1;
         this.mInitDone = 1;
         uVar1 = Component.get_gameObject(this,0);
-        uVar1 = NGUITools.FindInParents(uVar1,DAT_181d8f620);
+        uVar1 = NGUITools.FindInParents(uVar1,DAT_181d8f4b8);
         this.mPanel = uVar1;
     }
 
     // Token : 0x6000171
-    // RVA   : 0x12C38B0   Offset: 0x12C2CB0   Length: 0x58
+    // RVA   : 0x12C3EC0   Offset: 0x12C32C0   Length: 0x58
     protected virtual void Start()
     {
         long lVar1;
@@ -249,7 +249,7 @@ public class UIGrid
     }
 
     // Token : 0x6000172
-    // RVA   : 0x12C3910   Offset: 0x12C2D10   Length: 0x2B
+    // RVA   : 0x12C3F20   Offset: 0x12C3320   Length: 0x2B
     protected virtual void Update()
     {
         (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
@@ -257,7 +257,7 @@ public class UIGrid
     }
 
     // Token : 0x6000173
-    // RVA   : 0x12C2ED0   Offset: 0x12C22D0   Length: 0x7B
+    // RVA   : 0x12C34E0   Offset: 0x12C28E0   Length: 0x7B
     private void OnValidate()
     {
         bool cVar1;
@@ -265,7 +265,7 @@ public class UIGrid
         if (!cVar1) {
           cVar1 = NGUITools.GetActive(this,0);
           if (cVar1) {
-                          // WARNING: Could not recover jumptable at 0x0001812c2f3e. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001812c354e. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x1b8))(this,*(uint64 *)(*this + 0x1c0));
             return;
@@ -274,7 +274,7 @@ public class UIGrid
     }
 
     // Token : 0x6000174
-    // RVA   : 0xA6B860   Offset: 0xA6AC60   Length: 0x48
+    // RVA   : 0xA6BEF0   Offset: 0xA6B2F0   Length: 0x48
     public static int SortByName(Transform a, Transform b)
     {
         ulong uVar1;
@@ -290,7 +290,7 @@ public class UIGrid
     }
 
     // Token : 0x6000175
-    // RVA   : 0x12C37D0   Offset: 0x12C2BD0   Length: 0x60
+    // RVA   : 0x12C3DE0   Offset: 0x12C31E0   Length: 0x60
     public static int SortHorizontal(Transform a, Transform b)
     {
         ulong local_28;
@@ -309,7 +309,7 @@ public class UIGrid
     }
 
     // Token : 0x6000176
-    // RVA   : 0x12C3840   Offset: 0x12C2C40   Length: 0x61
+    // RVA   : 0x12C3E50   Offset: 0x12C3250   Length: 0x61
     public static int SortVertical(Transform a, Transform b)
     {
         long lVar2;
@@ -331,7 +331,7 @@ public class UIGrid
     }
 
     // Token : 0x6000178
-    // RVA   : 0x12C2FF0   Offset: 0x12C23F0   Length: 0x20D
+    // RVA   : 0x12C3600   Offset: 0x12C2A00   Length: 0x20D
     public virtual void Reposition()
     {
         long lVar1;
@@ -363,28 +363,28 @@ public class UIGrid
             if (lVar1 != null) {
               UIPanel.ConstrainTargetToBounds(lVar1,uVar3,1,0);
               if (this[10] != 0) {
-                plVar4 = (int64 *)Component.GetComponent(this[10],DAT_181d96de0);
+                plVar4 = (int64 *)Component.GetComponent(this[10],DAT_181d96df8);
                 cVar2 = Object.op_Inequality(plVar4,0,0);
                 if (cVar2) {
-                  if (plVar4 == (int64 *)0) goto LAB_1812c31f8;
+                  if (plVar4 == (int64 *)0) goto LAB_1812c3808;
                   (**(code **)(*plVar4 + 0x1b8))(plVar4,1,*(uint64 *)(*plVar4 + 0x1c0));
                 }
-                goto LAB_1812c31dd;
+                goto LAB_1812c37ed;
               }
             }
-        LAB_1812c31f8:
+        LAB_1812c3808:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
-        LAB_1812c31dd:
+        LAB_1812c37ed:
         if (this[7] != 0) {
           OnGeometryUpdated.Invoke(this[7],0);
         }
     }
 
     // Token : 0x6000179
-    // RVA   : 0x12C2990   Offset: 0x12C1D90   Length: 0x101
+    // RVA   : 0x12C2FA0   Offset: 0x12C23A0   Length: 0x101
     public void ConstrainWithinPanel()
     {
         long lVar1;
@@ -400,7 +400,7 @@ public class UIGrid
         if (lVar1 != null) {
           UIPanel.ConstrainTargetToBounds(lVar1,uVar3,1,0);
           if (this.mPanel != null) {
-            plVar4 = (int64 *)Component.GetComponent(this.mPanel,DAT_181d96de0);
+            plVar4 = (int64 *)Component.GetComponent(this.mPanel,DAT_181d96df8);
             cVar2 = Object.op_Inequality(plVar4,0,0);
             if (cVar2) {
               if (plVar4 == (int64 *)0) throw; // [null/range check failed]
@@ -412,7 +412,7 @@ public class UIGrid
     }
 
     // Token : 0x600017A
-    // RVA   : 0x12C3200   Offset: 0x12C2600   Length: 0x5CD
+    // RVA   : 0x12C3810   Offset: 0x12C2C10   Length: 0x5CD
     protected virtual void ResetPosition(List<Transform> list)
     {
         bool cVar1;
@@ -459,7 +459,7 @@ public class UIGrid
         local_res8 = 0;
         uVar7 = 0;
         if (list == null) {
-        LAB_1812c37c8:
+        LAB_1812c3dd8:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -472,7 +472,7 @@ public class UIGrid
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar6 = *(int64 *)(*(int64 *)(list + 16) + lVar8);
-            if (lVar6 == null) goto LAB_1812c37c8;
+            if (lVar6 == null) goto LAB_1812c3dd8;
             puVar4 = (uint64 *)Transform.get_localPosition(local_a8,lVar6,0);
             local_158 = *puVar4;
             fVar13 = *(float *)(puVar4 + 1);
@@ -506,7 +506,7 @@ public class UIGrid
             }
             if ((!this.animateSmoothly) ||
                (cVar1 = Application.get_isPlaying(0), !cVar1)) {
-        LAB_1812c34f4:
+        LAB_1812c3b04:
               local_148 = local_158;
               local_140 = fVar13;
               Transform.set_localPosition(lVar6,&local_148);
@@ -519,13 +519,13 @@ public class UIGrid
                 fVar11 = (float)local_138 - fVar11;
                 fVar14 = (float)((uint64)local_138 >> 32) - fVar14;
                 if (fVar11 * fVar11 + fVar14 * fVar14 + (local_e8 - fVar13) * (local_e8 - fVar13) < 0.0001
-                   ) goto LAB_1812c34f4;
+                   ) goto LAB_1812c3b04;
               }
               uVar5 = Component.get_gameObject(lVar6,0);
               local_d8 = local_158;
               local_d0 = fVar13;
               lVar6 = SpringPosition.Begin(uVar5,&local_d8,0x41700000);
-              if (lVar6 == null) goto LAB_1812c37c8;
+              if (lVar6 == null) goto LAB_1812c3dd8;
               *(uint16 *)(lVar6 + 41) = 0x101;
             }
             iVar2 = Mathf.Max(local_res20,iVar9);
@@ -552,16 +552,16 @@ public class UIGrid
             iVar3 = iVar2;
           }
           fVar13 = (float)Mathf.Lerp((float)-iVar3 * this.cellHeight);
-          FUN_1817eb420(&local_c8,list,DAT_181da7e18);
+          FUN_1817eba30(&local_c8,list,DAT_181da7e30);
           local_120 = local_c8;
           uStack_118 = uStack_c0;
           local_110 = local_b8;
-          while (cVar1 = FUN_180c74f00(&local_120,DAT_181d929e0), lVar8 = local_110, cVar1) {
+          while (cVar1 = FUN_180c75510(&local_120,DAT_181d929f8), lVar8 = local_110, cVar1) {
             if (local_110 == 0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar6 = Component.GetComponent(local_110,DAT_181d95d60);
+            lVar6 = Component.GetComponent(local_110,DAT_181d95d78);
             cVar1 = Object.op_Inequality(lVar6,0,0);
             if (!cVar1) {
               puVar4 = (uint64 *)Transform.get_localPosition(&local_c8,lVar8);
@@ -583,15 +583,15 @@ public class UIGrid
               Behaviour.set_enabled(lVar6,1);
             }
           }
-          ZhSegment.Initialize(&local_120,DAT_181d92960);
+          ZhSegment.Initialize(&local_120,DAT_181d92978);
         }
     }
 
     // Token : 0x600017B
-    // RVA   : 0x12C3940   Offset: 0x12C2D40   Length: 0x15
+    // RVA   : 0x12C3F50   Offset: 0x12C3350   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_1812c3940(int64 this)
+        void FUN_1812c3f50(int64 this)
         {
         this.cellWidth = 0x43480000;
         this.cellHeight = 0x43480000;

@@ -6,13 +6,13 @@
 public class <AnimateProperties>d__6
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001F71
+    // Token: 0x4001F72
     private int <>1__state;
 
-    // Token: 0x4001F72
+    // Token: 0x4001F73
     private object <>2__current;
 
-    // Token: 0x4001F73
+    // Token: 0x4001F74
     public ShaderPropAnimator <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,7 +31,7 @@ public class <AnimateProperties>d__6
     }
 
     // Token : 0x60024B3
-    // RVA   : 0x8E84F0   Offset: 0x8E78F0   Length: 0x184
+    // RVA   : 0x91B370   Offset: 0x91A770   Length: 0x184
     private virtual bool MoveNext()
     {
         float fVar1;
@@ -59,7 +59,7 @@ public class <AnimateProperties>d__6
           uVar5 = AnimationCurve.Evaluate(*(int64 *)(lVar2 + 40),*(uint32 *)(lVar2 + 48),0);
           lVar3 = *(int64 *)(lVar2 + 32);
           if (lVar3 != null) {
-            FUN_1810e1f50(lVar3,*(uint32 *)(*(int64 *)(DAT_181da1b60 + 184) + 124),uVar5,0);
+            FUN_1810e2560(lVar3,*(uint32 *)(*(int64 *)(DAT_181da1b78 + 184) + 124),uVar5,0);
             fVar1 = *(float *)(lVar2 + 48);
             fVar6 = (float)Time.get_deltaTime(0);
             fVar7 = (float)Random.Range(0x3e4ccccd,0x3e99999a,0);
@@ -80,15 +80,15 @@ public class <AnimateProperties>d__6
     }
 
     // Token : 0x60024B5
-    // RVA   : 0x8E8680   Offset: 0x8E7A80   Length: 0x3E
+    // RVA   : 0x91B500   Offset: 0x91A900   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181dac9b8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181dacb50);
     }
 
     // Token : 0x60024B6

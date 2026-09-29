@@ -6,32 +6,32 @@
 public class QuickTravelBigMapSpriteController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A7B
+    // Token: 0x4001A7C
     private static QuickTravelBigMapSpriteController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600201A
-    // RVA   : 0xCFFCB0   Offset: 0xCFF0B0   Length: 0x36
+    // RVA   : 0xD002C0   Offset: 0xCFF6C0   Length: 0x36
     public static QuickTravelBigMapSpriteController get_Instance()
     {
-        return **(uint64 **)(DAT_181d93f80 + 184);
+        return **(uint64 **)(DAT_181d93f98 + 184);
     }
 
     // Token : 0x600201B
-    // RVA   : 0xCFF7C0   Offset: 0xCFEBC0   Length: 0x43
+    // RVA   : 0xCFFDD0   Offset: 0xCFF1D0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d93f80 + 184);
+        puVar1 = *(uint64 **)(DAT_181d93f98 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x600201C
-    // RVA   : 0xCFF810   Offset: 0xCFEC10   Length: 0x301
+    // RVA   : 0xCFFE20   Offset: 0xCFF220   Length: 0x301
     public virtual void OnDrag(PointerEventData eventData)
     {
         var plVar2 = *(int64*)(lVar2 + 184);
-        var pStatics = *(int64*)(DAT_181d94000 + 184);
+        var pStatics = *(int64*)(DAT_181d94018 + 184);
         float fVar1;
         long lVar2;
         ulong uVar3;
@@ -104,13 +104,13 @@ public class QuickTravelBigMapSpriteController
     }
 
     // Token : 0x600201D
-    // RVA   : 0xCFFB20   Offset: 0xCFEF20   Length: 0x186
+    // RVA   : 0xD00130   Offset: 0xCFF530   Length: 0x186
     public virtual void OnScroll(PointerEventData eventData)
     {
         long lVar1;
         float fVar4;
         float fVar5;
-        lVar1 = **(int64 **)(DAT_181d94000 + 184);
+        lVar1 = **(int64 **)(DAT_181d94018 + 184);
         if ((eventData != null) && (fVar5 = *(float *)(eventData + 0x13c), lVar1 != null)) {
           plVar2 = *(int64 **)(lVar1 + 144);
           if (plVar2 != (int64 *)0) {
@@ -126,7 +126,7 @@ public class QuickTravelBigMapSpriteController
                 if (fVar4 != fVar5) {
                   plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/摩擦",0);
                   plVar3 = (int64 *)0;
-                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
                     plVar3 = plVar2;
                   }
                   NGUITools.PlaySound(plVar3,0x3d75c28f,0);

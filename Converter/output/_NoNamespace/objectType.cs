@@ -6,13 +6,13 @@
 public class objectType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001F86
+    // Token: 0x4001F87
     public int value__;
 
-    // Token: 0x4001F87
+    // Token: 0x4001F88
     public const objectType TextMeshPro;
 
-    // Token: 0x4001F88
+    // Token: 0x4001F89
     public const objectType TextMeshProUGUI;
 
 }

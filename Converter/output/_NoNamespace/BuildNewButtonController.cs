@@ -11,12 +11,12 @@ public class BuildNewButtonController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000DC6
-    // RVA   : 0xB5EB60   Offset: 0xB5DF60   Length: 0xCC
+    // RVA   : 0xB5F220   Offset: 0xB5E620   Length: 0xCC
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           AreaBuildController.BuildNewButtonClicked(lVar1,uVar2,0);

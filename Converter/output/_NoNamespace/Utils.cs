@@ -7,7 +7,7 @@ public class Utils
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60026C7
-    // RVA   : 0x93AC60   Offset: 0x93A060   Length: 0x2BD
+    // RVA   : 0x93B2F0   Offset: 0x93A6F0   Length: 0x2BD
     public static Vector2 SwitchToRectTransform(RectTransform from, RectTransform to)
     {
         ulong uVar3;
@@ -31,13 +31,13 @@ public class Utils
           uStack_64 = puVar1[1];
           uStack_60 = puVar1[2];
           uStack_5c = puVar1[3];
-          fVar4 = (float)FUN_180d98fa0(&local_68,0);
+          fVar4 = (float)FUN_180d995b0(&local_68,0);
           puVar1 = (uint32 *)RectTransform.get_rect(&local_78,from,0);
           local_68 = *puVar1;
           uStack_64 = puVar1[1];
           uStack_60 = puVar1[2];
           uStack_5c = puVar1[3];
-          fVar5 = (float)FUN_180d98fc0(&local_68,0);
+          fVar5 = (float)FUN_180d995d0(&local_68,0);
           puVar1 = (uint32 *)RectTransform.get_rect(&local_78,from,0);
           local_68 = *puVar1;
           uStack_64 = puVar1[1];
@@ -65,13 +65,13 @@ public class Utils
             uStack_64 = puVar1[1];
             uStack_60 = puVar1[2];
             uStack_5c = puVar1[3];
-            fVar4 = (float)FUN_180d98fa0(&local_68,0);
+            fVar4 = (float)FUN_180d995b0(&local_68,0);
             puVar1 = (uint32 *)RectTransform.get_rect(&local_78,to,0);
             local_68 = *puVar1;
             uStack_64 = puVar1[1];
             uStack_60 = puVar1[2];
             uStack_5c = puVar1[3];
-            fVar5 = (float)FUN_180d98fc0(&local_68,0);
+            fVar5 = (float)FUN_180d995d0(&local_68,0);
             puVar1 = (uint32 *)RectTransform.get_rect(&local_78,to,0);
             local_68 = *puVar1;
             uStack_64 = puVar1[1];

@@ -34,7 +34,7 @@ public class <Start>d__3
     }
 
     // Token : 0x6000067
-    // RVA   : 0x935B00   Offset: 0x934F00   Length: 0x182
+    // RVA   : 0x936340   Offset: 0x935740   Length: 0x182
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -65,7 +65,7 @@ public class <Start>d__3
             uVar3 = *(uint64 *)(lVar1 + 40);
             cVar2 = Object.op_Inequality(uVar3,0,0);
             if (cVar2) {
-              plVar4 = (int64 *)Component.GetComponent(lVar1,DAT_181d96f60);
+              plVar4 = (int64 *)Component.GetComponent(lVar1,DAT_181d96f78);
               if (plVar4 == (int64 *)0) throw; // [null/range check failed]
               (**(code **)(*plVar4 + 0x2f8))
                         (plVar4,*(uint64 *)(lVar1 + 40),*(uint64 *)(*plVar4 + 0x300));
@@ -89,15 +89,15 @@ public class <Start>d__3
     }
 
     // Token : 0x6000069
-    // RVA   : 0x935C90   Offset: 0x935090   Length: 0x3E
+    // RVA   : 0x9364D0   Offset: 0x9358D0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da0928);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da0ac0);
     }
 
     // Token : 0x600006A

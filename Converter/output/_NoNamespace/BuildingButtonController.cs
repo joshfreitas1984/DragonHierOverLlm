@@ -11,7 +11,7 @@ public class BuildingButtonController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000DCF
-    // RVA   : 0xB5F860   Offset: 0xB5EC60   Length: 0x226
+    // RVA   : 0xB5FF20   Offset: 0xB5F320   Length: 0x226
     public void OnClick()
     {
         bool cVar1;
@@ -20,13 +20,13 @@ public class BuildingButtonController
         if (this.areaBuildingChoice == null) throw; // [null/range check failed]
         lVar2 = this.areaBuildingChoice.callFuc;
         if (lVar2 != null) {
-          cVar1 = FUN_18171e540(lVar2,"",0);
+          cVar1 = FUN_18171eb50(lVar2,"",0);
           if (!cVar1) {
             lVar2 = FUN_18046bca0(0);
             if (lVar2 != null) {
               lVar2.subCondition = this.areaBuildingChoice;
               if (this.areaBuildingChoice != null) {
-                cVar1 = FUN_18171e540(this.areaBuildingChoice.callFucParam,"",
+                cVar1 = FUN_18171eb50(this.areaBuildingChoice.callFucParam,"",
                                       0);
                 if (!cVar1) {
                   if (this.areaBuildingChoice == null) throw; // [null/range check failed]

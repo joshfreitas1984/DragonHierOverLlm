@@ -35,7 +35,7 @@ public class InnData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000FA9
-    // RVA   : 0xC99CD0   Offset: 0xC990D0   Length: 0xFF
+    // RVA   : 0xC9A2E0   Offset: 0xC996E0   Length: 0xFF
     public void /*ctor*/(int _id, string _innName)
     {
         ulong uVar1;
@@ -44,13 +44,13 @@ public class InnData
         this.id = _id;
         this.shopItemList = new ItemListData(0);
         this.bigMapPos = new c.DisplayClass9_0(0);
-        uVar1 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(uVar1,DAT_181d8f098);
+        uVar1 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(uVar1,DAT_181d8f0b0);
         this.nearAreaID = uVar1;
     }
 
     // Token : 0x6000FAA
-    // RVA   : 0xC99B50   Offset: 0xC98F50   Length: 0x175
+    // RVA   : 0xC9A160   Offset: 0xC99560   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -61,13 +61,13 @@ public class InnData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -79,7 +79,7 @@ public class InnData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

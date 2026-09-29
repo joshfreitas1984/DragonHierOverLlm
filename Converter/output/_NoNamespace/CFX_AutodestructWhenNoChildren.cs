@@ -7,7 +7,7 @@ public class CFX_AutodestructWhenNoChildren
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60023EC
-    // RVA   : 0xB7E150   Offset: 0xB7D550   Length: 0x87
+    // RVA   : 0xB7E810   Offset: 0xB7DC10   Length: 0x87
     private void Update()
     {
         ulong uVar1;

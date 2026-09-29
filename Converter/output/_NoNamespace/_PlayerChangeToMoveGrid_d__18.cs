@@ -6,19 +6,19 @@
 public class <PlayerChangeToMoveGrid>d__18
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C8D
+    // Token: 0x4001C8E
     private int <>1__state;
 
-    // Token: 0x4001C8E
+    // Token: 0x4001C8F
     private object <>2__current;
 
-    // Token: 0x4001C8F
+    // Token: 0x4001C90
     public float delta;
 
-    // Token: 0x4001C90
+    // Token: 0x4001C91
     public GameObject target;
 
-    // Token: 0x4001C91
+    // Token: 0x4001C92
     public StudyDodgePlayer <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ public class <PlayerChangeToMoveGrid>d__18
     }
 
     // Token : 0x600223C
-    // RVA   : 0x8F15A0   Offset: 0x8F09A0   Length: 0x106
+    // RVA   : 0x924420   Offset: 0x923820   Length: 0x106
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -76,15 +76,15 @@ public class <PlayerChangeToMoveGrid>d__18
     }
 
     // Token : 0x600223E
-    // RVA   : 0x8F16B0   Offset: 0x8F0AB0   Length: 0x3E
+    // RVA   : 0x924530   Offset: 0x923930   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db48f8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db4aa8);
     }
 
     // Token : 0x600223F

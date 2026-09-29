@@ -6,16 +6,16 @@
 public class <SeeAndReadText>d__42
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001AEA
+    // Token: 0x4001AEB
     private int <>1__state;
 
-    // Token: 0x4001AEB
+    // Token: 0x4001AEC
     private object <>2__current;
 
-    // Token: 0x4001AEC
+    // Token: 0x4001AED
     public GameObject target;
 
-    // Token: 0x4001AED
+    // Token: 0x4001AEE
     public ReadBookController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -34,7 +34,7 @@ public class <SeeAndReadText>d__42
     }
 
     // Token : 0x6002082
-    // RVA   : 0x8F1D60   Offset: 0x8F1160   Length: 0x24A
+    // RVA   : 0x924BE0   Offset: 0x923FE0   Length: 0x24A
     private virtual bool MoveNext()
     {
         bool cVar1;
@@ -51,13 +51,13 @@ public class <SeeAndReadText>d__42
               return false;
             }
             if ((lVar3 != null) && (*(int64 *)(lVar3 + 88) != 0)) {
-              cVar1 = FUN_18181e400(*(int64 *)(lVar3 + 88),this.target,
-                                    DAT_181d89498);
+              cVar1 = FUN_18181ea10(*(int64 *)(lVar3 + 88),this.target,
+                                    DAT_181d894b0);
               if (cVar1) {
                 return false;
               }
               if (*(int64 *)(lVar3 + 88) != 0) {
-                FUN_18181e0a0(*(int64 *)(lVar3 + 88),this.target,DAT_181d89398);
+                FUN_18181e6b0(*(int64 *)(lVar3 + 88),this.target,DAT_181d893b0);
                 if ((this.target != null) &&
                    (lVar3 = GameObject.GetComponent(this.target,DAT_181d72ab8),
                    lVar3 != null)) {
@@ -66,7 +66,7 @@ public class <SeeAndReadText>d__42
                     uVar4 = GameObject.get_transform(this.target,0);
                     uVar4 = ShortcutExtensions.DOShakePosition
                                       (uVar4,0x3f733333,0x41200000,10,0x42b40000,0,1,0);
-                    TweenSettingsExtensions.SetEase(uVar4,9,DAT_181dc1088);
+                    TweenSettingsExtensions.SetEase(uVar4,9,DAT_181dc1238);
                     uVar4 = new WaitForSecondsRealtime(0x3f800000,0);
                     this.<>2__current = uVar4;
                     this.<>1__state = 1;
@@ -92,7 +92,7 @@ public class <SeeAndReadText>d__42
               ReadBookTextController.ReadText(lVar2,0);
             }
             if ((lVar3 != null) && (*(int64 *)(lVar3 + 88) != 0)) {
-              FUN_1817eee00(*(int64 *)(lVar3 + 88),this.target,DAT_181d89618);
+              FUN_1817ef410(*(int64 *)(lVar3 + 88),this.target,DAT_181d89630);
               return false;
             }
           }
@@ -107,15 +107,15 @@ public class <SeeAndReadText>d__42
     }
 
     // Token : 0x6002084
-    // RVA   : 0x8F1FB0   Offset: 0x8F13B0   Length: 0x3E
+    // RVA   : 0x924E30   Offset: 0x924230   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181dab448);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181dab5e0);
     }
 
     // Token : 0x6002085

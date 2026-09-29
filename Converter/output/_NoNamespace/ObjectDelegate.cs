@@ -26,7 +26,7 @@ public class ObjectDelegate
     }
 
     // Token : 0x6000777
-    // RVA   : 0x8E6C80   Offset: 0x8E6080   Length: 0x2A6
+    // RVA   : 0x9192C0   Offset: 0x9186C0   Length: 0x2A6
     public virtual void Invoke(GameObject go, GameObject obj)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class ObjectDelegate
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e6edd;
+              goto LAB_18091951d;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -94,7 +94,7 @@ public class ObjectDelegate
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e6d27;
+              goto LAB_180919367;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -126,11 +126,11 @@ public class ObjectDelegate
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_1808e6d27:
+        LAB_180919367:
             (*pcVar2)(go,obj,lVar1);
           }
           else {
-        LAB_1808e6edd:
+        LAB_18091951d:
             (*pcVar2)(plVar3,go,obj,lVar1);
           }
           uVar9 = uVar9 + 1;

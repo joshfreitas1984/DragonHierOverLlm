@@ -26,7 +26,7 @@ public class HitCheck
     }
 
     // Token : 0x6000579
-    // RVA   : 0xFAEAB0   Offset: 0xFADEB0   Length: 0x3B3
+    // RVA   : 0xFAF0C0   Offset: 0xFAE4C0   Length: 0x3B3
     public virtual bool Invoke(Vector3 worldPos)
     {
         uint uVar1;
@@ -86,7 +86,7 @@ public class HitCheck
                 local_48 = *worldPos;
                 puVar7 = &local_48;
                 local_40 = *(uint32 *)(worldPos + 1);
-                goto LAB_180faee0d;
+                goto LAB_180faf41d;
               }
               uVar5 = (*pcVar2)(worldPos + -2,lVar12);
             }
@@ -115,13 +115,13 @@ public class HitCheck
                                   (int)((uint32)*(uint16 *)(lVar12 + 72) +
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
-                        goto LAB_180faed66;
+                        goto LAB_180faf376;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                   }
                   puVar7 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar12 + 72));
-        LAB_180faed66:
+        LAB_180faf376:
                   local_68 = uVar15;
                   local_60 = uVar1;
                   uVar5 = (*(code *)*puVar7)(plVar3,&local_68,puVar7[1]);
@@ -154,14 +154,14 @@ public class HitCheck
                                 (int)((uint32)*(uint16 *)(lVar12 + 72) +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_180faec66;
+                        goto LAB_180faf276;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < uVar10);
                   }
                   lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar12 + 24),*(uint16 *)(lVar12 + 72),
                                         uVar10,uVar15);
-        LAB_180faec66:
+        LAB_180faf276:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar12);
                   local_88 = uVar15;
                   local_80 = uVar1;
@@ -179,7 +179,7 @@ public class HitCheck
             puVar7 = &local_98;
             local_98 = *worldPos;
             local_90 = *(uint32 *)(worldPos + 1);
-        LAB_180faee0d:
+        LAB_180faf41d:
             uVar5 = (*pcVar2)(plVar3,puVar7,lVar12);
           }
           uVar14 = uVar14 + 1;
@@ -190,7 +190,7 @@ public class HitCheck
     }
 
     // Token : 0x600057A
-    // RVA   : 0x183D100   Offset: 0x183C500   Length: 0x81
+    // RVA   : 0x183D710   Offset: 0x183CB10   Length: 0x81
     public virtual IAsyncResult BeginInvoke(Vector3 worldPos, AsyncCallback callback, object object)
     {
         void HitCheck.BeginInvoke
@@ -199,7 +199,7 @@ public class HitCheck
         uint64 local_18;
         uint64 local_10;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181db3b70,worldPos);
+        local_18 = il2cpp_value_box(DAT_181db3b88,worldPos);
         il2cpp_internal(this,&local_18,callback,object);
     }
 

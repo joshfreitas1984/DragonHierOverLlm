@@ -6,13 +6,13 @@
 public class SVA
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E72
+    // Token: 0x4001E73
     public float S;
 
-    // Token: 0x4001E73
+    // Token: 0x4001E74
     public float V;
 
-    // Token: 0x4001E74
+    // Token: 0x4001E75
     public float A;
 
 }

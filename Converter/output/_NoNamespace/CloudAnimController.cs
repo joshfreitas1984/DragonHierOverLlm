@@ -26,14 +26,14 @@ public class CloudAnimController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001328
-    // RVA   : 0x99F830   Offset: 0x99EC30   Length: 0x57
+    // RVA   : 0x99FEC0   Offset: 0x99F2C0   Length: 0x57
     public static CloudAnimController get_Instance()
     {
-        return **(uint64 **)(DAT_181db7d98 + 184);
+        return **(uint64 **)(DAT_181db7db0 + 184);
     }
 
     // Token : 0x6001329
-    // RVA   : 0x99ECE0   Offset: 0x99E0E0   Length: 0x201
+    // RVA   : 0x99F370   Offset: 0x99E770   Length: 0x201
     private void Awake()
     {
         ulong uVar2;
@@ -42,7 +42,7 @@ public class CloudAnimController
         long lVar5;
         long lVar6;
         int iVar7;
-        plVar1 = *(int64 **)(DAT_181db7d98 + 184);
+        plVar1 = *(int64 **)(DAT_181db7db0 + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         iVar7 = 0;
@@ -52,19 +52,19 @@ public class CloudAnimController
           uVar3 = this.bigCloudPrefab;
           uVar3 = GlobalData.AddChild(uVar2,uVar3,0);
           if (lVar4 == null) break;
-          FUN_18181e0a0(lVar4,uVar3,DAT_181d89398);
+          FUN_18181e6b0(lVar4,uVar3,DAT_181d893b0);
           if (this.bigClouds == null) break;
-          lVar4 = FUN_180002f80(this.bigClouds,iVar7,DAT_181d89918);
+          lVar4 = FUN_180002f80(this.bigClouds,iVar7,DAT_181d89930);
           if (lVar4 == null) break;
           GameObject.SetActive(lVar4,0,0);
           if (this.bigClouds == null) break;
-          lVar4 = FUN_180002f80(this.bigClouds,iVar7,DAT_181d89918);
+          lVar4 = FUN_180002f80(this.bigClouds,iVar7,DAT_181d89930);
           if (lVar4 == null) break;
           lVar4 = GameObject.GetComponent(lVar4,DAT_181d73bb8);
-          lVar5 = FUN_1809907e0(0);
+          lVar5 = FUN_180990e70(0);
           if (lVar5 == null) break;
           lVar5 = *(int64 *)(lVar5 + 24);
-          lVar6 = FUN_1809907e0(0);
+          lVar6 = FUN_180990e70(0);
           if (((lVar6 == null) || (*(int64 *)(lVar6 + 24) == 0)) || (lVar5 == null)) break;
           FUN_180002f80(lVar5,(int64)iVar7 % (int64)*(int *)(*(int64 *)(lVar6 + 24) + 24) &
                               0xffffffff);
@@ -78,7 +78,7 @@ public class CloudAnimController
     }
 
     // Token : 0x600132A
-    // RVA   : 0x99EEF0   Offset: 0x99E2F0   Length: 0x722
+    // RVA   : 0x99F580   Offset: 0x99E980   Length: 0x722
     public void PlayerCloudAnim()
     {
         int iVar1;
@@ -121,13 +121,13 @@ public class CloudAnimController
         while( true ) {
           fVar14 = 0.0;
           if (this.distanceNumTotal == null) break;
-          uVar3 = FUN_181655b90(this.distanceNumTotal,DAT_181d8f898);
-          lVar4 = il2cpp_internal(DAT_181d93cd0);
-          FUN_1818399e0(lVar4,uVar3,DAT_181d8f118);
+          uVar3 = FUN_1816561a0(this.distanceNumTotal,DAT_181d8f8b0);
+          lVar4 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181839ff0(lVar4,uVar3,DAT_181d8f130);
           iVar8 = 0;
           do {
             if (lVar4 == null) throw; // [null/range check failed]
-            iVar1 = FUN_1800d6760(lVar4,(int)fVar14,DAT_181d8fa18);
+            iVar1 = FUN_1800d6760(lVar4,(int)fVar14,DAT_181d8fa30);
             if (iVar1 < 1) {
               fVar14 = fVar14 + 1.0;
             }
@@ -136,18 +136,18 @@ public class CloudAnimController
             Random.Range();
             if (this.distanceNumTotal == null) throw; // [null/range check failed]
             iVar1 = (int)fVar14;
-            FUN_1800d6760(this.distanceNumTotal,iVar1,DAT_181d8fa18);
-            FUN_1800d6760(lVar4,iVar1,DAT_181d8fa18);
+            FUN_1800d6760(this.distanceNumTotal,iVar1,DAT_181d8fa30);
+            FUN_1800d6760(lVar4,iVar1,DAT_181d8fa30);
             if (this.distanceNumTotal == null) throw; // [null/range check failed]
-            FUN_1800d6760(this.distanceNumTotal,iVar1,DAT_181d8fa18);
+            FUN_1800d6760(this.distanceNumTotal,iVar1,DAT_181d8fa30);
             if (this.bigClouds == null) throw; // [null/range check failed]
-            uVar3 = FUN_180002f80(this.bigClouds,iVar8 + iVar9,DAT_181d89918);
+            uVar3 = FUN_180002f80(this.bigClouds,iVar8 + iVar9,DAT_181d89930);
             this.newCloud = uVar3;
             if (this.newCloud == null) throw; // [null/range check failed]
             GameObject.SetActive(this.newCloud,1,0);
             if (this.newCloud == null) throw; // [null/range check failed]
             lVar5 = GameObject.GetComponent(this.newCloud,DAT_181d73bb8);
-            puVar6 = (uint64 *)FUN_1810d3570(local_e8,0);
+            puVar6 = (uint64 *)FUN_1810d3b80(local_e8,0);
             if (lVar5 == null) throw; // [null/range check failed]
             local_168 = *puVar6;
             uStack_160 = puVar6[1];
@@ -156,9 +156,9 @@ public class CloudAnimController
             lVar5 = GameObject.get_transform(this.newCloud,0);
             fVar11 = (float)FUN_1801e7e70();
             fVar12 = (float)FUN_1801e7370();
-            lVar7 = *(int64 *)(*(int64 *)(DAT_181db7d98 + 184) + 8);
+            lVar7 = *(int64 *)(*(int64 *)(DAT_181db7db0 + 184) + 8);
             if (lVar7 == null) throw; // [null/range check failed]
-            uVar3 = FUN_180132d60(lVar7,local_res18,DAT_181daba98);
+            uVar3 = FUN_180132d60(lVar7,local_res18,DAT_181dabab0);
             local_res20 = (float)uVar3;
             fStackX_24 = (float)((uint64)uVar3 >> 32);
             if (lVar5 == null) throw; // [null/range check failed]
@@ -180,8 +180,8 @@ public class CloudAnimController
             if (this.newCloud == null) throw; // [null/range check failed]
             uVar3 = GameObject.get_transform(this.newCloud,0);
             uVar3 = ShortcutExtensions.DOScale(uVar3,0x40300000,0x3fa00000,0);
-            uVar3 = TweenSettingsExtensions.SetEase(uVar3,3,DAT_181dc0f80);
-            TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
+            uVar3 = TweenSettingsExtensions.SetEase(uVar3,3,DAT_181dc1128);
+            TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
             if (this.newCloud == null) throw; // [null/range check failed]
             lVar5 = GameObject.GetComponent(this.newCloud,DAT_181d73228);
             Random.Range();
@@ -194,7 +194,7 @@ public class CloudAnimController
             if (lVar5 == null) throw; // [null/range check failed]
             *(uint32 *)(lVar5 + 28) = uVar13;
             if (this.newCloud == null) throw; // [null/range check failed]
-            lVar5 = GameObject.GetComponent(this.newCloud,DAT_181dc6fc8);
+            lVar5 = GameObject.GetComponent(this.newCloud,DAT_181dc6fe0);
             if (this.newCloud == null) throw; // [null/range check failed]
             lVar7 = GameObject.get_transform(this.newCloud,0);
             if (lVar7 == null) throw; // [null/range check failed]
@@ -212,11 +212,11 @@ public class CloudAnimController
             *(uint64 *)(lVar5 + 28) = CONCAT44(fStack_174,local_178);
             *(float *)(lVar5 + 36) = local_170;
             if (this.newCloud == null) throw; // [null/range check failed]
-            lVar5 = GameObject.GetComponent(this.newCloud,DAT_181dc6fc8);
+            lVar5 = GameObject.GetComponent(this.newCloud,DAT_181dc6fe0);
             if (lVar5 == null) throw; // [null/range check failed]
             *(uint32 *)(lVar5 + 48) = 0x3dcccccd;
-            iVar2 = FUN_1800d6760(lVar4,iVar1,DAT_181d8fa18);
-            FUN_181833d40(lVar4,iVar1,iVar2 + -1);
+            iVar2 = FUN_1800d6760(lVar4,iVar1,DAT_181d8fa30);
+            FUN_181834350(lVar4,iVar1,iVar2 + -1);
             iVar8 = iVar8 + 1;
           } while (iVar8 < 10);
           local_res18 = local_res18 + 1;
@@ -228,17 +228,17 @@ public class CloudAnimController
     }
 
     // Token : 0x600132B
-    // RVA   : 0x99F750   Offset: 0x99EB50   Length: 0xDC
+    // RVA   : 0x99FDE0   Offset: 0x99F1E0   Length: 0xDC
     public void /*ctor*/()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar1,DAT_181d8f098);
+        lVar1 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar1,DAT_181d8f0b0);
         if (lVar1 != null) {
-          FUN_18182a0b0(lVar1,2,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,2,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,3,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,3,DAT_181d8f218);
+          FUN_18182a6c0(lVar1,2,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,2,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,3,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,3,DAT_181d8f230);
           this.distanceNumTotal = lVar1;
           FUN_18044ef50(this,0);
           return;
@@ -246,18 +246,18 @@ public class CloudAnimController
     }
 
     // Token : 0x600132C
-    // RVA   : 0x99F620   Offset: 0x99EA20   Length: 0x12A
+    // RVA   : 0x99FCB0   Offset: 0x99F0B0   Length: 0x12A
     private static void /*cctor*/()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d98b50);
-        FUN_18132faf0(lVar1,DAT_181dab898);
+        lVar1 = il2cpp_internal(DAT_181d98b68);
+        FUN_181330100(lVar1,DAT_181dab8b0);
         if (lVar1 != null) {
-          FUN_181829f90(lVar1,0x3f8000003f800000,DAT_181dab918);
-          FUN_181829f90(lVar1,0xbf8000003f800000,DAT_181dab918);
-          FUN_181829f90(lVar1,0x3f800000bf800000,DAT_181dab918);
-          FUN_181829f90(lVar1,0xbf800000bf800000,DAT_181dab918);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181db7d98 + 184) + 8);
+          FUN_18182a5a0(lVar1,0x3f8000003f800000,DAT_181dab930);
+          FUN_18182a5a0(lVar1,0xbf8000003f800000,DAT_181dab930);
+          FUN_18182a5a0(lVar1,0x3f800000bf800000,DAT_181dab930);
+          FUN_18182a5a0(lVar1,0xbf800000bf800000,DAT_181dab930);
+          plVar2 = (int64 *)(*(int64 *)(DAT_181db7db0 + 184) + 8);
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           return;

@@ -6,12 +6,12 @@
 public class SkeletonAutoPause
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B94
+    // Token: 0x4001B95
     public SkeletonAnimation skeletonAnimation;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600211E
-    // RVA   : 0x983710   Offset: 0x982B10   Length: 0x4B
+    // RVA   : 0x983DA0   Offset: 0x9831A0   Length: 0x4B
     private void Start()
     {
         long lVar1;
@@ -28,7 +28,7 @@ public class SkeletonAutoPause
     }
 
     // Token : 0x600211F
-    // RVA   : 0x983760   Offset: 0x982B60   Length: 0x20
+    // RVA   : 0x983DF0   Offset: 0x9831F0   Length: 0x20
     private void OnBecameVisible()
     {
         if (this.skeletonAnimation != null) {
@@ -38,7 +38,7 @@ public class SkeletonAutoPause
     }
 
     // Token : 0x6002120
-    // RVA   : 0x983710   Offset: 0x982B10   Length: 0x4B
+    // RVA   : 0x983DA0   Offset: 0x9831A0   Length: 0x4B
     private void OnBecameInvisible()
     {
         long lVar1;

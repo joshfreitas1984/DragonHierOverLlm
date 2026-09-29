@@ -6,36 +6,36 @@
 public class ChangeSizeColor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E75
+    // Token: 0x4001E76
     public Gradient color;
 
-    // Token: 0x4001E76
+    // Token: 0x4001E77
     public Color m_changeColor;
 
-    // Token: 0x4001E77
+    // Token: 0x4001E78
     public GameObject m_obj;
 
-    // Token: 0x4001E78
+    // Token: 0x4001E79
     private Renderer[] m_rnds;
 
-    // Token: 0x4001E79
+    // Token: 0x4001E7A
     private float color_Value;
 
-    // Token: 0x4001E7A
+    // Token: 0x4001E7B
     private bool isChangeColor;
 
-    // Token: 0x4001E7B
+    // Token: 0x4001E7C
     public Image m_ColorHandler;
 
-    // Token: 0x4001E7C
+    // Token: 0x4001E7D
     public Text m_intensityfactor;
 
-    // Token: 0x4001E7D
+    // Token: 0x4001E7E
     private float intensity;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002412
-    // RVA   : 0x9935D0   Offset: 0x9929D0   Length: 0x35A
+    // RVA   : 0x993C60   Offset: 0x993060   Length: 0x35A
     private void Update()
     {
         long lVar2;
@@ -97,10 +97,10 @@ public class ChangeSizeColor
                       uVar11 = 0;
                       lVar3 = lVar2[uVar13];
                       while( true ) {
-                        if ((lVar3 == null) || (lVar10 = FUN_180d9d680(lVar3)) == null)
+                        if ((lVar3 == null) || (lVar10 = FUN_180d9dc90(lVar3)) == null)
                         throw; // [null/range check failed]
                         if (*(int *)(lVar10 + 24) <= (int)uVar11) break;
-                        lVar10 = FUN_180d9d680(lVar3,0);
+                        lVar10 = FUN_180d9dc90(lVar3,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         lVar12 = (int64)(int)uVar11;
                         if (*(uint32 *)(lVar10 + 24) <= uVar11) {
@@ -114,14 +114,14 @@ public class ChangeSizeColor
                         uStack_4c = *(uint32 *)(this + 44);
                         lVar10 = *(int64 *)(lVar10 + 32 + lVar12 * 8);
                         puVar8 = (uint32 *)
-                                 FUN_1810d3880(local_48,&local_58,this.intensity,0);
+                                 FUN_1810d3e90(local_48,&local_58,this.intensity,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         local_58 = *puVar8;
                         uStack_54 = puVar8[1];
                         uStack_50 = puVar8[2];
                         uStack_4c = puVar8[3];
                         Material.SetColor(lVar10,"_TintColor",&local_58);
-                        lVar10 = FUN_180d9d680(lVar3,0);
+                        lVar10 = FUN_180d9dc90(lVar3,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         if (*(uint32 *)(lVar10 + 24) <= uVar11) {
                           uVar9 = il2cpp_internal();
@@ -134,14 +134,14 @@ public class ChangeSizeColor
                         uStack_4c = *(uint32 *)(this + 44);
                         lVar10 = *(int64 *)(lVar10 + 32 + lVar12 * 8);
                         puVar8 = (uint32 *)
-                                 FUN_1810d3880(local_38,&local_58,this.intensity,0);
+                                 FUN_1810d3e90(local_38,&local_58,this.intensity,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         local_58 = *puVar8;
                         uStack_54 = puVar8[1];
                         uStack_50 = puVar8[2];
                         uStack_4c = puVar8[3];
                         Material.SetColor(lVar10,"_Color",&local_58);
-                        lVar10 = FUN_180d9d680(lVar3,0);
+                        lVar10 = FUN_180d9dc90(lVar3,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         if (*(uint32 *)(lVar10 + 24) <= uVar11) {
                           uVar9 = il2cpp_internal();
@@ -154,7 +154,7 @@ public class ChangeSizeColor
                         uStack_4c = *(uint32 *)(this + 44);
                         lVar10 = *(int64 *)(lVar10 + 32 + lVar12 * 8);
                         puVar8 = (uint32 *)
-                                 FUN_1810d3880(local_28,&local_58,this.intensity,0);
+                                 FUN_1810d3e90(local_28,&local_58,this.intensity,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         local_58 = *puVar8;
                         uStack_54 = puVar8[1];
@@ -176,32 +176,32 @@ public class ChangeSizeColor
     }
 
     // Token : 0x6002413
-    // RVA   : 0x993530   Offset: 0x992930   Length: 0x6
+    // RVA   : 0x993BC0   Offset: 0x992FC0   Length: 0x6
     public void ChangeEffectColor(float value)
     {
         this.color_Value = value;
     }
 
     // Token : 0x6002414
-    // RVA   : 0x993550   Offset: 0x992950   Length: 0x4
+    // RVA   : 0x993BE0   Offset: 0x992FE0   Length: 0x4
     public void CheckIsColorChange(bool value)
     {
-        void FUN_180993550(int64 this,uint8 value)
+        void FUN_180993be0(int64 this,uint8 value)
         {
         this.isChangeColor = value;
     }
 
     // Token : 0x6002415
-    // RVA   : 0x993540   Offset: 0x992940   Length: 0xD
+    // RVA   : 0x993BD0   Offset: 0x992FD0   Length: 0xD
     public void CheckColorState()
     {
-        void FUN_180993540(int64 this)
+        void FUN_180993bd0(int64 this)
         {
         this.isChangeColor = !this.isChangeColor;
     }
 
     // Token : 0x6002416
-    // RVA   : 0x993560   Offset: 0x992960   Length: 0x6A
+    // RVA   : 0x993BF0   Offset: 0x992FF0   Length: 0x6A
     public void GetIntensityFactor()
     {
         ulong uVar2;
@@ -223,10 +223,10 @@ public class ChangeSizeColor
     }
 
     // Token : 0x6002417
-    // RVA   : 0x993930   Offset: 0x992D30   Length: 0xE
+    // RVA   : 0x993FC0   Offset: 0x9933C0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180993930(int64 this)
+        void FUN_180993fc0(int64 this)
         {
         this.intensity = 0x40000000;
         FUN_18044ef50(this,0);

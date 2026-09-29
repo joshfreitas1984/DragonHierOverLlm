@@ -18,11 +18,11 @@ public class <>c__DisplayClass283_0
     }
 
     // Token : 0x6001752
-    // RVA   : 0x937E80   Offset: 0x937280   Length: 0x51
+    // RVA   : 0x938510   Offset: 0x937910   Length: 0x51
     internal bool <ListContain>b__0(int item)
     {
         if (this.ListFather != null) {
-          FUN_18182a3a0(this.ListFather,item,DAT_181d8f398);
+          FUN_18182a9b0(this.ListFather,item,DAT_181d8f3b0);
           return;
         }
     }

@@ -11,7 +11,7 @@ public class RePlayerPrefData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000EA7
-    // RVA   : 0xD091E0   Offset: 0xD085E0   Length: 0x65
+    // RVA   : 0xD097F0   Offset: 0xD08BF0   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;

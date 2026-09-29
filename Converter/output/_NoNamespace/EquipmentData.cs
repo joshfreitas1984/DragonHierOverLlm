@@ -38,7 +38,7 @@ public class EquipmentData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60012E8
-    // RVA   : 0x944EE0   Offset: 0x9442E0   Length: 0x24
+    // RVA   : 0x945570   Offset: 0x944970   Length: 0x24
     public HeroSpeAddData GetBaseAddData()
     {
         HeroSpeAddData.op_Multiply
@@ -46,7 +46,7 @@ public class EquipmentData
     }
 
     // Token : 0x60012E9
-    // RVA   : 0x944F10   Offset: 0x944310   Length: 0x2ED
+    // RVA   : 0x9455A0   Offset: 0x9449A0   Length: 0x2ED
     public string GetExtraAddName()
     {
         ulong uVar1;
@@ -70,11 +70,11 @@ public class EquipmentData
         iVar6 = 0;
         if (((this.extraAddData == null) ||
             (lVar3 = this.extraAddData.heroSpeAddData) == null) ||
-           (lVar3 = Dictionary_2.get_Keys(lVar3,DAT_181dbe4b8)) == null) {
+           (lVar3 = Dictionary_2.get_Keys(lVar3,DAT_181dbe4d0)) == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_180ecbf30(&local_48,lVar3,DAT_181dc36f0);
+        FUN_180ecc540(&local_48,lVar3,DAT_181dc3708);
         local_60 = local_48;
         uStack_5c = uStack_44;
         uStack_58 = uStack_40;
@@ -82,10 +82,10 @@ public class EquipmentData
         local_50 = local_38;
         while( true ) {
           do {
-            cVar2 = FUN_1811c4f60(&local_60,DAT_181d9b258);
+            cVar2 = FUN_1811c5570(&local_60,DAT_181d9b270);
             uVar1 = local_50;
             if (!cVar2) {
-              ZhSegment.Initialize(&local_60,DAT_181d9b1d8);
+              ZhSegment.Initialize(&local_60,DAT_181d9b1f0);
               return uVar4;
             }
             if (this.extraAddData == null) {
@@ -97,7 +97,7 @@ public class EquipmentData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            fVar7 = (float)FUN_1817d9cd0(lVar3,local_50 & 0xffffffff,DAT_181dbe430);
+            fVar7 = (float)FUN_1817da2e0(lVar3,local_50 & 0xffffffff,DAT_181dbe448);
           } while (fVar7 == 0.0);
           if (this.extraAddData == null) {
                           // WARNING: Subroutine does not return
@@ -105,7 +105,7 @@ public class EquipmentData
           }
           lVar3 = this.extraAddData.heroSpeAddData;
           if (lVar3 == null) break;
-          fVar7 = (float)FUN_1817d9cd0(lVar3,uVar1 & 0xffffffff,DAT_181dbe430);
+          fVar7 = (float)FUN_1817da2e0(lVar3,uVar1 & 0xffffffff,DAT_181dbe448);
           if (fVar7 <= 0.0) {
             lVar3 = FUN_18046c100(0);
             if (lVar3 == null) {
@@ -116,7 +116,7 @@ public class EquipmentData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar1 & 0xffffffff,DAT_181d8c018);
+            lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar1 & 0xffffffff,DAT_181d8c030);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -133,7 +133,7 @@ public class EquipmentData
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar1 & 0xffffffff,DAT_181d8c018);
+            lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 144),uVar1 & 0xffffffff,DAT_181d8c030);
             if (lVar3 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
@@ -143,14 +143,14 @@ public class EquipmentData
           uVar4 = String.Concat(uVar4,uVar5,0);
           iVar6 = iVar6 + 1;
           if (1 < iVar6) {
-            ZhSegment.Initialize(&local_60,DAT_181d9b1d8);
+            ZhSegment.Initialize(&local_60,DAT_181d9b1f0);
             return uVar4;
           }
         }
     }
 
     // Token : 0x60012EA
-    // RVA   : 0x945200   Offset: 0x944600   Length: 0x10F
+    // RVA   : 0x945890   Offset: 0x944C90   Length: 0x10F
     public void /*ctor*/()
     {
         ulong uVar1;

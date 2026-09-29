@@ -23,7 +23,7 @@ public class UIPlaySound
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60001C1
-    // RVA   : 0x119F6E0   Offset: 0x119EAE0   Length: 0xB3
+    // RVA   : 0x119FCF0   Offset: 0x119F0F0   Length: 0xB3
     private bool get_canPlay()
     {
         bool cVar1;
@@ -32,13 +32,13 @@ public class UIPlaySound
         if (!cVar1) {
           return false;
         }
-        plVar2 = (int64 *)Component.GetComponent(this,DAT_181d96760);
+        plVar2 = (int64 *)Component.GetComponent(this,DAT_181d96778);
         cVar1 = Object.op_Equality(plVar2,0,0);
         if (cVar1) {
           return true;
         }
         if (plVar2 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x00018119f77f. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018119fd8f. Too many branches
                           // WARNING: Treating indirect jump as call
           uVar3 = (**(code **)(*plVar2 + 0x178))(plVar2,*(uint64 *)(*plVar2 + 0x180));
           return uVar3;
@@ -46,7 +46,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C2
-    // RVA   : 0x119F240   Offset: 0x119E640   Length: 0x8C
+    // RVA   : 0x119F850   Offset: 0x119EC50   Length: 0x8C
     private void OnEnable()
     {
         uint uVar1;
@@ -61,7 +61,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C3
-    // RVA   : 0x119F1B0   Offset: 0x119E5B0   Length: 0x8C
+    // RVA   : 0x119F7C0   Offset: 0x119EBC0   Length: 0x8C
     private void OnDisable()
     {
         uint uVar1;
@@ -76,7 +76,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C4
-    // RVA   : 0x119F2D0   Offset: 0x119E6D0   Length: 0xC7
+    // RVA   : 0x119F8E0   Offset: 0x119ECE0   Length: 0xC7
     private void OnHover(bool isOver)
     {
         uint uVar1;
@@ -107,7 +107,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C5
-    // RVA   : 0x119F3A0   Offset: 0x119E7A0   Length: 0xC7
+    // RVA   : 0x119F9B0   Offset: 0x119EDB0   Length: 0xC7
     private void OnPress(bool isPressed)
     {
         uint uVar1;
@@ -138,7 +138,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C6
-    // RVA   : 0x119F110   Offset: 0x119E510   Length: 0x9A
+    // RVA   : 0x119F720   Offset: 0x119EB20   Length: 0x9A
     private void OnClick()
     {
         uint uVar1;
@@ -155,7 +155,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C7
-    // RVA   : 0x119F470   Offset: 0x119E870   Length: 0x128
+    // RVA   : 0x119FA80   Offset: 0x119EE80   Length: 0x128
     private void OnSelect(bool isSelected)
     {
         uint uVar1;
@@ -196,7 +196,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C8
-    // RVA   : 0x119F5A0   Offset: 0x119E9A0   Length: 0x84
+    // RVA   : 0x119FBB0   Offset: 0x119EFB0   Length: 0x84
     public void Play()
     {
         uint uVar1;
@@ -209,7 +209,7 @@ public class UIPlaySound
     }
 
     // Token : 0x60001C9
-    // RVA   : 0x119F630   Offset: 0x119EA30   Length: 0x8D
+    // RVA   : 0x119FC40   Offset: 0x119F040   Length: 0x8D
     public void TogglePlay(bool isOn)
     {
         uint uVar1;
@@ -224,10 +224,10 @@ public class UIPlaySound
     }
 
     // Token : 0x60001CA
-    // RVA   : 0x119F6C0   Offset: 0x119EAC0   Length: 0x15
+    // RVA   : 0x119FCD0   Offset: 0x119F0D0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_18119f6c0(int64 this)
+        void FUN_18119fcd0(int64 this)
         {
         this.volume = 0x3f800000;
         this.pitch = 0x3f800000;

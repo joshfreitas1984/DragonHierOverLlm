@@ -11,10 +11,10 @@ public class ItemUseChoiceButtonController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60018A1
-    // RVA   : 0xCAA7E0   Offset: 0xCA9BE0   Length: 0x18B
+    // RVA   : 0xCAADF0   Offset: 0xCAA1F0   Length: 0x18B
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d82398 + 184);
+        var pStatics = *(int64*)(DAT_181d823b0 + 184);
         long lVar1;
         ulong uVar2;
         lVar1 = this.targetHero;

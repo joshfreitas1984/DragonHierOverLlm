@@ -6,12 +6,12 @@
 public class WaitForRewind
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400215E
+    // Token: 0x400215F
     private readonly Tween t;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600276B
-    // RVA   : 0x93B070   Offset: 0x93A470   Length: 0x66
+    // RVA   : 0x93B700   Offset: 0x93AB00   Length: 0x66
     public override bool get_keepWaiting()
     {
         float fVar1;

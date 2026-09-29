@@ -6,100 +6,100 @@
 public class MeetingController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018D0
+    // Token: 0x40018D1
     public ForceData targetForce;
 
-    // Token: 0x40018D1
+    // Token: 0x40018D2
     public MeetingStep meetingStep;
 
-    // Token: 0x40018D2
+    // Token: 0x40018D3
     public GameObject meetingPanel;
 
-    // Token: 0x40018D3
+    // Token: 0x40018D4
     public GameObject mainGrid;
 
-    // Token: 0x40018D4
+    // Token: 0x40018D5
     public GameObject heroGrid;
 
-    // Token: 0x40018D5
+    // Token: 0x40018D6
     public GameObject mainObj;
 
-    // Token: 0x40018D6
+    // Token: 0x40018D7
     public GameObject playerObj;
 
-    // Token: 0x40018D7
+    // Token: 0x40018D8
     public GameObject talkPanel;
 
-    // Token: 0x40018D8
+    // Token: 0x40018D9
     public int subMeetingStep;
 
-    // Token: 0x40018D9
+    // Token: 0x40018DA
     public ForceFocusType playerAdviseFocusType;
 
-    // Token: 0x40018DA
+    // Token: 0x40018DB
     public GameObject lastMonthContributionUIPrefab;
 
-    // Token: 0x40018DB
+    // Token: 0x40018DC
     public List<GameObject> lastMonthContributionUIs;
 
-    // Token: 0x40018DC
+    // Token: 0x40018DD
     public List<GameObject> lastMonthContributionHeroList;
 
-    // Token: 0x40018DD
+    // Token: 0x40018DE
     public GameObject monthMissionPanel;
 
-    // Token: 0x40018DE
+    // Token: 0x40018DF
     public GameObject monthMissionGrid;
 
-    // Token: 0x40018DF
+    // Token: 0x40018E0
     public GameObject monthMissionButtonPrefab;
 
-    // Token: 0x40018E0
+    // Token: 0x40018E1
     public List<MissionData> playerAvailableMissions;
 
-    // Token: 0x40018E1
+    // Token: 0x40018E2
     public List<GameObject> monthMissionResultUIs;
 
-    // Token: 0x40018E2
+    // Token: 0x40018E3
     public EventData AttackAreaForceMissionData;
 
-    // Token: 0x40018E3
+    // Token: 0x40018E4
     private List<string> infoText;
 
-    // Token: 0x40018E4
+    // Token: 0x40018E5
     private static List<string> ForceLvText;
 
-    // Token: 0x40018E5
+    // Token: 0x40018E6
     private static List<string> MainFocusText;
 
-    // Token: 0x40018E6
+    // Token: 0x40018E7
     private GameObject newObj;
 
-    // Token: 0x40018E7
+    // Token: 0x40018E8
     public AreaData attackTargetArea;
 
-    // Token: 0x40018E8
+    // Token: 0x40018E9
     public int attackAreaID;
 
-    // Token: 0x40018E9
+    // Token: 0x40018EA
     public int adviseAttackAreaID;
 
-    // Token: 0x40018EA
+    // Token: 0x40018EB
     public int hudSiblingIndex;
 
-    // Token: 0x40018EB
+    // Token: 0x40018EC
     private static MeetingController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001909
-    // RVA   : 0xE630D0   Offset: 0xE624D0   Length: 0x58
+    // RVA   : 0xE636E0   Offset: 0xE62AE0   Length: 0x58
     public static MeetingController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d88a10 + 184) + 16);
+        return *(uint64 *)(*(int64 *)(DAT_181d88a28 + 184) + 16);
     }
 
     // Token : 0x600190A
-    // RVA   : 0xE57AD0   Offset: 0xE56ED0   Length: 0x11E
+    // RVA   : 0xE580E0   Offset: 0xE574E0   Length: 0x11E
     private void Awake()
     {
         bool cVar1;
@@ -115,7 +115,7 @@ public class MeetingController
     }
 
     // Token : 0x600190B
-    // RVA   : 0xE61A50   Offset: 0xE60E50   Length: 0x247
+    // RVA   : 0xE62060   Offset: 0xE61460   Length: 0x247
     public void SetMeetingEnd()
     {
         long lVar1;
@@ -126,7 +126,7 @@ public class MeetingController
         if ((GameController._instance != null) &&
            (lVar1 = GameController._instance.worldData) != null) {
           lVar1.forceMeetingStarted = 0;
-          lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+          lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
           if ((GameController._instance != null) &&
              (lVar2 = GameController._instance.worldData) != null) {
             lVar2 = WorldData.Player(lVar2,0);
@@ -135,7 +135,7 @@ public class MeetingController
               if (lVar2 != null) {
                 uVar3 = ForceData.GetForceName(lVar2,1,0);
                 uVar3 = String.Format("{0}门派会议已结束！",uVar3,0);
-                puVar4 = (uint64 *)FUN_1810d33f0(&local_18,0);
+                puVar4 = (uint64 *)FUN_1810d3a00(&local_18,0);
                 if (lVar1 != null) {
                   local_18 = *puVar4;
                   uStack_10 = puVar4[1];
@@ -151,7 +151,7 @@ public class MeetingController
     }
 
     // Token : 0x600190C
-    // RVA   : 0xE57BF0   Offset: 0xE56FF0   Length: 0x3F1
+    // RVA   : 0xE58200   Offset: 0xE57600   Length: 0x3F1
     public void EndMeeting()
     {
         var pStatics_61e8 = *(int64*)(DAT_181d761e8 + 184);
@@ -175,7 +175,7 @@ public class MeetingController
               MeetingController.SetMeetingEnd(this,0);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/终场锣",0);
               plVar5 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0);
@@ -193,7 +193,7 @@ public class MeetingController
                     if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                        (lVar3 = *(int64 *)(lVar3.villageAreaID + 216)) == null)
                     throw; // [null/range check failed]
-                    cVar2 = FUN_1808ab490(lVar3,47,DAT_181dbf7d8);
+                    cVar2 = FUN_1808ab490(lVar3,47,DAT_181dbf7f0);
                     if (!cVar2) {
                       lVar3 = FUN_18046c0a0(0);
                       if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
@@ -213,7 +213,7 @@ public class MeetingController
     }
 
     // Token : 0x600190D
-    // RVA   : 0xE624D0   Offset: 0xE618D0   Length: 0x970
+    // RVA   : 0xE62AE0   Offset: 0xE61EE0   Length: 0x970
     public void StartMeeting()
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
@@ -244,12 +244,12 @@ public class MeetingController
                 Transform.SetSiblingIndex(lVar3,uVar1,0);
                 if (this.meetingPanel != null) {
                   GameObject.SetActive(this.meetingPanel,1,0);
-                  lVar3 = il2cpp_internal(DAT_181d97750);
-                  FUN_18132faf0(lVar3,DAT_181da3bd8);
+                  lVar3 = il2cpp_internal(DAT_181d97768);
+                  FUN_181330100(lVar3,DAT_181da3bf0);
                   if (lVar3 != null) {
-                    FUN_18181e0a0(lVar3,"......",DAT_181da3d58);
-                    FUN_18181e0a0(lVar3,"......",DAT_181da3d58);
-                    FUN_18181e0a0(lVar3,"......",DAT_181da3d58);
+                    FUN_18181e6b0(lVar3,"......",DAT_181da3d70);
+                    FUN_18181e6b0(lVar3,"......",DAT_181da3d70);
+                    FUN_18181e6b0(lVar3,"......",DAT_181da3d70);
                     this.infoText = lVar3;
                     MeetingController.SetInfoText(this,0);
                     this.meetingStep = 1;
@@ -290,11 +290,11 @@ public class MeetingController
                                                               (this.meetingPanel,0),
                                            lVar3 != null)) &&
                                           (lVar3 = Transform.Find(lVar3,"HeroGrid",0)) != null) &&
-                                         (lVar3 = Component.GetComponent(lVar3,DAT_181d96960), lVar3 != null
+                                         (lVar3 = Component.GetComponent(lVar3,DAT_181d96978), lVar3 != null
                                          )) {
                                         UIGrid.set_repositionNow(lVar3,1,0);
                                         plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/紧张",0);
-                                        if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf348)) {
+                                        if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf360)) {
                                           plVar8 = plVar7;
                                         }
                                         NGUITools.PlaySound(plVar8,0);
@@ -373,7 +373,7 @@ public class MeetingController
                                           if ((this.targetForce == null) ||
                                              (lVar3 = this.targetForce.ownHeros,
                                              lVar3 == null)) break;
-                                          iVar2 = FUN_1800d6760(lVar3,local_res18[0],DAT_181d8fa18);
+                                          iVar2 = FUN_1800d6760(lVar3,local_res18[0],DAT_181d8fa30);
                                           if (iVar2 == 0) {
                                             this.playerObj = *plVar7;
                                           }
@@ -401,7 +401,7 @@ public class MeetingController
     }
 
     // Token : 0x600190E
-    // RVA   : 0xE5DFD0   Offset: 0xE5D3D0   Length: 0x11
+    // RVA   : 0xE5E5E0   Offset: 0xE5D9E0   Length: 0x11
     public void NextBigStep()
     {
         this.meetingStep = this.meetingStep + 1;
@@ -410,7 +410,7 @@ public class MeetingController
     }
 
     // Token : 0x600190F
-    // RVA   : 0xE618C0   Offset: 0xE60CC0   Length: 0x18C
+    // RVA   : 0xE61ED0   Offset: 0xE612D0   Length: 0x18C
     public void SetInfoText()
     {
         ulong uVar1;
@@ -423,7 +423,7 @@ public class MeetingController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"InfoText",0);
             if (lVar2 != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
               lVar2 = this.infoText;
               if (lVar2 != null) {
                 lVar5 = lVar2;
@@ -456,18 +456,18 @@ public class MeetingController
     }
 
     // Token : 0x6001910
-    // RVA   : 0xE61850   Offset: 0xE60C50   Length: 0x65
+    // RVA   : 0xE61E60   Offset: 0xE61260   Length: 0x65
     public void SetInfoFocusText(string targetText)
     {
         if (this.infoText != null) {
-          FUN_181829cd0(this.infoText,2,targetText,DAT_181da43d8);
+          FUN_18182a2e0(this.infoText,2,targetText,DAT_181da43f0);
           MeetingController.SetInfoText(this,0);
           return;
         }
     }
 
     // Token : 0x6001911
-    // RVA   : 0xE58850   Offset: 0xE57C50   Length: 0xE4
+    // RVA   : 0xE58E60   Offset: 0xE58260   Length: 0xE4
     public bool ForceCanAttackArea()
     {
         long lVar1;
@@ -486,7 +486,7 @@ public class MeetingController
     }
 
     // Token : 0x6001912
-    // RVA   : 0xE5DFF0   Offset: 0xE5D3F0   Length: 0x408
+    // RVA   : 0xE5E600   Offset: 0xE5DA00   Length: 0x408
     public void NextStep()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -546,15 +546,15 @@ public class MeetingController
             lVar15 = FUN_18046c0a0(0);
             if ((lVar15 != null) && (lVar15.defaultSkinID != null)) {
               if (*(char *)(lVar15.defaultSkinID + 0x10c) == false) {
-                uVar9 = il2cpp_internal(DAT_181d93cd0);
-                FUN_18132faf0(uVar9,DAT_181d8f098);
-                if (uVar9 == 0) goto LAB_180e60968;
-                FUN_18182a0b0(uVar9,0,DAT_181d8f218);
+                uVar9 = il2cpp_internal(DAT_181d93ce8);
+                FUN_181330100(uVar9,DAT_181d8f0b0);
+                if (uVar9 == 0) goto LAB_180e60f78;
+                FUN_18182a6c0(uVar9,0,DAT_181d8f230);
               }
               if (lVar13 != null) {
                 uVar14 = GameController.GetRandomArea(lVar13,(4 < iVar8) + '\x05',uVar9,0);
                 this.attackTargetArea = uVar14;
-        LAB_180e5e57a:
+        LAB_180e5eb8a:
                 this.meetingStep = this.meetingStep + 1;
                 this.subMeetingStep = 0;
                 MeetingController.NextStep(this,0);
@@ -562,12 +562,12 @@ public class MeetingController
               }
             }
           }
-          goto LAB_180e60968;
+          goto LAB_180e60f78;
         case 2:
           iVar8 = this.subMeetingStep;
           if (iVar8 == 0) {
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             uVar17 = this.talkPanel;
             uVar14 = this.mainObj;
             uVar16 = "首先，来看看上个月各位的功绩情况吧！";
@@ -580,7 +580,7 @@ public class MeetingController
                 while (lVar13 = GameObject.get_transform(lVar13,0)) != null {
                   iVar8 = Transform.get_childCount(lVar13,0);
                   iVar6 = (int)uVar22;
-                  if (iVar8 <= iVar6) goto LAB_180e5ffe8;
+                  if (iVar8 <= iVar6) goto LAB_180e605f8;
                   uVar14 = this.meetingPanel;
                   uVar16 = this.lastMonthContributionUIPrefab;
                   lVar13 = GlobalData.AddChild(uVar14,uVar16,0);
@@ -596,7 +596,7 @@ public class MeetingController
                   if (((this.heroGrid == null) ||
                       (lVar15 = GameObject.get_transform(this.heroGrid,0)) == null)
                      || ((lVar15 = Transform.GetChild(lVar15,uVar22,0), lVar15 == null ||
-                         (lVar15 = Component.GetComponent(lVar15,DAT_181d94f60)) == null))) break;
+                         (lVar15 = Component.GetComponent(lVar15,DAT_181d94f78)) == null))) break;
                   puVar11 = (uint64 *)RectTransform.get_rect(local_c8,lVar15,0);
                   local_158 = *puVar11;
                   uStack_150 = puVar11[1];
@@ -625,11 +625,11 @@ public class MeetingController
                   Transform.set_position(lVar13,&local_138,0);
                   if (((*plVar1 == 0) || (lVar13 = GameObject.get_transform(*plVar1,0)) == null) ||
                      (lVar13 = Transform.Find(lVar13,"Text",0)) == null) break;
-                  uVar14 = Component.GetComponent(lVar13,DAT_181d96160);
+                  uVar14 = Component.GetComponent(lVar13,DAT_181d96178);
                   if (((this.heroGrid == null) ||
                       (lVar13 = GameObject.get_transform(this.heroGrid,0)) == null)
                      || ((lVar13 = Transform.GetChild(lVar13,uVar22,0), lVar13 == null ||
-                         ((lVar13 = Component.GetComponent(lVar13,DAT_181d940e0), lVar13 == null ||
+                         ((lVar13 = Component.GetComponent(lVar13,DAT_181d940f8), lVar13 == null ||
                           (lVar13.defaultSkinID == null)))))) break;
                   local_res8[0] = (int)*(float *)(lVar13.defaultSkinID + 164);
                   uVar16 = Int32.ToString(local_res8,0);
@@ -645,8 +645,8 @@ public class MeetingController
                   if (*plVar1 == 0) break;
                   uVar14 = GameObject.get_transform(*plVar1,0);
                   uVar14 = ShortcutExtensions.DOScale(uVar14);
-                  uVar14 = TweenSettingsExtensions.SetEase(uVar14,27,DAT_181dc0f80);
-                  TweenSettingsExtensions.SetDelay(uVar14,(float)iVar6 * 0.1,DAT_181dc0c60);
+                  uVar14 = TweenSettingsExtensions.SetEase(uVar14,27,DAT_181dc1128);
+                  TweenSettingsExtensions.SetDelay(uVar14,(float)iVar6 * 0.1,DAT_181dc0e10);
                   lVar13 = this.lastMonthContributionHeroList;
                   if (lVar13 == null) break;
                   uVar20 = uVar9;
@@ -655,23 +655,23 @@ public class MeetingController
                         (lVar15 = GameObject.get_transform(this.heroGrid,0)) == null
                         ) || (lVar15 = Transform.GetChild(lVar15,uVar22,0)) == null) break;
                     uVar14 = Component.get_gameObject(lVar15,0);
-                    FUN_18181e0a0(lVar13,uVar14,DAT_181d89398);
+                    FUN_18181e6b0(lVar13,uVar14,DAT_181d893b0);
                     lVar13 = this.lastMonthContributionHeroList;
                   }
                   while( true ) {
-                    if (lVar13 == null) goto LAB_180e60968;
+                    if (lVar13 == null) goto LAB_180e60f78;
                     iVar8 = (int)uVar20;
-                    if (lVar13.forceName <= iVar8) goto LAB_180e5ee90;
+                    if (lVar13.forceName <= iVar8) goto LAB_180e5f4a0;
                     if (((this.heroGrid == null) ||
                         (lVar13 = GameObject.get_transform(this.heroGrid,0)) == null
                         ) || ((lVar13 = Transform.GetChild(lVar13,uVar22,0), lVar13 == null ||
-                              ((lVar13 = Component.GetComponent(lVar13,DAT_181d940e0), lVar13 == null ||
-                               (lVar13.defaultSkinID == null)))))) goto LAB_180e60968;
+                              ((lVar13 = Component.GetComponent(lVar13,DAT_181d940f8), lVar13 == null ||
+                               (lVar13.defaultSkinID == null)))))) goto LAB_180e60f78;
                     fVar23 = *(float *)(lVar13.defaultSkinID + 164);
                     if ((this.lastMonthContributionHeroList == null) ||
                        (((lVar13 = FUN_180002f80(this.lastMonthContributionHeroList,uVar20), lVar13 == null ||
                          (lVar13 = GameObject.GetComponent(lVar13)) == null) ||
-                        (lVar13.defaultSkinID == null)))) goto LAB_180e60968;
+                        (lVar13.defaultSkinID == null)))) goto LAB_180e60f78;
                     pfVar2 = (float *)(lVar13.defaultSkinID + 164);
                     lVar13 = this.lastMonthContributionHeroList;
                     if (*pfVar2 <= fVar23 && fVar23 != *pfVar2) {
@@ -680,11 +680,11 @@ public class MeetingController
                           lVar15 == null)) ||
                          ((lVar15 = Transform.GetChild(lVar15,uVar22,0), lVar15 == null ||
                           (uVar14 = Component.get_gameObject(lVar15,0), lVar13 == null))))
-                      goto LAB_180e60968;
-                      FUN_181822520(lVar13,uVar20,uVar14);
-                      goto LAB_180e5ee90;
+                      goto LAB_180e60f78;
+                      FUN_181822b30(lVar13,uVar20,uVar14);
+                      goto LAB_180e5f4a0;
                     }
-                    if (lVar13 == null) goto LAB_180e60968;
+                    if (lVar13 == null) goto LAB_180e60f78;
                     if (iVar8 == lVar13.forceName + -1) break;
                     uVar20 = (uint64)(iVar8 + 1);
                   }
@@ -692,114 +692,114 @@ public class MeetingController
                       (lVar15 = GameObject.get_transform(this.heroGrid,0)) == null)
                      || (lVar15 = Transform.GetChild(lVar15,uVar22,0)) == null) break;
                   uVar14 = Component.get_gameObject(lVar15,0);
-                  FUN_18181e0a0(lVar13,uVar14,DAT_181d89398);
-        LAB_180e5ee90:
+                  FUN_18181e6b0(lVar13,uVar14,DAT_181d893b0);
+        LAB_180e5f4a0:
                   if (this.lastMonthContributionUIs == null) break;
-                  FUN_18181e0a0();
+                  FUN_18181e6b0();
                   lVar13 = this.heroGrid;
                   uVar22 = (uint64)(iVar6 + 1);
                   if (lVar13 == null) break;
                 }
               }
-              goto LAB_180e60968;
+              goto LAB_180e60f78;
             }
             if (iVar8 != 2) {
               if (iVar8 != 3) {
-                if (this.lastMonthContributionHeroList == null) goto LAB_180e60968;
-                FUN_1812f9a10(this.lastMonthContributionHeroList,DAT_181d89418);
+                if (this.lastMonthContributionHeroList == null) goto LAB_180e60f78;
+                FUN_1812fa020(this.lastMonthContributionHeroList,DAT_181d89430);
                 uVar14 = this.lastMonthContributionUIs;
                 GlobalData.DestroyAll(uVar14,0);
-                goto LAB_180e5e57a;
+                goto LAB_180e5eb8a;
               }
               lVar15 = FUN_1807789e0(0);
               lVar13 = this.lastMonthContributionHeroList;
-              if (lVar13 == null) goto LAB_180e60968;
+              if (lVar13 == null) goto LAB_180e60f78;
               if (lVar13.forceName == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              if (lVar15 == null) goto LAB_180e60968;
+              if (lVar15 == null) goto LAB_180e60f78;
               HeroLittleTalkController.HeroTalk
                         (lVar15,*(uint64 *)(lVar13.forceID + 32),"多谢掌门！",
                          0xbf800000,this.talkPanel,CONCAT44(uVar5,2),0);
               lVar13 = FUN_18046c0a0(0);
-              if (this.targetForce == null) goto LAB_180e60968;
+              if (this.targetForce == null) goto LAB_180e60f78;
               fVar23 = (float)this.targetForce.forceLv;
               uVar14 = Random.Range(fVar23 * 0.2,fVar23 * 0.4,0);
               uVar5 = Mathf.RoundToInt(uVar14,0);
-              if (lVar13 == null) goto LAB_180e60968;
+              if (lVar13 == null) goto LAB_180e60f78;
               uVar14 = GameController.GenerateTreasure(lVar13,uVar5);
               lVar13 = this.lastMonthContributionHeroList;
-              if (lVar13 == null) goto LAB_180e60968;
+              if (lVar13 == null) goto LAB_180e60f78;
               if (lVar13.forceName == null) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar13 = *(int64 *)(lVar13.forceID + 32);
               if (((lVar13 == null) || (lVar13 = GameObject.GetComponent(lVar13,DAT_181d71b50)) == null
-                  ) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+                  ) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
               HeroData.GetItem(lVar13.defaultSkinID,uVar14,1,0);
-              goto LAB_180e5ffe8;
+              goto LAB_180e605f8;
             }
             lVar13 = FUN_1807789e0(0);
             lVar15 = this.lastMonthContributionHeroList;
             uVar14 = this.mainObj;
-            if (lVar15 == null) goto LAB_180e60968;
+            if (lVar15 == null) goto LAB_180e60f78;
             if (lVar15.forceName == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar15 = *(int64 *)(lVar15.forceID + 32);
             if (((lVar15 == null) || (lVar15 = GameObject.GetComponent(lVar15,DAT_181d71b50)) == null)
-               || (lVar15.defaultSkinID == null)) goto LAB_180e60968;
+               || (lVar15.defaultSkinID == null)) goto LAB_180e60f78;
             uVar16 = HeroData.HeroName(lVar15.defaultSkinID,0,0);
             lVar15 = FUN_18046c0a0(0);
             if (((this.mainObj == null) ||
                 (lVar10 = GameObject.GetComponent(this.mainObj,DAT_181d71b50),
-                lVar10 == null)) || (*(int64 *)(lVar10 + 32) == 0)) goto LAB_180e60968;
+                lVar10 == null)) || (*(int64 *)(lVar10 + 32) == 0)) goto LAB_180e60f78;
             lVar3 = this.lastMonthContributionHeroList;
             uVar5 = *(uint32 *)(*(int64 *)(lVar10 + 32) + 88);
-            if (lVar3 == null) goto LAB_180e60968;
+            if (lVar3 == null) goto LAB_180e60f78;
             if (lVar3.Count == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar10 = *(int64 *)(lVar3._items + 32);
             if (((lVar10 == null) || (lVar10 = GameObject.GetComponent(lVar10,DAT_181d71b50)) == null)
-               || ((*(int64 *)(lVar10 + 32) == 0 || (lVar15 == null)))) goto LAB_180e60968;
+               || ((*(int64 *)(lVar10 + 32) == 0 || (lVar15 == null)))) goto LAB_180e60f78;
             uVar17 = GameController.GetHeroName
                                (lVar15,uVar5,*(uint32 *)(*(int64 *)(lVar10 + 32) + 88),0);
             uVar16 = String.Format("看来，上个月还是{0}的成果最为丰硕。\n{1}，你做的很好\n这个是奖励，收下吧。",uVar16,uVar17,0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             uVar17 = this.talkPanel;
           }
-          goto LAB_180e5ffe3;
+          goto LAB_180e605f3;
         case 3:
           if (this.subMeetingStep == null) {
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             HeroLittleTalkController.ClearAll(lVar13,0);
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             uVar17 = this.talkPanel;
             uVar14 = this.mainObj;
             uVar16 = "接下来，看看当今武林的局势......";
-            goto LAB_180e5ffe3;
+            goto LAB_180e605f3;
           }
-          if (this.subMeetingStep != 1) goto switchD_180e5fd86_default;
+          if (this.subMeetingStep != 1) goto switchD_180e60396_default;
           lVar13 = FUN_18046c4c0(0);
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           QuickTravelUIController.ShowQuickTravelUI(lVar13,0,0);
-          goto LAB_180e5ffe8;
+          goto LAB_180e605f8;
         case 4:
           break;
         case 5:
           lVar13 = this.targetForce;
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           iVar8 = this.subMeetingStep;
           if (lVar13.forceFocus != 3) {
             if (iVar8 == 0) {
               lVar13 = FUN_1807789e0(0);
-              if (lVar13 == null) goto LAB_180e60968;
+              if (lVar13 == null) goto LAB_180e60f78;
               HeroLittleTalkController.ClearAll(lVar13,0);
               lVar13 = FUN_1807789e0(0);
-              if (lVar13 == null) goto LAB_180e60968;
+              if (lVar13 == null) goto LAB_180e60f78;
               uVar17 = this.talkPanel;
               uVar14 = this.mainObj;
               uVar16 = "既然如此，大家就各自选择本月的门派任务吧。";
@@ -807,7 +807,7 @@ public class MeetingController
             else {
               if (iVar8 == 1) {
                 MeetingController.ShowForceMission(this,0);
-                goto LAB_180e5ffe8;
+                goto LAB_180e605f8;
               }
               if (iVar8 == 2) {
                 return;
@@ -816,21 +816,21 @@ public class MeetingController
                 lVar13 = FUN_18046c0a0(0);
                 if (((lVar13 == null) || (lVar13.defaultSkinID == null)) ||
                    (lVar13 = WorldData.Player(lVar13.defaultSkinID,0)) == null)
-                goto LAB_180e60968;
+                goto LAB_180e60f78;
                 if (*(int64 *)(lVar13 + 0x2e0) != 0) {
                   lVar13 = this.targetForce;
                   lVar15 = FUN_18046c0a0(0);
                   if ((((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                       (lVar15 = WorldData.Player(lVar15.defaultSkinID,0)) == null) ||
-                     ((*(int64 *)(lVar15 + 0x2e0) == 0 || (lVar13 == null)))) goto LAB_180e60968;
+                     ((*(int64 *)(lVar15 + 0x2e0) == 0 || (lVar13 == null)))) goto LAB_180e60f78;
                   ForceData.ChangeResource(lVar13,0);
                   lVar13 = FUN_18046c0a0(0);
-                  if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+                  if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
                   lVar13 = WorldData.Player(lVar13.defaultSkinID,0);
                   lVar15 = FUN_18046c0a0(0);
                   if (((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                      ((lVar15 = WorldData.Player(lVar15.defaultSkinID,0), lVar15 == null ||
-                      ((*(int64 *)(lVar15 + 0x2e0) == 0 || (lVar13 == null)))))) goto LAB_180e60968;
+                      ((*(int64 *)(lVar15 + 0x2e0) == 0 || (lVar13 == null)))))) goto LAB_180e60f78;
                   HeroData.ChangeMoney(lVar13,*(uint32 *)(*(int64 *)(lVar15 + 0x2e0) + 132),1,0);
                   lVar13 = FUN_1807789e0(0);
                   uVar14 = this.mainObj;
@@ -838,12 +838,12 @@ public class MeetingController
                   if ((lVar15 == null) ||
                      (((lVar15.defaultSkinID == null ||
                        (lVar15 = WorldData.Player(lVar15.defaultSkinID,0)) == null) ||
-                      (*(int64 *)(lVar15 + 0x2e0) == 0)))) goto LAB_180e60968;
+                      (*(int64 *)(lVar15 + 0x2e0) == 0)))) goto LAB_180e60f78;
                   uVar16 = *(uint64 *)(*(int64 *)(lVar15 + 0x2e0) + 24);
                   lVar15 = FUN_18046c0a0(0);
                   if ((((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                       (lVar15 = WorldData.Player(lVar15.defaultSkinID,0), uVar17 = "#PlayerName#，<b>{0}</b>的任务{1}就交给你了，一定要妥善完成。",
-                      lVar15 == null)) || (*(int64 *)(lVar15 + 0x2e0) == 0)) goto LAB_180e60968;
+                      lVar15 == null)) || (*(int64 *)(lVar15 + 0x2e0) == 0)) goto LAB_180e60f78;
                   uVar12 = "";
                   if (0 < *(int *)(*(int64 *)(lVar15 + 0x2e0) + 132)) {
                     lVar15 = FUN_18046c0a0(0);
@@ -854,24 +854,24 @@ public class MeetingController
                       FUN_1800d6620();
                     }
                     local_res18[0] = *(int *)(*(int64 *)(lVar15 + 0x2e0) + 132);
-                    uVar12 = il2cpp_value_box(DAT_181d80418,local_res18);
+                    uVar12 = il2cpp_value_box(DAT_181d80430,local_res18);
                     uVar12 = String.Format("和这{0}两经费",uVar12,0);
                   }
                   uVar16 = String.Format(uVar17,uVar16,uVar12,0);
-                  goto joined_r0x000180e5fcb9;
+                  goto joined_r0x000180e602c9;
                 }
                 lVar13 = FUN_1807789e0(0);
-                if (lVar13 == null) goto LAB_180e60968;
+                if (lVar13 == null) goto LAB_180e60f78;
                 uVar17 = this.talkPanel;
                 uVar14 = this.mainObj;
                 uVar16 = "#PlayerName#这个月没有空闲吗？可不要借口偷懒哦。";
               }
               else {
-                if (iVar8 != 4) goto switchD_180e5fd86_default;
+                if (iVar8 != 4) goto switchD_180e60396_default;
                 lVar13 = FUN_18046c0a0(0);
                 if (((lVar13 == null) || (lVar13.defaultSkinID == null)) ||
                    (lVar13 = WorldData.Player(lVar13.defaultSkinID,0)) == null)
-                goto LAB_180e60968;
+                goto LAB_180e60f78;
                 if (*(int64 *)(lVar13 + 0x2e0) == 0) {
                   lVar13 = FUN_1807789e0(0);
                   uVar16 = "万万不敢...(好险，差点被发现)";
@@ -880,18 +880,18 @@ public class MeetingController
                   lVar13 = FUN_1807789e0(0);
                   uVar16 = "领命！";
                 }
-                if (lVar13 == null) goto LAB_180e60968;
+                if (lVar13 == null) goto LAB_180e60f78;
                 uVar17 = this.talkPanel;
                 uVar14 = this.playerObj;
               }
             }
-            goto LAB_180e5ffe3;
+            goto LAB_180e605f3;
           }
           switch(iVar8) {
           case 0:
             if (this.attackTargetArea == null) {
               this.attackAreaID = 0xffffffff;
-              goto switchD_180e5fd86_default;
+              goto switchD_180e60396_default;
             }
             this.attackAreaID = this.attackTargetArea.areaID;
             if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) && (*(int *)(DAT_181d73d40 + 224) == 0)) {
@@ -899,49 +899,49 @@ public class MeetingController
               lVar13 = this.targetForce;
             }
             lVar15 = *(int64 *)(pStatics_3d40 + 0x5b8);
-            if ((lVar13 == null) || (lVar15 == null)) goto LAB_180e60968;
-            uVar14 = FUN_180002f80(lVar15,lVar13.forceFocus,DAT_181da4358);
-            if (this.attackTargetArea == null) goto LAB_180e60968;
+            if ((lVar13 == null) || (lVar15 == null)) goto LAB_180e60f78;
+            uVar14 = FUN_180002f80(lVar15,lVar13.forceFocus,DAT_181da4370);
+            if (this.attackTargetArea == null) goto LAB_180e60f78;
             uVar16 = AreaData.GetAreaName(this.attackTargetArea,0);
             uVar16 = String.Format("({0})",uVar16,0);
             uVar14 = String.Concat(uVar14,uVar16,0);
             MeetingController.SetInfoFocusText(this,uVar14,0);
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             HeroLittleTalkController.ClearAll(lVar13,0);
             lVar13 = FUN_1807789e0(0);
             uVar14 = this.mainObj;
             if ((this.attackTargetArea == null) ||
                (lVar15 = AreaData.GetForce(this.attackTargetArea,0)) == null)
-            goto LAB_180e60968;
+            goto LAB_180e60f78;
             uVar16 = ForceData.GetForceName(lVar15,1,0);
-            if (this.attackTargetArea == null) goto LAB_180e60968;
+            if (this.attackTargetArea == null) goto LAB_180e60f78;
             uVar17 = AreaData.GetAreaName(this.attackTargetArea,0);
             uVar16 = String.Format("本门养精蓄锐，秣马厉兵已久，是时候一展雄威，因此我决定，本月要向<b>{0}</b>所占据的<b>{1}</b>发起进攻！",uVar16,uVar17,0);
-            goto joined_r0x000180e5fcb9;
+            goto joined_r0x000180e602c9;
           case 1:
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             uVar17 = this.talkPanel;
             uVar14 = this.playerObj;
             uVar16 = "(那么，是否要建议掌门转而攻击其他地点呢？)";
             break;
           case 2:
             lVar13 = FUN_180778ae0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             SureMenu.CallSureMenu
                       (lVar13,"是否要针对攻略地点提出建议？","GivingAttackAreaAdvise","true","MeetingController",1,
                        in_stack_fffffffffffffe68 & 0xffffffffffffff00,"GivingAttackAreaAdvise","false",0);
-            goto LAB_180e5ffe8;
+            goto LAB_180e605f8;
           case 3:
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             HeroLittleTalkController.ClearAll(lVar13,0);
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e60968;
+            if (lVar13 == null) goto LAB_180e60f78;
             uVar17 = this.talkPanel;
             uVar16 = "#PlayerName#你似乎有话想说？";
-        LAB_180e5ffdc:
+        LAB_180e605ec:
             uVar14 = this.mainObj;
             break;
           case 4:
@@ -950,23 +950,23 @@ public class MeetingController
             lVar15 = FUN_18046c0a0(0);
             if (((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                (lVar15 = WorldData.GetArea(lVar15.defaultSkinID,this.adviseAttackAreaID,0
-                                           ), lVar15 == null)) goto LAB_180e60968;
+                                           ), lVar15 == null)) goto LAB_180e60f78;
             uVar16 = AreaData.GetAreaName(lVar15,0);
             uVar16 = String.Format("弟子认为，如今之计，应当优先进攻战略要地<b>{0}</b>才是。",uVar16,0);
-        joined_r0x000180e5fcb9:
-            if (lVar13 == null) goto LAB_180e60968;
+        joined_r0x000180e602c9:
+            if (lVar13 == null) goto LAB_180e60f78;
             uVar17 = this.talkPanel;
             break;
           case 5:
             lVar13 = FUN_18046c0a0(0);
             if (((lVar13 == null) || (lVar13.defaultSkinID == null)) ||
                (lVar13 = WorldData.GetArea(lVar13.defaultSkinID,this.adviseAttackAreaID,0
-                                           ), lVar13 == null)) goto LAB_180e60968;
+                                           ), lVar13 == null)) goto LAB_180e60f78;
             if (lVar13.startSkillBookID == 2) {
               lVar13 = FUN_18046c0a0(0);
               if (((lVar13 == null) || (lVar13.defaultSkinID == null)) ||
                  (lVar13 = WorldData.Player(lVar13.defaultSkinID,0)) == null)
-              goto LAB_180e60968;
+              goto LAB_180e60f78;
               if (lVar13.bookStorage < 5) {
                 lVar13 = FUN_1807789e0(0);
                 uVar14 = this.mainObj;
@@ -974,32 +974,32 @@ public class MeetingController
                 if (((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                    (lVar15 = WorldData.GetArea(lVar15.defaultSkinID,
                                                 this.adviseAttackAreaID,0), lVar15 == null))
-                goto LAB_180e60968;
+                goto LAB_180e60f78;
                 uVar17 = AreaData.GetAreaName(lVar15,0);
                 uVar16 = "<b>{0}</b>总舵防备严密，#PlayerName#升任副掌门前，还是不要贸然策划此等大计";
-                goto LAB_180e604af;
+                goto LAB_180e60abf;
               }
             }
             fVar23 = (float)Random.get_value(0);
             lVar13 = FUN_18046c0a0(0);
             if (((lVar13 == null) || (lVar13.defaultSkinID == null)) ||
                (lVar13 = WorldData.Player(lVar13.defaultSkinID,0)) == null)
-            goto LAB_180e60968;
+            goto LAB_180e60f78;
             iVar8 = lVar13.bookStorage;
             if (((this.mainObj == null) ||
                 (lVar13 = GameObject.GetComponent(this.mainObj,DAT_181d71b50),
-                lVar13 == null)) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+                lVar13 == null)) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
             fVar24 = (float)HeroData.Favor(lVar13.defaultSkinID,0,0);
             if (fVar23 <= (fVar24 + (float)iVar8 * 20.0) * 0.0045 + 0.1) {
               this.attackAreaID = this.adviseAttackAreaID;
               lVar13 = *(int64 *)(pStatics_3d40 + 0x5b8);
-              if ((this.targetForce == null) || (lVar13 == null)) goto LAB_180e60968;
+              if ((this.targetForce == null) || (lVar13 == null)) goto LAB_180e60f78;
               uVar14 = FUN_180002f80(lVar13,this.targetForce.forceFocus,
-                                     DAT_181da4358);
+                                     DAT_181da4370);
               lVar13 = FUN_18046c0a0(0);
               if (((lVar13 == null) || (lVar13.defaultSkinID == null)) ||
                  (lVar13 = WorldData.GetArea(lVar13.defaultSkinID,this.attackAreaID
-                                              ,0), lVar13 == null)) goto LAB_180e60968;
+                                              ,0), lVar13 == null)) goto LAB_180e60f78;
               uVar16 = AreaData.GetAreaName(lVar13,0);
               uVar16 = String.Format("({0})",uVar16,0);
               uVar14 = String.Concat(uVar14,uVar16,0);
@@ -1009,7 +1009,7 @@ public class MeetingController
               lVar15 = FUN_18046c0a0(0);
               if (((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                  (lVar15 = WorldData.GetArea(lVar15.defaultSkinID,this.attackAreaID
-                                              ,0), lVar15 == null)) goto LAB_180e60968;
+                                              ,0), lVar15 == null)) goto LAB_180e60f78;
               uVar17 = AreaData.GetAreaName(lVar15,0);
               uVar16 = "#PlayerName#所言确有道理。那就依你所言，本月转而进攻<b>{0}</b>吧";
             }
@@ -1019,32 +1019,32 @@ public class MeetingController
               lVar15 = FUN_18046c0a0(0);
               if (((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                  (lVar15 = WorldData.GetArea(lVar15.defaultSkinID,this.attackAreaID
-                                              ,0), lVar15 == null)) goto LAB_180e60968;
+                                              ,0), lVar15 == null)) goto LAB_180e60f78;
               uVar17 = AreaData.GetAreaName(lVar15,0);
               uVar16 = "#PlayerName#所言虽有几分道理，但终究难以服众。本月还是继续进攻<b>{0}</b>吧";
             }
-            goto LAB_180e604af;
+            goto LAB_180e60abf;
           default:
-        switchD_180e5fd86_default:
+        switchD_180e60396_default:
             this.subMeetingStep = 0;
             this.meetingStep = this.meetingStep + 1;
             MeetingController.NextStep(this,0);
             return;
           }
-          goto LAB_180e5ffe3;
+          goto LAB_180e605f3;
         case 6:
-          if (this.targetForce == null) goto LAB_180e60968;
+          if (this.targetForce == null) goto LAB_180e60f78;
           iVar8 = this.subMeetingStep;
           if (this.targetForce.forceFocus == 3) {
             if (iVar8 == 0) {
               iVar8 = this.attackAreaID;
               if (iVar8 == -1) {
                 lVar13 = FUN_1807789e0(0);
-                if (lVar13 == null) goto LAB_180e60968;
+                if (lVar13 == null) goto LAB_180e60f78;
                 HeroLittleTalkController.ClearAll(lVar13,0);
                 lVar13 = FUN_1807789e0(0);
                 uVar14 = this.mainObj;
-                uVar16 = FUN_180004500(DAT_181d8b140);
+                uVar16 = FUN_180004500(DAT_181d8b158);
                 uVar16 = String.Format("可惜本门周边暂无可进攻区域，各位弟子就先自由行动好了",uVar16,0);
               }
               else {
@@ -1053,7 +1053,7 @@ public class MeetingController
                 if (((lVar13 == null) ||
                     (lVar13 = MissionData.SetForceMission(lVar13,"攻略地点",20,0x41200000,0),
                     lVar13 == null)) || (lVar15 = lVar13.heroLvNum) == null) {
-        LAB_180e60974:
+        LAB_180e60f84:
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
@@ -1062,31 +1062,31 @@ public class MeetingController
                 }
                 lVar15 = *(int64 *)(lVar15.forceID + 32);
                 if ((lVar15 = lVar15?.mainAreaID) == null)
-                goto LAB_180e60974;
+                goto LAB_180e60f84;
                 if (lVar15.forceName == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar15 = *(int64 *)(lVar15.forceID + 32);
-                if (lVar15 == null) goto LAB_180e60974;
+                if (lVar15 == null) goto LAB_180e60f84;
                 lVar15.forceStyle = 0x3f800000;
                 lVar15 = lVar13.heroLvNum;
-                if (lVar15 == null) goto LAB_180e60974;
+                if (lVar15 == null) goto LAB_180e60f84;
                 if (lVar15.forceName == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar15 = *(int64 *)(lVar15.forceID + 32);
                 if ((lVar15 = lVar15?.mainAreaID) == null)
-                goto LAB_180e60974;
+                goto LAB_180e60f84;
                 if (lVar15.forceName == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar15 = *(int64 *)(lVar15.forceID + 32);
                 uVar14 = Int32.ToString(local_res18,0);
-                if (lVar15 == null) goto LAB_180e60974;
+                if (lVar15 == null) goto LAB_180e60f84;
                 lVar15.forceName = uVar14;
                 MeetingController.PlayerReciveForceMission(this,lVar13,0);
                 lVar13 = FUN_1807789e0(0);
-                if (lVar13 == null) goto LAB_180e6097a;
+                if (lVar13 == null) goto LAB_180e60f8a;
                 HeroLittleTalkController.ClearAll(lVar13,0);
                 lVar13 = FUN_1807789e0(0);
                 uVar14 = this.mainObj;
@@ -1094,19 +1094,19 @@ public class MeetingController
                 if (((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                    (lVar15 = WorldData.GetArea(lVar15.defaultSkinID,
                                                 this.attackAreaID,0), lVar15 == null))
-                goto LAB_180e6097a;
+                goto LAB_180e60f8a;
                 uVar16 = AreaData.GetAreaName(lVar15,0);
                 lVar15 = FUN_18046c0a0(0);
                 if (((lVar15 == null) || (lVar15.defaultSkinID == null)) ||
                    ((lVar15 = WorldData.GetArea(lVar15.defaultSkinID,
                                                  this.attackAreaID,0), lVar15 == null ||
-                    (lVar15 = AreaData.GetForce(lVar15,0)) == null))) goto LAB_180e6097a;
+                    (lVar15 = AreaData.GetForce(lVar15,0)) == null))) goto LAB_180e60f8a;
                 uVar17 = ForceData.GetForceName(lVar15,1,0);
                 uVar16 = String.Format("那就决定了，请各位弟子分头前往{0}，汇合后由我带领出击，定要一举从{1}手中夺下此地！",uVar16,uVar17,0);
               }
-              if (lVar13 == null) goto LAB_180e6097a;
+              if (lVar13 == null) goto LAB_180e60f8a;
               uVar17 = this.talkPanel;
-              goto LAB_180e5ffe3;
+              goto LAB_180e605f3;
             }
             if (iVar8 == 1) {
               lVar13 = this.heroGrid;
@@ -1116,7 +1116,7 @@ public class MeetingController
                   lVar13 = GameObject.get_transform(lVar13,0);
                   if (lVar13 == null) break;
                   iVar8 = Transform.get_childCount(lVar13,0);
-                  if (iVar8 <= (int)uVar9) goto LAB_180e5ffe8;
+                  if (iVar8 <= (int)uVar9) goto LAB_180e605f8;
                   lVar13 = **(int64 **)(DAT_181d761e8 + 184);
                   if (((this.heroGrid == null) ||
                       (lVar15 = GameObject.get_transform(this.heroGrid,0)) == null)
@@ -1131,26 +1131,26 @@ public class MeetingController
                   if (lVar13 == null) break;
                 }
               }
-              goto LAB_180e6097a;
+              goto LAB_180e60f8a;
             }
           }
           else if (iVar8 == 0) {
             lVar13 = FUN_1807789e0(0);
             if (lVar13 == null) {
-        LAB_180e6097a:
+        LAB_180e60f8a:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             HeroLittleTalkController.ClearAll(lVar13,0);
             lVar13 = FUN_1807789e0(0);
-            if (lVar13 == null) goto LAB_180e6097a;
+            if (lVar13 == null) goto LAB_180e60f8a;
             uVar17 = this.talkPanel;
             uVar16 = "看样子，每个人的门派任务都已交代完成。\n会议到此结束。诸位辛苦了！";
-            goto LAB_180e5ffdc;
+            goto LAB_180e605ec;
           }
           MeetingController.EndMeeting(this,0);
         default:
-          goto switchD_180e5e3ff_default;
+          goto switchD_180e5ea0f_default;
         }
         switch(this.subMeetingStep) {
         case 0:
@@ -1158,56 +1158,56 @@ public class MeetingController
           if (((this.targetForce == null) || (MeetingController.ForceLvText == null)) ||
              (uVar14 = FUN_180002f80(MeetingController.ForceLvText,
                                      (int)((float)this.targetForce.forceLv * 0.5),
-                                     DAT_181da4358), lVar13 == null)) goto LAB_180e60968;
-          FUN_181829cd0(lVar13,0,uVar14,DAT_181da43d8);
+                                     DAT_181da4370), lVar13 == null)) goto LAB_180e60f78;
+          FUN_18182a2e0(lVar13,0,uVar14,DAT_181da43f0);
           lVar13 = this.infoText;
           lVar15 = MeetingController.MainFocusText;
           if (((this.targetForce == null) || (lVar15 == null)) ||
              (uVar14 = FUN_180002f80(lVar15,(int)((float)this.targetForce.forceLv *
-                                                 0.5),DAT_181da4358), lVar13 == null)) goto LAB_180e60968;
-          FUN_181829cd0(lVar13,1,uVar14,DAT_181da43d8);
+                                                 0.5),DAT_181da4370), lVar13 == null)) goto LAB_180e60f78;
+          FUN_18182a2e0(lVar13,1,uVar14,DAT_181da43f0);
           MeetingController.SetInfoText(this,0);
           lVar13 = FUN_1807789e0(0);
           lVar15 = this.infoText;
           uVar14 = this.mainObj;
-          if (lVar15 == null) goto LAB_180e60968;
+          if (lVar15 == null) goto LAB_180e60f78;
           lVar10 = lVar15;
           if (lVar15.forceName == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
             lVar10 = this.infoText;
           }
           uVar16 = *(uint64 *)(lVar15.forceID + 32);
-          if (lVar10 == null) goto LAB_180e60968;
+          if (lVar10 == null) goto LAB_180e60f78;
           if (lVar10.Count < 2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar16 = String.Format("如各位所见，\n本门的江湖地位为<b>{0}</b>。\n看来应进一步<b>{1}</b>才是。",uVar16,
                                   *(uint64 *)(lVar10._items + 40),0);
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           uVar17 = this.talkPanel;
           break;
         case 1:
           lVar13 = FUN_18046c0a0(0);
-          if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+          if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
           if (*(int *)(lVar13.defaultSkinID + 156) == 0) {
             lVar13 = FUN_18046c0a0(0);
-            if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+            if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
             if (0 >= *(int *)(lVar13.defaultSkinID + 0x188))
             {
-              if (this.targetForce == null) goto LAB_180e60968;
+              if (this.targetForce == null) goto LAB_180e60f78;
               this.targetForce.forceFocus = 0;
               }
               else {
             }
-            lVar13 = il2cpp_internal(DAT_181d92d58);
-            FUN_18132faf0(lVar13,DAT_181d883a0);
-            uVar14 = DAT_181db8b30;
-            if (this.targetForce == null) goto LAB_180e60968;
+            lVar13 = il2cpp_internal(DAT_181d92d70);
+            FUN_181330100(lVar13,DAT_181d883b0);
+            uVar14 = DAT_181db8b48;
+            if (this.targetForce == null) goto LAB_180e60f78;
             iVar8 = (int)((float)this.targetForce.forceLv * 0.5);
             uVar14 = Type.GetTypeFromHandle(uVar14,0);
             lVar15 = Enum.GetValues(uVar14,0);
-            if (lVar15 == null) goto LAB_180e60968;
-            iVar6 = FUN_1812fe680(lVar15,0);
+            if (lVar15 == null) goto LAB_180e60f78;
+            iVar6 = FUN_1812fec90(lVar15,0);
             iVar21 = 0;
             if (0 < iVar6) {
               do {
@@ -1231,8 +1231,8 @@ public class MeetingController
                   iVar19 = 0;
                   if (0 < iVar18) {
                     do {
-                      if (lVar13 == null) goto LAB_180e60968;
-                      FUN_18182a0b0(lVar13,iVar21,DAT_181d88420);
+                      if (lVar13 == null) goto LAB_180e60f78;
+                      FUN_18182a6c0(lVar13,iVar21,DAT_181d88430);
                       iVar19 = iVar19 + 1;
                     } while (iVar19 < iVar18);
                   }
@@ -1241,48 +1241,48 @@ public class MeetingController
               } while (iVar21 < iVar6);
             }
             lVar15 = this.targetForce;
-            if (lVar13 == null) goto LAB_180e60968;
-            uVar7 = FUN_180d95a30(0,lVar13.forceName,0);
+            if (lVar13 == null) goto LAB_180e60f78;
+            uVar7 = FUN_180d96040(0,lVar13.forceName,0);
             if (lVar13.forceName <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            if (lVar15 == null) goto LAB_180e60968;
+            if (lVar15 == null) goto LAB_180e60f78;
             lVar15.forceFocus =
                  lVar13.forceID[uVar7];
           }
           lVar13 = *(int64 *)(pStatics_3d40 + 0x5b8);
-          if ((this.targetForce == null) || (lVar13 == null)) goto LAB_180e60968;
+          if ((this.targetForce == null) || (lVar13 == null)) goto LAB_180e60f78;
           uVar14 = FUN_180002f80(lVar13,this.targetForce.forceFocus,
-                                 DAT_181da4358);
+                                 DAT_181da4370);
           MeetingController.SetInfoFocusText(this,uVar14,0);
           lVar13 = FUN_1807789e0(0);
           uVar14 = this.mainObj;
           lVar15 = *(int64 *)(pStatics_3d40 + 0x5b8);
-          if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60968;
+          if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60f78;
           uVar17 = FUN_180002f80(lVar15,this.targetForce.forceFocus,
-                                 DAT_181da4358);
+                                 DAT_181da4370);
           uVar16 = "因此，本月将进行<b>{0}</b>。\n诸位弟子可有建议？";
-          goto LAB_180e5f460;
+          goto LAB_180e5fa70;
         case 2:
           lVar13 = FUN_1807789e0(0);
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           uVar17 = this.talkPanel;
           uVar14 = this.playerObj;
           uVar16 = "(那么，接下来是否要提出建议呢？)";
           break;
         case 3:
           lVar13 = FUN_180778ae0(0);
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           SureMenu.CallSureMenu
                     (lVar13,"是否要针对本月方针提出建议？","GivingMeetingAdvise","true","MeetingController",1,
                      in_stack_fffffffffffffe68 & 0xffffffffffffff00,"GivingMeetingAdvise","false",0);
-          goto LAB_180e5ffe8;
+          goto LAB_180e605f8;
         case 4:
           lVar13 = FUN_1807789e0(0);
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           HeroLittleTalkController.ClearAll(lVar13,0);
           lVar13 = FUN_1807789e0(0);
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           uVar17 = this.talkPanel;
           uVar14 = this.mainObj;
           uVar16 = "#PlayerName#你似乎有话想说？";
@@ -1291,13 +1291,13 @@ public class MeetingController
           lVar13 = FUN_1807789e0(0);
           uVar14 = this.playerObj;
           lVar15 = *(int64 *)(pStatics_3d40 + 0x5b8);
-          if (lVar15 == null) goto LAB_180e60968;
-          uVar17 = FUN_180002f80(lVar15,this.playerAdviseFocusType,DAT_181da4358);
+          if (lVar15 == null) goto LAB_180e60f78;
+          uVar17 = FUN_180002f80(lVar15,this.playerAdviseFocusType,DAT_181da4370);
           uVar16 = "弟子认为，如今之计，应当优先<b>{0}</b>才是。";
-        LAB_180e5f460:
+        LAB_180e5fa70:
           uVar16 = String.Format(uVar16,uVar17,0);
           if (lVar13 == null) {
-        LAB_180e60968:
+        LAB_180e60f78:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1305,73 +1305,73 @@ public class MeetingController
           break;
         case 6:
           lVar13 = FUN_18046c0a0(0);
-          if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+          if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
           if (*(int *)(lVar13.defaultSkinID + 156) == 0) {
             lVar13 = FUN_18046c0a0(0);
-            if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+            if ((lVar13 == null) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
             if (*(int *)(lVar13.defaultSkinID + 0x188) < 1) {
               lVar13 = FUN_1807789e0(0);
               uVar14 = this.mainObj;
               lVar15 = *(int64 *)(pStatics_3d40 + 0x5b8);
-              if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60968;
+              if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60f78;
               uVar17 = FUN_180002f80(lVar15,this.targetForce.forceFocus,
-                                     DAT_181da4358);
+                                     DAT_181da4370);
               uVar16 = "#PlayerName#初次参会，还需多加学习。本月还是继续<b>{0}</b>吧";
-              goto LAB_180e604af;
+              goto LAB_180e60abf;
             }
           }
           fVar23 = (float)Random.get_value(0);
           lVar13 = FUN_18046c0a0(0);
           if (((lVar13 == null) || (lVar13.defaultSkinID == null)) ||
              (lVar13 = WorldData.Player(lVar13.defaultSkinID,0)) == null)
-          goto LAB_180e60968;
+          goto LAB_180e60f78;
           iVar8 = lVar13.bookStorage;
           if (((this.mainObj == null) ||
               (lVar13 = GameObject.GetComponent(this.mainObj,DAT_181d71b50), lVar13 == null
-              )) || (lVar13.defaultSkinID == null)) goto LAB_180e60968;
+              )) || (lVar13.defaultSkinID == null)) goto LAB_180e60f78;
           fVar24 = (float)HeroData.Favor(lVar13.defaultSkinID,0,0);
           if (fVar23 <= (fVar24 + (float)iVar8 * 20.0) * 0.0045 + 0.1) {
-            if (this.targetForce == null) goto LAB_180e60968;
+            if (this.targetForce == null) goto LAB_180e60f78;
             this.targetForce.forceFocus = this.playerAdviseFocusType;
             lVar13 = *(int64 *)(pStatics_3d40 + 0x5b8);
-            if ((this.targetForce == null) || (lVar13 == null)) goto LAB_180e60968;
+            if ((this.targetForce == null) || (lVar13 == null)) goto LAB_180e60f78;
             uVar14 = FUN_180002f80(lVar13,this.targetForce.forceFocus,
-                                   DAT_181da4358);
+                                   DAT_181da4370);
             MeetingController.SetInfoFocusText(this,uVar14,0);
             lVar13 = FUN_1807789e0(0);
             uVar14 = this.mainObj;
             lVar15 = *(int64 *)(pStatics_3d40 + 0x5b8);
-            if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60968;
+            if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60f78;
             uVar17 = FUN_180002f80(lVar15,this.targetForce.forceFocus,
-                                   DAT_181da4358);
+                                   DAT_181da4370);
             uVar16 = "#PlayerName#所言确有道理。那就依你所言，本月转而进行<b>{0}</b>吧";
           }
           else {
             lVar13 = FUN_1807789e0(0);
             uVar14 = this.mainObj;
             lVar15 = *(int64 *)(pStatics_3d40 + 0x5b8);
-            if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60968;
+            if ((this.targetForce == null) || (lVar15 == null)) goto LAB_180e60f78;
             uVar17 = FUN_180002f80(lVar15,this.targetForce.forceFocus,
-                                   DAT_181da4358);
+                                   DAT_181da4370);
             uVar16 = "#PlayerName#所言虽有几分道理，但终究难以服众。本月还是继续<b>{0}</b>吧";
           }
-        LAB_180e604af:
+        LAB_180e60abf:
           uVar16 = String.Format(uVar16,uVar17,0);
-          if (lVar13 == null) goto LAB_180e60968;
+          if (lVar13 == null) goto LAB_180e60f78;
           uVar17 = this.talkPanel;
           break;
         default:
-          goto switchD_180e5fd86_default;
+          goto switchD_180e60396_default;
         }
-        LAB_180e5ffe3:
+        LAB_180e605f3:
         HeroLittleTalkController.HeroTalk(lVar13,uVar14,uVar16,0xbf800000,uVar17,2,0);
-        LAB_180e5ffe8:
+        LAB_180e605f8:
         this.subMeetingStep = this.subMeetingStep + 1;
-        switchD_180e5e3ff_default:
+        switchD_180e5ea0f_default:
     }
 
     // Token : 0x6001913
-    // RVA   : 0xE609D0   Offset: 0xE5FDD0   Length: 0x18B
+    // RVA   : 0xE60FE0   Offset: 0xE603E0   Length: 0x18B
     public void PlayerGetAttackAreaMission(int targetAreaID)
     {
         long lVar2;
@@ -1422,10 +1422,10 @@ public class MeetingController
     }
 
     // Token : 0x6001914
-    // RVA   : 0xE61CA0   Offset: 0xE610A0   Length: 0x82D
+    // RVA   : 0xE622B0   Offset: 0xE616B0   Length: 0x82D
     public void ShowForceMission()
     {
-        var pStatics_4000 = *(int64*)(DAT_181d94000 + 184);
+        var pStatics_4018 = *(int64*)(DAT_181d94018 + 184);
         ulong uVar1;
         int iVar2;
         long lVar3;
@@ -1442,8 +1442,8 @@ public class MeetingController
         local_res8[0] = 0.0;
         if (this.monthMissionPanel != null) {
           GameObject.SetActive(this.monthMissionPanel,1,0);
-          if ((((*pStatics_4000 != 0) &&
-               (lVar3 = *(int64 *)(*pStatics_4000 + 32)) != null) &&
+          if ((((*pStatics_4018 != 0) &&
+               (lVar3 = *(int64 *)(*pStatics_4018 + 32)) != null) &&
               (lVar3 = GameObject.get_transform(lVar3,0)) != null) &&
              (lVar3 = Transform.Find(lVar3,"MapRoot",0)) != null) {
             puVar4 = (uint64 *)Transform.get_localPosition(local_58,lVar3,0);
@@ -1455,9 +1455,9 @@ public class MeetingController
                                 (float)((uint64)uVar5 >> 32),(float)*puVar4 * 120.0 + (float)uVar5);
             local_50 = local_60;
             Transform.set_localPosition(lVar3,&local_68,0);
-            if (*pStatics_4000 != 0) {
+            if (*pStatics_4018 != 0) {
               QuickTravelUIController.ShowQuickTravelUI
-                        (*pStatics_4000,0,0x3f800000,1,0);
+                        (*pStatics_4018,0,0x3f800000,1,0);
               if ((GameController._instance != null) &&
                  (lVar3 = GameController._instance.worldData) != null) {
                 uVar5 = WorldData.Player(lVar3,0);
@@ -1496,16 +1496,16 @@ public class MeetingController
                         if ((((this.monthMissionPanel != null) &&
                              (lVar3 = GameObject.get_transform(this.monthMissionPanel,0),
                              lVar3 != null)) && (lVar3 = Transform.Find(lVar3,"RefuseMonthMissionButton",0)) != null)
-                           && (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) != null) {
+                           && (lVar3 = Component.GetComponent(lVar3,DAT_181d93778)) != null) {
                           Selectable.set_interactable(lVar3,0,0);
                           if (((this.monthMissionPanel != null) &&
                               (lVar3 = GameObject.get_transform(this.monthMissionPanel,0),
                               lVar3 != null)) &&
                              ((lVar3 = Transform.Find(lVar3,"RefuseMonthMissionButton",0), lVar3 != null &&
-                              (lVar3 = Component.GetComponent(lVar3,DAT_181d95560), uVar5 = "完成一次门派任务才能选择"
+                              (lVar3 = Component.GetComponent(lVar3,DAT_181d95578), uVar5 = "完成一次门派任务才能选择"
                               , lVar3 != null)))) {
                             lVar3.Count = "完成一次门派任务才能选择";
-                            goto LAB_180e622ad;
+                            goto LAB_180e628bd;
                           }
                         }
                         throw; // [null/range check failed]
@@ -1514,12 +1514,12 @@ public class MeetingController
                     if (((this.monthMissionPanel != null) &&
                         (lVar3 = GameObject.get_transform(this.monthMissionPanel,0)) != null)
                        && ((lVar3 = Transform.Find(lVar3,"RefuseMonthMissionButton",0), lVar3 != null &&
-                           (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) != null))) {
+                           (lVar3 = Component.GetComponent(lVar3,DAT_181d93778)) != null))) {
                       Selectable.set_interactable(lVar3,1,0);
                       if (((this.monthMissionPanel != null) &&
                           (lVar3 = GameObject.get_transform(this.monthMissionPanel,0)) != null
                           ) && (lVar3 = Transform.Find(lVar3,"RefuseMonthMissionButton",0)) != null) {
-                        lVar3 = Component.GetComponent(lVar3,DAT_181d95560);
+                        lVar3 = Component.GetComponent(lVar3,DAT_181d95578);
                         uVar5 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d0);
                         if (((GameController._instance != null) &&
                             (lVar8 = GameController._instance.worldData,
@@ -1530,7 +1530,7 @@ public class MeetingController
                           uVar5 = String.Concat(uVar5,"门派功绩",uVar6,"</color>",0);
                           if (lVar3 != null) {
                             lVar3.Count = uVar5;
-        LAB_180e622ad:
+        LAB_180e628bd:
                             il2cpp_internal(puVar4,uVar5);
                             return;
                           }
@@ -1546,7 +1546,7 @@ public class MeetingController
     }
 
     // Token : 0x6001915
-    // RVA   : 0xE5D6A0   Offset: 0xE5CAA0   Length: 0x159
+    // RVA   : 0xE5DCB0   Offset: 0xE5D0B0   Length: 0x159
     public float GetMissionRandomDifficulty(HeroData targetHero)
     {
         int iVar1;
@@ -1556,17 +1556,17 @@ public class MeetingController
           fVar3 = (float)GameController.GetTimeRandomDifficulty();
           if (targetHero != null) {
             iVar1 = *(int *)(targetHero + 184);
-            iVar2 = FUN_180d95a30(0xfffffffe);
+            iVar2 = FUN_180d96040(0xfffffffe);
             Mathf.Min(0x41200000,(float)*(int *)(targetHero + 184) + (float)*(int *)(targetHero + 184) + 3.0,
                        0);
-            FUN_1810e36c0(((float)iVar1 + (float)iVar1 + fVar3) * 0.5 + (float)iVar2);
+            FUN_1810e3cd0(((float)iVar1 + (float)iVar1 + fVar3) * 0.5 + (float)iVar2);
             return;
           }
         }
     }
 
     // Token : 0x6001916
-    // RVA   : 0xE58940   Offset: 0xE57D40   Length: 0x4B6C
+    // RVA   : 0xE58F50   Offset: 0xE58350   Length: 0x4B6C
     public List<MissionData> GetAvailableMissions(HeroData targetHero)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -1609,8 +1609,8 @@ public class MeetingController
         local_100 = 0;
         uStack_f8 = 0;
         local_f0 = 0;
-        lVar6 = il2cpp_internal(DAT_181d94b50);
-        FUN_18132faf0(lVar6,DAT_181d94888);
+        lVar6 = il2cpp_internal(DAT_181d94b68);
+        FUN_181330100(lVar6,DAT_181d948a0);
         local_e8 = lVar6;
         if (this.targetForce == null) throw; // [null/range check failed]
         iVar3 = this.targetForce.forceFocus;
@@ -1621,18 +1621,18 @@ public class MeetingController
             lVar8 = new MissionData(0);
             lVar7 = *(int64 *)(pStatics_3d40 + 0x438);
             if (lVar7 == null) throw; // [null/range check failed]
-            uVar13 = FUN_180002f80(lVar7,uVar19,DAT_181da4358);
+            uVar13 = FUN_180002f80(lVar7,uVar19,DAT_181da4370);
             uVar13 = String.Concat("获取",uVar13,0);
             if (uVar19 == 0) {
               lVar7 = FUN_18046c0a0(0);
               if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
-              if (*(int *)(*(int64 *)(lVar7 + 32) + 156) != 0) goto LAB_180e5c815;
+              if (*(int *)(*(int64 *)(lVar7 + 32) + 156) != 0) goto LAB_180e5ce25;
               lVar7 = FUN_18046c0a0(0);
               if ((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) throw; // [null/range check failed]
-              if (0 < *(int *)(*(int64 *)(lVar7 + 32) + 0x188)) goto LAB_180e5c815;
+              if (0 < *(int *)(*(int64 *)(lVar7 + 32) + 0x188)) goto LAB_180e5ce25;
             }
             else {
-        LAB_180e5c815:
+        LAB_180e5ce25:
               MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
             }
             if (lVar8 == null) throw; // [null/range check failed]
@@ -1664,24 +1664,24 @@ public class MeetingController
             Random.Range();
             lVar9 = *(int64 *)(pStatics_3d40 + 0x448);
             if (lVar9 == null) throw; // [null/range check failed]
-            FUN_1800d6790(lVar9,uVar19,DAT_181da1078);
+            FUN_1800d6790(lVar9,uVar19,DAT_181da1090);
             iVar5 = Mathf.RoundToInt();
             if ((lVar7 == null) || (*(float *)(lVar7 + 40) = (float)(iVar5 * 10), lVar6 == null))
             throw; // [null/range check failed]
-            FUN_18181e0a0(lVar6,lVar8,DAT_181d94908);
+            FUN_18181e6b0(lVar6,lVar8,DAT_181d94920);
             uVar19 = uVar19 + 1;
           } while ((int)uVar19 < 6);
           if (targetHero == null) throw; // [null/range check failed]
           if (*(int *)(targetHero + 88) == 0) {
-            lVar8 = il2cpp_internal(DAT_181d952d0);
-            FUN_18132faf0(lVar8,DAT_181d97508);
+            lVar8 = il2cpp_internal(DAT_181d952e8);
+            FUN_181330100(lVar8,DAT_181d97520);
             uVar19 = uVar17;
             do {
-              uVar13 = il2cpp_internal(DAT_181d91c88);
+              uVar13 = il2cpp_internal(DAT_181d91ca0);
               uVar24 = uVar24 & 0xffffffff00000000;
               PlotRandomHeroData.ctor(uVar13,0,0,0,0,uVar24,1,0,1,0,0,0);
               if (lVar8 == null) throw; // [null/range check failed]
-              FUN_18181e0a0(lVar8);
+              FUN_18181e6b0(lVar8);
               uVar19 = uVar19 + 1;
             } while ((int)uVar19 < 2);
             lVar7 = FUN_18046c0a0(0);
@@ -1697,7 +1697,7 @@ public class MeetingController
               uVar4 = (uint32)((uint64)uVar13 >> 32);
               if (lVar8[uVar19] != 0) {
                 lVar7 = new MissionData(0);
-                lVar9 = FUN_180002f80(lVar8,uVar19,DAT_181d8bb98);
+                lVar9 = FUN_180002f80(lVar8,uVar19,DAT_181d8bbb0);
                 if ((lVar9 == null) || (lVar7 == null)) throw; // [null/range check failed]
                 uVar13 = CONCAT44(uVar4,1);
                 lVar7 = MissionData.SetForceMission
@@ -1728,13 +1728,13 @@ public class MeetingController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 32);
-                lVar9 = FUN_180002f80(lVar8,uVar19,DAT_181d8bb98);
+                lVar9 = FUN_180002f80(lVar8,uVar19,DAT_181d8bbb0);
                 if ((lVar9 == null) || (uVar14 = Int32.ToString(lVar9 + 88,0), lVar7 == null))
                 throw; // [null/range check failed]
                 puVar1 = (uint64 *)(lVar7 + 24);
                 *puVar1 = uVar14;
                 il2cpp_internal(puVar1,uVar14);
-                FUN_18181e0a0(lVar6);
+                FUN_18181e6b0(lVar6);
               }
             }
           }
@@ -1745,7 +1745,7 @@ public class MeetingController
               lVar8 = new MissionData(0);
               lVar7 = *(int64 *)(pStatics_3d40 + 0x608);
               if (lVar7 == null) throw; // [null/range check failed]
-              uVar13 = FUN_180002f80(lVar7,uVar17,DAT_181da4358);
+              uVar13 = FUN_180002f80(lVar7,uVar17,DAT_181da4370);
               uVar13 = String.Concat("提升",uVar13,0);
               MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
               if (((lVar8 == null) || (lVar8 = MissionData.SetForceMission(lVar8,uVar13,4)) == null) ||
@@ -1793,7 +1793,7 @@ public class MeetingController
               puVar1 = (uint64 *)(lVar7 + 24);
               *puVar1 = uVar13;
               il2cpp_internal(puVar1,uVar13);
-              FUN_18181e0a0(lVar6,lVar8,DAT_181d94908);
+              FUN_18181e6b0(lVar6,lVar8,DAT_181d94920);
               uVar17 = uVar17 + 1;
             } while ((int)uVar17 < 3);
           }
@@ -1801,7 +1801,7 @@ public class MeetingController
             lVar8 = new MissionData(0);
             lVar7 = *(int64 *)(pStatics_3d40 + 0x578);
             if (lVar7 == null) throw; // [null/range check failed]
-            uVar13 = FUN_180002f80(lVar7,iVar3,DAT_181da4358);
+            uVar13 = FUN_180002f80(lVar7,iVar3,DAT_181da4370);
             MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
             if (((lVar8 == null) || (lVar8 = MissionData.SetForceMission(lVar8,uVar13,5)) == null) ||
                (lVar7 = *(int64 *)(lVar8 + 120)) == null) throw; // [null/range check failed]
@@ -1831,7 +1831,7 @@ public class MeetingController
             iVar5 = Mathf.RoundToInt();
             if (lVar7 == null) throw; // [null/range check failed]
             *(float *)(lVar7 + 40) = (float)(iVar5 * 20);
-            FUN_18181e0a0(lVar6,lVar8,DAT_181d94908);
+            FUN_18181e6b0(lVar6,lVar8,DAT_181d94920);
             iVar3 = iVar3 + -1;
           } while (-1 < iVar3);
           if (this.targetForce == null) throw; // [null/range check failed]
@@ -1883,7 +1883,7 @@ public class MeetingController
             auVar23._0_4_ = (float)auVar22._0_8_ * 500.0;
             uVar4 = Mathf.RoundToInt(auVar23._0_8_,0);
             *(uint32 *)(lVar8 + 132) = uVar4;
-            goto LAB_180e5c6b4;
+            goto LAB_180e5ccc4;
           }
         }
         else {
@@ -1918,23 +1918,23 @@ public class MeetingController
                         }
                         lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 32);
                         if ((lVar7 != null) && (*(uint32 *)(lVar7 + 40) = 0x3f800000, lVar6 != null)) {
-                          FUN_18181e0a0(lVar6,lVar8,DAT_181d94908);
-                          lVar8 = il2cpp_internal(DAT_181d93cd0);
-                          FUN_18132faf0(lVar8,DAT_181d8f098);
-                          lVar7 = il2cpp_internal(DAT_181d93cd0);
-                          FUN_18132faf0(lVar7,DAT_181d8f098);
-                          lVar9 = il2cpp_internal(DAT_181d93cd0);
-                          FUN_18132faf0(lVar9,DAT_181d8f098);
-                          lVar10 = il2cpp_internal(DAT_181d93cd0);
-                          FUN_18132faf0(lVar10,DAT_181d8f098);
+                          FUN_18181e6b0(lVar6,lVar8,DAT_181d94920);
+                          lVar8 = il2cpp_internal(DAT_181d93ce8);
+                          FUN_181330100(lVar8,DAT_181d8f0b0);
+                          lVar7 = il2cpp_internal(DAT_181d93ce8);
+                          FUN_181330100(lVar7,DAT_181d8f0b0);
+                          lVar9 = il2cpp_internal(DAT_181d93ce8);
+                          FUN_181330100(lVar9,DAT_181d8f0b0);
+                          lVar10 = il2cpp_internal(DAT_181d93ce8);
+                          FUN_181330100(lVar10,DAT_181d8f0b0);
                           uVar19 = uVar17;
                           if (targetHero != null) {
                             while (lVar11 = *(int64 *)(targetHero + 0x260)) != null {
                               if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar19) {
                                 if (lVar8 != null) {
                                   uVar19 = uVar17;
-                                  if (*(int *)(lVar8 + 24) < 1) goto LAB_180e5aae0;
-                                  goto LAB_180e5a760;
+                                  if (*(int *)(lVar8 + 24) < 1) goto LAB_180e5b0f0;
+                                  goto LAB_180e5ad70;
                                 }
                                 break;
                               }
@@ -1947,31 +1947,31 @@ public class MeetingController
                               if (*(int *)(lVar11 + 20) < 10) {
                                 if ((*(int64 *)(targetHero + 0x260) == 0) ||
                                    (lVar11 = FUN_180002f80(*(int64 *)(targetHero + 0x260),uVar19,
-                                                           DAT_181d92590), lVar11 == null)) break;
+                                                           DAT_181d925a8), lVar11 == null)) break;
                                 local_res20[0] = KungfuSkillLvData.Type(lVar11,0);
                                 lVar11 = *(int64 *)(targetHero + 0x260);
                                 if (local_res20[0] == 0) {
                                   if (lVar11 == null) break;
-                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d92590);
+                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d925a8);
                                   lVar11 = lVar7;
                                 }
                                 else if (local_res20[0] == 1) {
                                   if (lVar11 == null) break;
-                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d92590);
+                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d925a8);
                                   lVar11 = lVar9;
                                 }
                                 else if (local_res20[0] == 2) {
                                   if (lVar11 == null) break;
-                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d92590);
+                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d925a8);
                                   lVar11 = lVar10;
                                 }
                                 else {
                                   if (lVar11 == null) break;
-                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d92590);
+                                  lVar12 = FUN_180002f80(lVar11,uVar19,DAT_181d925a8);
                                   lVar11 = lVar8;
                                 }
                                 if ((lVar12 == null) || (lVar11 == null)) break;
-                                FUN_18182a0b0(lVar11);
+                                FUN_18182a6c0(lVar11);
                               }
                               uVar19 = uVar19 + 1;
                             }
@@ -1986,24 +1986,24 @@ public class MeetingController
             throw; // [null/range check failed]
           }
           if (iVar3 == 2) {
-            lVar7 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(lVar7,DAT_181d8f098);
+            lVar7 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(lVar7,DAT_181d8f0b0);
             local_e0 = lVar7;
-            lVar8 = il2cpp_internal(DAT_181d93cd0);
-            FUN_18132faf0(lVar8,DAT_181d8f098);
+            lVar8 = il2cpp_internal(DAT_181d93ce8);
+            FUN_181330100(lVar8,DAT_181d8f0b0);
             local_d8 = lVar8;
             lVar9 = FUN_18046c0a0(0);
             if (((lVar9 != null) && (*(int64 *)(lVar9 + 32) != 0)) &&
                (lVar9 = *(int64 *)(*(int64 *)(lVar9 + 32) + 72)) != null) {
-              FUN_1817eb420(&local_c8,lVar9,DAT_181d88020);
+              FUN_1817eba30(&local_c8,lVar9,DAT_181d88038);
               local_100 = local_c8;
               uStack_f8 = uStack_c0;
               local_f0 = local_b8;
-        LAB_180e58df0:
+        LAB_180e59400:
               do {
-                cVar2 = FUN_180c74f00(&local_100,DAT_181d8c5e8);
+                cVar2 = FUN_180c75510(&local_100,DAT_181d8c600);
                 lVar9 = local_f0;
-                if (!cVar2) goto LAB_180e58f26;
+                if (!cVar2) goto LAB_180e59536;
                 if (local_f0 == 0) {
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
@@ -2019,8 +2019,8 @@ public class MeetingController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    cVar2 = FUN_18182a3a0(lVar10,*(uint32 *)(lVar9 + 16),DAT_181d8f398);
-                    if (!cVar2) goto LAB_180e58df0;
+                    cVar2 = FUN_18182a9b0(lVar10,*(uint32 *)(lVar9 + 16),DAT_181d8f3b0);
+                    if (!cVar2) goto LAB_180e59400;
                   }
                   if (this.targetForce == null) {
                           // WARNING: Subroutine does not return
@@ -2034,7 +2034,7 @@ public class MeetingController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    FUN_18182a0b0(lVar7,*(uint32 *)(lVar9 + 16));
+                    FUN_18182a6c0(lVar7,*(uint32 *)(lVar9 + 16));
                   }
                   if (this.targetForce == null) {
                           // WARNING: Subroutine does not return
@@ -2048,7 +2048,7 @@ public class MeetingController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    FUN_18182a0b0(lVar8,*(uint32 *)(lVar9 + 16));
+                    FUN_18182a6c0(lVar8,*(uint32 *)(lVar9 + 16));
                   }
                 }
               } while( true );
@@ -2056,7 +2056,7 @@ public class MeetingController
             throw; // [null/range check failed]
           }
         }
-        goto LAB_180e5d385;
+        goto LAB_180e5d995;
         while( true ) {
           lVar11 = new MissionData(0);
           MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
@@ -2068,57 +2068,57 @@ public class MeetingController
           lVar12 = MeetingController.GetSkillRarelv(this,lVar8,uVar4,0,uVar13);
           if ((lVar12 == null) || (lVar15 = *(int64 *)(lVar11 + 120)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar12 + 24) < 1) {
-            lVar12 = FUN_180002f80(lVar15,0,DAT_181d95108);
+            lVar12 = FUN_180002f80(lVar15,0,DAT_181d95120);
             if ((lVar12 == null) || (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
-            lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88);
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
-            local_res20[0] = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
+            lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94ea0);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar8 + 24),0);
+            local_res20[0] = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa30);
             uVar14 = Int32.ToString(local_res20,0);
             if (lVar12 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar12 + 24) = uVar14;
             lVar12 = FUN_18046c100(0);
             if (((((*(int64 *)(lVar11 + 120) == 0) ||
-                  (lVar15 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+                  (lVar15 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95120)) == null) ||
                  (*(int64 *)(lVar15 + 56) == 0)) ||
-                ((lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),0,DAT_181d94e88), lVar15 == null ||
+                ((lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),0,DAT_181d94ea0), lVar15 == null ||
                  (uVar4 = Int32.Parse(*(uint64 *)(lVar15 + 24),0), lVar12 == null)))) ||
                (lVar12 = GameDataController.GetSkillDataBase(lVar12,uVar4,0)) == null)
             throw; // [null/range check failed]
             GameController.GetGameMaxDifficulty(0);
-            fVar20 = (float)FUN_1810e36c0();
+            fVar20 = (float)FUN_1810e3cd0();
             *(float *)(lVar11 + 44) = fVar20;
             *(float *)(lVar11 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar11 + 140);
           }
           else {
-            lVar15 = FUN_180002f80(lVar15,0,DAT_181d95108);
+            lVar15 = FUN_180002f80(lVar15,0,DAT_181d95120);
             if ((lVar15 == null) || (*(int64 *)(lVar15 + 56) == 0)) throw; // [null/range check failed]
-            lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),0,DAT_181d94e88);
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar12 + 24),0);
-            local_res20[0] = FUN_1800d6760(lVar12,uVar4,DAT_181d8fa18);
+            lVar15 = FUN_180002f80(*(int64 *)(lVar15 + 56),0,DAT_181d94ea0);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar12 + 24),0);
+            local_res20[0] = FUN_1800d6760(lVar12,uVar4,DAT_181d8fa30);
             uVar14 = Int32.ToString(local_res20,0);
             if (lVar15 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar15 + 24) = uVar14;
           }
           if ((((*(int64 *)(lVar11 + 120) == 0) ||
-               (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+               (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95120)) == null) ||
               (*(int64 *)(lVar12 + 56) == 0)) ||
-             (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88)) == null)
+             (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94ea0)) == null)
           throw; // [null/range check failed]
           uVar4 = Int32.Parse(*(uint64 *)(lVar12 + 24),0);
-          FUN_1817eee00(lVar8,uVar4,DAT_181d8f618);
+          FUN_1817ef410(lVar8,uVar4,DAT_181d8f630);
           if (((*(int64 *)(lVar11 + 120) == 0) ||
-              (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+              (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95120)) == null) ||
              ((*(int64 *)(lVar11 + 56) == 0 ||
-              (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88)) == null)))
+              (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94ea0)) == null)))
           throw; // [null/range check failed]
           *(uint32 *)(lVar11 + 40) = 0x3f800000;
-          FUN_18181e0a0(lVar6);
+          FUN_18181e6b0(lVar6);
           uVar19 = uVar19 + 1;
           if (1 < (int)uVar19) break;
-        LAB_180e5a760:
+        LAB_180e5ad70:
           if (*(int *)(lVar8 + 24) < 1) break;
         }
-        LAB_180e5aae0:
+        LAB_180e5b0f0:
         uVar4 = (uint32)((uint64)uVar13 >> 32);
         if (lVar9 != null) {
           if (0 < *(int *)(lVar9 + 24)) {
@@ -2146,7 +2146,7 @@ public class MeetingController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar12 = *(int64 *)(*(int64 *)(lVar12 + 16) + 32);
-              uVar19 = FUN_180d95a30(0,*(uint32 *)(lVar9 + 24),0);
+              uVar19 = FUN_180d96040(0,*(uint32 *)(lVar9 + 24),0);
               if (*(uint32 *)(lVar9 + 24) <= uVar19) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -2172,7 +2172,7 @@ public class MeetingController
                  || (lVar9 = GameDataController.GetSkillDataBase(lVar12,uVar4,0)) == null)
               throw; // [null/range check failed]
               GameController.GetGameMaxDifficulty(0);
-              fVar20 = (float)FUN_1810e36c0();
+              fVar20 = (float)FUN_1810e3cd0();
               *(float *)(lVar11 + 44) = fVar20;
               *(float *)(lVar11 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar11 + 140);
             }
@@ -2187,7 +2187,7 @@ public class MeetingController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 32);
-              uVar19 = FUN_180d95a30(0,*(uint32 *)(lVar12 + 24),0);
+              uVar19 = FUN_180d96040(0,*(uint32 *)(lVar12 + 24),0);
               if (*(uint32 *)(lVar12 + 24) <= uVar19) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -2211,7 +2211,7 @@ public class MeetingController
             lVar9 = *(int64 *)(*(int64 *)(lVar9 + 16) + 32);
             if (lVar9 == null) throw; // [null/range check failed]
             *(uint32 *)(lVar9 + 40) = 0x3f800000;
-            FUN_18181e0a0(lVar6,lVar11,DAT_181d94908);
+            FUN_18181e6b0(lVar6,lVar11,DAT_181d94920);
           }
           uVar4 = (uint32)((uint64)uVar13 >> 32);
           if (lVar10 != null) {
@@ -2240,7 +2240,7 @@ public class MeetingController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar11 = *(int64 *)(*(int64 *)(lVar11 + 16) + 32);
-                uVar19 = FUN_180d95a30(0,*(uint32 *)(lVar10 + 24),0);
+                uVar19 = FUN_180d96040(0,*(uint32 *)(lVar10 + 24),0);
                 if (*(uint32 *)(lVar10 + 24) <= uVar19) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
@@ -2269,7 +2269,7 @@ public class MeetingController
                    (lVar10 = GameDataController.GetSkillDataBase(lVar11,uVar4,0)) == null)
                 throw; // [null/range check failed]
                 GameController.GetGameMaxDifficulty(0);
-                fVar20 = (float)FUN_1810e36c0();
+                fVar20 = (float)FUN_1810e3cd0();
                 *(float *)(lVar9 + 44) = fVar20;
                 *(float *)(lVar9 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar9 + 140);
               }
@@ -2285,7 +2285,7 @@ public class MeetingController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar10 = *(int64 *)(*(int64 *)(lVar10 + 16) + 32);
-                uVar19 = FUN_180d95a30(0,*(uint32 *)(lVar11 + 24),0);
+                uVar19 = FUN_180d96040(0,*(uint32 *)(lVar11 + 24),0);
                 if (*(uint32 *)(lVar11 + 24) <= uVar19) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
@@ -2311,7 +2311,7 @@ public class MeetingController
               lVar10 = *(int64 *)(*(int64 *)(lVar10 + 16) + 32);
               if (lVar10 == null) throw; // [null/range check failed]
               *(uint32 *)(lVar10 + 40) = 0x3f800000;
-              FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+              FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
             }
             uVar4 = (uint32)((uint64)uVar13 >> 32);
             if (lVar7 != null) {
@@ -2340,7 +2340,7 @@ public class MeetingController
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar10 = *(int64 *)(*(int64 *)(lVar10 + 16) + 32);
-                  uVar19 = FUN_180d95a30(0,*(uint32 *)(lVar7 + 24),0);
+                  uVar19 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
                   if (*(uint32 *)(lVar7 + 24) <= uVar19) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
@@ -2369,7 +2369,7 @@ public class MeetingController
                      (lVar7 = GameDataController.GetSkillDataBase(lVar10,uVar4,0)) == null)
                   throw; // [null/range check failed]
                   GameController.GetGameMaxDifficulty(0);
-                  fVar20 = (float)FUN_1810e36c0();
+                  fVar20 = (float)FUN_1810e3cd0();
                   *(float *)(lVar9 + 44) = fVar20;
                   *(float *)(lVar9 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar9 + 140);
                 }
@@ -2385,7 +2385,7 @@ public class MeetingController
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 32);
-                  uVar19 = FUN_180d95a30(0,*(uint32 *)(lVar10 + 24),0);
+                  uVar19 = FUN_180d96040(0,*(uint32 *)(lVar10 + 24),0);
                   if (*(uint32 *)(lVar10 + 24) <= uVar19) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
@@ -2410,15 +2410,15 @@ public class MeetingController
                 lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 32);
                 if (lVar7 == null) throw; // [null/range check failed]
                 *(uint32 *)(lVar7 + 40) = 0x3f800000;
-                FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+                FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
               }
-              FUN_1812f9a10(lVar8,DAT_181d8f318);
+              FUN_1812fa020(lVar8,DAT_181d8f330);
               uVar19 = uVar17;
               while (lVar7 = *(int64 *)(targetHero + 0x158)) != null {
                 if ((int)*(uint32 *)(lVar7 + 24) <= (int)uVar19) {
                   uVar19 = uVar17;
-                  if (*(int *)(lVar8 + 24) < 1) goto LAB_180e5baa9;
-                  goto LAB_180e5b5e6;
+                  if (*(int *)(lVar8 + 24) < 1) goto LAB_180e5c0b9;
+                  goto LAB_180e5bbf6;
                 }
                 if (*(uint32 *)(lVar7 + 24) <= uVar19) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2426,7 +2426,7 @@ public class MeetingController
                 fVar20 = lVar7[uVar19];
                 fVar21 = (float)HeroData.GetMaxLivingSkill(targetHero);
                 if (fVar20 < fVar21) {
-                  FUN_18182a0b0(lVar8);
+                  FUN_18182a6c0(lVar8);
                 }
                 uVar19 = uVar19 + 1;
               }
@@ -2443,30 +2443,30 @@ public class MeetingController
           lVar7 = MissionData.SetForceMission(lVar7,"提升技艺",9);
           if (lVar7 == null) throw; // [null/range check failed]
           fVar20 = *(float *)(lVar7 + 44);
-          lVar9 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar9,DAT_181d8f098);
+          lVar9 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar9,DAT_181d8f0b0);
           for (uVar18 = uVar17; (int)uVar18 < *(int *)(lVar8 + 24); uVar18 = uVar18 + 1) {
             lVar10 = FUN_18046c0a0(0);
             if (((lVar10 == null) || (*(int64 *)(lVar10 + 32) == 0)) ||
                (lVar10 = WorldData.Player(*(int64 *)(lVar10 + 32),0)) == null)
             throw; // [null/range check failed]
             lVar10 = *(int64 *)(lVar10 + 0x158);
-            uVar4 = FUN_1800d6760(lVar8,uVar18,DAT_181d8fa18);
+            uVar4 = FUN_1800d6760(lVar8,uVar18,DAT_181d8fa30);
             if (lVar10 == null) throw; // [null/range check failed]
-            fVar21 = (float)FUN_1800d6790(lVar10,uVar4,DAT_181da1078);
+            fVar21 = (float)FUN_1800d6790(lVar10,uVar4,DAT_181da1090);
             if (ABS(fVar20 - fVar21 * 0.125) < 0.5) {
-              uVar4 = FUN_1800d6760(lVar8,uVar18,DAT_181d8fa18);
+              uVar4 = FUN_1800d6760(lVar8,uVar18,DAT_181d8fa30);
               if (lVar9 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar9,uVar4,DAT_181d8f218);
+              FUN_18182a6c0(lVar9,uVar4,DAT_181d8f230);
             }
           }
           if ((lVar9 == null) || (lVar10 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) < 1) {
-            lVar9 = FUN_180002f80(lVar10,0,DAT_181d95108);
+            lVar9 = FUN_180002f80(lVar10,0,DAT_181d95120);
             if ((lVar9 == null) || (*(int64 *)(lVar9 + 56) == 0)) throw; // [null/range check failed]
-            lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88);
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
-            local_res20[0] = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
+            lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94ea0);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar8 + 24),0);
+            local_res20[0] = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa30);
             uVar14 = Int32.ToString(local_res20,0);
             if (lVar9 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar9 + 24) = uVar14;
@@ -2475,55 +2475,55 @@ public class MeetingController
                (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) throw; // [null/range check failed]
             lVar9 = *(int64 *)(lVar9 + 0x158);
             if (((*(int64 *)(lVar7 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
                ((*(int64 *)(lVar10 + 56) == 0 ||
-                ((lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88), lVar10 == null ||
+                ((lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0), lVar10 == null ||
                  (uVar4 = Int32.Parse(*(uint64 *)(lVar10 + 24),0), lVar9 == null))))))
             throw; // [null/range check failed]
-            FUN_1800d6790(lVar9,uVar4,DAT_181da1078);
+            FUN_1800d6790(lVar9,uVar4,DAT_181da1090);
             GameController.GetGameMaxDifficulty(0);
-            fVar20 = (float)FUN_1810e36c0();
+            fVar20 = (float)FUN_1810e3cd0();
             *(float *)(lVar7 + 44) = fVar20;
             *(float *)(lVar7 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar7 + 140);
           }
           else {
-            lVar10 = FUN_180002f80(lVar10,0,DAT_181d95108);
+            lVar10 = FUN_180002f80(lVar10,0,DAT_181d95120);
             if ((lVar10 == null) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar9 + 24),0);
-            local_res20[0] = FUN_1800d6760(lVar9,uVar4,DAT_181d8fa18);
+            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar9 + 24),0);
+            local_res20[0] = FUN_1800d6760(lVar9,uVar4,DAT_181d8fa30);
             uVar14 = Int32.ToString(local_res20,0);
             if (lVar10 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar10 + 24) = uVar14;
           }
           if ((((*(int64 *)(lVar7 + 120) == 0) ||
-               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
               (*(int64 *)(lVar9 + 56) == 0)) ||
-             (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88)) == null)
+             (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94ea0)) == null)
           throw; // [null/range check failed]
           uVar4 = Int32.Parse(*(uint64 *)(lVar9 + 24),0);
-          FUN_1817eee00(lVar8,uVar4,DAT_181d8f618);
+          FUN_1817ef410(lVar8,uVar4,DAT_181d8f630);
           if (((*(int64 *)(lVar7 + 120) == 0) ||
-              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
              ((*(int64 *)(lVar7 + 56) == 0 ||
-              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94e88)) == null)))
+              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94ea0)) == null)))
           throw; // [null/range check failed]
           *(uint32 *)(lVar7 + 40) = 0x3f800000;
-          FUN_18181e0a0(lVar6);
+          FUN_18181e6b0(lVar6);
           uVar19 = uVar19 + 1;
           if (1 < (int)uVar19) break;
-        LAB_180e5b5e6:
+        LAB_180e5bbf6:
           uVar4 = (uint32)((uint64)uVar13 >> 32);
           if (*(int *)(lVar8 + 24) < 1) break;
         }
-        LAB_180e5baa9:
-        FUN_1812f9a10(lVar8,DAT_181d8f318);
+        LAB_180e5c0b9:
+        FUN_1812fa020(lVar8,DAT_181d8f330);
         uVar19 = uVar17;
         while (lVar7 = *(int64 *)(targetHero + 0x260)) != null {
           if ((int)*(uint32 *)(lVar7 + 24) <= (int)uVar19) {
             uVar19 = uVar17;
-            if (*(int *)(lVar8 + 24) < 1) goto LAB_180e5bef1;
-            goto LAB_180e5bb64;
+            if (*(int *)(lVar8 + 24) < 1) goto LAB_180e5c501;
+            goto LAB_180e5c174;
           }
           if (*(uint32 *)(lVar7 + 24) <= uVar19) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2532,9 +2532,9 @@ public class MeetingController
              (lVar7 = KungfuSkillLvData.DataBase()) == null) break;
           if (*(int *)(lVar7 + 52) < 4) {
             if ((*(int64 *)(targetHero + 0x260) == 0) ||
-               (lVar7 = FUN_180002f80(*(int64 *)(targetHero + 0x260),uVar19,DAT_181d92590)) == null)
+               (lVar7 = FUN_180002f80(*(int64 *)(targetHero + 0x260),uVar19,DAT_181d925a8)) == null)
             break;
-            FUN_18182a0b0(lVar8);
+            FUN_18182a6c0(lVar8);
           }
           uVar19 = uVar19 + 1;
         }
@@ -2552,68 +2552,68 @@ public class MeetingController
                             (this,lVar8,uVar4,0,uVar13,in_stack_fffffffffffffea0);
           if ((lVar9 == null) || (lVar10 = *(int64 *)(lVar7 + 120)) == null) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) < 1) {
-            lVar9 = FUN_180002f80(lVar10,0,DAT_181d95108);
+            lVar9 = FUN_180002f80(lVar10,0,DAT_181d95120);
             if ((lVar9 == null) || (*(int64 *)(lVar9 + 56) == 0)) throw; // [null/range check failed]
-            lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88);
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
-            local_res20[0] = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
+            lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94ea0);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar8 + 24),0);
+            local_res20[0] = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa30);
             uVar14 = Int32.ToString(local_res20,0);
             if (lVar9 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar9 + 24) = uVar14;
             lVar9 = FUN_18046c100(0);
             if ((((*(int64 *)(lVar7 + 120) == 0) ||
-                 (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+                 (lVar10 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
                 (*(int64 *)(lVar10 + 56) == 0)) ||
-               (((lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88), lVar10 == null ||
+               (((lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0), lVar10 == null ||
                  (uVar4 = Int32.Parse(*(uint64 *)(lVar10 + 24),0), lVar9 == null)) ||
                 (lVar9 = GameDataController.GetSkillDataBase(lVar9,uVar4,0)) == null)))
             throw; // [null/range check failed]
             GameController.GetGameMaxDifficulty(0);
-            fVar20 = (float)FUN_1810e36c0();
+            fVar20 = (float)FUN_1810e3cd0();
             *(float *)(lVar7 + 44) = fVar20;
             *(float *)(lVar7 + 144) = (fVar20 * 0.2 + 1.0) * *(float *)(lVar7 + 140);
           }
           else {
-            lVar10 = FUN_180002f80(lVar10,0,DAT_181d95108);
+            lVar10 = FUN_180002f80(lVar10,0,DAT_181d95120);
             if ((lVar10 == null) || (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar9 + 24),0);
-            local_res20[0] = FUN_1800d6760(lVar9,uVar4,DAT_181d8fa18);
+            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar9 + 24),0);
+            local_res20[0] = FUN_1800d6760(lVar9,uVar4,DAT_181d8fa30);
             uVar14 = Int32.ToString(local_res20,0);
             if (lVar10 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar10 + 24) = uVar14;
           }
           if ((((*(int64 *)(lVar7 + 120) == 0) ||
-               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+               (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
               (*(int64 *)(lVar9 + 56) == 0)) ||
-             (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88)) == null)
+             (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94ea0)) == null)
           throw; // [null/range check failed]
           uVar4 = Int32.Parse(*(uint64 *)(lVar9 + 24),0);
-          FUN_1817eee00(lVar8,uVar4,DAT_181d8f618);
+          FUN_1817ef410(lVar8,uVar4,DAT_181d8f630);
           if (((*(int64 *)(lVar7 + 120) == 0) ||
-              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
              ((*(int64 *)(lVar7 + 56) == 0 ||
-              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94e88)) == null)))
+              (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94ea0)) == null)))
           throw; // [null/range check failed]
           *(uint32 *)(lVar7 + 40) = 0x3f800000;
-          FUN_18181e0a0(lVar6);
+          FUN_18181e6b0(lVar6);
           uVar19 = uVar19 + 1;
           if (1 < (int)uVar19) break;
-        LAB_180e5bb64:
+        LAB_180e5c174:
           uVar4 = (uint32)((uint64)uVar13 >> 32);
           if (*(int *)(lVar8 + 24) < 1) break;
         }
-        LAB_180e5bef1:
+        LAB_180e5c501:
         if (*(int *)(targetHero + 88) == 0) {
-          lVar8 = il2cpp_internal(DAT_181d952d0);
-          FUN_18132faf0(lVar8,DAT_181d97508);
+          lVar8 = il2cpp_internal(DAT_181d952e8);
+          FUN_181330100(lVar8,DAT_181d97520);
           uVar19 = uVar17;
           do {
-            uVar13 = il2cpp_internal(DAT_181d91c88);
+            uVar13 = il2cpp_internal(DAT_181d91ca0);
             in_stack_fffffffffffffea0 = in_stack_fffffffffffffea0 & 0xffffffff00000000;
             PlotRandomHeroData.ctor(uVar13,0,0,0,0,in_stack_fffffffffffffea0,1,0,1,0,0,0);
             if (lVar8 == null) throw; // [null/range check failed]
-            FUN_18181e0a0(lVar8);
+            FUN_18181e6b0(lVar8);
             uVar19 = uVar19 + 1;
           } while ((int)uVar19 < 2);
           lVar7 = FUN_18046c0a0(0);
@@ -2629,7 +2629,7 @@ public class MeetingController
             uVar4 = (uint32)((uint64)uVar13 >> 32);
             if (lVar7[uVar19] != 0) {
               lVar9 = new MissionData(0);
-              lVar10 = FUN_180002f80(lVar7,uVar19,DAT_181d8bb98);
+              lVar10 = FUN_180002f80(lVar7,uVar19,DAT_181d8bbb0);
               if ((lVar10 == null) || (lVar9 == null)) throw; // [null/range check failed]
               uVar13 = CONCAT44(uVar4,2);
               lVar9 = MissionData.SetForceMission
@@ -2638,20 +2638,20 @@ public class MeetingController
               ;
               if ((lVar9 == null) ||
                  ((((*(int64 *)(lVar9 + 120) == 0 ||
-                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                    (*(int64 *)(lVar10 + 56) == 0)) ||
-                  (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)))
+                  (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0)) == null)))
               throw; // [null/range check failed]
               *(uint32 *)(lVar10 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar9 + 120) == 0) ||
-                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                  (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-              lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
-              lVar11 = FUN_180002f80(lVar7,uVar19,DAT_181d8bb98);
+              lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
+              lVar11 = FUN_180002f80(lVar7,uVar19,DAT_181d8bbb0);
               if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
               throw; // [null/range check failed]
               *(uint64 *)(lVar10 + 24) = uVar14;
-              FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+              FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
             }
           }
           lVar7 = FUN_18046c0a0(0);
@@ -2667,7 +2667,7 @@ public class MeetingController
             uVar4 = (uint32)((uint64)uVar13 >> 32);
             if (lVar7[uVar19] != 0) {
               lVar9 = new MissionData(0);
-              lVar10 = FUN_180002f80(lVar7,uVar19,DAT_181d8bb98);
+              lVar10 = FUN_180002f80(lVar7,uVar19,DAT_181d8bbb0);
               if ((lVar10 == null) || (lVar9 == null)) throw; // [null/range check failed]
               uVar13 = CONCAT44(uVar4,3);
               lVar9 = MissionData.SetForceMission
@@ -2676,20 +2676,20 @@ public class MeetingController
               ;
               if (((lVar9 == null) ||
                   (((*(int64 *)(lVar9 + 120) == 0 ||
-                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                    (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                    (*(int64 *)(lVar10 + 56) == 0)))) ||
-                 (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)
+                 (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0)) == null)
               throw; // [null/range check failed]
               *(uint32 *)(lVar10 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar9 + 120) == 0) ||
-                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                  (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                  (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-              lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
-              lVar11 = FUN_180002f80(lVar7,uVar19,DAT_181d8bb98);
+              lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
+              lVar11 = FUN_180002f80(lVar7,uVar19,DAT_181d8bbb0);
               if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
               throw; // [null/range check failed]
               *(uint64 *)(lVar10 + 24) = uVar14;
-              FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+              FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
             }
           }
           lVar7 = FUN_18046c0a0(0);
@@ -2704,7 +2704,7 @@ public class MeetingController
             uVar4 = (uint32)((uint64)uVar13 >> 32);
             if (lVar8[uVar17] != 0) {
               lVar7 = new MissionData(0);
-              lVar9 = FUN_180002f80(lVar8,uVar17,DAT_181d8bb98);
+              lVar9 = FUN_180002f80(lVar8,uVar17,DAT_181d8bbb0);
               if ((lVar9 == null) || (lVar7 == null)) throw; // [null/range check failed]
               uVar13 = CONCAT44(uVar4,4);
               lVar7 = MissionData.SetForceMission
@@ -2712,20 +2712,20 @@ public class MeetingController
                                  (float)*(int *)(lVar9 + 184) + (float)*(int *)(lVar9 + 184),uVar13,0);
               if (((lVar7 == null) ||
                   (((*(int64 *)(lVar7 + 120) == 0 ||
-                    (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+                    (lVar9 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
                    (*(int64 *)(lVar9 + 56) == 0)))) ||
-                 (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94e88)) == null)
+                 (lVar9 = FUN_180002f80(*(int64 *)(lVar9 + 56),0,DAT_181d94ea0)) == null)
               throw; // [null/range check failed]
               *(uint32 *)(lVar9 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar7 + 120) == 0) ||
-                  (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95108)) == null) ||
+                  (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 120),0,DAT_181d95120)) == null) ||
                  (*(int64 *)(lVar7 + 56) == 0)) throw; // [null/range check failed]
-              lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94e88);
-              lVar9 = FUN_180002f80(lVar8,uVar17,DAT_181d8bb98);
+              lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 56),0,DAT_181d94ea0);
+              lVar9 = FUN_180002f80(lVar8,uVar17,DAT_181d8bbb0);
               if ((lVar9 == null) || (uVar14 = Int32.ToString(lVar9 + 88,0), lVar7 == null))
               throw; // [null/range check failed]
               *(uint64 *)(lVar7 + 24) = uVar14;
-              FUN_18181e0a0(lVar6);
+              FUN_18181e6b0(lVar6);
             }
           }
         }
@@ -2760,11 +2760,11 @@ public class MeetingController
         *(uint32 *)(lVar7 + 40) = 0x3f800000;
         uVar4 = Mathf.RoundToInt(*(float *)(lVar8 + 44) * 200.0,0);
         *(uint32 *)(lVar8 + 132) = uVar4;
-        goto LAB_180e5c6b4;
-        LAB_180e58f26:
-        ZhSegment.Initialize(&local_100,DAT_181d8c568);
-        lVar9 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar9,DAT_181d8f098);
+        goto LAB_180e5ccc4;
+        LAB_180e59536:
+        ZhSegment.Initialize(&local_100,DAT_181d8c580);
+        lVar9 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar9,DAT_181d8f0b0);
         uVar19 = uVar17;
         do {
           lVar10 = FUN_18046c0a0(0);
@@ -2772,70 +2772,70 @@ public class MeetingController
           lVar10 = GameController.GetRandomArea(lVar10,1,lVar9);
           if (lVar10 != null) {
             if (lVar9 == null) throw; // [null/range check failed]
-            FUN_18182a0b0(lVar9,*(uint32 *)(lVar10 + 16),DAT_181d8f218);
+            FUN_18182a6c0(lVar9,*(uint32 *)(lVar10 + 16),DAT_181d8f230);
             lVar11 = new MissionData(0);
             MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
             if (((lVar11 == null) ||
                 (lVar11 = MissionData.SetForceMission(lVar11,"进行探索",1)) == null) ||
                ((*(int64 *)(lVar11 + 120) == 0 ||
-                (((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108), lVar12 == null ||
+                (((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95120), lVar12 == null ||
                   (*(int64 *)(lVar12 + 56) == 0)) ||
-                 (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88)) == null)))))
+                 (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94ea0)) == null)))))
             throw; // [null/range check failed]
             *(uint32 *)(lVar12 + 40) = 0x3f800000;
             if (((*(int64 *)(lVar11 + 120) == 0) ||
-                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95120)) == null) ||
                (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
-            lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88);
+            lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94ea0);
             uVar13 = Int32.ToString((uint32 *)(lVar10 + 16),0);
             if (lVar12 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar12 + 24) = uVar13;
             if (lVar6 == null) throw; // [null/range check failed]
-            FUN_18181e0a0(lVar6,lVar11,DAT_181d94908);
+            FUN_18181e6b0(lVar6,lVar11,DAT_181d94920);
           }
           uVar19 = uVar19 + 1;
         } while ((int)uVar19 < 2);
         if (lVar9 == null) throw; // [null/range check failed]
-        FUN_1812f9a10(lVar9,DAT_181d8f318);
+        FUN_1812fa020(lVar9,DAT_181d8f330);
         uVar19 = uVar17;
         do {
           lVar10 = FUN_18046c0a0(0);
           if (lVar10 == null) throw; // [null/range check failed]
           lVar10 = GameController.GetRandomArea(lVar10,0,lVar9,0);
           if (lVar10 != null) {
-            FUN_18182a0b0(lVar9,*(uint32 *)(lVar10 + 16),DAT_181d8f218);
+            FUN_18182a6c0(lVar9,*(uint32 *)(lVar10 + 16),DAT_181d8f230);
             lVar11 = new MissionData(0);
             MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
             if (((((lVar11 == null) ||
                   (lVar11 = MissionData.SetForceMission(lVar11,"岗哨巡查",21)) == null) ||
                  (*(int64 *)(lVar11 + 120) == 0)) ||
-                ((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108), lVar12 == null ||
+                ((lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95120), lVar12 == null ||
                  (*(int64 *)(lVar12 + 56) == 0)))) ||
-               (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88)) == null)
+               (lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94ea0)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar12 + 40) = 0x3f800000;
             if (((*(int64 *)(lVar11 + 120) == 0) ||
-                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95108)) == null) ||
+                (lVar12 = FUN_180002f80(*(int64 *)(lVar11 + 120),0,DAT_181d95120)) == null) ||
                (*(int64 *)(lVar12 + 56) == 0)) throw; // [null/range check failed]
-            lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94e88);
+            lVar12 = FUN_180002f80(*(int64 *)(lVar12 + 56),0,DAT_181d94ea0);
             uVar13 = Int32.ToString((uint32 *)(lVar10 + 16),0);
             if (lVar12 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar12 + 24) = uVar13;
             if (lVar6 == null) throw; // [null/range check failed]
-            FUN_18181e0a0(lVar6,lVar11,DAT_181d94908);
+            FUN_18181e6b0(lVar6,lVar11,DAT_181d94920);
           }
           uVar19 = uVar19 + 1;
         } while ((int)uVar19 < 2);
         if (**(int **)(DAT_181d73d40 + 184) != 2) {
-          lVar9 = il2cpp_internal(DAT_181d952d0);
-          FUN_18132faf0(lVar9,DAT_181d97508);
+          lVar9 = il2cpp_internal(DAT_181d952e8);
+          FUN_181330100(lVar9,DAT_181d97520);
           uVar19 = uVar17;
           do {
-            uVar13 = il2cpp_internal(DAT_181d91c88);
+            uVar13 = il2cpp_internal(DAT_181d91ca0);
             in_stack_fffffffffffffea0 = in_stack_fffffffffffffea0 & 0xffffffff00000000;
             PlotRandomHeroData.ctor(uVar13,0,0,0,0,in_stack_fffffffffffffea0,3,0,1,0,0,0);
             if (lVar9 == null) throw; // [null/range check failed]
-            FUN_18181e0a0(lVar9);
+            FUN_18181e6b0(lVar9);
             uVar19 = uVar19 + 1;
           } while ((int)uVar19 < 2);
           lVar10 = FUN_18046c0a0(0);
@@ -2851,7 +2851,7 @@ public class MeetingController
             uVar4 = (uint32)((uint64)uVar13 >> 32);
             if (lVar9[uVar19] != 0) {
               lVar10 = new MissionData(0);
-              lVar11 = FUN_180002f80(lVar9,uVar19,DAT_181d8bb98);
+              lVar11 = FUN_180002f80(lVar9,uVar19,DAT_181d8bbb0);
               if ((lVar11 == null) || (lVar10 == null)) throw; // [null/range check failed]
               uVar13 = CONCAT44(uVar4,1);
               lVar10 = MissionData.SetForceMission
@@ -2861,23 +2861,23 @@ public class MeetingController
               uVar4 = (uint32)((uint64)uVar13 >> 32);
               if (((lVar10 == null) ||
                   (((*(int64 *)(lVar10 + 120) == 0 ||
-                    (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null)
+                    (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95120)) == null)
                    || (*(int64 *)(lVar11 + 56) == 0)))) ||
-                 (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88)) == null)
+                 (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94ea0)) == null)
               throw; // [null/range check failed]
               *(uint32 *)(lVar11 + 40) = 0x3f800000;
               if (((*(int64 *)(lVar10 + 120) == 0) ||
-                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95120)) == null) ||
                  (*(int64 *)(lVar11 + 56) == 0)) throw; // [null/range check failed]
-              lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88);
-              lVar12 = FUN_180002f80(lVar9,uVar19,DAT_181d8bb98);
+              lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94ea0);
+              lVar12 = FUN_180002f80(lVar9,uVar19,DAT_181d8bbb0);
               if ((lVar12 == null) || (uVar13 = Int32.ToString(lVar12 + 88,0), lVar11 == null))
               throw; // [null/range check failed]
               *(uint64 *)(lVar11 + 24) = uVar13;
               if (lVar6 == null) throw; // [null/range check failed]
-              FUN_18181e0a0(lVar6,lVar10,DAT_181d94908);
+              FUN_18181e6b0(lVar6,lVar10,DAT_181d94920);
               lVar10 = new MissionData(0);
-              lVar11 = FUN_180002f80(lVar9,uVar19,DAT_181d8bb98);
+              lVar11 = FUN_180002f80(lVar9,uVar19,DAT_181d8bbb0);
               if ((lVar11 == null) || (lVar10 == null)) throw; // [null/range check failed]
               uVar13 = CONCAT44(uVar4,1);
               lVar10 = MissionData.SetForceMission
@@ -2886,22 +2886,22 @@ public class MeetingController
                                  );
               if ((lVar10 == null) ||
                  (((*(int64 *)(lVar10 + 120) == 0 ||
-                   (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                   (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95120)) == null) ||
                   (*(int64 *)(lVar11 + 56) == 0)))) throw; // [null/range check failed]
-              lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88);
+              lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94ea0);
               Random.Range();
               iVar3 = Mathf.RoundToInt();
               if (lVar11 == null) throw; // [null/range check failed]
               *(float *)(lVar11 + 40) = (float)iVar3;
               if (((*(int64 *)(lVar10 + 120) == 0) ||
-                  (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                  (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95120)) == null) ||
                  (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-              lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
-              lVar11 = FUN_180002f80(lVar9,uVar19,DAT_181d8bb98);
+              lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
+              lVar11 = FUN_180002f80(lVar9,uVar19,DAT_181d8bbb0);
               if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
               throw; // [null/range check failed]
               *(uint64 *)(lVar10 + 24) = uVar14;
-              FUN_18181e0a0(lVar6);
+              FUN_18181e6b0(lVar6);
             }
           }
         }
@@ -2914,34 +2914,34 @@ public class MeetingController
             lVar9 = new MissionData(0);
             lVar10 = *(int64 *)(pStatics_3d40 + 0x608);
             if (lVar10 == null) throw; // [null/range check failed]
-            uVar13 = FUN_180002f80(lVar10,uVar19,DAT_181da4358);
+            uVar13 = FUN_180002f80(lVar10,uVar19,DAT_181da4370);
             uVar13 = String.Concat("降低",uVar13,0);
             MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
             if (((((lVar9 == null) || (lVar9 = MissionData.SetForceMission(lVar9,uVar13,17)) == null)
                  || (*(int64 *)(lVar9 + 120) == 0)) ||
-                ((lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108), lVar10 == null ||
+                ((lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120), lVar10 == null ||
                  (*(int64 *)(lVar10 + 56) == 0)))) ||
-               (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)
+               (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar10 + 32) = uVar19;
             if (((*(int64 *)(lVar9 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
+            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
             Random.Range();
             iVar3 = Mathf.RoundToInt();
             if (lVar10 == null) throw; // [null/range check failed]
             *(float *)(lVar10 + 40) = (float)iVar3;
             if (((*(int64 *)(lVar9 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
+            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
             lVar11 = FUN_18046c0a0(0);
             if (((lVar11 == null) || (lVar11 = GameController.GetRandomArea(lVar11,3,0)) == null) ||
                (uVar13 = Int32.ToString(lVar11 + 16,0), lVar10 == null)) throw; // [null/range check failed]
             *(uint64 *)(lVar10 + 24) = uVar13;
             if (lVar6 == null) throw; // [null/range check failed]
-            FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+            FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
             uVar19 = uVar19 + 1;
           } while ((int)uVar19 < 3);
         }
@@ -2951,22 +2951,22 @@ public class MeetingController
         uVar24 = 0;
         lVar9 = MissionData.SetForceMission(lVar9,"搜集珍宝",22);
         if ((((lVar9 == null) || (*(int64 *)(lVar9 + 120) == 0)) ||
-            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
            (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-        lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
+        lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
         uVar4 = Mathf.RoundToInt(*(float *)(lVar9 + 44) * 0.5,0);
         if (lVar10 == null) throw; // [null/range check failed]
         *(uint32 *)(lVar10 + 32) = uVar4;
         if (((*(int64 *)(lVar9 + 120) == 0) ||
-            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+            (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
            ((*(int64 *)(lVar10 + 56) == 0 ||
-            (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)))
+            (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0)) == null)))
         throw; // [null/range check failed]
         *(uint32 *)(lVar10 + 40) = 0x3f800000;
         uVar4 = Mathf.RoundToInt(*(float *)(lVar9 + 44) * 100.0,0);
         *(uint32 *)(lVar9 + 132) = uVar4;
         if (lVar6 == null) throw; // [null/range check failed]
-        FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+        FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
         if (**(int **)(DAT_181d73d40 + 184) != 2) {
           if (lVar8 == null) throw; // [null/range check failed]
           if (0 < *(int *)(lVar8 + 24)) {
@@ -2976,37 +2976,37 @@ public class MeetingController
             uVar24 = 0;
             lVar9 = MissionData.SetForceMission(lVar9,"窃取资源",18);
             if ((((lVar9 == null) || (*(int64 *)(lVar9 + 120) == 0)) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
+            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
             lVar11 = FUN_18046c0a0(0);
             if (lVar11 == null) throw; // [null/range check failed]
             lVar11 = *(int64 *)(lVar11 + 32);
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
-            uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa18);
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar8 + 24),0);
+            uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d8fa30);
             if (((lVar11 == null) || (lVar11 = WorldData.GetForce(lVar11,uVar4,0)) == null) ||
                (uVar13 = Int32.ToString(lVar11 + 56,0), lVar10 == null)) throw; // [null/range check failed]
             *(uint64 *)(lVar10 + 24) = uVar13;
             if ((((*(int64 *)(lVar9 + 120) == 0) ||
-                 (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95108)) == null) ||
+                 (lVar10 = FUN_180002f80(*(int64 *)(lVar9 + 120),0,DAT_181d95120)) == null) ||
                 (*(int64 *)(lVar10 + 56) == 0)) ||
-               (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88)) == null)
+               (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar10 + 40) = 0x3f800000;
-            FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+            FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
           }
         }
-        lVar9 = il2cpp_internal(DAT_181d952d0);
-        FUN_18132faf0(lVar9,DAT_181d97508);
+        lVar9 = il2cpp_internal(DAT_181d952e8);
+        FUN_181330100(lVar9,DAT_181d97520);
         uVar19 = uVar17;
         do {
           if (targetHero == null) throw; // [null/range check failed]
           iVar3 = Mathf.Clamp(*(uint32 *)(targetHero + 184),0,4);
-          uVar13 = il2cpp_internal(DAT_181d91c88);
+          uVar13 = il2cpp_internal(DAT_181d91ca0);
           uVar24 = uVar24 & 0xffffffff00000000;
           PlotRandomHeroData.ctor(uVar13,1,0,0,0,uVar24,3,0,3,(float)iVar3,0,0);
           if (lVar9 == null) throw; // [null/range check failed]
-          FUN_18181e0a0(lVar9,uVar13,DAT_181d97588);
+          FUN_18181e6b0(lVar9,uVar13,DAT_181d975a0);
           uVar19 = uVar19 + 1;
         } while ((int)uVar19 < 2);
         lVar10 = FUN_18046c0a0(0);
@@ -3023,27 +3023,27 @@ public class MeetingController
           uVar4 = (uint32)((uint64)uVar13 >> 32);
           if (lVar9[uVar17] != 0) {
             lVar10 = new MissionData(0);
-            lVar11 = FUN_180002f80(lVar9,uVar17,DAT_181d8bb98);
+            lVar11 = FUN_180002f80(lVar9,uVar17,DAT_181d8bbb0);
             if ((lVar11 == null) || (lVar10 == null)) throw; // [null/range check failed]
             uVar13 = CONCAT44(uVar4,3);
             lVar10 = MissionData.SetForceMission
                                (lVar10,"挑拨离间",19,(float)*(int *)(lVar11 + 184) * 2.5,uVar13,0);
             if (((lVar10 == null) ||
                 (((*(int64 *)(lVar10 + 120) == 0 ||
-                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                  (lVar11 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95120)) == null) ||
                  (*(int64 *)(lVar11 + 56) == 0)))) ||
-               (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94e88)) == null)
+               (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 56),0,DAT_181d94ea0)) == null)
             throw; // [null/range check failed]
             *(uint32 *)(lVar11 + 40) = 0x40400000;
             if (((*(int64 *)(lVar10 + 120) == 0) ||
-                (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95108)) == null) ||
+                (lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 120),0,DAT_181d95120)) == null) ||
                (*(int64 *)(lVar10 + 56) == 0)) throw; // [null/range check failed]
-            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94e88);
-            lVar11 = FUN_180002f80(lVar9,uVar17,DAT_181d8bb98);
+            lVar10 = FUN_180002f80(*(int64 *)(lVar10 + 56),0,DAT_181d94ea0);
+            lVar11 = FUN_180002f80(lVar9,uVar17,DAT_181d8bbb0);
             if ((lVar11 == null) || (uVar14 = Int32.ToString(lVar11 + 88,0), lVar10 == null))
             throw; // [null/range check failed]
             *(uint64 *)(lVar10 + 24) = uVar14;
-            FUN_18181e0a0(lVar6);
+            FUN_18181e6b0(lVar6);
           }
           uVar17 = uVar17 + 1;
         }
@@ -3088,10 +3088,10 @@ public class MeetingController
           iVar3 = Mathf.RoundToInt((*(float *)(lVar9 + 44) * 0.4 + 1.0) * 5.0,0);
           if (lVar8 == null) throw; // [null/range check failed]
           *(float *)(lVar8 + 40) = (float)iVar3;
-          FUN_18181e0a0(lVar6,lVar9,DAT_181d94908);
+          FUN_18181e6b0(lVar6,lVar9,DAT_181d94920);
         }
         if (lVar7 == null) throw; // [null/range check failed]
-        if (*(int *)(lVar7 + 24) < 1) goto LAB_180e5d385;
+        if (*(int *)(lVar7 + 24) < 1) goto LAB_180e5d995;
         lVar8 = new MissionData(0);
         MeetingController.GetMissionRandomDifficulty(this,targetHero,0);
         if (lVar8 == null) throw; // [null/range check failed]
@@ -3131,23 +3131,23 @@ public class MeetingController
         if (lVar7 == null) throw; // [null/range check failed]
         *(float *)(lVar7 + 40) = (float)iVar3;
         *(uint32 *)(lVar8 + 132) = 0x640;
-        LAB_180e5c6b4:
-        FUN_18181e0a0(lVar6,lVar8,DAT_181d94908);
-        LAB_180e5d385:
+        LAB_180e5ccc4:
+        FUN_18181e6b0(lVar6,lVar8,DAT_181d94920);
+        LAB_180e5d995:
         lVar8 = MeetingController.MainFocusText;
         if (lVar8 == null) {
-          uVar13 = **(uint64 **)(DAT_181d7d580 + 184);
-          lVar8 = new OnTooltipCB(uVar13,DAT_181da7d48,DAT_181dab638);
+          uVar13 = **(uint64 **)(DAT_181d7d598 + 184);
+          lVar8 = new OnTooltipCB(uVar13,DAT_181da7ee0,DAT_181dab650);
           MeetingController.MainFocusText = lVar8;
         }
         if (lVar6 != null) {
-          List_1.Sort(lVar6,lVar8,DAT_181d94b88);
+          List_1.Sort(lVar6,lVar8,DAT_181d94ba0);
           return lVar6;
         }
     }
 
     // Token : 0x6001917
-    // RVA   : 0xE5D800   Offset: 0xE5CC00   Length: 0x247
+    // RVA   : 0xE5DE10   Offset: 0xE5D210   Length: 0x247
     public int GetRandomForceByMissionDifficulty(List<int> availableForceID, float difficulty)
     {
         uint32
@@ -3161,8 +3161,8 @@ public class MeetingController
         int64 lVar5;
         int iVar6;
         float fVar7;
-        lVar3 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar3,DAT_181d8f098);
+        lVar3 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar3,DAT_181d8f0b0);
         iVar6 = 0;
         if (availableForceID != null) {
           for (; iVar6 < *(int *)(availableForceID + 24); iVar6 = iVar6 + 1) {
@@ -3178,21 +3178,21 @@ public class MeetingController
                (lVar4 == null)) throw; // [null/range check failed]
             fVar7 = (float)BigMapPos.Distance(lVar4,*(uint64 *)(lVar5 + 64));
             if (fVar7 <= difficulty * 250.0 + 1500.0) {
-              uVar1 = FUN_1800d6760(availableForceID,iVar6,DAT_181d8fa18);
+              uVar1 = FUN_1800d6760(availableForceID,iVar6,DAT_181d8fa30);
               if (lVar3 == null) throw; // [null/range check failed]
-              FUN_18182a0b0(lVar3,uVar1);
+              FUN_18182a6c0(lVar3,uVar1);
             }
           }
           if (lVar3 != null) {
             if (*(int *)(lVar3 + 24) == 0) {
-              uVar2 = FUN_180d95a30(0,*(int *)(availableForceID + 24),0);
+              uVar2 = FUN_180d96040(0,*(int *)(availableForceID + 24),0);
               if (*(uint32 *)(availableForceID + 24) <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar3 = *(int64 *)(availableForceID + 16);
             }
             else {
-              uVar2 = FUN_180d95a30(0,*(int *)(lVar3 + 24),0);
+              uVar2 = FUN_180d96040(0,*(int *)(lVar3 + 24),0);
               if (*(uint32 *)(lVar3 + 24) <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -3204,7 +3204,7 @@ public class MeetingController
     }
 
     // Token : 0x6001918
-    // RVA   : 0xE5D4B0   Offset: 0xE5C8B0   Length: 0x1E1
+    // RVA   : 0xE5DAC0   Offset: 0xE5CEC0   Length: 0x1E1
     public List<int> GetLivingSkillDiffiCulty(List<int> originList, float difficulty)
     {
         int64 MeetingController.GetLivingSkillDiffiCulty
@@ -3215,8 +3215,8 @@ public class MeetingController
         int64 lVar3;
         int iVar4;
         float fVar5;
-        lVar2 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar2,DAT_181d8f098);
+        lVar2 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar2,DAT_181d8f0b0);
         iVar4 = 0;
         if (originList != null) {
           while( true ) {
@@ -3227,13 +3227,13 @@ public class MeetingController
             if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
                (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null) break;
             lVar3 = *(int64 *)(lVar3 + 0x158);
-            uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa18);
+            uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa30);
             if (lVar3 == null) break;
-            fVar5 = (float)FUN_1800d6790(lVar3,uVar1,DAT_181da1078);
+            fVar5 = (float)FUN_1800d6790(lVar3,uVar1,DAT_181da1090);
             if (ABS(difficulty - fVar5 * 0.125) < 0.5) {
-              uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa18);
+              uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa30);
               if (lVar2 == null) break;
-              FUN_18182a0b0(lVar2,uVar1,DAT_181d8f218);
+              FUN_18182a6c0(lVar2,uVar1,DAT_181d8f230);
             }
             iVar4 = iVar4 + 1;
           }
@@ -3241,15 +3241,15 @@ public class MeetingController
     }
 
     // Token : 0x6001919
-    // RVA   : 0xE5DA50   Offset: 0xE5CE50   Length: 0x155
+    // RVA   : 0xE5E060   Offset: 0xE5D460   Length: 0x155
     public List<int> GetSkillRarelv(List<int> originList, int targetRareLv)
     {
         uint uVar1;
         long lVar2;
         long lVar3;
         int iVar4;
-        lVar2 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar2,DAT_181d8f098);
+        lVar2 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar2,DAT_181d8f0b0);
         iVar4 = 0;
         if (originList != null) {
           while( true ) {
@@ -3257,14 +3257,14 @@ public class MeetingController
               return lVar2;
             }
             lVar3 = FUN_18046c100(0);
-            uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa18);
+            uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa30);
             if (lVar3 == null) break;
             lVar3 = GameDataController.GetSkillDataBase(lVar3,uVar1,0);
             if (lVar3 == null) break;
             if (*(int *)(lVar3 + 52) == targetRareLv) {
-              uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa18);
+              uVar1 = FUN_1800d6760(originList,iVar4,DAT_181d8fa30);
               if (lVar2 == null) break;
-              FUN_18182a0b0(lVar2,uVar1,DAT_181d8f218);
+              FUN_18182a6c0(lVar2,uVar1,DAT_181d8f230);
             }
             iVar4 = iVar4 + 1;
           }
@@ -3272,7 +3272,7 @@ public class MeetingController
     }
 
     // Token : 0x600191A
-    // RVA   : 0xE57910   Offset: 0xE56D10   Length: 0xD7
+    // RVA   : 0xE57F20   Offset: 0xE57320   Length: 0xD7
     public void AddNewForceMissionButton(MissionData targetMission)
     {
         ulong uVar1;
@@ -3292,7 +3292,7 @@ public class MeetingController
     }
 
     // Token : 0x600191B
-    // RVA   : 0xE60B60   Offset: 0xE5FF60   Length: 0xB52
+    // RVA   : 0xE61170   Offset: 0xE60570   Length: 0xB52
     public void PlayerReciveForceMission(MissionData targetMission)
     {
         int iVar1;
@@ -3529,7 +3529,7 @@ public class MeetingController
     }
 
     // Token : 0x600191C
-    // RVA   : 0xE616C0   Offset: 0xE60AC0   Length: 0x186
+    // RVA   : 0xE61CD0   Offset: 0xE610D0   Length: 0x186
     public void RefuseMonthMissionButtonClicked()
     {
         int iVar1;
@@ -3555,7 +3555,7 @@ public class MeetingController
     }
 
     // Token : 0x600191D
-    // RVA   : 0xE5DDD0   Offset: 0xE5D1D0   Length: 0x1F8
+    // RVA   : 0xE5E3E0   Offset: 0xE5D7E0   Length: 0x1F8
     public void MonthMissionButtonClicked(GameObject buttonClicked)
     {
         bool cVar1;
@@ -3579,7 +3579,7 @@ public class MeetingController
                     GameController.ShowTextOnMouse(lVar2,"门派银钱不足！",0);
                     plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                     plVar5 = (int64 *)0;
-                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                       plVar5 = plVar4;
                     }
                     NGUITools.PlaySound(plVar5,0);
@@ -3600,10 +3600,10 @@ public class MeetingController
     }
 
     // Token : 0x600191E
-    // RVA   : 0xE57FF0   Offset: 0xE573F0   Length: 0x85A
+    // RVA   : 0xE58600   Offset: 0xE57A00   Length: 0x85A
     public void FinishMonthMission()
     {
-        var pStatics = *(int64*)(DAT_181d94000 + 184);
+        var pStatics = *(int64*)(DAT_181d94018 + 184);
         int iVar2;
         uint uVar3;
         long lVar4;
@@ -3652,8 +3652,8 @@ public class MeetingController
                 Transform.set_localPosition(lVar4,&local_168,0);
                 uVar6 = this.monthMissionGrid;
                 GlobalData.DeleteAllChild(uVar6,0);
-                uVar6 = il2cpp_internal(DAT_181d94b50);
-                FUN_18132faf0(uVar6,DAT_181d94888);
+                uVar6 = il2cpp_internal(DAT_181d94b68);
+                FUN_181330100(uVar6,DAT_181d948a0);
                 lVar4 = this.heroGrid;
                 iVar11 = 0;
                 if (lVar4 != null) {
@@ -3667,13 +3667,13 @@ public class MeetingController
                     if (((this.heroGrid == null) ||
                         (lVar4 = GameObject.get_transform(this.heroGrid,0)) == null)
                        || ((lVar4 = Transform.GetChild(lVar4,iVar11,0), lVar4 == null ||
-                           ((lVar4 = Component.GetComponent(lVar4,DAT_181d940e0), lVar4 == null ||
+                           ((lVar4 = Component.GetComponent(lVar4,DAT_181d940f8), lVar4 == null ||
                             (lVar4 = *(int64 *)(lVar4 + 32)) == null))))) break;
                     if (*(int *)(lVar4 + 88) != 0) {
                       lVar7 = MeetingController.GetAvailableMissions(this,lVar4,0);
                       if (lVar7 == null) break;
-                      uVar3 = FUN_180d95a30(0,*(uint32 *)(lVar7 + 24),0);
-                      uVar6 = FUN_180002f80(lVar7,uVar3,DAT_181d94c88);
+                      uVar3 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
+                      uVar6 = FUN_180002f80(lVar7,uVar3,DAT_181d94ca0);
                       *(uint64 *)(lVar4 + 0x2e0) = uVar6;
                     }
                     uVar6 = this.meetingPanel;
@@ -3691,7 +3691,7 @@ public class MeetingController
                     if (((this.heroGrid == null) ||
                         (lVar8 = GameObject.get_transform(this.heroGrid,0)) == null)
                        || ((lVar8 = Transform.GetChild(lVar8,iVar11,0), lVar8 == null ||
-                           (lVar8 = Component.GetComponent(lVar8,DAT_181d94f60)) == null))) break;
+                           (lVar8 = Component.GetComponent(lVar8,DAT_181d94f78)) == null))) break;
                     puVar5 = (uint64 *)RectTransform.get_rect(local_b8,lVar8,0);
                     local_138 = *puVar5;
                     uStack_130 = puVar5[1];
@@ -3722,7 +3722,7 @@ public class MeetingController
                     Transform.set_position(lVar7,&local_118,0);
                     if (((*plVar1 == 0) || (lVar7 = GameObject.get_transform(*plVar1,0)) == null) ||
                        (lVar7 = Transform.Find(lVar7,"Text",0)) == null) break;
-                    uVar9 = Component.GetComponent(lVar7,DAT_181d96160);
+                    uVar9 = Component.GetComponent(lVar7,DAT_181d96178);
                     uVar6 = "无任务";
                     if (*(int64 *)(lVar4 + 0x2e0) != 0) {
                       uVar6 = *(uint64 *)(*(int64 *)(lVar4 + 0x2e0) + 24);
@@ -3730,7 +3730,7 @@ public class MeetingController
                     LTLocalization.SetText(uVar9,uVar6,0);
                     if (((*plVar1 == 0) || (lVar4 = GameObject.get_transform(*plVar1,0)) == null) ||
                        (lVar4 = Transform.Find(lVar4,"Text",0)) == null) break;
-                    plVar10 = (int64 *)Component.GetComponent(lVar4,DAT_181d96160);
+                    plVar10 = (int64 *)Component.GetComponent(lVar4,DAT_181d96178);
                     puVar5 = (uint64 *)Color.get_black(local_98,0);
                     if (plVar10 == (int64 *)0) break;
                     local_148 = *puVar5;
@@ -3747,10 +3747,10 @@ public class MeetingController
                     if (*plVar1 == 0) break;
                     uVar6 = GameObject.get_transform(*plVar1,0);
                     uVar6 = ShortcutExtensions.DOScale(uVar6);
-                    uVar6 = TweenSettingsExtensions.SetEase(uVar6,27,DAT_181dc0f80);
-                    TweenSettingsExtensions.SetDelay(uVar6,(float)iVar11 * 0.1,DAT_181dc0c60);
+                    uVar6 = TweenSettingsExtensions.SetEase(uVar6,27,DAT_181dc1128);
+                    TweenSettingsExtensions.SetDelay(uVar6,(float)iVar11 * 0.1,DAT_181dc0e10);
                     if (this.monthMissionResultUIs == null) break;
-                    FUN_18181e0a0();
+                    FUN_18181e6b0();
                     lVar4 = this.heroGrid;
                     iVar11 = iVar11 + 1;
                     if (lVar4 == null) break;
@@ -3763,10 +3763,10 @@ public class MeetingController
     }
 
     // Token : 0x600191F
-    // RVA   : 0xE579F0   Offset: 0xE56DF0   Length: 0xD2
+    // RVA   : 0xE58000   Offset: 0xE57400   Length: 0xD2
     public void AttackAreaAdviseChoosen(int targetArea)
     {
-        var pStatics = *(int64*)(DAT_181d94000 + 184);
+        var pStatics = *(int64*)(DAT_181d94018 + 184);
         long lVar1;
         bool cVar2;
         if ((*pStatics != 0) &&
@@ -3789,14 +3789,14 @@ public class MeetingController
     }
 
     // Token : 0x6001920
-    // RVA   : 0xE5DBB0   Offset: 0xE5CFB0   Length: 0xE3
+    // RVA   : 0xE5E1C0   Offset: 0xE5D5C0   Length: 0xE3
     public void GivingAttackAreaAdvise(string sure)
     {
-        var pStatics = *(int64*)(DAT_181d94000 + 184);
+        var pStatics = *(int64*)(DAT_181d94018 + 184);
         bool cVar1;
-        cVar1 = FUN_18171e540(sure,"true",0);
+        cVar1 = FUN_18171eb50(sure,"true",0);
         if (!cVar1) {
-          cVar1 = FUN_18171e540(sure,"false",0);
+          cVar1 = FUN_18171eb50(sure,"false",0);
           if (cVar1) {
             this.meetingStep = this.meetingStep + 1;
             this.subMeetingStep = 0;
@@ -3812,14 +3812,14 @@ public class MeetingController
     }
 
     // Token : 0x6001921
-    // RVA   : 0xE5DCA0   Offset: 0xE5D0A0   Length: 0x121
+    // RVA   : 0xE5E2B0   Offset: 0xE5D6B0   Length: 0x121
     public void GivingMeetingAdvise(string sure)
     {
         long lVar1;
         bool cVar2;
-        cVar2 = FUN_18171e540(sure,"true",0);
+        cVar2 = FUN_18171eb50(sure,"true",0);
         if (!cVar2) {
-          cVar2 = FUN_18171e540(sure,"false",0);
+          cVar2 = FUN_18171eb50(sure,"false",0);
           if (cVar2) {
             this.meetingStep = this.meetingStep + 1;
             this.subMeetingStep = 0;
@@ -3827,7 +3827,7 @@ public class MeetingController
           }
           return;
         }
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
         if (lVar1 != null) {
           PlotController.GiveMeetingAdvise(lVar1,0);
           return;
@@ -3842,32 +3842,32 @@ public class MeetingController
     }
 
     // Token : 0x6001923
-    // RVA   : 0xE62E50   Offset: 0xE62250   Length: 0x270
+    // RVA   : 0xE63460   Offset: 0xE62860   Length: 0x270
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d88a10 + 184);
+        var pStatics = *(int64*)(DAT_181d88a28 + 184);
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar1,DAT_181da3bd8);
+        lVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar1,DAT_181da3bf0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,"衰微",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"孱弱",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"中庸",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"强大",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"称霸",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"鼎盛",DAT_181da3d58);
+          FUN_18181e6b0(lVar1,"衰微",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"孱弱",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"中庸",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"强大",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"称霸",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"鼎盛",DAT_181da3d70);
           plVar2 = pStatics;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
-          lVar1 = il2cpp_internal(DAT_181d97750);
-          FUN_18132faf0(lVar1,DAT_181da3bd8);
+          lVar1 = il2cpp_internal(DAT_181d97768);
+          FUN_181330100(lVar1,DAT_181da3bf0);
           if (lVar1 != null) {
-            FUN_18181e0a0(lVar1,"谋求发展",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"巩固实力",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"稳步防守",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"转守为攻",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"攻城略地",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"一统武林",DAT_181da3d58);
+            FUN_18181e6b0(lVar1,"谋求发展",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"巩固实力",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"稳步防守",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"转守为攻",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"攻城略地",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"一统武林",DAT_181da3d70);
             MeetingController.MainFocusText = lVar1;
             return;
           }

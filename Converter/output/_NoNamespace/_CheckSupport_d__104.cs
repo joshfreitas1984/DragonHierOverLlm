@@ -37,7 +37,7 @@ public class <CheckSupport>d__104
     }
 
     // Token : 0x6000BA7
-    // RVA   : 0x92E0F0   Offset: 0x92D4F0   Length: 0x3E5
+    // RVA   : 0x92E750   Offset: 0x92DB50   Length: 0x3E5
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -88,23 +88,23 @@ public class <CheckSupport>d__104
                   fVar10 = *(float *)(lVar3 + 0x1c8);
                   if (((*(int64 *)(lVar3 + 104) == 0) ||
                       (lVar5 = FUN_180002f80(*(int64 *)(lVar3 + 104),this.<teamID>5__2,
-                                             DAT_181d79628), lVar5 == null)) ||
-                     (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da6898),
+                                             DAT_181d79640), lVar5 == null)) ||
+                     (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da68b0),
                      lVar5 == null)) throw; // [null/range check failed]
                   if (*(float *)(lVar5 + 36) <= fVar10) {
                     if (((*(int64 *)(lVar3 + 104) == 0) ||
                         (lVar5 = FUN_180002f80(*(int64 *)(lVar3 + 104),this.<teamID>5__2
-                                               ,DAT_181d79628), lVar5 == null)) ||
-                       (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da6898),
+                                               ,DAT_181d79640), lVar5 == null)) ||
+                       (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da68b0),
                        lVar5 == null)) throw; // [null/range check failed]
                     uVar8 = *(uint64 *)(lVar5 + 24);
                     if (*(int64 *)(lVar3 + 112) == 0) throw; // [null/range check failed]
                     uVar6 = FUN_180002f80(*(int64 *)(lVar3 + 112),this.<teamID>5__2,
-                                          DAT_181d7f830);
+                                          DAT_181d7f848);
                     if (((*(int64 *)(lVar3 + 104) == 0) ||
                         (lVar5 = FUN_180002f80(*(int64 *)(lVar3 + 104),this.<teamID>5__2
-                                               ,DAT_181d79628), lVar5 == null)) ||
-                       (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da6898),
+                                               ,DAT_181d79640), lVar5 == null)) ||
+                       (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da68b0),
                        lVar5 == null)) throw; // [null/range check failed]
                     lVar4 = *(int64 *)(lVar3 + 24);
                     if (*(int *)(lVar5 + 44) == -1) {
@@ -114,17 +114,17 @@ public class <CheckSupport>d__104
                     else {
                       if ((((*(int64 *)(lVar3 + 104) == 0) ||
                            (lVar5 = FUN_180002f80(*(int64 *)(lVar3 + 104),
-                                                  this.<teamID>5__2,DAT_181d79628),
+                                                  this.<teamID>5__2,DAT_181d79640),
                            lVar5 == null)) ||
-                          (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da6898),
+                          (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da68b0),
                           lVar5 == null)) || (lVar4 == null)) throw; // [null/range check failed]
                       uVar2 = *(uint32 *)(lVar5 + 44);
                     }
                     uVar7 = BattleMapData.GetRandomBornGrid(lVar4,uVar2,0);
                     if (((*(int64 *)(lVar3 + 104) != 0) &&
                         (lVar5 = FUN_180002f80(*(int64 *)(lVar3 + 104),this.<teamID>5__2
-                                               ,DAT_181d79628), lVar5 != null)) &&
-                       (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da6898),
+                                               ,DAT_181d79640), lVar5 != null)) &&
+                       (lVar5 = FUN_180002f80(lVar5,this.<heroID>5__3,DAT_181da68b0),
                        lVar5 != null)) {
                       uVar2 = *(uint32 *)(lVar5 + 40);
                       fVar10 = (float)BattleController.GetHalfBattleTimeScale(lVar3,0);
@@ -140,7 +140,7 @@ public class <CheckSupport>d__104
                     throw; // [null/range check failed]
                   }
                 }
-        LAB_18092e1e9:
+        LAB_18092e849:
                 this.<heroID>5__3 = this.<heroID>5__3 + -1;
                 uVar9 = this.<heroID>5__3;
               }
@@ -161,8 +161,8 @@ public class <CheckSupport>d__104
             }
             lVar5 = lVar5[uVar9];
             if (lVar5 != null) {
-              FUN_181823590(lVar5,this.<heroID>5__3,DAT_181da6718);
-              goto LAB_18092e1e9;
+              FUN_181823ba0(lVar5,this.<heroID>5__3,DAT_181da6730);
+              goto LAB_18092e849;
             }
           }
         }
@@ -176,15 +176,15 @@ public class <CheckSupport>d__104
     }
 
     // Token : 0x6000BA9
-    // RVA   : 0x92E4E0   Offset: 0x92D8E0   Length: 0x3E
+    // RVA   : 0x92EB40   Offset: 0x92DF40   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d977b8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97950);
     }
 
     // Token : 0x6000BAA

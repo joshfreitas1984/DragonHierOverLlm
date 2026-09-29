@@ -29,7 +29,7 @@ public class InfoTabData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000EB6
-    // RVA   : 0xC98C30   Offset: 0xC98030   Length: 0x15D
+    // RVA   : 0xC99240   Offset: 0xC98640   Length: 0x15D
     public void /*ctor*/(string _infoText, string _atlasName, string _infoPic, string _soundName, float _volumn, float _lastTime, Color _picColor)
     {
                             uint64 _soundName,uint32 _volumn,uint32 _lastTime,uint32 *_picColor)
@@ -68,7 +68,7 @@ public class InfoTabData
         *(uint32 *)(this + 48) = uVar4;
         *(uint32 *)(this + 52) = uVar5;
         if (_infoPic != null) {
-          puVar1 = (uint32 *)FUN_180d98fe0(&local_28,0);
+          puVar1 = (uint32 *)FUN_180d995f0(&local_28,0);
           local_28 = *_picColor;
           uStack_24 = _picColor[1];
           uStack_20 = _picColor[2];
@@ -79,7 +79,7 @@ public class InfoTabData
           uStack_2c = puVar1[3];
           cVar7 = Color.op_Equality(&local_28,&local_38,0);
           if (cVar7) {
-            puVar2 = (uint64 *)FUN_1810d3570(&local_28,0);
+            puVar2 = (uint64 *)FUN_1810d3b80(&local_28,0);
             uVar6 = puVar2[1];
             this.picColor = *puVar2;
             *(uint64 *)(this + 48) = uVar6;
@@ -88,7 +88,7 @@ public class InfoTabData
     }
 
     // Token : 0x6000EB7
-    // RVA   : 0xC98AB0   Offset: 0xC97EB0   Length: 0x175
+    // RVA   : 0xC990C0   Offset: 0xC984C0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -99,13 +99,13 @@ public class InfoTabData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -117,7 +117,7 @@ public class InfoTabData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

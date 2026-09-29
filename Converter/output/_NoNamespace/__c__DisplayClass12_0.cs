@@ -6,7 +6,7 @@
 public class <>c__DisplayClass12_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002116
+    // Token: 0x4002117
     public Outline target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass12_0
     }
 
     // Token : 0x60026EA
-    // RVA   : 0x937890   Offset: 0x936C90   Length: 0x29
+    // RVA   : 0x937F20   Offset: 0x937320   Length: 0x29
     internal Vector2 <DOScale>b__0()
     {
         if (this.target != null) {
@@ -27,7 +27,7 @@ public class <>c__DisplayClass12_0
     }
 
     // Token : 0x60026EB
-    // RVA   : 0x9378C0   Offset: 0x936CC0   Length: 0x1E
+    // RVA   : 0x937F50   Offset: 0x937350   Length: 0x1E
     internal void <DOScale>b__1(Vector2 x)
     {
         if (this.target != null) {

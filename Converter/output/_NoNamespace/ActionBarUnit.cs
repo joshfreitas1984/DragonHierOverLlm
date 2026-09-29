@@ -11,7 +11,7 @@ public class ActionBarUnit
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000A2A
-    // RVA   : 0xA1C230   Offset: 0xA1B630   Length: 0x51E
+    // RVA   : 0xA1C8C0   Offset: 0xA1BCC0   Length: 0x51E
     public void RefreshActionBarUnit(bool useAnim)
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -34,7 +34,7 @@ public class ActionBarUnit
           lVar4 = Component.get_transform(this,0);
           if (this.targetBattleUnit == null) throw; // [null/range check failed]
           fVar8 = this.targetBattleUnit.battleMove;
-          fVar8 = (float)FUN_1810e36c0(fVar8 / *(float *)(pStatics + 0x230),0,
+          fVar8 = (float)FUN_1810e3cd0(fVar8 / *(float *)(pStatics + 0x230),0,
                                        0x3f800000,0);
           if (lVar4 == null) throw; // [null/range check failed]
           uStack_24 = 0;
@@ -43,28 +43,28 @@ public class ActionBarUnit
         }
         else {
           uVar3 = ShortcutExtensions.DOScale(uVar3,0x3fc00000,0x3e99999a,0);
-          uVar3 = TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc1330);
-          TweenSettingsExtensions.SetEase(uVar3,9,DAT_181dc0f80);
+          uVar3 = TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
+          TweenSettingsExtensions.SetEase(uVar3,9,DAT_181dc1128);
           uVar3 = Component.get_transform(this,0);
           if (this.targetBattleUnit == null) throw; // [null/range check failed]
           fVar8 = this.targetBattleUnit.battleMove;
-          local_28 = (float)FUN_1810e36c0(fVar8 / *(float *)(pStatics + 0x230),
+          local_28 = (float)FUN_1810e3cd0(fVar8 / *(float *)(pStatics + 0x230),
                                           0,0x3f800000,0);
           local_28 = local_28 * 1296.0;
           uStack_24 = 0;
           uVar3 = ShortcutExtensions.DOLocalMove(uVar3,&local_28,0x3e99999a,0,0);
-          TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1db0);
+          TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
         }
         lVar4 = Component.get_transform(this,0);
         if (lVar4 != null) {
-          plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+          plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+          lVar4 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
           if (lVar4 != null) {
             uVar3 = *(uint64 *)(lVar4 + 0x110);
             uVar7 = this.targetBattleUnit;
             cVar2 = Object.op_Equality(uVar3,uVar7,0);
             if (!cVar2) {
-              pfVar6 = (float *)FUN_1810d33f0(&local_28,0);
+              pfVar6 = (float *)FUN_1810d3a00(&local_28,0);
               fVar8 = *pfVar6;
               fVar9 = pfVar6[1];
               fVar10 = pfVar6[2];
@@ -82,7 +82,7 @@ public class ActionBarUnit
               local_28 = fVar8;
               fStack_1c = fVar11;
               (**(code **)(*plVar5 + 0x2a8))(plVar5,&local_28,*(uint64 *)(*plVar5 + 0x2b0));
-              uVar3 = *(uint64 *)(*(int64 *)(DAT_181d8b790 + 184) + 72);
+              uVar3 = *(uint64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 72);
               uVar7 = Component.get_gameObject(this,0);
               cVar2 = Object.op_Equality(uVar3,uVar7,0);
               if (!cVar2) {
@@ -90,7 +90,7 @@ public class ActionBarUnit
               }
               lVar4 = Component.get_transform(this,0);
               if (lVar4 != null) {
-                lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+                lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
                 if (((this.targetBattleUnit != null) &&
                     (lVar1 = this.targetBattleUnit.heroData) != null) &&
                    (lVar1 = *(int64 *)(lVar1 + 0x2b8)) != null) {
@@ -110,7 +110,7 @@ public class ActionBarUnit
     }
 
     // Token : 0x6000A2B
-    // RVA   : 0xA1BFD0   Offset: 0xA1B3D0   Length: 0x251
+    // RVA   : 0xA1C660   Offset: 0xA1BA60   Length: 0x251
     public void OnClick()
     {
         bool cVar1;

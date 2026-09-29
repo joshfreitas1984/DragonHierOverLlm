@@ -6,7 +6,7 @@
 public class <>c__DisplayClass0_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400210B
+    // Token: 0x400210C
     public CanvasGroup target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass0_0
     }
 
     // Token : 0x60026C9
-    // RVA   : 0x937080   Offset: 0x936480   Length: 0x1D
+    // RVA   : 0x9378C0   Offset: 0x936CC0   Length: 0x1D
     internal float <DOFade>b__0()
     {
         if (this.target != null) {
@@ -28,7 +28,7 @@ public class <>c__DisplayClass0_0
     }
 
     // Token : 0x60026CA
-    // RVA   : 0x9370C0   Offset: 0x9364C0   Length: 0x1E
+    // RVA   : 0x937900   Offset: 0x936D00   Length: 0x1E
     internal void <DOFade>b__1(float x)
     {
         if (this.target != null) {

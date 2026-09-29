@@ -6,37 +6,37 @@
 public class WeaponResearchUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DD9
+    // Token: 0x4001DDA
     public GameObject weaponResearchUI;
 
-    // Token: 0x4001DDA
+    // Token: 0x4001DDB
     public GameObject researchTargetItemIcon;
 
-    // Token: 0x4001DDB
+    // Token: 0x4001DDC
     public GameObject researchTargetClearButton;
 
-    // Token: 0x4001DDC
+    // Token: 0x4001DDD
     private static WeaponResearchUIController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002371
-    // RVA   : 0xC16580   Offset: 0xC15980   Length: 0x36
+    // RVA   : 0xC16BF0   Offset: 0xC15FF0   Length: 0x36
     public static WeaponResearchUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181db4e90 + 184);
+        return **(uint64 **)(DAT_181db4ea8 + 184);
     }
 
     // Token : 0x6002372
-    // RVA   : 0xC13E20   Offset: 0xC13220   Length: 0x43
+    // RVA   : 0xC14490   Offset: 0xC13890   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db4e90 + 184);
+        puVar1 = *(uint64 **)(DAT_181db4ea8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6002373
-    // RVA   : 0xC14240   Offset: 0xC13640   Length: 0xC7
+    // RVA   : 0xC148B0   Offset: 0xC13CB0   Length: 0xC7
     public void HideWeaponResearchUI()
     {
         ulong uVar1;
@@ -55,7 +55,7 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x6002374
-    // RVA   : 0xC15990   Offset: 0xC14D90   Length: 0xBE6
+    // RVA   : 0xC16000   Offset: 0xC15400   Length: 0xBE6
     public void ShowWeaponResearchUI()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -75,7 +75,7 @@ public class WeaponResearchUIController
             if (lVar3 != null) {
               lVar3 = Transform.Find(lVar3,"Title",0);
               if (lVar3 != null) {
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                 lVar3 = *(int64 *)(pStatics_3d40 + 0x4a0);
                 if ((GameController._instance != null) &&
                    (lVar5 = GameController._instance.worldData) != null) {
@@ -97,7 +97,7 @@ public class WeaponResearchUIController
                           if (lVar3 != null) {
                             lVar3 = Transform.Find(lVar3,"Label",0);
                             if (lVar3 != null) {
-                              uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                              uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                               lVar3 = *(int64 *)(pStatics_3d40 + 0x4a0);
                               if ((GameController._instance != null) &&
                                  (lVar5 = GameController._instance.worldData,
@@ -119,7 +119,7 @@ public class WeaponResearchUIController
                                       if (lVar3 != null) {
                                         lVar3 = Transform.Find(lVar3,"ResearchLv",0);
                                         if (lVar3 != null) {
-                                          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                                          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                                           if (((GameController._instance != null) &&
                                               (lVar3 = *(int64 *)
                                                         (GameController._instance + 32),
@@ -134,7 +134,7 @@ public class WeaponResearchUIController
                                               if (lVar3 != null) {
                                                 lVar3 = Transform.Find(lVar3,"ResearchLvAdd",0);
                                                 if (lVar3 != null) {
-                                                  uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                                                  uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                                                   lVar3 = *(int64 *)
                                                            (pStatics_3d40 + 0x4a0);
                                                   if ((GameController._instance != null) &&
@@ -161,7 +161,7 @@ public class WeaponResearchUIController
                                                            (lVar3 = *(int64 *)(lVar3 + 0x1e8),
                                                            lVar3 != null)) {
                                                           local_res8[0] = *(uint32 *)(lVar3 + 16);
-                                                          uVar7 = il2cpp_value_box(DAT_181d80418,
+                                                          uVar7 = il2cpp_value_box(DAT_181d80430,
                                                                                    local_res8);
                                                           uVar6 = String.Format("等级加成\n{0}威力+{1}%",uVar6,uVar7
                                                                                  ,0);
@@ -178,7 +178,7 @@ public class WeaponResearchUIController
                                                         "ExpText",0);
                                                         if (lVar3 != null) {
                                                           uVar4 = Component.GetComponent
-                                                                            (lVar3,DAT_181d96160);
+                                                                            (lVar3,DAT_181d96178);
                                                           if (((GameController._instance != null
                                                                ) && (lVar3 = *(int64 *)
                                                                               (**(int64 **)
@@ -200,7 +200,7 @@ public class WeaponResearchUIController
                                                               local_res18[0] =
                                                                    (float)((iVar2 + 2) * (iVar2 + 1)) *
                                                                    0.5;
-                                                              uVar7 = il2cpp_value_box(DAT_181da22d8,
+                                                              uVar7 = il2cpp_value_box(DAT_181da22f0,
                                                                                        local_res18);
                                                               uVar6 = String.Format("{0}/{1}",uVar6,
                                                                                      uVar7,0);
@@ -216,7 +216,7 @@ public class WeaponResearchUIController
                                                           lVar3 = Transform.Find(lVar3,"ExpBar",0);
                                                           if (lVar3 != null) {
                                                             lVar3 = Component.GetComponent
-                                                                              (lVar3,DAT_181d94460);
+                                                                              (lVar3,DAT_181d94478);
                                                             if (((GameController._instance !=
                                                                   0) && (lVar5 = *(int64 *)
                                                                                   (**(int64 **)
@@ -260,7 +260,7 @@ public class WeaponResearchUIController
                                                                         )) ||
                                                                (lVar3 = *(int64 *)(lVar3 + 0x1e8),
                                                                lVar3 == null)) {
-        LAB_180c16571:
+        LAB_180c16be1:
                           // WARNING: Subroutine does not return
                                                               FUN_1800d6620();
                                                             }
@@ -276,7 +276,7 @@ public class WeaponResearchUIController
                                                                  (lVar3 = *(int64 *)
                                                                            (*(int64 *)(lVar3 + 32) +
                                                                            0x1e8), lVar3 == null))
-                                                              goto LAB_180c16571;
+                                                              goto LAB_180c16be1;
 
                                                         WeaponResearchUIController.CreateResearchTargetItemIcon
                                                                   (this,*(uint64 *)(lVar3 + 24),0
@@ -288,7 +288,7 @@ public class WeaponResearchUIController
                                                                  Resources.Load("Sound/SoundEffect/OpenBook",0);
                                                         plVar9 = (int64 *)0;
                                                         if ((plVar8 != (int64 *)0) &&
-                                                           (*plVar8 == DAT_181daf348)) {
+                                                           (*plVar8 == DAT_181daf360)) {
                                                           plVar9 = plVar8;
                                                         }
                                                         NGUITools.PlaySound(plVar9,0);
@@ -334,7 +334,7 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x6002375
-    // RVA   : 0xC14310   Offset: 0xC13710   Length: 0xEAD
+    // RVA   : 0xC14980   Offset: 0xC13D80   Length: 0xEAD
     public void RefreshUI()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -353,25 +353,25 @@ public class WeaponResearchUIController
         uint32 uStack_1c;
         if (((GameController._instance == null) ||
             (lVar3 = GameController._instance.worldData) == null) ||
-           (lVar3 = lVar3.weaponResearchData) == null) goto LAB_180c151ac;
+           (lVar3 = lVar3.weaponResearchData) == null) goto LAB_180c1581c;
         lVar6 = this.weaponResearchUI;
         if (lVar3.forceAreaID < 1) {
           if (((lVar6 == null) || (lVar3 = GameObject.get_transform(lVar6,0)) == null) ||
              ((lVar3 = Transform.Find(lVar3,"SureButton",0), lVar3 == null ||
               (lVar3 = Transform.Find(lVar3,"Label",0)) == null))) {
-        LAB_180c151ac:
+        LAB_180c1581c:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           LTLocalization.SetText(uVar4,"确认",0);
           if ((((this.weaponResearchUI == null) ||
                (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
               (lVar3 = Transform.Find(lVar3,"SureButton",0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"Label",0)) == null) goto LAB_180c151ac;
-          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"Label",0)) == null) goto LAB_180c1581c;
+          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = pStatics_3d40;
-          if (plVar5 == (int64 *)0) goto LAB_180c151ac;
+          if (plVar5 == (int64 *)0) goto LAB_180c1581c;
           local_28 = *(uint32 *)(lVar3 + 0x378);
           uStack_24 = *(uint32 *)(lVar3 + 0x37c);
           uStack_20 = *(uint32 *)(lVar3 + 0x380);
@@ -380,13 +380,13 @@ public class WeaponResearchUIController
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
              ((lVar3 = Transform.Find(lVar3,"ResearchTarget",0), lVar3 == null ||
-              (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) == null))) goto LAB_180c151ac;
+              (lVar3 = Component.GetComponent(lVar3,DAT_181d93778)) == null))) goto LAB_180c1581c;
           Selectable.set_interactable(lVar3,1,0);
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"SureButton",0)) == null) goto LAB_180c151ac;
+             (lVar3 = Transform.Find(lVar3,"SureButton",0)) == null) goto LAB_180c1581c;
           lVar3 = Component.get_gameObject(lVar3,0);
-          if (lVar3 == null) goto LAB_180c151ac;
+          if (lVar3 == null) goto LAB_180c1581c;
           GameObject.SetActive(lVar3,1,0);
           uVar4 = this.researchTargetItemIcon;
           cVar1 = Object.op_Inequality(uVar4,0,0);
@@ -394,37 +394,37 @@ public class WeaponResearchUIController
           if (cVar1) {
             if (((lVar3 == null) || (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
                ((lVar3 = Transform.Find(lVar3,"SureButton",0), lVar3 == null ||
-                (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) == null))) {
-        LAB_180c151b2:
+                (lVar3 = Component.GetComponent(lVar3,DAT_181d93778)) == null))) {
+        LAB_180c15822:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             Selectable.set_interactable(lVar3,1,0);
             if (((this.weaponResearchUI == null) ||
                 (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
-               (lVar3 = Transform.Find(lVar3,"ResearchText",0)) == null) goto LAB_180c151b2;
-            uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+               (lVar3 = Transform.Find(lVar3,"ResearchText",0)) == null) goto LAB_180c15822;
+            uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
             local_res18[0] = WeaponResearchUIController.GetResearchDay(this,0);
-            uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
+            uVar7 = il2cpp_value_box(DAT_181d80430,local_res18);
             local_res20[0] = WeaponResearchUIController.GetExpNum(this,0);
-            uVar8 = il2cpp_value_box(DAT_181d80418,local_res20);
+            uVar8 = il2cpp_value_box(DAT_181d80430,local_res20);
             uVar7 = String.Format("研究时间 {0}日\n获取经验 {1}",uVar7,uVar8,0);
             LTLocalization.SetText(uVar4,uVar7,0);
             if (((this.weaponResearchUI == null) ||
                 (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
-               (lVar3 = Transform.Find(lVar3,"ResearchExtraAdd",0)) == null) goto LAB_180c151b2;
-            uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+               (lVar3 = Transform.Find(lVar3,"ResearchExtraAdd",0)) == null) goto LAB_180c15822;
+            uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
             if ((((this.researchTargetItemIcon == null) ||
                  (lVar3 = GameObject.GetComponent(this.researchTargetItemIcon,DAT_181d720a0),
                  lVar3 == null)) || (lVar3.villageAreaID == null)) ||
                ((lVar3 = *(int64 *)(lVar3.villageAreaID + 96), lVar3 == null ||
-                (lVar3 = lVar3.forceAreaID) == null))) goto LAB_180c151b2;
+                (lVar3 = lVar3.forceAreaID) == null))) goto LAB_180c15822;
             uVar7 = HeroSpeAddData.GetDescribe(lVar3,1,1,1,0,0);
             lVar3 = *(int64 *)(pStatics_3d40 + 0x4a0);
             if ((((GameController._instance == null) ||
                  (lVar6 = GameController._instance.worldData) == null) ||
                 (lVar6 = WorldData.Player(lVar6,0)) == null) ||
-               (iVar2 = HeroData.GetWeaponResearchWeaponType(lVar6,0), lVar3 == null)) goto LAB_180c151b2;
+               (iVar2 = HeroData.GetWeaponResearchWeaponType(lVar6,0), lVar3 == null)) goto LAB_180c15822;
             if (lVar3.cityAreaID <= iVar2 + 3U) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -434,28 +434,28 @@ public class WeaponResearchUIController
                                    ,0);
             LTLocalization.SetText(uVar4,uVar7,0);
             lVar3 = this.researchTargetClearButton;
-            if (lVar3 == null) goto LAB_180c151b2;
+            if (lVar3 == null) goto LAB_180c15822;
             uVar4 = 1;
-            goto LAB_180c1496f;
+            goto LAB_180c14fdf;
           }
           if (((lVar3 == null) || (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
              ((lVar3 = Transform.Find(lVar3,"SureButton",0), lVar3 == null ||
-              (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) == null))) goto LAB_180c151ac;
+              (lVar3 = Component.GetComponent(lVar3,DAT_181d93778)) == null))) goto LAB_180c1581c;
           Selectable.set_interactable(lVar3,0,0);
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"ResearchExtraAdd",0)) == null) goto LAB_180c151ac;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"ResearchExtraAdd",0)) == null) goto LAB_180c1581c;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           LTLocalization.SetText(uVar4,"",0);
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"ResearchText",0)) == null) goto LAB_180c151ac;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"ResearchText",0)) == null) goto LAB_180c1581c;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = *(int64 *)(pStatics_3d40 + 0x4a0);
           if ((((GameController._instance == null) ||
                (lVar6 = GameController._instance.worldData) == null) ||
               (lVar6 = WorldData.Player(lVar6,0)) == null) ||
-             (iVar2 = HeroData.GetWeaponResearchWeaponType(lVar6,0), lVar3 == null)) goto LAB_180c151ac;
+             (iVar2 = HeroData.GetWeaponResearchWeaponType(lVar6,0), lVar3 == null)) goto LAB_180c1581c;
           if (lVar3.cityAreaID <= iVar2 + 3U) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -465,13 +465,13 @@ public class WeaponResearchUIController
                                 );
           LTLocalization.SetText(uVar4,uVar7,0);
           lVar3 = this.researchTargetClearButton;
-          if (lVar3 == null) goto LAB_180c151ac;
+          if (lVar3 == null) goto LAB_180c1581c;
         }
         else {
           if (((lVar6 == null) || (lVar3 = GameObject.get_transform(lVar6,0)) == null) ||
              ((lVar3 = Transform.Find(lVar3,"ResearchTarget",0), lVar3 == null ||
-              (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) == null))) {
-        LAB_180c151b8:
+              (lVar3 = Component.GetComponent(lVar3,DAT_181d93778)) == null))) {
+        LAB_180c15828:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -479,16 +479,16 @@ public class WeaponResearchUIController
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
              ((lVar3 = Transform.Find(lVar3,"SureButton",0), lVar3 == null ||
-              (lVar3 = Transform.Find(lVar3,"Label",0)) == null))) goto LAB_180c151b8;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+              (lVar3 = Transform.Find(lVar3,"Label",0)) == null))) goto LAB_180c15828;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           LTLocalization.SetText(uVar4,"研究中",0);
           if ((((this.weaponResearchUI == null) ||
                (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
               (lVar3 = Transform.Find(lVar3,"SureButton",0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"Label",0)) == null) goto LAB_180c151b8;
-          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"Label",0)) == null) goto LAB_180c15828;
+          plVar5 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
           puVar9 = (uint32 *)Color.get_red(&local_28,0);
-          if (plVar5 == (int64 *)0) goto LAB_180c151b8;
+          if (plVar5 == (int64 *)0) goto LAB_180c15828;
           local_28 = *puVar9;
           uStack_24 = puVar9[1];
           uStack_20 = puVar9[2];
@@ -497,35 +497,35 @@ public class WeaponResearchUIController
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
              ((lVar3 = Transform.Find(lVar3,"SureButton",0), lVar3 == null ||
-              (lVar3 = Component.GetComponent(lVar3,DAT_181d93760)) == null))) goto LAB_180c151b8;
+              (lVar3 = Component.GetComponent(lVar3,DAT_181d93778)) == null))) goto LAB_180c15828;
           Selectable.set_interactable(lVar3,0,0);
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"ResearchText",0)) == null) goto LAB_180c151b8;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"ResearchText",0)) == null) goto LAB_180c15828;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           if (((GameController._instance == null) ||
               (lVar3 = GameController._instance.worldData) == null) ||
-             (lVar3 = lVar3.weaponResearchData) == null) goto LAB_180c151b8;
+             (lVar3 = lVar3.weaponResearchData) == null) goto LAB_180c15828;
           local_res18[0] = lVar3.forceAreaID;
-          uVar7 = il2cpp_value_box(DAT_181d80418,local_res18);
+          uVar7 = il2cpp_value_box(DAT_181d80430,local_res18);
           local_res20[0] = WeaponResearchUIController.GetExpNum(this,0);
-          uVar8 = il2cpp_value_box(DAT_181d80418,local_res20);
+          uVar8 = il2cpp_value_box(DAT_181d80430,local_res20);
           uVar7 = String.Format("剩余时间 {0}日\n获取经验 {1}",uVar7,uVar8,0);
           LTLocalization.SetText(uVar4,uVar7,0);
           if (((this.weaponResearchUI == null) ||
               (lVar3 = GameObject.get_transform(this.weaponResearchUI,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"ResearchExtraAdd",0)) == null) goto LAB_180c151b8;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+             (lVar3 = Transform.Find(lVar3,"ResearchExtraAdd",0)) == null) goto LAB_180c15828;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           if ((((GameController._instance == null) ||
                (lVar3 = GameController._instance.worldData) == null) ||
               (lVar3 = lVar3.weaponResearchData) == null) ||
-             (lVar3 = lVar3.villageAreaID) == null) goto LAB_180c151b8;
+             (lVar3 = lVar3.villageAreaID) == null) goto LAB_180c15828;
           uVar7 = HeroSpeAddData.GetDescribe(lVar3,1,1,1,0,0);
           lVar3 = *(int64 *)(pStatics_3d40 + 0x4a0);
           if ((((GameController._instance == null) ||
                (lVar6 = GameController._instance.worldData) == null) ||
               (lVar6 = WorldData.Player(lVar6,0)) == null) ||
-             (iVar2 = HeroData.GetWeaponResearchWeaponType(lVar6,0), lVar3 == null)) goto LAB_180c151b8;
+             (iVar2 = HeroData.GetWeaponResearchWeaponType(lVar6,0), lVar3 == null)) goto LAB_180c15828;
           if (lVar3.cityAreaID <= iVar2 + 3U) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -535,15 +535,15 @@ public class WeaponResearchUIController
                                 );
           LTLocalization.SetText(uVar4,uVar7,0);
           lVar3 = this.researchTargetClearButton;
-          if (lVar3 == null) goto LAB_180c151b8;
+          if (lVar3 == null) goto LAB_180c15828;
         }
         uVar4 = 0;
-        LAB_180c1496f:
+        LAB_180c14fdf:
         GameObject.SetActive(lVar3,uVar4,0);
     }
 
     // Token : 0x6002376
-    // RVA   : 0xC140D0   Offset: 0xC134D0   Length: 0xAE
+    // RVA   : 0xC14740   Offset: 0xC13B40   Length: 0xAE
     public int GetExpNum()
     {
         bool cVar1;
@@ -564,7 +564,7 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x6002377
-    // RVA   : 0xC14180   Offset: 0xC13580   Length: 0xB0
+    // RVA   : 0xC147F0   Offset: 0xC13BF0   Length: 0xB0
     public int GetResearchDay()
     {
         ulong uVar1;
@@ -584,7 +584,7 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x6002378
-    // RVA   : 0xC151C0   Offset: 0xC145C0   Length: 0x3E2
+    // RVA   : 0xC15830   Offset: 0xC14C30   Length: 0x3E2
     public void ResearchButtonClicked()
     {
         uint uVar1;
@@ -623,7 +623,7 @@ public class WeaponResearchUIController
                         HeroData.LoseItem(lVar4,*(uint64 *)(lVar2 + 32),1,0);
                         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/修理升级",0);
                         plVar5 = (int64 *)0;
-                        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                           plVar5 = plVar3;
                         }
                         NGUITools.PlaySound(plVar5,0);
@@ -640,7 +640,7 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x6002379
-    // RVA   : 0xC155B0   Offset: 0xC149B0   Length: 0x339
+    // RVA   : 0xC15C20   Offset: 0xC15020   Length: 0x339
     public void ResearchTargetButtonClicked()
     {
         long lVar1;
@@ -660,34 +660,34 @@ public class WeaponResearchUIController
         if (cVar2) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7518 + 184);
-        lVar3 = il2cpp_internal(DAT_181d94e50);
-        FUN_18132faf0(lVar3,DAT_181d95788);
+        lVar1 = **(int64 **)(DAT_181db7530 + 184);
+        lVar3 = il2cpp_internal(DAT_181d94e68);
+        FUN_181330100(lVar3,DAT_181d957a0);
         local_res8[0] = 0;
-        uVar4 = il2cpp_value_box(DAT_181d80418,local_res8);
+        uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
         if (lVar3 != null) {
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           local_res18[0] = 0;
-          uVar4 = il2cpp_value_box(DAT_181d80418,local_res18);
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           local_res20[0] = 0xffffffff;
-          uVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          uVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           local_28 = 0xffffffff;
-          uVar4 = il2cpp_value_box(DAT_181d80418,&local_28);
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          uVar4 = il2cpp_value_box(DAT_181d80430,&local_28);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           local_24 = 0;
-          uVar4 = il2cpp_value_box(DAT_181d80418,&local_24);
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          uVar4 = il2cpp_value_box(DAT_181d80430,&local_24);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           local_20 = 0xffffffff;
-          uVar4 = il2cpp_value_box(DAT_181d80418,&local_20);
-          FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+          uVar4 = il2cpp_value_box(DAT_181d80430,&local_20);
+          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
           if (((GameController._instance != null) &&
               (lVar5 = GameController._instance.worldData) != null) &&
              (lVar5 = WorldData.Player(lVar5,0)) != null) {
             local_1c = HeroData.GetWeaponResearchWeaponType(lVar5,0);
-            uVar4 = il2cpp_value_box(DAT_181d80418,&local_1c);
-            FUN_18181e0a0(lVar3,uVar4,DAT_181d95888);
+            uVar4 = il2cpp_value_box(DAT_181d80430,&local_1c);
+            FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
             uVar4 = Component.get_gameObject(this,0);
             if (lVar1 != null) {
               ChooseController.ShowChoosePanel(lVar1,1,lVar3,uVar4,"ResearchTargetChoosen",0,0,0,0,0);
@@ -698,10 +698,10 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x600237A
-    // RVA   : 0xC158F0   Offset: 0xC14CF0   Length: 0x94
+    // RVA   : 0xC15F60   Offset: 0xC15360   Length: 0x94
     public void ResearchTargetChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         long lVar1;
         if ((*pStatics != 0) &&
            (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
@@ -716,7 +716,7 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x600237B
-    // RVA   : 0xC13F30   Offset: 0xC13330   Length: 0x19B
+    // RVA   : 0xC145A0   Offset: 0xC139A0   Length: 0x19B
     public void CreateResearchTargetItemIcon(ItemData targetItemData)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -759,7 +759,7 @@ public class WeaponResearchUIController
     }
 
     // Token : 0x600237C
-    // RVA   : 0xC13E70   Offset: 0xC13270   Length: 0xBA
+    // RVA   : 0xC144E0   Offset: 0xC138E0   Length: 0xBA
     public void ClearResearchTarget()
     {
         ulong uVar1;

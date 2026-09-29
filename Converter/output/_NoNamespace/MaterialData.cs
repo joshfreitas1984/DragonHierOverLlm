@@ -11,7 +11,7 @@ public class MaterialData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60012F2
-    // RVA   : 0xA8D9C0   Offset: 0xA8CDC0   Length: 0x65
+    // RVA   : 0xA8E080   Offset: 0xA8D480   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;

@@ -31,7 +31,7 @@ public class <StartShowHeroFightScore>d__16
     }
 
     // Token : 0x60017CC
-    // RVA   : 0x8F4370   Offset: 0x8F3770   Length: 0x19B
+    // RVA   : 0x935670   Offset: 0x934A70   Length: 0x19B
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -42,7 +42,7 @@ public class <StartShowHeroFightScore>d__16
         lVar1 = this.<>4__this;
         if (local_res8[0] == 0) {
           this.<>1__state = 0xffffffff;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar3;
           this.<>1__state = 1;
           return true;
@@ -50,15 +50,15 @@ public class <StartShowHeroFightScore>d__16
         if (local_res8[0] == 1) {
           this.<>1__state = 0xffffffff;
           if (lVar1 == null) {
-        LAB_1808f4506:
+        LAB_180935806:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (*(char *)(lVar1 + 66) == false) {
             *(uint8 *)(lVar1 + 66) = 1;
-            lVar2 = *(int64 *)(*(int64 *)(DAT_181daa190 + 184) + 8);
-            uVar3 = new OnTooltipCB(lVar1,DAT_181d78f30,0);
-            if (lVar2 == null) goto LAB_1808f4506;
+            lVar2 = *(int64 *)(*(int64 *)(DAT_181daa1a8 + 184) + 8);
+            uVar3 = new OnTooltipCB(lVar1,DAT_181d78f48,0);
+            if (lVar2 == null) goto LAB_180935806;
             TaskFactory.StartNew(lVar2,uVar3,2);
           }
           if (*(char *)(lVar1 + 64) == false) {
@@ -76,15 +76,15 @@ public class <StartShowHeroFightScore>d__16
     }
 
     // Token : 0x60017CE
-    // RVA   : 0x8F4510   Offset: 0x8F3910   Length: 0x3E
+    // RVA   : 0x935810   Offset: 0x934C10   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da5848);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da59e0);
     }
 
     // Token : 0x60017CF

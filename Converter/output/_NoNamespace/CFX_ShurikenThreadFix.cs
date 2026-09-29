@@ -6,18 +6,18 @@
 public class CFX_ShurikenThreadFix
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E49
+    // Token: 0x4001E4A
     private ParticleSystem[] systems;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60023F2
-    // RVA   : 0xB80270   Offset: 0xB7F670   Length: 0xC4
+    // RVA   : 0xB80930   Offset: 0xB7FD30   Length: 0xC4
     private void OnEnable()
     {
         long lVar1;
         ulong uVar2;
         uint uVar3;
-        uVar2 = FUN_1809674e0(this,DAT_181d98660);
+        uVar2 = FUN_180967b70(this,DAT_181d98678);
         this.systems = uVar2;
         lVar1 = this.systems;
         uVar3 = 0;
@@ -40,7 +40,7 @@ public class CFX_ShurikenThreadFix
     }
 
     // Token : 0x60023F3
-    // RVA   : 0xB80340   Offset: 0xB7F740   Length: 0x6C
+    // RVA   : 0xB80A00   Offset: 0xB7FE00   Length: 0x6C
     private IEnumerator WaitFrame()
     {
         long lVar1;

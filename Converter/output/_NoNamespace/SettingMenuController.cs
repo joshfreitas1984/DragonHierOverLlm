@@ -6,70 +6,70 @@
 public class SettingMenuController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B4D
+    // Token: 0x4001B4E
     public GameObject settingMenu;
 
-    // Token: 0x4001B4E
+    // Token: 0x4001B4F
     public Slider volumeSlider;
 
-    // Token: 0x4001B4F
+    // Token: 0x4001B50
     public Slider bgmVolumeSlider;
 
-    // Token: 0x4001B50
+    // Token: 0x4001B51
     public Slider soundEffectVolumeSlider;
 
-    // Token: 0x4001B51
+    // Token: 0x4001B52
     public Dropdown solutionDropDown;
 
-    // Token: 0x4001B52
+    // Token: 0x4001B53
     public Dropdown languageDropDown;
 
-    // Token: 0x4001B53
+    // Token: 0x4001B54
     public Toggle fullScreen;
 
-    // Token: 0x4001B54
+    // Token: 0x4001B55
     public Toggle skipTutorial;
 
-    // Token: 0x4001B55
+    // Token: 0x4001B56
     public Dropdown autoSave;
 
-    // Token: 0x4001B56
+    // Token: 0x4001B57
     public Toggle fastTalk;
 
-    // Token: 0x4001B57
+    // Token: 0x4001B58
     public Toggle fightViewFollow;
 
-    // Token: 0x4001B58
+    // Token: 0x4001B59
     public Toggle fightScreenShake;
 
-    // Token: 0x4001B59
+    // Token: 0x4001B5A
     public Toggle skipSpeGetItem;
 
-    // Token: 0x4001B5A
+    // Token: 0x4001B5B
     public Toggle rightPopInfo;
 
-    // Token: 0x4001B5B
+    // Token: 0x4001B5C
     public Toggle evadeBalance;
 
-    // Token: 0x4001B5C
+    // Token: 0x4001B5D
     public static List<SystemLanguage> TargetLanguage;
 
-    // Token: 0x4001B5D
+    // Token: 0x4001B5E
     private static SettingMenuController _instance;
 
-    // Token: 0x4001B5E
+    // Token: 0x4001B5F
     private bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60020E3
-    // RVA   : 0x97D6E0   Offset: 0x97CAE0   Length: 0x58
+    // RVA   : 0x97DD70   Offset: 0x97D170   Length: 0x58
     public static SettingMenuController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181da1960 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181da1978 + 184) + 8);
     }
 
     // Token : 0x60020E4
-    // RVA   : 0x97B600   Offset: 0x97AA00   Length: 0xE0
+    // RVA   : 0x97BC90   Offset: 0x97B090   Length: 0xE0
     private void Awake()
     {
         ulong uVar1;
@@ -82,7 +82,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020E5
-    // RVA   : 0x97BB00   Offset: 0x97AF00   Length: 0x91C
+    // RVA   : 0x97C190   Offset: 0x97B590   Length: 0x91C
     public void RefreshSettingState()
     {
         var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
@@ -133,7 +133,7 @@ public class SettingMenuController
                         uVar7 = Int32.ToString(local_res8,0);
                         uVar6 = String.Concat(uVar6,"x",uVar7,0);
                         if (lVar2 != null) {
-                          uVar9 = FUN_1817eb4e0(lVar2,uVar6,DAT_181da3fd8);
+                          uVar9 = FUN_1817ebaf0(lVar2,uVar6,DAT_181da3ff0);
                           if (lVar8 != null) {
                             Dropdown.set_value(lVar8,uVar9,0);
                             local_res18[0] = SceneManager.GetActiveScene(0);
@@ -156,7 +156,7 @@ public class SettingMenuController
                                 lVar2 = SettingMenuController.TargetLanguage;
                                 uVar9 = LTLocalization.GetNowSystemLanguage(0);
                                 if (lVar2 == null) throw; // [null/range check failed]
-                                uVar9 = FUN_1817eb4e0(lVar2,uVar9,DAT_181da4b58);
+                                uVar9 = FUN_1817ebaf0(lVar2,uVar9,DAT_181da4b70);
                                 if (lVar8 == null) throw; // [null/range check failed]
                                 Dropdown.set_value(lVar8,uVar9,0);
                               }
@@ -283,7 +283,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020E6
-    // RVA   : 0x97CBF0   Offset: 0x97BFF0   Length: 0x2DD
+    // RVA   : 0x97D280   Offset: 0x97C680   Length: 0x2DD
     public void ShowSettingMenu()
     {
         long lVar1;
@@ -298,13 +298,13 @@ public class SettingMenuController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                 if (this.settingMenu != null) {
                   lVar1 = GameObject.get_transform(this.settingMenu,0);
                   if (lVar1 != null) {
                     lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                     if (lVar1 != null) {
-                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                       if (plVar3 != (int64 *)0) {
                         puVar4 = (uint64 *)
                                  (**(code **)(*plVar3 + 0x298))
@@ -322,9 +322,9 @@ public class SettingMenuController
                             if (lVar1 != null) {
                               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                               if (lVar1 != null) {
-                                uVar5 = Component.GetComponent(lVar1,DAT_181d94460);
+                                uVar5 = Component.GetComponent(lVar1,DAT_181d94478);
                                 uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f000000,0x3e800000,0);
-                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1c20);
+                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1dc8);
                                 if (this.settingMenu != null) {
                                   lVar1 = GameObject.get_transform(this.settingMenu,0);
                                   if (lVar1 != null) {
@@ -340,7 +340,7 @@ public class SettingMenuController
                                           uVar5 = Transform.Find(lVar1,"SettingRoot",0);
                                           uVar5 = ShortcutExtensions.DOScale
                                                             (uVar5,0x3f800000,0x3e800000,0);
-                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1db0);
+                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
                                           SettingMenuController.RefreshSettingState(this,0);
                                           return;
                                         }
@@ -363,7 +363,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020E7
-    // RVA   : 0x97D1E0   Offset: 0x97C5E0   Length: 0x2B0
+    // RVA   : 0x97D870   Offset: 0x97CC70   Length: 0x2B0
     public void UnshowSettingMenu()
     {
         long lVar1;
@@ -377,9 +377,9 @@ public class SettingMenuController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"BlackBackground",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d94460);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
               uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1c20);
+              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
               if (this.settingMenu != null) {
                 lVar1 = GameObject.get_transform(this.settingMenu,0);
                 if (lVar1 != null) {
@@ -388,15 +388,15 @@ public class SettingMenuController
                   local_14 = 0x3f800000;
                   local_10 = 0x3f800000;
                   uVar2 = ShortcutExtensions.DOScale(uVar2,&local_18,0x3e4ccccd,0);
-                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1db0);
-                  uVar3 = new OnTooltipCB(this,DAT_181da79a0,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc01d0);
+                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
+                  uVar3 = new OnTooltipCB(this,DAT_181da7b38,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0380);
                   lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
                   if (lVar1 != null) {
                     GameDataController.SavePlayerprefData(lVar1,0);
                     plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
                     plVar5 = (int64 *)0;
-                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                       plVar5 = plVar4;
                     }
                     NGUITools.PlaySound(plVar5,0);
@@ -410,7 +410,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020E8
-    // RVA   : 0x97D4A0   Offset: 0x97C8A0   Length: 0x17C
+    // RVA   : 0x97DB30   Offset: 0x97CF30   Length: 0x17C
     public void VolumeSliderChanged()
     {
         long lVar1;
@@ -441,7 +441,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020E9
-    // RVA   : 0x97B6E0   Offset: 0x97AAE0   Length: 0x2C9
+    // RVA   : 0x97BD70   Offset: 0x97B170   Length: 0x2C9
     public void BgmVolumeSliderChanged()
     {
         long lVar1;
@@ -475,7 +475,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020EA
-    // RVA   : 0x97D040   Offset: 0x97C440   Length: 0x195
+    // RVA   : 0x97D6D0   Offset: 0x97CAD0   Length: 0x195
     public void SoundEffectVolumeSliderChanged()
     {
         long lVar2;
@@ -506,7 +506,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020EB
-    // RVA   : 0x97CED0   Offset: 0x97C2D0   Length: 0x162
+    // RVA   : 0x97D560   Offset: 0x97C960   Length: 0x162
     public void SolutionDropDownValueChange()
     {
         uint uVar1;
@@ -524,7 +524,7 @@ public class SettingMenuController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar6 = lVar6[uVar1];
-            lVar5 = FUN_1800d60b0(DAT_181da1040,1);
+            lVar5 = FUN_1800d60b0(DAT_181da1058,1);
             if (lVar5 != null) {
               if (*(int *)(lVar5 + 24) == 0) {
                 uVar7 = il2cpp_internal();
@@ -558,7 +558,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020EC
-    // RVA   : 0x97C780   Offset: 0x97BB80   Length: 0x151
+    // RVA   : 0x97CE10   Offset: 0x97C210   Length: 0x151
     public void SetResolution(int resulotionID)
     {
         byte uVar1;
@@ -573,7 +573,7 @@ public class SettingMenuController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar5 = lVar5[resulotionID];
-          lVar4 = FUN_1800d60b0(DAT_181da1040,1);
+          lVar4 = FUN_1800d60b0(DAT_181da1058,1);
           if (lVar4 != null) {
             if (*(int *)(lVar4 + 24) == 0) {
               uVar6 = il2cpp_internal();
@@ -606,7 +606,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020ED
-    // RVA   : 0x97BA20   Offset: 0x97AE20   Length: 0xD2
+    // RVA   : 0x97C0B0   Offset: 0x97B4B0   Length: 0xD2
     public void LanguageDropDownValueChange()
     {
         uint uVar1;
@@ -625,7 +625,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020EE
-    // RVA   : 0x97B9B0   Offset: 0x97ADB0   Length: 0x67
+    // RVA   : 0x97C040   Offset: 0x97B440   Length: 0x67
     public void FullScreenButtonClicked()
     {
         byte uVar1;
@@ -637,10 +637,10 @@ public class SettingMenuController
     }
 
     // Token : 0x60020EF
-    // RVA   : 0x97CA40   Offset: 0x97BE40   Length: 0x1A6
+    // RVA   : 0x97D0D0   Offset: 0x97C4D0   Length: 0x1A6
     public void SetSkipTutorial()
     {
-        var pStatics_dcf8 = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics_dd10 = *(int64*)(DAT_181dadd10 + 184);
         long lVar1;
         ulong uVar2;
         bool cVar3;
@@ -651,15 +651,15 @@ public class SettingMenuController
           if ((this.skipTutorial != null) && (lVar1 != null)) {
             PlayerPrefDictionary.SetKey
                       (lVar1,"SkipTutorial",*(char *)(this.skipTutorial + 0x118) != false,0);
-            uVar2 = **(uint64 **)(DAT_181dadcf8 + 184);
+            uVar2 = **(uint64 **)(DAT_181dadd10 + 184);
             cVar3 = Object.op_Inequality(uVar2,0,0);
             if (cVar3) {
               lVar1 = GameController.difficultyExtraPoint;
               if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 16)) == null) throw; // [null/range check failed]
               iVar4 = PlayerPrefDictionary.GetInt(lVar1,"SkipTutorial",0);
               if (iVar4 == 1) {
-                if (*pStatics_dcf8 == 0) throw; // [null/range check failed]
-                *(uint8 *)(*pStatics_dcf8 + 89) = 0;
+                if (*pStatics_dd10 == 0) throw; // [null/range check failed]
+                *(uint8 *)(*pStatics_dd10 + 89) = 0;
               }
             }
             return;
@@ -668,7 +668,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F0
-    // RVA   : 0x97C420   Offset: 0x97B820   Length: 0x9B
+    // RVA   : 0x97CAB0   Offset: 0x97BEB0   Length: 0x9B
     public void SetAutoSave()
     {
         long lVar1;
@@ -682,7 +682,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F1
-    // RVA   : 0x97C4C0   Offset: 0x97B8C0   Length: 0xA2
+    // RVA   : 0x97CB50   Offset: 0x97BF50   Length: 0xA2
     public void SetFastTalk()
     {
         long lVar1;
@@ -698,7 +698,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F2
-    // RVA   : 0x97C620   Offset: 0x97BA20   Length: 0xA2
+    // RVA   : 0x97CCB0   Offset: 0x97C0B0   Length: 0xA2
     public void SetFightViewFollow()
     {
         long lVar1;
@@ -714,7 +714,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F3
-    // RVA   : 0x97C570   Offset: 0x97B970   Length: 0xA2
+    // RVA   : 0x97CC00   Offset: 0x97C000   Length: 0xA2
     public void SetFightScreenShake()
     {
         long lVar1;
@@ -730,7 +730,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F4
-    // RVA   : 0x97C990   Offset: 0x97BD90   Length: 0xA2
+    // RVA   : 0x97D020   Offset: 0x97C420   Length: 0xA2
     public void SetSkipSpeGetItem()
     {
         long lVar1;
@@ -746,7 +746,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F5
-    // RVA   : 0x97C8E0   Offset: 0x97BCE0   Length: 0xA5
+    // RVA   : 0x97CF70   Offset: 0x97C370   Length: 0xA5
     public void SetRightPopInfo()
     {
         long lVar1;
@@ -762,7 +762,7 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F6
-    // RVA   : 0x97C6D0   Offset: 0x97BAD0   Length: 0xA5
+    // RVA   : 0x97CD60   Offset: 0x97C160   Length: 0xA5
     public void SetNoEvadeBalance()
     {
         long lVar1;
@@ -785,16 +785,16 @@ public class SettingMenuController
     }
 
     // Token : 0x60020F8
-    // RVA   : 0x97D620   Offset: 0x97CA20   Length: 0xB4
+    // RVA   : 0x97DCB0   Offset: 0x97D0B0   Length: 0xB4
     private static void /*cctor*/()
     {
         long lVar2;
-        lVar2 = il2cpp_internal(DAT_181d97a50);
-        FUN_18132faf0(lVar2,DAT_181da4a58);
+        lVar2 = il2cpp_internal(DAT_181d97a68);
+        FUN_181330100(lVar2,DAT_181da4a70);
         if (lVar2 != null) {
-          FUN_18182a0b0(lVar2,40,DAT_181da4ad8);
-          FUN_18182a0b0(lVar2,41,DAT_181da4ad8);
-          plVar1 = *(int64 **)(DAT_181da1960 + 184);
+          FUN_18182a6c0(lVar2,40,DAT_181da4af0);
+          FUN_18182a6c0(lVar2,41,DAT_181da4af0);
+          plVar1 = *(int64 **)(DAT_181da1978 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;

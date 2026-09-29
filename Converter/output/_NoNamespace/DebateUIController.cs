@@ -98,23 +98,23 @@ public class DebateUIController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600138A
-    // RVA   : 0xA582A0   Offset: 0xA576A0   Length: 0x58
+    // RVA   : 0xA58930   Offset: 0xA57D30   Length: 0x58
     public static DebateUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181dbfc40 + 184) + 32);
+        return *(uint64 *)(*(int64 *)(DAT_181dbfc58 + 184) + 32);
     }
 
     // Token : 0x600138B
-    // RVA   : 0xA505C0   Offset: 0xA4F9C0   Length: 0x68
+    // RVA   : 0xA50C50   Offset: 0xA50050   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181dbfc40 + 184) + 32);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181dbfc58 + 184) + 32);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x600138C
-    // RVA   : 0xA56920   Offset: 0xA55D20   Length: 0xA99
+    // RVA   : 0xA56FB0   Offset: 0xA563B0   Length: 0xA99
     public void ShowDebateUI(HeroData _enemyData, string _fightEndCallFuc)
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
@@ -204,25 +204,25 @@ public class DebateUIController
                                       this.enemyPatient = fVar13;
                                       this.enemyMaxPatient = fVar13;
                                       DebateUIController.RefreshPatientUI(this,0);
-                                      lVar5 = il2cpp_internal(DAT_181d91360);
-                                      FUN_18132faf0(lVar5,DAT_181d7e5c8);
+                                      lVar5 = il2cpp_internal(DAT_181d91378);
+                                      FUN_181330100(lVar5,DAT_181d7e5e0);
                                       iVar11 = 15;
                                       while( true ) {
-                                        uVar6 = DAT_181db47d0;
+                                        uVar6 = DAT_181db47e8;
                                         uVar6 = Type.GetTypeFromHandle(uVar6,0);
                                         lVar7 = Enum.GetNames(uVar6,0);
-                                        if (lVar7 == null) goto LAB_180a573b4;
+                                        if (lVar7 == null) goto LAB_180a57a44;
                                         lVar10 = this.debateTopics;
                                         if (lVar7.Count <= iVar11) break;
-                                        if (lVar10 == null) goto LAB_180a573b4;
-                                        cVar2 = FUN_18182a3a0();
+                                        if (lVar10 == null) goto LAB_180a57a44;
+                                        cVar2 = FUN_18182a9b0();
                                         if (!cVar2) {
-                                          if (lVar5 == null) goto LAB_180a573b4;
-                                          FUN_18182a0b0(lVar5);
+                                          if (lVar5 == null) goto LAB_180a57a44;
+                                          FUN_18182a6c0(lVar5);
                                         }
                                         iVar11 = iVar11 + 1;
                                       }
-                                      if (lVar10 != null) goto LAB_180a56ff4;
+                                      if (lVar10 != null) goto LAB_180a57684;
                                     }
                                   }
                                 }
@@ -238,10 +238,10 @@ public class DebateUIController
             }
           }
         }
-        LAB_180a573b4:
+        LAB_180a57a44:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180a56ff4:
+        LAB_180a57684:
         if (2 < lVar10.Count) {
           DebateUIController.GenerateNextTopic(this,0);
           DebateUIController.FullFillCard(this,1,0);
@@ -266,35 +266,35 @@ public class DebateUIController
               MonoBehaviour.Invoke(this,"NextDebateRound",0x40000000,0);
               plVar9 = (int64 *)Resources.Load("Sound/SoundEffect/紧张",0);
               plVar12 = (int64 *)0;
-              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+              if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                 plVar12 = plVar9;
               }
               NGUITools.PlaySound(plVar12);
               return;
             }
           }
-          goto LAB_180a573b4;
+          goto LAB_180a57a44;
         }
-        if (lVar5 == null) goto LAB_180a573b4;
-        uVar3 = FUN_180d95a30(0,lVar5.cityAreaID,0);
+        if (lVar5 == null) goto LAB_180a57a44;
+        uVar3 = FUN_180d96040(0,lVar5.cityAreaID,0);
         if (lVar5.cityAreaID <= uVar3) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        if (lVar10 == null) goto LAB_180a573b4;
-        FUN_18182a0b0(lVar10,*(uint32 *)
+        if (lVar10 == null) goto LAB_180a57a44;
+        FUN_18182a6c0(lVar10,*(uint32 *)
                               (lVar5.chapter + 32 + (int64)(int)uVar3 * 4),
-                      DAT_181d7e648);
+                      DAT_181d7e660);
         lVar7 = this.debateTopics;
-        if (lVar7 == null) goto LAB_180a573b4;
+        if (lVar7 == null) goto LAB_180a57a44;
         uVar3 = lVar7.Count;
         if (uVar3 <= uVar3 - 1) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        FUN_1817eee00(lVar5,*(uint32 *)(lVar7._items + 28 + (int64)(int)uVar3 * 4)
-                      ,DAT_181d7e840);
+        FUN_1817ef410(lVar5,*(uint32 *)(lVar7._items + 28 + (int64)(int)uVar3 * 4)
+                      ,DAT_181d7e858);
         if (((this.debateUIPanel == null) ||
             (lVar7 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
-           (lVar7 = Transform.Find(lVar7,"Topic",0)) == null) goto LAB_180a573b4;
+           (lVar7 = Transform.Find(lVar7,"Topic",0)) == null) goto LAB_180a57a44;
         uVar8 = Component.get_gameObject(lVar7,0);
         uVar6 = this.debateTopicPrefab;
         lVar7 = GlobalData.AddChild(uVar8,uVar6,0);
@@ -302,26 +302,26 @@ public class DebateUIController
         il2cpp_internal(plVar9,lVar7);
         lVar7 = this.debateTopics;
         lVar10 = *plVar9;
-        if (lVar7 == null) goto LAB_180a573b4;
-        local_res8[0] = FUN_1800d6760(lVar7,lVar7.Count + -1,DAT_181d7e940);
+        if (lVar7 == null) goto LAB_180a57a44;
+        local_res8[0] = FUN_1800d6760(lVar7,lVar7.Count + -1,DAT_181d7e958);
         uVar6 = Int32.ToString(local_res8,0);
-        if (lVar10 == null) goto LAB_180a573b4;
+        if (lVar10 == null) goto LAB_180a57a44;
         Object.set_name(lVar10,uVar6,0);
         if (((*plVar9 == 0) || (lVar7 = GameObject.get_transform(*plVar9,0)) == null) ||
-           (lVar7 = Transform.Find(lVar7,"Text",0)) == null) goto LAB_180a573b4;
-        uVar6 = Component.GetComponent(lVar7,DAT_181d96160);
+           (lVar7 = Transform.Find(lVar7,"Text",0)) == null) goto LAB_180a57a44;
+        uVar6 = Component.GetComponent(lVar7,DAT_181d96178);
         lVar7 = this.debateTopics;
-        if (lVar7 == null) goto LAB_180a573b4;
+        if (lVar7 == null) goto LAB_180a57a44;
         uVar4 = FUN_1800d6760(lVar7,lVar7.Count + -1);
         GlobalData.GetBaseAttriName(uVar4,0);
         LTLocalization.SetText(uVar6);
         lVar10 = this.debateTopics;
-        if (lVar10 == null) goto LAB_180a573b4;
-        goto LAB_180a56ff4;
+        if (lVar10 == null) goto LAB_180a57a44;
+        goto LAB_180a57684;
     }
 
     // Token : 0x600138D
-    // RVA   : 0xA51B10   Offset: 0xA50F10   Length: 0xBD9
+    // RVA   : 0xA521A0   Offset: 0xA515A0   Length: 0xBD9
     public GameObject GetAIUseCard()
     {
         int iVar1;
@@ -338,10 +338,10 @@ public class DebateUIController
         uint uVar13;
         float fVar14;
         uint local_res18;
-        lVar5 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(lVar5,DAT_181d89298);
-        lVar6 = il2cpp_internal(DAT_181d92f58);
-        FUN_18132faf0(lVar6,DAT_181d89298);
+        lVar5 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(lVar5,DAT_181d892b0);
+        lVar6 = il2cpp_internal(DAT_181d92f70);
+        FUN_181330100(lVar6,DAT_181d892b0);
         iVar11 = 0;
         while( true ) {
           if ((((this.debateUIPanel == null) ||
@@ -368,13 +368,13 @@ public class DebateUIController
                (((this.lastTopic == -1 || (*(int *)(lVar7 + 24) != this.lastTopic))
                 && ((this.nowTopic == -1 ||
                     (*(int *)(lVar7 + 24) == this.nowTopic)))))) {
-        LAB_180a51dbb:
+        LAB_180a5244b:
               if (((this.debateUIPanel == null) ||
                   (lVar7 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                  ((lVar7 = Transform.Find(lVar7,"Enemy",0), lVar7 == null ||
                   ((((lVar7 = Transform.Find(lVar7,"Card",0), lVar7 == null ||
                      (lVar7 = Transform.GetChild(lVar7,iVar11,0)) == null) ||
-                    (lVar7 = Component.GetComponent(lVar7,DAT_181d93ce0)) == null) ||
+                    (lVar7 = Component.GetComponent(lVar7,DAT_181d93cf8)) == null) ||
                    (*(int64 *)(lVar7 + 24) == 0)))))) throw; // [null/range check failed]
               if (*(char *)(*(int64 *)(lVar7 + 24) + 17) == false) {
                 if ((((this.debateUIPanel == null) ||
@@ -395,14 +395,14 @@ public class DebateUIController
                 lVar7 = lVar6;
               }
               if (lVar7 == null) throw; // [null/range check failed]
-              FUN_18181e0a0(lVar7);
+              FUN_18181e6b0(lVar7);
             }
-        LAB_180a51fdd:
+        LAB_180a5266d:
             iVar11 = iVar11 + 1;
           }
           else {
-            if (*(char *)(lVar7 + 17) == false) goto LAB_180a51fdd;
-            if (*(int *)(lVar7 + 20) == 4) goto LAB_180a51dbb;
+            if (*(char *)(lVar7 + 17) == false) goto LAB_180a5266d;
+            if (*(int *)(lVar7 + 20) == 4) goto LAB_180a5244b;
             iVar11 = iVar11 + 1;
           }
         }
@@ -413,11 +413,11 @@ public class DebateUIController
             local_res18 = 0xffffffff;
             if (lVar5 != null) {
               uVar3 = *(uint32 *)(lVar5 + 24);
-              if ((int)uVar3 < 1) goto LAB_180a5266c;
+              if ((int)uVar3 < 1) goto LAB_180a52cfc;
               lVar7 = 32;
               uVar3 = 0;
               uVar4 = 0xffffffff;
-              goto LAB_180a52200;
+              goto LAB_180a52890;
             }
           }
           else if (lVar5 != null) {
@@ -425,14 +425,14 @@ public class DebateUIController
             if ((int)uVar3 < 1) {
               uVar4 = 0xffffffff;
               iVar11 = -999999;
-              goto LAB_180a5266c;
+              goto LAB_180a52cfc;
             }
-            uVar4 = FUN_180d95a30(0,uVar3,0);
+            uVar4 = FUN_180d96040(0,uVar3,0);
             if (*(uint32 *)(lVar5 + 24) <= uVar4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar5 = *(int64 *)(lVar5 + 16);
-            goto LAB_180a521af;
+            goto LAB_180a5283f;
           }
         }
         else if (lVar5 != null) {
@@ -440,23 +440,23 @@ public class DebateUIController
             lVar7 = DebateUIController.WinPassiveTalkText;
             if (lVar7 == null) {
               uVar9 = **(uint64 **)(DAT_181d72ad8 + 184);
-              lVar7 = new OnTooltipCB(uVar9,DAT_181d9fda8,DAT_181dab1b8);
+              lVar7 = new OnTooltipCB(uVar9,DAT_181d9ff40,DAT_181dab1d0);
               DebateUIController.WinPassiveTalkText = lVar7;
             }
-            List_1.Sort(lVar5,lVar7,DAT_181d89718);
+            List_1.Sort(lVar5,lVar7,DAT_181d89730);
           }
           lVar7 = DebateUIController.GetOutCard(this,1,0);
           if (lVar6 != null) {
             if (0 < *(int *)(lVar6 + 24)) {
-              if (*(int *)(lVar5 + 24) < 1) goto LAB_180a52694;
+              if (*(int *)(lVar5 + 24) < 1) goto LAB_180a52d24;
               if (*(int *)(lVar5 + 24) == 0) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar8 = *(int64 *)(*(int64 *)(lVar5 + 16) + 32);
-              if ((((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8260)) == null)
+              if ((((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8278)) == null)
                   || (*(int64 *)(lVar8 + 24) == 0)) || (lVar7 == null)) throw; // [null/range check failed]
               if ((*(int *)(*(int64 *)(lVar8 + 24) + 28) <= *(int *)(lVar7 + 28)) ||
-                 (fVar14 = (float)Random.get_value(0), fVar14 < 0.5)) goto LAB_180a52694;
+                 (fVar14 = (float)Random.get_value(0), fVar14 < 0.5)) goto LAB_180a52d24;
             }
             if (0 < *(int *)(lVar5 + 24)) {
               if (*(int *)(lVar5 + 24) == 0) {
@@ -464,11 +464,11 @@ public class DebateUIController
               }
               return *(uint64 *)(*(int64 *)(lVar5 + 16) + 32);
             }
-            goto LAB_180a526dd;
+            goto LAB_180a52d6d;
           }
         }
         throw; // [null/range check failed]
-        LAB_180a52200:
+        LAB_180a52890:
         uVar13 = uVar3;
         uVar3 = *(uint32 *)(lVar5 + 24);
         if ((int)uVar13 < (int)uVar3) {
@@ -476,11 +476,11 @@ public class DebateUIController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar8 = *(int64 *)(*(int64 *)(lVar5 + 16) + lVar7);
-          if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8260)) == null) ||
+          if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8278)) == null) ||
              (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
           if (*(char *)(*(int64 *)(lVar8 + 24) + 17) == false) {
-            lVar8 = FUN_180002f80(lVar5,uVar13,DAT_181d89918);
-            if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8260)) == null) ||
+            lVar8 = FUN_180002f80(lVar5,uVar13,DAT_181d89930);
+            if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8278)) == null) ||
                (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
             iVar1 = *(int *)(*(int64 *)(lVar8 + 24) + 28);
             iVar12 = 0;
@@ -496,7 +496,7 @@ public class DebateUIController
                   ((lVar8 = Transform.Find(lVar8,"Player",0), lVar8 == null ||
                    ((lVar8 = Transform.Find(lVar8,"Card",0), lVar8 == null ||
                     (lVar8 = Transform.GetChild(lVar8,iVar12,0)) == null))))) ||
-                 ((lVar8 = Component.GetComponent(lVar8,DAT_181d93ce0), lVar8 == null ||
+                 ((lVar8 = Component.GetComponent(lVar8,DAT_181d93cf8), lVar8 == null ||
                   (*(int64 *)(lVar8 + 24) == 0)))) throw; // [null/range check failed]
               iVar2 = *(int *)(*(int64 *)(lVar8 + 24) + 24);
               lVar8 = FUN_180002f80(lVar5,uVar13);
@@ -504,7 +504,7 @@ public class DebateUIController
                  (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
               if (iVar2 == *(int *)(*(int64 *)(lVar8 + 24) + 24)) {
                 lVar8 = FUN_180002f80(lVar5,uVar13);
-                if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8260)) == null)
+                if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8278)) == null)
                    || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
                 iVar2 = *(int *)(*(int64 *)(lVar8 + 24) + 28);
                 if (((this.debateUIPanel == null) ||
@@ -516,7 +516,7 @@ public class DebateUIController
                     (*(int64 *)(lVar8 + 24) == 0)))) throw; // [null/range check failed]
                 if (iVar2 - *(int *)(*(int64 *)(lVar8 + 24) + 28) < iVar1) {
                   lVar8 = FUN_180002f80(lVar5,uVar13);
-                  if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8260)) == null
+                  if (((lVar8 == null) || (lVar8 = GameObject.GetComponent(lVar8,DAT_181dc8278)) == null
                       ) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
                   iVar1 = *(int *)(*(int64 *)(lVar8 + 24) + 28);
                   if (((this.debateUIPanel == null) ||
@@ -545,15 +545,15 @@ public class DebateUIController
             lVar7 = lVar7 + 8;
             uVar3 = uVar13 + 1;
           }
-          goto LAB_180a52200;
+          goto LAB_180a52890;
         }
-        LAB_180a5266c:
+        LAB_180a52cfc:
         if (lVar6 != null) {
           if ((*(int *)(lVar6 + 24) < 1) ||
              (((0 < (int)uVar3 && (0 < iVar11)) && (fVar14 = (float)Random.get_value(0), 0.5 <= fVar14)))
              ) {
             if ((int)*(uint32 *)(lVar5 + 24) < 1) {
-        LAB_180a526dd:
+        LAB_180a52d6d:
               uVar9 = 0;
             }
             else {
@@ -564,13 +564,13 @@ public class DebateUIController
             }
           }
           else {
-        LAB_180a52694:
-            uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar6 + 24),0);
+        LAB_180a52d24:
+            uVar4 = FUN_180d96040(0,*(uint32 *)(lVar6 + 24),0);
             if (*(uint32 *)(lVar6 + 24) <= uVar4) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar5 = *(int64 *)(lVar6 + 16);
-        LAB_180a521af:
+        LAB_180a5283f:
             uVar9 = lVar5[uVar4];
           }
           return uVar9;
@@ -578,7 +578,7 @@ public class DebateUIController
     }
 
     // Token : 0x600138E
-    // RVA   : 0xA528B0   Offset: 0xA51CB0   Length: 0x79
+    // RVA   : 0xA52F40   Offset: 0xA52340   Length: 0x79
     public Transform GetOutCardRoot(bool isPlayer)
     {
         long lVar1;
@@ -597,7 +597,7 @@ public class DebateUIController
     }
 
     // Token : 0x600138F
-    // RVA   : 0xA52830   Offset: 0xA51C30   Length: 0x76
+    // RVA   : 0xA52EC0   Offset: 0xA522C0   Length: 0x76
     public GameObject GetOutCardObj(bool isPlayer)
     {
         int iVar1;
@@ -621,7 +621,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001390
-    // RVA   : 0xA52930   Offset: 0xA51D30   Length: 0xA7
+    // RVA   : 0xA52FC0   Offset: 0xA523C0   Length: 0xA7
     public DebateCardData GetOutCard(bool isPlayer)
     {
         int iVar1;
@@ -636,7 +636,7 @@ public class DebateUIController
           if (lVar2 != null) {
             lVar2 = Transform.GetChild(lVar2,0,0);
             if (lVar2 != null) {
-              lVar2 = Component.GetComponent(lVar2,DAT_181d93ce0);
+              lVar2 = Component.GetComponent(lVar2,DAT_181d93cf8);
               if (lVar2 != null) {
                 return *(uint64 *)(lVar2 + 24);
               }
@@ -646,7 +646,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001391
-    // RVA   : 0xA55B40   Offset: 0xA54F40   Length: 0x1A5
+    // RVA   : 0xA561D0   Offset: 0xA555D0   Length: 0x1A5
     public void PlayAttackAnim(GameObject attackCard, GameObject targetObj)
     {
         long lVar2;
@@ -656,19 +656,19 @@ public class DebateUIController
         byte[] local_18 = new byte[16];
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/AtkHit0",0);
         plVar5 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
           plVar5 = plVar1;
         }
         NGUITools.PlaySound(plVar5,0);
         if (attackCard != null) {
           lVar2 = GameObject.get_transform(attackCard,0);
           if (lVar2 != null) {
-            lVar2 = FUN_180da9a20(lVar2,0);
+            lVar2 = FUN_180daa030(lVar2,0);
             if (lVar2 != null) {
               Transform.SetAsLastSibling(lVar2,0);
               uVar3 = GameObject.get_transform(attackCard,0);
               uVar3 = ShortcutExtensions.DOScale(uVar3,0x3fc00000,0x3e800000,0);
-              TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc1330);
+              TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
               uVar3 = GameObject.get_transform(attackCard,0);
               if (targetObj != null) {
                 lVar2 = GameObject.get_transform(targetObj,0);
@@ -677,7 +677,7 @@ public class DebateUIController
                   local_28 = *puVar4;
                   local_20 = *(uint32 *)(puVar4 + 1);
                   uVar3 = ShortcutExtensions.DOMove(uVar3,&local_28,0x3e800000,0,0);
-                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc1330);
+                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
                   return;
                 }
               }
@@ -687,7 +687,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001392
-    // RVA   : 0xA56830   Offset: 0xA55C30   Length: 0xE0
+    // RVA   : 0xA56EC0   Offset: 0xA562C0   Length: 0xE0
     public void SetCardDark(GameObject targetCard)
     {
         ulong uVar1;
@@ -703,8 +703,8 @@ public class DebateUIController
         }
         if (((targetCard != null) && (lVar4 = GameObject.get_transform(targetCard,0)) != null) &&
            (lVar4 = Transform.Find(lVar4,"Back",0)) != null) {
-          uVar1 = Component.GetComponent(lVar4,DAT_181d94460);
-          puVar2 = (uint32 *)FUN_1810d33f0(&local_18,0);
+          uVar1 = Component.GetComponent(lVar4,DAT_181d94478);
+          puVar2 = (uint32 *)FUN_1810d3a00(&local_18,0);
           local_18 = *puVar2;
           uStack_14 = puVar2[1];
           uStack_10 = puVar2[2];
@@ -715,10 +715,10 @@ public class DebateUIController
     }
 
     // Token : 0x6001393
-    // RVA   : 0xA53050   Offset: 0xA52450   Length: 0x2AAC
+    // RVA   : 0xA536E0   Offset: 0xA52AE0   Length: 0x2AAC
     public void NextDebateRound()
     {
-        var pStatics_dcf8 = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics_dd10 = *(int64*)(DAT_181dadd10 + 184);
         float fVar4;
         bool cVar5;
         uint uVar6;
@@ -753,8 +753,8 @@ public class DebateUIController
         uint8 local_b8 [16];
         uint8 local_a8 [16];
         uint8 local_98 [96];
-        if (*pStatics_dcf8 == 0) goto LAB_180a55aee;
-        TutorialController.StartTutorial(*pStatics_dcf8,"论战系统",0);
+        if (*pStatics_dd10 == 0) goto LAB_180a5617e;
+        TutorialController.StartTutorial(*pStatics_dd10,"论战系统",0);
         this.debateState = this.debateState + 1;
         this.cardUsed = 0;
         switch(this.debateState) {
@@ -775,50 +775,50 @@ public class DebateUIController
           lVar20 = DebateUIController.GetOutCard(this,0,0);
           if (((this.debateUIPanel == null) ||
               (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
-             (lVar8 = Transform.Find(lVar8,"Player",0)) == null) goto LAB_180a55aee;
+             (lVar8 = Transform.Find(lVar8,"Player",0)) == null) goto LAB_180a5617e;
           uVar16 = Transform.Find(lVar8,"Result",0);
           plVar17 = (int64 *)Vector3.get_one(&local_128,0);
           local_100 = *(float *)(plVar17 + 1);
           local_108 = *plVar17;
           uVar16 = ShortcutExtensions.DOScale(uVar16,&local_108);
-          uVar18 = new OnTooltipCB(this,DAT_181da9370,0);
-          TweenSettingsExtensions.OnComplete(uVar16,uVar18,DAT_181dc01d0);
+          uVar18 = new OnTooltipCB(this,DAT_181da9388,0);
+          TweenSettingsExtensions.OnComplete(uVar16,uVar18,DAT_181dc0380);
           if (((this.debateUIPanel == null) ||
               (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
-             (lVar8 = Transform.Find(lVar8,"Enemy",0)) == null) goto LAB_180a55aee;
+             (lVar8 = Transform.Find(lVar8,"Enemy",0)) == null) goto LAB_180a5617e;
           uVar16 = Transform.Find(lVar8,"Result",0);
           puVar9 = (uint64 *)Vector3.get_one(&local_128,0);
           local_100 = *(float *)(puVar9 + 1);
           local_108 = *puVar9;
           ShortcutExtensions.DOScale(uVar16,&local_108);
-          lVar8 = il2cpp_internal(DAT_181d97750);
+          lVar8 = il2cpp_internal(DAT_181d97768);
           local_108 = lVar8;
-          FUN_18132faf0(lVar8,DAT_181da3bd8);
-          if (lVar8 == null) goto LAB_180a55aee;
-          FUN_18181e0a0(lVar8,"这......",DAT_181da3d58);
+          FUN_181330100(lVar8,DAT_181da3bf0);
+          if (lVar8 == null) goto LAB_180a5617e;
+          FUN_18181e6b0(lVar8,"这......",DAT_181da3d70);
           bVar1 = false;
           bVar23 = false;
           bVar2 = false;
           bVar3 = false;
-          if (lVar19 == null) goto LAB_180a55aee;
+          if (lVar19 == null) goto LAB_180a5617e;
           plVar17 = (int64 *)0;
           iVar7 = 0;
           if (*(char *)(lVar19 + 17) == false) {
-            if (lVar20 == null) goto LAB_180a55aee;
-            if (*(char *)(lVar20 + 17) != false) goto LAB_180a535ad;
-            goto LAB_180a540c1;
+            if (lVar20 == null) goto LAB_180a5617e;
+            if (*(char *)(lVar20 + 17) != false) goto LAB_180a53c3d;
+            goto LAB_180a54751;
           }
-        LAB_180a535ad:
-          if (DebateCardData.SpeCardName == null) goto LAB_180a55aee;
+        LAB_180a53c3d:
+          if (DebateCardData.SpeCardName == null) goto LAB_180a5617e;
           local_f8 = DebateCardData.SpeCardName.targetAttriID + -1;
           if (local_f8 < 0) {
-        LAB_180a540c1:
-            if (*(char *)(lVar19 + 17) != false) goto LAB_180a540cb;
-        LAB_180a54442:
+        LAB_180a54751:
+            if (*(char *)(lVar19 + 17) != false) goto LAB_180a5475b;
+        LAB_180a54ad2:
             iVar22 = *(int *)(lVar19 + 28);
-        LAB_180a54446:
+        LAB_180a54ad6:
             if (!bVar23) {
-              if (lVar20 == null) goto LAB_180a55aee;
+              if (lVar20 == null) goto LAB_180a5617e;
               if (*(char *)(lVar20 + 17) == false) {
                 iVar7 = *(int *)(lVar20 + 28);
               }
@@ -839,16 +839,16 @@ public class DebateUIController
               if ((((this.debateUIPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                   (lVar11 = Transform.Find(lVar11,"Player",0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a55aee;
-              uVar16 = Component.GetComponent(lVar11,DAT_181d96160);
+                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a5617e;
+              uVar16 = Component.GetComponent(lVar11,DAT_181d96178);
               LTLocalization.SetText(uVar16,"胜",0);
               if (((this.debateUIPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"Player",0), lVar11 == null ||
-                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a55aee;
-              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
+                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a5617e;
+              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96178);
               puVar12 = (uint32 *)Color.get_green(&local_118,0);
-              if (plVar17 == (int64 *)0) goto LAB_180a55aee;
+              if (plVar17 == (int64 *)0) goto LAB_180a5617e;
               local_118 = *puVar12;
               uStack_114 = puVar12[1];
               uStack_110 = puVar12[2];
@@ -857,18 +857,18 @@ public class DebateUIController
               if ((((this.debateUIPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                   (lVar11 = Transform.Find(lVar11,"Enemy",0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a55aee;
-              uVar16 = Component.GetComponent(lVar11,DAT_181d96160);
+                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a5617e;
+              uVar16 = Component.GetComponent(lVar11,DAT_181d96178);
               LTLocalization.SetText(uVar16,"负",0);
               if (((this.debateUIPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"Enemy",0), lVar11 == null ||
-                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a55aee;
-              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
+                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a5617e;
+              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96178);
               puVar12 = (uint32 *)Color.get_red(&local_118,0);
-        LAB_180a54e90:
+        LAB_180a55520:
               if (plVar17 == (int64 *)0) {
-        LAB_180a55aee:
+        LAB_180a5617e:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -890,16 +890,16 @@ public class DebateUIController
                 if ((((this.debateUIPanel == null) ||
                      (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null)
                     || (lVar11 = Transform.Find(lVar11,"Player",0)) == null) ||
-                   (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a55aee;
-                uVar16 = Component.GetComponent(lVar11,DAT_181d96160);
+                   (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a5617e;
+                uVar16 = Component.GetComponent(lVar11,DAT_181d96178);
                 LTLocalization.SetText(uVar16,"负",0);
                 if (((this.debateUIPanel == null) ||
                     (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                    ((lVar11 = Transform.Find(lVar11,"Player",0), lVar11 == null ||
-                    (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a55aee;
-                plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
+                    (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a5617e;
+                plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96178);
                 puVar12 = (uint32 *)Color.get_red(&local_118,0);
-                if (plVar17 == (int64 *)0) goto LAB_180a55aee;
+                if (plVar17 == (int64 *)0) goto LAB_180a5617e;
                 local_118 = *puVar12;
                 uStack_114 = puVar12[1];
                 uStack_110 = puVar12[2];
@@ -908,16 +908,16 @@ public class DebateUIController
                 if ((((this.debateUIPanel == null) ||
                      (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null)
                     || (lVar11 = Transform.Find(lVar11,"Enemy",0)) == null) ||
-                   (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a55aee;
-                uVar16 = Component.GetComponent(lVar11,DAT_181d96160);
+                   (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a5617e;
+                uVar16 = Component.GetComponent(lVar11,DAT_181d96178);
                 LTLocalization.SetText(uVar16,"胜",0);
                 if (((this.debateUIPanel == null) ||
                     (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                    ((lVar11 = Transform.Find(lVar11,"Enemy",0), lVar11 == null ||
-                    (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a55aee;
-                plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
+                    (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a5617e;
+                plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96178);
                 puVar12 = (uint32 *)Color.get_green(&local_118,0);
-                goto LAB_180a54e90;
+                goto LAB_180a55520;
               }
               lVar8 = PlotController._instance;
               uVar16 = DebateUIController.GetOutCardObj(this,1,0);
@@ -927,16 +927,16 @@ public class DebateUIController
               if ((((this.debateUIPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                   (lVar11 = Transform.Find(lVar11,"Player",0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a55aee;
-              uVar16 = Component.GetComponent(lVar11,DAT_181d96160);
+                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a5617e;
+              uVar16 = Component.GetComponent(lVar11,DAT_181d96178);
               LTLocalization.SetText(uVar16,"平",0);
               if (((this.debateUIPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"Player",0), lVar11 == null ||
-                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a55aee;
-              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
-              puVar12 = (uint32 *)FUN_1810d33f0(&local_118,0);
-              if (plVar17 == (int64 *)0) goto LAB_180a55aee;
+                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a5617e;
+              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96178);
+              puVar12 = (uint32 *)FUN_1810d3a00(&local_118,0);
+              if (plVar17 == (int64 *)0) goto LAB_180a5617e;
               local_118 = *puVar12;
               uStack_114 = puVar12[1];
               uStack_110 = puVar12[2];
@@ -945,17 +945,17 @@ public class DebateUIController
               if ((((this.debateUIPanel == null) ||
                    (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                   (lVar11 = Transform.Find(lVar11,"Enemy",0)) == null) ||
-                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a55aee;
-              uVar16 = Component.GetComponent(lVar11,DAT_181d96160);
+                 (lVar11 = Transform.Find(lVar11,"Result",0)) == null) goto LAB_180a5617e;
+              uVar16 = Component.GetComponent(lVar11,DAT_181d96178);
               LTLocalization.SetText(uVar16,"平",0);
               if (((this.debateUIPanel == null) ||
                   (lVar11 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                  ((lVar11 = Transform.Find(lVar11,"Enemy",0), lVar11 == null ||
-                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a55aee;
-              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96160);
-              puVar12 = (uint32 *)FUN_1810d33f0(&local_118,0);
+                  (lVar11 = Transform.Find(lVar11,"Result",0)) == null))) goto LAB_180a5617e;
+              plVar17 = (int64 *)Component.GetComponent(lVar11,DAT_181d96178);
+              puVar12 = (uint32 *)FUN_1810d3a00(&local_118,0);
               fVar4 = local_120;
-              if (plVar17 == (int64 *)0) goto LAB_180a55af4;
+              if (plVar17 == (int64 *)0) goto LAB_180a56184;
             }
             local_118 = *puVar12;
             uStack_114 = puVar12[1];
@@ -967,19 +967,19 @@ public class DebateUIController
             do {
               bVar24 = false;
               if (local_f8 == 0) {
-                if (lVar19 == null) goto LAB_180a55aee;
+                if (lVar19 == null) goto LAB_180a5617e;
                 if (((*(char *)(lVar19 + 17) == false) || (*(int *)(lVar19 + 20) != 0)) || (bVar1)) {
-                  if (lVar20 == null) goto LAB_180a55aee;
+                  if (lVar20 == null) goto LAB_180a5617e;
                 }
                 else {
                   DebateUIController.ChangePatient(this,0);
                   DebateUIController.GetOutCardObj(this,1,0);
                   DebateUIController.PlayAttackAnim(this);
-                  if (lVar20 == null) goto LAB_180a55aee;
+                  if (lVar20 == null) goto LAB_180a5617e;
                   bVar24 = *(char *)(lVar20 + 17) == false;
                   plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/剑鸣");
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21);
@@ -993,51 +993,51 @@ public class DebateUIController
                   bVar23 = *(char *)(lVar19 + 17) == false;
                   plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/剑鸣");
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21);
-        LAB_180a5427a:
+        LAB_180a5490a:
                   bVar1 = bVar2;
                   if (bVar23) {
-        LAB_180a5427e:
+        LAB_180a5490e:
                     bVar2 = true;
                     DebateUIController.GetOutCardObj(this,1);
                     DebateUIController.SetCardDark(this);
                     bVar1 = true;
                   }
                 }
-                goto LAB_180a542af;
+                goto LAB_180a5493f;
               }
               if (local_f8 == 1) {
-                if (lVar19 == null) goto LAB_180a55aee;
+                if (lVar19 == null) goto LAB_180a5617e;
                 if (((*(char *)(lVar19 + 17) != false) && (*(int *)(lVar19 + 20) == 1)) && (!bVar1)) {
-                  bVar23 = !DAT_181e9d9a0;
+                  bVar23 = !DAT_181e9d9a2;
                   this.enemyAngryRound = 2;
                   if (bVar23) {
                     il2cpp_internal(&"Enemy");
                     il2cpp_internal(&"Player");
-                    DAT_181e9d9a0 = true;
+                    DAT_181e9d9a2 = true;
                   }
                   if (((this.debateUIPanel == null) ||
                       (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                      ((lVar8 = Transform.Find(lVar8,"Enemy",0), lVar8 == null ||
-                      (lVar8 = Transform.Find(lVar8,"Angry",0)) == null))) goto LAB_180a55aee;
+                      (lVar8 = Transform.Find(lVar8,"Angry",0)) == null))) goto LAB_180a5617e;
                   lVar8 = Component.get_gameObject(lVar8,0);
-                  if (lVar8 == null) goto LAB_180a55aee;
+                  if (lVar8 == null) goto LAB_180a5617e;
                   GameObject.SetActive(lVar8,1,0);
                   if (((this.debateUIPanel == null) ||
                       (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
-                     (lVar8 = Transform.Find(lVar8,"Enemy",0)) == null) goto LAB_180a55aee;
+                     (lVar8 = Transform.Find(lVar8,"Enemy",0)) == null) goto LAB_180a5617e;
                   lVar8 = Transform.Find(lVar8,"Angry",0);
                   puVar9 = (uint64 *)Vector3.get_one(local_98,0);
-                  if (lVar8 == null) goto LAB_180a55aee;
+                  if (lVar8 == null) goto LAB_180a5617e;
                   local_e0 = *(uint32 *)(puVar9 + 1);
                   local_e8 = *puVar9;
                   Transform.set_localScale(lVar8,&local_e8,0);
                   if (((this.debateUIPanel == null) ||
                       (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
-                     (lVar8 = Transform.Find(lVar8,"Enemy",0)) == null) goto LAB_180a55aee;
+                     (lVar8 = Transform.Find(lVar8,"Enemy",0)) == null) goto LAB_180a5617e;
                   uVar16 = Transform.Find(lVar8,"Angry",0);
                   uVar16 = ShortcutExtensions.DOScale(uVar16,0x3fa00000);
                   TweenSettingsExtensions.SetLoops(uVar16,0xffffffff,1);
@@ -1045,40 +1045,40 @@ public class DebateUIController
                   DebateUIController.PlayAttackAnim(this);
                   plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/吼叫");
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21);
                   bVar23 = bVar3;
                 }
-                if (lVar20 == null) goto LAB_180a55aee;
+                if (lVar20 == null) goto LAB_180a5617e;
                 if (((*(char *)(lVar20 + 17) != false) && (*(int *)(lVar20 + 20) == 1)) && (!bVar23)) {
-                  bVar23 = !DAT_181e9d9a0;
+                  bVar23 = !DAT_181e9d9a2;
                   this.playerAngryRound = 2;
                   if (bVar23) {
                     il2cpp_internal(&"Enemy");
                     il2cpp_internal(&"Player");
-                    DAT_181e9d9a0 = true;
+                    DAT_181e9d9a2 = true;
                   }
                   if (((this.debateUIPanel == null) ||
                       (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
                      ((lVar8 = Transform.Find(lVar8,"Player",0), lVar8 == null ||
-                      (lVar8 = Transform.Find(lVar8,"Angry",0)) == null))) goto LAB_180a55aee;
+                      (lVar8 = Transform.Find(lVar8,"Angry",0)) == null))) goto LAB_180a5617e;
                   lVar8 = Component.get_gameObject(lVar8,0);
-                  if (lVar8 == null) goto LAB_180a55aee;
+                  if (lVar8 == null) goto LAB_180a5617e;
                   GameObject.SetActive(lVar8,1,0);
                   if (((this.debateUIPanel == null) ||
                       (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
-                     (lVar8 = Transform.Find(lVar8,"Player",0)) == null) goto LAB_180a55aee;
+                     (lVar8 = Transform.Find(lVar8,"Player",0)) == null) goto LAB_180a5617e;
                   lVar8 = Transform.Find(lVar8,"Angry",0);
                   plVar10 = (int64 *)Vector3.get_one(&local_118,0);
-                  if (lVar8 == null) goto LAB_180a55aee;
+                  if (lVar8 == null) goto LAB_180a5617e;
                   local_120 = *(float *)(plVar10 + 1);
                   local_128 = *plVar10;
                   Transform.set_localScale(lVar8,&local_128,0);
                   if (((this.debateUIPanel == null) ||
                       (lVar8 = GameObject.get_transform(this.debateUIPanel,0)) == null) ||
-                     (lVar8 = Transform.Find(lVar8,"Player",0)) == null) goto LAB_180a55aee;
+                     (lVar8 = Transform.Find(lVar8,"Player",0)) == null) goto LAB_180a5617e;
                   uVar16 = Transform.Find(lVar8,"Angry",0);
                   uVar16 = ShortcutExtensions.DOScale(uVar16,0x3fa00000);
                   TweenSettingsExtensions.SetLoops(uVar16,0xffffffff,1);
@@ -1086,7 +1086,7 @@ public class DebateUIController
                   DebateUIController.PlayAttackAnim(this);
                   plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/吼叫");
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21);
@@ -1095,16 +1095,16 @@ public class DebateUIController
               }
               else if (local_f8 == 2) {
                 if ((!bVar1) && (!bVar23)) {
-                  if (lVar19 == null) goto LAB_180a55aee;
+                  if (lVar19 == null) goto LAB_180a5617e;
                   if ((*(char *)(lVar19 + 17) != false) && (*(int *)(lVar19 + 20) == 2)) {
-                    if (lVar20 == null) goto LAB_180a55aee;
+                    if (lVar20 == null) goto LAB_180a5617e;
                     if ((*(char *)(lVar20 + 17) != false) && (*(int *)(lVar20 + 20) == 2)) {
                       lVar20 = DebateUIController.GetOutCardObj(this,0);
                       if (lVar20 != null) {
                         lVar20 = GameObject.get_transform(lVar20,0);
                         uVar16 = DebateUIController.GetOutCardRoot(this,1);
                         if (lVar20 != null) {
-                          FUN_180daa820(lVar20,uVar16);
+                          FUN_180daae30(lVar20,uVar16);
                           lVar20 = DebateUIController.GetOutCardObj(this,0);
                           if (lVar20 != null) {
                             uVar16 = GameObject.get_transform(lVar20,0);
@@ -1117,7 +1117,7 @@ public class DebateUIController
                               lVar20 = GameObject.get_transform(lVar20,0);
                               uVar16 = DebateUIController.GetOutCardRoot(this,0);
                               if (lVar20 != null) {
-                                FUN_180daa820(lVar20,uVar16);
+                                FUN_180daae30(lVar20,uVar16);
                                 lVar20 = DebateUIController.GetOutCardObj(this,1);
                                 if (lVar20 != null) {
                                   uVar16 = GameObject.get_transform(lVar20,0);
@@ -1129,27 +1129,27 @@ public class DebateUIController
                                   lVar20 = DebateUIController.GetOutCard(this,0);
                                   bVar24 = true;
                                   uVar16 = "Sound/SoundEffect/SpeEffect/古筝";
-                                  goto LAB_180a53802;
+                                  goto LAB_180a53e92;
                                 }
                               }
                             }
                           }
                         }
                       }
-                      goto LAB_180a55aee;
+                      goto LAB_180a5617e;
                     }
                     uVar16 = DebateUIController.GetOutCardObj(this,0);
                     this.temp = uVar16;
-                    if (this.temp == null) goto LAB_180a55aee;
+                    if (this.temp == null) goto LAB_180a5617e;
                     lVar19 = GameObject.get_transform(this.temp,0);
                     DebateUIController.GetOutCardRoot(this,1);
-                    if (((lVar19 == null) || (FUN_180daa820(lVar19), this.temp == null)) ||
-                       (lVar19 = GameObject.get_transform()) == null) goto LAB_180a55aee;
+                    if (((lVar19 == null) || (FUN_180daae30(lVar19), this.temp == null)) ||
+                       (lVar19 = GameObject.get_transform()) == null) goto LAB_180a5617e;
                     Transform.SetAsFirstSibling(lVar19);
                     bVar24 = true;
                     plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/古筝");
                     plVar21 = plVar17;
-                    if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                    if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                       plVar21 = plVar10;
                     }
                     NGUITools.PlaySound(plVar21);
@@ -1157,52 +1157,52 @@ public class DebateUIController
                   }
                   if (lVar20 != null) {
                     if ((*(char *)(lVar20 + 17) == false) || (*(int *)(lVar20 + 20) != 2))
-                    goto LAB_180a542af;
+                    goto LAB_180a5493f;
                     uVar16 = DebateUIController.GetOutCardObj(this,1);
                     this.temp = uVar16;
                     if (this.temp != null) {
                       lVar20 = GameObject.get_transform(this.temp,0);
                       uVar16 = DebateUIController.GetOutCardRoot(this,0);
                       if (lVar20 != null) {
-                        FUN_180daa820(lVar20,uVar16);
+                        FUN_180daae30(lVar20,uVar16);
                         if ((this.temp != null) &&
                            (lVar20 = GameObject.get_transform(this.temp,0),
                            lVar20 != null)) {
                           Transform.SetAsFirstSibling(lVar20,0);
                           uVar16 = "Sound/SoundEffect/SpeEffect/古筝";
                           lVar20 = lVar19;
-                          goto LAB_180a53802;
+                          goto LAB_180a53e92;
                         }
                       }
                     }
                   }
-                  goto LAB_180a55aee;
+                  goto LAB_180a5617e;
                 }
               }
               else if (local_f8 == 3) {
-                if (lVar19 == null) goto LAB_180a55aee;
+                if (lVar19 == null) goto LAB_180a5617e;
                 if ((*(char *)(lVar19 + 17) != false) && (*(int *)(lVar19 + 20) == 3)) {
                   bVar24 = true;
                   plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/叹息");
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21);
                 }
-                if (lVar20 == null) goto LAB_180a55aee;
+                if (lVar20 == null) goto LAB_180a5617e;
                 if ((*(char *)(lVar20 + 17) != false) &&
                    (uVar16 = "Sound/SoundEffect/SpeEffect/叹息", *(int *)(lVar20 + 20) == 3)) {
-        LAB_180a53802:
+        LAB_180a53e92:
                   plVar10 = (int64 *)Resources.Load(uVar16,0);
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21,0);
-                  goto LAB_180a5427e;
+                  goto LAB_180a5490e;
                 }
-        LAB_180a542af:
+        LAB_180a5493f:
                 bVar23 = bVar3;
                 if (bVar24) {
                   bVar3 = true;
@@ -1212,15 +1212,15 @@ public class DebateUIController
                 }
               }
               else if (local_f8 == 4) {
-                if (lVar19 == null) goto LAB_180a55aee;
+                if (lVar19 == null) goto LAB_180a5617e;
                 if ((*(char *)(lVar19 + 17) == false) || (*(int *)(lVar19 + 20) != 4)) {
                   bVar23 = false;
-                  if (lVar20 == null) goto LAB_180a55aee;
+                  if (lVar20 == null) goto LAB_180a5617e;
                 }
                 else {
                   DebateUIController.ChangePatient(this);
                   bVar23 = true;
-                  if (lVar20 == null) goto LAB_180a55aee;
+                  if (lVar20 == null) goto LAB_180a5617e;
                   if (*(char *)(lVar20 + 17) != false) {
                     bVar24 = false;
                     if (*(int *)(lVar20 + 20) == 1) {
@@ -1229,7 +1229,7 @@ public class DebateUIController
                   }
                   plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/治疗");
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21);
@@ -1242,30 +1242,30 @@ public class DebateUIController
                   }
                   plVar10 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/治疗");
                   plVar21 = plVar17;
-                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf348)) {
+                  if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181daf360)) {
                     plVar21 = plVar10;
                   }
                   NGUITools.PlaySound(plVar21);
                 }
-                goto LAB_180a5427a;
+                goto LAB_180a5490a;
               }
               local_f8 = local_f8 + -1;
             } while (-1 < local_f8);
             if (!bVar1) {
-              if (lVar19 == null) goto LAB_180a55aee;
-              goto LAB_180a540c1;
+              if (lVar19 == null) goto LAB_180a5617e;
+              goto LAB_180a54751;
             }
-        LAB_180a540cb:
+        LAB_180a5475b:
             if (!bVar23) {
-              if (lVar20 == null) goto LAB_180a55aee;
+              if (lVar20 == null) goto LAB_180a5617e;
               if (*(char *)(lVar20 + 17) == false) {
                 bVar23 = false;
                 iVar22 = iVar7;
                 if (!bVar1) {
-                  if (lVar19 == null) goto LAB_180a55aee;
-                  if (*(char *)(lVar19 + 17) == false) goto LAB_180a54442;
+                  if (lVar19 == null) goto LAB_180a5617e;
+                  if (*(char *)(lVar19 + 17) == false) goto LAB_180a54ad2;
                 }
-                goto LAB_180a54446;
+                goto LAB_180a54ad6;
               }
             }
             fVar4 = local_120;
@@ -1274,8 +1274,8 @@ public class DebateUIController
                 lVar8 == null)) ||
                ((lVar8 = Transform.Find(lVar8,"Player",0), fVar4 = local_120, lVar8 == null ||
                 (lVar8 = Transform.Find(lVar8,"Result",0), fVar4 = local_120) == null)))
-            goto LAB_180a55af4;
-            uVar16 = Component.GetComponent(lVar8,DAT_181d96160);
+            goto LAB_180a56184;
+            uVar16 = Component.GetComponent(lVar8,DAT_181d96178);
             LTLocalization.SetText(uVar16,"",0);
             fVar4 = local_120;
             if ((((this.debateUIPanel == null) ||
@@ -1283,8 +1283,8 @@ public class DebateUIController
                  lVar8 == null)) ||
                 (lVar8 = Transform.Find(lVar8,"Enemy",0), fVar4 = local_120) == null) ||
                (lVar8 = Transform.Find(lVar8,"Result",0), fVar4 = local_120) == null)
-            goto LAB_180a55af4;
-            uVar16 = Component.GetComponent(lVar8,DAT_181d96160);
+            goto LAB_180a56184;
+            uVar16 = Component.GetComponent(lVar8,DAT_181d96178);
             LTLocalization.SetText(uVar16,"",0);
             lVar8 = local_108;
           }
@@ -1292,7 +1292,7 @@ public class DebateUIController
             lVar20 = lVar19;
           }
           fVar4 = local_120;
-          if (lVar20 == null) goto LAB_180a55af4;
+          if (lVar20 == null) goto LAB_180a56184;
           if (*(char *)(lVar20 + 17) == false) {
             if ((**(int **)(DAT_181d73d40 + 184) != 2) && (*(int *)(lVar20 + 24) != -1)) {
               lVar19 = FUN_1807789e0(0);
@@ -1304,8 +1304,8 @@ public class DebateUIController
               }
               fVar4 = local_120;
               if (lVar8 != null) {
-                uVar6 = FUN_180d95a30(0,lVar8.plotHappen,0);
-                uVar18 = FUN_180002f80(lVar8,uVar6,DAT_181da4358);
+                uVar6 = FUN_180d96040(0,lVar8.plotHappen,0);
+                uVar18 = FUN_180002f80(lVar8,uVar6,DAT_181da4370);
                 uVar6 = *(uint32 *)(lVar20 + 24);
                 uVar13 = GlobalData.GetBaseAttriName(uVar6,0);
                 if (!this.playerActiveRound) {
@@ -1314,7 +1314,7 @@ public class DebateUIController
                   fVar4 = local_120;
                   if (((lVar8 == null) || (lVar8.plotPanel == null)) ||
                      (uVar15 = WorldData.Player(lVar8.plotPanel,0), fVar4 = local_120,
-                     lVar20 == null)) goto LAB_180a55af4;
+                     lVar20 == null)) goto LAB_180a56184;
                   uVar14 = this.enemyData;
                 }
                 else {
@@ -1324,7 +1324,7 @@ public class DebateUIController
                   fVar4 = local_120;
                   if (((lVar8 == null) || (lVar8.plotPanel == null)) ||
                      (uVar14 = WorldData.Player(lVar8.plotPanel,0), fVar4 = local_120,
-                     lVar20 == null)) goto LAB_180a55af4;
+                     lVar20 == null)) goto LAB_180a56184;
                 }
                 uVar15 = GameController.GetHeroName(lVar20,uVar15,uVar14,0);
                 uVar18 = String.Format(uVar18,uVar13,uVar15,0);
@@ -1334,7 +1334,7 @@ public class DebateUIController
                   break;
                 }
               }
-              goto LAB_180a55af4;
+              goto LAB_180a56184;
             }
           }
           else {
@@ -1348,8 +1348,8 @@ public class DebateUIController
             lVar8 = DebateCardData.SpeCardTalk;
             fVar4 = local_120;
             if ((lVar8 == null) ||
-               (uVar18 = FUN_180002f80(lVar8,*(uint32 *)(lVar20 + 20),DAT_181da4358),
-               fVar4 = local_120, lVar19 == null)) goto LAB_180a55af4;
+               (uVar18 = FUN_180002f80(lVar8,*(uint32 *)(lVar20 + 20),DAT_181da4370),
+               fVar4 = local_120, lVar19 == null)) goto LAB_180a56184;
             HeroLittleTalkController.HeroTalk(lVar19,uVar16,uVar18,0x40a00000,0);
           }
           break;
@@ -1374,8 +1374,8 @@ public class DebateUIController
               local_120 = *(float *)(plVar17 + 1);
               local_128 = *plVar17;
               uVar16 = ShortcutExtensions.DOScale(uVar16,&local_128);
-              uVar18 = new OnTooltipCB(this,DAT_181da93f0,0);
-              TweenSettingsExtensions.OnComplete(uVar16,uVar18,DAT_181dc01d0);
+              uVar18 = new OnTooltipCB(this,DAT_181da9408,0);
+              TweenSettingsExtensions.OnComplete(uVar16,uVar18,DAT_181dc0380);
               if ((this.playerPatient <= 0.0) || (this.enemyPatient <= 0.0)) {
                 this.playerWin = this.enemyPatient <= 0.0;
                 fVar4 = local_120;
@@ -1383,37 +1383,37 @@ public class DebateUIController
                    ((lVar20 = GameObject.get_transform(this.debateUIPanel,0),
                     fVar4 = local_120, lVar20 == null ||
                     (lVar20 = Transform.Find(lVar20,"FinalResult",0), fVar4 = local_120) == null)))
-                goto LAB_180a55af4;
+                goto LAB_180a56184;
                 lVar20 = Component.get_gameObject(lVar20,0);
                 fVar4 = local_120;
-                if (lVar20 == null) goto LAB_180a55af4;
+                if (lVar20 == null) goto LAB_180a56184;
                 GameObject.SetActive(lVar20,1,0);
                 fVar4 = local_120;
                 if (((this.debateUIPanel == null) ||
                     (lVar20 = GameObject.get_transform(this.debateUIPanel,0),
                     fVar4 = local_120, lVar20 == null)) ||
                    (lVar20 = Transform.Find(lVar20,"FinalResult",0), fVar4 = local_120) == null)
-                goto LAB_180a55af4;
-                lVar20 = Component.GetComponent(lVar20,DAT_181d94460);
+                goto LAB_180a56184;
+                lVar20 = Component.GetComponent(lVar20,DAT_181d94478);
                 if (!this.playerWin) {
                   lVar19 = FUN_18046bb80(0);
                   fVar4 = local_120;
-                  if (lVar19 == null) goto LAB_180a55af4;
+                  if (lVar19 == null) goto LAB_180a56184;
                   uVar16 = *(uint64 *)(lVar19 + 0x278);
                 }
                 else {
                   lVar19 = FUN_18046bb80(0);
                   fVar4 = local_120;
-                  if (lVar19 == null) goto LAB_180a55af4;
+                  if (lVar19 == null) goto LAB_180a56184;
                   uVar16 = *(uint64 *)(lVar19 + 0x270);
                 }
                 fVar4 = local_120;
-                if (lVar20 == null) goto LAB_180a55af4;
+                if (lVar20 == null) goto LAB_180a56184;
                 Image.set_sprite(lVar20,uVar16,0);
                 fVar4 = local_120;
                 if ((this.debateUIPanel == null) ||
                    (lVar20 = GameObject.get_transform(this.debateUIPanel,0), fVar4 = local_120
-                   , lVar20 == null)) goto LAB_180a55af4;
+                   , lVar20 == null)) goto LAB_180a56184;
                 lVar20 = Transform.Find(lVar20,"FinalResult",0);
                 plVar17 = (int64 *)Vector3.get_one(&local_118,0);
                 local_128 = *plVar17;
@@ -1421,17 +1421,17 @@ public class DebateUIController
                 local_108 = CONCAT44((float)((uint64)local_128 >> 32) * 5.0,(float)local_128 * 5.0);
                 fVar4 = *(float *)(plVar17 + 1);
                 local_100 = local_120;
-                if (lVar20 == null) goto LAB_180a55af4;
+                if (lVar20 == null) goto LAB_180a56184;
                 local_128 = local_108;
                 Transform.set_localScale(lVar20,&local_128,0);
                 fVar4 = local_120;
                 if ((this.debateUIPanel == null) ||
                    (lVar20 = GameObject.get_transform(this.debateUIPanel,0), fVar4 = local_120
-                   , lVar20 == null)) goto LAB_180a55af4;
+                   , lVar20 == null)) goto LAB_180a56184;
                 uVar16 = Transform.Find(lVar20,"FinalResult",0);
                 uVar16 = ShortcutExtensions.DOScale(uVar16,0x3f800000);
-                uVar16 = TweenSettingsExtensions.SetDelay(uVar16,0x3dcccccd,DAT_181dc0c60);
-                TweenSettingsExtensions.SetEase(uVar16,9,DAT_181dc0f80);
+                uVar16 = TweenSettingsExtensions.SetDelay(uVar16,0x3dcccccd,DAT_181dc0e10);
+                TweenSettingsExtensions.SetEase(uVar16,9,DAT_181dc1128);
                 uVar16 = "FightWin";
                 if (!this.playerWin) {
                   uVar16 = "FightLose";
@@ -1439,7 +1439,7 @@ public class DebateUIController
                 uVar16 = String.Concat("Sound/SoundEffect/",uVar16,0);
                 plVar17 = (int64 *)Resources.Load(uVar16,0);
                 plVar10 = (int64 *)0;
-                if ((plVar17 != (int64 *)0) && (*plVar17 == DAT_181daf348)) {
+                if ((plVar17 != (int64 *)0) && (*plVar17 == DAT_181daf360)) {
                   plVar10 = plVar17;
                 }
                 NGUITools.PlaySound(plVar10,0);
@@ -1469,7 +1469,7 @@ public class DebateUIController
                     DebateUIController.SetCalmDown(this,1,0);
                     lVar20 = FUN_1807789e0(0);
                     fVar4 = local_120;
-                    if (lVar20 == null) goto LAB_180a55af4;
+                    if (lVar20 == null) goto LAB_180a56184;
                     HeroLittleTalkController.HeroTalk
                               (lVar20,this.playerIcon,"总算冷静下来了...",0x40a00000,0);
                   }
@@ -1479,7 +1479,7 @@ public class DebateUIController
                     DebateUIController.SetCalmDown(this,0,0);
                     lVar20 = FUN_1807789e0(0);
                     fVar4 = local_120;
-                    if (lVar20 == null) goto LAB_180a55af4;
+                    if (lVar20 == null) goto LAB_180a56184;
                     HeroLittleTalkController.HeroTalk
                               (lVar20,this.enemyIcon,"总算冷静下来了...",0x40a00000,0);
                   }
@@ -1488,7 +1488,7 @@ public class DebateUIController
               }
             }
           }
-          goto LAB_180a55af4;
+          goto LAB_180a56184;
         case 6:
           this.waitClick = 1;
           lVar20 = FUN_18046c0a0(0);
@@ -1541,16 +1541,16 @@ public class DebateUIController
                         fVar4 = local_120;
                         if (((lVar20 == null) || (*(int64 *)(lVar20 + 32) == 0)) ||
                            (lVar20 = WorldData.Player(*(int64 *)(lVar20 + 32),0), fVar4 = local_120,
-                           lVar20 == null)) goto LAB_180a55af4;
+                           lVar20 == null)) goto LAB_180a56184;
                         HeroData.AddTag(lVar20,0x155);
                       }
                       else {
                         lVar20 = FUN_18046c0a0(0);
                         fVar4 = local_120;
-                        if ((lVar20 == null) || (*(int64 *)(lVar20 + 32) == 0)) goto LAB_180a55af4;
+                        if ((lVar20 == null) || (*(int64 *)(lVar20 + 32) == 0)) goto LAB_180a56184;
                         lVar20 = WorldData.Player(*(int64 *)(lVar20 + 32),0);
                         fVar4 = local_120;
-                        if ((this.enemyData == null) || (lVar20 == null)) goto LAB_180a55af4;
+                        if ((this.enemyData == null) || (lVar20 == null)) goto LAB_180a56184;
                         HeroData.GetDebateSpeBuff
                                   (lVar20,this.enemyData.heroForceLv,0);
                       }
@@ -1565,7 +1565,7 @@ public class DebateUIController
               }
             }
           }
-        LAB_180a55af4:
+        LAB_180a56184:
           local_120 = fVar4;
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -1577,7 +1577,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001394
-    // RVA   : 0xA56120   Offset: 0xA55520   Length: 0x1FD
+    // RVA   : 0xA567B0   Offset: 0xA55BB0   Length: 0x1FD
     public void RefreshNowTopic()
     {
         bool cVar1;
@@ -1602,19 +1602,19 @@ public class DebateUIController
                 (lVar3 = Transform.Find(lVar3,"Topic",0)) == null) ||
                ((lVar3 = Transform.GetChild(lVar3,iVar7,0), lVar3 == null ||
                 (lVar3 = Transform.Find(lVar3,"HighLight",0)) == null))) break;
-            plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+            plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
             if (((this.debateUIPanel == null) ||
                 ((lVar3 = GameObject.get_transform(this.debateUIPanel,0), lVar3 == null ||
                  (lVar3 = Transform.Find(lVar3,"Topic",0)) == null))) ||
                (lVar3 = Transform.GetChild(lVar3,iVar7,0)) == null) break;
             uVar5 = Object.get_name(lVar3,0);
             uVar6 = Int32.ToString(this + 112,0);
-            cVar1 = FUN_18171e540(uVar5,uVar6,0);
+            cVar1 = FUN_18171eb50(uVar5,uVar6,0);
             if (!cVar1) {
-              FUN_180d98fe0(local_18,0);
+              FUN_180d995f0(local_18,0);
             }
             else {
-              FUN_1810d3570(local_28);
+              FUN_1810d3b80(local_28);
             }
             if (plVar4 == (int64 *)0) break;
             (**(code **)(*plVar4 + 0x2a8))(plVar4);
@@ -1626,7 +1626,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001395
-    // RVA   : 0xA50D10   Offset: 0xA50110   Length: 0x18D
+    // RVA   : 0xA513A0   Offset: 0xA507A0   Length: 0x18D
     public void DeleteCard(Transform targetCard)
     {
         long lVar1;
@@ -1645,15 +1645,15 @@ public class DebateUIController
           local_28 = *puVar2;
           local_20 = *(uint32 *)(puVar2 + 1);
           uVar3 = ShortcutExtensions.DOMove(uVar3,&local_28,0x3f000000,0,0);
-          uVar4 = new OnTooltipCB(lVar1,DAT_181d9fe28,0);
-          TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc01d0);
+          uVar4 = new OnTooltipCB(lVar1,DAT_181d9ffc0,0);
+          TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc0380);
           lVar1 = *(int64 *)(lVar1 + 16);
           if (this.debateUIPanel != null) {
             lVar5 = GameObject.get_transform(this.debateUIPanel,0);
             if (lVar5 != null) {
               uVar3 = Transform.Find(lVar5,"DeleteCard",0);
               if (lVar1 != null) {
-                FUN_180daa820(lVar1,uVar3,0);
+                FUN_180daae30(lVar1,uVar3,0);
                 return;
               }
             }
@@ -1662,7 +1662,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001396
-    // RVA   : 0xA506A0   Offset: 0xA4FAA0   Length: 0x407
+    // RVA   : 0xA50D30   Offset: 0xA50130   Length: 0x407
     public void ChangeNextDebateTopic()
     {
         bool cVar1;
@@ -1687,7 +1687,7 @@ public class DebateUIController
             lVar3 = DebateUIController.GetObjRoot(this,bVar8,0);
             if ((((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Card")) == null) ||
                 (lVar3 = Transform.GetChild(lVar3,iVar2)) == null) ||
-               ((lVar3 = Component.GetComponent(lVar3,DAT_181d93ce0), lVar3 == null ||
+               ((lVar3 = Component.GetComponent(lVar3,DAT_181d93cf8), lVar3 == null ||
                 (*(int64 *)(lVar3 + 24) == 0)))) throw; // [null/range check failed]
             if (*(int *)(*(int64 *)(lVar3 + 24) + 24) == this.lastTopic) {
               lVar3 = DebateUIController.GetObjRoot(this,bVar8,0);
@@ -1700,9 +1700,9 @@ public class DebateUIController
           iVar6 = iVar6 + 1;
         } while (iVar6 < 2);
         if (this.debateTopics != null) {
-          FUN_1817eee00(this.debateTopics,this.lastTopic,DAT_181d7e840);
+          FUN_1817ef410(this.debateTopics,this.lastTopic,DAT_181d7e858);
           if (this.debateTopics != null) {
-            FUN_18182a0b0(this.debateTopics,this.nextDebateTopic,DAT_181d7e648);
+            FUN_18182a6c0(this.debateTopics,this.nextDebateTopic,DAT_181d7e660);
             lVar3 = this.debateUIPanel;
             if (lVar3 != null) {
               while( true ) {
@@ -1717,7 +1717,7 @@ public class DebateUIController
                    (lVar3 = Transform.GetChild(lVar3,iVar7)) == null) throw; // [null/range check failed]
                 uVar4 = Object.get_name(lVar3,0);
                 Int32.ToString(this + 108,0);
-                cVar1 = FUN_18171e540(uVar4);
+                cVar1 = FUN_18171eb50(uVar4);
                 lVar3 = this.debateUIPanel;
                 if (cVar1) {
                   if (((lVar3 != null) && (lVar3 = GameObject.get_transform(lVar3,0)) != null) &&
@@ -1739,7 +1739,7 @@ public class DebateUIController
                 if (((this.debateUIPanel != null) &&
                     (lVar5 = GameObject.get_transform(this.debateUIPanel,0)) != null) &&
                    (uVar4 = Transform.Find(lVar5,"Topic",0), lVar3 != null)) {
-                  FUN_180daa820(lVar3,uVar4,0);
+                  FUN_180daae30(lVar3,uVar4,0);
                   DebateUIController.GenerateNextTopic(this,0);
                   return;
                 }
@@ -1750,7 +1750,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001397
-    // RVA   : 0xA517E0   Offset: 0xA50BE0   Length: 0x32C
+    // RVA   : 0xA51E70   Offset: 0xA51270   Length: 0x32C
     public void GenerateNextTopic()
     {
         bool cVar1;
@@ -1762,25 +1762,25 @@ public class DebateUIController
         int iVar7;
         uint[] local_res18 = new uint[2];
         local_res18[0] = 0;
-        lVar3 = il2cpp_internal(DAT_181d91360);
-        FUN_18132faf0(lVar3,DAT_181d7e5c8);
+        lVar3 = il2cpp_internal(DAT_181d91378);
+        FUN_181330100(lVar3,DAT_181d7e5e0);
         iVar7 = 15;
         while( true ) {
-          uVar4 = DAT_181db47d0;
+          uVar4 = DAT_181db47e8;
           uVar4 = Type.GetTypeFromHandle(uVar4,0);
           lVar5 = Enum.GetNames(uVar4,0);
           if (lVar5 == null) throw; // [null/range check failed]
           if (*(int *)(lVar5 + 24) <= iVar7) break;
           if (this.debateTopics == null) throw; // [null/range check failed]
-          cVar1 = FUN_18182a3a0();
+          cVar1 = FUN_18182a9b0();
           if (!cVar1) {
             if (lVar3 == null) throw; // [null/range check failed]
-            FUN_18182a0b0(lVar3);
+            FUN_18182a6c0(lVar3);
           }
           iVar7 = iVar7 + 1;
         }
         if (lVar3 != null) {
-          uVar2 = FUN_180d95a30(0,*(uint32 *)(lVar3 + 24),0);
+          uVar2 = FUN_180d96040(0,*(uint32 *)(lVar3 + 24),0);
           if (*(uint32 *)(lVar3 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -1805,7 +1805,7 @@ public class DebateUIController
                     if (lVar3 != null) {
                       lVar3 = Transform.Find(lVar3,"Text",0);
                       if (lVar3 != null) {
-                        uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                        uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
                         uVar6 = GlobalData.GetBaseAttriName(this.nextDebateTopic,0);
                         LTLocalization.SetText(uVar4,uVar6,0);
                         return;
@@ -1820,7 +1820,7 @@ public class DebateUIController
     }
 
     // Token : 0x6001398
-    // RVA   : 0xA56730   Offset: 0xA55B30   Length: 0xF7
+    // RVA   : 0xA56DC0   Offset: 0xA561C0   Length: 0xF7
     public void SetCalmDown(bool isPlayer)
     {
         long lVar1;
@@ -1847,10 +1847,10 @@ public class DebateUIController
     }
 
     // Token : 0x6001399
-    // RVA   : 0xA50CF0   Offset: 0xA500F0   Length: 0x18
+    // RVA   : 0xA51380   Offset: 0xA50780   Length: 0x18
     public void DebateUIBackClicked()
     {
-        void FUN_180a50cf0(int64 this)
+        void FUN_180a51380(int64 this)
         {
         if (this.waitClick) {
           this.waitClick = 0;
@@ -1860,27 +1860,27 @@ public class DebateUIController
     }
 
     // Token : 0x600139A
-    // RVA   : 0xA529E0   Offset: 0xA51DE0   Length: 0xA
+    // RVA   : 0xA53070   Offset: 0xA52470   Length: 0xA
     public void GiveUpButtonClicked()
     {
-        void FUN_180a529e0(uint64 this)
+        void FUN_180a53070(uint64 this)
         {
         DebateUIController.UseDebateCard(this,0,0);
     }
 
     // Token : 0x600139B
-    // RVA   : 0xA55F50   Offset: 0xA55350   Length: 0x1C0
+    // RVA   : 0xA565E0   Offset: 0xA559E0   Length: 0x1C0
     public void RefreshCardButtonClicked()
     {
         int iVar1;
         long lVar2;
         DebateUIController.ChangePatient(this,1,0xc1a00000,0);
-        bVar3 = !DAT_181e9d9a0;
+        bVar3 = !DAT_181e9d9a2;
         this.debateState = 4;
         if (bVar3) {
           il2cpp_internal(&"Enemy");
           il2cpp_internal(&"Player");
-          DAT_181e9d9a0 = true;
+          DAT_181e9d9a2 = true;
         }
         if ((((this.debateUIPanel != null) &&
              (lVar2 = GameObject.get_transform(this.debateUIPanel,0)) != null) &&
@@ -1907,10 +1907,10 @@ public class DebateUIController
     }
 
     // Token : 0x600139C
-    // RVA   : 0xA55B20   Offset: 0xA54F20   Length: 0x17
+    // RVA   : 0xA561B0   Offset: 0xA555B0   Length: 0x17
     public bool NotAngry(bool isPlayer)
     {
-        bool FUN_180a55b20(int64 this,char isPlayer)
+        bool FUN_180a561b0(int64 this,char isPlayer)
         {
         if (isPlayer) {
           return this.playerAngryRound < 1;
@@ -1919,7 +1919,7 @@ public class DebateUIController
     }
 
     // Token : 0x600139D
-    // RVA   : 0xA50630   Offset: 0xA4FA30   Length: 0x63
+    // RVA   : 0xA50CC0   Offset: 0xA500C0   Length: 0x63
     public bool CardCanUse(DebateCardData cardData)
     {
         int iVar1;
@@ -1951,7 +1951,7 @@ public class DebateUIController
     }
 
     // Token : 0x600139E
-    // RVA   : 0xA57450   Offset: 0xA56850   Length: 0x826
+    // RVA   : 0xA57AE0   Offset: 0xA56EE0   Length: 0x826
     public void UseDebateCard(GameObject targetCard)
     {
         var pStatics = *(int64*)(DAT_181d761e8 + 184);
@@ -1974,23 +1974,23 @@ public class DebateUIController
         if (!cVar4) {
           if ((((targetCard == null) || (lVar6 = GameObject.get_transform(targetCard,0)) == null) ||
               (lVar6 = Transform.Find(lVar6,"Back",0)) == null) ||
-             (lVar6 = Component.GetComponent(lVar6,DAT_181d93760)) == null) goto LAB_180a57c71;
+             (lVar6 = Component.GetComponent(lVar6,DAT_181d93778)) == null) goto LAB_180a58301;
           Selectable.set_interactable(lVar6,0,0);
-          lVar6 = GameObject.GetComponent(targetCard,DAT_181dc8260);
-          if (lVar6 == null) goto LAB_180a57c71;
+          lVar6 = GameObject.GetComponent(targetCard,DAT_181dc8278);
+          if (lVar6 == null) goto LAB_180a58301;
           lVar11 = *(int64 *)(lVar6 + 24);
           if (this.nowTopic == -1) {
-            if (lVar11 == null) goto LAB_180a57c71;
+            if (lVar11 == null) goto LAB_180a58301;
             this.nowTopic = *(uint32 *)(lVar11 + 24);
             lVar6 = GameObject.get_transform(targetCard,0);
           }
           else {
             lVar6 = GameObject.get_transform(targetCard,0);
-            if (lVar11 == null) goto LAB_180a57c71;
+            if (lVar11 == null) goto LAB_180a58301;
           }
           uVar7 = DebateUIController.GetOutCardRoot(this,*(uint8 *)(lVar11 + 16),0);
-          if (lVar6 == null) goto LAB_180a57c71;
-          FUN_180daa820(lVar6,uVar7,0);
+          if (lVar6 == null) goto LAB_180a58301;
+          FUN_180daae30(lVar6,uVar7,0);
           uVar7 = GameObject.get_transform(targetCard,0);
           ShortcutExtensions.DOScale(uVar7,0x3f800000,0x3f000000,0);
           uVar7 = GameObject.get_transform(targetCard,0);
@@ -1998,11 +1998,11 @@ public class DebateUIController
           local_40 = *(uint32 *)(puVar8 + 1);
           local_48 = *puVar8;
           uVar7 = ShortcutExtensions.DOLocalMove(uVar7,&local_48,0x3f000000,0,0);
-          uVar9 = new OnTooltipCB(this,DAT_181da93f0,0);
-          TweenSettingsExtensions.OnComplete(uVar7,uVar9,DAT_181dc01d0);
-          if (this.debateState != 2) goto LAB_180a57c33;
+          uVar9 = new OnTooltipCB(this,DAT_181da9408,0);
+          TweenSettingsExtensions.OnComplete(uVar7,uVar9,DAT_181dc0380);
+          if (this.debateState != 2) goto LAB_180a582c3;
           if (*(char *)(lVar11 + 17) == false) {
-            if (**(int **)(DAT_181d73d40 + 184) == 2) goto LAB_180a57c33;
+            if (**(int **)(DAT_181d73d40 + 184) == 2) goto LAB_180a582c3;
             lVar6 = *pStatics;
             if (*(char *)(lVar11 + 16) == false) {
               uVar7 = this.enemyIcon;
@@ -2011,9 +2011,9 @@ public class DebateUIController
               uVar7 = this.playerIcon;
             }
             lVar12 = PlotController.attriIndexCache;
-            if (lVar12 == null) goto LAB_180a57c71;
-            uVar5 = FUN_180d95a30(0,*(uint32 *)(lVar12 + 24),0);
-            uVar9 = FUN_180002f80(lVar12,uVar5,DAT_181da4358);
+            if (lVar12 == null) goto LAB_180a58301;
+            uVar5 = FUN_180d96040(0,*(uint32 *)(lVar12 + 24),0);
+            uVar9 = FUN_180002f80(lVar12,uVar5,DAT_181da4370);
             uVar5 = *(uint32 *)(lVar11 + 24);
             uVar10 = GlobalData.GetBaseAttriName(uVar5,0);
             if (*(char *)(lVar11 + 16) == false) {
@@ -2022,19 +2022,19 @@ public class DebateUIController
               lVar12 = FUN_18046c0a0(0);
               if (((lVar12 == null) || (*(int64 *)(lVar12 + 32) == 0)) ||
                  (uVar14 = WorldData.Player(*(int64 *)(lVar12 + 32),0), lVar11 == null))
-              goto LAB_180a57c71;
+              goto LAB_180a58301;
             }
             else {
               lVar11 = FUN_18046c0a0(0);
               lVar12 = FUN_18046c0a0(0);
               if (((lVar12 == null) || (*(int64 *)(lVar12 + 32) == 0)) ||
                  (uVar13 = WorldData.Player(*(int64 *)(lVar12 + 32),0), lVar11 == null))
-              goto LAB_180a57c71;
+              goto LAB_180a58301;
               uVar14 = this.enemyData;
             }
             uVar13 = GameController.GetHeroName(lVar11,uVar13,uVar14,0);
             uVar9 = String.Format(uVar9,uVar10,uVar13,0);
-            goto joined_r0x000180a57c1c;
+            goto joined_r0x000180a582ac;
           }
           lVar6 = *pStatics;
           if (*(char *)(lVar11 + 16) == false) {
@@ -2043,13 +2043,13 @@ public class DebateUIController
           else {
             uVar7 = this.playerIcon;
           }
-          lVar12 = *(int64 *)(*(int64 *)(DAT_181dbfbb8 + 184) + 16);
-          if (lVar12 == null) goto LAB_180a57c71;
+          lVar12 = *(int64 *)(*(int64 *)(DAT_181dbfbd0 + 184) + 16);
+          if (lVar12 == null) goto LAB_180a58301;
           uVar2 = *(uint32 *)(lVar11 + 20);
           if (*(uint32 *)(lVar12 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          if (lVar6 == null) goto LAB_180a57c71;
+          if (lVar6 == null) goto LAB_180a58301;
           uVar9 = lVar12[uVar2];
         }
         else {
@@ -2060,28 +2060,28 @@ public class DebateUIController
             bVar15 = this.debateState == 2;
           }
           lVar6 = DebateUIController.GetOutCardRoot(this,bVar15,0);
-          if (lVar6 == null) goto LAB_180a57c71;
+          if (lVar6 == null) goto LAB_180a58301;
           uVar9 = Component.get_gameObject(lVar6,0);
           uVar7 = this.debateCardPrefab;
           lVar6 = GlobalData.AddChild(uVar9,uVar7,0);
           this.temp = lVar6;
-          if (*plVar1 == 0) goto LAB_180a57c71;
+          if (*plVar1 == 0) goto LAB_180a58301;
           lVar6 = GameObject.get_transform(*plVar1,0);
           puVar8 = (uint64 *)Vector3.get_zero(local_38,0);
-          if (lVar6 == null) goto LAB_180a57c71;
+          if (lVar6 == null) goto LAB_180a58301;
           local_40 = *(uint32 *)(puVar8 + 1);
           local_48 = *puVar8;
           Transform.set_localScale(lVar6,&local_48,0);
-          if (*plVar1 == 0) goto LAB_180a57c71;
+          if (*plVar1 == 0) goto LAB_180a58301;
           uVar7 = GameObject.get_transform(*plVar1,0);
           puVar8 = (uint64 *)Vector3.get_one(local_38,0);
           local_40 = *(uint32 *)(puVar8 + 1);
           local_48 = *puVar8;
           uVar7 = ShortcutExtensions.DOScale(uVar7,&local_48,0x3f000000,0);
-          uVar9 = new OnTooltipCB(this,DAT_181da93f0,0);
-          TweenSettingsExtensions.OnComplete(uVar7,uVar9,DAT_181dc01d0);
-          if (*plVar1 == 0) goto LAB_180a57c71;
-          lVar6 = GameObject.GetComponent(*plVar1,DAT_181dc8260);
+          uVar9 = new OnTooltipCB(this,DAT_181da9408,0);
+          TweenSettingsExtensions.OnComplete(uVar7,uVar9,DAT_181dc0380);
+          if (*plVar1 == 0) goto LAB_180a58301;
+          lVar6 = GameObject.GetComponent(*plVar1,DAT_181dc8278);
           if (!this.playerActiveRound) {
             bVar15 = this.debateState == 3;
           }
@@ -2094,52 +2094,52 @@ public class DebateUIController
           *(uint32 *)(lVar11 + 20) = 0;
           *(uint32 *)(lVar11 + 24) = 0xffffffff;
           *(uint32 *)(lVar11 + 28) = 0;
-          if (lVar6 == null) goto LAB_180a57c71;
+          if (lVar6 == null) goto LAB_180a58301;
           *(int64 *)(lVar6 + 24) = lVar11;
-          if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181dc8260)) == null)
-          goto LAB_180a57c71;
+          if ((*plVar1 == 0) || (lVar6 = GameObject.GetComponent(*plVar1,DAT_181dc8278)) == null)
+          goto LAB_180a58301;
           DebateCardController.Init(lVar6,0);
           iVar3 = this.debateState;
           lVar6 = *pStatics;
           if (!this.playerActiveRound) {
-            if (iVar3 == 3) goto LAB_180a57c01;
-        LAB_180a57bdd:
+            if (iVar3 == 3) goto LAB_180a58291;
+        LAB_180a5826d:
             uVar7 = this.enemyIcon;
           }
           else {
-            if (iVar3 != 2) goto LAB_180a57bdd;
-        LAB_180a57c01:
+            if (iVar3 != 2) goto LAB_180a5826d;
+        LAB_180a58291:
             uVar7 = this.playerIcon;
           }
           if (!this.playerActiveRound) {
-            if (iVar3 == 3) goto LAB_180a57c0c;
-        LAB_180a57bea:
+            if (iVar3 == 3) goto LAB_180a5829c;
+        LAB_180a5827a:
             iVar3 = this.enemyAngryRound;
           }
           else {
-            if (iVar3 != 2) goto LAB_180a57bea;
-        LAB_180a57c0c:
+            if (iVar3 != 2) goto LAB_180a5827a;
+        LAB_180a5829c:
             iVar3 = this.playerAngryRound;
           }
           uVar9 = "怒不可遏！";
           if (iVar3 < 1) {
             uVar9 = "我竟无言以对...";
           }
-        joined_r0x000180a57c1c:
+        joined_r0x000180a582ac:
           if (lVar6 == null) {
-        LAB_180a57c71:
+        LAB_180a58301:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
         HeroLittleTalkController.HeroTalk(lVar6,uVar7,uVar9,0x40a00000,0);
-        LAB_180a57c33:
+        LAB_180a582c3:
         this.cardUsed = 1;
         DebateUIController.RefreshAllButtonState(this,0);
     }
 
     // Token : 0x600139F
-    // RVA   : 0xA55D70   Offset: 0xA55170   Length: 0x100
+    // RVA   : 0xA56400   Offset: 0xA55800   Length: 0x100
     public void RefreshAllButtonState()
     {
         bool cVar1;
@@ -2148,16 +2148,16 @@ public class DebateUIController
         if (!this.cardUsed) {
           cVar1 = this.playerActiveRound;
           if (!cVar1) {
-            if (this.debateState == 3) goto LAB_180a55dba;
+            if (this.debateState == 3) goto LAB_180a5644a;
           }
-          else if (this.debateState == 2) goto LAB_180a55dba;
+          else if (this.debateState == 2) goto LAB_180a5644a;
         }
         cVar1 = false;
-        LAB_180a55dba:
+        LAB_180a5644a:
         if (this.refreshCardButton != null) {
           GameObject.SetActive(this.refreshCardButton,cVar1,0);
           if ((this.refreshCardButton != null) &&
-             (lVar2 = GameObject.GetComponent(this.refreshCardButton,DAT_181dc7c00)) != null)
+             (lVar2 = GameObject.GetComponent(this.refreshCardButton,DAT_181dc7c18)) != null)
           {
             Selectable.set_interactable(lVar2,20.0 <= this.playerPatient,0);
             if (!this.cardUsed) {
@@ -2179,10 +2179,10 @@ public class DebateUIController
     }
 
     // Token : 0x60013A0
-    // RVA   : 0xA53030   Offset: 0xA52430   Length: 0x16
+    // RVA   : 0xA536C0   Offset: 0xA52AC0   Length: 0x16
     public bool IsPlayerRound()
     {
-        bool FUN_180a53030(int64 this)
+        bool FUN_180a536c0(int64 this)
         {
         if (this.playerActiveRound) {
           return this.debateState == 2;
@@ -2191,7 +2191,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A1
-    // RVA   : 0xA52790   Offset: 0xA51B90   Length: 0x9F
+    // RVA   : 0xA52E20   Offset: 0xA52220   Length: 0x9F
     public Transform GetObjRoot(bool isPlayer)
     {
         long lVar1;
@@ -2215,7 +2215,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A2
-    // RVA   : 0xA50AB0   Offset: 0xA4FEB0   Length: 0x232
+    // RVA   : 0xA51140   Offset: 0xA50540   Length: 0x232
     public void ChangePatient(bool isPlayer, float num)
     {
         ulong uVar1;
@@ -2269,7 +2269,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A3
-    // RVA   : 0xA56320   Offset: 0xA55720   Length: 0x405
+    // RVA   : 0xA569B0   Offset: 0xA55DB0   Length: 0x405
     public void RefreshPatientUI()
     {
         ulong uVar1;
@@ -2285,7 +2285,7 @@ public class DebateUIController
               if (lVar3 != null) {
                 lVar3 = Transform.Find(lVar3,"Text",0);
                 if (lVar3 != null) {
-                  uVar1 = Component.GetComponent(lVar3,DAT_181d96160);
+                  uVar1 = Component.GetComponent(lVar3,DAT_181d96178);
                   local_res18[0] = Mathf.CeilToInt(this.playerPatient,0);
                   uVar2 = Int32.ToString(local_res18,0);
                   LTLocalization.SetText(uVar1,uVar2,0);
@@ -2300,7 +2300,7 @@ public class DebateUIController
                           if (lVar3 != null) {
                             lVar3 = Transform.Find(lVar3,"Bar",0);
                             if (lVar3 != null) {
-                              lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
+                              lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
                               if (lVar3 != null) {
                                 Image.set_fillAmount
                                           (lVar3,this.playerPatient / this.playerMaxPatient,0
@@ -2314,7 +2314,7 @@ public class DebateUIController
                                       if (lVar3 != null) {
                                         lVar3 = Transform.Find(lVar3,"Text",0);
                                         if (lVar3 != null) {
-                                          uVar1 = Component.GetComponent(lVar3,DAT_181d96160);
+                                          uVar1 = Component.GetComponent(lVar3,DAT_181d96178);
                                           local_res18[0] =
                                                Mathf.CeilToInt(this.enemyPatient,0);
                                           uVar2 = Int32.ToString(local_res18,0);
@@ -2331,7 +2331,7 @@ public class DebateUIController
                                                   if (lVar3 != null) {
                                                     lVar3 = Transform.Find(lVar3,"Bar",0);
                                                     if (lVar3 != null) {
-                                                      lVar3 = Component.GetComponent(lVar3,DAT_181d94460)
+                                                      lVar3 = Component.GetComponent(lVar3,DAT_181d94478)
                                                       ;
                                                       if (lVar3 != null) {
                                                         Image.set_fillAmount
@@ -2365,7 +2365,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A4
-    // RVA   : 0xA55E80   Offset: 0xA55280   Length: 0xC9
+    // RVA   : 0xA56510   Offset: 0xA55910   Length: 0xC9
     public void RefreshAllCardButtonState(bool isPlayer)
     {
         int iVar1;
@@ -2394,7 +2394,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A5
-    // RVA   : 0xA526F0   Offset: 0xA51AF0   Length: 0x97
+    // RVA   : 0xA52D80   Offset: 0xA52180   Length: 0x97
     public int GetMaxCardNum(HeroData targetHero)
     {
         float fVar1;
@@ -2411,7 +2411,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A6
-    // RVA   : 0xA50EA0   Offset: 0xA502A0   Length: 0x93D
+    // RVA   : 0xA51530   Offset: 0xA50930   Length: 0x93D
     public void FullFillCard(bool isPlayer)
     {
         bool cVar2;
@@ -2461,7 +2461,7 @@ public class DebateUIController
               fVar13 = *(float *)(lVar8._items + 44);
               cVar2 = HeroData.HaveForceFunction(lVar6,9);
               if ((int)((int)(fVar13 * 0.05 + 5.0) + (-(uint32)(cVar2) & 3)) <= iVar3)
-              goto LAB_180a51516;
+              goto LAB_180a51ba6;
               uVar7 = Component.get_gameObject(lVar5,0);
               uVar11 = this.debateCardPrefab;
               lVar8 = GlobalData.AddChild(uVar7,uVar11,0);
@@ -2474,7 +2474,7 @@ public class DebateUIController
               }
               if (fVar13 < *(float *)(lVar8._items + 40) * 0.001 + 0.05) {
                 if (*plVar1 == 0) break;
-                lVar8 = GameObject.GetComponent(*plVar1,DAT_181dc8260);
+                lVar8 = GameObject.GetComponent(*plVar1,DAT_181dc8278);
                 if (DebateCardData.SpeCardName == null) break;
                 lVar9 = lVar6.totalLivingSkill;
                 uVar4 = DebateCardData.SpeCardName.targetAttriID;
@@ -2484,7 +2484,7 @@ public class DebateUIController
                 }
                 uVar4 = Mathf.Min(uVar4,1 - (int)(*(float *)(*(int64 *)(lVar9 + 16) + 44) * -0.05)
                                    ,0);
-                uVar4 = FUN_180d95a30(0,uVar4,0);
+                uVar4 = FUN_180d96040(0,uVar4,0);
                 lVar9 = new ZhSegment(0);
                 *(char *)(lVar9 + 16) = isPlayer;
                 *(uint8 *)(lVar9 + 17) = 1;
@@ -2499,15 +2499,15 @@ public class DebateUIController
                 iVar3 = DebateUIController.RandomCardRareLv(this);
                 lVar8 = this.debateTopics;
                 if (lVar8 == null) break;
-                uVar4 = FUN_180d95a30(0,lVar8.Count,0);
-                uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d7e940);
+                uVar4 = FUN_180d96040(0,lVar8.Count,0);
+                uVar4 = FUN_1800d6760(lVar8,uVar4,DAT_181d7e958);
                 local_104 = uVar4;
                 fVar13 = (float)Random.Range(0);
                 fVar14 = (float)HeroData.GetBaseAttriNum(lVar6,uVar4,0);
                 uVar4 = Mathf.RoundToInt(((float)iVar3 * 0.2 + 0.5 + fVar13) * fVar14,0);
                 local_100 = Mathf.Max(1,uVar4);
                 if (*plVar1 == 0) break;
-                lVar8 = GameObject.GetComponent(*plVar1,DAT_181dc8260);
+                lVar8 = GameObject.GetComponent(*plVar1,DAT_181dc8278);
                 lVar9 = new ZhSegment(0);
                 *(char *)(lVar9 + 16) = isPlayer;
                 *(uint32 *)(lVar9 + 24) = local_104;
@@ -2517,7 +2517,7 @@ public class DebateUIController
               }
               if (lVar8 == null) break;
               lVar8.Count = lVar9;
-              if ((*plVar1 == 0) || (lVar8 = GameObject.GetComponent(*plVar1,DAT_181dc8260)) == null)
+              if ((*plVar1 == 0) || (lVar8 = GameObject.GetComponent(*plVar1,DAT_181dc8278)) == null)
               break;
               DebateCardController.Init(lVar8,0);
               if (*plVar1 == 0) break;
@@ -2539,29 +2539,29 @@ public class DebateUIController
           }
         }
         throw; // [null/range check failed]
-        LAB_180a51516:
+        LAB_180a51ba6:
         iVar3 = Transform.get_childCount(lVar5,0);
-        if (iVar3 <= iVar12) goto LAB_180a516c5;
+        if (iVar3 <= iVar12) goto LAB_180a51d55;
         lVar6 = Transform.GetChild(lVar5,iVar12);
-        if (((lVar6 == null) || (lVar6 = Component.GetComponent(lVar6,DAT_181d93ce0)) == null) ||
+        if (((lVar6 == null) || (lVar6 = Component.GetComponent(lVar6,DAT_181d93cf8)) == null) ||
            (lVar6.summonLv == null)) throw; // [null/range check failed]
         if (*(char *)(lVar6.summonLv + 17) == false) {
           lVar6 = Transform.GetChild(lVar5,iVar12);
           lVar8 = this.debateTopics;
           lVar9 = Transform.GetChild(lVar5,iVar12,0);
-          if (((lVar9 == null) || (lVar9 = Component.GetComponent(lVar9,DAT_181d93ce0)) == null) ||
+          if (((lVar9 == null) || (lVar9 = Component.GetComponent(lVar9,DAT_181d93cf8)) == null) ||
              ((*(int64 *)(lVar9 + 24) == 0 || (lVar8 == null)))) throw; // [null/range check failed]
-          local_108 = FUN_1817eb4e0(lVar8,*(uint32 *)(*(int64 *)(lVar9 + 24) + 24));
+          local_108 = FUN_1817ebaf0(lVar8,*(uint32 *)(*(int64 *)(lVar9 + 24) + 24));
           uVar11 = Int32.ToString(&local_108,0);
           lVar8 = Transform.GetChild(lVar5,iVar12);
-          if (((lVar8 == null) || (lVar8 = Component.GetComponent(lVar8,DAT_181d93ce0)) == null) ||
+          if (((lVar8 == null) || (lVar8 = Component.GetComponent(lVar8,DAT_181d93cf8)) == null) ||
              (lVar8.Count == null)) throw; // [null/range check failed]
           uVar7 = Int32.ToString(lVar8.Count + 28,"000");
         }
         else {
           lVar6 = Transform.GetChild(lVar5,iVar12);
           lVar8 = Transform.GetChild(lVar5,iVar12);
-          if (((lVar8 == null) || (lVar8 = Component.GetComponent(lVar8,DAT_181d93ce0)) == null) ||
+          if (((lVar8 == null) || (lVar8 = Component.GetComponent(lVar8,DAT_181d93cf8)) == null) ||
              (lVar8.Count == null)) throw; // [null/range check failed]
           uVar7 = Int32.ToString(lVar8.Count + 20,0);
           uVar11 = "9999";
@@ -2570,21 +2570,21 @@ public class DebateUIController
         if (lVar6 == null) throw; // [null/range check failed]
         Object.set_name(lVar6);
         iVar12 = iVar12 + 1;
-        goto LAB_180a51516;
-        LAB_180a516c5:
+        goto LAB_180a51ba6;
+        LAB_180a51d55:
         uVar11 = Component.get_gameObject(lVar5,0);
         GlobalData.SortChild(uVar11,0);
         lVar6 = new WarpText_d__8(0,0);
         if (lVar6 != null) {
           lVar6.summonControlable = lVar5;
           lVar6.summonSourceHero = isPlayer;
-          FUN_180d8c2e0(this,lVar6,0);
+          FUN_180d8c8f0(this,lVar6,0);
           return;
         }
     }
 
     // Token : 0x60013A7
-    // RVA   : 0xA573C0   Offset: 0xA567C0   Length: 0x7E
+    // RVA   : 0xA57A50   Offset: 0xA56E50   Length: 0x7E
     public IEnumerator SortCardPosition(Transform targetCardGrid, bool isPlayer)
     {
         int64 DebateUIController.SortCardPosition
@@ -2600,7 +2600,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A8
-    // RVA   : 0xA55CF0   Offset: 0xA550F0   Length: 0x71
+    // RVA   : 0xA56380   Offset: 0xA55780   Length: 0x71
     public int RandomCardRareLv(float speechSkill)
     {
         int iVar1;
@@ -2623,7 +2623,7 @@ public class DebateUIController
     }
 
     // Token : 0x60013A9
-    // RVA   : 0xA529F0   Offset: 0xA51DF0   Length: 0x636
+    // RVA   : 0xA53080   Offset: 0xA52480   Length: 0x636
     public void HideDebateUI()
     {
         uint uVar1;
@@ -2640,7 +2640,7 @@ public class DebateUIController
         DebateUIController.SetCalmDown(this,0,0);
         this.debateState = 0;
         if (this.debateTopics != null) {
-          FUN_1812f9a10(this.debateTopics,DAT_181d7e6c8);
+          FUN_1812fa020(this.debateTopics,DAT_181d7e6e0);
           if (this.debateUIPanel != null) {
             GameObject.SetActive(this.debateUIPanel,0,0);
             if (((this.debateUIPanel != null) &&
@@ -2696,7 +2696,7 @@ public class DebateUIController
                               return;
                             }
                             lVar4 = this.fightEndCallFuc;
-                            lVar6 = FUN_1800d60b0(DAT_181da1040,1);
+                            lVar6 = FUN_1800d60b0(DAT_181da1058,1);
                             if (lVar6 != null) {
                               if (*(int *)(lVar6 + 24) == 0) {
                                 uVar5 = il2cpp_internal();
@@ -2749,73 +2749,73 @@ public class DebateUIController
     }
 
     // Token : 0x60013AA
-    // RVA   : 0xA58290   Offset: 0xA57690   Length: 0xF
+    // RVA   : 0xA58920   Offset: 0xA57D20   Length: 0xF
     public void /*ctor*/()
     {
-        void FUN_180a58290(int64 this)
+        void FUN_180a58920(int64 this)
         {
         this.lastTopic = 0xffffffffffffffff;
         FUN_18044ef50(this,0);
     }
 
     // Token : 0x60013AB
-    // RVA   : 0xA57C80   Offset: 0xA57080   Length: 0x602
+    // RVA   : 0xA58310   Offset: 0xA57710   Length: 0x602
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181dbfc40 + 184);
+        var pStatics = *(int64*)(DAT_181dbfc58 + 184);
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar1,DAT_181da3bd8);
+        lVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar1,DAT_181da3bf0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,"对于“{0}”，\n我颇有几分见解",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"“{0}”之道，博大精深",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"不知对于“{0}”一事，\n{1}有何见地？",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"这“{0}”的精要之处，\n我早已了然于胸",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"{1}可知这“{0}”之妙？\n容我娓娓道来",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"若不通晓“{0}”，\n功夫再高又有何用？",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"“{0}”此事，可谓易学难精",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"这“{0}”乃我得意之处，\n{1}可有应对？",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"“{0}”者奥妙非常，\n非常人能够掌握",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"不知{1}之“{0}”，\n与我相比孰强孰弱？",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"便用这“{0}”，\n令你心服口服",DAT_181da3d58);
+          FUN_18181e6b0(lVar1,"对于“{0}”，\n我颇有几分见解",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"“{0}”之道，博大精深",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"不知对于“{0}”一事，\n{1}有何见地？",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"这“{0}”的精要之处，\n我早已了然于胸",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"{1}可知这“{0}”之妙？\n容我娓娓道来",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"若不通晓“{0}”，\n功夫再高又有何用？",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"“{0}”此事，可谓易学难精",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"这“{0}”乃我得意之处，\n{1}可有应对？",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"“{0}”者奥妙非常，\n非常人能够掌握",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"不知{1}之“{0}”，\n与我相比孰强孰弱？",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"便用这“{0}”，\n令你心服口服",DAT_181da3d70);
           plVar2 = pStatics;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
-          lVar1 = il2cpp_internal(DAT_181d97750);
-          FUN_18132faf0(lVar1,DAT_181da3bd8);
+          lVar1 = il2cpp_internal(DAT_181d97768);
+          FUN_181330100(lVar1,DAT_181da3bf0);
           if (lVar1 != null) {
-            FUN_18181e0a0(lVar1,"{1}这番见解，\n不过老生常谈而已",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"{1}“{0}”止步于此，\n与乡野村夫何异？",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"{1}之理解颇为浅薄，\n还需多加学习才是",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"我“{0}”修为远胜{1}，\n又何必班门弄斧？",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"{1}言语中颇多纰漏之处，\n只恐贻笑大方",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"{1}语焉不详，词不达意，\n令人哑然失笑",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"看来{1}的“{0}”修为，\n不过平平而已",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"{1}此言前后多有矛盾，\n还请三思",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"{1}语无伦次，文不对题，\n需先理清思路，方可发言",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"{1}“{0}”修为尚浅\n切勿自以为是",DAT_181da3d58);
+            FUN_18181e6b0(lVar1,"{1}这番见解，\n不过老生常谈而已",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"{1}“{0}”止步于此，\n与乡野村夫何异？",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"{1}之理解颇为浅薄，\n还需多加学习才是",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"我“{0}”修为远胜{1}，\n又何必班门弄斧？",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"{1}言语中颇多纰漏之处，\n只恐贻笑大方",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"{1}语焉不详，词不达意，\n令人哑然失笑",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"看来{1}的“{0}”修为，\n不过平平而已",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"{1}此言前后多有矛盾，\n还请三思",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"{1}语无伦次，文不对题，\n需先理清思路，方可发言",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"{1}“{0}”修为尚浅\n切勿自以为是",DAT_181da3d70);
             PlotController.fightSkillIndexCache = lVar1;
-            lVar1 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar1,DAT_181da3bd8);
+            lVar1 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar1,DAT_181da3bf0);
             if (lVar1 != null) {
-              FUN_18181e0a0(lVar1,"这...只有心悦诚服",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"{1}高论，是我技不如人",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"“{0}”竟有这等境界...\n我不能及也",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"{1}“{0}”之高，\n令我眼界大开",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"比起{1}，\n我终究还是稍逊一筹",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"{1}之“{0}”精妙非常，\n我还需多加学习",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"今日听{1}一席高论，\n才知自己“{0}”之贫弱",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"{1}一席话，\n令我茅塞顿开",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"山外有山，人外有人，\n今日方知此言真意",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"{1}辩才无双，佩服佩服！",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"我之“{0}”竟远不及{1}，\n惭愧惭愧",DAT_181da3d58);
+              FUN_18181e6b0(lVar1,"这...只有心悦诚服",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"{1}高论，是我技不如人",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"“{0}”竟有这等境界...\n我不能及也",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"{1}“{0}”之高，\n令我眼界大开",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"比起{1}，\n我终究还是稍逊一筹",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"{1}之“{0}”精妙非常，\n我还需多加学习",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"今日听{1}一席高论，\n才知自己“{0}”之贫弱",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"{1}一席话，\n令我茅塞顿开",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"山外有山，人外有人，\n今日方知此言真意",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"{1}辩才无双，佩服佩服！",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"我之“{0}”竟远不及{1}，\n惭愧惭愧",DAT_181da3d70);
               PlotController.livingSkillIndexCache = lVar1;
-              lVar1 = il2cpp_internal(DAT_181d97750);
-              FUN_18132faf0(lVar1,DAT_181da3bd8);
+              lVar1 = il2cpp_internal(DAT_181d97768);
+              FUN_181330100(lVar1,DAT_181da3bf0);
               if (lVar1 != null) {
-                FUN_18181e0a0(lVar1,"{1}的“{0}”，\n竟与我不相上下",DAT_181da3d58);
-                FUN_18181e0a0(lVar1,"真是棋逢对手",DAT_181da3d58);
-                FUN_18181e0a0(lVar1,"此局只能说难分高下",DAT_181da3d58);
+                FUN_18181e6b0(lVar1,"{1}的“{0}”，\n竟与我不相上下",DAT_181da3d70);
+                FUN_18181e6b0(lVar1,"真是棋逢对手",DAT_181da3d70);
+                FUN_18181e6b0(lVar1,"此局只能说难分高下",DAT_181da3d70);
                 PlotController._instance = lVar1;
                 return;
               }
@@ -2825,10 +2825,10 @@ public class DebateUIController
     }
 
     // Token : 0x60013AC
-    // RVA   : 0xA57440   Offset: 0xA56840   Length: 0x8
+    // RVA   : 0xA57AD0   Offset: 0xA56ED0   Length: 0x8
     private void <NextDebateRound>b__40_0()
     {
-        void FUN_180a57440(int64 this)
+        void FUN_180a57ad0(int64 this)
         {
         this.waitClick = 1;
     }

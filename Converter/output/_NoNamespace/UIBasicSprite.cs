@@ -59,23 +59,23 @@ public class UIBasicSprite
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000467
-    // RVA   : 0x112A1F0   Offset: 0x11295F0   Length: 0x7
+    // RVA   : 0x112A800   Offset: 0x1129C00   Length: 0x7
     public virtual Type get_type()
     {
-        uint32 FUN_18112a1f0(int64 this)
+        uint32 FUN_18112a800(int64 this)
         {
         return this.mType;
     }
 
     // Token : 0x6000468
-    // RVA   : 0x152F1E0   Offset: 0x152E5E0   Length: 0x20
+    // RVA   : 0x152F7F0   Offset: 0x152EBF0   Length: 0x20
     public virtual void set_type(Type value)
     {
-        void FUN_18152f1e0(int64 *this,int value)
+        void FUN_18152f7f0(int64 *this,int value)
         {
         if ((int)this[49] != value) {
           *(int *)(this + 49) = value;
-                          // WARNING: Could not recover jumptable at 0x00018152f1f8. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018152f808. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
@@ -83,23 +83,23 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000469
-    // RVA   : 0x152EE50   Offset: 0x152E250   Length: 0x7
+    // RVA   : 0x152F460   Offset: 0x152E860   Length: 0x7
     public Flip get_flip()
     {
-        uint32 FUN_18152ee50(int64 this)
+        uint32 FUN_18152f460(int64 this)
         {
         return this.mFlip;
     }
 
     // Token : 0x600046A
-    // RVA   : 0x152F1A0   Offset: 0x152E5A0   Length: 0x20
+    // RVA   : 0x152F7B0   Offset: 0x152EBB0   Length: 0x20
     public void set_flip(Flip value)
     {
-        void FUN_18152f1a0(int64 *this,int value)
+        void FUN_18152f7b0(int64 *this,int value)
         {
         if ((int)this[51] != value) {
           *(int *)(this + 51) = value;
-                          // WARNING: Could not recover jumptable at 0x00018152f1b8. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018152f7c8. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
@@ -107,16 +107,16 @@ public class UIBasicSprite
     }
 
     // Token : 0x600046B
-    // RVA   : 0x152EE40   Offset: 0x152E240   Length: 0x7
+    // RVA   : 0x152F450   Offset: 0x152E850   Length: 0x7
     public FillDirection get_fillDirection()
     {
-        uint32 FUN_18152ee40(int64 this)
+        uint32 FUN_18152f450(int64 this)
         {
         return this.mFillDirection;
     }
 
     // Token : 0x600046C
-    // RVA   : 0x152F180   Offset: 0x152E580   Length: 0x13
+    // RVA   : 0x152F790   Offset: 0x152EB90   Length: 0x13
     public void set_fillDirection(FillDirection value)
     {
         if (this.mFillDirection != value) {
@@ -126,16 +126,16 @@ public class UIBasicSprite
     }
 
     // Token : 0x600046D
-    // RVA   : 0x152EE30   Offset: 0x152E230   Length: 0x9
+    // RVA   : 0x152F440   Offset: 0x152E840   Length: 0x9
     public float get_fillAmount()
     {
-        uint32 FUN_18152ee30(int64 this)
+        uint32 FUN_18152f440(int64 this)
         {
         return *(uint32 *)(this + 400);
     }
 
     // Token : 0x600046E
-    // RVA   : 0x152F140   Offset: 0x152E540   Length: 0x34
+    // RVA   : 0x152F750   Offset: 0x152EB50   Length: 0x34
     public void set_fillAmount(float value)
     {
         float fVar1;
@@ -147,7 +147,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x600046F
-    // RVA   : 0x152EFF0   Offset: 0x152E3F0   Length: 0x108
+    // RVA   : 0x152F600   Offset: 0x152EA00   Length: 0x108
     public override int get_minWidth()
     {
         float fVar1;
@@ -177,7 +177,7 @@ public class UIBasicSprite
         fVar9 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dc910(&local_28,fVar1 * fVar9,fVar2 * fVar9,fVar3 * fVar9,fVar4 * fVar9,0);
+        FUN_1809dcfa0(&local_28,fVar1 * fVar9,fVar2 * fVar9,fVar3 * fVar9,fVar4 * fVar9,0);
         uVar6 = Mathf.RoundToInt((float)uStack_20 + (float)local_28,0);
         uVar7 = UIWidget.get_minHeight(this,0);
         if ((uVar6 & 1) != 0) {
@@ -187,7 +187,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000470
-    // RVA   : 0x152EEE0   Offset: 0x152E2E0   Length: 0x108
+    // RVA   : 0x152F4F0   Offset: 0x152E8F0   Length: 0x108
     public override int get_minHeight()
     {
         float fVar1;
@@ -217,7 +217,7 @@ public class UIBasicSprite
         fVar9 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dc910(&local_28,fVar1 * fVar9,fVar2 * fVar9,fVar3 * fVar9,fVar4 * fVar9,0);
+        FUN_1809dcfa0(&local_28,fVar1 * fVar9,fVar2 * fVar9,fVar3 * fVar9,fVar4 * fVar9,0);
         uVar6 = Mathf.RoundToInt(uStack_20._4_4_ + local_28._4_4_,0);
         uVar7 = UIWidget.get_minHeight(this,0);
         if ((uVar6 & 1) != 0) {
@@ -227,16 +227,16 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000471
-    // RVA   : 0x152EED0   Offset: 0x152E2D0   Length: 0x8
+    // RVA   : 0x152F4E0   Offset: 0x152E8E0   Length: 0x8
     public bool get_invert()
     {
-        uint8 FUN_18152eed0(int64 this)
+        uint8 FUN_18152f4e0(int64 this)
         {
         return this.mInvert;
     }
 
     // Token : 0x6000472
-    // RVA   : 0x152F1C0   Offset: 0x152E5C0   Length: 0x13
+    // RVA   : 0x152F7D0   Offset: 0x152EBD0   Length: 0x13
     public void set_invert(bool value)
     {
         if (this.mInvert != value) {
@@ -246,7 +246,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000473
-    // RVA   : 0x152EE60   Offset: 0x152E260   Length: 0x63
+    // RVA   : 0x152F470   Offset: 0x152E870   Length: 0x63
     public bool get_hasBorder()
     {
         byte[] local_18 = new byte[24];
@@ -266,26 +266,26 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000475
-    // RVA   : 0xF133C0   Offset: 0xF127C0   Length: 0x9
+    // RVA   : 0xF139D0   Offset: 0xF12DD0   Length: 0x9
     public virtual float get_pixelSize()
     {
-        uint64 FUN_180f133c0(void)
+        uint64 FUN_180f139d0(void)
         {
         return 0x3f800000;
     }
 
     // Token : 0x6000476
-    // RVA   : 0x152F100   Offset: 0x152E500   Length: 0x35
+    // RVA   : 0x152F710   Offset: 0x152EB10   Length: 0x35
     protected virtual Vector4 get_padding()
     {
         *this = 0;
         this[1] = 0;
-        FUN_1809dc910(0,0,0,0,0,0);
+        FUN_1809dcfa0(0,0,0,0,0,0);
         return this;
     }
 
     // Token : 0x6000477
-    // RVA   : 0x152ECF0   Offset: 0x152E0F0   Length: 0x13F
+    // RVA   : 0x152F300   Offset: 0x152E700   Length: 0x13F
     protected Vector4 get_drawingUVs()
     {
         int iVar1;
@@ -298,37 +298,37 @@ public class UIBasicSprite
         if (iVar1 == 1) {
           uVar2 = Rect.get_xMax(param_2,0);
           uVar3 = FUN_18044df60(param_2,0);
-          uVar4 = FUN_180d98fc0(param_2,0);
+          uVar4 = FUN_180d995d0(param_2,0);
         }
         else {
           if (iVar1 == 2) {
-            uVar2 = FUN_180d98fc0(param_2,0);
+            uVar2 = FUN_180d995d0(param_2,0);
             uVar3 = Rect.get_yMax(param_2,0);
             uVar4 = Rect.get_xMax(param_2,0);
             uVar5 = FUN_18044df60(param_2,0);
-            goto LAB_18152edea;
+            goto LAB_18152f3fa;
           }
           if (iVar1 == 3) {
             uVar2 = Rect.get_xMax(param_2,0);
             uVar3 = Rect.get_yMax(param_2,0);
-            uVar4 = FUN_180d98fc0(param_2,0);
+            uVar4 = FUN_180d995d0(param_2,0);
             uVar5 = FUN_18044df60(param_2,0);
-            goto LAB_18152edea;
+            goto LAB_18152f3fa;
           }
-          uVar2 = FUN_180d98fc0();
+          uVar2 = FUN_180d995d0();
           uVar3 = FUN_18044df60(param_2,0);
           uVar4 = Rect.get_xMax(param_2,0);
         }
         uVar5 = Rect.get_yMax(param_2,0);
-        LAB_18152edea:
+        LAB_18152f3fa:
         *this = 0;
         this[1] = 0;
-        FUN_1809dc910(this,uVar2,uVar3,uVar4,uVar5,0);
+        FUN_1809dcfa0(this,uVar2,uVar3,uVar4,uVar5,0);
         return this;
     }
 
     // Token : 0x6000478
-    // RVA   : 0x152EC40   Offset: 0x152E040   Length: 0xAE
+    // RVA   : 0x152F250   Offset: 0x152E650   Length: 0xAE
     protected Color get_drawingColor()
     {
         uint uVar1;
@@ -365,7 +365,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000479
-    // RVA   : 0x152AC40   Offset: 0x152A040   Length: 0x270
+    // RVA   : 0x152B250   Offset: 0x152A650   Length: 0x270
     protected void Fill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, Rect outer, Rect inner)
     {
                               uint32 outer,uint32 inner,uint32 param_7,uint32 param_8,
@@ -380,45 +380,45 @@ public class UIBasicSprite
           uStack_44 = inner;
           uStack_40 = 0;
           local_48 = cols;
-          FUN_181816b80(this,&local_48,DAT_181dabc18);
+          FUN_181817190(this,&local_48,DAT_181dabc30);
           uStack_44 = param_7;
           uStack_40 = 0;
           local_48 = cols;
-          FUN_181816b80(this,&local_48,DAT_181dabc18);
+          FUN_181817190(this,&local_48,DAT_181dabc30);
           local_48 = outer;
           uStack_44 = param_7;
           uStack_40 = 0;
-          FUN_181816b80(this,&local_48,DAT_181dabc18);
+          FUN_181817190(this,&local_48,DAT_181dabc30);
           local_48 = outer;
           uStack_44 = inner;
           uStack_40 = 0;
-          FUN_181816b80(this,&local_48,DAT_181dabc18);
+          FUN_181817190(this,&local_48,DAT_181dabc30);
           if (verts != null) {
-            FUN_181829f90(verts,CONCAT44(param_10,param_8),DAT_181dab918);
-            FUN_181829f90(verts,CONCAT44(param_11,param_8),DAT_181dab918);
-            FUN_181829f90(verts,CONCAT44(param_11,param_9),DAT_181dab918);
-            FUN_181829f90(verts,CONCAT44(param_10,param_9),DAT_181dab918);
+            FUN_18182a5a0(verts,CONCAT44(param_10,param_8),DAT_181dab930);
+            FUN_18182a5a0(verts,CONCAT44(param_11,param_8),DAT_181dab930);
+            FUN_18182a5a0(verts,CONCAT44(param_11,param_9),DAT_181dab930);
+            FUN_18182a5a0(verts,CONCAT44(param_10,param_9),DAT_181dab930);
             if (uvs != null) {
               local_48 = *param_12;
               uStack_44 = param_12[1];
               uStack_40 = param_12[2];
               uStack_3c = param_12[3];
-              FUN_1817e9a90(uvs,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(uvs,&local_48,DAT_181d82e38);
               local_48 = *param_12;
               uStack_44 = param_12[1];
               uStack_40 = param_12[2];
               uStack_3c = param_12[3];
-              FUN_1817e9a90(uvs,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(uvs,&local_48,DAT_181d82e38);
               local_48 = *param_12;
               uStack_44 = param_12[1];
               uStack_40 = param_12[2];
               uStack_3c = param_12[3];
-              FUN_1817e9a90(uvs,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(uvs,&local_48,DAT_181d82e38);
               local_48 = *param_12;
               uStack_44 = param_12[1];
               uStack_40 = param_12[2];
               uStack_3c = param_12[3];
-              FUN_1817e9a90(uvs,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(uvs,&local_48,DAT_181d82e38);
               return;
             }
           }
@@ -426,7 +426,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x600047A
-    // RVA   : 0x152CCC0   Offset: 0x152C0C0   Length: 0x7EB
+    // RVA   : 0x152D2D0   Offset: 0x152C6D0   Length: 0x7EB
     protected void SimpleFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Vector4 u, ref Color c)
     {
         void UIBasicSprite.SimpleFill
@@ -448,38 +448,38 @@ public class UIBasicSprite
         int64 lStack_50;
         uint8 local_48 [48];
         uVar7 = (uint32)((uint64)in_stack_ffffffffffffff88 >> 32);
-        if (verts == null) goto LAB_18152d4a6;
+        if (verts == null) goto LAB_18152dab6;
         uStack_60 = uStack_60 & 0xffffffff00000000;
         local_68 = *v;
-        FUN_181816b80(verts,&local_68,DAT_181dabc18);
+        FUN_181817190(verts,&local_68,DAT_181dabc30);
         local_68 = CONCAT44(*(uint32 *)((int64)v + 12),*(uint32 *)v);
         uStack_60 = uStack_60 & 0xffffffff00000000;
-        FUN_181816b80(verts,&local_68,DAT_181dabc18);
+        FUN_181817190(verts,&local_68,DAT_181dabc30);
         local_68 = v[1];
         uStack_60 = uStack_60 & 0xffffffff00000000;
-        FUN_181816b80(verts,&local_68,DAT_181dabc18);
+        FUN_181817190(verts,&local_68,DAT_181dabc30);
         local_68 = CONCAT44(*(uint32 *)((int64)v + 4),*(uint32 *)(v + 1));
         uStack_60 = uStack_60 & 0xffffffff00000000;
-        FUN_181816b80(verts,&local_68,DAT_181dabc18);
-        if (uvs == null) goto LAB_18152d4a6;
-        FUN_181829f90(uvs,CONCAT44(u[1],*u),DAT_181dab918);
-        FUN_181829f90(uvs,CONCAT44(u[3],*u),DAT_181dab918);
-        FUN_181829f90(uvs,*(uint64 *)(u + 2),DAT_181dab918);
-        FUN_181829f90(uvs,CONCAT44(u[1],u[2]),DAT_181dab918);
+        FUN_181817190(verts,&local_68,DAT_181dabc30);
+        if (uvs == null) goto LAB_18152dab6;
+        FUN_18182a5a0(uvs,CONCAT44(u[1],*u),DAT_181dab930);
+        FUN_18182a5a0(uvs,CONCAT44(u[3],*u),DAT_181dab930);
+        FUN_18182a5a0(uvs,*(uint64 *)(u + 2),DAT_181dab930);
+        FUN_18182a5a0(uvs,CONCAT44(u[1],u[2]),DAT_181dab930);
         if (*(char *)((int64)this + 0x19c) == false) {
-          if (cols == null) goto LAB_18152d4a6;
+          if (cols == null) goto LAB_18152dab6;
           local_58 = *c;
           lStack_50 = c[1];
-          FUN_1817e9a90(cols,&local_58,DAT_181d82e20);
+          FUN_1817ea0a0(cols,&local_58,DAT_181d82e38);
           local_58 = *c;
           lStack_50 = c[1];
-          FUN_1817e9a90(cols,&local_58,DAT_181d82e20);
+          FUN_1817ea0a0(cols,&local_58,DAT_181d82e38);
           local_58 = *c;
           lStack_50 = c[1];
-          FUN_1817e9a90(cols,&local_58,DAT_181d82e20);
+          FUN_1817ea0a0(cols,&local_58,DAT_181d82e38);
           local_58 = *c;
           lStack_50 = c[1];
-          goto LAB_18152d409;
+          goto LAB_18152da19;
         }
         lVar2 = (**(code **)(*this + 0x378))(&local_58,this,*(uint64 *)(*this + 0x380));
         fVar5 = *(float *)(lVar2 + 12);
@@ -488,16 +488,16 @@ public class UIBasicSprite
         uStack_60 = 0;
         uVar8 = 0;
         uVar6 = CONCAT44(uVar7,fVar4 * fVar5);
-        FUN_1809dc910(&local_68);
+        FUN_1809dcfa0(&local_68);
         iVar1 = (**(code **)(*this + 0x3a8))(this,*(uint64 *)(*this + 0x3b0));
         if (iVar1 == 0) {
-        LAB_18152cfb2:
+        LAB_18152d5c2:
           local_58 = this[54];
           lStack_50 = this[55];
         }
         else {
           if (((((float)local_68 == 0.0) && (local_68._4_4_ == null.0)) && ((float)uStack_60 == 0.0)) &&
-             (uStack_60._4_4_ == null.0)) goto LAB_18152cfb2;
+             (uStack_60._4_4_ == null.0)) goto LAB_18152d5c2;
           uStack_60 = this[53];
           uVar6 = 0;
           local_58 = this[54];
@@ -513,13 +513,13 @@ public class UIBasicSprite
         plVar3 = (int64 *)Color.op_Multiply(local_48,&local_68,&local_58,0,uVar6);
         uVar7 = (uint32)((uint64)uVar6 >> 32);
         if (cols == null) {
-        LAB_18152d4a6:
+        LAB_18152dab6:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         local_58 = *plVar3;
         lStack_50 = plVar3[1];
-        FUN_1817e9a90(cols,&local_58,DAT_181d82e20);
+        FUN_1817ea0a0(cols,&local_58,DAT_181d82e38);
         lVar2 = (**(code **)(*this + 0x378))(local_48,this,*(uint64 *)(*this + 0x380));
         fVar5 = *(float *)(lVar2 + 12);
         fVar4 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
@@ -527,16 +527,16 @@ public class UIBasicSprite
         local_68 = 0;
         uStack_60 = 0;
         uVar6 = CONCAT44(uVar7,fVar4 * fVar5);
-        FUN_1809dc910(&local_68);
+        FUN_1809dcfa0(&local_68);
         iVar1 = (**(code **)(*this + 0x3a8))(this,*(uint64 *)(*this + 0x3b0));
         if (iVar1 == 0) {
-        LAB_18152d120:
+        LAB_18152d730:
           local_58 = this[52];
           lStack_50 = this[53];
         }
         else {
           if ((((float)local_68 == 0.0) && (local_68._4_4_ == null.0)) &&
-             (((float)uStack_60 == 0.0 && (uStack_60._4_4_ == null.0)))) goto LAB_18152d120;
+             (((float)uStack_60 == 0.0 && (uStack_60._4_4_ == null.0)))) goto LAB_18152d730;
           local_58 = this[54];
           lStack_50 = this[55];
           uVar6 = 0;
@@ -553,7 +553,7 @@ public class UIBasicSprite
         uVar7 = (uint32)((uint64)uVar6 >> 32);
         local_58 = *plVar3;
         lStack_50 = plVar3[1];
-        FUN_1817e9a90(cols,&local_58,DAT_181d82e20);
+        FUN_1817ea0a0(cols,&local_58,DAT_181d82e38);
         lVar2 = (**(code **)(*this + 0x378))(local_48,this,*(uint64 *)(*this + 0x380));
         fVar5 = *(float *)(lVar2 + 12);
         fVar4 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
@@ -561,16 +561,16 @@ public class UIBasicSprite
         local_68 = 0;
         uStack_60 = 0;
         uVar6 = CONCAT44(uVar7,fVar4 * fVar5);
-        FUN_1809dc910(&local_68);
+        FUN_1809dcfa0(&local_68);
         iVar1 = (**(code **)(*this + 0x3a8))(this,*(uint64 *)(*this + 0x3b0));
         if (iVar1 == 0) {
-        LAB_18152d280:
+        LAB_18152d890:
           local_58 = this[52];
           lStack_50 = this[53];
         }
         else {
           if ((((float)local_68 == 0.0) && (local_68._4_4_ == null.0)) &&
-             (((float)uStack_60 == 0.0 && (uStack_60._4_4_ == null.0)))) goto LAB_18152d280;
+             (((float)uStack_60 == 0.0 && (uStack_60._4_4_ == null.0)))) goto LAB_18152d890;
           local_58 = this[54];
           lStack_50 = this[55];
           uVar6 = 0;
@@ -587,7 +587,7 @@ public class UIBasicSprite
         uVar7 = (uint32)((uint64)uVar6 >> 32);
         local_58 = *plVar3;
         lStack_50 = plVar3[1];
-        FUN_1817e9a90(cols,&local_58,DAT_181d82e20);
+        FUN_1817ea0a0(cols,&local_58,DAT_181d82e38);
         lVar2 = (**(code **)(*this + 0x378))(local_48,this,*(uint64 *)(*this + 0x380));
         fVar5 = *(float *)(lVar2 + 12);
         fVar4 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
@@ -595,16 +595,16 @@ public class UIBasicSprite
         local_68 = 0;
         uStack_60 = 0;
         uVar6 = CONCAT44(uVar7,fVar4 * fVar5);
-        FUN_1809dc910(&local_68);
+        FUN_1809dcfa0(&local_68);
         iVar1 = (**(code **)(*this + 0x3a8))(this,*(uint64 *)(*this + 0x3b0));
         if (iVar1 == 0) {
-        LAB_18152d3e0:
+        LAB_18152d9f0:
           local_58 = this[54];
           lStack_50 = this[55];
         }
         else {
           if (((((float)local_68 == 0.0) && (local_68._4_4_ == null.0)) && ((float)uStack_60 == 0.0)) &&
-             (uStack_60._4_4_ == null.0)) goto LAB_18152d3e0;
+             (uStack_60._4_4_ == null.0)) goto LAB_18152d9f0;
           local_58 = this[52];
           lStack_50 = this[53];
           uVar6 = 0;
@@ -620,12 +620,12 @@ public class UIBasicSprite
         plVar3 = (int64 *)Color.op_Multiply(local_48,&local_68,&local_58,0,uVar6);
         local_58 = *plVar3;
         lStack_50 = plVar3[1];
-        LAB_18152d409:
-        FUN_1817e9a90(cols,&local_58,DAT_181d82e20);
+        LAB_18152da19:
+        FUN_1817ea0a0(cols,&local_58,DAT_181d82e38);
     }
 
     // Token : 0x600047B
-    // RVA   : 0x152D4B0   Offset: 0x152C8B0   Length: 0xFAA
+    // RVA   : 0x152DAC0   Offset: 0x152CEC0   Length: 0xFAA
     protected void SlicedFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Vector4 u, ref Color gc)
     {
         void UIBasicSprite.SlicedFill
@@ -678,7 +678,7 @@ public class UIBasicSprite
         fVar19 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
         local_98 = 0;
         uStack_90 = 0;
-        FUN_1809dc910(&local_98,fVar4 * fVar19,fVar5 * fVar19,fVar6 * fVar19,
+        FUN_1809dcfa0(&local_98,fVar4 * fVar19,fVar5 * fVar19,fVar6 * fVar19,
                       CONCAT44(uVar20,fVar7 * fVar19),0);
         fVar4 = (float)local_98;
         fVar7 = uStack_90._4_4_;
@@ -745,7 +745,7 @@ public class UIBasicSprite
                   *(float *)(lVar3 + 48) = *(float *)(lVar3 + 56) - fVar4;
                   lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
-                  uVar20 = FUN_180d98fc0(this + 58,0);
+                  uVar20 = FUN_180d995d0(this + 58,0);
                   if (*(uint32 *)(lVar3 + 24) < 4) {
                     uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -754,7 +754,7 @@ public class UIBasicSprite
                   *(uint32 *)(lVar3 + 56) = uVar20;
                   lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
-                  uVar20 = FUN_180d98fc0(this + 56,0);
+                  uVar20 = FUN_180d995d0(this + 56,0);
                   if (*(uint32 *)(lVar3 + 24) < 3) {
                     uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -804,7 +804,7 @@ public class UIBasicSprite
                   *(float *)(lVar3 + 48) = *(float *)(lVar3 + 56) - fVar6;
                   lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
-                  uVar20 = FUN_180d98fc0(this + 58,0);
+                  uVar20 = FUN_180d995d0(this + 58,0);
                   if (*(int *)(lVar3 + 24) == 0) {
                     uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -813,7 +813,7 @@ public class UIBasicSprite
                   *(uint32 *)(lVar3 + 32) = uVar20;
                   lVar3 = UIBasicSprite.mTempUVs;
                   if (lVar3 == null) throw; // [null/range check failed]
-                  uVar20 = FUN_180d98fc0(this + 56,0);
+                  uVar20 = FUN_180d995d0(this + 56,0);
                   if (*(uint32 *)(lVar3 + 24) < 2) {
                     uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -899,7 +899,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar9,0);
                               }
                               *(uint32 *)(lVar3 + 36) = uVar20;
-                              goto LAB_18152dcc0;
+                              goto LAB_18152e2d0;
                             }
                           }
                         }
@@ -965,7 +965,7 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar9,0);
                               }
                               *(uint32 *)(lVar3 + 60) = uVar20;
-        LAB_18152dcc0:
+        LAB_18152e2d0:
                               uVar11 = 0;
                               do {
                                 uVar15 = uVar11 + 1;
@@ -990,7 +990,7 @@ public class UIBasicSprite
                                     local_c0 = 0;
                                     local_c8 = *(uint32 *)(lVar3 + 32 + lVar18 * 8);
                                     local_c4 = *(uint32 *)(lVar3 + 36 + lVar16 * 8);
-                                    FUN_181816b80(verts,&local_c8,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_c8,DAT_181dabc30);
                                     lVar3 = UIBasicSprite.mTempPos;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar11) {
@@ -1008,7 +1008,7 @@ public class UIBasicSprite
                                     local_b8 = *(uint32 *)(lVar3 + 32 + lVar18 * 8);
                                     local_b4 = *(uint32 *)(lVar3 + 36 + lVar1 * 8);
                                     local_b0 = 0;
-                                    FUN_181816b80(verts,&local_b8,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_b8,DAT_181dabc30);
                                     lVar3 = UIBasicSprite.mTempPos;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     lVar2 = lVar18 + 1;
@@ -1026,7 +1026,7 @@ public class UIBasicSprite
                                     local_a8 = *(uint32 *)(lVar3 + 32 + lVar2 * 8);
                                     local_a4 = *(uint32 *)(lVar3 + 36 + lVar1 * 8);
                                     local_a0 = 0;
-                                    FUN_181816b80(verts,&local_a8,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_a8,DAT_181dabc30);
                                     lVar3 = UIBasicSprite.mTempPos;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar10) {
@@ -1042,7 +1042,7 @@ public class UIBasicSprite
                                     local_98 = CONCAT44(*(uint32 *)(lVar3 + 36 + lVar16 * 8),
                                                         *(uint32 *)(lVar3 + 32 + lVar2 * 8));
                                     uStack_90 = uStack_90 & 0xffffffff00000000;
-                                    FUN_181816b80(verts,&local_98,DAT_181dabc18);
+                                    FUN_181817190(verts,&local_98,DAT_181dabc30);
                                     lVar3 = UIBasicSprite.mTempUVs;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar11) {
@@ -1056,11 +1056,11 @@ public class UIBasicSprite
                                       FUN_1800d65f0(uVar9,0);
                                     }
                                     if (uvs == null) throw; // [null/range check failed]
-                                    FUN_181829f90(uvs,CONCAT44(*(uint32 *)
+                                    FUN_18182a5a0(uvs,CONCAT44(*(uint32 *)
                                                                     (lVar3 + 36 + lVar16 * 8),
                                                                    *(uint32 *)
                                                                     (lVar3 + 32 + lVar18 * 8)),
-                                                  DAT_181dab918);
+                                                  DAT_181dab930);
                                     lVar3 = UIBasicSprite.mTempUVs;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar11) {
@@ -1073,11 +1073,11 @@ public class UIBasicSprite
                           // WARNING: Subroutine does not return
                                       FUN_1800d65f0(uVar9,0);
                                     }
-                                    FUN_181829f90(uvs,CONCAT44(*(uint32 *)
+                                    FUN_18182a5a0(uvs,CONCAT44(*(uint32 *)
                                                                     (lVar3 + 36 + lVar1 * 8),
                                                                    *(uint32 *)
                                                                     (lVar3 + 32 + lVar18 * 8)),
-                                                  DAT_181dab918);
+                                                  DAT_181dab930);
                                     lVar3 = UIBasicSprite.mTempUVs;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar10) {
@@ -1090,11 +1090,11 @@ public class UIBasicSprite
                           // WARNING: Subroutine does not return
                                       FUN_1800d65f0(uVar9,0);
                                     }
-                                    FUN_181829f90(uvs,CONCAT44(*(uint32 *)
+                                    FUN_18182a5a0(uvs,CONCAT44(*(uint32 *)
                                                                     (lVar3 + 36 + lVar1 * 8),
                                                                    *(uint32 *)
                                                                     (lVar3 + 32 + lVar2 * 8)),
-                                                  DAT_181dab918);
+                                                  DAT_181dab930);
                                     lVar3 = UIBasicSprite.mTempUVs;
                                     if (lVar3 == null) throw; // [null/range check failed]
                                     if (*(uint32 *)(lVar3 + 24) <= uVar10) {
@@ -1107,33 +1107,33 @@ public class UIBasicSprite
                           // WARNING: Subroutine does not return
                                       FUN_1800d65f0(uVar9,0);
                                     }
-                                    FUN_181829f90(uvs,CONCAT44(*(uint32 *)
+                                    FUN_18182a5a0(uvs,CONCAT44(*(uint32 *)
                                                                     (lVar3 + 36 + lVar16 * 8),
                                                                    *(uint32 *)
                                                                     (lVar3 + 32 + lVar2 * 8)),
-                                                  DAT_181dab918);
+                                                  DAT_181dab930);
                                     if (*(char *)((int64)this + 0x19c) == false) {
                                       if (cols == null) throw; // [null/range check failed]
                                       local_88 = *gc;
                                       uStack_84 = gc[1];
                                       uStack_80 = gc[2];
                                       uStack_7c = gc[3];
-                                      FUN_1817e9a90(cols,&local_88,DAT_181d82e20);
+                                      FUN_1817ea0a0(cols,&local_88,DAT_181d82e38);
                                       local_88 = *gc;
                                       uStack_84 = gc[1];
                                       uStack_80 = gc[2];
                                       uStack_7c = gc[3];
-                                      FUN_1817e9a90(cols,&local_88,DAT_181d82e20);
+                                      FUN_1817ea0a0(cols,&local_88,DAT_181d82e38);
                                       local_88 = *gc;
                                       uStack_84 = gc[1];
                                       uStack_80 = gc[2];
                                       uStack_7c = gc[3];
-                                      FUN_1817e9a90(cols,&local_88,DAT_181d82e20);
+                                      FUN_1817ea0a0(cols,&local_88,DAT_181d82e38);
                                       local_88 = *gc;
                                       uStack_84 = gc[1];
                                       uStack_80 = gc[2];
                                       uStack_7c = gc[3];
-                                      FUN_1817e9a90(cols,&local_88,DAT_181d82e20);
+                                      FUN_1817ea0a0(cols,&local_88,DAT_181d82e38);
                                     }
                                     else {
                                       UIBasicSprite.AddVertexColours
@@ -1167,7 +1167,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x600047C
-    // RVA   : 0x1528C20   Offset: 0x1528020   Length: 0x246
+    // RVA   : 0x1529230   Offset: 0x1528630   Length: 0x246
     private void AddVertexColours(List<Color> cols, ref Color color, int x, int y)
     {
         void UIBasicSprite.AddVertexColours
@@ -1199,18 +1199,18 @@ public class UIBasicSprite
         fVar8 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
         local_48 = 0;
         uStack_40 = 0;
-        FUN_1809dc910(&local_48,fVar9 * fVar8,fVar1 * fVar8,fVar2 * fVar8,CONCAT44(uVar10,fVar3 * fVar8),0
+        FUN_1809dcfa0(&local_48,fVar9 * fVar8,fVar1 * fVar8,fVar2 * fVar8,CONCAT44(uVar10,fVar3 * fVar8),0
                      );
         iVar4 = (**(code **)(*this + 0x3a8))(this,*(uint64 *)(*this + 0x3b0));
         if (iVar4 == 0) {
-        LAB_181528de2:
+        LAB_1815293f2:
           if ((y == null) || (y == 1)) {
             local_38 = this[54];
             lStack_30 = this[55];
           }
           else {
             if (y != 2) {
-        LAB_181528df3:
+        LAB_181529403:
               if (y != 3) {
                 return;
               }
@@ -1221,7 +1221,7 @@ public class UIBasicSprite
         }
         else {
           if (((((float)local_48 == 0.0) && (local_48._4_4_ == null.0)) && ((float)uStack_40 == 0.0)) &&
-             (uStack_40._4_4_ == null.0)) goto LAB_181528de2;
+             (uStack_40._4_4_ == null.0)) goto LAB_1815293f2;
           if (y == null) {
             local_48 = this[54];
             uStack_40 = this[55];
@@ -1229,7 +1229,7 @@ public class UIBasicSprite
             local_38 = *color;
             lStack_30 = color[1];
             plVar7 = &local_38;
-            goto LAB_181528e12;
+            goto LAB_181529422;
           }
           if (y != 1) {
             if (y == 2) {
@@ -1241,9 +1241,9 @@ public class UIBasicSprite
               plVar6 = (int64 *)Color.Lerp(local_28,&local_48,&local_38,fVar9,0);
               local_38 = *plVar6;
               lStack_30 = plVar6[1];
-              goto LAB_181528dff;
+              goto LAB_18152940f;
             }
-            goto LAB_181528df3;
+            goto LAB_181529403;
           }
           local_38 = this[52];
           lStack_30 = this[53];
@@ -1254,23 +1254,23 @@ public class UIBasicSprite
           local_38 = *plVar6;
           lStack_30 = plVar6[1];
         }
-        LAB_181528dff:
+        LAB_18152940f:
         local_48 = *color;
         uStack_40 = color[1];
         plVar6 = &local_38;
         plVar7 = &local_48;
-        LAB_181528e12:
+        LAB_181529422:
         plVar6 = (int64 *)Color.op_Multiply(local_28,plVar7,plVar6,0);
         if (cols != null) {
           local_38 = *plVar6;
           lStack_30 = plVar6[1];
-          FUN_1817e9a90(cols,&local_38,DAT_181d82e20);
+          FUN_1817ea0a0(cols,&local_38,DAT_181d82e38);
           return;
         }
     }
 
     // Token : 0x600047D
-    // RVA   : 0x152E460   Offset: 0x152D860   Length: 0x69A
+    // RVA   : 0x152EA70   Offset: 0x152DE70   Length: 0x69A
     protected void TiledFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Color c)
     {
         void UIBasicSprite.TiledFill
@@ -1323,9 +1323,9 @@ public class UIBasicSprite
         cVar2 = Object.op_Equality(plVar5,0,0);
         if (!cVar2) {
           plVar1 = this + 56;
-          fVar7 = (float)FUN_180d98fa0(plVar1,0);
+          fVar7 = (float)FUN_180d995b0(plVar1,0);
           if (plVar5 == (int64 *)0) {
-        LAB_18152eaf5:
+        LAB_18152f105:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -1345,7 +1345,7 @@ public class UIBasicSprite
             fStack_12c = pfVar6[3];
             if (((int)this[51] - 1U & 0xfffffffd) == 0) {
               uVar10 = Rect.get_xMax(plVar1,0);
-              uVar11 = FUN_180d98fc0(plVar1,0);
+              uVar11 = FUN_180d995d0(plVar1,0);
               fVar7 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
               fVar7 = fVar7 * fStack_130;
               local_128 = (float)(**(code **)(*this + 0x3d8))
@@ -1353,7 +1353,7 @@ public class UIBasicSprite
               local_128 = local_128 * local_138;
             }
             else {
-              uVar10 = FUN_180d98fc0();
+              uVar10 = FUN_180d995d0();
               uVar11 = Rect.get_xMax(plVar1,0);
               fVar7 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
               fVar7 = fVar7 * local_138;
@@ -1405,51 +1405,51 @@ public class UIBasicSprite
                       uVar13 = Mathf.Lerp(uVar10,uVar11,(fVar15 - fVar14) / fVar9,0);
                       fVar8 = v[2];
                     }
-                    if (verts == null) goto LAB_18152eaf5;
+                    if (verts == null) goto LAB_18152f105;
                     local_f0 = 0;
                     local_f8 = fVar14;
                     local_f4 = fVar16;
-                    FUN_181816b80(verts,&local_f8,DAT_181dabc18);
+                    FUN_181817190(verts,&local_f8,DAT_181dabc30);
                     local_e0 = 0;
                     local_e8 = fVar14;
                     local_e4 = fVar17;
-                    FUN_181816b80(verts,&local_e8,DAT_181dabc18);
+                    FUN_181817190(verts,&local_e8,DAT_181dabc30);
                     local_d0 = 0;
                     local_d8 = fVar8;
                     local_d4 = fVar17;
-                    FUN_181816b80(verts,&local_d8,DAT_181dabc18);
+                    FUN_181817190(verts,&local_d8,DAT_181dabc30);
                     fStack_130 = 0.0;
                     local_138 = fVar8;
                     fStack_134 = fVar16;
-                    FUN_181816b80(verts,&local_138,DAT_181dabc18);
+                    FUN_181817190(verts,&local_138,DAT_181dabc30);
                     local_100 = uVar10;
                     uStack_fc = uVar12;
-                    if (uvs == null) goto LAB_18152eaf5;
-                    FUN_181829f90(uvs,CONCAT44(uVar12,uVar10),DAT_181dab918);
-                    FUN_181829f90(uvs,CONCAT44(local_res8,uVar10),DAT_181dab918);
-                    FUN_181829f90(uvs,CONCAT44(local_res8,uVar13),DAT_181dab918);
-                    FUN_181829f90(uvs,CONCAT44(uVar12,uVar13),DAT_181dab918);
-                    if (cols == null) goto LAB_18152eaf5;
+                    if (uvs == null) goto LAB_18152f105;
+                    FUN_18182a5a0(uvs,CONCAT44(uVar12,uVar10),DAT_181dab930);
+                    FUN_18182a5a0(uvs,CONCAT44(local_res8,uVar10),DAT_181dab930);
+                    FUN_18182a5a0(uvs,CONCAT44(local_res8,uVar13),DAT_181dab930);
+                    FUN_18182a5a0(uvs,CONCAT44(uVar12,uVar13),DAT_181dab930);
+                    if (cols == null) goto LAB_18152f105;
                     local_118 = *c;
                     uStack_114 = c[1];
                     uStack_110 = c[2];
                     uStack_10c = c[3];
-                    FUN_1817e9a90(cols,&local_118,DAT_181d82e20);
+                    FUN_1817ea0a0(cols,&local_118,DAT_181d82e38);
                     local_118 = *c;
                     uStack_114 = c[1];
                     uStack_110 = c[2];
                     uStack_10c = c[3];
-                    FUN_1817e9a90(cols,&local_118,DAT_181d82e20);
+                    FUN_1817ea0a0(cols,&local_118,DAT_181d82e38);
                     local_118 = *c;
                     uStack_114 = c[1];
                     uStack_110 = c[2];
                     uStack_10c = c[3];
-                    FUN_1817e9a90(cols,&local_118,DAT_181d82e20);
+                    FUN_1817ea0a0(cols,&local_118,DAT_181d82e38);
                     local_118 = *c;
                     uStack_114 = c[1];
                     uStack_110 = c[2];
                     uStack_10c = c[3];
-                    FUN_1817e9a90(cols,&local_118,DAT_181d82e20);
+                    FUN_1817ea0a0(cols,&local_118,DAT_181d82e38);
                     fVar15 = v[2];
                     fVar14 = fVar14 + local_128 + fVar9;
                     uVar13 = local_124;
@@ -1466,10 +1466,10 @@ public class UIBasicSprite
     }
 
     // Token : 0x600047E
-    // RVA   : 0x152AEB0   Offset: 0x152A2B0   Length: 0x16DE
+    // RVA   : 0x152B4C0   Offset: 0x152A8C0   Length: 0x16DE
     protected void FilledFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Vector4 u, ref Color c)
     {
-        var pStatics = *(int64*)(DAT_181daf578 + 184);
+        var pStatics = *(int64*)(DAT_181daf590 + 184);
         void UIBasicSprite.FilledFill
                      (int64 this,int64 verts,int64 uvs,int64 cols,float *v,
                      float *u,uint64 *c)
@@ -1608,15 +1608,15 @@ public class UIBasicSprite
                         if (fVar10 < 1.0) {
                           iVar9 = this.mFillDirection;
                           if (iVar9 == 2) {
-                            if (((*(byte *)(DAT_181daf578 + 0x133) & 4) != 0) &&
-                               (*(int *)(DAT_181daf578 + 224) == 0)) {
-                              il2cpp_runtime_class_init(DAT_181daf578);
+                            if (((*(byte *)(DAT_181daf590 + 0x133) & 4) != 0) &&
+                               (*(int *)(DAT_181daf590 + 224) == 0)) {
+                              il2cpp_runtime_class_init(DAT_181daf590);
                               fVar10 = *(float *)(this + 400);
                             }
                             uVar6 = 0;
                             cVar4 = UIBasicSprite.RadialCut
-                                              (**(uint64 **)(DAT_181daf578 + 184),
-                                               (*(uint64 **)(DAT_181daf578 + 184))[1],fVar10,
+                                              (**(uint64 **)(DAT_181daf590 + 184),
+                                               (*(uint64 **)(DAT_181daf590 + 184))[1],fVar10,
                                                this.mInvert,0,0);
                             if (!cVar4) {
                               return;
@@ -1634,7 +1634,7 @@ public class UIBasicSprite
                               local_c8 = CONCAT44(*(uint32 *)(lVar2 + 36 + lVar8 * 8),
                                                   *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                               local_c0 = 0;
-                              FUN_181816b80(verts,&local_c8,DAT_181dabc18);
+                              FUN_181817190(verts,&local_c8,DAT_181dabc30);
                               lVar2 = UIBasicSprite.mTempUVs;
                               if (lVar2 == null) break;
                               if (*(uint32 *)(lVar2 + 24) <= uVar6) {
@@ -1645,10 +1645,10 @@ public class UIBasicSprite
                               local_res8 = CONCAT44(*(uint32 *)(lVar2 + 36 + lVar8 * 8),
                                                     *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                               if ((uvs == null) ||
-                                 (FUN_181829f90(uvs,local_res8,DAT_181dab918), cols == null)) break;
+                                 (FUN_18182a5a0(uvs,local_res8,DAT_181dab930), cols == null)) break;
                               local_b8 = *c;
                               uStack_b0 = c[1];
-                              FUN_1817e9a90(cols,&local_b8,DAT_181d82e20);
+                              FUN_1817ea0a0(cols,&local_b8,DAT_181d82e38);
                               uVar6 = uVar6 + 1;
                               if (3 < (int)uVar6) {
                                 return;
@@ -1848,8 +1848,8 @@ public class UIBasicSprite
                                 FUN_1800d65f0(uVar5,0);
                               }
                               *(uint32 *)(lVar2 + 60) = *(uint32 *)(lVar2 + 36);
-                              uVar5 = **(uint64 **)(DAT_181daf578 + 184);
-                              uVar3 = (*(uint64 **)(DAT_181daf578 + 184))[1];
+                              uVar5 = **(uint64 **)(DAT_181daf590 + 184);
+                              uVar3 = (*(uint64 **)(DAT_181daf590 + 184))[1];
                               uVar14 = Mathf.Clamp01();
                               cVar4 = this.mInvert;
                               uVar13 = NGUIMath.RepeatIndex(uVar6 + 3,4);
@@ -1869,7 +1869,7 @@ public class UIBasicSprite
                                   local_c8 = CONCAT44(*(uint32 *)(lVar2 + 36 + lVar8 * 8),
                                                       *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                                   local_c0 = 0;
-                                  FUN_181816b80(verts,&local_c8,DAT_181dabc18);
+                                  FUN_181817190(verts,&local_c8,DAT_181dabc30);
                                   lVar2 = UIBasicSprite.mTempUVs;
                                   if (lVar2 == null) throw; // [null/range check failed]
                                   if (*(uint32 *)(lVar2 + 24) <= uVar7) {
@@ -1878,14 +1878,14 @@ public class UIBasicSprite
                                     FUN_1800d65f0(uVar5,0);
                                   }
                                   if ((uvs == null) ||
-                                     (FUN_181829f90(uvs,CONCAT44(*(uint32 *)
+                                     (FUN_18182a5a0(uvs,CONCAT44(*(uint32 *)
                                                                       (lVar2 + 36 + lVar8 * 8),
                                                                      *(uint32 *)
                                                                       (lVar2 + 32 + lVar8 * 8)),
-                                                    DAT_181dab918), cols == null)) throw; // [null/range check failed]
+                                                    DAT_181dab930), cols == null)) throw; // [null/range check failed]
                                   local_b8 = *c;
                                   uStack_b0 = c[1];
-                                  FUN_1817e9a90(cols);
+                                  FUN_1817ea0a0(cols);
                                   uVar7 = uVar7 + 1;
                                 } while ((int)uVar7 < 4);
                               }
@@ -1902,16 +1902,16 @@ public class UIBasicSprite
                               if (local_e8 < 2) {
                                 uVar13 = 0;
                                 uVar14 = 0x3f000000;
-                                if (local_e8 != 0) goto LAB_18152b2b0;
-        LAB_18152b2bf:
+                                if (local_e8 != 0) goto LAB_18152b8c0;
+        LAB_18152b8cf:
                                 uVar15 = 0;
                                 uVar16 = 0x3f000000;
                               }
                               else {
                                 uVar13 = 0x3f000000;
                                 uVar14 = 0x3f800000;
-        LAB_18152b2b0:
-                                if (local_e8 == 3) goto LAB_18152b2bf;
+        LAB_18152b8c0:
+                                if (local_e8 == 3) goto LAB_18152b8cf;
                                 uVar15 = 0x3f000000;
                                 uVar16 = 0x3f800000;
                               }
@@ -2105,8 +2105,8 @@ public class UIBasicSprite
                               else {
                                 NGUIMath.RepeatIndex(iVar9,4);
                               }
-                              uVar5 = **(uint64 **)(DAT_181daf578 + 184);
-                              uVar3 = (*(uint64 **)(DAT_181daf578 + 184))[1];
+                              uVar5 = **(uint64 **)(DAT_181daf590 + 184);
+                              uVar3 = (*(uint64 **)(DAT_181daf590 + 184))[1];
                               uVar14 = Mathf.Clamp01();
                               uVar1 = this.mInvert;
                               uVar13 = NGUIMath.RepeatIndex(iVar9,4);
@@ -2126,7 +2126,7 @@ public class UIBasicSprite
                                   local_c8 = CONCAT44(*(uint32 *)(lVar2 + 36 + lVar8 * 8),
                                                       *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                                   local_c0 = 0;
-                                  FUN_181816b80(verts,&local_c8,DAT_181dabc18);
+                                  FUN_181817190(verts,&local_c8,DAT_181dabc30);
                                   lVar2 = UIBasicSprite.mTempUVs;
                                   if (lVar2 == null) throw; // [null/range check failed]
                                   if (*(uint32 *)(lVar2 + 24) <= uVar6) {
@@ -2135,14 +2135,14 @@ public class UIBasicSprite
                                     FUN_1800d65f0(uVar5,0);
                                   }
                                   if ((uvs == null) ||
-                                     (FUN_181829f90(uvs,CONCAT44(*(uint32 *)
+                                     (FUN_18182a5a0(uvs,CONCAT44(*(uint32 *)
                                                                       (lVar2 + 36 + lVar8 * 8),
                                                                      *(uint32 *)
                                                                       (lVar2 + 32 + lVar8 * 8)),
-                                                    DAT_181dab918), cols == null)) throw; // [null/range check failed]
+                                                    DAT_181dab930), cols == null)) throw; // [null/range check failed]
                                   local_b8 = *c;
                                   uStack_b0 = c[1];
-                                  FUN_1817e9a90(cols);
+                                  FUN_1817ea0a0(cols);
                                   uVar6 = uVar6 + 1;
                                 } while ((int)uVar6 < 4);
                               }
@@ -2167,7 +2167,7 @@ public class UIBasicSprite
                           local_c8 = CONCAT44(*(uint32 *)(lVar2 + 36 + lVar8 * 8),
                                               *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                           local_c0 = 0;
-                          FUN_181816b80(verts,&local_c8,DAT_181dabc18);
+                          FUN_181817190(verts,&local_c8,DAT_181dabc30);
                           lVar2 = UIBasicSprite.mTempUVs;
                           if (lVar2 == null) break;
                           if (*(uint32 *)(lVar2 + 24) <= uVar6) {
@@ -2178,10 +2178,10 @@ public class UIBasicSprite
                           local_res8 = CONCAT44(*(uint32 *)(lVar2 + 36 + lVar8 * 8),
                                                 *(uint32 *)(lVar2 + 32 + lVar8 * 8));
                           if ((uvs == null) ||
-                             (FUN_181829f90(uvs,local_res8,DAT_181dab918), cols == null)) break;
+                             (FUN_18182a5a0(uvs,local_res8,DAT_181dab930), cols == null)) break;
                           local_b8 = *c;
                           uStack_b0 = c[1];
-                          FUN_1817e9a90(cols,&local_b8,DAT_181d82e20);
+                          FUN_1817ea0a0(cols,&local_b8,DAT_181d82e38);
                           uVar6 = uVar6 + 1;
                           if (3 < (int)uVar6) {
                             return;
@@ -2198,7 +2198,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x600047F
-    // RVA   : 0x1528E70   Offset: 0x1528270   Length: 0x1B8A
+    // RVA   : 0x1529480   Offset: 0x1528880   Length: 0x1B8A
     protected void AdvancedFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, ref Vector4 v, ref Vector4 u, ref Color c)
     {
         var plVar12 = *(int64*)(lVar12 + 184);
@@ -2260,7 +2260,7 @@ public class UIBasicSprite
           local_d8 = 0;
           uStack_d0 = 0;
           lVar13 = (uint64)uVar15 << 32;
-          FUN_1809dc910(&local_d8);
+          FUN_1809dcfa0(&local_d8);
           fVar2 = (float)local_d8;
           fVar31 = uStack_d0._4_4_;
           fVar29 = (float)uStack_d0;
@@ -2268,7 +2268,7 @@ public class UIBasicSprite
           if (((((float)local_d8 != 0.0) || (local_d8._4_4_ != null.0)) || ((float)uStack_d0 != 0.0)) ||
              (uStack_d0._4_4_ != null.0)) {
             plVar1 = this + 56;
-            fVar20 = (float)FUN_180d98fa0(plVar1,0);
+            fVar20 = (float)FUN_180d995b0(plVar1,0);
             if (plVar11 != (int64 *)0) {
               iVar9 = (**(code **)(*plVar11 + 0x178))(plVar11,*(uint64 *)(*plVar11 + 0x180));
               fVar21 = (float)FUN_18044e2b0(plVar1,0);
@@ -2317,7 +2317,7 @@ public class UIBasicSprite
                       *(uint32 *)(lVar12 + 60) = v[3];
                       if (((int)this[51] - 1U & 0xfffffffd) == 0) {
                         lVar12 = UIBasicSprite.mTempPos;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         if (*(uint32 *)(lVar12 + 24) == 0) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2330,7 +2330,7 @@ public class UIBasicSprite
                         }
                         *(float *)(lVar12 + 40) = fVar29 + *(float *)(lVar12 + 32);
                         lVar12 = UIBasicSprite.mTempPos;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         if (*(uint32 *)(lVar12 + 24) < 4) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2338,8 +2338,8 @@ public class UIBasicSprite
                         }
                         *(float *)(lVar12 + 48) = *(float *)(lVar12 + 56) - fVar2;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
-                        uVar22 = FUN_180d98fc0(this + 58,0);
+                        if (lVar12 == null) goto LAB_18152b005;
+                        uVar22 = FUN_180d995d0(this + 58,0);
                         if (*(uint32 *)(lVar12 + 24) < 4) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2347,8 +2347,8 @@ public class UIBasicSprite
                         }
                         *(uint32 *)(lVar12 + 56) = uVar22;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
-                        uVar22 = FUN_180d98fc0(plVar1,0);
+                        if (lVar12 == null) goto LAB_18152b005;
+                        uVar22 = FUN_180d995d0(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 3) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2356,7 +2356,7 @@ public class UIBasicSprite
                         }
                         *(uint32 *)(lVar12 + 48) = uVar22;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         uVar22 = Rect.get_xMax(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 2) {
                           uVar34 = il2cpp_internal();
@@ -2365,7 +2365,7 @@ public class UIBasicSprite
                         }
                         *(uint32 *)(lVar12 + 40) = uVar22;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         uVar22 = Rect.get_xMax(this + 58,0);
                         if (*(int *)(lVar12 + 24) == 0) {
                           uVar34 = il2cpp_internal();
@@ -2376,7 +2376,7 @@ public class UIBasicSprite
                       }
                       else {
                         lVar12 = UIBasicSprite.mTempPos;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         if (*(uint32 *)(lVar12 + 24) == 0) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2389,7 +2389,7 @@ public class UIBasicSprite
                         }
                         *(float *)(lVar12 + 40) = fVar2 + *(float *)(lVar12 + 32);
                         lVar12 = UIBasicSprite.mTempPos;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         if (*(uint32 *)(lVar12 + 24) < 4) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2397,8 +2397,8 @@ public class UIBasicSprite
                         }
                         *(float *)(lVar12 + 48) = *(float *)(lVar12 + 56) - fVar29;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
-                        uVar22 = FUN_180d98fc0(this + 58,0);
+                        if (lVar12 == null) goto LAB_18152b005;
+                        uVar22 = FUN_180d995d0(this + 58,0);
                         if (*(int *)(lVar12 + 24) == 0) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2406,8 +2406,8 @@ public class UIBasicSprite
                         }
                         *(uint32 *)(lVar12 + 32) = uVar22;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
-                        uVar22 = FUN_180d98fc0(plVar1,0);
+                        if (lVar12 == null) goto LAB_18152b005;
+                        uVar22 = FUN_180d995d0(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 2) {
                           uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2415,7 +2415,7 @@ public class UIBasicSprite
                         }
                         *(uint32 *)(lVar12 + 40) = uVar22;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         uVar22 = Rect.get_xMax(plVar1,0);
                         if (*(uint32 *)(lVar12 + 24) < 3) {
                           uVar34 = il2cpp_internal();
@@ -2424,7 +2424,7 @@ public class UIBasicSprite
                         }
                         *(uint32 *)(lVar12 + 48) = uVar22;
                         lVar12 = UIBasicSprite.mTempUVs;
-                        if (lVar12 == null) goto LAB_18152a9f5;
+                        if (lVar12 == null) goto LAB_18152b005;
                         uVar22 = Rect.get_xMax(this + 58,0);
                         if (*(uint32 *)(lVar12 + 24) < 4) {
                           uVar34 = il2cpp_internal();
@@ -2492,7 +2492,7 @@ public class UIBasicSprite
                                       FUN_1800d65f0(uVar34,0);
                                     }
                                     *(uint32 *)(lVar12 + 36) = uVar22;
-                                    goto LAB_1815297d4;
+                                    goto LAB_181529de4;
                                   }
                                 }
                               }
@@ -2558,9 +2558,9 @@ public class UIBasicSprite
                                       FUN_1800d65f0(uVar34,0);
                                     }
                                     *(uint32 *)(lVar12 + 60) = uVar22;
-        LAB_1815297d4:
+        LAB_181529de4:
                                     uVar15 = 0;
-                                    lVar12 = DAT_181daf578;
+                                    lVar12 = DAT_181daf590;
                                     do {
                                       uVar14 = 0;
                                       do {
@@ -2572,22 +2572,22 @@ public class UIBasicSprite
                                                  ((uint64)in_stack_fffffffffffffed0 >> 32);
                                         iVar9 = (int)this[60];
                                         if (iVar9 == 0) {
-                                          if (uVar15 != 1) goto LAB_181529f3e;
-                                          if (uVar14 == 1) goto LAB_18152a3cc;
-        LAB_181529821:
+                                          if (uVar15 != 1) goto LAB_18152a54e;
+                                          if (uVar14 == 1) goto LAB_18152a9dc;
+        LAB_181529e31:
                                           if (uVar14 != 0) {
                                             if (uVar14 == 2) {
-                                              if ((int)this[62] == 2) goto LAB_181529967;
-                                              if ((int)this[62] != 0) goto LAB_18152985e;
+                                              if ((int)this[62] == 2) goto LAB_181529f77;
+                                              if ((int)this[62] != 0) goto LAB_181529e6e;
                                             }
-                                            goto LAB_18152a3cc;
+                                            goto LAB_18152a9dc;
                                           }
                                           if (*(int *)((int64)this + 0x1ec) == 2) {
-        LAB_181529967:
+        LAB_181529f77:
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                             }
                                             lVar16 = *plVar12;
                                             if (lVar16 != null) {
@@ -2651,11 +2651,11 @@ public class UIBasicSprite
                                                   if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                      (*(int *)(lVar12 + 224) == 0)) {
                                                     il2cpp_runtime_class_init();
-                                                    lVar12 = DAT_181daf578;
+                                                    lVar12 = DAT_181daf590;
                                                   }
                                                   lVar13 = *(int64 *)(plVar12 + 8)
                                                   ;
-                                                  if (lVar13 == null) goto LAB_18152a9f5;
+                                                  if (lVar13 == null) goto LAB_18152b005;
                                                   lVar16 = (int64)(int)uVar15 + 1;
                                                   if (*(uint32 *)(lVar13 + 24) <= (uint32)lVar16) {
                                                     uVar34 = il2cpp_internal();
@@ -2667,7 +2667,7 @@ public class UIBasicSprite
                                                   if (fVar2 < fVar29) {
                                                     uVar23 = Mathf.Lerp(uVar24,lVar13,
                                                                          (fVar2 - fVar3) / local_res8,0);
-                                                    lVar12 = DAT_181daf578;
+                                                    lVar12 = DAT_181daf590;
                                                     fVar31 = fVar2;
                                                   }
                                                   uVar6 = *c;
@@ -2687,23 +2687,23 @@ public class UIBasicSprite
                                                                       in_stack_fffffffffffffed0,uVar23,
                                                                       uVar27,uVar36,&local_d8,0);
                                                   fVar3 = fVar29;
-                                                  lVar12 = DAT_181daf578;
+                                                  lVar12 = DAT_181daf590;
                                                 }
-                                                goto LAB_18152a3cc;
+                                                goto LAB_18152a9dc;
                                               }
                                             }
-                                            goto LAB_18152a9f5;
+                                            goto LAB_18152b005;
                                           }
                                           if (*(int *)((int64)this + 0x1ec) == 0)
-                                          goto LAB_18152a3cc;
-        LAB_18152985e:
+                                          goto LAB_18152a9dc;
+        LAB_181529e6e:
                                           if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                              (*(int *)(lVar12 + 224) == 0)) {
                                             il2cpp_runtime_class_init();
-                                            lVar12 = DAT_181daf578;
+                                            lVar12 = DAT_181daf590;
                                           }
                                           lVar13 = *plVar12;
-                                          if (lVar13 == null) goto LAB_18152a9f5;
+                                          if (lVar13 == null) goto LAB_18152b005;
                                           uVar4 = *(uint32 *)(lVar13 + 24);
                                           if (uVar4 <= uVar15) {
                                             uVar34 = il2cpp_internal();
@@ -2729,7 +2729,7 @@ public class UIBasicSprite
                                             FUN_1800d65f0(uVar34,0);
                                           }
                                           lVar12 = (plVar12)[1];
-                                          if (lVar12 == null) goto LAB_18152a9f5;
+                                          if (lVar12 == null) goto LAB_18152b005;
                                           uVar4 = *(uint32 *)(lVar12 + 24);
                                           if (uVar4 <= uVar15) {
                                             uVar34 = il2cpp_internal();
@@ -2764,23 +2764,23 @@ public class UIBasicSprite
                                                CONCAT44(uVar24,*(uint32 *)(lVar13 + 36 + lVar17 * 8)
                                                        );
                                           uVar24 = *(uint32 *)(lVar13 + 32 + lVar16 * 8);
-        LAB_18152a090:
+        LAB_18152a6a0:
                                           uVar34 = CONCAT44(uVar35,uVar27);
                                           lVar13 = CONCAT44(uVar22,uVar24);
                                           UIBasicSprite.Fill(verts,uvs,cols,uVar28,lVar13,uVar34
                                                               ,in_stack_fffffffffffffec8,
                                                               in_stack_fffffffffffffed0,uVar25,uVar36,
                                                               uVar37,&local_d8,0);
-                                          lVar12 = DAT_181daf578;
+                                          lVar12 = DAT_181daf590;
                                         }
                                         else if (uVar15 == 1) {
-                                          if (uVar14 != 1) goto LAB_181529821;
+                                          if (uVar14 != 1) goto LAB_181529e31;
                                           if (iVar9 != 2) {
-                                            if (iVar9 != 1) goto LAB_18152a3cc;
+                                            if (iVar9 != 1) goto LAB_18152a9dc;
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                             }
                                             lVar13 = *plVar12;
                                             if (lVar13 != null) {
@@ -2840,18 +2840,18 @@ public class UIBasicSprite
                                                 in_stack_fffffffffffffec8 =
                                                      CONCAT44(uVar24,*(uint32 *)(lVar13 + 52));
                                                 uVar24 = *(uint32 *)(lVar13 + 48);
-                                                goto LAB_18152a090;
+                                                goto LAB_18152a6a0;
                                               }
                                             }
-                                            goto LAB_18152a9f5;
+                                            goto LAB_18152b005;
                                           }
                                           if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                              (*(int *)(lVar12 + 224) == 0)) {
                                             il2cpp_runtime_class_init();
-                                            lVar12 = DAT_181daf578;
+                                            lVar12 = DAT_181daf590;
                                           }
                                           lVar16 = *plVar12;
-                                          if (lVar16 == null) goto LAB_18152a9f5;
+                                          if (lVar16 == null) goto LAB_18152b005;
                                           uVar4 = *(uint32 *)(lVar16 + 24);
                                           if (uVar4 < 2) {
                                             uVar34 = il2cpp_internal();
@@ -2876,7 +2876,7 @@ public class UIBasicSprite
                                             FUN_1800d65f0(uVar34,0);
                                           }
                                           lVar17 = (plVar12)[1];
-                                          if (lVar17 == null) goto LAB_18152a9f5;
+                                          if (lVar17 == null) goto LAB_18152b005;
                                           if (*(uint32 *)(lVar17 + 24) < 2) {
                                             uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2895,10 +2895,10 @@ public class UIBasicSprite
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                             }
                                             lVar16 = *(int64 *)(plVar12 + 8);
-                                            if (lVar16 == null) goto LAB_18152a9f5;
+                                            if (lVar16 == null) goto LAB_18152b005;
                                             if (*(uint32 *)(lVar16 + 24) < 3) {
                                               uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2911,7 +2911,7 @@ public class UIBasicSprite
                                             if (fVar29 < fVar31) {
                                               uVar24 = Mathf.Lerp(uVar35,lVar16,
                                                                    (fVar29 - fVar20) / local_f8,0);
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                               fVar33 = fVar29;
                                             }
                                             while (fVar21 < fVar3) {
@@ -2925,10 +2925,10 @@ public class UIBasicSprite
                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                  (*(int *)(lVar12 + 224) == 0)) {
                                                 il2cpp_runtime_class_init();
-                                                lVar12 = DAT_181daf578;
+                                                lVar12 = DAT_181daf590;
                                               }
                                               lVar13 = *(int64 *)(plVar12 + 8);
-                                              if (lVar13 == null) goto LAB_18152a9f5;
+                                              if (lVar13 == null) goto LAB_18152b005;
                                               if (*(uint32 *)(lVar13 + 24) < 3) {
                                                 uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -2939,7 +2939,7 @@ public class UIBasicSprite
                                               if (fVar3 < fVar30) {
                                                 uVar25 = Mathf.Lerp(uVar22,lVar13,
                                                                      (fVar3 - fVar21) / local_res8,0);
-                                                lVar12 = DAT_181daf578;
+                                                lVar12 = DAT_181daf590;
                                                 fVar32 = fVar3;
                                               }
                                               uVar6 = *c;
@@ -2959,35 +2959,35 @@ public class UIBasicSprite
                                                                   in_stack_fffffffffffffed0,uVar25,uVar35,
                                                                   uVar24,&local_d8,0);
                                               fVar21 = fVar30;
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                             }
                                           }
                                         }
                                         else {
-        LAB_181529f3e:
+        LAB_18152a54e:
                                           if (uVar14 != 1) {
                                             if (uVar14 == 0) {
                                               iVar9 = *(int *)((int64)this + 0x1ec);
-        LAB_181529f61:
-                                              if (iVar9 == 0) goto LAB_18152a3cc;
+        LAB_18152a571:
+                                              if (iVar9 == 0) goto LAB_18152a9dc;
                                             }
                                             else if (uVar14 == 2) {
                                               iVar9 = (int)this[62];
-                                              goto LAB_181529f61;
+                                              goto LAB_18152a571;
                                             }
                                             if (uVar15 == 0) {
                                               iVar9 = *(int *)((int64)this + 0x1e4);
-        LAB_181529f81:
-                                              if (iVar9 == 0) goto LAB_18152a3cc;
+        LAB_18152a591:
+                                              if (iVar9 == 0) goto LAB_18152a9dc;
                                             }
                                             else if (uVar15 == 2) {
                                               iVar9 = (int)this[61];
-                                              goto LAB_181529f81;
+                                              goto LAB_18152a591;
                                             }
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                             }
                                             lVar13 = *plVar12;
                                             if (lVar13 != null) {
@@ -3050,23 +3050,23 @@ public class UIBasicSprite
                                                      CONCAT44(uVar27,*(uint32 *)
                                                                       (lVar12 + 32 + lVar17 * 8));
                                                 uVar27 = *(uint32 *)(lVar13 + 36 + lVar19 * 8);
-        LAB_18152a083:
+        LAB_18152a693:
                                                 in_stack_fffffffffffffec8 = CONCAT44(uVar24,uVar26);
                                                 uVar24 = *(uint32 *)(lVar13 + 32 + lVar16 * 8);
-                                                goto LAB_18152a090;
+                                                goto LAB_18152a6a0;
                                               }
                                             }
-                                            goto LAB_18152a9f5;
+                                            goto LAB_18152b005;
                                           }
                                           if (uVar15 == 0) {
                                             if (*(int *)((int64)this + 0x1e4) != 2) {
                                               if (*(int *)((int64)this + 0x1e4) == 0)
-                                              goto LAB_18152a3cc;
-        LAB_18152a0f3:
+                                              goto LAB_18152a9dc;
+        LAB_18152a703:
                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                  (*(int *)(lVar12 + 224) == 0)) {
                                                 il2cpp_runtime_class_init();
-                                                lVar12 = DAT_181daf578;
+                                                lVar12 = DAT_181daf590;
                                               }
                                               lVar13 = *plVar12;
                                               if (lVar13 != null) {
@@ -3127,19 +3127,19 @@ public class UIBasicSprite
                                                        CONCAT44(uVar27,*(uint32 *)
                                                                         (lVar12 + 32 + lVar17 * 8));
                                                   uVar27 = *(uint32 *)(lVar13 + 44);
-                                                  goto LAB_18152a083;
+                                                  goto LAB_18152a693;
                                                 }
                                               }
-                                              goto LAB_18152a9f5;
+                                              goto LAB_18152b005;
                                             }
-        LAB_18152a1e7:
+        LAB_18152a7f7:
                                             if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                (*(int *)(lVar12 + 224) == 0)) {
                                               il2cpp_runtime_class_init();
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                             }
                                             lVar16 = *plVar12;
-                                            if (lVar16 == null) goto LAB_18152a9f5;
+                                            if (lVar16 == null) goto LAB_18152b005;
                                             uVar4 = *(uint32 *)(lVar16 + 24);
                                             if (uVar4 <= uVar15) {
                                               uVar34 = il2cpp_internal();
@@ -3166,7 +3166,7 @@ public class UIBasicSprite
                                               FUN_1800d65f0(uVar34,0);
                                             }
                                             lVar19 = (plVar12)[1];
-                                            if (lVar19 == null) goto LAB_18152a9f5;
+                                            if (lVar19 == null) goto LAB_18152b005;
                                             uVar4 = *(uint32 *)(lVar19 + 24);
                                             if (uVar4 <= uVar15) {
                                               uVar34 = il2cpp_internal();
@@ -3198,10 +3198,10 @@ public class UIBasicSprite
                                               if (((*(byte *)(lVar12 + 0x133) & 4) != 0) &&
                                                  (*(int *)(lVar12 + 224) == 0)) {
                                                 il2cpp_runtime_class_init();
-                                                lVar12 = DAT_181daf578;
+                                                lVar12 = DAT_181daf590;
                                               }
                                               lVar13 = *(int64 *)(plVar12 + 8);
-                                              if (lVar13 == null) goto LAB_18152a9f5;
+                                              if (lVar13 == null) goto LAB_18152b005;
                                               if (*(uint32 *)(lVar13 + 24) < 3) {
                                                 uVar34 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3213,7 +3213,7 @@ public class UIBasicSprite
                                               if (fVar2 < fVar31) {
                                                 uVar23 = Mathf.Lerp(uVar36,lVar13,
                                                                      (fVar2 - fVar3) / local_f8,0);
-                                                lVar12 = DAT_181daf578;
+                                                lVar12 = DAT_181daf590;
                                                 fVar29 = fVar2;
                                               }
                                               uVar6 = *c;
@@ -3233,15 +3233,15 @@ public class UIBasicSprite
                                                                   in_stack_fffffffffffffed0,uVar27,uVar36,
                                                                   uVar23,&local_d8,0);
                                               fVar3 = fVar31;
-                                              lVar12 = DAT_181daf578;
+                                              lVar12 = DAT_181daf590;
                                             }
                                           }
                                           else if (uVar15 == 2) {
-                                            if ((int)this[61] == 2) goto LAB_18152a1e7;
-                                            if ((int)this[61] != 0) goto LAB_18152a0f3;
+                                            if ((int)this[61] == 2) goto LAB_18152a7f7;
+                                            if ((int)this[61] != 0) goto LAB_18152a703;
                                           }
                                         }
-        LAB_18152a3cc:
+        LAB_18152a9dc:
                                         uVar14 = uVar14 + 1;
                                       } while ((int)uVar14 < 3);
                                       uVar15 = uVar15 + 1;
@@ -3261,7 +3261,7 @@ public class UIBasicSprite
                 }
               }
             }
-        LAB_18152a9f5:
+        LAB_18152b005:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -3270,7 +3270,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000480
-    // RVA   : 0x152CB70   Offset: 0x152BF70   Length: 0x14C
+    // RVA   : 0x152D180   Offset: 0x152C580   Length: 0x14C
     private static bool RadialCut(Vector2[] xy, Vector2[] uv, float fill, bool invert, int corner)
     {
         void UIBasicSprite.RadialCut
@@ -3327,11 +3327,11 @@ public class UIBasicSprite
               }
               fill = 1.0;
               *(uint32 *)(xy + 32 + lVar5 * 8) = uVar9;
-              goto LAB_18152c8d7;
+              goto LAB_18152cee7;
             }
-        LAB_18152c917:
+        LAB_18152cf27:
             if (xy != null) {
-        LAB_18152c91c:
+        LAB_18152cf2c:
               if (*(uint32 *)(xy + 24) <= corner) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3388,16 +3388,16 @@ public class UIBasicSprite
                   FUN_1800d65f0(uVar4,0);
                 }
                 *(uint32 *)(xy + 36 + lVar7 * 8) = uVar9;
-                goto LAB_18152c91c;
+                goto LAB_18152cf2c;
               }
             }
             else {
               fill = 1.0;
               uv = 1.0;
-              if (!invert) goto LAB_18152c917;
+              if (!invert) goto LAB_18152cf27;
             }
             if (xy != null) {
-        LAB_18152c8d7:
+        LAB_18152cee7:
               if (*(uint32 *)(xy + 24) <= corner) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3455,11 +3455,11 @@ public class UIBasicSprite
               FUN_1800d65f0(uVar4,0);
             }
             *(uint32 *)(xy + 36 + lVar5 * 8) = uVar9;
-            goto LAB_18152c71d;
+            goto LAB_18152cd2d;
           }
-        LAB_18152c77b:
+        LAB_18152cd8b:
           if (xy != null) {
-        LAB_18152c784:
+        LAB_18152cd94:
             if (*(uint32 *)(xy + 24) <= corner) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3516,16 +3516,16 @@ public class UIBasicSprite
               }
               fill = 1.0;
               *(uint32 *)(xy + 32 + lVar7 * 8) = uVar9;
-              goto LAB_18152c784;
+              goto LAB_18152cd94;
             }
           }
           else {
             fill = 1.0;
             uv = 1.0;
-            if (invert) goto LAB_18152c77b;
+            if (invert) goto LAB_18152cd8b;
           }
           if (xy != null) {
-        LAB_18152c71d:
+        LAB_18152cd2d:
             if (*(uint32 *)(xy + 24) <= corner) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3550,7 +3550,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000481
-    // RVA   : 0x152C590   Offset: 0x152B990   Length: 0x5D1
+    // RVA   : 0x152CBA0   Offset: 0x152BFA0   Length: 0x5D1
     private static void RadialCut(Vector2[] xy, float cos, float sin, bool invert, int corner)
     {
         void UIBasicSprite.RadialCut
@@ -3607,11 +3607,11 @@ public class UIBasicSprite
               }
               sin = 1.0;
               *(uint32 *)(xy + 32 + lVar5 * 8) = uVar9;
-              goto LAB_18152c8d7;
+              goto LAB_18152cee7;
             }
-        LAB_18152c917:
+        LAB_18152cf27:
             if (xy != null) {
-        LAB_18152c91c:
+        LAB_18152cf2c:
               if (*(uint32 *)(xy + 24) <= corner) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3668,16 +3668,16 @@ public class UIBasicSprite
                   FUN_1800d65f0(uVar4,0);
                 }
                 *(uint32 *)(xy + 36 + lVar7 * 8) = uVar9;
-                goto LAB_18152c91c;
+                goto LAB_18152cf2c;
               }
             }
             else {
               sin = 1.0;
               cos = 1.0;
-              if (!invert) goto LAB_18152c917;
+              if (!invert) goto LAB_18152cf27;
             }
             if (xy != null) {
-        LAB_18152c8d7:
+        LAB_18152cee7:
               if (*(uint32 *)(xy + 24) <= corner) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3735,11 +3735,11 @@ public class UIBasicSprite
               FUN_1800d65f0(uVar4,0);
             }
             *(uint32 *)(xy + 36 + lVar5 * 8) = uVar9;
-            goto LAB_18152c71d;
+            goto LAB_18152cd2d;
           }
-        LAB_18152c77b:
+        LAB_18152cd8b:
           if (xy != null) {
-        LAB_18152c784:
+        LAB_18152cd94:
             if (*(uint32 *)(xy + 24) <= corner) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3796,16 +3796,16 @@ public class UIBasicSprite
               }
               sin = 1.0;
               *(uint32 *)(xy + 32 + lVar7 * 8) = uVar9;
-              goto LAB_18152c784;
+              goto LAB_18152cd94;
             }
           }
           else {
             sin = 1.0;
             cos = 1.0;
-            if (invert) goto LAB_18152c77b;
+            if (invert) goto LAB_18152cd8b;
           }
           if (xy != null) {
-        LAB_18152c71d:
+        LAB_18152cd2d:
             if (*(uint32 *)(xy + 24) <= corner) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -3830,7 +3830,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000482
-    // RVA   : 0x152AA00   Offset: 0x1529E00   Length: 0x23C
+    // RVA   : 0x152B010   Offset: 0x152A410   Length: 0x23C
     private static void Fill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols, float v0x, float v1x, float v0y, float v1y, float u0x, float u1x, float u0y, float u1y, Color col)
     {
                               uint32 v1x,uint32 v0y,uint32 v1y,uint32 u0x,
@@ -3845,45 +3845,45 @@ public class UIBasicSprite
           uStack_44 = v0y;
           uStack_40 = 0;
           local_48 = v0x;
-          FUN_181816b80(verts,&local_48,DAT_181dabc18);
+          FUN_181817190(verts,&local_48,DAT_181dabc30);
           uStack_44 = v1y;
           uStack_40 = 0;
           local_48 = v0x;
-          FUN_181816b80(verts,&local_48,DAT_181dabc18);
+          FUN_181817190(verts,&local_48,DAT_181dabc30);
           local_48 = v1x;
           uStack_44 = v1y;
           uStack_40 = 0;
-          FUN_181816b80(verts,&local_48,DAT_181dabc18);
+          FUN_181817190(verts,&local_48,DAT_181dabc30);
           local_48 = v1x;
           uStack_44 = v0y;
           uStack_40 = 0;
-          FUN_181816b80(verts,&local_48,DAT_181dabc18);
+          FUN_181817190(verts,&local_48,DAT_181dabc30);
           if (uvs != null) {
-            FUN_181829f90(uvs,CONCAT44(u0y,u0x),DAT_181dab918);
-            FUN_181829f90(uvs,CONCAT44(u1y,u0x),DAT_181dab918);
-            FUN_181829f90(uvs,CONCAT44(u1y,u1x),DAT_181dab918);
-            FUN_181829f90(uvs,CONCAT44(u0y,u1x),DAT_181dab918);
+            FUN_18182a5a0(uvs,CONCAT44(u0y,u0x),DAT_181dab930);
+            FUN_18182a5a0(uvs,CONCAT44(u1y,u0x),DAT_181dab930);
+            FUN_18182a5a0(uvs,CONCAT44(u1y,u1x),DAT_181dab930);
+            FUN_18182a5a0(uvs,CONCAT44(u0y,u1x),DAT_181dab930);
             if (cols != null) {
               local_48 = *col;
               uStack_44 = col[1];
               uStack_40 = col[2];
               uStack_3c = col[3];
-              FUN_1817e9a90(cols,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(cols,&local_48,DAT_181d82e38);
               local_48 = *col;
               uStack_44 = col[1];
               uStack_40 = col[2];
               uStack_3c = col[3];
-              FUN_1817e9a90(cols,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(cols,&local_48,DAT_181d82e38);
               local_48 = *col;
               uStack_44 = col[1];
               uStack_40 = col[2];
               uStack_3c = col[3];
-              FUN_1817e9a90(cols,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(cols,&local_48,DAT_181d82e38);
               local_48 = *col;
               uStack_44 = col[1];
               uStack_40 = col[2];
               uStack_3c = col[3];
-              FUN_1817e9a90(cols,&local_48,DAT_181d82e20);
+              FUN_1817ea0a0(cols,&local_48,DAT_181d82e38);
               return;
             }
           }
@@ -3891,7 +3891,7 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000483
-    // RVA   : 0x152EB90   Offset: 0x152DF90   Length: 0xAA
+    // RVA   : 0x152F1A0   Offset: 0x152E5A0   Length: 0xAA
     protected void /*ctor*/()
     {
         uint uVar1;
@@ -3902,7 +3902,7 @@ public class UIBasicSprite
         byte[] local_18 = new byte[16];
         this.mFillDirection = 4;
         *(uint32 *)(this + 400) = 0x3f800000;
-        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];
@@ -3926,16 +3926,16 @@ public class UIBasicSprite
     }
 
     // Token : 0x6000484
-    // RVA   : 0x152EB00   Offset: 0x152DF00   Length: 0x88
+    // RVA   : 0x152F110   Offset: 0x152E510   Length: 0x88
     private static void /*cctor*/()
     {
         ulong uVar1;
-        uVar1 = FUN_1800d60b0(DAT_181da6ce0,4);
-        puVar2 = *(uint64 **)(DAT_181daf578 + 184);
+        uVar1 = FUN_1800d60b0(DAT_181da6cf8,4);
+        puVar2 = *(uint64 **)(DAT_181daf590 + 184);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
-        uVar1 = FUN_1800d60b0(DAT_181da6ce0,4);
-        puVar2 = (uint64 *)(*(int64 *)(DAT_181daf578 + 184) + 8);
+        uVar1 = FUN_1800d60b0(DAT_181da6cf8,4);
+        puVar2 = (uint64 *)(*(int64 *)(DAT_181daf590 + 184) + 8);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
     }

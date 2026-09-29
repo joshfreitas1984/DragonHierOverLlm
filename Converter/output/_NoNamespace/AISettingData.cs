@@ -14,7 +14,7 @@ public class AISettingData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009D5
-    // RVA   : 0xA19710   Offset: 0xA18B10   Length: 0x39
+    // RVA   : 0xA19DA0   Offset: 0xA191A0   Length: 0x39
     public void /*ctor*/(int _priorityLv)
     {
         this.priorityLv = 1;

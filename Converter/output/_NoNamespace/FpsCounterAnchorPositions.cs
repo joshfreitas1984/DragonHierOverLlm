@@ -6,19 +6,19 @@
 public class FpsCounterAnchorPositions
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FC2
+    // Token: 0x4001FC3
     public int value__;
 
-    // Token: 0x4001FC3
+    // Token: 0x4001FC4
     public const FpsCounterAnchorPositions TopLeft;
 
-    // Token: 0x4001FC4
+    // Token: 0x4001FC5
     public const FpsCounterAnchorPositions BottomLeft;
 
-    // Token: 0x4001FC5
+    // Token: 0x4001FC6
     public const FpsCounterAnchorPositions TopRight;
 
-    // Token: 0x4001FC6
+    // Token: 0x4001FC7
     public const FpsCounterAnchorPositions BottomRight;
 
 }

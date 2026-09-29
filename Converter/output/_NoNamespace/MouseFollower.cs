@@ -11,10 +11,10 @@ public class MouseFollower
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009B1
-    // RVA   : 0xDF3AA0   Offset: 0xDF2EA0   Length: 0x2F0
+    // RVA   : 0xDF40B0   Offset: 0xDF34B0   Length: 0x2F0
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d7ddf0 + 184);
+        var pStatics = *(int64*)(DAT_181d7de08 + 184);
         uint uVar1;
         ulong uVar2;
         bool cVar3;
@@ -31,28 +31,28 @@ public class MouseFollower
         if (!cVar3) {
           lVar4 = *(int64 *)(pStatics + 16);
           if (lVar4 == null) {
-            uVar2 = **(uint64 **)(DAT_181d7ddf0 + 184);
-            lVar4 = new OnTooltipCB(uVar2,DAT_181da82c8,DAT_181d98728);
+            uVar2 = **(uint64 **)(DAT_181d7de08 + 184);
+            lVar4 = new OnTooltipCB(uVar2,DAT_181da8460,DAT_181d98740);
             plVar9 = (int64 *)(pStatics + 16);
             *plVar9 = lVar4;
             il2cpp_internal(plVar9,lVar4);
           }
           if (lVar5 != null) {
-            FUN_18181f150(lVar5,lVar4,DAT_181da7b98);
+            FUN_18181f760(lVar5,lVar4,DAT_181da7bb0);
             return;
           }
         }
         else {
           lVar4 = *(int64 *)(pStatics + 8);
           if (lVar4 == null) {
-            uVar2 = **(uint64 **)(DAT_181d7ddf0 + 184);
-            lVar4 = new OnTooltipCB(uVar2,DAT_181da8248,DAT_181d98728);
+            uVar2 = **(uint64 **)(DAT_181d7de08 + 184);
+            lVar4 = new OnTooltipCB(uVar2,DAT_181da83e0,DAT_181d98740);
             plVar9 = (int64 *)(pStatics + 8);
             *plVar9 = lVar4;
             il2cpp_internal(plVar9,lVar4);
           }
           if (lVar5 != null) {
-            FUN_18181f150(lVar5,lVar4,DAT_181da7b98);
+            FUN_18181f760(lVar5,lVar4,DAT_181da7bb0);
             lVar5 = Component.get_transform(this,0);
             lVar4 = Camera.get_main(0);
             puVar6 = (uint32 *)Input.get_mousePosition(&local_28,0);

@@ -6,121 +6,121 @@
 public class PartyController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001951
+    // Token: 0x4001952
     public PartyType partyType;
 
-    // Token: 0x4001952
+    // Token: 0x4001953
     public PartyState partyState;
 
-    // Token: 0x4001953
+    // Token: 0x4001954
     public GameObject partyUIPanel;
 
-    // Token: 0x4001954
+    // Token: 0x4001955
     public GameObject startButton;
 
-    // Token: 0x4001955
+    // Token: 0x4001956
     public AudioSource partySound;
 
-    // Token: 0x4001956
+    // Token: 0x4001957
     public GameObject wineIcon;
 
-    // Token: 0x4001957
+    // Token: 0x4001958
     public GameObject wineCancel;
 
-    // Token: 0x4001958
+    // Token: 0x4001959
     private ItemData wineData;
 
-    // Token: 0x4001959
+    // Token: 0x400195A
     public float wineScore;
 
-    // Token: 0x400195A
+    // Token: 0x400195B
     public GameObject foodIcon;
 
-    // Token: 0x400195B
+    // Token: 0x400195C
     public GameObject foodCancel;
 
-    // Token: 0x400195C
+    // Token: 0x400195D
     private ItemData foodData;
 
-    // Token: 0x400195D
+    // Token: 0x400195E
     public float foodScore;
 
-    // Token: 0x400195E
+    // Token: 0x400195F
     public GameObject treasureIcon;
 
-    // Token: 0x400195F
+    // Token: 0x4001960
     public GameObject treasureCancel;
 
-    // Token: 0x4001960
+    // Token: 0x4001961
     private ItemData treasureData;
 
-    // Token: 0x4001961
+    // Token: 0x4001962
     public float treasureScore;
 
-    // Token: 0x4001962
+    // Token: 0x4001963
     public float baseScore;
 
-    // Token: 0x4001963
+    // Token: 0x4001964
     public float scoreRate;
 
-    // Token: 0x4001964
+    // Token: 0x4001965
     public AreaData sourceArea;
 
-    // Token: 0x4001965
+    // Token: 0x4001966
     public HeroData sourceHero;
 
-    // Token: 0x4001966
+    // Token: 0x4001967
     public HeroData sourceAssistHero;
 
-    // Token: 0x4001967
+    // Token: 0x4001968
     public List<HeroData> targetHero;
 
-    // Token: 0x4001968
+    // Token: 0x4001969
     public List<GameObject> targetHeroIcon;
 
-    // Token: 0x4001969
+    // Token: 0x400196A
     public float heroConsumeRate;
 
-    // Token: 0x400196A
+    // Token: 0x400196B
     public bool skipping;
 
-    // Token: 0x400196B
+    // Token: 0x400196C
     public GameObject skipButton;
 
-    // Token: 0x400196C
+    // Token: 0x400196D
     private GameObject temp;
 
-    // Token: 0x400196D
+    // Token: 0x400196E
     private static PartyController _instance;
 
-    // Token: 0x400196E
+    // Token: 0x400196F
     public static List<string> PartyMeetTalkText;
 
-    // Token: 0x400196F
+    // Token: 0x4001970
     public static List<string> WeddingMeetTalkText;
 
-    // Token: 0x4001970
+    // Token: 0x4001971
     public static List<string> PartyFavorChangeText;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600197F
-    // RVA   : 0xB9AA80   Offset: 0xB99E80   Length: 0x57
+    // RVA   : 0xB9B140   Offset: 0xB9A540   Length: 0x57
     public static PartyController get_Instance()
     {
-        return **(uint64 **)(DAT_181d90290 + 184);
+        return **(uint64 **)(DAT_181d902a8 + 184);
     }
 
     // Token : 0x6001980
-    // RVA   : 0xB97540   Offset: 0xB96940   Length: 0x61
+    // RVA   : 0xB97C00   Offset: 0xB97000   Length: 0x61
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d90290 + 184);
+        puVar1 = *(uint64 **)(DAT_181d902a8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6001981
-    // RVA   : 0xB98620   Offset: 0xB97A20   Length: 0x674
+    // RVA   : 0xB98CE0   Offset: 0xB980E0   Length: 0x674
     public void PartyStart(PartyType _partyType, HeroData _sourceHero, AreaData _sourceArea, float _baseScore, float _scoreRate, HeroData _sourceAssistHero)
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
@@ -143,11 +143,11 @@ public class PartyController
         if (this.partyUIPanel != null) {
           GameObject.SetActive(this.partyUIPanel,1,0);
           if ((this.partyUIPanel != null) &&
-             (lVar4 = GameObject.GetComponent(this.partyUIPanel,DAT_181dc7e20)) != null)
+             (lVar4 = GameObject.GetComponent(this.partyUIPanel,DAT_181dc7e38)) != null)
           {
             CanvasGroup.set_alpha(lVar4,0,0);
             if (this.partyUIPanel != null) {
-              uVar5 = GameObject.GetComponent(this.partyUIPanel,DAT_181dc7e20);
+              uVar5 = GameObject.GetComponent(this.partyUIPanel,DAT_181dc7e38);
               DOTweenModuleUI.DOFade(uVar5,0x3f800000);
               PartyController.SetAllIconButtonActive(this,1,0);
               PartyController.RefreshExtraRateInfo(this,0);
@@ -233,7 +233,7 @@ public class PartyController
     }
 
     // Token : 0x6001982
-    // RVA   : 0xB98200   Offset: 0xB97600   Length: 0x41D
+    // RVA   : 0xB988C0   Offset: 0xB97CC0   Length: 0x41D
     public void PartyEnd()
     {
         var pStatics = *(int64*)(DAT_181d761e8 + 184);
@@ -245,10 +245,10 @@ public class PartyController
           HeroLittleTalkController.ClearAll(*pStatics,0);
           this.partyState = 0;
           if (this.partyUIPanel != null) {
-            uVar1 = GameObject.GetComponent(this.partyUIPanel,DAT_181dc7e20);
+            uVar1 = GameObject.GetComponent(this.partyUIPanel,DAT_181dc7e38);
             uVar1 = DOTweenModuleUI.DOFade(uVar1,0,0x3f000000,0);
-            uVar2 = new OnTooltipCB(this,DAT_181d96110,0);
-            TweenSettingsExtensions.OnComplete(uVar1,uVar2,DAT_181dc0038);
+            uVar2 = new OnTooltipCB(this,DAT_181d95fa8,0);
+            TweenSettingsExtensions.OnComplete(uVar1,uVar2,DAT_181dc01e8);
             if (this.partyUIPanel != null) {
               lVar3 = GameObject.get_transform(this.partyUIPanel,0);
               if (lVar3 != null) {
@@ -313,32 +313,32 @@ public class PartyController
     }
 
     // Token : 0x6001983
-    // RVA   : 0xB98EB0   Offset: 0xB982B0   Length: 0x128
+    // RVA   : 0xB99570   Offset: 0xB98970   Length: 0x128
     public void SetAllIconButtonActive(bool active)
     {
         long lVar1;
         if (this.wineIcon != null) {
           lVar1 = GameObject.get_transform(this.wineIcon,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180da9a20(lVar1,0);
+            lVar1 = FUN_180daa030(lVar1,0);
             if (lVar1 != null) {
-              lVar1 = Component.GetComponent(lVar1,DAT_181d93760);
+              lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
               if (lVar1 != null) {
                 Selectable.set_interactable(lVar1,active,0);
                 if (this.foodIcon != null) {
                   lVar1 = GameObject.get_transform(this.foodIcon,0);
                   if (lVar1 != null) {
-                    lVar1 = FUN_180da9a20(lVar1,0);
+                    lVar1 = FUN_180daa030(lVar1,0);
                     if (lVar1 != null) {
-                      lVar1 = Component.GetComponent(lVar1,DAT_181d93760);
+                      lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
                       if (lVar1 != null) {
                         Selectable.set_interactable(lVar1,active,0);
                         if (this.treasureIcon != null) {
                           lVar1 = GameObject.get_transform(this.treasureIcon,0);
                           if (lVar1 != null) {
-                            lVar1 = FUN_180da9a20(lVar1,0);
+                            lVar1 = FUN_180daa030(lVar1,0);
                             if (lVar1 != null) {
-                              lVar1 = Component.GetComponent(lVar1,DAT_181d93760);
+                              lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
                               if (lVar1 != null) {
                                 Selectable.set_interactable(lVar1,active,0);
                                 return;
@@ -357,7 +357,7 @@ public class PartyController
     }
 
     // Token : 0x6001984
-    // RVA   : 0xB97D10   Offset: 0xB97110   Length: 0x20E
+    // RVA   : 0xB983D0   Offset: 0xB977D0   Length: 0x20E
     public void DrinkWineChoose()
     {
         long lVar1;
@@ -371,25 +371,25 @@ public class PartyController
         if (this.wineData != null) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7518 + 184);
-        lVar2 = il2cpp_internal(DAT_181d94e50);
-        FUN_18132faf0(lVar2,DAT_181d95788);
+        lVar1 = **(int64 **)(DAT_181db7530 + 184);
+        lVar2 = il2cpp_internal(DAT_181d94e68);
+        FUN_181330100(lVar2,DAT_181d957a0);
         local_res8[0] = 0;
-        uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+        uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
         if (lVar2 != null) {
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_res18[0] = 2;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_res20[0] = 0xffffffff;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res20);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res20);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_28 = 0xffffffff;
-          uVar3 = il2cpp_value_box(DAT_181d80418,&local_28);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,&local_28);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_24[0] = 1;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_24);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_24);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           uVar3 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar2,uVar3,"DrinkWineChoosen",0,0,0,0,0);
@@ -399,10 +399,10 @@ public class PartyController
     }
 
     // Token : 0x6001985
-    // RVA   : 0xB97F20   Offset: 0xB97320   Length: 0x8A
+    // RVA   : 0xB985E0   Offset: 0xB979E0   Length: 0x8A
     public void DrinkWineChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         long lVar1;
         if ((*pStatics != 0) &&
            (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
@@ -415,7 +415,7 @@ public class PartyController
     }
 
     // Token : 0x6001986
-    // RVA   : 0xB99300   Offset: 0xB98700   Length: 0x176
+    // RVA   : 0xB999C0   Offset: 0xB98DC0   Length: 0x176
     public void SetDrinkWine(ItemData targetWine)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -452,7 +452,7 @@ public class PartyController
     }
 
     // Token : 0x6001987
-    // RVA   : 0xB97C70   Offset: 0xB97070   Length: 0x9A
+    // RVA   : 0xB98330   Offset: 0xB97730   Length: 0x9A
     public void DrinkWineCancel()
     {
         ulong uVar1;
@@ -468,7 +468,7 @@ public class PartyController
     }
 
     // Token : 0x6001988
-    // RVA   : 0xB97710   Offset: 0xB96B10   Length: 0x20A
+    // RVA   : 0xB97DD0   Offset: 0xB971D0   Length: 0x20A
     public void DrinkFoodChoose()
     {
         long lVar1;
@@ -482,25 +482,25 @@ public class PartyController
         if (this.foodData != null) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7518 + 184);
-        lVar2 = il2cpp_internal(DAT_181d94e50);
-        FUN_18132faf0(lVar2,DAT_181d95788);
+        lVar1 = **(int64 **)(DAT_181db7530 + 184);
+        lVar2 = il2cpp_internal(DAT_181d94e68);
+        FUN_181330100(lVar2,DAT_181d957a0);
         local_res8[0] = 0;
-        uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+        uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
         if (lVar2 != null) {
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_res18[0] = 2;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_res20[0] = 0xffffffff;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res20);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res20);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_28 = 0xffffffff;
-          uVar3 = il2cpp_value_box(DAT_181d80418,&local_28);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,&local_28);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_24[0] = 0;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_24);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_24);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           uVar3 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar2,uVar3,"DrinkFoodChoosen",0,0,0,0,0);
@@ -510,10 +510,10 @@ public class PartyController
     }
 
     // Token : 0x6001989
-    // RVA   : 0xB97920   Offset: 0xB96D20   Length: 0x8A
+    // RVA   : 0xB97FE0   Offset: 0xB973E0   Length: 0x8A
     public void DrinkFoodChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         long lVar1;
         if ((*pStatics != 0) &&
            (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
@@ -526,7 +526,7 @@ public class PartyController
     }
 
     // Token : 0x600198A
-    // RVA   : 0xB98FE0   Offset: 0xB983E0   Length: 0x176
+    // RVA   : 0xB996A0   Offset: 0xB98AA0   Length: 0x176
     public void SetDrinkFood(ItemData targetFood)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -563,7 +563,7 @@ public class PartyController
     }
 
     // Token : 0x600198B
-    // RVA   : 0xB97670   Offset: 0xB96A70   Length: 0x9A
+    // RVA   : 0xB97D30   Offset: 0xB97130   Length: 0x9A
     public void DrinkFoodCancel()
     {
         ulong uVar1;
@@ -579,7 +579,7 @@ public class PartyController
     }
 
     // Token : 0x600198C
-    // RVA   : 0xB97A60   Offset: 0xB96E60   Length: 0x17E
+    // RVA   : 0xB98120   Offset: 0xB97520   Length: 0x17E
     public void DrinkTreasureChoose()
     {
         long lVar1;
@@ -590,16 +590,16 @@ public class PartyController
         if (this.treasureData != null) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7518 + 184);
-        lVar2 = il2cpp_internal(DAT_181d94e50);
-        FUN_18132faf0(lVar2,DAT_181d95788);
+        lVar1 = **(int64 **)(DAT_181db7530 + 184);
+        lVar2 = il2cpp_internal(DAT_181d94e68);
+        FUN_181330100(lVar2,DAT_181d957a0);
         local_res8[0] = 0;
-        uVar3 = il2cpp_value_box(DAT_181d80418,local_res8);
+        uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
         if (lVar2 != null) {
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           local_res18[0] = 4;
-          uVar3 = il2cpp_value_box(DAT_181d80418,local_res18);
-          FUN_18181e0a0(lVar2,uVar3,DAT_181d95888);
+          uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+          FUN_18181e6b0(lVar2,uVar3,DAT_181d958a0);
           uVar3 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar2,uVar3,"DrinkTreasureChoosen",0,0,0,0,0);
@@ -609,10 +609,10 @@ public class PartyController
     }
 
     // Token : 0x600198D
-    // RVA   : 0xB97BE0   Offset: 0xB96FE0   Length: 0x8A
+    // RVA   : 0xB982A0   Offset: 0xB976A0   Length: 0x8A
     public void DrinkTreasureChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7518 + 184);
+        var pStatics = *(int64*)(DAT_181db7530 + 184);
         long lVar1;
         if ((*pStatics != 0) &&
            (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
@@ -625,7 +625,7 @@ public class PartyController
     }
 
     // Token : 0x600198E
-    // RVA   : 0xB99160   Offset: 0xB98560   Length: 0x194
+    // RVA   : 0xB99820   Offset: 0xB98C20   Length: 0x194
     public void SetDrinkTreasure(ItemData targetTreasure)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -663,7 +663,7 @@ public class PartyController
     }
 
     // Token : 0x600198F
-    // RVA   : 0xB979B0   Offset: 0xB96DB0   Length: 0xA3
+    // RVA   : 0xB98070   Offset: 0xB97470   Length: 0xA3
     public void DrinkTreasureCancel()
     {
         ulong uVar1;
@@ -679,7 +679,7 @@ public class PartyController
     }
 
     // Token : 0x6001990
-    // RVA   : 0xB98CA0   Offset: 0xB980A0   Length: 0x20C
+    // RVA   : 0xB99360   Offset: 0xB98760   Length: 0x20C
     public void RefreshExtraRateInfo()
     {
         long lVar1;
@@ -694,7 +694,7 @@ public class PartyController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"ExtraRateInfo",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d96160);
+              uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
               local_res8[0] =
                    (this.baseScore + this.wineScore + this.foodScore +
                    this.treasureScore) * this.scoreRate;
@@ -717,7 +717,7 @@ public class PartyController
     }
 
     // Token : 0x6001991
-    // RVA   : 0xB980F0   Offset: 0xB974F0   Length: 0x23
+    // RVA   : 0xB987B0   Offset: 0xB97BB0   Length: 0x23
     public float GetTotalScore()
     {
         return (this.baseScore + this.wineScore + this.foodScore +
@@ -725,7 +725,7 @@ public class PartyController
     }
 
     // Token : 0x6001992
-    // RVA   : 0xB98090   Offset: 0xB97490   Length: 0x60
+    // RVA   : 0xB98750   Offset: 0xB97B50   Length: 0x60
     public float GetMaxHeroLv()
     {
         uint uVar1;
@@ -738,7 +738,7 @@ public class PartyController
     }
 
     // Token : 0x6001993
-    // RVA   : 0xB99790   Offset: 0xB98B90   Length: 0xEB1
+    // RVA   : 0xB99E50   Offset: 0xB99250   Length: 0xEB1
     public void StartButtonClicked()
     {
         bool cVar2;
@@ -769,11 +769,11 @@ public class PartyController
                   if (this.sourceHero.heroID == null) {
                     if (((GameController._instance == null) ||
                         (lVar5 = GameController._instance.worldData) == null)
-                       || (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180b9a63c;
+                       || (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180b9acfc;
                     HeroData.LoseItem(lVar5,this.wineData,1,0);
                     if (((GameController._instance == null) ||
                         (lVar5 = GameController._instance.worldData) == null)
-                       || (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180b9a63c;
+                       || (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180b9acfc;
                     HeroData.LoseItem(lVar5,this.foodData,1,0);
                   }
                   iVar4 = this.partyType;
@@ -787,7 +787,7 @@ public class PartyController
                       while (lVar5.insideHeros != null) {
                         if (*(int *)(lVar5.insideHeros + 24) <= (int)uVar9) {
                           uVar9 = uVar8;
-                          if (lVar5 != null) goto LAB_180b9a030;
+                          if (lVar5 != null) goto LAB_180b9a6f0;
                           break;
                         }
                         if ((lVar5 = lVar5?.insideHeros) == null) break;
@@ -801,12 +801,12 @@ public class PartyController
                           if ((this.sourceArea == null) ||
                              (uVar12 = AreaData.GetInsideHero(this.sourceArea,uVar9,0),
                              lVar5 == null)) break;
-                          cVar2 = FUN_18181e400(lVar5,uVar12,DAT_181d8b698);
+                          cVar2 = FUN_18181ea10(lVar5,uVar12,DAT_181d8b6b0);
                           if (!cVar2) {
                             if ((this.sourceArea == null) ||
                                (lVar5 = this.sourceArea.insideHeros) == null)
                             break;
-                            iVar4 = FUN_1800d6760(lVar5,uVar9,DAT_181d8fa18);
+                            iVar4 = FUN_1800d6760(lVar5,uVar9,DAT_181d8fa30);
                             if (iVar4 != 0) {
                               if ((this.sourceArea == null) ||
                                  (lVar5 = AreaData.GetInsideHero(this.sourceArea,uVar9,0),
@@ -833,21 +833,21 @@ public class PartyController
                                                             (this.sourceArea,uVar9,0),
                                          lVar5 == null)) break;
                                       cVar2 = HeroData.CanPlayerMeet(lVar5,0);
-                                      if (!cVar2) goto LAB_180b99ff7;
+                                      if (!cVar2) goto LAB_180b9a6b7;
                                     }
                                     lVar5 = this.targetHero;
                                     if ((this.sourceArea == null) ||
                                        (uVar12 = AreaData.GetInsideHero
                                                            (this.sourceArea,uVar9,0),
                                        lVar5 == null)) break;
-                                    FUN_18181e0a0(lVar5,uVar12,DAT_181d8b518);
+                                    FUN_18181e6b0(lVar5,uVar12,DAT_181d8b530);
                                   }
                                 }
                               }
                             }
                           }
                         }
-        LAB_180b99ff7:
+        LAB_180b9a6b7:
                         lVar5 = this.sourceArea;
                         uVar9 = uVar9 + 1;
                         lVar6 = lVar6 + 4;
@@ -861,7 +861,7 @@ public class PartyController
                       while ((lVar5 = HeroData.GetForce(lVar5,0,0), lVar5 != null &&
                              (lVar5.belongForceID != null))) {
                         if (*(int *)(lVar5.belongForceID + 24) <= (int)uVar8)
-                        goto LAB_180b99abd;
+                        goto LAB_180b9a17d;
                         if ((this.sourceHero == null) ||
                            (lVar5 = HeroData.GetForce(this.sourceHero,0,0)) == null)
                         break;
@@ -886,7 +886,7 @@ public class PartyController
                                     (lVar6 = HeroData.GetForce(this.sourceHero,0,0),
                                     lVar6 == null)) || (ForceData.GetOwnHero(lVar6,uVar8,0), lVar5 == null))
                                 break;
-                                FUN_18181e0a0(lVar5);
+                                FUN_18181e6b0(lVar5);
                               }
                             }
                           }
@@ -906,7 +906,7 @@ public class PartyController
                                 (this,this.sourceAssistHero,this.targetHero,
                                  this.sourceHero,0);
                     }
-        LAB_180b99abd:
+        LAB_180b9a17d:
                     if (this.sourceHero != null) {
                       PartyController.ChangeBaseScore
                                 (this,this.sourceHero.fame * 0.1,0);
@@ -922,9 +922,9 @@ public class PartyController
                         il2cpp_internal(plVar1,lVar5);
                         lVar5 = *plVar1;
                         while (lVar5 != null) {
-                          if (lVar5.areaName < 13) goto LAB_180b9a39f;
+                          if (lVar5.areaName < 13) goto LAB_180b9aa5f;
                           if (lVar5 == null) break;
-                          FUN_181823590(lVar5,lVar5.areaName + -1,DAT_181d8b998);
+                          FUN_181823ba0(lVar5,lVar5.areaName + -1,DAT_181d8b9b0);
                           lVar5 = *plVar1;
                         }
                       }
@@ -945,21 +945,21 @@ public class PartyController
                             if (this.sourceHero.heroID != null) {
                               if (lVar5 == null) break;
                               if (0 < lVar5.areaName) {
-                                uVar3 = FUN_180d95a30(0,lVar5.areaName,0);
-                                FUN_181823590(lVar5,uVar3,DAT_181d8b998);
+                                uVar3 = FUN_180d96040(0,lVar5.areaName,0);
+                                FUN_181823ba0(lVar5,uVar3,DAT_181d8b9b0);
                                 lVar5 = *plVar1;
                               }
                               if (((GameController._instance == null) ||
                                   (lVar6 = GameController._instance.worldData,
                                   lVar6 == null)) || (uVar12 = WorldData.Player(lVar6,0), lVar5 == null))
                               break;
-                              FUN_18181e0a0(lVar5,uVar12,DAT_181d8b518);
+                              FUN_18181e6b0(lVar5,uVar12,DAT_181d8b530);
                               lVar5 = *plVar1;
                             }
                             lVar5 = GlobalData.SortHeroList(lVar5,0,0);
                             *plVar1 = lVar5;
                             il2cpp_internal(plVar1,lVar5);
-        LAB_180b9a39f:
+        LAB_180b9aa5f:
                             if (this.sourceAssistHero == null) {
                               fVar15 = 1.0;
                             }
@@ -969,11 +969,11 @@ public class PartyController
                               lVar5 = this.targetHero;
                               if (lVar5 != null) {
                                 if (lVar5.areaName < 1) {
-                                  lVar5 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
-                                  lVar6 = il2cpp_internal(DAT_181d97750);
-                                  FUN_18132faf0(lVar6,DAT_181da3bd8);
+                                  lVar5 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+                                  lVar6 = il2cpp_internal(DAT_181d97768);
+                                  FUN_181330100(lVar6,DAT_181da3bf0);
                                   if (lVar6 != null) {
-                                    FUN_18181e0a0(lVar6,"结束宴会;EndParty",DAT_181da3d58);
+                                    FUN_18181e6b0(lVar6,"结束宴会;EndParty",DAT_181da3d70);
                                     if (this.sourceHero != null) {
                                       uVar12 = Int32.ToString(this.sourceHero + 88,0);
                                       uVar7 = new SinglePlotData("啊这......附近竟无人参加宴会吗？\n可惜浪费了一桌好酒好菜啊......",lVar6,1,0,3,uVar12,1,0,0);
@@ -988,7 +988,7 @@ public class PartyController
                                   lVar5 = new WarpText_d__8(0,0);
                                   if (lVar5 != null) {
                                     lVar5.areaStartLv = this;
-                                    FUN_180d8c2e0(this,lVar5,0);
+                                    FUN_180d8c8f0(this,lVar5,0);
                                     return;
                                   }
                                 }
@@ -997,8 +997,8 @@ public class PartyController
                             break;
                           }
                           if (lVar5 == null) break;
-                          FUN_180d95a30(0,lVar5.areaName,0);
-                          FUN_181823590(lVar5);
+                          FUN_180d96040(0,lVar5.areaName,0);
+                          FUN_181823ba0(lVar5);
                           lVar5 = *plVar1;
                         }
                       }
@@ -1009,74 +1009,74 @@ public class PartyController
             }
           }
         }
-        LAB_180b9a63c:
+        LAB_180b9acfc:
                           // WARNING: Subroutine does not return
         FUN_1800d6620();
-        LAB_180b9a030:
-        if (lVar5.nearAreaID == null) goto LAB_180b9a63c;
-        if (*(int *)(lVar5.nearAreaID + 24) <= (int)uVar9) goto LAB_180b99abd;
+        LAB_180b9a6f0:
+        if (lVar5.nearAreaID == null) goto LAB_180b9acfc;
+        if (*(int *)(lVar5.nearAreaID + 24) <= (int)uVar9) goto LAB_180b9a17d;
         lVar5 = FUN_18046c0a0(0);
-        if (lVar5 == null) goto LAB_180b9a63c;
+        if (lVar5 == null) goto LAB_180b9acfc;
         lVar5 = lVar5.areaStartLv;
         if (((this.sourceArea == null) ||
             (lVar6 = this.sourceArea.nearAreaID) == null) ||
-           (uVar3 = FUN_1800d6760(lVar6,uVar9,DAT_181d8fa18), lVar5 == null)) goto LAB_180b9a63c;
+           (uVar3 = FUN_1800d6760(lVar6,uVar9,DAT_181d8fa30), lVar5 == null)) goto LAB_180b9acfc;
         lVar5 = WorldData.GetArea(lVar5,uVar3,0);
         uVar10 = uVar8;
         while( true ) {
-          if ((lVar5 == null) || (lVar6 = lVar5.insideHeros) == null) goto LAB_180b9a63c;
+          if ((lVar5 == null) || (lVar6 = lVar5.insideHeros) == null) goto LAB_180b9acfc;
           if (lVar6.Count <= (int)uVar10) break;
-          iVar4 = FUN_1800d6760(lVar6,uVar10,DAT_181d8fa18);
-          if (this.sourceHero == null) goto LAB_180b9a63c;
+          iVar4 = FUN_1800d6760(lVar6,uVar10,DAT_181d8fa30);
+          if (this.sourceHero == null) goto LAB_180b9acfc;
           if (iVar4 != this.sourceHero.heroID) {
             lVar6 = this.targetHero;
             uVar12 = AreaData.GetInsideHero(lVar5,uVar10,0);
-            if (lVar6 == null) goto LAB_180b9a63c;
-            cVar2 = FUN_18181e400(lVar6,uVar12,DAT_181d8b698);
+            if (lVar6 == null) goto LAB_180b9acfc;
+            cVar2 = FUN_18181ea10(lVar6,uVar12,DAT_181d8b6b0);
             if (!cVar2) {
-              if (lVar5.insideHeros == null) goto LAB_180b9a63c;
-              iVar4 = FUN_1800d6760(lVar5.insideHeros,uVar10,DAT_181d8fa18);
+              if (lVar5.insideHeros == null) goto LAB_180b9acfc;
+              iVar4 = FUN_1800d6760(lVar5.insideHeros,uVar10,DAT_181d8fa30);
               if (iVar4 != 0) {
                 lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
-                if (lVar6 == null) goto LAB_180b9a63c;
+                if (lVar6 == null) goto LAB_180b9acfc;
                 iVar4 = lVar6.forceMeetingStarted;
                 fVar15 = (float)PartyController.GetMaxHeroLv(this,0);
                 if ((float)iVar4 <= fVar15) {
                   lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
-                  if (lVar6 == null) goto LAB_180b9a63c;
+                  if (lVar6 == null) goto LAB_180b9acfc;
                   if (!lVar6.BigMapRandomEventDatas) {
                     lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
-                    if (lVar6 == null) goto LAB_180b9a63c;
+                    if (lVar6 == null) goto LAB_180b9acfc;
                     if (*(char *)(lVar6 + 209) == false) {
                       lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
-                      if (lVar6 == null) goto LAB_180b9a63c;
+                      if (lVar6 == null) goto LAB_180b9acfc;
                       if (!lVar6.monthDoctorTime) {
                         lVar6 = AreaData.GetInsideHero(lVar5,uVar10,0);
-                        if (lVar6 == null) goto LAB_180b9a63c;
+                        if (lVar6 == null) goto LAB_180b9acfc;
                         cVar2 = HeroData.CanPlayerMeet(lVar6,0);
-                        if (!cVar2) goto LAB_180b9a24b;
+                        if (!cVar2) goto LAB_180b9a90b;
                       }
                       lVar6 = this.targetHero;
                       uVar12 = AreaData.GetInsideHero(lVar5,uVar10,0);
-                      if (lVar6 == null) goto LAB_180b9a63c;
-                      FUN_18181e0a0(lVar6,uVar12,DAT_181d8b518);
+                      if (lVar6 == null) goto LAB_180b9acfc;
+                      FUN_18181e6b0(lVar6,uVar12,DAT_181d8b530);
                     }
                   }
                 }
               }
             }
           }
-        LAB_180b9a24b:
+        LAB_180b9a90b:
           uVar10 = uVar10 + 1;
         }
         lVar5 = this.sourceArea;
         uVar9 = uVar9 + 1;
-        if (lVar5 == null) goto LAB_180b9a63c;
-        goto LAB_180b9a030;
+        if (lVar5 == null) goto LAB_180b9acfc;
+        goto LAB_180b9a6f0;
     }
 
     // Token : 0x6001994
-    // RVA   : 0xB96B60   Offset: 0xB95F60   Length: 0x9DB
+    // RVA   : 0xB97220   Offset: 0xB96620   Length: 0x9DB
     public void AddFriendToList(HeroData sourceHeroData, List<HeroData> targetList, HeroData restrictHeroData)
     {
         void PartyController.AddFriendToList
@@ -1103,12 +1103,12 @@ public class PartyController
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar4 = ForceData.GetLeader(lVar3,0);
                 if (targetList == null) throw; // [null/range check failed]
-                cVar1 = FUN_18181e400(targetList,uVar4,DAT_181d8b698);
+                cVar1 = FUN_18181ea10(targetList,uVar4,DAT_181d8b6b0);
                 if (!cVar1) {
                   lVar3 = HeroData.GetForce(sourceHeroData,0,0);
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar4 = ForceData.GetLeader(lVar3,0);
-                  FUN_18181e0a0(targetList,uVar4,DAT_181d8b518);
+                  FUN_18181e6b0(targetList,uVar4,DAT_181d8b530);
                 }
               }
             }
@@ -1124,25 +1124,25 @@ public class PartyController
               if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
               uVar4 = WorldData.GetHero(lVar3.villageAreaID,*(uint32 *)(sourceHeroData + 0x31c),0);
               if (targetList == null) throw; // [null/range check failed]
-              cVar1 = FUN_18181e400(targetList,uVar4,DAT_181d8b698);
+              cVar1 = FUN_18181ea10(targetList,uVar4,DAT_181d8b6b0);
               if (!cVar1) {
                 lVar3 = FUN_18046c0a0(0);
                 if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
                 uVar4 = WorldData.GetHero(lVar3.villageAreaID,*(uint32 *)(sourceHeroData + 0x31c),0)
                 ;
-                FUN_18181e0a0(targetList,uVar4,DAT_181d8b518);
+                FUN_18181e6b0(targetList,uVar4,DAT_181d8b530);
               }
             }
           }
           iVar8 = 0;
           iVar6 = 0;
           while (*(int64 *)(sourceHeroData + 800) != 0) {
-            if (*(int *)(*(int64 *)(sourceHeroData + 800) + 24) <= iVar6) goto LAB_180b96fcb;
+            if (*(int *)(*(int64 *)(sourceHeroData + 800) + 24) <= iVar6) goto LAB_180b9768b;
             lVar3 = FUN_18046c0a0(0);
             if (lVar3 == null) break;
             lVar3 = lVar3.villageAreaID;
             if (*(int64 *)(sourceHeroData + 800) == 0) break;
-            uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa18);
+            uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa30);
             if (lVar3 == null) break;
             lVar3 = WorldData.GetHero(lVar3,uVar2,0);
             if (lVar3 != restrictHeroData) {
@@ -1150,38 +1150,38 @@ public class PartyController
               if (lVar3 == null) break;
               lVar3 = lVar3.villageAreaID;
               if (*(int64 *)(sourceHeroData + 800) == 0) break;
-              uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa18);
+              uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa30);
               if (lVar3 == null) break;
               uVar4 = WorldData.GetHero(lVar3,uVar2,0);
               if (targetList == null) break;
-              cVar1 = FUN_18181e400(targetList,uVar4,DAT_181d8b698);
+              cVar1 = FUN_18181ea10(targetList,uVar4,DAT_181d8b6b0);
               if (!cVar1) {
                 lVar3 = FUN_18046c0a0(0);
                 if (lVar3 == null) break;
                 lVar3 = lVar3.villageAreaID;
                 if (*(int64 *)(sourceHeroData + 800) == 0) break;
-                uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa18);
+                uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 800),iVar6,DAT_181d8fa30);
                 if (lVar3 == null) break;
                 uVar4 = WorldData.GetHero(lVar3,uVar2,0);
-                FUN_18181e0a0(targetList,uVar4,DAT_181d8b518);
+                FUN_18181e6b0(targetList,uVar4,DAT_181d8b530);
               }
             }
             iVar6 = iVar6 + 1;
           }
         }
         throw; // [null/range check failed]
-        LAB_180b96fcb:
+        LAB_180b9768b:
         if (*(int64 *)(sourceHeroData + 0x348) == 0) throw; // [null/range check failed]
         if (*(int *)(*(int64 *)(sourceHeroData + 0x348) + 24) <= iVar8) {
-          if (*(int *)(sourceHeroData + 88) != 0) goto LAB_180b974a1;
+          if (*(int *)(sourceHeroData + 88) != 0) goto LAB_180b97b61;
           iVar6 = 1;
-          goto LAB_180b97180;
+          goto LAB_180b97840;
         }
         lVar3 = FUN_18046c0a0(0);
         if (lVar3 == null) throw; // [null/range check failed]
         lVar3 = lVar3.villageAreaID;
         if (*(int64 *)(sourceHeroData + 0x348) == 0) throw; // [null/range check failed]
-        uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa18);
+        uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa30);
         if (lVar3 == null) throw; // [null/range check failed]
         lVar3 = WorldData.GetHero(lVar3,uVar2,0);
         if (lVar3 != restrictHeroData) {
@@ -1189,38 +1189,38 @@ public class PartyController
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = lVar3.villageAreaID;
           if (*(int64 *)(sourceHeroData + 0x348) == 0) throw; // [null/range check failed]
-          uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa18);
+          uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa30);
           if (lVar3 == null) throw; // [null/range check failed]
           uVar4 = WorldData.GetHero(lVar3,uVar2,0);
           if (targetList == null) throw; // [null/range check failed]
-          cVar1 = FUN_18181e400(targetList,uVar4,DAT_181d8b698);
+          cVar1 = FUN_18181ea10(targetList,uVar4,DAT_181d8b6b0);
           if (!cVar1) {
             lVar3 = FUN_18046c0a0(0);
             if (lVar3 == null) throw; // [null/range check failed]
             lVar3 = lVar3.villageAreaID;
             if (*(int64 *)(sourceHeroData + 0x348) == 0) throw; // [null/range check failed]
-            uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa18);
+            uVar2 = FUN_1800d6760(*(int64 *)(sourceHeroData + 0x348),iVar8,DAT_181d8fa30);
             if (lVar3 == null) throw; // [null/range check failed]
             uVar4 = WorldData.GetHero(lVar3,uVar2,0);
-            FUN_18181e0a0(targetList,uVar4,DAT_181d8b518);
+            FUN_18181e6b0(targetList,uVar4,DAT_181d8b530);
           }
         }
         iVar8 = iVar8 + 1;
-        goto LAB_180b96fcb;
-        LAB_180b97180:
+        goto LAB_180b9768b;
+        LAB_180b97840:
         if (((GameController._instance == null) ||
             (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = lVar3.Heros) == null) throw; // [null/range check failed]
-        if (lVar3.cityAreaID <= iVar6) goto LAB_180b974a1;
+        if (lVar3.cityAreaID <= iVar6) goto LAB_180b97b61;
         lVar3 = FUN_18046c0a0(0);
         if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
            (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) throw; // [null/range check failed]
-        lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
+        lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bbb0);
         if (lVar3 != null) {
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
              (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) throw; // [null/range check failed]
-          lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
+          lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bbb0);
           if (lVar3 == null) throw; // [null/range check failed]
           fVar9 = (float)HeroData.Favor(lVar3,0,0);
           if (50.0 <= fVar9) {
@@ -1228,13 +1228,13 @@ public class PartyController
             if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
             throw; // [null/range check failed]
-            lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
+            lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bbb0);
             if (lVar3 != restrictHeroData) {
               lVar3 = FUN_18046c0a0(0);
               if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                  (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
               throw; // [null/range check failed]
-              lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
+              lVar3 = FUN_180002f80(lVar3,iVar6,DAT_181d8bbb0);
               if (lVar3 == null) throw; // [null/range check failed]
               cVar1 = HeroData.HavePrelover(sourceHeroData,lVar3.TempHeros,0);
               if (!cVar1) {
@@ -1242,24 +1242,24 @@ public class PartyController
                 if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                    (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
                 throw; // [null/range check failed]
-                uVar4 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
+                uVar4 = FUN_180002f80(lVar3,iVar6,DAT_181d8bbb0);
                 if (targetList == null) throw; // [null/range check failed]
-                cVar1 = FUN_18181e400(targetList,uVar4,DAT_181d8b698);
+                cVar1 = FUN_18181ea10(targetList,uVar4,DAT_181d8b6b0);
                 if (!cVar1) {
                   lVar3 = FUN_18046c0a0(0);
                   if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                      (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
                   throw; // [null/range check failed]
-                  uVar4 = FUN_180002f80(lVar3,iVar6,DAT_181d8bb98);
-                  FUN_18181e0a0(targetList,uVar4,DAT_181d8b518);
+                  uVar4 = FUN_180002f80(lVar3,iVar6,DAT_181d8bbb0);
+                  FUN_18181e6b0(targetList,uVar4,DAT_181d8b530);
                 }
               }
             }
           }
         }
         iVar6 = iVar6 + 1;
-        goto LAB_180b97180;
-        LAB_180b974a1:
+        goto LAB_180b97840;
+        LAB_180b97b61:
         if (targetList != null) {
           uVar7 = *(int *)(targetList + 24) - 1;
           if (-1 < (int)uVar7) {
@@ -1271,14 +1271,14 @@ public class PartyController
               lVar5 = *(int64 *)(lVar3 + *(int64 *)(targetList + 16));
               if (lVar5 == null) throw; // [null/range check failed]
               if (*(char *)(lVar5 + 96) == false) {
-                lVar5 = FUN_180002f80(targetList,uVar7,DAT_181d8bb98);
+                lVar5 = FUN_180002f80(targetList,uVar7,DAT_181d8bbb0);
                 if (lVar5 == null) throw; // [null/range check failed]
                 if (*(char *)(lVar5 + 209) == false)
                 {
                   }
                   else {
                 }
-                FUN_181823590(targetList,uVar7,DAT_181d8b998);
+                FUN_181823ba0(targetList,uVar7,DAT_181d8b9b0);
               }
               lVar3 = lVar3 + -8;
               uVar7 = uVar7 - 1;
@@ -1289,7 +1289,7 @@ public class PartyController
     }
 
     // Token : 0x6001995
-    // RVA   : 0xB98120   Offset: 0xB97520   Length: 0x6C
+    // RVA   : 0xB987E0   Offset: 0xB97BE0   Length: 0x6C
     public IEnumerator HeroEnteringParty()
     {
         long lVar1;
@@ -1301,7 +1301,7 @@ public class PartyController
     }
 
     // Token : 0x6001996
-    // RVA   : 0xB975B0   Offset: 0xB969B0   Length: 0xBC
+    // RVA   : 0xB97C70   Offset: 0xB97070   Length: 0xBC
     public void ChangeBaseScore(float delta)
     {
         long lVar1;
@@ -1313,14 +1313,14 @@ public class PartyController
           if (lVar1 != null) {
             uVar2 = Transform.Find(lVar1,"ExtraRateInfo",0);
             uVar2 = ShortcutExtensions.DOScale(uVar2,0x3fc00000,0x3e19999a,0);
-            TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc1330);
+            TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc14d8);
             return;
           }
         }
     }
 
     // Token : 0x6001997
-    // RVA   : 0xB98190   Offset: 0xB97590   Length: 0x6C
+    // RVA   : 0xB98850   Offset: 0xB97C50   Length: 0x6C
     public IEnumerator PartyContinue()
     {
         long lVar1;
@@ -1332,7 +1332,7 @@ public class PartyController
     }
 
     // Token : 0x6001998
-    // RVA   : 0xB98020   Offset: 0xB97420   Length: 0x6C
+    // RVA   : 0xB986E0   Offset: 0xB97AE0   Length: 0x6C
     public IEnumerator FinishParty()
     {
         long lVar1;
@@ -1344,7 +1344,7 @@ public class PartyController
     }
 
     // Token : 0x6001999
-    // RVA   : 0xB97FB0   Offset: 0xB973B0   Length: 0x6C
+    // RVA   : 0xB98670   Offset: 0xB97A70   Length: 0x6C
     public IEnumerator EndParty()
     {
         long lVar1;
@@ -1356,7 +1356,7 @@ public class PartyController
     }
 
     // Token : 0x600199A
-    // RVA   : 0xB99600   Offset: 0xB98A00   Length: 0x18A
+    // RVA   : 0xB99CC0   Offset: 0xB990C0   Length: 0x18A
     public void SkipButtonClicked()
     {
         bool cVar1;
@@ -1374,7 +1374,7 @@ public class PartyController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"Icon",0);
               if (lVar2 != null) {
-                plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
+                plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
                 puVar4 = (uint32 *)Color.get_red(&local_18,0);
                 if (plVar3 != (int64 *)0) {
                   local_18 = *puVar4;
@@ -1393,7 +1393,7 @@ public class PartyController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"Icon",0);
             if (lVar2 != null) {
-              plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94460);
+              plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
               lVar2 = *(int64 *)(DAT_181d73d40 + 184);
               if (plVar3 != (int64 *)0) {
                 local_18 = *(uint32 *)(lVar2 + 0x398);
@@ -1409,7 +1409,7 @@ public class PartyController
     }
 
     // Token : 0x600199B
-    // RVA   : 0xB99480   Offset: 0xB98880   Length: 0x17F
+    // RVA   : 0xB99B40   Offset: 0xB98F40   Length: 0x17F
     public void SetSkippingState(bool state)
     {
         long lVar1;
@@ -1425,7 +1425,7 @@ public class PartyController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Icon",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
                 lVar1 = *(int64 *)(DAT_181d73d40 + 184);
                 if (plVar2 != (int64 *)0) {
                   local_18 = *(uint32 *)(lVar1 + 0x398);
@@ -1444,7 +1444,7 @@ public class PartyController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"Icon",0);
             if (lVar1 != null) {
-              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94460);
+              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
               puVar3 = (uint32 *)Color.get_red(&local_18,0);
               if (plVar2 != (int64 *)0) {
                 local_18 = *puVar3;
@@ -1467,48 +1467,48 @@ public class PartyController
     }
 
     // Token : 0x600199D
-    // RVA   : 0xB9A670   Offset: 0xB99A70   Length: 0x40C
+    // RVA   : 0xB9AD30   Offset: 0xB9A130   Length: 0x40C
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d90290 + 184);
+        var pStatics = *(int64*)(DAT_181d902a8 + 184);
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d97750);
-        FUN_18132faf0(lVar1,DAT_181da3bd8);
+        lVar1 = il2cpp_internal(DAT_181d97768);
+        FUN_181330100(lVar1,DAT_181da3bf0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,"听闻#SourceInteractName#在此举办宴会，我就立刻赶来了！\n上次喝得不够尽兴，今天咱俩可得不醉不归！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"哈哈，#SourceInteractName#一日不见，如隔三秋。\n我不请自来，还望莫要嫌弃。",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"#SourceInteractName#举办宴会，怎能少了我捧场？\n有什么需要帮忙的，只管开口便是。",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"闻着酒香一路而来，没想到是#SourceInteractName#你在举办宴会啊！\n也罢也罢，既来之则安之，我找个位置去也。",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"#SourceInteractName#举办宴会，我怎能不来？\n哈哈哈，若能在此遇上其他熟人，那可就热闹了！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"无巧不成书，我恰好在附近逗留，便听闻#SourceInteractName#宴会之消息，\n看来今天这杯酒，是不得不喝了呀！",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"今日路过此地，竟恰好赶上#SourceInteractName#的宴会，\n真是有缘千里来相会，不喝一杯也不行了。",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"#SourceInteractName#在这儿大摆宴席，想必是遇上啥喜事了，\n等会可得和我好好说道说道。",DAT_181da3d58);
-          FUN_18181e0a0(lVar1,"几日不见，#SourceInteractName#风姿依旧，\n看来这人逢喜事精神爽，果不是虚言啊。",DAT_181da3d58);
+          FUN_18181e6b0(lVar1,"听闻#SourceInteractName#在此举办宴会，我就立刻赶来了！\n上次喝得不够尽兴，今天咱俩可得不醉不归！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"哈哈，#SourceInteractName#一日不见，如隔三秋。\n我不请自来，还望莫要嫌弃。",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"#SourceInteractName#举办宴会，怎能少了我捧场？\n有什么需要帮忙的，只管开口便是。",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"闻着酒香一路而来，没想到是#SourceInteractName#你在举办宴会啊！\n也罢也罢，既来之则安之，我找个位置去也。",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"#SourceInteractName#举办宴会，我怎能不来？\n哈哈哈，若能在此遇上其他熟人，那可就热闹了！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"无巧不成书，我恰好在附近逗留，便听闻#SourceInteractName#宴会之消息，\n看来今天这杯酒，是不得不喝了呀！",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"今日路过此地，竟恰好赶上#SourceInteractName#的宴会，\n真是有缘千里来相会，不喝一杯也不行了。",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"#SourceInteractName#在这儿大摆宴席，想必是遇上啥喜事了，\n等会可得和我好好说道说道。",DAT_181da3d70);
+          FUN_18181e6b0(lVar1,"几日不见，#SourceInteractName#风姿依旧，\n看来这人逢喜事精神爽，果不是虚言啊。",DAT_181da3d70);
           plVar2 = (int64 *)(pStatics + 8);
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
-          lVar1 = il2cpp_internal(DAT_181d97750);
-          FUN_18132faf0(lVar1,DAT_181da3bd8);
+          lVar1 = il2cpp_internal(DAT_181d97768);
+          FUN_181330100(lVar1,DAT_181da3bf0);
           if (lVar1 != null) {
-            FUN_18181e0a0(lVar1,"一听说#SourceInteractName#要和{0}在此举办婚礼，我就马不停蹄赶来了！\n还特意备了这#PlotInteractItemName#聊表心意，不必客气！",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"哈哈，#SourceInteractName#和{0}的大喜之日，怎能少了我#$TargetInteractName#捧场！\n这#PlotInteractItemName#是我准备的贺礼，#PlayerName#一定要收下！",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"几日未见，没想到#SourceInteractName#就要和{0}拜堂成亲了，恭喜恭喜！\n我临时准备了这#PlotInteractItemName#作礼，还望莫要嫌弃。",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"#SourceInteractName#风采照人，{0}也是仪态非凡，\n天生才子佳人配，只羡鸳鸯不羡仙，当真是天作之合！\n这份#PlotInteractItemName#贺礼，请两位收下。",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"百年恩爱双心结，千里姻缘一线牵，\n看到#SourceInteractName#和{0}终于修成正果，我也是由衷欢喜！\n这#PlotInteractItemName#作为贺礼虽不甚名贵，却也是我的一片心意，还请两位笑纳。",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"牲酒赛秋社，箫鼓迎新婚，\n今天是#SourceInteractName#和{0}大喜的日子，不好好热闹一番怎么行？\n你看，我还带了这件#PlotInteractItemName#作为新婚之礼，不成敬意，不成敬意！",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"#SourceInteractName#和{0}二位春光满面，笑语盈盈，真是人逢喜事精神爽！\n收下这件#PlotInteractItemName#，我也好沾沾你们的喜气，哈哈！",DAT_181da3d58);
-            FUN_18181e0a0(lVar1,"哎呀呀，#SourceInteractName#和{0}这对神仙侠侣终于成婚，我#$TargetInteractName#岂能不来？\n来来来，这件#PlotInteractItemName#是我的贺礼，你们小两口收好了。",DAT_181da3d58);
+            FUN_18181e6b0(lVar1,"一听说#SourceInteractName#要和{0}在此举办婚礼，我就马不停蹄赶来了！\n还特意备了这#PlotInteractItemName#聊表心意，不必客气！",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"哈哈，#SourceInteractName#和{0}的大喜之日，怎能少了我#$TargetInteractName#捧场！\n这#PlotInteractItemName#是我准备的贺礼，#PlayerName#一定要收下！",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"几日未见，没想到#SourceInteractName#就要和{0}拜堂成亲了，恭喜恭喜！\n我临时准备了这#PlotInteractItemName#作礼，还望莫要嫌弃。",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"#SourceInteractName#风采照人，{0}也是仪态非凡，\n天生才子佳人配，只羡鸳鸯不羡仙，当真是天作之合！\n这份#PlotInteractItemName#贺礼，请两位收下。",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"百年恩爱双心结，千里姻缘一线牵，\n看到#SourceInteractName#和{0}终于修成正果，我也是由衷欢喜！\n这#PlotInteractItemName#作为贺礼虽不甚名贵，却也是我的一片心意，还请两位笑纳。",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"牲酒赛秋社，箫鼓迎新婚，\n今天是#SourceInteractName#和{0}大喜的日子，不好好热闹一番怎么行？\n你看，我还带了这件#PlotInteractItemName#作为新婚之礼，不成敬意，不成敬意！",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"#SourceInteractName#和{0}二位春光满面，笑语盈盈，真是人逢喜事精神爽！\n收下这件#PlotInteractItemName#，我也好沾沾你们的喜气，哈哈！",DAT_181da3d70);
+            FUN_18181e6b0(lVar1,"哎呀呀，#SourceInteractName#和{0}这对神仙侠侣终于成婚，我#$TargetInteractName#岂能不来？\n来来来，这件#PlotInteractItemName#是我的贺礼，你们小两口收好了。",DAT_181da3d70);
             plVar2 = (int64 *)(pStatics + 16);
             *plVar2 = lVar1;
             il2cpp_internal(plVar2,lVar1);
-            lVar1 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar1,DAT_181da3bd8);
+            lVar1 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar1,DAT_181da3bf0);
             if (lVar1 != null) {
-              FUN_18181e0a0(lVar1,"（无趣）哎，食之无味弃之可惜，\n看在#SourceInteractName#面子上，还算勉强喝了几杯。",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"（平平）筵席虽不甚精美，但也算热闹欢腾。\n饮宴过后只觉烦恼疲惫一扫而空，快哉快哉！",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"（满意）食不厌精，烩不厌细，\n多谢#SourceInteractName#慷慨大方，尽地主之谊，方才使得举座皆欢，宾朋尽乐。",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"（欢喜）金樽清酒斗十千，玉盘珍羞直万钱。\n若非#SourceInteractName#情高志远，品味不俗，难成此精美绝伦之筵席，佩服佩服。",DAT_181da3d58);
-              FUN_18181e0a0(lVar1,"（极乐）此宴只应天上有，人间能得几回闻。\n如此极尽华美之筵席只消稍作体会，怕是连宫廷御宴也再难入眼了。",DAT_181da3d58);
+              FUN_18181e6b0(lVar1,"（无趣）哎，食之无味弃之可惜，\n看在#SourceInteractName#面子上，还算勉强喝了几杯。",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"（平平）筵席虽不甚精美，但也算热闹欢腾。\n饮宴过后只觉烦恼疲惫一扫而空，快哉快哉！",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"（满意）食不厌精，烩不厌细，\n多谢#SourceInteractName#慷慨大方，尽地主之谊，方才使得举座皆欢，宾朋尽乐。",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"（欢喜）金樽清酒斗十千，玉盘珍羞直万钱。\n若非#SourceInteractName#情高志远，品味不俗，难成此精美绝伦之筵席，佩服佩服。",DAT_181da3d70);
+              FUN_18181e6b0(lVar1,"（极乐）此宴只应天上有，人间能得几回闻。\n如此极尽华美之筵席只消稍作体会，怕是连宫廷御宴也再难入眼了。",DAT_181da3d70);
               plVar2 = (int64 *)(pStatics + 24);
               *plVar2 = lVar1;
               il2cpp_internal(plVar2,lVar1);
@@ -1529,7 +1529,7 @@ public class PartyController
     }
 
     // Token : 0x600199F
-    // RVA   : 0xB9A650   Offset: 0xB99A50   Length: 0x1D
+    // RVA   : 0xB9AD10   Offset: 0xB9A110   Length: 0x1D
     private void <PartyContinue>b__56_0()
     {
         if (this.partySound != null) {

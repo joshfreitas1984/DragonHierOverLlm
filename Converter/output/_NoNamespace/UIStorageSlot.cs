@@ -14,7 +14,7 @@ public class UIStorageSlot
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000039
-    // RVA   : 0x170B9E0   Offset: 0x170ADE0   Length: 0x8C
+    // RVA   : 0x170BFF0   Offset: 0x170B3F0   Length: 0x8C
     protected override InvGameItem get_observedItem()
     {
         bool cVar1;
@@ -34,7 +34,7 @@ public class UIStorageSlot
     }
 
     // Token : 0x600003A
-    // RVA   : 0x170B930   Offset: 0x170AD30   Length: 0xA2
+    // RVA   : 0x170BF40   Offset: 0x170B340   Length: 0xA2
     protected override InvGameItem Replace(InvGameItem item)
     {
         bool cVar1;
@@ -54,10 +54,10 @@ public class UIStorageSlot
     }
 
     // Token : 0x600003B
-    // RVA   : 0x12BCF90   Offset: 0x12BC390   Length: 0x7
+    // RVA   : 0x12BD5A0   Offset: 0x12BC9A0   Length: 0x7
     public void /*ctor*/()
     {
-        void FUN_1812bcf90(uint64 this)
+        void FUN_1812bd5a0(uint64 this)
         {
         UIItemSlot.ctor(this,0);
     }

@@ -17,7 +17,7 @@ public class InvAttachmentPoint
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600003C
-    // RVA   : 0xC9B2C0   Offset: 0xC9A6C0   Length: 0x2A6
+    // RVA   : 0xC9B8D0   Offset: 0xC9ACD0   Length: 0x2A6
     public GameObject Attach(GameObject prefab)
     {
         ulong uVar1;
@@ -54,7 +54,7 @@ public class InvAttachmentPoint
               uStack_30 = puVar5[1];
               local_48 = uVar1;
               local_40 = uVar2;
-              uVar6 = Object.Instantiate(uVar6,&local_48,&local_38,DAT_181d92e18);
+              uVar6 = Object.Instantiate(uVar6,&local_48,&local_38,DAT_181d92cb0);
               this.mChild = uVar6;
               if (this.mChild != null) {
                 lVar7 = GameObject.get_transform(this.mChild,0);
@@ -72,7 +72,7 @@ public class InvAttachmentPoint
                   local_48 = *puVar5;
                   local_40 = *(uint32 *)(puVar5 + 1);
                   Transform.set_localScale(lVar7,&local_48,0);
-                  goto LAB_180c9b547;
+                  goto LAB_180c9bb57;
                 }
               }
             }
@@ -80,7 +80,7 @@ public class InvAttachmentPoint
             FUN_1800d6620();
           }
         }
-        LAB_180c9b547:
+        LAB_180c9bb57:
         return this.mChild;
     }
 

@@ -67,7 +67,7 @@ public class BMGlyph
               }
               if (*(int *)(lVar1._items + lVar3) == previousChar) {
                 if (this.kerning != null) {
-                  uVar2 = FUN_1800d6760(this.kerning,uVar5 + 1,DAT_181d8fa18);
+                  uVar2 = FUN_1800d6760(this.kerning,uVar5 + 1,DAT_181d8fa30);
                   return uVar2;
                 }
                 goto LAB_1807f6d0d;
@@ -91,8 +91,8 @@ public class BMGlyph
         uint uVar5;
         lVar3 = this.kerning;
         if (lVar3 == null) {
-          uVar2 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(uVar2,DAT_181d8f098);
+          uVar2 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(uVar2,DAT_181d8f0b0);
           this.kerning = uVar2;
           lVar3 = this.kerning;
         }
@@ -101,9 +101,9 @@ public class BMGlyph
           lVar4 = 32;
           do {
             if (lVar3.Count <= (int)uVar5) {
-              FUN_18182a0b0(lVar3,previousChar,DAT_181d8f218);
+              FUN_18182a6c0(lVar3,previousChar,DAT_181d8f230);
               if (this.kerning != null) {
-                FUN_18182a0b0(this.kerning,amount,DAT_181d8f218);
+                FUN_18182a6c0(this.kerning,amount,DAT_181d8f230);
                 return;
               }
               break;
@@ -115,7 +115,7 @@ public class BMGlyph
             lVar3 = this.kerning;
             if (*(int *)(lVar4 + lVar3._items) == previousChar) {
               if (lVar3 != null) {
-                FUN_181833d40(lVar3,uVar5 + 1,amount,DAT_181d8fb18);
+                FUN_181834350(lVar3,uVar5 + 1,amount,DAT_181d8fb30);
                 return;
               }
               break;

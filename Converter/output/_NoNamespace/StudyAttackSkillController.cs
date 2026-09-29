@@ -6,73 +6,73 @@
 public class StudyAttackSkillController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C64
+    // Token: 0x4001C65
     public bool inStudy;
 
-    // Token: 0x4001C65
+    // Token: 0x4001C66
     public bool finishing;
 
-    // Token: 0x4001C66
+    // Token: 0x4001C67
     public float totalExp;
 
-    // Token: 0x4001C67
+    // Token: 0x4001C68
     public int combo;
 
-    // Token: 0x4001C68
+    // Token: 0x4001C69
     public int hit;
 
-    // Token: 0x4001C69
+    // Token: 0x4001C6A
     public int leftBulletCount;
 
-    // Token: 0x4001C6A
+    // Token: 0x4001C6B
     public int attackRangeType;
 
-    // Token: 0x4001C6B
+    // Token: 0x4001C6C
     public float flyTime;
 
-    // Token: 0x4001C6C
+    // Token: 0x4001C6D
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001C6D
+    // Token: 0x4001C6E
     public GameObject studyAttackSkillRoot;
 
-    // Token: 0x4001C6E
+    // Token: 0x4001C6F
     public GameObject bulletObjs;
 
-    // Token: 0x4001C6F
+    // Token: 0x4001C70
     public GameObject player;
 
-    // Token: 0x4001C70
+    // Token: 0x4001C71
     public GameObject dartPrefab;
 
-    // Token: 0x4001C71
+    // Token: 0x4001C72
     public GameObject arrowPrefab;
 
-    // Token: 0x4001C72
+    // Token: 0x4001C73
     public GameObject bombPrefab;
 
-    // Token: 0x4001C73
+    // Token: 0x4001C74
     public List<Vector3> attackRangeTypePos;
 
-    // Token: 0x4001C74
+    // Token: 0x4001C75
     private static StudyAttackSkillController _instance;
 
-    // Token: 0x4001C75
+    // Token: 0x4001C76
     private float generateTime;
 
-    // Token: 0x4001C76
+    // Token: 0x4001C77
     private GameObject newBullet;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600221A
-    // RVA   : 0xFD49F0   Offset: 0xFD3DF0   Length: 0x36
+    // RVA   : 0xFD5000   Offset: 0xFD4400   Length: 0x36
     public static StudyAttackSkillController get_Instance()
     {
-        return **(uint64 **)(DAT_181da7f90 + 184);
+        return **(uint64 **)(DAT_181da7fa8 + 184);
     }
 
     // Token : 0x600221B
-    // RVA   : 0xFD3250   Offset: 0xFD2650   Length: 0x12C
+    // RVA   : 0xFD3860   Offset: 0xFD2C60   Length: 0x12C
     private void Awake()
     {
         long lVar2;
@@ -80,7 +80,7 @@ public class StudyAttackSkillController
         ulong uVar4;
         int[] local_res8 = new int[2];
         byte[] local_18 = new byte[16];
-        plVar1 = *(int64 **)(DAT_181da7f90 + 184);
+        plVar1 = *(int64 **)(DAT_181da7fa8 + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         local_res8[0] = 3;
@@ -96,7 +96,7 @@ public class StudyAttackSkillController
           if (lVar3 == null) break;
           Transform.get_localPosition(local_18,lVar3,0);
           if (lVar2 == null) break;
-          FUN_181816b80(lVar2);
+          FUN_181817190(lVar2);
           local_res8[0] = local_res8[0] + 1;
           if (8 < local_res8[0]) {
             return;
@@ -105,7 +105,7 @@ public class StudyAttackSkillController
     }
 
     // Token : 0x600221C
-    // RVA   : 0xFD46E0   Offset: 0xFD3AE0   Length: 0x308
+    // RVA   : 0xFD4CF0   Offset: 0xFD40F0   Length: 0x308
     private void Update()
     {
         int iVar1;
@@ -138,7 +138,7 @@ public class StudyAttackSkillController
                   iVar1 = Transform.get_childCount(lVar3,0);
                   if (iVar1 < 1) {
                     uVar4 = StudyAttackSkillController.FinishStudyFightSkill(this,2);
-                    FUN_180d8c2e0(this,uVar4,0);
+                    FUN_180d8c8f0(this,uVar4,0);
                   }
                 }
                 return;
@@ -149,7 +149,7 @@ public class StudyAttackSkillController
     }
 
     // Token : 0x600221D
-    // RVA   : 0xFD3A20   Offset: 0xFD2E20   Length: 0x3CD
+    // RVA   : 0xFD4030   Offset: 0xFD3430   Length: 0x3CD
     public void ManageBulletGenerate()
     {
         uint uVar1;
@@ -215,7 +215,7 @@ public class StudyAttackSkillController
           local_30 = *(uint32 *)(puVar5 + 1);
           local_38 = *puVar5;
           uVar4 = ShortcutExtensions.DOMove(uVar4,&local_38,uVar1,0,0);
-          TweenSettingsExtensions.SetEase(uVar4,1,DAT_181dc0f80);
+          TweenSettingsExtensions.SetEase(uVar4,1,DAT_181dc1128);
         }
         else {
           this.leftBulletCount = this.leftBulletCount + -1;
@@ -253,7 +253,7 @@ public class StudyAttackSkillController
     }
 
     // Token : 0x600221E
-    // RVA   : 0xFD3560   Offset: 0xFD2960   Length: 0x439
+    // RVA   : 0xFD3B70   Offset: 0xFD2F70   Length: 0x439
     public GameObject CreateStudyAttackBullet(GameObject targetPrefab)
     {
         float fVar1;
@@ -297,7 +297,7 @@ public class StudyAttackSkillController
               local_88 = uVar5;
               local_80 = fVar1;
               uVar5 = ShortcutExtensions.DOMove(uVar6,&local_88,fVar9 / *(float *)(lVar4 + 28),0,0);
-              TweenSettingsExtensions.SetEase(uVar5,1,DAT_181dc0f80);
+              TweenSettingsExtensions.SetEase(uVar5,1,DAT_181dc1128);
               lVar4 = GameObject.GetComponent(lVar3,DAT_181d73c40);
               if (lVar4 != null) {
                 if (0.0 < *(float *)(lVar4 + 32)) {
@@ -307,8 +307,8 @@ public class StudyAttackSkillController
                   local_80 = 360.0;
                   local_88 = 0;
                   uVar5 = ShortcutExtensions.DORotate(uVar5,&local_88,*(uint32 *)(lVar4 + 32),1,0);
-                  uVar5 = TweenSettingsExtensions.SetLoops(uVar5,0xffffffff,0,DAT_181dc12a8);
-                  TweenSettingsExtensions.SetEase(uVar5,1,DAT_181dc0d70);
+                  uVar5 = TweenSettingsExtensions.SetLoops(uVar5,0xffffffff,0,DAT_181dc1458);
+                  TweenSettingsExtensions.SetEase(uVar5,1,DAT_181dc0f10);
                 }
                 lVar4 = GameObject.GetComponent(lVar3,DAT_181d73c40);
                 if (lVar4 != null) {
@@ -332,10 +332,10 @@ public class StudyAttackSkillController
                     local_70 = local_80;
                     Transform.set_right(lVar4,&local_78,0);
                   }
-                  uVar5 = GameObject.GetComponent(lVar3,DAT_181dc72f8);
+                  uVar5 = GameObject.GetComponent(lVar3,DAT_181dc7310);
                   cVar2 = Object.op_Inequality(uVar5,0,0);
                   if (cVar2) {
-                    lVar4 = GameObject.GetComponent(lVar3,DAT_181dc72f8);
+                    lVar4 = GameObject.GetComponent(lVar3,DAT_181dc7310);
                     if (lVar4 == null) throw; // [null/range check failed]
                     fVar9 = (float)AudioSource.get_volume(lVar4,0);
                     AudioSource.set_volume
@@ -350,10 +350,10 @@ public class StudyAttackSkillController
     }
 
     // Token : 0x600221F
-    // RVA   : 0xFD3F00   Offset: 0xFD3300   Length: 0x7DE
+    // RVA   : 0xFD4510   Offset: 0xFD3910   Length: 0x7DE
     public void StartStudyFightSkill(KungfuSkillLvData target)
     {
-        var pStatics_dcf8 = *(int64*)(DAT_181dadcf8 + 184);
+        var pStatics_dd10 = *(int64*)(DAT_181dadd10 + 184);
         int iVar1;
         bool cVar2;
         uint uVar3;
@@ -471,12 +471,12 @@ public class StudyAttackSkillController
                            (lVar4 = KungfuSkillLvData.DataBase(this.targetSkill,0),
                            lVar4 != null)) {
                           this.leftBulletCount = *(int *)(lVar4 + 52) * 3 + 20;
-                          if (*pStatics_dcf8 != 0) {
+                          if (*pStatics_dd10 != 0) {
                             TutorialController.StartTutorial
-                                      (*pStatics_dcf8,"练习外功",0);
-                            if (*pStatics_dcf8 != 0) {
+                                      (*pStatics_dd10,"练习外功",0);
+                            if (*pStatics_dd10 != 0) {
                               TutorialController.StartTutorial
-                                        (*pStatics_dcf8,"外功连击",0);
+                                        (*pStatics_dd10,"外功连击",0);
                               return;
                             }
                           }
@@ -492,7 +492,7 @@ public class StudyAttackSkillController
     }
 
     // Token : 0x6002220
-    // RVA   : 0xFD3380   Offset: 0xFD2780   Length: 0x1DB
+    // RVA   : 0xFD3990   Offset: 0xFD2D90   Length: 0x1DB
     public void ChangeCombo(int num)
     {
         long lVar1;
@@ -506,7 +506,7 @@ public class StudyAttackSkillController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180da9a20(lVar1,0);
+            lVar1 = FUN_180daa030(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_one(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -516,7 +516,7 @@ public class StudyAttackSkillController
                  (lVar1 = StudySkillController._instance.comboText) != null) {
                 lVar1 = Component.get_transform(lVar1,0);
                 if (lVar1 != null) {
-                  uVar3 = FUN_180da9a20(lVar1,0);
+                  uVar3 = FUN_180daa030(lVar1,0);
                   if (num < 1) {
                     uVar4 = 0x3f333333;
                   }
@@ -524,7 +524,7 @@ public class StudyAttackSkillController
                     uVar4 = 0x3fa66666;
                   }
                   uVar3 = ShortcutExtensions.DOScale(uVar3,uVar4,0x3dcccccd,0);
-                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc1330);
+                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
                   return;
                 }
               }
@@ -534,7 +534,7 @@ public class StudyAttackSkillController
     }
 
     // Token : 0x6002221
-    // RVA   : 0xFD3DF0   Offset: 0xFD31F0   Length: 0x106
+    // RVA   : 0xFD4400   Offset: 0xFD3800   Length: 0x106
     public void ResetCombo()
     {
         long lVar1;
@@ -546,7 +546,7 @@ public class StudyAttackSkillController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180da9a20(lVar1,0);
+            lVar1 = FUN_180daa030(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_zero(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -559,7 +559,7 @@ public class StudyAttackSkillController
     }
 
     // Token : 0x6002222
-    // RVA   : 0xFD39A0   Offset: 0xFD2DA0   Length: 0x7B
+    // RVA   : 0xFD3FB0   Offset: 0xFD33B0   Length: 0x7B
     public IEnumerator FinishStudyFightSkill(StudySkillResult studyDodgeResult)
     {
         long lVar1;

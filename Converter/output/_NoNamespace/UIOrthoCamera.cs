@@ -14,11 +14,11 @@ public class UIOrthoCamera
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600088C
-    // RVA   : 0x11964F0   Offset: 0x11958F0   Length: 0x83
+    // RVA   : 0x1196B00   Offset: 0x1195F00   Length: 0x83
     private void Start()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d937e0);
+        uVar1 = Component.GetComponent(this,DAT_181d937f8);
         this.mCam = uVar1;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
@@ -29,7 +29,7 @@ public class UIOrthoCamera
     }
 
     // Token : 0x600088D
-    // RVA   : 0x1196580   Offset: 0x1195980   Length: 0x132
+    // RVA   : 0x1196B90   Offset: 0x1195F90   Length: 0x132
     private void Update()
     {
         long lVar2;

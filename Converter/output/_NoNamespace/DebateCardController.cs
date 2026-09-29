@@ -14,7 +14,7 @@ public class DebateCardController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001384
-    // RVA   : 0xA4F700   Offset: 0xA4EB00   Length: 0x793
+    // RVA   : 0xA4FD90   Offset: 0xA4F190   Length: 0x793
     public void Init()
     {
         uint uVar1;
@@ -57,14 +57,14 @@ public class DebateCardController
           if (lVar3.attriLv < 1) {
             lVar3 = Component.get_transform(this);
             if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-              uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
+              uVar6 = Component.GetComponent(lVar3,DAT_181d96178);
               uVar7 = "弃权";
-              if (((*(byte *)(DAT_181d84898 + 0x133) & 4) != 0) && (*(int *)(DAT_181d84898 + 224) == 0))
+              if (((*(byte *)(DAT_181d848b0 + 0x133) & 4) != 0) && (*(int *)(DAT_181d848b0 + 224) == 0))
               {
                 il2cpp_runtime_class_init();
                 uVar7 = "弃权";
               }
-        LAB_180a4fbb5:
+        LAB_180a50245:
               LTLocalization.SetText(uVar6,uVar7,0);
               return;
             }
@@ -72,7 +72,7 @@ public class DebateCardController
           else {
             lVar3 = Component.get_transform(this);
             if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-              uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
+              uVar6 = Component.GetComponent(lVar3,DAT_181d96178);
               if (this.cardData != null) {
                 uVar1 = this.cardData.targetAttriID;
                 uVar7 = GlobalData.GetBaseAttriName(uVar1,0);
@@ -92,8 +92,8 @@ public class DebateCardController
                       lVar3 = Component.get_transform(this,0);
                       if (((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Back",0)) != null)
                          && (lVar3 = Transform.Find(lVar3,"RareLv",0)) != null) {
-                        lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
-                        lVar4 = **(int64 **)(DAT_181dab490 + 184);
+                        lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
+                        lVar4 = **(int64 **)(DAT_181dab4a8 + 184);
                         if (this.cardData != null) {
                           uVar6 = Int32.ToString(this.cardData + 20,0);
                           uVar6 = String.Concat("RareLv",uVar6,0);
@@ -115,7 +115,7 @@ public class DebateCardController
         else {
           lVar3 = Component.get_transform(this);
           if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Back",0)) != null) {
-            lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
+            lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
             if ((this.cardData != null) &&
                (lVar4 = this.speCardSprite) != null) {
               uVar2 = this.cardData.rareLv;
@@ -138,7 +138,7 @@ public class DebateCardController
                     lVar3 = Component.get_transform(this,0);
                     if (((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Back",0)) != null) &&
                        (lVar3 = Component.get_gameObject(lVar3,0)) != null) {
-                      lVar3 = GameObject.AddComponent(lVar3,DAT_181dc5d30);
+                      lVar3 = GameObject.AddComponent(lVar3,DAT_181dc5d48);
                       lVar4 = DebateCardData.SpeCardDescribe;
                       if ((this.cardData != null) && (lVar4 != null)) {
                         uVar2 = this.cardData.rareLv;
@@ -159,7 +159,7 @@ public class DebateCardController
                             lVar3 = Component.get_transform(this,0);
                             if ((lVar3 != null) &&
                                (lVar3 = Transform.Find(lVar3,"Text",0)) != null) {
-                              uVar6 = Component.GetComponent(lVar3,DAT_181d96160);
+                              uVar6 = Component.GetComponent(lVar3,DAT_181d96178);
                               lVar3 = DebateCardData.SpeCardName;
                               if ((this.cardData != null) && (lVar3 != null)) {
                                 uVar2 = this.cardData.rareLv;
@@ -168,7 +168,7 @@ public class DebateCardController
                                 }
                                 uVar7 = *(uint64 *)
                                          (lVar3.isPlayerCard + 32 + (int64)(int)uVar2 * 8);
-                                goto LAB_180a4fbb5;
+                                goto LAB_180a50245;
                               }
                             }
                           }
@@ -184,7 +184,7 @@ public class DebateCardController
     }
 
     // Token : 0x6001385
-    // RVA   : 0xA4FF70   Offset: 0xA4F370   Length: 0x2CE
+    // RVA   : 0xA50600   Offset: 0xA4FA00   Length: 0x2CE
     public void RefreshButtonState()
     {
         int iVar1;
@@ -192,9 +192,9 @@ public class DebateCardController
         long lVar3;
         lVar2 = Component.get_transform(this,0);
         if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Back",0)) == null) ||
-           (lVar2 = Component.GetComponent(lVar2,DAT_181d93760)) == null) throw; // [null/range check failed]
+           (lVar2 = Component.GetComponent(lVar2,DAT_181d93778)) == null) throw; // [null/range check failed]
         Selectable.set_interactable(lVar2,0,0);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dbfc40 + 184) + 32);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181dbfc58 + 184) + 32);
         if (lVar2 == null) throw; // [null/range check failed]
         if (*(char *)(lVar2 + 136) != false) {
           return;
@@ -248,7 +248,7 @@ public class DebateCardController
           }
           lVar2 = Component.get_transform(this,0);
           if (((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Back",0)) != null) &&
-             (lVar2 = Component.GetComponent(lVar2,DAT_181d93760)) != null) {
+             (lVar2 = Component.GetComponent(lVar2,DAT_181d93778)) != null) {
             Selectable.set_interactable(lVar2,1,0);
             return;
           }
@@ -256,12 +256,12 @@ public class DebateCardController
     }
 
     // Token : 0x6001386
-    // RVA   : 0xA4FEA0   Offset: 0xA4F2A0   Length: 0xCC
+    // RVA   : 0xA50530   Offset: 0xA4F930   Length: 0xCC
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dbfc40 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dbfc58 + 184) + 32);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           DebateUIController.UseDebateCard(lVar1,uVar2,0);

@@ -6,21 +6,21 @@
 public class PlotInteractController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A3E
+    // Token: 0x4001A3F
     public SinglePlotChoiceData choiceData;
 
-    // Token: 0x4001A3F
+    // Token: 0x4001A40
     private bool meetRequire;
 
-    // Token: 0x4001A40
+    // Token: 0x4001A41
     private bool meetCost;
 
-    // Token: 0x4001A41
+    // Token: 0x4001A42
     private float refreshTime;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001FD9
-    // RVA   : 0xB0D010   Offset: 0xB0C410   Length: 0x7AD
+    // RVA   : 0xB0D6D0   Offset: 0xB0CAD0   Length: 0x7AD
     public void Update()
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -51,7 +51,7 @@ public class PlotInteractController
         if (this.choiceData == null) throw; // [null/range check failed]
         lVar5 = this.choiceData.requirements;
         if ((lVar5 == null) || (*(int *)(lVar5 + 24) < 1)) {
-        LAB_180b0d38a:
+        LAB_180b0da4a:
           this.meetRequire = 1;
         }
         else {
@@ -63,16 +63,16 @@ public class PlotInteractController
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
             throw; // [null/range check failed]
-            lVar5 = Component.GetComponent(lVar5,DAT_181d94ae0);
+            lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
             lVar2 = pStatics;
             if (lVar5 == null) throw; // [null/range check failed]
             local_28 = *(uint32 *)(lVar2 + 0x2b8);
             uStack_24 = *(uint32 *)(lVar2 + 700);
             uStack_20 = *(uint32 *)(lVar2 + 0x2c0);
             uStack_1c = *(uint32 *)(lVar2 + 0x2c4);
-        LAB_180b0d375:
+        LAB_180b0da35:
             Shadow.set_effectColor(lVar5,&local_28,0);
-            goto LAB_180b0d38a;
+            goto LAB_180b0da4a;
           }
           lVar5 = FUN_18046c400(0);
           if ((this.choiceData == null) || (lVar5 == null)) throw; // [null/range check failed]
@@ -82,19 +82,19 @@ public class PlotInteractController
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
             throw; // [null/range check failed]
-            lVar5 = Component.GetComponent(lVar5,DAT_181d94ae0);
+            lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
             lVar2 = pStatics;
             if (lVar5 == null) throw; // [null/range check failed]
             local_28 = *(uint32 *)(lVar2 + 0x330);
             uStack_24 = *(uint32 *)(lVar2 + 0x334);
             uStack_20 = *(uint32 *)(lVar2 + 0x338);
             uStack_1c = *(uint32 *)(lVar2 + 0x33c);
-            goto LAB_180b0d375;
+            goto LAB_180b0da35;
           }
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
           throw; // [null/range check failed]
-          lVar5 = Component.GetComponent(lVar5,DAT_181d94ae0);
+          lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
           lVar2 = pStatics;
           if (lVar5 == null) throw; // [null/range check failed]
           local_28 = *(uint32 *)(lVar2 + 0x310);
@@ -119,7 +119,7 @@ public class PlotInteractController
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Cost",0)) == null)
           throw; // [null/range check failed]
-          lVar5 = Component.GetComponent(lVar5,DAT_181d94ae0);
+          lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
           if (!this.meetCost) {
             lVar2 = pStatics;
             uVar8 = *(uint32 *)(lVar2 + 0x310);
@@ -141,18 +141,18 @@ public class PlotInteractController
           uStack_1c = uVar11;
           Shadow.set_effectColor(lVar5,&local_28,0);
         }
-        lVar5 = Component.GetComponent(this,DAT_181d93760);
+        lVar5 = Component.GetComponent(this,DAT_181d93778);
         if (lVar5 == null) throw; // [null/range check failed]
         Selectable.set_interactable(lVar5,1,0);
         if (this.choiceData == null) throw; // [null/range check failed]
         if (this.choiceData.playerInteractionTimeNeed == null) {
-        LAB_180b0d665:
+        LAB_180b0dd25:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"InteractTime",0)) == null)
           throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
           LTLocalization.SetText(uVar6,"",0);
-          lVar5 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+          lVar5 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
           if (lVar5 == null) throw; // [null/range check failed]
           if (*(char *)(lVar5 + 208) == false) {
             lVar5 = FUN_18046c400(0);
@@ -166,7 +166,7 @@ public class PlotInteractController
         else {
           lVar5 = FUN_18046c400(0);
           if (lVar5 == null) throw; // [null/range check failed]
-          if (*(int64 *)(lVar5 + 112) == 0) goto LAB_180b0d665;
+          if (*(int64 *)(lVar5 + 112) == 0) goto LAB_180b0dd25;
           lVar5 = FUN_18046c400(0);
           if ((((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
               (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 112) + 0x308)) == null) ||
@@ -177,14 +177,14 @@ public class PlotInteractController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (0 < lVar5[uVar1])
-          goto LAB_180b0d665;
+          goto LAB_180b0dd25;
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"InteractTime",0)) == null)
           throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
+          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
           LTLocalization.SetText(uVar6,"本月已用",0);
         }
-        lVar5 = Component.GetComponent(this,DAT_181d93760);
+        lVar5 = Component.GetComponent(this,DAT_181d93778);
         if (lVar5 != null) {
           Selectable.set_interactable(lVar5,0,0);
           return;
@@ -192,7 +192,7 @@ public class PlotInteractController
     }
 
     // Token : 0x6001FDA
-    // RVA   : 0xB0CC40   Offset: 0xB0C040   Length: 0x3C7
+    // RVA   : 0xB0D300   Offset: 0xB0C700   Length: 0x3C7
     public void OnClick()
     {
         long lVar1;

@@ -31,7 +31,7 @@ public class <StartAuctionRound>d__42
     }
 
     // Token : 0x6000AD0
-    // RVA   : 0x9C6190   Offset: 0x9C5590   Length: 0x36E
+    // RVA   : 0x9C6820   Offset: 0x9C5C20   Length: 0x36E
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -58,7 +58,7 @@ public class <StartAuctionRound>d__42
               if ((*(int64 *)(lVar1 + 24) != 0) &&
                  ((lVar4 = GameObject.get_transform(*(int64 *)(lVar1 + 24),0), lVar4 != null &&
                   (uVar5 = Transform.Find(lVar4,"AuctionItemNow",0), lVar3 != null)))) {
-                FUN_180daa820(lVar3,uVar5,0);
+                FUN_180daae30(lVar3,uVar5,0);
                 uVar5 = GameObject.get_transform(lVar2,0);
                 puVar6 = (uint64 *)Vector3.get_zero(local_18,0);
                 local_20 = *(uint32 *)(puVar6 + 1);
@@ -80,7 +80,7 @@ public class <StartAuctionRound>d__42
                     uVar5 = *(uint64 *)(*(int64 *)(lVar2 + 16) + 32);
                     Object.Destroy(uVar5,0);
                     if (*(int64 *)(lVar1 + 104) != 0) {
-                      FUN_181823590(*(int64 *)(lVar1 + 104),0,DAT_181d89698);
+                      FUN_181823ba0(*(int64 *)(lVar1 + 104),0,DAT_181d896b0);
                       lVar2 = *(int64 *)(lVar1 + 88);
                       if (lVar2 != null) {
                         if (*(int *)(lVar2 + 24) == 0) {
@@ -125,15 +125,15 @@ public class <StartAuctionRound>d__42
     }
 
     // Token : 0x6000AD2
-    // RVA   : 0x9C6500   Offset: 0x9C5900   Length: 0x3E
+    // RVA   : 0x9C6B90   Offset: 0x9C5F90   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d970b8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97250);
     }
 
     // Token : 0x6000AD3

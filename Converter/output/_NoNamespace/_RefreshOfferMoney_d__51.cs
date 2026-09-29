@@ -37,7 +37,7 @@ public class <RefreshOfferMoney>d__51
     }
 
     // Token : 0x6000ADC
-    // RVA   : 0x9C5070   Offset: 0x9C4470   Length: 0x6A5
+    // RVA   : 0x9C5700   Offset: 0x9C4B00   Length: 0x6A5
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -67,11 +67,11 @@ public class <RefreshOfferMoney>d__51
         *(uint32 *)(lVar1 + 72) = 3;
         AuctionController.SetOfferHero(lVar1,this.newOfferHero,0);
         AuctionController.SetOfferMoney(lVar1);
-        *(uint32 *)(lVar1 + 148) = **(uint32 **)(DAT_181daf2c8 + 184);
+        *(uint32 *)(lVar1 + 148) = **(uint32 **)(DAT_181daf2e0 + 184);
         if (*(int64 *)(lVar1 + 152) != 0) {
           lVar7 = *(int64 *)(lVar1 + 120);
           if (*(int64 *)(lVar1 + 112) == 0) throw; // [null/range check failed]
-          uVar2 = FUN_1817eb4e0(*(int64 *)(lVar1 + 112),*(int64 *)(lVar1 + 152),DAT_181d8b798);
+          uVar2 = FUN_1817ebaf0(*(int64 *)(lVar1 + 112),*(int64 *)(lVar1 + 152),DAT_181d8b7b0);
           if (lVar7 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -80,20 +80,20 @@ public class <RefreshOfferMoney>d__51
           if (lVar7 == null) throw; // [null/range check failed]
           uVar3 = GameObject.get_transform(lVar7,0);
           uVar3 = ShortcutExtensions.DOScale(uVar3);
-          uVar3 = TweenSettingsExtensions.SetEase(uVar3,3,DAT_181dc0f80);
-          TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc1330);
+          uVar3 = TweenSettingsExtensions.SetEase(uVar3,3,DAT_181dc1128);
+          TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
           lVar7 = *(int64 *)(lVar1 + 120);
           lVar9 = **(int64 **)(DAT_181d761e8 + 184);
           if (*(int64 *)(lVar1 + 112) == 0) throw; // [null/range check failed]
-          uVar2 = FUN_1817eb4e0(*(int64 *)(lVar1 + 112),*(uint64 *)(lVar1 + 152),DAT_181d8b798);
+          uVar2 = FUN_1817ebaf0(*(int64 *)(lVar1 + 112),*(uint64 *)(lVar1 + 152),DAT_181d8b7b0);
           if (lVar7 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar3 = lVar7[uVar2];
-          lVar7 = *(int64 *)(*(int64 *)(DAT_181daf2c8 + 184) + 8);
+          lVar7 = *(int64 *)(*(int64 *)(DAT_181daf2e0 + 184) + 8);
           if (lVar7 == null) throw; // [null/range check failed]
-          uVar2 = FUN_180d95a30(0,*(uint32 *)(lVar7 + 24),0);
+          uVar2 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -113,8 +113,8 @@ public class <RefreshOfferMoney>d__51
           HeroLittleTalkController.HeroTalk
                     (lVar9,uVar3,uVar6,0x40400000,*(uint64 *)(lVar1 + 192),2,0);
         }
-        lVar7 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar7,DAT_181d8f098);
+        lVar7 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar7,DAT_181d8f0b0);
         uVar2 = 0;
         lVar9 = 32;
         while (lVar8 = *(int64 *)(lVar1 + 112)) != null {
@@ -128,10 +128,10 @@ public class <RefreshOfferMoney>d__51
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (*(int64 *)(*(int64 *)(lVar9 + 16) + 32) == 0) break;
-              fVar11 = (float)FUN_1810e36c0();
+              fVar11 = (float)FUN_1810e3cd0();
               if (fVar11 < fVar10) {
                 lVar9 = *(int64 *)(lVar1 + 112);
-                uVar2 = FUN_180d95a30(0,*(uint32 *)(lVar7 + 24),0);
+                uVar2 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
                 if (*(uint32 *)(lVar7 + 24) <= uVar2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
@@ -144,15 +144,15 @@ public class <RefreshOfferMoney>d__51
                        lVar9[uVar2];
                   il2cpp_internal();
                   fVar10 = (float)Random.Range();
-                  fVar10 = fVar10 * **(float **)(DAT_181daf2c8 + 184);
-                  goto LAB_1809c5668;
+                  fVar10 = fVar10 * **(float **)(DAT_181daf2e0 + 184);
+                  goto LAB_1809c5cf8;
                 }
                 break;
               }
             }
             *(uint64 *)(lVar1 + 168) = 0;
             fVar10 = 0.0;
-        LAB_1809c5668:
+        LAB_1809c5cf8:
             *(float *)(lVar1 + 160) = fVar10;
             uVar3 = new WaitForSeconds();
             this.<>2__current = uVar3;
@@ -170,7 +170,7 @@ public class <RefreshOfferMoney>d__51
                  (*(int64 *)(lVar8 + 0x220) == 0)) break;
               if (fVar10 <= (float)*(int *)(*(int64 *)(lVar8 + 0x220) + 24)) {
                 if (lVar7 == null) break;
-                FUN_18182a0b0(lVar7);
+                FUN_18182a6c0(lVar7);
               }
             }
           }
@@ -187,15 +187,15 @@ public class <RefreshOfferMoney>d__51
     }
 
     // Token : 0x6000ADE
-    // RVA   : 0x9C5720   Offset: 0x9C4B20   Length: 0x3E
+    // RVA   : 0x9C5DB0   Offset: 0x9C51B0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d96fb8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97150);
     }
 
     // Token : 0x6000ADF

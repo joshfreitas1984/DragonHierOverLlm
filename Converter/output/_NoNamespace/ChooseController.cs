@@ -53,23 +53,23 @@ public class ChooseController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000E85
-    // RVA   : 0x99EC40   Offset: 0x99E040   Length: 0x36
+    // RVA   : 0x99F2D0   Offset: 0x99E6D0   Length: 0x36
     public static ChooseController get_Instance()
     {
-        return **(uint64 **)(DAT_181db7518 + 184);
+        return **(uint64 **)(DAT_181db7530 + 184);
     }
 
     // Token : 0x6000E86
-    // RVA   : 0x9962D0   Offset: 0x9956D0   Length: 0x43
+    // RVA   : 0x996960   Offset: 0x995D60   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db7518 + 184);
+        puVar1 = *(uint64 **)(DAT_181db7530 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6000E87
-    // RVA   : 0x996D20   Offset: 0x996120   Length: 0x3F6
+    // RVA   : 0x9973B0   Offset: 0x9967B0   Length: 0x3F6
     public void Init()
     {
         long lVar1;
@@ -93,10 +93,10 @@ public class ChooseController
           if (lVar1 == null) break;
           lVar1 = Transform.Find(lVar1,"Label",0);
           if (lVar1 == null) break;
-          plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d96160);
+          plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
           lVar1 = FUN_18046c100(0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 56) == 0)) break;
-          lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 56),local_res8[0],DAT_181d9e108);
+          lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 56),local_res8[0],DAT_181d9e120);
           if ((lVar1 == null) || (plVar3 == (int64 *)0)) break;
           local_18 = *(uint32 *)(lVar1 + 24);
           uStack_14 = *(uint32 *)(lVar1 + 28);
@@ -115,10 +115,10 @@ public class ChooseController
           if (lVar1 == null) break;
           lVar1 = Transform.Find(lVar1,"Label",0);
           if (lVar1 == null) break;
-          plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d96160);
+          plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
           lVar1 = FUN_18046c100(0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 56) == 0)) break;
-          lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 56),local_res8[0],DAT_181d9e108);
+          lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 56),local_res8[0],DAT_181d9e120);
           if ((lVar1 == null) || (plVar3 == (int64 *)0)) break;
           local_18 = *(uint32 *)(lVar1 + 24);
           uStack_14 = *(uint32 *)(lVar1 + 28);
@@ -137,10 +137,10 @@ public class ChooseController
           if (lVar1 == null) break;
           lVar1 = Transform.Find(lVar1,"Label",0);
           if (lVar1 == null) break;
-          plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d96160);
+          plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
           lVar1 = FUN_18046c100(0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 56) == 0)) break;
-          lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 56),local_res8[0],DAT_181d9e108);
+          lVar1 = FUN_180002f80(*(int64 *)(lVar1 + 56),local_res8[0],DAT_181d9e120);
           if ((lVar1 == null) || (plVar3 == (int64 *)0)) break;
           local_18 = *(uint32 *)(lVar1 + 24);
           uStack_14 = *(uint32 *)(lVar1 + 28);
@@ -155,7 +155,7 @@ public class ChooseController
     }
 
     // Token : 0x6000E88
-    // RVA   : 0x998330   Offset: 0x997730   Length: 0x15A
+    // RVA   : 0x9989C0   Offset: 0x997DC0   Length: 0x15A
     public void ShowChoosePanel(ChooseType _chooseType, List<HeroData> param, GameObject _sendResultFucTarget, string _sendResultFuc, string _sendResultParam, ChooseFilterType _filterType, string _cancelFuc)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -218,7 +218,7 @@ public class ChooseController
         }
         plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
         plVar12 = plVar16;
-        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
           plVar12 = plVar6;
         }
         NGUITools.PlaySound(plVar12,0);
@@ -249,8 +249,8 @@ public class ChooseController
                   local_118 = (uint32)*puVar9;
                   uStack_114 = (uint32)((uint64)*puVar9 >> 32);
                   uVar10 = ShortcutExtensions.DOMove(uVar10,&local_118,0x3e19999a,0,0);
-                  uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc0f80);
-                  TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1db0);
+                  uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc1128);
+                  TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1f60);
                   if ((this.choosePanel != null) &&
                      (lVar7 = GameObject.get_transform(this.choosePanel,0)) != null) {
                     lVar7 = Transform.Find(lVar7,"ChoosePanelRoot",0);
@@ -265,14 +265,14 @@ public class ChooseController
                       {
                         uVar10 = Transform.Find(lVar7,"ChoosePanelRoot",0);
                         uVar10 = ShortcutExtensions.DOScale(uVar10);
-                        uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc0f80);
-                        TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1db0);
+                        uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc1128);
+                        TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1f60);
                         if ((this.choosePanel != null) &&
                            ((lVar7 = GameObject.get_transform(this.choosePanel,0),
                             lVar7 != null && (lVar7 = Transform.Find(lVar7,"BlackBackground",0)) != null)))
                         {
-                          plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d94460);
-                          puVar11 = (uint32 *)FUN_180d98fe0(local_88,0);
+                          plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d94478);
+                          puVar11 = (uint32 *)FUN_180d995f0(local_88,0);
                           if (plVar6 != (int64 *)0) {
                             local_118 = *puVar11;
                             uStack_114 = puVar11[1];
@@ -284,9 +284,9 @@ public class ChooseController
                                 (lVar7 = GameObject.get_transform(this.choosePanel,0),
                                 lVar7 != null)) &&
                                (lVar7 = Transform.Find(lVar7,"BlackBackground",0)) != null) {
-                              uVar10 = Component.GetComponent(lVar7,DAT_181d94460);
+                              uVar10 = Component.GetComponent(lVar7,DAT_181d94478);
                               uVar10 = DOTweenModuleUI.DOFade(uVar10);
-                              TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1c20);
+                              TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1dc8);
                               this.chooseType = _chooseType;
                               this.sendResultFucTarget = _sendResultFucTarget;
                               this.sendResultFuc = _sendResultFuc;
@@ -327,9 +327,9 @@ public class ChooseController
                                             plVar6 = *(int64 **)(*(int64 *)(param + 16) + 32);
                                             if ((lVar7 != null) && (plVar6 != (int64 *)0)) {
                                               if (*(int64 *)(*plVar6 + 64) !=
-                                                  *(int64 *)(DAT_181d80418 + 64)) {
+                                                  *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                FUN_1800d6070(plVar6,DAT_181d80418);
+                                                FUN_1800d6070(plVar6,DAT_181d80430);
                                               }
                                               puVar11 = (uint32 *)il2cpp_object_unbox();
                                               uVar10 = WorldData.GetHero(lVar7,*puVar11,0);
@@ -351,7 +351,7 @@ public class ChooseController
                                                     lVar7 = (**(code **)(*plVar12 + 0x168))
                                                                       (plVar12,*(uint64 *)
                                                                                 (*plVar12 + 0x170));
-                                                    lVar8 = FUN_1800d60b0(DAT_181da1040,1);
+                                                    lVar8 = FUN_1800d60b0(DAT_181da1058,1);
                                                     if (lVar8 != null) {
                                                       if (*(int *)(lVar8 + 24) == 0) {
                                                         uVar10 = il2cpp_internal();
@@ -362,16 +362,16 @@ public class ChooseController
                                                       if (lVar7 != null) {
                                                         uVar10 = String.Split(lVar7,lVar8,0);
                                                         plVar12 = (int64 *)
-                                                                  il2cpp_internal(DAT_181d97750);
-                                                        FUN_181827480(plVar12,uVar10,DAT_181da3c58);
-                                                        goto LAB_18099c314;
+                                                                  il2cpp_internal(DAT_181d97768);
+                                                        FUN_181827a90(plVar12,uVar10,DAT_181da3c70);
+                                                        goto LAB_18099c9a4;
                                                       }
                                                     }
                                                   }
                                                   throw; // [null/range check failed]
                                                 }
                                               }
-        LAB_18099c314:
+        LAB_18099c9a4:
                                               do {
                                                 while( true ) {
                                                   iVar4 = (int)plVar6;
@@ -380,31 +380,31 @@ public class ChooseController
                                                            (pStatics_3d40 + 0x4f8);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   plVar6 = plVar16;
-                                                  if (lVar7.summonLv <= iVar4) goto LAB_18099c689;
+                                                  if (lVar7.summonLv <= iVar4) goto LAB_18099cd19;
                                                   if (2 < *(int *)(param + 24)) break;
-        LAB_18099c3fa:
+        LAB_18099ca8a:
                                                   if (3 < *(int *)(param + 24)) {
                                                     plVar6 = (int64 *)
-                                                             FUN_180002f80(param,3,DAT_181d95e88);
+                                                             FUN_180002f80(param,3,DAT_181d95ea0);
                                                     if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                     if (*(int64 *)(*plVar6 + 64) !=
-                                                        *(int64 *)(DAT_181d80418 + 64)) {
+                                                        *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d6070(plVar6,DAT_181d80418);
+                                                      FUN_1800d6070(plVar6,DAT_181d80430);
                                                     }
                                                     piVar13 = (int *)il2cpp_object_unbox();
                                                     iVar4 = local_134;
                                                     if (*piVar13 != -1) {
                                                       plVar6 = (int64 *)
-                                                               FUN_180002f80(param,3,DAT_181d95e88);
+                                                               FUN_180002f80(param,3,DAT_181d95ea0);
                                                       if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                       if (*(int64 *)(*plVar6 + 64) !=
-                                                          *(int64 *)(DAT_181d80418 + 64)) {
+                                                          *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                        FUN_1800d6070(plVar6,DAT_181d80418);
+                                                        FUN_1800d6070(plVar6,DAT_181d80430);
                                                       }
                                                       piVar13 = (int *)il2cpp_object_unbox();
-                                                      if (*piVar13 < iVar4) goto LAB_18099c493;
+                                                      if (*piVar13 < iVar4) goto LAB_18099cb23;
                                                     }
                                                   }
                                                   if (((this.itemList == null) ||
@@ -418,33 +418,33 @@ public class ChooseController
                                                   if (((lVar7 == null) ||
                                                       (lVar7 = Transform.Find(lVar7,uVar10)) == null)
                                                      || (lVar7 = Component.GetComponent
-                                                                           (lVar7,DAT_181d962e0),
+                                                                           (lVar7,DAT_181d962f8),
                                                         lVar7 == null)) throw; // [null/range check failed]
                                                   Selectable.set_interactable(lVar7);
                                                   plVar6 = (int64 *)(uint64)(local_134 + 1);
                                                 }
                                                 plVar6 = (int64 *)
-                                                         FUN_180002f80(param,2,DAT_181d95e88);
+                                                         FUN_180002f80(param,2,DAT_181d95ea0);
                                                 if (plVar6 == (int64 *)0) break;
                                                 if (*(int64 *)(*plVar6 + 64) !=
-                                                    *(int64 *)(DAT_181d80418 + 64)) {
+                                                    *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d6070(plVar6,DAT_181d80418);
+                                                  FUN_1800d6070(plVar6,DAT_181d80430);
                                                 }
                                                 piVar13 = (int *)il2cpp_object_unbox();
                                                 iVar4 = local_134;
-                                                if (*piVar13 == -1) goto LAB_18099c3fa;
+                                                if (*piVar13 == -1) goto LAB_18099ca8a;
                                                 plVar6 = (int64 *)
-                                                         FUN_180002f80(param,2,DAT_181d95e88);
+                                                         FUN_180002f80(param,2,DAT_181d95ea0);
                                                 if (plVar6 == (int64 *)0) break;
                                                 if (*(int64 *)(*plVar6 + 64) !=
-                                                    *(int64 *)(DAT_181d80418 + 64)) {
+                                                    *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d6070(plVar6,DAT_181d80418);
+                                                  FUN_1800d6070(plVar6,DAT_181d80430);
                                                 }
                                                 piVar13 = (int *)il2cpp_object_unbox();
-                                                if (*piVar13 <= iVar4) goto LAB_18099c3fa;
-        LAB_18099c493:
+                                                if (*piVar13 <= iVar4) goto LAB_18099ca8a;
+        LAB_18099cb23:
                                                 if (((this.itemList == null) ||
                                                     (lVar7 = GameObject.get_transform
                                                                        (this.itemList,0),
@@ -456,7 +456,7 @@ public class ChooseController
                                                 if (((lVar7 == null) ||
                                                     (lVar7 = Transform.Find(lVar7,uVar10)) == null)
                                                    || (lVar7 = Component.GetComponent
-                                                                         (lVar7,DAT_181d962e0), lVar7 == null
+                                                                         (lVar7,DAT_181d962f8), lVar7 == null
                                                       )) break;
                                                 Selectable.set_interactable(lVar7,0);
                                                 if (((this.itemList == null) ||
@@ -516,9 +516,9 @@ public class ChooseController
                                             plVar6 = *(int64 **)(*(int64 *)(param + 16) + 32);
                                             if ((lVar7 != null) && (plVar6 != (int64 *)0)) {
                                               if (*(int64 *)(*plVar6 + 64) !=
-                                                  *(int64 *)(DAT_181d80418 + 64)) {
+                                                  *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                FUN_1800d6070(plVar6,DAT_181d80418);
+                                                FUN_1800d6070(plVar6,DAT_181d80430);
                                               }
                                               puVar11 = (uint32 *)il2cpp_object_unbox();
                                               lVar7 = WorldData.GetHero(lVar7,*puVar11,0);
@@ -530,9 +530,9 @@ public class ChooseController
                                                          (*(int64 *)(param + 16) + 32);
                                               if (plVar12 != (int64 *)0) {
                                                 if (*(int64 *)(*plVar12 + 64) !=
-                                                    *(int64 *)(DAT_181d80418 + 64)) {
+                                                    *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d6070(plVar12,DAT_181d80418);
+                                                  FUN_1800d6070(plVar12,DAT_181d80430);
                                                 }
                                                 puVar11 = (uint32 *)il2cpp_object_unbox();
                                                 local_128[0] = *puVar11;
@@ -606,9 +606,9 @@ public class ChooseController
                                                 local_res8 = 0;
                                                 plVar6 = plVar16;
                                                 if ((*(int *)(param + 24) < 2) ||
-                                                   (lVar7 = FUN_180002f80(param,1,DAT_181d95e88),
+                                                   (lVar7 = FUN_180002f80(param,1,DAT_181d95ea0),
                                                    lVar7 == null)) {
-        LAB_18099951e:
+        LAB_180999bae:
                                                   do {
                                                     while( true ) {
                                                       iVar4 = (int)plVar6;
@@ -619,32 +619,32 @@ public class ChooseController
                                                       if (lVar7 == null) throw; // [null/range check failed]
                                                       plVar6 = plVar16;
                                                       if (lVar7.summonLv <= iVar4)
-                                                      goto LAB_180999899;
+                                                      goto LAB_180999f29;
                                                       if (2 < *(int *)(param + 24)) break;
-        LAB_18099960a:
+        LAB_180999c9a:
                                                       if (3 < *(int *)(param + 24)) {
                                                         plVar6 = (int64 *)
-                                                                 FUN_180002f80(param,3,DAT_181d95e88);
+                                                                 FUN_180002f80(param,3,DAT_181d95ea0);
                                                         if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                         if (*(int64 *)(*plVar6 + 64) !=
-                                                            *(int64 *)(DAT_181d80418 + 64)) {
+                                                            *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d6070(plVar6,DAT_181d80418);
+                                                          FUN_1800d6070(plVar6,DAT_181d80430);
                                                         }
                                                         piVar13 = (int *)il2cpp_object_unbox();
                                                         iVar4 = local_138;
                                                         if (*piVar13 != -1) {
                                                           plVar6 = (int64 *)
-                                                                   FUN_180002f80(param,3,DAT_181d95e88);
+                                                                   FUN_180002f80(param,3,DAT_181d95ea0);
                                                           if (plVar6 == (int64 *)0)
                                                           throw; // [null/range check failed]
                                                           if (*(int64 *)(*plVar6 + 64) !=
-                                                              *(int64 *)(DAT_181d80418 + 64)) {
+                                                              *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                            FUN_1800d6070(plVar6,DAT_181d80418);
+                                                            FUN_1800d6070(plVar6,DAT_181d80430);
                                                           }
                                                           piVar13 = (int *)il2cpp_object_unbox();
-                                                          if (*piVar13 < iVar4) goto LAB_1809996a3;
+                                                          if (*piVar13 < iVar4) goto LAB_180999d33;
                                                         }
                                                       }
                                                       if (((this.itemList == null) ||
@@ -660,33 +660,33 @@ public class ChooseController
                                                           (lVar7 = Transform.Find(lVar7,uVar10),
                                                           lVar7 == null)) ||
                                                          (lVar7 = Component.GetComponent
-                                                                            (lVar7,DAT_181d962e0),
+                                                                            (lVar7,DAT_181d962f8),
                                                          lVar7 == null)) throw; // [null/range check failed]
                                                       Selectable.set_interactable(lVar7);
                                                       plVar6 = (int64 *)(uint64)(local_138 + 1);
                                                     }
                                                     plVar6 = (int64 *)
-                                                             FUN_180002f80(param,2,DAT_181d95e88);
+                                                             FUN_180002f80(param,2,DAT_181d95ea0);
                                                     if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                     if (*(int64 *)(*plVar6 + 64) !=
-                                                        *(int64 *)(DAT_181d80418 + 64)) {
+                                                        *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d6070(plVar6,DAT_181d80418);
+                                                      FUN_1800d6070(plVar6,DAT_181d80430);
                                                     }
                                                     piVar13 = (int *)il2cpp_object_unbox();
                                                     iVar4 = local_138;
-                                                    if (*piVar13 == -1) goto LAB_18099960a;
+                                                    if (*piVar13 == -1) goto LAB_180999c9a;
                                                     plVar6 = (int64 *)
-                                                             FUN_180002f80(param,2,DAT_181d95e88);
+                                                             FUN_180002f80(param,2,DAT_181d95ea0);
                                                     if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                     if (*(int64 *)(*plVar6 + 64) !=
-                                                        *(int64 *)(DAT_181d80418 + 64)) {
+                                                        *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d6070(plVar6,DAT_181d80418);
+                                                      FUN_1800d6070(plVar6,DAT_181d80430);
                                                     }
                                                     piVar13 = (int *)il2cpp_object_unbox();
-                                                    if (*piVar13 <= iVar4) goto LAB_18099960a;
-        LAB_1809996a3:
+                                                    if (*piVar13 <= iVar4) goto LAB_180999c9a;
+        LAB_180999d33:
                                                     if (((this.itemList == null) ||
                                                         (lVar7 = GameObject.get_transform
                                                                            (this.itemList,
@@ -698,7 +698,7 @@ public class ChooseController
                                                     if (((lVar7 == null) ||
                                                         (lVar7 = Transform.Find(lVar7,uVar10), lVar7 == null
                                                         )) || (lVar7 = Component.GetComponent
-                                                                                 (lVar7,DAT_181d962e0),
+                                                                                 (lVar7,DAT_181d962f8),
                                                               lVar7 == null)) throw; // [null/range check failed]
                                                     Selectable.set_interactable(lVar7,0);
                                                     if (((this.itemList == null) ||
@@ -718,12 +718,12 @@ public class ChooseController
                                                   } while( true );
                                                 }
                                                 plVar12 = (int64 *)
-                                                          FUN_180002f80(param,1,DAT_181d95e88);
+                                                          FUN_180002f80(param,1,DAT_181d95ea0);
                                                 if (plVar12 != (int64 *)0) {
                                                   lVar7 = (**(code **)(*plVar12 + 0x168))
                                                                     (plVar12,*(uint64 *)
                                                                               (*plVar12 + 0x170));
-                                                  lVar8 = FUN_1800d60b0(DAT_181da1040,1);
+                                                  lVar8 = FUN_1800d60b0(DAT_181da1058,1);
                                                   if (lVar8 != null) {
                                                     if (*(int *)(lVar8 + 24) == 0) {
                                                       uVar10 = il2cpp_internal();
@@ -733,9 +733,9 @@ public class ChooseController
                                                     *(uint16 *)(lVar8 + 32) = 47;
                                                     if (lVar7 != null) {
                                                       uVar10 = String.Split(lVar7,lVar8,0);
-                                                      local_res8 = il2cpp_internal(DAT_181d97750);
-                                                      FUN_181827480(local_res8,uVar10,DAT_181da3c58);
-                                                      goto LAB_18099951e;
+                                                      local_res8 = il2cpp_internal(DAT_181d97768);
+                                                      FUN_181827a90(local_res8,uVar10,DAT_181da3c70);
+                                                      goto LAB_180999bae;
                                                     }
                                                   }
                                                 }
@@ -763,11 +763,11 @@ public class ChooseController
                                     if ((this.heroList != null) &&
                                        (GameObject.SetActive(this.heroList,1,0),
                                        plVar6 = plVar16, param != null)) {
-        LAB_180998cc0:
+        LAB_180999350:
                                       do {
                                         uVar5 = (uint32)plVar6;
                                         if ((int)*(uint32 *)(param + 24) <= (int)uVar5)
-                                        goto LAB_18099bf9f;
+                                        goto LAB_18099c62f;
                                         if (*(uint32 *)(param + 24) <= uVar5) {
                                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         }
@@ -796,16 +796,16 @@ public class ChooseController
                                           lVar7 = FUN_18046c0a0(0);
                                           if ((lVar7 == null) || (lVar7.summonControlable == null)) break;
                                           plVar6 = (int64 *)WorldData.Player();
-                                          if (plVar12 == plVar6) goto LAB_180998f46;
+                                          if (plVar12 == plVar6) goto LAB_1809995d6;
                                           if (((plVar12 == (int64 *)0) || (plVar12[97] == 0)) ||
                                              (lVar7 = *(int64 *)(plVar12[97] + 16)) == null)
                                           break;
-                                          iVar4 = FUN_1800d6760(lVar7,16,DAT_181d8fa18);
+                                          iVar4 = FUN_1800d6760(lVar7,16,DAT_181d8fa30);
                                           if (iVar4 < 1) {
                                             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-                                            goto LAB_180998cc0;
+                                            goto LAB_180999350;
                                           }
-        LAB_180998e61:
+        LAB_1809994f1:
                                           uVar10 = *puVar9;
                                           lVar7 = FUN_18046c1a0(0);
                                           if (lVar7 == null) break;
@@ -828,7 +828,7 @@ public class ChooseController
                                           puVar9 = local_120;
                                         }
                                         else {
-                                          if (_filterType != 10) goto LAB_180998e61;
+                                          if (_filterType != 10) goto LAB_1809994f1;
                                           lVar7 = FUN_18046c0a0(0);
                                           if ((lVar7 == null) || (lVar7.summonControlable == null)) break;
                                           plVar6 = (int64 *)WorldData.Player();
@@ -836,11 +836,11 @@ public class ChooseController
                                             if (((plVar12 == (int64 *)0) || (plVar12[97] == 0)) ||
                                                (lVar7 = *(int64 *)(plVar12[97] + 16)) == null)
                                             break;
-                                            iVar4 = FUN_1800d6760(lVar7,17,DAT_181d8fa18);
-                                            if (0 < iVar4) goto LAB_180998e61;
+                                            iVar4 = FUN_1800d6760(lVar7,17,DAT_181d8fa30);
+                                            if (0 < iVar4) goto LAB_1809994f1;
                                           }
                                         }
-        LAB_180998f46:
+        LAB_1809995d6:
                                         plVar6 = (int64 *)(uint64)(uVar5 + 1);
                                       } while( true );
                                     }
@@ -848,7 +848,7 @@ public class ChooseController
                                 }
                               }
                               else {
-        LAB_18099bf9f:
+        LAB_18099c62f:
                                 uVar10 = this.targetGrid;
                                 GlobalData.SortChild(uVar10,0);
                                 if (this.targetGrid != null) {
@@ -870,35 +870,35 @@ public class ChooseController
           }
         }
         throw; // [null/range check failed]
-        LAB_18099c689:
+        LAB_18099cd19:
         iVar4 = (int)plVar6;
         local_12c = iVar4;
         lVar7 = *(int64 *)(pStatics_3d40 + 0x4a0);
         if (lVar7 == null) throw; // [null/range check failed]
         if (iVar4 < lVar7.summonLv) {
           if (plVar12 == (int64 *)0) {
-        LAB_18099c84d:
+        LAB_18099cedd:
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"SkillFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"SkillTypeFlitter");
             uVar10 = Int32.ToString(&local_12c,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7);
             plVar6 = (int64 *)(uint64)(local_12c + 1);
           }
           else {
             uVar10 = Int32.ToString(&local_12c,0);
-            cVar2 = FUN_18181e400(plVar12,uVar10);
-            if (cVar2) goto LAB_18099c84d;
+            cVar2 = FUN_18181ea10(plVar12,uVar10);
+            if (cVar2) goto LAB_18099cedd;
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"SkillFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"SkillTypeFlitter");
             uVar10 = Int32.ToString(&local_12c,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7,0);
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
@@ -910,15 +910,15 @@ public class ChooseController
             Toggle.set_isOn(lVar7);
             plVar6 = (int64 *)(uint64)(local_12c + 1);
           }
-          goto LAB_18099c689;
+          goto LAB_18099cd19;
         }
         lVar7 = this.targetHero;
-        if (lVar7 != null) goto LAB_18099c920;
+        if (lVar7 != null) goto LAB_18099cfb0;
         throw; // [null/range check failed]
-        LAB_18099c920:
+        LAB_18099cfb0:
         if (lVar7.kungfuSkills == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar7.kungfuSkills + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar7.kungfuSkills + 24) <= (int)uVar5) goto LAB_18099c62f;
         if ((lVar7 = lVar7?.kungfuSkills) == null) throw; // [null/range check failed]
         if (lVar7.summonLv <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -928,105 +928,105 @@ public class ChooseController
           if (lVar7 != null) {
             local_128[0] = KungfuSkillLvData.Type(lVar7,0);
             uVar10 = Int32.ToString(local_128,0);
-            cVar2 = FUN_18181e400(plVar12,uVar10,DAT_181da3e58);
-            if (cVar2) goto LAB_18099c9ad;
-            goto LAB_18099d731;
+            cVar2 = FUN_18181ea10(plVar12,uVar10,DAT_181da3e70);
+            if (cVar2) goto LAB_18099d03d;
+            goto LAB_18099ddc1;
           }
           throw; // [null/range check failed]
         }
-        LAB_18099c9ad:
+        LAB_18099d03d:
         if (2 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if ((lVar7 == null) || (lVar8 = KungfuSkillLvData.DataBase(lVar7,0)) == null)
             throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 52);
-            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099d731;
+            if (iVar4 < *piVar13) goto LAB_18099ddc1;
           }
         }
         if (3 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if ((lVar7 == null) || (lVar8 = KungfuSkillLvData.DataBase(lVar7,0)) == null)
             throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 52);
-            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099d731;
+            if (*piVar13 < iVar4) goto LAB_18099ddc1;
           }
         }
         if (4 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.summonID;
-            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099d731;
+            if (iVar4 < *piVar13) goto LAB_18099ddc1;
           }
         }
         if (5 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.summonID;
-            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099d731;
+            if (*piVar13 < iVar4) goto LAB_18099ddc1;
           }
         }
         if (_filterType == 1) {
           if (lVar7 == null) throw; // [null/range check failed]
           cVar2 = KungfuSkillLvData.SkillMeetObstacleLv(lVar7,0);
           if ((!cVar2) || (cVar2 = KungfuSkillLvData.CanUpgrade(lVar7,0), !cVar2))
-          goto LAB_18099d731;
-        switchD_18099cd15_caseD_14:
+          goto LAB_18099ddc1;
+        switchD_18099d3a5_caseD_14:
           uVar10 = this.targetGrid;
           lVar7 = FUN_18046c1a0(0);
           if (lVar7 == null) throw; // [null/range check failed]
@@ -1054,14 +1054,14 @@ public class ChooseController
         }
         else {
           if (_filterType == 12) {
-        switchD_18099cd15_caseD_17:
+        switchD_18099d3a5_caseD_17:
             lVar8 = FUN_18046c0a0(0);
             if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                 (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0), lVar7 == null)) || (lVar8 == null))
             throw; // [null/range check failed]
             lVar7 = HeroData.FindSkill(lVar8,lVar7.isSummon,0);
-            if (lVar7 == null) goto switchD_18099cd15_caseD_14;
-            goto LAB_18099d731;
+            if (lVar7 == null) goto switchD_18099d3a5_caseD_14;
+            goto LAB_18099ddc1;
           }
           switch(_filterType) {
           case 18:
@@ -1094,10 +1094,10 @@ public class ChooseController
                     lVar8 = FUN_18046c400(0);
                     if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 112)) == null)
                     throw; // [null/range check failed]
-        LAB_18099cf02:
+        LAB_18099d592:
                     lVar7 = HeroData.FindSkill(lVar8,lVar7.isSummon,0);
                     if (lVar7 == null) throw; // [null/range check failed]
-                    if (lVar7.summonID < 10) goto switchD_18099cd15_caseD_14;
+                    if (lVar7.summonID < 10) goto switchD_18099d3a5_caseD_14;
                   }
                 }
               }
@@ -1133,7 +1133,7 @@ public class ChooseController
                     lVar8 = FUN_18046c0a0(0);
                     if (((lVar8 != null) && (*(int64 *)(lVar8 + 32) != 0)) &&
                        (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0)) != null)
-                    goto LAB_18099cf02;
+                    goto LAB_18099d592;
                     throw; // [null/range check failed]
                   }
                 }
@@ -1141,7 +1141,7 @@ public class ChooseController
             }
             break;
           default:
-            goto switchD_18099cd15_caseD_14;
+            goto switchD_18099d3a5_caseD_14;
           case 22:
             lVar8 = FUN_18046c400(0);
             if (lVar8 == null) throw; // [null/range check failed]
@@ -1171,7 +1171,7 @@ public class ChooseController
               if (((lVar15 == null) || (*(int64 *)(lVar15 + 112) == 0)) || (lVar8 == null))
               throw; // [null/range check failed]
               cVar2 = HeroData.HavePrelover(lVar8,*(uint32 *)(*(int64 *)(lVar15 + 112) + 88));
-              if (cVar2) goto switchD_18099cd15_caseD_14;
+              if (cVar2) goto switchD_18099d3a5_caseD_14;
               lVar8 = FUN_18046c0a0(0);
               if (((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                  (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0)) == null)
@@ -1185,9 +1185,9 @@ public class ChooseController
                 if (4 < lVar7.manageAiHour) break;
               }
             }
-            goto switchD_18099cd15_caseD_14;
+            goto switchD_18099d3a5_caseD_14;
           case 23:
-            goto switchD_18099cd15_caseD_17;
+            goto switchD_18099d3a5_caseD_17;
           case 26:
             lVar8 = FUN_18046c400(0);
             if (lVar8 == null) throw; // [null/range check failed]
@@ -1203,7 +1203,7 @@ public class ChooseController
                 lVar7 = FUN_18046c400(0);
                 if ((lVar7 == null) || (lVar7.heroFamilyName == null)) throw; // [null/range check failed]
                 if (iVar4 <= *(int *)(lVar7.heroFamilyName + 184))
-                goto switchD_18099cd15_caseD_14;
+                goto switchD_18099d3a5_caseD_14;
               }
             }
             break;
@@ -1221,17 +1221,17 @@ public class ChooseController
                    (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0)) == null)
                 throw; // [null/range check failed]
                 lVar7 = HeroData.FindSkill(lVar8,lVar7.isSummon,0);
-                if (lVar7 != null) goto switchD_18099cd15_caseD_14;
+                if (lVar7 != null) goto switchD_18099d3a5_caseD_14;
               }
             }
           }
         }
-        LAB_18099d731:
+        LAB_18099ddc1:
         lVar7 = this.targetHero;
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
         if (lVar7 == null) throw; // [null/range check failed]
-        goto LAB_18099c920;
-        LAB_180999b30:
+        goto LAB_18099cfb0;
+        LAB_18099a1c0:
         plVar12 = &this.targetHero;
         lVar7 = local_120[5];
         if (lVar7 == null) throw; // [null/range check failed]
@@ -1241,33 +1241,33 @@ public class ChooseController
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage, plVar6 = plVar16) != null) goto LAB_18099ba50;
+               (lVar7 = lVar7.selfStorage, plVar6 = plVar16) != null) goto LAB_18099c0e0;
           }
           else if (_filterType == 8) {
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099b930;
+               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099bfc0;
           }
           else if (_filterType == 6) {
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099b850;
+               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099bee0;
           }
           else if (_filterType == 25) {
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099b440;
+               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099bad0;
           }
           else {
-            if (_filterType != 27) goto LAB_18099bf9f;
+            if (_filterType != 27) goto LAB_18099c62f;
             lVar7 = FUN_18046c0a0(0);
             if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
                ((lVar7 = WorldData.Player(lVar7.summonControlable,0), lVar7 != null &&
                 (lVar7 = lVar7.selfStorage, plVar6 = plVar16) != null)))
-            goto LAB_18099ace0;
+            goto LAB_18099b370;
           }
           throw; // [null/range check failed]
         }
@@ -1279,163 +1279,163 @@ public class ChooseController
           if (lVar7 != null) {
             local_128[0] = lVar7.summonID;
             uVar10 = Int32.ToString(local_128,0);
-            cVar2 = FUN_18181e400(local_res8,uVar10);
-            if (cVar2) goto LAB_180999b9a;
-            goto LAB_18099ac3b;
+            cVar2 = FUN_18181ea10(local_res8,uVar10);
+            if (cVar2) goto LAB_18099a22a;
+            goto LAB_18099b2cb;
           }
           throw; // [null/range check failed]
         }
-        LAB_180999b9a:
+        LAB_18099a22a:
         if (2 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar7 + 60);
-            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099ac3b;
+            if (iVar4 < *piVar13) goto LAB_18099b2cb;
           }
         }
         if (3 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar7 + 60);
-            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099ac3b;
+            if (*piVar13 < iVar4) goto LAB_18099b2cb;
           }
         }
         if (4 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.summonLv;
-            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 != *piVar13) goto LAB_18099ac3b;
+            if (iVar4 != *piVar13) goto LAB_18099b2cb;
           }
         }
         if (5 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.dailyAIManaged;
-            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099ac3b;
+            if (iVar4 < *piVar13) goto LAB_18099b2cb;
           }
         }
         if (6 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
-          if (*piVar13 == -1) goto LAB_180999ec2;
+          if (*piVar13 == -1) goto LAB_18099a552;
           if (lVar7 == null) throw; // [null/range check failed]
           if (lVar7.summonID == null) {
             if (lVar7.hide != null) {
               iVar4 = *(int *)(lVar7.hide + 20);
-              plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+              plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
               if (plVar6 != (int64 *)0) {
-                if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar6,DAT_181d80418);
+                  FUN_1800d6070(plVar6,DAT_181d80430);
                 }
                 piVar13 = (int *)il2cpp_object_unbox();
-                if (iVar4 == *piVar13) goto LAB_180999ec2;
-                goto LAB_18099ac3b;
+                if (iVar4 == *piVar13) goto LAB_18099a552;
+                goto LAB_18099b2cb;
               }
             }
             throw; // [null/range check failed]
           }
-          goto LAB_18099ac3b;
+          goto LAB_18099b2cb;
         }
-        LAB_180999ec2:
+        LAB_18099a552:
         switch(_filterType) {
         case 2:
           if (lVar7 == null) throw; // [null/range check failed]
-          if (lVar7.summonID - 1U < 2) goto switchD_180999ee7_caseD_9;
+          if (lVar7.summonID - 1U < 2) goto switchD_18099a577_caseD_9;
           plVar6 = (int64 *)(uint64)(uVar5 + 1);
-          goto LAB_180999b30;
+          goto LAB_18099a1c0;
         case 3:
           if (lVar7 == null) throw; // [null/range check failed]
           if ((lVar7.summonID == 5) && (lVar7.summonLv < 2)) {
-        LAB_180999f31:
+        LAB_18099a5c1:
             lVar8 = FUN_18046bde0();
             if (lVar8 == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar8 + 48) != lVar7) {
               lVar8 = FUN_18046bde0();
               if (lVar8 == null) throw; // [null/range check failed]
-              if (*(int64 *)(lVar8 + 64) != lVar7) goto switchD_180999ee7_caseD_9;
+              if (*(int64 *)(lVar8 + 64) != lVar7) goto switchD_18099a577_caseD_9;
               plVar6 = (int64 *)(uint64)(uVar5 + 1);
-              goto LAB_180999b30;
+              goto LAB_18099a1c0;
             }
           }
           break;
         case 4:
           if (lVar7 == null) throw; // [null/range check failed]
-          if ((lVar7.summonID == 5) && (lVar7.summonLv == 2)) goto LAB_180999f31;
+          if ((lVar7.summonID == 5) && (lVar7.summonLv == 2)) goto LAB_18099a5c1;
           break;
         case 5:
           if (lVar7 == null) throw; // [null/range check failed]
-          if ((lVar7.summonID == 5) && (lVar7.summonLv == 3)) goto LAB_180999f31;
+          if ((lVar7.summonID == 5) && (lVar7.summonLv == 3)) goto LAB_18099a5c1;
           break;
         case 6:
           if (lVar7 == null) throw; // [null/range check failed]
           if ((lVar7.summonID == 3) && (lVar7.heroAIData < 5)) {
             if (this.targetHero == null) throw; // [null/range check failed]
             lVar8 = HeroData.FindSameBook(this.targetHero,lVar7);
-            if (lVar8 != null) goto switchD_180999ee7_caseD_9;
+            if (lVar8 != null) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 7:
@@ -1448,15 +1448,15 @@ public class ChooseController
           iVar4 = 0;
           if (*(int64 *)(lVar8 + 24) != 0) {
             lVar8 = FUN_18046bca0(0);
-            uVar3 = FUN_18171e540(this.sendResultParam,"true");
+            uVar3 = FUN_18171eb50(this.sendResultParam,"true");
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = BuildingUIController.GetBuildingExtraKnowledge(lVar8,uVar3);
           }
           if ((lVar7 == null) || (lVar8 = lVar7.heroNickName) == null) throw; // [null/range check failed]
           if (*(char *)(lVar8 + 16) == false) {
-            if (*(float *)(lVar8 + 20) <= (float)iVar4 + fVar17) goto switchD_180999ee7_caseD_9;
+            if (*(float *)(lVar8 + 20) <= (float)iVar4 + fVar17) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 8:
@@ -1464,19 +1464,19 @@ public class ChooseController
           if (lVar7.summonID == 3) {
             if ((lVar7.heroFamilyName == null) || (this.targetHero == null)) throw; // [null/range check failed]
             lVar8 = HeroData.FindSkill(this.targetHero,*(uint32 *)(lVar7.heroFamilyName + 16));
-            if ((lVar8 == null) || (*(int *)(lVar8 + 20) < 10)) goto switchD_180999ee7_caseD_9;
+            if ((lVar8 == null) || (*(int *)(lVar8 + 20) < 10)) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         default:
-          goto switchD_180999ee7_caseD_9;
+          goto switchD_18099a577_caseD_9;
         case 11:
           if (lVar7 == null) throw; // [null/range check failed]
           cVar2 = ItemData.Equiped(lVar7,0);
-          if (!cVar2) goto switchD_180999ee7_caseD_9;
+          if (!cVar2) goto switchD_18099a577_caseD_9;
           plVar6 = (int64 *)(uint64)(uVar5 + 1);
-          goto LAB_180999b30;
+          goto LAB_18099a1c0;
         case 13:
           lVar8 = FUN_18046c400(0);
           if (lVar8 == null) throw; // [null/range check failed]
@@ -1484,11 +1484,11 @@ public class ChooseController
             lVar8 = FUN_18046c400(0);
             if ((lVar8 == null) || (*(int64 *)(lVar8 + 112) == 0)) throw; // [null/range check failed]
             cVar2 = HeroData.HaveHobby(*(int64 *)(lVar8 + 112),lVar7);
-            if (cVar2) goto switchD_180999ee7_caseD_9;
+            if (cVar2) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
-          goto switchD_180999ee7_caseD_9;
+          goto switchD_18099a577_caseD_9;
         case 14:
           if (lVar7 == null) throw; // [null/range check failed]
           if (lVar7.summonID == 3) {
@@ -1496,9 +1496,9 @@ public class ChooseController
             iVar4 = *(int *)(lVar7.heroFamilyName + 16);
             lVar8 = FUN_18046bc40();
             if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
-            if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) goto switchD_180999ee7_caseD_9;
+            if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 15:
@@ -1535,19 +1535,19 @@ public class ChooseController
             if (((lVar8 == null) || (*(int64 *)(lVar8 + 88) == 0)) ||
                (lVar8 = GameObject.GetComponent(*(int64 *)(lVar8 + 88),DAT_181d720a0)) == null)
             throw; // [null/range check failed]
-            if (lVar7 != *(int64 *)(lVar8 + 32)) goto switchD_180999ee7_caseD_9;
+            if (lVar7 != *(int64 *)(lVar8 + 32)) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
-          goto switchD_180999ee7_caseD_9;
+          goto switchD_18099a577_caseD_9;
         case 16:
           if (((lVar7 == null) || (lVar7.hide == null)) ||
              (lVar8 = *(int64 *)(lVar7.hide + 64)) == null) throw; // [null/range check failed]
           if (0.0 < *(float *)(lVar8 + 16)) {
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
-        switchD_180999ee7_caseD_9:
+        switchD_18099a577_caseD_9:
           uVar10 = this.targetGrid;
           lVar8 = FUN_18046c1a0(0);
           if (lVar8 == null) throw; // [null/range check failed]
@@ -1576,7 +1576,7 @@ public class ChooseController
             uStack_110 = 0;
             local_f8 = 0;
             uStack_f0 = 0;
-            FUN_181308660(&local_f8,&local_118,DAT_181dba8c0);
+            FUN_181308c70(&local_f8,&local_118,DAT_181dbaa70);
             local_108 = local_f8;
             uStack_100 = uStack_f0;
             local_d8 = 0;
@@ -1596,7 +1596,7 @@ public class ChooseController
             plVar6 = (int64 *)GameObject.GetComponent(lVar7,DAT_181d71e80);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
             (**(code **)(*plVar6 + 0x408))(plVar6,*(uint64 *)(*plVar6 + 0x410));
-            lVar8 = GameObject.AddComponent(lVar7,DAT_181dc5d30);
+            lVar8 = GameObject.AddComponent(lVar7,DAT_181dc5d48);
             if (lVar8 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar8 + 24) = "对方喜好\n赠送好感加倍";
             lVar7 = GameObject.GetComponent(lVar7,DAT_181d73448);
@@ -1608,13 +1608,13 @@ public class ChooseController
           if (lVar7 == null) throw; // [null/range check failed]
           if (0.0 < *(float *)(lVar7 + 76)) {
             cVar2 = ItemData.DetectPoisonNum(lVar7,0);
-            if (cVar2) goto switchD_180999ee7_caseD_9;
+            if (cVar2) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 20:
-          lVar8 = FUN_180990820();
+          lVar8 = FUN_180990eb0();
           if (lVar8 == null) throw; // [null/range check failed]
           plVar6 = plVar16;
           if (*(int *)(lVar8 + 40) == 0) {
@@ -1627,16 +1627,16 @@ public class ChooseController
               if (lVar7.summonLv == 4) {
             }
               do {
-                lVar8 = FUN_180990820(0);
+                lVar8 = FUN_180990eb0(0);
                 if ((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) throw; // [null/range check failed]
                 if (*(int *)(*(int64 *)(lVar8 + 32) + 24) <= (int)plVar6)
-                goto switchD_180999ee7_caseD_9;
-                lVar8 = FUN_180990820(0);
+                goto switchD_18099a577_caseD_9;
+                lVar8 = FUN_180990eb0(0);
                 if ((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) throw; // [null/range check failed]
                 uVar10 = FUN_180002f80(*(int64 *)(lVar8 + 32),plVar6);
                 cVar2 = Object.op_Inequality(uVar10,0);
                 if (cVar2) {
-                  lVar8 = FUN_180990820(0);
+                  lVar8 = FUN_180990eb0(0);
                   if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                       (lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 32),plVar6)) == null) ||
                      (lVar8 = GameObject.GetComponent(lVar8,DAT_181d720a0)) == null)
@@ -1667,7 +1667,7 @@ public class ChooseController
                 if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                     (lVar8 = *(int64 *)(*(int64 *)(lVar8 + 32) + 0x218)) == null) ||
                    (lVar8 = *(int64 *)(lVar8 + 40)) == null) throw; // [null/range check failed]
-                if (*(int *)(lVar8 + 24) <= (int)plVar6) goto switchD_180999ee7_caseD_9;
+                if (*(int *)(lVar8 + 24) <= (int)plVar6) goto switchD_18099a577_caseD_9;
                 lVar8 = FUN_18046c0a0(0);
                 if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                     ((lVar8 = *(int64 *)(*(int64 *)(lVar8 + 32) + 0x218), lVar8 == null ||
@@ -1695,9 +1695,9 @@ public class ChooseController
           }
           if ((lVar7 == null) || (lVar8 = lVar7.heroNickName) == null) throw; // [null/range check failed]
           if (*(char *)(lVar8 + 16) != false) break;
-          if (*(float *)(lVar8 + 20) <= fVar17) goto switchD_180999ee7_caseD_9;
+          if (*(float *)(lVar8 + 20) <= fVar17) goto switchD_18099a577_caseD_9;
           plVar6 = (int64 *)(uint64)(uVar5 + 1);
-          goto LAB_180999b30;
+          goto LAB_18099a1c0;
         case 27:
           if (lVar7 == null) throw; // [null/range check failed]
           if (lVar7.summonID == 3) {
@@ -1714,14 +1714,14 @@ public class ChooseController
               throw; // [null/range check failed]
               lVar8 = HeroData.FindSkill(*(int64 *)(lVar8 + 112),
                                           *(uint32 *)(lVar7.heroFamilyName + 16));
-              if (lVar8 == null) goto switchD_180999ee7_caseD_9;
+              if (lVar8 == null) goto switchD_18099a577_caseD_9;
             }
           }
         }
-        LAB_18099ac3b:
+        LAB_18099b2cb:
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_180999b30;
-        LAB_18099ba50:
+        goto LAB_18099a1c0;
+        LAB_18099c0e0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
@@ -1730,12 +1730,12 @@ public class ChooseController
           if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
              (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) {
             lVar7 = HeroData.GetForce(lVar7,0,0);
-            if (lVar7 == null) goto LAB_18099bf9f;
+            if (lVar7 == null) goto LAB_18099c62f;
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
                ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 != null &&
-                (lVar7 = lVar7.heroForceLv, plVar6 = plVar16) != null))) goto LAB_18099bc20;
+                (lVar7 = lVar7.heroForceLv, plVar6 = plVar16) != null))) goto LAB_18099c2b0;
           }
           throw; // [null/range check failed]
         }
@@ -1752,18 +1752,18 @@ public class ChooseController
           if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
           if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) {
             if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
             ChooseController.CreateChooseItem(this,uVar10,"仓库",0);
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099ba50;
-        LAB_18099bc20:
+        goto LAB_18099c0e0;
+        LAB_18099c2b0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
         plVar12 = plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bd20;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c3b0;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -1777,19 +1777,19 @@ public class ChooseController
           if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
           if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) {
             if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
             ChooseController.CreateChooseItem(this,uVar10,"藏经阁",0);
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099bc20;
-        LAB_18099bd20:
+        goto LAB_18099c2b0;
+        LAB_18099c3b0:
         if ((((GameController._instance == null) ||
              (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
-        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099bf9f;
+        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099c62f;
         lVar7 = FUN_18046c0a0(0);
         if (lVar7 == null) throw; // [null/range check failed]
         lVar7 = lVar7.summonControlable;
@@ -1814,19 +1814,19 @@ public class ChooseController
             if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
             if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) {
               if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
               ChooseController.CreateChooseItem(this,uVar10,"附庸藏经阁",0);
             }
           }
           plVar6 = (int64 *)(uint64)((int)plVar6 + 1);
         }
         plVar12 = (int64 *)(uint64)((int)plVar12 + 1);
-        goto LAB_18099bd20;
-        LAB_18099b930:
+        goto LAB_18099c3b0;
+        LAB_18099bfc0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c62f;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -1846,12 +1846,12 @@ public class ChooseController
               }
             }
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099b930;
-        LAB_18099b850:
+        goto LAB_18099bfc0;
+        LAB_18099bee0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c62f;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -1865,12 +1865,12 @@ public class ChooseController
           }
         }
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099b850;
-        LAB_18099b440:
+        goto LAB_18099bee0;
+        LAB_18099bad0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c62f;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -1879,128 +1879,128 @@ public class ChooseController
           if (lVar8 != null) {
             local_128[0] = *(uint32 *)(lVar8 + 20);
             uVar10 = Int32.ToString(local_128,0);
-            cVar2 = FUN_18181e400(local_res8,uVar10,DAT_181da3e58);
-            if (cVar2) goto LAB_18099b4aa;
-            goto LAB_18099b7e3;
+            cVar2 = FUN_18181ea10(local_res8,uVar10,DAT_181da3e70);
+            if (cVar2) goto LAB_18099bb3a;
+            goto LAB_18099be73;
           }
           throw; // [null/range check failed]
         }
-        LAB_18099b4aa:
+        LAB_18099bb3a:
         if (2 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 60);
-            plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099b7e3;
+            if (iVar4 < *piVar13) goto LAB_18099be73;
           }
         }
         if (3 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 60);
-            plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099b7e3;
+            if (*piVar13 < iVar4) goto LAB_18099be73;
           }
         }
         if (4 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 24);
-            plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 != *piVar13) goto LAB_18099b7e3;
+            if (iVar4 != *piVar13) goto LAB_18099be73;
           }
         }
         if (5 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 56);
-            plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099b7e3;
+            if (iVar4 < *piVar13) goto LAB_18099be73;
           }
         }
         if (*(int *)(param + 24) < 7) {
-        LAB_18099b7ca:
+        LAB_18099be5a:
           ChooseController.CreateChooseItem(this,lVar8,"仓库",0);
         }
         else {
-          plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
-          if (*piVar13 == -1) goto LAB_18099b7ca;
+          if (*piVar13 == -1) goto LAB_18099be5a;
           if (lVar8 == null) throw; // [null/range check failed]
           if (*(int *)(lVar8 + 20) == 0) {
             if (*(int64 *)(lVar8 + 96) == 0) throw; // [null/range check failed]
             iVar4 = *(int *)(*(int64 *)(lVar8 + 96) + 20);
-            plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
               FUN_1800d6070();
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 == *piVar13) goto LAB_18099b7ca;
+            if (iVar4 == *piVar13) goto LAB_18099be5a;
           }
         }
-        LAB_18099b7e3:
+        LAB_18099be73:
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099b440;
-        LAB_18099ace0:
+        goto LAB_18099bad0;
+        LAB_18099b370:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
@@ -2009,13 +2009,13 @@ public class ChooseController
           if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
              (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) {
             lVar7 = HeroData.GetForce(lVar7,0,0);
-            if (lVar7 == null) goto LAB_18099bf9f;
+            if (lVar7 == null) goto LAB_18099c62f;
             lVar7 = FUN_18046c0a0(0);
             if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
                ((lVar7 = WorldData.Player(lVar7.summonControlable,0), lVar7 != null &&
                 ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 != null &&
                  (lVar7 = lVar7.heroForceLv, plVar6 = plVar16) != null)))))
-            goto LAB_18099af40;
+            goto LAB_18099b5d0;
           }
           throw; // [null/range check failed]
         }
@@ -2041,19 +2041,19 @@ public class ChooseController
             lVar8 = HeroData.FindSkill();
             if (lVar8 == null) {
               if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
               ChooseController.CreateChooseItem(this,uVar10,"仓库",0);
             }
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099ace0;
-        LAB_18099af40:
+        goto LAB_18099b370;
+        LAB_18099b5d0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
         plVar12 = plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099b0d0;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099b760;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -2076,20 +2076,20 @@ public class ChooseController
             lVar8 = HeroData.FindSkill();
             if (lVar8 == null) {
               if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
               ChooseController.CreateChooseItem(this,uVar10,"藏经阁",0);
             }
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099af40;
-        LAB_18099b0d0:
+        goto LAB_18099b5d0;
+        LAB_18099b760:
         if ((((GameController._instance == null) ||
              (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
-        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099bf9f;
+        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099c62f;
         lVar7 = FUN_18046c0a0(0);
         if (lVar7 == null) throw; // [null/range check failed]
         lVar7 = lVar7.summonControlable;
@@ -2123,7 +2123,7 @@ public class ChooseController
               lVar8 = HeroData.FindSkill(lVar8);
               if (lVar8 == null) {
                 if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-                uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+                uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
                 ChooseController.CreateChooseItem(this,uVar10,"附庸藏经阁",0);
               }
             }
@@ -2131,36 +2131,36 @@ public class ChooseController
           plVar6 = (int64 *)(uint64)((int)plVar6 + 1);
         }
         plVar12 = (int64 *)(uint64)((int)plVar12 + 1);
-        goto LAB_18099b0d0;
-        LAB_180999899:
+        goto LAB_18099b760;
+        LAB_180999f29:
         iVar4 = (int)plVar6;
         local_130 = iVar4;
         lVar7 = *(int64 *)(pStatics_3d40 + 0x4d0);
         if (lVar7 == null) throw; // [null/range check failed]
         if (iVar4 < lVar7.summonLv) {
           if (local_res8 == 0) {
-        LAB_180999a5d:
+        LAB_18099a0ed:
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"ItemFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"ItemTypeFlitter");
             uVar10 = Int32.ToString(&local_130,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7);
             plVar6 = (int64 *)(uint64)(local_130 + 1);
           }
           else {
             uVar10 = Int32.ToString(&local_130,0);
-            cVar2 = FUN_18181e400(local_res8,uVar10);
-            if (cVar2) goto LAB_180999a5d;
+            cVar2 = FUN_18181ea10(local_res8,uVar10);
+            if (cVar2) goto LAB_18099a0ed;
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"ItemFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"ItemTypeFlitter");
             uVar10 = Int32.ToString(&local_130,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7,0);
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
@@ -2172,14 +2172,14 @@ public class ChooseController
             Toggle.set_isOn(lVar7);
             plVar6 = (int64 *)(uint64)(local_130 + 1);
           }
-          goto LAB_180999899;
+          goto LAB_180999f29;
         }
         plVar6 = plVar16;
-        if (local_120 != (uint64 *)0) goto LAB_180999b30;
+        if (local_120 != (uint64 *)0) goto LAB_18099a1c0;
     }
 
     // Token : 0x6000E89
-    // RVA   : 0x998490   Offset: 0x997890   Length: 0x1174
+    // RVA   : 0x998B20   Offset: 0x997F20   Length: 0x1174
     public void ShowChoosePanel(ChooseType _chooseType, List<object> param, GameObject _sendResultFucTarget, string _sendResultFuc, string _sendResultParam, ChooseFilterType _filterType, HeroData targetFavorHero, string _cancelFuc)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -2242,7 +2242,7 @@ public class ChooseController
         }
         plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
         plVar12 = plVar16;
-        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf348)) {
+        if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
           plVar12 = plVar6;
         }
         NGUITools.PlaySound(plVar12,0);
@@ -2273,8 +2273,8 @@ public class ChooseController
                   local_118 = (uint32)*puVar9;
                   uStack_114 = (uint32)((uint64)*puVar9 >> 32);
                   uVar10 = ShortcutExtensions.DOMove(uVar10,&local_118,0x3e19999a,0,0);
-                  uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc0f80);
-                  TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1db0);
+                  uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc1128);
+                  TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1f60);
                   if ((this.choosePanel != null) &&
                      (lVar7 = GameObject.get_transform(this.choosePanel,0)) != null) {
                     lVar7 = Transform.Find(lVar7,"ChoosePanelRoot",0);
@@ -2289,14 +2289,14 @@ public class ChooseController
                       {
                         uVar10 = Transform.Find(lVar7,"ChoosePanelRoot",0);
                         uVar10 = ShortcutExtensions.DOScale(uVar10);
-                        uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc0f80);
-                        TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1db0);
+                        uVar10 = TweenSettingsExtensions.SetEase(uVar10,2,DAT_181dc1128);
+                        TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1f60);
                         if ((this.choosePanel != null) &&
                            ((lVar7 = GameObject.get_transform(this.choosePanel,0),
                             lVar7 != null && (lVar7 = Transform.Find(lVar7,"BlackBackground",0)) != null)))
                         {
-                          plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d94460);
-                          puVar11 = (uint32 *)FUN_180d98fe0(local_88,0);
+                          plVar6 = (int64 *)Component.GetComponent(lVar7,DAT_181d94478);
+                          puVar11 = (uint32 *)FUN_180d995f0(local_88,0);
                           if (plVar6 != (int64 *)0) {
                             local_118 = *puVar11;
                             uStack_114 = puVar11[1];
@@ -2308,9 +2308,9 @@ public class ChooseController
                                 (lVar7 = GameObject.get_transform(this.choosePanel,0),
                                 lVar7 != null)) &&
                                (lVar7 = Transform.Find(lVar7,"BlackBackground",0)) != null) {
-                              uVar10 = Component.GetComponent(lVar7,DAT_181d94460);
+                              uVar10 = Component.GetComponent(lVar7,DAT_181d94478);
                               uVar10 = DOTweenModuleUI.DOFade(uVar10);
-                              TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1c20);
+                              TweenSettingsExtensions.SetUpdate(uVar10,1,DAT_181dc1dc8);
                               this.chooseType = _chooseType;
                               this.sendResultFucTarget = _sendResultFucTarget;
                               this.sendResultFuc = _sendResultFuc;
@@ -2351,9 +2351,9 @@ public class ChooseController
                                             plVar6 = *(int64 **)(*(int64 *)(param + 16) + 32);
                                             if ((lVar7 != null) && (plVar6 != (int64 *)0)) {
                                               if (*(int64 *)(*plVar6 + 64) !=
-                                                  *(int64 *)(DAT_181d80418 + 64)) {
+                                                  *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                FUN_1800d6070(plVar6,DAT_181d80418);
+                                                FUN_1800d6070(plVar6,DAT_181d80430);
                                               }
                                               puVar11 = (uint32 *)il2cpp_object_unbox();
                                               uVar10 = WorldData.GetHero(lVar7,*puVar11,0);
@@ -2375,7 +2375,7 @@ public class ChooseController
                                                     lVar7 = (**(code **)(*plVar12 + 0x168))
                                                                       (plVar12,*(uint64 *)
                                                                                 (*plVar12 + 0x170));
-                                                    lVar8 = FUN_1800d60b0(DAT_181da1040,1);
+                                                    lVar8 = FUN_1800d60b0(DAT_181da1058,1);
                                                     if (lVar8 != null) {
                                                       if (*(int *)(lVar8 + 24) == 0) {
                                                         uVar10 = il2cpp_internal();
@@ -2386,16 +2386,16 @@ public class ChooseController
                                                       if (lVar7 != null) {
                                                         uVar10 = String.Split(lVar7,lVar8,0);
                                                         plVar12 = (int64 *)
-                                                                  il2cpp_internal(DAT_181d97750);
-                                                        FUN_181827480(plVar12,uVar10,DAT_181da3c58);
-                                                        goto LAB_18099c314;
+                                                                  il2cpp_internal(DAT_181d97768);
+                                                        FUN_181827a90(plVar12,uVar10,DAT_181da3c70);
+                                                        goto LAB_18099c9a4;
                                                       }
                                                     }
                                                   }
                                                   throw; // [null/range check failed]
                                                 }
                                               }
-        LAB_18099c314:
+        LAB_18099c9a4:
                                               do {
                                                 while( true ) {
                                                   iVar4 = (int)plVar6;
@@ -2404,31 +2404,31 @@ public class ChooseController
                                                            (pStatics_3d40 + 0x4f8);
                                                   if (lVar7 == null) throw; // [null/range check failed]
                                                   plVar6 = plVar16;
-                                                  if (lVar7.summonLv <= iVar4) goto LAB_18099c689;
+                                                  if (lVar7.summonLv <= iVar4) goto LAB_18099cd19;
                                                   if (2 < *(int *)(param + 24)) break;
-        LAB_18099c3fa:
+        LAB_18099ca8a:
                                                   if (3 < *(int *)(param + 24)) {
                                                     plVar6 = (int64 *)
-                                                             FUN_180002f80(param,3,DAT_181d95e88);
+                                                             FUN_180002f80(param,3,DAT_181d95ea0);
                                                     if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                     if (*(int64 *)(*plVar6 + 64) !=
-                                                        *(int64 *)(DAT_181d80418 + 64)) {
+                                                        *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d6070(plVar6,DAT_181d80418);
+                                                      FUN_1800d6070(plVar6,DAT_181d80430);
                                                     }
                                                     piVar13 = (int *)il2cpp_object_unbox();
                                                     iVar4 = local_134;
                                                     if (*piVar13 != -1) {
                                                       plVar6 = (int64 *)
-                                                               FUN_180002f80(param,3,DAT_181d95e88);
+                                                               FUN_180002f80(param,3,DAT_181d95ea0);
                                                       if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                       if (*(int64 *)(*plVar6 + 64) !=
-                                                          *(int64 *)(DAT_181d80418 + 64)) {
+                                                          *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                        FUN_1800d6070(plVar6,DAT_181d80418);
+                                                        FUN_1800d6070(plVar6,DAT_181d80430);
                                                       }
                                                       piVar13 = (int *)il2cpp_object_unbox();
-                                                      if (*piVar13 < iVar4) goto LAB_18099c493;
+                                                      if (*piVar13 < iVar4) goto LAB_18099cb23;
                                                     }
                                                   }
                                                   if (((this.itemList == null) ||
@@ -2442,33 +2442,33 @@ public class ChooseController
                                                   if (((lVar7 == null) ||
                                                       (lVar7 = Transform.Find(lVar7,uVar10)) == null)
                                                      || (lVar7 = Component.GetComponent
-                                                                           (lVar7,DAT_181d962e0),
+                                                                           (lVar7,DAT_181d962f8),
                                                         lVar7 == null)) throw; // [null/range check failed]
                                                   Selectable.set_interactable(lVar7);
                                                   plVar6 = (int64 *)(uint64)(local_134 + 1);
                                                 }
                                                 plVar6 = (int64 *)
-                                                         FUN_180002f80(param,2,DAT_181d95e88);
+                                                         FUN_180002f80(param,2,DAT_181d95ea0);
                                                 if (plVar6 == (int64 *)0) break;
                                                 if (*(int64 *)(*plVar6 + 64) !=
-                                                    *(int64 *)(DAT_181d80418 + 64)) {
+                                                    *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d6070(plVar6,DAT_181d80418);
+                                                  FUN_1800d6070(plVar6,DAT_181d80430);
                                                 }
                                                 piVar13 = (int *)il2cpp_object_unbox();
                                                 iVar4 = local_134;
-                                                if (*piVar13 == -1) goto LAB_18099c3fa;
+                                                if (*piVar13 == -1) goto LAB_18099ca8a;
                                                 plVar6 = (int64 *)
-                                                         FUN_180002f80(param,2,DAT_181d95e88);
+                                                         FUN_180002f80(param,2,DAT_181d95ea0);
                                                 if (plVar6 == (int64 *)0) break;
                                                 if (*(int64 *)(*plVar6 + 64) !=
-                                                    *(int64 *)(DAT_181d80418 + 64)) {
+                                                    *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d6070(plVar6,DAT_181d80418);
+                                                  FUN_1800d6070(plVar6,DAT_181d80430);
                                                 }
                                                 piVar13 = (int *)il2cpp_object_unbox();
-                                                if (*piVar13 <= iVar4) goto LAB_18099c3fa;
-        LAB_18099c493:
+                                                if (*piVar13 <= iVar4) goto LAB_18099ca8a;
+        LAB_18099cb23:
                                                 if (((this.itemList == null) ||
                                                     (lVar7 = GameObject.get_transform
                                                                        (this.itemList,0),
@@ -2480,7 +2480,7 @@ public class ChooseController
                                                 if (((lVar7 == null) ||
                                                     (lVar7 = Transform.Find(lVar7,uVar10)) == null)
                                                    || (lVar7 = Component.GetComponent
-                                                                         (lVar7,DAT_181d962e0), lVar7 == null
+                                                                         (lVar7,DAT_181d962f8), lVar7 == null
                                                       )) break;
                                                 Selectable.set_interactable(lVar7,0);
                                                 if (((this.itemList == null) ||
@@ -2540,9 +2540,9 @@ public class ChooseController
                                             plVar6 = *(int64 **)(*(int64 *)(param + 16) + 32);
                                             if ((lVar7 != null) && (plVar6 != (int64 *)0)) {
                                               if (*(int64 *)(*plVar6 + 64) !=
-                                                  *(int64 *)(DAT_181d80418 + 64)) {
+                                                  *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                FUN_1800d6070(plVar6,DAT_181d80418);
+                                                FUN_1800d6070(plVar6,DAT_181d80430);
                                               }
                                               puVar11 = (uint32 *)il2cpp_object_unbox();
                                               lVar7 = WorldData.GetHero(lVar7,*puVar11,0);
@@ -2554,9 +2554,9 @@ public class ChooseController
                                                          (*(int64 *)(param + 16) + 32);
                                               if (plVar12 != (int64 *)0) {
                                                 if (*(int64 *)(*plVar12 + 64) !=
-                                                    *(int64 *)(DAT_181d80418 + 64)) {
+                                                    *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d6070(plVar12,DAT_181d80418);
+                                                  FUN_1800d6070(plVar12,DAT_181d80430);
                                                 }
                                                 puVar11 = (uint32 *)il2cpp_object_unbox();
                                                 local_128[0] = *puVar11;
@@ -2630,9 +2630,9 @@ public class ChooseController
                                                 local_res8 = 0;
                                                 plVar6 = plVar16;
                                                 if ((*(int *)(param + 24) < 2) ||
-                                                   (lVar7 = FUN_180002f80(param,1,DAT_181d95e88),
+                                                   (lVar7 = FUN_180002f80(param,1,DAT_181d95ea0),
                                                    lVar7 == null)) {
-        LAB_18099951e:
+        LAB_180999bae:
                                                   do {
                                                     while( true ) {
                                                       iVar4 = (int)plVar6;
@@ -2643,32 +2643,32 @@ public class ChooseController
                                                       if (lVar7 == null) throw; // [null/range check failed]
                                                       plVar6 = plVar16;
                                                       if (lVar7.summonLv <= iVar4)
-                                                      goto LAB_180999899;
+                                                      goto LAB_180999f29;
                                                       if (2 < *(int *)(param + 24)) break;
-        LAB_18099960a:
+        LAB_180999c9a:
                                                       if (3 < *(int *)(param + 24)) {
                                                         plVar6 = (int64 *)
-                                                                 FUN_180002f80(param,3,DAT_181d95e88);
+                                                                 FUN_180002f80(param,3,DAT_181d95ea0);
                                                         if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                         if (*(int64 *)(*plVar6 + 64) !=
-                                                            *(int64 *)(DAT_181d80418 + 64)) {
+                                                            *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d6070(plVar6,DAT_181d80418);
+                                                          FUN_1800d6070(plVar6,DAT_181d80430);
                                                         }
                                                         piVar13 = (int *)il2cpp_object_unbox();
                                                         iVar4 = local_138;
                                                         if (*piVar13 != -1) {
                                                           plVar6 = (int64 *)
-                                                                   FUN_180002f80(param,3,DAT_181d95e88);
+                                                                   FUN_180002f80(param,3,DAT_181d95ea0);
                                                           if (plVar6 == (int64 *)0)
                                                           throw; // [null/range check failed]
                                                           if (*(int64 *)(*plVar6 + 64) !=
-                                                              *(int64 *)(DAT_181d80418 + 64)) {
+                                                              *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                            FUN_1800d6070(plVar6,DAT_181d80418);
+                                                            FUN_1800d6070(plVar6,DAT_181d80430);
                                                           }
                                                           piVar13 = (int *)il2cpp_object_unbox();
-                                                          if (*piVar13 < iVar4) goto LAB_1809996a3;
+                                                          if (*piVar13 < iVar4) goto LAB_180999d33;
                                                         }
                                                       }
                                                       if (((this.itemList == null) ||
@@ -2684,33 +2684,33 @@ public class ChooseController
                                                           (lVar7 = Transform.Find(lVar7,uVar10),
                                                           lVar7 == null)) ||
                                                          (lVar7 = Component.GetComponent
-                                                                            (lVar7,DAT_181d962e0),
+                                                                            (lVar7,DAT_181d962f8),
                                                          lVar7 == null)) throw; // [null/range check failed]
                                                       Selectable.set_interactable(lVar7);
                                                       plVar6 = (int64 *)(uint64)(local_138 + 1);
                                                     }
                                                     plVar6 = (int64 *)
-                                                             FUN_180002f80(param,2,DAT_181d95e88);
+                                                             FUN_180002f80(param,2,DAT_181d95ea0);
                                                     if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                     if (*(int64 *)(*plVar6 + 64) !=
-                                                        *(int64 *)(DAT_181d80418 + 64)) {
+                                                        *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d6070(plVar6,DAT_181d80418);
+                                                      FUN_1800d6070(plVar6,DAT_181d80430);
                                                     }
                                                     piVar13 = (int *)il2cpp_object_unbox();
                                                     iVar4 = local_138;
-                                                    if (*piVar13 == -1) goto LAB_18099960a;
+                                                    if (*piVar13 == -1) goto LAB_180999c9a;
                                                     plVar6 = (int64 *)
-                                                             FUN_180002f80(param,2,DAT_181d95e88);
+                                                             FUN_180002f80(param,2,DAT_181d95ea0);
                                                     if (plVar6 == (int64 *)0) throw; // [null/range check failed]
                                                     if (*(int64 *)(*plVar6 + 64) !=
-                                                        *(int64 *)(DAT_181d80418 + 64)) {
+                                                        *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d6070(plVar6,DAT_181d80418);
+                                                      FUN_1800d6070(plVar6,DAT_181d80430);
                                                     }
                                                     piVar13 = (int *)il2cpp_object_unbox();
-                                                    if (*piVar13 <= iVar4) goto LAB_18099960a;
-        LAB_1809996a3:
+                                                    if (*piVar13 <= iVar4) goto LAB_180999c9a;
+        LAB_180999d33:
                                                     if (((this.itemList == null) ||
                                                         (lVar7 = GameObject.get_transform
                                                                            (this.itemList,
@@ -2722,7 +2722,7 @@ public class ChooseController
                                                     if (((lVar7 == null) ||
                                                         (lVar7 = Transform.Find(lVar7,uVar10), lVar7 == null
                                                         )) || (lVar7 = Component.GetComponent
-                                                                                 (lVar7,DAT_181d962e0),
+                                                                                 (lVar7,DAT_181d962f8),
                                                               lVar7 == null)) throw; // [null/range check failed]
                                                     Selectable.set_interactable(lVar7,0);
                                                     if (((this.itemList == null) ||
@@ -2742,12 +2742,12 @@ public class ChooseController
                                                   } while( true );
                                                 }
                                                 plVar12 = (int64 *)
-                                                          FUN_180002f80(param,1,DAT_181d95e88);
+                                                          FUN_180002f80(param,1,DAT_181d95ea0);
                                                 if (plVar12 != (int64 *)0) {
                                                   lVar7 = (**(code **)(*plVar12 + 0x168))
                                                                     (plVar12,*(uint64 *)
                                                                               (*plVar12 + 0x170));
-                                                  lVar8 = FUN_1800d60b0(DAT_181da1040,1);
+                                                  lVar8 = FUN_1800d60b0(DAT_181da1058,1);
                                                   if (lVar8 != null) {
                                                     if (*(int *)(lVar8 + 24) == 0) {
                                                       uVar10 = il2cpp_internal();
@@ -2757,9 +2757,9 @@ public class ChooseController
                                                     *(uint16 *)(lVar8 + 32) = 47;
                                                     if (lVar7 != null) {
                                                       uVar10 = String.Split(lVar7,lVar8,0);
-                                                      local_res8 = il2cpp_internal(DAT_181d97750);
-                                                      FUN_181827480(local_res8,uVar10,DAT_181da3c58);
-                                                      goto LAB_18099951e;
+                                                      local_res8 = il2cpp_internal(DAT_181d97768);
+                                                      FUN_181827a90(local_res8,uVar10,DAT_181da3c70);
+                                                      goto LAB_180999bae;
                                                     }
                                                   }
                                                 }
@@ -2787,11 +2787,11 @@ public class ChooseController
                                     if ((this.heroList != null) &&
                                        (GameObject.SetActive(this.heroList,1,0),
                                        plVar6 = plVar16, param != null)) {
-        LAB_180998cc0:
+        LAB_180999350:
                                       do {
                                         uVar5 = (uint32)plVar6;
                                         if ((int)*(uint32 *)(param + 24) <= (int)uVar5)
-                                        goto LAB_18099bf9f;
+                                        goto LAB_18099c62f;
                                         if (*(uint32 *)(param + 24) <= uVar5) {
                                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                         }
@@ -2820,16 +2820,16 @@ public class ChooseController
                                           lVar7 = FUN_18046c0a0(0);
                                           if ((lVar7 == null) || (lVar7.summonControlable == null)) break;
                                           plVar6 = (int64 *)WorldData.Player();
-                                          if (plVar12 == plVar6) goto LAB_180998f46;
+                                          if (plVar12 == plVar6) goto LAB_1809995d6;
                                           if (((plVar12 == (int64 *)0) || (plVar12[97] == 0)) ||
                                              (lVar7 = *(int64 *)(plVar12[97] + 16)) == null)
                                           break;
-                                          iVar4 = FUN_1800d6760(lVar7,16,DAT_181d8fa18);
+                                          iVar4 = FUN_1800d6760(lVar7,16,DAT_181d8fa30);
                                           if (iVar4 < 1) {
                                             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-                                            goto LAB_180998cc0;
+                                            goto LAB_180999350;
                                           }
-        LAB_180998e61:
+        LAB_1809994f1:
                                           uVar10 = *puVar9;
                                           lVar7 = FUN_18046c1a0(0);
                                           if (lVar7 == null) break;
@@ -2852,7 +2852,7 @@ public class ChooseController
                                           puVar9 = local_120;
                                         }
                                         else {
-                                          if (_filterType != 10) goto LAB_180998e61;
+                                          if (_filterType != 10) goto LAB_1809994f1;
                                           lVar7 = FUN_18046c0a0(0);
                                           if ((lVar7 == null) || (lVar7.summonControlable == null)) break;
                                           plVar6 = (int64 *)WorldData.Player();
@@ -2860,11 +2860,11 @@ public class ChooseController
                                             if (((plVar12 == (int64 *)0) || (plVar12[97] == 0)) ||
                                                (lVar7 = *(int64 *)(plVar12[97] + 16)) == null)
                                             break;
-                                            iVar4 = FUN_1800d6760(lVar7,17,DAT_181d8fa18);
-                                            if (0 < iVar4) goto LAB_180998e61;
+                                            iVar4 = FUN_1800d6760(lVar7,17,DAT_181d8fa30);
+                                            if (0 < iVar4) goto LAB_1809994f1;
                                           }
                                         }
-        LAB_180998f46:
+        LAB_1809995d6:
                                         plVar6 = (int64 *)(uint64)(uVar5 + 1);
                                       } while( true );
                                     }
@@ -2872,7 +2872,7 @@ public class ChooseController
                                 }
                               }
                               else {
-        LAB_18099bf9f:
+        LAB_18099c62f:
                                 uVar10 = this.targetGrid;
                                 GlobalData.SortChild(uVar10,0);
                                 if (this.targetGrid != null) {
@@ -2894,35 +2894,35 @@ public class ChooseController
           }
         }
         throw; // [null/range check failed]
-        LAB_18099c689:
+        LAB_18099cd19:
         iVar4 = (int)plVar6;
         local_12c = iVar4;
         lVar7 = *(int64 *)(pStatics_3d40 + 0x4a0);
         if (lVar7 == null) throw; // [null/range check failed]
         if (iVar4 < lVar7.summonLv) {
           if (plVar12 == (int64 *)0) {
-        LAB_18099c84d:
+        LAB_18099cedd:
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"SkillFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"SkillTypeFlitter");
             uVar10 = Int32.ToString(&local_12c,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7);
             plVar6 = (int64 *)(uint64)(local_12c + 1);
           }
           else {
             uVar10 = Int32.ToString(&local_12c,0);
-            cVar2 = FUN_18181e400(plVar12,uVar10);
-            if (cVar2) goto LAB_18099c84d;
+            cVar2 = FUN_18181ea10(plVar12,uVar10);
+            if (cVar2) goto LAB_18099cedd;
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"SkillFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"SkillTypeFlitter");
             uVar10 = Int32.ToString(&local_12c,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7,0);
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
@@ -2934,15 +2934,15 @@ public class ChooseController
             Toggle.set_isOn(lVar7);
             plVar6 = (int64 *)(uint64)(local_12c + 1);
           }
-          goto LAB_18099c689;
+          goto LAB_18099cd19;
         }
         lVar7 = this.targetHero;
-        if (lVar7 != null) goto LAB_18099c920;
+        if (lVar7 != null) goto LAB_18099cfb0;
         throw; // [null/range check failed]
-        LAB_18099c920:
+        LAB_18099cfb0:
         if (lVar7.kungfuSkills == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar7.kungfuSkills + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar7.kungfuSkills + 24) <= (int)uVar5) goto LAB_18099c62f;
         if ((lVar7 = lVar7?.kungfuSkills) == null) throw; // [null/range check failed]
         if (lVar7.summonLv <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2952,105 +2952,105 @@ public class ChooseController
           if (lVar7 != null) {
             local_128[0] = KungfuSkillLvData.Type(lVar7,0);
             uVar10 = Int32.ToString(local_128,0);
-            cVar2 = FUN_18181e400(plVar12,uVar10,DAT_181da3e58);
-            if (cVar2) goto LAB_18099c9ad;
-            goto LAB_18099d731;
+            cVar2 = FUN_18181ea10(plVar12,uVar10,DAT_181da3e70);
+            if (cVar2) goto LAB_18099d03d;
+            goto LAB_18099ddc1;
           }
           throw; // [null/range check failed]
         }
-        LAB_18099c9ad:
+        LAB_18099d03d:
         if (2 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if ((lVar7 == null) || (lVar8 = KungfuSkillLvData.DataBase(lVar7,0)) == null)
             throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 52);
-            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099d731;
+            if (iVar4 < *piVar13) goto LAB_18099ddc1;
           }
         }
         if (3 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if ((lVar7 == null) || (lVar8 = KungfuSkillLvData.DataBase(lVar7,0)) == null)
             throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 52);
-            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099d731;
+            if (*piVar13 < iVar4) goto LAB_18099ddc1;
           }
         }
         if (4 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.summonID;
-            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099d731;
+            if (iVar4 < *piVar13) goto LAB_18099ddc1;
           }
         }
         if (5 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.summonID;
-            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099d731;
+            if (*piVar13 < iVar4) goto LAB_18099ddc1;
           }
         }
         if (_filterType == 1) {
           if (lVar7 == null) throw; // [null/range check failed]
           cVar2 = KungfuSkillLvData.SkillMeetObstacleLv(lVar7,0);
           if ((!cVar2) || (cVar2 = KungfuSkillLvData.CanUpgrade(lVar7,0), !cVar2))
-          goto LAB_18099d731;
-        switchD_18099cd15_caseD_14:
+          goto LAB_18099ddc1;
+        switchD_18099d3a5_caseD_14:
           uVar10 = this.targetGrid;
           lVar7 = FUN_18046c1a0(0);
           if (lVar7 == null) throw; // [null/range check failed]
@@ -3078,14 +3078,14 @@ public class ChooseController
         }
         else {
           if (_filterType == 12) {
-        switchD_18099cd15_caseD_17:
+        switchD_18099d3a5_caseD_17:
             lVar8 = FUN_18046c0a0(0);
             if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                 (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0), lVar7 == null)) || (lVar8 == null))
             throw; // [null/range check failed]
             lVar7 = HeroData.FindSkill(lVar8,lVar7.isSummon,0);
-            if (lVar7 == null) goto switchD_18099cd15_caseD_14;
-            goto LAB_18099d731;
+            if (lVar7 == null) goto switchD_18099d3a5_caseD_14;
+            goto LAB_18099ddc1;
           }
           switch(_filterType) {
           case 18:
@@ -3118,10 +3118,10 @@ public class ChooseController
                     lVar8 = FUN_18046c400(0);
                     if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 112)) == null)
                     throw; // [null/range check failed]
-        LAB_18099cf02:
+        LAB_18099d592:
                     lVar7 = HeroData.FindSkill(lVar8,lVar7.isSummon,0);
                     if (lVar7 == null) throw; // [null/range check failed]
-                    if (lVar7.summonID < 10) goto switchD_18099cd15_caseD_14;
+                    if (lVar7.summonID < 10) goto switchD_18099d3a5_caseD_14;
                   }
                 }
               }
@@ -3157,7 +3157,7 @@ public class ChooseController
                     lVar8 = FUN_18046c0a0(0);
                     if (((lVar8 != null) && (*(int64 *)(lVar8 + 32) != 0)) &&
                        (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0)) != null)
-                    goto LAB_18099cf02;
+                    goto LAB_18099d592;
                     throw; // [null/range check failed]
                   }
                 }
@@ -3165,7 +3165,7 @@ public class ChooseController
             }
             break;
           default:
-            goto switchD_18099cd15_caseD_14;
+            goto switchD_18099d3a5_caseD_14;
           case 22:
             lVar8 = FUN_18046c400(0);
             if (lVar8 == null) throw; // [null/range check failed]
@@ -3195,7 +3195,7 @@ public class ChooseController
               if (((lVar15 == null) || (*(int64 *)(lVar15 + 112) == 0)) || (lVar8 == null))
               throw; // [null/range check failed]
               cVar2 = HeroData.HavePrelover(lVar8,*(uint32 *)(*(int64 *)(lVar15 + 112) + 88));
-              if (cVar2) goto switchD_18099cd15_caseD_14;
+              if (cVar2) goto switchD_18099d3a5_caseD_14;
               lVar8 = FUN_18046c0a0(0);
               if (((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                  (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0)) == null)
@@ -3209,9 +3209,9 @@ public class ChooseController
                 if (4 < lVar7.manageAiHour) break;
               }
             }
-            goto switchD_18099cd15_caseD_14;
+            goto switchD_18099d3a5_caseD_14;
           case 23:
-            goto switchD_18099cd15_caseD_17;
+            goto switchD_18099d3a5_caseD_17;
           case 26:
             lVar8 = FUN_18046c400(0);
             if (lVar8 == null) throw; // [null/range check failed]
@@ -3227,7 +3227,7 @@ public class ChooseController
                 lVar7 = FUN_18046c400(0);
                 if ((lVar7 == null) || (lVar7.heroFamilyName == null)) throw; // [null/range check failed]
                 if (iVar4 <= *(int *)(lVar7.heroFamilyName + 184))
-                goto switchD_18099cd15_caseD_14;
+                goto switchD_18099d3a5_caseD_14;
               }
             }
             break;
@@ -3245,17 +3245,17 @@ public class ChooseController
                    (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0)) == null)
                 throw; // [null/range check failed]
                 lVar7 = HeroData.FindSkill(lVar8,lVar7.isSummon,0);
-                if (lVar7 != null) goto switchD_18099cd15_caseD_14;
+                if (lVar7 != null) goto switchD_18099d3a5_caseD_14;
               }
             }
           }
         }
-        LAB_18099d731:
+        LAB_18099ddc1:
         lVar7 = this.targetHero;
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
         if (lVar7 == null) throw; // [null/range check failed]
-        goto LAB_18099c920;
-        LAB_180999b30:
+        goto LAB_18099cfb0;
+        LAB_18099a1c0:
         plVar12 = &this.targetHero;
         lVar7 = local_120[5];
         if (lVar7 == null) throw; // [null/range check failed]
@@ -3265,33 +3265,33 @@ public class ChooseController
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage, plVar6 = plVar16) != null) goto LAB_18099ba50;
+               (lVar7 = lVar7.selfStorage, plVar6 = plVar16) != null) goto LAB_18099c0e0;
           }
           else if (_filterType == 8) {
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099b930;
+               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099bfc0;
           }
           else if (_filterType == 6) {
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099b850;
+               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099bee0;
           }
           else if (_filterType == 25) {
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
-               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099b440;
+               (lVar7 = lVar7.selfStorage) != null) goto LAB_18099bad0;
           }
           else {
-            if (_filterType != 27) goto LAB_18099bf9f;
+            if (_filterType != 27) goto LAB_18099c62f;
             lVar7 = FUN_18046c0a0(0);
             if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
                ((lVar7 = WorldData.Player(lVar7.summonControlable,0), lVar7 != null &&
                 (lVar7 = lVar7.selfStorage, plVar6 = plVar16) != null)))
-            goto LAB_18099ace0;
+            goto LAB_18099b370;
           }
           throw; // [null/range check failed]
         }
@@ -3303,163 +3303,163 @@ public class ChooseController
           if (lVar7 != null) {
             local_128[0] = lVar7.summonID;
             uVar10 = Int32.ToString(local_128,0);
-            cVar2 = FUN_18181e400(local_res8,uVar10);
-            if (cVar2) goto LAB_180999b9a;
-            goto LAB_18099ac3b;
+            cVar2 = FUN_18181ea10(local_res8,uVar10);
+            if (cVar2) goto LAB_18099a22a;
+            goto LAB_18099b2cb;
           }
           throw; // [null/range check failed]
         }
-        LAB_180999b9a:
+        LAB_18099a22a:
         if (2 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar7 + 60);
-            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099ac3b;
+            if (iVar4 < *piVar13) goto LAB_18099b2cb;
           }
         }
         if (3 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar7 + 60);
-            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099ac3b;
+            if (*piVar13 < iVar4) goto LAB_18099b2cb;
           }
         }
         if (4 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.summonLv;
-            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 != *piVar13) goto LAB_18099ac3b;
+            if (iVar4 != *piVar13) goto LAB_18099b2cb;
           }
         }
         if (5 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar7 == null) throw; // [null/range check failed]
             iVar4 = lVar7.dailyAIManaged;
-            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+            plVar6 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar6,DAT_181d80418);
+              FUN_1800d6070(plVar6,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099ac3b;
+            if (iVar4 < *piVar13) goto LAB_18099b2cb;
           }
         }
         if (6 < *(int *)(param + 24)) {
-          plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+          plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar6,DAT_181d80418);
+            FUN_1800d6070(plVar6,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
-          if (*piVar13 == -1) goto LAB_180999ec2;
+          if (*piVar13 == -1) goto LAB_18099a552;
           if (lVar7 == null) throw; // [null/range check failed]
           if (lVar7.summonID == null) {
             if (lVar7.hide != null) {
               iVar4 = *(int *)(lVar7.hide + 20);
-              plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+              plVar6 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
               if (plVar6 != (int64 *)0) {
-                if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+                if (*(int64 *)(*plVar6 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6070(plVar6,DAT_181d80418);
+                  FUN_1800d6070(plVar6,DAT_181d80430);
                 }
                 piVar13 = (int *)il2cpp_object_unbox();
-                if (iVar4 == *piVar13) goto LAB_180999ec2;
-                goto LAB_18099ac3b;
+                if (iVar4 == *piVar13) goto LAB_18099a552;
+                goto LAB_18099b2cb;
               }
             }
             throw; // [null/range check failed]
           }
-          goto LAB_18099ac3b;
+          goto LAB_18099b2cb;
         }
-        LAB_180999ec2:
+        LAB_18099a552:
         switch(_filterType) {
         case 2:
           if (lVar7 == null) throw; // [null/range check failed]
-          if (lVar7.summonID - 1U < 2) goto switchD_180999ee7_caseD_9;
+          if (lVar7.summonID - 1U < 2) goto switchD_18099a577_caseD_9;
           plVar6 = (int64 *)(uint64)(uVar5 + 1);
-          goto LAB_180999b30;
+          goto LAB_18099a1c0;
         case 3:
           if (lVar7 == null) throw; // [null/range check failed]
           if ((lVar7.summonID == 5) && (lVar7.summonLv < 2)) {
-        LAB_180999f31:
+        LAB_18099a5c1:
             lVar8 = FUN_18046bde0();
             if (lVar8 == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar8 + 48) != lVar7) {
               lVar8 = FUN_18046bde0();
               if (lVar8 == null) throw; // [null/range check failed]
-              if (*(int64 *)(lVar8 + 64) != lVar7) goto switchD_180999ee7_caseD_9;
+              if (*(int64 *)(lVar8 + 64) != lVar7) goto switchD_18099a577_caseD_9;
               plVar6 = (int64 *)(uint64)(uVar5 + 1);
-              goto LAB_180999b30;
+              goto LAB_18099a1c0;
             }
           }
           break;
         case 4:
           if (lVar7 == null) throw; // [null/range check failed]
-          if ((lVar7.summonID == 5) && (lVar7.summonLv == 2)) goto LAB_180999f31;
+          if ((lVar7.summonID == 5) && (lVar7.summonLv == 2)) goto LAB_18099a5c1;
           break;
         case 5:
           if (lVar7 == null) throw; // [null/range check failed]
-          if ((lVar7.summonID == 5) && (lVar7.summonLv == 3)) goto LAB_180999f31;
+          if ((lVar7.summonID == 5) && (lVar7.summonLv == 3)) goto LAB_18099a5c1;
           break;
         case 6:
           if (lVar7 == null) throw; // [null/range check failed]
           if ((lVar7.summonID == 3) && (lVar7.heroAIData < 5)) {
             if (this.targetHero == null) throw; // [null/range check failed]
             lVar8 = HeroData.FindSameBook(this.targetHero,lVar7);
-            if (lVar8 != null) goto switchD_180999ee7_caseD_9;
+            if (lVar8 != null) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 7:
@@ -3472,15 +3472,15 @@ public class ChooseController
           iVar4 = 0;
           if (*(int64 *)(lVar8 + 24) != 0) {
             lVar8 = FUN_18046bca0(0);
-            uVar3 = FUN_18171e540(this.sendResultParam,"true");
+            uVar3 = FUN_18171eb50(this.sendResultParam,"true");
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = BuildingUIController.GetBuildingExtraKnowledge(lVar8,uVar3);
           }
           if ((lVar7 == null) || (lVar8 = lVar7.heroNickName) == null) throw; // [null/range check failed]
           if (*(char *)(lVar8 + 16) == false) {
-            if (*(float *)(lVar8 + 20) <= (float)iVar4 + fVar17) goto switchD_180999ee7_caseD_9;
+            if (*(float *)(lVar8 + 20) <= (float)iVar4 + fVar17) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 8:
@@ -3488,19 +3488,19 @@ public class ChooseController
           if (lVar7.summonID == 3) {
             if ((lVar7.heroFamilyName == null) || (this.targetHero == null)) throw; // [null/range check failed]
             lVar8 = HeroData.FindSkill(this.targetHero,*(uint32 *)(lVar7.heroFamilyName + 16));
-            if ((lVar8 == null) || (*(int *)(lVar8 + 20) < 10)) goto switchD_180999ee7_caseD_9;
+            if ((lVar8 == null) || (*(int *)(lVar8 + 20) < 10)) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         default:
-          goto switchD_180999ee7_caseD_9;
+          goto switchD_18099a577_caseD_9;
         case 11:
           if (lVar7 == null) throw; // [null/range check failed]
           cVar2 = ItemData.Equiped(lVar7,0);
-          if (!cVar2) goto switchD_180999ee7_caseD_9;
+          if (!cVar2) goto switchD_18099a577_caseD_9;
           plVar6 = (int64 *)(uint64)(uVar5 + 1);
-          goto LAB_180999b30;
+          goto LAB_18099a1c0;
         case 13:
           lVar8 = FUN_18046c400(0);
           if (lVar8 == null) throw; // [null/range check failed]
@@ -3508,11 +3508,11 @@ public class ChooseController
             lVar8 = FUN_18046c400(0);
             if ((lVar8 == null) || (*(int64 *)(lVar8 + 112) == 0)) throw; // [null/range check failed]
             cVar2 = HeroData.HaveHobby(*(int64 *)(lVar8 + 112),lVar7);
-            if (cVar2) goto switchD_180999ee7_caseD_9;
+            if (cVar2) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
-          goto switchD_180999ee7_caseD_9;
+          goto switchD_18099a577_caseD_9;
         case 14:
           if (lVar7 == null) throw; // [null/range check failed]
           if (lVar7.summonID == 3) {
@@ -3520,9 +3520,9 @@ public class ChooseController
             iVar4 = *(int *)(lVar7.heroFamilyName + 16);
             lVar8 = FUN_18046bc40();
             if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
-            if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) goto switchD_180999ee7_caseD_9;
+            if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 15:
@@ -3559,19 +3559,19 @@ public class ChooseController
             if (((lVar8 == null) || (*(int64 *)(lVar8 + 88) == 0)) ||
                (lVar8 = GameObject.GetComponent(*(int64 *)(lVar8 + 88),DAT_181d720a0)) == null)
             throw; // [null/range check failed]
-            if (lVar7 != *(int64 *)(lVar8 + 32)) goto switchD_180999ee7_caseD_9;
+            if (lVar7 != *(int64 *)(lVar8 + 32)) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
-          goto switchD_180999ee7_caseD_9;
+          goto switchD_18099a577_caseD_9;
         case 16:
           if (((lVar7 == null) || (lVar7.hide == null)) ||
              (lVar8 = *(int64 *)(lVar7.hide + 64)) == null) throw; // [null/range check failed]
           if (0.0 < *(float *)(lVar8 + 16)) {
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
-        switchD_180999ee7_caseD_9:
+        switchD_18099a577_caseD_9:
           uVar10 = this.targetGrid;
           lVar8 = FUN_18046c1a0(0);
           if (lVar8 == null) throw; // [null/range check failed]
@@ -3600,7 +3600,7 @@ public class ChooseController
             uStack_110 = 0;
             local_f8 = 0;
             uStack_f0 = 0;
-            FUN_181308660(&local_f8,&local_118,DAT_181dba8c0);
+            FUN_181308c70(&local_f8,&local_118,DAT_181dbaa70);
             local_108 = local_f8;
             uStack_100 = uStack_f0;
             local_d8 = 0;
@@ -3620,7 +3620,7 @@ public class ChooseController
             plVar6 = (int64 *)GameObject.GetComponent(lVar7,DAT_181d71e80);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
             (**(code **)(*plVar6 + 0x408))(plVar6,*(uint64 *)(*plVar6 + 0x410));
-            lVar8 = GameObject.AddComponent(lVar7,DAT_181dc5d30);
+            lVar8 = GameObject.AddComponent(lVar7,DAT_181dc5d48);
             if (lVar8 == null) throw; // [null/range check failed]
             *(uint64 *)(lVar8 + 24) = "对方喜好\n赠送好感加倍";
             lVar7 = GameObject.GetComponent(lVar7,DAT_181d73448);
@@ -3632,13 +3632,13 @@ public class ChooseController
           if (lVar7 == null) throw; // [null/range check failed]
           if (0.0 < *(float *)(lVar7 + 76)) {
             cVar2 = ItemData.DetectPoisonNum(lVar7,0);
-            if (cVar2) goto switchD_180999ee7_caseD_9;
+            if (cVar2) goto switchD_18099a577_caseD_9;
             plVar6 = (int64 *)(uint64)(uVar5 + 1);
-            goto LAB_180999b30;
+            goto LAB_18099a1c0;
           }
           break;
         case 20:
-          lVar8 = FUN_180990820();
+          lVar8 = FUN_180990eb0();
           if (lVar8 == null) throw; // [null/range check failed]
           plVar6 = plVar16;
           if (*(int *)(lVar8 + 40) == 0) {
@@ -3651,16 +3651,16 @@ public class ChooseController
               if (lVar7.summonLv == 4) {
             }
               do {
-                lVar8 = FUN_180990820(0);
+                lVar8 = FUN_180990eb0(0);
                 if ((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) throw; // [null/range check failed]
                 if (*(int *)(*(int64 *)(lVar8 + 32) + 24) <= (int)plVar6)
-                goto switchD_180999ee7_caseD_9;
-                lVar8 = FUN_180990820(0);
+                goto switchD_18099a577_caseD_9;
+                lVar8 = FUN_180990eb0(0);
                 if ((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) throw; // [null/range check failed]
                 uVar10 = FUN_180002f80(*(int64 *)(lVar8 + 32),plVar6);
                 cVar2 = Object.op_Inequality(uVar10,0);
                 if (cVar2) {
-                  lVar8 = FUN_180990820(0);
+                  lVar8 = FUN_180990eb0(0);
                   if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                       (lVar8 = FUN_180002f80(*(int64 *)(lVar8 + 32),plVar6)) == null) ||
                      (lVar8 = GameObject.GetComponent(lVar8,DAT_181d720a0)) == null)
@@ -3691,7 +3691,7 @@ public class ChooseController
                 if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                     (lVar8 = *(int64 *)(*(int64 *)(lVar8 + 32) + 0x218)) == null) ||
                    (lVar8 = *(int64 *)(lVar8 + 40)) == null) throw; // [null/range check failed]
-                if (*(int *)(lVar8 + 24) <= (int)plVar6) goto switchD_180999ee7_caseD_9;
+                if (*(int *)(lVar8 + 24) <= (int)plVar6) goto switchD_18099a577_caseD_9;
                 lVar8 = FUN_18046c0a0(0);
                 if ((((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                     ((lVar8 = *(int64 *)(*(int64 *)(lVar8 + 32) + 0x218), lVar8 == null ||
@@ -3719,9 +3719,9 @@ public class ChooseController
           }
           if ((lVar7 == null) || (lVar8 = lVar7.heroNickName) == null) throw; // [null/range check failed]
           if (*(char *)(lVar8 + 16) != false) break;
-          if (*(float *)(lVar8 + 20) <= fVar17) goto switchD_180999ee7_caseD_9;
+          if (*(float *)(lVar8 + 20) <= fVar17) goto switchD_18099a577_caseD_9;
           plVar6 = (int64 *)(uint64)(uVar5 + 1);
-          goto LAB_180999b30;
+          goto LAB_18099a1c0;
         case 27:
           if (lVar7 == null) throw; // [null/range check failed]
           if (lVar7.summonID == 3) {
@@ -3738,14 +3738,14 @@ public class ChooseController
               throw; // [null/range check failed]
               lVar8 = HeroData.FindSkill(*(int64 *)(lVar8 + 112),
                                           *(uint32 *)(lVar7.heroFamilyName + 16));
-              if (lVar8 == null) goto switchD_180999ee7_caseD_9;
+              if (lVar8 == null) goto switchD_18099a577_caseD_9;
             }
           }
         }
-        LAB_18099ac3b:
+        LAB_18099b2cb:
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_180999b30;
-        LAB_18099ba50:
+        goto LAB_18099a1c0;
+        LAB_18099c0e0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
@@ -3754,12 +3754,12 @@ public class ChooseController
           if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
              (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) {
             lVar7 = HeroData.GetForce(lVar7,0,0);
-            if (lVar7 == null) goto LAB_18099bf9f;
+            if (lVar7 == null) goto LAB_18099c62f;
             lVar7 = FUN_18046c0a0(0);
             if ((((lVar7 != null) && (lVar7.summonControlable != null)) &&
                 (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) &&
                ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 != null &&
-                (lVar7 = lVar7.heroForceLv, plVar6 = plVar16) != null))) goto LAB_18099bc20;
+                (lVar7 = lVar7.heroForceLv, plVar6 = plVar16) != null))) goto LAB_18099c2b0;
           }
           throw; // [null/range check failed]
         }
@@ -3776,18 +3776,18 @@ public class ChooseController
           if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
           if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) {
             if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
             ChooseController.CreateChooseItem(this,uVar10,"仓库",0);
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099ba50;
-        LAB_18099bc20:
+        goto LAB_18099c0e0;
+        LAB_18099c2b0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
         plVar12 = plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bd20;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c3b0;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -3801,19 +3801,19 @@ public class ChooseController
           if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
           if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) {
             if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+            uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
             ChooseController.CreateChooseItem(this,uVar10,"藏经阁",0);
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099bc20;
-        LAB_18099bd20:
+        goto LAB_18099c2b0;
+        LAB_18099c3b0:
         if ((((GameController._instance == null) ||
              (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
-        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099bf9f;
+        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099c62f;
         lVar7 = FUN_18046c0a0(0);
         if (lVar7 == null) throw; // [null/range check failed]
         lVar7 = lVar7.summonControlable;
@@ -3838,19 +3838,19 @@ public class ChooseController
             if ((lVar8 == null) || (*(int64 *)(lVar8 + 24) == 0)) throw; // [null/range check failed]
             if (iVar4 == *(int *)(*(int64 *)(lVar8 + 24) + 16)) {
               if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
               ChooseController.CreateChooseItem(this,uVar10,"附庸藏经阁",0);
             }
           }
           plVar6 = (int64 *)(uint64)((int)plVar6 + 1);
         }
         plVar12 = (int64 *)(uint64)((int)plVar12 + 1);
-        goto LAB_18099bd20;
-        LAB_18099b930:
+        goto LAB_18099c3b0;
+        LAB_18099bfc0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c62f;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -3870,12 +3870,12 @@ public class ChooseController
               }
             }
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099b930;
-        LAB_18099b850:
+        goto LAB_18099bfc0;
+        LAB_18099bee0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c62f;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -3889,12 +3889,12 @@ public class ChooseController
           }
         }
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099b850;
-        LAB_18099b440:
+        goto LAB_18099bee0;
+        LAB_18099bad0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099bf9f;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099c62f;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -3903,128 +3903,128 @@ public class ChooseController
           if (lVar8 != null) {
             local_128[0] = *(uint32 *)(lVar8 + 20);
             uVar10 = Int32.ToString(local_128,0);
-            cVar2 = FUN_18181e400(local_res8,uVar10,DAT_181da3e58);
-            if (cVar2) goto LAB_18099b4aa;
-            goto LAB_18099b7e3;
+            cVar2 = FUN_18181ea10(local_res8,uVar10,DAT_181da3e70);
+            if (cVar2) goto LAB_18099bb3a;
+            goto LAB_18099be73;
           }
           throw; // [null/range check failed]
         }
-        LAB_18099b4aa:
+        LAB_18099bb3a:
         if (2 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 60);
-            plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,2,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099b7e3;
+            if (iVar4 < *piVar13) goto LAB_18099be73;
           }
         }
         if (3 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 60);
-            plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,3,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (*piVar13 < iVar4) goto LAB_18099b7e3;
+            if (*piVar13 < iVar4) goto LAB_18099be73;
           }
         }
         if (4 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 24);
-            plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,4,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 != *piVar13) goto LAB_18099b7e3;
+            if (iVar4 != *piVar13) goto LAB_18099be73;
           }
         }
         if (5 < *(int *)(param + 24)) {
-          plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
           if (*piVar13 != -1) {
             if (lVar8 == null) throw; // [null/range check failed]
             iVar4 = *(int *)(lVar8 + 56);
-            plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,5,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar16,DAT_181d80418);
+              FUN_1800d6070(plVar16,DAT_181d80430);
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 < *piVar13) goto LAB_18099b7e3;
+            if (iVar4 < *piVar13) goto LAB_18099be73;
           }
         }
         if (*(int *)(param + 24) < 7) {
-        LAB_18099b7ca:
+        LAB_18099be5a:
           ChooseController.CreateChooseItem(this,lVar8,"仓库",0);
         }
         else {
-          plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+          plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
           if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+          if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar16,DAT_181d80418);
+            FUN_1800d6070(plVar16,DAT_181d80430);
           }
           piVar13 = (int *)il2cpp_object_unbox();
-          if (*piVar13 == -1) goto LAB_18099b7ca;
+          if (*piVar13 == -1) goto LAB_18099be5a;
           if (lVar8 == null) throw; // [null/range check failed]
           if (*(int *)(lVar8 + 20) == 0) {
             if (*(int64 *)(lVar8 + 96) == 0) throw; // [null/range check failed]
             iVar4 = *(int *)(*(int64 *)(lVar8 + 96) + 20);
-            plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95e88);
+            plVar16 = (int64 *)FUN_180002f80(param,6,DAT_181d95ea0);
             if (plVar16 == (int64 *)0) throw; // [null/range check failed]
-            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80418 + 64)) {
+            if (*(int64 *)(*plVar16 + 64) != *(int64 *)(DAT_181d80430 + 64)) {
                           // WARNING: Subroutine does not return
               FUN_1800d6070();
             }
             piVar13 = (int *)il2cpp_object_unbox();
-            if (iVar4 == *piVar13) goto LAB_18099b7ca;
+            if (iVar4 == *piVar13) goto LAB_18099be5a;
           }
         }
-        LAB_18099b7e3:
+        LAB_18099be73:
         plVar16 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099b440;
-        LAB_18099ace0:
+        goto LAB_18099bad0;
+        LAB_18099b370:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
@@ -4033,13 +4033,13 @@ public class ChooseController
           if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
              (lVar7 = WorldData.Player(lVar7.summonControlable,0)) != null) {
             lVar7 = HeroData.GetForce(lVar7,0,0);
-            if (lVar7 == null) goto LAB_18099bf9f;
+            if (lVar7 == null) goto LAB_18099c62f;
             lVar7 = FUN_18046c0a0(0);
             if (((lVar7 != null) && (lVar7.summonControlable != null)) &&
                ((lVar7 = WorldData.Player(lVar7.summonControlable,0), lVar7 != null &&
                 ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 != null &&
                  (lVar7 = lVar7.heroForceLv, plVar6 = plVar16) != null)))))
-            goto LAB_18099af40;
+            goto LAB_18099b5d0;
           }
           throw; // [null/range check failed]
         }
@@ -4065,19 +4065,19 @@ public class ChooseController
             lVar8 = HeroData.FindSkill();
             if (lVar8 == null) {
               if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
               ChooseController.CreateChooseItem(this,uVar10,"仓库",0);
             }
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099ace0;
-        LAB_18099af40:
+        goto LAB_18099b370;
+        LAB_18099b5d0:
         lVar8 = lVar7.summonSourceHero;
         if (lVar8 == null) throw; // [null/range check failed]
         uVar5 = (uint32)plVar6;
         plVar12 = plVar16;
-        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099b0d0;
+        if (*(int *)(lVar8 + 24) <= (int)uVar5) goto LAB_18099b760;
         if (*(uint32 *)(lVar8 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
@@ -4100,20 +4100,20 @@ public class ChooseController
             lVar8 = HeroData.FindSkill();
             if (lVar8 == null) {
               if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+              uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
               ChooseController.CreateChooseItem(this,uVar10,"藏经阁",0);
             }
           }
         }
         plVar6 = (int64 *)(uint64)(uVar5 + 1);
-        goto LAB_18099af40;
-        LAB_18099b0d0:
+        goto LAB_18099b5d0;
+        LAB_18099b760:
         if ((((GameController._instance == null) ||
              (lVar7 = GameController._instance.worldData) == null) ||
             (lVar7 = WorldData.Player(lVar7,0)) == null) ||
            ((lVar7 = HeroData.GetForce(lVar7,0,0), lVar7 == null || (lVar7.heroAIData == null))))
         throw; // [null/range check failed]
-        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099bf9f;
+        if (*(int *)(lVar7.heroAIData + 24) <= (int)plVar12) goto LAB_18099c62f;
         lVar7 = FUN_18046c0a0(0);
         if (lVar7 == null) throw; // [null/range check failed]
         lVar7 = lVar7.summonControlable;
@@ -4147,7 +4147,7 @@ public class ChooseController
               lVar8 = HeroData.FindSkill(lVar8);
               if (lVar8 == null) {
                 if (lVar7.summonSourceHero == null) throw; // [null/range check failed]
-                uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f18);
+                uVar10 = FUN_180002f80(lVar7.summonSourceHero,plVar6,DAT_181d90f30);
                 ChooseController.CreateChooseItem(this,uVar10,"附庸藏经阁",0);
               }
             }
@@ -4155,36 +4155,36 @@ public class ChooseController
           plVar6 = (int64 *)(uint64)((int)plVar6 + 1);
         }
         plVar12 = (int64 *)(uint64)((int)plVar12 + 1);
-        goto LAB_18099b0d0;
-        LAB_180999899:
+        goto LAB_18099b760;
+        LAB_180999f29:
         iVar4 = (int)plVar6;
         local_130 = iVar4;
         lVar7 = *(int64 *)(pStatics_3d40 + 0x4d0);
         if (lVar7 == null) throw; // [null/range check failed]
         if (iVar4 < lVar7.summonLv) {
           if (local_res8 == 0) {
-        LAB_180999a5d:
+        LAB_18099a0ed:
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"ItemFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"ItemTypeFlitter");
             uVar10 = Int32.ToString(&local_130,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7);
             plVar6 = (int64 *)(uint64)(local_130 + 1);
           }
           else {
             uVar10 = Int32.ToString(&local_130,0);
-            cVar2 = FUN_18181e400(local_res8,uVar10);
-            if (cVar2) goto LAB_180999a5d;
+            cVar2 = FUN_18181ea10(local_res8,uVar10);
+            if (cVar2) goto LAB_18099a0ed;
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
                (lVar7 = Transform.Find(lVar7,"ItemFlitter")) == null) throw; // [null/range check failed]
             lVar7 = Transform.Find(lVar7,"ItemTypeFlitter");
             uVar10 = Int32.ToString(&local_130,0);
             if (((lVar7 == null) || (lVar7 = Transform.Find(lVar7,uVar10)) == null) ||
-               (lVar7 = Component.GetComponent(lVar7,DAT_181d962e0)) == null) throw; // [null/range check failed]
+               (lVar7 = Component.GetComponent(lVar7,DAT_181d962f8)) == null) throw; // [null/range check failed]
             Selectable.set_interactable(lVar7,0);
             if (((this.itemList == null) ||
                 (lVar7 = GameObject.get_transform(this.itemList,0)) == null) ||
@@ -4196,14 +4196,14 @@ public class ChooseController
             Toggle.set_isOn(lVar7);
             plVar6 = (int64 *)(uint64)(local_130 + 1);
           }
-          goto LAB_180999899;
+          goto LAB_180999f29;
         }
         plVar6 = plVar16;
-        if (local_120 != (uint64 *)0) goto LAB_180999b30;
+        if (local_120 != (uint64 *)0) goto LAB_18099a1c0;
     }
 
     // Token : 0x6000E8A
-    // RVA   : 0x996460   Offset: 0x995860   Length: 0x2A7
+    // RVA   : 0x996AF0   Offset: 0x995EF0   Length: 0x2A7
     public void CreateChooseItem(ItemData targetItem, string fromStorage)
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -4233,11 +4233,11 @@ public class ChooseController
                    lVar3 != null)) {
                   *(int64 *)(lVar3 + 56) = fromStorage;
                   if (fromStorage != null) {
-                    cVar1 = FUN_18171e540(fromStorage,"仓库",0);
+                    cVar1 = FUN_18171eb50(fromStorage,"仓库",0);
                     if (!cVar1) {
-                      cVar1 = FUN_18171e540(fromStorage,"藏经阁",0);
+                      cVar1 = FUN_18171eb50(fromStorage,"藏经阁",0);
                       if (!cVar1) {
-                        cVar1 = FUN_18171e540(fromStorage,"附庸藏经阁",0);
+                        cVar1 = FUN_18171eb50(fromStorage,"附庸藏经阁",0);
                         if (!cVar1) {
                           return;
                         }
@@ -4271,7 +4271,7 @@ public class ChooseController
     }
 
     // Token : 0x6000E8B
-    // RVA   : 0x996320   Offset: 0x995720   Length: 0x138
+    // RVA   : 0x9969B0   Offset: 0x995DB0   Length: 0x138
     public void ChooseObj(GameObject targetObj)
     {
         ulong uVar1;
@@ -4290,9 +4290,9 @@ public class ChooseController
           lVar2 = GameObject.get_transform(this.chooseResult,0);
           if ((this.chooseRoot != null) &&
              (uVar1 = GameObject.get_transform(this.chooseRoot,0), lVar2 != null)) {
-            FUN_180daa820(lVar2,uVar1,0);
+            FUN_180daae30(lVar2,uVar1,0);
             if ((this.sendResultParam == null) ||
-               (cVar3 = FUN_18171e540(this.sendResultParam,"",0), cVar3)) {
+               (cVar3 = FUN_18171eb50(this.sendResultParam,"",0), cVar3)) {
               if (this.sendResultFucTarget == null) throw; // [null/range check failed]
               GameObject.SendMessage(this.sendResultFucTarget,this.sendResultFuc,0);
             }
@@ -4309,12 +4309,12 @@ public class ChooseController
     }
 
     // Token : 0x6000E8C
-    // RVA   : 0x99EB80   Offset: 0x99DF80   Length: 0xBF
+    // RVA   : 0x99F210   Offset: 0x99E610   Length: 0xBF
     public void UnshowChoosePanel()
     {
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
         plVar2 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
           plVar2 = plVar1;
         }
         NGUITools.PlaySound(plVar2,0);
@@ -4329,7 +4329,7 @@ public class ChooseController
     }
 
     // Token : 0x6000E8D
-    // RVA   : 0x996710   Offset: 0x995B10   Length: 0x60F
+    // RVA   : 0x996DA0   Offset: 0x9961A0   Length: 0x60F
     public void HideChoosePanel()
     {
         ulong uVar1;
@@ -4342,15 +4342,15 @@ public class ChooseController
            (lVar4 = GameObject.get_transform(this.choosePanel,0)) != null) {
           uVar1 = Transform.Find(lVar4,"ChoosePanelRoot",0);
           uVar1 = ShortcutExtensions.DOScale(uVar1,0,0x3dcccccd,0);
-          uVar1 = TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1db0);
-          uVar5 = new OnTooltipCB(this,DAT_181d908f0,0);
-          TweenSettingsExtensions.OnComplete(uVar1,uVar5,DAT_181dc01d0);
+          uVar1 = TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1f60);
+          uVar5 = new OnTooltipCB(this,DAT_181d90908,0);
+          TweenSettingsExtensions.OnComplete(uVar1,uVar5,DAT_181dc0380);
           if ((this.choosePanel != null) &&
              ((lVar4 = GameObject.get_transform(this.choosePanel,0), lVar4 != null &&
               (lVar4 = Transform.Find(lVar4,"BlackBackground",0)) != null))) {
-            uVar1 = Component.GetComponent(lVar4,DAT_181d94460);
+            uVar1 = Component.GetComponent(lVar4,DAT_181d94478);
             uVar1 = DOTweenModuleUI.DOFade(uVar1,0,0x3dcccccd,0);
-            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1c20);
+            TweenSettingsExtensions.SetUpdate(uVar1,1,DAT_181dc1dc8);
             uVar1 = this.targetGrid;
             GlobalData.DeleteAllChild(uVar1,0);
             iVar6 = this.chooseType;
@@ -4377,7 +4377,7 @@ public class ChooseController
                         ((lVar4 = Transform.Find(lVar4,"SkillFlitter",0), lVar4 == null ||
                          ((lVar4 = Transform.GetChild(lVar4,iVar6), lVar4 == null ||
                           (lVar4 = Transform.GetChild(lVar4,iVar2)) == null))))) ||
-                       (lVar4 = Component.GetComponent(lVar4,DAT_181d962e0)) == null)
+                       (lVar4 = Component.GetComponent(lVar4,DAT_181d962f8)) == null)
                     throw; // [null/range check failed]
                     Toggle.set_isOn(lVar4);
                     iVar2 = iVar2 + 1;
@@ -4410,7 +4410,7 @@ public class ChooseController
                         ((lVar4 = Transform.Find(lVar4,"ItemFlitter",0), lVar4 == null ||
                          ((lVar4 = Transform.GetChild(lVar4,iVar6), lVar4 == null ||
                           (lVar4 = Transform.GetChild(lVar4,iVar2)) == null))))) ||
-                       (lVar4 = Component.GetComponent(lVar4,DAT_181d962e0)) == null)
+                       (lVar4 = Component.GetComponent(lVar4,DAT_181d962f8)) == null)
                     throw; // [null/range check failed]
                     Toggle.set_isOn(lVar4);
                     iVar2 = iVar2 + 1;
@@ -4446,7 +4446,7 @@ public class ChooseController
                         ((lVar4 = Transform.Find(lVar4,"HeroFlitter",0), lVar4 == null ||
                          ((lVar4 = Transform.GetChild(lVar4,iVar6), lVar4 == null ||
                           (lVar4 = Transform.GetChild(lVar4,iVar2)) == null))))) ||
-                       (lVar4 = Component.GetComponent(lVar4,DAT_181d962e0)) == null)
+                       (lVar4 = Component.GetComponent(lVar4,DAT_181d962f8)) == null)
                     throw; // [null/range check failed]
                     Toggle.set_isOn(lVar4);
                     iVar2 = iVar2 + 1;
@@ -4461,7 +4461,7 @@ public class ChooseController
     }
 
     // Token : 0x6000E8E
-    // RVA   : 0x99D990   Offset: 0x99CD90   Length: 0x7A3
+    // RVA   : 0x99E020   Offset: 0x99D420   Length: 0x7A3
     public void TypeFlitterAllChanged(bool allOn)
     {
         int iVar1;
@@ -4469,7 +4469,7 @@ public class ChooseController
         plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
         plVar5 = (int64 *)0;
         plVar4 = plVar5;
-        if ((plVar2 != (int64 *)0) && (plVar4 = (int64 *)0, *plVar2 == DAT_181daf348)) {
+        if ((plVar2 != (int64 *)0) && (plVar4 = (int64 *)0, *plVar2 == DAT_181daf360)) {
           plVar4 = plVar2;
         }
         NGUITools.PlaySound(plVar4,0);
@@ -4503,7 +4503,7 @@ public class ChooseController
                      ((lVar3 = Transform.Find(lVar3,"HeroFlitter",0), lVar3 == null ||
                       (((lVar3 = Transform.Find(lVar3,"HeroTypeFlitter",0), lVar3 == null ||
                         (lVar3 = Transform.GetChild(lVar3,plVar5)) == null) ||
-                       (lVar3 = Component.GetComponent(lVar3,DAT_181d962e0)) == null))))) break;
+                       (lVar3 = Component.GetComponent(lVar3,DAT_181d962f8)) == null))))) break;
                   Toggle.set_isOn(lVar3);
                 }
               }
@@ -4542,7 +4542,7 @@ public class ChooseController
                        || (lVar3 = Transform.Find(lVar3,"SkillFlitter",0)) == null) ||
                       ((lVar3 = Transform.Find(lVar3,"SkillTypeFlitter",0), lVar3 == null ||
                        (lVar3 = Transform.GetChild(lVar3,plVar5)) == null))) ||
-                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962e0)) == null) break;
+                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962f8)) == null) break;
                   Toggle.set_isOn(lVar3);
                 }
               }
@@ -4584,7 +4584,7 @@ public class ChooseController
                       || ((lVar3 = Transform.Find(lVar3,"ItemFlitter",0), lVar3 == null ||
                           ((lVar3 = Transform.Find(lVar3,"ItemTypeFlitter",0), lVar3 == null ||
                            (lVar3 = Transform.GetChild(lVar3,plVar5)) == null))))) ||
-                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962e0)) == null) break;
+                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962f8)) == null) break;
                   Toggle.set_isOn(lVar3);
                 }
               }
@@ -4597,7 +4597,7 @@ public class ChooseController
     }
 
     // Token : 0x6000E8F
-    // RVA   : 0x997120   Offset: 0x996520   Length: 0x7A3
+    // RVA   : 0x9977B0   Offset: 0x996BB0   Length: 0x7A3
     public void LvFlitterAllChanged(bool allOn)
     {
         int iVar1;
@@ -4605,7 +4605,7 @@ public class ChooseController
         plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
         plVar5 = (int64 *)0;
         plVar4 = plVar5;
-        if ((plVar2 != (int64 *)0) && (plVar4 = (int64 *)0, *plVar2 == DAT_181daf348)) {
+        if ((plVar2 != (int64 *)0) && (plVar4 = (int64 *)0, *plVar2 == DAT_181daf360)) {
           plVar4 = plVar2;
         }
         NGUITools.PlaySound(plVar4,0);
@@ -4639,7 +4639,7 @@ public class ChooseController
                      ((lVar3 = Transform.Find(lVar3,"HeroFlitter",0), lVar3 == null ||
                       (((lVar3 = Transform.Find(lVar3,"HeroLvFlitter",0), lVar3 == null ||
                         (lVar3 = Transform.GetChild(lVar3,plVar5)) == null) ||
-                       (lVar3 = Component.GetComponent(lVar3,DAT_181d962e0)) == null))))) break;
+                       (lVar3 = Component.GetComponent(lVar3,DAT_181d962f8)) == null))))) break;
                   Toggle.set_isOn(lVar3);
                 }
               }
@@ -4678,7 +4678,7 @@ public class ChooseController
                        || (lVar3 = Transform.Find(lVar3,"SkillFlitter",0)) == null) ||
                       ((lVar3 = Transform.Find(lVar3,"SkillLvFlitter",0), lVar3 == null ||
                        (lVar3 = Transform.GetChild(lVar3,plVar5)) == null))) ||
-                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962e0)) == null) break;
+                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962f8)) == null) break;
                   Toggle.set_isOn(lVar3);
                 }
               }
@@ -4720,7 +4720,7 @@ public class ChooseController
                       || ((lVar3 = Transform.Find(lVar3,"ItemFlitter",0), lVar3 == null ||
                           ((lVar3 = Transform.Find(lVar3,"ItemLvFlitter",0), lVar3 == null ||
                            (lVar3 = Transform.GetChild(lVar3,plVar5)) == null))))) ||
-                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962e0)) == null) break;
+                     (lVar3 = Component.GetComponent(lVar3,DAT_181d962f8)) == null) break;
                   Toggle.set_isOn(lVar3);
                 }
               }
@@ -4733,7 +4733,7 @@ public class ChooseController
     }
 
     // Token : 0x6000E90
-    // RVA   : 0x99E140   Offset: 0x99D540   Length: 0xA30
+    // RVA   : 0x99E7D0   Offset: 0x99DBD0   Length: 0xA30
     public void TypeFlitterChanged(GameObject flitter)
     {
         int iVar3;
@@ -4744,7 +4744,7 @@ public class ChooseController
         plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
         plVar10 = (int64 *)0;
         plVar9 = plVar10;
-        if ((plVar5 != (int64 *)0) && (plVar9 = (int64 *)0, *plVar5 == DAT_181daf348)) {
+        if ((plVar5 != (int64 *)0) && (plVar9 = (int64 *)0, *plVar5 == DAT_181daf360)) {
           plVar9 = plVar5;
         }
         NGUITools.PlaySound(plVar9,0);
@@ -4772,12 +4772,12 @@ public class ChooseController
                    ((lVar8 = Transform.Find(lVar8,"Viewport",0), lVar8 == null ||
                     ((((((lVar8 = Transform.Find(lVar8,"Content",0), lVar8 == null ||
                          (lVar8 = Transform.GetChild(lVar8,plVar10)) == null) ||
-                        (lVar8 = Component.GetComponent(lVar8,DAT_181d95ae0)) == null) ||
+                        (lVar8 = Component.GetComponent(lVar8,DAT_181d95af8)) == null) ||
                        ((*(int64 *)(lVar8 + 32) == 0 ||
                         (lVar8 = KungfuSkillLvData.DataBase(*(int64 *)(lVar8 + 32),0)) == null))
                        ) || (uVar7 = Int32.ToString(lVar8 + 52,0), lVar6 == null)) ||
                      ((lVar6 = Transform.Find(lVar6,uVar7,0), lVar6 == null ||
-                      (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null)))))))
+                      (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null)))))))
                 throw; // [null/range check failed]
                 bVar11 = *(byte *)(lVar6 + 0x118);
                 if ((((this.itemList == null) ||
@@ -4788,7 +4788,7 @@ public class ChooseController
                      (lVar6 = Component.GetComponent(lVar6)) == null))) ||
                    (*(int64 *)(lVar6 + 32) == 0)) throw; // [null/range check failed]
                 iVar4 = KungfuSkillLvData.Type();
-        LAB_18099e6cc:
+        LAB_18099ed5c:
                 if (iVar4 == iVar3) {
                   if (((this.itemList == null) ||
                       (lVar6 = GameObject.get_transform(this.itemList,0)) == null) ||
@@ -4818,11 +4818,11 @@ public class ChooseController
                        && (lVar8 = Transform.Find(lVar8,"Viewport",0)) != null) &&
                       (((lVar8 = Transform.Find(lVar8,"Content",0), lVar8 != null &&
                         (lVar8 = Transform.GetChild(lVar8,plVar10)) != null) &&
-                       (((lVar8 = Component.GetComponent(lVar8,DAT_181d945e0), lVar8 != null &&
+                       (((lVar8 = Component.GetComponent(lVar8,DAT_181d945f8), lVar8 != null &&
                          ((*(int64 *)(lVar8 + 32) != 0 &&
                           (uVar7 = Int32.ToString(*(int64 *)(lVar8 + 32) + 60,0), lVar6 != null))))
                         && (lVar6 = Transform.Find(lVar6,uVar7,0)) != null))))) &&
-                     (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) != null) {
+                     (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) != null) {
                     bVar11 = *(byte *)(lVar6 + 0x118);
                     if (((((this.itemList != null) &&
                           (lVar6 = GameObject.get_transform(this.itemList,0)) != null
@@ -4832,7 +4832,7 @@ public class ChooseController
                        ((lVar6 = Component.GetComponent(lVar6), lVar6 != null &&
                         (*(int64 *)(lVar6 + 32) != 0)))) {
                       iVar4 = *(int *)(*(int64 *)(lVar6 + 32) + 20);
-                      goto LAB_18099e6cc;
+                      goto LAB_18099ed5c;
                     }
                   }
                 }
@@ -4860,11 +4860,11 @@ public class ChooseController
                   ((lVar8 = Transform.Find(lVar8,"Viewport",0), lVar8 == null ||
                    ((((lVar8 = Transform.Find(lVar8,"Content",0), lVar8 == null ||
                       (lVar8 = Transform.GetChild(lVar8,plVar10)) == null) ||
-                     (lVar8 = Component.GetComponent(lVar8,DAT_181d940e0)) == null) ||
+                     (lVar8 = Component.GetComponent(lVar8,DAT_181d940f8)) == null) ||
                     ((*(int64 *)(lVar8 + 32) == 0 ||
                      (uVar7 = Int32.ToString(*(int64 *)(lVar8 + 32) + 184,0), lVar6 == null)))))))) ||
                  ((lVar6 = Transform.Find(lVar6,uVar7,0), lVar6 == null ||
-                  (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null))) break;
+                  (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null))) break;
               bVar11 = *(byte *)(lVar6 + 0x118);
               if (((this.heroList == null) ||
                   (lVar6 = GameObject.get_transform(this.heroList,0)) == null) ||
@@ -4900,7 +4900,7 @@ public class ChooseController
     }
 
     // Token : 0x6000E91
-    // RVA   : 0x9978D0   Offset: 0x996CD0   Length: 0xA51
+    // RVA   : 0x997F60   Offset: 0x997360   Length: 0xA51
     public void LvFlitterChanged(GameObject flitter)
     {
         int iVar3;
@@ -4913,7 +4913,7 @@ public class ChooseController
         local_res10[0] = 0;
         plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
         plVar9 = plVar11;
-        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
           plVar9 = plVar5;
         }
         NGUITools.PlaySound(plVar9,0);
@@ -4941,12 +4941,12 @@ public class ChooseController
                    ((lVar8 = Transform.Find(lVar8,"Viewport",0), lVar8 == null ||
                     ((((lVar8 = Transform.Find(lVar8,"Content",0), lVar8 == null ||
                        (lVar8 = Transform.GetChild(lVar8,plVar11)) == null) ||
-                      (lVar8 = Component.GetComponent(lVar8,DAT_181d95ae0)) == null) ||
+                      (lVar8 = Component.GetComponent(lVar8,DAT_181d95af8)) == null) ||
                      (*(int64 *)(lVar8 + 32) == 0)))))) throw; // [null/range check failed]
                 local_res10[0] = KungfuSkillLvData.Type(*(int64 *)(lVar8 + 32),0);
                 uVar7 = Int32.ToString(local_res10,0);
                 if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-                   (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null) throw; // [null/range check failed]
+                   (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) throw; // [null/range check failed]
                 bVar10 = *(byte *)(lVar6 + 0x118);
                 if ((((this.itemList == null) ||
                      (lVar6 = GameObject.get_transform(this.itemList,0)) == null) ||
@@ -4957,7 +4957,7 @@ public class ChooseController
                    ((*(int64 *)(lVar6 + 32) == 0 ||
                     (lVar6 = KungfuSkillLvData.DataBase()) == null))) throw; // [null/range check failed]
                 iVar4 = *(int *)(lVar6 + 52);
-        LAB_180997e81:
+        LAB_180998511:
                 if (iVar4 == iVar3) {
                   if (((this.itemList == null) ||
                       (lVar6 = GameObject.get_transform(this.itemList,0)) == null) ||
@@ -4987,12 +4987,12 @@ public class ChooseController
                       && (lVar8 = Transform.Find(lVar8,"Viewport",0)) != null) &&
                      (((lVar8 = Transform.Find(lVar8,"Content",0), lVar8 != null &&
                        (lVar8 = Transform.GetChild(lVar8,plVar11)) != null) &&
-                      ((lVar8 = Component.GetComponent(lVar8,DAT_181d945e0), lVar8 != null &&
+                      ((lVar8 = Component.GetComponent(lVar8,DAT_181d945f8), lVar8 != null &&
                        (*(int64 *)(lVar8 + 32) != 0)))))) {
                     local_res10[0] = *(uint32 *)(*(int64 *)(lVar8 + 32) + 20);
                     uVar7 = Int32.ToString(local_res10,0);
                     if (((lVar6 != null) && (lVar6 = Transform.Find(lVar6,uVar7,0)) != null) &&
-                       (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) != null) {
+                       (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) != null) {
                       bVar10 = *(byte *)(lVar6 + 0x118);
                       if ((((((this.itemList != null) &&
                              (lVar6 = GameObject.get_transform(this.itemList,0),
@@ -5002,7 +5002,7 @@ public class ChooseController
                           (lVar6 = Component.GetComponent(lVar6)) != null) &&
                          (*(int64 *)(lVar6 + 32) != 0)) {
                         iVar4 = *(int *)(*(int64 *)(lVar6 + 32) + 60);
-                        goto LAB_180997e81;
+                        goto LAB_180998511;
                       }
                     }
                   }
@@ -5031,14 +5031,14 @@ public class ChooseController
                  ((lVar8 = Transform.Find(lVar8,"Viewport",0), lVar8 == null ||
                   ((((lVar8 = Transform.Find(lVar8,"Content",0), lVar8 == null ||
                      (lVar8 = Transform.GetChild(lVar8,plVar11)) == null) ||
-                    (lVar8 = Component.GetComponent(lVar8,DAT_181d940e0)) == null) ||
+                    (lVar8 = Component.GetComponent(lVar8,DAT_181d940f8)) == null) ||
                    (*(int64 *)(lVar8 + 32) == 0)))))) break;
               uVar7 = "1";
               if (*(char *)(*(int64 *)(lVar8 + 32) + 92) != false) {
                 uVar7 = "0";
               }
               if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-                 (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null) break;
+                 (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) break;
               bVar10 = *(byte *)(lVar6 + 0x118);
               if ((((this.heroList == null) ||
                    (lVar6 = GameObject.get_transform(this.heroList,0)) == null) ||

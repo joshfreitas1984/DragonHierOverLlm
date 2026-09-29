@@ -20,33 +20,33 @@ public class SpePoisonData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000ED0
-    // RVA   : 0xC585C0   Offset: 0xC579C0   Length: 0xBF
+    // RVA   : 0xC58BD0   Offset: 0xC57FD0   Length: 0xBF
     public void /*ctor*/()
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d940d0);
-        FUN_18132faf0(lVar1,DAT_181d90998);
+        lVar1 = il2cpp_internal(DAT_181d940e8);
+        FUN_181330100(lVar1,DAT_181d909b0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
           this.material = lVar1;
           return;
         }
     }
 
     // Token : 0x6000ED1
-    // RVA   : 0xC584F0   Offset: 0xC578F0   Length: 0xCB
+    // RVA   : 0xC58B00   Offset: 0xC57F00   Length: 0xCB
     public void Reset()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d940d0);
-        FUN_18132faf0(lVar1,DAT_181d90998);
+        lVar1 = il2cpp_internal(DAT_181d940e8);
+        FUN_181330100(lVar1,DAT_181d909b0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
           this.material = lVar1;
           this.leftTime = 0;
           this.finished = 0;
@@ -56,7 +56,7 @@ public class SpePoisonData
     }
 
     // Token : 0x6000ED2
-    // RVA   : 0xC583E0   Offset: 0xC577E0   Length: 0x10E
+    // RVA   : 0xC589F0   Offset: 0xC57DF0   Length: 0x10E
     public float GetTotalScore(int spePoisonType)
     {
         long lVar1;
@@ -84,7 +84,7 @@ public class SpePoisonData
             }
             if (*(int64 *)(lVar2 + lVar1._items) != 0) {
               if ((this.material == null) ||
-                 (lVar1 = FUN_180002f80(this.material,uVar3,DAT_181d90f18)) == null)
+                 (lVar1 = FUN_180002f80(this.material,uVar3,DAT_181d90f30)) == null)
               break;
               fVar4 = fVar4 + (float)*(int *)(lVar1 + 56);
             }
@@ -96,7 +96,7 @@ public class SpePoisonData
     }
 
     // Token : 0x6000ED3
-    // RVA   : 0xC583A0   Offset: 0xC577A0   Length: 0x3B
+    // RVA   : 0xC589B0   Offset: 0xC57DB0   Length: 0x3B
     public float GetScoreLv(int spePoisonType)
     {
         float fVar1;

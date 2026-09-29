@@ -20,7 +20,7 @@ public class PrisonData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000ECD
-    // RVA   : 0xB11BA0   Offset: 0xB10FA0   Length: 0x6D
+    // RVA   : 0xB12260   Offset: 0xB11660   Length: 0x6D
     public void /*ctor*/()
     {
         ulong uVar1;

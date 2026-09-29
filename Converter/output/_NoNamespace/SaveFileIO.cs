@@ -11,7 +11,7 @@ public class SaveFileIO
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009D2
-    // RVA   : 0x9784E0   Offset: 0x9778E0   Length: 0xAE
+    // RVA   : 0x978B70   Offset: 0x977F70   Length: 0xAE
     private static bool IsGzip(FileStream fs)
     {
         int iVar1;
@@ -35,8 +35,8 @@ public class SaveFileIO
     }
 
     // Token : 0x60009D3
-    // RVA   : 0xBB1C10   Offset: 0xBB1010   Length: 0x39F
-    public static void WriteJson<T>(string path, T data)
+    // RVA   : 0xBB22D0   Offset: 0xBB16D0   Length: 0x34D
+    public static void WriteJson<T>(string path, T data, bool compress)
     {
         bool cVar1;
         ulong uVar2;
@@ -45,47 +45,45 @@ public class SaveFileIO
         long lVar5;
         ulong uVar6;
         long lVar7;
-        long lVar8;
-        ulong in_stack_ffffffffffffff48;
-        uint uVar9;
-        uVar9 = (uint32)((uint64)in_stack_ffffffffffffff48 >> 32);
+        ulong in_stack_ffffffffffffff58;
+        uint uVar8;
+        uVar8 = (uint32)((uint64)in_stack_ffffffffffffff58 >> 32);
         uVar2 = String.Concat(path,".tmp",0);
         lVar3 = JsonSerializer.CreateDefault(0);
-        lVar4 = new FileStream(uVar2,2,2,(uint64)uVar9 << 32,0x10000,0);
-        lVar5 = new GZipStream(lVar4,1,1,0);
+        lVar4 = new FileStream(uVar2,2,2,(uint64)uVar8 << 32,0x10000,0);
+        lVar5 = lVar4;
+        if (compress) {
+          lVar5 = new GZipStream(lVar4,1,1,0);
+        }
         uVar6 = new UTF8Encoding(0,0);
         lVar7 = new StreamWriter(lVar5,uVar6,0x10000,0);
-        lVar8 = new JsonTextWriter(lVar7,0);
-        if (lVar3 == null) {
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
-        JsonSerializer.Serialize(lVar3,lVar8,data,0);
-        if (lVar8 != null) {
-          FUN_180002970(0,DAT_181d78da0,lVar8);
-        }
-        if (lVar7 != null) {
-          FUN_180002970(0,DAT_181d78da0,lVar7);
-        }
-        if (lVar5 != null) {
-          FUN_180002970(0,DAT_181d78da0,lVar5);
-        }
-        if (lVar4 != null) {
-          FUN_180002970(0,DAT_181d78da0,lVar4);
-        }
-        cVar1 = File.Exists(path);
-        if (cVar1) {
-          File.Delete(path,0);
-        }
-        File.Move(uVar2,path,0);
-        cVar1 = File.Exists(uVar2,0);
-        if (cVar1) {
-          File.Delete(uVar2,0);
+        lVar5 = new JsonTextWriter(lVar7,0);
+        if (lVar3 != null) {
+          JsonSerializer.Serialize(lVar3,lVar5,data,0);
+          if (lVar5 != null) {
+            FUN_180002970(0,DAT_181d78db8,lVar5);
+          }
+          if (lVar7 != null) {
+            FUN_180002970(0,DAT_181d78db8,lVar7);
+          }
+          if (lVar4 != null) {
+            FUN_180002970(0,DAT_181d78db8,lVar4);
+          }
+          cVar1 = File.Exists(path);
+          if (cVar1) {
+            File.Delete(path,0);
+          }
+          File.Move(uVar2,path,0);
+          cVar1 = File.Exists(uVar2,0);
+          if (cVar1) {
+            File.Delete(uVar2,0);
+          }
+          return;
         }
     }
 
     // Token : 0x60009D4
-    // RVA   : 0xBB1930   Offset: 0xBB0D30   Length: 0x2D2
+    // RVA   : 0xBB1FF0   Offset: 0xBB13F0   Length: 0x2D2
     public static T ReadJson<T>(string path)
     {
         bool cVar1;
@@ -117,13 +115,13 @@ public class SaveFileIO
           uVar5 = (**(code **)**(uint64 **)(param_2 + 48))
                             (lVar3,lVar2,(uint64 *)**(uint64 **)(param_2 + 48));
           if (lVar2 != null) {
-            FUN_180002970(0,DAT_181d78da0,lVar2);
+            FUN_180002970(0,DAT_181d78db8,lVar2);
           }
           if (lVar6 != null) {
-            FUN_180002970(0,DAT_181d78da0,lVar6);
+            FUN_180002970(0,DAT_181d78db8,lVar6);
           }
           if (lVar4 != null) {
-            FUN_180002970(0,DAT_181d78da0,lVar4);
+            FUN_180002970(0,DAT_181d78db8,lVar4);
           }
           return uVar5;
         }

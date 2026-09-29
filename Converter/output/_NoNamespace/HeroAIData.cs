@@ -58,13 +58,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = param_2;
-        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9de0);
+        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9df8);
           param_2 = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
         if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a3a0(lVar4,param_2,DAT_181d7ae88);
+        cVar1 = FUN_18182a9b0(lVar4,param_2,DAT_181d7aea0);
         if (cVar1) {
           iVar2 = Int32.Parse(param_3,0);
           this.bigMapTargetID = iVar2;
@@ -110,13 +110,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9de0);
+        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9df8);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
         if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a3a0(lVar4,_aiStuffType,DAT_181d7ae88);
+        cVar1 = FUN_18182a9b0(lVar4,_aiStuffType,DAT_181d7aea0);
         if (cVar1) {
           iVar2 = Int32.Parse(_keepWorkingTimeLeft,0);
           this.bigMapTargetID = iVar2;
@@ -162,13 +162,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9de0);
+        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9df8);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
         if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a3a0(lVar4,_aiStuffType,DAT_181d7ae88);
+        cVar1 = FUN_18182a9b0(lVar4,_aiStuffType,DAT_181d7aea0);
         if (cVar1) {
           iVar2 = Int32.Parse(_aiStuffTarget,0);
           this.bigMapTargetID = iVar2;
@@ -214,13 +214,13 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181da9de0 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9de0 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9de0);
+        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181da9df8);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9de0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
         if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a3a0(lVar4,_aiStuffType,DAT_181d7ae88);
+        cVar1 = FUN_18182a9b0(lVar4,_aiStuffType,DAT_181d7aea0);
         if (cVar1) {
           iVar2 = Int32.Parse(_aiStuffTarget,0);
           this.bigMapTargetID = iVar2;
@@ -311,7 +311,7 @@ public class HeroAIData
         LAB_180876197:
           uVar1 = Int32.Parse(this.aiStuffTarget,0);
           if (lVar2 == null) goto LAB_180876367;
-          uVar3 = FUN_180002f80(lVar2,uVar1,DAT_181da4358);
+          uVar3 = FUN_180002f80(lVar2,uVar1,DAT_181da4370);
           break;
         case 11:
         case 12:
@@ -403,13 +403,13 @@ public class HeroAIData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -421,7 +421,7 @@ public class HeroAIData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

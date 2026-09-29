@@ -26,7 +26,7 @@ public class BoolDelegate
     }
 
     // Token : 0x600076B
-    // RVA   : 0x8E46D0   Offset: 0x8E3AD0   Length: 0x2AF
+    // RVA   : 0x916D10   Offset: 0x916110   Length: 0x2AF
     public virtual void Invoke(GameObject go, bool state)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class BoolDelegate
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e4935;
+              goto LAB_180916f75;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -74,7 +74,7 @@ public class BoolDelegate
                 }
                 else {
                   uVar7 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180133470(*(uint16 *)(lVar1 + 72),uVar7,plVar3,go,state);
+                  FUN_1801334d0(*(uint16 *)(lVar1 + 72),uVar7,plVar3,go,state);
                 }
               }
               else {
@@ -88,13 +88,13 @@ public class BoolDelegate
                   (*(code *)*puVar6)(plVar3,go,state,puVar6);
                 }
                 else {
-                  FUN_1801331b0(lVar1,plVar3,go,state);
+                  FUN_180133210(lVar1,plVar3,go,state);
                 }
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e4777;
+              goto LAB_180916db7;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -126,11 +126,11 @@ public class BoolDelegate
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_1808e4777:
+        LAB_180916db7:
             (*pcVar2)(go,state,lVar1);
           }
           else {
-        LAB_1808e4935:
+        LAB_180916f75:
             (*pcVar2)(plVar3,go,state,lVar1);
           }
           uVar9 = uVar9 + 1;
@@ -141,7 +141,7 @@ public class BoolDelegate
     }
 
     // Token : 0x600076C
-    // RVA   : 0x8E45B0   Offset: 0x8E39B0   Length: 0x82
+    // RVA   : 0x916BF0   Offset: 0x915FF0   Length: 0x82
     public virtual IAsyncResult BeginInvoke(GameObject go, bool state, AsyncCallback callback, object object)
     {
         void BoolDelegate.BeginInvoke
@@ -155,7 +155,7 @@ public class BoolDelegate
         local_res18[0] = state;
         local_18 = 0;
         local_28 = go;
-        local_20 = il2cpp_value_box(DAT_181db2ac8,local_res18);
+        local_20 = il2cpp_value_box(DAT_181db2ae0,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 

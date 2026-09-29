@@ -6,24 +6,24 @@
 public class CFX_InspectorHelp
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E54
+    // Token: 0x4001E55
     public bool Locked;
 
-    // Token: 0x4001E55
+    // Token: 0x4001E56
     public string Title;
 
-    // Token: 0x4001E56
+    // Token: 0x4001E57
     public string HelpText;
 
-    // Token: 0x4001E57
+    // Token: 0x4001E58
     public int MsgType;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002404
-    // RVA   : 0xB7FEE0   Offset: 0xB7F2E0   Length: 0x5
+    // RVA   : 0xB805A0   Offset: 0xB7F9A0   Length: 0x5
     private void Unlock()
     {
-        void FUN_180b7fee0(int64 this)
+        void FUN_180b805a0(int64 this)
         {
         this.Locked = 0;
     }

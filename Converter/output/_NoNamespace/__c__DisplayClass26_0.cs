@@ -6,7 +6,7 @@
 public class <>c__DisplayClass26_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002124
+    // Token: 0x4002125
     public RectTransform target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass26_0
     }
 
     // Token : 0x6002714
-    // RVA   : 0x937D30   Offset: 0x937130   Length: 0x4F
+    // RVA   : 0x9383C0   Offset: 0x9377C0   Length: 0x4F
     internal Vector3 <DOPunchAnchorPos>b__0()
     {
         ulong uVar1;
@@ -31,7 +31,7 @@ public class <>c__DisplayClass26_0
     }
 
     // Token : 0x6002715
-    // RVA   : 0x937D80   Offset: 0x937180   Length: 0x37
+    // RVA   : 0x938410   Offset: 0x937810   Length: 0x37
     internal void <DOPunchAnchorPos>b__1(Vector3 x)
     {
         if (this.target != null) {

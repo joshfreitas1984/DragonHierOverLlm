@@ -33,7 +33,7 @@ public class AreaMapRandomEventController
         uint uStack_10;
         uint32 uStack_c;
         this.inited = 1;
-        lVar1 = Component.GetComponent(this,DAT_181d95de0);
+        lVar1 = Component.GetComponent(this,DAT_181d95df8);
         if (this.areaMapRandomEventData != null) {
           uVar3 = EventData.GetEventRareLv(this.areaMapRandomEventData,0);
           puVar2 = (uint32 *)GlobalData.GetEventColor(&local_18,uVar3,0);
@@ -63,7 +63,7 @@ public class AreaMapRandomEventController
         uint32 uStack_1c;
         if (!this.inited) {
           this.inited = 1;
-          lVar2 = Component.GetComponent(this,DAT_181d95de0);
+          lVar2 = Component.GetComponent(this,DAT_181d95df8);
           if (this.areaMapRandomEventData == null) throw; // [null/range check failed]
           uVar1 = EventData.GetEventRareLv(this.areaMapRandomEventData,0);
           puVar3 = (uint32 *)GlobalData.GetEventColor(&local_28,uVar1,0);
@@ -94,7 +94,7 @@ public class AreaMapRandomEventController
               lVar2 = *(int64 *)(lVar2 + 184);
               uVar4 = Component.get_gameObject(this,0);
               if (lVar2 != null) {
-                FUN_1817eee00(lVar2,uVar4,DAT_181d89618);
+                FUN_1817ef410(lVar2,uVar4,DAT_181d89630);
                 lVar2 = Component.get_gameObject(this,0);
                 if (lVar2 != null) {
                   GameObject.SetActive(lVar2,0,0);
@@ -112,7 +112,7 @@ public class AreaMapRandomEventController
     // RVA   : 0x7ECFC0   Offset: 0x7EC3C0   Length: 0x27C
     public void RefreshColor()
     {
-        var pStatics = *(int64*)(DAT_181dab490 + 184);
+        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
@@ -136,7 +136,7 @@ public class AreaMapRandomEventController
             SpriteRenderer.set_sprite(lVar3,uVar4,0);
             if (this.isMissionTarget == null) throw; // [null/range check failed]
             lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
-            puVar5 = (uint32 *)FUN_1810d3570(&local_18,0);
+            puVar5 = (uint32 *)FUN_1810d3b80(&local_18,0);
             goto LAB_1807ed1fd;
           }
           lVar1 = this.isNewIcon;
@@ -189,21 +189,21 @@ public class AreaMapRandomEventController
     public void OnClick()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 48) != false) {
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar3 = (int64 *)0;
-            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
               plVar3 = plVar2;
             }
             NGUITools.PlaySound(plVar3,0);
             return;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d91b88 + 184) + 24);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
           if (lVar1 != null) {
             PlotController.StartPlotEvent(lVar1,this.areaMapRandomEventData,0);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
             if (lVar1 != null) {
               *(uint8 *)(lVar1 + 225) = 1;
               return;

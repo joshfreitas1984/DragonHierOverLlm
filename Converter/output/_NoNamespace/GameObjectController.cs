@@ -101,14 +101,14 @@ public class GameObjectController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60016A0
-    // RVA   : 0xA58570   Offset: 0xA57970   Length: 0x36
+    // RVA   : 0xA58C00   Offset: 0xA58000   Length: 0x36
     public static GameObjectController get_Instance()
     {
         return **(uint64 **)(DAT_181d72ee8 + 184);
     }
 
     // Token : 0x60016A1
-    // RVA   : 0xA58490   Offset: 0xA57890   Length: 0xD7
+    // RVA   : 0xA58B20   Offset: 0xA57F20   Length: 0xD7
     private void Awake()
     {
         bool cVar2;

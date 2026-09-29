@@ -17,7 +17,7 @@ public class ChatInput
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600005F
-    // RVA   : 0x996040   Offset: 0x995440   Length: 0x17B
+    // RVA   : 0x9966D0   Offset: 0x995AD0   Length: 0x17B
     private void Start()
     {
         long lVar1;
@@ -25,7 +25,7 @@ public class ChatInput
         ulong uVar3;
         ulong uVar4;
         uint[] local_res8 = new uint[2];
-        uVar3 = Component.GetComponent(this,DAT_181d969e0);
+        uVar3 = Component.GetComponent(this,DAT_181d969f8);
         this.mInput = uVar3;
         if ((this.mInput != null) &&
            (lVar1 = this.mInput.label) != null) {
@@ -54,7 +54,7 @@ public class ChatInput
     }
 
     // Token : 0x6000060
-    // RVA   : 0x995F20   Offset: 0x995320   Length: 0x117
+    // RVA   : 0x9965B0   Offset: 0x9959B0   Length: 0x117
     public void OnSubmit()
     {
         bool cVar1;
@@ -67,7 +67,7 @@ public class ChatInput
         if (this.mInput != null) {
           uVar2 = UIInput.get_value(this.mInput,0);
           uVar2 = NGUIText.StripSymbols(uVar2,0);
-          cVar1 = FUN_180d755b0(uVar2,0);
+          cVar1 = FUN_180d75bc0(uVar2,0);
           if (cVar1) {
             return;
           }

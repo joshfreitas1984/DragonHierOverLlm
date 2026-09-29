@@ -6,15 +6,15 @@
 public class MonthMissionButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001911
+    // Token: 0x4001912
     public MissionData targetMission;
 
-    // Token: 0x4001912
+    // Token: 0x4001913
     private bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001946
-    // RVA   : 0xDEE970   Offset: 0xDEDD70   Length: 0xCC6
+    // RVA   : 0xDEEF80   Offset: 0xDEE380   Length: 0xCC6
     private void Update()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -46,83 +46,83 @@ public class MonthMissionButtonController
         fVar17 = local_60;
         if ((GameController._instance == null) ||
            (lVar5 = GameController._instance.worldData) == null)
-        goto LAB_180def62b;
+        goto LAB_180defc3b;
         if (lVar5.gameMode == null) {
           lVar5 = FUN_18046c0a0(0);
           fVar17 = local_60;
-          if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_180def62b;
-          if (0 < *(int *)(lVar5.villageAreaID + 0x188)) goto LAB_180deed00;
-          lVar5 = Component.GetComponent(this,DAT_181d93760);
+          if ((lVar5 == null) || (lVar5.villageAreaID == null)) goto LAB_180defc3b;
+          if (0 < *(int *)(lVar5.villageAreaID + 0x188)) goto LAB_180def310;
+          lVar5 = Component.GetComponent(this,DAT_181d93778);
           fVar17 = local_60;
           if ((this.targetMission == null) ||
              (lVar6 = this.targetMission.missionTargetDatas) == null)
-          goto LAB_180def62b;
+          goto LAB_180defc3b;
           if (lVar6.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar6 = *(int64 *)(lVar6.chapter + 32);
           fVar17 = local_60;
-          if ((lVar6 = lVar6?.Inns) == null) goto LAB_180def62b;
+          if ((lVar6 = lVar6?.Inns) == null) goto LAB_180defc3b;
           if (lVar6.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar6 = *(int64 *)(lVar6.chapter + 32);
           fVar17 = local_60;
-          if (lVar6 == null) goto LAB_180def62b;
+          if (lVar6 == null) goto LAB_180defc3b;
           if (lVar6.chapter == 2) {
             if ((this.targetMission == null) ||
                (lVar6 = this.targetMission.missionTargetDatas) == null)
-            goto LAB_180def62b;
+            goto LAB_180defc3b;
             if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar6 = *(int64 *)(lVar6.chapter + 32);
             fVar17 = local_60;
-            if ((lVar6 = lVar6?.Inns) == null) goto LAB_180def62b;
+            if ((lVar6 = lVar6?.Inns) == null) goto LAB_180defc3b;
             if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar6 = *(int64 *)(lVar6.chapter + 32);
             fVar17 = local_60;
-            if (lVar6 == null) goto LAB_180def62b;
+            if (lVar6 == null) goto LAB_180defc3b;
             bVar15 = lVar6.villageAreaID == null;
           }
           else {
             bVar15 = false;
           }
           fVar17 = local_60;
-          if (lVar5 == null) goto LAB_180def62b;
+          if (lVar5 == null) goto LAB_180defc3b;
           Selectable.set_interactable(lVar5,bVar15,0);
-          lVar5 = Component.GetComponent(this,DAT_181d93760);
+          lVar5 = Component.GetComponent(this,DAT_181d93778);
           fVar17 = local_60;
-          if (lVar5 == null) goto LAB_180def62b;
+          if (lVar5 == null) goto LAB_180defc3b;
           if (!lVar5.infos) {
-            lVar5 = Component.GetComponent(this,DAT_181d95560);
+            lVar5 = Component.GetComponent(this,DAT_181d95578);
             uVar8 = "完成一次门派任务才能选择";
             fVar17 = local_60;
-            if (lVar5 == null) goto LAB_180def62b;
+            if (lVar5 == null) goto LAB_180defc3b;
             puVar10 = (uint64 *)(lVar5 + 24);
             *puVar10 = "完成一次门派任务才能选择";
-            goto LAB_180def293;
+            goto LAB_180def8a3;
           }
         }
         else {
-        LAB_180deed00:
-          lVar5 = Component.GetComponent(this,DAT_181d93760);
+        LAB_180def310:
+          lVar5 = Component.GetComponent(this,DAT_181d93778);
           fVar17 = local_60;
           if ((((GameController._instance == null) ||
                (lVar6 = GameController._instance.worldData) == null) ||
               (lVar6 = WorldData.Player(lVar6,0), fVar17 = local_60) == null) ||
-             ((this.targetMission == null || (lVar5 == null)))) goto LAB_180def62b;
+             ((this.targetMission == null || (lVar5 == null)))) goto LAB_180defc3b;
           iVar2 = this.targetMission.minForceLv;
           Selectable.set_interactable
                     (lVar5,CONCAT31((int3)((uint32)iVar2 >> 8),iVar2 <= lVar6.forceMeetingStarted),0);
-          lVar5 = Component.GetComponent(this,DAT_181d95560);
+          lVar5 = Component.GetComponent(this,DAT_181d95578);
           fVar17 = local_60;
           if ((((GameController._instance == null) ||
                (lVar6 = GameController._instance.worldData) == null) ||
               (lVar6 = WorldData.Player(lVar6,0), fVar17 = local_60) == null) ||
-             (lVar13 = this.targetMission) == null) goto LAB_180def62b;
+             (lVar13 = this.targetMission) == null) goto LAB_180defc3b;
           uVar8 = "";
           if (lVar6.forceMeetingStarted < lVar13.minForceLv) {
             if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) && (*(int *)(DAT_181d73d40 + 224) == 0)) {
@@ -131,15 +131,15 @@ public class MonthMissionButtonController
             }
             lVar6 = *(int64 *)(pStatics_3d40 + 0x3d8);
             fVar17 = local_60;
-            if (lVar13 == null) goto LAB_180def62b;
+            if (lVar13 == null) goto LAB_180defc3b;
             uVar1 = lVar13.minForceLv;
-            if (lVar6 == null) goto LAB_180def62b;
+            if (lVar6 == null) goto LAB_180defc3b;
             if (lVar6.cityAreaID <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
               lVar13 = this.targetMission;
             }
             fVar17 = local_60;
-            if (lVar13 == null) goto LAB_180def62b;
+            if (lVar13 == null) goto LAB_180defc3b;
             uVar8 = GlobalData.GenerateRareLvColorText
                               (*(uint64 *)
                                 (lVar6.chapter + 32 + (int64)(int)uVar1 * 8),
@@ -147,38 +147,38 @@ public class MonthMissionButtonController
             uVar8 = String.Concat("需要 ",uVar8,0);
           }
           fVar17 = local_60;
-          if (lVar5 == null) goto LAB_180def62b;
+          if (lVar5 == null) goto LAB_180defc3b;
           lVar5.cityAreaID = uVar8;
           fVar17 = local_60;
           if ((this.targetMission == null) ||
              (lVar5 = this.targetMission.missionTargetDatas) == null)
-          goto LAB_180def62b;
+          goto LAB_180defc3b;
           if (lVar5.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar5 = *(int64 *)(lVar5.chapter + 32);
           fVar17 = local_60;
-          if ((lVar5 = lVar5?.Inns) == null) goto LAB_180def62b;
+          if ((lVar5 = lVar5?.Inns) == null) goto LAB_180defc3b;
           if (lVar5.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar5 = *(int64 *)(lVar5.chapter + 32);
           fVar17 = local_60;
-          if (lVar5 == null) goto LAB_180def62b;
+          if (lVar5 == null) goto LAB_180defc3b;
           if (lVar5.chapter == 12) {
             lVar5 = FUN_18046c0a0(0);
             fVar17 = local_60;
-            if (lVar5 == null) goto LAB_180def62b;
+            if (lVar5 == null) goto LAB_180defc3b;
             lVar5 = lVar5.villageAreaID;
             if ((this.targetMission == null) ||
                (lVar6 = this.targetMission.missionTargetDatas) == null)
-            goto LAB_180def62b;
+            goto LAB_180defc3b;
             if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar6 = *(int64 *)(lVar6.chapter + 32);
             fVar17 = local_60;
-            if ((lVar6 = lVar6?.Inns) == null) goto LAB_180def62b;
+            if ((lVar6 = lVar6?.Inns) == null) goto LAB_180defc3b;
             if (lVar6.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -187,23 +187,23 @@ public class MonthMissionButtonController
             if (((lVar6 == null) ||
                 (uVar4 = Int32.Parse(lVar6.cityAreaID,0), fVar17 = local_60, lVar5 == null)) ||
                (lVar5 = WorldData.GetHero(lVar5,uVar4,0), fVar17 = local_60) == null)
-            goto LAB_180def62b;
+            goto LAB_180defc3b;
             fVar16 = (float)HeroData.Favor(lVar5,0,0);
-            lVar5 = Component.GetComponent(this,DAT_181d95560);
+            lVar5 = Component.GetComponent(this,DAT_181d95578);
             fVar17 = local_60;
-            if (lVar5 == null) goto LAB_180def62b;
+            if (lVar5 == null) goto LAB_180defc3b;
             puVar10 = (uint64 *)(lVar5 + 24);
             uVar8 = *puVar10;
-            lVar5 = Component.GetComponent(this,DAT_181d95560);
+            lVar5 = Component.GetComponent(this,DAT_181d95578);
             fVar17 = local_60;
-            if (lVar5 == null) goto LAB_180def62b;
-            cVar3 = FUN_18171e540(lVar5.cityAreaID,"",0);
+            if (lVar5 == null) goto LAB_180defc3b;
+            cVar3 = FUN_18171eb50(lVar5.cityAreaID,"",0);
             uVar11 = "\n";
             if (cVar3) {
               uVar11 = "";
             }
             local_res8[0] = Mathf.FloorToInt();
-            uVar7 = il2cpp_value_box(DAT_181d80418,local_res8);
+            uVar7 = il2cpp_value_box(DAT_181d80430,local_res8);
             uVar12 = "对方好感 60{1}(当前{0})</color>";
             if (fVar16 < 60.0) {
               uVar14 = *(uint64 *)(pStatics_3d40 + 0x2d0);
@@ -216,18 +216,18 @@ public class MonthMissionButtonController
             *puVar10 = uVar8;
             il2cpp_internal(puVar10,uVar8);
           }
-          lVar5 = Component.GetComponent(this,DAT_181d95560);
+          lVar5 = Component.GetComponent(this,DAT_181d95578);
           fVar17 = local_60;
-          if (lVar5 == null) goto LAB_180def62b;
+          if (lVar5 == null) goto LAB_180defc3b;
           uVar8 = lVar5.cityAreaID;
           puVar10 = (uint64 *)(lVar5 + 24);
-          if (this.targetMission == null) goto LAB_180def62b;
+          if (this.targetMission == null) goto LAB_180defc3b;
           uVar11 = "";
           if (0 < this.targetMission.missionFunds) {
-            lVar5 = Component.GetComponent(this,DAT_181d95560);
+            lVar5 = Component.GetComponent(this,DAT_181d95578);
             fVar17 = local_60;
-            if (lVar5 == null) goto LAB_180def62b;
-            cVar3 = FUN_18171e540(lVar5.cityAreaID,"",0);
+            if (lVar5 == null) goto LAB_180defc3b;
+            cVar3 = FUN_18171eb50(lVar5.cityAreaID,"",0);
             uVar11 = "\n";
             if (cVar3) {
               uVar11 = "";
@@ -237,21 +237,21 @@ public class MonthMissionButtonController
               FUN_1800d6620();
             }
             local_res8[0] = this.targetMission.missionFunds;
-            uVar12 = il2cpp_value_box(DAT_181d80418,local_res8);
+            uVar12 = il2cpp_value_box(DAT_181d80430,local_res8);
             uVar12 = String.Format("任务经费 {0}两",uVar12,0);
             uVar11 = String.Concat(uVar11,uVar12,0);
           }
           uVar8 = String.Concat(uVar8,uVar11,0);
           *puVar10 = uVar8;
-        LAB_180def293:
+        LAB_180def8a3:
           il2cpp_internal(puVar10,uVar8);
         }
         lVar5 = Component.get_transform(this,0);
         fVar17 = local_60;
         if ((lVar5 != null) &&
            (lVar5 = Transform.Find(lVar5,"RareLv",0), fVar17 = local_60) != null) {
-          lVar5 = Component.GetComponent(lVar5,DAT_181d94460);
-          lVar6 = **(int64 **)(DAT_181dab490 + 184);
+          lVar5 = Component.GetComponent(lVar5,DAT_181d94478);
+          lVar6 = **(int64 **)(DAT_181dab4a8 + 184);
           fVar17 = local_60;
           if (this.targetMission != null) {
             uVar8 = Int32.ToString(this.targetMission + 72,0);
@@ -265,7 +265,7 @@ public class MonthMissionButtonController
               fVar17 = local_60;
               if ((lVar5 != null) &&
                  ((lVar5 = Transform.Find(lVar5,"RareLv",0), fVar17 = local_60, lVar5 != null &&
-                  (plVar9 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460), fVar17 = local_60,
+                  (plVar9 = (int64 *)Component.GetComponent(lVar5,DAT_181d94478), fVar17 = local_60,
                   plVar9 != (int64 *)0)))) {
                 (**(code **)(*plVar9 + 0x408))(plVar9,*(uint64 *)(*plVar9 + 0x410));
                 lVar5 = Component.get_transform(this,0);
@@ -290,7 +290,7 @@ public class MonthMissionButtonController
                       if ((lVar5 != null) &&
                          (lVar5 = Transform.Find(lVar5,"Text",0), fVar17 = local_60) != null)
                       {
-                        uVar8 = Component.GetComponent(lVar5,DAT_181d96160);
+                        uVar8 = Component.GetComponent(lVar5,DAT_181d96178);
                         fVar17 = local_60;
                         if (this.targetMission != null) {
                           uVar11 = MissionData.GetMissionDescribe
@@ -302,7 +302,7 @@ public class MonthMissionButtonController
                           if (((lVar5 != null) &&
                               (lVar5 = Transform.Find(lVar5,"ExtraInfo",0), fVar17 = local_60,
                               lVar5 != null)) &&
-                             (uVar8 = Component.GetComponent(lVar5,DAT_181d96160), fVar17 = local_60,
+                             (uVar8 = Component.GetComponent(lVar5,DAT_181d96178), fVar17 = local_60,
                              this.targetMission != null)) {
                             uVar11 = GlobalData.GetDifficultyStarString();
                             fVar17 = local_60;
@@ -323,17 +323,17 @@ public class MonthMissionButtonController
             }
           }
         }
-        LAB_180def62b:
+        LAB_180defc3b:
         local_60 = fVar17;
     }
 
     // Token : 0x6001947
-    // RVA   : 0xDEE8A0   Offset: 0xDEDCA0   Length: 0xCC
+    // RVA   : 0xDEEEB0   Offset: 0xDEE2B0   Length: 0xCC
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d88a10 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181d88a28 + 184) + 16);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           MeetingController.MonthMissionButtonClicked(lVar1,uVar2,0);

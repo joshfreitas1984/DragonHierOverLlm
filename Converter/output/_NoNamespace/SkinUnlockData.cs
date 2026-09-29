@@ -14,28 +14,28 @@ public class SkinUnlockData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000EC8
-    // RVA   : 0x989360   Offset: 0x988760   Length: 0xF7
+    // RVA   : 0x9899F0   Offset: 0x988DF0   Length: 0xF7
     public void /*ctor*/(int _skinID)
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
         this.skinID = _skinID;
-        lVar1 = il2cpp_internal(DAT_181d917d8);
-        FUN_18132faf0(lVar1,DAT_181d804a0);
+        lVar1 = il2cpp_internal(DAT_181d917f0);
+        FUN_181330100(lVar1,DAT_181d804b8);
         if (lVar1 != null) {
-          FUN_1817e98e0(lVar1,0,DAT_181d80520);
-          FUN_1817e98e0(lVar1,0,DAT_181d80520);
-          FUN_1817e98e0(lVar1,0,DAT_181d80520);
-          FUN_1817e98e0(lVar1,0,DAT_181d80520);
-          FUN_1817e98e0(lVar1,0,DAT_181d80520);
-          FUN_1817e98e0(lVar1,0,DAT_181d80520);
+          FUN_1817e9ef0(lVar1,0,DAT_181d80538);
+          FUN_1817e9ef0(lVar1,0,DAT_181d80538);
+          FUN_1817e9ef0(lVar1,0,DAT_181d80538);
+          FUN_1817e9ef0(lVar1,0,DAT_181d80538);
+          FUN_1817e9ef0(lVar1,0,DAT_181d80538);
+          FUN_1817e9ef0(lVar1,0,DAT_181d80538);
           this.skinLvUnlocked = lVar1;
           return;
         }
     }
 
     // Token : 0x6000EC9
-    // RVA   : 0x989260   Offset: 0x988660   Length: 0xFD
+    // RVA   : 0x9898F0   Offset: 0x988CF0   Length: 0xFD
     public string GetSkinFullName(int _skinLv, bool changeLine, bool changeColor)
     {
         void SkinUnlockData.GetSkinFullName

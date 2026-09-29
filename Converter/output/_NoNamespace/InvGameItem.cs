@@ -27,7 +27,7 @@ public class InvGameItem
     }
 
     // Token : 0x6000053
-    // RVA   : 0xC9C9C0   Offset: 0xC9BDC0   Length: 0x7A
+    // RVA   : 0xC9CFD0   Offset: 0xC9C3D0   Length: 0x7A
     public InvBaseItem get_baseItem()
     {
         uint uVar2;
@@ -43,14 +43,14 @@ public class InvGameItem
     }
 
     // Token : 0x6000054
-    // RVA   : 0xC9CBE0   Offset: 0xC9BFE0   Length: 0xD3
+    // RVA   : 0xC9D1F0   Offset: 0xC9C5F0   Length: 0xD3
     public string get_name()
     {
         long lVar1;
         ulong uVar3;
         lVar1 = InvGameItem.get_baseItem(this,0);
         if (lVar1 != null) {
-          plVar2 = (int64 *)il2cpp_value_box(DAT_181d7af28,this + 20);
+          plVar2 = (int64 *)il2cpp_value_box(DAT_181d7af40,this + 20);
           if (plVar2 != (int64 *)0) {
             uVar3 = (**(code **)(*plVar2 + 0x168))(plVar2,*(uint64 *)(*plVar2 + 0x170));
             puVar4 = (uint32 *)il2cpp_object_unbox(plVar2);
@@ -67,7 +67,7 @@ public class InvGameItem
     }
 
     // Token : 0x6000055
-    // RVA   : 0xC9CCC0   Offset: 0xC9C0C0   Length: 0x24
+    // RVA   : 0xC9D2D0   Offset: 0xC9C6D0   Length: 0x24
     public float get_statMultiplier()
     {
         float fVar1;
@@ -119,7 +119,7 @@ public class InvGameItem
     }
 
     // Token : 0x6000056
-    // RVA   : 0xC9CA40   Offset: 0xC9BE40   Length: 0x164
+    // RVA   : 0xC9D050   Offset: 0xC9C450   Length: 0x4C
     public Color get_color()
     {
         uint uVar1;
@@ -129,7 +129,7 @@ public class InvGameItem
         byte[] local_18 = new byte[16];
         *this = 0;
         this[1] = 0;
-        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];
@@ -143,7 +143,7 @@ public class InvGameItem
           return this;
         case 1:
           puVar5 = (uint64 *)Color.get_red(local_18,0);
-          goto LAB_180c9cb8e;
+          goto LAB_180c9d19e;
         case 2:
           Color.ctor(this,0x180000000,0x3ecccccd,0x3ecccccd,0);
           return this;
@@ -175,19 +175,19 @@ public class InvGameItem
           uVar6 = 0xff9000ff;
           break;
         default:
-          goto switchD_180c9ca86_default;
+          goto switchD_180c9d096_default;
         }
         puVar5 = (uint64 *)NGUIMath.HexToColor(local_18,uVar6,0);
-        LAB_180c9cb8e:
+        LAB_180c9d19e:
         uVar6 = puVar5[1];
         *this = *puVar5;
         this[1] = uVar6;
-        switchD_180c9ca86_default:
+        switchD_180c9d096_default:
         return this;
     }
 
     // Token : 0x6000057
-    // RVA   : 0xC9C980   Offset: 0xC9BD80   Length: 0x32
+    // RVA   : 0xC9CF90   Offset: 0xC9C390   Length: 0x32
     public void /*ctor*/(int id)
     {
         this.quality = 4;
@@ -198,7 +198,7 @@ public class InvGameItem
     }
 
     // Token : 0x6000058
-    // RVA   : 0xC9C930   Offset: 0xC9BD30   Length: 0x4D
+    // RVA   : 0xC9CF40   Offset: 0xC9C340   Length: 0x4D
     public void /*ctor*/(int id, InvBaseItem bi)
     {
         this.quality = 4;
@@ -209,7 +209,7 @@ public class InvGameItem
     }
 
     // Token : 0x6000059
-    // RVA   : 0xC9C5A0   Offset: 0xC9B9A0   Length: 0x104
+    // RVA   : 0xC9CBB0   Offset: 0xC9BFB0   Length: 0x104
     public List<InvStat> CalculateStats()
     {
         int iVar1;
@@ -226,8 +226,8 @@ public class InvGameItem
         long lVar12;
         float fVar13;
         float fVar14;
-        lVar5 = il2cpp_internal(DAT_181d94050);
-        FUN_18132faf0(lVar5,DAT_181d90718);
+        lVar5 = il2cpp_internal(DAT_181d94068);
+        FUN_181330100(lVar5,DAT_181d90730);
         lVar6 = InvGameItem.get_baseItem(this,0);
         if (lVar6 == null) {
           return lVar5;
@@ -291,12 +291,12 @@ public class InvGameItem
                   iVar2 = *(int *)(lVar5 + 24);
                   if (0 < iVar2) {
                     do {
-                      lVar7 = FUN_180002f80(lVar5,iVar9,DAT_181d90918);
+                      lVar7 = FUN_180002f80(lVar5,iVar9,DAT_181d90930);
                       if (lVar7 == null) throw; // [null/range check failed]
                       if ((*(int *)(lVar7 + 16) == *(int *)(lVar3 + 16)) &&
                          (*(int *)(lVar7 + 20) == *(int *)(lVar3 + 20))) {
                         *(int *)(lVar7 + 24) = *(int *)(lVar7 + 24) + iVar4;
-                        goto LAB_180c9c860;
+                        goto LAB_180c9ce70;
                       }
                       iVar9 = iVar9 + 1;
                     } while (iVar9 < iVar2);
@@ -306,17 +306,17 @@ public class InvGameItem
                   *(uint32 *)(lVar7 + 16) = *(uint32 *)(lVar3 + 16);
                   *(int *)(lVar7 + 24) = iVar4;
                   *(uint32 *)(lVar7 + 20) = *(uint32 *)(lVar3 + 20);
-                  FUN_18181e0a0(lVar5,lVar7,DAT_181d90798);
+                  FUN_18181e6b0(lVar5,lVar7,DAT_181d907b0);
                 }
-        LAB_180c9c860:
+        LAB_180c9ce70:
                 uVar11 = uVar11 + 1;
                 lVar12 = lVar12 + 1;
                 lVar10 = lVar10 + 8;
               } while (lVar12 < iVar1);
             }
-            uVar8 = new OnTooltipCB(0,DAT_181d7ca68,DAT_181dab438);
+            uVar8 = new OnTooltipCB(0,DAT_181d7ca80,DAT_181dab450);
             if (lVar5 != null) {
-              List_1.Sort(lVar5,uVar8,DAT_181d90818);
+              List_1.Sort(lVar5,uVar8,DAT_181d90830);
               return lVar5;
             }
           }

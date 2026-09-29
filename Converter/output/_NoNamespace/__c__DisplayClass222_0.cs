@@ -18,7 +18,7 @@ public class <>c__DisplayClass222_0
     }
 
     // Token : 0x6001645
-    // RVA   : 0x937BA0   Offset: 0x936FA0   Length: 0x1D
+    // RVA   : 0x938230   Offset: 0x937630   Length: 0x1D
     internal bool <HeroLeaveArea>b__0(int x)
     {
         long lVar1;

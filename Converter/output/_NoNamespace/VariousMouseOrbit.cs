@@ -6,42 +6,42 @@
 public class VariousMouseOrbit
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001ECF
+    // Token: 0x4001ED0
     private Transform Target;
 
-    // Token: 0x4001ED0
+    // Token: 0x4001ED1
     public Transform[] Targets;
 
-    // Token: 0x4001ED1
+    // Token: 0x4001ED2
     private int i;
 
-    // Token: 0x4001ED2
+    // Token: 0x4001ED3
     public float distance;
 
-    // Token: 0x4001ED3
+    // Token: 0x4001ED4
     public float xSpeed;
 
-    // Token: 0x4001ED4
+    // Token: 0x4001ED5
     public float ySpeed;
 
-    // Token: 0x4001ED5
+    // Token: 0x4001ED6
     public float yMinLimit;
 
-    // Token: 0x4001ED6
+    // Token: 0x4001ED7
     public float yMaxLimit;
 
-    // Token: 0x4001ED7
+    // Token: 0x4001ED8
     private float x;
 
-    // Token: 0x4001ED8
+    // Token: 0x4001ED9
     private float y;
 
-    // Token: 0x4001ED9
+    // Token: 0x4001EDA
     public float CameraDist;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002446
-    // RVA   : 0xC10CE0   Offset: 0xC100E0   Length: 0x12B
+    // RVA   : 0xC11350   Offset: 0xC10750   Length: 0x12B
     private void Start()
     {
         ulong uVar1;
@@ -63,12 +63,12 @@ public class VariousMouseOrbit
               FUN_1800d65f0(uVar1,0);
             }
             this.Target = *(uint64 *)(lVar4 + 32);
-            uVar1 = Component.GetComponent(this,DAT_181d950e0);
+            uVar1 = Component.GetComponent(this,DAT_181d950f8);
             cVar3 = Object.op_Implicit(uVar1,0);
             if (!cVar3) {
               return;
             }
-            lVar4 = Component.GetComponent(this,DAT_181d950e0);
+            lVar4 = Component.GetComponent(this,DAT_181d950f8);
             if (lVar4 != null) {
               Rigidbody.set_freezeRotation(lVar4,1,0);
               return;
@@ -78,7 +78,7 @@ public class VariousMouseOrbit
     }
 
     // Token : 0x6002447
-    // RVA   : 0xC10970   Offset: 0xC0FD70   Length: 0x360
+    // RVA   : 0xC10FE0   Offset: 0xC103E0   Length: 0x360
     private void LateUpdate()
     {
         ulong uVar1;
@@ -103,7 +103,7 @@ public class VariousMouseOrbit
         cVar3 = FUN_1804625b0(118);
         if (cVar3) {
           lVar6 = this.Targets;
-          if (lVar6 == null) goto LAB_180c10cbb;
+          if (lVar6 == null) goto LAB_180c1132b;
           if (this.i < *(int *)(lVar6 + 24) + -1) {
             uVar4 = this.i + 1;
           }
@@ -136,7 +136,7 @@ public class VariousMouseOrbit
             if (360.0 < fVar9) {
               fVar9 = fVar9 + -360.0;
             }
-            uVar11 = FUN_1810e36c0(fVar9,this.yMinLimit,this.yMaxLimit,0
+            uVar11 = FUN_1810e3cd0(fVar9,this.yMinLimit,this.yMaxLimit,0
                                   );
             this.y = (int)uVar11;
             puVar5 = (uint64 *)Quaternion.Euler(&local_28,uVar11,this.x,0,0)
@@ -176,7 +176,7 @@ public class VariousMouseOrbit
                     fVar9 = (float)Time.get_deltaTime(0);
                     fVar8 = fVar8 - fVar9 * 20.0;
                     this.CameraDist = fVar8;
-                    uVar10 = FUN_1810e36c0(fVar8,0x40000000,0x42a00000,0);
+                    uVar10 = FUN_1810e3cd0(fVar8,0x40000000,0x42a00000,0);
                     this.CameraDist = uVar10;
                   }
                   cVar3 = FUN_1804625f0(115);
@@ -187,13 +187,13 @@ public class VariousMouseOrbit
                   fVar9 = (float)Time.get_deltaTime(0);
                   fVar8 = fVar9 * 20.0 + fVar8;
                   this.CameraDist = fVar8;
-                  uVar10 = FUN_1810e36c0(fVar8,0x40000000,0x42a00000,0);
+                  uVar10 = FUN_1810e3cd0(fVar8,0x40000000,0x42a00000,0);
                   this.CameraDist = uVar10;
                   return;
                 }
               }
             }
-        LAB_180c10cbb:
+        LAB_180c1132b:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -201,10 +201,10 @@ public class VariousMouseOrbit
     }
 
     // Token : 0x6002448
-    // RVA   : 0xC10930   Offset: 0xC0FD30   Length: 0x36
+    // RVA   : 0xC10FA0   Offset: 0xC103A0   Length: 0x36
     private float ClampAngle(float ag, float min, float max)
     {
-        void FUN_180c10930(uint64 this,float ag,uint32 min,uint32 max)
+        void FUN_180c10fa0(uint64 this,float ag,uint32 min,uint32 max)
         {
         if (ag < -360.0) {
           ag = ag + 360.0;
@@ -212,14 +212,14 @@ public class VariousMouseOrbit
         if (360.0 < ag) {
           ag = ag + -360.0;
         }
-        FUN_1810e36c0(ag,min,max,0);
+        FUN_1810e3cd0(ag,min,max,0);
     }
 
     // Token : 0x6002449
-    // RVA   : 0xC10E10   Offset: 0xC10210   Length: 0x2A
+    // RVA   : 0xC11480   Offset: 0xC10880   Length: 0x2A
     public void /*ctor*/()
     {
-        void FUN_180c10e10(int64 this)
+        void FUN_180c11480(int64 this)
         {
         this.xSpeed = 0x437a0000;
         this.ySpeed = 0x42f00000;

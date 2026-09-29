@@ -6,13 +6,13 @@
 public class PlotChoiceRequirement
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40019C3
+    // Token: 0x40019C4
     public ChoiceRequirementType requireType;
 
-    // Token: 0x40019C4
+    // Token: 0x40019C5
     public float requireNum;
 
-    // Token: 0x40019C5
+    // Token: 0x40019C6
     public bool autoChangeReuqireByDifficulty;
 
     // ── Methods ──────────────────────────────────────────────────

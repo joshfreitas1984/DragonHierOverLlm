@@ -6,39 +6,39 @@
 public class SkillIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BAB
+    // Token: 0x4001BAC
     public int skillListID;
 
-    // Token: 0x4001BAC
+    // Token: 0x4001BAD
     public KungfuSkillLvData skillLvData;
 
-    // Token: 0x4001BAD
+    // Token: 0x4001BAE
     public SkillIconType skillIconType;
 
-    // Token: 0x4001BAE
+    // Token: 0x4001BAF
     public bool inited;
 
-    // Token: 0x4001BAF
+    // Token: 0x4001BB0
     private float refreshTime;
 
-    // Token: 0x4001BB0
+    // Token: 0x4001BB1
     private static Color activeColor;
 
-    // Token: 0x4001BB1
+    // Token: 0x4001BB2
     private static Color activeOutLineColor;
 
-    // Token: 0x4001BB2
+    // Token: 0x4001BB3
     private static Color cdColor;
 
-    // Token: 0x4001BB3
+    // Token: 0x4001BB4
     private static Color cdOutLineColor;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002129
-    // RVA   : 0x985DF0   Offset: 0x9851F0   Length: 0x118A
+    // RVA   : 0x986480   Offset: 0x985880   Length: 0x118A
     private void Update()
     {
-        var pStatics_3150 = *(int64*)(DAT_181da3150 + 184);
+        var pStatics_3168 = *(int64*)(DAT_181da3168 + 184);
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
         uint uVar1;
         bool cVar2;
@@ -62,7 +62,7 @@ public class SkillIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Name",0)) == null)
           throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           if (this.skillLvData == null) throw; // [null/range check failed]
           uVar5 = KungfuSkillLvData.Name(this.skillLvData,0,0);
           LTLocalization.SetText(uVar4,uVar5,0);
@@ -70,8 +70,8 @@ public class SkillIconController
             lVar3 = Component.get_transform(this,0);
             if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Name",0)) == null)
             throw; // [null/range check failed]
-            plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
-            puVar9 = (uint32 *)FUN_1810d3570(&local_38,0);
+            plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
+            puVar9 = (uint32 *)FUN_1810d3b80(&local_38,0);
             if (plVar6 == (int64 *)0) throw; // [null/range check failed]
             local_38 = *puVar9;
             uStack_34 = puVar9[1];
@@ -81,7 +81,7 @@ public class SkillIconController
             lVar3 = Component.get_transform(this,0);
             if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Name",0)) == null)
             throw; // [null/range check failed]
-            lVar3 = Component.GetComponent(lVar3,DAT_181d94ae0);
+            lVar3 = Component.GetComponent(lVar3,DAT_181d94af8);
             puVar9 = (uint32 *)Color.get_black(&local_38,0);
             if (lVar3 == null) throw; // [null/range check failed]
             uVar11 = *puVar9;
@@ -93,10 +93,10 @@ public class SkillIconController
             lVar3 = Component.get_transform(this,0);
             if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Name",0)) == null)
             throw; // [null/range check failed]
-            lVar3 = Component.GetComponent(lVar3,DAT_181d94ae0);
+            lVar3 = Component.GetComponent(lVar3,DAT_181d94af8);
             if (this.skillIconType == 4) {
-        LAB_180986070:
-              puVar9 = (uint32 *)FUN_1810d3570(&local_38,0);
+        LAB_180986700:
+              puVar9 = (uint32 *)FUN_1810d3b80(&local_38,0);
               uVar11 = *puVar9;
               uVar12 = puVar9[1];
               uVar13 = puVar9[2];
@@ -104,7 +104,7 @@ public class SkillIconController
             }
             else {
               if (this.skillLvData == null) throw; // [null/range check failed]
-              if (!this.skillLvData.equiped) goto LAB_180986070;
+              if (!this.skillLvData.equiped) goto LAB_180986700;
               lVar7 = pStatics_3d40;
               uVar11 = *(uint32 *)(lVar7 + 0x378);
               uVar12 = *(uint32 *)(lVar7 + 0x37c);
@@ -121,7 +121,7 @@ public class SkillIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"SkillLvBack",0)) == null)
           throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
           lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
           if (lVar3 == null) throw; // [null/range check failed]
           lVar3 = lVar3.speUseData;
@@ -142,8 +142,8 @@ public class SkillIconController
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Icon",0)) == null)
           throw; // [null/range check failed]
-          lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
-          lVar7 = **(int64 **)(DAT_181dab490 + 184);
+          lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
+          lVar7 = **(int64 **)(DAT_181dab4a8 + 184);
           if (((this.skillLvData == null) ||
               (uVar4 = KungfuSkillLvData.GetSkillIcon(this.skillLvData,0), lVar7 == null)) ||
              (uVar4 = TextureController.LoadAtlasSprite(lVar7,"IconAtlas",uVar4,0), lVar3 == null))
@@ -167,7 +167,7 @@ public class SkillIconController
             lVar3 = Component.get_transform(this,0);
             if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"Force",0)) == null)
             throw; // [null/range check failed]
-            lVar3 = Component.GetComponent(lVar3,DAT_181d94460);
+            lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
             lVar7 = FUN_18046c0a0(0);
             if (lVar7 == null) throw; // [null/range check failed]
             lVar7 = *(int64 *)(lVar7 + 32);
@@ -181,7 +181,7 @@ public class SkillIconController
           }
           SkillIconController.RefreshSkillLvAndExp(this,0);
         }
-        uVar4 = *(uint64 *)(*(int64 *)(DAT_181d8b790 + 184) + 72);
+        uVar4 = *(uint64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 72);
         uVar5 = Component.get_gameObject(this,0);
         cVar2 = Object.op_Equality(uVar4,uVar5,0);
         if (cVar2) {
@@ -223,15 +223,15 @@ public class SkillIconController
           lVar3 = Component.get_transform(this,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"CdTime",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           if (this.skillLvData == null) throw; // [null/range check failed]
           uVar5 = Single.ToString(this.skillLvData + 96,"f0",0);
           LTLocalization.SetText(uVar4,uVar5,0);
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null)
           throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-          puVar9 = *(uint32 **)(DAT_181da3150 + 184);
+          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+          puVar9 = *(uint32 **)(DAT_181da3168 + 184);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
           local_38 = *puVar9;
           uStack_34 = puVar9[1];
@@ -241,7 +241,7 @@ public class SkillIconController
           lVar3 = Component.get_transform(this,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"CdTime",0)) == null) throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = pStatics_3d40;
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
           local_38 = *(uint32 *)(lVar3 + 0x288);
@@ -252,14 +252,14 @@ public class SkillIconController
           lVar3 = Component.get_transform(this,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"CdTime",0)) == null) throw; // [null/range check failed]
-          lVar7 = Component.GetComponent(lVar3,DAT_181d94ae0);
-          lVar3 = pStatics_3150;
+          lVar7 = Component.GetComponent(lVar3,DAT_181d94af8);
+          lVar3 = pStatics_3168;
           if (lVar7 == null) throw; // [null/range check failed]
           local_38 = lVar3.skillID;
           uStack_34 = lVar3.lv;
           uStack_30 = lVar3.fightExp;
           uStack_2c = lVar3.bookExp;
-        LAB_180986d59:
+        LAB_1809873e9:
           Shadow.set_effectColor(lVar7,&local_38,0);
         }
         else {
@@ -277,7 +277,7 @@ public class SkillIconController
               lVar3 = Component.get_transform(this,0);
               if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null) ||
                  (lVar3 = Transform.Find(lVar3,"CdTime",0)) == null) throw; // [null/range check failed]
-              uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+              uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
               lVar3 = this.skillLvData;
               if (lVar3 == null) throw; // [null/range check failed]
               uVar5 = "";
@@ -288,8 +288,8 @@ public class SkillIconController
               lVar3 = Component.get_transform(this,0);
               if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null)
               throw; // [null/range check failed]
-              plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-              lVar3 = pStatics_3150;
+              plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+              lVar3 = pStatics_3168;
               if (plVar6 == (int64 *)0) throw; // [null/range check failed]
               local_38 = lVar3.equiped;
               uStack_34 = lVar3.belongHeroID;
@@ -299,7 +299,7 @@ public class SkillIconController
               lVar3 = Component.get_transform(this,0);
               if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null) ||
                  (lVar3 = Transform.Find(lVar3,"CdTime",0)) == null) throw; // [null/range check failed]
-              plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d96160);
+              plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d96178);
               lVar3 = pStatics_3d40;
               if (plVar6 == (int64 *)0) throw; // [null/range check failed]
               local_38 = *(uint32 *)(lVar3 + 0x2f0);
@@ -310,21 +310,21 @@ public class SkillIconController
               lVar3 = Component.get_transform(this,0);
               if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null) ||
                  (lVar3 = Transform.Find(lVar3,"CdTime",0)) == null) throw; // [null/range check failed]
-              lVar7 = Component.GetComponent(lVar3,DAT_181d94ae0);
-              lVar3 = pStatics_3150;
+              lVar7 = Component.GetComponent(lVar3,DAT_181d94af8);
+              lVar3 = pStatics_3168;
               if (lVar7 == null) throw; // [null/range check failed]
               local_38 = lVar3.equipUseSpeAddValue;
               uStack_34 = *(uint32 *)(lVar3 + 52);
               uStack_30 = lVar3.speUseData;
               uStack_2c = *(uint32 *)(lVar3 + 60);
-              goto LAB_180986d59;
+              goto LAB_1809873e9;
             }
           }
           lVar3 = Component.get_transform(this,0);
           if ((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null)
           throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
-          puVar9 = (uint32 *)FUN_180d98fe0(&local_38,0);
+          plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+          puVar9 = (uint32 *)FUN_180d995f0(&local_38,0);
           if (plVar6 == (int64 *)0) throw; // [null/range check failed]
           local_38 = *puVar9;
           uStack_34 = puVar9[1];
@@ -334,7 +334,7 @@ public class SkillIconController
           lVar3 = Component.get_transform(this,0);
           if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"CdCover",0)) == null) ||
              (lVar3 = Transform.Find(lVar3,"CdTime",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           LTLocalization.SetText(uVar4,"",0);
         }
         if ((this.skillLvData != null) &&
@@ -346,7 +346,7 @@ public class SkillIconController
             if (0.0 < this.skillLvData.activeTimeLeft) {
               lVar3 = Component.get_transform(this,0);
               if (((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"PowerBar",0)) != null) &&
-                 (lVar3 = Component.GetComponent(lVar3,DAT_181d94460)) != null) {
+                 (lVar3 = Component.GetComponent(lVar3,DAT_181d94478)) != null) {
                 Image.set_fillAmount(lVar3,0,0);
                 return;
               }
@@ -354,7 +354,7 @@ public class SkillIconController
             else {
               lVar3 = Component.get_transform(this,0);
               if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"PowerBar",0)) != null) {
-                lVar7 = Component.GetComponent(lVar3,DAT_181d94460);
+                lVar7 = Component.GetComponent(lVar3,DAT_181d94478);
                 lVar3 = this.skillLvData;
                 if (lVar3 != null) {
                   fVar15 = lVar3.power;
@@ -363,7 +363,7 @@ public class SkillIconController
                     Image.set_fillAmount(lVar7,fVar15 / fVar10,0);
                     lVar3 = Component.get_transform(this,0);
                     if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"PowerBar",0)) != null) {
-                      plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+                      plVar6 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
                       lVar3 = this.skillLvData;
                       if (lVar3 != null) {
                         fVar15 = lVar3.power;
@@ -402,7 +402,7 @@ public class SkillIconController
     }
 
     // Token : 0x600212A
-    // RVA   : 0x9854E0   Offset: 0x9848E0   Length: 0x901
+    // RVA   : 0x985B70   Offset: 0x984F70   Length: 0x901
     public void RefreshSkillLvAndExp()
     {
         float fVar1;
@@ -424,7 +424,7 @@ public class SkillIconController
           lVar6 = Component.get_transform(this,0);
           if (((lVar6 != null) && (lVar6 = Transform.Find(lVar6,"SkillLvBack",0)) != null) &&
              (lVar6 = Transform.Find(lVar6,"SkillLv",0)) != null) {
-            uVar7 = Component.GetComponent(lVar6,DAT_181d96160);
+            uVar7 = Component.GetComponent(lVar6,DAT_181d96178);
             if (this.skillLvData != null) {
               uVar2 = this.skillLvData.lv;
               plVar8 = (int64 *)GlobalData.GetNumText(uVar2,0);
@@ -467,7 +467,7 @@ public class SkillIconController
                       if ((((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"SkillLvBack",0)) == null)
                           || (lVar6 = Transform.Find(lVar6,"Lock",0)) == null) ||
                          (lVar6 = Transform.Find(lVar6,"Icon",0)) == null) throw; // [null/range check failed]
-                      plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d94460);
+                      plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d94478);
                       if (!cVar3) {
                         puVar10 = (uint32 *)Color.get_red(&local_28,0);
                       }
@@ -484,7 +484,7 @@ public class SkillIconController
                       if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"SkillLvBack",0)) == null)
                          || (lVar6 = Transform.Find(lVar6,"Lock",0)) == null)
                       throw; // [null/range check failed]
-                      lVar6 = Component.GetComponent(lVar6,DAT_181d95560);
+                      lVar6 = Component.GetComponent(lVar6,DAT_181d95578);
                       uVar7 = "<color=red>经验未满\n无法突破</color>";
                       if (cVar3) {
                         uVar7 = "<color=green>经验已满\n在闭关室突破</color>";
@@ -537,7 +537,7 @@ public class SkillIconController
                           if (((lVar6 != null) &&
                               (lVar6 = Transform.Find(lVar6,"ExpBack",0)) != null) &&
                              (lVar6 = Transform.Find(lVar6,"BookExp",0)) != null) {
-                            lVar11 = Component.GetComponent(lVar6,DAT_181d94460);
+                            lVar11 = Component.GetComponent(lVar6,DAT_181d94478);
                             lVar6 = this.skillLvData;
                             if (lVar6 != null) {
                               fVar1 = lVar6.bookExp;
@@ -548,7 +548,7 @@ public class SkillIconController
                                 if (((lVar6 != null) &&
                                     (lVar6 = Transform.Find(lVar6,"ExpBack",0)) != null) &&
                                    (lVar6 = Transform.Find(lVar6,"FightExp",0)) != null) {
-                                  lVar11 = Component.GetComponent(lVar6,DAT_181d94460);
+                                  lVar11 = Component.GetComponent(lVar6,DAT_181d94478);
                                   lVar6 = this.skillLvData;
                                   if (lVar6 != null) {
                                     fVar1 = lVar6.fightExp;
@@ -605,7 +605,7 @@ public class SkillIconController
     }
 
     // Token : 0x600212B
-    // RVA   : 0x984FB0   Offset: 0x9843B0   Length: 0x33C
+    // RVA   : 0x985640   Offset: 0x984A40   Length: 0x33C
     public void AutoSetName(SkillSortType sortType, bool reverseOrder)
     {
         long lVar1;
@@ -617,17 +617,17 @@ public class SkillIconController
         local_28[0] = 0.0;
         if ((this.skillLvData == null) ||
            (lVar1 = KungfuSkillLvData.DataBase(this.skillLvData,0)) == null) {
-        LAB_1809852e5:
+        LAB_180985975:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         uVar2 = Int32.ToString(lVar1 + 52,"",0);
         if ((this.skillLvData == null) ||
            (lVar1 = KungfuSkillLvData.DataBase(this.skillLvData,0)) == null)
-        goto LAB_1809852e5;
+        goto LAB_180985975;
         local_res8[0] = lVar1.fightExp + 1;
         uVar3 = Int32.ToString(local_res8,"00",0);
-        if (this.skillLvData == null) goto LAB_1809852e5;
+        if (this.skillLvData == null) goto LAB_180985975;
         uVar4 = Int32.ToString(this.skillLvData + 16,"0000",0);
         uVar2 = String.Concat(uVar2,uVar3,uVar4,0);
         Object.set_name(this,uVar2,0);
@@ -644,25 +644,25 @@ public class SkillIconController
           lVar1 = this.skillLvData;
           if (!reverseOrder) {
             if ((lVar1 == null) || (lVar1 = KungfuSkillLvData.DataBase(lVar1,0)) == null)
-            goto LAB_1809852e5;
+            goto LAB_180985975;
             uVar2 = Int32.ToString(lVar1 + 52,0);
           }
           else {
             if ((lVar1 == null) || (lVar1 = KungfuSkillLvData.DataBase(lVar1,0)) == null)
-            goto LAB_1809852e5;
+            goto LAB_180985975;
             local_res8[0] = 9 - *(int *)(lVar1 + 52);
             uVar2 = Int32.ToString(local_res8,0);
           }
-          goto LAB_180985112;
+          goto LAB_1809857a2;
         case 2:
           lVar1 = this.skillLvData;
           uVar2 = "00";
           if (!reverseOrder) {
-            if (lVar1 == null) goto LAB_1809852e5;
+            if (lVar1 == null) goto LAB_180985975;
             piVar5 = &lVar1.lv;
           }
           else {
-            if (lVar1 == null) goto LAB_1809852e5;
+            if (lVar1 == null) goto LAB_180985975;
             local_res8[0] = 10 - lVar1.lv;
             piVar5 = local_res8;
           }
@@ -671,13 +671,13 @@ public class SkillIconController
           lVar1 = this.skillLvData;
           if (!reverseOrder) {
             if ((lVar1 == null) || (lVar1 = KungfuSkillLvData.DataBase(lVar1,0)) == null)
-            goto LAB_1809852e5;
+            goto LAB_180985975;
             piVar5 = &lVar1.fightExp;
             uVar2 = "00";
           }
           else {
             if ((lVar1 == null) || (lVar1 = KungfuSkillLvData.DataBase(lVar1,0)) == null)
-            goto LAB_1809852e5;
+            goto LAB_180985975;
             local_res8[0] = 99 - lVar1.fightExp;
             piVar5 = local_res8;
             uVar2 = "00";
@@ -686,41 +686,41 @@ public class SkillIconController
         case 4:
           lVar1 = this.skillLvData;
           if (!reverseOrder) {
-            if (lVar1 == null) goto LAB_1809852e5;
+            if (lVar1 == null) goto LAB_180985975;
             local_28[0] = (float)KungfuSkillLvData.GetBaseDamage(lVar1,0);
           }
           else {
-            if (lVar1 == null) goto LAB_1809852e5;
+            if (lVar1 == null) goto LAB_180985975;
             local_28[0] = (float)KungfuSkillLvData.GetBaseDamage(lVar1,0);
-        LAB_180985282:
+        LAB_180985912:
             local_28[0] = 99.0 - local_28[0];
           }
-          goto LAB_1809852a8;
+          goto LAB_180985938;
         case 5:
           lVar1 = this.skillLvData;
           if (reverseOrder) {
-            if (lVar1 == null) goto LAB_1809852e5;
+            if (lVar1 == null) goto LAB_180985975;
             local_28[0] = (float)KungfuSkillLvData.GetManaCost(lVar1,0);
-            goto LAB_180985282;
+            goto LAB_180985912;
           }
-          if (lVar1 == null) goto LAB_1809852e5;
+          if (lVar1 == null) goto LAB_180985975;
           local_28[0] = (float)KungfuSkillLvData.GetManaCost(lVar1,0);
-        LAB_1809852a8:
+        LAB_180985938:
           uVar2 = Single.ToString(local_28,"00.0",0);
-          goto LAB_180985112;
+          goto LAB_1809857a2;
         default:
-          goto switchD_1809850e6_default;
+          goto switchD_180985776_default;
         }
         uVar2 = Int32.ToString(piVar5,uVar2,0);
-        LAB_180985112:
+        LAB_1809857a2:
         uVar3 = Object.get_name(this,0);
         uVar2 = String.Concat(uVar2,uVar3,0);
         Object.set_name(this,uVar2,0);
-        switchD_1809850e6_default:
+        switchD_180985776_default:
     }
 
     // Token : 0x600212C
-    // RVA   : 0x985310   Offset: 0x984710   Length: 0x1CF
+    // RVA   : 0x9859A0   Offset: 0x984DA0   Length: 0x1CF
     public void OnClick()
     {
         var pStatics = *(int64*)(DAT_181d75f40 + 184);
@@ -779,10 +779,10 @@ public class SkillIconController
     }
 
     // Token : 0x600212E
-    // RVA   : 0x986F80   Offset: 0x986380   Length: 0x139
+    // RVA   : 0x987610   Offset: 0x986A10   Length: 0x139
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181da3150 + 184);
+        var pStatics = *(int64*)(DAT_181da3168 + 184);
         long lVar2;
         ulong local_48;
         ulong uStack_40;
@@ -794,19 +794,19 @@ public class SkillIconController
         ulong uStack_10;
         local_48 = 0;
         uStack_40 = 0;
-        FUN_1809dc910(&local_48,0,0x3f19999a,0,0x3f000000,0);
-        puVar1 = *(uint64 **)(DAT_181da3150 + 184);
+        FUN_1809dcfa0(&local_48,0,0x3f19999a,0,0x3f000000,0);
+        puVar1 = *(uint64 **)(DAT_181da3168 + 184);
         *puVar1 = local_48;
         puVar1[1] = uStack_40;
         local_38 = 0;
         uStack_30 = 0;
-        FUN_1809dc910(&local_38,0,0,0,0x3f333333,0);
+        FUN_1809dcfa0(&local_38,0,0,0,0x3f333333,0);
         lVar2 = pStatics;
         *(uint64 *)(lVar2 + 16) = local_38;
         *(uint64 *)(lVar2 + 24) = uStack_30;
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dc910(&local_28,0,0,0,0x3f400000,0);
+        FUN_1809dcfa0(&local_28,0,0,0,0x3f400000,0);
         lVar2 = pStatics;
         *(uint32 *)(lVar2 + 32) = (uint32)local_28;
         *(uint32 *)(lVar2 + 36) = local_28._4_4_;
@@ -814,7 +814,7 @@ public class SkillIconController
         *(uint32 *)(lVar2 + 44) = uStack_20._4_4_;
         local_18 = 0;
         uStack_10 = 0;
-        FUN_1809dc910(&local_18,0x3f800000,0x3f800000,0x3f800000,0x3f800000,0);
+        FUN_1809dcfa0(&local_18,0x3f800000,0x3f800000,0x3f800000,0x3f800000,0);
         lVar2 = pStatics;
         *(uint64 *)(lVar2 + 48) = local_18;
         *(uint64 *)(lVar2 + 56) = uStack_10;

@@ -44,21 +44,21 @@ public class UIFont
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600079C
-    // RVA   : 0x12BF5F0   Offset: 0x12BE9F0   Length: 0x54
+    // RVA   : 0x12BFC00   Offset: 0x12BF000   Length: 0x54
     public virtual BMFont get_bmFont()
     {
         long lVar1;
         ulong uVar2;
         lVar1 = UIFont.get_replacement(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180002970(0,DAT_181d7a800,lVar1);
+          uVar2 = FUN_180002970(0,DAT_181d7a818,lVar1);
           return uVar2;
         }
         return this.mFont;
     }
 
     // Token : 0x600079D
-    // RVA   : 0x12C0B50   Offset: 0x12BFF50   Length: 0xDD
+    // RVA   : 0x12C1160   Offset: 0x12C0560   Length: 0xDD
     public virtual void set_bmFont(BMFont value)
     {
         long lVar1;
@@ -72,31 +72,31 @@ public class UIFont
         uVar4 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a818) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar4 * 16) *
                         16 + 0x148 + lVar1);
-              goto LAB_1812c0bfa;
+              goto LAB_1812c120a;
             }
             uVar4 = uVar4 + 1;
           } while (uVar4 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,1);
-        LAB_1812c0bfa:
-                          // WARNING: Could not recover jumptable at 0x0001812c0c13. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,1);
+        LAB_1812c120a:
+                          // WARNING: Could not recover jumptable at 0x0001812c1223. Too many branches
                           // WARNING: Treating indirect jump as call
         (*(code *)*puVar3)(plVar2,value,puVar3[1]);
     }
 
     // Token : 0x600079E
-    // RVA   : 0x12C0570   Offset: 0x12BF970   Length: 0x6A
+    // RVA   : 0x12C0B80   Offset: 0x12BFF80   Length: 0x6A
     public virtual int get_texWidth()
     {
         long lVar1;
         ulong uVar2;
         lVar1 = UIFont.get_replacement(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180002970(2,DAT_181d7a800,lVar1);
+          uVar2 = FUN_180002970(2,DAT_181d7a818,lVar1);
           return uVar2;
         }
         if (this.mFont != null) {
@@ -106,7 +106,7 @@ public class UIFont
     }
 
     // Token : 0x600079F
-    // RVA   : 0x12C1500   Offset: 0x12C0900   Length: 0x73
+    // RVA   : 0x12C1B10   Offset: 0x12C0F10   Length: 0x73
     public virtual void set_texWidth(int value)
     {
         long lVar1;
@@ -118,19 +118,19 @@ public class UIFont
           }
         }
         else {
-          FUN_180004670(3,DAT_181d7a800,lVar1,value);
+          FUN_180004670(3,DAT_181d7a818,lVar1,value);
         }
     }
 
     // Token : 0x60007A0
-    // RVA   : 0x12C0500   Offset: 0x12BF900   Length: 0x6A
+    // RVA   : 0x12C0B10   Offset: 0x12BFF10   Length: 0x6A
     public virtual int get_texHeight()
     {
         long lVar1;
         ulong uVar2;
         lVar1 = UIFont.get_replacement(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180002970(4,DAT_181d7a800,lVar1);
+          uVar2 = FUN_180002970(4,DAT_181d7a818,lVar1);
           return uVar2;
         }
         if (this.mFont != null) {
@@ -140,7 +140,7 @@ public class UIFont
     }
 
     // Token : 0x60007A1
-    // RVA   : 0x12C1480   Offset: 0x12C0880   Length: 0x73
+    // RVA   : 0x12C1A90   Offset: 0x12C0E90   Length: 0x73
     public virtual void set_texHeight(int value)
     {
         long lVar1;
@@ -152,19 +152,19 @@ public class UIFont
           }
         }
         else {
-          FUN_180004670(5,DAT_181d7a800,lVar1,value);
+          FUN_180004670(5,DAT_181d7a818,lVar1,value);
         }
     }
 
     // Token : 0x60007A2
-    // RVA   : 0x12BF950   Offset: 0x12BED50   Length: 0x75
+    // RVA   : 0x12BFF60   Offset: 0x12BF360   Length: 0x75
     public virtual bool get_hasSymbols()
     {
         long lVar1;
         ulong uVar2;
         lVar1 = UIFont.get_replacement(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180002970(6,DAT_181d7a800,lVar1);
+          uVar2 = FUN_180002970(6,DAT_181d7a818,lVar1);
           return uVar2;
         }
         lVar1 = this.mSymbols;
@@ -175,7 +175,7 @@ public class UIFont
     }
 
     // Token : 0x60007A3
-    // RVA   : 0x12C0430   Offset: 0x12BF830   Length: 0xC2
+    // RVA   : 0x12C0A40   Offset: 0x12BFE40   Length: 0xC2
     public virtual List<BMSymbol> get_symbols()
     {
         long lVar1;
@@ -189,25 +189,25 @@ public class UIFont
         uVar5 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a818) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar5 * 16) *
                         16 + 0x1a8 + lVar1);
-              goto LAB_1812c04b8;
+              goto LAB_1812c0ac8;
             }
             uVar5 = uVar5 + 1;
           } while (uVar5 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,7);
-        LAB_1812c04b8:
-                          // WARNING: Could not recover jumptable at 0x0001812c04c9. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,7);
+        LAB_1812c0ac8:
+                          // WARNING: Could not recover jumptable at 0x0001812c0ad9. Too many branches
                           // WARNING: Treating indirect jump as call
         uVar4 = (*(code *)*puVar3)(plVar2,puVar3[1]);
         return uVar4;
     }
 
     // Token : 0x60007A4
-    // RVA   : 0x12C13A0   Offset: 0x12C07A0   Length: 0xDD
+    // RVA   : 0x12C19B0   Offset: 0x12C0DB0   Length: 0xDD
     public virtual void set_symbols(List<BMSymbol> value)
     {
         long lVar1;
@@ -221,37 +221,37 @@ public class UIFont
         uVar4 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a818) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar4 * 16) *
                         16 + 0x1b8 + lVar1);
-              goto LAB_1812c144a;
+              goto LAB_1812c1a5a;
             }
             uVar4 = uVar4 + 1;
           } while (uVar4 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,8);
-        LAB_1812c144a:
-                          // WARNING: Could not recover jumptable at 0x0001812c1463. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,8);
+        LAB_1812c1a5a:
+                          // WARNING: Could not recover jumptable at 0x0001812c1a73. Too many branches
                           // WARNING: Treating indirect jump as call
         (*(code *)*puVar3)(plVar2,value,puVar3[1]);
     }
 
     // Token : 0x60007A5
-    // RVA   : 0x12BF580   Offset: 0x12BE980   Length: 0x6E
+    // RVA   : 0x12BFB90   Offset: 0x12BEF90   Length: 0x6E
     public virtual INGUIAtlas get_atlas()
     {
         long lVar1;
         lVar1 = UIFont.get_replacement(this,0);
         if (lVar1 == null) {
-          il2cpp_internal(this.mAtlas,DAT_181d7a788);
+          il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
           return;
         }
-        FUN_180002970(9,DAT_181d7a800,lVar1);
+        FUN_180002970(9,DAT_181d7a818,lVar1);
     }
 
     // Token : 0x60007A6
-    // RVA   : 0x12C08A0   Offset: 0x12BFCA0   Length: 0x2AA
+    // RVA   : 0x12C0EB0   Offset: 0x12C02B0   Length: 0x2AA
     public virtual void set_atlas(INGUIAtlas value)
     {
         bool cVar2;
@@ -267,10 +267,10 @@ public class UIFont
         byte[] local_18 = new byte[16];
         lVar3 = UIFont.get_replacement(this,0);
         if (lVar3 != null) {
-          FUN_180004720(10,DAT_181d7a800,lVar3,value);
+          FUN_180004720(10,DAT_181d7a818,lVar3,value);
           return;
         }
-        plVar4 = (int64 *)il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        plVar4 = (int64 *)il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (plVar4 == value) {
           return;
         }
@@ -281,10 +281,10 @@ public class UIFont
           this.mMat = 0;
         }
         else {
-          if ((*(byte *)(*value + 300) < *(byte *)(DAT_181d8e210 + 300)) ||
+          if ((*(byte *)(*value + 300) < *(byte *)(DAT_181d8e228 + 300)) ||
              (*(int64 *)
-               (*(int64 *)(*value + 200) + -8 + (uint64)*(byte *)(DAT_181d8e210 + 300) * 8) !=
-              DAT_181d8e210)) {
+               (*(int64 *)(*value + 200) + -8 + (uint64)*(byte *)(DAT_181d8e228 + 300) * 8) !=
+              DAT_181d8e228)) {
             bVar1 = false;
           }
           else {
@@ -296,7 +296,7 @@ public class UIFont
             plVar4 = value;
           }
           this.mAtlas = plVar4;
-          uVar5 = FUN_180002970(0,DAT_181d7a788,value);
+          uVar5 = FUN_180002970(0,DAT_181d7a7a0,value);
           this.mMat = uVar5;
           lVar3 = UIFont.get_sprite(this,0);
           if (lVar3 != null) {
@@ -307,7 +307,7 @@ public class UIFont
               if ((!cVar2) || (lVar3 = UIFont.get_sprite(this,0)) == null) {
                 local_28 = 0;
                 uStack_20 = 0;
-                FUN_1809dc910(&local_28,0,0,0x3f800000,0x3f800000,0);
+                FUN_1809dcfa0(&local_28,0,0,0x3f800000,0x3f800000,0);
                 uVar10 = (uint32)local_28;
                 uVar11 = local_28._4_4_;
                 uVar12 = (uint32)uStack_20;
@@ -325,19 +325,19 @@ public class UIFont
               if (*(uint16 *)(lVar3 + 0x12a) != 0) {
                 do {
                   if (*(int64 *)(*(int64 *)(lVar3 + 176) + (int64)plVar9 * 16) ==
-                      DAT_181d7a800) {
+                      DAT_181d7a818) {
                     puVar6 = (uint64 *)
                              ((int64)
                               *(int *)(*(int64 *)(lVar3 + 176) + 8 + (int64)plVar9 * 16) * 16 +
                               0x248 + lVar3);
-                    goto LAB_1812c0ad7;
+                    goto LAB_1812c10e7;
                   }
                   uVar8 = (short)plVar9 + 1;
                   plVar9 = (int64 *)(uint64)uVar8;
                 } while (uVar8 < *(uint16 *)(lVar3 + 0x12a));
               }
-              puVar6 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a800,17);
-        LAB_1812c0ad7:
+              puVar6 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a818,17);
+        LAB_1812c10e7:
               puVar7 = (uint32 *)(*(code *)*puVar6)(local_18,plVar4,puVar6[1]);
               uVar10 = *puVar7;
               uVar11 = puVar7[1];
@@ -354,25 +354,25 @@ public class UIFont
     }
 
     // Token : 0x60007A7
-    // RVA   : 0x12BE610   Offset: 0x12BDA10   Length: 0xBA
+    // RVA   : 0x12BEC20   Offset: 0x12BE020   Length: 0xBA
     public virtual UISpriteData GetSprite(string spriteName)
     {
         long lVar1;
         lVar1 = UIFont.get_replacement(this,0);
         if (lVar1 == null) {
-          lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+          lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         }
         else {
-          lVar1 = FUN_180002970(9,DAT_181d7a800,lVar1);
+          lVar1 = FUN_180002970(9,DAT_181d7a818,lVar1);
         }
         if (lVar1 == null) {
           return;
         }
-        FUN_180002aa0(10,DAT_181d7a788,lVar1,spriteName);
+        FUN_180002aa0(10,DAT_181d7a7a0,lVar1,spriteName);
     }
 
     // Token : 0x60007A8
-    // RVA   : 0x12BFAF0   Offset: 0x12BEEF0   Length: 0x1F8
+    // RVA   : 0x12C0100   Offset: 0x12BF500   Length: 0x1F8
     public virtual Material get_material()
     {
         bool cVar1;
@@ -382,12 +382,12 @@ public class UIFont
         long lVar5;
         lVar2 = UIFont.get_replacement(this,0);
         if (lVar2 != null) {
-          uVar3 = FUN_180002970(12,DAT_181d7a800,lVar2);
+          uVar3 = FUN_180002970(12,DAT_181d7a818,lVar2);
           return uVar3;
         }
-        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (lVar2 != null) {
-          uVar3 = FUN_180002970(0,DAT_181d7a788,lVar2);
+          uVar3 = FUN_180002970(0,DAT_181d7a7a0,lVar2);
           return uVar3;
         }
         uVar3 = this.mMat;
@@ -406,14 +406,14 @@ public class UIFont
         else {
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (!cVar1) {
-        LAB_1812bfca5:
+        LAB_1812c02b5:
             return this.mMat;
           }
           uVar3 = this.mMat;
           if (this.mDynamicFont != null) {
             uVar4 = Font.get_material(this.mDynamicFont,0);
             cVar1 = Object.op_Inequality(uVar3,uVar4,0);
-            if (!cVar1) goto LAB_1812bfca5;
+            if (!cVar1) goto LAB_1812c02b5;
             lVar2 = this.mMat;
             if (this.mDynamicFont != null) {
               lVar5 = Font.get_material(this.mDynamicFont,0);
@@ -421,7 +421,7 @@ public class UIFont
                 uVar3 = Material.get_mainTexture(lVar5,0);
                 if (lVar2 != null) {
                   Material.set_mainTexture(lVar2,uVar3,0);
-                  goto LAB_1812bfca5;
+                  goto LAB_1812c02b5;
                 }
               }
             }
@@ -430,7 +430,7 @@ public class UIFont
     }
 
     // Token : 0x60007A9
-    // RVA   : 0x12C0FB0   Offset: 0x12C03B0   Length: 0x13C
+    // RVA   : 0x12C15C0   Offset: 0x12C09C0   Length: 0x13C
     public virtual void set_material(Material value)
     {
         ulong uVar1;
@@ -453,32 +453,32 @@ public class UIFont
           uVar6 = 0;
           if (*(uint16 *)(lVar2 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar6 * 16) == DAT_181d7a800) {
+              if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar6 * 16) == DAT_181d7a818) {
                 puVar5 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + (uint64)uVar6 * 16) *
                           16 + 0x208 + lVar2);
-                goto LAB_1812c10b9;
+                goto LAB_1812c16c9;
               }
               uVar6 = uVar6 + 1;
             } while (uVar6 < *(uint16 *)(lVar2 + 0x12a));
           }
-          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a800,13);
-        LAB_1812c10b9:
+          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a818,13);
+        LAB_1812c16c9:
           (*(code *)*puVar5)(plVar4,value,puVar5[1]);
         }
     }
 
     // Token : 0x60007AA
-    // RVA   : 0x12C0040   Offset: 0x12BF440   Length: 0x7
+    // RVA   : 0x12C0650   Offset: 0x12BFA50   Length: 0x7
     public bool get_premultipliedAlpha()
     {
-        void FUN_1812c0040(uint64 this)
+        void FUN_1812c0650(uint64 this)
         {
         UIFont.get_premultipliedAlphaShader(this,0);
     }
 
     // Token : 0x60007AB
-    // RVA   : 0x12BFEA0   Offset: 0x12BF2A0   Length: 0x19D
+    // RVA   : 0x12C04B0   Offset: 0x12BF8B0   Length: 0x19D
     public virtual bool get_premultipliedAlphaShader()
     {
         bool cVar1;
@@ -487,46 +487,46 @@ public class UIFont
         ulong uVar4;
         lVar2 = UIFont.get_replacement(this,0);
         if (lVar2 != null) {
-          uVar3 = FUN_180002970(14,DAT_181d7a800,lVar2);
+          uVar3 = FUN_180002970(14,DAT_181d7a818,lVar2);
           return uVar3;
         }
-        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (lVar2 != null) {
-          uVar3 = FUN_180002970(7,DAT_181d7a788,lVar2);
+          uVar3 = FUN_180002970(7,DAT_181d7a7a0,lVar2);
           return uVar3;
         }
         uVar4 = (uint64)this.mPMA;
-        if (this.mPMA != 0xffffffff) goto LAB_1812bfff5;
+        if (this.mPMA != 0xffffffff) goto LAB_1812c0605;
         lVar2 = UIFont.get_material(this,0);
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (!cVar1) {
-        LAB_1812bfff0:
+        LAB_1812c0600:
           uVar4 = 0;
         }
         else {
-          if (lVar2 == null) goto LAB_1812c0038;
+          if (lVar2 == null) goto LAB_1812c0648;
           uVar3 = Material.get_shader(lVar2,0);
           cVar1 = Object.op_Inequality(uVar3,0,0);
-          if (!cVar1) goto LAB_1812bfff0;
+          if (!cVar1) goto LAB_1812c0600;
           lVar2 = Material.get_shader(lVar2,0);
           if (lVar2 == null) {
-        LAB_1812c0038:
+        LAB_1812c0648:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar2 = Object.get_name(lVar2,0);
-          if (lVar2 == null) goto LAB_1812c0038;
+          if (lVar2 == null) goto LAB_1812c0648;
           cVar1 = String.Contains(lVar2,"Premultiplied",0);
-          if (!cVar1) goto LAB_1812bfff0;
+          if (!cVar1) goto LAB_1812c0600;
           uVar4 = 1;
         }
         this.mPMA = (int)uVar4;
-        LAB_1812bfff5:
+        LAB_1812c0605:
         return CONCAT71((int7)(uVar4 >> 8),(int)uVar4 == 1);
     }
 
     // Token : 0x60007AC
-    // RVA   : 0x12BFCF0   Offset: 0x12BF0F0   Length: 0x1A2
+    // RVA   : 0x12C0300   Offset: 0x12BF700   Length: 0x1A2
     public virtual bool get_packedFontShader()
     {
         bool cVar1;
@@ -535,7 +535,7 @@ public class UIFont
         ulong uVar4;
         lVar2 = UIFont.get_replacement(this,0);
         if (lVar2 != null) {
-          uVar3 = FUN_180002970(15,DAT_181d7a800,lVar2);
+          uVar3 = FUN_180002970(15,DAT_181d7a818,lVar2);
           return uVar3;
         }
         uVar4 = this.mAtlas;
@@ -544,37 +544,37 @@ public class UIFont
           return uVar3 & 0xffffffffffffff00;
         }
         uVar3 = (uint64)this.mPacked;
-        if (this.mPacked != 0xffffffff) goto LAB_1812bfe56;
+        if (this.mPacked != 0xffffffff) goto LAB_1812c0466;
         lVar2 = UIFont.get_material(this,0);
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (!cVar1) {
-        LAB_1812bfe51:
+        LAB_1812c0461:
           uVar3 = 0;
         }
         else {
-          if (lVar2 == null) goto LAB_1812bfe8d;
+          if (lVar2 == null) goto LAB_1812c049d;
           uVar4 = Material.get_shader(lVar2,0);
           cVar1 = Object.op_Inequality(uVar4,0,0);
-          if (!cVar1) goto LAB_1812bfe51;
+          if (!cVar1) goto LAB_1812c0461;
           lVar2 = Material.get_shader(lVar2,0);
           if (lVar2 == null) {
-        LAB_1812bfe8d:
+        LAB_1812c049d:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar2 = Object.get_name(lVar2,0);
-          if (lVar2 == null) goto LAB_1812bfe8d;
+          if (lVar2 == null) goto LAB_1812c049d;
           cVar1 = String.Contains(lVar2,"Packed",0);
-          if (!cVar1) goto LAB_1812bfe51;
+          if (!cVar1) goto LAB_1812c0461;
           uVar3 = 1;
         }
         this.mPacked = (int)uVar3;
-        LAB_1812bfe56:
+        LAB_1812c0466:
         return CONCAT71((int7)(uVar3 >> 8),(int)uVar3 == 1);
     }
 
     // Token : 0x60007AD
-    // RVA   : 0x12C05E0   Offset: 0x12BF9E0   Length: 0x148
+    // RVA   : 0x12C0BF0   Offset: 0x12BFFF0   Length: 0x148
     public virtual Texture2D get_texture()
     {
         bool cVar1;
@@ -590,7 +590,7 @@ public class UIFont
             if (lVar3 != null) {
               plVar4 = (int64 *)Material.get_mainTexture(lVar3,0);
               plVar2 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181dab390)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181dab3a8)) {
                 plVar2 = plVar4;
               }
               return plVar2;
@@ -603,26 +603,26 @@ public class UIFont
         lVar3 = *plVar2;
         if (*(uint16 *)(lVar3 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar3 + 176) + uVar7 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar3 + 176) + uVar7 * 16) == DAT_181d7a818) {
               puVar5 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar3 + 176) + 8 + uVar7 * 16) * 16 + 0x238
                        + lVar3);
-              goto LAB_1812c06f8;
+              goto LAB_1812c0d08;
             }
             uVar6 = (short)uVar7 + 1;
             uVar7 = (uint64)uVar6;
           } while (uVar6 < *(uint16 *)(lVar3 + 0x12a));
         }
-        puVar5 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,16);
-        LAB_1812c06f8:
-                          // WARNING: Could not recover jumptable at 0x0001812c0709. Too many branches
+        puVar5 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,16);
+        LAB_1812c0d08:
+                          // WARNING: Could not recover jumptable at 0x0001812c0d19. Too many branches
                           // WARNING: Treating indirect jump as call
         plVar2 = (int64 *)(*(code *)*puVar5)(plVar2,puVar5[1]);
         return plVar2;
     }
 
     // Token : 0x60007AE
-    // RVA   : 0x12C0730   Offset: 0x12BFB30   Length: 0x166
+    // RVA   : 0x12C0D40   Offset: 0x12C0140   Length: 0x166
     public virtual Rect get_uvRect()
     {
         ulong uVar1;
@@ -645,35 +645,35 @@ public class UIFont
               uVar9 = *(uint32 *)(param_2 + 36);
               uVar10 = *(uint32 *)(param_2 + 40);
               uVar11 = *(uint32 *)(param_2 + 44);
-              goto LAB_1812c0869;
+              goto LAB_1812c0e79;
             }
           }
           *this = 0;
           this[1] = 0;
-          FUN_1809dc910(this,0,0,0x3f800000,0x3f800000,0);
+          FUN_1809dcfa0(this,0,0,0x3f800000,0x3f800000,0);
           return this;
         }
         lVar4 = *plVar3;
         uVar7 = 0;
         if (*(uint16 *)(lVar4 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar4 + 176) + (uint64)uVar7 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar4 + 176) + (uint64)uVar7 * 16) == DAT_181d7a818) {
               puVar5 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar4 + 176) + 8 + (uint64)uVar7 * 16) *
                         16 + 0x248 + lVar4);
-              goto LAB_1812c0858;
+              goto LAB_1812c0e68;
             }
             uVar7 = uVar7 + 1;
           } while (uVar7 < *(uint16 *)(lVar4 + 0x12a));
         }
-        puVar5 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a800,17);
-        LAB_1812c0858:
+        puVar5 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a818,17);
+        LAB_1812c0e68:
         puVar6 = (uint32 *)(*(code *)*puVar5)(local_18,plVar3,puVar5[1]);
         uVar8 = *puVar6;
         uVar9 = puVar6[1];
         uVar10 = puVar6[2];
         uVar11 = puVar6[3];
-        LAB_1812c0869:
+        LAB_1812c0e79:
         *(uint32 *)this = uVar8;
         *(uint32 *)((int64)this + 4) = uVar9;
         *(uint32 *)(this + 1) = uVar10;
@@ -682,7 +682,7 @@ public class UIFont
     }
 
     // Token : 0x60007AF
-    // RVA   : 0x12C1580   Offset: 0x12C0980   Length: 0x127
+    // RVA   : 0x12C1B90   Offset: 0x12C0F90   Length: 0x127
     public virtual void set_uvRect(Rect value)
     {
         uint uVar1;
@@ -726,17 +726,17 @@ public class UIFont
           uVar8 = 0;
           if (*(uint16 *)(lVar6 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar8 * 16) == DAT_181d7a800) {
+              if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar8 * 16) == DAT_181d7a818) {
                 puVar7 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar8 * 16) *
                           16 + 600 + lVar6);
-                goto LAB_1812c166a;
+                goto LAB_1812c1c7a;
               }
               uVar8 = uVar8 + 1;
             } while (uVar8 < *(uint16 *)(lVar6 + 0x12a));
           }
-          puVar7 = (uint64 *)FUN_1800914f0(plVar5,DAT_181d7a800,18);
-        LAB_1812c166a:
+          puVar7 = (uint64 *)FUN_1800914f0(plVar5,DAT_181d7a818,18);
+        LAB_1812c1c7a:
           local_18 = *(uint32 *)value;
           uStack_14 = *(uint32 *)((int64)value + 4);
           uStack_10 = *(uint32 *)(value + 1);
@@ -746,7 +746,7 @@ public class UIFont
     }
 
     // Token : 0x60007B0
-    // RVA   : 0x12C00E0   Offset: 0x12BF4E0   Length: 0xD0
+    // RVA   : 0x12C06F0   Offset: 0x12BFAF0   Length: 0xD0
     public virtual string get_spriteName()
     {
         long lVar1;
@@ -764,25 +764,25 @@ public class UIFont
         uVar5 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a818) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar5 * 16) *
                         16 + 0x268 + lVar1);
-              goto LAB_1812c0168;
+              goto LAB_1812c0778;
             }
             uVar5 = uVar5 + 1;
           } while (uVar5 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,19);
-        LAB_1812c0168:
-                          // WARNING: Could not recover jumptable at 0x0001812c0179. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,19);
+        LAB_1812c0778:
+                          // WARNING: Could not recover jumptable at 0x0001812c0789. Too many branches
                           // WARNING: Treating indirect jump as call
         uVar4 = (*(code *)*puVar3)(plVar2,puVar3[1]);
         return uVar4;
     }
 
     // Token : 0x60007B1
-    // RVA   : 0x12C1270   Offset: 0x12C0670   Length: 0x120
+    // RVA   : 0x12C1880   Offset: 0x12C0C80   Length: 0x120
     public virtual void set_spriteName(string value)
     {
         long lVar1;
@@ -809,22 +809,22 @@ public class UIFont
         uVar4 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar4 * 16) == DAT_181d7a818) {
               puVar5 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar4 * 16) *
                         16 + 0x278 + lVar1);
-              goto LAB_1812c1358;
+              goto LAB_1812c1968;
             }
             uVar4 = uVar4 + 1;
           } while (uVar4 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar5 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a800,20);
-        LAB_1812c1358:
+        puVar5 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a818,20);
+        LAB_1812c1968:
         (*(code *)*puVar5)(plVar3,value,puVar5[1]);
     }
 
     // Token : 0x60007B2
-    // RVA   : 0x12BFA60   Offset: 0x12BEE60   Length: 0x88
+    // RVA   : 0x12C0070   Offset: 0x12BF470   Length: 0x88
     public virtual bool get_isValid()
     {
         ulong uVar1;
@@ -842,7 +842,7 @@ public class UIFont
     }
 
     // Token : 0x60007B3
-    // RVA   : 0x12BF650   Offset: 0x12BEA50   Length: 0xF5
+    // RVA   : 0x12BFC60   Offset: 0x12BF060   Length: 0xF5
     public int get_size()
     {
         ulong uVar1;
@@ -851,7 +851,7 @@ public class UIFont
         ulong uVar4;
         lVar3 = UIFont.get_replacement(this,0);
         if (lVar3 != null) {
-          uVar4 = FUN_180002970(22,DAT_181d7a800,lVar3);
+          uVar4 = FUN_180002970(22,DAT_181d7a818,lVar3);
           return uVar4;
         }
         lVar3 = UIFont.get_replacement(this,0);
@@ -860,7 +860,7 @@ public class UIFont
           cVar2 = Object.op_Inequality(uVar1,0,0);
         }
         else {
-          cVar2 = FUN_180002970(28,DAT_181d7a800,lVar3);
+          cVar2 = FUN_180002970(28,DAT_181d7a818,lVar3);
         }
         if ((!cVar2) && (this.mFont != null)) {
           return (uint64)this.mFont.mSize;
@@ -869,7 +869,7 @@ public class UIFont
     }
 
     // Token : 0x60007B4
-    // RVA   : 0x12C0C30   Offset: 0x12C0030   Length: 0x69
+    // RVA   : 0x12C1240   Offset: 0x12C0640   Length: 0x69
     public void set_size(int value)
     {
         long lVar1;
@@ -878,11 +878,11 @@ public class UIFont
           this.mDynamicFontSize = value;
           return;
         }
-        FUN_180004670(23,DAT_181d7a800,lVar1,value);
+        FUN_180004670(23,DAT_181d7a818,lVar1,value);
     }
 
     // Token : 0x60007B5
-    // RVA   : 0x12BF650   Offset: 0x12BEA50   Length: 0xF5
+    // RVA   : 0x12BFC60   Offset: 0x12BF060   Length: 0xF5
     public virtual int get_defaultSize()
     {
         ulong uVar1;
@@ -891,7 +891,7 @@ public class UIFont
         ulong uVar4;
         lVar3 = UIFont.get_replacement(this,0);
         if (lVar3 != null) {
-          uVar4 = FUN_180002970(22,DAT_181d7a800,lVar3);
+          uVar4 = FUN_180002970(22,DAT_181d7a818,lVar3);
           return uVar4;
         }
         lVar3 = UIFont.get_replacement(this,0);
@@ -900,7 +900,7 @@ public class UIFont
           cVar2 = Object.op_Inequality(uVar1,0,0);
         }
         else {
-          cVar2 = FUN_180002970(28,DAT_181d7a800,lVar3);
+          cVar2 = FUN_180002970(28,DAT_181d7a818,lVar3);
         }
         if ((!cVar2) && (this.mFont != null)) {
           return (uint64)this.mFont.mSize;
@@ -909,7 +909,7 @@ public class UIFont
     }
 
     // Token : 0x60007B6
-    // RVA   : 0x12C0C30   Offset: 0x12C0030   Length: 0x69
+    // RVA   : 0x12C1240   Offset: 0x12C0640   Length: 0x69
     public virtual void set_defaultSize(int value)
     {
         long lVar1;
@@ -918,11 +918,11 @@ public class UIFont
           this.mDynamicFontSize = value;
           return;
         }
-        FUN_180004670(23,DAT_181d7a800,lVar1,value);
+        FUN_180004670(23,DAT_181d7a818,lVar1,value);
     }
 
     // Token : 0x60007B7
-    // RVA   : 0x12C01C0   Offset: 0x12BF5C0   Length: 0x268
+    // RVA   : 0x12C07D0   Offset: 0x12BFBD0   Length: 0x268
     public virtual UISpriteData get_sprite()
     {
         bool cVar1;
@@ -939,41 +939,41 @@ public class UIFont
           uVar7 = 0;
           if (*(uint16 *)(lVar3 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar7 * 16) == DAT_181d7a800) {
+              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar7 * 16) == DAT_181d7a818) {
                 puVar6 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar3 + 176) + 8 + (uint64)uVar7 * 16) *
                           16 + 0x2b8 + lVar3);
-                goto LAB_1812c03f7;
+                goto LAB_1812c0a07;
               }
               uVar7 = uVar7 + 1;
             } while (uVar7 < *(uint16 *)(lVar3 + 0x12a));
           }
-          puVar6 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,24);
-        LAB_1812c03f7:
-                          // WARNING: Could not recover jumptable at 0x0001812c0409. Too many branches
+          puVar6 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,24);
+        LAB_1812c0a07:
+                          // WARNING: Could not recover jumptable at 0x0001812c0a19. Too many branches
                           // WARNING: Treating indirect jump as call
           uVar4 = (*(code *)*puVar6)(plVar2,puVar6[1]);
           return uVar4;
         }
-        lVar3 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        lVar3 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (((this.mSprite == null) && (lVar3 != null)) && (this.mFont != null)
            ) {
-          cVar1 = FUN_180d755b0(this.mFont.mSpriteName,0);
+          cVar1 = FUN_180d75bc0(this.mFont.mSpriteName,0);
           if (!cVar1) {
             if (this.mFont != null) {
-              uVar4 = FUN_180002aa0(10,DAT_181d7a788,lVar3,
+              uVar4 = FUN_180002aa0(10,DAT_181d7a7a0,lVar3,
                                     this.mFont.mSpriteName);
               this.mSprite = uVar4;
               lVar10 = this.mSprite;
               if (lVar10 == null) {
                 uVar4 = Object.get_name(this,0);
-                uVar4 = FUN_180002aa0(10,DAT_181d7a788,lVar3,uVar4);
+                uVar4 = FUN_180002aa0(10,DAT_181d7a7a0,lVar3,uVar4);
                 this.mSprite = uVar4;
                 lVar10 = this.mSprite;
               }
               uVar8 = 0;
               if (lVar10 == null) {
-                if (this.mFont == null) goto LAB_1812c0423;
+                if (this.mFont == null) goto LAB_1812c0a33;
                 this.mFont.mSpriteName = 0;
               }
               else {
@@ -986,31 +986,31 @@ public class UIFont
                   uVar9 = uVar8;
                   do {
                     lVar5 = UIFont.get_symbols(this,0);
-                    if (lVar5 == null) goto LAB_1812c0423;
+                    if (lVar5 == null) goto LAB_1812c0a33;
                     if (*(uint32 *)(lVar5 + 24) <= (uint32)uVar8) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     }
-                    if (*(int64 *)(lVar10 + *(int64 *)(lVar5 + 16)) == 0) goto LAB_1812c0423;
+                    if (*(int64 *)(lVar10 + *(int64 *)(lVar5 + 16)) == 0) goto LAB_1812c0a33;
                     BMSymbol.MarkAsChanged();
                     uVar8 = (uint64)((uint32)uVar8 + 1);
                     uVar9 = uVar9 + 1;
                     lVar10 = lVar10 + 8;
                   } while ((int64)uVar9 < lVar3);
                 }
-                goto LAB_1812c0388;
+                goto LAB_1812c0998;
               }
             }
-        LAB_1812c0423:
+        LAB_1812c0a33:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
-        LAB_1812c0388:
+        LAB_1812c0998:
         return this.mSprite;
     }
 
     // Token : 0x60007B8
-    // RVA   : 0x12C0050   Offset: 0x12BF450   Length: 0x8F
+    // RVA   : 0x12C0660   Offset: 0x12BFA60   Length: 0x8F
     public virtual INGUIFont get_replacement()
     {
         bool cVar1;
@@ -1018,14 +1018,14 @@ public class UIFont
         uVar2 = this.mReplacement;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (!cVar1) {
-          uVar2 = il2cpp_internal(this.mReplacement,DAT_181d7a800);
+          uVar2 = il2cpp_internal(this.mReplacement,DAT_181d7a818);
           return uVar2;
         }
         return 0;
     }
 
     // Token : 0x60007B9
-    // RVA   : 0x12C10F0   Offset: 0x12C04F0   Length: 0x17A
+    // RVA   : 0x12C1700   Offset: 0x12C0B00   Length: 0x17A
     public virtual void set_replacement(INGUIFont value)
     {
         long lVar1;
@@ -1035,12 +1035,12 @@ public class UIFont
           plVar5 = value;
         }
         plVar6 = this + 8;
-        plVar4 = (int64 *)il2cpp_internal(this[8],DAT_181d7a800);
+        plVar4 = (int64 *)il2cpp_internal(this[8],DAT_181d7a818);
         if (plVar4 != plVar5) {
           if (plVar5 != (int64 *)0) {
-            plVar4 = (int64 *)FUN_180002970(25,DAT_181d7a800,plVar5);
+            plVar4 = (int64 *)FUN_180002970(25,DAT_181d7a818,plVar5);
             if (plVar4 == this) {
-              FUN_180004720(26,DAT_181d7a800,plVar5,0);
+              FUN_180004720(26,DAT_181d7a818,plVar5,0);
             }
           }
           lVar1 = *plVar6;
@@ -1065,7 +1065,7 @@ public class UIFont
     }
 
     // Token : 0x60007BA
-    // RVA   : 0x12BF880   Offset: 0x12BEC80   Length: 0xCE
+    // RVA   : 0x12BFE90   Offset: 0x12BF290   Length: 0xCE
     public virtual INGUIFont get_finalFont()
     {
         long lVar1;
@@ -1082,18 +1082,18 @@ public class UIFont
           uVar3 = 0;
           if (*(uint16 *)(lVar1 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar1 + 176) + uVar3 * 16) == DAT_181d7a800) {
+              if (*(int64 *)(*(int64 *)(lVar1 + 176) + uVar3 * 16) == DAT_181d7a818) {
                 puVar4 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + uVar3 * 16) * 16 +
                           0x2c8 + lVar1);
-                goto LAB_1812bf908;
+                goto LAB_1812bff18;
               }
               uVar2 = (short)uVar3 + 1;
               uVar3 = (uint64)uVar2;
             } while (uVar2 < *(uint16 *)(lVar1 + 0x12a));
           }
-          puVar4 = (uint64 *)FUN_1800914f0(this,DAT_181d7a800,25);
-        LAB_1812bf908:
+          puVar4 = (uint64 *)FUN_1800914f0(this,DAT_181d7a818,25);
+        LAB_1812bff18:
           plVar5 = (int64 *)(*(code *)*puVar4)(this,puVar4[1]);
           if (plVar5 != (int64 *)0) {
             this = plVar5;
@@ -1106,14 +1106,14 @@ public class UIFont
     }
 
     // Token : 0x60007BB
-    // RVA   : 0x12BF9D0   Offset: 0x12BEDD0   Length: 0x8D
+    // RVA   : 0x12BFFE0   Offset: 0x12BF3E0   Length: 0x8D
     public virtual bool get_isDynamic()
     {
         ulong uVar1;
         long lVar2;
         lVar2 = UIFont.get_replacement(this,0);
         if (lVar2 != null) {
-          FUN_180002970(28,DAT_181d7a800,lVar2);
+          FUN_180002970(28,DAT_181d7a818,lVar2);
           return;
         }
         uVar1 = this.mDynamicFont;
@@ -1121,7 +1121,7 @@ public class UIFont
     }
 
     // Token : 0x60007BC
-    // RVA   : 0x12BF7B0   Offset: 0x12BEBB0   Length: 0xC2
+    // RVA   : 0x12BFDC0   Offset: 0x12BF1C0   Length: 0xC2
     public virtual Font get_dynamicFont()
     {
         long lVar1;
@@ -1135,25 +1135,25 @@ public class UIFont
         uVar5 = 0;
         if (*(uint16 *)(lVar1 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a800) {
+            if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a818) {
               puVar3 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar5 * 16) *
                         16 + 0x308 + lVar1);
-              goto LAB_1812bf838;
+              goto LAB_1812bfe48;
             }
             uVar5 = uVar5 + 1;
           } while (uVar5 < *(uint16 *)(lVar1 + 0x12a));
         }
-        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,29);
-        LAB_1812bf838:
-                          // WARNING: Could not recover jumptable at 0x0001812bf849. Too many branches
+        puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,29);
+        LAB_1812bfe48:
+                          // WARNING: Could not recover jumptable at 0x0001812bfe59. Too many branches
                           // WARNING: Treating indirect jump as call
         uVar4 = (*(code *)*puVar3)(plVar2,puVar3[1]);
         return uVar4;
     }
 
     // Token : 0x60007BD
-    // RVA   : 0x12C0D20   Offset: 0x12C0120   Length: 0x28B
+    // RVA   : 0x12C1330   Offset: 0x12C0730   Length: 0x28B
     public virtual void set_dynamicFont(Font value)
     {
         ulong uVar1;
@@ -1167,18 +1167,18 @@ public class UIFont
           uVar6 = 0;
           if (*(uint16 *)(lVar2 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar6 * 16) == DAT_181d7a800) {
+              if (*(int64 *)(*(int64 *)(lVar2 + 176) + (uint64)uVar6 * 16) == DAT_181d7a818) {
                 puVar5 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + (uint64)uVar6 * 16) *
                           16 + 0x318 + lVar2);
-                goto LAB_1812c0f78;
+                goto LAB_1812c1588;
               }
               uVar6 = uVar6 + 1;
             } while (uVar6 < *(uint16 *)(lVar2 + 0x12a));
           }
-          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a800,30);
-        LAB_1812c0f78:
-                          // WARNING: Could not recover jumptable at 0x0001812c0f91. Too many branches
+          puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a818,30);
+        LAB_1812c1588:
+                          // WARNING: Could not recover jumptable at 0x0001812c15a1. Too many branches
                           // WARNING: Treating indirect jump as call
           (*(code *)*puVar5)(plVar4,value,puVar5[1]);
           return;
@@ -1204,18 +1204,18 @@ public class UIFont
               uVar7 = 0;
               if (*(uint16 *)(lVar2 + 0x12a) != 0) {
                 do {
-                  if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar7 * 16) == DAT_181d7a800) {
+                  if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar7 * 16) == DAT_181d7a818) {
                     puVar5 = (uint64 *)
                              ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + uVar7 * 16) * 16 +
                               0x208 + lVar2);
-                    goto LAB_1812c0ed8;
+                    goto LAB_1812c14e8;
                   }
                   uVar6 = (short)uVar7 + 1;
                   uVar7 = (uint64)uVar6;
                 } while (uVar6 < *(uint16 *)(lVar2 + 0x12a));
               }
-              puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a800,13);
-        LAB_1812c0ed8:
+              puVar5 = (uint64 *)FUN_1800914f0(plVar4,DAT_181d7a818,13);
+        LAB_1812c14e8:
               (*(code *)*puVar5)(plVar4,0,puVar5[1]);
             }
           }
@@ -1225,21 +1225,21 @@ public class UIFont
     }
 
     // Token : 0x60007BE
-    // RVA   : 0x12BF750   Offset: 0x12BEB50   Length: 0x56
+    // RVA   : 0x12BFD60   Offset: 0x12BF160   Length: 0x56
     public virtual FontStyle get_dynamicFontStyle()
     {
         long lVar1;
         ulong uVar2;
         lVar1 = UIFont.get_replacement(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180002970(31,DAT_181d7a800,lVar1);
+          uVar2 = FUN_180002970(31,DAT_181d7a818,lVar1);
           return uVar2;
         }
         return (uint64)this.mDynamicFontStyle;
     }
 
     // Token : 0x60007BF
-    // RVA   : 0x12C0CA0   Offset: 0x12C00A0   Length: 0x78
+    // RVA   : 0x12C12B0   Offset: 0x12C06B0   Length: 0x78
     public virtual void set_dynamicFontStyle(FontStyle value)
     {
         long lVar1;
@@ -1252,12 +1252,12 @@ public class UIFont
           }
         }
         else {
-          FUN_180004670(32,DAT_181d7a800,lVar1,value);
+          FUN_180004670(32,DAT_181d7a818,lVar1,value);
         }
     }
 
     // Token : 0x60007C0
-    // RVA   : 0x12BEE10   Offset: 0x12BE210   Length: 0x282
+    // RVA   : 0x12BF420   Offset: 0x12BE820   Length: 0x282
     private void Trim()
     {
         ulong uVar1;
@@ -1278,9 +1278,9 @@ public class UIFont
         uVar8 = 0;
         local_58 = 0;
         uStack_50 = 0;
-        lVar7 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        lVar7 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (lVar7 != null) {
-          uVar8 = FUN_180002970(4,DAT_181d7a788,lVar7);
+          uVar8 = FUN_180002970(4,DAT_181d7a7a0,lVar7);
         }
         cVar2 = Object.op_Inequality(uVar8,0,0);
         if ((cVar2) && (this.mSprite != null)) {
@@ -1298,15 +1298,15 @@ public class UIFont
               local_48 = *puVar10;
               uStack_40 = puVar10[1];
               if (this.mSprite != null) {
-                FUN_1809dc910(&local_58);
-                FUN_180d98fc0(&local_58,0);
-                FUN_180d98fc0(&local_48,0);
+                FUN_1809dcfa0(&local_58);
+                FUN_180d995d0(&local_58,0);
+                FUN_180d995d0(&local_48,0);
                 uVar3 = Mathf.RoundToInt();
                 FUN_18044df60(&local_58,0);
                 FUN_18044df60(&local_48,0);
                 uVar4 = Mathf.RoundToInt();
                 Rect.get_xMax(&local_58,0);
-                FUN_180d98fc0(&local_48,0);
+                FUN_180d995d0(&local_48,0);
                 uVar5 = Mathf.RoundToInt();
                 Rect.get_yMax(&local_58,0);
                 FUN_18044df60(&local_48,0);
@@ -1324,7 +1324,7 @@ public class UIFont
     }
 
     // Token : 0x60007C1
-    // RVA   : 0x12BEC50   Offset: 0x12BE050   Length: 0xF0
+    // RVA   : 0x12BF260   Offset: 0x12BE660   Length: 0xF0
     public virtual bool References(INGUIFont font)
     {
         long lVar1;
@@ -1340,19 +1340,19 @@ public class UIFont
             uVar5 = 0;
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a800)
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar5 * 16) == DAT_181d7a818)
                 {
                   puVar3 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar5 * 16)
                             * 16 + 0x348 + lVar1);
-                  goto LAB_1812becf8;
+                  goto LAB_1812bf308;
                 }
                 uVar5 = uVar5 + 1;
               } while (uVar5 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a800,33);
-        LAB_1812becf8:
-                          // WARNING: Could not recover jumptable at 0x0001812bed0c. Too many branches
+            puVar3 = (uint64 *)FUN_1800914f0(plVar2,DAT_181d7a818,33);
+        LAB_1812bf308:
+                          // WARNING: Could not recover jumptable at 0x0001812bf31c. Too many branches
                           // WARNING: Treating indirect jump as call
             uVar4 = (*(code *)*puVar3)(plVar2,font,puVar3[1]);
             return uVar4;
@@ -1362,7 +1362,7 @@ public class UIFont
     }
 
     // Token : 0x60007C2
-    // RVA   : 0x12BE830   Offset: 0x12BDC30   Length: 0x253
+    // RVA   : 0x12BEE40   Offset: 0x12BE240   Length: 0x253
     public virtual void MarkAsChanged()
     {
         int iVar1;
@@ -1375,11 +1375,11 @@ public class UIFont
         uint uVar8;
         lVar3 = UIFont.get_replacement(this,0);
         if (lVar3 != null) {
-          FUN_180002970(34,DAT_181d7a800,lVar3);
+          FUN_180002970(34,DAT_181d7a818,lVar3);
         }
         uVar6 = 0;
         this.mSprite = 0;
-        lVar3 = NGUITools.FindActive(DAT_181d8f120);
+        lVar3 = NGUITools.FindActive(DAT_181d8efb8);
         if (lVar3 != null) {
           iVar1 = *(int *)(lVar3 + 24);
           uVar7 = uVar6;
@@ -1435,7 +1435,7 @@ public class UIFont
     }
 
     // Token : 0x60007C3
-    // RVA   : 0x12BF0A0   Offset: 0x12BE4A0   Length: 0x1F5
+    // RVA   : 0x12BF6B0   Offset: 0x12BEAB0   Length: 0x1F5
     public virtual void UpdateUVRect()
     {
         ulong uVar1;
@@ -1455,9 +1455,9 @@ public class UIFont
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (!cVar3) {
           plVar7 = (int64 *)0;
-          lVar6 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+          lVar6 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
           if (lVar6 != null) {
-            plVar7 = (int64 *)FUN_180002970(4,DAT_181d7a788,lVar6);
+            plVar7 = (int64 *)FUN_180002970(4,DAT_181d7a7a0,lVar6);
           }
           cVar3 = Object.op_Inequality(plVar7,0,0);
           if (cVar3) {
@@ -1465,7 +1465,7 @@ public class UIFont
             if (lVar6 != null) {
               local_48 = 0;
               uStack_40 = 0;
-              FUN_1809dc910(&local_48,lVar6.paddingRight,lVar6.width,
+              FUN_1809dcfa0(&local_48,lVar6.paddingRight,lVar6.width,
                             lVar6.paddingTop,
                             CONCAT44(uVar4,(float)(lVar6.paddingBottom + lVar6.paddingTop +
                                                   lVar6.height)),0);
@@ -1499,7 +1499,7 @@ public class UIFont
     }
 
     // Token : 0x60007C4
-    // RVA   : 0x12BE6D0   Offset: 0x12BDAD0   Length: 0x150
+    // RVA   : 0x12BECE0   Offset: 0x12BE0E0   Length: 0x150
     private BMSymbol GetSymbol(string sequence, bool createIfMissing)
     {
         long lVar1;
@@ -1522,7 +1522,7 @@ public class UIFont
               }
               lVar1 = *(int64 *)(lVar5 + lVar1._items);
               if (lVar1 == null) throw; // [null/range check failed]
-              cVar2 = FUN_18171e540(lVar1._items,sequence,0);
+              cVar2 = FUN_18171eb50(lVar1._items,sequence,0);
               if (cVar2) {
                 return lVar1;
               }
@@ -1538,7 +1538,7 @@ public class UIFont
           if (lVar6 != null) {
             *(uint64 *)(lVar6 + 16) = sequence;
             if (this.mSymbols != null) {
-              FUN_18181e0a0(this.mSymbols,lVar6,DAT_181d7e3c8);
+              FUN_18181e6b0(this.mSymbols,lVar6,DAT_181d7e3e0);
               return lVar6;
             }
           }
@@ -1546,7 +1546,7 @@ public class UIFont
     }
 
     // Token : 0x60007C5
-    // RVA   : 0x12BEA90   Offset: 0x12BDE90   Length: 0x1B6
+    // RVA   : 0x12BF0A0   Offset: 0x12BE4A0   Length: 0x1B6
     public virtual BMSymbol MatchSymbol(string text, int offset, int textLength)
     {
         int iVar1;
@@ -1581,7 +1581,7 @@ public class UIFont
                       sVar4 = String.get_Chars(text,iVar7 + offset,0);
                       if (lVar2._items == null) throw; // [null/range check failed]
                       sVar5 = String.get_Chars(lVar2._items,iVar7,0);
-                      if (sVar4 != sVar5) goto LAB_1812bec20;
+                      if (sVar4 != sVar5) goto LAB_1812bf230;
                       iVar7 = iVar7 + 1;
                     } while (iVar7 < iVar6);
                   }
@@ -1591,7 +1591,7 @@ public class UIFont
                     return lVar2;
                   }
                 }
-        LAB_1812bec20:
+        LAB_1812bf230:
                 uVar10 = uVar10 + 1;
                 lVar8 = lVar8 + 1;
                 lVar9 = lVar9 + 8;
@@ -1603,7 +1603,7 @@ public class UIFont
     }
 
     // Token : 0x60007C6
-    // RVA   : 0x12BE5C0   Offset: 0x12BD9C0   Length: 0x48
+    // RVA   : 0x12BEBD0   Offset: 0x12BDFD0   Length: 0x48
     public virtual void AddSymbol(string sequence, string spriteName)
     {
         long lVar1;
@@ -1616,7 +1616,7 @@ public class UIFont
     }
 
     // Token : 0x60007C7
-    // RVA   : 0x12BED40   Offset: 0x12BE140   Length: 0x7F
+    // RVA   : 0x12BF350   Offset: 0x12BE750   Length: 0x7F
     public virtual void RemoveSymbol(string sequence)
     {
         long lVar1;
@@ -1628,13 +1628,13 @@ public class UIFont
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_1817eee00(lVar2,lVar1,DAT_181d7e448);
+          FUN_1817ef410(lVar2,lVar1,DAT_181d7e460);
         }
         UIFont.MarkAsChanged(this,0);
     }
 
     // Token : 0x60007C8
-    // RVA   : 0x12BEDC0   Offset: 0x12BE1C0   Length: 0x43
+    // RVA   : 0x12BF3D0   Offset: 0x12BE7D0   Length: 0x43
     public virtual void RenameSymbol(string before, string after)
     {
         long lVar1;
@@ -1646,7 +1646,7 @@ public class UIFont
     }
 
     // Token : 0x60007C9
-    // RVA   : 0x12BF2A0   Offset: 0x12BE6A0   Length: 0x1D9
+    // RVA   : 0x12BF8B0   Offset: 0x12BECB0   Length: 0x1D9
     public virtual bool UsesSprite(string s)
     {
         int iVar1;
@@ -1657,7 +1657,7 @@ public class UIFont
         ushort uVar8;
         ulong uVar9;
         ulong uVar10;
-        cVar2 = FUN_180d755b0(s,0);
+        cVar2 = FUN_180d75bc0(s,0);
         if (cVar2) {
           return false;
         }
@@ -1672,20 +1672,20 @@ public class UIFont
           uVar8 = 0;
           if (*(uint16 *)(lVar6 + 0x12a) != 0) {
             do {
-              if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar8 * 16) == DAT_181d7a800) {
+              if (*(int64 *)(*(int64 *)(lVar6 + 176) + (uint64)uVar8 * 16) == DAT_181d7a818) {
                 puVar4 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar8 * 16) *
                           16 + 0x268 + lVar6);
                 uVar5 = (*(code *)*puVar4)(plVar3,puVar4[1]);
-                goto LAB_1812bf3b6;
+                goto LAB_1812bf9c6;
               }
               uVar8 = uVar8 + 1;
             } while (uVar8 < *(uint16 *)(lVar6 + 0x12a));
           }
-          puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a800,19);
+          puVar4 = (uint64 *)FUN_1800914f0(plVar3,DAT_181d7a818,19);
           uVar5 = (*(code *)*puVar4)(plVar3,puVar4[1]);
         }
-        LAB_1812bf3b6:
+        LAB_1812bf9c6:
         if (s != null) {
           cVar2 = String.Equals(s,uVar5,0);
           if (cVar2) {
@@ -1721,7 +1721,7 @@ public class UIFont
     }
 
     // Token : 0x60007CA
-    // RVA   : 0x12BF480   Offset: 0x12BE880   Length: 0xF2
+    // RVA   : 0x12BFA90   Offset: 0x12BEE90   Length: 0xF2
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -1729,14 +1729,14 @@ public class UIFont
         ulong uStack_10;
         local_18 = 0;
         uStack_10 = 0;
-        FUN_1809dc910(&local_18,0,0,0x3f800000,0x3f800000,0);
+        FUN_1809dcfa0(&local_18,0,0,0x3f800000,0x3f800000,0);
         this.mUVRect = (uint32)local_18;
         *(uint32 *)(this + 36) = local_18._4_4_;
         *(uint32 *)(this + 40) = (uint32)uStack_10;
         *(uint32 *)(this + 44) = uStack_10._4_4_;
         this.mFont = new BMFont(0);
-        uVar1 = il2cpp_internal(DAT_181d912e0);
-        FUN_18132faf0(uVar1,DAT_181d7e348);
+        uVar1 = il2cpp_internal(DAT_181d912f8);
+        FUN_181330100(uVar1,DAT_181d7e360);
         this.mSymbols = uVar1;
         this.mDynamicFontSize = 16;
         this.mPMA = 0xffffffffffffffff;

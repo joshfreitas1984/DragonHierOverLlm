@@ -6,24 +6,24 @@
 public class SpriteVisibleController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C0C
+    // Token: 0x4001C0D
     public bool visible;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60021B2
-    // RVA   : 0xC5EC40   Offset: 0xC5E040   Length: 0x5
+    // RVA   : 0xC5F250   Offset: 0xC5E650   Length: 0x5
     private void OnBecameVisible()
     {
-        void FUN_180c5ec40(int64 this)
+        void FUN_180c5f250(int64 this)
         {
         this.visible = 1;
     }
 
     // Token : 0x60021B3
-    // RVA   : 0xB7FEE0   Offset: 0xB7F2E0   Length: 0x5
+    // RVA   : 0xB805A0   Offset: 0xB7F9A0   Length: 0x5
     private void OnBecameInvisible()
     {
-        void FUN_180b7fee0(int64 this)
+        void FUN_180b805a0(int64 this)
         {
         this.visible = 0;
     }

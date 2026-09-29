@@ -6,19 +6,19 @@
 public class <WarpText>d__8
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002041
+    // Token: 0x4002042
     private int <>1__state;
 
-    // Token: 0x4002042
+    // Token: 0x4002043
     private object <>2__current;
 
-    // Token: 0x4002043
+    // Token: 0x4002044
     public WarpTextExample <>4__this;
 
-    // Token: 0x4002044
+    // Token: 0x4002045
     private float <old_CurveScale>5__2;
 
-    // Token: 0x4002045
+    // Token: 0x4002046
     private AnimationCurve <old_curve>5__3;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -37,7 +37,7 @@ public class <WarpText>d__8
     }
 
     // Token : 0x6002566
-    // RVA   : 0x1843A80   Offset: 0x1842E80   Length: 0xD8D
+    // RVA   : 0x1843B20   Offset: 0x1842F20   Length: 0xD8D
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -167,7 +167,7 @@ public class <WarpText>d__8
           if ((*(char *)(*(int64 *)(lVar4 + 24) + 0x370) == false) &&
              (this.<old_CurveScale>5__2 == *(float *)(lVar4 + 48))) {
             if ((this.<old_curve>5__3 == 0) ||
-               (lVar7 = FUN_1810ccc30(this.<old_curve>5__3,0)) == null) throw; // [null/range check failed]
+               (lVar7 = FUN_1810cd240(this.<old_curve>5__3,0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar7 + 24) < 2) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -175,7 +175,7 @@ public class <WarpText>d__8
             }
             fVar19 = (float)FUN_18044df60(lVar7 + 60,0);
             if ((*(int64 *)(lVar4 + 32) == 0) ||
-               (lVar7 = FUN_1810ccc30(*(int64 *)(lVar4 + 32),0)) == null) throw; // [null/range check failed]
+               (lVar7 = FUN_1810cd240(*(int64 *)(lVar4 + 32),0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar7 + 24) < 2) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -486,15 +486,15 @@ public class <WarpText>d__8
     }
 
     // Token : 0x6002568
-    // RVA   : 0x1844810   Offset: 0x1843C10   Length: 0x3E
+    // RVA   : 0x18448B0   Offset: 0x1843CB0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db8570);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db8720);
     }
 
     // Token : 0x6002569

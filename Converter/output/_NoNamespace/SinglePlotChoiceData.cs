@@ -6,40 +6,40 @@
 public class SinglePlotChoiceData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40019C6
+    // Token: 0x40019C7
     public string choiceText;
 
-    // Token: 0x40019C7
+    // Token: 0x40019C8
     public string callFuc;
 
-    // Token: 0x40019C8
+    // Token: 0x40019C9
     public string callParam;
 
-    // Token: 0x40019C9
+    // Token: 0x40019CA
     public bool inited;
 
-    // Token: 0x40019CA
+    // Token: 0x40019CB
     public bool inheritMissionRequirement;
 
-    // Token: 0x40019CB
+    // Token: 0x40019CC
     public List<PlotChoiceRequirement> requirements;
 
-    // Token: 0x40019CC
+    // Token: 0x40019CD
     public List<RelationRequirementType> relations;
 
-    // Token: 0x40019CD
+    // Token: 0x40019CE
     public bool autoChangeCostByDifficulty;
 
-    // Token: 0x40019CE
+    // Token: 0x40019CF
     public List<ResourceData> costResource;
 
-    // Token: 0x40019CF
+    // Token: 0x40019D0
     public string describe;
 
-    // Token: 0x40019D0
+    // Token: 0x40019D1
     public bool destroyEvent;
 
-    // Token: 0x40019D1
+    // Token: 0x40019D2
     public PlayerInteractionTimeType playerInteractionTimeNeed;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -55,7 +55,7 @@ public class SinglePlotChoiceData
         ulong uVar6;
         long lVar7;
         ZhSegment.Initialize(this,0);
-        lVar5 = FUN_1800d60b0(DAT_181da1040,1);
+        lVar5 = FUN_1800d60b0(DAT_181da1058,1);
         if (lVar5 != null) {
           if (*(int *)(lVar5 + 24) == 0) {
             uVar6 = il2cpp_internal();
@@ -86,14 +86,14 @@ public class SinglePlotChoiceData
                 }
                 this.callParam = *(uint64 *)(lVar5 + 48);
               }
-              uVar6 = il2cpp_internal(DAT_181d95250);
-              FUN_18132faf0(uVar6,DAT_181d97108);
+              uVar6 = il2cpp_internal(DAT_181d95268);
+              FUN_181330100(uVar6,DAT_181d97120);
               this.requirements = uVar6;
-              uVar6 = il2cpp_internal(DAT_181d96850);
-              FUN_18132faf0(uVar6,DAT_181d9f178);
+              uVar6 = il2cpp_internal(DAT_181d96868);
+              FUN_181330100(uVar6,DAT_181d9f190);
               this.relations = uVar6;
-              uVar6 = il2cpp_internal(DAT_181d969d0);
-              FUN_18132faf0(uVar6,DAT_181d9f778);
+              uVar6 = il2cpp_internal(DAT_181d969e8);
+              FUN_181330100(uVar6,DAT_181d9f790);
               this.costResource = uVar6;
               if (3 < (int)*(uint32 *)(lVar5 + 24)) {
                 if (*(uint32 *)(lVar5 + 24) < 4) {
@@ -109,7 +109,7 @@ public class SinglePlotChoiceData
                     FUN_1800d65f0(uVar6,0);
                   }
                   lVar1 = *(int64 *)(lVar5 + 56);
-                  lVar7 = FUN_1800d60b0(DAT_181da1040,1);
+                  lVar7 = FUN_1800d60b0(DAT_181da1058,1);
                   if (lVar7 == null) throw; // [null/range check failed]
                   if (*(int *)(lVar7 + 24) == 0) {
                     uVar6 = il2cpp_internal();
@@ -135,7 +135,7 @@ public class SinglePlotChoiceData
                   Int32.Parse(*(uint64 *)(lVar7 + 40),0);
                   uVar6 = new PlotChoiceRequirement(uVar4);
                   if (lVar1 == null) throw; // [null/range check failed]
-                  FUN_18181e0a0(lVar1,uVar6,DAT_181d9f7f8);
+                  FUN_18181e6b0(lVar1,uVar6,DAT_181d9f810);
                 }
               }
               if (4 < (int)*(uint32 *)(lVar5 + 24)) {
@@ -168,7 +168,7 @@ public class SinglePlotChoiceData
                     FUN_1800d65f0(uVar6,0);
                   }
                   lVar1 = *(int64 *)(lVar5 + 72);
-                  lVar7 = FUN_1800d60b0(DAT_181da1040,1);
+                  lVar7 = FUN_1800d60b0(DAT_181da1058,1);
                   if (lVar7 == null) throw; // [null/range check failed]
                   if (*(int *)(lVar7 + 24) == 0) {
                     uVar6 = il2cpp_internal();
@@ -178,7 +178,7 @@ public class SinglePlotChoiceData
                   *(uint16 *)(lVar7 + 32) = 47;
                   if (lVar1 == null) throw; // [null/range check failed]
                   lVar7 = String.Split(lVar1,lVar7,0);
-                  uVar6 = DAT_181db5848;
+                  uVar6 = DAT_181db5860;
                   lVar1 = this.requirements;
                   uVar6 = Type.GetTypeFromHandle(uVar6,0);
                   if (lVar7 == null) throw; // [null/range check failed]
@@ -195,16 +195,16 @@ public class SinglePlotChoiceData
                     FUN_1800d65f0(uVar6,0);
                   }
                   Single.Parse(*(uint64 *)(lVar7 + 40),0);
-                  uVar6 = il2cpp_internal(DAT_181d91b08);
+                  uVar6 = il2cpp_internal(DAT_181d91b20);
                   if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181db7490 + 64)) {
+                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181db74a8 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar8,DAT_181db7490);
+                    FUN_1800d6070(plVar8,DAT_181db74a8);
                   }
                   puVar9 = (uint32 *)il2cpp_object_unbox();
                   PlotChoiceRequirement.ctor(uVar6,*puVar9);
                   if (lVar1 == null) throw; // [null/range check failed]
-                  FUN_18181e0a0(lVar1,uVar6,DAT_181d97188);
+                  FUN_18181e6b0(lVar1,uVar6,DAT_181d971a0);
                 }
               }
               if (6 < (int)*(uint32 *)(lVar5 + 24)) {
@@ -214,7 +214,7 @@ public class SinglePlotChoiceData
                   FUN_1800d65f0(uVar6,0);
                 }
                 cVar3 = String.op_Inequality(*(uint64 *)(lVar5 + 80),"",0);
-                uVar6 = DAT_181dbef50;
+                uVar6 = DAT_181dbef68;
                 if (cVar3) {
                   uVar6 = Type.GetTypeFromHandle(uVar6,0);
                   if (*(uint32 *)(lVar5 + 24) < 7) {
@@ -225,9 +225,9 @@ public class SinglePlotChoiceData
                   uVar2 = *(uint64 *)(lVar5 + 80);
                   plVar8 = (int64 *)Enum.Parse(uVar6,uVar2,0);
                   if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181d91708 + 64)) {
+                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181d91728 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar8,DAT_181d91708);
+                    FUN_1800d6070(plVar8,DAT_181d91728);
                   }
                   puVar9 = (uint32 *)il2cpp_object_unbox();
                   this.playerInteractionTimeNeed = *puVar9;
@@ -240,7 +240,7 @@ public class SinglePlotChoiceData
     }
 
     // Token : 0x60019C7
-    // RVA   : 0x9826D0   Offset: 0x981AD0   Length: 0x736
+    // RVA   : 0x982D60   Offset: 0x982160   Length: 0x736
     public void /*ctor*/(string choiceDataText)
     {
         long lVar1;
@@ -251,7 +251,7 @@ public class SinglePlotChoiceData
         ulong uVar6;
         long lVar7;
         ZhSegment.Initialize(this,0);
-        lVar5 = FUN_1800d60b0(DAT_181da1040,1);
+        lVar5 = FUN_1800d60b0(DAT_181da1058,1);
         if (lVar5 != null) {
           if (*(int *)(lVar5 + 24) == 0) {
             uVar6 = il2cpp_internal();
@@ -282,14 +282,14 @@ public class SinglePlotChoiceData
                 }
                 this.callParam = *(uint64 *)(lVar5 + 48);
               }
-              uVar6 = il2cpp_internal(DAT_181d95250);
-              FUN_18132faf0(uVar6,DAT_181d97108);
+              uVar6 = il2cpp_internal(DAT_181d95268);
+              FUN_181330100(uVar6,DAT_181d97120);
               this.requirements = uVar6;
-              uVar6 = il2cpp_internal(DAT_181d96850);
-              FUN_18132faf0(uVar6,DAT_181d9f178);
+              uVar6 = il2cpp_internal(DAT_181d96868);
+              FUN_181330100(uVar6,DAT_181d9f190);
               this.relations = uVar6;
-              uVar6 = il2cpp_internal(DAT_181d969d0);
-              FUN_18132faf0(uVar6,DAT_181d9f778);
+              uVar6 = il2cpp_internal(DAT_181d969e8);
+              FUN_181330100(uVar6,DAT_181d9f790);
               this.costResource = uVar6;
               if (3 < (int)*(uint32 *)(lVar5 + 24)) {
                 if (*(uint32 *)(lVar5 + 24) < 4) {
@@ -305,7 +305,7 @@ public class SinglePlotChoiceData
                     FUN_1800d65f0(uVar6,0);
                   }
                   lVar1 = *(int64 *)(lVar5 + 56);
-                  lVar7 = FUN_1800d60b0(DAT_181da1040,1);
+                  lVar7 = FUN_1800d60b0(DAT_181da1058,1);
                   if (lVar7 == null) throw; // [null/range check failed]
                   if (*(int *)(lVar7 + 24) == 0) {
                     uVar6 = il2cpp_internal();
@@ -331,7 +331,7 @@ public class SinglePlotChoiceData
                   Int32.Parse(*(uint64 *)(lVar7 + 40),0);
                   uVar6 = new PlotChoiceRequirement(uVar4);
                   if (lVar1 == null) throw; // [null/range check failed]
-                  FUN_18181e0a0(lVar1,uVar6,DAT_181d9f7f8);
+                  FUN_18181e6b0(lVar1,uVar6,DAT_181d9f810);
                 }
               }
               if (4 < (int)*(uint32 *)(lVar5 + 24)) {
@@ -364,7 +364,7 @@ public class SinglePlotChoiceData
                     FUN_1800d65f0(uVar6,0);
                   }
                   lVar1 = *(int64 *)(lVar5 + 72);
-                  lVar7 = FUN_1800d60b0(DAT_181da1040,1);
+                  lVar7 = FUN_1800d60b0(DAT_181da1058,1);
                   if (lVar7 == null) throw; // [null/range check failed]
                   if (*(int *)(lVar7 + 24) == 0) {
                     uVar6 = il2cpp_internal();
@@ -374,7 +374,7 @@ public class SinglePlotChoiceData
                   *(uint16 *)(lVar7 + 32) = 47;
                   if (lVar1 == null) throw; // [null/range check failed]
                   lVar7 = String.Split(lVar1,lVar7,0);
-                  uVar6 = DAT_181db5848;
+                  uVar6 = DAT_181db5860;
                   lVar1 = this.requirements;
                   uVar6 = Type.GetTypeFromHandle(uVar6,0);
                   if (lVar7 == null) throw; // [null/range check failed]
@@ -391,16 +391,16 @@ public class SinglePlotChoiceData
                     FUN_1800d65f0(uVar6,0);
                   }
                   Single.Parse(*(uint64 *)(lVar7 + 40),0);
-                  uVar6 = il2cpp_internal(DAT_181d91b08);
+                  uVar6 = il2cpp_internal(DAT_181d91b20);
                   if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181db7490 + 64)) {
+                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181db74a8 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar8,DAT_181db7490);
+                    FUN_1800d6070(plVar8,DAT_181db74a8);
                   }
                   puVar9 = (uint32 *)il2cpp_object_unbox();
                   PlotChoiceRequirement.ctor(uVar6,*puVar9);
                   if (lVar1 == null) throw; // [null/range check failed]
-                  FUN_18181e0a0(lVar1,uVar6,DAT_181d97188);
+                  FUN_18181e6b0(lVar1,uVar6,DAT_181d971a0);
                 }
               }
               if (6 < (int)*(uint32 *)(lVar5 + 24)) {
@@ -410,7 +410,7 @@ public class SinglePlotChoiceData
                   FUN_1800d65f0(uVar6,0);
                 }
                 cVar3 = String.op_Inequality(*(uint64 *)(lVar5 + 80),"",0);
-                uVar6 = DAT_181dbef50;
+                uVar6 = DAT_181dbef68;
                 if (cVar3) {
                   uVar6 = Type.GetTypeFromHandle(uVar6,0);
                   if (*(uint32 *)(lVar5 + 24) < 7) {
@@ -421,9 +421,9 @@ public class SinglePlotChoiceData
                   uVar2 = *(uint64 *)(lVar5 + 80);
                   plVar8 = (int64 *)Enum.Parse(uVar6,uVar2,0);
                   if (plVar8 == (int64 *)0) throw; // [null/range check failed]
-                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181d91708 + 64)) {
+                  if (*(int64 *)(*plVar8 + 64) != *(int64 *)(DAT_181d91728 + 64)) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar8,DAT_181d91708);
+                    FUN_1800d6070(plVar8,DAT_181d91728);
                   }
                   puVar9 = (uint32 *)il2cpp_object_unbox();
                   this.playerInteractionTimeNeed = *puVar9;

@@ -26,7 +26,7 @@ public class UISprite
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60008FA
-    // RVA   : 0x170AEB0   Offset: 0x170A2B0   Length: 0xBD
+    // RVA   : 0x170B4C0   Offset: 0x170A8C0   Length: 0xBD
     public override Texture get_mainTexture()
     {
         bool cVar1;
@@ -34,9 +34,9 @@ public class UISprite
         long lVar3;
         ulong uVar4;
         lVar3 = 0;
-        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (lVar2 != null) {
-          lVar3 = FUN_180002970(0,DAT_181d7a788,lVar2);
+          lVar3 = FUN_180002970(0,DAT_181d7a7a0,lVar2);
         }
         cVar1 = Object.op_Inequality(lVar3,0,0);
         if (cVar1) {
@@ -51,16 +51,16 @@ public class UISprite
     }
 
     // Token : 0x60008FB
-    // RVA   : 0x1195BC0   Offset: 0x1194FC0   Length: 0x8
+    // RVA   : 0x11961D0   Offset: 0x11955D0   Length: 0x8
     public override void set_mainTexture(Texture value)
     {
-        void FUN_181195bc0(uint64 this,uint64 value)
+        void FUN_1811961d0(uint64 this,uint64 value)
         {
         UIWidget.set_mainTexture(this,value,0);
     }
 
     // Token : 0x60008FC
-    // RVA   : 0x170AF70   Offset: 0x170A370   Length: 0xB7
+    // RVA   : 0x170B580   Offset: 0x170A980   Length: 0xB7
     public override Material get_material()
     {
         bool cVar1;
@@ -69,34 +69,34 @@ public class UISprite
         uVar3 = *(uint64 *)(this + 176);
         cVar1 = Object.op_Inequality(uVar3,0,0);
         if (!cVar1) {
-          lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+          lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
           if (lVar2 == null) {
             return 0;
           }
-          uVar3 = FUN_180002970(0,DAT_181d7a788,lVar2);
+          uVar3 = FUN_180002970(0,DAT_181d7a7a0,lVar2);
           return uVar3;
         }
         return uVar3;
     }
 
     // Token : 0x60008FD
-    // RVA   : 0x1195BD0   Offset: 0x1194FD0   Length: 0x8
+    // RVA   : 0x11961E0   Offset: 0x11955E0   Length: 0x8
     public override void set_material(Material value)
     {
-        void FUN_181195bd0(uint64 this,uint64 value)
+        void FUN_1811961e0(uint64 this,uint64 value)
         {
         UIWidget.set_material(this,value,0);
     }
 
     // Token : 0x60008FE
-    // RVA   : 0x170A840   Offset: 0x1709C40   Length: 0x3D
+    // RVA   : 0x170AE50   Offset: 0x170A250   Length: 0x3D
     public INGUIAtlas get_atlas()
     {
-        il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
     }
 
     // Token : 0x60008FF
-    // RVA   : 0x170B4C0   Offset: 0x170A8C0   Length: 0x219
+    // RVA   : 0x170BAD0   Offset: 0x170AED0   Length: 0x219
     public void set_atlas(INGUIAtlas value)
     {
         bool cVar2;
@@ -117,14 +117,14 @@ public class UISprite
           this[66] = 0;
           il2cpp_internal(this + 66,0);
           plVar3 = this + 64;
-          cVar2 = FUN_180d755b0(*plVar3,0);
-          if ((cVar2) && (lVar4 = il2cpp_internal(this[63],DAT_181d7a788)) != null) {
-            lVar5 = FUN_180002970(2,DAT_181d7a788,lVar4);
-            if (lVar5 == null) goto LAB_18170b6d4;
+          cVar2 = FUN_180d75bc0(*plVar3,0);
+          if ((cVar2) && (lVar4 = il2cpp_internal(this[63],DAT_181d7a7a0)) != null) {
+            lVar5 = FUN_180002970(2,DAT_181d7a7a0,lVar4);
+            if (lVar5 == null) goto LAB_18170bce4;
             if (0 < *(int *)(lVar5 + 24)) {
-              lVar4 = FUN_180002970(2,DAT_181d7a788,lVar4);
+              lVar4 = FUN_180002970(2,DAT_181d7a7a0,lVar4);
               if (lVar4 == null) {
-        LAB_18170b6d4:
+        LAB_18170bce4:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
@@ -132,12 +132,12 @@ public class UISprite
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               UISprite.SetAtlasSprite(this,*(uint64 *)(*(int64 *)(lVar4 + 16) + 32),0);
-              if (this[66] == 0) goto LAB_18170b6d4;
+              if (this[66] == 0) goto LAB_18170bce4;
               *plVar3 = *(int64 *)(this[66] + 16);
               il2cpp_internal(plVar3);
             }
           }
-          cVar2 = FUN_180d755b0(*plVar3,0);
+          cVar2 = FUN_180d75bc0(*plVar3,0);
           if (!cVar2) {
             lVar4 = *plVar3;
             *plVar3 = "";
@@ -149,16 +149,16 @@ public class UISprite
     }
 
     // Token : 0x6000900
-    // RVA   : 0x170AE60   Offset: 0x170A260   Length: 0x8
+    // RVA   : 0x170B470   Offset: 0x170A870   Length: 0x8
     public bool get_fixedAspect()
     {
-        uint8 FUN_18170ae60(int64 this)
+        uint8 FUN_18170b470(int64 this)
         {
         return this.mFixedAspect;
     }
 
     // Token : 0x6000901
-    // RVA   : 0x170B710   Offset: 0x170AB10   Length: 0x6B
+    // RVA   : 0x170BD20   Offset: 0x170B120   Length: 0x6B
     public void set_fixedAspect(bool value)
     {
         ulong local_18;
@@ -167,7 +167,7 @@ public class UISprite
           *(char *)(this + 65) = value;
           local_18 = 0;
           uStack_10 = 0;
-          FUN_1809dc910(&local_18,0,0,0x3f800000,0x3f800000,0);
+          FUN_1809dcfa0(&local_18,0,0,0x3f800000,0x3f800000,0);
           *(uint32 *)((int64)this + 252) = (uint32)local_18;
           *(uint32 *)(this + 32) = local_18._4_4_;
           *(uint32 *)((int64)this + 0x104) = (uint32)uStack_10;
@@ -177,19 +177,19 @@ public class UISprite
     }
 
     // Token : 0x6000902
-    // RVA   : 0x1709FA0   Offset: 0x17093A0   Length: 0x8C
+    // RVA   : 0x170A5B0   Offset: 0x17099B0   Length: 0x8C
     public UISpriteData GetSprite(string spriteName)
     {
         long lVar1;
-        lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (lVar1 != null) {
-          FUN_180002aa0(10,DAT_181d7a788,lVar1,spriteName);
+          FUN_180002aa0(10,DAT_181d7a7a0,lVar1,spriteName);
           return;
         }
     }
 
     // Token : 0x6000903
-    // RVA   : 0x170A1E0   Offset: 0x17095E0   Length: 0x34
+    // RVA   : 0x170A7F0   Offset: 0x1709BF0   Length: 0x34
     public override void MarkAsChanged()
     {
         this.mSprite = 0;
@@ -198,20 +198,20 @@ public class UISprite
     }
 
     // Token : 0x6000904
-    // RVA   : 0x113BC60   Offset: 0x113B060   Length: 0x8
+    // RVA   : 0x113C270   Offset: 0x113B670   Length: 0x8
     public string get_spriteName()
     {
-        uint64 FUN_18113bc60(int64 this)
+        uint64 FUN_18113c270(int64 this)
         {
         return this.mSpriteName;
     }
 
     // Token : 0x6000905
-    // RVA   : 0x170B860   Offset: 0x170AC60   Length: 0xC9
+    // RVA   : 0x170BE70   Offset: 0x170B270   Length: 0xC9
     public void set_spriteName(string value)
     {
         bool cVar1;
-        cVar1 = FUN_180d755b0(value,0);
+        cVar1 = FUN_180d75bc0(value,0);
         if (!cVar1) {
           cVar1 = String.op_Inequality(this[64],value,0);
           if (!cVar1) {
@@ -220,7 +220,7 @@ public class UISprite
           this[64] = value;
         }
         else {
-          cVar1 = FUN_180d755b0(this[64],0);
+          cVar1 = FUN_180d75bc0(this[64],0);
           value = "";
           if (cVar1) {
             return;
@@ -236,7 +236,7 @@ public class UISprite
     }
 
     // Token : 0x6000906
-    // RVA   : 0x170AE90   Offset: 0x170A290   Length: 0x16
+    // RVA   : 0x170B4A0   Offset: 0x170A8A0   Length: 0x16
     public bool get_isValid()
     {
         long lVar1;
@@ -245,23 +245,23 @@ public class UISprite
     }
 
     // Token : 0x6000907
-    // RVA   : 0x170AE50   Offset: 0x170A250   Length: 0xB
+    // RVA   : 0x170B460   Offset: 0x170A860   Length: 0xB
     public bool get_fillCenter()
     {
-        bool FUN_18170ae50(int64 this)
+        bool FUN_18170b460(int64 this)
         {
         return *(int *)(this + 0x1e0) != 0;
     }
 
     // Token : 0x6000908
-    // RVA   : 0x170B6E0   Offset: 0x170AAE0   Length: 0x2D
+    // RVA   : 0x170BCF0   Offset: 0x170B0F0   Length: 0x2D
     public void set_fillCenter(bool value)
     {
-        void FUN_18170b6e0(int64 *this,byte value)
+        void FUN_18170bcf0(int64 *this,byte value)
         {
         if ((uint32)value != (uint32)((int)this[60] != 0)) {
           *(uint32 *)(this + 60) = (uint32)value;
-                          // WARNING: Could not recover jumptable at 0x00018170b705. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018170bd15. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
@@ -269,23 +269,23 @@ public class UISprite
     }
 
     // Token : 0x6000909
-    // RVA   : 0x170A830   Offset: 0x1709C30   Length: 0x8
+    // RVA   : 0x170AE40   Offset: 0x170A240   Length: 0x8
     public bool get_applyGradient()
     {
-        uint8 FUN_18170a830(int64 this)
+        uint8 FUN_18170ae40(int64 this)
         {
         return *(uint8 *)(this + 0x19c);
     }
 
     // Token : 0x600090A
-    // RVA   : 0x170B4A0   Offset: 0x170A8A0   Length: 0x20
+    // RVA   : 0x170BAB0   Offset: 0x170AEB0   Length: 0x20
     public void set_applyGradient(bool value)
     {
-        void FUN_18170b4a0(int64 *this,char value)
+        void FUN_18170bab0(int64 *this,char value)
         {
         if (*(char *)((int64)this + 0x19c) != value) {
           *(char *)((int64)this + 0x19c) = value;
-                          // WARNING: Could not recover jumptable at 0x00018170b4b8. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018170bac8. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           return;
@@ -293,10 +293,10 @@ public class UISprite
     }
 
     // Token : 0x600090B
-    // RVA   : 0x170AE80   Offset: 0x170A280   Length: 0xE
+    // RVA   : 0x170B490   Offset: 0x170A890   Length: 0xE
     public Color get_gradientTop()
     {
-        uint64 * FUN_18170ae80(uint64 *this,int64 param_2)
+        uint64 * FUN_18170b490(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1a8);
@@ -306,7 +306,7 @@ public class UISprite
     }
 
     // Token : 0x600090C
-    // RVA   : 0x170B7F0   Offset: 0x170ABF0   Length: 0x6B
+    // RVA   : 0x170BE00   Offset: 0x170B200   Length: 0x6B
     public void set_gradientTop(Color value)
     {
         uint uVar1;
@@ -341,10 +341,10 @@ public class UISprite
     }
 
     // Token : 0x600090D
-    // RVA   : 0x170AE70   Offset: 0x170A270   Length: 0xE
+    // RVA   : 0x170B480   Offset: 0x170A880   Length: 0xE
     public Color get_gradientBottom()
     {
-        uint64 * FUN_18170ae70(uint64 *this,int64 param_2)
+        uint64 * FUN_18170b480(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x1b8);
@@ -354,7 +354,7 @@ public class UISprite
     }
 
     // Token : 0x600090E
-    // RVA   : 0x170B780   Offset: 0x170AB80   Length: 0x6B
+    // RVA   : 0x170BD90   Offset: 0x170B190   Length: 0x6B
     public void set_gradientBottom(Color value)
     {
         uint uVar1;
@@ -389,7 +389,7 @@ public class UISprite
     }
 
     // Token : 0x600090F
-    // RVA   : 0x170A880   Offset: 0x1709C80   Length: 0x9A
+    // RVA   : 0x170AE90   Offset: 0x170A290   Length: 0x9A
     public override Vector4 get_border()
     {
         uint uVar1;
@@ -407,7 +407,7 @@ public class UISprite
           iVar4 = *(int *)(lVar6 + 48);
           *this = 0;
           this[1] = 0;
-          FUN_1809dc910(this,uVar3,uVar2,uVar1,(float)iVar4,0);
+          FUN_1809dcfa0(this,uVar3,uVar2,uVar1,(float)iVar4,0);
           return this;
         }
         puVar7 = (uint64 *)UIWidget.get_border(local_18,param_2,0);
@@ -418,7 +418,7 @@ public class UISprite
     }
 
     // Token : 0x6000910
-    // RVA   : 0x170B2F0   Offset: 0x170A6F0   Length: 0x89
+    // RVA   : 0x170B900   Offset: 0x170AD00   Length: 0x89
     protected override Vector4 get_padding()
     {
         long lVar1;
@@ -427,7 +427,7 @@ public class UISprite
         this[2] = 0.0;
         this[3] = 0.0;
         lVar1 = UISprite.GetAtlasSprite(param_2,0);
-        FUN_1809dc910(this);
+        FUN_1809dcfa0(this);
         if (lVar1 != null) {
           *this = (float)*(int *)(lVar1 + 56);
           this[1] = (float)*(int *)(lVar1 + 68);
@@ -438,7 +438,7 @@ public class UISprite
     }
 
     // Token : 0x6000911
-    // RVA   : 0x170B380   Offset: 0x170A780   Length: 0xB4
+    // RVA   : 0x170B990   Offset: 0x170AD90   Length: 0xB4
     public override float get_pixelSize()
     {
         bool cVar1;
@@ -447,9 +447,9 @@ public class UISprite
         uVar3 = this.mAtlas;
         cVar1 = Object.op_Equality(uVar3,0,0);
         if (!cVar1) {
-          lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+          lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
           if (lVar2 != null) {
-            uVar3 = FUN_180133520(5,DAT_181d7a788,lVar2);
+            uVar3 = FUN_180133580(5,DAT_181d7a7a0,lVar2);
             return uVar3;
           }
         }
@@ -457,7 +457,7 @@ public class UISprite
     }
 
     // Token : 0x6000912
-    // RVA   : 0x170B190   Offset: 0x170A590   Length: 0x151
+    // RVA   : 0x170B7A0   Offset: 0x170ABA0   Length: 0x151
     public override int get_minWidth()
     {
         uint uVar1;
@@ -491,7 +491,7 @@ public class UISprite
         fVar12 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
         local_38 = 0;
         uStack_30 = 0;
-        FUN_1809dc910(&local_38,fVar2 * fVar12,fVar3 * fVar12,fVar4 * fVar12,fVar5 * fVar12,0);
+        FUN_1809dcfa0(&local_38,fVar2 * fVar12,fVar3 * fVar12,fVar4 * fVar12,fVar5 * fVar12,0);
         uVar7 = Mathf.RoundToInt((float)uStack_30 + (float)local_38,0);
         lVar10 = UISprite.GetAtlasSprite(this,0);
         if (lVar10 != null) {
@@ -508,7 +508,7 @@ public class UISprite
     }
 
     // Token : 0x6000913
-    // RVA   : 0x170B030   Offset: 0x170A430   Length: 0x151
+    // RVA   : 0x170B640   Offset: 0x170AA40   Length: 0x151
     public override int get_minHeight()
     {
         uint uVar1;
@@ -542,7 +542,7 @@ public class UISprite
         fVar12 = (float)(**(code **)(*this + 0x3d8))(this,*(uint64 *)(*this + 0x3e0));
         local_38 = 0;
         uStack_30 = 0;
-        FUN_1809dc910(&local_38,fVar2 * fVar12,fVar3 * fVar12,fVar4 * fVar12,fVar5 * fVar12,0);
+        FUN_1809dcfa0(&local_38,fVar2 * fVar12,fVar3 * fVar12,fVar4 * fVar12,fVar5 * fVar12,0);
         uVar7 = Mathf.RoundToInt(uStack_30._4_4_ + local_38._4_4_,0);
         lVar10 = UISprite.GetAtlasSprite(this,0);
         if (lVar10 != null) {
@@ -559,7 +559,7 @@ public class UISprite
     }
 
     // Token : 0x6000914
-    // RVA   : 0x170A920   Offset: 0x1709D20   Length: 0x526
+    // RVA   : 0x170AF30   Offset: 0x170A330   Length: 0x526
     public override Vector4 get_drawingDimensions()
     {
         int iVar1;
@@ -599,7 +599,7 @@ public class UISprite
             (*(float *)((int64)param_2 + 0x104) == 1.0)) && (*(float *)(param_2 + 33) == 0.0)) {
           *this = 0;
           this[1] = 0;
-          FUN_1809dc910(this);
+          FUN_1809dcfa0(this);
         }
         else {
           if ((char)param_2[65] == false) {
@@ -615,7 +615,7 @@ public class UISprite
               (**(code **)(*param_2 + 0x3d8))(param_2,*(uint64 *)(*param_2 + 0x3e0));
               local_a8 = 0;
               uStack_a0 = 0;
-              FUN_1809dc910(&local_a8);
+              FUN_1809dcfa0(&local_a8);
             }
           }
           Mathf.Lerp();
@@ -624,25 +624,25 @@ public class UISprite
           Mathf.Lerp();
           *this = 0;
           this[1] = 0;
-          FUN_1809dc910(this);
+          FUN_1809dcfa0(this);
         }
         return this;
     }
 
     // Token : 0x6000915
-    // RVA   : 0x170B440   Offset: 0x170A840   Length: 0x5C
+    // RVA   : 0x170BA50   Offset: 0x170AE50   Length: 0x5C
     public override bool get_premultipliedAlpha()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a788);
+        lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
         if (lVar1 == null) {
           return;
         }
-        FUN_180002970(7,DAT_181d7a788,lVar1);
+        FUN_180002970(7,DAT_181d7a7a0,lVar1);
     }
 
     // Token : 0x6000916
-    // RVA   : 0x1709D50   Offset: 0x1709150   Length: 0x246
+    // RVA   : 0x170A360   Offset: 0x1709760   Length: 0x246
     public UISpriteData GetAtlasSprite()
     {
         bool cVar1;
@@ -652,21 +652,21 @@ public class UISprite
           this.mSprite = 0;
         }
         if ((this.mSprite == null) &&
-           (plVar2 = (int64 *)il2cpp_internal(this.mAtlas,DAT_181d7a788),
+           (plVar2 = (int64 *)il2cpp_internal(this.mAtlas,DAT_181d7a7a0),
            plVar2 != (int64 *)0)) {
-          cVar1 = FUN_180d755b0(this.mSpriteName,0);
+          cVar1 = FUN_180d75bc0(this.mSpriteName,0);
           if (!cVar1) {
-            lVar3 = FUN_180002aa0(10,DAT_181d7a788,plVar2,this.mSpriteName);
+            lVar3 = FUN_180002aa0(10,DAT_181d7a7a0,plVar2,this.mSpriteName);
             if (lVar3 == null) {
               return 0;
             }
             UISprite.SetAtlasSprite(this,lVar3,0);
           }
           if (this.mSprite == null) {
-            lVar3 = FUN_180002970(2,DAT_181d7a788,plVar2);
+            lVar3 = FUN_180002970(2,DAT_181d7a7a0,plVar2);
             if (lVar3 != null) {
-              if (*(int *)(lVar3 + 24) < 1) goto LAB_181709eee;
-              lVar3 = FUN_180002970(2,DAT_181d7a788,plVar2);
+              if (*(int *)(lVar3 + 24) < 1) goto LAB_18170a4fe;
+              lVar3 = FUN_180002970(2,DAT_181d7a7a0,plVar2);
               if (lVar3 != null) {
                 if (*(int *)(lVar3 + 24) == 0) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -678,12 +678,12 @@ public class UISprite
                     this.mSpriteName =
                          this.mSprite.name;
                     il2cpp_internal(this + 0x200);
-                    goto LAB_181709eee;
+                    goto LAB_18170a4fe;
                   }
-                  if ((*(byte *)(*plVar2 + 300) < *(byte *)(DAT_181d8e210 + 300)) ||
+                  if ((*(byte *)(*plVar2 + 300) < *(byte *)(DAT_181d8e228 + 300)) ||
                      (*(int64 *)
-                       (*(int64 *)(*plVar2 + 200) + -8 + (uint64)*(byte *)(DAT_181d8e210 + 300) * 8)
-                      != DAT_181d8e210)) goto LAB_181709f91;
+                       (*(int64 *)(*plVar2 + 200) + -8 + (uint64)*(byte *)(DAT_181d8e228 + 300) * 8)
+                      != DAT_181d8e228)) goto LAB_18170a5a1;
                   uVar4 = Object.get_name(plVar2,0);
                   uVar4 = String.Concat(uVar4," seems to have a null sprite!",0);
                   Debug.LogError(uVar4,0);
@@ -691,17 +691,17 @@ public class UISprite
                 return 0;
               }
             }
-        LAB_181709f91:
+        LAB_18170a5a1:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
         }
-        LAB_181709eee:
+        LAB_18170a4fe:
         return this.mSprite;
     }
 
     // Token : 0x6000917
-    // RVA   : 0x170A710   Offset: 0x1709B10   Length: 0xB7
+    // RVA   : 0x170AD20   Offset: 0x170A120   Length: 0xB7
     protected void SetAtlasSprite(UISpriteData sp)
     {
         ulong uVar2;
@@ -732,7 +732,7 @@ public class UISprite
     }
 
     // Token : 0x6000918
-    // RVA   : 0x170A030   Offset: 0x1709430   Length: 0x1AE
+    // RVA   : 0x170A640   Offset: 0x1709A40   Length: 0x1AE
     public override void MakePixelPerfect()
     {
         bool cVar1;
@@ -772,10 +772,10 @@ public class UISprite
     }
 
     // Token : 0x6000919
-    // RVA   : 0x170A510   Offset: 0x1709910   Length: 0x21
+    // RVA   : 0x170AB20   Offset: 0x1709F20   Length: 0x21
     protected override void OnInit()
     {
-        void FUN_18170a510(int64 this)
+        void FUN_18170ab20(int64 this)
         {
         if (!this.mFillCenter) {
           this.mFillCenter = 1;
@@ -785,7 +785,7 @@ public class UISprite
     }
 
     // Token : 0x600091A
-    // RVA   : 0x170A540   Offset: 0x1709940   Length: 0x1CB
+    // RVA   : 0x170AB50   Offset: 0x1709F50   Length: 0x1CB
     protected override void OnUpdate()
     {
         int iVar2;
@@ -834,7 +834,7 @@ public class UISprite
             else {
               fVar9 = 0.0;
             }
-            FUN_1809dc910(&local_38,fVar9);
+            FUN_1809dcfa0(&local_38,fVar9);
             local_28 = local_38;
             uStack_20 = uStack_30;
             UIWidget.set_drawRegion(this,&local_28,0);
@@ -843,7 +843,7 @@ public class UISprite
     }
 
     // Token : 0x600091B
-    // RVA   : 0x170A220   Offset: 0x1709620   Length: 0x2EE
+    // RVA   : 0x170A830   Offset: 0x1709C30   Length: 0x2EE
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         ulong uVar1;
@@ -870,9 +870,9 @@ public class UISprite
         if ((!cVar3) &&
            ((((char)this[67] != false && (this[66] != 0)) ||
             (lVar7 = UISprite.GetAtlasSprite(this,0)) != null))) {
-          if ((this[66] != 0) && (FUN_1809dc910(&local_68), this[66] != 0)) {
+          if ((this[66] != 0) && (FUN_1809dcfa0(&local_68), this[66] != 0)) {
             uVar9 = 0;
-            FUN_1809dc910(&local_58);
+            FUN_1809dcfa0(&local_58);
             uVar2 = uStack_60;
             uVar1 = local_68;
             if (plVar6 != (int64 *)0) {
@@ -914,7 +914,7 @@ public class UISprite
     }
 
     // Token : 0x600091C
-    // RVA   : 0x170A7D0   Offset: 0x1709BD0   Length: 0x59
+    // RVA   : 0x170ADE0   Offset: 0x170A1E0   Length: 0x59
     public void /*ctor*/()
     {
         this.mFillCenter = 1;

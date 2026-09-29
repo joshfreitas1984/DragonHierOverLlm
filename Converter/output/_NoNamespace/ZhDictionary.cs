@@ -6,325 +6,325 @@
 public class ZhDictionary
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40020AC
+    // Token: 0x40020AD
     private static string _dictionaryDirectory;
 
-    // Token: 0x40020AD
+    // Token: 0x40020AE
     private static IDictionary<string, string> <STCharacters>k__BackingField;
 
-    // Token: 0x40020AE
+    // Token: 0x40020AF
     private static IDictionary<string, string> <STPhrases>k__BackingField;
 
-    // Token: 0x40020AF
+    // Token: 0x40020B0
     private static IDictionary<string, string> <TSCharacters>k__BackingField;
 
-    // Token: 0x40020B0
+    // Token: 0x40020B1
     private static IDictionary<string, string> <TSPhrases>k__BackingField;
 
-    // Token: 0x40020B1
+    // Token: 0x40020B2
     private static IDictionary<string, string> <TWVariants>k__BackingField;
 
-    // Token: 0x40020B2
+    // Token: 0x40020B3
     private static IDictionary<string, string> <TWPhrases>k__BackingField;
 
-    // Token: 0x40020B3
+    // Token: 0x40020B4
     private static IDictionary<string, string> <TWVariantsRev>k__BackingField;
 
-    // Token: 0x40020B4
+    // Token: 0x40020B5
     private static IDictionary<string, string> <TWVariantsRevPhrases>k__BackingField;
 
-    // Token: 0x40020B5
+    // Token: 0x40020B6
     private static IDictionary<string, string> <TWPhrasesRev>k__BackingField;
 
-    // Token: 0x40020B6
+    // Token: 0x40020B7
     private static IDictionary<string, string> <HKVariants>k__BackingField;
 
-    // Token: 0x40020B7
+    // Token: 0x40020B8
     private static IDictionary<string, string> <HKVariantsRev>k__BackingField;
 
-    // Token: 0x40020B8
+    // Token: 0x40020B9
     private static IDictionary<string, string> <HKVariantsRevPhrases>k__BackingField;
 
-    // Token: 0x40020B9
+    // Token: 0x40020BA
     private static IDictionary<string, string> <JPVariants>k__BackingField;
 
-    // Token: 0x40020BA
+    // Token: 0x40020BB
     private static IDictionary<string, string> <JPVariantsRev>k__BackingField;
 
-    // Token: 0x40020BB
+    // Token: 0x40020BC
     private static IDictionary<string, string> <JPShinjitaiCharacters>k__BackingField;
 
-    // Token: 0x40020BC
+    // Token: 0x40020BD
     private static IDictionary<string, string> <JPShinjitaiPhrases>k__BackingField;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60025FE
-    // RVA   : 0x1846170   Offset: 0x1845570   Length: 0x37
+    // RVA   : 0x1846210   Offset: 0x1845610   Length: 0x37
     public static IDictionary<string, string> get_STCharacters()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 8);
     }
 
     // Token : 0x60025FF
-    // RVA   : 0x18465E0   Offset: 0x18459E0   Length: 0x47
+    // RVA   : 0x1846680   Offset: 0x1845A80   Length: 0x47
     public static void set_STCharacters(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 8);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002600
-    // RVA   : 0x18461B0   Offset: 0x18455B0   Length: 0x37
+    // RVA   : 0x1846250   Offset: 0x1845650   Length: 0x37
     public static IDictionary<string, string> get_STPhrases()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 16);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 16);
     }
 
     // Token : 0x6002601
-    // RVA   : 0x1846630   Offset: 0x1845A30   Length: 0x47
+    // RVA   : 0x18466D0   Offset: 0x1845AD0   Length: 0x47
     public static void set_STPhrases(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 16);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 16);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002602
-    // RVA   : 0x18461F0   Offset: 0x18455F0   Length: 0x37
+    // RVA   : 0x1846290   Offset: 0x1845690   Length: 0x37
     public static IDictionary<string, string> get_TSCharacters()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 24);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 24);
     }
 
     // Token : 0x6002603
-    // RVA   : 0x1846680   Offset: 0x1845A80   Length: 0x47
+    // RVA   : 0x1846720   Offset: 0x1845B20   Length: 0x47
     public static void set_TSCharacters(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 24);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 24);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002604
-    // RVA   : 0x1846230   Offset: 0x1845630   Length: 0x37
+    // RVA   : 0x18462D0   Offset: 0x18456D0   Length: 0x37
     public static IDictionary<string, string> get_TSPhrases()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 32);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 32);
     }
 
     // Token : 0x6002605
-    // RVA   : 0x18466D0   Offset: 0x1845AD0   Length: 0x47
+    // RVA   : 0x1846770   Offset: 0x1845B70   Length: 0x47
     public static void set_TSPhrases(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 32);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 32);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002606
-    // RVA   : 0x1846370   Offset: 0x1845770   Length: 0x37
+    // RVA   : 0x1846410   Offset: 0x1845810   Length: 0x37
     public static IDictionary<string, string> get_TWVariants()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 40);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 40);
     }
 
     // Token : 0x6002607
-    // RVA   : 0x1846860   Offset: 0x1845C60   Length: 0x47
+    // RVA   : 0x1846900   Offset: 0x1845D00   Length: 0x47
     public static void set_TWVariants(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 40);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 40);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002608
-    // RVA   : 0x18462B0   Offset: 0x18456B0   Length: 0x37
+    // RVA   : 0x1846350   Offset: 0x1845750   Length: 0x37
     public static IDictionary<string, string> get_TWPhrases()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 48);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 48);
     }
 
     // Token : 0x6002609
-    // RVA   : 0x1846770   Offset: 0x1845B70   Length: 0x47
+    // RVA   : 0x1846810   Offset: 0x1845C10   Length: 0x47
     public static void set_TWPhrases(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 48);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 48);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x600260A
-    // RVA   : 0x1846330   Offset: 0x1845730   Length: 0x37
+    // RVA   : 0x18463D0   Offset: 0x18457D0   Length: 0x37
     public static IDictionary<string, string> get_TWVariantsRev()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 56);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 56);
     }
 
     // Token : 0x600260B
-    // RVA   : 0x1846810   Offset: 0x1845C10   Length: 0x47
+    // RVA   : 0x18468B0   Offset: 0x1845CB0   Length: 0x47
     public static void set_TWVariantsRev(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 56);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 56);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x600260C
-    // RVA   : 0x18462F0   Offset: 0x18456F0   Length: 0x37
+    // RVA   : 0x1846390   Offset: 0x1845790   Length: 0x37
     public static IDictionary<string, string> get_TWVariantsRevPhrases()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 64);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 64);
     }
 
     // Token : 0x600260D
-    // RVA   : 0x18467C0   Offset: 0x1845BC0   Length: 0x47
+    // RVA   : 0x1846860   Offset: 0x1845C60   Length: 0x47
     public static void set_TWVariantsRevPhrases(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 64);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 64);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x600260E
-    // RVA   : 0x1846270   Offset: 0x1845670   Length: 0x37
+    // RVA   : 0x1846310   Offset: 0x1845710   Length: 0x37
     public static IDictionary<string, string> get_TWPhrasesRev()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 72);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 72);
     }
 
     // Token : 0x600260F
-    // RVA   : 0x1846720   Offset: 0x1845B20   Length: 0x47
+    // RVA   : 0x18467C0   Offset: 0x1845BC0   Length: 0x47
     public static void set_TWPhrasesRev(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 72);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 72);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002610
-    // RVA   : 0x1846030   Offset: 0x1845430   Length: 0x37
+    // RVA   : 0x18460D0   Offset: 0x18454D0   Length: 0x37
     public static IDictionary<string, string> get_HKVariants()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 80);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 80);
     }
 
     // Token : 0x6002611
-    // RVA   : 0x1846450   Offset: 0x1845850   Length: 0x47
+    // RVA   : 0x18464F0   Offset: 0x18458F0   Length: 0x47
     public static void set_HKVariants(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 80);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 80);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002612
-    // RVA   : 0x1845FF0   Offset: 0x18453F0   Length: 0x37
+    // RVA   : 0x1846090   Offset: 0x1845490   Length: 0x37
     public static IDictionary<string, string> get_HKVariantsRev()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 88);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 88);
     }
 
     // Token : 0x6002613
-    // RVA   : 0x1846400   Offset: 0x1845800   Length: 0x47
+    // RVA   : 0x18464A0   Offset: 0x18458A0   Length: 0x47
     public static void set_HKVariantsRev(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 88);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 88);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002614
-    // RVA   : 0x1845FB0   Offset: 0x18453B0   Length: 0x37
+    // RVA   : 0x1846050   Offset: 0x1845450   Length: 0x37
     public static IDictionary<string, string> get_HKVariantsRevPhrases()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 96);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 96);
     }
 
     // Token : 0x6002615
-    // RVA   : 0x18463B0   Offset: 0x18457B0   Length: 0x47
+    // RVA   : 0x1846450   Offset: 0x1845850   Length: 0x47
     public static void set_HKVariantsRevPhrases(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 96);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 96);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002616
-    // RVA   : 0x1846130   Offset: 0x1845530   Length: 0x37
+    // RVA   : 0x18461D0   Offset: 0x18455D0   Length: 0x37
     public static IDictionary<string, string> get_JPVariants()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 104);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 104);
     }
 
     // Token : 0x6002617
-    // RVA   : 0x1846590   Offset: 0x1845990   Length: 0x47
+    // RVA   : 0x1846630   Offset: 0x1845A30   Length: 0x47
     public static void set_JPVariants(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 104);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 104);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x6002618
-    // RVA   : 0x18460F0   Offset: 0x18454F0   Length: 0x37
+    // RVA   : 0x1846190   Offset: 0x1845590   Length: 0x37
     public static IDictionary<string, string> get_JPVariantsRev()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 112);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 112);
     }
 
     // Token : 0x6002619
-    // RVA   : 0x1846540   Offset: 0x1845940   Length: 0x47
+    // RVA   : 0x18465E0   Offset: 0x18459E0   Length: 0x47
     public static void set_JPVariantsRev(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 112);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 112);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x600261A
-    // RVA   : 0x1846070   Offset: 0x1845470   Length: 0x37
+    // RVA   : 0x1846110   Offset: 0x1845510   Length: 0x37
     public static IDictionary<string, string> get_JPShinjitaiCharacters()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 120);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 120);
     }
 
     // Token : 0x600261B
-    // RVA   : 0x18464A0   Offset: 0x18458A0   Length: 0x47
+    // RVA   : 0x1846540   Offset: 0x1845940   Length: 0x47
     public static void set_JPShinjitaiCharacters(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 120);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 120);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x600261C
-    // RVA   : 0x18460B0   Offset: 0x18454B0   Length: 0x3A
+    // RVA   : 0x1846150   Offset: 0x1845550   Length: 0x3A
     public static IDictionary<string, string> get_JPShinjitaiPhrases()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 128);
+        return *(uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 128);
     }
 
     // Token : 0x600261D
-    // RVA   : 0x18464F0   Offset: 0x18458F0   Length: 0x47
+    // RVA   : 0x1846590   Offset: 0x1845990   Length: 0x47
     public static void set_JPShinjitaiPhrases(IDictionary<string, string> value)
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918b0 + 184) + 128);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181d918c8 + 184) + 128);
         *puVar1 = value;
         il2cpp_internal(puVar1,value);
     }
 
     // Token : 0x600261E
-    // RVA   : 0x18448D0   Offset: 0x1843CD0   Length: 0xF00
+    // RVA   : 0x1844970   Offset: 0x1843D70   Length: 0xF00
     public static void Initialize(string dictionaryDirectory)
     {
-        var pStatics = *(int64*)(DAT_181d918b0 + 184);
+        var pStatics = *(int64*)(DAT_181d918c8 + 184);
         long lVar2;
         ulong uVar3;
-        puVar4 = *(uint64 **)(DAT_181d918b0 + 184);
+        puVar4 = *(uint64 **)(DAT_181d918c8 + 184);
         *puVar4 = dictionaryDirectory;
         il2cpp_internal(puVar4,dictionaryDirectory);
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
         if (plVar1 != (int64 *)0) {
           if (("STCharacters" != 0) &&
              (lVar2 = il2cpp_internal("STCharacters",*(uint64 *)(*plVar1 + 64))) == null) {
@@ -342,7 +342,7 @@ public class ZhDictionary
           il2cpp_internal(plVar1 + 4,lVar2);
           uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
           ZhDictionary.<STCharacters>k.BackingField = uVar3;
-          plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+          plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
           if (plVar1 != (int64 *)0) {
             if (("STPhrases" != 0) &&
                (lVar2 = il2cpp_internal("STPhrases",*(uint64 *)(*plVar1 + 64))) == null) {
@@ -360,7 +360,7 @@ public class ZhDictionary
             il2cpp_internal(plVar1 + 4,lVar2);
             uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
             ZhDictionary.<STPhrases>k.BackingField = uVar3;
-            plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+            plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
             if (plVar1 != (int64 *)0) {
               if (("TSCharacters" != 0) &&
                  (lVar2 = il2cpp_internal("TSCharacters",*(uint64 *)(*plVar1 + 64))) == null)
@@ -379,7 +379,7 @@ public class ZhDictionary
               il2cpp_internal(plVar1 + 4,lVar2);
               uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
               ZhDictionary.<TSCharacters>k.BackingField = uVar3;
-              plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+              plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
               if (plVar1 != (int64 *)0) {
                 if (("TSPhrases" != 0) &&
                    (lVar2 = il2cpp_internal("TSPhrases",*(uint64 *)(*plVar1 + 64)), lVar2 == null
@@ -398,7 +398,7 @@ public class ZhDictionary
                 il2cpp_internal(plVar1 + 4,lVar2);
                 uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                 ZhDictionary.<TSPhrases>k.BackingField = uVar3;
-                plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                 if (plVar1 != (int64 *)0) {
                   if (("TWVariants" != 0) &&
                      (lVar2 = il2cpp_internal("TWVariants",*(uint64 *)(*plVar1 + 64)),
@@ -417,7 +417,7 @@ public class ZhDictionary
                   il2cpp_internal(plVar1 + 4,lVar2);
                   uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                   ZhDictionary.<TWVariants>k.BackingField = uVar3;
-                  plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,3);
+                  plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,3);
                   if (plVar1 != (int64 *)0) {
                     if (("TWPhrasesIT" != 0) &&
                        (lVar2 = il2cpp_internal("TWPhrasesIT",*(uint64 *)(*plVar1 + 64)),
@@ -466,7 +466,7 @@ public class ZhDictionary
                     il2cpp_internal(plVar1 + 6,lVar2);
                     uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                     ZhDictionary.<TWPhrases>k.BackingField = uVar3;
-                    plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                    plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                     if (plVar1 != (int64 *)0) {
                       if (("TWVariants" != 0) &&
                          (lVar2 = il2cpp_internal("TWVariants",*(uint64 *)(*plVar1 + 64)),
@@ -485,7 +485,7 @@ public class ZhDictionary
                       il2cpp_internal(plVar1 + 4,lVar2);
                       uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
                       ZhDictionary.<TWVariantsRev>k.BackingField = uVar3;
-                      plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                      plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                       if (plVar1 != (int64 *)0) {
                         if (("TWVariantsRevPhrases" != 0) &&
                            (lVar2 = il2cpp_internal("TWVariantsRevPhrases",*(uint64 *)(*plVar1 + 64)),
@@ -504,7 +504,7 @@ public class ZhDictionary
                         il2cpp_internal(plVar1 + 4,lVar2);
                         uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                         ZhDictionary.<TWVariantsRevPhrases>k.BackingField = uVar3;
-                        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,3);
+                        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,3);
                         if (plVar1 != (int64 *)0) {
                           if (("TWPhrasesIT" != 0) &&
                              (lVar2 = il2cpp_internal("TWPhrasesIT",*(uint64 *)(*plVar1 + 64)),
@@ -553,7 +553,7 @@ public class ZhDictionary
                           il2cpp_internal(plVar1 + 6,lVar2);
                           uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
                           ZhDictionary.<TWPhrasesRev>k.BackingField = uVar3;
-                          plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                          plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                           if (plVar1 != (int64 *)0) {
                             if (("HKVariants" != 0) &&
                                (lVar2 = il2cpp_internal("HKVariants",*(uint64 *)(*plVar1 + 64))
@@ -572,7 +572,7 @@ public class ZhDictionary
                             il2cpp_internal(plVar1 + 4,lVar2);
                             uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                             ZhDictionary.<HKVariants>k.BackingField = uVar3;
-                            plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                            plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                             if (plVar1 != (int64 *)0) {
                               if (("HKVariants" != 0) &&
                                  (lVar2 = il2cpp_internal("HKVariants",
@@ -592,7 +592,7 @@ public class ZhDictionary
                               il2cpp_internal(plVar1 + 4,lVar2);
                               uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
                               ZhDictionary.<HKVariantsRev>k.BackingField = uVar3;
-                              plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                              plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                               if (plVar1 != (int64 *)0) {
                                 if (("HKVariantsRevPhrases" != 0) &&
                                    (lVar2 = il2cpp_internal("HKVariantsRevPhrases",
@@ -612,7 +612,7 @@ public class ZhDictionary
                                 il2cpp_internal(plVar1 + 4,lVar2);
                                 uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                                 ZhDictionary.<HKVariantsRevPhrases>k.BackingField = uVar3;
-                                plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                                plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                                 if (plVar1 != (int64 *)0) {
                                   if (("JPVariants" != 0) &&
                                      (lVar2 = il2cpp_internal("JPVariants",
@@ -632,7 +632,7 @@ public class ZhDictionary
                                   il2cpp_internal(plVar1 + 4,lVar2);
                                   uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                                   ZhDictionary.<JPVariants>k.BackingField = uVar3;
-                                  plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                                  plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                                   if (plVar1 != (int64 *)0) {
                                     if (("JPVariants" != 0) &&
                                        (lVar2 = il2cpp_internal("JPVariants",
@@ -652,7 +652,7 @@ public class ZhDictionary
                                     il2cpp_internal(plVar1 + 4,lVar2);
                                     uVar3 = ZhDictionary.LoadDictionaryReversed(plVar1,0);
                                     ZhDictionary.<JPVariantsRev>k.BackingField = uVar3;
-                                    plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                                    plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                                     if (plVar1 != (int64 *)0) {
                                       if (("JPShinjitaiCharacters" != 0) &&
                                          (lVar2 = il2cpp_internal("JPShinjitaiCharacters",
@@ -672,7 +672,7 @@ public class ZhDictionary
                                       il2cpp_internal(plVar1 + 4,lVar2);
                                       uVar3 = ZhDictionary.LoadDictionary(plVar1,0);
                                       ZhDictionary.<JPShinjitaiCharacters>k.BackingField = uVar3;
-                                      plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,1);
+                                      plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,1);
                                       if (plVar1 != (int64 *)0) {
                                         if (("JPShinjitaiPhrases" != 0) &&
                                            (lVar2 = il2cpp_internal("JPShinjitaiPhrases",
@@ -715,37 +715,37 @@ public class ZhDictionary
     }
 
     // Token : 0x600261F
-    // RVA   : 0x1845EA0   Offset: 0x18452A0   Length: 0x110
+    // RVA   : 0x1845F40   Offset: 0x1845340   Length: 0x110
     private static IDictionary<string, string> LoadDictionary(string[] dictionaryNames)
     {
         ulong uVar1;
         long lVar2;
         lVar2 = ZhDictionary.<STCharacters>k.BackingField;
         if (lVar2 == null) {
-          uVar1 = **(uint64 **)(DAT_181d93628 + 184);
-          lVar2 = new OnTooltipCB(uVar1,DAT_181dbadb8,DAT_181d98a28);
+          uVar1 = **(uint64 **)(DAT_181d93640 + 184);
+          lVar2 = new OnTooltipCB(uVar1,DAT_181dbaf68,DAT_181d98a40);
           ZhDictionary.<STCharacters>k.BackingField = lVar2;
         }
         ZhDictionary.LoadDictionaryInternal(dictionaryNames,lVar2,0);
     }
 
     // Token : 0x6002620
-    // RVA   : 0x1845D90   Offset: 0x1845190   Length: 0x110
+    // RVA   : 0x1845E30   Offset: 0x1845230   Length: 0x110
     private static IDictionary<string, string> LoadDictionaryReversed(string[] dictionaryNames)
     {
         ulong uVar1;
         long lVar2;
         lVar2 = ZhDictionary.<STPhrases>k.BackingField;
         if (lVar2 == null) {
-          uVar1 = **(uint64 **)(DAT_181d93628 + 184);
-          lVar2 = new OnTooltipCB(uVar1,DAT_181dbaec8,DAT_181d98a28);
+          uVar1 = **(uint64 **)(DAT_181d93640 + 184);
+          lVar2 = new OnTooltipCB(uVar1,DAT_181dbb078,DAT_181d98a40);
           ZhDictionary.<STPhrases>k.BackingField = lVar2;
         }
         ZhDictionary.LoadDictionaryInternal(dictionaryNames,lVar2,0);
     }
 
     // Token : 0x6002621
-    // RVA   : 0x18457E0   Offset: 0x1844BE0   Length: 0x5AB
+    // RVA   : 0x1845880   Offset: 0x1844C80   Length: 0x5AB
     private static IDictionary<string, string> LoadDictionaryInternal(IList<string> dictionaryNames, Action<IList<string>, Dictionary<string, string>> processLine)
     {
         bool cVar1;
@@ -757,25 +757,25 @@ public class ZhDictionary
         ushort uVar8;
         uint uVar10;
         ushort uVar11;
-        cVar1 = FUN_180d755b0(**(uint64 **)(DAT_181d918b0 + 184),0);
+        cVar1 = FUN_180d75bc0(**(uint64 **)(DAT_181d918c8 + 184),0);
         if (cVar1) {
-          uVar2 = il2cpp_runtime_class_init(&DAT_181d81998);
+          uVar2 = il2cpp_runtime_class_init(&DAT_181d819b0);
           uVar2 = il2cpp_internal(uVar2);
           uVar7 = il2cpp_internal(&"字典目录未初始化，请先调用Initialize方法");
           InvalidOperationException.ctor(uVar2,uVar7,0);
-          uVar7 = il2cpp_runtime_class_init(&DAT_181dba298);
+          uVar7 = il2cpp_runtime_class_init(&DAT_181dba448);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar2,uVar7);
         }
-        uVar2 = il2cpp_internal(DAT_181d83368);
+        uVar2 = il2cpp_internal(DAT_181d83380);
         FUN_1808b1490(uVar2,10000,DAT_181d758b8);
         lVar3 = ZhDictionary.<TSCharacters>k.BackingField;
         if (lVar3 == null) {
-          uVar7 = **(uint64 **)(DAT_181d93628 + 184);
-          lVar3 = new OnTooltipCB(uVar7,DAT_181dbae40,DAT_181db2d78);
+          uVar7 = **(uint64 **)(DAT_181d93640 + 184);
+          lVar3 = new OnTooltipCB(uVar7,DAT_181dbaff0,DAT_181db2d90);
           ZhDictionary.<TSCharacters>k.BackingField = lVar3;
         }
-        plVar9 = (int64 *)FUN_180970560(dictionaryNames,lVar3,DAT_181db41b0);
+        plVar9 = (int64 *)FUN_180970bf0(dictionaryNames,lVar3,DAT_181db41c8);
         if (plVar9 == (int64 *)0) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
@@ -785,17 +785,17 @@ public class ZhDictionary
         if (*(uint16 *)(lVar3 + 0x12a) != 0) {
           uVar8 = uVar11;
           do {
-            if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar8 * 16) == DAT_181d8cc60) {
+            if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar8 * 16) == DAT_181d8cc78) {
               puVar4 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar3 + 176) + 8 + (uint64)uVar8 * 16) *
                         16 + 0x138 + lVar3);
-              goto LAB_181845a0c;
+              goto LAB_181845aac;
             }
             uVar8 = uVar8 + 1;
           } while (uVar8 < *(uint16 *)(lVar3 + 0x12a));
         }
-        puVar4 = (uint64 *)FUN_1800914f0(plVar9,DAT_181d8cc60,0);
-        LAB_181845a0c:
+        puVar4 = (uint64 *)FUN_1800914f0(plVar9,DAT_181d8cc78,0);
+        LAB_181845aac:
         plVar9 = (int64 *)(*(code *)*puVar4)(plVar9,puVar4[1]);
         do {
           if (plVar9 == (int64 *)0) {
@@ -806,47 +806,47 @@ public class ZhDictionary
           if (*(uint16 *)(lVar3 + 0x12a) != 0) {
             uVar8 = uVar11;
             do {
-              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar8 * 16) == DAT_181d79620) {
+              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar8 * 16) == DAT_181d79638) {
                 puVar4 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar3 + 176) + 8 + (uint64)uVar8 * 16) *
                           16 + 0x138 + lVar3);
-                goto LAB_181845a79;
+                goto LAB_181845b19;
               }
               uVar8 = uVar8 + 1;
             } while (uVar8 < *(uint16 *)(lVar3 + 0x12a));
           }
-          puVar4 = (uint64 *)FUN_1800914f0(plVar9,DAT_181d79620,0);
-        LAB_181845a79:
+          puVar4 = (uint64 *)FUN_1800914f0(plVar9,DAT_181d79638,0);
+        LAB_181845b19:
           cVar1 = (*(code *)*puVar4)(plVar9,puVar4[1]);
           if (!cVar1) {
-            FUN_180002970(0,DAT_181d78da0,plVar9);
+            FUN_180002970(0,DAT_181d78db8,plVar9);
             return uVar2;
           }
           lVar3 = *plVar9;
           if (*(uint16 *)(lVar3 + 0x12a) != 0) {
             uVar8 = uVar11;
             do {
-              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar8 * 16) == DAT_181d8dfe0) {
+              if (*(int64 *)(*(int64 *)(lVar3 + 176) + (uint64)uVar8 * 16) == DAT_181d8dff8) {
                 puVar4 = (uint64 *)
                          ((int64)*(int *)(*(int64 *)(lVar3 + 176) + 8 + (uint64)uVar8 * 16) *
                           16 + 0x138 + lVar3);
-                goto LAB_181845ad9;
+                goto LAB_181845b79;
               }
               uVar8 = uVar8 + 1;
             } while (uVar8 < *(uint16 *)(lVar3 + 0x12a));
           }
-          puVar4 = (uint64 *)FUN_1800914f0(plVar9,DAT_181d8dfe0,0);
-        LAB_181845ad9:
+          puVar4 = (uint64 *)FUN_1800914f0(plVar9,DAT_181d8dff8,0);
+        LAB_181845b79:
           uVar5 = (*(code *)*puVar4)(plVar9,puVar4[1]);
           uVar7 = uVar5;
           cVar1 = File.Exists(uVar5,0);
           if (!cVar1) {
             uVar2 = il2cpp_internal(&"找不到字典文件：");
             uVar2 = String.Concat(uVar2,uVar5,0);
-            uVar7 = il2cpp_runtime_class_init(&DAT_181dc7370);
+            uVar7 = il2cpp_runtime_class_init(&DAT_181dc7388);
             uVar7 = il2cpp_internal(uVar7);
             FileNotFoundException.ctor(uVar7,uVar2,0);
-            uVar2 = il2cpp_runtime_class_init(&DAT_181dba298);
+            uVar2 = il2cpp_runtime_class_init(&DAT_181dba448);
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar7,uVar2);
           }

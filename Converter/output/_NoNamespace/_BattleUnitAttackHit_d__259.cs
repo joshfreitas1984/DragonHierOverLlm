@@ -37,11 +37,11 @@ public class <BattleUnitAttackHit>d__259
     }
 
     // Token : 0x6000BFF
-    // RVA   : 0x92B890   Offset: 0x92AC90   Length: 0x1959
+    // RVA   : 0x92BEF0   Offset: 0x92B2F0   Length: 0x1959
     private virtual bool MoveNext()
     {
-        var pStatics_0248 = *(int64*)(DAT_181db0248 + 184);
-        var pStatics_1be0 = *(int64*)(DAT_181da1be0 + 184);
+        var pStatics_0260 = *(int64*)(DAT_181db0260 + 184);
+        var pStatics_1bf8 = *(int64*)(DAT_181da1bf8 + 184);
         long lVar1;
         bool cVar3;
         int iVar4;
@@ -91,13 +91,13 @@ public class <BattleUnitAttackHit>d__259
         if ((lVar10 == null) || (lVar10 = *(int64 *)(lVar10 + 16)) == null) throw; // [null/range check failed]
         iVar4 = PlayerPrefDictionary.GetInt(lVar10,"FightScreenShake",0);
         if (iVar4 == 1) {
-          if (*pStatics_1be0 == 0) throw; // [null/range check failed]
-          ShakeCam.StartShake(*pStatics_1be0,2,0);
+          if (*pStatics_1bf8 == 0) throw; // [null/range check failed]
+          ShakeCam.StartShake(*pStatics_1bf8,2,0);
         }
         if (((lVar1 == null) || (this.targetGridUnit == null)) || (*(int64 *)(lVar1 + 0x308) == 0))
         throw; // [null/range check failed]
-        cVar3 = FUN_18181e400(*(int64 *)(lVar1 + 0x308),
-                              this.targetGridUnit.battleUnit,DAT_181d7fa28);
+        cVar3 = FUN_18181ea10(*(int64 *)(lVar1 + 0x308),
+                              this.targetGridUnit.battleUnit,DAT_181d7fa40);
         iVar4 = 0;
         if (!cVar3) {
           if (*(int64 *)(lVar1 + 0x110) == 0) throw; // [null/range check failed]
@@ -107,8 +107,8 @@ public class <BattleUnitAttackHit>d__259
             if (cVar3) {
               if ((this.targetGridUnit == null) || (*(int64 *)(lVar1 + 0x308) == 0))
               throw; // [null/range check failed]
-              FUN_18181e0a0(*(int64 *)(lVar1 + 0x308),
-                            this.targetGridUnit.battleUnit,DAT_181d7f928);
+              FUN_18181e6b0(*(int64 *)(lVar1 + 0x308),
+                            this.targetGridUnit.battleUnit,DAT_181d7f940);
               if ((this.targetGridUnit == null) ||
                  ((lVar10 = this.targetGridUnit.battleUnit, lVar10 == null ||
                   (lVar10 = *(int64 *)(lVar10 + 64)) == null))) throw; // [null/range check failed]
@@ -137,8 +137,8 @@ public class <BattleUnitAttackHit>d__259
                      (lVar10 = *(int64 *)(lVar10 + 64)) == null) throw; // [null/range check failed]
                   if (local_res18[0] <= *(float *)(lVar10 + 400)) {
                     local_res20 = 3;
-                    lVar10 = il2cpp_internal(DAT_181d915e0);
-                    FUN_18132faf0(lVar10,DAT_181d7f8a8);
+                    lVar10 = il2cpp_internal(DAT_181d915f8);
+                    FUN_181330100(lVar10,DAT_181d7f8c0);
                     while( true ) {
                       uVar6 = (uint32)((uint64)uVar12 >> 32);
                       uVar8 = (uint32)(in_stack_ffffffffffffff38 >> 32);
@@ -146,9 +146,9 @@ public class <BattleUnitAttackHit>d__259
                       if (*(int64 *)(lVar1 + 112) == 0) break;
                       if (*(int *)(*(int64 *)(lVar1 + 112) + 24) <= iVar4) {
                         if (lVar10 != null) {
-                          if (*(int *)(lVar10 + 24) < 1) goto LAB_18092cf98;
+                          if (*(int *)(lVar10 + 24) < 1) goto LAB_18092d5f8;
                           plVar14 = (int64 *)Resources.Load("Sound/SoundEffect/HitMetal",0);
-                          if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181daf348)) {
+                          if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181daf360)) {
                             plVar16 = plVar14;
                           }
                           NGUITools.PlaySound(plVar16);
@@ -167,8 +167,8 @@ public class <BattleUnitAttackHit>d__259
                               if ((this.targetGridUnit != null) &&
                                  (this.targetGridUnit.battleUnit != null)) {
                                 BattleUnit.ChangeMana();
-                                uVar8 = FUN_180d95a30(0,*(uint32 *)(lVar10 + 24),0);
-                                lVar10 = FUN_180002f80(lVar10,uVar8,DAT_181d7fc20);
+                                uVar8 = FUN_180d96040(0,*(uint32 *)(lVar10 + 24),0);
+                                lVar10 = FUN_180002f80(lVar10,uVar8,DAT_181d7fc38);
                                 if (lVar10 != null) {
                                   lVar10 = *(int64 *)(lVar10 + 96);
                                   if ((((this.targetGridUnit != null) &&
@@ -209,8 +209,8 @@ public class <BattleUnitAttackHit>d__259
                                           local_98._0_4_ = (float)uVar9;
                                           local_98._4_4_ = (float)((uint64)uVar9 >> 32);
                                           local_68 = *(uint64 *)
-                                                      (pStatics_0248 + 16);
-                                          fStack_60 = *(float *)(pStatics_0248 +
+                                                      (pStatics_0260 + 16);
+                                          fStack_60 = *(float *)(pStatics_0260 +
                                                                 24);
                                           local_80 = fVar19 + fStack_60;
                                           local_88 = CONCAT44(local_98._4_4_ +
@@ -231,7 +231,7 @@ public class <BattleUnitAttackHit>d__259
                                               if (lVar11 != null) {
                                                 *(uint32 *)(lVar11 + 32) = 0x3e99999a;
                                                 this.targetGridUnit = lVar10;
-                                                goto LAB_18092cf98;
+                                                goto LAB_18092d5f8;
                                               }
                                             }
                                           }
@@ -252,25 +252,25 @@ public class <BattleUnitAttackHit>d__259
                            (*(int64 *)(lVar11 + 24) == 0)) throw; // [null/range check failed]
                         if (*(int *)(*(int64 *)(lVar11 + 24) + 24) <= (int)plVar16) break;
                         if (((*(int64 *)(lVar1 + 112) == 0) ||
-                            (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f830),
+                            (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f848),
                             lVar11 == null)) || (*(int64 *)(lVar11 + 24) == 0)) throw; // [null/range check failed]
-                        uVar9 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,DAT_181d7fc20);
+                        uVar9 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,DAT_181d7fc38);
                         if (this.targetGridUnit == null) throw; // [null/range check failed]
                         uVar15 = this.targetGridUnit.battleUnit;
                         cVar3 = Object.op_Inequality(uVar9,uVar15,0);
                         if (cVar3) {
                           if ((((*(int64 *)(lVar1 + 112) == 0) ||
-                               (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f830),
+                               (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f848),
                                lVar11 == null)) || (*(int64 *)(lVar11 + 24) == 0)) ||
-                             (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,DAT_181d7fc20),
+                             (lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,DAT_181d7fc38),
                              lVar11 == null)) throw; // [null/range check failed]
                           if (*(int64 *)(lVar11 + 96) != 0) {
                             if (((*(int64 *)(lVar1 + 112) == 0) ||
-                                (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f830),
+                                (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f848),
                                 lVar11 == null)) ||
                                ((((*(int64 *)(lVar11 + 24) == 0 ||
                                   ((lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,
-                                                           DAT_181d7fc20), lVar11 == null ||
+                                                           DAT_181d7fc38), lVar11 == null ||
                                    (this.targetGridUnit == null)))) ||
                                  (lVar17 = this.targetGridUnit.battleUnit,
                                  lVar17 == null)) || (*(int64 *)(lVar11 + 96) == 0))))
@@ -282,10 +282,10 @@ public class <BattleUnitAttackHit>d__259
                             lVar11 = *(int64 *)(lVar1 + 112);
                             if (iVar7 < local_res20) {
                               if ((((lVar11 == null) ||
-                                   (lVar11 = FUN_180002f80(lVar11,iVar4,DAT_181d7f830)) == null) ||
+                                   (lVar11 = FUN_180002f80(lVar11,iVar4,DAT_181d7f848)) == null) ||
                                   (*(int64 *)(lVar11 + 24) == 0)) ||
                                  (((lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,
-                                                           DAT_181d7fc20), lVar11 == null ||
+                                                           DAT_181d7fc38), lVar11 == null ||
                                    (this.targetGridUnit == null)) ||
                                   ((lVar17 = this.targetGridUnit.battleUnit,
                                    lVar17 == null ||
@@ -294,19 +294,19 @@ public class <BattleUnitAttackHit>d__259
                                                              (*(int64 *)(lVar11 + 96),
                                                               *(uint64 *)(lVar17 + 96),0),
                                     lVar10 == null)))))))) throw; // [null/range check failed]
-                              FUN_1812f9a10(lVar10,DAT_181d7f9a8);
+                              FUN_1812fa020(lVar10,DAT_181d7f9c0);
                               if ((*(int64 *)(lVar1 + 112) == 0) ||
-                                 ((lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f830)
+                                 ((lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f848)
                                   , lVar11 == null || (*(int64 *)(lVar11 + 24) == 0))))
                               throw; // [null/range check failed]
-                              uVar9 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,DAT_181d7fc20);
+                              uVar9 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,DAT_181d7fc38);
                             }
                             else {
                               if ((((lVar11 == null) ||
-                                   (lVar11 = FUN_180002f80(lVar11,iVar4,DAT_181d7f830)) == null) ||
+                                   (lVar11 = FUN_180002f80(lVar11,iVar4,DAT_181d7f848)) == null) ||
                                   (*(int64 *)(lVar11 + 24) == 0)) ||
                                  (((lVar11 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,
-                                                           DAT_181d7fc20), lVar11 == null ||
+                                                           DAT_181d7fc38), lVar11 == null ||
                                    (this.targetGridUnit == null)) ||
                                   ((lVar17 = this.targetGridUnit.battleUnit,
                                    lVar17 == null || (*(int64 *)(lVar11 + 96) == 0))))))
@@ -314,19 +314,19 @@ public class <BattleUnitAttackHit>d__259
                               iVar7 = GridUnitData.Distance
                                                 (*(int64 *)(lVar11 + 96),
                                                  *(uint64 *)(lVar17 + 96),0);
-                              if (iVar7 != iVar5) goto LAB_18092cb94;
+                              if (iVar7 != iVar5) goto LAB_18092d1f4;
                               if (((*(int64 *)(lVar1 + 112) == 0) ||
-                                  (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f830)
+                                  (lVar11 = FUN_180002f80(*(int64 *)(lVar1 + 112),iVar4,DAT_181d7f848)
                                   , lVar11 == null)) ||
                                  ((*(int64 *)(lVar11 + 24) == 0 ||
                                   (uVar9 = FUN_180002f80(*(int64 *)(lVar11 + 24),plVar16,
-                                                         DAT_181d7fc20), lVar10 == null))))
+                                                         DAT_181d7fc38), lVar10 == null))))
                               throw; // [null/range check failed]
                             }
-                            FUN_18181e0a0(lVar10,uVar9,DAT_181d7f928);
+                            FUN_18181e6b0(lVar10,uVar9,DAT_181d7f940);
                           }
                         }
-        LAB_18092cb94:
+        LAB_18092d1f4:
                         plVar16 = (int64 *)(uint64)((int)plVar16 + 1);
                       }
                       iVar4 = iVar4 + 1;
@@ -335,7 +335,7 @@ public class <BattleUnitAttackHit>d__259
                   }
                 }
               }
-        LAB_18092cf98:
+        LAB_18092d5f8:
               bVar2 = false;
               if (this.targetGridUnit == null) throw; // [null/range check failed]
               lVar10 = this.targetGridUnit.battleUnit;
@@ -349,19 +349,19 @@ public class <BattleUnitAttackHit>d__259
               if (!cVar3) {
                 bVar2 = true;
                 if ((*(int64 *)(lVar1 + 0x110) == 0) ||
-                   (lVar10 = Component.GetComponent(*(int64 *)(lVar1 + 0x110),DAT_181d934e0),
+                   (lVar10 = Component.GetComponent(*(int64 *)(lVar1 + 0x110),DAT_181d934f8),
                    lVar10 == null)) throw; // [null/range check failed]
                 if (*(char *)(lVar10 + 0x101) == false) {
                   if ((*(int64 *)(lVar1 + 0x110) == 0) ||
-                     (lVar10 = Component.GetComponent(*(int64 *)(lVar1 + 0x110),DAT_181d934e0),
+                     (lVar10 = Component.GetComponent(*(int64 *)(lVar1 + 0x110),DAT_181d934f8),
                      lVar10 == null)) throw; // [null/range check failed]
                   *(uint8 *)(lVar10 + 0x101) = 1;
                   if (*(int64 *)(lVar1 + 0x110) == 0) throw; // [null/range check failed]
-                  lVar10 = Component.GetComponent(*(int64 *)(lVar1 + 0x110),DAT_181d934e0);
-                  lVar11 = *(int64 *)(*(int64 *)(DAT_181db07c8 + 184) + 40);
+                  lVar10 = Component.GetComponent(*(int64 *)(lVar1 + 0x110),DAT_181d934f8);
+                  lVar11 = *(int64 *)(*(int64 *)(DAT_181db07e0 + 184) + 40);
                   if (lVar11 == null) throw; // [null/range check failed]
-                  uVar8 = FUN_180d95a30(0,*(uint32 *)(lVar11 + 24),0);
-                  uVar9 = FUN_180002f80(lVar11,uVar8,DAT_181da4358);
+                  uVar8 = FUN_180d96040(0,*(uint32 *)(lVar11 + 24),0);
+                  uVar9 = FUN_180002f80(lVar11,uVar8,DAT_181da4370);
                   if (lVar10 == null) throw; // [null/range check failed]
                   BattleUnit.Talk(lVar10,uVar9);
                 }
@@ -382,12 +382,12 @@ public class <BattleUnitAttackHit>d__259
                 if (*(int64 *)(lVar10 + 88) != *(int64 *)(lVar11 + 88)) {
                   if (*(int64 *)(lVar11 + 64) == 0) throw; // [null/range check failed]
                   cVar3 = HeroData.AttackSelfTeam(*(int64 *)(lVar11 + 64),0);
-                  if (!cVar3) goto LAB_18092bef6;
+                  if (!cVar3) goto LAB_18092c556;
                 }
                 if ((this.targetGridUnit == null) || (*(int64 *)(lVar1 + 0x308) == 0))
                 throw; // [null/range check failed]
-                FUN_18181e0a0(*(int64 *)(lVar1 + 0x308),
-                              this.targetGridUnit.battleUnit,DAT_181d7f928);
+                FUN_18181e6b0(*(int64 *)(lVar1 + 0x308),
+                              this.targetGridUnit.battleUnit,DAT_181d7f940);
                 if (this.targetGridUnit == null) throw; // [null/range check failed]
                 cVar3 = BattleController.ManageRecover
                                   (lVar1,*(uint64 *)(lVar1 + 0x110),
@@ -410,13 +410,13 @@ public class <BattleUnitAttackHit>d__259
               if (*(char *)(*(int64 *)(lVar10 + 64) + 16) == false) {
                 uVar9 = *(uint64 *)(lVar1 + 0x110);
                 cVar3 = Object.op_Equality(lVar10,uVar9,0);
-        LAB_18092c4fe:
+        LAB_18092cb5e:
                 if (cVar3) {
-        LAB_18092c506:
+        LAB_18092cb66:
                   if ((this.targetGridUnit == null) || (*(int64 *)(lVar1 + 0x308) == 0))
                   throw; // [null/range check failed]
-                  FUN_18181e0a0(*(int64 *)(lVar1 + 0x308),
-                                this.targetGridUnit.battleUnit,DAT_181d7f928);
+                  FUN_18181e6b0(*(int64 *)(lVar1 + 0x308),
+                                this.targetGridUnit.battleUnit,DAT_181d7f940);
                   if (this.targetGridUnit == null) throw; // [null/range check failed]
                   cVar3 = BattleController.ManageRecover
                                     (lVar1,*(uint64 *)(lVar1 + 0x110),
@@ -447,9 +447,9 @@ public class <BattleUnitAttackHit>d__259
                   if (*(int64 *)(lVar10 + 88) != *(int64 *)(lVar11 + 88)) {
                     if (*(int64 *)(lVar11 + 64) == 0) throw; // [null/range check failed]
                     cVar3 = HeroData.AttackSelfTeam(*(int64 *)(lVar11 + 64),0);
-                    goto LAB_18092c4fe;
+                    goto LAB_18092cb5e;
                   }
-                  goto LAB_18092c506;
+                  goto LAB_18092cb66;
                 }
               }
             }
@@ -483,11 +483,11 @@ public class <BattleUnitAttackHit>d__259
               *plVar16 = lVar10;
               il2cpp_internal(plVar16,lVar10);
               if (*plVar16 == 0) throw; // [null/range check failed]
-              lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7518);
+              lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7530);
               if (lVar10 == null) throw; // [null/range check failed]
               *(uint64 *)(lVar10 + 72) = *(uint64 *)(lVar1 + 0x110);
               if (*plVar16 == 0) throw; // [null/range check failed]
-              lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7518);
+              lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7530);
               if (((*(int64 *)(lVar1 + 0x110) == 0) ||
                   (lVar11 = *(int64 *)(*(int64 *)(lVar1 + 0x110) + 64)) == null) ||
                  (uVar9 = HeroData.GetNowActiveSkill(lVar11,0), lVar10 == null)) throw; // [null/range check failed]
@@ -498,19 +498,19 @@ public class <BattleUnitAttackHit>d__259
               throw; // [null/range check failed]
               uVar9 = HeroData.Name(lVar10,1,0);
               if ((*plVar16 == 0) ||
-                 ((lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7518), lVar10 == null ||
+                 ((lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7530), lVar10 == null ||
                   (*(int64 *)(lVar10 + 64) == 0)))) throw; // [null/range check failed]
               uVar12 = HeroData.Name(*(int64 *)(lVar10 + 64),1,0);
               uVar9 = String.Format("{0}召唤了{1}。",uVar9,uVar12,0);
               BattleController.AddInfoText(lVar1,uVar9,1,0);
               if (*plVar16 == 0) throw; // [null/range check failed]
-              lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7518);
+              lVar10 = GameObject.GetComponent(*plVar16,DAT_181dc7530);
               if ((*(int64 *)(lVar1 + 0x110) == 0) || (lVar10 == null)) throw; // [null/range check failed]
               *(uint8 *)(lVar10 + 176) = *(uint8 *)(*(int64 *)(lVar1 + 0x110) + 176);
             }
           }
         }
-        LAB_18092bef6:
+        LAB_18092c556:
         if (((this.targetGridUnit == null) ||
             (lVar10 = GridUnitData.get_GridObj(this.targetGridUnit,0)) == null) ||
            (lVar10 = GameObject.GetComponent(lVar10,DAT_181d71820)) == null) throw; // [null/range check failed]
@@ -537,7 +537,7 @@ public class <BattleUnitAttackHit>d__259
                     (lVar10 = *(int64 *)(*(int64 *)(lVar1 + 0x110) + 64)) == null) ||
                    (lVar10 = *(int64 *)(lVar10 + 0x2b8)) == null) throw; // [null/range check failed]
                 fVar19 = (float)HeroSpeAddData.Get(lVar10,134,0);
-                if (fVar19 <= 0.0) goto LAB_18092c0d7;
+                if (fVar19 <= 0.0) goto LAB_18092c737;
               }
               if (this.targetGridUnit == null) throw; // [null/range check failed]
               lVar10 = this.targetGridUnit.battleUnit;
@@ -548,11 +548,11 @@ public class <BattleUnitAttackHit>d__259
                  (uVar6 = HeroData.GetHitMoveRange(*(int64 *)(lVar11 + 64),0), lVar10 == null))
               throw; // [null/range check failed]
               uVar9 = BattleUnit.MoveFromTarget(lVar10,uVar9,uVar6,0);
-              FUN_180d8c2e0(lVar1,uVar9,0);
+              FUN_180d8c8f0(lVar1,uVar9,0);
             }
           }
         }
-        LAB_18092c0d7:
+        LAB_18092c737:
         if ((((*(int64 *)(lVar1 + 0x110) == 0) ||
              (lVar10 = *(int64 *)(*(int64 *)(lVar1 + 0x110) + 64)) == null) ||
             (lVar10 = HeroData.GetNowActiveSkill(lVar10,0)) == null) ||
@@ -584,7 +584,7 @@ public class <BattleUnitAttackHit>d__259
           ShortcutExtensions.DOScale(uVar9);
         }
         if (local_res8) {
-          lVar10 = FUN_18092a390(0);
+          lVar10 = FUN_18092a9f0(0);
           if (bVar2) {
             if (lVar10 == null) throw; // [null/range check failed]
             TimeScaleController.SetSlowTime(lVar10);
@@ -603,12 +603,12 @@ public class <BattleUnitAttackHit>d__259
           }
         }
         if (*(int64 *)(lVar1 + 0x310) != 0) {
-          FUN_18181e0a0(*(int64 *)(lVar1 + 0x310),this.targetGridUnit,DAT_181d8af18);
+          FUN_18181e6b0(*(int64 *)(lVar1 + 0x310),this.targetGridUnit,DAT_181d8af30);
           if ((*(int64 *)(lVar1 + 0x310) != 0) && (*(int64 *)(lVar1 + 0x208) != 0)) {
             if (*(int *)(*(int64 *)(lVar1 + 0x310) + 24) ==
                 *(int *)(*(int64 *)(lVar1 + 0x208) + 24)) {
               uVar9 = BattleController.BattleUnitAttackFinish(lVar1,0);
-              FUN_180d8c2e0(lVar1,uVar9,0);
+              FUN_180d8c8f0(lVar1,uVar9,0);
             }
             return false;
           }
@@ -623,15 +623,15 @@ public class <BattleUnitAttackHit>d__259
     }
 
     // Token : 0x6000C01
-    // RVA   : 0x92D1F0   Offset: 0x92C5F0   Length: 0x3E
+    // RVA   : 0x92D850   Offset: 0x92CC50   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d976b8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97850);
     }
 
     // Token : 0x6000C02

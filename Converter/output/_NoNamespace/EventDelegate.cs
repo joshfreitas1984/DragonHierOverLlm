@@ -48,7 +48,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000311
-    // RVA   : 0x948540   Offset: 0x947940   Length: 0x62
+    // RVA   : 0x948BD0   Offset: 0x947FD0   Length: 0x62
     public void set_target(MonoBehaviour value)
     {
         this.mTarget = value;
@@ -67,7 +67,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000313
-    // RVA   : 0x9484D0   Offset: 0x9478D0   Length: 0x62
+    // RVA   : 0x948B60   Offset: 0x947F60   Length: 0x62
     public void set_methodName(string value)
     {
         this.mMethodName = value;
@@ -79,7 +79,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000314
-    // RVA   : 0x9484A0   Offset: 0x9478A0   Length: 0x2A
+    // RVA   : 0x948B30   Offset: 0x947F30   Length: 0x2A
     public Parameter[] get_parameters()
     {
         if (!this.mCached) {
@@ -90,7 +90,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000315
-    // RVA   : 0x9483F0   Offset: 0x9477F0   Length: 0xA3
+    // RVA   : 0x948A80   Offset: 0x947E80   Length: 0xA3
     public bool get_isValid()
     {
         ulong uVar1;
@@ -106,12 +106,12 @@ public class EventDelegate
         if (!cVar2) {
           return false;
         }
-        cVar2 = FUN_180d755b0(this.mMethodName,0);
+        cVar2 = FUN_180d75bc0(this.mMethodName,0);
         return !cVar2;
     }
 
     // Token : 0x6000316
-    // RVA   : 0x948310   Offset: 0x947710   Length: 0xDB
+    // RVA   : 0x9489A0   Offset: 0x947DA0   Length: 0xDB
     public bool get_isEnabled()
     {
         ulong uVar1;
@@ -152,7 +152,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000318
-    // RVA   : 0x948280   Offset: 0x947680   Length: 0x2F
+    // RVA   : 0x948910   Offset: 0x947D10   Length: 0x2F
     public void /*ctor*/(Callback call)
     {
         ZhSegment.Initialize(this,0);
@@ -162,7 +162,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000319
-    // RVA   : 0x9482B0   Offset: 0x9476B0   Length: 0x56
+    // RVA   : 0x948940   Offset: 0x947D40   Length: 0x56
     public void /*ctor*/(MonoBehaviour target, string methodName)
     {
         ZhSegment.Initialize(this,0);
@@ -172,13 +172,13 @@ public class EventDelegate
     }
 
     // Token : 0x600031A
-    // RVA   : 0x947A70   Offset: 0x946E70   Length: 0x32
+    // RVA   : 0x948100   Offset: 0x947500   Length: 0x32
     private static string GetMethodName(Callback callback)
     {
         if (callback != null) {
-          plVar1 = (int64 *)FUN_180f4a640(callback,0);
+          plVar1 = (int64 *)FUN_180f4ac50(callback,0);
           if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180947a96. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180948126. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*plVar1 + 0x1b8))(plVar1,*(uint64 *)(*plVar1 + 0x1c0));
             return;
@@ -187,7 +187,7 @@ public class EventDelegate
     }
 
     // Token : 0x600031B
-    // RVA   : 0x947B70   Offset: 0x946F70   Length: 0x28
+    // RVA   : 0x948200   Offset: 0x947600   Length: 0x28
     private static bool IsValid(Callback callback)
     {
         int iVar1;
@@ -220,7 +220,7 @@ public class EventDelegate
     }
 
     // Token : 0x600031C
-    // RVA   : 0x946E70   Offset: 0x946270   Length: 0x22B
+    // RVA   : 0x947500   Offset: 0x946900   Length: 0x22B
     public override bool Equals(object obj)
     {
         bool cVar3;
@@ -238,17 +238,17 @@ public class EventDelegate
           plVar8 = obj;
         }
         if (plVar8 == (int64 *)0) {
-          if ((*(byte *)(DAT_181dc48f0 + 300) <= *(byte *)(lVar6 + 300)) &&
+          if ((*(byte *)(DAT_181dc4908 + 300) <= *(byte *)(lVar6 + 300)) &&
              (*(int64 *)
-               (*(int64 *)(lVar6 + 200) + -8 + (uint64)*(byte *)(DAT_181dc48f0 + 300) * 8) ==
-              DAT_181dc48f0)) {
+               (*(int64 *)(lVar6 + 200) + -8 + (uint64)*(byte *)(DAT_181dc4908 + 300) * 8) ==
+              DAT_181dc4908)) {
             uVar7 = this.mTarget;
             lVar6 = obj[2];
             cVar3 = Object.op_Equality(uVar7,lVar6,0);
             if (cVar3) {
               lVar6 = obj[3];
               uVar7 = this.mMethodName;
-              goto LAB_180946f65;
+              goto LAB_1809475f5;
             }
           }
         }
@@ -260,10 +260,10 @@ public class EventDelegate
           }
           plVar1 = (int64 *)plVar8[4];
           if (plVar1 != (int64 *)0) {
-            if ((*(byte *)(*plVar1 + 300) < *(byte *)(DAT_181d8ae10 + 300)) ||
+            if ((*(byte *)(*plVar1 + 300) < *(byte *)(DAT_181d8ae28 + 300)) ||
                (*(int64 *)
-                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d8ae10 + 300) * 8) !=
-                DAT_181d8ae10)) {
+                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181d8ae28 + 300) * 8) !=
+                DAT_181d8ae28)) {
               bVar2 = false;
             }
             else {
@@ -277,14 +277,14 @@ public class EventDelegate
           cVar3 = Object.op_Equality(uVar7,plVar5,0);
           if (cVar3) {
             uVar7 = this.mMethodName;
-            plVar5 = (int64 *)FUN_180f4a640(plVar8,0);
+            plVar5 = (int64 *)FUN_180f4ac50(plVar8,0);
             if (plVar5 == (int64 *)0) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             lVar6 = (**(code **)(*plVar5 + 0x1b8))(plVar5,*(uint64 *)(*plVar5 + 0x1c0));
-        LAB_180946f65:
-            uVar4 = FUN_18171e540(uVar7,lVar6,0);
+        LAB_1809475f5:
+            uVar4 = FUN_18171eb50(uVar7,lVar6,0);
             return (bool)uVar4;
           }
         }
@@ -292,34 +292,34 @@ public class EventDelegate
     }
 
     // Token : 0x600031D
-    // RVA   : 0x947A10   Offset: 0x946E10   Length: 0x56
+    // RVA   : 0x9480A0   Offset: 0x9474A0   Length: 0x56
     public override int GetHashCode()
     {
-        return **(uint32 **)(DAT_181dc48f0 + 184);
+        return **(uint32 **)(DAT_181dc4908 + 184);
     }
 
     // Token : 0x600031E
-    // RVA   : 0x947D80   Offset: 0x947180   Length: 0x1B4
+    // RVA   : 0x948410   Offset: 0x947810   Length: 0x1B4
     private void Set(Callback call)
     {
         if (this != 0) {
-          FUN_1812f9a10(this,DAT_181d85fa0);
-          FUN_18181e0a0(this,call,DAT_181d85f20);
+          FUN_1812fa020(this,DAT_181d85fb8);
+          FUN_18181e6b0(this,call,DAT_181d85f38);
         }
     }
 
     // Token : 0x600031F
-    // RVA   : 0x948070   Offset: 0x947470   Length: 0x4C
+    // RVA   : 0x948700   Offset: 0x947B00   Length: 0x4C
     public void Set(MonoBehaviour target, string methodName)
     {
         if (this != 0) {
-          FUN_1812f9a10(this,DAT_181d85fa0);
-          FUN_18181e0a0(this,target,DAT_181d85f20);
+          FUN_1812fa020(this,DAT_181d85fb8);
+          FUN_18181e6b0(this,target,DAT_181d85f38);
         }
     }
 
     // Token : 0x6000320
-    // RVA   : 0x9466A0   Offset: 0x945AA0   Length: 0x733
+    // RVA   : 0x946D30   Offset: 0x946130   Length: 0x733
     private void Cache()
     {
         int iVar1;
@@ -345,7 +345,7 @@ public class EventDelegate
           cVar4 = Object.op_Inequality(plVar7,uVar6,0);
           if (!cVar4) {
             lVar9 = this.mCachedCallback;
-            if ((lVar9 == null) || (plVar5 = (int64 *)FUN_180f4a640(lVar9,0), plVar5 == (int64 *)0))
+            if ((lVar9 == null) || (plVar5 = (int64 *)FUN_180f4ac50(lVar9,0), plVar5 == (int64 *)0))
             throw; // [null/range check failed]
             uVar6 = (**(code **)(*plVar5 + 0x1b8))(plVar5,*(uint64 *)(*plVar5 + 0x1c0));
             cVar4 = String.op_Inequality(uVar6,this.mMethodName,0);
@@ -360,7 +360,7 @@ public class EventDelegate
         if (!cVar4) {
           return;
         }
-        cVar4 = FUN_180d755b0(this.mMethodName,0);
+        cVar4 = FUN_180d75bc0(this.mMethodName,0);
         if (cVar4) {
           return;
         }
@@ -391,7 +391,7 @@ public class EventDelegate
               plVar5 = (int64 *)
                        (**(code **)(*plVar11 + 0x168))(plVar11,*(uint64 *)(*plVar11 + 0x170));
             }
-        LAB_180946d30:
+        LAB_1809473c0:
             uVar8 = String.Concat(plVar7,uVar6,uVar8,plVar5,0);
             uVar6 = this.mTarget;
             Debug.LogError(uVar8,uVar6,0);
@@ -402,7 +402,7 @@ public class EventDelegate
         plVar7 = this.mMethod;
         if (plVar7 == (int64 *)0) throw; // [null/range check failed]
         uVar8 = (**(code **)(*plVar7 + 0x3c8))(plVar7,*(uint64 *)(*plVar7 + 0x3d0));
-        uVar6 = DAT_181dc4ae0;
+        uVar6 = DAT_181dc4af8;
         uVar6 = Type.GetTypeFromHandle(uVar6,0);
         cVar4 = FUN_180295d80(uVar8,uVar6,0);
         if (cVar4) {
@@ -416,7 +416,7 @@ public class EventDelegate
             plVar7 = plVar5;
             uVar6 = ".";
             plVar5 = " must have a 'void' return type.";
-            goto LAB_180946d30;
+            goto LAB_1809473c0;
           }
           throw; // [null/range check failed]
         }
@@ -450,8 +450,8 @@ public class EventDelegate
         lVar10 = *plVar7;
         if (lVar9 == null) {
           if (lVar10 == null) throw; // [null/range check failed]
-        LAB_180946ab8:
-          lVar9 = FUN_1800d60b0(DAT_181da7d60,*(uint32 *)(lVar10 + 24));
+        LAB_180947148:
+          lVar9 = FUN_1800d60b0(DAT_181da7d78,*(uint32 *)(lVar10 + 24));
           *plVar11 = lVar9;
           il2cpp_internal(plVar11,lVar9);
           lVar9 = *plVar11;
@@ -486,7 +486,7 @@ public class EventDelegate
           if (lVar10 == null) throw; // [null/range check failed]
           if (*(int *)(lVar9 + 24) != *(int *)(lVar10 + 24)) {
             lVar10 = *plVar7;
-            goto LAB_180946ab8;
+            goto LAB_180947148;
           }
         }
         if (lVar9 != null) {
@@ -523,7 +523,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000321
-    // RVA   : 0x947200   Offset: 0x946600   Length: 0x80C
+    // RVA   : 0x947890   Offset: 0x946C90   Length: 0x80C
     public bool Execute()
     {
         long lVar1;
@@ -533,7 +533,7 @@ public class EventDelegate
         if (this == 0) {
           return;
         }
-        LAB_1809470f6:
+        LAB_180947786:
         if ((int)this.mMethodName <= (int)uVar3) {
           return;
         }
@@ -541,28 +541,28 @@ public class EventDelegate
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar1 = this.mTarget[uVar3];
-        if (lVar1 != null) goto code_r0x000180947122;
-        goto LAB_1809471e7;
-        code_r0x000180947122:
+        if (lVar1 != null) goto code_r0x0001809477b2;
+        goto LAB_180947877;
+        code_r0x0001809477b2:
         EventDelegate.Execute(lVar1,0);
         if (this.mMethodName <= (int)uVar3) {
           return;
         }
-        lVar2 = FUN_180002f80(this,uVar3,DAT_181d861a0);
+        lVar2 = FUN_180002f80(this,uVar3,DAT_181d861b8);
         if (lVar2 == lVar1) {
           if (*(char *)(lVar1 + 40) == false) {
-        LAB_1809471e7:
+        LAB_180947877:
             uVar3 = uVar3 + 1;
           }
           else {
-            FUN_181823590(this,uVar3,DAT_181d860a0);
+            FUN_181823ba0(this,uVar3,DAT_181d860b8);
           }
         }
-        goto LAB_1809470f6;
+        goto LAB_180947786;
     }
 
     // Token : 0x6000322
-    // RVA   : 0x946DE0   Offset: 0x9461E0   Length: 0x83
+    // RVA   : 0x947470   Offset: 0x946870   Length: 0x83
     public void Clear()
     {
         this.mTarget = 0;
@@ -577,7 +577,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000323
-    // RVA   : 0x9480C0   Offset: 0x9474C0   Length: 0x143
+    // RVA   : 0x948750   Offset: 0x947B50   Length: 0x143
     public override string ToString()
     {
         bool cVar1;
@@ -602,7 +602,7 @@ public class EventDelegate
               if (0 < iVar2) {
                 lVar4 = String.Substring(lVar4,iVar2 + 1,0);
               }
-              cVar1 = FUN_180d755b0(this.mMethodName,0);
+              cVar1 = FUN_180d75bc0(this.mMethodName,0);
               if (cVar1) {
                 uVar5 = String.Concat(lVar4,"/[delegate]",0);
                 return uVar5;
@@ -615,7 +615,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000324
-    // RVA   : 0x9470A0   Offset: 0x9464A0   Length: 0x15B
+    // RVA   : 0x947730   Offset: 0x946B30   Length: 0x15B
     public static void Execute(List<EventDelegate> list)
     {
         long lVar1;
@@ -625,7 +625,7 @@ public class EventDelegate
         if (list == null) {
           return;
         }
-        LAB_1809470f6:
+        LAB_180947786:
         if ((int)*(uint32 *)(list + 24) <= (int)uVar3) {
           return;
         }
@@ -633,28 +633,28 @@ public class EventDelegate
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar1 = list[uVar3];
-        if (lVar1 != null) goto code_r0x000180947122;
-        goto LAB_1809471e7;
-        code_r0x000180947122:
+        if (lVar1 != null) goto code_r0x0001809477b2;
+        goto LAB_180947877;
+        code_r0x0001809477b2:
         EventDelegate.Execute(lVar1,0);
         if (*(int *)(list + 24) <= (int)uVar3) {
           return;
         }
-        lVar2 = FUN_180002f80(list,uVar3,DAT_181d861a0);
+        lVar2 = FUN_180002f80(list,uVar3,DAT_181d861b8);
         if (lVar2 == lVar1) {
           if (*(char *)(lVar1 + 40) == false) {
-        LAB_1809471e7:
+        LAB_180947877:
             uVar3 = uVar3 + 1;
           }
           else {
-            FUN_181823590(list,uVar3,DAT_181d860a0);
+            FUN_181823ba0(list,uVar3,DAT_181d860b8);
           }
         }
-        goto LAB_1809470f6;
+        goto LAB_180947786;
     }
 
     // Token : 0x6000325
-    // RVA   : 0x947AB0   Offset: 0x946EB0   Length: 0xB2
+    // RVA   : 0x948140   Offset: 0x947540   Length: 0xB2
     public static bool IsValid(List<EventDelegate> list)
     {
         int iVar1;
@@ -687,27 +687,27 @@ public class EventDelegate
     }
 
     // Token : 0x6000326
-    // RVA   : 0x947FB0   Offset: 0x9473B0   Length: 0xB6
+    // RVA   : 0x948640   Offset: 0x947A40   Length: 0xB6
     public static EventDelegate Set(List<EventDelegate> list, Callback callback)
     {
         if (list != null) {
-          FUN_1812f9a10(list,DAT_181d85fa0);
-          FUN_18181e0a0(list,callback,DAT_181d85f20);
+          FUN_1812fa020(list,DAT_181d85fb8);
+          FUN_18181e6b0(list,callback,DAT_181d85f38);
         }
     }
 
     // Token : 0x6000327
-    // RVA   : 0x947F40   Offset: 0x947340   Length: 0x69
+    // RVA   : 0x9485D0   Offset: 0x9479D0   Length: 0x69
     public static void Set(List<EventDelegate> list, EventDelegate del)
     {
         if (list != null) {
-          FUN_1812f9a10(list,DAT_181d85fa0);
-          FUN_18181e0a0(list,del,DAT_181d85f20);
+          FUN_1812fa020(list,DAT_181d85fb8);
+          FUN_18181e6b0(list,del,DAT_181d85f38);
         }
     }
 
     // Token : 0x6000328
-    // RVA   : 0x9464A0   Offset: 0x9458A0   Length: 0x65
+    // RVA   : 0x946B30   Offset: 0x945F30   Length: 0x65
     public static EventDelegate Add(List<EventDelegate> list, Callback callback)
     {
         int iVar1;
@@ -721,14 +721,14 @@ public class EventDelegate
         long lVar10;
         long lVar11;
         if (callback == null) {
-        LAB_1809463e6:
+        LAB_180946a76:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (*(char *)(callback + 56) == false) {
           uVar6 = *(uint64 *)(callback + 16);
           cVar5 = Object.op_Equality(uVar6,0,0);
-          if ((!cVar5) && (cVar5 = FUN_180d755b0(*(uint64 *)(callback + 24),0), !cVar5)
+          if ((!cVar5) && (cVar5 = FUN_180d75bc0(*(uint64 *)(callback + 24),0), !cVar5)
              ) {
             if (list == null) {
               Debug.LogWarning("Attempting to add a callback to a list that's null",0);
@@ -764,14 +764,14 @@ public class EventDelegate
             *(uint8 *)(lVar10 + 40) = param_3;
             if ((*(int64 *)(callback + 32) == 0) ||
                (uVar4 = *(uint64 *)(*(int64 *)(callback + 32) + 24)) == null) {
-        LAB_180946396:
-              FUN_18181e0a0(list,lVar10,DAT_181d85f20);
+        LAB_180946a26:
+              FUN_18181e6b0(list,lVar10,DAT_181d85f38);
               return;
             }
-            uVar6 = FUN_1800d60b0(DAT_181da7d60,uVar4 & 0xffffffff);
+            uVar6 = FUN_1800d60b0(DAT_181da7d78,uVar4 & 0xffffffff);
             *(uint64 *)(lVar10 + 32) = uVar6;
             while (lVar11 = *(int64 *)(callback + 32)) != null {
-              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946396;
+              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946a26;
               plVar2 = *(int64 **)(lVar10 + 32);
               if (*(uint32 *)(lVar11 + 24) <= uVar9) {
                 uVar6 = il2cpp_internal();
@@ -795,7 +795,7 @@ public class EventDelegate
               il2cpp_internal();
               uVar9 = uVar9 + 1;
             }
-            goto LAB_1809463e6;
+            goto LAB_180946a76;
           }
         }
         uVar6 = *(uint64 *)(callback + 48);
@@ -803,7 +803,7 @@ public class EventDelegate
     }
 
     // Token : 0x6000329
-    // RVA   : 0x946510   Offset: 0x945910   Length: 0x187
+    // RVA   : 0x946BA0   Offset: 0x945FA0   Length: 0x187
     public static EventDelegate Add(List<EventDelegate> list, Callback callback, bool oneShot)
     {
         int iVar1;
@@ -817,14 +817,14 @@ public class EventDelegate
         long lVar10;
         long lVar11;
         if (callback == null) {
-        LAB_1809463e6:
+        LAB_180946a76:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (*(char *)(callback + 56) == false) {
           uVar6 = *(uint64 *)(callback + 16);
           cVar5 = Object.op_Equality(uVar6,0,0);
-          if ((!cVar5) && (cVar5 = FUN_180d755b0(*(uint64 *)(callback + 24),0), !cVar5)
+          if ((!cVar5) && (cVar5 = FUN_180d75bc0(*(uint64 *)(callback + 24),0), !cVar5)
              ) {
             if (list == null) {
               Debug.LogWarning("Attempting to add a callback to a list that's null",0);
@@ -860,14 +860,14 @@ public class EventDelegate
             *(uint8 *)(lVar10 + 40) = oneShot;
             if ((*(int64 *)(callback + 32) == 0) ||
                (uVar4 = *(uint64 *)(*(int64 *)(callback + 32) + 24)) == null) {
-        LAB_180946396:
-              FUN_18181e0a0(list,lVar10,DAT_181d85f20);
+        LAB_180946a26:
+              FUN_18181e6b0(list,lVar10,DAT_181d85f38);
               return;
             }
-            uVar6 = FUN_1800d60b0(DAT_181da7d60,uVar4 & 0xffffffff);
+            uVar6 = FUN_1800d60b0(DAT_181da7d78,uVar4 & 0xffffffff);
             *(uint64 *)(lVar10 + 32) = uVar6;
             while (lVar11 = *(int64 *)(callback + 32)) != null {
-              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946396;
+              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946a26;
               plVar2 = *(int64 **)(lVar10 + 32);
               if (*(uint32 *)(lVar11 + 24) <= uVar9) {
                 uVar6 = il2cpp_internal();
@@ -891,7 +891,7 @@ public class EventDelegate
               il2cpp_internal();
               uVar9 = uVar9 + 1;
             }
-            goto LAB_1809463e6;
+            goto LAB_180946a76;
           }
         }
         uVar6 = *(uint64 *)(callback + 48);
@@ -899,7 +899,7 @@ public class EventDelegate
     }
 
     // Token : 0x600032A
-    // RVA   : 0x946420   Offset: 0x945820   Length: 0x7E
+    // RVA   : 0x946AB0   Offset: 0x945EB0   Length: 0x7E
     public static void Add(List<EventDelegate> list, EventDelegate ev)
     {
         int iVar1;
@@ -913,14 +913,14 @@ public class EventDelegate
         long lVar10;
         long lVar11;
         if (ev == null) {
-        LAB_1809463e6:
+        LAB_180946a76:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (*(char *)(ev + 56) == false) {
           uVar6 = *(uint64 *)(ev + 16);
           cVar5 = Object.op_Equality(uVar6,0,0);
-          if ((!cVar5) && (cVar5 = FUN_180d755b0(*(uint64 *)(ev + 24),0), !cVar5)
+          if ((!cVar5) && (cVar5 = FUN_180d75bc0(*(uint64 *)(ev + 24),0), !cVar5)
              ) {
             if (list == null) {
               Debug.LogWarning("Attempting to add a callback to a list that's null",0);
@@ -956,14 +956,14 @@ public class EventDelegate
             *(uint8 *)(lVar10 + 40) = param_3;
             if ((*(int64 *)(ev + 32) == 0) ||
                (uVar4 = *(uint64 *)(*(int64 *)(ev + 32) + 24)) == null) {
-        LAB_180946396:
-              FUN_18181e0a0(list,lVar10,DAT_181d85f20);
+        LAB_180946a26:
+              FUN_18181e6b0(list,lVar10,DAT_181d85f38);
               return;
             }
-            uVar6 = FUN_1800d60b0(DAT_181da7d60,uVar4 & 0xffffffff);
+            uVar6 = FUN_1800d60b0(DAT_181da7d78,uVar4 & 0xffffffff);
             *(uint64 *)(lVar10 + 32) = uVar6;
             while (lVar11 = *(int64 *)(ev + 32)) != null {
-              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946396;
+              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946a26;
               plVar2 = *(int64 **)(lVar10 + 32);
               if (*(uint32 *)(lVar11 + 24) <= uVar9) {
                 uVar6 = il2cpp_internal();
@@ -987,7 +987,7 @@ public class EventDelegate
               il2cpp_internal();
               uVar9 = uVar9 + 1;
             }
-            goto LAB_1809463e6;
+            goto LAB_180946a76;
           }
         }
         uVar6 = *(uint64 *)(ev + 48);
@@ -995,7 +995,7 @@ public class EventDelegate
     }
 
     // Token : 0x600032B
-    // RVA   : 0x946100   Offset: 0x945500   Length: 0x31B
+    // RVA   : 0x946790   Offset: 0x945B90   Length: 0x31B
     public static void Add(List<EventDelegate> list, EventDelegate ev, bool oneShot)
     {
         int iVar1;
@@ -1009,14 +1009,14 @@ public class EventDelegate
         long lVar10;
         long lVar11;
         if (ev == null) {
-        LAB_1809463e6:
+        LAB_180946a76:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (*(char *)(ev + 56) == false) {
           uVar6 = *(uint64 *)(ev + 16);
           cVar5 = Object.op_Equality(uVar6,0,0);
-          if ((!cVar5) && (cVar5 = FUN_180d755b0(*(uint64 *)(ev + 24),0), !cVar5)
+          if ((!cVar5) && (cVar5 = FUN_180d75bc0(*(uint64 *)(ev + 24),0), !cVar5)
              ) {
             if (list == null) {
               Debug.LogWarning("Attempting to add a callback to a list that's null",0);
@@ -1052,14 +1052,14 @@ public class EventDelegate
             *(uint8 *)(lVar10 + 40) = oneShot;
             if ((*(int64 *)(ev + 32) == 0) ||
                (uVar4 = *(uint64 *)(*(int64 *)(ev + 32) + 24)) == null) {
-        LAB_180946396:
-              FUN_18181e0a0(list,lVar10,DAT_181d85f20);
+        LAB_180946a26:
+              FUN_18181e6b0(list,lVar10,DAT_181d85f38);
               return;
             }
-            uVar6 = FUN_1800d60b0(DAT_181da7d60,uVar4 & 0xffffffff);
+            uVar6 = FUN_1800d60b0(DAT_181da7d78,uVar4 & 0xffffffff);
             *(uint64 *)(lVar10 + 32) = uVar6;
             while (lVar11 = *(int64 *)(ev + 32)) != null {
-              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946396;
+              if ((int)*(uint32 *)(lVar11 + 24) <= (int)uVar9) goto LAB_180946a26;
               plVar2 = *(int64 **)(lVar10 + 32);
               if (*(uint32 *)(lVar11 + 24) <= uVar9) {
                 uVar6 = il2cpp_internal();
@@ -1083,7 +1083,7 @@ public class EventDelegate
               il2cpp_internal();
               uVar9 = uVar9 + 1;
             }
-            goto LAB_1809463e6;
+            goto LAB_180946a76;
           }
         }
         uVar6 = *(uint64 *)(ev + 48);
@@ -1091,7 +1091,7 @@ public class EventDelegate
     }
 
     // Token : 0x600032C
-    // RVA   : 0x947C90   Offset: 0x947090   Length: 0xE1
+    // RVA   : 0x948320   Offset: 0x947720   Length: 0xE1
     public static bool Remove(List<EventDelegate> list, Callback callback)
     {
         int iVar1;
@@ -1113,7 +1113,7 @@ public class EventDelegate
               if ((plVar2 != (int64 *)0) &&
                  (cVar3 = (**(code **)(*plVar2 + 0x138))(plVar2,callback,*(uint64 *)(*plVar2 + 0x140)),
                  cVar3)) {
-                FUN_181823590(list,uVar4,DAT_181d860a0);
+                FUN_181823ba0(list,uVar4,DAT_181d860b8);
                 return true;
               }
               uVar4 = uVar4 + 1;
@@ -1126,7 +1126,7 @@ public class EventDelegate
     }
 
     // Token : 0x600032D
-    // RVA   : 0x947BA0   Offset: 0x946FA0   Length: 0xE1
+    // RVA   : 0x948230   Offset: 0x947630   Length: 0xE1
     public static bool Remove(List<EventDelegate> list, EventDelegate ev)
     {
         int iVar1;
@@ -1148,7 +1148,7 @@ public class EventDelegate
               if ((plVar2 != (int64 *)0) &&
                  (cVar3 = (**(code **)(*plVar2 + 0x138))(plVar2,ev,*(uint64 *)(*plVar2 + 0x140)),
                  cVar3)) {
-                FUN_181823590(list,uVar4,DAT_181d860a0);
+                FUN_181823ba0(list,uVar4,DAT_181d860b8);
                 return true;
               }
               uVar4 = uVar4 + 1;
@@ -1161,14 +1161,14 @@ public class EventDelegate
     }
 
     // Token : 0x600032E
-    // RVA   : 0x948210   Offset: 0x947610   Length: 0x62
+    // RVA   : 0x9488A0   Offset: 0x947CA0   Length: 0x62
     private static void /*cctor*/()
     {
         uint uVar1;
         if ("EventDelegate" != (int64 *)0) {
           uVar1 = (**(code **)(*"EventDelegate" + 0x158))
                             ("EventDelegate",*(uint64 *)(*"EventDelegate" + 0x160));
-          **(uint32 **)(DAT_181dc48f0 + 184) = uVar1;
+          **(uint32 **)(DAT_181dc4908 + 184) = uVar1;
           return;
         }
     }

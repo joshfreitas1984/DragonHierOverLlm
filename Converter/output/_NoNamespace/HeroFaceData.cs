@@ -11,30 +11,30 @@ public class HeroFaceData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001252
-    // RVA   : 0xAF2730   Offset: 0xAF1B30   Length: 0x144
+    // RVA   : 0xAF2DF0   Offset: 0xAF21F0   Length: 0x144
     public void /*ctor*/()
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar1,DAT_181d8f098);
+        lVar1 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar1,DAT_181d8f0b0);
         if (lVar1 != null) {
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
-          FUN_18182a0b0(lVar1,0xffffffff,DAT_181d8f218);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
+          FUN_18182a6c0(lVar1,0xffffffff,DAT_181d8f230);
           this.faceID = lVar1;
           return;
         }
     }
 
     // Token : 0x6001253
-    // RVA   : 0xAF2590   Offset: 0xAF1990   Length: 0xD8
+    // RVA   : 0xAF2C50   Offset: 0xAF2050   Length: 0xD8
     internal void OnDeserializedMethod(StreamingContext context)
     {
         int iVar1;
@@ -48,13 +48,13 @@ public class HeroFaceData
             return;
           }
           if (this.faceID == null) break;
-          FUN_18182a0b0(this.faceID,0xffffffff,DAT_181d8f218);
+          FUN_18182a6c0(this.faceID,0xffffffff,DAT_181d8f230);
           lVar2 = this.faceID;
         }
     }
 
     // Token : 0x6001254
-    // RVA   : 0xAF2670   Offset: 0xAF1A70   Length: 0xB4
+    // RVA   : 0xAF2D30   Offset: 0xAF2130   Length: 0xB4
     public void Reset()
     {
         long lVar1;
@@ -63,20 +63,20 @@ public class HeroFaceData
         iVar2 = 0;
         do {
           if (lVar1 == null) {
-        LAB_180af271f:
+        LAB_180af2ddf:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           if (lVar1.Count <= iVar2) {
-            FUN_181833d40(lVar1,7,0xffffffff,DAT_181d8fb18);
+            FUN_181834350(lVar1,7,0xffffffff,DAT_181d8fb30);
             if (this.faceID != null) {
-              FUN_181833d40(this.faceID,8,0xffffffff,DAT_181d8fb18);
+              FUN_181834350(this.faceID,8,0xffffffff,DAT_181d8fb30);
               return;
             }
-            goto LAB_180af271f;
+            goto LAB_180af2ddf;
           }
-          if (lVar1 == null) goto LAB_180af271f;
-          FUN_181833d40(lVar1,iVar2,0,DAT_181d8fb18);
+          if (lVar1 == null) goto LAB_180af2ddf;
+          FUN_181834350(lVar1,iVar2,0,DAT_181d8fb30);
           lVar1 = this.faceID;
           iVar2 = iVar2 + 1;
         } while( true );

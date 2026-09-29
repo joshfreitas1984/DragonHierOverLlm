@@ -17,7 +17,7 @@ public class LTCSVLoader
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60018AB
-    // RVA   : 0xA7CA30   Offset: 0xA7BE30   Length: 0x1E9
+    // RVA   : 0xA7D0C0   Offset: 0xA7C4C0   Length: 0x1E9
     private void ReadFile(string fileName)
     {
         long lVar1;
@@ -28,30 +28,30 @@ public class LTCSVLoader
         int iVar6;
         uVar4 = Encoding.GetEncoding("GBK",0);
         this.inStream = new StreamReader(fileName,uVar4,0);
-        uVar4 = il2cpp_internal(DAT_181d903e0);
-        FUN_18132faf0(uVar4,DAT_181d79228);
+        uVar4 = il2cpp_internal(DAT_181d903f8);
+        FUN_181330100(uVar4,DAT_181d79240);
         this.table = uVar4;
         cVar2 = LTCSVLoader.readCSVNextRecord(this,0);
         if (cVar2) {
           lVar1 = this.vContent;
           while (lVar1 != null) {
-            lVar5 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar5,DAT_181da3bd8);
+            lVar5 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar5,DAT_181da3bf0);
             iVar6 = 0;
             while( true ) {
-              if (lVar1 == null) goto LAB_180a7cc14;
+              if (lVar1 == null) goto LAB_180a7d2a4;
               if (lVar1.Count <= iVar6) break;
-              uVar4 = FUN_180002f80(lVar1,iVar6,DAT_181da4358);
-              if (lVar5 == null) goto LAB_180a7cc14;
-              FUN_18181e0a0(lVar5,uVar4,DAT_181da3d58);
+              uVar4 = FUN_180002f80(lVar1,iVar6,DAT_181da4370);
+              if (lVar5 == null) goto LAB_180a7d2a4;
+              FUN_18181e6b0(lVar5,uVar4,DAT_181da3d70);
               iVar6 = iVar6 + 1;
             }
             if (this.table == null) {
-        LAB_180a7cc14:
+        LAB_180a7d2a4:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18181e0a0(this.table,lVar5,DAT_181d792a8);
+            FUN_18181e6b0(this.table,lVar5,DAT_181d792c0);
             cVar2 = LTCSVLoader.readCSVNextRecord(this,0);
             if (!cVar2) {
               return;
@@ -62,7 +62,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018AC
-    // RVA   : 0xA7CC20   Offset: 0xA7C020   Length: 0x1C9
+    // RVA   : 0xA7D2B0   Offset: 0xA7C6B0   Length: 0x1C9
     public void ReadMultiLine(string str)
     {
         long lVar1;
@@ -71,30 +71,30 @@ public class LTCSVLoader
         long lVar4;
         int iVar5;
         this.inStream = new StringReader(str,0);
-        uVar3 = il2cpp_internal(DAT_181d903e0);
-        FUN_18132faf0(uVar3,DAT_181d79228);
+        uVar3 = il2cpp_internal(DAT_181d903f8);
+        FUN_181330100(uVar3,DAT_181d79240);
         this.table = uVar3;
         cVar2 = LTCSVLoader.readCSVNextRecord(this,0);
         if (cVar2) {
           lVar1 = this.vContent;
           while (lVar1 != null) {
-            lVar4 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar4,DAT_181da3bd8);
+            lVar4 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar4,DAT_181da3bf0);
             iVar5 = 0;
             while( true ) {
-              if (lVar1 == null) goto LAB_180a7cde4;
+              if (lVar1 == null) goto LAB_180a7d474;
               if (lVar1.Count <= iVar5) break;
-              uVar3 = FUN_180002f80(lVar1,iVar5,DAT_181da4358);
-              if (lVar4 == null) goto LAB_180a7cde4;
-              FUN_18181e0a0(lVar4,uVar3,DAT_181da3d58);
+              uVar3 = FUN_180002f80(lVar1,iVar5,DAT_181da4370);
+              if (lVar4 == null) goto LAB_180a7d474;
+              FUN_18181e6b0(lVar4,uVar3,DAT_181da3d70);
               iVar5 = iVar5 + 1;
             }
             if (this.table == null) {
-        LAB_180a7cde4:
+        LAB_180a7d474:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            FUN_18181e0a0(this.table,lVar4,DAT_181d792a8);
+            FUN_18181e6b0(this.table,lVar4,DAT_181d792c0);
             cVar2 = LTCSVLoader.readCSVNextRecord(this,0);
             if (!cVar2) {
               return;
@@ -105,7 +105,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018AD
-    // RVA   : 0xA7CDF0   Offset: 0xA7C1F0   Length: 0xB8
+    // RVA   : 0xA7D480   Offset: 0xA7C880   Length: 0xB8
     private int containsNumber(string parentStr, string parameter)
     {
         bool cVar1;
@@ -130,7 +130,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018AE
-    // RVA   : 0xA7CEE0   Offset: 0xA7C2E0   Length: 0x9B
+    // RVA   : 0xA7D570   Offset: 0xA7C970   Length: 0x9B
     private bool isQuoteAdjacent(string p_String)
     {
         int iVar1;
@@ -143,7 +143,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018AF
-    // RVA   : 0xA7CF80   Offset: 0xA7C380   Length: 0x8F
+    // RVA   : 0xA7D610   Offset: 0xA7CA10   Length: 0x8F
     private bool isQuoteContained(string p_String)
     {
         uint uVar1;
@@ -156,7 +156,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018B0
-    // RVA   : 0xA7D010   Offset: 0xA7C410   Length: 0x54E
+    // RVA   : 0xA7D6A0   Offset: 0xA7CAA0   Length: 0x54E
     private string[] readAtomString(string lineStr)
     {
         bool cVar1;
@@ -170,8 +170,8 @@ public class LTCSVLoader
         long lVar10;
         uint uVar11;
         lVar7 = "";
-        plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,2);
-        lVar6 = FUN_1800d60b0(DAT_181da1040,1);
+        plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,2);
+        lVar6 = FUN_1800d60b0(DAT_181da1058,1);
         if (lVar6 != null) {
           if (*(int *)(lVar6 + 24) == 0) {
             uVar8 = il2cpp_internal();
@@ -181,11 +181,11 @@ public class LTCSVLoader
           *(uint16 *)(lVar6 + 32) = 44;
           if (lineStr != null) {
             lVar6 = String.Split(lineStr,lVar6,0);
-        LAB_180a7d0f0:
+        LAB_180a7d780:
             uVar11 = 0;
-        LAB_180a7d0f2:
+        LAB_180a7d782:
             if (lVar6 == null) throw; // [null/range check failed]
-            if ((int)*(uint32 *)(lVar6 + 24) <= (int)uVar11) goto LAB_180a7d0f0;
+            if ((int)*(uint32 *)(lVar6 + 24) <= (int)uVar11) goto LAB_180a7d780;
             if (*(uint32 *)(lVar6 + 24) <= uVar11) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
@@ -201,7 +201,7 @@ public class LTCSVLoader
             cVar1 = LTCSVLoader.isQuoteContained(this,lVar7);
             lVar10 = lVar7;
             if (!cVar1) {
-        LAB_180a7d3fe:
+        LAB_180a7da8e:
               if (lVar7 != null) {
                 lVar6 = "";
                 if (*(int *)(lVar7 + 16) < *(int *)(lineStr + 16)) {
@@ -249,7 +249,7 @@ public class LTCSVLoader
             }
             if (lVar7 == null) throw; // [null/range check failed]
             cVar1 = String.StartsWith(lVar7,"\"");
-            if (!cVar1) goto LAB_180a7d3fe;
+            if (!cVar1) goto LAB_180a7da8e;
             cVar1 = String.StartsWith(lVar7);
             if (cVar1) {
               uVar2 = LTCSVLoader.containsNumber(this,lVar7,"\"",0);
@@ -264,7 +264,7 @@ public class LTCSVLoader
                   uVar8 = String.Substring(lVar7,1,uVar4);
                   iVar3 = String.IndexOf(lVar7,34,1,0);
                   lVar6 = lVar7;
-        LAB_180a7d256:
+        LAB_180a7d8e6:
                   uVar9 = String.Substring(lVar6,iVar3 + 1,0);
                   lVar10 = String.Concat(uVar8,uVar9,0);
                 }
@@ -283,7 +283,7 @@ public class LTCSVLoader
                       lVar6 = String.Substring(lVar7,1,uVar4);
                       if (lVar6 != null) {
                         lVar10 = String.Replace(lVar6,"\"\"","\"",0);
-                        goto LAB_180a7d3fe;
+                        goto LAB_180a7da8e;
                       }
                       throw; // [null/range check failed]
                     }
@@ -296,7 +296,7 @@ public class LTCSVLoader
                     lVar10 = String.Concat(uVar8,uVar9,0);
                   }
                 }
-                goto LAB_180a7d3fe;
+                goto LAB_180a7da8e;
               }
               cVar1 = String.Equals(lVar7,"\"",0);
               if (!cVar1) {
@@ -307,20 +307,20 @@ public class LTCSVLoader
                   if (lVar6 != null) {
                     iVar3 = String.IndexOf(lVar6,"\"",0);
                     uVar8 = String.Substring(lVar6,0,iVar3,0);
-                    goto LAB_180a7d256;
+                    goto LAB_180a7d8e6;
                   }
                   throw; // [null/range check failed]
                 }
               }
             }
             uVar11 = uVar11 + 1;
-            goto LAB_180a7d0f2;
+            goto LAB_180a7d782;
           }
         }
     }
 
     // Token : 0x60018B1
-    // RVA   : 0xA7D560   Offset: 0xA7C960   Length: 0x3DC
+    // RVA   : 0xA7DBF0   Offset: 0xA7CFF0   Length: 0x3DC
     private bool readCSVNextRecord()
     {
         bool cVar2;
@@ -330,53 +330,53 @@ public class LTCSVLoader
         long lVar8;
         long lVar9;
         if (this.inStream == null) {
-        LAB_180a7d900:
+        LAB_180a7df90:
           uVar6 = 0;
         }
         else {
           lVar8 = this.vContent;
           if (lVar8 == null) {
-            uVar6 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(uVar6,DAT_181da3bd8);
+            uVar6 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(uVar6,DAT_181da3bf0);
             this.vContent = uVar6;
             lVar8 = this.vContent;
-            if (lVar8 == null) goto LAB_180a7d917;
+            if (lVar8 == null) goto LAB_180a7dfa7;
           }
-          FUN_1812f9a10(lVar8,DAT_181da3dd8);
-          plVar7 = (int64 *)il2cpp_internal(DAT_181da7710);
+          FUN_1812fa020(lVar8,DAT_181da3df0);
+          plVar7 = (int64 *)il2cpp_internal(DAT_181da7728);
           StringBuilder.ctor(plVar7,0);
           do {
             do {
               while( true ) {
                 plVar1 = this.inStream;
-                if (plVar1 == (int64 *)0) goto LAB_180a7d917;
+                if (plVar1 == (int64 *)0) goto LAB_180a7dfa7;
                 lVar8 = (**(code **)(*plVar1 + 0x208))(plVar1,*(uint64 *)(*plVar1 + 0x210));
                 if (lVar8 == null) {
                   this.vContent = 0;
-                  goto LAB_180a7d900;
+                  goto LAB_180a7df90;
                 }
                 if ((plVar7 == (int64 *)0) ||
                    (lVar9 = (**(code **)(*plVar7 + 0x168))(plVar7,*(uint64 *)(*plVar7 + 0x170)),
-                   lVar9 == null)) goto LAB_180a7d917;
+                   lVar9 == null)) goto LAB_180a7dfa7;
                 cVar2 = String.Equals(lVar9,"",0);
                 if (!cVar2) {
                   StringBuilder.Append(plVar7,"\n",0);
                 }
                 StringBuilder.Append(plVar7,lVar8,0);
                 lVar8 = (**(code **)(*plVar7 + 0x168))(plVar7,*(uint64 *)(*plVar7 + 0x170));
-                if (lVar8 == null) goto LAB_180a7d917;
+                if (lVar8 == null) goto LAB_180a7dfa7;
                 iVar4 = String.IndexOf(lVar8,",",0);
                 if (iVar4 == -1) break;
                 lVar8 = String.Replace(lVar8,"\"\"","");
-                if (lVar8 == null) goto LAB_180a7d917;
+                if (lVar8 == null) goto LAB_180a7dfa7;
                 iVar4 = String.LastIndexOf(lVar8,"\"",0);
                 if (iVar4 != 0) {
-                  if (iVar4 == -1) goto LAB_180a7d86d;
+                  if (iVar4 == -1) goto LAB_180a7defd;
                   lVar8 = String.Replace(lVar8,"\",\"","");
-                  if (lVar8 == null) goto LAB_180a7d917;
+                  if (lVar8 == null) goto LAB_180a7dfa7;
                   iVar4 = String.LastIndexOf(lVar8,"\"",0);
                   if ((iVar4 != 0) && (sVar3 = String.get_Chars(lVar8,iVar4 + -1,0), sVar3 != 44))
-                  goto LAB_180a7d86d;
+                  goto LAB_180a7defd;
                 }
               }
               uVar5 = LTCSVLoader.containsNumber(this,lVar8,"\"",0);
@@ -384,18 +384,18 @@ public class LTCSVLoader
               if ((int)uVar5 < 0) {
                 uVar5 = (uVar5 - 1 | 0xfffffffe) + 1;
               }
-              if (uVar5 == 0) goto LAB_180a7d86d;
+              if (uVar5 == 0) goto LAB_180a7defd;
               cVar2 = String.StartsWith(lVar8,"\"",0);
             } while ((!cVar2) || (cVar2 = String.Equals(lVar8,"\"",0), cVar2));
             uVar6 = String.Substring(lVar8,1);
             cVar2 = LTCSVLoader.isQuoteAdjacent(this,uVar6,0);
           } while (cVar2);
-        LAB_180a7d86d:
+        LAB_180a7defd:
           lVar8 = (**(code **)(*plVar7 + 0x168))(plVar7,*(uint64 *)(*plVar7 + 0x170));
           if (lVar8 != null) {
             while( true ) {
               cVar2 = String.Equals(lVar8,"",0);
-              if (cVar2) goto LAB_180a7d8e9;
+              if (cVar2) goto LAB_180a7df79;
               lVar9 = LTCSVLoader.readAtomString(this,lVar8,0);
               if (lVar9 == null) break;
               if (*(uint32 *)(lVar9 + 24) == 0) {
@@ -410,21 +410,21 @@ public class LTCSVLoader
               }
               lVar8 = *(int64 *)(lVar9 + 40);
               if ((this.vContent == null) ||
-                 (FUN_18181e0a0(this.vContent,*(uint64 *)(lVar9 + 32)), lVar8 == null))
+                 (FUN_18181e6b0(this.vContent,*(uint64 *)(lVar9 + 32)), lVar8 == null))
               break;
             }
-        LAB_180a7d917:
+        LAB_180a7dfa7:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-        LAB_180a7d8e9:
+        LAB_180a7df79:
           uVar6 = 1;
         }
         return uVar6;
     }
 
     // Token : 0x60018B2
-    // RVA   : 0xA7CEB0   Offset: 0xA7C2B0   Length: 0x26
+    // RVA   : 0xA7D540   Offset: 0xA7C940   Length: 0x26
     private List<string> getLineContentVector()
     {
         bool cVar1;
@@ -443,7 +443,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018B4
-    // RVA   : 0xA7C790   Offset: 0xA7BB90   Length: 0x7F
+    // RVA   : 0xA7CE20   Offset: 0xA7C220   Length: 0x7F
     public int GetRow()
     {
         ulong uVar1;
@@ -451,15 +451,15 @@ public class LTCSVLoader
         if (this.table != null) {
           return this.table.Count;
         }
-        uVar1 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181dc54b8);
         uVar1 = il2cpp_internal(uVar1);
         uVar2 = il2cpp_internal(&"table尚未初始化,请检查是否成功读取");
         Exception.ctor(uVar1,uVar2,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d85fa8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d85e40);
     }
 
     // Token : 0x60018B5
-    // RVA   : 0xA7BCC0   Offset: 0xA7B0C0   Length: 0xFA
+    // RVA   : 0xA7C350   Offset: 0xA7B750   Length: 0xFA
     public int GetCol()
     {
         long lVar1;
@@ -467,20 +467,20 @@ public class LTCSVLoader
         ulong uVar3;
         lVar1 = this.table;
         if (lVar1 == null) {
-          uVar2 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar2 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar2 = il2cpp_internal(uVar2);
           uVar3 = il2cpp_internal(&"table尚未初始化,请检查是否成功读取");
           Exception.ctor(uVar2,uVar3,0);
-          uVar3 = il2cpp_runtime_class_init(&DAT_181d85d28);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181d85bc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar2,uVar3);
         }
         if (lVar1.Count == null) {
-          uVar2 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar2 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar2 = il2cpp_internal(uVar2);
           uVar3 = il2cpp_internal(&"table内容为空");
           Exception.ctor(uVar2,uVar3,0);
-          uVar3 = il2cpp_runtime_class_init(&DAT_181d85d28);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181d85bc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar2,uVar3);
         }
@@ -491,7 +491,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018B6
-    // RVA   : 0xA7BDC0   Offset: 0xA7B1C0   Length: 0x229
+    // RVA   : 0xA7C450   Offset: 0xA7B850   Length: 0x229
     public int GetFirstIndexAtCol(string str, int col)
     {
         bool cVar1;
@@ -502,31 +502,31 @@ public class LTCSVLoader
         uint uVar6;
         lVar2 = this.table;
         if (lVar2 == null) {
-          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar3 = il2cpp_internal(uVar3);
           uVar4 = il2cpp_internal(&"table尚未初始化,请检查是否成功读取");
           Exception.ctor(uVar3,uVar4,0);
-          uVar4 = il2cpp_runtime_class_init(&DAT_181d85da8);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181d85c40);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar3,uVar4);
         }
         if (lVar2.Count == null) {
-          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar3 = il2cpp_internal(uVar3);
           uVar4 = il2cpp_internal(&"table内容为空");
           Exception.ctor(uVar3,uVar4,0);
-          uVar4 = il2cpp_runtime_class_init(&DAT_181d85da8);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181d85c40);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar3,uVar4);
         }
         lVar5 = *(int64 *)(lVar2._items + 32);
         if (lVar5 != null) {
           if (*(int *)(lVar5 + 24) <= (int)col) {
-            uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+            uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
             uVar3 = il2cpp_internal(uVar3);
             uVar4 = il2cpp_internal(&"参数错误：col大于最大列");
             Exception.ctor(uVar3,uVar4,0);
-            uVar4 = il2cpp_runtime_class_init(&DAT_181d85da8);
+            uVar4 = il2cpp_runtime_class_init(&DAT_181d85c40);
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar3,uVar4);
           }
@@ -561,7 +561,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018B7
-    // RVA   : 0xA7BFF0   Offset: 0xA7B3F0   Length: 0x232
+    // RVA   : 0xA7C680   Offset: 0xA7BA80   Length: 0x232
     public int GetFirstIndexAtRow(string str, int row)
     {
         int iVar1;
@@ -574,30 +574,30 @@ public class LTCSVLoader
         long lVar8;
         lVar6 = this.table;
         if (lVar6 == null) {
-          uVar4 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar4 = il2cpp_internal(uVar4);
           uVar5 = il2cpp_internal(&"table尚未初始化,请检查是否成功读取");
           Exception.ctor(uVar4,uVar5,0);
-          uVar5 = il2cpp_runtime_class_init(&DAT_181d85e28);
+          uVar5 = il2cpp_runtime_class_init(&DAT_181d85cc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar4,uVar5);
         }
         iVar1 = lVar6.Count;
         if (iVar1 == 0) {
-          uVar4 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar4 = il2cpp_internal(uVar4);
           uVar5 = il2cpp_internal(&"table内容为空");
           Exception.ctor(uVar4,uVar5,0);
-          uVar5 = il2cpp_runtime_class_init(&DAT_181d85e28);
+          uVar5 = il2cpp_runtime_class_init(&DAT_181d85cc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar4,uVar5);
         }
         if (iVar1 <= (int)row) {
-          uVar4 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar4 = il2cpp_internal(uVar4);
           uVar5 = il2cpp_internal(&"参数错误：row大于最大行");
           Exception.ctor(uVar4,uVar5,0);
-          uVar5 = il2cpp_runtime_class_init(&DAT_181d85e28);
+          uVar5 = il2cpp_runtime_class_init(&DAT_181d85cc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar4,uVar5);
         }
@@ -638,7 +638,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018B8
-    // RVA   : 0xA7C230   Offset: 0xA7B630   Length: 0x2A5
+    // RVA   : 0xA7C8C0   Offset: 0xA7BCC0   Length: 0x2A5
     public int[] GetIndexsAtCol(string str, int col)
     {
         bool cVar1;
@@ -650,36 +650,36 @@ public class LTCSVLoader
         long lVar7;
         lVar5 = this.table;
         if (lVar5 == null) {
-          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar3 = il2cpp_internal(uVar3);
           uVar4 = il2cpp_internal(&"table尚未初始化,请检查是否成功读取");
           Exception.ctor(uVar3,uVar4,0);
-          uVar4 = il2cpp_runtime_class_init(&DAT_181d85ea8);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181d85d40);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar3,uVar4);
         }
         if (lVar5.Count == null) {
-          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar3 = il2cpp_internal(uVar3);
           uVar4 = il2cpp_internal(&"table内容为空");
           Exception.ctor(uVar3,uVar4,0);
-          uVar4 = il2cpp_runtime_class_init(&DAT_181d85ea8);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181d85d40);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar3,uVar4);
         }
         lVar5 = *(int64 *)(lVar5._items + 32);
         if (lVar5 != null) {
           if (lVar5.Count <= (int)col) {
-            uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+            uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
             uVar3 = il2cpp_internal(uVar3);
             uVar4 = il2cpp_internal(&"参数错误：col大于最大列");
             Exception.ctor(uVar3,uVar4,0);
-            uVar4 = il2cpp_runtime_class_init(&DAT_181d85ea8);
+            uVar4 = il2cpp_runtime_class_init(&DAT_181d85d40);
                           // WARNING: Subroutine does not return
             FUN_1800d65f0(uVar3,uVar4);
           }
-          lVar2 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar2,DAT_181d8f098);
+          lVar2 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar2,DAT_181d8f0b0);
           lVar5 = this.table;
           uVar6 = 0;
           if (lVar5 != null) {
@@ -687,7 +687,7 @@ public class LTCSVLoader
             do {
               if (lVar5.Count <= (int)uVar6) {
                 if (lVar2 != null) {
-                  FUN_181655b90(lVar2,DAT_181d8f898);
+                  FUN_1816561a0(lVar2,DAT_181d8f8b0);
                   return;
                 }
                 break;
@@ -706,7 +706,7 @@ public class LTCSVLoader
               cVar1 = String.Equals(lVar5,str,0);
               if (cVar1) {
                 if (lVar2 == null) break;
-                FUN_18182a0b0(lVar2,uVar6);
+                FUN_18182a6c0(lVar2,uVar6);
               }
               lVar5 = this.table;
               uVar6 = uVar6 + 1;
@@ -717,7 +717,7 @@ public class LTCSVLoader
     }
 
     // Token : 0x60018B9
-    // RVA   : 0xA7C4E0   Offset: 0xA7B8E0   Length: 0x2AC
+    // RVA   : 0xA7CB70   Offset: 0xA7BF70   Length: 0x2AC
     public int[] GetIndexsAtRow(string str, int row)
     {
         int iVar1;
@@ -731,30 +731,30 @@ public class LTCSVLoader
         long lVar9;
         lVar4 = this.table;
         if (lVar4 == null) {
-          uVar5 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar5 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar5 = il2cpp_internal(uVar5);
           uVar6 = il2cpp_internal(&"table尚未初始化,请检查是否成功读取");
           Exception.ctor(uVar5,uVar6,0);
-          uVar6 = il2cpp_runtime_class_init(&DAT_181d85f28);
+          uVar6 = il2cpp_runtime_class_init(&DAT_181d85dc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar5,uVar6);
         }
         iVar1 = lVar4.Count;
         if (iVar1 == 0) {
-          uVar5 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar5 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar5 = il2cpp_internal(uVar5);
           uVar6 = il2cpp_internal(&"table内容为空");
           Exception.ctor(uVar5,uVar6,0);
-          uVar6 = il2cpp_runtime_class_init(&DAT_181d85f28);
+          uVar6 = il2cpp_runtime_class_init(&DAT_181d85dc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar5,uVar6);
         }
         if (iVar1 <= (int)row) {
-          uVar5 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar5 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar5 = il2cpp_internal(uVar5);
           uVar6 = il2cpp_internal(&"参数错误：row大于最大行");
           Exception.ctor(uVar5,uVar6,0);
-          uVar6 = il2cpp_runtime_class_init(&DAT_181d85f28);
+          uVar6 = il2cpp_runtime_class_init(&DAT_181d85dc0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar5,uVar6);
         }
@@ -764,8 +764,8 @@ public class LTCSVLoader
         lVar4 = *(int64 *)(lVar4._items + 32);
         if (lVar4 != null) {
           iVar1 = lVar4.Count;
-          lVar4 = il2cpp_internal(DAT_181d93cd0);
-          FUN_18132faf0(lVar4,DAT_181d8f098);
+          lVar4 = il2cpp_internal(DAT_181d93ce8);
+          FUN_181330100(lVar4,DAT_181d8f0b0);
           uVar8 = 0;
           if (0 < iVar1) {
             lVar9 = 32;
@@ -786,7 +786,7 @@ public class LTCSVLoader
               cVar3 = String.Equals(lVar2,str,0);
               if (cVar3) {
                 if (lVar4 == null) throw; // [null/range check failed]
-                FUN_18182a0b0(lVar4,uVar8);
+                FUN_18182a6c0(lVar4,uVar8);
               }
               uVar8 = uVar8 + 1;
               lVar7 = lVar7 + 1;
@@ -794,14 +794,14 @@ public class LTCSVLoader
             } while (lVar7 < iVar1);
           }
           if (lVar4 != null) {
-            FUN_181655b90(lVar4,DAT_181d8f898);
+            FUN_1816561a0(lVar4,DAT_181d8f8b0);
             return;
           }
         }
     }
 
     // Token : 0x60018BA
-    // RVA   : 0xA7C810   Offset: 0xA7BC10   Length: 0x213
+    // RVA   : 0xA7CEA0   Offset: 0xA7C2A0   Length: 0x213
     public string GetValueAt(int col, int row)
     {
         int iVar1;
@@ -810,21 +810,21 @@ public class LTCSVLoader
         ulong uVar4;
         lVar2 = this.table;
         if (lVar2 == null) {
-          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar3 = il2cpp_internal(uVar3);
           uVar4 = il2cpp_internal(&"table尚未初始化,请检查是否成功读取");
           Exception.ctor(uVar3,uVar4,0);
-          uVar4 = il2cpp_runtime_class_init(&DAT_181d86028);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181d85ec0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar3,uVar4);
         }
         iVar1 = lVar2.Count;
         if (iVar1 == 0) {
-          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+          uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
           uVar3 = il2cpp_internal(uVar3);
           uVar4 = il2cpp_internal(&"table内容为空");
           Exception.ctor(uVar3,uVar4,0);
-          uVar4 = il2cpp_runtime_class_init(&DAT_181d86028);
+          uVar4 = il2cpp_runtime_class_init(&DAT_181d85ec0);
                           // WARNING: Subroutine does not return
           FUN_1800d65f0(uVar3,uVar4);
         }
@@ -835,18 +835,18 @@ public class LTCSVLoader
           lVar2 = *(int64 *)(lVar2._items + 32);
           if (lVar2 != null) {
             if (lVar2.Count <= col) {
-              uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+              uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
               uVar3 = il2cpp_internal(uVar3);
               uVar4 = il2cpp_internal(&"参数错误：col大于最大列");
               Exception.ctor(uVar3,uVar4,0);
-              uVar4 = il2cpp_runtime_class_init(&DAT_181d86028);
+              uVar4 = il2cpp_runtime_class_init(&DAT_181d85ec0);
                           // WARNING: Subroutine does not return
               FUN_1800d65f0(uVar3,uVar4);
             }
             if (this.table != null) {
-              lVar2 = FUN_180002f80(this.table,row,DAT_181d793a8);
+              lVar2 = FUN_180002f80(this.table,row,DAT_181d793c0);
               if (lVar2 != null) {
-                FUN_180002f80(lVar2,col,DAT_181da4358);
+                FUN_180002f80(lVar2,col,DAT_181da4370);
                 return;
               }
             }
@@ -854,11 +854,11 @@ public class LTCSVLoader
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        uVar3 = il2cpp_runtime_class_init(&DAT_181dc54a0);
+        uVar3 = il2cpp_runtime_class_init(&DAT_181dc54b8);
         uVar3 = il2cpp_internal(uVar3);
         uVar4 = il2cpp_internal(&"参数错误：row大于最大行");
         Exception.ctor(uVar3,uVar4,0);
-        uVar4 = il2cpp_runtime_class_init(&DAT_181d86028);
+        uVar4 = il2cpp_runtime_class_init(&DAT_181d85ec0);
     }
 
     // Token : 0x60018BB

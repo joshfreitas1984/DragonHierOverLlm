@@ -6,10 +6,10 @@
 public class UIQuitTarget
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DD2
+    // Token: 0x4001DD3
     public GameObject quitTarget;
 
-    // Token: 0x4001DD3
+    // Token: 0x4001DD4
     public UnityEvent onQuitEvent;
 
     // ── Methods ──────────────────────────────────────────────────

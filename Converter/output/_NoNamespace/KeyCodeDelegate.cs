@@ -26,7 +26,7 @@ public class KeyCodeDelegate
     }
 
     // Token : 0x600077B
-    // RVA   : 0x8E6010   Offset: 0x8E5410   Length: 0x2A2
+    // RVA   : 0x918650   Offset: 0x917A50   Length: 0x2A2
     public virtual void Invoke(GameObject go, KeyCode key)
     {
         long lVar1;
@@ -62,7 +62,7 @@ public class KeyCodeDelegate
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e6269;
+              goto LAB_1809188a9;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -88,13 +88,13 @@ public class KeyCodeDelegate
                   (*(code *)*puVar6)(plVar3,go,key,puVar6);
                 }
                 else {
-                  FUN_180132f60(lVar1,plVar3,go,key);
+                  FUN_180132fc0(lVar1,plVar3,go,key);
                 }
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1808e60b7;
+              goto LAB_1809186f7;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
                 cVar4 = FUN_1800d65c0(lVar1);
@@ -126,11 +126,11 @@ public class KeyCodeDelegate
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_1808e60b7:
+        LAB_1809186f7:
             (*pcVar2)(go,key,lVar1);
           }
           else {
-        LAB_1808e6269:
+        LAB_1809188a9:
             (*pcVar2)(plVar3,go,key,lVar1);
           }
           uVar9 = uVar9 + 1;
@@ -141,7 +141,7 @@ public class KeyCodeDelegate
     }
 
     // Token : 0x600077C
-    // RVA   : 0x8E5EF0   Offset: 0x8E52F0   Length: 0x82
+    // RVA   : 0x918530   Offset: 0x917930   Length: 0x82
     public virtual IAsyncResult BeginInvoke(GameObject go, KeyCode key, AsyncCallback callback, object object)
     {
         void KeyCodeDelegate.BeginInvoke
@@ -155,7 +155,7 @@ public class KeyCodeDelegate
         local_res18[0] = key;
         local_18 = 0;
         local_28 = go;
-        local_20 = il2cpp_value_box(DAT_181d84298,local_res18);
+        local_20 = il2cpp_value_box(DAT_181d842b0,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 

@@ -6,19 +6,19 @@
 public class StudyAttackBulletController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C53
+    // Token: 0x4001C54
     public float loseHpRate;
 
-    // Token: 0x4001C54
+    // Token: 0x4001C55
     public float speedRate;
 
-    // Token: 0x4001C55
+    // Token: 0x4001C56
     public float spinTime;
 
-    // Token: 0x4001C56
+    // Token: 0x4001C57
     public bool faceTarget;
 
-    // Token: 0x4001C57
+    // Token: 0x4001C58
     public string speEffect;
 
     // ── Methods ──────────────────────────────────────────────────

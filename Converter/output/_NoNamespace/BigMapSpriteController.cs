@@ -11,23 +11,23 @@ public class BigMapSpriteController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000D24
-    // RVA   : 0xC7D1C0   Offset: 0xC7C5C0   Length: 0x36
+    // RVA   : 0xC7D7D0   Offset: 0xC7CBD0   Length: 0x36
     public static BigMapSpriteController get_Instance()
     {
-        return **(uint64 **)(DAT_181db0dc8 + 184);
+        return **(uint64 **)(DAT_181db0de0 + 184);
     }
 
     // Token : 0x6000D25
-    // RVA   : 0xC7C630   Offset: 0xC7BA30   Length: 0x43
+    // RVA   : 0xC7CC40   Offset: 0xC7C040   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db0dc8 + 184);
+        puVar1 = *(uint64 **)(DAT_181db0de0 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
     // Token : 0x6000D26
-    // RVA   : 0xC7CE90   Offset: 0xC7C290   Length: 0x326
+    // RVA   : 0xC7D4A0   Offset: 0xC7C8A0   Length: 0x326
     private void Update()
     {
         bool cVar1;
@@ -44,17 +44,17 @@ public class BigMapSpriteController
         uint32 local_30;
         lVar2 = Component.get_gameObject(this,0);
         if (lVar2 == null) {
-        LAB_180c7d1b1:
+        LAB_180c7d7c1:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         cVar1 = GameObject.get_activeInHierarchy(lVar2,0);
         if (cVar1) {
-          if (GameController._instance == null) goto LAB_180c7d1b1;
+          if (GameController._instance == null) goto LAB_180c7d7c1;
           cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (!cVar1) {
             lVar2 = FUN_18046bbe0(0);
-            if (lVar2 == null) goto LAB_180c7d1b1;
+            if (lVar2 == null) goto LAB_180c7d7c1;
             cVar1 = BigMapController.CanDrag(lVar2,0);
             if (cVar1) {
               uVar3 = Vector2.get_zero(0);
@@ -102,7 +102,7 @@ public class BigMapSpriteController
                   (fVar4 - local_res18) * (fVar4 - local_res18)) {
                 lVar2 = FUN_18046bbe0(0);
                 fVar5 = (float)Time.get_deltaTime(0);
-                if (lVar2 == null) goto LAB_180c7d1b1;
+                if (lVar2 == null) goto LAB_180c7d7c1;
                 local_38 = CONCAT44(fVar6 * fVar5 * -1000.0,fVar4 * fVar5 * -1000.0);
                 local_30 = 0;
                 BigMapController.OnDrag(lVar2,&local_38,0);
@@ -113,7 +113,7 @@ public class BigMapSpriteController
     }
 
     // Token : 0x6000D27
-    // RVA   : 0xC7C680   Offset: 0xC7BA80   Length: 0x395
+    // RVA   : 0xC7CC90   Offset: 0xC7C090   Length: 0x395
     public void OnClick()
     {
         ulong uVar1;
@@ -169,13 +169,13 @@ public class BigMapSpriteController
     }
 
     // Token : 0x6000D28
-    // RVA   : 0xC7CA20   Offset: 0xC7BE20   Length: 0xED
+    // RVA   : 0xC7D030   Offset: 0xC7C430   Length: 0xED
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
         ulong local_18;
         uint local_10;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0bc8 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
         if (lVar1 != null) {
           local_10 = 0;
           local_18 = delta;
@@ -185,7 +185,7 @@ public class BigMapSpriteController
     }
 
     // Token : 0x6000D29
-    // RVA   : 0xC7CB10   Offset: 0xC7BF10   Length: 0x37C
+    // RVA   : 0xC7D120   Offset: 0xC7C520   Length: 0x37C
     public void OnScroll(float delta)
     {
         float fVar1;
@@ -195,7 +195,7 @@ public class BigMapSpriteController
         ulong uVar5;
         long lVar6;
         uint uVar8;
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181db0bc8 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
         if (lVar4 != null) {
           if ((*(char *)(lVar4 + 0x100) != false) || (delta == null.0)) {
             return;
@@ -232,12 +232,12 @@ public class BigMapSpriteController
                     puVar7 = (uint32 *)(lVar6 + 28);
                   }
                   else {
-                    puVar7 = *(uint32 **)(DAT_181db0bc8 + 184);
+                    puVar7 = *(uint32 **)(DAT_181db0be0 + 184);
                   }
                   uVar8 = *puVar7;
                   lVar6 = FUN_18046bbe0(0);
                   if ((lVar6 != null) &&
-                     (uVar8 = FUN_1810e36c0(fVar2 * delta + fVar1,uVar8,*(uint32 *)(lVar6 + 24),0)
+                     (uVar8 = FUN_1810e3cd0(fVar2 * delta + fVar1,uVar8,*(uint32 *)(lVar6 + 24),0)
                      , lVar4 != null)) {
                     *(uint32 *)(lVar4 + 32) = uVar8;
                     return;

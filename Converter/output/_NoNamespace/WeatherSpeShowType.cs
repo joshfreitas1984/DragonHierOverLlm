@@ -6,16 +6,16 @@
 public class WeatherSpeShowType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DDD
+    // Token: 0x4001DDE
     public int value__;
 
-    // Token: 0x4001DDE
+    // Token: 0x4001DDF
     public const WeatherSpeShowType None;
 
-    // Token: 0x4001DDF
+    // Token: 0x4001DE0
     public const WeatherSpeShowType Show;
 
-    // Token: 0x4001DE0
+    // Token: 0x4001DE1
     public const WeatherSpeShowType Hide;
 
 }

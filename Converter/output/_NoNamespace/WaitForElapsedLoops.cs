@@ -6,15 +6,15 @@
 public class WaitForElapsedLoops
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002160
+    // Token: 0x4002161
     private readonly Tween t;
 
-    // Token: 0x4002161
+    // Token: 0x4002162
     private readonly int elapsedLoops;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600276F
-    // RVA   : 0x93AF60   Offset: 0x93A360   Length: 0x3B
+    // RVA   : 0x93B5F0   Offset: 0x93A9F0   Length: 0x3B
     public override bool get_keepWaiting()
     {
         long lVar1;

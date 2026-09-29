@@ -32,7 +32,7 @@ public class UIItemStorage
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000034
-    // RVA   : 0x118C7F0   Offset: 0x118BBF0   Length: 0x77
+    // RVA   : 0x118CE00   Offset: 0x118C200   Length: 0x77
     public List<InvGameItem> get_items()
     {
         long lVar1;
@@ -42,13 +42,13 @@ public class UIItemStorage
             return lVar1;
           }
           if (lVar1 == null) break;
-          FUN_18181e0a0(lVar1,0,DAT_181d90518);
+          FUN_18181e6b0(lVar1,0,DAT_181d90530);
           lVar1 = this.mItems;
         }
     }
 
     // Token : 0x6000035
-    // RVA   : 0x118C280   Offset: 0x118B680   Length: 0x87
+    // RVA   : 0x118C890   Offset: 0x118BC90   Length: 0x87
     public InvGameItem GetItem(int slot)
     {
         long lVar1;
@@ -68,7 +68,7 @@ public class UIItemStorage
     }
 
     // Token : 0x6000036
-    // RVA   : 0x118C310   Offset: 0x118B710   Length: 0x10C
+    // RVA   : 0x118C920   Offset: 0x118BD20   Length: 0x10C
     public InvGameItem Replace(int slot, InvGameItem item)
     {
         long lVar1;
@@ -80,7 +80,7 @@ public class UIItemStorage
         lVar1 = this.mItems;
         do {
           if (lVar1 == null) {
-        LAB_18118c417:
+        LAB_18118ca27:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -92,19 +92,19 @@ public class UIItemStorage
             }
             uVar2 = lVar1._items[slot];
             if (lVar3 != null) {
-              FUN_181829cd0(lVar3,slot,item,DAT_181d90698);
+              FUN_18182a2e0(lVar3,slot,item,DAT_181d906b0);
               return uVar2;
             }
-            goto LAB_18118c417;
+            goto LAB_18118ca27;
           }
-          if (lVar1 == null) goto LAB_18118c417;
-          FUN_18181e0a0(lVar1,0,DAT_181d90518);
+          if (lVar1 == null) goto LAB_18118ca27;
+          FUN_18181e6b0(lVar1,0,DAT_181d90530);
           lVar1 = this.mItems;
         } while( true );
     }
 
     // Token : 0x6000037
-    // RVA   : 0x118C420   Offset: 0x118B820   Length: 0x324
+    // RVA   : 0x118CA30   Offset: 0x118BE30   Length: 0x324
     private void Start()
     {
         ulong uVar1;
@@ -141,9 +141,9 @@ public class UIItemStorage
                   uVar3 = Component.get_gameObject(this,0);
                   uVar1 = this.template;
                   lVar4 = NGUITools.AddChild(uVar3,uVar1,0);
-                  if (lVar4 == null) goto LAB_18118c73f;
+                  if (lVar4 == null) goto LAB_18118cd4f;
                   lVar5 = GameObject.get_transform(lVar4,0);
-                  if (lVar5 == null) goto LAB_18118c73f;
+                  if (lVar5 == null) goto LAB_18118cd4f;
                   local_60 = 0;
                   local_68 = ((float)iVar7 + 0.5) * (float)this.spacing +
                              (float)this.padding;
@@ -153,7 +153,7 @@ public class UIItemStorage
                   lVar4 = GameObject.GetComponent(lVar4,DAT_181d74ba8);
                   cVar2 = Object.op_Inequality(lVar4,0);
                   if (cVar2) {
-                    if (lVar4 == null) goto LAB_18118c73f;
+                    if (lVar4 == null) goto LAB_18118cd4f;
                     *(int64 *)(lVar4 + 88) = this;
                     *(int *)(lVar4 + 96) = iVar9;
                   }
@@ -186,7 +186,7 @@ public class UIItemStorage
                 return;
               }
             }
-        LAB_18118c73f:
+        LAB_18118cd4f:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -194,7 +194,7 @@ public class UIItemStorage
     }
 
     // Token : 0x6000038
-    // RVA   : 0x118C750   Offset: 0x118BB50   Length: 0x99
+    // RVA   : 0x118CD60   Offset: 0x118C160   Length: 0x99
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -203,8 +203,8 @@ public class UIItemStorage
         this.maxColumns = 4;
         this.spacing = 128;
         this.padding = 10;
-        uVar1 = il2cpp_internal(DAT_181d93fd0);
-        FUN_18132faf0(uVar1,DAT_181d90498);
+        uVar1 = il2cpp_internal(DAT_181d93fe8);
+        FUN_181330100(uVar1,DAT_181d904b0);
         this.mItems = uVar1;
         FUN_18044ef50(this,0);
     }

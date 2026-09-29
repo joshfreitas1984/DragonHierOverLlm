@@ -7,7 +7,7 @@ public class AreaBackground
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000A2F
-    // RVA   : 0xA1EE50   Offset: 0xA1E250   Length: 0x2CA
+    // RVA   : 0xA1F4E0   Offset: 0xA1E8E0   Length: 0x2CA
     private void Update()
     {
         bool cVar1;
@@ -21,17 +21,17 @@ public class AreaBackground
         float fStackX_24;
         lVar2 = Component.get_gameObject(this,0);
         if (lVar2 == null) {
-        LAB_180a1f115:
+        LAB_180a1f7a5:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         cVar1 = GameObject.get_activeInHierarchy(lVar2,0);
         if (cVar1) {
-          if (GameController._instance == null) goto LAB_180a1f115;
+          if (GameController._instance == null) goto LAB_180a1f7a5;
           cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (!cVar1) {
             lVar2 = FUN_18046bac0(0);
-            if (lVar2 == null) goto LAB_180a1f115;
+            if (lVar2 == null) goto LAB_180a1f7a5;
             cVar1 = AreaController.CanDrag(lVar2,0);
             if (cVar1) {
               uVar3 = Vector2.get_zero(0);
@@ -80,7 +80,7 @@ public class AreaBackground
                 lVar2 = FUN_18046bac0(0);
                 fVar5 = (float)Time.get_deltaTime(0);
                 local_res18 = CONCAT44(fVar6 * fVar5 * -1000.0,fVar4 * fVar5 * -1000.0);
-                if (lVar2 == null) goto LAB_180a1f115;
+                if (lVar2 == null) goto LAB_180a1f7a5;
                 AreaController.OnDrag(lVar2,local_res18,0);
               }
             }
@@ -89,11 +89,11 @@ public class AreaBackground
     }
 
     // Token : 0x6000A30
-    // RVA   : 0xA1ECC0   Offset: 0xA1E0C0   Length: 0xC1
+    // RVA   : 0xA1F350   Offset: 0xA1E750   Length: 0xC1
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           AreaController.OnDrag(lVar1,delta,0);
           return;
@@ -101,11 +101,11 @@ public class AreaBackground
     }
 
     // Token : 0x6000A31
-    // RVA   : 0xA1ED90   Offset: 0xA1E190   Length: 0xBD
+    // RVA   : 0xA1F420   Offset: 0xA1E820   Length: 0xBD
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           AreaController.OnScroll(lVar1,delta,0);
           return;

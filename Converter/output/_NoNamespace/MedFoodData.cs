@@ -20,7 +20,7 @@ public class MedFoodData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60012EB
-    // RVA   : 0xA8DA30   Offset: 0xA8CE30   Length: 0x24
+    // RVA   : 0xA8E0F0   Offset: 0xA8D4F0   Length: 0x24
     public ChangeHeroStateData GetChangeHeroStateData()
     {
         ChangeHeroStateData.op_Multiply
@@ -28,7 +28,7 @@ public class MedFoodData
     }
 
     // Token : 0x60012EC
-    // RVA   : 0xA8DA60   Offset: 0xA8CE60   Length: 0x99
+    // RVA   : 0xA8E120   Offset: 0xA8D520   Length: 0x99
     public void /*ctor*/()
     {
         ulong uVar1;

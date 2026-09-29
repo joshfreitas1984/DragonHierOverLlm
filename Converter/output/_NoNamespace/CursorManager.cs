@@ -17,26 +17,26 @@ public class CursorManager
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600137C
-    // RVA   : 0xA43330   Offset: 0xA42730   Length: 0x36
+    // RVA   : 0xA439C0   Offset: 0xA42DC0   Length: 0x36
     public static CursorManager get_Instance()
     {
-        return **(uint64 **)(DAT_181dbb428 + 184);
+        return **(uint64 **)(DAT_181dbb440 + 184);
     }
 
     // Token : 0x600137D
-    // RVA   : 0xA42EE0   Offset: 0xA422E0   Length: 0x10C
+    // RVA   : 0xA43570   Offset: 0xA42970   Length: 0x10C
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181dbb428 + 184);
+        uVar3 = **(uint64 **)(DAT_181dbb440 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181dbb428 + 184);
+        puVar1 = *(uint64 **)(DAT_181dbb440 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
         uVar3 = Component.get_gameObject(this,0);
@@ -44,7 +44,7 @@ public class CursorManager
     }
 
     // Token : 0x600137E
-    // RVA   : 0xA43130   Offset: 0xA42530   Length: 0x52
+    // RVA   : 0xA437C0   Offset: 0xA42BC0   Length: 0x52
     private void Start()
     {
         long lVar1;
@@ -66,7 +66,7 @@ public class CursorManager
     }
 
     // Token : 0x600137F
-    // RVA   : 0xA43190   Offset: 0xA42590   Length: 0x19D
+    // RVA   : 0xA43820   Offset: 0xA42C20   Length: 0x19D
     private void Update()
     {
         long lVar1;
@@ -78,7 +78,7 @@ public class CursorManager
         }
         cVar2 = Input.GetMouseButton(0,0);
         if (!cVar2) {
-        LAB_180a432cd:
+        LAB_180a4395d:
           cVar2 = Input.GetMouseButton(1);
           if (!cVar2) {
             return;
@@ -92,7 +92,7 @@ public class CursorManager
             if (lVar1 == null) throw; // [null/range check failed]
             uVar3 = GameObject.GetComponent(lVar1,DAT_181d720a0);
             cVar2 = Object.op_Equality(uVar3,0,0);
-            if (!cVar2) goto LAB_180a432cd;
+            if (!cVar2) goto LAB_180a4395d;
           }
         }
         this.cursorType = 0;
@@ -111,7 +111,7 @@ public class CursorManager
     }
 
     // Token : 0x6001380
-    // RVA   : 0xA43130   Offset: 0xA42530   Length: 0x52
+    // RVA   : 0xA437C0   Offset: 0xA42BC0   Length: 0x52
     public void Reset()
     {
         long lVar1;
@@ -133,7 +133,7 @@ public class CursorManager
     }
 
     // Token : 0x6001381
-    // RVA   : 0xA42FF0   Offset: 0xA423F0   Length: 0x8
+    // RVA   : 0xA43680   Offset: 0xA42A80   Length: 0x8
     public void ChangeCursorType(CursorType changeType)
     {
         long lVar1;
@@ -151,7 +151,7 @@ public class CursorManager
           plVar2 = lVar1[changeType];
           if (changeType == null) {
             uVar6 = Vector2.get_zero(0);
-        LAB_180a430d9:
+        LAB_180a43769:
             Cursor.SetCursor(plVar2,uVar6,0,0);
             return;
           }
@@ -168,7 +168,7 @@ public class CursorManager
               if (plVar3 != (int64 *)0) {
                 iVar5 = (**(code **)(*plVar3 + 0x198))(plVar3,*(uint64 *)(*plVar3 + 0x1a0));
                 uVar6 = CONCAT44((float)iVar5 * 0.5,(float)iVar4 * 0.5);
-                goto LAB_180a430d9;
+                goto LAB_180a43769;
               }
             }
           }
@@ -176,7 +176,7 @@ public class CursorManager
     }
 
     // Token : 0x6001382
-    // RVA   : 0xA43000   Offset: 0xA42400   Length: 0x125
+    // RVA   : 0xA43690   Offset: 0xA42A90   Length: 0x125
     public void ChangeCursorType(int changeType)
     {
         long lVar1;
@@ -194,7 +194,7 @@ public class CursorManager
           plVar2 = lVar1[changeType];
           if (changeType == null) {
             uVar6 = Vector2.get_zero(0);
-        LAB_180a430d9:
+        LAB_180a43769:
             Cursor.SetCursor(plVar2,uVar6,0,0);
             return;
           }
@@ -211,7 +211,7 @@ public class CursorManager
               if (plVar3 != (int64 *)0) {
                 iVar5 = (**(code **)(*plVar3 + 0x198))(plVar3,*(uint64 *)(*plVar3 + 0x1a0));
                 uVar6 = CONCAT44((float)iVar5 * 0.5,(float)iVar4 * 0.5);
-                goto LAB_180a430d9;
+                goto LAB_180a43769;
               }
             }
           }

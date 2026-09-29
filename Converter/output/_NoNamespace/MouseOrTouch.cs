@@ -62,7 +62,7 @@ public class MouseOrTouch
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600073B
-    // RVA   : 0x8E67A0   Offset: 0x8E5BA0   Length: 0x1B
+    // RVA   : 0x918DE0   Offset: 0x9181E0   Length: 0x1B
     public float get_deltaTime()
     {
         float fVar1;
@@ -71,7 +71,7 @@ public class MouseOrTouch
     }
 
     // Token : 0x600073C
-    // RVA   : 0x8E67C0   Offset: 0x8E5BC0   Length: 0x16E
+    // RVA   : 0x918E00   Offset: 0x918200   Length: 0x16E
     public bool get_isOverUI()
     {
         ulong uVar1;
@@ -81,11 +81,11 @@ public class MouseOrTouch
         uVar2 = Object.op_Inequality(uVar3,0,0);
         if ((char)uVar2) {
           uVar3 = this.current;
-          uVar1 = *(uint64 *)(*(int64 *)(DAT_181daf678 + 184) + 248);
+          uVar1 = *(uint64 *)(*(int64 *)(DAT_181daf690 + 184) + 248);
           uVar2 = Object.op_Inequality(uVar3,uVar1,0);
           if ((char)uVar2) {
             uVar3 = this.current;
-            uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f820);
+            uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f6b8);
             uVar2 = Object.op_Inequality(uVar3,0,0);
             return uVar2;
           }
@@ -94,7 +94,7 @@ public class MouseOrTouch
     }
 
     // Token : 0x600073D
-    // RVA   : 0x8E6780   Offset: 0x8E5B80   Length: 0x12
+    // RVA   : 0x918DC0   Offset: 0x9181C0   Length: 0x12
     public void /*ctor*/()
     {
         this.clickNotification = 1;

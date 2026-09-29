@@ -31,7 +31,7 @@ public class <RefreshBuffGridPos>d__40
     }
 
     // Token : 0x60017B3
-    // RVA   : 0x932EC0   Offset: 0x9322C0   Length: 0xDB
+    // RVA   : 0x933520   Offset: 0x932920   Length: 0xDB
     private virtual bool MoveNext()
     {
         ulong uVar1;
@@ -39,7 +39,7 @@ public class <RefreshBuffGridPos>d__40
         if (this.<>1__state == 0) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 1;
-          uVar1 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar1 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar1;
           this.<>1__state = 1;
           return true;
@@ -64,15 +64,15 @@ public class <RefreshBuffGridPos>d__40
     }
 
     // Token : 0x60017B5
-    // RVA   : 0x932FA0   Offset: 0x9323A0   Length: 0x3E
+    // RVA   : 0x933600   Offset: 0x932A00   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da57c8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da5960);
     }
 
     // Token : 0x60017B6

@@ -17,7 +17,7 @@ public class HeroSeeRangeController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600180A
-    // RVA   : 0xAFA750   Offset: 0xAF9B50   Length: 0x166
+    // RVA   : 0xAFAE10   Offset: 0xAFA210   Length: 0x166
     private void Update()
     {
         bool cVar1;
@@ -73,7 +73,7 @@ public class HeroSeeRangeController
     }
 
     // Token : 0x600180B
-    // RVA   : 0xAFA710   Offset: 0xAF9B10   Length: 0x39
+    // RVA   : 0xAFADD0   Offset: 0xAFA1D0   Length: 0x39
     public void OnTriggerStay(Collider other)
     {
         long lVar1;

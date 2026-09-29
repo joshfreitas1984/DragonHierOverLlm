@@ -6,13 +6,13 @@
 public class <WaitFrame>d__2
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E4A
+    // Token: 0x4001E4B
     private int <>1__state;
 
-    // Token: 0x4001E4B
+    // Token: 0x4001E4C
     private object <>2__current;
 
-    // Token: 0x4001E4C
+    // Token: 0x4001E4D
     public CFX_ShurikenThreadFix <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,7 +31,7 @@ public class <WaitFrame>d__2
     }
 
     // Token : 0x60023F7
-    // RVA   : 0x93AB50   Offset: 0x939F50   Length: 0xCF
+    // RVA   : 0x93B1E0   Offset: 0x93A5E0   Length: 0xCF
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -79,15 +79,15 @@ public class <WaitFrame>d__2
     }
 
     // Token : 0x60023F9
-    // RVA   : 0x93AC20   Offset: 0x93A020   Length: 0x3E
+    // RVA   : 0x93B2B0   Offset: 0x93A6B0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d98cb8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d98e50);
     }
 
     // Token : 0x60023FA

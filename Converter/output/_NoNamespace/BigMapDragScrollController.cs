@@ -10,7 +10,7 @@ public class BigMapDragScrollController
     // RVA   : 0x7EBBC0   Offset: 0x7EAFC0   Length: 0x5B
     public void OnDrag(Vector2 delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnDrag(*pStatics,delta,0);
           return;
@@ -21,7 +21,7 @@ public class BigMapDragScrollController
     // RVA   : 0x7EBC20   Offset: 0x7EB020   Length: 0x57
     public void OnScroll(float delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnScroll(*pStatics,delta,0);
           return;

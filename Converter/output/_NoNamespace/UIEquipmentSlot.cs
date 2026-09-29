@@ -14,7 +14,7 @@ public class UIEquipmentSlot
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000028
-    // RVA   : 0x12BCFA0   Offset: 0x12BC3A0   Length: 0x8C
+    // RVA   : 0x12BD5B0   Offset: 0x12BC9B0   Length: 0x8C
     protected override InvGameItem get_observedItem()
     {
         bool cVar1;
@@ -34,7 +34,7 @@ public class UIEquipmentSlot
     }
 
     // Token : 0x6000029
-    // RVA   : 0x12BCEE0   Offset: 0x12BC2E0   Length: 0xA2
+    // RVA   : 0x12BD4F0   Offset: 0x12BC8F0   Length: 0xA2
     protected override InvGameItem Replace(InvGameItem item)
     {
         bool cVar1;
@@ -54,10 +54,10 @@ public class UIEquipmentSlot
     }
 
     // Token : 0x600002A
-    // RVA   : 0x12BCF90   Offset: 0x12BC390   Length: 0x7
+    // RVA   : 0x12BD5A0   Offset: 0x12BC9A0   Length: 0x7
     public void /*ctor*/()
     {
-        void FUN_1812bcf90(uint64 this)
+        void FUN_1812bd5a0(uint64 this)
         {
         UIItemSlot.ctor(this,0);
     }

@@ -71,7 +71,7 @@ public class AreaIconController
     // RVA   : 0x7EB2C0   Offset: 0x7EA6C0   Length: 0x829
     public void Init()
     {
-        var pStatics_b490 = *(int64*)(DAT_181dab490 + 184);
+        var pStatics_b4a8 = *(int64*)(DAT_181dab4a8 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -94,24 +94,24 @@ public class AreaIconController
         if (lVar5 != null) {
           lVar5 = Transform.Find(lVar5,"Sprite",0);
           if (lVar5 != null) {
-            lVar5 = Component.GetComponent(lVar5,DAT_181d95de0);
-            if ((this.areaData != null) && (*pStatics_b490 != 0)) {
+            lVar5 = Component.GetComponent(lVar5,DAT_181d95df8);
+            if ((this.areaData != null) && (*pStatics_b4a8 != 0)) {
               uVar6 = TextureController.LoadAtlasSprite
-                                (*pStatics_b490,"AreaIconAtlas",
+                                (*pStatics_b4a8,"AreaIconAtlas",
                                  this.areaData.spriteName,0);
               if (lVar5 != null) {
                 SpriteRenderer.set_sprite(lVar5,uVar6,0);
-                lVar7 = Component.GetComponent(this,DAT_181d935e0);
+                lVar7 = Component.GetComponent(this,DAT_181d935f8);
                 lVar5 = this.areaData;
                 if (lVar5 != null) {
                   lVar3 = lVar5.speBoxColliderSize;
                   if (lVar3 == null) {
-                    if (((*(byte *)(DAT_181dac850 + 0x133) & 4) != 0) &&
-                       (*(int *)(DAT_181dac850 + 224) == 0)) {
-                      il2cpp_runtime_class_init(DAT_181dac850);
+                    if (((*(byte *)(DAT_181dac868 + 0x133) & 4) != 0) &&
+                       (*(int *)(DAT_181dac868 + 224) == 0)) {
+                      il2cpp_runtime_class_init(DAT_181dac868);
                       lVar5 = this.areaData;
                     }
-                    lVar3 = **(int64 **)(DAT_181dac850 + 184);
+                    lVar3 = **(int64 **)(DAT_181dac868 + 184);
                     if ((lVar5 == null) || (lVar3 == null)) throw; // [null/range check failed]
                     uVar2 = lVar5.areaType;
                     if (*(uint32 *)(lVar3 + 24) <= uVar2) {
@@ -176,7 +176,7 @@ public class AreaIconController
                                               if (lVar5 != null) {
                                                 lVar5 = Transform.Find(lVar5,"MissionTarget",0);
                                                 if (lVar5 != null) {
-                                                  uVar6 = Component.GetComponent(lVar5,DAT_181d94460);
+                                                  uVar6 = Component.GetComponent(lVar5,DAT_181d94478);
                                                   this.missionTarget = uVar6;
                                                   il2cpp_internal((uint64 *)(this + 56),uVar6
                                                                      );
@@ -187,10 +187,10 @@ public class AreaIconController
                                                       lVar5 = Transform.Find(lVar5,"Label",0);
                                                       if (lVar5 != null) {
                                                         uVar6 = Component.GetComponent
-                                                                          (lVar5,DAT_181d96160);
+                                                                          (lVar5,DAT_181d96178);
                                                         lVar5 = this.areaData;
                                                         if (lVar5 != null) {
-                                                          cVar4 = FUN_180d755b0(*(uint64 *)
+                                                          cVar4 = FUN_180d75bc0(*(uint64 *)
                                                                                  (lVar5 + 0x128),0);
                                                           if (!cVar4) {
                                                             uVar10 = lVar5.setAreaName;
@@ -208,10 +208,10 @@ public class AreaIconController
                                                                                       0);
                                                               if (lVar5 != null) {
                                                                 uVar6 = Component.GetComponent
-                                                                                  (lVar5,DAT_181d94f60);
-                                                                if (((*(byte *)(DAT_181d84c98 + 0x133) & 4
+                                                                                  (lVar5,DAT_181d94f78);
+                                                                if (((*(byte *)(DAT_181d84cb0 + 0x133) & 4
                                                                      ) != 0) &&
-                                                                   (*(int *)(DAT_181d84c98 + 224) == 0))
+                                                                   (*(int *)(DAT_181d84cb0 + 224) == 0))
                                                                 {
                                                                   il2cpp_runtime_class_init();
                                                                 }
@@ -342,7 +342,7 @@ public class AreaIconController
           cVar1 = Object.op_Inequality(lVar2,0,0);
           if (cVar1) {
             if (lVar2 == null) goto LAB_1807eb2b9;
-            uVar3 = Component.GetComponent(lVar2,DAT_181d95e60);
+            uVar3 = Component.GetComponent(lVar2,DAT_181d95e78);
             this.spriteVisible = uVar3;
           }
         }
@@ -355,7 +355,7 @@ public class AreaIconController
             if (((this.areaNameLabel == null) ||
                 (lVar2 = GameObject.get_transform(this.areaNameLabel,0)) == null) ||
                (lVar2 = Transform.Find(lVar2,"Label",0)) == null) goto LAB_1807eb2b9;
-            uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+            uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
             this.areaNameText = uVar3;
           }
         }
@@ -368,7 +368,7 @@ public class AreaIconController
             if (((this.areaNameLabel == null) ||
                 (lVar2 = GameObject.get_transform(this.areaNameLabel,0)) == null) ||
                (lVar2 = Transform.Find(lVar2,"Cover",0)) == null) goto LAB_1807eb2b9;
-            uVar3 = Component.GetComponent(lVar2,DAT_181d94460);
+            uVar3 = Component.GetComponent(lVar2,DAT_181d94478);
             this.areaCoverImage = uVar3;
           }
         }
@@ -521,7 +521,7 @@ public class AreaIconController
             uVar8 = this.areaNameText;
             this.showBelongForceID = iVar3;
             if (lVar4 == null) goto LAB_1807ec943;
-            cVar1 = FUN_180d755b0(lVar4.setAreaName,0);
+            cVar1 = FUN_180d75bc0(lVar4.setAreaName,0);
             if (!cVar1) {
               uVar9 = lVar4.setAreaName;
             }
@@ -533,7 +533,7 @@ public class AreaIconController
             this.areaData.areaIconDirty = 0;
             if (this.showBelongForceID == -1) {
               plVar10 = this.areaCoverImage;
-              puVar7 = (uint32 *)FUN_1810d3570(&local_28,0);
+              puVar7 = (uint32 *)FUN_1810d3b80(&local_28,0);
               if (plVar10 == (int64 *)0) goto LAB_1807ec943;
               local_28 = *puVar7;
               uStack_24 = puVar7[1];
@@ -541,7 +541,7 @@ public class AreaIconController
               uStack_1c = puVar7[3];
               (**(code **)(*plVar10 + 0x2a8))(plVar10,&local_28,*(uint64 *)(*plVar10 + 0x2b0));
               plVar10 = this.areaForceImage;
-              puVar7 = (uint32 *)FUN_180d98fe0(&local_28,0);
+              puVar7 = (uint32 *)FUN_180d995f0(&local_28,0);
               if (plVar10 == (int64 *)0) goto LAB_1807ec943;
               local_28 = *puVar7;
               uStack_24 = puVar7[1];
@@ -599,10 +599,10 @@ public class AreaIconController
               if (plVar10 == (int64 *)0) goto LAB_1807ec943;
               Image.set_sprite(plVar10,uVar8,0);
               plVar10 = this.missionTarget;
-              puVar7 = (uint32 *)FUN_1810d3570(&local_28,0);
+              puVar7 = (uint32 *)FUN_1810d3b80(&local_28,0);
             }
             else {
-              puVar7 = (uint32 *)FUN_180d98fe0(&local_28,0);
+              puVar7 = (uint32 *)FUN_180d995f0(&local_28,0);
             }
             if (plVar10 == (int64 *)0) goto LAB_1807ec943;
             local_28 = *puVar7;
@@ -623,7 +623,7 @@ public class AreaIconController
           if (cVar1) {
             lVar4 = FUN_18046bbe0(0);
             if ((lVar4 == null) || (lVar4.support == null)) goto LAB_1807ec943;
-            uVar8 = GameObject.GetComponent(lVar4.support,DAT_181dc76b0);
+            uVar8 = GameObject.GetComponent(lVar4.support,DAT_181dc76c8);
             this.playerArmyNpc = uVar8;
           }
         }
@@ -656,7 +656,7 @@ public class AreaIconController
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0bc8 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           BigMapController.SetPlayerMoveTargetArea(lVar1,uVar2,0);
@@ -719,7 +719,7 @@ public class AreaIconController
     // RVA   : 0x7EBBC0   Offset: 0x7EAFC0   Length: 0x5B
     public void OnDrag(Vector2 delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnDrag(*pStatics,delta,0);
           return;
@@ -730,7 +730,7 @@ public class AreaIconController
     // RVA   : 0x7EBC20   Offset: 0x7EB020   Length: 0x57
     public void OnScroll(float delta)
     {
-        var pStatics = *(int64*)(DAT_181db0dc8 + 184);
+        var pStatics = *(int64*)(DAT_181db0de0 + 184);
         if (*pStatics != 0) {
           BigMapSpriteController.OnScroll(*pStatics,delta,0);
           return;
@@ -756,22 +756,22 @@ public class AreaIconController
         uint local_18;
         uint local_14;
         uint local_10;
-        lVar2 = il2cpp_internal(DAT_181d98bd0);
-        FUN_18132faf0(lVar2,DAT_181dabb98);
+        lVar2 = il2cpp_internal(DAT_181d98be8);
+        FUN_181330100(lVar2,DAT_181dabbb0);
         if (lVar2 != null) {
           local_18 = 0x40000000;
           local_14 = 0x40000000;
           local_10 = 0x3dcccccd;
-          FUN_181816b80(lVar2,&local_18,DAT_181dabc18);
+          FUN_181817190(lVar2,&local_18,DAT_181dabc30);
           local_18 = 0x3fcccccd;
           local_14 = 0x3fb33333;
           local_10 = 0x3dcccccd;
-          FUN_181816b80(lVar2,&local_18,DAT_181dabc18);
+          FUN_181817190(lVar2,&local_18,DAT_181dabc30);
           local_18 = 0x3fcccccd;
           local_14 = 0x3fb33333;
           local_10 = 0x3dcccccd;
-          FUN_181816b80(lVar2,&local_18,DAT_181dabc18);
-          plVar1 = *(int64 **)(DAT_181dac850 + 184);
+          FUN_181817190(lVar2,&local_18,DAT_181dabc30);
+          plVar1 = *(int64 **)(DAT_181dac868 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;

@@ -6,7 +6,7 @@
 public class <>c__DisplayClass20_1
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B02
+    // Token: 0x4001B03
     public GameObject newIcon;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass20_1
     }
 
     // Token : 0x6002096
-    // RVA   : 0x8F60A0   Offset: 0x8F54A0   Length: 0x56
+    // RVA   : 0x928D40   Offset: 0x928140   Length: 0x56
     internal void <ReadText>b__1()
     {
         ulong uVar1;

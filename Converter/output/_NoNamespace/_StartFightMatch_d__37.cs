@@ -34,7 +34,7 @@ public class <StartFightMatch>d__37
     }
 
     // Token : 0x600147A
-    // RVA   : 0x934710   Offset: 0x933B10   Length: 0x8B6
+    // RVA   : 0x934D70   Offset: 0x934170   Length: 0x8B6
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -55,17 +55,17 @@ public class <StartFightMatch>d__37
             GameObject.SetActive(*(int64 *)(lVar10 + 32),1,0);
             plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/开场锣",0);
             plVar11 = (int64 *)0;
-            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
               plVar11 = plVar4;
             }
             NGUITools.PlaySound(plVar11,0);
             if (*(int64 *)(lVar10 + 72) == 0) {
-              uVar5 = il2cpp_internal(DAT_181d92bd8);
-              FUN_18132faf0(uVar5,DAT_181d87ca0);
+              uVar5 = il2cpp_internal(DAT_181d92bf0);
+              FUN_181330100(uVar5,DAT_181d87cb8);
               *(uint64 *)(lVar10 + 72) = uVar5;
             }
             else {
-              FUN_1812f9a10(*(int64 *)(lVar10 + 72),DAT_181d87da0);
+              FUN_1812fa020(*(int64 *)(lVar10 + 72),DAT_181d87db8);
             }
             if (((*(int64 *)(lVar10 + 32) != 0) &&
                 (lVar6 = GameObject.get_transform(*(int64 *)(lVar10 + 32),0)) != null) &&
@@ -85,7 +85,7 @@ public class <StartFightMatch>d__37
                   }
                   lVar6 = new FightMatchCouple(0);
                   if (this.heroList == null) break;
-                  uVar1 = FUN_180d95a30(0,this.heroList.Count,0);
+                  uVar1 = FUN_180d96040(0,this.heroList.Count,0);
                   if (lVar6 == null) break;
                   lVar7 = this.heroList;
                   lVar8 = lVar6.Count;
@@ -94,52 +94,52 @@ public class <StartFightMatch>d__37
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   if (lVar8 == null) break;
-                  FUN_18181e0a0(lVar8,*(uint64 *)
+                  FUN_18181e6b0(lVar8,*(uint64 *)
                                        (lVar7._items + 32 + (int64)(int)uVar1 * 8),
-                                DAT_181d8b518);
+                                DAT_181d8b530);
                   if (*(char *)(lVar10 + 121) != false) {
                     iVar12 = 0;
                     while( true ) {
                       lVar7 = *(int64 *)(lVar10 + 128);
-                      if (lVar7 == null) goto LAB_180934fc1;
+                      if (lVar7 == null) goto LAB_180935621;
                       if (lVar7.Count <= iVar12) break;
-                      lVar7 = FUN_180002f80(lVar7,iVar12,DAT_181d789a8);
-                      if (lVar7 == null) goto LAB_180934fc1;
+                      lVar7 = FUN_180002f80(lVar7,iVar12,DAT_181d789c0);
+                      if (lVar7 == null) goto LAB_180935621;
                       if (lVar7.Count == null) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
                       iVar13 = *(int *)(lVar7._items + 32);
                       if ((this.heroList == null) ||
-                         (lVar7 = FUN_180002f80(this.heroList,uVar1,DAT_181d8bb98),
-                         lVar7 == null)) goto LAB_180934fc1;
+                         (lVar7 = FUN_180002f80(this.heroList,uVar1,DAT_181d8bbb0),
+                         lVar7 == null)) goto LAB_180935621;
                       if (iVar13 == *(int *)(lVar7 + 88)) {
                         iVar13 = 1;
                         while( true ) {
                           if ((*(int64 *)(lVar10 + 128) == 0) ||
-                             (lVar7 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789a8),
-                             lVar7 == null)) goto LAB_180934fc1;
+                             (lVar7 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789c0),
+                             lVar7 == null)) goto LAB_180935621;
                           if (lVar7.Count <= iVar13) break;
                           lVar7 = FUN_18046c0a0(0);
-                          if (lVar7 == null) goto LAB_180934fc1;
+                          if (lVar7 == null) goto LAB_180935621;
                           lVar7 = *(int64 *)(lVar7 + 32);
                           if (((*(int64 *)(lVar10 + 128) == 0) ||
-                              (lVar8 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789a8),
+                              (lVar8 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789c0),
                               lVar8 == null)) ||
-                             (uVar2 = FUN_1800d6760(lVar8,iVar13,DAT_181d8fa18), lVar7 == null))
-                          goto LAB_180934fc1;
+                             (uVar2 = FUN_1800d6760(lVar8,iVar13,DAT_181d8fa30), lVar7 == null))
+                          goto LAB_180935621;
                           lVar7 = WorldData.GetHero(lVar7,uVar2,0);
                           if (lVar7 != null) {
                             lVar7 = lVar6.Count;
                             lVar8 = FUN_18046c0a0(0);
-                            if (lVar8 == null) goto LAB_180934fc1;
+                            if (lVar8 == null) goto LAB_180935621;
                             lVar8 = *(int64 *)(lVar8 + 32);
                             if (((*(int64 *)(lVar10 + 128) == 0) ||
-                                (lVar9 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789a8),
+                                (lVar9 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789c0),
                                 lVar9 == null)) ||
-                               ((uVar2 = FUN_1800d6760(lVar9,iVar13,DAT_181d8fa18), lVar8 == null ||
+                               ((uVar2 = FUN_1800d6760(lVar9,iVar13,DAT_181d8fa30), lVar8 == null ||
                                 (uVar5 = WorldData.GetHero(lVar8,uVar2,0), lVar7 == null))))
-                            goto LAB_180934fc1;
-                            FUN_18181e0a0(lVar7,uVar5,DAT_181d8b518);
+                            goto LAB_180935621;
+                            FUN_18181e6b0(lVar7,uVar5,DAT_181d8b530);
                           }
                           iVar13 = iVar13 + 1;
                         }
@@ -148,59 +148,59 @@ public class <StartFightMatch>d__37
                     }
                   }
                   if (this.heroList == null) break;
-                  FUN_181823590(this.heroList,uVar1,DAT_181d8b998);
+                  FUN_181823ba0(this.heroList,uVar1,DAT_181d8b9b0);
                   if (this.heroList == null) break;
                   iVar12 = this.heroList.Count;
                   if (0 < iVar12) {
-                    uVar2 = FUN_180d95a30(0,iVar12,0);
+                    uVar2 = FUN_180d96040(0,iVar12,0);
                     lVar7 = *(int64 *)(lVar6 + 32);
                     if ((this.heroList == null) ||
-                       (uVar5 = FUN_180002f80(this.heroList,uVar2,DAT_181d8bb98),
+                       (uVar5 = FUN_180002f80(this.heroList,uVar2,DAT_181d8bbb0),
                        lVar7 == null)) break;
-                    FUN_18181e0a0(lVar7,uVar5,DAT_181d8b518);
+                    FUN_18181e6b0(lVar7,uVar5,DAT_181d8b530);
                     if (*(char *)(lVar10 + 121) != false) {
                       iVar12 = 0;
                       while( true ) {
                         lVar7 = *(int64 *)(lVar10 + 128);
-                        if (lVar7 == null) goto LAB_180934fc1;
+                        if (lVar7 == null) goto LAB_180935621;
                         if (lVar7.Count <= iVar12) break;
-                        lVar7 = FUN_180002f80(lVar7,iVar12,DAT_181d789a8);
-                        if (lVar7 == null) goto LAB_180934fc1;
+                        lVar7 = FUN_180002f80(lVar7,iVar12,DAT_181d789c0);
+                        if (lVar7 == null) goto LAB_180935621;
                         if (lVar7.Count == null) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         iVar13 = *(int *)(lVar7._items + 32);
                         if ((this.heroList == null) ||
-                           (lVar7 = FUN_180002f80(this.heroList,uVar2,DAT_181d8bb98),
-                           lVar7 == null)) goto LAB_180934fc1;
+                           (lVar7 = FUN_180002f80(this.heroList,uVar2,DAT_181d8bbb0),
+                           lVar7 == null)) goto LAB_180935621;
                         if (iVar13 == *(int *)(lVar7 + 88)) {
                           iVar13 = 1;
                           while( true ) {
                             if ((*(int64 *)(lVar10 + 128) == 0) ||
-                               (lVar7 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789a8),
-                               lVar7 == null)) goto LAB_180934fc1;
+                               (lVar7 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789c0),
+                               lVar7 == null)) goto LAB_180935621;
                             if (lVar7.Count <= iVar13) break;
                             lVar7 = FUN_18046c0a0(0);
-                            if (lVar7 == null) goto LAB_180934fc1;
+                            if (lVar7 == null) goto LAB_180935621;
                             lVar7 = *(int64 *)(lVar7 + 32);
                             if (((*(int64 *)(lVar10 + 128) == 0) ||
-                                (lVar8 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789a8),
+                                (lVar8 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789c0),
                                 lVar8 == null)) ||
-                               (uVar3 = FUN_1800d6760(lVar8,iVar13,DAT_181d8fa18), lVar7 == null))
-                            goto LAB_180934fc1;
+                               (uVar3 = FUN_1800d6760(lVar8,iVar13,DAT_181d8fa30), lVar7 == null))
+                            goto LAB_180935621;
                             lVar7 = WorldData.GetHero(lVar7,uVar3,0);
                             if (lVar7 != null) {
                               lVar7 = *(int64 *)(lVar6 + 32);
                               lVar8 = FUN_18046c0a0(0);
-                              if (lVar8 == null) goto LAB_180934fc1;
+                              if (lVar8 == null) goto LAB_180935621;
                               lVar8 = *(int64 *)(lVar8 + 32);
                               if (((*(int64 *)(lVar10 + 128) == 0) ||
-                                  (lVar9 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789a8
+                                  (lVar9 = FUN_180002f80(*(int64 *)(lVar10 + 128),iVar12,DAT_181d789c0
                                                         ), lVar9 == null)) ||
-                                 ((uVar3 = FUN_1800d6760(lVar9,iVar13,DAT_181d8fa18), lVar8 == null ||
+                                 ((uVar3 = FUN_1800d6760(lVar9,iVar13,DAT_181d8fa30), lVar8 == null ||
                                   (uVar5 = WorldData.GetHero(lVar8,uVar3,0), lVar7 == null))))
-                              goto LAB_180934fc1;
-                              FUN_18181e0a0(lVar7,uVar5,DAT_181d8b518);
+                              goto LAB_180935621;
+                              FUN_18181e6b0(lVar7,uVar5,DAT_181d8b530);
                             }
                             iVar13 = iVar13 + 1;
                           }
@@ -209,28 +209,28 @@ public class <StartFightMatch>d__37
                       }
                     }
                     if (this.heroList == null) break;
-                    FUN_181823590(this.heroList,uVar2,DAT_181d8b998);
+                    FUN_181823ba0(this.heroList,uVar2,DAT_181d8b9b0);
                   }
                   lVar7 = *(int64 *)(lVar10 + 72);
                   if ((lVar7 == null) ||
                      (lVar6._items = lVar7.Count,
                      *(int64 *)(lVar10 + 72) == 0)) break;
-                  FUN_18181e0a0();
+                  FUN_18181e6b0();
                   lVar6 = this.heroList;
                   if (lVar6 == null) break;
                 }
               }
             }
           }
-        LAB_180934fc1:
+        LAB_180935621:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
         if (this.<>1__state == 1) {
           this.<>1__state = 0xffffffff;
           if (((lVar10 == null) || (*(int64 *)(lVar10 + 40) == 0)) ||
-             (lVar10 = GameObject.GetComponent(*(int64 *)(lVar10 + 40),DAT_181dc7c00)) == null)
-          goto LAB_180934fc1;
+             (lVar10 = GameObject.GetComponent(*(int64 *)(lVar10 + 40),DAT_181dc7c18)) == null)
+          goto LAB_180935621;
           Selectable.set_interactable(lVar10,1,0);
         }
         return false;
@@ -244,15 +244,15 @@ public class <StartFightMatch>d__37
     }
 
     // Token : 0x600147C
-    // RVA   : 0x934FD0   Offset: 0x9343D0   Length: 0x3E
+    // RVA   : 0x935630   Offset: 0x934A30   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da3708);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da38a0);
     }
 
     // Token : 0x600147D

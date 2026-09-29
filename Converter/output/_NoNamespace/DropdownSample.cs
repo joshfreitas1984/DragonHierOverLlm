@@ -6,18 +6,18 @@
 public class DropdownSample
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EE8
+    // Token: 0x4001EE9
     private TextMeshProUGUI text;
 
-    // Token: 0x4001EE9
+    // Token: 0x4001EEA
     private TMP_Dropdown dropdownWithoutPlaceholder;
 
-    // Token: 0x4001EEA
+    // Token: 0x4001EEB
     private TMP_Dropdown dropdownWithPlaceholder;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002454
-    // RVA   : 0x940760   Offset: 0x93FB60   Length: 0x108
+    // RVA   : 0x940DF0   Offset: 0x9401F0   Length: 0x108
     public void OnButtonClick()
     {
         ulong uVar2;

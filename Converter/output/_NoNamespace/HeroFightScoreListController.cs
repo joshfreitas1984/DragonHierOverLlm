@@ -41,14 +41,14 @@ public class HeroFightScoreListController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60017BF
-    // RVA   : 0xAF4330   Offset: 0xAF3730   Length: 0x36
+    // RVA   : 0xAF49F0   Offset: 0xAF3DF0   Length: 0x36
     public static HeroFightScoreListController get_Instance()
     {
         return **(uint64 **)(DAT_181d760d8 + 184);
     }
 
     // Token : 0x60017C0
-    // RVA   : 0xAF2880   Offset: 0xAF1C80   Length: 0x43
+    // RVA   : 0xAF2F40   Offset: 0xAF2340   Length: 0x43
     private void Awake()
     {
         puVar1 = *(uint64 **)(DAT_181d760d8 + 184);
@@ -57,7 +57,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C1
-    // RVA   : 0xAF40E0   Offset: 0xAF34E0   Length: 0x24F
+    // RVA   : 0xAF47A0   Offset: 0xAF3BA0   Length: 0x24F
     private void Update()
     {
         long lVar1;
@@ -104,7 +104,7 @@ public class HeroFightScoreListController
                                         ShortcutExtensions.DOScaleY(uVar2,0x3f800000,0x3e4ccccd,0);
                                         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
                                         plVar4 = (int64 *)0;
-                                        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                           plVar4 = plVar3;
                                         }
                                         NGUITools.PlaySound(plVar4,0);
@@ -130,7 +130,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C2
-    // RVA   : 0xAF3E80   Offset: 0xAF3280   Length: 0x102
+    // RVA   : 0xAF4540   Offset: 0xAF3940   Length: 0x102
     public void ShowHeroFightScoreListUI()
     {
         long lVar1;
@@ -144,16 +144,16 @@ public class HeroFightScoreListController
                 lVar1 = Component.get_gameObject(lVar1,0);
                 if (lVar1 != null) {
                   GameObject.SetActive(lVar1,1,0);
-                  bVar2 = !DAT_181e9dc51;
+                  bVar2 = !DAT_181e9dc53;
                   this.refreshFinished = 0;
                   if (bVar2) {
-                    il2cpp_runtime_class_init(&DAT_181d79348);
-                    DAT_181e9dc51 = true;
+                    il2cpp_runtime_class_init(&DAT_181d79360);
+                    DAT_181e9dc53 = true;
                   }
                   lVar1 = new WarpText_d__8(0,0);
                   if (lVar1 != null) {
                     *(int64 *)(lVar1 + 32) = this;
-                    FUN_180d8c2e0(this,lVar1,0);
+                    FUN_180d8c8f0(this,lVar1,0);
                     return;
                   }
                 }
@@ -164,7 +164,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C3
-    // RVA   : 0xAF3F90   Offset: 0xAF3390   Length: 0x6C
+    // RVA   : 0xAF4650   Offset: 0xAF3A50   Length: 0x6C
     public IEnumerator StartShowHeroFightScore()
     {
         long lVar1;
@@ -176,7 +176,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C4
-    // RVA   : 0xAF28D0   Offset: 0xAF1CD0   Length: 0x105
+    // RVA   : 0xAF2F90   Offset: 0xAF2390   Length: 0x105
     public void HideHeroFightScoreListUI()
     {
         long lVar1;
@@ -192,7 +192,7 @@ public class HeroFightScoreListController
                   GameObject.SetActive(lVar1,0,0);
                   plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
                   plVar3 = (int64 *)0;
-                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf348)) {
+                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
                     plVar3 = plVar2;
                   }
                   NGUITools.PlaySound(plVar3,0);
@@ -205,7 +205,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C5
-    // RVA   : 0xAF29E0   Offset: 0xAF1DE0   Length: 0x2F6
+    // RVA   : 0xAF30A0   Offset: 0xAF24A0   Length: 0x2F6
     public void Init()
     {
         var pStatics = *(int64*)(DAT_181d72ee8 + 184);
@@ -273,7 +273,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C6
-    // RVA   : 0xAF3370   Offset: 0xAF2770   Length: 0xB0C
+    // RVA   : 0xAF3A30   Offset: 0xAF2E30   Length: 0xB0C
     public void RefreshUI()
     {
         int iVar1;
@@ -308,7 +308,7 @@ public class HeroFightScoreListController
              (((lVar3 = Transform.Find(lVar3,uVar4,0), lVar3 == null ||
                (lVar3 = Transform.Find(lVar3,"HeroIconPos",0)) == null) ||
               (lVar3 = Transform.GetChild(lVar3,0,0)) == null))) throw; // [null/range check failed]
-          lVar5 = Component.GetComponent(lVar3,DAT_181d940e0);
+          lVar5 = Component.GetComponent(lVar3,DAT_181d940f8);
           lVar3 = this.heroFightScoreList;
           lVar10 = (int64)(int)local_res18[0];
           if (lVar3 == null) throw; // [null/range check failed]
@@ -328,7 +328,7 @@ public class HeroFightScoreListController
                ((lVar3 = Transform.Find(lVar3,uVar4,0), lVar3 == null ||
                 (lVar3 = Transform.Find(lVar3,"HeroIconPos",0)) == null))) ||
               (lVar3 = Transform.GetChild(lVar3,0,0)) == null) ||
-             (lVar3 = Component.GetComponent(lVar3,DAT_181d940e0)) == null) throw; // [null/range check failed]
+             (lVar3 = Component.GetComponent(lVar3,DAT_181d940f8)) == null) throw; // [null/range check failed]
           HeroIconController.Init(lVar3,0);
           if ((this.heroFightScoreListUIPanel == null) ||
              (lVar3 = GameObject.get_transform(this.heroFightScoreListUIPanel,0)) == null)
@@ -338,7 +338,7 @@ public class HeroFightScoreListController
           if ((lVar3 == null) ||
              ((lVar3 = Transform.Find(lVar3,uVar4,0), lVar3 == null ||
               (lVar3 = Transform.Find(lVar3,"Score",0)) == null))) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
           lVar3 = this.heroFightScoreList;
           lVar5 = (int64)(int)local_res18[0];
           if (lVar3 == null) throw; // [null/range check failed]
@@ -358,9 +358,9 @@ public class HeroFightScoreListController
           if ((lVar3 == null) ||
              ((lVar3 = Transform.Find(lVar3,uVar4,0), lVar3 == null ||
               (lVar3 = Transform.Find(lVar3,"ColorBack",0)) == null))) throw; // [null/range check failed]
-          plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d94460);
+          plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
           if ((this.heroFightScoreList == null) ||
-             (lVar3 = FUN_180002f80(this.heroFightScoreList,local_res18[0],DAT_181d8bb98),
+             (lVar3 = FUN_180002f80(this.heroFightScoreList,local_res18[0],DAT_181d8bbb0),
              lVar3 == null)) throw; // [null/range check failed]
           local_a8 = 0;
           uStack_a0 = 0;
@@ -375,7 +375,7 @@ public class HeroFightScoreListController
             uVar14 = 0x3f800000;
             uVar13 = 0x3f800000;
           }
-          FUN_1809dc910(&local_a8,uVar13,uVar14,uVar15,in_stack_ffffffffffffff48,0);
+          FUN_1809dcfa0(&local_a8,uVar13,uVar14,uVar15,in_stack_ffffffffffffff48,0);
           if (plVar7 == (int64 *)0) throw; // [null/range check failed]
           (**(code **)(*plVar7 + 0x2a8))(plVar7);
           local_res18[0] = local_res18[0] + 1;
@@ -388,7 +388,7 @@ public class HeroFightScoreListController
               (lVar5 = Transform.GetChild(lVar5,iVar2,0)) == null) ||
              ((lVar5 = Transform.Find(lVar5,"HeroIconPos",0), lVar5 == null ||
               (lVar5 = Transform.GetChild(lVar5,0,0)) == null))) throw; // [null/range check failed]
-          lVar10 = Component.GetComponent(lVar5,DAT_181d940e0);
+          lVar10 = Component.GetComponent(lVar5,DAT_181d940f8);
           lVar5 = this.heroFightScoreList;
           if (lVar5 == null) throw; // [null/range check failed]
           uVar11 = iVar2 + 3;
@@ -402,13 +402,13 @@ public class HeroFightScoreListController
              ((lVar5 = Transform.GetChild(lVar5,iVar2,0), lVar5 == null ||
               (((lVar5 = Transform.Find(lVar5,"HeroIconPos",0), lVar5 == null ||
                 (lVar5 = Transform.GetChild(lVar5,0,0)) == null) ||
-               (lVar5 = Component.GetComponent(lVar5,DAT_181d940e0)) == null))))) throw; // [null/range check failed]
+               (lVar5 = Component.GetComponent(lVar5,DAT_181d940f8)) == null))))) throw; // [null/range check failed]
           HeroIconController.Init(lVar5,0);
           if (((this.heroFightScoreListGrid == null) ||
               (lVar5 = GameObject.get_transform(this.heroFightScoreListGrid,0)) == null) ||
              ((lVar5 = Transform.GetChild(lVar5,iVar2,0), lVar5 == null ||
               (lVar5 = Transform.Find(lVar5,"Num",0)) == null))) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
           local_res20[0] = iVar2 + 4;
           uVar6 = Int32.ToString(local_res20,0);
           LTLocalization.SetText(uVar4,uVar6,0);
@@ -416,9 +416,9 @@ public class HeroFightScoreListController
                (lVar5 = GameObject.get_transform(this.heroFightScoreListGrid,0)) == null) ||
               (lVar5 = Transform.GetChild(lVar5,iVar2,0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"Name",0)) == null) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
           if (this.heroFightScoreList == null) throw; // [null/range check failed]
-          lVar5 = FUN_180002f80(this.heroFightScoreList,uVar11,DAT_181d8bb98);
+          lVar5 = FUN_180002f80(this.heroFightScoreList,uVar11,DAT_181d8bbb0);
           if (lVar5 == null) throw; // [null/range check failed]
           uVar6 = HeroData.HeroName(lVar5,1,0);
           LTLocalization.SetText(uVar4,uVar6,0);
@@ -426,18 +426,18 @@ public class HeroFightScoreListController
               (lVar5 = GameObject.get_transform(this.heroFightScoreListGrid,0)) == null) ||
              ((lVar5 = Transform.GetChild(lVar5,iVar2,0), lVar5 == null ||
               (lVar5 = Transform.Find(lVar5,"Score",0)) == null))) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(lVar5,DAT_181d96160);
+          uVar4 = Component.GetComponent(lVar5,DAT_181d96178);
           if ((this.heroFightScoreList == null) ||
-             (lVar5 = FUN_180002f80(this.heroFightScoreList,uVar11,DAT_181d8bb98)) == null)
+             (lVar5 = FUN_180002f80(this.heroFightScoreList,uVar11,DAT_181d8bbb0)) == null)
           throw; // [null/range check failed]
           uVar6 = Single.ToString(lVar5 + 0x3d4,"f0",0);
           LTLocalization.SetText(uVar4,uVar6,0);
           if ((this.heroFightScoreListGrid == null) ||
              ((lVar5 = GameObject.get_transform(this.heroFightScoreListGrid,0), lVar5 == null ||
               (lVar5 = Transform.GetChild(lVar5,iVar2,0)) == null))) throw; // [null/range check failed]
-          plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d94460);
+          plVar7 = (int64 *)Component.GetComponent(lVar5,DAT_181d94478);
           if ((this.heroFightScoreList == null) ||
-             (lVar5 = FUN_180002f80(this.heroFightScoreList,uVar11,DAT_181d8bb98)) == null)
+             (lVar5 = FUN_180002f80(this.heroFightScoreList,uVar11,DAT_181d8bbb0)) == null)
           throw; // [null/range check failed]
           if (*(int *)(lVar5 + 88) == 0) {
             local_a8 = 0;
@@ -449,7 +449,7 @@ public class HeroFightScoreListController
             uVar12 = uStack_a0._4_4_;
           }
           else {
-            puVar8 = (uint32 *)FUN_1810d3570(local_98,0);
+            puVar8 = (uint32 *)FUN_1810d3b80(local_98,0);
             uVar13 = *puVar8;
             uVar14 = puVar8[1];
             uVar15 = puVar8[2];
@@ -467,12 +467,12 @@ public class HeroFightScoreListController
         lVar5 = FUN_18046c0a0(0);
         if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
            (uVar4 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar3 != null)) {
-          iVar2 = FUN_1817eb4e0(lVar3,uVar4,DAT_181d8b798);
+          iVar2 = FUN_1817ebaf0(lVar3,uVar4,DAT_181d8b7b0);
           if (((this.heroFightScoreListUIPanel != null) &&
               (lVar3 = GameObject.get_transform(this.heroFightScoreListUIPanel,0)) != null) &&
              ((lVar3 = Transform.Find(lVar3,"HeroFightScoreListRoot",0), lVar3 != null &&
               (lVar3 = Transform.Find(lVar3,"PlayerNumText",0)) != null))) {
-            uVar9 = Component.GetComponent(lVar3,DAT_181d96160);
+            uVar9 = Component.GetComponent(lVar3,DAT_181d96178);
             uVar4 = "你的排名 ";
             uVar6 = "500+";
             if (-1 < iVar2) {
@@ -492,7 +492,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C7
-    // RVA   : 0xAF2CE0   Offset: 0xAF20E0   Length: 0x680
+    // RVA   : 0xAF33A0   Offset: 0xAF27A0   Length: 0x680
     public void RefreshHeroFightScoreList()
     {
         float fVar1;
@@ -503,7 +503,7 @@ public class HeroFightScoreListController
         int iVar6;
         int iVar7;
         if (this.heroFightScoreList != null) {
-          FUN_1812f9a10(this.heroFightScoreList,DAT_181d8b618);
+          FUN_1812fa020(this.heroFightScoreList,DAT_181d8b630);
           lVar3 = this.heroFightScoreList;
           if (((GameController._instance != null) &&
               (lVar4 = GameController._instance.worldData) != null) &&
@@ -512,9 +512,9 @@ public class HeroFightScoreListController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (lVar3 != null) {
-              FUN_18181e0a0(lVar3,*(uint64 *)(lVar4.chapter + 32),DAT_181d8b518);
+              FUN_18181e6b0(lVar3,*(uint64 *)(lVar4.chapter + 32),DAT_181d8b530);
               iVar7 = 1;
-        LAB_180af2e70:
+        LAB_180af3530:
               do {
                 if (((GameController._instance == null) ||
                     (lVar3 = GameController._instance.worldData) == null) ||
@@ -525,37 +525,37 @@ public class HeroFightScoreListController
                 lVar3 = FUN_18046c0a0(0);
                 if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                    (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
-                lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
+                lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bbb0);
                 if (lVar3 != null) {
                   lVar3 = FUN_18046c0a0(0);
                   if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                      (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
-                  lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
+                  lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bbb0);
                   if (lVar3 == null) break;
                   if (!lVar3.BigMapRandomEventDatas) {
                     lVar3 = FUN_18046c0a0(0);
                     if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                        (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
-                    lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
+                    lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bbb0);
                     if (lVar3 == null) break;
                     if (*(char *)(lVar3 + 97) == false) {
                       lVar3 = FUN_18046c0a0(0);
                       if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                          (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
-                      lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
+                      lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bbb0);
                       if (lVar3 == null) break;
-                      cVar2 = FUN_18171e540(lVar3.AreaMapRandomEventDatas,"白云天",0);
+                      cVar2 = FUN_18171eb50(lVar3.AreaMapRandomEventDatas,"白云天",0);
                       if (cVar2) {
                         lVar3 = FUN_18046c0a0(0);
                         if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                            (lVar3 = *(int64 *)(lVar3.villageAreaID + 216)) == null) break;
-                        cVar2 = FUN_1808ab490(lVar3,1000,DAT_181dbf7d8);
-                        if (!cVar2) goto LAB_180af333a;
+                        cVar2 = FUN_1808ab490(lVar3,1000,DAT_181dbf7f0);
+                        if (!cVar2) goto LAB_180af39fa;
                       }
                       lVar3 = FUN_18046c0a0(0);
                       if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                          (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null) break;
-                      lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
+                      lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bbb0);
                       if (lVar3 == null) break;
                       HeroData.CheckHeroDetailDirty(lVar3,0,0);
                       iVar6 = 0;
@@ -563,24 +563,24 @@ public class HeroFightScoreListController
                         lVar3 = this.heroFightScoreList;
                         if (lVar3 == null) throw; // [null/range check failed]
                         if (lVar3.Count <= iVar6) {
-                          if (499 < lVar3.Count) goto LAB_180af333a;
+                          if (499 < lVar3.Count) goto LAB_180af39fa;
                           lVar4 = FUN_18046c0a0(0);
                           if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
                              (lVar4 = *(int64 *)(lVar4.villageAreaID + 80)) == null)
                           throw; // [null/range check failed]
-                          uVar5 = FUN_180002f80(lVar4,iVar7,DAT_181d8bb98);
-                          FUN_18181e0a0(lVar3,uVar5,DAT_181d8b518);
-                          goto LAB_180af333a;
+                          uVar5 = FUN_180002f80(lVar4,iVar7,DAT_181d8bbb0);
+                          FUN_18181e6b0(lVar3,uVar5,DAT_181d8b530);
+                          goto LAB_180af39fa;
                         }
                         lVar3 = FUN_18046c0a0(0);
                         if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                            (lVar3 = *(int64 *)(lVar3.villageAreaID + 80)) == null)
                         throw; // [null/range check failed]
-                        lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bb98);
+                        lVar3 = FUN_180002f80(lVar3,iVar7,DAT_181d8bbb0);
                         if (lVar3 == null) throw; // [null/range check failed]
                         fVar1 = *(float *)(lVar3 + 0x3d4);
                         if (this.heroFightScoreList == null) throw; // [null/range check failed]
-                        lVar3 = FUN_180002f80(this.heroFightScoreList,iVar6,DAT_181d8bb98);
+                        lVar3 = FUN_180002f80(this.heroFightScoreList,iVar6,DAT_181d8bbb0);
                         if (lVar3 == null) throw; // [null/range check failed]
                         if (*(float *)(lVar3 + 0x3d4) <= fVar1 && fVar1 != *(float *)(lVar3 + 0x3d4))
                         break;
@@ -590,20 +590,20 @@ public class HeroFightScoreListController
                       lVar4 = FUN_18046c0a0(0);
                       if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
                          (lVar4 = *(int64 *)(lVar4.villageAreaID + 80)) == null) break;
-                      uVar5 = FUN_180002f80(lVar4,iVar7,DAT_181d8bb98);
+                      uVar5 = FUN_180002f80(lVar4,iVar7,DAT_181d8bbb0);
                       if (lVar3 == null) break;
-                      FUN_181822520(lVar3,iVar6,uVar5,DAT_181d8b818);
+                      FUN_181822b30(lVar3,iVar6,uVar5,DAT_181d8b830);
                       lVar3 = this.heroFightScoreList;
                       if (lVar3 == null) break;
                       if (500 < lVar3.Count) {
-                        FUN_181823590(lVar3,lVar3.Count + -1,DAT_181d8b998);
+                        FUN_181823ba0(lVar3,lVar3.Count + -1,DAT_181d8b9b0);
                         iVar7 = iVar7 + 1;
-                        goto LAB_180af2e70;
+                        goto LAB_180af3530;
                       }
                     }
                   }
                 }
-        LAB_180af333a:
+        LAB_180af39fa:
                 iVar7 = iVar7 + 1;
               } while( true );
             }
@@ -619,7 +619,7 @@ public class HeroFightScoreListController
     }
 
     // Token : 0x60017C9
-    // RVA   : 0xAF4000   Offset: 0xAF3400   Length: 0xD2
+    // RVA   : 0xAF46C0   Offset: 0xAF3AC0   Length: 0xD2
     private void <StartShowHeroFightScore>b__16_0()
     {
         HeroFightScoreListController.RefreshHeroFightScoreList(this,0);

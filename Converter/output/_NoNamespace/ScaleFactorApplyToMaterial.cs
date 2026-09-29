@@ -6,30 +6,30 @@
 public class ScaleFactorApplyToMaterial
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EC1
+    // Token: 0x4001EC2
     private ParticleSystemRenderer ps;
 
-    // Token: 0x4001EC2
+    // Token: 0x4001EC3
     private float value;
 
-    // Token: 0x4001EC3
+    // Token: 0x4001EC4
     private float m_scaleFactor;
 
-    // Token: 0x4001EC4
+    // Token: 0x4001EC5
     private float m_changedFactor;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600243B
-    // RVA   : 0x97AF20   Offset: 0x97A320   Length: 0x97
+    // RVA   : 0x97B5B0   Offset: 0x97A9B0   Length: 0x97
     private void Awake()
     {
         ulong uVar1;
         long lVar2;
         uint uVar3;
-        uVar1 = Component.GetComponent(this,DAT_181d94be0);
+        uVar1 = Component.GetComponent(this,DAT_181d94bf8);
         this.ps = uVar1;
         if (this.ps != null) {
-          lVar2 = FUN_180d9d700(this.ps,0);
+          lVar2 = FUN_180d9dd10(this.ps,0);
           if (lVar2 != null) {
             uVar3 = Material.GetFloat(lVar2,"_NoiseScale",0);
             this.value = uVar3;
@@ -40,12 +40,12 @@ public class ScaleFactorApplyToMaterial
     }
 
     // Token : 0x600243C
-    // RVA   : 0x97AFC0   Offset: 0x97A3C0   Length: 0xF5
+    // RVA   : 0x97B650   Offset: 0x97AA50   Length: 0xF5
     private void Update()
     {
         long lVar1;
         float fVar2;
-        fVar2 = **(float **)(DAT_181db38c8 + 184);
+        fVar2 = **(float **)(DAT_181db38e0 + 184);
         this.m_changedFactor = fVar2;
         if ((this.m_scaleFactor == fVar2) || (1.0 < fVar2)) {
           return;
@@ -53,14 +53,14 @@ public class ScaleFactorApplyToMaterial
         lVar1 = this.ps;
         this.m_scaleFactor = fVar2;
         if (fVar2 <= 0.5) {
-          if ((lVar1 != null) && (lVar1 = FUN_180d9d700(lVar1,0)) != null) {
+          if ((lVar1 != null) && (lVar1 = FUN_180d9dd10(lVar1,0)) != null) {
             fVar2 = this.value * 0.25;
-            goto LAB_18097b073;
+            goto LAB_18097b703;
           }
         }
-        else if ((lVar1 != null) && (lVar1 = FUN_180d9d700(lVar1,0)) != null) {
+        else if ((lVar1 != null) && (lVar1 = FUN_180d9dd10(lVar1,0)) != null) {
           fVar2 = this.value * this.m_scaleFactor;
-        LAB_18097b073:
+        LAB_18097b703:
           Material.SetFloat(lVar1,"_NoiseScale",fVar2,0);
           return;
         }

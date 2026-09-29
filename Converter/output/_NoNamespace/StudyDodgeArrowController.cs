@@ -6,27 +6,27 @@
 public class StudyDodgeArrowController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C7B
+    // Token: 0x4001C7C
     public GameObject barBack;
 
-    // Token: 0x4001C7C
+    // Token: 0x4001C7D
     public GameObject bar;
 
-    // Token: 0x4001C7D
+    // Token: 0x4001C7E
     public Vector3 direction;
 
-    // Token: 0x4001C7E
+    // Token: 0x4001C7F
     public float generateTime;
 
-    // Token: 0x4001C7F
+    // Token: 0x4001C80
     public float lifeTime;
 
-    // Token: 0x4001C80
+    // Token: 0x4001C81
     private float speed;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600222A
-    // RVA   : 0xFD4B20   Offset: 0xFD3F20   Length: 0x6B
+    // RVA   : 0xFD5130   Offset: 0xFD4530   Length: 0x6B
     private void Start()
     {
         long lVar1;
@@ -34,8 +34,8 @@ public class StudyDodgeArrowController
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        lVar1 = Component.GetComponent(this,DAT_181d95de0);
-        puVar2 = (uint32 *)FUN_180d98fe0(&local_18,0);
+        lVar1 = Component.GetComponent(this,DAT_181d95df8);
+        puVar2 = (uint32 *)FUN_180d995f0(&local_18,0);
         if (lVar1 != null) {
           local_18 = *puVar2;
           uStack_14 = puVar2[1];
@@ -47,7 +47,7 @@ public class StudyDodgeArrowController
     }
 
     // Token : 0x600222B
-    // RVA   : 0xFD4B90   Offset: 0xFD3F90   Length: 0x2A6
+    // RVA   : 0xFD51A0   Offset: 0xFD45A0   Length: 0x2A6
     private void Update()
     {
         long lVar1;
@@ -75,29 +75,29 @@ public class StudyDodgeArrowController
           if (0.0 < fVar6 - fVar5) {
             return;
           }
-          if (this.barBack == null) goto LAB_180fd4e31;
+          if (this.barBack == null) goto LAB_180fd5441;
           GameObject.SetActive(this.barBack,0,0);
-          lVar1 = Component.GetComponent(this,DAT_181d95de0);
-          puVar2 = (uint32 *)FUN_1810d3570(&local_38,0);
-          if (lVar1 == null) goto LAB_180fd4e31;
+          lVar1 = Component.GetComponent(this,DAT_181d95df8);
+          puVar2 = (uint32 *)FUN_1810d3b80(&local_38,0);
+          if (lVar1 == null) goto LAB_180fd5441;
           local_38 = *puVar2;
           uStack_34 = puVar2[1];
           fStack_30 = (float)puVar2[2];
           uStack_2c = puVar2[3];
           SpriteRenderer.set_color(lVar1,&local_38,0);
-          lVar1 = Component.GetComponent(this,DAT_181d93360);
-          if (lVar1 == null) goto LAB_180fd4e31;
+          lVar1 = Component.GetComponent(this,DAT_181d93378);
+          if (lVar1 == null) goto LAB_180fd5441;
           fVar6 = (float)AudioSource.get_volume(lVar1,0);
           AudioSource.set_volume(lVar1,fVar6 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
-          lVar1 = Component.GetComponent(this,DAT_181d93360);
-          if (lVar1 == null) goto LAB_180fd4e31;
+          lVar1 = Component.GetComponent(this,DAT_181d93378);
+          if (lVar1 == null) goto LAB_180fd5441;
           AudioSource.Play(lVar1,0);
           fVar6 = this.generateTime;
         }
         if (fVar6 <= 0.0) {
           lVar1 = Component.get_transform(this,0);
           if (lVar1 == null) {
-        LAB_180fd4e31:
+        LAB_180fd5441:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
@@ -116,27 +116,27 @@ public class StudyDodgeArrowController
     }
 
     // Token : 0x600222C
-    // RVA   : 0xFD4A30   Offset: 0xFD3E30   Length: 0xE6
+    // RVA   : 0xFD5040   Offset: 0xFD4440   Length: 0xE6
     private void OnDestroy()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da8090 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181da80a8 + 184) + 8);
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 112);
           uVar2 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
-            FUN_1817eee00(lVar1,uVar2,DAT_181d89618);
+            FUN_1817ef410(lVar1,uVar2,DAT_181d89630);
             return;
           }
         }
     }
 
     // Token : 0x600222D
-    // RVA   : 0xFD4E40   Offset: 0xFD4240   Length: 0x1C
+    // RVA   : 0xFD5450   Offset: 0xFD4850   Length: 0x1C
     public void /*ctor*/()
     {
-        void FUN_180fd4e40(int64 this)
+        void FUN_180fd5450(int64 this)
         {
         this.generateTime = 0x3f800000;
         this.lifeTime = 0x40a00000;

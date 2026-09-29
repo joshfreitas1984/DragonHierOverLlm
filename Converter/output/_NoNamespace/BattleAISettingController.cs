@@ -112,7 +112,7 @@ public class BattleAISettingController
         lVar6 = Component.get_transform(this,0);
         if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Auto",0)) == null)
         throw; // [null/range check failed]
-        lVar6 = Component.GetComponent(lVar6,DAT_181d962e0);
+        lVar6 = Component.GetComponent(lVar6,DAT_181d962f8);
         if ((this.targetBattleUnit == null) || (lVar6 == null)) throw; // [null/range check failed]
         Toggle.set_isOn(lVar6,this.targetBattleUnit.autoFight,0);
         lVar6 = Component.get_transform(this,0);
@@ -127,7 +127,7 @@ public class BattleAISettingController
         local_res18[0] = *(uint32 *)(*(int64 *)(lVar8 + 16) + 32);
         uVar7 = Int32.ToString(local_res18,0);
         if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-           (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null) throw; // [null/range check failed]
+           (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) throw; // [null/range check failed]
         Toggle.set_isOn(lVar6,1,0);
         if ((this.targetBattleUnit == null) ||
            (lVar6 = this.targetBattleUnit.heroData) == null) throw; // [null/range check failed]
@@ -139,7 +139,7 @@ public class BattleAISettingController
           local_res18[0] = 3;
           uVar7 = Int32.ToString(local_res18,0);
           if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-             (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null) throw; // [null/range check failed]
+             (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) throw; // [null/range check failed]
           Selectable.set_interactable(lVar6,0,0);
           lVar6 = Component.get_transform(this,0);
           if (lVar6 == null) throw; // [null/range check failed]
@@ -147,7 +147,7 @@ public class BattleAISettingController
           local_res18[0] = 4;
           uVar7 = Int32.ToString(local_res18,0);
           if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-             (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null) throw; // [null/range check failed]
+             (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) throw; // [null/range check failed]
           Selectable.set_interactable(lVar6,0,0);
         }
         else {
@@ -168,7 +168,7 @@ public class BattleAISettingController
             local_res18[0] = *(uint32 *)(*(int64 *)(lVar8 + 16) + 36);
             uVar7 = Int32.ToString(local_res18,0);
             if (((lVar6 != null) && (lVar6 = Transform.Find(lVar6,uVar7,0)) != null) &&
-               (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) != null) {
+               (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) != null) {
               Toggle.set_isOn(lVar6,1,0);
               lVar6 = this.targetBattleUnit;
               local_res20[0] = 2;
@@ -208,7 +208,7 @@ public class BattleAISettingController
                   lVar6 = Component.get_transform(this,0);
                   uVar7 = Int32.ToString(local_res20,0);
                   if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-                     (lVar6 = Component.GetComponent(lVar6,DAT_181d962e0)) == null) break;
+                     (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) break;
                   cVar4 = *(char *)(lVar6 + 0x118);
                   if (((this.targetBattleUnit == null) ||
                       (lVar6 = this.targetBattleUnit.heroData) == null) ||
@@ -218,7 +218,7 @@ public class BattleAISettingController
                     lVar6 = Component.get_transform(this,0);
                     uVar7 = Int32.ToString(local_res20,0);
                     if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) break;
-                    lVar6 = Component.GetComponent(lVar6,DAT_181d962e0);
+                    lVar6 = Component.GetComponent(lVar6,DAT_181d962f8);
                     if ((this.targetBattleUnit == null) ||
                        ((lVar8 = this.targetBattleUnit.heroData, lVar8 == null ||
                         (lVar8 = *(int64 *)(lVar8 + 0x2d0)) == null))) break;
@@ -247,7 +247,7 @@ public class BattleAISettingController
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"Auto",0);
           if (lVar2 != null) {
-            lVar2 = Component.GetComponent(lVar2,DAT_181d962e0);
+            lVar2 = Component.GetComponent(lVar2,DAT_181d962f8);
             if ((lVar2 != null) && (lVar1 != null)) {
               BattleUnit.ChangeAutoType(lVar1,*(uint8 *)(lVar2 + 0x118),0);
               return;
@@ -275,9 +275,9 @@ public class BattleAISettingController
             uVar5 = Object.get_name(buttonChanged,0);
             uVar3 = Int32.Parse(uVar5,0);
             if (lVar4 != null) {
-              FUN_181833d40(lVar4,0,uVar3,DAT_181d8fb18);
+              FUN_181834350(lVar4,0,uVar3,DAT_181d8fb30);
               uVar5 = this.targetBattleUnit;
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
               if (lVar4 != null) {
                 uVar1 = *(uint64 *)(lVar4 + 0x110);
                 cVar2 = Object.op_Equality(uVar5,uVar1,0);
@@ -312,9 +312,9 @@ public class BattleAISettingController
             uVar5 = Object.get_name(buttonChanged,0);
             uVar3 = Int32.Parse(uVar5,0);
             if (lVar4 != null) {
-              FUN_181833d40(lVar4,1,uVar3,DAT_181d8fb18);
+              FUN_181834350(lVar4,1,uVar3,DAT_181d8fb30);
               uVar5 = this.targetBattleUnit;
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
               if (lVar4 != null) {
                 uVar1 = *(uint64 *)(lVar4 + 0x110);
                 cVar2 = Object.op_Equality(uVar5,uVar1,0);
@@ -347,7 +347,7 @@ public class BattleAISettingController
           uVar4 = Int32.Parse(uVar5,0);
           lVar6 = GameObject.GetComponent(buttonClicked,DAT_181d743b0);
           if ((lVar6 != null) && (lVar1 != null)) {
-            FUN_181833d40(lVar1,uVar4,*(char *)(lVar6 + 0x118) != false,DAT_181d8fb18);
+            FUN_181834350(lVar1,uVar4,*(char *)(lVar6 + 0x118) != false,DAT_181d8fb30);
             uVar5 = this.targetBattleUnit;
             lVar1 = PlotController.LaBaFestivelResultTalkText;
             if (lVar1 != null) {

@@ -6,19 +6,19 @@
 public class CFX_AutoDestructShuriken
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E3C
+    // Token: 0x4001E3D
     public bool OnlyDeactivate;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60023E1
-    // RVA   : 0xB7E050   Offset: 0xB7D450   Length: 0x3C
+    // RVA   : 0xB7E710   Offset: 0xB7DB10   Length: 0x3C
     private void OnEnable()
     {
         MonoBehaviour.StartCoroutine(this,"CheckIfAlive",0);
     }
 
     // Token : 0x60023E2
-    // RVA   : 0xB7DFE0   Offset: 0xB7D3E0   Length: 0x6C
+    // RVA   : 0xB7E6A0   Offset: 0xB7DAA0   Length: 0x6C
     private IEnumerator CheckIfAlive()
     {
         long lVar1;

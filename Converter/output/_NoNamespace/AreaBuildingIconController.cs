@@ -41,7 +41,7 @@ public class AreaBuildingIconController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000A49
-    // RVA   : 0xA2B2E0   Offset: 0xA2A6E0   Length: 0xC9B
+    // RVA   : 0xA2B970   Offset: 0xA2AD70   Length: 0xC9B
     private void Update()
     {
         uint uVar1;
@@ -65,7 +65,7 @@ public class AreaBuildingIconController
         uint64 local_38;
         uint64 uStack_30;
         if ((this.areaTile == null) ||
-           (lVar3 = this.areaTile.areaTileData) == null) goto LAB_180a2bf6a;
+           (lVar3 = this.areaTile.areaTileData) == null) goto LAB_180a2c5fa;
         if (lVar3.shopItemList == null) {
           AreaBuildingIconController.SelfDestroy(this,0);
           return;
@@ -74,27 +74,27 @@ public class AreaBuildingIconController
         cVar2 = Object.op_Inequality(uVar4,0,0);
         if (!cVar2) {
           lVar3 = this.buildingData;
-          if (lVar3 == null) goto LAB_180a2bf6a;
+          if (lVar3 == null) goto LAB_180a2c5fa;
           if (-1 < lVar3.buildingID) {
             lVar3 = AreaBuildingData.DataBase(lVar3,0);
-            if (lVar3 == null) goto LAB_180a2bf6a;
+            if (lVar3 == null) goto LAB_180a2c5fa;
             if (lVar3.missionDatas != 5) {
               lVar3 = FUN_18046bac0(0);
-              if (lVar3 == null) goto LAB_180a2bf6a;
+              if (lVar3 == null) goto LAB_180a2c5fa;
               uVar4 = *(uint64 *)(lVar3 + 112);
               lVar3 = FUN_18046bac0(0);
-              if (lVar3 == null) goto LAB_180a2bf6a;
+              if (lVar3 == null) goto LAB_180a2c5fa;
               uVar7 = *(uint64 *)(lVar3 + 120);
               uVar4 = GlobalData.AddChild(uVar4,uVar7,0);
               this.buildingUI = uVar4;
               if ((((this.buildingUI == null) ||
                    (lVar3 = GameObject.get_transform(this.buildingUI,0)) == null) ||
                   (lVar3 = Transform.Find(lVar3,"Back",0)) == null) ||
-                 (lVar3 = Transform.Find(lVar3,"BuildingName",0)) == null) goto LAB_180a2bf6a;
-              uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
+                 (lVar3 = Transform.Find(lVar3,"BuildingName",0)) == null) goto LAB_180a2c5fa;
+              uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
               if ((this.buildingData == null) ||
                  (lVar3 = AreaBuildingData.DataBase(this.buildingData,0)) == null)
-              goto LAB_180a2bf6a;
+              goto LAB_180a2c5fa;
               uVar7 = lVar3.buildTimeLeft;
               LTLocalization.SetText(uVar4,uVar7,0);
             }
@@ -103,16 +103,16 @@ public class AreaBuildingIconController
         else {
           if (((this.buildingUI == null) ||
               (lVar3 = GameObject.get_transform(this.buildingUI,0)) == null) ||
-             (lVar3 = Transform.Find(lVar3,"BuildingLv",0)) == null) goto LAB_180a2bf6a;
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96160);
-          if (this.buildingData == null) goto LAB_180a2bf6a;
+             (lVar3 = Transform.Find(lVar3,"BuildingLv",0)) == null) goto LAB_180a2c5fa;
+          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
+          if (this.buildingData == null) goto LAB_180a2c5fa;
           uVar1 = this.buildingData.lv;
           uVar7 = GlobalData.GetNumText(uVar1,0);
           LTLocalization.SetText(uVar4,uVar7,0);
-          if (this.buildingUI == null) goto LAB_180a2bf6a;
+          if (this.buildingUI == null) goto LAB_180a2c5fa;
           lVar3 = GameObject.get_transform(this.buildingUI,0);
           lVar5 = Component.get_transform(this,0);
-          if (lVar5 == null) goto LAB_180a2bf6a;
+          if (lVar5 == null) goto LAB_180a2c5fa;
           puVar8 = (uint64 *)Transform.get_position(&local_58,lVar5,0);
           local_68 = *puVar8;
           fStack_60 = *(float *)(puVar8 + 1);
@@ -121,17 +121,17 @@ public class AreaBuildingIconController
           lVar5 = FUN_18046bac0(0);
           if (((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
              (lVar5 = GameObject.get_transform(*(int64 *)(lVar5 + 72),0)) == null)
-          goto LAB_180a2bf6a;
+          goto LAB_180a2c5fa;
           pfVar6 = (float *)Transform.get_localScale(&local_58,lVar5,0);
           fVar10 = *pfVar6;
           local_58 = CONCAT44(local_78._4_4_ * fVar10 + local_68._4_4_,
                               (float)local_78 * fVar10 + (float)local_68);
           fStack_50 = local_70 * fVar10 + fStack_60;
-          if (lVar3 == null) goto LAB_180a2bf6a;
+          if (lVar3 == null) goto LAB_180a2c5fa;
           local_68 = local_58;
           fStack_60 = fStack_50;
           Transform.set_position(lVar3,&local_68,0);
-          if (this.buildingUI == null) goto LAB_180a2bf6a;
+          if (this.buildingUI == null) goto LAB_180a2c5fa;
           lVar3 = GameObject.get_transform(this.buildingUI,0);
           puVar8 = (uint64 *)Vector3.get_one(&local_68,0);
           fStack_50 = *(float *)(puVar8 + 1);
@@ -139,13 +139,13 @@ public class AreaBuildingIconController
           lVar5 = FUN_18046bac0(0);
           if (((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
              (lVar5 = GameObject.get_transform(*(int64 *)(lVar5 + 72),0)) == null)
-          goto LAB_180a2bf6a;
+          goto LAB_180a2c5fa;
           pfVar6 = (float *)Transform.get_localScale(&local_68,lVar5,0);
           fVar10 = *pfVar6;
           lVar5 = FUN_18046bac0(0);
           if (((lVar5 == null) || (*(int64 *)(lVar5 + 72) == 0)) ||
              (lVar5 = GameObject.get_transform(*(int64 *)(lVar5 + 72),0)) == null)
-          goto LAB_180a2bf6a;
+          goto LAB_180a2c5fa;
           pfVar6 = (float *)Transform.get_localScale(&local_68,lVar5,0);
           if (1.0 < *pfVar6 || *pfVar6 == 1.0) {
             fVar9 = 0.5;
@@ -156,57 +156,57 @@ public class AreaBuildingIconController
           fVar10 = (fVar10 - 1.0) * fVar9 + 1.0;
           fStack_60 = fStack_50 * fVar10;
           local_68 = CONCAT44(local_58._4_4_ * fVar10,(float)local_58 * fVar10);
-          if (lVar3 == null) goto LAB_180a2bf6a;
+          if (lVar3 == null) goto LAB_180a2c5fa;
           local_58 = local_68;
           fStack_50 = fStack_60;
           Transform.set_localScale(lVar3,&local_58,0);
         }
         if ((!this.highLight) && (!this.mouseIsOver)) {
-          if (this.highLightObj == null) goto LAB_180a2bf6a;
+          if (this.highLightObj == null) goto LAB_180a2c5fa;
           cVar2 = GameObject.get_activeSelf(this.highLightObj,0);
           if (cVar2) {
             lVar3 = this.highLightObj;
-            if (lVar3 == null) goto LAB_180a2bf6a;
+            if (lVar3 == null) goto LAB_180a2c5fa;
             uVar4 = 0;
-        LAB_180a2b901:
+        LAB_180a2bf91:
             GameObject.SetActive(lVar3,uVar4,0);
           }
         }
         else {
-          if (this.highLightObj == null) goto LAB_180a2bf6a;
+          if (this.highLightObj == null) goto LAB_180a2c5fa;
           cVar2 = GameObject.get_activeSelf(this.highLightObj,0);
           if (!cVar2) {
             lVar3 = this.highLightObj;
-            if (lVar3 == null) goto LAB_180a2bf6a;
+            if (lVar3 == null) goto LAB_180a2c5fa;
             uVar4 = 1;
-            goto LAB_180a2b901;
+            goto LAB_180a2bf91;
           }
         }
-        if (this.buildingData == null) goto LAB_180a2bf6a;
+        if (this.buildingData == null) goto LAB_180a2c5fa;
         if (this.buildingData.buildingID == -1) {
           lVar3 = FUN_1807e63d0(0);
-          if (lVar3 == null) goto LAB_180a2bf6a;
+          if (lVar3 == null) goto LAB_180a2c5fa;
           if (!lVar3.missionDatas) {
-        LAB_180a2be8a:
+        LAB_180a2c51a:
             uVar4 = this.destroyObstacleSprite;
             cVar2 = Object.op_Inequality(uVar4,0,0);
             if (cVar2) {
-              if (this.destroyObstacleSprite == null) goto LAB_180a2bf6a;
+              if (this.destroyObstacleSprite == null) goto LAB_180a2c5fa;
               cVar2 = GameObject.get_activeSelf(this.destroyObstacleSprite,0);
               if (cVar2) {
                 lVar3 = this.destroyObstacleSprite;
-                if (lVar3 == null) goto LAB_180a2bf6a;
+                if (lVar3 == null) goto LAB_180a2c5fa;
                 uVar4 = 0;
-        LAB_180a2bee3:
+        LAB_180a2c573:
                 GameObject.SetActive(lVar3,uVar4,0);
               }
             }
           }
           else {
             lVar3 = FUN_18046c0a0(0);
-            if (lVar3 == null) goto LAB_180a2bf6a;
+            if (lVar3 == null) goto LAB_180a2c5fa;
             cVar2 = GameController.ObstacleCanDestroy(lVar3,this.buildingData,0);
-            if (!cVar2) goto LAB_180a2be8a;
+            if (!cVar2) goto LAB_180a2c51a;
             uVar4 = this.destroyObstacleSprite;
             cVar2 = Object.op_Equality(uVar4,0,0);
             if (cVar2) {
@@ -221,7 +221,7 @@ public class AreaBuildingIconController
               uStack_40 = 0;
               local_58 = 0xbe8000003e800000;
               fStack_50 = -1.0;
-              FUN_181308660(&local_48,&local_58,DAT_181dba8c0);
+              FUN_181308c70(&local_48,&local_58,DAT_181dbaa70);
               puVar8 = (uint64 *)Vector3.get_one(&local_78,0);
               local_68 = *puVar8;
               fStack_60 = *(float *)(puVar8 + 1) * 0.6;
@@ -229,7 +229,7 @@ public class AreaBuildingIconController
               local_38 = 0;
               uStack_30 = 0;
               fStack_50 = fStack_60;
-              FUN_181308660(&local_38,&local_58,DAT_181dba8c0);
+              FUN_181308c70(&local_38,&local_58,DAT_181dbaa70);
               local_58 = local_38;
               fStack_50 = (float)uStack_30;
               uStack_4c = uStack_30._4_4_;
@@ -239,13 +239,13 @@ public class AreaBuildingIconController
               uVar4 = GlobalData.AddSprite(uVar4,"DestroySprite",uVar7,&local_68,&local_58,0);
               this.destroyObstacleSprite = uVar4;
             }
-            if (this.destroyObstacleSprite == null) goto LAB_180a2bf6a;
+            if (this.destroyObstacleSprite == null) goto LAB_180a2c5fa;
             cVar2 = GameObject.get_activeSelf(this.destroyObstacleSprite,0);
             if (!cVar2) {
               lVar3 = this.destroyObstacleSprite;
-              if (lVar3 == null) goto LAB_180a2bf6a;
+              if (lVar3 == null) goto LAB_180a2c5fa;
               uVar4 = 1;
-              goto LAB_180a2bee3;
+              goto LAB_180a2c573;
             }
           }
           uVar4 = this.upgradeHintSprite;
@@ -257,35 +257,35 @@ public class AreaBuildingIconController
           Object.Destroy(uVar4,0);
           this.upgradeHintSprite = 0;
           this = this + 64;
-          goto LAB_180a2bc21;
+          goto LAB_180a2c2b1;
         }
         lVar3 = FUN_1807e63d0(0);
-        if (lVar3 == null) goto LAB_180a2bf6a;
+        if (lVar3 == null) goto LAB_180a2c5fa;
         if (!lVar3.missionDatas) {
-        LAB_180a2bb59:
+        LAB_180a2c1e9:
           uVar4 = this.upgradeHintSprite;
           cVar2 = Object.op_Inequality(uVar4,0,0);
           if (cVar2) {
             if (this.upgradeHintSprite == null) {
-        LAB_180a2bf6a:
+        LAB_180a2c5fa:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             cVar2 = GameObject.get_activeSelf(this.upgradeHintSprite,0);
             if (cVar2) {
               lVar3 = this.upgradeHintSprite;
-              if (lVar3 == null) goto LAB_180a2bf6a;
+              if (lVar3 == null) goto LAB_180a2c5fa;
               uVar4 = 0;
-        LAB_180a2bbb2:
+        LAB_180a2c242:
               GameObject.SetActive(lVar3,uVar4,0);
             }
           }
         }
         else {
           lVar3 = FUN_18046c0a0(0);
-          if (lVar3 == null) goto LAB_180a2bf6a;
+          if (lVar3 == null) goto LAB_180a2c5fa;
           cVar2 = GameController.BuildingCanUpgrade(lVar3,this.buildingData,0);
-          if (!cVar2) goto LAB_180a2bb59;
+          if (!cVar2) goto LAB_180a2c1e9;
           uVar4 = this.upgradeHintSprite;
           cVar2 = Object.op_Equality(uVar4,0,0);
           if (cVar2) {
@@ -300,7 +300,7 @@ public class AreaBuildingIconController
             uStack_30 = 0;
             local_58 = 0xbe8000003e800000;
             fStack_50 = -1.0;
-            FUN_181308660(&local_38,&local_58,DAT_181dba8c0);
+            FUN_181308c70(&local_38,&local_58,DAT_181dbaa70);
             puVar8 = (uint64 *)Vector3.get_one(&local_78,0);
             local_68 = *puVar8;
             fStack_60 = *(float *)(puVar8 + 1) * 0.6;
@@ -308,7 +308,7 @@ public class AreaBuildingIconController
             local_48 = 0;
             uStack_40 = 0;
             fStack_50 = fStack_60;
-            FUN_181308660(&local_48,&local_58,DAT_181dba8c0);
+            FUN_181308c70(&local_48,&local_58,DAT_181dbaa70);
             local_58 = local_48;
             fStack_50 = (float)uStack_40;
             uStack_4c = uStack_40._4_4_;
@@ -318,13 +318,13 @@ public class AreaBuildingIconController
             uVar4 = GlobalData.AddSprite(uVar4,"UpgradeHintSprite",uVar7,&local_68,&local_58,0);
             this.upgradeHintSprite = uVar4;
           }
-          if (this.upgradeHintSprite == null) goto LAB_180a2bf6a;
+          if (this.upgradeHintSprite == null) goto LAB_180a2c5fa;
           cVar2 = GameObject.get_activeSelf(this.upgradeHintSprite,0);
           if (!cVar2) {
             lVar3 = this.upgradeHintSprite;
-            if (lVar3 == null) goto LAB_180a2bf6a;
+            if (lVar3 == null) goto LAB_180a2c5fa;
             uVar4 = 1;
-            goto LAB_180a2bbb2;
+            goto LAB_180a2c242;
           }
         }
         uVar4 = this.destroyObstacleSprite;
@@ -336,12 +336,12 @@ public class AreaBuildingIconController
         Object.Destroy(uVar4,0);
         this.destroyObstacleSprite = 0;
         this = this + 56;
-        LAB_180a2bc21:
+        LAB_180a2c2b1:
         il2cpp_internal(this,0);
     }
 
     // Token : 0x6000A4A
-    // RVA   : 0xA2B1F0   Offset: 0xA2A5F0   Length: 0xE8
+    // RVA   : 0xA2B880   Offset: 0xA2AC80   Length: 0xE8
     public void SelfDestroy()
     {
         ulong uVar1;
@@ -363,7 +363,7 @@ public class AreaBuildingIconController
     }
 
     // Token : 0x6000A4B
-    // RVA   : 0xA2A9C0   Offset: 0xA29DC0   Length: 0x508
+    // RVA   : 0xA2B050   Offset: 0xA2A450   Length: 0x508
     public void OnClick()
     {
         long lVar1;
@@ -372,12 +372,12 @@ public class AreaBuildingIconController
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 221) != false) {
             return;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
           if (lVar1 == null) throw; // [null/range check failed]
           if (!lVar1.missionDatas) {
             lVar1 = this.buildingData;
@@ -391,7 +391,7 @@ public class AreaBuildingIconController
                   return;
                 }
                 uVar2 = this.buildingData;
-                lVar1 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8);
+                lVar1 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 8);
                 lVar4 = Component.get_transform(this,0);
                 if ((lVar4 != null) &&
                    (puVar5 = (uint64 *)Transform.get_position(local_18,lVar4,0), lVar1 != null)) {
@@ -440,17 +440,17 @@ public class AreaBuildingIconController
               lVar1 = FUN_18046c0a0(0);
               uVar2 = "无法与未完工建筑交换位置";
               if (lVar1 == null) throw; // [null/range check failed]
-              goto LAB_180a2ad4d;
+              goto LAB_180a2b3dd;
             }
             lVar1 = FUN_18046c0a0(0);
             uVar2 = "无法与主要建筑交换位置";
           }
           if (lVar1 != null) {
-        LAB_180a2ad4d:
+        LAB_180a2b3dd:
             GameController.ShowTextOnMouse(lVar1,uVar2,0);
             plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar6 = (int64 *)0;
-            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
               plVar6 = plVar3;
             }
             NGUITools.PlaySound(plVar6,0);
@@ -460,7 +460,7 @@ public class AreaBuildingIconController
     }
 
     // Token : 0x6000A4C
-    // RVA   : 0xA2AFA0   Offset: 0xA2A3A0   Length: 0x181
+    // RVA   : 0xA2B630   Offset: 0xA2AA30   Length: 0x181
     public void OnHover(bool isOver)
     {
         long lVar1;
@@ -476,7 +476,7 @@ public class AreaBuildingIconController
         if (!isOver) {
           if (lVar1 != null) {
             uVar5 = *(uint64 *)(lVar1 + 192);
-            puVar3 = (uint32 *)FUN_1810d3570(&local_18,0);
+            puVar3 = (uint32 *)FUN_1810d3b80(&local_18,0);
             local_18 = *puVar3;
             uStack_14 = puVar3[1];
             uStack_10 = puVar3[2];
@@ -491,9 +491,9 @@ public class AreaBuildingIconController
           uStack_10 = *(uint32 *)(this + 104);
           uStack_c = *(uint32 *)(this + 108);
           SkeletonExtensions.SetColor(*(uint64 *)(lVar1 + 192),&local_18,0);
-          lVar4 = Component.GetComponent(this,DAT_181d95560);
+          lVar4 = Component.GetComponent(this,DAT_181d95578);
           lVar1 = this.buildingData;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181dac458 + 184) + 16);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
           if ((lVar2 != null) && (lVar1 != null)) {
             uVar5 = AreaBuildingData.GetBuildingText(lVar1,1,*(uint8 *)(lVar2 + 48),1,0);
             if (lVar4 != null) {
@@ -505,11 +505,11 @@ public class AreaBuildingIconController
     }
 
     // Token : 0x6000A4D
-    // RVA   : 0xA2AED0   Offset: 0xA2A2D0   Length: 0xC1
+    // RVA   : 0xA2B560   Offset: 0xA2A960   Length: 0xC1
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           AreaController.OnDrag(lVar1,delta,0);
           return;
@@ -517,11 +517,11 @@ public class AreaBuildingIconController
     }
 
     // Token : 0x6000A4E
-    // RVA   : 0xA2B130   Offset: 0xA2A530   Length: 0xBD
+    // RVA   : 0xA2B7C0   Offset: 0xA2ABC0   Length: 0xBD
     public void OnScroll(float delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac758 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
         if (lVar1 != null) {
           AreaController.OnScroll(lVar1,delta,0);
           return;
@@ -529,7 +529,7 @@ public class AreaBuildingIconController
     }
 
     // Token : 0x6000A4F
-    // RVA   : 0xA2BF80   Offset: 0xA2B380   Length: 0x73
+    // RVA   : 0xA2C610   Offset: 0xA2BA10   Length: 0x73
     public void /*ctor*/()
     {
         ulong local_18;

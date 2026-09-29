@@ -6,25 +6,25 @@
 public class <RevealCharacters>d__7
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001FD1
+    // Token: 0x4001FD2
     private int <>1__state;
 
-    // Token: 0x4001FD2
+    // Token: 0x4001FD3
     private object <>2__current;
 
-    // Token: 0x4001FD3
+    // Token: 0x4001FD4
     public TMP_Text textComponent;
 
-    // Token: 0x4001FD4
+    // Token: 0x4001FD5
     public TextConsoleSimulator <>4__this;
 
-    // Token: 0x4001FD5
+    // Token: 0x4001FD6
     private TMP_TextInfo <textInfo>5__2;
 
-    // Token: 0x4001FD6
+    // Token: 0x4001FD7
     private int <totalVisibleCharacters>5__3;
 
-    // Token: 0x4001FD7
+    // Token: 0x4001FD8
     private int <visibleCount>5__4;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -43,7 +43,7 @@ public class <RevealCharacters>d__7
     }
 
     // Token : 0x6002501
-    // RVA   : 0x8F1940   Offset: 0x8F0D40   Length: 0x197
+    // RVA   : 0x9247C0   Offset: 0x923BC0   Length: 0x197
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -61,7 +61,7 @@ public class <RevealCharacters>d__7
           if (this.<textInfo>5__2 == 0) throw; // [null/range check failed]
           this.<totalVisibleCharacters>5__3 = *(uint32 *)(this.<textInfo>5__2 + 24);
           this.<visibleCount>5__4 = 0;
-        LAB_1808f1a17:
+        LAB_180924897:
           if (lVar1 == null) throw; // [null/range check failed]
           if (*(char *)(lVar1 + 32) != false) {
             if (this.<textInfo>5__2 == 0) throw; // [null/range check failed]
@@ -82,7 +82,7 @@ public class <RevealCharacters>d__7
               return false;
             }
             this.<>1__state = 0xffffffff;
-            goto LAB_1808f1a17;
+            goto LAB_180924897;
           }
           this.<>1__state = 0xffffffff;
           iVar4 = 0;
@@ -105,15 +105,15 @@ public class <RevealCharacters>d__7
     }
 
     // Token : 0x6002503
-    // RVA   : 0x8F1AE0   Offset: 0x8F0EE0   Length: 0x3E
+    // RVA   : 0x924960   Offset: 0x923D60   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db60d0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db6280);
     }
 
     // Token : 0x6002504

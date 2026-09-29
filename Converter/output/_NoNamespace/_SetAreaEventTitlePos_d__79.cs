@@ -31,7 +31,7 @@ public class <SetAreaEventTitlePos>d__79
     }
 
     // Token : 0x6000A88
-    // RVA   : 0x9C5760   Offset: 0x9C4B60   Length: 0x191
+    // RVA   : 0x9C5DF0   Offset: 0x9C51F0   Length: 0x191
     private virtual bool MoveNext()
     {
         var plVar2 = *(int64*)(lVar2 + 184);
@@ -47,7 +47,7 @@ public class <SetAreaEventTitlePos>d__79
         if (iVar1 == 0) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 0;
-          uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar5 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar5;
           this.<>1__state = 1;
           return true;
@@ -55,7 +55,7 @@ public class <SetAreaEventTitlePos>d__79
         if (iVar1 == 1) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 0;
-          uVar5 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar5 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar5;
           this.<>1__state = 2;
           return true;
@@ -92,15 +92,15 @@ public class <SetAreaEventTitlePos>d__79
     }
 
     // Token : 0x6000A8A
-    // RVA   : 0x9C5900   Offset: 0x9C4D00   Length: 0x3E
+    // RVA   : 0x9C5F90   Offset: 0x9C5390   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d95438);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d955d0);
     }
 
     // Token : 0x6000A8B

@@ -59,16 +59,16 @@ public class HorseData
         long lVar4;
         int iVar5;
         ZhSegment.Initialize(this,0);
-        lVar3 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar3,DAT_181d8f098);
+        lVar3 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar3,DAT_181d8f0b0);
         iVar5 = 0;
         while( true ) {
           uVar1 = GlobalData.RandomRange(0,param_2 + 1,0,0);
           if (lVar3 == null) break;
-          FUN_18182a0b0(lVar3,uVar1);
+          FUN_18182a6c0(lVar3,uVar1);
           iVar5 = iVar5 + 1;
           if (2 < iVar5) {
-            List_1.Sort(lVar3,DAT_181d8f798);
+            List_1.Sort(lVar3,DAT_181d8f7b0);
             if (*(int *)(lVar3 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -107,7 +107,7 @@ public class HorseData
     }
 
     // Token : 0x60012F4
-    // RVA   : 0xB012F0   Offset: 0xB006F0   Length: 0x1DB
+    // RVA   : 0xB019B0   Offset: 0xB00DB0   Length: 0x1DB
     public void /*ctor*/(int totalNum)
     {
         uint uVar1;
@@ -116,16 +116,16 @@ public class HorseData
         long lVar4;
         int iVar5;
         ZhSegment.Initialize(this,0);
-        lVar3 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(lVar3,DAT_181d8f098);
+        lVar3 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(lVar3,DAT_181d8f0b0);
         iVar5 = 0;
         while( true ) {
           uVar1 = GlobalData.RandomRange(0,totalNum + 1,0,0);
           if (lVar3 == null) break;
-          FUN_18182a0b0(lVar3,uVar1);
+          FUN_18182a6c0(lVar3,uVar1);
           iVar5 = iVar5 + 1;
           if (2 < iVar5) {
-            List_1.Sort(lVar3,DAT_181d8f798);
+            List_1.Sort(lVar3,DAT_181d8f7b0);
             if (*(int *)(lVar3 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -164,7 +164,7 @@ public class HorseData
     }
 
     // Token : 0x60012F5
-    // RVA   : 0xB01270   Offset: 0xB00670   Length: 0x7A
+    // RVA   : 0xB01930   Offset: 0xB00D30   Length: 0x7A
     public void StartSprint()
     {
         var pStatics = *(int64*)(DAT_181d73d40 + 184);
@@ -173,16 +173,16 @@ public class HorseData
     }
 
     // Token : 0x60012F6
-    // RVA   : 0xB004F0   Offset: 0xAFF8F0   Length: 0x30
+    // RVA   : 0xB00BB0   Offset: 0xAFFFB0   Length: 0x30
     public void ChangeFavorRate(float delta)
     {
         uint uVar1;
-        uVar1 = FUN_1810e36c0(this.favorRate + delta,0,0x3f800000,0);
+        uVar1 = FUN_1810e3cd0(this.favorRate + delta,0,0x3f800000,0);
         this.favorRate = uVar1;
     }
 
     // Token : 0x60012F7
-    // RVA   : 0xB01190   Offset: 0xB00590   Length: 0x63
+    // RVA   : 0xB01850   Offset: 0xB00C50   Length: 0x63
     public float Speed()
     {
         float fVar1;
@@ -195,7 +195,7 @@ public class HorseData
     }
 
     // Token : 0x60012F8
-    // RVA   : 0xB00FE0   Offset: 0xB003E0   Length: 0x63
+    // RVA   : 0xB016A0   Offset: 0xB00AA0   Length: 0x63
     public float Power()
     {
         float fVar1;
@@ -208,7 +208,7 @@ public class HorseData
     }
 
     // Token : 0x60012F9
-    // RVA   : 0xB01200   Offset: 0xB00600   Length: 0x63
+    // RVA   : 0xB018C0   Offset: 0xB00CC0   Length: 0x63
     public float Sprint()
     {
         float fVar1;
@@ -221,7 +221,7 @@ public class HorseData
     }
 
     // Token : 0x60012FA
-    // RVA   : 0xB01120   Offset: 0xB00520   Length: 0x63
+    // RVA   : 0xB017E0   Offset: 0xB00BE0   Length: 0x63
     public float Resist()
     {
         float fVar1;
@@ -234,7 +234,7 @@ public class HorseData
     }
 
     // Token : 0x60012FB
-    // RVA   : 0xB00F70   Offset: 0xB00370   Length: 0x6B
+    // RVA   : 0xB01630   Offset: 0xB00A30   Length: 0x6B
     public float MaxPower()
     {
         float fVar1;
@@ -247,7 +247,7 @@ public class HorseData
     }
 
     // Token : 0x60012FC
-    // RVA   : 0xB005D0   Offset: 0xAFF9D0   Length: 0x6D
+    // RVA   : 0xB00C90   Offset: 0xB00090   Length: 0x6D
     public void FullFillPower()
     {
         float fVar1;
@@ -261,7 +261,7 @@ public class HorseData
     }
 
     // Token : 0x60012FD
-    // RVA   : 0xB01050   Offset: 0xB00450   Length: 0x73
+    // RVA   : 0xB01710   Offset: 0xB00B10   Length: 0x73
     public void RefreshState()
     {
         float fVar1;
@@ -276,17 +276,17 @@ public class HorseData
     }
 
     // Token : 0x60012FE
-    // RVA   : 0xB00520   Offset: 0xAFF920   Length: 0xA6
+    // RVA   : 0xB00BE0   Offset: 0xAFFFE0   Length: 0xA6
     public void ChangeNowPower(float delta)
     {
         uint uVar1;
         HorseData.GetHorseStateSpeAdd(this,this.power,0);
-        uVar1 = FUN_1810e36c0();
+        uVar1 = FUN_1810e3cd0();
         this.nowPower = uVar1;
     }
 
     // Token : 0x60012FF
-    // RVA   : 0xB004A0   Offset: 0xAFF8A0   Length: 0x4F
+    // RVA   : 0xB00B60   Offset: 0xAFFF60   Length: 0x4F
     public void Add(HorseData target)
     {
         if (target != null) {
@@ -299,7 +299,7 @@ public class HorseData
     }
 
     // Token : 0x6001300
-    // RVA   : 0xB00450   Offset: 0xAFF850   Length: 0x4F
+    // RVA   : 0xB00B10   Offset: 0xAFFF10   Length: 0x4F
     public void AddHorseArmor(HorseData target)
     {
         if (target != null) {
@@ -312,7 +312,7 @@ public class HorseData
     }
 
     // Token : 0x6001301
-    // RVA   : 0xB010D0   Offset: 0xB004D0   Length: 0x4F
+    // RVA   : 0xB01790   Offset: 0xB00B90   Length: 0x4F
     public void RemoveHorseArmor(HorseData target)
     {
         if (target != null) {
@@ -325,7 +325,7 @@ public class HorseData
     }
 
     // Token : 0x6001302
-    // RVA   : 0xB00DA0   Offset: 0xB001A0   Length: 0x1C9
+    // RVA   : 0xB01460   Offset: 0xB00860   Length: 0x1C9
     public int GetHorseStateSpeAdd(float originState)
     {
         bool cVar1;
@@ -360,7 +360,7 @@ public class HorseData
     }
 
     // Token : 0x6001303
-    // RVA   : 0xB00640   Offset: 0xAFFA40   Length: 0x75E
+    // RVA   : 0xB00D00   Offset: 0xB00100   Length: 0x75E
     public string GetDescribe()
     {
         float fVar1;
@@ -368,7 +368,7 @@ public class HorseData
         long lVar4;
         long lVar5;
         ulong uVar6;
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,12);
+        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,12);
         if (plVar3 == (int64 *)0) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();

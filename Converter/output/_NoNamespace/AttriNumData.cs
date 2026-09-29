@@ -34,41 +34,41 @@ public class AttriNumData
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar1,DAT_181da0cf8);
+        lVar1 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar1,DAT_181da0d10);
         if (lVar1 != null) {
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
-          FUN_18181de10(lVar1,0,DAT_181da0df8);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18181e420(lVar1,0,DAT_181da0e10);
           this.attri = lVar1;
-          lVar1 = il2cpp_internal(DAT_181d96ed0);
-          FUN_18132faf0(lVar1,DAT_181da0cf8);
+          lVar1 = il2cpp_internal(DAT_181d96ee8);
+          FUN_181330100(lVar1,DAT_181da0d10);
           if (lVar1 != null) {
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
             this.fightSkill = lVar1;
-            lVar1 = il2cpp_internal(DAT_181d96ed0);
-            FUN_18132faf0(lVar1,DAT_181da0cf8);
+            lVar1 = il2cpp_internal(DAT_181d96ee8);
+            FUN_181330100(lVar1,DAT_181da0d10);
             if (lVar1 != null) {
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
-              FUN_18181de10(lVar1,0,DAT_181da0df8);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
+              FUN_18181e420(lVar1,0,DAT_181da0e10);
               this.livingSkill = lVar1;
               return;
             }
@@ -121,7 +121,7 @@ public class AttriNumData
               }
               lVar4 = *(int64 *)(plVar4 + 0x560);
               if (lVar4 != null) {
-                uVar3 = FUN_180002f80(lVar4,uVar6,DAT_181da4358);
+                uVar3 = FUN_180002f80(lVar4,uVar6,DAT_181da4370);
                 lVar4 = FUN_18046c100(0);
                 if ((lVar4 != null) && (*(int64 *)(lVar4 + 56) != 0)) {
                   iVar5 = *(int *)(*(int64 *)(lVar4 + 56) + 24);
@@ -185,7 +185,7 @@ public class AttriNumData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (*(float *)(lVar10 + lVar5._items) != 0.0) {
-              cVar1 = FUN_18171e540(uVar4,"",0);
+              cVar1 = FUN_18171eb50(uVar4,"",0);
               uVar8 = "";
               if ((!cVar1) &&
                  (uVar8 = " ",
@@ -196,9 +196,9 @@ public class AttriNumData
               }
               lVar5 = *(int64 *)(pStatics + 0x498);
               if (lVar5 == null) break;
-              uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181da4358);
+              uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181da4370);
               if (this.attri == null) break;
-              fVar11 = (float)FUN_1800d6790(this.attri,uVar7,DAT_181da1078);
+              fVar11 = (float)FUN_1800d6790(this.attri,uVar7,DAT_181da1090);
               uVar3 = AttriNumData.GetAttriRatioString(this,fVar11 * speRate,0);
               uVar4 = String.Concat(uVar4,uVar8,uVar2,uVar3,0);
               uVar6 = uVar6 + 1;
@@ -215,7 +215,7 @@ public class AttriNumData
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (*(float *)(lVar10 + lVar5._items) != 0.0) {
-            cVar1 = FUN_18171e540(uVar4,"",0);
+            cVar1 = FUN_18171eb50(uVar4,"",0);
             uVar8 = "";
             if ((!cVar1) &&
                (uVar8 = " ",
@@ -226,9 +226,9 @@ public class AttriNumData
             }
             lVar5 = *(int64 *)(pStatics + 0x4a0);
             if (lVar5 == null) break;
-            uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181da4358);
+            uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181da4370);
             if (this.fightSkill == null) break;
-            fVar11 = (float)FUN_1800d6790(this.fightSkill,uVar7,DAT_181da1078);
+            fVar11 = (float)FUN_1800d6790(this.fightSkill,uVar7,DAT_181da1090);
             uVar3 = AttriNumData.GetAttriRatioString(this,fVar11 * speRate,0);
             uVar4 = String.Concat(uVar4,uVar8,uVar2,uVar3,0);
             uVar6 = uVar6 + 1;
@@ -254,7 +254,7 @@ public class AttriNumData
         LAB_1807ef7c0:
           if (lVar5.Count <= (int)uVar7) {
             if (this.Hp != null.0) {
-              cVar1 = FUN_18171e540(uVar4,"",0);
+              cVar1 = FUN_18171eb50(uVar4,"",0);
               uVar8 = "";
               if ((!cVar1) &&
                  (uVar8 = " ",
@@ -269,7 +269,7 @@ public class AttriNumData
               uVar6 = uVar6 + 1;
             }
             if (this.Power != null.0) {
-              cVar1 = FUN_18171e540(uVar4,"",0);
+              cVar1 = FUN_18171eb50(uVar4,"",0);
               uVar8 = "";
               if ((!cVar1) &&
                  (uVar8 = " ",
@@ -283,7 +283,7 @@ public class AttriNumData
               uVar6 = uVar6 + 1;
             }
             if (this.Mana != null.0) {
-              cVar1 = FUN_18171e540(uVar4,"",0);
+              cVar1 = FUN_18171eb50(uVar4,"",0);
               uVar8 = "";
               if ((!cVar1) &&
                  (uVar8 = " ",
@@ -298,7 +298,7 @@ public class AttriNumData
               uVar6 = uVar6 + 1;
             }
             if (this.Charm != null.0) {
-              cVar1 = FUN_18171e540(uVar4,"",0);
+              cVar1 = FUN_18171eb50(uVar4,"",0);
               uVar8 = "";
               if ((!cVar1) &&
                  (uVar8 = " ",
@@ -317,7 +317,7 @@ public class AttriNumData
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (*(float *)(lVar5._items + lVar9) != 0.0) {
-            cVar1 = FUN_18171e540(uVar4,"",0);
+            cVar1 = FUN_18171eb50(uVar4,"",0);
             uVar8 = "";
             if ((!cVar1) &&
                (uVar8 = " ",
@@ -328,9 +328,9 @@ public class AttriNumData
             }
             lVar5 = *(int64 *)(pStatics + 0x4b0);
             if (lVar5 == null) break;
-            uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181da4358);
+            uVar2 = FUN_180002f80(lVar5,uVar7,DAT_181da4370);
             if (this.livingSkill == null) break;
-            fVar11 = (float)FUN_1800d6790(this.livingSkill,uVar7,DAT_181da1078);
+            fVar11 = (float)FUN_1800d6790(this.livingSkill,uVar7,DAT_181da1090);
             uVar3 = AttriNumData.GetAttriRatioString(this,fVar11 * speRate,0);
             uVar4 = String.Concat(uVar4,uVar8,uVar2,uVar3,0);
             uVar6 = uVar6 + 1;
@@ -369,26 +369,26 @@ public class AttriNumData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (*(float *)(lVar10 + lVar6._items) != 0.0) {
-              cVar1 = FUN_18171e540(uVar5,"",0);
+              cVar1 = FUN_18171eb50(uVar5,"",0);
               uVar8 = "/";
               if (cVar1) {
                 uVar8 = "";
               }
               if ((targetHero == null) || (*(int64 *)(targetHero + 0x138) == 0)) goto LAB_1807f0b79;
-              fVar11 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x138),uVar9,DAT_181da1078);
+              fVar11 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x138),uVar9,DAT_181da1090);
               if (this.attri == null) goto LAB_1807f0b79;
-              fVar12 = (float)FUN_1800d6790(this.attri,uVar9,DAT_181da1078);
+              fVar12 = (float)FUN_1800d6790(this.attri,uVar9,DAT_181da1090);
               uVar2 = "{1}{0}";
               if (fVar11 < fVar12) {
                 uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2d0),
                                        "{1}{0}</color>",0);
               }
               if (this.attri == null) goto LAB_1807f0b79;
-              local_res8[0] = FUN_1800d6790(this.attri,uVar9,DAT_181da1078);
+              local_res8[0] = FUN_1800d6790(this.attri,uVar9,DAT_181da1090);
               uVar3 = Single.ToString(local_res8,0);
               lVar6 = *(int64 *)(pStatics + 0x498);
               if (lVar6 == null) goto LAB_1807f0b79;
-              uVar4 = FUN_180002f80(lVar6,uVar9,DAT_181da4358);
+              uVar4 = FUN_180002f80(lVar6,uVar9,DAT_181da4370);
               uVar2 = String.Format(uVar2,uVar3,uVar4);
               uVar5 = String.Concat(uVar5,uVar8,uVar2,0);
             }
@@ -421,26 +421,26 @@ public class AttriNumData
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         if (*(float *)(lVar10 + lVar6._items) != 0.0) {
-          cVar1 = FUN_18171e540(uVar5,"",0);
+          cVar1 = FUN_18171eb50(uVar5,"",0);
           uVar8 = "/";
           if (cVar1) {
             uVar8 = "";
           }
           if ((targetHero == null) || (*(int64 *)(targetHero + 0x150) == 0)) goto LAB_1807f0b79;
-          fVar11 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x150),uVar9,DAT_181da1078);
+          fVar11 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x150),uVar9,DAT_181da1090);
           if (this.fightSkill == null) goto LAB_1807f0b79;
-          fVar12 = (float)FUN_1800d6790(this.fightSkill,uVar9,DAT_181da1078);
+          fVar12 = (float)FUN_1800d6790(this.fightSkill,uVar9,DAT_181da1090);
           uVar2 = "{1}{0}";
           if (fVar11 < fVar12) {
             uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2d0),
                                    "{1}{0}</color>",0);
           }
           if (this.fightSkill == null) goto LAB_1807f0b79;
-          local_res8[0] = FUN_1800d6790(this.fightSkill,uVar9,DAT_181da1078);
+          local_res8[0] = FUN_1800d6790(this.fightSkill,uVar9,DAT_181da1090);
           uVar3 = Single.ToString(local_res8,0);
           lVar6 = *(int64 *)(pStatics + 0x4a0);
           if (lVar6 == null) goto LAB_1807f0b79;
-          uVar4 = FUN_180002f80(lVar6,uVar9,DAT_181da4358);
+          uVar4 = FUN_180002f80(lVar6,uVar9,DAT_181da4370);
           uVar2 = String.Format(uVar2,uVar3,uVar4);
           uVar5 = String.Concat(uVar5,uVar8,uVar2,0);
         }
@@ -452,7 +452,7 @@ public class AttriNumData
         LAB_1807f0740:
         if (lVar6.Count <= (int)uVar7) {
           if (this.Hp != null.0) {
-            cVar1 = FUN_18171e540(uVar5,"",0);
+            cVar1 = FUN_18171eb50(uVar5,"",0);
             uVar8 = "/";
             if (cVar1) {
               uVar8 = "";
@@ -469,7 +469,7 @@ public class AttriNumData
             uVar5 = String.Concat(uVar5,uVar8,uVar2,0);
           }
           if (this.Power != null.0) {
-            cVar1 = FUN_18171e540(uVar5,"",0);
+            cVar1 = FUN_18171eb50(uVar5,"",0);
             uVar8 = "/";
             if (cVar1) {
               uVar8 = "";
@@ -486,7 +486,7 @@ public class AttriNumData
             uVar5 = String.Concat(uVar5,uVar8,uVar2,0);
           }
           if (this.Mana != null.0) {
-            cVar1 = FUN_18171e540(uVar5,"",0);
+            cVar1 = FUN_18171eb50(uVar5,"",0);
             uVar8 = "/";
             if (cVar1) {
               uVar8 = "";
@@ -509,26 +509,26 @@ public class AttriNumData
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         if (*(float *)(lVar10 + lVar6._items) != 0.0) {
-          cVar1 = FUN_18171e540(uVar5,"",0);
+          cVar1 = FUN_18171eb50(uVar5,"",0);
           uVar8 = "/";
           if (cVar1) {
             uVar8 = "";
           }
           if ((targetHero == null) || (*(int64 *)(targetHero + 0x168) == 0)) goto LAB_1807f0b79;
-          fVar11 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x168),uVar7,DAT_181da1078);
+          fVar11 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x168),uVar7,DAT_181da1090);
           if (this.livingSkill == null) goto LAB_1807f0b79;
-          fVar12 = (float)FUN_1800d6790(this.livingSkill,uVar7,DAT_181da1078);
+          fVar12 = (float)FUN_1800d6790(this.livingSkill,uVar7,DAT_181da1090);
           uVar2 = "{1}{0}";
           if (fVar11 < fVar12) {
             uVar2 = String.Concat(*(uint64 *)(pStatics + 0x2d0),
                                    "{1}{0}</color>",0);
           }
           if (this.livingSkill == null) goto LAB_1807f0b79;
-          local_res8[0] = FUN_1800d6790(this.livingSkill,uVar7,DAT_181da1078);
+          local_res8[0] = FUN_1800d6790(this.livingSkill,uVar7,DAT_181da1090);
           uVar3 = Single.ToString(local_res8,0);
           lVar6 = *(int64 *)(pStatics + 0x4b0);
           if (lVar6 == null) goto LAB_1807f0b79;
-          uVar4 = FUN_180002f80(lVar6,uVar7,DAT_181da4358);
+          uVar4 = FUN_180002f80(lVar6,uVar7,DAT_181da4370);
           uVar2 = String.Format(uVar2,uVar3,uVar4);
           uVar5 = String.Concat(uVar5,uVar8,uVar2,0);
         }
@@ -569,11 +569,11 @@ public class AttriNumData
             }
             if (*(float *)(lVar5 + lVar1._items) != 0.0) {
               if ((targetHero == null) || (*(int64 *)(targetHero + 0x138) == 0)) goto LAB_1807f0263;
-              fVar6 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x138),uVar2,DAT_181da1078);
+              fVar6 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x138),uVar2,DAT_181da1090);
               if (this.attri == null) goto LAB_1807f0263;
-              fVar7 = (float)FUN_1800d6790(this.attri,uVar2,DAT_181da1078);
+              fVar7 = (float)FUN_1800d6790(this.attri,uVar2,DAT_181da1090);
               if (*(int64 *)(targetHero + 0x138) == 0) goto LAB_1807f0263;
-              fVar8 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x138),uVar2,DAT_181da1078);
+              fVar8 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x138),uVar2,DAT_181da1090);
               if (this.attri == null) goto LAB_1807f0263;
               fVar9 = (float)FUN_1800d6790(this.attri,uVar2);
               if (fVar8 <= fVar9) {
@@ -611,11 +611,11 @@ public class AttriNumData
         }
         if (*(float *)(lVar5 + lVar1._items) != 0.0) {
           if ((targetHero == null) || (*(int64 *)(targetHero + 0x150) == 0)) goto LAB_1807f0263;
-          fVar6 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x150),uVar2,DAT_181da1078);
+          fVar6 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x150),uVar2,DAT_181da1090);
           if (this.fightSkill == null) goto LAB_1807f0263;
-          fVar7 = (float)FUN_1800d6790(this.fightSkill,uVar2,DAT_181da1078);
+          fVar7 = (float)FUN_1800d6790(this.fightSkill,uVar2,DAT_181da1090);
           if (*(int64 *)(targetHero + 0x150) == 0) goto LAB_1807f0263;
-          fVar8 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x150),uVar2,DAT_181da1078);
+          fVar8 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x150),uVar2,DAT_181da1090);
           if (this.fightSkill == null) goto LAB_1807f0263;
           fVar9 = (float)FUN_1800d6790(this.fightSkill,uVar2);
           if (fVar8 <= fVar9) {
@@ -699,11 +699,11 @@ public class AttriNumData
         }
         if (*(float *)(lVar4 + lVar1._items) != 0.0) {
           if ((targetHero == null) || (*(int64 *)(targetHero + 0x168) == 0)) goto LAB_1807f0263;
-          fVar6 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x168),uVar3,DAT_181da1078);
+          fVar6 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x168),uVar3,DAT_181da1090);
           if (this.livingSkill == null) goto LAB_1807f0263;
-          fVar7 = (float)FUN_1800d6790(this.livingSkill,uVar3,DAT_181da1078);
+          fVar7 = (float)FUN_1800d6790(this.livingSkill,uVar3,DAT_181da1090);
           if (*(int64 *)(targetHero + 0x168) == 0) goto LAB_1807f0263;
-          fVar8 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x168),uVar3,DAT_181da1078);
+          fVar8 = (float)FUN_1800d6790(*(int64 *)(targetHero + 0x168),uVar3,DAT_181da1090);
           if (this.livingSkill == null) goto LAB_1807f0263;
           fVar9 = (float)FUN_1800d6790(this.livingSkill,uVar3);
           if (fVar8 <= fVar9) {
@@ -733,13 +733,13 @@ public class AttriNumData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -751,7 +751,7 @@ public class AttriNumData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

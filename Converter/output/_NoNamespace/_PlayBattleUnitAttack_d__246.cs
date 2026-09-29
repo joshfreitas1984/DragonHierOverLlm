@@ -31,7 +31,7 @@ public class <PlayBattleUnitAttack>d__246
     }
 
     // Token : 0x6000BE2
-    // RVA   : 0x9306C0   Offset: 0x92FAC0   Length: 0x7EA
+    // RVA   : 0x930D20   Offset: 0x930120   Length: 0x7EA
     private virtual bool MoveNext()
     {
         ulong uVar1;
@@ -79,7 +79,7 @@ public class <PlayBattleUnitAttack>d__246
         if (*pfVar9 <= (float)local_58 && (float)local_58 != *pfVar9) {
           if (lVar8 == null) throw; // [null/range check failed]
           uVar11 = 1;
-        LAB_1809308aa:
+        LAB_180930f0a:
           BattleUnit.ChangeFaceDirection(lVar8,uVar11,0,0);
         }
         else {
@@ -93,7 +93,7 @@ public class <PlayBattleUnitAttack>d__246
             lVar8 = *(int64 *)(lVar3 + 0x110);
             if (lVar8 == null) throw; // [null/range check failed]
             uVar11 = 0;
-            goto LAB_1809308aa;
+            goto LAB_180930f0a;
           }
         }
         lVar8 = *(int64 *)(lVar3 + 0x110);
@@ -132,7 +132,7 @@ public class <PlayBattleUnitAttack>d__246
                   local_50 = (int)uVar4;
                   BattleController.FocusOnTarget(lVar3,&local_58,uVar11,0);
                 }
-                plVar13 = (int64 *)FUN_1800d60b0(DAT_181da4120,4);
+                plVar13 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
                 if ((*(int64 *)(lVar3 + 0x110) != 0) &&
                    (lVar8 = *(int64 *)(*(int64 *)(lVar3 + 0x110) + 64)) != null) {
                   lVar8 = HeroData.Name(lVar8,1,0);
@@ -227,7 +227,7 @@ public class <PlayBattleUnitAttack>d__246
                                       uVar11 = String.Format(uVar11,plVar13,0);
                                       BattleController.AddInfoText(lVar3,uVar11,1,0);
                                       uVar11 = BattleController.BattleUnitAttackStart(lVar3,0);
-                                      FUN_180d8c2e0(lVar3,uVar11,0);
+                                      FUN_180d8c8f0(lVar3,uVar11,0);
                                       this.<>2__current = 0;
                                       this.<>1__state = 1;
                                       return true;
@@ -259,15 +259,15 @@ public class <PlayBattleUnitAttack>d__246
     }
 
     // Token : 0x6000BE4
-    // RVA   : 0x930EB0   Offset: 0x9302B0   Length: 0x3E
+    // RVA   : 0x931510   Offset: 0x930910   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d979b8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97b50);
     }
 
     // Token : 0x6000BE5

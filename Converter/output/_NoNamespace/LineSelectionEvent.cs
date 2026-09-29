@@ -7,10 +7,10 @@ public class LineSelectionEvent
 {
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002481
-    // RVA   : 0x8E62C0   Offset: 0x8E56C0   Length: 0x39
+    // RVA   : 0x918900   Offset: 0x917D00   Length: 0x39
     public void /*ctor*/()
     {
-        FUN_180fec720(this,DAT_181d7d488);
+        FUN_180fecd30(this,DAT_181d7d4a0);
     }
 
 }

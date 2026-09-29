@@ -29,11 +29,11 @@ public class ForceSpeResearchData
         long lVar1;
         ulong uVar2;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d940d0);
-        FUN_18132faf0(lVar1,DAT_181d90998);
+        lVar1 = il2cpp_internal(DAT_181d940e8);
+        FUN_181330100(lVar1,DAT_181d909b0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
           this.material = lVar1;
           this.researchBuff = new HeroSpeAddData(0);
           return;
@@ -47,11 +47,11 @@ public class ForceSpeResearchData
         long lVar1;
         ulong uVar2;
         this.researchRate = 0;
-        lVar1 = il2cpp_internal(DAT_181d940d0);
-        FUN_18132faf0(lVar1,DAT_181d90998);
+        lVar1 = il2cpp_internal(DAT_181d940e8);
+        FUN_181330100(lVar1,DAT_181d909b0);
         if (lVar1 != null) {
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
-          FUN_18181e0a0(lVar1,0,DAT_181d90a98);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
           this.material = lVar1;
           this.addDamageRate = 0;
           this.researchBuff = new HeroSpeAddData(0);
@@ -69,7 +69,7 @@ public class ForceSpeResearchData
         uint uVar3;
         fVar1 = this.researchRate;
         fVar2 = (float)Mathf.Max(0x3dcccccd,1.0 - fVar1,0);
-        uVar3 = FUN_1810e36c0(fVar2 * changeNum + fVar1,0,0x3f800000,0);
+        uVar3 = FUN_1810e3cd0(fVar2 * changeNum + fVar1,0,0x3f800000,0);
         this.researchRate = uVar3;
     }
 

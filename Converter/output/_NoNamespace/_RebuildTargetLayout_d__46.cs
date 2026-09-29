@@ -6,13 +6,13 @@
 public class <RebuildTargetLayout>d__46
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A6D
+    // Token: 0x4001A6E
     private int <>1__state;
 
-    // Token: 0x4001A6E
+    // Token: 0x4001A6F
     private object <>2__current;
 
-    // Token: 0x4001A6F
+    // Token: 0x4001A70
     public GameObject target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -31,7 +31,7 @@ public class <RebuildTargetLayout>d__46
     }
 
     // Token : 0x600200E
-    // RVA   : 0x8F1820   Offset: 0x8F0C20   Length: 0xDB
+    // RVA   : 0x9246A0   Offset: 0x923AA0   Length: 0xDB
     private virtual bool MoveNext()
     {
         ulong uVar1;
@@ -39,7 +39,7 @@ public class <RebuildTargetLayout>d__46
         if (this.<>1__state == 0) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 1;
-          uVar1 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar1 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar1;
           this.<>1__state = 1;
           return true;
@@ -64,15 +64,15 @@ public class <RebuildTargetLayout>d__46
     }
 
     // Token : 0x6002010
-    // RVA   : 0x8F1900   Offset: 0x8F0D00   Length: 0x3E
+    // RVA   : 0x924780   Offset: 0x923B80   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181daa948);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181daaae0);
     }
 
     // Token : 0x6002011

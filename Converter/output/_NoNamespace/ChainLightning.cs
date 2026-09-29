@@ -29,19 +29,19 @@ public class ChainLightning
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000E72
-    // RVA   : 0x992740   Offset: 0x991B40   Length: 0x96
+    // RVA   : 0x992DD0   Offset: 0x9921D0   Length: 0x96
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d94860);
+        uVar1 = Component.GetComponent(this,DAT_181d94878);
         this._lineRender = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98bd0);
-        FUN_18132faf0(uVar1,DAT_181dabb98);
+        uVar1 = il2cpp_internal(DAT_181d98be8);
+        FUN_181330100(uVar1,DAT_181dabbb0);
         this._linePosList = uVar1;
     }
 
     // Token : 0x6000E73
-    // RVA   : 0x992A30   Offset: 0x991E30   Length: 0x32F
+    // RVA   : 0x9930C0   Offset: 0x9924C0   Length: 0x32F
     private void Update()
     {
         ulong uVar1;
@@ -69,7 +69,7 @@ public class ChainLightning
           return;
         }
         if (this._linePosList != null) {
-          FUN_1812f9a10(this._linePosList,DAT_181dabd18);
+          FUN_1812fa020(this._linePosList,DAT_181dabd30);
           Vector3.get_zero(local_88,0);
           Vector3.get_zero(local_88,0);
           local_a0 = *(float *)(this + 40);
@@ -98,7 +98,7 @@ public class ChainLightning
           if (this._linePosList != null) {
             local_a8 = CONCAT44(fVar12,fVar13);
             local_a0 = fVar5;
-            FUN_181816b80(this._linePosList,&local_a8,DAT_181dabc18);
+            FUN_181817190(this._linePosList,&local_a8,DAT_181dabc30);
             if ((this._linePosList != null) && (this._lineRender != null)) {
               LineRenderer.set_positionCount
                         (this._lineRender,
@@ -135,7 +135,7 @@ public class ChainLightning
     }
 
     // Token : 0x6000E74
-    // RVA   : 0x9927E0   Offset: 0x991BE0   Length: 0x241
+    // RVA   : 0x992E70   Offset: 0x992270   Length: 0x241
     private void CollectLinPos(Vector3 startPos, Vector3 destPos, float displace)
     {
         ulong uVar1;
@@ -154,7 +154,7 @@ public class ChainLightning
           }
           local_98 = *(uint64 *)startPos;
           local_90 = startPos[2];
-          FUN_181816b80(this._linePosList,&local_98,DAT_181dabc18);
+          FUN_181817190(this._linePosList,&local_98,DAT_181dabc30);
         }
         else {
           local_a0 = startPos[2];
@@ -184,10 +184,10 @@ public class ChainLightning
     }
 
     // Token : 0x6000E75
-    // RVA   : 0x992D60   Offset: 0x992160   Length: 0x15
+    // RVA   : 0x9933F0   Offset: 0x9927F0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_180992d60(int64 this)
+        void FUN_1809933f0(int64 this)
         {
         this.detail = 0x3f800000;
         this.displacement = 0x41700000;

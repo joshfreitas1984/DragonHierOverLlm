@@ -6,13 +6,13 @@
 public class LockTagButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018B5
+    // Token: 0x40018B6
     public HeroTagData targetHeroTag;
 
-    // Token: 0x40018B6
+    // Token: 0x40018B7
     public Sprite unlockSprite;
 
-    // Token: 0x40018B7
+    // Token: 0x40018B8
     public Sprite lockSprite;
 
     // ── Methods ──────────────────────────────────────────────────

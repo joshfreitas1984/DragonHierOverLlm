@@ -6,21 +6,21 @@
 public class <AsyncWaitForStart>d__15
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002159
+    // Token: 0x400215A
     public int <>1__state;
 
-    // Token: 0x400215A
+    // Token: 0x400215B
     public AsyncTaskMethodBuilder <>t__builder;
 
-    // Token: 0x400215B
+    // Token: 0x400215C
     public Tween t;
 
-    // Token: 0x400215C
+    // Token: 0x400215D
     private YieldAwaiter <>u__1;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002767
-    // RVA   : 0x92B6D0   Offset: 0x92AAD0   Length: 0x1B5
+    // RVA   : 0x92BD30   Offset: 0x92B130   Length: 0x1B5
     private virtual void MoveNext()
     {
         long lVar1;
@@ -35,14 +35,14 @@ public class <AsyncWaitForStart>d__15
           *this = -1;
           do {
             ZhSegment.Initialize(local_res18,0);
-        LAB_18092b752:
+        LAB_18092bdb2:
             lVar1 = *(int64 *)(this + 8);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             if ((*(char *)(lVar1 + 232) == false) || (*(char *)(lVar1 + 0x102) != false))
-            goto LAB_18092b82e;
+            goto LAB_18092be8e;
             local_res20[0] = CircularBuffer_1__System_Collections_Generic_ICollection_T.get_IsReadOnly(0)
             ;
             local_res18[0] =
@@ -52,18 +52,18 @@ public class <AsyncWaitForStart>d__15
           } while (cVar2);
           *this = 0;
           *(uint8 *)(this + 10) = local_res18[0];
-          FUN_180962960(this + 2,local_res18,this,DAT_181d85ff8);
+          FUN_180962ff0(this + 2,local_res18,this,DAT_181d86010);
         }
         else {
           if (*(int64 *)(this + 8) == 0) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          if (*(char *)(*(int64 *)(this + 8) + 232) != false) goto LAB_18092b752;
-          if (0 < **(int **)(DAT_181dbff70 + 184)) {
+          if (*(char *)(*(int64 *)(this + 8) + 232) != false) goto LAB_18092bdb2;
+          if (0 < **(int **)(DAT_181dbff88 + 184)) {
             Debugger.LogInvalidTween(*(uint64 *)(this + 8),0);
           }
-        LAB_18092b82e:
+        LAB_18092be8e:
           *this = -2;
           AsyncTaskMethodBuilder.SetResult(this + 2,0);
         }

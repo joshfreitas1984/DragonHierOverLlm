@@ -6,7 +6,7 @@
 public class <>c__DisplayClass11_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002115
+    // Token: 0x4002116
     public Outline target;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -18,7 +18,7 @@ public class <>c__DisplayClass11_0
     }
 
     // Token : 0x60026E7
-    // RVA   : 0x937140   Offset: 0x936540   Length: 0x21
+    // RVA   : 0x937980   Offset: 0x936D80   Length: 0x21
     internal Color <DOFade>b__0()
     {
         long lVar1;
@@ -33,7 +33,7 @@ public class <>c__DisplayClass11_0
     }
 
     // Token : 0x60026E8
-    // RVA   : 0x937170   Offset: 0x936570   Length: 0x2C
+    // RVA   : 0x9379B0   Offset: 0x936DB0   Length: 0x2C
     internal void <DOFade>b__1(Color x)
     {
         uint local_18;

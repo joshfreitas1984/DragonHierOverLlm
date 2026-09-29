@@ -41,7 +41,7 @@ public class UIKeyNavigation
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600019B
-    // RVA   : 0x118F5E0   Offset: 0x118E9E0   Length: 0xB7
+    // RVA   : 0x118FBF0   Offset: 0x118EFF0   Length: 0xB7
     public static UIKeyNavigation get_current()
     {
         bool cVar1;
@@ -61,7 +61,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x600019C
-    // RVA   : 0x118F6A0   Offset: 0x118EAA0   Length: 0x13F
+    // RVA   : 0x118FCB0   Offset: 0x118F0B0   Length: 0x13F
     public bool get_isColliderEnabled()
     {
         bool cVar1;
@@ -77,10 +77,10 @@ public class UIKeyNavigation
           if (!cVar1) {
             return false;
           }
-          lVar3 = Component.GetComponent(this,DAT_181d93b60);
+          lVar3 = Component.GetComponent(this,DAT_181d93b78);
           cVar1 = Object.op_Inequality(lVar3,0,0);
           if (!cVar1) {
-            lVar3 = Component.GetComponent(this,DAT_181d93be0);
+            lVar3 = Component.GetComponent(this,DAT_181d93bf8);
             cVar1 = Object.op_Inequality(lVar3,0,0);
             if (!cVar1) {
               return false;
@@ -98,11 +98,11 @@ public class UIKeyNavigation
     }
 
     // Token : 0x600019D
-    // RVA   : 0x118EE10   Offset: 0x118E210   Length: 0xB3
+    // RVA   : 0x118F420   Offset: 0x118E820   Length: 0xB3
     protected virtual void OnEnable()
     {
         if (UIKeyNavigation.list != null) {
-          FUN_181583c60(UIKeyNavigation.list,this,DAT_181da6cb8);
+          FUN_181584270(UIKeyNavigation.list,this,DAT_181da6cd0);
           if (this.mStarted) {
             MonoBehaviour.Invoke(this,"Start",0x3a83126f,0);
             return;
@@ -112,7 +112,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x600019E
-    // RVA   : 0x118F4D0   Offset: 0x118E8D0   Length: 0x7D
+    // RVA   : 0x118FAE0   Offset: 0x118EEE0   Length: 0x7D
     private void Start()
     {
         ulong uVar1;
@@ -129,17 +129,17 @@ public class UIKeyNavigation
     }
 
     // Token : 0x600019F
-    // RVA   : 0x118ED80   Offset: 0x118E180   Length: 0x81
+    // RVA   : 0x118F390   Offset: 0x118E790   Length: 0x81
     protected virtual void OnDisable()
     {
         if (UIKeyNavigation.list != null) {
-          FUN_181585c70(UIKeyNavigation.list,this,DAT_181da6d38);
+          FUN_181586280(UIKeyNavigation.list,this,DAT_181da6d50);
           return;
         }
     }
 
     // Token : 0x60001A0
-    // RVA   : 0x118EB80   Offset: 0x118DF80   Length: 0x153
+    // RVA   : 0x118F190   Offset: 0x118E590   Length: 0x153
     private static bool IsActive(GameObject go)
     {
         long lVar1;
@@ -154,10 +154,10 @@ public class UIKeyNavigation
           if (!cVar2) {
             return false;
           }
-          lVar1 = GameObject.GetComponent(go,DAT_181dc80c8);
+          lVar1 = GameObject.GetComponent(go,DAT_181dc80e0);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
-            lVar1 = GameObject.GetComponent(go,DAT_181dc8150);
+            lVar1 = GameObject.GetComponent(go,DAT_181dc8168);
             cVar2 = Object.op_Inequality(lVar1,0,0);
             if (!cVar2) {
               return false;
@@ -175,7 +175,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001A1
-    // RVA   : 0x118E430   Offset: 0x118D830   Length: 0xCF
+    // RVA   : 0x118EA40   Offset: 0x118DE40   Length: 0xCF
     public GameObject GetLeft()
     {
         bool cVar1;
@@ -199,7 +199,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001A2
-    // RVA   : 0x118E500   Offset: 0x118D900   Length: 0xCF
+    // RVA   : 0x118EB10   Offset: 0x118DF10   Length: 0xCF
     public GameObject GetRight()
     {
         bool cVar1;
@@ -223,7 +223,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001A3
-    // RVA   : 0x118E5D0   Offset: 0x118D9D0   Length: 0xCE
+    // RVA   : 0x118EBE0   Offset: 0x118DFE0   Length: 0xCE
     public GameObject GetUp()
     {
         bool cVar1;
@@ -247,7 +247,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001A4
-    // RVA   : 0x118E360   Offset: 0x118D760   Length: 0xCE
+    // RVA   : 0x118E970   Offset: 0x118DD70   Length: 0xCE
     public GameObject GetDown()
     {
         bool cVar1;
@@ -271,7 +271,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001A5
-    // RVA   : 0x118E6A0   Offset: 0x118DAA0   Length: 0x4D7
+    // RVA   : 0x118ECB0   Offset: 0x118E0B0   Length: 0x4D7
     public GameObject Get(Vector3 myDir, float x, float y)
     {
         uint uVar1;
@@ -341,13 +341,13 @@ public class UIKeyNavigation
               if (lVar3 == null) break;
               if ((*(int *)(lVar3 + 24) != 3) &&
                  (cVar6 = UIKeyNavigation.get_isColliderEnabled(lVar3,0), cVar6)) {
-                plVar10 = (int64 *)Component.GetComponent(lVar3,DAT_181d97060);
+                plVar10 = (int64 *)Component.GetComponent(lVar3,DAT_181d97078);
                 cVar6 = Object.op_Inequality(plVar10,0);
                 if (cVar6) {
                   if (plVar10 == (int64 *)0) break;
                   fVar14 = (float)(**(code **)(*plVar10 + 0x1a8))
                                             (plVar10,*(uint64 *)(*plVar10 + 0x1b0));
-                  if (fVar14 == 0.0) goto LAB_18118eade;
+                  if (fVar14 == 0.0) goto LAB_18118f0ee;
                 }
                 uVar9 = Component.get_gameObject(lVar3,0);
                 puVar8 = (uint64 *)UIKeyNavigation.GetCenter(local_e8,uVar9);
@@ -374,14 +374,14 @@ public class UIKeyNavigation
                 }
               }
             }
-        LAB_18118eade:
+        LAB_18118f0ee:
             uVar13 = (uint64)(uVar12 + 1);
           }
         }
     }
 
     // Token : 0x60001A6
-    // RVA   : 0x118DF80   Offset: 0x118D380   Length: 0x3D0
+    // RVA   : 0x118E590   Offset: 0x118D990   Length: 0x3D0
     protected static Vector3 GetCenter(GameObject go)
     {
         ulong uVar1;
@@ -411,7 +411,7 @@ public class UIKeyNavigation
                 puVar6 = (uint64 *)Transform.get_position(&local_28,lVar5,0);
                 local_50 = *(float *)(puVar6 + 1);
                 *(uint64 *)go = *puVar6;
-        LAB_18118e0c3:
+        LAB_18118e6d3:
                 go[2] = local_50;
                 return go;
               }
@@ -478,7 +478,7 @@ public class UIKeyNavigation
                 puVar6 = (uint64 *)Camera.WorldToScreenPoint(&local_28,lVar5,&local_38,0,uVar8);
                 local_50 = 0.0;
                 *(uint64 *)go = *puVar6;
-                goto LAB_18118e0c3;
+                goto LAB_18118e6d3;
               }
             }
           }
@@ -486,7 +486,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001A7
-    // RVA   : 0x118F320   Offset: 0x118E720   Length: 0x1AD
+    // RVA   : 0x118F930   Offset: 0x118ED30   Length: 0x1AD
     public virtual void OnNavigate(KeyCode key)
     {
         int iVar1;
@@ -523,7 +523,7 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001A8
-    // RVA   : 0x118EED0   Offset: 0x118E2D0   Length: 0x442
+    // RVA   : 0x118F4E0   Offset: 0x118E8E0   Length: 0x442
     public virtual void OnKey(KeyCode key)
     {
         int iVar1;
@@ -549,11 +549,11 @@ public class UIKeyNavigation
         cVar2 = Object.op_Equality(lVar5,0,0);
         if (cVar2) {
           lVar5 = UICamera.GetKey;
-          if (lVar5 == null) goto LAB_18118f30d;
+          if (lVar5 == null) goto LAB_18118f91d;
           cVar2 = GetKeyStateFunc.Invoke(lVar5,0x130,0);
           if (!cVar2) {
             lVar5 = UICamera.GetKey;
-            if (lVar5 == null) goto LAB_18118f30d;
+            if (lVar5 == null) goto LAB_18118f91d;
             cVar2 = GetKeyStateFunc.Invoke(lVar5,0x12f,0);
             if (!cVar2) {
               lVar5 = UIKeyNavigation.GetRight(this,0);
@@ -569,7 +569,7 @@ public class UIKeyNavigation
               if (cVar2) {
                 lVar5 = UIKeyNavigation.GetLeft(this,0);
               }
-              goto LAB_18118f240;
+              goto LAB_18118f850;
             }
           }
           lVar5 = UIKeyNavigation.GetLeft(this,0);
@@ -586,27 +586,27 @@ public class UIKeyNavigation
             lVar5 = UIKeyNavigation.GetRight(this,0);
           }
         }
-        LAB_18118f240:
+        LAB_18118f850:
         cVar2 = Object.op_Inequality(lVar5,0,0);
         if (cVar2) {
           UICamera.set_currentScheme(2);
           UICamera.set_hoveredObject(lVar5,0);
           if (lVar5 == null) {
-        LAB_18118f30d:
+        LAB_18118f91d:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar5 = GameObject.GetComponent(lVar5,DAT_181d74988);
           cVar2 = Object.op_Inequality(lVar5,0,0);
           if (cVar2) {
-            if (lVar5 == null) goto LAB_18118f30d;
+            if (lVar5 == null) goto LAB_18118f91d;
             UIInput.set_isSelected(lVar5,1,0);
           }
         }
     }
 
     // Token : 0x60001A9
-    // RVA   : 0x118ECE0   Offset: 0x118E0E0   Length: 0x9C
+    // RVA   : 0x118F2F0   Offset: 0x118E6F0   Length: 0x9C
     protected virtual void OnClick()
     {
         ulong uVar1;
@@ -627,15 +627,15 @@ public class UIKeyNavigation
     }
 
     // Token : 0x60001AB
-    // RVA   : 0x118F550   Offset: 0x118E950   Length: 0x8C
+    // RVA   : 0x118FB60   Offset: 0x118EF60   Length: 0x8C
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = new BetterList_1(DAT_181da6c38);
-        puVar1 = *(uint64 **)(DAT_181dafcf8 + 184);
+        uVar2 = new BetterList_1(DAT_181da6c50);
+        puVar1 = *(uint64 **)(DAT_181dafd10 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
-        *(uint32 *)(*(int64 *)(DAT_181dafcf8 + 184) + 8) = 0;
+        *(uint32 *)(*(int64 *)(DAT_181dafd10 + 184) + 8) = 0;
     }
 
 }

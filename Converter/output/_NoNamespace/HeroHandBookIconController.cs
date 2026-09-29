@@ -14,7 +14,7 @@ public class HeroHandBookIconController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60017D0
-    // RVA   : 0xAF4370   Offset: 0xAF3770   Length: 0x39D
+    // RVA   : 0xAF4A30   Offset: 0xAF3E30   Length: 0x39D
     public void Init()
     {
         uint uVar3;
@@ -33,7 +33,7 @@ public class HeroHandBookIconController
           if (lVar5 != null) {
             lVar5 = Transform.Find(lVar5,"Text",0);
             if (lVar5 != null) {
-              uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
+              uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
               if (this.heroData != null) {
                 uVar7 = HeroData.HeroName(this.heroData,0,0);
                 LTLocalization.SetText(uVar6,uVar7,0);
@@ -43,7 +43,7 @@ public class HeroHandBookIconController
                   if (lVar5 != null) {
                     lVar5 = Transform.Find(lVar5,"Text",0);
                     if (lVar5 != null) {
-                      uVar6 = Component.GetComponent(lVar5,DAT_181d96160);
+                      uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
                       if (this.heroData != null) {
                         uVar7 = HeroData.GetHeroForceLvDescribe(this.heroData,1,0);
                         LTLocalization.SetText(uVar6,uVar7,0);
@@ -118,7 +118,7 @@ public class HeroHandBookIconController
     }
 
     // Token : 0x60017D1
-    // RVA   : 0xAF4710   Offset: 0xAF3B10   Length: 0x171
+    // RVA   : 0xAF4DD0   Offset: 0xAF41D0   Length: 0x171
     public void Update()
     {
         long lVar1;
@@ -128,7 +128,7 @@ public class HeroHandBookIconController
         ulong uVar5;
         ulong uVar6;
         lVar1 = this.skeletonGraphic;
-        uVar6 = *(uint64 *)(*(int64 *)(DAT_181d8b790 + 184) + 72);
+        uVar6 = *(uint64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 72);
         uVar5 = Component.get_gameObject(this,0);
         cVar3 = Object.op_Inequality(uVar6,uVar5,0);
         if (!cVar3) {

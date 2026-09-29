@@ -34,7 +34,7 @@ public class <PlayItemSound>d__56
     }
 
     // Token : 0x6001378
-    // RVA   : 0x9318D0   Offset: 0x930CD0   Length: 0x1E9
+    // RVA   : 0x931F30   Offset: 0x931330   Length: 0x1E9
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -68,7 +68,7 @@ public class <PlayItemSound>d__56
               }
               plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/LegendDrop",0);
               plVar6 = (int64 *)0;
-              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+              if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                 plVar6 = plVar5;
               }
               NGUITools.PlaySound(plVar6,0x3f000000,0);
@@ -86,15 +86,15 @@ public class <PlayItemSound>d__56
     }
 
     // Token : 0x600137A
-    // RVA   : 0x931AC0   Offset: 0x930EC0   Length: 0x3E
+    // RVA   : 0x932120   Offset: 0x931520   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d9a638);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d9a7d0);
     }
 
     // Token : 0x600137B

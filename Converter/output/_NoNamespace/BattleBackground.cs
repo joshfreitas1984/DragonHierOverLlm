@@ -11,7 +11,7 @@ public class BattleBackground
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
         if (lVar1 != null) {
           BattleController.OnDrag(lVar1,delta,0);
           return;
@@ -27,7 +27,7 @@ public class BattleBackground
         ulong uVar3;
         long lVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0248 + 184) + 80);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
         if (lVar1 == null) {
         LAB_1807f90ea:
                           // WARNING: Subroutine does not return
@@ -35,18 +35,18 @@ public class BattleBackground
         }
         if (delta != null.0) {
           if (*(int64 *)(lVar1 + 200) == 0) goto LAB_1807f90ea;
-          uVar3 = Component.GetComponent(*(int64 *)(lVar1 + 200),DAT_181d95d60);
+          uVar3 = Component.GetComponent(*(int64 *)(lVar1 + 200),DAT_181d95d78);
           cVar2 = Object.op_Equality(uVar3,0,0);
           if (!cVar2) {
             if ((*(int64 *)(lVar1 + 200) == 0) ||
-               (lVar4 = Component.GetComponent(*(int64 *)(lVar1 + 200),DAT_181d95d60)) == null)
+               (lVar4 = Component.GetComponent(*(int64 *)(lVar1 + 200),DAT_181d95d78)) == null)
             goto LAB_1807f90ea;
             cVar2 = Behaviour.get_isActiveAndEnabled(lVar4,0);
             if (cVar2) {
               return;
             }
           }
-          uVar5 = FUN_1810e36c0(*(float *)(lVar1 + 224) + delta,0x3f000000,0x3fc00000,0);
+          uVar5 = FUN_1810e3cd0(*(float *)(lVar1 + 224) + delta,0x3f000000,0x3fc00000,0);
           *(uint32 *)(lVar1 + 224) = uVar5;
         }
     }

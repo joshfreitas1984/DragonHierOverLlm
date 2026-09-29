@@ -17,16 +17,16 @@ public class TankWeaponController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009CA
-    // RVA   : 0xA9D150   Offset: 0xA9C550   Length: 0x48
+    // RVA   : 0xA9D810   Offset: 0xA9CC10   Length: 0x48
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d93168);
+        uVar1 = Component.GetComponent(this,DAT_181d93178);
         this._animation = uVar1;
     }
 
     // Token : 0x60009CB
-    // RVA   : 0xA9D1A0   Offset: 0xA9C5A0   Length: 0x12B
+    // RVA   : 0xA9D860   Offset: 0xA9CC60   Length: 0x12B
     private void Update()
     {
         ulong uVar1;
@@ -55,7 +55,7 @@ public class TankWeaponController
                 uStack_30 = puVar5[1];
                 local_48 = uVar1;
                 local_40 = uVar2;
-                Object.Instantiate(uVar3,&local_48,&local_38,DAT_181d92e98);
+                Object.Instantiate(uVar3,&local_48,&local_38,DAT_181d92d30);
                 return;
               }
             }

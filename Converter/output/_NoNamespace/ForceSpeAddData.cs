@@ -16,8 +16,8 @@ public class ForceSpeAddData
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d815e8);
-        FUN_1808b1370(uVar1,DAT_181dbdbb8);
+        uVar1 = il2cpp_internal(DAT_181d81600);
+        FUN_1808b1370(uVar1,DAT_181dbdbd0);
         this.forceSpeAddData = uVar1;
     }
 
@@ -27,11 +27,11 @@ public class ForceSpeAddData
     {
         ulong uVar1;
         if (this.forceSpeAddData != null) {
-          Dictionary_2.Clear(this.forceSpeAddData,DAT_181dbddd8);
+          Dictionary_2.Clear(this.forceSpeAddData,DAT_181dbddf0);
           return;
         }
-        uVar1 = il2cpp_internal(DAT_181d815e8);
-        FUN_1808b1370(uVar1,DAT_181dbdbb8);
+        uVar1 = il2cpp_internal(DAT_181d81600);
+        FUN_1808b1370(uVar1,DAT_181dbdbd0);
         this.forceSpeAddData = uVar1;
     }
 
@@ -42,13 +42,13 @@ public class ForceSpeAddData
         long lVar1;
         bool cVar2;
         if (this.forceSpeAddData != null) {
-          cVar2 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde60);
+          cVar2 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde78);
           if (!cVar2) {
             if (value == null.0) {
               return this;
             }
             if (this.forceSpeAddData != null) {
-              FUN_1817af4f0(this.forceSpeAddData,speAddDataType,value,DAT_181dbdd50);
+              FUN_1817afb00(this.forceSpeAddData,speAddDataType,value,DAT_181dbdd68);
               return this;
             }
           }
@@ -56,12 +56,12 @@ public class ForceSpeAddData
             lVar1 = this.forceSpeAddData;
             if (value == null.0) {
               if (lVar1 != null) {
-                FUN_18145de50(lVar1,speAddDataType,DAT_181dbe188);
+                FUN_18145e460(lVar1,speAddDataType,DAT_181dbe1a0);
                 return this;
               }
             }
             else if (lVar1 != null) {
-              FUN_1817c6620(lVar1,speAddDataType,value,DAT_181dbe540);
+              FUN_1817c6c30(lVar1,speAddDataType,value,DAT_181dbe558);
               return this;
             }
           }
@@ -75,13 +75,13 @@ public class ForceSpeAddData
         long lVar1;
         bool cVar2;
         if (this.forceSpeAddData != null) {
-          cVar2 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde60);
+          cVar2 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde78);
           if (!cVar2) {
             if (value == null.0) {
               return this;
             }
             if (this.forceSpeAddData != null) {
-              FUN_1817af4f0(this.forceSpeAddData,speAddDataType,value,DAT_181dbdd50);
+              FUN_1817afb00(this.forceSpeAddData,speAddDataType,value,DAT_181dbdd68);
               return this;
             }
           }
@@ -89,12 +89,12 @@ public class ForceSpeAddData
             lVar1 = this.forceSpeAddData;
             if (value == null.0) {
               if (lVar1 != null) {
-                FUN_18145de50(lVar1,speAddDataType,DAT_181dbe188);
+                FUN_18145e460(lVar1,speAddDataType,DAT_181dbe1a0);
                 return this;
               }
             }
             else if (lVar1 != null) {
-              FUN_1817c6620(lVar1,speAddDataType,value,DAT_181dbe540);
+              FUN_1817c6c30(lVar1,speAddDataType,value,DAT_181dbe558);
               return this;
             }
           }
@@ -108,12 +108,12 @@ public class ForceSpeAddData
         bool cVar1;
         ulong uVar2;
         if (this.forceSpeAddData != null) {
-          cVar1 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde60);
+          cVar1 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde78);
           if (!cVar1) {
             return 0;
           }
           if (this.forceSpeAddData != null) {
-            uVar2 = FUN_1817d9cd0(this.forceSpeAddData,speAddDataType,DAT_181dbe430);
+            uVar2 = FUN_1817da2e0(this.forceSpeAddData,speAddDataType,DAT_181dbe448);
             return uVar2;
           }
         }
@@ -126,12 +126,12 @@ public class ForceSpeAddData
         bool cVar1;
         ulong uVar2;
         if (this.forceSpeAddData != null) {
-          cVar1 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde60);
+          cVar1 = FUN_1808ab490(this.forceSpeAddData,speAddDataType,DAT_181dbde78);
           if (!cVar1) {
             return 0;
           }
           if (this.forceSpeAddData != null) {
-            uVar2 = FUN_1817d9cd0(this.forceSpeAddData,speAddDataType,DAT_181dbe430);
+            uVar2 = FUN_1817da2e0(this.forceSpeAddData,speAddDataType,DAT_181dbe448);
             return uVar2;
           }
         }
@@ -179,8 +179,8 @@ public class ForceSpeAddData
     {
         ulong uVar1;
         if (this.forceSpeAddData != null) {
-          uVar1 = Dictionary_2.get_Keys(this.forceSpeAddData,DAT_181dbe4b8);
-          FUN_180971e70(uVar1,DAT_181db53c0);
+          uVar1 = Dictionary_2.get_Keys(this.forceSpeAddData,DAT_181dbe4d0);
+          FUN_180972500(uVar1,DAT_181db53d8);
           return;
         }
     }
@@ -207,35 +207,35 @@ public class ForceSpeAddData
         uint64 local_28;
         aiStack_64[3] = 0;
         if ((this.forceSpeAddData == null) ||
-           (lVar2 = Dictionary_2.get_Keys(this.forceSpeAddData,DAT_181dbe4b8)) == null) {
+           (lVar2 = Dictionary_2.get_Keys(this.forceSpeAddData,DAT_181dbe4d0)) == null) {
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        FUN_180ecbf30(&local_38,lVar2,DAT_181dc36f0);
+        FUN_180ecc540(&local_38,lVar2,DAT_181dc3708);
         local_50 = local_38;
         uStack_4c = uStack_34;
         uStack_48 = uStack_30;
         uStack_44 = uStack_2c;
         local_40 = local_28;
         do {
-          cVar1 = FUN_1811c4f60(&local_50,DAT_181d9b258);
+          cVar1 = FUN_1811c5570(&local_50,DAT_181d9b270);
           if (!cVar1) {
             aiStack_64[1] = 75;
             iVar4 = aiStack_64[3] + 1;
             aiStack_64[3] = iVar4;
-            ZhSegment.Initialize(&local_50,DAT_181d9b1d8);
+            ZhSegment.Initialize(&local_50,DAT_181d9b1f0);
             goto LAB_18077faf0;
           }
           if (this.forceSpeAddData == null) {
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          fVar5 = (float)FUN_1817d9cd0(this.forceSpeAddData,local_40 & 0xffffffff,DAT_181dbe430);
+          fVar5 = (float)FUN_1817da2e0(this.forceSpeAddData,local_40 & 0xffffffff,DAT_181dbe448);
         } while (fVar5 == 0.0);
         aiStack_64[1] = 77;
         iVar4 = aiStack_64[3] + 1;
         aiStack_64[3] = iVar4;
-        ZhSegment.Initialize(&local_50,DAT_181d9b1d8);
+        ZhSegment.Initialize(&local_50,DAT_181d9b1f0);
         LAB_18077faf0:
         if ((iVar4 == 0) || (aiStack_64[iVar4] != 77)) {
           uVar3 = 1;
@@ -268,25 +268,25 @@ public class ForceSpeAddData
         if (a != null) {
           plVar3 = (int64 *)ForceSpeAddData.Clone(a,0);
           if (((b != null) && (*(int64 *)(b + 16) != 0)) &&
-             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(b + 16),DAT_181dbe4b8)) != null) {
-            FUN_180ecbf30(&local_38,lVar4,DAT_181dc36f0);
+             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(b + 16),DAT_181dbe4d0)) != null) {
+            FUN_180ecc540(&local_38,lVar4,DAT_181dc3708);
             local_50 = local_38;
             uStack_4c = uStack_34;
             uStack_48 = uStack_30;
             uStack_44 = uStack_2c;
             local_40 = local_28;
             while( true ) {
-              cVar2 = FUN_1811c4f60(&local_50,DAT_181d9b258);
+              cVar2 = FUN_1811c5570(&local_50,DAT_181d9b270);
               uVar1 = local_40;
               if (!cVar2) {
-                ZhSegment.Initialize(&local_50,DAT_181d9b1d8);
+                ZhSegment.Initialize(&local_50,DAT_181d9b1f0);
                 return plVar3;
               }
               if (*(int64 *)(b + 16) == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar2 = FUN_1808ab490(*(int64 *)(b + 16),uVar1 & 0xffffffff,DAT_181dbde60);
+              cVar2 = FUN_1808ab490(*(int64 *)(b + 16),uVar1 & 0xffffffff,DAT_181dbde78);
               if (!cVar2) {
                 fVar6 = 0.0;
               }
@@ -295,15 +295,15 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar6 = (float)FUN_1817d9cd0(*(int64 *)(b + 16),uVar1 & 0xffffffff,
-                                             DAT_181dbe430);
+                fVar6 = (float)FUN_1817da2e0(*(int64 *)(b + 16),uVar1 & 0xffffffff,
+                                             DAT_181dbe448);
               }
               if (plVar3 == (int64 *)0) break;
               if (plVar3[2] == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde60);
+              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde78);
               if (!cVar2) {
                 fVar5 = 0.0;
               }
@@ -312,7 +312,7 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar5 = (float)FUN_1817d9cd0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe430);
+                fVar5 = (float)FUN_1817da2e0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe448);
               }
               ForceSpeAddData.Set(plVar3,uVar1 & 0xffffffff,fVar5 + fVar6,0);
             }
@@ -343,18 +343,18 @@ public class ForceSpeAddData
         if (a != null) {
           plVar3 = (int64 *)ForceSpeAddData.Clone(a,0);
           if ((*(int64 *)(a + 16) != 0) &&
-             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(a + 16),DAT_181dbe4b8)) != null) {
-            FUN_180ecbf30(&local_38,lVar4,DAT_181dc36f0);
+             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(a + 16),DAT_181dbe4d0)) != null) {
+            FUN_180ecc540(&local_38,lVar4,DAT_181dc3708);
             local_50 = local_38;
             uStack_4c = uStack_34;
             uStack_48 = uStack_30;
             uStack_44 = uStack_2c;
             local_40 = local_28;
             while( true ) {
-              cVar2 = FUN_1811c4f60(&local_50,DAT_181d9b258);
+              cVar2 = FUN_1811c5570(&local_50,DAT_181d9b270);
               uVar1 = local_40;
               if (!cVar2) {
-                ZhSegment.Initialize(&local_50,DAT_181d9b1d8);
+                ZhSegment.Initialize(&local_50,DAT_181d9b1f0);
                 return plVar3;
               }
               if (plVar3 == (int64 *)0) break;
@@ -362,7 +362,7 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde60);
+              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde78);
               if (!cVar2) {
                 fVar5 = 0.0;
               }
@@ -371,7 +371,7 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar5 = (float)FUN_1817d9cd0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe430);
+                fVar5 = (float)FUN_1817da2e0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe448);
               }
               ForceSpeAddData.Set(plVar3,uVar1 & 0xffffffff,fVar5 * b,0);
             }
@@ -402,18 +402,18 @@ public class ForceSpeAddData
         if (a != null) {
           plVar3 = (int64 *)ForceSpeAddData.Clone(a,0);
           if ((*(int64 *)(a + 16) != 0) &&
-             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(a + 16),DAT_181dbe4b8)) != null) {
-            FUN_180ecbf30(&local_38,lVar4,DAT_181dc36f0);
+             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(a + 16),DAT_181dbe4d0)) != null) {
+            FUN_180ecc540(&local_38,lVar4,DAT_181dc3708);
             local_50 = local_38;
             uStack_4c = uStack_34;
             uStack_48 = uStack_30;
             uStack_44 = uStack_2c;
             local_40 = local_28;
             while( true ) {
-              cVar2 = FUN_1811c4f60(&local_50,DAT_181d9b258);
+              cVar2 = FUN_1811c5570(&local_50,DAT_181d9b270);
               uVar1 = local_40;
               if (!cVar2) {
-                ZhSegment.Initialize(&local_50,DAT_181d9b1d8);
+                ZhSegment.Initialize(&local_50,DAT_181d9b1f0);
                 return plVar3;
               }
               if (plVar3 == (int64 *)0) break;
@@ -421,7 +421,7 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde60);
+              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde78);
               if (!cVar2) {
                 fVar5 = 0.0;
               }
@@ -430,7 +430,7 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar5 = (float)FUN_1817d9cd0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe430);
+                fVar5 = (float)FUN_1817da2e0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe448);
               }
               ForceSpeAddData.Set(plVar3,uVar1 & 0xffffffff,fVar5 * b,0);
             }
@@ -462,25 +462,25 @@ public class ForceSpeAddData
         if (a != null) {
           plVar3 = (int64 *)ForceSpeAddData.Clone(a,0);
           if (((b != null) && (*(int64 *)(b + 16) != 0)) &&
-             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(b + 16),DAT_181dbe4b8)) != null) {
-            FUN_180ecbf30(&local_48,lVar4,DAT_181dc36f0);
+             (lVar4 = Dictionary_2.get_Keys(*(int64 *)(b + 16),DAT_181dbe4d0)) != null) {
+            FUN_180ecc540(&local_48,lVar4,DAT_181dc3708);
             local_60 = local_48;
             uStack_5c = uStack_44;
             uStack_58 = uStack_40;
             uStack_54 = uStack_3c;
             local_50 = local_38;
             while( true ) {
-              cVar2 = FUN_1811c4f60(&local_60,DAT_181d9b258);
+              cVar2 = FUN_1811c5570(&local_60,DAT_181d9b270);
               uVar1 = local_50;
               if (!cVar2) {
-                ZhSegment.Initialize(&local_60,DAT_181d9b1d8);
+                ZhSegment.Initialize(&local_60,DAT_181d9b1f0);
                 return plVar3;
               }
               if (*(int64 *)(b + 16) == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar2 = FUN_1808ab490(*(int64 *)(b + 16),uVar1 & 0xffffffff,DAT_181dbde60);
+              cVar2 = FUN_1808ab490(*(int64 *)(b + 16),uVar1 & 0xffffffff,DAT_181dbde78);
               if (!cVar2) {
                 fVar6 = 0.0;
               }
@@ -489,15 +489,15 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar6 = (float)FUN_1817d9cd0(*(int64 *)(b + 16),uVar1 & 0xffffffff,
-                                             DAT_181dbe430);
+                fVar6 = (float)FUN_1817da2e0(*(int64 *)(b + 16),uVar1 & 0xffffffff,
+                                             DAT_181dbe448);
               }
               if (plVar3 == (int64 *)0) break;
               if (plVar3[2] == 0) {
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde60);
+              cVar2 = FUN_1808ab490(plVar3[2],uVar1 & 0xffffffff,DAT_181dbde78);
               if (!cVar2) {
                 fVar5 = 0.0;
               }
@@ -506,7 +506,7 @@ public class ForceSpeAddData
                           // WARNING: Subroutine does not return
                   FUN_1800d6620();
                 }
-                fVar5 = (float)FUN_1817d9cd0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe430);
+                fVar5 = (float)FUN_1817da2e0(plVar3[2],uVar1 & 0xffffffff,DAT_181dbe448);
               }
               ForceSpeAddData.Set(plVar3,uVar1 & 0xffffffff,-fVar6 + fVar5,0);
             }
@@ -535,11 +535,11 @@ public class ForceSpeAddData
         local_res20[0] = 0.0;
         lVar7 = "";
         do {
-          uVar3 = DAT_181db8bb8;
+          uVar3 = DAT_181db8bd0;
           uVar3 = Type.GetTypeFromHandle(uVar3,0);
           lVar4 = Enum.GetValues(uVar3,0);
           if (lVar4 == null) goto LAB_18077f579;
-          iVar2 = FUN_1812fe680(lVar4,0);
+          iVar2 = FUN_1812fec90(lVar4,0);
           if (iVar2 <= iVar8) {
             return lVar7;
           }
@@ -547,7 +547,7 @@ public class ForceSpeAddData
           if (fVar9 != 0.0) {
             if (param_2) {
               local_48[0] = iVar8;
-              plVar5 = (int64 *)il2cpp_value_box(DAT_181dc8250,local_48);
+              plVar5 = (int64 *)il2cpp_value_box(DAT_181dc8268,local_48);
               if (plVar5 == (int64 *)0) goto LAB_18077f579;
               lVar4 = (**(code **)(*plVar5 + 0x168))(plVar5,*(uint64 *)(*plVar5 + 0x170));
               piVar6 = (int *)il2cpp_object_unbox(plVar5);
@@ -556,7 +556,7 @@ public class ForceSpeAddData
               cVar1 = String.Contains(lVar4);
               if (cVar1) goto LAB_18077f549;
             }
-            plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,6);
+            plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
             if (plVar5 == (int64 *)0) {
         LAB_18077f579:
                           // WARNING: Subroutine does not return
@@ -575,7 +575,7 @@ public class ForceSpeAddData
             }
             plVar5[4] = lVar7;
             il2cpp_internal(plVar5 + 4,lVar7);
-            cVar1 = FUN_18171e540(lVar7,"",0);
+            cVar1 = FUN_18171eb50(lVar7,"",0);
             lVar7 = "\n";
             if (cVar1) {
               lVar7 = "";
@@ -588,7 +588,7 @@ public class ForceSpeAddData
             }
             FUN_180002fd0(plVar5,1,lVar7);
             if (this.forceSpeAddData == null) goto LAB_18077f579;
-            fVar9 = (float)FUN_1817d9cd0(this.forceSpeAddData,iVar8,DAT_181dbe430);
+            fVar9 = (float)FUN_1817da2e0(this.forceSpeAddData,iVar8,DAT_181dbe448);
             if (fVar9 <= 0.0) {
               lVar7 = *(int64 *)(pStatics + 0x2d0);
             }
@@ -604,7 +604,7 @@ public class ForceSpeAddData
             FUN_180002fd0(plVar5,2,lVar7);
             lVar7 = FUN_18046c100(0);
             if (((lVar7 == null) || (*(int64 *)(lVar7 + 152) == 0)) ||
-               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d88898)) == null)
+               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d888b0)) == null)
             goto LAB_18077f579;
             lVar7 = *(int64 *)(lVar7 + 16);
             if ((lVar7 != null) &&
@@ -622,17 +622,17 @@ public class ForceSpeAddData
             il2cpp_internal(plVar5 + 7,lVar7);
             lVar7 = FUN_18046c100(0);
             if (((lVar7 == null) || (*(int64 *)(lVar7 + 152) == 0)) ||
-               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d88898)) == null)
+               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d888b0)) == null)
             goto LAB_18077f579;
             lVar4 = this.forceSpeAddData;
             if (*(char *)(lVar7 + 32) == false) {
               if (lVar4 == null) goto LAB_18077f579;
-              local_res20[0] = (float)FUN_1817d9cd0(lVar4,iVar8,DAT_181dbe430);
+              local_res20[0] = (float)FUN_1817da2e0(lVar4,iVar8,DAT_181dbe448);
               lVar7 = Single.ToString(local_res20,"+0.##;-0.##;0",0);
             }
             else {
               if (lVar4 == null) goto LAB_18077f579;
-              local_res20[0] = (float)FUN_1817d9cd0(lVar4,iVar8,DAT_181dbe430);
+              local_res20[0] = (float)FUN_1817da2e0(lVar4,iVar8,DAT_181dbe448);
               local_res20[0] = local_res20[0] * 100.0;
               uVar3 = Single.ToString(local_res20,"+0.##;-0.##;0",0);
               lVar7 = String.Concat(uVar3,"%",0);
@@ -683,11 +683,11 @@ public class ForceSpeAddData
         local_res20[0] = 0.0;
         lVar7 = "";
         do {
-          uVar3 = DAT_181db8bb8;
+          uVar3 = DAT_181db8bd0;
           uVar3 = Type.GetTypeFromHandle(uVar3,0);
           lVar4 = Enum.GetValues(uVar3,0);
           if (lVar4 == null) goto LAB_18077f579;
-          iVar2 = FUN_1812fe680(lVar4,0);
+          iVar2 = FUN_1812fec90(lVar4,0);
           if (iVar2 <= iVar8) {
             return lVar7;
           }
@@ -695,7 +695,7 @@ public class ForceSpeAddData
           if (fVar9 != 0.0) {
             if (noLocal) {
               local_48[0] = iVar8;
-              plVar5 = (int64 *)il2cpp_value_box(DAT_181dc8250,local_48);
+              plVar5 = (int64 *)il2cpp_value_box(DAT_181dc8268,local_48);
               if (plVar5 == (int64 *)0) goto LAB_18077f579;
               lVar4 = (**(code **)(*plVar5 + 0x168))(plVar5,*(uint64 *)(*plVar5 + 0x170));
               piVar6 = (int *)il2cpp_object_unbox(plVar5);
@@ -704,7 +704,7 @@ public class ForceSpeAddData
               cVar1 = String.Contains(lVar4);
               if (cVar1) goto LAB_18077f549;
             }
-            plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5ce0,6);
+            plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
             if (plVar5 == (int64 *)0) {
         LAB_18077f579:
                           // WARNING: Subroutine does not return
@@ -723,7 +723,7 @@ public class ForceSpeAddData
             }
             plVar5[4] = lVar7;
             il2cpp_internal(plVar5 + 4,lVar7);
-            cVar1 = FUN_18171e540(lVar7,"",0);
+            cVar1 = FUN_18171eb50(lVar7,"",0);
             lVar7 = "\n";
             if (cVar1) {
               lVar7 = "";
@@ -736,7 +736,7 @@ public class ForceSpeAddData
             }
             FUN_180002fd0(plVar5,1,lVar7);
             if (this.forceSpeAddData == null) goto LAB_18077f579;
-            fVar9 = (float)FUN_1817d9cd0(this.forceSpeAddData,iVar8,DAT_181dbe430);
+            fVar9 = (float)FUN_1817da2e0(this.forceSpeAddData,iVar8,DAT_181dbe448);
             if (fVar9 <= 0.0) {
               lVar7 = *(int64 *)(pStatics + 0x2d0);
             }
@@ -752,7 +752,7 @@ public class ForceSpeAddData
             FUN_180002fd0(plVar5,2,lVar7);
             lVar7 = FUN_18046c100(0);
             if (((lVar7 == null) || (*(int64 *)(lVar7 + 152) == 0)) ||
-               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d88898)) == null)
+               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d888b0)) == null)
             goto LAB_18077f579;
             lVar7 = *(int64 *)(lVar7 + 16);
             if ((lVar7 != null) &&
@@ -770,17 +770,17 @@ public class ForceSpeAddData
             il2cpp_internal(plVar5 + 7,lVar7);
             lVar7 = FUN_18046c100(0);
             if (((lVar7 == null) || (*(int64 *)(lVar7 + 152) == 0)) ||
-               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d88898)) == null)
+               (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 152),iVar8,DAT_181d888b0)) == null)
             goto LAB_18077f579;
             lVar4 = this.forceSpeAddData;
             if (*(char *)(lVar7 + 32) == false) {
               if (lVar4 == null) goto LAB_18077f579;
-              local_res20[0] = (float)FUN_1817d9cd0(lVar4,iVar8,DAT_181dbe430);
+              local_res20[0] = (float)FUN_1817da2e0(lVar4,iVar8,DAT_181dbe448);
               lVar7 = Single.ToString(local_res20,"+0.##;-0.##;0",0);
             }
             else {
               if (lVar4 == null) goto LAB_18077f579;
-              local_res20[0] = (float)FUN_1817d9cd0(lVar4,iVar8,DAT_181dbe430);
+              local_res20[0] = (float)FUN_1817da2e0(lVar4,iVar8,DAT_181dbe448);
               local_res20[0] = local_res20[0] * 100.0;
               uVar3 = Single.ToString(local_res20,"+0.##;-0.##;0",0);
               lVar7 = String.Concat(uVar3,"%",0);
@@ -824,13 +824,13 @@ public class ForceSpeAddData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -842,7 +842,7 @@ public class ForceSpeAddData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

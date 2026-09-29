@@ -31,7 +31,7 @@ public class <BattleUnitAttackStart>d__248
     }
 
     // Token : 0x6000BE8
-    // RVA   : 0x92D230   Offset: 0x92C630   Length: 0xCEC
+    // RVA   : 0x92D890   Offset: 0x92CC90   Length: 0xCEC
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -95,9 +95,9 @@ public class <BattleUnitAttackStart>d__248
                         (lVar5 = KungfuSkillLvData.DataBase(lVar5,0)) != null))) {
                       if (fVar12 <= (float)*(int *)(lVar5 + 52) * 0.05) {
                         lVar5 = *(int64 *)(lVar10 + 0x110);
-                        lVar6 = *(int64 *)(*(int64 *)(DAT_181db07c8 + 184) + 80);
+                        lVar6 = *(int64 *)(*(int64 *)(DAT_181db07e0 + 184) + 80);
                         if (lVar6 == null) throw; // [null/range check failed]
-                        uVar4 = FUN_180d95a30(0,*(uint32 *)(lVar6 + 24),0);
+                        uVar4 = FUN_180d96040(0,*(uint32 *)(lVar6 + 24),0);
                         if (*(uint32 *)(lVar6 + 24) <= uVar4) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
@@ -226,10 +226,10 @@ public class <BattleUnitAttackStart>d__248
                                 fVar12 = (float)BattleController.GetHalfBattleTimeScale(lVar10,0);
                                 uVar8 = BattleController.HeroEnterGridDelay
                                                   (lVar10,uVar8,uVar3,0.6 / fVar12,0);
-                                FUN_180d8c2e0(lVar10,uVar8,0);
+                                FUN_180d8c8f0(lVar10,uVar8,0);
                               }
                               uVar8 = BattleController.BattleUnitAttackEnd(lVar10);
-                              FUN_180d8c2e0(lVar10,uVar8,0);
+                              FUN_180d8c8f0(lVar10,uVar8,0);
                             }
                             else {
                               if (lVar6 == null) break;
@@ -298,7 +298,7 @@ public class <BattleUnitAttackStart>d__248
                                   (lVar10 = HeroData.GetNowActiveSkill(lVar10,0)) != null) &&
                                  (lVar10 = KungfuSkillLvData.DataBase(lVar10,0)) != null) {
                                 iVar1 = *(int *)(lVar10 + 52);
-                                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf348)) {
+                                if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
                                   plVar11 = plVar9;
                                 }
                                 NGUITools.PlaySound
@@ -345,15 +345,15 @@ public class <BattleUnitAttackStart>d__248
     }
 
     // Token : 0x6000BEA
-    // RVA   : 0x92DF20   Offset: 0x92D320   Length: 0x3E
+    // RVA   : 0x92E580   Offset: 0x92D980   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97738);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d978d0);
     }
 
     // Token : 0x6000BEB

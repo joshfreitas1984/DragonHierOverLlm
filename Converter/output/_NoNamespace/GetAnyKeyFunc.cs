@@ -26,7 +26,7 @@ public class GetAnyKeyFunc
     }
 
     // Token : 0x6000747
-    // RVA   : 0x8E4D90   Offset: 0x8E4190   Length: 0x292
+    // RVA   : 0x9173D0   Offset: 0x9167D0   Length: 0x292
     public virtual bool Invoke()
     {
         long lVar1;
@@ -67,7 +67,7 @@ public class GetAnyKeyFunc
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_1808e4fe5;
+            goto LAB_180917625;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
               cVar4 = FUN_1800d65c0(lVar1);
@@ -90,7 +90,7 @@ public class GetAnyKeyFunc
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + uVar5 * 16)) * 16 +
                                 0x138 + lVar6);
                       uVar5 = (*(code *)*puVar7)(plVar3,puVar7[1]);
-                      goto LAB_1808e4fed;
+                      goto LAB_18091762d;
                     }
                     uVar10 = (short)uVar5 + 1;
                     uVar5 = (uint64)uVar10;
@@ -117,14 +117,14 @@ public class GetAnyKeyFunc
                               (int)((uint32)uVar10 +
                                    *(int *)(*(int64 *)(lVar6 + 176) + 8 + uVar5 * 16)) * 16 +
                               0x138 + lVar6;
-                      goto LAB_1808e4ee6;
+                      goto LAB_180917526;
                     }
                     uVar9 = (short)uVar5 + 1;
                     uVar5 = (uint64)uVar9;
                   } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
                 lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_1808e4ee6:
+        LAB_180917526:
                 uVar11 = *(uint64 *)(lVar6 + 8);
               }
               puVar7 = (uint64 *)il2cpp_internal(uVar11,lVar1);
@@ -135,10 +135,10 @@ public class GetAnyKeyFunc
             uVar5 = (*pcVar2)(lVar1);
           }
           else {
-        LAB_1808e4fe5:
+        LAB_180917625:
             uVar5 = (*pcVar2)(plVar3,lVar1);
           }
-        LAB_1808e4fed:
+        LAB_18091762d:
           uVar12 = uVar12 + 1;
           if (uVar14 <= uVar12) {
             return uVar5;

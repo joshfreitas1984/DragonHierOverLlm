@@ -59,17 +59,17 @@ public class UIEventListener
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60004B9
-    // RVA   : 0x12BD6C0   Offset: 0x12BCAC0   Length: 0x11B
+    // RVA   : 0x12BDCD0   Offset: 0x12BD0D0   Length: 0x11B
     private bool get_isColliderEnabled()
     {
         long lVar1;
         bool cVar2;
         byte uVar3;
         if (this.needsActiveCollider) {
-          lVar1 = Component.GetComponent(this,DAT_181d93b60);
+          lVar1 = Component.GetComponent(this,DAT_181d93b78);
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (!cVar2) {
-            lVar1 = Component.GetComponent(this,DAT_181d93be0);
+            lVar1 = Component.GetComponent(this,DAT_181d93bf8);
             cVar2 = Object.op_Inequality(lVar1,0,0);
             if (!cVar2) {
               return false;
@@ -90,7 +90,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004BA
-    // RVA   : 0x12BD600   Offset: 0x12BCA00   Length: 0x45
+    // RVA   : 0x12BDC10   Offset: 0x12BD010   Length: 0x45
     private void OnSubmit()
     {
         long lVar1;
@@ -104,7 +104,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004BB
-    // RVA   : 0x12BD1E0   Offset: 0x12BC5E0   Length: 0x45
+    // RVA   : 0x12BD7F0   Offset: 0x12BCBF0   Length: 0x45
     private void OnClick()
     {
         long lVar1;
@@ -118,7 +118,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004BC
-    // RVA   : 0x12BD230   Offset: 0x12BC630   Length: 0x45
+    // RVA   : 0x12BD840   Offset: 0x12BCC40   Length: 0x45
     private void OnDoubleClick()
     {
         long lVar1;
@@ -132,7 +132,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004BD
-    // RVA   : 0x12BD420   Offset: 0x12BC820   Length: 0x55
+    // RVA   : 0x12BDA30   Offset: 0x12BCE30   Length: 0x55
     private void OnHover(bool isOver)
     {
         long lVar1;
@@ -146,7 +146,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004BE
-    // RVA   : 0x12BD4E0   Offset: 0x12BC8E0   Length: 0x55
+    // RVA   : 0x12BDAF0   Offset: 0x12BCEF0   Length: 0x55
     private void OnPress(bool isPressed)
     {
         long lVar1;
@@ -160,7 +160,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004BF
-    // RVA   : 0x12BD5A0   Offset: 0x12BC9A0   Length: 0x55
+    // RVA   : 0x12BDBB0   Offset: 0x12BCFB0   Length: 0x55
     private void OnSelect(bool selected)
     {
         long lVar1;
@@ -174,7 +174,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C0
-    // RVA   : 0x12BD540   Offset: 0x12BC940   Length: 0x55
+    // RVA   : 0x12BDB50   Offset: 0x12BCF50   Length: 0x55
     private void OnScroll(float delta)
     {
         long lVar1;
@@ -188,7 +188,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C1
-    // RVA   : 0x12BD350   Offset: 0x12BC750   Length: 0x2F
+    // RVA   : 0x12BD960   Offset: 0x12BCD60   Length: 0x2F
     private void OnDragStart()
     {
         long lVar1;
@@ -202,7 +202,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C2
-    // RVA   : 0x12BD380   Offset: 0x12BC780   Length: 0x3E
+    // RVA   : 0x12BD990   Offset: 0x12BCD90   Length: 0x3E
     private void OnDrag(Vector2 delta)
     {
         long lVar1;
@@ -215,7 +215,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C3
-    // RVA   : 0x12BD300   Offset: 0x12BC700   Length: 0x45
+    // RVA   : 0x12BD910   Offset: 0x12BCD10   Length: 0x45
     private void OnDragOver()
     {
         long lVar1;
@@ -229,7 +229,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C4
-    // RVA   : 0x12BD2B0   Offset: 0x12BC6B0   Length: 0x45
+    // RVA   : 0x12BD8C0   Offset: 0x12BCCC0   Length: 0x45
     private void OnDragOut()
     {
         long lVar1;
@@ -243,7 +243,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C5
-    // RVA   : 0x12BD280   Offset: 0x12BC680   Length: 0x2F
+    // RVA   : 0x12BD890   Offset: 0x12BCC90   Length: 0x2F
     private void OnDragEnd()
     {
         long lVar1;
@@ -257,7 +257,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C6
-    // RVA   : 0x12BD3C0   Offset: 0x12BC7C0   Length: 0x57
+    // RVA   : 0x12BD9D0   Offset: 0x12BCDD0   Length: 0x57
     private void OnDrop(GameObject go)
     {
         long lVar1;
@@ -271,7 +271,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C7
-    // RVA   : 0x12BD480   Offset: 0x12BC880   Length: 0x56
+    // RVA   : 0x12BDA90   Offset: 0x12BCE90   Length: 0x56
     private void OnKey(KeyCode key)
     {
         long lVar1;
@@ -285,7 +285,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C8
-    // RVA   : 0x12BD650   Offset: 0x12BCA50   Length: 0x58
+    // RVA   : 0x12BDC60   Offset: 0x12BD060   Length: 0x58
     private void OnTooltip(bool show)
     {
         long lVar1;
@@ -299,7 +299,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004C9
-    // RVA   : 0x12BD030   Offset: 0x12BC430   Length: 0xF4
+    // RVA   : 0x12BD640   Offset: 0x12BCA40   Length: 0xF4
     public void Clear()
     {
         this.onSubmit = 0;
@@ -320,7 +320,7 @@ public class UIEventListener
     }
 
     // Token : 0x60004CA
-    // RVA   : 0x12BD130   Offset: 0x12BC530   Length: 0xAD
+    // RVA   : 0x12BD740   Offset: 0x12BCB40   Length: 0xAD
     public static UIEventListener Get(GameObject go)
     {
         bool cVar1;
@@ -329,17 +329,17 @@ public class UIEventListener
           uVar2 = GameObject.GetComponent(go,DAT_181d747f0);
           cVar1 = Object.op_Equality(uVar2,0,0);
           if (cVar1) {
-            uVar2 = GameObject.AddComponent(go,DAT_181dc6a78);
+            uVar2 = GameObject.AddComponent(go,DAT_181dc6a90);
           }
           return uVar2;
         }
     }
 
     // Token : 0x60004CB
-    // RVA   : 0x12BD6B0   Offset: 0x12BCAB0   Length: 0xE
+    // RVA   : 0x12BDCC0   Offset: 0x12BD0C0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1812bd6b0(int64 this)
+        void FUN_1812bdcc0(int64 this)
         {
         this.needsActiveCollider = 1;
         FUN_18044ef50(this,0);

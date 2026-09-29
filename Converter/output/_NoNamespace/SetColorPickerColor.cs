@@ -11,7 +11,7 @@ public class SetColorPickerColor
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600008A
-    // RVA   : 0x97B4D0   Offset: 0x97A8D0   Length: 0x122
+    // RVA   : 0x97BB60   Offset: 0x97AF60   Length: 0x122
     public void SetToCurrent()
     {
         ulong uVar2;
@@ -24,11 +24,11 @@ public class SetColorPickerColor
         lVar4 = this.mWidget;
         cVar3 = Object.op_Equality(lVar4,0,0);
         if (cVar3) {
-          lVar4 = Component.GetComponent(this,DAT_181d97060);
+          lVar4 = Component.GetComponent(this,DAT_181d97078);
           *plVar1 = lVar4;
           il2cpp_internal(plVar1,lVar4);
         }
-        uVar2 = **(uint64 **)(DAT_181daf778 + 184);
+        uVar2 = **(uint64 **)(DAT_181daf790 + 184);
         cVar3 = Object.op_Inequality(uVar2,0,0);
         if (cVar3) {
           lVar4 = UIColorPicker.current;

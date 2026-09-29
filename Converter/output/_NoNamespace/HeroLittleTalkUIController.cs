@@ -20,7 +20,7 @@ public class HeroLittleTalkUIController
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60017F4
-    // RVA   : 0xAF7C00   Offset: 0xAF7000   Length: 0x4CB
+    // RVA   : 0xAF82C0   Offset: 0xAF76C0   Length: 0x4CB
     private void Update()
     {
         int iVar1;
@@ -57,8 +57,8 @@ public class HeroLittleTalkUIController
             local_c0 = *(float *)(puVar6 + 1);
             local_c8 = *puVar6;
             uVar5 = ShortcutExtensions.DOScale(uVar5,&local_c8,0x3e19999a,0);
-            uVar7 = new OnTooltipCB(this,DAT_181d79030,0);
-            TweenSettingsExtensions.OnComplete(uVar5,uVar7,DAT_181dc01d0);
+            uVar7 = new OnTooltipCB(this,DAT_181d79048,0);
+            TweenSettingsExtensions.OnComplete(uVar5,uVar7,DAT_181dc0380);
           }
         }
         uVar5 = this.followTarget;
@@ -108,16 +108,16 @@ public class HeroLittleTalkUIController
                       fVar16 = *pfVar10 * 0.5;
                       lVar9 = Component.get_transform(this,0);
                       if (((lVar9 != null) && (lVar9 = Transform.Find(lVar9,"Back",0)) != null)
-                         && (lVar9 = Component.GetComponent(lVar9,DAT_181d94f60)) != null) {
+                         && (lVar9 = Component.GetComponent(lVar9,DAT_181d94f78)) != null) {
                         puVar11 = (uint32 *)RectTransform.get_rect(local_98,lVar9,0);
                         local_88 = *puVar11;
                         uStack_84 = puVar11[1];
                         uStack_80 = puVar11[2];
                         uStack_7c = puVar11[3];
-                        fVar13 = (float)FUN_180d98fa0(&local_88,0);
+                        fVar13 = (float)FUN_180d995b0(&local_88,0);
                         lVar9 = Component.get_transform(this,0);
                         if (((lVar9 != null) && (lVar9 = Transform.Find(lVar9,"Back",0)) != null)
-                           && (lVar9 = Component.GetComponent(lVar9,DAT_181d94f60)) != null) {
+                           && (lVar9 = Component.GetComponent(lVar9,DAT_181d94f78)) != null) {
                           puVar11 = (uint32 *)RectTransform.get_rect(local_98,lVar9,0);
                           local_88 = *puVar11;
                           uStack_84 = puVar11[1];
@@ -152,17 +152,17 @@ public class HeroLittleTalkUIController
     }
 
     // Token : 0x60017F5
-    // RVA   : 0xAF80D0   Offset: 0xAF74D0   Length: 0xE
+    // RVA   : 0xAF8790   Offset: 0xAF7B90   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180af80d0(int64 this)
+        void FUN_180af8790(int64 this)
         {
         this.lifeTime = 0xbf800000;
         FUN_18044ef50(this,0);
     }
 
     // Token : 0x60017F6
-    // RVA   : 0xAF7BA0   Offset: 0xAF6FA0   Length: 0x5F
+    // RVA   : 0xAF8260   Offset: 0xAF7660   Length: 0x5F
     private void <Update>b__4_0()
     {
         ulong uVar1;

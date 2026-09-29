@@ -6,22 +6,22 @@
 public class <>c__DisplayClass29_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002127
+    // Token: 0x4002128
     public RectTransform target;
 
-    // Token: 0x4002128
+    // Token: 0x4002129
     public float startPosY;
 
-    // Token: 0x4002129
+    // Token: 0x400212A
     public bool offsetYSet;
 
-    // Token: 0x400212A
+    // Token: 0x400212B
     public float offsetY;
 
-    // Token: 0x400212B
+    // Token: 0x400212C
     public Sequence s;
 
-    // Token: 0x400212C
+    // Token: 0x400212D
     public Vector2 endValue;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -33,7 +33,7 @@ public class <>c__DisplayClass29_0
     }
 
     // Token : 0x600271D
-    // RVA   : 0x9378E0   Offset: 0x936CE0   Length: 0x1D
+    // RVA   : 0x937F70   Offset: 0x937370   Length: 0x1D
     internal Vector2 <DOJumpAnchorPos>b__0()
     {
         if (this.target != null) {
@@ -43,7 +43,7 @@ public class <>c__DisplayClass29_0
     }
 
     // Token : 0x600271E
-    // RVA   : 0x937900   Offset: 0x936D00   Length: 0x1E
+    // RVA   : 0x937F90   Offset: 0x937390   Length: 0x1E
     internal void <DOJumpAnchorPos>b__1(Vector2 x)
     {
         if (this.target != null) {
@@ -53,7 +53,7 @@ public class <>c__DisplayClass29_0
     }
 
     // Token : 0x600271F
-    // RVA   : 0x937EE0   Offset: 0x9372E0   Length: 0x34
+    // RVA   : 0x938570   Offset: 0x937970   Length: 0x34
     internal void <DOJumpAnchorPos>b__2()
     {
         uint32 extraout_var;
@@ -65,7 +65,7 @@ public class <>c__DisplayClass29_0
     }
 
     // Token : 0x6002720
-    // RVA   : 0x9378E0   Offset: 0x936CE0   Length: 0x1D
+    // RVA   : 0x937F70   Offset: 0x937370   Length: 0x1D
     internal Vector2 <DOJumpAnchorPos>b__3()
     {
         if (this.target != null) {
@@ -75,7 +75,7 @@ public class <>c__DisplayClass29_0
     }
 
     // Token : 0x6002721
-    // RVA   : 0x937900   Offset: 0x936D00   Length: 0x1E
+    // RVA   : 0x937F90   Offset: 0x937390   Length: 0x1E
     internal void <DOJumpAnchorPos>b__4(Vector2 x)
     {
         if (this.target != null) {
@@ -85,7 +85,7 @@ public class <>c__DisplayClass29_0
     }
 
     // Token : 0x6002722
-    // RVA   : 0x937F20   Offset: 0x937320   Length: 0xBC
+    // RVA   : 0x9385B0   Offset: 0x9379B0   Length: 0xBC
     internal void <DOJumpAnchorPos>b__5()
     {
         uint uVar1;

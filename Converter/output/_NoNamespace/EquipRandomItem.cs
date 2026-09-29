@@ -11,7 +11,7 @@ public class EquipRandomItem
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600001F
-    // RVA   : 0x944D00   Offset: 0x944100   Length: 0x1D0
+    // RVA   : 0x945390   Offset: 0x944790   Length: 0x1D0
     private void OnClick()
     {
         uint uVar1;
@@ -36,13 +36,13 @@ public class EquipRandomItem
               if (*(int *)(lVar6 + 24) == 0) {
                 return;
               }
-              uVar4 = FUN_180d95a30(0,*(int *)(lVar6 + 24),0);
+              uVar4 = FUN_180d96040(0,*(int *)(lVar6 + 24),0);
               if (*(uint32 *)(lVar6 + 24) <= uVar4) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar6 = lVar6[uVar4];
               lVar7 = new InvGameItem(uVar4,lVar6,0);
-              uVar5 = FUN_180d95a30(0,12);
+              uVar5 = FUN_180d96040(0,12);
               if ((lVar7 != null) && (*(uint32 *)(lVar7 + 20) = uVar5, lVar6 != null)) {
                 uVar5 = *(uint32 *)(lVar6 + 44);
                 uVar1 = *(uint32 *)(lVar6 + 48);

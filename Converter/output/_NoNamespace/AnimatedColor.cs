@@ -14,7 +14,7 @@ public class AnimatedColor
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600057F
-    // RVA   : 0xA1EA30   Offset: 0xA1DE30   Length: 0x77
+    // RVA   : 0xA1F0C0   Offset: 0xA1E4C0   Length: 0x77
     private void OnEnable()
     {
         ulong uVar1;
@@ -22,7 +22,7 @@ public class AnimatedColor
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        uVar1 = Component.GetComponent(this,DAT_181d97060);
+        uVar1 = Component.GetComponent(this,DAT_181d97078);
         this.mWidget = uVar1;
         if (this.mWidget != null) {
           local_18 = this.color;
@@ -35,7 +35,7 @@ public class AnimatedColor
     }
 
     // Token : 0x6000580
-    // RVA   : 0xA1E9F0   Offset: 0xA1DDF0   Length: 0x30
+    // RVA   : 0xA1F080   Offset: 0xA1E480   Length: 0x30
     private void LateUpdate()
     {
         uint local_18;
@@ -53,14 +53,14 @@ public class AnimatedColor
     }
 
     // Token : 0x6000581
-    // RVA   : 0xA1EAB0   Offset: 0xA1DEB0   Length: 0x2B
+    // RVA   : 0xA1F140   Offset: 0xA1E540   Length: 0x2B
     public void /*ctor*/()
     {
         uint uVar1;
         uint uVar2;
         uint uVar3;
         byte[] local_18 = new byte[16];
-        puVar4 = (uint32 *)FUN_1810d3570(local_18,0);
+        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];

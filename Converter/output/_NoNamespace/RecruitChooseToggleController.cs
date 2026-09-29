@@ -6,17 +6,17 @@
 public class RecruitChooseToggleController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B03
+    // Token: 0x4001B04
     public int heroID;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002097
-    // RVA   : 0xD11B00   Offset: 0xD10F00   Length: 0x117
+    // RVA   : 0xD12110   Offset: 0xD11510   Length: 0x117
     public void RecruitChooseToggleClicked()
     {
-        var pStatics = *(int64*)(DAT_181d9a200 + 184);
+        var pStatics = *(int64*)(DAT_181d9a218 + 184);
         long lVar1;
-        lVar1 = Component.GetComponent(this,DAT_181d962e0);
+        lVar1 = Component.GetComponent(this,DAT_181d962f8);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 0x118) == false) {
             if (*pStatics != 0) {

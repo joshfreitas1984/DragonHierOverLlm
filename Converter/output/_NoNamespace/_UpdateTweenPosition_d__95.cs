@@ -34,7 +34,7 @@ public class <UpdateTweenPosition>d__95
     }
 
     // Token : 0x6000216
-    // RVA   : 0x8F6740   Offset: 0x8F5B40   Length: 0x202
+    // RVA   : 0x9293E0   Offset: 0x9287E0   Length: 0x202
     private virtual bool MoveNext()
     {
         long lVar2;
@@ -47,12 +47,12 @@ public class <UpdateTweenPosition>d__95
           if (plVar1 == (int64 *)0) throw; // [null/range check failed]
           lVar2 = plVar1[30];
           cVar3 = Object.op_Inequality(lVar2,0,0);
-          if (!cVar3) goto LAB_1808f6924;
+          if (!cVar3) goto LAB_1809295c4;
           lVar2 = plVar1[31];
           cVar3 = Object.op_Inequality(lVar2,0,0);
-          if (!cVar3) goto LAB_1808f6924;
+          if (!cVar3) goto LAB_1809295c4;
           if (plVar1[30] == 0) throw; // [null/range check failed]
-          uVar4 = Component.GetComponent(plVar1[30],DAT_181d96460);
+          uVar4 = Component.GetComponent(plVar1[30],DAT_181d96478);
           this.<tp>5__2 = uVar4;
         }
         else {
@@ -83,7 +83,7 @@ public class <UpdateTweenPosition>d__95
         }
         this.<tp>5__2 = 0;
         if (plVar1 != (int64 *)0) {
-        LAB_1808f6924:
+        LAB_1809295c4:
           *(uint8 *)((int64)plVar1 + 0x15a) = 0;
           return false;
         }
@@ -97,15 +97,15 @@ public class <UpdateTweenPosition>d__95
     }
 
     // Token : 0x6000218
-    // RVA   : 0x8F6950   Offset: 0x8F5D50   Length: 0x3E
+    // RVA   : 0x9295F0   Offset: 0x9289F0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db7ad8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181db7c88);
     }
 
     // Token : 0x6000219

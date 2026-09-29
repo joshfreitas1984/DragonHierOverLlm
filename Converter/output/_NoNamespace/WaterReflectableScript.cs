@@ -6,30 +6,30 @@
 public class WaterReflectableScript
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EF5
+    // Token: 0x4001EF6
     public Vector3 localPosition;
 
-    // Token: 0x4001EF6
+    // Token: 0x4001EF7
     public Vector3 localRotation;
 
-    // Token: 0x4001EF7
+    // Token: 0x4001EF8
     public Sprite sprite;
 
-    // Token: 0x4001EF8
+    // Token: 0x4001EF9
     public string spriteLayer;
 
-    // Token: 0x4001EF9
+    // Token: 0x4001EFA
     public int spriteLayerOrder;
 
-    // Token: 0x4001EFA
+    // Token: 0x4001EFB
     private SpriteRenderer spriteSource;
 
-    // Token: 0x4001EFB
+    // Token: 0x4001EFC
     private SpriteRenderer spriteRenderer;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6002462
-    // RVA   : 0xC133E0   Offset: 0xC127E0   Length: 0x28C
+    // RVA   : 0xC13A50   Offset: 0xC12E50   Length: 0x28C
     private void Awake()
     {
         uint uVar1;
@@ -82,7 +82,7 @@ public class WaterReflectableScript
                       if (lVar3 != null) {
                         local_28 = local_48;
                         Transform.set_localScale(lVar3,&local_28,0);
-                        uVar4 = GameObject.AddComponent(lVar2,DAT_181dc6280);
+                        uVar4 = GameObject.AddComponent(lVar2,DAT_181dc6298);
                         this.spriteRenderer = uVar4;
                         if (this.spriteRenderer != null) {
                           Renderer.set_sortingLayerName
@@ -90,7 +90,7 @@ public class WaterReflectableScript
                           if (this.spriteRenderer != null) {
                             Renderer.set_sortingOrder
                                       (this.spriteRenderer,this.spriteLayerOrder,0);
-                            uVar4 = Component.GetComponent(this,DAT_181d95de0);
+                            uVar4 = Component.GetComponent(this,DAT_181d95df8);
                             this.spriteSource = uVar4;
                             return;
                           }
@@ -106,7 +106,7 @@ public class WaterReflectableScript
     }
 
     // Token : 0x6002463
-    // RVA   : 0xC137E0   Offset: 0xC12BE0   Length: 0xA7
+    // RVA   : 0xC13E50   Offset: 0xC13250   Length: 0xA7
     private void OnDestroy()
     {
         ulong uVar1;
@@ -124,7 +124,7 @@ public class WaterReflectableScript
     }
 
     // Token : 0x6002464
-    // RVA   : 0xC13670   Offset: 0xC12A70   Length: 0x16A
+    // RVA   : 0xC13CE0   Offset: 0xC130E0   Length: 0x16A
     private void LateUpdate()
     {
         long lVar1;
@@ -176,7 +176,7 @@ public class WaterReflectableScript
     }
 
     // Token : 0x6002465
-    // RVA   : 0xC13890   Offset: 0xC12C90   Length: 0x93
+    // RVA   : 0xC13F00   Offset: 0xC13300   Length: 0x93
     public void /*ctor*/()
     {
         this.localPosition = 0xbe80000000000000;

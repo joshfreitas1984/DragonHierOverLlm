@@ -43,7 +43,7 @@ public class <ShowItemParticle>d__54
     }
 
     // Token : 0x6000DC0
-    // RVA   : 0x932FE0   Offset: 0x9323E0   Length: 0x2CE
+    // RVA   : 0x933640   Offset: 0x932A40   Length: 0x2CE
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -97,7 +97,7 @@ public class <ShowItemParticle>d__54
               lVar7 = *(int64 *)(lVar7 + 56);
               if ((int)uVar9 < 0) {
                 if (this.targetItemIcon == null) throw; // [null/range check failed]
-                lVar8 = GameObject.GetComponent(this.targetItemIcon,DAT_181dc79e0);
+                lVar8 = GameObject.GetComponent(this.targetItemIcon,DAT_181dc79f8);
                 if (lVar8 == null) throw; // [null/range check failed]
                 uVar9 = *(uint32 *)(lVar8 + 32);
               }
@@ -128,15 +128,15 @@ public class <ShowItemParticle>d__54
     }
 
     // Token : 0x6000DC2
-    // RVA   : 0x9332B0   Offset: 0x9326B0   Length: 0x3E
+    // RVA   : 0x933910   Offset: 0x932D10   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d988b8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d98a50);
     }
 
     // Token : 0x6000DC3

@@ -6,31 +6,31 @@
 public class PlotTargetHeroType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400197E
+    // Token: 0x400197F
     public int value__;
 
-    // Token: 0x400197F
+    // Token: 0x4001980
     public const PlotTargetHeroType Keep;
 
-    // Token: 0x4001980
+    // Token: 0x4001981
     public const PlotTargetHeroType None;
 
-    // Token: 0x4001981
+    // Token: 0x4001982
     public const PlotTargetHeroType Pic;
 
-    // Token: 0x4001982
+    // Token: 0x4001983
     public const PlotTargetHeroType HeroID;
 
-    // Token: 0x4001983
+    // Token: 0x4001984
     public const PlotTargetHeroType PlotInteractHero;
 
-    // Token: 0x4001984
+    // Token: 0x4001985
     public const PlotTargetHeroType HeroName;
 
-    // Token: 0x4001985
+    // Token: 0x4001986
     public const PlotTargetHeroType MissionEventTargetHero;
 
-    // Token: 0x4001986
+    // Token: 0x4001987
     public const PlotTargetHeroType MissionEventSourceHero;
 
 }

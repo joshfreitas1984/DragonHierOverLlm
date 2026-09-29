@@ -23,7 +23,7 @@ public class BigMapPos
     }
 
     // Token : 0x6001067
-    // RVA   : 0xC7B8B0   Offset: 0xC7ACB0   Length: 0x45
+    // RVA   : 0xC7BEC0   Offset: 0xC7B2C0   Length: 0x45
     public void /*ctor*/(Vector3 source)
     {
         ZhSegment.Initialize(this,0);
@@ -32,14 +32,14 @@ public class BigMapPos
     }
 
     // Token : 0x6001068
-    // RVA   : 0xC7B7A0   Offset: 0xC7ABA0   Length: 0x7
+    // RVA   : 0xC7BDB0   Offset: 0xC7B1B0   Length: 0x7
     public void Reset()
     {
         this.x = 0;
     }
 
     // Token : 0x6001069
-    // RVA   : 0xC7B7B0   Offset: 0xC7ABB0   Length: 0x2C
+    // RVA   : 0xC7BDC0   Offset: 0xC7B1C0   Length: 0x2C
     public void SetByVector3(Vector3 source)
     {
         this.x = *source * 100.0;
@@ -47,7 +47,7 @@ public class BigMapPos
     }
 
     // Token : 0x600106A
-    // RVA   : 0xC7B6D0   Offset: 0xC7AAD0   Length: 0x21
+    // RVA   : 0xC7BCE0   Offset: 0xC7B0E0   Length: 0x21
     public bool IsZero()
     {
         if ((this.x == null.0) && (this.y == null.0)) {
@@ -57,7 +57,7 @@ public class BigMapPos
     }
 
     // Token : 0x600106B
-    // RVA   : 0xC7B590   Offset: 0xC7A990   Length: 0x8A
+    // RVA   : 0xC7BBA0   Offset: 0xC7AFA0   Length: 0x8A
     public float Distance(BigMapPos target)
     {
         float fVar1;
@@ -78,7 +78,7 @@ public class BigMapPos
     }
 
     // Token : 0x600106C
-    // RVA   : 0xC7B700   Offset: 0xC7AB00   Length: 0x93
+    // RVA   : 0xC7BD10   Offset: 0xC7B110   Length: 0x93
     public int QuickTravelTime(BigMapPos target)
     {
         uint uVar1;
@@ -101,7 +101,7 @@ public class BigMapPos
     }
 
     // Token : 0x600106D
-    // RVA   : 0xC7B870   Offset: 0xC7AC70   Length: 0x40
+    // RVA   : 0xC7BE80   Offset: 0xC7B280   Length: 0x40
     public Vector3 ToVector3()
     {
         *this = CONCAT44(param_3 * *(float *)(param_2 + 20),param_3 * *(float *)(param_2 + 16));
@@ -110,7 +110,7 @@ public class BigMapPos
     }
 
     // Token : 0x600106E
-    // RVA   : 0xC7B830   Offset: 0xC7AC30   Length: 0x3A
+    // RVA   : 0xC7BE40   Offset: 0xC7B240   Length: 0x3A
     public Vector3 ToVector3(float multi)
     {
         *this = CONCAT44(param_3 * *(float *)(multi + 20),param_3 * *(float *)(multi + 16));
@@ -119,25 +119,25 @@ public class BigMapPos
     }
 
     // Token : 0x600106F
-    // RVA   : 0xC7B800   Offset: 0xC7AC00   Length: 0x23
+    // RVA   : 0xC7BE10   Offset: 0xC7B210   Length: 0x23
     public Vector2 ToVector2()
     {
-        uint64 FUN_180c7b7e0(int64 this,float param_2)
+        uint64 FUN_180c7bdf0(int64 this,float param_2)
         {
         return CONCAT44(this.y * param_2,param_2 * this.x);
     }
 
     // Token : 0x6001070
-    // RVA   : 0xC7B7E0   Offset: 0xC7ABE0   Length: 0x1A
+    // RVA   : 0xC7BDF0   Offset: 0xC7B1F0   Length: 0x1A
     public Vector2 ToVector2(float multi)
     {
-        uint64 FUN_180c7b7e0(int64 this,float multi)
+        uint64 FUN_180c7bdf0(int64 this,float multi)
         {
         return CONCAT44(this.y * multi,multi * this.x);
     }
 
     // Token : 0x6001071
-    // RVA   : 0xC7B620   Offset: 0xC7AA20   Length: 0xA3
+    // RVA   : 0xC7BC30   Offset: 0xC7B030   Length: 0xA3
     public string GetDescribe(bool haveBrakets)
     {
         ulong uVar1;
@@ -153,7 +153,7 @@ public class BigMapPos
     }
 
     // Token : 0x6001072
-    // RVA   : 0xC7B900   Offset: 0xC7AD00   Length: 0xB0
+    // RVA   : 0xC7BF10   Offset: 0xC7B310   Length: 0xB0
     public static BigMapPos op_Addition(BigMapPos a, BigMapPos b)
     {
         if (a != null) {
@@ -170,7 +170,7 @@ public class BigMapPos
     }
 
     // Token : 0x6001073
-    // RVA   : 0xC7BA80   Offset: 0xC7AE80   Length: 0xB0
+    // RVA   : 0xC7C090   Offset: 0xC7B490   Length: 0xB0
     public static BigMapPos op_Subtraction(BigMapPos a, BigMapPos b)
     {
         if (a != null) {
@@ -187,49 +187,49 @@ public class BigMapPos
     }
 
     // Token : 0x6001074
-    // RVA   : 0xC7B9C0   Offset: 0xC7ADC0   Length: 0xF
+    // RVA   : 0xC7BFD0   Offset: 0xC7B3D0   Length: 0xF
     public static BigMapPos op_Multiply(BigMapPos a, int b)
     {
         if (a != null) {
           plVar1 = (int64 *)BigMapPos.Clone(a,0);
           if (plVar1 != (int64 *)0) {
-            if ((*(byte *)(DAT_181db0cc8 + 300) <= *(byte *)(*plVar1 + 300)) &&
+            if ((*(byte *)(DAT_181db0ce0 + 300) <= *(byte *)(*plVar1 + 300)) &&
                (*(int64 *)
-                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db0cc8 + 300) * 8) ==
-                DAT_181db0cc8)) {
+                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db0ce0 + 300) * 8) ==
+                DAT_181db0ce0)) {
               *(float *)(plVar1 + 2) = b * *(float *)(plVar1 + 2);
               *(float *)((int64)plVar1 + 20) = b * *(float *)((int64)plVar1 + 20);
               return plVar1;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar1,DAT_181db0cc8);
+            FUN_1800d6070(plVar1,DAT_181db0ce0);
           }
         }
     }
 
     // Token : 0x6001075
-    // RVA   : 0xC7B9D0   Offset: 0xC7ADD0   Length: 0xA5
+    // RVA   : 0xC7BFE0   Offset: 0xC7B3E0   Length: 0xA5
     public static BigMapPos op_Multiply(BigMapPos a, float b)
     {
         if (a != null) {
           plVar1 = (int64 *)BigMapPos.Clone(a,0);
           if (plVar1 != (int64 *)0) {
-            if ((*(byte *)(DAT_181db0cc8 + 300) <= *(byte *)(*plVar1 + 300)) &&
+            if ((*(byte *)(DAT_181db0ce0 + 300) <= *(byte *)(*plVar1 + 300)) &&
                (*(int64 *)
-                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db0cc8 + 300) * 8) ==
-                DAT_181db0cc8)) {
+                 (*(int64 *)(*plVar1 + 200) + -8 + (uint64)*(byte *)(DAT_181db0ce0 + 300) * 8) ==
+                DAT_181db0ce0)) {
               *(float *)(plVar1 + 2) = b * *(float *)(plVar1 + 2);
               *(float *)((int64)plVar1 + 20) = b * *(float *)((int64)plVar1 + 20);
               return plVar1;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar1,DAT_181db0cc8);
+            FUN_1800d6070(plVar1,DAT_181db0ce0);
           }
         }
     }
 
     // Token : 0x6001076
-    // RVA   : 0xC7B3B0   Offset: 0xC7A7B0   Length: 0x1DD
+    // RVA   : 0xC7B9C0   Offset: 0xC7ADC0   Length: 0x1DD
     public virtual object Clone()
     {
         long lVar2;
@@ -243,13 +243,13 @@ public class BigMapPos
         uint32 uStack_1c;
         uint64 uVar6;
         uVar6 = 0;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar7 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -270,18 +270,18 @@ public class BigMapPos
         lVar2 = *plVar1;
         if (*(uint16 *)(lVar2 + 0x12a) != 0) {
           do {
-            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d78da0) {
+            if (*(int64 *)(*(int64 *)(lVar2 + 176) + uVar6 * 16) == DAT_181d78db8) {
               puVar4 = (uint64 *)
                        ((int64)*(int *)(*(int64 *)(lVar2 + 176) + 8 + uVar6 * 16) * 16 + 0x138
                        + lVar2);
-              goto LAB_180c7b534;
+              goto LAB_180c7bb44;
             }
             uVar5 = (short)uVar6 + 1;
             uVar6 = (uint64)uVar5;
           } while (uVar5 < *(uint16 *)(lVar2 + 0x12a));
         }
-        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d78da0,0);
-        LAB_180c7b534:
+        puVar4 = (uint64 *)FUN_1800914f0(plVar1,DAT_181d78db8,0);
+        LAB_180c7bb44:
         (*(code *)*puVar4)(plVar1,puVar4[1]);
         return uVar3;
     }

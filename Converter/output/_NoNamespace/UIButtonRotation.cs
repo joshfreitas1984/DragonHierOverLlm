@@ -26,7 +26,7 @@ public class UIButtonRotation
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60000ED
-    // RVA   : 0x1531800   Offset: 0x1530C00   Length: 0xBC
+    // RVA   : 0x1531E10   Offset: 0x1531210   Length: 0xBC
     private void Start()
     {
         bool cVar2;
@@ -52,7 +52,7 @@ public class UIButtonRotation
     }
 
     // Token : 0x60000EE
-    // RVA   : 0x1531430   Offset: 0x1530830   Length: 0x7E
+    // RVA   : 0x1531A40   Offset: 0x1530E40   Length: 0x7E
     private void OnEnable()
     {
         ulong uVar1;
@@ -65,7 +65,7 @@ public class UIButtonRotation
     }
 
     // Token : 0x60000EF
-    // RVA   : 0x1531330   Offset: 0x1530730   Length: 0xF5
+    // RVA   : 0x1531940   Offset: 0x1530D40   Length: 0xF5
     private void OnDisable()
     {
         ulong uVar1;
@@ -80,14 +80,14 @@ public class UIButtonRotation
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
             if (this.tweenTarget == null) {
-        LAB_181531420:
+        LAB_181531a30:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
-            lVar2 = Component.GetComponent(this.tweenTarget,DAT_181d964e0);
+            lVar2 = Component.GetComponent(this.tweenTarget,DAT_181d964f8);
             cVar3 = Object.op_Inequality(lVar2,0,0);
             if (cVar3) {
-              if (lVar2 == null) goto LAB_181531420;
+              if (lVar2 == null) goto LAB_181531a30;
               local_18 = this.mRot;
               uStack_14 = *(uint32 *)(this + 64);
               uStack_10 = *(uint32 *)(this + 68);
@@ -100,7 +100,7 @@ public class UIButtonRotation
     }
 
     // Token : 0x60000F0
-    // RVA   : 0x15315C0   Offset: 0x15309C0   Length: 0x1AF
+    // RVA   : 0x1531BD0   Offset: 0x1530FD0   Length: 0x1AF
     private void OnPress(bool isPressed)
     {
         uint uVar1;
@@ -181,7 +181,7 @@ public class UIButtonRotation
     }
 
     // Token : 0x60000F1
-    // RVA   : 0x15314B0   Offset: 0x15308B0   Length: 0x102
+    // RVA   : 0x1531AC0   Offset: 0x1530EC0   Length: 0x102
     private void OnHover(bool isOver)
     {
         uint uVar1;
@@ -244,7 +244,7 @@ public class UIButtonRotation
     }
 
     // Token : 0x60000F2
-    // RVA   : 0x1531770   Offset: 0x1530B70   Length: 0x81
+    // RVA   : 0x1531D80   Offset: 0x1531180   Length: 0x81
     private void OnSelect(bool isSelected)
     {
         bool cVar1;
@@ -262,7 +262,7 @@ public class UIButtonRotation
     }
 
     // Token : 0x60000F3
-    // RVA   : 0x15318C0   Offset: 0x1530CC0   Length: 0x55
+    // RVA   : 0x1531ED0   Offset: 0x15312D0   Length: 0x55
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];

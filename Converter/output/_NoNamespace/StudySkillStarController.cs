@@ -6,7 +6,7 @@
 public class StudySkillStarController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D32
+    // Token: 0x4001D33
     public StudySkillStarType studySkillStarType;
 
     // ── Methods ──────────────────────────────────────────────────

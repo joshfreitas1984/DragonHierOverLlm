@@ -6,21 +6,21 @@
 public class VariousRotateObject
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EDA
+    // Token: 0x4001EDB
     public Vector3 RotateOffset;
 
-    // Token: 0x4001EDB
+    // Token: 0x4001EDC
     private Vector3 RotateMulti;
 
-    // Token: 0x4001EDC
+    // Token: 0x4001EDD
     public float m_delay;
 
-    // Token: 0x4001EDD
+    // Token: 0x4001EDE
     private float m_Time;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600244A
-    // RVA   : 0xC10E40   Offset: 0xC10240   Length: 0x1B
+    // RVA   : 0xC114B0   Offset: 0xC108B0   Length: 0x1B
     private void Awake()
     {
         uint uVar1;
@@ -29,7 +29,7 @@ public class VariousRotateObject
     }
 
     // Token : 0x600244B
-    // RVA   : 0xC10E60   Offset: 0xC10260   Length: 0x162
+    // RVA   : 0xC114D0   Offset: 0xC108D0   Length: 0x162
     private void Update()
     {
         ulong uVar1;

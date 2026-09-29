@@ -31,7 +31,7 @@ public class <PlayPosture>d__239
     }
 
     // Token : 0x6000BDC
-    // RVA   : 0x931B00   Offset: 0x930F00   Length: 0x3A9
+    // RVA   : 0x932160   Offset: 0x931560   Length: 0x3A9
     private virtual bool MoveNext()
     {
         float fVar1;
@@ -85,7 +85,7 @@ public class <PlayPosture>d__239
             plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Defence",0);
             if (lVar6 != null) {
               plVar9 = (int64 *)0;
-              if ((plVar5 != (int64 *)0) && (plVar9 = (int64 *)0, *plVar5 == DAT_181daf348)) {
+              if ((plVar5 != (int64 *)0) && (plVar9 = (int64 *)0, *plVar5 == DAT_181daf360)) {
                 plVar9 = plVar5;
               }
               BattleUnit.PlayHeroSound(lVar6,plVar9,1,0,uVar11 & 0xffffffffffffff00,0);
@@ -137,15 +137,15 @@ public class <PlayPosture>d__239
     }
 
     // Token : 0x6000BDE
-    // RVA   : 0x931EB0   Offset: 0x9312B0   Length: 0x3E
+    // RVA   : 0x932510   Offset: 0x931910   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97b38);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97cd0);
     }
 
     // Token : 0x6000BDF

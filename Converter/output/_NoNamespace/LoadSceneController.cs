@@ -39,12 +39,15 @@ public class LoadSceneController
     // Token: 0x40018B0
     private float progress;
 
+    // Token: 0x40018B1
+    private bool gcCollected;
+
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60018D6
-    // RVA   : 0xA80A40   Offset: 0xA7FE40   Length: 0x780
+    // RVA   : 0xA810D0   Offset: 0xA804D0   Length: 0x780
     private void Start()
     {
-        var pStatics_6790 = *(int64*)(DAT_181da6790 + 184);
+        var pStatics_67a8 = *(int64*)(DAT_181da67a8 + 184);
         bool cVar1;
         uint uVar2;
         uint uVar3;
@@ -56,7 +59,7 @@ public class LoadSceneController
         byte[] local_18 = new byte[16];
         Resources.UnloadUnusedAssets(0);
         GC.Collect(0);
-        uVar4 = **(uint64 **)(DAT_181da6790 + 184);
+        uVar4 = **(uint64 **)(DAT_181da67a8 + 184);
         cVar1 = Object.op_Inequality(uVar4,0,0);
         if (!cVar1) {
           plVar5 = this.tipsText;
@@ -65,7 +68,7 @@ public class LoadSceneController
           lVar7 = *(int64 *)(lVar7 + 0x1c8);
           lVar8 = GameController.lockObj;
           if ((lVar8 == null) || (lVar8 = *(int64 *)(lVar8 + 0x1c8)) == null) throw; // [null/range check failed]
-          uVar2 = FUN_180d95a30(0,*(uint32 *)(lVar8 + 24),0);
+          uVar2 = FUN_180d96040(0,*(uint32 *)(lVar8 + 24),0);
           if (lVar7 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -77,9 +80,9 @@ public class LoadSceneController
           LTLocalization.CheckTextFont(plVar5,0);
         }
         else {
-          if (((*pStatics_6790 == 0) ||
-              (lVar7 = Component.get_gameObject(*pStatics_6790,0)) == null) ||
-             (lVar7 = GameObject.GetComponent(lVar7,DAT_181dc72f8)) == null) throw; // [null/range check failed]
+          if (((*pStatics_67a8 == 0) ||
+              (lVar7 = Component.get_gameObject(*pStatics_67a8,0)) == null) ||
+             (lVar7 = GameObject.GetComponent(lVar7,DAT_181dc7310)) == null) throw; // [null/range check failed]
           AudioSource.Stop(lVar7,0);
           lVar7 = this.videoClip;
           if (lVar7 == null) throw; // [null/range check failed]
@@ -103,7 +106,7 @@ public class LoadSceneController
           if (this.Subtitle == null) throw; // [null/range check failed]
           GameObject.SetActive(this.Subtitle,1,0);
           lVar7 = this.videoPlayer;
-          uVar4 = new OnTooltipCB(this,DAT_181d88128,0);
+          uVar4 = new OnTooltipCB(this,DAT_181d87fc0,0);
           if (lVar7 == null) throw; // [null/range check failed]
           VideoPlayer.add_loopPointReached(lVar7,uVar4,0);
           if ((this.Subtitle == null) ||
@@ -111,7 +114,7 @@ public class LoadSceneController
           throw; // [null/range check failed]
           lVar7 = Transform.Find(lVar7,"Text",0);
           if (lVar7 == null) throw; // [null/range check failed]
-          plVar5 = (int64 *)Component.GetComponent(lVar7,DAT_181d96160);
+          plVar5 = (int64 *)Component.GetComponent(lVar7,DAT_181d96178);
           uVar4 = "";
           uVar4 = LTLocalization.GetText(uVar4,0,1,0);
           if (plVar5 == (int64 *)0) throw; // [null/range check failed]
@@ -137,7 +140,7 @@ public class LoadSceneController
         if (lVar7 != null) {
           *(int64 *)(lVar7 + 32) = this;
           *(uint64 *)(lVar7 + 40) = uVar4;
-          FUN_180d8c2e0(this,lVar7,0);
+          FUN_180d8c8f0(this,lVar7,0);
           uVar4 = GameObject.FindGameObjectWithTag("LoadSaveIDTag",0);
           cVar1 = Object.op_Inequality(uVar4,0,0);
           if (!cVar1) {
@@ -157,7 +160,7 @@ public class LoadSceneController
     }
 
     // Token : 0x60018D7
-    // RVA   : 0xA809B0   Offset: 0xA7FDB0   Length: 0x88
+    // RVA   : 0xA81040   Offset: 0xA80440   Length: 0x88
     private IEnumerator LoadScene(string sceneName)
     {
         long lVar1;
@@ -170,10 +173,10 @@ public class LoadSceneController
     }
 
     // Token : 0x60018D8
-    // RVA   : 0xA81870   Offset: 0xA80C70   Length: 0x359
+    // RVA   : 0xA81F30   Offset: 0xA81330   Length: 0x359
     public void VideoPlayFinished(VideoPlayer vp)
     {
-        var pStatics = *(int64*)(DAT_181da6790 + 184);
+        var pStatics = *(int64*)(DAT_181da67a8 + 184);
         uint uVar1;
         long lVar2;
         bool cVar3;
@@ -182,10 +185,10 @@ public class LoadSceneController
         ulong local_28;
         uint local_20;
         byte[] local_18 = new byte[16];
-        uVar6 = **(uint64 **)(DAT_181da6790 + 184);
+        uVar6 = **(uint64 **)(DAT_181da67a8 + 184);
         cVar3 = Object.op_Inequality(uVar6,0,0);
         if (!cVar3) {
-        LAB_180a81976:
+        LAB_180a82036:
           this.videoClipID = this.videoClipID + 1;
           uVar1 = this.videoClipID;
           lVar4 = this.videoClip;
@@ -193,7 +196,7 @@ public class LoadSceneController
         }
         else {
           if (*pStatics == 0) throw; // [null/range check failed]
-          if (*(int *)(*pStatics + 44) != 1) goto LAB_180a81976;
+          if (*(int *)(*pStatics + 44) != 1) goto LAB_180a82036;
           lVar4 = this.videoClip;
           if (lVar4 == null) throw; // [null/range check failed]
           uVar1 = *(uint32 *)(lVar4 + 24);
@@ -249,7 +252,7 @@ public class LoadSceneController
                 if (lVar4 != null) {
                   lVar4 = Transform.Find(lVar4,"Text",0);
                   if (lVar4 != null) {
-                    plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d96160);
+                    plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d96178);
                     uVar6 = "";
                     uVar6 = LTLocalization.GetText(uVar6,0,1,0);
                     if (plVar5 != (int64 *)0) {
@@ -266,7 +269,7 @@ public class LoadSceneController
     }
 
     // Token : 0x60018D9
-    // RVA   : 0xA811D0   Offset: 0xA805D0   Length: 0x691
+    // RVA   : 0xA81860   Offset: 0xA80C60   Length: 0x6CC
     private void Update()
     {
         float fVar1;
@@ -317,13 +320,13 @@ public class LoadSceneController
               }
               lVar6 = *(int64 *)(lVar6 + 32 + (int64)(int)this.videoClipID * 8);
               if (((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 16)) == null) ||
-                 (lVar6 = FUN_180002f80(lVar6,this.subTitleID,DAT_181da46d8)) == null)
+                 (lVar6 = FUN_180002f80(lVar6,this.subTitleID,DAT_181da46f0)) == null)
               throw; // [null/range check failed]
               if ((double)*(float *)(lVar6 + 16) <= dVar4) {
                 if (((this.Subtitle == null) ||
                     (lVar6 = GameObject.get_transform(this.Subtitle,0)) == null) ||
                    (lVar6 = Transform.Find(lVar6,"Text",0)) == null) throw; // [null/range check failed]
-                uVar7 = Component.GetComponent(lVar6,DAT_181d96160);
+                uVar7 = Component.GetComponent(lVar6,DAT_181d96178);
                 lVar6 = this.subTitleDatas;
                 if (lVar6 == null) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar6 + 24) <= this.videoClipID) {
@@ -333,15 +336,15 @@ public class LoadSceneController
                 }
                 lVar6 = *(int64 *)(lVar6 + 32 + (int64)(int)this.videoClipID * 8);
                 if (((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 16)) == null) ||
-                   (lVar6 = FUN_180002f80(lVar6,this.subTitleID,DAT_181da46d8), lVar6 == null
+                   (lVar6 = FUN_180002f80(lVar6,this.subTitleID,DAT_181da46f0), lVar6 == null
                    )) throw; // [null/range check failed]
                 uVar3 = *(uint64 *)(lVar6 + 24);
                 LTLocalization.SetText(uVar7,uVar3,0);
                 if (((this.Subtitle == null) ||
                     (lVar6 = GameObject.get_transform(this.Subtitle,0)) == null) ||
                    (lVar6 = Transform.Find(lVar6,"Text",0)) == null) throw; // [null/range check failed]
-                plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d96160);
-                puVar9 = (uint32 *)FUN_180d98fe0(&local_28,0);
+                plVar8 = (int64 *)Component.GetComponent(lVar6,DAT_181d96178);
+                puVar9 = (uint32 *)FUN_180d995f0(&local_28,0);
                 if (plVar8 == (int64 *)0) throw; // [null/range check failed]
                 local_28 = *puVar9;
                 uStack_24 = puVar9[1];
@@ -351,8 +354,8 @@ public class LoadSceneController
                 if (((this.Subtitle == null) ||
                     (lVar6 = GameObject.get_transform(this.Subtitle,0)) == null) ||
                    (lVar6 = Transform.Find(lVar6,"Text",0)) == null) throw; // [null/range check failed]
-                uVar7 = Component.GetComponent(lVar6,DAT_181d96160);
-                puVar9 = (uint32 *)FUN_1810d3570(&local_28,0);
+                uVar7 = Component.GetComponent(lVar6,DAT_181d96178);
+                puVar9 = (uint32 *)FUN_1810d3b80(&local_28,0);
                 local_28 = *puVar9;
                 uStack_24 = puVar9[1];
                 uStack_20 = puVar9[2];
@@ -410,6 +413,10 @@ public class LoadSceneController
           if (!cVar5) {
             return;
           }
+        }
+        if (*(char *)(this + 100) == false) {
+          *(uint8 *)(this + 100) = 1;
+          GC.Collect(0);
         }
         if (**(int **)(DAT_181d73d40 + 184) == 1) {
           lVar6 = RailManager.get_Instance(0);

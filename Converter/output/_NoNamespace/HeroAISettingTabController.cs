@@ -30,19 +30,19 @@ public class HeroAISettingTabController
         int iVar5;
         lVar2 = Component.get_transform(this,0);
         if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"ForceLv",0)) != null) {
-          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
           if (this.targetHero != null) {
             uVar4 = HeroData.GetHeroForceLvDescribeSimplify(this.targetHero,0);
             LTLocalization.SetText(uVar3,uVar4,0);
             lVar2 = Component.get_transform(this,0);
             if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Name",0)) != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
               if (this.targetHero != null) {
                 uVar4 = HeroData.HeroName(this.targetHero,1,0);
                 LTLocalization.SetText(uVar3,uVar4,0);
                 lVar2 = Component.get_transform(this,0);
                 if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Name",0)) != null) {
-                  lVar2 = Component.GetComponent(lVar2,DAT_181d94060);
+                  lVar2 = Component.GetComponent(lVar2,DAT_181d94078);
                   if ((this.targetHero != null) && (lVar2 != null)) {
                     lVar2.summonLv = this.targetHero.heroName;
                     lVar2 = this.targetHero;
@@ -52,22 +52,22 @@ public class HeroAISettingTabController
                         if ((lVar2.heroAISettingData == null) ||
                            (lVar2 = *(int64 *)(lVar2.heroAISettingData + 16)) == null)
                         throw; // [null/range check failed]
-                        iVar1 = Dictionary_2.get_Count(lVar2,DAT_181db2908);
+                        iVar1 = Dictionary_2.get_Count(lVar2,DAT_181db2920);
                         if (iVar1 <= iVar5) break;
                         uVar3 = this.AISettingTabGrid;
                         uVar4 = this.AISettingTabPrefab;
                         uVar3 = GlobalData.AddChild(uVar3,uVar4);
                         this.temp = uVar3;
                         if ((this.temp == null) ||
-                           (lVar2 = GameObject.GetComponent(this.temp,DAT_181dc6eb8),
+                           (lVar2 = GameObject.GetComponent(this.temp,DAT_181dc6ed0),
                            lVar2 == null)) throw; // [null/range check failed]
                         lVar2.summonLv = this;
                         if ((this.temp == null) ||
-                           (lVar2 = GameObject.GetComponent(this.temp,DAT_181dc6eb8),
+                           (lVar2 = GameObject.GetComponent(this.temp,DAT_181dc6ed0),
                            lVar2 == null)) throw; // [null/range check failed]
                         lVar2.summonSourceHero = iVar5;
                         if ((this.temp == null) ||
-                           (lVar2 = GameObject.GetComponent(this.temp,DAT_181dc6eb8),
+                           (lVar2 = GameObject.GetComponent(this.temp,DAT_181dc6ed0),
                            lVar2 == null)) throw; // [null/range check failed]
                         AISettingTabController.Refresh(lVar2,0);
                         lVar2 = this.targetHero;
@@ -76,7 +76,7 @@ public class HeroAISettingTabController
                       }
                       lVar2 = Component.get_transform(this,0);
                       if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"StudyNewSkill",0)) != null) {
-                        lVar2 = Component.GetComponent(lVar2,DAT_181d93d60);
+                        lVar2 = Component.GetComponent(lVar2,DAT_181d93d78);
                         if ((this.targetHero != null) && (lVar2 != null)) {
                           Dropdown.set_value(lVar2,this.targetHero.studyNewSkillSetting
                                               ,0);
@@ -103,18 +103,18 @@ public class HeroAISettingTabController
           iVar1 = this.targetHero.studyNewSkillSetting;
           lVar2 = Component.get_transform(this,0);
           if (((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"StudyNewSkill",0)) != null) &&
-             (lVar2 = Component.GetComponent(lVar2,DAT_181d93d60)) != null) {
+             (lVar2 = Component.GetComponent(lVar2,DAT_181d93d78)) != null) {
             if (iVar1 == lVar2.haveMeet) {
               return;
             }
             lVar2 = this.targetHero;
             lVar3 = Component.get_transform(this,0);
             if (((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"StudyNewSkill",0)) != null) &&
-               ((lVar3 = Component.GetComponent(lVar3,DAT_181d93d60), lVar3 != null && (lVar2 != null)))) {
+               ((lVar3 = Component.GetComponent(lVar3,DAT_181d93d78), lVar3 != null && (lVar2 != null)))) {
               lVar2.studyNewSkillSetting = *(uint32 *)(lVar3 + 0x120);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
               plVar5 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0x3f000000,0);

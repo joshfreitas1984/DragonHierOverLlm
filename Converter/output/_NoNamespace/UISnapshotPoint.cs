@@ -26,7 +26,7 @@ public class UISnapshotPoint
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000523
-    // RVA   : 0x17069A0   Offset: 0x1705DA0   Length: 0x58
+    // RVA   : 0x1706FB0   Offset: 0x17063B0   Length: 0x58
     private void Start()
     {
         bool cVar1;
@@ -38,10 +38,10 @@ public class UISnapshotPoint
     }
 
     // Token : 0x6000524
-    // RVA   : 0x1706A00   Offset: 0x1705E00   Length: 0x27
+    // RVA   : 0x1707010   Offset: 0x1706410   Length: 0x27
     public void /*ctor*/()
     {
-        void FUN_181706a00(int64 this)
+        void FUN_181707010(int64 this)
         {
         this.isOrthographic = 1;
         this.nearClip = 0xc2c80000;

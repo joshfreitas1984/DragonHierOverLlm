@@ -6,43 +6,43 @@
 public class OtherForceContributionExchangeController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001939
+    // Token: 0x400193A
     public ForceData targetForceData;
 
-    // Token: 0x400193A
+    // Token: 0x400193B
     public GameObject exchangeUIPanel;
 
-    // Token: 0x400193B
+    // Token: 0x400193C
     public GameObject exchangeSkillGrid;
 
-    // Token: 0x400193C
+    // Token: 0x400193D
     public GameObject contributionSkillUnlockButtonPrefab;
 
-    // Token: 0x400193D
+    // Token: 0x400193E
     public SkeletonGraphic buildingIcon;
 
-    // Token: 0x400193E
+    // Token: 0x400193F
     private GameObject temp;
 
-    // Token: 0x400193F
+    // Token: 0x4001940
     private static List<float> exchangeMinFame;
 
-    // Token: 0x4001940
+    // Token: 0x4001941
     private static List<float> exchangeMinFavor;
 
-    // Token: 0x4001941
+    // Token: 0x4001942
     private static OtherForceContributionExchangeController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001970
-    // RVA   : 0xB953E0   Offset: 0xB947E0   Length: 0x58
+    // RVA   : 0xB95AA0   Offset: 0xB94EA0   Length: 0x58
     public static OtherForceContributionExchangeController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d8f490 + 184) + 16);
+        return *(uint64 *)(*(int64 *)(DAT_181d8f4a8 + 184) + 16);
     }
 
     // Token : 0x6001971
-    // RVA   : 0xB91220   Offset: 0xB90620   Length: 0xE0
+    // RVA   : 0xB918E0   Offset: 0xB90CE0   Length: 0xE0
     private void Awake()
     {
         ulong uVar1;
@@ -55,7 +55,7 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x6001972
-    // RVA   : 0xB92C30   Offset: 0xB92030   Length: 0x121A
+    // RVA   : 0xB932F0   Offset: 0xB926F0   Length: 0x121A
     public void ShowExchangeUI(ForceData targetForce)
     {
         var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
@@ -88,7 +88,7 @@ public class OtherForceContributionExchangeController
         local_res10[0] = 0;
         plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
         plVar11 = plVar10;
-        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+        if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
           plVar11 = plVar3;
         }
         NGUITools.PlaySound(plVar11,0x3f800000,0x3f800000,0);
@@ -98,7 +98,7 @@ public class OtherForceContributionExchangeController
           if (((this.exchangeUIPanel != null) &&
               (lVar4 = GameObject.get_transform(this.exchangeUIPanel,0)) != null) &&
              (lVar4 = Transform.Find(lVar4,"ForceName",0)) != null) {
-            uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+            uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
             if (this.targetForceData != null) {
               uVar6 = ForceData.GetForceName(this.targetForceData,1,0);
               LTLocalization.SetText(uVar5,uVar6,0);
@@ -112,10 +112,10 @@ public class OtherForceContributionExchangeController
                 if ((lVar4 == null) ||
                    ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
                     (lVar4 = Transform.Find(lVar4,"Icon",0)) == null))) throw; // [null/range check failed]
-                plVar3 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+                plVar3 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
                 lVar4 = FUN_18046c100(0);
                 if ((((lVar4 == null) || (lVar4.mainAreaID == null)) ||
-                    (lVar4 = FUN_180002f80(lVar4.mainAreaID,local_res8[0],DAT_181d9e108),
+                    (lVar4 = FUN_180002f80(lVar4.mainAreaID,local_res8[0],DAT_181d9e120),
                     lVar4 == null)) || (plVar3 == (int64 *)0)) throw; // [null/range check failed]
                 local_68 = lVar4.forceName;
                 uStack_64 = *(uint32 *)(lVar4 + 28);
@@ -130,7 +130,7 @@ public class OtherForceContributionExchangeController
                 if ((lVar4 == null) ||
                    ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
                     (lVar4 = Transform.Find(lVar4,"Name",0)) == null))) throw; // [null/range check failed]
-                uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+                uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
                 lVar4 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4f8);
                 if (lVar4 == null) throw; // [null/range check failed]
                 uVar6 = FUN_180002f80(lVar4,local_res8[0]);
@@ -144,20 +144,20 @@ public class OtherForceContributionExchangeController
                 if ((lVar4 == null) ||
                    ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
                     (lVar4 = Transform.Find(lVar4,"Describe",0)) == null))) throw; // [null/range check failed]
-                uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+                uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
                 cVar2 = OtherForceContributionExchangeController.ForceIsPlayerServant(this,0);
                 if (!cVar2) {
                   if (OtherForceContributionExchangeController.exchangeMinFame == null) {
-        LAB_180b93e30:
+        LAB_180b944f0:
                           // WARNING: Subroutine does not return
                     FUN_1800d6620();
                   }
                   local_res20[0] =
-                       FUN_1800d6790(OtherForceContributionExchangeController.exchangeMinFame,local_res8[0],DAT_181da1078);
-                  uVar6 = il2cpp_value_box(DAT_181da22d8,local_res20);
+                       FUN_1800d6790(OtherForceContributionExchangeController.exchangeMinFame,local_res8[0],DAT_181da1090);
+                  uVar6 = il2cpp_value_box(DAT_181da22f0,local_res20);
                   lVar4 = OtherForceContributionExchangeController.exchangeMinFavor;
-                  if (lVar4 == null) goto LAB_180b93e30;
-                  fVar12 = (float)FUN_1800d6790(lVar4,local_res8[0],DAT_181da1078);
+                  if (lVar4 == null) goto LAB_180b944f0;
+                  fVar12 = (float)FUN_1800d6790(lVar4,local_res8[0],DAT_181da1090);
                   uVar1 = "{0}点声望{1}";
                   uVar7 = "";
                   if (0.0 < fVar12) {
@@ -166,8 +166,8 @@ public class OtherForceContributionExchangeController
                           // WARNING: Subroutine does not return
                       FUN_1800d6620();
                     }
-                    local_b8[0] = FUN_1800d6790(lVar4,local_res8[0],DAT_181da1078);
-                    uVar7 = il2cpp_value_box(DAT_181da22d8,local_b8);
+                    local_b8[0] = FUN_1800d6790(lVar4,local_res8[0],DAT_181da1090);
+                    uVar7 = il2cpp_value_box(DAT_181da22f0,local_b8);
                     uVar7 = String.Format(" {0}点掌门好感",uVar7,0);
                   }
                   String.Format(uVar1,uVar6,uVar7,0);
@@ -229,7 +229,7 @@ public class OtherForceContributionExchangeController
                         (lVar4 = Transform.Find(lVar4,"ClothList",0)) != null) &&
                        (lVar4 = Component.get_gameObject(lVar4,0)) != null) {
                       GameObject.SetActive(lVar4,0,0);
-                      goto LAB_180b93a44;
+                      goto LAB_180b94104;
                     }
                   }
                   else if (((lVar9 != null) && (lVar4 = GameObject.get_transform(lVar9,0)) != null) &&
@@ -237,7 +237,7 @@ public class OtherForceContributionExchangeController
                     lVar4 = Component.get_gameObject(lVar4,0);
                     if (lVar4 != null) {
                       GameObject.SetActive(lVar4,1,0);
-                      goto LAB_180b93690;
+                      goto LAB_180b93d50;
                     }
                   }
                 }
@@ -253,7 +253,7 @@ public class OtherForceContributionExchangeController
           if ((lVar4 == null) ||
              ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
               (lVar4 = Transform.Find(lVar4,"Text",0)) == null))) throw; // [null/range check failed]
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
           if (this.targetForceData == null) throw; // [null/range check failed]
           uVar14 = this.targetForceData.defaultSkinID;
           lVar4 = new SkinUnlockData(uVar14,0);
@@ -270,10 +270,10 @@ public class OtherForceContributionExchangeController
           if ((lVar4 == null) ||
              ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
               (lVar4 = Transform.Find(lVar4,"Icon",0)) == null))) throw; // [null/range check failed]
-          plVar3 = (int64 *)Component.GetComponent(lVar4,DAT_181d94460);
+          plVar3 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
           lVar4 = FUN_18046c100(0);
           if ((((lVar4 == null) || (lVar4.mainAreaID == null)) ||
-              (lVar4 = FUN_180002f80(lVar4.mainAreaID,local_res10[0],DAT_181d9e108), lVar4 == null
+              (lVar4 = FUN_180002f80(lVar4.mainAreaID,local_res10[0],DAT_181d9e120), lVar4 == null
               )) || (plVar3 == (int64 *)0)) throw; // [null/range check failed]
           local_68 = lVar4.forceName;
           uStack_64 = *(uint32 *)(lVar4 + 28);
@@ -289,7 +289,7 @@ public class OtherForceContributionExchangeController
           if ((lVar4 == null) ||
              ((lVar4 = Transform.Find(lVar4,uVar5,0), lVar4 == null ||
               (lVar4 = Transform.Find(lVar4,"UnlockButton",0)) == null))) throw; // [null/range check failed]
-          lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+          lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
           lVar9 = FUN_18046c100(0);
           if ((this.targetForceData == null) ||
              (((lVar9 == null ||
@@ -304,12 +304,12 @@ public class OtherForceContributionExchangeController
           lVar4.forceName = uVar5;
           local_res10[0] = local_res10[0] + 1;
           if (5 < local_res10[0]) break;
-        LAB_180b93690:
+        LAB_180b93d50:
           if ((this.exchangeUIPanel == null) ||
              (lVar4 = GameObject.get_transform(this.exchangeUIPanel,0)) == null)
           throw; // [null/range check failed]
         }
-        LAB_180b93a44:
+        LAB_180b94104:
         if (**(int **)(DAT_181d73d40 + 184) != 2) {
           if (this.targetForceData == null) throw; // [null/range check failed]
           if (0 < this.targetForceData.speBuildingID) {
@@ -323,22 +323,22 @@ public class OtherForceContributionExchangeController
                    (lVar4 = GameObject.get_transform(this.exchangeUIPanel,0)) == null) ||
                   (lVar4 = Transform.Find(lVar4,"SpeBuilding",0)) == null) ||
                  (lVar4 = Transform.Find(lVar4,"Text",0)) == null) throw; // [null/range check failed]
-              uVar5 = Component.GetComponent(lVar4,DAT_181d96160);
+              uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
               lVar4 = FUN_18046c100(0);
               if (((lVar4 == null) || (this.targetForceData == null)) ||
                  ((lVar4.allyForce == null ||
-                  (lVar4 = FUN_1817d9e10(lVar4.allyForce,
+                  (lVar4 = FUN_1817da420(lVar4.allyForce,
                                          this.targetForceData.speBuildingID,
-                                         DAT_181db7bd8), lVar4 == null)))) throw; // [null/range check failed]
+                                         DAT_181db7bf0), lVar4 == null)))) throw; // [null/range check failed]
               uVar6 = lVar4.forceName;
               LTLocalization.SetText(uVar5,uVar6,0);
               lVar4 = this.buildingIcon;
               lVar9 = FUN_18046c100(0);
               if ((((lVar9 == null) || (this.targetForceData == null)) ||
                   (*(int64 *)(lVar9 + 224) == 0)) ||
-                 (lVar9 = FUN_1817d9e10(*(int64 *)(lVar9 + 224),
+                 (lVar9 = FUN_1817da420(*(int64 *)(lVar9 + 224),
                                         this.targetForceData.speBuildingID,
-                                        DAT_181db7bd8), lVar9 == null)) throw; // [null/range check failed]
+                                        DAT_181db7bf0), lVar9 == null)) throw; // [null/range check failed]
               uVar5 = String.Concat("Skeleton/Building/",*(uint64 *)(lVar9 + 32),"/skeleton_SkeletonData",0);
               plVar3 = (int64 *)Resources.Load(uVar5,0);
               if (lVar4 == null) throw; // [null/range check failed]
@@ -351,18 +351,18 @@ public class OtherForceContributionExchangeController
                   (lVar4 = GameObject.get_transform(this.exchangeUIPanel,0)) == null) ||
                  ((lVar4 = Transform.Find(lVar4,"SpeBuilding",0), lVar4 == null ||
                   (lVar4 = Transform.Find(lVar4,"UnlockButton",0)) == null))) throw; // [null/range check failed]
-              lVar4 = Component.GetComponent(lVar4,DAT_181d95560);
+              lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
               lVar9 = FUN_18046c100(0);
               if ((((lVar9 == null) || (this.targetForceData == null)) ||
                   (*(int64 *)(lVar9 + 224) == 0)) ||
-                 ((lVar9 = FUN_1817d9e10(*(int64 *)(lVar9 + 224),
+                 ((lVar9 = FUN_1817da420(*(int64 *)(lVar9 + 224),
                                          this.targetForceData.speBuildingID,
-                                         DAT_181db7bd8), lVar9 == null ||
+                                         DAT_181db7bf0), lVar9 == null ||
                   (uVar5 = AreaBuildingDataBase.GetBuildingText
                                      (lVar9,0,1,1,CONCAT44(uVar14,0x3f800000),1,0,0), lVar4 == null))))
               throw; // [null/range check failed]
               lVar4.forceName = uVar5;
-              goto LAB_180b93dfc;
+              goto LAB_180b944bc;
             }
             throw; // [null/range check failed]
           }
@@ -372,14 +372,14 @@ public class OtherForceContributionExchangeController
            ((lVar4 = Transform.Find(lVar4,"SpeBuilding",0), lVar4 != null &&
             (lVar4 = Component.get_gameObject(lVar4,0)) != null))) {
           GameObject.SetActive(lVar4,0,0);
-        LAB_180b93dfc:
+        LAB_180b944bc:
           OtherForceContributionExchangeController.RefreshExchangeUI(this,0);
           return;
         }
     }
 
     // Token : 0x6001973
-    // RVA   : 0xB91FF0   Offset: 0xB913F0   Length: 0xC32
+    // RVA   : 0xB926B0   Offset: 0xB91AB0   Length: 0xC32
     public void RefreshExchangeUI()
     {
         float fVar1;
@@ -410,7 +410,7 @@ public class OtherForceContributionExchangeController
         if (((this.exchangeUIPanel != null) &&
             (lVar6 = GameObject.get_transform(this.exchangeUIPanel,0)) != null) &&
            (lVar6 = Transform.Find(lVar6,"ForceContribution",0)) != null) {
-          uVar7 = Component.GetComponent(lVar6,DAT_181d96160);
+          uVar7 = Component.GetComponent(lVar6,DAT_181d96178);
           if (this.targetForceData != null) {
             local_res18[0] = (int)this.targetForceData.playerOutForceContribution;
             uVar8 = Int32.ToString(local_res18,0);
@@ -421,11 +421,11 @@ public class OtherForceContributionExchangeController
             if (lVar6 != null) {
               while (lVar6 = GameObject.get_transform(lVar6,0)) != null {
                 iVar4 = Transform.get_childCount(lVar6,0);
-                if (iVar4 <= iVar12) goto LAB_180b92550;
+                if (iVar4 <= iVar12) goto LAB_180b92c10;
                 if (((this.exchangeSkillGrid == null) ||
                     (lVar6 = GameObject.get_transform(this.exchangeSkillGrid,0)) == null) ||
                    ((lVar6 = Transform.GetChild(lVar6,iVar12,0), lVar6 == null ||
-                    (lVar6 = Component.GetComponent(lVar6,DAT_181d95ae0)) == null))) break;
+                    (lVar6 = Component.GetComponent(lVar6,DAT_181d95af8)) == null))) break;
                 lVar6 = *(int64 *)(lVar6 + 32);
                 lVar9 = FUN_18046c0a0(0);
                 if ((((lVar9 == null) || (*(int64 *)(lVar9 + 32) == 0)) ||
@@ -437,14 +437,14 @@ public class OtherForceContributionExchangeController
                     (lVar9 = GameObject.get_transform(this.exchangeSkillGrid,0)) == null) ||
                    ((lVar9 = Transform.GetChild(lVar9,iVar12,0), lVar9 == null ||
                     ((lVar9 = Transform.Find(lVar9,"UnlockButton",0), lVar9 == null ||
-                     (lVar9 = Component.GetComponent(lVar9,DAT_181d93760)) == null))))) break;
+                     (lVar9 = Component.GetComponent(lVar9,DAT_181d93778)) == null))))) break;
                 Selectable.set_interactable(lVar9,!bVar13,0);
                 if ((this.exchangeSkillGrid == null) ||
                    ((((lVar9 = GameObject.get_transform(this.exchangeSkillGrid,0), lVar9 == null ||
                       (lVar9 = Transform.GetChild(lVar9,iVar12,0)) == null) ||
                      (lVar9 = Transform.Find(lVar9,"UnlockButton",0)) == null) ||
                     (lVar9 = Transform.Find(lVar9,"Cost",0)) == null))) break;
-                uVar8 = Component.GetComponent(lVar9,DAT_181d96160);
+                uVar8 = Component.GetComponent(lVar9,DAT_181d96178);
                 uVar7 = "已习得";
                 if (!bVar13) {
                   lVar9 = KungfuSkillLvData.DataBase(lVar6,0);
@@ -461,9 +461,9 @@ public class OtherForceContributionExchangeController
                    ((lVar9 = Transform.GetChild(lVar9,iVar12,0), lVar9 == null ||
                     ((lVar9 = Transform.Find(lVar9,"UnlockButton",0), lVar9 == null ||
                      (lVar9 = Transform.Find(lVar9,"Cost",0)) == null))))) break;
-                plVar10 = (int64 *)Component.GetComponent(lVar9,DAT_181d96160);
+                plVar10 = (int64 *)Component.GetComponent(lVar9,DAT_181d96178);
                 if (bVar13) {
-        LAB_180b924f4:
+        LAB_180b92bb4:
                   puVar11 = (uint64 *)Color.get_black(local_78,0);
                 }
                 else {
@@ -473,7 +473,7 @@ public class OtherForceContributionExchangeController
                   if (lVar6 == null) break;
                   iVar4 = OtherForceContributionExchangeController.GetExchangeContributionCost
                                     (this,*(uint32 *)(lVar6 + 52),0x3f800000);
-                  if ((float)iVar4 <= fVar1) goto LAB_180b924f4;
+                  if ((float)iVar4 <= fVar1) goto LAB_180b92bb4;
                   puVar11 = (uint64 *)Color.get_red(local_88,0);
                 }
                 if (plVar10 == (int64 *)0) break;
@@ -501,7 +501,7 @@ public class OtherForceContributionExchangeController
           if (((lVar6 == null) ||
               ((lVar6 = Transform.Find(lVar6,uVar7,0), lVar6 == null ||
                (lVar6 = Transform.Find(lVar6,"UnlockButton",0)) == null))) ||
-             (lVar6 = Component.GetComponent(lVar6,DAT_181d93760)) == null) throw; // [null/range check failed]
+             (lVar6 = Component.GetComponent(lVar6,DAT_181d93778)) == null) throw; // [null/range check failed]
           Selectable.set_interactable(lVar6,!cVar2,0);
           if ((this.exchangeUIPanel == null) ||
              (lVar6 = GameObject.get_transform(this.exchangeUIPanel,0)) == null)
@@ -513,7 +513,7 @@ public class OtherForceContributionExchangeController
              (((lVar6 = Transform.Find(lVar6,uVar7,0), lVar6 == null ||
                (lVar6 = Transform.Find(lVar6,"UnlockButton",0)) == null) ||
               (lVar6 = Transform.Find(lVar6,"Cost",0)) == null))) throw; // [null/range check failed]
-          uVar8 = Component.GetComponent(lVar6,DAT_181d96160);
+          uVar8 = Component.GetComponent(lVar6,DAT_181d96178);
           uVar7 = "已获取";
           if (!cVar2) {
             local_res18[0] =
@@ -533,7 +533,7 @@ public class OtherForceContributionExchangeController
              (((lVar6 = Transform.Find(lVar6,uVar7,0), lVar6 == null ||
                (lVar6 = Transform.Find(lVar6,"UnlockButton",0)) == null) ||
               (lVar6 = Transform.Find(lVar6,"Cost",0)) == null))) throw; // [null/range check failed]
-          plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181d96160);
+          plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181d96178);
           if (!cVar2) {
             if (this.targetForceData == null) throw; // [null/range check failed]
             fVar1 = this.targetForceData.playerOutForceContribution;
@@ -555,7 +555,7 @@ public class OtherForceContributionExchangeController
           (**(code **)(*plVar10 + 0x2a8))(plVar10,&local_98,*(uint64 *)(*plVar10 + 0x2b0));
           local_res8[0] = local_res8[0] + 1;
           if (5 < local_res8[0]) break;
-        LAB_180b92550:
+        LAB_180b92c10:
           lVar6 = FUN_18046c0a0(0);
           if (((lVar6 == null) || (this.targetForceData == null)) || (*(int64 *)(lVar6 + 32) == 0)
              ) throw; // [null/range check failed]
@@ -565,19 +565,19 @@ public class OtherForceContributionExchangeController
            ((this.targetForceData == null ||
             (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 0x180)) == null)))
         throw; // [null/range check failed]
-        cVar2 = FUN_18182a3a0(lVar6,this.targetForceData.speBuildingID,DAT_181d8f398);
+        cVar2 = FUN_18182a9b0(lVar6,this.targetForceData.speBuildingID,DAT_181d8f3b0);
         if ((((this.exchangeUIPanel == null) ||
              (lVar6 = GameObject.get_transform(this.exchangeUIPanel,0)) == null) ||
             (lVar6 = Transform.Find(lVar6,"SpeBuilding",0)) == null) ||
            ((lVar6 = Transform.Find(lVar6,"UnlockButton",0), lVar6 == null ||
-            (lVar6 = Component.GetComponent(lVar6,DAT_181d93760)) == null))) throw; // [null/range check failed]
+            (lVar6 = Component.GetComponent(lVar6,DAT_181d93778)) == null))) throw; // [null/range check failed]
         Selectable.set_interactable(lVar6,!cVar2,0);
         if (((this.exchangeUIPanel == null) ||
             ((lVar6 = GameObject.get_transform(this.exchangeUIPanel,0), lVar6 == null ||
              (lVar6 = Transform.Find(lVar6,"SpeBuilding",0)) == null))) ||
            ((lVar6 = Transform.Find(lVar6,"UnlockButton",0), lVar6 == null ||
             (lVar6 = Transform.Find(lVar6,"Cost",0)) == null))) throw; // [null/range check failed]
-        uVar8 = Component.GetComponent(lVar6,DAT_181d96160);
+        uVar8 = Component.GetComponent(lVar6,DAT_181d96178);
         uVar7 = "已获取";
         if (!cVar2) {
           cVar3 = OtherForceContributionExchangeController.ForceIsPlayerServant(this,0);
@@ -600,7 +600,7 @@ public class OtherForceContributionExchangeController
             (lVar6 = Transform.Find(lVar6,"SpeBuilding",0)) == null) ||
            ((lVar6 = Transform.Find(lVar6,"UnlockButton",0), lVar6 == null ||
             (lVar6 = Transform.Find(lVar6,"Cost",0)) == null))) throw; // [null/range check failed]
-        plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181d96160);
+        plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181d96178);
         if (!cVar2) {
           if (this.targetForceData == null) throw; // [null/range check failed]
           fVar1 = this.targetForceData.playerOutForceContribution;
@@ -629,7 +629,7 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x6001974
-    // RVA   : 0xB91300   Offset: 0xB90700   Length: 0xAF4
+    // RVA   : 0xB919C0   Offset: 0xB90DC0   Length: 0xAF4
     public void ExchangeSkillClicked(KungfuSkillLvData targetSkill)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -648,24 +648,24 @@ public class OtherForceContributionExchangeController
         uint32 local_res20 [2];
         if ((((GameController._instance == null) ||
              (lVar3 = GameController._instance.worldData) == null) ||
-            (lVar3 = WorldData.Player(lVar3,0), targetSkill == null)) || (lVar3 == null)) goto LAB_180b91ddd;
+            (lVar3 = WorldData.Player(lVar3,0), targetSkill == null)) || (lVar3 == null)) goto LAB_180b9249d;
         lVar3 = HeroData.FindSkill(lVar3,*(uint32 *)(targetSkill + 16),0);
         if (lVar3 != null) {
           if (GameController._instance != null) {
             GameController.ShowTextOnMouse(GameController._instance,"已学会！",0);
             return;
           }
-          goto LAB_180b91ddd;
+          goto LAB_180b9249d;
         }
         cVar2 = OtherForceContributionExchangeController.ForceIsPlayerServant(this,0);
         if (!cVar2) {
           lVar3 = FUN_18046c0a0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
-             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180b91ddd;
+             (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) goto LAB_180b9249d;
           fVar9 = *(float *)(lVar3 + 0x1c4);
           lVar3 = OtherForceContributionExchangeController.exchangeMinFame;
           lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
-          if ((lVar4 == null) || (lVar3 == null)) goto LAB_180b91ddd;
+          if ((lVar4 == null) || (lVar3 == null)) goto LAB_180b9249d;
           uVar1 = *(uint32 *)(lVar4 + 52);
           if (lVar3.cityAreaID <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -675,7 +675,7 @@ public class OtherForceContributionExchangeController
             lVar4 = OtherForceContributionExchangeController.exchangeMinFame;
             lVar5 = KungfuSkillLvData.DataBase(targetSkill,0);
             if ((lVar5 == null) || (lVar4 == null)) {
-        LAB_180b91de3:
+        LAB_180b924a3:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -685,10 +685,10 @@ public class OtherForceContributionExchangeController
             }
             local_res20[0] =
                  lVar4[uVar1];
-            uVar6 = il2cpp_value_box(DAT_181da22d8,local_res20);
+            uVar6 = il2cpp_value_box(DAT_181da22f0,local_res20);
             lVar4 = *(int64 *)(pStatics_3d40 + 0x4f8);
             lVar5 = KungfuSkillLvData.DataBase(targetSkill,0);
-            if ((lVar5 == null) || (lVar4 == null)) goto LAB_180b91de3;
+            if ((lVar5 == null) || (lVar4 == null)) goto LAB_180b924a3;
             uVar1 = *(uint32 *)(lVar5 + 52);
             if (*(uint32 *)(lVar4 + 24) <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -696,25 +696,25 @@ public class OtherForceContributionExchangeController
             uVar6 = String.Format("#PlayerName#的江湖声望太低，若将本门{1}武学托付于你，只怕难以服众。\n(需要至少{0}点声望。)",uVar6,
                                    *(uint64 *)
                                     (*(int64 *)(lVar4 + 16) + 32 + (int64)(int)uVar1 * 8),0);
-            lVar4 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar4,DAT_181da3bd8);
-            if (lVar4 == null) goto LAB_180b91de3;
-            FUN_18181e0a0(lVar4,"是我唐突了;HideInteractUI",DAT_181da3d58);
+            lVar4 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar4,DAT_181da3bf0);
+            if (lVar4 == null) goto LAB_180b924a3;
+            FUN_18181e6b0(lVar4,"是我唐突了;HideInteractUI",DAT_181da3d70);
             lVar5 = FUN_18046bac0(0);
             if (((lVar5 == null) || (*(int64 *)(lVar5 + 88) == 0)) ||
                (lVar5 = AreaData.GetForce(*(int64 *)(lVar5 + 88),0)) == null)
-            goto LAB_180b91de3;
+            goto LAB_180b924a3;
             uVar7 = Int32.ToString(lVar5 + 88,0);
             var uVar8 = new SinglePlotData(uVar6,lVar4,3,uVar7,3,"0",0,0,0);
-            if (lVar3 == null) goto LAB_180b91de3;
-            goto LAB_180b917ea;
+            if (lVar3 == null) goto LAB_180b924a3;
+            goto LAB_180b91eaa;
           }
         }
         cVar2 = OtherForceContributionExchangeController.ForceIsPlayerServant(this,0);
         if (!cVar2) {
           lVar3 = OtherForceContributionExchangeController.exchangeMinFavor;
           lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
-          if ((lVar4 == null) || (lVar3 == null)) goto LAB_180b91ddd;
+          if ((lVar4 == null) || (lVar3 == null)) goto LAB_180b9249d;
           uVar1 = *(uint32 *)(lVar4 + 52);
           if (lVar3.cityAreaID <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -724,14 +724,14 @@ public class OtherForceContributionExchangeController
             if ((((lVar3 == null) || (lVar3.TempHeros == null)) ||
                 (lVar3 = AreaData.GetForce(lVar3.TempHeros,0)) == null) ||
                (lVar3 = ForceData.GetLeader(lVar3,0)) == null) {
-        LAB_180b91ddd:
+        LAB_180b9249d:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             fVar9 = (float)HeroData.Favor(lVar3,0,0);
             lVar3 = OtherForceContributionExchangeController.exchangeMinFavor;
             lVar4 = KungfuSkillLvData.DataBase(targetSkill,0);
-            if ((lVar4 == null) || (lVar3 == null)) goto LAB_180b91ddd;
+            if ((lVar4 == null) || (lVar3 == null)) goto LAB_180b9249d;
             uVar1 = *(uint32 *)(lVar4 + 52);
             if (lVar3.cityAreaID <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -741,29 +741,29 @@ public class OtherForceContributionExchangeController
               lVar4 = OtherForceContributionExchangeController.exchangeMinFavor;
               lVar5 = KungfuSkillLvData.DataBase(targetSkill,0);
               if ((lVar5 == null) || (lVar4 == null)) {
-        LAB_180b91de9:
+        LAB_180b924a9:
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              local_res20[0] = FUN_1800d6790(lVar4,*(uint32 *)(lVar5 + 52),DAT_181da1078);
-              uVar6 = il2cpp_value_box(DAT_181da22d8,local_res20);
+              local_res20[0] = FUN_1800d6790(lVar4,*(uint32 *)(lVar5 + 52),DAT_181da1090);
+              uVar6 = il2cpp_value_box(DAT_181da22f0,local_res20);
               lVar4 = *(int64 *)(pStatics_3d40 + 0x4f8);
               lVar5 = KungfuSkillLvData.DataBase(targetSkill,0);
-              if ((lVar5 == null) || (lVar4 == null)) goto LAB_180b91de9;
-              uVar8 = FUN_180002f80(lVar4,*(uint32 *)(lVar5 + 52),DAT_181da4358);
+              if ((lVar5 == null) || (lVar4 == null)) goto LAB_180b924a9;
+              uVar8 = FUN_180002f80(lVar4,*(uint32 *)(lVar5 + 52),DAT_181da4370);
               uVar6 = String.Format("本座与#PlayerName#你交情尚浅，恐怕还不能将本门{1}武学贸然托付于你。\n(需要至少{0}点掌门好感。)",uVar6,uVar8,0);
-              lVar4 = il2cpp_internal(DAT_181d97750);
-              FUN_18132faf0(lVar4,DAT_181da3bd8);
-              if (lVar4 == null) goto LAB_180b91de9;
-              FUN_18181e0a0(lVar4,"是我唐突了;HideInteractUI",DAT_181da3d58);
+              lVar4 = il2cpp_internal(DAT_181d97768);
+              FUN_181330100(lVar4,DAT_181da3bf0);
+              if (lVar4 == null) goto LAB_180b924a9;
+              FUN_18181e6b0(lVar4,"是我唐突了;HideInteractUI",DAT_181da3d70);
               lVar5 = FUN_18046bac0(0);
               if (((lVar5 == null) || (*(int64 *)(lVar5 + 88) == 0)) ||
                  (lVar5 = AreaData.GetForce(*(int64 *)(lVar5 + 88),0)) == null)
-              goto LAB_180b91de9;
+              goto LAB_180b924a9;
               uVar7 = Int32.ToString(lVar5 + 88,0);
               var uVar8 = new SinglePlotData(uVar6,lVar4,3,uVar7,3,"0",0,0,0);
-              if (lVar3 == null) goto LAB_180b91de9;
-              goto LAB_180b917ea;
+              if (lVar3 == null) goto LAB_180b924a9;
+              goto LAB_180b91eaa;
             }
           }
         }
@@ -780,20 +780,20 @@ public class OtherForceContributionExchangeController
               fVar9 = (float)FUN_1801f8ab0(0x40000000);
               local_res20[0] = Mathf.RoundToInt(fVar9 * 50.0,0);
             }
-            uVar8 = il2cpp_value_box(DAT_181d80418,local_res20);
+            uVar8 = il2cpp_value_box(DAT_181d80430,local_res20);
             uVar6 = String.Format("#PlayerName#想要学习本门的{0}吗？\n#PlayerName#虽非本门弟子，但在江湖中声名显赫，且与本座私交甚笃。\n因此若能为本门立下{1}点功绩，倒也可破例而为。",uVar6,uVar8,0);
-            lVar4 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar4,DAT_181da3bd8);
+            lVar4 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar4,DAT_181da3bf0);
             uVar8 = Int32.ToString(targetSkill + 16,0);
             uVar8 = String.Concat("兑换该武学;SureExchangeOtherForceSkill;",uVar8,0);
             if (lVar4 != null) {
-              FUN_18181e0a0(lVar4,uVar8,DAT_181da3d58);
-              FUN_18181e0a0(lVar4,"还是算了;HideInteractUI",DAT_181da3d58);
+              FUN_18181e6b0(lVar4,uVar8,DAT_181da3d70);
+              FUN_18181e6b0(lVar4,"还是算了;HideInteractUI",DAT_181da3d70);
               if (this.targetForceData != null) {
                 uVar7 = Int32.ToString(this.targetForceData + 88,0);
                 var uVar8 = new SinglePlotData(uVar6,lVar4,3,uVar7,3,"0",0,0,0);
                 if (lVar3 != null) {
-        LAB_180b917ea:
+        LAB_180b91eaa:
                   PlotController.ChangePlot(lVar3,uVar8,0);
                   return;
                 }
@@ -804,7 +804,7 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x6001975
-    // RVA   : 0xB94760   Offset: 0xB93B60   Length: 0xA0D
+    // RVA   : 0xB94E20   Offset: 0xB94220   Length: 0xA0D
     public void UnlockClothButtonClicked(int lv)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -849,7 +849,7 @@ public class OtherForceContributionExchangeController
               GameController.ShowTextOnMouse(lVar9,"功绩不足！",0);
               plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar10 = (int64 *)0;
-              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                 plVar10 = plVar3;
               }
               NGUITools.PlaySound(plVar10,0);
@@ -873,7 +873,7 @@ public class OtherForceContributionExchangeController
             lVar4 = FUN_18046c400(0);
             lVar6 = OtherForceContributionExchangeController.exchangeMinFame;
             if (lVar6 == null) {
-        LAB_180b95162:
+        LAB_180b95822:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -881,26 +881,26 @@ public class OtherForceContributionExchangeController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             local_res20[0] = *(uint32 *)(*(int64 *)(lVar6 + 16) + 32 + lVar9 * 4);
-            uVar5 = il2cpp_value_box(DAT_181da22d8,local_res20);
+            uVar5 = il2cpp_value_box(DAT_181da22f0,local_res20);
             lVar6 = *(int64 *)(pStatics_3d40 + 0x3d8);
-            if (lVar6 == null) goto LAB_180b95162;
+            if (lVar6 == null) goto LAB_180b95822;
             if (*(uint32 *)(lVar6 + 24) <= lv) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar5 = String.Format("#PlayerName#的江湖声望太低，若将本门{1}服饰托付于你，只怕难以服众。\n(需要至少{0}点声望)",uVar5,
                                    *(uint64 *)(*(int64 *)(lVar6 + 16) + 32 + lVar9 * 8),0);
-            lVar9 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar9,DAT_181da3bd8);
-            if (lVar9 == null) goto LAB_180b95162;
-            FUN_18181e0a0(lVar9,"是我唐突了;HideInteractUI",DAT_181da3d58);
+            lVar9 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar9,DAT_181da3bf0);
+            if (lVar9 == null) goto LAB_180b95822;
+            FUN_18181e6b0(lVar9,"是我唐突了;HideInteractUI",DAT_181da3d70);
             lVar6 = FUN_18046bac0(0);
             if (((lVar6 == null) || (*(int64 *)(lVar6 + 88) == 0)) ||
                (lVar6 = AreaData.GetForce(*(int64 *)(lVar6 + 88),0)) == null)
-            goto LAB_180b95162;
+            goto LAB_180b95822;
             uVar7 = Int32.ToString(lVar6 + 88,0);
             var uVar8 = new SinglePlotData(uVar5,lVar9,3,uVar7,3,"0",0,0,0);
-            if (lVar4 == null) goto LAB_180b95162;
-            goto LAB_180b94ca2;
+            if (lVar4 == null) goto LAB_180b95822;
+            goto LAB_180b95362;
           }
         }
         cVar1 = OtherForceContributionExchangeController.ForceIsPlayerServant(this,0);
@@ -929,7 +929,7 @@ public class OtherForceContributionExchangeController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 local_res20[0] = *(uint32 *)(*(int64 *)(lVar6 + 16) + 32 + lVar9 * 4);
-                uVar5 = il2cpp_value_box(DAT_181da22d8,local_res20);
+                uVar5 = il2cpp_value_box(DAT_181da22f0,local_res20);
                 lVar6 = *(int64 *)(pStatics_3d40 + 0x3d8);
                 if (lVar6 != null) {
                   if (*(uint32 *)(lVar6 + 24) <= lv) {
@@ -938,17 +938,17 @@ public class OtherForceContributionExchangeController
                   uVar5 = String.Format("本座与#PlayerName#你交情尚浅，恐怕还不能将本门{1}服饰贸然托付于你。\n(需要至少{0}点掌门好感)",uVar5,
                                          *(uint64 *)(*(int64 *)(lVar6 + 16) + 32 + lVar9 * 8),0
                                         );
-                  lVar9 = il2cpp_internal(DAT_181d97750);
-                  FUN_18132faf0(lVar9,DAT_181da3bd8);
+                  lVar9 = il2cpp_internal(DAT_181d97768);
+                  FUN_181330100(lVar9,DAT_181da3bf0);
                   if (lVar9 != null) {
-                    FUN_18181e0a0(lVar9,"是我唐突了;HideInteractUI",DAT_181da3d58);
+                    FUN_18181e6b0(lVar9,"是我唐突了;HideInteractUI",DAT_181da3d70);
                     lVar6 = FUN_18046bac0(0);
                     if (((lVar6 != null) && (*(int64 *)(lVar6 + 88) != 0)) &&
                        (lVar6 = AreaData.GetForce(*(int64 *)(lVar6 + 88),0)) != null) {
                       uVar7 = Int32.ToString(lVar6 + 88,0);
                       var uVar8 = new SinglePlotData(uVar5,lVar9,3,uVar7,3,"0",0,0,0);
                       if (lVar4 != null) {
-        LAB_180b94ca2:
+        LAB_180b95362:
                         PlotController.ChangePlot(lVar4,uVar8,0);
                         return;
                       }
@@ -987,7 +987,7 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x6001976
-    // RVA   : 0xB93E50   Offset: 0xB93250   Length: 0x900
+    // RVA   : 0xB94510   Offset: 0xB93910   Length: 0x900
     public void SpeBuildingButtonClicked()
     {
         bool cVar1;
@@ -1025,7 +1025,7 @@ public class OtherForceContributionExchangeController
               GameController.ShowTextOnMouse(lVar3,"功绩不足！",0);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar10 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf348)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
                 plVar10 = plVar4;
               }
               NGUITools.PlaySound(plVar10,0);
@@ -1049,7 +1049,7 @@ public class OtherForceContributionExchangeController
             lVar3 = FUN_18046c400(0);
             lVar6 = OtherForceContributionExchangeController.exchangeMinFame;
             if (lVar6 == null) {
-        LAB_180b94745:
+        LAB_180b94e05:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
@@ -1057,20 +1057,20 @@ public class OtherForceContributionExchangeController
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             local_res18[0] = *(uint32 *)(lVar6.forceID + 52);
-            uVar5 = il2cpp_value_box(DAT_181da22d8,local_res18);
+            uVar5 = il2cpp_value_box(DAT_181da22f0,local_res18);
             uVar5 = String.Format("#PlayerName#的江湖声望太低，若将本门特殊建筑托付于你，只怕难以服众。\n(需要至少{0}点声望)",uVar5,0);
-            lVar6 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar6,DAT_181da3bd8);
-            if (lVar6 == null) goto LAB_180b94745;
-            FUN_18181e0a0(lVar6,"是我唐突了;HideInteractUI",DAT_181da3d58);
+            lVar6 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar6,DAT_181da3bf0);
+            if (lVar6 == null) goto LAB_180b94e05;
+            FUN_18181e6b0(lVar6,"是我唐突了;HideInteractUI",DAT_181da3d70);
             lVar7 = FUN_18046bac0(0);
             if (((lVar7 == null) || (*(int64 *)(lVar7 + 88) == 0)) ||
                (lVar7 = AreaData.GetForce(*(int64 *)(lVar7 + 88),0)) == null)
-            goto LAB_180b94745;
+            goto LAB_180b94e05;
             uVar8 = Int32.ToString(lVar7 + 88,0);
             uVar9 = new SinglePlotData(uVar5,lVar6,3,uVar8,3,"0",0,0,0);
-            if (lVar3 == null) goto LAB_180b94745;
-            goto LAB_180b94331;
+            if (lVar3 == null) goto LAB_180b94e05;
+            goto LAB_180b949f1;
           }
         }
         cVar1 = OtherForceContributionExchangeController.ForceIsPlayerServant(this,0);
@@ -1093,19 +1093,19 @@ public class OtherForceContributionExchangeController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               local_res18[0] = *(uint32 *)(lVar6.forceID + 52);
-              uVar5 = il2cpp_value_box(DAT_181da22d8,local_res18);
+              uVar5 = il2cpp_value_box(DAT_181da22f0,local_res18);
               uVar5 = String.Format("本座与#PlayerName#你交情尚浅，恐怕还不能将本门特殊建筑贸然托付于你。\n(需要至少{0}点掌门好感)",uVar5,0);
-              lVar6 = il2cpp_internal(DAT_181d97750);
-              FUN_18132faf0(lVar6,DAT_181da3bd8);
+              lVar6 = il2cpp_internal(DAT_181d97768);
+              FUN_181330100(lVar6,DAT_181da3bf0);
               if (lVar6 != null) {
-                FUN_18181e0a0(lVar6,"是我唐突了;HideInteractUI",DAT_181da3d58);
+                FUN_18181e6b0(lVar6,"是我唐突了;HideInteractUI",DAT_181da3d70);
                 lVar7 = FUN_18046bac0(0);
                 if (((lVar7 != null) && (*(int64 *)(lVar7 + 88) != 0)) &&
                    (lVar7 = AreaData.GetForce(*(int64 *)(lVar7 + 88),0)) != null) {
                   uVar8 = Int32.ToString(lVar7 + 88,0);
                   uVar9 = new SinglePlotData(uVar5,lVar6,3,uVar8,3,"0",0,0,0);
                   if (lVar3 != null) {
-        LAB_180b94331:
+        LAB_180b949f1:
                     PlotController.ChangePlot(lVar3,uVar9,0);
                     return;
                   }
@@ -1134,7 +1134,7 @@ public class OtherForceContributionExchangeController
                  (lVar3 = GameController._instance.worldData) != null) &&
                 (this.targetForceData != null)) &&
                (lVar3 = lVar3.speBuildingUnlocked) != null) {
-              FUN_18182a0b0(lVar3,this.targetForceData.speBuildingID,DAT_181d8f218);
+              FUN_18182a6c0(lVar3,this.targetForceData.speBuildingID,DAT_181d8f230);
               OtherForceContributionExchangeController.RefreshExchangeUI(this,0);
               return;
             }
@@ -1143,7 +1143,7 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x6001977
-    // RVA   : 0xB91F90   Offset: 0xB91390   Length: 0x59
+    // RVA   : 0xB92650   Offset: 0xB91A50   Length: 0x59
     public int GetExchangeContributionCost(int lv, float rate)
     {
         uint64
@@ -1163,7 +1163,7 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x6001978
-    // RVA   : 0xB91E00   Offset: 0xB91200   Length: 0x189
+    // RVA   : 0xB924C0   Offset: 0xB918C0   Length: 0x189
     public bool ForceIsPlayerServant()
     {
         int iVar1;
@@ -1192,7 +1192,7 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x6001979
-    // RVA   : 0xB95170   Offset: 0xB94570   Length: 0x80
+    // RVA   : 0xB95830   Offset: 0xB94C30   Length: 0x80
     public void UnshowExchangeUI()
     {
         ulong uVar1;
@@ -1213,32 +1213,32 @@ public class OtherForceContributionExchangeController
     }
 
     // Token : 0x600197B
-    // RVA   : 0xB95200   Offset: 0xB94600   Length: 0x1D9
+    // RVA   : 0xB958C0   Offset: 0xB94CC0   Length: 0x1D9
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d8f490 + 184);
+        var pStatics = *(int64*)(DAT_181d8f4a8 + 184);
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d96ed0);
-        FUN_18132faf0(lVar1,DAT_181da0cf8);
+        lVar1 = il2cpp_internal(DAT_181d96ee8);
+        FUN_181330100(lVar1,DAT_181da0d10);
         if (lVar1 != null) {
-          FUN_18181de10(lVar1,0x42c80000,DAT_181da0df8);
-          FUN_18181de10(lVar1,0x43480000,DAT_181da0df8);
-          FUN_18181de10(lVar1,0x43c80000,DAT_181da0df8);
-          FUN_18181de10(lVar1,0x44480000,DAT_181da0df8);
-          FUN_18181de10(lVar1,0x44c80000,DAT_181da0df8);
-          FUN_18181de10(lVar1,0x45480000,DAT_181da0df8);
+          FUN_18181e420(lVar1,0x42c80000,DAT_181da0e10);
+          FUN_18181e420(lVar1,0x43480000,DAT_181da0e10);
+          FUN_18181e420(lVar1,0x43c80000,DAT_181da0e10);
+          FUN_18181e420(lVar1,0x44480000,DAT_181da0e10);
+          FUN_18181e420(lVar1,0x44c80000,DAT_181da0e10);
+          FUN_18181e420(lVar1,0x45480000,DAT_181da0e10);
           plVar2 = pStatics;
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
-          lVar1 = il2cpp_internal(DAT_181d96ed0);
-          FUN_18132faf0(lVar1,DAT_181da0cf8);
+          lVar1 = il2cpp_internal(DAT_181d96ee8);
+          FUN_181330100(lVar1,DAT_181da0d10);
           if (lVar1 != null) {
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0,DAT_181da0df8);
-            FUN_18181de10(lVar1,0x41a00000,DAT_181da0df8);
-            FUN_18181de10(lVar1,0x42480000,DAT_181da0df8);
-            FUN_18181de10(lVar1,0x42c80000,DAT_181da0df8);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0,DAT_181da0e10);
+            FUN_18181e420(lVar1,0x41a00000,DAT_181da0e10);
+            FUN_18181e420(lVar1,0x42480000,DAT_181da0e10);
+            FUN_18181e420(lVar1,0x42c80000,DAT_181da0e10);
             OtherForceContributionExchangeController.exchangeMinFavor = lVar1;
             return;
           }

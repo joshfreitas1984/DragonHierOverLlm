@@ -6,10 +6,10 @@
 public class <>c__DisplayClass9_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002141
+    // Token: 0x4002142
     public Material target;
 
-    // Token: 0x4002142
+    // Token: 0x4002143
     public int propertyID;
 
     // ── Methods ──────────────────────────────────────────────────
@@ -21,7 +21,7 @@ public class <>c__DisplayClass9_0
     }
 
     // Token : 0x600275B
-    // RVA   : 0x93A790   Offset: 0x939B90   Length: 0x24
+    // RVA   : 0x93AE20   Offset: 0x93A220   Length: 0x24
     internal Vector2 <DOTiling>b__0()
     {
         if (this.target != null) {
@@ -31,11 +31,11 @@ public class <>c__DisplayClass9_0
     }
 
     // Token : 0x600275C
-    // RVA   : 0x93A7C0   Offset: 0x939BC0   Length: 0x27
+    // RVA   : 0x93AE50   Offset: 0x93A250   Length: 0x27
     internal void <DOTiling>b__1(Vector2 x)
     {
         if (this.target != null) {
-          FUN_1810e23f0(this.target,this.propertyID,x,0);
+          FUN_1810e2a00(this.target,this.propertyID,x,0);
           return;
         }
     }

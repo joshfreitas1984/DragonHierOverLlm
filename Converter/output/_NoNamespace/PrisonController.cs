@@ -6,46 +6,46 @@
 public class PrisonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A45
+    // Token: 0x4001A46
     public GameObject prisonPanel;
 
-    // Token: 0x4001A46
+    // Token: 0x4001A47
     public static readonly int BadFameEveryDay;
 
-    // Token: 0x4001A47
+    // Token: 0x4001A48
     public static readonly int BuyGuardCdTime;
 
-    // Token: 0x4001A48
+    // Token: 0x4001A49
     public static readonly int BuyGuardCureMinFavor;
 
-    // Token: 0x4001A49
+    // Token: 0x4001A4A
     public static readonly int BuyGuardMedMinFavor;
 
-    // Token: 0x4001A4A
+    // Token: 0x4001A4B
     public static readonly int StealPrisonMinFavor;
 
-    // Token: 0x4001A4B
+    // Token: 0x4001A4C
     public static readonly int BreakChainMinFavor;
 
-    // Token: 0x4001A4C
+    // Token: 0x4001A4D
     public static readonly int EscapePrisonMinFavor;
 
-    // Token: 0x4001A4D
+    // Token: 0x4001A4E
     public bool needRefreshUI;
 
-    // Token: 0x4001A4E
+    // Token: 0x4001A4F
     private static PrisonController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6001FE0
-    // RVA   : 0xB11B40   Offset: 0xB10F40   Length: 0x58
+    // RVA   : 0xB12200   Offset: 0xB11600   Length: 0x58
     public static PrisonController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d92c88 + 184) + 32);
+        return *(uint64 *)(*(int64 *)(DAT_181d92ca0 + 184) + 32);
     }
 
     // Token : 0x6001FE1
-    // RVA   : 0xB0E460   Offset: 0xB0D860   Length: 0xE0
+    // RVA   : 0xB0EB20   Offset: 0xB0DF20   Length: 0xE0
     private void Awake()
     {
         ulong uVar1;
@@ -58,10 +58,10 @@ public class PrisonController
     }
 
     // Token : 0x6001FE2
-    // RVA   : 0xB11A70   Offset: 0xB10E70   Length: 0xE
+    // RVA   : 0xB12130   Offset: 0xB11530   Length: 0xE
     private void Update()
     {
-        void FUN_180b11a70(int64 this)
+        void FUN_180b12130(int64 this)
         {
         if (this.needRefreshUI) {
           PrisonController.RefreshUI(this,0);
@@ -70,7 +70,7 @@ public class PrisonController
     }
 
     // Token : 0x6001FE3
-    // RVA   : 0xB0F170   Offset: 0xB0E570   Length: 0xB8
+    // RVA   : 0xB0F830   Offset: 0xB0EC30   Length: 0xB8
     public void LoadGameReshowPrison()
     {
         if (this.prisonPanel != null) {
@@ -78,7 +78,7 @@ public class PrisonController
           PrisonController.RefreshUI(this,0);
           plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Door/BigDoor3",0);
           plVar2 = (int64 *)0;
-          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf348)) {
+          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
             plVar2 = plVar1;
           }
           NGUITools.PlaySound(plVar2,0x3f800000,0);
@@ -87,11 +87,11 @@ public class PrisonController
     }
 
     // Token : 0x6001FE4
-    // RVA   : 0xB108A0   Offset: 0xB0FCA0   Length: 0x11CB
+    // RVA   : 0xB10F60   Offset: 0xB10360   Length: 0x11CB
     public void StartPrison()
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_f6a8 = *(int64*)(DAT_181d7f6a8 + 184);
+        var pStatics_f6c0 = *(int64*)(DAT_181d7f6c0 + 184);
         long lVar1;
         long lVar2;
         ulong uVar4;
@@ -187,13 +187,13 @@ public class PrisonController
                       lVar1 = WorldData.Player(lVar1,0);
                       if (lVar1 != null) {
                         HeroData.LoseAllItem(lVar1,0);
-                        if (*pStatics_f6a8 != 0) {
+                        if (*pStatics_f6c0 != 0) {
                           puVar3 = &local_38;
                           local_38 = 0;
                           uStack_30 = 0;
                           uVar4 = "Woosh";
                           InfoController.AddInfoTab
-                                    (*pStatics_f6a8,"你的所有物品被收入监狱库房中","UIAtlas",
+                                    (*pStatics_f6c0,"你的所有物品被收入监狱库房中","UIAtlas",
                                      "从事工作_被囚禁","Woosh",CONCAT44(uVar12,0x3f800000),
                                      CONCAT44(uVar13,0x40a00000),puVar3,0);
                           if ((GameController._instance != null) &&
@@ -231,16 +231,16 @@ public class PrisonController
                                         PrisonController.RefreshUI(this,0);
                                         plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/Door/BigDoor3",0);
                                         plVar10 = (int64 *)0;
-                                        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+                                        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                                           plVar10 = plVar5;
                                         }
                                         NGUITools.PlaySound(plVar10,0x3f800000,0);
                                         lVar1 = new ZhSegment(0);
-                                        uVar4 = il2cpp_internal(DAT_181d952d0);
-                                        FUN_18132faf0(uVar4,DAT_181d97508);
+                                        uVar4 = il2cpp_internal(DAT_181d952e8);
+                                        FUN_181330100(uVar4,DAT_181d97520);
                                         lVar1.villageAreaID = uVar4;
-                                        uVar4 = il2cpp_internal(DAT_181d96fd0);
-                                        FUN_18132faf0(uVar4,DAT_181da1370);
+                                        uVar4 = il2cpp_internal(DAT_181d96fe8);
+                                        FUN_181330100(uVar4,DAT_181da1388);
                                         lVar1.ResourcePoints = uVar4;
                                         lVar2 = lVar1.ResourcePoints;
                                         uVar4 = "你就是#$PlayerName#？\n哼哼，你这家伙近来行凶作恶，犯下{0}恶名。\n为了搜捕你，可费了咱们不少功夫。";
@@ -255,7 +255,7 @@ public class PrisonController
                                           if (lVar6 != null) {
                                             uVar7 = Single.ToString(lVar6 + 0x1c8,"f0",0);
                                             uVar4 = String.Format(uVar4,uVar7,0);
-                                            lVar6 = *(int64 *)(*(int64 *)(DAT_181db4008 + 184) + 8)
+                                            lVar6 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 8)
                                             ;
                                             if ((GameController._instance != null) &&
                                                (lVar8 = *(int64 *)
@@ -269,39 +269,39 @@ public class PrisonController
                                                                    0xffffffff,
                                                                    CONCAT44(uVar12,*(uint32 *)
                                                                                     (lVar8 + 184)),0);
-                                                uVar9 = il2cpp_internal(DAT_181da24d8);
+                                                uVar9 = il2cpp_internal(DAT_181da24f0);
                                                 uVar14 = (uint64)puVar3 & 0xffffffff00000000;
                                                 uVar11 = CONCAT44(uVar13,3);
                                                 SinglePlotData.ctor
                                                           (uVar9,uVar4,0,5,uVar7,uVar11,"0",
                                                            uVar14,0,0);
                                                 if (lVar2 != null) {
-                                                  FUN_18181e0a0(lVar2,uVar9,DAT_181da13f0);
+                                                  FUN_18181e6b0(lVar2,uVar9,DAT_181da1408);
                                                   lVar2 = lVar1.ResourcePoints;
                                                   uVar4 = "不过既然进了牢中带上手铐脚镣，任你功夫再高也得低头做人。\n若是敢动逃跑越狱的歪心思，可别怪本官不客气！";
                                                   if (*(char *)(pStatics_3d40 + 4)
                                                       != false) {
                                                     uVar4 = "不过既然进了思过室带上手铐脚镣，任你功夫再高也得低头做人。\n若是敢动逃跑的歪心思，可别怪我不客气！";
                                                   }
-                                                  uVar7 = FUN_180004500(DAT_181d8b140);
+                                                  uVar7 = FUN_180004500(DAT_181d8b158);
                                                   uVar4 = String.Format(uVar4,uVar7,0);
-                                                  uVar7 = il2cpp_internal(DAT_181da24d8);
+                                                  uVar7 = il2cpp_internal(DAT_181da24f0);
                                                   uVar14 = uVar14 & 0xffffffff00000000;
                                                   uVar11 = uVar11 & 0xffffffff00000000;
                                                   SinglePlotData.ctor
                                                             (uVar7,uVar4,0,0,0,uVar11,0,uVar14,0,0);
                                                   if (lVar2 != null) {
-                                                    FUN_18181e0a0(lVar2,uVar7,DAT_181da13f0);
+                                                    FUN_18181e6b0(lVar2,uVar7,DAT_181da1408);
                                                     lVar2 = lVar1.ResourcePoints;
                                                     uVar4 = "此外，你身上所有物品都会保管在库房中，待出狱之时自会如数奉还。\n望你在此好生反省，争取早日洗心革面，重新做人。";
                                                     if (*(char *)(pStatics_3d40 + 4)
                                                         != false) {
                                                       uVar4 = "此外，你身上所有物品都会保管在库房中，待离开之时自会如数奉还。\n望你在此好生反省，争取早日完成思过。";
                                                     }
-                                                    uVar7 = FUN_180004500(DAT_181d8b140);
+                                                    uVar7 = FUN_180004500(DAT_181d8b158);
                                                     uVar4 = String.Format(uVar4,uVar7,0);
-                                                    lVar6 = il2cpp_internal(DAT_181d97750);
-                                                    FUN_18132faf0(lVar6,DAT_181da3bd8);
+                                                    lVar6 = il2cpp_internal(DAT_181d97768);
+                                                    FUN_181330100(lVar6,DAT_181da3bf0);
                                                     if ((GameController._instance != null) &&
                                                        (lVar8 = *(int64 *)
                                                                  (GameController._instance +
@@ -315,16 +315,16 @@ public class PrisonController
                                                         }
                                                         uVar7 = String.Concat("虎落平阳;",uVar7,0);
                                                         if (lVar6 != null) {
-                                                          FUN_18181e0a0(lVar6,uVar7,DAT_181da3d58);
-                                                          uVar7 = il2cpp_internal(DAT_181da24d8);
+                                                          FUN_18181e6b0(lVar6,uVar7,DAT_181da3d70);
+                                                          uVar7 = il2cpp_internal(DAT_181da24f0);
                                                           SinglePlotData.ctor
                                                                     (uVar7,uVar4,lVar6,0,0,
                                                                      uVar11 & 0xffffffff00000000,0,
                                                                      uVar14 & 0xffffffff00000000,0,0);
                                                           if (lVar2 != null) {
-                                                            FUN_18181e0a0(lVar2,uVar7,DAT_181da13f0);
+                                                            FUN_18181e6b0(lVar2,uVar7,DAT_181da1408);
                                                             lVar2 = *(int64 *)
-                                                                     (*(int64 *)(DAT_181d91b88 + 184)
+                                                                     (*(int64 *)(DAT_181d91ba0 + 184)
                                                                      + 24);
                                                             if (lVar2 != null) {
                                                               PlotController.ChangePlot(lVar2,lVar1,0);
@@ -359,10 +359,10 @@ public class PrisonController
     }
 
     // Token : 0x6001FE5
-    // RVA   : 0xB0EB80   Offset: 0xB0DF80   Length: 0x4CA
+    // RVA   : 0xB0F240   Offset: 0xB0E640   Length: 0x4CA
     public void EndPrison()
     {
-        var pStatics_f6a8 = *(int64*)(DAT_181d7f6a8 + 184);
+        var pStatics_f6c0 = *(int64*)(DAT_181d7f6c0 + 184);
         long lVar1;
         long lVar2;
         ulong local_28;
@@ -383,11 +383,11 @@ public class PrisonController
                    ((lVar2 = lVar2.prisonData, lVar2 != null &&
                     (lVar2 = lVar2.cityAreaID) != null))) {
                   ItemListData.ClearAllItem(lVar2,0);
-                  if (*pStatics_f6a8 != 0) {
+                  if (*pStatics_f6c0 != 0) {
                     local_28 = 0;
                     uStack_20 = 0;
                     InfoController.AddInfoTab
-                              (*pStatics_f6a8,"你取回了监狱库房中的所有物品","UIAtlas",
+                              (*pStatics_f6c0,"你取回了监狱库房中的所有物品","UIAtlas",
                                "从事工作_交易","Woosh",0x3f800000,0x40a00000,&local_28,0);
                     if ((GameController._instance != null) &&
                        (lVar2 = GameController._instance.worldData) != null)
@@ -409,7 +409,7 @@ public class PrisonController
                                 HeroData.GoOutPrison(lVar2,0);
                                 plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Door/BigDoor0",0);
                                 plVar4 = (int64 *)0;
-                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf348)) {
+                                if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
                                   plVar4 = plVar3;
                                 }
                                 NGUITools.PlaySound(plVar4,0x3f800000,0);
@@ -429,7 +429,7 @@ public class PrisonController
     }
 
     // Token : 0x6001FE6
-    // RVA   : 0xB0E540   Offset: 0xB0D940   Length: 0x319
+    // RVA   : 0xB0EC00   Offset: 0xB0E000   Length: 0x319
     public void ChangeGuardAlert(float num, bool showInfo)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -449,12 +449,12 @@ public class PrisonController
           if (((GameController._instance != null) &&
               (lVar2 = GameController._instance.worldData) != null) &&
              (lVar2 = lVar2.prisonData) != null) {
-            uVar6 = FUN_1810e36c0(lVar2.chapter + local_res10[0],0,0x42c80000,0);
+            uVar6 = FUN_1810e3cd0(lVar2.chapter + local_res10[0],0,0x42c80000,0);
             if (lVar1 != null) {
               lVar1.chapter = uVar6;
               this.needRefreshUI = 1;
               if (showInfo) {
-                lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+                lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
                 uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
                 uVar4 = "{1}守卫警戒{0}</color>";
                 if (0.0 <= local_res10[0]) {
@@ -478,7 +478,7 @@ public class PrisonController
     }
 
     // Token : 0x6001FE7
-    // RVA   : 0xB0E860   Offset: 0xB0DC60   Length: 0x31D
+    // RVA   : 0xB0EF20   Offset: 0xB0E320   Length: 0x31D
     public void ChangeGuardFavor(float num, bool showInfo)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -498,12 +498,12 @@ public class PrisonController
           if (((GameController._instance != null) &&
               (lVar2 = GameController._instance.worldData) != null) &&
              (lVar2 = lVar2.prisonData) != null) {
-            uVar6 = FUN_1810e36c0(*(float *)(lVar2 + 20) + local_res10[0],0,0x42c80000,0);
+            uVar6 = FUN_1810e3cd0(*(float *)(lVar2 + 20) + local_res10[0],0,0x42c80000,0);
             if (lVar1 != null) {
               *(uint32 *)(lVar1 + 20) = uVar6;
               this.needRefreshUI = 1;
               if (showInfo) {
-                lVar1 = **(int64 **)(DAT_181d7f6a8 + 184);
+                lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
                 uVar3 = Single.ToString(local_res10,"+0;-0;0",0);
                 uVar4 = "{1}守卫熟络{0}</color>";
                 if (local_res10[0] <= 0.0) {
@@ -527,7 +527,7 @@ public class PrisonController
     }
 
     // Token : 0x6001FE8
-    // RVA   : 0xB10090   Offset: 0xB0F490   Length: 0x805
+    // RVA   : 0xB10750   Offset: 0xB0FB50   Length: 0x805
     public void RefreshUI()
     {
         int iVar1;
@@ -548,12 +548,12 @@ public class PrisonController
               if (lVar2 != null) {
                 lVar2 = Transform.Find(lVar2,"Text",0);
                 if (lVar2 != null) {
-                  uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                  uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                   if (((GameController._instance != null) &&
                       (lVar2 = GameController._instance.worldData) != null)
                      && (lVar2 = lVar2.prisonData) != null) {
                     local_res18[0] = (int)lVar2.chapter;
-                    uVar4 = il2cpp_value_box(DAT_181d80418,local_res18);
+                    uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
                     uVar4 = String.Format("{0}%",uVar4,0);
                     LTLocalization.SetText(uVar3,uVar4,0);
                     if (this.prisonPanel != null) {
@@ -565,7 +565,7 @@ public class PrisonController
                           if (lVar2 != null) {
                             lVar2 = Transform.Find(lVar2,"Slider",0);
                             if (lVar2 != null) {
-                              plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d95b60);
+                              plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d95b78);
                               if ((((GameController._instance != null) &&
                                    (lVar2 = GameController._instance.worldData,
                                    lVar2 != null)) && (lVar2 = lVar2.prisonData) != null) &&
@@ -582,14 +582,14 @@ public class PrisonController
                                       if (lVar2 != null) {
                                         lVar2 = Transform.Find(lVar2,"Text",0);
                                         if (lVar2 != null) {
-                                          uVar3 = Component.GetComponent(lVar2,DAT_181d96160);
+                                          uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
                                           if (((GameController._instance != null) &&
                                               (lVar2 = *(int64 *)
                                                         (GameController._instance + 32),
                                               lVar2 != null)) &&
                                              (lVar2 = lVar2.prisonData) != null) {
                                             local_res20[0] = (int)*(float *)(lVar2 + 20);
-                                            uVar4 = il2cpp_value_box(DAT_181d80418,local_res20);
+                                            uVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
                                             uVar4 = String.Format("{0}%",uVar4,0);
                                             LTLocalization.SetText(uVar3,uVar4,0);
                                             if (this.prisonPanel != null) {
@@ -604,7 +604,7 @@ public class PrisonController
                                                     if (lVar2 != null) {
                                                       plVar5 = (int64 *)
                                                                Component.GetComponent
-                                                                         (lVar2,DAT_181d95b60);
+                                                                         (lVar2,DAT_181d95b78);
                                                       if ((((GameController._instance != null)
                                                            && (lVar2 = *(int64 *)
                                                                         (**(int64 **)
@@ -627,10 +627,10 @@ public class PrisonController
                                                                                       0);
                                                               if (lVar2 != null) {
                                                                 uVar3 = Component.GetComponent
-                                                                                  (lVar2,DAT_181d96160);
+                                                                                  (lVar2,DAT_181d96178);
                                                                 local_28[0] = 
                                                         PrisonController.GetLeftPrisonDay(this,0);
-                                                        uVar4 = il2cpp_value_box(DAT_181d80418,local_28);
+                                                        uVar4 = il2cpp_value_box(DAT_181d80430,local_28);
                                                         uVar4 = String.Format("{0}天",uVar4,0);
                                                         LTLocalization.SetText(uVar3,uVar4,0);
                                                         if (this.prisonPanel != null) {
@@ -648,7 +648,7 @@ public class PrisonController
                                                         "Text",0);
                                                         if (lVar2 != null) {
                                                           uVar4 = Component.GetComponent
-                                                                            (lVar2,DAT_181d96160);
+                                                                            (lVar2,DAT_181d96178);
                                                           iVar1 = PrisonController.GetLeftPrisonDay
                                                                             (this,0);
                                                           uVar3 = "出狱";
@@ -669,7 +669,7 @@ public class PrisonController
                                                             lVar2 = Transform.Find(lVar2,uVar3,0);
                                                             if (lVar2 == null) break;
                                                             lVar2 = Component.GetComponent
-                                                                              (lVar2,DAT_181d93760);
+                                                                              (lVar2,DAT_181d93778);
                                                             PrisonController.GetLeftPrisonDay(this,0);
                                                             if (lVar2 == null) break;
                                                             Selectable.set_interactable(lVar2);
@@ -716,7 +716,7 @@ public class PrisonController
     }
 
     // Token : 0x6001FE9
-    // RVA   : 0xB0F050   Offset: 0xB0E450   Length: 0x11B
+    // RVA   : 0xB0F710   Offset: 0xB0EB10   Length: 0x11B
     public int GetLeftPrisonDay()
     {
         float fVar1;
@@ -726,14 +726,14 @@ public class PrisonController
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             fVar1 = lVar2.thisYearExploreSpeEventNum;
-            Mathf.CeilToInt(fVar1 / (float)**(int **)(DAT_181d92c88 + 184),0);
+            Mathf.CeilToInt(fVar1 / (float)**(int **)(DAT_181d92ca0 + 184),0);
             return;
           }
         }
     }
 
     // Token : 0x6001FEA
-    // RVA   : 0xB0F230   Offset: 0xB0E630   Length: 0xE5A
+    // RVA   : 0xB0F8F0   Offset: 0xB0ECF0   Length: 0xE5A
     public void PrisonButtonClicked(GameObject buttonClicked)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -751,14 +751,14 @@ public class PrisonController
         uint local_40;
         int local_3c;
         uint32 local_38 [4];
-        if (buttonClicked == null) goto LAB_180b10067;
+        if (buttonClicked == null) goto LAB_180b10727;
         lVar3 = Object.get_name(buttonClicked,0);
         if (lVar3 == null) {
           return;
         }
-        cVar1 = FUN_18171e540(lVar3,"0",0);
+        cVar1 = FUN_18171eb50(lVar3,"0",0);
         if (!cVar1) {
-          cVar1 = FUN_18171e540(lVar3,"1",0);
+          cVar1 = FUN_18171eb50(lVar3,"1",0);
           if (cVar1) {
             lVar3 = FUN_18046c0a0(0);
             if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
@@ -766,28 +766,28 @@ public class PrisonController
               local_res20[0] = HeroData.GetBadFameFineMoney(lVar3,0);
               lVar4 = FUN_18046c400(0);
               local_48 = local_res20[0];
-              uVar6 = il2cpp_value_box(DAT_181d80418,&local_48);
+              uVar6 = il2cpp_value_box(DAT_181d80430,&local_48);
               uVar6 = String.Format("江湖声望和恶名越高，就需要缴纳越多罚金。\n眼下我需要一次性缴纳{0}两的罚金，方能将当前的恶名与悬赏一笔勾销。",uVar6,0);
-              lVar3 = il2cpp_internal(DAT_181d97750);
-              FUN_18132faf0(lVar3,DAT_181da3bd8);
+              lVar3 = il2cpp_internal(DAT_181d97768);
+              FUN_181330100(lVar3,DAT_181da3bf0);
               uVar5 = Int32.ToString(local_res20,0);
               uVar5 = String.Concat("缴纳罚金;ClearBadFame;;0/",uVar5,0);
               if (lVar3 != null) {
-                FUN_18181e0a0(lVar3,uVar5,DAT_181da3d58);
-                FUN_18181e0a0(lVar3,"还是算了;HideInteractUI",DAT_181da3d58);
+                FUN_18181e6b0(lVar3,uVar5,DAT_181da3d70);
+                FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
                 uVar5 = new SinglePlotData(uVar6,lVar3,1,0,3,"0",1,0,0);
-                if (lVar4 != null) goto LAB_180b0f556;
+                if (lVar4 != null) goto LAB_180b0fc16;
               }
             }
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          cVar1 = FUN_18171e540(lVar3,"2",0);
+          cVar1 = FUN_18171eb50(lVar3,"2",0);
           if (cVar1) {
             lVar3 = FUN_18046c0a0(0);
             if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                (lVar3 = *(int64 *)(lVar3.villageAreaID + 0x1b0)) == null)
-            goto LAB_180b10067;
+            goto LAB_180b10727;
             if (lVar3.villageAreaID <= 0.0) {
               lVar3 = FUN_18046c0a0(0);
               if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
@@ -798,33 +798,33 @@ public class PrisonController
                 if (*(char *)(pStatics_3d40 + 4) != false) {
                   uVar6 = "只要花上些小钱赔礼道歉，便可展现诚意。\n待到熟络之后，也能请守卫帮忙行些方便。";
                 }
-                lVar3 = il2cpp_internal(DAT_181d97750);
-                FUN_18132faf0(lVar3,DAT_181da3bd8);
+                lVar3 = il2cpp_internal(DAT_181d97768);
+                FUN_181330100(lVar3,DAT_181da3bf0);
                 local_48 = iVar2;
-                uVar5 = il2cpp_value_box(DAT_181d80418,&local_48);
+                uVar5 = il2cpp_value_box(DAT_181d80430,&local_48);
                 uVar5 = String.Format("贿赂狱卒;BuyPrisonGuard;0;0/{0};♦降低少量警觉度\n♦增加少量熟络度",uVar5,0);
                 if (lVar3 != null) {
-                  FUN_18181e0a0(lVar3,uVar5,DAT_181da3d58);
+                  FUN_18181e6b0(lVar3,uVar5,DAT_181da3d70);
                   local_44 = iVar2 * 2;
-                  uVar5 = il2cpp_value_box(DAT_181d80418,&local_44);
+                  uVar5 = il2cpp_value_box(DAT_181d80430,&local_44);
                   local_40 = PrisonController.BuyGuardCureMinFavor;
-                  uVar7 = il2cpp_value_box(DAT_181d80418,&local_40);
+                  uVar7 = il2cpp_value_box(DAT_181d80430,&local_40);
                   uVar5 = String.Format("治疗伤势;BuyPrisonGuard;1;0/{0};♦治疗全伤势10点;GuardFavor/{1}",uVar5,uVar7,0);
-                  FUN_18181e0a0(lVar3,uVar5,DAT_181da3d58);
+                  FUN_18181e6b0(lVar3,uVar5,DAT_181da3d70);
                   local_3c = iVar2 * 5;
-                  uVar5 = il2cpp_value_box(DAT_181d80418,&local_3c);
+                  uVar5 = il2cpp_value_box(DAT_181d80430,&local_3c);
                   local_38[0] = PrisonController.BuyGuardMedMinFavor;
-                  uVar7 = il2cpp_value_box(DAT_181d80418,local_38);
+                  uVar7 = il2cpp_value_box(DAT_181d80430,local_38);
                   uVar5 = String.Format("获取药品;BuyPrisonGuard;2;0/{0};♦获取随机药品;GuardFavor/{1}",uVar5,uVar7,0);
-                  FUN_18181e0a0(lVar3,uVar5,DAT_181da3d58);
-                  FUN_18181e0a0(lVar3,"还是算了;HideInteractUI",DAT_181da3d58);
+                  FUN_18181e6b0(lVar3,uVar5,DAT_181da3d70);
+                  FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
                   uVar5 = new SinglePlotData(uVar6,lVar3,1,0,3,"0",1,0,0);
-                  if (lVar4 != null) goto LAB_180b0f556;
+                  if (lVar4 != null) goto LAB_180b0fc16;
                 }
                           // WARNING: Subroutine does not return
                 FUN_1800d6620();
               }
-              goto LAB_180b10067;
+              goto LAB_180b10727;
             }
             lVar4 = FUN_18046c400(0);
             uVar6 = "还需等待{0}日方能再次贿赂狱卒。";
@@ -834,102 +834,102 @@ public class PrisonController
             if (((GameController._instance == null) ||
                 (lVar3 = GameController._instance.worldData) == null) ||
                (lVar3 = lVar3.prisonData) == null) {
-        LAB_180b1007f:
+        LAB_180b1073f:
                           // WARNING: Subroutine does not return
               FUN_1800d6620();
             }
             local_38[0] = lVar3.villageAreaID;
-            uVar5 = il2cpp_value_box(DAT_181da22d8,local_38);
+            uVar5 = il2cpp_value_box(DAT_181da22f0,local_38);
             uVar6 = String.Format(uVar6,uVar5,0);
             uVar5 = new SinglePlotData(uVar6,0,1,0,3,"0",1,0,0);
-            if (lVar4 == null) goto LAB_180b1007f;
-            goto LAB_180b0f556;
+            if (lVar4 == null) goto LAB_180b1073f;
+            goto LAB_180b0fc16;
           }
-          cVar1 = FUN_18171e540(lVar3,"3",0);
+          cVar1 = FUN_18171eb50(lVar3,"3",0);
           if (!cVar1) {
             return;
           }
-          lVar3 = il2cpp_internal(DAT_181d97750);
-          FUN_18132faf0(lVar3,DAT_181da3bd8);
+          lVar3 = il2cpp_internal(DAT_181d97768);
+          FUN_181330100(lVar3,DAT_181da3bf0);
           uVar6 = "{0};PrepareBreakPrison;2;;;GuardFavor/{1}";
           uVar5 = "寻找物品";
           if (*(char *)(pStatics_3d40 + 4) == false) {
             uVar5 = "偷取物品";
           }
           local_38[0] = PrisonController.StealPrisonMinFavor;
-          uVar7 = il2cpp_value_box(DAT_181d80418,local_38);
+          uVar7 = il2cpp_value_box(DAT_181d80430,local_38);
           uVar6 = String.Format(uVar6,uVar5,uVar7,0);
           if (lVar3 == null) {
-        LAB_180b10085:
+        LAB_180b10745:
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
-          FUN_18181e0a0(lVar3,uVar6,DAT_181da3d58);
+          FUN_18181e6b0(lVar3,uVar6,DAT_181da3d70);
           local_res10[0] = PrisonController.EscapePrisonMinFavor;
           uVar6 = Int32.ToString(local_res10,0);
           uVar6 = String.Concat("暗中逃跑;PrepareBreakPrison;3;;;GuardFavor/",uVar6,0);
-          FUN_18181e0a0(lVar3,uVar6,DAT_181da3d58);
-          FUN_18181e0a0(lVar3,"强行越狱;PrepareBreakPrison;4",DAT_181da3d58);
-          FUN_18181e0a0(lVar3,"还是算了;HideInteractUI",DAT_181da3d58);
+          FUN_18181e6b0(lVar3,uVar6,DAT_181da3d70);
+          FUN_18181e6b0(lVar3,"强行越狱;PrepareBreakPrison;4",DAT_181da3d70);
+          FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
           lVar4 = FUN_18046c0a0(0);
           if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-             (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_180b10085;
+             (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_180b10745;
           cVar1 = HeroData.HaveTag(lVar4,0x171,0);
           if (cVar1) {
             local_res10[0] = PrisonController.BreakChainMinFavor;
             uVar6 = Int32.ToString(local_res10,0);
             uVar6 = String.Concat("解开脚镣;PrepareBreakPrison;1;;;GuardFavor/",uVar6,0);
-            FUN_181822520(lVar3,1,uVar6,DAT_181da4058);
+            FUN_181822b30(lVar3,1,uVar6,DAT_181da4070);
           }
           lVar4 = FUN_18046c0a0(0);
           if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
-             (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_180b10067;
+             (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) goto LAB_180b10727;
           cVar1 = HeroData.HaveTag(lVar4,0x170,0);
           if (cVar1) {
             local_res10[0] = PrisonController.BreakChainMinFavor;
             uVar6 = Int32.ToString(local_res10,0);
             uVar6 = String.Concat("解开手铐;PrepareBreakPrison;0;;;GuardFavor/",uVar6,0);
-            FUN_181822520(lVar3,1,uVar6,DAT_181da4058);
+            FUN_181822b30(lVar3,1,uVar6,DAT_181da4070);
           }
           lVar4 = FUN_18046c400(0);
-          uVar5 = il2cpp_internal(DAT_181da24d8);
+          uVar5 = il2cpp_internal(DAT_181da24f0);
           uVar6 = "哼，我#$PlayerName#堂堂一代大侠，\n岂能在此处虚度光阴，受尽白眼！\n得想个办法，尽快逃出这鬼地方才行。";
         }
         else {
           iVar2 = PrisonController.GetLeftPrisonDay(this,0);
           if (0 < iVar2) {
             lVar4 = FUN_18046c400(0);
-            local_48 = **(int **)(DAT_181d92c88 + 184);
-            uVar6 = il2cpp_value_box(DAT_181d80418,&local_48);
+            local_48 = **(int **)(DAT_181d92ca0 + 184);
+            uVar6 = il2cpp_value_box(DAT_181d80430,&local_48);
             uVar6 = String.Format("每日可降低{0}点恶名，待恶名降低到0时便可出狱。\n同时每日也会累积少量伤势，不过若能与看守更为熟络，便也能少受些罪。",uVar6,0);
-            lVar3 = il2cpp_internal(DAT_181d97750);
-            FUN_18132faf0(lVar3,DAT_181da3bd8);
+            lVar3 = il2cpp_internal(DAT_181d97768);
+            FUN_181330100(lVar3,DAT_181da3bf0);
             if (lVar3 != null) {
-              FUN_18181e0a0(lVar3,"1天;PlayerContinuePrison;1",DAT_181da3d58);
-              FUN_18181e0a0(lVar3,"5天;PlayerContinuePrison;5",DAT_181da3d58);
-              FUN_18181e0a0(lVar3,"10天;PlayerContinuePrison;10",DAT_181da3d58);
-              FUN_18181e0a0(lVar3,"取消;HideInteractUI",DAT_181da3d58);
+              FUN_18181e6b0(lVar3,"1天;PlayerContinuePrison;1",DAT_181da3d70);
+              FUN_18181e6b0(lVar3,"5天;PlayerContinuePrison;5",DAT_181da3d70);
+              FUN_18181e6b0(lVar3,"10天;PlayerContinuePrison;10",DAT_181da3d70);
+              FUN_18181e6b0(lVar3,"取消;HideInteractUI",DAT_181da3d70);
               uVar5 = new SinglePlotData(uVar6,lVar3,1,0,3,"0",1,0,0);
-              if (lVar4 != null) goto LAB_180b0f556;
+              if (lVar4 != null) goto LAB_180b0fc16;
             }
                           // WARNING: Subroutine does not return
             FUN_1800d6620();
           }
           lVar4 = FUN_18046c400(0);
-          lVar3 = il2cpp_internal(DAT_181d97750);
-          FUN_18132faf0(lVar3,DAT_181da3bd8);
-          if (lVar3 == null) goto LAB_180b10067;
-          FUN_18181e0a0(lVar3,"重见天日;PlayerFinishPrison",DAT_181da3d58);
-          uVar5 = il2cpp_internal(DAT_181da24d8);
+          lVar3 = il2cpp_internal(DAT_181d97768);
+          FUN_181330100(lVar3,DAT_181da3bf0);
+          if (lVar3 == null) goto LAB_180b10727;
+          FUN_18181e6b0(lVar3,"重见天日;PlayerFinishPrison",DAT_181da3d70);
+          uVar5 = il2cpp_internal(DAT_181da24f0);
           uVar6 = "刑期已满，总算可以离开这鬼地方了......";
         }
         SinglePlotData.ctor(uVar5,uVar6,lVar3,1,0,3,"0",1,0,0);
         if (lVar4 == null) {
-        LAB_180b10067:
+        LAB_180b10727:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
-        LAB_180b0f556:
+        LAB_180b0fc16:
         PlotController.ChangePlot(lVar4,uVar5,0);
     }
 
@@ -941,10 +941,10 @@ public class PrisonController
     }
 
     // Token : 0x6001FEC
-    // RVA   : 0xB11A80   Offset: 0xB10E80   Length: 0xB7
+    // RVA   : 0xB12140   Offset: 0xB11540   Length: 0xB7
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181d92c88 + 184) = 5;
+        **(uint32 **)(DAT_181d92ca0 + 184) = 5;
         PrisonController.BuyGuardCdTime = 5;
         PrisonController.BuyGuardCureMinFavor = 20;
         PrisonController.BuyGuardMedMinFavor = 40;

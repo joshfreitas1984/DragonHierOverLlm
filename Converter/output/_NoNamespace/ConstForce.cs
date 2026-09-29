@@ -11,7 +11,7 @@ public class ConstForce
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x60009A6
-    // RVA   : 0xA3B640   Offset: 0xA3AA40   Length: 0x12D
+    // RVA   : 0xA3BCD0   Offset: 0xA3B0D0   Length: 0x12D
     private void Update()
     {
         float fVar1;
@@ -22,7 +22,7 @@ public class ConstForce
         ulong uVar7;
         uint uVar8;
         byte[] local_28 = new byte[32];
-        lVar4 = Component.GetComponents(this,DAT_181d98060);
+        lVar4 = Component.GetComponents(this,DAT_181d98078);
         uVar8 = 0;
         if (lVar4 != null) {
           while( true ) {

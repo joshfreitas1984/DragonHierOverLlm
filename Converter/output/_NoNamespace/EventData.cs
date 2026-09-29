@@ -101,16 +101,16 @@ public class EventData
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000FE2
-    // RVA   : 0x946000   Offset: 0x945400   Length: 0xF4
+    // RVA   : 0x946690   Offset: 0x945A90   Length: 0xF4
     public void /*ctor*/()
     {
         ulong uVar1;
         this.resourcePointID = 0xffffffff;
-        uVar1 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(uVar1,DAT_181d8f098);
+        uVar1 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(uVar1,DAT_181d8f0b0);
         this.areaID = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93cd0);
-        FUN_18132faf0(uVar1,DAT_181d8f098);
+        uVar1 = il2cpp_internal(DAT_181d93ce8);
+        FUN_181330100(uVar1,DAT_181d8f0b0);
         this.areaMapTileID = uVar1;
         this.nearAreaID = 0xffffffffffffffff;
         this.difficultyRate = 0x3f800000;
@@ -129,7 +129,7 @@ public class EventData
     }
 
     // Token : 0x6000FE4
-    // RVA   : 0x945A10   Offset: 0x944E10   Length: 0x28
+    // RVA   : 0x9460A0   Offset: 0x9454A0   Length: 0x28
     public int GetEventRareLv()
     {
         int iVar1;
@@ -138,7 +138,7 @@ public class EventData
     }
 
     // Token : 0x6000FE5
-    // RVA   : 0x945F70   Offset: 0x945370   Length: 0x81
+    // RVA   : 0x946600   Offset: 0x945A00   Length: 0x81
     public string Name()
     {
         ulong uVar1;
@@ -149,7 +149,7 @@ public class EventData
     }
 
     // Token : 0x6000FE6
-    // RVA   : 0x945490   Offset: 0x944890   Length: 0x576
+    // RVA   : 0x945B20   Offset: 0x944F20   Length: 0x576
     public string GetDescribe(bool showDifficulty)
     {
         var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
@@ -253,7 +253,7 @@ public class EventData
     }
 
     // Token : 0x6000FE7
-    // RVA   : 0x945A40   Offset: 0x944E40   Length: 0x527
+    // RVA   : 0x9460D0   Offset: 0x9454D0   Length: 0x527
     public string GetPosText()
     {
         uint uVar1;
@@ -323,7 +323,7 @@ public class EventData
                           if (lVar5 == null) break;
                           lVar5 = lVar5.villageAreaID;
                           if (((this.areaID == null) ||
-                              (uVar3 = FUN_1800d6760(this.areaID,iVar8,DAT_181d8fa18),
+                              (uVar3 = FUN_1800d6760(this.areaID,iVar8,DAT_181d8fa30),
                               lVar5 == null)) || (lVar5 = WorldData.GetArea(lVar5,uVar3,0)) == null)
                           break;
                           uVar6 = AreaData.GetAreaName(lVar5,0);
@@ -375,7 +375,7 @@ public class EventData
     }
 
     // Token : 0x6000FE8
-    // RVA   : 0x945310   Offset: 0x944710   Length: 0x175
+    // RVA   : 0x9459A0   Offset: 0x944DA0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -386,13 +386,13 @@ public class EventData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -404,7 +404,7 @@ public class EventData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return

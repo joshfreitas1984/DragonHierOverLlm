@@ -37,7 +37,7 @@ public class <PlayUseItem>d__236
     }
 
     // Token : 0x6000BCA
-    // RVA   : 0x9322E0   Offset: 0x9316E0   Length: 0x838
+    // RVA   : 0x932940   Offset: 0x931D40   Length: 0x838
     private virtual bool MoveNext()
     {
         ulong uVar1;
@@ -105,12 +105,12 @@ public class <PlayUseItem>d__236
         iVar8 = *(int *)(lVar6.equipmentData + 40);
         if (iVar8 < iVar4) {
           uVar5 = CONCAT71((uint7)(uint3)((uint32)iVar4 >> 8),1);
-        LAB_18093255b:
+        LAB_180932bbb:
           BattleUnit.ChangeFaceDirection(lVar6,uVar5,0,0);
         }
         else if (iVar4 < iVar8) {
           uVar5 = 0;
-          goto LAB_18093255b;
+          goto LAB_180932bbb;
         }
         if ((lVar7.OnceShowText != null) &&
            (lVar6 = *(int64 *)(lVar7.OnceShowText + 24)) != null) {
@@ -164,13 +164,13 @@ public class <PlayUseItem>d__236
                               (lVar7 = this.targetItem.medFoodData) == null)
                              || ((lVar7 = lVar7.mouthPos, lVar7 == null ||
                                  ((lVar7 = *(int64 *)(lVar7 + 16), lVar7 == null ||
-                                  (lVar7 = Dictionary_2.get_Keys(lVar7,DAT_181dbe4b8)) == null)))))
+                                  (lVar7 = Dictionary_2.get_Keys(lVar7,DAT_181dbe4d0)) == null)))))
                           throw; // [null/range check failed]
-                          FUN_180ecbf30(&local_78,lVar7,DAT_181dc36f0);
+                          FUN_180ecc540(&local_78,lVar7,DAT_181dc3708);
                           local_90 = CONCAT44(uStack_74,local_78);
                           uStack_88 = CONCAT44(uStack_6c,uStack_70);
                           local_80 = local_68;
-                          while (cVar3 = FUN_1811c4f60(&local_90,DAT_181d9b258), uVar2 = local_80,
+                          while (cVar3 = FUN_1811c5570(&local_90,DAT_181d9b270), uVar2 = local_80,
                                 cVar3) {
                             lVar7 = FUN_18046c100(0);
                             if (lVar7 == null) {
@@ -263,7 +263,7 @@ public class <PlayUseItem>d__236
                               }
                             }
                           }
-                          ZhSegment.Initialize(&local_90,DAT_181d9b1d8);
+                          ZhSegment.Initialize(&local_90,DAT_181d9b1f0);
                         }
                         lVar7 = FUN_18046c0a0(0);
                         if ((lVar7 != null) && (lVar7.hipPos != null)) {
@@ -291,15 +291,15 @@ public class <PlayUseItem>d__236
     }
 
     // Token : 0x6000BCC
-    // RVA   : 0x932B20   Offset: 0x931F20   Length: 0x3E
+    // RVA   : 0x933180   Offset: 0x932580   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97c38);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d97dd0);
     }
 
     // Token : 0x6000BCD

@@ -26,7 +26,7 @@ public class OnInitializeItem
     }
 
     // Token : 0x60002BC
-    // RVA   : 0xEC7EA0   Offset: 0xEC72A0   Length: 0x49A
+    // RVA   : 0xEC84B0   Offset: 0xEC78B0   Length: 0x49A
     public virtual void Invoke(GameObject go, int wrapIndex, int realIndex)
     {
         void OnInitializeItem.Invoke
@@ -73,7 +73,7 @@ public class OnInitializeItem
             if (*(char *)(lVar11 + 74) == '\x03') {
               if ((((plVar2 == (int64 *)0) || (*(short *)(lVar11 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar2 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180ec82e9;
+              goto LAB_180ec88f9;
               cVar3 = il2cpp_internal(lVar11);
               if (!cVar3) {
                 cVar3 = FUN_1800d65c0(lVar11);
@@ -94,13 +94,13 @@ public class OnInitializeItem
                                   (int)((uint32)*(uint16 *)(lVar11 + 72) +
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
-                        goto LAB_180ec8288;
+                        goto LAB_180ec8898;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
                   }
                   puVar6 = (uint64 *)FUN_1800914f0(plVar2,lVar7,*(uint16 *)(lVar11 + 72));
-        LAB_180ec8288:
+        LAB_180ec8898:
                   (*(code *)*puVar6)(plVar2,go,wrapIndex,realIndex,puVar6[1]);
                 }
               }
@@ -121,13 +121,13 @@ public class OnInitializeItem
                                 (int)((uint32)uVar9 +
                                      *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16))
                                 * 16 + 0x138 + lVar5;
-                        goto LAB_180ec81d6;
+                        goto LAB_180ec87e6;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
                   }
                   lVar5 = FUN_1800914f0(plVar2,*(int64 *)(lVar11 + 24),uVar9);
-        LAB_180ec81d6:
+        LAB_180ec87e6:
                   uVar10 = *(uint64 *)(lVar5 + 8);
                 }
                 puVar6 = (uint64 *)il2cpp_internal(uVar10,lVar11);
@@ -136,7 +136,7 @@ public class OnInitializeItem
             }
             else {
               if ((*(short *)(lVar11 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180ec7f57;
+              goto LAB_180ec8567;
               cVar3 = il2cpp_internal(lVar11);
               if (!cVar3) {
                 cVar3 = FUN_1800d65c0(lVar11);
@@ -159,7 +159,7 @@ public class OnInitializeItem
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
                         (*(code *)*puVar6)(go,wrapIndex,realIndex,puVar6[1]);
-                        goto LAB_180ec82fc;
+                        goto LAB_180ec890c;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
@@ -188,13 +188,13 @@ public class OnInitializeItem
                                 (int)((uint32)uVar9 +
                                      *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16))
                                 * 16 + 0x138 + lVar5;
-                        goto LAB_180ec7ff6;
+                        goto LAB_180ec8606;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
                   }
                   lVar5 = FUN_1800914f0(go,*(int64 *)(lVar11 + 24),uVar9);
-        LAB_180ec7ff6:
+        LAB_180ec8606:
                   puVar6 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar5 + 8),lVar11);
                   (*(code *)*puVar6)(go,wrapIndex,realIndex,puVar6);
                 }
@@ -202,14 +202,14 @@ public class OnInitializeItem
             }
           }
           else if (*(char *)(lVar11 + 74) == '\x03') {
-        LAB_180ec7f57:
+        LAB_180ec8567:
             (*pcVar1)(go,wrapIndex,realIndex,lVar11);
           }
           else {
-        LAB_180ec82e9:
+        LAB_180ec88f9:
             (*pcVar1)(plVar2,go,wrapIndex,realIndex,lVar11);
           }
-        LAB_180ec82fc:
+        LAB_180ec890c:
           uVar12 = uVar12 + 1;
           if (local_38 <= uVar12) {
             return;
@@ -218,7 +218,7 @@ public class OnInitializeItem
     }
 
     // Token : 0x60002BD
-    // RVA   : 0x183D700   Offset: 0x183CB00   Length: 0x92
+    // RVA   : 0x183D7A0   Offset: 0x183CBA0   Length: 0x92
     public virtual IAsyncResult BeginInvoke(GameObject go, int wrapIndex, int realIndex, AsyncCallback callback, object object)
     {
         void OnInitializeItem.BeginInvoke
@@ -235,8 +235,8 @@ public class OnInitializeItem
         local_res20[0] = realIndex;
         local_10 = 0;
         local_28 = go;
-        local_20 = il2cpp_value_box(DAT_181d80418,local_res18);
-        local_18 = il2cpp_value_box(DAT_181d80418,local_res20);
+        local_20 = il2cpp_value_box(DAT_181d80430,local_res18);
+        local_18 = il2cpp_value_box(DAT_181d80430,local_res20);
         il2cpp_internal(this,&local_28,callback,object);
     }
 

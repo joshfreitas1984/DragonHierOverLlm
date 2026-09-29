@@ -47,7 +47,7 @@ public class WorldEventDataBase
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x6000EC5
-    // RVA   : 0x9D2380   Offset: 0x9D1780   Length: 0x175
+    // RVA   : 0x9D2A10   Offset: 0x9D1E10   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -58,13 +58,13 @@ public class WorldEventDataBase
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89210);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1730);
+        lVar2 = il2cpp_internal(DAT_181db1748);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -76,7 +76,7 @@ public class WorldEventDataBase
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78da0,plVar1);
+            FUN_180002970(0,DAT_181d78db8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
@@ -85,7 +85,7 @@ public class WorldEventDataBase
     }
 
     // Token : 0x6000EC6
-    // RVA   : 0x9D2500   Offset: 0x9D1900   Length: 0xE
+    // RVA   : 0x9D2B90   Offset: 0x9D1F90   Length: 0xE
     public void /*ctor*/()
     {
         this.forceDifficulty = 0xffffffff;

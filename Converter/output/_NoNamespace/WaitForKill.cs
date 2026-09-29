@@ -6,12 +6,12 @@
 public class WaitForKill
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400215F
+    // Token: 0x4002160
     private readonly Tween t;
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600276D
-    // RVA   : 0x93AFA0   Offset: 0x93A3A0   Length: 0x1E
+    // RVA   : 0x93B630   Offset: 0x93AA30   Length: 0x1E
     public override bool get_keepWaiting()
     {
         if (this.t != null) {

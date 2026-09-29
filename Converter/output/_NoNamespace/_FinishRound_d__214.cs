@@ -31,10 +31,10 @@ public class <FinishRound>d__214
     }
 
     // Token : 0x6000BC4
-    // RVA   : 0x92F250   Offset: 0x92E650   Length: 0x49E
+    // RVA   : 0x92F8B0   Offset: 0x92ECB0   Length: 0x49E
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181dc6fb8 + 184);
+        var pStatics = *(int64*)(DAT_181dc6fd0 + 184);
         float fVar2;
         int iVar3;
         long lVar4;
@@ -150,15 +150,15 @@ public class <FinishRound>d__214
     }
 
     // Token : 0x6000BC6
-    // RVA   : 0x92F6F0   Offset: 0x92EAF0   Length: 0x3E
+    // RVA   : 0x92FD50   Offset: 0x92F150   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97838);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181d979d0);
     }
 
     // Token : 0x6000BC7

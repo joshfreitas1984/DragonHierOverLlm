@@ -26,16 +26,16 @@ public class LagPosition
 
     // ── Methods ──────────────────────────────────────────────────
     // Token : 0x600006E
-    // RVA   : 0xA7F890   Offset: 0xA7EC90   Length: 0x10
+    // RVA   : 0xA7FF20   Offset: 0xA7F320   Length: 0x10
     public void OnRepositionEnd()
     {
-        void FUN_180a7f890(uint64 this)
+        void FUN_180a7ff20(uint64 this)
         {
         LagPosition.Interpolate(this,0x447a0000,0);
     }
 
     // Token : 0x600006F
-    // RVA   : 0xA7F5F0   Offset: 0xA7E9F0   Length: 0x22C
+    // RVA   : 0xA7FC80   Offset: 0xA7F080   Length: 0x22C
     private void Interpolate(float delta)
     {
         ulong uVar1;
@@ -56,7 +56,7 @@ public class LagPosition
         uint32 uStack_6c;
         uint8 local_68 [96];
         if (this.mTrans != null) {
-          lVar4 = FUN_180da9a20(this.mTrans,0);
+          lVar4 = FUN_180daa030(this.mTrans,0);
           cVar3 = Object.op_Inequality(lVar4,0,0);
           if (!cVar3) {
             return;
@@ -101,7 +101,7 @@ public class LagPosition
     }
 
     // Token : 0x6000070
-    // RVA   : 0xA7F5C0   Offset: 0xA7E9C0   Length: 0x24
+    // RVA   : 0xA7FC50   Offset: 0xA7F050   Length: 0x24
     private void Awake()
     {
         ulong uVar1;
@@ -110,7 +110,7 @@ public class LagPosition
     }
 
     // Token : 0x6000071
-    // RVA   : 0xA7F820   Offset: 0xA7EC20   Length: 0x64
+    // RVA   : 0xA7FEB0   Offset: 0xA7F2B0   Length: 0x64
     private void OnEnable()
     {
         byte[] local_18 = new byte[16];
@@ -131,7 +131,7 @@ public class LagPosition
     }
 
     // Token : 0x6000072
-    // RVA   : 0xA7F900   Offset: 0xA7ED00   Length: 0x62
+    // RVA   : 0xA7FF90   Offset: 0xA7F390   Length: 0x62
     private void Start()
     {
         byte[] local_18 = new byte[16];
@@ -150,7 +150,7 @@ public class LagPosition
     }
 
     // Token : 0x6000073
-    // RVA   : 0xA7F8A0   Offset: 0xA7ECA0   Length: 0x5E
+    // RVA   : 0xA7FF30   Offset: 0xA7F330   Length: 0x5E
     public void ResetPosition()
     {
         byte[] local_18 = new byte[16];
@@ -168,7 +168,7 @@ public class LagPosition
     }
 
     // Token : 0x6000074
-    // RVA   : 0xA7F970   Offset: 0xA7ED70   Length: 0x32
+    // RVA   : 0xA80000   Offset: 0xA7F400   Length: 0x32
     private void Update()
     {
         uint uVar1;
@@ -182,7 +182,7 @@ public class LagPosition
     }
 
     // Token : 0x6000075
-    // RVA   : 0xA7F9B0   Offset: 0xA7EDB0   Length: 0x31
+    // RVA   : 0xA80040   Offset: 0xA7F440   Length: 0x31
     public void /*ctor*/()
     {
         this.speed = 0x4120000041200000;

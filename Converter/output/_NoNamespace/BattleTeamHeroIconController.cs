@@ -146,7 +146,7 @@ public class BattleTeamHeroIconController
                 GameController.ShowTextOnMouse(lVar3,uVar6,0);
                 plVar5 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                 plVar7 = (int64 *)0;
-                if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf348)) {
+                if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
                   plVar7 = plVar5;
                 }
                 NGUITools.PlaySound(plVar7,0);

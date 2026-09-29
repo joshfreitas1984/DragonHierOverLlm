@@ -31,7 +31,7 @@ public class <SortHeroLittleTalk>d__13
     }
 
     // Token : 0x60017F0
-    // RVA   : 0x8F3630   Offset: 0x8F2A30   Length: 0x509
+    // RVA   : 0x9264B0   Offset: 0x9258B0   Length: 0x509
     private virtual bool MoveNext()
     {
         bool cVar1;
@@ -59,12 +59,12 @@ public class <SortHeroLittleTalk>d__13
         if (uVar7 == 0) {
           this.<>1__state = 0xffffffff;
           local_res8[0] = 1;
-          uVar2 = il2cpp_value_box(DAT_181d80418,local_res8);
+          uVar2 = il2cpp_value_box(DAT_181d80430,local_res8);
           this.<>2__current = uVar2;
           this.<>1__state = 1;
           return true;
         }
-        if (uVar7 != 1) goto LAB_1808f3ae8;
+        if (uVar7 != 1) goto LAB_180926968;
         this.<>1__state = 0xffffffff;
         puVar3 = (uint64 *)Vector3.get_zero(local_88,0);
         local_a8 = *puVar3;
@@ -72,9 +72,9 @@ public class <SortHeroLittleTalk>d__13
         fVar9 = (float)((uint64)local_a8 >> 32);
         fVar10 = *(float *)(puVar3 + 1);
         if ((this.targetTalkData == null) ||
-           (lVar4 = this.targetTalkData.littleTalks) == null) goto LAB_1808f3b34;
+           (lVar4 = this.targetTalkData.littleTalks) == null) goto LAB_1809269b4;
         if (*(int *)(lVar4 + 24) < 1) {
-        LAB_1808f3830:
+        LAB_1809266b0:
           uVar8 = 1;
         }
         else {
@@ -83,22 +83,22 @@ public class <SortHeroLittleTalk>d__13
           }
           uVar2 = *(uint64 *)(*(int64 *)(lVar4 + 16) + 32);
           cVar1 = Object.op_Inequality(uVar2,0,0);
-          if (!cVar1) goto LAB_1808f3830;
+          if (!cVar1) goto LAB_1809266b0;
           if ((this.targetTalkData == null) ||
              (lVar4 = this.targetTalkData.littleTalks) == null)
-          goto LAB_1808f3b34;
+          goto LAB_1809269b4;
           if (*(int *)(lVar4 + 24) == 0) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar4 = *(int64 *)(*(int64 *)(lVar4 + 16) + 32);
-          if (lVar4 == null) goto LAB_1808f3b34;
+          if (lVar4 == null) goto LAB_1809269b4;
           lVar4 = GameObject.GetComponent(lVar4,DAT_181d71c60);
-          if (lVar4 == null) goto LAB_1808f3b34;
+          if (lVar4 == null) goto LAB_1809269b4;
           uVar8 = *(uint32 *)(lVar4 + 44);
         }
         uVar5 = this.targetTalkData;
         if ((uVar5 == 0) || (uVar5.littleTalks == null)) {
-        LAB_1808f3b34:
+        LAB_1809269b4:
                           // WARNING: Subroutine does not return
           FUN_1800d6620();
         }
@@ -109,7 +109,7 @@ public class <SortHeroLittleTalk>d__13
           do {
             if ((this.targetTalkData == null) ||
                (lVar6 = this.targetTalkData.littleTalks) == null)
-            goto LAB_1808f3b34;
+            goto LAB_1809269b4;
             if (lVar6.littleTalks <= uVar7) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -117,49 +117,49 @@ public class <SortHeroLittleTalk>d__13
             cVar1 = Object.op_Inequality(uVar2,0,0);
             lVar6 = this.targetTalkData;
             if (!cVar1) {
-              if ((lVar6 == null) || (lVar6.littleTalks == null)) goto LAB_1808f3b34;
-              uVar5 = FUN_181823590();
+              if ((lVar6 == null) || (lVar6.littleTalks == null)) goto LAB_1809269b4;
+              uVar5 = FUN_181823ba0();
             }
             else {
-              if ((lVar6 == null) || (lVar6.littleTalks == null)) goto LAB_1808f3b34;
-              lVar6 = FUN_180002f80(lVar6.littleTalks,uVar7,DAT_181d89918);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              if ((lVar6 == null) || (lVar6.littleTalks == null)) goto LAB_1809269b4;
+              lVar6 = FUN_180002f80(lVar6.littleTalks,uVar7,DAT_181d89930);
+              if (lVar6 == null) goto LAB_1809269b4;
               lVar6 = GameObject.GetComponent(lVar6,DAT_181d71c60);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              if (lVar6 == null) goto LAB_1809269b4;
               *(uint32 *)(lVar6 + 44) = uVar8;
               if ((this.targetTalkData == null) ||
                  (lVar6 = this.targetTalkData.littleTalks) == null)
-              goto LAB_1808f3b34;
-              lVar6 = FUN_180002f80(lVar6,uVar7,DAT_181d89918);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              goto LAB_1809269b4;
+              lVar6 = FUN_180002f80(lVar6,uVar7,DAT_181d89930);
+              if (lVar6 == null) goto LAB_1809269b4;
               lVar6 = GameObject.GetComponent(lVar6,DAT_181d71c60);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              if (lVar6 == null) goto LAB_1809269b4;
               *(uint64 *)(lVar6 + 32) = CONCAT44(fVar9,fVar11);
               *(float *)(lVar6 + 40) = fVar10;
               if ((this.targetTalkData == null) ||
                  (lVar6 = this.targetTalkData.littleTalks) == null)
-              goto LAB_1808f3b34;
-              lVar6 = FUN_180002f80(lVar6,uVar7,DAT_181d89918);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              goto LAB_1809269b4;
+              lVar6 = FUN_180002f80(lVar6,uVar7,DAT_181d89930);
+              if (lVar6 == null) goto LAB_1809269b4;
               lVar6 = GameObject.get_transform(lVar6,0);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              if (lVar6 == null) goto LAB_1809269b4;
               lVar6 = Transform.Find(lVar6,"Back",0);
-              if (lVar6 == null) goto LAB_1808f3b34;
-              lVar6 = Component.GetComponent(lVar6,DAT_181d94f60);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              if (lVar6 == null) goto LAB_1809269b4;
+              lVar6 = Component.GetComponent(lVar6,DAT_181d94f78);
+              if (lVar6 == null) goto LAB_1809269b4;
               puVar3 = (uint64 *)RectTransform.get_rect(local_58,lVar6,0);
               local_68 = *puVar3;
               uStack_60 = puVar3[1];
               fVar9 = (float)FUN_18044e2b0(&local_68,0);
               if ((this.targetTalkData == null) ||
                  (lVar6 = this.targetTalkData.littleTalks) == null)
-              goto LAB_1808f3b34;
+              goto LAB_1809269b4;
               lVar6 = FUN_180002f80(lVar6,uVar7);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              if (lVar6 == null) goto LAB_1809269b4;
               lVar6 = GameObject.get_transform(lVar6,0);
-              if (lVar6 == null) goto LAB_1808f3b34;
-              lVar6 = FUN_180da9a20(lVar6,0);
-              if (lVar6 == null) goto LAB_1808f3b34;
+              if (lVar6 == null) goto LAB_1809269b4;
+              lVar6 = FUN_180daa030(lVar6,0);
+              if (lVar6 == null) goto LAB_1809269b4;
               uVar5 = Transform.get_lossyScale();
               fVar10 = local_a0 + 0.0;
               fVar11 = (float)local_a8 + 0.0;
@@ -172,7 +172,7 @@ public class <SortHeroLittleTalk>d__13
             uVar7 = uVar7 - 1;
           } while (-1 < (int)uVar7);
         }
-        LAB_1808f3ae8:
+        LAB_180926968:
         return uVar5 & 0xffffffffffffff00;
     }
 
@@ -184,15 +184,15 @@ public class <SortHeroLittleTalk>d__13
     }
 
     // Token : 0x60017F2
-    // RVA   : 0x8F3B40   Offset: 0x8F2F40   Length: 0x3E
+    // RVA   : 0x9269C0   Offset: 0x925DC0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d510);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da58c8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181da5a60);
     }
 
     // Token : 0x60017F3
