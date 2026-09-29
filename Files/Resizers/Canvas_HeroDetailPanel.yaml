@@ -26,6 +26,8 @@
   sampleText: High-quality Heavy boots
   idealFontSize: 11.0
   allowWordWrap: true
+  adjustY: 7.0
+  adjustHeight: 5.0
 - path: Canvas/HeroDetailPanel/Item/ItemTabGrid/*/Label
   sampleText: Equipment
   idealFontSize: 12.0

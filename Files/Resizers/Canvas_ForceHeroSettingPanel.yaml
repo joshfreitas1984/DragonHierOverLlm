@@ -1,3 +1,4 @@
 - path: Canvas/ForceHeroSettingPanel/HeroList/TextGrid/Text*
   sampleText: Healing and recuperation
-  idealFontSize: 12.0
+  idealFontSize: 10.0
+  adjustHeight: 5.0

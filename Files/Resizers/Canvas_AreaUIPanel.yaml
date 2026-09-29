@@ -16,13 +16,15 @@
   idealFontSize: 14.0
   allowWordWrap: false
 - path: Canvas/AreaUIPanel/BuildingIconPanel/AreaBuildingUI(Clone)/BuildingLv
-  sampleText: 0
+  sampleText: "0"
   idealFontSize: 11.0
   allowWordWrap: false
 - path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/AreaEventQuickButtonGrid/AreaEventQuickButtonPrefab(Clone)/Text
   sampleText: Princess Missing
   idealFontSize: 16.0
-  allowWordWrap: true
+  adjustX: 10.0
+  adjustWidth: 30.0
+  adjustHeight: 10.0
 - path: Canvas/AreaUIPanel/BuildingQuickButtonPanel/BuildQuickButtonGrid/*/Text
   sampleText: Government offices
   idealFontSize: 14.0
