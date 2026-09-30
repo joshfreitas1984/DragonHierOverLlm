@@ -126,18 +126,14 @@
   - split: 10
     text: "+0.5%暴击"
     translated: "+0.5% Critical Hit"
-    qcReviewedText: "+0.5% Critical Hit\\n+0.5% Disconnected\\n+1 load capacity for equipment"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "+0.5%断连"
-    translated: "+0.5% Disconnected"
+    translated: "+0.5% Interrupt"
   - split: 10
     subIndex: 2
     text: "+1装备负重"
-    translated: "+1 load capacity for equipment"
+    translated: "+1Equipment Weight"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -160,10 +156,6 @@
   - split: 10
     text: "+0.5%速度"
     translated: "+0.5% Speed"
-    qcReviewedText: "+0.5% Speed\\n+0.5% Dodge\\n+0.5 maximum stamina capacity"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "+0.5%闪避"
@@ -171,7 +163,7 @@
   - split: 10
     subIndex: 2
     text: "+0.5体力上限"
-    translated: "+0.5 maximum stamina capacity"
+    translated: "Max Stamina +0.5"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -194,18 +186,14 @@
   - split: 10
     text: "+0.5%命中"
     translated: "+0.5% Hit Rate"
-    qcReviewedText: "+0.5% Hit Rate\\n+0.5% Absorb Force\\n+0.5% Negative Bonus"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "+0.5%卸力"
-    translated: "+0.5% Absorb Force"
+    translated: "+0.5% Force Deflection"
   - split: 10
     subIndex: 2
     text: "+0.5%负面加成"
-    translated: "+0.5% Negative Bonus"
+    translated: "+0.5% Debuff Potency"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -228,10 +216,6 @@
   - split: 10
     text: "+0.5%反击"
     translated: "+0.5% Counterattack"
-    qcReviewedText: "+0.5% Counterattack\\n+0.5% Armor\\n+0.5% Negative Resistance"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "+0.5%护甲"
@@ -239,7 +223,7 @@
   - split: 10
     subIndex: 2
     text: "+0.5%负面抗性"
-    translated: "+0.5% Negative Resistance"
+    translated: "+0.5% Debuff Resistance"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -261,18 +245,11 @@
     qcDefectCategory: None
   - split: 10
     text: "+1生命上限"
-    translated: "+1Health Max"
-    qcReviewedText: "+1Health Max\\n+0.5% Suppression\\n+0.5% injury resistance"
-    qcTranslated: "+1Health Max\\n+0.5% Suppression\\n+0.5% Injury Resistance"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "+1Max Health"
   - split: 10
     subIndex: 1
     text: "+0.5%压制"
-    translated: "+0.5% Suppression"
+    translated: "+0.5% Overwhelm"
   - split: 10
     subIndex: 2
     text: "+0.5%伤势抗性"
@@ -298,22 +275,15 @@
     qcDefectCategory: None
   - split: 10
     text: "+2内力上限"
-    translated: "+2 Inner Power Max"
-    qcReviewedText: "+2 Inner Power Max\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
-    qcTranslated: "+2 Inner Power Max\\n+0.5% consecutive hits\\n+0.5% recovery efficiency"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "+2Max Inner Power"
   - split: 10
     subIndex: 1
     text: "+0.5%连击"
-    translated: "+0.5 consecutive hits"
+    translated: "+0.5% Combo"
   - split: 10
     subIndex: 2
     text: "+0.5%恢复效率"
-    translated: "+0.5% recovery efficiency"
+    translated: "+0.5% Recovery Rate"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -331,11 +301,7 @@
     qcDefectCategory: None
   - split: 10
     text: "+1%内力上限"
-    translated: "+1% Inner Power Maximum"
-    qcReviewedText: "+1% Inner Power Maximum"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "+1% Max Inner Power"
 - raw: "7,轻功,1,迅疾,迟慢,0,0,0,0,0,+1%速度,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -377,11 +343,7 @@
     qcDefectCategory: None
   - split: 10
     text: "+1%生命上限"
-    translated: "+1% Health Maximum"
-    qcReviewedText: "+1% Health Maximum"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "+1% Max Health"
 - raw: "9,拳掌,1,钢拳,残拳,0,0,0,0,0,提升拳掌伤害\\n降低受到的拳掌伤害,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -767,14 +729,7 @@
     qcDefectCategory: None
   - split: 10
     text: "影响治疗外伤"
-    translated: "Affecting External Injuries Treatment"
-    qcReviewedText: "Affecting External Injuries Treatment/Internal Injury's efficiency"
-    qcTranslated: "Affecting the efficiency of treating External Injuries/Internal Injuries"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Affecting treatment of external injuries"
   - split: 10
     subIndex: 1
     text: "内伤的效率"
@@ -1553,11 +1508,7 @@
     qcDefectCategory: None
   - split: 10
     text: "生命上限"
-    translated: "Health Max"
-    qcReviewedText: "Health Max"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Max Health"
 - raw: "58,体力上限,5,焕发,疲敝,0,0,0,0,0,体力上限,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -1576,11 +1527,7 @@
     qcDefectCategory: None
   - split: 10
     text: "体力上限"
-    translated: "Maximum stamina"
-    qcReviewedText: "Maximum stamina"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Max Stamina"
 - raw: "59,内力上限,4,充盈,空虚,0,0,0,0,0,内力上限,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -1599,11 +1546,7 @@
     qcDefectCategory: None
   - split: 10
     text: "内力上限"
-    translated: "Inner Power Max"
-    qcReviewedText: "Inner Power Max"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Max Inner Power"
 - raw: "60,伤害,0.01,强攻,羸弱,1,0,0,0,0,造成伤害,伤害,0,1,1,0,0"
   splits:
   - split: 3
@@ -1769,11 +1712,7 @@
   splits:
   - split: 3
     text: "卸力"
-    translated: "Force absorption"
-    qcReviewedText: "Force absorption"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Force Deflection"
   - split: 4
     text: "受力"
     translated: "Force applied"
@@ -1983,11 +1922,7 @@
     qcDefectCategory: None
   - split: 4
     text: "动摇"
-    translated: "Shake"
-    qcReviewedText: "Shake"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Shaken"
   - split: 10
     text: "降低受到负面效果的概率"
     translated: "Reduce the probability of suffering negative effects"
@@ -2099,11 +2034,7 @@
     qcDefectCategory: None
   - split: 10
     text: "根据生命差造成外伤"
-    translated: "Based on the health difference, cause external injuries"
-    qcReviewedText: "Based on the health difference, cause external injuries"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Based on the difference in Health, cause External Injury."
 - raw: "81,内伤,0.01,无,无,1,1,1,0,0,根据内力差造成内伤,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -2122,11 +2053,7 @@
     qcDefectCategory: None
   - split: 10
     text: "根据内力差造成内伤"
-    translated: "Due to the difference in inner power causing internal injuries"
-    qcReviewedText: "Due to the difference in inner power causing internal injuries"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Caused an Internal Injury due to a difference in Inner Power"
 - raw: "82,毒素,0.01,无,无,1,1,1,0,0,根据毒术差造成中毒,伤害,0,1,1,1,0"
   splits:
   - split: 3
@@ -2436,14 +2363,10 @@
   - split: 10
     text: "速度"
     translated: "Speed"
-    qcReviewedText: "Speed/Recovery efficiency-30%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "恢复效率"
-    translated: "Recovery efficiency"
+    translated: "Recovery Rate"
   templates:
   - split: 10
     template: "{0}/{1}-30%"
@@ -2632,10 +2555,6 @@
   - split: 10
     text: "智力"
     translated: "Intelligence"
-    qcReviewedText: "Intelligence/Willpower/Negative resistance-30%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "意志"
@@ -2643,7 +2562,7 @@
   - split: 10
     subIndex: 2
     text: "负面抗性"
-    translated: "Negative resistance"
+    translated: "Debuff Resistance"
   templates:
   - split: 10
     template: "{0}/{1}/{2}-30%"
@@ -2651,11 +2570,7 @@
   splits:
   - split: 3
     text: "虚弱"
-    translated: "Weak"
-    qcReviewedText: "Weak"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Weakness"
   - split: 4
     text: "无"
     translated: "None"
@@ -2677,14 +2592,7 @@
   splits:
   - split: 3
     text: "横练"
-    translated: "Horizontal training"
-    qcReviewedText: "Horizontal training"
-    qcTranslated: "Iron Body Training"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Body Conditioning"
   - split: 4
     text: "无"
     translated: "None"
@@ -2706,11 +2614,7 @@
   splits:
   - split: 3
     text: "破甲"
-    translated: "Pierce armor"
-    qcReviewedText: "Pierce armor"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Armor Break"
   - split: 4
     text: "无"
     translated: "None"
@@ -2758,11 +2662,7 @@
   splits:
   - split: 3
     text: "迟缓"
-    translated: "Lagging"
-    qcReviewedText: "Lagging"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Slowed"
   - split: 4
     text: "无"
     translated: "None"
@@ -2836,11 +2736,7 @@
   splits:
   - split: 3
     text: "飘逸"
-    translated: "Elegant"
-    qcReviewedText: "Elegant"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Graceful"
   - split: 4
     text: "无"
     translated: "None"
@@ -2888,11 +2784,7 @@
   splits:
   - split: 3
     text: "霸体"
-    translated: "Invincibility"
-    qcReviewedText: "Invincibility"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Super Armor"
   - split: 4
     text: "无"
     translated: "None"
@@ -2914,11 +2806,7 @@
   splits:
   - split: 3
     text: "弱点"
-    translated: "Weakness"
-    qcReviewedText: "Weakness"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Weak Point"
   - split: 4
     text: "无"
     translated: "None"
@@ -2940,11 +2828,7 @@
   splits:
   - split: 3
     text: "疯魔"
-    translated: "Mad Despair"
-    qcReviewedText: "Mad Despair"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Demonic Frenzy"
   - split: 4
     text: "无"
     translated: "None"
@@ -2974,11 +2858,7 @@
   splits:
   - split: 3
     text: "混乱"
-    translated: "Chaos"
-    qcReviewedText: "Chaos"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Confusion"
   - split: 4
     text: "无"
     translated: "None"
@@ -3043,11 +2923,7 @@
   splits:
   - split: 3
     text: "壮骨"
-    translated: "Strengthen bone"
-    qcReviewedText: "Strengthen bone"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Strengthen Bones"
   - split: 4
     text: "无"
     translated: "None"
@@ -3069,11 +2945,7 @@
   splits:
   - split: 3
     text: "断骨"
-    translated: "Broken bone"
-    qcReviewedText: "Broken bone"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Broken bones"
   - split: 4
     text: "无"
     translated: "None"
@@ -3095,11 +2967,7 @@
   splits:
   - split: 3
     text: "舒筋"
-    translated: "Stretch tendons"
-    qcReviewedText: "Stretch tendons"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Muscle Relaxation"
   - split: 4
     text: "无"
     translated: "None"
@@ -3117,11 +2985,7 @@
   splits:
   - split: 3
     text: "伤筋"
-    translated: "Sprain"
-    qcReviewedText: "Sprain"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Muscle Injury"
   - split: 4
     text: "无"
     translated: "None"
@@ -3139,11 +3003,7 @@
   splits:
   - split: 3
     text: "醒脑"
-    translated: "Refresh their minds"
-    qcReviewedText: "Refresh their minds"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mind Clearing"
   - split: 4
     text: "无"
     translated: "None"
@@ -3165,11 +3025,7 @@
   splits:
   - split: 3
     text: "震脑"
-    translated: "Brain shock"
-    qcReviewedText: "Brain shock"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mind Shock"
   - split: 4
     text: "无"
     translated: "None"
@@ -3191,11 +3047,7 @@
   splits:
   - split: 3
     text: "定神"
-    translated: "Focus"
-    qcReviewedText: "Focus"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mind Calming"
   - split: 4
     text: "无"
     translated: "None"
@@ -3217,11 +3069,7 @@
   splits:
   - split: 3
     text: "乱神"
-    translated: "Mad God"
-    qcReviewedText: "Mad God"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mind Disruption"
   - split: 4
     text: "无"
     translated: "None"
@@ -3265,11 +3113,7 @@
   splits:
   - split: 3
     text: "凝血"
-    translated: "Blood clotting"
-    qcReviewedText: "Blood clotting"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Blood Coagulation"
   - split: 4
     text: "无"
     translated: "None"
@@ -3287,11 +3131,7 @@
   splits:
   - split: 3
     text: "通脉"
-    translated: "Tonify Meridians"
-    qcReviewedText: "Tonify Meridians"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unblock Meridians"
   - split: 4
     text: "无"
     translated: "None"
@@ -3313,11 +3153,7 @@
   splits:
   - split: 3
     text: "截脉"
-    translated: "Cut pulse"
-    qcReviewedText: "Cut pulse"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Seal Meridians"
   - split: 4
     text: "无"
     translated: "None"
@@ -3422,14 +3258,7 @@
     qcDefectCategory: None
   - split: 10
     text: "受伤时削除内力"
-    translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcReviewedText: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcTranslated: "Inner Power is reduced when injured"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Remove Inner Power when injured"
 - raw: "133,击退,1,无,无,0,1,1,0,0,将目标击退,敌方,1,1,1,1,0"
   splits:
   - split: 3
@@ -3448,11 +3277,7 @@
     qcDefectCategory: None
   - split: 10
     text: "将目标击退"
-    translated: "Push back the target"
-    qcReviewedText: "Push back the target"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Knockback the target"
 - raw: "134,拉近,1,无,无,0,1,1,0,0,将目标拉近,敌方,1,1,1,1,0"
   splits:
   - split: 3
@@ -3480,11 +3305,7 @@
   splits:
   - split: 3
     text: "慧眼"
-    translated: "Sharp‑eyed"
-    qcReviewedText: "Sharp‑eyed"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Keen Eye"
   - split: 4
     text: "无"
     translated: "None"
@@ -3532,11 +3353,7 @@
   splits:
   - split: 3
     text: "铜皮"
-    translated: "Brass skin"
-    qcReviewedText: "Brass skin"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Copper skin"
   - split: 4
     text: "无"
     translated: "None"
@@ -3546,11 +3363,7 @@
     qcDefectCategory: None
   - split: 10
     text: "卸力"
-    translated: "Force absorption"
-    qcReviewedText: "Force absorption+50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Force Deflection"
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3558,11 +3371,7 @@
   splits:
   - split: 3
     text: "脆弱"
-    translated: "Fragile"
-    qcReviewedText: "Fragile"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Vulnerable"
   - split: 4
     text: "无"
     translated: "None"
@@ -3572,11 +3381,7 @@
     qcDefectCategory: None
   - split: 10
     text: "卸力"
-    translated: "Force absorption"
-    qcReviewedText: "Force absorption-50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Force Deflection"
   templates:
   - split: 10
     template: "{0}-50%"
@@ -3584,11 +3389,7 @@
   splits:
   - split: 3
     text: "不屈"
-    translated: "Indomitable"
-    qcReviewedText: "Indomitable"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unyielding"
   - split: 4
     text: "无"
     translated: "None"
@@ -3610,11 +3411,7 @@
   splits:
   - split: 3
     text: "重碾"
-    translated: "Repeatedly crushed"
-    qcReviewedText: "Repeatedly crushed"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Crushing Blow"
   - split: 4
     text: "无"
     translated: "None"
@@ -3624,11 +3421,7 @@
     qcDefectCategory: None
   - split: 10
     text: "压制"
-    translated: "Suppress"
-    qcReviewedText: "Suppress+50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Overwhelm"
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3636,11 +3429,7 @@
   splits:
   - split: 3
     text: "连绵"
-    translated: "Continuous"
-    qcReviewedText: "Continuous"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Flurry"
   - split: 4
     text: "无"
     translated: "None"
@@ -3688,11 +3477,7 @@
   splits:
   - split: 3
     text: "断招"
-    translated: "Counterattack"
-    qcReviewedText: "Counterattack"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Interrupt"
   - split: 4
     text: "无"
     translated: "None"
@@ -3702,11 +3487,7 @@
     qcDefectCategory: None
   - split: 10
     text: "断连"
-    translated: "Disconnect"
-    qcReviewedText: "Disconnect+50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Interrupt"
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3714,11 +3495,7 @@
   splits:
   - split: 3
     text: "阻滞"
-    translated: "Obstacle"
-    qcReviewedText: "Obstacle"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Impede"
   - split: 4
     text: "无"
     translated: "None"
@@ -3728,11 +3505,7 @@
     qcDefectCategory: None
   - split: 10
     text: "断连"
-    translated: "Disconnect"
-    qcReviewedText: "Disconnect-50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Interrupt"
   templates:
   - split: 10
     template: "{0}-50%"
@@ -3740,11 +3513,7 @@
   splits:
   - split: 3
     text: "杀机"
-    translated: "Killer intent"
-    qcReviewedText: "Killer intent"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Killing intent"
   - split: 4
     text: "无"
     translated: "None"
@@ -3766,11 +3535,7 @@
   splits:
   - split: 3
     text: "康复"
-    translated: "Recovery"
-    qcReviewedText: "Recovery"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recuperation"
   - split: 4
     text: "无"
     translated: "None"
@@ -3780,11 +3545,7 @@
     qcDefectCategory: None
   - split: 10
     text: "恢复效率"
-    translated: "Recovery efficiency"
-    qcReviewedText: "Recovery efficiency+50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recovery Rate"
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3792,11 +3553,7 @@
   splits:
   - split: 3
     text: "不愈"
-    translated: "Unhealed"
-    qcReviewedText: "Unhealed"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Suppressed Healing"
   - split: 4
     text: "无"
     translated: "None"
@@ -3806,11 +3563,7 @@
     qcDefectCategory: None
   - split: 10
     text: "恢复效率"
-    translated: "Recovery efficiency"
-    qcReviewedText: "Recovery efficiency-50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recovery Rate"
   templates:
   - split: 10
     template: "{0}-50%"
@@ -3818,11 +3571,7 @@
   splits:
   - split: 3
     text: "坚毅"
-    translated: "Resilience"
-    qcReviewedText: "Resilience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Resolve"
   - split: 4
     text: "无"
     translated: "None"
@@ -3832,11 +3581,7 @@
     qcDefectCategory: None
   - split: 10
     text: "负面抗性"
-    translated: "Negative resistance"
-    qcReviewedText: "Negative resistance+50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Debuff Resistance"
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3844,11 +3589,7 @@
   splits:
   - split: 3
     text: "动摇"
-    translated: "Shake"
-    qcReviewedText: "Shake"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Shaken"
   - split: 4
     text: "无"
     translated: "None"
@@ -3858,11 +3599,7 @@
     qcDefectCategory: None
   - split: 10
     text: "负面抗性"
-    translated: "Negative resistance"
-    qcReviewedText: "Negative resistance-50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Debuff Resistance"
   templates:
   - split: 10
     template: "{0}-50%"
@@ -3916,11 +3653,7 @@
   splits:
   - split: 3
     text: "回血"
-    translated: "Healing"
-    qcReviewedText: "Healing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Restore health"
   - split: 4
     text: "无"
     translated: "None"
@@ -3930,20 +3663,12 @@
     qcDefectCategory: None
   - split: 10
     text: "每回合百分比恢复生命"
-    translated: "Percentage recovery of Health per turn"
-    qcReviewedText: "Percentage recovery of Health per turn"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Restore health as a percentage each turn"
 - raw: "153,回内,0.0015,回内,无,1,0,1,0,0,每回合百分比恢复内力,我方,0,0,1,1,0"
   splits:
   - split: 3
     text: "回内"
-    translated: "Inside"
-    qcReviewedText: "Inside"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Return Inner Power"
   - split: 4
     text: "无"
     translated: "None"
@@ -3953,20 +3678,12 @@
     qcDefectCategory: None
   - split: 10
     text: "每回合百分比恢复内力"
-    translated: "Recover Inner Power Percentage Per Turn"
-    qcReviewedText: "Recover Inner Power Percentage Per Turn"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Restores a percentage of Inner Power each turn."
 - raw: "154,回体,0.2,回体,无,0,0,1,0,0,每回合恢复体力,我方,0,0,1,1,0"
   splits:
   - split: 3
     text: "回体"
-    translated: "Restore Health"
-    qcReviewedText: "Restore Health"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Restore Stamina"
   - split: 4
     text: "无"
     translated: "None"
@@ -3976,11 +3693,7 @@
     qcDefectCategory: None
   - split: 10
     text: "每回合恢复体力"
-    translated: "Recover stamina each turn"
-    qcReviewedText: "Recover stamina each turn"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Restores Stamina each turn"
 - raw: "155,自愈,0.5,无,无,0,1,1,0,0,每回合消耗内力治疗伤势,我方,0,0,1,1,0"
   splits:
   - split: 3
@@ -3999,20 +3712,12 @@
     qcDefectCategory: None
   - split: 10
     text: "每回合消耗内力治疗伤势"
-    translated: "Every turn consumes Inner Power to heal injuries."
-    qcReviewedText: "Every turn consumes Inner Power to heal injuries."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Consume Inner Power each turn to treat injuries."
 - raw: "156,护头,1,护头,无,0,0,1,0,0,每回合提升头部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
     text: "护头"
-    translated: "Protect your head"
-    qcReviewedText: "Protect your head"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Guard Head"
   - split: 4
     text: "无"
     translated: "None"
@@ -4031,11 +3736,7 @@
   splits:
   - split: 3
     text: "护心"
-    translated: "Heart protection"
-    qcReviewedText: "Heart protection"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Guard Heart"
   - split: 4
     text: "无"
     translated: "None"
@@ -4054,11 +3755,7 @@
   splits:
   - split: 3
     text: "护胸"
-    translated: "Breastplate"
-    qcReviewedText: "Breastplate"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Guard Chest"
   - split: 4
     text: "无"
     translated: "None"
@@ -4077,11 +3774,7 @@
   splits:
   - split: 3
     text: "护腹"
-    translated: "Abdominal protector"
-    qcReviewedText: "Abdominal protector"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Guard Waist"
   - split: 4
     text: "无"
     translated: "None"
@@ -4100,11 +3793,7 @@
   splits:
   - split: 3
     text: "护手"
-    translated: "Hand guard"
-    qcReviewedText: "Hand guard"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Guard Wrist"
   - split: 4
     text: "无"
     translated: "None"
@@ -4123,11 +3812,7 @@
   splits:
   - split: 3
     text: "护足"
-    translated: "Footrest"
-    qcReviewedText: "Footrest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Guard Foot"
   - split: 4
     text: "无"
     translated: "None"
@@ -4183,11 +3868,7 @@
     qcDefectCategory: None
   - split: 10
     text: "降低所受伤害并反弹"
-    translated: "Reduce damage taken and retaliate"
-    qcReviewedText: "Reduce damage taken and retaliate"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Reduce the damage received and rebound it"
 - raw: "164,减伤,0.5,减伤,无,0,0,1,0,0,固定减少伤害,我方,0,2,1,1,0"
   splits:
   - split: 3
@@ -4287,11 +3968,7 @@
   splits:
   - split: 3
     text: "裂膝"
-    translated: "Split‑knee"
-    qcReviewedText: "Split‑knee"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Knee Injury"
   - split: 4
     text: "无"
     translated: "None"
@@ -4396,11 +4073,7 @@
     qcDefectCategory: None
   - split: 10
     text: "声望获取"
-    translated: "Reputation Points Earned"
-    qcReviewedText: "Reputation Points Earned"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Reputation Gain"
 - raw: "173,功绩获取,0.01,无,无,1,1,1,0,0,弟子功绩,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4465,11 +4138,7 @@
     qcDefectCategory: None
   - split: 10
     text: "疗伤效率"
-    translated: "Healing efficiency"
-    qcReviewedText: "Healing efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Injury Treatment Efficiency"
 - raw: "176,实战经验,0.02,无,无,1,1,1,0,0,实战经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4488,11 +4157,7 @@
     qcDefectCategory: None
   - split: 10
     text: "实战经验"
-    translated: "Combat experience"
-    qcReviewedText: "Combat experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Practical experience"
 - raw: "177,理论经验,0.02,无,无,1,1,1,0,0,理论经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4534,11 +4199,7 @@
     qcDefectCategory: None
   - split: 10
     text: "技艺经验"
-    translated: "Skill and experience"
-    qcReviewedText: "Skill and experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Skill experience"
 - raw: "179,内功经验,0.04,无,无,1,1,1,0,0,内功经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4943,11 +4604,7 @@
     qcDefectCategory: None
   - split: 10
     text: "买卖优势"
-    translated: "Advantage of Buying and Selling"
-    qcReviewedText: "Advantage of Buying and Selling"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Trading Bonus"
 - raw: "198,拳掌距离,1,无,无,0,1,1,0,0,拳掌攻击距离,我方,1,0,1,0,0"
   splits:
   - split: 3
@@ -5096,7 +4753,7 @@
     qcDefectCategory: None
   - split: 10
     text: "坐骑加成轻功"
-    translated: "Mount Boost Qinggong"
+    translated: "Mount bonus Qinggong"
   - split: 10
     subIndex: 1
     text: "力道"
@@ -5176,11 +4833,7 @@
     qcDefectCategory: None
   - split: 10
     text: "提升装备负重"
-    translated: "Increase equipment burden capacity"
-    qcReviewedText: "Increase equipment burden capacity"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Increase Equipment Weight"
 - raw: "208,机关伤害,0.02,无,无,1,1,1,0,0,提升机关建构的伤害,我方,0,0,1,0,0"
   splits:
   - split: 3
@@ -5291,11 +4944,7 @@
     qcDefectCategory: None
   - split: 10
     text: "提升好感获取"
-    translated: "Increase affection points"
-    qcReviewedText: "Increase affection points"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Increase Favor Gain"
 - raw: "213,本门武学威力,0.01,无,无,1,1,0,0,0,本门武学威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -5314,11 +4963,7 @@
     qcDefectCategory: None
   - split: 10
     text: "本门武学威力"
-    translated: "The power of this martial arts style"
-    qcReviewedText: "The power of this martial arts style"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sect Martial Arts Power"
 - raw: "214,恶名减少,0.005,无,无,1,1,0,0,0,减少恶名,伤害,0,0,1,0,0"
   splits:
   - split: 3

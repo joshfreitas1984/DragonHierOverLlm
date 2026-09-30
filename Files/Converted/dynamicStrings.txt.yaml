@@ -507,16 +507,9 @@
   splits:
   - text: "#PlayerName#一番好意，我也不便推辞，稍后就用这"
     translated: "#PlayerName#, I won't refuse such kind consideration. I'll use this later."
-    qcReviewedText: "#PlayerName#, I won't refuse such kind consideration. I'll use this later.{0} Heal\nThank you!"
-    qcTranslated: "#PlayerName#, I won't refuse such kind consideration. I'll use this {0} to heal my wounds later.\nThank you!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "疗伤。"
-    translated: "Heal"
+    translated: "Injury Treatment"
   - subIndex: 2
     text: "在此谢过！"
     translated: "Thank you!"
@@ -804,16 +797,9 @@
   splits:
   - text: "#PlayerName#仗义相救，此等恩情，自当涌泉相报。"
     translated: "#PlayerName# helped me with integrity, such kindness deserves a spring of gratitude in return."
-    qcReviewedText: "#PlayerName# helped me with integrity, such kindness deserves a spring of gratitude in return.\nI just need to rest and recover for now, so I'll have to take my leave!"
-    qcTranslated: "#PlayerName# came to my aid with righteous valor; such a debt of gratitude I shall repay a hundredfold.\nBut for now, I must rest and tend to my wounds, so I'll have to take my leave!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
   - subIndex: 1
     text: "只是眼下我还得调息养伤去，只好先告辞了！"
-    translated: "I just need to rest and recover for now, so I'll have to take my leave!"
+    translated: "I still need to rest and tend to my injuries, so I must take my leave for now!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#任职门客时日未久，还需再为我#TargetForceName#效力{0}日方可卸任。\n(门客叛离门派会固定增加50点恶名，且90天内不能拜师或加入其他门派)"
@@ -947,16 +933,12 @@
   splits:
   - text: "#PlayerName#你来的正好，我最近悟出了新招式，"
     translated: "#PlayerName#, you came at the right time. I recently figured out a new technique."
-    qcReviewedText: "#PlayerName#, you came at the right time. I recently figured out a new technique.\n#PlayerName# If we can tough it out for a few strikes and test its power, that would be perfect.\n(The more your internal skill exceeds that of your opponent, the less likely you are to suffer internal injuries.)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "#PlayerName#若能硬扛几招，试试威力，那就再好不过了。"
     translated: "#PlayerName# If we can tough it out for a few strikes and test its power, that would be perfect."
   - subIndex: 2
     text: "比对方内功高出越多，越不容易受到内伤"
-    translated: "The more your internal skill exceeds that of your opponent, the less likely you are to suffer internal injuries."
+    translated: "The higher your internal skill is compared to your opponent's, the less likely you are to suffer an internal injury."
   templates:
   - template: "{0}\n{1}\n({2})"
 - raw: "#PlayerName#你来的正好，我最近新配制了一味药方，急需找人来试一试效果如何。\n(双方医术越高越不容易中毒)"
@@ -1184,11 +1166,7 @@
 - raw: "#PlayerName#又在开玩笑了，你身上并无内伤啊。"
   splits:
   - text: "#PlayerName#又在开玩笑了，你身上并无内伤啊。"
-    translated: "#PlayerName# is pulling your leg again. You don't have any internal injuries."
-    qcReviewedText: "#PlayerName# is pulling your leg again. You don't have any internal injuries."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerName#, you're joking again. There's no internal injury on you."
 - raw: "#PlayerName#又在开玩笑了，你身上并未中毒啊。"
   splits:
   - text: "#PlayerName#又在开玩笑了，你身上并未中毒啊。"
@@ -1208,11 +1186,7 @@
 - raw: "#PlayerName#又在开玩笑了，我身上并无外伤啊。"
   splits:
   - text: "#PlayerName#又在开玩笑了，我身上并无外伤啊。"
-    translated: "#PlayerName# is just joking around. I don't have any external injuries on me."
-    qcReviewedText: "#PlayerName# is just joking around. I don't have any external injuries on me."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerName#, you're joking again. I don't have any external injuries."
 - raw: "#PlayerName#又在开玩笑了，我身上并未中毒啊。"
   splits:
   - text: "#PlayerName#又在开玩笑了，我身上并未中毒啊。"
@@ -1393,19 +1367,12 @@
   splits:
   - text: "#PlayerName#如此热心，我也不好推辞，"
     translated: "#PlayerName# so enthusiastic, I can't refuse either"
-    qcReviewedText: "#PlayerName# so enthusiastic, I can't refuse either\nWill use this shortly {0} Healing. Thank you for that!"
-    qcTranslated: "#PlayerName# so enthusiastic, I can't refuse either. I'll use this {0} to heal my wounds shortly. Thank you for that!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "稍后便用这"
     translated: "Will use this shortly"
   - subIndex: 2
     text: "疗伤。在此谢过！"
-    translated: "Healing. Thank you for that!"
+    translated: "Injury treatment. Thank you here!"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
 - raw: "#PlayerName#如此狮子大开口，未免有违江湖道义。\n也罢，我们拳脚底下见真章！"
@@ -2158,14 +2125,7 @@
 - raw: "#PlayerName#果真慧眼识珠，此人确实是个可造之材。\n若蒙#SourceForceName#不弃，我这就命其拜入#PlayerName#麾下！\n(招募附庸门派的{0}，需消耗门派威望{1}点)"
   splits:
   - text: "#PlayerName#果真慧眼识珠，此人确实是个可造之材。"
-    translated: "#PlayerName# truly has keen insight; this person is indeed a promising talent."
-    qcReviewedText: "#PlayerName# truly has keen insight; this person is indeed a promising talent.\nIf #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Click)"
-    qcTranslated: "#PlayerName# truly has keen insight; this person is indeed a promising talent.\nIf #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Points)"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "#PlayerName#, you truly have a keen eye; this person is indeed a promising talent."
   - subIndex: 1
     text: "若蒙#SourceForceName#不弃，我这就命其拜入#PlayerName#麾下！"
     translated: "If #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!"
@@ -3152,19 +3112,11 @@
 - raw: "#PlayerName#身上确有内伤，若你有意，就让我来诊治一番吧。"
   splits:
   - text: "#PlayerName#身上确有内伤，若你有意，就让我来诊治一番吧。"
-    translated: "#PlayerName# has internal injuries. If you wish, let me treat them."
-    qcReviewedText: "#PlayerName# has internal injuries. If you wish, let me treat them."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerName# does indeed have internal injuries. If you wish, let me treat them."
 - raw: "#PlayerName#身上确有外伤，若你有意，就让我来诊治一番吧。"
   splits:
   - text: "#PlayerName#身上确有外伤，若你有意，就让我来诊治一番吧。"
-    translated: "#PlayerName# has external injuries. If you wish, let me treat them."
-    qcReviewedText: "#PlayerName# has external injuries. If you wish, let me treat them."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerName# does have external injuries. If you wish, let me treat them."
 - raw: "#PlayerName#身手不凡，居中仗义调停，\n我若再锱铢必较，未免有些不识抬举了！"
   splits:
   - text: "#PlayerName#身手不凡，居中仗义调停，"
@@ -5978,32 +5930,18 @@
   splits:
   - text: "60%探索奖励"
     translated: "60% Exploration Reward"
-    qcReviewedText: "60% Exploration Reward：Restore 15% Stamina"
-    qcTranslated: "60% Exploration Reward: Restore 15% Stamina"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "恢复15%已消耗耐力"
-    translated: "Restore 15% Stamina"
+    translated: "Recovery of 15% of endurance consumed"
   templates:
   - template: "{0}：{1}"
 - raw: "80%探索奖励：恢复10%已消耗耐力并揭示终点"
   splits:
   - text: "80%探索奖励"
     translated: "80% exploration reward"
-    qcReviewedText: "80% exploration reward：Restore 10% stamina and reveal the finish line"
-    qcTranslated: "80% Exploration Reward: Restore 10% Stamina and Reveal the Finish Line"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "恢复10%已消耗耐力并揭示终点"
-    translated: "Restore 10% stamina and reveal the finish line"
+    translated: "Restore 10% of endurance used and reveal the endpoint"
   templates:
   - template: "{0}：{1}"
 - raw: ";预计门派好感+{0}"
@@ -6351,13 +6289,6 @@
   splits:
   - text: "可两个月参加一次门派会议"
     translated: "Could participate in the sect meeting once every two months."
-    qcReviewedText: "<b>Could participate in the sect meeting once every two months.</b>\nGain 70% Sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Scripture Pavilion) Compile the Secret Manual：Integrate/Copy/Recite\n♦(Healing Room) On duty：Treat injuries and illnesses for fellow disciples\n♦(Ancestral hall) Exhibit hall：Display artifacts\n♦(Warehouse) Sect Treasury：Receive silver coins\n♦Function creation：Casting/Prepare</color></i>"
-    qcTranslated: "<b>Can participate in the sect meeting once every two months.</b>\nGain 70% Sect bonus effect\n<i><color=#696969>Add new Sect functionality：\n♦(Scripture Pavilion) Compile the Secret Manual：Integrate/Copy/Recite\n♦(Healing Room) On duty：Treat injuries and illnesses for fellow disciples\n♦(Ancestral hall) Exhibit hall：Display artifacts\n♦(Warehouse) Sect Treasury：Receive silver coins\n♦Function creation：Casting/Prepare</color></i>"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "获得70%门派加成效果"
     translated: "Gain 70% Sect bonus effect"
@@ -6381,13 +6312,13 @@
     translated: "Recite"
   - subIndex: 8
     text: "疗伤室"
-    translated: "Healing Room"
+    translated: "Injury Treatment Room"
   - subIndex: 9
     text: "坐诊"
     translated: "On duty"
   - subIndex: 10
     text: "替同门治疗伤病"
-    translated: "Treat injuries and illnesses for fellow disciples"
+    translated: "Treat fellow disciples' injuries and illnesses"
   - subIndex: 11
     text: "祠堂"
     translated: "Ancestral hall"
@@ -6686,11 +6617,7 @@
 - raw: "<b>装备负重</b>"
   splits:
   - text: "装备负重"
-    translated: "Equipment load limit"
-    qcReviewedText: "<b>Equipment load limit</b>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Equipment Weight"
   templates:
   - template: "<b>{0}</b>"
 - raw: "<b>门派特性</b>\n{1}{0}</color>"
@@ -7336,11 +7263,7 @@
 - raw: ">={0} 基础移距{1}"
   splits:
   - text: "基础移距"
-    translated: "Base shift distance"
-    qcReviewedText: ">={0} Base shift distance {1}"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Basic Repositioning"
   templates:
   - template: ">=⟦0⟧ {0}⟦1⟧"
 - raw: "AI门派发展速度"
@@ -7762,11 +7685,7 @@
 - raw: "SpeEffect/斗转"
   splits:
   - text: "斗转"
-    translated: "Stars turn"
-    qcReviewedText: "SpeEffect/Stars turn"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Stars Shift"
   templates:
   - template: "SpeEffect/{0}"
 - raw: "SpeEffect/治疗"
@@ -7966,11 +7885,7 @@
 - raw: "[削内{0}]"
   splits:
   - text: "削内"
-    translated: "Eliminate internal enemies"
-    qcReviewedText: "[Eliminate internal enemies {0}]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Energy Reduction"
   templates:
   - template: "[{0}⟦0⟧]"
 - raw: "[可获取成就]"
@@ -7986,21 +7901,13 @@
 - raw: "[吸内{0}]"
   splits:
   - text: "吸内"
-    translated: "Inhale"
-    qcReviewedText: "[Inhale {0}]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Energy Drain"
   templates:
   - template: "[{0}⟦0⟧]"
 - raw: "[吸血{0}]"
   splits:
   - text: "吸血"
-    translated: "Vampire"
-    qcReviewedText: "[Vampire {0}]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Lifesteal"
   templates:
   - template: "[{0}⟦0⟧]"
 - raw: "[外伤{0}]"
@@ -8032,11 +7939,7 @@
 - raw: "[失衡]"
   splits:
   - text: "失衡"
-    translated: "Imbalance"
-    qcReviewedText: "[Imbalance]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Off Balance"
   templates:
   - template: "[{0}]"
 - raw: "[武器淬毒{0}]"
@@ -8082,31 +7985,19 @@
 - raw: "[被反伤{0}]"
   splits:
   - text: "被反伤"
-    translated: "Counterdmg"
-    qcReviewedText: "[Counterdmg {0}]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Suffering reflect damage"
   templates:
   - template: "[{0}⟦0⟧]"
 - raw: "[被反伤削内{0}]"
   splits:
   - text: "被反伤削内"
-    translated: "Counter‑damage reduction"
-    qcReviewedText: "[Counter‑damage reduction {0}]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Suffering from Reflect Energy Reduction"
   templates:
   - template: "[{0}⟦0⟧]"
 - raw: "[被反伤吸内{0}]"
   splits:
   - text: "被反伤吸内"
-    translated: "Backfire and absorb damage"
-    qcReviewedText: "[Backfire and absorb damage {0}]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Suffering from Reflect Energy Drain"
   templates:
   - template: "[{0}⟦0⟧]"
 - raw: "[被头盔淬毒{0}]"
@@ -9232,19 +9123,12 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Mid‑rest and recovery {3} Health and Inner Power recover {2}%"
-    qcTranslated: "{0} is resting and recovering in {1}. {3} Health and Inner Power recover {2}%"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "中休整疗养，"
     translated: "Mid‑rest and recovery"
   - subIndex: 2
     text: "生命内力恢复"
-    translated: "Health and Inner Power recover"
+    translated: "Health and Inner Power Recovery"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}⟦3⟧{2}⟦2⟧%"
 - raw: "{0}在{1}中发现了一些资源"
@@ -9283,17 +9167,9 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Healing herbs were found in the middle"
-    qcTranslated: "{0} discovered healing herbs in {1}"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - GarbledNumber
   - subIndex: 1
     text: "中发现了疗伤药草"
-    translated: "Healing herbs were found in the middle"
+    translated: "Found medicinal herbs for injury treatment"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}在{1}中发现了终点信息"
@@ -9420,26 +9296,18 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Triggered a trap, suffered external injuries"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "中误触陷阱，身负外伤"
-    translated: "Triggered a trap, suffered external injuries"
+    translated: "Suffered an external injury from accidentally triggering a trap."
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}在{1}中运功调息，疗养内伤"
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Regulate breathing and cultivate qi to heal internal injuries"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "中运功调息，疗养内伤"
-    translated: "Regulate breathing and cultivate qi to heal internal injuries"
+    translated: "Practice breath regulation to heal the internal injury."
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}在{1}中遭毒虫叮咬，痛痒难耐"
@@ -9804,14 +9672,7 @@
 - raw: "{0}将伤害斗转给{1}(耗内{2})。"
   splits:
   - text: "将伤害斗转给"
-    translated: "Transfer the damage back"
-    qcReviewedText: "{0} Transfer the damage back {1} (Internal Use Only {2})。"
-    qcTranslated: "{0} transfers the damage to {1} (Costs {2} internal energy)."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Redirect the damage with Stars Shift to"
   - subIndex: 1
     text: "耗内"
     translated: "Internal Use Only"
@@ -10264,25 +10125,13 @@
 - raw: "{0}服食异草，生命上限增加{1}"
   splits:
   - text: "服食异草，生命上限增加"
-    translated: "Eating the strange herb increases Health Max"
-    qcReviewedText: "{0} Eating the strange herb increases Health Max {1}"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Eating the strange herb increases Max Health"
   templates:
   - template: "⟦0⟧{0}⟦1⟧"
 - raw: "{0}服食灵果，内力上限增加{1}"
   splits:
   - text: "服食灵果，内力上限增加"
-    translated: "While consuming the Spirit Fruit, they increase their inner power limit to the Inner Power Limit."
-    qcReviewedText: "{0} While consuming the Spirit Fruit, they increase their inner power limit to the Inner Power Limit.{1}"
-    qcTranslated: "{0} Consuming the Spirit Fruit increases Inner Power limit by {1}."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - OtherNamedDefect
+    translated: "Eating the spirit fruit increases Max Inner Power."
   templates:
   - template: "⟦0⟧{0}⟦1⟧"
 - raw: "{0}未拥有</color>"
@@ -10340,11 +10189,7 @@
 - raw: "{0}武功经验获取 <b>{1}%</b>"
   splits:
   - text: "武功经验获取"
-    translated: "Martial arts experience points acquisition"
-    qcReviewedText: "{0} Martial arts experience points acquisition <b>{1}%</b>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Skill Experience Gain"
   templates:
   - template: "⟦0⟧{0} <b>⟦1⟧%</b>"
 - raw: "{0}武学威力+{1}%\n{2}武学加成：\n{3}"
@@ -10366,14 +10211,7 @@
 - raw: "{0}死而复生，恢复{1}生命/{2}内力/{3}体力/{4}全架势/{4}%行动力。"
   splits:
   - text: "死而复生，恢复"
-    translated: "Resurrection, restoration"
-    qcReviewedText: "{0} Resurrection, restoration {1} Health/{2} Inner Power/{3} Stamina/{4} Full‑tilt/{4}%Action points"
-    qcTranslated: "{0} Resurrection, restoring {1} Health/{2} Inner Power/{3} Stamina/{4} Full Stance/{4}% Action points"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Revive, Recovery"
   - subIndex: 1
     text: "生命"
     translated: "Health"
@@ -10467,11 +10305,7 @@
 - raw: "{0}猝不及防，陷入虚弱(4回合)"
   splits:
   - text: "猝不及防，陷入虚弱"
-    translated: "Caught off guard, weakened"
-    qcReviewedText: "{0} Caught off guard, weakened(4 turn)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Caught off guard, fell into weakness"
   - subIndex: 1
     text: "4回合"
     translated: "4 turn"
@@ -10513,14 +10347,7 @@
 - raw: "{0}的招式未能命中{1}。"
   splits:
   - text: "的招式未能命中"
-    translated: "His move failed to hit"
-    qcReviewedText: "{0} His move failed to hit {1}。"
-    qcTranslated: "{0}'s move failed to hit {1}"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Move failed to hit"
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}的潜力等级提升了{1}级！"
@@ -10880,11 +10707,7 @@
 - raw: "{0}进行调息。"
   splits:
   - text: "进行调息。"
-    translated: "Practice breathing"
-    qcReviewedText: "{0} Practice breathing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Perform Breath Regulation"
   templates:
   - template: "⟦0⟧{0}"
 - raw: "{0}部架势 {1}\n{2}"
@@ -11010,26 +10833,18 @@
   splits:
   - text: "声望加成"
     translated: "Reputation bonus"
-    qcReviewedText: "{1}\nReputation bonus {2}%\nInfamy reduced {3}%\n{0}"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "恶名减少"
-    translated: "Infamy reduced"
+    translated: "Infamy Reduction"
   templates:
   - template: "⟦1⟧\n{0}⟦2⟧%\n{1}⟦3⟧%\n⟦0⟧"
 - raw: "{1}\n好感加成{2}%\n恶名减少{3}%\n{0}"
   splits:
   - text: "好感加成"
     translated: "Goodwill Boost"
-    qcReviewedText: "{1}\nGoodwill Boost {2}%\nInfamy reduced {3}%\n{0}"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "恶名减少"
-    translated: "Infamy reduced"
+    translated: "Infamy Reduction"
   templates:
   - template: "⟦1⟧\n{0}⟦2⟧%\n{1}⟦3⟧%\n⟦0⟧"
 - raw: "{1}“{0}”之高，\n令我眼界大开"
@@ -11173,11 +10988,7 @@
 - raw: "{1}冰寒武学满级，额外内力上限+{0}"
   splits:
   - text: "冰寒武学满级，额外内力上限"
-    translated: "Ice and Frost Martial Arts at maximum level, additional Inner Power cap"
-    qcReviewedText: "{1} Ice and Frost Martial Arts at maximum level, additional Inner Power cap+{0}"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Maximum Chill Martial Arts level, additional Max Inner Power"
   templates:
   - template: "⟦1⟧{0}+⟦0⟧"
 - raw: "{1}剑法满级，额外剑法+{0}"
@@ -11326,11 +11137,7 @@
 - raw: "{1}灼烧武学满级，额外负面加成+{0}%"
   splits:
   - text: "灼烧武学满级，额外负面加成"
-    translated: "Maxed out Combative Arts of Incineration, additional negative effects"
-    qcReviewedText: "{1} Maxed out Combative Arts of Incineration, additional negative effects+{0}%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Max‑level Burned martial arts, additional debuff potency"
   templates:
   - template: "⟦1⟧{0}+⟦0⟧%"
 - raw: "{1}特效\n{0}"
@@ -11708,13 +11515,9 @@
   splits:
   - text: "凝结玄冰需要消耗矿料，食材和内力。所用材料品级越高，最终效果越强。"
     translated: "Condensing Xuan Bing requires the consumption of ore, ingredients, and inner power. The higher the quality of the materials used, the stronger the final effect."
-    qcReviewedText: "♦Condensing Xuan Bing requires the consumption of ore, ingredients, and inner power. The higher the quality of the materials used, the stronger the final effect.\n♦Xuanbing will enhance the power of Tianshan Sect martial arts and all icy‑cold martial arts effects for 30 days.\n♦Each condensation increases proficiency, and proficiency greatly affects the final result."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "玄冰会提升天山派武学威力和所有冰寒武学效果，持续30日。"
-    translated: "Xuanbing will enhance the power of Tianshan Sect martial arts and all icy‑cold martial arts effects for 30 days."
+    translated: "Xuanbing will enhance the power of Tianshan Sect martial arts and all Chill martial arts effects for 30 days."
   - subIndex: 2
     text: "每次凝结都会提升熟练度，熟练度会很大程度上影响最终效果。"
     translated: "Each condensation increases proficiency, and proficiency greatly affects the final result."
@@ -11854,16 +11657,9 @@
   splits:
   - text: "配置火药需要消耗木材，药引和生命。所用材料品级越高，最终效果越强。"
     translated: "Configuring the gunpowder requires consuming wood, a medicinal guide, and health. The higher the quality of the materials used, the stronger the final effect."
-    qcReviewedText: "♦Configuring the gunpowder requires consuming wood, a medicinal guide, and health. The higher the quality of the materials used, the stronger the final effect.\n♦Fire will enhance the power of Thunderclap Hall's martial arts and all burning martial arts effects for 30 days.\n♦Each setup will increase proficiency, which will significantly impact the final result."
-    qcTranslated: "♦Configuring the gunpowder requires consuming wood, a primer, and Health. The higher the quality of the materials used, the stronger the final effect.\\n♦Gunpowder will enhance the power of Thunderclap Hall's martial arts and all burning martial arts effects for 30 days.\\n♦Each setup will increase proficiency, which will significantly impact the final result."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
   - subIndex: 1
     text: "火药会提升霹雳堂武学威力和所有灼烧武学效果，持续30日。"
-    translated: "Fire will enhance the power of Thunderclap Hall's martial arts and all burning martial arts effects for 30 days."
+    translated: "Gunpowder will enhance the power of Thunderclap Hall martial arts and all Burned techniques for 30 days."
   - subIndex: 2
     text: "每次配置都会提升熟练度，熟练度会很大程度上影响最终效果。"
     translated: "Each setup will increase proficiency, which will significantly impact the final result."
@@ -12070,11 +11866,7 @@
 - raw: "一番血战过后，你被击倒在地，再也无力反击。\n#$TargetInteractName#冷眼打量着，似乎在考虑应该如何处置你。"
   splits:
   - text: "一番血战过后，你被击倒在地，再也无力反击。"
-    translated: "After the fierce battle, you were knocked to the ground and could no longer retaliate."
-    qcReviewedText: "After the fierce battle, you were knocked to the ground and could no longer retaliate.\n#$TargetInteractName# coldly sized you up, as if considering how to deal with you."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "After a fierce battle, you were struck to the ground and were no longer able to counterattack."
   - subIndex: 1
     text: "#$TargetInteractName#冷眼打量着，似乎在考虑应该如何处置你。"
     translated: "#$TargetInteractName# coldly sized you up, as if considering how to deal with you."
@@ -15697,7 +15489,7 @@
     translated: "Making friends"
   - subIndex: 1
     text: "好友关系好感获取+10%，好感消耗"
-    translated: "Friendship affinity gain +10%, affinity consumption"
+    translated: "Friendship favor gain +10%, favor consumption"
   - subIndex: 2
     text: "对好友作恶，恶名"
     translated: "To do evil to a friend, infamy"
@@ -15777,7 +15569,7 @@
     translated: "Intimate"
   - subIndex: 1
     text: "亲密关系好感获取+20%，好感消耗"
-    translated: "Intimate Relationship Goodwill Gain +20%, Goodwill Consumption"
+    translated: "Favor Gain with Intimacy Relationship +20%, Favor Consumption"
   - subIndex: 2
     text: "对亲友作恶，恶名"
     translated: "To wrong friends and family, infamy"
@@ -17193,7 +16985,7 @@
 - raw: "传授技艺经验;TeachLivingSkillWithNPC;;;♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
   splits:
   - text: "传授技艺经验"
-    translated: "Share skill and experience"
+    translated: "Teach skill experience"
   - subIndex: 1
     text: "你的技艺比对方高出越多，效果越好"
     translated: "The better the disparity in your skill compared to the opponent, the better the effect."
@@ -17510,11 +17302,7 @@
 - raw: "伤势抗性"
   splits:
   - text: "伤势抗性"
-    translated: "Wound resistance"
-    qcReviewedText: "Wound resistance"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Injury Resistance"
 - raw: "伤害"
   splits:
   - text: "伤害"
@@ -17648,11 +17436,7 @@
 - raw: "体力上限"
   splits:
   - text: "体力上限"
-    translated: "Maximum stamina"
-    qcReviewedText: "Maximum stamina"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Max Stamina"
 - raw: "体力不足"
   splits:
   - text: "体力不足"
@@ -19362,11 +19146,7 @@
 - raw: "内力上限"
   splits:
   - text: "内力上限"
-    translated: "Inner Power Max"
-    qcReviewedText: "Inner Power Max"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Max Inner Power"
 - raw: "内力不足"
   splits:
   - text: "内力不足"
@@ -19591,11 +19371,7 @@
 - raw: "冰寒"
   splits:
   - text: "冰寒"
-    translated: "Icicles"
-    qcReviewedText: "Icicles"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Chill"
 - raw: "冲关成功率{0}%\n经验{1}"
   splits:
   - text: "冲关成功率"
@@ -20755,11 +20531,7 @@
 - raw: "剧情毒素"
   splits:
   - text: "剧情毒素"
-    translated: "Plot toxin"
-    qcReviewedText: "Plot toxin"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Plot Poison"
 - raw: "剧情重击"
   splits:
   - text: "剧情重击"
@@ -21509,14 +21281,6 @@
   splits:
   - text: "千里之行，始于足下。接下来该修炼哪门武功呢？"
     translated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?"
-    qcReviewedText: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase neigong/Qinggong/Combat experience with Special Techniques {0} Best effect within the grade)"
-    qcTranslated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase Neigong/Qinggong/Special Technique combat experience, best effect within {0} levels)"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - OtherNamedDefect
   - subIndex: 1
     text: "修炼可增加内功"
     translated: "Training can increase neigong"
@@ -21525,7 +21289,7 @@
     translated: "Qinggong"
   - subIndex: 3
     text: "绝技的实战经验，"
-    translated: "Combat experience with Special Techniques"
+    translated: "Practical experience with Special Techniques,"
   - subIndex: 4
     text: "级内效果最佳"
     translated: "Best effect within the grade"
@@ -21719,11 +21483,7 @@
 - raw: "卸力"
   splits:
   - text: "卸力"
-    translated: "Force absorption"
-    qcReviewedText: "Force absorption"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Force Deflection"
 - raw: "历时{0}载，#PlayerForceName#以及附庸、盟友，终于占据了天下全部江山。\n没想到我#$PlayerName#起于青萍之末，竟能创下如此前无古人后无来者之丰功伟业。"
   splits:
   - text: "历时"
@@ -21794,11 +21554,7 @@
 - raw: "压制"
   splits:
   - text: "压制"
-    translated: "Suppress"
-    qcReviewedText: "Suppress"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Overwhelm"
 - raw: "厌恶"
   splits:
   - text: "厌恶"
@@ -22329,16 +22085,9 @@
   splits:
   - text: "受击时与对方"
     translated: "When hit, engage the opponent"
-    qcReviewedText: "When hit, engage the opponent <b>Suppress </b>Compare\nTrigger counterattack doubles your action slot"
-    qcTranslated: "When hit, compare with the opponent's <b>Suppress</b>\nTrigger counterattack doubles your action slot"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "压制"
-    translated: "Suppress"
+    translated: "Overwhelm"
   - subIndex: 2
     text: "比较"
     translated: "Compare"
@@ -22376,13 +22125,6 @@
   splits:
   - text: "受击时与对方"
     translated: "When hit, engage the opponent"
-    qcReviewedText: "When hit, engage the opponent <b>Critical hit </b>Compare\nTriggering Mitigation reduces damage by half"
-    qcTranslated: "When hit, compare with the opponent's <b>Critical hit</b>\nTriggering Mitigation reduces damage by half"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "暴击"
     translated: "Critical hit"
@@ -22391,7 +22133,7 @@
     translated: "Compare"
   - subIndex: 3
     text: "触发卸力则伤害减半"
-    translated: "Triggering Mitigation reduces damage by half"
+    translated: "Triggering Force Deflection halves the damage"
   templates:
   - template: "{0}<b>{1}</b>{2}\n{3}"
 - raw: "受击时减少对方连击率"
@@ -23936,19 +23678,11 @@
 - raw: "吸内"
   splits:
   - text: "吸内"
-    translated: "Inhale"
-    qcReviewedText: "Inhale"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Energy Drain"
 - raw: "吸血"
   splits:
   - text: "吸血"
-    translated: "Vampire"
-    qcReviewedText: "Vampire"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Lifesteal"
 - raw: "告示"
   splits:
   - text: "告示"
@@ -29190,13 +28924,9 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "In {0} How many days to recover?\nDaily consumption of 25 Sect herbs reduces {1} External Injury"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "疗伤几天？"
-    translated: "How many days to recover?"
+    translated: "How many days for injury treatment?"
   - subIndex: 2
     text: "每日消耗25门派药材，降低"
     translated: "Daily consumption of 25 Sect herbs reduces"
@@ -29228,16 +28958,9 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "In {0} How many days should I rest?\nDaily consumption of 25 Sect herbs reduces {1} Internal Injury"
-    qcTranslated: "How many days should I rest in {0}?\nDaily consumption of 25 Sect herbs reduces {1} Internal Injury"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "调息几天？"
-    translated: "How many days should I rest?"
+    translated: "How many days of Breath Regulation?"
   - subIndex: 2
     text: "每日消耗25门派药材，降低"
     translated: "Daily consumption of 25 Sect herbs reduces"
@@ -29628,14 +29351,7 @@
 - raw: "在疗伤室中，只需消耗门派药材便可治疗自身伤势。\n（当前伤势：外伤{0}/内伤{1}/中毒{2}）"
   splits:
   - text: "在疗伤室中，只需消耗门派药材便可治疗自身伤势。"
-    translated: "In the healing room, one can treat their own injuries by consuming Sect herbs."
-    qcReviewedText: "In the healing room, one can treat their own injuries by consuming Sect herbs.\n(Current injuries：External Injury {0}/Internal Injury {1}/Poisoned {2}）"
-    qcTranslated: "In the healing room, one can treat their own injuries by consuming Sect herbs.\n(Current injuries: External Injury {0}/Internal Injury {1}/Poisoned {2})"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "In the injury treatment room, one only needs to consume Sect herbs to treat their own injuries."
   - subIndex: 1
     text: "（当前伤势"
     translated: "(Current injuries"
@@ -29971,16 +29687,12 @@
   splits:
   - text: "增加生命"
     translated: "Increase Health"
-    qcReviewedText: "Increase Health/Inner Power/Stamina recovery efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "内力"
     translated: "Inner Power"
   - subIndex: 2
     text: "体力恢复效率"
-    translated: "Stamina recovery efficiency"
+    translated: "Stamina Recovery Rate"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "增加给对方施加负面状态的概率"
@@ -30132,11 +29844,7 @@
 - raw: "复生+{0}%"
   splits:
   - text: "复生"
-    translated: "Resurrection"
-    qcReviewedText: "Resurrection+{0}%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Revive"
   templates:
   - template: "{0}+⟦0⟧%"
 - raw: "夏"
@@ -30312,13 +30020,9 @@
   splits:
   - text: "多年以后一个炎热的下午，你正坐在大殿中思考国策。"
     translated: "Many years later, on a hot afternoon, you sat in the grand hall contemplating national policies."
-    qcReviewedText: "Many years later, on a hot afternoon, you sat in the grand hall contemplating national policies.\nSuddenly, a strong dizziness struck, making you spin like you were in a fog."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "突然一阵强烈的眩晕袭来，使你天旋地转，如坠云里雾里。"
-    translated: "Suddenly, a strong dizziness struck, making you spin like you were in a fog."
+    translated: "Suddenly, a wave of intense dizziness hit you, making the world spin and feel as if you were lost in a cloud of mist."
   templates:
   - template: "{0}\n{1}"
 - raw: "多有得罪;FinishEventMission"
@@ -30853,13 +30557,6 @@
   splits:
   - text: "大侠目前的勋阶为"
     translated: "The current title of the Great Hero is"
-    qcReviewedText: "The current title of the Great Hero is <b>{0}</b>, Can increase the upper limit of occupied areas for this school {1}, Goodwill Boost {2}%, Infamy reduced {3}%。\nGovernment service merits are {4}，{5}。"
-    qcTranslated: "The current title of the Great Hero is <b>{0}</b>, can increase the upper limit of occupied areas for this school {1}, Goodwill Boost {2}%, Infamy reduced {3}%.\\nGovernment service merits are {4}, {5}."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "，可以提升本门占领区域上限"
     translated: ", Can increase the upper limit of occupied areas for this school"
@@ -30868,7 +30565,7 @@
     translated: ", Goodwill Boost"
   - subIndex: 3
     text: "，恶名减少"
-    translated: ", Infamy reduced"
+    translated: ", Infamy Reduction"
   - subIndex: 4
     text: "官府功绩为"
     translated: "Government service merits are"
@@ -33526,7 +33223,7 @@
 - raw: "学习技艺经验;StudyLivingSkillWithNPC;;;♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
   splits:
   - text: "学习技艺经验"
-    translated: "Skillcraft experience"
+    translated: "Learning skill experience"
   - subIndex: 1
     text: "对方技艺比你高出越多，效果越好"
     translated: "While their skill is better than yours, the effect is also enhanced."
@@ -33663,13 +33360,13 @@
 - raw: "宁死不屈;PlayerLoseFightNoBeg"
   splits:
   - text: "宁死不屈"
-    translated: "Die with one's head held high"
+    translated: "Would rather die than submit"
   templates:
   - template: "{0};PlayerLoseFightNoBeg"
 - raw: "宁死不屈;PlayerLoseFightNoBegSure"
   splits:
   - text: "宁死不屈"
-    translated: "Die with one's head held high"
+    translated: "Would rather die than submit"
   templates:
   - template: "{0};PlayerLoseFightNoBegSure"
 - raw: "宇文极"
@@ -33770,49 +33467,49 @@
 - raw: "完全恢复;SureHomeRestRecover;1"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHomeRestRecover;1"
 - raw: "完全恢复;SureHospitalCureInjury;0~0-"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHospitalCureInjury;0~0-"
 - raw: "完全恢复;SureHospitalCureInjury;0~1-"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHospitalCureInjury;0~1-"
 - raw: "完全恢复;SureHospitalCureInjury;0~2-"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHospitalCureInjury;0~2-"
 - raw: "完全恢复;SureHospitalCureInjury;1~0-"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHospitalCureInjury;1~0-"
 - raw: "完全恢复;SureHospitalCureInjury;1~1-"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHospitalCureInjury;1~1-"
 - raw: "完全恢复;SureHospitalCureInjury;1~2-"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHospitalCureInjury;1~2-"
 - raw: "完全恢复;SureHotelRestRecover;1"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
+    translated: "Complete Recovery"
   templates:
   - template: "{0};SureHotelRestRecover;1"
 - raw: "完成;HideInteractUI"
@@ -34197,11 +33894,7 @@
 - raw: "实战经验"
   splits:
   - text: "实战经验"
-    translated: "Combat experience"
-    qcReviewedText: "Combat experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Practical experience"
 - raw: "客人离席;FinishParty"
   splits:
   - text: "客人离席"
@@ -34233,11 +33926,7 @@
 - raw: "宴会持续良久，肴核既尽，杯盘狼籍。相与枕藉，不觉天色昏沉。"
   splits:
   - text: "宴会持续良久，肴核既尽，杯盘狼籍。相与枕藉，不觉天色昏沉。"
-    translated: "The banquet lasted for a long time, and by the end, the food and drink were finished, leaving the table strewn with empty plates and cups. They lay down beside each other, and before they knew it, the sky had grown dark."
-    qcReviewedText: "The banquet lasted for a long time, and by the end, the food and drink were finished, leaving the table strewn with empty plates and cups. They lay down beside each other, and before they knew it, the sky had grown dark."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The banquet lasted for a long time, and when the dishes were finished, the tables were left in disarray. Lying together, they did not notice the onset of drowsiness as the sky grew dark."
 - raw: "宴会评分"
   splits:
   - text: "宴会评分"
@@ -34857,20 +34546,12 @@
   splits:
   - text: "小的上有八十老母，下有三岁小儿，还望大侠网开一面，饶我性命！"
     translated: "The small one has an eighty‑year‑old mother above and a three‑year‑old child below. I beg the Great Hero to show mercy and spare my life!"
-    qcReviewedText: "The small one has an eighty‑year‑old mother above and a three‑year‑old child below. I beg the Great Hero to show mercy and spare my life!\n(Current success rate is {0}%. While they act more and more chaotically, their opponents behave increasingly recklessly./Mercy, as well as one's own eloquence, makes it more likely to escape unscathed.)"
-    qcTranslated: "I have an eighty‑year‑old mother to support and a three‑year‑old child to raise. I beg the Great Hero to show mercy and spare my life!\n(Current success rate is {0}%. The more chaotic or merciful the opponent's actions, and the higher your own eloquence, the more likely you are to escape unscathed.)"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
-    - HardToParseSeam
   - subIndex: 1
     text: "（当前成功率为"
     translated: "(Current success rate is"
   - subIndex: 2
     text: "。对方行事越接近混乱"
-    translated: ". While they act more and more chaotically, their opponents behave increasingly recklessly."
+    translated: "...the more their actions approach confusion."
   - subIndex: 3
     text: "仁慈，以及自身口才越高，越有可能逃过一劫。）"
     translated: "Mercy, as well as one's own eloquence, makes it more likely to escape unscathed.)"
@@ -35352,13 +35033,6 @@
   splits:
   - text: "少侠目前的官职为"
     translated: "The current official position of Young Hero is"
-    qcReviewedText: "The current official position of Young Hero is <b>{0}</b>, Monthly salary {1} Taels, Reputation Bonus {2}%, Infamy reduced {3}%。\nGovernment service merits are {4}，{5}。"
-    qcTranslated: "The current official position of Young Hero is <b>{0}</b>, Monthly salary {1} Taels, Reputation Bonus {2}%, Infamy reduced {3}%.\nGovernment service merits are {4}, {5}."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "，月俸"
     translated: ", Monthly salary"
@@ -35367,7 +35041,7 @@
     translated: "Taels, Reputation Bonus"
   - subIndex: 3
     text: "，恶名减少"
-    translated: ", Infamy reduced"
+    translated: ", Infamy Reduction"
   - subIndex: 4
     text: "官府功绩为"
     translated: "Government service merits are"
@@ -38055,11 +37729,7 @@
 - raw: "心胸点穴"
   splits:
   - text: "心胸点穴"
-    translated: "Heart Point Acupressure"
-    qcReviewedText: "Heart Point Acupressure"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Seal Chest Acupoints"
 - raw: "心腹"
   splits:
   - text: "心腹"
@@ -38446,27 +38116,15 @@
 - raw: "恢复效率"
   splits:
   - text: "恢复效率"
-    translated: "Recovery efficiency"
-    qcReviewedText: "Recovery efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recovery Rate"
 - raw: "恢复状态"
   splits:
   - text: "恢复状态"
-    translated: "Restore status"
-    qcReviewedText: "Restore status"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recovery status"
 - raw: "恢复自身30耐心\n抵消愤怒效果"
   splits:
   - text: "恢复自身30耐心"
-    translated: "Recharge their own patience 30"
-    qcReviewedText: "Recharge their own patience 30\nMitigate anger effect"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Restore your own patience 30"
   - subIndex: 1
     text: "抵消愤怒效果"
     translated: "Mitigate anger effect"
@@ -40011,11 +39669,7 @@
 - raw: "我方全队恢复少量状态！"
   splits:
   - text: "我方全队恢复少量状态！"
-    translated: "My team regains a little stamina!"
-    qcReviewedText: "My team regains a little stamina!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Our entire team has recovered a small amount of status!"
 - raw: "我方全队振奋了！"
   splits:
   - text: "我方全队振奋了！"
@@ -40678,19 +40332,11 @@
 - raw: "我身上确有内伤，若#PlayerName#你有意，劳烦帮我诊治一番吧。"
   splits:
   - text: "我身上确有内伤，若#PlayerName#你有意，劳烦帮我诊治一番吧。"
-    translated: "I indeed have internal injuries. If #PlayerName# you are willing, could you please treat me?"
-    qcReviewedText: "I indeed have internal injuries. If #PlayerName# you are willing, could you please treat me?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "I do have an internal injury. If you're willing, #PlayerName#, please help me treat it."
 - raw: "我身上确有外伤，若#PlayerName#你有意，劳烦帮我诊治一番吧。"
   splits:
   - text: "我身上确有外伤，若#PlayerName#你有意，劳烦帮我诊治一番吧。"
-    translated: "I do indeed have external injuries. If #PlayerName# you wish, could you please treat them for me?"
-    qcReviewedText: "I do indeed have external injuries. If #PlayerName# you wish, could you please treat them for me?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "I do have some external injuries. If you're willing, #PlayerName#, please help me treat them."
 - raw: "我近日{1}，若#PlayerName#闲来无事，还望能到{0}与吾小聚一番。"
   splits:
   - text: "我近日"
@@ -40951,7 +40597,7 @@
     translated: "Distance moved in battle"
   - subIndex: 1
     text: "灵巧轻功之和决定基础移距"
-    translated: "Agility and qinggong determine the base movement distance."
+    translated: "Agility and qinggong combined determine the base reposition distance."
   templates:
   - template: "{0}\n{1}"
 - raw: "战斗准备"
@@ -41233,11 +40879,7 @@
 - raw: "手臂点穴"
   splits:
   - text: "手臂点穴"
-    translated: "Arm point pressing"
-    qcReviewedText: "Arm point pressing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Seal Arm Acupoints"
 - raw: "打倒杀手后，你开始在密室内细细搜索，可惜并未发现魔头的踪迹。\n不过在杀手身上，你发现了一封准备寄往#NextMissionTargetPlace#的信件，\n这很可能是那魔头的最终藏身之处。"
   splits:
   - text: "打倒杀手后，你开始在密室内细细搜索，可惜并未发现魔头的踪迹。"
@@ -42014,11 +41656,7 @@
 - raw: "拆招"
   splits:
   - text: "拆招"
-    translated: "Counterattack"
-    qcReviewedText: "Counterattack"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Disarm"
 - raw: "拆除"
   splits:
   - text: "拆除"
@@ -43444,16 +43082,9 @@
   splits:
   - text: "攻击时与对方"
     translated: "Attack when the opponent"
-    qcReviewedText: "Attack when the opponent <b>Force absorption </b>Compare\nCritical hit doubles damage"
-    qcTranslated: "Attack when the opponent's <b>Force absorption</b> is compared\\nCritical hit doubles damage"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "卸力"
-    translated: "Force absorption"
+    translated: "Force Deflection"
   - subIndex: 2
     text: "比较"
     translated: "Compare"
@@ -43466,14 +43097,6 @@
   splits:
   - text: "攻击时与对方"
     translated: "Attack when the opponent"
-    qcReviewedText: "Attack when the opponent <b>Counterattack </b>Compare\nTrigger reduces opponent's action bar to half"
-    qcTranslated: "Compare with the opponent's <b>Counterattack</b> when attacking\\nTrigger reduces opponent's action bar to half"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - UnnaturalPhrasing
   - subIndex: 1
     text: "反击"
     translated: "Counterattack"
@@ -43482,24 +43105,16 @@
     translated: "Compare"
   - subIndex: 3
     text: "触发压制对方行动条减半"
-    translated: "Trigger reduces opponent's action bar to half"
+    translated: "Trigger Overwhelm: Opponent's action bar reduced by half."
   templates:
   - template: "{0}<b>{1}</b>{2}\n{3}"
 - raw: "攻击时与对方<b>断连</b>比较\n触发连击则会再次进行攻击"
   splits:
   - text: "攻击时与对方"
     translated: "Attack when the opponent"
-    qcReviewedText: "Attack when the opponent <b>Disconnect </b>Compare\nTriggering a combo will allow for an additional attack."
-    qcTranslated: "Attack when the opponent <b>Disconnects</b>\\nTriggering a combo will allow for an additional attack."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
   - subIndex: 1
     text: "断连"
-    translated: "Disconnect"
+    translated: "Interrupt"
   - subIndex: 2
     text: "比较"
     translated: "Compare"
@@ -43825,11 +43440,7 @@
 - raw: "斗转"
   splits:
   - text: "斗转"
-    translated: "Stars turn"
-    qcReviewedText: "Stars turn"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Stars Shift"
 - raw: "斗酒僧"
   splits:
   - text: "斗酒僧"
@@ -43966,11 +43577,7 @@
 - raw: "断连"
   splits:
   - text: "断连"
-    translated: "Disconnect"
-    qcReviewedText: "Disconnect"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Interrupt"
 - raw: "新的江湖传闻：{0}"
   splits:
   - text: "新的江湖传闻"
@@ -44654,16 +44261,9 @@
   splits:
   - text: "既然都是习武之人，咱们干脆手底下见真章。"
     translated: "Since we're both martial artists, let's get straight to the point and see who's better."
-    qcReviewedText: "Since we're both martial artists, let's get straight to the point and see who's better.\nWhoever defeats #PlayerName# is #PlayerName#'s destined opponent!"
-    qcTranslated: "Since we're both martial artists, let's get straight to the point and see who's better.\\nWhoever defeats #PlayerName# is #PlayerName#'s destined fated one!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "谁能胜过#PlayerName#，谁就是#PlayerName#的命中注定之人！"
-    translated: "Whoever defeats #PlayerName# is #PlayerName#'s destined opponent!"
+    translated: "Whoever can defeat #PlayerName# is destined to be the one chosen by fate for #PlayerName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "日"
@@ -44749,13 +44349,6 @@
   splits:
   - text: "时序"
     translated: "Sequence"
-    qcReviewedText: "Sequence {0} Post‑entry fatigue\nCannot use item\nEnd battle and return to pre‑battle state"
-    qcTranslated: "Fatigue after Sequence {0}\\nCannot use items\\nRestores to pre‑battle state when battle ends"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "后进入疲劳"
     translated: "Post‑entry fatigue"
@@ -44764,20 +44357,13 @@
     translated: "Cannot use item"
   - subIndex: 3
     text: "战斗结束恢复至战前状态"
-    translated: "End battle and return to pre‑battle state"
+    translated: "Battle ended, returning to pre‑battle status"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n{3}"
 - raw: "时序{0}后进入疲劳\n被击倒产生中量伤势\n战斗结束恢复50%损失状态"
   splits:
   - text: "时序"
     translated: "Sequence"
-    qcReviewedText: "Sequence {0} Post‑entry fatigue\nKnocked down with moderate injuries\nEnd battle recover 50% status loss"
-    qcTranslated: "After sequence {0}, enter fatigue\nKnocked down with moderate injuries\nEnd battle recover 50% lost status"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "后进入疲劳"
     translated: "Post‑entry fatigue"
@@ -44786,7 +44372,7 @@
     translated: "Knocked down with moderate injuries"
   - subIndex: 3
     text: "战斗结束恢复50%损失状态"
-    translated: "End battle recover 50% status loss"
+    translated: "Battle ended, restored 50% of lost status"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n{3}"
 - raw: "时序{0}后进入疲劳\n被击倒产生大量伤势"
@@ -46968,11 +46554,7 @@
 - raw: "机关伤害"
   splits:
   - text: "机关伤害"
-    translated: "Mechanical damage"
-    qcReviewedText: "Mechanical damage"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mechanism damage"
 - raw: "机关建构"
   splits:
   - text: "机关建构"
@@ -48212,14 +47794,7 @@
 - raw: "此人被打倒在地，神志仍未恢复清醒，不过看其走火入魔之势已无大碍。"
   splits:
   - text: "此人被打倒在地，神志仍未恢复清醒，不过看其走火入魔之势已无大碍。"
-    translated: "This person was knocked to the ground, but still hadn't regained consciousness. However, it seems the risk of going too far has passed."
-    qcReviewedText: "This person was knocked to the ground, but still hadn't regained consciousness. However, it seems the risk of going too far has passed."
-    qcTranslated: "This person was knocked to the ground, but still hadn't regained consciousness. However, it seems the danger of their internal energy running wild has passed."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "This person was knocked to the ground, still not fully conscious, but it seems the danger of their magic spiraling out of control has passed."
 - raw: "此人身上并无悬赏，何来抓捕一说？"
   splits:
   - text: "此人身上并无悬赏，何来抓捕一说？"
@@ -48765,14 +48340,6 @@
   splits:
   - text: "此次挑战，我可"
     translated: "This challenge, I can"
-    qcReviewedText: "This challenge, I can <b>Take all teammates along to face the challenge.{0} Twelve most powerful disciples</b>。\nIf I hold an official position, I can use my government merit to obtain reinforcements.\nAdditionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning."
-    qcTranslated: "This challenge, I can <b>bring all my teammates to face the twelve most powerful disciples of {0}</b>.\nIf I hold an official position, I can use my government merit to obtain reinforcements.\nAdditionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
   - subIndex: 1
     text: "携所有队友一同上阵，挑战"
     translated: "Take all teammates along to face the challenge."
@@ -48781,7 +48348,7 @@
     translated: "Twelve most powerful disciples"
   - subIndex: 3
     text: "若我在官府内任职，可消耗官府功绩获取援军。"
-    translated: "If I hold an official position, I can use my government merit to obtain reinforcements."
+    translated: "If I hold a position in the government, I can use my government merit to obtain reinforcements."
   - subIndex: 4
     text: "此外也可重金聘请江湖高手助阵，以增加我方取胜之筹码。"
     translated: "Additionally, we can hire skilled Jianghu experts at a high price to increase our chances of winning."
@@ -50834,15 +50401,11 @@
 - raw: "治疗伤势"
   splits:
   - text: "治疗伤势"
-    translated: "Healing wounds"
-    qcReviewedText: "Healing wounds"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Injury Treatment"
 - raw: "治疗伤势;BuyPrisonGuard;1;0/{0};♦治疗全伤势10点;GuardFavor/{1}"
   splits:
   - text: "治疗伤势"
-    translated: "Healing wounds"
+    translated: "Injury Treatment"
   - subIndex: 1
     text: "治疗全伤势10点"
     translated: "Heal all injuries 10 points"
@@ -50851,7 +50414,7 @@
 - raw: "治疗伤势;FinishHiddenDoctor;0"
   splits:
   - text: "治疗伤势"
-    translated: "Healing wounds"
+    translated: "Injury Treatment"
   templates:
   - template: "{0};FinishHiddenDoctor;0"
 - raw: "治疗加成"
@@ -51203,7 +50766,7 @@
 - raw: "消耗内力助其调息;SaveCrazyNpcHelp"
   splits:
   - text: "消耗内力助其调息"
-    translated: "Consume inner power to help them regulate their breathing"
+    translated: "Consume Inner Power to help with Breath Regulation."
   templates:
   - template: "{0};SaveCrazyNpcHelp"
 - raw: "消耗天数"
@@ -51306,11 +50869,7 @@
 - raw: "混乱"
   splits:
   - text: "混乱"
-    translated: "Chaos"
-    qcReviewedText: "Chaos"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Confusion"
 - raw: "清明上河图"
   splits:
   - text: "清明上河图"
@@ -51720,19 +51279,11 @@
 - raw: "灼烧"
   splits:
   - text: "灼烧"
-    translated: "Scorching"
-    qcReviewedText: "Scorching"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Burned"
 - raw: "灼烧持续"
   splits:
   - text: "灼烧持续"
-    translated: "Burning persists"
-    qcReviewedText: "Burning persists"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Burned status persists"
 - raw: "炮制"
   splits:
   - text: "炮制"
@@ -52135,11 +51686,7 @@
 - raw: "状态完全恢复了！"
   splits:
   - text: "状态完全恢复了！"
-    translated: "Status is fully restored!"
-    qcReviewedText: "Status is fully restored!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Full recovery!"
 - raw: "状态已满"
   splits:
   - text: "状态已满"
@@ -52855,11 +52402,7 @@
 - raw: "生命上限"
   splits:
   - text: "生命上限"
-    translated: "Health Max"
-    qcReviewedText: "Health Max"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Max Health"
 - raw: "生命耗尽！"
   splits:
   - text: "生命耗尽！"
@@ -53034,35 +52577,31 @@
 - raw: "疗伤;ChooseDoctorInjury;1"
   splits:
   - text: "疗伤"
-    translated: "Healing"
+    translated: "Injury Treatment"
   templates:
   - template: "{0};ChooseDoctorInjury;1"
 - raw: "疗伤;CureByNPCExternal"
   splits:
   - text: "疗伤"
-    translated: "Healing"
+    translated: "Injury Treatment"
   templates:
   - template: "{0};CureByNPCExternal"
 - raw: "疗伤;CureForNPCExternal"
   splits:
   - text: "疗伤"
-    translated: "Healing"
+    translated: "Injury Treatment"
   templates:
   - template: "{0};CureForNPCExternal"
 - raw: "疗伤;CureForNPCExternalSpe"
   splits:
   - text: "疗伤"
-    translated: "Healing"
+    translated: "Injury Treatment"
   templates:
   - template: "{0};CureForNPCExternalSpe"
 - raw: "疗伤室"
   splits:
   - text: "疗伤室"
-    translated: "Healing Room"
-    qcReviewedText: "Healing Room"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Injury Treatment Room"
 - raw: "疲劳"
   splits:
   - text: "疲劳"
@@ -53260,14 +52799,7 @@
 - raw: "白云天恢复记忆后，仍然选择继续留在仙霞派。\n平日里自由自在，四处游山玩水。\n一旦仙霞派弟子遭遇强敌，她便会从天而降一招取胜，随后飘然而去。\n以至于在江湖中，留下了仙霞派之人有仙子护体的传说。"
   splits:
   - text: "白云天恢复记忆后，仍然选择继续留在仙霞派。"
-    translated: "After regaining his memory, Bai Yuntian still chose to stay at the Xianxia Sect."
-    qcReviewedText: "After regaining his memory, Bai Yuntian still chose to stay at the Xianxia Sect.\nFree and carefree during the weekdays, exploring mountains and waters wherever I went.\nOnce an Xianxia Sect disciple faces a powerful opponent, she descends from the sky with a single move to secure victory, then disappears in a gentle breeze.\nThus, in the Jianghu, there arose the legend that the Xianxia Sect had daoists protected by fairy essences."
-    qcTranslated: "After regaining her memory, Bai Yuntian still chose to stay at the Xianxia Sect.\nFree and carefree during the weekdays, exploring mountains and waters wherever I went.\nOnce an Xianxia Sect disciple faces a powerful opponent, she descends from the sky with a single move to secure victory, then disappears in a gentle breeze.\nThus, in the Jianghu, there arose the legend that the Xianxia Sect had daoists protected by fairy essences."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "After recovering his memory, Bai Yuntian still chose to remain at the Xianxia Sect."
   - subIndex: 1
     text: "平日里自由自在，四处游山玩水。"
     translated: "Free and carefree during the weekdays, exploring mountains and waters wherever I went."
@@ -54009,32 +53541,18 @@
   splits:
   - text: "看样子伤势不算太严重，我身边恰好有个"
     translated: "From the looks of it, the injuries aren't too severe. I happen to have something nearby."
-    qcReviewedText: "From the looks of it, the injuries aren't too severe. I happen to have something nearby.{0}，\n#TargetInteractName#, you go ahead and use it to treat your injuries."
-    qcTranslated: "From the looks of it, the injuries aren't too severe. I happen to have a {0} nearby,\n#TargetInteractName#, you go ahead and use it to treat your injuries."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "#TargetInteractName#你先拿去疗伤便是。"
-    translated: "#TargetInteractName#, you go ahead and use it to treat your injuries."
+    translated: "#TargetInteractName#, you should take this for Injury Treatment first."
   templates:
   - template: "{0}⟦0⟧，\n{1}"
 - raw: "看样子伤势不算太严重，我身边恰好有这{0}，\n#TargetInteractName#你先拿去疗伤便是。"
   splits:
   - text: "看样子伤势不算太严重，我身边恰好有这"
     translated: "It doesn't look like the injury is too severe. I happen to have this nearby."
-    qcReviewedText: "It doesn't look like the injury is too severe. I happen to have this nearby.{0}，\n#TargetInteractName#, you go ahead and use it to treat your injuries."
-    qcTranslated: "It doesn't look like the injury is too severe. I happen to have this {0} nearby, #TargetInteractName#, you go ahead and use it to treat your injuries."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "#TargetInteractName#你先拿去疗伤便是。"
-    translated: "#TargetInteractName#, you go ahead and use it to treat your injuries."
+    translated: "#TargetInteractName#, you should take this for Injury Treatment first."
   templates:
   - template: "{0}⟦0⟧，\n{1}"
 - raw: "看样子，每个人的门派任务都已交代完成。\n会议到此结束。诸位辛苦了！"
@@ -54139,11 +53657,7 @@
 - raw: "眩晕"
   splits:
   - text: "眩晕"
-    translated: "Dizziness"
-    qcReviewedText: "Dizziness"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Stunned"
 - raw: "眷侣"
   splits:
   - text: "眷侣"
@@ -54244,14 +53758,6 @@
   splits:
   - text: "眼下这处房产正在打折，只需要"
     translated: "The property in question is currently on sale, requiring only"
-    qcReviewedText: "The property in question is currently on sale, requiring only {0} Silver coins will do\nBuy this property, and the Young Hero can rest, read, or store items here.\nAdditionally, you can increase Young Hero {1} Increase the storage capacity of the point's warehouse and {2}%The rate at which they gain reputation"
-    qcTranslated: "The property in question is currently on sale, requiring only {0} taels of silver.\nBuy this property, and the Young Hero can rest, read, or store items here.\nAdditionally, you can increase the Young Hero's warehouse capacity by {1} points and their reputation gain rate by {2}%."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - GarbledNumber
   - subIndex: 1
     text: "两银子便可。"
     translated: "Silver coins will do"
@@ -54266,7 +53772,7 @@
     translated: "Increase the storage capacity of the point's warehouse and"
   - subIndex: 5
     text: "的声望获取速度。"
-    translated: "The rate at which they gain reputation"
+    translated: "Reputation gain speed"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}\n{3}⟦1⟧{4}⟦2⟧%{5}"
 - raw: "眼冒金星"
@@ -54816,13 +54322,9 @@
   splits:
   - text: "确认要删除该存档吗？"
     translated: "Are you sure you want to delete this save game?"
-    qcReviewedText: "Are you sure you want to delete this save game?\n<color=red>(Deleted saves cannot be recovered, so please choose carefully.)</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "存档一经删除无法恢复，请谨慎选择"
-    translated: "Deleted saves cannot be recovered, so please choose carefully."
+    translated: "Once the save file is deleted, it cannot be recovered. Please choose carefully."
   templates:
   - template: "{0}\n<color=red>({1})</color>"
 - raw: "确认要将{0}提升至{1}级吗？\n大约需要{2}天时间。"
@@ -54966,16 +54468,12 @@
   splits:
   - text: "确认要覆盖该存档吗？"
     translated: "Are you sure you want to overwrite this save file?"
-    qcReviewedText: "Are you sure you want to overwrite this save file?\n(Target object <b>{0} {1}</b>)\n<color=red>(Saving over cannot be recovered, please be cautious.)</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "覆盖对象"
     translated: "Target object"
   - subIndex: 2
     text: "存档一经覆盖无法恢复，请谨慎选择"
-    translated: "Saving over cannot be recovered, please be cautious."
+    translated: "Once the save file is overwritten, it cannot be recovered. Please choose carefully."
   templates:
   - template: "{0}\n({1} <b>⟦0⟧ ⟦1⟧</b>)\n<color=red>({2})</color>"
 - raw: "确认要解散全体队友吗？"
@@ -57800,15 +57298,7 @@
 - raw: "胜利了！一番血战最终击退了{0}的攻击，\n我{1}对{2}的统治亦将更加稳固！"
   splits:
   - text: "胜利了！一番血战最终击退了"
-    translated: "Victory! After a fierce battle, we finally repelled the enemy."
-    qcReviewedText: "Victory! After a fierce battle, we finally repelled the enemy.{0} His attack,\nI {1} For {2} The rule will also become more stable!"
-    qcTranslated: "Victory! After a fierce battle, we finally repelled {0}'s attack. My {1} rule over {2} will also become more stable!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
+    translated: "Victory! After a fierce battle, we finally dealt the knockback."
   - subIndex: 1
     text: "的攻击，"
     translated: "His attack,"
@@ -58141,11 +57631,7 @@
 - raw: "腰腹点穴"
   splits:
   - text: "腰腹点穴"
-    translated: "Stomach and waist acupressure points"
-    qcReviewedText: "Stomach and waist acupressure points"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Seal Waist Acupoints"
 - raw: "腹"
   splits:
   - text: "腹"
@@ -58173,11 +57659,7 @@
 - raw: "腿足点穴"
   splits:
   - text: "腿足点穴"
-    translated: "Leg and foot acupressure"
-    qcReviewedText: "Leg and foot acupressure"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Seal Leg Acupoints"
 - raw: "膏肓俞"
   splits:
   - text: "膏肓俞"
@@ -58852,11 +58334,7 @@
 - raw: "若我在官府内任职，可消耗官府功绩获取援军。\n请求的援军级别越高，需要我有越高的官府职位，并消耗更多的官府功绩。"
   splits:
   - text: "若我在官府内任职，可消耗官府功绩获取援军。"
-    translated: "If I hold an official position, I can use my government merit to obtain reinforcements."
-    qcReviewedText: "If I hold an official position, I can use my government merit to obtain reinforcements.\nThe higher the level of reinforcements I request, the higher my official government position must be, and it will also consume more government merit points."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "If I hold a position in the government, I can use my government merit to obtain reinforcements."
   - subIndex: 1
     text: "请求的援军级别越高，需要我有越高的官府职位，并消耗更多的官府功绩。"
     translated: "The higher the level of reinforcements I request, the higher my official government position must be, and it will also consume more government merit points."
@@ -61428,39 +60906,35 @@
 - raw: "调息"
   splits:
   - text: "调息"
-    translated: "Breathwork"
-    qcReviewedText: "Breathwork"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Breath Regulation"
 - raw: "调息;ChooseDoctorInjury;2"
   splits:
   - text: "调息"
-    translated: "Breathwork"
+    translated: "Breath Regulation"
   templates:
   - template: "{0};ChooseDoctorInjury;2"
 - raw: "调息;CureByNPCInternal"
   splits:
   - text: "调息"
-    translated: "Breathwork"
+    translated: "Breath Regulation"
   templates:
   - template: "{0};CureByNPCInternal"
 - raw: "调息;CureForNPCInternal"
   splits:
   - text: "调息"
-    translated: "Breathwork"
+    translated: "Breath Regulation"
   templates:
   - template: "{0};CureForNPCInternal"
 - raw: "调息;CureForNPCInternalSpe"
   splits:
   - text: "调息"
-    translated: "Breathwork"
+    translated: "Breath Regulation"
   templates:
   - template: "{0};CureForNPCInternalSpe"
 - raw: "调息;HospitalCureInternalInjury;;;技能影响:医术 内功"
   splits:
   - text: "调息"
-    translated: "Breathwork"
+    translated: "Breath Regulation"
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61475,7 +60949,7 @@
 - raw: "调息;HospitalCureInternalInjuryForce;;;技能影响:医术 内功"
   splits:
   - text: "调息"
-    translated: "Breathwork"
+    translated: "Breath Regulation"
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61707,19 +61181,11 @@
 - raw: "负面加成"
   splits:
   - text: "负面加成"
-    translated: "Negative buffs"
-    qcReviewedText: "Negative buffs"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Debuff Potency"
 - raw: "负面抗性"
   splits:
   - text: "负面抗性"
-    translated: "Negative resistance"
-    qcReviewedText: "Negative resistance"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Debuff Resistance"
 - raw: "责备"
   splits:
   - text: "责备"
@@ -64886,19 +64352,12 @@
   splits:
   - text: "这日你巡视之时，忽听得远处锣声大躁，喊杀震天，"
     translated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky."
-    qcReviewedText: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky.\nHastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault.\nThe servants fought back vigorously and managed to hold their ground for the moment."
-    qcTranslated: "On this day, as you patrolled, you suddenly heard distant gongs beating loudly and shouts of battle echoing to the sky.\\nHastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault.\\nThe servants fought back vigorously and managed to barely hold their ground."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "匆忙赶去，发现竟是一伙盗贼从后院闯入，意欲抢劫行凶。"
     translated: "Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault."
   - subIndex: 2
     text: "众家丁奋力反击，方才勉强抵挡得住。"
-    translated: "The servants fought back vigorously and managed to hold their ground for the moment."
+    translated: "The servants fought back desperately and barely managed to hold their ground."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "这日你巡视之时，忽见一道黑影从围墙上跃下，\n前去一看，竟是一名浑身黑衣打扮的盗贼欲行偷窃之事。\n你当下大喝一声，冲上前去。"
@@ -67128,11 +66587,7 @@
 - raw: "铁掌帮全队混乱了！"
   splits:
   - text: "铁掌帮全队混乱了！"
-    translated: "The Iron Palm Gang is in total chaos!"
-    qcReviewedText: "The Iron Palm Gang is in total chaos!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Iron Palm Gang is in total confusion!"
 - raw: "铁掌弟子丁"
   splits:
   - text: "铁掌弟子丁"
@@ -68051,16 +67506,9 @@
   splits:
   - text: "阁下想在"
     translated: "Your Excellency wishes to"
-    qcReviewedText: "Your Excellency wishes to {0} How many days to recover? Daily consumption {4} Silver, reduce {1} External Injury\n(The Medical Pavilion's current skill level is {2}, Your medical skill level is {3}, The effect is the sum of both)"
-    qcTranslated: "Your Excellency wishes to {0} for how many days? Daily cost is {4} Silver, reducing {1} External Injury.\n(The Medical Pavilion's current skill level is {2}, your medical skill level is {3}; the effect is the sum of both.)"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "疗伤几天？每日消耗"
-    translated: "How many days to recover? Daily consumption"
+    translated: "How many days for injury treatment? Daily consumption:\\n"
   - subIndex: 2
     text: "银两，降低"
     translated: "Silver, reduce"
@@ -68115,7 +67563,7 @@
     translated: "Your Excellency wishes to"
   - subIndex: 1
     text: "调息几天？每日消耗"
-    translated: "How many days for the breathing exercise? Daily consumption?"
+    translated: "How many days of Breath Regulation? Daily consumption:\\n"
   - subIndex: 2
     text: "银两，降低"
     translated: "Silver, reduce"
@@ -68206,19 +67654,12 @@
   splits:
   - text: "阁下难道就是......传说中的绝世高手，"
     translated: "You are... the legendary master swordsman, aren't you?"
-    qcReviewedText: "You are... the legendary master swordsman, aren't you?{0}？！\nJianghu rumor has it, your respected self's {1} Kung fu is transcendent, unbeatable under heaven\nTo be able to see the senior's true form today is truly a blessing beyond three lifetimes!"
-    qcTranslated: "You are... the legendary master swordsman, {0}?!\nJianghu rumor has it, your respected self's {1} Kung fu is transcendent, unbeatable under heaven.\nTo be able to see Senior's true form today is truly a blessing beyond three lifetimes!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "江湖传闻，您老人家的"
     translated: "Jianghu rumor has it, your respected self's"
   - subIndex: 2
     text: "功夫出神入化，天下无敌。"
-    translated: "Kung fu is transcendent, unbeatable under heaven"
+    translated: "Kung fu divine and miraculous, invincible in the world."
   - subIndex: 3
     text: "今日竟能得见前辈真容，当真是三生有幸！"
     translated: "To be able to see the senior's true form today is truly a blessing beyond three lifetimes!"
@@ -69781,11 +69222,7 @@
 - raw: "额外内力上限"
   splits:
   - text: "额外内力上限"
-    translated: "Additional Inner Power Max"
-    qcReviewedText: "Additional Inner Power Max"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Additional Max Inner Power"
 - raw: "额外生命>{0}时\n提升效果-90%"
   splits:
   - text: "额外生命"
@@ -69808,11 +69245,7 @@
 - raw: "额外生命上限"
   splits:
   - text: "额外生命上限"
-    translated: "Additional Health Max"
-    qcReviewedText: "Additional Health Max"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Additional Max Health"
 - raw: "额，我来选啊，那就……"
   splits:
   - text: "额，我来选啊，那就……"
@@ -70704,19 +70137,12 @@
   splits:
   - text: "（一番诊治）......"
     translated: "(The first diagnosis)......"
-    qcReviewedText: "(The first diagnosis)......\nSo that's good. The Young Hero's injuries are no longer a major concern.\nJust need to return and rest properly for a while to recover one's strength."
-    qcTranslated: "(The first diagnosis)......\nSo that's good. The Young Hero's injuries are no longer a major concern.\nJust need to return and rest properly for a while, and take extra care, to recover one's strength."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "如此便好，少侠伤势已无大碍，"
     translated: "So that's good. The Young Hero's injuries are no longer a major concern."
   - subIndex: 2
     text: "只是还需要回去好生静养，多加休息，方能恢复元气。"
-    translated: "Just need to return and rest properly for a while to recover one's strength."
+    translated: "Just need to go back and rest properly in peace to recover my energy."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "（一番诊治）;NPCHurtHelpMedFinish"

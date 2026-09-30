@@ -228,27 +228,13 @@
 - raw: "{0}吉星高照，得到一枚灵果，服食后内力上限增加{1}。"
   splits:
   - text: "吉星高照，得到一枚灵果，服食后内力上限增加"
-    translated: "Good fortune shines upon you, and you obtain a Spirit Fruit. Upon consuming it, your maximum Inner Power capacity increases."
-    qcReviewedText: "{0} Good fortune shines upon you, and you obtain a Spirit Fruit. Upon consuming it, your maximum Inner Power capacity increases.{1}。"
-    qcTranslated: "{0} Good fortune shines upon you, and you obtain a Spirit Fruit. Upon consuming it, your maximum Inner Power capacity increases by {1}."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Lucky stars shine bright, received a Spirit Fruit, after consuming it, Max Inner Power increased."
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}吉星高照，得到一株异草，服食后生命上限增加{1}。"
   splits:
   - text: "吉星高照，得到一株异草，服食后生命上限增加"
-    translated: "Lucky day, received a strange herb. After consuming it, Health maximum increased."
-    qcReviewedText: "{0} Lucky day, received a strange herb. After consuming it, Health maximum increased.{1}。"
-    qcTranslated: "{0} Lucky day, received a strange herb. After consuming it, Health maximum increased by {1}."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Your luck is shining bright; you've obtained a strange herb. After consuming it, your Max Health increases."
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}向{3}仓库捐赠了{1}，获取功绩{2}"
@@ -652,16 +638,9 @@
   splits:
   - text: "在"
     translated: "In"
-    qcReviewedText: "{0} In {1} Ended the confinement, regained freedom"
-    qcTranslated: "{0} ended the confinement in {1}, regaining their freedom."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "结束关押，恢复了自由之身。"
-    translated: "Ended the confinement, regained freedom"
+    translated: "Ended the imprisonment, restoring freedom"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
 - raw: "{0}在{1}辛勤劳作，为门派收获了{2}。"

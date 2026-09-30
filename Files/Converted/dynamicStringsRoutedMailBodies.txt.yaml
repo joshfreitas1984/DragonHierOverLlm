@@ -369,19 +369,12 @@
   splits:
   - text: "#PlayerName#！诸葛姐姐将你上次所寻珍宝进献给皇上，果真求得了圣旨！你快"
     translated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry."
-    qcReviewedText: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry.<b>Return to the Xianxia Sect </b>And receive the imperial decree from Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
-    qcTranslated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry back to the <b>Xianxia Sect</b> to receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "回仙霞派"
     translated: "Return to the Xianxia Sect"
   - subIndex: 2
     text: "和顾师兄接旨，然后去大隐阁好好治病疗伤。"
-    translated: "And receive the imperial decree from Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
+    translated: "Receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion for proper injury treatment."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "<b>本月会在门内为师傅举办寿宴，#PlayerName#莫要忘了准备礼物。</b>若惹得师父他老人家生气，可别怪师姐我没提醒你。"

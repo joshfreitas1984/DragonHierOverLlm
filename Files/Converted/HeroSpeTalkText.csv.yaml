@@ -357,14 +357,10 @@
   - split: 11
     text: "习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，"
     translated: "The path of martial arts offers no shortcuts; one must steadily and tirelessly train day and night."
-    qcReviewedText: "The path of martial arts offers no shortcuts; one must steadily and tirelessly train day and night.\\nOnly by mastering martial arts can one reach the realm of the unvanquished righteous."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "方能踏上武学正道，抵达仁者无敌之境。"
-    translated: "Only by mastering martial arts can one reach the realm of the unvanquished righteous."
+    translated: "One must then embark on the righteous path of martial arts to reach the realm where the benevolent are invincible."
   - split: 12
     text: "太极神功乃武当武学之尊，在江湖中亦是久负盛名。"
     translated: "Taiji Divine Skill is the pride of Wudang martial arts and is widely renowned in the Jianghu."

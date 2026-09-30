@@ -205,14 +205,6 @@
   - split: 15
     text: "符法"
     translated: "Spellcasting"
-    qcReviewedText: "<b>Spellcasting</b>：Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle./Weaken the opposing character \\n<b>Heavenly Thunder</b>：Gain one Thunderbolt Martial Art per level, with additional enhancement 0.5 based on the Art's grade./1/1.5/2/2.5/3 points of Willpower \\n<b>Dan Yin</b>：In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
-    qcTranslated: "<b>Spellcasting</b>: Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle or weaken the opposing character. \\n<b>Heavenly Thunder</b>: For every level a Thunderbolt Martial Art reaches its maximum, gain an additional 0.5/1/1.5/2/2.5/3 points of Willpower based on the Art's grade. \\n<b>Dan Yin</b>: In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "修习符咒武学解锁对应符法，用符法在战前强化己方角色"
@@ -228,7 +220,7 @@
   - split: 15
     subIndex: 4
     text: "每满级一门雷电武学，根据武学品级额外提升0.5"
-    translated: "Gain one Thunderbolt Martial Art per level, with additional enhancement 0.5 based on the Art's grade."
+    translated: "For each level‑up in a Lightning martial art, gain an additional 0.5 based on the quality level of the martial art."
   - split: 15
     subIndex: 5
     text: "3点意志。"
@@ -504,14 +496,6 @@
   - split: 15
     text: "机关"
     translated: "Mechanism"
-    qcReviewedText: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous studies</b>：All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures./Materials and treasure appraisal additional knowledge bonus"
-    qcTranslated: "<b>Mechanism</b>: Upgrade mechs by equipping and enhancing them to gain corresponding mech bonuses.\\n<b>Miscellaneous Studies</b>: All skill experience +20%, collecting resources is more likely to yield high‑grade treasures/materials, and treasure appraisal grants an additional knowledge bonus."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "使用装备改装升级机关兽，获取对应的机关兽加成。"
@@ -523,7 +507,7 @@
   - split: 15
     subIndex: 3
     text: "所有技艺经验+20%，收集资源时更易获得高级珍宝"
-    translated: "All skills and experience +20% gathered, collecting resources is more likely to yield high‑grade treasures."
+    translated: "All skill experience ++20%, making it easier to obtain rare treasures when gathering resources."
   - split: 15
     subIndex: 4
     text: "材料，珍宝鉴定额外学识加成。"
@@ -536,30 +520,22 @@
   - split: 15
     text: "火药"
     translated: "Gunpowder"
-    qcReviewedText: "<b>Gunpowder</b>：Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder.\\n<b>Scorching</b>：Gain one Burning Martial Art per level, with an additional 0.5% boost based on the art's grade./1%/1.5%/2%/2.5%/3% negative modifier \\n<b>Stewed Again</b>：You can reheat meals in the Furnace Room to get the corresponding ingredients."
-    qcTranslated: "<b>Gunpowder</b>: Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder.\\n<b>Scorching</b>: For each Burning Martial Art at max level, gain an additional 0.5%/1%/1.5%/2%/2.5%/3% negative modifier based on the art's grade.\\n<b>Re‑stew</b>: You can re‑stew meals in the Furnace Room to get the corresponding ingredients."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "通过配置火药提升霹雳堂武学和灼烧武学效果。"
-    translated: "Boost the effectiveness of Thunderclap Hall and burning combat techniques by configuring gunpowder."
+    translated: "Enhance Thunderclap Hall martial arts and Burned techniques by configuring gunpowder."
   - split: 15
     subIndex: 2
     text: "灼烧"
-    translated: "Scorching"
+    translated: "Burned"
   - split: 15
     subIndex: 3
     text: "每满级一门灼烧武学，根据武学品级额外提升0.5%"
-    translated: "Gain one Burning Martial Art per level, with an additional 0.5% boost based on the art's grade."
+    translated: "For each fully mastered level of a Burned martial art, receive an additional 0.5% bonus based on the quality grade of the martial art."
   - split: 15
     subIndex: 4
     text: "3%负面加成。"
-    translated: "3% negative modifier"
+    translated: "3% Debuff Potency"
   - split: 15
     subIndex: 5
     text: "重烩"
@@ -576,13 +552,6 @@
   - split: 15
     text: "密宗"
     translated: "Esoteric Buddhism"
-    qcReviewedText: "<b>Esoteric Buddhism</b>：Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown ceremony</b>：Reform wild villains or other heroes, altering others' stance toward chaos and ferocity, and increase good will and reputation."
-    qcTranslated: "<b>Esoteric Buddhism</b>: Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown ceremony</b>: Reform wild villains or other Heroes, altering others' stance toward chaos and ferocity, and increase good will and reputation."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "通过密宗修行获取金刚宗武学加成。"
@@ -594,7 +563,7 @@
   - split: 15
     subIndex: 3
     text: "教化野外恶徒或其他侠士，将他人立场向混乱凶狠改变，并提升好感和声望。"
-    translated: "Reform wild villains or other heroes, altering others' stance toward chaos and ferocity, and increase good will and reputation."
+    translated: "Educate wild villains or other heroes, shifting their stance towards confusion and brutality, while increasing their favor and reputation."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -603,30 +572,22 @@
   - split: 15
     text: "玄冰"
     translated: "Xuanbing"
-    qcReviewedText: "<b>Xuanbing</b>：Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>：Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality./4/6/8/10/12 points of Inner Power Maximum"
-    qcTranslated: "<b>Xuanbing</b>: Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques.\\n<b>Icicles</b>: For each Ice and Cold Martial Art fully leveled, gain an additional 2/4/6/8/10/12 points of Inner Power Maximum based on the martial art's quality."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "通过凝结玄冰提升天山派武学和冰寒武学效果。"
-    translated: "Condense cosmic ice to enhance the Tianshan Sect's martial arts and icy martial techniques."
+    translated: "Enhance Tianshan Sect martial arts and Chill techniques by condensing Mystic Ice."
   - split: 15
     subIndex: 2
     text: "冰寒"
-    translated: "Icicles"
+    translated: "Chill"
   - split: 15
     subIndex: 3
     text: "每满级一门冰寒武学，根据武学品级额外提升2"
-    translated: "Gain one Ice and Cold Martial Art upon leveling fully, with additional boosts of 2 based on the martial art's quality."
+    translated: "For each level‑up in a Chill martial art technique, gain an additional 2 based on the quality grade of the technique."
   - split: 15
     subIndex: 4
     text: "12点内力上限。"
-    translated: "12 points of Inner Power Maximum"
+    translated: "12 Max Inner Power"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}/4/6/8/10/{4}"
@@ -709,17 +670,10 @@
   - split: 15
     text: "仙霞"
     translated: "Xianxia"
-    qcReviewedText: "<b>Xianxia</b>：All experience points gained+5%。"
-    qcTranslated: "<b>Xianxia</b>: All experience gained +5%"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "所有经验获取"
-    translated: "All experience points gained"
+    translated: "All experience gain"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+5%。"

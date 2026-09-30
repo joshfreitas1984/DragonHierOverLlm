@@ -130,22 +130,15 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
-    qcReviewedText: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Health Maximum\\n‑0.25% Inner Power Maximum\\n‑0.25% Max Stamina"
-    qcTranslated: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.25%生命上限"
-    translated: "‑0.25% Health Maximum"
+    translated: "‑0.25% Max Health"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "‑0.25% Inner Power Maximum"
+    translated: "‑0.25% Max Inner Power"
   - subIndex: 4
     text: "-0.25%体力上限"
     translated: "‑0.25% Max Stamina"
@@ -160,7 +153,7 @@
     translated: "+1Max Health"
   - subIndex: 2
     text: "+0.5%压制"
-    translated: "+0.5% Suppression"
+    translated: "+0.5% Overwhelm"
   - subIndex: 3
     text: "+0.5%伤势抗性"
     translated: "+0.5% injury resistance"
@@ -170,13 +163,6 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
-    qcReviewedText: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Inner Power Maximum\\n‑0.5% Maximum Stamina Capacity"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "<b>Internal Injury</b>\\n0.5% All Attributes\\n0.5% Inner Power Maximum\\n0.5% Maximum Stamina Capacity"
-    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
-    qcDefectCategories:
-    - Unknown
     qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Inner Power Maximum\\n‑0.5% Maximum Stamina Capacity"
   - subIndex: 1
@@ -184,23 +170,19 @@
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "‑0.5% Inner Power Maximum"
+    translated: "‑0.5% Max Inner Power"
   - subIndex: 3
     text: "-0.5%体力上限"
-    translated: "‑0.5% Maximum Stamina Capacity"
+    translated: "‑0.5% Max Stamina"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>内功</b>\\n+1%内力上限"
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "<b>Neigong</b>\\n+1% Inner Power Maximum"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "+1%内力上限"
-    translated: "+1% Inner Power Maximum"
+    translated: "+1% Max Inner Power"
   templates:
   - template: "<b>{0}</b>\\n{1}"
 - raw: "<b>刀法</b>\\n提升刀法伤害\\n降低受到的刀法伤害"
@@ -231,22 +213,15 @@
   splits:
   - text: "力道"
     translated: "Strength"
-    qcReviewedText: "<b>Strength</b>\\n+0.5% Critical Hit\\n+0.5% Disconnected\\n+1 load capacity for equipment"
-    qcTranslated: "<b>Strength</b>\\n+0.5% Critical Hit\\n+0.5% Disconnected\\n+1 Equipment Weight"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
   - subIndex: 1
     text: "+0.5%暴击"
     translated: "+0.5% Critical Hit"
   - subIndex: 2
     text: "+0.5%断连"
-    translated: "+0.5% Disconnected"
+    translated: "+0.5% Interrupt"
   - subIndex: 3
     text: "+1装备负重"
-    translated: "+1 load capacity for equipment"
+    translated: "+1Equipment Weight"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>医术</b>\\n影响治疗外伤/内伤的效率"
@@ -255,7 +230,7 @@
     translated: "Medical Arts"
   - subIndex: 1
     text: "影响治疗外伤"
-    translated: "Affecting External Injuries Treatment"
+    translated: "Affecting treatment of external injuries"
   - subIndex: 2
     text: "内伤的效率"
     translated: "Internal Injury's efficiency"
@@ -281,16 +256,12 @@
   splits:
   - text: "外伤"
     translated: "External Injury"
-    qcReviewedText: "<b>External Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Health Maximum"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%生命上限"
-    translated: "‑0.5% Health Maximum"
+    translated: "‑0.5% Max Health"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}"
 - raw: "<b>奇门</b>\\n提升奇门伤害\\n降低受到的奇门伤害"
@@ -337,10 +308,6 @@
   splits:
   - text: "意志"
     translated: "Willpower"
-    qcReviewedText: "<b>Willpower</b>\\n+0.5% Counterattack\\n+0.5% Armor\\n+0.5% Negative Resistance"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "+0.5%反击"
     translated: "+0.5% Counterattack"
@@ -349,7 +316,7 @@
     translated: "+0.5% Armor"
   - subIndex: 3
     text: "+0.5%负面抗性"
-    translated: "+0.5% Negative Resistance"
+    translated: "+0.5% Debuff Resistance"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>拳掌</b>\\n提升拳掌伤害\\n降低受到的拳掌伤害"
@@ -368,19 +335,15 @@
   splits:
   - text: "智力"
     translated: "Intelligence"
-    qcReviewedText: "<b>Intelligence</b>\\n+0.5% Hit Rate\\n+0.5% Absorb Force\\n+0.5% Negative Bonus"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "+0.5%命中"
     translated: "+0.5% Hit Rate"
   - subIndex: 2
     text: "+0.5%卸力"
-    translated: "+0.5% Absorb Force"
+    translated: "+0.5% Force Deflection"
   - subIndex: 3
     text: "+0.5%负面加成"
-    translated: "+0.5% Negative Bonus"
+    translated: "+0.5% Debuff Potency"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>木植</b>\\n影响获取门派粮食/药材，以及巩固区域防御的效率"
@@ -426,7 +389,7 @@
     translated: "+0.5% Dodge"
   - subIndex: 3
     text: "+0.5体力上限"
-    translated: "+0.5 maximum stamina capacity"
+    translated: "+0.5 Max Stamina"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>炼药</b>\\n影响丹药的制作/强化，以及巩固/破坏区域人口的效率"
@@ -478,32 +441,24 @@
   splits:
   - text: "经脉"
     translated: "Meridian"
-    qcReviewedText: "<b>Meridian</b>\\n+2 Inner Power Max\\n+0.5 consecutive hits\\n+0.5% recovery efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "+2内力上限"
-    translated: "+2 Inner Power Max"
+    translated: "+2Max Inner Power"
   - subIndex: 2
     text: "+0.5%连击"
-    translated: "+0.5 consecutive hits"
+    translated: "+0.5% Combo"
   - subIndex: 3
     text: "+0.5%恢复效率"
-    translated: "+0.5% recovery efficiency"
+    translated: "+0.5% Recovery Rate"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>绝技</b>\\n+1%生命上限"
   splits:
   - text: "绝技"
     translated: "Special Technique"
-    qcReviewedText: "<b>Special Technique</b>\\n+1% Health Maximum"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "+1%生命上限"
-    translated: "+1% Health Maximum"
+    translated: "+1% Max Health"
   templates:
   - template: "<b>{0}</b>\\n{1}"
 - raw: "<b>轻功</b>\\n+1%速度"
@@ -1648,22 +1603,15 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
-    qcReviewedText: "Poisoned\\n‑0.5% All Attributes\\n‑0.25% Health Maximum\\n‑0.25% Inner Power Maximum\\n‑0.25% Max Stamina"
-    qcTranslated: "Poisoned\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.25%生命上限"
-    translated: "‑0.25% Health Maximum"
+    translated: "‑0.25% Max Health"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "‑0.25% Inner Power Maximum"
+    translated: "‑0.25% Max Inner Power"
   - subIndex: 4
     text: "-0.25%体力上限"
     translated: "‑0.25% Max Stamina"
@@ -2030,13 +1978,6 @@
   splits:
   - text: "休息"
     translated: "Rest"
-    qcReviewedText: "Rest(Shortcut keys S)\\n♦Health+1% Inner Power+2%\\n♦Stamina+10\\n♦Restore 5% Stance Lost"
-    qcTranslated: "Rest (Shortcut key S)\\n♦Health+1% Inner Power+2%\\n♦Stamina+10\\n♦Restore 5% Lost Stance"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "快捷键"
     translated: "Shortcut keys"
@@ -2051,7 +1992,7 @@
     translated: "Stamina"
   - subIndex: 5
     text: "恢复5%已损失架势"
-    translated: "Restore 5% Stance Lost"
+    translated: "Recovery of 5% lost posture"
   templates:
   - template: "{0}({1}S)\\n♦{2}+1% {3}+2%\\n♦{4}+10\\n♦{5}"
 - raw: "优先未满级武学"
@@ -2302,11 +2243,7 @@
 - raw: "使用调息"
   splits:
   - text: "使用调息"
-    translated: "Use controlled breathing"
-    qcReviewedText: "Use controlled breathing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Use Breath Regulation"
 - raw: "使用道具"
   splits:
   - text: "使用道具"
@@ -2758,16 +2695,12 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
-    qcReviewedText: "Internal Injury\\n‑0.5% All Attributes\\n‑0.5% Inner Power Maximum\\n‑0.25% Max Stamina"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "‑0.5% Inner Power Maximum"
+    translated: "‑0.5% Max Inner Power"
   - subIndex: 3
     text: "-0.25%体力上限"
     translated: "‑0.25% Max Stamina"
@@ -2891,11 +2824,7 @@
 - raw: "减伤100%"
   splits:
   - text: "减伤100%"
-    translated: "Reduce damage by 100%"
-    qcReviewedText: "Reduce damage by 100%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Damage Reduction100%"
 - raw: "减少潜力\\n按住左shift连减5点"
   splits:
   - text: "减少潜力"
@@ -3902,11 +3831,7 @@
 - raw: "基础生命上限 200"
   splits:
   - text: "基础生命上限"
-    translated: "Base Health Max"
-    qcReviewedText: "Base Health Max 200"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Base Max Health"
   templates:
   - template: "{0} 200"
 - raw: "增加潜力\\n按住左shift连加5点"
@@ -3973,16 +3898,12 @@
   splits:
   - text: "外伤"
     translated: "External Injury"
-    qcReviewedText: "External Injury\\n‑0.5% All Attributes\\n‑0.5% Health Maximum\\n‑0.25% Max Stamina"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%生命上限"
-    translated: "‑0.5% Health Maximum"
+    translated: "‑0.5% Max Health"
   - subIndex: 3
     text: "-0.25%体力上限"
     translated: "‑0.25% Max Stamina"
@@ -5716,13 +5637,6 @@
   splits:
   - text: "招架"
     translated: "Block"
-    qcReviewedText: "Block(Shortcut keys C)\\n♦Stamina+5\\n♦Restore 15% Stance Damaged"
-    qcTranslated: "Block(Shortcut key C)\\n♦Stamina+5\\n♦Restore 15% Lost Stance"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "快捷键"
     translated: "Shortcut keys"
@@ -5731,7 +5645,7 @@
     translated: "Stamina"
   - subIndex: 3
     text: "恢复15%已损失架势"
-    translated: "Restore 15% Stance Damaged"
+    translated: "Recovery of 15% lost posture"
   templates:
   - template: "{0}({1}C)\\n♦{2}+5\\n♦{3}"
 - raw: "拳掌"
@@ -5859,26 +5773,18 @@
   splits:
   - text: "探索度60%"
     translated: "Explore Level 60%"
-    qcReviewedText: "Explore Level 60%\\nRestore 15% Stamina"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "恢复15%已消耗耐力"
-    translated: "Restore 15% Stamina"
+    translated: "Recovery of 15% of endurance consumed"
   templates:
   - template: "{0}\\n{1}"
 - raw: "探索度80%\\n恢复10%已消耗耐力\\n揭示终点位置"
   splits:
   - text: "探索度80%"
     translated: "Explore Level 80%"
-    qcReviewedText: "Explore Level 80%\\nRestore 10% stamina consumed \\nReveal the final position"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "恢复10%已消耗耐力"
-    translated: "Restore 10% stamina consumed"
+    translated: "Recovery of 10% of endurance consumed"
   - subIndex: 2
     text: "揭示终点位置"
     translated: "Reveal the final position"
@@ -6164,19 +6070,11 @@
 - raw: "无敌无敌无敌"
   splits:
   - text: "无敌无敌无敌"
-    translated: "Unbeatable! Unbeatable! Unbeatable!"
-    qcReviewedText: "Unbeatable! Unbeatable! Unbeatable!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Invincible, invincible, invincible"
 - raw: "无敌牌 至交(100) 11111"
   splits:
   - text: "无敌牌"
-    translated: "Unbeatable Card"
-    qcReviewedText: "Unbeatable Card Best friend(100) 11111"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Invincible Card"
   - subIndex: 1
     text: "至交"
     translated: "Best friend"
@@ -6473,11 +6371,7 @@
 - raw: "机关伤害+10%"
   splits:
   - text: "机关伤害"
-    translated: "Mechanical damage"
-    qcReviewedText: "Mechanical damage+10%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Mechanism damage"
   templates:
   - template: "{0}+10%"
 - raw: "机关耐久+10%"
@@ -6823,11 +6717,7 @@
 - raw: "死战"
   splits:
   - text: "死战"
-    translated: "All‑Out Battle"
-    qcReviewedText: "All‑Out Battle"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Last Stand"
 - raw: "每10日"
   splits:
   - text: "每10日"
@@ -7403,11 +7293,7 @@
 - raw: "灼烧: 每回合减少对手当前血量5%内力5%血量5%内力5%血量5%内力5%"
   splits:
   - text: "灼烧"
-    translated: "Scorching"
-    qcReviewedText: "Scorching: Reduce opponent's current health by 5% inner power, 5% health, 5% inner power, 5% health, 5% inner power, 5% health each turn."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Burned"
   - subIndex: 1
     text: "每回合减少对手当前血量5%内力5%血量5%内力5%血量5%内力5%"
     translated: "Reduce opponent's current health by 5% inner power, 5% health, 5% inner power, 5% health, 5% inner power, 5% health each turn."
@@ -7708,11 +7594,7 @@
 - raw: "疗伤休养"
   splits:
   - text: "疗伤休养"
-    translated: "Healing and recuperation"
-    qcReviewedText: "Healing and recuperation"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Injury treatment and rest"
 - raw: "瘟疫"
   splits:
   - text: "瘟疫"
@@ -8077,13 +7959,9 @@
   splits:
   - text: "立场"
     translated: "Stance"
-    qcReviewedText: "Stance Chaos Neutral"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "混乱"
-    translated: "Chaos"
+    translated: "Confusion"
   - subIndex: 2
     text: "中立"
     translated: "Neutral"
@@ -8600,11 +8478,7 @@
 - raw: "耐药性100%"
   splits:
   - text: "耐药性100%"
-    translated: "Drug resistance 100%"
-    qcReviewedText: "Drug resistance 100%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Resistance: 100%"
 - raw: "耗内"
   splits:
   - text: "耗内"
@@ -8757,11 +8631,7 @@
 - raw: "自巫峡东至西陵峡，群山皆连绵无断处，怪石穿空，奇峰耸峙。"
   splits:
   - text: "自巫峡东至西陵峡，群山皆连绵无断处，怪石穿空，奇峰耸峙。"
-    translated: "From Wu Gorge to Xiling Gorge, the mountains stretch continuously with no breaks, their strange rocks piercing the sky, and magnificent peaks rising majestically."
-    qcReviewedText: "From Wu Gorge to Xiling Gorge, the mountains stretch continuously with no breaks, their strange rocks piercing the sky, and magnificent peaks rising majestically."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "From the eastern Wu Gorge to the western Xiling Gorge, the mountains stretch in a continuous line without interruption, with strange rocks piercing the sky and bizarre peaks standing tall."
 - raw: "自由模式"
   splits:
   - text: "自由模式"
@@ -9319,11 +9189,7 @@
 - raw: "调息(快捷键X)\\n♦生命+5% 内力+10%\\n♦体力+30\\n♦恢复10%已损失架势"
   splits:
   - text: "调息"
-    translated: "Breathwork"
-    qcReviewedText: "Breathwork(Shortcut keys X)\\n♦Health+5% Inner Power+10%\\n♦Stamina+30\\n♦Restore 10% Stance Lost"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Breath Regulation"
   - subIndex: 1
     text: "快捷键"
     translated: "Shortcut keys"
@@ -9338,7 +9204,7 @@
     translated: "Stamina"
   - subIndex: 5
     text: "恢复10%已损失架势"
-    translated: "Restore 10% Stance Lost"
+    translated: "Recovery of 10% of lost posture"
   templates:
   - template: "{0}({1}X)\\n♦{2}+5% {3}+10%\\n♦{4}+30\\n♦{5}"
 - raw: "谨慎"

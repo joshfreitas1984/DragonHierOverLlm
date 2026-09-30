@@ -3,12 +3,19 @@
   result: "Infamy"
   allowalt:
     - "infamous"
+  exclude:
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 
 - raw: 力道
   result: Strength
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 灵巧
   result: Agility
   allowalt: 
@@ -16,21 +23,33 @@
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 智力
   result: Intelligence
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 意志
   result: Willpower
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 体质
   result: Constitution
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 
 - raw: 经脉
   result: Meridians
@@ -40,717 +59,1180 @@
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 
 
 - raw: 生命
   result: Health
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 内力
   result: Inner Power
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 体力
   result: "Stamina"
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 
 - raw: 生命上限
   result: Max Health
+  exclude:
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 体力上限
   result: Max Stamina
+  exclude:
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 内力上限
   result: Max Inner Power
+  exclude:
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 伤害
   result: Damage
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护甲
   result: Armor
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护甲率
   result: Armor Effectiveness
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 速度
   result: Speed
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 命中
   result: Hit Rate
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 闪避
   result: Dodge
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 暴击
   result: Critical hit
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 
 - raw: 卸力
   result: Force Deflection
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 反击
   result: Counterattack
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 压制
   result: Overwhelm
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 连击
   result: Combo
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 断连
   result: Interrupt
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 
 - raw: 经验获取
   result: Experience Gain
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 恢复效率
   result: Recovery Rate
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 伤害抗性
   result: Damage Resistance
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 负面加成
   result: Debuff Potency
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 负面抗性
   result: Debuff Resistance
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 伤势抗性
   result: Injury Resistance
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 失衡
   result: Off Balance
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 急速
   result: Haste
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 外伤
   result: External Injury
+  allowalt: 
+    - External Injuries
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 内伤
   result: Internal Injury
+  allowalt: 
+    - Internal Injuries
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 毒素
   result: Poison
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 吸血
   result: Lifesteal
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 吸内
   result: Energy Drain
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 削内
   result: Energy Reduction
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 恢复
   result: Recovery
+  badtrans: false 
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 灼烧
   result: Burned
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 疗伤
   result: Injury Treatment
+  badtrans: false 
+  allowalt: 
+    - Heal
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 流血
   result: Bleeding
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 调息
   result: Breath Regulation
+  badtrans: false 
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 雷电
   result: Lightning
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 蓄力
   result: Charging
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 疲劳
   result: Fatigue
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 冰寒
   result: Chill
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 无敌
   result: Invincible
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 眩晕
   result: Stunned
+  badtrans: false 
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 手臂点穴
   result: Seal Arm Acupoints
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 腿足点穴
   result: Seal Leg Acupoints
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 心胸点穴
   result: Seal Chest Acupoints
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 腰腹点穴
   result: Seal Waist Acupoints
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 头颈点穴
   result: Seal Head Acupoints
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 虚弱
   result: Weakness
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 横练
   result: Body Conditioning
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 破甲
   result: Armor Break
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 轻灵
   result: Nimble
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 迟缓
   result: Slowed
+  allowalt: 
+    - Slow
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 鹰眼
   result: Eagle Eye
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 目盲
   result: Blindness
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 飘逸
   result: Graceful
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 笨拙
   result: Clumsy
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 霸体
   result: Super Armor
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 弱点
   result: Weak Point
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 疯魔
   result: Demonic Frenzy
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 混乱
   result: Confusion
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 死战
   result: Last Stand
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 穿甲
   result: Armor Penetration
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 壮骨
   result: Strengthen Bones
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 断骨
   result: Broken bones
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 舒筋
   result: Muscle Relaxation
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 伤筋
   result: Muscle Injury
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 醒脑
   result: Mind Clearing
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 震脑
   result: Mind Shock
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 定神
   result: Mind Calming
+  badtrans: false
   allowalt: 
     - Calm and composed ## Talent
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 乱神
   result: Mind Disruption
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 活血
   result: Blood Circulation
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 凝血
   result: Blood Coagulation
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 通脉
   result: Unblock Meridians
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 截脉
   result: Seal Meridians
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 复生
   result: Revive
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 反伤
   result: Reflect
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 反伤吸内
   result: Reflect Energy Drain
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 反伤削内
   result: Reflect Energy Reduction
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 击退
   result: Knockback
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 拉近
   result: Pull
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 慧眼
   result: Keen Eye
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 昏沉
   result: Drowsiness
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 铜皮
   result: Copper skin
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 脆弱
   result: Vulnerable
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 不屈
   result: Unyielding
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 重碾
   result: Crushing Blow
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 连绵
   result: Flurry
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 断腕
   result: Severed Wrist
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 断招
   result: Interrupt
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 阻滞
   result: Impede
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 杀机
   result: Killing intent
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 康复
   result: Recuperation
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 不愈
   result: Suppressed Healing
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 坚毅
   result: Resolve
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 动摇
   result: Shaken
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 内劲
   result: Inner Power
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 真伤
   result: True Damage
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 回血
   result: Restore health
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 回内
   result: Return Inner Power
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 回体
   result:  Restore Stamina
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 自愈
   result: Self‑healing
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护头
   result: Guard Head
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护心
   result: Guard Heart
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护胸
   result: Guard Chest
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护腹
   result: Guard Waist
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护手
   result: Guard Wrist
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护足
   result: Guard Foot
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 护体真气
   result: Protective True Qi
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 反弹
   result: Rebound
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 减伤
   result: Damage Reduction
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 定身
   result: Immobilize
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 移距
   result: Reposition
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 神行
   result: Swift Movement
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 裂膝
   result: Knee Injury
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 破招
   result: Counter
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 拆招
   result: Disarm
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 斗转
   result: Stars Shift
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 声望获取
   result: Reputation Gain
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 功绩获取
   result: Merit Gain
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 旅行速度
   result: Travel speed
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 疗伤效率
   result: Injury Treatment Efficiency
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 实战经验
   result: Practical experience
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 理论经验
   result: Theoretical experience
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 技艺经验
   result: Skill experience
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 
 - raw: 买卖优势
   result: Trading Bonus
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 拳掌距离
   result: Unarmed Range
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 剑法距离
   result: Sword Technique Range
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 刀法距离
   result: Blade Technique Range
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 长兵距离
   result: Long weapon range
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 奇门距离
   result: Qimen Range
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 射术距离
   result: Archery Range
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 坐骑加成
   result: Mount bonus
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 装备强化
   result: Equipment Enhancement
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 药性
-  result: Medicinal properties
+  result: Medicinal Potency
+  badtrans: false
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 装备负重
-  result: Equipment weight limit
+  result: Equipment Weight
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 机关伤害
   result: Mechanism damage
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 机关速度
   result: Mechanism speed
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 机关耐久
   result: Mechanism durability
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 城防耐久
   result: City defense durability
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 好感获取
   result: Favor Gain
+  allowalt:
+    - gain favor
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 本门武学威力
   result: Sect Martial Arts Power
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv
 - raw: 恶名减少
   result: Infamy Reduction
   exclude:
     - PlotData.csv
     - KungFuData.csv
+    - BuildingData.csv
+    - dynamicStringsPoetry.txt
+    - HorseData.csv

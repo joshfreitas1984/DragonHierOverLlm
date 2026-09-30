@@ -14,11 +14,7 @@
 - raw: "“关系”可以与对方成为朋友关系，提升好感获取。\\n对于需要重点结交的对象，成为朋友往往是不错的选择。"
   splits:
   - text: "“关系”可以与对方成为朋友关系，提升好感获取。"
-    translated: "Relationship can be developed into a friendly relationship with the other party to increase goodwill."
-    qcReviewedText: "Relationship can be developed into a friendly relationship with the other party to increase goodwill.\\nFor objects that require special attention, becoming friends is often a good choice."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Building a relationship can turn you into friends and increase favor gain."
   - subIndex: 1
     text: "对于需要重点结交的对象，成为朋友往往是不错的选择。"
     translated: "For objects that require special attention, becoming friends is often a good choice."
@@ -821,11 +817,7 @@
 - raw: "#TargetInteractName#你刚刚这套招式使出来虚实混乱，轻重无序，\\n真是错误百出！"
   splits:
   - text: "#TargetInteractName#你刚刚这套招式使出来虚实混乱，轻重无序，"
-    translated: "#TargetInteractName#, you just mixed up your offensive moves; they were chaotic and lacked a clear sequence of light and heavy strikes."
-    qcReviewedText: "#TargetInteractName#, you just mixed up your offensive moves; they were chaotic and lacked a clear sequence of light and heavy strikes.\\nIt's full of errors!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#TargetInteractName#, your just now moves were full of confusion, with no distinction between offense and defense, and the strikes lacked any rhythm or order."
   - subIndex: 1
     text: "真是错误百出！"
     translated: "It's full of errors!"
@@ -1964,19 +1956,12 @@
   splits:
   - text: "#PlayerName#！诸葛姐姐将你上次所寻珍宝进献给皇上，果真求得了圣旨！你快"
     translated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry."
-    qcReviewedText: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry.<b>Return to the Xianxia Sect </b>And receive the imperial decree from Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
-    qcTranslated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry back to the <b>Xianxia Sect</b> to receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "回仙霞派"
     translated: "Return to the Xianxia Sect"
   - subIndex: 2
     text: "和顾师兄接旨，然后去大隐阁好好治病疗伤。"
-    translated: "And receive the imperial decree from Senior Brother Gu, then go to the Great Hidden Pavilion to focus on treating your injuries."
+    translated: "Receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion for proper injury treatment."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "<b>本月会在门内为师傅举办寿宴，#PlayerName#莫要忘了准备礼物。</b>若惹得师父他老人家生气，可别怪师姐我没提醒你。"
@@ -7392,13 +7377,6 @@
   splits:
   - text: "传闻在"
     translated: "Rumors say that"
-    qcReviewedText: "Rumors say that<b>#PosText#</b>In the city, the Hero known as A Hundred Rolls with a Hundred Wins was surrounded by his enemies, his life hanging in the balance."
-    qcTranslated: "Rumors say that in <b>#PosText#</b> city, the Hero known as A Hundred Rolls with a Hundred Wins was surrounded by his enemies, his life hanging in the balance."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "城中，号称“百骰百胜”的侠士被仇家团团围住，生命危在旦夕。"
     translated: "In the city, the Hero known as A Hundred Rolls with a Hundred Wins was surrounded by his enemies, his life hanging in the balance."
@@ -8147,16 +8125,9 @@
   splits:
   - text: "传闻长乐帮主乐无疾亲率大军兵临"
     translated: "It is said that Sect Master Yue Wuji of the Changle Gang personally led a massive army to approach."
-    qcReviewedText: "It is said that Sect Master Yue Wuji of the Changle Gang personally led a massive army to approach.<b>#PosText#</b>Below the city walls, prepare to fight to the death with traitor Lu Yulin."
-    qcTranslated: "It is said that Sect Master Yue Wuji of the Changle Gang personally led a massive army to approach <b>#PosText#</b> city, preparing to fight to the death with traitor Lu Yulin."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "城下，准备与叛徒卢玉麟决一死战。"
-    translated: "Below the city walls, prepare to fight to the death with traitor Lu Yulin."
+    translated: "At the city gates, prepare for a Last Stand against the traitor Lu Yulin."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻长乐帮叛徒卢玉麟逃出杭州后，一路向北流亡，如今已抵达<b>#PosText#</b>一带。"
@@ -8474,16 +8445,12 @@
   splits:
   - text: "低等级的内功"
     translated: "Low‑level internal skill"
-    qcReviewedText: "Low‑level internal skill/Qinggong/Special Techniques can be practiced in the meditation chamber to quickly gain combat experience.\\nLet's try entering the seclusion room now"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
   - subIndex: 2
     text: "绝技可在闭关室修炼，从而快速获取实战经验。"
-    translated: "Special Techniques can be practiced in the meditation chamber to quickly gain combat experience."
+    translated: "Special Techniques can be practiced in the meditation chamber, thereby quickly gaining practical experience."
   - subIndex: 3
     text: "眼下不妨进入闭关室一试。"
     translated: "Let's try entering the seclusion room now"
@@ -9009,14 +8976,10 @@
 - raw: "使用道具包括丹药和饮食，可快速恢复状态，\\n但也会产生耐药性。"
   splits:
   - text: "使用道具包括丹药和饮食，可快速恢复状态，"
-    translated: "Using items, including elixirs and food, can quickly restore your condition."
-    qcReviewedText: "Using items, including elixirs and food, can quickly restore your condition.\\nBut it can also develop resistance"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Using items such as pills and food can quickly restore your condition."
   - subIndex: 1
     text: "但也会产生耐药性。"
-    translated: "But it can also develop resistance"
+    translated: "But it will also lead to resistance"
   templates:
   - template: "{0}\\n{1}"
 - raw: "供后世所有从商者纪念膜拜。"
@@ -9422,13 +9385,9 @@
   splits:
   - text: "内功主要通过攻击充能。"
     translated: "Internal Skill primarily charges through attacks"
-    qcReviewedText: "Internal Skill primarily charges through attacks \\nActivating internal skill will double its effects while restoring some inner power."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "激活内功可使其效果翻倍，同时恢复部分内力。"
-    translated: "Activating internal skill will double its effects while restoring some inner power."
+    translated: "Activating Neigong doubles its effects and restores some Inner Power."
   templates:
   - template: "{0}\\n{1}"
 - raw: "内功修炼"
@@ -9996,11 +9955,7 @@
 - raw: "前往#TargetPlace#发起佯攻，装作要与铁掌帮决一死战。"
   splits:
   - text: "前往#TargetPlace#发起佯攻，装作要与铁掌帮决一死战。"
-    translated: "Proceed to #TargetPlace# to launch a feint attack, pretending to engage the Iron Palm Gang in a final battle."
-    qcReviewedText: "Proceed to #TargetPlace# to launch a feint attack, pretending to engage the Iron Palm Gang in a final battle."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Head to #TargetPlace# to launch a diversionary attack, pretending to fight the Iron Palm Gang to the death."
 - raw: "前往#TargetPlace#向唐嫣然道明真相。"
   splits:
   - text: "前往#TargetPlace#向唐嫣然道明真相。"
@@ -10865,22 +10820,15 @@
   splits:
   - text: "另外还有一些特殊射击物如"
     translated: "Additionally, there are some special projectiles like"
-    qcReviewedText: "Additionally, there are some special projectiles like：\\nStars can increase combo count,\\nApples can restore health \\nThe shield can block one hit"
-    qcTranslated: "Additionally, there are some special projectiles like:\\nStars can increase combo count,\\nApples can restore Health\\nThe shield can block one hit"
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "星星可增加连击数，"
     translated: "Stars can increase combo count,"
   - subIndex: 2
     text: "苹果可恢复生命，"
-    translated: "Apples can restore health"
+    translated: "An apple can restore Health"
   - subIndex: 3
     text: "盾牌则可抵挡一次伤害。"
-    translated: "The shield can block one hit"
+    translated: "The shield can block one instance of damage."
   templates:
   - template: "{0}：\\n{1}\\n{2}\\n{3}"
 - raw: "只可惜我#$SourceInteractName#纵横江湖多年，却仍旧茕茕孑立，形影相吊。\\n不知有谁能与我共度佳期，同赏明月呢？\\n（可以邀请好感50以上的异性共度七夕）"
@@ -11198,13 +11146,9 @@
   splits:
   - text: "同时还会出现两种道具，"
     translated: "Additionally, two types of items will also appear."
-    qcReviewedText: "Additionally, two types of items will also appear.\\nSupplies will restore 25% of the horse's stamina.\\nObstacles reduce the horse's stamina by 15%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "补给会恢复25%的马匹耐力，"
-    translated: "Supplies will restore 25% of the horse's stamina."
+    translated: "Supplies will restore 25% of your horse's endurance."
   - subIndex: 2
     text: "障碍会降低15%的马匹耐力。"
     translated: "Obstacles reduce the horse's stamina by 15%"
@@ -12865,13 +12809,6 @@
   splits:
   - text: "在一个月内提升太祖长拳一重功力，以赢得与师兄顾游年的赌约。"
     translated: "Boost the Great Ancestor Long Fist by one rank of cultivation within a month to win the bet with Senior Brother Gu Younian."
-    qcReviewedText: "Boost the Great Ancestor Long Fist by one rank of cultivation within a month to win the bet with Senior Brother Gu Younian.\\n<i>Theoretical experience：In the Scripture Pavilion, read the secret manuals \\nCombat experience：Practice or exchange techniques in the training ground</i>"
-    qcTranslated: "Boost the Great Ancestor Long Fist by one rank of cultivation within a month to win the bet with Senior Brother Gu Younian.\\n<i>Theoretical experience: In the Scripture Pavilion, read the Secret Manual \\nCombat experience: Practice or exchange techniques in the training ground</i>"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "理论经验"
     translated: "Theoretical experience"
@@ -12880,7 +12817,7 @@
     translated: "In the Scripture Pavilion, read the secret manuals"
   - subIndex: 3
     text: "实战经验"
-    translated: "Combat experience"
+    translated: "Practical experience"
   - subIndex: 4
     text: "在练武场练习或切磋"
     translated: "Practice or exchange techniques in the training ground"
@@ -13747,11 +13684,7 @@
 - raw: "奉旨疗伤"
   splits:
   - text: "奉旨疗伤"
-    translated: "Imperial Order to Treat Wounds"
-    qcReviewedText: "Imperial Order to Treat Wounds"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Healing by imperial decree"
 - raw: "奉旨讨逆"
   splits:
   - text: "奉旨讨逆"
@@ -13925,13 +13858,9 @@
   splits:
   - text: "如果马匹耐力耗尽，速度会大大降低，"
     translated: "If the horse's stamina runs out, its speed will significantly decrease."
-    qcReviewedText: "If the horse's stamina runs out, its speed will significantly decrease.\\nYou can long‑press to rest in place to recover stamina."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "此时可以长按原地休息，恢复体力。"
-    translated: "You can long‑press to rest in place to recover stamina."
+    translated: "You can now long press to rest in place and recover Stamina."
   templates:
   - template: "{0}\\n{1}"
 - raw: "如此相濡以沫，长相厮守，倒也颇为惬意快活。"
@@ -14356,7 +14285,7 @@
     translated: "In the Scripture Pavilion, read the secret manuals"
   - subIndex: 3
     text: "实战经验"
-    translated: "Combat experience"
+    translated: "Practical experience"
   - subIndex: 4
     text: "在练武场练习或切磋"
     translated: "Practice or exchange techniques in the training ground"
@@ -15258,13 +15187,6 @@
   splits:
   - text: "当你的生命"
     translated: "When your health"
-    qcReviewedText: "When your health/Inner Power/When your stamina is low,\\nYou can choose to rest, regulate your breathing, or use an item to recover."
-    qcTranslated: "When your Health/Inner Power/Stamina is low,\\nYou can choose to rest, regulate your breathing, or use an item to recover."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "内力"
     translated: "Inner Power"
@@ -15273,7 +15195,7 @@
     translated: "When your stamina is low,"
   - subIndex: 3
     text: "可以选择休息，调息或使用道具来恢复。"
-    translated: "You can choose to rest, regulate your breathing, or use an item to recover."
+    translated: "You can choose to rest, perform breath regulation, or use items for recovery."
   templates:
   - template: "{0}/{1}/{2}\\n{3}"
 - raw: "当前区域内的侠士显示在下方，\\n点击头像即可与其进行交流。"
@@ -15605,19 +15527,11 @@
 - raw: "恢复状态"
   splits:
   - text: "恢复状态"
-    translated: "Restore status"
-    qcReviewedText: "Restore status"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recovery status"
 - raw: "恢复耐心"
   splits:
   - text: "恢复耐心"
-    translated: "Recover your patience"
-    qcReviewedText: "Recover your patience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Restore patience"
 - raw: "恭喜你成为了一派之掌门。\\n此后你将对门派拥有完全的管理权限，\\n并且不再需要每月进行门派会议。"
   splits:
   - text: "恭喜你成为了一派之掌门。"
@@ -17697,17 +17611,13 @@
 - raw: "架势过低时，可以通过“招架”进行恢复。\\n休息/调息也会恢复少量架势。"
   splits:
   - text: "架势过低时，可以通过“招架”进行恢复。"
-    translated: "When the guard is too low, it can be restored by performing a Block."
-    qcReviewedText: "When the guard is too low, it can be restored by performing a Block.\\nRest/Respiration also restores a small amount of stance."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "When your guard is down, you can use Parry to recover."
   - subIndex: 1
     text: "休息"
     translated: "Rest"
   - subIndex: 2
     text: "调息也会恢复少量架势。"
-    translated: "Respiration also restores a small amount of stance."
+    translated: "Breath regulation will also restore a small amount of posture."
   templates:
   - template: "{0}\\n{1}/{2}"
 - raw: "查看名录"
@@ -18148,16 +18058,12 @@
   splits:
   - text: "此外，升级还对建筑本身的功能有所增益。"
     translated: "Moreover, upgrades also enhance the functional benefits of the building itself."
-    qcReviewedText: "Moreover, upgrades also enhance the functional benefits of the building itself.\\nAfter upgrading the store, the items inside will also gain a higher grade.\\nUpgrading the Medical Pavilion will increase your healing efficiency within it."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "如升级商店后，店内商品等级也会提升。"
     translated: "After upgrading the store, the items inside will also gain a higher grade."
   - subIndex: 2
     text: "升级医馆后，可提升你在其中疗伤的效率。"
-    translated: "Upgrading the Medical Pavilion will increase your healing efficiency within it."
+    translated: "Upgrading the Medical Pavilion will increase your efficiency in treating injuries there."
   templates:
   - template: "{0}\\n{1}\\n{2}"
 - raw: "此外，还需对方的门派/江湖地位不高于你，\\n或你们之间有结义/情侣关系。"
@@ -18286,11 +18192,7 @@
 - raw: "武功右侧的橙色进度条表示实战经验。"
   splits:
   - text: "武功右侧的橙色进度条表示实战经验。"
-    translated: "The orange progress bar on the right side of the martial arts skill indicates practical combat experience."
-    qcReviewedText: "The orange progress bar on the right side of the martial arts skill indicates practical combat experience."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The orange progress bar on the right side of the Martial Arts panel indicates Practical Experience."
 - raw: "武功左侧的蓝色进度条表示理论经验。"
   splits:
   - text: "武功左侧的蓝色进度条表示理论经验。"
@@ -18989,11 +18891,7 @@
 - raw: "治疗伤势"
   splits:
   - text: "治疗伤势"
-    translated: "Healing wounds"
-    qcReviewedText: "Healing wounds"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Injury Treatment"
 - raw: "注"
   splits:
   - text: "注"
@@ -19018,11 +18916,7 @@
 - raw: "注意每次攻击后，红色范围都需要一定时间恢复。\\n建筑等级和对应武功技能越高，恢复速度就越快。"
   splits:
   - text: "注意每次攻击后，红色范围都需要一定时间恢复。"
-    translated: "Note that the red area needs some time to recover after each attack."
-    qcReviewedText: "Note that the red area needs some time to recover after each attack.\\nThe higher the building level and the corresponding martial arts skill, the faster the recovery speed."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Note that the red range needs some time to recover after each attack."
   - subIndex: 1
     text: "建筑等级和对应武功技能越高，恢复速度就越快。"
     translated: "The higher the building level and the corresponding martial arts skill, the faster the recovery speed."
@@ -19469,20 +19363,13 @@
 - raw: "疗伤共有三种方式：\\n包扎用于治疗外伤。\\n调息用于治疗内伤。\\n解毒用于治疗中毒。"
   splits:
   - text: "疗伤共有三种方式"
-    translated: "There are three ways to heal"
-    qcReviewedText: "There are three ways to heal：\\nBandages are used to treat external injuries \\nRegulation of breathing is used to treat internal injuries.\\nDecontamination is used to treat poisoning"
-    qcTranslated: "There are three ways to heal:\\nBandages are used to treat external injuries.\\nRegulation of breathing is used to treat internal injuries.\\nDecontamination is used to treat poisoning."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "There are three methods for Injury Treatment"
   - subIndex: 1
     text: "包扎用于治疗外伤。"
-    translated: "Bandages are used to treat external injuries"
+    translated: "Bandaging is used to treat external injuries"
   - subIndex: 2
     text: "调息用于治疗内伤。"
-    translated: "Regulation of breathing is used to treat internal injuries."
+    translated: "Breath regulation is used to treat internal injuries."
   - subIndex: 3
     text: "解毒用于治疗中毒。"
     translated: "Decontamination is used to treat poisoning"
@@ -19865,21 +19752,13 @@
 - raw: "眼下铁掌帮元气大伤尚未恢复，正是一举夺回巴陵村之良机！还望#PlayerName#<b>速回门派</b>，准备与铁掌帮决一死战！"
   splits:
   - text: "眼下铁掌帮元气大伤尚未恢复，正是一举夺回巴陵村之良机！还望#PlayerName#"
-    translated: "The Iron Palm Gang is currently depleted and has not recovered, making this an excellent opportunity to reclaim Baling Village! Hope you, #PlayerName#, will seize this chance!"
-    qcReviewedText: "The Iron Palm Gang is currently depleted and has not recovered, making this an excellent opportunity to reclaim Baling Village! Hope you, #PlayerName#, will seize this chance!<b>Speed back to the sect</b>, Prepare to fight the Iron Palm Gang to the death!"
-    qcTranslated: "The Iron Palm Gang is currently depleted and has not recovered, making this an excellent opportunity to reclaim Baling Village! I hope you, #PlayerName#, will <b>return to the Sect swiftly</b>, preparing for a decisive battle with the Iron Palm Gang!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "With the Iron Palm Gang still reeling and not yet recovered, this is the perfect opportunity to reclaim Baling Village! I look forward to your assistance, #PlayerName#."
   - subIndex: 1
     text: "速回门派"
     translated: "Speed back to the sect"
   - subIndex: 2
     text: "，准备与铁掌帮决一死战！"
-    translated: ", Prepare to fight the Iron Palm Gang to the death!"
+    translated: ", Prepare for a Last Stand against the Iron Palm Gang!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "眼前一名疯疯癫癫的乞丐躺在路边，一遍哼唱着不知来由的乡野小调，\\n一遍痛饮着葫芦中的酒水，眉宇间竟颇有几分闲适自在之乐趣。"
@@ -20673,10 +20552,6 @@
   splits:
   - text: "绝技主要通过遭受攻击充能。"
     translated: "The Special Technique primarily charges through sustaining attacks."
-    qcReviewedText: "The Special Technique primarily charges through sustaining attacks.\\nActivating a Special Technique doubles its effect and restores some Health."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "激活绝技可使其效果翻倍，同时恢复部分生命。"
     translated: "Activating a Special Technique doubles its effect and restores some Health."
@@ -20707,10 +20582,6 @@
   splits:
   - text: "继续将太祖长拳修炼至十重功力"
     translated: "Continue to train the Great Ancestor Long Fist to the tenth level of power"
-    qcReviewedText: "Continue to train the Great Ancestor Long Fist to the tenth level of power \\n<i>Theoretical experience：In the Scripture Pavilion, read the secret manuals \\nCombat experience：Practice or exchange techniques in the training ground</i>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "理论经验"
     translated: "Theoretical experience"
@@ -20719,7 +20590,7 @@
     translated: "In the Scripture Pavilion, read the secret manuals"
   - subIndex: 3
     text: "实战经验"
-    translated: "Combat experience"
+    translated: "Practical experience"
   - subIndex: 4
     text: "在练武场练习或切磋"
     translated: "Practice or exchange techniques in the training ground"
@@ -20932,11 +20803,7 @@
 - raw: "而武林各派势力，也在这支强盛禁军的压制之下，再也不敢与朝廷争锋。"
   splits:
   - text: "而武林各派势力，也在这支强盛禁军的压制之下，再也不敢与朝廷争锋。"
-    translated: "And with the dominance of this strong Imperial Guard, the various factions of the Wulin no longer dared to challenge the court."
-    qcReviewedText: "And with the dominance of this strong Imperial Guard, the various factions of the Wulin no longer dared to challenge the court."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "And the various factions of Wulin were also overwhelmed by this powerful Imperial Guard and no longer dared to challenge the court."
 - raw: "而统一之后的武林，在#$PlayerName#领导下越发繁荣兴旺。"
   splits:
   - text: "而统一之后的武林，在#$PlayerName#领导下越发繁荣兴旺。"
@@ -20961,11 +20828,7 @@
 - raw: "聚义死战"
   splits:
   - text: "聚义死战"
-    translated: "Gang up and fight to the death"
-    qcReviewedText: "Gang up and fight to the death"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Gather to Fight the Last Stand"
 - raw: "聚义求援"
   splits:
   - text: "聚义求援"
@@ -20977,15 +20840,7 @@
 - raw: "胥华和游年皆已康复，眼下正是重夺巴陵村，替你陆师伯报仇雪恨之良机。\\n还望#PlayerName#<b>速回门派</b>，与师兄弟共商大计。"
   splits:
   - text: "胥华和游年皆已康复，眼下正是重夺巴陵村，替你陆师伯报仇雪恨之良机。"
-    translated: "Xuhua and Younian are both fully recovered. This is the perfect opportunity to retake Baling Village and avenge your Martial Uncle Lu."
-    qcReviewedText: "Xuhua and Younian are both fully recovered. This is the perfect opportunity to retake Baling Village and avenge your Martial Uncle Lu.\\nI hope, #PlayerName#<b>Speed back to the sect</b>, Discuss major plans with Senior Brothers"
-    qcTranslated: "Xuhua and Younian are both fully recovered. This is the perfect opportunity to retake Baling Village and avenge your Martial Uncle Lu.\\nI hope, #PlayerName#<b>hurry back to the Sect</b>, to discuss major plans with your fellow disciples"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "Xuhua and Younian have both recuperated; it is now the perfect opportunity to reclaim Baling Village and avenge your Martial Uncle Lu."
   - subIndex: 1
     text: "还望#PlayerName#"
     translated: "I hope, #PlayerName#"
@@ -21379,17 +21234,10 @@
 - raw: "虽说生命/内力每天都会自动恢复，但速度缓慢。"
   splits:
   - text: "虽说生命"
-    translated: "Though life"
-    qcReviewedText: "Though life/Inner Power recovers automatically each day, but at a slow rate."
-    qcTranslated: "Though Health/Inner Power recovers automatically each day, the speed is slow."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Although healthy"
   - subIndex: 1
     text: "内力每天都会自动恢复，但速度缓慢。"
-    translated: "Inner Power recovers automatically each day, but at a slow rate."
+    translated: "Inner Power recovers automatically every day, but slowly."
   templates:
   - template: "{0}/{1}"
 - raw: "融"
@@ -21609,11 +21457,7 @@
 - raw: "要想快速恢复状态，除了直接服用丹药外，\\n也可以点击进入宿舍。"
   splits:
   - text: "要想快速恢复状态，除了直接服用丹药外，"
-    translated: "To quickly recover, in addition to directly consuming elixirs,"
-    qcReviewedText: "To quickly recover, in addition to directly consuming elixirs,\\nYou can also click to enter the dormitory."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "To quickly recover your condition, in addition to directly consuming elixirs,"
   - subIndex: 1
     text: "也可以点击进入宿舍。"
     translated: "You can also click to enter the dormitory."
@@ -21638,14 +21482,10 @@
 - raw: "要想治疗伤势，除了直接服用丹药外，\\n也可以点击进入疗伤室，消耗门派药材进行治疗。"
   splits:
   - text: "要想治疗伤势，除了直接服用丹药外，"
-    translated: "To treat the injuries, in addition to directly consuming elixirs,"
-    qcReviewedText: "To treat the injuries, in addition to directly consuming elixirs,\\nYou can also click to enter the Healing Room and use the Sect's medicinal herbs for treatment."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "To treat injuries, besides directly consuming elixirs,"
   - subIndex: 1
     text: "也可以点击进入疗伤室，消耗门派药材进行治疗。"
-    translated: "You can also click to enter the Healing Room and use the Sect's medicinal herbs for treatment."
+    translated: "You can also enter the injury treatment room to receive treatment by consuming sect herbs."
   templates:
   - template: "{0}\\n{1}"
 - raw: "要提升属性和武学的潜力值，一般需要修炼高级别的武功。\\n紫色秘传武功及以上大多可以提升潜力值。\\n武功越高级，往往也能提升越多潜力。"
@@ -21993,13 +21833,9 @@
   splits:
   - text: "请根据你当前的伤势类型，"
     translated: "Please determine the type of injury you are currently dealing with,"
-    qcReviewedText: "Please determine the type of injury you are currently dealing with,\\nChoose the healing method that suits you!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "选择对应的疗伤方式吧！"
-    translated: "Choose the healing method that suits you!"
+    translated: "Choose the corresponding injury treatment method!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "请点击“修行”选项。"
@@ -22085,11 +21921,7 @@
 - raw: "调息恢复量较大，\\n但每场战斗只可使用三次。"
   splits:
   - text: "调息恢复量较大，"
-    translated: "The recovery amount is relatively high"
-    qcReviewedText: "The recovery amount is relatively high \\nBut each battle allows for use only three times."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Large breath regulation recovery"
   - subIndex: 1
     text: "但每场战斗只可使用三次。"
     translated: "But each battle allows for use only three times."
@@ -22281,19 +22113,12 @@
   splits:
   - text: "赵胤宗的龙胤归藏功重现江湖，各大门派决定于"
     translated: "Zhao Yinzong's Dragonheir Secluded Return Skill has returned to Jianghu, and the major sects have decided to..."
-    qcReviewedText: "Zhao Yinzong's Dragonheir Secluded Return Skill has returned to Jianghu, and the major sects have decided to...<b>A month later </b>Hold the second Mount Tai Grand Assembly on Mount Tai to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance.<b>#PosText#</b>, To catch a glimpse of this unprecedented grand festival."
-    qcTranslated: "Zhao Yinzong's Dragonheir Secluded Return Skill has returned to Jianghu, and the major sects have decided to hold the second Mount Tai Grand Assembly on Mount Tai <b>a month later</b> to decide the ownership of the divine technique.\\nMany Wulin practitioners have gone there in advance <b>#PosText#</b>, to catch a glimpse of this unprecedented grand festival."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "一个月后"
     translated: "A month later"
   - subIndex: 2
     text: "在泰山举办第二届泰岳大典，商定神功归属。"
-    translated: "Hold the second Mount Tai Grand Assembly on Mount Tai to decide the ownership of the divine technique."
+    translated: "Hold the second Mount Tai Grand Assembly on Mount Tai to determine the ownership of divine skills."
   - subIndex: 3
     text: "许多武林人士已提前前往"
     translated: "Many Wulin practitioners have gone there in advance."
@@ -22464,13 +22289,9 @@
   splits:
   - text: "轻功主要通过移动充能。"
     translated: "Qinggong mainly relies on movement charging"
-    qcReviewedText: "Qinggong mainly relies on movement charging \\nActivating Qinggong will double its effects, allowing you to leap to a designated location and recover some stamina."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "激活轻功可使其效果翻倍，跳跃到指定位置同时恢复部分体力。"
-    translated: "Activating Qinggong will double its effects, allowing you to leap to a designated location and recover some stamina."
+    translated: "Activating qinggong doubles its effects, allowing you to jump to a designated location while restoring some stamina."
   templates:
   - template: "{0}\\n{1}"
 - raw: "轻功修炼，需要你在场上不断跳跃，\\n避开地面上冒出的钉刺，和四周来袭的箭矢。"
@@ -22574,11 +22395,7 @@
 - raw: "近日#TargetPlace#治安混乱，罪案频发，请有志武林人士前往协助巡查，以正风气。"
   splits:
   - text: "近日#TargetPlace#治安混乱，罪案频发，请有志武林人士前往协助巡查，以正风气。"
-    translated: "Recently, #TargetPlace# has been experiencing chaotic law and order, with frequent crimes occurring. We kindly request that dedicated individuals from the Wulin visit to assist in patrolling and restoring proper conduct."
-    qcReviewedText: "Recently, #TargetPlace# has been experiencing chaotic law and order, with frequent crimes occurring. We kindly request that dedicated individuals from the Wulin visit to assist in patrolling and restoring proper conduct."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Recently, #TargetPlace# has been plagued by chaos and frequent crimes. Please assist in patrolling the area to restore order and uphold justice, for those with aspirations in Wulin."
 - raw: "近日压镖途经贵派宝地，路过一处山林时，\\n突然冲出伙强人将兄弟们团团围住，只有我一人见机不妙逃了出来。"
   splits:
   - text: "近日压镖途经贵派宝地，路过一处山林时，"
@@ -23809,11 +23626,7 @@
 - raw: "选择休息，即可快速恢复状态。"
   splits:
   - text: "选择休息，即可快速恢复状态。"
-    translated: "Choose rest to quickly recover your status"
-    qcReviewedText: "Choose rest to quickly recover your status"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Choose to rest and you will quickly recover your status."
 - raw: "选择完全恢复，\\n就会自动休息直到满状态为止。"
   splits:
   - text: "选择完全恢复，"
@@ -24396,13 +24209,9 @@
   splits:
   - text: "镖师弟兄们莫慌，我与#SourceForceName##$PlayerName#前来支援！"
     translated: "Martial Artist brothers, do not panic, I and #SourceForceName# #$PlayerName# come to support!"
-    qcReviewedText: "Martial Artist brothers, do not panic, I and #SourceForceName# #$PlayerName# come to support!\\nWork together, and we can repel these bandits!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "大家齐心协力，定能击退这群贼人！"
-    translated: "Work together, and we can repel these bandits!"
+    translated: "With everyone working together, we can surely knock back this group of bandits!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "镖师求助"

@@ -72,11 +72,7 @@
 - raw: "装备负重会影响角色在战斗中的速度。"
   splits:
   - text: "装备负重会影响角色在战斗中的速度。"
-    translated: "Equipping weight will affect the character's speed in battle."
-    qcReviewedText: "Equipping weight will affect the character's speed in battle."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Equipment weight affects the character's speed in battle."
 - raw: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
   splits:
   - text: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
@@ -224,14 +220,7 @@
 - raw: "较高的恶名会降低好感获取，\\n其他侠士在野外遭遇时也会避而远之。"
   splits:
   - text: "较高的恶名会降低好感获取，"
-    translated: "Higher infamy will reduce the gain in favor."
-    qcReviewedText: "Higher infamy will reduce the gain in favor.\\nOther Heroes will also avoid each other when encountered in the wild."
-    qcTranslated: "Higher infamy will reduce the gain in favor.\\nOther Heroes will also avoid you when encountered in the wild."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Higher infamy reduces favor gain"
   - subIndex: 1
     text: "其他侠士在野外遭遇时也会避而远之。"
     translated: "Other Heroes will also avoid each other when encountered in the wild."

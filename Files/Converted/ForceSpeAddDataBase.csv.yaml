@@ -85,11 +85,7 @@
   splits:
   - split: 2
     text: "实战经验"
-    translated: "Combat experience"
-    qcReviewedText: "Combat experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Practical experience"
 - raw: "7,理论经验,理论经验,TRUE,0.01"
   splits:
   - split: 2
@@ -103,38 +99,22 @@
   splits:
   - split: 2
     text: "疗伤效率"
-    translated: "Healing efficiency"
-    qcReviewedText: "Healing efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Injury Treatment Efficiency"
 - raw: "9,本地疗伤效率,本地疗伤效率,TRUE,0.05"
   splits:
   - split: 2
     text: "本地疗伤效率"
-    translated: "Local healing efficiency"
-    qcReviewedText: "Local healing efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Local Injury Treatment Efficiency"
 - raw: "10,日常恢复效率,日常恢复效率,TRUE,0.02"
   splits:
   - split: 2
     text: "日常恢复效率"
-    translated: "Daily recovery efficiency"
-    qcReviewedText: "Daily recovery efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Daily Recovery Rate"
 - raw: "11,本地恢复效率,本地恢复效率,TRUE,0.1"
   splits:
   - split: 2
     text: "本地恢复效率"
-    translated: "Local recovery efficiency"
-    qcReviewedText: "Local recovery efficiency"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Local Recovery Rate"
 - raw: "12,建造速度,建造速度,TRUE,0.02"
   splits:
   - split: 2
@@ -175,11 +155,7 @@
   splits:
   - split: 2
     text: "技艺经验"
-    translated: "Skill and experience"
-    qcReviewedText: "Skill and experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Skill experience"
 - raw: "17,内功经验,内功经验,TRUE,0.02"
   splits:
   - split: 2

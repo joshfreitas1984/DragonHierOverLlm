@@ -21,7 +21,7 @@
     translated: "Prisoners break free"
   - split: 4
     text: "猛力冲击敌人造成失衡效果"
-    translated: "Impact the enemy with force to create a state of imbalance."
+    translated: "Deal a powerful blow to knock the enemy off balance."
 - raw: "2,射术,1,狂奔猛突,猛力冲撞敌人造成击退效果,14,0,,,,,\"2,3,4\",\"0,0,0\",急速0.06;击退1,0,16,0,,,,,skill5_2,,打击2-Target-Grid-Happen,弓,Same,TRUE,-1,0"
   splits:
   - split: 3
@@ -29,7 +29,7 @@
     translated: "Rush forward with great vigor"
   - split: 4
     text: "猛力冲撞敌人造成击退效果"
-    translated: "Ram into enemies to knock them back"
+    translated: "Forcefully ram into the enemy to knock them back."
 - raw: "3,射术,2,飞矢乱箭,向小范围射出密集的箭雨,10,0,,,,,\"0,2,3\",\"0,0,1\",流血0.1,0,16,0,,,,,skill5_2,,箭雨-Target-Grid-Happen,弓,Distance,FALSE,-1,0"
   splits:
   - split: 3

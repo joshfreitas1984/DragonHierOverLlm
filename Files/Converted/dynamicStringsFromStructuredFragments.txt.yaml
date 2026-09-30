@@ -688,14 +688,7 @@
 - raw: "♦好友关系好感获取+10%，好感消耗-10%\n♦对好友作恶，恶名x200%"
   splits:
   - text: "好友关系好感获取+10%，好感消耗"
-    translated: "Friendship affinity gain +10%, affinity consumption"
-    qcReviewedText: "♦Friendship affinity gain +10%, affinity consumption-10%\n♦To do evil to a friend, infamy x200%"
-    qcTranslated: "♦Friendship affinity gain +10%, affinity consumption ‑10%\n♦To do evil to a friend, Infamy x200%"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Friendship favor gain +10%, favor consumption"
   - subIndex: 1
     text: "对好友作恶，恶名"
     translated: "To do evil to a friend, infamy"
@@ -704,14 +697,7 @@
 - raw: "♦亲密关系好感获取+20%，好感消耗-20%\n♦对亲友作恶，恶名x400%"
   splits:
   - text: "亲密关系好感获取+20%，好感消耗"
-    translated: "Intimate Relationship Goodwill Gain +20%, Goodwill Consumption"
-    qcReviewedText: "♦Intimate Relationship Goodwill Gain +20%, Goodwill Consumption-20%\n♦To wrong friends and family, infamy x400%"
-    qcTranslated: "♦Intimate Relationship Goodwill Gain +20%, Goodwill Consumption ‑20%\n♦To wrong friends and family, Infamy x400%"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Favor Gain with Intimacy Relationship +20%, Favor Consumption"
   - subIndex: 1
     text: "对亲友作恶，恶名"
     translated: "To wrong friends and family, infamy"
@@ -797,11 +783,7 @@
 - raw: "传授技艺经验"
   splits:
   - text: "传授技艺经验"
-    translated: "Share skill and experience"
-    qcReviewedText: "Share skill and experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Teach skill experience"
 - raw: "♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
   splits:
   - text: "你的技艺比对方高出越多，效果越好"
@@ -1885,11 +1867,7 @@
 - raw: "学习技艺经验"
   splits:
   - text: "学习技艺经验"
-    translated: "Skillcraft experience"
-    qcReviewedText: "Skillcraft experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Learning skill experience"
 - raw: "♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
   splits:
   - text: "对方技艺比你高出越多，效果越好"
@@ -1917,11 +1895,7 @@
 - raw: "完全恢复"
   splits:
   - text: "完全恢复"
-    translated: "Fully recovered"
-    qcReviewedText: "Fully recovered"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Complete Recovery"
 - raw: "完成巡查"
   splits:
   - text: "完成巡查"
