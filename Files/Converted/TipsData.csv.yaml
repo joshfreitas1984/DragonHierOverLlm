@@ -3,6 +3,10 @@
   splits:
   - text: "随身携带的珍宝，"
     translated: "Treasure always at hand,"
+    qcReviewedText: "Treasure always at hand,\\nIf the knowledge is sufficient, it will automatically attempt appraisal every day."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "若学识足够会每日自动尝试鉴定。"
     translated: "If the knowledge is sufficient, it will automatically attempt appraisal every day."
@@ -73,6 +77,10 @@
   splits:
   - text: "装备负重会影响角色在战斗中的速度。"
     translated: "Equipment weight affects the character's speed in battle."
+    qcReviewedText: "Equipment weight affects the character's speed in battle."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
   splits:
   - text: "成为掌门后，可以在京城皇宫获取御赐勋阶。"
@@ -221,6 +229,13 @@
   splits:
   - text: "较高的恶名会降低好感获取，"
     translated: "Higher infamy reduces favor gain"
+    qcReviewedText: "Higher infamy reduces favor gain \\nOther Heroes will also avoid each other when encountered in the wild."
+    qcTranslated: "Higher infamy reduces favor gain \\nOther Heroes will also avoid you when encountered in the wild."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - subIndex: 1
     text: "其他侠士在野外遭遇时也会避而远之。"
     translated: "Other Heroes will also avoid each other when encountered in the wild."

@@ -130,6 +130,10 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
+    qcReviewedText: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -148,6 +152,13 @@
   splits:
   - text: "体质"
     translated: "Constitution"
+    qcReviewedText: "<b>Constitution</b>\\n+1Max Health\\n+0.5% Overwhelm\\n+0.5% injury resistance"
+    qcTranslated: "<b>Constitution</b>\\n+1Max Health\\n+0.5% Overwhelm\\n+0.5% Injury Resistance"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "+1生命上限"
     translated: "+1Max Health"
@@ -163,8 +174,10 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Inner Power Maximum\\n‑0.5% Maximum Stamina Capacity"
+    qcReviewedText: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Max Inner Power\\n‑0.5% Max Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -180,6 +193,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "<b>Neigong</b>\\n+1% Max Inner Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+1%内力上限"
     translated: "+1% Max Inner Power"
@@ -189,6 +206,13 @@
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "<b>Blade Technique </b>\\nIncrease Blade Technique damage \\nReduce damage from blade techniques"
+    qcTranslated: "<b>Blade Technique</b>\\nIncrease Blade Technique damage\\nReduce damage from blade techniques"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "提升刀法伤害"
     translated: "Increase Blade Technique damage"
@@ -201,6 +225,10 @@
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "<b>Sword Technique </b>\\nEnhance sword technique damage \\nReduce damage from sword techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "提升剑法伤害"
     translated: "Enhance sword technique damage"
@@ -213,6 +241,10 @@
   splits:
   - text: "力道"
     translated: "Strength"
+    qcReviewedText: "<b>Strength</b>\\n+0.5% Critical Hit\\n+0.5% Interrupt\\n+1Equipment Weight"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+0.5%暴击"
     translated: "+0.5% Critical Hit"
@@ -228,6 +260,13 @@
   splits:
   - text: "医术"
     translated: "Medical Arts"
+    qcReviewedText: "<b>Medical Arts </b>\\nAffecting treatment of external injuries/Internal Injury's efficiency"
+    qcTranslated: "<b>Medical Arts</b>\\nAffects the efficiency of treating External Injuries/Internal Injuries"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "影响治疗外伤"
     translated: "Affecting treatment of external injuries"
@@ -256,6 +295,10 @@
   splits:
   - text: "外伤"
     translated: "External Injury"
+    qcReviewedText: "<b>External Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Max Health"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -287,6 +330,10 @@
   splits:
   - text: "学识"
     translated: "Knowledge"
+    qcReviewedText: "<b>Knowledge </b>\\nInfluences the efficiency of treasure appraisal, debates, and sect reputation gain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "影响珍宝鉴定，论战，以及获取门派威望的效率"
     translated: "Influences the efficiency of treasure appraisal, debates, and sect reputation gain"
@@ -296,6 +343,10 @@
   splits:
   - text: "射术"
     translated: "Archery"
+    qcReviewedText: "<b>Archery </b>\\nIncrease Archery Damage \\nReduce received archery damage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "提升射术伤害"
     translated: "Increase Archery Damage"
@@ -308,6 +359,10 @@
   splits:
   - text: "意志"
     translated: "Willpower"
+    qcReviewedText: "<b>Willpower</b>\\n+0.5% Counterattack\\n+0.5% Armor\\n+0.5% Debuff Resistance"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+0.5%反击"
     translated: "+0.5% Counterattack"
@@ -323,6 +378,10 @@
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "<b>Unarmed </b>\\nIncrease unarmed damage \\nReduce received unarmed damage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "提升拳掌伤害"
     translated: "Increase unarmed damage"
@@ -335,6 +394,10 @@
   splits:
   - text: "智力"
     translated: "Intelligence"
+    qcReviewedText: "<b>Intelligence</b>\\n+0.5% Hit Rate\\n+0.5% Force Deflection\\n+0.5% Debuff Potency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+0.5%命中"
     translated: "+0.5% Hit Rate"
@@ -350,6 +413,13 @@
   splits:
   - text: "木植"
     translated: "Planting"
+    qcReviewedText: "<b>Planting </b>\\nAffect acquisition of Sect grains/Herbs, and the efficiency of reinforcing regional defenses"
+    qcTranslated: "<b>Planting </b>\\nAffects the acquisition of Sect grains/Herbs, and the efficiency of reinforcing regional defenses"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "影响获取门派粮食"
     translated: "Affect acquisition of Sect grains"
@@ -381,6 +451,10 @@
   splits:
   - text: "灵巧"
     translated: "Agility"
+    qcReviewedText: "<b>Agility</b>\\n+0.5% Speed\\n+0.5% Dodge\\n+0.5 Max Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+0.5%速度"
     translated: "+0.5% Speed"
@@ -441,6 +515,10 @@
   splits:
   - text: "经脉"
     translated: "Meridian"
+    qcReviewedText: "<b>Meridian</b>\\n+2Max Inner Power\\n+0.5% Combo\\n+0.5% Recovery Rate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+2内力上限"
     translated: "+2Max Inner Power"
@@ -456,6 +534,10 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
+    qcReviewedText: "<b>Special Technique</b>\\n+1% Max Health"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "+1%生命上限"
     translated: "+1% Max Health"
@@ -1101,6 +1183,15 @@
   splits:
   - text: "自定义选项会在"
     translated: "Custom options will be available in"
+    qcReviewedText: "♦Custom options will be available in <b>Based on the selected difficulty </b>Have an impact\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Each 10 point increases the Maximum Talent Points for difficulty +1.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
+    qcTranslated: "♦Custom options will have an impact <b>based on the selected difficulty</b>\\n♦Achievements can only be obtained when the Overall Balance is set to Balanced/Hard/Very Hard/Extreme\\n♦Each 10 point of difficulty increases the Maximum Talent Points by +1.\\n♦It is recommended to understand the game mechanics before adjusting the custom options."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - MeaningReversal
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "所选难度基础上"
     translated: "Based on the selected difficulty"
@@ -1166,6 +1257,10 @@
   splits:
   - text: "达成结局解锁对应传承天赋"
     translated: "Achieve the ending to unlock corresponding legacy talents"
+    qcReviewedText: "♦Achieve the ending to unlock corresponding legacy talents(Does not occupy a talent slot)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "不占用天赋栏位"
     translated: "Does not occupy a talent slot"
@@ -1175,6 +1270,13 @@
   splits:
   - text: "选出价值最贵的珍宝。"
     translated: "Choose the most expensive treasure"
+    qcReviewedText: "♦Choose the most expensive treasure\\n♦<b>Knowledge </b>Can increase the ability to identify treasures"
+    qcTranslated: "♦Choose the most expensive treasure\\n♦<b>Knowledge</b> can increase the ability to identify treasures"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "学识"
     translated: "Knowledge"
@@ -1187,6 +1289,10 @@
   splits:
   - text: "随机三种技艺作为议题，每次辩论会更换新议题。"
     translated: "Randomly select three arts as topics for each debate session, with new topics chosen for each meeting."
+    qcReviewedText: "♦Randomly select three arts as topics for each debate session, with new topics chosen for each meeting.\\n♦Knowledge determines the strength of hand cards and the probability of special cards.\\n♦Eloquence determines initial patience, the number of hand cards, and the types of special cards."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "学识决定手牌强度和特殊牌概率。"
     translated: "Knowledge determines the strength of hand cards and the probability of special cards."
@@ -1603,6 +1709,10 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
+    qcReviewedText: "Poisoned\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -1978,6 +2088,10 @@
   splits:
   - text: "休息"
     translated: "Rest"
+    qcReviewedText: "Rest(Shortcut keys S)\\n♦Health+1% Inner Power+2%\\n♦Stamina+10\\n♦Recovery of 5% lost posture"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "快捷键"
     translated: "Shortcut keys"
@@ -2155,16 +2269,28 @@
   splits:
   - text: "体质"
     translated: "Constitution"
+    qcReviewedText: "Constitution"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "体质+5"
   splits:
   - text: "体质"
     translated: "Constitution"
+    qcReviewedText: "Constitution+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+5"
 - raw: "体质+5\\n意志+5"
   splits:
   - text: "体质"
     translated: "Constitution"
+    qcReviewedText: "Constitution+5 \\nWillpower+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "意志"
     translated: "Willpower"
@@ -2174,6 +2300,14 @@
   splits:
   - text: "作为仙霞派弟子，体验一个小门派在江湖变局之中的恩怨浮沉。"
     translated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu."
+    qcReviewedText: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu.\\n<color=green>Unlock special intimate interactions with characters through the storyline/Recruit</color>\\n(I recommend using Sword Technique/Unarmed character)"
+    qcTranslated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu.\\n<color=green>Unlock special character intimacy/recruitment through the storyline</color>\\n(I recommend using Sword Technique/Unarmed characters)"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "通过剧情解锁特殊角色的亲密"
     translated: "Unlock special intimate interactions with characters through the storyline"
@@ -2244,6 +2378,10 @@
   splits:
   - text: "使用调息"
     translated: "Use Breath Regulation"
+    qcReviewedText: "Use Breath Regulation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "使用道具"
   splits:
   - text: "使用道具"
@@ -2695,6 +2833,10 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
+    qcReviewedText: "Internal Injury\\n‑0.5% All Attributes\\n‑0.5% Max Inner Power\\n‑0.25% Max Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -2726,6 +2868,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "Neigong+5 \\nKnowledge+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "学识"
     translated: "Knowledge"
@@ -2825,6 +2971,10 @@
   splits:
   - text: "减伤100%"
     translated: "Damage Reduction100%"
+    qcReviewedText: "Damage Reduction100%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "减少潜力\\n按住左shift连减5点"
   splits:
   - text: "减少潜力"
@@ -2929,16 +3079,28 @@
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法+5"
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "Blade Technique+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+5"
 - raw: "刀法+5\\n烹饪+5"
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "Blade Technique+5 \\nCooking+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "烹饪"
     translated: "Cooking"
@@ -3105,16 +3267,28 @@
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法+5"
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+5"
 - raw: "剑法+5\\n医术+5"
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique+5 \\nMedical Arts+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "医术"
     translated: "Medical Arts"
@@ -3124,6 +3298,10 @@
   splits:
   - text: "剑法武器"
     translated: "Sword Technique weapon"
+    qcReviewedText: "Sword Technique weapon"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剧情"
   splits:
   - text: "剧情"
@@ -3194,6 +3372,10 @@
   splits:
   - text: "力道"
     translated: "Strength"
+    qcReviewedText: "Strength+5 \\nConstitution+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "体质"
     translated: "Constitution"
@@ -3203,6 +3385,10 @@
   splits:
   - text: "力道"
     translated: "Strength"
+    qcReviewedText: "Strength+5 \\nAgility+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "灵巧"
     translated: "Agility"
@@ -3326,16 +3512,28 @@
   splits:
   - text: "医术"
     translated: "Medical Arts"
+    qcReviewedText: "Medical Arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "医术 99"
   splits:
   - text: "医术"
     translated: "Medical Arts"
+    qcReviewedText: "Medical Arts 99"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0} 99"
 - raw: "医术+10\\n炼药+10"
   splits:
   - text: "医术"
     translated: "Medical Arts"
+    qcReviewedText: "Medical Arts+10 \\nAlchemy+10"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "炼药"
     translated: "Alchemy"
@@ -3832,6 +4030,10 @@
   splits:
   - text: "基础生命上限"
     translated: "Base Max Health"
+    qcReviewedText: "Base Max Health 200"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0} 200"
 - raw: "增加潜力\\n按住左shift连加5点"
@@ -3898,6 +4100,10 @@
   splits:
   - text: "外伤"
     translated: "External Injury"
+    qcReviewedText: "External Injury\\n‑0.5% All Attributes\\n‑0.5% Max Health\\n‑0.25% Max Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
     translated: "‑0.5% All Attributes"
@@ -3961,6 +4167,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天赋点 99"
   splits:
   - text: "天赋点"
@@ -4056,6 +4266,10 @@
   splits:
   - text: "奇门武器"
     translated: "Qimen weapons"
+    qcReviewedText: "Qimen weapons"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奈何天妒英才，不久竟突发恶疾，中道崩殂。"
   splits:
   - text: "奈何天妒英才，不久竟突发恶疾，中道崩殂。"
@@ -4211,10 +4425,18 @@
   splits:
   - text: "学识"
     translated: "Knowledge"
+    qcReviewedText: "Knowledge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "学识+10\\n口才+10"
   splits:
   - text: "学识"
     translated: "Knowledge"
+    qcReviewedText: "Knowledge+10 \\nEloquence+10"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "口才"
     translated: "Eloquence"
@@ -4520,6 +4742,10 @@
   splits:
   - text: "射术武器"
     translated: "Archery weapons"
+    qcReviewedText: "Archery weapons"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "小周天"
   splits:
   - text: "小周天"
@@ -5637,6 +5863,10 @@
   splits:
   - text: "招架"
     translated: "Block"
+    qcReviewedText: "Block(Shortcut keys C)\\n♦Stamina+5\\n♦Recovery of 15% lost posture"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "快捷键"
     translated: "Shortcut keys"
@@ -5652,16 +5882,28 @@
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌+5"
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "Unarmed+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+5"
 - raw: "拳掌+5\\n木植+5"
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "Unarmed+5 \\nPlanting+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "木植"
     translated: "Planting"
@@ -5671,6 +5913,10 @@
   splits:
   - text: "拳掌兵器"
     translated: "Unarmed weapons"
+    qcReviewedText: "Unarmed weapons\\n(consumption)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "（消耗）"
     translated: "(consumption)"
@@ -5680,6 +5926,10 @@
   splits:
   - text: "拳掌武器"
     translated: "Unarmed weapons"
+    qcReviewedText: "Unarmed weapons"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "持有"
   splits:
   - text: "持有"
@@ -5773,6 +6023,10 @@
   splits:
   - text: "探索度60%"
     translated: "Explore Level 60%"
+    qcReviewedText: "Explore Level 60%\\nRecovery of 15% of endurance consumed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "恢复15%已消耗耐力"
     translated: "Recovery of 15% of endurance consumed"
@@ -5782,6 +6036,10 @@
   splits:
   - text: "探索度80%"
     translated: "Explore Level 80%"
+    qcReviewedText: "Explore Level 80%\\nRecovery of 10% of endurance consumed \\nReveal the final position"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "恢复10%已消耗耐力"
     translated: "Recovery of 10% of endurance consumed"
@@ -6067,14 +6325,26 @@
   splits:
   - text: "无敌剑法功法"
     translated: "Invincible Sword Technique Kung Fu Method"
+    qcReviewedText: "Invincible Sword Technique Kung Fu Method"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "无敌无敌无敌"
   splits:
   - text: "无敌无敌无敌"
     translated: "Invincible, invincible, invincible"
+    qcReviewedText: "Invincible, invincible, invincible"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "无敌牌 至交(100) 11111"
   splits:
   - text: "无敌牌"
     translated: "Invincible Card"
+    qcReviewedText: "Invincible Card Best friend(100) 11111"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "至交"
     translated: "Best friend"
@@ -6352,6 +6622,10 @@
   splits:
   - text: "木植"
     translated: "Planting"
+    qcReviewedText: "Planting"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "未获取"
   splits:
   - text: "未获取"
@@ -6372,6 +6646,10 @@
   splits:
   - text: "机关伤害"
     translated: "Mechanism damage"
+    qcReviewedText: "Mechanism damage+10%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+10%"
 - raw: "机关耐久+10%"
@@ -6718,6 +6996,10 @@
   splits:
   - text: "死战"
     translated: "Last Stand"
+    qcReviewedText: "Last Stand"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "每10日"
   splits:
   - text: "每10日"
@@ -7275,16 +7557,28 @@
   splits:
   - text: "灵巧"
     translated: "Agility"
+    qcReviewedText: "Agility"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵巧+5"
   splits:
   - text: "灵巧"
     translated: "Agility"
+    qcReviewedText: "Agility+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}+5"
 - raw: "灵巧+5\\n经脉+5"
   splits:
   - text: "灵巧"
     translated: "Agility"
+    qcReviewedText: "Agility+5 \\nMeridian+5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "经脉"
     translated: "Meridian"
@@ -7294,6 +7588,10 @@
   splits:
   - text: "灼烧"
     translated: "Burned"
+    qcReviewedText: "Burned: Reduce opponent's current health by 5% inner power, 5% health, 5% inner power, 5% health, 5% inner power, 5% health each turn."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "每回合减少对手当前血量5%内力5%血量5%内力5%血量5%内力5%"
     translated: "Reduce opponent's current health by 5% inner power, 5% health, 5% inner power, 5% health, 5% inner power, 5% health each turn."
@@ -7484,12 +7782,12 @@
   - text: "猪皮无敌"
     translated: "Skin as Strong as Pig Leather Invincible"
     qcReviewedText: "Skin as Strong as Pig Leather Invincible"
-    qcTranslated: "Unbeatable Pigskin"
+    qcTranslated: "Pigskin Invincible"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
+    - UnnaturalPhrasing
 - raw: "猪皮无敌使用"
   splits:
   - text: "猪皮无敌使用"
@@ -7595,6 +7893,10 @@
   splits:
   - text: "疗伤休养"
     translated: "Injury treatment and rest"
+    qcReviewedText: "Injury treatment and rest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "瘟疫"
   splits:
   - text: "瘟疫"
@@ -7959,6 +8261,10 @@
   splits:
   - text: "立场"
     translated: "Stance"
+    qcReviewedText: "Stance Confusion Neutral"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "混乱"
     translated: "Confusion"
@@ -8104,6 +8410,10 @@
   splits:
   - text: "等级加成"
     translated: "Level bonus"
+    qcReviewedText: "Level bonus \\nUnarmed Power +10%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌威力"
     translated: "Unarmed Power"
@@ -8479,6 +8789,10 @@
   splits:
   - text: "耐药性100%"
     translated: "Resistance: 100%"
+    qcReviewedText: "Resistance: 100%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "耗内"
   splits:
   - text: "耗内"
@@ -8632,6 +8946,10 @@
   splits:
   - text: "自巫峡东至西陵峡，群山皆连绵无断处，怪石穿空，奇峰耸峙。"
     translated: "From the eastern Wu Gorge to the western Xiling Gorge, the mountains stretch in a continuous line without interruption, with strange rocks piercing the sky and bizarre peaks standing tall."
+    qcReviewedText: "From the eastern Wu Gorge to the western Xiling Gorge, the mountains stretch in a continuous line without interruption, with strange rocks piercing the sky and bizarre peaks standing tall."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "自由模式"
   splits:
   - text: "自由模式"
@@ -9190,6 +9508,10 @@
   splits:
   - text: "调息"
     translated: "Breath Regulation"
+    qcReviewedText: "Breath Regulation(Shortcut keys X)\\n♦Health+5% Inner Power+10%\\n♦Stamina+30\\n♦Recovery of 10% of lost posture"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "快捷键"
     translated: "Shortcut keys"

@@ -54,6 +54,10 @@
   - split: 2
     text: "马和驴杂交而成，体质结实，肢蹄强健，多见于民间"
     translated: "A hybrid of a horse and a donkey, with a sturdy constitution and strong limbs and hooves, commonly found among the people."
+    qcReviewedText: "A hybrid of a horse and a donkey, with a sturdy constitution and strong limbs and hooves, commonly found among the people."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "1,驴子,四肢瘦弱，躯干短小的畜类，速度缓慢但刻苦耐劳,0,5,20,5,20,200"
   splits:
   - split: 2
@@ -122,6 +126,10 @@
   - split: 2
     text: "体质强健的高头大马，武林人士常用"
     translated: "A sturdy, well‑built horse with strong constitution, often used by Wulin figures."
+    qcReviewedText: "A sturdy, well‑built horse with strong constitution, often used by Wulin figures."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "9,烈马,性格爆裂，难以驾驭的马匹，狂奔时速度极快,1,45,10,35,10,400"
   splits:
   - split: 2

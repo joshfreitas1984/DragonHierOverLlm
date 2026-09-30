@@ -273,6 +273,10 @@
   - split: 3
     text: "闯荡江湖，只要练好轻功就行。"
     translated: "Venturing into Jianghu just requires mastering Qinggong"
+    qcReviewedText: "Venturing into Jianghu just requires mastering Qinggong \\nWant to fight, go fight; want to leave, go leave‑aren't you invincible under heaven?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 3
     subIndex: 1
     text: "想打就打，想走就走，岂不是天下无敌？"
@@ -357,6 +361,10 @@
   - split: 11
     text: "习武之路罕有捷径，唯稳扎稳打，日夜苦练一途，"
     translated: "The path of martial arts offers no shortcuts; one must steadily and tirelessly train day and night."
+    qcReviewedText: "The path of martial arts offers no shortcuts; one must steadily and tirelessly train day and night.\\nOne must then embark on the righteous path of martial arts to reach the realm where the benevolent are invincible."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "方能踏上武学正道，抵达仁者无敌之境。"
@@ -589,6 +597,13 @@
   - split: 3
     text: "#PlayerName#，你这身形笨重，步伐迟缓，"
     translated: "#PlayerName#, your movements are slow and cumbersome"
+    qcReviewedText: "#PlayerName#, your movements are slow and cumbersome \\nI still need to practice my qinggong more."
+    qcTranslated: "#PlayerName#, your movements are slow and cumbersome \\nYou still need to practice your Qinggong more."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - split: 3
     subIndex: 1
     text: "还得多练练轻功才行。"

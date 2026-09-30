@@ -283,6 +283,10 @@
   - split: 1
     text: "天赋异禀"
     translated: "Gifted and Talented"
+    qcReviewedText: "Gifted and Talented"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 2
     text: "累计领悟30次天赋"
     translated: "Accumulated 30 times mastering talents"

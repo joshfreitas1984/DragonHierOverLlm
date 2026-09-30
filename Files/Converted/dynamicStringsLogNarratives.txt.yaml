@@ -229,12 +229,26 @@
   splits:
   - text: "吉星高照，得到一枚灵果，服食后内力上限增加"
     translated: "Lucky stars shine bright, received a Spirit Fruit, after consuming it, Max Inner Power increased."
+    qcReviewedText: "{0} Lucky stars shine bright, received a Spirit Fruit, after consuming it, Max Inner Power increased.{1}。"
+    qcTranslated: "{0} Lucky stars shine bright, received a Spirit Fruit, after consuming it, Max Inner Power increased by {1}."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}吉星高照，得到一株异草，服食后生命上限增加{1}。"
   splits:
   - text: "吉星高照，得到一株异草，服食后生命上限增加"
     translated: "Your luck is shining bright; you've obtained a strange herb. After consuming it, your Max Health increases."
+    qcReviewedText: "{0} Your luck is shining bright; you've obtained a strange herb. After consuming it, your Max Health increases.{1}。"
+    qcTranslated: "{0} Your luck is shining bright; you've obtained a strange herb. After consuming it, your Max Health increases by {1}."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   templates:
   - template: "⟦0⟧{0}⟦1⟧。"
 - raw: "{0}向{3}仓库捐赠了{1}，获取功绩{2}"
@@ -638,6 +652,13 @@
   splits:
   - text: "在"
     translated: "In"
+    qcReviewedText: "{0} In {1} Ended the imprisonment, restoring freedom"
+    qcTranslated: "{0} ended their imprisonment in {1}, recovering their freedom."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "结束关押，恢复了自由之身。"
     translated: "Ended the imprisonment, restoring freedom"

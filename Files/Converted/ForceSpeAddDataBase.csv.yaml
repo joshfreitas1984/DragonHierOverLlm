@@ -86,6 +86,10 @@
   - split: 2
     text: "实战经验"
     translated: "Practical experience"
+    qcReviewedText: "Practical experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "7,理论经验,理论经验,TRUE,0.01"
   splits:
   - split: 2
@@ -100,21 +104,37 @@
   - split: 2
     text: "疗伤效率"
     translated: "Injury Treatment Efficiency"
+    qcReviewedText: "Injury Treatment Efficiency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "9,本地疗伤效率,本地疗伤效率,TRUE,0.05"
   splits:
   - split: 2
     text: "本地疗伤效率"
     translated: "Local Injury Treatment Efficiency"
+    qcReviewedText: "Local Injury Treatment Efficiency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "10,日常恢复效率,日常恢复效率,TRUE,0.02"
   splits:
   - split: 2
     text: "日常恢复效率"
     translated: "Daily Recovery Rate"
+    qcReviewedText: "Daily Recovery Rate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "11,本地恢复效率,本地恢复效率,TRUE,0.1"
   splits:
   - split: 2
     text: "本地恢复效率"
     translated: "Local Recovery Rate"
+    qcReviewedText: "Local Recovery Rate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "12,建造速度,建造速度,TRUE,0.02"
   splits:
   - split: 2
@@ -156,6 +176,10 @@
   - split: 2
     text: "技艺经验"
     translated: "Skill experience"
+    qcReviewedText: "Skill experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "17,内功经验,内功经验,TRUE,0.02"
   splits:
   - split: 2
@@ -188,11 +212,19 @@
   - split: 2
     text: "拳掌经验"
     translated: "Unarmed Experience"
+    qcReviewedText: "Unarmed Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "21,剑法经验,剑法经验,TRUE,0.02"
   splits:
   - split: 2
     text: "剑法经验"
     translated: "Sword Technique Experience"
+    qcReviewedText: "Sword Technique Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "22,刀法经验,刀法经验,TRUE,0.02"
   splits:
   - split: 2
@@ -243,16 +275,28 @@
   - split: 2
     text: "毒术经验"
     translated: "Poison Experience"
+    qcReviewedText: "Poison Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "28,学识经验,学识经验,TRUE,0.02"
   splits:
   - split: 2
     text: "学识经验"
     translated: "Knowledge Experience"
+    qcReviewedText: "Knowledge Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "29,口才经验,口才经验,TRUE,0.02"
   splits:
   - split: 2
     text: "口才经验"
     translated: "Eloquence Experience"
+    qcReviewedText: "Eloquence Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "30,采伐经验,采伐经验,TRUE,0.02"
   splits:
   - split: 2
@@ -276,11 +320,19 @@
   - split: 2
     text: "锻造经验"
     translated: "Forging Experience"
+    qcReviewedText: "Forging Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "33,炼药经验,炼药经验,TRUE,0.02"
   splits:
   - split: 2
     text: "炼药经验"
     translated: "Alchemy Experience"
+    qcReviewedText: "Alchemy Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "34,烹饪经验,烹饪经验,TRUE,0.02"
   splits:
   - split: 2
@@ -313,6 +365,10 @@
   - split: 2
     text: "全员智力"
     translated: "All Intelligence"
+    qcReviewedText: "All Intelligence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "38,全员意志,全员意志,FALSE,1"
   splits:
   - split: 2
@@ -372,16 +428,28 @@
   - split: 2
     text: "全员拳掌"
     translated: "All Unarmed"
+    qcReviewedText: "All Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "45,全员剑法,全员剑法,FALSE,1"
   splits:
   - split: 2
     text: "全员剑法"
     translated: "All Sword Techniques"
+    qcReviewedText: "All Sword Techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "46,全员刀法,全员刀法,FALSE,1"
   splits:
   - split: 2
     text: "全员刀法"
     translated: "All Blade Techniques"
+    qcReviewedText: "All Blade Techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "47,全员长兵,全员长兵,FALSE,1"
   splits:
   - split: 2
@@ -414,6 +482,10 @@
   - split: 2
     text: "全员医术"
     translated: "All Medical"
+    qcReviewedText: "All Medical"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "51,全员毒术,全员毒术,FALSE,1"
   splits:
   - split: 2

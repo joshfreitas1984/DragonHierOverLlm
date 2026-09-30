@@ -1115,6 +1115,10 @@
   splits:
   - text: "腊八粥"
     translated: "Laba Porridge"
+    qcReviewedText: "Laba Porridge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "炖老母鸡"
   splits:
   - text: "炖老母鸡"
@@ -2273,18 +2277,34 @@
   splits:
   - text: "疗伤效率"
     translated: "Injury Treatment Efficiency"
+    qcReviewedText: "Injury Treatment Efficiency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "本地疗伤效率"
   splits:
   - text: "本地疗伤效率"
     translated: "Local Injury Treatment Efficiency"
+    qcReviewedText: "Local Injury Treatment Efficiency"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "日常恢复效率"
   splits:
   - text: "日常恢复效率"
     translated: "Daily Recovery Rate"
+    qcReviewedText: "Daily Recovery Rate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "本地恢复效率"
   splits:
   - text: "本地恢复效率"
     translated: "Local Recovery Rate"
+    qcReviewedText: "Local Recovery Rate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "建造速度"
   splits:
   - text: "建造速度"
@@ -2321,6 +2341,10 @@
   splits:
   - text: "技艺经验"
     translated: "Skill experience"
+    qcReviewedText: "Skill experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内功经验"
   splits:
   - text: "内功经验"
@@ -2349,10 +2373,18 @@
   splits:
   - text: "拳掌经验"
     translated: "Unarmed Experience"
+    qcReviewedText: "Unarmed Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法经验"
   splits:
   - text: "剑法经验"
     translated: "Sword Technique Experience"
+    qcReviewedText: "Sword Technique Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法经验"
   splits:
   - text: "刀法经验"
@@ -2397,14 +2429,26 @@
   splits:
   - text: "毒术经验"
     translated: "Poison Experience"
+    qcReviewedText: "Poison Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "学识经验"
   splits:
   - text: "学识经验"
     translated: "Knowledge Experience"
+    qcReviewedText: "Knowledge Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "口才经验"
   splits:
   - text: "口才经验"
     translated: "Eloquence Experience"
+    qcReviewedText: "Eloquence Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "采伐经验"
   splits:
   - text: "采伐经验"
@@ -2417,14 +2461,26 @@
   splits:
   - text: "木植经验"
     translated: "Planting experience"
+    qcReviewedText: "Planting experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "锻造经验"
   splits:
   - text: "锻造经验"
     translated: "Forging Experience"
+    qcReviewedText: "Forging Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "炼药经验"
   splits:
   - text: "炼药经验"
     translated: "Alchemy Experience"
+    qcReviewedText: "Alchemy Experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "烹饪经验"
   splits:
   - text: "烹饪经验"
@@ -2445,10 +2501,18 @@
   splits:
   - text: "全员灵巧"
     translated: "All Agility"
+    qcReviewedText: "All Agility"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员智力"
   splits:
   - text: "全员智力"
     translated: "All Intelligence"
+    qcReviewedText: "All Intelligence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员意志"
   splits:
   - text: "全员意志"
@@ -2461,6 +2525,10 @@
   splits:
   - text: "全员体质"
     translated: "All Constitution"
+    qcReviewedText: "All Constitution"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员经脉"
   splits:
   - text: "全员经脉"
@@ -2497,6 +2565,10 @@
   splits:
   - text: "全员拳掌"
     translated: "All Unarmed"
+    qcReviewedText: "All Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员剑法"
   splits:
   - text: "全员剑法"
@@ -2533,22 +2605,42 @@
   splits:
   - text: "全员射术"
     translated: "All Archery"
+    qcReviewedText: "All Archery"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员医术"
   splits:
   - text: "全员医术"
     translated: "All Medical"
+    qcReviewedText: "All Medical"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员毒术"
   splits:
   - text: "全员毒术"
     translated: "All Poison Arts"
+    qcReviewedText: "All Poison Arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员学识"
   splits:
   - text: "全员学识"
     translated: "All Knowledge"
+    qcReviewedText: "All Knowledge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员口才"
   splits:
   - text: "全员口才"
     translated: "All Eloquence"
+    qcReviewedText: "All Eloquence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员采伐"
   splits:
   - text: "全员采伐"
@@ -2561,18 +2653,34 @@
   splits:
   - text: "全员木植"
     translated: "All Planting"
+    qcReviewedText: "All Planting"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员锻造"
   splits:
   - text: "全员锻造"
     translated: "All Forging"
+    qcReviewedText: "All Forging"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员炼药"
   splits:
   - text: "全员炼药"
     translated: "All Alchemy"
+    qcReviewedText: "All Alchemy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "全员烹饪"
   splits:
   - text: "全员烹饪"
     translated: "All Cooking"
+    qcReviewedText: "All Cooking"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "藏经容量"
   splits:
   - text: "藏经容量"
@@ -3034,10 +3142,18 @@
   splits:
   - text: "孔武有力"
     translated: "Mighty and Strong"
+    qcReviewedText: "Mighty and Strong"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拔山扛鼎"
   splits:
   - text: "拔山扛鼎"
     translated: "Herculean Strength"
+    qcReviewedText: "Herculean Strength"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手疾眼快"
   splits:
   - text: "手疾眼快"
@@ -3050,122 +3166,242 @@
   splits:
   - text: "七窍玲珑"
     translated: "Ingenious Mind"
+    qcReviewedText: "Ingenious Mind"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足智多谋"
   splits:
   - text: "足智多谋"
     translated: "Resourceful and Cunning"
+    qcReviewedText: "Resourceful and Cunning"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "聪慧绝伦"
   splits:
   - text: "聪慧绝伦"
     translated: "Peerless Cleverness"
+    qcReviewedText: "Peerless Cleverness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "动心忍性"
   splits:
   - text: "动心忍性"
     translated: "Steadfast Resolve"
+    qcReviewedText: "Steadfast Resolve"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "百折不挠"
   splits:
   - text: "百折不挠"
     translated: "Indomitable perseverance"
+    qcReviewedText: "Indomitable perseverance"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "强身健体"
   splits:
   - text: "强身健体"
     translated: "Strengthening the body and building health"
+    qcReviewedText: "Strengthening the body and building health"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "钢筋铁骨"
   splits:
   - text: "钢筋铁骨"
     translated: "Iron Bones and Steel Sinews"
+    qcReviewedText: "Iron Bones and Steel Sinews"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "运气自如"
   splits:
   - text: "运气自如"
     translated: "Masterful Qi Control"
+    qcReviewedText: "Masterful Qi Control"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇经八脉"
   splits:
   - text: "奇经八脉"
     translated: "Eight Extraordinary Meridians"
+    qcReviewedText: "Eight Extraordinary Meridians"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内家"
   splits:
   - text: "内家"
     translated: "Neigong"
+    qcReviewedText: "Neigong"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内力精纯"
   splits:
   - text: "内力精纯"
     translated: "Refined Inner Power"
+    qcReviewedText: "Refined Inner Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "炉火纯青"
   splits:
   - text: "炉火纯青"
     translated: "Perfect Mastery"
+    qcReviewedText: "Perfect Mastery"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "飞檐走壁"
   splits:
   - text: "飞檐走壁"
     translated: "Wall‑Running and Roof‑Leaping"
+    qcReviewedText: "Wall‑Running and Roof‑Leaping"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "神出鬼没"
   splits:
   - text: "神出鬼没"
     translated: "Elusive as a Phantom"
+    qcReviewedText: "Elusive as a Phantom"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "身怀绝技"
   splits:
   - text: "身怀绝技"
     translated: "Master of Special Techniques"
+    qcReviewedText: "Master of Special Techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝艺超群"
   splits:
   - text: "绝艺超群"
     translated: "Peerless Skill"
+    qcReviewedText: "Peerless Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳不离手"
   splits:
   - text: "拳不离手"
     translated: "Constant Practice"
+    qcReviewedText: "Constant Practice"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁手钢拳"
   splits:
   - text: "铁手钢拳"
     translated: "Iron Hands and Steel Fists"
+    qcReviewedText: "Iron Hands and Steel Fists"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "御剑"
   splits:
   - text: "御剑"
     translated: "Sword Manipulation"
+    qcReviewedText: "Sword Manipulation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑随意动"
   splits:
   - text: "剑随意动"
     translated: "Sword Follows the Will"
+    qcReviewedText: "Sword Follows the Will"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "人剑合一"
   splits:
   - text: "人剑合一"
     translated: "Unity of Sword and Self"
+    qcReviewedText: "Unity of Sword and Self"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "耍刀"
   splits:
   - text: "耍刀"
     translated: "Saber Techniques"
+    qcReviewedText: "Saber Techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "横刀跃马"
   splits:
   - text: "横刀跃马"
     translated: "Saber in Hand, Horse at the Ready"
+    qcReviewedText: "Saber in Hand, Horse at the Ready"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "一刀两断"
   splits:
   - text: "一刀两断"
     translated: "Cut Clean in Two"
+    qcReviewedText: "Cut Clean in Two"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "舞枪弄棍"
   splits:
   - text: "舞枪弄棍"
     translated: "Master of Spears and Staves"
+    qcReviewedText: "Master of Spears and Staves"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "枪扫六合"
   splits:
   - text: "枪扫六合"
     translated: "Spear Sweeps the Six Directions"
+    qcReviewedText: "Spear Sweeps the Six Directions"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "旁门左道"
   splits:
   - text: "旁门左道"
     translated: "Qimen Methods"
+    qcReviewedText: "Qimen Methods"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇门遁甲"
   splits:
   - text: "奇门遁甲"
     translated: "Qimen Arts"
+    qcReviewedText: "Qimen Arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "百步穿杨"
   splits:
   - text: "百步穿杨"
     translated: "Hit a Willow Leaf from a Hundred Paces"
+    qcReviewedText: "Hit a Willow Leaf from a Hundred Paces"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "例无虚发"
   splits:
   - text: "例无虚发"
     translated: "Never Miss a Shot"
+    qcReviewedText: "Never Miss a Shot"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "外门"
   splits:
   - text: "外门"
@@ -3186,22 +3422,42 @@
   splits:
   - text: "刀枪不入"
     translated: "Invulnerable to Blades and Spears"
+    qcReviewedText: "Invulnerable to Blades and Spears"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "掌风"
   splits:
   - text: "掌风"
     translated: "Palm wind"
+    qcReviewedText: "Palm wind"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "排山倒海"
   splits:
   - text: "排山倒海"
     translated: "Overwhelming like waves crashing against mountains"
+    qcReviewedText: "Overwhelming like waves crashing against mountains"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑气"
   splits:
   - text: "剑气"
     translated: "Sword Qi"
+    qcReviewedText: "Sword Qi"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "气冲斗牛"
   splits:
   - text: "气冲斗牛"
     translated: "Qi Pierces the Heavens"
+    qcReviewedText: "Qi Pierces the Heavens"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀锋"
   splits:
   - text: "刀锋"
@@ -3214,22 +3470,42 @@
   splits:
   - text: "削铁无声"
     translated: "Slices Through Iron in Silence"
+    qcReviewedText: "Slices Through Iron in Silence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "枪芒"
   splits:
   - text: "枪芒"
     translated: "Spear Aura"
+    qcReviewedText: "Spear Aura"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "枪出如龙"
   splits:
   - text: "枪出如龙"
     translated: "Spear Strikes Like a Dragon"
+    qcReviewedText: "Spear Strikes Like a Dragon"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇技"
   splits:
   - text: "奇技"
     translated: "Amazing Skill"
+    qcReviewedText: "Amazing Skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇异莫名"
   splits:
   - text: "奇异莫名"
     translated: "Mysterious beyond comprehension"
+    qcReviewedText: "Mysterious beyond comprehension"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "惊弓"
   splits:
   - text: "惊弓"
@@ -3242,10 +3518,18 @@
   splits:
   - text: "摘叶飞花"
     translated: "Plucking Leaves and Sending Flowers"
+    qcReviewedText: "Plucking Leaves and Sending Flowers"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "脱胎换骨"
   splits:
   - text: "脱胎换骨"
     translated: "Reborn and transformed"
+    qcReviewedText: "Reborn and transformed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "0"
   splits:
   - text: "0"
@@ -3258,30 +3542,58 @@
   splits:
   - text: "羽化登仙"
     translated: "Ascend to Immortality by Shedding Mortality"
+    qcReviewedText: "Ascend to Immortality by Shedding Mortality"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "不老长生"
   splits:
   - text: "不老长生"
     translated: "Eternal Youthfulness"
+    qcReviewedText: "Eternal Youthfulness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内息灼热"
   splits:
   - text: "内息灼热"
     translated: "Inner Qi burns hot"
+    qcReviewedText: "Inner Qi burns hot"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "焚身烈焰"
   splits:
   - text: "焚身烈焰"
     translated: "Burning Corpse Flame"
+    qcReviewedText: "Burning Corpse Flame"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内息冰寒"
   splits:
   - text: "内息冰寒"
     translated: "Inner Qi chills"
+    qcReviewedText: "Inner Qi chills"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刺骨奇寒"
   splits:
   - text: "刺骨奇寒"
     translated: "Piercing cold"
+    qcReviewedText: "Piercing cold"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "阴阳调和"
   splits:
   - text: "阴阳调和"
     translated: "Yin and Yang in harmony"
+    qcReviewedText: "Yin and Yang in harmony"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内息灼热;内息冰寒;炉火纯青"
   splits:
   - text: "内息灼热"
@@ -3298,34 +3610,66 @@
   splits:
   - text: "先天真气"
     translated: "Innate True Qi"
+    qcReviewedText: "Innate True Qi"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "万物归墟"
   splits:
   - text: "万物归墟"
     translated: "All Things Return to the Void"
+    qcReviewedText: "All Things Return to the Void"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "混元一气"
   splits:
   - text: "混元一气"
     translated: "Primordial Vital Energy"
+    qcReviewedText: "Primordial Vital Energy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "至阳至刚"
   splits:
   - text: "至阳至刚"
     translated: "Utmost Yang and Utmost Rigidity"
+    qcReviewedText: "Utmost Yang and Utmost Rigidity"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "至阴至柔"
   splits:
   - text: "至阴至柔"
     translated: "Extremely Yin and Extremely Gentle"
+    qcReviewedText: "Extremely Yin and Extremely Gentle"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刚柔并济"
   splits:
   - text: "刚柔并济"
     translated: "Balance of hardness and softness"
+    qcReviewedText: "Balance of hardness and softness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "物我两忘"
   splits:
   - text: "物我两忘"
     translated: "Losing oneself in the object"
+    qcReviewedText: "Losing oneself in the object"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "移形换位"
   splits:
   - text: "移形换位"
     translated: "Shape‑Shifting Technique"
+    qcReviewedText: "Shape‑Shifting Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "陆地飞行"
   splits:
   - text: "陆地飞行"
@@ -3338,110 +3682,218 @@
   splits:
   - text: "扭转乾坤"
     translated: "Turn the Tide of Heaven and Earth"
+    qcReviewedText: "Turn the Tide of Heaven and Earth"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "不动如山"
   splits:
   - text: "不动如山"
     translated: "As still as a mountain"
+    qcReviewedText: "As still as a mountain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "神鬼莫测"
   splits:
   - text: "神鬼莫测"
     translated: "Inscrutable to gods and ghosts"
+    qcReviewedText: "Inscrutable to gods and ghosts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "以劲御气"
   splits:
   - text: "以劲御气"
     translated: "Control qi with strength"
+    qcReviewedText: "Control qi with strength"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "艺成百家"
   splits:
   - text: "艺成百家"
     translated: "Mastering skills from a hundred schools"
+    qcReviewedText: "Mastering skills from a hundred schools"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "武学宗师"
   splits:
   - text: "武学宗师"
     translated: "Martial Arts Master"
+    qcReviewedText: "Martial Arts Master"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "返璞归真"
   splits:
   - text: "返璞归真"
     translated: "Return to simplicity and authenticity"
+    qcReviewedText: "Return to simplicity and authenticity"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "起死回生"
   splits:
   - text: "起死回生"
     translated: "Bring back to life"
+    qcReviewedText: "Bring back to life"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天人合一"
   splits:
   - text: "天人合一"
     translated: "Oneness with heaven and humanity"
+    qcReviewedText: "Oneness with heaven and humanity"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "功德圆满"
   splits:
   - text: "功德圆满"
     translated: "Merit complete"
+    qcReviewedText: "Merit complete"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "即身成佛"
   splits:
   - text: "即身成佛"
     translated: "Achieve Buddhahood in This Body"
+    qcReviewedText: "Achieve Buddhahood in This Body"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "太极圆转"
   splits:
   - text: "太极圆转"
     translated: "Tai Chi Circles Rotating"
+    qcReviewedText: "Tai Chi Circles Rotating"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轰天震地"
   splits:
   - text: "轰天震地"
     translated: "Earth‑shaking and heaven‑shattering"
+    qcReviewedText: "Earth‑shaking and heaven‑shattering"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "十殿阎王"
   splits:
   - text: "十殿阎王"
     translated: "Ten Kings of the Underworld"
+    qcReviewedText: "Ten Kings of the Underworld"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力降十会"
   splits:
   - text: "力降十会"
     translated: "Reduce Strength by Ten Levels"
+    qcReviewedText: "Reduce Strength by Ten Levels"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "术精岐黄"
   splits:
   - text: "术精岐黄"
     translated: "Master the Art of Qihuang"
+    qcReviewedText: "Master the Art of Qihuang"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "妙手回春"
   splits:
   - text: "妙手回春"
     translated: "Revive with Skilled Hands"
+    qcReviewedText: "Revive with Skilled Hands"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "五毒俱全"
   splits:
   - text: "五毒俱全"
     translated: "Guilty of Every Vice"
+    qcReviewedText: "Guilty of Every Vice"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "见血封喉"
   splits:
   - text: "见血封喉"
     translated: "Deadly Venom Touch"
+    qcReviewedText: "Deadly Venom Touch"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "见多识广"
   splits:
   - text: "见多识广"
     translated: "Well‑traveled and experienced"
+    qcReviewedText: "Well‑traveled and experienced"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "学富五车"
   splits:
   - text: "学富五车"
     translated: "Well‑versed and erudite"
+    qcReviewedText: "Well‑versed and erudite"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "口齿伶俐"
   splits:
   - text: "口齿伶俐"
     translated: "Quick‑witted and articulate"
+    qcReviewedText: "Quick‑witted and articulate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "舌灿莲花"
   splits:
   - text: "舌灿莲花"
     translated: "Tongue as eloquent as blooming lotus flowers"
+    qcReviewedText: "Tongue as eloquent as blooming lotus flowers"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "劈荆斩棘"
   splits:
   - text: "劈荆斩棘"
     translated: "Chopping through thorns and brambles"
+    qcReviewedText: "Chopping through thorns and brambles"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铸山煮海"
   splits:
   - text: "铸山煮海"
     translated: "Forge mountains and boil the sea"
+    qcReviewedText: "Forge mountains and boil the sea"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "精耕细作"
   splits:
   - text: "精耕细作"
     translated: "Cultivate with care and precision"
+    qcReviewedText: "Cultivate with care and precision"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "万木争荣"
   splits:
   - text: "万木争荣"
     translated: "Ten Thousand Trees Compete for Glory"
+    qcReviewedText: "Ten Thousand Trees Compete for Glory"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "千锤百炼"
   splits:
   - text: "千锤百炼"
@@ -3454,18 +3906,34 @@
   splits:
   - text: "鬼斧神工"
     translated: "Magnificent craftsmanship beyond mortal skill"
+    qcReviewedText: "Magnificent craftsmanship beyond mortal skill"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "对症下药"
   splits:
   - text: "对症下药"
     translated: "Tailor the remedy to the illness"
+    qcReviewedText: "Tailor the remedy to the illness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "烩不厌细"
   splits:
   - text: "烩不厌细"
     translated: "More meticulous, the better"
+    qcReviewedText: "More meticulous, the better"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "炮凤烹龙"
   splits:
   - text: "炮凤烹龙"
     translated: "Serving dragons and phoenixes in a feast"
+    qcReviewedText: "Serving dragons and phoenixes in a feast"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "毒医"
   splits:
   - text: "毒医"
@@ -3478,6 +3946,10 @@
   splits:
   - text: "医毒"
     translated: "Medicine and Poison"
+    qcReviewedText: "Medicine and Poison"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "以毒攻毒"
   splits:
   - text: "以毒攻毒"
@@ -3490,6 +3962,10 @@
   splits:
   - text: "毒手药王"
     translated: "Poisonous Hand Medicine King"
+    qcReviewedText: "Poisonous Hand Medicine King"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "强壮"
   splits:
   - text: "强壮"
@@ -3502,26 +3978,50 @@
   splits:
   - text: "瘦弱"
     translated: "Weak and frail"
+    qcReviewedText: "Weak and frail"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "魁梧奇伟"
   splits:
   - text: "魁梧奇伟"
     translated: "Towering and majestic"
+    qcReviewedText: "Towering and majestic"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天生神力"
   splits:
   - text: "天生神力"
     translated: "Blessed with divine strength"
+    qcReviewedText: "Blessed with divine strength"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "瘦骨嶙峋"
   splits:
   - text: "瘦骨嶙峋"
     translated: "Emaciated and bony"
+    qcReviewedText: "Emaciated and bony"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "缚鸡之力"
   splits:
   - text: "缚鸡之力"
     translated: "Scant strength to catch a chicken"
+    qcReviewedText: "Scant strength to catch a chicken"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机敏"
   splits:
   - text: "机敏"
     translated: "Alertness"
+    qcReviewedText: "Alertness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "笨拙"
   splits:
   - text: "笨拙"
@@ -3534,38 +4034,74 @@
   splits:
   - text: "随机应变"
     translated: "Adapt to the situation as it arises"
+    qcReviewedText: "Adapt to the situation as it arises"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "巧捷万端"
   splits:
   - text: "巧捷万端"
     translated: "Adroit and versatile in every way"
+    qcReviewedText: "Adroit and versatile in every way"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "笨手笨脚"
   splits:
   - text: "笨手笨脚"
     translated: "Clumsy and awkward"
+    qcReviewedText: "Clumsy and awkward"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "东倒西歪"
   splits:
   - text: "东倒西歪"
     translated: "Staggering and reeling"
+    qcReviewedText: "Staggering and reeling"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "聪慧"
   splits:
   - text: "聪慧"
     translated: "Cleverness"
+    qcReviewedText: "Cleverness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天资过人"
   splits:
   - text: "天资过人"
     translated: "Outstanding natural talent"
+    qcReviewedText: "Outstanding natural talent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "旷世奇才"
   splits:
   - text: "旷世奇才"
     translated: "Prodigy of the Ages"
+    qcReviewedText: "Prodigy of the Ages"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "傻头傻脑"
   splits:
   - text: "傻头傻脑"
     translated: "Clueless and foolish"
+    qcReviewedText: "Clueless and foolish"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "痴傻蒙昧"
   splits:
   - text: "痴傻蒙昧"
     translated: "Foolish and ignorant"
+    qcReviewedText: "Foolish and ignorant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "勇敢"
   splits:
   - text: "勇敢"
@@ -3594,18 +4130,34 @@
   splits:
   - text: "临危不乱"
     translated: "Stay calm in times of crisis"
+    qcReviewedText: "Stay calm in times of crisis"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "战战兢兢"
   splits:
   - text: "战战兢兢"
     translated: "Trembling with fear"
+    qcReviewedText: "Trembling with fear"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胆小如鼠"
   splits:
   - text: "胆小如鼠"
     translated: "Cowardly as a mouse"
+    qcReviewedText: "Cowardly as a mouse"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "康健"
   splits:
   - text: "康健"
     translated: "Well‑being"
+    qcReviewedText: "Well‑being"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "病体"
   splits:
   - text: "病体"
@@ -3618,34 +4170,66 @@
   splits:
   - text: "容光焕发"
     translated: "Radiant and energetic"
+    qcReviewedText: "Radiant and energetic"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "百病不侵"
   splits:
   - text: "百病不侵"
     translated: "Invulnerable to all illnesses"
+    qcReviewedText: "Invulnerable to all illnesses"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "多病"
   splits:
   - text: "多病"
     translated: "Chronic illnesses"
+    qcReviewedText: "Chronic illnesses"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "身心交病"
   splits:
   - text: "身心交病"
     translated: "Mentally and physically exhausted"
+    qcReviewedText: "Mentally and physically exhausted"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "旧病沉疴"
   splits:
   - text: "旧病沉疴"
     translated: "Chronic old illness"
+    qcReviewedText: "Chronic old illness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "顺脉"
   splits:
   - text: "顺脉"
     translated: "Follow the meridian"
+    qcReviewedText: "Follow the meridian"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "滞脉"
   splits:
   - text: "滞脉"
     translated: "Obstructed Pulse"
+    qcReviewedText: "Obstructed Pulse"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "脉络贯通"
   splits:
   - text: "脉络贯通"
     translated: "Meridians connected"
+    qcReviewedText: "Meridians connected"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "先天气海"
   splits:
   - text: "先天气海"
@@ -3658,34 +4242,66 @@
   splits:
   - text: "脉络阻塞"
     translated: "Blocked meridians"
+    qcReviewedText: "Blocked meridians"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉断绝"
   splits:
   - text: "经脉断绝"
     translated: "Meridian blockage"
+    qcReviewedText: "Meridian blockage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "正直"
   splits:
   - text: "正直"
     translated: "Upright"
+    qcReviewedText: "Upright"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "阴险"
   splits:
   - text: "阴险"
     translated: "Treacherous"
+    qcReviewedText: "Treacherous"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "公正不阿"
   splits:
   - text: "公正不阿"
     translated: "Impartial and upright"
+    qcReviewedText: "Impartial and upright"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "浩气凛然"
   splits:
   - text: "浩气凛然"
     translated: "Dignified and Sternly Righteous"
+    qcReviewedText: "Dignified and Sternly Righteous"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "不择手段"
   splits:
   - text: "不择手段"
     translated: "By any means necessary"
+    qcReviewedText: "By any means necessary"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "笑里藏刀"
   splits:
   - text: "笑里藏刀"
     translated: "Smiling but hiding a dagger"
+    qcReviewedText: "Smiling but hiding a dagger"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "残忍"
   splits:
   - text: "残忍"
@@ -3698,10 +4314,18 @@
   splits:
   - text: "宅心仁厚"
     translated: "Benevolent and kind‑hearted"
+    qcReviewedText: "Benevolent and kind‑hearted"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "慈悲为怀"
   splits:
   - text: "慈悲为怀"
     translated: "Be merciful and compassionate"
+    qcReviewedText: "Be merciful and compassionate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心狠手辣"
   splits:
   - text: "心狠手辣"
@@ -3714,6 +4338,10 @@
   splits:
   - text: "灭心绝情"
     translated: "Heartless and Unfeeling"
+    qcReviewedText: "Heartless and Unfeeling"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "暴躁"
   splits:
   - text: "暴躁"
@@ -3742,34 +4370,66 @@
   splits:
   - text: "性烈如火"
     translated: "Temper as fierce as fire"
+    qcReviewedText: "Temper as fierce as fire"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "怒发冲冠"
   splits:
   - text: "怒发冲冠"
     translated: "Hair standing on end in rage"
+    qcReviewedText: "Hair standing on end in rage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "幸运"
   splits:
   - text: "幸运"
     translated: "Lucky"
+    qcReviewedText: "Lucky"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "不幸"
   splits:
   - text: "不幸"
     translated: "Misfortune"
+    qcReviewedText: "Misfortune"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "福星高照"
   splits:
   - text: "福星高照"
     translated: "Good fortune shines brightly"
+    qcReviewedText: "Good fortune shines brightly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "吉人天相"
   splits:
   - text: "吉人天相"
     translated: "Heaven favors the virtuous"
+    qcReviewedText: "Heaven favors the virtuous"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "命途多舛"
   splits:
   - text: "命途多舛"
     translated: "Fate full of twists and turns"
+    qcReviewedText: "Fate full of twists and turns"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天煞孤星"
   splits:
   - text: "天煞孤星"
     translated: "Fated Star of Solitude and Calamity"
+    qcReviewedText: "Fated Star of Solitude and Calamity"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "美貌"
   splits:
   - text: "美貌"
@@ -3790,26 +4450,50 @@
   splits:
   - text: "明眸皓齿"
     translated: "Bright eyes and white teeth"
+    qcReviewedText: "Bright eyes and white teeth"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "倾国倾城"
   splits:
   - text: "倾国倾城"
     translated: "Bewitching beauty"
+    qcReviewedText: "Bewitching beauty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "面目狰狞"
   splits:
   - text: "面目狰狞"
     translated: "Frightening visage"
+    qcReviewedText: "Frightening visage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "百丑千拙"
   splits:
   - text: "百丑千拙"
     translated: "A thousand flaws and a hundred uglinesses"
+    qcReviewedText: "A thousand flaws and a hundred uglinesses"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "锐眼"
   splits:
   - text: "锐眼"
     translated: "Sharp‑eyed"
+    qcReviewedText: "Sharp‑eyed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "弱视"
   splits:
   - text: "弱视"
     translated: "Low vision"
+    qcReviewedText: "Low vision"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "目光炯炯"
   splits:
   - text: "目光炯炯"
@@ -3822,38 +4506,74 @@
   splits:
   - text: "明察秋毫"
     translated: "Perceive the subtle details"
+    qcReviewedText: "Perceive the subtle details"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "视线模糊"
   splits:
   - text: "视线模糊"
     translated: "Vision blurred"
+    qcReviewedText: "Vision blurred"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "雾里看花"
   splits:
   - text: "雾里看花"
     translated: "Seeing flowers through a fog"
+    qcReviewedText: "Seeing flowers through a fog"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "谦逊"
   splits:
   - text: "谦逊"
     translated: "Modesty"
+    qcReviewedText: "Modesty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刚愎"
   splits:
   - text: "刚愎"
     translated: "Stubbornly self‑willed"
+    qcReviewedText: "Stubbornly self‑willed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "不骄不躁"
   splits:
   - text: "不骄不躁"
     translated: "Neither arrogant nor impatient"
+    qcReviewedText: "Neither arrogant nor impatient"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "虚怀若谷"
   splits:
   - text: "虚怀若谷"
     translated: "Humble as an empty valley"
+    qcReviewedText: "Humble as an empty valley"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "盛气凌人"
   splits:
   - text: "盛气凌人"
     translated: "Arrogant and overbearing"
+    qcReviewedText: "Arrogant and overbearing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "唯我独尊"
   splits:
   - text: "唯我独尊"
     translated: "I am supreme"
+    qcReviewedText: "I am supreme"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "忠诚"
   splits:
   - text: "忠诚"
@@ -3866,18 +4586,34 @@
   splits:
   - text: "忠心耿耿"
     translated: "Loyal and devoted"
+    qcReviewedText: "Loyal and devoted"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "至死不渝"
   splits:
   - text: "至死不渝"
     translated: "Forever Faithful Until Death"
+    qcReviewedText: "Forever Faithful Until Death"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "桀骜不驯"
   splits:
   - text: "桀骜不驯"
     translated: "Rebellious and unruly"
+    qcReviewedText: "Rebellious and unruly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "离经叛道"
   splits:
   - text: "离经叛道"
     translated: "Deviate from the norms"
+    qcReviewedText: "Deviate from the norms"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "勤奋"
   splits:
   - text: "勤奋"
@@ -3890,26 +4626,50 @@
   splits:
   - text: "懒惰"
     translated: "Lazy"
+    qcReviewedText: "Lazy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "孜孜不倦"
   splits:
   - text: "孜孜不倦"
     translated: "Diligently without rest"
+    qcReviewedText: "Diligently without rest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "废寝忘食"
   splits:
   - text: "废寝忘食"
     translated: "Forget to Eat and Sleep"
+    qcReviewedText: "Forget to Eat and Sleep"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "游手好闲"
   splits:
   - text: "游手好闲"
     translated: "Idle and lazy"
+    qcReviewedText: "Idle and lazy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "无所用心"
   splits:
   - text: "无所用心"
     translated: "Idle thoughts"
+    qcReviewedText: "Idle thoughts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "节俭"
   splits:
   - text: "节俭"
     translated: "Thrifty"
+    qcReviewedText: "Thrifty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "浪费"
   splits:
   - text: "浪费"
@@ -3922,30 +4682,58 @@
   splits:
   - text: "精打细算"
     translated: "Being thrifty and calculating carefully"
+    qcReviewedText: "Being thrifty and calculating carefully"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "取予有节"
   splits:
   - text: "取予有节"
     translated: "Take and give in moderation"
+    qcReviewedText: "Take and give in moderation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "挥霍无度"
   splits:
   - text: "挥霍无度"
     translated: "Living extravagantly"
+    qcReviewedText: "Living extravagantly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "穷奢极欲"
   splits:
   - text: "穷奢极欲"
     translated: "Extreme luxury and indulgence"
+    qcReviewedText: "Extreme luxury and indulgence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "练武"
   splits:
   - text: "练武"
     translated: "Practicing martial arts"
+    qcReviewedText: "Practicing martial arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "武痴"
   splits:
   - text: "武痴"
     translated: "Wu Maniac"
+    qcReviewedText: "Wu Maniac"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "武学天才"
   splits:
   - text: "武学天才"
     translated: "Martial Arts Genius"
+    qcReviewedText: "Martial Arts Genius"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "学医"
   splits:
   - text: "学医"
@@ -3958,58 +4746,114 @@
   splits:
   - text: "济世神医"
     translated: "Benevolent Divine Physician"
+    qcReviewedText: "Benevolent Divine Physician"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "习文"
   splits:
   - text: "习文"
     translated: "Study literature"
+    qcReviewedText: "Study literature"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "雅士"
   splits:
   - text: "雅士"
     translated: "Elegant Scholar"
+    qcReviewedText: "Elegant Scholar"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "文采斐然"
   splits:
   - text: "文采斐然"
     translated: "Outstanding literary talent"
+    qcReviewedText: "Outstanding literary talent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "务农"
   splits:
   - text: "务农"
     translated: "Farming"
+    qcReviewedText: "Farming"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "农家"
   splits:
   - text: "农家"
     translated: "Farm family"
+    qcReviewedText: "Farm family"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "在世神农"
   splits:
   - text: "在世神农"
     translated: "Living Divine Farmer"
+    qcReviewedText: "Living Divine Farmer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "能工巧匠"
   splits:
   - text: "能工巧匠"
     translated: "Skilled Artisans"
+    qcReviewedText: "Skilled Artisans"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经商"
   splits:
   - text: "经商"
     translated: "Doing business"
+    qcReviewedText: "Doing business"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "善贾"
   splits:
   - text: "善贾"
     translated: "Shrewd merchant"
+    qcReviewedText: "Shrewd merchant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "囤积居奇"
   splits:
   - text: "囤积居奇"
     translated: "Hoarding for speculative profit"
+    qcReviewedText: "Hoarding for speculative profit"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "从政"
   splits:
   - text: "从政"
     translated: "Entering politics"
+    qcReviewedText: "Entering politics"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "仕官"
   splits:
   - text: "仕官"
     translated: "Official position"
+    qcReviewedText: "Official position"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "位极人臣"
   splits:
   - text: "位极人臣"
     translated: "Reaching the pinnacle of human nobility"
+    qcReviewedText: "Reaching the pinnacle of human nobility"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "杂学"
   splits:
   - text: "杂学"
@@ -4022,14 +4866,26 @@
   splits:
   - text: "通才"
     translated: "Jack‑of‑all‑Trades"
+    qcReviewedText: "Jack‑of‑all‑Trades"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "博学多才"
   splits:
   - text: "博学多才"
     translated: "Well‑versed and talented"
+    qcReviewedText: "Well‑versed and talented"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "淡泊"
   splits:
   - text: "淡泊"
     translated: "Indifferent"
+    qcReviewedText: "Indifferent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "隐士"
   splits:
   - text: "隐士"
@@ -4042,10 +4898,18 @@
   splits:
   - text: "避世绝俗"
     translated: "Shun the world and transcend the secular world"
+    qcReviewedText: "Shun the world and transcend the secular world"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "儒术"
   splits:
   - text: "儒术"
     translated: "Confucian arts"
+    qcReviewedText: "Confucian arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "儒生"
   splits:
   - text: "儒生"
@@ -4058,18 +4922,34 @@
   splits:
   - text: "鸿儒大学"
     translated: "Hongru University"
+    qcReviewedText: "Hongru University"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "修道"
   splits:
   - text: "修道"
     translated: "Cultivate Dao"
+    qcReviewedText: "Cultivate Dao"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "道士"
   splits:
   - text: "道士"
     translated: "Taoist priest"
+    qcReviewedText: "Taoist priest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "仙风道骨"
   splits:
   - text: "仙风道骨"
     translated: "Hermitic grace and Taoist bone structure"
+    qcReviewedText: "Hermitic grace and Taoist bone structure"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "学佛"
   splits:
   - text: "学佛"
@@ -4090,6 +4970,10 @@
   splits:
   - text: "四大皆空"
     translated: "Four Great Empties"
+    qcReviewedText: "Four Great Empties"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "行乞"
   splits:
   - text: "行乞"
@@ -4102,6 +4986,10 @@
   splits:
   - text: "化缘"
     translated: "Begging for alms"
+    qcReviewedText: "Begging for alms"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "游戏人间"
   splits:
   - text: "游戏人间"
@@ -4114,30 +5002,58 @@
   splits:
   - text: "卜算"
     translated: "Divination"
+    qcReviewedText: "Divination"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "相士"
   splits:
   - text: "相士"
     translated: "Fortune‑teller"
+    qcReviewedText: "Fortune‑teller"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "未卜先知"
   splits:
   - text: "未卜先知"
     translated: "Foreseeing the unseen"
+    qcReviewedText: "Foreseeing the unseen"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "侠义无双"
   splits:
   - text: "侠义无双"
     translated: "Unparalleled Chivalry"
+    qcReviewedText: "Unparalleled Chivalry"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "嗜赌如命"
   splits:
   - text: "嗜赌如命"
     translated: "Obsessed with gambling"
+    qcReviewedText: "Obsessed with gambling"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "赌运亨通"
   splits:
   - text: "赌运亨通"
     translated: "Fortunate Gambler's Luck"
+    qcReviewedText: "Fortunate Gambler's Luck"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "酒鬼"
   splits:
   - text: "酒鬼"
     translated: "Alcoholic"
+    qcReviewedText: "Alcoholic"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "放歌纵酒"
   splits:
   - text: "放歌纵酒"
@@ -4150,18 +5066,34 @@
   splits:
   - text: "醉生梦死"
     translated: "Living in drunken dreams, dying without regrets"
+    qcReviewedText: "Living in drunken dreams, dying without regrets"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "食客"
   splits:
   - text: "食客"
     translated: "Customer"
+    qcReviewedText: "Customer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "大快朵颐"
   splits:
   - text: "大快朵颐"
     translated: "Feast heartily"
+    qcReviewedText: "Feast heartily"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "饕餮盛宴"
   splits:
   - text: "饕餮盛宴"
     translated: "Feast of epic proportions"
+    qcReviewedText: "Feast of epic proportions"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "收藏"
   splits:
   - text: "收藏"
@@ -4174,26 +5106,50 @@
   splits:
   - text: "去伪存真"
     translated: "Discard the false and keep the true"
+    qcReviewedText: "Discard the false and keep the true"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "慧眼独具"
   splits:
   - text: "慧眼独具"
     translated: "Having keen eyes"
+    qcReviewedText: "Having keen eyes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "骑术"
   splits:
   - text: "骑术"
     translated: "Riding skills"
+    qcReviewedText: "Riding skills"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "纵马驰骋"
   splits:
   - text: "纵马驰骋"
     translated: "Ride hard and fast"
+    qcReviewedText: "Ride hard and fast"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "一骑绝尘"
   splits:
   - text: "一骑绝尘"
     translated: "Leave All Others in the Dust"
+    qcReviewedText: "Leave All Others in the Dust"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "读书"
   splits:
   - text: "读书"
     translated: "Study reading"
+    qcReviewedText: "Study reading"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "博览群书"
   splits:
   - text: "博览群书"
@@ -4206,30 +5162,58 @@
   splits:
   - text: "皓首穷经"
     translated: "Devoting one's entire life to scholarly study"
+    qcReviewedText: "Devoting one's entire life to scholarly study"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "瑶琴"
   splits:
   - text: "瑶琴"
     translated: "Yaoqin"
+    qcReviewedText: "Yaoqin"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "余音绕梁"
   splits:
   - text: "余音绕梁"
     translated: "The music lingers in the air"
+    qcReviewedText: "The music lingers in the air"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "鸾吟凤唱"
   splits:
   - text: "鸾吟凤唱"
     translated: "Phoenix song and crane chant"
+    qcReviewedText: "Phoenix song and crane chant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "弈棋"
   splits:
   - text: "弈棋"
     translated: "Playing chess"
+    qcReviewedText: "Playing chess"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "棋高一着"
   splits:
   - text: "棋高一着"
     translated: "One move ahead in the game"
+    qcReviewedText: "One move ahead in the game"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "神机妙算"
   splits:
   - text: "神机妙算"
     translated: "Divine calculation and ingenious strategy"
+    qcReviewedText: "Divine calculation and ingenious strategy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "书法"
   splits:
   - text: "书法"
@@ -4242,10 +5226,18 @@
   splits:
   - text: "笔走龙蛇"
     translated: "Flowing like dragons and snakes"
+    qcReviewedText: "Flowing like dragons and snakes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁画银钩"
   splits:
   - text: "铁画银钩"
     translated: "Iron handwriting, silver hooks"
+    qcReviewedText: "Iron handwriting, silver hooks"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绘画"
   splits:
   - text: "绘画"
@@ -4258,22 +5250,42 @@
   splits:
   - text: "丹青妙手"
     translated: "Master of Skilled Brushwork"
+    qcReviewedText: "Master of Skilled Brushwork"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "妙至毫巅"
   splits:
   - text: "妙至毫巅"
     translated: "Perfection down to the finest detail"
+    qcReviewedText: "Perfection down to the finest detail"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "吟诗"
   splits:
   - text: "吟诗"
     translated: "Recite poetry"
+    qcReviewedText: "Recite poetry"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "文思泉涌"
   splits:
   - text: "文思泉涌"
     translated: "Inspiration flows like a fountain"
+    qcReviewedText: "Inspiration flows like a fountain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "七步成诗"
   splits:
   - text: "七步成诗"
     translated: "Poem in Seven Steps"
+    qcReviewedText: "Poem in Seven Steps"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "狩猎"
   splits:
   - text: "狩猎"
@@ -4286,54 +5298,106 @@
   splits:
   - text: "飞鹰走犬"
     translated: "Flying Eagles and Running Dogs"
+    qcReviewedText: "Flying Eagles and Running Dogs"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "苍鹰搏兔"
   splits:
   - text: "苍鹰搏兔"
     translated: "A hawk preying on a rabbit"
+    qcReviewedText: "A hawk preying on a rabbit"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "云游"
   splits:
   - text: "云游"
     translated: "Wandering Cloud Edge"
+    qcReviewedText: "Wandering Cloud Edge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "游山玩水"
   splits:
   - text: "游山玩水"
     translated: "Traveling and enjoying the scenery"
+    qcReviewedText: "Traveling and enjoying the scenery"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "浪迹天涯"
   splits:
   - text: "浪迹天涯"
     translated: "Wandering the ends of the earth"
+    qcReviewedText: "Wandering the ends of the earth"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "静修"
   splits:
   - text: "静修"
     translated: "Meditation retreat"
+    qcReviewedText: "Meditation retreat"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "蛰居偃伏"
   splits:
   - text: "蛰居偃伏"
     translated: "Lie in hiding"
+    qcReviewedText: "Lie in hiding"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "面壁功深"
   splits:
   - text: "面壁功深"
     translated: "Deep in wall‑gazing meditation"
+    qcReviewedText: "Deep in wall‑gazing meditation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "舞技"
   splits:
   - text: "舞技"
     translated: "Dance skills"
+    qcReviewedText: "Dance skills"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "舞态生风"
   splits:
   - text: "舞态生风"
     translated: "Dancing with the wind in motion"
+    qcReviewedText: "Dancing with the wind in motion"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "羽衣蹁跹"
   splits:
   - text: "羽衣蹁跹"
     translated: "Feathered robes dancing gracefully"
+    qcReviewedText: "Feathered robes dancing gracefully"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "随从"
   splits:
   - text: "随从"
     translated: "Follower"
+    qcReviewedText: "Follower"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "唯命是从"
   splits:
   - text: "唯命是从"
     translated: "Obey without question"
+    qcReviewedText: "Obey without question"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "精明强干"
   splits:
   - text: "精明强干"
@@ -4346,14 +5410,26 @@
   splits:
   - text: "军师"
     translated: "Advisor"
+    qcReviewedText: "Advisor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "排兵布阵"
   splits:
   - text: "排兵布阵"
     translated: "Deploying troops and arranging formations"
+    qcReviewedText: "Deploying troops and arranging formations"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "运筹帷幄"
   splits:
   - text: "运筹帷幄"
     translated: "Plan from a distance"
+    qcReviewedText: "Plan from a distance"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "领袖"
   splits:
   - text: "领袖"
@@ -4366,46 +5442,90 @@
   splits:
   - text: "胸怀大志"
     translated: "Aspiring for great ambitions"
+    qcReviewedText: "Aspiring for great ambitions"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "雄才伟略"
   splits:
   - text: "雄才伟略"
     translated: "Outstanding talent and grand strategy"
+    qcReviewedText: "Outstanding talent and grand strategy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "先锋"
   splits:
   - text: "先锋"
     translated: "Pioneer"
+    qcReviewedText: "Pioneer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奋勇当先"
   splits:
   - text: "奋勇当先"
     translated: "Charge forward with courage"
+    qcReviewedText: "Charge forward with courage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "背水一战"
   splits:
   - text: "背水一战"
     translated: "Fight with our backs against the water"
+    qcReviewedText: "Fight with our backs against the water"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "守备"
   splits:
   - text: "守备"
     translated: "Defense guard"
+    qcReviewedText: "Defense guard"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "戒备森严"
   splits:
   - text: "戒备森严"
     translated: "Tightly secured"
+    qcReviewedText: "Tightly secured"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "严防死守"
   splits:
   - text: "严防死守"
     translated: "Closely guard and defend"
+    qcReviewedText: "Closely guard and defend"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "游斗"
   splits:
   - text: "游斗"
     translated: "Sparring Match"
+    qcReviewedText: "Sparring Match"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "快步流星"
   splits:
   - text: "快步流星"
     translated: "Swift as a meteor"
+    qcReviewedText: "Swift as a meteor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "千里奔袭"
   splits:
   - text: "千里奔袭"
     translated: "Racing a thousand miles"
+    qcReviewedText: "Racing a thousand miles"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "精力充沛"
   splits:
   - text: "精力充沛"
@@ -4418,14 +5538,26 @@
   splits:
   - text: "微醺"
     translated: "Slightly tipsy"
+    qcReviewedText: "Slightly tipsy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "大醉"
   splits:
   - text: "大醉"
     translated: "Dead Drunk"
+    qcReviewedText: "Dead Drunk"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "酩酊"
   splits:
   - text: "酩酊"
     translated: "Intoxicated"
+    qcReviewedText: "Intoxicated"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "宴会无趣"
   splits:
   - text: "宴会无趣"
@@ -4446,18 +5578,34 @@
   splits:
   - text: "宴会满意"
     translated: "Dinner was satisfactory"
+    qcReviewedText: "Dinner was satisfactory"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "宴会欢喜"
   splits:
   - text: "宴会欢喜"
     translated: "Banquet joy"
+    qcReviewedText: "Banquet joy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "宴会极乐"
   splits:
   - text: "宴会极乐"
     translated: "Banquet of Extreme Bliss"
+    qcReviewedText: "Banquet of Extreme Bliss"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "赌运"
   splits:
   - text: "赌运"
     translated: "Gambler's luck"
+    qcReviewedText: "Gambler's luck"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "霉运"
   splits:
   - text: "霉运"
@@ -4470,14 +5618,26 @@
   splits:
   - text: "论胜"
     translated: "On Victory"
+    qcReviewedText: "On Victory"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "论败"
   splits:
   - text: "论败"
     translated: "On Defeat"
+    qcReviewedText: "On Defeat"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻症"
   splits:
   - text: "轻症"
     translated: "Minor injuries"
+    qcReviewedText: "Minor injuries"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "抱恙"
   splits:
   - text: "抱恙"
@@ -4498,6 +5658,10 @@
   splits:
   - text: "重症"
     translated: "Severe condition"
+    qcReviewedText: "Severe condition"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "危症"
   splits:
   - text: "危症"
@@ -4510,14 +5674,26 @@
   splits:
   - text: "气息不调"
     translated: "Imbalanced breath"
+    qcReviewedText: "Imbalanced breath"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内息紊乱"
   splits:
   - text: "内息紊乱"
     translated: "Disrupted Inner Qi"
+    qcReviewedText: "Disrupted Inner Qi"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉受阻"
   splits:
   - text: "经脉受阻"
     translated: "Blocked meridians"
+    qcReviewedText: "Blocked meridians"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "断臂"
   splits:
   - text: "断臂"
@@ -4530,10 +5706,18 @@
   splits:
   - text: "跛足"
     translated: "Lame‑legged"
+    qcReviewedText: "Lame‑legged"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "目渺"
   splits:
   - text: "目渺"
     translated: "Distant gaze"
+    qcReviewedText: "Distant gaze"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "理论心得"
   splits:
   - text: "理论心得"
@@ -4546,14 +5730,26 @@
   splits:
   - text: "实战心得"
     translated: "Practical Combat Insights"
+    qcReviewedText: "Practical Combat Insights"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关木臂"
   splits:
   - text: "机关木臂"
     translated: "Mechanism Arm"
+    qcReviewedText: "Mechanism Arm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关石臂"
   splits:
   - text: "机关石臂"
     translated: "Mechanism Stone Arm"
+    qcReviewedText: "Mechanism Stone Arm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关铁臂"
   splits:
   - text: "机关铁臂"
@@ -4566,6 +5762,10 @@
   splits:
   - text: "机关木轮"
     translated: "Mechanism Wood Wheel"
+    qcReviewedText: "Mechanism Wood Wheel"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关石轮"
   splits:
   - text: "机关石轮"
@@ -4586,26 +5786,50 @@
   splits:
   - text: "机关木甲"
     translated: "Mechanism Wooden Armor"
+    qcReviewedText: "Mechanism Wooden Armor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关石甲"
   splits:
   - text: "机关石甲"
     translated: "Mechanism Stone Armor"
+    qcReviewedText: "Mechanism Stone Armor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关铁甲"
   splits:
   - text: "机关铁甲"
     translated: "Mechanical Iron Armor"
+    qcReviewedText: "Mechanical Iron Armor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关大师"
   splits:
   - text: "机关大师"
     translated: "Master of Mechanisms"
+    qcReviewedText: "Master of Mechanisms"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "鲁班在世"
   splits:
   - text: "鲁班在世"
     translated: "If Lu Ban were alive"
+    qcReviewedText: "If Lu Ban were alive"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "机关义手"
   splits:
   - text: "机关义手"
     translated: "Mechanism prosthetic hand"
+    qcReviewedText: "Mechanism prosthetic hand"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手铐"
   splits:
   - text: "手铐"
@@ -4618,30 +5842,58 @@
   splits:
   - text: "脚镣"
     translated: "Fetters"
+    qcReviewedText: "Fetters"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "登顶泰岳"
   splits:
   - text: "登顶泰岳"
     translated: "Reaching the summit of Mount Tai"
+    qcReviewedText: "Reaching the summit of Mount Tai"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "负心人"
   splits:
   - text: "负心人"
     translated: "Unfaithful one"
+    qcReviewedText: "Unfaithful one"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "修行心得"
   splits:
   - text: "修行心得"
     translated: "Meditation Insights"
+    qcReviewedText: "Meditation Insights"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刮骨疗毒"
   splits:
   - text: "刮骨疗毒"
     translated: "Surgery to Remove Poison from the Bones"
+    qcReviewedText: "Surgery to Remove Poison from the Bones"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "百毒不侵"
   splits:
   - text: "百毒不侵"
     translated: "Poisonproof"
+    qcReviewedText: "Poisonproof"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "背叛师门"
   splits:
   - text: "背叛师门"
     translated: "Betraying one's master's school"
+    qcReviewedText: "Betraying one's master's school"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "合练心得"
   splits:
   - text: "合练心得"
@@ -4791,6 +6043,10 @@
   splits:
   - text: "灵巧1"
     translated: "Agility1"
+    qcReviewedText: "Agility1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功4;灵巧4;速度0.04"
   splits:
   - text: "轻功4"
@@ -4938,6 +6194,10 @@
   splits:
   - text: "意志1"
     translated: "Willpower1"
+    qcReviewedText: "Willpower1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限8;体质4;经脉4"
   splits:
   - text: "生命上限8"
@@ -4962,6 +6222,10 @@
   splits:
   - text: "拳掌1"
     translated: "Unarmed 1"
+    qcReviewedText: "Unarmed 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道2;拳掌1;内力0.3"
   splits:
   - text: "力道2"
@@ -5022,10 +6286,18 @@
   splits:
   - text: "拳掌5"
     translated: "Unarmed 5"
+    qcReviewedText: "Unarmed 5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "恢复0.06"
   splits:
   - text: "恢复0.06"
     translated: "Recovery 0.06"
+    qcReviewedText: "Recovery 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腹15"
   splits:
   - text: "腹15"
@@ -5054,14 +6326,26 @@
   splits:
   - text: "经脉1"
     translated: "Meridian 1"
+    qcReviewedText: "Meridian 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌2"
   splits:
   - text: "拳掌2"
     translated: "Unarmed 2"
+    qcReviewedText: "Unarmed 2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌10"
   splits:
   - text: "拳掌10"
     translated: "Unarmed 10"
+    qcReviewedText: "Unarmed 10"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头16"
   splits:
   - text: "头16"
@@ -5082,6 +6366,10 @@
   splits:
   - text: "御剑要术"
     translated: "Essential Sword Manipulation Technique"
+    qcReviewedText: "Essential Sword Manipulation Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法1"
   splits:
   - text: "剑法1"
@@ -5158,6 +6446,10 @@
   splits:
   - text: "通脉0.06"
     translated: "Unblock Meridians 0.06"
+    qcReviewedText: "Unblock Meridians 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足8"
   splits:
   - text: "足8"
@@ -5299,6 +6591,10 @@
   splits:
   - text: "蓄力0.06"
     translated: "Charging 0.06"
+    qcReviewedText: "Charging 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足18"
   splits:
   - text: "足18"
@@ -5471,6 +6767,10 @@
   splits:
   - text: "体质1"
     translated: "Constitution 1"
+    qcReviewedText: "Constitution 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵2"
   splits:
   - text: "长兵2"
@@ -5535,6 +6835,10 @@
   splits:
   - text: "震脑0.04"
     translated: "Mind Shock 0.04"
+    qcReviewedText: "Mind Shock 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头14"
   splits:
   - text: "头14"
@@ -5583,6 +6887,10 @@
   splits:
   - text: "压制0.04"
     translated: "Overwhelm 0.04"
+    qcReviewedText: "Overwhelm 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足15"
   splits:
   - text: "足15"
@@ -5627,6 +6935,10 @@
   splits:
   - text: "拉近2"
     translated: "Pull 2"
+    qcReviewedText: "Pull 2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手13"
   splits:
   - text: "手13"
@@ -5655,6 +6967,10 @@
   splits:
   - text: "射术1"
     translated: "Archery skills1"
+    qcReviewedText: "Archery skills1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵巧2;射术1;内力0.1"
   splits:
   - text: "灵巧2"
@@ -5715,10 +7031,18 @@
   splits:
   - text: "射术5"
     translated: "Archery skills5"
+    qcReviewedText: "Archery skills5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "目盲0.06"
   splits:
   - text: "目盲0.06"
     translated: "Blindness0.06"
+    qcReviewedText: "Blindness0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心20"
   splits:
   - text: "心20"
@@ -5747,14 +7071,26 @@
   splits:
   - text: "智力1"
     translated: "Intelligence 1"
+    qcReviewedText: "Intelligence 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "射术2"
   splits:
   - text: "射术2"
     translated: "Archery skills2"
+    qcReviewedText: "Archery skills2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "射术10"
   splits:
   - text: "射术10"
     translated: "Archery skills10"
+    qcReviewedText: "Archery skills10"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸20"
   splits:
   - text: "胸20"
@@ -5840,6 +7176,10 @@
   splits:
   - text: "舒筋通络法"
     translated: "Muscle Relaxation and Meridian Flow Technique"
+    qcReviewedText: "Muscle Relaxation and Meridian Flow Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内功1;灵巧1"
   splits:
   - text: "内功1"
@@ -6923,6 +8263,10 @@
   splits:
   - text: "拳掌15"
     translated: "Unarmed 15"
+    qcReviewedText: "Unarmed 15"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "命中0.06"
   splits:
   - text: "命中0.06"
@@ -7142,6 +8486,10 @@
   splits:
   - text: "虚弱0.06"
     translated: "Weakness0.06"
+    qcReviewedText: "Weakness0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头20"
   splits:
   - text: "头20"
@@ -7200,6 +8548,10 @@
   splits:
   - text: "活血0.06"
     translated: "Blood Circulation0.06"
+    qcReviewedText: "Blood Circulation0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腹18"
   splits:
   - text: "腹18"
@@ -7228,10 +8580,18 @@
   splits:
   - text: "拳掌3"
     translated: "Unarmed 3"
+    qcReviewedText: "Unarmed 3"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "连绵0.02"
   splits:
   - text: "连绵0.02"
     translated: "Flurry 0.02"
+    qcReviewedText: "Flurry 0.02"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手17"
   splits:
   - text: "手17"
@@ -7322,6 +8682,10 @@
   splits:
   - text: "眩晕0.02"
     translated: "Stunned 0.02"
+    qcReviewedText: "Stunned 0.02"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸5"
   splits:
   - text: "胸5"
@@ -7459,6 +8823,10 @@
   splits:
   - text: "雷电0.02"
     translated: "Lightning0.02"
+    qcReviewedText: "Lightning0.02"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心6"
   splits:
   - text: "心6"
@@ -7534,6 +8902,10 @@
   splits:
   - text: "迟缓0.08"
     translated: "Slowed 0.08"
+    qcReviewedText: "Slowed 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸12"
   splits:
   - text: "胸12"
@@ -7620,6 +8992,10 @@
   splits:
   - text: "急速0.06"
     translated: "Haste0.06"
+    qcReviewedText: "Haste0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心18"
   splits:
   - text: "心18"
@@ -7769,6 +9145,10 @@
   splits:
   - text: "八卦刀法"
     translated: "Bagua Blade Technique"
+    qcReviewedText: "Bagua Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法1;力道1"
   splits:
   - text: "刀法1"
@@ -7870,6 +9250,10 @@
   splits:
   - text: "暴击0.06"
     translated: "Critical hit 0.06"
+    qcReviewedText: "Critical hit 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心9"
   splits:
   - text: "心9"
@@ -7911,6 +9295,10 @@
   splits:
   - text: "压制0.06"
     translated: "Overwhelm 0.06"
+    qcReviewedText: "Overwhelm 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸19"
   splits:
   - text: "胸19"
@@ -7959,6 +9347,10 @@
   splits:
   - text: "霸体0.08"
     translated: "Super Armor0.08"
+    qcReviewedText: "Super Armor0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸14"
   splits:
   - text: "胸14"
@@ -7971,6 +9363,10 @@
   splits:
   - text: "辛酉刀法"
     translated: "Xin You Blade Technique"
+    qcReviewedText: "Xin You Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道1;智力1"
   splits:
   - text: "力道1"
@@ -8005,6 +9401,10 @@
   splits:
   - text: "重碾0.06"
     translated: "Crushing Blow 0.06"
+    qcReviewedText: "Crushing Blow 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头18"
   splits:
   - text: "头18"
@@ -8109,6 +9509,10 @@
   splits:
   - text: "青龙刀法"
     translated: "Azure Dragon Blade Technique"
+    qcReviewedText: "Azure Dragon Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法1;经脉1"
   splits:
   - text: "刀法1"
@@ -8134,6 +9538,10 @@
   splits:
   - text: "破甲0.06"
     translated: "Armor Break 0.06"
+    qcReviewedText: "Armor Break 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "南山刀法"
   splits:
   - text: "南山刀法"
@@ -8167,6 +9575,10 @@
   splits:
   - text: "横练0.06"
     translated: "Body Conditioning0.06"
+    qcReviewedText: "Body Conditioning0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足13"
   splits:
   - text: "足13"
@@ -8422,6 +9834,10 @@
   splits:
   - text: "弱点0.06"
     translated: "Weak Point0.06"
+    qcReviewedText: "Weak Point0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "杨家枪法"
   splits:
   - text: "杨家枪法"
@@ -8791,6 +10207,10 @@
   splits:
   - text: "断招0.1"
     translated: "Interrupt 0.1"
+    qcReviewedText: "Interrupt 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁蜈钩"
   splits:
   - text: "铁蜈钩"
@@ -8821,6 +10241,10 @@
   splits:
   - text: "拉近1"
     translated: "Pull 1"
+    qcReviewedText: "Pull 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "清凉扇法"
   splits:
   - text: "清凉扇法"
@@ -8854,6 +10278,10 @@
   splits:
   - text: "飘逸0.08"
     translated: "Graceful 0.08"
+    qcReviewedText: "Graceful 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "闪电五连鞭"
   splits:
   - text: "闪电五连鞭"
@@ -9049,6 +10477,10 @@
   splits:
   - text: "射术15"
     translated: "Archery skills15"
+    qcReviewedText: "Archery skills15"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "枣核钉"
   splits:
   - text: "枣核钉"
@@ -9091,6 +10523,10 @@
   splits:
   - text: "头颈点穴0.06"
     translated: "Seal Head Acupoints0.06"
+    qcReviewedText: "Seal Head Acupoints0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头3"
   splits:
   - text: "头3"
@@ -9238,6 +10674,10 @@
   splits:
   - text: "射术20"
     translated: "Archery skills20"
+    qcReviewedText: "Archery skills20"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "流血0.02"
   splits:
   - text: "流血0.02"
@@ -9304,6 +10744,10 @@
   splits:
   - text: "压制0.02"
     translated: "Overwhelm 0.02"
+    qcReviewedText: "Overwhelm 0.02"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头5"
   splits:
   - text: "头5"
@@ -10688,6 +12132,10 @@
   splits:
   - text: "眩晕0.04"
     translated: "Stunned 0.04"
+    qcReviewedText: "Stunned 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸12;手8"
   splits:
   - text: "胸12"
@@ -10867,6 +12315,10 @@
   splits:
   - text: "伤筋0.08"
     translated: "Muscle Injury 0.08"
+    qcReviewedText: "Muscle Injury 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手14;头6"
   splits:
   - text: "手14"
@@ -10991,6 +12443,10 @@
   splits:
   - text: "凝血0.08"
     translated: "Blood Coagulation0.08"
+    qcReviewedText: "Blood Coagulation0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心8;胸4"
   splits:
   - text: "心8"
@@ -11054,6 +12510,10 @@
   splits:
   - text: "壮骨0.08"
     translated: "Strengthen Bones 0.08"
+    qcReviewedText: "Strengthen Bones 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "大擒拿手"
   splits:
   - text: "大擒拿手"
@@ -11102,6 +12562,10 @@
   splits:
   - text: "断骨0.08"
     translated: "Broken bones 0.08"
+    qcReviewedText: "Broken bones 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手10;足10"
   splits:
   - text: "手10"
@@ -11165,6 +12629,10 @@
   splits:
   - text: "横练0.08"
     translated: "Body Conditioning0.08"
+    qcReviewedText: "Body Conditioning0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "二郎担山掌"
   splits:
   - text: "二郎担山掌"
@@ -11256,6 +12724,10 @@
   splits:
   - text: "急速0.08"
     translated: "Haste0.08"
+    qcReviewedText: "Haste0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "快慢十八路"
   splits:
   - text: "快慢十八路"
@@ -11358,6 +12830,10 @@
   splits:
   - text: "通脉0.08"
     translated: "Unblock Meridians 0.08"
+    qcReviewedText: "Unblock Meridians 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "北斗剑法"
   splits:
   - text: "北斗剑法"
@@ -11400,6 +12876,10 @@
   splits:
   - text: "弱点0.08"
     translated: "Weak Point0.08"
+    qcReviewedText: "Weak Point0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "雨打飞花剑"
   splits:
   - text: "雨打飞花剑"
@@ -11477,6 +12957,10 @@
   splits:
   - text: "内劲0.08"
     translated: "Inner Power0.08"
+    qcReviewedText: "Inner Power0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手8;心12"
   splits:
   - text: "手8"
@@ -11543,6 +13027,10 @@
   splits:
   - text: "雷电0.08"
     translated: "Lightning0.08"
+    qcReviewedText: "Lightning0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心22"
   splits:
   - text: "心22"
@@ -11607,6 +13095,10 @@
   splits:
   - text: "活血0.12"
     translated: "Blood Circulation0.12"
+    qcReviewedText: "Blood Circulation0.12"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足11;腹8"
   splits:
   - text: "足11"
@@ -11732,6 +13224,10 @@
   splits:
   - text: "冰寒0.08"
     translated: "Chill 0.08"
+    qcReviewedText: "Chill 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心9;腹11"
   splits:
   - text: "心9"
@@ -11860,6 +13356,10 @@
   splits:
   - text: "压制0.08"
     translated: "Overwhelm 0.08"
+    qcReviewedText: "Overwhelm 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "鸳鸯刀法"
   splits:
   - text: "鸳鸯刀法"
@@ -11970,6 +13470,10 @@
   splits:
   - text: "杀机0.08"
     translated: "Killing intent0.08"
+    qcReviewedText: "Killing intent0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸21"
   splits:
   - text: "胸21"
@@ -12026,6 +13530,10 @@
   splits:
   - text: "震脑0.08"
     translated: "Mind Shock 0.08"
+    qcReviewedText: "Mind Shock 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头9;心9"
   splits:
   - text: "头9"
@@ -12092,6 +13600,10 @@
   splits:
   - text: "定神0.08"
     translated: "Mind Calming 0.08"
+    qcReviewedText: "Mind Calming 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "百兽刀法"
   splits:
   - text: "百兽刀法"
@@ -12207,6 +13719,10 @@
   splits:
   - text: "破甲0.08"
     translated: "Armor Break 0.08"
+    qcReviewedText: "Armor Break 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心12;腹7"
   splits:
   - text: "心12"
@@ -12339,6 +13855,10 @@
   splits:
   - text: "蓄力0.08"
     translated: "Charging 0.08"
+    qcReviewedText: "Charging 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心8;腹10"
   splits:
   - text: "心8"
@@ -12405,6 +13925,10 @@
   splits:
   - text: "铜皮0.08"
     translated: "Copper skin0.08"
+    qcReviewedText: "Copper skin0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "六合大枪"
   splits:
   - text: "六合大枪"
@@ -12863,6 +14387,10 @@
   splits:
   - text: "震脑0.1"
     translated: "Mind Shock 0.1"
+    qcReviewedText: "Mind Shock 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "狂风扫雷扇"
   splits:
   - text: "狂风扫雷扇"
@@ -13041,6 +14569,10 @@
   splits:
   - text: "脆弱0.08"
     translated: "Vulnerable 0.08"
+    qcReviewedText: "Vulnerable 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心14;腹6"
   splits:
   - text: "心14"
@@ -13107,6 +14639,10 @@
   splits:
   - text: "连绵0.08"
     translated: "Flurry 0.08"
+    qcReviewedText: "Flurry 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头12;胸11"
   splits:
   - text: "头12"
@@ -13548,6 +15084,10 @@
   splits:
   - text: "混乱0.08"
     translated: "Confusion0.08"
+    qcReviewedText: "Confusion0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腹22"
   splits:
   - text: "腹22"
@@ -13721,6 +15261,10 @@
   splits:
   - text: "截脉0.08"
     translated: "Seal Meridians0.08"
+    qcReviewedText: "Seal Meridians0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁索渔网"
   splits:
   - text: "铁索渔网"
@@ -13754,6 +15298,10 @@
   splits:
   - text: "腿足点穴0.15"
     translated: "Seal Leg Acupoints 0.15"
+    qcReviewedText: "Seal Leg Acupoints 0.15"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腿23"
   splits:
   - text: "腿23"
@@ -13818,6 +15366,10 @@
   splits:
   - text: "目盲0.08"
     translated: "Blindness0.08"
+    qcReviewedText: "Blindness0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头7"
   splits:
   - text: "头7"
@@ -16991,6 +18543,10 @@
   splits:
   - text: "刀枪不入法"
     translated: "Invulnerable to Blades and Spears Technique"
+    qcReviewedText: "Invulnerable to Blades and Spears Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "绝技潜力1;体质潜力1;绝技1;体质1"
   splits:
   - text: "绝技潜力1"
@@ -17539,6 +19095,10 @@
   splits:
   - text: "万壑刀法"
     translated: "Wanhe Blade Technique"
+    qcReviewedText: "Wanhe Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法潜力2;刀法1;体质1"
   splits:
   - text: "刀法潜力2"
@@ -18587,6 +20147,10 @@
   splits:
   - text: "诛仙剑法"
     translated: "Zhu Xian Sword Technique"
+    qcReviewedText: "Zhu Xian Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法潜力2;灵巧潜力1;灵巧2"
   splits:
   - text: "剑法潜力2"
@@ -19119,6 +20683,10 @@
   splits:
   - text: "刑场刀法"
     translated: "Execution Grounds Blade Technique"
+    qcReviewedText: "Execution Grounds Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道2;刀法1;内力0.1"
   splits:
   - text: "力道2"
@@ -19265,6 +20833,10 @@
   splits:
   - text: "目盲0.14"
     translated: "Blindness0.14"
+    qcReviewedText: "Blindness0.14"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铜蟾蜍"
   splits:
   - text: "铜蟾蜍"
@@ -19457,6 +21029,10 @@
   splits:
   - text: "混乱0.15"
     translated: "Confusion0.15"
+    qcReviewedText: "Confusion0.15"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长乐刀法"
   splits:
   - text: "长乐刀法"
@@ -19499,6 +21075,10 @@
   splits:
   - text: "笑里藏刀式"
     translated: "Smiling but hiding a dagger technique"
+    qcReviewedText: "Smiling but hiding a dagger technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法30;力道25"
   splits:
   - text: "刀法30"
@@ -19759,6 +21339,10 @@
   splits:
   - text: "一刀两断法"
     translated: "Cut Clean in Two Method"
+    qcReviewedText: "Cut Clean in Two Method"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "力道2;刀法3;内力0.2"
   splits:
   - text: "力道2"
@@ -20474,6 +22058,10 @@
   splits:
   - text: "七窍玲珑功"
     translated: "Ingenious Mind Technique"
+    qcReviewedText: "Ingenious Mind Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限20;内力上限20;内功8;智力8;射术威力0.06"
   splits:
   - text: "生命上限20"
@@ -20908,6 +22496,10 @@
   splits:
   - text: "腿足点穴0.16"
     translated: "Seal Leg Acupoints 0.16"
+    qcReviewedText: "Seal Leg Acupoints 0.16"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足24"
   splits:
   - text: "足24"
@@ -22004,6 +23596,10 @@
   splits:
   - text: "手臂点穴0.15"
     translated: "Seal Arm Acupoints 0.15"
+    qcReviewedText: "Seal Arm Acupoints 0.15"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "化瘀掌"
   splits:
   - text: "化瘀掌"
@@ -22028,6 +23624,13 @@
   splits:
   - text: "医术10"
     translated: "Medical skills10"
+    qcReviewedText: "Medical skills10"
+    qcTranslated: "Medical Arts10"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
 - raw: "恢复0.03;康复0.03"
   splits:
   - text: "恢复0.03"
@@ -22070,6 +23673,10 @@
   splits:
   - text: "疗伤0.04"
     translated: "Injury Treatment 0.04"
+    qcReviewedText: "Injury Treatment 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "采补养元功"
   splits:
   - text: "采补养元功"
@@ -22336,6 +23943,10 @@
   splits:
   - text: "疗伤0.08"
     translated: "Injury Treatment 0.08"
+    qcReviewedText: "Injury Treatment 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "金针伐脉术"
   splits:
   - text: "金针伐脉术"
@@ -22487,6 +24098,13 @@
   splits:
   - text: "凝血指"
     translated: "Blood Coagulation Indicator"
+    qcReviewedText: "Blood Coagulation Indicator"
+    qcTranslated: "Blood Coagulation Finger"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
 - raw: "拳掌2;经脉1"
   splits:
   - text: "拳掌2"
@@ -22556,6 +24174,10 @@
   splits:
   - text: "内伤0.1"
     translated: "Internal Injury 0.1"
+    qcReviewedText: "Internal Injury 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "心18;胸6"
   splits:
   - text: "心18"
@@ -23209,6 +24831,10 @@
   splits:
   - text: "削内0.5"
     translated: "Energy Reduction0.5"
+    qcReviewedText: "Energy Reduction0.5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手9;腹14"
   splits:
   - text: "手9"
@@ -23619,6 +25245,13 @@
   splits:
   - text: "内家数来宝"
     translated: "Neigong Shu Laobaocai"
+    qcReviewedText: "Neigong Shu Laobaocai"
+    qcTranslated: "Neigong Shu Laibao"
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
 - raw: "生命上限40;内力上限40;内功6;经脉6;卸力0.03;拳掌威力0.03"
   splits:
   - text: "生命上限40"
@@ -23731,6 +25364,10 @@
   splits:
   - text: "失衡0.08"
     translated: "Off Balance 0.08"
+    qcReviewedText: "Off Balance 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "醉拳"
   splits:
   - text: "醉拳"
@@ -23752,6 +25389,10 @@
   splits:
   - text: "动摇0.06"
     translated: "Shaken 0.06"
+    qcReviewedText: "Shaken 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拜年棍法"
   splits:
   - text: "拜年棍法"
@@ -23782,6 +25423,10 @@
   splits:
   - text: "迟缓0.06"
     translated: "Slowed 0.06"
+    qcReviewedText: "Slowed 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "双棍缠身"
   splits:
   - text: "双棍缠身"
@@ -24069,6 +25714,10 @@
   splits:
   - text: "动摇0.08"
     translated: "Shaken 0.08"
+    qcReviewedText: "Shaken 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "混天功"
   splits:
   - text: "混天功"
@@ -24317,6 +25966,10 @@
   splits:
   - text: "奇门三才棍"
     translated: "Qimen Three Treasures Staff"
+    qcReviewedText: "Qimen Three Treasures Staff"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵潜力1;长兵1;经脉1"
   splits:
   - text: "长兵潜力1"
@@ -25055,6 +26708,10 @@
   splits:
   - text: "铜皮0.04"
     translated: "Copper skin0.04"
+    qcReviewedText: "Copper skin0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足12"
   splits:
   - text: "足12"
@@ -25100,10 +26757,18 @@
   splits:
   - text: "意志5"
     translated: "Willpower5"
+    qcReviewedText: "Willpower5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "破甲0.04"
   splits:
   - text: "破甲0.04"
     translated: "Armor Break 0.04"
+    qcReviewedText: "Armor Break 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "四门刀法"
   splits:
   - text: "四门刀法"
@@ -25244,6 +26909,10 @@
   splits:
   - text: "裂膝0.06"
     translated: "Knee Injury0.06"
+    qcReviewedText: "Knee Injury0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "回马枪术"
   splits:
   - text: "回马枪术"
@@ -25274,6 +26943,10 @@
   splits:
   - text: "死战0.04"
     translated: "Last Stand 0.04"
+    qcReviewedText: "Last Stand 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "泣血戈术"
   splits:
   - text: "泣血戈术"
@@ -25581,6 +27254,10 @@
   splits:
   - text: "穿甲0.08"
     translated: "Armor Penetration 0.08"
+    qcReviewedText: "Armor Penetration 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "潜龙心法"
   splits:
   - text: "潜龙心法"
@@ -26493,6 +28170,10 @@
   splits:
   - text: "雷电0.04"
     translated: "Lightning0.04"
+    qcReviewedText: "Lightning0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足16"
   splits:
   - text: "足16"
@@ -26525,10 +28206,18 @@
   splits:
   - text: "意志10"
     translated: "Willpower10"
+    qcReviewedText: "Willpower10"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "醒脑0.2"
   splits:
   - text: "醒脑0.2"
     translated: "Mind Clearing 0.2"
+    qcReviewedText: "Mind Clearing 0.2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "安神咒"
   splits:
   - text: "安神咒"
@@ -26550,6 +28239,10 @@
   splits:
   - text: "定神0.2"
     translated: "Mind Calming 0.2"
+    qcReviewedText: "Mind Calming 0.2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "清风剑法"
   splits:
   - text: "清风剑法"
@@ -26752,6 +28445,10 @@
   splits:
   - text: "定身咒"
     translated: "Immobilize Charm"
+    qcReviewedText: "Immobilize Charm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉1;智力1"
   splits:
   - text: "经脉1"
@@ -26824,6 +28521,10 @@
   splits:
   - text: "调息0.06"
     translated: "Breath Regulation0.06"
+    qcReviewedText: "Breath Regulation0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "玄门胎息功"
   splits:
   - text: "玄门胎息功"
@@ -27042,6 +28743,10 @@
   splits:
   - text: "混乱0.24"
     translated: "Confusion0.24"
+    qcReviewedText: "Confusion0.24"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天罡咒"
   splits:
   - text: "天罡咒"
@@ -27078,10 +28783,18 @@
   splits:
   - text: "铜皮0.24"
     translated: "Copper skin0.24"
+    qcReviewedText: "Copper skin0.24"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "御剑秘术"
   splits:
   - text: "御剑秘术"
     translated: "Sword Manipulation Secret Technique"
+    qcReviewedText: "Sword Manipulation Secret Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉3;剑法3"
   splits:
   - text: "经脉3"
@@ -27333,6 +29046,10 @@
   splits:
   - text: "冰寒0.25"
     translated: "Chill 0.25"
+    qcReviewedText: "Chill 0.25"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "地母雷网"
   splits:
   - text: "地母雷网"
@@ -27378,6 +29095,10 @@
   splits:
   - text: "雷电0.1"
     translated: "Lightning0.1"
+    qcReviewedText: "Lightning0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足16;腹6"
   splits:
   - text: "足16"
@@ -27432,6 +29153,10 @@
   splits:
   - text: "霸体0.3"
     translated: "Super Armor0.3"
+    qcReviewedText: "Super Armor0.3"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "钟馗斩妖剑"
   splits:
   - text: "钟馗斩妖剑"
@@ -27601,6 +29326,10 @@
   splits:
   - text: "万里神行"
     translated: "Swift Movement Ten Thousand Miles"
+    qcReviewedText: "Swift Movement Ten Thousand Miles"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻功潜力2;轻功1;意志1"
   splits:
   - text: "轻功潜力2"
@@ -27776,6 +29505,10 @@
   splits:
   - text: "无敌0.2"
     translated: "Invincible 0.2"
+    qcReviewedText: "Invincible 0.2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "斗煞藏魂符"
   splits:
   - text: "斗煞藏魂符"
@@ -27845,6 +29578,10 @@
   splits:
   - text: "玄真剑气"
     translated: "Mystic True Sword Qi"
+    qcReviewedText: "Mystic True Sword Qi"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉潜力1;剑法2;经脉2"
   splits:
   - text: "经脉潜力1"
@@ -27882,6 +29619,10 @@
   splits:
   - text: "内劲0.12"
     translated: "Inner Power0.12"
+    qcReviewedText: "Inner Power0.12"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸12;头11"
   splits:
   - text: "胸12"
@@ -28164,6 +29905,10 @@
   splits:
   - text: "穿甲0.02"
     translated: "Armor Penetration 0.02"
+    qcReviewedText: "Armor Penetration 0.02"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "宰鸡牛刀"
   splits:
   - text: "宰鸡牛刀"
@@ -28319,6 +30064,10 @@
   splits:
   - text: "穿甲0.06"
     translated: "Armor Penetration 0.06"
+    qcReviewedText: "Armor Penetration 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胜邪剑法"
   splits:
   - text: "胜邪剑法"
@@ -28343,6 +30092,10 @@
   splits:
   - text: "坚毅0.04"
     translated: "Resolve0.04"
+    qcReviewedText: "Resolve0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "乱麻刀法"
   splits:
   - text: "乱麻刀法"
@@ -28540,6 +30293,10 @@
   splits:
   - text: "承影剑法"
     translated: "Chengying Sword Technique"
+    qcReviewedText: "Chengying Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法潜力1;体质1"
   splits:
   - text: "剑法潜力1"
@@ -28641,6 +30398,10 @@
   splits:
   - text: "炉火纯青功"
     translated: "Perfect Mastery Technique"
+    qcReviewedText: "Perfect Mastery Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限120;内力上限40;内功12;力道12;坚毅0.04;横练0.04;装备强化0.1;装备负重5"
   splits:
   - text: "生命上限120"
@@ -28865,6 +30626,10 @@
   splits:
   - text: "穿甲0.1"
     translated: "Armor Penetration 0.1"
+    qcReviewedText: "Armor Penetration 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头16;腹6"
   splits:
   - text: "头16"
@@ -29273,6 +31038,10 @@
   splits:
   - text: "毒术10"
     translated: "Poison arts 10"
+    qcReviewedText: "Poison arts 10"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "泥鳅功"
   splits:
   - text: "泥鳅功"
@@ -29368,6 +31137,10 @@
   splits:
   - text: "毒术1"
     translated: "Poison arts 1"
+    qcReviewedText: "Poison arts 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉2;拳掌1;毒术1"
   splits:
   - text: "经脉2"
@@ -29481,6 +31254,10 @@
   splits:
   - text: "虚弱0.1"
     translated: "Weakness0.1"
+    qcReviewedText: "Weakness0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腐尸功"
   splits:
   - text: "腐尸功"
@@ -29610,6 +31387,10 @@
   splits:
   - text: "手臂点穴0.08"
     translated: "Seal Arm Acupoints 0.08"
+    qcReviewedText: "Seal Arm Acupoints 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "灵蛇拳"
   splits:
   - text: "灵蛇拳"
@@ -29643,6 +31424,10 @@
   splits:
   - text: "腰腹点穴0.06"
     translated: "Seal Waist Acupoints0.06"
+    qcReviewedText: "Seal Waist Acupoints0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腐尸毒"
   splits:
   - text: "腐尸毒"
@@ -29726,6 +31511,10 @@
   splits:
   - text: "灼烧0.06"
     translated: "Burned 0.06"
+    qcReviewedText: "Burned 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "阴蛇蛊"
   splits:
   - text: "阴蛇蛊"
@@ -29912,6 +31701,10 @@
   splits:
   - text: "毒素0.08"
     translated: "Poison0.08"
+    qcReviewedText: "Poison0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手8;心14"
   splits:
   - text: "手8"
@@ -30140,6 +31933,10 @@
   splits:
   - text: "混乱0.12"
     translated: "Confusion0.12"
+    qcReviewedText: "Confusion0.12"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头13"
   splits:
   - text: "头13"
@@ -31207,6 +33004,10 @@
   splits:
   - text: "杀机0.04"
     translated: "Killing intent0.04"
+    qcReviewedText: "Killing intent0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "红眼刀法"
   splits:
   - text: "红眼刀法"
@@ -31237,6 +33038,10 @@
   splits:
   - text: "疯魔0.02"
     translated: "Demonic Frenzy0.02"
+    qcReviewedText: "Demonic Frenzy0.02"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "僵尸拳"
   splits:
   - text: "僵尸拳"
@@ -31265,6 +33070,10 @@
   splits:
   - text: "壮骨0.04"
     translated: "Strengthen Bones 0.04"
+    qcReviewedText: "Strengthen Bones 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "招魂掌"
   splits:
   - text: "招魂掌"
@@ -31289,6 +33098,10 @@
   splits:
   - text: "昏沉0.04"
     translated: "Drowsiness0.04"
+    qcReviewedText: "Drowsiness0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "杀意心法"
   splits:
   - text: "杀意心法"
@@ -31415,6 +33228,10 @@
   splits:
   - text: "死战0.05"
     translated: "Last Stand 0.05"
+    qcReviewedText: "Last Stand 0.05"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "阴风刀法"
   splits:
   - text: "阴风刀法"
@@ -31514,6 +33331,10 @@
   splits:
   - text: "凝血0.04"
     translated: "Blood Coagulation0.04"
+    qcReviewedText: "Blood Coagulation0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "阴阳磨"
   splits:
   - text: "阴阳磨"
@@ -32958,6 +34779,10 @@
   splits:
   - text: "伤筋0.06"
     translated: "Muscle Injury 0.06"
+    qcReviewedText: "Muscle Injury 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "丹青破穴"
   splits:
   - text: "丹青破穴"
@@ -34442,6 +36267,10 @@
   splits:
   - text: "断招0.04"
     translated: "Interrupt 0.04"
+    qcReviewedText: "Interrupt 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "少林棍法"
   splits:
   - text: "少林棍法"
@@ -34483,6 +36312,10 @@
   splits:
   - text: "急速0.04"
     translated: "Haste0.04"
+    qcReviewedText: "Haste0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "月牙铲功"
   splits:
   - text: "月牙铲功"
@@ -34504,6 +36337,10 @@
   splits:
   - text: "坚毅0.02"
     translated: "Resolve0.02"
+    qcReviewedText: "Resolve0.02"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足7"
   splits:
   - text: "足7"
@@ -34666,6 +36503,10 @@
   splits:
   - text: "铜皮0.06"
     translated: "Copper skin0.06"
+    qcReviewedText: "Copper skin0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天竺佛指"
   splits:
   - text: "天竺佛指"
@@ -34776,6 +36617,10 @@
   splits:
   - text: "坚毅0.06"
     translated: "Resolve0.06"
+    qcReviewedText: "Resolve0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "菩提心法"
   splits:
   - text: "菩提心法"
@@ -35098,6 +36943,10 @@
   splits:
   - text: "心胸点穴0.08"
     translated: "Seal Chest Acupoints 0.08"
+    qcReviewedText: "Seal Chest Acupoints 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸14;腹6"
   splits:
   - text: "胸14"
@@ -35363,6 +37212,10 @@
   splits:
   - text: "疯魔棍法"
     translated: "Demonic Frenzy Staff Techniques"
+    qcReviewedText: "Demonic Frenzy Staff Techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "体质4;长兵2;内力0.1"
   splits:
   - text: "体质4"
@@ -36374,6 +38227,10 @@
   splits:
   - text: "调息0.04"
     translated: "Breath Regulation0.04"
+    qcReviewedText: "Breath Regulation0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "武当绵掌"
   splits:
   - text: "武当绵掌"
@@ -36398,6 +38255,10 @@
   splits:
   - text: "连绵0.06"
     translated: "Flurry 0.06"
+    qcReviewedText: "Flurry 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "武当丹剑"
   splits:
   - text: "武当丹剑"
@@ -36642,6 +38503,10 @@
   splits:
   - text: "内劲0.06"
     translated: "Inner Power0.06"
+    qcReviewedText: "Inner Power0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "元始周天功"
   splits:
   - text: "元始周天功"
@@ -36809,6 +38674,10 @@
   splits:
   - text: "蓄力0.04"
     translated: "Charging 0.04"
+    qcReviewedText: "Charging 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸8;腹12"
   splits:
   - text: "胸8"
@@ -36886,6 +38755,10 @@
   splits:
   - text: "阻滞0.08"
     translated: "Impede 0.08"
+    qcReviewedText: "Impede 0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手14;心6"
   splits:
   - text: "手14"
@@ -37874,6 +39747,10 @@
   splits:
   - text: "骤雨刀法"
     translated: "Sudden Rain Blade Technique"
+    qcReviewedText: "Sudden Rain Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "体质2;刀法2"
   splits:
   - text: "体质2"
@@ -37887,6 +39764,10 @@
   splits:
   - text: "重碾0.04"
     translated: "Crushing Blow 0.04"
+    qcReviewedText: "Crushing Blow 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "银蛇枪法"
   splits:
   - text: "银蛇枪法"
@@ -37916,6 +39797,10 @@
   splits:
   - text: "十三太保横练"
     translated: "Thirteen Bodyguards' Body Conditioning"
+    qcReviewedText: "Thirteen Bodyguards' Body Conditioning"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限70;内力上限10;力道3;体质3;横练0.02;刀法威力0.08;减伤3"
   splits:
   - text: "生命上限70"
@@ -38457,6 +40342,10 @@
   splits:
   - text: "嗔狂刀法"
     translated: "Furious Blade Technique"
+    qcReviewedText: "Furious Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "体质4;刀法3"
   splits:
   - text: "体质4"
@@ -39019,6 +40908,10 @@
   splits:
   - text: "飘逸0.06"
     translated: "Graceful 0.06"
+    qcReviewedText: "Graceful 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "芭蕉铁扇功"
   splits:
   - text: "芭蕉铁扇功"
@@ -39215,6 +41108,10 @@
   splits:
   - text: "轻灵0.08"
     translated: "Nimble0.08"
+    qcReviewedText: "Nimble0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足8;腹12"
   splits:
   - text: "足8"
@@ -40141,6 +42038,10 @@
   splits:
   - text: "灵巧潜力1"
     translated: "Agility potential 1"
+    qcReviewedText: "Agility potential 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生命上限50;内力上限30;内功4;灵巧4;经脉4;意志2;通脉0.06"
   splits:
   - text: "生命上限50"
@@ -40989,6 +42890,10 @@
   splits:
   - text: "灭心绝情剑"
     translated: "Heartless and Unfeeling Sword"
+    qcReviewedText: "Heartless and Unfeeling Sword"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "杀机0.06;弱点0.06"
   splits:
   - text: "杀机0.06"
@@ -41268,6 +43173,10 @@
   splits:
   - text: "目盲0.04"
     translated: "Blindness0.04"
+    qcReviewedText: "Blindness0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁脊矛突"
   splits:
   - text: "铁脊矛突"
@@ -42395,6 +44304,10 @@
   splits:
   - text: "失衡0.04"
     translated: "Off Balance 0.04"
+    qcReviewedText: "Off Balance 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "飞蝗箭"
   splits:
   - text: "飞蝗箭"
@@ -42407,6 +44320,10 @@
   splits:
   - text: "裂膝0.04"
     translated: "Knee Injury0.04"
+    qcReviewedText: "Knee Injury0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "明鬼诀"
   splits:
   - text: "明鬼诀"
@@ -42547,6 +44464,10 @@
   splits:
   - text: "失衡0.06"
     translated: "Off Balance 0.06"
+    qcReviewedText: "Off Balance 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "连珠箭"
   splits:
   - text: "连珠箭"
@@ -42748,6 +44669,10 @@
   splits:
   - text: "裂膝0.08"
     translated: "Knee Injury0.08"
+    qcReviewedText: "Knee Injury0.08"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头10;足16"
   splits:
   - text: "头10"
@@ -42971,6 +44896,10 @@
   splits:
   - text: "裂膝0.1"
     translated: "Knee Injury0.1"
+    qcReviewedText: "Knee Injury0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "足7;腹5"
   splits:
   - text: "足7"
@@ -43198,6 +45127,10 @@
   splits:
   - text: "裂膝0.12"
     translated: "Knee Injury0.12"
+    qcReviewedText: "Knee Injury0.12"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸15;腹15"
   splits:
   - text: "胸15"
@@ -43415,6 +45348,10 @@
   splits:
   - text: "锻造10"
     translated: "Forging 10"
+    qcReviewedText: "Forging 10"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "火蒺藜"
   splits:
   - text: "火蒺藜"
@@ -44710,6 +46647,13 @@
   splits:
   - text: "智力潜力1"
     translated: "Intelligence potential 1"
+    qcReviewedText: "Intelligence potential 1"
+    qcTranslated: "Intelligence Potential 1"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
 - raw: "绝技6;智力6;鹰眼0.06"
   splits:
   - text: "绝技6"
@@ -45954,6 +47898,10 @@
   splits:
   - text: "轻灵0.1"
     translated: "Nimble0.1"
+    qcReviewedText: "Nimble0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "朔风指"
   splits:
   - text: "朔风指"
@@ -45981,6 +47929,10 @@
   splits:
   - text: "冰寒0.04"
     translated: "Chill 0.04"
+    qcReviewedText: "Chill 0.04"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天山剑法"
   splits:
   - text: "天山剑法"
@@ -46534,6 +48486,10 @@
   splits:
   - text: "内劲0.1"
     translated: "Inner Power0.1"
+    qcReviewedText: "Inner Power0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "胸8;腹6"
   splits:
   - text: "胸8"
@@ -46622,6 +48578,10 @@
   splits:
   - text: "冰寒0.1"
     translated: "Chill 0.1"
+    qcReviewedText: "Chill 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "手14;胸8"
   splits:
   - text: "手14"
@@ -47449,6 +49409,10 @@
   splits:
   - text: "灵巧5"
     translated: "Agility5"
+    qcReviewedText: "Agility5"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "劈砖掌"
   splits:
   - text: "劈砖掌"
@@ -47473,6 +49437,10 @@
   splits:
   - text: "眩晕0.03"
     translated: "Stunned 0.03"
+    qcReviewedText: "Stunned 0.03"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刺剑术"
   splits:
   - text: "刺剑术"
@@ -47497,6 +49465,10 @@
   splits:
   - text: "弱点0.05"
     translated: "Weak Point0.05"
+    qcReviewedText: "Weak Point0.05"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑器舞"
   splits:
   - text: "剑器舞"
@@ -47537,6 +49509,10 @@
   splits:
   - text: "脆弱0.06"
     translated: "Vulnerable 0.06"
+    qcReviewedText: "Vulnerable 0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "贼寇刀法"
   splits:
   - text: "贼寇刀法"
@@ -47558,6 +49534,10 @@
   splits:
   - text: "击退1"
     translated: "Knockback 1"
+    qcReviewedText: "Knockback 1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "腹2"
   splits:
   - text: "腹2"
@@ -48165,6 +50145,10 @@
   splits:
   - text: "达摩剑法"
     translated: "Damo Sword Technique"
+    qcReviewedText: "Damo Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "智力潜力1;意志潜力1;剑法1;智力1"
   splits:
   - text: "智力潜力1"
@@ -49574,6 +51558,10 @@
   splits:
   - text: "生死劫刀法"
     translated: "Life‑and‑Death Peril Blade Technique"
+    qcReviewedText: "Life‑and‑Death Peril Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法潜力1;体质潜力1;经脉潜力1;体质2"
   splits:
   - text: "刀法潜力1"
@@ -50652,6 +52640,10 @@
   splits:
   - text: "拳掌威力"
     translated: "Unarmed Power"
+    qcReviewedText: "Unarmed Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法威力"
   splits:
   - text: "剑法威力"
@@ -50680,6 +52672,10 @@
   splits:
   - text: "奇门威力"
     translated: "Qimen Power"
+    qcReviewedText: "Qimen Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "射术威力"
   splits:
   - text: "射术威力"
@@ -50700,10 +52696,18 @@
   splits:
   - text: "灵巧潜力"
     translated: "Agility Potential"
+    qcReviewedText: "Agility Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "智力潜力"
   splits:
   - text: "智力潜力"
     translated: "Intelligence Potential"
+    qcReviewedText: "Intelligence Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "意志潜力"
   splits:
   - text: "意志潜力"
@@ -50716,6 +52720,10 @@
   splits:
   - text: "体质潜力"
     translated: "Constitution Potential"
+    qcReviewedText: "Constitution Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "经脉潜力"
   splits:
   - text: "经脉潜力"
@@ -50744,14 +52752,26 @@
   splits:
   - text: "绝技潜力"
     translated: "Special Technique Potential"
+    qcReviewedText: "Special Technique Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌潜力"
   splits:
   - text: "拳掌潜力"
     translated: "Unarmed Potential"
+    qcReviewedText: "Unarmed Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法潜力"
   splits:
   - text: "剑法潜力"
     translated: "Sword Technique Potential"
+    qcReviewedText: "Sword Technique Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "刀法潜力"
   splits:
   - text: "刀法潜力"
@@ -50772,6 +52792,10 @@
   splits:
   - text: "奇门潜力"
     translated: "Qimen Potential"
+    qcReviewedText: "Qimen Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "射术潜力"
   splits:
   - text: "射术潜力"
@@ -50784,18 +52808,34 @@
   splits:
   - text: "医术潜力"
     translated: "Medical Potential"
+    qcReviewedText: "Medical Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "毒术潜力"
   splits:
   - text: "毒术潜力"
     translated: "Poison Potential"
+    qcReviewedText: "Poison Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "学识潜力"
   splits:
   - text: "学识潜力"
     translated: "Knowledge potential"
+    qcReviewedText: "Knowledge potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "口才潜力"
   splits:
   - text: "口才潜力"
     translated: "Eloquence Potential"
+    qcReviewedText: "Eloquence Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "采伐潜力"
   splits:
   - text: "采伐潜力"
@@ -50808,10 +52848,18 @@
   splits:
   - text: "木植潜力"
     translated: "Planting Potential"
+    qcReviewedText: "Planting Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "锻造潜力"
   splits:
   - text: "锻造潜力"
     translated: "Forging Potential"
+    qcReviewedText: "Forging Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "炼药潜力"
   splits:
   - text: "炼药潜力"
@@ -50832,14 +52880,26 @@
   splits:
   - text: "护甲率"
     translated: "Armor Effectiveness"
+    qcReviewedText: "Armor Effectiveness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "失衡"
   splits:
   - text: "失衡"
     translated: "Off Balance"
+    qcReviewedText: "Off Balance"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "急速"
   splits:
   - text: "急速"
     translated: "Haste"
+    qcReviewedText: "Haste"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "毒素"
   splits:
   - text: "毒素"
@@ -50852,6 +52912,10 @@
   splits:
   - text: "削内"
     translated: "Energy Reduction"
+    qcReviewedText: "Energy Reduction"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "恢复"
   splits:
   - text: "恢复"
@@ -50864,6 +52928,10 @@
   splits:
   - text: "疗伤"
     translated: "Injury Treatment"
+    qcReviewedText: "Injury Treatment"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "流血"
   splits:
   - text: "流血"
@@ -50876,30 +52944,58 @@
   splits:
   - text: "雷电"
     translated: "Lightning"
+    qcReviewedText: "Lightning"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "蓄力"
   splits:
   - text: "蓄力"
     translated: "Charging"
+    qcReviewedText: "Charging"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "无敌"
   splits:
   - text: "无敌"
     translated: "Invincible"
+    qcReviewedText: "Invincible"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "头颈点穴"
   splits:
   - text: "头颈点穴"
     translated: "Seal Head Acupoints"
+    qcReviewedText: "Seal Head Acupoints"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "虚弱"
   splits:
   - text: "虚弱"
     translated: "Weakness"
+    qcReviewedText: "Weakness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "横练"
   splits:
   - text: "横练"
     translated: "Body Conditioning"
+    qcReviewedText: "Body Conditioning"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "破甲"
   splits:
   - text: "破甲"
     translated: "Armor Break"
+    qcReviewedText: "Armor Break"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "轻灵"
   splits:
   - text: "轻灵"
@@ -50912,6 +53008,10 @@
   splits:
   - text: "迟缓"
     translated: "Slowed"
+    qcReviewedText: "Slowed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "鹰眼"
   splits:
   - text: "鹰眼"
@@ -50924,62 +53024,122 @@
   splits:
   - text: "目盲"
     translated: "Blindness"
+    qcReviewedText: "Blindness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "飘逸"
   splits:
   - text: "飘逸"
     translated: "Graceful"
+    qcReviewedText: "Graceful"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "霸体"
   splits:
   - text: "霸体"
     translated: "Super Armor"
+    qcReviewedText: "Super Armor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "弱点"
   splits:
   - text: "弱点"
     translated: "Weak Point"
+    qcReviewedText: "Weak Point"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "疯魔"
   splits:
   - text: "疯魔"
     translated: "Demonic Frenzy"
+    qcReviewedText: "Demonic Frenzy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "死战"
   splits:
   - text: "死战"
     translated: "Last Stand"
+    qcReviewedText: "Last Stand"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "穿甲"
   splits:
   - text: "穿甲"
     translated: "Armor Penetration"
+    qcReviewedText: "Armor Penetration"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "壮骨"
   splits:
   - text: "壮骨"
     translated: "Strengthen Bones"
+    qcReviewedText: "Strengthen Bones"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "断骨"
   splits:
   - text: "断骨"
     translated: "Broken bones"
+    qcReviewedText: "Broken bones"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "舒筋"
   splits:
   - text: "舒筋"
     translated: "Muscle Relaxation"
+    qcReviewedText: "Muscle Relaxation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "伤筋"
   splits:
   - text: "伤筋"
     translated: "Muscle Injury"
+    qcReviewedText: "Muscle Injury"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "醒脑"
   splits:
   - text: "醒脑"
     translated: "Mind Clearing"
+    qcReviewedText: "Mind Clearing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "震脑"
   splits:
   - text: "震脑"
     translated: "Mind Shock"
+    qcReviewedText: "Mind Shock"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "定神"
   splits:
   - text: "定神"
     translated: "Mind Calming"
+    qcReviewedText: "Mind Calming"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "乱神"
   splits:
   - text: "乱神"
     translated: "Mind Disruption"
+    qcReviewedText: "Mind Disruption"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "活血"
   splits:
   - text: "活血"
@@ -50992,42 +53152,82 @@
   splits:
   - text: "凝血"
     translated: "Blood Coagulation"
+    qcReviewedText: "Blood Coagulation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "通脉"
   splits:
   - text: "通脉"
     translated: "Unblock Meridians"
+    qcReviewedText: "Unblock Meridians"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "截脉"
   splits:
   - text: "截脉"
     translated: "Seal Meridians"
+    qcReviewedText: "Seal Meridians"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "复生"
   splits:
   - text: "复生"
     translated: "Revive"
+    qcReviewedText: "Revive"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "反伤"
   splits:
   - text: "反伤"
     translated: "Reflect"
+    qcReviewedText: "Reflect"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "反伤吸内"
   splits:
   - text: "反伤吸内"
     translated: "Reflect Energy Drain"
+    qcReviewedText: "Reflect Energy Drain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "反伤削内"
   splits:
   - text: "反伤削内"
     translated: "Reflect Energy Reduction"
+    qcReviewedText: "Reflect Energy Reduction"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "击退"
   splits:
   - text: "击退"
     translated: "Knockback"
+    qcReviewedText: "Knockback"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拉近"
   splits:
   - text: "拉近"
     translated: "Pull"
+    qcReviewedText: "Pull"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "慧眼"
   splits:
   - text: "慧眼"
     translated: "Keen Eye"
+    qcReviewedText: "Keen Eye"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "昏沉"
   splits:
   - text: "昏沉"
@@ -51040,22 +53240,42 @@
   splits:
   - text: "铜皮"
     translated: "Copper skin"
+    qcReviewedText: "Copper skin"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "脆弱"
   splits:
   - text: "脆弱"
     translated: "Vulnerable"
+    qcReviewedText: "Vulnerable"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "不屈"
   splits:
   - text: "不屈"
     translated: "Unyielding"
+    qcReviewedText: "Unyielding"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "重碾"
   splits:
   - text: "重碾"
     translated: "Crushing Blow"
+    qcReviewedText: "Crushing Blow"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "连绵"
   splits:
   - text: "连绵"
     translated: "Flurry"
+    qcReviewedText: "Flurry"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "断腕"
   splits:
   - text: "断腕"
@@ -51068,34 +53288,66 @@
   splits:
   - text: "断招"
     translated: "Interrupt"
+    qcReviewedText: "Interrupt"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "阻滞"
   splits:
   - text: "阻滞"
     translated: "Impede"
+    qcReviewedText: "Impede"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "杀机"
   splits:
   - text: "杀机"
     translated: "Killing intent"
+    qcReviewedText: "Killing intent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "康复"
   splits:
   - text: "康复"
     translated: "Recuperation"
+    qcReviewedText: "Recuperation"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "不愈"
   splits:
   - text: "不愈"
     translated: "Suppressed Healing"
+    qcReviewedText: "Suppressed Healing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "坚毅"
   splits:
   - text: "坚毅"
     translated: "Resolve"
+    qcReviewedText: "Resolve"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "动摇"
   splits:
   - text: "动摇"
     translated: "Shaken"
+    qcReviewedText: "Shaken"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "内劲"
   splits:
   - text: "内劲"
     translated: "Inner Power"
+    qcReviewedText: "Inner Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "真伤"
   splits:
   - text: "真伤"
@@ -51108,14 +53360,26 @@
   splits:
   - text: "回血"
     translated: "Restore health"
+    qcReviewedText: "Restore health"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "回内"
   splits:
   - text: "回内"
     translated: "Return Inner Power"
+    qcReviewedText: "Return Inner Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "回体"
   splits:
   - text: "回体"
     translated: "Restore Stamina"
+    qcReviewedText: "Restore Stamina"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "自愈"
   splits:
   - text: "自愈"
@@ -51128,34 +53392,66 @@
   splits:
   - text: "护头"
     translated: "Guard Head"
+    qcReviewedText: "Guard Head"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "护心"
   splits:
   - text: "护心"
     translated: "Guard Heart"
+    qcReviewedText: "Guard Heart"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "护胸"
   splits:
   - text: "护胸"
     translated: "Guard Chest"
+    qcReviewedText: "Guard Chest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "护腹"
   splits:
   - text: "护腹"
     translated: "Guard Waist"
+    qcReviewedText: "Guard Waist"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "护手"
   splits:
   - text: "护手"
     translated: "Guard Wrist"
+    qcReviewedText: "Guard Wrist"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "护足"
   splits:
   - text: "护足"
     translated: "Guard Foot"
+    qcReviewedText: "Guard Foot"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "护体真气"
   splits:
   - text: "护体真气"
     translated: "Protective True Qi"
+    qcReviewedText: "Protective True Qi"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "反弹"
   splits:
   - text: "反弹"
     translated: "Rebound"
+    qcReviewedText: "Rebound"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "减伤"
   splits:
   - text: "减伤"
@@ -51168,34 +53464,66 @@
   splits:
   - text: "定身"
     translated: "Immobilize"
+    qcReviewedText: "Immobilize"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "移距"
   splits:
   - text: "移距"
     translated: "Reposition"
+    qcReviewedText: "Reposition"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "神行"
   splits:
   - text: "神行"
     translated: "Swift Movement"
+    qcReviewedText: "Swift Movement"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "裂膝"
   splits:
   - text: "裂膝"
     translated: "Knee Injury"
+    qcReviewedText: "Knee Injury"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "声望获取"
   splits:
   - text: "声望获取"
     translated: "Reputation Gain"
+    qcReviewedText: "Reputation Gain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "功绩获取"
   splits:
   - text: "功绩获取"
     translated: "Merit Gain"
+    qcReviewedText: "Merit Gain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "买卖优势"
   splits:
   - text: "买卖优势"
     translated: "Trading Bonus"
+    qcReviewedText: "Trading Bonus"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "拳掌距离"
   splits:
   - text: "拳掌距离"
     translated: "Unarmed Range"
+    qcReviewedText: "Unarmed Range"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "剑法距离"
   splits:
   - text: "剑法距离"
@@ -51208,18 +53536,34 @@
   splits:
   - text: "刀法距离"
     translated: "Blade Technique Range"
+    qcReviewedText: "Blade Technique Range"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵距离"
   splits:
   - text: "长兵距离"
     translated: "Long weapon range"
+    qcReviewedText: "Long weapon range"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "奇门距离"
   splits:
   - text: "奇门距离"
     translated: "Qimen Range"
+    qcReviewedText: "Qimen Range"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "射术距离"
   splits:
   - text: "射术距离"
     translated: "Archery range"
+    qcReviewedText: "Archery range"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "坐骑加成"
   splits:
   - text: "坐骑加成"
@@ -51232,26 +53576,53 @@
   splits:
   - text: "装备强化"
     translated: "Equipment Enhancement"
+    qcReviewedText: "Equipment Enhancement"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "药性"
   splits:
   - text: "药性"
     translated: "Medicinal properties"
+    qcReviewedText: "Medicinal properties"
+    qcTranslated: "Medicinal Potency"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
 - raw: "装备负重"
   splits:
   - text: "装备负重"
     translated: "Equipment Weight"
+    qcReviewedText: "Equipment Weight"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "好感获取"
   splits:
   - text: "好感获取"
     translated: "Favor Gain"
+    qcReviewedText: "Favor Gain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "本门武学威力"
   splits:
   - text: "本门武学威力"
     translated: "Sect Martial Arts Power"
+    qcReviewedText: "Sect Martial Arts Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "恶名减少"
   splits:
   - text: "恶名减少"
     translated: "Infamy Reduction"
+    qcReviewedText: "Infamy Reduction"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "姜.映泉"
   splits:
   - text: "姜.映泉"
@@ -51290,6 +53661,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "Neigong/Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -51299,6 +53674,10 @@
   splits:
   - text: "医术"
     translated: "Medical skills"
+    qcReviewedText: "Medical skills/Knowledge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "学识"
     translated: "Knowledge"
@@ -51359,6 +53738,10 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
+    qcReviewedText: "Special Technique/Unarmed/Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -51407,6 +53790,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "Neigong/Sword Technique/Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -51455,6 +53842,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "Neigong/Qinggong/Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
@@ -51490,6 +53881,10 @@
   splits:
   - text: "无序"
     translated: "Disorderly"
+    qcReviewedText: "Disorderly/Mercy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仁慈"
     translated: "Mercy"
@@ -51499,6 +53894,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "Neigong/Sword Technique/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -51511,6 +53910,10 @@
   splits:
   - text: "学识"
     translated: "Knowledge"
+    qcReviewedText: "Knowledge/Eloquence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "口才"
     translated: "Eloquence"
@@ -51556,6 +53959,13 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
+    qcReviewedText: "Special Technique/Sword Technique/Archery skills"
+    qcTranslated: "Special Technique/Sword Technique/Archery"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -51601,6 +54011,10 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
+    qcReviewedText: "Qinggong/Qimen/Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
     translated: "Qimen"
@@ -51613,6 +54027,10 @@
   splits:
   - text: "医术"
     translated: "Medical skills"
+    qcReviewedText: "Medical skills/Alchemy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "炼药"
     translated: "Alchemy"
@@ -51645,6 +54063,10 @@
   splits:
   - text: "混乱"
     translated: "Confusion"
+    qcReviewedText: "Confusion/Mercy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仁慈"
     translated: "Mercy"
@@ -51654,6 +54076,10 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
+    qcReviewedText: "Special Technique/Unarmed/Long weapon"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -51666,6 +54092,10 @@
   splits:
   - text: "采伐"
     translated: "Resource Gathering"
+    qcReviewedText: "Resource Gathering/Forging"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "锻造"
     translated: "Forging"
@@ -51698,6 +54128,10 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
+    qcReviewedText: "Qinggong/Sword Technique/Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -51710,6 +54144,10 @@
   splits:
   - text: "烹饪"
     translated: "Cooking"
+    qcReviewedText: "Cooking/Planting"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "木植"
     translated: "Planting"
@@ -51752,6 +54190,13 @@
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "Blade Technique/Archery skills"
+    qcTranslated: "Blade Technique/Archery"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "射术"
     translated: "Archery skills"
@@ -51911,6 +54356,10 @@
   splits:
   - text: "混乱"
     translated: "Confusion"
+    qcReviewedText: "Confusion/Neutral"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "中立"
     translated: "Neutral"
@@ -51920,6 +54369,10 @@
   splits:
   - text: "射术"
     translated: "Archery skills"
+    qcReviewedText: "Archery skills/Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
     translated: "Blade Technique"
@@ -52074,6 +54527,10 @@
   splits:
   - text: "平常"
     translated: "Ordinary"
+    qcReviewedText: "Ordinary/Mercy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仁慈"
     translated: "Mercy"
@@ -52083,6 +54540,10 @@
   splits:
   - text: "射术"
     translated: "Archery skills"
+    qcReviewedText: "Archery skills/Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -52263,6 +54724,10 @@
   splits:
   - text: "守序"
     translated: "Lawful"
+    qcReviewedText: "Lawful/Mercy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仁慈"
     translated: "Mercy"
@@ -52315,6 +54780,10 @@
   splits:
   - text: "长兵"
     translated: "Long weapon"
+    qcReviewedText: "Long weapon/Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
     translated: "Blade Technique"
@@ -52599,6 +55068,10 @@
   splits:
   - text: "混乱"
     translated: "Confusion"
+    qcReviewedText: "Confusion/Ferocious"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "凶狠"
     translated: "Ferocious"
@@ -52760,6 +55233,10 @@
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "Blade Technique/Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -53046,6 +55523,10 @@
   splits:
   - text: "混乱"
     translated: "Confusion"
+    qcReviewedText: "Confusion/Coldblooded"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "冷酷"
     translated: "Coldblooded"
@@ -53234,6 +55715,10 @@
   splits:
   - text: "戒律"
     translated: "Code"
+    qcReviewedText: "Code/Mercy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仁慈"
     translated: "Mercy"
@@ -53381,6 +55866,10 @@
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "Unarmed/Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -53446,6 +55935,10 @@
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique/Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -53547,6 +56040,10 @@
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "Blade Technique/Long weapon"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -53639,6 +56136,10 @@
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
     translated: "Qimen"
@@ -53691,6 +56192,10 @@
   splits:
   - text: "奇门"
     translated: "Qimen"
+    qcReviewedText: "Qimen/Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -54024,6 +56529,10 @@
   splits:
   - text: "混乱"
     translated: "Confusion"
+    qcReviewedText: "Confusion/Kindness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "善良"
     translated: "Kindness"
@@ -54082,6 +56591,10 @@
   splits:
   - text: "射术"
     translated: "Archery skills"
+    qcReviewedText: "Archery skills/Long weapon"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -54144,6 +56657,10 @@
   splits:
   - text: "长兵"
     translated: "Long weapon"
+    qcReviewedText: "Long weapon/Archery skills"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "射术"
     translated: "Archery skills"
@@ -54342,6 +56859,10 @@
   splits:
   - text: "奇门"
     translated: "Qimen"
+    qcReviewedText: "Qimen/Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
     translated: "Blade Technique"
@@ -54375,6 +56896,10 @@
   splits:
   - text: "慧眼明王"
     translated: "Keen Eyed Ming King"
+    qcReviewedText: "Keen Eyed Ming King"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "凌.北渊"
   splits:
   - text: "凌.北渊"
@@ -56140,6 +58665,10 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
+    qcReviewedText: "Special Technique/Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
     translated: "Blade Technique"
@@ -56189,6 +58718,10 @@
   splits:
   - text: "内功"
     translated: "Neigong"
+    qcReviewedText: "Neigong/Unarmed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -56247,6 +58780,10 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
+    qcReviewedText: "Qinggong/Sword Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -56794,6 +59331,10 @@
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique/Long weapon"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -56937,6 +59478,10 @@
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "Unarmed/Sword Technique/Blade Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
     translated: "Sword Technique"
@@ -56998,6 +59543,10 @@
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique/Blade Technique/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
     translated: "Blade Technique"
@@ -57051,6 +59600,10 @@
   splits:
   - text: "奇门"
     translated: "Qimen"
+    qcReviewedText: "Qimen/Long weapon/Archery skills"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -57104,6 +59657,10 @@
   splits:
   - text: "射术"
     translated: "Archery skills"
+    qcReviewedText: "Archery skills/Unarmed/Long weapon"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -57222,6 +59779,10 @@
   splits:
   - text: "剑法"
     translated: "Sword Technique"
+    qcReviewedText: "Sword Technique/Qinggong/Neigong"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
@@ -57275,6 +59836,10 @@
   splits:
   - text: "射术"
     translated: "Archery skills"
+    qcReviewedText: "Archery skills/Qinggong/Special Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
@@ -57385,6 +59950,10 @@
   splits:
   - text: "刀法"
     translated: "Blade Technique"
+    qcReviewedText: "Blade Technique/Neigong/Special Technique"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "内功"
     translated: "Neigong"
@@ -57438,6 +60007,10 @@
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "Unarmed/Neigong/Qinggong"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "内功"
     translated: "Neigong"
@@ -57712,6 +60285,10 @@
   splits:
   - text: "拳掌"
     translated: "Unarmed"
+    qcReviewedText: "Unarmed/Qimen"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
     translated: "Qimen"
@@ -57954,6 +60531,10 @@
   splits:
   - text: "灼烧0.1"
     translated: "Burned 0.1"
+    qcReviewedText: "Burned 0.1"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "眩晕0.05;动摇0.05;失衡0.05"
   splits:
   - text: "眩晕0.05"
@@ -57970,6 +60551,10 @@
   splits:
   - text: "蓄力0.05"
     translated: "Charging 0.05"
+    qcReviewedText: "Charging 0.05"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "虚弱0.08;弱点0.08;迟缓0.08"
   splits:
   - text: "虚弱0.08"
@@ -58776,6 +61361,10 @@
   splits:
   - text: "内力"
     translated: "Inner Power"
+    qcReviewedText: "Inner Power+20%\nConfusion 2 round"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "混乱2回合"
     translated: "Confusion 2 round"
@@ -58793,6 +61382,10 @@
   splits:
   - text: "内力"
     translated: "Inner Power"
+    qcReviewedText: "Inner Power+10%\nDemonic Frenzy 2 round"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "疯魔2回合"
     translated: "Demonic Frenzy 2 round"
@@ -58860,6 +61453,10 @@
   splits:
   - text: "持续外伤"
     translated: "Continuous External Injury"
+    qcReviewedText: "Continuous External Injury"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "陷坑"
   splits:
   - text: "陷坑"
@@ -58933,6 +61530,10 @@
   splits:
   - text: "意志2"
     translated: "Willpower2"
+    qcReviewedText: "Willpower2"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "跌打梅山符"
   splits:
   - text: "跌打梅山符"
@@ -59005,6 +61606,10 @@
   splits:
   - text: "卸力0.06"
     translated: "Force Deflection0.06"
+    qcReviewedText: "Force Deflection0.06"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "寒天符"
   splits:
   - text: "寒天符"
@@ -59307,6 +61912,10 @@
   splits:
   - text: "恢复耐心"
     translated: "Restore patience"
+    qcReviewedText: "Restore patience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "困"
   splits:
   - text: "困"
@@ -59543,6 +62152,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Iron Bones and Steel Sinews"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "钢筋铁骨"
     translated: "Iron Bones and Steel Sinews"
@@ -59552,6 +62165,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Perfect Mastery"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "炉火纯青"
     translated: "Perfect Mastery"
@@ -59561,6 +62178,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Inner Qi burns hot"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "内息灼热"
     translated: "Inner Qi burns hot"
@@ -59570,6 +62191,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Strong"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "强壮"
     translated: "Strong"
@@ -59579,6 +62204,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Towering and majestic"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "魁梧奇伟"
     translated: "Towering and majestic"
@@ -59588,6 +62217,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Weak and frail"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "瘦弱"
     translated: "Weak and frail"
@@ -59597,6 +62230,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Emaciated and bony"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "瘦骨嶙峋"
     translated: "Emaciated and bony"
@@ -59606,6 +62243,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Alertness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "机敏"
     translated: "Alertness"
@@ -59615,6 +62256,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Adapt to the situation as it arises"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "随机应变"
     translated: "Adapt to the situation as it arises"
@@ -59624,6 +62269,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Clumsy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "笨拙"
     translated: "Clumsy"
@@ -59633,6 +62282,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Clumsy and awkward"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "笨手笨脚"
     translated: "Clumsy and awkward"
@@ -59642,6 +62295,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Cleverness"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "聪慧"
     translated: "Cleverness"
@@ -59651,6 +62308,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Outstanding natural talent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "天资过人"
     translated: "Outstanding natural talent"
@@ -59660,6 +62321,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Clumsy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "愚钝"
     translated: "Clumsy"
@@ -59669,6 +62334,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Clueless and foolish"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "傻头傻脑"
     translated: "Clueless and foolish"
@@ -59678,6 +62347,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Brave"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "勇敢"
     translated: "Brave"
@@ -59687,6 +62360,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Lead by example"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "身先士卒"
     translated: "Lead by example"
@@ -59696,6 +62373,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Cowardly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "懦弱"
     translated: "Cowardly"
@@ -59705,6 +62386,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Trembling with fear"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "战战兢兢"
     translated: "Trembling with fear"
@@ -59714,6 +62399,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Well‑being"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "康健"
     translated: "Well‑being"
@@ -59723,6 +62412,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Radiant and energetic"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "容光焕发"
     translated: "Radiant and energetic"
@@ -59732,6 +62425,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Chronic illnesses"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "多病"
     translated: "Chronic illnesses"
@@ -59741,6 +62438,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Mentally and physically exhausted"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "身心交病"
     translated: "Mentally and physically exhausted"
@@ -59750,6 +62451,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Follow the meridian"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "顺脉"
     translated: "Follow the meridian"
@@ -59759,6 +62464,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Meridians connected"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "脉络贯通"
     translated: "Meridians connected"
@@ -59768,6 +62477,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Obstructed Pulse"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "滞脉"
     translated: "Obstructed Pulse"
@@ -59777,6 +62490,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Blocked meridians"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "脉络阻塞"
     translated: "Blocked meridians"
@@ -59786,6 +62503,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Upright"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "正直"
     translated: "Upright"
@@ -59795,6 +62516,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Impartial and upright"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "公正不阿"
     translated: "Impartial and upright"
@@ -59804,6 +62529,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Treacherous"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "阴险"
     translated: "Treacherous"
@@ -59813,6 +62542,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:By any means necessary"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "不择手段"
     translated: "By any means necessary"
@@ -59822,6 +62555,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Mercy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仁慈"
     translated: "Mercy"
@@ -59831,6 +62568,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Benevolent and kind‑hearted"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "宅心仁厚"
     translated: "Benevolent and kind‑hearted"
@@ -59840,6 +62581,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Cruel"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "残忍"
     translated: "Cruel"
@@ -59849,6 +62594,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Cruel and ruthless"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "心狠手辣"
     translated: "Cruel and ruthless"
@@ -59858,6 +62607,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Stay calm"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "冷静"
     translated: "Stay calm"
@@ -59867,6 +62620,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Calm and composed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "气定神闲"
     translated: "Calm and composed"
@@ -59876,6 +62633,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Irritable"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "暴躁"
     translated: "Irritable"
@@ -59885,6 +62646,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Temper as fierce as fire"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "性烈如火"
     translated: "Temper as fierce as fire"
@@ -59894,6 +62659,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Lucky"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "幸运"
     translated: "Lucky"
@@ -59903,6 +62672,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Good fortune shines brightly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "福星高照"
     translated: "Good fortune shines brightly"
@@ -59912,6 +62685,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Misfortune"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "不幸"
     translated: "Misfortune"
@@ -59921,6 +62698,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Fate full of twists and turns"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "命途多舛"
     translated: "Fate full of twists and turns"
@@ -59930,6 +62711,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Beauty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "美貌"
     translated: "Beauty"
@@ -59939,6 +62724,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Bright eyes and white teeth"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "明眸皓齿"
     translated: "Bright eyes and white teeth"
@@ -59948,6 +62737,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Ugly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "丑陋"
     translated: "Ugly"
@@ -59957,6 +62750,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Frightening visage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "面目狰狞"
     translated: "Frightening visage"
@@ -59966,6 +62763,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Sharp‑eyed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "锐眼"
     translated: "Sharp‑eyed"
@@ -59975,6 +62776,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Eyes shining brightly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "目光炯炯"
     translated: "Eyes shining brightly"
@@ -59984,6 +62789,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Low vision"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "弱视"
     translated: "Low vision"
@@ -59993,6 +62802,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Vision blurred"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "视线模糊"
     translated: "Vision blurred"
@@ -60002,6 +62815,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Modesty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "谦逊"
     translated: "Modesty"
@@ -60011,6 +62828,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Neither arrogant nor impatient"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "不骄不躁"
     translated: "Neither arrogant nor impatient"
@@ -60020,6 +62841,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Stubbornly self‑willed"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "刚愎"
     translated: "Stubbornly self‑willed"
@@ -60029,6 +62854,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Arrogant and overbearing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "盛气凌人"
     translated: "Arrogant and overbearing"
@@ -60038,6 +62867,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Loyalty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "忠诚"
     translated: "Loyalty"
@@ -60047,6 +62880,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Loyal and devoted"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "忠心耿耿"
     translated: "Loyal and devoted"
@@ -60056,6 +62893,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Rebellion"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "叛逆"
     translated: "Rebellion"
@@ -60065,6 +62906,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Rebellious and unruly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "桀骜不驯"
     translated: "Rebellious and unruly"
@@ -60074,6 +62919,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Diligence"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "勤奋"
     translated: "Diligence"
@@ -60083,6 +62932,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Diligently without rest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "孜孜不倦"
     translated: "Diligently without rest"
@@ -60092,6 +62945,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Lazy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "懒惰"
     translated: "Lazy"
@@ -60101,6 +62958,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Idle and lazy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "游手好闲"
     translated: "Idle and lazy"
@@ -60110,6 +62971,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Thrifty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "节俭"
     translated: "Thrifty"
@@ -60119,6 +62984,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Being thrifty and calculating carefully"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "精打细算"
     translated: "Being thrifty and calculating carefully"
@@ -60128,6 +62997,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Waste"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "浪费"
     translated: "Waste"
@@ -60137,6 +63010,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Living extravagantly"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "挥霍无度"
     translated: "Living extravagantly"
@@ -60146,6 +63023,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Practicing martial arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "练武"
     translated: "Practicing martial arts"
@@ -60155,6 +63036,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Wu Maniac"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "武痴"
     translated: "Wu Maniac"
@@ -60164,6 +63049,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Study medicine"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "学医"
     translated: "Study medicine"
@@ -60173,6 +63062,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Doctor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "医师"
     translated: "Doctor"
@@ -60182,6 +63075,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Study literature"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "习文"
     translated: "Study literature"
@@ -60191,6 +63088,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Elegant Scholar"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "雅士"
     translated: "Elegant Scholar"
@@ -60200,6 +63101,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Farming"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "务农"
     translated: "Farming"
@@ -60209,6 +63114,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Farm family"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "农家"
     translated: "Farm family"
@@ -60218,6 +63127,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Apprentice"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "学徒"
     translated: "Apprentice"
@@ -60227,6 +63140,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Craftsman"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "工匠"
     translated: "Craftsman"
@@ -60236,6 +63153,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Doing business"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "经商"
     translated: "Doing business"
@@ -60245,6 +63166,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Shrewd merchant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "善贾"
     translated: "Shrewd merchant"
@@ -60254,6 +63179,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Entering politics"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "从政"
     translated: "Entering politics"
@@ -60263,6 +63192,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Official position"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "仕官"
     translated: "Official position"
@@ -60272,6 +63205,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Miscellaneous studies"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "杂学"
     translated: "Miscellaneous studies"
@@ -60281,6 +63218,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Jack‑of‑all‑Trades"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "通才"
     translated: "Jack‑of‑all‑Trades"
@@ -60290,6 +63231,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Indifferent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "淡泊"
     translated: "Indifferent"
@@ -60299,6 +63244,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Hermit"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "隐士"
     translated: "Hermit"
@@ -60308,6 +63257,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Confucian arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "儒术"
     translated: "Confucian arts"
@@ -60317,6 +63270,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Scholar‑official"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "儒生"
     translated: "Scholar‑official"
@@ -60326,6 +63283,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Cultivate Dao"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "修道"
     translated: "Cultivate Dao"
@@ -60335,6 +63296,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Taoist priest"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "道士"
     translated: "Taoist priest"
@@ -60344,6 +63309,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Study Buddhism"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "学佛"
     translated: "Study Buddhism"
@@ -60353,6 +63322,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Zen Master"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "禅师"
     translated: "Zen Master"
@@ -60362,6 +63335,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Begging"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "行乞"
     translated: "Begging"
@@ -60371,6 +63348,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Begging for alms"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "化缘"
     translated: "Begging for alms"
@@ -60380,6 +63361,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Divination"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "卜算"
     translated: "Divination"
@@ -60389,6 +63374,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Fortune‑teller"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "相士"
     translated: "Fortune‑teller"
@@ -60398,6 +63387,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Wandering Swordsman"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "游侠"
     translated: "Wandering Swordsman"
@@ -60407,6 +63400,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Wanderer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "侠客"
     translated: "Wanderer"
@@ -60416,6 +63413,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Gambler"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "赌徒"
     translated: "Gambler"
@@ -60425,6 +63426,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Obsessed with gambling"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "嗜赌如命"
     translated: "Obsessed with gambling"
@@ -60434,6 +63439,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Alcoholic"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "酒鬼"
     translated: "Alcoholic"
@@ -60443,6 +63452,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Sing and drink freely"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "放歌纵酒"
     translated: "Sing and drink freely"
@@ -60452,6 +63465,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Customer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "食客"
     translated: "Customer"
@@ -60461,6 +63478,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Feast heartily"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "大快朵颐"
     translated: "Feast heartily"
@@ -60470,6 +63491,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Collect"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "收藏"
     translated: "Collect"
@@ -60479,6 +63504,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Discard the false and keep the true"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "去伪存真"
     translated: "Discard the false and keep the true"
@@ -60488,6 +63517,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Riding skills"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "骑术"
     translated: "Riding skills"
@@ -60497,6 +63530,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Ride hard and fast"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "纵马驰骋"
     translated: "Ride hard and fast"
@@ -60506,6 +63543,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Study reading"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "读书"
     translated: "Study reading"
@@ -60515,6 +63556,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Read extensively"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "博览群书"
     translated: "Read extensively"
@@ -60524,6 +63569,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Yaoqin"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "瑶琴"
     translated: "Yaoqin"
@@ -60533,6 +63582,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:The music lingers in the air"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "余音绕梁"
     translated: "The music lingers in the air"
@@ -60542,6 +63595,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Playing chess"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "弈棋"
     translated: "Playing chess"
@@ -60551,6 +63608,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:One move ahead in the game"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "棋高一着"
     translated: "One move ahead in the game"
@@ -60560,6 +63621,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Calligraphy"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "书法"
     translated: "Calligraphy"
@@ -60569,6 +63634,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Flowing like dragons and snakes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "笔走龙蛇"
     translated: "Flowing like dragons and snakes"
@@ -60578,6 +63647,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Painting"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "绘画"
     translated: "Painting"
@@ -60587,6 +63660,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Master of Skilled Brushwork"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "丹青妙手"
     translated: "Master of Skilled Brushwork"
@@ -60596,6 +63673,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Recite poetry"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "吟诗"
     translated: "Recite poetry"
@@ -60605,6 +63686,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Inspiration flows like a fountain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "文思泉涌"
     translated: "Inspiration flows like a fountain"
@@ -60614,6 +63699,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Hunting"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "狩猎"
     translated: "Hunting"
@@ -60623,6 +63712,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Flying Eagles and Running Dogs"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "飞鹰走犬"
     translated: "Flying Eagles and Running Dogs"
@@ -60632,6 +63725,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Wandering Cloud Edge"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "云游"
     translated: "Wandering Cloud Edge"
@@ -60641,6 +63738,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Traveling and enjoying the scenery"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "游山玩水"
     translated: "Traveling and enjoying the scenery"
@@ -60650,6 +63751,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Meditation retreat"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "静修"
     translated: "Meditation retreat"
@@ -60659,6 +63764,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Lie in hiding"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "蛰居偃伏"
     translated: "Lie in hiding"
@@ -60668,6 +63777,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Dance skills"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "舞技"
     translated: "Dance skills"
@@ -60677,6 +63790,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Dancing with the wind in motion"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "舞态生风"
     translated: "Dancing with the wind in motion"
@@ -60686,6 +63803,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Follower"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "随从"
     translated: "Follower"
@@ -60695,6 +63816,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Obey without question"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "唯命是从"
     translated: "Obey without question"
@@ -60704,6 +63829,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Advisor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "军师"
     translated: "Advisor"
@@ -60713,6 +63842,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Deploying troops and arranging formations"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "排兵布阵"
     translated: "Deploying troops and arranging formations"
@@ -60722,6 +63855,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Leader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "领袖"
     translated: "Leader"
@@ -60731,6 +63868,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Aspiring for great ambitions"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "胸怀大志"
     translated: "Aspiring for great ambitions"
@@ -60740,6 +63881,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Pioneer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "先锋"
     translated: "Pioneer"
@@ -60749,6 +63894,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Charge forward with courage"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "奋勇当先"
     translated: "Charge forward with courage"
@@ -60758,6 +63907,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Defense guard"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "守备"
     translated: "Defense guard"
@@ -60767,6 +63920,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Tightly secured"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "戒备森严"
     translated: "Tightly secured"
@@ -60776,6 +63933,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Sparring Match"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "游斗"
     translated: "Sparring Match"
@@ -60785,6 +63946,10 @@
   splits:
   - text: "天赋"
     translated: "Talent"
+    qcReviewedText: "Talent:Swift as a meteor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "快步流星"
     translated: "Swift as a meteor"
@@ -61052,6 +64217,10 @@
   splits:
   - text: "练习武功获取实战经验"
     translated: "Practicing martial arts to gain practical experience"
+    qcReviewedText: "Practicing martial arts to gain practical experience"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "与门派弟子进行切磋"
   splits:
   - text: "与门派弟子进行切磋"
@@ -61107,6 +64276,13 @@
   splits:
   - text: "获取门派威望"
     translated: "Acquire Sect Prestige"
+    qcReviewedText: "Acquire Sect Prestige\nSkill impact：Knowledge"
+    qcTranslated: "Acquire Sect Prestige\nSkill impact: Knowledge"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61234,10 +64410,18 @@
   splits:
   - text: "为周边受伤侠士疗伤治病"
     translated: "Treat the injuries and illnesses of the injured heroes around you."
+    qcReviewedText: "Treat the injuries and illnesses of the injured heroes around you."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "休养恢复状态"
   splits:
   - text: "休养恢复状态"
     translated: "Rest to recover your condition"
+    qcReviewedText: "Rest to recover your condition"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "存放物品"
   splits:
   - text: "存放物品"
@@ -61317,6 +64501,13 @@
   splits:
   - text: "增加资源储量"
     translated: "Increase resource reserves"
+    qcReviewedText: "Increase resource reserves\nSkill impact：Eloquence Knowledge"
+    qcTranslated: "Increase resource reserves\nSkill impact: Eloquence, Knowledge"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61359,6 +64550,13 @@
   splits:
   - text: "获取门派粮食"
     translated: "Acquire Sect Food Grain"
+    qcReviewedText: "Acquire Sect Food Grain\nSkill impact：Planting"
+    qcTranslated: "Acquire Sect Food Grain\\nSkill impact: Planting"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61379,6 +64577,13 @@
   splits:
   - text: "增加资源储量"
     translated: "Increase resource reserves"
+    qcReviewedText: "Increase resource reserves\nSkill impact：Planting Knowledge"
+    qcTranslated: "Increase resource reserves\nSkill impact: Planting Knowledge"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61394,6 +64599,13 @@
   splits:
   - text: "窃取门派粮食"
     translated: "Steal from the sect's food stores"
+    qcReviewedText: "Steal from the sect's food stores\nSkill impact：Planting"
+    qcTranslated: "Steal from the Sect's food stores\\nSkill impact: Planting"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61441,6 +64653,13 @@
   splits:
   - text: "增加资源储量"
     translated: "Increase resource reserves"
+    qcReviewedText: "Increase resource reserves\nSkill impact：Resource Gathering Knowledge"
+    qcTranslated: "Increase resource reserves\nSkill impact: Resource Gathering Knowledge"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61529,6 +64748,13 @@
   splits:
   - text: "获取门派药材"
     translated: "Acquire Sect Herbal Medicines"
+    qcReviewedText: "Acquire Sect Herbal Medicines\nSkill impact：Planting"
+    qcTranslated: "Acquire Sect Herbal Medicines\\nSkill impact: Planting"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61541,6 +64767,13 @@
   splits:
   - text: "窃取门派药材"
     translated: "Steal Sect herbs"
+    qcReviewedText: "Steal Sect herbs\nSkill impact：Planting"
+    qcTranslated: "Steal Sect herbs\\nSkill impact: Planting"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61638,6 +64871,13 @@
   splits:
   - text: "增加区域人口"
     translated: "Increase the population in the area"
+    qcReviewedText: "Increase the population in the area\nSkill impact：Alchemy"
+    qcTranslated: "Increase the population in the area\\nSkill impact: Alchemy"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61650,6 +64890,13 @@
   splits:
   - text: "降低区域人口"
     translated: "Decrease the population in the area"
+    qcReviewedText: "Decrease the population in the area\nSkill impact：Alchemy"
+    qcTranslated: "Decrease the population in the area\\nSkill impact: Alchemy"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61764,6 +65011,13 @@
   splits:
   - text: "增加区域治安"
     translated: "Increase public safety in the area"
+    qcReviewedText: "Increase public safety in the area\nSkill impact：Forging"
+    qcTranslated: "Increase public safety in the area\\nSkill impact: Forging"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61784,6 +65038,13 @@
   splits:
   - text: "降低区域治安"
     translated: "Decrease regional law and order"
+    qcReviewedText: "Decrease regional law and order\nSkill impact：Forging"
+    qcTranslated: "Decrease regional law and order\nSkill impact: Forging"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -61828,6 +65089,13 @@
   splits:
   - text: "增加区域防御"
     translated: "Increase area defense"
+    qcReviewedText: "Increase area defense\nSkill impact：Planting"
+    qcTranslated: "Increase area defense\\nSkill impact: Planting"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "技能影响"
     translated: "Skill impact"
@@ -62027,6 +65295,10 @@
   splits:
   - text: "提升口才潜力"
     translated: "Enhance Eloquence Potential"
+    qcReviewedText: "Enhance Eloquence Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "销金"
   splits:
   - text: "销金"
@@ -62039,6 +65311,10 @@
   splits:
   - text: "提升射术潜力"
     translated: "Enhance Archery Potential"
+    qcReviewedText: "Enhance Archery Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "暗器"
   splits:
   - text: "暗器"
@@ -62059,10 +65335,18 @@
   splits:
   - text: "提升医术潜力"
     translated: "Enhance Medical Potential"
+    qcReviewedText: "Enhance Medical Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "提升拳掌潜力"
   splits:
   - text: "提升拳掌潜力"
     translated: "Enhance unarmed potential"
+    qcReviewedText: "Enhance unarmed potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁掌"
   splits:
   - text: "铁掌"
@@ -62075,6 +65359,10 @@
   splits:
   - text: "提升长兵潜力"
     translated: "Enhance Long Weapon Potential"
+    qcReviewedText: "Enhance Long Weapon Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "枪术"
   splits:
   - text: "枪术"
@@ -62090,6 +65378,10 @@
   splits:
   - text: "提升炼药潜力"
     translated: "Enhance Alchemy Potential"
+    qcReviewedText: "Enhance Alchemy Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "丹引"
   splits:
   - text: "丹引"
@@ -62102,6 +65394,10 @@
   splits:
   - text: "提升锻造潜力"
     translated: "Enhance Forging Potential"
+    qcReviewedText: "Enhance Forging Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "天工"
   splits:
   - text: "天工"
@@ -62122,6 +65418,10 @@
   splits:
   - text: "提升毒术潜力"
     translated: "Enhance Poison Potential"
+    qcReviewedText: "Enhance Poison Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "提升采伐潜力"
   splits:
   - text: "提升采伐潜力"
@@ -62158,6 +65458,10 @@
   splits:
   - text: "提升生命上限"
     translated: "Increase Max Health"
+    qcReviewedText: "Increase Max Health"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "禅宗修行"
   splits:
   - text: "禅宗修行"
@@ -62170,6 +65474,10 @@
   splits:
   - text: "提升内力上限"
     translated: "Increase Max Inner Power"
+    qcReviewedText: "Increase Max Inner Power"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "道法修行"
   splits:
   - text: "道法修行"
@@ -62198,6 +65506,10 @@
   splits:
   - text: "提升剑法潜力"
     translated: "Enhance Sword Technique Potential"
+    qcReviewedText: "Enhance Sword Technique Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "万剑"
   splits:
   - text: "万剑"
@@ -62210,6 +65522,10 @@
   splits:
   - text: "提升木植潜力"
     translated: "Enhance Planting Potential"
+    qcReviewedText: "Enhance Planting Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "自然修行"
   splits:
   - text: "自然修行"
@@ -62230,6 +65546,10 @@
   splits:
   - text: "提升学识潜力"
     translated: "Enhance knowledge potential"
+    qcReviewedText: "Enhance knowledge potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "提升烹饪潜力"
   splits:
   - text: "提升烹饪潜力"
@@ -62250,6 +65570,10 @@
   splits:
   - text: "提升绝技潜力"
     translated: "Enhance Special Technique Potential"
+    qcReviewedText: "Enhance Special Technique Potential"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "密宗修行"
   splits:
   - text: "密宗修行"
@@ -62307,6 +65631,10 @@
   splits:
   - text: "自行练习"
     translated: "Practice on your own"
+    qcReviewedText: "♦Practice on your own\n♦Breakthrough\n♦Talent"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "突破"
     translated: "Breakthrough"
@@ -62410,6 +65738,10 @@
   splits:
   - text: "侠客甲"
     translated: "Wanderer A"
+    qcReviewedText: "Wanderer A"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "侠客乙"
   splits:
   - text: "侠客乙"
@@ -62422,6 +65754,10 @@
   splits:
   - text: "侠客丙"
     translated: "Wanderer Bing"
+    qcReviewedText: "Wanderer Bing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "狱卒甲"
   splits:
   - text: "狱卒甲"

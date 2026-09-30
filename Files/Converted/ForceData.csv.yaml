@@ -115,8 +115,13 @@
   - split: 15
     text: "暗器"
     translated: "Hidden Weapon"
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Hidden Weapon</b>：Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
+    qcReviewedText: "<b>Hidden Weapon</b>：Studying archery weapons in a dark room to increase Archery Power.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
+    qcTranslated: "<b>Hidden Weapon</b>: Studying archery weapons in a dark room to increase Archery Power.\\n<b>Assassin</b>: In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use Qinggong to evade."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
   - split: 15
     subIndex: 1
     text: "暗室研究射术兵器，提升射术威力。"
@@ -137,6 +142,14 @@
   - split: 15
     text: "行医"
     translated: "Practice medicine"
+    qcReviewedText: "<b>Practice medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>：Alchemy efficiency +20% and multiple choice elixir ingredients to meet all requirements for crafting enhanced pills.-50%。\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
+    qcTranslated: "<b>Practice medicine</b>: Healing others is not limited by affinity or frequency. Monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>: Alchemy efficiency +20%, allows selecting multiple medicinal ingredients, and reduces all requirements for crafting enhanced pills by ‑50%.\\n<b>Spirit Grove</b>: In the Ten Thousand Flowers Valley, Sect contributions can be exchanged for high‑quality medicinal aids."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+    - UnnaturalPhrasing
   - split: 15
     subIndex: 1
     text: "治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
@@ -165,6 +178,13 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
+    qcReviewedText: "<b>Iron Palm</b>：The conference stage researches unarmed weapons, enhancing unarmed power.\\n<b>Begging</b>：Consume prestige to beg for silver from others. Requesting items from others consumes goodwill.-40%。"
+    qcTranslated: "<b>Iron Palm</b>: The tournament stage researches unarmed weapons, enhancing Unarmed Power.\\n<b>Begging</b>: Consume prestige to beg for silver from others. Requesting items from others consumes ‑40% goodwill."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "大会台研究拳掌兵器，提升拳掌威力。"
@@ -185,6 +205,14 @@
   - split: 15
     text: "枪术"
     translated: "Gun combat"
+    qcReviewedText: "<b>Gun combat</b>：Study long weapons at the horse racing track to increase long weapon power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcTranslated: "<b>Spear technique</b>: Study long weapons at the horse racing track to increase Long weapon Power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
@@ -205,6 +233,14 @@
   - split: 15
     text: "符法"
     translated: "Spellcasting"
+    qcReviewedText: "<b>Spellcasting</b>：Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle./Weaken the opposing character \\n<b>Heavenly Thunder</b>：For each level‑up in a Lightning martial art, gain an additional 0.5 based on the quality level of the martial art./1/1.5/2/2.5/3 points of Willpower \\n<b>Dan Yin</b>：In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    qcTranslated: "<b>Spellcasting</b>: Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities or weaken the opposing character before battle. \\n<b>Heavenly Thunder</b>: For each level‑up in a Lightning martial art, gain an additional 0.5/1/1.5/2/2.5/3 points of Willpower based on the quality level of the martial art. \\n<b>Dan Yin</b>: In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "修习符咒武学解锁对应符法，用符法在战前强化己方角色"
@@ -298,8 +334,15 @@
   - split: 15
     text: "试炼"
     translated: "Trial"
+    qcReviewedText: "<b>Trial</b>：Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
+    qcStatus: FailedValidation
+    flaggedForQcReview: true
+    qcRejectedCorrection: "<b>Trial</b>: Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>: Infamy for stealing from others and shops: 40%. You can use a Special Technique to force your way out when caught by the authorities."
+    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
+    qcDefectCategories:
+    - Unknown
     qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
+    qcRuleCheckFailureBaseline: "<b>Trial</b>：Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
   - split: 15
     subIndex: 1
     text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
@@ -401,6 +444,13 @@
   - split: 15
     text: "试刀"
     translated: "Test blade"
+    qcReviewedText: "<b>Test blade</b>：The Test Blade Platform studies blade techniques and weapons, enhancing blade technique power.\\n<b>Gourmand</b>：Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
+    qcTranslated: "<b>Test Blade</b>: The Test Blade Platform studies Blade Techniques and weapons, enhancing Blade Technique Power.\\n<b>Gourmand</b>: Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "试刀台研究刀法兵器，提升刀法威力。"
@@ -421,6 +471,14 @@
   - split: 15
     text: "万剑"
     translated: "Ten Thousand Swords"
+    qcReviewedText: "<b>Ten Thousand Swords</b>：Penglai Pavilion studies Sword Techniques and weapons, enhancing Sword Technique Power.\\n<b>Return to the Ancestral Home</b>：For each Sword Technique martial art mastered at max level, receive an additional bonus based on the quality level of the martial art, 0.5./1/1.5/2/2.5/3 points of Sword Technique"
+    qcTranslated: "<b>Ten Thousand Swords</b>: Penglai Pavilion studies Sword Techniques and weapons, enhancing Sword Technique Power.\\n<b>Return to the Ancestral Home</b>: For each Sword Technique martial art mastered at max level, receive an additional bonus based on the quality level of the martial art, 0.5/1/1.5/2/2.5/3 points of Sword Technique"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+    - GarbledNumber
   - split: 15
     subIndex: 1
     text: "蓬莱阁研究剑法兵器，提升剑法威力。"
@@ -472,6 +530,14 @@
   - split: 15
     text: "奇技"
     translated: "Strange Art"
+    qcReviewedText: "<b>Strange Art</b>：Study the seventy‑two holes of Qimen weapons to enhance Qimen Power.\\n<b>Constant problems</b>：For each advanced Qimen martial art mastered at level cap, gain an additional bonus based on the art's quality level.0.5/1/1.5/2/2.5/3 points of Qimen"
+    qcTranslated: "<b>Strange Art</b>: Study the seventy‑two caves' research on Qimen weapons to enhance Qimen Power.\\n<b>Hundred Failures</b>: For each Qimen martial art mastered at max level, gain an additional .0/.5/1/1.5/2/2.5 points of Qimen based on the art's quality level."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 15
     subIndex: 1
     text: "七十二洞研究奇门兵器，提升奇门威力。"
@@ -496,6 +562,14 @@
   - split: 15
     text: "机关"
     translated: "Mechanism"
+    qcReviewedText: "<b>Mechanism</b>：Upgrade mechs by equipping and enhancing them to gain corresponding mechs bonuses.\\n<b>Miscellaneous studies</b>：All skill experience ++20%, making it easier to obtain rare treasures when gathering resources./Materials and treasure appraisal additional knowledge bonus"
+    qcTranslated: "<b>Mechanism</b>: Upgrade mechs by equipping and enhancing them to gain corresponding mech bonuses.\\n<b>Miscellaneous studies</b>: All skill experience ++20%, making it easier to obtain rare treasures/materials when gathering resources, plus an additional Knowledge bonus for treasure appraisal"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+    - UnnaturalPhrasing
   - split: 15
     subIndex: 1
     text: "使用装备改装升级机关兽，获取对应的机关兽加成。"
@@ -520,6 +594,14 @@
   - split: 15
     text: "火药"
     translated: "Gunpowder"
+    qcReviewedText: "<b>Gunpowder</b>：Enhance Thunderclap Hall martial arts and Burned techniques by configuring gunpowder.\\n<b>Burned</b>：For each fully mastered level of a Burned martial art, receive an additional 0.5% bonus based on the quality grade of the martial art./1%/1.5%/2%/2.5%/3% Debuff Potency \\n<b>Stewed Again</b>：You can reheat meals in the Furnace Room to get the corresponding ingredients."
+    qcTranslated: "<b>Gunpowder</b>: Enhance Thunderclap Hall martial arts and Burned techniques by configuring gunpowder.\\n<b>Burned</b>: For each fully mastered level of a Burned martial art, receive an additional 0.5%/1%/1.5%/2%/2.5%/3% Debuff Potency based on the quality grade of the martial art.\\n<b>Stewed Again</b>: You can reheat meals in the Furnace Room to get the corresponding ingredients."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "通过配置火药提升霹雳堂武学和灼烧武学效果。"
@@ -552,6 +634,13 @@
   - split: 15
     text: "密宗"
     translated: "Esoteric Buddhism"
+    qcReviewedText: "<b>Esoteric Buddhism</b>：Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown ceremony</b>：Educate wild villains or other heroes, shifting their stance towards confusion and brutality, while increasing their favor and reputation."
+    qcTranslated: "<b>Esoteric Buddhism</b>: Gain benefits from Vajra Martial Arts through Tantric practice.\\n<b>Crown ceremony</b>: Educate wild villains or other Heroes, shifting their stance towards Confusion and brutality, while increasing their favor and reputation."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "通过密宗修行获取金刚宗武学加成。"
@@ -572,6 +661,13 @@
   - split: 15
     text: "玄冰"
     translated: "Xuanbing"
+    qcReviewedText: "<b>Xuanbing</b>：Enhance Tianshan Sect martial arts and Chill techniques by condensing Mystic Ice.\\n<b>Chill</b>：For each level‑up in a Chill martial art technique, gain an additional 2 based on the quality grade of the technique./4/6/8/10/12 Max Inner Power"
+    qcTranslated: "<b>Xuanbing</b>: Enhance Tianshan Sect martial arts and Chill techniques by condensing Mystic Ice.\\n<b>Chill</b>: For each level‑up in a Chill martial art technique, gain an additional 2/4/6/8/10/12 Max Inner Power based on the quality grade of the technique."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - split: 15
     subIndex: 1
     text: "通过凝结玄冰提升天山派武学和冰寒武学效果。"
@@ -596,6 +692,13 @@
   - split: 15
     text: "聚义"
     translated: "Gather to swear loyalty"
+    qcReviewedText: "<b>Gather to swear loyalty</b>：Neigong Experience +20%, Medical Experience+20%。"
+    qcTranslated: "<b>Gather to swear loyalty</b>: Neigong Experience +20%, Medical Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "内功经验+20%，医术经验"
@@ -608,6 +711,13 @@
   - split: 15
     text: "黄河"
     translated: "Yellow River"
+    qcReviewedText: "<b>Yellow River</b>：Blade Technique Experience +20%, Poison Experience+20%。"
+    qcTranslated: "<b>Yellow River</b>: Blade Technique Experience +20%, Poison Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "刀法经验+20%，毒术经验"
@@ -658,6 +768,13 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
+    qcReviewedText: "<b>Iron Palm</b>：Unarmed Experience +20%, Forging Experience+20%。"
+    qcTranslated: "<b>Iron Palm</b>: Unarmed Experience +20%, Forging Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "拳掌经验+20%，锻造经验"
@@ -670,6 +787,13 @@
   - split: 15
     text: "仙霞"
     translated: "Xianxia"
+    qcReviewedText: "<b>Xianxia</b>：All experience gain+5%。"
+    qcTranslated: "<b>Xianxia</b>: All Experience Gain +5%"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "所有经验获取"
@@ -720,6 +844,13 @@
   - split: 15
     text: "青城"
     translated: "Qingcheng"
+    qcReviewedText: "<b>Qingcheng</b>：Sword Technique Experience +20%, Alchemy Experience+20%。"
+    qcTranslated: "<b>Qingcheng</b>: Sword Technique Experience +20%, Alchemy Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "剑法经验+20%，炼药经验"
@@ -732,6 +863,13 @@
   - split: 15
     text: "伏牛"
     translated: "Wutou Mountain"
+    qcReviewedText: "<b>Wutou Mountain</b>：Long Weapon Experience +20%, Planting Experience+20%。"
+    qcTranslated: "<b>Funiu</b>: Long Weapon Experience +20%, Planting Experience +20%."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "长兵经验+20%，木植经验"

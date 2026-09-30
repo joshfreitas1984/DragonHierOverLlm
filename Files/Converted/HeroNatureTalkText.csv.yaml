@@ -202,6 +202,10 @@
   - split: 6
     text: "依我所见，武学的精要之处在于活学活用，灵巧多变"
     translated: "In my view, the essence of martial arts lies in applying them flexibly and with agility."
+    qcReviewedText: "In my view, the essence of martial arts lies in applying them flexibly and with agility."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 7
     text: "依我所见，武学的精要之处在于行云流水，挥洒自如"
     translated: "In my opinion, the essence of martial arts lies in its fluidity and natural grace."
@@ -333,6 +337,10 @@
   - split: 3
     text: "#PlayerName#武功灵巧有余，若能增加一些踏实稳重便再好不过了"
     translated: "#PlayerName#, your martial skills are agile, but it would be even better if you could add some solid steadiness to them."
+    qcReviewedText: "#PlayerName#, your martial skills are agile, but it would be even better if you could add some solid steadiness to them."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "#PlayerName#若在武学上有疑惑不解之处，只管来问我便是"
     translated: "#PlayerName#, if you have any doubts about martial arts, feel free to ask me."
