@@ -3986,8 +3986,8 @@
   splits:
   - split: 4
     text: "京城守卫禁军所习之入门内功心法，与武林中人的内功相比，颇为简单直接"
-    translated: "The Heart Method of basic Neigong practiced by the Forbidden Army guards in the Capital is rather simple and direct compared to that of Wulin practitioners."
-    qcReviewedText: "The Heart Method of basic Neigong practiced by the Forbidden Army guards in the Capital is rather simple and direct compared to that of Wulin practitioners."
+    translated: "The Heart Method of basic Neigong practiced by the Imperial Guard guards in the Capital is rather simple and direct compared to that of Wulin practitioners."
+    qcReviewedText: "The Heart Method of basic Neigong practiced by the Imperial Guard guards in the Capital is rather simple and direct compared to that of Wulin practitioners."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4052,8 +4052,8 @@
   splits:
   - split: 4
     text: "京城守卫禁军所习之基础内功心法，与武林中人的内功相比，忽视了内力修为，更注重实战操练"
-    translated: "The basic neigong and heart method practiced by the Forbidden Army guards of the Capital are less focused on cultivating inner power compared to those of martial artists in the Wulin, placing greater emphasis on practical combat training."
-    qcReviewedText: "The basic neigong and heart method practiced by the Forbidden Army guards of the Capital are less focused on cultivating inner power compared to those of martial artists in the Wulin, placing greater emphasis on practical combat training."
+    translated: "The basic neigong and heart method practiced by the Imperial Guard guards of the Capital are less focused on cultivating inner power compared to those of martial artists in the Wulin, placing greater emphasis on practical combat training."
+    qcReviewedText: "The basic neigong and heart method practiced by the Imperial Guard guards of the Capital are less focused on cultivating inner power compared to those of martial artists in the Wulin, placing greater emphasis on practical combat training."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

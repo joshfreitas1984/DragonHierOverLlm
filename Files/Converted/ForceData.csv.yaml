@@ -336,19 +336,12 @@
   - split: 15
     text: "试炼"
     translated: "Trial"
-    qcReviewedText: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "<b>Trial</b>: Challenge the Gate of Despair trials with increasing difficulty to gain progressively enhanced talent effects.\\n<b>Domineering</b>: Infamy for seizing items from others and shops: 40%. You can use a Special Technique to force your way out when caught by the authorities."
-    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
-    qcDefectCategories:
-    - Unknown
     qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "<b>Trial</b>：Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
   - split: 15
     subIndex: 1
     text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"
-    translated: "Tackle the Gate of Despair, they faced increasing challenges and gained progressively enhanced abilities."
+    translated: "Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects."
   - split: 15
     subIndex: 2
     text: "霸道"

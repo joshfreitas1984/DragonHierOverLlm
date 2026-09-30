@@ -282,11 +282,7 @@
   splits:
   - split: 1
     text: "天赋异禀"
-    translated: "Gifted"
-    qcReviewedText: "Gifted"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Gifted and Talented"
   - split: 2
     text: "累计领悟30次天赋"
     translated: "Accumulated 30 times mastering talents"
@@ -788,15 +784,15 @@
   splits:
   - split: 1
     text: "禁军统领"
-    translated: "Commander of the Forbidden Army"
-    qcReviewedText: "Commander of the Forbidden Army"
+    translated: "Commander of the Imperial Guard"
+    qcReviewedText: "Commander of the Imperial Guard"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 2
     text: "达成禁军统领结局"
-    translated: "Achieve the Forbidden Army Commander Ending"
-    qcReviewedText: "Achieve the Forbidden Army Commander Ending"
+    translated: "Achieve the Imperial Guard Commander Ending"
+    qcReviewedText: "Achieve the Imperial Guard Commander Ending"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

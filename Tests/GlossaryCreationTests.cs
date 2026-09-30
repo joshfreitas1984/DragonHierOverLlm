@@ -28,6 +28,12 @@ public class GlossaryCreationTests
     }
 
     [Fact]
+    public async Task GetTalents()
+    {
+        await GenerateGlossaryFromDumpedRaw("HeroTagData.csv", 1, "Talents");
+    }
+
+    [Fact]
     public async Task GetLoveInterest()
     {
         await GenerateGlossaryFromIndex("LoveableSpeHero.csv", 0, "LoveInterest");

@@ -1197,15 +1197,6 @@
   splits:
   - text: "自定义选项会在"
     translated: "Custom options will be available in"
-    qcReviewedText: "♦Custom options will be available in <b>Based on the selected difficulty </b>Have an impact\\n♦Overall balance is being adjusted/More difficult/Difficulty/Achievements can only be obtained in extremely difficult situations\\n♦Every 10 points increase the difficulty +1 talent number limit.\\n♦I recommend understanding the game mechanics before adjusting the custom options."
-    qcTranslated: "♦Custom options will have an impact <b>based on the selected difficulty</b>\\n♦The overall rank can only be achieved in Balanced/More Difficult/Difficult/Extremely Difficult modes\\n♦Every 10 points of difficulty increases the talent limit by +1\\n♦It is recommended to understand the game mechanics before adjusting custom options"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
-    - GarbledNumber
   - subIndex: 1
     text: "所选难度基础上"
     translated: "Based on the selected difficulty"
@@ -1226,7 +1217,7 @@
     translated: "Achievements can only be obtained in extremely difficult situations"
   - subIndex: 7
     text: "每10点难度+1天赋数上限"
-    translated: "Every 10 points increase the difficulty +1 talent number limit."
+    translated: "Each 10 point increases the Maximum Talent Points for difficulty +1."
   - subIndex: 8
     text: "建议了解游戏机制后再调整自定义选项"
     translated: "I recommend understanding the game mechanics before adjusting the custom options."
@@ -1271,13 +1262,9 @@
   splits:
   - text: "达成结局解锁对应传承天赋"
     translated: "Achieve the ending to unlock corresponding legacy talents"
-    qcReviewedText: "♦Achieve the ending to unlock corresponding legacy talents(Does not occupy skill slot)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "不占用天赋栏位"
-    translated: "Does not occupy skill slot"
+    translated: "Does not occupy a talent slot"
   templates:
   - template: "♦{0}({1})"
 - raw: "♦选出价值最贵的珍宝。\\n♦<b>学识</b>可以增加珍宝辨别能力。"
@@ -4186,11 +4173,7 @@
 - raw: "天赋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
 - raw: "天赋点 99"
   splits:
   - text: "天赋点"
@@ -8161,8 +8144,8 @@
 - raw: "禁军统领"
   splits:
   - text: "禁军统领"
-    translated: "Commander of the Forbidden Army"
-    qcReviewedText: "Commander of the Forbidden Army"
+    translated: "Commander of the Imperial Guard"
+    qcReviewedText: "Commander of the Imperial Guard"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

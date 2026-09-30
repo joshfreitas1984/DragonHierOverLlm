@@ -55,7 +55,7 @@
   result: Willow Brushing Sword
   badtrans: true
 - raw: 灭心绝情剑
-  result: Heart Extinguishing Passion Severing Sword
+  result: Heartless and Unfeeling Sword
   badtrans: true
 - raw: 八仙剑法
   result: Eight Immortals Sword Technique
@@ -89,7 +89,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 御剑要术
-  result: Essential Sword Controlling Technique
+  result: Essential Sword Manipulation Technique
   badtrans: true
 - raw: 五毒掌
   result: Five Poisons Palm
@@ -289,13 +289,13 @@
 #   result: Ten‑Form Brocade Long Fist
 #   badtrans: true
 # - raw: 禁军拳术
-#   result: Forbidden Army Combat Technique
+#   result: Imperial Guard Combat Technique
 #   badtrans: true
 # - raw: 木剑式
 #   result: Wooden Sword Style
 #   badtrans: true
 # - raw: 禁军剑术
-#   result: Forbidden Army Swordsmanship
+#   result: Imperial Guard Swordsmanship
 #   badtrans: true
 # - raw: 拔刀功
 #   result: Draw Blade Technique
@@ -304,7 +304,7 @@
 #   result: Chopping Wood Blade Technique
 #   badtrans: true
 # - raw: 禁军刀术
-#   result: Forbidden Army Blade Technique
+#   result: Imperial Guard Blade Technique
 #   badtrans: true
 # - raw: 太祖棍法
 #   result: Ancestral Staff Technique
@@ -313,7 +313,7 @@
 #   result: Hunter's Fork Technique
 #   badtrans: true
 # - raw: 禁军枪术
-#   result: Forbidden Army Spear Technique
+#   result: Imperial Guard Spear Technique
 #   badtrans: true
 # - raw: 三路鞭法
 #   result: Three Whips Technique
@@ -322,7 +322,7 @@
 #   result: Axeman Skill
 #   badtrans: true
 # - raw: 禁军钩术
-#   result: Forbidden Army Hook Technique
+#   result: Imperial Guard Hook Technique
 #   badtrans: true
 # - raw: 飞镖要诀
 #   result: Dart throwing secrets
@@ -1427,7 +1427,7 @@
 #   result: Eight Absolute Staff Techniques
 #   badtrans: true
 # - raw: 禁军心法
-#   result: Forbidden Army Heart Method
+#   result: Imperial Guard Heart Method
 #   badtrans: true
 # - raw: 举盾术
 #   result: Shield Bash

@@ -206,3 +206,12 @@
 
 - raw: 分则两败，合能成王
   result: "Divided we fall, united we rule"
+
+- raw: 天赋
+  result: Talent
+- raw: 天赋数
+  result: Talent Points
+  allowalt:
+    - Talent Point
+- raw: 天赋数上限
+  result: Maximum Talent Points

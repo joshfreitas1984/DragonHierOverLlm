@@ -6051,14 +6051,6 @@
   splits:
   - text: "新手推荐！"
     translated: "New Player Recommendation!"
-    qcReviewedText: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+10%/Injured-10%\nAll attributes/All skills+15\nPlayer experience/Reputation+80%\nDisciple Experience Points+40%\nNon‑disciple experience points-40%\n<color=green>Maximum potential points 10\nSpecial Building Limit 5</color>"
-    qcTranslated: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+10%/Injured‑10%\nAll attributes/All skills+15\nPlayer experience/Reputation+80%\nDisciples of this sect experience+40%\nNon‑disciples of this sect experience‑40%\n<color=green>Maximum potential points 10\nSpecial Building Limit 5</color>"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
   - subIndex: 1
     text: "适合寻求轻松体验的玩家"
     translated: "Suitable for players seeking a relaxed experience"
@@ -6088,7 +6080,7 @@
     translated: "Non‑disciple experience points"
   - subIndex: 10
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 11
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -6098,14 +6090,6 @@
   splits:
   - text: "新手推荐！"
     translated: "New Player Recommendation!"
-    qcReviewedText: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Injured-20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=green>Maximum potential points 9\nSpecial Building Limit 5</color>"
-    qcTranslated: "<b><color=teal>New Player Recommendation!\nSuitable for players seeking a relaxed experience </color></b>\nPlayer damage+20%/Damage taken‑20%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciples of this sect experience+60%\nNon‑disciples of this sect experience‑60%\n<color=green>Maximum potential points 9\nSpecial Building Limit 5</color>"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
   - subIndex: 1
     text: "适合寻求轻松体验的玩家"
     translated: "Suitable for players seeking a relaxed experience"
@@ -6135,7 +6119,7 @@
     translated: "Non‑disciple experience points"
   - subIndex: 10
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 11
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -6145,13 +6129,6 @@
   splits:
   - text: "适合了解游戏机制的玩家"
     translated: "Suitable for players who understand the game mechanics"
-    qcReviewedText: "<b><color=teal>Suitable for players who understand the game mechanics </color></b>\nAll attributes/All skills+10\nPlayer experience/Reputation+60%\nDisciple Experience Points+20%\nNon‑disciple experience points-20%\n<color=green>Maximum potential points 11\nSpecial Building Limit 5</color>"
-    qcTranslated: "<b><color=teal>Suitable for players who understand the game mechanics </color></b>\nAll attributes/All skills+10\nPlayer experience/Reputation+60%\nDisciple Experience Points+20%\nNon‑disciple experience points‑20%\n<color=green>Maximum talent count 11\nSpecial Building Limit 5</color>"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "全属性"
     translated: "All attributes"
@@ -6172,7 +6149,7 @@
     translated: "Non‑disciple experience points"
   - subIndex: 7
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 8
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -6182,10 +6159,6 @@
   splits:
   - text: "适合仅体验剧情的玩家"
     translated: "Suitable for players who want to experience the storyline only."
-    qcReviewedText: "<b><color=teal>Suitable for players who want to experience the storyline only.</color></b>\n<color=red>Cannot earn achievement </color>\nPlayer damage+100%/Injured-50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=red>Maximum potential points 9\nSpecial Building Limit 5</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "无法获得成就"
     translated: "Cannot earn achievement"
@@ -6215,7 +6188,7 @@
     translated: "Non‑disciple experience points"
   - subIndex: 10
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 11
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -6225,10 +6198,6 @@
   splits:
   - text: "适合寻求挑战的玩家"
     translated: "Suitable for players seeking a challenge"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenge </color></b>\nAll attributes/All skills+4\nPlayer experience/Reputation+20%\nNon‑disciple experience points+20%\nDifficulty increase speed++\n<color=green>Maximum potential points 13\nSpecial Building Limit 6</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "全属性"
     translated: "All attributes"
@@ -6249,7 +6218,7 @@
     translated: "Difficulty increase speed"
   - subIndex: 7
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 8
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -6259,10 +6228,6 @@
   splits:
   - text: "适合寻求挑战的玩家"
     translated: "Suitable for players seeking a challenge"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenge </color></b>\nAll attributes/All skills+6\nPlayer experience/Reputation+40%\nDifficulty increase speed+\n<color=green>Maximum potential points 12\nSpecial Building Limit 6</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "全属性"
     translated: "All attributes"
@@ -6280,7 +6245,7 @@
     translated: "Difficulty increase speed"
   - subIndex: 6
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 7
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -6290,10 +6255,6 @@
   splits:
   - text: "适合寻求高难挑战的玩家"
     translated: "Suitable for players seeking a challenging experience"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenging experience </color></b>\nAll attributes/All skills+2\nNon‑disciple experience points+40%\nDifficulty increase speed+++\n<color=green>Maximum potential points 14\nSpecial Building Limit 7</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "全属性"
     translated: "All attributes"
@@ -6308,7 +6269,7 @@
     translated: "Difficulty increase speed"
   - subIndex: 5
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 6
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -6318,10 +6279,6 @@
   splits:
   - text: "适合寻求高难挑战的玩家"
     translated: "Suitable for players seeking a challenging experience"
-    qcReviewedText: "<b><color=teal>Suitable for players seeking a challenging experience </color></b>\nNon‑disciple experience points+60%\nDifficulty increase speed++++\n<color=green>Maximum potential points 15\nSpecial Building Limit 7</color>"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "非本门弟子经验"
     translated: "Non‑disciple experience points"
@@ -6330,7 +6287,7 @@
     translated: "Difficulty increase speed"
   - subIndex: 3
     text: "天赋数上限"
-    translated: "Maximum potential points"
+    translated: "Maximum Talent Points"
   - subIndex: 4
     text: "特殊建筑上限"
     translated: "Special Building Limit"
@@ -8100,11 +8057,7 @@
 - raw: "[天赋数上限{0}]"
   splits:
   - text: "天赋数上限"
-    translated: "Maximum potential points"
-    qcReviewedText: "[Maximum potential points {0}]"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Maximum Talent Points"
   templates:
   - template: "[{0}⟦0⟧]"
 - raw: "[失衡]"
@@ -9634,14 +9587,7 @@
 - raw: "{0}天赋变化：{1}"
   splits:
   - text: "天赋变化"
-    translated: "Skill Evolution"
-    qcReviewedText: "{0} Skill Evolution：{1}"
-    qcTranslated: "{0} Talent Change: {1}"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent change"
   templates:
   - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}天赋点{1}"
@@ -9667,14 +9613,7 @@
 - raw: "{0}失去天赋：{1}"
   splits:
   - text: "失去天赋"
-    translated: "Lose one's gift"
-    qcReviewedText: "{0} Lose one's gift：{1}"
-    qcTranslated: "{0} loses talent: {1}"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Losing Talent"
   templates:
   - template: "⟦0⟧{0}：⟦1⟧"
 - raw: "{0}失去状态：{1}"
@@ -31922,25 +31861,17 @@
 - raw: "天赋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
 - raw: "天赋:"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   templates:
   - template: "{0}:"
 - raw: "天赋;ChooseManageTagTargetSelfHouse"
   splits:
   - text: "天赋"
-    translated: "Gift"
+    translated: "Talent"
   templates:
   - template: "{0};ChooseManageTagTargetSelfHouse"
 - raw: "天赋点"
@@ -35611,16 +35542,9 @@
   splits:
   - text: "少侠确认要在此闭关三十日，遗忘"
     translated: "Young Hero, are you sure you want to seclude yourself for thirty days and forget?"
-    qcReviewedText: "Young Hero, are you sure you want to seclude yourself for thirty days and forget?“{0}”This potential ability, right?"
-    qcTranslated: "Young Hero, are you sure you want to seclude yourself for thirty days and forget the {0} potential ability?"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "这一天赋吗？"
-    translated: "This potential ability, right?"
+    translated: "This talent?"
   templates:
   - template: "{0}“⟦0⟧”{1}"
 - raw: "少侠确认要在此闭关十日，遗忘这门#PlotInteractSkillName#吗？"
@@ -55527,16 +55451,16 @@
 - raw: "禁军侍卫"
   splits:
   - text: "禁军侍卫"
-    translated: "Forbidden Army guard"
-    qcReviewedText: "Forbidden Army guard"
+    translated: "Imperial Guard guard"
+    qcReviewedText: "Imperial Guard guard"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "禁军统领"
   splits:
   - text: "禁军统领"
-    translated: "Commander of the Forbidden Army"
-    qcReviewedText: "Commander of the Forbidden Army"
+    translated: "Commander of the Imperial Guard"
+    qcReviewedText: "Commander of the Imperial Guard"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

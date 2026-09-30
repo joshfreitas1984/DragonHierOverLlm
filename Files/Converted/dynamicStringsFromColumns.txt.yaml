@@ -6410,8 +6410,8 @@
 - raw: "禁军拳术"
   splits:
   - text: "禁军拳术"
-    translated: "Forbidden Army Combat Technique"
-    qcReviewedText: "Forbidden Army Combat Technique"
+    translated: "Imperial Guard Combat Technique"
+    qcReviewedText: "Imperial Guard Combat Technique"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6458,11 +6458,7 @@
 - raw: "御剑要术"
   splits:
   - text: "御剑要术"
-    translated: "Essential Sword Controlling Technique"
-    qcReviewedText: "Essential Sword Controlling Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Essential Sword Manipulation Technique"
 - raw: "剑法1"
   splits:
   - text: "剑法1"
@@ -6563,8 +6559,8 @@
 - raw: "禁军剑术"
   splits:
   - text: "禁军剑术"
-    translated: "Forbidden Army Swordsmanship"
-    qcReviewedText: "Forbidden Army Swordsmanship"
+    translated: "Imperial Guard Swordsmanship"
+    qcReviewedText: "Imperial Guard Swordsmanship"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6707,8 +6703,8 @@
 - raw: "禁军刀术"
   splits:
   - text: "禁军刀术"
-    translated: "Forbidden Army Blade Technique"
-    qcReviewedText: "Forbidden Army Blade Technique"
+    translated: "Imperial Guard Blade Technique"
+    qcReviewedText: "Imperial Guard Blade Technique"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6851,8 +6847,8 @@
 - raw: "禁军枪术"
   splits:
   - text: "禁军枪术"
-    translated: "Forbidden Army Spear Technique"
-    qcReviewedText: "Forbidden Army Spear Technique"
+    translated: "Imperial Guard Spear Technique"
+    qcReviewedText: "Imperial Guard Spear Technique"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7003,8 +6999,8 @@
 - raw: "禁军钩术"
   splits:
   - text: "禁军钩术"
-    translated: "Forbidden Army Hook Technique"
-    qcReviewedText: "Forbidden Army Hook Technique"
+    translated: "Imperial Guard Hook Technique"
+    qcReviewedText: "Imperial Guard Hook Technique"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -26699,8 +26695,8 @@
 - raw: "禁军心法"
   splits:
   - text: "禁军心法"
-    translated: "Forbidden Army Heart Method"
-    qcReviewedText: "Forbidden Army Heart Method"
+    translated: "Imperial Guard Heart Method"
+    qcReviewedText: "Imperial Guard Heart Method"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -42991,11 +42987,7 @@
 - raw: "灭心绝情剑"
   splits:
   - text: "灭心绝情剑"
-    translated: "Heart Extinguishing Passion Severing Sword"
-    qcReviewedText: "Heart Extinguishing Passion Severing Sword"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Heartless and Unfeeling Sword"
 - raw: "杀机0.06;弱点0.06"
   splits:
   - text: "杀机0.06"
@@ -62246,14 +62238,7 @@
 - raw: "天赋:钢筋铁骨"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Steel frame"
-    qcTranslated: "Gift: Iron Body"
-    qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "钢筋铁骨"
     translated: "Steel frame"
@@ -62262,14 +62247,7 @@
 - raw: "天赋:炉火纯青"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Mature beyond measure"
-    qcTranslated: "Gift: The Peak of Mastery"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "炉火纯青"
     translated: "Mature beyond measure"
@@ -62278,11 +62256,7 @@
 - raw: "天赋:内息灼热"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Inner Qi is hot"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "内息灼热"
     translated: "Inner Qi is hot"
@@ -62291,11 +62265,7 @@
 - raw: "天赋:强壮"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Strong"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "强壮"
     translated: "Strong"
@@ -62304,11 +62274,7 @@
 - raw: "天赋:魁梧奇伟"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Towering and imposing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "魁梧奇伟"
     translated: "Towering and imposing"
@@ -62317,11 +62283,7 @@
 - raw: "天赋:瘦弱"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Weak"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "瘦弱"
     translated: "Weak"
@@ -62330,11 +62292,7 @@
 - raw: "天赋:瘦骨嶙峋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Bony"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "瘦骨嶙峋"
     translated: "Bony"
@@ -62343,11 +62301,7 @@
 - raw: "天赋:机敏"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Nimble"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "机敏"
     translated: "Nimble"
@@ -62356,11 +62310,7 @@
 - raw: "天赋:随机应变"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Adapt on the fly"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "随机应变"
     translated: "Adapt on the fly"
@@ -62369,11 +62319,7 @@
 - raw: "天赋:笨拙"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Clumsy"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "笨拙"
     translated: "Clumsy"
@@ -62382,11 +62328,7 @@
 - raw: "天赋:笨手笨脚"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Clumsy"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "笨手笨脚"
     translated: "Clumsy"
@@ -62395,11 +62337,7 @@
 - raw: "天赋:聪慧"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Wise"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "聪慧"
     translated: "Wise"
@@ -62408,11 +62346,7 @@
 - raw: "天赋:天资过人"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Gifted"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "天资过人"
     translated: "Gifted"
@@ -62421,11 +62355,7 @@
 - raw: "天赋:愚钝"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Stupid"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "愚钝"
     translated: "Stupid"
@@ -62434,11 +62364,7 @@
 - raw: "天赋:傻头傻脑"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Stupid and silly"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "傻头傻脑"
     translated: "Stupid and silly"
@@ -62447,11 +62373,7 @@
 - raw: "天赋:勇敢"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Brave"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "勇敢"
     translated: "Brave"
@@ -62460,11 +62382,7 @@
 - raw: "天赋:身先士卒"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Lead by example"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "身先士卒"
     translated: "Lead by example"
@@ -62473,11 +62391,7 @@
 - raw: "天赋:懦弱"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Cowardly"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "懦弱"
     translated: "Cowardly"
@@ -62486,11 +62400,7 @@
 - raw: "天赋:战战兢兢"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:On tenterhooks"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "战战兢兢"
     translated: "On tenterhooks"
@@ -62499,11 +62409,7 @@
 - raw: "天赋:康健"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Healthy"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "康健"
     translated: "Healthy"
@@ -62512,11 +62418,7 @@
 - raw: "天赋:容光焕发"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Energetic and vibrant"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "容光焕发"
     translated: "Energetic and vibrant"
@@ -62525,14 +62427,7 @@
 - raw: "天赋:多病"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Ill often"
-    qcTranslated: "Talent: Prone to Illness"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "多病"
     translated: "Ill often"
@@ -62541,11 +62436,7 @@
 - raw: "天赋:身心交病"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Body and mind affected"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "身心交病"
     translated: "Body and mind affected"
@@ -62554,11 +62445,7 @@
 - raw: "天赋:顺脉"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Correct Pulse"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "顺脉"
     translated: "Correct Pulse"
@@ -62567,14 +62454,7 @@
 - raw: "天赋:脉络贯通"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Clearly understood"
-    qcTranslated: "Gift: Meridians in Perfect Harmony"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "脉络贯通"
     translated: "Clearly understood"
@@ -62583,14 +62463,7 @@
 - raw: "天赋:滞脉"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Stop pulse"
-    qcTranslated: "Gift: Stagnant Meridian"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "滞脉"
     translated: "Stop pulse"
@@ -62599,11 +62472,7 @@
 - raw: "天赋:脉络阻塞"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Blocked meridian"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "脉络阻塞"
     translated: "Blocked meridian"
@@ -62612,11 +62481,7 @@
 - raw: "天赋:正直"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Honest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "正直"
     translated: "Honest"
@@ -62625,11 +62490,7 @@
 - raw: "天赋:公正不阿"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Impartial"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "公正不阿"
     translated: "Impartial"
@@ -62638,11 +62499,7 @@
 - raw: "天赋:阴险"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Cunning"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "阴险"
     translated: "Cunning"
@@ -62651,11 +62508,7 @@
 - raw: "天赋:不择手段"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Stop at nothing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "不择手段"
     translated: "Stop at nothing"
@@ -62664,11 +62517,7 @@
 - raw: "天赋:仁慈"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Merciful"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "仁慈"
     translated: "Merciful"
@@ -62677,11 +62526,7 @@
 - raw: "天赋:宅心仁厚"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Kind and benevolent"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "宅心仁厚"
     translated: "Kind and benevolent"
@@ -62690,11 +62535,7 @@
 - raw: "天赋:残忍"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Cruel"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "残忍"
     translated: "Cruel"
@@ -62703,11 +62544,7 @@
 - raw: "天赋:心狠手辣"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Cruel and ruthless"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "心狠手辣"
     translated: "Cruel and ruthless"
@@ -62716,11 +62553,7 @@
 - raw: "天赋:冷静"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Stay calm"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "冷静"
     translated: "Stay calm"
@@ -62729,11 +62562,7 @@
 - raw: "天赋:气定神闲"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Calm and composed"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "气定神闲"
     translated: "Calm and composed"
@@ -62742,14 +62571,7 @@
 - raw: "天赋:暴躁"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Irritable"
-    qcTranslated: "Talent: Irritable"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "暴躁"
     translated: "Irritable"
@@ -62758,11 +62580,7 @@
 - raw: "天赋:性烈如火"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:As fierce as fire"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "性烈如火"
     translated: "As fierce as fire"
@@ -62771,11 +62589,7 @@
 - raw: "天赋:幸运"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Luck"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "幸运"
     translated: "Luck"
@@ -62784,11 +62598,7 @@
 - raw: "天赋:福星高照"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Lucky stars shining high"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "福星高照"
     translated: "Lucky stars shining high"
@@ -62797,14 +62607,7 @@
 - raw: "天赋:不幸"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Unluckily"
-    qcTranslated: "Talent: Misfortune"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "不幸"
     translated: "Unluckily"
@@ -62813,11 +62616,7 @@
 - raw: "天赋:命途多舛"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:With a tumultuous fate"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "命途多舛"
     translated: "With a tumultuous fate"
@@ -62826,11 +62625,7 @@
 - raw: "天赋:美貌"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Beauty"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "美貌"
     translated: "Beauty"
@@ -62839,11 +62634,7 @@
 - raw: "天赋:明眸皓齿"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Bright eyes and perfect teeth"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "明眸皓齿"
     translated: "Bright eyes and perfect teeth"
@@ -62852,11 +62643,7 @@
 - raw: "天赋:丑陋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Ugly"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "丑陋"
     translated: "Ugly"
@@ -62865,14 +62652,7 @@
 - raw: "天赋:面目狰狞"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:With a fierce expression"
-    qcTranslated: "Gift: Fierce Expression"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "面目狰狞"
     translated: "With a fierce expression"
@@ -62881,11 +62661,7 @@
 - raw: "天赋:锐眼"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Sharp Eye"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "锐眼"
     translated: "Sharp Eye"
@@ -62894,11 +62670,7 @@
 - raw: "天赋:目光炯炯"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Eyes shining brightly"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "目光炯炯"
     translated: "Eyes shining brightly"
@@ -62907,11 +62679,7 @@
 - raw: "天赋:弱视"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Lazy eye"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "弱视"
     translated: "Lazy eye"
@@ -62920,11 +62688,7 @@
 - raw: "天赋:视线模糊"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Sight blurred"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "视线模糊"
     translated: "Sight blurred"
@@ -62933,11 +62697,7 @@
 - raw: "天赋:谦逊"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Humble"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "谦逊"
     translated: "Humble"
@@ -62946,11 +62706,7 @@
 - raw: "天赋:不骄不躁"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Neither arrogant nor anxious"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "不骄不躁"
     translated: "Neither arrogant nor anxious"
@@ -62959,11 +62715,7 @@
 - raw: "天赋:刚愎"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Stubborn"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "刚愎"
     translated: "Stubborn"
@@ -62972,11 +62724,7 @@
 - raw: "天赋:盛气凌人"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Overbearing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "盛气凌人"
     translated: "Overbearing"
@@ -62985,11 +62733,7 @@
 - raw: "天赋:忠诚"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Loyalty"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "忠诚"
     translated: "Loyalty"
@@ -62998,11 +62742,7 @@
 - raw: "天赋:忠心耿耿"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Loyal to the core"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "忠心耿耿"
     translated: "Loyal to the core"
@@ -63011,11 +62751,7 @@
 - raw: "天赋:叛逆"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Rebellion"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "叛逆"
     translated: "Rebellion"
@@ -63024,11 +62760,7 @@
 - raw: "天赋:桀骜不驯"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Rebellious"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "桀骜不驯"
     translated: "Rebellious"
@@ -63037,11 +62769,7 @@
 - raw: "天赋:勤奋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Diligence"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "勤奋"
     translated: "Diligence"
@@ -63050,11 +62778,7 @@
 - raw: "天赋:孜孜不倦"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Diligent"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "孜孜不倦"
     translated: "Diligent"
@@ -63063,11 +62787,7 @@
 - raw: "天赋:懒惰"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Laziness"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "懒惰"
     translated: "Laziness"
@@ -63076,14 +62796,7 @@
 - raw: "天赋:游手好闲"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Idle"
-    qcTranslated: "Gift: Idleness"
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "游手好闲"
     translated: "Idle"
@@ -63092,11 +62805,7 @@
 - raw: "天赋:节俭"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Frugality"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "节俭"
     translated: "Frugality"
@@ -63105,11 +62814,7 @@
 - raw: "天赋:精打细算"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Thrifty"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "精打细算"
     translated: "Thrifty"
@@ -63118,11 +62823,7 @@
 - raw: "天赋:浪费"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Waste"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "浪费"
     translated: "Waste"
@@ -63131,11 +62832,7 @@
 - raw: "天赋:挥霍无度"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Wasteful"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "挥霍无度"
     translated: "Wasteful"
@@ -63144,11 +62841,7 @@
 - raw: "天赋:练武"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Training in martial arts"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "练武"
     translated: "Training in martial arts"
@@ -63157,11 +62850,7 @@
 - raw: "天赋:武痴"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Martial maniac"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "武痴"
     translated: "Martial maniac"
@@ -63170,14 +62859,7 @@
 - raw: "天赋:学医"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Study medicine"
-    qcTranslated: "Talent: Study Medicine"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "学医"
     translated: "Study medicine"
@@ -63186,11 +62868,7 @@
 - raw: "天赋:医师"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Doctor"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "医师"
     translated: "Doctor"
@@ -63199,14 +62877,7 @@
 - raw: "天赋:习文"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Xwen"
-    qcTranslated: "Gift: Learning Literature"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Talent"
   - subIndex: 1
     text: "习文"
     translated: "Xwen"
@@ -63215,11 +62886,7 @@
 - raw: "天赋:雅士"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Gentleman"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "雅士"
     translated: "Gentleman"
@@ -63228,11 +62895,7 @@
 - raw: "天赋:务农"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Farm"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "务农"
     translated: "Farm"
@@ -63241,11 +62904,7 @@
 - raw: "天赋:农家"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Farmer's"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "农家"
     translated: "Farmer's"
@@ -63254,11 +62913,7 @@
 - raw: "天赋:学徒"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Apprentice"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "学徒"
     translated: "Apprentice"
@@ -63267,11 +62922,7 @@
 - raw: "天赋:工匠"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Craftsman"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "工匠"
     translated: "Craftsman"
@@ -63280,11 +62931,7 @@
 - raw: "天赋:经商"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Business"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "经商"
     translated: "Business"
@@ -63293,11 +62940,7 @@
 - raw: "天赋:善贾"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Skillful Trader"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "善贾"
     translated: "Skillful Trader"
@@ -63306,11 +62949,7 @@
 - raw: "天赋:从政"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Enter politics"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "从政"
     translated: "Enter politics"
@@ -63319,11 +62958,7 @@
 - raw: "天赋:仕官"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Become a government official"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "仕官"
     translated: "Become a government official"
@@ -63332,11 +62967,7 @@
 - raw: "天赋:杂学"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Miscellaneous studies"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "杂学"
     translated: "Miscellaneous studies"
@@ -63345,11 +62976,7 @@
 - raw: "天赋:通才"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Renaissance Man"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "通才"
     translated: "Renaissance Man"
@@ -63358,11 +62985,7 @@
 - raw: "天赋:淡泊"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Tranquil"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "淡泊"
     translated: "Tranquil"
@@ -63371,11 +62994,7 @@
 - raw: "天赋:隐士"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Hermit"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "隐士"
     translated: "Hermit"
@@ -63384,11 +63003,7 @@
 - raw: "天赋:儒术"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Confucianism"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "儒术"
     translated: "Confucianism"
@@ -63397,11 +63012,7 @@
 - raw: "天赋:儒生"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Scholar‑official"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "儒生"
     translated: "Scholar‑official"
@@ -63410,11 +63021,7 @@
 - raw: "天赋:修道"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Cultivate the way"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "修道"
     translated: "Cultivate the way"
@@ -63423,11 +63030,7 @@
 - raw: "天赋:道士"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Daoist priest"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "道士"
     translated: "Daoist priest"
@@ -63436,11 +63039,7 @@
 - raw: "天赋:学佛"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Study Buddhism"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "学佛"
     translated: "Study Buddhism"
@@ -63449,11 +63048,7 @@
 - raw: "天赋:禅师"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Zen Master"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "禅师"
     translated: "Zen Master"
@@ -63462,11 +63057,7 @@
 - raw: "天赋:行乞"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Begging"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "行乞"
     translated: "Begging"
@@ -63475,11 +63066,7 @@
 - raw: "天赋:化缘"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Beg for alms"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "化缘"
     translated: "Beg for alms"
@@ -63488,11 +63075,7 @@
 - raw: "天赋:卜算"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Fortune Teller"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "卜算"
     translated: "Fortune Teller"
@@ -63501,11 +63084,7 @@
 - raw: "天赋:相士"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Fortune teller"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "相士"
     translated: "Fortune teller"
@@ -63514,11 +63093,7 @@
 - raw: "天赋:游侠"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Ranger"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "游侠"
     translated: "Ranger"
@@ -63527,11 +63102,7 @@
 - raw: "天赋:侠客"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Wanderer"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "侠客"
     translated: "Wanderer"
@@ -63540,14 +63111,7 @@
 - raw: "天赋:赌徒"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Gamble addict"
-    qcTranslated: "Gift: Gambler"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "赌徒"
     translated: "Gamble addict"
@@ -63556,11 +63120,7 @@
 - raw: "天赋:嗜赌如命"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Addicted to gambling"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "嗜赌如命"
     translated: "Addicted to gambling"
@@ -63569,11 +63129,7 @@
 - raw: "天赋:酒鬼"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Drunkard"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "酒鬼"
     translated: "Drunkard"
@@ -63582,11 +63138,7 @@
 - raw: "天赋:放歌纵酒"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Sing and drink freely"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "放歌纵酒"
     translated: "Sing and drink freely"
@@ -63595,14 +63147,7 @@
 - raw: "天赋:食客"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Dining guest"
-    qcTranslated: "Talent: Foodie"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "食客"
     translated: "Dining guest"
@@ -63611,14 +63156,7 @@
 - raw: "天赋:大快朵颐"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Enjoy oneself to the fullest"
-    qcTranslated: "Gift:Feast"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "大快朵颐"
     translated: "Enjoy oneself to the fullest"
@@ -63627,11 +63165,7 @@
 - raw: "天赋:收藏"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Collect"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "收藏"
     translated: "Collect"
@@ -63640,11 +63174,7 @@
 - raw: "天赋:去伪存真"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Separate truth from falsehood"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "去伪存真"
     translated: "Separate truth from falsehood"
@@ -63653,11 +63183,7 @@
 - raw: "天赋:骑术"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Horsemanship"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "骑术"
     translated: "Horsemanship"
@@ -63666,11 +63192,7 @@
 - raw: "天赋:纵马驰骋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Gallop on horseback"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "纵马驰骋"
     translated: "Gallop on horseback"
@@ -63679,11 +63201,7 @@
 - raw: "天赋:读书"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Reading books"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "读书"
     translated: "Reading books"
@@ -63692,11 +63210,7 @@
 - raw: "天赋:博览群书"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Read extensively"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "博览群书"
     translated: "Read extensively"
@@ -63705,11 +63219,7 @@
 - raw: "天赋:瑶琴"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Yaqin"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "瑶琴"
     translated: "Yaqin"
@@ -63718,11 +63228,7 @@
 - raw: "天赋:余音绕梁"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Resonant echoes linger in the hall"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "余音绕梁"
     translated: "Resonant echoes linger in the hall"
@@ -63731,11 +63237,7 @@
 - raw: "天赋:弈棋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Go playing"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "弈棋"
     translated: "Go playing"
@@ -63744,11 +63246,7 @@
 - raw: "天赋:棋高一着"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:A move ahead"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "棋高一着"
     translated: "A move ahead"
@@ -63757,11 +63255,7 @@
 - raw: "天赋:书法"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Calligraphy"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "书法"
     translated: "Calligraphy"
@@ -63770,14 +63264,7 @@
 - raw: "天赋:笔走龙蛇"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Brush moves like dragonsisciendi"
-    qcTranslated: "Gift: Brush Moves Like Dragon"
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
+    translated: "Talent"
   - subIndex: 1
     text: "笔走龙蛇"
     translated: "Brush moves like dragonsisciendi"
@@ -63786,11 +63273,7 @@
 - raw: "天赋:绘画"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Painting"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "绘画"
     translated: "Painting"
@@ -63799,11 +63282,7 @@
 - raw: "天赋:丹青妙手"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Skillful Painter"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "丹青妙手"
     translated: "Skillful Painter"
@@ -63812,11 +63291,7 @@
 - raw: "天赋:吟诗"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Compose poetry"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "吟诗"
     translated: "Compose poetry"
@@ -63825,11 +63300,7 @@
 - raw: "天赋:文思泉涌"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Inspiration flows freely"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "文思泉涌"
     translated: "Inspiration flows freely"
@@ -63838,14 +63309,7 @@
 - raw: "天赋:狩猎"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Hunting"
-    qcTranslated: "Talent: Hunting"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "狩猎"
     translated: "Hunting"
@@ -63854,14 +63318,7 @@
 - raw: "天赋:飞鹰走犬"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Eagle flies, hounds run"
-    qcTranslated: "Gift: Eagle Soars, Hounds Chase"
-    qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Talent"
   - subIndex: 1
     text: "飞鹰走犬"
     translated: "Eagle flies, hounds run"
@@ -63870,11 +63327,7 @@
 - raw: "天赋:云游"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Wandering Clouds"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "云游"
     translated: "Wandering Clouds"
@@ -63883,14 +63336,7 @@
 - raw: "天赋:游山玩水"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:To sightsee and have fun"
-    qcTranslated: "Gift: Traveling Mountains and Waters"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "游山玩水"
     translated: "To sightsee and have fun"
@@ -63899,11 +63345,7 @@
 - raw: "天赋:静修"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Meditation"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "静修"
     translated: "Meditation"
@@ -63912,11 +63354,7 @@
 - raw: "天赋:蛰居偃伏"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Secluded Resting"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "蛰居偃伏"
     translated: "Secluded Resting"
@@ -63925,11 +63363,7 @@
 - raw: "天赋:舞技"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Dance skill"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "舞技"
     translated: "Dance skill"
@@ -63938,11 +63372,7 @@
 - raw: "天赋:舞态生风"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Dance with the grace of the wind"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "舞态生风"
     translated: "Dance with the grace of the wind"
@@ -63951,11 +63381,7 @@
 - raw: "天赋:随从"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Attendant"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "随从"
     translated: "Attendant"
@@ -63964,11 +63390,7 @@
 - raw: "天赋:唯命是从"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:At your command"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "唯命是从"
     translated: "At your command"
@@ -63977,11 +63399,7 @@
 - raw: "天赋:军师"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Counselor"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "军师"
     translated: "Counselor"
@@ -63990,11 +63408,7 @@
 - raw: "天赋:排兵布阵"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Arranging troops on the battlefield"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "排兵布阵"
     translated: "Arranging troops on the battlefield"
@@ -64003,14 +63417,7 @@
 - raw: "天赋:领袖"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Leader"
-    qcTranslated: "Talent: Leader"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Talent"
   - subIndex: 1
     text: "领袖"
     translated: "Leader"
@@ -64019,11 +63426,7 @@
 - raw: "天赋:胸怀大志"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Ambitious heart"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "胸怀大志"
     translated: "Ambitious heart"
@@ -64032,11 +63435,7 @@
 - raw: "天赋:先锋"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Vanguard"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "先锋"
     translated: "Vanguard"
@@ -64045,11 +63444,7 @@
 - raw: "天赋:奋勇当先"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Charge bravely"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "奋勇当先"
     translated: "Charge bravely"
@@ -64058,11 +63453,7 @@
 - raw: "天赋:守备"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Garrison"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "守备"
     translated: "Garrison"
@@ -64071,11 +63462,7 @@
 - raw: "天赋:戒备森严"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Strictly guarded"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "戒备森严"
     translated: "Strictly guarded"
@@ -64084,11 +63471,7 @@
 - raw: "天赋:游斗"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Duel"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "游斗"
     translated: "Duel"
@@ -64097,11 +63480,7 @@
 - raw: "天赋:快步流星"
   splits:
   - text: "天赋"
-    translated: "Gift"
-    qcReviewedText: "Gift:Quickstep"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Talent"
   - subIndex: 1
     text: "快步流星"
     translated: "Quickstep"
@@ -65780,16 +65159,12 @@
   splits:
   - text: "自行练习"
     translated: "Practice on your own"
-    qcReviewedText: "♦Practice on your own\n♦Breakthrough\n♦Gift"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "突破"
     translated: "Breakthrough"
   - subIndex: 2
     text: "天赋"
-    translated: "Gift"
+    translated: "Talent"
   templates:
   - template: "♦{0}\n♦{1}\n♦{2}"
 - raw: "管理个人展厅"

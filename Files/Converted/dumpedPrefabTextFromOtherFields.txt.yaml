@@ -12964,8 +12964,8 @@
 - raw: "在国力最为强盛之时，#$PlayerName#更是御驾亲征，统领着武艺精湛的禁军，\\n北击大辽，东征高丽，收服西域，克定安南。"
   splits:
   - text: "在国力最为强盛之时，#$PlayerName#更是御驾亲征，统领着武艺精湛的禁军，"
-    translated: "During the height of national power, #$PlayerName# personally led the elite Forbidden Army in campaigns."
-    qcReviewedText: "During the height of national power, #$PlayerName# personally led the elite Forbidden Army in campaigns.\\nConquer the Great Liao to the north, march east to Goryeo, subdue the Western Regions, and pacify Annam."
+    translated: "During the height of national power, #$PlayerName# personally led the elite Imperial Guard in campaigns."
+    qcReviewedText: "During the height of national power, #$PlayerName# personally led the elite Imperial Guard in campaigns.\\nConquer the Great Liao to the north, march east to Goryeo, subdue the Western Regions, and pacify Annam."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14407,14 +14407,7 @@
 - raw: "将御剑要术修炼至十重功力\\n<i>理论经验：在藏经阁阅读秘籍\\n实战经验：在练武场练习或切磋\\n突破瓶颈：在闭关室选择突破</i>"
   splits:
   - text: "将御剑要术修炼至十重功力"
-    translated: "Cultivate the Essential Sword Controlling Technique to the tenth level of proficiency."
-    qcReviewedText: "Cultivate the Essential Sword Controlling Technique to the tenth level of proficiency.\\n<i>Theoretical experience：In the Scripture Pavilion, read the secret manuals \\nCombat experience：Practice or exchange techniques in the training ground \\nBreak through the bottleneck：Choose to breakthrough in the meditation chamber</i>"
-    qcTranslated: "Cultivate the Essential Sword Controlling Technique to the tenth level of proficiency.\\n<i>Theoretical experience: In the Scripture Pavilion, read the Secret Manual \\nCombat experience: Practice or exchange techniques in the training ground \\nBreak through the bottleneck: Choose to breakthrough in the meditation chamber</i>"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Cultivate the Essential Sword Manipulation Technique to the tenth level of proficiency."
   - subIndex: 1
     text: "理论经验"
     translated: "Theoretical experience"
@@ -15514,22 +15507,11 @@
 - raw: "御剑要术"
   splits:
   - text: "御剑要术"
-    translated: "Essential Sword Controlling Technique"
-    qcReviewedText: "Essential Sword Controlling Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Essential Sword Manipulation Technique"
 - raw: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
   splits:
   - text: "御剑要术已经大成，去#TargetPlace#找顾游年师兄询问接下来的修炼之法。"
-    translated: "The Essential Sword Controlling Technique is now complete. Go to #TargetPlace# and ask Senior Brother Gu Younian about the next stage of cultivation methods. Practice methods\\nCultivation methods The cultivation methods are recorded in the ancient scripture. A more natural translation might be the next steps in my training or similar, depending on context.)"
-    qcReviewedText: "The Essential Sword Controlling Technique is now complete. Go to #TargetPlace# and ask Senior Brother Gu Younian about the next stage of cultivation methods. Practice methods\\nCultivation methods The cultivation methods are recorded in the ancient scripture. A more natural translation might be the next steps in my training or similar, depending on context.)"
-    qcTranslated: "The Essential Sword Controlling Technique is now complete. Go to #TargetPlace# and ask Senior Brother Gu Younian about the next stage of cultivation methods."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "The Essential Sword Manipulation Technique is now complete. Go to #TargetPlace# and ask Senior Brother Gu Younian about the next stage of your training."
 - raw: "御史嘉奖"
   splits:
   - text: "御史嘉奖"
@@ -20209,8 +20191,8 @@
 - raw: "禁军在他的统帅之下，军容整肃，号令如山。"
   splits:
   - text: "禁军在他的统帅之下，军容整肃，号令如山。"
-    translated: "Under his command, the Forbidden Army stood in strict formation, orders carried with the weight of mountains."
-    qcReviewedText: "Under his command, the Forbidden Army stood in strict formation, orders carried with the weight of mountains."
+    translated: "Under his command, the Imperial Guard stood in strict formation, orders carried with the weight of mountains."
+    qcReviewedText: "Under his command, the Imperial Guard stood in strict formation, orders carried with the weight of mountains."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -21022,8 +21004,8 @@
 - raw: "而武林各派势力，也在这支强盛禁军的压制之下，再也不敢与朝廷争锋。"
   splits:
   - text: "而武林各派势力，也在这支强盛禁军的压制之下，再也不敢与朝廷争锋。"
-    translated: "And with the dominance of this strong Forbidden Army, the various factions of the Wulin no longer dared to challenge the court."
-    qcReviewedText: "And with the dominance of this strong Forbidden Army, the various factions of the Wulin no longer dared to challenge the court."
+    translated: "And with the dominance of this strong Imperial Guard, the various factions of the Wulin no longer dared to challenge the court."
+    qcReviewedText: "And with the dominance of this strong Imperial Guard, the various factions of the Wulin no longer dared to challenge the court."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -24859,8 +24841,8 @@
 - raw: "随后，他便奉诏入宫担任殿前都点检之职，大权独揽，执掌禁军。"
   splits:
   - text: "随后，他便奉诏入宫担任殿前都点检之职，大权独揽，执掌禁军。"
-    translated: "Subsequently, he was summoned to the palace to serve as the Commandant of the Imperial Guard, holding supreme power and commanding the Forbidden Army."
-    qcReviewedText: "Subsequently, he was summoned to the palace to serve as the Commandant of the Imperial Guard, holding supreme power and commanding the Forbidden Army."
+    translated: "Subsequently, he was summoned to the palace to serve as the Commandant of the Imperial Guard, holding supreme power and commanding the Imperial Guard."
+    qcReviewedText: "Subsequently, he was summoned to the palace to serve as the Commandant of the Imperial Guard, holding supreme power and commanding the Imperial Guard."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
