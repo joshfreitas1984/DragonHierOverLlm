@@ -4,40 +4,28 @@
     - every household #adjacent char
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 轻功
   result: Qinggong
   exclude:
     - PlotData.csv
     - KungFuData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 绝技
   result: Special Technique
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 拳掌
   result: Unarmed
   exclude:
     - PlotData.csv
     - KungFuData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: "剑法"
   result: "Sword Technique"
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: "刀法"
   result: "Blade Technique"
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 长兵
   result: Long weapon
   allowalt:
@@ -45,79 +33,57 @@
   exclude:
     - PlotData.csv
     - heroNameParts.txt
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 奇门
   result: Qimen
   exclude:
     - PlotData.csv
     - KungFuData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 射术
   result: Archery
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 医术
   result: Medical Arts
   allowalt: 
     - Medical
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 毒术
   result: Poison Arts
   allowalt:
     - Poison
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 学识
   result: Knowledge
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 口才
   result: Eloquence
   allowalt:
     - excuse # colocated chars
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 采伐
   result: Resource Gathering
   allowalt:
     - gather resources
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 木植
   result: Planting
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 锻造
   result: Forging
   exclude:
     - PlotData.csv
   allowalt:
     - forge
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 炼药
   result: Alchemy
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 - raw: 烹饪
   result: Cooking
   allowalt:
@@ -125,8 +91,6 @@
   - prepared
   exclude:
     - PlotData.csv
-  # only: 
-  #   - dynamicStringsFromColumns.txt
 
 
 - raw: 口才经验

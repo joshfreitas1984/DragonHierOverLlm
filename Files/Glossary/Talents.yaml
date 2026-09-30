@@ -51,7 +51,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 内力精纯
-  result: Refined Neigong
+  result: Refined Inner Power
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 炉火纯青
@@ -211,7 +211,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 内息冰寒
-  result: Inner Qi icy cold
+  result: Inner Qi chills
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 刺骨奇寒
@@ -1020,7 +1020,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 慧眼独具
-  result: Having keen insight
+  result: Having keen eyes
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 骑术

@@ -3,7 +3,7 @@
   result: "Infamy"
   allowalt:
     - "infamous"
-- 
+
 - raw: 力道
   result: Strength
   exclude:
@@ -44,6 +44,9 @@
 
 - raw: 生命
   result: Health
+  exclude:
+    - PlotData.csv
+    - KungFuData.csv
 - raw: 内力
   result: Inner Power
   exclude:
@@ -54,8 +57,6 @@
   exclude:
     - PlotData.csv
     - KungFuData.csv
-  # allowalt:
-  #   - "Strength" # only after we fixed all the strengths and the one or two usages of "Strength" that are not "Stamina"
 
 - raw: 生命上限
   result: Max Health
@@ -236,7 +237,7 @@
     - PlotData.csv
     - KungFuData.csv
 - raw: 冰寒
-  result: Chilling
+  result: Chill
   exclude:
     - PlotData.csv
     - KungFuData.csv
@@ -382,6 +383,8 @@
     - KungFuData.csv
 - raw: 定神
   result: Mind Calming
+  allowalt: 
+    - Calm and composed ## Talent
   exclude:
     - PlotData.csv
     - KungFuData.csv
@@ -421,12 +424,12 @@
     - PlotData.csv
     - KungFuData.csv
 - raw: 反伤吸内
-  result: Reflect & Drain
+  result: Reflect Energy Drain
   exclude:
     - PlotData.csv
     - KungFuData.csv
 - raw: 反伤削内
-  result: Reflect & Weaken
+  result: Reflect Energy Reduction
   exclude:
     - PlotData.csv
     - KungFuData.csv
@@ -621,7 +624,7 @@
     - PlotData.csv
     - KungFuData.csv
 - raw: 斗转
-  result: Star Shift
+  result: Stars Shift
   exclude:
     - PlotData.csv
     - KungFuData.csv
@@ -641,7 +644,7 @@
     - PlotData.csv
     - KungFuData.csv
 - raw: 疗伤效率
-  result: Healing Efficiency
+  result: Injury Treatment Efficiency
   exclude:
     - PlotData.csv
     - KungFuData.csv
