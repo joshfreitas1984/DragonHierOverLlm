@@ -162,10 +162,6 @@ public class MainPlugin : BasePlugin
     // its unconstrained single-line preferred width with no cap.
     internal static ConfigEntry<bool> ClampPlotTextWidthEnabled;
 
-    // Gameplay tweak - see TagGroupPatches. Off by default (vanilla behaviour).
-    internal static ConfigEntry<bool> SplitSeniorTalentGroupsEnabled;
-    internal static bool SplitSeniorTalentGroupsEnabledCached;
-
     // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above. Read from
     // Text.preferredWidth's getter, which the game's layout system can call often.
     internal static bool ClampPlotTextWidthEnabledCached;
@@ -307,13 +303,6 @@ public class MainPlugin : BasePlugin
             "When true, the currently-equipped/ridden horse's bigmap quick-travel icon is resolved by looking up its itemID in a raw-name table read directly from the deployed HorseData.csv, instead of relying on the (already-translated in memory, and sometimes save-baked) targetHorseData.name field, so the icon resolves instead of going missing once the horse's name has been translated to English. See HorseMountedIconPatches.",
             v => ResyncMountedHorseIconEnabledCached = v);
 
-        SplitSeniorTalentGroupsEnabled = BindCachedBool(
-            "Game Bugfixes",
-            "SplitSeniorTalentGroups",
-            true,
-            "When true, Senior Neigong/Qinggong/Special-technique talents (e.g. Yin and Yang in harmony) no longer block learning the base talents of the same line (Neigong, Qinggong, Special technique). Seniors still block each other. Off by default (vanilla rule). Takes effect as talent data is next looked up; reopen the talent screen after changing.",
-            v => SplitSeniorTalentGroupsEnabledCached = v);
-
         ClampPlotTextWidthEnabled = BindCachedBool(
             "Game Bugfixes",
             "ClampPlotTextWidth",
@@ -437,7 +426,6 @@ public class MainPlugin : BasePlugin
 
         SpeAddDescribePatches.PatchAll();
         TagDisabledTooltipPatches.PatchAll();
-        TagGroupPatches.PatchAll();
 
         MissionPatches.PatchAll();
 
