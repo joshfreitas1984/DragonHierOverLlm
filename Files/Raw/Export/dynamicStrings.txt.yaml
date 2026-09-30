@@ -2541,27 +2541,6 @@
   - text: "秒"
   templates:
   - template: "(⟦0⟧{0})"
-- raw: "(不观战);RealStartForceGroupFightMatch;0-{0};;不观看其他角色之间的对战"
-  splits:
-  - text: "不观战"
-  - subIndex: 1
-    text: "不观看其他角色之间的对战"
-  templates:
-  - template: "({0});RealStartForceGroupFightMatch;0-⟦0⟧;;{1}"
-- raw: "(不观战);StartAreaFightMatchSure;0-{0};;不观看其他角色之间的对战"
-  splits:
-  - text: "不观战"
-  - subIndex: 1
-    text: "不观看其他角色之间的对战"
-  templates:
-  - template: "({0});StartAreaFightMatchSure;0-⟦0⟧;;{1}"
-- raw: "(不观战);StartForceFightMatchSure;0-{0};;不观看其他角色之间的对战"
-  splits:
-  - text: "不观战"
-  - subIndex: 1
-    text: "不观看其他角色之间的对战"
-  templates:
-  - template: "({0});StartForceFightMatchSure;0-⟦0⟧;;{1}"
 - raw: "(仅男性)"
   splits:
   - text: "仅男性"
@@ -2726,27 +2705,6 @@
   - text: "耐力"
   templates:
   - template: "({0}-⟦0⟧)"
-- raw: "(观战);RealStartForceGroupFightMatch;1-{0};;其他角色对战时会询问是否观看"
-  splits:
-  - text: "观战"
-  - subIndex: 1
-    text: "其他角色对战时会询问是否观看"
-  templates:
-  - template: "({0});RealStartForceGroupFightMatch;1-⟦0⟧;;{1}"
-- raw: "(观战);StartAreaFightMatchSure;1-{0};;其他角色对战时会询问是否观看"
-  splits:
-  - text: "观战"
-  - subIndex: 1
-    text: "其他角色对战时会询问是否观看"
-  templates:
-  - template: "({0});StartAreaFightMatchSure;1-⟦0⟧;;{1}"
-- raw: "(观战);StartForceFightMatchSure;1-{0};;其他角色对战时会询问是否观看"
-  splits:
-  - text: "观战"
-  - subIndex: 1
-    text: "其他角色对战时会询问是否观看"
-  templates:
-  - template: "({0});StartForceFightMatchSure;1-⟦0⟧;;{1}"
 - raw: "(这{0}我早已学会，还是另做打算吧......)"
   splits:
   - text: "这"
@@ -2798,131 +2756,6 @@
     text: "额外获得声望"
   templates:
   - template: "{0}：{1}"
-- raw: "10000两;ManageForceMoneyPlotSure;10000-"
-  splits:
-  - text: "10000两"
-  templates:
-  - template: "{0};ManageForceMoneyPlotSure;10000-"
-- raw: "1000两;ManageForceMoneyPlotSure;1000-"
-  splits:
-  - text: "1000两"
-  templates:
-  - template: "{0};ManageForceMoneyPlotSure;1000-"
-- raw: "100两;ManageForceMoneyPlotSure;100-"
-  splits:
-  - text: "100两"
-  templates:
-  - template: "{0};ManageForceMoneyPlotSure;100-"
-- raw: "10天;PlayerContinuePrison;10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};PlayerContinuePrison;10"
-- raw: "10天;RecoverBuildingResourceRate;10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};RecoverBuildingResourceRate;10"
-- raw: "10天;SureHomeRest;10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHomeRest;10"
-- raw: "10天;SureHospitalCureInjury;0~0-10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~0-10"
-- raw: "10天;SureHospitalCureInjury;0~1-10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~1-10"
-- raw: "10天;SureHospitalCureInjury;0~2-10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~2-10"
-- raw: "10天;SureHospitalCureInjury;1~0-10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~0-10"
-- raw: "10天;SureHospitalCureInjury;1~1-10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~1-10"
-- raw: "10天;SureHospitalCureInjury;1~2-10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~2-10"
-- raw: "10天;SureHotelRest;10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureHotelRest;10"
-- raw: "10天;SureSimpleWork;10"
-  splits:
-  - text: "10天"
-  templates:
-  - template: "{0};SureSimpleWork;10"
-- raw: "15天;RecoverBuildingResourceRate;15"
-  splits:
-  - text: "15天"
-  templates:
-  - template: "{0};RecoverBuildingResourceRate;15"
-- raw: "1天;PlayerContinuePrison;1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};PlayerContinuePrison;1"
-- raw: "1天;SureHomeRest;1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHomeRest;1"
-- raw: "1天;SureHospitalCureInjury;0~0-1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~0-1"
-- raw: "1天;SureHospitalCureInjury;0~1-1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~1-1"
-- raw: "1天;SureHospitalCureInjury;0~2-1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~2-1"
-- raw: "1天;SureHospitalCureInjury;1~0-1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~0-1"
-- raw: "1天;SureHospitalCureInjury;1~1-1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~1-1"
-- raw: "1天;SureHospitalCureInjury;1~2-1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~2-1"
-- raw: "1天;SureHotelRest;1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureHotelRest;1"
-- raw: "1天;SureSimpleWork;1"
-  splits:
-  - text: "1天"
-  templates:
-  - template: "{0};SureSimpleWork;1"
 - raw: "20%探索奖励：揭示所有塔楼"
   splits:
   - text: "20%探索奖励"
@@ -2930,11 +2763,6 @@
     text: "揭示所有塔楼"
   templates:
   - template: "{0}：{1}"
-- raw: "2000两;ManageForceMoneyPlotSure;2000-"
-  splits:
-  - text: "2000两"
-  templates:
-  - template: "{0};ManageForceMoneyPlotSure;2000-"
 - raw: "40%探索奖励：揭示所有地图和营地"
   splits:
   - text: "40%探索奖励"
@@ -2942,71 +2770,6 @@
     text: "揭示所有地图和营地"
   templates:
   - template: "{0}：{1}"
-- raw: "5000两;ManageForceMoneyPlotSure;5000-"
-  splits:
-  - text: "5000两"
-  templates:
-  - template: "{0};ManageForceMoneyPlotSure;5000-"
-- raw: "500两;ManageForceMoneyPlotSure;500-"
-  splits:
-  - text: "500两"
-  templates:
-  - template: "{0};ManageForceMoneyPlotSure;500-"
-- raw: "5天;PlayerContinuePrison;5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};PlayerContinuePrison;5"
-- raw: "5天;RecoverBuildingResourceRate;5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};RecoverBuildingResourceRate;5"
-- raw: "5天;SureHomeRest;5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHomeRest;5"
-- raw: "5天;SureHospitalCureInjury;0~0-5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~0-5"
-- raw: "5天;SureHospitalCureInjury;0~1-5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~1-5"
-- raw: "5天;SureHospitalCureInjury;0~2-5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~2-5"
-- raw: "5天;SureHospitalCureInjury;1~0-5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~0-5"
-- raw: "5天;SureHospitalCureInjury;1~1-5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~1-5"
-- raw: "5天;SureHospitalCureInjury;1~2-5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~2-5"
-- raw: "5天;SureHotelRest;5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureHotelRest;5"
-- raw: "5天;SureSimpleWork;5"
-  splits:
-  - text: "5天"
-  templates:
-  - template: "{0};SureSimpleWork;5"
 - raw: "60%探索奖励：恢复15%已消耗耐力"
   splits:
   - text: "60%探索奖励"
@@ -3512,20 +3275,6 @@
   - text: "任务"
   templates:
   - template: "<color=#⟦1⟧><b>[⟦0⟧{0}]</b></color>"
-- raw: "<color=#{1}>第{0}层</color>;StealForceResourceExploreStart;{2}"
-  splits:
-  - text: "第"
-  - subIndex: 1
-    text: "层"
-  templates:
-  - template: "<color=#⟦1⟧>{0}⟦0⟧{1}</color>;StealForceResourceExploreStart;⟦2⟧"
-- raw: "<color=#{1}>第{0}层</color>;StealForceSkillExploreStart;{2}"
-  splits:
-  - text: "第"
-  - subIndex: 1
-    text: "层"
-  templates:
-  - template: "<color=#⟦1⟧>{0}⟦0⟧{1}</color>;StealForceSkillExploreStart;⟦2⟧"
 - raw: "<color=darkblue>[守]</color>"
   splits:
   - text: "守"
@@ -3598,13 +3347,6 @@
   - text: "敌"
   templates:
   - template: "<color=red>[{0}]</color>"
-- raw: "<color=red>{0}</color>;{1};false;;学识{2}排除"
-  splits:
-  - text: "学识"
-  - subIndex: 1
-    text: "排除"
-  templates:
-  - template: "<color=red>⟦0⟧</color>;⟦1⟧;false;;{0}⟦2⟧{1}"
 - raw: "<color=red>●试玩版好感上限为{0}</color>"
   splits:
   - text: "试玩版好感上限为"
@@ -4655,11 +4397,6 @@
   - text: "周边"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}周边情报;SureBuyCityAroundInfo;{1};0/{2}"
-  splits:
-  - text: "周边情报"
-  templates:
-  - template: "⟦0⟧{0};SureBuyCityAroundInfo;⟦1⟧;0/⟦2⟧"
 - raw: "{0}回合"
   splits:
   - text: "回合"
@@ -4919,28 +4656,6 @@
   - text: "官职"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}宴会({1}日);SpeStartPartySure;{2}-{3};0/{4};基础评分{5}\n基础加成{6}%"
-  splits:
-  - text: "宴会"
-  - subIndex: 1
-    text: "日"
-  - subIndex: 2
-    text: "基础评分"
-  - subIndex: 3
-    text: "基础加成"
-  templates:
-  - template: "⟦0⟧{0}(⟦1⟧{1});SpeStartPartySure;⟦2⟧-⟦3⟧;0/⟦4⟧;{2}⟦5⟧\n{3}⟦6⟧%"
-- raw: "{0}宴会({1}日);StartPrepareParty;{2}-{3};0/{4};基础评分{5}\n基础加成{6}%"
-  splits:
-  - text: "宴会"
-  - subIndex: 1
-    text: "日"
-  - subIndex: 2
-    text: "基础评分"
-  - subIndex: 3
-    text: "基础加成"
-  templates:
-  - template: "⟦0⟧{0}(⟦1⟧{1});StartPrepareParty;⟦2⟧-⟦3⟧;0/⟦4⟧;{2}⟦5⟧\n{3}⟦6⟧%"
 - raw: "{0}对{1}口诛笔伐大加谴责，双方关系降低到了{2}。"
   splits:
   - text: "对"
@@ -5111,16 +4826,6 @@
     text: "掌门之位。"
   templates:
   - template: "⟦0⟧{0}⟦1⟧{1}"
-- raw: "{0}援军;SetReplaceOtherForceGovernSuppotLv;{1};7/{2};;GovernLv/{3}"
-  splits:
-  - text: "援军"
-  templates:
-  - template: "⟦0⟧{0};SetReplaceOtherForceGovernSuppotLv;⟦1⟧;7/⟦2⟧;;GovernLv/⟦3⟧"
-- raw: "{0}援军;SetReplaceOtherForceRecruitSuppotLv;{1};0/{2}"
-  splits:
-  - text: "援军"
-  templates:
-  - template: "⟦0⟧{0};SetReplaceOtherForceRecruitSuppotLv;⟦1⟧;0/⟦2⟧"
 - raw: "{0}搜刮宝藏，获得了{1}银两"
   splits:
   - text: "搜刮宝藏，获得了"
@@ -5140,19 +4845,6 @@
   - text: "效果已结束！"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}教化;EnlightRandomEnmey;{1};;♦以{0}教化贼人\n♦获取声望和{0}修行经验"
-  splits:
-  - text: "教化"
-  - subIndex: 1
-    text: "以"
-  - subIndex: 2
-    text: "教化贼人"
-  - subIndex: 3
-    text: "获取声望和"
-  - subIndex: 4
-    text: "修行经验"
-  templates:
-  - template: "⟦0⟧{0};EnlightRandomEnmey;⟦1⟧;;♦{1}⟦0⟧{2}\n♦{3}⟦0⟧{4}"
 - raw: "{0}新的练习最高纪录：{1}点"
   splits:
   - text: "新的练习最高纪录"
@@ -5180,11 +4872,6 @@
   - text: "日"
   templates:
   - template: "⟦0⟧{0}"
-- raw: "{0}日;StartMeditationWork;{1}"
-  splits:
-  - text: "日"
-  templates:
-  - template: "⟦0⟧{0};StartMeditationWork;⟦1⟧"
 - raw: "{0}日夜苦练，终于学会了{1}"
   splits:
   - text: "日夜苦练，终于学会了"
@@ -5471,11 +5158,6 @@
   - text: "藏经阁添加了藏书"
   templates:
   - template: "⟦0⟧{0}《⟦1⟧》。"
-- raw: "{0}表演;ChooseCoachWork;{1}"
-  splits:
-  - text: "表演"
-  templates:
-  - template: "⟦0⟧{0};ChooseCoachWork;⟦1⟧"
 - raw: "{0}被{1}侵占多时，当地百姓苦其苛政久矣。"
   splits:
   - text: "被"
@@ -5555,11 +5237,6 @@
   - text: "附庸"
   templates:
   - template: "⟦0⟧{0}</color>"
-- raw: "{0}难度;SurePerformForMoney;{1}_{2}"
-  splits:
-  - text: "难度"
-  templates:
-  - template: "⟦0⟧{0};SurePerformForMoney;⟦1⟧_⟦2⟧"
 - raw: "{0}领悟天赋：{1}"
   splits:
   - text: "领悟天赋"
@@ -6044,11 +5721,6 @@
   - text: "一"
   templates:
   - template: "䷀{0}"
-- raw: "一个都答不上...;ForceLeaderAnswerQuestion;1"
-  splits:
-  - text: "一个都答不上..."
-  templates:
-  - template: "{0};ForceLeaderAnswerQuestion;1"
 - raw: "一分价钱一分货"
   splits:
   - text: "一分价钱一分货"
@@ -6089,11 +5761,6 @@
   - text: "一探究竟"
   templates:
   - template: "{0};ExploreAreaExploreStart"
-- raw: "一探究竟;FinishExploreMap;true"
-  splits:
-  - text: "一探究竟"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "一日之计在于晨，一年之计在于春。\n过完这个春节，咱们仙霞派也应当重整旗鼓，砥砺前行才是。"
   splits:
   - text: "一日之计在于晨，一年之计在于春。"
@@ -6126,11 +5793,6 @@
   - text: "一番恳求"
   templates:
   - template: "{0};AskJiangWanLeaveForce"
-- raw: "一番感激;FriendVisitPrison;"
-  splits:
-  - text: "一番感激"
-  templates:
-  - template: "{0};FriendVisitPrison;"
 - raw: "一番血战过后，你被击倒在地，再也无力反击。\n#$TargetInteractName#冷眼打量着，似乎在考虑应该如何处置你。"
   splits:
   - text: "一番血战过后，你被击倒在地，再也无力反击。"
@@ -6196,11 +5858,6 @@
   - text: "一言为定"
   templates:
   - template: "{0};SureHeroToBrother"
-- raw: "一言为定;SureHireHeroJoinTeam;;0/{0}"
-  splits:
-  - text: "一言为定"
-  templates:
-  - template: "{0};SureHireHeroJoinTeam;;0/⟦0⟧"
 - raw: "一言为定！\n......此战需应战对方十二名精锐，只有我方几人难免势单力孤。\n若能寻得更多援军，方能增加我方之胜算。"
   splits:
   - text: "一言为定！"
@@ -6306,11 +5963,6 @@
   - text: "一身正气"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "一较高下;FightInteractHero;HardFight-TreasureMapFightResult"
-  splits:
-  - text: "一较高下"
-  templates:
-  - template: "{0};FightInteractHero;HardFight-TreasureMapFightResult"
 - raw: "一饮而尽才是真英雄好汉"
   splits:
   - text: "一饮而尽才是真英雄好汉"
@@ -6332,11 +5984,6 @@
 - raw: "万仞山"
   splits:
   - text: "万仞山"
-- raw: "万份感谢;ManageNpcTeachSkill;0"
-  splits:
-  - text: "万份感谢"
-  templates:
-  - template: "{0};ManageNpcTeachSkill;0"
 - raw: "万分感谢;HideInteractUIOneDay"
   splits:
   - text: "万分感谢"
@@ -6526,16 +6173,6 @@
     text: "以你我二人之力，想必那些官府走狗无法阻挡。"
   templates:
   - template: "{0}\n{1}"
-- raw: "不妨一看;PlotOpenRandomShop;2-0--true"
-  splits:
-  - text: "不妨一看"
-  templates:
-  - template: "{0};PlotOpenRandomShop;2-0--true"
-- raw: "不妨一看;PlotOpenRandomShopWithSpeRate;1.25-0-0-true|1|0.9"
-  splits:
-  - text: "不妨一看"
-  templates:
-  - template: "{0};PlotOpenRandomShopWithSpeRate;1.25-0-0-true|1|0.9"
 - raw: "不妨给老弱病残者分发一些饮食，他们必定对#AreaForceName#感恩戴德"
   splits:
   - text: "不妨给老弱病残者分发一些饮食，他们必定对#AreaForceName#感恩戴德"
@@ -6544,16 +6181,6 @@
   - text: "不客气了"
   templates:
   - template: "{0};AcceptNpcReleaseHateItem"
-- raw: "不客气了;AcceptNpcReleaseHateMoney;"
-  splits:
-  - text: "不客气了"
-  templates:
-  - template: "{0};AcceptNpcReleaseHateMoney;"
-- raw: "不客气了;FinishExploreEvilCamp;0"
-  splits:
-  - text: "不客气了"
-  templates:
-  - template: "{0};FinishExploreEvilCamp;0"
 - raw: "不客气了;HideInteractUIOneDay"
   splits:
   - text: "不客气了"
@@ -6572,31 +6199,6 @@
   - text: "不必客气"
   templates:
   - template: "{0};FinishEventMission"
-- raw: "不必客气;GetRandomNpcGift;0-"
-  splits:
-  - text: "不必客气"
-  templates:
-  - template: "{0};GetRandomNpcGift;0-"
-- raw: "不必客气;GetRandomNpcGift;1-"
-  splits:
-  - text: "不必客气"
-  templates:
-  - template: "{0};GetRandomNpcGift;1-"
-- raw: "不必客气;GetRandomNpcGift;2-"
-  splits:
-  - text: "不必客气"
-  templates:
-  - template: "{0};GetRandomNpcGift;2-"
-- raw: "不必客气;GetRandomNpcGift;4-"
-  splits:
-  - text: "不必客气"
-  templates:
-  - template: "{0};GetRandomNpcGift;4-"
-- raw: "不必客气;GetRandomNpcPoison;"
-  splits:
-  - text: "不必客气"
-  templates:
-  - template: "{0};GetRandomNpcPoison;"
 - raw: "不必客气;HideInteractUI"
   splits:
   - text: "不必客气"
@@ -6607,11 +6209,6 @@
   - text: "不必客气"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "不必客气;ReleaseHateWithNpcFameFinish;"
-  splits:
-  - text: "不必客气"
-  templates:
-  - template: "{0};ReleaseHateWithNpcFameFinish;"
 - raw: "不必，你留着吧;HideInteractUI"
   splits:
   - text: "不必，你留着吧"
@@ -6620,11 +6217,6 @@
 - raw: "不怕#PlayerName#嘲笑，我适才突觉饥饿难耐，正准备去寻觅些美食酒饮。"
   splits:
   - text: "不怕#PlayerName#嘲笑，我适才突觉饥饿难耐，正准备去寻觅些美食酒饮。"
-- raw: "不感兴趣;FinishQingMingFestivalPlot;false"
-  splits:
-  - text: "不感兴趣"
-  templates:
-  - template: "{0};FinishQingMingFestivalPlot;false"
 - raw: "不敢不敢;HideInteractUI"
   splits:
   - text: "不敢不敢"
@@ -6763,11 +6355,6 @@
   - text: "不自量力"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "不自量力;PlotStartFight;HardFight-FightThiefResult-6-"
-  splits:
-  - text: "不自量力"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FightThiefResult-6-"
 - raw: "不行不行，#PlayerName#，我都喝了十几杯了。\n再喝下去，耽误明早练功可不行！"
   splits:
   - text: "不行不行，#PlayerName#，我都喝了十几杯了。"
@@ -6860,11 +6447,6 @@
   - text: "不醉不归！"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "不醉不归！;WatchMasterFightEnd;0"
-  splits:
-  - text: "不醉不归！"
-  templates:
-  - template: "{0};WatchMasterFightEnd;0"
 - raw: "不重投"
   splits:
   - text: "不重投"
@@ -6904,20 +6486,6 @@
 - raw: "与"
   splits:
   - text: "与"
-- raw: "与{0}分享;StartFightForSpeItemFight;0-DeathFight-FightForSpeItemResult-"
-  splits:
-  - text: "与"
-  - subIndex: 1
-    text: "分享"
-  templates:
-  - template: "{0}⟦0⟧{1};StartFightForSpeItemFight;0-DeathFight-FightForSpeItemResult-"
-- raw: "与{0}分享;StartFightForSpeItemFight;1-DeathFight-FightForSpeItemResult-"
-  splits:
-  - text: "与"
-  - subIndex: 1
-    text: "分享"
-  templates:
-  - template: "{0}⟦0⟧{1};StartFightForSpeItemFight;1-DeathFight-FightForSpeItemResult-"
 - raw: "与{0}切磋获胜{1}次"
   splits:
   - text: "与"
@@ -7049,11 +6617,6 @@
   - text: "个人演武"
   templates:
   - template: "{0};StudyFightWithGreatHeroSingle"
-- raw: "个人赠礼;AddFavorOtherForce;1-"
-  splits:
-  - text: "个人赠礼"
-  templates:
-  - template: "{0};AddFavorOtherForce;1-"
 - raw: "个十百千万亿兆京垓秭穰沟涧正载极"
   splits:
   - text: "个十百千万亿兆京垓秭穰沟涧正载极"
@@ -7114,11 +6677,6 @@
 - raw: "中立"
   splits:
   - text: "中立"
-- raw: "中级嘉奖;RewardForceHeroPlotSure;1-{0};0/{0}"
-  splits:
-  - text: "中级嘉奖"
-  templates:
-  - template: "{0};RewardForceHeroPlotSure;1-⟦0⟧;0/⟦0⟧"
 - raw: "中级武师"
   splits:
   - text: "中级武师"
@@ -7131,21 +6689,6 @@
 - raw: "中華民國曆"
   splits:
   - text: "中華民國曆"
-- raw: "中额红包;SpringFestivalGiveReward;2"
-  splits:
-  - text: "中额红包"
-  templates:
-  - template: "{0};SpringFestivalGiveReward;2"
-- raw: "中额赠礼;AddFavorOtherForceSure;{0}-2-{1};0/{1}{2}"
-  splits:
-  - text: "中额赠礼"
-  templates:
-  - template: "{0};AddFavorOtherForceSure;⟦0⟧-2-⟦1⟧;0/⟦1⟧⟦2⟧"
-- raw: "中额赠礼;LeaderAddFavorOtherForceSure;2-{0};0/{0}{1}"
-  splits:
-  - text: "中额赠礼"
-  templates:
-  - template: "{0};LeaderAddFavorOtherForceSure;2-⟦0⟧;0/⟦0⟧⟦1⟧"
 - raw: "中！"
   splits:
   - text: "中！"
@@ -7154,397 +6697,6 @@
   - text: "临时"
   templates:
   - template: "{0}:"
-- raw: "临时:{0}&{1};{2};{5};{3};{4}"
-  splits:
-  - text: "临时"
-  templates:
-  - template: "{0}:⟦0⟧&⟦1⟧;⟦2⟧;⟦5⟧;⟦3⟧;⟦4⟧"
-- raw: "临时:传令&随机;;-1;3;-1"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "传令"
-  - subIndex: 2
-    text: "随机"
-  templates:
-  - template: "{0}:{1}&{2};;-1;3;-1"
-- raw: "临时:劫匪头目"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "劫匪头目"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:名士"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "名士"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:商人"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "商人"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:大会主持"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "大会主持"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:大会主持&随机;;;事件难度;-3"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "大会主持"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;;{3};-3"
-- raw: "临时:大赛主持"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "大赛主持"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:大赛主持&随机;;;事件难度;-4"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "大赛主持"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;;{3};-4"
-- raw: "临时:大赛主持&随机;;;事件难度;-6"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "大赛主持"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;;{3};-6"
-- raw: "临时:大赛主持&随机;;随机0.3;事件难度"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "大赛主持"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.3"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}"
-- raw: "临时:官兵领队"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "官兵领队"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:官兵领队&随机;;-1;事件难度;-5"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "官兵领队"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;-1;{3};-5"
-- raw: "临时:小二"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "小二"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:工匠"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "工匠"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:店铺商人"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "店铺商人"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:强盗头目"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "强盗头目"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:强盗头目&随机;;-2;事件难度+0.5;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "强盗头目"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;-2;{3}+0.5;;;true"
-- raw: "临时:怪盗"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "怪盗"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:怪盗&随机;;随机0.2;事件难度+1;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "怪盗"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.2"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+1;;;true"
-- raw: "临时:恶贼头目"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "恶贼头目"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:恶贼头目&随机;;随机0.3;事件难度+0.5;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "恶贼头目"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.3"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+0.5;;;true"
-- raw: "临时:恶霸头目"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "恶霸头目"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:恶霸头目&随机;;-2;;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "恶霸头目"
-  - subIndex: 2
-    text: "随机"
-  templates:
-  - template: "{0}:{1}&{2};;-2;;;;true"
-- raw: "临时:拍卖主持"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "拍卖主持"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:拍卖主持&随机;;;事件难度;-3"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "拍卖主持"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;;{3};-3"
-- raw: "临时:旅行商人"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "旅行商人"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:暴民头领"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "暴民头领"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:暴民头领&随机;;-1;事件难度+0.5"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "暴民头领"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;-1;{3}+0.5"
-- raw: "临时:杀手头目&随机;;随机0.4;事件难度+0.5;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "杀手头目"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.4"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+0.5;;;true"
-- raw: "临时:百姓"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "百姓"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:盗贼"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "盗贼"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:盗贼&随机;;随机0.6;;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "盗贼"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.6"
-  templates:
-  - template: "{0}:{1}&{2};;{3};;;;true"
-- raw: "临时:管家"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "管家"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:落魄之人"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "落魄之人"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:贪官&随机;;-1;0;-3;5"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "贪官"
-  - subIndex: 2
-    text: "随机"
-  templates:
-  - template: "{0}:{1}&{2};;-1;0;-3;5"
-- raw: "临时:逃犯&随机;;随机0.4;事件难度+0.5;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "逃犯"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.4"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+0.5;;;true"
-- raw: "临时:邪道头目&随机;;随机0.1;事件难度+1;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "邪道头目"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.1"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+1;;;true"
-- raw: "临时:邪道头目&随机;;随机0;事件难度+1;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "邪道头目"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+1;;;true"
-- raw: "临时:镖头"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "镖头"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:马贼头目&随机;;随机0.5;事件难度+0.5;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "马贼头目"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.5"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+0.5;;;true"
-- raw: "临时:魔头"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "魔头"
-  templates:
-  - template: "{0}:{1}"
-- raw: "临时:魔头&随机;;随机0.1;事件难度+1.5;;;true"
-  splits:
-  - text: "临时"
-  - subIndex: 1
-    text: "魔头"
-  - subIndex: 2
-    text: "随机"
-  - subIndex: 3
-    text: "随机0.1"
-  - subIndex: 4
-    text: "事件难度"
-  templates:
-  - template: "{0}:{1}&{2};;{3};{4}+1.5;;;true"
 - raw: "临泣"
   splits:
   - text: "临泣"
@@ -7583,11 +6735,6 @@
     text: "两的物品似乎也能接受。"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}⟦1⟧{3}"
-- raw: "为其践行;FarewellNPCWantLeave;;;;FavorDegree/20"
-  splits:
-  - text: "为其践行"
-  templates:
-  - template: "{0};FarewellNPCWantLeave;;;;FavorDegree/20"
 - raw: "为师也不太为难于你，\n只要在{0}这几个方面说出些门道，\n便算你过关！"
   splits:
   - text: "为师也不太为难于你，"
@@ -7643,11 +6790,6 @@
   - text: "举手之劳"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "举手之劳;SupportForceAttackAreaResultFinish;"
-  splits:
-  - text: "举手之劳"
-  templates:
-  - template: "{0};SupportForceAttackAreaResultFinish;"
 - raw: "举杯邀明月，对饮成三人"
   splits:
   - text: "举杯邀明月，对饮成三人"
@@ -7698,11 +6840,6 @@
 - raw: "义"
   splits:
   - text: "义"
-- raw: "义不容辞;AcceptGuardNpcMission;2"
-  splits:
-  - text: "义不容辞"
-  templates:
-  - template: "{0};AcceptGuardNpcMission;2"
 - raw: "义不容辞;CureForNPCExternalSure"
   splits:
   - text: "义不容辞"
@@ -7735,11 +6872,6 @@
 - raw: "乐经"
   splits:
   - text: "乐经"
-- raw: "乖乖交钱;GiveRandomEnemyMoney;;0/"
-  splits:
-  - text: "乖乖交钱"
-  templates:
-  - template: "{0};GiveRandomEnemyMoney;;0/"
 - raw: "乘坐马车前往{0}吗？\n耗时{1}天，车费{2}银两"
   splits:
   - text: "乘坐马车前往"
@@ -7753,11 +6885,6 @@
     text: "银两"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}⟦1⟧{3}⟦2⟧{4}"
-- raw: "乘机开溜;ChooseJiangWanLeaveForce;2;;;8/15"
-  splits:
-  - text: "乘机开溜"
-  templates:
-  - template: "{0};ChooseJiangWanLeaveForce;2;;;8/15"
 - raw: "乘车"
   splits:
   - text: "乘车"
@@ -7779,11 +6906,6 @@
 - raw: "乞丐"
   splits:
   - text: "乞丐"
-- raw: "乞讨;BegForNpcSpe;;-1/{0};;;BegTime"
-  splits:
-  - text: "乞讨"
-  templates:
-  - template: "{0};BegForNpcSpe;;-1/⟦0⟧;;;BegTime"
 - raw: "也罢也罢，#PlayerName#武功卓绝，我等输得心服口服。\n#TargetForceName#弟子中若有愿意留下者，便就此拜入#PlayerName#门派好了。"
   splits:
   - text: "也罢也罢，#PlayerName#武功卓绝，我等输得心服口服。"
@@ -7820,11 +6942,6 @@
 - raw: "书生"
   splits:
   - text: "书生"
-- raw: "买下宝物;FinishFightForSpeItem;win-{0}-{1}-1;0/{2}"
-  splits:
-  - text: "买下宝物"
-  templates:
-  - template: "{0};FinishFightForSpeItem;win-⟦0⟧-⟦1⟧-1;0/⟦2⟧"
 - raw: "买卖价格x{0}%"
   splits:
   - text: "买卖价格"
@@ -7844,16 +6961,6 @@
   - text: "了然于心"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "了解周遭情况;ExploreWildPeopleSeePlot;0;0/"
-  splits:
-  - text: "了解周遭情况"
-  templates:
-  - template: "{0};ExploreWildPeopleSeePlot;0;0/"
-- raw: "了解远处情况;ExploreWildPeopleSeePlot;1;0/"
-  splits:
-  - text: "了解远处情况"
-  templates:
-  - template: "{0};ExploreWildPeopleSeePlot;1;0/"
 - raw: "事不关己;HideInteractUI"
   splits:
   - text: "事不关己"
@@ -7884,16 +6991,6 @@
     text: "取得胜利"
   templates:
   - template: "{0}⟦0⟧{1}"
-- raw: "二人平分;GetTreasureMapReward;1-2"
-  splits:
-  - text: "二人平分"
-  templates:
-  - template: "{0};GetTreasureMapReward;1-2"
-- raw: "二人平分;GetTreasureMapReward;1-3"
-  splits:
-  - text: "二人平分"
-  templates:
-  - template: "{0};GetTreasureMapReward;1-3"
 - raw: "二人相谈甚欢，离别之际{0}向{1}赠送了{2}。"
   splits:
   - text: "二人相谈甚欢，离别之际"
@@ -7928,11 +7025,6 @@
     text: "的运用法门。"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}"
-- raw: "二位住手，要打就打我吧;HelpInteractHeroFight;2-DeathFight-HelpInteractHeroFightResult"
-  splits:
-  - text: "二位住手，要打就打我吧"
-  templates:
-  - template: "{0};HelpInteractHeroFight;2-DeathFight-HelpInteractHeroFightResult"
 - raw: "二品"
   splits:
   - text: "二品"
@@ -8004,26 +7096,12 @@
 - raw: "交友"
   splits:
   - text: "交友"
-- raw: "交友;AskHeroMakeFriend;;;♦好友关系好感获取+10%，好感消耗-10%\n♦对好友作恶，恶名x200%;FavorDegree/50"
-  splits:
-  - text: "交友"
-  - subIndex: 1
-    text: "好友关系好感获取+10%，好感消耗"
-  - subIndex: 2
-    text: "对好友作恶，恶名"
-  templates:
-  - template: "{0};AskHeroMakeFriend;;;♦{1}-10%\n♦{2}x200%;FavorDegree/50"
 - raw: "交换"
   splits:
   - text: "交换"
 - raw: "交易"
   splits:
   - text: "交易"
-- raw: "交易;OpenInnShop;"
-  splits:
-  - text: "交易"
-  templates:
-  - template: "{0};OpenInnShop;"
 - raw: "交给我好了;NPCMissionAcceptBounty"
   splits:
   - text: "交给我好了"
@@ -8044,15 +7122,6 @@
 - raw: "亲密"
   splits:
   - text: "亲密"
-- raw: "亲密;AskHeroMakeFriend;;;♦亲密关系好感获取+20%，好感消耗-20%\n♦对亲友作恶，恶名x400%"
-  splits:
-  - text: "亲密"
-  - subIndex: 1
-    text: "亲密关系好感获取+20%，好感消耗"
-  - subIndex: 2
-    text: "对亲友作恶，恶名"
-  templates:
-  - template: "{0};AskHeroMakeFriend;;;♦{1}-20%\n♦{2}x400%"
 - raw: "亲属"
   splits:
   - text: "亲属"
@@ -8565,21 +7634,6 @@
     text: "告终，确认要开战吗？"
   templates:
   - template: "{0}<b>⟦5⟧%</b>{1}<b>⟦6⟧%</b>{2}\n{3}⟦2⟧{4}：\n<b>⟦0⟧⟦7⟧ ⟦3⟧\n⟦1⟧⟦8⟧ ⟦4⟧</b>\n{5}<b>{6}⟦9⟧</b>{7}"
-- raw: "以武论道;EnlightForNpcSpePlot;1"
-  splits:
-  - text: "以武论道"
-  templates:
-  - template: "{0};EnlightForNpcSpePlot;1"
-- raw: "以武论道;EnlightForNpcSpeStart;1"
-  splits:
-  - text: "以武论道"
-  templates:
-  - template: "{0};EnlightForNpcSpeStart;1"
-- raw: "以理说服;StopNpcReduceAreaState;1"
-  splits:
-  - text: "以理说服"
-  templates:
-  - template: "{0};StopNpcReduceAreaState;1"
 - raw: "仲尼梦奠帖"
   splits:
   - text: "仲尼梦奠帖"
@@ -8642,16 +7696,6 @@
 - raw: "仿本"
   splits:
   - text: "仿本"
-- raw: "伏地恳求;FinishReleaseHate;;-1/"
-  splits:
-  - text: "伏地恳求"
-  templates:
-  - template: "{0};FinishReleaseHate;;-1/"
-- raw: "休养;ChooseDoctorInjury;0"
-  splits:
-  - text: "休养"
-  templates:
-  - template: "{0};ChooseDoctorInjury;0"
 - raw: "休息"
   splits:
   - text: "休息"
@@ -8704,71 +7748,9 @@
     text: "以免这群乌合之众趁火打劫，乱我大局！"
   templates:
   - template: "{0}\n{1}"
-- raw: "传授;ForceTeachNewSkillToNPCType;;;♦传授弟子武功无好感要求\n♦武功品级不能超过对方身份等级\n♦每月最多一次;;ForceTeachNewSkillTime"
-  splits:
-  - text: "传授"
-  - subIndex: 1
-    text: "传授弟子武功无好感要求"
-  - subIndex: 2
-    text: "武功品级不能超过对方身份等级"
-  - subIndex: 3
-    text: "每月最多一次"
-  templates:
-  - template: "{0};ForceTeachNewSkillToNPCType;;;♦{1}\n♦{2}\n♦{3};;ForceTeachNewSkillTime"
-- raw: "传授技艺潜力;TeachMaxLivingSkillWithNPC;;;♦你的潜力比对方高出越多，效果越好\n♦提升2点好感"
-  splits:
-  - text: "传授技艺潜力"
-  - subIndex: 1
-    text: "你的潜力比对方高出越多，效果越好"
-  - subIndex: 2
-    text: "提升2点好感"
-  templates:
-  - template: "{0};TeachMaxLivingSkillWithNPC;;;♦{1}\n♦{2}"
-- raw: "传授技艺经验;TeachLivingSkillWithNPC;;;♦你的技艺比对方高出越多，效果越好\n♦提升2点好感"
-  splits:
-  - text: "传授技艺经验"
-  - subIndex: 1
-    text: "你的技艺比对方高出越多，效果越好"
-  - subIndex: 2
-    text: "提升2点好感"
-  templates:
-  - template: "{0};TeachLivingSkillWithNPC;;;♦{1}\n♦{2}"
-- raw: "传授此武学;ForceTeachNewSkillToNPCSure;"
-  splits:
-  - text: "传授此武学"
-  templates:
-  - template: "{0};ForceTeachNewSkillToNPCSure;"
-- raw: "传授此秘籍;ForceTeachNewSkillToNPCSure;"
-  splits:
-  - text: "传授此秘籍"
-  templates:
-  - template: "{0};ForceTeachNewSkillToNPCSure;"
 - raw: "传授武功"
   splits:
   - text: "传授武功"
-- raw: "传授武功;FinishQingMingFestivalPlot;false"
-  splits:
-  - text: "传授武功"
-  templates:
-  - template: "{0};FinishQingMingFestivalPlot;false"
-- raw: "传授武学;ForceTeachNewSkillToNPC;;;♦传授自己掌握的武学"
-  splits:
-  - text: "传授武学"
-  - subIndex: 1
-    text: "传授自己掌握的武学"
-  templates:
-  - template: "{0};ForceTeachNewSkillToNPC;;;♦{1}"
-- raw: "传授秘籍;ForceTeachNewBookToNPC;;;♦传授背包/仓库/藏经阁内秘籍记载的武学"
-  splits:
-  - text: "传授秘籍"
-  - subIndex: 1
-    text: "传授背包"
-  - subIndex: 2
-    text: "仓库"
-  - subIndex: 3
-    text: "藏经阁内秘籍记载的武学"
-  templates:
-  - template: "{0};ForceTeachNewBookToNPC;;;♦{1}/{2}/{3}"
 - raw: "传说青城叛徒王添翼逃出中原后，代替岳无畏成了黑道第四鬼，被唤作“笑面鬼”。\n曾经的英雄侠少，如今竟助纣为虐，堕入邪道，实在令人不齿！"
   splits:
   - text: "传说青城叛徒王添翼逃出中原后，代替岳无畏成了黑道第四鬼，被唤作“笑面鬼”。"
@@ -8933,21 +7915,9 @@
 - raw: "低于对方"
   splits:
   - text: "低于对方"
-- raw: "低价出售({0}两);GiveNpcBountyItemPriceSure;1"
-  splits:
-  - text: "低价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1});GiveNpcBountyItemPriceSure;1"
 - raw: "住宿"
   splits:
   - text: "住宿"
-- raw: "住宿;HotelRest;"
-  splits:
-  - text: "住宿"
-  templates:
-  - template: "{0};HotelRest;"
 - raw: "体力"
   splits:
   - text: "体力"
@@ -9228,11 +8198,6 @@
 - raw: "使用次数已达上限"
   splits:
   - text: "使用次数已达上限"
-- raw: "使用钥匙;OpenLockChest;0"
-  splits:
-  - text: "使用钥匙"
-  templates:
-  - template: "{0};OpenLockChest;0"
 - raw: "侍卫"
   splits:
   - text: "侍卫"
@@ -9321,53 +8286,12 @@
 - raw: "修习"
   splits:
   - text: "修习"
-- raw: "修习{0}口诀;FinishExplorAncientRuinFightChoose;{1}"
-  splits:
-  - text: "修习"
-  - subIndex: 1
-    text: "口诀"
-  templates:
-  - template: "{0}⟦0⟧{1};FinishExplorAncientRuinFightChoose;⟦1⟧"
-- raw: "修习{0}潜力;FindSpeMasterSteleEvent;{1}"
-  splits:
-  - text: "修习"
-  - subIndex: 1
-    text: "潜力"
-  templates:
-  - template: "{0}⟦0⟧{1};FindSpeMasterSteleEvent;⟦1⟧"
-- raw: "修习{0}潜力;FindSpeSteleFightChoose;{1}"
-  splits:
-  - text: "修习"
-  - subIndex: 1
-    text: "潜力"
-  templates:
-  - template: "{0}⟦0⟧{1};FindSpeSteleFightChoose;⟦1⟧"
 - raw: "修建完成"
   splits:
   - text: "修建完成"
-- raw: "修改本门弟子折扣;SetForceStorageDiscount;0"
-  splits:
-  - text: "修改本门弟子折扣"
-  templates:
-  - template: "{0};SetForceStorageDiscount;0"
-- raw: "修改非本门弟子折扣;SetForceStorageDiscount;1"
-  splits:
-  - text: "修改非本门弟子折扣"
-  templates:
-  - template: "{0};SetForceStorageDiscount;1"
 - raw: "修炼"
   splits:
   - text: "修炼"
-- raw: "修炼{0};StudyFightSelfChoose;{1}"
-  splits:
-  - text: "修炼"
-  templates:
-  - template: "{0}⟦0⟧;StudyFightSelfChoose;⟦1⟧"
-- raw: "修炼{0};StudyFightSelfChooseMoney;{1}"
-  splits:
-  - text: "修炼"
-  templates:
-  - template: "{0}⟦0⟧;StudyFightSelfChooseMoney;⟦1⟧"
 - raw: "修炼内功"
   splits:
   - text: "修炼内功"
@@ -9388,11 +8312,6 @@
 - raw: "修行"
   splits:
   - text: "修行"
-- raw: "修行...;ChangePlot;0"
-  splits:
-  - text: "修行..."
-  templates:
-  - template: "{0};ChangePlot;0"
 - raw: "借口推辞;RefuseHeroChallenge"
   splits:
   - text: "借口推辞"
@@ -9413,21 +8332,6 @@
 - raw: "做到这种程度，想必江湖中那些对我的污蔑之词便会不攻自破了吧。"
   splits:
   - text: "做到这种程度，想必江湖中那些对我的污蔑之词便会不攻自破了吧。"
-- raw: "停战{0}个月;StopWarOtherForceChoose;{1};;至少需{2}门派好感\n消耗{3}门派好感"
-  splits:
-  - text: "停战"
-  - subIndex: 1
-    text: "个月"
-  - subIndex: 2
-    text: "至少需"
-  - subIndex: 3
-    text: "门派好感"
-  - subIndex: 4
-    text: "消耗"
-  - subIndex: 5
-    text: "门派好感"
-  templates:
-  - template: "{0}⟦0⟧{1};StopWarOtherForceChoose;⟦1⟧;;{2}⟦2⟧{3}\n{4}⟦3⟧{5}"
 - raw: "偷取物品"
   splits:
   - text: "偷取物品"
@@ -9499,11 +8403,6 @@
 - raw: "兄"
   splits:
   - text: "兄"
-- raw: "充分休息;ExploreWildPeopleRestPlot;0;0/"
-  splits:
-  - text: "充分休息"
-  templates:
-  - template: "{0};ExploreWildPeopleRestPlot;0;0/"
 - raw: "充能不足"
   splits:
   - text: "充能不足"
@@ -9519,16 +8418,6 @@
     text: "真是神龙见首不见尾啊，让我一通好找。"
   templates:
   - template: "{0}\n{1}"
-- raw: "先生高义，万分感谢;FinishExploreMap;true"
-  splits:
-  - text: "先生高义，万分感谢"
-  templates:
-  - template: "{0};FinishExploreMap;true"
-- raw: "先追上我再说;EnterAreaEscapeEnemyForce;0;;;Dodge/"
-  splits:
-  - text: "先追上我再说"
-  templates:
-  - template: "{0};EnterAreaEscapeEnemyForce;0;;;Dodge/"
 - raw: "光天化日，朗朗乾坤，竟敢在此杀人越货？\n莫慌，我#$TargetInteractName#前来相救！"
   splits:
   - text: "光天化日，朗朗乾坤，竟敢在此杀人越货？"
@@ -9546,16 +8435,6 @@
 - raw: "免费"
   splits:
   - text: "免费"
-- raw: "免费赠与;GiveXinYanMissionEquipMoney;3"
-  splits:
-  - text: "免费赠与"
-  templates:
-  - template: "{0};GiveXinYanMissionEquipMoney;3"
-- raw: "免费赠送;GiveNpcBountyItemPriceSure;0"
-  splits:
-  - text: "免费赠送"
-  templates:
-  - template: "{0};GiveNpcBountyItemPriceSure;0"
 - raw: "兑\n换"
   splits:
   - text: "兑"
@@ -9574,28 +8453,6 @@
     text: "点。"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}⟦2⟧{3}"
-- raw: "兑换该武学;SureExchangeOtherForceSkill;"
-  splits:
-  - text: "兑换该武学"
-  templates:
-  - template: "{0};SureExchangeOtherForceSkill;"
-- raw: "入朝主政;PlotStartGameResult;5"
-  splits:
-  - text: "入朝主政"
-  templates:
-  - template: "{0};PlotStartGameResult;5"
-- raw: "入朝掌兵;PlotStartGameResult;4"
-  splits:
-  - text: "入朝掌兵"
-  templates:
-  - template: "{0};PlotStartGameResult;4"
-- raw: "入派;LoverAskHeroJoinForce;;;♦邀请眷侣加入自己门派"
-  splits:
-  - text: "入派"
-  - subIndex: 1
-    text: "邀请眷侣加入自己门派"
-  templates:
-  - template: "{0};LoverAskHeroJoinForce;;;♦{1}"
 - raw: "入门弟子"
   splits:
   - text: "入门弟子"
@@ -9604,13 +8461,6 @@
   - text: "入门需要"
   templates:
   - template: "{0}:"
-- raw: "入队;AskHeroJoinTeam;;;♦邀请对方入队30天\n♦{0}{2};FavorDegree/{1}"
-  splits:
-  - text: "入队"
-  - subIndex: 1
-    text: "邀请对方入队30天"
-  templates:
-  - template: "{0};AskHeroJoinTeam;;;♦{1}\n♦⟦0⟧⟦2⟧;FavorDegree/⟦1⟧"
 - raw: "入队好感消耗10\n对方最高比玩家高1级"
   splits:
   - text: "入队好感消耗10"
@@ -9666,11 +8516,6 @@
 - raw: "全部"
   splits:
   - text: "全部"
-- raw: "全部;ManageForceMoneyPlotSure;0-"
-  splits:
-  - text: "全部"
-  templates:
-  - template: "{0};ManageForceMoneyPlotSure;0-"
 - raw: "全队"
   splits:
   - text: "全队"
@@ -9710,15 +8555,6 @@
   - text: "共同修炼"
   templates:
   - template: "{0};SureLoverStudyTogether"
-- raw: "共餐;LoverEatFoodTogether;;;♦共同分享一件饮食\n♦双方均可获得完整服食效果;;EatFoodTogetherTime"
-  splits:
-  - text: "共餐"
-  - subIndex: 1
-    text: "共同分享一件饮食"
-  - subIndex: 2
-    text: "双方均可获得完整服食效果"
-  templates:
-  - template: "{0};LoverEatFoodTogether;;;♦{1}\n♦{2};;EatFoodTogetherTime"
 - raw: "共饮"
   splits:
   - text: "共饮"
@@ -9829,18 +8665,6 @@
 - raw: "内功"
   splits:
   - text: "内功"
-- raw: "内功 吐纳法;ForceFightChooseStartSkill;0"
-  splits:
-  - text: "内功"
-  - subIndex: 1
-    text: "吐纳法"
-  templates:
-  - template: "{0} {1};ForceFightChooseStartSkill;0"
-- raw: "内功;ShowBeggerFoodExchangeSkill;0"
-  splits:
-  - text: "内功"
-  templates:
-  - template: "{0};ShowBeggerFoodExchangeSkill;0"
 - raw: "内功修炼"
   splits:
   - text: "内功修炼"
@@ -10139,30 +8963,11 @@
 - raw: "出师"
   splits:
   - text: "出师"
-- raw: "出师;AskHeroCancelStudent;;;♦与对方结束师徒关系"
-  splits:
-  - text: "出师"
-  - subIndex: 1
-    text: "与对方结束师徒关系"
-  templates:
-  - template: "{0};AskHeroCancelStudent;;;♦{1}"
-- raw: "出师;AskHeroCancelTeacher;;;♦与对方结束师徒关系"
-  splits:
-  - text: "出师"
-  - subIndex: 1
-    text: "与对方结束师徒关系"
-  templates:
-  - template: "{0};AskHeroCancelTeacher;;;♦{1}"
 - raw: "出师{0};SurePlayerLeaveForcePlot"
   splits:
   - text: "出师"
   templates:
   - template: "{0}⟦0⟧;SurePlayerLeaveForcePlot"
-- raw: "出征！;ForceAttackAreaSure;"
-  splits:
-  - text: "出征！"
-  templates:
-  - template: "{0};ForceAttackAreaSure;"
 - raw: "出战_出战"
   splits:
   - text: "出战"
@@ -10180,50 +8985,16 @@
 - raw: "出战人数最少为一人"
   splits:
   - text: "出战人数最少为一人"
-- raw: "出手伤人;DeathFightHurtHero;;;♦重伤对方\n♦增加10恶名"
-  splits:
-  - text: "出手伤人"
-  - subIndex: 1
-    text: "重伤对方"
-  - subIndex: 2
-    text: "增加10恶名"
-  templates:
-  - template: "{0};DeathFightHurtHero;;;♦{1}\n♦{2}"
 - raw: "出手偷窃;StealNPCItemSure"
   splits:
   - text: "出手偷窃"
   templates:
   - template: "{0};StealNPCItemSure"
-- raw: "出手吧;FightInteractHero;StudyFight-StopNpcReduceAreaStateFightReuslt"
-  splits:
-  - text: "出手吧"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-StopNpcReduceAreaStateFightReuslt"
 - raw: "出手吧！;AskHeroToStudentSpeFight"
   splits:
   - text: "出手吧！"
   templates:
   - template: "{0};AskHeroToStudentSpeFight"
-- raw: "出手吧！;FightInteractHero;DeathFight-NpcRobAskItemResult"
-  splits:
-  - text: "出手吧！"
-  templates:
-  - template: "{0};FightInteractHero;DeathFight-NpcRobAskItemResult"
-- raw: "出手吧！;FightInteractHero;HardFight-FinishExploreBigRobberCampRobNpcFightResult~"
-  splits:
-  - text: "出手吧！"
-  templates:
-  - template: "{0};FightInteractHero;HardFight-FinishExploreBigRobberCampRobNpcFightResult~"
-- raw: "出手威逼;FightInteractHero;StudyFight-FightReleaseHateResult"
-  splits:
-  - text: "出手威逼"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-FightReleaseHateResult"
-- raw: "出手威逼;StartFightRecruitEnemyPlot;;0/"
-  splits:
-  - text: "出手威逼"
-  templates:
-  - template: "{0};StartFightRecruitEnemyPlot;;0/"
 - raw: "出手抢夺;RobNPCItemSure"
   splits:
   - text: "出手抢夺"
@@ -10234,19 +9005,9 @@
   - text: "出手袭击"
   templates:
   - template: "{0};AskSureFightInteractHero"
-- raw: "出手阻止;StopNpcReduceAreaState;0"
-  splits:
-  - text: "出手阻止"
-  templates:
-  - template: "{0};StopNpcReduceAreaState;0"
 - raw: "出狱"
   splits:
   - text: "出狱"
-- raw: "出钱了事;StopNpcReduceAreaState;3;0/"
-  splits:
-  - text: "出钱了事"
-  templates:
-  - template: "{0};StopNpcReduceAreaState;3;0/"
 - raw: "刀"
   splits:
   - text: "刀"
@@ -10262,32 +9023,6 @@
 - raw: "分"
   splits:
   - text: "分"
-- raw: "分手;LoverAskHeroBreakup;;;♦结束情侣关系\n♦降低100点好感\n♦固定增加20恶名"
-  splits:
-  - text: "分手"
-  - subIndex: 1
-    text: "结束情侣关系"
-  - subIndex: 2
-    text: "降低100点好感"
-  - subIndex: 3
-    text: "固定增加20恶名"
-  templates:
-  - template: "{0};LoverAskHeroBreakup;;;♦{1}\n♦{2}\n♦{3}"
-- raw: "分文不取;ChooseDoctorResult;0-"
-  splits:
-  - text: "分文不取"
-  templates:
-  - template: "{0};ChooseDoctorResult;0-"
-- raw: "分文不取;FinishExploreBigRobberCampGiveNpc;"
-  splits:
-  - text: "分文不取"
-  templates:
-  - template: "{0};FinishExploreBigRobberCampGiveNpc;"
-- raw: "分而食之;FinishLaBaFestivalCook;"
-  splits:
-  - text: "分而食之"
-  templates:
-  - template: "{0};FinishLaBaFestivalCook;"
 - raw: "分舵"
   splits:
   - text: "分舵"
@@ -10297,11 +9032,6 @@
 - raw: "切磋"
   splits:
   - text: "切磋"
-- raw: "切磋出师;FightInteractHero;StudyFight-CancelTeacherFightResult"
-  splits:
-  - text: "切磋出师"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-CancelTeacherFightResult"
 - raw: "切磋无法使用"
   splits:
   - text: "切磋无法使用"
@@ -10356,11 +9086,6 @@
     text: "阁下想必就是近来颇有名气的#PlayerForceDescribe##$PlayerName#，真是百闻不如一见啊。"
   templates:
   - template: "{0}\n{1}"
-- raw: "初级嘉奖;RewardForceHeroPlotSure;0-{0};0/{0}"
-  splits:
-  - text: "初级嘉奖"
-  templates:
-  - template: "{0};RewardForceHeroPlotSure;0-⟦0⟧;0/⟦0⟧"
 - raw: "初级武师"
   splits:
   - text: "初级武师"
@@ -10399,16 +9124,6 @@
 - raw: "别派盗匪"
   splits:
   - text: "别派盗匪"
-- raw: "别生气啊;HelpArgueFriends;0"
-  splits:
-  - text: "别生气啊"
-  templates:
-  - template: "{0};HelpArgueFriends;0"
-- raw: "别生气啊;HelpArgueFriends;1"
-  splits:
-  - text: "别生气啊"
-  templates:
-  - template: "{0};HelpArgueFriends;1"
 - raw: "别看咱们这不起眼，却也是人才济济，卧虎藏龙。\n少侠行走江湖若遇到什么不便之处，掌柜的可以为您介绍一名江湖人士作为保镖。\n不仅价钱实惠，而且定能竭智尽忠，替您分忧解难！"
   splits:
   - text: "别看咱们这不起眼，却也是人才济济，卧虎藏龙。"
@@ -10450,11 +9165,6 @@
   - text: "制作效率"
   templates:
   - template: "{0}+"
-- raw: "刷新展品;FreshAuctionItemSure;;0/"
-  splits:
-  - text: "刷新展品"
-  templates:
-  - template: "{0};FreshAuctionItemSure;;0/"
 - raw: "刺客"
   splits:
   - text: "刺客"
@@ -10551,47 +9261,12 @@
 - raw: "副掌门"
   splits:
   - text: "副掌门"
-- raw: "割据一方;PlotStartGameResult;6"
-  splits:
-  - text: "割据一方"
-  templates:
-  - template: "{0};PlotStartGameResult;6"
 - raw: "力有不逮"
   splits:
   - text: "力有不逮"
-- raw: "力有不逮;HelpRandomNpcPickFood;1-1"
-  splits:
-  - text: "力有不逮"
-  templates:
-  - template: "{0};HelpRandomNpcPickFood;1-1"
-- raw: "力有不逮;HelpRandomNpcPickMaterial;1-1"
-  splits:
-  - text: "力有不逮"
-  templates:
-  - template: "{0};HelpRandomNpcPickMaterial;1-1"
-- raw: "力有不逮;HelpRandomNpcPickPlant;1-1"
-  splits:
-  - text: "力有不逮"
-  templates:
-  - template: "{0};HelpRandomNpcPickPlant;1-1"
-- raw: "力有不逮;HelpRandomNpcPickPoison;1-1"
-  splits:
-  - text: "力有不逮"
-  templates:
-  - template: "{0};HelpRandomNpcPickPoison;1-1"
-- raw: "力有不逮;HelpRandomNpcPickTreasure;1-1"
-  splits:
-  - text: "力有不逮"
-  templates:
-  - template: "{0};HelpRandomNpcPickTreasure;1-1"
 - raw: "力道"
   splits:
   - text: "力道"
-- raw: "劝入门派;AskHeroJoinForce;AskNPCWantLeave;;;FavorDegree/60"
-  splits:
-  - text: "劝入门派"
-  templates:
-  - template: "{0};AskHeroJoinForce;AskNPCWantLeave;;;FavorDegree/60"
 - raw: "劝君更尽一杯酒，西出阳关无故人"
   splits:
   - text: "劝君更尽一杯酒，西出阳关无故人"
@@ -10605,11 +9280,6 @@
 - raw: "功成名就"
   splits:
   - text: "功成名就"
-- raw: "功成名就;PlotStartGameResult;3"
-  splits:
-  - text: "功成名就"
-  templates:
-  - template: "{0};PlotStartGameResult;3"
 - raw: "功法效果翻倍(5回合)</color>"
   splits:
   - text: "功法效果翻倍"
@@ -10631,11 +9301,6 @@
 - raw: "功绩兑换"
   splits:
   - text: "功绩兑换"
-- raw: "功绩兑换;OpenServantForceStorage;"
-  splits:
-  - text: "功绩兑换"
-  templates:
-  - template: "{0};OpenServantForceStorage;"
 - raw: "功能未解锁！"
   splits:
   - text: "功能未解锁！"
@@ -10654,42 +9319,9 @@
 - raw: "劣质"
   splits:
   - text: "劣质"
-- raw: "动之以理;ChatInteractHero;DebateReleaseHateResult"
-  splits:
-  - text: "动之以理"
-  templates:
-  - template: "{0};ChatInteractHero;DebateReleaseHateResult"
 - raw: "动词"
   splits:
   - text: "动词"
-- raw: "助{0}一臂之力;HelpInteractHeroFight;0-DeathFight-HelpInteractHeroFightResult"
-  splits:
-  - text: "助"
-  - subIndex: 1
-    text: "一臂之力"
-  templates:
-  - template: "{0}⟦0⟧{1};HelpInteractHeroFight;0-DeathFight-HelpInteractHeroFightResult"
-- raw: "助{0}一臂之力;HelpInteractHeroFight;0-StudyFight-HelpInteractHeroFightResult"
-  splits:
-  - text: "助"
-  - subIndex: 1
-    text: "一臂之力"
-  templates:
-  - template: "{0}⟦0⟧{1};HelpInteractHeroFight;0-StudyFight-HelpInteractHeroFightResult"
-- raw: "助{0}一臂之力;HelpInteractHeroFight;1-DeathFight-HelpInteractHeroFightResult"
-  splits:
-  - text: "助"
-  - subIndex: 1
-    text: "一臂之力"
-  templates:
-  - template: "{0}⟦0⟧{1};HelpInteractHeroFight;1-DeathFight-HelpInteractHeroFightResult"
-- raw: "助{0}一臂之力;HelpInteractHeroFight;1-StudyFight-HelpInteractHeroFightResult"
-  splits:
-  - text: "助"
-  - subIndex: 1
-    text: "一臂之力"
-  templates:
-  - template: "{0}⟦0⟧{1};HelpInteractHeroFight;1-StudyFight-HelpInteractHeroFightResult"
 - raw: "努力习武，不负本门栽培"
   splits:
   - text: "努力习武，不负本门栽培"
@@ -10699,11 +9331,6 @@
 - raw: "劫匪头目"
   splits:
   - text: "劫匪头目"
-- raw: "劫狱;RescureNPCPrison;;;;FavorDegree/50"
-  splits:
-  - text: "劫狱"
-  templates:
-  - template: "{0};RescureNPCPrison;;;;FavorDegree/50"
 - raw: "劫狱;RescureNPCPrisonSure"
   splits:
   - text: "劫狱"
@@ -10760,53 +9387,11 @@
 - raw: "勒索财物"
   splits:
   - text: "勒索财物"
-- raw: "勒索财物;RobRandomEnmey;;;♦获取贼人身上一件物品\n♦增加少许恶名"
-  splits:
-  - text: "勒索财物"
-  - subIndex: 1
-    text: "获取贼人身上一件物品"
-  - subIndex: 2
-    text: "增加少许恶名"
-  templates:
-  - template: "{0};RobRandomEnmey;;;♦{1}\n♦{2}"
-- raw: "包在我身上;AcceptLittleMission;0"
-  splits:
-  - text: "包在我身上"
-  templates:
-  - template: "{0};AcceptLittleMission;0"
-- raw: "包在我身上;AcceptLittleMission;1"
-  splits:
-  - text: "包在我身上"
-  templates:
-  - template: "{0};AcceptLittleMission;1"
-- raw: "包在我身上;AcceptLittleMission;2"
-  splits:
-  - text: "包在我身上"
-  templates:
-  - template: "{0};AcceptLittleMission;2"
 - raw: "包在我身上;HideInteractUI"
   splits:
   - text: "包在我身上"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "包扎;HospitalCureExternalInjury;;;技能影响:医术"
-  splits:
-  - text: "包扎"
-  - subIndex: 1
-    text: "技能影响"
-  - subIndex: 2
-    text: "医术"
-  templates:
-  - template: "{0};HospitalCureExternalInjury;;;{1}:{2}"
-- raw: "包扎;HospitalCureExternalInjuryForce;;;技能影响:医术"
-  splits:
-  - text: "包扎"
-  - subIndex: 1
-    text: "技能影响"
-  - subIndex: 2
-    text: "医术"
-  templates:
-  - template: "{0};HospitalCureExternalInjuryForce;;;{1}:{2}"
 - raw: "化干戈为玉帛，本就是一桩美事。\n既然#PlayerName#也有此意，那咱们两派从今日起便停战{0}日！"
   splits:
   - text: "化干戈为玉帛，本就是一桩美事。"
@@ -10893,11 +9478,6 @@
 - raw: "十步杀一人，千里不留行"
   splits:
   - text: "十步杀一人，千里不留行"
-- raw: "千恩万谢;GetBegForNpcMoney;"
-  splits:
-  - text: "千恩万谢"
-  templates:
-  - template: "{0};GetBegForNpcMoney;"
 - raw: "千里之行始于足下，再微小的任务也不能掉以轻心，#PlayerName#你速去速回吧！"
   splits:
   - text: "千里之行始于足下，再微小的任务也不能掉以轻心，#PlayerName#你速去速回吧！"
@@ -10955,11 +9535,6 @@
 - raw: "卓远望"
   splits:
   - text: "卓远望"
-- raw: "单次指点;ForceTeachNPCSure;"
-  splits:
-  - text: "单次指点"
-  templates:
-  - template: "{0};ForceTeachNPCSure;"
 - raw: "南"
   splits:
   - text: "南"
@@ -10975,11 +9550,6 @@
 - raw: "博骰"
   splits:
   - text: "博骰"
-- raw: "博骰;GambleInteractHeroPlot;;;;;GambleTime"
-  splits:
-  - text: "博骰"
-  templates:
-  - template: "{0};GambleInteractHeroPlot;;;;;GambleTime"
 - raw: "博骰教程"
   splits:
   - text: "博骰教程"
@@ -11136,11 +9706,6 @@
 - raw: "参悟"
   splits:
   - text: "参悟"
-- raw: "参赛;StartForceGroupFightMatch;true"
-  splits:
-  - text: "参赛"
-  templates:
-  - template: "{0};StartForceGroupFightMatch;true"
 - raw: "参赛人数不足5人，确认出战吗？"
   splits:
   - text: "参赛人数不足5人，确认出战吗？"
@@ -11190,11 +9755,6 @@
 - raw: "友善"
   splits:
   - text: "友善"
-- raw: "友善...;ChangePlot;1"
-  splits:
-  - text: "友善..."
-  templates:
-  - template: "{0};ChangePlot;1"
 - raw: "友善度"
   splits:
   - text: "友善度"
@@ -11275,11 +9835,6 @@
   - text: "取消"
   templates:
   - template: "{0};ManageForceMoneyPlotStart"
-- raw: "取消;SetMeetingPlayerAdvise;-1"
-  splits:
-  - text: "取消"
-  templates:
-  - template: "{0};SetMeetingPlayerAdvise;-1"
 - raw: "取消升级"
   splits:
   - text: "取消升级"
@@ -11345,21 +9900,11 @@
 - raw: "受击时减少对方连击率"
   splits:
   - text: "受击时减少对方连击率"
-- raw: "受教了;ChangePlot;0"
-  splits:
-  - text: "受教了"
-  templates:
-  - template: "{0};ChangePlot;0"
 - raw: "受教了;HideInteractUI"
   splits:
   - text: "受教了"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "受教了;StudyNewSkillWithNPCSure;{0};;;FavorDegree/{1}"
-  splits:
-  - text: "受教了"
-  templates:
-  - template: "{0};StudyNewSkillWithNPCSure;⟦0⟧;;;FavorDegree/⟦1⟧"
 - raw: "受死吧！;DeathFightKillHeroStart"
   splits:
   - text: "受死吧！"
@@ -11440,16 +9985,6 @@
     text: "这内功，轻功与绝技，#PlayerName#想先选择哪门进行修习？"
   templates:
   - template: "{0}\n{1}"
-- raw: "只是借你一看罢了;ChangePlot;1"
-  splits:
-  - text: "只是借你一看罢了"
-  templates:
-  - template: "{0};ChangePlot;1"
-- raw: "只是借你一看罢了;ChangePlot;2"
-  splits:
-  - text: "只是借你一看罢了"
-  templates:
-  - template: "{0};ChangePlot;2"
 - raw: "只是借你一看罢了;ReduceHeroLoyal"
   splits:
   - text: "只是借你一看罢了"
@@ -11512,31 +10047,6 @@
 - raw: "只有掌门或奉命者才能进行招募"
   splits:
   - text: "只有掌门或奉命者才能进行招募"
-- raw: "只管开口便是！;StartPerformForMoney;3"
-  splits:
-  - text: "只管开口便是！"
-  templates:
-  - template: "{0};StartPerformForMoney;3"
-- raw: "只管砸来便是！;StartPerformForMoney;1"
-  splits:
-  - text: "只管砸来便是！"
-  templates:
-  - template: "{0};StartPerformForMoney;1"
-- raw: "只管考验便是！;StartPerformForMoney;2"
-  splits:
-  - text: "只管考验便是！"
-  templates:
-  - template: "{0};StartPerformForMoney;2"
-- raw: "只管走起便是！;StartPerformForMoney;0"
-  splits:
-  - text: "只管走起便是！"
-  templates:
-  - template: "{0};StartPerformForMoney;0"
-- raw: "只能出手了;FightInteractHero;HardFight-FightRandomEnemyResult-true-Hero~None"
-  splits:
-  - text: "只能出手了"
-  templates:
-  - template: "{0};FightInteractHero;HardFight-FightRandomEnemyResult-true-Hero~None"
 - raw: "只能劈柴烧水，替师兄弟们打打下手了。"
   splits:
   - text: "只能劈柴烧水，替师兄弟们打打下手了。"
@@ -11549,11 +10059,6 @@
 - raw: "只能说聊胜于无了..."
   splits:
   - text: "只能说聊胜于无了..."
-- raw: "只要一半价格;GiveXinYanMissionEquipMoney;2"
-  splits:
-  - text: "只要一半价格"
-  templates:
-  - template: "{0};GiveXinYanMissionEquipMoney;2"
 - raw: "只要不断完成官府委托，抓捕野外盗匪以积累功绩，\n相信以少侠的武功，不多时便可升官进职。"
   splits:
   - text: "只要不断完成官府委托，抓捕野外盗匪以积累功绩，"
@@ -11671,11 +10176,6 @@
 - raw: "可恶..."
   splits:
   - text: "可恶..."
-- raw: "可恶...;GetTreasureMapReward;2"
-  splits:
-  - text: "可恶..."
-  templates:
-  - template: "{0};GetTreasureMapReward;2"
 - raw: "可恶...;HideInteractUI"
   splits:
   - text: "可恶..."
@@ -11736,11 +10236,6 @@
   - text: "可惜可惜"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "可惜可惜;SupportForceAttackAreaResultFinish;"
-  splits:
-  - text: "可惜可惜"
-  templates:
-  - template: "{0};SupportForceAttackAreaResultFinish;"
 - raw: "可惜可惜，看走眼了......\n看来还得多行走江湖，积累些阅历才行。"
   splits:
   - text: "可惜可惜，看走眼了......"
@@ -11871,15 +10366,6 @@
 - raw: "合"
   splits:
   - text: "合"
-- raw: "合练;LoverStudyTogether;;;♦共同修炼一门武学\n♦双方均可获得经验和持续加成效果;;StudyTogetherTime"
-  splits:
-  - text: "合练"
-  - subIndex: 1
-    text: "共同修炼一门武学"
-  - subIndex: 2
-    text: "双方均可获得经验和持续加成效果"
-  templates:
-  - template: "{0};LoverStudyTogether;;;♦{1}\n♦{2};;StudyTogetherTime"
 - raw: "合谷"
   splits:
   - text: "合谷"
@@ -11895,15 +10381,6 @@
 - raw: "同花！同花！同花！"
   splits:
   - text: "同花！同花！同花！"
-- raw: "同行;LoverAskHeroJoinTeam;;;♦邀请眷侣加入队伍\n♦无好感消耗"
-  splits:
-  - text: "同行"
-  - subIndex: 1
-    text: "邀请眷侣加入队伍"
-  - subIndex: 2
-    text: "无好感消耗"
-  templates:
-  - template: "{0};LoverAskHeroJoinTeam;;;♦{1}\n♦{2}"
 - raw: "同门争斗"
   splits:
   - text: "同门争斗"
@@ -11940,21 +10417,6 @@
   - text: "后会有期"
   templates:
   - template: "{0};FinishEventMission"
-- raw: "后会有期;FinishExploreMap;true"
-  splits:
-  - text: "后会有期"
-  templates:
-  - template: "{0};FinishExploreMap;true"
-- raw: "后会有期;FriendVisitFinish;0"
-  splits:
-  - text: "后会有期"
-  templates:
-  - template: "{0};FriendVisitFinish;0"
-- raw: "后会有期;FriendVisitFinish;1"
-  splits:
-  - text: "后会有期"
-  templates:
-  - template: "{0};FriendVisitFinish;1"
 - raw: "后会有期;HeroReallyLeave"
   splits:
   - text: "后会有期"
@@ -12017,11 +10479,6 @@
 - raw: "听宫"
   splits:
   - text: "听宫"
-- raw: "听我一言;ChatInteractHero;StopNPCWantLeaveByDebateResult"
-  splits:
-  - text: "听我一言"
-  templates:
-  - template: "{0};ChatInteractHero;StopNPCWantLeaveByDebateResult"
 - raw: "听说#PlayerName#近来得了新欢，难怪对我爱搭不理起来。这个月若是不来{0}寻我解释一番，可别怪我翻脸不认人。"
   splits:
   - text: "听说#PlayerName#近来得了新欢，难怪对我爱搭不理起来。这个月若是不来"
@@ -12182,21 +10639,11 @@
   - text: "告辞"
   templates:
   - template: "{0};QiXiFestivalLeave"
-- raw: "告辞;StopNpcReduceAreaStateFinalReuslt;true"
-  splits:
-  - text: "告辞"
-  templates:
-  - template: "{0};StopNpcReduceAreaStateFinalReuslt;true"
 - raw: "告辞;SureHeroLeaveTeam"
   splits:
   - text: "告辞"
   templates:
   - template: "{0};SureHeroLeaveTeam"
-- raw: "告辞！;WatchMasterFightEnd;1"
-  splits:
-  - text: "告辞！"
-  templates:
-  - template: "{0};WatchMasterFightEnd;1"
 - raw: "呔！大侠，休要听这贼人胡言乱语！\n近来圣上体恤民情，每年赋税皆有减免，你说是也不是？"
   splits:
   - text: "呔！大侠，休要听这贼人胡言乱语！"
@@ -12398,15 +10845,6 @@
     text: "银钱"
   templates:
   - template: "{0}⟦0⟧{1}"
-- raw: "和解;AskHeroCancelOtherHater;;;♦使对方与仇敌握手言和\n♦消耗40点好感;FavorDegree/80"
-  splits:
-  - text: "和解"
-  - subIndex: 1
-    text: "使对方与仇敌握手言和"
-  - subIndex: 2
-    text: "消耗40点好感"
-  templates:
-  - template: "{0};AskHeroCancelOtherHater;;;♦{1}\n♦{2};FavorDegree/80"
 - raw: "和这{0}两经费"
   splits:
   - text: "和这"
@@ -13873,11 +12311,6 @@
     text: "今天爷心情好，饶你一条狗命！"
   templates:
   - template: "{0}\n{1}"
-- raw: "哼，还好我早有准备！;PlotStartFight;HardFight-KillerFightResult-16;;;{0}/{1}"
-  splits:
-  - text: "哼，还好我早有准备！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-KillerFightResult-16;;;⟦0⟧/⟦1⟧"
 - raw: "哼，这点甜言蜜语就想把我糊弄过去？\n#PlayerName#未免也太敷衍了！"
   splits:
   - text: "哼，这点甜言蜜语就想把我糊弄过去？"
@@ -13954,16 +12387,6 @@
     text: "此战是我#TargetForceName#输了......"
   templates:
   - template: "{0}\n{1}"
-- raw: "唔......;FinishPerformForMoneyDefence;"
-  splits:
-  - text: "唔......"
-  templates:
-  - template: "{0};FinishPerformForMoneyDefence;"
-- raw: "唔......;FinishPerformForMoneyDodge;"
-  splits:
-  - text: "唔......"
-  templates:
-  - template: "{0};FinishPerformForMoneyDodge;"
 - raw: "唔......对方的这招{0}好生厉害，\n似乎只要如此运功，便能使出其中招式......"
   splits:
   - text: "唔......对方的这招"
@@ -14177,15 +12600,6 @@
     text: "势头不妙，还是先开溜吧！"
   templates:
   - template: "{0}\n{1}"
-- raw: "唯唯诺诺;ReleaseLoverUnhappy;2;;♦降低20好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "唯唯诺诺"
-  - subIndex: 1
-    text: "降低20好感"
-  - subIndex: 2
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "{0};ReleaseLoverUnhappy;2;;♦{1}\n♦{2}"
 - raw: "商人"
   splits:
   - text: "商人"
@@ -14474,17 +12888,6 @@
 - raw: "嗯？有动静......什么人！"
   splits:
   - text: "嗯？有动静......什么人！"
-- raw: "嘉奖;RewardForceHeroPlot;;;♦以银两或珍宝嘉奖弟子\n♦提升弟子好感，忠诚和门派功绩\n♦每月最多一次;;ForceRewardTime"
-  splits:
-  - text: "嘉奖"
-  - subIndex: 1
-    text: "以银两或珍宝嘉奖弟子"
-  - subIndex: 2
-    text: "提升弟子好感，忠诚和门派功绩"
-  - subIndex: 3
-    text: "每月最多一次"
-  templates:
-  - template: "{0};RewardForceHeroPlot;;;♦{1}\n♦{2}\n♦{3};;ForceRewardTime"
 - raw: "嘴"
   splits:
   - text: "嘴"
@@ -14651,11 +13054,6 @@
 - raw: "围炉煮茶"
   splits:
   - text: "围炉煮茶"
-- raw: "围观;StartForceGroupFightMatch;false"
-  splits:
-  - text: "围观"
-  templates:
-  - template: "{0};StartForceGroupFightMatch;false"
 - raw: "固执"
   splits:
   - text: "固执"
@@ -15033,39 +13431,12 @@
 - raw: "地缺"
   splits:
   - text: "地缺"
-- raw: "均价出售({0}两);GiveNpcBountyItemPriceSure;2"
-  splits:
-  - text: "均价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1});GiveNpcBountyItemPriceSure;2"
 - raw: "坐牢"
   splits:
   - text: "坐牢"
-- raw: "坐镇指挥;CommandAttackResourcePointForce;{0};;;{1}"
-  splits:
-  - text: "坐镇指挥"
-  templates:
-  - template: "{0};CommandAttackResourcePointForce;⟦0⟧;;;⟦1⟧"
 - raw: "坚韧"
   splits:
   - text: "坚韧"
-- raw: "垫付一半欠款;SureHelpDebt;;0/"
-  splits:
-  - text: "垫付一半欠款"
-  templates:
-  - template: "{0};SureHelpDebt;;0/"
-- raw: "垫付全部欠款;SureHelpDebt;;0/"
-  splits:
-  - text: "垫付全部欠款"
-  templates:
-  - template: "{0};SureHelpDebt;;0/"
-- raw: "垫付欠款;FinishEventMission;;0/"
-  splits:
-  - text: "垫付欠款"
-  templates:
-  - template: "{0};FinishEventMission;;0/"
 - raw: "城墙"
   splits:
   - text: "城墙"
@@ -15255,11 +13626,6 @@
   - text: "多多保重"
   templates:
   - template: "{0};FinishEventMission"
-- raw: "多少给点吧;ChangePlayerMoneyFinish;"
-  splits:
-  - text: "多少给点吧"
-  templates:
-  - template: "{0};ChangePlayerMoneyFinish;"
 - raw: "多年以后一个炎热的下午，你正坐在大殿中思考国策。\n突然一阵强烈的眩晕袭来，使你天旋地转，如坠云里雾里。"
   splits:
   - text: "多年以后一个炎热的下午，你正坐在大殿中思考国策。"
@@ -15326,11 +13692,6 @@
 - raw: "多谢#TargetInteractName#！"
   splits:
   - text: "多谢#TargetInteractName#！"
-- raw: "多谢;StopNpcReduceAreaStateFinalReuslt;true"
-  splits:
-  - text: "多谢"
-  templates:
-  - template: "{0};StopNpcReduceAreaStateFinalReuslt;true"
 - raw: "多谢;SureJoinNpcParty"
   splits:
   - text: "多谢"
@@ -15351,11 +13712,6 @@
   - text: "多谢多谢"
   templates:
   - template: "{0};ChangeNormalMeetNpcPlot"
-- raw: "多谢大侠;ChooseWujueyiReward;0"
-  splits:
-  - text: "多谢大侠"
-  templates:
-  - template: "{0};ChooseWujueyiReward;0"
 - raw: "多谢大侠，多谢大侠！\n这{0}两银子是小的此前行窃所得，\n就都交给您老，以示小的悔过之意。"
   splits:
   - text: "多谢大侠，多谢大侠！"
@@ -15403,11 +13759,6 @@
   - text: "多谢师姐！"
   templates:
   - template: "{0};FinishJiangWanLeaveForce"
-- raw: "多谢捧场;ChangePlayerMoneyFinish;"
-  splits:
-  - text: "多谢捧场"
-  templates:
-  - template: "{0};ChangePlayerMoneyFinish;"
 - raw: "多谢掌门;HideInteractUI"
   splits:
   - text: "多谢掌门"
@@ -15436,11 +13787,6 @@
   - text: "多谢掌门！"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "多谢掌门！;PlayerGetForceGroupFightMatchReward;"
-  splits:
-  - text: "多谢掌门！"
-  templates:
-  - template: "{0};PlayerGetForceGroupFightMatchReward;"
 - raw: "多谢掌门！;UpgradeHeroForceLvPlotSuccess"
   splits:
   - text: "多谢掌门！"
@@ -15718,15 +14064,6 @@
     text: "下一代仙霞派弟子也在他的引领之下，成为武林中新一代之佼佼者。"
   templates:
   - template: "{0}\n{1}\n{2}"
-- raw: "大张旗鼓;ChooseStealSkill;2;;迎战大量守卫\n获取高品质秘籍"
-  splits:
-  - text: "大张旗鼓"
-  - subIndex: 1
-    text: "迎战大量守卫"
-  - subIndex: 2
-    text: "获取高品质秘籍"
-  templates:
-  - template: "{0};ChooseStealSkill;2;;{1}\n{2}"
 - raw: "大当家"
   splits:
   - text: "大当家"
@@ -15759,31 +14096,6 @@
   - text: "大肆诋毁"
   templates:
   - template: "{0};SureHeroCancelOtherRelation"
-- raw: "大胆表白;StartAskHeroToLoverPlot;QiXiFestivalLeave;;{0};FavorDegree/90"
-  splits:
-  - text: "大胆表白"
-  templates:
-  - template: "{0};StartAskHeroToLoverPlot;QiXiFestivalLeave;;⟦0⟧;FavorDegree/90"
-- raw: "大胆贼人！;PlotStartFight;DeathFight-FindBigCriminal0Result-16-"
-  splits:
-  - text: "大胆贼人！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-FindBigCriminal0Result-16-"
-- raw: "大胆贼人！;PlotStartFight;HardFight-{0}~2-13"
-  splits:
-  - text: "大胆贼人！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-⟦0⟧~2-13"
-- raw: "大胆贼人！;PlotStartFight;HardFight-{0}~3-6"
-  splits:
-  - text: "大胆贼人！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-⟦0⟧~3-6"
-- raw: "大胆贼人！;PlotStartFight;HardFight-{0}~4-7"
-  splits:
-  - text: "大胆贼人！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-⟦0⟧~4-7"
 - raw: "大获全胜并将其收为附庸"
   splits:
   - text: "大获全胜并将其收为附庸"
@@ -15832,29 +14144,9 @@
 - raw: "大隐魔首"
   splits:
   - text: "大隐魔首"
-- raw: "大额红包;SpringFestivalGiveReward;3"
-  splits:
-  - text: "大额红包"
-  templates:
-  - template: "{0};SpringFestivalGiveReward;3"
-- raw: "大额赠礼;AddFavorOtherForceSure;{0}-3-{1};0/{1}{2}"
-  splits:
-  - text: "大额赠礼"
-  templates:
-  - template: "{0};AddFavorOtherForceSure;⟦0⟧-3-⟦1⟧;0/⟦1⟧⟦2⟧"
-- raw: "大额赠礼;LeaderAddFavorOtherForceSure;3-{0};0/{0}{1}"
-  splits:
-  - text: "大额赠礼"
-  templates:
-  - template: "{0};LeaderAddFavorOtherForceSure;3-⟦0⟧;0/⟦0⟧⟦1⟧"
 - raw: "天"
   splits:
   - text: "天"
-- raw: "天;SureBuildingWork;"
-  splits:
-  - text: "天"
-  templates:
-  - template: "{0};SureBuildingWork;"
 - raw: "天下大势：{4}{0}门派 {1}攻击资源{4}门派 {2}攻击城镇{4}门派 {3}攻击京城/总舵"
   splits:
   - text: "天下大势"
@@ -16008,16 +14300,6 @@
 - raw: "天赋点"
   splits:
   - text: "天赋点"
-- raw: "天赐良机;PlotChangeGuardAlart;-10"
-  splits:
-  - text: "天赐良机"
-  templates:
-  - template: "{0};PlotChangeGuardAlart;-10"
-- raw: "天赐良机;PlotChangeGuardFavor;+10"
-  splits:
-  - text: "天赐良机"
-  templates:
-  - template: "{0};PlotChangeGuardFavor;+10"
 - raw: "天鼎"
   splits:
   - text: "天鼎"
@@ -16117,36 +14399,6 @@
 - raw: "她"
   splits:
   - text: "她"
-- raw: "好个强敌！;PlotStartFight;DeathFight-FindBigTreasureFightResult-24-"
-  splits:
-  - text: "好个强敌！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-FindBigTreasureFightResult-24-"
-- raw: "好个强敌！;PlotStartFight;DeathFight-FindLostBookFightResult-22-"
-  splits:
-  - text: "好个强敌！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-FindLostBookFightResult-22-"
-- raw: "好个强敌！;PlotStartFight;DeathFight-FindSpeHorseFightResult-20-"
-  splits:
-  - text: "好个强敌！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-FindSpeHorseFightResult-20-"
-- raw: "好个强敌！;PlotStartFight;HardFight-FinishCatchBigCriminal-14-"
-  splits:
-  - text: "好个强敌！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishCatchBigCriminal-14-"
-- raw: "好个强敌！;PlotStartFight;HardFight-FinishCatchBigThief-15-"
-  splits:
-  - text: "好个强敌！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishCatchBigThief-15-"
-- raw: "好个强敌！;PlotStartFight;HardFight-FinishSpeEquipFight-14-"
-  splits:
-  - text: "好个强敌！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishSpeEquipFight-14-"
 - raw: "好了好了，春节时分嬉笑吵嚷虽然热闹，但也不能得意忘形。\n天色渐晚，徒儿们轮流上前来领红包吧。"
   splits:
   - text: "好了好了，春节时分嬉笑吵嚷虽然热闹，但也不能得意忘形。"
@@ -16381,11 +14633,6 @@
     text: "若是#SourceInteractName#能替我垫付这笔欠款，就再好不过了。"
   templates:
   - template: "{0}\n{1}"
-- raw: "好险好险...;ChangePlotDataBase;584"
-  splits:
-  - text: "好险好险..."
-  templates:
-  - template: "{0};ChangePlotDataBase;584"
 - raw: "好险好险;HideInteractUI"
   splits:
   - text: "好险好险"
@@ -16434,11 +14681,6 @@
 - raw: "好，#PlayerName#果然爽快。"
   splits:
   - text: "好，#PlayerName#果然爽快。"
-- raw: "好，一起上吧！;PlotStartFight;HardFight-HelpOldManResult-3_1"
-  splits:
-  - text: "好，一起上吧！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-HelpOldManResult-3_1"
 - raw: "好，如此一来红包便分发完毕。"
   splits:
   - text: "好，如此一来红包便分发完毕。"
@@ -16456,16 +14698,6 @@
     text: "不过，掌门我还准备了一份特殊礼物，奖励去年功绩最高的弟子。"
   templates:
   - template: "{0}\n{1}"
-- raw: "好，我们合力对敌！;PlotStartFight;DeathFight-FinishExploreBigRobberCamp-20_1-"
-  splits:
-  - text: "好，我们合力对敌！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-FinishExploreBigRobberCamp-20_1-"
-- raw: "好，我们合力除贼！;PlotStartFight;DeathFight-FinishExploreEvilCampFight-24_1-"
-  splits:
-  - text: "好，我们合力除贼！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-FinishExploreEvilCampFight-24_1-"
 - raw: "好，望你勤学苦练，将这本基础武学修习纯熟。\n此后方能继续精进，参悟更为高深的功法。"
   splits:
   - text: "好，望你勤学苦练，将这本基础武学修习纯熟。"
@@ -16490,16 +14722,6 @@
     text: "今天，为师就正式准许你出师！"
   templates:
   - template: "{0}\n{1}"
-- raw: "好，算我一个！;AcceptLittleMission;3-"
-  splits:
-  - text: "好，算我一个！"
-  templates:
-  - template: "{0};AcceptLittleMission;3-"
-- raw: "好，算我一个！;AcceptLittleMission;4"
-  splits:
-  - text: "好，算我一个！"
-  templates:
-  - template: "{0};AcceptLittleMission;4"
 - raw: "好，那就开始轮流出题吧，\n谁自告奋勇，打个头阵？"
   splits:
   - text: "好，那就开始轮流出题吧，"
@@ -16627,11 +14849,6 @@
     text: "说起来此战实在惊心动魄，险象环生，到现在我仍心有余悸。"
   templates:
   - template: "{0}\n{1}"
-- raw: "如此便好...;ChangePlotDataBase;583"
-  splits:
-  - text: "如此便好..."
-  templates:
-  - template: "{0};ChangePlotDataBase;583"
 - raw: "如此便好。只是我过惯了清净日子，不喜喧闹，\n少侠若无他事，就请原路返回吧。"
   splits:
   - text: "如此便好。只是我过惯了清净日子，不喜喧闹，"
@@ -16775,13 +14992,6 @@
 - raw: "委托"
   splits:
   - text: "委托"
-- raw: "委托？;AskNPCMission;;;♦完成对方委托提升好感"
-  splits:
-  - text: "委托？"
-  - subIndex: 1
-    text: "完成对方委托提升好感"
-  templates:
-  - template: "{0};AskNPCMission;;;♦{1}"
 - raw: "姜婉"
   splits:
   - text: "姜婉"
@@ -16856,11 +15066,6 @@
   - text: "威望"
   templates:
   - template: "{0}+"
-- raw: "娓娓道来;CheckLivingSkillResult;0-{0};;;{1}/{2}"
-  splits:
-  - text: "娓娓道来"
-  templates:
-  - template: "{0};CheckLivingSkillResult;0-⟦0⟧;;;⟦1⟧/⟦2⟧"
 - raw: "娘子"
   splits:
   - text: "娘子"
@@ -16923,46 +15128,9 @@
 - raw: "学习对方"
   splits:
   - text: "学习对方"
-- raw: "学习技艺潜力;StudyMaxLivingSkillWithNPC;;;♦对方潜力比你高出越多，效果越好\n♦消耗10点好感(师傅好感消耗减半)"
-  splits:
-  - text: "学习技艺潜力"
-  - subIndex: 1
-    text: "对方潜力比你高出越多，效果越好"
-  - subIndex: 2
-    text: "消耗10点好感"
-  - subIndex: 3
-    text: "师傅好感消耗减半"
-  templates:
-  - template: "{0};StudyMaxLivingSkillWithNPC;;;♦{1}\n♦{2}({3})"
-- raw: "学习技艺经验;StudyLivingSkillWithNPC;;;♦对方技艺比你高出越多，效果越好\n♦消耗4点好感(师傅好感消耗减半)"
-  splits:
-  - text: "学习技艺经验"
-  - subIndex: 1
-    text: "对方技艺比你高出越多，效果越好"
-  - subIndex: 2
-    text: "消耗4点好感"
-  - subIndex: 3
-    text: "师傅好感消耗减半"
-  templates:
-  - template: "{0};StudyLivingSkillWithNPC;;;♦{1}\n♦{2}({3})"
 - raw: "学习武功"
   splits:
   - text: "学习武功"
-- raw: "学习武功;FindSpeFollowerFinish;2"
-  splits:
-  - text: "学习武功"
-  templates:
-  - template: "{0};FindSpeFollowerFinish;2"
-- raw: "学习武功;FinishQingMingFestivalPlot;true"
-  splits:
-  - text: "学习武功"
-  templates:
-  - template: "{0};FinishQingMingFestivalPlot;true"
-- raw: "学习武功;SpeMasterFightChoose;1"
-  splits:
-  - text: "学习武功"
-  templates:
-  - template: "{0};SpeMasterFightChoose;1"
 - raw: "学人武功"
   splits:
   - text: "学人武功"
@@ -16978,31 +15146,6 @@
     text: "级内效果最佳"
   templates:
   - template: "{0}\n({1}⟦0⟧{2})"
-- raw: "学艺不精;HelpRandomNpcPickFood;0-1"
-  splits:
-  - text: "学艺不精"
-  templates:
-  - template: "{0};HelpRandomNpcPickFood;0-1"
-- raw: "学艺不精;HelpRandomNpcPickMaterial;0-1"
-  splits:
-  - text: "学艺不精"
-  templates:
-  - template: "{0};HelpRandomNpcPickMaterial;0-1"
-- raw: "学艺不精;HelpRandomNpcPickPlant;0-1"
-  splits:
-  - text: "学艺不精"
-  templates:
-  - template: "{0};HelpRandomNpcPickPlant;0-1"
-- raw: "学艺不精;HelpRandomNpcPickPoison;0-1"
-  splits:
-  - text: "学艺不精"
-  templates:
-  - template: "{0};HelpRandomNpcPickPoison;0-1"
-- raw: "学艺不精;HelpRandomNpcPickTreasure;0-1"
-  splits:
-  - text: "学艺不精"
-  templates:
-  - template: "{0};HelpRandomNpcPickTreasure;0-1"
 - raw: "学识"
   splits:
   - text: "学识"
@@ -17073,46 +15216,6 @@
 - raw: "完"
   splits:
   - text: "完"
-- raw: "完全恢复;SureHomeRestRecover;1"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHomeRestRecover;1"
-- raw: "完全恢复;SureHospitalCureInjury;0~0-"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~0-"
-- raw: "完全恢复;SureHospitalCureInjury;0~1-"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~1-"
-- raw: "完全恢复;SureHospitalCureInjury;0~2-"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHospitalCureInjury;0~2-"
-- raw: "完全恢复;SureHospitalCureInjury;1~0-"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~0-"
-- raw: "完全恢复;SureHospitalCureInjury;1~1-"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~1-"
-- raw: "完全恢复;SureHospitalCureInjury;1~2-"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHospitalCureInjury;1~2-"
-- raw: "完全恢复;SureHotelRestRecover;1"
-  splits:
-  - text: "完全恢复"
-  templates:
-  - template: "{0};SureHotelRestRecover;1"
 - raw: "完成;HideInteractUI"
   splits:
   - text: "完成"
@@ -17134,16 +15237,6 @@
   - text: "完成委托"
   templates:
   - template: "{0};⟦0⟧;0"
-- raw: "完成巡查;FinishAreaPatrol;"
-  splits:
-  - text: "完成巡查"
-  templates:
-  - template: "{0};FinishAreaPatrol;"
-- raw: "完成巡查;FinishHelpPatrol;"
-  splits:
-  - text: "完成巡查"
-  templates:
-  - template: "{0};FinishHelpPatrol;"
 - raw: "完成派遣;HideInteractUIOneDay"
   splits:
   - text: "完成派遣"
@@ -17167,11 +15260,6 @@
 - raw: "官兵领队"
   splits:
   - text: "官兵领队"
-- raw: "官员进贡;GiveTreasureToGovernChoose;2"
-  splits:
-  - text: "官员进贡"
-  templates:
-  - template: "{0};GiveTreasureToGovernChoose;2"
 - raw: "官差"
   splits:
   - text: "官差"
@@ -17349,11 +15437,6 @@
   - text: "容我再去准备"
   templates:
   - template: "{0};"
-- raw: "容我娓娓道来;TeachNPCSure;"
-  splits:
-  - text: "容我娓娓道来"
-  templates:
-  - template: "{0};TeachNPCSure;"
 - raw: "宾客皆已离场，婚礼终于结束了。\n能和#TargetInteractName#一路走来，最终结为夫妻，回头看真如同做梦一般。"
   splits:
   - text: "宾客皆已离场，婚礼终于结束了。"
@@ -17428,13 +15511,6 @@
     text: "我前几日得了这件#PlotInteractItemName#，若#SourceInteractName#不嫌弃，请一定收下。"
   templates:
   - template: "{0}\n{1}"
-- raw: "对于{0}我有几分心得;ForceLeaderAnswerQuestion;0;;;{1}/{2}"
-  splits:
-  - text: "对于"
-  - subIndex: 1
-    text: "我有几分心得"
-  templates:
-  - template: "{0}⟦0⟧{1};ForceLeaderAnswerQuestion;0;;;⟦1⟧/⟦2⟧"
 - raw: "对于“{0}”，\n我颇有几分见解"
   splits:
   - text: "对于"
@@ -17519,11 +15595,6 @@
 - raw: "对饮"
   splits:
   - text: "对饮"
-- raw: "对饮;ChooseDrinkWineSpe;;;;;DrinkTime"
-  splits:
-  - text: "对饮"
-  templates:
-  - template: "{0};ChooseDrinkWineSpe;;;;;DrinkTime"
 - raw: "寻得仇家踪迹"
   splits:
   - text: "寻得仇家踪迹"
@@ -17593,11 +15664,6 @@
     text: "贵馆的秘籍我就笑纳了！"
   templates:
   - template: "{0}\n{1}"
-- raw: "小心为上;FinishExploreMap;true"
-  splits:
-  - text: "小心为上"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "小捕快"
   splits:
   - text: "小捕快"
@@ -17646,16 +15712,6 @@
 - raw: "小试牛刀"
   splits:
   - text: "小试牛刀"
-- raw: "小贼休走！;ChaseThief;;;;Dodge/"
-  splits:
-  - text: "小贼休走！"
-  templates:
-  - template: "{0};ChaseThief;;;;Dodge/"
-- raw: "小贼休走！;PlotStartFight;HardFight-GuardRichFightResult-6"
-  splits:
-  - text: "小贼休走！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-GuardRichFightResult-6"
 - raw: "小贼休走！真是胆大包天，偷东西偷到我#SourceForceName#头上来了！\n(你催动轻功追赶，没一会就把那毛贼按倒在地。)"
   splits:
   - text: "小贼休走！真是胆大包天，偷东西偷到我#SourceForceName#头上来了！"
@@ -17683,21 +15739,6 @@
 - raw: "小酌"
   splits:
   - text: "小酌"
-- raw: "小额红包;SpringFestivalGiveReward;1"
-  splits:
-  - text: "小额红包"
-  templates:
-  - template: "{0};SpringFestivalGiveReward;1"
-- raw: "小额赠礼;AddFavorOtherForceSure;{0}-1-{1};0/{1}{2}"
-  splits:
-  - text: "小额赠礼"
-  templates:
-  - template: "{0};AddFavorOtherForceSure;⟦0⟧-1-⟦1⟧;0/⟦1⟧⟦2⟧"
-- raw: "小额赠礼;LeaderAddFavorOtherForceSure;1-{0};0/{0}{1}"
-  splits:
-  - text: "小额赠礼"
-  templates:
-  - template: "{0};LeaderAddFavorOtherForceSure;1-⟦0⟧;0/⟦0⟧⟦1⟧"
 - raw: "少侠"
   splits:
   - text: "少侠"
@@ -17951,11 +15992,6 @@
 - raw: "尝尝这招#SkillName#"
   splits:
   - text: "尝尝这招#SkillName#"
-- raw: "就学这个！;ChooseBeggerFoodExchangeSkill;"
-  splits:
-  - text: "就学这个！"
-  templates:
-  - template: "{0};ChooseBeggerFoodExchangeSkill;"
 - raw: "就是。#PlayerName#，你若不说出个所以然来，\n今天就别想随随便便打发我们！"
   splits:
   - text: "就是。#PlayerName#，你若不说出个所以然来，"
@@ -18007,11 +16043,6 @@
 - raw: "尽快返回门派正厅！"
   splits:
   - text: "尽快返回门派正厅！"
-- raw: "尽绵薄之力;GovernPlotStart;1"
-  splits:
-  - text: "尽绵薄之力"
-  templates:
-  - template: "{0};GovernPlotStart;1"
 - raw: "局势"
   splits:
   - text: "局势"
@@ -18026,11 +16057,6 @@
 - raw: "属性潜力"
   splits:
   - text: "属性潜力"
-- raw: "履约伤人;KillNpcChoice;1"
-  splits:
-  - text: "履约伤人"
-  templates:
-  - template: "{0};KillNpcChoice;1"
 - raw: "山"
   splits:
   - text: "山"
@@ -18203,11 +16229,6 @@
 - raw: "巨石"
   splits:
   - text: "巨石"
-- raw: "巨额红包;SpringFestivalGiveReward;4"
-  splits:
-  - text: "巨额红包"
-  templates:
-  - template: "{0};SpringFestivalGiveReward;4"
 - raw: "巨骨"
   splits:
   - text: "巨骨"
@@ -18307,11 +16328,6 @@
 - raw: "布施"
   splits:
   - text: "布施"
-- raw: "布施;SpeReduceBadFameStart;;0/"
-  splits:
-  - text: "布施"
-  templates:
-  - template: "{0};SpeReduceBadFameStart;;0/"
 - raw: "师"
   splits:
   - text: "师"
@@ -18447,26 +16463,6 @@
 - raw: "帮佣"
   splits:
   - text: "帮佣"
-- raw: "帮助五毒教;StartSpeFight;299"
-  splits:
-  - text: "帮助五毒教"
-  templates:
-  - template: "{0};StartSpeFight;299"
-- raw: "帮助官差对抗暴民;PlotStartFight;DeathFight-HelpGovFightMobResult~0-11"
-  splits:
-  - text: "帮助官差对抗暴民"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-HelpGovFightMobResult~0-11"
-- raw: "帮助暴民对抗官差;PlotStartFight;DeathFight-HelpGovFightMobResult~1-12"
-  splits:
-  - text: "帮助暴民对抗官差"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-HelpGovFightMobResult~1-12"
-- raw: "帮助茅山派;StartSpeFight;298"
-  splits:
-  - text: "帮助茅山派"
-  templates:
-  - template: "{0};StartSpeFight;298"
 - raw: "常无白"
   splits:
   - text: "常无白"
@@ -18486,11 +16482,6 @@
 - raw: "平"
   splits:
   - text: "平"
-- raw: "平分银两;FinishExploreBigRobberCampShareNpc;"
-  splits:
-  - text: "平分银两"
-  templates:
-  - template: "{0};FinishExploreBigRobberCampShareNpc;"
 - raw: "平南"
   splits:
   - text: "平南"
@@ -18594,11 +16585,6 @@
 - raw: "开"
   splits:
   - text: "开"
-- raw: "开个玩笑;ChangePlot;2"
-  splits:
-  - text: "开个玩笑"
-  templates:
-  - template: "{0};ChangePlot;2"
 - raw: "开个玩笑;FurtherInteractWithNPC"
   splits:
   - text: "开个玩笑"
@@ -18627,54 +16613,14 @@
 - raw: "开始"
   splits:
   - text: "开始"
-- raw: "开始修习;StudyMartialClubSkillSure;{0};0/{1}"
-  splits:
-  - text: "开始修习"
-  templates:
-  - template: "{0};StudyMartialClubSkillSure;⟦0⟧;0/⟦1⟧"
-- raw: "开始修炼;StudyLivingSkillStart;{0}-{1};0/{2}"
-  splits:
-  - text: "开始修炼"
-  templates:
-  - template: "{0};StudyLivingSkillStart;⟦0⟧-⟦1⟧;0/⟦2⟧"
-- raw: "开始修炼;StudyMaxFightSkillStart;{0}-{1};0/{2}"
-  splits:
-  - text: "开始修炼"
-  templates:
-  - template: "{0};StudyMaxFightSkillStart;⟦0⟧-⟦1⟧;0/⟦2⟧"
-- raw: "开始修炼;StudyMaxLivingSkillStart;{0}-{1};0/{2}"
-  splits:
-  - text: "开始修炼"
-  templates:
-  - template: "{0};StudyMaxLivingSkillStart;⟦0⟧-⟦1⟧;0/⟦2⟧"
-- raw: "开始修炼;StudyMaxStateStart;{0}-{1};0/{2}"
-  splits:
-  - text: "开始修炼"
-  templates:
-  - template: "{0};StudyMaxStateStart;⟦0⟧-⟦1⟧;0/⟦2⟧"
 - raw: "开始准备"
   splits:
   - text: "开始准备"
-- raw: "开始准备;StartPrepareParty;2-2-{0};0/1000"
-  splits:
-  - text: "开始准备"
-  templates:
-  - template: "{0};StartPrepareParty;2-2-⟦0⟧;0/1000"
 - raw: "开始切磋;StartFightRecruitEnemy"
   splits:
   - text: "开始切磋"
   templates:
   - template: "{0};StartFightRecruitEnemy"
-- raw: "开始动工吧;UpgradeCityHouse;;0/"
-  splits:
-  - text: "开始动工吧"
-  templates:
-  - template: "{0};UpgradeCityHouse;;0/"
-- raw: "开始对饮;DrinkInteractHero;FinishChongYangFestivalDrink"
-  splits:
-  - text: "开始对饮"
-  templates:
-  - template: "{0};DrinkInteractHero;FinishChongYangFestivalDrink"
 - raw: "开始巡查;PatrolAreaStart"
   splits:
   - text: "开始巡查"
@@ -18688,11 +16634,6 @@
   - text: "开始挑战"
   templates:
   - template: "{0};StartReplaceOtherForceFight"
-- raw: "开始探听;StartAskNearRandomEvent;;0/50"
-  splits:
-  - text: "开始探听"
-  templates:
-  - template: "{0};StartAskNearRandomEvent;;0/50"
 - raw: "开始探索;ExploreAreaStart"
   splits:
   - text: "开始探索"
@@ -18719,16 +16660,6 @@
   - text: "开始竞猜"
   templates:
   - template: "{0};StartLanternFestivalMatch"
-- raw: "开始舌战;ChatInteractHero;DebateRecruitEnemyResult"
-  splits:
-  - text: "开始舌战"
-  templates:
-  - template: "{0};ChatInteractHero;DebateRecruitEnemyResult"
-- raw: "开始论战;ChatInteractHero;DebateRandomEnemyResult"
-  splits:
-  - text: "开始论战"
-  templates:
-  - template: "{0};ChatInteractHero;DebateRandomEnemyResult"
 - raw: "开始论战;SureChatWithNPC"
   splits:
   - text: "开始论战"
@@ -18739,16 +16670,6 @@
   - text: "开始试炼"
   templates:
   - template: "{0};StartChallengeGhostGateFight"
-- raw: "开始遗忘;SpeRemoveSkillStart;;0/"
-  splits:
-  - text: "开始遗忘"
-  templates:
-  - template: "{0};SpeRemoveSkillStart;;0/"
-- raw: "开始遗忘;SpeRemoveTagStart;{0};0/{1}"
-  splits:
-  - text: "开始遗忘"
-  templates:
-  - template: "{0};SpeRemoveTagStart;⟦0⟧;0/⟦1⟧"
 - raw: "开席"
   splits:
   - text: "开席"
@@ -18757,26 +16678,6 @@
   - text: "开席入宴"
   templates:
   - template: "{0};PartyContinue"
-- raw: "开席对饮;DrinkInteractHero;DrinkWithNPCResult"
-  splits:
-  - text: "开席对饮"
-  templates:
-  - template: "{0};DrinkInteractHero;DrinkWithNPCResult"
-- raw: "开战;StartAttackResroucePoint;{0};;;{1}"
-  splits:
-  - text: "开战"
-  templates:
-  - template: "{0};StartAttackResroucePoint;⟦0⟧;;;⟦1⟧"
-- raw: "开诊;SureDoctorWork;;;;Med/20"
-  splits:
-  - text: "开诊"
-  templates:
-  - template: "{0};SureDoctorWork;;;;Med/20"
-- raw: "开赌！;GambleInteractHero;GambleWithNPCResult"
-  splits:
-  - text: "开赌！"
-  templates:
-  - template: "{0};GambleInteractHero;GambleWithNPCResult"
 - raw: "异禀天赋，精奇骨骼，百年之后，枯骨尔尔。\n如今这藏身之所已为仇家所知，我只得另寻名山大川，避世修行去也。\n小兄弟我们后会有期！"
   splits:
   - text: "异禀天赋，精奇骨骼，百年之后，枯骨尔尔。"
@@ -18807,15 +16708,6 @@
 - raw: "引毒已完成！"
   splits:
   - text: "引毒已完成！"
-- raw: "引荐;AskHeroAddOtherFriend;;;♦将自己的亲友引荐给对方\n♦消耗20点好感;FavorDegree/60"
-  splits:
-  - text: "引荐"
-  - subIndex: 1
-    text: "将自己的亲友引荐给对方"
-  - subIndex: 2
-    text: "消耗20点好感"
-  templates:
-  - template: "{0};AskHeroAddOtherFriend;;;♦{1}\n♦{2};FavorDegree/60"
 - raw: "弟"
   splits:
   - text: "弟"
@@ -18857,11 +16749,6 @@
     text: "才是。"
   templates:
   - template: "{0}<b>⟦0⟧</b>{1}"
-- raw: "张口结舌;CheckLivingSkillResult;2-{0}"
-  splits:
-  - text: "张口结舌"
-  templates:
-  - template: "{0};CheckLivingSkillResult;2-⟦0⟧"
 - raw: "张峻"
   splits:
   - text: "张峻"
@@ -18915,21 +16802,11 @@
   - text: "强行叛离"
   templates:
   - template: "{0};ForceCancelTeacher"
-- raw: "强行越狱;PrepareBreakPrison;4"
-  splits:
-  - text: "强行越狱"
-  templates:
-  - template: "{0};PrepareBreakPrison;4"
 - raw: "强行逐出;ForceCancelStudent"
   splits:
   - text: "强行逐出"
   templates:
   - template: "{0};ForceCancelStudent"
-- raw: "归还资源;ProduceBuildingReturn;"
-  splits:
-  - text: "归还资源"
-  templates:
-  - template: "{0};ProduceBuildingReturn;"
 - raw: "归隐田园"
   splits:
   - text: "归隐田园"
@@ -19051,31 +16928,6 @@
     text: "师傅每每借此方法，教育我们“众人拾柴火焰高”的道理。"
   templates:
   - template: "{0}\n{1}\n{2}"
-- raw: "征召;ForceAskHeroJoinTeam;;;♦征召弟子入队\n♦无好感消耗"
-  splits:
-  - text: "征召"
-  - subIndex: 1
-    text: "征召弟子入队"
-  - subIndex: 2
-    text: "无好感消耗"
-  templates:
-  - template: "{0};ForceAskHeroJoinTeam;;;♦{1}\n♦{2}"
-- raw: "征收资源;ManageServantForceResource;0-{0};;;ForceLv/4"
-  splits:
-  - text: "征收资源"
-  templates:
-  - template: "{0};ManageServantForceResource;0-⟦0⟧;;;ForceLv/4"
-- raw: "征用;ForceAskHeroGiveItem;;;♦消耗门派威望征用物品\n♦降低弟子少许好感和忠诚\n♦每月最多一次;;ForceAskGiveItemTime"
-  splits:
-  - text: "征用"
-  - subIndex: 1
-    text: "消耗门派威望征用物品"
-  - subIndex: 2
-    text: "降低弟子少许好感和忠诚"
-  - subIndex: 3
-    text: "每月最多一次"
-  templates:
-  - template: "{0};ForceAskHeroGiveItem;;;♦{1}\n♦{2}\n♦{3};;ForceAskGiveItemTime"
 - raw: "待到启封之时，淳厚酒香混合菊花清香冲鼻而来，\n想来真是让人垂涎欲滴啊！"
   splits:
   - text: "待到启封之时，淳厚酒香混合菊花清香冲鼻而来，"
@@ -19154,11 +17006,6 @@
 - raw: "得罪了"
   splits:
   - text: "得罪了"
-- raw: "得罪了;FightInteractHero;StudyFight-StopNPCWantLeaveByFightResult"
-  splits:
-  - text: "得罪了"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-StopNPCWantLeaveByFightResult"
 - raw: "得罪了！"
   splits:
   - text: "得罪了！"
@@ -19171,23 +17018,6 @@
 - raw: "御赐勋阶"
   splits:
   - text: "御赐勋阶"
-- raw: "循循善诱;EnlightForNpcSpePlot;0;;花费三日;FavorDegree/50"
-  splits:
-  - text: "循循善诱"
-  - subIndex: 1
-    text: "花费三日"
-  templates:
-  - template: "{0};EnlightForNpcSpePlot;0;;{1};FavorDegree/50"
-- raw: "循循善诱;EnlightForNpcSpeStart;0"
-  splits:
-  - text: "循循善诱"
-  templates:
-  - template: "{0};EnlightForNpcSpeStart;0"
-- raw: "微额红包;SpringFestivalGiveReward;0"
-  splits:
-  - text: "微额红包"
-  templates:
-  - template: "{0};SpringFestivalGiveReward;0"
 - raw: "心"
   splits:
   - text: "心"
@@ -19439,46 +17269,6 @@
     text: "你见势不妙，也只能向后纵越几步，扭头就跑！"
   templates:
   - template: "{0}\n{1}"
-- raw: "恶贼住手！;PlotStartFight;HardFight-PoorSellTreasureFightResult-3"
-  splits:
-  - text: "恶贼住手！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-PoorSellTreasureFightResult-3"
-- raw: "恶贼受死！;FightInteractHero;HardFight-FightRandomEnemyResult-true-Hero~None"
-  splits:
-  - text: "恶贼受死！"
-  templates:
-  - template: "{0};FightInteractHero;HardFight-FightRandomEnemyResult-true-Hero~None"
-- raw: "恶贼受死！;FightInteractHero;HardFight-FinishExploreTombFight"
-  splits:
-  - text: "恶贼受死！"
-  templates:
-  - template: "{0};FightInteractHero;HardFight-FinishExploreTombFight"
-- raw: "恶贼受死！;PlotStartFight;HardFight-FinishCatchExcapeCriminal-7-"
-  splits:
-  - text: "恶贼受死！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishCatchExcapeCriminal-7-"
-- raw: "恶贼受死！;PlotStartFight;HardFight-FinishExplorAncientRuinFight-22-"
-  splits:
-  - text: "恶贼受死！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishExplorAncientRuinFight-22-"
-- raw: "恶贼受死！;PlotStartFight;HardFight-FinishExploreNoNameMazeFight-21-"
-  splits:
-  - text: "恶贼受死！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishExploreNoNameMazeFight-21-"
-- raw: "恶贼受死！;PlotStartFight;HardFight-FinishExploreRobberCamp-4-"
-  splits:
-  - text: "恶贼受死！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishExploreRobberCamp-4-"
-- raw: "恶贼受死！;PlotStartFight;HardFight-ProtectWomenResult-15_1"
-  splits:
-  - text: "恶贼受死！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-ProtectWomenResult-15_1"
 - raw: "恶贼头目"
   splits:
   - text: "恶贼头目"
@@ -19488,21 +17278,6 @@
 - raw: "恶霸头目"
   splits:
   - text: "恶霸头目"
-- raw: "悉心指点;TeachLivingSkillWithNPCSure;"
-  splits:
-  - text: "悉心指点"
-  templates:
-  - template: "{0};TeachLivingSkillWithNPCSure;"
-- raw: "悉心指点;TeachMaxLivingSkillWithNPCSure;"
-  splits:
-  - text: "悉心指点"
-  templates:
-  - template: "{0};TeachMaxLivingSkillWithNPCSure;"
-- raw: "悍然出手;FightInteractHero;DeathFight-KillNPCMissionResult"
-  splits:
-  - text: "悍然出手"
-  templates:
-  - template: "{0};FightInteractHero;DeathFight-KillNPCMissionResult"
 - raw: "悔不当初"
   splits:
   - text: "悔不当初"
@@ -19541,19 +17316,9 @@
 - raw: "情势不妙"
   splits:
   - text: "情势不妙"
-- raw: "情势所逼;ChooseWujueyiReward;1"
-  splits:
-  - text: "情势所逼"
-  templates:
-  - template: "{0};ChooseWujueyiReward;1"
 - raw: "情报探子"
   splits:
   - text: "情报探子"
-- raw: "惭愧惭愧;ForceLittleFightResult;"
-  splits:
-  - text: "惭愧惭愧"
-  templates:
-  - template: "{0};ForceLittleFightResult;"
 - raw: "惭愧惭愧;GiveUpEventMission"
   splits:
   - text: "惭愧惭愧"
@@ -19626,11 +17391,6 @@
 - raw: "愿赌服输"
   splits:
   - text: "愿赌服输"
-- raw: "愿闻其详;StudySkillWithNPCSure;"
-  splits:
-  - text: "愿闻其详"
-  templates:
-  - template: "{0};StudySkillWithNPCSure;"
 - raw: "慕容星辰"
   splits:
   - text: "慕容星辰"
@@ -19682,16 +17442,6 @@
     text: "有本事来重新比过！"
   templates:
   - template: "{0}\n{1}"
-- raw: "慰问;ComfortNPCPrison;;;;;ComfortInPrisonTime"
-  splits:
-  - text: "慰问"
-  templates:
-  - template: "{0};ComfortNPCPrison;;;;;ComfortInPrisonTime"
-- raw: "慰问;ComfortNPCPrisonSure;;0/"
-  splits:
-  - text: "慰问"
-  templates:
-  - template: "{0};ComfortNPCPrisonSure;;0/"
 - raw: "慷慨放弃;HelpRobTreasureFightRefuse"
   splits:
   - text: "慷慨放弃"
@@ -19702,16 +17452,6 @@
   - text: "慷慨放弃"
   templates:
   - template: "{0};HelpStealBookFightRefuse"
-- raw: "慷慨相让;GetTreasureMapReward;2-5"
-  splits:
-  - text: "慷慨相让"
-  templates:
-  - template: "{0};GetTreasureMapReward;2-5"
-- raw: "慷慨相让;GetTreasureMapReward;2-6"
-  splits:
-  - text: "慷慨相让"
-  templates:
-  - template: "{0};GetTreasureMapReward;2-6"
 - raw: "慷慨相让，#PlayerName#真乃仁义之士。\n只是这样让你空跑一趟，我也有些过意不去。\n前几日恰好得了本秘籍，还请收下，作为我#TargetForceName#的谢礼好了。"
   splits:
   - text: "慷慨相让，#PlayerName#真乃仁义之士。"
@@ -19726,23 +17466,11 @@
   - text: "慷慨赠送"
   templates:
   - template: "{0};GiveNpcAskItem"
-- raw: "成为{0}门客;SurePlayerServantForcePlot;{1}"
-  splits:
-  - text: "成为"
-  - subIndex: 1
-    text: "门客"
-  templates:
-  - template: "{0}⟦0⟧{1};SurePlayerServantForcePlot;⟦1⟧"
 - raw: "成交;FinishEventMission"
   splits:
   - text: "成交"
   templates:
   - template: "{0};FinishEventMission"
-- raw: "成功了;FinishExploreMap;true"
-  splits:
-  - text: "成功了"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "成功率{0}%"
   splits:
   - text: "成功率"
@@ -20213,16 +17941,6 @@
 - raw: "我本有机会..."
   splits:
   - text: "我本有机会..."
-- raw: "我来助你！;PlotStartFight;HardFight-HelpDeliveryProtectorResult-1-"
-  splits:
-  - text: "我来助你！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-HelpDeliveryProtectorResult-1-"
-- raw: "我来相助！;PlotStartFight;HardFight-GuardRichFightResult-27"
-  splits:
-  - text: "我来相助！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-GuardRichFightResult-27"
 - raw: "我欲与#TargetInteractName#切磋武功，不知可否赏光？"
   splits:
   - text: "我欲与#TargetInteractName#切磋武功，不知可否赏光？"
@@ -20539,11 +18257,6 @@
   - text: "我还有事..."
   templates:
   - template: "{0};ChangeMeetNpcPlot"
-- raw: "我还有事;ChangePlot;1"
-  splits:
-  - text: "我还有事"
-  templates:
-  - template: "{0};ChangePlot;1"
 - raw: "我还有事;SpeInteractWithNPC"
   splits:
   - text: "我还有事"
@@ -20598,11 +18311,6 @@
   - text: "我这就去"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "我这就走;AreaBadWorkLeave;"
-  splits:
-  - text: "我这就走"
-  templates:
-  - template: "{0};AreaBadWorkLeave;"
 - raw: "我这就走;ProduceBuildingStealLeave"
   splits:
   - text: "我这就走"
@@ -20734,11 +18442,6 @@
 - raw: "所有门派"
   splits:
   - text: "所有门派"
-- raw: "所见略同;ReleaseHateWithNpcFameFinish;"
-  splits:
-  - text: "所见略同"
-  templates:
-  - template: "{0};ReleaseHateWithNpcFameFinish;"
 - raw: "扁桃"
   splits:
   - text: "扁桃"
@@ -20777,11 +18480,6 @@
   - text: "打开宝箱"
   templates:
   - template: "{0};FindBigTreasureFightSuccess"
-- raw: "打开宝箱;GetTreasureMapReward;0"
-  splits:
-  - text: "打开宝箱"
-  templates:
-  - template: "{0};GetTreasureMapReward;0"
 - raw: "打开木匣;FindLostBookSuccess"
   splits:
   - text: "打开木匣"
@@ -20806,11 +18504,6 @@
 - raw: "打扫"
   splits:
   - text: "打扫"
-- raw: "打扰了;GovernPlotStart;1"
-  splits:
-  - text: "打扰了"
-  templates:
-  - template: "{0};GovernPlotStart;1"
 - raw: "打扰了;HideInteractUI"
   splits:
   - text: "打扰了"
@@ -20819,11 +18512,6 @@
 - raw: "打杂"
   splits:
   - text: "打杂"
-- raw: "打杂;SimpleWork;"
-  splits:
-  - text: "打杂"
-  templates:
-  - template: "{0};SimpleWork;"
 - raw: "打磨武器，整备军械，方能将敌对细作一网打尽！"
   splits:
   - text: "打磨武器，整备军械，方能将敌对细作一网打尽！"
@@ -20859,11 +18547,6 @@
   - text: "扬长而去"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "扭头就跑;EscapeRandomEnemy;;;;Dodge/"
-  splits:
-  - text: "扭头就跑"
-  templates:
-  - template: "{0};EscapeRandomEnemy;;;;Dodge/"
 - raw: "扳指"
   splits:
   - text: "扳指"
@@ -20958,16 +18641,6 @@
 - raw: "承让承让"
   splits:
   - text: "承让承让"
-- raw: "承让承让;ChangePlayerMoneyFinish;"
-  splits:
-  - text: "承让承让"
-  templates:
-  - template: "{0};ChangePlayerMoneyFinish;"
-- raw: "承让承让;ForceLittleFightResult;"
-  splits:
-  - text: "承让承让"
-  templates:
-  - template: "{0};ForceLittleFightResult;"
 - raw: "承让承让;HideInteractUI"
   splits:
   - text: "承让承让"
@@ -20978,16 +18651,6 @@
   - text: "承让承让"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "承让承让;ReleaseHateWithNpcFameFinish;5"
-  splits:
-  - text: "承让承让"
-  templates:
-  - template: "{0};ReleaseHateWithNpcFameFinish;5"
-- raw: "承让承让;ReleaseHateWithPlayerFinish;5"
-  splits:
-  - text: "承让承让"
-  templates:
-  - template: "{0};ReleaseHateWithPlayerFinish;5"
 - raw: "承让承让;StudyFightWithGreatHeroFinal"
   splits:
   - text: "承让承让"
@@ -21057,16 +18720,6 @@
 - raw: "抄录"
   splits:
   - text: "抄录"
-- raw: "抄录功法;FindSpeMasterSteleEvent;book;;;{0}/{1}"
-  splits:
-  - text: "抄录功法"
-  templates:
-  - template: "{0};FindSpeMasterSteleEvent;book;;;⟦0⟧/⟦1⟧"
-- raw: "把地契拿来吧;BuyCityHouse;;0/"
-  splits:
-  - text: "把地契拿来吧"
-  templates:
-  - template: "{0};BuyCityHouse;;0/"
 - raw: "把身上细软交出来！若敢耍小心思，可别怪我刀下不留人"
   splits:
   - text: "把身上细软交出来！若敢耍小心思，可别怪我刀下不留人"
@@ -21079,11 +18732,6 @@
 - raw: "抓捕"
   splits:
   - text: "抓捕"
-- raw: "抓捕归案;FightInteractHero;DeathFight-CatchBadFameHeroResult--None~Hero"
-  splits:
-  - text: "抓捕归案"
-  templates:
-  - template: "{0};FightInteractHero;DeathFight-CatchBadFameHeroResult--None~Hero"
 - raw: "投案自首"
   splits:
   - text: "投案自首"
@@ -21117,27 +18765,9 @@
 - raw: "抢夺财物"
   splits:
   - text: "抢夺财物"
-- raw: "抢夺财物;DeathFightRobHero;;;♦抢夺对方一件物品\n♦根据物品价值增加恶名"
-  splits:
-  - text: "抢夺财物"
-  - subIndex: 1
-    text: "抢夺对方一件物品"
-  - subIndex: 2
-    text: "根据物品价值增加恶名"
-  templates:
-  - template: "{0};DeathFightRobHero;;;♦{1}\n♦{2}"
 - raw: "抢夺银两"
   splits:
   - text: "抢夺银两"
-- raw: "抢夺银两;DeathFightRobHeroMoney;;;♦抢夺对方约一半的银两\n♦根据抢夺数额增加恶名"
-  splits:
-  - text: "抢夺银两"
-  - subIndex: 1
-    text: "抢夺对方约一半的银两"
-  - subIndex: 2
-    text: "根据抢夺数额增加恶名"
-  templates:
-  - template: "{0};DeathFightRobHeroMoney;;;♦{1}\n♦{2}"
 - raw: "抢夺银两;RobBuildingShopMoney"
   splits:
   - text: "抢夺银两"
@@ -21215,64 +18845,23 @@
 - raw: "招募弟子"
   splits:
   - text: "招募弟子"
-- raw: "招募弟子;RecruitServantForceHero;{0};;;ForceLv/6"
-  splits:
-  - text: "招募弟子"
-  templates:
-  - template: "{0};RecruitServantForceHero;⟦0⟧;;;ForceLv/6"
-- raw: "招揽;AskHeroJoinForce;FurtherInteractWithNPC;;♦邀请对方加入你的门派;FavorDegree/80"
-  splits:
-  - text: "招揽"
-  - subIndex: 1
-    text: "邀请对方加入你的门派"
-  templates:
-  - template: "{0};AskHeroJoinForce;FurtherInteractWithNPC;;♦{1};FavorDegree/80"
-- raw: "招揽入派;FindSpeFollowerFinish;0"
-  splits:
-  - text: "招揽入派"
-  templates:
-  - template: "{0};FindSpeFollowerFinish;0"
-- raw: "招揽入派;RecruitRandomEnemy;{0};;♦将贼人招揽入派\n♦降低全门派好感和全弟子忠诚"
-  splits:
-  - text: "招揽入派"
-  - subIndex: 1
-    text: "将贼人招揽入派"
-  - subIndex: 2
-    text: "降低全门派好感和全弟子忠诚"
-  templates:
-  - template: "{0};RecruitRandomEnemy;⟦0⟧;;♦{1}\n♦{2}"
 - raw: "招架"
   splits:
   - text: "招架"
 - raw: "拜入"
   splits:
   - text: "拜入"
-- raw: "拜入{0};SurePlayerJoinForcePlot;{1}"
-  splits:
-  - text: "拜入"
-  templates:
-  - template: "{0}⟦0⟧;SurePlayerJoinForcePlot;⟦1⟧"
 - raw: "拜入了"
   splits:
   - text: "拜入了"
 - raw: "拜入门派"
   splits:
   - text: "拜入门派"
-- raw: "拜师;AskHeroToTeacher;;;;FavorDegree/70"
-  splits:
-  - text: "拜师"
-  templates:
-  - template: "{0};AskHeroToTeacher;;;;FavorDegree/70"
 - raw: "拜见师傅！;SureHeroToTeacher"
   splits:
   - text: "拜见师傅！"
   templates:
   - template: "{0};SureHeroToTeacher"
-- raw: "拜谢离去;FinishExploreMap;true"
-  splits:
-  - text: "拜谢离去"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "拜谢离去;HideInteractUI"
   splits:
   - text: "拜谢离去"
@@ -21319,15 +18908,6 @@
     text: "日"
   templates:
   - template: "{0}⟦0⟧{1}"
-- raw: "指点;ForceTeachNPC;;;♦指点弟子武功无好感要求\n♦每月最多三次;;ForceTeachTime"
-  splits:
-  - text: "指点"
-  - subIndex: 1
-    text: "指点弟子武功无好感要求"
-  - subIndex: 2
-    text: "每月最多三次"
-  templates:
-  - template: "{0};ForceTeachNPC;;;♦{1}\n♦{2};;ForceTeachTime"
 - raw: "指点;TeachStudyingNpc"
   splits:
   - text: "指点"
@@ -21375,11 +18955,6 @@
 - raw: "挑拨离间"
   splits:
   - text: "挑拨离间"
-- raw: "挑拨离间;ChangeFavorToOtherForce;1-{0};;;ForceLv/5"
-  splits:
-  - text: "挑拨离间"
-  templates:
-  - template: "{0};ChangeFavorToOtherForce;1-⟦0⟧;;;ForceLv/5"
 - raw: "挑选食材，逐步放入，这些工作还是能顺利完成的。"
   splits:
   - text: "挑选食材，逐步放入，这些工作还是能顺利完成的。"
@@ -21399,62 +18974,21 @@
   - text: "挥泪送别"
   templates:
   - template: "{0};DismissForceHeroPlotSure"
-- raw: "挽留;AskHeroStayTeam;;;♦延长入队时间30天\n♦{0};FavorDegree/{1}"
-  splits:
-  - text: "挽留"
-  - subIndex: 1
-    text: "延长入队时间30天"
-  templates:
-  - template: "{0};AskHeroStayTeam;;;♦{1}\n♦⟦0⟧;FavorDegree/⟦1⟧"
-- raw: "捉拿归案;CatchRandomEnemy;{0};;♦将贼人捉拿归案\n♦获取对应悬赏和官府功绩"
-  splits:
-  - text: "捉拿归案"
-  - subIndex: 1
-    text: "将贼人捉拿归案"
-  - subIndex: 2
-    text: "获取对应悬赏和官府功绩"
-  templates:
-  - template: "{0};CatchRandomEnemy;⟦0⟧;;♦{1}\n♦{2}"
 - raw: "捉拿归案;FinishEventMission"
   splits:
   - text: "捉拿归案"
   templates:
   - template: "{0};FinishEventMission"
-- raw: "捉拿归案;FinishExploreMap;true"
-  splits:
-  - text: "捉拿归案"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "捉拿归案;{0};1"
   splits:
   - text: "捉拿归案"
   templates:
   - template: "{0};⟦0⟧;1"
-- raw: "捐献;ManageForceMoneyPlot;0;;;ForceLv/1"
-  splits:
-  - text: "捐献"
-  templates:
-  - template: "{0};ManageForceMoneyPlot;0;;;ForceLv/1"
 - raw: "捐献银两;GiveMoneyToGovern"
   splits:
   - text: "捐献银两"
   templates:
   - template: "{0};GiveMoneyToGovern"
-- raw: "捐纳100官府功绩;GiveMoneyToGovernSure;1;0/2000"
-  splits:
-  - text: "捐纳100官府功绩"
-  templates:
-  - template: "{0};GiveMoneyToGovernSure;1;0/2000"
-- raw: "捐纳200官府功绩;GiveMoneyToGovernSure;2;0/4000"
-  splits:
-  - text: "捐纳200官府功绩"
-  templates:
-  - template: "{0};GiveMoneyToGovernSure;2;0/4000"
-- raw: "捐纳50官府功绩;GiveMoneyToGovernSure;0;0/1000"
-  splits:
-  - text: "捐纳50官府功绩"
-  templates:
-  - template: "{0};GiveMoneyToGovernSure;0;0/1000"
 - raw: "捕头"
   splits:
   - text: "捕头"
@@ -21552,15 +19086,6 @@
 - raw: "探索"
   splits:
   - text: "探索"
-- raw: "探索;ExploreResourcePointPlot;{0};;收集资源\n每月一次"
-  splits:
-  - text: "探索"
-  - subIndex: 1
-    text: "收集资源"
-  - subIndex: 2
-    text: "每月一次"
-  templates:
-  - template: "{0};ExploreResourcePointPlot;⟦0⟧;;{1}\n{2}"
 - raw: "探索_"
   splits:
   - text: "探索"
@@ -21612,16 +19137,6 @@
 - raw: "接下来，看看当今武林的局势......"
   splits:
   - text: "接下来，看看当今武林的局势......"
-- raw: "接受挑战;FightInteractHero;StudyFight-AcceptHeroChallengeResult"
-  splits:
-  - text: "接受挑战"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-AcceptHeroChallengeResult"
-- raw: "接受致歉;AcceptNpcReleaseHateFame;"
-  splits:
-  - text: "接受致歉"
-  templates:
-  - template: "{0};AcceptNpcReleaseHateFame;"
 - raw: "接受赔偿"
   splits:
   - text: "接受赔偿"
@@ -21662,19 +19177,9 @@
 - raw: "提升内功"
   splits:
   - text: "提升内功"
-- raw: "提升医术潜力;FinishHiddenDoctor;4"
-  splits:
-  - text: "提升医术潜力"
-  templates:
-  - template: "{0};FinishHiddenDoctor;4"
 - raw: "提升外功"
   splits:
   - text: "提升外功"
-- raw: "提升天赋;SpeMasterFightChoose;2"
-  splits:
-  - text: "提升天赋"
-  templates:
-  - template: "{0};SpeMasterFightChoose;2"
 - raw: "提升强化等级至+{6}\n{0}需要建筑等级 {1}级</color>\n{2}需要{5}技能 {3}</color>\n{4}"
   splits:
   - text: "提升强化等级至"
@@ -21691,37 +19196,12 @@
 - raw: "提升技艺"
   splits:
   - text: "提升技艺"
-- raw: "提升木植潜力;FinishHiddenCooker;4"
-  splits:
-  - text: "提升木植潜力"
-  templates:
-  - template: "{0};FinishHiddenCooker;4"
-- raw: "提升炼药潜力;FinishHiddenDoctor;3"
-  splits:
-  - text: "提升炼药潜力"
-  templates:
-  - template: "{0};FinishHiddenDoctor;3"
-- raw: "提升烹饪潜力;FinishHiddenCooker;3"
-  splits:
-  - text: "提升烹饪潜力"
-  templates:
-  - template: "{0};FinishHiddenCooker;3"
 - raw: "提升绝技"
   splits:
   - text: "提升绝技"
 - raw: "提升轻功"
   splits:
   - text: "提升轻功"
-- raw: "提升采伐潜力;FinishHiddenSmith;4"
-  splits:
-  - text: "提升采伐潜力"
-  templates:
-  - template: "{0};FinishHiddenSmith;4"
-- raw: "提升锻造潜力;FinishHiddenSmith;3"
-  splits:
-  - text: "提升锻造潜力"
-  templates:
-  - template: "{0};FinishHiddenSmith;3"
 - raw: "提升队友{0}战斗经验"
   splits:
   - text: "提升队友"
@@ -21729,11 +19209,6 @@
     text: "战斗经验"
   templates:
   - template: "{0}⟦0⟧{1}"
-- raw: "提取;ManageForceMoneyPlot;1;;;ForceLv/2"
-  splits:
-  - text: "提取"
-  templates:
-  - template: "{0};ManageForceMoneyPlot;1;;;ForceLv/2"
 - raw: "援军"
   splits:
   - text: "援军"
@@ -21747,16 +19222,6 @@
 - raw: "援军甲"
   splits:
   - text: "援军甲"
-- raw: "搜寻稀有材料;SearchExlporeMaterial;0"
-  splits:
-  - text: "搜寻稀有材料"
-  templates:
-  - template: "{0};SearchExlporeMaterial;0"
-- raw: "搜寻稀有材料;SearchExlporeMaterial;1"
-  splits:
-  - text: "搜寻稀有材料"
-  templates:
-  - template: "{0};SearchExlporeMaterial;1"
 - raw: "搜集{0}件{1}珍宝"
   splits:
   - text: "搜集"
@@ -21781,11 +19246,6 @@
 - raw: "搜集秘籍"
   splits:
   - text: "搜集秘籍"
-- raw: "携手归隐;PlotStartGameResult;9"
-  splits:
-  - text: "携手归隐"
-  templates:
-  - template: "{0};PlotStartGameResult;9"
 - raw: "摧毁时伤害周围\n生命-{0}% {1}+{2}"
   splits:
   - text: "摧毁时伤害周围"
@@ -21793,15 +19253,6 @@
     text: "生命"
   templates:
   - template: "{0}\n{1}-⟦0⟧% ⟦1⟧+⟦2⟧"
-- raw: "撕毁盟约;StopAllyOtherForce;;;门派好感-20\n休战3个月"
-  splits:
-  - text: "撕毁盟约"
-  - subIndex: 1
-    text: "门派好感"
-  - subIndex: 2
-    text: "休战3个月"
-  templates:
-  - template: "{0};StopAllyOtherForce;;;{1}-20\n{2}"
 - raw: "撞到大爷手里，算你倒霉！今天你是想吃“板刀面”，还是吃“馄饨”？"
   splits:
   - text: "撞到大爷手里，算你倒霉！今天你是想吃“板刀面”，还是吃“馄饨”？"
@@ -21836,11 +19287,6 @@
 - raw: "收"
   splits:
   - text: "收"
-- raw: "收下奖品;FinishLanternFestivalMatchReward;"
-  splits:
-  - text: "收下奖品"
-  templates:
-  - template: "{0};FinishLanternFestivalMatchReward;"
 - raw: "收下定情信物;FinishHeroToLover"
   splits:
   - text: "收下定情信物"
@@ -21851,31 +19297,11 @@
   - text: "收下红包"
   templates:
   - template: "{0};ChangeNextPlot"
-- raw: "收下酬劳;FinishFightForSpeItem;win-{0}-{1}-0"
-  splits:
-  - text: "收下酬劳"
-  templates:
-  - template: "{0};FinishFightForSpeItem;win-⟦0⟧-⟦1⟧-0"
 - raw: "收入囊中;GetTreasureMapMissionPlot"
   splits:
   - text: "收入囊中"
   templates:
   - template: "{0};GetTreasureMapMissionPlot"
-- raw: "收取罚金;StopNpcStealFightFinish;1"
-  splits:
-  - text: "收取罚金"
-  templates:
-  - template: "{0};StopNpcStealFightFinish;1"
-- raw: "收取赠礼;FindSpeFollowerFinish;1"
-  splits:
-  - text: "收取赠礼"
-  templates:
-  - template: "{0};FindSpeFollowerFinish;1"
-- raw: "收徒;AskHeroToStudent;;;;FavorDegree/80"
-  splits:
-  - text: "收徒"
-  templates:
-  - template: "{0};AskHeroToStudent;;;;FavorDegree/80"
 - raw: "收获颇丰，真是不虚此行"
   splits:
   - text: "收获颇丰，真是不虚此行"
@@ -21898,16 +19324,6 @@
     text: "未收藏"
   templates:
   - template: "{0}-{1}"
-- raw: "收集普通资源;CollectExploreResource;0"
-  splits:
-  - text: "收集普通资源"
-  templates:
-  - template: "{0};CollectExploreResource;0"
-- raw: "收集普通资源;CollectExploreResource;1"
-  splits:
-  - text: "收集普通资源"
-  templates:
-  - template: "{0};CollectExploreResource;1"
 - raw: "改装"
   splits:
   - text: "改装"
@@ -21982,31 +19398,11 @@
   - text: "放你一马"
   templates:
   - template: "{0};DeathFightHeroFinish"
-- raw: "放你一马;EnterAreaStartFightHaterSpeWinChoice;1"
-  splits:
-  - text: "放你一马"
-  templates:
-  - template: "{0};EnterAreaStartFightHaterSpeWinChoice;1"
-- raw: "放你一马;KillNpcChoice;2"
-  splits:
-  - text: "放你一马"
-  templates:
-  - template: "{0};KillNpcChoice;2"
 - raw: "放你一马;NpcAttackPlayerResultRelease"
   splits:
   - text: "放你一马"
   templates:
   - template: "{0};NpcAttackPlayerResultRelease"
-- raw: "放你一马;RevengeNpcChoice;2"
-  splits:
-  - text: "放你一马"
-  templates:
-  - template: "{0};RevengeNpcChoice;2"
-- raw: "放你一马;StopNpcStealFightFinish;0"
-  splits:
-  - text: "放你一马"
-  templates:
-  - template: "{0};StopNpcStealFightFinish;0"
 - raw: "放弃委托;GiveUpEventMission"
   splits:
   - text: "放弃委托"
@@ -22018,11 +19414,6 @@
 - raw: "敌对"
   splits:
   - text: "敌对"
-- raw: "敌对...;ChangePlot;2"
-  splits:
-  - text: "敌对..."
-  templates:
-  - template: "{0};ChangePlot;2"
 - raw: "敌方"
   splits:
   - text: "敌方"
@@ -22038,11 +19429,6 @@
 - raw: "教化"
   splits:
   - text: "教化"
-- raw: "教化;EnlightForNpcSpe;;;;;EnlightTime"
-  splits:
-  - text: "教化"
-  templates:
-  - template: "{0};EnlightForNpcSpe;;;;;EnlightTime"
 - raw: "教头"
   splits:
   - text: "教头"
@@ -22063,16 +19449,6 @@
 - raw: "散席"
   splits:
   - text: "散席"
-- raw: "敬酒不吃吃罚酒;PlotStartFight;HardFight-RobDeliveryProtectorResult-0-"
-  splits:
-  - text: "敬酒不吃吃罚酒"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-RobDeliveryProtectorResult-0-"
-- raw: "敬酒不吃吃罚酒;StartSpeFight;-1"
-  splits:
-  - text: "敬酒不吃吃罚酒"
-  templates:
-  - template: "{0};StartSpeFight;-1"
 - raw: "敬酒不吃吃罚酒！"
   splits:
   - text: "敬酒不吃吃罚酒！"
@@ -22094,21 +19470,6 @@
 - raw: "斗智"
   splits:
   - text: "斗智"
-- raw: "斗胆向两位一齐讨教;HelpInteractHeroFight;2-StudyFight-HelpInteractHeroFightResult"
-  splits:
-  - text: "斗胆向两位一齐讨教"
-  templates:
-  - template: "{0};HelpInteractHeroFight;2-StudyFight-HelpInteractHeroFightResult"
-- raw: "斗胆挑战;ChooseJiangWanLeaveForce;0"
-  splits:
-  - text: "斗胆挑战"
-  templates:
-  - template: "{0};ChooseJiangWanLeaveForce;0"
-- raw: "斗胆挑战！;UpgradeHeroForceLvFightStart;"
-  splits:
-  - text: "斗胆挑战！"
-  templates:
-  - template: "{0};UpgradeHeroForceLvFightStart;"
 - raw: "斗茶"
   splits:
   - text: "斗茶"
@@ -22130,33 +19491,6 @@
 - raw: "斧头帮"
   splits:
   - text: "斧头帮"
-- raw: "斩草除根;FinishExploreMap;true"
-  splits:
-  - text: "斩草除根"
-  templates:
-  - template: "{0};FinishExploreMap;true"
-- raw: "断义;AskHeroCancelBrother;;;♦与对方断绝结义关系\n♦降低100点好感\n♦固定增加20恶名"
-  splits:
-  - text: "断义"
-  - subIndex: 1
-    text: "与对方断绝结义关系"
-  - subIndex: 2
-    text: "降低100点好感"
-  - subIndex: 3
-    text: "固定增加20恶名"
-  templates:
-  - template: "{0};AskHeroCancelBrother;;;♦{1}\n♦{2}\n♦{3}"
-- raw: "断交;AskHeroCancelFriend;;;♦与对方断绝好友关系\n♦降低50点好感\n♦固定增加10恶名"
-  splits:
-  - text: "断交"
-  - subIndex: 1
-    text: "与对方断绝好友关系"
-  - subIndex: 2
-    text: "降低50点好感"
-  - subIndex: 3
-    text: "固定增加10恶名"
-  templates:
-  - template: "{0};AskHeroCancelFriend;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "断绝了亲属关系"
   splits:
   - text: "断绝了亲属关系"
@@ -22192,61 +19526,11 @@
 - raw: "方形"
   splits:
   - text: "方形"
-- raw: "施以惩戒;EnterAreaStartFightHaterSpeWinChoice;0"
-  splits:
-  - text: "施以惩戒"
-  templates:
-  - template: "{0};EnterAreaStartFightHaterSpeWinChoice;0"
 - raw: "施以惩戒;NpcAttackPlayerResultHurt"
   splits:
   - text: "施以惩戒"
   templates:
   - template: "{0};NpcAttackPlayerResultHurt"
-- raw: "施以重罚;RevengeNpcChoice;0"
-  splits:
-  - text: "施以重罚"
-  templates:
-  - template: "{0};RevengeNpcChoice;0"
-- raw: "施展内功抵御毒瘴;HelpRandomNpcPickPoison;1-0;;;Internal/"
-  splits:
-  - text: "施展内功抵御毒瘴"
-  templates:
-  - template: "{0};HelpRandomNpcPickPoison;1-0;;;Internal/"
-- raw: "施展绝技挖掘遗迹;HelpRandomNpcPickTreasure;1-0;;;Unique/"
-  splits:
-  - text: "施展绝技挖掘遗迹"
-  templates:
-  - template: "{0};HelpRandomNpcPickTreasure;1-0;;;Unique/"
-- raw: "施展绝技震碎巨石;HelpRandomNpcPickMaterial;1-0;;;Unique/"
-  splits:
-  - text: "施展绝技震碎巨石"
-  templates:
-  - template: "{0};HelpRandomNpcPickMaterial;1-0;;;Unique/"
-- raw: "施展轻功攀登绝壁;HelpRandomNpcPickFood;1-0;;;Dodge/"
-  splits:
-  - text: "施展轻功攀登绝壁"
-  templates:
-  - template: "{0};HelpRandomNpcPickFood;1-0;;;Dodge/"
-- raw: "施展轻功攀登绝壁;HelpRandomNpcPickPlant;1-0;;;Dodge/"
-  splits:
-  - text: "施展轻功攀登绝壁"
-  templates:
-  - template: "{0};HelpRandomNpcPickPlant;1-0;;;Dodge/"
-- raw: "施舍银两;GiveNpcBeggerMoney;0;0/"
-  splits:
-  - text: "施舍银两"
-  templates:
-  - template: "{0};GiveNpcBeggerMoney;0;0/"
-- raw: "施舍银两;GiveNpcBeggerMoney;1;0/"
-  splits:
-  - text: "施舍银两"
-  templates:
-  - template: "{0};GiveNpcBeggerMoney;1;0/"
-- raw: "施舍银两;GiveNpcBeggerMoney;2;0/"
-  splits:
-  - text: "施舍银两"
-  templates:
-  - template: "{0};GiveNpcBeggerMoney;2;0/"
 - raw: "旁证"
   splits:
   - text: "旁证"
@@ -22297,11 +19581,6 @@
 - raw: "无序"
   splits:
   - text: "无序"
-- raw: "无意争夺，你们请便;FinishFightForSpeItem;watch--"
-  splits:
-  - text: "无意争夺，你们请便"
-  templates:
-  - template: "{0};FinishFightForSpeItem;watch--"
 - raw: "无所事事"
   splits:
   - text: "无所事事"
@@ -22348,11 +19627,6 @@
 - raw: "无视普通卡牌并造成15伤害"
   splits:
   - text: "无视普通卡牌并造成15伤害"
-- raw: "无话可说;FinishExploreMap;false"
-  splits:
-  - text: "无话可说"
-  templates:
-  - template: "{0};FinishExploreMap;false"
 - raw: "无量天尊，施主积德行善，广结仙缘，日后必定大有成就。"
   splits:
   - text: "无量天尊，施主积德行善，广结仙缘，日后必定大有成就。"
@@ -22362,23 +19636,6 @@
 - raw: "无门派时不可进行招募"
   splits:
   - text: "无门派时不可进行招募"
-- raw: "无需多此一举;FinishReplaceOtherForceSendGift;3;;与所有门派停战30天"
-  splits:
-  - text: "无需多此一举"
-  - subIndex: 1
-    text: "与所有门派停战30天"
-  templates:
-  - template: "{0};FinishReplaceOtherForceSendGift;3;;{1}"
-- raw: "无需援军;SetReplaceOtherForceGovernSuppotLv;0"
-  splits:
-  - text: "无需援军"
-  templates:
-  - template: "{0};SetReplaceOtherForceGovernSuppotLv;0"
-- raw: "无需援军;SetReplaceOtherForceRecruitSuppotLv;0"
-  splits:
-  - text: "无需援军"
-  templates:
-  - template: "{0};SetReplaceOtherForceRecruitSuppotLv;0"
 - raw: "无需治疗"
   splits:
   - text: "无需治疗"
@@ -22528,11 +19785,6 @@
   - text: "早该如此"
   templates:
   - template: "{0};FinishEventMission"
-- raw: "早该如此;FinishExploreMap;true"
-  splits:
-  - text: "早该如此"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "旱"
   splits:
   - text: "旱"
@@ -22767,16 +20019,6 @@
   - text: "是我唐突了"
   templates:
   - template: "{0};ChangeMeetNpcPlot"
-- raw: "是我唐突了;ChangePlot;0"
-  splits:
-  - text: "是我唐突了"
-  templates:
-  - template: "{0};ChangePlot;0"
-- raw: "是我唐突了;ChangePlot;1"
-  splits:
-  - text: "是我唐突了"
-  templates:
-  - template: "{0};ChangePlot;1"
 - raw: "是我唐突了;ForceInteractWithNPC"
   splits:
   - text: "是我唐突了"
@@ -22817,11 +20059,6 @@
   - text: "是我疏忽了"
   templates:
   - template: "{0};"
-- raw: "是我疏忽了;ChangePlot;0"
-  splits:
-  - text: "是我疏忽了"
-  templates:
-  - template: "{0};ChangePlot;0"
 - raw: "是我疏忽了;ChooseStudyLivingSkillWithNPC"
   splits:
   - text: "是我疏忽了"
@@ -22862,11 +20099,6 @@
   - text: "是我疏忽了"
   templates:
   - template: "{0};ReleaseHateWithNpc"
-- raw: "是我走眼了;ChangePlot;1"
-  splits:
-  - text: "是我走眼了"
-  templates:
-  - template: "{0};ChangePlot;1"
 - raw: "是我走眼了;SpeInteractWithNPC"
   splits:
   - text: "是我走眼了"
@@ -22920,16 +20152,6 @@
   - text: "晋升职位"
   templates:
   - template: "{0};UpgradeHeroForceLvPlot"
-- raw: "晓之以情;FinishReleaseHate;;;;FavorDegree/50"
-  splits:
-  - text: "晓之以情"
-  templates:
-  - template: "{0};FinishReleaseHate;;;;FavorDegree/50"
-- raw: "晓之以情;StopNpcReduceAreaState;2;;;FavorDegree/50"
-  splits:
-  - text: "晓之以情"
-  templates:
-  - template: "{0};StopNpcReduceAreaState;2;;;FavorDegree/50"
 - raw: "普通"
   splits:
   - text: "普通"
@@ -22942,11 +20164,6 @@
 - raw: "智力"
   splits:
   - text: "智力"
-- raw: "暂不招新;NewAskJoinResult;1"
-  splits:
-  - text: "暂不招新"
-  templates:
-  - template: "{0};NewAskJoinResult;1"
 - raw: "暂且作罢;HideInteractUI"
   splits:
   - text: "暂且作罢"
@@ -22962,35 +20179,15 @@
   - text: "暗下毒手"
   templates:
   - template: "{0};PoisonInteractHeroSure"
-- raw: "暗中下毒;StartKillNPCFight;2;;;Poison/"
-  splits:
-  - text: "暗中下毒"
-  templates:
-  - template: "{0};StartKillNPCFight;2;;;Poison/"
 - raw: "暗中破坏"
   splits:
   - text: "暗中破坏"
-- raw: "暗中逃跑;PrepareBreakPrison;3;;;GuardFavor/"
-  splits:
-  - text: "暗中逃跑"
-  templates:
-  - template: "{0};PrepareBreakPrison;3;;;GuardFavor/"
 - raw: "暗记招式"
   splits:
   - text: "暗记招式"
-- raw: "暗记招式;StealNPCSkillSure;1.5-"
-  splits:
-  - text: "暗记招式"
-  templates:
-  - template: "{0};StealNPCSkillSure;1.5-"
 - raw: "暴击"
   splits:
   - text: "暴击"
-- raw: "暴力破解;OpenLockChest;1"
-  splits:
-  - text: "暴力破解"
-  templates:
-  - template: "{0};OpenLockChest;1"
 - raw: "暴民"
   splits:
   - text: "暴民"
@@ -23046,16 +20243,6 @@
   - text: "替换天赋"
   templates:
   - template: "{0}:"
-- raw: "替民众补交一半税赋;HelpMobGiveMoney;0;0/"
-  splits:
-  - text: "替民众补交一半税赋"
-  templates:
-  - template: "{0};HelpMobGiveMoney;0;0/"
-- raw: "替民众补交全部税赋;HelpMobGiveMoney;1;0/"
-  splits:
-  - text: "替民众补交全部税赋"
-  templates:
-  - template: "{0};HelpMobGiveMoney;1;0/"
 - raw: "最低要求"
   splits:
   - text: "最低要求"
@@ -23766,11 +20953,6 @@
 - raw: "来得正好，我早想与#PlayerName#你交流一二"
   splits:
   - text: "来得正好，我早想与#PlayerName#你交流一二"
-- raw: "来战;PlotStartFight;HardFight-AttackMartialClubResult-19-"
-  splits:
-  - text: "来战"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-AttackMartialClubResult-19-"
 - raw: "来战！;EnterAreaStartFightBounty"
   splits:
   - text: "来战！"
@@ -23786,11 +20968,6 @@
   - text: "来战！"
   templates:
   - template: "{0};EnterAreaStartFightHater"
-- raw: "来战！;PlotStartFight;HardFight-ExploreRandomFightResult--{0}-{1}"
-  splits:
-  - text: "来战！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-ExploreRandomFightResult--⟦0⟧-⟦1⟧"
 - raw: "来来来！把酒斟上！"
   splits:
   - text: "来来来！把酒斟上！"
@@ -23894,11 +21071,6 @@
 - raw: "架势系统"
   splits:
   - text: "架势系统"
-- raw: "查看功绩;StartFightResultContribution;"
-  splits:
-  - text: "查看功绩"
-  templates:
-  - template: "{0};StartFightResultContribution;"
 - raw: "查看名录"
   splits:
   - text: "查看名录"
@@ -24050,11 +21222,6 @@
     text: "这样好了，若#SourceInteractName#能胜过我一招半式，我便乖乖将欠款奉上！"
   templates:
   - template: "{0}\n{1}\n{2}"
-- raw: "欢迎之至;NewAskJoinResult;0"
-  splits:
-  - text: "欢迎之至"
-  templates:
-  - template: "{0};NewAskJoinResult;0"
 - raw: "欢迎之至;SureAskHeroJoinForce"
   splits:
   - text: "欢迎之至"
@@ -24066,56 +21233,11 @@
 - raw: "欣欣向荣，如日方生，势力发展颇为迅猛"
   splits:
   - text: "欣欣向荣，如日方生，势力发展颇为迅猛"
-- raw: "欣然同意;AcceptNpcGift;"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};AcceptNpcGift;"
-- raw: "欣然同意;AcceptNpcGift;0-"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};AcceptNpcGift;0-"
-- raw: "欣然同意;AcceptNpcGift;1"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};AcceptNpcGift;1"
-- raw: "欣然同意;ChatInteractHero;ChatWithNPCResult"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};ChatInteractHero;ChatWithNPCResult"
-- raw: "欣然同意;DrinkInteractHero;DrinkWithNPCResult-NPCInvite"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};DrinkInteractHero;DrinkWithNPCResult-NPCInvite"
-- raw: "欣然同意;FightInteractHero;StudyFight-StudyFightInteractHeroResult----Arena"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-StudyFightInteractHeroResult----Arena"
-- raw: "欣然同意;GambleInteractHero;GambleWithNPCResult"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};GambleInteractHero;GambleWithNPCResult"
-- raw: "欣然同意;GiveXinYanMissionEquipMoney;1"
-  splits:
-  - text: "欣然同意"
-  templates:
-  - template: "{0};GiveXinYanMissionEquipMoney;1"
 - raw: "欣然同意;IdentifyInteractHero"
   splits:
   - text: "欣然同意"
   templates:
   - template: "{0};IdentifyInteractHero"
-- raw: "欣然收下;ChooseDoctorResult;1-"
-  splits:
-  - text: "欣然收下"
-  templates:
-  - template: "{0};ChooseDoctorResult;1-"
 - raw: "欣然收下;QiXiFestivalGiftBack"
   splits:
   - text: "欣然收下"
@@ -24189,11 +21311,6 @@
   - text: "正有此意"
   templates:
   - template: "{0};ExchangeBookSure"
-- raw: "正有此意;SureReduceHeroLoyal;2;;;FavorDegree/50"
-  splits:
-  - text: "正有此意"
-  templates:
-  - template: "{0};SureReduceHeroLoyal;2;;;FavorDegree/50"
 - raw: "正有此意！此战若我方能击败贵派大部精锐，\n按照江湖规矩便可取代#TargetForceName#，在此地开宗立派。\n还望#TargetInteractName#言而有信，莫要临阵反悔！"
   splits:
   - text: "正有此意！此战若我方能击败贵派大部精锐，"
@@ -24203,11 +21320,6 @@
     text: "还望#TargetInteractName#言而有信，莫要临阵反悔！"
   templates:
   - template: "{0}\n{1}\n{2}"
-- raw: "正面出手;StartKillNPCFight;0"
-  splits:
-  - text: "正面出手"
-  templates:
-  - template: "{0};StartKillNPCFight;0"
 - raw: "此...此话当真？！\n#PlayerName#真要将往日情谊弃之不顾，就此与我断绝好友关系？"
   splits:
   - text: "此...此话当真？！"
@@ -24300,11 +21412,6 @@
 - raw: "此人身上并无悬赏，何来抓捕一说？"
   splits:
   - text: "此人身上并无悬赏，何来抓捕一说？"
-- raw: "此仇必报;ForceLittleFightResult;"
-  splits:
-  - text: "此仇必报"
-  templates:
-  - template: "{0};ForceLittleFightResult;"
 - raw: "此价钱虽说不便宜，倒也还算公道。\n便依#PlayerName#所言成交，在此谢过了！"
   splits:
   - text: "此价钱虽说不便宜，倒也还算公道。"
@@ -24787,11 +21894,6 @@
 - raw: "武者"
   splits:
   - text: "武者"
-- raw: "武艺劝说;StopNPCWantLeaveByFight;;;;FavorDegree/40"
-  splits:
-  - text: "武艺劝说"
-  templates:
-  - template: "{0};StopNPCWantLeaveByFight;;;;FavorDegree/40"
 - raw: "武艺表演;StartCoachPlot"
   splits:
   - text: "武艺表演"
@@ -25119,56 +22221,6 @@
 - raw: "永久"
   splits:
   - text: "永久"
-- raw: "求医;RandomNpcCureWound;;0/"
-  splits:
-  - text: "求医"
-  templates:
-  - template: "{0};RandomNpcCureWound;;0/"
-- raw: "求取材料;FinishHiddenSmith;2"
-  splits:
-  - text: "求取材料"
-  templates:
-  - template: "{0};FinishHiddenSmith;2"
-- raw: "求取灵药;FinishHiddenDoctor;1"
-  splits:
-  - text: "求取灵药"
-  templates:
-  - template: "{0};FinishHiddenDoctor;1"
-- raw: "求取物品;SpeMasterFightChoose;0"
-  splits:
-  - text: "求取物品"
-  templates:
-  - template: "{0};SpeMasterFightChoose;0"
-- raw: "求取美食;FinishHiddenCooker;1"
-  splits:
-  - text: "求取美食"
-  templates:
-  - template: "{0};FinishHiddenCooker;1"
-- raw: "求取药引;FinishHiddenDoctor;2"
-  splits:
-  - text: "求取药引"
-  templates:
-  - template: "{0};FinishHiddenDoctor;2"
-- raw: "求取装备;FinishHiddenSmith;1"
-  splits:
-  - text: "求取装备"
-  templates:
-  - template: "{0};FinishHiddenSmith;1"
-- raw: "求取陨铁;FinishHiddenSmith;5"
-  splits:
-  - text: "求取陨铁"
-  templates:
-  - template: "{0};FinishHiddenSmith;5"
-- raw: "求取食材;FinishHiddenCooker;2"
-  splits:
-  - text: "求取食材"
-  templates:
-  - template: "{0};FinishHiddenCooker;2"
-- raw: "求情说理;DebateRandomEnemy;;;;Speech/"
-  splits:
-  - text: "求情说理"
-  templates:
-  - template: "{0};DebateRandomEnemy;;;;Speech/"
 - raw: "求死之人，神仙也难救"
   splits:
   - text: "求死之人，神仙也难救"
@@ -25236,11 +22288,6 @@
 - raw: "江湖翻沸壮士死"
   splits:
   - text: "江湖翻沸壮士死"
-- raw: "江湖进贡;GiveTreasureToGovernChoose;1"
-  splits:
-  - text: "江湖进贡"
-  templates:
-  - template: "{0};GiveTreasureToGovernChoose;1"
 - raw: "江湖险恶;DeathFightKillHeroFinish"
   splits:
   - text: "江湖险恶"
@@ -25528,40 +22575,18 @@
   - text: "没错！"
   templates:
   - template: "{0};AttackMartialClubStart"
-- raw: "没错，只能得罪二位了！;StartFightForSpeItemFight;2-DeathFight-FightForSpeItemResult-"
-  splits:
-  - text: "没错，只能得罪二位了！"
-  templates:
-  - template: "{0};StartFightForSpeItemFight;2-DeathFight-FightForSpeItemResult-"
 - raw: "治安"
   splits:
   - text: "治安"
 - raw: "治愈"
   splits:
   - text: "治愈"
-- raw: "治愈;SpeCureStart;;0/"
-  splits:
-  - text: "治愈"
-  templates:
-  - template: "{0};SpeCureStart;;0/"
 - raw: "治疗"
   splits:
   - text: "治疗"
 - raw: "治疗伤势"
   splits:
   - text: "治疗伤势"
-- raw: "治疗伤势;BuyPrisonGuard;1;0/{0};♦治疗全伤势10点;GuardFavor/{1}"
-  splits:
-  - text: "治疗伤势"
-  - subIndex: 1
-    text: "治疗全伤势10点"
-  templates:
-  - template: "{0};BuyPrisonGuard;1;0/⟦0⟧;♦{1};GuardFavor/⟦1⟧"
-- raw: "治疗伤势;FinishHiddenDoctor;0"
-  splits:
-  - text: "治疗伤势"
-  templates:
-  - template: "{0};FinishHiddenDoctor;0"
 - raw: "治疗加成"
   splits:
   - text: "治疗加成"
@@ -25602,21 +22627,6 @@
   - text: "注册结果"
   templates:
   - template: "{0}:"
-- raw: "泰岳大典;PlotStartGameResult;7"
-  splits:
-  - text: "泰岳大典"
-  templates:
-  - template: "{0};PlotStartGameResult;7"
-- raw: "洗耳恭听;StudyLivingSkillWithNPCSure;"
-  splits:
-  - text: "洗耳恭听"
-  templates:
-  - template: "{0};StudyLivingSkillWithNPCSure;"
-- raw: "洗耳恭听;StudyMaxLivingSkillWithNPCSure;"
-  splits:
-  - text: "洗耳恭听"
-  templates:
-  - template: "{0};StudyMaxLivingSkillWithNPCSure;"
 - raw: "洛神赋图"
   splits:
   - text: "洛神赋图"
@@ -25814,11 +22824,6 @@
   - text: "溜之大吉"
   templates:
   - template: "{0};DeathFightHeroFinish"
-- raw: "溜之大吉;FinishFightForSpeItem;lose-{0}-{1}"
-  splits:
-  - text: "溜之大吉"
-  templates:
-  - template: "{0};FinishFightForSpeItem;lose-⟦0⟧-⟦1⟧"
 - raw: "溜之大吉;FinishJiangWanLeaveForce"
   splits:
   - text: "溜之大吉"
@@ -25858,21 +22863,11 @@
 - raw: "满堂花醉三千客，一剑霜寒十四州"
   splits:
   - text: "满堂花醉三千客，一剑霜寒十四州"
-- raw: "满意离去;FinishExploreMap;true"
-  splits:
-  - text: "满意离去"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "满意离去;HideInteractUI"
   splits:
   - text: "满意离去"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "满载而归;FinishExploreMap;true"
-  splits:
-  - text: "满载而归"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "演武争霸;StudyFightWithGreatHero"
   splits:
   - text: "演武争霸"
@@ -25906,27 +22901,12 @@
 - raw: "潜入库房"
   splits:
   - text: "潜入库房"
-- raw: "潜入库房;StealBuildingShopStart;;;;Dodge/"
-  splits:
-  - text: "潜入库房"
-  templates:
-  - template: "{0};StealBuildingShopStart;;;;Dodge/"
 - raw: "潜入藏经阁"
   splits:
   - text: "潜入藏经阁"
 - raw: "潜力"
   splits:
   - text: "潜力"
-- raw: "潜力;StudyMaxLivingSkillWithNPCChoosen;"
-  splits:
-  - text: "潜力"
-  templates:
-  - template: "{0};StudyMaxLivingSkillWithNPCChoosen;"
-- raw: "潜力;TeachMaxLivingSkillWithNPCChoosen;"
-  splits:
-  - text: "潜力"
-  templates:
-  - template: "{0};TeachMaxLivingSkillWithNPCChoosen;"
 - raw: "激活"
   splits:
   - text: "激活"
@@ -26006,11 +22986,6 @@
 - raw: "烹饪"
   splits:
   - text: "烹饪"
-- raw: "照单全收;GetTreasureMapReward;0"
-  splits:
-  - text: "照单全收"
-  templates:
-  - template: "{0};GetTreasureMapReward;0"
 - raw: "照海"
   splits:
   - text: "照海"
@@ -26072,44 +23047,9 @@
 - raw: "物品"
   splits:
   - text: "物品"
-- raw: "物归原主;ChaseRuningThiefFinish;0"
-  splits:
-  - text: "物归原主"
-  templates:
-  - template: "{0};ChaseRuningThiefFinish;0"
 - raw: "物有所值，算是捡了个便宜"
   splits:
   - text: "物有所值，算是捡了个便宜"
-- raw: "物色优良人手;StartRecruitHero;1-Hire-1;0/"
-  splits:
-  - text: "物色优良人手"
-  templates:
-  - template: "{0};StartRecruitHero;1-Hire-1;0/"
-- raw: "物色优良人选;StartRecruitHero;5-Normal-1;0/"
-  splits:
-  - text: "物色优良人选"
-  templates:
-  - template: "{0};StartRecruitHero;5-Normal-1;0/"
-- raw: "物色普通人手;StartRecruitHero;1-Hire-0"
-  splits:
-  - text: "物色普通人手"
-  templates:
-  - template: "{0};StartRecruitHero;1-Hire-0"
-- raw: "物色普通人选;StartRecruitHero;5-Normal-0"
-  splits:
-  - text: "物色普通人选"
-  templates:
-  - template: "{0};StartRecruitHero;5-Normal-0"
-- raw: "物色顶尖人手;StartRecruitHero;1-Hire-2;0/"
-  splits:
-  - text: "物色顶尖人手"
-  templates:
-  - template: "{0};StartRecruitHero;1-Hire-2;0/"
-- raw: "物色顶尖人选;StartRecruitHero;5-Normal-2;0/"
-  splits:
-  - text: "物色顶尖人选"
-  templates:
-  - template: "{0};StartRecruitHero;5-Normal-2;0/"
 - raw: "牲酒赛秋社，箫鼓迎新婚，\n今天是#SourceInteractName#和{0}大喜的日子，不好好热闹一番怎么行？\n你看，我还带了这件#PlotInteractItemName#作为新婚之礼，不成敬意，不成敬意！"
   splits:
   - text: "牲酒赛秋社，箫鼓迎新婚，"
@@ -26148,16 +23088,6 @@
 - raw: "特殊角色"
   splits:
   - text: "特殊角色"
-- raw: "牺牲声望;ClearBadFame;;-1/"
-  splits:
-  - text: "牺牲声望"
-  templates:
-  - template: "{0};ClearBadFame;;-1/"
-- raw: "牺牲声望;GovernmentClearBadFame;1"
-  splits:
-  - text: "牺牲声望"
-  templates:
-  - template: "{0};GovernmentClearBadFame;1"
 - raw: "犀角杯"
   splits:
   - text: "犀角杯"
@@ -26170,11 +23100,6 @@
 - raw: "狄坤"
   splits:
   - text: "狄坤"
-- raw: "狗官受死！;PlotStartFight;HardFight-FinishCatchBadOfficial-8-"
-  splits:
-  - text: "狗官受死！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-FinishCatchBadOfficial-8-"
 - raw: "狗官受死！;StartCatchBadFamePlayerFight"
   splits:
   - text: "狗官受死！"
@@ -26187,32 +23112,17 @@
     text: "好汉不吃眼前亏，告辞！"
   templates:
   - template: "{0}\n{1}"
-- raw: "狡兔三窟;FinishExploreMap;true"
-  splits:
-  - text: "狡兔三窟"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "独吞宝藏;StartTreasureMapFightPlot"
   splits:
   - text: "独吞宝藏"
   templates:
   - template: "{0};StartTreasureMapFightPlot"
-- raw: "独吞财宝;FinishExploreBigRobberCampRobNpc;"
-  splits:
-  - text: "独吞财宝"
-  templates:
-  - template: "{0};FinishExploreBigRobberCampRobNpc;"
 - raw: "独孤剑"
   splits:
   - text: "独孤剑"
 - raw: "独臂刀"
   splits:
   - text: "独臂刀"
-- raw: "狮子大开口;ChooseDoctorResult;2-"
-  splits:
-  - text: "狮子大开口"
-  templates:
-  - template: "{0};ChooseDoctorResult;2-"
 - raw: "狱卒"
   splits:
   - text: "狱卒"
@@ -26248,11 +23158,6 @@
   - text: "献上银两"
   templates:
   - template: "{0};PlayerLoseFightMoney"
-- raw: "献上银两;PlayerLoseFightMoneySure;"
-  splits:
-  - text: "献上银两"
-  templates:
-  - template: "{0};PlayerLoseFightMoneySure;"
 - raw: "玄冰"
   splits:
   - text: "玄冰"
@@ -26411,19 +23316,9 @@
   - text: "珍宝嘉奖"
   templates:
   - template: "{0};RewardForceHeroPlotTreasure"
-- raw: "珍宝赠礼;AddFavorOtherForceTreasureChoose;"
-  splits:
-  - text: "珍宝赠礼"
-  templates:
-  - template: "{0};AddFavorOtherForceTreasureChoose;"
 - raw: "珍宝鉴定"
   splits:
   - text: "珍宝鉴定"
-- raw: "珍宝鉴定;ChoosePerformForMoney;3"
-  splits:
-  - text: "珍宝鉴定"
-  templates:
-  - template: "{0};ChoosePerformForMoney;3"
 - raw: "珍宝鉴定？我看是鱼目混珠吧！\n#SourceInteractName#如果真有本事，便让我来考你一考。\n若你确实眼光独到，明辨是非，父老乡亲们方能慷慨解囊！"
   splits:
   - text: "珍宝鉴定？我看是鱼目混珠吧！"
@@ -26477,15 +23372,6 @@
     text: "少侠咱们有缘再见，告辞！"
   templates:
   - template: "{0}\n{1}"
-- raw: "甜言蜜语;ChatInteractHero;DebateReleaseLoverUnhappy;;♦与对方进行论战，失败降低25好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "甜言蜜语"
-  - subIndex: 1
-    text: "与对方进行论战，失败降低25好感"
-  - subIndex: 2
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "{0};ChatInteractHero;DebateReleaseLoverUnhappy;;♦{1}\n♦{2}"
 - raw: "生产效率"
   splits:
   - text: "生产效率"
@@ -26573,27 +23459,12 @@
   - text: "留得青山在"
   templates:
   - template: "{0};NpcAttackPlayerFinish"
-- raw: "略加惩戒;RevengeNpcChoice;1"
-  splits:
-  - text: "略加惩戒"
-  templates:
-  - template: "{0};RevengeNpcChoice;1"
 - raw: "略处上风"
   splits:
   - text: "略处上风"
 - raw: "略处下风"
   splits:
   - text: "略处下风"
-- raw: "略知一二;CheckLivingSkillResult;1-{0};;;{1}/{2}"
-  splits:
-  - text: "略知一二"
-  templates:
-  - template: "{0};CheckLivingSkillResult;1-⟦0⟧;;;⟦1⟧/⟦2⟧"
-- raw: "疗伤;ChooseDoctorInjury;1"
-  splits:
-  - text: "疗伤"
-  templates:
-  - template: "{0};ChooseDoctorInjury;1"
 - raw: "疗伤;CureByNPCExternal"
   splits:
   - text: "疗伤"
@@ -26633,16 +23504,6 @@
     text: "待我重见天日，必不忘此番恩情。"
   templates:
   - template: "{0}\n{1}\n{2}"
-- raw: "痛下狠手;KillNpcChoice;0"
-  splits:
-  - text: "痛下狠手"
-  templates:
-  - template: "{0};KillNpcChoice;0"
-- raw: "痛下狠手;StopNpcStealFightFinish;2"
-  splits:
-  - text: "痛下狠手"
-  templates:
-  - template: "{0};StopNpcStealFightFinish;2"
 - raw: "痛饮"
   splits:
   - text: "痛饮"
@@ -26926,32 +23787,12 @@
     text: "今天，为师就正式准许你出师！"
   templates:
   - template: "{0}\n{1}"
-- raw: "看好了;ReleaseHateWithNpcSkillSure;"
-  splits:
-  - text: "看好了"
-  templates:
-  - template: "{0};ReleaseHateWithNpcSkillSure;"
-- raw: "看好了;TeachNewSkillToNPCSure;"
-  splits:
-  - text: "看好了"
-  templates:
-  - template: "{0};TeachNewSkillToNPCSure;"
 - raw: "看守"
   splits:
   - text: "看守"
 - raw: "看家护院"
   splits:
   - text: "看家护院"
-- raw: "看招！;FightInteractHero;DeathFight-CatchBadFameHeroResult--None~Hero"
-  splits:
-  - text: "看招！"
-  templates:
-  - template: "{0};FightInteractHero;DeathFight-CatchBadFameHeroResult--None~Hero"
-- raw: "看招！;FightInteractHero;DeathFight-DeathFightInteractHeroResult--None~Hero"
-  splits:
-  - text: "看招！"
-  templates:
-  - template: "{0};FightInteractHero;DeathFight-DeathFightInteractHeroResult--None~Hero"
 - raw: "看来#PlayerName#你对本门招式也不甚理解啊，我们还是去找别人评理吧！"
   splits:
   - text: "看来#PlayerName#你对本门招式也不甚理解啊，我们还是去找别人评理吧！"
@@ -27078,16 +23919,6 @@
   - text: "真是倒霉"
   templates:
   - template: "{0};HideInteractUIOneDay"
-- raw: "真是倒霉;PlotChangeGuardAlart;10"
-  splits:
-  - text: "真是倒霉"
-  templates:
-  - template: "{0};PlotChangeGuardAlart;10"
-- raw: "真是倒霉;PlotChangeGuardFavor;-10"
-  splits:
-  - text: "真是倒霉"
-  templates:
-  - template: "{0};PlotChangeGuardFavor;-10"
 - raw: "真是小孩子脾气;HideInteractUI"
   splits:
   - text: "真是小孩子脾气"
@@ -27376,11 +24207,6 @@
   - text: "确认兑换"
   templates:
   - template: "{0};GetGovernBodyGuardSure"
-- raw: "确认兑换;ShowGovernShopSure;"
-  splits:
-  - text: "确认兑换"
-  templates:
-  - template: "{0};ShowGovernShopSure;"
 - raw: "确认全部取出;AllItemOutExternalStorageSure"
   splits:
   - text: "确认全部取出"
@@ -27425,11 +24251,6 @@
   - text: "确认开战"
   templates:
   - template: "{0};SureCommandAttackResourcePointForce"
-- raw: "确认征用;ForceAskHeroGiveItemSure;{0};;;FavorDegree/{0}"
-  splits:
-  - text: "确认征用"
-  templates:
-  - template: "{0};ForceAskHeroGiveItemSure;⟦0⟧;;;FavorDegree/⟦0⟧"
 - raw: "确认消耗{1}天{4}练习{0}？{3}{2}"
   splits:
   - text: "确认消耗"
@@ -27667,11 +24488,6 @@
 - raw: "禁售"
   splits:
   - text: "禁售"
-- raw: "禁售;SetForceStorageDiscountSelected;{0}/{1}"
-  splits:
-  - text: "禁售"
-  templates:
-  - template: "{0};SetForceStorageDiscountSelected;⟦0⟧/⟦1⟧"
 - raw: "禅宗"
   splits:
   - text: "禅宗"
@@ -27697,15 +24513,6 @@
 - raw: "离间"
   splits:
   - text: "离间"
-- raw: "离间;ReduceHeroLoyal;;;♦赠礼或消耗好感降低对方忠诚\n♦对方忠诚低于好感度20%，便会加入你的门派;;ReduceLoyalTime"
-  splits:
-  - text: "离间"
-  - subIndex: 1
-    text: "赠礼或消耗好感降低对方忠诚"
-  - subIndex: 2
-    text: "对方忠诚低于好感度20%，便会加入你的门派"
-  templates:
-  - template: "{0};ReduceHeroLoyal;;;♦{1}\n♦{2};;ReduceLoyalTime"
 - raw: "离队时间\n{0}日"
   splits:
   - text: "离队时间"
@@ -27759,11 +24566,6 @@
 - raw: "移动距离"
   splits:
   - text: "移动距离"
-- raw: "稍作休息;ExploreWildPeopleRestPlot;1;0/"
-  splits:
-  - text: "稍作休息"
-  templates:
-  - template: "{0};ExploreWildPeopleRestPlot;1;0/"
 - raw: "稳如泰山"
   splits:
   - text: "稳如泰山"
@@ -27827,19 +24629,9 @@
     text: "次"
   templates:
   - template: "{0}⟦0⟧{1}⟦1⟧{2}"
-- raw: "窃取物品;StealResourceSuccessChooseItem;"
-  splits:
-  - text: "窃取物品"
-  templates:
-  - template: "{0};StealResourceSuccessChooseItem;"
 - raw: "窃取资源"
   splits:
   - text: "窃取资源"
-- raw: "窃取资源;StealResourceSuccessChooseResource;"
-  splits:
-  - text: "窃取资源"
-  templates:
-  - template: "{0};StealResourceSuccessChooseResource;"
 - raw: "窃贼丁"
   splits:
   - text: "窃贼丁"
@@ -27855,11 +24647,6 @@
 - raw: "立场"
   splits:
   - text: "立场"
-- raw: "立志从商;PlotStartGameResult;2"
-  splits:
-  - text: "立志从商"
-  templates:
-  - template: "{0};PlotStartGameResult;2"
 - raw: "竟...竟然不求回报吗？恩公高风亮节，令小的五体投地。\n小的此行，必定一路传扬大侠的威名！"
   splits:
   - text: "竟...竟然不求回报吗？恩公高风亮节，令小的五体投地。"
@@ -27907,11 +24694,6 @@
 - raw: "竹笛"
   splits:
   - text: "竹笛"
-- raw: "笑纳了;ChangePlayerMoneyFinish;"
-  splits:
-  - text: "笑纳了"
-  templates:
-  - template: "{0};ChangePlayerMoneyFinish;"
 - raw: "笑面虎"
   splits:
   - text: "笑面虎"
@@ -28084,20 +24866,6 @@
   - text: "算了算了"
   templates:
   - template: "{0};SpeInteractWithNPC"
-- raw: "算了，小命要紧;FinishExploreMap;false"
-  splits:
-  - text: "算了，小命要紧"
-  templates:
-  - template: "{0};FinishExploreMap;false"
-- raw: "算你识相！;MercyRandomEnemy;{0};;♦增加{1}恶名"
-  splits:
-  - text: "算你识相！"
-  - subIndex: 1
-    text: "增加"
-  - subIndex: 2
-    text: "恶名"
-  templates:
-  - template: "{0};MercyRandomEnemy;⟦0⟧;;♦{1}⟦1⟧{2}"
 - raw: "算计"
   splits:
   - text: "算计"
@@ -28121,36 +24889,6 @@
 - raw: "箱"
   splits:
   - text: "箱"
-- raw: "粗略挖掘;FinishSpeTreasure;1"
-  splits:
-  - text: "粗略挖掘"
-  templates:
-  - template: "{0};FinishSpeTreasure;1"
-- raw: "粗略选取;FinishSpeFood;1"
-  splits:
-  - text: "粗略选取"
-  templates:
-  - template: "{0};FinishSpeFood;1"
-- raw: "粗略选取;FinishSpeMed;1"
-  splits:
-  - text: "粗略选取"
-  templates:
-  - template: "{0};FinishSpeMed;1"
-- raw: "粗略选取;FinishSpePoison;1"
-  splits:
-  - text: "粗略选取"
-  templates:
-  - template: "{0};FinishSpePoison;1"
-- raw: "粗略选取;FinishSpeStone;1"
-  splits:
-  - text: "粗略选取"
-  templates:
-  - template: "{0};FinishSpeStone;1"
-- raw: "粗略选取;FinishSpeWood;1"
-  splits:
-  - text: "粗略选取"
-  templates:
-  - template: "{0};FinishSpeWood;1"
 - raw: "粗看尚可，然细节处处透出庸俗之气，可谓食之无味，弃之可惜。"
   splits:
   - text: "粗看尚可，然细节处处透出庸俗之气，可谓食之无味，弃之可惜。"
@@ -28160,41 +24898,6 @@
 - raw: "精"
   splits:
   - text: "精"
-- raw: "精挑细选;ChooseCollectResource;0-{0};;;{1}/{2}"
-  splits:
-  - text: "精挑细选"
-  templates:
-  - template: "{0};ChooseCollectResource;0-⟦0⟧;;;⟦1⟧/⟦2⟧"
-- raw: "精挑细选;FinishSpeFood;0;;;Plant/"
-  splits:
-  - text: "精挑细选"
-  templates:
-  - template: "{0};FinishSpeFood;0;;;Plant/"
-- raw: "精挑细选;FinishSpeMed;0;;;Plant/"
-  splits:
-  - text: "精挑细选"
-  templates:
-  - template: "{0};FinishSpeMed;0;;;Plant/"
-- raw: "精挑细选;FinishSpePoison;0;;;Poison/"
-  splits:
-  - text: "精挑细选"
-  templates:
-  - template: "{0};FinishSpePoison;0;;;Poison/"
-- raw: "精挑细选;FinishSpeStone;0;;;DigAndCut/"
-  splits:
-  - text: "精挑细选"
-  templates:
-  - template: "{0};FinishSpeStone;0;;;DigAndCut/"
-- raw: "精挑细选;FinishSpeTreasure;0;;;Knowledge/"
-  splits:
-  - text: "精挑细选"
-  templates:
-  - template: "{0};FinishSpeTreasure;0;;;Knowledge/"
-- raw: "精挑细选;FinishSpeWood;0;;;DigAndCut/"
-  splits:
-  - text: "精挑细选"
-  templates:
-  - template: "{0};FinishSpeWood;0;;;DigAndCut/"
 - raw: "精烩"
   splits:
   - text: "精烩"
@@ -28232,11 +24935,6 @@
 - raw: "糟糕，溜之大吉吧。"
   splits:
   - text: "糟糕，溜之大吉吧。"
-- raw: "糟糕，这下大意了！;PlotStartFight;HardFight-KillerFightResult-16_1"
-  splits:
-  - text: "糟糕，这下大意了！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-KillerFightResult-16_1"
 - raw: "素纱"
   splits:
   - text: "素纱"
@@ -28353,21 +25051,6 @@
     text: "应当以哪一层区域作为挑战目标呢？"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}\n{3}"
-- raw: "终于开始了;StartAreaAuctionSure;"
-  splits:
-  - text: "终于开始了"
-  templates:
-  - template: "{0};StartAreaAuctionSure;"
-- raw: "终于开始了;StartAreaDebateMatchSure;"
-  splits:
-  - text: "终于开始了"
-  templates:
-  - template: "{0};StartAreaDebateMatchSure;"
-- raw: "终于开始了;StartAreaHorseMatchSure;"
-  splits:
-  - text: "终于开始了"
-  templates:
-  - template: "{0};StartAreaHorseMatchSure;"
 - raw: "终于开始了;StartSpeHorseMatchEventSure"
   splits:
   - text: "终于开始了"
@@ -28482,19 +25165,6 @@
 - raw: "结为了知己好友"
   splits:
   - text: "结为了知己好友"
-- raw: "结为同盟;StartAllyOtherForce;;;需100门派好感\n结盟后永久停战且援军+1\n可进攻盟友的相邻区域\n好感低于80会自动断盟;ForceLv/6"
-  splits:
-  - text: "结为同盟"
-  - subIndex: 1
-    text: "需100门派好感"
-  - subIndex: 2
-    text: "结盟后永久停战且援军"
-  - subIndex: 3
-    text: "可进攻盟友的相邻区域"
-  - subIndex: 4
-    text: "好感低于80会自动断盟"
-  templates:
-  - template: "{0};StartAllyOtherForce;;;{1}\n{2}+1\n{3}\n{4};ForceLv/6"
 - raw: "结为生死之交"
   splits:
   - text: "结为生死之交"
@@ -28509,24 +25179,12 @@
 - raw: "结义"
   splits:
   - text: "结义"
-- raw: "结义;AskHeroToBrother;;;;FavorDegree/90"
-  splits:
-  - text: "结义"
-  templates:
-  - template: "{0};AskHeroToBrother;;;;FavorDegree/90"
 - raw: "结义数量已达上限！"
   splits:
   - text: "结义数量已达上限！"
 - raw: "结交天下英豪，乃是武林中人毕生之夙愿。"
   splits:
   - text: "结交天下英豪，乃是武林中人毕生之夙愿。"
-- raw: "结婚;LoverAskHeroMarry;;;♦举办婚宴正式结为夫妻{0};FavorDegree/100"
-  splits:
-  - text: "结婚"
-  - subIndex: 1
-    text: "举办婚宴正式结为夫妻"
-  templates:
-  - template: "{0};LoverAskHeroMarry;;;♦{1}⟦0⟧;FavorDegree/100"
 - raw: "结束"
   splits:
   - text: "结束"
@@ -28535,11 +25193,6 @@
   - text: "结束宴会"
   templates:
   - template: "{0};EndParty"
-- raw: "结缘;AskHeroToLover;;;{0};FavorDegree/100"
-  splits:
-  - text: "结缘"
-  templates:
-  - template: "{0};AskHeroToLover;;;⟦0⟧;FavorDegree/100"
 - raw: "给\n予"
   splits:
   - text: "给"
@@ -28550,22 +25203,6 @@
 - raw: "给予"
   splits:
   - text: "给予"
-- raw: "给予嘉奖;RewardForceHeroPlot;;;♦以银两或珍宝嘉奖弟子\n♦提升弟子好感，忠诚和门派功绩\n♦每月最多一次;;ForceRewardTime"
-  splits:
-  - text: "给予嘉奖"
-  - subIndex: 1
-    text: "以银两或珍宝嘉奖弟子"
-  - subIndex: 2
-    text: "提升弟子好感，忠诚和门派功绩"
-  - subIndex: 3
-    text: "每月最多一次"
-  templates:
-  - template: "{0};RewardForceHeroPlot;;;♦{1}\n♦{2}\n♦{3};;ForceRewardTime"
-- raw: "给点医药费吧;ChangePlayerMoneyFinish;"
-  splits:
-  - text: "给点医药费吧"
-  templates:
-  - template: "{0};ChangePlayerMoneyFinish;"
 - raw: "绝"
   splits:
   - text: "绝"
@@ -28578,34 +25215,6 @@
 - raw: "绝技"
   splits:
   - text: "绝技"
-- raw: "绝技 千斤坠;ForceFightChooseStartSkill;2"
-  splits:
-  - text: "绝技"
-  - subIndex: 1
-    text: "千斤坠"
-  templates:
-  - template: "{0} {1};ForceFightChooseStartSkill;2"
-- raw: "绝技;ShowBeggerFoodExchangeSkill;2"
-  splits:
-  - text: "绝技"
-  templates:
-  - template: "{0};ShowBeggerFoodExchangeSkill;2"
-- raw: "绝技硬闯;CatchBadFamePlayerUniqueEscape;;;;Unique/"
-  splits:
-  - text: "绝技硬闯"
-  templates:
-  - template: "{0};CatchBadFamePlayerUniqueEscape;;;;Unique/"
-- raw: "绝离;LoverAskHeroBreakup;;;♦结束夫妻关系\n♦降低150点好感\n♦固定增加40恶名"
-  splits:
-  - text: "绝离"
-  - subIndex: 1
-    text: "结束夫妻关系"
-  - subIndex: 2
-    text: "降低150点好感"
-  - subIndex: 3
-    text: "固定增加40恶名"
-  templates:
-  - template: "{0};LoverAskHeroBreakup;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "绢袍"
   splits:
   - text: "绢袍"
@@ -28630,11 +25239,6 @@
 - raw: "继续思过"
   splits:
   - text: "继续思过"
-- raw: "继续追踪;FinishExploreMap;true"
-  splits:
-  - text: "继续追踪"
-  templates:
-  - template: "{0};FinishExploreMap;true"
 - raw: "维道"
   splits:
   - text: "维道"
@@ -28663,16 +25267,6 @@
   - text: "编纂秘籍"
   templates:
   - template: "{0};ShowBookWriterSelf"
-- raw: "缴纳罚金;ClearBadFame;;0/"
-  splits:
-  - text: "缴纳罚金"
-  templates:
-  - template: "{0};ClearBadFame;;0/"
-- raw: "缴纳罚金;GovernmentClearBadFame;0"
-  splits:
-  - text: "缴纳罚金"
-  templates:
-  - template: "{0};GovernmentClearBadFame;0"
 - raw: "缺"
   splits:
   - text: "缺"
@@ -28702,11 +25296,6 @@
   - text: "罢了罢了"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "罢了罢了;StopNpcReduceAreaStateFinalReuslt;false"
-  splits:
-  - text: "罢了罢了"
-  templates:
-  - template: "{0};StopNpcReduceAreaStateFinalReuslt;false"
 - raw: "罢了罢了，今天就算#PlayerName#你过关。\n......刚才切磋之时，没受伤吧？"
   splits:
   - text: "罢了罢了，今天就算#PlayerName#你过关。"
@@ -28736,11 +25325,6 @@
 - raw: "美酒"
   splits:
   - text: "美酒"
-- raw: "羞愧难当;ChangePlayerMoneyFinish;"
-  splits:
-  - text: "羞愧难当"
-  templates:
-  - template: "{0};ChangePlayerMoneyFinish;"
 - raw: "羞辱"
   splits:
   - text: "羞辱"
@@ -28924,11 +25508,6 @@
 - raw: "背击"
   splits:
   - text: "背击"
-- raw: "背后偷袭;StartKillNPCFight;1;;;Dodge/"
-  splits:
-  - text: "背后偷袭"
-  templates:
-  - template: "{0};StartKillNPCFight;1;;;Dodge/"
 - raw: "胜"
   splits:
   - text: "胜"
@@ -29068,13 +25647,6 @@
 - raw: "脑户"
   splits:
   - text: "脑户"
-- raw: "脱罪;ReduceBadFameNPCPrison;;7/{0};降低对方50点恶名;GovernLv/{1};BadFameInPrisonTime"
-  splits:
-  - text: "脱罪"
-  - subIndex: 1
-    text: "降低对方50点恶名"
-  templates:
-  - template: "{0};ReduceBadFameNPCPrison;;7/⟦0⟧;{1};GovernLv/⟦1⟧;BadFameInPrisonTime"
 - raw: "脸"
   splits:
   - text: "脸"
@@ -29120,13 +25692,6 @@
 - raw: "自不量力"
   splits:
   - text: "自不量力"
-- raw: "自不量力;GetTreasureMapReward;0-负3"
-  splits:
-  - text: "自不量力"
-  - subIndex: 1
-    text: "负3"
-  templates:
-  - template: "{0};GetTreasureMapReward;0-{1}"
 - raw: "自动"
   splits:
   - text: "自动"
@@ -29171,19 +25736,9 @@
   - text: "自寻死路！"
   templates:
   - template: "{0};EnterAreaStartFightHaterSpe"
-- raw: "自己留下;ChaseRuningThiefFinish;1"
-  splits:
-  - text: "自己留下"
-  templates:
-  - template: "{0};ChaseRuningThiefFinish;1"
 - raw: "自愿思过"
   splits:
   - text: "自愿思过"
-- raw: "自投罗网！;PlotStartFight;HardFight-{0}~5-3"
-  splits:
-  - text: "自投罗网！"
-  templates:
-  - template: "{0};PlotStartFight;HardFight-⟦0⟧~5-3"
 - raw: "自然"
   splits:
   - text: "自然"
@@ -29277,11 +25832,6 @@
 - raw: "花绫"
   splits:
   - text: "花绫"
-- raw: "花言巧语;ChooseJiangWanLeaveForce;1;;;19/20"
-  splits:
-  - text: "花言巧语"
-  templates:
-  - template: "{0};ChooseJiangWanLeaveForce;1;;;19/20"
 - raw: "花费{3}天时间，收获了{0}{1}。\n{2}"
   splits:
   - text: "花费"
@@ -29610,11 +26160,6 @@
     text: "听说还给我们每个人都准备了压岁礼物。"
   templates:
   - template: "{0}\n{1}"
-- raw: "莫慌，我来助你！;PlotStartFight;DeathFight-FindSpeFollowerFightResult-21_1-"
-  splits:
-  - text: "莫慌，我来助你！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-FindSpeFollowerFightResult-21_1-"
 - raw: "获取"
   splits:
   - text: "获取"
@@ -29624,13 +26169,6 @@
 - raw: "获取当前用户"
   splits:
   - text: "获取当前用户"
-- raw: "获取药品;BuyPrisonGuard;2;0/{0};♦获取随机药品;GuardFavor/{1}"
-  splits:
-  - text: "获取药品"
-  - subIndex: 1
-    text: "获取随机药品"
-  templates:
-  - template: "{0};BuyPrisonGuard;2;0/⟦0⟧;♦{1};GuardFavor/⟦1⟧"
 - raw: "获取财物"
   splits:
   - text: "获取财物"
@@ -30179,11 +26717,6 @@
     text: "点门派功绩）"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}⟦1⟧{3}"
-- raw: "要求双倍价格;GiveXinYanMissionEquipMoney;0"
-  splits:
-  - text: "要求双倍价格"
-  templates:
-  - template: "{0};GiveXinYanMissionEquipMoney;0"
 - raw: "要求如此高价，#PlayerName#未免有些趁人之危了。\n罢了罢了，能寻来此物也颇为不易，就依#PlayerName#所说的价格吧。"
   splits:
   - text: "要求如此高价，#PlayerName#未免有些趁人之危了。"
@@ -30261,21 +26794,6 @@
 - raw: "角色详情"
   splits:
   - text: "角色详情"
-- raw: "解开手铐;PrepareBreakPrison;0;;;GuardFavor/"
-  splits:
-  - text: "解开手铐"
-  templates:
-  - template: "{0};PrepareBreakPrison;0;;;GuardFavor/"
-- raw: "解开脚镣;PrepareBreakPrison;1;;;GuardFavor/"
-  splits:
-  - text: "解开脚镣"
-  templates:
-  - template: "{0};PrepareBreakPrison;1;;;GuardFavor/"
-- raw: "解毒;ChooseDoctorInjury;3"
-  splits:
-  - text: "解毒"
-  templates:
-  - template: "{0};ChooseDoctorInjury;3"
 - raw: "解毒;CureByNPCPoison"
   splits:
   - text: "解毒"
@@ -30291,24 +26809,6 @@
   - text: "解毒"
   templates:
   - template: "{0};CureForNPCPoisonSpe"
-- raw: "解毒;HospitalCurePoison;;;技能影响:毒术"
-  splits:
-  - text: "解毒"
-  - subIndex: 1
-    text: "技能影响"
-  - subIndex: 2
-    text: "毒术"
-  templates:
-  - template: "{0};HospitalCurePoison;;;{1}:{2}"
-- raw: "解毒;HospitalCurePoisonForce;;;技能影响:毒术"
-  splits:
-  - text: "解毒"
-  - subIndex: 1
-    text: "技能影响"
-  - subIndex: 2
-    text: "毒术"
-  templates:
-  - template: "{0};HospitalCurePoisonForce;;;{1}:{2}"
 - raw: "解溪"
   splits:
   - text: "解溪"
@@ -30375,21 +26875,6 @@
 - raw: "让我瞧瞧，又是哪只肥羊送上门来了？"
   splits:
   - text: "让我瞧瞧，又是哪只肥羊送上门来了？"
-- raw: "让渡功绩100点;GiveForceHeroContributionSure;{0};-2/{1}"
-  splits:
-  - text: "让渡功绩100点"
-  templates:
-  - template: "{0};GiveForceHeroContributionSure;⟦0⟧;-2/⟦1⟧"
-- raw: "让渡功绩200点;GiveForceHeroContributionSure;{0};-2/{1}"
-  splits:
-  - text: "让渡功绩200点"
-  templates:
-  - template: "{0};GiveForceHeroContributionSure;⟦0⟧;-2/⟦1⟧"
-- raw: "让渡功绩50点;GiveForceHeroContributionSure;{0};-2/{1}"
-  splits:
-  - text: "让渡功绩50点"
-  templates:
-  - template: "{0};GiveForceHeroContributionSure;⟦0⟧;-2/⟦1⟧"
 - raw: "让渡功绩;GiveForceHeroContribution"
   splits:
   - text: "让渡功绩"
@@ -30410,45 +26895,12 @@
 - raw: "讲经说书"
   splits:
   - text: "讲经说书"
-- raw: "讲经说书;ChoosePerformForMoney;2"
-  splits:
-  - text: "讲经说书"
-  templates:
-  - template: "{0};ChoosePerformForMoney;2"
-- raw: "讲经说法;EnlightForNpcSpePlot;2"
-  splits:
-  - text: "讲经说法"
-  templates:
-  - template: "{0};EnlightForNpcSpePlot;2"
-- raw: "讲经说法;EnlightForNpcSpeStart;2"
-  splits:
-  - text: "讲经说法"
-  templates:
-  - template: "{0};EnlightForNpcSpeStart;2"
-- raw: "论战劝解;StopNPCWantLeaveByDebate;;;;FavorDegree/30"
-  splits:
-  - text: "论战劝解"
-  templates:
-  - template: "{0};StopNPCWantLeaveByDebate;;;;FavorDegree/30"
 - raw: "论战系统"
   splits:
   - text: "论战系统"
 - raw: "设备登录"
   splits:
   - text: "设备登录"
-- raw: "诋毁;AskHeroCancelOtherRelation;;;♦使对方断绝与他人的好友/结义关系\n♦断绝好友消耗30点好感\n♦断绝结义消耗50点好感;FavorDegree/70"
-  splits:
-  - text: "诋毁"
-  - subIndex: 1
-    text: "使对方断绝与他人的好友"
-  - subIndex: 2
-    text: "结义关系"
-  - subIndex: 3
-    text: "断绝好友消耗30点好感"
-  - subIndex: 4
-    text: "断绝结义消耗50点好感"
-  templates:
-  - template: "{0};AskHeroCancelOtherRelation;;;♦{1}/{2}\n♦{3}\n♦{4};FavorDegree/70"
 - raw: "试玩时间已结束，感谢您的游玩体验！\n敬请期待《龙胤立志传》的正式版本。"
   splits:
   - text: "试玩时间已结束，感谢您的游玩体验！"
@@ -30464,20 +26916,6 @@
   - text: "诚心恳求"
   templates:
   - template: "{0};LoverAskHeroJoinForceSure"
-- raw: "诚心相求;AskGiftFromNPCSure;{0};;;FavorDegree/{0}"
-  splits:
-  - text: "诚心相求"
-  templates:
-  - template: "{0};AskGiftFromNPCSure;⟦0⟧;;;FavorDegree/⟦0⟧"
-- raw: "诚恳道歉;ReleaseLoverUnhappy;1;-1/{0};♦降低15好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "诚恳道歉"
-  - subIndex: 1
-    text: "降低15好感"
-  - subIndex: 2
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "{0};ReleaseLoverUnhappy;1;-1/⟦0⟧;♦{1}\n♦{2}"
 - raw: "询问万仞山"
   splits:
   - text: "询问万仞山"
@@ -30496,21 +26934,9 @@
 - raw: "该死，早知如此..."
   splits:
   - text: "该死，早知如此..."
-- raw: "诬陷;AddBadFameNPCPrison;;7/{0};增加对方50点恶名;GovernLv/{1};BadFameInPrisonTime"
-  splits:
-  - text: "诬陷"
-  - subIndex: 1
-    text: "增加对方50点恶名"
-  templates:
-  - template: "{0};AddBadFameNPCPrison;;7/⟦0⟧;{1};GovernLv/⟦1⟧;BadFameInPrisonTime"
 - raw: "误"
   splits:
   - text: "误"
-- raw: "误会一场;ChangePlot;2"
-  splits:
-  - text: "误会一场"
-  templates:
-  - template: "{0};ChangePlot;2"
 - raw: "误会一场;HideInteractUI"
   splits:
   - text: "误会一场"
@@ -30536,36 +26962,6 @@
 - raw: "说和"
   splits:
   - text: "说和"
-- raw: "说干就干;SurePrepareBreakPrison;0"
-  splits:
-  - text: "说干就干"
-  templates:
-  - template: "{0};SurePrepareBreakPrison;0"
-- raw: "说干就干;SurePrepareBreakPrison;1"
-  splits:
-  - text: "说干就干"
-  templates:
-  - template: "{0};SurePrepareBreakPrison;1"
-- raw: "说干就干;SurePrepareBreakPrison;2"
-  splits:
-  - text: "说干就干"
-  templates:
-  - template: "{0};SurePrepareBreakPrison;2"
-- raw: "说干就干;SurePrepareBreakPrison;3"
-  splits:
-  - text: "说干就干"
-  templates:
-  - template: "{0};SurePrepareBreakPrison;3"
-- raw: "说干就干;SurePrepareBreakPrison;4"
-  splits:
-  - text: "说干就干"
-  templates:
-  - template: "{0};SurePrepareBreakPrison;4"
-- raw: "说情道理;StartDebateRecruitEnemyPlot;;0/"
-  splits:
-  - text: "说情道理"
-  templates:
-  - template: "{0};StartDebateRecruitEnemyPlot;;0/"
 - raw: "诶诶诶！几位别走啊......\n哎，这下真是打翻醋坛子了。"
   splits:
   - text: "诶诶诶！几位别走啊......"
@@ -30573,16 +26969,6 @@
     text: "哎，这下真是打翻醋坛子了。"
   templates:
   - template: "{0}\n{1}"
-- raw: "诶诶，别跑啊！;ChaseDebt;;;;Dodge/"
-  splits:
-  - text: "诶诶，别跑啊！"
-  templates:
-  - template: "{0};ChaseDebt;;;;Dodge/"
-- raw: "诶都别走啊！;ChangePlayerMoneyFinish;"
-  splits:
-  - text: "诶都别走啊！"
-  templates:
-  - template: "{0};ChangePlayerMoneyFinish;"
 - raw: "诶，本届比武大会竟是一名参与侠士都没有么...\n罢了罢了，那就下届再会吧。"
   splits:
   - text: "诶，本届比武大会竟是一名参与侠士都没有么..."
@@ -30604,11 +26990,6 @@
     text: "罢了罢了，那就下届再会吧。"
   templates:
   - template: "{0}\n{1}"
-- raw: "请二位先选;FinishExploreEvilCamp;1"
-  splits:
-  - text: "请二位先选"
-  templates:
-  - template: "{0};FinishExploreEvilCamp;1"
 - raw: "请勿点击鼠标\n否则可能导致程序未响应"
   splits:
   - text: "请勿点击鼠标"
@@ -30616,11 +26997,6 @@
     text: "否则可能导致程序未响应"
   templates:
   - template: "{0}\n{1}"
-- raw: "请听我一言;ChatInteractHero;StopNpcReduceAreaStateDebateReuslt"
-  splits:
-  - text: "请听我一言"
-  templates:
-  - template: "{0};ChatInteractHero;StopNpcReduceAreaStateDebateReuslt"
 - raw: "请填写用户名和密码"
   splits:
   - text: "请填写用户名和密码"
@@ -30633,16 +27009,6 @@
 - raw: "请指教"
   splits:
   - text: "请指教"
-- raw: "请指教;FightInteractHero;StudyFight-FinishJiangWanLeaveForceFight"
-  splits:
-  - text: "请指教"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-FinishJiangWanLeaveForceFight"
-- raw: "请指教;FightInteractHero;StudyFight-StudyFightSelfForceHeroResult----Arena"
-  splits:
-  - text: "请指教"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-StudyFightSelfForceHeroResult----Arena"
 - raw: "请指教;PlayerFightMatch"
   splits:
   - text: "请指教"
@@ -30653,23 +27019,6 @@
   - text: "请指教"
   templates:
   - template: "{0};StudyFightWithNPCSure"
-- raw: "请指教！;UpgradeHeroForceLvFightStart;"
-  splits:
-  - text: "请指教！"
-  templates:
-  - template: "{0};UpgradeHeroForceLvFightStart;"
-- raw: "请教{0}潜力;FindSpeMasterEvent;{1}"
-  splits:
-  - text: "请教"
-  - subIndex: 1
-    text: "潜力"
-  templates:
-  - template: "{0}⟦0⟧{1};FindSpeMasterEvent;⟦1⟧"
-- raw: "请教功法;FindSpeMasterEvent;book;;;{0}/{1}"
-  splits:
-  - text: "请教功法"
-  templates:
-  - template: "{0};FindSpeMasterEvent;book;;;⟦0⟧/⟦1⟧"
 - raw: "请求结果:"
   splits:
   - text: "请求结果"
@@ -30685,16 +27034,6 @@
   - text: "请笑纳"
   templates:
   - template: "{0};ReleaseHateWithNpcGiftSure"
-- raw: "请笑纳;SureReduceHeroLoyal;0;0/"
-  splits:
-  - text: "请笑纳"
-  templates:
-  - template: "{0};SureReduceHeroLoyal;0;0/"
-- raw: "请笑纳;SureReduceHeroLoyal;1"
-  splits:
-  - text: "请笑纳"
-  templates:
-  - template: "{0};SureReduceHeroLoyal;1"
 - raw: "请选择队友使用道具"
   splits:
   - text: "请选择队友使用道具"
@@ -30714,11 +27053,6 @@
 - raw: "读取"
   splits:
   - text: "读取"
-- raw: "谁敢挡我！;PlotStartFight;DeathFight-BreakPrisonResult-30-"
-  splits:
-  - text: "谁敢挡我！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-BreakPrisonResult-30-"
 - raw: "谁能挡我！;HideInteractUI"
   splits:
   - text: "谁能挡我！"
@@ -30727,11 +27061,6 @@
 - raw: "调息"
   splits:
   - text: "调息"
-- raw: "调息;ChooseDoctorInjury;2"
-  splits:
-  - text: "调息"
-  templates:
-  - template: "{0};ChooseDoctorInjury;2"
 - raw: "调息;CureByNPCInternal"
   splits:
   - text: "调息"
@@ -30747,33 +27076,6 @@
   - text: "调息"
   templates:
   - template: "{0};CureForNPCInternalSpe"
-- raw: "调息;HospitalCureInternalInjury;;;技能影响:医术 内功"
-  splits:
-  - text: "调息"
-  - subIndex: 1
-    text: "技能影响"
-  - subIndex: 2
-    text: "医术"
-  - subIndex: 3
-    text: "内功"
-  templates:
-  - template: "{0};HospitalCureInternalInjury;;;{1}:{2} {3}"
-- raw: "调息;HospitalCureInternalInjuryForce;;;技能影响:医术 内功"
-  splits:
-  - text: "调息"
-  - subIndex: 1
-    text: "技能影响"
-  - subIndex: 2
-    text: "医术"
-  - subIndex: 3
-    text: "内功"
-  templates:
-  - template: "{0};HospitalCureInternalInjuryForce;;;{1}:{2} {3}"
-- raw: "调解说和;ChangeFavorToOtherForce;0-{0};;;ForceLv/5"
-  splits:
-  - text: "调解说和"
-  templates:
-  - template: "{0};ChangeFavorToOtherForce;0-⟦0⟧;;;ForceLv/5"
 - raw: "谋求勋阶;PlayerGetHornorPlot"
   splits:
   - text: "谋求勋阶"
@@ -30940,34 +27242,6 @@
     text: "买"
   templates:
   - template: "{0}\n{1}"
-- raw: "购买{0}木料;BuyRandomNpcResource;2;0/{0}"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "木料"
-  templates:
-  - template: "{0}⟦0⟧{1};BuyRandomNpcResource;2;0/⟦0⟧"
-- raw: "购买{0}矿石;BuyRandomNpcResource;3;0/{0}"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "矿石"
-  templates:
-  - template: "{0}⟦0⟧{1};BuyRandomNpcResource;3;0/⟦0⟧"
-- raw: "购买{0}粮食;BuyRandomNpcResource;1;0/{0}"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "粮食"
-  templates:
-  - template: "{0}⟦0⟧{1};BuyRandomNpcResource;1;0/⟦0⟧"
-- raw: "购买{0}药材;BuyRandomNpcResource;4;0/{0}"
-  splits:
-  - text: "购买"
-  - subIndex: 1
-    text: "药材"
-  templates:
-  - template: "{0}⟦0⟧{1};BuyRandomNpcResource;4;0/⟦0⟧"
 - raw: "购买价格{0}%\n出售价格{1}%"
   splits:
   - text: "购买价格"
@@ -30975,11 +27249,6 @@
     text: "出售价格"
   templates:
   - template: "{0}⟦0⟧%\n{1}⟦1⟧%"
-- raw: "购买库存;OpenOtherForceStorage;"
-  splits:
-  - text: "购买库存"
-  templates:
-  - template: "{0};OpenOtherForceStorage;"
 - raw: "购买情报;BuyCityAroundInfo"
   splits:
   - text: "购买情报"
@@ -30992,26 +27261,6 @@
     text: "出售折扣"
   templates:
   - template: "{0}x⟦0⟧%\n{1}x⟦1⟧%"
-- raw: "购买材料;PlotOpenRandomShop;0.5-0.3-5"
-  splits:
-  - text: "购买材料"
-  templates:
-  - template: "{0};PlotOpenRandomShop;0.5-0.3-5"
-- raw: "购买材料;PlotOpenRandomShop;1-0.6-5"
-  splits:
-  - text: "购买材料"
-  templates:
-  - template: "{0};PlotOpenRandomShop;1-0.6-5"
-- raw: "购药;PlotOpenRandomShop;0.5-0.3-1"
-  splits:
-  - text: "购药"
-  templates:
-  - template: "{0};PlotOpenRandomShop;0.5-0.3-1"
-- raw: "购药;PlotOpenRandomShop;1-0.6-1"
-  splits:
-  - text: "购药"
-  templates:
-  - template: "{0};PlotOpenRandomShop;1-0.6-1"
 - raw: "贵派诸位弟子武功不俗，且个个赤胆忠心。\n若有愿意留下者，大可继续在我#$PlayerName#门下施展才能，争雄武林。"
   splits:
   - text: "贵派诸位弟子武功不俗，且个个赤胆忠心。"
@@ -31043,15 +27292,6 @@
 - raw: "贿赂狱卒"
   splits:
   - text: "贿赂狱卒"
-- raw: "贿赂狱卒;BuyPrisonGuard;0;0/{0};♦降低少量警觉度\n♦增加少量熟络度"
-  splits:
-  - text: "贿赂狱卒"
-  - subIndex: 1
-    text: "降低少量警觉度"
-  - subIndex: 2
-    text: "增加少量熟络度"
-  templates:
-  - template: "{0};BuyPrisonGuard;0;0/⟦0⟧;♦{1}\n♦{2}"
 - raw: "资源_人口"
   splits:
   - text: "资源"
@@ -31080,11 +27320,6 @@
 - raw: "赌鬼"
   splits:
   - text: "赌鬼"
-- raw: "赐予资源;ManageServantForceResource;1-{0};;;ForceLv/5"
-  splits:
-  - text: "赐予资源"
-  templates:
-  - template: "{0};ManageServantForceResource;1-⟦0⟧;;;ForceLv/5"
 - raw: "赔款;ReleaseHateWithNpcMoney"
   splits:
   - text: "赔款"
@@ -31095,11 +27330,6 @@
   - text: "赔礼"
   templates:
   - template: "{0};ReleaseHateWithNpcGift"
-- raw: "赔礼谢罪;AreaBadWorkSorry;"
-  splits:
-  - text: "赔礼谢罪"
-  templates:
-  - template: "{0};AreaBadWorkSorry;"
 - raw: "赔礼道歉"
   splits:
   - text: "赔礼道歉"
@@ -31118,13 +27348,6 @@
     text: "望各位大侠拍马向前，奋勇争先，最终都能取得满意名次！"
   templates:
   - template: "{0}\n{1}\n{2}"
-- raw: "赠与{0}两;NPCMissionGiveMoney;;0/{0}"
-  splits:
-  - text: "赠与"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}⟦0⟧{1};NPCMissionGiveMoney;;0/⟦0⟧"
 - raw: "赠与药品;NPCMissionGiveMed"
   splits:
   - text: "赠与药品"
@@ -31145,25 +27368,11 @@
   - text: "赠送礼物"
   templates:
   - template: "{0};QiXiFestivalChooseGift"
-- raw: "赠送礼物;ReleaseLoverUnhappy;0;0/{0};♦降低10好感\n♦若好感小于50会断绝情侣关系"
-  splits:
-  - text: "赠送礼物"
-  - subIndex: 1
-    text: "降低10好感"
-  - subIndex: 2
-    text: "若好感小于50会断绝情侣关系"
-  templates:
-  - template: "{0};ReleaseLoverUnhappy;0;0/⟦0⟧;♦{1}\n♦{2}"
 - raw: "赠送药品;SaveCrazyNpcMed"
   splits:
   - text: "赠送药品"
   templates:
   - template: "{0};SaveCrazyNpcMed"
-- raw: "赠送赔礼;FinishReleaseHate;;0/"
-  splits:
-  - text: "赠送赔礼"
-  templates:
-  - template: "{0};FinishReleaseHate;;0/"
 - raw: "赠送银两;ReduceHeroLoyalTypeByMoney"
   splits:
   - text: "赠送银两"
@@ -31182,11 +27391,6 @@
 - raw: "赤脚医生"
   splits:
   - text: "赤脚医生"
-- raw: "走为上策;FinishExploreMap;false"
-  splits:
-  - text: "走为上策"
-  templates:
-  - template: "{0};FinishExploreMap;false"
 - raw: "走为上策;GiveUpEventMission"
   splits:
   - text: "走为上策"
@@ -31197,11 +27401,6 @@
   - text: "走为上策"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "走好不送;ForceLittleFightResult;"
-  splits:
-  - text: "走好不送"
-  templates:
-  - template: "{0};ForceLittleFightResult;"
 - raw: "走好不送;HideInteractUI"
   splits:
   - text: "走好不送"
@@ -31230,17 +27429,6 @@
 - raw: "赵胤宗"
   splits:
   - text: "赵胤宗"
-- raw: "赶尽杀绝;DeathFightKillHero;;;♦追杀成功后，夺取其所有物品装备\n♦与对方门派和亲友结仇\n♦根据对方身份等级增加大量恶名，每月最多1次"
-  splits:
-  - text: "赶尽杀绝"
-  - subIndex: 1
-    text: "追杀成功后，夺取其所有物品装备"
-  - subIndex: 2
-    text: "与对方门派和亲友结仇"
-  - subIndex: 3
-    text: "根据对方身份等级增加大量恶名，每月最多1次"
-  templates:
-  - template: "{0};DeathFightKillHero;;;♦{1}\n♦{2}\n♦{3}"
 - raw: "趁#TargetInteractName#专心修炼此{0}之时偷师，成功概率自是大增。\n(偷师成功率 {1}%)"
   splits:
   - text: "趁#TargetInteractName#专心修炼此"
@@ -31274,13 +27462,6 @@
 - raw: "超重"
   splits:
   - text: "超重"
-- raw: "超高价出售({0}两);GiveNpcBountyItemPriceSure;4"
-  splits:
-  - text: "超高价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1});GiveNpcBountyItemPriceSure;4"
 - raw: "越狱"
   splits:
   - text: "越狱"
@@ -31311,11 +27492,6 @@
   - text: "跪地求饶"
   templates:
   - template: "{0};PlayerLoseFightBegSure"
-- raw: "路见不平，自当拔刀相助;HelpInteractHeroFight;0-DeathFight-HelpInteractHeroFightResult"
-  splits:
-  - text: "路见不平，自当拔刀相助"
-  templates:
-  - template: "{0};HelpInteractHeroFight;0-DeathFight-HelpInteractHeroFightResult"
 - raw: "路边摊_0"
   splits:
   - text: "路边摊"
@@ -31446,21 +27622,6 @@
   - text: "转念一想"
   templates:
   - template: "{0};ChangeMeetNpcPlot"
-- raw: "转念一想;ChangePlot;0"
-  splits:
-  - text: "转念一想"
-  templates:
-  - template: "{0};ChangePlot;0"
-- raw: "转念一想;ChangePlot;1"
-  splits:
-  - text: "转念一想"
-  templates:
-  - template: "{0};ChangePlot;1"
-- raw: "转念一想;ChangePlot;2"
-  splits:
-  - text: "转念一想"
-  templates:
-  - template: "{0};ChangePlot;2"
 - raw: "转念一想;ChooseDrinkWineCancel"
   splits:
   - text: "转念一想"
@@ -31531,11 +27692,6 @@
   - text: "转念一想"
   templates:
   - template: "{0};SpeInteractWithNPC"
-- raw: "转念一想;StartBeatRandomEnemy;"
-  splits:
-  - text: "转念一想"
-  templates:
-  - template: "{0};StartBeatRandomEnemy;"
 - raw: "转念一想;StartLeaderInteractOtherForce"
   splits:
   - text: "转念一想"
@@ -31564,28 +27720,6 @@
 - raw: "轻功"
   splits:
   - text: "轻功"
-- raw: "轻功 轻身术;ForceFightChooseStartSkill;1"
-  splits:
-  - text: "轻功"
-  - subIndex: 1
-    text: "轻身术"
-  templates:
-  - template: "{0} {1};ForceFightChooseStartSkill;1"
-- raw: "轻功;ShowBeggerFoodExchangeSkill;1"
-  splits:
-  - text: "轻功"
-  templates:
-  - template: "{0};ShowBeggerFoodExchangeSkill;1"
-- raw: "轻功赶上;DeathFightKillHeroSure;;;;Dodge/"
-  splits:
-  - text: "轻功赶上"
-  templates:
-  - template: "{0};DeathFightKillHeroSure;;;;Dodge/"
-- raw: "轻功躲避;CatchBadFamePlayerDodgeEscape;;;;Dodge/"
-  splits:
-  - text: "轻功躲避"
-  templates:
-  - template: "{0};CatchBadFamePlayerDodgeEscape;;;;Dodge/"
 - raw: "轻松休闲"
   splits:
   - text: "轻松休闲"
@@ -31739,11 +27873,6 @@
   - text: "还是算了"
   templates:
   - template: "{0};ChangeAuctionPlot"
-- raw: "还是算了;ChangePlot;1"
-  splits:
-  - text: "还是算了"
-  templates:
-  - template: "{0};ChangePlot;1"
 - raw: "还是算了;ForceInteractWithNPC"
   splits:
   - text: "还是算了"
@@ -31754,11 +27883,6 @@
   - text: "还是算了"
   templates:
   - template: "{0};FurtherInteractWithNPC"
-- raw: "还是算了;GovernPlotStart;1"
-  splits:
-  - text: "还是算了"
-  templates:
-  - template: "{0};GovernPlotStart;1"
 - raw: "还是算了;HeroBookInteract"
   splits:
   - text: "还是算了"
@@ -31774,11 +27898,6 @@
   - text: "还是算了"
   templates:
   - template: "{0};LoverInteractWithNPC"
-- raw: "还是算了;ShowGovernShop;1"
-  splits:
-  - text: "还是算了"
-  templates:
-  - template: "{0};ShowGovernShop;1"
 - raw: "还是算了;SpeInteractWithNPC"
   splits:
   - text: "还是算了"
@@ -31918,11 +28037,6 @@
     text: "#PlayerName#只管开个价吧。"
   templates:
   - template: "{0}\n{1}"
-- raw: "这...也只能如此了;FightInteractHero;StudyFight-FightDebtResult"
-  splits:
-  - text: "这...也只能如此了"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-FightDebtResult"
 - raw: "这...只有心悦诚服"
   splits:
   - text: "这...只有心悦诚服"
@@ -32357,11 +28471,6 @@
     text: "重任，还需证明你的武功修为更在本掌门之上方可。"
   templates:
   - template: "{0}\n{1}⟦0⟧{2}"
-- raw: "这些徒儿均已掌握;ForceFightChooseStartSkill;3"
-  splits:
-  - text: "这些徒儿均已掌握"
-  templates:
-  - template: "{0};ForceFightChooseStartSkill;3"
 - raw: "这些珍宝世所罕见，大侠猜中其中小半已属不易，这参与奖品还请收下！"
   splits:
   - text: "这些珍宝世所罕见，大侠猜中其中小半已属不易，这参与奖品还请收下！"
@@ -32600,31 +28709,6 @@
     text: "不论结果如何，还望今日之经验教训，能令诸位日后通力合作，团结无间。"
   templates:
   - template: "{0}\n{1}"
-- raw: "这有何难;HelpRandomNpcPickFood;0-0;;;Plant/"
-  splits:
-  - text: "这有何难"
-  templates:
-  - template: "{0};HelpRandomNpcPickFood;0-0;;;Plant/"
-- raw: "这有何难;HelpRandomNpcPickMaterial;0-0;;;DigAndCut/"
-  splits:
-  - text: "这有何难"
-  templates:
-  - template: "{0};HelpRandomNpcPickMaterial;0-0;;;DigAndCut/"
-- raw: "这有何难;HelpRandomNpcPickPlant;0-0;;;Med/"
-  splits:
-  - text: "这有何难"
-  templates:
-  - template: "{0};HelpRandomNpcPickPlant;0-0;;;Med/"
-- raw: "这有何难;HelpRandomNpcPickPoison;0-0;;;Poison/"
-  splits:
-  - text: "这有何难"
-  templates:
-  - template: "{0};HelpRandomNpcPickPoison;0-0;;;Poison/"
-- raw: "这有何难;HelpRandomNpcPickTreasure;0-0;;;Knowledge/"
-  splits:
-  - text: "这有何难"
-  templates:
-  - template: "{0};HelpRandomNpcPickTreasure;0-0;;;Knowledge/"
 - raw: "这有何难，我身边恰好有一{0}，\n#TargetInteractName#你只管拿去充饥便是。"
   splits:
   - text: "这有何难，我身边恰好有一"
@@ -32886,11 +28970,6 @@
 - raw: "进招吧"
   splits:
   - text: "进招吧"
-- raw: "进攻;AttackResourcPointPlot;{0}"
-  splits:
-  - text: "进攻"
-  templates:
-  - template: "{0};AttackResourcPointPlot;⟦0⟧"
 - raw: "进攻架势"
   splits:
   - text: "进攻架势"
@@ -32917,15 +28996,6 @@
 - raw: "连接"
   splits:
   - text: "连接"
-- raw: "连续指点;ForceTeachNPCContinue;{0};;♦消耗剩余指点次数\n♦对方武学满级或超过你时自动停止"
-  splits:
-  - text: "连续指点"
-  - subIndex: 1
-    text: "消耗剩余指点次数"
-  - subIndex: 2
-    text: "对方武学满级或超过你时自动停止"
-  templates:
-  - template: "{0};ForceTeachNPCContinue;⟦0⟧;;♦{1}\n♦{2}"
 - raw: "连连道歉;HideInteractUI"
   splits:
   - text: "连连道歉"
@@ -32959,34 +29029,6 @@
 - raw: "退出游戏"
   splits:
   - text: "退出游戏"
-- raw: "退隐？;AskNPCWantLeave;;;♦询问对方关于退隐江湖之事"
-  splits:
-  - text: "退隐？"
-  - subIndex: 1
-    text: "询问对方关于退隐江湖之事"
-  templates:
-  - template: "{0};AskNPCWantLeave;;;♦{1}"
-- raw: "送上中额礼金;FinishReplaceOtherForceSendGift;1;0/10000;与所有门派停战180天"
-  splits:
-  - text: "送上中额礼金"
-  - subIndex: 1
-    text: "与所有门派停战180天"
-  templates:
-  - template: "{0};FinishReplaceOtherForceSendGift;1;0/10000;{1}"
-- raw: "送上大额礼金;FinishReplaceOtherForceSendGift;0;0/20000;与所有门派停战360天"
-  splits:
-  - text: "送上大额礼金"
-  - subIndex: 1
-    text: "与所有门派停战360天"
-  templates:
-  - template: "{0};FinishReplaceOtherForceSendGift;0;0/20000;{1}"
-- raw: "送上小额礼金;FinishReplaceOtherForceSendGift;2;0/5000;与所有门派停战90天"
-  splits:
-  - text: "送上小额礼金"
-  - subIndex: 1
-    text: "与所有门派停战90天"
-  templates:
-  - template: "{0};FinishReplaceOtherForceSendGift;2;0/5000;{1}"
 - raw: "适中"
   splits:
   - text: "适中"
@@ -33041,16 +29083,6 @@
   - text: "选择弟子"
   templates:
   - template: "{0};ChooseJuyiHeroReward"
-- raw: "选择弟子;ChooseRecruitServantForceHero;"
-  splits:
-  - text: "选择弟子"
-  templates:
-  - template: "{0};ChooseRecruitServantForceHero;"
-- raw: "选择挖掘;ChooseDigTreasure;"
-  splits:
-  - text: "选择挖掘"
-  templates:
-  - template: "{0};ChooseDigTreasure;"
 - raw: "选择武功;ChooseQingMingFestivalPlot"
   splits:
   - text: "选择武功"
@@ -33086,11 +29118,6 @@
   - text: "选择秘籍"
   templates:
   - template: "{0};ChooseExchangeBook"
-- raw: "选择秘籍;ChooseReadBook;true"
-  splits:
-  - text: "选择秘籍"
-  templates:
-  - template: "{0};ChooseReadBook;true"
 - raw: "选择秘籍;StealSkillSuccessChoose"
   splits:
   - text: "选择秘籍"
@@ -33121,11 +29148,6 @@
   - text: "选择饮食"
   templates:
   - template: "{0};ChooseBreakFood"
-- raw: "选贤举能;StartRecruitHero;5-Normal-3;0/"
-  splits:
-  - text: "选贤举能"
-  templates:
-  - template: "{0};StartRecruitHero;5-Normal-3;0/"
 - raw: "逍遥生"
   splits:
   - text: "逍遥生"
@@ -33146,15 +29168,6 @@
 - raw: "速度"
   splits:
   - text: "速度"
-- raw: "速战速决;ChooseStealSkill;1;;迎战守卫\n获取中品质秘籍"
-  splits:
-  - text: "速战速决"
-  - subIndex: 1
-    text: "迎战守卫"
-  - subIndex: 2
-    text: "获取中品质秘籍"
-  templates:
-  - template: "{0};ChooseStealSkill;1;;{1}\n{2}"
 - raw: "造成{0} {1}"
   splits:
   - text: "造成"
@@ -33191,11 +29204,6 @@
 - raw: "遗忘"
   splits:
   - text: "遗忘"
-- raw: "遗忘“{0}”;SpeRemoveTagChoose;{1}"
-  splits:
-  - text: "遗忘"
-  templates:
-  - template: "{0}“⟦0⟧”;SpeRemoveTagChoose;⟦1⟧"
 - raw: "遭到贼人袭击"
   splits:
   - text: "遭到贼人袭击"
@@ -33207,20 +29215,6 @@
   - text: "遵命"
   templates:
   - template: "{0};HideInteractUI"
-- raw: "遵命;StartForceGroupFightMatch;true"
-  splits:
-  - text: "遵命"
-  templates:
-  - template: "{0};StartForceGroupFightMatch;true"
-- raw: "避人耳目;ChooseStealSkill;0;;避免战斗\n获取低品质秘籍;Dodge/"
-  splits:
-  - text: "避人耳目"
-  - subIndex: 1
-    text: "避免战斗"
-  - subIndex: 2
-    text: "获取低品质秘籍"
-  templates:
-  - template: "{0};ChooseStealSkill;0;;{1}\n{2};Dodge/"
 - raw: "邀请入队"
   splits:
   - text: "邀请入队"
@@ -33248,36 +29242,6 @@
     text: "远远抛下一句“青山不改绿水长流”来，然后悻悻离去。"
   templates:
   - template: "{0}\n{1}"
-- raw: "那便来吧;FightInteractHero;StudyFight-FightHelpStudyResult"
-  splits:
-  - text: "那便来吧"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-FightHelpStudyResult"
-- raw: "那便来吧！;FightInteractHero;HardFight-NpcAttackPlayerResult--Hero~None"
-  splits:
-  - text: "那便来吧！"
-  templates:
-  - template: "{0};FightInteractHero;HardFight-NpcAttackPlayerResult--Hero~None"
-- raw: "那便来吧！;FightInteractHero;HardFight-NpcReleaseHateAttackPlayerResult--Hero~None"
-  splits:
-  - text: "那便来吧！"
-  templates:
-  - template: "{0};FightInteractHero;HardFight-NpcReleaseHateAttackPlayerResult--Hero~None"
-- raw: "那便来吧！;FightInteractHero;StudyFight-ReleaseHateWithNpcStrenghtFightResult"
-  splits:
-  - text: "那便来吧！"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-ReleaseHateWithNpcStrenghtFightResult"
-- raw: "那便来吧！;FightInteractHero;StudyFight-ReleaseHateWithPlayerFightResult"
-  splits:
-  - text: "那便来吧！"
-  templates:
-  - template: "{0};FightInteractHero;StudyFight-ReleaseHateWithPlayerFightResult"
-- raw: "那只好硬闯了;EnterAreaEscapeEnemyForce;1;;;Unique/"
-  splits:
-  - text: "那只好硬闯了"
-  templates:
-  - template: "{0};EnterAreaEscapeEnemyForce;1;;;Unique/"
 - raw: "那名弟子将你打的鼻青脸肿，\n你只得趁他一个不备，向后纵越几步，然后落荒而逃！"
   splits:
   - text: "那名弟子将你打的鼻青脸肿，"
@@ -33414,22 +29378,12 @@
   - text: "那我也不打扰了"
   templates:
   - template: "{0};ChangeMeetNpcPlot"
-- raw: "那我就买下了;PoorSellTreasureBuy;;0/"
-  splits:
-  - text: "那我就买下了"
-  templates:
-  - template: "{0};PoorSellTreasureBuy;;0/"
 - raw: "那我就恭敬不如从命了"
   splits:
   - text: "那我就恭敬不如从命了"
 - raw: "那我就笑纳了"
   splits:
   - text: "那我就笑纳了"
-- raw: "那是自然;FinishFightForSpeItem;win-{0}-{1}"
-  splits:
-  - text: "那是自然"
-  templates:
-  - template: "{0};FinishFightForSpeItem;win-⟦0⟧-⟦1⟧"
 - raw: "那是自然;FurtherInteractWithNPC"
   splits:
   - text: "那是自然"
@@ -33450,21 +29404,6 @@
   - text: "那是自然"
   templates:
   - template: "{0};NpcAttackPlayerFinish"
-- raw: "那是自然;ReleaseHateWithNpcFameFinish;"
-  splits:
-  - text: "那是自然"
-  templates:
-  - template: "{0};ReleaseHateWithNpcFameFinish;"
-- raw: "那是自然;ReleaseHateWithNpcFameFinish;15;-1/"
-  splits:
-  - text: "那是自然"
-  templates:
-  - template: "{0};ReleaseHateWithNpcFameFinish;15;-1/"
-- raw: "那是自然;ReleaseHateWithNpcFameFinish;15;0/"
-  splits:
-  - text: "那是自然"
-  templates:
-  - template: "{0};ReleaseHateWithNpcFameFinish;15;0/"
 - raw: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？\n不过此战若是阁下落败，我#TargetForceName#也定不会轻饶。\n否则日后江湖中，岂不是人人以为我#TargetForceName#软弱可欺？"
   splits:
   - text: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？"
@@ -33640,22 +29579,12 @@
 - raw: "采伐"
   splits:
   - text: "采伐"
-- raw: "采掘陨铁;FinishSpeStone;2;;;DigAndCut/"
-  splits:
-  - text: "采掘陨铁"
-  templates:
-  - template: "{0};FinishSpeStone;2;;;DigAndCut/"
 - raw: "采花大盗"
   splits:
   - text: "采花大盗"
 - raw: "采集"
   splits:
   - text: "采集"
-- raw: "采集{0};ChooseCollectResource;1-{1}"
-  splits:
-  - text: "采集"
-  templates:
-  - template: "{0}⟦0⟧;ChooseCollectResource;1-⟦1⟧"
 - raw: "释放范围"
   splits:
   - text: "释放范围"
@@ -33733,21 +29662,6 @@
 - raw: "鉴定学识"
   splits:
   - text: "鉴定学识"
-- raw: "鉴定物品;ChooseIdentifyItem;false"
-  splits:
-  - text: "鉴定物品"
-  templates:
-  - template: "{0};ChooseIdentifyItem;false"
-- raw: "鉴定物品;ChooseIdentifyItem;true"
-  splits:
-  - text: "鉴定物品"
-  templates:
-  - template: "{0};ChooseIdentifyItem;true"
-- raw: "针锋相对;FinishExploreBigRobberCampRobNpc;"
-  splits:
-  - text: "针锋相对"
-  templates:
-  - template: "{0};FinishExploreBigRobberCampRobNpc;"
 - raw: "钥匙"
   splits:
   - text: "钥匙"
@@ -33826,11 +29740,6 @@
   - text: "银两"
   templates:
   - template: "{0}:⟦0⟧"
-- raw: "银两利诱;BuyRecruitEnemyPlot;;0/"
-  splits:
-  - text: "银两利诱"
-  templates:
-  - template: "{0};BuyRecruitEnemyPlot;;0/"
 - raw: "银钱"
   splits:
   - text: "银钱"
@@ -33993,11 +29902,6 @@
 - raw: "门派交互"
   splits:
   - text: "门派交互"
-- raw: "门派亲善;AddFavorOtherForce;0-"
-  splits:
-  - text: "门派亲善"
-  templates:
-  - template: "{0};AddFavorOtherForce;0-"
 - raw: "门派亲善;LeaderAddFavorOtherForce"
   splits:
   - text: "门派亲善"
@@ -34060,11 +29964,6 @@
 - raw: "门派正厅已开始升级！"
   splits:
   - text: "门派正厅已开始升级！"
-- raw: "门派盟约;StopWarOtherForce;;;;ForceLv/5"
-  splits:
-  - text: "门派盟约"
-  templates:
-  - template: "{0};StopWarOtherForce;;;;ForceLv/5"
 - raw: "门派等级令牌"
   splits:
   - text: "门派等级令牌"
@@ -34076,19 +29975,9 @@
   - text: "门派羞辱"
   templates:
   - template: "{0};LeaderReduceFavorOtherForce"
-- raw: "门派羞辱;ReduceFavorOtherForce;"
-  splits:
-  - text: "门派羞辱"
-  templates:
-  - template: "{0};ReduceFavorOtherForce;"
 - raw: "门派药材不足！"
   splits:
   - text: "门派药材不足！"
-- raw: "门派进贡;GiveTreasureToGovernChoose;0"
-  splits:
-  - text: "门派进贡"
-  templates:
-  - template: "{0};GiveTreasureToGovernChoose;0"
 - raw: "门派金库已满！"
   splits:
   - text: "门派金库已满！"
@@ -34112,11 +30001,6 @@
 - raw: "闭关"
   splits:
   - text: "闭关"
-- raw: "闭关;SpeGetTalentPointStart;;0/"
-  splits:
-  - text: "闭关"
-  templates:
-  - template: "{0};SpeGetTalentPointStart;;0/"
 - raw: "闭关室"
   splits:
   - text: "闭关室"
@@ -34299,11 +30183,6 @@
 - raw: "阅读秘籍"
   splits:
   - text: "阅读秘籍"
-- raw: "阅读秘籍;ChooseReadBook;false"
-  splits:
-  - text: "阅读秘籍"
-  templates:
-  - template: "{0};ChooseReadBook;false"
 - raw: "阅读藏书"
   splits:
   - text: "阅读藏书"
@@ -34614,15 +30493,6 @@
 - raw: "雇佣"
   splits:
   - text: "雇佣"
-- raw: "雇佣;HireHeroJoinTeam;;;♦雇佣对方加入队伍15天\n♦根据对方战力消耗银钱;FavorDegree/30"
-  splits:
-  - text: "雇佣"
-  - subIndex: 1
-    text: "雇佣对方加入队伍15天"
-  - subIndex: 2
-    text: "根据对方战力消耗银钱"
-  templates:
-  - template: "{0};HireHeroJoinTeam;;;♦{1}\n♦{2};FavorDegree/30"
 - raw: "雇佣帮手"
   splits:
   - text: "雇佣帮手"
@@ -34822,11 +30692,6 @@
     text: "其实我等#PlayerName#这句话，也已经许久了。"
   templates:
   - template: "{0}\n{1}"
-- raw: "静静等待;SaveCrazyNpcFinish;2"
-  splits:
-  - text: "静静等待"
-  templates:
-  - template: "{0};SaveCrazyNpcFinish;2"
 - raw: "非我"
   splits:
   - text: "非我"
@@ -35114,11 +30979,6 @@
 - raw: "骁骑尉"
   splits:
   - text: "骁骑尉"
-- raw: "骇然出手;StartSpeFight;-3"
-  splits:
-  - text: "骇然出手"
-  templates:
-  - template: "{0};StartSpeFight;-3"
 - raw: "验证码"
   splits:
   - text: "验证码"
@@ -35131,18 +30991,6 @@
 - raw: "高于对方"
   splits:
   - text: "高于对方"
-- raw: "高人，我来助你！;PlotStartFight;DeathFight-SpeMasterFightResult-26-"
-  splits:
-  - text: "高人，我来助你！"
-  templates:
-  - template: "{0};PlotStartFight;DeathFight-SpeMasterFightResult-26-"
-- raw: "高价出售({0}两);GiveNpcBountyItemPriceSure;3"
-  splits:
-  - text: "高价出售"
-  - subIndex: 1
-    text: "两"
-  templates:
-  - template: "{0}(⟦0⟧{1});GiveNpcBountyItemPriceSure;3"
 - raw: "高僧"
   splits:
   - text: "高僧"
@@ -35152,11 +31000,6 @@
 - raw: "高级"
   splits:
   - text: "高级"
-- raw: "高级嘉奖;RewardForceHeroPlotSure;2-{0};0/{0}"
-  splits:
-  - text: "高级嘉奖"
-  templates:
-  - template: "{0};RewardForceHeroPlotSure;2-⟦0⟧;0/⟦0⟧"
 - raw: "高级武师"
   splits:
   - text: "高级武师"
@@ -35232,11 +31075,6 @@
 - raw: "黄牛帮"
   splits:
   - text: "黄牛帮"
-- raw: "黄袍加身;PlotStartGameResult;8"
-  splits:
-  - text: "黄袍加身"
-  templates:
-  - template: "{0};PlotStartGameResult;8"
 - raw: "黄豺"
   splits:
   - text: "黄豺"
@@ -35276,11 +31114,6 @@
 - raw: "默认"
   splits:
   - text: "默认"
-- raw: "默默看戏;StartSpeFight;301"
-  splits:
-  - text: "默默看戏"
-  templates:
-  - template: "{0};StartSpeFight;301"
 - raw: "鼎盛"
   splits:
   - text: "鼎盛"
