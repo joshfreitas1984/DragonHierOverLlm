@@ -8555,16 +8555,16 @@
 - raw: "腹18"
   splits:
   - text: "腹18"
-    translated: "18 stomach"
-    qcReviewedText: "18 stomach"
+    translated: "Stomach 18"
+    qcReviewedText: "Stomach 18"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "腹10"
   splits:
   - text: "腹10"
-    translated: "10's stomach"
-    qcReviewedText: "10's stomach"
+    translated: "Stomach 10"
+    qcReviewedText: "Stomach 10"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -13296,7 +13296,7 @@
     translated: "7 chest"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "胸6;腹8"
@@ -13865,7 +13865,7 @@
     translated: "8 heart"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "心6;腹7"
@@ -14043,7 +14043,7 @@
     translated: "Seal Chest Acupoints 0.02"
   - subIndex: 1
     text: "腰腹点穴0.06"
-    translated: "Seal Waist Acupoints0.06"
+    translated: "Seal Abdomen Acupoints0.06"
   templates:
   - template: "{0};{1}"
 - raw: "胸10;腹9"
@@ -14164,7 +14164,7 @@
     translated: "7's hand"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "手6;腹8"
@@ -16398,7 +16398,7 @@
     translated: "12 heart"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "心6;腹6"
@@ -16722,7 +16722,7 @@
     translated: "11 chest"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "胸5;腹6"
@@ -17307,7 +17307,7 @@
 - raw: "腰腹点穴0.05;虚弱0.05"
   splits:
   - text: "腰腹点穴0.05"
-    translated: "Seal Waist Acupoints0.05"
+    translated: "Seal Abdomen Acupoints0.05"
   - subIndex: 1
     text: "虚弱0.05"
     translated: "Weakness0.05"
@@ -17718,7 +17718,7 @@
     translated: "Seal Chest Acupoints 0.08"
   - subIndex: 1
     text: "腰腹点穴0.04"
-    translated: "Seal Waist Acupoints0.04"
+    translated: "Seal Abdomen Acupoints0.04"
   templates:
   - template: "{0};{1}"
 - raw: "胸10;腹10"
@@ -17727,7 +17727,7 @@
     translated: "10 chest"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "胸7;腹7"
@@ -18061,7 +18061,7 @@
     translated: "Poison 0.06"
   - subIndex: 1
     text: "腰腹点穴0.04"
-    translated: "Seal Waist Acupoints0.04"
+    translated: "Seal Abdomen Acupoints0.04"
   templates:
   - template: "{0};{1}"
 - raw: "心14;腹10"
@@ -18070,7 +18070,7 @@
     translated: "14 heart"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "心2;腹4"
@@ -19224,7 +19224,7 @@
     translated: "10 heart"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "心9;腹8"
@@ -19880,7 +19880,7 @@
     translated: "Weak Point0.06"
   - subIndex: 1
     text: "腰腹点穴0.06"
-    translated: "Seal Waist Acupoints0.06"
+    translated: "Seal Abdomen Acupoints0.06"
   templates:
   - template: "{0};{1}"
 - raw: "胸13;足13"
@@ -24915,7 +24915,7 @@
     translated: "10 feet"
   - subIndex: 1
     text: "腹18"
-    translated: "18 stomach"
+    translated: "Stomach 18"
   templates:
   - template: "{0};{1}"
 - raw: "足2;腹4"
@@ -25051,7 +25051,7 @@
     translated: "10 heart"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   - subIndex: 2
     text: "手10"
     translated: "10 hand"
@@ -25587,7 +25587,7 @@
     translated: "Seal Meridians0.04"
   - subIndex: 1
     text: "腰腹点穴0.04"
-    translated: "Seal Waist Acupoints0.04"
+    translated: "Seal Abdomen Acupoints0.04"
   templates:
   - template: "{0};{1}"
 - raw: "铜锤手"
@@ -25897,7 +25897,7 @@
     translated: "12 chest"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "铁蒲扇手"
@@ -26502,7 +26502,7 @@
     translated: "8 heart"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   - subIndex: 2
     text: "胸12"
     translated: "12 chest"
@@ -30907,7 +30907,7 @@
     translated: "Head 8"
   - subIndex: 1
     text: "腹18"
-    translated: "18 stomach"
+    translated: "Stomach 18"
   templates:
   - template: "{0};{1}"
 - raw: "头2;腹8"
@@ -31423,8 +31423,8 @@
 - raw: "腰腹点穴0.06"
   splits:
   - text: "腰腹点穴0.06"
-    translated: "Seal Waist Acupoints0.06"
-    qcReviewedText: "Seal Waist Acupoints0.06"
+    translated: "Seal Abdomen Acupoints0.06"
+    qcReviewedText: "Seal Abdomen Acupoints0.06"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -33298,7 +33298,7 @@
     translated: "Weakness0.06"
   - subIndex: 1
     text: "腰腹点穴0.04"
-    translated: "Seal Waist Acupoints0.04"
+    translated: "Seal Abdomen Acupoints0.04"
   templates:
   - template: "{0};{1}"
 - raw: "血手印"
@@ -35014,7 +35014,7 @@
     translated: "Drowsiness0.05"
   - subIndex: 1
     text: "腰腹点穴0.05"
-    translated: "Seal Waist Acupoints0.05"
+    translated: "Seal Abdomen Acupoints0.05"
   templates:
   - template: "{0};{1}"
 - raw: "腹14;手4"
@@ -35100,7 +35100,7 @@
     translated: "12 feet"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "足6;腹6"
@@ -35385,7 +35385,7 @@
     translated: "Seal Chest Acupoints 0.05"
   - subIndex: 1
     text: "腰腹点穴0.05"
-    translated: "Seal Waist Acupoints0.05"
+    translated: "Seal Abdomen Acupoints0.05"
   templates:
   - template: "{0};{1}"
 - raw: "胸16;心8"
@@ -35450,7 +35450,7 @@
     translated: "10 hand"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "手7;腹7"
@@ -35811,7 +35811,7 @@
 - raw: "腰腹点穴0.06;定神0.06"
   splits:
   - text: "腰腹点穴0.06"
-    translated: "Seal Waist Acupoints0.06"
+    translated: "Seal Abdomen Acupoints0.06"
   - subIndex: 1
     text: "定神0.06"
     translated: "Mind Calming 0.06"
@@ -37599,7 +37599,7 @@
 - raw: "腰腹点穴0.05;手臂点穴0.05;心胸点穴0.05"
   splits:
   - text: "腰腹点穴0.05"
-    translated: "Seal Waist Acupoints0.05"
+    translated: "Seal Abdomen Acupoints0.05"
   - subIndex: 1
     text: "手臂点穴0.05"
     translated: "Seal Arm Acupoints 0.05"
@@ -41313,7 +41313,7 @@
     translated: "12 feet"
   - subIndex: 1
     text: "腹18"
-    translated: "18 stomach"
+    translated: "Stomach 18"
   templates:
   - template: "{0};{1}"
 - raw: "朝阳一气剑"
@@ -42539,7 +42539,7 @@
     translated: "Seal Head Acupoints 0.04"
   - subIndex: 2
     text: "腰腹点穴0.04"
-    translated: "Seal Waist Acupoints0.04"
+    translated: "Seal Abdomen Acupoints0.04"
   templates:
   - template: "{0};{1};{2}"
 - raw: "手12;腹10"
@@ -42548,7 +42548,7 @@
     translated: "12 hand"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "金刚三昧掌"
@@ -42818,7 +42818,7 @@
     translated: "Seal Head Acupoints 0.04"
   - subIndex: 2
     text: "腰腹点穴0.04"
-    translated: "Seal Waist Acupoints0.04"
+    translated: "Seal Abdomen Acupoints0.04"
   templates:
   - template: "{0};{1};{2}"
 - raw: "头10;腹14"
@@ -47557,7 +47557,7 @@
     translated: "10 feet"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "足8;腹8"
@@ -50596,7 +50596,7 @@
     translated: "Head 14"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1}"
 - raw: "头7;腹7"
@@ -51308,7 +51308,7 @@
     translated: "Seal Leg Acupoints 0.06"
   - subIndex: 2
     text: "腰腹点穴0.06"
-    translated: "Seal Waist Acupoints0.06"
+    translated: "Seal Abdomen Acupoints0.06"
   templates:
   - template: "{0};{1};{2}"
 - raw: "心10;胸10;腹10"
@@ -51320,7 +51320,7 @@
     translated: "10 chest"
   - subIndex: 2
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   templates:
   - template: "{0};{1};{2}"
 - raw: "剑十三式"
@@ -52028,7 +52028,7 @@
     translated: "Head 10"
   - subIndex: 1
     text: "腹10"
-    translated: "10's stomach"
+    translated: "Stomach 10"
   - subIndex: 2
     text: "手8"
     translated: "8's hand"

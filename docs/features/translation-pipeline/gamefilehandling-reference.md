@@ -86,6 +86,8 @@ Confirmed 2026-08-30 via a clinic/hospital interaction-menu screenshot case ("�
 
 The `"{0}年{1}月{2}日"` case is a save-slot date built via `DateTime.ToString()` (see `DynamicStringPatches.cs`'s `_compiledTemplates` comments).
 
+Hit-zone tokens from the KungFuData combat-stance/kungfu-info columns (`手17`, `腹18`, `足14`, `头22`, `胸12`, `腿N`, `心N`) are forced by a Raw-pattern rule (`BodyPartTokenPattern`) to `Hand/Abdomen/Feet/Head/Chest/Legs/Heart N` at packaging time, because the LLM translated them inconsistently ("17's hand", "Touch 15", "15 steps"). The rule beats any exact-Raw entry and whatever sits in `Files/Converted`.
+
 ## Prefab text and dynamic-string sources
 
 `dumpedPrefabText.txt` and `dumpedPrefabTextFromOtherFields.txt` are flat, exact-match `PrefabText` inputs. The first comes from primary `m_Text`/`text` fields; the second comes from the explicitly sampled allowlist in `DynamicStringSources.DynamicStringOtherTextFields`. They are packaged by `PrefabTextWorkflow` and consumed by the plugin's setter-level exact lookup. The asset-dumper and field-selection rationale is in [assetdumper-libcpp2il-and-noise-filtering.md](assetdumper-libcpp2il-and-noise-filtering.md) and [prefabtext-pipeline-architecture.md](prefabtext-pipeline-architecture.md).

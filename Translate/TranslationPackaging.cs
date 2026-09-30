@@ -240,6 +240,24 @@ namespace Tests
                 m => $"Level {{{m.Groups[1].Value}}}"),
         ];
 
+        // Hit-zone tokens ("手17", "腹18", ...) from the KungFuData combat-stance / kungfu-info
+        // columns: one body-part character plus a number, shown as a whole string. The LLM
+        // translated these inconsistently ("17's hand", "Touch 15", "15 steps", "4 abdomen" vs
+        // "Stomach 18"), so they are forced to a single "Part N" form regardless of what sits in
+        // Files/Converted. Matched against Raw (not Result), keyed by the body-part character.
+        private static readonly Regex BodyPartTokenPattern = new(@"^(手|腹|足|头|胸|腿|心)(\d+)$", RegexOptions.Compiled);
+
+        private static readonly Dictionary<string, string> BodyPartNames = new()
+        {
+            ["手"] = "Hand",
+            ["腹"] = "Abdomen",
+            ["足"] = "Feet",
+            ["头"] = "Head",
+            ["胸"] = "Chest",
+            ["腿"] = "Legs",
+            ["心"] = "Heart",
+        };
+
         // Re-reads the just-packaged Files/Mod/{textFile.Path}.yaml and force-overwrites any
         // entry whose Raw matches DynamicStringResultOverrides, then rewrites the file. Runs
         // AFTER DynamicStringWorkflow.PackageDynamicStringsAsync on every packaging pass -
@@ -261,7 +279,10 @@ namespace Tests
             {
                 string? forcedResult = null;
 
-                if (DynamicStringResultOverrides.TryGetValue(entry.Raw, out var exactResult))
+                var bodyPartMatch = BodyPartTokenPattern.Match(entry.Raw);
+                if (bodyPartMatch.Success)
+                    forcedResult = $"{BodyPartNames[bodyPartMatch.Groups[1].Value]} {bodyPartMatch.Groups[2].Value}";
+                else if (DynamicStringResultOverrides.TryGetValue(entry.Raw, out var exactResult))
                     forcedResult = exactResult;
                 else
                 {

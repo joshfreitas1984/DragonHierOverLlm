@@ -54083,8 +54083,8 @@
 - raw: "腰腹点穴"
   splits:
   - text: "腰腹点穴"
-    translated: "Seal Waist Acupoints"
-    qcReviewedText: "Seal Waist Acupoints"
+    translated: "Seal Abdomen Acupoints"
+    qcReviewedText: "Seal Abdomen Acupoints"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

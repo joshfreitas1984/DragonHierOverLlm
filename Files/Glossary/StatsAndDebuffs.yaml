@@ -444,7 +444,7 @@
     - dynamicStringsPoetry.txt
     - HorseData.csv
 - raw: 腰腹点穴
-  result: Seal Waist Acupoints
+  result: Seal Abdomen Acupoints
   exclude:
     - PlotData.csv
     - KungFuData.csv
