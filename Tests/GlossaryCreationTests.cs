@@ -37,6 +37,16 @@ public class GlossaryCreationTests
     }
 
     [Fact]
+    public async Task GetDebuffs()
+    {
+        await GenerateGlossaryFromDumpedRaw("SpeAddDataBase.csv", 1, "Debuffs",
+            translate: true//,
+            //only: ["dynamicStringsFromColumns.txt"]
+            );
+    }
+
+
+    [Fact]
     public async Task GetLoveInterest()
     {
         await GenerateGlossaryFromIndex("LoveableSpeHero.csv", 0, "LoveInterest");

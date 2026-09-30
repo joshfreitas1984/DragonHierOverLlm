@@ -290,8 +290,8 @@
   splits:
   - split: 2
     text: "木植经验"
-    translated: "Tree planting experience"
-    qcReviewedText: "Tree planting experience"
+    translated: "Planting experience"
+    qcReviewedText: "Planting experience"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

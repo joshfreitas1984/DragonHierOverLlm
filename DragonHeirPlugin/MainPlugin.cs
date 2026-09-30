@@ -424,6 +424,8 @@ public class MainPlugin : BasePlugin
 
         WorldEventPatches.PatchAll();
 
+        SpeAddDescribePatches.PatchAll();
+
         MissionPatches.PatchAll();
 
         // Must patch AFTER DynamicStringPatches.PatchAll() - RecordLogDisplayPatches calls

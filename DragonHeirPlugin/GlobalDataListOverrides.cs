@@ -44,7 +44,7 @@ internal static class GlobalDataListOverrides
     {
         ("BattleScoreText", new[] { "Poor", "Average", "Good", "Excellent", "Supreme", "Peerless" }),
         ("AttriRatioString", new[] { "Low", "Average", "High", "Refined", "Supreme", "Peerless", "Divine" }),
-        ("EquipmentWeightLvName", new[] { "None", "Mininmal", "Light", "Moderate", "Heavy", "Overloaded" }),
+        ("EquipmentWeightLvName", new[] { "None", "Minimal", "Light", "Moderate", "Heavy", "Overloaded" }),
         ("EquipLvName", new []{ "Poor", "Common", "Fine", "Superior", "Perfect", "Peerless"}),
         ("SkillLvName", new []{ "Basic", "Advanced", "Superior", "Secret", "Ultimate", "Peerless"}),
         ("BookRareLvName", new []{ "Incomplete", "Replica", "Fine", "Antique", "Rare", "Complete"}),

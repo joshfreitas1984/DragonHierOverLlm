@@ -101,7 +101,8 @@
   adjustWidth: 25.0
 - path: Canvas/HeroDetailPanel/TagList/Viewport/Content/HeroTagIconPrefab(Clone)/Text
   sampleText: Loyal to the core
-  idealFontSize: 15.0
+  idealFontSize: 11.0
   minFontSize: 10.0
   maxFontSize: 14.0
   allowWordWrap: true
+  allowAutoSizing: false
