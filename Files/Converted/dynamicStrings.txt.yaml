@@ -17934,8 +17934,8 @@
 - raw: "内力消耗 {0}"
   splits:
   - text: "内力消耗"
-    translated: "Inner Power Consumption"
-    qcReviewedText: "Inner Power Consumption {0}"
+    translated: "Inner Power Cost"
+    qcReviewedText: "Inner Power Cost {0}"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
