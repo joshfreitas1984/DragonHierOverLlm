@@ -70,6 +70,8 @@
   result: Horse Face
 - raw: 道无名
   result: Dao Wuming
+  exclude: 
+    - KungFuData.csv
 - raw: 思中澜
   result: Si Zhonglan
 - raw: 姬清梵

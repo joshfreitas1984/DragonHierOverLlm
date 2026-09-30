@@ -130,11 +130,7 @@
 - raw: "学识{2}排除"
   splits:
   - text: "学识"
-    translated: "Scholarship"
-    qcReviewedText: "Scholarship {2} Exclude"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Knowledge"
   - subIndex: 1
     text: "排除"
     translated: "Exclude"

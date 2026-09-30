@@ -144,10 +144,10 @@
   splits:
   - split: 1
     text: "拳掌纲要"
-    translated: "Palm and Fist Fundamentals"
+    translated: "Unarmed Combat Essentials"
   - split: 2
     text: "拳掌纲要"
-    translated: "Palm and Fist Fundamentals"
+    translated: "Unarmed Combat Essentials"
 - raw: "16,剑法纲要,剑法纲要,1,剑法经验,0.02,FALSE,1,银钱"
   splits:
   - split: 1
@@ -184,10 +184,10 @@
   splits:
   - split: 1
     text: "射术纲要"
-    translated: "Shooting Essentials"
+    translated: "Archery Outline"
   - split: 2
     text: "射术纲要"
-    translated: "Shooting Essentials"
+    translated: "Archery Outline"
 - raw: "21,日常修习,日常修习,2,技艺经验,0.01,FALSE,3,银钱"
   splits:
   - split: 1
@@ -200,10 +200,10 @@
   splits:
   - split: 1
     text: "医术纲要"
-    translated: "Essentials of Medicine"
+    translated: "Outline of Medical Arts"
   - split: 2
     text: "医术纲要"
-    translated: "Essentials of Medicine"
+    translated: "Outline of Medical Arts"
 - raw: "23,毒术纲要,毒术纲要,2,毒术经验,0.02,FALSE,1,药材"
   splits:
   - split: 1
@@ -224,10 +224,10 @@
   splits:
   - split: 1
     text: "口才纲要"
-    translated: "Oral Communication Outline"
+    translated: "Eloquence Overview"
   - split: 2
     text: "口才纲要"
-    translated: "Oral Communication Outline"
+    translated: "Eloquence Overview"
 - raw: "26,采伐纲要,采伐纲要,2,采伐经验,0.02,FALSE,1,粮食"
   splits:
   - split: 1
@@ -240,26 +240,26 @@
   splits:
   - split: 1
     text: "木植纲要"
-    translated: "Tree Primer"
+    translated: "Planting Outline"
   - split: 2
     text: "木植纲要"
-    translated: "Tree Primer"
+    translated: "Planting Outline"
 - raw: "28,锻造纲要,锻造纲要,2,锻造经验,0.02,FALSE,1,矿石"
   splits:
   - split: 1
     text: "锻造纲要"
-    translated: "Smithing Manual"
+    translated: "Forging Outline"
   - split: 2
     text: "锻造纲要"
-    translated: "Smithing Manual"
+    translated: "Forging Outline"
 - raw: "29,炼药纲要,炼药纲要,2,炼药经验,0.02,FALSE,1,药材"
   splits:
   - split: 1
     text: "炼药纲要"
-    translated: "Pharmaceutical Essentials"
+    translated: "Alchemy Guide"
   - split: 2
     text: "炼药纲要"
-    translated: "Pharmaceutical Essentials"
+    translated: "Alchemy Guide"
 - raw: "30,烹饪纲要,烹饪纲要,2,烹饪经验,0.02,FALSE,1,粮食"
   splits:
   - split: 1
@@ -304,10 +304,10 @@
   splits:
   - split: 1
     text: "体质训练"
-    translated: "Physical Training"
+    translated: "Constitution Training"
   - split: 2
     text: "体质训练"
-    translated: "Physical Training"
+    translated: "Constitution Training"
 - raw: "36,经脉训练,经脉训练,3,全员经脉,1,TRUE,3,银钱"
   splits:
   - split: 1
@@ -344,26 +344,26 @@
   splits:
   - split: 1
     text: "拳掌训练"
-    translated: "Punch and palm training"
+    translated: "Unarmed training"
   - split: 2
     text: "拳掌训练"
-    translated: "Punch and palm training"
+    translated: "Unarmed training"
 - raw: "41,剑法训练,剑法训练,3,全员剑法,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "剑法训练"
-    translated: "Swordsmanship Training"
+    translated: "Sword Technique training"
   - split: 2
     text: "剑法训练"
-    translated: "Swordsmanship Training"
+    translated: "Sword Technique training"
 - raw: "42,刀法训练,刀法训练,3,全员刀法,1,TRUE,2,银钱"
   splits:
   - split: 1
     text: "刀法训练"
-    translated: "Blade Art Training"
+    translated: "Blade Technique training"
   - split: 2
     text: "刀法训练"
-    translated: "Blade Art Training"
+    translated: "Blade Technique training"
 - raw: "43,长兵训练,长兵训练,3,全员长兵,1,TRUE,2,银钱"
   splits:
   - split: 1
@@ -400,26 +400,26 @@
   splits:
   - split: 1
     text: "毒术训练"
-    translated: "Toxin Training"
+    translated: "Poison Arts training"
   - split: 2
     text: "毒术训练"
-    translated: "Toxin Training"
+    translated: "Poison Arts training"
 - raw: "48,学识训练,学识训练,3,全员学识,1,TRUE,1,银钱"
   splits:
   - split: 1
     text: "学识训练"
-    translated: "Scholarly Training"
+    translated: "Knowledge Training"
   - split: 2
     text: "学识训练"
-    translated: "Scholarly Training"
+    translated: "Knowledge Training"
 - raw: "49,口才训练,口才训练,3,全员口才,1,TRUE,1,银钱"
   splits:
   - split: 1
     text: "口才训练"
-    translated: "Speech training"
+    translated: "Eloquence training"
   - split: 2
     text: "口才训练"
-    translated: "Speech training"
+    translated: "Eloquence training"
 - raw: "50,采伐训练,采伐训练,3,全员采伐,1,TRUE,1,粮食"
   splits:
   - split: 1
@@ -432,10 +432,10 @@
   splits:
   - split: 1
     text: "木植训练"
-    translated: "Tree Training"
+    translated: "Planting training"
   - split: 2
     text: "木植训练"
-    translated: "Tree Training"
+    translated: "Planting training"
 - raw: "52,锻造训练,锻造训练,3,全员锻造,1,TRUE,1,矿石"
   splits:
   - split: 1

@@ -1552,7 +1552,7 @@
     translated: "Qinggong"
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   - subIndex: 2
     text: "射术"
     translated: "Archery skills"
@@ -1577,7 +1577,7 @@
     translated: "Archery skills"
   - subIndex: 2
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "材料:1.5"
@@ -1661,7 +1661,7 @@
     translated: "Long weapon"
   - subIndex: 2
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "马匹:2"
@@ -1683,7 +1683,7 @@
     translated: "Qimen"
   - subIndex: 2
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "丹药:1.5"
@@ -1699,13 +1699,13 @@
 - raw: "剑法;绝技;刀法"
   splits:
   - text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 1
     text: "绝技"
     translated: "Special Technique"
   - subIndex: 2
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "采伐;锻造"
@@ -1764,7 +1764,7 @@
     translated: "Neigong"
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   - subIndex: 2
     text: "绝技"
     translated: "Special Technique"
@@ -1795,7 +1795,7 @@
     translated: "Qimen"
   - subIndex: 3
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "学识;口才"
@@ -1851,7 +1851,7 @@
     translated: "Special Technique"
   - subIndex: 2
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 3
     text: "拳掌"
     translated: "Unarmed"
@@ -1879,7 +1879,7 @@
 - raw: "刀法;长兵;绝技"
   splits:
   - text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -1904,7 +1904,7 @@
     translated: "Neigong"
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 2
     text: "奇门"
     translated: "Qimen"
@@ -2089,7 +2089,7 @@
     translated: "Qinggong"
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0};{1}"
 - raw: "珍宝:0.5"
@@ -2108,7 +2108,7 @@
     translated: "Special Technique"
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 2
     text: "奇门"
     translated: "Qimen"
@@ -2130,7 +2130,7 @@
     translated: "Special Technique"
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0};{1}"
 - raw: "材料:0.5"
@@ -2199,7 +2199,7 @@
     translated: "Qimen"
   - subIndex: 2
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0};{1};{2}"
 - raw: "绝技;长兵"
@@ -3077,7 +3077,7 @@
 - raw: "聪慧绝伦"
   splits:
   - text: "聪慧绝伦"
-    translated: "Peerless Intelligence"
+    translated: "Peerless Cleverness"
 - raw: "动心忍性"
   splits:
   - text: "动心忍性"
@@ -3105,7 +3105,7 @@
 - raw: "内家"
   splits:
   - text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
 - raw: "内力精纯"
   splits:
   - text: "内力精纯"
@@ -3569,7 +3569,7 @@
 - raw: "聪慧"
   splits:
   - text: "聪慧"
-    translated: "Intelligence"
+    translated: "Cleverness"
 - raw: "天资过人"
   splits:
   - text: "天资过人"
@@ -7848,11 +7848,7 @@
 - raw: "八卦刀法"
   splits:
   - text: "八卦刀法"
-    translated: "Bagua Blade Art"
-    qcReviewedText: "Bagua Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Bagua Blade Technique"
 - raw: "刀法1;力道1"
   splits:
   - text: "刀法1"
@@ -8066,11 +8062,7 @@
 - raw: "辛酉刀法"
   splits:
   - text: "辛酉刀法"
-    translated: "Xinchou Blade Art"
-    qcReviewedText: "Xinchou Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Xin You Blade Technique"
 - raw: "力道1;智力1"
   splits:
   - text: "力道1"
@@ -8212,11 +8204,7 @@
 - raw: "青龙刀法"
   splits:
   - text: "青龙刀法"
-    translated: "Blue Dragon Blade Art"
-    qcReviewedText: "Blue Dragon Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Azure Dragon Blade Technique"
 - raw: "刀法1;经脉1"
   splits:
   - text: "刀法1"
@@ -17789,14 +17777,7 @@
 - raw: "万壑刀法"
   splits:
   - text: "万壑刀法"
-    translated: "Valley of Blades Technique"
-    qcReviewedText: "Valley of Blades Technique"
-    qcTranslated: "Ten Thousand Gorges Blade Technique"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Wanhe Blade Technique"
 - raw: "刀法潜力2;刀法1;体质1"
   splits:
   - text: "刀法潜力2"
@@ -18844,14 +18825,7 @@
 - raw: "诛仙剑法"
   splits:
   - text: "诛仙剑法"
-    translated: "Swordsmanship of the Crimson Virtue Sword"
-    qcReviewedText: "Swordsmanship of the Crimson Virtue Sword"
-    qcTranslated: "Sword Art of the Annihilation Sword"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Zhu Xian Sword Technique"
 - raw: "剑法潜力2;灵巧潜力1;灵巧2"
   splits:
   - text: "剑法潜力2"
@@ -19383,11 +19357,7 @@
 - raw: "刑场刀法"
   splits:
   - text: "刑场刀法"
-    translated: "Execution Blade Art"
-    qcReviewedText: "Execution Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Execution Grounds Blade Technique"
 - raw: "力道2;刀法1;内力0.1"
   splits:
   - text: "力道2"
@@ -23923,14 +23893,7 @@
 - raw: "内家数来宝"
   splits:
   - text: "内家数来宝"
-    translated: "Internal School's Coming to Showcase"
-    qcReviewedText: "Internal School's Coming to Showcase"
-    qcTranslated: "Inner Style's Numbering Rhyme"
-    qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Neigong Shu Laobaocai"
 - raw: "生命上限40;内力上限40;内功6;经脉6;卸力0.03;拳掌威力0.03"
   splits:
   - text: "生命上限40"
@@ -28954,11 +28917,7 @@
 - raw: "承影剑法"
   splits:
   - text: "承影剑法"
-    translated: "Chengying Swordsmanship"
-    qcReviewedText: "Chengying Swordsmanship"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Chengying Sword Technique"
 - raw: "剑法潜力1;体质1"
   splits:
   - text: "剑法潜力1"
@@ -38399,11 +38358,7 @@
 - raw: "骤雨刀法"
   splits:
   - text: "骤雨刀法"
-    translated: "Thunderstorm Blade Art"
-    qcReviewedText: "Thunderstorm Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sudden Rain Blade Technique"
 - raw: "体质2;刀法2"
   splits:
   - text: "体质2"
@@ -38994,11 +38949,7 @@
 - raw: "嗔狂刀法"
   splits:
   - text: "嗔狂刀法"
-    translated: "Frenzied Blade Art"
-    qcReviewedText: "Frenzied Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Furious Blade Technique"
 - raw: "体质4;刀法3"
   splits:
   - text: "体质4"
@@ -48774,11 +48725,7 @@
 - raw: "达摩剑法"
   splits:
   - text: "达摩剑法"
-    translated: "Shaolin Swordsmanship"
-    qcReviewedText: "Shaolin Swordsmanship"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Damo Sword Technique"
 - raw: "智力潜力1;意志潜力1;剑法1;智力1"
   splits:
   - text: "智力潜力1"
@@ -50187,11 +50134,7 @@
 - raw: "生死劫刀法"
   splits:
   - text: "生死劫刀法"
-    translated: "Life and Death Saber Technique"
-    qcReviewedText: "Life and Death Saber Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Life‑and‑Death Peril Blade Technique"
 - raw: "刀法潜力1;体质潜力1;经脉潜力1;体质2"
   splits:
   - text: "刀法潜力1"
@@ -52225,13 +52168,9 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "Neigong/Sword Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "医术/学识"
@@ -52252,7 +52191,7 @@
     translated: "Sword Manipulation"
   - subIndex: 2
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 3
     text: "正直"
     translated: "Upright"
@@ -52303,7 +52242,7 @@
     translated: "Unarmed"
   - subIndex: 2
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "游侠;御剑;刚愎;云游"
@@ -52348,7 +52287,7 @@
     translated: "Neigong"
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 2
     text: "拳掌"
     translated: "Unarmed"
@@ -52366,7 +52305,7 @@
     translated: "Diligence"
   - subIndex: 3
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "余.采薇"
@@ -52394,16 +52333,12 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "Neigong/Qinggong/Sword Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
   - subIndex: 2
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "武学天才;灵巧;幸运;机敏"
@@ -52442,13 +52377,9 @@
   splits:
   - text: "内功"
     translated: "Neigong"
-    qcReviewedText: "Neigong/Sword Art/Qimen"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 2
     text: "奇门"
     translated: "Qimen"
@@ -52505,7 +52436,7 @@
     translated: "Special Technique"
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 2
     text: "射术"
     translated: "Archery skills"
@@ -52548,16 +52479,12 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
-    qcReviewedText: "Qinggong/Qimen/Sword Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "奇门"
     translated: "Qimen"
   - subIndex: 2
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "医术/炼药"
@@ -52649,16 +52576,12 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
-    qcReviewedText: "Qinggong/Sword Art/Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 2
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "烹饪/木植"
@@ -52706,7 +52629,7 @@
 - raw: "刀法/射术"
   splits:
   - text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   - subIndex: 1
     text: "射术"
     translated: "Archery skills"
@@ -52881,7 +52804,7 @@
     translated: "Archery skills"
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "胸怀大志;例无虚发;轻功;绝艺超群;惊弓;毒术;精打细算;明察秋毫"
@@ -53065,7 +52988,7 @@
     translated: "Poison arts"
   - subIndex: 5
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 6
     text: "宅心仁厚"
     translated: "Benevolent and kind‑hearted"
@@ -53177,7 +53100,7 @@
     translated: "Feast of epic proportions"
   - subIndex: 4
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 5
     text: "身怀绝技"
     translated: "Master of Special Techniques"
@@ -53274,13 +53197,9 @@
   splits:
   - text: "长兵"
     translated: "Long weapon"
-    qcReviewedText: "Long weapon/Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "公正不阿;胸怀大志;一骑绝尘;枪扫六合;横刀跃马;绝艺超群;坚若磐石;身先士卒"
@@ -53726,7 +53645,7 @@
 - raw: "刀法/拳掌"
   splits:
   - text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -53819,7 +53738,7 @@
     translated: "Saber in Hand, Horse at the Ready"
   - subIndex: 4
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 5
     text: "身怀绝技"
     translated: "Master of Special Techniques"
@@ -53959,7 +53878,7 @@
     translated: "Constant Practice"
   - subIndex: 3
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 4
     text: "精耕细作"
     translated: "Cultivate with care and precision"
@@ -54354,7 +54273,7 @@
     translated: "Unarmed"
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "仙风道骨;铁手钢拳;剑随意动;炉火纯青;绝艺超群;对症下药;运气自如;脉络贯通;掌风"
@@ -54416,7 +54335,7 @@
 - raw: "剑法/拳掌"
   splits:
   - text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 1
     text: "拳掌"
     translated: "Unarmed"
@@ -54517,11 +54436,7 @@
 - raw: "刀法/长兵"
   splits:
   - text: "刀法"
-    translated: "Blade Art"
-    qcReviewedText: "Blade Art/Long weapon"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Blade Technique"
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -54613,11 +54528,7 @@
 - raw: "剑法/奇门"
   splits:
   - text: "剑法"
-    translated: "Sword Art"
-    qcReviewedText: "Sword Art/Qimen"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique"
   - subIndex: 1
     text: "奇门"
     translated: "Qimen"
@@ -54670,13 +54581,9 @@
   splits:
   - text: "奇门"
     translated: "Qimen"
-    qcReviewedText: "Qimen/Sword Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "游山玩水;旁门左道;神出鬼没;武学天才;内力精纯;隐士;卜算;剑气"
@@ -54814,7 +54721,7 @@
     translated: "Ingenious Mind"
   - subIndex: 2
     text: "聪慧绝伦"
-    translated: "Peerless Intelligence"
+    translated: "Peerless Cleverness"
   - subIndex: 3
     text: "奇经八脉"
     translated: "Eight Extraordinary Meridians"
@@ -54913,7 +54820,7 @@
     translated: "Qimen Methods"
   - subIndex: 2
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 3
     text: "绝艺超群"
     translated: "Peerless Skill"
@@ -54956,7 +54863,7 @@
     translated: "Skilled Artisans"
   - subIndex: 3
     text: "聪慧绝伦"
-    translated: "Peerless Intelligence"
+    translated: "Peerless Cleverness"
   - subIndex: 4
     text: "旧病沉疴"
     translated: "Chronic old illness"
@@ -55092,7 +54999,7 @@
     translated: "Special Technique"
   - subIndex: 5
     text: "聪慧"
-    translated: "Intelligence"
+    translated: "Cleverness"
   - subIndex: 6
     text: "滞脉"
     translated: "Obstructed Pulse"
@@ -55329,13 +55236,9 @@
   splits:
   - text: "奇门"
     translated: "Qimen"
-    qcReviewedText: "Qimen/Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "禅师;运气自如;先天气海;炉火纯青;绝技;奇技;对症下药"
@@ -55510,7 +55413,7 @@
     translated: "As solid as a rock"
   - subIndex: 3
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 4
     text: "身怀绝技"
     translated: "Master of Special Techniques"
@@ -56059,7 +55962,7 @@
     translated: "Smiling but hiding a dagger"
   - subIndex: 2
     text: "聪慧绝伦"
-    translated: "Peerless Intelligence"
+    translated: "Peerless Cleverness"
   - subIndex: 3
     text: "未卜先知"
     translated: "Foreseeing the unseen"
@@ -56321,7 +56224,7 @@
     translated: "Unarmed"
   - subIndex: 2
     text: "内家"
-    translated: "Internal School"
+    translated: "Neigong"
   - subIndex: 3
     text: "多病"
     translated: "Chronic illnesses"
@@ -57135,13 +57038,9 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
-    qcReviewedText: "Special Technique/Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "囤积居奇;暴躁;盛气凌人;公正不阿;身怀绝技;横刀跃马;笔走龙蛇"
@@ -57246,13 +57145,9 @@
   splits:
   - text: "轻功"
     translated: "Qinggong"
-    qcReviewedText: "Qinggong/Sword Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0}/{1}"
 - raw: "淡泊;蛰居偃伏;不骄不躁;博览群书;神出鬼没;剑随意动;剑气"
@@ -57796,11 +57691,7 @@
 - raw: "剑法/长兵"
   splits:
   - text: "剑法"
-    translated: "Sword Art"
-    qcReviewedText: "Sword Art/Long weapon"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique"
   - subIndex: 1
     text: "长兵"
     translated: "Long weapon"
@@ -57946,10 +57837,10 @@
     translated: "Unarmed"
   - subIndex: 1
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 2
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0}/{1}/{2}"
 - raw: "缚鸡之力;旧病沉疴;铁手钢拳;人剑合一;一刀两断;炉火纯青;神出鬼没;绝艺超群;艺成百家;武学宗师"
@@ -58004,14 +57895,10 @@
 - raw: "剑法/刀法/奇门"
   splits:
   - text: "剑法"
-    translated: "Sword Art"
-    qcReviewedText: "Sword Art/Blade Art/Qimen"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique"
   - subIndex: 1
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   - subIndex: 2
     text: "奇门"
     translated: "Qimen"
@@ -58232,11 +58119,7 @@
 - raw: "剑法/轻功/内功"
   splits:
   - text: "剑法"
-    translated: "Sword Art"
-    qcReviewedText: "Sword Art/Qinggong/Neigong"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique"
   - subIndex: 1
     text: "轻功"
     translated: "Qinggong"
@@ -58399,11 +58282,7 @@
 - raw: "刀法/内功/绝技"
   splits:
   - text: "刀法"
-    translated: "Blade Art"
-    qcReviewedText: "Blade Art/Neigong/Special Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Blade Technique"
   - subIndex: 1
     text: "内功"
     translated: "Neigong"
@@ -60691,7 +60570,7 @@
     translated: "Talent"
   - subIndex: 1
     text: "聪慧"
-    translated: "Intelligence"
+    translated: "Cleverness"
   templates:
   - template: "{0}:{1}"
 - raw: "天赋:天资过人"

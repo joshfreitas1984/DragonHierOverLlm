@@ -1,10 +1,3 @@
-
-- raw: 绝技
-  result: Special Technique
-- raw: 道无名
-  result: Dao Wuming
-  allowalt:
-    - Great Way is nameless
 - raw: 花石纲
   result: "Flower and Stone Convoy"
 - raw: "藏经阁"
@@ -15,10 +8,6 @@
   result: Sentry Post
 - raw: 钱庄
   result: Bank
-- raw: 采伐
-  result: Resource Gathering
-  allowalt:
-    - Gather Resources
 - raw: "侠盗四奇"
   result: "Four Legendary Thieves"
 - raw: 小翼子
@@ -123,34 +112,6 @@
   result: "Second Brother"
 - raw: 云裳
   result: "Yunshang"
-- raw: 体力
-  result: "Stamina"
-  allowalt:
-    - "Strength" # only after we fixed all the strengths and the one or two usages of "Strength" that are not "Stamina"
-- raw: 夏天雄
-  result: "Xia Tianxiong"
-- raw: 金龙生
-  result: "Jin Longsheng"
-- raw: 思中澜
-  result: "Si Zhonglan"
-- raw: "计心狂"
-  result: "Ji Xinkuang"
-- raw: "阎罗王"
-  result: "King Yama"
-- raw: "欧长兵"
-  result: "Ou Changbing"
-- raw: 恶名
-  result: "Infamy"
-  allowalt:
-    - "infamous"
-# - raw: 体质
-#   result: "Constitution"
-- raw: "长兵"
-  result: "Long weapon"
-  allowalt: 
-  - "Changbing"
-  exclude: 
-    - heroNameParts.txt
 
 - raw: 黑风寨
   result: Black Wind Stronghold 
@@ -207,3 +168,6 @@
 - raw: 分则两败，合能成王
   result: "Divided we fall, united we rule"
 
+- raw: 筑基
+  result: Foundation Establishment
+  badtrans: false

@@ -38,11 +38,7 @@
   splits:
   - split: 19
     text: "位于门派深处一处幽僻隐秘的建筑，设有修习内功，轻功以及绝技的各类器械秘籍、机关装置，以及突破武学境界所需的闭关房。"
-    translated: "Deep within the sect, in a secluded and hidden building, there are various machines, secret manuals, mechanisms, and devices for practicing internal skill, lightness, and special techniques, as well as meditation rooms needed to break through martial arts realms."
-    qcReviewedText: "Deep within the sect, in a secluded and hidden building, there are various machines, secret manuals, mechanisms, and devices for practicing internal skill, lightness, and special techniques, as well as meditation rooms needed to break through martial arts realms."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Deep within the sect, in a secluded and hidden building, there are various devices, secret manuals, mechanisms, and apparatus for practicing internal skill, qinggong, and special techniques, as well as meditation chambers needed to break through martial arts realms."
 - raw: "4,祠堂,4,0,1,0,3,祭典?获取门派威望\\n技能影响：学识-我-ProduceBuildingWork-5;鉴定?鉴定珍宝-我&入门弟子-IdentifyItem;门派展厅?管理门派展厅-我&正式弟子-ShowForceShowRoom;宴会?与门派弟子宴饮提升忠诚-我&掌门-StartForceParty,威望+10,银钱-100,科研效率0.4;学识经验0.1;口才经验0.1,,威望100;木料500;矿石500,10,2,,11,door,0;0,供奉祭祀门派历代掌门先贤之所，同时设有陈列珍宝之展厅，以及研习技艺，鉴定珍宝所需的各类工具书籍。"
   splits:
   - split: 19
@@ -429,11 +425,7 @@
   splits:
   - split: 19
     text: "点苍山麓，洱海之滨，寺中有三塔峙立，金碧交辉，香火鼎盛，以五大重器闻名于世，堪称西南第一佛刹。传闻其间僧众不乏极擅医术者，慈悲为怀，济世救民，一时传为佳话。"
-    translated: "At the foot of Diancang Mountain, beside Erhai Lake, there stand three pagodas within the temple, shining with golden and emerald light. The temple is renowned for its five major treasures and thrives with incense offerings. It is considered the foremost Buddhist monastery in Southwest China. Legends say that among the monks, many are exceptionally skilled in medicine, practicing compassion to heal the sick and save lives, which has become a well‑told tale."
-    qcReviewedText: "At the foot of Diancang Mountain, beside Erhai Lake, there stand three pagodas within the temple, shining with golden and emerald light. The temple is renowned for its five major treasures and thrives with incense offerings. It is considered the foremost Buddhist monastery in Southwest China. Legends say that among the monks, many are exceptionally skilled in medicine, practicing compassion to heal the sick and save lives, which has become a well‑told tale."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "At the foot of Diancang Mountain, by the shores of Erhai Lake, three towering pagodas stand in the temple, their golden and verdant hues shining brilliantly, with incense smoke rising continuously. Renowned for the Five Great Treasures, it is known as the foremost Buddhist sanctuary in southwestern China. It is said that among the monks, many excel in Medical Arts, driven by compassion to heal and save the people, a tale that has become legendary."
 - raw: "46,长城,46,6,1,0,4,兵器--ShowBuildingShop,威望+20;全域防御+1,矿石-100,实战经验0.1;城防耐久0.2,,银钱1000;矿石2000,20,4,2000-15-1-0,2,footstep,0;0,依山而建的防御工事，由高大绵延的长垣以及敌楼、关城、墩堡、营城等组成，用于阻隔北方游牧骑兵入侵之铁蹄，作为自古以来兵家必争之地，一时也成了兵甲器具的集散交易之所。"
   splits:
   - split: 19
@@ -635,11 +627,7 @@
   splits:
   - split: 19
     text: "一座气势森然的高台，其上陈列有各式刀兵数百把，大小各异，长短不一，刀光凛凛，耀眼夺目。霸刀门弟子常在此演习刀法，试用兵刃，劈金碎石之声如雷霆惊乍，不绝于耳。"
-    translated: "A high stage exuding momentum is adorned with hundreds of various swords and blades. Their sizes vary, and their lengths differ, yet the blade light sparkles brilliantly. Disciples of the Tyrant Blade Sect frequently practice their Blade Art here, testing out their weapons. The sound of splitting gold and shattering stones reverberates like thunder, never ceasing to echo."
-    qcReviewedText: "A high stage exuding momentum is adorned with hundreds of various swords and blades. Their sizes vary, and their lengths differ, yet the blade light sparkles brilliantly. Disciples of the Tyrant Blade Sect frequently practice their Blade Art here, testing out their weapons. The sound of splitting gold and shattering stones reverberates like thunder, never ceasing to echo."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A towering platform with a formidable presence, upon which hundreds of various blades and weapons are displayed. They vary in size and length, their sharp edges gleaming brilliantly. Disciples of the Tyrant Blade Sect often practice their blade techniques here, testing their weapons with the sound of cleaving through metal and shattering stones echoing like thunder."
 - raw: "66,蓬莱阁,66,6,1,0,4,提升剑法潜力--StudyMaxFightSkill-4;万剑-我&门派功能13-ShowWeaponResearch,威望+10,木料-100,全员灵巧2;剑法经验0.2;全员剑法2,,木料2000;药材1000,20,43,,2,footstep,0;0,地处丹崖山峦，东临碣石，以观沧海，传说八仙过海始于此处，蓬莱弟子登临此地，观琼瑶仙境，海市蜃楼之奇景，以此融入剑法剑意之中，轻灵飘逸确不似凡间所有。"
   splits:
   - split: 19
@@ -662,11 +650,7 @@
   splits:
   - split: 19
     text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
-    translated: "The perilous and extraordinary Kongtong Mountain, with its legend of seventy‑two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in a labyrinthine fashion. The disciples of Kongtong use this terrain to hone their unorthodox special techniques, often employing risky maneuvers that are hard to guard against."
-    qcReviewedText: "The perilous and extraordinary Kongtong Mountain, with its legend of seventy‑two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in a labyrinthine fashion. The disciples of Kongtong use this terrain to hone their unorthodox special techniques, often employing risky maneuvers that are hard to guard against."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Kongtong Mountain is perilous and extraordinary, with legends of seventy‑two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in intricate loops. Kongtong disciples use this terrain to practice Qimen Special Techniques, often employing risky maneuvers that are hard to guard against."
 - raw: "69,机关坊,69,6,1,0,4,提升学识潜力--StudyMaxLivingSkill-2;机关-我&门派功能16-ShowSpeSummonResearch,威望+10;银钱+100,木料-150,城防耐久0.2;科研效率0.4;全员灵巧2;全员智力2,,银钱1000;木料2000,20,46,,9,door,0;0,墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
   splits:
   - split: 19

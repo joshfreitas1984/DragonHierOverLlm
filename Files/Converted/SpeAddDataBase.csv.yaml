@@ -321,11 +321,7 @@
   splits:
   - split: 3
     text: "内家"
-    translated: "Internal kung fu"
-    qcReviewedText: "Internal kung fu"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Neigong"
   - split: 4
     text: "空乏"
     translated: "Deprive"
@@ -404,15 +400,11 @@
     qcDefectCategory: None
   - split: 10
     text: "提升拳掌伤害"
-    translated: "Increase fist and palm attack damage"
-    qcReviewedText: "Increase fist and palm attack damage \\nReduce damage from fist and palm attacks"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Increase unarmed damage"
   - split: 10
     subIndex: 1
     text: "降低受到的拳掌伤害"
-    translated: "Reduce damage from fist and palm attacks"
+    translated: "Reduce received unarmed damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -464,11 +456,7 @@
     qcDefectCategory: None
   - split: 10
     text: "提升刀法伤害"
-    translated: "Boost Blade Art damage"
-    qcReviewedText: "Boost Blade Art damage \\nReduce damage from blade techniques"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Increase Blade Technique damage"
   - split: 10
     subIndex: 1
     text: "降低受到的刀法伤害"
@@ -554,18 +542,11 @@
     qcDefectCategory: None
   - split: 10
     text: "提升射术伤害"
-    translated: "Increase arrow damage"
-    qcReviewedText: "Increase arrow damage \\nReduce their arrow damage taken"
-    qcTranslated: "Increase arrow damage \\nReduce incoming arrow damage"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Increase Archery Damage"
   - split: 10
     subIndex: 1
     text: "降低受到的射术伤害"
-    translated: "Reduce their arrow damage taken"
+    translated: "Reduce received archery damage"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -2620,15 +2601,11 @@
     qcDefectCategory: None
   - split: 10
     text: "灵巧"
-    translated: "Nimble"
-    qcReviewedText: "Nimble/Physique-30%;Disable Special Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Agility"
   - split: 10
     subIndex: 1
     text: "体质"
-    translated: "Physique"
+    translated: "Constitution"
   - split: 10
     subIndex: 2
     text: "禁用绝技"
@@ -3132,11 +3109,7 @@
     qcDefectCategory: None
   - split: 10
     text: "灵巧"
-    translated: "Nimble"
-    qcReviewedText: "Nimble+50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Agility"
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3158,11 +3131,7 @@
     qcDefectCategory: None
   - split: 10
     text: "灵巧"
-    translated: "Nimble"
-    qcReviewedText: "Nimble-50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Agility"
   templates:
   - split: 10
     template: "{0}-50%"
@@ -3288,11 +3257,7 @@
     qcDefectCategory: None
   - split: 10
     text: "体质"
-    translated: "Physique"
-    qcReviewedText: "Physique+50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Constitution"
   templates:
   - split: 10
     template: "{0}+50%"
@@ -3314,11 +3279,7 @@
     qcDefectCategory: None
   - split: 10
     text: "体质"
-    translated: "Physique"
-    qcReviewedText: "Physique-50%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Constitution"
   templates:
   - split: 10
     template: "{0}-50%"
@@ -5005,11 +4966,7 @@
     qcDefectCategory: None
   - split: 10
     text: "拳掌攻击距离"
-    translated: "Punch and palm attack range"
-    qcReviewedText: "Punch and palm attack range"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unarmed attack range"
 - raw: "199,剑法距离,1,无,无,0,1,1,0,0,剑法攻击距离,我方,1,0,1,0,0"
   splits:
   - split: 3
@@ -5097,11 +5054,7 @@
     qcDefectCategory: None
   - split: 10
     text: "奇门攻击距离"
-    translated: "Unorthodox attack range"
-    qcReviewedText: "Unorthodox attack range"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Qimen attack range"
 - raw: "203,射术距离,1,无,无,0,1,1,0,0,射术攻击距离,我方,1,0,1,0,0"
   splits:
   - split: 3
@@ -5144,10 +5097,6 @@
   - split: 10
     text: "坐骑加成轻功"
     translated: "Mount Boost Qinggong"
-    qcReviewedText: "Mount Boost Qinggong/Strength/Physique/Willpower"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "力道"
@@ -5155,7 +5104,7 @@
   - split: 10
     subIndex: 2
     text: "体质"
-    translated: "Physique"
+    translated: "Constitution"
   - split: 10
     subIndex: 3
     text: "意志"

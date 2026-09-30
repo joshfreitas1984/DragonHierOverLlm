@@ -1,78 +1,103 @@
+- raw: 体力
+  result: "Stamina"
+  exclude:
+    - PlotData.csv
+    - KungFuData.csv
+  # allowalt:
+  #   - "Strength" # only after we fixed all the strengths and the one or two usages of "Strength" that are not "Stamina"
+- raw: 恶名
+  result: "Infamy"
+  allowalt:
+    - "infamous"
+
 
 - raw: 力道
   result: Strength
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 灵巧
   result: Agility
+  allowalt: 
+    - agile
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 智力
   result: Intelligence
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 意志
   result: Willpower
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 体质
   result: Constitution
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 经脉
   result: Meridians
   allowalt: 
     - Meridian
+    - KungFuData.csv
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 
 
 - raw: 内家
   result: Neigong
+  allowalt:
+    - every household #adjacent char
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 轻功
   result: Qinggong
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 绝技
   result: Special Technique
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 拳掌
   result: Unarmed
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: "剑法"
   result: "Sword Technique"
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: "刀法"
   result: "Blade Technique"
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 长兵
@@ -80,19 +105,21 @@
   allowalt:
     - Changbing
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - heroNameParts.txt
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 奇门
   result: Qimen
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+    - KungFuData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 射术
   result: Archery
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 医术
@@ -100,7 +127,7 @@
   allowalt: 
     - Medical
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 毒术
@@ -108,49 +135,58 @@
   allowalt:
     - Poison
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 学识
   result: Knowledge
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 口才
   result: Eloquence
+  allowalt:
+    - excuse # colocated chars
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 采伐
   result: Resource Gathering
+  allowalt:
+    - gather resources
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 木植
   result: Planting
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 锻造
   result: Forging
   exclude:
-    - PlotText.csv
+    - PlotData.csv
+  allowalt:
+    - forge
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 炼药
   result: Alchemy
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 - raw: 烹饪
   result: Cooking
+  allowalt:
+  - Cook
+  - prepared
   exclude:
-    - PlotText.csv
+    - PlotData.csv
   # only: 
   #   - dynamicStringsFromColumns.txt
 

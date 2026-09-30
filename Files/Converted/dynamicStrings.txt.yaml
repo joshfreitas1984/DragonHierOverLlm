@@ -869,26 +869,18 @@
   splits:
   - text: "#PlayerName#你初入本门，修为尚浅，为师今天就先传你一式基础武学。"
     translated: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique."
-    qcReviewedText: "#PlayerName#, you are new to our sect and your cultivation is still shallow. Today, I will first teach you a basic martial technique.\nWhich one would you like to learn first among our sect's basic internal skill, lightness, and special technique?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "不知本门的基础内功，轻功与绝技之中，你想先学哪一门？"
-    translated: "Which one would you like to learn first among our sect's basic internal skill, lightness, and special technique?"
+    translated: "Which one would you like to learn first among our sect's basic internal skill, qinggong, and special technique?"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#你初入江湖，修为尚浅，为师今天就先传你一式基础武学。\n不知为师的基础内功，轻功与绝技之中，你想先学哪一门？"
   splits:
   - text: "#PlayerName#你初入江湖，修为尚浅，为师今天就先传你一式基础武学。"
     translated: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique."
-    qcReviewedText: "#PlayerName#, you're just starting out in the Jianghu, and your cultivation is still shallow. Today, I'll teach you a basic martial art technique.\nWhich one would you like to learn first among my basic internal skill, lightness, and special technique?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "不知为师的基础内功，轻功与绝技之中，你想先学哪一门？"
-    translated: "Which one would you like to learn first among my basic internal skill, lightness, and special technique?"
+    translated: "Don't know which of my basic internal skill, qinggong, or special technique you'd like to learn first?"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#你发烧糊涂了吗？我们已经是同门了啊！"
@@ -2087,13 +2079,9 @@
   splits:
   - text: "#PlayerName#来得正好，我近日有所感悟，想寻人辩论验证！"
     translated: "#PlayerName#, you've come at the right time. I've had some recent realizations and want to find someone to debate and verify them!"
-    qcReviewedText: "#PlayerName#, you've come at the right time. I've had some recent realizations and want to find someone to debate and verify them!\nIf #PlayerName# has some free time, why not compete in a verbal duel with me?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "若#PlayerName#得空，不妨同我一较口才？"
-    translated: "If #PlayerName# has some free time, why not compete in a verbal duel with me?"
+    translated: "If #PlayerName# has the time, why not compete with me in eloquence?"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#来的正好！\n我眼下被一恶徒盯上，已与其游斗多时，还请#PlayerName#施以援手！"
@@ -3429,13 +3417,9 @@
   splits:
   - text: "#PlayerName#面色苍白，脚步虚浮，似乎有伤势在身。"
     translated: "#PlayerName# had a pale face and unsteady steps, as if injured."
-    qcReviewedText: "#PlayerName# had a pale face and unsteady steps, as if injured.\nI have a basic understanding of medicine. If you don't mind, I'd be happy to examine you!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "本人还算略通医术，若不嫌弃还请让我为你诊治一番！"
-    translated: "I have a basic understanding of medicine. If you don't mind, I'd be happy to examine you!"
+    translated: "I still have some knowledge of Medical Arts; if you don't mind, please let me examine and treat you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#高风亮节，淡泊名利，反倒显得我小家子气了。\n也罢也罢，下次请你喝酒便是！"
@@ -4552,16 +4536,9 @@
   splits:
   - text: "#TargetInteractName#可敢按照江湖规矩与我斗技一番，胜利者就能获得这件物品如何？"
     translated: "#TargetInteractName#, dare you face me in combat according to the rules of the Jianghu? The winner will obtain this item, isn't that right?"
-    qcReviewedText: "#TargetInteractName#, dare you face me in combat according to the rules of the Jianghu? The winner will obtain this item, isn't that right?\n(The more agile, with stronger willpower and greater proficiency in Qinggong compared to the opponent, and the higher the goodwill, the higher the success rate.\nCurrent Arena Battle Success Rate {0}%, Expected increase in infamy {1} Dot)"
-    qcTranslated: "#TargetInteractName#, dare you face me in combat according to the rules of the Jianghu? The winner will obtain this item, isn't that right?\n(The more agile, with stronger willpower and greater proficiency in Qinggong compared to the opponent, and the higher the goodwill, the higher the success rate.\nCurrent Arena Battle Success Rate {0}%, Expected increase in Infamy {1} points)"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "灵巧，意志和轻功超过对方越多且好感越高，成功率越高。"
-    translated: "The more agile, with stronger willpower and greater proficiency in Qinggong compared to the opponent, and the higher the goodwill, the higher the success rate."
+    translated: "The more your Agility, Willpower, and Qinggong surpass the other person's, and the higher your affection, the greater the success rate."
   - subIndex: 2
     text: "当前斗技成功率"
     translated: "Current Arena Battle Success Rate"
@@ -5050,11 +5027,7 @@
 - raw: "#TargetInteractName#轻功过人，我是在追赶不上。\n愿赌服输，这些钱便归#TargetInteractName#你所有！"
   splits:
   - text: "#TargetInteractName#轻功过人，我是在追赶不上。"
-    translated: "#TargetInteractName# has superior lightness skills; I can't keep up."
-    qcReviewedText: "#TargetInteractName# has superior lightness skills; I can't keep up.\nWin or lose, the money belongs to #TargetInteractName#!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#TargetInteractName#'s qinggong is too skilled for me to catch up."
   - subIndex: 1
     text: "愿赌服输，这些钱便归#TargetInteractName#你所有！"
     translated: "Win or lose, the money belongs to #TargetInteractName#!"
@@ -7026,7 +6999,7 @@
 - raw: "<color=red>{0}</color>;{1};false;;学识{2}排除"
   splits:
   - text: "学识"
-    translated: "Scholarship"
+    translated: "Knowledge"
   - subIndex: 1
     text: "排除"
     translated: "Exclude"
@@ -11210,11 +11183,7 @@
 - raw: "{1}剑法满级，额外剑法+{0}"
   splits:
   - text: "剑法满级，额外剑法"
-    translated: "Sword Art Maxed, Additional Sword Art"
-    qcReviewedText: "{1} Sword Art Maxed, Additional Sword Art+{0}"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Maxed Sword Technique, Extra Sword Techniques"
   templates:
   - template: "⟦1⟧{0}+⟦0⟧"
 - raw: "{1}功绩+{0}%\n获得{0}%门派加成效果\n当月功绩可获月俸<b>{2}</b>\n每月刷新门派委托{3}/1次"
@@ -12399,13 +12368,9 @@
   splits:
   - text: "一路跋涉，终于来到资源最为丰饶之处。"
     translated: "After a long journey, we finally arrive at the most resource‑rich area."
-    qcReviewedText: "After a long journey, we finally arrive at the most resource‑rich area.\nI can collect ordinary wood ore for the sect's use, or search for rarer materials to forge and enhance equipment."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我可以在此收集普通的木料矿石供门派使用，或是搜寻更为稀有的材料用来锻造强化装备。"
-    translated: "I can collect ordinary wood ore for the sect's use, or search for rarer materials to forge and enhance equipment."
+    translated: "I can gather common wood and ore for the Sect to use, or search for rarer materials to forge and enhance equipment."
   templates:
   - template: "{0}\n{1}"
 - raw: "一路跋涉，终于来到资源最为丰饶之处。\n我可以在此收集普通的粮食药材供门派使用，或是搜寻更为稀有的材料用来烹饪炼丹。"
@@ -13724,15 +13689,7 @@
 - raw: "世间奇珍异宝可谓浩如繁星，若想一一准确鉴定，非有渊博之学识不可。\n({0}提升{1}点学识效果，当前可鉴定学识要求{2}以下的珍宝)"
   splits:
   - text: "世间奇珍异宝可谓浩如繁星，若想一一准确鉴定，非有渊博之学识不可。"
-    translated: "The world is indeed filled with countless rare treasures and extraordinary baubles. To accurately appraise each one requires profound scholarship."
-    qcReviewedText: "The world is indeed filled with countless rare treasures and extraordinary baubles. To accurately appraise each one requires profound scholarship.\n({0} Improve {1} Activate knowledge effect: Current identification knowledge requirement Applies {2} Following Treasures)"
-    qcTranslated: "The world is indeed filled with countless rare treasures and extraordinary baubles. To accurately appraise each one requires profound scholarship.\n({0} improves {1} points of Knowledge effect; current identification Knowledge requirement applies to treasures below {2})"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "The world's rare treasures are as numerous as the stars in the sky. To accurately identify each one, one must possess extensive knowledge."
   - subIndex: 1
     text: "提升"
     translated: "Improve"
@@ -17707,11 +17664,7 @@
 - raw: "体质"
   splits:
   - text: "体质"
-    translated: "Physique"
-    qcReviewedText: "Physique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Constitution"
 - raw: "何以解忧，唯有杜康"
   splits:
   - text: "何以解忧，唯有杜康"
@@ -17981,14 +17934,7 @@
 - raw: "你施展轻功，避开紧追其后的官差袭来的兵刃，\n随后跃上房檐，消失在一阵烟雾之中。"
   splits:
   - text: "你施展轻功，避开紧追其后的官差袭来的兵刃，"
-    translated: "You perform lightness, dodging the officials' weapons that pursue you closely."
-    qcReviewedText: "You perform lightness, dodging the officials' weapons that pursue you closely.\nThen he leaped onto the roof and disappeared in a cloud of smoke."
-    qcTranslated: "You perform Qinggong, dodging the weapons of the pursuing officials.\nThen you leaped onto the roof and disappeared in a cloud of smoke."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "You use qinggong to evade the weapons of the pursuing officials."
   - subIndex: 1
     text: "随后跃上房檐，消失在一阵烟雾之中。"
     translated: "Then he leaped onto the roof and disappeared in a cloud of smoke."
@@ -20039,14 +19985,7 @@
 - raw: "凭借我#PlayerForceName#秘法，可拆解成品装备，将其熔炼成锻造材料。\n所得材料会保留装备上的最多三个加成效果。"
   splits:
   - text: "凭借我#PlayerForceName#秘法，可拆解成品装备，将其熔炼成锻造材料。"
-    translated: "While using their #PlayerForceName# arcane technique, they can disassemble finished items into crafting materials."
-    qcReviewedText: "While using their #PlayerForceName# arcane technique, they can disassemble finished items into crafting materials.\nThe materials will retain up to three enhancement effects on the equipment."
-    qcTranslated: "By using my #PlayerForceName# arcane technique, I can disassemble finished items into crafting materials.\nThe materials will retain up to three enhancement effects on the equipment."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Using my secret technique, #PlayerForceName#, I can dismantle finished equipment and smelt it into forging materials."
   - subIndex: 1
     text: "所得材料会保留装备上的最多三个加成效果。"
     translated: "The materials will retain up to three enhancement effects on the equipment."
@@ -20290,11 +20229,7 @@
 - raw: "刀法"
   splits:
   - text: "刀法"
-    translated: "Blade Art"
-    qcReviewedText: "Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Blade Technique"
 - raw: "分"
   splits:
   - text: "分"
@@ -20622,11 +20557,7 @@
 - raw: "别跑了别跑了，#TargetInteractName#轻功超绝，我难以望其项背......\n这些钱#TargetInteractName#你拿去快走吧！"
   splits:
   - text: "别跑了别跑了，#TargetInteractName#轻功超绝，我难以望其项背......"
-    translated: "Stop running, stop running, #TargetInteractName# has incredible lightness skills... I can't even compare to them......"
-    qcReviewedText: "Stop running, stop running, #TargetInteractName# has incredible lightness skills... I can't even compare to them......\nThese funds, #TargetInteractName#, take them and leave quickly!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Don't run, don't run, #TargetInteractName#'s qinggong is unparalleled, I can't even begin to compare..."
   - subIndex: 1
     text: "这些钱#TargetInteractName#你拿去快走吧！"
     translated: "These funds, #TargetInteractName#, take them and leave quickly!"
@@ -20780,11 +20711,7 @@
 - raw: "剑法"
   splits:
   - text: "剑法"
-    translated: "Sword Art"
-    qcReviewedText: "Sword Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique"
 - raw: "剧情"
   splits:
   - text: "剧情"
@@ -21352,7 +21279,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "医术"
-    translated: "Medicine"
+    translated: "Medical Arts"
   templates:
   - template: "{0};HospitalCureExternalInjury;;;{1}:{2}"
 - raw: "包扎;HospitalCureExternalInjuryForce;;;技能影响:医术"
@@ -21364,7 +21291,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "医术"
-    translated: "Medicine"
+    translated: "Medical Arts"
   templates:
   - template: "{0};HospitalCureExternalInjuryForce;;;{1}:{2}"
 - raw: "化干戈为玉帛，本就是一桩美事。\n既然#PlayerName#也有此意，那咱们两派从今日起便停战{0}日！"
@@ -21517,11 +21444,7 @@
 - raw: "医术"
   splits:
   - text: "医术"
-    translated: "Medicine"
-    qcReviewedText: "Medicine"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Medical Arts"
 - raw: "十"
   splits:
   - text: "十"
@@ -22641,13 +22564,9 @@
   splits:
   - text: "只是你现在根基未稳，为师今天先传你一门基础武学。"
     translated: "But your foundation is not yet stable, so I will teach you a basic martial art for today."
-    qcReviewedText: "But your foundation is not yet stable, so I will teach you a basic martial art for today.\nThis internal skill, lightness, or special technique, #PlayerName#, which one would you like to practice first?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "这内功，轻功与绝技，#PlayerName#想先选择哪门进行修习？"
-    translated: "This internal skill, lightness, or special technique, #PlayerName#, which one would you like to practice first?"
+    translated: "This internal skill, qinggong, or special technique, #PlayerName#, which one would you like to practice first?"
   templates:
   - template: "{0}\n{1}"
 - raw: "只是借你一看罢了;ChangePlot;1"
@@ -22950,13 +22869,9 @@
   splits:
   - text: "只见#$TargetInteractName#从最近的书架上抄起两本秘籍收入怀中，随后飞身跃出窗外。"
     translated: "Only #$TargetInteractName# grabs two secret manuals from the nearest bookshelf and stores them in his arms, then leaps out of the window."
-    qcReviewedText: "Only #$TargetInteractName# grabs two secret manuals from the nearest bookshelf and stores them in his arms, then leaps out of the window.\nYou also propelled yourself forward with lightness, following closely until you came to a stop in a hidden spot."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "你也催动轻功紧随其后，直至一隐蔽之处方才停下。"
-    translated: "You also propelled yourself forward with lightness, following closely until you came to a stop in a hidden spot."
+    translated: "You also activated your qinggong and followed closely behind until you stopped at a hidden spot."
   templates:
   - template: "{0}\n{1}"
 - raw: "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，\n随手将银两收入囊中，然后径直起身飘然而去。"
@@ -23042,11 +22957,7 @@
 - raw: "只需发挥我的轻功在这山上快速游走，一定能采到足够的药材。"
   splits:
   - text: "只需发挥我的轻功在这山上快速游走，一定能采到足够的药材。"
-    translated: "Just by utilizing my lightness to quickly move around on this mountain, I should be able to gather enough herbs."
-    qcReviewedText: "Just by utilizing my lightness to quickly move around on this mountain, I should be able to gather enough herbs."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Just use my qinggong to move swiftly through this mountain, and I'm sure I can gather enough herbs."
 - raw: "召唤"
   splits:
   - text: "召唤"
@@ -25089,11 +25000,7 @@
 - raw: "哈哈！#PlayerName#这点口才也来调解纷争，未免不自量力了。\n后会有期！"
   splits:
   - text: "哈哈！#PlayerName#这点口才也来调解纷争，未免不自量力了。"
-    translated: "Ha ha! #PlayerName# this bit of rhetoric also comes to mediate disputes, rather overestimating yourself."
-    qcReviewedText: "Ha ha! #PlayerName# this bit of rhetoric also comes to mediate disputes, rather overestimating yourself.\nSee you later!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Haha! #PlayerName#, with your eloquence, you're overestimating your abilities to mediate this dispute."
   - subIndex: 1
     text: "后会有期！"
     translated: "See you later!"
@@ -32449,15 +32356,7 @@
 - raw: "好汉不吃眼前亏，眼下势头不妙，只能催动轻功溜之大吉了。\n（当前成功率为{0}%。自身轻功比对方高越多，越可能逃过一劫。）"
   splits:
   - text: "好汉不吃眼前亏，眼下势头不妙，只能催动轻功溜之大吉了。"
-    translated: "A hero doesn't swallow his pride, and with the situation not looking good, he could only muster his lightness to make a quick getaway."
-    qcReviewedText: "A hero doesn't swallow his pride, and with the situation not looking good, he could only muster his lightness to make a quick getaway.\n(Current success rate is {0}%.The higher one's Qinggong is compared to the other, the greater the chance of escaping unharmed.)"
-    qcTranslated: "A true hero doesn't take a loss just to save face, and with the situation looking grim, he could only use his Qinggong to make a quick getaway.\n(Current success rate is {0}%. The higher one's Qinggong is compared to the other, the greater the chance of escaping unharmed.)"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
-    - OtherNamedDefect
+    translated: "A hero doesn't take a loss when it can be avoided. With the situation turning for the worse, it's best to use qinggong and make a hasty retreat."
   - subIndex: 1
     text: "（当前成功率为"
     translated: "(Current success rate is"
@@ -32532,16 +32431,12 @@
   splits:
   - text: "好说好说，只是近来囊中羞涩，着实周转不开。"
     translated: "No problem, it's just that lately I've been a bit short on cash and things are a bit tight."
-    qcReviewedText: "No problem, it's just that lately I've been a bit short on cash and things are a bit tight.\nOnce I strike it rich in the future, I will gladly present the outstanding debt to you with both hands!\n(As soon as the words fell from his mouth, this person suddenly propelled himself with lightness and turned to run towards the distance!)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "等日后发了大财，我自会将欠款双手奉上！"
     translated: "Once I strike it rich in the future, I will gladly present the outstanding debt to you with both hands!"
   - subIndex: 2
     text: "（话音刚落，此人竟催动轻功，扭头向远方跑去！）"
-    translated: "(As soon as the words fell from his mouth, this person suddenly propelled himself with lightness and turned to run towards the distance!)"
+    translated: "(No sooner had the words been spoken than this person activated qinggong and turned to run off into the distance!)"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "好说好说，只是近来囊中羞涩，着实周转不开。\n若是#SourceInteractName#能替我垫付一半欠款，就再好不过了。"
@@ -33738,11 +33633,7 @@
 - raw: "学识"
   splits:
   - text: "学识"
-    translated: "Scholarship"
-    qcReviewedText: "Scholarship"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Knowledge"
 - raw: "孱弱"
   splits:
   - text: "孱弱"
@@ -35076,13 +34967,9 @@
   splits:
   - text: "小贼休走！真是胆大包天，偷东西偷到我#SourceForceName#头上来了！"
     translated: "Thief, do not run! You have the audacity to steal from #SourceForceName#!"
-    qcReviewedText: "Thief, do not run! You have the audacity to steal from #SourceForceName#!\n(You propelled yourself with lightness to catch up and had the bandit on the ground in no time.)"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "你催动轻功追赶，没一会就把那毛贼按倒在地。"
-    translated: "You propelled yourself with lightness to catch up and had the bandit on the ground in no time."
+    translated: "You activated your qinggong and caught up to the thief, pinning him to the ground in no time."
   templates:
   - template: "{0}\n({1})"
 - raw: "小贼，凭你这花拳绣腿也敢越狱？\n不想受罪就给老子乖乖待着，少动歪心思！"
@@ -37887,11 +37774,7 @@
 - raw: "往年本门烹饪这腊八粥，都是讲究一个同心协力，人人有份。\n不论厨艺高低，皆需尽心尽力，\n师傅每每借此方法，教育我们“众人拾柴火焰高”的道理。"
   splits:
   - text: "往年本门烹饪这腊八粥，都是讲究一个同心协力，人人有份。"
-    translated: "In previous years, when our sect prepared this Laba porridge, it was always about working together in harmony, with everyone having a share."
-    qcReviewedText: "In previous years, when our sect prepared this Laba porridge, it was always about working together in harmony, with everyone having a share.\nRegardless of skill level, one must give their all.\nMaster often uses this method to teach us the principle that many hands make light work."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "In previous years, our sect cooked Laba Porridge with everyone working together and contributing."
   - subIndex: 1
     text: "不论厨艺高低，皆需尽心尽力，"
     translated: "Regardless of skill level, one must give their all."
@@ -38088,7 +37971,7 @@
 - raw: "得找个好借口才行;MissMeeting"
   splits:
   - text: "得找个好借口才行"
-    translated: "We need a good excuse for that"
+    translated: "I need to come up with a good excuse."
   templates:
   - template: "{0};MissMeeting"
 - raw: "得罪了"
@@ -39632,13 +39515,9 @@
   splits:
   - text: "我也想帮忙，可实在是不擅厨艺......"
     translated: "I want to help, but I'm really not good at cooking......"
-    qcReviewedText: "I want to help, but I'm really not good at cooking......\nRecently, I've been cutting back on drinks to practice lightness and lose weight, so it's better to have just a little less."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "最近正好为了苦练轻功减肥，还是少喝两口为妙。"
-    translated: "Recently, I've been cutting back on drinks to practice lightness and lose weight, so it's better to have just a little less."
+    translated: "Recently, I've been working hard to lose weight by practicing qinggong, so it's best to drink less for now."
   templates:
   - template: "{0}\n{1}"
 - raw: "我也有此意，奈何#PlayerName#所属{0}之弟子人员已满，只能暂且作罢。"
@@ -40174,16 +40053,9 @@
   splits:
   - text: "我最近新得了几本秘籍，若#TargetInteractName#不嫌弃，何不来近前观赏一番？"
     translated: "I've recently acquired a few new secret manuals. If #TargetInteractName# don't mind, would you come closer to take a look?"
-    qcReviewedText: "I've recently acquired a few new secret manuals. If #TargetInteractName# don't mind, would you come closer to take a look?\n(The more agile, with stronger willpower and greater proficiency in Qinggong compared to the opponent, and the higher the goodwill, the higher the success rate.\nCurrent theft success rate {0}%, Expected increase in infamy {1} Dot)"
-    qcTranslated: "I've recently acquired a few new Secret Manuals. If #TargetInteractName# don't mind, would you come closer to take a look?\n(The more agile, with stronger willpower and greater proficiency in Qinggong compared to the opponent, and the higher the goodwill, the higher the success rate.\nCurrent theft success rate {0}%, Expected increase in Infamy {1} points)"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "灵巧，意志和轻功超过对方越多且好感越高，成功率越高。"
-    translated: "The more agile, with stronger willpower and greater proficiency in Qinggong compared to the opponent, and the higher the goodwill, the higher the success rate."
+    translated: "The more your Agility, Willpower, and Qinggong surpass the other person's, and the higher your affection, the greater the success rate."
   - subIndex: 2
     text: "当前偷窃成功率"
     translated: "Current theft success rate"
@@ -40953,11 +40825,7 @@
 - raw: "我还算粗通医术，\n若#TargetInteractName#不嫌弃，还请让我为你诊治一番。"
   splits:
   - text: "我还算粗通医术，"
-    translated: "I have a fair understanding of medicine"
-    qcReviewedText: "I have a fair understanding of medicine\nIf #TargetInteractName# doesn't mind, may I please treat you?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "I still have some basic knowledge of Medical Arts."
   - subIndex: 1
     text: "若#TargetInteractName#不嫌弃，还请让我为你诊治一番。"
     translated: "If #TargetInteractName# doesn't mind, may I please treat you?"
@@ -41081,13 +40949,9 @@
   splits:
   - text: "战斗中的移动距离"
     translated: "Distance moved in battle"
-    qcReviewedText: "Distance moved in battle\nLightness and agility determine the basic leap distance."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "灵巧轻功之和决定基础移距"
-    translated: "Lightness and agility determine the basic leap distance."
+    translated: "Agility and qinggong determine the base movement distance."
   templates:
   - template: "{0}\n{1}"
 - raw: "战斗准备"
@@ -42387,11 +42251,7 @@
 - raw: "拳掌"
   splits:
   - text: "拳掌"
-    translated: "Fists and palms"
-    qcReviewedText: "Fists and palms"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unarmed"
 - raw: "拼酒"
   splits:
   - text: "拼酒"
@@ -45131,16 +44991,12 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nI just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials.\nI wonder if #PlayerName# knows how to gather Resources?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我适才发现一处矿藏丰饶的山脉，里面似乎埋藏有珍稀材料，"
     translated: "I just discovered a mountain range rich in mineral deposits, and it seems to contain rare materials."
   - subIndex: 2
     text: "不知#PlayerName#是否知晓应当如何采伐？"
-    translated: "I wonder if #PlayerName# knows how to gather Resources?"
+    translated: "Do you know how to gather resources, #PlayerName#?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n我适才发现一群毒性异常的蛇虫，里面似乎混杂有珍稀毒物，\n不知#PlayerName#是否知晓应当如何捉捕？"
@@ -45195,32 +45051,24 @@
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nOn this sheer cliff grows a rather rare medicinal herb.\nI've heard that #PlayerName# has impressive lightness skills. Could you use them to pick some down for me?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "这悬崖绝壁之上生长着一味颇为珍稀的药材，"
     translated: "On this sheer cliff grows a rather rare medicinal herb."
   - subIndex: 2
     text: "久闻#PlayerName#轻功高强，能否替我去采摘几株下来？"
-    translated: "I've heard that #PlayerName# has impressive lightness skills. Could you use them to pick some down for me?"
+    translated: "I've heard that your qinggong is highly skilled, #PlayerName#. Could you pick me a few of them?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n这悬崖绝壁之上生长着一种颇为珍稀的食材，\n久闻#PlayerName#轻功高强，能否替我去采摘几株下来？"
   splits:
   - text: "是#PlayerName#啊！来的正巧，"
     translated: "It's you, #PlayerName#! You timed it just right!"
-    qcReviewedText: "It's you, #PlayerName#! You timed it just right!\nOn this sheer cliff face grows a rather rare ingredient.\nI've heard that #PlayerName# has impressive lightness skills. Could you use them to pick some down for me?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "这悬崖绝壁之上生长着一种颇为珍稀的食材，"
     translated: "On this sheer cliff face grows a rather rare ingredient."
   - subIndex: 2
     text: "久闻#PlayerName#轻功高强，能否替我去采摘几株下来？"
-    translated: "I've heard that #PlayerName# has impressive lightness skills. Could you use them to pick some down for me?"
+    translated: "I've heard that your qinggong is highly skilled, #PlayerName#. Could you pick me a few of them?"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "是#PlayerName#啊！来的正巧，\n这浓雾毒瘴之中潜伏着一种颇为珍稀的毒虫，\n久闻#PlayerName#内功高强，能否替我去捉捕几只下来？"
@@ -46000,14 +45848,7 @@
 - raw: "木植"
   splits:
   - text: "木植"
-    translated: "Forest Plant"
-    qcReviewedText: "Forest Plant"
-    qcTranslated: "Forestry"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Planting"
 - raw: "未习得"
   splits:
   - text: "未习得"
@@ -46149,11 +45990,7 @@
 - raw: "本人初到贵宝地，身无长技，只是自幼练得一伶牙俐齿，能言善辩的辩论口才。\n望您各位走过路过不要错过！有钱捧个钱场，没钱捧个人场！\n废话不多说，给各位表演一个出口成章！"
   splits:
   - text: "本人初到贵宝地，身无长技，只是自幼练得一伶牙俐齿，能言善辩的辩论口才。"
-    translated: "I am a novice in your esteemed land, lacking in many skills, but I have a sharp tongue and skilled in debate from my youth."
-    qcReviewedText: "I am a novice in your esteemed land, lacking in many skills, but I have a sharp tongue and skilled in debate from my youth.\nPlease don't miss this! If you have money, please support with money; if you don't, please support with your presence!\nNo idle talk. Let me show you my fluency!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "I am new to this esteemed place, without any special skills, except for a sharp tongue and eloquence that I've honed since childhood."
   - subIndex: 1
     text: "望您各位走过路过不要错过！有钱捧个钱场，没钱捧个人场！"
     translated: "Please don't miss this! If you have money, please support with money; if you don't, please support with your presence!"
@@ -46181,11 +46018,7 @@
 - raw: "本人初到贵宝地，身无长技，只是自幼练得一登萍渡水，追云赶月的飘逸轻功。\n望您各位走过路过不要错过！有钱捧个钱场，没钱捧个人场！\n废话不多说，给各位表演一个飞檐走壁！"
   splits:
   - text: "本人初到贵宝地，身无长技，只是自幼练得一登萍渡水，追云赶月的飘逸轻功。"
-    translated: "I am new to your esteemed land, possessing no great skills. Since my youth, I have practiced lightness, allowing me to step on water and follow clouds and moonlight."
-    qcReviewedText: "I am new to your esteemed land, possessing no great skills. Since my youth, I have practiced lightness, allowing me to step on water and follow clouds and moonlight.\nPlease don't miss this! If you have money, please support with money; if you don't, please support with your presence!\nWithout further ado, let me show you a demonstration of wall‑running!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "I am new to this esteemed place and have no special skills, except for a graceful qinggong that I've practiced since childhood, allowing me to tread on water lilies and chase the moon in the clouds."
   - subIndex: 1
     text: "望您各位走过路过不要错过！有钱捧个钱场，没钱捧个人场！"
     translated: "Please don't miss this! If you have money, please support with money; if you don't, please support with your presence!"
@@ -50929,13 +50762,9 @@
   splits:
   - text: "没错没错，这正是我苦寻已久的珍稀材料！多谢#PlayerName#出手相助。"
     translated: "Correct, correct. This is exactly the rare material I've been searching for! Thank you, #PlayerName#, for your help."
-    qcReviewedText: "Correct, correct. This is exactly the rare material I've been searching for! Thank you, #PlayerName#, for your help.\nI forged an item a few days ago, and if you don't mind, please accept it."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我前几日锻造了一件装备，若不嫌弃还请收下。"
-    translated: "I forged an item a few days ago, and if you don't mind, please accept it."
+    translated: "A few days ago, I forged a piece of equipment. If you don't mind, please accept it."
   templates:
   - template: "{0}\n{1}"
 - raw: "没错没错，这正是我苦寻已久的珍稀药引！多谢#PlayerName#出手相助。\n我前几日配置了一味药方，若不嫌弃还请收下。"
@@ -50955,13 +50784,9 @@
   splits:
   - text: "没错没错，这正是我苦寻已久的珍稀食材！多谢#PlayerName#出手相助。"
     translated: "Right, right! This is exactly the rare ingredient I've been searching for! Thank you, #PlayerName#, for your help."
-    qcReviewedText: "Right, right! This is exactly the rare ingredient I've been searching for! Thank you, #PlayerName#, for your help.\nI prepared a delicious dish a few days ago. If you don't mind, please accept it."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我前几日烹饪了一件佳肴，若不嫌弃还请收下。"
-    translated: "I prepared a delicious dish a few days ago. If you don't mind, please accept it."
+    translated: "I prepared a delicacy a few days ago; if you are not repulsed by it, please accept it."
   templates:
   - template: "{0}\n{1}"
 - raw: "没错！;AttackMartialClubStart"
@@ -51875,11 +51700,7 @@
 - raw: "灵巧"
   splits:
   - text: "灵巧"
-    translated: "Nimble"
-    qcReviewedText: "Nimble"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Agility"
 - raw: "灵果"
   splits:
   - text: "灵果"
@@ -60150,19 +59971,12 @@
   splits:
   - text: "行至一山明水秀之处，只见花飞蝶舞之间，"
     translated: "Arriving at a place where the mountains are clear and the waters are beautiful, one sees flowers flying and butterflies dancing."
-    qcReviewedText: "Arriving at a place where the mountains are clear and the waters are beautiful, one sees flowers flying and butterflies dancing.\nIt was a field of medicinal herbs infused with spirit, from which many herbs could be harvested at a glance.\nBut to select the finest pieces, one must have exquisite woodworking skills."
-    qcTranslated: "Arriving at a place where the mountains are clear and the waters are beautiful, one sees flowers flying and butterflies dancing. It was a field of medicinal herbs infused with spirit, from which many herbs could be harvested at a glance. But to select the finest pieces, one must have exquisite cultivation skills."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
   - subIndex: 1
     text: "赫然是一片负气含灵的药田，一眼望去有诸多药材可供取用。"
     translated: "It was a field of medicinal herbs infused with spirit, from which many herbs could be harvested at a glance."
   - subIndex: 2
     text: "但若要从中挑选精品，非得有高超木植技巧不可。"
-    translated: "But to select the finest pieces, one must have exquisite woodworking skills."
+    translated: "But to pick out the fine goods, one must have superb Planting skills."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "行至一枝繁叶茂之处，只见丛林掩映之间，\n赫然矗立着一株参天巨木，一眼望去有诸多木材可供取用。\n但若要从中挑选精品，非得有高超采伐技巧不可。"
@@ -60185,35 +59999,24 @@
   splits:
   - text: "行至一水草丰茂之处，只见鸟语花香之间，"
     translated: "Arriving at a place where the grass is lush and verdant, one finds oneself amid the sounds of birds and the fragrance of flowers."
-    qcReviewedText: "Arriving at a place where the grass is lush and verdant, one finds oneself amid the sounds of birds and the fragrance of flowers.\nIt was a vibrant river valley, offering a variety of edible ingredients at first glance.\nBut to select the finest pieces, one must have exquisite woodworking skills."
-    qcTranslated: "Arriving at a place where the grass is lush and verdant, one finds oneself amid the sounds of birds and the fragrance of flowers. It was a vibrant river valley, offering a variety of edible ingredients at first glance. But to select the finest pieces, one must have exquisite botany skills."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
   - subIndex: 1
     text: "赫然是一片生机勃勃的河谷，一眼望去有诸多食材可供取用。"
     translated: "It was a vibrant river valley, offering a variety of edible ingredients at first glance."
   - subIndex: 2
     text: "但若要从中挑选精品，非得有高超木植技巧不可。"
-    translated: "But to select the finest pieces, one must have exquisite woodworking skills."
+    translated: "But to pick out the fine goods, one must have superb Planting skills."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "行至一穷山恶水之处，只见瘴气缭绕之间，\n赫然是一片泥泞污浊的沼泽，一眼望去有诸多毒物可供捕获。\n但若要从中挑选精品，非得有高超毒术技巧不可。"
   splits:
   - text: "行至一穷山恶水之处，只见瘴气缭绕之间，"
     translated: "Travelling to a desolate place among desolate mountains and foul waters, one sees the miasma hanging in the air."
-    qcReviewedText: "Travelling to a desolate place among desolate mountains and foul waters, one sees the miasma hanging in the air.\nIt was a muddy and foul swamp, teeming with various poisonous creatures to capture at a glance.\nBut to pick out the best, one must have superb venom techniques."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "赫然是一片泥泞污浊的沼泽，一眼望去有诸多毒物可供捕获。"
     translated: "It was a muddy and foul swamp, teeming with various poisonous creatures to capture at a glance."
   - subIndex: 2
     text: "但若要从中挑选精品，非得有高超毒术技巧不可。"
-    translated: "But to pick out the best, one must have superb venom techniques."
+    translated: "But to pick out the finest items, one must have exceptional Poison Arts skills."
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "行走江湖，难免跌打损伤。\n我在这附近游方行医多年，若少侠需要寻诊问药，只管开口便是！"
@@ -60305,13 +60108,9 @@
   splits:
   - text: "被你说的都饿了，我也再吃一个好了......"
     translated: "Hearing you say that makes me hungry too... I'll have one more..."
-    qcReviewedText: "Hearing you say that makes me hungry too... I'll have one more...\nJust lately, I've been feeling a bit too content, and practicing lightness techniques is really not advisable. Sin, sin...\nAh, even better than last year!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "只是近来有些心宽体胖，修炼轻功实在大为不宜，罪过罪过......"
-    translated: "Just lately, I've been feeling a bit too content, and practicing lightness techniques is really not advisable. Sin, sin..."
+    translated: "I've just been feeling a bit too relaxed and comfortable lately, which is really not good for practicing qinggong... Sin of sins..."
   - subIndex: 2
     text: "嗯，比去年还好吃！"
     translated: "Ah, even better than last year!"
@@ -60321,13 +60120,9 @@
   splits:
   - text: "被你说的都饿了，我也再吃一个好了......"
     translated: "Hearing you say that makes me hungry too... I'll have one more..."
-    qcReviewedText: "Hearing you say that makes me hungry too... I'll have one more...\nJust lately, I've been feeling a bit too content, and practicing lightness techniques is really not advisable. Sin, sin...\nMm, it's definitely tasty"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "只是近来有些心宽体胖，修炼轻功实在大为不宜，罪过罪过......"
-    translated: "Just lately, I've been feeling a bit too content, and practicing lightness techniques is really not advisable. Sin, sin..."
+    translated: "I've just been feeling a bit too relaxed and comfortable lately, which is really not good for practicing qinggong... Sin of sins..."
   - subIndex: 2
     text: "嗯，确实好吃。"
     translated: "Mm, it's definitely tasty"
@@ -61671,7 +61466,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "医术"
-    translated: "Medicine"
+    translated: "Medical Arts"
   - subIndex: 3
     text: "内功"
     translated: "Neigong"
@@ -61686,7 +61481,7 @@
     translated: "Skill impact"
   - subIndex: 2
     text: "医术"
-    translated: "Medicine"
+    translated: "Medical Arts"
   - subIndex: 3
     text: "内功"
     translated: "Neigong"
@@ -64848,13 +64643,9 @@
   splits:
   - text: "这位少侠面容富态，神采奕奕，显然正是万中无一的庖厨奇才。"
     translated: "This young hero has a plump and lively appearance, clearly the unparalleled culinary genius among a myriad of candidates."
-    qcReviewedText: "This young hero has a plump and lively appearance, clearly the unparalleled culinary genius among a myriad of candidates.\nI just happen to have some cooking and alchemical resources, so I might as well sell them to you at a discount!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我这儿正好有些烹饪炼药的资源材料，就干脆便宜些卖给你好了！"
-    translated: "I just happen to have some cooking and alchemical resources, so I might as well sell them to you at a discount!"
+    translated: "I happen to have some cooking and alchemy resources here, so I'll sell them to you at a discount!"
   templates:
   - template: "{0}\n{1}"
 - raw: "这位少侠面无血色，印堂发黑，似乎有隐疾在身。\n不妨让本医师替你诊治一番，必能妙手回春，药到病除。"
@@ -65569,11 +65360,7 @@
 - raw: "这轻功名为“逍遥游”，乃是脱胎自道家典籍《庄子》的轻功，\n乘天地之正，御六气之辩，以游无穷，\n倒也颇为符合丐帮弟子云游天下之意趣。"
   splits:
   - text: "这轻功名为“逍遥游”，乃是脱胎自道家典籍《庄子》的轻功，"
-    translated: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic Zhuangzi."
-    qcReviewedText: "This lightness skill is called Free and Easy Wandering, a skill derived from the Daoist classic Zhuangzi.\nTo ride the principles of nature, to wander beyond the bounds of the mundane.\nIt rather suits the wandering spirit of the disciples of the Beggar Sect."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This qinggong is called Free and Easy Wandering, a qinggong derived from the Taoist classic Zhuangzi."
   - subIndex: 1
     text: "乘天地之正，御六气之辩，以游无穷，"
     translated: "To ride the principles of nature, to wander beyond the bounds of the mundane."
@@ -65585,11 +65372,7 @@
 - raw: "这轻身术乃轻功筑基之法，还望你好生参悟。\n待功力大成之后，方能修习更高深之武学。"
   splits:
   - text: "这轻身术乃轻功筑基之法，还望你好生参悟。"
-    translated: "This lightness technique is the Foundation Establishment of Flying Skill, I hope you can deeply understand it."
-    qcReviewedText: "This lightness technique is the Foundation Establishment of Flying Skill, I hope you can deeply understand it.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This Lightness Technique is the foundational method of Qinggong; I hope you study it diligently."
   - subIndex: 1
     text: "待功力大成之后，方能修习更高深之武学。"
     translated: "Only after one's cultivation is complete can they practice more advanced martial arts."
@@ -67238,11 +67021,7 @@
 - raw: "鉴定学识"
   splits:
   - text: "鉴定学识"
-    translated: "Scholarship appraisal"
-    qcReviewedText: "Scholarship appraisal"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Evaluate Knowledge"
 - raw: "鉴定物品;ChooseIdentifyItem;false"
   splits:
   - text: "鉴定物品"
@@ -68334,13 +68113,6 @@
   splits:
   - text: "阁下想在"
     translated: "Your Excellency wishes to"
-    qcReviewedText: "Your Excellency wishes to {0} How many days for the breathing exercise? Daily consumption?{4} Silver, reduce {1} Internal Injury\n(The Medical Pavilion's current skill level is {2}, Your average Internal Skill in Medicine is {3}, The effect is the sum of both)"
-    qcTranslated: "Your Excellency wishes to {0} for how many days? Daily cost is {4} Silver, reducing {1} Internal Injury.\n(The Medical Pavilion's current skill level is {2}, Your average Internal Skill in Medicine is {3}, The effect is the sum of both)"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "调息几天？每日消耗"
     translated: "How many days for the breathing exercise? Daily consumption?"
@@ -68355,7 +68127,7 @@
     translated: "The Medical Pavilion's current skill level is"
   - subIndex: 5
     text: "，你的医术内功技能平均为"
-    translated: ", Your average Internal Skill in Medicine is"
+    translated: ", Your average Medical Arts and Neigong skills are"
   - subIndex: 6
     text: "，效果取二者之和。"
     translated: ", The effect is the sum of both"
@@ -70996,14 +70768,10 @@
 - raw: "（催动轻功一路追赶......）\n这家伙脚力不错，若非我轻功高强恐怕还真追之不及\n看来得因地制宜，想想办法才行！"
   splits:
   - text: "（催动轻功一路追赶......）"
-    translated: "(Activating lightness to pursue relentlessly......)"
-    qcReviewedText: "(Activating lightness to pursue relentlessly......)\nThis guy has pretty good speed. If it weren't for my excellent lightness technique, I might not have been able to catch up.\nWe need to adapt to the situation and think of a solution!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "(Activating qinggong to chase all the way...)"
   - subIndex: 1
     text: "这家伙脚力不错，若非我轻功高强恐怕还真追之不及"
-    translated: "This guy has pretty good speed. If it weren't for my excellent lightness technique, I might not have been able to catch up."
+    translated: "This guy has pretty good footwork; if it weren't for my superior qinggong, I probably wouldn't have been able to catch up."
   - subIndex: 2
     text: "看来得因地制宜，想想办法才行！"
     translated: "We need to adapt to the situation and think of a solution!"

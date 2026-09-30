@@ -1317,19 +1317,12 @@
   splits:
   - text: "偷窃对方的一件物品"
     translated: "Stealing an item from the other party"
-    qcReviewedText: "♦Stealing an item from the other party\\n♦The theft success rate depends on the item's value and the goodwill between both parties./Nimble/Willpower/Qinggong collectively decides\\n♦According to the result, increase infamy slightly"
-    qcTranslated: "♦Stealing an item from the other party\\n♦The theft success rate depends on the item's value and the goodwill, Nimble, Willpower, and Qinggong of both parties collectively\\n♦According to the result, increase infamy slightly"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "偷窃成功率由物品价值和双方的好感"
     translated: "The theft success rate depends on the item's value and the goodwill between both parties."
   - subIndex: 2
     text: "灵巧"
-    translated: "Nimble"
+    translated: "Agility"
   - subIndex: 3
     text: "意志"
     translated: "Willpower"
@@ -1431,13 +1424,6 @@
   splits:
   - text: "抢夺对方的一件物品"
     translated: "Steal an item from the other party"
-    qcReviewedText: "♦Steal an item from the other party\\n♦Robbing success rate depends on the item's value and mutual goodwill./Strength/Physique/Decide together on the Special Technique\\n♦Increase Infamy based on the result"
-    qcTranslated: "♦Steal an item from the other party\\n♦Robbing success rate depends on the item's value and mutual goodwill/Strength/Physique/Special Technique\\n♦Increase Infamy based on the result"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "抢夺成功率由物品价值和双方的好感"
     translated: "Robbing success rate depends on the item's value and mutual goodwill."
@@ -1446,7 +1432,7 @@
     translated: "Strength"
   - subIndex: 3
     text: "体质"
-    translated: "Physique"
+    translated: "Constitution"
   - subIndex: 4
     text: "绝技共同决定"
     translated: "Decide together on the Special Technique"
@@ -5425,13 +5411,9 @@
   splits:
   - text: "主属性"
     translated: "Primary Stat"
-    qcReviewedText: "Primary Stat Physique Willpower \\nMain Martial Art Long weapon Qimen"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "体质"
-    translated: "Physique"
+    translated: "Constitution"
   - subIndex: 2
     text: "意志"
     translated: "Willpower"
@@ -5450,22 +5432,18 @@
   splits:
   - text: "主属性"
     translated: "Primary Stat"
-    qcReviewedText: "Primary Stat Strength Physique \\nMain Martial Art Blade Art Long weapon"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "力道"
     translated: "Strength"
   - subIndex: 2
     text: "体质"
-    translated: "Physique"
+    translated: "Constitution"
   - subIndex: 3
     text: "主武学"
     translated: "Main Martial Art"
   - subIndex: 4
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   - subIndex: 5
     text: "长兵"
     translated: "Long weapon"
@@ -5500,16 +5478,12 @@
   splits:
   - text: "主属性"
     translated: "Primary Stat"
-    qcReviewedText: "Primary Stat Intelligence Nimble \\nMain Martial Art Archery Sword Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "智力"
     translated: "Intelligence"
   - subIndex: 2
     text: "灵巧"
-    translated: "Nimble"
+    translated: "Agility"
   - subIndex: 3
     text: "主武学"
     translated: "Main Martial Art"
@@ -5518,20 +5492,16 @@
     translated: "Archery"
   - subIndex: 5
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   templates:
   - template: "{0} {1} {2}\\n{3} {4} {5}"
 - raw: "主属性 灵巧 经脉\\n主武学 剑法 拳掌"
   splits:
   - text: "主属性"
     translated: "Primary Stat"
-    qcReviewedText: "Primary Stat Nimble Meridian \\nMain Martial Art Sword Art Fists and palms"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "灵巧"
-    translated: "Nimble"
+    translated: "Agility"
   - subIndex: 2
     text: "经脉"
     translated: "Meridian"
@@ -5540,20 +5510,16 @@
     translated: "Main Martial Art"
   - subIndex: 4
     text: "剑法"
-    translated: "Sword Art"
+    translated: "Sword Technique"
   - subIndex: 5
     text: "拳掌"
-    translated: "Fists and palms"
+    translated: "Unarmed"
   templates:
   - template: "{0} {1} {2}\\n{3} {4} {5}"
 - raw: "主属性 经脉 力道\\n主武学 拳掌 刀法"
   splits:
   - text: "主属性"
     translated: "Primary Stat"
-    qcReviewedText: "Primary Stat Meridian Strength \\nMain Martial Art Fists and palms Blade Art"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "经脉"
     translated: "Meridian"
@@ -5565,10 +5531,10 @@
     translated: "Main Martial Art"
   - subIndex: 4
     text: "拳掌"
-    translated: "Fists and palms"
+    translated: "Unarmed"
   - subIndex: 5
     text: "刀法"
-    translated: "Blade Art"
+    translated: "Blade Technique"
   templates:
   - template: "{0} {1} {2}\\n{3} {4} {5}"
 - raw: "主管治下城镇人口事宜\\n\\n提升任职者#EffectSkill#经验#ForceJobExpRate#\\n同时根据任职者<b>#EffectSkill#技能</b>提升<b>#EffectForceSpeAdd#</b>"
@@ -5877,32 +5843,18 @@
   splits:
   - text: "九种武学技能分别为"
     translated: "Nine martial arts skills are as follows:"
-    qcReviewedText: "Nine martial arts skills are as follows:：\\nInternal Skill, Lightness, Special Techniques, Fist and Palm Techniques, Sword Art, Blade Art, Long weapon, Unorthodox, Archery."
-    qcTranslated: "Nine martial arts skills are as follows:\\nInternal Skill, Lightness, Special Techniques, Fist and Palm Techniques, Sword Art, Blade Art, Long weapon, Unorthodox, Archery."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "内功，轻功，绝技，拳掌，剑法，刀法，长兵，奇门，射术。"
-    translated: "Internal Skill, Lightness, Special Techniques, Fist and Palm Techniques, Sword Art, Blade Art, Long weapon, Unorthodox, Archery."
+    translated: "Internal Skill, Qinggong, Special Technique, Unarmed, Sword Technique, Blade Technique, Long weapon, Qimen, Archery."
   templates:
   - template: "{0}：\\n{1}"
 - raw: "九种生活技艺分别为：\\n医术，毒术，学识，口才，采伐，木植，锻造，炼药，烹饪。"
   splits:
   - text: "九种生活技艺分别为"
     translated: "The nine life skills are respectively"
-    qcReviewedText: "The nine life skills are respectively：\\nMedicine, Toxin Techniques, Knowledge, Eloquence, Resource Gathering, Wood Crafting, Smithing, Alchemy, Cooking."
-    qcTranslated: "The nine life skills are respectively:\\nMedicine, Toxin Techniques, Knowledge, Eloquence, Resource Gathering, Wood Crafting, Smithing, Alchemy, Cooking."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "医术，毒术，学识，口才，采伐，木植，锻造，炼药，烹饪。"
-    translated: "Medicine, Toxin Techniques, Knowledge, Eloquence, Resource Gathering, Wood Crafting, Smithing, Alchemy, Cooking."
+    translated: "Medical Arts, Poison Arts, Knowledge, Eloquence, Resource Gathering, Planting, Forging, Alchemy, Cooking."
   templates:
   - template: "{0}：\\n{1}"
 - raw: "也有人说他抵达北辽，在当地乱局中留下了足迹。"
@@ -8855,13 +8807,9 @@
   splits:
   - text: "你当前运用的武功，包括"
     translated: "The martial arts you are currently using include"
-    qcReviewedText: "The martial arts you are currently using include：\\nInternal Skill, Lightness, Special Technique, and up to eight External Skills."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "内功，轻功，绝技，以及最多八门外功。"
-    translated: "Internal Skill, Lightness, Special Technique, and up to eight External Skills."
+    translated: "Internal Skill, Qinggong, Special Technique, and up to eight External Skills."
   templates:
   - template: "{0}：\\n{1}"
 - raw: "你按镖头指示抵达目标地点，只见一群强人正围着镖队僵持不下，\\n有数名镖师已然身受重伤，勉强支撑着。"
@@ -10738,11 +10686,7 @@
 - raw: "又是一年一度元宵佳节，城内家家户户张灯结彩，欢庆节日。\\n行人也皆是盛装打扮，手提花灯，熙熙攘攘，穿梭路间。\\n整条街道仿佛银河落地，流光溢彩，好一派热闹喜庆的祥和景象！"
   splits:
   - text: "又是一年一度元宵佳节，城内家家户户张灯结彩，欢庆节日。"
-    translated: "It's the Lantern Festival once again, and the city is adorned with lanterns and festive decorations as everyone celebrates."
-    qcReviewedText: "It's the Lantern Festival once again, and the city is adorned with lanterns and festive decorations as everyone celebrates.\\nPedestrians were all dressed in their finest, holding flower lanterns, bustling and moving about the streets.\\nThe entire street sparkles like a fallen galaxy, a dazzling display of joy and festivity!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Another year has brought the Lantern Festival, with every household in the city decorating with lanterns and celebrating the holiday."
   - subIndex: 1
     text: "行人也皆是盛装打扮，手提花灯，熙熙攘攘，穿梭路间。"
     translated: "Pedestrians were all dressed in their finest, holding flower lanterns, bustling and moving about the streets."
@@ -13351,11 +13295,7 @@
 - raw: "坊间传闻有一名神医隐居于此，医术高妙，菩萨心肠。\\n只是这山高地阔，人迹罕至，要寻找此人也无异于大海捞针一般。"
   splits:
   - text: "坊间传闻有一名神医隐居于此，医术高妙，菩萨心肠。"
-    translated: "Folklore speaks of a divine physician who resides here, with exquisite skills and a compassionate heart."
-    qcReviewedText: "Folklore speaks of a divine physician who resides here, with exquisite skills and a compassionate heart.\\nBut with this remote and rugged terrain, rarely visited by humans, finding this person would be akin to searching for a needle in a haystack."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "There's a rumor in town about a divine doctor who lives here, skilled in Medical Arts with a compassionate heart."
   - subIndex: 1
     text: "只是这山高地阔，人迹罕至，要寻找此人也无异于大海捞针一般。"
     translated: "But with this remote and rugged terrain, rarely visited by humans, finding this person would be akin to searching for a needle in a haystack."
@@ -16644,13 +16584,9 @@
   splits:
   - text: "掌门之右臂，主管门派情报探查事务"
     translated: "Sect Leader's Right Arm, oversees the sect's intelligence gathering affairs"
-    qcReviewedText: "Sect Leader's Right Arm, oversees the sect's intelligence gathering affairs \\n\\nEnhance the job holder's Agile Will Meridian #ForceJobAttriNum#"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "提升任职者灵巧意志经脉#ForceJobAttriNum#"
-    translated: "Enhance the job holder's Agile Will Meridian #ForceJobAttriNum#"
+    translated: "Enhance the agility, willpower, and meridians of the position holder by #ForceJobAttriNum#."
   templates:
   - template: "{0}\\n\\n{1}"
 - raw: "掌门之左膀，主管门派征伐防卫事务\\n\\n提升任职者力量智力体质#ForceJobAttriNum#"
@@ -18054,11 +17990,7 @@
 - raw: "此处会列出你所掌握的所有拳掌功夫。"
   splits:
   - text: "此处会列出你所掌握的所有拳掌功夫。"
-    translated: "Here is a list of all the fist and palm techniques you master."
-    qcReviewedText: "Here is a list of all the fist and palm techniques you master."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Here lists all the unarmed combat skills you know."
 - raw: "此处便会列出你随身携带的所有秘籍，\\n点击即可进行阅读。"
   splits:
   - text: "此处便会列出你随身携带的所有秘籍，"
@@ -19520,11 +19452,7 @@
 - raw: "由于太祖长拳是拳掌功夫，因此选择“拳掌”分类"
   splits:
   - text: "由于太祖长拳是拳掌功夫，因此选择“拳掌”分类"
-    translated: "Since the Great Ancestor Long Fist is a combination of fist and palm techniques, it is therefore categorized under the Fist and Palm section."
-    qcReviewedText: "Since the Great Ancestor Long Fist is a combination of fist and palm techniques, it is therefore categorized under the Fist and Palm section."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Since the Great Ancestor Long Fist is a unarmed technique, select the Unarmed category."
 - raw: "由于现在你实力较弱，建议先从功力较低的杨思迟师兄开始。\\n点击头像，便可开始切磋。"
   splits:
   - text: "由于现在你实力较弱，建议先从功力较低的杨思迟师兄开始。"
@@ -23096,14 +23024,7 @@
 - raw: "这......我虽粗通医术，但大多针对江湖中人之内外损伤。\\n若要医治这时疾瘟疫，还真有些束手无策。"
   splits:
   - text: "这......我虽粗通医术，但大多针对江湖中人之内外损伤。"
-    translated: "This... Though I have a basic understanding of medicine, it is mostly for the injuries of people in the Jianghu."
-    qcReviewedText: "This... Though I have a basic understanding of medicine, it is mostly for the injuries of people in the Jianghu.\\nTo treat this particular epidemic, there really seems to be little we can do."
-    qcTranslated: "This... Though I have a basic understanding of medicine, it is mostly for the internal and external injuries of people in the Jianghu.\\nTo treat this particular epidemic, there really seems to be little we can do."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "This... Although I have a basic understanding of Medical Arts, they are mostly for treating the internal and external injuries of those in Jianghu."
   - subIndex: 1
     text: "若要医治这时疾瘟疫，还真有些束手无策。"
     translated: "To treat this particular epidemic, there really seems to be little we can do."
@@ -23414,11 +23335,7 @@
 - raw: "这家伙一副诡计多端的样子，轻功也颇为不俗。\\n大侠千万当心，别着了他的道啊。"
   splits:
   - text: "这家伙一副诡计多端的样子，轻功也颇为不俗。"
-    translated: "This guy has a devious look about him, and his lightness skill is quite impressive."
-    qcReviewedText: "This guy has a devious look about him, and his lightness skill is quite impressive.\\nGreat Hero, be extremely cautious and don't fall for his trap."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This guy looks full of cunning schemes, and his qinggong is also quite impressive."
   - subIndex: 1
     text: "大侠千万当心，别着了他的道啊。"
     translated: "Great Hero, be extremely cautious and don't fall for his trap."

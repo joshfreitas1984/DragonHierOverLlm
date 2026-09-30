@@ -47,7 +47,7 @@ models:
 glossaryPreset:
   usePresetChineseGlossary: true
   chineseGlossaryTypesToSupress:
-    - Phonetics
+    - Phonetics    
 useContinuousWorkerPool: true
 maxConcurrency: 2
 retryCount: 3

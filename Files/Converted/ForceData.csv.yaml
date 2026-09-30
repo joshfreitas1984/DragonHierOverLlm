@@ -137,14 +137,6 @@
   - split: 15
     text: "行医"
     translated: "Practice medicine"
-    qcReviewedText: "<b>Practice medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>：Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are met.-50%。\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
-    qcTranslated: "<b>Practice medicine</b>: Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>: Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are reduced by ‑50%.\\n<b>Spirit Grove</b>: In the Ten Thousand Flowers Valley, Sect contributions can be exchanged for high‑quality medicinal aids."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
-    - DroppedContent
   - split: 15
     subIndex: 1
     text: "治疗他人不限好感和次数，每月坐诊次数翻倍，所有治疗好感+20%并获得额外声望。"
@@ -156,7 +148,7 @@
   - split: 15
     subIndex: 3
     text: "炼药效率+20%且可以选用多个药引，炮制强化丹药的所有需求"
-    translated: "Potion‑making efficiency at +20% and can choose multiple infusions. All requirements for refining elixirs are met."
+    translated: "Alchemy efficiency +20% and multiple choice elixir ingredients to meet all requirements for crafting enhanced pills."
   - split: 15
     subIndex: 4
     text: "灵谷"
@@ -448,7 +440,7 @@
   - split: 15
     subIndex: 3
     text: "每满级一门剑法武学，根据武学品级额外提升0.5"
-    translated: "Gain one Sword Art upon reaching max level, with additional boosts based on the art's rank: 0.5"
+    translated: "For each Sword Technique martial art mastered at max level, receive an additional bonus based on the quality level of the martial art, 0.5."
   - split: 15
     subIndex: 4
     text: "3点剑法。"
@@ -499,7 +491,7 @@
   - split: 15
     subIndex: 3
     text: "每满级一门奇门武学，根据武学品级额外提升0.5"
-    translated: "For each advanced Unorthodox martial art you master at level‑up, you receive an additional bonus based on the quality level of the martial art: 0.5"
+    translated: "For each advanced Qimen martial art mastered at level cap, gain an additional bonus based on the art's quality level.0.5"
   - split: 15
     subIndex: 4
     text: "3点奇门。"

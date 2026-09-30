@@ -305,11 +305,7 @@
   splits:
   - split: 4
     text: "源于少林的内家功法，分为四段，其法至简而其理颇深"
-    translated: "Originating from Shaolin, internal kung fu techniques are divided into four stages. The methods may be simple, but the principles are profound."
-    qcReviewedText: "Originating from Shaolin, internal kung fu techniques are divided into four stages. The methods may be simple, but the principles are profound."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Shaolin's Neigong techniques are divided into four stages. The methods are simple, but the principles are profound."
 - raw: "31,内功,1,玉带诀,以双臂抱树不断运力拔持的奇特功法，功成者一发力便可将树木连根拔起,,1,力道1;意志1,生命上限20;内力上限60;内功6;力道3;意志3;伤害0.06,,内功15;力道10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -362,11 +358,7 @@
   splits:
   - split: 4
     text: "修习时周身发热，如置身火窖之中，非意志坚定者难以修炼"
-    translated: "During cultivation, one feels heat all over their body, as if they are in a furnace. Only those with a firm will can endure the training."
-    qcReviewedText: "During cultivation, one feels heat all over their body, as if they are in a furnace. Only those with a firm will can endure the training."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "During practice, one feels feverish all over, as if in a furnace; only those with strong willpower can endure the training."
 - raw: "37,轻功,1,草上飞,身轻体快的奔跑之法，其名有夸大之嫌,,0.9,轻功1;灵巧1,轻功6;灵巧6;速度0.06,,轻功10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -380,11 +372,7 @@
   splits:
   - split: 4
     text: "在粘稠至极的泥潭之中练习的步法，对体质与毅力均有锤炼之功效"
-    translated: "Practicing steps in an extremely viscous swamp enhances both physical stamina and mental fortitude."
-    qcReviewedText: "Practicing steps in an extremely viscous swamp enhances both physical stamina and mental fortitude."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Practicing footwork in a mire so thick has the effect of refining both constitution and resilience."
 - raw: "39,轻功,1,走壁功,修习者借由巧劲与内功，可在光滑墙壁上踏行数丈远，因而得名,,1,轻功1;经脉1,轻功6;灵巧3;经脉3;神行0.06,,轻功10;灵巧15,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -485,11 +473,7 @@
   splits:
   - split: 4
     text: "将数十斤的石锁折腕上举，或向旁平提，进而练习翻接盘腰等法，可以大大增加修习者的力道与体质"
-    translated: "Lifting a stone lock weighing dozens of catties by breaking one's wrist and lifting it overhead, or raising it to the side with flat palms, can greatly enhance one's strength and physique through such exercises."
-    qcReviewedText: "Lifting a stone lock weighing dozens of catties by breaking one's wrist and lifting it overhead, or raising it to the side with flat palms, can greatly enhance one's strength and physique through such exercises."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Lifting stone locks weighing dozens of pounds by bending the wrist to raise them overhead or lifting them horizontally to the side, and then practicing techniques such as flipping, receiving, and wrapping the waist, can significantly increase a practitioner's strength and constitution."
 - raw: "50,绝技,1,拔山功,将丈许木桩埋入地下，每日用三指紧扣并尽力上提。功成者手腕饱含阴柔之劲，可伤敌于毫厘之间,,1,绝技1;力道1,绝技3;力道9;伤害0.06,,绝技15;力道10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -654,20 +638,12 @@
   splits:
   - split: 4
     text: "八卦门成名剑法，剑势暗含八卦之理，在江湖中也多有流传"
-    translated: "Sword Arts of the Bagua Sect contain the principles of Bagua, and are widely known in the Jianghu."
-    qcReviewedText: "Sword Arts of the Bagua Sect contain the principles of Bagua, and are widely known in the Jianghu."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Bagua Sect's renowned Sword Technique, which incorporates the principles of Bagua in its sword movements, is also widely known throughout Jianghu."
 - raw: "68,剑法,1,连环剑法,一套注重防守与寻找敌人破绽的剑法，剑势自如收发，连绵不绝,13,1.1,剑法1;经脉1,,剑法2;内力0.1,剑法20,\"0,1,2\",\"0,0,0\",连击0.04,11,-1,0,腹18,腹8,,,skill1_2,,旋风-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "一套注重防守与寻找敌人破绽的剑法，剑势自如收发，连绵不绝"
-    translated: "A sword art focused on defense and exploiting enemy weaknesses, the sword movements flow freely and continuously without pause."
-    qcReviewedText: "A sword art focused on defense and exploiting enemy weaknesses, the sword movements flow freely and continuously without pause."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A sword technique that emphasizes defense and finding the opponent's weaknesses, with fluid and continuous movements."
 - raw: "69,剑法,1,雷震剑法,将内劲运于剑锋之上，一剑刺出犹如雷霆之势,14,1.2,剑法1;经脉1,,经脉2;剑法2;内力0.2,剑法20;经脉15,\"4,0,0\",\"4,1,2\",雷电0.02,13,-1,0,心20,心6,,,skill1_0,,闪电-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -690,29 +666,17 @@
   splits:
   - split: 4
     text: "这套剑招灵巧绵密，如同云雾般无孔不入，无处不在，不需内功基础便能发挥效力"
-    translated: "These sword techniques are dexterous and continuous, like mist that penetrates everywhere without gaps. They can be effective even without a foundation in neigong."
-    qcReviewedText: "These sword techniques are dexterous and continuous, like mist that penetrates everywhere without gaps. They can be effective even without a foundation in neigong."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This sword technique is agile and intricate, like clouds and mist, penetrating every opening and filling every space, effective even without a foundation in Neigong."
 - raw: "72,剑法,1,无量剑法,注重内功修为之剑法，其内劲收发方式繁多且可以自由组合，因此得“无量”之名,12,1,剑法1;经脉1,,经脉1;剑法2;内力0.1,剑法15,\"2,1,2\",\"7,0,0\",通脉0.06,10,-1,0,头16,头12,,,skill1_1,,战轮-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "注重内功修为之剑法，其内劲收发方式繁多且可以自由组合，因此得“无量”之名"
-    translated: "Focus on neigong cultivation, this sword art features a myriad of internal energy emission methods that can be freely combined, thus earning the name Boundless."
-    qcReviewedText: "Focus on neigong cultivation, this sword art features a myriad of internal energy emission methods that can be freely combined, thus earning the name Boundless."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A sword technique that emphasizes the cultivation of internal skill has numerous ways to control and release its internal energy, allowing for various combinations. Thus, it earned the name Boundless."
 - raw: "73,剑法,1,迅剑诀,以攻势迅捷而闻名，若使用者轻功高强，则能发挥出更大威力,12,1,剑法1;轻功1,,灵巧1;剑法1;轻功2,剑法15;轻功10,\"4,0,0\",\"4,1,3\",急速0.06,11,-1,0,心18,心10,,,skill1_0,,快刃-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "以攻势迅捷而闻名，若使用者轻功高强，则能发挥出更大威力"
-    translated: "Famous for its swift attacks, if the user's lightness is strong, it can unleash even greater power."
-    qcReviewedText: "Famous for its swift attacks, if the user's lightness is strong, it can unleash even greater power."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Known for its swift offensive capabilities, if the user has strong qinggong skills, it can unleash even greater power."
 - raw: "74,剑法,1,闪剑,追求极高出剑速度的剑法，其势若闪电，一去不返，但也因此导致防御薄弱,10,0.9,剑法1;灵巧1,,灵巧3;剑法1;轻功1,剑法10;灵巧15,\"4,0,0\",\"4,1,4\",破招0.06,9,-1,0,腹20,腹8,,,skill1_0,,闪光-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -726,11 +690,7 @@
   splits:
   - split: 4
     text: "这套剑法起源于行伍，大开大阖，势大力沉，非身强体壮者难以发挥其威力"
-    translated: "This sword art originated from military training, with broad and forceful movements that require a strong and robust body to fully exert its power."
-    qcReviewedText: "This sword art originated from military training, with broad and forceful movements that require a strong and robust body to fully exert its power."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This sword technique originated from military training. It is bold and expansive, with powerful and heavy movements that are difficult for those who are not physically strong to fully utilize."
 - raw: "76,剑法,1,迎风剑法,相传是高人迎狂风舞剑时领悟的剑法，其招式动静结合，攻守兼备,12,1.1,剑法1;意志1,,意志1;剑法2;内力0.1,剑法15;意志10,\"4,0,0\",\"6,1,2\",不屈0.06,9,-1,0,手16,手12,,,skill1_2,,劈砍_灰-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -756,11 +716,7 @@
   splits:
   - split: 4
     text: "朴实无华，劲力浑厚，乃是一套实用性极强的江湖人士常用刀法"
-    translated: "Plain yet powerful, with thick momentum, it is a highly practical blade art commonly used by Jianghu practitioners."
-    qcReviewedText: "Plain yet powerful, with thick momentum, it is a highly practical blade art commonly used by Jianghu practitioners."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Simple yet effective, with powerful and robust force, it is a highly practical blade technique commonly used by Jianghu figures."
 - raw: "79,刀法,1,螳螂刀法,使用者需要反手持刀，势如螳螂，其招式诡谲难测，追求一招毙敌,12,1.1,刀法1;体质1,,灵巧2;体质1;刀法1,灵巧15;体质10,\"3,1,1\",\"7,0,0\",暴击0.06,9,-1,0,心20,心9,,,skill2_0,,火轮-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -792,29 +748,17 @@
   splits:
   - split: 4
     text: "需要双手握刀的刀法，以身催刀，刀随身转，使用者悟性越高，刀势越难于预料"
-    translated: "A Blade Art that requires dual‑handed grip. The body drives the blade, and the blade follows the body's movement. The higher the user's comprehension, the harder it is to predict the blade's momentum."
-    qcReviewedText: "A Blade Art that requires dual‑handed grip. The body drives the blade, and the blade follows the body's movement. The higher the user's comprehension, the harder it is to predict the blade's momentum."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A blade technique that requires both hands to wield the sword, using one's body to drive the blade, making it spin with the user's movements. The higher the user's wisdom, the harder it is to predict the sword's trajectory."
 - raw: "83,刀法,1,雁行刀,注重刚柔并济之刀法，因其招式不疾不徐，横平竖直，观之有如雁行而闻名,13,1.1,刀法1;灵巧1,,力道1;灵巧1;刀法2,刀法15;灵巧10,\"4,0,0\",\"5,2,2\",命中0.06,11,-1,0,心16,心12,,,skill2_1,,十字斩-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "注重刚柔并济之刀法，因其招式不疾不徐，横平竖直，观之有如雁行而闻名"
-    translated: "Focusing on the Blade Art that balances hard and soft techniques, as its maneuvers are neither rushed nor delayed, moving straight and level like geese in formation."
-    qcReviewedText: "Focusing on the Blade Art that balances hard and soft techniques, as its maneuvers are neither rushed nor delayed, moving straight and level like geese in formation."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Focus on a blade technique that balances hardness and softness, known for its unhurried yet steady movements, as straight and level as a line, resembling the formation of geese in flight."
 - raw: "84,刀法,1,地堂刀法,一套与各种地趟动作结合而成的下盘刀法，招式之间跌扑滚摔，虽然不甚雅观，实则攻守兼备,11,1,刀法1;意志1,,灵巧1;意志2;刀法1,刀法10;意志15,\"0,1,1\",\"7,0,0\",不屈0.06,9,-1,0,足14,足14,,,skill2_2,,穿刺_灰黄-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "一套与各种地趟动作结合而成的下盘刀法，招式之间跌扑滚摔，虽然不甚雅观，实则攻守兼备"
-    translated: "A Blade Art combined with various low‑kick techniques. The moves involve tumbles and rolls, though not particularly graceful, they are both offensive and defensive in nature."
-    qcReviewedText: "A Blade Art combined with various low‑kick techniques. The moves involve tumbles and rolls, though not particularly graceful, they are both offensive and defensive in nature."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A low‑style blade technique combined with various ground movements, involving tumbles and rolls between moves. Though it may not be graceful, it is both offensive and defensive."
 - raw: "85,刀法,1,青龙刀法,这套江湖人士常用刀法以攻击见长，刀势结合内劲长驱直入，如同青龙出海勇猛难当,12,0.9,刀法1;经脉1,,经脉1;刀法2;内力0.1,刀法10,\"4,0,0\",\"4,1,2\",破甲0.06,11,-1,0,心18,心12,,,skill2_1,,蟠龙-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -964,11 +908,7 @@
   splits:
   - split: 4
     text: "一门大开大合的进攻性鞭法，功力深厚者可以一鞭击碎岩石，足见其力道之刚猛"
-    translated: "A powerful and aggressive whip technique that opens and closes with great force; those with profound power can break rocks with a single lash, truly showcasing its ferocity."
-    qcReviewedText: "A powerful and aggressive whip technique that opens and closes with great force; those with profound power can break rocks with a single lash, truly showcasing its ferocity."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A wide‑ranging offensive whip technique; those with deep inner strength can shatter rocks with a single strike, demonstrating its fierce power."
 - raw: "101,奇门,1,九节鞭法,由九节铁鞭铰接而成的奇门兵器，以内力灌注其中，则可刚可柔，如臂指使，招式多变异常,12,1.2,奇门1;经脉1,,经脉1;奇门2;内力0.1,奇门20;经脉15,\"2,1,2\",\"0,0,1\",断腕0.06,10,-1,0,腹17,腹11,,,skill4_3,,战轮-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1228,29 +1168,17 @@
   splits:
   - split: 4
     text: "从燕子点水姿势中化出的灵巧轻功，功成者可足踏水面三次而不沉"
-    translated: "From the agile Qinggong inspired by a swallow skimming the water, one who masters it can step on the surface three times without sinking."
-    qcReviewedText: "From the agile Qinggong inspired by a swallow skimming the water, one who masters it can step on the surface three times without sinking."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A nimble qinggong derived from the posture of a swallow dipping its beak in water, allowing the practitioner to stand on the water's surface three times without sinking."
 - raw: "128,轻功,2,上高楼,主修跳跃攀爬之法，以高楼或高塔为训练工具的轻功法门，练成者顷刻之间便能纵身而上数层,,0.9,轻功1;灵巧1;体质1,轻功9;灵巧6;体质3;鹰眼0.08,,轻功25;灵巧15;体质15,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "主修跳跃攀爬之法，以高楼或高塔为训练工具的轻功法门，练成者顷刻之间便能纵身而上数层"
-    translated: "Mastering the techniques of leaping and climbing, this lightness skill uses high buildings or towers as training tools. Upon mastery, one can ascend several stories in an instant."
-    qcReviewedText: "Mastering the techniques of leaping and climbing, this lightness skill uses high buildings or towers as training tools. Upon mastery, one can ascend several stories in an instant."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A qinggong technique that focuses on jumping and climbing, using tall buildings or towers as training tools. Once mastered, one can swiftly scale several floors in an instant."
 - raw: "129,轻功,2,壁虎游墙,借助轻功与内劲吸附，在墙面游行之轻功，精通此术者于广厦高墙上亦能如履平地,,1,轻功1;灵巧1;经脉1,轻功9;经脉9;神行0.08,,轻功30;经脉15,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "借助轻功与内劲吸附，在墙面游行之轻功，精通此术者于广厦高墙上亦能如履平地"
-    translated: "Using lightness and internal strength to adhere and move along walls, those proficient in this technique can walk on high walls of large buildings as if they were flat ground."
-    qcReviewedText: "Using lightness and internal strength to adhere and move along walls, those proficient in this technique can walk on high walls of large buildings as if they were flat ground."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Using qinggong and inner strength to adhere to walls, one can move nimbly along vertical surfaces; those who master this technique can traverse the broad faces of tall buildings and high walls as easily as walking on flat ground."
 - raw: "130,轻功,2,磐罡步,此步法四纵五横，平直稳重，在稳固下盘之余，亦能增强周身之劲道,,0.9,轻功1;力道1;体质1,轻功6;力道6;体质6;卸力0.08,,轻功25;体质20,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1366,14 +1294,7 @@
   splits:
   - split: 4
     text: "以内家功夫分拨水面，初学者不过毫厘而已，而大成者可令水开数尺，足见其劲道浑厚"
-    translated: "Dividing internal martial arts force like ripples on the water, beginners can only affect millimeters, while those who have achieved mastery can part several feet of water, truly demonstrating the power's thickness and strength."
-    qcReviewedText: "Dividing internal martial arts force like ripples on the water, beginners can only affect millimeters, while those who have achieved mastery can part several feet of water, truly demonstrating the power's thickness and strength."
-    qcTranslated: "Dividing the water surface with internal martial arts force, beginners can only affect it by a hair's breadth, while those who have achieved mastery can part the water several feet wide, truly demonstrating the power's profound depth and strength."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Using neigong to split the water's surface, a beginner can only manage a few millimeters, while a master can cause the water to part several feet, clearly demonstrating the power and depth of their technique."
 - raw: "143,绝技,2,柔骨摆柳功,此功法修炼者腰身与四肢极为柔韧，遇敌起舞，如迎风摆柳，或攻或守，灵活异常,,1,绝技2;灵巧1,绝技9;灵巧9;闪避0.08,,绝技30;灵巧20,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1585,11 +1506,7 @@
   splits:
   - split: 4
     text: "高人观泰山五大夫松所创之剑法，其剑势如苍松挺直，古朴沉稳，讲求以静制动"
-    translated: "Masters observing the Sword Art created by the Great Doctor Pine on Mount Tai find its sword movements as straight as a towering pine, ancient and steady. It emphasizes using stillness to generate power."
-    qcReviewedText: "Masters observing the Sword Art created by the Great Doctor Pine on Mount Tai find its sword movements as straight as a towering pine, ancient and steady. It emphasizes using stillness to generate power."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A sword technique created by observing the Five Doctors Pines on Mount Tai. Its sword movements are as straight and sturdy as ancient pines, dignified and steady, emphasizing stillness to counteract motion."
 - raw: "166,剑法,2,霜花剑式,此剑招需将阴寒之内力灌注剑身，使出时寒气逼人，周身霜花乱舞，剑身亦有冰凝，故而得名,14,1,剑法1;经脉1;内功1,,经脉3;剑法1;内力0.3,剑法20;经脉30,\"1,1,1\",\"7,0,0\",冰寒0.08,16,-1,0,心9;腹11,心4;腹8,,,skill1_0,,冰域-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1615,20 +1532,12 @@
   splits:
   - split: 4
     text: "东南刀客于海边练成的刀法，需挥刀反复劈斩海浪，至刀风可开分海浪数尺，方能功成"
-    translated: "The Blade Master from the southeast hones his blade art by repeatedly chopping and slicing the sea waves at the seaside. Only when the blade wind can part the waves by several feet can he consider his training complete."
-    qcReviewedText: "The Blade Master from the southeast hones his blade art by repeatedly chopping and slicing the sea waves at the seaside. Only when the blade wind can part the waves by several feet can he consider his training complete."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Blade Technique practiced by the Eastern Blade Master on the seashore requires repeatedly slashing at the waves with a sword until the sword's wind can part the waves by several feet, before it is considered complete."
 - raw: "169,刀法,2,鸳鸯刀法,源于苗疆的双刀刀法，鸳刀主攻，鸯刀主守，双刀配合无间，上下翻飞，可谓滴水不漏,15,1.1,刀法2;灵巧1,,灵巧2;刀法2;内力0.2,刀法30;灵巧25,\"3,1,2\",\"7,0,0\",连绵0.04;外伤0.04,15,-1,0,手10;足9,手6;足6,,,skill2_2,,血十字-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "源于苗疆的双刀刀法，鸳刀主攻，鸯刀主守，双刀配合无间，上下翻飞，可谓滴水不漏"
-    translated: "Originating from the Miaojiang region, the dual‑knife Blade Art features the Yin Dao as the offensive weapon and the Yang Dao as the defensive one. The two knives complement each other flawlessly, flipping up and down with such precision that it leaves no room for attack."
-    qcReviewedText: "Originating from the Miaojiang region, the dual‑knife Blade Art features the Yin Dao as the offensive weapon and the Yang Dao as the defensive one. The two knives complement each other flawlessly, flipping up and down with such precision that it leaves no room for attack."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A double‑blade technique originating from Miaojiang, with the Yuyao knife focusing on offense and the Yingyao knife on defense. The two blades work in perfect harmony, flipping and flying up and down, leaving no gap unsealed."
 - raw: "170,刀法,2,五虎断门刀,势大力沉，刚猛雄壮之刀法，如由膂力过人者使出，更是有分金断玉之能,16,1,刀法2;力道1,,力道3;刀法1;内力0.1,刀法20;力道30,\"4,0,0\",\"4,1,2\",杀机0.08,14,-1,0,胸21,胸9,,,skill2_1,,地面打击2-Target-Grid-Happen;猛虎-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1667,20 +1576,12 @@
   splits:
   - split: 4
     text: "效仿百兽形意之刀法，其招式威猛霸道，颇具熊虎之姿，对修习者的体魄大有裨益"
-    translated: "Mimicking the forms and intentions of a hundred beasts in blade art, its techniques are fierce and domineering, resembling the posture of bears and tigers. This greatly benefits the practitioner's resilience."
-    qcReviewedText: "Mimicking the forms and intentions of a hundred beasts in blade art, its techniques are fierce and domineering, resembling the posture of bears and tigers. This greatly benefits the practitioner's resilience."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Emulating the blade techniques inspired by the forms of a hundred beasts, its moves are fierce and domineering, bearing the might of bears and tigers, greatly benefiting the resilience of the practitioner."
 - raw: "174,刀法,2,荡寇刀法,刀意潇洒豪爽，正气凛然，相传髯须刀客曾以此刀法扫荡贼寇，剪除恶徒，因而闻名,15,1,刀法1;力道1;经脉1,,经脉2;刀法2;内力0.2,刀法30;经脉20,\"4,0,0\",\"5,1,2\",破甲0.08,15,-1,0,心12;腹7,心7;腹4,,,skill2_2,,圆斩火-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "刀意潇洒豪爽，正气凛然，相传髯须刀客曾以此刀法扫荡贼寇，剪除恶徒，因而闻名"
-    translated: "The Blade Master's technique exudes elegance and generosity, radiating righteous energy. It is said that with this blade art, the bearded Blade Master swept away bandits and eliminated evil doers, earning him widespread fame."
-    qcReviewedText: "The Blade Master's technique exudes elegance and generosity, radiating righteous energy. It is said that with this blade art, the bearded Blade Master swept away bandits and eliminated evil doers, earning him widespread fame."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The blade technique is graceful and bold, filled with righteousness. It is said that the bearded Blade Master once used this technique to sweep away bandits and eliminate evildoers, thus gaining fame."
 - raw: "175,刀法,2,雷鸣刀法,双手持刀，以全身之力快速劈出刀招，刀锋隐隐有雷鸣之声，乃是劈空刀气所致,14,0.9,刀法1;力道1;体质1,,力道3;刀法3;内力0.1,刀法25;力道20,\"4,0,0\",\"4,1,4\",雷电0.08,16,-1,0,心20,心11,,,skill2_0,,雷球-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -1910,11 +1811,7 @@
   splits:
   - split: 4
     text: "极细极长之银针，需要以灵巧手法催动内劲射出，一旦命中敌人穴道，便可使其内息紊乱"
-    translated: "Extremely thin and long silver needles require dexterous technique to propel with inner qi. Once they hit an enemy's acupoint, it can disrupt their inner qi."
-    qcReviewedText: "Extremely thin and long silver needles require dexterous technique to propel with inner qi. Once they hit an enemy's acupoint, it can disrupt their inner qi."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Extremely fine and long silver needles require agile manipulation to channel inner strength and shoot them out. Once they hit an enemy's acupoint, they can disrupt their Inner Qi."
 - raw: "200,射术,2,铁链飞爪,尾部连接锁链的特制铁爪，命中目标后，爪上倒钩会自动收紧并牢牢抓握，从而阻滞其行动,11,1.1,射术2;灵巧1,,灵巧2;射术1;内力0.2,射术35;灵巧15,\"4,0,0\",\"4,2,4\",裂膝0.1;拉近2,11,-1,0,手25,手6,,,skill5_0,10,锁链-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -1955,11 +1852,7 @@
   splits:
   - split: 4
     text: "以灵巧手法抛出大量粹毒铁砂，一旦接触皮肤或眼睛，便疼痛难忍，无法再战"
-    translated: "Throwing a large amount of corrosive iron sand with skillful dexterity; once it makes contact with skin or eyes, the pain is unbearable, leaving one unable to fight."
-    qcReviewedText: "Throwing a large amount of corrosive iron sand with skillful dexterity; once it makes contact with skin or eyes, the pain is unbearable, leaving one unable to fight."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Using agile movements, throw out a large amount of refined toxic iron sand; once it comes into contact with skin or eyes, the pain becomes unbearable, rendering one unable to continue fighting."
 - raw: "205,射术,2,刀叶扇,扇叶边缘极为锋利之铁扇，只需触动机关，便会一齐激射而出,14,1,射术2;智力1,,智力3;射术3;内力0.1,射术30;智力20,\"4,0,0\",\"5,1,2\",流血0.08,14,-1,0,腹8;腿15,腹3;腿6,,,skill5_1,9,快刃-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -1991,11 +1884,7 @@
   splits:
   - split: 4
     text: "泰山高手留下的内家心法，其内力奔流之势雄浑磅礴，有如泰山压顶，能敌百人"
-    translated: "The inner home‑style Heart Method left by a master of Mount Tai has an imposing and mighty flow of Inner Power, like the weight of Mount Tai bearing down, capable of opposing a hundred men."
-    qcReviewedText: "The inner home‑style Heart Method left by a master of Mount Tai has an imposing and mighty flow of Inner Power, like the weight of Mount Tai bearing down, capable of opposing a hundred men."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Neigong Heart Method left by the expert of Mount Tai has a powerful and majestic flow of Inner Power, like a mountain pressing down, capable of rivaling a hundred men."
 - raw: "209,内功,3,乾元功,此心法暗合天道，旨在颐养神智，功成后如高僧入定，泰山崩于前亦面不改色,,0.9,智力潜力1;内功1;意志1,生命上限100;内力上限60;内功12;意志12;回血0.01,,内功40;意志30;智力25,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2030,11 +1919,7 @@
   splits:
   - split: 4
     text: "借助踩踏之力，在水面漂行之轻功，初时需要借助木板训练，功成后可奔行数丈而不沉"
-    translated: "Using the power of treading water to glide on the surface, this lightness technique initially requires training with planks. Once mastered, one can run for several yards without sinking."
-    qcReviewedText: "Using the power of treading water to glide on the surface, this lightness technique initially requires training with planks. Once mastered, one can run for several yards without sinking."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A qinggong technique that allows one to glide on water using the force of stepping, initially requiring training with a wooden board, and later enabling movement for several dozen feet without sinking."
 - raw: "213,轻功,3,七步追魂,此七招步法，步步皆兵行险要，出人意料，有追魂夺命之能,,1.1,意志潜力1;轻功1;智力1,轻功12;力道3;智力9;神行0.1,,轻功50;智力30;意志25,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2123,11 +2008,7 @@
   splits:
   - split: 4
     text: "双手上下翻转，如同龙飞凤舞，颇为好看，其实暗含巨大力道，不能掉以轻心"
-    translated: "The hands flipped up and down, like dragons flying and phoenixes dancing, quite impressive to watch. In reality, they contained immense force, so one must not be careless."
-    qcReviewedText: "The hands flipped up and down, like dragons flying and phoenixes dancing, quite impressive to watch. In reality, they contained immense force, so one must not be careless."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "With hands flipping up and down, like dragons flying and phoenixes dancing, it looks quite impressive, but it actually conceals tremendous strength and cannot be taken lightly."
 - raw: "223,拳掌,3,缠丝擒拿手,此手法如同蜘蛛缠丝一般，轻巧柔弱，层层叠叠，待到敌人发觉，已被其中内劲所制，再难反抗,15,1.1,经脉潜力1;拳掌1;经脉1,,经脉2;拳掌3;内力0.2,拳掌50;经脉35,\"0,1,2\",\"7,0,0\",手臂点穴0.06;迟缓0.06,18,-1,0,手8;心10,手10;心8,,,skill0_2,,清风-Target-Grid-Start;网旋-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2213,23 +2094,12 @@
   splits:
   - split: 4
     text: "从四象八卦中演化而出的刀法，其中变化八八六十四式，纷繁复杂，连舞三天三夜亦不能穷尽"
-    translated: "Derived from the Four Symbols and Bagua, this Blade Art features eighty‑eight forms, complex and varied, such that even dancing for three days and three nights would not fully exhaust its variations."
-    qcReviewedText: "Derived from the Four Symbols and Bagua, this Blade Art features eighty‑eight forms, complex and varied, such that even dancing for three days and three nights would not fully exhaust its variations."
-    qcTranslated: "Derived from the Four Symbols and Bagua, this Blade Art features sixty‑four forms, complex and varied, such that even dancing for three days and three nights would not fully exhaust its variations."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
+    translated: "Evolved from the Four Symbols and Bagua, this Blade Technique comprises 64 variations, each intricate and complex, with even three days and nights of continuous dance unable to exhaust its depths."
 - raw: "233,刀法,3,羽衣刀法,轻快迅捷之刀法，施展时闪烁刀光覆盖周身，犹如身披羽衣，寻常拳脚不能近之,17,0.9,力道潜力1;刀法1;灵巧1,,灵巧2;刀法3;内力0.2,刀法40;灵巧30;力道15,\"0,1,2\",\"7,0,0\",昏沉0.05;目盲0.05,19,-1,0,胸8;腹8,胸10;腹9,,,skill2_2,,羽散-Target-Grid-Happen;三连剑影小-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "轻快迅捷之刀法，施展时闪烁刀光覆盖周身，犹如身披羽衣，寻常拳脚不能近之"
-    translated: "Light and swift Blade Art that flashes blade light around the user, making them seem cloaked in feathers. Ordinary punches and kicks cannot come close."
-    qcReviewedText: "Light and swift Blade Art that flashes blade light around the user, making them seem cloaked in feathers. Ordinary punches and kicks cannot come close."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A swift and nimble blade technique, when executed, flashes with swordlight that envelops the body, like wearing a cloak of feathers, making it hard for ordinary punches and kicks to come close."
 - raw: "234,刀法,3,空空玄玄刀,相传乃是一无名老道所传，以虚招为主，刀意空玄飘幻，令人如坠云里雾里，无从捉摸,16,1.1,刀法潜力1;刀法1;体质1,,意志2;刀法3;内力0.2,刀法50;意志35;灵巧20,\"4,0,0\",\"5,1,3\",迟缓0.05;笨拙0.05,18,-1,0,头10;手12,头6;手6,,,skill2_2,,墨烟-Target-Grid-Happen;墨旋-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2243,11 +2113,7 @@
   splits:
   - split: 4
     text: "东瀛武士之刀法，招法看似简单，实则强调对人体力道之极致运用，无需内力修为便能发挥威力"
-    translated: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
-    qcReviewedText: "The blade art of the Eastern Samurai, while seeming simple, actually emphasizes the utmost in the application of stamina, and can still unleash power without requiring inner power cultivation."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Japanese samurai blade techniques may seem simple, but they actually emphasize the utmost utilization of one's strength. They can be highly effective without requiring inner power cultivation."
 - raw: "236,刀法,3,升天斩,猛将所传，刀势自下而上攻击骑兵之招数，据说由臂力惊人者使用，能挑飞战马,20,1,刀法潜力1;刀法1;力道1,,力道3;刀法2;内力0.2,刀法45;力道30,\"4,0,0\",\"4,1,3\",死战0.05;失衡0.05,22,-1,0,头16;胸6,头8;胸4,,,skill2_1,,升龙斩-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -2340,11 +2206,7 @@
   splits:
   - split: 4
     text: "如同一轮弯月的细长铁钩，一旦被其钩中便再难脱身，乃是苗疆抓捕恶徒之奇门兵刃"
-    translated: "Like a crescent moon, this slender iron hook is difficult to escape once it catches you, making it a unique and unorthodox weapon used by the Miao people to capture evildoers."
-    qcReviewedText: "Like a crescent moon, this slender iron hook is difficult to escape once it catches you, making it a unique and unorthodox weapon used by the Miao people to capture evildoers."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Like a slender crescent moon, once hooked by it, escape is nearly impossible. It is a peculiar weapon used in Miaojiang for capturing evildoers."
 - raw: "246,奇门,3,开天辟地斧,以巨斧迎头重劈的奇门招式，伴以怒吼之声増其声威，如盘古开天地般势不可挡,19,0.9,奇门潜力1;奇门1;体质1,,体质2;奇门3;内力0.2,奇门45;体质30,\"2,1,3\",\"0,0,1\",活血0.05;外伤0.05,21,-1,0,头12;足12,头5;足5,,,skill2_1,,地震波-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2358,14 +2220,7 @@
   splits:
   - split: 4
     text: "带有螺旋形锋利棱角的铁钻，用铁锤击打射出，力道惊人，在中距离上可以贯穿甲胄，重伤敌人"
-    translated: "A iron drill with spiral sharp edges, when struck by an iron hammer, generates a tremendous force. At medium range, it can pierce armor and severely wound enemies."
-    qcReviewedText: "A iron drill with spiral sharp edges, when struck by an iron hammer, generates a tremendous force. At medium range, it can pierce armor and severely wound enemies."
-    qcTranslated: "An iron drill with spiral sharp edges, when struck by an iron hammer, generates tremendous Strength. At medium range, it can pierce armor and severely wound enemies."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "A spiral‑shaped iron drill with sharp ridges, struck and fired with a hammer, has incredible strength. At medium range, it can pierce armor and severely wound enemies."
 - raw: "248,射术,3,子母如意珠,看似平平无奇的铁珠，实则内藏数个更小的铁珠，手法高超者掷出，能同时打击多个穴位,15,1,射术潜力1;射术1;智力1,,智力2;射术3;内力0.2,射术45;智力30,\"0,2,5\",\"0,0,1\",腿足点穴0.08;头颈点穴0.04,18,-1,0,胸10;头12,胸4;头4,,,skill5_1,15-----1.15,爆炸星-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2442,11 +2297,7 @@
   splits:
   - split: 4
     text: "纵跃能力超绝之轻功，手伸足蹬间，如攀爬阶梯直至云上，常人见之只道是仙人乘龙，无不称奇"
-    translated: "Superb lightness ability, leaping and kicking like climbing steps to the clouds. Ordinary people see it and only think of divine beings riding dragons, all marveling in wonder."
-    qcReviewedText: "Superb lightness ability, leaping and kicking like climbing steps to the clouds. Ordinary people see it and only think of divine beings riding dragons, all marveling in wonder."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Supernatural leaping skills that surpass all others; with hands and feet, one climbs as if ascending steps to the clouds. Common folk who witness it only believe a celestial being riding a dragon has appeared, marveling at the sight without exception."
 - raw: "257,轻功,4,嫦娥奔月,一门滞空飘行之身法，修习者可借由微风之力扶摇而上，常人视之，真如直奔月宫而去一般,,0.9,轻功潜力1;意志潜力1;轻功1;灵巧1,轻功10;灵巧10;意志10;速度0.12,,轻功55;意志40;灵巧30,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2514,20 +2365,12 @@
   splits:
   - split: 4
     text: "大巧不工，大道无名，此剑法仅有图谱却无固定招式，讲求随机应变，自然妙悟，对使用者剑法造诣要求极高"
-    translated: "Great skill appears effortless, and the Great Way is nameless. This sword art exists only as a manual of diagrams, with no fixed techniques. It emphasizes adapting to circumstances and achieving natural insight, demanding an exceptionally high level of swordsmanship from its practitioner."
-    qcReviewedText: "Great skill appears effortless, and the Great Way is nameless. This sword art exists only as a manual of diagrams, with no fixed techniques. It emphasizes adapting to circumstances and achieving natural insight, demanding an exceptionally high level of swordsmanship from its practitioner."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Great skill appears effortless, the Great Way has no name. This Sword Technique has only a diagram but no set moves, emphasizing adaptability and spontaneous insight, with extremely high requirements for the user's sword mastery."
 - raw: "265,剑法,4,天意剑诀,此剑法应和天意，实则暗含经脉运转之法。施展时催动全身内息随剑招奔流而出，便能克敌机先，伤敌无形,21,0.9,剑法潜力2;剑法1;经脉1,,经脉3;剑法3;内力0.3,剑法55;经脉40,\"4,0,0\",\"4,1,5\",内劲0.06;截脉0.06,26,-1,0,头14;胸10,头7;胸6,,,skill1_0,,喷墨-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 4
     text: "此剑法应和天意，实则暗含经脉运转之法。施展时催动全身内息随剑招奔流而出，便能克敌机先，伤敌无形"
-    translated: "This sword art should align with the heavens, yet subtly incorporates the method of meridian circulation. When performed, it urges one's entire inner qi to surge forth with each sword move, allowing for a preemptive strike and invisible injury to the enemy."
-    qcReviewedText: "This sword art should align with the heavens, yet subtly incorporates the method of meridian circulation. When performed, it urges one's entire inner qi to surge forth with each sword move, allowing for a preemptive strike and invisible injury to the enemy."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This sword technique harmonizes with the will of heaven, but in truth it conceals methods for circulating the meridians. When performing it, one channels all inner qi throughout the body to surge forth with the sword techniques, allowing one to gain the upper hand and injure the enemy without being detected."
 - raw: "266,剑法,4,太白剑意,传说乃李太白所创，其精要在于剑意而非招式。得其神髓者剑势变化雄奇，奔逸绝伦，颇得太白诗歌之神韵,20,1,剑法潜力1;经脉潜力1;剑法1;灵巧1,,灵巧3;剑法4;内力0.1,剑法60;灵巧50,\"2,1,4\",\"3,0,1\",失衡0.06;伤筋0.06,24,-1,0,手11;心11,手8;心8,,,skill1_2,,墨圆斩-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2541,11 +2384,7 @@
   splits:
   - split: 4
     text: "极尽霸道之刀法，每一刀均有劈石裂地之能，故激战过后，常在地面留下千沟万壑，其威势可见一斑"
-    translated: "Extreme Domination Blade Art, each slash possesses the power to split stone and crack earth. Hence, after intense battles, it frequently leaves behind countless ravines and trenches on the ground, showcasing its formidable might."
-    qcReviewedText: "Extreme Domination Blade Art, each slash possesses the power to split stone and crack earth. Hence, after intense battles, it frequently leaves behind countless ravines and trenches on the ground, showcasing its formidable might."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Extremely domineering blade technique, with each slash capable of splitting stones and cleaving the earth. Thus, after a fierce battle, one often finds thousands of gullies and ravines left on the ground, revealing the sheer power of its might."
 - raw: "268,刀法,4,雾隐云龙刀,此刀法善以大量虚招掩盖锋芒，静待时机。一旦察觉破绽，则如飞龙探云，潜蛟出海，毙敌于瞬息之间,19,0.9,刀法潜力1;体质潜力1;刀法1;力道1,,力道3;灵巧2;刀法2;内力0.1,刀法55;力道45;灵巧25,\"4,0,0\",\"5,1,3\",目盲0.06;杀机0.06,22,-1,0,心10;腹10,心9;腹8,,,skill2_2,,真气-Target-Grid-Happen;腾龙-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2667,20 +2506,12 @@
   splits:
   - split: 4
     text: "习此功法者，出拳掌如虎啸，舞刀兵似龙吟，即便是再寻常的武功招式，也能发挥出惊人之威能"
-    translated: "Those who practice this cultivation technique strike with fists and palms like a tiger's roar, wield weapons as if dancing with dragons' cries. Even the most ordinary martial arts moves can unleash astonishing power."
-    qcReviewedText: "Those who practice this cultivation technique strike with fists and palms like a tiger's roar, wield weapons as if dancing with dragons' cries. Even the most ordinary martial arts moves can unleash astonishing power."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Those who practice this martial art strike with fists and palms like a tiger's roar, wield weapons as if a dragon were singing. Even the most ordinary martial techniques can unleash astonishing power."
 - raw: "282,拳掌,5,照影神拳,此拳法擅以内息催动拳劲，往往拳未发出，内劲已至。因内劲变化远胜拳掌，其招法犹如惊鸿之照影，瞬息万变,24,0.9,拳掌潜力2;经脉潜力1;经脉2,,经脉3;力道1;拳掌3;内力0.2,拳掌75;经脉60,\"0,2,2\",\"0,0,1\",内伤0.08;截脉0.08,29,-1,0,胸9;心8;腹8,胸7;心4;腹4,,,skill0_0,,残影-Target-Grid-Start;爆炸灰-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "此拳法擅以内息催动拳劲，往往拳未发出，内劲已至。因内劲变化远胜拳掌，其招法犹如惊鸿之照影，瞬息万变"
-    translated: "This fist technique excels in using inner qi to drive the power of each punch. Often, by the time the fist is thrown, the internal force has already arrived. Due to the unpredictable nature of the internal force, its techniques are like a fleeting glimpse of a wild goose, constantly changing in an instant."
-    qcReviewedText: "This fist technique excels in using inner qi to drive the power of each punch. Often, by the time the fist is thrown, the internal force has already arrived. Due to the unpredictable nature of the internal force, its techniques are like a fleeting glimpse of a wild goose, constantly changing in an instant."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This fist technique excels at using Inner Qi to drive the force of the punches; often, before the fist even moves, the inner strength has already arrived. Because the variations in inner strength far surpass those of unarmed techniques, its movements are like the fleeting reflection of a startled swan, changing in an instant."
 - raw: "283,剑法,5,诛仙剑法,传说乃是西王母于昆仑山所授，极尽锋锐之剑招，发挥十成威力时，风云际会，天地变色，心怀邪念之散仙亦当场伏诛,25,1.1,剑法潜力2;灵巧潜力1;灵巧2,,灵巧3;经脉1;剑法3;内力0.2,剑法75;灵巧60,\"2,1,3\",\"7,0,0\",伤筋0.08;杀机0.08,32,-1,0,手9;头9;胸7,手7;头4;胸4,,,skill1_2,,剑雨-Target-Grid-Start;劈砍_黑白震-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2781,11 +2612,7 @@
   splits:
   - split: 4
     text: "刽子手杀头之刀法，招式极其简单，胜在干脆利落"
-    translated: "Decapitation Blade Art, the moves are extremely simple, excelling in their direct and decisive nature."
-    qcReviewedText: "Decapitation Blade Art, the moves are extremely simple, excelling in their direct and decisive nature."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The executioner's beheading blade technique is extremely simple, but it excels in its efficiency and decisiveness."
 - raw: "294,内功,1,怒面功,长乐帮入门弟子时常与其他帮派中人争抢地盘与档口，此时以怒面示人，可以吓退竞争者,,0.9,内功1;力道1,生命上限60;内力上限20;内功6;力道6;外伤0.06,,内功10;力道10,,,,0,0,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2835,11 +2662,7 @@
   splits:
   - split: 4
     text: "长乐帮众所使之基础刀法，出手力道颇大，往往令人猝不及防"
-    translated: "The Changle Gang's basic Blade Art involves considerable strength, often catching opponents off guard."
-    qcReviewedText: "The Changle Gang's basic Blade Art involves considerable strength, often catching opponents off guard."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The basic Blade Technique of the Changle Gang is quite powerful in terms of Strength, often catching others off guard."
 - raw: "300,内功,2,知足常乐功,长乐帮正式弟子有时需要迎送贵客，此时摆出知足常乐之笑脸，方为生财之道,,0.9,内功2;体质1,生命上限90;内力上限30;内功9;体质9;虚弱0.08,,内功25;体质20,,,,0,0,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2892,11 +2715,7 @@
   splits:
   - split: 4
     text: "长乐帮众所使力道强横之刀法，招式发力迅猛，大开大合，擅长以攻代守"
-    translated: "The Changle Gang's widely used Blade Art employs strong force, with quick and powerful moves that open up large spaces. They excel in using offensive tactics to defend."
-    qcReviewedText: "The Changle Gang's widely used Blade Art employs strong force, with quick and powerful moves that open up large spaces. They excel in using offensive tactics to defend."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The powerful and fierce blade technique used by the Changle Gang, with swift and explosive movements, excels in turning defense into offense."
 - raw: "306,内功,3,活弥勒心法,长乐帮亲传弟子时常需要接洽官府中人乃至皇亲贵胄，此时以极度欢喜之情相迎，自然事半功倍,,0.9,内功潜力1;内功1;体质1,生命上限100;内力上限60;内功12;体质12;昏沉0.1;负面抗性0.05,,内功40;体质25,,,,0,0,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2940,11 +2759,7 @@
   splits:
   - split: 4
     text: "戏子出身的用刀高手从武生套路中悟出，其招式龙飞凤舞，绵绵不绝，煞是好看，亦是擅长久战之刀法"
-    translated: "A blade master from the performer ‑ theatrical arts background ‑ gleaned techniques from Wu Sheng routines, their movements flowing like dragons and phoenixes, continuous and unending, truly mesmerizing. He is particularly adept at long‑lasting battles with his blades."
-    qcReviewedText: "A blade master from the performer ‑ theatrical arts background ‑ gleaned techniques from Wu Sheng routines, their movements flowing like dragons and phoenixes, continuous and unending, truly mesmerizing. He is particularly adept at long‑lasting battles with his blades."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A master swordsman with an acting background has derived his blade techniques from the stylized movements of a martial performer. His moves are as graceful and continuous as flying dragons and dancing phoenixes, making for a visually stunning long‑range combat style."
 - raw: "311,刀法,3,一刀两断法,双手持刀，将全身力道集中于刀刃，简单刚猛之招式，其一刀劈下，威势惊人，着者无不两断,18,1,刀法潜力1;刀法1;力道1,,力道2;刀法3;内力0.2,刀法45;力道35,\"4,0,0\",\"4,1,4\",外伤0.1,21,0,0,头14;胸8,头6;胸6,,,skill2_1,,劈砍_蓝裂地-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -2994,11 +2809,7 @@
   splits:
   - split: 4
     text: "攻敌要害，倾力出击，是罕见的不留丝毫退路之杀招，难怪江湖皆称长乐帮刀法繁多，以恩断义绝一式最为伤人"
-    translated: "Attacking an opponent's vital points with all one's force is a rare move that leaves no room for retreat‑no wonder the Jianghu speaks of Changle Gang's diverse blade arts, with the Grudge Cut being the most deadly."
-    qcReviewedText: "Attacking an opponent's vital points with all one's force is a rare move that leaves no room for retreat‑no wonder the Jianghu speaks of Changle Gang's diverse blade arts, with the Grudge Cut being the most deadly."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Attacking the vital point with all one's strength is a rare killing move that leaves no room for retreat, no wonder Jianghu refers to Changle Gang's blade techniques as numerous, with Cutting Ties of Gratitude being the most devastating."
 - raw: "317,轻功,5,醉梦鱼龙舞,观元宵舞鱼龙彩灯的游行人群而悟，步法纷繁复杂，影影绰绰，身形虚幻难寻，待蓦然回首已在灯火阑珊处,,1,轻功潜力2;意志潜力1;力道1;意志1,轻功12;力道12;意志12;混乱0.08;目盲0.08,,轻功75;力道60;意志50,,,,0,0,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3030,11 +2841,7 @@
   splits:
   - split: 4
     text: "于房檐之上奔跑行走的轻功，常为民间宵小之徒所用"
-    translated: "The lightness practiced by running and walking on the roof eaves is often used by petty individuals from the common folk."
-    qcReviewedText: "The lightness practiced by running and walking on the roof eaves is often used by petty individuals from the common folk."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The qinggong technique of running and walking on roof eaves is often used by petty rascals in the folk."
 - raw: "321,绝技,0,心眼功,唐门锻炼心智与眼力的初级法门，乃一切暗器手法之基,,1.1,绝技1,绝技4;智力4;暴击0.04;负面加成0.04,,绝技10,,,,0,1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3075,11 +2882,7 @@
   splits:
   - split: 4
     text: "为江湖人士所不齿之刀法，需将兵刀藏于袖中，待敌人近前，突然出手，以偷袭取胜"
-    translated: "A Blade Art Disdained by Jianghu Foes‑The martial artist must conceal the weapon in their sleeve, waiting until the enemy is close before making a sudden attack to gain an advantage through ambush."
-    qcReviewedText: "A Blade Art Disdained by Jianghu Foes‑The martial artist must conceal the weapon in their sleeve, waiting until the enemy is close before making a sudden attack to gain an advantage through ambush."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A blade technique despised by those in Jianghu involves hiding the weapon in one's sleeve and striking suddenly when an enemy is close, relying on surprise to win."
 - raw: "326,内功,1,七窍玲珑功,唐门着重锻炼七窍五感之内功心法，需得日夜苦练方能成玲珑之功,,1,内功1;灵巧1,生命上限20;内力上限20;内功8;智力8;射术威力0.06,,内功10;智力10;射术10,,,,0,1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3147,11 +2950,7 @@
   splits:
   - split: 4
     text: "唐门独特内家心法，以此内劲所发之暗器，可以空中转向九次，任你轻功再高也难以闪避"
-    translated: "The unique internal heart method of the Tang Clan can enable hidden weapons to change direction mid‑air nine times. No matter how high your lightness prowess is, it will be difficult to dodge them."
-    qcReviewedText: "The unique internal heart method of the Tang Clan can enable hidden weapons to change direction mid‑air nine times. No matter how high your lightness prowess is, it will be difficult to dodge them."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The unique Neigong Heart Method of the Tang Clan allows Hidden Weapons to turn in mid‑air nine times. No matter how skilled your Qinggong is, it will be difficult to dodge."
 - raw: "334,轻功,2,金蝉脱壳,擅长逃脱闪避之轻功步法，可以快速拉开距离，避免与敌人近身缠斗,,0.9,轻功2;智力1,轻功9;智力9;闪避0.08,,轻功25;智力15,,,,0,1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3210,11 +3009,7 @@
   splits:
   - split: 4
     text: "唐门秘传心法，以内息驱使五指手臂，使其灵巧倍增，发箭掷镖如疾风骤雨，堪比百手千指之功"
-    translated: "Tang Clan's Secret Heart Method, using Inner Qi to control the five‑finger arms, making them incredibly dexterous. Arrows and darts are shot like a storm of wind, comparable to the feats of a hundred hands and thousand fingers."
-    qcReviewedText: "Tang Clan's Secret Heart Method, using Inner Qi to control the five‑finger arms, making them incredibly dexterous. Arrows and darts are shot like a storm of wind, comparable to the feats of a hundred hands and thousand fingers."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The secret Heart Method of the Tang Clan uses Inner Qi to control the five fingers and arms, greatly increasing their agility. Arrows and darts are launched like a sudden storm, rivaling the work of a hundred hands and a thousand fingers."
 - raw: "341,轻功,3,鬼影重重,此步法飘忽诡谲，无声无息，挪移闪烁之间只留下重重黑影，有如鬼魅,,1,轻功潜力1;轻功1;力道1,轻功12;力道12;暴击0.05;闪避0.05,,轻功45;力道30,,,,0,1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3634,14 +3429,7 @@
   splits:
   - split: 4
     text: "药王谷医术最高手法，需将五指功夫练至化境，劲道妙至毫巅，或悬丝诊脉，或摘叶飞花，皆若探囊取物"
-    translated: "The highest techniques in Medicine King Valley require mastering the Five Fingers Technique to reach Transcendence. The power and precision are exquisite, allowing for either pulse diagnosis by thread or leaf, as if taking something from a pocket."
-    qcReviewedText: "The highest techniques in Medicine King Valley require mastering the Five Fingers Technique to reach Transcendence. The power and precision are exquisite, allowing for either pulse diagnosis by thread or leaf, as if taking something from a pocket."
-    qcTranslated: "The highest techniques in Medicine King Valley require mastering the Five Fingers Technique to reach Transcendence. The power and precision are exquisite, allowing for either pulse diagnosis by thread or plucking leaves and flowers, as if taking something from a pocket."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "The highest techniques of Medicine King Valley's Medical Arts require practicing the five‑finger techniques to Transcendence, with power and skill reaching perfection. Whether it's diagnosing through a thread or plucking leaves and sending flowers flying, it all seems as easy as reaching into a bag to retrieve an object."
 - raw: "385,内功,0,敲碗诀,街边乞丐一遍以筷子敲碗，一遍所唱之歌谣，其吐字换气中暗含丐帮入门内功心法,,0.8,内功1,生命上限20;内力上限20;内功4;力道2;经脉2;卸力0.04,,内功5,,,,0,3,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3766,11 +3554,7 @@
   splits:
   - split: 4
     text: "相传是无名乞丐长棍被恶徒砍断后，情急之下以两节断棍使出的棍法，颇有几分灵巧快速"
-    translated: "It is said that this staff technique was developed in a moment of desperation when a nameless beggar's long staff was chopped in half by vicious villains. It is quite dexterous and swift."
-    qcReviewedText: "It is said that this staff technique was developed in a moment of desperation when a nameless beggar's long staff was chopped in half by vicious villains. It is quite dexterous and swift."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Legend has it that this staff technique was devised by an unnamed beggar whose long staff was cut in half by a villain. In a moment of desperation, he used the two broken pieces and developed a style that is quite agile and swift."
 - raw: "399,内功,2,莲花落心法,暗藏在民间戏曲莲花落中的进阶内功心法，若能演唱此贯口，证明此人已步入丐帮正式弟子之行列,,0.9,内功2;经脉1,生命上限60;内力上限60;内功9;经脉9;壮骨0.04;拳掌威力0.04,,内功30;经脉15,,,,0,3,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4043,11 +3827,7 @@
   splits:
   - split: 4
     text: "只有四式的刀法，攻击敌人上下左右四处门户，胜在简单易学"
-    translated: "Only the Four Styles Blade Art attacks the enemy's four directions‑up, down, left, and right‑and excels in its simplicity and ease of learning."
-    qcReviewedText: "Only the Four Styles Blade Art attacks the enemy's four directions‑up, down, left, and right‑and excels in its simplicity and ease of learning."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A four‑move blade technique that attacks an enemy's openings from all directions‑up, down, left, and right. Its strength lies in its simplicity and ease of learning."
 - raw: "428,内功,1,羽林心法,京城守卫禁军所习之基础内功心法，与武林中人的内功相比，忽视了内力修为，更注重实战操练,,0.9,内功1;意志1,生命上限70;内力上限10;内功4;力道4;体质4;回血0.003;长兵威力0.03,,内功10;体质10,,,,0,4,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4139,14 +3919,7 @@
   splits:
   - split: 4
     text: "陷阵之志，有死无生，乃猛将高顺所率精兵之口号，以此意志修习武功者，心神如铁，不可摧折"
-    translated: "Charge to Death, No Retreat‑This was the battle cry of the elite soldiers led by General High Spring. Those who practiced martial arts with such resolve had hearts as steel, unbreakable."
-    qcReviewedText: "Charge to Death, No Retreat‑This was the battle cry of the elite soldiers led by General High Spring. Those who practiced martial arts with such resolve had hearts as steel, unbreakable."
-    qcTranslated: "Charge to Death, No Retreat‑This was the battle cry of the elite soldiers led by General Gao Shun. Those who practiced martial arts with such resolve had hearts as steel, unbreakable."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "To charge into battle with the resolve to fight to the death, without thought of life‑this is the battle cry of General Gao Shun's elite troops. Those who cultivate martial arts with such resolve have minds as hard as iron, unbreakable and unbending."
 - raw: "438,长兵,2,飞龙长戟,专攻远距离的戟法，其出势如龙，长攻远击，可谓一寸长一寸强，但难以应付近身肉搏之敌,15,1,长兵1;体质2,,体质2;长兵2;内力0.1,长兵25;体质25,\"4,0,0\",\"4,3,4\",击退2;凝血0.04,5,4,0,胸10;手10,胸5;手5,,,skill3_1,,火柱-Target-Grid-Happen;腾龙-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4169,23 +3942,12 @@
   splits:
   - split: 4
     text: "行伍猛士所使的挥戈术，专破敌人防御，凭其惊人力道，可轻易啄开寻常甲盾"
-    translated: "The combat technique of the warrior uses them specifically to break enemy defenses. Leveraging their astonishing power, it can easily penetrate ordinary armor."
-    qcReviewedText: "The combat technique of the warrior uses them specifically to break enemy defenses. Leveraging their astonishing power, it can easily penetrate ordinary armor."
-    qcTranslated: "The combat technique of the warrior uses them specifically to break enemy defenses. Leveraging their astonishing Strength, it can easily penetrate ordinary armor and shields."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "The swordsmanship technique used by fierce warriors, which specializes in breaking through enemies' defenses. With its astonishing strength, it can easily pierce through ordinary armor and shields."
 - raw: "441,刀法,2,劈天刀法,举刀砍劈敌人上盘之刀法，招式简单以力量取胜，抵挡不及者难免头颈遭受重创,18,1.1,刀法2;力道1,,力道3;刀法1;内力0.1,刀法20;力道30,\"4,0,0\",\"4,1,2\",穿甲0.08,8,4,0,头21,头10,,,skill2_1,,劈砍_黄裂地-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "举刀砍劈敌人上盘之刀法，招式简单以力量取胜，抵挡不及者难免头颈遭受重创"
-    translated: "Lifting the blade to slash and cleave at the enemy's upper body‑this Blade Art relies on raw power. Those who cannot block in time are doomed to suffer severe injuries to their necks."
-    qcReviewedText: "Lifting the blade to slash and cleave at the enemy's upper body‑this Blade Art relies on raw power. Those who cannot block in time are doomed to suffer severe injuries to their necks."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A blade technique for raising the sword to slash at an opponent's upper body. The move is simple and relies on strength; those who cannot defend in time will inevitably suffer severe injuries to their head and neck."
 - raw: "442,内功,3,潜龙心法,讲求藏锋守拙，蓄势待发之内功心法，其息如龙潜深渊，厚积薄发，一旦出手，便如蛟龙出海，势不可挡,,1,内功潜力1;内功1;体质1,生命上限140;内力上限30;内功8;力道8;体质8;外伤0.06;长兵威力0.06,,内功45;体质30,,,,0,4,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4238,23 +4000,12 @@
   splits:
   - split: 4
     text: "力道独特，招式精妙的挥戈之法，修习此功法登峰造极者，可用长戈雕琢玉器，分毫不差"
-    translated: "The technique displays unique force and exquisite movements. They execute it with grace and power. Those who have mastered this martial arts to the pinnacle can use a long spear to carve jade with precision, not missing by a hair."
-    qcReviewedText: "The technique displays unique force and exquisite movements. They execute it with grace and power. Those who have mastered this martial arts to the pinnacle can use a long spear to carve jade with precision, not missing by a hair."
-    qcTranslated: "The technique displays unique Strength and exquisite movements. They execute it with grace and power. Those who have mastered this martial arts to the pinnacle can use a long halberd to carve jade with precision, not missing by a hair."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "With unique strength and exquisite techniques, the method of wielding a halberd allows those who master it to carve jade with a long pole weapon without missing by even a hair."
 - raw: "448,刀法,3,百战刀法,古代名将所传之刀法，凝练其从军以来一百余战之经验，乃是以鲜血浇灌而成，极尽实用之杀人术,19,1,力道潜力1;刀法1;力道1,,力道3;刀法3,刀法40;力道35,\"0,1,2\",\"7,0,0\",横练0.1;霸体0.02,9,4,0,头10;手10,头8;手6,,,skill2_1,,血龙卷-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 4
     text: "古代名将所传之刀法，凝练其从军以来一百余战之经验，乃是以鲜血浇灌而成，极尽实用之杀人术"
-    translated: "The Blade Art passed down by ancient renowned generals, condensed over more than a hundred battles since their military service. This technique has been refined through blood spilled on the battlefield, a highly effective method of defeating enemies."
-    qcReviewedText: "The Blade Art passed down by ancient renowned generals, condensed over more than a hundred battles since their military service. This technique has been refined through blood spilled on the battlefield, a highly effective method of defeating enemies."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The blade technique passed down by ancient generals, refined from over a hundred battles since their military service, is a killing art cultivated in blood, highly practical and lethal."
 - raw: "449,轻功,4,龙城飞将步,西汉名将李广所传之步法，初看沉稳持重，虎步而行，而后逐渐加快，直至大步流星，气势惊人，宛如飞将军再世,,1.3,轻功潜力2;轻功2,坐骑加成0.1;死战0.05;霸体0.05;长兵威力0.05,,轻功50;体质45;力道35,,,,0,4,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4389,14 +4140,7 @@
   splits:
   - split: 4
     text: "清风徐来，水波不兴，此剑法不急不躁，舒缓平稳，旨在锻炼经脉而非逞强伤人"
-    translated: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
-    qcReviewedText: "Qingfeng xu lai, shuibo bu xing, ci jianfa bu ji bu zao, shufan pingwen, zhan zhi lianlian jingmai er bu chengqiang sharen."
-    qcTranslated: "A gentle breeze stirs, the water's surface remains calm; this Sword Technique is neither hasty nor impatient, but leisurely and steady, aiming to cultivate the meridians rather than display strength or harm others."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "A gentle breeze blows, the water ripples not; this Sword Technique is neither hurried nor agitated, calm and steady, aiming to exercise the meridians rather than show off strength or harm others."
 - raw: "464,内功,1,静守谷神法,茅山派动静结合，凝练心神的基础内功，修习者需盘膝端坐，咬牙合口，掌按耳门，腹内鼓气以修炼内息,,1.1,内功1;经脉1,生命上限20;内力上限60;内功6;经脉6;恢复0.03;康复0.06;负面抗性0.03,,内功20;经脉10,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4437,11 +4181,7 @@
   splits:
   - split: 4
     text: "扰乱对方内息的奇门咒术，命中者骨鲠在喉，芒刺在背，难以发挥全力"
-    translated: "Disruptive Unorthodox incantations that interfere with an opponent's Inner Qi, causing them to feel a fishbone stuck in the throat and needles in the back, making it difficult to fully exert their strength."
-    qcReviewedText: "Disruptive Unorthodox incantations that interfere with an opponent's Inner Qi, causing them to feel a fishbone stuck in the throat and needles in the back, making it difficult to fully exert their strength."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Disruptive Qimen incantations that disturb one's Inner Qi, leaving the target feeling like there's a bone stuck in their throat and needles pricking their back, making it difficult to perform at full strength."
 - raw: "469,奇门,1,定身咒,专攻下盘的奇门点穴之法，命中者腿脚僵劲不能动，如被仙法定身一般,2,1,经脉1;智力1,,智力2;奇门1;内力0.3,奇门10;智力15,\"0,1,1\",\"0,0,0\",腿足点穴0.09;雷电0.09,7,5,0,足14,,,,skill0_2,,符纸-Target-Grid-Happen;锁链-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4605,11 +4345,7 @@
   splits:
   - split: 4
     text: "仿照钟馗姿态所创之剑法，需以浑厚内劲驱动，其招式刚猛，劲道四射，足以令神鬼惊诧，群邪辟易"
-    translated: "Created in the posture of Zhong Kuei, this sword art requires driving with robust internal strength. Its moves are fierce and forceful, radiating power that can startle gods and demons, forcing all evil to retreat."
-    qcReviewedText: "Created in the posture of Zhong Kuei, this sword art requires driving with robust internal strength. Its moves are fierce and forceful, radiating power that can startle gods and demons, forcing all evil to retreat."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A sword technique modeled after Zhong Kui's posture, requiring thick and powerful internal energy to drive it. Its moves are fierce and mighty, with explosive force radiating outward, enough to astonish gods and ghosts, and repel all evil."
 - raw: "487,内功,4,龙虎金丹功,将周身内力汇聚丹田反复催动炼化，如龙虎相争，直至阴阳调和水火相济，便是金丹练成之时，功力亦突飞猛进,,1.2,内功潜力1;经脉潜力1;体质潜力1,生命上限50;内力上限150;内功15;经脉10;意志5;内劲0.06;调息0.06;药性0.04,,内功65;经脉50;意志35,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4707,11 +4443,7 @@
   splits:
   - split: 4
     text: "铸剑山庄新晋弟子皆需从事最苦最累的打铁工作，不仅可吓退意志薄弱者，也能锻炼外力与内劲之根基"
-    translated: "New recruits at Swordforging Manor are required to engage in the most arduous blacksmithing work. This not only deters those with weak wills but also strengthens their external force and internal energy."
-    qcReviewedText: "New recruits at Swordforging Manor are required to engage in the most arduous blacksmithing work. This not only deters those with weak wills but also strengthens their external force and internal energy."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "New recruits at Swordforging Manor must undertake the most arduous and exhausting blacksmithing work, which not only scares off those with weak willpower but also helps to build a foundation for both external strength and internal energy."
 - raw: "498,轻功,0,木屐步,需穿着木鞋训练的轻功，以灵巧见长,,0.8,轻功1,轻功4;灵巧6;速度0.02,,轻功5,,,,0,6,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4743,24 +4475,12 @@
   splits:
   - split: 4
     text: "专诸刺吴王僚所使之剑法，以刺击招式为主，近身肉搏之时颇有几分险意"
-    translated: "Zhu Zhu's technique for assassinating Wu Wang Yao involves primarily sword arts and strikes. In close‑quarters combat, there is a noticeable element of risk involved."
-    qcReviewedText: "Zhu Zhu's technique for assassinating Wu Wang Yao involves primarily sword arts and strikes. In close‑quarters combat, there is a noticeable element of risk involved."
-    qcTranslated: "The Sword Art used by Zhuan Zhu to assassinate King Liao of Wu is centered on thrusting techniques, carrying a distinct sense of danger in close‑quarters combat."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
+    translated: "Zhu Zhu's sword technique used to assassinate King Laoliao of Wu consists mainly of thrusting and striking moves, with a fair amount of danger when engaging in close combat."
 - raw: "502,刀法,0,宰鸡牛刀,铸剑弟子在庖厨中修习之刀法，以牛刀宰杀活鸡，切分鸡肉，专练手部力道和掌腕控制力,9,0.8,刀法1,,力道1;灵巧1;刀法2,力道5;灵巧5,\"0,1,1\",\"0,0,0\",破招0.03;流血0.03,3,6,0,头14,头11,,,skill2_0,,爪痕-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "铸剑弟子在庖厨中修习之刀法，以牛刀宰杀活鸡，切分鸡肉，专练手部力道和掌腕控制力"
-    translated: "Disciples training in blade art within the kitchen forge their strength by using a beef knife to slaughter live chickens and dissect the chicken meat, focusing on developing hand strength and wrist control."
-    qcReviewedText: "Disciples training in blade art within the kitchen forge their strength by using a beef knife to slaughter live chickens and dissect the chicken meat, focusing on developing hand strength and wrist control."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The blade technique practiced by the sword‑casting disciple in the kitchen involves using a large knife to slaughter live chickens and cut up the meat, focusing specifically on hand strength and control of the palm and wrist."
 - raw: "503,内功,1,百炼功,铸剑山庄基础心法，如同打铁一般撞击锤炼丹田内息的功法，需运功百次方能练成,,0.9,内功1;力道1,生命上限60;内力上限20;内功6;力道6;装备强化0.06;坚毅0.03;装备负重3,,内功10;力道10,,,,0,6,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4792,11 +4512,7 @@
   splits:
   - split: 4
     text: "以攻代守，灵巧锐利的剑法招式，铸剑低级弟子常以此功试剑"
-    translated: "Attack instead of defense; this agile and sharp sword technique is often used by junior smelting disciples to test their swords."
-    qcReviewedText: "Attack instead of defense; this agile and sharp sword technique is often used by junior smelting disciples to test their swords."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Attack as defense, agile and sharp sword techniques, junior sword‑casting disciples often use this skill to test their swords."
 - raw: "507,剑法,1,胜邪剑法,招式中透露着邪气的剑法，每挥出一招，剑上邪气便更胜一分，故而得名,13,1.1,剑法1;体质1,,剑法4;内力0.1,剑法20,\"3,1,1\",\"3,0,1\",坚毅0.04,10,6,0,腹20,腹3,,,skill1_1,,黑焰-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4810,14 +4526,7 @@
   splits:
   - split: 4
     text: "招式快速连绵之刀法，乱中有序，序中有乱，形意多变，令敌人烦扰不堪"
-    translated: "While they executed a series of rapid and continuous movements, chaotic yet organized, organized yet chaotic, their form and intent shifted constantly, leaving the enemy bewildered and unable to cope."
-    qcReviewedText: "While they executed a series of rapid and continuous movements, chaotic yet organized, organized yet chaotic, their form and intent shifted constantly, leaving the enemy bewildered and unable to cope."
-    qcTranslated: "While they executed a series of rapid and continuous movements in their Blade Art, chaotic yet organized, organized yet chaotic, their form and intent shifted constantly, leaving the enemy bewildered and unable to cope."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
+    translated: "Swift and continuous blade techniques, chaotic yet orderly, orderly yet chaotic, with ever‑changing forms and intentions, leaving enemies thoroughly vexed."
 - raw: "509,内功,2,千锤功,铸剑山庄进阶心法，如同打铁一般撞击锤炼丹田内息的功法，需运功千次方能练成,,1,内功2;力道1,生命上限90;内力上限30;内功9;力道9;横练0.04;装备强化0.08;装备负重4,,内功25;力道25,,,,0,6,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -4969,11 +4678,7 @@
   splits:
   - split: 4
     text: "战国奇人支离益为斩杀梦中蛟龙所创，然终其一生未得使用，铸剑后人将之改成了绝妙的刀法，每招每式均属世间罕见"
-    translated: "Created by Zhiliyi, a strange genius from the Warring States period, to slay a dream dragon, it remained unused throughout his life. Later swordsmiths transformed it into an exquisite blade art, with each move being incredibly rare in the world."
-    qcReviewedText: "Created by Zhiliyi, a strange genius from the Warring States period, to slay a dream dragon, it remained unused throughout his life. Later swordsmiths transformed it into an exquisite blade art, with each move being incredibly rare in the world."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Created by the Strange Man Shi Liyi of the Warring States period to slay a dragon in a dream, yet he never got to use it in his lifetime. Later swordsmiths transformed it into an extraordinary Blade Technique; every move and form is rare in this world."
 - raw: "526,剑法,5,无尽剑意,铸剑祖师欧治子感应剑池中万柄废弃刀剑之意，终苦思而成一没有剑招只有剑意的神妙剑法，剑未动，意已发，剑有尽，意无穷,19,1.1,剑法潜力2;力道潜力1;灵巧潜力1,,灵巧3;力道1;剑法3;刀法1,剑法80;灵巧60;力道50,\"0,1,3\",\"7,0,0\",连击0.1;穿甲0.1;破招0.1,23,6,0,心10;胸6;腹8,心5;胸5;腹5,,,skill1_1,,剑影大-Target-Grid-Happen,剑,Random,TRUE,0,0"
   splits:
   - split: 4
@@ -5218,11 +4923,7 @@
   splits:
   - split: 4
     text: "双腿摆动迅捷，更兼指掌攀援的奇特轻功，登山越险，见缝插针，上树游墙，如履平地"
-    translated: "The legs swung with great speed, and the unique lightness technique of finger and palm climbing allowed for scaling mountains and overcoming obstacles with ease, fitting into every available space, climbing trees and walls as if walking on flat ground."
-    qcReviewedText: "The legs swung with great speed, and the unique lightness technique of finger and palm climbing allowed for scaling mountains and overcoming obstacles with ease, fitting into every available space, climbing trees and walls as if walking on flat ground."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "With swift leg movements and the aid of a unique qinggong technique for climbing with fingers and palms, scaling mountains, navigating perilous paths, leaping through narrow gaps, climbing trees, and running up walls was as easy as walking on flat ground."
 - raw: "553,绝技,3,摄魂大法,结合毒烟迷雾，传音催眠和邪门真气等法，使心智不坚定者困惑迷狂，坠入幻境的五毒教奇门秘法,,1,绝技潜力1;绝技1;智力1,绝技8;智力10;毒术8;毒素0.04;混乱0.06;负面加成0.04,,绝技35;智力30;毒术45,,,,0,7,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5245,11 +4946,7 @@
   splits:
   - split: 4
     text: "含有五毒教奇门热毒的掌法，命中后会留下鲜红色掌印，此热毒入体会使人血脉膨胀，五内俱焚，功力孱弱者更是自燃当场"
-    translated: "A palm technique containing the Five Poisons Sect's Unorthodox Heat Poison leaves a bright red palm mark. This heat poison, upon entering the body, causes the blood vessels to swell and internal organs to burn, severely weakening one's abilities and causing spontaneous combustion."
-    qcReviewedText: "A palm technique containing the Five Poisons Sect's Unorthodox Heat Poison leaves a bright red palm mark. This heat poison, upon entering the body, causes the blood vessels to swell and internal organs to burn, severely weakening one's abilities and causing spontaneous combustion."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A palm technique imbued with the Five Poisons Sect's Qimen heat poison leaves a bright red palm mark behind. Upon entering the body, this heat poison causes blood vessels to swell and internal organs to burn, rendering even those with weak martial arts abilities unable to withstand it and causing them to combust on the spot."
 - raw: "556,射术,3,孟婆散,可迅速麻痹心脉大脑之五毒教特制迷药，中者如饮孟婆汤般，迷离惝恍，神情恍惚，乃至当场昏迷不醒，丧失记忆,10,0.9,毒术潜力1;毒术1;智力1,,智力2;射术1;毒术4,射术35;智力25;毒术45,\"2,1,2\",\"0,0,1\",毒素0.08;震脑0.06;混乱0.06,14,7,0,头18;心8,头3;心1,,,skill5_0,11-----1.15,毒素-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -5398,11 +5095,7 @@
   splits:
   - split: 4
     text: "西南盗匪常用刀法，招式简洁凶狠，专砍人要害"
-    translated: "The knife techniques used by bandits in the southwest are simple yet vicious, targeting vital points."
-    qcReviewedText: "The knife techniques used by bandits in the southwest are simple yet vicious, targeting vital points."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Bandits in the southwest often use blade techniques with simple and ruthless moves, specifically targeting their enemies' vital points. Vital Points."
 - raw: "573,刀法,0,红眼刀法,西北刀客搏命时所使，招招凶猛，拼急斗狠的赌徒式刀法，此刀法一出，意味着不是你死，就是我亡,13,1,刀法1,,体质2;刀法1,刀法5;体质5,\"0,1,1\",\"0,0,0\",疯魔0.02,7,8,0,腹18,腹6,,,skill2_1,,血轮-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5536,11 +5229,7 @@
   splits:
   - split: 4
     text: "阎罗殿弟子常用之进阶刀法，讲求以战养战，威猛嗜杀，挥砍之间鬼神惊惧，气势不凡"
-    translated: "Yama Hall disciples commonly use this advanced Blade Art, which emphasizes feeding off battle to maintain ferocity and a deadly appetite. In their swings and slashes, even ghosts and gods are terrified, exuding an extraordinary momentum."
-    qcReviewedText: "Yama Hall disciples commonly use this advanced Blade Art, which emphasizes feeding off battle to maintain ferocity and a deadly appetite. In their swings and slashes, even ghosts and gods are terrified, exuding an extraordinary momentum."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The advanced Blade Technique commonly used by Yama Hall disciples, which emphasizes honing skills through combat, is fierce and bloodthirsty, striking fear into the hearts of gods and spirits with each swing, displaying extraordinary momentum."
 - raw: "588,拳掌,2,鬼哭拳,套路狂放，以力道取胜的拳法，由膂力过人者使出，劲风飒飒，声响刺耳，不明就里者只以为是冤鬼夜哭,16,0.9,拳掌2;力道1,,力道3;拳掌2;内力0.1,拳掌25;力道20,\"4,0,0\",\"4,1,2\",断骨0.08,16,8,0,胸20,胸11,,,skill0_0,,暗影-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5590,11 +5279,7 @@
   splits:
   - split: 4
     text: "此七式刀法每招名称中皆有一“杀”字，一刀比一刀更为邪气逼人，杀意旺盛，若七刀尽出则再无退路，不死不休"
-    translated: "Each of these seven Blade Arts includes a kill in its name. Each strike is more wicked than the last, brimming with murderous intent. If all seven are used, there will be no turning back‑no mercy, no survival."
-    qcReviewedText: "Each of these seven Blade Arts includes a kill in its name. Each strike is more wicked than the last, brimming with murderous intent. If all seven are used, there will be no turning back‑no mercy, no survival."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Each of these seven blade techniques has a kill in its name, with each slash more sinister than the last, brimming with murderous intent. Once all seven blades are unleashed, there is no turning back, no escape, until death or victory."
 - raw: "594,刀法,3,阴阳乱刃,在刀上蕴含一阴一阳两股劲道，忽刚忽柔，随时变化，其招法看似散乱无章，实则配合无间，杀机四伏,19,1.2,力道潜力1;刀法1;体质1,,体质2;刀法3;内力0.2,刀法50;体质25,\"3,1,2\",\"7,0,0\",动摇0.04;昏沉0.04;疯魔0.04,19,8,0,手10;足10,手7;足7,,,skill2_2,,气流-Target-Grid-Happen;墨旋-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5710,11 +5395,7 @@
   splits:
   - split: 4
     text: "相传阎罗王曾学尽天下刀法，并以此创出这一无所不用其极的最强杀戮法门，因其凶险异常，稍有不慎便会走火入魔"
-    translated: "Legend has it that King Yama mastered every blade art in the world and created this extreme and utterly merciless method of slaughter with them. Due to its tremendous peril, even the slightest carelessness could lead one down a path of corruption."
-    qcReviewedText: "Legend has it that King Yama mastered every blade art in the world and created this extreme and utterly merciless method of slaughter with them. Due to its tremendous peril, even the slightest carelessness could lead one down a path of corruption."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "It is said that King Yama once mastered all the blade techniques in the world and used them to create this ultimate killing art that leaves no stone unturned. Due to its extreme danger, one risks falling into madness with even the slightest mistake."
 - raw: "607,内功,0,龟息功,模仿龟鳖，减缓呼吸频率的吐纳之法，有调养心神，延年益寿之功效,,1,内功1,生命上限10;内力上限30;内功4;意志4;调息0.04;负面抗性0.02,,内功10;意志5,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5728,11 +5409,7 @@
   splits:
   - split: 4
     text: "灵巧飘逸，避实就虚之步法，其中意图常人难以揣测"
-    translated: "Graceful and elusive, this footwork evades the real strike while targeting the weak point, making its intent hard for ordinary people to fathom."
-    qcReviewedText: "Graceful and elusive, this footwork evades the real strike while targeting the weak point, making its intent hard for ordinary people to fathom."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Elegant and agile, evasive footwork that defies ordinary understanding."
 - raw: "609,绝技,0,抚琴清音,江上调玉琴，一弦清一心，乃是借瑶琴演奏锻炼心智之法门,,1.1,绝技1,绝技4;智力4;定神0.04,,绝技10;智力5,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5916,11 +5593,7 @@
   splits:
   - split: 4
     text: "纵身跳跃后长久滞空的轻功，实为借助真气反冲减缓下坠速度，不明诀窍者只道是仙人降世，惊骇莫名"
-    translated: "A long‑lasting aerial maneuver after leaping, what is known as lightness, actually relies on utilizing True Qi to reduce the descent speed through a reverse thrust. Those who do not understand its secrets only think it is a manifestation of a divine being, leaving them amazed and terrified."
-    qcReviewedText: "A long‑lasting aerial maneuver after leaping, what is known as lightness, actually relies on utilizing True Qi to reduce the descent speed through a reverse thrust. Those who do not understand its secrets only think it is a manifestation of a divine being, leaving them amazed and terrified."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The qinggong technique of leaping high and remaining suspended in the air for a long time is actually achieved by using True Qi to slow down the descent. Those who do not understand the secret behind it merely think it is a divine being descending, filled with amazement and fear."
 - raw: "629,绝技,3,文心雕龙,南朝刘勰阐述文章笔法义理之巨著，其中包罗万象，开源发流，通晓此书后，各式秘籍中艰深之处自然迎刃而解,,1.1,绝技潜力1;绝技1;智力1,绝技8;智力8;意志8;醒脑0.1,,绝技40;智力35;意志30,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -5970,11 +5643,7 @@
   splits:
   - split: 4
     text: "遵循阴阳相生相克之理的奇特剑法，其招式一正一反，一攻一守，不断交错转换，每一剑都符合情理却又出人意料"
-    translated: "Following the principle of yin and yang generating and overcoming each other, this unique sword art features moves that are both complementary and contradictory, offensive and defensive, continuously alternating. Each stroke is both logical yet surprising."
-    qcReviewedText: "Following the principle of yin and yang generating and overcoming each other, this unique sword art features moves that are both complementary and contradictory, offensive and defensive, continuously alternating. Each stroke is both logical yet surprising."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This unique sword technique follows the principles of yin and yang, generating and restraining each other. Its moves alternate between positive and negative, offensive and defensive, constantly shifting and transforming. Each strike is both logical and unexpected."
 - raw: "635,内功,4,太阳太玄功,融汇儒道易三家之神妙经典：太玄经上卷，需于正午时分汲取皓日之精华，日积月累方能修得此至阳至刚之磅礴内息,,1.2,内功潜力2;内功1;意志1,生命上限130;内力上限70;内功15;意志15;舒筋0.05;灼烧0.05;削内0.2,,内功70;意志45,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6023,14 +5692,7 @@
   splits:
   - split: 4
     text: "自霓裳羽衣舞姿中演化而来，其身形与力道时而飘然转旋回雪轻，时而嫣然纵送游龙惊，再平凡之招式也能生出无穷变化"
-    translated: "Evolved from the graceful Zhiru Dance Posture, her movements shift between light, swirling snowflakes and swift, startling dragon glides. Even the simplest techniques can unfold into endless variations."
-    qcReviewedText: "Evolved from the graceful Zhiru Dance Posture, her movements shift between light, swirling snowflakes and swift, startling dragon glides. Even the simplest techniques can unfold into endless variations."
-    qcTranslated: "Evolved from the graceful Zhiru Dance Posture, her form and strength shift between light, swirling snowflakes and swift, startling dragon glides. Even the simplest techniques can unfold into endless variations."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Evolved from the dance of the Feathered Robe and Brocade Dress, her movements and strength are at times graceful and light as swirling snow, at times stunning and fierce like a dragon in flight. Even the most ordinary techniques can be transformed into endless variations."
 - raw: "639,射术,4,广陵散曲功,以嵇康失传曲谱为形，深厚玄奥内劲为意所创奇功，演奏时劲风四射，周身数丈内惊蓬振振，杀气森森，飞沙走石，天地变色,18,1.2,智力潜力2;射术1;智力1,,智力5;射术3;内力0.1,射术60;智力55,\"1,1,3\",\"7,0,0\",定身0.08;震脑0.08,26,9,0,头18;心10,头6;心4,,,skill4_8,13-----1.2,黄沙-Target-Grid-Happen;音波-Target-Grid-Happen,琴,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -6071,11 +5733,7 @@
   splits:
   - split: 4
     text: "源于敦煌飞天壁画中的奇绝剑法，其招式需纵跃而上后凌空直下，剑光自天上而来，真如银瓶乍破水光泄，九天星河落凡间"
-    translated: "Swordsmanship derived from the exquisite depictions of flying celestial beings in Dunhuang murals. Its techniques require leaping high and then descending vertically, with sword light cascading down from the heavens, truly like the sudden breakage of a silver bottle releasing water, bringing the celestial river of stars to earth."
-    qcReviewedText: "Swordsmanship derived from the exquisite depictions of flying celestial beings in Dunhuang murals. Its techniques require leaping high and then descending vertically, with sword light cascading down from the heavens, truly like the sudden breakage of a silver bottle releasing water, bringing the celestial river of stars to earth."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A miraculous sword technique derived from the Flying Heavenly Figures murals of Dunhuang, where its moves require leaping upward and then plunging downward through the air. The sword's light comes from the heavens above, truly like a silver vase suddenly breaking to spill water, or the celestial river of stars falling to the mortal world."
 - raw: "644,内功,5,归墟秘典,传说海水汇集处有无底深谷名曰归墟，此心法将丹田炼化为归墟，经脉炼化为河流，与他人内劲相交时，可将其内力沿河流吸纳入海，化为己用,,1.3,智力潜力2;内功潜力1;内功1;智力1,生命上限20;内力上限220;内功12;智力12;经脉12;吸内0.18;反伤吸内0.12;护体真气0.06,,内功80;智力60;经脉60,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6281,11 +5939,7 @@
   splits:
   - split: 4
     text: "古朴易学，力道奇大之少林爪法，拳掌坚硬逾钢，手指开砖如泥，致敌伤残于瞬息间，也因威力过大，戒律规定不得滥用"
-    translated: "Ancient and easy to learn, the Shaolin Claw technique with extraordinary strength, has fists and palms harder than steel, fingers capable of cracking bricks as if they were mud. It can injure or disable enemies in an instant. Due to its overwhelming power, the monastic rules prohibit its excessive use."
-    qcReviewedText: "Ancient and easy to learn, the Shaolin Claw technique with extraordinary strength, has fists and palms harder than steel, fingers capable of cracking bricks as if they were mud. It can injure or disable enemies in an instant. Due to its overwhelming power, the monastic rules prohibit its excessive use."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Ancient and easy to learn, with extraordinary strength, Shaolin Claw Technique. Unarmed strikes are as hard as steel, breaking bricks with fingers as easily as mud, causing instant injury to opponents. Due to its excessive power, the rules prohibit its misuse."
 - raw: "667,拳掌,2,去烦恼指,招式精妙，专攻头颈部位的少林指法，若不施加内劲可指点他人使其醒悟，若施加内劲则能令其昏厥当场,13,1.1,拳掌2;经脉1,,经脉2;拳掌4;内力0.2,拳掌30;经脉25,\"4,0,0\",\"4,1,3\",头颈点穴0.06;定身0.04,13,10,0,头21,头13,,,skill0_2,,闪光-Target-Grid-Happen;佛散-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6560,11 +6214,7 @@
   splits:
   - split: 4
     text: "武当入门拳法，舒缓灵巧，开合缜密，有培本筑基之功效，不可轻视"
-    translated: "Basic Wudang Fist Technique, gentle yet agile, opening and closing with meticulous detail, possesses the effect of nurturing the root and foundation establishment; it should not be underestimated."
-    qcReviewedText: "Basic Wudang Fist Technique, gentle yet agile, opening and closing with meticulous detail, possesses the effect of nurturing the root and foundation establishment; it should not be underestimated."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Wudang entry fist techniques, smooth and agile, with meticulous openings and closings, they have the effect of cultivating a solid foundation; do not underestimate them."
 - raw: "697,拳掌,0,武当绵掌,体现武当以柔克刚思维的入门掌法，掌力绵长圆转且蕴含内劲，看似柔弱无骨，实为绵里藏针,8,1,拳掌1,,经脉2;拳掌2;内力0.1,拳掌10;经脉5,\"0,1,1\",\"0,0,1\",连绵0.06,3,11,0,腹16,腹12,,,skill0_1,,乱刃-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6578,23 +6228,12 @@
   splits:
   - split: 4
     text: "武当内家剑之母，其神韵悠然自得，沉着稳重，亦包含基础的内劲运用技巧"
-    translated: "Mother of Wudang Neijia Jian, its spirit and grace exude a sense of serene confidence and steady composure, also incorporating basic techniques of internal power application."
-    qcReviewedText: "Mother of Wudang Neijia Jian, its spirit and grace exude a sense of serene confidence and steady composure, also incorporating basic techniques of internal power application."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The matriarch of Wudang Neigong Sword techniques, her demeanor is naturally graceful and composed, also encompassing fundamental skills in the application of Neigong."
 - raw: "699,剑法,0,松溪小花剑,招式简练扼要，轻灵洒脱之剑法，其剑势如溪流潺潺而下，轻快奔腾,10,0.9,剑法1,,智力1;剑法2;内力0.2,剑法5,\"2,1,1\",\"7,0,0\",疲劳0.04,5,11,0,手14,手11,,,skill1_0,,水滴-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "招式简练扼要，轻灵洒脱之剑法，其剑势如溪流潺潺而下，轻快奔腾"
-    translated: "The martial art move is straightforward and graceful, like a gentle stream flowing down a mountain, swift yet unhurried."
-    qcReviewedText: "The martial art move is straightforward and graceful, like a gentle stream flowing down a mountain, swift yet unhurried."
-    qcTranslated: "The Swordsmanship is concise and to the point, a light and free‑spirited style whose sword momentum flows down like a gentle stream, swift and galloping."
-    qcStatus: Corrected
-    qcQualityScore: 82
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "A concise and straightforward sword technique, graceful and carefree, with sword movements like a stream rushing down, light and swift."
 - raw: "700,内功,1,武当混元桩,武当基础内修法门，取顶天立地之势站桩直立，引阴阳之气上下贯通经脉，最终归于丹田融成混元之内息,,1,内功1;经脉1,生命上限30;内力上限50;内功6;经脉6;调息0.06,,内功15;经脉15,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6659,11 +6298,7 @@
   splits:
   - split: 4
     text: "共分为十三大剑势，快慢相兼，刚柔并济，讲求形神相合，意气贯通，乃武当正宗剑法之基"
-    translated: "Divided into thirteen major sword postures, combining fast and slow movements, blending hardness and softness, emphasizing harmony between form and spirit, and unobstructed intent and energy. These are the foundational techniques of authentic Wudang Sword Art."
-    qcReviewedText: "Divided into thirteen major sword postures, combining fast and slow movements, blending hardness and softness, emphasizing harmony between form and spirit, and unobstructed intent and energy. These are the foundational techniques of authentic Wudang Sword Art."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Divided into thirteen major sword postures, combining speed and slowness, hardness and softness, emphasizing the unity of form and spirit, and the flow of intent and energy‑this is the foundation of Wudang's true Sword Technique."
 - raw: "707,内功,2,元始周天功,使体内真气沿十二经脉自动循环运行之心法，每循环一周内息便略微增强一分，因而更讲求细水长流，厚积薄发,,1.1,内功2;经脉1,生命上限30;内力上限90;内功9;经脉9;调息0.04;连绵0.04,,内功35;经脉20,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6734,11 +6369,7 @@
   splits:
   - split: 4
     text: "一阴一阳，一柔一刚两种剑法融合而成，要求配合无间，切换迅速，若运用者思路稍有混乱，便难免错漏百出"
-    translated: "Yin and yang, soft and hard two sword arts blended together require seamless coordination and swift switching. If the user's thoughts become even slightly chaotic, mistakes are inevitable."
-    qcReviewedText: "Yin and yang, soft and hard two sword arts blended together require seamless coordination and swift switching. If the user's thoughts become even slightly chaotic, mistakes are inevitable."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Combining two sword techniques, one yin and one yang, one soft and one hard, requires seamless coordination and swift transitions; if the practitioner's mind is slightly confused, mistakes will inevitably abound."
 - raw: "715,内功,3,纯阳无极功,武当上乘内功心法，全篇十二关颇为艰涩，取天地阳气至丹田熔炉中反复精炼，修成后内息炽热无比，纯净清澈,,1.2,内功潜力1;内功1;经脉1,生命上限50;内力上限110;内功12;经脉12;内伤0.05;反弹0.03,,内功50;经脉40,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6788,11 +6419,7 @@
   splits:
   - split: 4
     text: "将至阳内力灌注剑身使出的武当内家剑法，破空之声清冽，如凤凰啼鸣，劲风奔涌炽热，如朝阳初生"
-    translated: "Projecting Yang Inner Power into the blade to wield Wudang Internal Sword Technique, the piercing sound cut through the air, clear as a phoenix's cry. The intense heat of the fierce wind surged like the sun rising."
-    qcReviewedText: "Projecting Yang Inner Power into the blade to wield Wudang Internal Sword Technique, the piercing sound cut through the air, clear as a phoenix's cry. The intense heat of the fierce wind surged like the sun rising."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Wudang Neigong Sword Technique infused with intense Yang Inner Power, slicing through the air with a crisp sound like the cry of a phoenix, accompanied by a surging hot gale like the rising sun."
 - raw: "721,剑法,3,三清化一剑,三清者，玉清上清太清三胜景也，此剑法一招三剑，看似从三个方位刺向敌人，实则最终攻击同一点，可谓精妙非凡,17,1,灵巧潜力1;剑法1;灵巧1,,灵巧3;剑法3;内力0.2,剑法45;灵巧30,\"4,0,0\",\"4,1,4\",破招0.1,19,11,0,手6;心18,手4;心8,,,skill1_0,,真气-Target-Grid-Start;三连剑影中-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6824,11 +6451,7 @@
   splits:
   - split: 4
     text: "结合道家理念将一阴一阳两股内力调和成混元气劲的功法。此劲奔流无匹，更兼延绵不绝，便是内家高手也忌惮三分"
-    translated: "A cultivation technique that integrates Yin and Yang inner powers to form Primordial Unity Qi. This qi flows with unmatched power and is continuous without end‑ even accomplished internal martial artists are wary of it by a third."
-    qcReviewedText: "A cultivation technique that integrates Yin and Yang inner powers to form Primordial Unity Qi. This qi flows with unmatched power and is continuous without end‑ even accomplished internal martial artists are wary of it by a third."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A technique that combines Daoist principles to harmonize two streams of Inner Power‑yin and yang‑into a primordial energy force. This force flows unmatched and endures without ceasing; even the most skilled practitioners of Neigong fear it greatly."
 - raw: "725,拳掌,4,日月明光掌,汲取日月之精华，以纯阳纯阴内力混元击出的掌法，其气劲破空激射，如日月当空，光芒万丈刺目耀眼,22,1,经脉潜力2;拳掌1;智力1,,智力3;拳掌4;内力0.1,拳掌60;智力45,\"4,0,0\",\"4,1,4\",目盲0.04;内劲0.04,27,11,0,头14;心9,头8;心6,,,skill0_1,,天光-Target-Grid-Happen;八卦光-Target-Grid-Happen,拳,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -6851,20 +6474,12 @@
   splits:
   - split: 4
     text: "武当内家剑精髓，催周身真气于剑上，锋刃灵气氤氲，瑞光乍现，出招时乘九狮之仙驭，散百宝之祥光，堪有太乙天尊三分神通"
-    translated: "The essence of Wudang Internal School Swordsmanship focuses True Qi throughout the body onto the sword, enhancing its edge with ethereal spirit. A divine light suddenly shines forth as the technique is delivered while riding nine celestial lions, dispersing a hundred treasures' auspicious radiance, wielding power akin to three parts of Venerable Taiyi's divine abilities."
-    qcReviewedText: "The essence of Wudang Internal School Swordsmanship focuses True Qi throughout the body onto the sword, enhancing its edge with ethereal spirit. A divine light suddenly shines forth as the technique is delivered while riding nine celestial lions, dispersing a hundred treasures' auspicious radiance, wielding power akin to three parts of Venerable Taiyi's divine abilities."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The essence of Wudang Neigong Sword Technique involves channeling True Qi throughout the body and onto the sword, causing its blade to shimmer with spiritual energy and emit auspicious light. When executing a move, one rides on the divine carriage of the Nine Lions and scatters the blessed radiance of myriad treasures, wielding powers akin to one‑third of the celestial might of the Grand Ultimate Celestial Immortal."
 - raw: "728,剑法,4,真武荡魔剑,传说真武大帝于武当修行四十二年，功成飞升，遗此剑法于世，其剑势矫若惊龙，翩若游鸿，正气浩然长存，妖魔触之即溃,20,0.9,剑法潜力2;剑法1;灵巧1,,灵巧2;剑法4;内力0.3,剑法55;灵巧50,\"2,1,3\",\"7,0,0\",内伤0.04;内劲0.08,24,11,0,足13;手10,足9;手5,,,skill1_1,,旋风斩-Target-Grid-Happen;八卦光-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "传说真武大帝于武当修行四十二年，功成飞升，遗此剑法于世，其剑势矫若惊龙，翩若游鸿，正气浩然长存，妖魔触之即溃"
-    translated: "Legend says that True Martial Emperor cultivated at Wudang for forty‑two years. Upon achieving enlightenment, he left this Sword Art behind. The sword movements are agile like a startled dragon and graceful like wandering geese. The righteous energy endures forever, causing demons and monsters to dissipate upon contact."
-    qcReviewedText: "Legend says that True Martial Emperor cultivated at Wudang for forty‑two years. Upon achieving enlightenment, he left this Sword Art behind. The sword movements are agile like a startled dragon and graceful like wandering geese. The righteous energy endures forever, causing demons and monsters to dissipate upon contact."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Legend has it that the True Martial Emperor practiced on Wudang for forty‑two years, achieving enlightenment and ascending, leaving this Sword Technique in the world. Its sword movements are as swift and majestic as a startled dragon, as graceful as a wandering wild goose, with righteous energy that endures forever, causing demons and monsters to scatter upon contact."
 - raw: "729,内功,5,太极神功,太极者天地混沌未开之相，此功法集天地灵气，纳四海于经脉，含八荒于丹田，故太极真气得以生生不息，取之无尽，用之不竭,,1,内功潜力2;智力潜力1;内功1;智力1,生命上限60;内力上限180;内功12;经脉12;智力12;内伤0.04;连绵0.04;反弹0.04,,内功75;智力60;经脉50,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6896,11 +6511,7 @@
   splits:
   - split: 4
     text: "霸刀门地处西北蛮荒，向来重视硬功锤炼而轻视内家修为，此心法正是专练经脉之强劲，而非内息之积累"
-    translated: "The Tyrant Blade Sect is located in the northwest wilderness, and has always placed greater emphasis on the cultivation of external hard skills over the accumulation of inner qi. This Heart Method focuses specifically on strengthening the meridians rather than building up inner energy."
-    qcReviewedText: "The Tyrant Blade Sect is located in the northwest wilderness, and has always placed greater emphasis on the cultivation of external hard skills over the accumulation of inner qi. This Heart Method focuses specifically on strengthening the meridians rather than building up inner energy."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Tyrant Blade Sect is located in the northwest wilderness and has always valued hard training in external skills while neglecting Neigong cultivation. This Heart Method specifically focuses on strengthening the Meridians rather than accumulating Inner Qi."
 - raw: "733,轻功,0,铁膝功,此脚法专练腿足膝盖之坚韧程度，棍棒击打亦不能曲折，如有铁铸,,0.9,体质1,意志4;体质4;卸力0.04,,体质5,,,,0,12,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -6944,14 +6555,7 @@
   splits:
   - split: 4
     text: "枪如银蛇，灵巧锐利，招式以各种刺击为主"
-    translated: "The sword moves like a silver snake, agile and sharp, with strikes dominating the technique."
-    qcReviewedText: "The sword moves like a silver snake, agile and sharp, with strikes dominating the technique."
-    qcTranslated: "The spear moves like a silver snake, agile and sharp, with thrusts dominating the technique."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
+    translated: "The gun is like a silver snake, agile and sharp, with techniques centered around various thrusts."
 - raw: "738,内功,1,十三太保横练,从硬功中演化而来，讲求内外兼修的霸刀门心法，以丹田内息支撑肢体之强健，提升力道之威猛,,1,内功1;力道1,生命上限70;内力上限10;力道3;体质3;横练0.02;刀法威力0.08;减伤3,,内功15;力道10,,,,0,12,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7037,14 +6641,7 @@
   splits:
   - split: 4
     text: "以雷电破空之势急速劈砍，力道狂猛之刀法，兵刀相交之时火光四溅，真如雷公电母显灵一般"
-    translated: "With the speed of lightning piercing the sky, he slash with a blade art of raging strength. As sword met saber, sparks flew everywhere, truly like Lei Gong and Leibu manifesting."
-    qcReviewedText: "With the speed of lightning piercing the sky, he slash with a blade art of raging strength. As sword met saber, sparks flew everywhere, truly like Lei Gong and Leibu manifesting."
-    qcTranslated: "With the speed of lightning piercing the sky, he slashes with a Blade Art of raging Strength. As sword met saber, sparks flew everywhere, truly like Lei Gong and Leibu manifesting."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "With the speed of lightning, he slashed with a fierce and powerful blade technique, causing sparks to fly when blades met, as if the Thunder God and Lightning Goddess had descended."
 - raw: "748,刀法,2,断水流刀法,以钢刀不断劈砍水流修炼而成，起初水流只是略有阻滞，待功力深厚之时，则能将水面劈开数寸,15,1,刀法2;体质1,,体质3;刀法1;内力0.1,刀法20;体质30,\"4,0,0\",\"4,1,3\",破甲0.08,9,12,0,头5;胸14,头3;胸9,,,skill2_1,,喷泉-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -7085,29 +6682,17 @@
   splits:
   - split: 4
     text: "在悬挂半空的刀阵中练习武功的霸刀门绝技，修成后可敏捷闪战，无惧刀兵，对于刀法理解亦更为深刻"
-    translated: "Practicing the Tyrant Blade Sect's Special Technique while suspended in mid‑air within a blade array allows one to become agile and fearless in battle, with a deeper understanding of Blade Art."
-    qcReviewedText: "Practicing the Tyrant Blade Sect's Special Technique while suspended in mid‑air within a blade array allows one to become agile and fearless in battle, with a deeper understanding of Blade Art."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Practicing the special techniques of the Tyrant Blade Sect within a suspended array of blades, one becomes agile in combat, fearless against weapons, and gains a deeper understanding of blade techniques."
 - raw: "753,刀法,3,英雄刀法,每一招均以英雄命名，豪气干云，霸道纵横之刀法，若由臂力过人者使出，气度更是不凡,18,1,刀法潜力1;刀法1;力道1,,力道3;刀法2;内力0.1,刀法45;力道30,\"4,0,0\",\"5,1,2\",外伤0.05;铜皮0.05,12,12,0,手9;胸12,手6;胸7,,,skill2_0,,爆炸星-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "每一招均以英雄命名，豪气干云，霸道纵横之刀法，若由臂力过人者使出，气度更是不凡"
-    translated: "Each move is named after a hero, exuding grandeur and dominance. If such powerful arm strength is used to wield these Blade Arts, the demeanor becomes even more extraordinary."
-    qcReviewedText: "Each move is named after a hero, exuding grandeur and dominance. If such powerful arm strength is used to wield these Blade Arts, the demeanor becomes even more extraordinary."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Each move named after a hero, brimming with heroic spirit and domineering presence, this blade technique is even more impressive when wielded by one with exceptional strength."
 - raw: "754,刀法,3,嗔狂刀法,愤怒至极，狂放莫名的刀法，每一刀挥出，皆是竭尽全力，奋不顾身，颇有玉石俱焚，置之死地而后生之意,19,1,力道潜力1;体质潜力1,,体质4;刀法3,刀法40;体质35,\"1,1,1\",\"7,0,0\",死战0.06;横练0.06,13,12,0,头18;胸8,头4;胸2,,,skill2_1,,圆斩血-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "愤怒至极，狂放莫名的刀法，每一刀挥出，皆是竭尽全力，奋不顾身，颇有玉石俱焚，置之死地而后生之意"
-    translated: "Fury knows no bounds, and this wild and frenzied Blade Art is wielded with all one's might, forsaking personal safety. Each swing seems to embody the spirit of destroying both oneself and the enemy to survive."
-    qcReviewedText: "Fury knows no bounds, and this wild and frenzied Blade Art is wielded with all one's might, forsaking personal safety. Each swing seems to embody the spirit of destroying both oneself and the enemy to survive."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Furious and unrestrained, his blade technique was extreme and unpredictable. With every slash, he exerted all his strength without reservation, as if willing to destroy everything in a desperate bid for survival."
 - raw: "755,长兵,3,寻龙枪诀,霸刀门主眺望西北戈壁山脉走势时所创，其枪势随山脊蜿蜒起伏，层峦叠嶂，心容山海之人方能得其真意,17,1.1,长兵潜力1;长兵1;意志1,,意志3;长兵3;内力0.1,长兵40;意志40,\"3,1,1\",\"2,0,2\",壮骨0.05;活血0.05,11,12,0,心14;腹8,心8;腹4,,,skill3_1,,龙腾爆-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7131,14 +6716,10 @@
   - split: 4
     text: "上应天命"
     translated: "Up to the mandate of heaven"
-    qcReviewedText: "Up to the mandate of heaven,From the depths of one's heart, this Blade Art exudes an overwhelmingly domineering force when unleashed. Its momentum is fierce and unyielding, pressing forward fearlessly, truly a manifestation of destiny, sweeping all before it."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - split: 4
     subIndex: 1
     text: "下从人心之刀法，出手时引动全身霸道无比之劲道，去势威猛，勇往直前，可谓天命所归，所向披靡"
-    translated: "From the depths of one's heart, this Blade Art exudes an overwhelmingly domineering force when unleashed. Its momentum is fierce and unyielding, pressing forward fearlessly, truly a manifestation of destiny, sweeping all before it."
+    translated: "This blade technique draws upon overwhelming power from the entire body when executed, with a fierce and unstoppable momentum that seems destined to conquer all."
   templates:
   - split: 4
     template: "{0},{1}"
@@ -7146,11 +6727,7 @@
   splits:
   - split: 4
     text: "此刀法孤傲诡谲，去势如同天边一轮残月，以弧线向下勾连，寒冷皎洁之刀光亦四下照射，能够穿透世间一切壁障"
-    translated: "This Blade Art is solitary and cunning, its momentum like a waning moon in the sky, drawing down in an arc. The cold, bright blade light also casts shadows all around, capable of piercing through everything in this world."
-    qcReviewedText: "This Blade Art is solitary and cunning, its momentum like a waning moon in the sky, drawing down in an arc. The cold, bright blade light also casts shadows all around, capable of piercing through everything in this world."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This blade technique is solitary and enigmatic. Its momentum arcs like a crescent moon on the horizon, curving downward to hook its target, with cold, radiant blade light radiating outward, capable of piercing through all barriers in the world."
 - raw: "759,长兵,4,霸王枪法,西楚霸王项羽所传，一式极尽霸道之枪法，扫八荒，清六合，荡平群魔，铲除奸邪，只在举手之间,23,1,长兵潜力2;长兵1;意志1,,意志3;长兵4,长兵60;意志45,\"4,0,0\",\"4,1,4\",真伤0.06;重碾0.04;坚毅0.04,15,12,0,胸12;腹11,胸7;腹7,,,skill3_0,,墨爪爆-Target-Grid-Happen;墨旋-Target-Grid-Start,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7208,20 +6785,12 @@
   splits:
   - split: 4
     text: "蓬莱派入门剑法，假托八仙诸形分为八大架势，快慢相济，刚柔有度"
-    translated: "Penglai Sect's Foundation Sword Art, mimicking the forms of the Eight Immortals, is divided into eight postures, combining speed and slowness while maintaining a balance between hardness and softness."
-    qcReviewedText: "Penglai Sect's Foundation Sword Art, mimicking the forms of the Eight Immortals, is divided into eight postures, combining speed and slowness while maintaining a balance between hardness and softness."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The introductory sword technique of the Penglai Sect, modeled after the forms of the Eight Immortals, is divided into eight major stances. It balances speed and slowness, hardness and softness."
 - raw: "765,剑法,0,碧波剑法,将内息缠绕于剑上，使之柔韧回转，波涛荡漾，可荡开力道较弱的攻势,9,1,剑法1,,经脉2;剑法1;内力0.2,剑法5;经脉10,\"0,1,1\",\"3,0,1\",断招0.06,4,13,0,手14,手12,,,skill1_1,,水滴-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "将内息缠绕于剑上，使之柔韧回转，波涛荡漾，可荡开力道较弱的攻势"
-    translated: "Wrap the inner qi around the sword to make it flexible and twisting, like waves rippling, thus dispelling weaker attacks."
-    qcReviewedText: "Wrap the inner qi around the sword to make it flexible and twisting, like waves rippling, thus dispelling weaker attacks."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Wrap the Inner Qi around the sword, making it supple and responsive, with waves that can deflect weaker attacks."
 - raw: "766,奇门,0,天女散花篮,仿照蓝采和法宝以铁条编成，云游八方时能作容器，如遇拦路盗匪，也可遮挡利刃和暗器的袭击,8,1.1,奇门1,,意志1;奇门2;内力0.1,奇门5,\"3,1,2\",\"7,0,0\",铜皮0.06,3,13,0,头13,头13,,,skill4_6,,花散-Target-Grid-Happen,扇,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -7328,15 +6897,7 @@
   splits:
   - split: 4
     text: "攻势凌厉，出手迅猛之剑法，一招既出，全身内劲随剑身追风赶月而去，轻功高绝之人亦难以逃避"
-    translated: "While attacking with fierce momentum and swift sword techniques, one move releases all internal energy following like chasing the wind and moon. They deliver each strike with relentless precision and fluidity. Even those with supreme lightness skills find it hard to evade."
-    qcReviewedText: "While attacking with fierce momentum and swift sword techniques, one move releases all internal energy following like chasing the wind and moon. They deliver each strike with relentless precision and fluidity. Even those with supreme lightness skills find it hard to evade."
-    qcTranslated: "A Sword Art of fierce momentum and swift strikes; once a move is unleashed, all internal force chases the wind and moon along with the blade, making it hard even for those with supreme Lightness to evade."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
-    - LostIdiom
+    translated: "A sword technique with a fierce offensive and swift strikes. Once unleashed, the inner strength follows the blade like the wind chasing the moon, making it hard even for those with exceptional qinggong to evade."
 - raw: "778,奇门,2,天花引,韩湘子所作之洞箫曲，辞语空灵玄奥，摄人心神，可令听者如闻仙乐，心醉神迷之间不能自已,3,1.1,奇门2;体质1,,意志2;奇门2;内力0.2,奇门30;意志15,\"1,1,3\",\"7,0,0\",定身0.1;昏沉0.1,12,13,0,头23,头7,,,skill4_8,,花散-Target-Grid-Happen;音波-Target-Grid-Happen,琴,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -7377,23 +6938,12 @@
   splits:
   - split: 4
     text: "需于月升之时修炼，吸收午夜阴气来滋养自身剑气的道家剑法，一经施展，则剑光闪闪，寒气逼人，如皎月西沉，令朔风四起"
-    translated: "Practice under the moon's rise to absorb the midnight yinqi and nourish their sword energy. Once unleashed, it shines like moonlight, with a chilling presence, resembling the waning moon setting, causing the cold wind to howl."
-    qcReviewedText: "Practice under the moon's rise to absorb the midnight yinqi and nourish their sword energy. Once unleashed, it shines like moonlight, with a chilling presence, resembling the waning moon setting, causing the cold wind to howl."
-    qcTranslated: "A Daoist Sword Technique that must be practiced at moonrise to absorb midnight yin energy and nourish one's sword qi. Once unleashed, it shines like moonlight, with a chilling presence, resembling the waning moon setting, causing the cold wind to howl."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "A Daoist sword technique that must be practiced at moonrise, absorbing the yin energy of midnight to nourish one's sword qi. Once unleashed, it sparkles with swordlight and chills the air, like a waning moon causing cold winds to rise."
 - raw: "783,剑法,3,朝阳一气剑,需于日出之时修炼，吸收清晨阳气来温养自身剑气的道家剑法，一经施展，则剑光滚滚，辉耀湛然，如旭日东升，令群邪辟易,18,1,剑法潜力1;剑法1;经脉1,,经脉4;剑法2;内力0.1,剑法45;经脉30,\"4,0,0\",\"4,1,4\",阻滞0.05;灼烧0.05,20,13,0,手8;心14,手8;心4,,,skill1_0,,天火-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 4
     text: "需于日出之时修炼，吸收清晨阳气来温养自身剑气的道家剑法，一经施展，则剑光滚滚，辉耀湛然，如旭日东升，令群邪辟易"
-    translated: "Need to cultivate at dawn, absorbing the morning yang energy to nourish one's sword qi according to Daoist swordsmanship. Once deployed, the sword light rolls on, shining brightly, like the sunrise rising, driving away all evil forces."
-    qcReviewedText: "Need to cultivate at dawn, absorbing the morning yang energy to nourish one's sword qi according to Daoist swordsmanship. Once deployed, the sword light rolls on, shining brightly, like the sunrise rising, driving away all evil forces."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A Daoist sword technique that must be practiced at sunrise, absorbing the morning yang energy to nourish one's own sword qi. Once unleashed, it unleashes rolling sword light, radiant and brilliant, like the rising sun, driving away all evil."
 - raw: "784,奇门,3,冲天渔鼓,张国老所授克敌之法，以内劲击打鼓身时响声震天动地，气冲云霄，能吓退凶邪，震慑敌人心神,10,0.9,奇门潜力1;奇门1;力道1,,意志3;奇门3;内力0.2,奇门40;意志35,\"0,1,3\",\"7,0,0\",昏沉0.08;定神0.08,19,13,0,头14;心10,头2;心6,,,skill4_8,,喷水-Target-Grid-Happen;音波-Target-Grid-Happen,琴,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -7419,11 +6969,7 @@
   splits:
   - split: 4
     text: "世间轻功大多为腿脚窜纵之术，而此轻功玄妙则可腾空以内息推进而行，凌空时全身静止不动，唯有衣袂飘飘，宛如驭气飞行"
-    translated: "Most lightness techniques involve leaping and bounding with the legs, but this particular lightness technique allows one to soar through the air by propelling themselves with inner qi. When airborne, the body remains still except for the flowing garments, giving the impression of riding on a flow of energy like flying."
-    qcReviewedText: "Most lightness techniques involve leaping and bounding with the legs, but this particular lightness technique allows one to soar through the air by propelling themselves with inner qi. When airborne, the body remains still except for the flowing garments, giving the impression of riding on a flow of energy like flying."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Most worldlier qinggong techniques involve leaping and bounding with the legs, but this arcane qinggong is miraculous, allowing one to propel oneself through the air using inner qi, remaining completely still in mid‑air except for fluttering robes, as if riding the wind."
 - raw: "787,绝技,4,大道剑诀,食指中指并拢伸直，如剑指向敌方之手势，可借此测算敌我距离和行动方位，从而于高手相争之时攻敌必取，料敌机先,,1.1,经脉潜力1;灵巧潜力1;灵巧1;剑法1,灵巧10;意志10;剑法10;剑法威力0.12,,绝技45;灵巧45;剑法55,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7489,14 +7035,7 @@
   splits:
   - split: 4
     text: "神妙非凡，玄机莫测，与凡间剑法有云泥之别，传说乃火龙真人所授仙法，吕祖有诗赞曰"
-    translated: "Mysterious and unparalleled, its intricacies unfathomable, differing like the gap between heaven and earth from ordinary sword arts. Legends say it is a celestial technique taught by the Immortal of the Fire Dragon. Lu Zhen praised it in a poem:"
-    qcReviewedText: "Mysterious and unparalleled, its intricacies unfathomable, differing like the gap between heaven and earth from ordinary sword arts. Legends say it is a celestial technique taught by the Immortal of the Fire Dragon. Lu Zhen praised it in a poem:：Brow furrowed in a threatening manner, leaping into the sky with a bound. Upon his back, a scabbard holds a three‑foot sword, ready to demonstrate justice to those who wrong the heavens."
-    qcTranslated: "Mysterious and unparalleled, its intricacies unfathomable, differing like the gap between heaven and earth from ordinary Sword Art. Legends say it is a celestial technique taught by the Immortal of the Fire Dragon. Lu Zhen praised it in a poem:：Brow furrowed in a threatening manner, leaping into the sky with a bound. Upon his back, a scabbard holds a three‑foot sword, ready to demonstrate justice to those who wrong the heavens."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Mysterious and extraordinary, its secrets unfathomable, it is said to be worlds apart from mortal sword techniques. It is believed to be a divine technique taught by Immortal Fire Dragon, and Master Lu praised it in verse."
   - split: 4
     subIndex: 1
     text: "庞眉斗竖恶精神，万里腾空一踊身。背上匣中三尺剑，为天且示不平人。"
@@ -7544,14 +7083,7 @@
   splits:
   - split: 4
     text: "灵巧协调之拳法，其三十六式变化多端，连环紧扣，擅长封禁敌手，避实打虚"
-    translated: "Agile Coordination Fist Technique, with its 36 variations, changes endlessly and tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
-    qcReviewedText: "Agile Coordination Fist Technique, with its 36 variations, changes endlessly and tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
-    qcTranslated: "Agile Coordination Fist Technique, with its thirty‑six variations, changes endlessly and tightly. It excels in sealing off an opponent's movements, avoiding their strengths to strike at their weaknesses."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
+    translated: "Agile and coordinated fist techniques, with thirty‑six variations that are diverse and interconnected, excelling in restraining opponents and attacking their weaknesses."
 - raw: "799,剑法,0,静心剑法,此剑法暗含修道之理，需平心静气方能发挥威力，修习者越是急于求成，越是难以精进,10,0.9,剑法1,,灵巧1;剑法2;内力0.2,剑法5,\"4,0,0\",\"4,1,2\",调息0.04,5,14,0,心14,心11,,,skill1_0,,十字斩-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7739,11 +7271,7 @@
   splits:
   - split: 4
     text: "暹罗国王所赠之秘宝，乃天竺僧人以贝多罗叶为纸以泥金为墨所写之经书，内含极为精深的佛法和内家修行法门，非智慧非凡者难以参悟"
-    translated: "The secret treasure given by the King of Siam is a scripture written on bodhi leaves with gold ink by a Buddhist monk from India. It contains extremely profound Buddhist teachings and internal cultivation methods, accessible only to those of extraordinary wisdom."
-    qcReviewedText: "The secret treasure given by the King of Siam is a scripture written on bodhi leaves with gold ink by a Buddhist monk from India. It contains extremely profound Buddhist teachings and internal cultivation methods, accessible only to those of extraordinary wisdom."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The secret treasure given by the King of Siam is a scripture written on palm leaves with gold ink by a monk from India. It contains extremely profound Buddhist teachings and Neigong cultivation methods, which are difficult for those without exceptional wisdom to comprehend."
 - raw: "820,轻功,4,舍身飞渡,峨眉金顶东面有一悬崖名舍身崖，雄险奇伟，修习者需以舍身勇气一跃而下，于悬崖上攀援横渡直至谷底，功力稍浅者恐有粉骨碎身之虞,,1.1,轻功潜力2;轻功1;灵巧1,轻功15;灵巧15;舒筋0.06;不屈0.06,,轻功65;灵巧45,,,,0,14,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7874,11 +7402,7 @@
   splits:
   - split: 4
     text: "双臂展开如同鹰翼保持平衡，于山崖之间跳跃滑行之轻功"
-    translated: "Spread your arms like an eagle's wings to maintain balance, leaping and gliding between the cliffs with lightness."
-    qcReviewedText: "Spread your arms like an eagle's wings to maintain balance, leaping and gliding between the cliffs with lightness."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "With arms spread wide like eagle wings to maintain balance, the qinggong of leaping and gliding between mountain cliffs."
 - raw: "835,绝技,1,磐石劲,将下盘以磐石之劲道扎根地面的硬功绝技，可增强身体平衡和腿脚抗击打能力,,0.9,绝技1;意志1,绝技4;意志4;体质4;重碾0.03;奇门威力0.03,,绝技15;意志5,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7901,11 +7425,7 @@
   splits:
   - split: 4
     text: "以一双铁钩使出的奇门招法，左右开弓，龙飞凤舞，一旦武器或肢体被其钩住便再难挣脱"
-    translated: "Using unorthodox techniques delivered with iron hooks, they attack with equal skill in both directions, like dancing dragons and phoenixes. Once a weapon or limb is hooked, it is nearly impossible to escape."
-    qcReviewedText: "Using unorthodox techniques delivered with iron hooks, they attack with equal skill in both directions, like dancing dragons and phoenixes. Once a weapon or limb is hooked, it is nearly impossible to escape."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Using Qimen techniques with iron hooks, he strikes left and right, as graceful as a dragon flying and a phoenix dancing. Once his hooks catch onto a weapon or limb, it is nearly impossible to escape."
 - raw: "838,长兵,1,搬山铁耙功,铁耙本是常见松土之农具，挥舞起来却也是虎虎生风，威力惊人,14,0.9,长兵1;体质1,,体质3;长兵1,长兵10;体质15,\"4,0,0\",\"4,2,2\",压制0.04,11,15,0,足14,足12,,,skill3_1,,地面打击3-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7919,20 +7439,12 @@
   splits:
   - split: 4
     text: "崆峒派以奇门功夫闻名天下，此心法是专为此所创，其真气灵活多变，诡谲难测，配合各式奇门武功皆有妙效"
-    translated: "The Kongtong Sect is renowned for its Unorthodox martial arts. This Heart Method was created specifically for them; its True Qi is flexible and versatile, unpredictable and elusive, providing excellent effects when combined with various Unorthodox martial techniques."
-    qcReviewedText: "The Kongtong Sect is renowned for its Unorthodox martial arts. This Heart Method was created specifically for them; its True Qi is flexible and versatile, unpredictable and elusive, providing excellent effects when combined with various Unorthodox martial techniques."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The Kongtong Sect is renowned for its Qimen martial arts. This Heart Method was specially created for them; its True Qi is flexible and unpredictable, making it highly effective when combined with various Qimen techniques."
 - raw: "840,轻功,2,大鹏展翅,模仿山间大鹏将双臂大开，可在空中长时间滑翔的轻功法门，崆峒派弟子时常需用此身法在山头间快速移动,,1,轻功2;灵巧1,轻功9;灵巧9;压制0.04;反击0.04,,轻功25;灵巧25,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "模仿山间大鹏将双臂大开，可在空中长时间滑翔的轻功法门，崆峒派弟子时常需用此身法在山头间快速移动"
-    translated: "Imitating the vulture in the mountains spreading its wings wide to glide for a long time in the air, this lightness technique is often used by Kongtong Sect disciples to quickly move between mountain peaks."
-    qcReviewedText: "Imitating the vulture in the mountains spreading its wings wide to glide for a long time in the air, this lightness technique is often used by Kongtong Sect disciples to quickly move between mountain peaks."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Imitating the mountain eagle's wide‑spread wings to glide in the air for extended periods, this qinggong technique allows Kongtong Sect disciples to quickly move between mountain peaks."
 - raw: "841,绝技,2,花架门,针对出手架势的修炼法门，花哨繁复，奇崛多变，看上去颇具表演性质，其后手反击招式也令敌人难以预料,,1,绝技2;意志1,绝技8;意志8;反击0.08;奇门威力0.04,,绝技30;意志20,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8018,11 +7530,7 @@
   splits:
   - split: 4
     text: "以狂猛之劲道，向前快速多次突刺的使矛之法，体质强壮之人甚至可连刺百下，纵使铜墙铁壁也为之洞穿"
-    translated: "Using a powerful technique to thrust the spear forward rapidly multiple times, those with robust physiques can even stab over a hundred times consecutively, piercing through even the strongest walls."
-    qcReviewedText: "Using a powerful technique to thrust the spear forward rapidly multiple times, those with robust physiques can even stab over a hundred times consecutively, piercing through even the strongest walls."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Using fierce and powerful momentum, this spear technique involves rapid and repeated thrusts forward. A person with a strong constitution can even deliver over a hundred strikes, piercing through even the most impenetrable defenses."
 - raw: "851,内功,4,离合神功,崆峒派绝学，将阴阳两股内息彻底分离，再行融合，离合间可产生强悍的真气，偏折来袭攻势，裂石开山，无坚不摧,,1.1,内功潜力2;内功1;体质1,生命上限110;内力上限90;内功15;体质15;斗转0.04;不屈0.04;调息0.04,,内功60;体质50,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8054,11 +7562,7 @@
   splits:
   - split: 4
     text: "将鞭收于脑后引而不发，全神贯注，将生死悬于身后一线之超绝鞭法，此鞭挥出力道时机方位均是精妙非凡，可谓高下立判，胜负立分"
-    translated: "Holding the whip behind his head, ready but restrained, he focused intently on a supreme technique that placed life and death in a fine balance. The timing, power, and angle of this swing were exceptionally precise, making the difference between victory and defeat instantly clear."
-    qcReviewedText: "Holding the whip behind his head, ready but restrained, he focused intently on a supreme technique that placed life and death in a fine balance. The timing, power, and angle of this swing were exceptionally precise, making the difference between victory and defeat instantly clear."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "With the whip coiled behind her head, ready but not unleashed, she focused intently on the supreme whip technique that hung her very life on a thread behind her. The strength, timing, and positioning of this whip strike were all exquisite, clearly distinguishing between skill levels and deciding victory or defeat in an instant."
 - raw: "855,奇门,4,乾坤日月圈,崆峒奇门高手所使的圆环形兵刃，可持于手中挥砍格挡，也可掷于空中回环飞舞，招式纷繁复杂变化无穷，功浅者使用反而容易划伤自己,21,1,意志潜力2;奇门1;意志1,,意志4;奇门3;内力0.2,奇门55;意志50,\"1,2,2\",\"1,1,1\",定神0.06;流血0.06,25,15,0,心12;足11,心7;足7,,,skill4_2,,圆斩-Target-Grid-Happen;八卦光-Target-Grid-Happen,轮,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8072,11 +7576,7 @@
   splits:
   - split: 4
     text: "西凉死士所创，但求同归于尽的悲壮招式，虽毫无防御且不留后手，其一往无前之势却能摧毁敌人意志，颇有置之死地而后生之意"
-    translated: "Created by the Xiliang Assassins, this tragic technique seeks mutual annihilation. Though it offers no defense and leaves no retreat, its unyielding charge can shatter an enemy's will, embodying the spirit of turning one's back to certain death in order to survive."
-    qcReviewedText: "Created by the Xiliang Assassins, this tragic technique seeks mutual annihilation. Though it offers no defense and leaves no retreat, its unyielding charge can shatter an enemy's will, embodying the spirit of turning one's back to certain death in order to survive."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A desperate and tragic technique created by the loyalists of Xiliang, seeking mutual destruction. Though it offers no defense and leaves no room for retreat, its unstoppable momentum can shatter an enemy's willpower, embodying the spirit of facing certain death to achieve a comeback."
 - raw: "857,绝技,5,斗转星移,令经脉穴位皆偏移逆转的崆峒奇功，修习后周身力道反转，出招方式与内息运行皆异于常人，更能借此反转之力将来袭刀剑偏移方向，甚至反伤敌身,,1.2,意志潜力2;灵巧潜力1;体质潜力1,绝技12;意志12;体质12;斗转0.1;反伤吸内0.1;负面抗性0.05,,意志65;灵巧65;体质65,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8212,11 +7712,7 @@
   splits:
   - split: 4
     text: "试图以奇门数术之法，解释上天意志的墨家法门，若以此法掌控内力运行，统领周身经脉，修为便能获得精进"
-    translated: "Using the Unorthodox methods to interpret the will of heaven, the Mohist technique attempts to control the flow of Inner Power and govern the body's meridians, thereby advancing one's cultivation."
-    qcReviewedText: "Using the Unorthodox methods to interpret the will of heaven, the Mohist technique attempts to control the flow of Inner Power and govern the body's meridians, thereby advancing one's cultivation."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Using the Qimen numerology method to interpret the will of heaven in the Mohist techniques, if one controls the flow of Inner Power and commands all the meridians with this approach, one's cultivation will advance."
 - raw: "871,轻功,2,八阵图步,自孔明八阵图中演化而来的步法，需结合兵法和周易之理，决定下一步行走方位，若一步算错则步步皆错,,1.1,轻功2;智力1,轻功9;智力9;急速0.04;迟缓0.04,,轻功30;智力25,,,,0,16,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8230,11 +7726,7 @@
   splits:
   - split: 4
     text: "专门锻炼手指臂膀的灵巧功夫，乃神机门正式弟子必修科目，若修习不精，打造机关时难免错漏百出"
-    translated: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms."
-    qcReviewedText: "Special techniques to exercise fingers and arms, essential for all formal disciples of the Divine Mechanism Sect. If not practiced thoroughly, mistakes are inevitable when creating mechanisms."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Finger and arm agility training, a required subject for Formal Disciples of the Divine Mechanism Sect, must be mastered; otherwise, one is prone to errors when crafting mechanisms."
 - raw: "873,奇门,2,玉石麒麟,以玉石装饰的铜制麒麟，奔跑纵跃颇为华丽好看，绕敌人移动时口中会不时喷出箭矢暗器，令人防不胜防,,1.1,奇门2;意志1,,,奇门30;智力30,\"0,1,1\",\"0,0,0\",,16,16,4,,,3,1,craft,,组装-Target-Grid-Start;烟雾-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8449,11 +7941,7 @@
   splits:
   - split: 4
     text: "霹雳堂独门轻功，在鞋底安装特制滑轮，在鞋跟安装火药推进装置，可短时间内极大提升行进速度"
-    translated: "Thunderclap Hall's exclusive lightness technique involves installing specially designed pulleys on the soles of the shoes and thrusting devices with gunpowder in the heels, greatly boosting travel speed over a short period."
-    qcReviewedText: "Thunderclap Hall's exclusive lightness technique involves installing specially designed pulleys on the soles of the shoes and thrusting devices with gunpowder in the heels, greatly boosting travel speed over a short period."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Thunderclap Hall's unique qinggong involves installing custom‑made wheels on the soles of the shoes and a firepowder propulsion device on the heels, greatly increasing speed for short periods of time."
 - raw: "897,绝技,1,硝石法,火药原材料之一硝石的制备之法，需采掘含硝的矿石土块，水浸过滤，熬煮晒干，便可得纯净之结晶,,1.1,绝技1;智力1,绝技2;智力8;意志2;伤害0.06,,绝技15;智力15,,,,0,17,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8503,11 +7991,7 @@
   splits:
   - split: 4
     text: "压低身形，以雷车滚地之势快速移动，施展同时向四周抛洒烟火，声势惊人，意志薄弱者难免被其震慑"
-    translated: "Crouch low and move swiftly like a Thunder Chariot rolling across the ground, simultaneously releasing fireworks in all directions. The spectacle is astonishing, and those with weak wills are likely to be intimidated."
-    qcReviewedText: "Crouch low and move swiftly like a Thunder Chariot rolling across the ground, simultaneously releasing fireworks in all directions. The spectacle is astonishing, and those with weak wills are likely to be intimidated."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Crouch low and move quickly like lightning, rolling across the ground while simultaneously throwing off fireworks in all directions. The spectacle is awe‑inspiring, and those with weak willpower are sure to be intimidated."
 - raw: "903,绝技,2,伏硫黄法,炼丹之人意外间发明，将硫磺、硝石与木炭混合制备火药的法门，也是霹雳堂火器制造的必修之法,,1.1,绝技2;智力1,绝技4;智力10;意志4;锻造4;伤害0.04;震脑0.04,,绝技20;智力30,,,,0,17,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8557,11 +8041,7 @@
   splits:
   - split: 4
     text: "将至阳内力灌注于双腿之上，此后便能以爆炸之势极速移动的轻功步法"
-    translated: "Injecting yang inner power into his legs, he could then move with explosive speed using this lightness stepping technique."
-    qcReviewedText: "Injecting yang inner power into his legs, he could then move with explosive speed using this lightness stepping technique."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A qinggong footwork technique that allows for rapid movement at explosive speed by channeling yang inner power into the legs."
 - raw: "909,绝技,3,伏火矾法,经霹雳堂历代不断研发的火药制备之法，消耗更少的原料，其产量和威力皆有所提升,,1.1,智力潜力1;意志潜力1;锻造潜力1;绝技1,绝技6;智力12;意志6;锻造6;伤害0.05;震脑0.05,,绝技45;智力35;意志20,,,,0,17,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8704,11 +8184,7 @@
   splits:
   - split: 4
     text: "以防守为重的刀法，一招一式皆遵循规制，严谨板正"
-    translated: "A defensive Blade Art, each move adheres strictly to established norms, precise and formal."
-    qcReviewedText: "A defensive Blade Art, each move adheres strictly to established norms, precise and formal."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A defensive blade technique where each move adheres rigorously to the rules, formal and strict."
 - raw: "925,内功,1,宝瓶气功,金刚宗修气瑜伽法，借助观想拙火疏通并洗涤自身经脉，可令内息滚沸，抵御藏地严寒,,1,内功1;力道1,生命上限60;内力上限20;内功6;力道6;外伤0.04;回血0.004,,内功15;力道10,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8837,11 +8313,7 @@
   splits:
   - split: 4
     text: "招式刚猛的刀法，蕴含无比锐利且无坚不摧之金刚智慧，号称可消除罪孽，降魔息灾"
-    translated: "Fierce Blade Art, imbued with unparalleled sharpness and invincible wisdom like that of the Diamond, is said to purge sins, subdue demons, and bring peace."
-    qcReviewedText: "Fierce Blade Art, imbued with unparalleled sharpness and invincible wisdom like that of the Diamond, is said to purge sins, subdue demons, and bring peace."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A powerful and fierce blade technique, imbued with razor‑sharp and invincible wisdom like that of Vajra, said to eliminate sin, subdue demons, and quell calamities."
 - raw: "939,内功,3,摩揭陀瑜伽功,古国摩揭陀流传而来的瑜伽法，以苦修冥想，体位调息之法增进修为，最终达到心神合一之三摩地境界,,1,内功潜力1;内功1;力道1,生命上限110;内力上限50;内功8;力道8;体质8;外伤0.05;反弹0.03,,内功40;力道35;体质20,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8900,11 +8372,7 @@
   splits:
   - split: 4
     text: "用于惩戒凶恶的恐怖刀法，刀刀攻人要害，却竟又刀刀不致人死地，中刀者如坠无间地狱，痛苦万分，嚎哭求饶"
-    translated: "Used to punish the evil and terrifying Blade Art, each strike targets the vital point, yet fails to deliver a fatal blow. Those struck suffer as if in an unending hell, in excruciating pain, howling for mercy."
-    qcReviewedText: "Used to punish the evil and terrifying Blade Art, each strike targets the vital point, yet fails to deliver a fatal blow. Those struck suffer as if in an unending hell, in excruciating pain, howling for mercy."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A terrifying blade technique used for punishing the wicked, each strike targets vital points yet stops short of killing, leaving those struck to suffer as if in a hellish limbo, crying out in agony and begging for mercy."
 - raw: "946,内功,4,大黑天降魔功,传说湿婆皈依后所创护法神功，运转时遍体肌肤深沉暗淡，修为精深者更得黑气缭绕，此乃大黑天护持之法相，森然恐怖，不怒自威,,1,内功潜力2;内功1;力道1,生命上限160;内力上限40;内功10;力道10;体质10;暴击0.06;无敌0.03,,内功60;力道45;体质35,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -8957,11 +8425,7 @@
   splits:
   - split: 4
     text: "修习者需先破除烦恼妄想，令身心进入绝对静止之境界，然后方能使出这消除世间苦难，令万物寂灭的玄妙刀法"
-    translated: "Mortals must first rid themselves of worldly worries and illusions, allowing their body and mind to enter an absolute state of stillness. Only then can they wield this mystic Blade Art that eradicates suffering from the world and brings all things to silence."
-    qcReviewedText: "Mortals must first rid themselves of worldly worries and illusions, allowing their body and mind to enter an absolute state of stillness. Only then can they wield this mystic Blade Art that eradicates suffering from the world and brings all things to silence."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The practitioner must first dispel all worries and delusions, allowing their body and mind to enter a state of absolute stillness. Only then can they unleash this profound Blade Technique that eradicates the suffering of the world, bringing all things to silence."
 - raw: "952,内功,5,大日如来功,金刚宗至高内修秘法，修成者如蒙佛祖加持，运功时遍体佛光照耀万物，获不可思议之力量与智慧，可谓功德圆满,,1.2,内功潜力2;智力潜力1;内功1;智力1,生命上限180;内力上限60;内功12;力道12;智力12;慧眼0.06;杀机0.06;无敌0.03,,内功70;智力70;力道55,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9038,11 +8502,7 @@
   splits:
   - split: 4
     text: "天山派剑法之基，灵巧有加而威力稍弱，招式亦多走阴柔路数"
-    translated: "The foundation of the Tianshan Sect's Sword Art emphasizes agility over power, with techniques tending more towards the Yin and soft."
-    qcReviewedText: "The foundation of the Tianshan Sect's Sword Art emphasizes agility over power, with techniques tending more towards the Yin and soft."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The foundation of Tianshan Sect's Sword Technique is characterized by increased agility but slightly reduced power, with many of its moves leaning towards a more subtle and gentle style."
 - raw: "961,剑法,0,吹雪剑法,此剑法以气势见长，在雪地中使出时能将周围积雪扬起，挥挥洒洒随剑风飘荡,9,0.9,剑法1,,经脉1;剑法2;内力0.1,剑法10,\"4,0,0\",\"5,1,2\",冰寒0.06,4,19,0,头16,头9,,,skill1_2,,烟雾-Target-Grid-Happen;穿刺_风电-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9076,11 +8536,7 @@
   splits:
   - split: 4
     text: "此轻功可在深厚积雪中快速移动，在雪面所留足印形似鸿雁落下之爪印，足见其轻巧迅捷，故而得名"
-    translated: "This lightness allows quick movement through deep snow, leaving footprints resembling the claws of a goose, showcasing its nimble and swift nature, hence the name."
-    qcReviewedText: "This lightness allows quick movement through deep snow, leaving footprints resembling the claws of a goose, showcasing its nimble and swift nature, hence the name."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "This qinggong allows for swift movement on deep snow, leaving footprints that resemble the claws of a swan landing on the surface, showcasing its lightness and speed, hence its name."
 - raw: "964,绝技,1,傲霜诀,天山之上常年雪积如冬，故弟子需修习此驱寒抗冻之法门，功成者不惧霜雪，在严寒之下亦能活动自如,,1,绝技1;力道1,绝技4;力道4;体质4;恢复0.06;药性0.03,,绝技15;力道10,,,,0,19,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9112,11 +8568,7 @@
   splits:
   - split: 4
     text: "这六招剑法皆是花哨虚招，取烟雨朦胧之意，挥舞时云山雾罩，故弄玄虚，自是难以捉摸"
-    translated: "These six sword arts are all flashy feints, meant to evoke the misty and elusive. When wielded, they swirl in a cloud of mist, creating a deceptive atmosphere that is hard to predict."
-    qcReviewedText: "These six sword arts are all flashy feints, meant to evoke the misty and elusive. When wielded, they swirl in a cloud of mist, creating a deceptive atmosphere that is hard to predict."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "These six sword techniques are all flashy feints, evoking the mood of misty rain. When wielded, they create a haze of clouds and fog, deliberately misleading, making them hard to fathom."
 - raw: "968,剑法,1,飞瀑剑法,举剑过头顶，自上而下连续刺击之剑术，如天山飞瀑倾泻而落，以强劲力道取胜,13,1,剑法1;力道1,,力道3;剑法1;内力0.2,剑法10;力道15,\"4,0,0\",\"4,1,2\",截脉0.08,12,19,0,胸17,胸10,,,skill1_0,,喷水-Target-Grid-Happen;穿刺_土叶-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9175,11 +8627,7 @@
   splits:
   - split: 4
     text: "天山派女弟子修习之柔美剑法，其挥招之时如素女立雪，羽衣蹁跹，鸾回凤舞，妙招频频"
-    translated: "The graceful sword art practiced by the female disciples of the Tianshan Sect, as they wield their swords it is like a virtuous maiden standing in the snow, her feather robe fluttering, moving like a phoenix and a phoenix, with exquisite techniques flowing continuously."
-    qcReviewedText: "The graceful sword art practiced by the female disciples of the Tianshan Sect, as they wield their swords it is like a virtuous maiden standing in the snow, her feather robe fluttering, moving like a phoenix and a phoenix, with exquisite techniques flowing continuously."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The graceful sword technique practiced by the female disciples of the Tianshan Sect, with movements as delicate as a maiden standing in snow, their robes fluttering like birds in flight, phoenixes dancing, and beautiful strokes coming one after another."
 - raw: "975,剑法,2,长风落雁剑,将气劲自剑尖迸射而出，化作一道长风破空而行，功力深厚者可以此击坠天边飞雁，足见其精妙,13,1.1,剑法2;经脉1,,经脉3;剑法2;内力0.3,剑法25;经脉30,\"4,0,0\",\"4,1,5\",鹰眼0.06;轻灵0.06,13,19,0,头19,头14,,,skill1_0,,羽散-Target-Grid-Happen;真气喷-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -9205,11 +8653,7 @@
   splits:
   - split: 4
     text: "天山派独门轻功，以此步法行于积雪上，可踏雪而行如履平地，雪面亦几乎不留踪迹，其轻巧高绝可见一斑"
-    translated: "The unique Tianshan sect's lightness technique allows them to walk on accumulated snow as if treading on solid ground, leaving almost no trace. Its lightness and excellence are evident."
-    qcReviewedText: "The unique Tianshan sect's lightness technique allows them to walk on accumulated snow as if treading on solid ground, leaving almost no trace. Its lightness and excellence are evident."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "The unique qinggong of the Tianshan Sect allows one to walk on snow as if on flat ground, leaving almost no trace behind, showcasing its unparalleled lightness and agility."
 - raw: "978,绝技,3,控鹤功,天山山脚水草丰茂，时常有仙鹤驻留，此擒拿绝技擅长攻其不备，快速捕捉而不伤分毫，若力道和内功修为稍有不足，便难以得手,,0.9,力道潜力1;绝技1;力道1,绝技8;力道8;经脉8;鹰眼0.05;飘逸0.05,,绝技40;力道30,,,,0,19,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9325,11 +8769,7 @@
   splits:
   - split: 4
     text: "传说天山祖师修行之时，曾目睹九天玄女自空中俯身而下，采撷梅花一枝，从而领悟出此飘忽若仙的绝世轻功，妙至巅毫，神出鬼入，不似人间所有"
-    translated: "Legend has it that when the ancestor master of Tianshan was cultivating, they once witnessed the Nine Heavens Xuanyu Lady descend from the sky to pluck a branch of plum blossoms. Thus, they gained insight into this ethereal and unparalleled lightness technique, reaching the pinnacle of skill, moving like a spirit, entering realms beyond human comprehension."
-    qcReviewedText: "Legend has it that when the ancestor master of Tianshan was cultivating, they once witnessed the Nine Heavens Xuanyu Lady descend from the sky to pluck a branch of plum blossoms. Thus, they gained insight into this ethereal and unparalleled lightness technique, reaching the pinnacle of skill, moving like a spirit, entering realms beyond human comprehension."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Legend has it that when the ancestor of Tianshan was practicing, he witnessed the Nine Heavens Mystic Maiden descend from the sky to pluck a branch of plum blossom, thereby gaining insight into this ethereal, otherworldly qinggong, perfect in its subtlety, divine in its emergence and disappearance, not of this mortal realm."
 - raw: "991,拳掌,5,白虹贯日掌,由天山独特天文异象演化而来，将至阳内劲于掌心倾吐而出，形成一道炽热耀目的白虹，所过之处，冰消雪融，与日月争辉，势不可挡,23,1,拳掌潜力1;经脉潜力2;拳掌1;经脉1,,经脉3;灵巧2;拳掌3;内力0.3,拳掌70;经脉70;灵巧50,\"0,3,4\",\"0,0,1\",内劲0.08;灼烧0.06;轻灵0.06,31,19,0,足9;心9;胸9,足5;心5;胸5,,,skill0_1,,天光-Target-Grid-Happen;烈日-Target-Grid-Start,拳,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -9478,14 +8918,7 @@
   splits:
   - split: 4
     text: "招式粗浅，以命相搏的刀法，多为贼寇所使"
-    translated: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcReviewedText: "Explanation was provided when none should be given. Alternatives were provided when none should be given."
-    qcTranslated: "The technique is crude, a Blade Art that trades life for life, mostly used by bandits."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "The techniques are crude; blade techniques that involve risking one's life are often used by bandits."
 - raw: "1008,长兵,0,花枪法,以虚招迷惑对手的枪法,9,1,长兵1,,智力1;长兵3;内力0.2,智力5,\"4,0,0\",\"8,1,3\",笨拙0.05,4,-1,0,足14,足12,,,skill3_1,,莲花转-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9517,11 +8950,7 @@
   splits:
   - split: 4
     text: "初习武艺者用于辨明穴位的奇门功法"
-    translated: "Beginner martial artists use this unorthodox technique to identify acupuncture points."
-    qcReviewedText: "Beginner martial artists use this unorthodox technique to identify acupuncture points."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A Qimen technique used by beginners to identify acupuncture points."
 - raw: "1012,射术,0,飞箭要诀,一门使用羽箭的基础手法,9,1,射术1,,灵巧1;射术2;内力0.2,灵巧5,\"0,2,4\",\"0,0,0\",鹰眼0.06,4,-1,0,足20,足3,,,skill5_2,0-----0.7,劈砍-Target-Grid-Happen,弓,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9562,11 +8991,7 @@
   splits:
   - split: 4
     text: "掀起漫天尘土，同时身形贴地快速滑行的奇特轻功，神出鬼没，难以捉摸，如同遁地仙术一般"
-    translated: "Rising a cloud of dust as the body skids swiftly close to the ground, this peculiar lightness technique is elusive and hard to pin down, much like earth‑penetrating sorcery."
-    qcReviewedText: "Rising a cloud of dust as the body skids swiftly close to the ground, this peculiar lightness technique is elusive and hard to pin down, much like earth‑penetrating sorcery."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A strange form of qinggong that kicks up clouds of dust while the body slides along the ground at high speed, appearing and disappearing like a magical earthbound technique."
 - raw: "1017,轻功,4,凌霄天外,世外高人于泰山之巅观日出，见云雾翻涌如海，腾涌而上所领悟的步法。功成者可踏云而上，步步高升直至凌空数十丈,,1.2,轻功潜力1;智力潜力1;体质潜力1,轻功8;智力12;体质10;轻灵0.06;破招0.06,,轻功50;智力65;体质55,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9619,14 +9044,7 @@
   splits:
   - split: 4
     text: "传闻乃达摩祖师所创之高妙剑法，因少林僧众罕有习剑者，自藏经阁流出后散落江湖，鲜有人能一睹其全貌"
-    translated: "It is said that this exquisite Sword Art was created by the Venerable Damao. Due to the rare practice of swordsmanship among Shaolin monks, after it was released from the Scripture Pavilion, it scattered throughout the Jianghu, with few able to see its full glory."
-    qcReviewedText: "It is said that this exquisite Sword Art was created by the Venerable Damao. Due to the rare practice of swordsmanship among Shaolin monks, after it was released from the Scripture Pavilion, it scattered throughout the Jianghu, with few able to see its full glory."
-    qcTranslated: "It is said that this exquisite Sword Art was created by the Venerable Bodhidharma. Due to the rare practice of swordsmanship among Shaolin monks, after it was released from the Scripture Pavilion, it scattered throughout the Jianghu, with few able to see its full glory."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "It is said that this profound Sword Technique was created by the Patriarch Bodhidharma. Since few Shaolin monks practice swordsmanship, after it emerged from the Scripture Pavilion, it scattered throughout Jianghu, with few able to witness its entirety."
 - raw: "1023,剑法,4,重剑无锋,看似朴实无华的剑招，直来直往之间却蕴含千钧重力，堪称剑法大巧若拙之至高境界,25,1.3,剑法潜力1;力道潜力2,,力道5;剑法2;内力0.1,剑法50;力道70,\"2,2,2\",\"1,0,1\",壮骨0.06;穿甲0.06,30,-1,0,胸20;腹12,胸6;腹4,,,skill1_2,,墨爪爆-Target-Grid-Happen;碎地-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9640,11 +9058,7 @@
   splits:
   - split: 4
     text: "以冰寒刺骨之内力催动招式，引发漫天风雪，笼罩周遭敌人之高深刀法"
-    translated: "Using Inner Power as cold and piercing as ice, this advanced Blade Art induces a storm of wind and snow, enveloping the surrounding enemies."
-    qcReviewedText: "Using Inner Power as cold and piercing as ice, this advanced Blade Art induces a storm of wind and snow, enveloping the surrounding enemies."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A profound blade technique that channels bone‑chilling Inner Power to summon a blizzard, enveloping nearby enemies."
 - raw: "1025,刀法,4,秦王破阵刀,刀出如雷霆震怒，万军辟易，破阵如碾碎蝼蚁一般，久经沙场者亦不敢挡其锋芒。,24,1.1,灵巧潜力1;意志潜力1;刀法1;意志1,,意志2;刀法4;内力0.1,刀法70;意志45,\"2,1,2\",\"3,0,1\",穿甲0.06;破甲0.06,26,-1,0,心14;胸12,心7;胸5,,,skill2_0,,闪光-Target-Grid-Happen;音波-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9734,11 +9148,7 @@
   splits:
   - split: 4
     text: "以高强内力催动之轻功，可在空中快速行进，周身真气萦绕如同腾云驾雾一般"
-    translated: "With high‑strength inner power driving the lightness technique, one can move quickly in mid‑air, with true qi swirling around the body like riding a cloud and controlling a mist."
-    qcReviewedText: "With high‑strength inner power driving the lightness technique, one can move quickly in mid‑air, with true qi swirling around the body like riding a cloud and controlling a mist."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "With powerful Inner Power driving Qinggong, one can move swiftly through the air, surrounded by True Qi as if riding on clouds."
 - raw: "1035,轻功,5,咫尺天涯,此功一步跨出看似只动分毫，实则已越过数丈，对敌者往往产生明明近在咫尺，却又永远难以触及之绝望感,,1.2,轻功潜力1;灵巧潜力1;体质潜力1;灵巧2,轻功12;智力12;体质12;急速0.08;失衡0.08,,轻功70;智力65;体质60,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9779,11 +9189,7 @@
   splits:
   - split: 4
     text: "穷尽千变万化，而返璞归真于一指。修习者需先通晓天下拳掌，然后忘尽所学，方能领悟此招真谛"
-    translated: "Exhaust all myriad changes and transformations, then revert to the essence with a single finger. Practitioners must first master all martial arts techniques, then forget everything they have learned, to truly comprehend the intent of this move."
-    qcReviewedText: "Exhaust all myriad changes and transformations, then revert to the essence with a single finger. Practitioners must first master all martial arts techniques, then forget everything they have learned, to truly comprehend the intent of this move."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "After mastering countless variations, one returns to the essence with a single finger. Practitioners must first understand all the unarmed techniques in the world, then forget everything they have learned, to truly grasp the essence of this technique."
 - raw: "1040,剑法,5,剑十三式,传说此剑法本有十五式，但因后两式凶煞无比，杀业过重而被作者毁去，最终仅余十三式,24,1.2,剑法潜力1;力道潜力1;经脉潜力1;经脉2,,力道2;经脉2;剑法4;内力0.3,剑法85;力道55;经脉40,\"4,0,0\",\"4,1,5\",急速0.06;断骨0.06;截脉0.06,36,-1,0,心13;腹13,心8;腹8,,,skill1_1,,瞬杀-Target-Grid-Happen;爆血迹-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 4

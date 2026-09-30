@@ -272,11 +272,7 @@
     translated: "Yet only Kill reaches the pinnacle of martial arts."
   - split: 3
     text: "闯荡江湖，只要练好轻功就行。"
-    translated: "Traverse the Jianghu, you just need to master the lightness."
-    qcReviewedText: "Traverse the Jianghu, you just need to master the lightness.\\nWant to fight, go fight; want to leave, go leave‑aren't you invincible under heaven?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Venturing into Jianghu just requires mastering Qinggong"
   - split: 3
     subIndex: 1
     text: "想打就打，想走就走，岂不是天下无敌？"
@@ -597,17 +593,10 @@
   - split: 3
     text: "#PlayerName#，你这身形笨重，步伐迟缓，"
     translated: "#PlayerName#, your movements are slow and cumbersome"
-    qcReviewedText: "#PlayerName#, your movements are slow and cumbersome \\nOne needs to practice lightness more"
-    qcTranslated: "#PlayerName#, your movements are slow and cumbersome \\nYou need to practice Lightness more"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - split: 3
     subIndex: 1
     text: "还得多练练轻功才行。"
-    translated: "One needs to practice lightness more"
+    translated: "I still need to practice my qinggong more."
   - split: 4
     text: "#PlayerName#，老夫观你骨骼精奇，气运不凡。"
     translated: "#PlayerName#, Old Man I've noticed your bone structure is peculiar and extraordinary, and your life force isremarkable."

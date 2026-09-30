@@ -3,13 +3,9 @@
   splits:
   - text: "随身携带的珍宝，"
     translated: "Treasure always at hand,"
-    qcReviewedText: "Treasure always at hand,\\nIf learned enough, it will attempt identification automatically every day."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "若学识足够会每日自动尝试鉴定。"
-    translated: "If learned enough, it will attempt identification automatically every day."
+    translated: "If the knowledge is sufficient, it will automatically attempt appraisal every day."
   templates:
   - template: "{0}\\n{1}"
 - raw: "珍宝在鉴定后才能卖出更高价格。"
