@@ -39644,3 +39644,405 @@
 - raw: "少林弟子丙"
   splits:
   - text: "少林弟子丙"
+- raw: "力道30"
+  splits:
+  - text: "力道30"
+- raw: "力道60"
+  splits:
+  - text: "力道60"
+- raw: "力道90"
+  splits:
+  - text: "力道90"
+- raw: "灵巧30"
+  splits:
+  - text: "灵巧30"
+- raw: "灵巧60"
+  splits:
+  - text: "灵巧60"
+- raw: "灵巧90"
+  splits:
+  - text: "灵巧90"
+- raw: "智力30"
+  splits:
+  - text: "智力30"
+- raw: "智力60"
+  splits:
+  - text: "智力60"
+- raw: "智力90"
+  splits:
+  - text: "智力90"
+- raw: "意志30"
+  splits:
+  - text: "意志30"
+- raw: "意志60"
+  splits:
+  - text: "意志60"
+- raw: "意志90"
+  splits:
+  - text: "意志90"
+- raw: "体质30"
+  splits:
+  - text: "体质30"
+- raw: "体质60"
+  splits:
+  - text: "体质60"
+- raw: "体质90"
+  splits:
+  - text: "体质90"
+- raw: "经脉30"
+  splits:
+  - text: "经脉30"
+- raw: "经脉60"
+  splits:
+  - text: "经脉60"
+- raw: "经脉90"
+  splits:
+  - text: "经脉90"
+- raw: "内功30"
+  splits:
+  - text: "内功30"
+- raw: "内功60"
+  splits:
+  - text: "内功60"
+- raw: "内功90"
+  splits:
+  - text: "内功90"
+- raw: "轻功30"
+  splits:
+  - text: "轻功30"
+- raw: "轻功60"
+  splits:
+  - text: "轻功60"
+- raw: "轻功90"
+  splits:
+  - text: "轻功90"
+- raw: "绝技30"
+  splits:
+  - text: "绝技30"
+- raw: "绝技60"
+  splits:
+  - text: "绝技60"
+- raw: "绝技90"
+  splits:
+  - text: "绝技90"
+- raw: "拳掌30"
+  splits:
+  - text: "拳掌30"
+- raw: "拳掌60"
+  splits:
+  - text: "拳掌60"
+- raw: "拳掌90"
+  splits:
+  - text: "拳掌90"
+- raw: "剑法30"
+  splits:
+  - text: "剑法30"
+- raw: "剑法60"
+  splits:
+  - text: "剑法60"
+- raw: "剑法90"
+  splits:
+  - text: "剑法90"
+- raw: "刀法30"
+  splits:
+  - text: "刀法30"
+- raw: "刀法60"
+  splits:
+  - text: "刀法60"
+- raw: "刀法90"
+  splits:
+  - text: "刀法90"
+- raw: "长兵30"
+  splits:
+  - text: "长兵30"
+- raw: "长兵60"
+  splits:
+  - text: "长兵60"
+- raw: "长兵90"
+  splits:
+  - text: "长兵90"
+- raw: "奇门30"
+  splits:
+  - text: "奇门30"
+- raw: "奇门60"
+  splits:
+  - text: "奇门60"
+- raw: "奇门90"
+  splits:
+  - text: "奇门90"
+- raw: "射术30"
+  splits:
+  - text: "射术30"
+- raw: "射术60"
+  splits:
+  - text: "射术60"
+- raw: "射术90"
+  splits:
+  - text: "射术90"
+- raw: "绝技25"
+  splits:
+  - text: "绝技25"
+- raw: "体质25"
+  splits:
+  - text: "体质25"
+- raw: "绝技50"
+  splits:
+  - text: "绝技50"
+- raw: "体质50"
+  splits:
+  - text: "体质50"
+- raw: "绝技75"
+  splits:
+  - text: "绝技75"
+- raw: "体质75"
+  splits:
+  - text: "体质75"
+- raw: "拳掌50"
+  splits:
+  - text: "拳掌50"
+- raw: "内功50"
+  splits:
+  - text: "内功50"
+- raw: "拳掌100"
+  splits:
+  - text: "拳掌100"
+- raw: "内功100"
+  splits:
+  - text: "内功100"
+- raw: "剑法50"
+  splits:
+  - text: "剑法50"
+- raw: "剑法100"
+  splits:
+  - text: "剑法100"
+- raw: "刀法50"
+  splits:
+  - text: "刀法50"
+- raw: "刀法100"
+  splits:
+  - text: "刀法100"
+- raw: "长兵50"
+  splits:
+  - text: "长兵50"
+- raw: "长兵100"
+  splits:
+  - text: "长兵100"
+- raw: "奇门50"
+  splits:
+  - text: "奇门50"
+- raw: "奇门100"
+  splits:
+  - text: "奇门100"
+- raw: "射术50"
+  splits:
+  - text: "射术50"
+- raw: "射术100"
+  splits:
+  - text: "射术100"
+- raw: "体质110"
+  splits:
+  - text: "体质110"
+- raw: "经脉110"
+  splits:
+  - text: "经脉110"
+- raw: "体质120"
+  splits:
+  - text: "体质120"
+- raw: "经脉120"
+  splits:
+  - text: "经脉120"
+- raw: "内功120"
+  splits:
+  - text: "内功120"
+- raw: "经脉100"
+  splits:
+  - text: "经脉100"
+- raw: "灵巧120"
+  splits:
+  - text: "灵巧120"
+- raw: "轻功120"
+  splits:
+  - text: "轻功120"
+- raw: "轻功110"
+  splits:
+  - text: "轻功110"
+- raw: "绝技120"
+  splits:
+  - text: "绝技120"
+- raw: "绝技110"
+  splits:
+  - text: "绝技110"
+- raw: "绝技100"
+  splits:
+  - text: "绝技100"
+- raw: "力道80"
+  splits:
+  - text: "力道80"
+- raw: "灵巧80"
+  splits:
+  - text: "灵巧80"
+- raw: "智力80"
+  splits:
+  - text: "智力80"
+- raw: "意志80"
+  splits:
+  - text: "意志80"
+- raw: "体质80"
+  splits:
+  - text: "体质80"
+- raw: "经脉80"
+  splits:
+  - text: "经脉80"
+- raw: "拳掌80"
+  splits:
+  - text: "拳掌80"
+- raw: "剑法80"
+  splits:
+  - text: "剑法80"
+- raw: "刀法80"
+  splits:
+  - text: "刀法80"
+- raw: "长兵80"
+  splits:
+  - text: "长兵80"
+- raw: "奇门80"
+  splits:
+  - text: "奇门80"
+- raw: "射术80"
+  splits:
+  - text: "射术80"
+- raw: "轻功100"
+  splits:
+  - text: "轻功100"
+- raw: "意志110"
+  splits:
+  - text: "意志110"
+- raw: "意志120"
+  splits:
+  - text: "意志120"
+- raw: "智力110"
+  splits:
+  - text: "智力110"
+- raw: "灵巧110"
+  splits:
+  - text: "灵巧110"
+- raw: "力道100"
+  splits:
+  - text: "力道100"
+- raw: "力道120"
+  splits:
+  - text: "力道120"
+- raw: "医术30"
+  splits:
+  - text: "医术30"
+- raw: "医术50"
+  splits:
+  - text: "医术50"
+- raw: "医术70"
+  splits:
+  - text: "医术70"
+- raw: "毒术30"
+  splits:
+  - text: "毒术30"
+- raw: "毒术50"
+  splits:
+  - text: "毒术50"
+- raw: "毒术70"
+  splits:
+  - text: "毒术70"
+- raw: "学识30"
+  splits:
+  - text: "学识30"
+- raw: "学识50"
+  splits:
+  - text: "学识50"
+- raw: "学识70"
+  splits:
+  - text: "学识70"
+- raw: "口才30"
+  splits:
+  - text: "口才30"
+- raw: "口才50"
+  splits:
+  - text: "口才50"
+- raw: "口才70"
+  splits:
+  - text: "口才70"
+- raw: "采伐30"
+  splits:
+  - text: "采伐30"
+- raw: "采伐50"
+  splits:
+  - text: "采伐50"
+- raw: "采伐70"
+  splits:
+  - text: "采伐70"
+- raw: "木植30"
+  splits:
+  - text: "木植30"
+- raw: "木植50"
+  splits:
+  - text: "木植50"
+- raw: "木植70"
+  splits:
+  - text: "木植70"
+- raw: "锻造30"
+  splits:
+  - text: "锻造30"
+- raw: "锻造50"
+  splits:
+  - text: "锻造50"
+- raw: "锻造70"
+  splits:
+  - text: "锻造70"
+- raw: "炼药30"
+  splits:
+  - text: "炼药30"
+- raw: "炼药50"
+  splits:
+  - text: "炼药50"
+- raw: "炼药70"
+  splits:
+  - text: "炼药70"
+- raw: "烹饪30"
+  splits:
+  - text: "烹饪30"
+- raw: "烹饪50"
+  splits:
+  - text: "烹饪50"
+- raw: "烹饪70"
+  splits:
+  - text: "烹饪70"
+- raw: "医术20"
+  splits:
+  - text: "医术20"
+- raw: "毒术40"
+  splits:
+  - text: "毒术40"
+- raw: "医术40"
+  splits:
+  - text: "医术40"
+- raw: "毒术60"
+  splits:
+  - text: "毒术60"
+- raw: "医术60"
+  splits:
+  - text: "医术60"
+- raw: "毒术80"
+  splits:
+  - text: "毒术80"
+- raw: "毒术20"
+  splits:
+  - text: "毒术20"
+- raw: "奇门20"
+  splits:
+  - text: "奇门20"
+- raw: "奇门40"
+  splits:
+  - text: "奇门40"
+- raw: "智力100"
+  splits:
+  - text: "智力100"
+- raw: "医术80"
+  splits:
+  - text: "医术80"

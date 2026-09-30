@@ -80,6 +80,13 @@ namespace Tests
                     .Select(item => DynamicStringSources.StatLabelRegex.Match(item).Value));
             }
 
+            foreach (var (csvFileName, columns) in DynamicStringSources.DynamicStringLabelValueColumnSources)
+            {
+                ExtractFrom(csvFileName, columns, cell => cell
+                    .Split(['+', ';', ','], StringSplitOptions.RemoveEmptyEntries)
+                    .Where(item => !item.Contains("天赋:") && item.Any(char.IsDigit)));
+            }
+
             foreach (var (csvFileName, columns) in DynamicStringSources.DynamicStringInteractionOptionColumnSources)
             {
                 ExtractFrom(csvFileName, columns, cell => cell
@@ -122,7 +129,8 @@ namespace Tests
         ///
         /// Must run AFTER ExtractDynamicStringCandidatesFromIl2CppStringMap, which populates the
         /// master dump this reads from. Idempotent: re-running never duplicates an already-
-        /// extracted value.
+        /// extracted value. Also REMOVES the harvested whole-record lines (structured records and
+        /// "临时:" temp-NPC records) from the master dump itself - see the write-back at the end.
         /// </summary>
         public static void ExtractStructuredRecordFragmentCandidates(string workingDirectory)
         {
@@ -142,13 +150,33 @@ namespace Tests
                 found.Add(value);
             }
 
-            foreach (var line in File.ReadAllLines(masterDumpPath))
+            var masterLines = File.ReadAllLines(masterDumpPath);
+            var keptMasterLines = new List<string>(masterLines.Length);
+
+            foreach (var line in masterLines)
             {
-                if (string.IsNullOrEmpty(line)) continue;
+                if (string.IsNullOrEmpty(line))
+                {
+                    keptMasterLines.Add(line);
+                    continue;
+                }
+
+                // A "临时:Name[&Random;;...]" temp-NPC-spawn record (RandomEvent plot speaker/
+                // target) is parsed by the game and only its bare Name is ever displayed - see
+                // DynamicStringTempNpcNameColumnSources. Harvest the Name, drop the whole record.
+                var tempNpc = DynamicStringSources.TempNpcNameRegex.Match(line);
+                if (tempNpc.Success)
+                {
+                    AddCandidate(tempNpc.Groups[1].Value);
+                    continue;
+                }
 
                 var fields = line.Split(';');
-                if (fields.Length < 3) continue;
-                if (!fields.Any(f => DynamicStringSources.AsciiIdentifierFieldRegex.IsMatch(f))) continue;
+                if (fields.Length < 3 || !fields.Any(f => DynamicStringSources.AsciiIdentifierFieldRegex.IsMatch(f)))
+                {
+                    keptMasterLines.Add(line);
+                    continue;
+                }
 
                 foreach (var field in fields)
                 {
@@ -171,6 +199,13 @@ namespace Tests
 
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
             File.AppendAllLines(outputPath, found);
+
+            // The whole-record lines never match at runtime (only their fields are displayed), so
+            // leaving them in the master dump would still export, translate and QC them - and the
+            // IL2CPP scan re-adds them on every refresh, so this must strip them every run, AFTER
+            // their fragments were harvested above.
+            if (keptMasterLines.Count != masterLines.Length)
+                File.WriteAllLines(masterDumpPath, keptMasterLines);
         }
 
         /// <summary>
@@ -364,6 +399,21 @@ namespace Tests
                 // Labels are now extracted separately - see ExtractOtherFieldLabelCandidates.
                 if (labelFields.Contains(field)) continue;
 
+                // RandomEvent plot speaker/target names can be "临时:Name&随机;;-1;事件难度;-5"
+                // temp-NPC-spawn records (same shape as PlotData.csv's speaker columns - see
+                // DynamicStringTempNpcNameColumnSources). The game parses the record and only the
+                // bare Name is ever displayed, so emit just that; the whole record never matches at
+                // runtime and its spawn parameters must never reach translation/QC.
+                if (TempNpcNameFields.Contains(field))
+                {
+                    var name = DynamicStringSources.TempNpcNameRegex.Match(raw);
+                    if (name.Success)
+                    {
+                        if (seen.Add(name.Groups[1].Value)) found.Add(name.Groups[1].Value);
+                        continue;
+                    }
+                }
+
                 if (!allowedFields.Contains(field)) continue;
                 if (!seen.Add(raw)) continue;
 
@@ -373,6 +423,11 @@ namespace Tests
             Directory.CreateDirectory(Path.GetDirectoryName(outputPath)!);
             File.AppendAllLines(outputPath, found);
         }
+
+        // targetName is deliberately NOT in DynamicStringOtherTextFields (plain targetName values
+        // are never extracted) - only its "临时:" temp-NPC records are, and only as bare names.
+        private static readonly HashSet<string> TempNpcNameFields =
+            new(["sourceName", "targetName"], StringComparer.OrdinalIgnoreCase);
 
         /// <summary>
         /// Extracts the stat-label sub-source (e.g. "spellEffectString") out of

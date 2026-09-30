@@ -425,6 +425,7 @@ public class MainPlugin : BasePlugin
         WorldEventPatches.PatchAll();
 
         SpeAddDescribePatches.PatchAll();
+        TagDisabledTooltipPatches.PatchAll();
 
         MissionPatches.PatchAll();
 

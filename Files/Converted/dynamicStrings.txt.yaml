@@ -7463,7 +7463,7 @@
   splits:
   - text: "检测状态"
     translated: "Status check"
-    qcReviewedText: "FCM:Status check"
+    qcReviewedText: "FCM: Status check"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7473,7 +7473,7 @@
   splits:
   - text: "模拟未成年人"
     translated: "Simulate being a minor"
-    qcReviewedText: "FCM:Simulate being a minor-{0}"
+    qcReviewedText: "FCM: Simulate being a minor-{0}"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7483,7 +7483,7 @@
   splits:
   - text: "模拟未成年人"
     translated: "Simulate being a minor"
-    qcReviewedText: "FCM:Simulate being a minor:{0}"
+    qcReviewedText: "FCM: Simulate being a minor:{0}"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10341,13 +10341,13 @@
   splits:
   - text: "月俸"
     translated: "Monthly salary"
-    qcReviewedText: "{0} Monthly salary:Money {1}"
+    qcReviewedText: "{0} Monthly salary: {1} Silver"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "银钱"
-    translated: "Money"
+    translated: "Silver"
   templates:
   - template: "⟦0⟧{0}:{1}⟦1⟧"
 - raw: "{0}服用了{1}"
@@ -10374,10 +10374,12 @@
   splits:
   - text: "服食灵果，内力上限增加"
     translated: "Eating the spirit fruit increases Max Inner Power."
-    qcReviewedText: "{0} Eating the spirit fruit increases Max Inner Power.{1}"
-    qcStatus: Passed
+    qcReviewedText: "{0} eat a spirit fruit and increased Max Inner Power by {1}"
+    qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: None
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   templates:
   - template: "⟦0⟧{0}⟦1⟧"
 - raw: "{0}未拥有</color>"
@@ -14244,7 +14246,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Gang leader"
+    qcReviewedText: "Temporary: Gang leader"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14257,7 +14259,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Scholar"
+    qcReviewedText: "Temporary: Scholar"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14270,7 +14272,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Trader"
+    qcReviewedText: "Temporary: Trader"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14283,7 +14285,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Conference host"
+    qcReviewedText: "Temporary: Conference host"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14311,7 +14313,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Host of the competition"
+    qcReviewedText: "Temporary: Host of the competition"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14372,14 +14374,14 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Officer led the way"
+    qcReviewedText: "Temporary: Officer led the way"
     qcTranslated: "Temporary: Officer Squad Leader"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - LostIdiom
-    - OtherNamedDefect
+    - DomainTerm
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "官兵领队"
     translated: "Officer led the way"
@@ -14404,7 +14406,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Waiter"
+    qcReviewedText: "Temporary: Waiter"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14417,7 +14419,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Craftsman"
+    qcReviewedText: "Temporary: Craftsman"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14430,7 +14432,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Store merchant"
+    qcReviewedText: "Temporary: Store merchant"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14443,7 +14445,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Bandit leader"
+    qcReviewedText: "Temporary: Bandit leader"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14471,13 +14473,13 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Thief King"
-    qcTranslated: "Temporary:Phantom Thief"
+    qcReviewedText: "Temporary: Thief King"
+    qcTranslated: "Temporary: Phantom Thief"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - OtherNamedDefect
+    - DomainTerm
   - subIndex: 1
     text: "怪盗"
     translated: "Thief King"
@@ -14505,7 +14507,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Chief villain"
+    qcReviewedText: "Temporary: Chief villain"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14536,10 +14538,13 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Bullseye Boss"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "Temporary: Bullseye Boss"
+    qcTranslated: "Temporary: Bully Leader"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
   - subIndex: 1
     text: "恶霸头目"
     translated: "Bullseye Boss"
@@ -14561,13 +14566,10 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Auctioneer"
-    qcTranslated: "Temporary: Auctioneer"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    qcReviewedText: "Temporary: Auctioneer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "拍卖主持"
     translated: "Auctioneer"
@@ -14592,7 +14594,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Traveling merchant"
+    qcReviewedText: "Temporary: Traveling merchant"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14605,13 +14607,10 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Mob leader"
-    qcTranslated: "Temporary: Mob Leader"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    qcReviewedText: "Temporary: Mob leader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "暴民头领"
     translated: "Mob leader"
@@ -14654,7 +14653,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Common people"
+    qcReviewedText: "Temporary: Common people"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14667,7 +14666,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Thief"
+    qcReviewedText: "Temporary: Thief"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14695,7 +14694,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Butler"
+    qcReviewedText: "Temporary: Butler"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14708,7 +14707,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Down‑and‑out person"
+    qcReviewedText: "Temporary: Down‑and‑out person"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14787,7 +14786,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Messenger"
+    qcReviewedText: "Temporary: Messenger"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14818,7 +14817,7 @@
   splits:
   - text: "临时"
     translated: "Temporary"
-    qcReviewedText: "Temporary:Demon king"
+    qcReviewedText: "Temporary: Demon king"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -31927,12 +31926,12 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:"
+    qcReviewedText: "Talent: "
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   templates:
-  - template: "{0}:"
+  - template: "{0}: "
 - raw: "天赋;ChooseManageTagTargetSelfHouse"
   splits:
   - text: "天赋"
@@ -39925,7 +39924,7 @@
   - text: "我在"
     translated: "I am"
     qcReviewedText: "I am {0} {1}, If #PlayerName# can {2} Come to help today, and I will be eternally grateful!"
-    qcTranslated: "I am {0} {1}, If #PlayerName# can come to help within {2} days, I will be eternally grateful!"
+    qcTranslated: "I am at {0} and {1}, If #PlayerName# can come to help within {2} days, I will be eternally grateful!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
@@ -70069,8 +70068,8 @@
 - raw: "领悟需求:"
   splits:
   - text: "领悟需求"
-    translated: "Understand needs"
-    qcReviewedText: "Understand needs:"
+    translated: "Comprehension requires"
+    qcReviewedText: "Comprehension requires:"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

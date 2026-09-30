@@ -222,6 +222,17 @@ namespace Tests
             ("SummonKungFuData.csv", [13]),
         ];
 
+        // Cells of "<Label><number>" requirement items joined by '+' (e.g. HeroTagData.csv column 9,
+        // "体质110+经脉110+天赋:体质"). DynamicStringLabelColumnSources only extracts the bare label
+        // ("体质"), so a value with no exact dictionary entry fell back to a shorter prefix entry
+        // ("体质1" -> "Constitution 1" + leftover "10") and rendered as "Constitution 1 10" or
+        // "10 intelligence 0". Extracting each full item ("体质110") gives it an exact entry.
+        // "天赋:" items are talent names, already covered by the name column, so they are skipped.
+        public static readonly (string CsvFileName, int[] Columns)[] DynamicStringLabelValueColumnSources =
+        [
+            ("HeroTagData.csv", [9]),
+        ];
+
         // CSV columns holding a "."-joined compound value where each half needs its own standalone
         // translated entry, not just the whole joined string. SpeHeroData.csv column 1 (名字/Name,
         // e.g. "姜.映泉") is the only known case: GameDataController strips the "." separator when

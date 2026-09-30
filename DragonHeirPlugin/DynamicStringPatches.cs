@@ -1748,7 +1748,7 @@ internal static class DynamicStringPatches
 
                 var nextChar = pos < input.Length ? EffectiveLeadingCharAt(input, pos) : null;
                 if (entry.ReplacementTrailChar.HasValue && nextChar.HasValue
-                    && char.IsLetterOrDigit(entry.ReplacementTrailChar.Value) && char.IsLetterOrDigit(nextChar.Value))
+                    && NeedsSpaceAfterReplacement(entry.ReplacementTrailChar.Value, nextChar.Value))
                 {
                     sb.Append(' ');
                 }
@@ -1954,6 +1954,16 @@ internal static class DynamicStringPatches
         return k < j && char.IsLetter(s[k]) ? j : -1;
     }
 
+    // A replacement ending in a digit followed by a raw digit is one number split mid-way by a
+    // shorter dictionary entry (e.g. "体质1" matched inside "体质110" -> "Constitution 1" + "10"),
+    // so it must not get a word-boundary space ("Constitution 110", not "Constitution 1 10").
+    // Entries whose replacement puts the number first ("10 intelligence" + "0") can't be fixed
+    // here - only an exact dictionary entry for the full value can (see
+    // DynamicStringSources.DynamicStringLabelValueColumnSources).
+    private static bool NeedsSpaceAfterReplacement(char trail, char next)
+        => char.IsLetterOrDigit(trail) && char.IsLetterOrDigit(next)
+           && !(char.IsDigit(trail) && char.IsDigit(next));
+
     // NOTE: this used to guard short entries (<=2 chars) from matching while still touching a CJK
     // ideograph on either side, to avoid pulling a fragment like "时"->"Time" out of the middle of
     // an unrelated compound like "同时" (see
@@ -1987,7 +1997,7 @@ internal static class DynamicStringPatches
 
             var nextChar = startIndex < input.Length ? EffectiveLeadingCharAt(input, startIndex) : null;
             if (entry.ReplacementTrailChar.HasValue && nextChar.HasValue
-                && char.IsLetterOrDigit(entry.ReplacementTrailChar.Value) && char.IsLetterOrDigit(nextChar.Value))
+                && NeedsSpaceAfterReplacement(entry.ReplacementTrailChar.Value, nextChar.Value))
             {
                 sb.Append(' ');
             }

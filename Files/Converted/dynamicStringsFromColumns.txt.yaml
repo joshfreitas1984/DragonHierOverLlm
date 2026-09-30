@@ -7251,7 +7251,7 @@
     translated: "Internal Skill 10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "玉带诀"
@@ -7725,7 +7725,7 @@
     translated: "Qinggong 10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "跑铁索"
@@ -8227,7 +8227,7 @@
     translated: "Special Technique 20"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "八卦掌法"
@@ -8749,7 +8749,7 @@
     translated: "Sword Technique 15"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "手16"
@@ -9827,7 +9827,7 @@
     translated: "Long weapon 15"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "弱点0.06"
@@ -13088,7 +13088,7 @@
     translated: "Constitution 20"
   - subIndex: 2
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1};{2}"
 - raw: "活血0.12"
@@ -14034,7 +14034,7 @@
     translated: "Agility20"
   - subIndex: 2
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1};{2}"
 - raw: "心胸点穴0.02;腰腹点穴0.06"
@@ -14562,7 +14562,7 @@
     translated: "Willpower20"
   - subIndex: 2
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1};{2}"
 - raw: "脆弱0.08"
@@ -18253,7 +18253,7 @@
     translated: "Internal Skill 10"
   - subIndex: 3
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 4
     text: "意志10"
     translated: "Willpower10"
@@ -22086,7 +22086,7 @@
     translated: "Internal Skill 10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "射术10"
     translated: "Archery skills10"
@@ -22317,7 +22317,7 @@
     translated: "Blade Technique 15"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "流血0.1"
@@ -22633,7 +22633,7 @@
     translated: "Agility20"
   - subIndex: 2
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1};{2}"
 - raw: "百手千指功"
@@ -23826,7 +23826,7 @@
     translated: "Unarmed 10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "医术10"
     translated: "Medical skills10"
@@ -24962,7 +24962,7 @@
     translated: "Meridian 10"
   - subIndex: 4
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 5
     text: "医术10"
     translated: "Medical skills10"
@@ -28371,7 +28371,7 @@
     translated: "Special Technique 15"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "跌打梅山咒"
@@ -28400,7 +28400,7 @@
     translated: "Qimen 10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "失衡0.04;动摇0.04"
@@ -29348,7 +29348,7 @@
     translated: "Qinggong 10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "经脉10"
     translated: "Meridian 10"
@@ -31357,7 +31357,7 @@
     translated: "Special Technique 10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "毒术10"
     translated: "Poison arts 10"
@@ -32029,7 +32029,7 @@
     translated: "Special Technique 8"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "毒术8"
     translated: "Poison arts 8"
@@ -34603,7 +34603,7 @@
     translated: "Archery skills5"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "削内0.16;弱点0.04;疲劳0.04"
@@ -34772,7 +34772,7 @@
     translated: "Qimen 20"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "伤筋0.06"
@@ -36533,7 +36533,7 @@
     translated: "Unarmed 20"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "心胸点穴0.03;腿足点穴0.03;头颈点穴0.03"
@@ -38192,7 +38192,7 @@
     translated: "Qinggong 5"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "武当软硬功"
@@ -38357,7 +38357,7 @@
     translated: "Agility10"
   - subIndex: 2
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1};{2}"
 - raw: "子午盘功"
@@ -38389,7 +38389,7 @@
     translated: "Special Technique 15"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "灵巧5"
     translated: "Agility5"
@@ -42950,7 +42950,7 @@
     translated: "Agility10"
   - subIndex: 5
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 6
     text: "通脉0.05"
     translated: "Unblock Meridians 0.05"
@@ -44249,8 +44249,8 @@
 - raw: "智力10"
   splits:
   - text: "智力10"
-    translated: "10 intelligence"
-    qcReviewedText: "10 intelligence"
+    translated: "Intelligence 10"
+    qcReviewedText: "Intelligence 10"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -44268,7 +44268,7 @@
     translated: "Qimen 5"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "机簧斧"
@@ -44929,7 +44929,7 @@
     translated: "Internal Skill 10"
   - subIndex: 3
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 4
     text: "意志10"
     translated: "Willpower10"
@@ -44988,7 +44988,7 @@
     translated: "Agility10"
   - subIndex: 2
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 3
     text: "脆弱0.04"
     translated: "Vulnerable 0.04"
@@ -45178,7 +45178,7 @@
     translated: "Agility10"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "意志12"
     translated: "Willpower12"
@@ -45654,7 +45654,7 @@
     translated: "Special Technique 4"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 2
     text: "意志4"
     translated: "Willpower4"
@@ -46724,7 +46724,7 @@
     translated: "Qimen 15"
   - subIndex: 1
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   templates:
   - template: "{0};{1}"
 - raw: "往生轮"
@@ -47401,7 +47401,7 @@
 - raw: "智力10;意志10;体质10;外伤0.06;无敌0.03"
   splits:
   - text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 1
     text: "意志10"
     translated: "Willpower10"
@@ -47445,7 +47445,7 @@
     translated: "Strength 10"
   - subIndex: 2
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 3
     text: "慧眼0.05"
     translated: "Keen Eye0.05"
@@ -49238,7 +49238,7 @@
     translated: "Agility10"
   - subIndex: 5
     text: "智力10"
-    translated: "10 intelligence"
+    translated: "Intelligence 10"
   - subIndex: 6
     text: "意志10"
     translated: "Willpower10"
@@ -62152,7 +62152,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Iron Bones and Steel Sinews"
+    qcReviewedText: "Talent: Iron Bones and Steel Sinews"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62165,7 +62165,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Perfect Mastery"
+    qcReviewedText: "Talent: Perfect Mastery"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62178,7 +62178,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Inner Qi burns hot"
+    qcReviewedText: "Talent: Inner Qi burns hot"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62191,7 +62191,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Strong"
+    qcReviewedText: "Talent: Strong"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62204,7 +62204,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Towering and majestic"
+    qcReviewedText: "Talent: Towering and majestic"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62217,7 +62217,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Weak and frail"
+    qcReviewedText: "Talent: Weak and frail"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62230,7 +62230,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Emaciated and bony"
+    qcReviewedText: "Talent: Emaciated and bony"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62243,7 +62243,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Alertness"
+    qcReviewedText: "Talent: Alertness"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62256,7 +62256,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Adapt to the situation as it arises"
+    qcReviewedText: "Talent: Adapt to the situation as it arises"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62269,7 +62269,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Clumsy"
+    qcReviewedText: "Talent: Clumsy"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62282,7 +62282,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Clumsy and awkward"
+    qcReviewedText: "Talent: Clumsy and awkward"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62295,7 +62295,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Cleverness"
+    qcReviewedText: "Talent: Cleverness"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62308,7 +62308,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Outstanding natural talent"
+    qcReviewedText: "Talent: Outstanding natural talent"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62321,7 +62321,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Clumsy"
+    qcReviewedText: "Talent: Clumsy"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62334,7 +62334,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Clueless and foolish"
+    qcReviewedText: "Talent: Clueless and foolish"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62347,7 +62347,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Brave"
+    qcReviewedText: "Talent: Brave"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62360,7 +62360,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Lead by example"
+    qcReviewedText: "Talent: Lead by example"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62373,7 +62373,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Cowardly"
+    qcReviewedText: "Talent: Cowardly"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62386,7 +62386,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Trembling with fear"
+    qcReviewedText: "Talent: Trembling with fear"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62399,7 +62399,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Well‑being"
+    qcReviewedText: "Talent: Well‑being"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62412,7 +62412,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Radiant and energetic"
+    qcReviewedText: "Talent: Radiant and energetic"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62425,7 +62425,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Chronic illnesses"
+    qcReviewedText: "Talent: Chronic illnesses"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62438,7 +62438,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Mentally and physically exhausted"
+    qcReviewedText: "Talent: Mentally and physically exhausted"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62451,7 +62451,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Follow the meridian"
+    qcReviewedText: "Talent: Follow the meridian"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62464,7 +62464,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Meridians connected"
+    qcReviewedText: "Talent: Meridians connected"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62477,7 +62477,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Obstructed Pulse"
+    qcReviewedText: "Talent: Obstructed Pulse"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62490,7 +62490,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Blocked meridians"
+    qcReviewedText: "Talent: Blocked meridians"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62503,7 +62503,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Upright"
+    qcReviewedText: "Talent: Upright"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62516,7 +62516,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Impartial and upright"
+    qcReviewedText: "Talent: Impartial and upright"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62529,7 +62529,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Treacherous"
+    qcReviewedText: "Talent: Treacherous"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62542,7 +62542,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:By any means necessary"
+    qcReviewedText: "Talent: By any means necessary"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62555,7 +62555,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Mercy"
+    qcReviewedText: "Talent: Mercy"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62568,7 +62568,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Benevolent and kind‑hearted"
+    qcReviewedText: "Talent: Benevolent and kind‑hearted"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62581,7 +62581,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Cruel"
+    qcReviewedText: "Talent: Cruel"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62594,7 +62594,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Cruel and ruthless"
+    qcReviewedText: "Talent: Cruel and ruthless"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62607,7 +62607,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Stay calm"
+    qcReviewedText: "Talent: Stay calm"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62620,7 +62620,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Calm and composed"
+    qcReviewedText: "Talent: Calm and composed"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62633,7 +62633,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Irritable"
+    qcReviewedText: "Talent: Irritable"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62646,7 +62646,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Temper as fierce as fire"
+    qcReviewedText: "Talent: Temper as fierce as fire"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62659,7 +62659,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Lucky"
+    qcReviewedText: "Talent: Lucky"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62672,7 +62672,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Good fortune shines brightly"
+    qcReviewedText: "Talent: Good fortune shines brightly"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62685,7 +62685,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Misfortune"
+    qcReviewedText: "Talent: Misfortune"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62698,7 +62698,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Fate full of twists and turns"
+    qcReviewedText: "Talent: Fate full of twists and turns"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62711,7 +62711,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Beauty"
+    qcReviewedText: "Talent: Beauty"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62724,7 +62724,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Bright eyes and white teeth"
+    qcReviewedText: "Talent: Bright eyes and white teeth"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62737,7 +62737,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Ugly"
+    qcReviewedText: "Talent: Ugly"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62750,7 +62750,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Frightening visage"
+    qcReviewedText: "Talent: Frightening visage"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62763,7 +62763,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Sharp‑eyed"
+    qcReviewedText: "Talent: Sharp‑eyed"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62776,7 +62776,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Eyes shining brightly"
+    qcReviewedText: "Talent: Eyes shining brightly"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62789,7 +62789,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Low vision"
+    qcReviewedText: "Talent: Low vision"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62802,7 +62802,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Vision blurred"
+    qcReviewedText: "Talent: Vision blurred"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62815,7 +62815,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Modesty"
+    qcReviewedText: "Talent: Modesty"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62828,7 +62828,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Neither arrogant nor impatient"
+    qcReviewedText: "Talent: Neither arrogant nor impatient"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62841,7 +62841,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Stubbornly self‑willed"
+    qcReviewedText: "Talent: Stubbornly self‑willed"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62854,7 +62854,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Arrogant and overbearing"
+    qcReviewedText: "Talent: Arrogant and overbearing"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62867,7 +62867,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Loyalty"
+    qcReviewedText: "Talent: Loyalty"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62880,7 +62880,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Loyal and devoted"
+    qcReviewedText: "Talent: Loyal and devoted"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62893,7 +62893,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Rebellion"
+    qcReviewedText: "Talent: Rebellion"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62906,7 +62906,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Rebellious and unruly"
+    qcReviewedText: "Talent: Rebellious and unruly"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62919,7 +62919,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Diligence"
+    qcReviewedText: "Talent: Diligence"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62932,7 +62932,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Diligently without rest"
+    qcReviewedText: "Talent: Diligently without rest"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62945,7 +62945,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Lazy"
+    qcReviewedText: "Talent: Lazy"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62958,7 +62958,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Idle and lazy"
+    qcReviewedText: "Talent: Idle and lazy"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62971,7 +62971,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Thrifty"
+    qcReviewedText: "Talent: Thrifty"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62984,7 +62984,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Being thrifty and calculating carefully"
+    qcReviewedText: "Talent: Being thrifty and calculating carefully"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -62997,7 +62997,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Waste"
+    qcReviewedText: "Talent: Waste"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63010,7 +63010,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Living extravagantly"
+    qcReviewedText: "Talent: Living extravagantly"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63023,7 +63023,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Practicing martial arts"
+    qcReviewedText: "Talent: Practicing martial arts"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63036,7 +63036,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Wu Maniac"
+    qcReviewedText: "Talent: Wu Maniac"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63049,7 +63049,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Study medicine"
+    qcReviewedText: "Talent: Study medicine"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63062,7 +63062,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Doctor"
+    qcReviewedText: "Talent: Doctor"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63075,7 +63075,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Study literature"
+    qcReviewedText: "Talent: Study literature"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63088,7 +63088,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Elegant Scholar"
+    qcReviewedText: "Talent: Elegant Scholar"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63101,7 +63101,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Farming"
+    qcReviewedText: "Talent: Farming"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63114,7 +63114,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Farm family"
+    qcReviewedText: "Talent: Farm family"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63127,7 +63127,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Apprentice"
+    qcReviewedText: "Talent: Apprentice"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63140,7 +63140,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Craftsman"
+    qcReviewedText: "Talent: Craftsman"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63153,7 +63153,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Doing business"
+    qcReviewedText: "Talent: Doing business"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63166,7 +63166,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Shrewd merchant"
+    qcReviewedText: "Talent: Shrewd merchant"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63179,7 +63179,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Entering politics"
+    qcReviewedText: "Talent: Entering politics"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63192,7 +63192,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Official position"
+    qcReviewedText: "Talent: Official position"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63205,7 +63205,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Miscellaneous studies"
+    qcReviewedText: "Talent: Miscellaneous studies"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63218,7 +63218,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Jack‑of‑all‑Trades"
+    qcReviewedText: "Talent: Jack‑of‑all‑Trades"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63231,7 +63231,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Indifferent"
+    qcReviewedText: "Talent: Indifferent"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63244,7 +63244,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Hermit"
+    qcReviewedText: "Talent: Hermit"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63257,7 +63257,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Confucian arts"
+    qcReviewedText: "Talent: Confucian arts"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63270,7 +63270,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Scholar‑official"
+    qcReviewedText: "Talent: Scholar‑official"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63283,7 +63283,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Cultivate Dao"
+    qcReviewedText: "Talent: Cultivate Dao"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63296,7 +63296,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Taoist priest"
+    qcReviewedText: "Talent: Taoist priest"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63309,7 +63309,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Study Buddhism"
+    qcReviewedText: "Talent: Study Buddhism"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63322,7 +63322,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Zen Master"
+    qcReviewedText: "Talent: Zen Master"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63335,7 +63335,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Begging"
+    qcReviewedText: "Talent: Begging"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63348,7 +63348,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Begging for alms"
+    qcReviewedText: "Talent: Begging for alms"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63361,7 +63361,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Divination"
+    qcReviewedText: "Talent: Divination"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63374,7 +63374,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Fortune‑teller"
+    qcReviewedText: "Talent: Fortune‑teller"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63387,7 +63387,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Wandering Swordsman"
+    qcReviewedText: "Talent: Wandering Swordsman"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63400,7 +63400,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Wanderer"
+    qcReviewedText: "Talent: Wanderer"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63413,7 +63413,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Gambler"
+    qcReviewedText: "Talent: Gambler"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63426,7 +63426,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Obsessed with gambling"
+    qcReviewedText: "Talent: Obsessed with gambling"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63439,7 +63439,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Alcoholic"
+    qcReviewedText: "Talent: Alcoholic"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63452,7 +63452,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Sing and drink freely"
+    qcReviewedText: "Talent: Sing and drink freely"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63465,7 +63465,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Customer"
+    qcReviewedText: "Talent: Customer"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63478,7 +63478,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Feast heartily"
+    qcReviewedText: "Talent: Feast heartily"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63491,7 +63491,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Collect"
+    qcReviewedText: "Talent: Collect"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63504,7 +63504,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Discard the false and keep the true"
+    qcReviewedText: "Talent: Discard the false and keep the true"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63517,7 +63517,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Riding skills"
+    qcReviewedText: "Talent: Riding skills"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63530,7 +63530,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Ride hard and fast"
+    qcReviewedText: "Talent: Ride hard and fast"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63543,7 +63543,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Study reading"
+    qcReviewedText: "Talent: Study reading"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63556,7 +63556,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Read extensively"
+    qcReviewedText: "Talent: Read extensively"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63569,7 +63569,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Yaoqin"
+    qcReviewedText: "Talent: Yaoqin"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63582,7 +63582,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:The music lingers in the air"
+    qcReviewedText: "Talent: The music lingers in the air"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63595,7 +63595,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Playing chess"
+    qcReviewedText: "Talent: Playing chess"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63608,7 +63608,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:One move ahead in the game"
+    qcReviewedText: "Talent: One move ahead in the game"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63621,7 +63621,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Calligraphy"
+    qcReviewedText: "Talent: Calligraphy"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63634,7 +63634,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Flowing like dragons and snakes"
+    qcReviewedText: "Talent: Flowing like dragons and snakes"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63647,7 +63647,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Painting"
+    qcReviewedText: "Talent: Painting"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63660,7 +63660,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Master of Skilled Brushwork"
+    qcReviewedText: "Talent: Master of Skilled Brushwork"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63673,7 +63673,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Recite poetry"
+    qcReviewedText: "Talent: Recite poetry"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63686,7 +63686,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Inspiration flows like a fountain"
+    qcReviewedText: "Talent: Inspiration flows like a fountain"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63699,7 +63699,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Hunting"
+    qcReviewedText: "Talent: Hunting"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63712,7 +63712,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Flying Eagles and Running Dogs"
+    qcReviewedText: "Talent: Flying Eagles and Running Dogs"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63725,7 +63725,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Wandering Cloud Edge"
+    qcReviewedText: "Talent: Wandering Cloud Edge"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63738,7 +63738,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Traveling and enjoying the scenery"
+    qcReviewedText: "Talent: Traveling and enjoying the scenery"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63751,7 +63751,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Meditation retreat"
+    qcReviewedText: "Talent: Meditation retreat"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63764,7 +63764,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Lie in hiding"
+    qcReviewedText: "Talent: Lie in hiding"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63777,7 +63777,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Dance skills"
+    qcReviewedText: "Talent: Dance skills"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63790,7 +63790,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Dancing with the wind in motion"
+    qcReviewedText: "Talent: Dancing with the wind in motion"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63803,7 +63803,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Follower"
+    qcReviewedText: "Talent: Follower"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63816,7 +63816,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Obey without question"
+    qcReviewedText: "Talent: Obey without question"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63829,7 +63829,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Advisor"
+    qcReviewedText: "Talent: Advisor"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63842,7 +63842,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Deploying troops and arranging formations"
+    qcReviewedText: "Talent: Deploying troops and arranging formations"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63855,7 +63855,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Leader"
+    qcReviewedText: "Talent: Leader"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63868,7 +63868,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Aspiring for great ambitions"
+    qcReviewedText: "Talent: Aspiring for great ambitions"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63881,7 +63881,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Pioneer"
+    qcReviewedText: "Talent: Pioneer"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63894,7 +63894,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Charge forward with courage"
+    qcReviewedText: "Talent: Charge forward with courage"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63907,7 +63907,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Defense guard"
+    qcReviewedText: "Talent: Defense guard"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63920,7 +63920,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Tightly secured"
+    qcReviewedText: "Talent: Tightly secured"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63933,7 +63933,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Sparring Match"
+    qcReviewedText: "Talent: Sparring Match"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -63946,7 +63946,7 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent:Swift as a meteor"
+    qcReviewedText: "Talent: Swift as a meteor"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -66200,6 +66200,1078 @@
   - text: "少林弟子丙"
     translated: "Shaolin Disciple Bing"
     qcReviewedText: "Shaolin Disciple Bing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "力道30"
+  splits:
+  - text: "力道30"
+    translated: "Strength 30"
+    qcReviewedText: "Strength 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "力道60"
+  splits:
+  - text: "力道60"
+    translated: "Strength 60"
+    qcReviewedText: "Strength 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "力道90"
+  splits:
+  - text: "力道90"
+    translated: "Strength 90"
+    qcReviewedText: "Strength 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "灵巧30"
+  splits:
+  - text: "灵巧30"
+    translated: "Agility30"
+    qcReviewedText: "Agility30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "灵巧60"
+  splits:
+  - text: "灵巧60"
+    translated: "Agility60"
+    qcReviewedText: "Agility60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "灵巧90"
+  splits:
+  - text: "灵巧90"
+    translated: "Agility90"
+    qcReviewedText: "Agility90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "智力30"
+  splits:
+  - text: "智力30"
+    translated: "Intelligence 30"
+    qcReviewedText: "Intelligence 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "智力60"
+  splits:
+  - text: "智力60"
+    translated: "Intelligence 60"
+    qcReviewedText: "Intelligence 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "智力90"
+  splits:
+  - text: "智力90"
+    translated: "Intelligence 90"
+    qcReviewedText: "Intelligence 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "意志30"
+  splits:
+  - text: "意志30"
+    translated: "Willpower 30"
+    qcReviewedText: "Willpower 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "意志60"
+  splits:
+  - text: "意志60"
+    translated: "Willpower 60"
+    qcReviewedText: "Willpower 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "意志90"
+  splits:
+  - text: "意志90"
+    translated: "Willpower90"
+    qcReviewedText: "Willpower90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质30"
+  splits:
+  - text: "体质30"
+    translated: "Constitution 30"
+    qcReviewedText: "Constitution 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质60"
+  splits:
+  - text: "体质60"
+    translated: "Constitution 60"
+    qcReviewedText: "Constitution 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质90"
+  splits:
+  - text: "体质90"
+    translated: "Constitution 90"
+    qcReviewedText: "Constitution 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "经脉30"
+  splits:
+  - text: "经脉30"
+    translated: "Meridian 30"
+    qcReviewedText: "Meridian 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "经脉60"
+  splits:
+  - text: "经脉60"
+    translated: "Meridian 60"
+    qcReviewedText: "Meridian 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "经脉90"
+  splits:
+  - text: "经脉90"
+    translated: "Meridian 90"
+    qcReviewedText: "Meridian 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内功30"
+  splits:
+  - text: "内功30"
+    translated: "Neigong 30"
+    qcReviewedText: "Neigong 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内功60"
+  splits:
+  - text: "内功60"
+    translated: "Neigong 60"
+    qcReviewedText: "Neigong 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内功90"
+  splits:
+  - text: "内功90"
+    translated: "Neigong 90"
+    qcReviewedText: "Neigong 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "轻功30"
+  splits:
+  - text: "轻功30"
+    translated: "Qinggong 30"
+    qcReviewedText: "Qinggong 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "轻功60"
+  splits:
+  - text: "轻功60"
+    translated: "Qinggong 60"
+    qcReviewedText: "Qinggong 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "轻功90"
+  splits:
+  - text: "轻功90"
+    translated: "Qinggong90"
+    qcReviewedText: "Qinggong90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技30"
+  splits:
+  - text: "绝技30"
+    translated: "Special Technique 30"
+    qcReviewedText: "Special Technique 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技60"
+  splits:
+  - text: "绝技60"
+    translated: "Special Technique 60"
+    qcReviewedText: "Special Technique 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技90"
+  splits:
+  - text: "绝技90"
+    translated: "Special Technique 90"
+    qcReviewedText: "Special Technique 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "拳掌30"
+  splits:
+  - text: "拳掌30"
+    translated: "Unarmed 30"
+    qcReviewedText: "Unarmed 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "拳掌60"
+  splits:
+  - text: "拳掌60"
+    translated: "Unarmed 60"
+    qcReviewedText: "Unarmed 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "拳掌90"
+  splits:
+  - text: "拳掌90"
+    translated: "Unarmed90"
+    qcReviewedText: "Unarmed90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "剑法30"
+  splits:
+  - text: "剑法30"
+    translated: "Sword Technique 30"
+    qcReviewedText: "Sword Technique 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "剑法60"
+  splits:
+  - text: "剑法60"
+    translated: "Sword Technique 60"
+    qcReviewedText: "Sword Technique 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "剑法90"
+  splits:
+  - text: "剑法90"
+    translated: "Sword Technique90"
+    qcReviewedText: "Sword Technique90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "刀法30"
+  splits:
+  - text: "刀法30"
+    translated: "Blade Technique 30"
+    qcReviewedText: "Blade Technique 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "刀法60"
+  splits:
+  - text: "刀法60"
+    translated: "Blade Technique 60"
+    qcReviewedText: "Blade Technique 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "刀法90"
+  splits:
+  - text: "刀法90"
+    translated: "Blade Technique90"
+    qcReviewedText: "Blade Technique90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "长兵30"
+  splits:
+  - text: "长兵30"
+    translated: "Long weapon 30"
+    qcReviewedText: "Long weapon 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "长兵60"
+  splits:
+  - text: "长兵60"
+    translated: "Long Weapon 60"
+    qcReviewedText: "Long Weapon 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "长兵90"
+  splits:
+  - text: "长兵90"
+    translated: "Long weapon 90"
+    qcReviewedText: "Long weapon 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门30"
+  splits:
+  - text: "奇门30"
+    translated: "Qimen 30"
+    qcReviewedText: "Qimen 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门60"
+  splits:
+  - text: "奇门60"
+    translated: "Qimen 60"
+    qcReviewedText: "Qimen 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门90"
+  splits:
+  - text: "奇门90"
+    translated: "Qimen 90"
+    qcReviewedText: "Qimen 90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "射术30"
+  splits:
+  - text: "射术30"
+    translated: "Archery skills30"
+    qcReviewedText: "Archery skills30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "射术60"
+  splits:
+  - text: "射术60"
+    translated: "Archery skills60"
+    qcReviewedText: "Archery skills60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "射术90"
+  splits:
+  - text: "射术90"
+    translated: "Archery90"
+    qcReviewedText: "Archery90"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技25"
+  splits:
+  - text: "绝技25"
+    translated: "Special Technique 25"
+    qcReviewedText: "Special Technique 25"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质25"
+  splits:
+  - text: "体质25"
+    translated: "Constitution 25"
+    qcReviewedText: "Constitution 25"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技50"
+  splits:
+  - text: "绝技50"
+    translated: "Special Technique 50"
+    qcReviewedText: "Special Technique 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质50"
+  splits:
+  - text: "体质50"
+    translated: "Constitution 50"
+    qcReviewedText: "Constitution 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技75"
+  splits:
+  - text: "绝技75"
+    translated: "Special Technique 75"
+    qcReviewedText: "Special Technique 75"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质75"
+  splits:
+  - text: "体质75"
+    translated: "Constitution 75"
+    qcReviewedText: "Constitution 75"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "拳掌50"
+  splits:
+  - text: "拳掌50"
+    translated: "Unarmed 50"
+    qcReviewedText: "Unarmed 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内功50"
+  splits:
+  - text: "内功50"
+    translated: "Neigong 50"
+    qcReviewedText: "Neigong 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "拳掌100"
+  splits:
+  - text: "拳掌100"
+    translated: "Unarmed100"
+    qcReviewedText: "Unarmed100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内功100"
+  splits:
+  - text: "内功100"
+    translated: "Neigong100"
+    qcReviewedText: "Neigong100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "剑法50"
+  splits:
+  - text: "剑法50"
+    translated: "Sword Technique 50"
+    qcReviewedText: "Sword Technique 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "剑法100"
+  splits:
+  - text: "剑法100"
+    translated: "Sword Technique100"
+    qcReviewedText: "Sword Technique100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "刀法50"
+  splits:
+  - text: "刀法50"
+    translated: "Blade Technique 50"
+    qcReviewedText: "Blade Technique 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "刀法100"
+  splits:
+  - text: "刀法100"
+    translated: "Blade Technique100"
+    qcReviewedText: "Blade Technique100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "长兵50"
+  splits:
+  - text: "长兵50"
+    translated: "Long Weapon 50"
+    qcReviewedText: "Long Weapon 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "长兵100"
+  splits:
+  - text: "长兵100"
+    translated: "Long weapon 100"
+    qcReviewedText: "Long weapon 100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门50"
+  splits:
+  - text: "奇门50"
+    translated: "Qimen 50"
+    qcReviewedText: "Qimen 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门100"
+  splits:
+  - text: "奇门100"
+    translated: "Qimen 100"
+    qcReviewedText: "Qimen 100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "射术50"
+  splits:
+  - text: "射术50"
+    translated: "Archery skills50"
+    qcReviewedText: "Archery skills50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "射术100"
+  splits:
+  - text: "射术100"
+    translated: "Archery 100"
+    qcReviewedText: "Archery 100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质110"
+  splits:
+  - text: "体质110"
+    translated: "Constitution 110"
+    qcReviewedText: "Constitution 110"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "经脉110"
+  splits:
+  - text: "经脉110"
+    translated: "Meridian 110"
+    qcReviewedText: "Meridian 110"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质120"
+  splits:
+  - text: "体质120"
+    translated: "Constitution 120"
+    qcReviewedText: "Constitution 120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "经脉120"
+  splits:
+  - text: "经脉120"
+    translated: "Meridian 120"
+    qcReviewedText: "Meridian 120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内功120"
+  splits:
+  - text: "内功120"
+    translated: "Neigong120"
+    qcReviewedText: "Neigong120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "经脉100"
+  splits:
+  - text: "经脉100"
+    translated: "Meridian 100"
+    qcReviewedText: "Meridian 100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "灵巧120"
+  splits:
+  - text: "灵巧120"
+    translated: "Agility120"
+    qcReviewedText: "Agility120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "轻功120"
+  splits:
+  - text: "轻功120"
+    translated: "Qinggong120"
+    qcReviewedText: "Qinggong120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "轻功110"
+  splits:
+  - text: "轻功110"
+    translated: "Qinggong110"
+    qcReviewedText: "Qinggong110"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技120"
+  splits:
+  - text: "绝技120"
+    translated: "Special Technique 120"
+    qcReviewedText: "Special Technique 120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技110"
+  splits:
+  - text: "绝技110"
+    translated: "Special Technique 110"
+    qcReviewedText: "Special Technique 110"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "绝技100"
+  splits:
+  - text: "绝技100"
+    translated: "Special Technique 100"
+    qcReviewedText: "Special Technique 100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "力道80"
+  splits:
+  - text: "力道80"
+    translated: "Strength 80"
+    qcReviewedText: "Strength 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "灵巧80"
+  splits:
+  - text: "灵巧80"
+    translated: "Agility80"
+    qcReviewedText: "Agility80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "智力80"
+  splits:
+  - text: "智力80"
+    translated: "Intelligence 80"
+    qcReviewedText: "Intelligence 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "意志80"
+  splits:
+  - text: "意志80"
+    translated: "Willpower80"
+    qcReviewedText: "Willpower80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "体质80"
+  splits:
+  - text: "体质80"
+    translated: "Constitution 80"
+    qcReviewedText: "Constitution 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "经脉80"
+  splits:
+  - text: "经脉80"
+    translated: "Meridian 80"
+    qcReviewedText: "Meridian 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "拳掌80"
+  splits:
+  - text: "拳掌80"
+    translated: "Unarmed 80"
+    qcReviewedText: "Unarmed 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "剑法80"
+  splits:
+  - text: "剑法80"
+    translated: "Sword Technique 80"
+    qcReviewedText: "Sword Technique 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "刀法80"
+  splits:
+  - text: "刀法80"
+    translated: "Blade Technique 80"
+    qcReviewedText: "Blade Technique 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "长兵80"
+  splits:
+  - text: "长兵80"
+    translated: "Long Weapon 80"
+    qcReviewedText: "Long Weapon 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门80"
+  splits:
+  - text: "奇门80"
+    translated: "Qimen 80"
+    qcReviewedText: "Qimen 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "射术80"
+  splits:
+  - text: "射术80"
+    translated: "Archery skills80"
+    qcReviewedText: "Archery skills80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "轻功100"
+  splits:
+  - text: "轻功100"
+    translated: "Qinggong100"
+    qcReviewedText: "Qinggong100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "意志110"
+  splits:
+  - text: "意志110"
+    translated: "Willpower110"
+    qcReviewedText: "Willpower110"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "意志120"
+  splits:
+  - text: "意志120"
+    translated: "Willpower120"
+    qcReviewedText: "Willpower120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "智力110"
+  splits:
+  - text: "智力110"
+    translated: "Intelligence 110"
+    qcReviewedText: "Intelligence 110"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "灵巧110"
+  splits:
+  - text: "灵巧110"
+    translated: "Agility110"
+    qcReviewedText: "Agility110"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "力道100"
+  splits:
+  - text: "力道100"
+    translated: "Strength 100"
+    qcReviewedText: "Strength 100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "力道120"
+  splits:
+  - text: "力道120"
+    translated: "Strength 120"
+    qcReviewedText: "Strength 120"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "医术30"
+  splits:
+  - text: "医术30"
+    translated: "Medical skills 30"
+    qcReviewedText: "Medical skills 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "医术50"
+  splits:
+  - text: "医术50"
+    translated: "Medical Arts 50"
+    qcReviewedText: "Medical Arts 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "医术70"
+  splits:
+  - text: "医术70"
+    translated: "Medical skills 70"
+    qcReviewedText: "Medical skills 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒术30"
+  splits:
+  - text: "毒术30"
+    translated: "Poison arts 30"
+    qcReviewedText: "Poison arts 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒术50"
+  splits:
+  - text: "毒术50"
+    translated: "Poison arts 50"
+    qcReviewedText: "Poison arts 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒术70"
+  splits:
+  - text: "毒术70"
+    translated: "Poison Arts 70"
+    qcReviewedText: "Poison Arts 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "学识30"
+  splits:
+  - text: "学识30"
+    translated: "Knowledge 30"
+    qcReviewedText: "Knowledge 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "学识50"
+  splits:
+  - text: "学识50"
+    translated: "Knowledge 50"
+    qcReviewedText: "Knowledge 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "学识70"
+  splits:
+  - text: "学识70"
+    translated: "Knowledge 70"
+    qcReviewedText: "Knowledge 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "口才30"
+  splits:
+  - text: "口才30"
+    translated: "Eloquence 30"
+    qcReviewedText: "Eloquence 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "口才50"
+  splits:
+  - text: "口才50"
+    translated: "Eloquence 50"
+    qcReviewedText: "Eloquence 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "口才70"
+  splits:
+  - text: "口才70"
+    translated: "Eloquence 70"
+    qcReviewedText: "Eloquence 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "采伐30"
+  splits:
+  - text: "采伐30"
+    translated: "Gather resources 30"
+    qcReviewedText: "Gather resources 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "采伐50"
+  splits:
+  - text: "采伐50"
+    translated: "Gather resources 50"
+    qcReviewedText: "Gather resources 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "采伐70"
+  splits:
+  - text: "采伐70"
+    translated: "Gather resources 70"
+    qcReviewedText: "Gather resources 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "木植30"
+  splits:
+  - text: "木植30"
+    translated: "Planting 30"
+    qcReviewedText: "Planting 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "木植50"
+  splits:
+  - text: "木植50"
+    translated: "Planting 50"
+    qcReviewedText: "Planting 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "木植70"
+  splits:
+  - text: "木植70"
+    translated: "Planting 70"
+    qcReviewedText: "Planting 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "锻造30"
+  splits:
+  - text: "锻造30"
+    translated: "Forging 30"
+    qcReviewedText: "Forging 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "锻造50"
+  splits:
+  - text: "锻造50"
+    translated: "Forging 50"
+    qcReviewedText: "Forging 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "锻造70"
+  splits:
+  - text: "锻造70"
+    translated: "Forging 70"
+    qcReviewedText: "Forging 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "炼药30"
+  splits:
+  - text: "炼药30"
+    translated: "Alchemy 30"
+    qcReviewedText: "Alchemy 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "炼药50"
+  splits:
+  - text: "炼药50"
+    translated: "Alchemy 50"
+    qcReviewedText: "Alchemy 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "炼药70"
+  splits:
+  - text: "炼药70"
+    translated: "Alchemy 70"
+    qcReviewedText: "Alchemy 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "烹饪30"
+  splits:
+  - text: "烹饪30"
+    translated: "Cooking 30"
+    qcReviewedText: "Cooking 30"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "烹饪50"
+  splits:
+  - text: "烹饪50"
+    translated: "Cooking 50"
+    qcReviewedText: "Cooking 50"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "烹饪70"
+  splits:
+  - text: "烹饪70"
+    translated: "Cooking 70"
+    qcReviewedText: "Cooking 70"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "医术20"
+  splits:
+  - text: "医术20"
+    translated: "Medical skills 20"
+    qcReviewedText: "Medical skills 20"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒术40"
+  splits:
+  - text: "毒术40"
+    translated: "Poison arts 40"
+    qcReviewedText: "Poison arts 40"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "医术40"
+  splits:
+  - text: "医术40"
+    translated: "Medical skills 40"
+    qcReviewedText: "Medical skills 40"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒术60"
+  splits:
+  - text: "毒术60"
+    translated: "Poison arts 60"
+    qcReviewedText: "Poison arts 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "医术60"
+  splits:
+  - text: "医术60"
+    translated: "Medical skills 60"
+    qcReviewedText: "Medical skills 60"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒术80"
+  splits:
+  - text: "毒术80"
+    translated: "Poison arts 80"
+    qcReviewedText: "Poison arts 80"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "毒术20"
+  splits:
+  - text: "毒术20"
+    translated: "Poison arts 20"
+    qcReviewedText: "Poison arts 20"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门20"
+  splits:
+  - text: "奇门20"
+    translated: "Qimen 20"
+    qcReviewedText: "Qimen 20"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "奇门40"
+  splits:
+  - text: "奇门40"
+    translated: "Qimen 40"
+    qcReviewedText: "Qimen 40"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "智力100"
+  splits:
+  - text: "智力100"
+    translated: "Intelligence 100"
+    qcReviewedText: "Intelligence 100"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "医术80"
+  splits:
+  - text: "医术80"
+    translated: "Medical Arts 80"
+    qcReviewedText: "Medical Arts 80"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
