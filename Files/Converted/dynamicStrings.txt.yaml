@@ -1336,13 +1336,9 @@
   splits:
   - text: "#PlayerName#啊，怕不是闻着味儿就来了。"
     translated: "#PlayerName#, they probably came smelling the scent"
-    qcReviewedText: "#PlayerName#, they probably came smelling the scent\nDon't rush, don't rush, the Eight Treasure Porridge hasn't even gone into the pot yet."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "别急别急，腊八粥还没下锅呢。"
-    translated: "Don't rush, don't rush, the Eight Treasure Porridge hasn't even gone into the pot yet."
+    translated: "Don't rush, don't rush, the Laba Porridge hasn't even been put in the pot yet."
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#啊，我近日探得一处宝藏的下落，\n奈何势单力孤，恐遭暗算，一直未能成行。\n若#PlayerName#也有兴趣，不妨你我一同前往，到时候平分宝藏，岂不美哉？"
@@ -10340,16 +10336,9 @@
   splits:
   - text: "检定了身上的"
     translated: "Examined my body"
-    qcReviewedText: "{0} Examined my body {1} Treasure, knowledge and experience increase {2} Dot"
-    qcTranslated: "{0} examined the {1} treasures on their body, gaining {2} points of knowledge and experience."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
   - subIndex: 1
     text: "件珍宝，学识经验增进"
-    translated: "Treasure, knowledge and experience increase"
+    translated: "A treasure, Knowledge Experience increased"
   - subIndex: 2
     text: "点。"
     translated: "Dot"
@@ -16126,11 +16115,7 @@
 - raw: "今天我#PlayerForceName#便联手烹饪这道腊八粥，\n看看最后究竟滋味如何。"
   splits:
   - text: "今天我#PlayerForceName#便联手烹饪这道腊八粥，"
-    translated: "Today, I'll team up with you, #PlayerForceName#, to cook this Eight Treasure Porridge."
-    qcReviewedText: "Today, I'll team up with you, #PlayerForceName#, to cook this Eight Treasure Porridge.\nSee how the final taste turns out"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Today, I, #PlayerForceName#, will cook this Laba Porridge together."
   - subIndex: 1
     text: "看看最后究竟滋味如何。"
     translated: "See how the final taste turns out"
@@ -24353,16 +24338,9 @@
   splits:
   - text: "呵呵，归隐这些年，每逢腊八时分，"
     translated: "Haha, after retiring all these years, every Laba Festival,"
-    qcReviewedText: "Haha, after retiring all these years, every Laba Festival,\nMaster will miss the taste of the Eight Treasure Porridge that the disciples make."
-    qcTranslated: "Haha, after retiring all these years, every Laba Festival, Master will miss the taste of the Laba Porridge that the disciples make."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "为师都会想念徒儿们做的腊八粥滋味。"
-    translated: "Master will miss the taste of the Eight Treasure Porridge that the disciples make."
+    translated: "My master will miss the taste of the Laba Porridge that disciples make."
   templates:
   - template: "{0}\n{1}"
 - raw: "呵呵，脸皮这么厚，想必是伤不着。\n#PlayerName#，你说是也不是？"
@@ -28578,14 +28556,7 @@
 - raw: "嗯...这腊八粥口味适中，无功无过，\n不过也足以暖胃果腹了。"
   splits:
   - text: "嗯...这腊八粥口味适中，无功无过，"
-    translated: "Hmm... This mung bean porridge is moderately flavored, neither particularly excellent nor entirely lacking."
-    qcReviewedText: "Hmm... This mung bean porridge is moderately flavored, neither particularly excellent nor entirely lacking.\nBut it's enough to warm the stomach and fill the belly."
-    qcTranslated: "Hmm... This Laba porridge is moderately flavored, neither particularly excellent nor entirely lacking.\\nBut it's enough to warm the stomach and fill the belly."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
+    translated: "Hmm... this Laba Porridge is just right, neither excellent nor disappointing."
   - subIndex: 1
     text: "不过也足以暖胃果腹了。"
     translated: "But it's enough to warm the stomach and fill the belly."
@@ -28968,16 +28939,9 @@
   splits:
   - text: "噗！（粥水喷了一身一地）"
     translated: "Pft! (The porridge soaked me and the floor.)"
-    qcReviewedText: "Pft! (The porridge soaked me and the floor.)\nThis eight‑treasure porridge is a mix of flavors, sour, salty, bitter, and spicy‑quite difficult to eat."
-    qcTranslated: "Pft! (The porridge splattered all over me and the floor.)\\nThis Laba porridge is a mix of flavors, sour, salty, bitter, and spicy‑quite difficult to eat."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "这腊八粥五味杂陈，酸咸苦辣，实在有些难以入口。"
-    translated: "This eight‑treasure porridge is a mix of flavors, sour, salty, bitter, and spicy‑quite difficult to eat."
+    translated: "This Laba Porridge is a complex mix of flavors, sour, salty, bitter, and spicy; it's quite difficult to swallow."
   templates:
   - template: "{0}\n{1}"
 - raw: "嚯！......哈！......\n这{0}易学难精，还得多花些功夫才是。"
@@ -40796,11 +40760,7 @@
 - raw: "我跟着姜师姐学了不少手艺，这腊八粥的做法也是烂熟于心。\n你们若是有不懂的地方，来问我就好啦！"
   splits:
   - text: "我跟着姜师姐学了不少手艺，这腊八粥的做法也是烂熟于心。"
-    translated: "I learned many skills from Senior Sister Jiang, and the method for making this Eight Treasure Porridge is second nature to me."
-    qcReviewedText: "I learned many skills from Senior Sister Jiang, and the method for making this Eight Treasure Porridge is second nature to me.\nIf you have any questions, feel free to ask me!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "I learned a lot of skills from Senior Sister Jiang, and the recipe for Laba Porridge is also ingrained in my mind."
   - subIndex: 1
     text: "你们若是有不懂的地方，来问我就好啦！"
     translated: "If you have any questions, feel free to ask me!"
@@ -41319,11 +41279,7 @@
 - raw: "所以这次咱们同门上下，也联手烹饪这道腊八粥，看看最后究竟滋味如何。"
   splits:
   - text: "所以这次咱们同门上下，也联手烹饪这道腊八粥，看看最后究竟滋味如何。"
-    translated: "So this time, our fellow disciples from the same sect will also team up to cook this Eight Treasure Porridge. Let's see how it turns out in the end."
-    qcReviewedText: "So this time, our fellow disciples from the same sect will also team up to cook this Eight Treasure Porridge. Let's see how it turns out in the end."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "So this time, let's work together with all our fellow disciples to cook up some Laba Porridge and see how it turns out in the end."
 - raw: "所有城市"
   splits:
   - text: "所有城市"
@@ -43175,7 +43131,7 @@
 - raw: "提升医术潜力;FinishHiddenDoctor;4"
   splits:
   - text: "提升医术潜力"
-    translated: "Improve medical skill potential"
+    translated: "Enhance Medical Potential"
   templates:
   - template: "{0};FinishHiddenDoctor;4"
 - raw: "提升外功"
@@ -43228,13 +43184,13 @@
 - raw: "提升木植潜力;FinishHiddenCooker;4"
   splits:
   - text: "提升木植潜力"
-    translated: "Boost tree potential"
+    translated: "Enhance Planting Potential"
   templates:
   - template: "{0};FinishHiddenCooker;4"
 - raw: "提升炼药潜力;FinishHiddenDoctor;3"
   splits:
   - text: "提升炼药潜力"
-    translated: "Increase alchemical potential"
+    translated: "Enhance Alchemy Potential"
   templates:
   - template: "{0};FinishHiddenDoctor;3"
 - raw: "提升烹饪潜力;FinishHiddenCooker;3"
@@ -54321,11 +54277,7 @@
 - raw: "真是群没见过世面的家伙，不过就是腊八粥而已，\n又不是什么鱼翅熊掌，有啥好大惊小怪的。"
   splits:
   - text: "真是群没见过世面的家伙，不过就是腊八粥而已，"
-    translated: "Truly a bunch of folks who haven't seen the world. It is just some plain old rice porridge, after all."
-    qcReviewedText: "Truly a bunch of folks who haven't seen the world. It is just some plain old rice porridge, after all.\nIt's not like it's shark fin or bear paw, so what's the big fuss about?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "These guys really haven't seen the world; it's just Laba Porridge after all."
   - subIndex: 1
     text: "又不是什么鱼翅熊掌，有啥好大惊小怪的。"
     translated: "It's not like it's shark fin or bear paw, so what's the big fuss about?"
@@ -65544,14 +65496,7 @@
 - raw: "这腊八粥入口柔滑，香气馥郁，食之四肢百骸，周身毛孔，无不舒爽通透，\n世间竟有如此美味，真令人回味无穷！"
   splits:
   - text: "这腊八粥入口柔滑，香气馥郁，食之四肢百骸，周身毛孔，无不舒爽通透，"
-    translated: "This mung bean porridge is smooth and silky in the mouth, with rich and fragrant aromas. Consuming it leaves one feeling refreshed and unobstructed from head to toe, inside and out."
-    qcReviewedText: "This mung bean porridge is smooth and silky in the mouth, with rich and fragrant aromas. Consuming it leaves one feeling refreshed and unobstructed from head to toe, inside and out.\nThere is such delicious food in the world, truly leaving a lasting taste!"
-    qcTranslated: "This Laba porridge is smooth and silky in the mouth, with rich and fragrant aromas. Consuming it leaves one feeling refreshed and unobstructed from head to toe, inside and out. There is such delicious food in the world, truly leaving a lasting taste!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "The Laba Porridge is smooth and creamy upon entry, with a rich and fragrant aroma. Eating it leaves every part of the body‑every limb and pore‑feeling refreshed and invigorated."
   - subIndex: 1
     text: "世间竟有如此美味，真令人回味无穷！"
     translated: "There is such delicious food in the world, truly leaving a lasting taste!"

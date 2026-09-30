@@ -1,5 +1,6 @@
 ﻿using FanslationStudio.LlmKit;
 using FanslationStudio.LlmKit.Configuration;
+using FanslationStudio.LlmKit.Support;
 using FanslationStudio.LlmKit.Utility;
 using FanslationStudio.LlmKit.Workflow;
 using System.Xml.Linq;
@@ -30,7 +31,9 @@ public class GlossaryCreationTests
     [Fact]
     public async Task GetTalents()
     {
-        await GenerateGlossaryFromDumpedRaw("HeroTagData.csv", 1, "Talents");
+        await GenerateGlossaryFromDumpedRaw("HeroTagData.csv", 1, "Talents",
+            translate: true,
+            only: ["dynamicStringsFromColumns.txt"]);
     }
 
     [Fact]
@@ -205,9 +208,31 @@ public class GlossaryCreationTests
     /// it works even for a file with zero pipeline processing. There's no translation to report -
     /// result is just the raw text, ready to be filled in/reviewed by hand.
     /// </summary>
-    private static async Task GenerateGlossaryFromDumpedRaw(string path, int rawIndex, string name)
+    /// <param name="translate">
+    /// When true, each unique raw value is run through the normal translation process
+    /// (TranslationService.TranslateSplitAsync - same prompts, glossary and validation as the
+    /// pipeline) using the TextFilesToSplit entry for <paramref name="path"/> (or a default entry if
+    /// the file isn't configured), and the result is written instead of a blank.
+    /// </param>
+    /// <param name="only">
+    /// When non-empty, each glossary entry is restricted with an "only:" list of these files.
+    /// </param>
+    private static async Task GenerateGlossaryFromDumpedRaw(string path, int rawIndex, string name,
+        bool translate = false, IReadOnlyList<string>? only = null)
     {
         var workingDirectory = GameFileHandling.WorkingDirectory;
+
+        LlmConfig? config = null;
+        TextFileToSplit? textFile = null;
+        HttpClient? client = null;
+        if (translate)
+        {
+            config = ConfigurationExtensions.GetConfiguration(workingDirectory, GameFileHandling.Hooks);
+            textFile = TextFileConfiguration.TextFilesToSplit
+                           .FirstOrDefault(x => string.Equals(x.Path, path, StringComparison.OrdinalIgnoreCase))
+                       ?? new TextFileToSplit { Path = path };
+            client = new HttpClient { Timeout = TimeSpan.FromSeconds(300) };
+        }
 
         var glossary = new List<string>();
         var items = new List<string>();
@@ -227,10 +252,27 @@ public class GlossaryCreationTests
 
             items.Add(raw);
 
+            var result = string.Empty;
+            if (translate)
+            {
+                var translation = await TranslationService.TranslateSplitAsync(config!, raw, client!, textFile!, column: rawIndex);
+                if (translation.Valid)
+                    result = translation.Result;
+                else
+                    Console.WriteLine($"Translation failed for '{raw}': {translation.CorrectionPrompt}");
+            }
+
             glossary.Add($"- raw: {raw}");
-            glossary.Add($"  result: ");
+            glossary.Add($"  result: {result}");
+            if (only is { Count: > 0 })
+            {
+                glossary.Add($"  only: ");
+                foreach (var file in only)
+                    glossary.Add($"    - {file}");
+            }
         }
 
+        client?.Dispose();
         FileHelper.WriteAllLinesWithRetry($"{workingDirectory}/TestResults/GlossaryExport/Export{name}.yaml", glossary);
     }
 

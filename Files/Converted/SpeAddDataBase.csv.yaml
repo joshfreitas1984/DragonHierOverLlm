@@ -656,11 +656,7 @@
     qcDefectCategory: None
   - split: 10
     text: "拳掌威力"
-    translated: "Fist and palm attacks are powerful"
-    qcReviewedText: "Fist and palm attacks are powerful"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unarmed Power"
 - raw: "19,剑法威力,0.01,无,无,1,1,0,0,0,剑法威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -748,11 +744,7 @@
     qcDefectCategory: None
   - split: 10
     text: "奇门威力"
-    translated: "Power of Qimen"
-    qcReviewedText: "Power of Qimen"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Qimen Power"
 - raw: "23,射术威力,0.01,无,无,1,1,0,0,0,射术威力,伤害,0,0,1,0,0"
   splits:
   - split: 3
@@ -1103,11 +1095,7 @@
     qcDefectCategory: None
   - split: 10
     text: "灵巧潜力"
-    translated: "Agile Potential"
-    qcReviewedText: "Agile Potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Agility Potential"
 - raw: "35,智力潜力,1,无,无,0,1,0,0,0,智力潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1126,11 +1114,7 @@
     qcDefectCategory: None
   - split: 10
     text: "智力潜力"
-    translated: "Intellectual potential"
-    qcReviewedText: "Intellectual potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Intelligence Potential"
 - raw: "36,意志潜力,1,无,无,0,1,0,0,0,意志潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1172,11 +1156,7 @@
     qcDefectCategory: None
   - split: 10
     text: "体质潜力"
-    translated: "Physical potential"
-    qcReviewedText: "Physical potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Constitution Potential"
 - raw: "38,经脉潜力,1,无,无,0,1,0,0,0,经脉潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1264,11 +1244,7 @@
     qcDefectCategory: None
   - split: 10
     text: "绝技潜力"
-    translated: "Potential for Special Technique"
-    qcReviewedText: "Potential for Special Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Special Technique Potential"
 - raw: "42,拳掌潜力,1,无,无,0,1,0,0,0,拳掌潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1287,11 +1263,7 @@
     qcDefectCategory: None
   - split: 10
     text: "拳掌潜力"
-    translated: "Punch Palm Potential"
-    qcReviewedText: "Punch Palm Potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unarmed Potential"
 - raw: "43,剑法潜力,1,无,无,0,1,0,0,0,剑法潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1310,11 +1282,7 @@
     qcDefectCategory: None
   - split: 10
     text: "剑法潜力"
-    translated: "Potential in Sword Technique"
-    qcReviewedText: "Potential in Sword Technique"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique Potential"
 - raw: "44,刀法潜力,1,无,无,0,1,0,0,0,刀法潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1379,11 +1347,7 @@
     qcDefectCategory: None
   - split: 10
     text: "奇门潜力"
-    translated: "Unorthodox Potential"
-    qcReviewedText: "Unorthodox Potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Qimen Potential"
 - raw: "47,射术潜力,1,无,无,0,1,0,0,0,射术潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1425,11 +1389,7 @@
     qcDefectCategory: None
   - split: 10
     text: "医术潜力"
-    translated: "Potential in medicine"
-    qcReviewedText: "Potential in medicine"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Medical Potential"
 - raw: "49,毒术潜力,1,无,无,0,1,0,0,0,毒术潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1448,11 +1408,7 @@
     qcDefectCategory: None
   - split: 10
     text: "毒术潜力"
-    translated: "Poison Technique Potential"
-    qcReviewedText: "Poison Technique Potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Poison Potential"
 - raw: "50,学识潜力,1,无,无,0,1,0,0,0,学识潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1471,11 +1427,7 @@
     qcDefectCategory: None
   - split: 10
     text: "学识潜力"
-    translated: "Scholarly potential"
-    qcReviewedText: "Scholarly potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Knowledge potential"
 - raw: "51,口才潜力,1,无,无,0,1,0,0,0,口才潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1494,11 +1446,7 @@
     qcDefectCategory: None
   - split: 10
     text: "口才潜力"
-    translated: "Potential eloquence"
-    qcReviewedText: "Potential eloquence"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Eloquence Potential"
 - raw: "52,采伐潜力,1,无,无,0,1,0,0,0,采伐潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1540,11 +1488,7 @@
     qcDefectCategory: None
   - split: 10
     text: "木植潜力"
-    translated: "Wood Cultivation Potential"
-    qcReviewedText: "Wood Cultivation Potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Planting Potential"
 - raw: "54,锻造潜力,1,无,无,0,1,0,0,0,锻造潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -1563,11 +1507,7 @@
     qcDefectCategory: None
   - split: 10
     text: "锻造潜力"
-    translated: "Forge Potential"
-    qcReviewedText: "Forge Potential"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Forging Potential"
 - raw: "55,炼药潜力,1,无,无,0,1,0,0,0,炼药潜力,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4725,11 +4665,7 @@
     qcDefectCategory: None
   - split: 10
     text: "拳掌经验"
-    translated: "Punching and palm striking experience"
-    qcReviewedText: "Punching and palm striking experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unarmed Experience"
 - raw: "183,剑法经验,0.04,无,无,1,1,1,0,0,剑法经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4748,11 +4684,7 @@
     qcDefectCategory: None
   - split: 10
     text: "剑法经验"
-    translated: "Swordsmanship Experience"
-    qcReviewedText: "Swordsmanship Experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique Experience"
 - raw: "184,刀法经验,0.04,无,无,1,1,1,0,0,刀法经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4886,11 +4818,7 @@
     qcDefectCategory: None
   - split: 10
     text: "毒术经验"
-    translated: "Poison technique experience"
-    qcReviewedText: "Poison technique experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Poison Experience"
 - raw: "190,学识经验,0.04,无,无,1,1,1,0,0,学识经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4909,11 +4837,7 @@
     qcDefectCategory: None
   - split: 10
     text: "学识经验"
-    translated: "Scholarly experience"
-    qcReviewedText: "Scholarly experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Knowledge Experience"
 - raw: "191,口才经验,0.04,无,无,1,1,1,0,0,口才经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -4932,11 +4856,7 @@
     qcDefectCategory: None
   - split: 10
     text: "口才经验"
-    translated: "Communication skills experience"
-    qcReviewedText: "Communication skills experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Eloquence Experience"
 - raw: "192,采伐经验,0.04,无,无,1,1,1,0,0,采伐经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -5001,11 +4921,7 @@
     qcDefectCategory: None
   - split: 10
     text: "锻造经验"
-    translated: "Smithing experience"
-    qcReviewedText: "Smithing experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Forging Experience"
 - raw: "195,炼药经验,0.04,无,无,1,1,1,0,0,炼药经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
@@ -5024,11 +4940,7 @@
     qcDefectCategory: None
   - split: 10
     text: "炼药经验"
-    translated: "Alchemical experience"
-    qcReviewedText: "Alchemical experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Alchemy Experience"
 - raw: "196,烹饪经验,0.04,无,无,1,1,1,0,0,烹饪经验,伤害,0,0,0,0,0"
   splits:
   - split: 3

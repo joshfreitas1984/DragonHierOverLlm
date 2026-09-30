@@ -211,20 +211,12 @@
   splits:
   - split: 2
     text: "拳掌经验"
-    translated: "Punching and palm striking experience"
-    qcReviewedText: "Punching and palm striking experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Unarmed Experience"
 - raw: "21,剑法经验,剑法经验,TRUE,0.02"
   splits:
   - split: 2
     text: "剑法经验"
-    translated: "Swordsmanship Experience"
-    qcReviewedText: "Swordsmanship Experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Sword Technique Experience"
 - raw: "22,刀法经验,刀法经验,TRUE,0.02"
   splits:
   - split: 2
@@ -274,29 +266,17 @@
   splits:
   - split: 2
     text: "毒术经验"
-    translated: "Poison technique experience"
-    qcReviewedText: "Poison technique experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Poison Experience"
 - raw: "28,学识经验,学识经验,TRUE,0.02"
   splits:
   - split: 2
     text: "学识经验"
-    translated: "Scholarly experience"
-    qcReviewedText: "Scholarly experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Knowledge Experience"
 - raw: "29,口才经验,口才经验,TRUE,0.02"
   splits:
   - split: 2
     text: "口才经验"
-    translated: "Communication skills experience"
-    qcReviewedText: "Communication skills experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Eloquence Experience"
 - raw: "30,采伐经验,采伐经验,TRUE,0.02"
   splits:
   - split: 2
@@ -319,20 +299,12 @@
   splits:
   - split: 2
     text: "锻造经验"
-    translated: "Smithing experience"
-    qcReviewedText: "Smithing experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Forging Experience"
 - raw: "33,炼药经验,炼药经验,TRUE,0.02"
   splits:
   - split: 2
     text: "炼药经验"
-    translated: "Alchemical experience"
-    qcReviewedText: "Alchemical experience"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Alchemy Experience"
 - raw: "34,烹饪经验,烹饪经验,TRUE,0.02"
   splits:
   - split: 2
@@ -364,11 +336,7 @@
   splits:
   - split: 2
     text: "全员智力"
-    translated: "All Intellect"
-    qcReviewedText: "All Intellect"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "All Intelligence"
 - raw: "38,全员意志,全员意志,FALSE,1"
   splits:
   - split: 2
@@ -427,29 +395,17 @@
   splits:
   - split: 2
     text: "全员拳掌"
-    translated: "All Fist and Palm"
-    qcReviewedText: "All Fist and Palm"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "All Unarmed"
 - raw: "45,全员剑法,全员剑法,FALSE,1"
   splits:
   - split: 2
     text: "全员剑法"
-    translated: "All Swordsmanship"
-    qcReviewedText: "All Swordsmanship"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "All Sword Techniques"
 - raw: "46,全员刀法,全员刀法,FALSE,1"
   splits:
   - split: 2
     text: "全员刀法"
-    translated: "All Blade Arts"
-    qcReviewedText: "All Blade Arts"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "All Blade Techniques"
 - raw: "47,全员长兵,全员长兵,FALSE,1"
   splits:
   - split: 2
@@ -481,14 +437,7 @@
   splits:
   - split: 2
     text: "全员医术"
-    translated: "All Medicine"
-    qcReviewedText: "All Medicine"
-    qcTranslated: "All‑Healing Arts"
-    qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "All Medical"
 - raw: "51,全员毒术,全员毒术,FALSE,1"
   splits:
   - split: 2

@@ -115,19 +115,12 @@
   - split: 15
     text: "暗器"
     translated: "Hidden Weapon"
-    qcReviewedText: "<b>Hidden Weapon</b>：Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "<b>Hidden Weapon</b>: Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>: In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is 60%. If you are caught by the officials, you can use Qinggong to evade."
-    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
-    qcDefectCategories:
-    - Unknown
     qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "<b>Hidden Weapon</b>：Study the art of archery in the dark room to enhance the power of shooting.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
   - split: 15
     subIndex: 1
     text: "暗室研究射术兵器，提升射术威力。"
-    translated: "Study the art of archery in the dark room to enhance the power of shooting."
+    translated: "Studying archery weapons in a dark room to increase Archery Power."
   - split: 15
     subIndex: 2
     text: "杀手"
@@ -180,17 +173,10 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
-    qcReviewedText: "<b>Iron Palm</b>：The conference focuses on palm and fist weapons, enhancing their power.\\n<b>Begging</b>：Consume prestige to beg for silver from others. Requesting items from others consumes goodwill.-40%。"
-    qcTranslated: "<b>Iron Palm</b>: The tournament focuses on fist and palm weapons, enhancing their power.\\n<b>Begging</b>: Consume prestige to beg for silver from others. Requesting items from others consumes ‑40% goodwill."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "大会台研究拳掌兵器，提升拳掌威力。"
-    translated: "The conference focuses on palm and fist weapons, enhancing their power."
+    translated: "The conference stage researches unarmed weapons, enhancing unarmed power."
   - split: 15
     subIndex: 2
     text: "行乞"
@@ -207,18 +193,10 @@
   - split: 15
     text: "枪术"
     translated: "Gun combat"
-    qcReviewedText: "<b>Gun combat</b>：Study the long weapon at the racetrack to enhance its power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
-    qcTranslated: "<b>Spear technique</b>: Study Long weapons at the racetrack to enhance their power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases all of the horse's stats by 0.2%."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
-    - UnnaturalPhrasing
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
-    translated: "Study the long weapon at the racetrack to enhance its power."
+    translated: "Study long weapons at the horse racing track to increase long weapon power."
   - split: 15
     subIndex: 2
     text: "马术"
@@ -439,17 +417,10 @@
   - split: 15
     text: "试刀"
     translated: "Test blade"
-    qcReviewedText: "<b>Test blade</b>：Study the Blade Art and weaponry on the Trial Blade Platform to enhance the power of your Blade Technique.\\n<b>Gourmand</b>：Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
-    qcTranslated: "<b>Test blade</b>: Study the Blade Art and weaponry on the Trial Blade Platform to enhance the power of your Blade Art.\\n<b>Gourmand</b>: Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "试刀台研究刀法兵器，提升刀法威力。"
-    translated: "Study the Blade Art and weaponry on the Trial Blade Platform to enhance the power of your Blade Technique."
+    translated: "The Test Blade Platform studies blade techniques and weapons, enhancing blade technique power."
   - split: 15
     subIndex: 2
     text: "老饕"
@@ -466,17 +437,10 @@
   - split: 15
     text: "万剑"
     translated: "Ten Thousand Swords"
-    qcReviewedText: "<b>Ten Thousand Swords</b>：Study sword arts and weaponry at Penglai Pavilion to enhance swordsmanship power.\\n<b>Return to the Ancestral Home</b>：Gain one Sword Art upon reaching max level, with additional boosts based on the art's rank: 0.5/1/1.5/2/2.5/3 points of Sword Technique"
-    qcTranslated: "<b>Ten Thousand Swords</b>: Study sword arts and weaponry at Penglai Pavilion to enhance Swordsmanship power.\\n<b>Return to the Ancestral Home</b>: For every Sword Art that reaches max level, gain an additional 0.5/1/1.5/2/2.5/3 points of Sword Technique based on its rank."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "蓬莱阁研究剑法兵器，提升剑法威力。"
-    translated: "Study sword arts and weaponry at Penglai Pavilion to enhance swordsmanship power."
+    translated: "Penglai Pavilion studies Sword Techniques and weapons, enhancing Sword Technique Power."
   - split: 15
     subIndex: 2
     text: "归宗"
@@ -524,18 +488,10 @@
   - split: 15
     text: "奇技"
     translated: "Strange Art"
-    qcReviewedText: "<b>Strange Art</b>：Research the 72 Caves to enhance the power of the qimen weapons.\\n<b>Constant problems</b>：For each advanced Unorthodox martial art you master at level‑up, you receive an additional bonus based on the quality level of the martial art: 0.5/1/1.5/2/2.5/3 points of Qimen"
-    qcTranslated: "<b>Strange Art</b>: Research the 72 Caves to enhance the power of the Qimen weapons.\\n<b>Constant problems</b>: For each Unorthodox martial art you master at level‑up, you receive an additional bonus based on the quality level of the martial art: 72/0.5/1/1.5/2/2.5 points of Qimen"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - DroppedContent
   - split: 15
     subIndex: 1
     text: "七十二洞研究奇门兵器，提升奇门威力。"
-    translated: "Research the 72 Caves to enhance the power of the qimen weapons."
+    translated: "Study the seventy‑two holes of Qimen weapons to enhance Qimen Power."
   - split: 15
     subIndex: 2
     text: "百出"
@@ -687,17 +643,10 @@
   - split: 15
     text: "聚义"
     translated: "Gather to swear loyalty"
-    qcReviewedText: "<b>Gather to swear loyalty</b>：Neigong experience +20%, medical skill experience+20%。"
-    qcTranslated: "<b>Gather to swear loyalty</b>: Neigong experience +20%, medical skill experience +20%."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "内功经验+20%，医术经验"
-    translated: "Neigong experience +20%, medical skill experience"
+    translated: "Neigong Experience +20%, Medical Experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"
@@ -706,17 +655,10 @@
   - split: 15
     text: "黄河"
     translated: "Yellow River"
-    qcReviewedText: "<b>Yellow River</b>：Blade Art experience +20%, poison technique experience+20%。"
-    qcTranslated: "<b>Yellow River</b>: Blade Art experience +20%, poison technique experience +20%"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "刀法经验+20%，毒术经验"
-    translated: "Blade Art experience +20%, poison technique experience"
+    translated: "Blade Technique Experience +20%, Poison Experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"
@@ -763,17 +705,10 @@
   - split: 15
     text: "铁掌"
     translated: "Iron Palm"
-    qcReviewedText: "<b>Iron Palm</b>：Fist and Palm Experience +20%, Smithing Experience+20%。"
-    qcTranslated: "<b>Iron Palm</b>: Fist and Palm Experience +20%, Smithing Experience +20%."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "拳掌经验+20%，锻造经验"
-    translated: "Fist and Palm Experience +20%, Smithing Experience"
+    translated: "Unarmed Experience +20%, Forging Experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"
@@ -839,17 +774,10 @@
   - split: 15
     text: "青城"
     translated: "Qingcheng"
-    qcReviewedText: "<b>Qingcheng</b>：Sword Art experience +20%, alchemy experience+20%。"
-    qcTranslated: "<b>Qingcheng</b>: Sword Art experience +20%, alchemy experience +20%."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "剑法经验+20%，炼药经验"
-    translated: "Sword Art experience +20%, alchemy experience"
+    translated: "Sword Technique Experience +20%, Alchemy Experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"
@@ -858,17 +786,10 @@
   - split: 15
     text: "伏牛"
     translated: "Wutou Mountain"
-    qcReviewedText: "<b>Wutou Mountain</b>：Long weapon experience +20%, wooden staff experience+20%。"
-    qcTranslated: "<b>Wutou Mountain</b>: Long weapon experience +20%, wooden staff experience +20%."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - split: 15
     subIndex: 1
     text: "长兵经验+20%，木植经验"
-    translated: "Long weapon experience +20%, wooden staff experience"
+    translated: "Long Weapon Experience +20%, Planting Experience"
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。"

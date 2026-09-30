@@ -8419,13 +8419,9 @@
   splits:
   - text: "等级加成"
     translated: "Level bonus"
-    qcReviewedText: "Level bonus \\nFist and palm attacks are powerful +10%"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "拳掌威力"
-    translated: "Fist and palm attacks are powerful"
+    translated: "Unarmed Power"
   templates:
   - template: "{0}\\n{1} +10%"
 - raw: "策划： ZPP\\n程序： ZPP\\n美术： TPP\\n\\n如果大侠觉得游戏不错，\\n还请给予好评支持，万分感谢！"

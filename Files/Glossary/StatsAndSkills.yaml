@@ -1,0 +1,295 @@
+
+- raw: 力道
+  result: Strength
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 灵巧
+  result: Agility
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 智力
+  result: Intelligence
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 意志
+  result: Willpower
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 体质
+  result: Constitution
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 经脉
+  result: Meridians
+  allowalt: 
+    - Meridian
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+
+
+- raw: 内家
+  result: Neigong
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 轻功
+  result: Qinggong
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 绝技
+  result: Special Technique
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 拳掌
+  result: Unarmed
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: "剑法"
+  result: "Sword Technique"
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: "刀法"
+  result: "Blade Technique"
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 长兵
+  result: Long weapon
+  allowalt:
+    - Changbing
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 奇门
+  result: Qimen
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 射术
+  result: Archery
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 医术
+  result: Medical Arts
+  allowalt: 
+    - Medical
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 毒术
+  result: Poison Arts
+  allowalt:
+    - Poison
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 学识
+  result: Knowledge
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 口才
+  result: Eloquence
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 采伐
+  result: Resource Gathering
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 木植
+  result: Planting
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 锻造
+  result: Forging
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 炼药
+  result: Alchemy
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 烹饪
+  result: Cooking
+  exclude:
+    - PlotText.csv
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+
+
+- raw: 口才经验
+  result: "Eloquence Experience"
+- raw: 学识经验
+  result: "Knowledge Experience"
+- raw: "炼药经验"
+  result: "Alchemy Experience"
+- raw: "拳掌经验"
+  result: "Unarmed Experience"
+- raw: "剑法经验"
+  result: "Sword Technique Experience"
+- raw: "绝技经验"
+  result: "Special Technique Experience"
+- raw: "轻功经验"
+  result: "Qinggong Experience"
+- raw: "内功经验"
+  result: "Neigong Experience"
+- raw: "刀法经验"
+  result: "Blade Technique Experience"
+- raw: "长兵经验"
+  result: "Long Weapon Experience"
+- raw: "奇门经验"
+  result: "Qimen Experience"
+- raw: "射术经验"
+  result: "Archery Experience"
+- raw: "医术经验"
+  result: "Medical Experience"
+- raw: "毒术经验"
+  result: "Poison Experience"
+- raw: "采伐经验"
+  result: "Resource Gathering Experience"
+- raw: "木植经验"
+  result: "Planting Experience"
+- raw: "锻造经验"
+  result: "Forging Experience"
+- raw: "烹饪经验"
+  result: "Cooking Experience"
+
+- raw: "全员拳掌"
+  result: "All Unarmed"
+- raw: "全员剑法"
+  result: "All Sword Techniques"
+- raw: "全员刀法"
+  result: "All Blade Techniques"
+- raw: "全员长兵"
+  result: "All Long Weapon"
+- raw: "全员奇门"
+  result: "All Qimen"
+- raw: "全员射术"
+  result: "All Archery"
+- raw: "全员智力"
+  result: "All Intelligence"
+- raw: "全员医术"
+  result: "All Medical"
+- raw: "全员毒术"
+  result: "All Poison Arts"
+- raw: "全员学识"
+  result: "All Knowledge"
+- raw: "全员口才"
+  result: "All Eloquence"
+- raw: "全员采伐"
+  result: "All Resource Gathering"
+- raw: "全员木植"
+  result: "All Planting"
+- raw: "全员锻造"
+  result: "All Forging"
+- raw: "全员炼药"
+  result: "All Alchemy"
+- raw: "全员烹饪"
+  result: "All Cooking"
+
+- raw: "内功威力"
+  result: "Neigong Power"
+- raw: "轻功威力"
+  result: "Qinggong Power"
+- raw: "绝技威力"
+  result: "Special Technique Power"
+- raw: "拳掌威力"
+  result: "Unarmed Power"
+- raw: "剑法威力"
+  result: "Sword Technique Power"
+- raw: "刀法威力"
+  result: "Blade Technique Power"
+- raw: "长兵威力"
+  result: "Long weapon Power"
+- raw: "奇门威力"
+  result: "Qimen Power"
+- raw: "射术威力"
+  result: "Archery Power"
+
+- raw: "力道潜力"
+  result: "Strength Potential"
+- raw: "灵巧潜力"
+  result: "Agility Potential"
+- raw: "智力潜力"
+  result: "Intelligence Potential"
+- raw: "意志潜力"
+  result: "Willpower Potential"
+- raw: "体质潜力"
+  result: "Constitution Potential"
+- raw: "经脉潜力"
+  result: "Meridian Potential"
+
+- raw: "内功潜力"
+  result: "Neigong Potential"
+- raw: "轻功潜力"
+  result: "Qinggong Potential"
+- raw: "绝技潜力"
+  result: "Special Technique Potential"
+- raw: "拳掌潜力"
+  result: "Unarmed Potential"
+- raw: "剑法潜力"
+  result: "Sword Technique Potential"
+- raw: "刀法潜力"
+  result: "Blade Technique Potential"
+- raw: "长兵潜力"
+  result: "Long weapon Potential"
+- raw: "奇门潜力"
+  result: "Qimen Potential"
+- raw: "射术潜力"
+  result: "Archery Potential"
+- raw: "医术潜力"
+  result: "Medical Potential"
+- raw: "毒术潜力"
+  result: "Poison Potential"
+- raw: "学识潜力"
+  result: "Knowledge potential"
+- raw: "口才潜力"
+  result: "Eloquence Potential"
+- raw: "采伐潜力"
+  result: "Resource Gathering Potential"
+- raw: "木植潜力"
+  result: "Planting Potential"
+- raw: "锻造潜力"
+  result: "Forging Potential"
+- raw: "炼药潜力"
+  result: "Alchemy potential"
+- raw: "烹饪潜力"
+  result: "Cooking potential"

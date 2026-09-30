@@ -1,782 +1,1484 @@
-# # - raw: 力道
-# #   result: Strength
-# - raw: 孔武有力
-#   result: Mighty and Strong
-# - raw: 拔山扛鼎
-#   result: Herculean Strength
-# - raw: 灵巧
-#   result: Agility
-# - raw: 手疾眼快
-#   result: Quick Hands and Sharp Eyes
-# - raw: 七窍玲珑
-#   result: Ingenious Mind
-# # - raw: 智力
-# #   result: Intelligence
-# - raw: 足智多谋
-#   result: Resourceful and Cunning
-# - raw: 聪慧绝伦
-#   result: Peerless Intelligence
-# # - raw: 意志
-# #   result: Willpower
-# - raw: 动心忍性
-#   result: Steadfast Resolve
-# - raw: 百折不挠
-#   result: Unyielding Will
-# # - raw: 体质
-# #   result: Constitution
-# - raw: 强身健体
-#   result: Robust Health
-# - raw: 钢筋铁骨
-#   result: Iron Bones and Steel Sinews
-# # - raw: 经脉
-# #   result: Meridians
-# - raw: 运气自如
-#   result: Masterful Qi Control
-# - raw: 奇经八脉
-#   result: Eight Extraordinary Meridians
-# # - raw: 内家
-# #   result: Internal Arts
-# - raw: 内力精纯
-#   result: Refined Neigong
-# - raw: 炉火纯青
-#   result: Perfect Mastery
-# # - raw: 轻功
-# #   result: Qinggong
-# - raw: 飞檐走壁
-#   result: Wall-Running and Roof-Leaping
-# - raw: 神出鬼没
-#   result: Elusive as a Phantom
-# - raw: 绝技
-#   result: Special Techniques
-# - raw: 身怀绝技
-#   result: Master of Special Techniques
-# - raw: 绝艺超群
-#   result: Peerless Skill
-# # - raw: 拳掌
-# #   result: Fist and Palm Techniques
-# - raw: 拳不离手
-#   result: Constant Practice
-# - raw: 铁手钢拳
-#   result: Iron Hands and Steel Fists
-# - raw: 御剑
-#   result: Sword Manipulation
-# - raw: 剑随意动
-#   result: Sword Follows the Will
-# - raw: 人剑合一
-#   result: Unity of Sword and Self
-# - raw: 耍刀
-#   result: Saber Techniques
-# - raw: 横刀跃马
-#   result: Saber in Hand, Horse at the Ready
-# - raw: 一刀两断
-#   result: Cut Clean in Two
-# # - raw: 长兵
-# #   result: Long Weapons
-# #   allowalt:
-# #     - Changbing
-# - raw: 舞枪弄棍
-#   result: Master of Spears and Staves
-# - raw: 枪扫六合
-#   result: Spear Sweeps the Six Directions
-# # - raw: 奇门
-# #   result: Qimen
-# - raw: 旁门左道
-#   result: Qimen Methods
-# - raw: 奇门遁甲
-#   result: Qimen Arts
-# # - raw: 射术
-# #   result: Archery
-# - raw: 百步穿杨
-#   result: Hit a Willow Leaf from a Hundred Paces
-# - raw: 例无虚发
-#   result: Never Miss a Shot
-# # - raw: 外门
-# #   result: External Arts
-# #   only: 
-# #     - dynamicStringsFromColumns.txt
-# - raw: 坚若磐石
-#   result: Solid as a Rock
-# - raw: 刀枪不入
-#   result: Invulnerable to Blades and Spears
-# # - raw: 掌风
-# #   result: Palm Force
-# - raw: 排山倒海
-#   result: Overwhelming Force
-# - raw: 剑气
-#   result: Sword Qi
-# - raw: 气冲斗牛
-#   result: Qi Pierces the Heavens
-# - raw: 刀锋
-#   result: Blade Edge
-# - raw: 削铁无声
-#   result: Slices Through Iron in Silence
-# - raw: 枪芒
-#   result: Spear Aura
-# - raw: 枪出如龙
-#   result: Spear Strikes Like a Dragon
-# # - raw: 奇技
-# #   result: Extraordinary Techniques
-# - raw: 奇异莫名
-#   result: Bizarre and Unfathomable
-# - raw: 惊弓
-#   result: Startling Bow
-# - raw: 摘叶飞花
-#   result: Leaves and Flowers as Projectiles
-# - raw: 脱胎换骨
-#   result: Transformed Body and Soul
-# - raw: 羽化登仙
-#   result: Ascension to Immortality
-# - raw: 不老长生
-#   result: Eternal Youth and Longevity
-# - raw: 内息灼热
-#   result: Scorching Inner Breath
-# - raw: 焚身烈焰
-#   result: Flames Engulf the Body
-# - raw: 内息冰寒
-#   result: Icy Inner Breath
-# - raw: 刺骨奇寒
-#   result: Bone-Piercing Cold
-# - raw: 阴阳调和
-#   result: Yin-Yang Harmony
-# - raw: 先天真气
-#   result: Primordial True Qi
-# - raw: 万物归墟
-#   result: All Things Return to the Void
-# - raw: 混元一气
-#   result: Primordial Unity
-# - raw: 至阳至刚
-#   result: Ultimate Yang and Hardness
-# - raw: 至阴至柔
-#   result: Ultimate Yin and Softness
-# - raw: 刚柔并济
-#   result: Balance of Hardness and Softness
-# - raw: 物我两忘
-#   result: Transcendence of Self and World
-# - raw: 移形换位
-#   result: Shifting Forms and Positions
-# - raw: 陆地飞行
-#   result: Soaring Across the Land
-# - raw: 扭转乾坤
-#   result: Turn the Tide
-# - raw: 不动如山
-#   result: Immovable as a Mountain
-# - raw: 神鬼莫测
-#   result: Beyond Comprehension
-# - raw: 以劲御气
-#   result: Wielding Qi Through Force
-# - raw: 艺成百家
-#   result: Master of a Hundred Arts
-# - raw: 武学宗师
-#   result: Martial Arts Grandmaster
-# - raw: 登峰造极
-#   result: Attain the Pinnacle
-# - raw: 返璞归真
-#   result: Return to Simplicity
-# - raw: 起死回生
-#   result: Bring the Dead Back to Life
-# - raw: 天人合一
-#   result: Unity of Heaven and Man
-# - raw: 功德圆满
-#   result: Perfection Attained
-# - raw: 即身成佛
-#   result: Attain Buddhahood in This Life
-# - raw: 太极圆转
-#   result: Taiji in Perfect Motion
-# - raw: 轰天震地
-#   result: Heaven-Shaking, Earth-Shattering
-# - raw: 十殿阎王
-#   result: The Ten Courts of Yama
-# - raw: 力降十会
-#   result: Strength Overcomes All Techniques
-# # - raw: 医术
-# #   result: Medicine
-# - raw: 术精岐黄
-#   result: Mastery of Medicine
-# - raw: 妙手回春
-#   result: Miraculous Healing
-# # - raw: 毒术
-# #   result: Poison Arts
-# - raw: 五毒俱全
-#   result: Master of the Five Poisons
-# - raw: 见血封喉
-#   result: Deadly Poison
-# # - raw: 学识
-# #   result: Knowledge
-# - raw: 见多识广
-#   result: Broad Knowledge and Experience
-# - raw: 学富五车
-#   result: Vast Erudition
-# - raw: 口才
-#   result: Eloquence
-# - raw: 口齿伶俐
-#   result: Silver Tongue
-# - raw: 舌灿莲花
-#   result: Words as Beautiful as Blossoms
-# - raw: 采伐
-#   result: Logging
-# - raw: 劈荆斩棘
-#   result: Cut Through Thorns and Brambles
-# - raw: 铸山煮海
-#   result: Move Mountains and Boil Seas
-# - raw: 木植
-#   result: Woodworking
-# - raw: 精耕细作
-#   result: Meticulous Cultivation
-# - raw: 万木争荣
-#   result: Flourishing Forests
-# - raw: 锻造
-#   result: Forging
-# - raw: 千锤百炼
-#   result: Tempered a Thousand Times
-# - raw: 鬼斧神工
-#   result: Masterful Craftsmanship
-# # - raw: 炼药
-# #   result: Medicine Brewing
-# - raw: 对症下药
-#   result: Prescribe the Right Remedy
-# - raw: 灵丹妙药
-#   result: Miraculous Elixirs
-# # - raw: 烹饪
-# #   result: Cooking
-# #   allowalt:
-# #     - Cook
-# - raw: 烩不厌细
-#   result: Meticulous Cooking
-# - raw: 炮凤烹龙
-#   result: Cooking Rare Delicacies
-# # - raw: 毒医
-# #   result: Poison Medicine
-# - raw: 以毒攻毒
-#   result: Fight Poison with Poison
-# - raw: 毒手药王
-#   result: Poison Master
-# - raw: 医毒
-#   result: Medicine and Poison
-# # - raw: 强壮
-# #   result: Strong
-# - raw: 魁梧奇伟
-#   result: Towering and Stalwart
-# - raw: 天生神力
-#   result: Innate Herculean Strength
-# - raw: 瘦弱
-#   result: Frail
-# - raw: 瘦骨嶙峋
-#   result: Skin and Bones
-# - raw: 缚鸡之力
-#   result: Too Weak to Catch a Chicken
-# - raw: 机敏
-#   result: Quick-Witted
-# - raw: 随机应变
-#   result: Adaptable
-# - raw: 巧捷万端
-#   result: Exceptionally Nimble
-# - raw: 笨拙
-#   result: Clumsy
-# - raw: 笨手笨脚
-#   result: All Thumbs
-# - raw: 东倒西歪
-#   result: Stumbling and Lurching
-# # - raw: 聪慧
-# #   result: Intelligence
-# - raw: 天资过人
-#   result: Exceptional Talent
-# - raw: 旷世奇才
-#   result: Once-in-a-Generation Genius
-# - raw: 愚钝
-#   result: Dull-Witted
-# - raw: 傻头傻脑
-#   result: Simple-Minded
-# - raw: 痴傻蒙昧
-#   result: Foolish and Ignorant
-# # - raw: 勇敢
-# #   result: Brave
-# - raw: 身先士卒
-#   result: Lead the Charge
-# - raw: 临危不乱
-#   result: Calm in the Face of Danger
-# - raw: 懦弱
-#   result: Cowardly
-# - raw: 战战兢兢
-#   result: Trembling with Fear
-# - raw: 胆小如鼠
-#   result: Chicken-Hearted
-# - raw: 康健
-#   result: Healthy
-# - raw: 容光焕发
-#   result: Radiant with Health
-# - raw: 百病不侵
-#   result: Immune to All Illness
-# - raw: 多病
-#   result: Sickly
-# - raw: 身心交病
-#   result: Physically and Mentally Ill
-# - raw: 旧病沉疴
-#   result: Chronic Illness
-# - raw: 顺脉
-#   result: Clear Meridians
-# - raw: 脉络贯通
-#   result: Unobstructed Meridians
-# - raw: 先天气海
-#   result: Innate Qi Sea
-# - raw: 滞脉
-#   result: Blocked Meridians
-# - raw: 脉络阻塞
-#   result: Obstructed Meridians
-# - raw: 经脉断绝
-#   result: Severed Meridians
-# - raw: 正直
-#   result: Upright
-# - raw: 公正不阿
-#   result: Impartial and Incorruptible
-# - raw: 浩气凛然
-#   result: Righteous and Dauntless
-# - raw: 阴险
-#   result: Devious
-# - raw: 不择手段
-#   result: Unscrupulous
-# - raw: 笑里藏刀
-#   result: A Dagger Behind a Smile
-# - raw: 仁慈
-#   result: Compassionate
-# - raw: 宅心仁厚
-#   result: Kind-Hearted
-# - raw: 慈悲为怀
-#   result: Guided by Compassion
-# - raw: 残忍
-#   result: Cruel
-# - raw: 心狠手辣
-#   result: Ruthless and Merciless
-# - raw: 灭心绝情
-#   result: Heartless and Unfeeling
-# - raw: 冷静
-#   result: Calm
-# - raw: 气定神闲
-#   result: Composed and Unruffled
-# - raw: 心如止水
-#   result: A Heart Like Still Water
-# - raw: 暴躁
-#   result: Hot-Tempered
-# - raw: 性烈如火
-#   result: Temper Like Fire
-# - raw: 怒发冲冠
-#   result: Blazing with Rage
-# - raw: 幸运
-#   result: Lucky
-# - raw: 福星高照
-#   result: Blessed by Fortune
-# - raw: 吉人天相
-#   result: Fortune Favors the Virtuous
-# - raw: 不幸
-#   result: Unlucky
-# - raw: 命途多舛
-#   result: A Troubled Fate
-# - raw: 天煞孤星
-#   result: Ill-Starred Lone Wolf
-# - raw: 美貌
-#   result: Beauty
-# - raw: 明眸皓齿
-#   result: Bright Eyes and Pearly Teeth
-# - raw: 倾国倾城
-#   result: Breathtaking Beauty
-# - raw: 丑陋
-#   result: Ugly
-# - raw: 面目狰狞
-#   result: Hideously Fierce
-# - raw: 百丑千拙
-#   result: Hideously Ugly
-# - raw: 锐眼
-#   result: Keen Eyesight
-# - raw: 目光炯炯
-#   result: Eyes Bright and Sharp
-# - raw: 明察秋毫
-#   result: See the Tiniest Details
-# - raw: 弱视
-#   result: Poor Eyesight
-# - raw: 视线模糊
-#   result: Blurred Vision
-# - raw: 雾里看花
-#   result: Seeing Flowers Through Mist
-# - raw: 谦逊
-#   result: Humble
-# - raw: 不骄不躁
-#   result: Modest and Composed
-# - raw: 虚怀若谷
-#   result: Humble and Open-Minded
-# #- raw: 刚愎
-# #  result: Stubborn
-# - raw: 盛气凌人
-#   result: Arrogant and Overbearing
-# - raw: 唯我独尊
-#   result: Self-Important
-# - raw: 忠诚
-#   result: Loyal
-# - raw: 忠心耿耿
-#   result: Steadfastly Loyal
-# - raw: 至死不渝
-#   result: Loyal Until Death
-# - raw: 叛逆
-#   result: Rebellious
-# - raw: 桀骜不驯
-#   result: Untamed and Unruly
-# - raw: 离经叛道
-#   result: Defying Tradition
-# - raw: 勤奋
-#   result: Diligent
-# - raw: 孜孜不倦
-#   result: Tirelessly Diligent
-# - raw: 废寝忘食
-#   result: Work Day and Night
-# - raw: 懒惰
-#   result: Lazy
-# - raw: 游手好闲
-#   result: Idle and Unproductive
-# - raw: 无所用心
-#   result: Careless and Indifferent
-# - raw: 节俭
-#   result: Thrifty
-# - raw: 精打细算
-#   result: Careful with Money
-# - raw: 取予有节
-#   result: Measured in Giving and Taking
-# - raw: 浪费
-#   result: Wasteful
-# - raw: 挥霍无度
-#   result: Recklessly Extravagant
-# - raw: 穷奢极欲
-#   result: Excessively Indulgent
-# - raw: 练武
-#   result: Martial Arts Training
-# - raw: 武痴
-#   result: Martial Arts Fanatic
-# - raw: 武学天才
-#   result: Martial Arts Prodigy
-# - raw: 学医
-#   result: Medical Studies
-# - raw: 医师
-#   result: Physician
-# - raw: 济世神医
-#   result: Legendary Healer
-# - raw: 习文
-#   result: Literary Studies
-# - raw: 雅士
-#   result: Refined Scholar
-# - raw: 文采斐然
-#   result: Literary Brilliance
-# - raw: 务农
-#   result: Farming
-# - raw: 农家
-#   result: Farmer
-# - raw: 在世神农
-#   result: Shennong Reborn
-# - raw: 学徒
-#   result: Apprenticeship
-# - raw: 工匠
-#   result: Artisan
-# - raw: 能工巧匠
-#   result: Master Craftsman
-# - raw: 经商
-#   result: Commerce
-# - raw: 善贾
-#   result: Skilled Merchant
-# - raw: 囤积居奇
-#   result: Hoarding for Profit
-# - raw: 从政
-#   result: Politics
-# - raw: 仕官
-#   result: Official
-# - raw: 位极人臣
-#   result: Highest Ministerial Rank
-# - raw: 杂学
-#   result: Miscellaneous Studies
-# - raw: 通才
-#   result: Generalist
-# - raw: 博学多才
-#   result: Learned and Talented
-# - raw: 淡泊
-#   result: Detachment
-# - raw: 隐士
-#   result: Recluse
-# - raw: 避世绝俗
-#   result: Withdrawn from the World
-# - raw: 儒术
-#   result: Confucian Arts
-# - raw: 儒生
-#   result: Confucian Scholar
-# - raw: 鸿儒大学
-#   result: Eminent Confucian Scholar
-# - raw: 修道
-#   result: Daoist Cultivation
-# - raw: 道士
-#   result: Daoist
-# - raw: 仙风道骨
-#   result: Immortal Bearing
-# - raw: 学佛
-#   result: Buddhist Studies
-# - raw: 禅师
-#   result: Chan Master
-# - raw: 四大皆空
-#   result: Emptiness of the Four Elements
-# - raw: 行乞
-#   result: Begging
-# - raw: 化缘
-#   result: Seeking Alms
-# - raw: 游戏人间
-#   result: Roaming the Mortal World
-# - raw: 卜算
-#   result: Divination
-# - raw: 相士
-#   result: Fortune-Teller
-# - raw: 未卜先知
-#   result: Foreknowledge
-# - raw: 游侠
-#   result: Wandering Hero
-# - raw: 侠客
-#   result: Wanderer
-# - raw: 侠义无双
-#   result: Peerless Chivalry
-# - raw: 赌徒
-#   result: Gambler
-# - raw: 嗜赌如命
-#   result: Compulsive Gambler
-# - raw: 赌运亨通
-#   result: Lady Luck Smiles
-# - raw: 酒鬼
-#   result: Drunkard
-# - raw: 放歌纵酒
-#   result: Revel in Song and Drink
-# - raw: 醉生梦死
-#   result: Drunk and Dreaming
-# - raw: 食客
-#   result: Gourmet
-# - raw: 大快朵颐
-#   result: Feast to Your Heart's Content
-# - raw: 饕餮盛宴
-#   result: Lavish Feast
-# - raw: 收藏
-#   result: Collecting
-# - raw: 去伪存真
-#   result: Separate the Genuine from the Fake
-# - raw: 慧眼独具
-#   result: Discerning Eye
-# - raw: 骑术
-#   result: Horsemanship
-# - raw: 纵马驰骋
-#   result: Gallop Freely
-# - raw: 一骑绝尘
-#   result: Outpace All Others
-# - raw: 读书
-#   result: Reading
-# - raw: 博览群书
-#   result: Well-Read
-# - raw: 皓首穷经
-#   result: Lifelong Study of the Classics
-# - raw: 瑶琴
-#   result: Guqin
-# - raw: 余音绕梁
-#   result: Music That Lingers in the Air
-# - raw: 鸾吟凤唱
-#   result: Heavenly Melodies
-# - raw: 弈棋
-#   result: Board Games
-# - raw: 棋高一着
-#   result: One Move Ahead
-# - raw: 神机妙算
-#   result: Brilliant Calculations
-# - raw: 书法
-#   result: Calligraphy
-# - raw: 笔走龙蛇
-#   result: Dragonlike Brushstrokes
-# - raw: 铁画银钩
-#   result: Powerful and Elegant Calligraphy
-# - raw: 绘画
-#   result: Painting
-# - raw: 丹青妙手
-#   result: Master Painter
-# - raw: 妙至毫巅
-#   result: Exquisite to the Finest Detail
-# - raw: 吟诗
-#   result: Poetry
-# - raw: 文思泉涌
-#   result: Words Flow Like a Spring
-# - raw: 七步成诗
-#   result: Compose a Poem in Seven Steps
-# - raw: 狩猎
-#   result: Hunting
-# - raw: 飞鹰走犬
-#   result: Falconry and Hound Hunting
-# - raw: 苍鹰搏兔
-#   result: A Hawk Seizing a Hare
-# - raw: 云游
-#   result: Wandering
-# - raw: 游山玩水
-#   result: Roaming Mountains and Rivers
-# - raw: 浪迹天涯
-#   result: Wander the World
-# - raw: 静修
-#   result: Meditation
-# - raw: 蛰居偃伏
-#   result: Living in Seclusion
-# - raw: 面壁功深
-#   result: Deep Meditative Practice
-# - raw: 舞技
-#   result: Dancing
-# - raw: 舞态生风
-#   result: Dance Like the Wind
-# - raw: 羽衣蹁跹
-#   result: Graceful as a Celestial Dancer
-# - raw: 随从
-#   result: Attendant
-# - raw: 唯命是从
-#   result: Obedient to Every Command
-# - raw: 精明强干
-#   result: Capable and Astute
-# - raw: 军师
-#   result: Strategist
-# - raw: 排兵布阵
-#   result: Deploy Troops and Formations
-# - raw: 运筹帷幄
-#   result: Command from Behind the Scenes
-# - raw: 领袖
-#   result: Leader
-# - raw: 胸怀大志
-#   result: Great Ambition
-# - raw: 雄才伟略
-#   result: Extraordinary Vision and Talent
-# - raw: 先锋
-#   result: Vanguard
-# - raw: 奋勇当先
-#   result: Brave the Front Lines
-# - raw: 背水一战
-#   result: Fight with No Retreat
-# - raw: 守备
-#   result: Defense
-# - raw: 戒备森严
-#   result: Heavily Guarded
-# - raw: 严防死守
-#   result: Defend at All Costs
-# - raw: 游斗
-#   result: Skirmishing
-# - raw: 快步流星
-#   result: Stride Swiftly
-# - raw: 千里奔袭
-#   result: Lightning Raid
-# - raw: 精力充沛
-#   result: Full of Energy
-# - raw: 腊八粥
-#   result: Laba Porridge
-# - raw: 微醺
-#   result: Slightly Tipsy
-# - raw: 痛饮
-#   result: Drinking Heavily
-# - raw: 大醉
-#   result: Drunken Hero
-# - raw: 酩酊
-#   result: Inebriated
-# - raw: 宴会无趣
-#   result: Boring Banquet
-# - raw: 宴会平平
-#   result: Ordinary Banquet
-# - raw: 宴会满意
-#   result: Satisfactory Banquet
-# - raw: 宴会欢喜
-#   result: Enjoyable Banquet
-# - raw: 宴会极乐
-#   result: Magnificent Banquet
-# - raw: 赌运
-#   result: Lady Luck
-# - raw: 霉运
-#   result: Bad Luck
-# - raw: 论胜
-#   result: Debate Victory
-# - raw: 论败
-#   result: Debate Defeat
-# - raw: 轻症
-#   result: Mild Illness
-# - raw: 中症
-#   result: Moderate Illness
-# - raw: 重症
-#   result: Severe Illness
-# - raw: 危症
-#   result: Critical Illness
-# - raw: 气息不调
-#   result: Disordered Breathing
-# - raw: 内息紊乱
-#   result: Disrupted Inner Breath
-# - raw: 经脉受阻
-#   result: Blocked Meridians
-# - raw: 断臂
-#   result: Severed Arm
-# - raw: 跛足
-#   result: Lameness
-# - raw: 目渺
-#   result: Impaired Vision
-# - raw: 理论心得
-#   result: Theoretical Insights
-# - raw: 实战心得
-#   result: Practical Combat Insights
-# - raw: 机关木臂
-#   result: Wooden Mechanical Arm
-# - raw: 机关石臂
-#   result: Stone Mechanical Arm
-# - raw: 机关铁臂
-#   result: Iron Mechanical Arm
-# - raw: 机关木轮
-#   result: Wooden Mechanical Wheel
-# - raw: 机关石轮
-#   result: Stone Mechanical Wheel
-# - raw: 机关铁轮
-#   result: Iron Mechanical Wheel
-# - raw: 机关木甲
-#   result: Wooden Mechanical Armor
-# - raw: 机关石甲
-#   result: Stone Mechanical Armor
-# - raw: 机关铁甲
-#   result: Iron Mechanical Armor
-# - raw: 机关大师
-#   result: Mechanism Master
-# - raw: 鲁班在世
-#   result: Lu Ban Reborn
-# - raw: 机关义手
-#   result: Mechanical Prosthetic Hand
-# - raw: 手铐
-#   result: Handcuffs
-# - raw: 脚镣
-#   result: Leg Shackles
-# - raw: 登顶泰岳
-#   result: Reach the Summit of Mount Tai
-# - raw: 负心人
-#   result: Heartbreaker
-# - raw: 修行心得
-#   result: Cultivation Insights
-# - raw: 刮骨疗毒
-#   result: Scrape the Bone to Remove Poison
-# - raw: 百毒不侵
-#   result: Immune to All Poisons
-# - raw: 天下第一
-#   result: Number One Under Heaven
-# - raw: 归隐田园
-#   result: Retire to the Countryside
-# - raw: 豪商巨贾
-#   result: Wealthy Merchant
-# - raw: 功成名就
-#   result: Achieve Fame and Success
-# - raw: 禁军统领
-#   result: Imperial Guard Commander
-# - raw: 权势滔天
-#   result: Immense Power and Influence
-# - raw: 名门大派
-#   result: Prestigious Sect
-# - raw: 武林盟主
-#   result: Martial Arts Alliance Leader
-# - raw: 终归一统
-#   result: Unite All Under Heaven
-# - raw: 鸾凤和鸣
-#   result: A Harmonious Union
-# - raw: 终生监禁
-#   result: Life Imprisonment
-# - raw: 背叛师门
-#   result: Betray One's Sect
-# - raw: 合练心得
-#   result: Joint Training Insights
-# - raw: 少年英雄
-#   result: Young Hero
+# - raw: 名称
+#   result: Name
+#   only: 
+#     - dynamicStringsFromColumns.txt
+- raw: 孔武有力
+  result: Mighty and Strong
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 拔山扛鼎
+  result: Herculean Strength
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 手疾眼快
+  result: Quick Hands and Sharp Eyes
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 七窍玲珑
+  result: Ingenious Mind
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 足智多谋
+  result: Resourceful and Cunning
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 聪慧绝伦
+  result: Peerless Cleverness
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 动心忍性
+  result: Steadfast Resolve
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 百折不挠
+  result: Indomitable perseverance
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 强身健体
+  result: Strengthening the body and building health
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 钢筋铁骨
+  result: Iron Bones and Steel Sinews
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 运气自如
+  result: Masterful Qi Control
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 奇经八脉
+  result: Eight Extraordinary Meridians
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 内力精纯
+  result: Refined Neigong
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 炉火纯青
+  result: Perfect Mastery
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 飞檐走壁
+  result: Wall‑Running and Roof‑Leaping
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 神出鬼没
+  result: Elusive as a Phantom
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 身怀绝技
+  result: Master of Special Techniques
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 绝艺超群
+  result: Peerless Skill
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 拳不离手
+  result: Constant Practice
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 铁手钢拳
+  result: Iron Hands and Steel Fists
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 御剑
+  result: Sword Manipulation
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 剑随意动
+  result: Sword Follows the Will
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 人剑合一
+  result: Unity of Sword and Self
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 耍刀
+  result: Saber Techniques
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 横刀跃马
+  result: Saber in Hand, Horse at the Ready
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 一刀两断
+  result: Cut Clean in Two
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 舞枪弄棍
+  result: Master of Spears and Staves
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 枪扫六合
+  result: Spear Sweeps the Six Directions
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 旁门左道
+  result: Qimen Methods
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 奇门遁甲
+  result: Qimen Arts
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 百步穿杨
+  result: Hit a Willow Leaf from a Hundred Paces
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 例无虚发
+  result: Never Miss a Shot
+  only: 
+    - dynamicStringsFromColumns.txt
+# - raw: 外门
+#   result: Outer Sect
+#   only: 
+#     - dynamicStringsFromColumns.txt
+- raw: 坚若磐石
+  result: Solid as a Rock
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 刀枪不入
+  result: Invulnerable to Blades and Spears
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 掌风
+  result: Palm wind
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 排山倒海
+  result: Overwhelming like waves crashing against mountains
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 剑气
+  result: Sword Qi
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 气冲斗牛
+  result: Qi Pierces the Heavens
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 刀锋
+  result: Blade Edge
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 削铁无声
+  result: Slices Through Iron in Silence
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 枪芒
+  result: Spear Aura
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 枪出如龙
+  result: Spear Strikes Like a Dragon
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 奇技
+  result: Amazing Skill
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 奇异莫名
+  result: Mysterious beyond comprehension
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 惊弓
+  result: Startled bird
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 摘叶飞花
+  result: Plucking Leaves and Sending Flowers
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 脱胎换骨
+  result: Reborn and transformed
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 羽化登仙
+  result: Ascend to Immortality by Shedding Mortality
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 不老长生
+  result: Eternal Youthfulness
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 内息灼热
+  result: Inner Qi burns hot
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 焚身烈焰
+  result: Burning Corpse Flame
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 内息冰寒
+  result: Inner Qi icy cold
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 刺骨奇寒
+  result: Piercing cold
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 阴阳调和
+  result: Yin and Yang in harmony
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 先天真气
+  result: Innate True Qi
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 万物归墟
+  result: All Things Return to the Void
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 混元一气
+  result: Primordial Vital Energy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 至阳至刚
+  result: Utmost Yang and Utmost Rigidity
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 至阴至柔
+  result: Extremely Yin and Extremely Gentle
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 刚柔并济
+  result: Balance of hardness and softness
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 物我两忘
+  result: Losing oneself in the object
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 移形换位
+  result: Shape‑Shifting Technique
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 陆地飞行
+  result: Land Flight
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 扭转乾坤
+  result: Turn the Tide of Heaven and Earth
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 不动如山
+  result: As still as a mountain
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 神鬼莫测
+  result: Inscrutable to gods and ghosts
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 以劲御气
+  result: Control qi with strength
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 艺成百家
+  result: Mastering skills from a hundred schools
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 武学宗师
+  result: Martial Arts Master
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 登峰造极
+  result: Reaching the pinnacle of excellence
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 返璞归真
+  result: Return to simplicity and authenticity
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 起死回生
+  result: Bring back to life
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 天人合一
+  result: Oneness with heaven and humanity
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 功德圆满
+  result: Merit complete
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 即身成佛
+  result: Achieve Buddhahood in This Body
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 太极圆转
+  result: Tai Chi Circles Rotating
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 轰天震地
+  result: Earth‑shaking and heaven‑shattering
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 十殿阎王
+  result: Ten Kings of the Underworld
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 力降十会
+  result: Reduce Strength by Ten Levels
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 术精岐黄
+  result: Master the Art of Qihuang
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 妙手回春
+  result: Revive with Skilled Hands
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 五毒俱全
+  result: Guilty of Every Vice
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 见血封喉
+  result: Deadly Venom Touch
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 见多识广
+  result: Well‑traveled and Experienced
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 学富五车
+  result: Well‑versed and erudite
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 口齿伶俐
+  result: Quick‑witted and articulate
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 舌灿莲花
+  result: Tongue as eloquent as blooming lotus flowers
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 劈荆斩棘
+  result: Chopping through thorns and brambles
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 铸山煮海
+  result: Forge mountains and boil the sea
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 精耕细作
+  result: Cultivate with care and precision
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 万木争荣
+  result: Ten Thousand Trees Compete for Glory
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 千锤百炼
+  result: Refined through countless trials
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 鬼斧神工
+  result: Magnificent craftsmanship beyond mortal skill
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 对症下药
+  result: Tailor the remedy to the illness
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 灵丹妙药
+  result: Miracle cure
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 烩不厌细
+  result: More meticulous, the better
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 炮凤烹龙
+  result: Serving dragons and phoenixes in a feast
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 毒医
+  result: Poison Doctor
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 以毒攻毒
+  result: Fight poison with poison
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 毒手药王
+  result: Poisonous Hand Medicine King
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 医毒
+  result: Medicine and Poison
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 强壮
+  result: Strong
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 魁梧奇伟
+  result: Towering and majestic
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 天生神力
+  result: Blessed with divine strength
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 瘦弱
+  result: Weak and frail
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 瘦骨嶙峋
+  result: Emaciated and bony
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 缚鸡之力
+  result: Scant strength to catch a chicken
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机敏
+  result: Alertness
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 随机应变
+  result: Adapt to the situation as it arises
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 巧捷万端
+  result: Adroit and versatile in every way
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 笨拙
+  result: Clumsy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 笨手笨脚
+  result: Clumsy and awkward
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 东倒西歪
+  result: Staggering and reeling
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 聪慧
+  result: Cleverness
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 天资过人
+  result: Outstanding natural talent
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 旷世奇才
+  result: Prodigy of the Ages
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 愚钝
+  result: Clumsy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 傻头傻脑
+  result: Clueless and foolish
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 痴傻蒙昧
+  result: Foolish and ignorant
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 勇敢
+  result: Brave
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 身先士卒
+  result: Lead by example
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 临危不乱
+  result: Stay calm in times of crisis
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 懦弱
+  result: Cowardly
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 战战兢兢
+  result: Trembling with fear
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 胆小如鼠
+  result: Cowardly as a mouse
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 康健
+  result: Well‑being
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 容光焕发
+  result: Radiant and energetic
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 百病不侵
+  result: Invulnerable to all illnesses
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 多病
+  result: Chronic illnesses
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 身心交病
+  result: Mentally and physically exhausted
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 旧病沉疴
+  result: Chronic old illness
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 顺脉
+  result: Follow the meridian
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 脉络贯通
+  result: Meridians connected
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 先天气海
+  result: Primordial Qi Sea
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 滞脉
+  result: Obstructed Pulse
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 脉络阻塞
+  result: Blocked meridians
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 经脉断绝
+  result: Meridian blockage  
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 正直
+  result: Upright
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 公正不阿
+  result: Impartial and upright
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 浩气凛然
+  result: Dignified and Sternly Righteous
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 阴险
+  result: Treacherous
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 不择手段
+  result: By any means necessary
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 笑里藏刀
+  result: Smiling but hiding a dagger
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 仁慈
+  result: Mercy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 宅心仁厚
+  result: Benevolent and kind‑hearted
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 慈悲为怀
+  result: Be merciful and compassionate
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 残忍
+  result: Cruel
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 心狠手辣
+  result: Cruel and ruthless
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 灭心绝情
+  #result: Eliminate Heart, Sever Affection
+  result: Heartless and Unfeeling
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 冷静
+  result: Stay calm
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 气定神闲
+  result: Calm and composed
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 心如止水
+  result: Calm as still water
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 暴躁
+  result: Irritable
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 性烈如火
+  result: Temper as fierce as fire
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 怒发冲冠
+  result: Hair standing on end in rage
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 幸运
+  result: Lucky
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 福星高照
+  result: Good fortune shines brightly
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 吉人天相
+  result: Heaven favors the virtuous
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 不幸
+  result: Misfortune
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 命途多舛
+  result: Fate full of twists and turns
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 天煞孤星
+  result: Fated Star of Solitude and Calamity
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 美貌
+  result: Beauty
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 明眸皓齿
+  result: Bright eyes and white teeth
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 倾国倾城
+  result: Bewitching beauty
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 丑陋
+  result: Ugly
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 面目狰狞
+  result: Frightening visage
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 百丑千拙
+  result: A thousand flaws and a hundred uglinesses
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 锐眼
+  result: Sharp‑eyed
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 目光炯炯
+  result: Eyes shining brightly
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 明察秋毫
+  result: Perceive the subtle details
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 弱视
+  result: Low vision
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 视线模糊
+  result: Vision blurred
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 雾里看花
+  result: Seeing flowers through a fog
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 谦逊
+  result: Modesty
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 不骄不躁
+  result: Neither arrogant nor impatient
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 虚怀若谷
+  result: Humble as an empty valley
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 刚愎
+  result: Stubbornly self‑willed
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 盛气凌人
+  result: Arrogant and overbearing
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 唯我独尊
+  result: I am supreme
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 忠诚
+  result: Loyalty
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 忠心耿耿
+  result: Loyal and devoted
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 至死不渝
+  result: Forever Faithful Until Death
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 叛逆
+  result: Rebellion
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 桀骜不驯
+  result: Rebellious and unruly
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 离经叛道
+  result: Deviate from the norms
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 勤奋
+  result: Diligence
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 孜孜不倦
+  result: Diligently without rest
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 废寝忘食
+  result: Forget to Eat and Sleep
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 懒惰
+  result: Lazy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 游手好闲
+  result: Idle and lazy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 无所用心
+  result: Idle thoughts
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 节俭
+  result: Thrifty
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 精打细算
+  result: Being thrifty and calculating carefully
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 取予有节
+  result: Take and give in moderation
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 浪费
+  result: Waste
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 挥霍无度
+  result: Living extravagantly
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 穷奢极欲
+  result: Extreme luxury and indulgence
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 练武
+  result: Practicing martial arts
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 武痴
+  result: Wu Maniac
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 武学天才
+  result: Martial Arts Genius
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 学医
+  result: Study medicine
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 医师
+  result: Doctor
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 济世神医
+  result: Benevolent Divine Physician
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 习文
+  result: Study literature
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 雅士
+  result: Elegant Scholar
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 文采斐然
+  result: Outstanding literary talent
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 务农
+  result: Farming
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 农家
+  result: Farm family
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 在世神农
+  result: Living Divine Farmer
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 学徒
+  result: Apprentice
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 工匠
+  result: Craftsman
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 能工巧匠
+  result: Skilled Artisans
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 经商
+  result: Doing business
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 善贾
+  result: Shrewd merchant
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 囤积居奇
+  result: Hoarding for speculative profit
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 从政
+  result: Entering politics
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 仕官
+  result: Official position
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 位极人臣
+  result: Reaching the pinnacle of human nobility
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 杂学
+  result: Miscellaneous Studies
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 通才
+  result: Jack‑of‑all‑Trades
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 博学多才
+  result: Well‑versed and talented
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 淡泊
+  result: Indifferent
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 隐士
+  result: Hermit
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 避世绝俗
+  result: Shun the world and transcend the secular world
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 儒术
+  result: Confucian arts
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 儒生
+  result: Scholar‑official
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 鸿儒大学
+  result: Hongru University
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 修道
+  result: Cultivate Dao
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 道士
+  result: Taoist priest
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 仙风道骨
+  result: Hermitic grace and Taoist bone structure
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 学佛
+  result: Study Buddhism
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 禅师
+  result: Zen Master
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 四大皆空
+  result: Four Great Empties
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 行乞
+  result: Begging
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 化缘
+  result: Begging for alms
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 游戏人间
+  result: Game of Life
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 卜算
+  result: Divination
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 相士
+  result: Fortune‑teller
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 未卜先知
+  result: Foreseeing the unseen
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 游侠
+  result: Wandering Swordsman
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 侠客
+  result: Wanderer
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 侠义无双
+  result: Unparalleled Chivalry
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 赌徒
+  result: Gambler
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 嗜赌如命
+  result: Obsessed with gambling
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 赌运亨通
+  result: Fortunate Gambler's Luck
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 酒鬼
+  result: Alcoholic
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 放歌纵酒
+  result: Sing and drink freely
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 醉生梦死
+  result: Living in drunken dreams, dying without regrets
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 食客
+  result: Customer
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 大快朵颐
+  result: Feast heartily
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 饕餮盛宴
+  result: Feast of epic proportions
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 收藏
+  result: Collect
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 去伪存真
+  result: Discard the false and keep the true
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 慧眼独具
+  result: Having keen insight
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 骑术
+  result: Riding skills
+  allowalt: 
+    - Riding
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 纵马驰骋
+  result: Ride hard and fast
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 一骑绝尘
+  result: Leave All Others in the Dust
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 读书
+  result: Study reading
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 博览群书
+  result: Read extensively
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 皓首穷经
+  result: Devoting one's entire life to scholarly study
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 瑶琴
+  result: Yaoqin
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 余音绕梁
+  result: The music lingers in the air
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 鸾吟凤唱
+  result: Phoenix song and crane chant
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 弈棋
+  result: Playing chess
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 棋高一着
+  result: One move ahead in the game
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 神机妙算
+  result: Divine calculation and ingenious strategy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 书法
+  result: Calligraphy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 笔走龙蛇
+  result: Flowing like dragons and snakes
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 铁画银钩
+  result: Iron handwriting, silver hooks
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 绘画
+  result: Painting
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 丹青妙手
+  result: Master of Skilled Brushwork
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 妙至毫巅
+  result: Perfection down to the finest detail
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 吟诗
+  result: Recite poetry
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 文思泉涌
+  result: Inspiration flows like a fountain
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 七步成诗
+  result: Poem in Seven Steps
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 狩猎
+  result: Hunting
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 飞鹰走犬
+  result: Flying Eagles and Running Dogs
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 苍鹰搏兔
+  result: A hawk preying on a rabbit
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 云游
+  result: Wandering Cloud Edge
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 游山玩水
+  result: Traveling and enjoying the scenery
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 浪迹天涯
+  result: Wandering the ends of the earth
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 静修
+  result: Meditation retreat
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 蛰居偃伏
+  result: Lie in hiding
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 面壁功深
+  result: Deep in wall‑gazing meditation
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 舞技
+  result: Dance skills
+  allowalt: 
+    - Dance
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 舞态生风
+  result: Dancing with the wind in motion
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 羽衣蹁跹
+  result: Feathered robes dancing gracefully
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 随从
+  result: Follower
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 唯命是从
+  result: Obey without question
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 精明强干
+  result: Shrewd and capable
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 军师
+  result: Advisor
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 排兵布阵
+  result: Deploying troops and arranging formations
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 运筹帷幄
+  result: Plan from a distance
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 领袖
+  result: Leader
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 胸怀大志
+  result: Aspiring for great ambitions
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 雄才伟略
+  result: Outstanding talent and grand strategy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 先锋
+  result: Pioneer
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 奋勇当先
+  result: Charge forward with courage
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 背水一战
+  result: Fight with our backs against the water
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 守备
+  result: Defense guard
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 戒备森严
+  result: Tightly secured
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 严防死守
+  result: Closely guard and defend
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 游斗
+  result: Sparring Match
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 快步流星
+  result: Swift as a meteor
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 千里奔袭
+  result: Racing a thousand miles
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 精力充沛
+  result: Full of energy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 腊八粥
+  result: Laba Porridge
+  # only: 
+  #   - dynamicStringsFromColumns.txt
+- raw: 微醺
+  result: Slightly tipsy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 痛饮
+  result: Drink to one's heart's content
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 大醉
+  result: Dead Drunk
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 酩酊
+  result: Intoxicated
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 宴会无趣
+  result: Banquet is boring
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 宴会平平
+  result: Banquet was unremarkable
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 宴会满意
+  result: Dinner was satisfactory
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 宴会欢喜
+  result: Banquet joy
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 宴会极乐
+  result: Banquet of Extreme Bliss
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 赌运
+  result: Gambler's luck
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 霉运
+  result: Bad luck
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 论胜
+  result: On Victory
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 论败
+  result: On Defeat
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 轻症
+  result: Minor injuries
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 中症
+  result: Moderate Condition
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 重症
+  result: Severe condition
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 危症
+  result: Critical condition
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 气息不调
+  result: Imbalanced breath
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 内息紊乱
+  result: Disrupted Inner Qi
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 经脉受阻
+  result: Blocked meridians
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 断臂
+  result: Severed Arm
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 跛足
+  result: Lame‑legged
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 目渺
+  result: Distant gaze
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 理论心得
+  result: Theoretical Insights
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 实战心得
+  result: Practical Combat Insights
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关木臂
+  result: Mechanism Arm
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关石臂
+  result: Mechanism Stone Arm
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关铁臂
+  result: Mechanical Iron Arm
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关木轮
+  result: Mechanism Wood Wheel
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关石轮
+  result: Mechanism Stone Wheel
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关铁轮
+  result: Mechanical Iron Wheel
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关木甲
+  result: Mechanism Wooden Armor
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关石甲
+  result: Mechanism Stone Armor
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关铁甲
+  result: Mechanical Iron Armor
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关大师
+  result: Master of Mechanisms
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 鲁班在世
+  result: If Lu Ban were alive
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 机关义手
+  result: Mechanism prosthetic hand
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 手铐
+  result: Handcuffs
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 脚镣
+  result: Fetters
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 登顶泰岳
+  result: Reaching the summit of Mount Tai
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 负心人
+  result: Unfaithful one
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 修行心得
+  result: Meditation Insights
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 刮骨疗毒
+  result: Surgery to Remove Poison from the Bones
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 百毒不侵
+  result: Poisonproof
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 天下第一
+  result: Number One in the Land
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 归隐田园
+  result: Retire to the countryside
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 豪商巨贾
+  result: Wealthy merchants and tycoons
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 功成名就
+  result: Achieve fame and success
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 禁军统领
+  result: Imperial Guard Commander
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 权势滔天
+  result: Overwhelming power and influence
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 名门大派
+  result: Renowned martial arts sect
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 武林盟主
+  result: Alliance Leader
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 终归一统
+  result: Ultimately Unify
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 鸾凤和鸣
+  result: Phoenixes singing in harmony
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 终生监禁
+  result: Life imprisonment
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 背叛师门
+  result: Betraying one's master's school
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 合练心得
+  result: Co‑training Insights
+  only: 
+    - dynamicStringsFromColumns.txt
+- raw: 少年英雄
+  result: Young Hero
+  only: 
+    - dynamicStringsFromColumns.txt
+
+
+#####
+- raw: 天赋
+  result: Talent
+- raw: 天赋数
+  result: Talent Points
+  allowalt:
+    - Talent Point
+- raw: 天赋数上限
+  result: Maximum Talent Points
