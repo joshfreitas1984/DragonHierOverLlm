@@ -109,3 +109,18 @@ strongly preferred over losing the whole template).
 Verified via a throwaway harness against the exact 5 reported `Raw`/`Result` pairs: 3 now compile
 and merge correctly, 2 remain correctly rejected (their gaps contain real content, not just
 whitespace).
+
+## CONFIRMED BUG #8 (2026-10-01, "我在{0}{1}，若#PlayerName#能在{2}日内赶来助阵" mail untranslated)
+
+Adjacent `{0}{1}` whose `Result` separates them (`at {0} and {1}`) was still rejected by the bug #5/#7
+safety check, so the whole template was dropped and the mail fell back to per-fragment substitution
+(`I 在Iron Palm Gang Found the enemy's trail，若Disciple能在4 Day Inside 赶来助阵...`). A scan of the packaged
+`Files/Mod` templates found 4 such rejections: this mail, `提升{0}的{1}{2}点`, `降低{0}的{1}{2}点`, and
+`花费{5}天时间，使{0}的{1}{2}了{3}。`.
+
+**Fix**: a run of exactly two plain `{n}` markers that Result separates now compiles as a *split run*:
+one `runN` capture (same bounds as a merged run), re-divided at match time by
+`AdjacentRunSplitter.TrySplitInTwo` using the bare-fragment dictionary as evidence (each half must be
+dictionary-tileable; a half scores if it is an exact entry or has no CJK; the best score must be unique).
+No convincing split leaves the matched text untouched (same as the old rejection). Larger or `#Token#`
+runs are still rejected. Regression scenario: `Verify/AdjacentRunSplitRepro.cs`.

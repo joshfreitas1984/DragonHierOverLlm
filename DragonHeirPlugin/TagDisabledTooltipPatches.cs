@@ -87,7 +87,7 @@ internal static class TagDisabledTooltipPatches
             if (ownedDb.oppositeMeaning == group)
                 reasons.Add($"- Conflicts with opposite talent you own: {ownedDb.name}");
             else if (ownedDb.sameMeaning == group && Math.Abs(ownedDb.value) >= Math.Abs(candidateDb.value))
-                reasons.Add($"- Same talent line as {ownedDb.name}, which you already own at an equal or higher tier.");
+                reasons.Add($"- Same talent line as {ownedDb.name} which you own.");
         }
 
         var cost = candidateDb.GetCostValue(false);

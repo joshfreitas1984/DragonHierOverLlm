@@ -263,6 +263,40 @@ internal static class DynamicStringPatches
     // time, so a live config edit only takes effect after the next reload/PatchAll.
     private static TimeSpan TemplateRegexTimeout => TimeSpan.FromMilliseconds(MainPlugin.TemplateRegexTimeoutMs.Value);
 
+    private sealed class SplitRun
+    {
+        public string GroupName;
+        public string[] MemberGroupNames;
+    }
+
+    private static readonly Regex ReplacementRefRegex = new(@"\$\{(\w+)\}|\$\$", RegexOptions.Compiled);
+
+    // Exact Raw strings of the bare-fragment dictionary - AdjacentRunSplitter's anchor evidence.
+    private static HashSet<string> _dictionaryRawSet = new();
+
+    // Equivalent of m.Result(template.ReplacementPattern), except that a template with SplitRuns
+    // first re-divides each captured run. Returns null when a run has no convincing split, so the
+    // caller leaves that match untouched.
+    private static string ExpandReplacement(CompiledTemplate template, Match m)
+    {
+        if (template.SplitRuns.Count == 0) return m.Result(template.ReplacementPattern);
+
+        var overrides = new Dictionary<string, string>();
+        foreach (var run in template.SplitRuns)
+        {
+            var parts = AdjacentRunSplitter.TrySplitInTwo(
+                m.Groups[run.GroupName].Value, _dictionaryRawSet.Contains, IsFullyCoveredByDictionary);
+            if (parts == null) return null;
+            overrides[run.MemberGroupNames[0]] = parts[0];
+            overrides[run.MemberGroupNames[1]] = parts[1];
+        }
+
+        return ReplacementRefRegex.Replace(template.ReplacementPattern, r =>
+            !r.Groups[1].Success ? "$"
+            : overrides.TryGetValue(r.Groups[1].Value, out var v) ? v
+            : m.Groups[r.Groups[1].Value].Value);
+    }
+
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private sealed class CompiledTemplate
     {
@@ -272,6 +306,10 @@ internal static class DynamicStringPatches
         public Regex PermissivePattern;
         public string ReplacementPattern;
         public List<string> LiteralSegments;
+
+        // Adjacent "{n}{m}" pairs whose Result separates the two markers. Captured as one
+        // "runN" group and re-divided per match by ExpandReplacement (via AdjacentRunSplitter).
+        public List<SplitRun> SplitRuns = new();
 
         // Perf: first char of each LiteralSegment - lets ApplyTemplates skip a template entirely
         // (no LiteralSegments.All(Contains) calls) when none of its trigger chars are present.
@@ -318,18 +356,32 @@ internal static class DynamicStringPatches
 
         // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
         var runResultSpan = new Dictionary<int, string>(); // keyed by run Start index
+        // Runs whose Result separates the markers ("at {0} and {1}"): captured as one span and
+        // re-divided at match time by AdjacentRunSplitter - see CompiledTemplate.SplitRuns.
+        var splitRunMembers = new Dictionary<int, string[]>(); // keyed by run Start index
         foreach (var (start, end) in runs)
         {
             var runPattern = string.Join(@"\s*", Enumerable.Range(start, end - start + 1).Select(k => Regex.Escape(placeholderMatches[k].Value)));
             var runMatch = Regex.Match(result, runPattern);
-            if (!runMatch.Success)
+            if (runMatch.Success)
+            {
+                runResultSpan[start] = runMatch.Value;
+                continue;
+            }
+
+            // Only a pair of plain "{n}" markers, each present in Result, can be split later.
+            var members = Enumerable.Range(start, end - start + 1).Select(k => placeholderMatches[k]).ToList();
+            var splittable = members.Count == 2
+                && members.All(m => m.Groups[1].Success && result.Contains(m.Value, StringComparison.Ordinal));
+            if (!splittable)
             {
                 MainPlugin.Logger.LogWarning(
                     $"[DynamicStringPatches] Skipping template with adjacent placeholders that Result splits apart (cannot be safely bounded by regex): '{raw}'");
                 return null;
             }
-            runResultSpan[start] = runMatch.Value;
+            splitRunMembers[start] = members.Select(m => $"p{m.Groups[1].Value}").ToArray();
         }
+        var splitRuns = new List<SplitRun>();
 
         // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
         var lastGroupIsUnanchored = placeholderMatches.Count > 0
@@ -368,6 +420,15 @@ internal static class DynamicStringPatches
                 patternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
                 permissivePatternBuilder.Append($"(?<{groupName}>{runCaptureClass}{runQuantifier})");
 
+                // Split run: nothing to swap in Result - the ordinary per-placeholder Replace pass
+                // below still turns each "{n}" into "${pN}", and ExpandReplacement fills those two
+                // names from the re-divided capture instead of from real regex groups.
+                if (splitRunMembers.TryGetValue(idx, out var memberNames))
+                {
+                    splitRuns.Add(new SplitRun { GroupName = groupName, MemberGroupNames = memberNames });
+                }
+                else
+                {
                 // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
                 var resultSpan = runResultSpan[idx];
                 var sentinelIdx = result.IndexOf(resultSpan, StringComparison.Ordinal);
@@ -375,6 +436,7 @@ internal static class DynamicStringPatches
                 {
                     var sentinel = $"\u0001RUN{runIndex}\u0001";
                     result = result.Substring(0, sentinelIdx) + sentinel + result.Substring(sentinelIdx + resultSpan.Length);
+                }
                 }
 
                 lastIndex = runEndMatch.Index + runEndMatch.Length;
@@ -503,6 +565,7 @@ internal static class DynamicStringPatches
             PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled | RegexOptions.Singleline, TemplateRegexTimeout),
             ReplacementPattern = replacementPattern,
             LiteralSegments = literalSegments,
+            SplitRuns = splitRuns,
             TriggerChars = new HashSet<char>(literalSegments.Where(s => s.Length > 0).Select(s => s[0])),
             RawPreview = raw.Length > 80 ? raw.Substring(0, 80) + "…" : raw,
         };
@@ -563,6 +626,7 @@ internal static class DynamicStringPatches
             _templateDictionary = loaded.Where(e => e.IsTemplate).ToList();
             _dictionary = loaded.Where(e => !e.IsTemplate).ToList();
             _dictionaryByFirstChar = BuildFirstCharIndex(_dictionary);
+            _dictionaryRawSet = new HashSet<string>(_dictionary.Where(e => !string.IsNullOrEmpty(e.Raw)).Select(e => e.Raw));
             _templateDictionaryByFirstChar = BuildFirstCharIndex(_templateDictionary);
             _maxDictionaryRawLength = Math.Max(
                 _dictionary.Count > 0 ? _dictionary.Max(e => e.Raw?.Length ?? 0) : 0,
@@ -1579,7 +1643,7 @@ internal static class DynamicStringPatches
                 {
                     var blocked = template.BlockingRawEntries.Count > 0
                         && OverlapsBlockingEntry(beforeThisTemplate, m, template.BlockingRawEntries);
-                    return blocked ? m.Value : m.Result(template.ReplacementPattern);
+                    return blocked ? m.Value : ExpandReplacement(template, m) ?? m.Value;
                 });
             }
             catch (RegexMatchTimeoutException)

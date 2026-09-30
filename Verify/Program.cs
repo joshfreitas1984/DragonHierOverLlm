@@ -354,6 +354,7 @@ class Program
         VerifyRepro.TemplateBlockingRepro.RunSectJobDescribeRepro(@"G:\DragonHierOverLlm\Files\Mod");
         VerifyRepro.TemplateBlockingRepro.RunMedicalSectJobDescribeRepro(@"G:\DragonHierOverLlm\Files\Mod");
         VerifyRepro.TemplateBlockingRepro.RunExpRateBlockingPositiveControl();
+        VerifyRepro.AdjacentRunSplitRepro.Run(@"G:\DragonHierOverLlm\Files\Mod");
     }
 }
 
