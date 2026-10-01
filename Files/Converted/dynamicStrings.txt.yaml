@@ -39604,10 +39604,18 @@
   splits:
   - text: "捕头"
     translated: "Constable"
+    qcReviewedText: "Constable"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "捕头丁"
   splits:
   - text: "捕头丁"
     translated: "Constable Ding"
+    qcReviewedText: "Constable Ding"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "捕头丙"
   splits:
   - text: "捕头丙"
@@ -62249,6 +62257,10 @@
   splits:
   - text: "钱捕头"
     translated: "Constable Qian"
+    qcReviewedText: "Constable Qian"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "铁掌帮众"
   splits:
   - text: "铁掌帮众"
