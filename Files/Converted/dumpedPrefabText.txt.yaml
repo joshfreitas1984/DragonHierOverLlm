@@ -41,11 +41,7 @@
 - raw: "《龙胤立志传》适龄游戏提示"
   splits:
   - text: "《龙胤立志传》适龄游戏提示"
-    translated: "Age‑appropriate game notice for Dragon Heritage Determination Chronicles"
-    qcReviewedText: "Age‑appropriate game notice for Dragon Heritage Determination Chronicles"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "《Dragon Legacy: Age‑Appropriate Game Warning》"
 - raw: "<b>(所有排名均不分先后)</b>\\n策划：ZPP\\n程序：ZPP\\n美术：TPP\\n\\n发行：青豆，Sherry，Ouyi，lele，Lost，云起龙骧，小云，谦谦，黄国，狗狗\\n测试：郑煜，夏田怡静，蒋晟，云起龙骧\\n玩家支持：椰子，Dr.玄\\n\\n特别鸣谢\\n参与自由模式测试的玩家：\\n椰子 \\n奥西法\\n月下饮江河\\n馒头君\\n河物休\\n只为遇见你\\n卿卿神\\n燕四方\\n妙手回春海森保\\nShades"
   splits:
   - text: "所有排名均不分先后"
@@ -7449,13 +7445,6 @@
   splits:
   - text: "游戏名称"
     translated: "Game Name"
-    qcReviewedText: "Game Name：Dragon's Heir's Resolve Approval Number：National Press and Publication Administration Permit 2025No.100 No Publication Number：ISBN 978-7-498-14483-6 \\nCopyright holder：Tutian County PiPiTang Software Development Studio Publishing House：East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
-    qcTranslated: "Game Name: Dragon's Heir's Chronicle Approval Number: National Press and Publication Administration Permit 2025 No. .100 Publication Number: ISBN 978‑7‑498‑14483‑6 \\nCopyright Holder: Dangtu County PiPiTang Software Development Studio Publisher: East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
   - subIndex: 1
     text: "《龙胤立志传》"
     translated: "Dragon's Heir's Resolve"
@@ -7464,7 +7453,7 @@
     translated: "Approval Number"
   - subIndex: 3
     text: "国新出审〔2025〕100"
-    translated: "National Press and Publication Administration Permit 2025No.100"
+    translated: "Guoxin Chu Shen [2025] No. 100"
   - subIndex: 4
     text: "号"
     translated: "No"

@@ -5,6 +5,8 @@ namespace Tests
         private const string OutputFileName = "dynamicStringsRoutedMailBodies.txt";
         private const int MinimumSenderPrefixLength = 2;
         private const int MaximumSenderPrefixLength = 4;
+        private const int MinimumProseBodyLength = 12;
+        private static readonly char[] SentenceEndings = ['。', '！', '？'];
 
         public static void AddBodyAliasesToRawDump(string workingDirectory)
         {
@@ -80,10 +82,19 @@ namespace Tests
         private static bool IsMasterMailCandidate(string value)
         {
             var separatorIndex = value.IndexOf('-');
-            return separatorIndex >= MinimumSenderPrefixLength &&
-                   separatorIndex <= MaximumSenderPrefixLength &&
-                   value.Contains("#PlayerName#", StringComparison.Ordinal) &&
-                   value.Contains("<b>", StringComparison.Ordinal);
+            if (separatorIndex < MinimumSenderPrefixLength ||
+                separatorIndex > MaximumSenderPrefixLength ||
+                separatorIndex == value.Length - 1)
+                return false;
+
+            if (value.Contains("#PlayerName#", StringComparison.Ordinal) &&
+                value.Contains("<b>", StringComparison.Ordinal))
+                return true;
+
+            // Hard-coded mails (e.g. GetTangMenWeddingMail) carry neither marker; accept a body that
+            // reads as prose: long enough and containing sentence-ending punctuation.
+            var body = value[(separatorIndex + 1)..];
+            return body.Length >= MinimumProseBodyLength && body.IndexOfAny(SentenceEndings) >= 0;
         }
 
         public static List<string> AddBodyAliases(IEnumerable<string> dynamicStrings, IEnumerable<string> routedMails)

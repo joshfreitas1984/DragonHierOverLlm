@@ -64,3 +64,14 @@ Result:
 - `dotnet build Tests/Tests.csproj --no-restore --no-incremental` passes
 
 The numbered workflow fact mutates the dedicated raw export file, so it should not be run casually with the rest of the numbered workflow.
+
+## Follow-up (2026-10-01): hard-coded mails without markers
+
+`PlotController.GetTangMenWeddingMail` calls `PlotGetNewMail` with literals (`姜映泉-听闻唐门…`,
+`魏胥华-听闻唐门…`). They are not PlotData records, so they only reach the pipeline through the master
+`dynamicStrings.txt` candidate path, whose filter required both `#PlayerName#` and `<b>`. Neither mail has
+both, so no body-only alias existed and the displayed body fell back to garbled per-fragment substitution.
+
+`IsMasterMailCandidate` now also accepts a sender-prefixed value whose body is at least 12 characters and
+contains `。`, `！` or `？`. A scan of the master dump found exactly these two additional matches.
+`4h. ExtractMailBodies` now emits both body aliases; they still need the normal translate -> QC -> package run.
