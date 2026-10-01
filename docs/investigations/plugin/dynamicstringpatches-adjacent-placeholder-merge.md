@@ -124,3 +124,15 @@ one `runN` capture (same bounds as a merged run), re-divided at match time by
 dictionary-tileable; a half scores if it is an exact entry or has no CJK; the best score must be unique).
 No convincing split leaves the matched text untouched (same as the old rejection). Larger or `#Token#`
 runs are still rejected. Regression scenario: `Verify/AdjacentRunSplitRepro.cs`.
+
+## CONFIRMED BUG #9 (2026-10-01, same mail still untranslated for "Yuxi Village北方寻得仇家踪迹")
+
+`{0}` is `AtAreaName`, which already carries the direction ("玉溪村北方"). `北` and `方` are separate
+bare dictionary entries, so `北方` counts as covered and the run had two candidate seams scoring 1
+each: the real one (`Yuxi Village北方` | exact entry `寻得仇家踪迹`) and a spurious one before `北方`
+(`Yuxi Village` has no CJK | `北方寻得仇家踪迹`). The tie made `TrySplitInTwo` return null, so the
+template was skipped and per-fragment substitution produced the garbled mail.
+
+**Fix**: anchor weighting - an exact dictionary entry scores 2, a half that merely has no CJK scores 1.
+The real seam (2) now beats the spurious one (1). Ties at the top score are still refused. Regression
+check added to `Verify/AdjacentRunSplitRepro.cs`.

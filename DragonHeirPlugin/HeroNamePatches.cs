@@ -294,6 +294,19 @@ internal static class HeroNamePatches
                 return;
             }
 
+            // Force-level rank title (GlobalData.HeroForceLvName, or the hard-coded "掌门") that
+            // GetHeroName natively appends to the family name - "Surname Rank" -> "Rank Surname".
+            foreach (var rank in GetRankTitles())
+            {
+                if (result.Length <= rank.Length || !result.EndsWith(rank, StringComparison.Ordinal)) continue;
+
+                var prefix = result.Substring(0, result.Length - rank.Length).Trim();
+                if (prefix.Length == 0) continue;
+
+                result = $"{rank} {TranslateNamePart(prefix)}";
+                return;
+            }
+
             // "儿" child-affix (informal address by given name, e.g. "映泉儿" in the former-lover
             // case) - strip it and translate the given name underneath via the same fragment
             // dictionary used for family names.
@@ -316,6 +329,43 @@ internal static class HeroNamePatches
         {
             MainPlugin.Logger.LogError($"Error in GetHeroName translation postfix: {ex}");
         }
+    }
+
+    // Rank titles GetHeroName appends to a family name, longest first so a more specific title wins.
+    // GlobalData.HeroForceLvName is read via reflection (same Count/Item-only approach as
+    // GlobalDataListOverrides) and cached once non-empty; "掌门" is hard-coded in GetHeroName.
+    // [GameCoupled GameController.GetHeroName logic] rank title list assumed to be GlobalData.HeroForceLvName
+    private static string[] _rankTitles;
+
+    private static string[] GetRankTitles()
+    {
+        if (_rankTitles != null) return _rankTitles;
+
+        var titles = new List<string> { "掌门" };
+        try
+        {
+            var prop = typeof(GlobalData).GetProperty("HeroForceLvName", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+            var list = prop?.GetValue(null);
+            if (list == null) return titles.ToArray(); // not initialized yet - retry on the next call
+
+            var count = (int)prop.PropertyType.GetProperty("Count").GetValue(list);
+            var itemProp = prop.PropertyType.GetProperty("Item");
+            for (var i = 0; i < count; i++)
+            {
+                if (itemProp.GetValue(list, new object[] { i }) is string title && title.Trim().Length > 0)
+                    titles.Add(title.Trim());
+            }
+
+            MainPlugin.Logger?.LogInfo($"[HeroNamePatches] Rank titles for name reordering: {string.Join(", ", titles)}");
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogWarning($"[HeroNamePatches] Failed reading HeroForceLvName: {ex.Message}");
+            return titles.ToArray();
+        }
+
+        _rankTitles = titles.Distinct().OrderByDescending(t => t.Length).ToArray();
+        return _rankTitles;
     }
 
     private static string FormatWithPrefix(string prefix, string english)

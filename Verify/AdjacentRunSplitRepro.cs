@@ -61,6 +61,9 @@ public static class AdjacentRunSplitRepro
         Check("Iron Palm Gang寻得仇家踪迹", "Iron Palm Gang", "寻得仇家踪迹");
         // Same mail before any substitution.
         Check("铁掌帮寻得仇家踪迹", "铁掌帮", "寻得仇家踪迹");
+        // {0} = AtAreaName already carries the direction; 北/方 are bare entries, so the seam before
+        // 北方 used to tie with the real one (pasted ApplyToComponentText log, 2026-10-01 20:18).
+        Check("Yuxi Village北方寻得仇家踪迹", "Yuxi Village北方", "寻得仇家踪迹");
         // No anchor anywhere: must refuse rather than guess.
         Check("甲乙", null, null);
 

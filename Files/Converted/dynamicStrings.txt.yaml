@@ -39603,19 +39603,11 @@
 - raw: "捕头"
   splits:
   - text: "捕头"
-    translated: "Sheriff"
-    qcReviewedText: "Sheriff"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Constable"
 - raw: "捕头丁"
   splits:
   - text: "捕头丁"
-    translated: "Detective Ding"
-    qcReviewedText: "Detective Ding"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Constable Ding"
 - raw: "捕头丙"
   splits:
   - text: "捕头丙"
@@ -62256,11 +62248,7 @@
 - raw: "钱捕头"
   splits:
   - text: "钱捕头"
-    translated: "Detective Qin"
-    qcReviewedText: "Detective Qin"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Constable Qian"
 - raw: "铁掌帮众"
   splits:
   - text: "铁掌帮众"

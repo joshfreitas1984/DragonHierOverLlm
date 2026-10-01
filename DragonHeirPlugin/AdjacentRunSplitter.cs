@@ -15,8 +15,8 @@ internal static class AdjacentRunSplitter
     //
     // A split point k is a candidate when both halves are non-empty and each is "covered"
     // (every CJK char is tileable by dictionary entries - non-CJK text always passes). A candidate
-    // scores 1 for each half that is an exact dictionary entry or contains no CJK at all (an
-    // already-translated name, a number). The best candidate wins if it scores at least 1 and is
+    // scores 2 for each half that is an exact dictionary entry and 1 for each half that merely
+    // contains no CJK at all (an already-translated name, a number). The best candidate wins if it scores at least 1 and is
     // unique at that score; an ambiguous tie is treated as "no convincing split".
     public static string[] TrySplitInTwo(
         string run,
@@ -34,7 +34,7 @@ internal static class AdjacentRunSplitter
             var right = run.Substring(k);
             if (!isCovered(left) || !isCovered(right)) continue;
 
-            var score = (IsAnchor(left, isExactEntry) ? 1 : 0) + (IsAnchor(right, isExactEntry) ? 1 : 0);
+            var score = AnchorWeight(left, isExactEntry) + AnchorWeight(right, isExactEntry);
             if (score > bestScore)
             {
                 bestScore = score;
@@ -51,8 +51,11 @@ internal static class AdjacentRunSplitter
         return new[] { run.Substring(0, bestK), run.Substring(bestK) };
     }
 
-    private static bool IsAnchor(string part, Func<string, bool> isExactEntry)
-        => isExactEntry(part) || !ContainsCjk(part);
+    // An exact dictionary entry (2) is stronger evidence than a half that merely has no CJK (1):
+    // "Yuxi Village北方寻得仇家踪迹" has a spurious seam before 北方 (left is non-CJK) that would
+    // otherwise tie with the real one after it (right is the exact entry 寻得仇家踪迹).
+    private static int AnchorWeight(string part, Func<string, bool> isExactEntry)
+        => isExactEntry(part) ? 2 : !ContainsCjk(part) ? 1 : 0;
 
     private static bool ContainsCjk(string s)
     {
