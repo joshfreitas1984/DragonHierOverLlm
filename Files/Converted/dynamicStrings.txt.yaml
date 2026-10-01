@@ -4459,7 +4459,7 @@
   - text: "#TargetInteractName#你为本门尽忠职守，可谓功勋卓著，"
     translated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable."
     qcReviewedText: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable.\nThis Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the Senior Disciple of this Sect.{0}。"
-    qcTranslated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable. This Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the {0} of this Sect.{0}"
+    qcTranslated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable.\\nThis Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the {0} of this Sect."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -45100,6 +45100,10 @@
   splits:
   - text: "此处乃是官府重地，少侠请回吧！"
     translated: "This is the premises of the official government, Hero. Please return!"
+    qcReviewedText: "This is the premises of the official government, Hero. Please return!\n(In order to serve in the government, you need at least 100 points of reputation and cannot have a bounty on your head.)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "（若要在官府任职需要至少100点声望并且无悬赏在身。）"
     translated: "(In order to serve in the government, you need at least 100 points of reputation and cannot have a bounty on your head.)"
@@ -54914,14 +54918,14 @@
   - text: "若能在"
     translated: "If I could only"
     qcReviewedText: "If I could only {0} In front of me {1}。\nShould {2} {0} What is the relationship with the He Pai?"
-    qcTranslated: "If I could only {0} before {1}.\nShould {2} {0} What is the relationship between {0} and the He Sect?"
-    qcStatus: Corrected
+    qcStatus: FailedValidation
     flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcRejectedCorrection: "If I could only {1} before {0}.\nShould {2} {0} What is the relationship between {0} and the He faction?"
+    qcFailureReason: " `{0}` appears in the result but not in the original text."
     qcDefectCategories:
-    - DroppedContent
-    - GarbledNumber
+    - Unknown
+    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureBaseline: "If I could only {0} In front of me {1}。\nShould {2} {0} What is the relationship with the He Pai?"
   - subIndex: 1
     text: "面前"
     translated: "In front of me"
@@ -56417,6 +56421,10 @@
   splits:
   - text: "要表演的武学至少需达到五重修为。且武学越高深，赚取的银两也越多。"
     translated: "At least five stages of cultivation are required to perform the martial arts. Moreover, the deeper the martial arts, the more silver coins one can earn."
+    qcReviewedText: "At least five stages of cultivation are required to perform the martial arts. Moreover, the deeper the martial arts, the more silver coins one can earn.\n(Performing martial arts does not gain experience, but instead earns money based on the outcome.)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "（表演武功不会获取经验，而是根据结果获取银钱）"
     translated: "(Performing martial arts does not gain experience, but instead earns money based on the outcome.)"
@@ -60716,6 +60724,10 @@
   splits:
   - text: "这轻功名为“逍遥游”，乃是脱胎自道家典籍《庄子》的轻功，"
     translated: "This qinggong is called Free and Easy Wandering, a qinggong derived from the Taoist classic Zhuangzi."
+    qcReviewedText: "This qinggong is called Free and Easy Wandering, a qinggong derived from the Taoist classic Zhuangzi.\nTo ride the principles of nature, to wander beyond the bounds of the mundane.\nIt rather suits the wandering spirit of the disciples of the Beggar Sect."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "乘天地之正，御六气之辩，以游无穷，"
     translated: "To ride the principles of nature, to wander beyond the bounds of the mundane."
@@ -65811,10 +65823,18 @@
   splits:
   - text: "（你运起内力，重重踏在地面上，顿时将那毒蛇惊走）"
     translated: "(You activate your Inner Power and stomp heavily on the ground, instantly startling the venomous snake away.)"
+    qcReviewedText: "(You activate your Inner Power and stomp heavily on the ground, instantly startling the venomous snake away.)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "（你随手扔出一枚石子，正好砸在那毒蛇的面门之上，顿时将它赶走）"
   splits:
   - text: "（你随手扔出一枚石子，正好砸在那毒蛇的面门之上，顿时将它赶走）"
     translated: "(You casually threw a pebble, hitting the poisonous snake right between its eyes, instantly driving it away.)"
+    qcReviewedText: "(You casually threw a pebble, hitting the poisonous snake right between its eyes, instantly driving it away.)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "（你顾不得危险，飞身上前将毒蛇拨开，抬手一看，已被浅浅咬了一口）"
   splits:
   - text: "（你顾不得危险，飞身上前将毒蛇拨开，抬手一看，已被浅浅咬了一口）"
@@ -65895,6 +65915,10 @@
   splits:
   - text: "（抡起铁锤向石板砸去）嚯！哈！嚯！哈！......"
     translated: "(Hurling the iron hammer at the stone slab) Ho! Ha! Ho! Ha!......"
+    qcReviewedText: "(Hurling the iron hammer at the stone slab) Ho! Ha! Ho! Ha!......\nThis iron hammer is terribly heavy, vibrating my muscles and bones until the stone slab shattered with just a few strikes.\n#SourceInteractName# how do you feel? Do you need me to call a doctor to treat you?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "这铁锤好生沉重，震的我筋酸骨麻，几下便将石板敲得粉碎。"
     translated: "This iron hammer is terribly heavy, vibrating my muscles and bones until the stone slab shattered with just a few strikes."
@@ -65907,6 +65931,10 @@
   splits:
   - text: "（无趣）哎，食之无味弃之可惜，"
     translated: "(Bored) Ah, it's tasteless yet hard to discard."
+    qcReviewedText: "(Bored) Ah, it's tasteless yet hard to discard.\nConsidering #SourceInteractName#'s sake, I managed to force a few drinks down."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "看在#SourceInteractName#面子上，还算勉强喝了几杯。"
     translated: "Considering #SourceInteractName#'s sake, I managed to force a few drinks down."
@@ -65937,6 +65965,10 @@
   splits:
   - text: "（欢喜）金樽清酒斗十千，玉盘珍羞直万钱。"
     translated: "(Happy) A thousand gold for a cup of clear wine, ten thousand coins for delicacies on jade platters."
+    qcReviewedText: "(Happy) A thousand gold for a cup of clear wine, ten thousand coins for delicacies on jade platters.\nIf not for #SourceInteractName# having lofty aspirations and refined tastes, it would be impossible to create such an exquisite feast. Well done, well done."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "若非#SourceInteractName#情高志远，品味不俗，难成此精美绝伦之筵席，佩服佩服。"
     translated: "If not for #SourceInteractName# having lofty aspirations and refined tastes, it would be impossible to create such an exquisite feast. Well done, well done."
@@ -65986,6 +66018,13 @@
   splits:
   - text: "（满意）食不厌精，烩不厌细，"
     translated: "(Satisfied) One should not be too frugal with food, nor too careless with cooking."
+    qcReviewedText: "(Satisfied) One should not be too frugal with food, nor too careless with cooking.\nThanks to #SourceInteractName#'s generosity and hospitality, everyone here is in high spirits and having a great time."
+    qcTranslated: "(Satisfied) Food should be finely prepared, and cooking meticulously done.\nThanks to #SourceInteractName#'s generosity and hospitality, everyone here is in high spirits and having a great time."
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
   - subIndex: 1
     text: "多谢#SourceInteractName#慷慨大方，尽地主之谊，方才使得举座皆欢，宾朋尽乐。"
     translated: "Thanks to #SourceInteractName#'s generosity and hospitality, everyone here is in high spirits and having a great time."
@@ -66064,6 +66103,10 @@
   splits:
   - text: "（面露难色）啊这..."
     translated: "(Faces a difficult expression) Uh, this..."
+    qcReviewedText: "(Faces a difficult expression) Uh, this...\nAll guests are invited in advance, so there are likely no additional seats available. I apologize for the inconvenience.\n(requiring a meeting without hostility, or when renown reaches {0})"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "宴会来宾均是事先邀请，只怕没有多余坐席了，实在抱歉。"
     translated: "All guests are invited in advance, so there are likely no additional seats available. I apologize for the inconvenience."
