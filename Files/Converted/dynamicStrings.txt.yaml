@@ -9954,7 +9954,7 @@
   splits:
   - text: "月俸"
     translated: "Monthly salary"
-    qcReviewedText: "{0} Monthly salary: {1} Silver"
+    qcReviewedText: "{0} Monthly salary: Silver {1}"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -9987,12 +9987,10 @@
   splits:
   - text: "服食灵果，内力上限增加"
     translated: "Eating the spirit fruit increases Max Inner Power."
-    qcReviewedText: "{0} eat a spirit fruit and increased Max Inner Power by {1}"
-    qcStatus: Corrected
+    qcReviewedText: "{0} Eating the spirit fruit increases Max Inner Power.{1}"
+    qcStatus: Passed
     qcQualityScore: 100
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    qcDefectCategory: None
   templates:
   - template: "⟦0⟧{0}⟦1⟧"
 - raw: "{0}未拥有</color>"
@@ -22544,13 +22542,13 @@
   splits:
   - text: "和"
     translated: "And"
-    qcReviewedText: "And {0} Money"
+    qcReviewedText: "And {0} Silver"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "银钱"
-    translated: "Money"
+    translated: "Silver"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "和这{0}两经费"
@@ -31710,8 +31708,8 @@
   splits:
   - text: "官府"
     translated: "Government offices"
-    qcReviewedText: "Government offices {0} Monthly salary：Money {1}"
-    qcTranslated: "Government offices {0} Monthly salary: Money {1}"
+    qcReviewedText: "Government offices {0} Monthly salary：Silver {1}"
+    qcTranslated: "Government office {0} monthly stipend: Silver {1}"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -31722,7 +31720,7 @@
     translated: "Monthly salary"
   - subIndex: 2
     text: "银钱"
-    translated: "Money"
+    translated: "Silver"
   templates:
   - template: "{0}⟦0⟧{1}：{2}⟦1⟧"
 - raw: "官府仓库"
@@ -54228,13 +54226,16 @@
   splits:
   - text: "自宅展厅收入"
     translated: "Income from home exhibit"
-    qcReviewedText: "Income from home exhibit：Money {0} Reputation {1}"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "Income from home exhibit：Silver {0} Reputation {1}"
+    qcTranslated: "Home Exhibit Income: Silver {0} Reputation {1}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "银钱"
-    translated: "Money"
+    translated: "Silver"
   - subIndex: 2
     text: "声望"
     translated: "Reputation"

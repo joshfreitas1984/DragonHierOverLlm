@@ -79,6 +79,12 @@
   result: Mount Tai
 - raw: 邪派
   result: Unorthodox Sect
+# - raw: 邪道
+#   result: unorthodox path
+#   allowalt:
+#     - unorthodox
+#     - underhanded
+#     - heretical
 
 - raw: 采薇
   result: "Caiwei"
@@ -171,3 +177,7 @@
 - raw: 筑基
   result: Foundation Establishment
   badtrans: false
+- raw: 血衣盟
+  result: Blood Robe Alliance
+- raw: 鲛人
+  result: Jiaoren

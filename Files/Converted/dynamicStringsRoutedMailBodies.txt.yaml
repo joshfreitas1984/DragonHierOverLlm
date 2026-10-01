@@ -544,20 +544,19 @@
   splits:
   - text: "#PlayerName#，听闻圣上已特许你入宫查案。咱们这就去"
     translated: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head there now."
-    qcReviewedText: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head there now.<b>Capital </b>Prepare to enter the palace to jointly investigate the true cause of Zhou Shizong's sudden death. Perhaps this can also provide an opportunity to uncover the true identity of Bloodclothe Alliance's Grand Commander."
-    qcTranslated: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head to <b>Capital</b> now to prepare for entering the palace, and jointly investigate the true cause of Zhou Shizong's sudden death. Perhaps this can also provide an opportunity to uncover the true identity of Bloodclothe Alliance's Grand Commander."
+    qcReviewedText: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head there now.<b>Capital </b>Prepare to enter the palace and investigate the true cause of Emperor Zhou's sudden death. Perhaps we can also use this opportunity to uncover the real identity of the Blood Robe Alliance's Grand Commander."
+    qcTranslated: "#PlayerName#, hearing that the emperor has specially allowed you to investigate inside the palace. Let's head to <b>Capital</b> now to prepare for entering the palace and investigating the true cause of Emperor Zhou's sudden death. Perhaps we can also use this opportunity to uncover the real identity of the Blood Robe Alliance's Grand Commander."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - OtherNamedDefect
   - subIndex: 1
     text: "京城"
     translated: "Capital"
   - subIndex: 2
     text: "准备入宫，一同查明周世宗暴毙之真相。或许还能借此机会，找出血衣盟大统领之真实身份。"
-    translated: "Prepare to enter the palace to jointly investigate the true cause of Zhou Shizong's sudden death. Perhaps this can also provide an opportunity to uncover the true identity of Bloodclothe Alliance's Grand Commander."
+    translated: "Prepare to enter the palace and investigate the true cause of Emperor Zhou's sudden death. Perhaps we can also use this opportunity to uncover the real identity of the Blood Robe Alliance's Grand Commander."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，听闻血衣盟东统领卢玉麟已经伏诛，其在扬州城内的总舵位置也被你得知。\n师傅想请你和武绝义一道会于<b>神机门</b>内，共商抓捕计心狂，铲除血衣盟之大计。"
@@ -653,14 +652,14 @@
   splits:
   - text: "#PlayerName#，我费了好一番口舌，终于从郭大侠处问得了金龙生的踪迹。"
     translated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo."
-    qcReviewedText: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\nCurrently,<b>Northern Youzhou </b>Search far and wide to find his trail, and I hope you can come to lend a hand. This way, we can clarify my position as the Blood Clothes Alliance Grand Leader."
-    qcTranslated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\nCurrently, we are searching far and wide in the <b>Northern Youzhou</b> area for his trail, and I hope you can come to lend a hand. This way, we can clarify the identity of the Blood Clothes Alliance Grand Leader."
+    qcReviewedText: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\nCurrently,<b>Northern Youzhou </b>I searched for his whereabouts in the area; I hope you can lend a hand so we can find out the identity of the Blood Robe Alliance's grand commander."
+    qcTranslated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\nI am currently searching for his whereabouts in the <b>Northern Youzhou</b> area; I hope you can lend a hand so we can find out the identity of the Blood Robe Alliance's grand commander."
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "眼下正在"
     translated: "Currently,"
@@ -669,7 +668,7 @@
     translated: "Northern Youzhou"
   - subIndex: 3
     text: "一带搜寻其踪迹，还望你能来助一臂之力，也好将血衣盟大统领之身份问个清楚。"
-    translated: "Search far and wide to find his trail, and I hope you can come to lend a hand. This way, we can clarify my position as the Blood Clothes Alliance Grand Leader."
+    translated: "I searched for his whereabouts in the area; I hope you can lend a hand so we can find out the identity of the Blood Robe Alliance's grand commander."
   templates:
   - template: "{0}\n{1}<b>{2}</b>{3}"
 - raw: "#PlayerName#，武绝义突然率众前来拜会<b>武当</b>山门。若你近日得空，还望前来替助我等压阵，以免此人又搞出什么乱子。"
@@ -1395,17 +1394,16 @@
   splits:
   - text: "京城"
     translated: "Capital"
-    qcReviewedText: "#PlayerName#，<b>Capital </b>With anomalies occurring, I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
-    qcTranslated: "#PlayerName#，<b>Capital</b> has been rife with anomalies, and I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
+    qcReviewedText: "#PlayerName#，<b>Capital </b>Strange occurrences have been happening frequently, and I don't know what the Blood Robe Alliance is plotting. I hope you will come to assist us, as per our previous agreement, to uncover the truth together."
+    qcTranslated: "#PlayerName#，<b>Capital </b>Strange occurrences have been happening frequently in the Capital, and I don't know what the Blood Robe Alliance is plotting. I hope you will come to assist us, as per our previous agreement, to uncover the truth together."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - DroppedContent
   - subIndex: 1
     text: "之中异变频发，不知血衣盟有何阴谋。还望你依照此前约定，来助我等一同查明真相。"
-    translated: "With anomalies occurring, I am unsure of the Blood Cloak Alliance's plots. I hope you will honor our previous agreement and assist us in uncovering the truth together."
+    translated: "Strange occurrences have been happening frequently, and I don't know what the Blood Robe Alliance is plotting. I hope you will come to assist us, as per our previous agreement, to uncover the truth together."
   templates:
   - template: "#PlayerName#，<b>{0}</b>{1}"
 - raw: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。\n还望你尽快来<b>飞龙门</b>，一同寻找姜婉姑娘的下落！"

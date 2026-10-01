@@ -4774,12 +4774,32 @@
 - raw: "传令"
   splits:
   - text: "传令"
+    translated: "Pass on the command"
+    qcReviewedText: "Pass on the command"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "大会主持"
   splits:
   - text: "大会主持"
+    translated: "Master of Ceremonies"
+    qcReviewedText: "Master of Ceremonies"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "大赛主持"
   splits:
   - text: "大赛主持"
+    translated: "Host of the tournament"
+    qcReviewedText: "Host of the tournament"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "落魄之人"
   splits:
   - text: "落魄之人"
+    translated: "Down‑and‑out person"
+    qcReviewedText: "Down‑and‑out person"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
