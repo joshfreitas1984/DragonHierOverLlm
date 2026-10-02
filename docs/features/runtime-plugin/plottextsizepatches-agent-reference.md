@@ -68,6 +68,16 @@ a safety buffer between the computed max and the actual screen edge. `PlotTextMa
   harness instead patches `Time.deltaTime`'s getter (read every frame by ordinary game code) as a
   safe once-per-frame tick, deduped by `Time.frameCount` - the same pattern used by
   `FanslationStudio.Plugins.TextResizerPlugin`.
+- That tick lives in the nested `PlotTextSizePatches.FrameTickPatch` class. `MainPlugin`
+  registers it only when `FrameTickPatch.IsNeeded` is true: `PerfInstrumentation` on, or either
+  debug hotkey set. Patching the getter routes every native `Time.deltaTime` read in the game
+  (every `Update`, DOTween) through a managed trampoline plus a `Time.frameCount` interop call,
+  which is pure overhead when none of those features is on (the default). Turning one on
+  mid-session therefore needs a restart.
+- `ClampPreferredWidth_Postfix` runs for every `Text` on every layout pass. `IsPlotText` caches
+  the "named `PlotText` under `PlotTextBack`" decision per component in a
+  `ConditionalWeakTable<Text, StrongBox<bool>>`. Interop wrappers are pooled per native object,
+  so the native `.name` string is read once per component, not on every call.
 
 ## The test hotkey
 
@@ -88,4 +98,6 @@ session, since it reuses the `PlotController` instance cached from
    safe width from the canvas's actual reference-resolution width and `PlotTextBack`'s real
    anchor offset each time, falling back to the flat config values only if that lookup fails.
 4. If touching the test hotkey's tick mechanism, keep the `Time.deltaTime`-getter-patch pattern
-   (see Interop notes) rather than `AddComponent<T>`/`ClassInjector`.
+   (see Interop notes) rather than `AddComponent<T>`/`ClassInjector`, and keep it registered only
+   when something needs it (`FrameTickPatch.IsNeeded`). A new tick consumer must be added to
+   `IsNeeded`.

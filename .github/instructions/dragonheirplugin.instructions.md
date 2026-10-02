@@ -48,6 +48,11 @@ references under [`docs/features/runtime-plugin/`](../../docs/features/runtime-p
   text and dynamic-string dictionaries.
 - Keep template regex timeouts and the `[ThreadStatic]` re-entrancy guard around String.Format /
   String.Concat patches.
+- Text-setter sinks (`TMP_Text`/`Text`/`UILabel`) are `ref string value` prefixes that rewrite
+  the value before the native setter stores it. Never change them to postfixes that re-assign
+  `.text`: that defeats the setter's same-value early-out and forces a rebuild every assignment.
+- Don't patch engine methods that run very often (e.g. `Time.deltaTime`) unconditionally for
+  debug-only features. Register them only when the feature is enabled.
 - New external NuGet dependencies require the existing copy-local override and Costura embedding;
   verify the dependency is actually embedded before deploying.
 

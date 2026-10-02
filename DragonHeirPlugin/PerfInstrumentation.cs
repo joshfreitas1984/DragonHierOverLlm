@@ -62,6 +62,8 @@ internal static class PerfInstrumentation
     // `sampleDescription` is only invoked when the call becomes the new slowest seen for its
     // bucket, or crosses SlowCallMillisecondsThreshold - cheap for the overwhelmingly common case
     // of a fast call that is neither.
+    // A default (bucket == null) Scope is a no-op - returned by Measure while instrumentation is off,
+    // so a disabled measurement costs neither Stopwatch timestamps nor a Record call.
     public readonly struct Scope : IDisposable
     {
         private readonly string _bucket;
@@ -75,15 +77,104 @@ internal static class PerfInstrumentation
             _start = Stopwatch.GetTimestamp();
         }
 
-        public void Dispose() => Record(_bucket, Stopwatch.GetTimestamp() - _start, _sampleDescription);
+        public void Dispose()
+        {
+            if (_bucket != null)
+                Record(_bucket, Stopwatch.GetTimestamp() - _start, _sampleDescription);
+        }
     }
 
-    public static Scope Measure(string bucket, Func<string> sampleDescription = null) => new(bucket, sampleDescription);
+    // State-passing variant for hot paths (per text set, per template attempt): with a `static`
+    // lambda the call site captures nothing, so it allocates no closure on every call while
+    // instrumentation is off. The closure binding state to the delegate is only created on Dispose
+    // of an enabled scope.
+    public readonly struct Scope<TState> : IDisposable
+    {
+        private readonly string _bucket;
+        private readonly long _start;
+        private readonly TState _state;
+        private readonly Func<TState, string> _sampleDescription;
+
+        public Scope(string bucket, TState state, Func<TState, string> sampleDescription)
+        {
+            _bucket = bucket;
+            _state = state;
+            _sampleDescription = sampleDescription;
+            _start = Stopwatch.GetTimestamp();
+        }
+
+        public void Dispose()
+        {
+            if (_bucket == null) return;
+            var state = _state;
+            var describe = _sampleDescription;
+            Record(_bucket, Stopwatch.GetTimestamp() - _start, describe == null ? null : () => describe(state));
+        }
+    }
+
+    public static Scope Measure(string bucket, Func<string> sampleDescription = null) =>
+        MainPlugin.PerfInstrumentationEnabledCached ? new(bucket, sampleDescription) : default;
+
+    public static Scope<TState> Measure<TState>(string bucket, TState state, Func<TState, string> sampleDescription) =>
+        MainPlugin.PerfInstrumentationEnabledCached ? new(bucket, state, sampleDescription) : default;
+
+    // Distinct managed caller stacks seen per bucket - see SampleCallerStack.
+    private static readonly Dictionary<string, HashSet<string>> _sampledStacks = new();
+    private const int MaxSampledStacksPerBucket = 25;
+
+    // Logs each DISTINCT managed call stack reaching `bucket` (up to MaxSampledStacksPerBucket) to
+    // perfStats.log. Built to answer whether DynamicStringPatches.GenericPostfix (a Harmony patch on
+    // CoreCLR's System.String.Concat/Format, not IL2CPP's) is ever reached from native game code -
+    // such a call would show Il2CppInterop trampoline frames - or only from managed callers (this
+    // plugin, BepInEx, YamlDotNet). Only called while instrumentation is on.
+    public static void SampleCallerStack(string bucket)
+    {
+        if (!MainPlugin.PerfInstrumentationEnabledCached) return;
+
+        var previousGuard = DynamicStringPatches._inFormatConcatPatch;
+        DynamicStringPatches._inFormatConcatPatch = true;
+        try
+        {
+            var stack = new StackTrace(2, false).ToString();
+            lock (WriteLock)
+            {
+                if (!_sampledStacks.TryGetValue(bucket, out var seen))
+                    _sampledStacks[bucket] = seen = new HashSet<string>();
+                if (seen.Count >= MaxSampledStacksPerBucket || !seen.Add(stack)) return;
+            }
+            AppendLine($"[STACK] {bucket} caller #{_sampledStacks[bucket].Count}:{Environment.NewLine}{stack}", flushNow: true);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger?.LogError($"PerfInstrumentation: SampleCallerStack failed: {ex}");
+        }
+        finally
+        {
+            DynamicStringPatches._inFormatConcatPatch = previousGuard;
+        }
+    }
 
     private static void Record(string bucket, long elapsedStopwatchTicks, Func<string> sampleDescription)
     {
         if (!MainPlugin.PerfInstrumentationEnabledCached) return;
 
+        // Sample delegates build strings (truncation/concatenation) that would otherwise re-enter
+        // DynamicStringPatches.GenericPostfix through the patched String.Concat and get run
+        // through the whole translation pipeline themselves.
+        var previousGuard = DynamicStringPatches._inFormatConcatPatch;
+        DynamicStringPatches._inFormatConcatPatch = true;
+        try
+        {
+            RecordCore(bucket, elapsedStopwatchTicks, sampleDescription);
+        }
+        finally
+        {
+            DynamicStringPatches._inFormatConcatPatch = previousGuard;
+        }
+    }
+
+    private static void RecordCore(string bucket, long elapsedStopwatchTicks, Func<string> sampleDescription)
+    {
         var ms = elapsedStopwatchTicks * 1000.0 / Stopwatch.Frequency;
 
         // `sampleDescription` is a caller-supplied delegate that can do arbitrary work (e.g.

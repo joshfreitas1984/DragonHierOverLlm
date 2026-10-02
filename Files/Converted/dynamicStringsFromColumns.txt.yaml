@@ -684,8 +684,8 @@
 - raw: "驿站"
   splits:
   - text: "驿站"
-    translated: "Inn"
-    qcReviewedText: "Inn"
+    translated: "Relay Station"
+    qcReviewedText: "Relay Station"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -33719,8 +33719,8 @@
 - raw: "群魔乱舞"
   splits:
   - text: "群魔乱舞"
-    translated: "Chaos reigns"
-    qcReviewedText: "Chaos reigns"
+    translated: "Wild Dance of Demons"
+    qcReviewedText: "Wild Dance of Demons"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

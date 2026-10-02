@@ -2772,3 +2772,29 @@
     translated: ", Let's think of a solution together!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
+- raw: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。\n可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+  splits:
+  - text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。"
+    translated: "It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend."
+    qcReviewedText: "It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend.\nUnfortunately, I've been very busy lately. I hope my disciple can go on my behalf to offer congratulations."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "可惜为师近来事务繁忙，还望徒儿能代为师前去道贺。"
+    translated: "Unfortunately, I've been very busy lately. I hope my disciple can go on my behalf to offer congratulations."
+  templates:
+  - template: "{0}\n{1}"
+- raw: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。\n本门虽与唐门无甚交情，但表面功夫还需做上一做。#PlayerName#别忘了代表我仙霞派前去道贺一番。"
+  splits:
+  - text: "听闻唐门近来要与霹雳堂举行联姻大典，邀请巴蜀一带各大门派前往参与。"
+    translated: "It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend."
+    qcReviewedText: "It has been heard that the Tang Clan is planning to hold a grand wedding ceremony with Thunderclap Hall, inviting major sects from the Bashu region to attend.\nAlthough our sect has no close relationship with the Tang Clan, we still need to go through the motions. #PlayerName#, don't forget to represent the Xianxia Sect and pay your respects."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "本门虽与唐门无甚交情，但表面功夫还需做上一做。#PlayerName#别忘了代表我仙霞派前去道贺一番。"
+    translated: "Although our sect has no close relationship with the Tang Clan, we still need to go through the motions. #PlayerName#, don't forget to represent the Xianxia Sect and pay your respects."
+  templates:
+  - template: "{0}\n{1}"

@@ -248,6 +248,32 @@ internal static class HeroNamePatches
         return $"{familyName} {properGivenName}";
     }
 
+    // GlobalData.ReplaceSpeString substitutes "#$PlayerName#" by reading the player HeroData's raw
+    // heroName field directly, bypassing HeroData.HeroName() and so HeroNamePostfix's family/given
+    // spacing ("WangXiaoming"). Every other name token goes through HeroName() or GetHeroName, so
+    // pre-substitute just this one with the spaced display name. Text-only - the field is untouched.
+    // [GameCoupled GlobalData.ReplaceSpeString logic] reads the player's raw heroName field for "#$PlayerName#"
+    [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.ReplaceSpeString))]
+    [HarmonyPrefix]
+    public static void ReplaceSpeStringPrefix(ref string targetText)
+    {
+        try
+        {
+            const string token = "#$PlayerName#";
+            if (string.IsNullOrEmpty(targetText) || !targetText.Contains(token, StringComparison.Ordinal)) return;
+
+            var player = GameController._instance?.worldData?.Player();
+            var name = player?.HeroName(false);
+            if (string.IsNullOrEmpty(name)) return;
+
+            targetText = targetText.Replace(token, name, StringComparison.Ordinal);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"Error in ReplaceSpeString #$PlayerName# prefix: {ex}");
+        }
+    }
+
     // [GameCoupled GameController.GetHeroName logic] parses the native name + relation-word result shapes
     [HarmonyPatch(typeof(GameController), nameof(GameController.GetHeroName), new[] { typeof(int), typeof(int) })]
     [HarmonyPostfix]

@@ -60,7 +60,10 @@ You cannot do this - the user must. Tell them:
 - Launching the updated game with BepInEx regenerates `BepInEx/interop/` - the Converter and the
   plugin both depend on it, so this must happen **before** decompiling.
 - The plugin dumps TextAssets into `G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\plugins\raw`
-  only when the game loads them, so play far enough for the data to load.
+  only when `DumpRawAssets = true` under `[Debug]` in
+  `BepInEx\config\FanslationStudio.EnglishPatch.cfg` (off by default; it also gates
+  `ExploreDataDumpPatches`, and needs a restart) - check it before launching. Dumps only happen
+  when the game loads the data, so play far enough for it to load.
 - Optionally clear that `raw` folder first so stale files from the old version don't carry
   over. Offer to clear it for them (look at its contents first; this is a delete, so confirm).
 

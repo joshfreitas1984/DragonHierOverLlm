@@ -270,6 +270,9 @@
 - raw: 九幽黄泉指
   result: Nine Netherworld Yellow Springs Finger
   badtrans: true
+- raw: 群魔乱舞
+  result: Wild Dance of Demons
+  badtrans: true
 
 #############################################################
 # Generated:
@@ -1908,9 +1911,6 @@
 #   badtrans: true
 # - raw: 百鬼夜行
 #   result: Night Parade of One Thousand Monsters
-#   badtrans: true
-# - raw: 群魔乱舞
-#   result: Chaos reigns
 #   badtrans: true
 # - raw: 天玄七煞刀
 #   result: Heavenly Black Seven Deadly Scimitars

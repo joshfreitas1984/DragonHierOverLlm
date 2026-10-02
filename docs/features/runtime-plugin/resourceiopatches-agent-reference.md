@@ -4,7 +4,7 @@ Read this before changing `ResourceIoPatches.cs`. The source keeps only short po
 
 ## Purpose and flow
 
-`Load_Postfix` handles `Resources.Load(string, Il2CppSystem.Type)` results whose requested type is `UnityEngine.TextAsset`. It wraps the already-loaded native object with `new TextAsset(__result.Pointer)`, decodes its raw bytes, writes a diagnostic copy under `raw/<path>.csv`, and applies `resources/<path>.csv` when that complete replacement exists.
+`Load_Postfix` handles `Resources.Load(string, Il2CppSystem.Type)` results whose requested type is `UnityEngine.TextAsset`. It wraps the already-loaded native object with `new TextAsset(__result.Pointer)` and applies `resources/<path>.csv` when that complete replacement exists. Only when `MainPlugin.DumpRawAssetsEnabled` is on (`[Debug] DumpRawAssets`, off by default) does it also decode the raw bytes and write a diagnostic copy under `raw/<path>.csv`. The same toggle decides at startup whether `ExploreDataDumpPatches` is registered at all. Those dumps feed the game-update refresh flow (the `game-update-refresh` skill tells you to turn the toggle on). Players don't need them, and they cost a full read, decode and write of every CSV on every load.
 
 The packaged override is a whole-file drop-in produced by `GameFileHandling.PackageFinalTranslationAsync`; it contains translated rows plus untranslated/failed rows retained verbatim. Do not reintroduce row-level merging by column 0. That assumption is invalid for files such as `NameData.csv`; see `resourceio-csv-merge-abandoned.md`.
 
@@ -21,7 +21,7 @@ Do not read `TextAsset.bytes`. Its return type is the generic `Il2CppStructArray
 ## Change checklist
 
 1. Preserve the `TextAsset` type guard and already-loaded pointer-wrap construction.
-2. Keep raw-byte extraction separate from the generated generic `.bytes` property.
+2. Keep raw-byte extraction separate from the generated generic `.bytes` property, and keep it (and the raw dump) behind `DumpRawAssetsEnabled` - the override path never needs the bytes.
 3. Keep strict UTF-8 then GBK fallback behavior.
 4. Keep override application whole-file and in-place.
 5. Compare actual dumped/overridden content when validating, not only log success.

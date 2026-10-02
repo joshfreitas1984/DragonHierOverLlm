@@ -340,21 +340,25 @@ internal static class PrefabTextPatches
     }
 
     // Measures only the top-level call at each entry point (Resources.Load/AssetBundle.LoadAsset/
-    // Instantiate/SceneLoaded/GlobalData.AddChild), not every recursive step - ProcessGameObjectRecursive
-    // calls itself for every child, so timing each recursive call individually would sum to far
-    // more than the actual wall-clock cost of one instantiation. `source` and `go.name` are only
-    // read if this call ends up being logged (new slowest, or over the slow-call threshold).
+    // Instantiate/SceneLoaded/GlobalData.AddChild). `source` and `go.name` are only read if this
+    // call ends up being logged (new slowest, or over the slow-call threshold).
     private static void MeasureAndProcess(GameObject go, string source)
     {
-        using var _ = PerfInstrumentation.Measure("PrefabTextPatches.ProcessGameObjectRecursive", () => $"{source}:{go?.name}");
-        ProcessGameObjectRecursive(go);
+        using var _ = PerfInstrumentation.Measure("PrefabTextPatches.ProcessGameObjectTree", (source, go),
+            static s => $"{s.source}:{s.go?.name}");
+        ProcessGameObjectTree(go);
     }
 
-    private static void ProcessGameObjectRecursive(GameObject go)
+    // Perf: one native GetComponentsInChildren(type, includeInactive: true) call per text type for
+    // the whole tree, instead of the old per-node recursion (3 GetComponents calls plus
+    // transform/childCount/GetChild interop calls for EVERY GameObject - prefab-heavy panels like
+    // HeroDetailPanel have hundreds). Same coverage: includes the root itself and inactive
+    // descendants, exactly like the old transform.GetChild walk.
+    private static void ProcessGameObjectTree(GameObject go)
     {
         try
         {
-            foreach (var component in go.GetComponents(TmpTextType))
+            foreach (var component in go.GetComponentsInChildren(TmpTextType, true))
             {
                 if (component == null)
                     continue;
@@ -370,7 +374,7 @@ internal static class PrefabTextPatches
 
         try
         {
-            foreach (var component in go.GetComponents(UiTextType))
+            foreach (var component in go.GetComponentsInChildren(UiTextType, true))
             {
                 if (component == null)
                     continue;
@@ -386,7 +390,7 @@ internal static class PrefabTextPatches
 
         try
         {
-            foreach (var component in go.GetComponents(UiLabelType))
+            foreach (var component in go.GetComponentsInChildren(UiLabelType, true))
             {
                 if (component == null)
                     continue;
@@ -398,32 +402,6 @@ internal static class PrefabTextPatches
         catch (Exception ex)
         {
             MainPlugin.Logger?.LogError($"PrefabTextPatches: failed reading UILabel components: {ex}");
-        }
-
-        Transform transform;
-        try
-        {
-            transform = go.transform;
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger?.LogError($"PrefabTextPatches: failed reading transform: {ex}");
-            return;
-        }
-
-        var childCount = transform.childCount;
-        for (var i = 0; i < childCount; i++)
-        {
-            try
-            {
-                var child = transform.GetChild(i);
-                if (child != null)
-                    ProcessGameObjectRecursive(child.gameObject);
-            }
-            catch (Exception ex)
-            {
-                MainPlugin.Logger?.LogError($"PrefabTextPatches: failed recursing into child {i}: {ex}");
-            }
         }
     }
 

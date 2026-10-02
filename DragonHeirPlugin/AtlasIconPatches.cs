@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using HarmonyLib;
+using UnityEngine;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -80,6 +81,86 @@ internal static class AtlasIconPatches
     {
         public string Raw { get; set; } = string.Empty;
         public string Result { get; set; } = string.Empty;
+    }
+
+    // Raw (Chinese) sprite key for an inn, resolved by id - see InnIconInitPatch. Cached per id:
+    // the live table and innIconNames.txt.yaml are both fixed for the process lifetime.
+    private static readonly Dictionary<int, string> _rawInnSpriteNameById = new();
+
+    private static string ResolveRawInnSpriteName(int innId)
+    {
+        if (_rawInnSpriteNameById.TryGetValue(innId, out var cached)) return cached;
+
+        var innDataBase = GameDataController.Instance?.innDataBase;
+        if (innDataBase == null || !innDataBase.TryGetValue(innId, out var liveInn) || liveInn == null)
+            return null;
+
+        var liveName = liveInn.innName;
+        if (string.IsNullOrEmpty(liveName)) return null;
+
+        // The live row carries the CURRENT packaged translation, which innIconNames.txt.yaml was
+        // produced from in the same packaging run; an untranslated (CJK) live name is already the key.
+        string raw;
+        if (_reverseSpriteNameDictionary.TryGetValue(liveName, out var reversed))
+            raw = reversed;
+        else if (DynamicStringPatches.ContainsCjk(liveName))
+            raw = liveName;
+        else
+            return null;
+
+        _rawInnSpriteNameById[innId] = raw;
+        return raw;
+    }
+
+    /// <summary>
+    /// Inn icons on a save made under an older translation. `InnData` is cloned into the save
+    /// (`InnData.Clone`), so `innData.innName` keeps whatever translation existed when the save was
+    /// created. `LoadAtlasSprite_Prefix` below can only reverse a CURRENT translation, so a stale
+    /// name either misses (no icon) or, if it happens to equal another inn's current name,
+    /// reverses to that other inn's raw key (wrong icon). Same identity-not-text fix as
+    /// HorseMountedIconPatches: after the game's own Init has set its (possibly wrong) sprite,
+    /// resolve the raw key from `innData.id` via the live `GameDataController.innDataBase` row and
+    /// set the sprite again. Display-only - the saved `innName` is never touched.
+    /// Registered separately from the outer class so a binding failure here can't take down the
+    /// LoadAtlasSprite prefix.
+    /// </summary>
+    internal static class InnIconInitPatch
+    {
+        private const string AreaIconAtlas = "AreaIconAtlas";
+
+        // [GameCoupled InnIconController.Init logic] sets the "Sprite" child's SpriteRenderer from LoadAtlasSprite("AreaIconAtlas", innData.innName)
+        [HarmonyPatch(typeof(InnIconController), nameof(InnIconController.Init))]
+        [HarmonyPostfix]
+        private static void Init_Postfix(InnIconController __instance)
+        {
+            try
+            {
+                var inn = __instance?.innData;
+                if (inn == null) return;
+
+                var rawName = ResolveRawInnSpriteName(inn.id);
+                if (rawName == null) return;
+
+                var textureController = TextureController.Instance;
+                if (textureController == null) return;
+
+                // rawName is Chinese, so LoadAtlasSprite_Prefix's reverse lookup leaves it as-is.
+                var sprite = textureController.LoadAtlasSprite(AreaIconAtlas, rawName);
+                if (sprite == null) return;
+
+                var spriteRenderer = __instance.transform.Find("Sprite")?.GetComponent<SpriteRenderer>();
+                if (spriteRenderer == null) return;
+
+                var current = spriteRenderer.sprite;
+                if (current != null && current.Pointer == sprite.Pointer) return;
+
+                spriteRenderer.sprite = sprite;
+            }
+            catch (Exception ex)
+            {
+                MainPlugin.Logger?.LogError($"[AtlasIconPatches] InnIconController.Init postfix failed: {ex}");
+            }
+        }
     }
 
     // [GameCoupled InnIconController.Init logic] passes the inn's (already translated) display name as the atlas sprite key

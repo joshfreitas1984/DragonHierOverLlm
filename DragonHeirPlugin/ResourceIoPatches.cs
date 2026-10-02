@@ -46,14 +46,19 @@ internal static class ResourceIoPatches
             var ta = new TextAsset(__result.Pointer);
             var sanitizedPath = SanitizePath(path);
 
-            // Detailed rationale and invariants: docs/resourceiopatches-agent-reference.md
-            byte[] rawBytes = GetTextAssetBytesRaw(ta);
-            var text = DecodeAssetBytes(rawBytes, path);
+            // Dev-only raw dump (MainPlugin.DumpRawAssetsEnabled, off by default) - reading and
+            // decoding the native bytes is only needed for the dump itself, never for the override.
+            if (MainPlugin.DumpRawAssetsEnabledCached)
+            {
+                // Detailed rationale and invariants: docs/resourceiopatches-agent-reference.md
+                byte[] rawBytes = GetTextAssetBytesRaw(ta);
+                var text = DecodeAssetBytes(rawBytes, path);
 
-            var rawFile = Path.Combine(RawDir, sanitizedPath + ".csv");
-            Directory.CreateDirectory(Path.GetDirectoryName(rawFile)!);
-            File.WriteAllText(rawFile, text, new UTF8Encoding(false));
-            MainPlugin.Logger?.LogDebug($"ResourceIoPatches: dumped raw TextAsset '{path}' -> '{rawFile}' ({text?.Length ?? 0} chars)");
+                var rawFile = Path.Combine(RawDir, sanitizedPath + ".csv");
+                Directory.CreateDirectory(Path.GetDirectoryName(rawFile)!);
+                File.WriteAllText(rawFile, text, new UTF8Encoding(false));
+                MainPlugin.Logger?.LogDebug($"ResourceIoPatches: dumped raw TextAsset '{path}' -> '{rawFile}' ({text?.Length ?? 0} chars)");
+            }
 
             var overrideFile = Path.Combine(ResourcesDir, sanitizedPath + ".csv");
             if (!File.Exists(overrideFile))

@@ -137,6 +137,21 @@ public class MainPlugin : BasePlugin
     // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
     internal static bool MultiPassTemplateApplicationEnabledCached;
 
+    // Off by default (dev-only) - when true, ResourceIoPatches writes every loaded TextAsset to
+    // BepInEx\plugins\raw and ExploreDataDumpPatches dumps its controller lists there. Those dumps
+    // feed the game-update refresh flow (see .claude/skills/game-update-refresh), but players don't
+    // need them: they cost a full read+decode+write of every CSV on every load. Read once at
+    // startup (ExploreDataDumpPatches is only registered when it's on).
+    internal static ConfigEntry<bool> DumpRawAssetsEnabled;
+
+    // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
+    internal static bool DumpRawAssetsEnabledCached;
+
+    // On by default - UnityLogCapture copies every Debug.Log* call to unity-log.txt (useful in bug
+    // reports). Turning it off skips registering its Debug.Log* patches entirely, so no native log
+    // call pays the managed trampoline. Takes effect on restart.
+    internal static ConfigEntry<bool> CaptureUnityLogEnabled;
+
     // Bounds a single compiled template's Pattern/PermissivePattern IsMatch/Replace attempt - see
     // DynamicStringPatches.TemplateRegexTimeout for the full rationale (confirmed 200ms-2.8s
     // catastrophic-backtracking spikes via perfStats.log). Baked into each compiled template's
@@ -235,8 +250,21 @@ public class MainPlugin : BasePlugin
             "Performance",
             "MultiPassTemplateApplication",
             true,
-            "When true, DynamicStringPatches.ApplyTemplates repeats its pass over all compiled templates (bounded, stops once a pass makes no change) instead of trying each template exactly once, to catch order-dependent nested-template gaps (e.g. a recollection dialogue embedding an already-formatted world-event sentence). Off by default - unverified/speculative fix, enable only while investigating a known nested-template translation gap.",
+            "When true, DynamicStringPatches.ApplyTemplates repeats its pass over all compiled templates (bounded, stops once a pass makes no change) instead of trying each template exactly once, to catch order-dependent nested-template gaps (e.g. a recollection dialogue embedding an already-formatted world-event sentence). On by default. Costs one extra full template pass for every string a template changed - turn off to compare if the template pipeline shows up in perfStats.log.",
             v => MultiPassTemplateApplicationEnabledCached = v);
+
+        DumpRawAssetsEnabled = BindCachedBool(
+            "Debug",
+            "DumpRawAssets",
+            false,
+            "When true, every loaded TextAsset is dumped to BepInEx\\plugins\\raw (and ExploreDataDumpPatches dumps its controller lists there) for the game-update refresh flow. Off by default - dev-only, and it costs a full read/decode/write of each CSV on every load. ExploreDataDumpPatches only registers at startup, so changing this needs a restart.",
+            v => DumpRawAssetsEnabledCached = v);
+
+        CaptureUnityLogEnabled = Config.Bind(
+            "Debug",
+            "CaptureUnityLog",
+            true,
+            "When true, every Unity Debug.Log*/LogException call is copied to unity-log.txt next to the plugin DLL (useful for bug reports). Turn off to skip patching Debug.Log* entirely. Requires a restart.");
 
         // Not cached - baked into each compiled template at PatchAll time (load-time only, never
         // read on the per-call hot path), unlike the other "Performance" toggles here.
@@ -354,22 +382,39 @@ public class MainPlugin : BasePlugin
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches));
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.AssetBundleLoadAssetPatch));
         Harmony.CreateAndPatchAll(typeof(PrefabTextPatches.GlobalDataAddChildPatch));
-        Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
+        if (CaptureUnityLogEnabled.Value)
+            Harmony.CreateAndPatchAll(typeof(UnityLogCapture));
         Harmony.CreateAndPatchAll(typeof(NameLengthPatches));
 
         AtlasIconPatches.LoadSpriteNameDictionary();
         Harmony.CreateAndPatchAll(typeof(AtlasIconPatches));
 
-        // Wrapped separately - unverified Harmony binding for "Awake" against this build's real
-        // interop metadata must not take down every patch registered below it (see PlotTextPatches
-        // below for the same defensive pattern).
+        // Wrapped separately - binds InnIconController.Init, which a game update could change
+        // without a compile error; must not take down the LoadAtlasSprite prefix above or any
+        // patch below. See AtlasIconPatches.InnIconInitPatch.
         try
         {
-            Harmony.CreateAndPatchAll(typeof(ExploreDataDumpPatches));
+            Harmony.CreateAndPatchAll(typeof(AtlasIconPatches.InnIconInitPatch));
         }
         catch (Exception ex)
         {
-            Logger.LogError($"Failed to patch ExploreDataDumpPatches: {ex}");
+            Logger.LogError($"Failed to patch AtlasIconPatches.InnIconInitPatch: {ex}");
+        }
+
+        // Wrapped separately - unverified Harmony binding for "Awake" against this build's real
+        // interop metadata must not take down every patch registered below it (see PlotTextPatches
+        // below for the same defensive pattern).
+        // Dev-only raw dumps - see DumpRawAssetsEnabled.
+        if (DumpRawAssetsEnabledCached)
+        {
+            try
+            {
+                Harmony.CreateAndPatchAll(typeof(ExploreDataDumpPatches));
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Failed to patch ExploreDataDumpPatches: {ex}");
+            }
         }
 
         // Background pre-warm for the HeroDetailPanel/AreaLog perf fix - see RecordLogPrewarmPatches.
@@ -413,7 +458,7 @@ public class MainPlugin : BasePlugin
         // verified live against this build's real interop metadata.
         try
         {
-            Harmony.CreateAndPatchAll(typeof(GlobalDataListOverrides));
+            GlobalDataListOverrides.HarmonyInstance = Harmony.CreateAndPatchAll(typeof(GlobalDataListOverrides));
         }
         catch (Exception ex)
         {
@@ -425,6 +470,7 @@ public class MainPlugin : BasePlugin
         WorldEventPatches.PatchAll();
 
         SpeAddDescribePatches.PatchAll();
+        EquipmentAffixNamePatches.PatchAll();
         QuickDetailPatches.PatchAll();
         AttriRatioDescribePatches.PatchAll();
         TagDisabledTooltipPatches.PatchAll();
@@ -484,6 +530,20 @@ public class MainPlugin : BasePlugin
             Logger.LogError($"Failed to patch PlotTextSizePatches: {ex}");
         }
 
+        // The Time.deltaTime frame tick only drives debug features (perfStats.log dumps and the
+        // two debug hotkeys) - only patch it when one of them is on. See FrameTickPatch.
+        if (PlotTextSizePatches.FrameTickPatch.IsNeeded)
+        {
+            try
+            {
+                Harmony.CreateAndPatchAll(typeof(PlotTextSizePatches.FrameTickPatch));
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError($"Failed to patch PlotTextSizePatches.FrameTickPatch: {ex}");
+            }
+        }
+
         // Wrapped separately - also binds against PlotController.ShowPlot's real interop
         // signature (see PlotTextSizePatches above), so a binding failure here must not take down
         // every patch above it either. Must patch AFTER DynamicStringPatches.PatchAll() and after
@@ -516,6 +576,7 @@ public class MainPlugin : BasePlugin
     public void OnDestroy()
     {
         UnityLogCapture.FlushLogFile();
+        DynamicStringPatches.FlushResidualCjkDebugLog();
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} is destroyed!");
     }
 

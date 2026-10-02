@@ -8297,14 +8297,15 @@
 - raw: "传闻飞凤钱庄庄主凤南飞在<b>#PosText#</b>设下宴席，邀请侠义七子之首项问天共商大事。"
   splits:
   - text: "传闻飞凤钱庄庄主凤南飞在"
-    translated: "Whispers circulated about Manor Master Feng Nanfei of the Flying Phoenix Bank."
-    qcReviewedText: "Whispers circulated about Manor Master Feng Nanfei of the Flying Phoenix Bank.<b>#PosText#</b>Set up a banquet and invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
-    qcTranslated: "Whispers circulated about Manor Master Feng Nanfei of the Flying Phoenix Bank, who set up a banquet in <b>#PosText#</b> to invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
+    translated: "It's said that the Manor Master of Feifeng Bank, Feng Nanfei, is in"
+    qcReviewedText: "It's said that the Manor Master of Feifeng Bank, Feng Nanfei, is in<b>#PosText#</b>Set up a banquet and invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
+    qcTranslated: "It's said that the Manor Master of Feifeng Bank, Feng Nanfei, has set up a banquet in<b>#PosText#</b> to invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
     qcStatus: Corrected
-    qcQualityScore: 95
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "设下宴席，邀请侠义七子之首项问天共商大事。"
     translated: "Set up a banquet and invite Xiang Wentian, the leader of the Seven Virtuous Heroes, to discuss important matters."
@@ -10085,8 +10086,8 @@
 - raw: "前往#TargetPlace#打听关于飞凤钱庄的信息。"
   splits:
   - text: "前往#TargetPlace#打听关于飞凤钱庄的信息。"
-    translated: "Go to #TargetPlace# to gather information about the Fei Feng Bank."
-    qcReviewedText: "Go to #TargetPlace# to gather information about the Fei Feng Bank."
+    translated: "Go to #TargetPlace# to inquire about the Feifeng Bank."
+    qcReviewedText: "Go to #TargetPlace# to inquire about the Feifeng Bank."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -22430,14 +22431,11 @@
 - raw: "路边驿站"
   splits:
   - text: "路边驿站"
-    translated: "On the side of the road is a inn."
-    qcReviewedText: "On the side of the road is a inn."
-    qcTranslated: "On the side of the road is an inn."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Roadside relay station"
+    qcReviewedText: "Roadside relay station"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "路过而已"
   splits:
   - text: "路过而已"
@@ -23443,14 +23441,14 @@
 - raw: "这是一处临时搭建的驿站，供往来商旅歇脚喂马所用。\\n帆布拼接而成的帘蓬下，风尘仆仆的旅人们坐在简陋的桌椅间，用粗劣瓷碗大口啜饮着茶水。"
   splits:
   - text: "这是一处临时搭建的驿站，供往来商旅歇脚喂马所用。"
-    translated: "This is a temporarily set‑up inn for travelers and merchants to rest and feed their horses."
-    qcReviewedText: "This is a temporarily set‑up inn for travelers and merchants to rest and feed their horses.\\nUnder the canopy pieced together from canvas, weary travelers sit at simple tables and chairs, taking big gulps of coarse porcelain bowls of tea."
-    qcTranslated: "This is a temporarily set‑up inn for travelers and merchants to rest and feed their horses.\\nUnder the canopy pieced together from canvas, weary travelers sit at simple tables and chairs, taking big gulps of tea from coarse porcelain bowls."
+    translated: "This is a temporary relay station for traders and travelers to rest and feed their horses."
+    qcReviewedText: "This is a temporary relay station for traders and travelers to rest and feed their horses.\\nUnder the canopy pieced together from canvas, weary travelers sit at simple tables and chairs, taking big gulps of coarse porcelain bowls of tea."
+    qcTranslated: "This is a temporary relay station for traders and travelers to rest and feed their horses.\\nUnder the canopy pieced together from canvas, weary travelers sit at simple tables and chairs, taking big gulps of tea from coarse porcelain bowls."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "帆布拼接而成的帘蓬下，风尘仆仆的旅人们坐在简陋的桌椅间，用粗劣瓷碗大口啜饮着茶水。"
     translated: "Under the canopy pieced together from canvas, weary travelers sit at simple tables and chairs, taking big gulps of coarse porcelain bowls of tea."
@@ -25069,8 +25067,8 @@
 - raw: "飞凤钱庄"
   splits:
   - text: "飞凤钱庄"
-    translated: "Phoenix Bank"
-    qcReviewedText: "Phoenix Bank"
+    translated: "Feifeng Bank"
+    qcReviewedText: "Feifeng Bank"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

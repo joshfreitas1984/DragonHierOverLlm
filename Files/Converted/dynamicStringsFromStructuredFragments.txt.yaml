@@ -1236,14 +1236,11 @@
 - raw: "分文不取"
   splits:
   - text: "分文不取"
-    translated: "Not a cent for free"
-    qcReviewedText: "Not a cent for free"
-    qcTranslated: "Not a cent taken"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Not a single coin taken"
+    qcReviewedText: "Not a single coin taken"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "分而食之"
   splits:
   - text: "分而食之"

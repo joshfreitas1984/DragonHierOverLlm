@@ -29675,14 +29675,12 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent: "
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
+    qcReviewedText: "Talent:"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
-  - template: "{0}: "
+  - template: "{0}:"
 - raw: "天赋;ChooseManageTagTargetSelfHouse"
   splits:
   - text: "天赋"

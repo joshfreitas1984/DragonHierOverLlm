@@ -50,8 +50,13 @@ internal static class DynamicStringPatches
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private static List<DictionaryEntry> _templateDictionary = new();
 
-    // Same perf bucketing as _dictionaryByFirstChar, for FormatPrefix's ApplyDictionary call.
+    // Same perf bucketing as _dictionaryByFirstChar, for IsSafeAppendBoundary's template check.
     private static Dictionary<char, List<DictionaryEntry>> _templateDictionaryByFirstChar = new();
+
+    // ApplyDictionary's candidate indexes (see DictionaryIndex) over _dictionary and
+    // _templateDictionary respectively.
+    private static DictionaryIndex _dictionaryIndex = new();
+    private static DictionaryIndex _templateDictionaryIndex = new();
 
     // Longest Raw entry across both dictionaries - bounds the boundary-straddle check window in
     // IsSafeAppendBoundary (see ApplyToComponentText's append-only fast path).
@@ -105,6 +110,10 @@ internal static class DynamicStringPatches
         if (instance == null) return;
         var cache = _componentTextCache.GetOrCreateValue(instance);
         cache.TranslatedSnapshot = translatedFullText;
+        // The seeded text no longer pairs with whatever raw text was translated last - clear it so
+        // ApplyToComponentText's repeat-raw fast path can't hand the seeded text back for that
+        // older raw string.
+        cache.RawSnapshot = null;
         cache.LoggedResidualCjkForSnapshot = false;
     }
 
@@ -195,6 +204,11 @@ internal static class DynamicStringPatches
     // unrelated pathological huge string can't grow this cache unbounded.
     private static readonly MemoCache _genericPipelineMemoCache = new(maxEntries: 5000, maxInputLength: 20000);
 
+    // RunGenericPipeline's preferLogNarrativeTemplates mode runs a different (narrower) template
+    // list, so its results must not share a key space with the full-corpus cache above - otherwise
+    // whichever mode saw an input first decides what the other mode returns for it.
+    private static readonly MemoCache _logNarrativePipelineMemoCache = new(maxEntries: 5000, maxInputLength: 20000);
+
     // FormatPrefix runs a different pipeline (template-dictionary substitution only), so it needs
     // its own cache rather than sharing _genericPipelineMemoCache. Left at the original bounds -
     // no evidence yet that String.Format's inputs share the same long-finished-text reuse pattern.
@@ -209,6 +223,7 @@ internal static class DynamicStringPatches
     internal static void ClearTranslationCaches()
     {
         _genericPipelineMemoCache.Clear();
+        _logNarrativePipelineMemoCache.Clear();
         _formatPipelineMemoCache.Clear();
         _componentTextCache.Clear();
         MainPlugin.Logger?.LogInfo("[DynamicStringPatches] Translation caches cleared.");
@@ -300,10 +315,45 @@ internal static class DynamicStringPatches
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
     private sealed class CompiledTemplate
     {
-        public Regex Pattern;
+        // Perf: the Regex objects are built on first use, not at PatchAll. RegexOptions.Compiled
+        // emits and JITs IL per pattern - ~5,500 of them (strict + permissive per template) made up
+        // most of plugin load time, while the trigger-char/literal pre-filter means only a small
+        // fraction of templates ever reaches a regex attempt in a session. Null means the pattern
+        // failed to construct (logged once); ApplyTemplatesSinglePass skips the template then,
+        // which matches the old load-time behavior of dropping it.
+        public string PatternSource;
+        public string PermissivePatternSource;
+        private Regex _pattern;
+        private Regex _permissivePattern;
+        private bool _patternFailed;
+        private bool _permissivePatternFailed;
+
+        public Regex Pattern => _pattern ?? CreateRegex(ref _pattern, ref _patternFailed, PatternSource, RegexOptions.Compiled);
 
         // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
-        public Regex PermissivePattern;
+        public Regex PermissivePattern => _permissivePattern
+            ?? CreateRegex(ref _permissivePattern, ref _permissivePatternFailed, PermissivePatternSource, RegexOptions.Compiled | RegexOptions.Singleline);
+
+        // Racing threads (RecordLogPrewarmPatches' background Task vs the main thread) may both
+        // build the same Regex - harmless, CompareExchange keeps the first one published.
+        private Regex CreateRegex(ref Regex slot, ref bool failed, string source, RegexOptions options)
+        {
+            if (failed) return null;
+            try
+            {
+                // MatchTimeout: see TemplateRegexTimeout and the construction-site comment in
+                // BuildCompiledTemplate for why every template regex is bounded.
+                var regex = new Regex(source, options, TemplateRegexTimeout);
+                return System.Threading.Interlocked.CompareExchange(ref slot, regex, null) ?? regex;
+            }
+            catch (Exception ex)
+            {
+                failed = true;
+                MainPlugin.Logger?.LogError($"[DynamicStringPatches] Failed to compile template '{RawPreview}': {ex}");
+                return null;
+            }
+        }
+
         public string ReplacementPattern;
         public List<string> LiteralSegments;
 
@@ -559,10 +609,11 @@ internal static class DynamicStringPatches
             // possible split before giving up. This timeout is the actual fix for that cost, since
             // deliberately not translating at the source (see the memoization comment above
             // _genericPipelineMemoCache) means the same raw text keeps reaching this pipeline on
-            // every redisplay across every future session too, not just once.
-            Pattern = new Regex(patternBuilder.ToString(), RegexOptions.Compiled, TemplateRegexTimeout),
+            // every redisplay across every future session too, not just once. The Regex itself is
+            // built lazily from these sources - see CompiledTemplate.Pattern.
+            PatternSource = patternBuilder.ToString(),
             // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
-            PermissivePattern = new Regex(permissivePatternBuilder.ToString(), RegexOptions.Compiled | RegexOptions.Singleline, TemplateRegexTimeout),
+            PermissivePatternSource = permissivePatternBuilder.ToString(),
             ReplacementPattern = replacementPattern,
             LiteralSegments = literalSegments,
             SplitRuns = splitRuns,
@@ -600,6 +651,56 @@ internal static class DynamicStringPatches
         // Set (not deserialized - never present in the YAML itself) when this entry was loaded
         // from LogNarrativeFileName. See _logNarrativeCompiledTemplates.
         public bool IsLogNarrative { get; set; }
+
+        // Computed by BuildDictionaryIndex (internal fields, so YamlDotNet never maps them).
+        // Rank: position in its own longest-Raw-first list - candidates are ordered by it.
+        // RawIsAllCjk/ResultLeavesNoCjk: see ApplyDictionary's skip rule.
+        internal int Rank;
+        internal bool RawIsAllCjk;
+        internal bool ResultLeavesNoCjk;
+    }
+
+    // Perf: ApplyDictionary's candidate index. Entries of 2+ chars are bucketed by their first TWO
+    // chars (a text has far fewer distinct char pairs than distinct chars, so long text no longer
+    // drags in most of the dictionary as candidates); single-char entries by that char. Every
+    // entry lands in exactly one bucket, so a collected candidate list has no duplicates.
+    private sealed class DictionaryIndex
+    {
+        public readonly Dictionary<char, List<DictionaryEntry>> SingleChar = new();
+        public readonly Dictionary<int, List<DictionaryEntry>> ByLeadingPair = new();
+        public int Count;
+    }
+
+    private static int LeadingPairKey(char a, char b) => (a << 16) | b;
+
+    private static DictionaryIndex BuildDictionaryIndex(List<DictionaryEntry> orderedEntries)
+    {
+        var index = new DictionaryIndex();
+        for (var i = 0; i < orderedEntries.Count; i++)
+        {
+            var entry = orderedEntries[i];
+            entry.Rank = i;
+            if (string.IsNullOrEmpty(entry.Raw)) continue;
+
+            entry.RawIsAllCjk = entry.Raw.All(IsCjkCharSingle);
+            entry.ResultLeavesNoCjk = !string.IsNullOrEmpty(entry.Result) && !ContainsCjk(entry.Result);
+
+            List<DictionaryEntry> bucket;
+            if (entry.Raw.Length == 1)
+            {
+                if (!index.SingleChar.TryGetValue(entry.Raw[0], out bucket))
+                    index.SingleChar[entry.Raw[0]] = bucket = new List<DictionaryEntry>();
+            }
+            else
+            {
+                var key = LeadingPairKey(entry.Raw[0], entry.Raw[1]);
+                if (!index.ByLeadingPair.TryGetValue(key, out bucket))
+                    index.ByLeadingPair[key] = bucket = new List<DictionaryEntry>();
+            }
+            bucket.Add(entry);
+            index.Count++;
+        }
+        return index;
     }
 
     // Shared by PatchAll's raw-entry and translated-literal-variant compilation loops.
@@ -628,6 +729,8 @@ internal static class DynamicStringPatches
             _dictionaryByFirstChar = BuildFirstCharIndex(_dictionary);
             _dictionaryRawSet = new HashSet<string>(_dictionary.Where(e => !string.IsNullOrEmpty(e.Raw)).Select(e => e.Raw));
             _templateDictionaryByFirstChar = BuildFirstCharIndex(_templateDictionary);
+            _dictionaryIndex = BuildDictionaryIndex(_dictionary);
+            _templateDictionaryIndex = BuildDictionaryIndex(_templateDictionary);
             _maxDictionaryRawLength = Math.Max(
                 _dictionary.Count > 0 ? _dictionary.Max(e => e.Raw?.Length ?? 0) : 0,
                 _templateDictionary.Count > 0 ? _templateDictionary.Max(e => e.Raw?.Length ?? 0) : 0);
@@ -678,11 +781,50 @@ internal static class DynamicStringPatches
             // See CompiledTemplate.BlockingRawEntries for why this exists: computed once here
             // (not per-call) since both _dictionary and _compiledTemplates are already loaded and
             // fixed for the lifetime of the process.
+            //
+            // Perf: an entry can only contain a segment if it contains every one of the segment's
+            // chars, so each segment is tested only against the entries containing its rarest char
+            // (via entriesByChar) instead of the whole dictionary, and memoized per distinct
+            // segment text. Results are re-sorted by Rank, so the list keeps _dictionary order
+            // exactly as the old full-scan LINQ produced it.
+            var entriesByChar = new Dictionary<char, List<DictionaryEntry>>();
+            foreach (var e in _dictionary)
+            {
+                if (string.IsNullOrEmpty(e.Raw)) continue;
+                foreach (var c in e.Raw.Distinct())
+                {
+                    if (!entriesByChar.TryGetValue(c, out var bucket))
+                        entriesByChar[c] = bucket = new List<DictionaryEntry>();
+                    bucket.Add(e);
+                }
+            }
+
+            var segmentHits = new Dictionary<string, List<DictionaryEntry>>();
+            List<DictionaryEntry> HitsFor(string seg)
+            {
+                if (segmentHits.TryGetValue(seg, out var hits)) return hits;
+                List<DictionaryEntry> rarest = null;
+                foreach (var c in seg)
+                {
+                    if (!entriesByChar.TryGetValue(c, out var bucket)) { rarest = null; break; }
+                    if (rarest == null || bucket.Count < rarest.Count) rarest = bucket;
+                }
+                hits = rarest == null
+                    ? new List<DictionaryEntry>()
+                    : rarest.Where(e => e.Raw.Length > seg.Length && e.Raw.Contains(seg)).ToList();
+                segmentHits[seg] = hits;
+                return hits;
+            }
+
             foreach (var template in _compiledTemplates)
             {
-                template.BlockingRawEntries = _dictionary
-                    .Where(e => !string.IsNullOrEmpty(e.Raw)
-                        && template.LiteralSegments.Any(seg => seg.Length > 0 && e.Raw.Contains(seg) && e.Raw.Length > seg.Length))
+                var blocking = new HashSet<DictionaryEntry>();
+                foreach (var seg in template.LiteralSegments)
+                    if (seg.Length > 0)
+                        blocking.UnionWith(HitsFor(seg));
+
+                template.BlockingRawEntries = blocking
+                    .OrderBy(e => e.Rank)
                     .Select(e => e.Raw)
                     .Distinct()
                     .ToList();
@@ -910,16 +1052,86 @@ internal static class DynamicStringPatches
 
     private const string ResidualCjkDebugLogFileName = "residualCjkDebug.log";
 
+    // Kept open for the session and flushed at most once a second (same approach as
+    // UnityLogCapture/PerfInstrumentation) instead of File.AppendAllText - an open/write/close per
+    // line - since with ResidualCjkDebugLogging on this fires on many translated hits and the log
+    // routinely reaches hundreds of MB per session. Shared by every diagnostic below.
+    private static readonly object _debugLogLock = new();
+    private static StreamWriter _debugLogWriter;
+    private static long _debugLogLastFlushTicks;
+    private static readonly long DebugLogFlushIntervalTicks = TimeSpan.FromSeconds(1).Ticks;
+
     public static void ClearResidualCjkDebugLog()
     {
         try
         {
-            var path = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
-            if (File.Exists(path)) File.Delete(path);
+            lock (_debugLogLock)
+            {
+                _debugLogWriter?.Dispose();
+                _debugLogWriter = null;
+                var path = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
+                if (File.Exists(path)) File.Delete(path);
+            }
         }
         catch
         {
             // Best-effort diagnostic only - never let a logging failure affect translation.
+        }
+    }
+
+    internal static void FlushResidualCjkDebugLog()
+    {
+        try
+        {
+            lock (_debugLogLock) _debugLogWriter?.Flush();
+        }
+        catch
+        {
+            // Best-effort diagnostic only.
+        }
+    }
+
+    // Callers build `entry` before calling, so they must already hold the _inFormatConcatPatch
+    // guard (see WithConcatGuard) - entry text contains CJK, and building it through the patched
+    // String.Concat would otherwise run the diagnostic text itself through the pipeline.
+    private static void AppendDebugLog(string entry)
+    {
+        try
+        {
+            lock (_debugLogLock)
+            {
+                _debugLogWriter ??= new StreamWriter(
+                    new FileStream(Path.Combine(PluginDir, ResidualCjkDebugLogFileName), FileMode.Append, FileAccess.Write, FileShare.Read),
+                    new System.Text.UTF8Encoding(false)) { AutoFlush = false };
+                _debugLogWriter.Write(entry);
+
+                var now = DateTime.UtcNow.Ticks;
+                if (now - _debugLogLastFlushTicks >= DebugLogFlushIntervalTicks)
+                {
+                    _debugLogWriter.Flush();
+                    _debugLogLastFlushTicks = now;
+                }
+            }
+        }
+        catch
+        {
+            // Best-effort diagnostic only - never let a logging failure affect translation.
+        }
+    }
+
+    // Runs `action` with _inFormatConcatPatch set (restoring the previous value afterwards), so
+    // string building inside it never re-enters GenericPostfix/FormatPrefix.
+    private static void WithConcatGuard<TState>(TState state, Action<TState> action)
+    {
+        var previous = _inFormatConcatPatch;
+        _inFormatConcatPatch = true;
+        try
+        {
+            action(state);
+        }
+        finally
+        {
+            _inFormatConcatPatch = previous;
         }
     }
 
@@ -932,40 +1144,27 @@ internal static class DynamicStringPatches
     internal static void LogResidualCjkDebug(string stage, string before, string after, object instance = null)
     {
         if (!MainPlugin.ResidualCjkDebugEnabledCached) return;
-        if (!ContainsCjk(after)) return;
+        if (after == null || !ContainsCjk(after)) return;
 
-        try
+        WithConcatGuard((stage, before, after, instance), static s =>
         {
-            var logPath = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
-            var componentPath = instance != null ? GetComponentPath(instance) : "(no component)";
-            File.AppendAllText(logPath,
-                $"[{DateTime.Now:HH:mm:ss.fff}] {stage}{Environment.NewLine}" +
+            var componentPath = s.instance != null ? GetComponentPath(s.instance) : "(no component)";
+            AppendDebugLog(
+                $"[{DateTime.Now:HH:mm:ss.fff}] {s.stage}{Environment.NewLine}" +
                 $"  path:   {componentPath}{Environment.NewLine}" +
-                $"  before: {before}{Environment.NewLine}" +
-                $"  after:  {after}{Environment.NewLine}");
-        }
-        catch
-        {
-            // Best-effort diagnostic only - never let a logging failure affect translation.
-        }
+                $"  before: {s.before}{Environment.NewLine}" +
+                $"  after:  {s.after}{Environment.NewLine}");
+        });
     }
 
     internal static void LogMissionDebug(string stage, string before, string after)
     {
         if (!MainPlugin.ResidualCjkDebugEnabledCached) return;
 
-        try
-        {
-            var logPath = Path.Combine(PluginDir, ResidualCjkDebugLogFileName);
-            File.AppendAllText(logPath,
-                $"[{DateTime.Now:HH:mm:ss.fff}] {stage}{Environment.NewLine}" +
-                $"  before: {before}{Environment.NewLine}" +
-                $"  after:  {after}{Environment.NewLine}");
-        }
-        catch
-        {
-            // Best-effort diagnostic only - never let logging affect translation.
-        }
+        WithConcatGuard((stage, before, after), static s => AppendDebugLog(
+            $"[{DateTime.Now:HH:mm:ss.fff}] {s.stage}{Environment.NewLine}" +
+            $"  before: {s.before}{Environment.NewLine}" +
+            $"  after:  {s.after}{Environment.NewLine}"));
     }
 
     // Diagnostic for the "Qingcheng Se?t祠?"-style corruption (see
@@ -975,12 +1174,20 @@ internal static class DynamicStringPatches
     // only on that specific signal (rather than every template/dictionary hit) keeps this from
     // spamming residualCjkDebug.log while still naming the exact template/entry responsible the
     // next time this class of corruption reproduces.
-    private static void LogUnexpectedQuestionMark(string stage, string before, string after)
+    //
+    // `describeStage` builds the stage label lazily: it was previously an interpolated string built
+    // on EVERY template/dictionary hit even with logging off, and since it embeds raw CJK text,
+    // building it through the patched String.Concat (from any caller not holding
+    // _inFormatConcatPatch) ran the label itself through the whole pipeline and parked it in the
+    // memo cache, evicting real translations.
+    private static void LogUnexpectedQuestionMark<TState>(TState state, Func<TState, string> describeStage, string before, string after)
     {
         if (!MainPlugin.ResidualCjkDebugEnabledCached) return;
         if (before == null || after == null) return;
-        if (after.Contains('?') && !before.Contains('?'))
-            LogMissionDebug(stage, before, after);
+        if (!after.Contains('?') || before.Contains('?')) return;
+
+        WithConcatGuard((state, describeStage, before, after),
+            static s => LogMissionDebug(s.describeStage(s.state), s.before, s.after));
     }
 
     // Manual type check (per the confirmed-safe pattern in dragonheirplugin.instructions.md) over
@@ -1097,27 +1304,45 @@ internal static class DynamicStringPatches
     // call site (see recordlog-translation-naturalness.md), so trusting the narrow list alone
     // here is safe; ApplyDictionary below (non-template fragment substitution) still always runs
     // regardless, covering any plain-text UI chrome sharing the same component subtree.
+    //
+    // Holds _inFormatConcatPatch for its whole duration (restoring the caller's value after), so no
+    // string built inside the pipeline - by this code or anything it calls - re-enters
+    // GenericPostfix via the patched String.Concat. Callers used to each have to remember to set it;
+    // several (text setters, RecordLogDisplayPatches, the prewarm Task, Tutorial/MartialClub
+    // prefixes) didn't.
     internal static string RunGenericPipeline(string input, bool preferLogNarrativeTemplates = false)
     {
-        using var _ = PerfInstrumentation.Measure("DynamicStringPatches.RunGenericPipeline",
-            () => input.Length > 60 ? input.Substring(0, 60) + "…" : input);
+        using var _ = PerfInstrumentation.Measure("DynamicStringPatches.RunGenericPipeline", input,
+            static s => s.Length > 60 ? s.Substring(0, 60) + "…" : s);
 
-        return _genericPipelineMemoCache.GetOrCompute(input, s =>
+        var previousGuard = _inFormatConcatPatch;
+        _inFormatConcatPatch = true;
+        try
         {
-            var r = s;
-            foreach (var (raw, result) in ForceMissionResourceCompounds)
-                if (r.Contains(raw, StringComparison.Ordinal))
-                    r = r.Replace(raw, result, StringComparison.Ordinal);
+            var useLogNarrative = preferLogNarrativeTemplates && _logNarrativeCompiledTemplates.Count > 0;
+            return useLogNarrative
+                ? _logNarrativePipelineMemoCache.GetOrCompute(input, static s => ComputeGenericPipeline(s, _logNarrativeCompiledTemplates))
+                : _genericPipelineMemoCache.GetOrCompute(input, static s => ComputeGenericPipeline(s, _compiledTemplates));
+        }
+        finally
+        {
+            _inFormatConcatPatch = previousGuard;
+        }
+    }
 
-            if (preferLogNarrativeTemplates && _logNarrativeCompiledTemplates.Count > 0)
-                r = ApplyTemplates(r, _logNarrativeCompiledTemplates);
-            else if (_compiledTemplates.Count > 0)
-                r = ApplyTemplates(r, _compiledTemplates);
+    private static string ComputeGenericPipeline(string s, List<CompiledTemplate> templates)
+    {
+        var r = s;
+        foreach (var (raw, result) in ForceMissionResourceCompounds)
+            if (r.Contains(raw, StringComparison.Ordinal))
+                r = r.Replace(raw, result, StringComparison.Ordinal);
 
-            if (_dictionary.Count > 0)
-                r = ApplyDictionary(r, _dictionaryByFirstChar);
-            return r;
-        });
+        if (templates.Count > 0)
+            r = ApplyTemplates(r, templates);
+
+        if (_dictionary.Count > 0)
+            r = ApplyDictionary(r, _dictionaryIndex);
+        return r;
     }
 
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
@@ -1151,6 +1376,11 @@ internal static class DynamicStringPatches
         _inFormatConcatPatch = true;
         try
         {
+            // Open question (see PerfInstrumentation.SampleCallerStack): does anything except
+            // managed code ever reach this CoreCLR String.Concat/Format patch? Logs each distinct
+            // caller stack while PerfInstrumentation is on.
+            PerfInstrumentation.SampleCallerStack("DynamicStringPatches.GenericPostfix");
+
             var original = __result;
             var result = RunGenericPipeline(original);
             LogResidualCjkDebug("GenericPostfix", original, result);
@@ -1179,7 +1409,7 @@ internal static class DynamicStringPatches
         try
         {
             var original = format;
-            format = _formatPipelineMemoCache.GetOrCompute(original, s => ApplyDictionary(s, _templateDictionaryByFirstChar));
+            format = _formatPipelineMemoCache.GetOrCompute(original, static s => ApplyDictionary(s, _templateDictionaryIndex));
             LogResidualCjkDebug("FormatPrefix", original, format);
         }
         catch (Exception ex)
@@ -1196,77 +1426,72 @@ internal static class DynamicStringPatches
     // docs/prefabtextpatches-agent-reference.md. These three setter postfixes used to be patched
     // separately by both this class AND PrefabTextPatches (each with its own ContainsCjk scan and
     // its own Harmony dispatch) - merged into HandleTextSetter below so every text assignment
-    // anywhere in the UI only reads the current text, and scans it for CJK, once.
+    // anywhere in the UI only scans the incoming text for CJK once.
+    //
+    // PREFIXES rewriting the incoming `value` (not postfixes that re-set the text afterwards): the
+    // native setters early-out when the new value equals the stored one, but a postfix leaves
+    // English stored, so a label the game re-assigns with the same Chinese every frame was never
+    // "equal" - every assignment cost two native sets, two dirty marks and a canvas rebuild, plus an
+    // interop read of .text. Translating before the native setter runs means a repeat assignment
+    // arrives already equal to what's stored (see ApplyToComponentText's repeat-raw fast path) and
+    // the setter skips its work. `value` is the parameter name Il2CppInterop gives every generated
+    // property setter (Harmony binds by name); the same ref-argument rewrite is already proven live
+    // by PlotTextPatches.DOText_Prefix's `ref string endValue`.
     [HarmonyPatch(typeof(TMP_Text), nameof(TMP_Text.text), MethodType.Setter)]
-    [HarmonyPostfix]
-    private static void TmpTextSetText_Postfix(TMP_Text __instance)
-    {
-        HandleTextSetter(__instance, () => __instance.text, v => __instance.text = v);
-    }
+    [HarmonyPrefix]
+    private static void TmpTextSetText_Prefix(TMP_Text __instance, ref string value) => HandleTextSetter(__instance, ref value);
 
     [HarmonyPatch(typeof(Text), nameof(Text.text), MethodType.Setter)]
-    [HarmonyPostfix]
-    private static void UiTextSetText_Postfix(Text __instance)
-    {
-        HandleTextSetter(__instance, () => __instance.text, v => __instance.text = v);
-    }
+    [HarmonyPrefix]
+    private static void UiTextSetText_Prefix(Text __instance, ref string value) => HandleTextSetter(__instance, ref value);
 
     // NGUI's own label type - has its own get_text()/set_text(string), entirely separate from
     // UnityEngine.UI.Text/TMP_Text, so it was invisible to this sink patch until confirmed missing
     // (see PrefabTextPatches.cs's TryApplyExactMatch for the same gap on the exact-match side).
     [HarmonyPatch(typeof(UILabel), nameof(UILabel.text), MethodType.Setter)]
-    [HarmonyPostfix]
-    private static void UiLabelSetText_Postfix(UILabel __instance)
-    {
-        HandleTextSetter(__instance, () => __instance.text, v => __instance.text = v);
-    }
+    [HarmonyPrefix]
+    private static void UiLabelSetText_Prefix(UILabel __instance, ref string value) => HandleTextSetter(__instance, ref value);
 
-    // Single entry point for all three text-setter sinks: reads the current text once, scans it
-    // for CJK once, then runs PrefabTextPatches' whole-string exact-match pass (preserving its old
+    // Single entry point for all three text-setter sinks: scans the incoming text for CJK once,
+    // then runs PrefabTextPatches' whole-string exact-match pass (preserving its old
     // [HarmonyPriority(Priority.First)] "exact match wins" ordering) before falling through to this
     // class's substring dictionary/template pipeline via ApplyToComponentText. Guarded by
-    // _inTextSetterPostfix so the setText() call below (which re-invokes the real setter, and so
-    // this same postfix) doesn't recurse.
-    private static void HandleTextSetter(object instance, Func<string> getText, Action<string> setText)
+    // _inTextSetterPostfix in case anything inside the pipeline/diagnostics assigns a text itself.
+    private static void HandleTextSetter(object instance, ref string value)
     {
-        using var _ = PerfInstrumentation.Measure("DynamicStringPatches.HandleTextSetter", () => GetComponentPath(instance));
+        using var _ = PerfInstrumentation.Measure("DynamicStringPatches.HandleTextSetter", instance, static i => GetComponentPath(i));
 
         if (_inTextSetterPostfix) return;
-
-        string current;
-        try
-        {
-            current = getText();
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger.LogError($"[DynamicStringPatches] HandleTextSetter failed reading current text: {ex}");
-            return;
-        }
-
-        if (string.IsNullOrEmpty(current) || !ContainsCjk(current)) return;
+        if (string.IsNullOrEmpty(value) || !ContainsCjk(value)) return;
 
         _inTextSetterPostfix = true;
         try
         {
-            var afterExactMatch = PrefabTextPatches.TryApplyExactMatch(current);
-            if (afterExactMatch != current)
+            var current = value;
+            try
             {
-                setText(afterExactMatch);
-                current = afterExactMatch;
+                current = PrefabTextPatches.TryApplyExactMatch(current);
             }
-        }
-        catch (Exception ex)
-        {
-            MainPlugin.Logger.LogError($"[DynamicStringPatches] HandleTextSetter exact-match pass failed: {ex}");
+            catch (Exception ex)
+            {
+                MainPlugin.Logger.LogError($"[DynamicStringPatches] HandleTextSetter exact-match pass failed: {ex}");
+            }
+
+            try
+            {
+                current = ApplyToComponentText(instance, current);
+            }
+            catch (Exception ex)
+            {
+                MainPlugin.Logger.LogError($"[DynamicStringPatches] Text setter prefix failed: {ex}");
+            }
+
+            value = current;
         }
         finally
         {
             _inTextSetterPostfix = false;
         }
-
-        var capturedCurrent = current;
-        ApplyToComponentText(instance, () => capturedCurrent, setText);
     }
 
     // AreaBuildController.BuildChoiceButtonClicked re-derives which build action was clicked by
@@ -1404,123 +1629,113 @@ internal static class DynamicStringPatches
             areaName = RunGenericPipeline(areaName);
     }
 
-    private static void ApplyToComponentText(object instance, Func<string> getText, Action<string> setText)
+    // Returns the text the component should actually store for an incoming assignment of
+    // `current` (already past PrefabTextPatches' exact-match pass). Called from HandleTextSetter,
+    // which holds _inTextSetterPostfix and catches/logs any exception.
+    private static string ApplyToComponentText(object instance, string current)
     {
-        if (_inTextSetterPostfix) return;
+        var cache = _componentTextCache.GetOrCreateValue(instance);
+        if (MainPlugin.SkipKnownNonCjkComponentsEnabledCached && cache.ConfirmedNonCjk)
+            return current;
 
-        // Guard set up-front (before diagnostic logging) for the same reason as
-        // GenericPostfix/FormatPrefix above: SafeDebugLog/DebugEscape's own string operations
-        // could otherwise re-enter this same setter postfix via a nested .text write.
-        _inTextSetterPostfix = true;
-        try
+        cache.IsKnownLogPanel ??= _logNarrativeCompiledTemplates.Count > 0 && IsKnownLogPanelPath(GetComponentPath(instance));
+
+        if (string.IsNullOrEmpty(current)) return current;
+        if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return current;
+
+        // Repeat-raw fast path: the game re-assigned exactly the raw text this component was
+        // last translated from (e.g. a label refreshed every frame). Hand back the translation
+        // the component already holds, so the native setter sees an unchanged value and skips
+        // its own dirty-marking/rebuild, and no pipeline/memo lookup runs at all.
+        if (cache.RawSnapshot != null && cache.TranslatedSnapshot != null
+            && string.Equals(current, cache.RawSnapshot, StringComparison.Ordinal))
+            return cache.TranslatedSnapshot;
+
+        // Typewriter-reveal fast path: if a caller (e.g. PlotTextPatches) already ran the full
+        // pipeline against this component's eventual full text via
+        // SeedComponentTranslatedSnapshot, every partial value set while revealing toward it
+        // is just a shorter prefix of already-translated text - skip re-running the pipeline
+        // (and the ContainsCjk scan below, which would otherwise still fire on residual
+        // fullwidth punctuation in an already-translated string) for those partial values.
+        if (cache.TranslatedSnapshot != null && cache.TranslatedSnapshot.StartsWith(current, StringComparison.Ordinal))
         {
-            var cache = _componentTextCache.GetOrCreateValue(instance);
-            if (MainPlugin.SkipKnownNonCjkComponentsEnabledCached && cache.ConfirmedNonCjk)
-                return;
-
-            cache.IsKnownLogPanel ??= _logNarrativeCompiledTemplates.Count > 0 && IsKnownLogPanelPath(GetComponentPath(instance));
-
-            var current = getText();
-            if (string.IsNullOrEmpty(current)) return;
-            if (_compiledTemplates.Count == 0 && _dictionary.Count == 0) return;
-
-            // Typewriter-reveal fast path: if a caller (e.g. PlotTextPatches) already ran the full
-            // pipeline against this component's eventual full text via
-            // SeedComponentTranslatedSnapshot, every partial value set while revealing toward it
-            // is just a shorter prefix of already-translated text - skip re-running the pipeline
-            // (and the ContainsCjk scan below, which would otherwise still fire on residual
-            // fullwidth punctuation in an already-translated string) for those partial values.
-            if (cache.TranslatedSnapshot != null && cache.TranslatedSnapshot.StartsWith(current, StringComparison.Ordinal))
+            // A seeded snapshot (e.g. from PlotTextPatches' pre-translate) can itself still
+            // contain residual CJK if the pipeline only partially translated it - this fast
+            // path would otherwise hide that from residualCjkDebug.log entirely, since it
+            // returns before ever reaching the full-pipeline branch's LogResidualCjkDebug call
+            // below. Log it once per seeded snapshot instead of every tween step.
+            if (!cache.LoggedResidualCjkForSnapshot && ContainsCjk(cache.TranslatedSnapshot))
             {
-                // A seeded snapshot (e.g. from PlotTextPatches' pre-translate) can itself still
-                // contain residual CJK if the pipeline only partially translated it - this fast
-                // path would otherwise hide that from residualCjkDebug.log entirely, since it
-                // returns before ever reaching the full-pipeline branch's LogResidualCjkDebug call
-                // below. Log it once per seeded snapshot instead of every tween step.
-                if (!cache.LoggedResidualCjkForSnapshot && ContainsCjk(cache.TranslatedSnapshot))
-                {
-                    LogResidualCjkDebug("ApplyToComponentText (typewriter snapshot)", current, cache.TranslatedSnapshot, instance);
-                    cache.LoggedResidualCjkForSnapshot = true;
-                }
-                return;
+                LogResidualCjkDebug("ApplyToComponentText (typewriter snapshot)", current, cache.TranslatedSnapshot, instance);
+                cache.LoggedResidualCjkForSnapshot = true;
             }
-
-            // Trusted append-only fast path: a source-level patch already translates every
-            // fragment before it reaches this component (see MarkTrustedAppendOnlySource), so
-            // only the NEWLY GROWN suffix needs checking - avoids a full-buffer ContainsCjk scan
-            // of the whole (potentially huge, ever-growing) accumulated text on every append.
-            // Falls through to the normal full-pipeline path below if the buffer was reset/
-            // replaced (current no longer starts with RawSnapshot) rather than grown, OR if the
-            // suffix unexpectedly still has CJK (e.g. from an untranslated source this component
-            // also receives text from) - translating just the suffix in that case could miss a
-            // dictionary/template match straddling the old/new boundary, so let the full pipeline
-            // below process the whole buffer instead of guessing.
-            if (cache.TrustedAppendOnlySource && cache.RawSnapshot != null
-                && current.Length > cache.RawSnapshot.Length
-                && current.StartsWith(cache.RawSnapshot, StringComparison.Ordinal))
-            {
-                var appendedSuffix = current.Substring(cache.RawSnapshot.Length);
-                if (!ContainsCjk(appendedSuffix))
-                {
-                    cache.RawSnapshot = current;
-                    cache.TranslatedSnapshot += appendedSuffix;
-                    return;
-                }
-            }
-
-            if (!ContainsCjk(current))
-
-            {
-                if (MainPlugin.SkipKnownNonCjkComponentsEnabledCached)
-                    cache.ConfirmedNonCjk = true;
-                return;
-            }
-
-            string replaced;
-            // No line-break heuristic here: a template's own Raw text can legitimately contain
-            // "\n" (e.g. a two-line dialogue sentence), and its literal text could also span
-            // across two separate .text=/+= calls (e.g. "component.Text = $"{value}"" followed by
-            // "component.Text += $"{value2}""), so no boundary check can fully rule that out.
-            // IsSafeAppendBoundary only catches the dictionary-entry case. MainPlugin.
-            // AppendOnlySuffixTranslationEnabled gates the whole fast path off by default so this
-            // can be compared against always running the full pipeline until the typewriter
-            // reveal itself is addressed (see item 3 of the perf plan).
-            if (MainPlugin.AppendOnlySuffixTranslationEnabledCached
-                && cache.RawSnapshot != null
-                && current.Length > cache.RawSnapshot.Length
-                && current.StartsWith(cache.RawSnapshot, StringComparison.Ordinal)
-                && IsSafeAppendBoundary(current, cache.RawSnapshot.Length))
-            {
-                // Append-only growth (e.g. the InfoList scrolling log) - translate only the newly
-                // appended suffix instead of re-running the whole accumulated text every time.
-                // NOTE: InfoTextList's own Add() overloads are now pre-translated at the source
-                // (see InfoTextListAdd_Prefix below), so this branch should rarely have any CJK
-                // left to do for that specific log - it stays here as a fallback for any other
-                // append-only growing component this heuristic also happens to catch.
-                var suffix = current.Substring(cache.RawSnapshot.Length);
-                suffix = RunGenericPipeline(suffix, cache.IsKnownLogPanel == true);
-                replaced = cache.TranslatedSnapshot + suffix;
-            }
-            else
-            {
-                replaced = RunGenericPipeline(current, cache.IsKnownLogPanel == true);
-            }
-
-            LogResidualCjkDebug("ApplyToComponentText", current, replaced, instance);
-            cache.RawSnapshot = current;
-            cache.TranslatedSnapshot = replaced;
-            if (replaced == current) return;
-
-            setText(replaced);
+            return current;
         }
-        catch (Exception ex)
+
+        // Trusted append-only fast path: a source-level patch already translates every
+        // fragment before it reaches this component (see MarkTrustedAppendOnlySource), so
+        // only the NEWLY GROWN suffix needs checking - avoids a full-buffer ContainsCjk scan
+        // of the whole (potentially huge, ever-growing) accumulated text on every append.
+        // Falls through to the normal full-pipeline path below if the buffer was reset/
+        // replaced (current no longer starts with RawSnapshot) rather than grown, OR if the
+        // suffix unexpectedly still has CJK (e.g. from an untranslated source this component
+        // also receives text from) - translating just the suffix in that case could miss a
+        // dictionary/template match straddling the old/new boundary, so let the full pipeline
+        // below process the whole buffer instead of guessing.
+        if (cache.TrustedAppendOnlySource && cache.RawSnapshot != null
+            && current.Length > cache.RawSnapshot.Length
+            && current.StartsWith(cache.RawSnapshot, StringComparison.Ordinal))
         {
-            MainPlugin.Logger.LogError($"[DynamicStringPatches] Text setter postfix failed: {ex}");
+            var appendedSuffix = current.Substring(cache.RawSnapshot.Length);
+            if (!ContainsCjk(appendedSuffix))
+            {
+                cache.RawSnapshot = current;
+                cache.TranslatedSnapshot += appendedSuffix;
+                return current;
+            }
         }
-        finally
+
+        if (!ContainsCjk(current))
         {
-            _inTextSetterPostfix = false;
+            if (MainPlugin.SkipKnownNonCjkComponentsEnabledCached)
+                cache.ConfirmedNonCjk = true;
+            return current;
         }
+
+        string replaced;
+        // No line-break heuristic here: a template's own Raw text can legitimately contain
+        // "\n" (e.g. a two-line dialogue sentence), and its literal text could also span
+        // across two separate .text=/+= calls (e.g. "component.Text = $"{value}"" followed by
+        // "component.Text += $"{value2}""), so no boundary check can fully rule that out.
+        // IsSafeAppendBoundary only catches the dictionary-entry case. MainPlugin.
+        // AppendOnlySuffixTranslationEnabled gates the whole fast path off by default so this
+        // can be compared against always running the full pipeline until the typewriter
+        // reveal itself is addressed (see item 3 of the perf plan).
+        if (MainPlugin.AppendOnlySuffixTranslationEnabledCached
+            && cache.RawSnapshot != null
+            && current.Length > cache.RawSnapshot.Length
+            && current.StartsWith(cache.RawSnapshot, StringComparison.Ordinal)
+            && IsSafeAppendBoundary(current, cache.RawSnapshot.Length))
+        {
+            // Append-only growth (e.g. the InfoList scrolling log) - translate only the newly
+            // appended suffix instead of re-running the whole accumulated text every time.
+            // NOTE: InfoTextList's own Add() overloads are now pre-translated at the source
+            // (see InfoTextListAdd_Prefix below), so this branch should rarely have any CJK
+            // left to do for that specific log - it stays here as a fallback for any other
+            // append-only growing component this heuristic also happens to catch.
+            var suffix = current.Substring(cache.RawSnapshot.Length);
+            suffix = RunGenericPipeline(suffix, cache.IsKnownLogPanel == true);
+            replaced = cache.TranslatedSnapshot + suffix;
+        }
+        else
+        {
+            replaced = RunGenericPipeline(current, cache.IsKnownLogPanel == true);
+        }
+
+        LogResidualCjkDebug("ApplyToComponentText", current, replaced, instance);
+        cache.RawSnapshot = current;
+        cache.TranslatedSnapshot = replaced;
+        return replaced;
     }
 
     // True if no dictionary/template Raw entry straddles the append boundary at `boundaryIndex`
@@ -1585,7 +1800,9 @@ internal static class DynamicStringPatches
                 // Perf: skip the (potentially several) LiteralSegments.All(Contains) scans
                 // entirely when none of this template's trigger chars appear in the text at all.
                 presentChars ??= BuildCharSet(result);
-                if (!template.TriggerChars.Overlaps(presentChars))
+                // HashSet.Overlaps enumerates its ARGUMENT - called on the text's char set it walks
+                // only this template's 1-5 trigger chars, not every distinct char of the text.
+                if (!presentChars.Overlaps(template.TriggerChars))
                     continue;
                 if (!template.LiteralSegments.All(result.Contains))
                     continue;
@@ -1599,7 +1816,8 @@ internal static class DynamicStringPatches
             // the common (fast, no-match-or-quick-match) case pays only the Stopwatch timestamp.
             using var _perfTemplateScope = PerfInstrumentation.Measure(
                 "DynamicStringPatches.ApplyTemplatesSinglePass.Template",
-                () => $"template='{template.RawPreview}' input='{(result.Length > 80 ? result.Substring(0, 80) + "…" : result)}'");
+                (template.RawPreview, result),
+                static s => $"template='{s.RawPreview}' input='{(s.result.Length > 80 ? s.result.Substring(0, 80) + "…" : s.result)}'");
 
             // PLAN B: try the strict (non-CJK-capture) pattern first - unchanged bug #3/#4
             // behavior. Only fall back to the permissive (CJK-inclusive) pattern when the strict
@@ -1616,12 +1834,13 @@ internal static class DynamicStringPatches
             // losing this one substitution is far better than blocking the whole pipeline (and the
             // UI thread) for seconds.
             var pattern = template.Pattern;
+            if (pattern == null) continue; // failed to construct - logged once by CompiledTemplate
             try
             {
                 if (!pattern.IsMatch(result))
                 {
                     pattern = template.PermissivePattern;
-                    if (!pattern.IsMatch(result))
+                    if (pattern == null || !pattern.IsMatch(result))
                         continue;
                 }
             }
@@ -1654,8 +1873,7 @@ internal static class DynamicStringPatches
                     $"[DynamicStringPatches] Template replace timed out (>{TemplateRegexTimeout.TotalMilliseconds}ms), skipping: '{template.RawPreview}'");
                 continue;
             }
-            LogUnexpectedQuestionMark(
-                $"ApplyTemplatesSinglePass introduced '?' (template='{template.RawPreview}')",
+            LogUnexpectedQuestionMark(template, static t => $"ApplyTemplatesSinglePass introduced '?' (template='{t.RawPreview}')",
                 beforeThisTemplate, result);
             presentChars = null; // result changed - rebuild lazily for the next template
         }
@@ -1746,24 +1964,20 @@ internal static class DynamicStringPatches
     // Greedily tiles `run` left-to-right using `_dictionary` (already sorted longest-Raw-first by
     // LoadDictionary) - true only if every CJK character in `run` is covered by some back-to-back
     // bare dictionary entry (non-CJK characters, e.g. digits/color-tag punctuation, always pass).
+    //
+    // Perf: looks up only the run[pos] first-char bucket (FindLongestDictionaryMatchAt) instead of
+    // scanning all ~20k entries per position - the bucket keeps _dictionary's longest-first order,
+    // so the first hit is the same entry the full scan found. Hot: AdjacentRunSplitter calls this
+    // twice per candidate split point, inside regex match evaluators.
     private static bool IsFullyCoveredByDictionary(string run)
     {
         var pos = 0;
         while (pos < run.Length)
         {
             if (!IsCjkCharSingle(run[pos])) { pos++; continue; }
-            var matched = false;
-            foreach (var e in _dictionary)
-            {
-                if (string.IsNullOrEmpty(e.Raw)) continue;
-                if (pos + e.Raw.Length <= run.Length && string.CompareOrdinal(run, pos, e.Raw, 0, e.Raw.Length) == 0)
-                {
-                    pos += e.Raw.Length;
-                    matched = true;
-                    break;
-                }
-            }
-            if (!matched) return false;
+            var entry = FindLongestDictionaryMatchAt(run, pos);
+            if (entry == null) return false;
+            pos += entry.Raw.Length;
         }
         return true;
     }
@@ -1772,7 +1986,7 @@ internal static class DynamicStringPatches
     // raw Chinese fragment - such as a family/given name sliced out of a native string
     // concatenation - using this same loaded substring dictionary, outside of the
     // Concat/Format/text-setter hooks this class patches itself.
-    public static string TranslateFragment(string input) => ApplyDictionary(input, _dictionaryByFirstChar);
+    public static string TranslateFragment(string input) => ApplyDictionary(input, _dictionaryIndex);
 
     // Strict left-to-right, longest-match-AT-POSITION translation for short, structurally-anchored
     // compound strings (e.g. AreaName+BuildingName mission target names - see
@@ -1883,29 +2097,43 @@ internal static class DynamicStringPatches
     }
 
     // Detailed rationale and invariants: docs/dynamicstringpatches-agent-reference.md
-    private static string ApplyDictionary(string input, Dictionary<char, List<DictionaryEntry>> byFirstChar)
+    //
+    // Semantics: repeatedly apply the highest-ranked (longest-Raw-first) entry present in the
+    // CURRENT text, until none is. Two perf measures keep that exact outcome:
+    //  - Candidates come from DictionaryIndex's leading-pair buckets (only entries whose first two
+    //    chars occur adjacently in the text), ordered by Rank.
+    //  - Skip rule: after replacing an entry whose Result is non-empty and CJK-free, an all-CJK
+    //    entry that already failed Contains can't match now - the replacement only removed CJK text
+    //    and put non-CJK text between its neighbours, so no new all-CJK substring can form. Such
+    //    entries ranked at or before `skipThroughRank` are skipped instead of re-scanned after the
+    //    restart. Any other replacement resets the rule (everything gets re-checked).
+    private static string ApplyDictionary(string input, DictionaryIndex index)
     {
-        if (byFirstChar.Count == 0) return input;
+        if (index.Count == 0) return input;
 
         var result = input;
         List<DictionaryEntry> candidates = null;
         var i = 0;
+        var skipThroughRank = -1;
         while (true)
         {
-            // Rebuilt from the CURRENT result whenever it changes (same as before), but now
-            // scoped to only the entries whose first char is present, instead of the whole list.
-            candidates ??= CollectCandidates(byFirstChar, BuildCharSet(result));
+            candidates ??= CollectIndexedCandidates(index, result);
             if (i >= candidates.Count) break;
 
             var entry = candidates[i];
+            if (entry.RawIsAllCjk && entry.Rank <= skipThroughRank)
+            {
+                i++;
+                continue;
+            }
+
             if (result.Contains(entry.Raw))
             {
                 var beforeThisEntry = result;
-                var replaced = ReplaceWithWordBoundarySpacing(result, entry);
-                result = replaced;
-                LogUnexpectedQuestionMark(
-                    $"ApplyDictionary introduced '?' (raw='{entry.Raw}', translated='{entry.Result}')",
+                result = ReplaceWithWordBoundarySpacing(result, entry);
+                LogUnexpectedQuestionMark(entry, static e => $"ApplyDictionary introduced '?' (raw='{e.Raw}', translated='{e.Result}')",
                     beforeThisEntry, result);
+                skipThroughRank = entry.ResultLeavesNoCjk ? Math.Max(skipThroughRank, entry.Rank) : -1;
                 candidates = null; // result changed - rebuild lazily on next use
                 i = 0;
                 continue;
@@ -1913,6 +2141,33 @@ internal static class DynamicStringPatches
             i++;
         }
         return result;
+    }
+
+    private static readonly Comparison<DictionaryEntry> ByRank = static (a, b) => a.Rank.CompareTo(b.Rank);
+
+    // Entries whose leading pair (or, for single-char entries, whose char) occurs in `text`,
+    // ordered by Rank - i.e. longest Raw first, ties in load order.
+    private static List<DictionaryEntry> CollectIndexedCandidates(DictionaryIndex index, string text)
+    {
+        var candidates = new List<DictionaryEntry>();
+        var seenChars = new HashSet<char>();
+        var seenPairs = new HashSet<int>();
+        for (var i = 0; i < text.Length; i++)
+        {
+            var c = text[i];
+            if (seenChars.Add(c) && index.SingleChar.TryGetValue(c, out var single))
+                candidates.AddRange(single);
+
+            if (i + 1 < text.Length)
+            {
+                var key = LeadingPairKey(c, text[i + 1]);
+                if (seenPairs.Add(key) && index.ByLeadingPair.TryGetValue(key, out var pairBucket))
+                    candidates.AddRange(pairBucket);
+            }
+        }
+        if (candidates.Count > 1)
+            candidates.Sort(ByRank);
+        return candidates;
     }
 
     // Character-membership set for ApplyDictionary's pre-filter - allocated at most once per call

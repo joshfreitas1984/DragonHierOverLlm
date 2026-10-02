@@ -21,14 +21,31 @@ namespace EnglishPatch;
 // size math both use the same corrected number from the start, so they stay consistent.
 internal static class PlotTextSizePatches
 {
+    // Whether a given Text is THE PlotText (named "PlotText" under "PlotTextBack"), computed once
+    // per component - this getter runs for every Text on every layout pass, and the old
+    // per-call `.name` read copied a native string each time just to reject almost every caller.
+    // Interop wrappers are pooled per native object here, so the same component maps to the same
+    // key (same assumption DynamicStringPatches' per-component cache relies on).
+    private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<Text, System.Runtime.CompilerServices.StrongBox<bool>> _isPlotTextCache = new();
+
+    private static bool IsPlotText(Text text)
+    {
+        if (_isPlotTextCache.TryGetValue(text, out var cached)) return cached.Value;
+
+        var parent = text.transform.parent;
+        var isPlotText = text.name == "PlotText" && parent != null && parent.name == "PlotTextBack";
+        _isPlotTextCache.AddOrUpdate(text, new System.Runtime.CompilerServices.StrongBox<bool>(isPlotText));
+        return isPlotText;
+    }
+
     [HarmonyPatch(typeof(Text), nameof(Text.preferredWidth), MethodType.Getter)]
     [HarmonyPostfix]
     private static void ClampPreferredWidth_Postfix(Text __instance, ref float __result)
     {
         if (!MainPlugin.ClampPlotTextWidthEnabledCached) return;
-        if (__instance == null || __instance.name != "PlotText") return;
+        if (__instance == null || !IsPlotText(__instance)) return;
         var plotTextBackTransform = __instance.transform.parent;
-        if (plotTextBackTransform == null || plotTextBackTransform.name != "PlotTextBack") return;
+        if (plotTextBackTransform == null) return;
 
         // PlotController.ShowSinglePlot sets pivot on PlotTextBack (the parent), never on PlotText
         // itself - PlotText's own pivot stays a constant (0.5, 0.5) regardless of speaker. The
@@ -140,24 +157,41 @@ internal static class PlotTextSizePatches
     // a hard native crash, not a catchable managed exception, so the try/catch fallback this class
     // briefly had around it never got a chance to run. Do not retry DelegateSupport.ConvertDelegate
     // for this without confirming it works in this specific game build first.
-    private static int _lastTickedFrame = -1;
-
-    [HarmonyPatch(typeof(Time), nameof(Time.deltaTime), MethodType.Getter)]
-    [HarmonyPostfix]
-    private static void OnDeltaTimeRead_Postfix()
+    //
+    // In its own class, registered by MainPlugin ONLY when something needs the tick
+    // (PerfInstrumentation on, or either debug hotkey set - see IsNeeded): patching this getter
+    // routes every native Time.deltaTime read in the game (every Update, DOTween) through a managed
+    // trampoline plus a Time.frameCount interop call, which is pure overhead for players with all
+    // of those off (the default). Consequence: flipping one of them on mid-session needs a restart.
+    internal static class FrameTickPatch
     {
-        var frame = Time.frameCount;
-        if (frame == _lastTickedFrame) return;
-        _lastTickedFrame = frame;
+        private static int _lastTickedFrame = -1;
 
-        // Piggybacks on this same safe once-per-frame tick - see PerfInstrumentation for why.
-        PerfInstrumentation.PeriodicTick();
+        internal static bool IsNeeded =>
+            MainPlugin.PerfInstrumentationEnabledCached
+            || IsSet(MainPlugin.ForceTestPlotTextHotkey)
+            || IsSet(MainPlugin.ClearTranslationCachesHotkey);
 
-        if (MainPlugin.ForceTestPlotTextHotkey != null)
-            RunHotkeyCheck();
+        private static bool IsSet(BepInEx.Configuration.ConfigEntry<BepInEx.Unity.IL2CPP.Configuration.KeyboardShortcut> entry) =>
+            entry != null && entry.Value.MainKey != KeyCode.None;
 
-        if (MainPlugin.ClearTranslationCachesHotkey != null)
-            RunClearTranslationCachesHotkeyCheck();
+        [HarmonyPatch(typeof(Time), nameof(Time.deltaTime), MethodType.Getter)]
+        [HarmonyPostfix]
+        private static void OnDeltaTimeRead_Postfix()
+        {
+            var frame = Time.frameCount;
+            if (frame == _lastTickedFrame) return;
+            _lastTickedFrame = frame;
+
+            // Piggybacks on this same safe once-per-frame tick - see PerfInstrumentation for why.
+            PerfInstrumentation.PeriodicTick();
+
+            if (MainPlugin.ForceTestPlotTextHotkey != null)
+                RunHotkeyCheck();
+
+            if (MainPlugin.ClearTranslationCachesHotkey != null)
+                RunClearTranslationCachesHotkeyCheck();
+        }
     }
 
     private static void RunClearTranslationCachesHotkeyCheck()

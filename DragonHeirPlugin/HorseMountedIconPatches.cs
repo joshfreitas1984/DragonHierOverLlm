@@ -5,6 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using HarmonyLib;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace EnglishPatch;
@@ -123,6 +124,34 @@ internal static class HorseMountedIconPatches
         }
     }
 
+    // Perf: Update_Postfix runs every frame. The atlas lookup (string build + native
+    // LoadAtlasSprite, itself prefix-patched by AtlasIconPatches) is cached per horse itemID, and
+    // the Image per controller; Unity's == null (native-alive check) drops an entry whose object
+    // was destroyed, e.g. by an atlas/scene unload.
+    private static readonly Dictionary<int, Sprite> _mountedSpriteByItemId = new();
+    private static readonly System.Runtime.CompilerServices.ConditionalWeakTable<HorseIconController, Image> _imageByController = new();
+
+    private static Sprite GetMountedSprite(int itemId, string rawName)
+    {
+        if (_mountedSpriteByItemId.TryGetValue(itemId, out var cached) && cached != null)
+            return cached;
+
+        var textureController = TextureController.Instance;
+        if (textureController == null) return null;
+
+        // Joined via StringBuilder, NOT string.Concat/interpolation/+ - see class remarks,
+        // point 2/3, for why plain concatenation gets the "大" suffix independently retranslated.
+        var spriteName = new StringBuilder(rawName.Length + MountedSuffix.Length)
+            .Append(rawName)
+            .Append(MountedSuffix)
+            .ToString();
+
+        var sprite = textureController.LoadAtlasSprite(TargetAtlas, spriteName);
+        if (sprite != null)
+            _mountedSpriteByItemId[itemId] = sprite;
+        return sprite;
+    }
+
     // [GameCoupled HorseIconController.Update logic] builds the sprite key as targetHorseData.name + "大"
     [HarmonyPatch(typeof(HorseIconController), nameof(HorseIconController.Update))]
     [HarmonyPostfix]
@@ -139,21 +168,19 @@ internal static class HorseMountedIconPatches
             if (!_rawNamesByItemId.TryGetValue(horse.itemID, out var rawName) || string.IsNullOrEmpty(rawName))
                 return;
 
-            var textureController = TextureController.Instance;
-            if (textureController == null) return;
-
-            // Joined via StringBuilder, NOT string.Concat/interpolation/+ - see class remarks,
-            // point 2/3, for why plain concatenation gets the "大" suffix independently retranslated.
-            var spriteNameBuilder = new StringBuilder();
-            spriteNameBuilder.Append(rawName);
-            spriteNameBuilder.Append(MountedSuffix);
-            var spriteName = spriteNameBuilder.ToString();
-
-            var sprite = textureController.LoadAtlasSprite(TargetAtlas, spriteName);
+            var sprite = GetMountedSprite(horse.itemID, rawName);
             if (sprite == null) return;
 
-            var image = __instance.horseIcon.GetComponent<Image>();
-            if (image == null) return;
+            if (!_imageByController.TryGetValue(__instance, out var image) || image == null)
+            {
+                image = __instance.horseIcon.GetComponent<Image>();
+                if (image == null) return;
+                _imageByController.AddOrUpdate(__instance, image);
+            }
+
+            // Already showing the right sprite - skip the setter (and its dirty-marking).
+            var current = image.sprite;
+            if (current != null && current.Pointer == sprite.Pointer) return;
 
             image.sprite = sprite;
         }

@@ -55,18 +55,53 @@ internal static class GlobalDataListOverrides
         //("MaterialTypeName", new []{ "Timber", "Ore", "Medical", "Ingredients", "Poison"}),
     };
 
+    // Set by MainPlugin from Harmony.CreateAndPatchAll - lets UnpatchGetAttriLv remove just that
+    // postfix once the one-time apply has happened.
+    internal static Harmony HarmonyInstance;
+    private static bool _getAttriLvUnpatched;
+
     // [GameCoupled PlotController.Awake by-name] targeted by string
     [HarmonyPatch(typeof(PlotController), "Awake")]
     [HarmonyPostfix]
-    private static void PlotController_Awake_Postfix() => TryApply("PlotController.Awake");
+    private static void PlotController_Awake_Postfix()
+    {
+        TryApply("PlotController.Awake");
+        UnpatchGetAttriLv();
+    }
 
+    // Never unpatches itself from in here (detouring a method from inside its own patch) - the
+    // next PlotController.Awake/ShowHeroDetail call removes it instead.
     [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.GetAttriLv))]
     [HarmonyPostfix]
     private static void GetAttriLv_Postfix() => TryApply("GlobalData.GetAttriLv");
 
     [HarmonyPatch(typeof(HeroDetailController), nameof(HeroDetailController.ShowHeroDetail))]
     [HarmonyPostfix]
-    private static void ShowHeroDetail_Postfix() => TryApply("HeroDetailController.ShowHeroDetail");
+    private static void ShowHeroDetail_Postfix()
+    {
+        TryApply("HeroDetailController.ShowHeroDetail");
+        UnpatchGetAttriLv();
+    }
+
+    // GetAttriLv is a general helper the game can call often; once the overrides are applied its
+    // postfix is just a trampoline round-trip that returns immediately, so drop it. The other two
+    // triggers are one-off UI events and stay patched (harmless).
+    private static void UnpatchGetAttriLv()
+    {
+        if (!_applied || _getAttriLvUnpatched || HarmonyInstance == null) return;
+        _getAttriLvUnpatched = true;
+
+        try
+        {
+            var target = AccessTools.Method(typeof(GlobalData), nameof(GlobalData.GetAttriLv));
+            HarmonyInstance.Unpatch(target, HarmonyPatchType.Postfix, HarmonyInstance.Id);
+            MainPlugin.Logger.LogInfo("[GlobalDataListOverrides] Unpatched GlobalData.GetAttriLv (overrides already applied).");
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogWarning($"[GlobalDataListOverrides] Failed to unpatch GlobalData.GetAttriLv (harmless - it just stays patched): {ex}");
+        }
+    }
 
     private static void TryApply(string trigger)
     {

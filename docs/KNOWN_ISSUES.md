@@ -51,6 +51,7 @@ root `docs/` taxonomy.
 - [Hero name spacing and translation plan](investigations/plugin/hero-name-spacing-and-translation-plan.md)
 - [PlotText width overflow investigation](investigations/plugin/plottext-width-overflow-investigation.md)
 - [Performance optimization pass](investigations/plugin/performance-optimization-pass-2026-09-13.md)
+- [Performance optimization pass 2 (algorithms, setter prefixes)](investigations/plugin/performance-optimization-pass-2026-10-02.md)
 - [Record-log translation naturalness](investigations/plugin/recordlog-translation-naturalness.md)
 - [UnityLogCapture logMessageReceived investigation](investigations/plugin/unitylogcapture-no-logmessagereceived.md)
 - [UpgradePriority and HeroSearch diagnostics removed](investigations/plugin/upgradepriority-and-herosearch-diagnostics-removed.md)
