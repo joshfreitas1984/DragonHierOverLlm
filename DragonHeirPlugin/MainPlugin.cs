@@ -123,6 +123,14 @@ public class MainPlugin : BasePlugin
     // Cached copy - see BindCachedBool/ResidualCjkDebugEnabledCached above.
     internal static bool ResyncMountedHorseIconEnabledCached;
 
+    // On by default - see HeroFightScoreListPatches.
+    internal static ConfigEntry<bool> FastHeroFightScoreListEnabled;
+    internal static bool FastHeroFightScoreListEnabledCached;
+
+    // Max milliseconds per ranking refresh spent recounting dirty heroes; 0 = unlimited.
+    internal static ConfigEntry<int> FastHeroFightScoreListRecountBudgetMs;
+    internal static int FastHeroFightScoreListRecountBudgetMsCached;
+
     // Off by default (dicey/unverified) - a "recollection" dialogue template (e.g.
     // "#TargetInteractName#将此前{0}之遭遇向你娓娓道来......") can embed another already-formatted
     // template's output (a plot-event/world-news sentence, e.g. "{0}在{1}遭逢{5}奇遇...") as its own
@@ -330,6 +338,22 @@ public class MainPlugin : BasePlugin
             true,
             "When true, the currently-equipped/ridden horse's bigmap quick-travel icon is resolved by looking up its itemID in a raw-name table read directly from the deployed HorseData.csv, instead of relying on the (already-translated in memory, and sometimes save-baked) targetHorseData.name field, so the icon resolves instead of going missing once the horse's name has been translated to English. See HorseMountedIconPatches.",
             v => ResyncMountedHorseIconEnabledCached = v);
+
+        FastHeroFightScoreListEnabled = BindCachedBool(
+            "Performance",
+            "FastHeroFightScoreList",
+            true,
+            "When true, the Hall of Heroes ranking rebuild (also run before every Battle for Martial Supremacy single/multi bout) sorts the heroes once instead of using the game's per-hero insertion sort, with the same eligibility rules and result order. Turn off to use the original game code. See HeroFightScoreListPatches.",
+            v => FastHeroFightScoreListEnabledCached = v);
+
+        FastHeroFightScoreListRecountBudgetMs = Config.Bind(
+            "Performance",
+            "HeroFightScoreListRecountBudgetMs",
+            300,
+            "Max milliseconds each Hall of Heroes ranking refresh spends recounting heroes whose stats changed (the game's native recount costs ~4ms per hero). Highest-ranked heroes are recounted first; the rest keep their last score and are caught up on later refreshes. 0 = recount everyone every time, like the original game. Only used when FastHeroFightScoreList is on.");
+        FastHeroFightScoreListRecountBudgetMsCached = FastHeroFightScoreListRecountBudgetMs.Value;
+        FastHeroFightScoreListRecountBudgetMs.SettingChanged += (_, _) =>
+            FastHeroFightScoreListRecountBudgetMsCached = FastHeroFightScoreListRecountBudgetMs.Value;
 
         ClampPlotTextWidthEnabled = BindCachedBool(
             "Game Bugfixes",
@@ -569,6 +593,16 @@ public class MainPlugin : BasePlugin
         catch (Exception ex)
         {
             Logger.LogError($"Failed to patch HorseMountedIconPatches: {ex}");
+        }
+
+        // Wrapped separately - binds against RefreshHeroFightScoreList's real interop signature.
+        try
+        {
+            Harmony.CreateAndPatchAll(typeof(HeroFightScoreListPatches));
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError($"Failed to patch HeroFightScoreListPatches: {ex}");
         }
 
         Logger.LogWarning($"Plugin {MyPluginInfo.PLUGIN_GUID} should be patched!");
