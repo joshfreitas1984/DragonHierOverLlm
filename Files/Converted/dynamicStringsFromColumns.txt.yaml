@@ -42657,8 +42657,8 @@
 - raw: "梵文贝叶经"
   splits:
   - text: "梵文贝叶经"
-    translated: "Buddhist Palm Leaf Texts"
-    qcReviewedText: "Buddhist Palm Leaf Texts"
+    translated: "Sanskrit Palm‑Leaf Scriptures"
+    qcReviewedText: "Sanskrit Palm‑Leaf Scriptures"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -59885,6 +59885,10 @@
   splits:
   - text: "都.点检"
     translated: "Grand Marshal"
+    qcReviewedText: "Grand Marshal"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "长兵/绝技/内功"
   splits:
   - text: "长兵"

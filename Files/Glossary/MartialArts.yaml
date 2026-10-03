@@ -12,6 +12,9 @@
   result: "Split Gold Shatter Jade Palm"
 - raw: "潮起月盈功"
   result: "Tide Rising Full Moon Art"
+- raw: 梵文贝叶经
+  result: Sanskrit Palm-Leaf Scriptures
+  badtrans: true
 
 
 ###### New
@@ -2543,9 +2546,6 @@
 # - raw: 玄女九式
 #   result: Nine Mystic Feminine Techniques
 #   badtrans: true
-# # - raw: 梵文贝叶经
-# #   result: Buddhist Palm Leaf Texts
-# #   badtrans: true
 # - raw: 舍身飞渡
 #   result: Selfless leap across
 #   badtrans: true

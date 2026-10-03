@@ -61932,6 +61932,10 @@
   splits:
   - text: "都点检"
     translated: "Grand Marshal"
+    qcReviewedText: "Grand Marshal"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "配偶"
   splits:
   - text: "配偶"
