@@ -107,7 +107,7 @@ cost" below for why that matters.
   `Qwen38Qc-IQ4XS` now that the question is closed.
 - **Sub-question closed (2026-09-20): the ceiling is not a reasoning-budget problem either.** Using
   the newly-added `qualityEvaluatorAssessment.detectionThinkingEnabled` flag (mirrors the
-  verification-call thinking precedent - see `quality-review-pass-architecture.md`'s "Verification-
+  verification-call thinking precedent - see `FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "Verification-
   call thinking" section) plus headroom raised in `HyMT2Moe`'s preset (`num_ctx`/`num_predict`
   4096/2048 -> 8192/4096, harmless with thinking off), ran `HyMT2-30B-A3B` with detection-time
   thinking enabled against the same 108-entry gold set (English prompt):

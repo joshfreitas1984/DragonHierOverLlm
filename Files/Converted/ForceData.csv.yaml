@@ -206,13 +206,13 @@
     text: "枪术"
     translated: "Gun combat"
     qcReviewedText: "<b>Gun combat</b>：Study long weapons at the horse racing track to increase long weapon power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
-    qcTranslated: "<b>Spear technique</b>: Study long weapons at the horse racing track to increase Long weapon Power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcTranslated: "<b>Spear Mastery</b>: Study Long weapons at the horse racing track to increase Long weapon Power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases all of the horse's stats by 0.2%."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - OtherNamedDefect
+    - DomainTerm
+    - UnnaturalPhrasing
   - split: 15
     subIndex: 1
     text: "赛马场研究长兵兵器，提升长兵威力。"
@@ -419,8 +419,7 @@
     qcReviewedText: "<b>Way of Dao</b>：Gain the Wudang sect martial arts bonuses through Daoist cultivation.\\n<b>Do Nothing</b>：Teach and civilize wild villains or other Heroes, changing others' stance to a neutral one and increasing their goodwill and reputation."
     qcTranslated: "<b>Way of Dao</b>: Gain the Wudang Sect martial arts bonuses through Daoist cultivation.\\n<b>Do Nothing</b>: Teach and civilize wild villains or other Heroes, changing others' stance to a neutral one and increasing their goodwill and reputation."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
     - OtherNamedDefect
@@ -533,11 +532,11 @@
     qcReviewedText: "<b>Strange Art</b>：Study the seventy‑two holes of Qimen weapons to enhance Qimen Power.\\n<b>Constant problems</b>：For each advanced Qimen martial art mastered at level cap, gain an additional bonus based on the art's quality level.0.5/1/1.5/2/2.5/3 points of Qimen"
     qcTranslated: "<b>Strange Art</b>: Study the seventy‑two caves' research on Qimen weapons to enhance Qimen Power.\\n<b>Hundred Failures</b>: For each Qimen martial art mastered at max level, gain an additional .0/.5/1/1.5/2/2.5 points of Qimen based on the art's quality level."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
-    - DroppedContent
+    - GarbledNumber
+    - UnnaturalPhrasing
   - split: 15
     subIndex: 1
     text: "七十二洞研究奇门兵器，提升奇门威力。"

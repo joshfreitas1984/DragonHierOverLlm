@@ -2958,7 +2958,7 @@
   - text: "骕骦马"
     translated: "Stallion"
     qcReviewedText: "Stallion"
-    qcTranslated: "Suishang"
+    qcTranslated: "Suishuang"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -3024,7 +3024,7 @@
   - text: "拳毛驹"
     translated: "Curly‑Coated Colt"
     qcReviewedText: "Curly‑Coated Colt"
-    qcTranslated: "Qunmao Ju"
+    qcTranslated: "Quanmaoju"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -45796,13 +45796,12 @@
   - text: "祝融真火诀"
     translated: "Wishing You True Fire Technique Success"
     qcReviewedText: "Wishing You True Fire Technique Success"
-    qcTranslated: "Zhurong True Fire Formula"
+    qcTranslated: "Zhurong True Fire Art"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "生命上限60;内力上限30;内功12;意志12;锻造12;灼烧0.05;动摇0.05"
   splits:
   - text: "生命上限60"
@@ -53636,14 +53635,12 @@
   - text: "-1"
     translated: "‑1"
     qcReviewedText: "‑1"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "1"
-    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
+    qcTranslated: "‑1"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "‑1"
+    - OtherNamedDefect
 - raw: "平常/善良"
   splits:
   - text: "平常"
@@ -53753,7 +53750,7 @@
 - raw: "游侠;御剑;刚愎;云游"
   splits:
   - text: "游侠"
-    translated: "Wandering Swordsman"
+    translated: "Wandering Hero"
   - subIndex: 1
     text: "御剑"
     translated: "Sword Manipulation"
@@ -53922,7 +53919,7 @@
 - raw: "游侠;谦逊;冷静;正直"
   splits:
   - text: "游侠"
-    translated: "Wandering Swordsman"
+    translated: "Wandering Hero"
   - subIndex: 1
     text: "谦逊"
     translated: "Modesty"
@@ -54629,7 +54626,7 @@
     translated: "Rebellion"
   - subIndex: 7
     text: "游侠"
-    translated: "Wandering Swordsman"
+    translated: "Wandering Hero"
   - subIndex: 8
     text: "以毒攻毒"
     translated: "Fight poison with poison"
@@ -57246,7 +57243,7 @@
     translated: "Practicing martial arts"
   - subIndex: 1
     text: "游侠"
-    translated: "Wandering Swordsman"
+    translated: "Wandering Hero"
   - subIndex: 2
     text: "美貌"
     translated: "Beauty"
@@ -58835,7 +58832,7 @@
     translated: "Taoist priest"
   - subIndex: 1
     text: "侠客"
-    translated: "Wanderer"
+    translated: "Hero"
   - subIndex: 2
     text: "浪迹天涯"
     translated: "Wandering the ends of the earth"
@@ -59059,7 +59056,7 @@
     translated: "Forget to Eat and Sleep"
   - subIndex: 2
     text: "侠客"
-    translated: "Wanderer"
+    translated: "Hero"
   - subIndex: 3
     text: "耍刀"
     translated: "Saber Techniques"
@@ -60465,7 +60462,7 @@
     translated: "Diligence"
   - subIndex: 3
     text: "游侠"
-    translated: "Wandering Swordsman"
+    translated: "Wandering Hero"
   templates:
   - template: "{0};{1};{2};{3}"
 - raw: "熊.刚"
@@ -63387,26 +63384,26 @@
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent: Wandering Swordsman"
+    qcReviewedText: "Talent: Wandering Hero"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "游侠"
-    translated: "Wandering Swordsman"
+    translated: "Wandering Hero"
   templates:
   - template: "{0}:{1}"
 - raw: "天赋:侠客"
   splits:
   - text: "天赋"
     translated: "Talent"
-    qcReviewedText: "Talent: Wanderer"
+    qcReviewedText: "Talent: Hero"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "侠客"
-    translated: "Wanderer"
+    translated: "Hero"
   templates:
   - template: "{0}:{1}"
 - raw: "天赋:赌徒"
@@ -65737,24 +65734,24 @@
 - raw: "侠客甲"
   splits:
   - text: "侠客甲"
-    translated: "Wanderer A"
-    qcReviewedText: "Wanderer A"
+    translated: "Hero A"
+    qcReviewedText: "Hero A"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "侠客乙"
   splits:
   - text: "侠客乙"
-    translated: "Wanderer Second"
-    qcReviewedText: "Wanderer Second"
+    translated: "Hero Yi"
+    qcReviewedText: "Hero Yi"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "侠客丙"
   splits:
   - text: "侠客丙"
-    translated: "Wanderer Bing"
-    qcReviewedText: "Wanderer Bing"
+    translated: "Hero C"
+    qcReviewedText: "Hero C"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

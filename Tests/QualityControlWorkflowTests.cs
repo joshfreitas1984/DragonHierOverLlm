@@ -406,7 +406,7 @@ public class QualityControlWorkflowTests
     // changed, never whether the QC model/prompt that produced an existing verdict did - so
     // swapping the QC model, or a prompt change significant enough that already-recorded
     // Passed/Corrected verdicts can no longer be trusted (see
-    // docs/quality-review-pass-architecture.md's "Postmortems" section, FanslationStudio.LlmKit -
+    // docs/investigations/quality-review-postmortems.md's "Postmortems" section, FanslationStudio.LlmKit -
     // the omitted-subject rule and low-score-discard retry bug fixed there both mean a PRIOR
     // verdict may be less trustworthy than its stored status suggests), is when to run this - never
     // as a matter of routine, since a full re-review is the same many-hours job a first full run

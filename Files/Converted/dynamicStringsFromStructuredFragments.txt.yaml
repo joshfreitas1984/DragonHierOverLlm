@@ -712,7 +712,7 @@
     qcReviewedText: "♦Favor Gain with Intimacy Relationship +20%, Favor Consumption-20%\n♦To wrong friends and family, infamy x400%"
     qcTranslated: "♦Favor Gain with Intimate Relationships +20%, Favor Consumption ‑20%\n♦Wronging friends and family, Infamy x400%"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
     - UnnaturalPhrasing

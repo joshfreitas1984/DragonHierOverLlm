@@ -456,8 +456,8 @@
   splits:
   - split: 19
     text: "由星罗棋布，错综复杂的引水渠道和大小水库组成的庞大水利工程，其渠可行舟，亦可作浇灌汲饮之用，蜀中以此灌溉沃野千里，并罕有水灾泛滥，终成其“天府”之美名。"
-    translated: "A vast water engineering project consisting of intricate and numerous irrigation canals and reservoirs supports the fertile fields of Shu. These canals serve not only as passageways for boats but also for irrigation and drinking. Thanks to this system, Shu enjoys rare occurrences of floods and earns its reputation as the Land of Abundance."
-    qcReviewedText: "A vast water engineering project consisting of intricate and numerous irrigation canals and reservoirs supports the fertile fields of Shu. These canals serve not only as passageways for boats but also for irrigation and drinking. Thanks to this system, Shu enjoys rare occurrences of floods and earns its reputation as the Land of Abundance."
+    translated: "This vast water management system, composed of a network of intricate channels and reservoirs scattered like stars, serves both for navigation and irrigation, allowing the fertile fields of Shu to span thousands of miles while rarely suffering from floods. It is this that earned Shu its reputation as the Land of Abundance."
+    qcReviewedText: "This vast water management system, composed of a network of intricate channels and reservoirs scattered like stars, serves both for navigation and irrigation, allowing the fertile fields of Shu to span thousands of miles while rarely suffering from floods. It is this that earned Shu its reputation as the Land of Abundance."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -552,15 +552,16 @@
   splits:
   - split: 19
     text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰"
-    translated: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Shen Zhen and Fu Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:"
-    qcReviewedText: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Shen Zhen and Fu Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:：Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
-    qcTranslated: "Divine Craftsmanship, in the grotto filled with ethereal mist, the Mao Shan disciples practice the methods of Preserving the Spirit and Ingesting Qi, reaping boundless benefits. As an ode to this place, a former poet wrote:：Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to Mulberry Field, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
+    translated: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse:"
+    qcReviewedText: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse:：Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
+    qcTranslated: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse: Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to Mulberry Field, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UntranslatedPinyin
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
     - OtherNamedDefect
+    - UnnaturalPhrasing
   - split: 19
     subIndex: 1
     text: "素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
@@ -602,14 +603,11 @@
   splits:
   - split: 19
     text: "屹立于山巅，取“危楼高百尺，手可摘星辰”之意。阁中珍藏诸子百家，经书典籍无数，每上一层，藏书之艰深晦涩便进一层。大隐阁弟子逐层研习而能登顶楼者，至今不过寥寥数人尔。"
-    translated: "Perched atop the mountain, it takes inspiration from A perilous tower a hundred feet high, where one's hands can pluck at the stars. The Pavilion houses countless treasures of the Hundred Schools and ancient texts. With each ascent, the depth and complexity of the zhenshu increase. To this day, only a handful of Great Hidden Pavilion disciples have been able to reach the top floor through their layer‑by‑layer study."
-    qcReviewedText: "Perched atop the mountain, it takes inspiration from A perilous tower a hundred feet high, where one's hands can pluck at the stars. The Pavilion houses countless treasures of the Hundred Schools and ancient texts. With each ascent, the depth and complexity of the zhenshu increase. To this day, only a handful of Great Hidden Pavilion disciples have been able to reach the top floor through their layer‑by‑layer study."
-    qcTranslated: "Perched atop the mountain, it takes inspiration from A perilous tower a hundred feet high, where one's hands can pluck at the stars. The Pavilion houses countless treasures of the Hundred Schools and ancient texts. With each ascent, the depth and complexity of the books increase. To this day, only a handful of Great Hidden Pavilion disciples have been able to reach the top floor through their layer‑by‑layer study."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Standing atop the mountain peak, embodying the meaning of a perilous tower a hundred feet high, where one can pluck stars with his hand. Within its halls are countless treasures of the Hundred Schools of Thought and classics, and with each ascending level, the depth and obscurity of the texts increase. Among the disciples of the Great Hidden Pavilion, those who have climbed to the pinnacle by studying layer by layer are but a few."
+    qcReviewedText: "Standing atop the mountain peak, embodying the meaning of a perilous tower a hundred feet high, where one can pluck stars with his hand. Within its halls are countless treasures of the Hundred Schools of Thought and classics, and with each ascending level, the depth and obscurity of the texts increase. Among the disciples of the Great Hidden Pavilion, those who have climbed to the pinnacle by studying layer by layer are but a few."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "63,铜人阵,63,6,1,0,4,提升生命上限--StudyMaxState-0;禅宗修行-我&门派功能10-ShowMeditation,威望+20,木料-50;矿石-100,理论经验0.1;实战经验0.2;全员体质2,,银钱1000;矿石2000,20,40,,3,footstep,0;0,以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
   splits:
   - split: 19

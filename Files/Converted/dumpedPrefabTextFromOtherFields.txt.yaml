@@ -4157,13 +4157,13 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Xiliang </b>They have gathered some leads in their pursuit of the notorious bandit responsible for the recent bloodshed in the city. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
-    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> investigating the notorious bandit responsible for the recent bloodshed in the city, and I have now gathered some leads. I hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
+    qcTranslated: "#PlayerName#, I am investigating the notorious bandit responsible for the recent bloodshed in <b>Xiliang</b> city, and I have gathered some leads. I hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
+    - MeaningReversal
   - subIndex: 1
     text: "西凉"
     translated: "Xiliang"
@@ -8157,9 +8157,9 @@
 - raw: "传闻长乐帮笑面虎为了围杀多管闲事的江湖侠客，在<b>#PosText#</b>一带布下了天罗地网。"
   splits:
   - text: "传闻长乐帮笑面虎为了围杀多管闲事的江湖侠客，在"
-    translated: "Rumors say that the Smiling Tiger of Changle Gang has gathered forces to eliminate meddlesome Jianghu Wanderers."
-    qcReviewedText: "Rumors say that the Smiling Tiger of Changle Gang has gathered forces to eliminate meddlesome Jianghu Wanderers.<b>#PosText#</b>A net was cast across the land"
-    qcTranslated: "Rumors say that the Smiling Tiger of Changle Gang has gathered forces to eliminate meddlesome Jianghu Wanderers, casting a net across <b>#PosText#</b> and its surroundings."
+    translated: "It is said that Smile Tiger of the Changle Gang plotted to ambush and kill the meddlesome Jianghu Hero, in"
+    qcReviewedText: "It is said that Smile Tiger of the Changle Gang plotted to ambush and kill the meddlesome Jianghu Hero, in<b>#PosText#</b>A net was cast across the land"
+    qcTranslated: "It is said that Smile Tiger of the Changle Gang plotted to ambush and kill the meddlesome Jianghu Hero, casting a net across the land in<b>#PosText#</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -11459,13 +11459,13 @@
   - text: "听爹爹说，"
     translated: "Listen to Father say,"
     qcReviewedText: "Listen to Father say,<b>A month later, the capital city </b>A competition will be held <b>Youth Hero Conference</b>, By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName#, I can't miss it!"
-    qcTranslated: "Father told me that <b>a month from now, in the Capital</b>, a <b>Young Heroes' Tournament</b> will be held. By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName# and I can't miss it!"
+    qcTranslated: "Father told me that <b>a month from now, in the Capital</b>, a <b>Young Heroes' Tournament</b> will be held. By then, it will surely be a grand spectacle with the whole town in the streets. As one of the top young heroes, #PlayerName#, I can't miss it!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "一个月后京城"
     translated: "A month later, the capital city"
@@ -12014,14 +12014,15 @@
 - raw: "听闻黄河五鬼岳无畏被侠客追杀，一路向西南逃亡，如今在<b>#PosText#</b>城内躲藏。"
   splits:
   - text: "听闻黄河五鬼岳无畏被侠客追杀，一路向西南逃亡，如今在"
-    translated: "It was heard that Yue Wuwei, one of the Five Ghosts of the Yellow River, has been hunted down by a wanderer and has fled southwest; he is now in"
-    qcReviewedText: "It was heard that Yue Wuwei, one of the Five Ghosts of the Yellow River, has been hunted down by a wanderer and has fled southwest; he is now in<b>#PosText#</b>Hide within the city"
-    qcTranslated: "It was heard that Yue Wuwei, one of the Five Ghosts of the Yellow River, has been hunted down by a Wanderer and has fled southwest; he is now hiding within <b>#PosText#</b> city."
+    translated: "It was heard that the Yellow River Five Ghosts, Yue Wuwei, was being hunted by a hero and has been fleeing southwest; now he is in"
+    qcReviewedText: "It was heard that the Yellow River Five Ghosts, Yue Wuwei, was being hunted by a hero and has been fleeing southwest; now he is in<b>#PosText#</b>Hide within the city"
+    qcTranslated: "It was heard that the Yellow River Five Ghosts, Yue Wuwei, was being hunted by a Hero and has been fleeing southwest; now he is hiding in<b>#PosText#</b>city."
     qcStatus: Corrected
-    qcQualityScore: 95
+    qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "城内躲藏。"
     translated: "Hide within the city"
@@ -12589,8 +12590,8 @@
 - raw: "啊这......虽说给富户当家丁这种差事，对于侠客来说有些丢脸，\\n奈何这丰厚报酬，却又实在诱人啊......"
   splits:
   - text: "啊这......虽说给富户当家丁这种差事，对于侠客来说有些丢脸，"
-    translated: "Ah, well... While serving as a retainer to a wealthy household might be a bit humiliating for a wanderer,"
-    qcReviewedText: "Ah, well... While serving as a retainer to a wealthy household might be a bit humiliating for a wanderer,\\nYet, the generous reward is simply too tempting to pass up..."
+    translated: "Ah, this... Although working as a butler for a wealthy household is somewhat embarrassing for a hero."
+    qcReviewedText: "Ah, this... Although working as a butler for a wealthy household is somewhat embarrassing for a hero.\\nYet, the generous reward is simply too tempting to pass up..."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -18916,13 +18917,13 @@
   - text: "沈退师兄近来鬼鬼祟祟，不知在"
     translated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve."
     qcReviewedText: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve.<b>#PosText#</b>What are you up to"
-    qcTranslated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve. <b>#PosText#</b>"
+    qcTranslated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve. <b>#PosText#</b> What are you up to"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 55
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "搞些什么东西。"
     translated: "What are you up to"
@@ -23890,12 +23891,13 @@
   - text: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，"
     translated: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant."
     qcReviewedText: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant.\\nFor all renowned scholars of future generations to admire."
-    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word carried the weight of nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
+    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word was as good as nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 45
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
+    - UnnaturalPhrasing
     - LostIdiom
   - subIndex: 1
     text: "供后世所有名人雅士瞻仰。"
@@ -25397,3 +25399,168 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "名士"
+  splits:
+  - text: "名士"
+    translated: "Scholar"
+    qcReviewedText: "Scholar"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "商人"
+  splits:
+  - text: "商人"
+    translated: "Trader"
+    qcReviewedText: "Trader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "官兵领队"
+  splits:
+  - text: "官兵领队"
+    translated: "Officer led the way"
+    qcReviewedText: "Officer led the way"
+    qcTranslated: "Officer led the troops"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+- raw: "官差"
+  splits:
+  - text: "官差"
+    translated: "Officer"
+    qcReviewedText: "Officer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "富商"
+  splits:
+  - text: "富商"
+    translated: "Wealthy merchant"
+    qcReviewedText: "Wealthy merchant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "小二"
+  splits:
+  - text: "小二"
+    translated: "Waiter"
+    qcReviewedText: "Waiter"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "小贼"
+  splits:
+  - text: "小贼"
+    translated: "Rascal thief"
+    qcReviewedText: "Rascal thief"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "强盗头目"
+  splits:
+  - text: "强盗头目"
+    translated: "Bandit leader"
+    qcReviewedText: "Bandit leader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "恶贼头目"
+  splits:
+  - text: "恶贼头目"
+    translated: "Chief villain"
+    qcReviewedText: "Chief villain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "恶霸头目"
+  splits:
+  - text: "恶霸头目"
+    translated: "Bullseye Boss"
+    qcReviewedText: "Bullseye Boss"
+    qcTranslated: "Bully Leader"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
+- raw: "拍卖主持"
+  splits:
+  - text: "拍卖主持"
+    translated: "Auctioneer"
+    qcReviewedText: "Auctioneer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "暴民头领"
+  splits:
+  - text: "暴民头领"
+    translated: "Mob leader"
+    qcReviewedText: "Mob leader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "百姓"
+  splits:
+  - text: "百姓"
+    translated: "Common people"
+    qcReviewedText: "Common people"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "盗贼"
+  splits:
+  - text: "盗贼"
+    translated: "Thief"
+    qcReviewedText: "Thief"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "管家"
+  splits:
+  - text: "管家"
+    translated: "Butler"
+    qcReviewedText: "Butler"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "落魄之人"
+  splits:
+  - text: "落魄之人"
+    translated: "Down‑and‑out person"
+    qcReviewedText: "Down‑and‑out person"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "讲经人"
+  splits:
+  - text: "讲经人"
+    translated: "Preacher"
+    qcReviewedText: "Preacher"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "镖头"
+  splits:
+  - text: "镖头"
+    translated: "Messenger"
+    qcReviewedText: "Messenger"
+    qcTranslated: "Escort Leader"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
+- raw: "飞贼"
+  splits:
+  - text: "飞贼"
+    translated: "Thief in flight"
+    qcReviewedText: "Thief in flight"
+    qcTranslated: "Flying Thief"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing

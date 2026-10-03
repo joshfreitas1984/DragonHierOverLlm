@@ -895,10 +895,9 @@
   - text: "#PlayerName#，阎罗王果真率领逐鹿盟大军近抵"
     translated: "#PlayerName#, King Yama truly led the Battle for the Swallow Alliance army near."
     qcReviewedText: "#PlayerName#, King Yama truly led the Battle for the Swallow Alliance army near.<b>Wudang </b>Shanyang, prepare to attack our sect's main den.\nNow, the outcome of life and death hangs in this single battle. If you can swiftly rally your forces to support us, Wudang Shangxia will surely be eternally grateful!"
-    qcTranslated: "#PlayerName#, King Yama truly led the Zhulu Alliance army to the foot of <b>Wudang</b>, preparing to attack our sect's main headquarters."
+    qcTranslated: "#PlayerName#, King Yama truly led the Zhulu Alliance army to the foot of <b>Wudang</b>, preparing to attack our sect's main headquarters.\nNow, life and death hang on this single battle. If you can swiftly rally your forces to support us, all of Wudang will surely be eternally grateful!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber

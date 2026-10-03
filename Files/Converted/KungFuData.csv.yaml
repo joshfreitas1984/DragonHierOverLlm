@@ -59,8 +59,8 @@
   splits:
   - split: 4
     text: "源于古代递送紧急军情“羽檄”之兵士的步法"
-    translated: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
-    qcReviewedText: "Footwork derived from the ancient emergency military dispatch flying swift messengers"
+    translated: "The footwork of ancient soldiers who delivered urgent military dispatches known as feathered edicts"
+    qcReviewedText: "The footwork of ancient soldiers who delivered urgent military dispatches known as feathered edicts"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -569,8 +569,8 @@
   splits:
   - split: 4
     text: "以“两臂相通”的通臂劲而著称的一套拳法，力道由肩发出，通过手肘至拳上，以成通臂之势"
-    translated: "A fist technique known for its Linked‑Arm Strength, where the strength originates from the shoulders and travels through the elbows to the fists, creating a connected‑arm posture."
-    qcReviewedText: "A fist technique known for its Linked‑Arm Strength, where the strength originates from the shoulders and travels through the elbows to the fists, creating a connected‑arm posture."
+    translated: "A set of boxing techniques known for the Linked Arm Power, where force originates from the shoulders and travels through the elbows to the fists, forming a connected arm posture."
+    qcReviewedText: "A set of boxing techniques known for the Linked Arm Power, where force originates from the shoulders and travels through the elbows to the fists, forming a connected arm posture."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -699,8 +699,8 @@
   splits:
   - split: 4
     text: "注重内功修为之剑法，其内劲收发方式繁多且可以自由组合，因此得“无量”之名"
-    translated: "A sword technique that emphasizes the cultivation of internal skill has numerous ways to control and release its internal energy, allowing for various combinations. Thus, it earned the name Boundless."
-    qcReviewedText: "A sword technique that emphasizes the cultivation of internal skill has numerous ways to control and release its internal energy, allowing for various combinations. Thus, it earned the name Boundless."
+    translated: "A sword technique that emphasizes the cultivation of neigong has numerous ways to control and release its internal power, which can be freely combined. Thus, it earned the name Boundless."
+    qcReviewedText: "A sword technique that emphasizes the cultivation of neigong has numerous ways to control and release its internal power, which can be freely combined. Thus, it earned the name Boundless."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -888,27 +888,20 @@
   splits:
   - split: 4
     text: "讲求顶平肩平脚平枪平“四平”之枪法，平直穿插，去势如箭，尽管招式简单，却又难以招架"
-    translated: "Focusing on the Four Plains: level shoulders, level hips, level feet, and level spear technique‑straight and penetrating like an arrow. Despite its simple movements, it is difficult to block."
-    qcReviewedText: "Focusing on the Four Plains: level shoulders, level hips, level feet, and level spear technique‑straight and penetrating like an arrow. Despite its simple movements, it is difficult to block."
-    qcTranslated: "Focusing on the Four Levels: level crown, level shoulders, level feet, and level spear in this Spear Technique‑straight and penetrating like an arrow. Despite its simple movements, it is difficult to block."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
+    translated: "Emphasizing the Four Levels of spear technique‑level top, level shoulders, level feet, and level spear‑with straight and interweaving movements that strike like an arrow. Though the moves are simple, they are hard to parry."
+    qcReviewedText: "Emphasizing the Four Levels of spear technique‑level top, level shoulders, level feet, and level spear‑with straight and interweaving movements that strike like an arrow. Though the moves are simple, they are hard to parry."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "93,长兵,1,八母枪术,“封闭提掳拿拦还缠”八式乃一切枪术之基本，其生出的组合又变化万千，因此以八母闻名,12,1.1,长兵1;智力1,,力道1;智力1;长兵2,长兵15;智力10,\"1,1,1\",\"7,0,0\",弱点0.06,11,-1,0,腹16,腹12,,,skill3_2,,劈砍_蓝-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 4
     text: "“封闭提掳拿拦还缠”八式乃一切枪术之基本，其生出的组合又变化万千，因此以八母闻名"
-    translated: "The Eightfold Seal Capture Form is the fundamental of all rifle techniques. Its combinations are countless and ever‑changing, hence it is known as the Eight Mothers."
-    qcReviewedText: "The Eightfold Seal Capture Form is the fundamental of all rifle techniques. Its combinations are countless and ever‑changing, hence it is known as the Eight Mothers."
-    qcTranslated: "The Eightfold Seal Capture Form is the fundamental of all spear techniques. Its combinations are countless and ever‑changing, hence it is known as the Eight Mothers."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
+    translated: "“The Closed Capture Seize Block Bind and Restrict” eight techniques are the fundamentals of all gun arts; their combinations are myriad, hence they are known as the Eight Mothers."
+    qcReviewedText: "“The Closed Capture Seize Block Bind and Restrict” eight techniques are the fundamentals of all gun arts; their combinations are myriad, hence they are known as the Eight Mothers."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "94,长兵,1,杨家枪法,杨家多猛将，其中不乏用枪之高手，这是其家传的一套入门枪法,12,1,长兵1;体质1,,体质1;长兵2;内力0.1,长兵15;体质10,\"2,1,2\",\"7,0,0\",外伤0.06,10,-1,0,足19,足9,,,skill3_0,,火轮-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 4
@@ -1414,11 +1407,14 @@
   splits:
   - split: 4
     text: "一门刚柔并济，攻守兼备的掌法，其诀窍在于“摔”字，即借助手腕甩打之力增强搏击威力"
-    translated: "A palm technique that combines softness and hardness, offense and defense. The key lies in the throw – using the wrist's snapping force to enhance the striking power."
-    qcReviewedText: "A palm technique that combines softness and hardness, offense and defense. The key lies in the throw – using the wrist's snapping force to enhance the striking power."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "A palm technique that combines hardness and softness, offering both offensive and defensive capabilities. The secret lies in the character fall, using wrist flicks to generate force and increase combat effectiveness."
+    qcReviewedText: "A palm technique that combines hardness and softness, offering both offensive and defensive capabilities. The secret lies in the character fall, using wrist flicks to generate force and increase combat effectiveness."
+    qcTranslated: "A palm technique that harmonizes the hard and the soft, blending offense with defense. Its secret lies in the character throw, leveraging the whipping force of the wrist to amplify the power of combat."
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: LostIdiom
+    qcDefectCategories:
+    - LostIdiom
 - raw: "148,拳掌,2,追风短打,小手寸劲，短促突击的贴身近战拳法，讲求闻风而动，穷追猛击，攻势越急促，敌人越容易露出破绽,12,0.9,拳掌1;灵巧1;意志1,,灵巧2;拳掌2;内力0.2,拳掌25;灵巧20,\"1,1,1\",\"7,0,0\",连击0.08;阻滞0.08,12,-1,0,手21,手12,,,skill0_0,,三连打击-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3560,8 +3556,8 @@
   splits:
   - split: 4
     text: "专攻人体周身紧要死穴的狠毒指法，中招者五内翻滚，经脉逆行，如坠九幽黄泉"
-    translated: "A vicious finger technique that targets critical acupoints throughout the body. Those struck will experience their internal organs churning, their meridians reversing flow, as if plummeting into the depths of hell."
-    qcReviewedText: "A vicious finger technique that targets critical acupoints throughout the body. Those struck will experience their internal organs churning, their meridians reversing flow, as if plummeting into the depths of hell."
+    translated: "A vicious finger technique that targets critical acupoints throughout the body. Those struck will feel their internal organs churn, their meridians flow in reverse, as if plummeting into the depths of hell."
+    qcReviewedText: "A vicious finger technique that targets critical acupoints throughout the body. Those struck will feel their internal organs churn, their meridians flow in reverse, as if plummeting into the depths of hell."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3981,8 +3977,8 @@
   splits:
   - split: 4
     text: "丐帮祖师对战群邪时所创棍法，以“打狗”称之颇有几分戏谑粗俗之意，却是举重若轻，返璞归真，实用至极，无丝毫多余动作之招式"
-    translated: "The staff technique created by the ancestor of the Beggar Sect during battles against evil forces is called Beat Dog, which has a certain humorous and coarse meaning. Yet, it is light yet weighty, simple yet practical, and utterly indispensable‑containing no superfluous movements at all."
-    qcReviewedText: "The staff technique created by the ancestor of the Beggar Sect during battles against evil forces is called Beat Dog, which has a certain humorous and coarse meaning. Yet, it is light yet weighty, simple yet practical, and utterly indispensable‑containing no superfluous movements at all."
+    translated: "The staff techniques created by the founding ancestor of the Beggar Sect during battles against many villains are humorously referred to as Beating Dogs, with a somewhat playful and crude connotation. Yet they are remarkably efficient, returning to simplicity and practicality, with no superfluous movements whatsoever."
+    qcReviewedText: "The staff techniques created by the founding ancestor of the Beggar Sect during battles against many villains are humorously referred to as Beating Dogs, with a somewhat playful and crude connotation. Yet they are remarkably efficient, returning to simplicity and practicality, with no superfluous movements whatsoever."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5578,8 +5574,8 @@
   splits:
   - split: 4
     text: "此七式刀法每招名称中皆有一“杀”字，一刀比一刀更为邪气逼人，杀意旺盛，若七刀尽出则再无退路，不死不休"
-    translated: "Each of these seven blade techniques has a kill in its name, with each slash more sinister than the last, brimming with murderous intent. Once all seven blades are unleashed, there is no turning back, no escape, until death or victory."
-    qcReviewedText: "Each of these seven blade techniques has a kill in its name, with each slash more sinister than the last, brimming with murderous intent. Once all seven blades are unleashed, there is no turning back, no escape, until death or victory."
+    translated: "Each of these seven blade techniques has a kill in its name, with each slash more malevolent than the last, their killing intent growing ever stronger. If all seven blades are unleashed, there is no turning back, only life or death."
+    qcReviewedText: "Each of these seven blade techniques has a kill in its name, with each slash more malevolent than the last, their killing intent growing ever stronger. If all seven blades are unleashed, there is no turning back, only life or death."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5791,16 +5787,16 @@
   splits:
   - split: 4
     text: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
-    translated: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
-    qcReviewedText: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
+    translated: "These eight moves draw a 'Permanence' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Permanence' as the introductory practice for calligraphy skills."
+    qcReviewedText: "These eight moves draw a 'Permanence' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Permanence' as the introductory practice for calligraphy skills."
     qcStatus: FailedValidation
     flaggedForQcReview: true
-    qcRejectedCorrection: "These eight moves trace an \"永\" character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
+    qcRejectedCorrection: "These eight moves draw a '永' character in the air, taking the eight brushstroke techniques—side, vertical, left-falling, rising, advancing, scooping, picking, and splitting—from the character '永' as the introductory practice for calligraphy skills."
     qcFailureReason: " If your prior translation includes Chinese, output English only. Scan the last translation for Chinese text, cross-check with the original Chinese from the first user prompt, and translate all remaining Chinese into fluent, natural English."
     qcDefectCategories:
     - Unknown
     qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "These eight moves trace an Everlasting character in mid‑air, taking the eight stroke techniques from it: side press, forceful lift, leap, spur, peck, and tear, as the foundation for practicing calligraphic martial arts."
+    qcRuleCheckFailureBaseline: "These eight moves draw a 'Permanence' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Permanence' as the introductory practice for calligraphy skills."
 - raw: "617,奇门,1,丹青破穴,以人体为画布，以穴位为着墨之处的奇门绘画武功，能快速点指敌人多处穴位,10,1.1,奇门1;意志1,,意志1;奇门3;内力0.2,奇门25;意志15,\"0,1,1\",\"0,0,0\",心胸点穴0.04;头颈点穴0.04,10,9,0,腹17,腹11,,,skill4_7,,墨染-Target-Grid-Happen,笔,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7537,12 +7533,13 @@
     text: "庄者四通八达之大道也，此功法共天地之心、龙鹤风云、大小幽明道路十二条，条条皆是修持气脉，元养筋骨之精妙法门"
     translated: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of great yin and yang, each a marvelous technique for nurturing qi channels, essence, and muscle & bone."
     qcReviewedText: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of great yin and yang, each a marvelous technique for nurturing qi channels, essence, and muscle & bone."
-    qcTranslated: "This is the great road of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of dragon, crane, wind, cloud, great yin, and yang, each a marvelous technique for nurturing qi channels, essence, and Muscle & Bone."
+    qcTranslated: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of great yin and yang, each a marvelous technique for nurturing qi channels, essence, and Muscle & Bone."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - LostIdiom
+    - DomainTerm
 - raw: "801,内功,1,峨眉归藏功,峨眉所夺得的龙胤归藏功一部分，因内容较少而融入了大量峨眉心法，可以提升修习者的行动之灵巧,,1.1,灵巧潜力1,生命上限50;内力上限30;内功4;灵巧4;经脉4;意志2;通脉0.06,,内功15;灵巧10;意志5,,,,0,14,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 4
@@ -8102,12 +8099,12 @@
     text: "柄上装有机关的铁斧，斧柄可伸缩，斧刃也可快速弹出，攻敌不备"
     translated: "A iron axe with a mechanism on the handle, which can extend, and the blade can quickly pop out to catch enemies off guard."
     qcReviewedText: "A iron axe with a mechanism on the handle, which can extend, and the blade can quickly pop out to catch enemies off guard."
-    qcTranslated: "An iron axe with a mechanism on the handle, which can extend, and the blade can quickly pop out to catch enemies off guard."
+    qcTranslated: "An iron axe with a mechanism on the handle; the handle can extend, and the blade can quickly pop out to catch enemies off guard."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - OtherNamedDefect
+    - UnnaturalPhrasing
 - raw: "863,射术,0,飞蝗箭,装有大量小箭的机关筒，一旦触发便如飞蝗激射而出，难以闪避,9,0.9,射术1,,灵巧1;射术2;内力0.1,射术5,\"0,2,3\",\"0,0,0\",裂膝0.04,4,16,0,足19,足4,,,skill5_2,0-----0.7,旋叶-Target-Grid-Happen,弓,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -9229,8 +9226,8 @@
   splits:
   - split: 4
     text: "在天山峰顶极寒之地修炼而成的内功心法，被此内劲击中者，冰肌蚀骨，血脉凝固，可谓一只脚已踏入黄泉幽冥之中"
-    translated: "The Internal Skill Heart Method cultivated in the bitterly cold peak of Tianshan. Those struck by this inner force will suffer frostbite that eats away at their bones and freezes their blood, effectively placing them one foot in the underworld."
-    qcReviewedText: "The Internal Skill Heart Method cultivated in the bitterly cold peak of Tianshan. Those struck by this inner force will suffer frostbite that eats away at their bones and freezes their blood, effectively placing them one foot in the underworld."
+    translated: "The Internal Skill Heart Method cultivated in the bitterly cold peak of Tianshan. Those struck by this inner force will suffer frostbite that penetrates to the bone and congeals the blood, effectively placing them one foot in the realm of the dead."
+    qcReviewedText: "The Internal Skill Heart Method cultivated in the bitterly cold peak of Tianshan. Those struck by this inner force will suffer frostbite that penetrates to the bone and congeals the blood, effectively placing them one foot in the realm of the dead."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -9681,13 +9678,9 @@
     text: "摩诃者大也，无量者不可计量也。修习此功法者内力如大海无量，且可随心所欲，掌控自如"
     translated: "Maha means great, and wuliang means immeasurable. Practitioners of this cultivation method have inner power like an endless sea, which they can control at will."
     qcReviewedText: "Maha means great, and wuliang means immeasurable. Practitioners of this cultivation method have inner power like an endless sea, which they can control at will."
-    qcTranslated: "Maha means great, and wuliang means immeasurable. Practitioners of this cultivation method have Inner Power like an endless sea, which they can control at will."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "1033,内功,5,蚀骨销魂功,魔道奇功，可无声无息侵入对方经脉，制造极乐幻觉与巨大痛苦，中者大多面容扭曲，似笑似哭，惨不忍睹,,1.2,内功潜力1;智力潜力1;意志潜力1;意志2,生命上限140;内力上限100;内功12;灵巧12;意志12;震脑0.06;乱神0.06;混乱0.06,,内功70;智力65;意志60,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4

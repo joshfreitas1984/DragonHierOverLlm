@@ -76,6 +76,14 @@ qualityReview:
   # Detection-only temperature (corrections keep Qwen38's 0.15): makes QC verdicts and gold-set
   # runs repeatable - at 0.15 the identical request was seen to return NONE then DROPPED_CONTENT.
   detectionTemperature: 0
+  # One verify->repair round instead of the default two (2026-10-03): on a defect-heavy batch the
+  # second repair round was accepted 0 of 10 times (13 of 21 repairs returned the candidate
+  # unchanged), so it only added ~17% more calls per flagged column. Raise back to 2 to restore it.
+  maxScoreRepairIterations: 1
+  # Verifier must quote the text each rejection is about; rejections quoting nothing real are
+  # overruled and the quotes guide the repair (2026-10-03: flagged 2-3 -> 1 of 28, same call count).
+  # The pre-verification gate is on by default in LlmKit (preVerificationGateEnabled).
+  verificationEvidenceEnabled: true
 translationAssessment:
   enabled: true
   modelNames:

@@ -195,3 +195,12 @@
   result: Feifeng Bank
 - raw: 驿站
   result: Relay Station
+
+- raw: 侠客
+  rawSimplified: 侠客
+  rawTraditional: 俠客
+  result: Hero
+- raw: 江湖侠客
+  rawSimplified: 江湖侠客
+  rawTraditional: 江湖俠客
+  result: Jianghu Hero

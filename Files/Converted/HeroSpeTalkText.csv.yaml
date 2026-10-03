@@ -102,14 +102,14 @@
   - split: 2
     text: "绝顶高手相争之时，唯一目的便是击败对方。"
     translated: "When masters of top‑tier skill contend, their sole purpose is to defeat each other."
-    qcReviewedText: "When masters of top‑tier skill contend, their sole purpose is to defeat each other.\\nWithout desire or emotion, fully immerse yourself. Focusing on the single word kill is enough."
+    qcReviewedText: "When masters of top‑tier skill contend, their sole purpose is to defeat each other.\\nWithout desire or emotion, devote yourself entirely; focusing on the single character kill is enough."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "无欲无情，全心投入，专注于“杀”这一字便已足够。"
-    translated: "Without desire or emotion, fully immerse yourself. Focusing on the single word kill is enough."
+    translated: "Without desire or emotion, devote yourself entirely; focusing on the single character kill is enough."
   - split: 3
     text: "#PlayerName#，你不会和那些无趣江湖人士一般，"
     translated: "#PlayerName#, you won't be like those dull Jianghu folk."
@@ -155,8 +155,8 @@
     translated: "No matter how powerful you are, you still can't figure out my tactics."
   - split: 7
     text: "高手之争，非在一招一式之间，而在于运用之“人”身上。"
-    translated: "The struggle between masters lies not in a single move or technique, but in the person who uses it."
-    qcReviewedText: "The struggle between masters lies not in a single move or technique, but in the person who uses it.\\nGiven the right opportunity, even the weakest technique can become incredibly powerful."
+    translated: "A contest between masters is not about individual moves and techniques, but rather in how the person wields them."
+    qcReviewedText: "A contest between masters is not about individual moves and techniques, but rather in how the person wields them.\\nGiven the right opportunity, even the weakest technique can become incredibly powerful."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -211,14 +211,14 @@
   - split: 12
     text: "我道法修为尚浅，师傅总说我还不懂太极生两仪，两仪生四象，四象生八卦的道理。"
     translated: "I am still shallow in my Daoist cultivation, and my master always says I don't understand the principle that Taiji gives rise to the Two Instruments, the Two Instruments give rise to the Four Symbols, and the Four Symbols give rise to Bagua."
-    qcReviewedText: "I am still shallow in my Daoist cultivation, and my master always says I don't understand the principle that Taiji gives rise to the Two Instruments, the Two Instruments give rise to the Four Symbols, and the Four Symbols give rise to Bagua.\\nI have only seen hens lay chickens and know not how the Taiji gives birth to the Liyi in such a manner."
+    qcReviewedText: "I am still shallow in my Daoist cultivation, and my master always says I don't understand the principle that Taiji gives rise to the Two Instruments, the Two Instruments give rise to the Four Symbols, and the Four Symbols give rise to Bagua.\\nI've only seen a mother hen hatch chicks, but I have no idea how this concept of Taiji giving rise to the Two Instruments actually works."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 12
     subIndex: 1
     text: "我只见过母鸡生小鸡，却不知这太极生两仪究竟是怎么个“生”法。"
-    translated: "I have only seen hens lay chickens and know not how the Taiji gives birth to the Liyi in such a manner."
+    translated: "I've only seen a mother hen hatch chicks, but I have no idea how this concept of Taiji giving rise to the Two Instruments actually works."
   templates:
   - split: 2
     template: "{0}\\n{1}"
@@ -262,14 +262,14 @@
   - split: 2
     text: "当今武学，多拘泥于花哨招式与繁复心法。"
     translated: "Today's martial arts often focus on flashy techniques and complex heart methods."
-    qcReviewedText: "Today's martial arts often focus on flashy techniques and complex heart methods.\\nYet only Kill reaches the pinnacle of martial arts."
+    qcReviewedText: "Today's martial arts often focus on flashy techniques and complex heart methods.\\nOnly those who kill are on the highest path of martial arts."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 2
     subIndex: 1
     text: "然唯有“杀”者，才是武学至高之道。"
-    translated: "Yet only Kill reaches the pinnacle of martial arts."
+    translated: "Only those who kill are on the highest path of martial arts."
   - split: 3
     text: "闯荡江湖，只要练好轻功就行。"
     translated: "Venturing into Jianghu just requires mastering Qinggong"
@@ -476,8 +476,8 @@
   - split: 7
     text: "但凡是这江湖之事，老朽皆算略有耳闻，"
     translated: "But regarding matters of the Jianghu, the old man has heard of them all."
-    qcReviewedText: "But regarding matters of the Jianghu, the old man has heard of them all.\\nThat's how he earned the title Bai Xiao just now."
-    qcTranslated: "But regarding matters of the Jianghu, the old man has heard of them all.\\nThat's how he earned the title Bai Xiao."
+    qcReviewedText: "But regarding matters of the Jianghu, the old man has heard of them all.\\nTherefore, I earned the title of All‑Knowing recently."
+    qcTranslated: "But regarding matters of the Jianghu, the old man has heard of them all.\\nTherefore, I earned the title of All‑Knowing."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: MeaningReversal
@@ -486,7 +486,7 @@
   - split: 7
     subIndex: 1
     text: "因此方才得了这“百晓”的名号。"
-    translated: "That's how he earned the title Bai Xiao just now."
+    translated: "Therefore, I earned the title of All‑Knowing recently."
   - split: 8
     text: "在峨眉山上耍猴子，抓野兔，那可有趣的紧啊！"
     translated: "Playing with monkeys and catching wild rabbits on Mount Emei is really fun!"
@@ -695,7 +695,7 @@
     text: "#PlayerName#若在武学上有疑惑之处，大可来与我探讨。"
     translated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me."
     qcReviewedText: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nHe will speak his mind fully and without reservation."
-    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will certainly speak my mind fully and without reservation."
+    qcTranslated: "#PlayerName#, if you have any doubts in martial arts, feel free to come and discuss with me.\\nI will certainly share everything I know, holding nothing back."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -761,7 +761,7 @@
     text: "#PlayerName#，最近可有得手什么好宝物？"
     translated: "#PlayerName#, have you come across any good treasures lately?"
     qcReviewedText: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I didn't mean to steal anything from you."
-    qcTranslated: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I‑I didn't mean to steal anything from you."
+    qcTranslated: "#PlayerName#, have you come across any good treasures lately?\\n...What expression is that? I, I didn't mean to steal anything from you."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedStutter
@@ -879,9 +879,12 @@
     text: "古人医在心，心正药自真......今人医在手，手滥药不神。"
     translated: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders."
     qcReviewedText: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders.\\nI wish for the Heavens Furnace to grant me the body of Bianque... May there be fewer poor patients in this world."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcTranslated: "Ancients healed with heart; when the heart is upright, medicine naturally works true... Moderns heal with hands; when hands are excessive, medicine fails to work wonders.\\nI wish for the Heavens Furnace to grant me many bodies of Bianque... May there be fewer poor patients within the Six Directions."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - split: 1
     subIndex: 1
     text: "我愿天地炉，多衔扁鹊身......自然六合内，少闻贫病人。"
@@ -990,12 +993,12 @@
     text: "兵者，诡道也。"
     translated: "A soldier fights not because he values his life but because he values victory."
     qcReviewedText: "A soldier fights not because he values his life but because he values victory.\\nBy being capable yet demonstrating incapability, by using something yet showing as if not using it, by drawing close yet appearing distant, and by being far away yet seeming near.\\nCatch them unprepared, strike when they least expect it. This is a victory in warfare, not to be prematurely disclosed."
-    qcTranslated: "War is the way of deception.\\nTherefore, when able, show yourself unable; when using, show as if not using; when near, show as if far; when far, show as if near.\\nAttack where they are unprepared, appear where you are not expected. This is the victory of the military strategist, which cannot be communicated in advance."
+    qcTranslated: "War is the way of deception.\\nThus, when able, show inability; when using force, show non‑use; when near, appear far; when far, appear near.\\nAttack where they are unprepared, appear where they do not expect. This is the key to victory in warfare, and must not be revealed beforehand."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - split: 10
     subIndex: 1
     text: "故能而示之不能，用而示之不用，近而示之远，远而示之近。"
@@ -1077,14 +1080,14 @@
   - split: 3
     text: "本姑娘所取的财物，大多来路不干净。"
     translated: "The goods I have acquired are mostly from dubious sources."
-    qcReviewedText: "The goods I have acquired are mostly from dubious sources.\\nHow can such righteous acts of helping the poor at the expense of the rich be considered theft?"
+    qcReviewedText: "The goods I have acquired are mostly from dubious sources.\\nSuch acts of helping the poor at the expense of the rich can hardly be called thievery, can they?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 3
     subIndex: 1
     text: "此等劫富济贫侠义之举，又怎能算是“偷”呢？"
-    translated: "How can such righteous acts of helping the poor at the expense of the rich be considered theft?"
+    translated: "Such acts of helping the poor at the expense of the rich can hardly be called thievery, can they?"
   - split: 4
     text: "祸兮福之所倚，福兮祸之所伏。"
     translated: "Misfortune may be an actual blessing in disguise, and a blessing may conceal a potential misfortune."
@@ -1170,14 +1173,14 @@
   - split: 11
     text: "天地有正气，公道在人心。"
     translated: "Righteous energy fills the universe; justice lies in the hearts of men."
-    qcReviewedText: "Righteous energy fills the universe; justice lies in the hearts of men.\\nI can earn the affection of Wulin only through the words chivalry and righteousness, Guo Huai."
+    qcReviewedText: "Righteous energy fills the universe; justice lies in the hearts of men.\\nI, Guo Huai, can earn the affection of Wulin's many with nothing but the two words chivalry and righteousness alone."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 11
     subIndex: 1
     text: "我郭淮能得武林众人厚爱，唯靠“侠义”二字而已。"
-    translated: "I can earn the affection of Wulin only through the words chivalry and righteousness, Guo Huai."
+    translated: "I, Guo Huai, can earn the affection of Wulin's many with nothing but the two words chivalry and righteousness alone."
   - split: 12
     text: "师傅和师叔为了武当派，日日殚精竭虑。"
     translated: "Master and Master Uncle daily exert themselves for the Wudang Sect."

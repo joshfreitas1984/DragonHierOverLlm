@@ -184,7 +184,7 @@ internal static class HeroNamePatches
     // name - translated directly rather than going through the fragment dictionary.
     private static readonly (string Prefix, string English)[] KnownPrefixes = new[]
     {
-        ("掌门", "Sect Leader's"),
+        ("掌门", "Sect Leader"),
         ("义", "Sworn"),
     };
 

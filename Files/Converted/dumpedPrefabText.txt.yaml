@@ -917,14 +917,13 @@
   - text: "每级对"
     translated: "Level up by"
     qcReviewedText: "♦Level up by AI Sect influence is generated：\\n‑Speed up construction：Monthly production limit+, Construction consumes ‑5% resources, construction speed+5%\\n‑Speed up research and development：Research consumption ‑5%, research speed+5%\\n‑Speed up disciples' advancement：Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level+, Recruitment costs ‑5% consumed, monthly salary costs consumed-2.5%"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "♦Each level affects the AI Sect:\\n—Accelerate construction: Monthly construction count+, construction cost 5%, construction speed +5%\\n—Accelerate research: Research cost 5%, research speed +5%\\n—Accelerate disciple promotion: Promotion frequency +5%, promotion cost 5%, promotion martial arts level+, recruitment cost 5%, monthly stipend cost -2.5%"
-    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
+    qcTranslated: "♦Each level affects the AI Sect:\\n‑Accelerate construction: Monthly construction count+, construction cost ‑5%, construction speed +5%\\n‑Accelerate research: Research cost ‑5%, research speed +5%\\n‑Accelerate disciple promotion: Promotion frequency +5%, promotion cost ‑5%, promotion martial arts level+, recruitment cost ‑5%, monthly stipend cost ‑2.5%"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "♦Level up by AI Sect influence is generated：\\n‑Speed up construction：Monthly production limit+, Construction consumes ‑5% resources, construction speed+5%\\n‑Speed up research and development：Research consumption ‑5%, research speed+5%\\n‑Speed up disciples' advancement：Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level+, Recruitment costs ‑5% consumed, monthly salary costs consumed-2.5%"
+    - MeaningReversal
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "门派产生影响"
     translated: "Sect influence is generated"
@@ -4041,13 +4040,9 @@
   - text: "增加潜力"
     translated: "Increase potential"
     qcReviewedText: "Increase potential \\nPress and hold the left button shift Add 1 point to 5"
-    qcTranslated: "Increase Potential\\nHold Left Shift to add 1 points"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "按住左"
     translated: "Press and hold the left button"
@@ -4321,13 +4316,12 @@
   - text: "如果您发现存档丢失或损坏，请查看备份文件夹"
     translated: "If you find that your save file is lost or damaged, please check the backup folder."
     qcReviewedText: "If you find that your save file is lost or damaged, please check the backup folder.：\\nC:\\Users\\[Username] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "If you find that your save file is lost or damaged, please check the backup folder:\\nC:\\Users\\[Username] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
+    qcTranslated: "If you find that your save file is lost or damaged, please check the backup folder:\\nC:\\Users\\[Username] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "If you find that your save file is lost or damaged, please check the backup folder.：\\nC:\\Users\\[Username] \\AppData\\LocalLow\\TppStudio\\LongYinLiZhiZhuan\\Save_backup"
+    - OtherNamedDefect
   - subIndex: 1
     text: "用户名"
     translated: "Username"
@@ -7452,10 +7446,10 @@
     qcReviewedText: "Game Name：Dragon's Heir's Resolve Approval Number：Guoxin Chu Shen [2025] No. 100 No Publication Number：ISBN 978-7-498-14483-6 \\nCopyright holder：Tutian County PiPiTang Software Development Studio Publishing House：East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
     qcTranslated: "Game Name: Dragon's Heir's Chronicle Approval Number: Guoxin Chu Shen [2025] No. 100 Publication Number: ISBN 978‑7‑498‑14483‑6 \\nCopyright holder: Dangtu County PiPiTang Software Development Studio Publishing House: East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 88
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
+    - DroppedContent
     - UntranslatedPinyin
   - subIndex: 1
     text: "《龙胤立志传》"

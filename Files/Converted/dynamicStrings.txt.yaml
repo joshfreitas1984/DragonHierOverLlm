@@ -4459,13 +4459,12 @@
   - text: "#TargetInteractName#你为本门尽忠职守，可谓功勋卓著，"
     translated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable."
     qcReviewedText: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable.\nThis Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the Senior Disciple of this Sect.{0}。"
-    qcTranslated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable.\\nThis Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the {0} of this Sect."
+    qcTranslated: "#TargetInteractName#, you have faithfully served this sect, and your achievements are commendable. This Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the {0} of this Sect."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 85
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "本掌门向来唯才是举，赏罚分明，今日就特此晋升你为本门"
     translated: "This Sect Master always promotes based on talent and administers rewards and punishments clearly. Today, I specially promote you to be the Senior Disciple of this Sect."
@@ -5130,12 +5129,12 @@
   - text: "#TargetInteractName#这招"
     translated: "#TargetInteractName# used this technique"
     qcReviewedText: "#TargetInteractName# used this technique {0} Though he had practiced extensively, there were still many flaws in his technique.\n(The very first instruction...)"
-    qcTranslated: "#TargetInteractName# used this technique {0}. Though he had practiced extensively, there were still many flaws in his technique.\n(The very first instruction...)"
+    qcTranslated: "#TargetInteractName# has practiced this technique {0} quite proficiently, but there are still many flaws in it.\\n(The very first instruction...)"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
+    - HardToParseSeam
     - DroppedContent
   - subIndex: 1
     text: "练得虽颇为纯熟，但仍有许多纰漏之处。"
@@ -5895,14 +5894,13 @@
   - text: "适合仅体验剧情的玩家"
     translated: "Suitable for players who want to experience the storyline only."
     qcReviewedText: "<b><color=teal>Suitable for players who want to experience the storyline only.</color></b>\n<color=red>Cannot earn achievement </color>\nPlayer damage+100%/Injured-50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=red>Maximum Talent Points 9\nSpecial Building Limit 5</color>"
-    qcTranslated: "<b><color=teal>Suitable for players who only want to experience the storyline.</color></b>\n<color=red>No achievements can be earned</color>\nPlayer damage+100%/Injured‑50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points‑60%\n<color=red>Maximum Talent Points 9\nSpecial Building Limit 5</color>"
+    qcTranslated: "<b><color=teal>Suitable for players who only want to experience the storyline.</color></b>\n<color=red>Cannot earn achievements</color>\nPlayer damage+100%/Damage taken‑50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points‑60%\n<color=red>Maximum Talent Points 9\nSpecial Building Limit 5</color>"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
-    - UnnaturalPhrasing
   - subIndex: 1
     text: "无法获得成就"
     translated: "Cannot earn achievement"
@@ -8922,14 +8920,12 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} And {2} Sparring over martial arts skills, in the end {3} One notch above in skill"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "{0} spars with {1} and {2}, ultimately proving to be the superior martial artist."
-    qcFailureReason: " Restore `{3}` to the translation, as it was incorrectly removed."
+    qcTranslated: "{0} sparred with {1} and {2} in martial arts, with {3} ultimately proving to be the superior fighter."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "{0} In {1} And {2} Sparring over martial arts skills, in the end {3} One notch above in skill"
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "与"
     translated: "And"
@@ -9119,13 +9115,12 @@
   - text: "在"
     translated: "In"
     qcReviewedText: "{0} In {1} Looking high and far, Zhong gained an understanding of the surrounding information."
-    qcTranslated: "{0} In {1}, looking high and far, gained an understanding of the surrounding information."
+    qcTranslated: "{0} In {1}, looking high and far, Zhong gained an understanding of the surrounding information."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
-    - DroppedContent
+    - GarbledNumber
   - subIndex: 1
     text: "中登高远望，了解了周边信息"
     translated: "Looking high and far, Zhong gained an understanding of the surrounding information."
@@ -16386,8 +16381,7 @@
     qcReviewedText: "How to relieve sorrow? Only Gu Di Kang can help."
     qcTranslated: "How to relieve sorrow? Only Dukang can help."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: UntranslatedPinyin
     qcDefectCategories:
     - UntranslatedPinyin
@@ -16997,8 +16991,8 @@
 - raw: "侠客"
   splits:
   - text: "侠客"
-    translated: "Wanderer"
-    qcReviewedText: "Wanderer"
+    translated: "Hero"
+    qcReviewedText: "Hero"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -17416,7 +17410,7 @@
   - text: "免、免费相赠？我没听错吧？"
     translated: "Isn't it free? You must be mistaken."
     qcReviewedText: "Isn't it free? You must be mistaken.\nHa ha, I'm really very grateful. You can't regret this, #PlayerName#."
-    qcTranslated: "Free, free of charge? You must be mistaken.\nHa ha, I'm really very grateful. You can't regret this, #PlayerName#."
+    qcTranslated: "F‑free of charge? You must be mistaken.\nHa ha, I'm really very grateful. You can't regret this, #PlayerName#."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedStutter
@@ -19769,10 +19763,9 @@
   - text: "千里之行，始于足下。接下来该修炼哪门武功呢？"
     translated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?"
     qcReviewedText: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase neigong/Qinggong/Practical experience with Special Techniques,{0} Best effect within the grade)"
-    qcTranslated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase Neigong/Qinggong/Practical experience with Special Techniques, {0} Best effect within the grade)"
+    qcTranslated: "A journey of a thousand miles begins with a single step. Which martial art should we practice next?\n(Training can increase Practical experience in Neigong/Qinggong/Special Technique, with the best effect within {0} levels)"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
     - UnnaturalPhrasing
@@ -21746,13 +21739,13 @@
   - text: "向"
     translated: "Towards"
     qcReviewedText: "Towards {0} Teach {1} Door martial arts"
-    qcTranslated: "Teach {0} {1} martial arts"
+    qcTranslated: "Teach {0} the {1} martial arts"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - DroppedContent
+    - UnnaturalPhrasing
+    - DomainTerm
   - subIndex: 1
     text: "传授"
     translated: "Teach"
@@ -26333,7 +26326,7 @@
   - text: "啊？什、什么地方？"
     translated: "Ah? What? Where exactly?"
     qcReviewedText: "Ah? What? Where exactly?"
-    qcTranslated: "Ah? W‑what place?"
+    qcTranslated: "Ah? W‑where exactly?"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedStutter
@@ -26386,7 +26379,7 @@
   - text: "啊？那、那当然是都很重要......."
     translated: "Ah? Well, of course, all of that is very important......."
     qcReviewedText: "Ah? Well, of course, all of that is very important.......\nYou are all hearts aligned with mine, #$PlayerName#. Why must there be a distinction in order?"
-    qcTranslated: "Ah? Well, of course, all of that is very important.......\nYou are all hearts aligned with mine, #$PlayerName#. Why, why must there be a distinction in order?"
+    qcTranslated: "Ah? Well, of course, all of that is very important.......\nYou are all hearts aligned with mine, #$PlayerName#. W‑why must there be a distinction in order?"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedStutter
@@ -29294,11 +29287,10 @@
     qcReviewedText: "Great Heights"
     qcTranslated: "Da He"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "大门\n{0}"
   splits:
   - text: "大门"
@@ -31332,11 +31324,10 @@
     qcReviewedText: "Study {0} Door {1} Martial arts"
     qcTranslated: "Study {0} {1} martial arts"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "门"
     translated: "Door"
@@ -35504,11 +35495,10 @@
     qcReviewedText: "Zhi Room"
     qcTranslated: "Zhishi"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "忘忧清乐集"
   splits:
   - text: "忘忧清乐集"
@@ -36206,7 +36196,7 @@
     qcReviewedText: "Thank you very much!"
     qcTranslated: "Than‑thank you very much!"
     qcStatus: Corrected
-    qcQualityScore: 95
+    qcQualityScore: 90
     qcDefectCategory: DroppedStutter
     qcDefectCategories:
     - DroppedStutter
@@ -39713,7 +39703,7 @@
   - text: "掌、掌门，大、大事不好了！"
     translated: "Sect Leader, big trouble!"
     qcReviewedText: "Sect Leader, big trouble!"
-    qcTranslated: "Sect Leader, big, big trouble!"
+    qcTranslated: "Sect Leader, Sect Leader, big, big trouble!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedStutter
@@ -40396,7 +40386,7 @@
   - text: "攻击时与对方"
     translated: "Attack when the opponent"
     qcReviewedText: "Attack when the opponent <b>Counterattack </b>Compare\nTrigger Overwhelm: Opponent's action bar reduced by half."
-    qcTranslated: "Attack when the opponent <b>Counterattack</b> Compare\\nTrigger Overwhelm: Opponent's action bar reduced by half."
+    qcTranslated: "Attack when the opponent <b>Counterattack</b>\\nTrigger Overwhelm: Opponent's action bar reduced by half."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -40426,7 +40416,6 @@
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - UnnaturalPhrasing
   - subIndex: 1
     text: "断连"
     translated: "Interrupt"
@@ -44894,13 +44883,13 @@
   - text: "此功法果然是高深莫测......多、多谢前辈指点！"
     translated: "This cultivation method is indeed profound and unfathomable... Thank you very much, Senior!"
     qcReviewedText: "This cultivation method is indeed profound and unfathomable... Thank you very much, Senior!\nSenior? Where have the seniors gone... Truly, an ultimate master is like the Dragon, seen only at the beginning but not at the end."
-    qcTranslated: "This cultivation method is indeed profound and unfathomable... Th‑thank you very much, Senior!\nSenior? Where have the seniors gone... Truly, an ultimate master is like a dragon, seen only at the head but not at the tail."
+    qcTranslated: "This cultivation method is indeed profound and unfathomable... Th‑thank you very much, Senior!\nSenior? Where has the Senior gone... Truly, an ultimate master is like a dragon, seen only at the head but not at the tail."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: DroppedStutter
     qcDefectCategories:
     - DroppedStutter
-    - LostIdiom
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "前辈？前辈人怎么不见了......绝世高手，果然是神龙见首不见尾。"
     translated: "Senior? Where have the seniors gone... Truly, an ultimate master is like the Dragon, seen only at the beginning but not at the end."
@@ -48364,11 +48353,15 @@
 - raw: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
   splits:
   - text: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
-    translated: "I roam the Jianghu, and I've always had the least tolerance for self‑proclaimed wanderers. This time, I must make you taste some bitterness!"
-    qcReviewedText: "I roam the Jianghu, and I've always had the least tolerance for self‑proclaimed wanderers. This time, I must make you taste some bitterness!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
+    qcReviewedText: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
+    qcTranslated: "I've roamed Jianghu for years, and I despise pretentious heroes more than anything. Today, I'll make you taste the bitterness of your actions!"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
 - raw: "牛头"
   splits:
   - text: "牛头"
@@ -53746,13 +53739,13 @@
   - text: "胜利了！一番血战最终击退了"
     translated: "Victory! After a fierce battle, we finally dealt the knockback."
     qcReviewedText: "Victory! After a fierce battle, we finally dealt the knockback.{0} His attack,\nI {1} For {2} The rule will also become more stable!"
-    qcTranslated: "Victory! After a fierce battle, we finally dealt the Knockback to {0}'s attack, and my {1} rule over {2} will also become more stable!"
+    qcTranslated: "Victory! After a fierce battle, we finally dealt the Knockback to {0}'s attack. I {1} My rule over {2} will also become more stable!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: MeaningReversal
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - MeaningReversal
+    - DroppedContent
   - subIndex: 1
     text: "的攻击，"
     translated: "His attack,"
@@ -54205,10 +54198,9 @@
   - text: "自古便是长江后浪推前浪，江山代有才人出，"
     translated: "As it has been said, new waves always push the old ones in the Yangtze River; talent emerges in every generation."
     qcReviewedText: "As it has been said, new waves always push the old ones in the Yangtze River; talent emerges in every generation.\nYou're saying this a bit clinging to the old ways and unable to adapt."
-    qcTranslated: "As it has been said, new waves always push the old ones in the Yangtze River; talent emerges in every generation. You're saying this a bit clinging to the old ways and unable to adapt."
+    qcTranslated: "As the old saying goes, the later waves of the Yangtze push the earlier ones aside, and each generation produces its own talents.\\nYour words are a bit too attached to outdated customs and fail to digest the wisdom of the past."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 20
+    qcQualityScore: 82
     qcDefectCategory: LostIdiom
     qcDefectCategories:
     - LostIdiom
@@ -54635,7 +54627,7 @@
   - text: "若#PlayerName#能正式向我赔礼谢罪，同时布告天下武林同道的话......"
     translated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community..."
     qcReviewedText: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nNature might still win back some of my affection."
-    qcTranslated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nI might still be able to win back some of my affection."
+    qcTranslated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nNaturally, I might still win back some of my affection."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -54916,14 +54908,13 @@
   - text: "若能在"
     translated: "If I could only"
     qcReviewedText: "If I could only {0} In front of me {1}。\nShould {2} {0} What is the relationship with the He Pai?"
-    qcStatus: FailedValidation
+    qcTranslated: "If I could only {0} in front of {1}.\nShould {2} {0} and the relationship between the He faction?"
+    qcStatus: Corrected
     flaggedForQcReview: true
-    qcRejectedCorrection: "If I could only {1} before {0}.\nShould {2} {0} What is the relationship between {0} and the He faction?"
-    qcFailureReason: " `{0}` appears in the result but not in the original text."
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "If I could only {0} In front of me {1}。\nShould {2} {0} What is the relationship with the He Pai?"
+    - DroppedContent
   - subIndex: 1
     text: "面前"
     translated: "In front of me"
@@ -59076,14 +59067,14 @@
   - text: "这"
     translated: "This"
     qcReviewedText: "This {0} Is {1} Improve {2} Potential's Supreme Sanctuary: They only need to pay for maintenance and repairs to cultivate here. There are no other conditions required for cultivation here.\nYoung Hero, you currently {2} Potential is {3}, Training requires {4} Peaceful Day {5} Silver coins {6}"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "This {0} is the supreme sanctuary for enhancing {2} potential; one only needs to pay the maintenance and repair fees to cultivate here. Young Hero, your current {2} potential is {3}, and cultivation requires {4} days and {5} silver taels. {6}"
-    qcFailureReason: " Restore `{1}` to the translation, as it was incorrectly removed."
+    qcTranslated: "This {0} is {1} the supreme sanctuary for enhancing {2} potential; you only need to pay the maintenance and repair fees to cultivate here. Young Hero, your current {2} potential is {3}, and cultivation requires {4} days and {5} silver taels.{6}"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: GarbledNumber
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "This {0} Is {1} Improve {2} Potential's Supreme Sanctuary: They only need to pay for maintenance and repairs to cultivate here. There are no other conditions required for cultivation here.\nYoung Hero, you currently {2} Potential is {3}, Training requires {4} Peaceful Day {5} Silver coins {6}"
+    - GarbledNumber
+    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "乃"
     translated: "Is"
@@ -59646,14 +59637,14 @@
   splits:
   - text: "这个人演武乃是单打独斗，每次挑战均需消耗一天时间。"
     translated: "This person excels in individual combat, and each challenge consumes a full day."
-    qcReviewedText: "This person excels in individual combat, and each challenge consumes a full day.\n#PlayerName#'s current wins are {0}, The next opponent is ranked on the Hero Roll.{1} Wanderers to the left and right,\nAre you ready?"
-    qcTranslated: "This person excels in individual combat, and each challenge consumes a full day.\n#PlayerName#'s current wins are {0}, The next opponent is a Wanderer ranked around {1} on the Hero Roll.\nAre you ready?"
+    qcReviewedText: "This person excels in individual combat, and each challenge consumes a full day.\n#PlayerName#'s current wins are {0}, The next opponent is ranked on the Hero Roll.{1} A hero named Left‑right,\nAre you ready?"
+    qcTranslated: "This person excels in individual combat, and each challenge consumes a full day.\n#PlayerName#'s current wins are {0}, The next opponent is a Hero ranked around {1} on the Hero Roll.\nAre you ready?"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
-    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "#PlayerName#当前的胜场为"
     translated: "#PlayerName#'s current wins are"
@@ -59662,7 +59653,7 @@
     translated: ", The next opponent is ranked on the Hero Roll."
   - subIndex: 3
     text: "名左右的侠客，"
-    translated: "Wanderers to the left and right,"
+    translated: "A hero named Left‑right,"
   - subIndex: 4
     text: "已经准备妥当吗？"
     translated: "Are you ready?"
@@ -60175,14 +60166,14 @@
   splits:
   - text: "这团队演武乃是五人对战五人，每次挑战需要消耗一天时间。"
     translated: "This team combat involves five versus five, and each challenge consumes one day of time."
-    qcReviewedText: "This team combat involves five versus five, and each challenge consumes one day of time.\n#PlayerName#'s current wins are {0}, The next opponent is ranked among the Five Heroes.{1} Wanderers to the left and right,\nAre you ready?"
-    qcTranslated: "This team combat involves five versus five, and each challenge consumes one day of time.\n#PlayerName#'s current wins are {0}, The next opponent is a Wanderer ranked around {1} in the Five Heroes Roster,\nAre you ready?"
+    qcReviewedText: "This team combat involves five versus five, and each challenge consumes one day of time.\n#PlayerName#'s current wins are {0}, The next opponent is ranked among the Five Heroes.{1} A hero named Left‑right,\nAre you ready?"
+    qcTranslated: "This team combat involves five versus five, and each challenge consumes one day of time.\n#PlayerName#'s current wins are {0}, The next opponent is a Hero ranked around {1} in the Five Heroes Roster.\nAre you ready?"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
-    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "#PlayerName#当前的胜场为"
     translated: "#PlayerName#'s current wins are"
@@ -60191,7 +60182,7 @@
     translated: ", The next opponent is ranked among the Five Heroes."
   - subIndex: 3
     text: "名左右的侠客，"
-    translated: "Wanderers to the left and right,"
+    translated: "A hero named Left‑right,"
   - subIndex: 4
     text: "已经准备妥当吗？"
     translated: "Are you ready?"
@@ -60273,13 +60264,13 @@
   - text: "这日你巡视之时，忽听得远处锣声大躁，喊杀震天，"
     translated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky."
     qcReviewedText: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky.\nHastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault.\nThe servants fought back desperately and barely managed to hold their ground."
-    qcTranslated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky. Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault. The servants fought back desperately and barely managed to hold their ground."
+    qcTranslated: "On this day, as you patrolled, you suddenly heard distant gongs beating loudly and shouts of battle echoing to the sky. Hastily rushing over, you found a gang of thieves had broken in from the backyard, intending to rob and assault. The servants Counterattack desperately and barely managed to hold their ground."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "匆忙赶去，发现竟是一伙盗贼从后院闯入，意欲抢劫行凶。"
     translated: "Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault."
@@ -61145,13 +61136,13 @@
   - text: "逍遥生"
     translated: "Free‑Spirited Fellow"
     qcReviewedText: "Free‑Spirited Fellow"
-    qcTranslated: "Xiaoyao Sheng"
+    qcTranslated: "Free‑Spirited Fellow"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "逐出师门"
   splits:
   - text: "逐出师门"
@@ -61527,13 +61518,12 @@
   - text: "那就决定了，请各位弟子分头前往"
     translated: "So it is decided. Please go to your respective destinations, disciples."
     qcReviewedText: "So it is decided. Please go to your respective destinations, disciples.{0}, Converging, I will lead the assault and ensure we secure a decisive victory.{1} Seize control of this area!"
-    qcTranslated: "So it is decided. Please go to your respective destinations, disciples. {0}, once we converge, I will lead the assault and ensure we seize this place from {1} in one decisive strike!"
+    qcTranslated: "So it is decided. Disciples, please proceed to your respective destinations at {0}. Once we converge, I will lead the assault and ensure we seize this place from {1} in one decisive strike!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "，汇合后由我带领出击，定要一举从"
     translated: ", Converging, I will lead the assault and ensure we secure a decisive victory."
@@ -63135,8 +63125,7 @@
     qcReviewedText: "Are you #PlayerForceDescribe# #$PlayerName#? I've heard much about you!\nI am #TargetForceDescribe#. It's nice to meet you, #$TargetInteractName#."
     qcTranslated: "Are you #PlayerForceDescribe# #$PlayerName#? I've heard much about you!\nI am #TargetForceDescribe# #$TargetInteractName#."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
@@ -65163,9 +65152,9 @@
   - text: "饶、饶命啊！"
     translated: "Rao, spare me!"
     qcReviewedText: "Rao, spare me!"
-    qcTranslated: "S‑s‑spare me!"
+    qcTranslated: "R‑r‑rao, spare me!"
     qcStatus: Corrected
-    qcQualityScore: 95
+    qcQualityScore: 85
     qcDefectCategory: DroppedStutter
     qcDefectCategories:
     - DroppedStutter
@@ -65779,14 +65768,12 @@
   - text: "（一番诊治）......"
     translated: "(The first diagnosis)......"
     qcReviewedText: "(The first diagnosis)......\nSo that's good. The Young Hero's injuries are no longer a major concern.\nJust need to go back and rest properly in peace to recover my energy."
-    qcTranslated: "(The first diagnosis)......\\nSo that's good. The Young Hero's injuries are no longer a major concern.\\nJust need to go back and rest properly in peace to recover one's energy."
+    qcTranslated: "(The first diagnosis)......\nSo that's good. The Young Hero's injuries are no longer a major concern.\nJust need to go back and rest properly in peace to recover your energy."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 90
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
-    - UnnaturalPhrasing
   - subIndex: 1
     text: "如此便好，少侠伤势已无大碍，"
     translated: "So that's good. The Young Hero's injuries are no longer a major concern."

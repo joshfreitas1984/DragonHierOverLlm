@@ -964,13 +964,9 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 游侠
-  result: Wandering Swordsman
+  result: Wandering Hero
   only: 
-    - dynamicStringsFromColumns.txt
-- raw: 侠客
-  result: Wanderer
-  only: 
-    - dynamicStringsFromColumns.txt
+    - dynamicStringsFromColumns.txt 
 - raw: 侠义无双
   result: Unparalleled Chivalry
   only: 
