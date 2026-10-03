@@ -59884,11 +59884,7 @@
 - raw: "都.点检"
   splits:
   - text: "都.点检"
-    translated: "Du Dianjian"
-    qcReviewedText: "Du Dianjian"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Grand Marshal"
 - raw: "长兵/绝技/内功"
   splits:
   - text: "长兵"

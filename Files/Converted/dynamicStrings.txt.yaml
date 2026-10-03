@@ -61931,11 +61931,7 @@
 - raw: "都点检"
   splits:
   - text: "都点检"
-    translated: "Check all of them"
-    qcReviewedText: "Check all of them"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Grand Marshal"
 - raw: "配偶"
   splits:
   - text: "配偶"

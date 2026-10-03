@@ -471,6 +471,7 @@ public class MainPlugin : BasePlugin
 
         SpeAddDescribePatches.PatchAll();
         EquipmentAffixNamePatches.PatchAll();
+        EquipmentTierNameSpacingPatches.PatchAll();
         QuickDetailPatches.PatchAll();
         AttriRatioDescribePatches.PatchAll();
         TagDisabledTooltipPatches.PatchAll();

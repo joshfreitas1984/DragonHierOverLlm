@@ -36,6 +36,10 @@ internal static class GlobalDataListOverrides
 {
     private static bool _applied;
 
+    // Also read by EquipmentTierNameSpacingPatches - the game's GenerateArmor/Helmet/Shoes/Weapon
+    // bake EquipLvName[itemLv] + base name into the saved ItemData.name with no separator.
+    internal static readonly string[] EquipLvNames = { "Poor", "Common", "Fine", "Superior", "Perfect", "Peerless" };
+
     // If any entry's Count doesn't match its expected length here, that list is skipped (logged as
     // a warning) rather than partially overwritten - a game update reordering/resizing the tier
     // scale should never silently mislabel it.
@@ -45,7 +49,7 @@ internal static class GlobalDataListOverrides
         ("BattleScoreText", new[] { "Poor", "Average", "Good", "Excellent", "Supreme", "Peerless" }),
         ("AttriRatioString", new[] { "Low", "Average", "High", "Refined", "Supreme", "Peerless", "Divine" }),
         ("EquipmentWeightLvName", new[] { "None", "Minimal", "Light", "Moderate", "Heavy", "Overloaded" }),
-        ("EquipLvName", new []{ "Poor", "Common", "Fine", "Superior", "Perfect", "Peerless"}),
+        ("EquipLvName", EquipLvNames),
         ("SkillLvName", new []{ "Basic", "Advanced", "Superior", "Secret", "Ultimate", "Peerless"}),
         ("BookRareLvName", new []{ "Incomplete", "Replica", "Fine", "Antique", "Rare", "Complete"}),
         ("TreasureRareLvName", new []{ "Damaged", "Low Grade", "Mid Grade", "High Grade", "Rare", "Exquisite"}),

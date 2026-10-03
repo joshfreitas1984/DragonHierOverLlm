@@ -1991,14 +1991,7 @@
 - raw: "#PlayerName#，大事不妙！不知是谁走漏了风声，都点检墓的消息传得满城风雨，不少武林人士都跑来寻宝了！\n你多带些人手尽快来<b>朱仙镇</b>汇合，免得被这些家伙捷足先登。"
   splits:
   - text: "#PlayerName#，大事不妙！不知是谁走漏了风声，都点检墓的消息传得满城风雨，不少武林人士都跑来寻宝了！"
-    translated: "#PlayerName#, something's terribly wrong! Word got out somehow that the tomb of Inspector Dou is being explored, and now it's causing a stir all over town! Many Wulin figures have come to seek treasure!"
-    qcReviewedText: "#PlayerName#, something's terribly wrong! Word got out somehow that the tomb of Inspector Dou is being explored, and now it's causing a stir all over town! Many Wulin figures have come to seek treasure!\nBring more people and come as soon as possible.<b>Zhuxian Town </b>Converge to avoid letting these guys get there first."
-    qcTranslated: "#PlayerName#, something's terribly wrong! Word got out somehow that the tomb of Inspector Dou is being explored, and now it's causing a stir all over town! Many Wulin figures have come to seek treasure!\nBring more people and come as soon as possible to <b>Zhuxian Town</b> to converge, so we don't let these guys get there first."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "#PlayerName#, something's wrong! Someone leaked the news, and now word of Grand Marshal's tomb has spread like wildfire. Many Wulin figures have come to seek treasure!"
   - subIndex: 1
     text: "你多带些人手尽快来"
     translated: "Bring more people and come as soon as possible."

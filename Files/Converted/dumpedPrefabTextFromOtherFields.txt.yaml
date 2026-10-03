@@ -482,15 +482,7 @@
 - raw: "#PlayerName#，都点检墓一别已有数日，如今风声渐歇，还请<b>来寻我平分当日所获战利品</b>。"
   splits:
   - text: "#PlayerName#，都点检墓一别已有数日，如今风声渐歇，还请"
-    translated: "#PlayerName#, since the last inspection tour of the cemetery a few days ago, the situation has calmed down. Please proceed with the rest of the matters."
-    qcReviewedText: "#PlayerName#, since the last inspection tour of the cemetery a few days ago, the situation has calmed down. Please proceed with the rest of the matters.<b>Come to share the treasures I acquired that day with them</b>。"
-    qcTranslated: "#PlayerName#, it has been several days since we last parted at the cemetery inspection. Now that the rumors have died down, please <b>come find me to share the spoils of war from that day</b>."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
+    translated: "#PlayerName#, Grand Marshal. It has been several days since we parted at the tomb. Now that the commotion has subsided, please [request]."
   - subIndex: 1
     text: "来寻我平分当日所获战利品"
     translated: "Come to share the treasures I acquired that day with them"
@@ -3609,14 +3601,7 @@
 - raw: "#PlayerName#，大事不妙！不知是谁走漏了风声，都点检墓的消息传得满城风雨，不少武林人士都跑来寻宝了！\\n你多带些人手尽快来<b>朱仙镇</b>汇合，免得被这些家伙捷足先登。"
   splits:
   - text: "#PlayerName#，大事不妙！不知是谁走漏了风声，都点检墓的消息传得满城风雨，不少武林人士都跑来寻宝了！"
-    translated: "#PlayerName#, trouble ahead! It seems that someone has leaked the news, and word of the tomb excavation has spread like wildfire throughout the city. Many martial artists have come to seek treasure!"
-    qcReviewedText: "#PlayerName#, trouble ahead! It seems that someone has leaked the news, and word of the tomb excavation has spread like wildfire throughout the city. Many martial artists have come to seek treasure!\\nBring more people and come as soon as possible.<b>Zhuxian Town </b>Converge to avoid letting these guys get there first."
-    qcTranslated: "#PlayerName#, trouble ahead! It seems that someone has leaked the news, and word of the tomb excavation has spread like wildfire throughout the city. Many Wulin figures have come to seek treasure!\\nBring more people and come as soon as possible to <b>Zhuxian Town</b> to converge, so we don't let these guys get there first."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "#PlayerName#, something's wrong! Someone leaked the news, and now word of Grand Marshal's tomb has spread like wildfire. Many Wulin figures have come to seek treasure!"
   - subIndex: 1
     text: "你多带些人手尽快来"
     translated: "Bring more people and come as soon as possible."
@@ -6430,15 +6415,7 @@
 - raw: "传说大侠孟经世机缘巧合下，得到了都点检封桩库之藏宝图。其老友<b>金龙帮</b>帮主上官雯特地设宴款待，为其庆贺。"
   splits:
   - text: "传说大侠孟经世机缘巧合下，得到了都点检封桩库之藏宝图。其老友"
-    translated: "Legend has it that Great Hero Meng Jingshi, through a series of coincidences, obtained the treasure map from Dujian's storage vault. His elderly friend"
-    qcReviewedText: "Legend has it that Great Hero Meng Jingshi, through a series of coincidences, obtained the treasure map from Dujian's storage vault. His elderly friend <b>Golden Dragon Gang </b>The Gang Master, Shangguan Wentei, specially arranged a banquet to celebrate the occasion."
-    qcTranslated: "Legend has it that Great Hero Meng Jingshi, through a series of coincidences, obtained the treasure map from Dujian's storage vault. His elderly friend <b>Golden Dragon Gang</b> Gang Master Shangguan Wen specially arranged a banquet to celebrate the occasion."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
+    translated: "Legend has it that Great Hero Meng Jingshi, by a stroke of luck, obtained the treasure map of the Grand Marshal's sealed vault. His old friend"
   - subIndex: 1
     text: "金龙帮"
     translated: "Golden Dragon Gang"
@@ -9587,17 +9564,9 @@
   splits:
   - text: "最近许多武林人士在"
     translated: "Recently, many Wulin practitioners have been"
-    qcReviewedText: "Recently, many Wulin practitioners have been<b>#PosText#</b>One place has gathered many, all said to be searching for Du Dianjian's tomb."
-    qcTranslated: "Recently, many Wulin practitioners have been gathering in the <b>#PosText#</b> area, all said to be searching for Du Dianjian's tomb."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - GarbledNumber
   - subIndex: 1
     text: "一带聚集，传闻都是为寻找都点检之墓而来。"
-    translated: "One place has gathered many, all said to be searching for Du Dianjian's tomb."
+    translated: "A group gathered there, all rumored to be searching for the Grand Marshal's tomb."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "决战在即"
@@ -14234,11 +14203,7 @@
 - raw: "寻找#TargetPlace#的都点检墓。"
   splits:
   - text: "寻找#TargetPlace#的都点检墓。"
-    translated: "Check every point in #TargetPlace#"
-    qcReviewedText: "Check every point in #TargetPlace#"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Search for the Grand Marshal's tomb in #TargetPlace#."
 - raw: "寻找一件精良级别的珍宝交给姜婉师姐"
   splits:
   - text: "寻找一件精良级别的珍宝交给姜婉师姐"
@@ -17864,14 +17829,7 @@
 - raw: "此后，#$PlayerName#便效仿都点检赵胤宗，\\n于泰山玉皇顶召开泰岳大典，宣告武林一统。"
   splits:
   - text: "此后，#$PlayerName#便效仿都点检赵胤宗，"
-    translated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector."
-    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector.\\nAt the Jade Emperor Peak of Mount Tai, the Mount Tai Grand Assembly will be held to declare the unification of Wulin."
-    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong, the Capital Inspector,\\nand held the Mount Tai Grand Assembly at the Jade Emperor Peak of Mount Tai to declare the unification of Wulin."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "After that, #$PlayerName# emulated Grand Marshal Zhao Yinzong,"
   - subIndex: 1
     text: "于泰山玉皇顶召开泰岳大典，宣告武林一统。"
     translated: "At the Jade Emperor Peak of Mount Tai, the Mount Tai Grand Assembly will be held to declare the unification of Wulin."
@@ -17880,14 +17838,7 @@
 - raw: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，\\n并借此时机黄袍加身，登基称帝。"
   splits:
   - text: "此后，#$PlayerName#效仿都点检赵胤宗，于泰山玉皇顶召开泰岳大典，"
-    translated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai."
-    qcReviewedText: "After that, #$PlayerName# emulated Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai.\\nAnd seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
-    qcTranslated: "After that, #$PlayerName# emulated Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai.\\nHe seized this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "After that, #$PlayerName# followed the example of Grand Marshal Zhao Yinzong and held the Mount Tai Grand Assembly on the Jade Emperor Peak of Mount Tai."
   - subIndex: 1
     text: "并借此时机黄袍加身，登基称帝。"
     translated: "And seize this opportunity to don the yellow robe and ascend the throne to proclaim himself emperor."
@@ -24172,11 +24123,7 @@
 - raw: "都点检墓"
   splits:
   - text: "都点检墓"
-    translated: "Check the tombstone"
-    qcReviewedText: "Check the tombstone"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Grand Marshal's tomb"
 - raw: "醒"
   splits:
   - text: "醒"
@@ -24796,11 +24743,7 @@
 - raw: "随后，他便奉诏入宫担任殿前都点检之职，大权独揽，执掌禁军。"
   splits:
   - text: "随后，他便奉诏入宫担任殿前都点检之职，大权独揽，执掌禁军。"
-    translated: "Subsequently, he was summoned to the palace to serve as the Commandant of the Imperial Guard, holding supreme power and commanding the Imperial Guard."
-    qcReviewedText: "Subsequently, he was summoned to the palace to serve as the Commandant of the Imperial Guard, holding supreme power and commanding the Imperial Guard."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Soon after, he was summoned to the palace to serve as the Grand Marshal in charge of the Imperial Guard, wielding absolute power."
 - raw: "随后此疫快速扩散，如今城内已有数百名染病者了。\\n若是不能尽快控制，只怕#AreaName#内就要生灵涂炭，死伤枕籍了。"
   splits:
   - text: "随后此疫快速扩散，如今城内已有数百名染病者了。"
