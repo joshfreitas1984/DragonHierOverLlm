@@ -52,6 +52,7 @@ root `docs/` taxonomy.
 - [PlotText width overflow investigation](investigations/plugin/plottext-width-overflow-investigation.md)
 - [Performance optimization pass](investigations/plugin/performance-optimization-pass-2026-09-13.md)
 - [Performance optimization pass 2 (algorithms, setter prefixes)](investigations/plugin/performance-optimization-pass-2026-10-02.md)
+- [Hall of Heroes ranking slow refresh](investigations/plugin/hall-of-heroes-ranking-slow-refresh.md)
 - [Record-log translation naturalness](investigations/plugin/recordlog-translation-naturalness.md)
 - [UnityLogCapture logMessageReceived investigation](investigations/plugin/unitylogcapture-no-logmessagereceived.md)
 - [UpgradePriority and HeroSearch diagnostics removed](investigations/plugin/upgradepriority-and-herosearch-diagnostics-removed.md)
@@ -59,6 +60,7 @@ root `docs/` taxonomy.
 ## Current-state feature references
 
 - [DynamicStringPatches agent reference](features/runtime-plugin/dynamicstringpatches-agent-reference.md)
+- [HeroFightScoreListPatches agent reference](features/runtime-plugin/herofightscorelistpatches-reference.md)
 - [PlotTextSizePatches agent reference](features/runtime-plugin/plottextsizepatches-agent-reference.md)
 - [PrefabTextPatches agent reference](features/runtime-plugin/prefabtextpatches-agent-reference.md)
 - [ResourceIoPatches agent reference](features/runtime-plugin/resourceiopatches-agent-reference.md)
