@@ -118,8 +118,9 @@ public class PlotLineContextTests
         Assert.True(context.GenderKnown);
         Assert.Equal(LineContext.Female, context.Gender);
         Assert.Contains("慕容星辰", context.Prompt);
-        // Different genders in one line: the pronoun is ambiguous, so no context.
-        Assert.Null(ContextOf(contexts, both));
+        // Different genders in one line: the translator is told who is who, with no single gender to check against.
+        Assert.True(ContextOf(contexts, both)!.GenderKnown);
+        Assert.Equal(string.Empty, ContextOf(contexts, both)!.Gender);
         // A person token keeps its unknown-gender hint.
         Assert.False(ContextOf(contexts, token)!.GenderKnown);
         // Two-character names are matched, so "his" for 马悍 is not an invented gender...
