@@ -111,6 +111,54 @@ additionalSourceAssessments:
     wrong, not on reacting to any creature word. Added BEFORE the prompt fix meant to address them, so
     the current prompt is baselined on them first. Borderline cases deliberately left out: 鱼肠剑法 (fish
     dropped from a famous sword name) and 控鹤功 (Featherfall Technique, crane dropped).
+- name: ConvertedCorpus-20261004-pronoun-mining
+  path: Files/Converted
+  sampleFingerprint: n/a - not a TranslationAssessmentWorkflow run
+  sampleSize: n/a
+  sampleSeed: n/a
+  selection: >-
+    16 single-candidate items hand-mined from Files/Converted for two reported translation habits
+    of the Qwen25 translator: (a) inventing he/she/his/him where the source states no gender (a
+    subject-omitted stage direction, a hermit, a beggar, a poem title) instead of singular
+    "they/their", and (b) flipping second person to first or third person (你 rendered as "my",
+    "me" or "them", or a speaker's 我 rendered as "he"). 10 Defect items (all pronoun-attribution)
+    plus 6 Pass controls where the source states gender (他/她) or the translation correctly uses
+    "they/their" or "you", so a prompt change is tested for over-correction as well. Candidates
+    were found with a throwaway keyword scan, then each line read individually; ambiguous cases
+    (NPC stage directions where "I" could be the actor) were left out. The 10 Defect sources are
+    also pinned in Config.yaml pinnedSampleSources so every assessment run re-translates them.
+    Items sourced from this batch set sampleRun: ConvertedCorpus-20261004-pronoun-mining below.
+- name: ConvertedCorpus-20261004-pronoun-mining-2
+  path: Files/Converted
+  sampleFingerprint: n/a - not a TranslationAssessmentWorkflow run
+  sampleSize: n/a
+  sampleSeed: n/a
+  selection: >-
+    Second pronoun batch, 25 single-candidate items mined from Files/Converted after the first
+    16 (ConvertedCorpus-20261004-pronoun-mining), widening file coverage beyond PlotData
+    (dynamicStrings, dumpedPrefabText*). 11 Defect items (all pronoun-attribution): six invented
+    he/his in subject-omitted lines, four 你 rendered as "them", "I" or "the two of them", and one
+    garbled "this couple". 14 Pass controls: ungendered 此人/这人/对方 correctly rendered as
+    "they/them", explicit 他 kept gendered, 你/你们 kept as "you", and named speakers (我宋廉庭, 我沈退)
+    kept as "I". The 11 Defect sources are also pinned in Config.yaml pinnedSampleSources. Items
+    sourced from this batch set sampleRun: ConvertedCorpus-20261004-pronoun-mining-2 below.
+- name: ConvertedCorpus-20261004-first-person-mining
+  path: Files/Converted
+  sampleFingerprint: n/a - not a TranslationAssessmentWorkflow run
+  sampleSize: n/a
+  sampleSeed: n/a
+  selection: >-
+    18 single-candidate items mined from Files/Converted after the reported "I where it should be
+    you" habit. A scan of 4231 translations with first-person "I/my/me" and no first-person word
+    in the source found most are legitimate (dialogue drops 我 and the speaker is the right
+    subject). The real defect is omitted-subject NARRATION (只见/只听/行至/忽然听闻) rendered "I
+    see/I heard" when the game narrates to the player in second person. 10 Defect items of that shape
+    (PlotData, dynamicStrings) plus 8 Pass controls where "I" is correct (speaker dialogue, parenthesised
+    inner thoughts, 听闻 in direct address), so a narration rule is tested for turning speech into
+    "you". Narration voice in PlotData is mixed (about 79 "I" vs 153 "you" among narration openers),
+    so these defects are the clear-cut dynamicStrings/second-person shapes, not every "I". All 18 are
+    pinned in Config.yaml pinnedSampleSources. Items sourced from this batch set sampleRun:
+    ConvertedCorpus-20261004-first-person-mining below.
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -3266,6 +3314,1042 @@ items:
     Real production translation mined from Files/Converted/dynamicStringsFromColumns.txt.yaml (pre-QC
     'translated' field, independent of the qcStatus already recorded on that row - QC Passed every
     Defect item here except 玉蜂针, which QC corrected).
+- sampleId: 06acf63122482484
+  sampleKind: split
+  source: "（说罢拉起你的手，向着地道入口飞驰而去）"
+  candidates:
+    ProductionTranslation: "(Said and done, he took my hand and raced towards the entrance of the tunnel.)"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    你的手 is the player's hand, addressed as "you" in this narration, but the translation renders it "my hand" - a you-to-I flip. Correct: "...took your hand...". The omitted subject also became "he", but the person swap is the defect.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: ec590aa1ec9865b7
+  sampleKind: split
+  source: "如今本掌门不得不将你逐出"
+  candidates:
+    ProductionTranslation: "Now, I, Sect Leader, have no choice but to expel them."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    将你逐出 is "expel you" (singular second person, the player). The translation turns 你 into "them", losing the addressee. Correct: "I have no choice but to expel you."
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: b37dcf29397827c0
+  sampleKind: split
+  source: "正思忖间，忽然有三个身影从暗处跳出，将你团团围住！"
+  candidates:
+    ProductionTranslation: "Just as I was thinking, suddenly three figures leaped out from the shadows and surrounded me!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Second-person narration (将你团团围住, "surrounded you") rendered in first person ("I was thinking... surrounded me"). The game addresses the player as 你 in narration, so this should read "Just as you were pondering... surrounded you!"
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 7a10ece9134a0610
+  sampleKind: split
+  source: "我郭勇锐只要还活着一天，就定要替你洗刷冤屈，"
+  candidates:
+    ProductionTranslation: "As long as Guo Yongrui lives another day, he vows to clear your name."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    The speaker introduces themself with 我郭勇锐 ("I, Guo Yongrui") and says they will clear YOUR name. The translation turns the speaker into a third person ("he vows"), which also invents a gender. Correct: "As long as I, Guo Yongrui, live another day, I will clear your name."
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: b362c1a21a1f2583
+  sampleKind: split
+  source: "寻西山隐者不遇"
+  candidates:
+    ProductionTranslation: "To Find the Hermit in the Western Mountains but Fail to Meet Him"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    隐者 (a hermit) carries no stated gender and the source has no pronoun, but the translation adds "Him". Neutral phrasing (e.g. "...but Fail to Meet Them" or "Visiting the Hermit of the Western Mountains, Not Home") is correct when gender is not stated.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStringsPoetry.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: cdabe0405ea1cac4
+  sampleKind: split
+  source: "竟然将这些暗器尽数拦下。"
+  candidates:
+    ProductionTranslation: "Surprisingly, he blocked all these hidden weapons"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Subject-omitted sentence with no 他 in the source; the translation invents "he". No gender is established on this line, so "they" or an agentless construction is correct.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: cf86b4b7308b09a3
+  sampleKind: split
+  source: "手中的瓷器碎片"
+  candidates:
+    ProductionTranslation: "Fragments of porcelain in his hand"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    No 他 in the source, only 手中 ("in the hand"). The translation attaches "his" to an unspecified holder; "in their hand" is the intended output.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 314c17492ed06e9a
+  sampleKind: split
+  source: "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，"
+  candidates:
+    ProductionTranslation: "Only to see the beggar barely lift his eyes to glance at you, sneering in contempt."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    乞丐 (a beggar) has no stated gender and the source has no 他, but the translation adds "his eyes". "Their eyes" or "eyes" is correct. The 你 is rendered correctly as "you" - only the gender is invented.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: ed0fa7bf0f7ef07c
+  sampleKind: split
+  source: "（摸了摸眼泪，破涕为笑）"
+  candidates:
+    ProductionTranslation: "(touched his tears, wiped them away with a smile)"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Subject-omitted stage direction with no 他 in the source; the translation invents "his". No gender is established here, so "(wiped away tears, breaking into a smile)" or "their" is correct. Reported as a representative example.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: e3f17efcd41fc481
+  sampleKind: split
+  source: "（说罢她盘膝坐下运功，不一会儿身上便腾起了阵阵真气，"
+  candidates:
+    ProductionTranslation: "(Saying this, she crossed her legs and sat down to cultivate. Soon, a array of True Qi rose from their body."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    The source gives the subject as 她 (she), so "she" is correct, but the second clause (身上, "on the body") switches to "from their body" in the same sentence, an inconsistent referent. Should stay "her body" or an agentless "True Qi rose from the body".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 0d567be491c11170
+  sampleKind: split
+  source: "不急，此人暂无性命之虞，"
+  candidates:
+    ProductionTranslation: "No rush; this person is not in immediate danger of losing their life."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    此人 ("this person") has no stated gender, and the translation correctly uses singular "their" rather than inventing he/she. Control for the gender-neutral rule.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: aaf4ed5efaee8c39
+  sampleKind: split
+  source: "我指出这功夫的缺陷，她不是应该感谢我么？"
+  candidates:
+    ProductionTranslation: "I pointed out the flaws in her martial arts, shouldn't she be grateful to me?"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Source explicitly says 她, so "her"/"she" is correct. Control: the neutral-pronoun rule must not rewrite explicitly gendered text.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: d2eee452faef4797
+  sampleKind: split
+  source: "慢着，这二十两我替他还上便是。"
+  candidates:
+    ProductionTranslation: "Hold on, I'll pay off the twenty taels for him."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Source explicitly says 他, so "him" is correct and the speaker 我 correctly stays "I". Control for both the gender and the I/you rules.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 03038819c4a33c92
+  sampleKind: split
+  source: "你趁他一个不备，向后纵越几步，然后落荒而逃！"
+  candidates:
+    ProductionTranslation: "You take advantage of his unpreparedness, leap back a few steps, and then flee into the wilderness!"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Explicit 你 and 他 map to "You" and "his" correctly. Control: second-person narration stays "you" and a stated gender stays gendered.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: d1a5a828a6957ad1
+  sampleKind: split
+  source: "你环视了房间一圈，只见闭关室正中央，正是道无名所坐的蒲团。"
+  candidates:
+    ProductionTranslation: "You scanned the room, and there, in the exact center of the seclusion chamber, was the zafu where Dao Wuming sat."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Second-person narration correctly rendered as "You". Control for the you-to-I rule.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 28ae07ee8e3184f5
+  sampleKind: split
+  source: "（你们随姑娘离开了那处是非之地，"
+  candidates:
+    ProductionTranslation: "(You followed Miss out of that place of turmoil."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    Plural-you narration correctly rendered as "You". Control for the you-to-I rule.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 2da33b7d18f5bb91
+  sampleKind: split
+  source: "（说罢从怀中掏出一柄长卷轴，从头开始细细查看起来，"
+  candidates:
+    ProductionTranslation: "(said, and pulled out a long scroll from his pocket, examining it in detail from the beginning."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    No 他 in the source and no gender established on this line; "his pocket" invents one. "Their pocket" or "the folds of the robe" is correct.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: fda0839ba1c3808b
+  sampleKind: split
+  source: "（喜笑颜开，将银两收入囊中）"
+  candidates:
+    ProductionTranslation: "(smiling broadly, he tucked the silver coins into his pocket)"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Subject-omitted stage direction with no 他; the translation invents "he"/"his". Neutral: "(beaming, tucked the silver away)".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 6957081c3e725800
+  sampleKind: split
+  source: "想必是在谋划什么大阴谋。"
+  candidates:
+    ProductionTranslation: "He must be plotting some grand conspiracy"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Subject-omitted, no 他 in the source. "He" is invented; "They must be plotting..." is correct when the referent is not gendered on the line.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 48f4e582da3a5620
+  sampleKind: split
+  source: "于是便起身在寺内闲逛，不知不觉竟走到了后山一处隐蔽院落。"
+  candidates:
+    ProductionTranslation: "So he got up to wander around the temple, and before he knew it, he found himself in a hidden courtyard at the back mountain."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Subject-omitted sentence; the source has no 他. The translation invents "he" repeatedly ("he got up", "he found himself"). Neutral "they" is expected.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 1a0a30a46f381f46
+  sampleKind: split
+  source: "便马不停蹄一路南下，终于在天黑之前赶到了河内乡。"
+  candidates:
+    ProductionTranslation: "He made his way south without stopping and finally arrived at Hanoi Township before dark."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Subject-omitted; no 他 in the source. "He" and "his way" are invented. Neutral "they" is correct.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 5152fdce6d8224c3
+  sampleKind: split
+  source: "（连连磕头，将身上兵器财物扔到地上，随后拔腿就跑）"
+  candidates:
+    ProductionTranslation: "(kneel repeatedly and beg, toss weapons and treasures at his feet, then take off running)"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    No 他 in the source (身上, "on the body"); "at his feet" invents a gender. "At their feet" is correct.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 3181e6f15de163f8
+  sampleKind: split
+  source: "全员对你的好感大减！"
+  candidates:
+    ProductionTranslation: "Everyone's goodwill towards them has significantly decreased!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    你 here is the player. The translation renders the player as "them", losing the addressee. Correct: "Everyone's goodwill towards you has significantly decreased!"
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: fb9526afd5ea861a
+  sampleKind: split
+  source: "那群邪道将你打的鼻青脸肿，"
+  candidates:
+    ProductionTranslation: "That yedao group beat them up until they were bruised all over."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    将你打 is "beat you up", with 你 the player; the translation switches to "them"/"they". Correct: "That yedao group beat you black and blue."
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 461fd6226820bf8c
+  sampleKind: split
+  source: "此处显示这对方对你的好感度。"
+  candidates:
+    ProductionTranslation: "This display shows the affection level of this couple towards them."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      - mistranslation
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    你 is the player ("towards you"), but the translation says "towards them" and also mangles 这对方 into "this couple". Correct: "This shows how much this person likes you."
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabTextFromOtherFields.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 14f2ca6050aa8029
+  sampleKind: split
+  source: "好，望你勤学苦练，将这本基础武学修习纯熟。"
+  candidates:
+    ProductionTranslation: "Okay, I'll work hard to master this basic martial arts technique."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    望你勤学苦练 is the speaker hoping YOU study hard; the translation makes the speaker the one who will work hard ("I'll"). Correct: "Good. I hope you study hard and master this basic martial art."
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 13d17d182aaad793
+  sampleKind: split
+  source: "你们二人远远跟着上官凤等人，继续长途跋涉，"
+  candidates:
+    ProductionTranslation: "The two of them followed Shangguan Feng and the others from a distance, continuing their long journey."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    你们二人 is "the two of you" - second-person narration addressed to the player party - but the translation uses third person ("The two of them"). Correct: "The two of you followed Shangguan Feng and the others from a distance..."
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 947af68dd2b6c6d0
+  sampleKind: split
+  source: "把此人一刀砍了，就地掩埋，此事不就无人知晓吗？"
+  candidates:
+    ProductionTranslation: "Cut this person down with one slash and bury them there. Won't that mean no one will know about it?"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    此人 ("this person") is ungendered; "them" is the right neutral pronoun. Control for the gender-neutral rule.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: bf6706a7f611836a
+  sampleKind: split
+  source: "如今看来此人虽心术不正，但确实是世所罕见的用毒奇才。"
+  candidates:
+    ProductionTranslation: "Now it appears that although this person's intentions are not upright, they are indeed a rare genius in the art of poison‑making."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    此人 stays ungendered and the translation uses "this person's... they". Control for the gender-neutral rule.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 36e9ac2ce53ea2c6
+  sampleKind: split
+  source: "第一个人似乎不服，便又说道"
+  candidates:
+    ProductionTranslation: "The first person didn't seem to agree, so they said again,"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    第一个人 ("the first person") has no stated gender; singular "they said" is correct.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: ba0ebe75800da57a
+  sampleKind: split
+  source: "姑娘，麻烦您再回忆回忆，这人有没有提起过要往何处去？"
+  candidates:
+    ProductionTranslation: "Miss, could you recall again if this person mentioned anywhere they were going?"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    这人 ("this person") is ungendered, so "they". 姑娘 is correctly "Miss" and 您 is correctly handled as polite "you".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 2b4aa092afca690f
+  sampleKind: split
+  source: "声望达到对方50%方可结识，同时影响好感上限。"
+  candidates:
+    ProductionTranslation: "You can meet them when your reputation reaches 50%, and this also affects the upper limit of your affection."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    对方 is the other party, ungendered; "them" is right, and the implied player is correctly "you".
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabText.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 7a1ff3ba0c362fbf
+  sampleKind: split
+  source: "这200银两乃是这群贼人的悬赏，你拿去吧。"
+  candidates:
+    ProductionTranslation: "These 200 silver pieces are the reward for this gang of thieves. Take them."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Imperative addressed to 你; "Take them." correctly leaves the subject implicit rather than inventing "I" or "they".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 8870723728cba77a
+  sampleKind: split
+  source: "你一把把他拉住。"
+  candidates:
+    ProductionTranslation: "You pulled him back abruptly"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Explicit 你 and 他 map to "You" and "him". Control for you and a stated gender.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: a1b37af640d43f49
+  sampleKind: split
+  source: "此处显示你当前使用的鞍具。"
+  candidates:
+    ProductionTranslation: "This shows the saddle you are currently using."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    你 correctly stays "you" in a UI description.
+  provenance: >-
+    Real production translation mined from Files/Converted/dumpedPrefabTextFromOtherFields.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: dce554bfc80d1ecb
+  sampleKind: split
+  source: "挡在你们和官差之间）"
+  candidates:
+    ProductionTranslation: "Block the officials from reaching you)"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    你们 correctly stays "you" in a stage direction.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 3abfd05f133c24fe
+  sampleKind: split
+  source: "哎哟！徒儿救我！"
+  candidates:
+    ProductionTranslation: "Ouch! Disciple, save me!"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    First-person 我 correctly stays "me"; 徒儿 is the vocative.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 298583c4b435e171
+  sampleKind: split
+  source: "自古以来正邪不两立，我宋廉庭便是千刀万剐，身首异处，"
+  candidates:
+    ProductionTranslation: "Throughout history, righteousness and evil have never coexisted; even if they cut me to pieces and dismember me, I, Song Lianting, will not waver."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Speaker named with 我宋廉庭 stays "I, Song Lian..."; contrast with the defect line where 我郭勇锐 became "he".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 23943541c0308fbb
+  sampleKind: split
+  source: "既是夏帮主一番好意，我沈退也不好推辞。"
+  candidates:
+    ProductionTranslation: "Since Sect Leader Xia is being so kind, I, Shen Tui, can't refuse either."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    我沈退 correctly rendered "I, Shen Tui". Control for the speaker-self-reference rule.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 2905780866d05dc1
+  sampleKind: split
+  source: "他一切都好，劳烦您挂念了。"
+  candidates:
+    ProductionTranslation: "He is doing well, no need for you to worry about him."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Explicit 他 stays "he/him" and 您 stays "you". Control for both rules.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 95186b187900f2a5
+  sampleKind: split
+  source: "彗定清风，你们包抄他后路！"
+  candidates:
+    ProductionTranslation: "Hui Ding Qingfeng, flank him from behind!"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining-2
+  reviewNote: >-
+    Explicit 他 stays "him" and the imperative to 你们 stays addressed ("flank"). Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: aadeaeef29e3c9c7
+  sampleKind: split
+  source: "行至一枝繁叶茂之处，只见丛林掩映之间，"
+  candidates:
+    ProductionTranslation: "Arriving at a place where branches and leaves are lush, I see the jungle hidden between the trees,"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration opener 行至/只见 with no subject, rendered "I see". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: c2c7f16381908b25
+  sampleKind: split
+  source: "只见阮芷躺在一块草席上，正不住咳嗽。"
+  candidates:
+    ProductionTranslation: "I see Ruan Zhi lying on a straw mat, coughing uncontrollably."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 只见 with no subject rendered "I see". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 46aabb1f147436d3
+  sampleKind: split
+  source: "只见四名老者配合无间，手中兵刃织成一张细密大网，"
+  candidates:
+    ProductionTranslation: "I see four elders moving in perfect coordination, their weapons weaving into a dense net."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 只见 with no subject rendered "I see". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 4e06afc91c67d041
+  sampleKind: split
+  source: "话音刚落，只听闻金鼓齐鸣，无数马蹄声轰隆而至。"
+  candidates:
+    ProductionTranslation: "The moment the words fell silent, I heard the simultaneous sound of gongs and drums, followed by countless hooves thundering toward me."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 只听闻 with no subject rendered "I heard". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 9eab66e2275fae04
+  sampleKind: split
+  source: "等了不多时，忽然听闻一阵轰隆之声，"
+  candidates:
+    ProductionTranslation: "Not long after, I suddenly heard a loud rumbling sound."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 忽然听闻 with no subject rendered "I suddenly heard". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: c3fe5446e5d138f6
+  sampleKind: split
+  source: "正暗自思量之间，只见一个身影出现在崖边，"
+  candidates:
+    ProductionTranslation: "Just as I was pondering this, I saw a figure appear at the edge of the cliff."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 正...之间 with no subject rendered "I was pondering... I saw". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 56bf7f95a959084e
+  sampleKind: split
+  source: "正逡巡间，突然一名少女跳出拦住去路。"
+  candidates:
+    ProductionTranslation: "Just as I was hesitating, suddenly a teenage girl jumped out to block my way."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration with no subject rendered "I was hesitating... block my way". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 0ca7f744e5df6285
+  sampleKind: split
+  source: "（眼见那个人影在山道上拾阶而上，不一会儿便来到门前。"
+  candidates:
+    ProductionTranslation: "(I watched as that figure climbed the mountain path and soon reached the doorstep."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 眼见 with no subject rendered "I watched". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 9af4be8202107895
+  sampleKind: split
+  source: "只见他全身血如泉涌，已然咽气而亡，"
+  candidates:
+    ProductionTranslation: "I could see that his body was bleeding profusely, and he had already passed away."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 只见 with no subject rendered "I could see that". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 9c2bb24d47bb069f
+  sampleKind: split
+  source: "（只听得一阵洪钟般的笑声从山下传来"
+  candidates:
+    ProductionTranslation: "(I could hear a loud bell‑like laughter coming from below the mountain."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories: 
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Narration 只听得 with no subject rendered "I could hear". The game narrates to the player in second person elsewhere (e.g. 你便听闻 -> "you heard"), so omitted-subject narration should read "you", not "I".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: de4ae245402974ca
+  sampleKind: split
+  source: "此次前来，是想要听些不一样的。"
+  candidates:
+    ProductionTranslation: "This time, I came to hear something different."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Speaker dialogue with omitted 我; "I" is the correct subject. Control: the narration rule must not turn speech into "you".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: b7e5b8d65a606ed6
+  sampleKind: split
+  source: "今天总算是将这恶贼绳之以法了。"
+  candidates:
+    ProductionTranslation: "Today, I finally brought this villain to justice."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Speaker dialogue; "I" is correct. Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 910bb06244557704
+  sampleKind: split
+  source: "（啊呀，又扔偏了）"
+  candidates:
+    ProductionTranslation: "(Oops, I missed again.)"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Parenthesised inner thought/exclamation by the speaker; "I" is correct. Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 4f96fd3fecf00f26
+  sampleKind: split
+  source: "（这下可以溜了吧……）"
+  candidates:
+    ProductionTranslation: "(I can finally slip away now......)"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Parenthesised inner thought; "I" is correct. Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: 3ab0c2b01c2a7020
+  sampleKind: split
+  source: "听闻近来监牢内更换了一批守卫，刚熟络起来的几位狱卒都调离了此处。"
+  candidates:
+    ProductionTranslation: "I heard that a batch of new guards has been assigned to the prison recently. The jailers who had just become familiar with their posts have all been reassigned."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    听闻 in dialogue is the speaker ("I heard that..."), unlike narration 听闻. Control for narration vs speech.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: f30e074209e5463a
+  sampleKind: split
+  source: "村长，听闻二三十年前，贵村有一户人家突然全家暴毙，"
+  candidates:
+    ProductionTranslation: "Village chief, I've heard that in the 1990s or so, your village had a family that suddenly died out completely."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    听闻 in direct address to a village chief is the speaker ("I've heard"). Control for narration vs speech.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: c6d69ec5599291da
+  sampleKind: split
+  source: "虽说入帮不久，但已是立下了汗马功劳。"
+  candidates:
+    ProductionTranslation: "Though I joined recently, I have already made significant contributions."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Speaker dialogue; "I" is correct. Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: fb558d953f9483b4
+  sampleKind: split
+  source: "近日深感精神萎靡，浑身不适，听闻#SourceInteractName#在此处坐诊，特地前来求药。"
+  candidates:
+    ProductionTranslation: "Lately, I have been feeling listless and unwell. Upon hearing that #SourceInteractName# is practicing medicine here, I specially came to seek some medicine."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-first-person-mining
+  reviewNote: >-
+    Speaker dialogue with 听闻; "I" is correct. Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell
