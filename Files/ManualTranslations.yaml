@@ -116,3 +116,7 @@
 #   result: "Time to make myself scarce"
 # - raw: "那便是寻找多年前害死柴世宗，破坏泰山封禅的罪魁祸首。"
 #   result: "Then we must find the mastermind who, years ago, murdered Chai Shizong and sabotaged the Mount Tai Fengshan Ceremony."
+- raw: "（趁着魏胥华不备，突然出手）小子看掌！"
+  result: "(Taking advantage of Wei Xuhua's distraction, suddenly strikes) Look out, boy!"
+- raw: "竟抢在我前头料理了此人。"
+  result: "You've dealt with this person before I could."

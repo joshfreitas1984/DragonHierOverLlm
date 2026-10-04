@@ -58,7 +58,12 @@ skipLineValidation: false
 correctionPromptsEnabled: true
 translateFlagged: true
 # PlotData stage directions and narration get a speaker/gender hint (see Translate/PlotLineContext.cs).
-lineContextEnabled: false
+lineContextEnabled: true
+# Flags translations with an invented/wrong gender or "I" narration for retranslation during ApplyAllRulesToCurrentTranslation
+# (once per line per run). On by default; set enabled: false if it keeps flagging lines the model cannot fix.
+pronounCheck:
+  enabled: true
+  skipWhenTranslationNamesSomeone: false
 qualityReview:
   enabled: true
   # Single model for every QC role (detection/verification/correction/repair) - see
@@ -133,6 +138,17 @@ translationAssessment:
     - "正思忖间，忽然有三个身影从暗处跳出，将你团团围住！"
     - "我郭勇锐只要还活着一天，就定要替你洗刷冤屈，"
     - "寻西山隐者不遇"
+    - "街边乞丐一遍以筷子敲碗，一遍所唱之歌谣，其吐字换气中暗含丐帮入门内功心法"
+    - "这慕容星辰号称天下第一神偷，果真是名不虚传。"
+    - "岂料副掌门诸葛伶潜结外藩，私蓄死士，意图宫变。"
+    - "依照唐逸影的性子，定会派人上门寻仇。"
+    - "但见白云天轻喝一声，运动周身真气一剑刺出，"
+    - "叶一鸣一闻此言，顿时收起轻蔑的笑容回头看去，"
+    - "听说，乃是当今朝廷四大御史之一的林弄影林统领。"
+    - "让姬清梵副阁主尽快率众支援才行！"
+    - "今日崔命官......死得其所......"
+    - "万一让计心狂探听到风声，肯定会溜之大吉。"
+    - "正好凤南飞在府上设席邀我前去喝酒，咱们一道赴宴。"
     - "竟然将这些暗器尽数拦下。"
     - "手中的瓷器碎片"
     - "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，"

@@ -4350,6 +4350,200 @@ items:
     Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field,
     independent of any qcStatus already recorded on that row); ProductionTranslation is a
     single-candidate label, not a specific configured model name.
+- sampleId: 29d98771f56ae258
+  sampleKind: split
+  source: "街边乞丐一遍以筷子敲碗，一遍所唱之歌谣，其吐字换气中暗含丐帮入门内功心法"
+  candidates:
+    ProductionTranslation: "A beggar by the street beat on his bowl with chopsticks while singing a folksong; his diction and breathing concealed the Beggar Sect's entrance-level internal skill heart method."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    街边乞丐 is an unnamed role with no stated gender, but the translation gives the beggar "his bowl" and "his diction". The model produces this on essentially every attempt. Correct: drop the possessive ("beat on a bowl") and repeat the role ("the beggar's diction"); "their" is a last resort and reads awkwardly here.
+  provenance: >-
+    Real production translation mined from Files/Converted/KungFuData.csv.yaml (kung fu description, flagged InventedGender);
+    ProductionTranslation is a single-candidate label, not a specific configured model name.
+- sampleId: 39df9789c7722961
+  sampleKind: split
+  source: "这慕容星辰号称天下第一神偷，果真是名不虚传。"
+  candidates:
+    ProductionTranslation: "This Murong Xingchen is known as the number one thief in the world, and indeed he lives up to his reputation."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    The source names 慕容星辰 and uses no pronoun, but the translation adds "he" and "his". The source has no pronoun, but SpeHeroData.csv lists 慕容星辰 as a female character, so "he" and "his" are wrong; correct is "she"/"her" (or the name repeated). The existing QC pass scored this row 100 and Passed, so QC misses it. PlotLineContext now supplies the hero's gender from SpeHeroData for any line that names a hero, so the translator and the pronoun check use the game's data.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name.
+- sampleId: af740eed26505db4
+  sampleKind: split
+  source: "岂料副掌门诸葛伶潜结外藩，私蓄死士，意图宫变。"
+  candidates:
+    ProductionTranslation: "Little did he expect that Deputy Sect Leader Zhuge Ling secretly allied with external factions, privately recruited assassins, and intended to stage a palace coup."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    诸葛伶 is a female character in SpeHeroData; "Little did he expect" invents a male subject for an omitted-subject clause. Correct is "Little did anyone expect" or "Who would have thought that Deputy Sect Leader Zhuge Ling...".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: 03de24f51b45427d
+  sampleKind: split
+  source: "依照唐逸影的性子，定会派人上门寻仇。"
+  candidates:
+    ProductionTranslation: "Given Tang Yiying's temperament, she would definitely send someone to seek revenge."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    唐逸影 is a male character in SpeHeroData, but the translation says "she". The game data settles the gender, so "he" is correct.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: b3ddbbc48739c957
+  sampleKind: split
+  source: "但见白云天轻喝一声，运动周身真气一剑刺出，"
+  candidates:
+    ProductionTranslation: "But seeing Bai Yuntian exhale sharply and channel his True Qi to thrust out a sword strike."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    白云天 is a female character in SpeHeroData, but the translation says "his". Correct is "her" (or "the True Qi of their whole body").
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: 0dc411657d81f992
+  sampleKind: split
+  source: "叶一鸣一闻此言，顿时收起轻蔑的笑容回头看去，"
+  candidates:
+    ProductionTranslation: "Ye Yiming heard these words and immediately put away his disdainful smile to look back."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    叶一鸣 is a female character in SpeHeroData, but the translation says "his". Correct is "her".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: 1fd18bc2b9a2f216
+  sampleKind: split
+  source: "听说，乃是当今朝廷四大御史之一的林弄影林统领。"
+  candidates:
+    ProductionTranslation: "He is said to be one of the Four Great Censors of the current court, Lin Nongying, the Commander."
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    林弄影 is a female character in SpeHeroData; the opening "He" for the omitted subject of 听说 is invented. Correct is "It is said that this is one of the Four Great Censors..." or "She".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: f2e8ab65b29ee656
+  sampleKind: split
+  source: "让姬清梵副阁主尽快率众支援才行！"
+  candidates:
+    ProductionTranslation: "Let Deputy Pavilion Chief Ji Qingfan quickly mobilize his followers to support us!"
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    姬清梵 is a female character in SpeHeroData, but the translation says "his followers". Correct is "her followers" or "the followers".
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: bedaf9fe82ff0982
+  sampleKind: split
+  source: "今日崔命官......死得其所......"
+  candidates:
+    ProductionTranslation: "Today, Cui Minguan... died as he should have..."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    崔命官 is male in SpeHeroData and "he" matches. Control: a correct pronoun for a named hero must not be flagged.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: 0c832136063dc3a7
+  sampleKind: split
+  source: "万一让计心狂探听到风声，肯定会溜之大吉。"
+  candidates:
+    ProductionTranslation: "If Ji Xinkuang hears any wind of this, he's sure to make a clean getaway."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    计心狂 is male in SpeHeroData and "he" matches. Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: fbb163cfa237466e
+  sampleKind: split
+  source: "正好凤南飞在府上设席邀我前去喝酒，咱们一道赴宴。"
+  candidates:
+    ProductionTranslation: "Feng Nanfei has set a feast at his residence and invited me to join him for some drinks. Let's head over together."
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-named-hero-mining
+  reviewNote: >-
+    凤南飞 is male in SpeHeroData and "his"/"him" are right. Control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
+    independent of any qcStatus already recorded on that row); ProductionTranslation is a
+    single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell
