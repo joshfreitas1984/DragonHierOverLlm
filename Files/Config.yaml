@@ -57,6 +57,8 @@ batchSize: 100
 skipLineValidation: false
 correctionPromptsEnabled: true
 translateFlagged: true
+# PlotData stage directions and narration get a speaker/gender hint (see Translate/PlotLineContext.cs).
+lineContextEnabled: false
 qualityReview:
   enabled: true
   # Single model for every QC role (detection/verification/correction/repair) - see

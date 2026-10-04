@@ -34,6 +34,7 @@ namespace Tests
             CustomPostRepair = RepairKnownLlmQuirks,
             CustomColumnRepair = RepairGameSpecificColumn,
             CustomColumnValidator = ValidateGameSpecificColumn,
+            LineContextProvider = PlotLineContext.Provide,
             CustomQcExclusionRule = (textFile, column, raw) =>
                 ExcludeFunctionRoutedDynamicStringFromQc(textFile, column, raw) ||
                 ExcludePlotChoiceColumnFromQc(textFile, column, raw),

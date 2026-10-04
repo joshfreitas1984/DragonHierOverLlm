@@ -62,6 +62,17 @@ public class TranslationWorkflowTests
             TextFileConfiguration.TextFilesToSplit, badStrings);
     }
 
+    [Fact(DisplayName = "5. Count lines needing pronoun retranslation (dry run)")]
+    public async Task CountPronounRetranslation() =>
+        await PronounDefectWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit,
+            flagForRetranslation: false, GameFileHandling.Hooks);
+
+    // Also sets FlaggedForRetranslation on each hit so a normal translate-flagged run redoes exactly those lines.
+    [Fact(DisplayName = "5. Flag lines needing pronoun retranslation")]
+    public async Task FlagPronounRetranslation() =>
+        await PronounDefectWorkflow.RunAsync(GameFileHandling.WorkingDirectory, TextFileConfiguration.TextFilesToSplit,
+            flagForRetranslation: true, GameFileHandling.Hooks);
+
     [Fact(DisplayName = "5. Flag some regexes")]
     public async Task SetSplitAsInvalid()
     {

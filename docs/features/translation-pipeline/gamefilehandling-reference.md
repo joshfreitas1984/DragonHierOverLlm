@@ -88,6 +88,16 @@ The `"{0}年{1}月{2}日"` case is a save-slot date built via `DateTime.ToString
 
 Hit-zone tokens from the KungFuData combat-stance/kungfu-info columns (`手17`, `腹18`, `足14`, `头22`, `胸12`, `腿N`, `心N`) are forced by a Raw-pattern rule (`BodyPartTokenPattern`) to `Hand/Abdomen/Feet/Head/Chest/Legs/Heart N` at packaging time, because the LLM translated them inconsistently ("17's hand", "Touch 15", "15 steps"). The rule beats any exact-Raw entry and whatever sits in `Files/Converted`.
 
+## Plot line context (`PlotLineContext`)
+
+`GameHooks.LineContextProvider` is set to `PlotLineContext.Provide` and used only when `lineContextEnabled: true` in `Config.yaml` (off by default). For `PlotData.csv` it tells the translator whose action a stage direction describes and whether that speaker's gender is known, so omitted subjects become "he"/"she" where the game knows the gender and "they"/"you" where it does not.
+
+- **Speaker:** the 角色左/角色右 columns plus 高亮方 (which side is highlighted; 皆 means ambiguous). A blank 角色 column means the character is unchanged, so the current left/right characters carry over from the previous row and reset when a new 剧情编号 starts.
+- **Gender:** `Raw/Dumped/GameData/SpeHeroData.csv` (名字 + 性别). Names are stored with a `.` between family and given name, which the lookup drops to match plot rows.
+- **The player (玩家) and temporary NPCs (临时:...) never get a gender.** The player's gender is chosen per playthrough, so their stage directions say "you" or no pronoun. Temp NPCs have no gender in these columns.
+- **What gets a hint:** only stage directions (text starting with `（`) and speaker-less rows, which are narration addressed to the player ("you", never "I"). Ordinary spoken lines translate as before.
+- **Fixing the old corpus:** `PronounDefectWorkflow` (see LlmKit's [translation project workflows](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/translation-project-workflows.md)) finds existing translations with an invented or wrong gender; the `5. Count lines needing pronoun retranslation (dry run)` and `5. Flag lines needing pronoun retranslation` tests in `TranslationWorkflowTests.cs` run it. Reports go to `Files/TestResults/PronounRetranslation.yaml`.
+
 ## Prefab text and dynamic-string sources
 
 `dumpedPrefabText.txt` and `dumpedPrefabTextFromOtherFields.txt` are flat, exact-match `PrefabText` inputs. The first comes from primary `m_Text`/`text` fields; the second comes from the explicitly sampled allowlist in `DynamicStringSources.DynamicStringOtherTextFields`. They are packaged by `PrefabTextWorkflow` and consumed by the plugin's setter-level exact lookup. The asset-dumper and field-selection rationale is in [assetdumper-libcpp2il-and-noise-filtering.md](assetdumper-libcpp2il-and-noise-filtering.md) and [prefabtext-pipeline-architecture.md](prefabtext-pipeline-architecture.md).
