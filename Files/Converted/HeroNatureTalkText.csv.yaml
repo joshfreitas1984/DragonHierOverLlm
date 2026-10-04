@@ -364,8 +364,8 @@
     qcDefectCategory: None
   - split: 7
     text: "#PlayerName#武功进步神速，只怕早晚要把我远远甩开。"
-    translated: "#PlayerName#'s martial arts progress is rapid, and he might leave me far behind before long."
-    qcReviewedText: "#PlayerName#'s martial arts progress is rapid, and he might leave me far behind before long."
+    translated: "#PlayerName#'s martial arts are improving at an incredible rate; sooner or later, you'll leave me far behind."
+    qcReviewedText: "#PlayerName#'s martial arts are improving at an incredible rate; sooner or later, you'll leave me far behind."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -459,8 +459,8 @@
     qcDefectCategory: None
   - split: 9
     text: "#PlayerName#前来寻我，只怕是有事相求？"
-    translated: "#PlayerName# came to find me, fearing there might be something he wishes to ask of me?"
-    qcReviewedText: "#PlayerName# came to find me, fearing there might be something he wishes to ask of me?"
+    translated: "#PlayerName#, are you here seeking something from me?"
+    qcReviewedText: "#PlayerName#, are you here seeking something from me?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

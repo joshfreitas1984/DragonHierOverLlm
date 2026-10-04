@@ -585,8 +585,8 @@
 - raw: "#PlayerName#不会又想偷溜下山吧？\n师傅吩咐，你这个月需好好练功，别成天想着乱跑！"
   splits:
   - text: "#PlayerName#不会又想偷溜下山吧？"
-    translated: "#PlayerName# isn't trying to sneak down the mountain again, is he?"
-    qcReviewedText: "#PlayerName# isn't trying to sneak down the mountain again, is he?\nMaster instructed you to practice diligently this month and don't wander around all the time!"
+    translated: "#PlayerName#, don't you want to sneak down the mountain again?"
+    qcReviewedText: "#PlayerName#, don't you want to sneak down the mountain again?\nMaster instructed you to practice diligently this month and don't wander around all the time!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -598,11 +598,15 @@
 - raw: "#PlayerName#与前任配偶绝离未久。\n为避免风言风语，你我还是日后再结亲为妙。"
   splits:
   - text: "#PlayerName#与前任配偶绝离未久。"
-    translated: "#PlayerName# had barely divorced from his previous spouse."
-    qcReviewedText: "#PlayerName# had barely divorced from his previous spouse.\nTo avoid rumors, it might be better for us to marry another day."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerName# recently divorced your former spouse"
+    qcReviewedText: "#PlayerName# recently divorced your former spouse\nTo avoid rumors, it might be better for us to marry another day."
+    qcTranslated: "#PlayerName# recently divorced their former spouse. To avoid rumors, it might be better for us to marry another day."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - subIndex: 1
     text: "为避免风言风语，你我还是日后再结亲为妙。"
     translated: "To avoid rumors, it might be better for us to marry another day."
@@ -643,14 +647,11 @@
 - raw: "#PlayerName#与我酒逢知己，旗鼓相当，实在是痛快痛快！\n时候不早，咱们改日再痛饮一番！"
   splits:
   - text: "#PlayerName#与我酒逢知己，旗鼓相当，实在是痛快痛快！"
-    translated: "#PlayerName# drinks as if he were a known acquaintance, matching me cup for cup, truly delightful!"
-    qcReviewedText: "#PlayerName# drinks as if he were a known acquaintance, matching me cup for cup, truly delightful!\nIt's getting late, let's have a great drink another day!"
-    qcTranslated: "#PlayerName# and I met as kindred spirits over wine, evenly matched, truly exhilarating!\nIt's getting late, let's have a great drink another day!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "#PlayerName#, you and I met as equals and had a delightful time over drinks!"
+    qcReviewedText: "#PlayerName#, you and I met as equals and had a delightful time over drinks!\nIt's getting late, let's have a great drink another day!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "时候不早，咱们改日再痛饮一番！"
     translated: "It's getting late, let's have a great drink another day!"
@@ -659,14 +660,14 @@
 - raw: "#PlayerName#与我酒逢知己，旗鼓相当，实在是痛快痛快！\n时候不早，咱们来年重阳佳节再痛饮一番！"
   splits:
   - text: "#PlayerName#与我酒逢知己，旗鼓相当，实在是痛快痛快！"
-    translated: "#PlayerName# drinks as if he were a known acquaintance, matching me cup for cup, truly delightful!"
-    qcReviewedText: "#PlayerName# drinks as if he were a known acquaintance, matching me cup for cup, truly delightful!\nIt's getting late, let's have another hearty drink next Mid‑Autumn Festival!"
-    qcTranslated: "#PlayerName# and I met as kindred spirits over wine, evenly matched, truly delightful!\nIt's getting late, let's have another hearty drink next Double Ninth Festival!"
+    translated: "#PlayerName#, you and I met as equals and had a delightful time over drinks!"
+    qcReviewedText: "#PlayerName#, you and I met as equals and had a delightful time over drinks!\nIt's getting late, let's have another hearty drink next Mid‑Autumn Festival!"
+    qcTranslated: "#PlayerName#, you and I met as equals and had a delightful time over drinks!\nIt's getting late, let's have another hearty drink next Double Ninth Festival!"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - DroppedContent
+    - DomainTerm
   - subIndex: 1
     text: "时候不早，咱们来年重阳佳节再痛饮一番！"
     translated: "It's getting late, let's have another hearty drink next Mid‑Autumn Festival!"
@@ -819,15 +820,15 @@
 - raw: "#PlayerName#任职门客时日未久，还需再为我#TargetForceName#效力{0}日方可卸任。\n(门客叛离门派会固定增加50点恶名，且90天内不能拜师或加入其他门派)"
   splits:
   - text: "#PlayerName#任职门客时日未久，还需再为我#TargetForceName#效力"
-    translated: "#PlayerName# served as a retainer for me for only a short while under #TargetForceName#. He must serve me again."
-    qcReviewedText: "#PlayerName# served as a retainer for me for only a short while under #TargetForceName#. He must serve me again.{0} The Day You May Step Down\n(Leaving a sect will fixedly increase 50 points of infamy, and one cannot apprentice or join another sect for 90 days.)"
-    qcTranslated: "#PlayerName# has served as a retainer for me for only a short while under #TargetForceName#. He must serve me for another {0} days before he may step down.\n(Leaving a sect will fixedly increase 50 points of Infamy, and one cannot apprentice or join another sect for 90 days.)"
+    translated: "#PlayerName#, you have not been serving as a retainer for long and still need to serve me, #TargetForceName#."
+    qcReviewedText: "#PlayerName#, you have not been serving as a retainer for long and still need to serve me, #TargetForceName#.{0} The Day You May Step Down\n(Leaving a sect will fixedly increase 50 points of infamy, and one cannot apprentice or join another sect for 90 days.)"
+    qcTranslated: "#PlayerName#, you have not been serving as a retainer for long and still need to serve me, #TargetForceName#, for another {0} days before you may step down.\n(Leaving a sect will fixedly increase 50 points of infamy, and one cannot apprentice or join another sect for 90 days.)"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
-    - DroppedContent
+    - HardToParseSeam
   - subIndex: 1
     text: "日方可卸任。"
     translated: "The Day You May Step Down"
@@ -1097,8 +1098,8 @@
 - raw: "#PlayerName#内功好生了得，看来我这招式还得多加磨炼才行。"
   splits:
   - text: "#PlayerName#内功好生了得，看来我这招式还得多加磨炼才行。"
-    translated: "#PlayerName# has significantly improved his internal skill. It seems I still need to polish my technique a great deal."
-    qcReviewedText: "#PlayerName# has significantly improved his internal skill. It seems I still need to polish my technique a great deal."
+    translated: "#PlayerName#'s Neigong is truly impressive; it seems I still have much to polish my techniques."
+    qcReviewedText: "#PlayerName#'s Neigong is truly impressive; it seems I still have much to polish my techniques."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1243,14 +1244,14 @@
 - raw: "#PlayerName#双眉紧蹙，有所思量，不妨与我说道说道"
   splits:
   - text: "#PlayerName#双眉紧蹙，有所思量，不妨与我说道说道"
-    translated: "#PlayerName# furrowed his brows, deep in thought, and might as well share his thoughts with me."
-    qcReviewedText: "#PlayerName# furrowed his brows, deep in thought, and might as well share his thoughts with me."
-    qcTranslated: "#PlayerName# furrowed his brows, deep in thought; why not share your thoughts with me?"
+    translated: "#PlayerName#'s eyebrows furrowed in thought; perhaps they should tell me about it."
+    qcReviewedText: "#PlayerName#'s eyebrows furrowed in thought; perhaps they should tell me about it."
+    qcTranslated: "#PlayerName#'s eyebrows furrowed in thought; perhaps you should tell me about it."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
 - raw: "#PlayerName#可是在试探我的身手？\n这未免有违江湖道义了吧。"
   splits:
   - text: "#PlayerName#可是在试探我的身手？"
@@ -1568,8 +1569,8 @@
 - raw: "#PlayerName#怎得神色突变？莫非......"
   splits:
   - text: "#PlayerName#怎得神色突变？莫非......"
-    translated: "#PlayerName# suddenly changed his expression. Could it be...?"
-    qcReviewedText: "#PlayerName# suddenly changed his expression. Could it be...?"
+    translated: "#PlayerName#, why did you suddenly change expressions? Could it be...?"
+    qcReviewedText: "#PlayerName#, why did you suddenly change expressions? Could it be...?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1629,8 +1630,8 @@
 - raw: "#PlayerName#想将自己"
   splits:
   - text: "#PlayerName#想将自己"
-    translated: "#PlayerName# wants to transform himself"
-    qcReviewedText: "#PlayerName# wants to transform himself"
+    translated: "#PlayerName#, you want to give yourself"
+    qcReviewedText: "#PlayerName#, you want to give yourself"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1653,8 +1654,8 @@
 - raw: "#PlayerName#想要与我赌赌手气吗？\n赌桌之上无兄弟，可别指望我手下留情哦。"
   splits:
   - text: "#PlayerName#想要与我赌赌手气吗？"
-    translated: "#PlayerName# wants to try his luck with me in a game of chance?"
-    qcReviewedText: "#PlayerName# wants to try his luck with me in a game of chance?\nNo brotherhood at the gambling table, so don't expect me to go easy on you."
+    translated: "Do you want to gamble with me, #PlayerName#?"
+    qcReviewedText: "Do you want to gamble with me, #PlayerName#?\nNo brotherhood at the gambling table, so don't expect me to go easy on you."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1772,8 +1773,8 @@
 - raw: "#PlayerName#技高一筹，我愧不能及。\n既然如此便按照先前所言，不再打扰贵派城镇了，就此告辞！"
   splits:
   - text: "#PlayerName#技高一筹，我愧不能及。"
-    translated: "#PlayerName# is slightly more skilled, and I cannot compare to him."
-    qcReviewedText: "#PlayerName# is slightly more skilled, and I cannot compare to him.\nThen we shall abide by the previous agreement and cease troubling your sect's town. Farewell!"
+    translated: "#PlayerName# is much more skilled than I am; I feel ashamed at my own inadequacy."
+    qcReviewedText: "#PlayerName# is much more skilled than I am; I feel ashamed at my own inadequacy.\nThen we shall abide by the previous agreement and cease troubling your sect's town. Farewell!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1804,8 +1805,8 @@
 - raw: "#PlayerName#招式多有纰漏，\n要挑战我们二人，只怕还差上几分。"
   splits:
   - text: "#PlayerName#招式多有纰漏，"
-    translated: "#PlayerName# has many flaws in his techniques,"
-    qcReviewedText: "#PlayerName# has many flaws in his techniques,\nTo challenge the two of us, you might still be a bit short."
+    translated: "#PlayerName#'s moves have many flaws"
+    qcReviewedText: "#PlayerName#'s moves have many flaws\nTo challenge the two of us, you might still be a bit short."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1830,14 +1831,15 @@
 - raw: "#PlayerName#拜师未久，武功修为还不甚纯熟。\n这出师之事，还是等{0}天后再说吧！"
   splits:
   - text: "#PlayerName#拜师未久，武功修为还不甚纯熟。"
-    translated: "#PlayerName#, having only recently become a disciple, still hasn't mastered his martial arts skills fully."
-    qcReviewedText: "#PlayerName#, having only recently become a disciple, still hasn't mastered his martial arts skills fully.\nThis matter of setting out, let's wait {0} Leave it for now!"
-    qcTranslated: "#PlayerName#, having only recently become a disciple, still hasn't mastered his martial arts skills fully.\\nThis matter of setting out, let's wait {0} days before discussing it!"
+    translated: "#PlayerName#, you have only recently become a disciple, and your martial arts skills are not yet well‑developed."
+    qcReviewedText: "#PlayerName#, you have only recently become a disciple, and your martial arts skills are not yet well‑developed.\nThis matter of setting out, let's wait {0} Leave it for now!"
+    qcTranslated: "#PlayerName#, you have only recently become a disciple, and your martial arts skills are not yet well‑developed.\nThis matter of setting out, let's wait {0} days before discussing it!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
+    - HardToParseSeam
   - subIndex: 1
     text: "这出师之事，还是等"
     translated: "This matter of setting out, let's wait"
@@ -1988,8 +1990,8 @@
 - raw: "#PlayerName#本月才刚刚慰问探视过，实在不应再为我劳心了。"
   splits:
   - text: "#PlayerName#本月才刚刚慰问探视过，实在不应再为我劳心了。"
-    translated: "#PlayerName# has just paid a visit this month; he really shouldn't worry about me again."
-    qcReviewedText: "#PlayerName# has just paid a visit this month; he really shouldn't worry about me again."
+    translated: "#PlayerName#, you've already visited me this month, so there's no need for you to trouble yourself further on my account."
+    qcReviewedText: "#PlayerName#, you've already visited me this month, so there's no need for you to trouble yourself further on my account."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2107,13 +2109,11 @@
   splits:
   - text: "#PlayerName#来的正好！"
     translated: "#PlayerName# comes just in time!"
-    qcReviewedText: "#PlayerName# comes just in time!\nI am currently being targeted by a villain and have been sparring with him for some time. Please, #PlayerName#, lend me your assistance!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
   - subIndex: 1
     text: "我眼下被一恶徒盯上，已与其游斗多时，还请#PlayerName#施以援手！"
-    translated: "I am currently being targeted by a villain and have been sparring with him for some time. Please, #PlayerName#, lend me your assistance!"
+    translated: "I am being targeted by a villain and have been fighting him off for some time now. Please lend me a hand, #PlayerName#!"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "InventedGender"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#来的正好！你倒是说说看。\n在你心中，我们几人到底哪个最重要？"
@@ -2178,16 +2178,16 @@
   splits:
   - text: "#PlayerName#果真慧眼识珠，此人确实是个可造之材。"
     translated: "#PlayerName#, you truly have a keen eye; this person is indeed a promising talent."
-    qcReviewedText: "#PlayerName#, you truly have a keen eye; this person is indeed a promising talent.\nIf #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Click)"
-    qcTranslated: "#PlayerName#, you truly have a Keen Eye; this person is indeed a promising talent.\nIf #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Click)"
+    qcReviewedText: "#PlayerName#, you truly have a keen eye; this person is indeed a promising talent.\nIf you honor me, #SourceForceName#, I will have them immediately swear allegiance to you, #PlayerName#!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Click)"
+    qcTranslated: "#PlayerName#, you truly have a Keen Eye; this person is indeed a promising talent.\nIf you do not reject me, #SourceForceName#, I will immediately command them to swear allegiance to you, #PlayerName#!\n(Recruit Subordinate Sects {0}, Need to consume Sect Prestige {1} Points)"
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - OtherNamedDefect
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "若蒙#SourceForceName#不弃，我这就命其拜入#PlayerName#麾下！"
-    translated: "If #SourceForceName# does not abandon me, I will command him to swear allegiance to #PlayerName#'s banner!"
+    translated: "If you honor me, #SourceForceName#, I will have them immediately swear allegiance to you, #PlayerName#!"
   - subIndex: 2
     text: "招募附庸门派的"
     translated: "Recruit Subordinate Sects"
@@ -2822,8 +2822,8 @@
 - raw: "#PlayerName#真是贵人多忘事呐。\n我本月才刚刚传授过你武功，还需积累一些新的心得才是。"
   splits:
   - text: "#PlayerName#真是贵人多忘事呐。"
-    translated: "#PlayerName# really is good at forgetting things when he's important, isn't he?"
-    qcReviewedText: "#PlayerName# really is good at forgetting things when he's important, isn't he?\nI just taught you martial arts skills this month, and you need to gain some new insights first."
+    translated: "#PlayerName#, you really are forgetful when you're busy."
+    qcReviewedText: "#PlayerName#, you really are forgetful when you're busy.\nI just taught you martial arts skills this month, and you need to gain some new insights first."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3080,15 +3080,14 @@
 - raw: "#PlayerName#虽一片赤诚之心，但若没有{0}掌门之命，还是不要随意代师收徒为妙。"
   splits:
   - text: "#PlayerName#虽一片赤诚之心，但若没有"
-    translated: "#PlayerName# had pure intentions, but if he lacked"
-    qcReviewedText: "#PlayerName# had pure intentions, but if he lacked {0} Sect Master's orders should not be casually disobeyed or ignored."
-    qcTranslated: "#PlayerName# had pure intentions, but without the {0} Sect Master's orders, it is best not to casually take disciples on the master's behalf."
+    translated: "Although #PlayerName# is sincere, without..."
+    qcReviewedText: "Although #PlayerName# is sincere, without...{0} Sect Master's orders should not be casually disobeyed or ignored."
+    qcTranslated: "Although #PlayerName# is sincere, without the {0} Sect Master's orders, it is best not to casually take disciples on their behalf."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "掌门之命，还是不要随意代师收徒为妙。"
     translated: "Sect Master's orders should not be casually disobeyed or ignored."
@@ -3118,8 +3117,8 @@
 - raw: "#PlayerName#言出必随，确实将此功法精要之处传授于我，令人钦佩！"
   splits:
   - text: "#PlayerName#言出必随，确实将此功法精要之处传授于我，令人钦佩！"
-    translated: "#PlayerName# always keeps his word, indeed imparting the essence of this cultivation technique to me, worthy of admiration!"
-    qcReviewedText: "#PlayerName# always keeps his word, indeed imparting the essence of this cultivation technique to me, worthy of admiration!"
+    translated: "#PlayerName#, you kept your word and taught me the essence of this technique; it's truly admirable!"
+    qcReviewedText: "#PlayerName#, you kept your word and taught me the essence of this technique; it's truly admirable!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3163,8 +3162,8 @@
 - raw: "#PlayerName#身上确有中毒，若你有意，就让我来诊治一番吧。"
   splits:
   - text: "#PlayerName#身上确有中毒，若你有意，就让我来诊治一番吧。"
-    translated: "#PlayerName# is indeed poisoned. If you wish, let me treat him."
-    qcReviewedText: "#PlayerName# is indeed poisoned. If you wish, let me treat him."
+    translated: "#PlayerName#, you do have poisoning. If you wish, let me examine and treat you."
+    qcReviewedText: "#PlayerName#, you do have poisoning. If you wish, let me examine and treat you."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3322,20 +3321,20 @@
   splits:
   - text: "#PlayerName#这药怎么味道有些刺鼻......"
     translated: "#PlayerName# why does this medicine have such a pungent smell..."
-    qcReviewedText: "#PlayerName# why does this medicine have such a pungent smell...\n(Slightly puzzled, he swallowed the pill.)"
+    qcReviewedText: "#PlayerName# why does this medicine have such a pungent smell...\n(Somewhat puzzled, took the pill)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "（神情有些疑惑，服下丹药）"
-    translated: "(Slightly puzzled, he swallowed the pill.)"
+    translated: "(Somewhat puzzled, took the pill)"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#连战连捷，三场全胜，气运实在难挡。\n改日我再来找回这场子！"
   splits:
   - text: "#PlayerName#连战连捷，三场全胜，气运实在难挡。"
-    translated: "#PlayerName# won three battles in a row, achieving perfect victories in all three. The luck just keeps flowing his way."
-    qcReviewedText: "#PlayerName# won three battles in a row, achieving perfect victories in all three. The luck just keeps flowing his way.\nI'll come back another day to settle this!"
+    translated: "#PlayerName# won battle after battle, sweeping all three matches; their luck was truly unstoppable."
+    qcReviewedText: "#PlayerName# won battle after battle, sweeping all three matches; their luck was truly unstoppable.\nI'll come back another day to settle this!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3755,15 +3754,15 @@
 - raw: "#SourceInteractName#先运起硬功，这一锤下来若是落得个重伤吐血，可怪我不得啊！\n（这#SourceInteractName#与我素来{0}，这出锤用上{1}成力气便是。）"
   splits:
   - text: "#SourceInteractName#先运起硬功，这一锤下来若是落得个重伤吐血，可怪我不得啊！"
-    translated: "#SourceInteractName# first activates his hard cultivation technique. If this hammer strike results in severe injuries and spitting blood, don't blame me!"
-    qcReviewedText: "#SourceInteractName# first activates his hard cultivation technique. If this hammer strike results in severe injuries and spitting blood, don't blame me!\n(This #SourceInteractName# has never gotten along with me...{0}, Use this hammer {1} It is the essence energy)"
-    qcTranslated: "#SourceInteractName# first activates his hard cultivation technique. If this hammer strike results in severe injuries and spitting blood, don't blame me!\n(This #SourceInteractName# has never gotten along with me...{0}, so I'll use {1} percent of my strength on this hammer strike.)"
+    translated: "#SourceInteractName# first activates their hard martial arts technique; if you end up seriously injured and coughing up blood from this hammer strike, don't blame me!"
+    qcReviewedText: "#SourceInteractName# first activates their hard martial arts technique; if you end up seriously injured and coughing up blood from this hammer strike, don't blame me!\n(This #SourceInteractName# has never gotten along with me...{0}, Use this hammer {1} It is the essence energy)"
+    qcTranslated: "#SourceInteractName# first activates their hard martial arts technique; if you end up seriously injured and coughing up blood from this hammer strike, don't blame me!\n(This #SourceInteractName# has never gotten along with me...{0}, so I'll use {1} percent of my strength on this hammer strike.)"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
-    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "（这#SourceInteractName#与我素来"
     translated: "(This #SourceInteractName# has never gotten along with me..."
@@ -3849,14 +3848,14 @@
 - raw: "#SourceInteractName#在这儿大摆宴席，想必是遇上啥喜事了，\n等会可得和我好好说道说道。"
   splits:
   - text: "#SourceInteractName#在这儿大摆宴席，想必是遇上啥喜事了，"
-    translated: "#SourceInteractName# is hosting a banquet here; he must be celebrating some good news."
-    qcReviewedText: "#SourceInteractName# is hosting a banquet here; he must be celebrating some good news.\nYou'll have to talk to me properly later."
-    qcTranslated: "#SourceInteractName# is hosting a banquet here; he must be celebrating some good news. I'll have to hear all about it from you properly later."
+    translated: "#SourceInteractName# is throwing a big banquet here; they must have some happy news."
+    qcReviewedText: "#SourceInteractName# is throwing a big banquet here; they must have some happy news.\nYou'll have to talk to me properly later."
+    qcTranslated: "#SourceInteractName# is throwing a big banquet here; they must have some happy news. I'll have to get you to tell me all about it later."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "等会可得和我好好说道说道。"
     translated: "You'll have to talk to me properly later."
@@ -3865,8 +3864,8 @@
 - raw: "#SourceInteractName#平日嬉笑怒骂，玩世不恭。\n没想到也有这般细腻心思，只怕要对你刮目相看了......"
   splits:
   - text: "#SourceInteractName#平日嬉笑怒骂，玩世不恭。"
-    translated: "#SourceInteractName# laughed and joked around in his usual irreverent manner, showing no respect to the world."
-    qcReviewedText: "#SourceInteractName# laughed and joked around in his usual irreverent manner, showing no respect to the world.\nI never expected such delicate consideration from you; I must admit you impress me..."
+    translated: "#SourceInteractName# is carefree and cynical, laughing and joking all day long."
+    qcReviewedText: "#SourceInteractName# is carefree and cynical, laughing and joking all day long.\nI never expected such delicate consideration from you; I must admit you impress me..."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4128,8 +4127,8 @@
 - raw: "#SourceInteractName#虽通晓理论，实战功力却尚显不足，\n我还是另寻他人指点吧。"
   splits:
   - text: "#SourceInteractName#虽通晓理论，实战功力却尚显不足，"
-    translated: "#SourceInteractName# understands the theories well, but his practical combat skills could use some improvement."
-    qcReviewedText: "#SourceInteractName# understands the theories well, but his practical combat skills could use some improvement.\nI'll seek guidance from someone else"
+    translated: "Although #SourceInteractName# is well‑versed in theory, their practical skill still falls short."
+    qcReviewedText: "Although #SourceInteractName# is well‑versed in theory, their practical skill still falls short.\nI'll seek guidance from someone else"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4984,8 +4983,8 @@
 - raw: "#TargetInteractName#虽说是为门派大业，身不由己，\n但若我也为门派大业，是否亦可去#TargetInteractName#治下城镇扰乱治安，残害百姓？\n如此一来，江湖道义何在？公理正义何在？"
   splits:
   - text: "#TargetInteractName#虽说是为门派大业，身不由己，"
-    translated: "#TargetInteractName# said that it was all for the sake of the sect's greater cause, beyond his control."
-    qcReviewedText: "#TargetInteractName# said that it was all for the sake of the sect's greater cause, beyond his control.\nBut if I were to serve the greater good of the Sect, could I also go to #TargetInteractName#'s domain to disrupt public order and harm the people?\nThus, where is the righteousness of the Jianghu? Where is the justice and fairness?"
+    translated: "Although #TargetInteractName# says it's for the sake of the sect's cause, they have no choice."
+    qcReviewedText: "Although #TargetInteractName# says it's for the sake of the sect's cause, they have no choice.\nBut if I were to serve the greater good of the Sect, could I also go to #TargetInteractName#'s domain to disrupt public order and harm the people?\nThus, where is the righteousness of the Jianghu? Where is the justice and fairness?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -11899,13 +11898,13 @@
   splits:
   - text: "一路跋涉，你终于在一处炊烟袅袅的山洞中发现了这名逃犯。"
     translated: "Trudging on, you finally discovered this fugitive in a cave where smoke curled gently from a hearth."
-    qcReviewedText: "Trudging on, you finally discovered this fugitive in a cave where smoke curled gently from a hearth.\nThis man has a grim expression, eyes glowing with malice, and without hesitation, he draws his weapon and rushes at you!"
+    qcReviewedText: "Trudging on, you finally discovered this fugitive in a cave where smoke curled gently from a hearth.\nThis person's face was dark with anger, their eyes filled with malice, and without hesitation, they drew their weapon and lunged at you!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "此人面色阴沉，目露凶光，毫不犹豫抽出兵刃向你扑来！"
-    translated: "This man has a grim expression, eyes glowing with malice, and without hesitation, he draws his weapon and rushes at you!"
+    translated: "This person's face was dark with anger, their eyes filled with malice, and without hesitation, they drew their weapon and lunged at you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "一路跋涉，你终于找到了迷宫出口。"
@@ -21035,8 +21034,8 @@
 - raw: "只见#$TargetInteractName#从最近的书架上抄起两本秘籍收入怀中，随后飞身跃出窗外。\n你也催动轻功紧随其后，直至一隐蔽之处方才停下。"
   splits:
   - text: "只见#$TargetInteractName#从最近的书架上抄起两本秘籍收入怀中，随后飞身跃出窗外。"
-    translated: "Only #$TargetInteractName# grabs two secret manuals from the nearest bookshelf and stores them in his arms, then leaps out of the window."
-    qcReviewedText: "Only #$TargetInteractName# grabs two secret manuals from the nearest bookshelf and stores them in his arms, then leaps out of the window.\nYou also activated your qinggong and followed closely behind until you stopped at a hidden spot."
+    translated: "You saw #$TargetInteractName# grab two Secret Manuals from the nearest bookshelf and tuck them into their robes, then leap out the window."
+    qcReviewedText: "You saw #$TargetInteractName# grab two Secret Manuals from the nearest bookshelf and tuck them into their robes, then leap out the window.\nYou also activated your qinggong and followed closely behind until you stopped at a hidden spot."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -21048,8 +21047,8 @@
 - raw: "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，\n随手将银两收入囊中，然后径直起身飘然而去。"
   splits:
   - text: "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，"
-    translated: "Only to see the beggar barely lift his eyes to glance at you, sneering in contempt."
-    qcReviewedText: "Only to see the beggar barely lift his eyes to glance at you, sneering in contempt.\nHe casually placed the silver ingots in his bag, then stood up and departed gracefully."
+    translated: "You saw the beggar barely raise their eyes to glance at you, then snorted in disdain."
+    qcReviewedText: "You saw the beggar barely raise their eyes to glance at you, then snorted in disdain.\nHe casually placed the silver ingots in his bag, then stood up and departed gracefully."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -21061,11 +21060,11 @@
 - raw: "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，\n随手将银两收入囊中，随后竟然开口道："
   splits:
   - text: "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，"
-    translated: "Only to see the beggar barely lift his eyes to glance at you, sneering in contempt."
-    qcReviewedText: "Only to see the beggar barely lift his eyes to glance at you, sneering in contempt.\nPick up the silver coins and put them in his pocket, then he surprisingly spoke out.："
-    qcTranslated: "Only to see the beggar barely lift his eyes to glance at you, sneering in contempt. He casually tucked the silver into his bag, then surprisingly spoke out:"
+    translated: "You saw the beggar barely raise their eyes to glance at you, then snorted in disdain."
+    qcReviewedText: "You saw the beggar barely raise their eyes to glance at you, then snorted in disdain.\nPick up the silver coins and put them in his pocket, then he surprisingly spoke out.："
+    qcTranslated: "You saw the beggar barely raise their eyes to glance at you, then snorted in disdain. He casually tucked the silver into his bag, and surprisingly, he spoke up."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
     - OtherNamedDefect
@@ -21925,14 +21924,14 @@
 - raw: "听闻#TargetInteractName#博采众长，技艺精湛，\n我有心与你交流一番。"
   splits:
   - text: "听闻#TargetInteractName#博采众长，技艺精湛，"
-    translated: "Heard that #TargetInteractName# has broadened his horizons and is skilled in his craft."
-    qcReviewedText: "Heard that #TargetInteractName# has broadened his horizons and is skilled in his craft.\nI have a heart‑to‑heart I'd like to have with you."
-    qcTranslated: "Heard that #TargetInteractName# has mastered the strengths of many and possesses exquisite skill. I have a heart‑to‑heart I'd like to have with you."
+    translated: "Heard that #TargetInteractName# has mastered various skills, excelling in their craft."
+    qcReviewedText: "Heard that #TargetInteractName# has mastered various skills, excelling in their craft.\nI have a heart‑to‑heart I'd like to have with you."
+    qcTranslated: "I've heard that #TargetInteractName# has mastered various skills and excels in their craft. I'd like to exchange techniques with you."
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "我有心与你交流一番。"
     translated: "I have a heart‑to‑heart I'd like to have with you."
@@ -24282,8 +24281,8 @@
 - raw: "哎，既然是#PlayerName#诚心相劝，那我也不能不卖个面子。\n咱们便过上两招，分个高下！"
   splits:
   - text: "哎，既然是#PlayerName#诚心相劝，那我也不能不卖个面子。"
-    translated: "Well, since #PlayerName# is giving sincere advice, I can't afford not to give him the courtesy."
-    qcReviewedText: "Well, since #PlayerName# is giving sincere advice, I can't afford not to give him the courtesy.\nLet's exchange two moves and see who comes out on top!"
+    translated: "Ah, since #PlayerName# is sincerely advising me, I can't refuse your request either."
+    qcReviewedText: "Ah, since #PlayerName# is sincerely advising me, I can't refuse your request either.\nLet's exchange two moves and see who comes out on top!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -24295,8 +24294,8 @@
 - raw: "哎，既然是#PlayerName#诚心相劝，那我也不能不卖个面子。\n我便听听看，#PlayerName#你有何高见！"
   splits:
   - text: "哎，既然是#PlayerName#诚心相劝，那我也不能不卖个面子。"
-    translated: "Well, since #PlayerName# is giving sincere advice, I can't afford not to give him the courtesy."
-    qcReviewedText: "Well, since #PlayerName# is giving sincere advice, I can't afford not to give him the courtesy.\nI'll listen to what you have to say, #PlayerName#!"
+    translated: "Ah, since #PlayerName# is sincerely advising me, I can't refuse your request either."
+    qcReviewedText: "Ah, since #PlayerName# is sincerely advising me, I can't refuse your request either.\nI'll listen to what you have to say, #PlayerName#!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -36242,14 +36241,11 @@
 - raw: "愿与#TargetInteractName#琴瑟和鸣，相敬如宾。\n若君心似我心，定不负相思意。"
   splits:
   - text: "愿与#TargetInteractName#琴瑟和鸣，相敬如宾。"
-    translated: "I wish to play music and chess with #TargetInteractName# and treat her with the utmost respect."
-    qcReviewedText: "I wish to play music and chess with #TargetInteractName# and treat her with the utmost respect.\nIf your heart is as mine, you will surely not disappoint my longing."
-    qcTranslated: "I wish to harmonize with #TargetInteractName# like the qin and se, treating each other with mutual respect.\nIf your heart is as mine, you will surely not disappoint my longing."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Wish to play harmoniously with #TargetInteractName#, treating each other with respect and courtesy."
+    qcReviewedText: "Wish to play harmoniously with #TargetInteractName#, treating each other with respect and courtesy.\nIf your heart is as mine, you will surely not disappoint my longing."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "若君心似我心，定不负相思意。"
     translated: "If your heart is as mine, you will surely not disappoint my longing."
@@ -41138,14 +41134,14 @@
 - raw: "既是#SourceInteractName#前来说情，自然也得卖个面子。\n我与#PlotTargetInteractName0#的龃龉便到此为止，一笔勾销！"
   splits:
   - text: "既是#SourceInteractName#前来说情，自然也得卖个面子。"
-    translated: "Since he is pleading on behalf of #SourceInteractName#, he naturally needs to save some face."
-    qcReviewedText: "Since he is pleading on behalf of #SourceInteractName#, he naturally needs to save some face.\nLet our disagreements with #PlotTargetInteractName0# end here, once and for all!"
-    qcTranslated: "Since #SourceInteractName# is pleading on my behalf, I naturally have to give him some face.\nLet our disagreements with #PlotTargetInteractName0# end here, once and for all!"
+    translated: "Since #SourceInteractName# came to speak on your behalf, they naturally have to give some face."
+    qcReviewedText: "Since #SourceInteractName# came to speak on your behalf, they naturally have to give some face.\nLet our disagreements with #PlotTargetInteractName0# end here, once and for all!"
+    qcTranslated: "Since #SourceInteractName# came to plead on your behalf, I naturally have to give some face.\nLet our disagreements with #PlotTargetInteractName0# end here, once and for all!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "我与#PlotTargetInteractName0#的龃龉便到此为止，一笔勾销！"
     translated: "Let our disagreements with #PlotTargetInteractName0# end here, once and for all!"
@@ -41202,8 +41198,8 @@
 - raw: "既然#PlayerName#已下定决心，那#TargetForceName#便就此与阁下解除门客关系。\n不过#PlayerName#日后若又想谋求差事，我#TargetForceName#依旧欢迎。"
   splits:
   - text: "既然#PlayerName#已下定决心，那#TargetForceName#便就此与阁下解除门客关系。"
-    translated: "Since #PlayerName# has made up his mind, #TargetForceName# will hereby sever the retainership relationship with you."
-    qcReviewedText: "Since #PlayerName# has made up his mind, #TargetForceName# will hereby sever the retainership relationship with you.\nBut if #PlayerName# wishes to seek employment with #TargetForceName# again in the future, we will still welcome you."
+    translated: "Since #PlayerName# has made up their mind, then #TargetForceName# will hereby terminate the retainer relationship with you."
+    qcReviewedText: "Since #PlayerName# has made up their mind, then #TargetForceName# will hereby terminate the retainer relationship with you.\nBut if #PlayerName# wishes to seek employment with #TargetForceName# again in the future, we will still welcome you."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -44180,13 +44176,13 @@
   splits:
   - text: "桀桀桀桀，既然此人已死，"
     translated: "Haha, since this person is already dead,"
-    qcReviewedText: "Haha, since this person is already dead,\nThe secret manuals and equipment he carries should all be handed over to #$PlayerName#!"
+    qcReviewedText: "Haha, since this person is already dead,\nThe secret manuals and equipment they carry should all belong to me, #$PlayerName#!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "其所携秘籍装备，自当尽数归我#$PlayerName#所有！"
-    translated: "The secret manuals and equipment he carries should all be handed over to #$PlayerName#!"
+    translated: "The secret manuals and equipment they carry should all belong to me, #$PlayerName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "桀桀桀桀，竟敢打我这千里名驹的主意，真是活得不耐烦了！\n小子，乖乖受死！"
@@ -46661,13 +46657,13 @@
   splits:
   - text: "江湖救急，师傅他老人家突然要我去"
     translated: "Jianghu emergency, Master suddenly needs me to go"
-    qcReviewedText: "Jianghu emergency, Master suddenly needs me to go <b>Find {0} Fine wine</b>, #PlayerName# If he could just <b>Within thirty days </b>Bring me a bottle, and I'll be eternally grateful!"
-    qcTranslated: "Jianghu emergency, Master suddenly needs me to go <b>Find {0} Fine wine</b>, #PlayerName# If you could just <b>Within thirty days </b>Bring me a bottle, and I'll be eternally grateful!"
+    qcReviewedText: "Jianghu emergency, Master suddenly needs me to go <b>Find {0} Fine wine</b>, #PlayerName#, if you can...<b>Within thirty days </b>Bring me a bottle, and I'll be eternally grateful!"
+    qcTranslated: "Jianghu emergency, Master, the old man, suddenly needs me to go <b>Find {0} Fine wine</b>, #PlayerName#, if you can bring me a bottle <b>Within thirty days </b>, I'll be eternally grateful!"
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - OtherNamedDefect
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "寻"
     translated: "Find"
@@ -46676,7 +46672,7 @@
     translated: "Fine wine"
   - subIndex: 3
     text: "，#PlayerName#若能在"
-    translated: ", #PlayerName# If he could just"
+    translated: ", #PlayerName#, if you can..."
   - subIndex: 4
     text: "三十日内"
     translated: "Within thirty days"
@@ -49538,11 +49534,11 @@
 - raw: "白云天恢复记忆后，仍然选择继续留在仙霞派。\n平日里自由自在，四处游山玩水。\n一旦仙霞派弟子遭遇强敌，她便会从天而降一招取胜，随后飘然而去。\n以至于在江湖中，留下了仙霞派之人有仙子护体的传说。"
   splits:
   - text: "白云天恢复记忆后，仍然选择继续留在仙霞派。"
-    translated: "After recovering his memory, Bai Yuntian still chose to remain at the Xianxia Sect."
-    qcReviewedText: "After recovering his memory, Bai Yuntian still chose to remain at the Xianxia Sect.\nFree and carefree during the weekdays, exploring mountains and waters wherever I went.\nOnce an Xianxia Sect disciple faces a powerful opponent, she descends from the sky with a single move to secure victory, then disappears in a gentle breeze.\nThus, in the Jianghu, there arose the legend that the Xianxia Sect had daoists protected by fairy essences."
-    qcTranslated: "After Bai Yuntian recovered her memory, she still chose to remain at the Xianxia Sect.\nFree and carefree in daily life, she roamed the mountains and waters at will.\nOnce an Xianxia Sect disciple faced a powerful opponent, she would descend from the sky with a single move to secure victory, then drift away on the breeze.\nThus, in the Jianghu, there arose the legend that the Xianxia Sect had disciples protected by a fairy's body."
+    translated: "After recovering her memory, Bai Yuntian still chose to remain at the Xianxia Sect."
+    qcReviewedText: "After recovering her memory, Bai Yuntian still chose to remain at the Xianxia Sect.\nFree and carefree during the weekdays, exploring mountains and waters wherever I went.\nOnce an Xianxia Sect disciple faces a powerful opponent, she descends from the sky with a single move to secure victory, then disappears in a gentle breeze.\nThus, in the Jianghu, there arose the legend that the Xianxia Sect had daoists protected by fairy essences."
+    qcTranslated: "After recovering her memory, Bai Yuntian still chose to remain at the Xianxia Sect.\nFree and carefree in her daily life, she roamed the mountains and waters wherever she went.\nOnce an Xianxia Sect disciple faces a powerful opponent, she descends from the sky with a single move to secure victory, then disappears in a gentle breeze.\nThus, in the Jianghu, there arose the legend that the Xianxia Sect had disciples protected by a fairy's aura."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
@@ -49684,14 +49680,14 @@
 - raw: "皇帝诏曰，鉴于#PlayerName#近来精忠报国，功勋卓著，\n特此晋升为<b>{0}</b>，并再加封邑一处。\n还望卿戒骄戒躁，继续恪尽职守，为国效力。"
   splits:
   - text: "皇帝诏曰，鉴于#PlayerName#近来精忠报国，功勋卓著，"
-    translated: "The emperor has issued an edict: Given #PlayerName#'s recent loyalty and dedication to the country, and his outstanding achievements,"
-    qcReviewedText: "The emperor has issued an edict: Given #PlayerName#'s recent loyalty and dedication to the country, and his outstanding achievements,\nHereby promote you to <b>{0}</b>, And grant him an additional fiefdom\nI hope you remain humble and diligent, and continue to serve the country faithfully."
-    qcTranslated: "The emperor has issued an edict: Given #PlayerName#'s recent loyalty and dedication to the country, and his outstanding achievements, hereby promote you to <b>{0}</b>, and grant him an additional fiefdom. I hope you remain humble and diligent, and continue to serve the country faithfully."
+    translated: "The Emperor decrees, in recognition of #PlayerName#'s recent loyal service to the nation and outstanding achievements,"
+    qcReviewedText: "The Emperor decrees, in recognition of #PlayerName#'s recent loyal service to the nation and outstanding achievements,\nHereby promote you to <b>{0}</b>, And grant him an additional fiefdom\nI hope you remain humble and diligent, and continue to serve the country faithfully."
+    qcTranslated: "The Emperor decrees, in recognition of #PlayerName#'s recent loyal service to the nation and outstanding achievements,\nHereby promote you to <b>{0}</b>, And grant you an additional fiefdom\nI hope you remain humble and diligent, and continue to serve the country faithfully."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "特此晋升为"
     translated: "Hereby promote you to"
@@ -52832,7 +52828,7 @@
   splits:
   - text: "经过重重险阻，你终于在地下迷宫的深处发现了一个木匣。"
     translated: "After overcoming numerous dangers, you finally discovered a wooden chest deep within the underground labyrinth."
-    qcReviewedText: "After overcoming numerous dangers, you finally discovered a wooden chest deep within the underground labyrinth.\nHowever beside it stood a grim and fearsome practitioner of the heretical way.\nThis man has a fierce expression, his eyes bloodshot, laughing oddly as he pulls out a weapon and lunges at you!"
+    qcReviewedText: "After overcoming numerous dangers, you finally discovered a wooden chest deep within the underground labyrinth.\nHowever beside it stood a grim and fearsome practitioner of the heretical way.\nThis person had a terrifying expression, with bloodshot eyes. They laughed strangely as they pulled out their weapon and lunged at you!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -52841,7 +52837,7 @@
     translated: "However beside it stood a grim and fearsome practitioner of the heretical way."
   - subIndex: 2
     text: "此人面目狰狞，双眼血红，一边怪笑着一边掏出兵刃向你扑来！"
-    translated: "This man has a fierce expression, his eyes bloodshot, laughing oddly as he pulls out a weapon and lunges at you!"
+    translated: "This person had a terrifying expression, with bloodshot eyes. They laughed strangely as they pulled out their weapon and lunged at you!"
   templates:
   - template: "{0}\n{1}\n{2}"
 - raw: "经过重重险阻，你终于在地下迷宫的深处发现了一块神秘石碑，\n然而其旁赫然站立着几名#TargetForceName#高手，正满脸戒备地盯视着你。"
@@ -52861,13 +52857,13 @@
   splits:
   - text: "经过重重险阻，你终于在地下迷宫的深处发现了这名大盗。"
     translated: "After traversing numerous dangers, you finally discovered the notorious thief deep within the underground maze."
-    qcReviewedText: "After traversing numerous dangers, you finally discovered the notorious thief deep within the underground maze.\nThis man has a grim expression, his face filled with cunning. He lunges at you with a wicked grin, pulling out a weapon!"
+    qcReviewedText: "After traversing numerous dangers, you finally discovered the notorious thief deep within the underground maze.\nThis person had a grim expression, sly in demeanor, and while laughing strangely, they pulled out a weapon and lunged at you!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "此人面色阴沉，神情狡诈，一边怪笑着一边掏出兵刃向你扑来！"
-    translated: "This man has a grim expression, his face filled with cunning. He lunges at you with a wicked grin, pulling out a weapon!"
+    translated: "This person had a grim expression, sly in demeanor, and while laughing strangely, they pulled out a weapon and lunged at you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "经过重重险阻，你终于在地下迷宫的深处发现了这名贪官。\n此人身边还跟随着数名鹰犬和打手，一同抽出武器向你扑来！"
@@ -52891,13 +52887,13 @@
   splits:
   - text: "经过重重险阻，你终于在地下迷宫的深处发现了这名魔头。"
     translated: "After facing numerous dangers, you finally discovered this devil in the deepest part of the underground labyrinth."
-    qcReviewedText: "After facing numerous dangers, you finally discovered this devil in the deepest part of the underground labyrinth.\nThis man has a fierce expression, his eyes bloodshot, laughing oddly as he pulls out a weapon and lunges at you!"
+    qcReviewedText: "After facing numerous dangers, you finally discovered this devil in the deepest part of the underground labyrinth.\nThis person had a terrifying expression, with bloodshot eyes. They laughed strangely as they pulled out their weapon and lunged at you!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "此人面目狰狞，双眼血红，一边怪笑着一边掏出兵刃向你扑来！"
-    translated: "This man has a fierce expression, his eyes bloodshot, laughing oddly as he pulls out a weapon and lunges at you!"
+    translated: "This person had a terrifying expression, with bloodshot eyes. They laughed strangely as they pulled out their weapon and lunged at you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "经过重重险阻，你终于在荒野深处发现了一处营地，\n周围林中突然窜出数名强人将你团团围住，原来此处竟是一伙马贼的秘密据点。"
@@ -55873,8 +55869,8 @@
 - raw: "行至一枝繁叶茂之处，只见丛林掩映之间，\n赫然矗立着一株参天巨木，一眼望去有诸多木材可供取用。\n但若要从中挑选精品，非得有高超采伐技巧不可。"
   splits:
   - text: "行至一枝繁叶茂之处，只见丛林掩映之间，"
-    translated: "Arriving at a place where branches and leaves are lush, I see the jungle hidden between the trees,"
-    qcReviewedText: "Arriving at a place where branches and leaves are lush, I see the jungle hidden between the trees,\nLofty trees stand toweringly, offering plenty of timber at a glance.\nBut to pick out the finest pieces, one must possess exquisite resource gathering skills."
+    translated: "As you walked to a place where the trees were lush and leafy, you saw that between the dense woods,"
+    qcReviewedText: "As you walked to a place where the trees were lush and leafy, you saw that between the dense woods,\nLofty trees stand toweringly, offering plenty of timber at a glance.\nBut to pick out the finest pieces, one must possess exquisite resource gathering skills."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -65873,8 +65869,8 @@
 - raw: "（微微一笑，转身离去。渐行渐远之时，却突然转过身来）\n#SourceInteractName#若不嫌弃，明年我们再共度七夕如何？"
   splits:
   - text: "（微微一笑，转身离去。渐行渐远之时，却突然转过身来）"
-    translated: "(Slightly smiling, she turned to leave. As she was gradually moving away, she suddenly turned back.)"
-    qcReviewedText: "(Slightly smiling, she turned to leave. As she was gradually moving away, she suddenly turned back.)\n#SourceInteractName#, if you don't mind, shall we celebrate Qixi Festival together again next year?"
+    translated: "(Smiling slightly, they turned to leave. As they walked further away, they suddenly turned back.)"
+    qcReviewedText: "(Smiling slightly, they turned to leave. As they walked further away, they suddenly turned back.)\n#SourceInteractName#, if you don't mind, shall we celebrate Qixi Festival together again next year?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -65886,8 +65882,8 @@
 - raw: "（扑通一声跪在地上）师傅息怒！\n你就饶了#PlayerName#吧！"
   splits:
   - text: "（扑通一声跪在地上）师傅息怒！"
-    translated: "(Pthud, he kneels down) Master, please calm down!"
-    qcReviewedText: "(Pthud, he kneels down) Master, please calm down!\nJust let #PlayerName# go!"
+    translated: "(Kneeling down with a thud) Master, please calm down!"
+    qcReviewedText: "(Kneeling down with a thud) Master, please calm down!\nJust let #PlayerName# go!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -66031,11 +66027,14 @@
 - raw: "（见台下呼声雷动，纷纷叫好，便伸手示意）\n好！既然如此，参赛者请上前准备，赛马大会马上开始！"
   splits:
   - text: "（见台下呼声雷动，纷纷叫好，便伸手示意）"
-    translated: "(Seeing the audience's enthusiastic applause, he reached out to gesture)"
-    qcReviewedText: "(Seeing the audience's enthusiastic applause, he reached out to gesture)\nOK! Since that's the case, please step forward to prepare. The horse racing carnival is about to begin!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "(Seeing the thunderous applause below, raised a hand to signal for quiet.)"
+    qcReviewedText: "(Seeing the thunderous applause below, raised a hand to signal for quiet.)\nOK! Since that's the case, please step forward to prepare. The horse racing carnival is about to begin!"
+    qcTranslated: "(Seeing the thunderous applause below, raised a hand to signal for quiet.)\nOK! Since that's the case, contestants please step forward to prepare. The horse racing carnival is about to begin!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
   - subIndex: 1
     text: "好！既然如此，参赛者请上前准备，赛马大会马上开始！"
     translated: "OK! Since that's the case, please step forward to prepare. The horse racing carnival is about to begin!"
@@ -66044,8 +66043,8 @@
 - raw: "（运起轻功跑将开去）嗖！嗖！嗖！嗖！......\n#SourceInteractName#你可追的上我这速度？现在投降认输还来得及。"
   splits:
   - text: "（运起轻功跑将开去）嗖！嗖！嗖！嗖！......"
-    translated: "(Summoning Qinggong, he ran off) Whoosh! Whoosh! Whoosh! Whoosh! ..."
-    qcReviewedText: "(Summoning Qinggong, he ran off) Whoosh! Whoosh! Whoosh! Whoosh! ...\n#SourceInteractName# Can you keep up with my speed? You still have time to surrender and admit defeat."
+    translated: "(Using qinggong, they dashed away) Whoosh! Whoosh! Whoosh! Whoosh!......"
+    qcReviewedText: "(Using qinggong, they dashed away) Whoosh! Whoosh! Whoosh! Whoosh!......\n#SourceInteractName# Can you keep up with my speed? You still have time to surrender and admit defeat."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

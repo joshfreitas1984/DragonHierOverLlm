@@ -3015,11 +3015,14 @@
   splits:
   - split: 4
     text: "长乐帮主乐无疾成名绝技，刀势玲珑剔透，乍看之下一览无余，实则蕴含无数精妙无比的刀意，再严密之防御也如透明一般"
-    translated: "Changle Gang's leader Yue Wuji is renowned for his Special Technique, where his swordsmanship is delicate and transparent at first glance, yet it harbors countless intricate and profound sword intents, rendering even the most rigorous defenses as if they were transparent."
-    qcReviewedText: "Changle Gang's leader Yue Wuji is renowned for his Special Technique, where his swordsmanship is delicate and transparent at first glance, yet it harbors countless intricate and profound sword intents, rendering even the most rigorous defenses as if they were transparent."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Changle Gang's Sect Leader Yue Wuji is renowned for her Special Technique, where her swordsmanship is delicate and transparent at first glance, yet it harbors countless intricate and exquisite sword intents, rendering even the most rigorous defenses as if they were transparent."
+    qcReviewedText: "Changle Gang's Sect Leader Yue Wuji is renowned for her Special Technique, where her swordsmanship is delicate and transparent at first glance, yet it harbors countless intricate and exquisite sword intents, rendering even the most rigorous defenses as if they were transparent."
+    qcTranslated: "Changle Gang's Sect Leader Yue Wuji is renowned for her Special Technique, where her blade technique is delicate and transparent at first glance, yet it harbors countless intricate and exquisite blade intents, rendering even the most rigorous defenses as if they were transparent."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
 - raw: "319,内功,0,阴手伤人法,唐门入门心法，专练收发暗器之阴狠内劲,,1,内功1,生命上限10;内力上限10;内功6;力道6;射术威力0.04,,内功10;射术5,,,,0,1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3646,8 +3649,8 @@
   splits:
   - split: 4
     text: "街边乞丐一遍以筷子敲碗，一遍所唱之歌谣，其吐字换气中暗含丐帮入门内功心法"
-    translated: "A street beggar clacks a chopstick against a bowl while singing a folksong. In his pronunciations and breathing, there lies the Beggar Sect's foundational Neigong Heart Method."
-    qcReviewedText: "A street beggar clacks a chopstick against a bowl while singing a folksong. In his pronunciations and breathing, there lies the Beggar Sect's foundational Neigong Heart Method."
+    translated: "A beggar by the street beat on a bowl with chopsticks while singing a folksong; the beggar's diction and breath control revealed mastery of the Beggar Sect's basic internal skill techniques."
+    qcReviewedText: "A beggar by the street beat on a bowl with chopsticks while singing a folksong; the beggar's diction and breath control revealed mastery of the Beggar Sect's basic internal skill techniques."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3766,8 +3769,8 @@
   splits:
   - split: 4
     text: "相传是无名乞丐长棍被恶徒砍断后，情急之下以两节断棍使出的棍法，颇有几分灵巧快速"
-    translated: "Legend has it that this staff technique was devised by an unnamed beggar whose long staff was cut in half by a villain. In a moment of desperation, he used the two broken pieces and developed a style that is quite agile and swift."
-    qcReviewedText: "Legend has it that this staff technique was devised by an unnamed beggar whose long staff was cut in half by a villain. In a moment of desperation, he used the two broken pieces and developed a style that is quite agile and swift."
+    translated: "Legend has it that this staff technique was used by an unnamed beggar who, in a moment of desperation, fought with two broken pieces of their staff after it was cut in half by bandits. It is quite nimble and swift."
+    qcReviewedText: "Legend has it that this staff technique was used by an unnamed beggar who, in a moment of desperation, fought with two broken pieces of their staff after it was cut in half by bandits. It is quite nimble and swift."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

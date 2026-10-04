@@ -1108,20 +1108,19 @@
   splits:
   - text: "近来有一恶徒闯入"
     translated: "Lately, a villain has intruded"
-    qcReviewedText: "Lately, a villain has intruded <b>Leshan Town </b>Misbehaving like this, he's causing the entire village no peace. Please #PlayerName#, intervene and give him a lesson. I'd be very grateful!"
-    qcTranslated: "Lately, a villain has intruded into <b>Leshan Town</b> and been causing trouble, leaving the entire village in chaos. Please, #PlayerName#, step in and teach this guy a lesson. I'd be very grateful!"
+    qcReviewedText: "Lately, a villain has intruded <b>Leshan Town </b>Misdeeds and mischief have caused unrest throughout the entire village. Please, #PlayerName#, step in to teach this fellow a lesson; I would be eternally grateful!"
+    qcTranslated: "Lately, a villain has intruded into <b>Leshan Town</b>, committing misdeeds and causing such chaos that the entire village is in an uproar. Please, #PlayerName#, step in to teach this fellow a lesson; I would be eternally grateful!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - DroppedContent
   - subIndex: 1
     text: "乐山镇"
     translated: "Leshan Town"
   - subIndex: 2
     text: "为非作歹，闹得整个村子鸡犬不宁。还请#PlayerName#出手教训下这家伙，感激不尽！"
-    translated: "Misbehaving like this, he's causing the entire village no peace. Please #PlayerName#, intervene and give him a lesson. I'd be very grateful!"
+    translated: "Misdeeds and mischief have caused unrest throughout the entire village. Please, #PlayerName#, step in to teach this fellow a lesson; I would be eternally grateful!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "黑道大会即将在<b>腾冲府</b>召开，#PlayerName#别忘了前来与兄弟几个汇合，咱们一道探探这龙潭虎穴。"
@@ -1733,19 +1732,14 @@
   splits:
   - text: "近来传闻"
     translated: "Lately there have been rumors"
-    qcReviewedText: "Lately there have been rumors <b>Chengdu </b>In the city, there is a lecherous criminal causing chaos. #PlayerName#, why not join me in catching him?"
-    qcTranslated: "Lately there have been rumors that a lecherous criminal is causing chaos in <b>Chengdu</b>. #PlayerName#, why not join me in catching him?"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
   - subIndex: 2
     text: "城内有个淫贼胡作非为，#PlayerName#何不与我一道将其捉拿归案？"
-    translated: "In the city, there is a lecherous criminal causing chaos. #PlayerName#, why not join me in catching him?"
+    translated: "There's a lecherous bandit causing trouble in town. #PlayerName#, why don't you join me in catching him?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "InventedGender"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#！听说丐帮掌法刚猛无比，乃武林之最，我准备前去讨教讨教。咱们到时候在<b>丐帮</b>碰头，一起开开眼界！"

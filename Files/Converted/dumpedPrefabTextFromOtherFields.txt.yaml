@@ -208,16 +208,16 @@
 - raw: "#PlayerForceDescribe##$PlayerName#为朝廷殚精竭虑，其勋阶也节节高升，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#为朝廷殚精竭虑，其勋阶也节节高升，"
-    translated: "#PlayerForceDescribe# #$PlayerName# devoted himself to the court, and his rank steadily rose due to his efforts."
-    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# devoted himself to the court, and his rank steadily rose due to his efforts."
+    translated: "#PlayerForceDescribe#$PlayerName# worked tirelessly for the court, and their rank steadily rose."
+    qcReviewedText: "#PlayerForceDescribe#$PlayerName# worked tirelessly for the court, and their rank steadily rose."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#为朝廷鞠躬尽瘁，其官职也节节高升。"
-    translated: "#PlayerForceDescribe# #$PlayerName# served the court with utmost dedication, and his official rank rose step by step."
-    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# served the court with utmost dedication, and his official rank rose step by step."
+    translated: "#PlayerForceDescribe# #$PlayerName# served the court with dedication, and their official rank steadily rose."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# served the court with dedication, and their official rank steadily rose."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -232,11 +232,14 @@
 - raw: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#及其附庸、盟友，一路高歌猛进，攻城略地。"
-    translated: "#PlayerForceDescribe# #$PlayerName# and his vassals, allies, have been advancing triumphantly, conquering cities and territories."
-    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# and his vassals, allies, have been advancing triumphantly, conquering cities and territories."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# and their allies advanced triumphantly, conquering cities and territories along the way."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# and their allies advanced triumphantly, conquering cities and territories along the way."
+    qcTranslated: "#PlayerForceDescribe# #$PlayerName# and their vassals and allies advanced triumphantly, conquering cities and territories along the way."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
 - raw: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#在江湖中历经无数风浪，"
@@ -734,8 +737,8 @@
 - raw: "#SourceInteractName#本事不大，口气不小，我早就看你不顺眼，咱们就新仇旧恨，一并算上！"
   splits:
   - text: "#SourceInteractName#本事不大，口气不小，我早就看你不顺眼，咱们就新仇旧恨，一并算上！"
-    translated: "#SourceInteractName# doesn't have much ability, but he talks big. I've never liked him. Let's settle both old and new grievances!"
-    qcReviewedText: "#SourceInteractName# doesn't have much ability, but he talks big. I've never liked him. Let's settle both old and new grievances!"
+    translated: "#SourceInteractName# isn't very skilled but talks big. I've been looking down on you for a long time, so let's settle old and new grudges together!"
+    qcReviewedText: "#SourceInteractName# isn't very skilled but talks big. I've been looking down on you for a long time, so let's settle old and new grudges together!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -869,8 +872,8 @@
 - raw: "#TargetInteractName#双眉紧蹙，来回踱步，似乎心中有所思量，\\n若是什么疑难困扰，可有我帮得上忙的地方？"
   splits:
   - text: "#TargetInteractName#双眉紧蹙，来回踱步，似乎心中有所思量，"
-    translated: "#TargetInteractName# furrowed his brow and paced back and forth, clearly deep in thought."
-    qcReviewedText: "#TargetInteractName# furrowed his brow and paced back and forth, clearly deep in thought.\\nIf there are any difficult issues troubling you, are they things I can assist with?"
+    translated: "#TargetInteractName# frowned tightly, pacing back and forth, seemingly deep in thought."
+    qcReviewedText: "#TargetInteractName# frowned tightly, pacing back and forth, seemingly deep in thought.\\nIf there are any difficult issues troubling you, are they things I can assist with?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -937,8 +940,8 @@
 - raw: "#TargetInteractName#行色匆匆，似乎有事在身，不知是否要上前询问一二？"
   splits:
   - text: "#TargetInteractName#行色匆匆，似乎有事在身，不知是否要上前询问一二？"
-    translated: "#TargetInteractName# is in a hurry, as if he has something on his mind. Should I go and ask if he needs help?"
-    qcReviewedText: "#TargetInteractName# is in a hurry, as if he has something on his mind. Should I go and ask if he needs help?"
+    translated: "#TargetInteractName# seems in a hurry, as if they have somewhere to be. Should you approach and ask if everything is alright?"
+    qcReviewedText: "#TargetInteractName# seems in a hurry, as if they have somewhere to be. Should you approach and ask if everything is alright?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2727,20 +2730,19 @@
   splits:
   - text: "近来有一恶徒闯入"
     translated: "Lately, a villain has intruded"
-    qcReviewedText: "Lately, a villain has intruded <b>Leshan Town </b>Misbehaving like this, he's causing the entire village no peace. Please #PlayerName#, intervene and give him a lesson. I'd be very grateful!"
-    qcTranslated: "Lately, a villain has intruded into <b>Leshan Town</b> and been causing trouble, leaving the entire village in chaos. Please, #PlayerName#, step in and teach this guy a lesson. I'd be very grateful!"
+    qcReviewedText: "Lately, a villain has intruded <b>Leshan Town </b>Misdeeds and mischief have caused unrest throughout the entire village. Please, #PlayerName#, step in to teach this fellow a lesson; I would be eternally grateful!"
+    qcTranslated: "Lately, a villain has intruded into <b>Leshan Town</b>, committing misdeeds and causing such chaos that the entire village is in an uproar. Please, #PlayerName#, step in to teach this fellow a lesson; I would be eternally grateful!"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - DroppedContent
   - subIndex: 1
     text: "乐山镇"
     translated: "Leshan Town"
   - subIndex: 2
     text: "为非作歹，闹得整个村子鸡犬不宁。还请#PlayerName#出手教训下这家伙，感激不尽！"
-    translated: "Misbehaving like this, he's causing the entire village no peace. Please #PlayerName#, intervene and give him a lesson. I'd be very grateful!"
+    translated: "Misdeeds and mischief have caused unrest throughout the entire village. Please, #PlayerName#, step in to teach this fellow a lesson; I would be eternally grateful!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "黑道大会即将在<b>腾冲府</b>召开，#PlayerName#别忘了前来与兄弟几个汇合，咱们一道探探这龙潭虎穴。"
@@ -3352,19 +3354,14 @@
   splits:
   - text: "近来传闻"
     translated: "Lately there have been rumors"
-    qcReviewedText: "Lately there have been rumors <b>Chengdu </b>In the city, there is a lecherous criminal causing chaos. #PlayerName#, why not join me in catching him?"
-    qcTranslated: "Lately there have been rumors that a lecherous criminal is causing chaos in <b>Chengdu</b>. #PlayerName#, why not join me in catching him?"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
   - subIndex: 2
     text: "城内有个淫贼胡作非为，#PlayerName#何不与我一道将其捉拿归案？"
-    translated: "In the city, there is a lecherous criminal causing chaos. #PlayerName#, why not join me in catching him?"
+    translated: "There's a lecherous bandit causing trouble in town. #PlayerName#, why don't you join me in catching him?"
+    flaggedForRetranslation: true
+    flaggedMistranslation: "InventedGender"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#！听说丐帮掌法刚猛无比，乃武林之最，我准备前去讨教讨教。咱们到时候在<b>丐帮</b>碰头，一起开开眼界！"
@@ -4395,8 +4392,8 @@
 - raw: "一名作恶多端的魔头近日在#TargetPlace#显露踪迹，此人武功高强，心狠手辣，还望武林人士尽快将其捉拿归案。"
   splits:
   - text: "一名作恶多端的魔头近日在#TargetPlace#显露踪迹，此人武功高强，心狠手辣，还望武林人士尽快将其捉拿归案。"
-    translated: "A wicked villain has recently shown signs of activity in #TargetPlace#. This individual is highly skilled in martial arts, ruthless, and heartless. We hope that martial artists will act quickly to apprehend him and bring him to justice."
-    qcReviewedText: "A wicked villain has recently shown signs of activity in #TargetPlace#. This individual is highly skilled in martial arts, ruthless, and heartless. We hope that martial artists will act quickly to apprehend him and bring him to justice."
+    translated: "A notorious villain recently appeared in #TargetPlace#, this person is highly skilled and ruthless. It is hoped that Wulin's heroes will apprehend them quickly."
+    qcReviewedText: "A notorious villain recently appeared in #TargetPlace#, this person is highly skilled and ruthless. It is hoped that Wulin's heroes will apprehend them quickly."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6417,8 +6414,8 @@
 - raw: "传说在#PosText#郊外，有名少年天资过人，乃是世间少见的武学奇才，附近门派人士纷纷前往欲招揽此人。\\n(凶险奇遇，建议携队友前往)"
   splits:
   - text: "传说在#PosText#郊外，有名少年天资过人，乃是世间少见的武学奇才，附近门派人士纷纷前往欲招揽此人。"
-    translated: "Legend has it that in the outskirts of #PosText#, there was a young man with extraordinary talent. He was a rare martial arts genius in the world, and people from nearby sects flocked there hoping to recruit him."
-    qcReviewedText: "Legend has it that in the outskirts of #PosText#, there was a young man with extraordinary talent. He was a rare martial arts genius in the world, and people from nearby sects flocked there hoping to recruit him.\\n(Dreadful Fortune, recommend going with teammates)"
+    translated: "Legend has it that in the outskirts of #PosText#, there is a young prodigy with extraordinary talent, a rare martial arts genius that nearby sects are vying to recruit."
+    qcReviewedText: "Legend has it that in the outskirts of #PosText#, there is a young prodigy with extraordinary talent, a rare martial arts genius that nearby sects are vying to recruit.\\n(Dreadful Fortune, recommend going with teammates)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7593,9 +7590,9 @@
 - raw: "传闻思中澜自剑川镇逃出正邪两派天罗地网后，躲入西南密林之中，可能很快就会抵达<b>#PosText#</b>总舵。"
   splits:
   - text: "传闻思中澜自剑川镇逃出正邪两派天罗地网后，躲入西南密林之中，可能很快就会抵达"
-    translated: "It is said that after Si Zhonglan escaped from the web of the Yin‑Yang Sects following their pursuit in Jianchuan Town, she hid in the dense forests of southwestern China, and may soon make her way there."
-    qcReviewedText: "It is said that after Si Zhonglan escaped from the web of the Yin‑Yang Sects following their pursuit in Jianchuan Town, she hid in the dense forests of southwestern China, and may soon make her way there.<b>#PosText#</b>Main Den"
-    qcTranslated: "It is said that after Si Zhonglan escaped from the web of the Yin‑Yang Sects following their pursuit in Jianchuan Town, she hid in the dense forests of southwestern China, and may soon make her way to <b>#PosText#</b>Main Den."
+    translated: "It is said that since Si Zhonglan escaped from the tight net of both righteous and evil sects in Jianchuan Town, he has been hiding in the dense forests to the southwest and may soon arrive."
+    qcReviewedText: "It is said that since Si Zhonglan escaped from the tight net of both righteous and evil sects in Jianchuan Town, he has been hiding in the dense forests to the southwest and may soon arrive.<b>#PosText#</b>Main Den"
+    qcTranslated: "It is said that since Si Zhonglan escaped from the tight net of both righteous and evil sects in Jianchuan Town, he has been hiding in the dense forests to the southwest and may soon arrive at the <b>#PosText#</b> Main Den."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7949,11 +7946,14 @@
 - raw: "传闻近日上官凤与麾下四大杀手一齐现身<b>#PosText#</b>，不知又在谋划什么大计。"
   splits:
   - text: "传闻近日上官凤与麾下四大杀手一齐现身"
-    translated: "It is said that recently, Shangguan Feng appeared together with his Four Great Assassins."
-    qcReviewedText: "It is said that recently, Shangguan Feng appeared together with his Four Great Assassins.<b>#PosText#</b>, I wonder what great plan he is plotting again."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "It is said that recently, Shangguan Feng appeared along with her Four Great Assassins."
+    qcReviewedText: "It is said that recently, Shangguan Feng appeared along with her Four Great Assassins.<b>#PosText#</b>, I wonder what great plan he is plotting again."
+    qcTranslated: "It is said that recently, Shangguan Feng appeared along with her Four Great Assassins.<b>#PosText#</b>, I wonder what great plan she is plotting again."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - subIndex: 1
     text: "，不知又在谋划什么大计。"
     translated: ", I wonder what great plan he is plotting again."
@@ -10189,8 +10189,8 @@
 - raw: "前往#TargetPlace#追捕唐逸影父子二人。"
   splits:
   - text: "前往#TargetPlace#追捕唐逸影父子二人。"
-    translated: "Go to #TargetPlace# to apprehend Tang Yiying and her son."
-    qcReviewedText: "Go to #TargetPlace# to apprehend Tang Yiying and her son."
+    translated: "Head to #TargetPlace# to capture Tang Yiying and his son."
+    qcReviewedText: "Head to #TargetPlace# to capture Tang Yiying and his son."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -11074,8 +11074,8 @@
 - raw: "叶一鸣已被击败，趁其群龙无首，返回#TargetPlace#发动进攻。"
   splits:
   - text: "叶一鸣已被击败，趁其群龙无首，返回#TargetPlace#发动进攻。"
-    translated: "Ye Yiming has been defeated. Taking advantage of his leadership vacuum, return to #TargetPlace# to launch an attack."
-    qcReviewedText: "Ye Yiming has been defeated. Taking advantage of his leadership vacuum, return to #TargetPlace# to launch an attack."
+    translated: "Ye Yiming has been defeated; take advantage of their lack of leadership and launch an attack on #TargetPlace#."
+    qcReviewedText: "Ye Yiming has been defeated; take advantage of their lack of leadership and launch an attack on #TargetPlace#."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -13514,16 +13514,16 @@
   splits:
   - text: "大胆！我说怎么吵吵闹闹的，原来是#TargetForceName#小贼在此放肆！"
     translated: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!"
-    qcReviewedText: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!\\n#PlayerName#, let's give this guy a taste of his own medicine!"
-    qcTranslated: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is acting shamelessly!\\n#PlayerName#, let's give this guy a taste of his own medicine!"
+    qcReviewedText: "Boldly! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being naughty!\\n#PlayerName#, let's teach this guy a lesson together!"
+    qcTranslated: "Audacious! I wondered why there was such a commotion, turns out the little thief from #TargetForceName# is being so brazen!\\n#PlayerName#, let's teach this guy a lesson together!"
     qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 90
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "#PlayerName#，咱们一道教训教训这家伙！"
-    translated: "#PlayerName#, let's give this guy a taste of his own medicine!"
+    translated: "#PlayerName#, let's teach this guy a lesson together!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "大言不惭，今天就来领教领教你#SourceForceName#武学，\\n看看与我#TargetForceName#孰高孰低！"
@@ -17827,8 +17827,8 @@
 - raw: "此人因而心灰意冷，归隐山林。"
   splits:
   - text: "此人因而心灰意冷，归隐山林。"
-    translated: "Thus, he became disheartened and retired to the mountains."
-    qcReviewedText: "Thus, he became disheartened and retired to the mountains."
+    translated: "They became disheartened and retreated to the mountains."
+    qcReviewedText: "They became disheartened and retreated to the mountains."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -17848,8 +17848,8 @@
 - raw: "此人随后便急流勇退，过上了云游四海的生活。"
   splits:
   - text: "此人随后便急流勇退，过上了云游四海的生活。"
-    translated: "This person then retired at the peak of his career and led a wandering life across the seas."
-    qcReviewedText: "This person then retired at the peak of his career and led a wandering life across the seas."
+    translated: "This person then retired from the world and began a life of traveling the four seas."
+    qcReviewedText: "This person then retired from the world and began a life of traveling the four seas."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -18830,14 +18830,15 @@
 - raw: "江湖风闻，神偷慕容星辰竟被三个小捕快一路追缉，只得在<b>#PosText#</b>一带躲藏。"
   splits:
   - text: "江湖风闻，神偷慕容星辰竟被三个小捕快一路追缉，只得在"
-    translated: "It's said in the Jianghu that the divine thief Murong Xingchen was chased by three young constables the whole way, leaving him no choice but to"
-    qcReviewedText: "It's said in the Jianghu that the divine thief Murong Xingchen was chased by three young constables the whole way, leaving him no choice but to<b>#PosText#</b>Stay hidden"
-    qcTranslated: "It's said in the Jianghu that the divine thief Murong Xingchen was chased by three young constables the whole way, leaving him no choice but to stay hidden in the <b>#PosText#</b> area."
+    translated: "It is said in the Jianghu that the master thief Murong Xingchen was pursued by three rookie constables and had to flee to"
+    qcReviewedText: "It is said in the Jianghu that the master thief Murong Xingchen was pursued by three rookie constables and had to flee to<b>#PosText#</b>Stay hidden"
+    qcTranslated: "It is said in the Jianghu that the master thief Murong Xingchen was pursued by three rookie constables and had to hide in the <b>#PosText#</b> area."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "一带躲藏。"
     translated: "Stay hidden"
@@ -19906,8 +19907,8 @@
 - raw: "眼前一名疯疯癫癫的乞丐躺在路边，一遍哼唱着不知来由的乡野小调，\\n一遍痛饮着葫芦中的酒水，眉宇间竟颇有几分闲适自在之乐趣。"
   splits:
   - text: "眼前一名疯疯癫癫的乞丐躺在路边，一遍哼唱着不知来由的乡野小调，"
-    translated: "Before him, a madcap beggar lay by the roadside, humming an unfamiliar countryside tune."
-    qcReviewedText: "Before him, a madcap beggar lay by the roadside, humming an unfamiliar countryside tune.\\nDraining the wine from the gourd, he found a surprising amount of leisurely enjoyment in the moment."
+    translated: "A mad‑looking beggar lay by the roadside, humming an unfamiliar folk tune."
+    qcReviewedText: "A mad‑looking beggar lay by the roadside, humming an unfamiliar folk tune.\\nDraining the wine from the gourd, he found a surprising amount of leisurely enjoyment in the moment."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -25023,8 +25024,8 @@
 - raw: "顾师兄将叶一鸣引诱到了#TargetPlace#，尽快前去支援。"
   splits:
   - text: "顾师兄将叶一鸣引诱到了#TargetPlace#，尽快前去支援。"
-    translated: "Senior Brother Gu has lured Ye Yiming to #TargetPlace#. Go to support him quickly."
-    qcReviewedText: "Senior Brother Gu has lured Ye Yiming to #TargetPlace#. Go to support him quickly."
+    translated: "Senior Brother Gu lured Ye Yiming to #TargetPlace#, hurry there to support them."
+    qcReviewedText: "Senior Brother Gu lured Ye Yiming to #TargetPlace#, hurry there to support them."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
