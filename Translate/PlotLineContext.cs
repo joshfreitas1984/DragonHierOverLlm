@@ -26,19 +26,55 @@ namespace Tests
         private const string UnknownHint = "Context: the gender of the omitted subject of this stage direction is unknown. Use \"they\" or leave the subject out; never he or she.";
         private const string NarrationHint = "Context: this is narration addressed to the player. Write \"you\" or leave the subject out; never \"I\".";
 
+        private const string TokenHint = "Context: the placeholder tokens in this line (such as #PlayerName#) stand for people whose gender is unknown, often the player. Refer to them as \"you\" or \"they\"; never he, she, his, her or him.";
+
+        /// <summary>
+        /// Placeholder tokens that stand for a person whose gender is unknown at translation time: the player, and the
+        /// interaction source/target people the game fills in at runtime. A survey of every token in the text found no
+        /// token that carries gender (no pronoun or sex token), so these are the ones that need the "unknown" hint.
+        /// Faction (…ForceName) and place/item/number tokens are not people and are left alone.
+        /// </summary>
+        public static readonly IReadOnlyCollection<string> UnknownGenderPersonTokens =
+        [
+            "#PlayerName#", "#$PlayerName#",
+            "#TargetInteractName#", "#$TargetInteractName#",
+            "#SourceInteractName#", "#$SourceInteractName#",
+            "#PlotTargetInteractName0#", "#PlotTargetInteractName1#",
+            "#SourceHeroName#",
+        ];
+
         private static readonly Lazy<IReadOnlyDictionary<string, string>> HeroGenders = new(() => LoadHeroGenders(GameFileHandling.WorkingDirectory));
 
         public static IReadOnlyDictionary<TranslationSplit, LineContext> Provide(string workingDirectory, TextFileToSplit textFile, IReadOnlyList<TranslationLine> lines)
         {
-            if (!string.Equals(textFile.Path, PlotFile, StringComparison.OrdinalIgnoreCase))
-                return new Dictionary<TranslationSplit, LineContext>();
+            var contexts = new Dictionary<TranslationSplit, LineContext>();
 
-            // The cached lookup is for the game's own working directory; any other directory (a test copy) is read directly.
-            var genders = string.Equals(workingDirectory, GameFileHandling.WorkingDirectory, StringComparison.Ordinal)
-                ? HeroGenders.Value
-                : LoadHeroGenders(workingDirectory);
+            if (string.Equals(textFile.Path, PlotFile, StringComparison.OrdinalIgnoreCase))
+            {
+                // The cached lookup is for the game's own working directory; any other directory (a test copy) is read directly.
+                var genders = string.Equals(workingDirectory, GameFileHandling.WorkingDirectory, StringComparison.Ordinal)
+                    ? HeroGenders.Value
+                    : LoadHeroGenders(workingDirectory);
 
-            return Build(lines, genders);
+                foreach (var (split, context) in Build(lines, genders))
+                    contexts[split] = context;
+            }
+
+            AddTokenContexts(contexts, lines);
+            return contexts;
+        }
+
+        /// <summary>
+        /// Any split containing a person token whose gender is unknown (see <see cref="UnknownGenderPersonTokens"/>) gets
+        /// the "unknown, use you/they" hint, in every file. A split that already has a speaker context keeps it.
+        /// </summary>
+        public static void AddTokenContexts(Dictionary<TranslationSplit, LineContext> contexts, IReadOnlyList<TranslationLine> lines)
+        {
+            var hint = new LineContext(TokenHint, GenderKnown: false);
+
+            foreach (var split in lines.SelectMany(line => line.Splits))
+                if (!contexts.ContainsKey(split) && UnknownGenderPersonTokens.Any(token => split.Text.Contains(token, StringComparison.Ordinal)))
+                    contexts[split] = hint;
         }
 
         /// <summary>Builds the contexts for a PlotData file's lines. <paramref name="heroGenders"/> maps a character name to 男 or 女.</summary>

@@ -35,6 +35,7 @@ namespace Tests
             CustomColumnRepair = RepairGameSpecificColumn,
             CustomColumnValidator = ValidateGameSpecificColumn,
             LineContextProvider = PlotLineContext.Provide,
+            UnknownGenderPersonTokens = PlotLineContext.UnknownGenderPersonTokens,
             CustomQcExclusionRule = (textFile, column, raw) =>
                 ExcludeFunctionRoutedDynamicStringFromQc(textFile, column, raw) ||
                 ExcludePlotChoiceColumnFromQc(textFile, column, raw),

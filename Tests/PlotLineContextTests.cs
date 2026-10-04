@@ -74,6 +74,29 @@ public class PlotLineContextTests
         Assert.Null(ContextOf(contexts, choice));
     }
 
+    [Fact(DisplayName = "PlotLineContext hints any split containing an unknown-gender person token, in any file, without overriding a speaker context")]
+    public void TokenLines_GetUnknownGenderHint()
+    {
+        var spoken = Row("1,无,杨思迟,右,,,,,,,", "#PlayerName#手脚挺快，");
+        var stage = Row(",雷殷殷,,左,,,,,,,", "（拍了拍#PlayerName#的肩膀）");
+        var target = new TranslationLine { Raw = "x", Splits = [new TranslationSplit { Split = 3, Text = "#TargetInteractName#来了" }] };
+        var faction = new TranslationLine { Raw = "y", Splits = [new TranslationSplit { Split = 3, Text = "#PlayerForceName#来了" }] };
+        var plot = new List<TranslationLine> { new() { Raw = Header }, spoken, stage };
+
+        var contexts = PlotLineContext.Build(plot, Genders).ToDictionary();
+        PlotLineContext.AddTokenContexts(contexts, plot);
+        PlotLineContext.AddTokenContexts(contexts, [target, faction]);
+
+        Assert.False(ContextOf(contexts, spoken)!.GenderKnown);
+        Assert.Contains("gender is unknown", ContextOf(contexts, spoken)!.Prompt);
+        // The stage direction keeps its speaker context (a known female speaker).
+        Assert.True(ContextOf(contexts, stage)!.GenderKnown);
+        Assert.Contains("female character", ContextOf(contexts, stage)!.Prompt);
+        Assert.Contains("gender is unknown", ContextOf(contexts, target)!.Prompt);
+        // A faction token is not a person.
+        Assert.Null(ContextOf(contexts, faction));
+    }
+
     [Fact(DisplayName = "PlotLineContext does nothing without the expected header columns")]
     public void MissingHeader_GivesNoContext()
     {
