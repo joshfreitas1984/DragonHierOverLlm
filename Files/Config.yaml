@@ -126,6 +126,16 @@ translationAssessment:
     - "玉蜂针"
     - "灵蛇拳"
     - "青蜂钉"
+    - "（说罢拉起你的手，向着地道入口飞驰而去）"
+    - "如今本掌门不得不将你逐出"
+    - "正思忖间，忽然有三个身影从暗处跳出，将你团团围住！"
+    - "我郭勇锐只要还活着一天，就定要替你洗刷冤屈，"
+    - "寻西山隐者不遇"
+    - "竟然将这些暗器尽数拦下。"
+    - "手中的瓷器碎片"
+    - "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，"
+    - "（摸了摸眼泪，破涕为笑）"
+    - "（说罢她盘膝坐下运功，不一会儿身上便腾起了阵阵真气，"
 qualityEvaluatorAssessment:
   enabled: true
   # See docs/investigations/tests/qc-evaluator-model-selection.md for the full model/quant/prompt

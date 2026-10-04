@@ -1984,9 +1984,9 @@
 - raw: "#PlayerName#！诸葛姐姐将你上次所寻珍宝进献给皇上，果真求得了圣旨！你快<b>回仙霞派</b>和顾师兄接旨，然后去大隐阁好好治病疗伤。"
   splits:
   - text: "#PlayerName#！诸葛姐姐将你上次所寻珍宝进献给皇上，果真求得了圣旨！你快"
-    translated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry."
-    qcReviewedText: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry.<b>Return to the Xianxia Sect </b>Receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion for proper injury treatment."
-    qcTranslated: "#PlayerName#! Zhuge Older Sister presented the treasure you sought last time to the emperor, and indeed she obtained a royal decree! You should hurry. <b>Return to the Xianxia Sect</b> to receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion for proper injury treatment."
+    translated: "#PlayerName#! Big Sister Zhuge presented the treasure you found to the Emperor and really got an imperial decree! Hurry up!"
+    qcReviewedText: "#PlayerName#! Big Sister Zhuge presented the treasure you found to the Emperor and really got an imperial decree! Hurry up!<b>Return to the Xianxia Sect </b>Receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion for proper injury treatment."
+    qcTranslated: "#PlayerName#! Big Sister Zhuge presented the treasure you found to the Emperor and really got an imperial decree! Hurry up!<b>Return to the Xianxia Sect </b>to receive the imperial decree with Senior Brother Gu, then go to the Great Hidden Pavilion for proper injury treatment."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
