@@ -74,14 +74,48 @@ internal static class PerfInstrumentation
         {
             _bucket = bucket;
             _sampleDescription = sampleDescription;
+            EnterScope();
             _start = Stopwatch.GetTimestamp();
         }
 
         public void Dispose()
         {
-            if (_bucket != null)
-                Record(_bucket, Stopwatch.GetTimestamp() - _start, _sampleDescription);
+            if (_bucket == null) return;
+            var elapsed = Stopwatch.GetTimestamp() - _start;
+            ExitScope(_bucket, elapsed);
+            Record(_bucket, elapsed, _sampleDescription);
         }
+    }
+
+    // --- Thread attribution + per-frame main-thread accounting ---
+    //
+    // Buckets used to mix main-thread and background work (RecordLogPrewarmPatches runs the same
+    // pipeline on a Task), so a 2s window's total couldn't say how much of it actually stalled a
+    // frame. Background calls are now recorded under "<bucket>[bg]"; main-thread ones keep the
+    // plain name. And the OUTERMOST measured scope on the main thread is also summed per frame
+    // (nested scopes, e.g. RunGenericPipeline inside HandleTextSetter, are not double-counted) and
+    // logged as a [FRAME] line when a single frame's plugin work crosses FrameLogThresholdMs.
+    private const double FrameLogThresholdMs = 8.0;
+    private static int _mainThreadId = -1;
+    [ThreadStatic] private static int _scopeDepth;
+    private static long _frameTicks;
+    private static readonly Dictionary<string, long> _frameBuckets = new();
+
+    // Called from MainPlugin.Load, which runs on the game's main thread.
+    public static void MarkMainThread() => _mainThreadId = Environment.CurrentManagedThreadId;
+
+    private static bool IsMainThread => Environment.CurrentManagedThreadId == _mainThreadId;
+
+    private static void EnterScope() => _scopeDepth++;
+
+    private static void ExitScope(string bucket, long elapsedTicks)
+    {
+        // Clamp: a scope whose End never ran (original threw) must not wedge the depth above zero.
+        if (_scopeDepth > 0) _scopeDepth--;
+        if (_scopeDepth != 0 || !IsMainThread) return;
+        _frameTicks += elapsedTicks;
+        _frameBuckets.TryGetValue(bucket, out var prior);
+        _frameBuckets[bucket] = prior + elapsedTicks;
     }
 
     // State-passing variant for hot paths (per text set, per template attempt): with a `static`
@@ -100,15 +134,18 @@ internal static class PerfInstrumentation
             _bucket = bucket;
             _state = state;
             _sampleDescription = sampleDescription;
+            EnterScope();
             _start = Stopwatch.GetTimestamp();
         }
 
         public void Dispose()
         {
             if (_bucket == null) return;
+            var elapsed = Stopwatch.GetTimestamp() - _start;
+            ExitScope(_bucket, elapsed);
             var state = _state;
             var describe = _sampleDescription;
-            Record(_bucket, Stopwatch.GetTimestamp() - _start, describe == null ? null : () => describe(state));
+            Record(_bucket, elapsed, describe == null ? null : () => describe(state));
         }
     }
 
@@ -176,6 +213,7 @@ internal static class PerfInstrumentation
     private static void RecordCore(string bucket, long elapsedStopwatchTicks, Func<string> sampleDescription)
     {
         var ms = elapsedStopwatchTicks * 1000.0 / Stopwatch.Frequency;
+        if (_mainThreadId != -1 && !IsMainThread) bucket += "[bg]";
 
         // `sampleDescription` is a caller-supplied delegate that can do arbitrary work (e.g.
         // HandleTextSetter's sample walks a live Unity transform hierarchy via GetComponentPath) -
@@ -213,6 +251,52 @@ internal static class PerfInstrumentation
             AppendLine($"[SLOW] {bucket}: {ms:F2}ms - {sampleDescription?.Invoke() ?? "(no sample)"}", flushNow: true);
     }
 
+    // Wall-clock frame time = gap between consecutive ticks. A frame is logged as a [HITCH] when it
+    // runs long, with how much of it was this plugin's measured main-thread work - the remainder is
+    // game/engine time (saves, GC, native code), which is what tells "our patch" from "not ours".
+    private const double HitchFrameMilliseconds = 50.0;
+    private static long _lastFrameTimestamp;
+    private static int _lastGc0, _lastGc1, _lastGc2;
+
+    // Logs and resets the per-frame accumulator; run at the top of every PeriodicTick (once per
+    // frame), so what has accumulated is the previous frame's main-thread plugin work.
+    private static void FlushFrameAccounting()
+    {
+        var nowTs = Stopwatch.GetTimestamp();
+        var frameMs = _lastFrameTimestamp == 0 ? 0 : (nowTs - _lastFrameTimestamp) * 1000.0 / Stopwatch.Frequency;
+        _lastFrameTimestamp = nowTs;
+
+        // .NET (CoreCLR) collections since the previous frame. A gen-2 (or gen-1) collection suspends
+        // every managed thread, so allocation-heavy background work (the translation prewarm) could
+        // stall the main thread without any measured plugin scope showing it - this tells whether a
+        // hitch frame coincides with one. (Unity's own IL2CPP GC is separate and not visible here.)
+        var gc0 = GC.CollectionCount(0); var gc1 = GC.CollectionCount(1); var gc2 = GC.CollectionCount(2);
+        var gcDelta = $"gc(g0/g1/g2)=+{gc0 - _lastGc0}/+{gc1 - _lastGc1}/+{gc2 - _lastGc2}";
+        _lastGc0 = gc0; _lastGc1 = gc1; _lastGc2 = gc2;
+
+        var ms = _frameTicks * 1000.0 / Stopwatch.Frequency;
+        var hitch = frameMs >= HitchFrameMilliseconds;
+        if (ms >= FrameLogThresholdMs || hitch)
+        {
+            var previousGuard = DynamicStringPatches._inFormatConcatPatch;
+            DynamicStringPatches._inFormatConcatPatch = true;
+            try
+            {
+                var parts = new List<string>();
+                foreach (var kvp in _frameBuckets)
+                    parts.Add($"{kvp.Key}={kvp.Value * 1000.0 / Stopwatch.Frequency:F1}ms");
+                var tag = hitch ? "[HITCH+FRAME]" : "[FRAME]";
+                AppendLine($"{tag} {DateTime.Now:HH:mm:ss.fff} frame={frameMs:F0}ms {gcDelta} main-thread plugin work {ms:F1}ms: {string.Join(", ", parts)}", flushNow: true);
+            }
+            finally
+            {
+                DynamicStringPatches._inFormatConcatPatch = previousGuard;
+            }
+        }
+        _frameTicks = 0;
+        _frameBuckets.Clear();
+    }
+
     // Called once per frame (already de-duplicated by the caller) from PlotTextSizePatches'
     // Time.deltaTime tick. Dumps and resets whichever buckets saw activity since the last dump, so
     // perfStats.log reads as a timeline of bursts rather than one giant running total.
@@ -235,6 +319,11 @@ internal static class PerfInstrumentation
     {
         if (!MainPlugin.PerfInstrumentationEnabledCached) return;
 
+        // Authoritative: this tick runs from Time.deltaTime's getter, i.e. Unity's main thread
+        // (MarkMainThread from plugin Load is only a best-effort early value).
+        MarkMainThread();
+        FlushFrameAccounting();
+
         var now = DateTime.UtcNow.Ticks;
         if (now - _lastDumpTicks < DumpIntervalTicks) return;
         _lastDumpTicks = now;
@@ -248,6 +337,11 @@ internal static class PerfInstrumentation
         }
 
         _tickReentered = true;
+        // The log lines built below embed raw CJK sample text; without the Concat guard they run
+        // back through GenericPostfix's translation pipeline (seen in perfStats.log as
+        // "(slowest: template=..." inputs) and inflate the very numbers being reported.
+        var previousGuard = DynamicStringPatches._inFormatConcatPatch;
+        DynamicStringPatches._inFormatConcatPatch = true;
         try
         {
             Dictionary<string, Bucket> snapshot;
@@ -277,6 +371,7 @@ internal static class PerfInstrumentation
         }
         finally
         {
+            DynamicStringPatches._inFormatConcatPatch = previousGuard;
             _tickReentered = false;
         }
     }

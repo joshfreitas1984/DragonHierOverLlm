@@ -239,6 +239,7 @@ public class MainPlugin : BasePlugin
         DynamicStringPatches.ClearResidualCjkDebugLog();
         UnityLogCapture.DeleteLogFile();
         PerfInstrumentation.ClearLog();
+        PerfInstrumentation.MarkMainThread();
 
         PerfInstrumentationEnabled = BindCachedBool(
             "Debug",
