@@ -100,13 +100,15 @@ public class PlotLineContextTests
     [Fact(DisplayName = "PlotLineContext gives a split that names a hero that hero's gender, but not over a known speaker or a token")]
     public void NamedHeroLines_GetThatHeroesGender()
     {
-        var heroes = new Dictionary<string, string> { ["慕容星辰"] = "女", ["空闻大师"] = "男", ["文馨"] = "女" };
+        var heroes = new Dictionary<string, string> { ["慕容星辰"] = "女", ["空闻大师"] = "男", ["马悍"] = "男", ["清风"] = "男", ["张文馨"] = "女" };
         TranslationLine Line(string text) => new() { Raw = "x", Splits = [new TranslationSplit { Split = 10, Text = text }] };
         var murong = Line("这慕容星辰号称天下第一神偷，果真是名不虚传。");
         var both = Line("慕容星辰与空闻大师同行。");
         var token = Line("#PlayerName#见过慕容星辰。");
-        var shortName = Line("文馨来了。");
-        var lines = new List<TranslationLine> { murong, both, token, shortName };
+        var shortName = Line("（马悍嘴里咬着牛肉，俯身查看汪财的尸体，");
+        var ordinaryWord = Line("清风拂面而来。");
+        var alias = Line("眼看文馨就要命丧刀下，");
+        var lines = new List<TranslationLine> { murong, both, token, shortName, ordinaryWord, alias };
 
         var contexts = new Dictionary<TranslationSplit, LineContext>();
         PlotLineContext.AddTokenContexts(contexts, lines);
@@ -120,8 +122,12 @@ public class PlotLineContextTests
         Assert.Null(ContextOf(contexts, both));
         // A person token keeps its unknown-gender hint.
         Assert.False(ContextOf(contexts, token)!.GenderKnown);
-        // Two-character names are not matched.
-        Assert.Null(ContextOf(contexts, shortName));
+        // Two-character names are matched, so "his" for 马悍 is not an invented gender...
+        Assert.Equal(LineContext.Male, ContextOf(contexts, shortName)!.Gender);
+        // ...including ones that are also ordinary words (清风 is a character).
+        Assert.Equal(LineContext.Male, ContextOf(contexts, ordinaryWord)!.Gender);
+        // 文馨 is the short form of 张文馨.
+        Assert.Equal(LineContext.Female, ContextOf(contexts, alias)!.Gender);
 
         // A speaker context that already knows the gender is not replaced.
         var known = new Dictionary<TranslationSplit, LineContext> { [murong.Splits[0]] = new LineContext("male", true, LineContext.Male) };

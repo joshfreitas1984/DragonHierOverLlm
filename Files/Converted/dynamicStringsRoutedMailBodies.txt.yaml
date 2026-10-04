@@ -1732,14 +1732,19 @@
   splits:
   - text: "近来传闻"
     translated: "Lately there have been rumors"
+    qcReviewedText: "Lately there have been rumors <b>Chengdu </b>There's a lecherous bandit causing trouble in town. #PlayerName#, why don't you join me in catching them?"
+    qcTranslated: "Lately there have been rumors that a lecherous bandit is causing trouble in <b>Chengdu</b>. #PlayerName#, why don't you join me in catching them?"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "成都"
     translated: "Chengdu"
   - subIndex: 2
     text: "城内有个淫贼胡作非为，#PlayerName#何不与我一道将其捉拿归案？"
-    translated: "There's a lecherous bandit causing trouble in town. #PlayerName#, why don't you join me in catching him?"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "InventedGender"
+    translated: "There's a lecherous bandit causing trouble in town. #PlayerName#, why don't you join me in catching them?"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#！听说丐帮掌法刚猛无比，乃武林之最，我准备前去讨教讨教。咱们到时候在<b>丐帮</b>碰头，一起开开眼界！"

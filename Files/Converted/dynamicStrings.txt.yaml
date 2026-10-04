@@ -2109,11 +2109,13 @@
   splits:
   - text: "#PlayerName#来的正好！"
     translated: "#PlayerName# comes just in time!"
+    qcReviewedText: "#PlayerName# comes just in time!\nI am being hounded by a villain and have been fighting them off for some time now. Please lend me a hand, #PlayerName#!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我眼下被一恶徒盯上，已与其游斗多时，还请#PlayerName#施以援手！"
-    translated: "I am being targeted by a villain and have been fighting him off for some time now. Please lend me a hand, #PlayerName#!"
-    flaggedForRetranslation: true
-    flaggedMistranslation: "InventedGender"
+    translated: "I am being hounded by a villain and have been fighting them off for some time now. Please lend me a hand, #PlayerName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#来的正好！你倒是说说看。\n在你心中，我们几人到底哪个最重要？"

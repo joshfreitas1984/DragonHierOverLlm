@@ -66,10 +66,10 @@ namespace Tests
         }
 
         /// <summary>
-        /// Shortest hero name worth matching. Two-character names are too often ordinary words, and a wrong match would
-        /// hand the translator a wrong gender.
+        /// Shortest hero name worth matching. Two-character names are common in SpeHeroData (马悍, 汪财, 郭淮), so they
+        /// are matched too.
         /// </summary>
-        private const int MinHeroNameLength = 3;
+        private const int MinHeroNameLength = 2;
 
         /// <summary>
         /// A split that names a character from SpeHeroData (慕容星辰, 空闻大师...) in any file gets that character's gender,
@@ -78,8 +78,24 @@ namespace Tests
         /// player/interaction token, and only when every hero named in the split has the same gender.
         /// </summary>
         public static void AddNamedHeroContexts(Dictionary<TranslationSplit, LineContext> contexts, IReadOnlyList<TranslationLine> lines, IReadOnlyDictionary<string, string> heroGenders) =>
-            CharacterContext.AddCharacterContext(contexts, lines, heroGenders, MinHeroNameLength,
+            CharacterContext.AddCharacterContext(contexts, lines,
+                WithAliases(heroGenders.ToDictionary(hero => hero.Key, hero => hero.Value)),
+                MinHeroNameLength,
                 split => UnknownGenderPersonTokens.Any(token => split.Text.Contains(token, StringComparison.Ordinal)));
+
+        /// <summary>Short names the text uses for a hero stored under a longer name (文馨 for 张文馨).</summary>
+        private static readonly Dictionary<string, string> HeroAliases = new() { ["文馨"] = "张文馨" };
+
+        private static Dictionary<string, string> WithAliases(Dictionary<string, string> heroGenders)
+        {
+            foreach (var (alias, name) in HeroAliases)
+            {
+                if (heroGenders.TryGetValue(name, out var gender))
+                    heroGenders.TryAdd(alias, gender);
+            }
+
+            return heroGenders;
+        }
 
         /// <summary>
         /// Any split containing a person token whose gender is unknown (see <see cref="UnknownGenderPersonTokens"/>) gets

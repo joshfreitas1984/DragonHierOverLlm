@@ -4544,6 +4544,38 @@ items:
     Real production translation mined from Files/Converted/PlotData.csv.yaml (pre-QC 'translated' field,
     independent of any qcStatus already recorded on that row); ProductionTranslation is a
     single-candidate label, not a specific configured model name. Hero gender from Files/Raw/Dumped/GameData/SpeHeroData.csv.
+- sampleId: 5c1e7a90d3b24f68
+  sampleKind: split
+  source: "（跪下）哈哈，这小师妹还没入门，怎就如此受欢迎了？"
+  candidates:
+    ProductionTranslation: "(Kneeling) Ha ha, this junior sister hasn't even joined the sect yet, and she's already so popular?"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    The speaker 顾游年 is male, but 小师妹 is a female kinship term (the girl 林云裳 the scene is about), so "junior sister" and "she" are both correct. The pronoun detector flagged it WrongGenderKinshipTerm only because the pronoun differs from the speaker's gender. False-positive control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (flagged WrongGenderKinshipTerm);
+    ProductionTranslation is a single-candidate label, not a specific configured model name.
+- sampleId: b84d2f0e6a917c35
+  sampleKind: split
+  source: "（只见那青年从怀中掏出细毫，"
+  candidates:
+    ProductionTranslation: "(You saw the young man take out a fine brush from his robes,"
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  sampleRun: ConvertedCorpus-20261004-pronoun-mining
+  reviewNote: >-
+    青年 means a young man, so the source does state a gender and "young man" / "his" are not invented. The pronoun detector flagged it InventedGender because 青年 is missing from its gendered-source list. False-positive control.
+  provenance: >-
+    Real production translation mined from Files/Converted/PlotData.csv.yaml (flagged InventedGender);
+    ProductionTranslation is a single-candidate label, not a specific configured model name.
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell
