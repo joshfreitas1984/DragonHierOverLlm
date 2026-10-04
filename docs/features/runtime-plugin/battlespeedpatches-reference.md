@@ -37,8 +37,11 @@ saved value there, so gating on "Update ran" alone sped up unrelated animations 
   per spawned object. Without the `_seenEffects` guard the speed-up was applied once per nested call
   (observed as effects running at roughly the square of the intended speed).
 - **Skill animation.** Track-1 `SetAnimation` results get `TrackEntry.TimeScale` = effect scale.
-- **Effect scale cap.** Effects and the skill animation use `min(battleTimeScale, 10)` so 20x stays
-  watchable; the cap is `EffectSpeedCap`. Game timings (waits, tweens) still use the real scale.
+- **Effect scale.** Effects and the skill animation use `min(1 + (battleTimeScale - 1) * 0.5, 10)`
+  (`BattleEffectSpeedFactor` config entry under "Game Bugfixes", default 0.5, live-reloaded;
+  `BattleEffectSpeedCap` config entry, default 10, minimum effective 1, also live-reloaded): only half the speed-up above 1x, so low speeds (2x-5x) stay
+  readable and 20x stays watchable. Game timings (waits, Half/Third scale, projectile tweens) still use
+  the real scale, so travel time is unaffected.
 - **Half/Third scale.** Both postfixes return the full `battleTimeScale` when it is larger than the
   game's dampened value. These functions are also used by some unit-movement delays, which therefore
   speed up too.

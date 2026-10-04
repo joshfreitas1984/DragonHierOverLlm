@@ -207,6 +207,13 @@ public class MainPlugin : BasePlugin
     // the canvas size and PlotTextBack's anchor position instead of a flat guessed constant.
     internal static ConfigEntry<float> PlotTextWidthMargin;
 
+    // Share of the battle speed-up (above 1x) that skill effects/animations receive - see
+    // BattleSpeedPatches.EffectScale. Travel/wave timing always uses the full battle speed.
+    internal static ConfigEntry<float> BattleEffectSpeedFactor;
+
+    // Upper bound on the effect scale after the factor is applied - see BattleSpeedPatches.EffectScale.
+    internal static ConfigEntry<float> BattleEffectSpeedCap;
+
     // Off by default (Empty shortcut = never triggers) - forces a long, no-CJK test string into
     // the live PlotText component so wrapping/clamping can be visually verified without hunting
     // for a sufficiently long dialogue in-game. Requires a plot dialogue to have been opened at
@@ -385,6 +392,18 @@ public class MainPlugin : BasePlugin
             "PlotTextWidthMargin",
             200f,
             "Safety buffer (in local RectTransform units, not pixels) kept clear between PlotText's dynamically computed max width and the actual screen edge. This is the value to tune day to day - live-reloaded, no restart needed. Increase if text still looks close to clipping; decrease to reclaim more usable width. See docs/plottextsizepatches-agent-reference.md.");
+
+        BattleEffectSpeedFactor = Config.Bind(
+            "Game Bugfixes",
+            "BattleEffectSpeedFactor",
+            0.5f,
+            "Fraction of the battle speed-up (above 1x) applied to skill effects and skill animations by the Anim fix. 1.0 = effects run at the full battle speed (capped at 10x); 0.5 = half the speed-up, so low speeds like 2x-5x stay readable; 0 = effects never speed up. Projectile travel time is not affected. Live-reloaded, no restart needed. See docs/features/runtime-plugin/battlespeedpatches-reference.md.");
+
+        BattleEffectSpeedCap = Config.Bind(
+            "Game Bugfixes",
+            "BattleEffectSpeedCap",
+            10f,
+            "Maximum speed multiplier for skill effects and skill animations under the Anim fix, applied after BattleEffectSpeedFactor. Keeps very high battle speeds (e.g. 20x) watchable; the game's own timings and projectile travel still use the real battle speed. Minimum effective value is 1 (no speed-up). Live-reloaded, no restart needed. See docs/features/runtime-plugin/battlespeedpatches-reference.md.");
 
         ForceTestPlotTextHotkey = Config.Bind(
             "Debug",

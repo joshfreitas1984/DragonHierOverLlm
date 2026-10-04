@@ -16,9 +16,9 @@ internal static class BattleSpeedPatches
 {
     private const string FixPrefKey = "EnglishPatch.AnimFixEnabled";
 
-    // Visual playback (effects, skill animation) is capped so very high battle speeds stay
-    // watchable; the game's own timings still use the real battleTimeScale.
-    private const float EffectSpeedCap = 10f;
+    // Visual playback (effects, skill animation) is capped (config BattleEffectSpeedCap) so very
+    // high battle speeds stay watchable; the game's own timings still use the real battleTimeScale.
+    private const float DefaultEffectSpeedCap = 10f;
 
     // Projectile tweens longer than TweenBudgetSeconds / battleTimeScale are shortened to that.
     private const float TweenBudgetSeconds = 0.6f;
@@ -64,7 +64,15 @@ internal static class BattleSpeedPatches
 
     private static float BattleScale => GameController._instance?.worldData?.battleTimeScale ?? 1f;
 
-    private static float EffectScale() => Math.Min(BattleScale, EffectSpeedCap);
+    // Effects only get the configured fraction (BattleEffectSpeedFactor) of the speed-up above 1x,
+    // so at low speeds (2x-5x) they stay readable; travel/wave timing (UseFullScale, ClampTween)
+    // still uses the full battle scale.
+    private static float EffectScale()
+    {
+        var factor = Math.Max(MainPlugin.BattleEffectSpeedFactor?.Value ?? 0.5f, 0f);
+        var cap = Math.Max(MainPlugin.BattleEffectSpeedCap?.Value ?? DefaultEffectSpeedCap, 1f);
+        return Math.Min(1f + (BattleScale - 1f) * factor, cap);
+    }
 
     // ---- Saved on/off state --------------------------------------------------------------------
 
