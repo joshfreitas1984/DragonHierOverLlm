@@ -49,19 +49,59 @@ namespace Tests
         {
             var contexts = new Dictionary<TranslationSplit, LineContext>();
 
+            // The cached lookup is for the game's own working directory; any other directory (a test copy) is read directly.
+            var genders = string.Equals(workingDirectory, GameFileHandling.WorkingDirectory, StringComparison.Ordinal)
+                ? HeroGenders.Value
+                : LoadHeroGenders(workingDirectory);
+
             if (string.Equals(textFile.Path, PlotFile, StringComparison.OrdinalIgnoreCase))
             {
-                // The cached lookup is for the game's own working directory; any other directory (a test copy) is read directly.
-                var genders = string.Equals(workingDirectory, GameFileHandling.WorkingDirectory, StringComparison.Ordinal)
-                    ? HeroGenders.Value
-                    : LoadHeroGenders(workingDirectory);
-
                 foreach (var (split, context) in Build(lines, genders))
                     contexts[split] = context;
             }
 
             AddTokenContexts(contexts, lines);
+            AddNamedHeroContexts(contexts, lines, genders);
             return contexts;
+        }
+
+        /// <summary>
+        /// Shortest hero name worth matching. Two-character names are too often ordinary words, and a wrong match would
+        /// hand the translator a wrong gender.
+        /// </summary>
+        private const int MinHeroNameLength = 3;
+
+        /// <summary>
+        /// A split that names a character from SpeHeroData (慕容星辰, 空闻大师...) in any file gets that character's gender,
+        /// so a pronoun for them is written (and checked) against the game's data instead of guessed. Applies when the
+        /// split has no context yet or only an "unknown" one, never over a known speaker context or a split with a
+        /// player/interaction token, and only when every hero named in the split has the same gender.
+        /// </summary>
+        public static void AddNamedHeroContexts(Dictionary<TranslationSplit, LineContext> contexts, IReadOnlyList<TranslationLine> lines, IReadOnlyDictionary<string, string> heroGenders)
+        {
+            var names = heroGenders.Where(hero => hero.Key.Length >= MinHeroNameLength && hero.Value is "男" or "女")
+                .Select(hero => (Name: hero.Key, Gender: hero.Value)).ToList();
+            if (names.Count == 0)
+                return;
+
+            foreach (var split in lines.SelectMany(line => line.Splits))
+            {
+                if (split.Text.Length < MinHeroNameLength || (contexts.TryGetValue(split, out var existing) && existing.GenderKnown))
+                    continue;
+                if (UnknownGenderPersonTokens.Any(token => split.Text.Contains(token, StringComparison.Ordinal)))
+                    continue;
+
+                var named = names.Where(hero => split.Text.Contains(hero.Name, StringComparison.Ordinal)).ToList();
+                // Hero names can contain one another; with different genders found the pronoun is ambiguous, so leave it.
+                if (named.Count == 0 || named.Select(hero => hero.Gender).Distinct().Count() != 1)
+                    continue;
+
+                var male = named[0].Gender == "男";
+                var who = string.Join(" and ", named.Select(hero => hero.Name).Distinct());
+                var prompt = $"Context: the text names {who}, a {(male ? "male" : "female")} character{(named.Select(hero => hero.Name).Distinct().Count() > 1 ? "s" : string.Empty)}. "
+                    + $"Where a pronoun refers to them, use {(male ? "he/his/him" : "she/her")}. For anyone else, or when the source does not say who is meant, use \"they\" or avoid the pronoun.";
+                contexts[split] = new LineContext(prompt, GenderKnown: true, male ? LineContext.Male : LineContext.Female);
+            }
         }
 
         /// <summary>
