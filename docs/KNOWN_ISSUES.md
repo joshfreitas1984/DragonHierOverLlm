@@ -63,6 +63,7 @@ root `docs/` taxonomy.
 ## Current-state feature references
 
 - [DynamicStringPatches agent reference](features/runtime-plugin/dynamicstringpatches-agent-reference.md)
+- [BattleSpeedPatches agent reference](features/runtime-plugin/battlespeedpatches-reference.md)
 - [HeroFightScoreListPatches agent reference](features/runtime-plugin/herofightscorelistpatches-reference.md)
 - [PlotTextSizePatches agent reference](features/runtime-plugin/plottextsizepatches-agent-reference.md)
 - [PrefabTextPatches agent reference](features/runtime-plugin/prefabtextpatches-agent-reference.md)

@@ -94,6 +94,21 @@
     <Reference Include="DOTween">
       <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\DOTween.dll</HintPath>
     </Reference>
+    <!-- Spine.AnimationState/TrackEntry - BattleSpeedPatches scales skill attack animations. -->
+    <Reference Include="spine-csharp">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\spine-csharp.dll</HintPath>
+    </Reference>
+    <!-- ParticleSystem / Animator - BattleSpeedPatches speeds up skill effect prefabs. -->
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <!-- Input.GetMouseButtonDown/mousePosition - BattleSpeedPatches' animation-fix button click. -->
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>G:\SteamLibrary\steamapps\common\LongYinLiZhiZhuan\BepInEx\interop\UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="Build">

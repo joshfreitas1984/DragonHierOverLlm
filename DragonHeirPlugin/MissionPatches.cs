@@ -1,6 +1,7 @@
 using System;
 using System.Text.RegularExpressions;
 using HarmonyLib;
+using UnityEngine;
 
 namespace EnglishPatch;
 
@@ -80,6 +81,50 @@ internal static class MissionPatches
         catch (Exception ex)
         {
             MainPlugin.Logger.LogError($"[MissionPatches] PatchAll failed: {ex}");
+        }
+    }
+
+    // Canvas stacking is plain sibling order (hierarchy dump: no per-panel Canvas overrides), and
+    // vanilla puts Canvas/MissionPanel near the end - over TradePanel/HeroDetailPanel etc. Move it
+    // to directly after Canvas/AreaUIPanel so it can stay open over the map without covering the
+    // full-screen panels. [GameCoupled Canvas/AreaUIPanel + Canvas/MissionPanel names]
+    //
+    // The panel is toggled by the HUD button via ToggleButtonClicked (which flips showUI directly,
+    // NOT through ShowMissionUI - ShowMissionUI only covers the hotkey/other callers), and can
+    // already be open without either being called, so RefreshMissionTable (runs on open and on
+    // day ticks) re-applies it too.
+    [HarmonyPatch(typeof(MissionUIController), nameof(MissionUIController.ShowMissionUI), new[] { typeof(bool) })]
+    [HarmonyPostfix]
+    private static void ShowMissionUIPostfix(MissionUIController __instance) => PlaceMissionPanel(__instance, "ShowMissionUI");
+
+    [HarmonyPatch(typeof(MissionUIController), nameof(MissionUIController.ToggleButtonClicked), new[] { typeof(GameObject) })]
+    [HarmonyPostfix]
+    private static void ToggleButtonClickedPostfix(MissionUIController __instance) => PlaceMissionPanel(__instance, "ToggleButtonClicked");
+
+    [HarmonyPatch(typeof(MissionUIController), nameof(MissionUIController.RefreshMissionTable), new Type[0])]
+    [HarmonyPostfix]
+    private static void RefreshMissionTablePostfix(MissionUIController __instance) => PlaceMissionPanel(__instance, "RefreshMissionTable");
+
+    private static void PlaceMissionPanel(MissionUIController instance, string caller)
+    {
+        try
+        {
+            var panel = instance?.missionUI?.transform.parent;
+            var area = panel?.parent?.Find("AreaUIPanel");
+            if (panel == null || area == null) return;
+
+            // Moving a later sibling down to just after AreaUIPanel doesn't shift AreaUIPanel's
+            // own index, so area + 1 is the correct final slot.
+            var target = area.GetSiblingIndex() + 1;
+            var current = panel.GetSiblingIndex();
+            if (current == target) return;
+
+            panel.SetSiblingIndex(target);
+            MainPlugin.Logger.LogInfo($"[MissionPatches] {caller}: moved MissionPanel sibling index {current} -> {target}.");
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[MissionPatches] PlaceMissionPanel ({caller}) failed: {ex}");
         }
     }
 

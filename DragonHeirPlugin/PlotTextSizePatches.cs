@@ -170,7 +170,8 @@ internal static class PlotTextSizePatches
         internal static bool IsNeeded =>
             MainPlugin.PerfInstrumentationEnabledCached
             || IsSet(MainPlugin.ForceTestPlotTextHotkey)
-            || IsSet(MainPlugin.ClearTranslationCachesHotkey);
+            || IsSet(MainPlugin.ClearTranslationCachesHotkey)
+            || IsSet(MainPlugin.DumpHierarchyHotkey);
 
         private static bool IsSet(BepInEx.Configuration.ConfigEntry<BepInEx.Unity.IL2CPP.Configuration.KeyboardShortcut> entry) =>
             entry != null && entry.Value.MainKey != KeyCode.None;
@@ -191,6 +192,8 @@ internal static class PlotTextSizePatches
 
             if (MainPlugin.ClearTranslationCachesHotkey != null)
                 RunClearTranslationCachesHotkeyCheck();
+
+            HierarchyDump.RunHotkeyCheck();
         }
     }
 

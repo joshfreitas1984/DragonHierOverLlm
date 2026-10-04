@@ -232,6 +232,11 @@ public class MainPlugin : BasePlugin
     // game/save state rather than memoized, not that this hotkey failed.
     internal static ConfigEntry<KeyboardShortcut> ClearTranslationCachesHotkey;
 
+    // Off by default (Empty shortcut = never triggers) - writes the sibling order and any
+    // per-child Canvas sorting override of everything directly under Canvas to
+    // hierarchy-dump.txt next to the plugin DLL. See HierarchyDump.
+    internal static ConfigEntry<KeyboardShortcut> DumpHierarchyHotkey;
+
     public override void Load()
     {
         Logger = base.Log;
@@ -393,6 +398,12 @@ public class MainPlugin : BasePlugin
             KeyboardShortcut.Empty,
             "When set (e.g. F9), clears DynamicStringPatches' translation memo caches (generic pipeline, format pipeline, per-component text cache) so the next redisplay of any currently-visible text recomputes its translation from scratch instead of replaying a cached result. Use while investigating a translation-corruption report to force a live repro to recompute immediately without restarting the game.");
 
+        DumpHierarchyHotkey = Config.Bind(
+            "Debug",
+            "DumpHierarchyHotkey",
+            KeyboardShortcut.Empty,
+            "When set (e.g. F10), writes the sibling order of every direct child of Canvas (plus any per-child Canvas sorting override) to hierarchy-dump.txt next to the plugin DLL. Open the panels of interest first so their active state is captured. Needs a restart to take effect.");
+
         // Register codepage 936 (GBK) support - .NET Core only ships Unicode encodings by
         // default. Some game TextAssets (e.g. SpeHeroFaceData) are GBK-encoded rather than
         // UTF-8, and Unity's TextAsset.text getter always assumes UTF-8, silently mangling
@@ -528,6 +539,7 @@ public class MainPlugin : BasePlugin
         // Sibling of InfoListPatches for the BATTLE combat log (BattleController.AddInfoText) -
         // same dependency on DynamicStringPatches.PatchAll() having run first.
         BattleInfoPatches.PatchAll();
+        BattleSpeedPatches.PatchAll();
 
         // Must patch AFTER DynamicStringPatches.PatchAll() - ItemIconPatches.
         // GetItemIconName_Postfix calls DynamicStringPatches.ReverseTranslate, which reads the
