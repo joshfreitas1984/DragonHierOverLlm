@@ -123,7 +123,7 @@ internal static class BattleSpeedPatches
                     source = child;
                 }
             }
-            if (source != null) AddFixButton(tab, source.gameObject);
+            if (source != null) AddFixButton(tab, source.gameObject, __instance.battleSkipButton);
         }
         catch (Exception ex)
         {
@@ -131,7 +131,7 @@ internal static class BattleSpeedPatches
         }
     }
 
-    private static void AddFixButton(GameObject tab, GameObject speedButton)
+    private static void AddFixButton(GameObject tab, GameObject speedButton, GameObject skipButton)
     {
         var parent = tab.transform.parent;
         if (parent == null) return;
@@ -155,7 +155,21 @@ internal static class BattleSpeedPatches
         var rect = obj.GetComponent<RectTransform>();
         var srcRect = speedButton.GetComponent<RectTransform>();
         if (rect != null && srcRect != null)
+        {
             rect.position = srcRect.position + new Vector3((srcRect.rect.width + 4f) * srcRect.lossyScale.x, 0f, 0f);
+
+            // The battle skip button (shown only sometimes) sits in that same slot, so go right of it
+            // when it is wider than the gap; its rect is valid even while the button is inactive.
+            var skipRect = skipButton != null ? skipButton.GetComponent<RectTransform>() : null;
+            if (skipRect != null)
+            {
+                float skipRight = skipRect.position.x + skipRect.rect.xMax * skipRect.lossyScale.x;
+                float ownLeftOffset = -rect.rect.xMin * rect.lossyScale.x;
+                float x = skipRight + 4f * rect.lossyScale.x + ownLeftOffset;
+                if (x > rect.position.x)
+                    rect.position = new Vector3(x, rect.position.y, rect.position.z);
+            }
+        }
 
         _fixButton = obj;
         RefreshFixLabel();

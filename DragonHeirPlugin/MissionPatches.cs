@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using HarmonyLib;
 using UnityEngine;
@@ -76,6 +77,7 @@ internal static class MissionPatches
         {
             var harmony = new Harmony("EnglishPatch.MissionPatches");
             harmony.PatchAll(typeof(MissionPatches));
+            PatchHideCompletion(harmony);
             MainPlugin.Logger.LogInfo("[MissionPatches] Patched MissionData.GetMissionTargetDescribe.");
         }
         catch (Exception ex)
@@ -105,18 +107,104 @@ internal static class MissionPatches
     [HarmonyPostfix]
     private static void RefreshMissionTablePostfix(MissionUIController __instance) => PlaceMissionPanel(__instance, "RefreshMissionTable");
 
+    // QuickTravelPanel (the full-screen travel map) sits after AreaUIPanel too, so while it is open the
+    // mission panel has to go above it; once it closes the panel drops back to just after AreaUIPanel.
+    // [GameCoupled QuickTravelUIController.ShowQuickTravelUI/ShowQuickTravelUIShowType/HideQuickTravelUI + quickTravelUI living under a direct child of Canvas]
+    [HarmonyPatch(typeof(QuickTravelUIController), nameof(QuickTravelUIController.ShowQuickTravelUI), new[] { typeof(QuickTravelUIType) })]
+    [HarmonyPostfix]
+    private static void ShowQuickTravelUIPostfix(QuickTravelUIController __instance) => PlaceMissionPanelForTravel(__instance, "ShowQuickTravelUI");
+
+    [HarmonyPatch(typeof(QuickTravelUIController), nameof(QuickTravelUIController.ShowQuickTravelUI), new[] { typeof(QuickTravelUIType), typeof(float), typeof(bool) })]
+    [HarmonyPostfix]
+    private static void ShowQuickTravelUIScaledPostfix(QuickTravelUIController __instance) => PlaceMissionPanelForTravel(__instance, "ShowQuickTravelUI(scaled)");
+
+    [HarmonyPatch(typeof(QuickTravelUIController), nameof(QuickTravelUIController.HideQuickTravelUI), new Type[0])]
+    [HarmonyPostfix]
+    private static void HideQuickTravelUIPostfix(QuickTravelUIController __instance) => PlaceMissionPanelForTravel(__instance, "HideQuickTravelUI");
+
+    // HideQuickTravelUI only starts a fade/scale tween; the panel is deactivated later by this tween
+    // OnComplete lambda, so that is when the travel panel is really closed.
+    // [GameCoupled QuickTravelUIController.<HideQuickTravelUI>b__N_0 by-name] compiler-generated lambda; interop mangles the name, so match loosely
+    private static void PatchHideCompletion(Harmony harmony)
+    {
+        foreach (var method in typeof(QuickTravelUIController).GetMethods(
+                     System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.DeclaredOnly))
+        {
+            if (method.Name.Contains("HideQuickTravelUI") && method.Name.Contains("b__") && method.GetParameters().Length == 0)
+            {
+                harmony.Patch(method, postfix: new HarmonyMethod(typeof(MissionPatches), nameof(HideQuickTravelUICompletePostfix)));
+                MainPlugin.Logger.LogInfo($"[MissionPatches] Patched travel-hide completion lambda {method.Name}.");
+            }
+        }
+    }
+
+    private static void HideQuickTravelUICompletePostfix(QuickTravelUIController __instance) => PlaceMissionPanelForTravel(__instance, "HideQuickTravelUI(complete)");
+
+    [HarmonyPatch(typeof(QuickTravelUIController), nameof(QuickTravelUIController.ShowQuickTravelUIShowType), new Type[0])]
+    [HarmonyPostfix]
+    private static void ShowQuickTravelUIShowTypePostfix(QuickTravelUIController __instance) => PlaceMissionPanelForTravel(__instance, "ShowQuickTravelUIShowType");
+
+    // The travel UI object and the mission panel, remembered so every placement call (including the
+    // mission ones) sees the travel panel's current state.
+    private static GameObject _travelUI;
+    private static Transform _missionPanel;
+
+    private static void PlaceMissionPanelForTravel(QuickTravelUIController instance, string caller)
+    {
+        try
+        {
+            if (instance?.quickTravelUI != null) _travelUI = instance.quickTravelUI;
+            var mission = _missionPanel != null ? _missionPanel : GameObject.Find("Canvas/MissionPanel")?.transform;
+            if (mission != null) PlaceMissionPanel(mission, caller);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[MissionPatches] PlaceMissionPanelForTravel ({caller}) failed: {ex}");
+        }
+    }
+
     private static void PlaceMissionPanel(MissionUIController instance, string caller)
     {
         try
         {
             var panel = instance?.missionUI?.transform.parent;
-            var area = panel?.parent?.Find("AreaUIPanel");
-            if (panel == null || area == null) return;
+            if (panel == null) return;
+            _missionPanel = panel;
+            PlaceMissionPanel(panel, caller);
+        }
+        catch (Exception ex)
+        {
+            MainPlugin.Logger.LogError($"[MissionPatches] PlaceMissionPanel ({caller}) failed: {ex}");
+        }
+    }
+
+    private static void PlaceMissionPanel(Transform panel, string caller)
+    {
+        try
+        {
+            var canvas = panel.parent;
+            var area = canvas?.Find("AreaUIPanel");
+            if (area == null) return;
 
             // Moving a later sibling down to just after AreaUIPanel doesn't shift AreaUIPanel's
             // own index, so area + 1 is the correct final slot.
             var target = area.GetSiblingIndex() + 1;
             var current = panel.GetSiblingIndex();
+
+            // The travel panel is whichever direct child of Canvas holds quickTravelUI.
+            Transform travel = null;
+            if (_travelUI != null && _travelUI.activeInHierarchy)
+            {
+                travel = _travelUI.transform;
+                while (travel != null && travel.parent != canvas) travel = travel.parent;
+            }
+            if (travel != null)
+            {
+                // Directly above the travel panel. If the mission panel is currently below it, the
+                // move shifts the travel panel down one slot, so its old index is the final one.
+                var travelIndex = travel.GetSiblingIndex();
+                target = current < travelIndex ? travelIndex : travelIndex + 1;
+            }
             if (current == target) return;
 
             panel.SetSiblingIndex(target);
