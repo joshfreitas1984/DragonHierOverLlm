@@ -30,3 +30,32 @@
   result: Yuan Ye
 - raw: 中脘
   result: Zhongwan
+
+# Idioms that contain a shorter glossary term (三七 = Sanqi, the herb, is a preset item entry). Listing the
+# idiom makes the longer match win, so the herb is no longer injected/demanded inside it (see
+# GlossaryLine.FindShadowedByLongerMatch). badtrans: false = a translator hint, not a hard requirement.
+- raw: 三七开
+  result: "70/30"
+  badtrans: false
+  allowalt:
+    - "70-30"
+    - "seventy-thirty"
+    - "seventy‑thirty"
+    - "seventy thirty"
+- raw: 三七二十一
+  result: "damn the consequences"
+  badtrans: false
+  allowalt:
+    - "come what may"
+    - "no matter what"
+    - "whatever happens"
+    - "never mind the consequences"
+
+# Slang the translator renders literally ("rotten stick"): 烂杆儿 is a good-for-nothing. A hint, not enforced.
+- raw: 烂杆儿
+  result: "good-for-nothing"
+  badtrans: false
+  allowalt:
+    - "good for nothing"
+    - "worthless"
+    - "wastrel"
