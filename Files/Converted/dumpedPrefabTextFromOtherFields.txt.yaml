@@ -23884,15 +23884,7 @@
 - raw: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，\\n供后世所有名人雅士瞻仰。"
   splits:
   - text: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，"
-    translated: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant."
-    qcReviewedText: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant.\\nFor all renowned scholars of future generations to admire."
-    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word was as good as nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "He gradually became a giant of the martial world, the most virtuous and revered, whose word carried the weight of nine cauldrons,"
   - subIndex: 1
     text: "供后世所有名人雅士瞻仰。"
     translated: "For all renowned scholars of future generations to admire."

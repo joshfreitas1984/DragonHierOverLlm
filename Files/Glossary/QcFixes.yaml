@@ -59,3 +59,47 @@
     - "good for nothing"
     - "worthless"
     - "wastrel"
+
+# QC "corrected" this to the invented romanisation "Jiang La'er" (老二 is Lao'er); the translation matches 江老五/江老八.
+- raw: 江老二
+  result: Old Man Jiang Er
+
+# Bare 峨眉 (the sect, without 派) was rendered "Mount Meihua"; 峨眉派/峨眉归藏功 stay the longer matches.
+- raw: 峨眉
+  result: Emei
+- raw: 李仅超
+  result: Li Jinchao
+
+# Idioms the translator renders literally or gets backwards. Hints, not enforced.
+- raw: 金盆洗手
+  result: "retire from the martial world"
+  badtrans: false
+  allowalt:
+    - "wash my hands in a golden basin"
+    - "washed my hands in a golden basin"
+    - "wash their hands in a golden basin"
+    - "retired from the Jianghu"
+    - "retire from the Jianghu"
+    - "retired from the martial world"
+    - "hang up my sword"
+- raw: 一言九鼎
+  result: "one's word is law"
+  badtrans: false
+  allowalt:
+    - "word carries great weight"
+    - "word is final"
+    - "word is as good as gold"
+    - "keeps their word"
+    - "keep their word"
+    - "man of his word"
+    - "nine cauldrons"
+- raw: 打草惊蛇
+  result: "tip off the enemy"
+  badtrans: false
+  allowalt:
+    - "alert the enemy"
+    - "alert them"
+    - "scare the snake"
+    - "startle the snake"
+    - "startling the snake"
+    - "tip them off"

@@ -598,15 +598,7 @@
 - raw: "#PlayerName#与前任配偶绝离未久。\n为避免风言风语，你我还是日后再结亲为妙。"
   splits:
   - text: "#PlayerName#与前任配偶绝离未久。"
-    translated: "#PlayerName# recently divorced your former spouse"
-    qcReviewedText: "#PlayerName# recently divorced your former spouse\nTo avoid rumors, it might be better for us to marry another day."
-    qcTranslated: "#PlayerName# recently divorced their former spouse. To avoid rumors, it might be better for us to tie the knot another day."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: MeaningReversal
-    qcDefectCategories:
-    - MeaningReversal
+    translated: "#PlayerName# only recently parted ways with their former spouse."
   - subIndex: 1
     text: "为避免风言风语，你我还是日后再结亲为妙。"
     translated: "To avoid rumors, it might be better for us to marry another day."
@@ -14168,16 +14160,7 @@
 - raw: "买卖价格x{0}%"
   splits:
   - text: "买卖价格"
-    translated: "Buy Price"
-    qcReviewedText: "Buy Price x {0}%"
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "Buy/Sell Price x {0}%"
-    qcFailureReason: " Alternatives were provided when none should be given."
-    qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "Buy Price x {0}%"
+    translated: "Buy/Sell Price"
   templates:
   - template: "{0}x⟦0⟧%"
 - raw: "买定离手！"
@@ -36481,15 +36464,7 @@
 - raw: "我#$TargetInteractName#也算是闻名一方的绿林豪杰！识相的快快束手就擒，免得场血光之灾！"
   splits:
   - text: "我#$TargetInteractName#也算是闻名一方的绿林豪杰！识相的快快束手就擒，免得场血光之灾！"
-    translated: "If you know what's good for you, surrender quickly to avoid a bloody disaster! Restore '#$TargetInteractName#' to the translation, as it was incorrectly removed."
-    qcReviewedText: "If you know what's good for you, surrender quickly to avoid a bloody disaster! Restore '#$TargetInteractName#' to the translation, as it was incorrectly removed."
-    qcTranslated: "I, #$TargetInteractName#, am a renowned bandit hero of this region! If you know what's good for you, surrender quickly to avoid a bloody disaster!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "I, #$TargetInteractName#, am also a well‑known outlaw! If you know what's good for you, surrender quickly to avoid a bloody disaster!"
 - raw: "我#TargetForceName#与#SourceForceName#素来交好。\n此次特地带数名#TargetForceDescribe#弟子前来，\n是想要与贵派以武论友，切磋交流一番。"
   splits:
   - text: "我#TargetForceName#与#SourceForceName#素来交好。"
@@ -39451,6 +39426,8 @@
   - subIndex: 2
     text: "我#$PlayerName#便可取而代之，在此处开宗建派，自立门户。"
     translated: "I, #$PlayerName#, can take your place, establish a sect here, and start anew."
+    flaggedForRetranslation: true
+    flaggedMistranslation: "SelfReferenceLost"
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "按照规矩，这溢出来的酒可不用喝"
@@ -46725,14 +46702,6 @@
   splits:
   - text: "江老二"
     translated: "Old Man Jiang Er"
-    qcReviewedText: "Old Man Jiang Er"
-    qcTranslated: "Jiang La'er"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
 - raw: "江老五"
   splits:
   - text: "江老五"
@@ -48323,15 +48292,7 @@
 - raw: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
   splits:
   - text: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
-    translated: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
-    qcReviewedText: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
-    qcTranslated: "I roam Jianghu freely, and I've always despised pretentious heroes. Today, I'll make you taste the bitterness of your actions!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "I roam the Jianghu as I please, and I can't stand pretentious so-called heroes. Today you'll learn the hard way!"
 - raw: "牛头"
   splits:
   - text: "牛头"
@@ -57001,8 +56962,8 @@
   splits:
   - text: "诸事已毕，从今日起，我#PlayerForceName#之威名便将传扬四海，震慑群雄。"
     translated: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals."
-    qcReviewedText: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals.\nI will also strive to govern wisely, $#$PlayerName#$$, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
-    qcTranslated: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals.\nI, $#$PlayerName#$$, will also strive to govern wisely, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
+    qcReviewedText: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals.\nI will also strive to govern wisely, #$PlayerName#, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
+    qcTranslated: "With everything now complete, from today onward, the fame of #PlayerForceName# shall spread far and wide, striking fear into our rivals.\nI, #$PlayerName#, will also strive to govern wisely, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -57010,7 +56971,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "我#$PlayerName#也当励精图治，以保我#PlayerForceName#江山稳固，香火永传！"
-    translated: "I will also strive to govern wisely, $#$PlayerName#$$, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
+    translated: "I will also strive to govern wisely, #$PlayerName#, ensuring our #PlayerForceName# realm's stability and eternal legacy!"
   templates:
   - template: "{0}\n{1}"
 - raw: "诸葛伶"
@@ -60226,17 +60187,9 @@
   splits:
   - text: "这日你巡视之时，忽听得远处锣声大躁，喊杀震天，"
     translated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky."
-    qcReviewedText: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky.\nHastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault.\nThe servants fought back desperately and barely managed to hold their ground."
-    qcTranslated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky. Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and commit violence. The servants fought back desperately and barely managed to hold their ground."
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
   - subIndex: 1
     text: "匆忙赶去，发现竟是一伙盗贼从后院闯入，意欲抢劫行凶。"
-    translated: "Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault."
+    translated: "Hastily rushing over, you found a gang of thieves had broken in from the backyard, intending to rob and commit violence."
   - subIndex: 2
     text: "众家丁奋力反击，方才勉强抵挡得住。"
     translated: "The servants fought back desperately and barely managed to hold their ground."

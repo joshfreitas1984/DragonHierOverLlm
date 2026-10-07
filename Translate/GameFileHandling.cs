@@ -58,6 +58,9 @@ namespace Tests
         private static readonly Regex AdjacentPlaceholderTokensRegex =
             new(@"(#\$?[A-Za-z0-9_]+#)(?=#\$?[A-Za-z0-9_]+#)", RegexOptions.Compiled);
 
+        private static readonly Regex StrayDollarAfterTokenRegex =
+            new(@"(#\$[A-Za-z0-9_]+#)\$", RegexOptions.Compiled);
+
         private static string RepairKnownLlmQuirks(string raw, string llmResult)
         {
             if (string.IsNullOrEmpty(llmResult))
@@ -65,6 +68,9 @@ namespace Tests
 
             llmResult = BraceWrappedPlaceholderTokenRegex.Replace(llmResult, "$1");
             llmResult = PlaceholderTrailingSuffixRegex.Replace(llmResult, "#$1#$2");
+
+            // A '$' stuck on the end of a complete "#$Name#" token ("#$PlayerName#$!") that the source never had.
+            llmResult = StrayDollarAfterTokenRegex.Replace(llmResult, match => raw.Contains(match.Value) ? match.Value : match.Groups[1].Value);
 
             // Restore recognizable tokens when the LLM drops a '$', delimiter, or wrapper.
             foreach (Match match in GamePlaceholderTokenRegex.Matches(raw))
