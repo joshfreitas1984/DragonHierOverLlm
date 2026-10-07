@@ -7325,8 +7325,8 @@
   splits:
   - split: 4
     text: "蓬莱派秘传修真之法，仙人抚我顶，结发受长生，习此功法时自有一股真气自百会穴而下，若能一路破关抵达丹田，便可大增功力"
-    translated: "The secret cultivation methods of the Penglai Sect grant me a touch from an immortal, binding my hair and bestowing eternal life. When practicing this technique, true qi naturally flows down from the Hundred Meetings point. If one can breakthrough through all obstacles to reach the dantian, their strength will greatly increase."
-    qcReviewedText: "The secret cultivation methods of the Penglai Sect grant me a touch from an immortal, binding my hair and bestowing eternal life. When practicing this technique, true qi naturally flows down from the Hundred Meetings point. If one can breakthrough through all obstacles to reach the dantian, their strength will greatly increase."
+    translated: "The secret cultivation methods of the Penglai Sect, where divine beings bestow immortality upon me, tying my hair to seal eternal life. When practicing this technique, True Qi naturally flows from the Baihui point down to the Dantian, and if one can break through the barriers all the way to the Dantian, their power will greatly increase."
+    qcReviewedText: "The secret cultivation methods of the Penglai Sect, where divine beings bestow immortality upon me, tying my hair to seal eternal life. When practicing this technique, True Qi naturally flows from the Baihui point down to the Dantian, and if one can break through the barriers all the way to the Dantian, their power will greatly increase."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7718,8 +7718,8 @@
   splits:
   - split: 4
     text: "峨眉金顶东面有一悬崖名舍身崖，雄险奇伟，修习者需以舍身勇气一跃而下，于悬崖上攀援横渡直至谷底，功力稍浅者恐有粉骨碎身之虞"
-    translated: "On the eastern side of Gold Summit of Mount Emei stands a sheer cliff known as Self‑Sacrifice Cliff. Majestic, perilous, and awe‑inspiring, cultivators must leap from the cliff with the courage of self‑sacrifice, then climb and cross along the precipice until reaching the valley floor. Those with slightly weaker cultivation might risk serious injury or even death."
-    qcReviewedText: "On the eastern side of Gold Summit of Mount Emei stands a sheer cliff known as Self‑Sacrifice Cliff. Majestic, perilous, and awe‑inspiring, cultivators must leap from the cliff with the courage of self‑sacrifice, then climb and cross along the precipice until reaching the valley floor. Those with slightly weaker cultivation might risk serious injury or even death."
+    translated: "East of Mount Emei's Golden Summit lies a precipice called the Sacrificial Cliff, renowned for its grandeur, peril, and splendor. Practitioners must leap with sacrificial courage, scaling and traversing the cliff face to reach the valley floor below. Those with lesser skill risk being crushed to dust."
+    qcReviewedText: "East of Mount Emei's Golden Summit lies a precipice called the Sacrificial Cliff, renowned for its grandeur, peril, and splendor. Practitioners must leap with sacrificial courage, scaling and traversing the cliff face to reach the valley floor below. Those with lesser skill risk being crushed to dust."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

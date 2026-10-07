@@ -1069,8 +1069,8 @@
   splits:
   - text: "#PlayerName#，我已在"
     translated: "#PlayerName#, I have already"
-    qcReviewedText: "#PlayerName#, I have already <b>Xiangyuan Village </b>You have located Shangguan Feng and the Four Great Assassins. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
-    qcTranslated: "#PlayerName#, I have already located the traces of Shangguan Feng and the Four Great Assassins within <b>Xiangyuan Village</b>. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
+    qcReviewedText: "#PlayerName#, I have already <b>Xiangyuan Village </b>You found Shangguan Feng and the Four Great Assassins. Hurry over to join us, before they beat you to the Sealed Treasury's treasures!"
+    qcTranslated: "#PlayerName#, I have already found traces of Shangguan Feng and the Four Great Assassins within <b>Xiangyuan Village</b>. Hurry over to join us, before they beat you to the Sealed Treasury's treasures!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -1081,7 +1081,7 @@
     translated: "Xiangyuan Village"
   - subIndex: 2
     text: "内寻得上官凤与四大杀手踪迹。你尽快赶来汇合，以免封桩库宝藏被他们捷足先登了！"
-    translated: "You have located Shangguan Feng and the Four Great Assassins. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
+    translated: "You found Shangguan Feng and the Four Great Assassins. Hurry over to join us, before they beat you to the Sealed Treasury's treasures!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来<b>丐帮</b>一同商议对策。"
@@ -1692,9 +1692,9 @@
 - raw: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来<b>青城派</b>，与兄弟一同领赏！"
   splits:
   - text: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来"
-    translated: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#."
-    qcReviewedText: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#.<b>Qingcheng Sect</b>, Collect your reward with your Brother!"
-    qcTranslated: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#, to the <b>Qingcheng Sect</b>, and collect your reward with your Brother!"
+    translated: "I heard that Lord Censor is coming to commend our capture of Yue Wuwei. Come quickly, #PlayerName#!"
+    qcReviewedText: "I heard that Lord Censor is coming to commend our capture of Yue Wuwei. Come quickly, #PlayerName#!<b>Qingcheng Sect</b>, Collect your reward with your Brother!"
+    qcTranslated: "I heard that Lord Censor is coming to commend our capture of Yue Wuwei. Come quickly, #PlayerName#, to the <b>Qingcheng Sect</b>, and collect your reward with your Brother!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam

@@ -31518,15 +31518,11 @@
 - raw: "阴蛇蛊"
   splits:
   - text: "阴蛇蛊"
-    translated: "Yin Snake Pesticide"
-    qcReviewedText: "Yin Snake Pesticide"
-    qcTranslated: "Yin Snake Gu"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Yin Snake Gu"
+    qcReviewedText: "Yin Snake Gu"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "意志2;奇门2;毒术1"
   splits:
   - text: "意志2"
@@ -52266,15 +52262,11 @@
 - raw: "参苓白术散"
   splits:
   - text: "参苓白术散"
-    translated: "Participating Ginseng and Atractylodes Decoction"
-    qcReviewedText: "Participating Ginseng and Atractylodes Decoction"
-    qcTranslated: "Shen Ling Bai Zhu Powder"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Shenling Baizhu Powder"
+    qcReviewedText: "Shenling Baizhu Powder"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "济生养气丸"
   splits:
   - text: "济生养气丸"

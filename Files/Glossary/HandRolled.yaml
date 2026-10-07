@@ -154,6 +154,12 @@
 - raw: 婉儿
   result: "Wan'er"
 
+- raw: 思阁主
+  result: Pavilion Master Si
+- raw: 赵点检 
+  result: Marshal Zhao
+- raw: 赵都点检 
+  result: Grand Marshal Zhao
 - raw: 诸葛姐姐
   result: Big Sister Zhuge
 - raw: 夏帮主
@@ -206,3 +212,24 @@
   rawSimplified: 江湖侠客
   rawTraditional: 江湖俠客
   result: Jianghu Hero
+
+- raw: 舍身崖
+  result: Sacrificial Cliff
+- raw: 楚御史
+  result: Censor Chu
+- raw: 云鹤小妹
+  result: Little Sister Yunhe
+- raw: 诸葛掌门
+  result: Sect Leader Zhuge
+- raw: 封桩库
+  result: Sealed Treasury
+- raw: 齐御史
+  result: Censor Qi
+- raw: 御史齐焱
+  result: Censor Qi Yan
+- raw: 张御史
+  result: Censor Zhang
+- raw: 林御史
+  result: Censor Lin
+- raw: 御史
+  result: Censor

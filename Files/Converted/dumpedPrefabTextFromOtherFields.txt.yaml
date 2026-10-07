@@ -158,14 +158,11 @@
 - raw: "#$PlayerName#继承帝位后，效法先皇周世宗柴荣，励精图治，改革朝政。"
   splits:
   - text: "#$PlayerName#继承帝位后，效法先皇周世宗柴荣，励精图治，改革朝政。"
-    translated: "After inheriting the throne, #$PlayerName# emulated the late Emperor Zhou Shizong Dazong, diligently governing and reforming the administration."
-    qcReviewedText: "After inheriting the throne, #$PlayerName# emulated the late Emperor Zhou Shizong Dazong, diligently governing and reforming the administration."
-    qcTranslated: "After inheriting the throne, #$PlayerName# emulated the late Emperor Zhou Shizong Chai Rong, diligently governing and reforming the administration."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "After #$PlayerName# inherited the throne, they followed in the footsteps of Emperor Zhou Shizong Chai Rong, working diligently to reform and improve the governance of the court."
+    qcReviewedText: "After #$PlayerName# inherited the throne, they followed in the footsteps of Emperor Zhou Shizong Chai Rong, working diligently to reform and improve the governance of the court."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#$TargetInteractName#？\\n你在我#SourceForceName#内鬼鬼祟祟的干什么呢？"
   splits:
   - text: "你在我#SourceForceName#内鬼鬼祟祟的干什么呢？"
@@ -457,15 +454,15 @@
 - raw: "#PlayerName#，我准备去趟飞龙门，亲自向诸葛掌门求援。你若<b>近三个月内</b>得空，能否来陪我一道前往？"
   splits:
   - text: "#PlayerName#，我准备去趟飞龙门，亲自向诸葛掌门求援。你若"
-    translated: "#PlayerName#, I'm planning to go to Flying Dragon Gate and personally seek aid from Sect Master Zhuge. You should join me."
-    qcReviewedText: "#PlayerName#, I'm planning to go to Flying Dragon Gate and personally seek aid from Sect Master Zhuge. You should join me.<b>In the past three months </b>Free if you can come along with me?"
-    qcTranslated: "#PlayerName#, I'm planning to go to Flying Dragon Gate and personally seek aid from Sect Master Zhuge. If you have some free time <b>within the next three months</b>, could you come along with me?"
+    translated: "#PlayerName#, I am going to Flying Dragon Gate to seek assistance from Sect Leader Zhuge personally. If you want,"
+    qcReviewedText: "#PlayerName#, I am going to Flying Dragon Gate to seek assistance from Sect Leader Zhuge personally. If you want,<b>In the past three months </b>Free if you can come along with me?"
+    qcTranslated: "#PlayerName#, I am going to Flying Dragon Gate to seek assistance from Sect Leader Zhuge personally. If you have time <b>within the next three months</b>, could you come along with me?"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - GarbledNumber
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "近三个月内"
     translated: "In the past three months"
@@ -515,9 +512,9 @@
 - raw: "#PlayerName#！诸葛掌门突然亲临<b>仙霞派</b>，要把我带到飞龙门去！这该如何是好？求你快回门派替我出出主意！"
   splits:
   - text: "#PlayerName#！诸葛掌门突然亲临"
-    translated: "#PlayerName#! Zhu Ge Sect Master suddenly arrived in person."
-    qcReviewedText: "#PlayerName#! Zhu Ge Sect Master suddenly arrived in person.<b>Xianxia Sect</b>, Take me to Flying Dragon Gate! What should I do? Please hurry back to the sect and give me some advice!"
-    qcTranslated: "#PlayerName#! Sect Master Zhu Ge suddenly arrived in person at <b>Xianxia Sect</b> to take me to Flying Dragon Gate! What should I do? Please hurry back to the sect and give me some advice!"
+    translated: "#PlayerName#! Sect Leader Zhuge suddenly arrived in person"
+    qcReviewedText: "#PlayerName#! Sect Leader Zhuge suddenly arrived in person <b>Xianxia Sect</b>, Take me to Flying Dragon Gate! What should I do? Please hurry back to the sect and give me some advice!"
+    qcTranslated: "#PlayerName#! Sect Leader Zhuge suddenly arrived in person at the <b>Xianxia Sect</b> to take me to Flying Dragon Gate! What should I do? Please hurry back to the sect and give me some advice!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -1060,14 +1057,11 @@
 - raw: "<b>#PosText#</b>近来流言四起，传闻先皇周世宗柴荣仍有血脉留存世间，一时间街谈巷议，众说纷纭。"
   splits:
   - text: "近来流言四起，传闻先皇周世宗柴荣仍有血脉留存世间，一时间街谈巷议，众说纷纭。"
-    translated: "Lately, rumors have been swirling, suggesting that Prince Zhou Shizong Duan Rong still has descendants alive in the world. For a time, people were speculating and discussing this in the streets and alleys, with many differing opinions."
-    qcReviewedText: "<b>#PosText#</b>Lately, rumors have been swirling, suggesting that Prince Zhou Shizong Duan Rong still has descendants alive in the world. For a time, people were speculating and discussing this in the streets and alleys, with many differing opinions."
-    qcTranslated: "<b>#PosText#</b>Lately, rumors have been swirling, suggesting that the late Emperor Zhou Shizong Chai Rong still has descendants alive in the world. For a time, people were speculating and discussing this in the streets and alleys, with many differing opinions."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "Recently, rumors have spread that Emperor Zhou Shizong Chai Rong still has descendants living in the world, leading to much speculation and debate in the streets."
+    qcReviewedText: "<b>#PosText#</b>Recently, rumors have spread that Emperor Zhou Shizong Chai Rong still has descendants living in the world, leading to much speculation and debate in the streets."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "<b>#PosText#</b>{0}"
 - raw: "<b>仙霞派</b>弟子聚于山门之下，似乎要送别某位重要人物。"
@@ -2691,8 +2685,8 @@
   splits:
   - text: "#PlayerName#，我已在"
     translated: "#PlayerName#, I have already"
-    qcReviewedText: "#PlayerName#, I have already <b>Xiangyuan Village </b>You have located Shangguan Feng and the Four Great Assassins. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
-    qcTranslated: "#PlayerName#, I have already located the traces of Shangguan Feng and the Four Great Assassins within <b>Xiangyuan Village</b>. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
+    qcReviewedText: "#PlayerName#, I have already <b>Xiangyuan Village </b>You found Shangguan Feng and the Four Great Assassins. Hurry over to join us, before they beat you to the Sealed Treasury's treasures!"
+    qcTranslated: "#PlayerName#, I have already found traces of Shangguan Feng and the Four Great Assassins within <b>Xiangyuan Village</b>. Hurry over to join us, before they beat you to the Sealed Treasury's treasures!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -2703,7 +2697,7 @@
     translated: "Xiangyuan Village"
   - subIndex: 2
     text: "内寻得上官凤与四大杀手踪迹。你尽快赶来汇合，以免封桩库宝藏被他们捷足先登了！"
-    translated: "You have located Shangguan Feng and the Four Great Assassins. Hurry and join up with us to prevent them from beating us to the treasures in the Sealed Pile Vault!"
+    translated: "You found Shangguan Feng and the Four Great Assassins. Hurry over to join us, before they beat you to the Sealed Treasury's treasures!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来<b>丐帮</b>一同商议对策。"
@@ -3314,11 +3308,11 @@
 - raw: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来<b>青城派</b>，与兄弟一同领赏！"
   splits:
   - text: "听说有个什么御史大人，要来嘉奖咱抓捕岳无畏之义举。#PlayerName#速来"
-    translated: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#."
-    qcReviewedText: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#.<b>Qingcheng Sect</b>, Collect your reward with your Brother!"
-    qcTranslated: "I heard that a Lord Inspector is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#, to the <b>Qingcheng Sect</b>, and collect your reward with your Brother!"
+    translated: "I heard that Lord Censor is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#!"
+    qcReviewedText: "I heard that Lord Censor is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#!<b>Qingcheng Sect</b>, Collect your reward with your Brother!"
+    qcTranslated: "I heard that Lord Censor is coming to commend us for capturing Yue Wuwei. Come quickly, #PlayerName#! <b>Qingcheng Sect</b>, let's collect your reward with Brother!"
     qcStatus: Corrected
-    qcQualityScore: 95
+    qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
@@ -5029,8 +5023,8 @@
 - raw: "中原九大门派联军终于兵临京城城下，仙霞联盟各派则于总舵内集结兵力，一场惊天决战即将打响。"
   splits:
   - text: "中原九大门派联军终于兵临京城城下，仙霞联盟各派则于总舵内集结兵力，一场惊天决战即将打响。"
-    translated: "Finally, the combined forces of the Nine Great Sects of Central Plains have arrived at the gates of the Capital, while the various branches of the Immortal Pine Alliance have gathered their troops within their main stronghold. An epic final battle is about to begin."
-    qcReviewedText: "Finally, the combined forces of the Nine Great Sects of Central Plains have arrived at the gates of the Capital, while the various branches of the Immortal Pine Alliance have gathered their troops within their main stronghold. An epic final battle is about to begin."
+    translated: "The allied forces of the Nine Great Sects of Central Plains have finally arrived at the gates of the Capital, while the Xianxia Alliance has gathered its troops within the main headquarters. A cataclysmic final battle is about to begin."
+    qcReviewedText: "The allied forces of the Nine Great Sects of Central Plains have finally arrived at the gates of the Capital, while the Xianxia Alliance has gathered its troops within the main headquarters. A cataclysmic final battle is about to begin."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6432,9 +6426,9 @@
 - raw: "传说大侠孟经世机缘巧合下，得到了都点检封桩库之藏宝图。其老友<b>金龙帮</b>帮主上官雯特地设宴款待，为其庆贺。"
   splits:
   - text: "传说大侠孟经世机缘巧合下，得到了都点检封桩库之藏宝图。其老友"
-    translated: "Legend has it that Great Hero Meng Jingshi, by a stroke of luck, obtained the treasure map of the Grand Marshal's sealed vault. His old friend"
-    qcReviewedText: "Legend has it that Great Hero Meng Jingshi, by a stroke of luck, obtained the treasure map of the Grand Marshal's sealed vault. His old friend <b>Golden Dragon Gang </b>The Gang Master, Shangguan Wentei, specially arranged a banquet to celebrate the occasion."
-    qcTranslated: "Legend has it that Great Hero Meng Jingshi, by a stroke of luck, obtained the treasure map of the Grand Marshal's sealed vault. His old friend <b>Golden Dragon Gang</b> Gang Master Shangguan Wen specially arranged a banquet to celebrate the occasion."
+    translated: "Legend has it that Great Hero Meng Jingshi, by a stroke of luck, obtained the treasure map of the Grand Marshal's Sealed Treasury. His old friend"
+    qcReviewedText: "Legend has it that Great Hero Meng Jingshi, by a stroke of luck, obtained the treasure map of the Grand Marshal's Sealed Treasury. His old friend <b>Golden Dragon Gang </b>The Gang Master, Shangguan Wentei, specially arranged a banquet to celebrate the occasion."
+    qcTranslated: "Legend has it that Great Hero Meng Jingshi, by a stroke of luck, obtained the treasure map of the Grand Marshal's Sealed Treasury. His old friend <b>Golden Dragon Gang</b> Gang Master Shangguan Wen specially arranged a banquet to celebrate the occasion."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -6573,8 +6567,8 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
-    qcReviewedText: "Rumor<b>#PosText#</b>The Flying Dragon Gate sub‑branch has been experiencing multiple cases of weapon theft, and Inspector Chu Fengji is currently investigating the matter."
-    qcTranslated: "Rumor has it that the Flying Dragon Gate sub‑branch within <b>#PosText#</b> has been experiencing multiple cases of weapon theft, and Inspector Chu Fengji is currently investigating the matter."
+    qcReviewedText: "Rumor<b>#PosText#</b>Within the Flying Dragon Gate's branch office, weapon thefts have occurred repeatedly, and Censor Chu Fengji is currently investigating the matter."
+    qcTranslated: "Rumor has it that within <b>#PosText#</b>'s Flying Dragon Gate branch, weapon thefts have occurred repeatedly, and Censor Chu Fengji is currently investigating the matter."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -6582,7 +6576,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "内的飞龙门分舵，屡屡发生武器失窃案件，御史楚风疾正在着手调查此事。"
-    translated: "The Flying Dragon Gate sub‑branch has been experiencing multiple cases of weapon theft, and Inspector Chu Fengji is currently investigating the matter."
+    translated: "Within the Flying Dragon Gate's branch office, weapon thefts have occurred repeatedly, and Censor Chu Fengji is currently investigating the matter."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>出现了一匹世所罕见的千里名驹，武林同道决定举办一场赛马大会来决定此马的最终归属。"
@@ -7195,8 +7189,8 @@
   splits:
   - text: "传闻几名武林人士聚于"
     translated: "Rumors have it that several Wulin figures have gathered."
-    qcReviewedText: "Rumors have it that several Wulin figures have gathered.<b>#PosText#</b>At the foot of Mount Tai, someone wanted to emulate Zhao Dianjian and hold a Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
-    qcTranslated: "Rumors have it that several Wulin figures have gathered at <b>#PosText#</b>the foot of Mount Tai, wanting to emulate Zhao Dianjian and hold a Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
+    qcReviewedText: "Rumors have it that several Wulin figures have gathered.<b>#PosText#</b>At the foot of Mount Tai, there was a desire to emulate Marshal Zhao and host the Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
+    qcTranslated: "Rumors have it that several Wulin figures have gathered at the foot of <b>#PosText#</b>Mount Tai, desiring to emulate Marshal Zhao and host the Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7204,7 +7198,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "泰山脚下，欲效仿赵点检举办“泰岳巨典”，江湖中一时引为笑谈。"
-    translated: "At the foot of Mount Tai, someone wanted to emulate Zhao Dianjian and hold a Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
+    translated: "At the foot of Mount Tai, there was a desire to emulate Marshal Zhao and host the Mount Tai Grand Assembly, which became the laughingstock of the Jianghu for a time."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻几大杀手近来一直在<b>#PosText#</b>四处挖掘，无人知晓他们究竟在找什么东西。"
@@ -7849,15 +7843,15 @@
 - raw: "传闻江湖侠士已将黑道五鬼之一高首捉拿归案，御史大人将在<b>飞龙门内</b>予以嘉奖。"
   splits:
   - text: "传闻江湖侠士已将黑道五鬼之一高首捉拿归案，御史大人将在"
-    translated: "It is said that a hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Inspector will be present at..."
-    qcReviewedText: "It is said that a hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Inspector will be present at...<b>Inside the Flying Dragon Gate </b>Commendation granted"
-    qcTranslated: "It is said that a Hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Inspector will grant commendation at <b>Inside the Flying Dragon Gate</b>."
+    translated: "It is said that a hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Censor will be present at..."
+    qcReviewedText: "It is said that a hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Censor will be present at...<b>Inside the Flying Dragon Gate </b>Commendation granted"
+    qcTranslated: "It is said that a Hero of Jianghu has already captured Gao Shou, one of the Underworld Five Ghosts, and Lord Censor will bestow commendations within <b>the Flying Dragon Gate</b>."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "飞龙门内"
     translated: "Inside the Flying Dragon Gate"
@@ -11589,9 +11583,9 @@
 - raw: "听说最近飞龙门诸葛掌门又要来<b>仙霞派</b>，准备兑现之前和姜师姐的承诺。#PlayerName#别忘了回来一道迎接。"
   splits:
   - text: "听说最近飞龙门诸葛掌门又要来"
-    translated: "I heard that recently, the Sect Leader of Flying Dragon Gate, Zhuge, is coming again."
-    qcReviewedText: "I heard that recently, the Sect Leader of Flying Dragon Gate, Zhuge, is coming again.<b>Xianxia Sect</b>, Prepare to fulfill the promise made to Senior Sister Jiang before. #PlayerName#, don't forget to come back to welcome her together."
-    qcTranslated: "I heard that recently, the Sect Leader of Flying Dragon Gate, Zhuge, is coming to <b>Xianxia Sect</b> again. Prepare to fulfill the promise made to Senior Sister Jiang before. #PlayerName#, don't forget to come back to welcome her together."
+    translated: "I heard that Sect Leader Zhuge from the Flying Dragon Gate is coming again soon."
+    qcReviewedText: "I heard that Sect Leader Zhuge from the Flying Dragon Gate is coming again soon.<b>Xianxia Sect</b>, Prepare to fulfill the promise made to Senior Sister Jiang before. #PlayerName#, don't forget to come back to welcome her together."
+    qcTranslated: "I heard that Sect Leader Zhuge from the Flying Dragon Gate is coming to <b>Xianxia Sect</b> again soon, preparing to fulfill the promise made to Senior Sister Jiang before. #PlayerName#, don't forget to come back to welcome her together."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -12848,8 +12842,8 @@
 - raw: "在#TargetPlace#寻找封桩库宝藏。"
   splits:
   - text: "在#TargetPlace#寻找封桩库宝藏。"
-    translated: "Find the treasure in the Pile Sealing Chest at #TargetPlace#."
-    qcReviewedText: "Find the treasure in the Pile Sealing Chest at #TargetPlace#."
+    translated: "Search for the Sealed Treasury treasure at #TargetPlace#."
+    qcReviewedText: "Search for the Sealed Treasury treasure at #TargetPlace#."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -19748,8 +19742,8 @@
 - raw: "直至升任正一品御史大夫，深得皇上信赖。"
   splits:
   - text: "直至升任正一品御史大夫，深得皇上信赖。"
-    translated: "Until promoted to Doctor of the Gate of the First Rank, he deeply won the trust of the emperor."
-    qcReviewedText: "Until promoted to Doctor of the Gate of the First Rank, he deeply won the trust of the emperor."
+    translated: "Until he was promoted to the rank of First Grade Censor and Doctor, earning the Emperor's trust."
+    qcReviewedText: "Until he was promoted to the rank of First Grade Censor and Doctor, earning the Emperor's trust."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -22365,8 +22359,8 @@
 - raw: "跟踪上官凤前往#TargetPlace#寻找封桩库。"
   splits:
   - text: "跟踪上官凤前往#TargetPlace#寻找封桩库。"
-    translated: "Track Shangguan Feng to #TargetPlace# to locate the sealing pile at the Repository."
-    qcReviewedText: "Track Shangguan Feng to #TargetPlace# to locate the sealing pile at the Repository."
+    translated: "Follow Shangguan Feng to #TargetPlace# to search for the Sealed Treasury."
+    qcReviewedText: "Follow Shangguan Feng to #TargetPlace# to search for the Sealed Treasury."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

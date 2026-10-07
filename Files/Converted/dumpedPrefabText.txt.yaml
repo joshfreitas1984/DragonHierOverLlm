@@ -7919,15 +7919,11 @@
 - raw: "百会"
   splits:
   - text: "百会"
-    translated: "Meeting of the Hundred Sands"
-    qcReviewedText: "Meeting of the Hundred Sands"
-    qcTranslated: "Baihui"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Baihui"
+    qcReviewedText: "Baihui"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "监牢"
   splits:
   - text: "监牢"

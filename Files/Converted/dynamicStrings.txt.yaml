@@ -13615,8 +13615,8 @@
 - raw: "中脘"
   splits:
   - text: "中脘"
-    translated: "Upper Central Abdomen"
-    qcReviewedText: "Upper Central Abdomen"
+    translated: "Zhongwan"
+    qcReviewedText: "Zhongwan"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -16941,14 +16941,11 @@
 - raw: "侍御史"
   splits:
   - text: "侍御史"
-    translated: "Counselor of the Imperial Stables"
-    qcReviewedText: "Counselor of the Imperial Stables"
-    qcTranslated: "Censor"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
+    translated: "Imperial Censor"
+    qcReviewedText: "Imperial Censor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "供奉"
   splits:
   - text: "供奉"
@@ -21552,15 +21549,11 @@
 - raw: "合谷"
   splits:
   - text: "合谷"
-    translated: "Hand Yangmingoins"
-    qcReviewedText: "Hand Yangmingoins"
-    qcTranslated: "Hegu"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Hegu"
+    qcReviewedText: "Hegu"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "同心竭力，不负本门青睐之恩"
   splits:
   - text: "同心竭力，不负本门青睐之恩"
@@ -33565,8 +33558,8 @@
 - raw: "巡按御史"
   splits:
   - text: "巡按御史"
-    translated: "Inspector General"
-    qcReviewedText: "Inspector General"
+    translated: "Touring Censor"
+    qcReviewedText: "Touring Censor"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -38703,15 +38696,11 @@
 - raw: "承扶"
   splits:
   - text: "承扶"
-    translated: "Support"
-    qcReviewedText: "Support"
-    qcTranslated: "Chengfu"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Chengfu"
+    qcReviewedText: "Chengfu"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "承泣"
   splits:
   - text: "承泣"
@@ -38723,15 +38712,11 @@
 - raw: "承浆"
   splits:
   - text: "承浆"
-    translated: "Receptionist"
-    qcReviewedText: "Receptionist"
-    qcTranslated: "Chengjiang"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Chengjiang"
+    qcReviewedText: "Chengjiang"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "承蒙#PlayerName#不弃，我必当赴汤蹈火，为{0}效犬马之劳。"
   splits:
   - text: "承蒙#PlayerName#不弃，我必当赴汤蹈火，为"
@@ -41263,8 +41248,8 @@
 - raw: "既然完成了赵点检未竟之事业，或许没必要再赶尽杀绝，徒兴兵祸了。\n<color=red>选择泰岳大典将会触发结局并解锁对应成就\n此后仍可继续游戏并触发其他结局</color>"
   splits:
   - text: "既然完成了赵点检未竟之事业，或许没必要再赶尽杀绝，徒兴兵祸了。"
-    translated: "Since completing Zhao Dianjian's unfinished business, perhaps there's no need to push for total annihilation and cause more military disasters."
-    qcReviewedText: "Since completing Zhao Dianjian's unfinished business, perhaps there's no need to push for total annihilation and cause more military disasters.\n<color=red>Choosing the Mount Tai Grand Assembly will trigger the ending and unlock the corresponding achievement.\nYou can continue playing and trigger other endings thereafter.</color>"
+    translated: "Since they have completed Marshal Zhao's unfinished business, perhaps there is no need to go to extremes and start a war."
+    qcReviewedText: "Since they have completed Marshal Zhao's unfinished business, perhaps there is no need to go to extremes and start a war.\n<color=red>Choosing the Mount Tai Grand Assembly will trigger the ending and unlock the corresponding achievement.\nYou can continue playing and trigger other endings thereafter.</color>"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -47802,15 +47787,11 @@
 - raw: "渊腋"
   splits:
   - text: "渊腋"
-    translated: "Deep armpit"
-    qcReviewedText: "Deep armpit"
-    qcTranslated: "Yuan Ye"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Yuan Ye"
+    qcReviewedText: "Yuan Ye"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "渐处下风，得想想办法"
   splits:
   - text: "渐处下风，得想想办法"
@@ -49567,15 +49548,11 @@
 - raw: "百会"
   splits:
   - text: "百会"
-    translated: "Meeting of the Hundred Sands"
-    qcReviewedText: "Meeting of the Hundred Sands"
-    qcTranslated: "Baihui"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Baihui"
+    qcReviewedText: "Baihui"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "百姓"
   splits:
   - text: "百姓"
@@ -49766,11 +49743,15 @@
 - raw: "监察御史"
   splits:
   - text: "监察御史"
-    translated: "Provincial Inspector"
-    qcReviewedText: "Provincial Inspector"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Censor Imperial Censor"
+    qcReviewedText: "Censor Imperial Censor"
+    qcTranslated: "Censor"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
 - raw: "监牢"
   splits:
   - text: "监牢"

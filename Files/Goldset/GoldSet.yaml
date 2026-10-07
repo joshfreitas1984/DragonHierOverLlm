@@ -159,6 +159,13 @@ additionalSourceAssessments:
     so these defects are the clear-cut dynamicStrings/second-person shapes, not every "I". All 18 are
     pinned in Config.yaml pinnedSampleSources. Items sourced from this batch set sampleRun:
     ConvertedCorpus-20261004-first-person-mining below.
+- name: ConvertedCorpus-20261007-qc-flagged-review
+  path: Files/Converted
+  sampleFingerprint: 'n/a - not a TranslationAssessmentWorkflow run'
+  sampleSize: 'n/a'
+  sampleSeed: 'n/a'
+  selection: >-
+    21 correctionSamples mined from the 161 splits flagged flaggedForQcReview in Files/Converted (2026-10-07 review). Covers 14 safe fixes (name/terminology, pronoun, anachronism, acupoint pinyin), 2 unnecessary rewrites and 5 harmful corrections (geisha for 舞伎, Pukdao for 朴刀, La'er for 江老二, an invented 'your humble wife' for 妾身, odds and evens for 管他三七二十一). Items set sampleRun ConvertedCorpus-20261007-qc-flagged-review.
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -4762,4 +4769,396 @@ correctionSamples:
     cf820a4e96a6c41f, just for a semantic/agency reversal instead of a dropped placeholder - and
     unlike those two, even a low score here wouldn't have been enough, since both categories a model
     could plausibly reach for are auto-accept-listed.
-
+- sampleId: 07762930a5978268
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "好了好了，你们俩这三脚猫功夫，\\n你一拳我一脚打了半天，看得我都快睡着了。"
+  currentTranslation: "Alright, alright, your two amateur skills,\\nWe fought for half a day with your punch and my kick, and I was almost dozing off."
+  label: Defect
+  defectCategories:
+  - mistranslation
+  - pronoun-attribution
+  proposedCorrection: "Alright, alright, you two with your amateur skills,\\nYou throw a punch, I throw a kick, and after fighting for half a day, I'm almost falling asleep watching."
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 好了好了，你们俩这三脚猫功夫，...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    Line 1 "your two amateur skills" is ungrammatical, and line 2 wrongly makes the speaker a
+    participant ("We fought ... with your punch and my kick") when 看得我都快睡着了 shows the speaker is
+    only watching two others fight. The correction fixes both ("you two with your amateur skills",
+    "You throw a punch, I throw a kick ... I'm almost falling asleep watching"). Wording is looser
+    than literal but the meaning is right, so safe.
+- sampleId: 6510964bcc2c2f50
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "仙霞小贼，给我死！"
+  currentTranslation: "Demi‑God Thief, die!"
+  label: Defect
+  defectCategories:
+  - terminology
+  proposedCorrection: "Xianxia Bandit, die!"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 仙霞小贼，给我死！...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    仙霞 is the Xianxia Sect (used everywhere else in this corpus). currentTranslation renders it
+    "Demi-God", an invented gloss that loses the sect name. The correction's "Xianxia Bandit"
+    restores the proper name; 小贼 as "Bandit" is slightly stronger than "petty thief" but not
+    misleading in a shouted insult.
+- sampleId: 44c35d0ef7f98c6a
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "柴荣也因此脱离掌控，最终自杀身亡。\\n此事乃老身的一生之耻！至今回想起来，仍旧懊悔不已。"
+  currentTranslation: "Because of this, Zhuo Ren was able to escape control and ultimately committed suicide.\\nThis is an indelible shame of my life! Even now, I still regret it deeply."
+  label: Defect
+  defectCategories:
+  - terminology
+  proposedCorrection: "Because of this, Chai Rong was able to escape control and ultimately committed suicide.\\nThis is an indelible shame of my life! Even now, I still regret it deeply."
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 柴荣也因此脱离掌控，最终自杀身亡。...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    柴荣 is Chai Rong, the Later Zhou emperor. currentTranslation reads the name as "Zhuo Ren", a
+    wrong romanization of a real historical figure. The correction gives the correct name and leaves
+    the rest of the cell untouched.
+- sampleId: da2a194561aed69e
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "加上祖师妙远真人年事已高，\\n自是需要从这两位亲传弟子中，选择一人继任仙霞掌门之位。\\n因此这争端又多了一分争夺掌门之位的意味。"
+  currentTranslation: "Add Master Daoist Miao Yuan, who is already of advanced age,\\nThus, it is necessary to choose one of these two direct disciples to succeed as the Sect Leader of Xi Xia.\\nTherefore, this dispute now carries an additional meaning of vying for the position of Sect Leader."
+  label: Defect
+  defectCategories:
+  - terminology
+  proposedCorrection: "Add Master Daoist Miao Yuan, who is already of advanced age,\\nThus, it is necessary to choose one of these two Direct Disciples to succeed as the Sect Leader of Xianxia.\\nTherefore, this dispute now carries an additional meaning of vying for the position of Sect Leader."
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 加上祖师妙远真人年事已高，...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    仙霞掌门 is the Xianxia Sect Leader; currentTranslation splits it as "Xi Xia" (reads like the
+    Western Xia dynasty). The correction restores "Xianxia". It also capitalizes "Direct Disciples",
+    which is harmless. It does not fix the awkward opening "Add Master Daoist Miao Yuan", which is a
+    separate defect left in place.
+- sampleId: 1d28328ea83ce5d5
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "（被一枪击飞，顿时喷出大口献血）噗！！！\\n我......我不服......你休想......废我武功！！！"
+  currentTranslation: "(getted in one shot and flew high, instantly spitting out a lot of blood)umph!!!\\nI... I don't give in... You won't be able to disable my martial arts!"
+  label: Defect
+  defectCategories:
+  - fluency
+  - mistranslation
+  proposedCorrection: "(Struck by a single spear thrust and sent flying, instantly spewing out a mouthful of blood) Ugh!!!\\nI... I refuse to accept this... You won't be able to cripple my martial arts!"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split （被一枪击飞，顿时喷出大口献血）噗！！！...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    "getted in one shot and flew high" is broken English, and 废我武功 (cripple my martial arts) is
+    rendered "disable". 一枪 is a spear thrust (the veteran in this scene wields a spear), not a shot.
+    The correction fixes the grammar and the weapon and keeps the stutter ellipses, so safe.
+- sampleId: 9e2fbeb4452692b1
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "（被一枪洞穿心脉，终于瘫倒在地）\\n我的武功......是和姐姐的约定......"
+  currentTranslation: "(killed by a single bullet to the heart and major blood vessels, finally collapsing to the ground) \\nMy martial arts... is a promise to my older sister..."
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "(pierced through the heart and meridians by a single spear thrust, finally collapsing to the ground) \\nMy martial arts... is a promise made with Older Sister..."
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split （被一枪洞穿心脉，终于瘫倒在地）...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    "killed by a single bullet" is an anachronism and a mistranslation: 一枪洞穿心脉 is a spear thrust
+    through the heart, and the speaker survives to say the next line. The correction ("pierced
+    through the heart and meridians by a single spear thrust") fixes it. It also tidies "a promise
+    to my older sister" to "a promise made with Older Sister", which is neutral.
+- sampleId: 5ccbe613108d5928
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "嘿嘿，大哥教训的是，以后不敢了，不敢了......\\n话说起来，怎么没见到那慕容姑…贼婆娘呢？"
+  currentTranslation: "Hehe, Senior Brother, you are right. I won't do it again, I swear...\\nSpeaking of it, where's that Lady Cuimo...bitch?"
+  label: Defect
+  defectCategories:
+  - terminology
+  proposedCorrection: "Hehe, Big Brother, you are right. I won't do it again, I swear...\\nSpeaking of it, where's that Lady Murong...bitch?"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 嘿嘿，大哥教训的是，以后不敢了，不敢了....);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    慕容 is the surname Murong. currentTranslation renders it "Cuimo", an invented reading. The
+    correction restores "Murong" and also changes 大哥 from "Senior Brother" to "Big Brother" (sworn-
+    brother address among bandits), a mild improvement.
+- sampleId: d8a1a55d9e8dfb64
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "（面色突变，连忙屏退左右）\\n妾身与赵点检之渊源，江湖中鲜有人知晓。\\n不知三位是从何得知？"
+  currentTranslation: "(Face suddenly changing, quickly dismissed those around them) \\nThe connection between Lady and Zhao Dijian is known to few in the Jianghu.\\nI wonder how you three heard about this."
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "(Their expression suddenly changing, they hurriedly dismissed those around them) \\nThe connection between your humble wife and Zhao Dijian is known to few in the Jianghu.\\nI wonder how you three heard about this."
+  correctionSafety: harmful
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split （面色突变，连忙屏退左右）...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    妾身 is a woman's humble first-person pronoun ("this humble woman"). currentTranslation treats it
+    as a noun ("The connection between Lady and Zhao Dijian"), which is wrong. The correction swaps
+    it for "your humble wife", which asserts that the speaker is the wife of the listeners - a false
+    relationship invented from nothing, since she is addressing three strangers (不知三位是从何得知). It
+    replaces one error with a different, more misleading one, so harmful. A safe fix would be "I" or
+    "this humble one".
+- sampleId: db29a1cce55a2229
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "哼，看你还算识相，就三七开吧！"
+  currentTranslation: "Hmph, since you're not completely out of your mind, let's split it fifty‑fifty like Sanqi!"
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "Hmph, since you're not completely out of your mind, let's split it seventy‑thirty!"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 哼，看你还算识相，就三七开吧！...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    三七开 is a 70/30 split; currentTranslation says "fifty-fifty like Sanqi" (misreading 三七 as the
+    herb notoginseng and contradicting the numbers). The next line, 要交三成 ("a third"), confirms the
+    split is 30%. The correction ("seventy-thirty") is correct.
+- sampleId: 4700c99277962e5b
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "哦！想起来了，这四人后来跟赵点检一起，共斗黄沙寨二当家三当家。\\n也算是弃暗投明，改邪归正了。"
+  currentTranslation: "Oh! I remember now. These four later fought against the Second Boss and Third Boss of Yellow Sand Camp together with Zhao Jianchecuan.\\nIt's also a case of turning from darkness to light, reforming and correcting one's ways."
+  label: Defect
+  defectCategories:
+  - terminology
+  - garbage-output
+  proposedCorrection: "Oh! I remember now. These four later fought against the Second Boss and Third Boss of Yellow Sand Camp together with Zhao Dianjian.\\nIt's also a case of turning from darkness to light, reforming and correcting one's ways."
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 哦！想起来了，这四人后来跟赵点检一起，共...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    赵点检 is Zhao, holding the title Dianjian (Inspector) - elsewhere in this corpus "Zhao the
+    Inspector" or "Zhao Dijian". currentTranslation invents "Zhao Jianchecuan", which is garbage.
+    The correction's "Zhao Dianjian" is a legitimate romanization of the title, so it is an
+    improvement, although it is still inconsistent with "Zhao Dijian" in other lines, which is why
+    赵点检 needs a glossary entry.
+- sampleId: dc3ece79b4b0e561
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "咳咳，大、大姐，这二位是我的朋友。\\n此伤是、是长乐帮贼人所为，你别误会了。"
+  currentTranslation: "Cough cough, big sister, these two are my friends.\\nThis wound was inflicted by the Changle Gang thugs. Don't misunderstand me."
+  label: Defect
+  defectCategories:
+  - dropped-content
+  proposedCorrection: "Cough cough, B‑b‑big sister, these two are my friends.\\nThis wound was inflicted by the Changle Gang thugs. Don't misunderstand me."
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 咳咳，大、大姐，这二位是我的朋友。...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    The source stutters on 大、大姐 (and 是、是长乐帮 in line 2). currentTranslation flattens line 1 to "big
+    sister"; the correction restores "B-b-big sister". The line-2 stutter is still dropped, so the
+    fix is partial but not harmful.
+- sampleId: cd1704c462c3c786
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "思迟？杨思迟？……\\n咦，思迟跑哪儿去了？"
+  currentTranslation: "Sichi... Yang Sichi...\\nEh, Sichi ran off somewhere?"
+  label: Pass
+  defectCategories: []
+  proposedCorrection: "Sichi... Yang Sichi...\\nEh, where did Sichi run off to?"
+  correctionSafety: unnecessary
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 思迟？杨思迟？……...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 55.
+  reviewNote: >-
+    The source has no stutter and no defect: "Eh, Sichi ran off somewhere?" correctly renders
+    咦，思迟跑哪儿去了？. QC rewrote it as "Eh, where did Sichi run off to?" and scored the original 0
+    (DroppedStutter). The rewrite is slightly more natural but changes nothing in meaning, so the
+    correction is unnecessary and the 0 score is a false alarm.
+- sampleId: 62ec500d7dae2f78
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: fullCell
+  source: "这二位舞伎，乃是在下自扬州高价购得，\\n轻歌曼舞，尽态极妍，堪称色艺双绝。\\n正好作为贴身侍女，侍奉二位大侠饮食起居不是！"
+  currentTranslation: "These two dancers were purchased at a high price by me in Yangzhou.\\nGraceful singing and dancing, exquisite beyond measure, truly a master of both color and artistry.\\nJust perfect for serving as a personal maid to attend to the every need of these Great Heroes!"
+  label: Pass
+  defectCategories: []
+  proposedCorrection: "These two geisha were purchased at a high price by me in Yangzhou.\\nGraceful singing and dancing, exquisite beyond measure, truly a master of both color and artistry.\\nJust perfect for serving as personal maids to attend to the daily needs of these Great Heroes!"
+  correctionSafety: harmful
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 这二位舞伎，乃是在下自扬州高价购得，...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    舞伎 means dancing girls and "dancers" is correct. The correction replaces it with "geisha", a
+    Japanese term that is wrong for a Chinese wuxia setting and adds meaning the source does not
+    carry. A correction that makes a correct line worse. QC also scored the original 0
+    (DroppedContent), although nothing was dropped.
+- sampleId: 8416f77d616d17aa
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "管他三七二十一，先杀个痛快再说！"
+  currentTranslation: "Who cares about the numbers, let's kill our way to satisfaction first!"
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "Who cares about the odds and evens, let's kill our hearts out first!"
+  correctionSafety: harmful
+  provenance: >-
+    Real QC pair from Files/Converted/PlotData.csv.yaml (first split 管他三七二十一，先杀个痛快再说！...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    管他三七二十一 is an idiom meaning "damn the consequences / come what may". currentTranslation takes it
+    literally ("Who cares about the numbers"). The correction is no better ("odds and evens") and
+    the second half becomes "kill our hearts out", which is not natural English. Harmful: it swaps
+    one literal mistranslation for a worse one. A correct fix would be "Damn the consequences" or
+    similar.
+- sampleId: 8c2d90bc659f5c5d
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "百会"
+  currentTranslation: "Meeting of the Hundred Sands"
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "Baihui"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/dynamicStrings.txt.yaml (first split 百会...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    百会 (Baihui, GV20) is an acupuncture point. currentTranslation's "Meeting of the Hundred Sands"
+    is a wrong gloss (the character is 会, meeting, not sand). The correction uses the standard point
+    name "Baihui". This source appears in several Converted files with the same text.
+- sampleId: 0d38d4e6bce814c1
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "承浆"
+  currentTranslation: "Receptionist"
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "Chengjiang"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/dynamicStrings.txt.yaml (first split 承浆...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    承浆 (Chengjiang, CV24) is an acupuncture point. currentTranslation's "Receptionist" is a nonsense
+    gloss. The correction "Chengjiang" is the correct romanization. Contrast the existing 中脘 sample,
+    where the correction invented a wrong romanization; here the pinyin is accurate.
+- sampleId: 9191da5e93576fb6
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "江老二"
+  currentTranslation: "Old Man Jiang Er"
+  label: Pass
+  defectCategories: []
+  proposedCorrection: "Jiang La'er"
+  correctionSafety: harmful
+  provenance: >-
+    Real QC pair from Files/Converted/dynamicStrings.txt.yaml (first split 江老二...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    江老二 is a gang member known as Jiang the Second, and "Old Man Jiang Er" is an acceptable
+    rendering (the same table renders 江老五 as "Old Man Jiang Wu"). The correction "Jiang La'er"
+    invents a wrong reading (老 is lǎo, 二 is èr; there is no "La'er") and breaks consistency with the
+    other 江老X names. Harmful.
+- sampleId: 33ca4ca8da9afbc9
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "阴蛇蛊"
+  currentTranslation: "Yin Snake Pesticide"
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: "Yin Snake Gu"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/dynamicStringsFromColumns.txt.yaml (first split 阴蛇蛊...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    阴蛇蛊 is a gu poison (蛊 is a standard wuxia term, rendered "Gu" elsewhere, e.g. 牵丝蛊 as "Qiansi
+    Gu"). "Pesticide" is a wrong gloss. The correction "Yin Snake Gu" is right.
+- sampleId: bf12c0e5e412cabd
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "参苓白术散"
+  currentTranslation: "Participating Ginseng and Atractylodes Decoction"
+  label: Defect
+  defectCategories:
+  - mistranslation
+  - terminology
+  proposedCorrection: "Shen Ling Bai Zhu Powder"
+  correctionSafety: safe
+  provenance: >-
+    Real QC pair from Files/Converted/dynamicStringsFromColumns.txt.yaml (first split 参苓白术散...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    参苓白术散 is the classical formula Shen Ling Bai Zhu San (a powder, 散). currentTranslation invents
+    "Participating Ginseng" (参 read as 'participate') and calls it a decoction. The correction "Shen
+    Ling Bai Zhu Powder" is accurate and consistent with the corpus's pinyin treatment of formula
+    names.
+- sampleId: 5e0ab2b281833acb
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "拳毛驹"
+  currentTranslation: "Curly‑Coated Colt"
+  label: Pass
+  defectCategories: []
+  proposedCorrection: "Quanmaoju"
+  correctionSafety: unnecessary
+  provenance: >-
+    Real QC pair from Files/Converted/dynamicStringsFromColumns.txt.yaml (first split 拳毛驹...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    拳毛驹 is a horse name. "Curly-Coated Colt" is a defensible gloss and consistent with "Leopard
+    Horse" next to it. The correction "Quanmaoju" is accurate pinyin but replaces readable text with
+    an opaque name; neutral at best, so unnecessary. QC scored the original 0 as UntranslatedPinyin
+    even though nothing was left untranslated.
+- sampleId: 21de723d11e773ae
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "朴刀"
+  currentTranslation: "Cutlass"
+  label: Pass
+  defectCategories: []
+  proposedCorrection: "Pukdao"
+  correctionSafety: harmful
+  provenance: >-
+    Real QC pair from Files/Converted/dynamicStringsFromColumns.txt.yaml (first split 朴刀...);
+    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
+    Original qcQualityScore 0.
+  reviewNote: >-
+    朴刀 is a pǔdāo, a long-handled cutlass; "Cutlass" is a standard rendering. The correction
+    "Pukdao" is not valid pinyin (it should be Pudao), so it introduces a wrong proper name into a
+    correct line. Harmful.

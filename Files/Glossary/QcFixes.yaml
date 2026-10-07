@@ -1,0 +1,32 @@
+# Terms the translator got wrong that QC then fixed (or that QC fixed wrongly) - see
+# Files/Goldset/GoldSet.yaml sampleRun ConvertedCorpus-20261007-qc-flagged-review.
+- raw: 慕容
+  result: Murong
+- raw: 柴荣
+  result: Chai Rong
+- raw: 仙霞
+  result: Xianxia
+- raw: 万掌门
+  result: Sect Leader Wan
+- raw: 阴蛇蛊
+  result: Yin Snake Gu
+- raw: 牵丝蛊
+  result: Silkworm Gu
+- raw: 参苓白术散
+  result: Shenling Baizhu Powder
+- raw: 玄铁
+  result: Dark Steel
+
+# Accupoints
+- raw: 百会
+  result: Baihui
+- raw: 合谷
+  result: Hegu
+- raw: 承浆
+  result: Chengjiang
+- raw: 承扶
+  result: Chengfu
+- raw: 渊腋
+  result: Yuan Ye
+- raw: 中脘
+  result: Zhongwan
