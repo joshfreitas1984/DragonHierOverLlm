@@ -600,7 +600,7 @@
   - text: "#PlayerName#与前任配偶绝离未久。"
     translated: "#PlayerName# recently divorced your former spouse"
     qcReviewedText: "#PlayerName# recently divorced your former spouse\nTo avoid rumors, it might be better for us to marry another day."
-    qcTranslated: "#PlayerName# recently divorced their former spouse. To avoid rumors, it might be better for us to marry another day."
+    qcTranslated: "#PlayerName# recently divorced their former spouse. To avoid rumors, it might be better for you and me to marry another day."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -5895,13 +5895,13 @@
   - text: "适合仅体验剧情的玩家"
     translated: "Suitable for players who want to experience the storyline only."
     qcReviewedText: "<b><color=teal>Suitable for players who want to experience the storyline only.</color></b>\n<color=red>Cannot earn achievement </color>\nPlayer damage+100%/Injured-50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points-60%\n<color=red>Maximum Talent Points 9\nSpecial Building Limit 5</color>"
-    qcTranslated: "<b><color=teal>Suitable for players who only want to experience the storyline.</color></b>\n<color=red>Cannot earn achievements</color>\nPlayer damage+100%/Damage taken‑50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciple Experience Points+60%\nNon‑disciple experience points‑60%\n<color=red>Maximum Talent Points 9\nSpecial Building Limit 5</color>"
+    qcTranslated: "<b><color=teal>Suitable for players who only want to experience the storyline.</color></b>\n<color=red>Cannot earn achievements</color>\nPlayer damage+100%/Injured‑50%\nAll attributes/All skills+20\nPlayer experience/Reputation+100%\nDisciples of this sect experience+60%\nNon‑disciples of this sect experience‑60%\n<color=red>Maximum Talent Points 9\nSpecial Building Limit 5</color>"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 92
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "无法获得成就"
     translated: "Cannot earn achievement"
@@ -14182,7 +14182,7 @@
     qcFailureReason: " Alternatives were provided when none should be given."
     qcDefectCategories:
     - Unknown
-    qcRuleCheckFailureCount: 4
+    qcRuleCheckFailureCount: 5
     qcRuleCheckFailureBaseline: "Buy Price x {0}%"
   templates:
   - template: "{0}x⟦0⟧%"
@@ -14948,11 +14948,12 @@
   - text: "今天正好有空，我来帮#PlayerName#一把手好了。"
     translated: "Today I have some free time, so I'll lend a hand with #PlayerName#'s chores."
     qcReviewedText: "Today I have some free time, so I'll lend a hand with #PlayerName#'s chores.\n(Other person {0} Click {1} Skills, additional Rewards this time {2}%)"
-    qcStatus: Passed
-    flaggedForQcReview: true
-    qcDefectCategory: Uncertain
+    qcTranslated: "Since I happen to be free today, I'll help #PlayerName# out.\n(Other person {0} Click {1} Skills, additional Rewards this time {2}%)"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - Uncertain
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "对方"
     translated: "Other person"
@@ -29308,11 +29309,12 @@
   - text: "大隐精锐"
     translated: "Elite Hidden Vein"
     qcReviewedText: "Elite Hidden Vein"
-    qcStatus: Passed
-    flaggedForQcReview: true
-    qcDefectCategory: Uncertain
+    qcTranslated: "Grand Concealment Elite"
+    qcStatus: Corrected
+    qcQualityScore: 90
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - Uncertain
+    - DomainTerm
 - raw: "大隐阁主"
   splits:
   - text: "大隐阁主"
@@ -40369,7 +40371,7 @@
   - text: "攻击时与对方"
     translated: "Attack when the opponent"
     qcReviewedText: "Attack when the opponent <b>Counterattack </b>Compare\nTrigger Overwhelm: Opponent's action bar reduced by half."
-    qcTranslated: "Attack when the opponent <b>Counterattack</b>\\nTrigger Overwhelm: Opponent's action bar reduced by half."
+    qcTranslated: "Attack when the opponent <b>Counterattack</b> Compare\nTrigger Overwhelm: Opponent's action bar reduced by half."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -40392,7 +40394,7 @@
   - text: "攻击时与对方"
     translated: "Attack when the opponent"
     qcReviewedText: "Attack when the opponent <b>Interrupt </b>Compare\nTriggering a combo will allow for an additional attack."
-    qcTranslated: "Attack when the opponent <b>Interrupt</b> Compare\\nTriggering a combo will allow for an additional attack."
+    qcTranslated: "Attack when the opponent <b>Interrupt</b> Compare\nTriggering a combo will allow for an additional attack."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -46735,7 +46737,7 @@
   - text: "江老二"
     translated: "Old Man Jiang Er"
     qcReviewedText: "Old Man Jiang Er"
-    qcTranslated: "Jiang La'er"
+    qcTranslated: "Jiang Lao'er"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -48334,7 +48336,7 @@
   - text: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
     translated: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
     qcReviewedText: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
-    qcTranslated: "I've roamed Jianghu for years, and I despise pretentious heroes more than anything. Today, I'll make you taste the bitterness of your actions!"
+    qcTranslated: "I've roamed Jianghu for years, and I've always despised pretentious Heroes. Today, I'll make you taste the bitterness of your actions!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -48354,13 +48356,12 @@
   - text: "牛富户"
     translated: "Wealthy cattle owner"
     qcReviewedText: "Wealthy cattle owner"
-    qcTranslated: "Niu Fuhu"
+    qcTranslated: "Wealthy Cattle Owner"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "牢头"
   splits:
   - text: "牢头"
@@ -49747,11 +49748,10 @@
     qcReviewedText: "Censor Imperial Censor"
     qcTranslated: "Censor"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
 - raw: "监牢"
   splits:
   - text: "监牢"
@@ -53154,10 +53154,10 @@
     qcTranslated: "Compile {0} {1} Secret Manuals"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 55
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "本"
     translated: "This"
@@ -53722,9 +53722,9 @@
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
   - subIndex: 1
     text: "的攻击，"
     translated: "His attack,"
@@ -54433,13 +54433,9 @@
   - text: "花绫"
     translated: "Flowered satin"
     qcReviewedText: "Flowered satin"
-    qcTranslated: "Hua Ling"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "花费{3}天时间，收获了{0}{1}。\n{2}"
   splits:
   - text: "花费"
@@ -54606,10 +54602,9 @@
   - text: "若#PlayerName#能正式向我赔礼谢罪，同时布告天下武林同道的话......"
     translated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community..."
     qcReviewedText: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nNature might still win back some of my affection."
-    qcTranslated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nNaturally, I might still win back some of my affection."
+    qcTranslated: "If #PlayerName# can formally apologize to me and announce it to the Wulin community...\nI might still recover some of my goodwill."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: MeaningReversal
     qcDefectCategories:
     - MeaningReversal
@@ -54887,13 +54882,13 @@
   - text: "若能在"
     translated: "If I could only"
     qcReviewedText: "If I could only {0} In front of me {1}。\nShould {2} {0} What is the relationship with the He Pai?"
-    qcTranslated: "If I could only {0} in front of {1}.\nShould {2} {0} and the relationship between the He faction?"
+    qcTranslated: "If I could only {0} In front of me {1}.\nShould {2} {0} What is the relationship with the He Sect?"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: UntranslatedPinyin
     qcDefectCategories:
-    - DroppedContent
+    - UntranslatedPinyin
+    - OtherNamedDefect
   - subIndex: 1
     text: "面前"
     translated: "In front of me"
@@ -60243,7 +60238,7 @@
   - text: "这日你巡视之时，忽听得远处锣声大躁，喊杀震天，"
     translated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky."
     qcReviewedText: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky.\nHastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault.\nThe servants fought back desperately and barely managed to hold their ground."
-    qcTranslated: "On this day, as you patrolled, you suddenly heard distant gongs beating loudly and shouts of battle echoing to the sky. Hastily rushing over, you found a gang of thieves had broken in from the backyard, intending to rob and assault. The servants Counterattack desperately and barely managed to hold their ground."
+    qcTranslated: "On this day, as you patrolled, you suddenly heard distant gongs beating loudly and shouts of battle echoing to the sky. Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault. The household servants Counterattack desperately and barely managed to hold their ground."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -61115,13 +61110,13 @@
   - text: "逍遥生"
     translated: "Free‑Spirited Fellow"
     qcReviewedText: "Free‑Spirited Fellow"
-    qcTranslated: "Free‑Spirited Fellow"
+    qcTranslated: "Xiaoyao Sheng"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: UntranslatedPinyin
     qcDefectCategories:
-    - OtherNamedDefect
+    - UntranslatedPinyin
 - raw: "逐出师门"
   splits:
   - text: "逐出师门"

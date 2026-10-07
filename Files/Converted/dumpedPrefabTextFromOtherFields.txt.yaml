@@ -2267,14 +2267,13 @@
   - text: "#PlayerName#，我费了好一番口舌，终于从郭大侠处问得了金龙生的踪迹。"
     translated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo."
     qcReviewedText: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\\nCurrently,<b>Northern Youzhou </b>I searched for his whereabouts in the area; I hope you can lend a hand so we can find out the identity of the Blood Robe Alliance's grand commander."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\\nCurrently, I am searching for his whereabouts in the area north of Youzhou; I hope you can lend a hand so we can find out the identity of the Blood Robe Alliance's grand commander."
-    qcFailureReason: " Restore `<b>` to the translation, as it was incorrectly removed. Restore `</b>` to the translation, as it was incorrectly removed."
+    qcTranslated: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\\nCurrently, I am searching for his whereabouts in <b>Northern Youzhou</b>; I hope you can lend a hand so we can find out the identity of the Blood Robe Alliance's grand commander."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "#PlayerName#, I had to plead my case for quite some time before finally getting the whereabouts of Jin Longsheng from Great Hero Guo.\\nCurrently,<b>Northern Youzhou </b>I searched for his whereabouts in the area; I hope you can lend a hand so we can find out the identity of the Blood Robe Alliance's grand commander."
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "眼下正在"
     translated: "Currently,"
@@ -2705,13 +2704,13 @@
   - text: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来"
     translated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#."
     qcReviewedText: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#.<b>Beggar Sect </b>Discuss strategies together"
-    qcTranslated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; please come to the <b>Beggar Sect</b> with #PlayerName# to discuss strategies together."
+    qcTranslated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; please come to the <b>Beggar Sect</b>, #PlayerName#, so we can discuss a countermeasure together."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: MeaningReversal
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - MeaningReversal
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -4582,11 +4581,12 @@
   - text: "万物归墟"
     translated: "Sea of Foes"
     qcReviewedText: "Sea of Foes"
-    qcStatus: Passed
-    flaggedForQcReview: true
-    qcDefectCategory: Uncertain
+    qcTranslated: "Return to the Void"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - Uncertain
+    - DomainTerm
 - raw: "三人行，必有我师焉。"
   splits:
   - text: "三人行，必有我师焉。"
@@ -11050,13 +11050,12 @@
   - text: "右侧的菜单栏，可以进行其他的战斗操作，"
     translated: "The menu on the right can be used for other battle operations."
     qcReviewedText: "The menu on the right can be used for other battle operations.\\nIf you need, use, or move items, rest, or perform other actions."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "The menu on the right can be used for other battle operations.\\nSuch as moving, resting, using items, etc."
+    qcTranslated: "The menu on the right can be used for other battle operations,\\nsuch as moving, resting, and using items."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "The menu on the right can be used for other battle operations.\\nIf you need, use, or move items, rest, or perform other actions."
+    - MeaningReversal
   - subIndex: 1
     text: "如移动，休息，使用物品等。"
     translated: "If you need, use, or move items, rest, or perform other actions."
@@ -18920,7 +18919,7 @@
     qcTranslated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve. <b>#PosText#</b> What are you up to"
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 55
+    qcQualityScore: 0
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
@@ -23891,13 +23890,12 @@
   - text: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，"
     translated: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant."
     qcReviewedText: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant.\\nFor all renowned scholars of future generations to admire."
-    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word was as good as nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
+    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word carried the weight of nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
     qcStatus: Corrected
     flaggedForQcReview: true
-    qcQualityScore: 45
-    qcDefectCategory: UnnaturalPhrasing
+    qcQualityScore: 0
+    qcDefectCategory: LostIdiom
     qcDefectCategories:
-    - UnnaturalPhrasing
     - LostIdiom
   - subIndex: 1
     text: "供后世所有名人雅士瞻仰。"

@@ -79,14 +79,13 @@
     text: "痛饮"
     translated: "Drunken revelry"
     qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
-    qcStatus: FailedValidation
+    qcTranslated: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high‑quality treasures."
+    qcStatus: Corrected
     flaggedForQcReview: true
-    qcRejectedCorrection: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes 20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high‑quality treasures."
-    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
+    - DroppedContent
   - split: 15
     subIndex: 1
     text: "消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
@@ -335,14 +334,9 @@
     text: "试炼"
     translated: "Trial"
     qcReviewedText: "<b>Trial</b>：Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "<b>Trial</b>: Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>: Infamy for stealing from others and shops: 40%. You can use a Special Technique to force your way out when caught by the authorities."
-    qcFailureReason: "Missing a negative sign '-' before a number required by the source."
-    qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "<b>Trial</b>：Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 15
     subIndex: 1
     text: "挑战难度不断提升的鬼门关试炼，获取逐渐增强的天赋效果。"

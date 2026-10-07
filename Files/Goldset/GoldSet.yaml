@@ -166,6 +166,13 @@ additionalSourceAssessments:
   sampleSeed: 'n/a'
   selection: >-
     21 correctionSamples mined from the 161 splits flagged flaggedForQcReview in Files/Converted (2026-10-07 review). Covers 14 safe fixes (name/terminology, pronoun, anachronism, acupoint pinyin), 2 unnecessary rewrites and 5 harmful corrections (geisha for 舞伎, Pukdao for 朴刀, La'er for 江老二, an invented 'your humble wife' for 妾身, odds and evens for 管他三七二十一). Items set sampleRun ConvertedCorpus-20261007-qc-flagged-review.
+- name: ConvertedCorpus-20261007-qc-flagged-review-2
+  path: Files/Converted
+  sampleFingerprint: 'n/a - not a TranslationAssessmentWorkflow run'
+  sampleSize: 'n/a'
+  sampleSeed: 'n/a'
+  selection: >-
+    10 correctionSamples mined from the 73 splits still flagged flaggedForQcReview after the 2026-10-07 full re-QC of the first 160 (with the first batch's Files/Glossary/QcFixes.yaml entries in place). 5 safe corrections (hand-written or pipeline) and 5 harmful pipeline corrections (wrong person shift, leaked game term, dropped title, invented content), plus the 朴刀 relabel from Pass to Defect (Cutlass is not wuxia-themed).
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -5150,15 +5157,166 @@ correctionSamples:
   sampleKind: split
   source: "朴刀"
   currentTranslation: "Cutlass"
-  label: Pass
-  defectCategories: []
-  proposedCorrection: "Pukdao"
-  correctionSafety: harmful
+  label: Defect
+  defectCategories:
+  - terminology
+  proposedCorrection: "Pudao"
+  correctionSafety: safe
   provenance: >-
     Real QC pair from Files/Converted/dynamicStringsFromColumns.txt.yaml (first split 朴刀...);
-    currentTranslation is the pre-QC translation, proposedCorrection is the pipeline's qcTranslated.
-    Original qcQualityScore 0.
+    currentTranslation is the pre-QC translation. The pipeline's qcTranslated was "Pukdao" (original
+    qcQualityScore 0); proposedCorrection here is the hand-written fix instead.
   reviewNote: >-
-    朴刀 is a pǔdāo, a long-handled cutlass; "Cutlass" is a standard rendering. The correction
-    "Pukdao" is not valid pinyin (it should be Pudao), so it introduces a wrong proper name into a
-    correct line. Harmful.
+    Relabelled Pass -> Defect on 2026-10-07 by the project owner: "Cutlass" is not wuxia-themed (a
+    modern/Western weapon name in a wuxia setting), so QC was right to flag it. 朴刀 is the pǔdāo, kept
+    as Pudao. The pipeline's "Pukdao" is not valid pinyin, so that correction was harmful, but the
+    detection was correct. Detection should flag this (DOMAIN_TERM / OTHER_NAMED_DEFECT); a verifier
+    must accept "Pudao".
+- sampleId: 3617fe0eacbb3b81
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review
+  sampleKind: split
+  source: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
+  currentTranslation: "These eight moves draw a 'Permanence' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Permanence' as the introductory practice for calligraphy skills."
+  label: Defect
+  defectCategories:
+  - mistranslation
+  - terminology
+  proposedCorrection: "These eight moves trace the character for 'eternity' in the air, using its eight brushstroke types - dot, horizontal, vertical, hook, rising, long sweep, short sweep, and right-falling stroke - as an introductory calligraphy practice."
+  correctionSafety: safe
+  provenance: >-
+    Real line from Files/Converted/KungFuData.csv.yaml (skill 616 永字八法 description, split 4);
+    currentTranslation is the pre-QC translation. Production QC gave up on it (qcRuleCheckFailureCount 4):
+    the natural correction keeps the character 永 in the output, which line validation rejects as
+    leftover Chinese. Hand-added 2026-10-07 to test that the corrector expresses a quoted
+    single character by its meaning instead of copying it.
+  reviewNote: >-
+    Source describes the eight strokes of the character 永 (侧 dot, 勒 horizontal, 努 vertical, 趯 hook,
+    策 rising, 掠 long left-falling, 啄 short left-falling, 磔 right-falling). currentTranslation mangles
+    the stroke list (horizontal is missing; "advancing", "picking", "splitting" are not stroke names)
+    and renders 永 as a 'Permanence' character. The correction must NOT contain the Chinese character
+    (validation rejects CJK in the output), so it gives the meaning ("eternity") and names the strokes
+    by their English calligraphy terms.
+- sampleId: 8ead92c280c7bb5d
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 买卖价格x{0}%
+  currentTranslation: Buy Price x {0}%
+  label: Defect
+  defectCategories:
+  - dropped-content
+  proposedCorrection: Buy/Sell Price x {0}%
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/dynamicStrings.txt.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is the pipeline's rejected correction (qcRuleCheckFailureCount 5).
+  reviewNote: 买卖 is literally buy-sell, so "Buy Price" drops half the label and "Buy/Sell Price" is faithful. The {0}% is in the source, not invented. Production rejected the correction with "Alternatives were provided when none should be given" - the alternative-pair rule false-positives here, so the correction is safe and the rule is the bug.
+- sampleId: dccd2f50c332d29d
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 江十二
+  currentTranslation: River Twelve
+  label: Defect
+  defectCategories:
+  - terminology
+  proposedCorrection: Jiang Shier
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/dynamicStrings.txt.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is the pipeline's qcTranslated.
+  reviewNote: A personal name rendered as a literal gloss (十二 'twelve'). The detection prompt's own example for this convention. Jiang Shier is correct.
+- sampleId: a5b87e6c4b1bdf2d
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 这日你巡视之时，忽听得远处锣声大躁，喊杀震天，\n匆忙赶去，发现竟是一伙盗贼从后院闯入，意欲抢劫行凶。\n众家丁奋力反击，方才勉强抵挡得住。
+  currentTranslation: On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky.\nHastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault.\nThe servants fought back desperately and barely managed to hold their ground.
+  label: Defect
+  defectCategories:
+  - mistranslation
+  - pronoun-attribution
+  proposedCorrection: On this day, as you patrolled, you suddenly heard distant gongs beating loudly and shouts of battle echoing to the sky. Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault. The household servants Counterattack desperately and barely managed to hold their ground.
+  correctionSafety: harmful
+  provenance: Real QC pair from Files/Converted/dynamicStrings.txt.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is the pipeline's qcTranslated.
+  reviewNote: 锣 is a gong, so "drums" is a mistranslation and the correction rightly fixes it. But the narration addresses the player as 你 ("as you patrolled") and 匆忙赶去 has no subject, so "I found" is a wrong person shift that neither the translator nor the correction fixed. The correction also leaks a game keyword ("Counterattack", from 反击) into the prose. A verifier should reject it for the person shift and the leaked term.
+- sampleId: fe953091e3366022
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 哼，一群宵小之徒，被我打的屁滚尿流了吧！\n多谢这位少侠相助，在下“神拳无敌”郝大力，\n在江湖中也算颇负盛名。
+  currentTranslation: Hmph, a bunch of upstarts‑were they running around with their pants down and urine streaming?\nThank you for your help, Young Hero. I am Invincible Divine Fist Hao Dali.\nIs fairly well‑known in the Jianghu
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: Hmph, a bunch of upstarts‑did I beat them into a bloody mess?\nThank you for your help, Young Hero. I am Invincible Divine Fist Hao Dali,\nquite famous in the Jianghu.
+  correctionSafety: harmful
+  provenance: Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is the pipeline's qcTranslated.
+  reviewNote: 屁滚尿流 is an idiom for fleeing in blind terror. The translation is a garbled literal, but the correction invents "bloody mess" (no blood in the source) and drops the terror/fleeing sense. A good fix reads along the lines of "sent them scrambling away in terror".
+- sampleId: 0de609c58bf47564
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 当年师伯我，确实是仙霞派掌门的继任人选。\n师公不知为何突然改变主意，决定将掌门之位传给姜师弟，\n实话说，我也确实心怀不满，此乃人之常情。
+  currentTranslation: Back then, my senior uncle was indeed the successor to the Xianxia Sect Leader.\nMaster Uncles knew for some reason he suddenly changed his mind and decided to pass the Sect Leader position to Junior Disciple Jiang.\nTo be honest, I do have some grievances, and it's only human.
+  label: Defect
+  defectCategories:
+  - terminology
+  - mistranslation
+  proposedCorrection: Back then, I was indeed the successor to the Xianxia Sect Leader.\nMartial Grandfather, for some reason, suddenly changed his mind and decided to pass the Sect Leader position to Junior Disciple Jiang.\nTo be honest, I do have some grievances, and it's only human.
+  correctionSafety: harmful
+  provenance: Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is the pipeline's rejected correction (glossary check failed).
+  reviewNote: 师伯我 is the speaker calling themself 师伯 ("I, your Martial Uncle"). The translation wrongly makes it a third party; the correction fixes line 2 (师公 -> Martial Grandfather) but drops the 师伯 title from line 1. The glossary check (师伯 -> Martial Uncle) was right to fail it, so this is not a validator false positive.
+- sampleId: 0fe9eb6b91603e77
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: （眼下正好找个理由开溜，想必不算太过丢脸）\n哎，我武当派助峨眉夺回大理，又攻下这乐山镇，已是仁至义尽。
+  currentTranslation: (Assuming I find a reasonable excuse to slip away now, it shouldn't be too shameful) \nAlas, having aided the Wudang Sect in recapturing Dali and conquering Leshan Town, we have already gone beyond duty.
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: (Assuming I find a reasonable excuse to slip away now, it shouldn't be too shameful)\nAlas, my Wudang Sect has helped Emei retake Dali and conquer Leshan Town; we have more than done our duty.
+  correctionSafety: safe
+  provenance: 'Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is hand-written. The pipeline''s was rejected by the glossary check: it wrote ''aided the Emei Sect ... we have already gone beyond duty'', dropping Wudang.'
+  reviewNote: The speaker is Wudang and the beneficiary is Emei (我武当派助峨眉). The translation has aided the wrong sect (Wudang). The pipeline correction fixed the object but dropped the speaker's own sect (我武当派 became 'we'), so the Wudang glossary check was right to fail it. The hand-written fix keeps both.
+- sampleId: f71100189bfe3d52
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 诸位，我#$PlayerName#自继任仙霞派掌门以来，一直承蒙各位支持。\n历经阎罗殿肆虐，血衣盟阴谋等劫难，勉力维持下来。
+  currentTranslation: 'Ladies and gentlemen, #$PlayerName# has been supported by all of you since I succeeded as the Sect Leader of Xianxia Sect.\nEnduring the ravages of Yama Hall and the machinations of the Blood Robe Alliance, we have managed to survive.'
+  label: Defect
+  defectCategories:
+  - mistranslation
+  proposedCorrection: 'Ladies and gentlemen, ever since I, #$PlayerName#, succeeded as the Sect Leader of Xianxia Sect, I have had all of your support.\nEnduring the ravages of Yama Hall and the machinations of the Blood Robe Alliance, we have managed to survive.'
+  correctionSafety: safe
+  provenance: 'Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is hand-written. The pipeline''s was rejected because it dropped #$PlayerName# entirely.'
+  reviewNote: 我#$PlayerName# is the speaker naming themself, but the translation makes the placeholder a third person while also saying 'I'. The pipeline correction fixed the grammar by deleting the placeholder, which the placeholder check rightly rejected. The fix must keep the placeholder as the speaker's own name.
+- sampleId: 06628c321d0106bb
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 咳咳，王、王添翼兄弟呢？！
+  currentTranslation: Cough, cough, where's Brother Wang Tianyi?!
+  label: Defect
+  defectCategories:
+  - dropped-content
+  proposedCorrection: Cough, cough, where's Brother W‑W‑Wang Tianyi?!
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is hand-written. The pipeline's 'W-W-Wang Tianyi, Brother?!' was rejected by the glossary check (添翼兄 -> Brother Tianyi).
+  reviewNote: Source stammers on 王 and the translation drops it. The pipeline correction restored the stammer but moved the honorific after the name, breaking the glossary form "Brother ...". A correct fix keeps "Brother" first.
+- sampleId: cc2c8782e58cf029
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: 虽说同样私交不深，但此前扬州烟花柳巷，\n铲除血衣盟总舵时，我也替神机门出力甚多。
+  currentTranslation: Though they had similarly shallow private friendships, previously in Yangzhou's red‑light district,\nWhen eliminating the headquarters of the Blood Robe Alliance, I also contributed significantly to the Divine Mechanism Sect.
+  label: Defect
+  defectCategories:
+  - pronoun-attribution
+  - mistranslation
+  proposedCorrection: Though our personal ties are similarly shallow, when I helped eliminate the Blood Robe Alliance's headquarters in Yangzhou's pleasure quarters, I also contributed significantly to the Divine Mechanism Sect.
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is the pipeline's qcTranslated.
+  reviewNote: The translation puts the first clause in third person ("Though they had") while the speaker says 我 in the next line, and splits the sentence awkwardly across the line break. The correction merges them correctly with "our"/"I". This is a good fix that production scored 0, so a verifier should accept it.
+- sampleId: 4f25cdae98ecce72
+  sampleRun: ConvertedCorpus-20261007-qc-flagged-review-2
+  sampleKind: split
+  source: （这次竟不闪不避，徒手接住岳无畏的兵刃，虎口顿时血流如注。\n随后使出醉拳中的缠身之法，用另一只手紧紧勒住岳无畏的脖颈，\n两人顿时打作一团！）
+  currentTranslation: (This time, he didn't dodge and caught Yue Wuwei's weapon with his bare hands, causing blood to flow profusely from his wrists.\nThen he used the entangling techniques from Drunken Fist, using his other hand to tightly choke Yue Wuwei's neck.\nTwo immediately started fighting!)
+  label: Defect
+  defectCategories:
+  - mistranslation
+  - terminology
+  proposedCorrection: (This time, he didn't dodge and caught Yue Wuwei's weapon with his bare hands, causing blood to flow profusely from the web of his hand.\nThen he used the entangling techniques from Drunken Fist, using his other hand to tightly choke Yue Wuwei's neck.\nThe two immediately started fighting!)
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is hand-written. The pipeline's said 'the tiger's mouth of his hand'.
+  reviewNote: 虎口 is the web between thumb and forefinger. "Wrists" is wrong, and the pipeline's literal "tiger's mouth of his hand" is a calque no English reader would parse.

@@ -1089,13 +1089,13 @@
   - text: "最近收到一封奇怪请柬，邀我参加什么黑道大会。感觉事有蹊跷，还请#PlayerName#来"
     translated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#."
     qcReviewedText: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; I could use your help, #PlayerName#.<b>Beggar Sect </b>Discuss strategies together"
-    qcTranslated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; please come to the <b>Beggar Sect</b> with #PlayerName# to discuss strategies together."
+    qcTranslated: "I recently received a strange invitation to attend some kind of Underworld conference. Something feels off about it; please come to the <b>Beggar Sect</b>, #PlayerName#, so we can discuss a countermeasure together."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: MeaningReversal
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - MeaningReversal
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "丐帮"
     translated: "Beggar Sect"
@@ -2537,12 +2537,12 @@
   - text: "#PlayerName#，我在"
     translated: "#PlayerName#, I am"
     qcReviewedText: "#PlayerName#, I am <b>Xiliang </b>They have gathered some leads in their pursuit of the notorious bandit responsible for the recent bloodshed in the city. We hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
-    qcTranslated: "#PlayerName#, I am <b>Xiliang</b> investigating the notorious bandit responsible for the recent bloodshed in the city, and I have now gathered some leads. I hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
+    qcTranslated: "#PlayerName#, I am investigating the notorious bandit responsible for the recent bloodshed in <b>Xiliang</b> City, and I have gathered some leads. I hope you can lend a hand to help catch this evil bandit and bring him to justice sooner."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
+    - HardToParseSeam
     - DroppedContent
   - subIndex: 1
     text: "西凉"

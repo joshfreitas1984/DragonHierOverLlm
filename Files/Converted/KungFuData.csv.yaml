@@ -5792,14 +5792,12 @@
     text: "此八招在空中画一“永”字，取“永”字中侧勒努趯策掠啄磔八种运笔方式，作为书法功夫的入门修习"
     translated: "These eight moves draw a 'Permanence' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Permanence' as the introductory practice for calligraphy skills."
     qcReviewedText: "These eight moves draw a 'Permanence' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Permanence' as the introductory practice for calligraphy skills."
-    qcStatus: FailedValidation
-    flaggedForQcReview: true
-    qcRejectedCorrection: "These eight moves draw a '永' character in the air, taking the eight brushstroke techniques—side, vertical, left-falling, rising, advancing, scooping, picking, and splitting—from the character '永' as the introductory practice for calligraphy skills."
-    qcFailureReason: " If your prior translation includes Chinese, output English only. Scan the last translation for Chinese text, cross-check with the original Chinese from the first user prompt, and translate all remaining Chinese into fluent, natural English."
+    qcTranslated: "These eight moves draw a 'Yong' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Yong' as the introductory practice for calligraphy skills."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - Unknown
-    qcRuleCheckFailureCount: 4
-    qcRuleCheckFailureBaseline: "These eight moves draw a 'Permanence' character in the air, taking the eight brushstroke techniques‑side, vertical, left‑falling, rising, advancing, scooping, picking, and splitting‑from the character 'Permanence' as the introductory practice for calligraphy skills."
+    - DomainTerm
 - raw: "617,奇门,1,丹青破穴,以人体为画布，以穴位为着墨之处的奇门绘画武功，能快速点指敌人多处穴位,10,1.1,奇门1;意志1,,意志1;奇门3;内力0.2,奇门25;意志15,\"0,1,1\",\"0,0,0\",心胸点穴0.04;头颈点穴0.04,10,9,0,腹17,腹11,,,skill4_7,,墨染-Target-Grid-Happen,笔,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -7536,13 +7534,13 @@
     text: "庄者四通八达之大道也，此功法共天地之心、龙鹤风云、大小幽明道路十二条，条条皆是修持气脉，元养筋骨之精妙法门"
     translated: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of great yin and yang, each a marvelous technique for nurturing qi channels, essence, and muscle & bone."
     qcReviewedText: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of great yin and yang, each a marvelous technique for nurturing qi channels, essence, and muscle & bone."
-    qcTranslated: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of great yin and yang, each a marvelous technique for nurturing qi channels, essence, and Muscle & Bone."
+    qcTranslated: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of dragon, crane, wind, cloud, great yin, and yang, each a marvelous technique for nurturing qi channels, essence, and Muscle & Bone."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: DomainTerm
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - DomainTerm
+    - DroppedContent
 - raw: "801,内功,1,峨眉归藏功,峨眉所夺得的龙胤归藏功一部分，因内容较少而融入了大量峨眉心法，可以提升修习者的行动之灵巧,,1.1,灵巧潜力1,生命上限50;内力上限30;内功4;灵巧4;经脉4;意志2;通脉0.06,,内功15;灵巧10;意志5,,,,0,14,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 4

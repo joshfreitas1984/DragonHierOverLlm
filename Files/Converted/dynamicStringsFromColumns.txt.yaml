@@ -2956,15 +2956,11 @@
 - raw: "骕骦马"
   splits:
   - text: "骕骦马"
-    translated: "Stallion"
-    qcReviewedText: "Stallion"
-    qcTranslated: "Suishuang"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    translated: "Swiftsteed Horse"
+    qcReviewedText: "Swiftsteed Horse"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "玉花骢"
   splits:
   - text: "玉花骢"
@@ -3024,7 +3020,7 @@
   - text: "拳毛驹"
     translated: "Curly‑Coated Colt"
     qcReviewedText: "Curly‑Coated Colt"
-    qcTranslated: "Quanmaoju"
+    qcTranslated: "Quan Mao Ju"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -52406,11 +52402,12 @@
   - text: "牛黄血竭丹"
     translated: "Orchid Bull Blood‑Resolving Pill"
     qcReviewedText: "Orchid Bull Blood‑Resolving Pill"
-    qcStatus: Passed
-    flaggedForQcReview: true
-    qcDefectCategory: Uncertain
+    qcTranslated: "Bezoar Dragon's Blood Pill"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - Uncertain
+    - DomainTerm
 - raw: "田七鲨胆丹"
   splits:
   - text: "田七鲨胆丹"
