@@ -388,26 +388,23 @@
   splits:
   - text: "本月会在门内为师傅举办寿宴，#PlayerName#莫要忘了准备礼物。"
     translated: "This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift."
-    qcReviewedText: "<b>This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift.</b>If you anger Master, don't blame Senior Sister for not warning you."
+    qcReviewedText: "<b>This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift.</b>Don't blame me, your Senior Sister, for not warning you if you anger Master."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若惹得师父他老人家生气，可别怪师姐我没提醒你。"
-    translated: "If you anger Master, don't blame Senior Sister for not warning you."
+    translated: "Don't blame me, your Senior Sister, for not warning you if you anger Master."
   templates:
   - template: "<b>{0}</b>{1}"
 - raw: "不知#PlayerName#近来练功可有懈怠？若是得空，不妨来与师姐我切磋切磋。"
   splits:
   - text: "不知#PlayerName#近来练功可有懈怠？若是得空，不妨来与师姐我切磋切磋。"
-    translated: "Unknown, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
-    qcReviewedText: "Unknown, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
-    qcTranslated: "I wonder, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Have you been slacking off in your training lately, #PlayerName#? If you have some free time, come and spar with me, your Senior Sister."
+    qcReviewedText: "Have you been slacking off in your training lately, #PlayerName#? If you have some free time, come and spar with me, your Senior Sister."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "魏师兄遭贼人围攻，事态紧急，#PlayerName#<b>速回门派</b>救援！"
   splits:
   - text: "魏师兄遭贼人围攻，事态紧急，#PlayerName#"
@@ -1517,8 +1514,8 @@
   splits:
   - text: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在"
     translated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here."
-    qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
-    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\nI'll take the lead, and you and Daoist Wenyi follow behind to deal with this guy together!"
+    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\nI'll take the lead, and you and Daoist Wenyi follow behind to deal with this guy together!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -1533,7 +1530,7 @@
     translated: "In!"
   - subIndex: 3
     text: "老子先行一步，你和文逸真人随后赶来，一同会会这家伙去！"
-    translated: "I'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    translated: "I'll take the lead, and you and Daoist Wenyi follow behind to deal with this guy together!"
   templates:
   - template: "{0}<b>{1}</b>{2}\n{3}"
 - raw: "大当家王伦突然发难，要将宋明公一派人马赶出梁山。还望#PlayerName#先行前去救援，以免山寨落入王伦手中。\n我会率领官军随后赶来，一同围剿这伙恶贼。"

@@ -3020,13 +3020,13 @@
   - text: "拳毛驹"
     translated: "Curly‑Coated Colt"
     qcReviewedText: "Curly‑Coated Colt"
-    qcTranslated: "Quan Mao Ju"
+    qcTranslated: "Quanmaojv"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "斑豹马"
   splits:
   - text: "斑豹马"
@@ -55894,8 +55894,8 @@
 - raw: "无为真人"
   splits:
   - text: "无为真人"
-    translated: "Immortal Wuwei"
-    qcReviewedText: "Immortal Wuwei"
+    translated: "Daoist Wuwei"
+    qcReviewedText: "Daoist Wuwei"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -55963,8 +55963,8 @@
 - raw: "文逸真人"
   splits:
   - text: "文逸真人"
-    translated: "Immortal Wenyi"
-    qcReviewedText: "Immortal Wenyi"
+    translated: "Daoist Wenyi"
+    qcReviewedText: "Daoist Wenyi"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -56009,8 +56009,8 @@
 - raw: "清虚真人"
   splits:
   - text: "清虚真人"
-    translated: "Immortal Qingxu"
-    qcReviewedText: "Immortal Qingxu"
+    translated: "Daoist Qingxu"
+    qcReviewedText: "Daoist Qingxu"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -56260,8 +56260,8 @@
 - raw: "白眉真人"
   splits:
   - text: "白眉真人"
-    translated: "Immortal Whitebrow"
-    qcReviewedText: "Immortal Whitebrow"
+    translated: "Daoist Whitebrow"
+    qcReviewedText: "Daoist Whitebrow"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -56300,8 +56300,8 @@
 - raw: "潇湘真人"
   splits:
   - text: "潇湘真人"
-    translated: "Immortal Xiaoxiang"
-    qcReviewedText: "Immortal Xiaoxiang"
+    translated: "Daoist Xiaoxiang"
+    qcReviewedText: "Daoist Xiaoxiang"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60684,13 +60684,12 @@
   - text: "朴刀"
     translated: "Cutlass"
     qcReviewedText: "Cutlass"
-    qcTranslated: "Pukdao"
+    qcTranslated: "Pudao"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 100
+    qcDefectCategory: DomainTerm
     qcDefectCategories:
-    - UntranslatedPinyin
+    - DomainTerm
 - raw: "大刀"
   splits:
   - text: "大刀"

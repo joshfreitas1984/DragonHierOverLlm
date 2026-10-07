@@ -78,13 +78,13 @@
   splits:
   - text: "#$PlayerName#！你作恶多端，江湖中人人得而诛之，"
     translated: "#$PlayerName#! You have committed numerous evil deeds, and in the Jianghu, everyone is entitled to seek your downfall."
-    qcReviewedText: "#$PlayerName#! You have committed numerous evil deeds, and in the Jianghu, everyone is entitled to seek your downfall.\nToday, I #$TargetInteractName# will mete out justice as the law demands and arrest you!"
+    qcReviewedText: "#$PlayerName#! You have committed numerous evil deeds, and in the Jianghu, everyone is entitled to seek your downfall.\nToday, I, #$TargetInteractName#, will uphold justice and arrest you!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "今日我#$TargetInteractName#就要替天行道，将你捉拿归案！"
-    translated: "Today, I #$TargetInteractName# will mete out justice as the law demands and arrest you!"
+    translated: "Today, I, #$TargetInteractName#, will uphold justice and arrest you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#$PlayerName#！天堂有路你不走，地狱无门你偏自投，\n今日便要将你我的新仇旧恨一齐算清！"
@@ -283,13 +283,13 @@
   splits:
   - text: "#$TargetInteractName#！你近些日子处处与我作对，可谓积怨已深。"
     translated: "#$TargetInteractName#! You've been deliberately opposing me at every turn lately, so our grievances run deep."
-    qcReviewedText: "#$TargetInteractName#! You've been deliberately opposing me at every turn lately, so our grievances run deep.\nToday, I #$SourceInteractName# will settle who's better!"
+    qcReviewedText: "#$TargetInteractName#! You've been deliberately opposing me at every turn lately, so our grievances run deep.\nToday, I, #$SourceInteractName#, will settle the score with you!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "今天我#$SourceInteractName#便要和你分个高下！"
-    translated: "Today, I #$SourceInteractName# will settle who's better!"
+    translated: "Today, I, #$SourceInteractName#, will settle the score with you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerForceName#与本门不甚和睦，恐怕还不能将本门任务委托于你。\n(需要至少40点门派好感。)"
@@ -600,7 +600,7 @@
   - text: "#PlayerName#与前任配偶绝离未久。"
     translated: "#PlayerName# recently divorced your former spouse"
     qcReviewedText: "#PlayerName# recently divorced your former spouse\nTo avoid rumors, it might be better for us to marry another day."
-    qcTranslated: "#PlayerName# recently divorced their former spouse. To avoid rumors, it might be better for you and me to marry another day."
+    qcTranslated: "#PlayerName# recently divorced their former spouse. To avoid rumors, it might be better for us to tie the knot another day."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -1961,14 +1961,11 @@
 - raw: "#PlayerName#有难，我#$TargetInteractName#岂能坐视不理？\n今天难得有此机会，你我并肩作战，一同对敌！"
   splits:
   - text: "#PlayerName#有难，我#$TargetInteractName#岂能坐视不理？"
-    translated: "#PlayerName# has trouble, how can I #$TargetInteractName# sit idly by?"
-    qcReviewedText: "#PlayerName# has trouble, how can I #$TargetInteractName# sit idly by?\nToday we have a rare chance to fight side by side and face our enemies together!"
-    qcTranslated: "#PlayerName# is in trouble, how can I, #$TargetInteractName#, sit idly by?\nToday we have a rare chance to fight side by side and face our enemies together!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "#PlayerName# in trouble, how could I, #$TargetInteractName#, stand idly by?"
+    qcReviewedText: "#PlayerName# in trouble, how could I, #$TargetInteractName#, stand idly by?\nToday we have a rare chance to fight side by side and face our enemies together!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "今天难得有此机会，你我并肩作战，一同对敌！"
     translated: "Today we have a rare chance to fight side by side and face our enemies together!"
@@ -2346,16 +2343,13 @@
   splits:
   - text: "#PlayerName#武功着实高强，"
     translated: "#PlayerName#'s martial arts skills are truly formidable"
-    qcReviewedText: "#PlayerName#'s martial arts skills are truly formidable\nI #$TargetInteractName# is skilled beyond me, and I willingly admit defeat."
-    qcTranslated: "#PlayerName#'s martial arts skills are truly formidable.\\nI, #$TargetInteractName#, am outmatched and willingly admit defeat."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    qcReviewedText: "#PlayerName#'s martial arts skills are truly formidable\nI yield; my skills are no match for you, #$TargetInteractName#."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我#$TargetInteractName#技不如人，甘拜下风。"
-    translated: "I #$TargetInteractName# is skilled beyond me, and I willingly admit defeat."
+    translated: "I yield; my skills are no match for you, #$TargetInteractName#."
   templates:
   - template: "{0}\n{1}"
 - raw: "#PlayerName#武功着实高强，佩服佩服。"
@@ -4488,13 +4482,13 @@
   splits:
   - text: "#TargetInteractName#你心狠手辣，作恶多端。"
     translated: "#TargetInteractName# You are ruthless and perpetually wicked"
-    qcReviewedText: "#TargetInteractName# You are ruthless and perpetually wicked\nToday, I #$PlayerName# will take justice into my own hands and arrest you!"
+    qcReviewedText: "#TargetInteractName# You are ruthless and perpetually wicked\nToday, I, #$PlayerName#, will uphold justice and arrest you!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "今日我#$PlayerName#就要替天行道，将你捉拿归案！"
-    translated: "Today, I #$PlayerName# will take justice into my own hands and arrest you!"
+    translated: "Today, I, #$PlayerName#, will uphold justice and arrest you!"
   templates:
   - template: "{0}\n{1}"
 - raw: "#TargetInteractName#你愁眉不展，唉声叹气，似乎有什么难言之隐，\n不知是否有我帮得上忙的地方。"
@@ -14182,7 +14176,7 @@
     qcFailureReason: " Alternatives were provided when none should be given."
     qcDefectCategories:
     - Unknown
-    qcRuleCheckFailureCount: 5
+    qcRuleCheckFailureCount: 4
     qcRuleCheckFailureBaseline: "Buy Price x {0}%"
   templates:
   - template: "{0}x⟦0⟧%"
@@ -15356,13 +15350,13 @@
   splits:
   - text: "从今往后，你应当勤修武功。"
     translated: "From now on, you should diligently practice your martial arts."
-    qcReviewedText: "From now on, you should diligently practice your martial arts.\nYou must not be lax or negligent; let down the reputation of your Master!"
+    qcReviewedText: "From now on, you should diligently practice your martial arts.\nAbsolutely no slackening, or it will tarnish my name as your Master!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "万万不能松散懈怠，堕了师傅我的威名！"
-    translated: "You must not be lax or negligent; let down the reputation of your Master!"
+    translated: "Absolutely no slackening, or it will tarnish my name as your Master!"
   templates:
   - template: "{0}\n{1}"
 - raw: "从今日起，我#PlayerForceName#便秉持{1}之道，在此地开宗立派。\n此外，我#PlayerForceName#也将继承{0}之武功秘籍和修行法门，并将之发扬光大。"
@@ -22966,17 +22960,16 @@
   splits:
   - text: "哈哈哈哈，高风亮节，果真大侠风范。"
     translated: "Haha, high moral character, truly the wind of a great hero."
-    qcReviewedText: "Haha, high moral character, truly the wind of a great hero.\n#PlayerName#, to have you as this sincere friend, I #$TargetInteractName# have lived a fulfilling life.\nJianghu road long, each take care, we'll meet again!"
-    qcTranslated: "Haha, noble and upright, truly the bearing of a Great Hero.\n#PlayerName#, to have you as this sincere friend, I #$TargetInteractName# have lived a fulfilling life.\nThe Jianghu road is long, take care of yourselves, we'll meet again!"
+    qcReviewedText: "Haha, high moral character, truly the wind of a great hero.\n#PlayerName#, having you as this sincere friend is enough for me, #$TargetInteractName#, in this lifetime.\nJianghu road long, each take care, we'll meet again!"
+    qcTranslated: "Haha, noble and upright, truly the bearing of a Great Hero.\n#PlayerName#, to have you as such a sincere friend is all I, #$TargetInteractName#, could ever wish for in this life.\nThe Jianghu road is long; take care of yourselves, and we shall meet again!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "#PlayerName#，能得你这一赤诚好友，我#$TargetInteractName#此生足矣。"
-    translated: "#PlayerName#, to have you as this sincere friend, I #$TargetInteractName# have lived a fulfilling life."
+    translated: "#PlayerName#, having you as this sincere friend is enough for me, #$TargetInteractName#, in this lifetime."
   - subIndex: 2
     text: "江湖路远，各自珍重，咱们后会有期！"
     translated: "Jianghu road long, each take care, we'll meet again!"
@@ -24827,11 +24820,14 @@
 - raw: "哼哼，你#TargetForceName#与我#SourceForceName#素来不和，\n此次前来有何贵干啊？"
   splits:
   - text: "哼哼，你#TargetForceName#与我#SourceForceName#素来不和，"
-    translated: "Hmph, you #TargetForceName# and I #SourceForceName# have never gotten along well."
-    qcReviewedText: "Hmph, you #TargetForceName# and I #SourceForceName# have never gotten along well.\nWhat brings you here?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "Hmph, you and #SourceForceName# have never gotten along with #TargetForceName#."
+    qcReviewedText: "Hmph, you and #SourceForceName# have never gotten along with #TargetForceName#.\nWhat brings you here?"
+    qcTranslated: "Hmph, you of #TargetForceName# and I of #SourceForceName# have never gotten along. What brings you here?"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - subIndex: 1
     text: "此次前来有何贵干啊？"
     translated: "What brings you here?"
@@ -24841,16 +24837,13 @@
   splits:
   - text: "哼哼，你们这些武功低微之人，"
     translated: "Hmph, you lowly martial artists,"
-    qcReviewedText: "Hmph, you lowly martial artists,\nEven a hundred or a thousand wouldn't be your match, #$SourceInteractName#!"
-    qcTranslated: "Hmph, you lowly martial artists, even a hundred or a thousand of you wouldn't be my match, #$SourceInteractName#!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: MeaningReversal
-    qcDefectCategories:
-    - MeaningReversal
+    qcReviewedText: "Hmph, you lowly martial artists,\nEven a hundred of them wouldn't be a match for me, #$SourceInteractName#!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "即便来上百十个也不是我#$SourceInteractName#的对手！"
-    translated: "Even a hundred or a thousand wouldn't be your match, #$SourceInteractName#!"
+    translated: "Even a hundred of them wouldn't be a match for me, #$SourceInteractName#!"
   templates:
   - template: "{0}\n{1}"
 - raw: "哼哼，你们这些武功低微之人，\n即便来上百十个也不是我#$TargetInteractName#的对手！"
@@ -25224,14 +25217,11 @@
 - raw: "哼，#TargetForceName#这等微末小派，岂配得上我#$PlayerName#泱泱大才？\n我就算背负骂名也要另谋高就去也，告辞！"
   splits:
   - text: "哼，#TargetForceName#这等微末小派，岂配得上我#$PlayerName#泱泱大才？"
-    translated: "Hmph, #TargetForceName# such a trivial force, how could it be worthy of your greatness, #$PlayerName#?"
-    qcReviewedText: "Hmph, #TargetForceName# such a trivial force, how could it be worthy of your greatness, #$PlayerName#?\nEven if I bear the contempt of others, I must seek a new path. Goodbye!"
-    qcTranslated: "Hmph, #TargetForceName# such a trivial force, how could it be worthy of my #$PlayerName#'s vast talent?\nEven if I bear the contempt of others, I must seek a new path. Goodbye!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Hmm, #TargetForceName#, how could such a minor sect be worthy of my vast talents, #$PlayerName#?"
+    qcReviewedText: "Hmm, #TargetForceName#, how could such a minor sect be worthy of my vast talents, #$PlayerName#?\nEven if I bear the contempt of others, I must seek a new path. Goodbye!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我就算背负骂名也要另谋高就去也，告辞！"
     translated: "Even if I bear the contempt of others, I must seek a new path. Goodbye!"
@@ -30127,13 +30117,13 @@
   splits:
   - text: "好好好，从今往后，你应当勤修武功。"
     translated: "Alright, from now on, you should diligently practice your martial arts."
-    qcReviewedText: "Alright, from now on, you should diligently practice your martial arts.\nYou must not be lax or negligent; let down the reputation of your Master!"
+    qcReviewedText: "Alright, from now on, you should diligently practice your martial arts.\nAbsolutely no slackening, or it will tarnish my name as your Master!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "万万不能松散懈怠，堕了师傅我的威名！"
-    translated: "You must not be lax or negligent; let down the reputation of your Master!"
+    translated: "Absolutely no slackening, or it will tarnish my name as your Master!"
   templates:
   - template: "{0}\n{1}"
 - raw: "好家伙，竟敢在城内公然抢劫，真是无法无天了！\n护卫们给我一起上，叫这小贼尝尝咱们商号的厉害！"
@@ -36455,8 +36445,8 @@
 - raw: "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。\n敢问阁下尊姓大名，寻我有何贵干？"
   splits:
   - text: "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。"
-    translated: "I #$PlayerName# is new to the Jianghu and doesn't seem to recognize someone like you."
-    qcReviewedText: "I #$PlayerName# is new to the Jianghu and doesn't seem to recognize someone like you.\nMay I ask your esteemed name, sir? What brings you to seek me out?"
+    translated: "I, #$PlayerName#, am new to the Jianghu and do not seem to recognize a figure like you, sir."
+    qcReviewedText: "I, #$PlayerName#, am new to the Jianghu and do not seem to recognize a figure like you, sir.\nMay I ask your esteemed name, sir? What brings you to seek me out?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -36468,15 +36458,15 @@
 - raw: "我#$PlayerName#技不如人，甘拜下风。要杀要剐，悉听尊便！\n（当前成功率为{0}%。对方行事越接近戒律/凶狠，以及自身口才越高，越有可能逃过一劫。）"
   splits:
   - text: "我#$PlayerName#技不如人，甘拜下风。要杀要剐，悉听尊便！"
-    translated: "I #$PlayerName# are no match for me. I submit humbly. Do with me as you will!"
-    qcReviewedText: "I #$PlayerName# are no match for me. I submit humbly. Do with me as you will!\n(Current success rate is {0}%. The other party's actions are becoming more and more law‑like./Fierceness, as well as the higher one's eloquence, makes it more likely to escape unscathed.)"
-    qcTranslated: "I #$PlayerName# am no match for you. I submit humbly. Do with me as you will!\n(Current success rate is {0}%. The closer the opponent's actions are to the precepts/fierceness, and the higher one's eloquence, the more likely it is to escape unscathed.)"
+    translated: "I yield; my skills are no match for yours, #$PlayerName#. Do with me as you see fit!"
+    qcReviewedText: "I yield; my skills are no match for yours, #$PlayerName#. Do with me as you see fit!\n(Current success rate is {0}%. The other party's actions are becoming more and more law‑like./Fierceness, as well as the higher one's eloquence, makes it more likely to escape unscathed.)"
+    qcTranslated: "I yield; my skills are no match for yours, #$PlayerName#. Do with me as you see fit!\n(Current success rate is {0}%. The closer the opponent's actions are to the precepts or the more ruthless they are, and the higher your Eloquence, the more likely you are to escape unscathed.)"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - DroppedContent
     - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "（当前成功率为"
     translated: "(Current success rate is"
@@ -36491,14 +36481,15 @@
 - raw: "我#$TargetInteractName#也算是闻名一方的绿林豪杰！识相的快快束手就擒，免得场血光之灾！"
   splits:
   - text: "我#$TargetInteractName#也算是闻名一方的绿林豪杰！识相的快快束手就擒，免得场血光之灾！"
-    translated: "I #$TargetInteractName# is also a notorious bandit hero in these parts! If you value your life, surrender now and avoid bloodshed!"
-    qcReviewedText: "I #$TargetInteractName# is also a notorious bandit hero in these parts! If you value your life, surrender now and avoid bloodshed!"
-    qcTranslated: "I, #$TargetInteractName#, am also a notorious bandit hero in these parts! If you value your life, surrender now and avoid bloodshed!"
+    translated: "If you know what's good for you, surrender quickly to avoid a bloody disaster! Restore '#$TargetInteractName#' to the translation, as it was incorrectly removed."
+    qcReviewedText: "If you know what's good for you, surrender quickly to avoid a bloody disaster! Restore '#$TargetInteractName#' to the translation, as it was incorrectly removed."
+    qcTranslated: "I, #$TargetInteractName#, am a renowned bandit hero of this region! If you know what's good for you, surrender quickly to avoid a bloody disaster!"
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - HardToParseSeam
+    - DroppedContent
 - raw: "我#TargetForceName#与#SourceForceName#素来交好。\n此次特地带数名#TargetForceDescribe#弟子前来，\n是想要与贵派以武论友，切磋交流一番。"
   splits:
   - text: "我#TargetForceName#与#SourceForceName#素来交好。"
@@ -39447,20 +39438,19 @@
   splits:
   - text: "按照江湖规矩，只要向"
     translated: "According to the rules of Jianghu, as long as one approaches"
-    qcReviewedText: "According to the rules of Jianghu, as long as one approaches {0} Formally deliver the challenge and defeat their main force of elite troops,\n'#$PlayerName#' can take your place and establish my own sect here."
-    qcTranslated: "According to the rules of Jianghu, as long as one formally delivers a challenge to {0} and defeats their main force of elite troops, #$PlayerName# can take their place and establish my own sect here."
+    qcReviewedText: "According to the rules of Jianghu, as long as one approaches {0} Formally deliver the challenge and defeat their main force of elite troops,\nI, #$PlayerName#, can take your place, establish a sect here, and start anew."
+    qcTranslated: "According to the rules of Jianghu, as long as one formally delivers a challenge to {0} and defeats their main force of elite troops, I, #$PlayerName#, can take their place, establish a sect here, and start anew."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - HardToParseSeam
-    - UnnaturalPhrasing
+    - MeaningReversal
   - subIndex: 1
     text: "正式递送战书，并击败其大部精锐，"
     translated: "Formally deliver the challenge and defeat their main force of elite troops,"
   - subIndex: 2
     text: "我#$PlayerName#便可取而代之，在此处开宗建派，自立门户。"
-    translated: "'#$PlayerName#' can take your place and establish my own sect here."
+    translated: "I, #$PlayerName#, can take your place, establish a sect here, and start anew."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "按照规矩，这溢出来的酒可不用喝"
@@ -46574,11 +46564,10 @@
     qcReviewedText: "River Twelve"
     qcTranslated: "Jiang Shier"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "江湖"
   splits:
   - text: "江湖"
@@ -46737,13 +46726,13 @@
   - text: "江老二"
     translated: "Old Man Jiang Er"
     qcReviewedText: "Old Man Jiang Er"
-    qcTranslated: "Jiang Lao'er"
+    qcTranslated: "Jiang La'er"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "江老五"
   splits:
   - text: "江老五"
@@ -48336,7 +48325,7 @@
   - text: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
     translated: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
     qcReviewedText: "Master, I've always despised pretentious heroes in Jianghu. Today, I'll make you taste the bitterness of your actions!"
-    qcTranslated: "I've roamed Jianghu for years, and I've always despised pretentious Heroes. Today, I'll make you taste the bitterness of your actions!"
+    qcTranslated: "I roam Jianghu freely, and I've always despised pretentious heroes. Today, I'll make you taste the bitterness of your actions!"
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -53718,13 +53707,13 @@
   - text: "胜利了！一番血战最终击退了"
     translated: "Victory! After a fierce battle, we finally dealt the knockback."
     qcReviewedText: "Victory! After a fierce battle, we finally dealt the knockback.{0} His attack,\nI {1} For {2} The rule will also become more stable!"
-    qcTranslated: "Victory! After a fierce battle, we finally dealt the Knockback to {0}'s attack. I {1} My rule over {2} will also become more stable!"
+    qcTranslated: "Victory! After a fierce battle, we finally dealt the knockback to {0}'s attack. My {1} rule over {2} will also become more stable!"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - OtherNamedDefect
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "的攻击，"
     translated: "His attack,"
@@ -60238,13 +60227,13 @@
   - text: "这日你巡视之时，忽听得远处锣声大躁，喊杀震天，"
     translated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky."
     qcReviewedText: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky.\nHastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault.\nThe servants fought back desperately and barely managed to hold their ground."
-    qcTranslated: "On this day, as you patrolled, you suddenly heard distant gongs beating loudly and shouts of battle echoing to the sky. Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault. The household servants Counterattack desperately and barely managed to hold their ground."
+    qcTranslated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky. Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and commit violence. The servants fought back desperately and barely managed to hold their ground."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - OtherNamedDefect
+    - DroppedContent
   - subIndex: 1
     text: "匆忙赶去，发现竟是一伙盗贼从后院闯入，意欲抢劫行凶。"
     translated: "Hastily rushing over, I found a gang of thieves had broken in from the backyard, intending to rob and assault."
@@ -61112,11 +61101,10 @@
     qcReviewedText: "Free‑Spirited Fellow"
     qcTranslated: "Xiaoyao Sheng"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: UntranslatedPinyin
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - UntranslatedPinyin
+    - OtherNamedDefect
 - raw: "逐出师门"
   splits:
   - text: "逐出师门"
@@ -61527,14 +61515,14 @@
 - raw: "那怎么行！我#$SourceInteractName#就算砸锅卖铁，\n也不能让你这样的好姑娘卖身为奴为婢啊！"
   splits:
   - text: "那怎么行！我#$SourceInteractName#就算砸锅卖铁，"
-    translated: "That won't do! Even if I #$SourceInteractName# sell everything I have,"
-    qcReviewedText: "That won't do! Even if I #$SourceInteractName# sell everything I have,\nYou can't make a good girl like you sell herself into slavery!"
-    qcTranslated: "That won't do! Even if I #$SourceInteractName# sell everything I have, I can't let a good girl like you sell herself into slavery!"
+    translated: "That's out of the question! I, #$SourceInteractName#, would sell everything we own,"
+    qcReviewedText: "That's out of the question! I, #$SourceInteractName#, would sell everything we own,\nYou can't make a good girl like you sell herself into slavery!"
+    qcTranslated: "That's out of the question! I, #$SourceInteractName#, would sell my pots and pans, but I can't let a good girl like you sell yourself into slavery!"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "也不能让你这样的好姑娘卖身为奴为婢啊！"
     translated: "You can't make a good girl like you sell herself into slavery!"
@@ -61589,8 +61577,8 @@
 - raw: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？\n不过此战若是阁下落败，我#TargetForceName#也定不会轻饶。\n否则日后江湖中，岂不是人人以为我#TargetForceName#软弱可欺？"
   splits:
   - text: "那是自然，我#$TargetInteractName#岂是出尔反尔之人？"
-    translated: "Of course not, I #$TargetInteractName# wouldn't go back on my word."
-    qcReviewedText: "Of course not, I #$TargetInteractName# wouldn't go back on my word.\nBut if you lose this battle, I, #TargetForceName#, will not show you mercy either.\nOtherwise, in the Jianghu, won't everyone think that I, #TargetForceName#, am weak and easy to bully?"
+    translated: "Of course not, I, #$TargetInteractName#, am not one to go back on my word."
+    qcReviewedText: "Of course not, I, #$TargetInteractName#, am not one to go back on my word.\nBut if you lose this battle, I, #TargetForceName#, will not show you mercy either.\nOtherwise, in the Jianghu, won't everyone think that I, #TargetForceName#, am weak and easy to bully?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

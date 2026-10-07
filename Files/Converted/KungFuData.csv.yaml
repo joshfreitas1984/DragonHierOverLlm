@@ -7536,8 +7536,7 @@
     qcReviewedText: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of great yin and yang, each a marvelous technique for nurturing qi channels, essence, and muscle & bone."
     qcTranslated: "This is the broadway of four directions and eight reaches, connecting with the hearts of heaven and earth. This cultivation method encompasses twelve roads of dragon, crane, wind, cloud, great yin, and yang, each a marvelous technique for nurturing qi channels, essence, and Muscle & Bone."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent

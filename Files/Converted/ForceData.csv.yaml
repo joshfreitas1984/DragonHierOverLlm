@@ -79,12 +79,12 @@
     text: "痛饮"
     translated: "Drunken revelry"
     qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
-    qcTranslated: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high‑quality treasures."
+    qcTranslated: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes -20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high‑quality treasures."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 92
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
+    - OtherNamedDefect
     - DroppedContent
   - split: 15
     subIndex: 1

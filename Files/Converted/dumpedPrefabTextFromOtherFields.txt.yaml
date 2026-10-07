@@ -2001,26 +2001,23 @@
   splits:
   - text: "本月会在门内为师傅举办寿宴，#PlayerName#莫要忘了准备礼物。"
     translated: "This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift."
-    qcReviewedText: "<b>This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift.</b>If you anger Master, don't blame Senior Sister for not warning you."
+    qcReviewedText: "<b>This month, a celebration banquet in honor of Master will be held within the gate. #PlayerName#, don't forget to prepare a gift.</b>Don't blame me, your Senior Sister, for not warning you if you anger Master."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若惹得师父他老人家生气，可别怪师姐我没提醒你。"
-    translated: "If you anger Master, don't blame Senior Sister for not warning you."
+    translated: "Don't blame me, your Senior Sister, for not warning you if you anger Master."
   templates:
   - template: "<b>{0}</b>{1}"
 - raw: "不知#PlayerName#近来练功可有懈怠？若是得空，不妨来与师姐我切磋切磋。"
   splits:
   - text: "不知#PlayerName#近来练功可有懈怠？若是得空，不妨来与师姐我切磋切磋。"
-    translated: "Unknown, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
-    qcReviewedText: "Unknown, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
-    qcTranslated: "I wonder, #PlayerName#, have you been lax in your training lately? If you have some free time, why not come and spar with Senior Sister?"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "Have you been slacking off in your training recently, #PlayerName#? If you have some free time, come and spar with me, your Senior Sister."
+    qcReviewedText: "Have you been slacking off in your training recently, #PlayerName#? If you have some free time, come and spar with me, your Senior Sister."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "魏师兄遭贼人围攻，事态紧急，#PlayerName#<b>速回门派</b>救援！"
   splits:
   - text: "魏师兄遭贼人围攻，事态紧急，#PlayerName#"
@@ -3132,8 +3129,8 @@
   splits:
   - text: "老子虽没找到胞兄赵胤宗的线索，但却找到一个很可能密切相关之人，眼下正躲在"
     translated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here."
-    qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
-    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\\nI'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    qcReviewedText: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, I am hiding here.<b>Shaolin Temple </b>In!\\nI'll take the lead, and you and Daoist Wenyi follow behind to deal with this guy together!"
+    qcTranslated: "Although I haven't found any clues about my biological brother Zhao Yinzong, I have discovered someone who is very likely closely related to him. Right now, he is hiding inside the <b>Shaolin Temple</b>!\\nI'll take the lead, and you and Daoist Wenyi follow behind to deal with this guy together!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -3148,7 +3145,7 @@
     translated: "In!"
   - subIndex: 3
     text: "老子先行一步，你和文逸真人随后赶来，一同会会这家伙去！"
-    translated: "I'll take the lead, and you and Immortal Wenyi follow behind to deal with this guy together!"
+    translated: "I'll take the lead, and you and Daoist Wenyi follow behind to deal with this guy together!"
   templates:
   - template: "{0}<b>{1}</b>{2}\\n{3}"
 - raw: "大当家王伦突然发难，要将宋明公一派人马赶出梁山。还望#PlayerName#先行前去救援，以免山寨落入王伦手中。\\n我会率领官军随后赶来，一同围剿这伙恶贼。"
@@ -7534,9 +7531,9 @@
 - raw: "传闻峨眉掌门白眉真人为抵御阎罗殿等邪派之威胁，邀请中原正道群雄在<b>峨眉</b>金顶召开大会，共商对敌之策。"
   splits:
   - text: "传闻峨眉掌门白眉真人为抵御阎罗殿等邪派之威胁，邀请中原正道群雄在"
-    translated: "It is said that Sect Leader Immortal Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall."
-    qcReviewedText: "It is said that Sect Leader Immortal Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall.<b>Emei </b>A grand conference is held at the Golden Summit to discuss strategies against the enemy."
-    qcTranslated: "It is said that Sect Leader Immortal Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall. A grand conference is held at <b>Emei</b>'s Golden Summit to discuss strategies against the enemy."
+    translated: "It is said that Sect Leader Daoist Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall."
+    qcReviewedText: "It is said that Sect Leader Daoist Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall.<b>Emei </b>A grand conference is held at the Golden Summit to discuss strategies against the enemy."
+    qcTranslated: "It is said that Sect Leader Daoist Whitebrow of Mount Emei invited the righteous heroes of Central Plains to gather in order to defend against the threats posed by the Unorthodox Sects such as Yama Hall. A grand conference is held at <b>Emei</b>'s Golden Summit to discuss strategies against the enemy."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -10871,9 +10868,9 @@
 - raw: "只可惜我#$SourceInteractName#纵横江湖多年，却仍旧茕茕孑立，形影相吊。\\n不知有谁能与我共度佳期，同赏明月呢？\\n（可以邀请好感50以上的异性共度七夕）"
   splits:
   - text: "只可惜我#$SourceInteractName#纵横江湖多年，却仍旧茕茕孑立，形影相吊。"
-    translated: "Unfortunately, I #$SourceInteractName# have roamed the Jianghu for many years, yet I remain solitary, standing alone in the world."
-    qcReviewedText: "Unfortunately, I #$SourceInteractName# have roamed the Jianghu for many years, yet I remain solitary, standing alone in the world.\\nWho knows if there is anyone who can share this delightful occasion and admire the bright moon with me?\\n(can invite people of goodwill level above 50 for Valentine's Day)"
-    qcTranslated: "Unfortunately, I #$SourceInteractName# have roamed the Jianghu for many years, yet I remain solitary, standing alone in the world.\\nWho knows if there is anyone who can share this delightful occasion and admire the bright moon with me?\\n(can invite opposite‑sex characters with affection above 50 to spend Qixi Festival together)"
+    translated: "Unfortunately, despite roaming the Jianghu for many years, I, #$SourceInteractName#, remain alone, lonely, and only have my own shadow for company."
+    qcReviewedText: "Unfortunately, despite roaming the Jianghu for many years, I, #$SourceInteractName#, remain alone, lonely, and only have my own shadow for company.\\nWho knows if there is anyone who can share this delightful occasion and admire the bright moon with me?\\n(can invite people of goodwill level above 50 for Valentine's Day)"
+    qcTranslated: "Unfortunately, despite roaming the Jianghu for many years, I, #$SourceInteractName#, remain alone, lonely, and only have my own shadow for company.\\nWho knows if there is anyone who can share this delightful occasion and admire the bright moon with me?\\n(can invite people of goodwill level above 50 for Qixi Festival)"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -13824,13 +13821,13 @@
   splits:
   - text: "好冷......又好热......哈哈哈哈......"
     translated: "So cold... and yet so hot...ahaha..."
-    qcReviewedText: "So cold... and yet so hot...ahaha...\\nI #$TargetInteractName# have mastered the divine technique, invincible under heaven......"
+    qcReviewedText: "So cold... and yet so hot...ahaha...\\nI, #$TargetInteractName#, have mastered my martial arts skills and am now invincible in the world......"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "我#$TargetInteractName#神功已成，天下无敌......"
-    translated: "I #$TargetInteractName# have mastered the divine technique, invincible under heaven......"
+    translated: "I, #$TargetInteractName#, have mastered my martial arts skills and am now invincible in the world......"
   templates:
   - template: "{0}\\n{1}"
 - raw: "好友拜访"
@@ -14759,9 +14756,9 @@
 - raw: "峨眉掌门白眉真人已率派内精锐前去防守大理，江湖传闻<b>峨眉</b>派内有个小姑娘天天想趁此机会偷溜下山。"
   splits:
   - text: "峨眉掌门白眉真人已率派内精锐前去防守大理，江湖传闻"
-    translated: "Immortal Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali, according to rumors in Jianghu."
-    qcReviewedText: "Immortal Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali, according to rumors in Jianghu.<b>Emei </b>There's a little girl in the clan who often tries to sneak down the mountain."
-    qcTranslated: "Immortal Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali. Rumors in Jianghu say <b>Emei</b> has a little girl who often tries to sneak down the mountain."
+    translated: "Daoist Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali, according to rumors in Jianghu."
+    qcReviewedText: "Daoist Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali, according to rumors in Jianghu.<b>Emei </b>There's a little girl in the clan who often tries to sneak down the mountain."
+    qcTranslated: "Daoist Whitebrow, the Sect Leader of Mount Emei, has already led the elite forces within the sect to defend Dali. Rumors in Jianghu say <b>Emei</b> has a little girl who often tries to sneak down the mountain."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -18916,10 +18913,9 @@
   - text: "沈退师兄近来鬼鬼祟祟，不知在"
     translated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve."
     qcReviewedText: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve.<b>#PosText#</b>What are you up to"
-    qcTranslated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve. <b>#PosText#</b> What are you up to"
+    qcTranslated: "Senior Brother Shen Tui has been acting suspiciously lately, and I can't help but feel they have something up their sleeve<b>#PosText#</b>. What are you up to"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
@@ -23890,7 +23886,7 @@
   - text: "逐渐成为了最为德高望重，一言九鼎的武林巨擘，"
     translated: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant."
     qcReviewedText: "Gradually became the most virtuous and esteemed, a word as good as gold, Wulin giant.\\nFor all renowned scholars of future generations to admire."
-    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word carried the weight of nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
+    qcTranslated: "Gradually became the most Virtuous and Esteemed, whose word was as good as nine cauldrons, Wulin giant.\\nFor all renowned scholars of future generations to admire."
     qcStatus: Corrected
     flaggedForQcReview: true
     qcQualityScore: 0
@@ -25418,13 +25414,12 @@
   - text: "官兵领队"
     translated: "Officer led the way"
     qcReviewedText: "Officer led the way"
-    qcTranslated: "Officer led the troops"
+    qcTranslated: "The officer led the troops"
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - DroppedContent
+    - UnnaturalPhrasing
 - raw: "官差"
   splits:
   - text: "官差"
