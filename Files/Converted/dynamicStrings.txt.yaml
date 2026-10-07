@@ -23711,13 +23711,9 @@
   - text: "哎呀呀，这怎么好意思......"
     translated: "Oh, how could I feel embarrassed about that..."
     qcReviewedText: "Oh, how could I feel embarrassed about that...\nGreat Hero, since you are so generous, I cannot refuse your kindness either.\n#$TargetInteractName# hereby joins the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
-    qcTranslated: "Oh, how could I feel embarrassed about that...\nGreat Hero, since you are so generous, I cannot turn down your face either.\n#$TargetInteractName# hereby joins the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: MeaningReversal
-    qcDefectCategories:
-    - MeaningReversal
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "大侠既然如此慷慨，小的也不好拂了您的面子。"
     translated: "Great Hero, since you are so generous, I cannot refuse your kindness either."
@@ -53120,13 +53116,9 @@
   - text: "编纂"
     translated: "Compile"
     qcReviewedText: "Compile {0} This {1} Secret Manual"
-    qcTranslated: "Compile {0} {1} Secret Manuals"
-    qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 55
-    qcDefectCategory: UnnaturalPhrasing
-    qcDefectCategories:
-    - UnnaturalPhrasing
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "本"
     translated: "This"
