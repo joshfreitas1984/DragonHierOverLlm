@@ -206,20 +206,20 @@
   splits:
   - text: "#PlayerName#，邪派联军再度兵临城下，如今"
     translated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,"
-    qcReviewedText: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,<b>Dali </b>Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
-    qcTranslated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now, <b>Dali</b> is perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand.\\n#PlayerName#, if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+    qcReviewedText: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now,<b>Dali </b>Already in grave danger, like eggs stacked precariously. Yet for the safety of the Central Plains Wulin, despite slim hope, this old man will lead all Emei disciples in one last desperate effort.\n#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
+    qcTranslated: "#PlayerName#, the Unorthodox Sect coalition has once again laid siege to the city. Now, <b>Dali</b> is in grave danger, like eggs stacked precariously. Yet for the safety of the Central Plains Wulin, despite slim hope, this old man will lead all Emei disciples in one last desperate effort.\n#PlayerName#, if you can bring #PlayerForceName# to lend a final helping hand, I would be immensely grateful."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "大理"
     translated: "Dali"
   - subIndex: 2
     text: "已危如累卵。然为了中原武林之安危，尽管希望渺茫，老朽仍将率峨眉全体弟子做最后一搏。"
-    translated: "Already perilous, like eggs balanced on a pile. Yet for the safety of the Central Plains Wulin, though hope is faint, this old man will lead all the Meishan disciples in one final stand."
+    translated: "Already in grave danger, like eggs stacked precariously. Yet for the safety of the Central Plains Wulin, despite slim hope, this old man will lead all Emei disciples in one last desperate effort."
   - subIndex: 3
     text: "#PlayerName#若能率#PlayerForceName#前来助最后一臂之力，必当感激不尽。"
     translated: "#PlayerName# if you can bring #PlayerForceName# to lend your last bit of support, I would be immensely grateful."
@@ -228,15 +228,15 @@
 - raw: "我峨眉与中原各大门派已在<b>大理城内</b>合兵一处，准备共同出兵攻打阎罗殿。为了中原武林之安危，还望#PlayerName#前来助一臂之力！"
   splits:
   - text: "我峨眉与中原各大门派已在"
-    translated: "I, the Meishan Sect, along with the major sects in Central Plains,"
-    qcReviewedText: "I, the Meishan Sect, along with the major sects in Central Plains,<b>In the city of Dali </b>Unite our forces, prepare to launch an assault on Yama Hall together. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
-    qcTranslated: "I, the Emei Sect, along with the major sects in Central Plains, have united our forces <b>in the city of Dali</b>, preparing to launch an assault on Yama Hall together. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
+    translated: "Emei and the major sects of Central Plains have already been in contact with each other."
+    qcReviewedText: "Emei and the major sects of Central Plains have already been in contact with each other.<b>In the city of Dali </b>Unite our forces, prepare to launch an assault on Yama Hall together. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
+    qcTranslated: "Emei and the major sects of Central Plains have already united their forces in <b>the city of Dali</b>, preparing to launch a joint assault on Yama Hall. For the safety of the Central Plains Wulin, we look to #PlayerName# to lend a helping hand!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
-    - OtherNamedDefect
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "大理城内"
     translated: "In the city of Dali"
@@ -2442,15 +2442,14 @@
 - raw: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于<b>板桥镇</b>。\n表面上为共商第三次泰岳大典事宜，实则是为告知金龙生就是血衣盟大统领之真相，并部署会上抓捕此人之计策。\n还请你届时定要前来参加，并将此前调查之来龙去脉尽数道明。"
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
-    translated: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at"
-    qcReviewedText: "#PlayerName#, I have invited the Palm Leaders of the Shaolin, Wudang, Meizhou, and Beggar Sects to meet at <b>Banqiao Town</b>。\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
-    qcTranslated: "#PlayerName#, I have invited the Sect Leaders of the Shaolin, Wudang, Emei, and Beggar Sects to meet at <b>Banqiao Town</b>.\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal that Jin Longsheng is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
+    translated: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at"
+    qcReviewedText: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at <b>Banqiao Town</b>。\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
+    qcTranslated: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at <b>Banqiao Town</b>.\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal the truth that Jin Longsheng is the Grand Commander of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
+    - MeaningReversal
   - subIndex: 1
     text: "板桥镇"
     translated: "Banqiao Town"

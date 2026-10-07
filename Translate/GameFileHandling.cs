@@ -58,6 +58,9 @@ namespace Tests
         private static readonly Regex AdjacentPlaceholderTokensRegex =
             new(@"(#\$?[A-Za-z0-9_]+#)(?=#\$?[A-Za-z0-9_]+#)", RegexOptions.Compiled);
 
+        private static readonly Regex DoubledTokenOpenerRegex =
+            new(@"#\$#\$?(?=[A-Za-z0-9_]+#)", RegexOptions.Compiled);
+
         private static readonly Regex StrayDollarAfterTokenRegex =
             new(@"(#\$[A-Za-z0-9_]+#)\$", RegexOptions.Compiled);
 
@@ -68,6 +71,10 @@ namespace Tests
 
             llmResult = BraceWrappedPlaceholderTokenRegex.Replace(llmResult, "$1");
             llmResult = PlaceholderTrailingSuffixRegex.Replace(llmResult, "#$1#$2");
+
+            // "#$#PlayerName#" / "#$#$PlayerName#" is a doubled opener on one "#$PlayerName#" token. Left alone, the
+            // restore loop below wraps the inner "#PlayerName#" again and the corruption spreads ("#$#$PlayerName#").
+            llmResult = DoubledTokenOpenerRegex.Replace(llmResult, "#$");
 
             // A '$' stuck on the end of a complete "#$Name#" token ("#$PlayerName#$!") that the source never had.
             llmResult = StrayDollarAfterTokenRegex.Replace(llmResult, match => raw.Contains(match.Value) ? match.Value : match.Groups[1].Value);

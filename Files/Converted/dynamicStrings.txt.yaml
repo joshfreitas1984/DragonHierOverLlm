@@ -599,6 +599,10 @@
   splits:
   - text: "#PlayerName#与前任配偶绝离未久。"
     translated: "#PlayerName# only recently parted ways with their former spouse."
+    qcReviewedText: "#PlayerName# only recently parted ways with their former spouse.\nTo avoid rumors, it might be better for us to marry another day."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "为避免风言风语，你我还是日后再结亲为妙。"
     translated: "To avoid rumors, it might be better for us to marry another day."
@@ -14161,6 +14165,10 @@
   splits:
   - text: "买卖价格"
     translated: "Buy/Sell Price"
+    qcReviewedText: "Buy/Sell Price x {0}%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0}x⟦0⟧%"
 - raw: "买定离手！"
@@ -23703,12 +23711,13 @@
   - text: "哎呀呀，这怎么好意思......"
     translated: "Oh, how could I feel embarrassed about that..."
     qcReviewedText: "Oh, how could I feel embarrassed about that...\nGreat Hero, since you are so generous, I cannot refuse your kindness either.\n#$TargetInteractName# hereby joins the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
-    qcTranslated: "Oh, how could I feel embarrassed about that...\nGreat Hero, since you are so generous, I cannot refuse your kindness either.\nI #$TargetInteractName# hereby join the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
+    qcTranslated: "Oh, how could I feel embarrassed about that...\nGreat Hero, since you are so generous, I cannot turn down your face either.\n#$TargetInteractName# hereby joins the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
+    - MeaningReversal
   - subIndex: 1
     text: "大侠既然如此慷慨，小的也不好拂了您的面子。"
     translated: "Great Hero, since you are so generous, I cannot refuse your kindness either."
@@ -28922,7 +28931,7 @@
   - text: "大侠这一番话，真是让小的茅塞顿开，醍醐灌顶。"
     translated: "These words of the Great Hero truly enlightened the young one, as if pouring enlightenment into their heart."
     qcReviewedText: "These words of the Great Hero truly enlightened the young one, as if pouring enlightenment into their heart.\nThis skill of mine should have been showcased among the major factions long ago.\n#$TargetInteractName# hereby joins the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
-    qcTranslated: "These words of the Great Hero truly opened my eyes and poured enlightenment into my heart.\nThis skill of mine should have been showcased among the major factions long ago.\nI #$TargetInteractName# hereby join the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
+    qcTranslated: "These words of the Great Hero truly opened my eyes and poured enlightenment into my heart.\nThis skill of mine should have been showcased among the major factions long ago.\nI, #$TargetInteractName#, hereby join the ranks of #PlayerForceName#. From now on, let's enjoy the finer things in life together!"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: DroppedContent
@@ -33485,8 +33494,8 @@
 - raw: "峨眉精锐"
   splits:
   - text: "峨眉精锐"
-    translated: "Everbright Elite"
-    qcReviewedText: "Everbright Elite"
+    translated: "Emei Elite"
+    qcReviewedText: "Emei Elite"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -36465,6 +36474,10 @@
   splits:
   - text: "我#$TargetInteractName#也算是闻名一方的绿林豪杰！识相的快快束手就擒，免得场血光之灾！"
     translated: "I, #$TargetInteractName#, am also a well‑known outlaw! If you know what's good for you, surrender quickly to avoid a bloody disaster!"
+    qcReviewedText: "I, #$TargetInteractName#, am also a well‑known outlaw! If you know what's good for you, surrender quickly to avoid a bloody disaster!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "我#TargetForceName#与#SourceForceName#素来交好。\n此次特地带数名#TargetForceDescribe#弟子前来，\n是想要与贵派以武论友，切磋交流一番。"
   splits:
   - text: "我#TargetForceName#与#SourceForceName#素来交好。"
@@ -39413,21 +39426,19 @@
   splits:
   - text: "按照江湖规矩，只要向"
     translated: "According to the rules of Jianghu, as long as one approaches"
-    qcReviewedText: "According to the rules of Jianghu, as long as one approaches {0} Formally deliver the challenge and defeat their main force of elite troops,\nI, #$PlayerName#, can take your place, establish a sect here, and start anew."
-    qcTranslated: "According to the rules of Jianghu, as long as one formally delivers a challenge to {0} and defeats their main force of elite troops, I, #$PlayerName#, can take their place, establish a sect here, and start anew."
+    qcReviewedText: "According to the rules of Jianghu, as long as one approaches {0} Formally deliver the challenge and defeat their main force of elite troops,\nI, #$PlayerName#, can take their place, found a sect here, and establish my own school."
+    qcTranslated: "According to the rules of Jianghu, as long as one formally delivers a challenge to {0} and defeats their main force of elite troops, I, #$PlayerName#, can take their place, found a sect here, and establish my own school."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: MeaningReversal
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - MeaningReversal
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "正式递送战书，并击败其大部精锐，"
     translated: "Formally deliver the challenge and defeat their main force of elite troops,"
   - subIndex: 2
     text: "我#$PlayerName#便可取而代之，在此处开宗建派，自立门户。"
-    translated: "I, #$PlayerName#, can take your place, establish a sect here, and start anew."
-    flaggedForRetranslation: true
-    flaggedMistranslation: "SelfReferenceLost"
+    translated: "I, #$PlayerName#, can take their place, found a sect here, and establish my own school."
   templates:
   - template: "{0}⟦0⟧{1}\n{2}"
 - raw: "按照规矩，这溢出来的酒可不用喝"
@@ -46702,6 +46713,10 @@
   splits:
   - text: "江老二"
     translated: "Old Man Jiang Er"
+    qcReviewedText: "Old Man Jiang Er"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "江老五"
   splits:
   - text: "江老五"
@@ -48292,7 +48307,11 @@
 - raw: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
   splits:
   - text: "爷横行江湖，平日最看不惯装腔作势的鸟侠客，今次非叫你尝尝苦头不可！"
-    translated: "I roam the Jianghu as I please, and I can't stand pretentious so-called heroes. Today you'll learn the hard way!"
+    translated: "I roam the Jianghu as I please, and I can't stand pretentious so‑called heroes. Today you'll learn the hard way!"
+    qcReviewedText: "I roam the Jianghu as I please, and I can't stand pretentious so‑called heroes. Today you'll learn the hard way!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "牛头"
   splits:
   - text: "牛头"
@@ -60187,6 +60206,10 @@
   splits:
   - text: "这日你巡视之时，忽听得远处锣声大躁，喊杀震天，"
     translated: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky."
+    qcReviewedText: "On this day, as you patrolled, you suddenly heard distant drums beating loudly and shouts of battle echoing to the sky.\nHastily rushing over, you found a gang of thieves had broken in from the backyard, intending to rob and commit violence.\nThe servants fought back desperately and barely managed to hold their ground."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "匆忙赶去，发现竟是一伙盗贼从后院闯入，意欲抢劫行凶。"
     translated: "Hastily rushing over, you found a gang of thieves had broken in from the backyard, intending to rob and commit violence."

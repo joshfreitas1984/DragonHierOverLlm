@@ -3019,6 +3019,13 @@
   splits:
   - text: "拳毛驹"
     translated: "Curly‑Coated Colt"
+    qcReviewedText: "Curly‑Coated Colt"
+    qcTranslated: "Quanmao Ju"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
 - raw: "斑豹马"
   splits:
   - text: "斑豹马"
@@ -65968,8 +65975,8 @@
 - raw: "峨眉守卫"
   splits:
   - text: "峨眉守卫"
-    translated: "Everbright Defender"
-    qcReviewedText: "Everbright Defender"
+    translated: "Emei Guard"
+    qcReviewedText: "Emei Guard"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
