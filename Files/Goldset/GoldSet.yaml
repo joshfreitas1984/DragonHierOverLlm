@@ -173,6 +173,13 @@ additionalSourceAssessments:
   sampleSeed: 'n/a'
   selection: >-
     10 correctionSamples mined from the 73 splits still flagged flaggedForQcReview after the 2026-10-07 full re-QC of the first 160 (with the first batch's Files/Glossary/QcFixes.yaml entries in place). 5 safe corrections (hand-written or pipeline) and 5 harmful pipeline corrections (wrong person shift, leaked game term, dropped title, invented content), plus the 朴刀 relabel from Pass to Defect (Cutlass is not wuxia-themed).
+- name: ConvertedCorpus-20261007-self-reference-mining
+  path: Files/Converted
+  sampleFingerprint: 'n/a - not a TranslationAssessmentWorkflow run'
+  sampleSize: 'n/a'
+  sampleSeed: 'n/a'
+  selection: >-
+    Self-reference by title or name: 4 Defect items QC marked Passed (师傅我 / 师姐我 turned into a third party, 我#$PlayerName# rendered "I #$PlayerName# is") plus 2 Pass controls where 掌门我 is already correct, and 5 correctionSamples (3 safe fixes, 1 harmful person shift, 1 over-application control). The 4 Defect sources are also pinned in Config.yaml pinnedSampleSources.
 models:
 - Qwen25-Standard
 - HyMT2-7B
@@ -4590,6 +4597,89 @@ items:
   provenance: >-
     Real production translation mined from Files/Converted/PlotData.csv.yaml (flagged InventedGender);
     ProductionTranslation is a single-candidate label, not a specific configured model name.
+- sampleId: 2e9351468e0ecadc
+  sampleKind: split
+  source: 万万不能松散懈怠，堕了师傅我的威名！
+  candidates:
+    ProductionTranslation: You must not be lax or negligent; let down the reputation of your Master!
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  provenance: Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field); QC marked this row Passed, so the detector missed it. ProductionTranslation is a single-candidate label, not a specific configured model name.
+  reviewNote: '师傅我 is the Master referring to themself ("my name as your Master"). The translation makes the Master a third party ("the reputation of your Master"), so the speaker''s own 我 is lost and the line reads as if someone else''s Master were being discussed. Correct: "...don''t tarnish my name as your Master!"'
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+- sampleId: 4a5df9708ee91d94
+  sampleKind: split
+  source: 若你能在切磋之中胜过师傅我，那为师方能准许你出师！
+  candidates:
+    ProductionTranslation: If you can defeat your Master in this exchange of skills, then I will allow you to leave and become a fully licensed practitioner!
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  provenance: Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field); QC marked this row Passed, so the detector missed it. ProductionTranslation is a single-candidate label, not a specific configured model name.
+  reviewNote: 胜过师傅我 is "defeat me, your Master". The translation says "defeat your Master", a third person, even though the same line continues with 为师 ("I, your Master") in the first person. Also invents "fully licensed practitioner".
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+- sampleId: c6d678ea3683cd27
+  sampleKind: split
+  source: 我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。
+  candidates:
+    ProductionTranslation: 'I #$PlayerName# is new to the Jianghu and doesn''t seem to recognize someone like you.'
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - fluency
+      - pronoun-attribution
+      correctionSafety: safe
+  provenance: Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field); QC marked this row Passed, so the detector missed it. ProductionTranslation is a single-candidate label, not a specific configured model name.
+  reviewNote: '我#$PlayerName# is the speaker naming themself: "I, #$PlayerName#, am new to the Jianghu". The translation drops the commas and the verb agrees with the placeholder ("is"), treating it as a separate third person.'
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+- sampleId: a6b3273584e9bef0
+  sampleKind: split
+  source: 若惹得师父他老人家生气，可别怪师姐我没提醒你。
+  candidates:
+    ProductionTranslation: If you anger Master, don't blame Senior Sister for not warning you.
+  labels:
+    ProductionTranslation:
+      label: Defect
+      defectCategories:
+      - pronoun-attribution
+      correctionSafety: safe
+  provenance: Real production translation mined from Files/Converted/dynamicStringsRoutedMailBodies.txt.yaml (pre-QC 'translated' field); QC marked this row Passed, so the detector missed it. ProductionTranslation is a single-candidate label, not a specific configured model name.
+  reviewNote: '师姐我 is the speaker referring to themself ("me, your Senior Sister"). The translation turns her into a third party ("blame Senior Sister"), losing the first person. Correct: "...don''t blame me, your Senior Sister, for not warning you."'
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+- sampleId: cb645b7704a6679c
+  sampleKind: split
+  source: 不过，掌门我还准备了一份特殊礼物，奖励去年功绩最高的弟子。
+  candidates:
+    ProductionTranslation: However, I, the Sect Leader, have prepared a special gift to reward the disciple with the highest merit from last year.
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  provenance: Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field); QC marked this row Passed, so the detector missed it. ProductionTranslation is a single-candidate label, not a specific configured model name.
+  reviewNote: 'Control: 掌门我 correctly rendered as "I, the Sect Leader". The self-reference rule must not flag a translation that already handles it.'
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+- sampleId: 27d58f6f2e37567a
+  sampleKind: split
+  source: 本场考核就由掌门我亲自主持好了。
+  candidates:
+    ProductionTranslation: Let me, the Sect Leader, personally conduct this assessment.
+  labels:
+    ProductionTranslation:
+      label: Pass
+      defectCategories: []
+      correctionSafety: unnecessary
+  provenance: Real production translation mined from Files/Converted/dynamicStrings.txt.yaml (pre-QC 'translated' field); QC marked this row Passed, so the detector missed it. ProductionTranslation is a single-candidate label, not a specific configured model name.
+  reviewNote: 'Control: 掌门我 correctly rendered as "me, the Sect Leader".'
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
 correctionSamples:
 - sampleId: 5b03cbee1d695c74
   sampleKind: fullCell
@@ -4957,7 +5047,7 @@ correctionSamples:
   defectCategories:
   - terminology
   - garbage-output
-  proposedCorrection: "Oh! I remember now. These four later fought against the Second Boss and Third Boss of Yellow Sand Camp together with Zhao Dianjian.\\nIt's also a case of turning from darkness to light, reforming and correcting one's ways."
+  proposedCorrection: "Oh! I remember now. These four later fought against the Second Boss and Third Boss of Yellow Sand Camp together with Marshal Zhao.\\nIt's also a case of turning from darkness to light, reforming and correcting one's ways."
   correctionSafety: safe
   provenance: >-
     Real QC pair from Files/Converted/PlotData.csv.yaml (first split 哦！想起来了，这四人后来跟赵点检一起，共...);
@@ -4969,6 +5059,9 @@ correctionSamples:
     The correction's "Zhao Dianjian" is a legitimate romanization of the title, so it is an
     improvement, although it is still inconsistent with "Zhao Dijian" in other lines, which is why
     赵点检 needs a glossary entry.
+    Corrected 2026-10-07: the proposed correction said "Zhao Dianjian", but the glossary fixes 赵点检 as
+    "Marshal Zhao" (HandRolled.yaml). The real call-4 verifier rejected it on exactly that; the gold
+    proposedCorrection now uses the glossary term, so the item tests what it was meant to.
 - sampleId: dc3ece79b4b0e561
   sampleRun: ConvertedCorpus-20261007-qc-flagged-review
   sampleKind: fullCell
@@ -4977,7 +5070,7 @@ correctionSamples:
   label: Defect
   defectCategories:
   - dropped-content
-  proposedCorrection: "Cough cough, B‑b‑big sister, these two are my friends.\\nThis wound was inflicted by the Changle Gang thugs. Don't misunderstand me."
+  proposedCorrection: "Cough cough, B‑b‑big sister, these two are my friends.\\nThis wound was, was inflicted by the Changle Gang thugs. Don't misunderstand me."
   correctionSafety: safe
   provenance: >-
     Real QC pair from Files/Converted/PlotData.csv.yaml (first split 咳咳，大、大姐，这二位是我的朋友。...);
@@ -4987,6 +5080,9 @@ correctionSamples:
     The source stutters on 大、大姐 (and 是、是长乐帮 in line 2). currentTranslation flattens line 1 to "big
     sister"; the correction restores "B-b-big sister". The line-2 stutter is still dropped, so the
     fix is partial but not harmful.
+    Corrected 2026-10-07: the source also stammers on 是 (此伤是、是长乐帮贼人所为) and the pipeline
+    correction dropped that second stutter. The real call-4 verifier flagged it DROPPED_CONTENT, and
+    it was right; the gold proposedCorrection now keeps both stutters.
 - sampleId: cd1704c462c3c786
   sampleRun: ConvertedCorpus-20261007-qc-flagged-review
   sampleKind: fullCell
@@ -5123,7 +5219,7 @@ correctionSamples:
   defectCategories:
   - mistranslation
   - terminology
-  proposedCorrection: "Shen Ling Bai Zhu Powder"
+  proposedCorrection: "Shenling Baizhu Powder"
   correctionSafety: safe
   provenance: >-
     Real QC pair from Files/Converted/dynamicStringsFromColumns.txt.yaml (first split 参苓白术散...);
@@ -5134,6 +5230,9 @@ correctionSamples:
     "Participating Ginseng" (参 read as 'participate') and calls it a decoction. The correction "Shen
     Ling Bai Zhu Powder" is accurate and consistent with the corpus's pinyin treatment of formula
     names.
+    Corrected 2026-10-07: proposedCorrection now matches the glossary spelling in
+    Files/Glossary/QcFixes.yaml ("Shenling Baizhu Powder"); the old spelling made the verifier
+    reject it on the glossary rule.
 - sampleId: 5e0ab2b281833acb
   sampleRun: ConvertedCorpus-20261007-qc-flagged-review
   sampleKind: split
@@ -5320,3 +5419,63 @@ correctionSamples:
   correctionSafety: safe
   provenance: Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation (qcReviewedText). proposedCorrection is hand-written. The pipeline's said 'the tiger's mouth of his hand'.
   reviewNote: 虎口 is the web between thumb and forefinger. "Wrists" is wrong, and the pipeline's literal "tiger's mouth of his hand" is a calque no English reader would parse.
+- sampleId: b8a670a8b3ce2aac
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+  sampleKind: split
+  source: 万万不能松散懈怠，堕了师傅我的威名！
+  currentTranslation: You must not be lax or negligent; let down the reputation of your Master!
+  label: Defect
+  defectCategories:
+  - pronoun-attribution
+  proposedCorrection: You must not be lax or negligent; don't tarnish my name as your Master!
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/dynamicStrings.txt.yaml; currentTranslation is the pre-QC translation. proposedCorrection is hand-written.
+  reviewNote: Restores the speaker as "my name as your Master". Safe.
+- sampleId: 771dd2ebcc2d48d9
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+  sampleKind: split
+  source: 若惹得师父他老人家生气，可别怪师姐我没提醒你。
+  currentTranslation: If you anger Master, don't blame Senior Sister for not warning you.
+  label: Defect
+  defectCategories:
+  - pronoun-attribution
+  proposedCorrection: If you anger Master, don't blame me, your Senior Sister, for not warning you.
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/dynamicStringsRoutedMailBodies.txt.yaml; currentTranslation is the pre-QC translation. proposedCorrection is hand-written.
+  reviewNote: Restores 师姐我 as "me, your Senior Sister". Safe.
+- sampleId: 20a20714620205bf
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+  sampleKind: split
+  source: 我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。
+  currentTranslation: 'I #$PlayerName# is new to the Jianghu and doesn''t seem to recognize someone like you.'
+  label: Defect
+  defectCategories:
+  - fluency
+  - pronoun-attribution
+  proposedCorrection: 'I, #$PlayerName#, am new to the Jianghu and don''t seem to recognize someone of your stature.'
+  correctionSafety: safe
+  provenance: Real QC pair from Files/Converted/dynamicStrings.txt.yaml; currentTranslation is the pre-QC translation. proposedCorrection is hand-written.
+  reviewNote: Placeholder kept as the speaker's own name between commas, verb agrees with "I". Safe.
+- sampleId: d8dad5586a2d421f
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+  sampleKind: split
+  source: 这这这……该死小贼竟如此下作，可别落到我#$PlayerName#手里！
+  currentTranslation: 'Y‑y‑you... Don''t let that despicable thief fall into my hands, #$PlayerName#$!'
+  label: Defect
+  defectCategories:
+  - fluency
+  proposedCorrection: 'Y‑y‑you... That despicable thief is truly vile; don''t let him fall into your hands, #$PlayerName#$!'
+  correctionSafety: harmful
+  provenance: Real QC pair from Files/Converted/PlotData.csv.yaml; currentTranslation is the pre-QC translation. proposedCorrection is the pipeline's qcTranslated (flagged, score 0).
+  reviewNote: 'The speaker is the player (我#$PlayerName#: "my hands"). The correction turns it into "your hands" and addresses #$PlayerName# as someone else, a person shift. A verifier must reject it.'
+- sampleId: 836daf5bc5935834
+  sampleRun: ConvertedCorpus-20261007-self-reference-mining
+  sampleKind: split
+  source: 师傅，请你指点我一二。
+  currentTranslation: Master, please guide me a bit.
+  label: Pass
+  defectCategories: []
+  proposedCorrection: I, your Master, please guide you a bit.
+  correctionSafety: harmful
+  provenance: Real QC pair from hand-written control (not from the corpus); currentTranslation is the pre-QC translation. The proposed correction is also hand-written.
+  reviewNote: 'Control: here the Master is being ADDRESSED (no 我 touching the title), so converting it into a self-reference would be wrong. A verifier must reject over-applying the self-reference rule.'

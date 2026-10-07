@@ -203,6 +203,10 @@ translationAssessment:
     - "村长，听闻二三十年前，贵村有一户人家突然全家暴毙，"
     - "虽说入帮不久，但已是立下了汗马功劳。"
     - "近日深感精神萎靡，浑身不适，听闻#SourceInteractName#在此处坐诊，特地前来求药。"
+    - "万万不能松散懈怠，堕了师傅我的威名！"
+    - "若你能在切磋之中胜过师傅我，那为师方能准许你出师！"
+    - "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。"
+    - "若惹得师父他老人家生气，可别怪师姐我没提醒你。"
 qualityEvaluatorAssessment:
   enabled: true
   # See docs/investigations/tests/qc-evaluator-model-selection.md for the full model/quant/prompt
