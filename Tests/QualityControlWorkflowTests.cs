@@ -137,7 +137,7 @@ public class QualityControlWorkflowTests
 
     // DEFECT-category counterpart to "7" (which resets by score threshold instead). Resets every
     // flagged column whose DEFECT category is NOT in Config.yaml's qualityControl.autoAcceptDefectCategories
-    // back to NotReviewed for a fresh review - see Tests/docs/qc-qualityscore-noise-investigation.md's
+    // back to NotReviewed for a fresh review - see ../FanslationStudio.LlmKit/docs/investigations/qc-qualityscore-noise-investigation.md's
     // "stratify by DEFECT category" policy step. QcDefectCategory.Unknown always lands in this bucket
     // (a line whose response predates the DEFECT-first prompt, or otherwise failed to parse a DEFECT:
     // line), so run this once to sweep up the ~1,100 Unknown rows left over from before DEFECT was

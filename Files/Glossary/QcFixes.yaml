@@ -1,5 +1,5 @@
 # Terms the translator got wrong that QC then fixed (or that QC fixed wrongly) - see
-# Files/Goldset/GoldSet.yaml sampleRun ConvertedCorpus-20261007-qc-flagged-review.
+# the LlmKit gold set (GoldSets/ChineseToEnglishWuxia.yaml) sampleRun ConvertedCorpus-20261007-qc-flagged-review.
 - raw: 慕容
   result: Murong
 - raw: 柴荣

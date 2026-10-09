@@ -1,5 +1,5 @@
-﻿# Model choices and the investigation behind them: docs/investigations/tests/qc-evaluator-model-selection.md
-# (QC model/quant/process-shape decision) and docs/plans/translation-prompt-tuning-candidates.md
+﻿# Model choices and the investigation behind them: ../FanslationStudio.LlmKit/docs/investigations/qc-evaluator-model-selection.md
+# (QC model/quant/process-shape decision) and ../FanslationStudio.LlmKit/docs/investigations/translation-prompt-tuning-candidates.md
 # (translation-model comparison). The FIRST entry in this list is the main translator model
 # (see FanslationStudio.LlmKit's LlmHelpers.CalculateModelConfig).
 models:
@@ -67,7 +67,7 @@ pronounCheck:
 qualityControl:
   enabled: true
   # Single model for every QC role (detection/verification/correction/repair) - see
-  # docs/investigations/tests/qc-evaluator-model-selection.md for why, and why a faster/cheaper
+  # ../FanslationStudio.LlmKit/docs/investigations/qc-evaluator-model-selection.md for why, and why a faster/cheaper
   # corrector model was tried and rejected.
   modelName: Qwen38Qc-IQ4XS
   minAcceptableScore: 60
@@ -77,7 +77,7 @@ qualityControl:
   # Switched off 2026-09-20 to prioritize detection-phase throughput: measured against the current
   # production quant, doubled detection costs ~15h across the full corpus for a thin recall lift
   # (1/18 in-scope defect rows in the original measurement) - see
-  # docs/investigations/tests/qc-evaluator-model-selection.md's "Process variants" section. Revert
+  # ../FanslationStudio.LlmKit/docs/investigations/qc-evaluator-model-selection.md's "Process variants" section. Revert
   # to true (or remove this line) if speed stops being the priority.
   doubledDetectionEnabled: false
   # Detection-only temperature (corrections keep Qwen38's 0.15): makes QC verdicts and gold-set
@@ -91,129 +91,3 @@ qualityControl:
   # overruled and the quotes guide the repair (2026-10-03: flagged 2-3 -> 1 of 28, same call count).
   # The pre-verification gate is on by default in LlmKit (preVerificationGateEnabled).
   verificationEvidenceEnabled: true
-translationAssessment:
-  enabled: true
-  modelNames:
-    - Qwen25-Standard
-    - HyMT2-7B
-    - HyMT2-30B-A3B
-    #- HyMT2-30B-A3B-Q3
-    #- HyMT2-30B-A3B-Q4
-  sampleSize: 200
-  sampleSeed: 20260919
-  fullCellSampleRatio: 0.5
-  outputPath: TestResults/ModelAssessment
-  pinnedSampleSources:
-    - "莫慌，让为师看看……\\n还好还好，只是精疲力竭昏厥过去了。\\n此次战况如何，云裳又是为何受伤啊？"
-    - "哈哈哈哈哈，石将军，\\n你竟想让老子屈居于你之下，当你的什么狗屁副殿主？"
-    - "好你个臭小子！\\n小的们，给我接着狠狠地打！"
-    - "有人高呼：饿虎扑食？这是饿犬吃屎吧！\\n引得台下又是一片嘘声和嘲笑。"
-    - "则为"
-    - "等到蛊虫完全苏醒，施术者就能在一定程度上操纵被寄宿之人的行为，\\n如同控制牵丝木偶一般，故而得名。\\n施术者越精于蛊术，对被寄宿者的控制力就越强。"
-    - "轻功10;意志15"
-    - "慷慨赠送;GiveNpcAskItem"
-    - "在"
-    - "第{0}名是{1}！\n奖励是银钱{2}两和这{3}，贵派威望也会因此提升{4}点。\n此外，每位参战弟子皆会获得{5}门派功绩以示鼓励。"
-    - "#$PlayerName#，项问天，又是你们两个来坏我好事！\\n若不是你们，我爹也不会死！！！"
-    - "各位放心，我#$PlayerName#不管是天下第一，还是天下倒数第一，\\n都会誓死守卫仙霞派，与各位生死相依，不离不弃！"
-    - "殷殷"
-    - "五毒弟子"
-    - "撤撤撤！你们三个给我记住！"
-    - "我#TargetForceName#与#SourceForceName#素来交好。\n此次特地带数名#TargetForceDescribe#弟子前来，\n是想要与贵派以武论友，切磋交流一番。"
-    - "继续将太祖长拳修炼至十重功力\\n<i>理论经验：在藏经阁阅读秘籍\\n实战经验：在练武场练习或切磋</i>"
-    - "另一方面，杀鸡儆猴，拿聚义门祭旗立威，\\n也好威慑中原那些原本中立的小门小派，\\n免得他们心怀侥幸，再来阻碍我军大事。"
-    - "呵呵，这牵丝蛊既是五毒教不传之秘，\\n那给思阁主下蛊之人，还能有谁？"
-    - "没想到反倒害了她，导致她命悬一线，功力丧尽。\\n白云子此番遭逢大难，皆因峨眉派保护不力，老朽心中实在过意不去。"
-    - "咳咳咳，这......\\n我要去扬州游玩几日，正好路过此地罢了。"
-    - "大！当！家！放我顾师弟走，饶你不死。"
-    - "蜈蚣遁地术"
-    - "千蛛万毒手"
-    - "引蛇术"
-    - "指虎"
-    - "玉蜂针"
-    - "灵蛇拳"
-    - "青蜂钉"
-    - "（说罢拉起你的手，向着地道入口飞驰而去）"
-    - "如今本掌门不得不将你逐出"
-    - "正思忖间，忽然有三个身影从暗处跳出，将你团团围住！"
-    - "我郭勇锐只要还活着一天，就定要替你洗刷冤屈，"
-    - "寻西山隐者不遇"
-    - "街边乞丐一遍以筷子敲碗，一遍所唱之歌谣，其吐字换气中暗含丐帮入门内功心法"
-    - "这慕容星辰号称天下第一神偷，果真是名不虚传。"
-    - "岂料副掌门诸葛伶潜结外藩，私蓄死士，意图宫变。"
-    - "依照唐逸影的性子，定会派人上门寻仇。"
-    - "但见白云天轻喝一声，运动周身真气一剑刺出，"
-    - "叶一鸣一闻此言，顿时收起轻蔑的笑容回头看去，"
-    - "听说，乃是当今朝廷四大御史之一的林弄影林统领。"
-    - "让姬清梵副阁主尽快率众支援才行！"
-    - "今日崔命官......死得其所......"
-    - "万一让计心狂探听到风声，肯定会溜之大吉。"
-    - "正好凤南飞在府上设席邀我前去喝酒，咱们一道赴宴。"
-    - "竟然将这些暗器尽数拦下。"
-    - "手中的瓷器碎片"
-    - "只见乞丐勉强抬眼，扫视了你一下，轻蔑一哼，"
-    - "（摸了摸眼泪，破涕为笑）"
-    - "（说罢她盘膝坐下运功，不一会儿身上便腾起了阵阵真气，"
-    - "（说罢从怀中掏出一柄长卷轴，从头开始细细查看起来，"
-    - "（喜笑颜开，将银两收入囊中）"
-    - "想必是在谋划什么大阴谋。"
-    - "于是便起身在寺内闲逛，不知不觉竟走到了后山一处隐蔽院落。"
-    - "便马不停蹄一路南下，终于在天黑之前赶到了河内乡。"
-    - "（连连磕头，将身上兵器财物扔到地上，随后拔腿就跑）"
-    - "全员对你的好感大减！"
-    - "那群邪道将你打的鼻青脸肿，"
-    - "此处显示这对方对你的好感度。"
-    - "好，望你勤学苦练，将这本基础武学修习纯熟。"
-    - "你们二人远远跟着上官凤等人，继续长途跋涉，"
-    - "不急，此人暂无性命之虞，"
-    - "我指出这功夫的缺陷，她不是应该感谢我么？"
-    - "慢着，这二十两我替他还上便是。"
-    - "你趁他一个不备，向后纵越几步，然后落荒而逃！"
-    - "你环视了房间一圈，只见闭关室正中央，正是道无名所坐的蒲团。"
-    - "（你们随姑娘离开了那处是非之地，"
-    - "把此人一刀砍了，就地掩埋，此事不就无人知晓吗？"
-    - "如今看来此人虽心术不正，但确实是世所罕见的用毒奇才。"
-    - "第一个人似乎不服，便又说道"
-    - "姑娘，麻烦您再回忆回忆，这人有没有提起过要往何处去？"
-    - "声望达到对方50%方可结识，同时影响好感上限。"
-    - "这200银两乃是这群贼人的悬赏，你拿去吧。"
-    - "你一把把他拉住。"
-    - "此处显示你当前使用的鞍具。"
-    - "挡在你们和官差之间）"
-    - "哎哟！徒儿救我！"
-    - "自古以来正邪不两立，我宋廉庭便是千刀万剐，身首异处，"
-    - "既是夏帮主一番好意，我沈退也不好推辞。"
-    - "他一切都好，劳烦您挂念了。"
-    - "彗定清风，你们包抄他后路！"
-    - "行至一枝繁叶茂之处，只见丛林掩映之间，"
-    - "只见阮芷躺在一块草席上，正不住咳嗽。"
-    - "只见四名老者配合无间，手中兵刃织成一张细密大网，"
-    - "话音刚落，只听闻金鼓齐鸣，无数马蹄声轰隆而至。"
-    - "等了不多时，忽然听闻一阵轰隆之声，"
-    - "正暗自思量之间，只见一个身影出现在崖边，"
-    - "正逡巡间，突然一名少女跳出拦住去路。"
-    - "（眼见那个人影在山道上拾阶而上，不一会儿便来到门前。"
-    - "只见他全身血如泉涌，已然咽气而亡，"
-    - "（只听得一阵洪钟般的笑声从山下传来"
-    - "此次前来，是想要听些不一样的。"
-    - "今天总算是将这恶贼绳之以法了。"
-    - "（啊呀，又扔偏了）"
-    - "（这下可以溜了吧……）"
-    - "听闻近来监牢内更换了一批守卫，刚熟络起来的几位狱卒都调离了此处。"
-    - "村长，听闻二三十年前，贵村有一户人家突然全家暴毙，"
-    - "虽说入帮不久，但已是立下了汗马功劳。"
-    - "近日深感精神萎靡，浑身不适，听闻#SourceInteractName#在此处坐诊，特地前来求药。"
-    - "万万不能松散懈怠，堕了师傅我的威名！"
-    - "若你能在切磋之中胜过师傅我，那为师方能准许你出师！"
-    - "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。"
-    - "若惹得师父他老人家生气，可别怪师姐我没提醒你。"
-qualityControlAssessment:
-  enabled: true
-  # See docs/investigations/tests/qc-evaluator-model-selection.md for the full model/quant/prompt
-  # comparison history and the fast-corrector-model-swap investigation (correctorModelNames/
-  # judgeModelName/enableRepairLoop - tested, rejected, and removed from here; re-derive from that
-  # document's git history if ever revisited).
-  modelNames:
-    - Qwen38Qc-IQ4XS
-  goldSetPath: Goldset/GoldSet.yaml
-  outputPath: TestResults/QcAssessment
