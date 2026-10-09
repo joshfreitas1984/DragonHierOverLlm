@@ -13,7 +13,7 @@ Expected labels always come from the CURRENT gold set, not from each Results.yam
 labels in force when that run happened), so an older run is rescored correctly after a gold-set
 label is corrected.
 
-Run each prompt version at qualityReview.detectionTemperature 0 so results are deterministic and
+Run each prompt version at qualityControl.detectionTemperature 0 so results are deterministic and
 differences are real rather than sampling noise.
 
 Usage:

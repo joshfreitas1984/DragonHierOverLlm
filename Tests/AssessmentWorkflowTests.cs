@@ -15,6 +15,6 @@ public class AssessmentWorkflowTests
     [Fact(DisplayName = "2. Assess configured QC models")]
     public async Task AssessConfiguredQualityEvaluators()
     {
-        await QualityEvaluatorAssessmentWorkflow.RunAsync(GameFileHandling.WorkingDirectory, GameFileHandling.Hooks);
+        await QualityControlAssessmentWorkflow.RunAsync(GameFileHandling.WorkingDirectory, GameFileHandling.Hooks);
     }
 }

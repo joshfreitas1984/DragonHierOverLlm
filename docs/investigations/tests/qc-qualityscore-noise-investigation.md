@@ -5,9 +5,9 @@
 > parsing/persistence, the flagged-subset backfill, and per-category triage
 > (`QcTriageByDefectCategory.yaml`) are all done — see "Per-category hand-validation findings and
 > policy (implemented)" near the end of this doc for what was found and what `Config.yaml`'s
-> `qualityReview.autoAcceptDefectCategories` is currently set to. The mechanism lives in the
+> `qualityControl.autoAcceptDefectCategories` is currently set to. The mechanism lives in the
 > **sibling repo** `FanslationStudio.LlmKit` — see
-> `../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "DEFECT categories and
+> `../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md`'s "DEFECT categories and
 > per-category policy" section for the current-state technical reference; this document remains the
 > investigation history and the record of *why* each category landed where it did. See "Two-stage
 > DEFECT verification (root-cause fix, implemented)" near the end of this doc for the newest change:
@@ -21,10 +21,10 @@
 
 ## Summary
 
-`QcQualityScore` (0-100, self-rated by the QC LLM in `QualityReviewWorkflow`, model
+`QcQualityScore` (0-100, self-rated by the QC LLM in `QualityControlWorkflow`, model
 `qwen38-27B-2048-unsloth` via Ollama) does not reliably distinguish genuine translation defects
 from fine translations. Real sampling shows a 75-91% false-positive rate among lines flagged by
-`FlaggedForQcReview` (score below `Config.yaml`'s `qualityReview.minAcceptableScore`, currently 70),
+`FlaggedForQcReview` (score below `Config.yaml`'s `qualityControl.minAcceptableScore`, currently 70),
 and the same source line scores wildly differently across independent re-runs with unchanged
 prompt/input (e.g. one recurring passage scored 0, 5, and 10 in three separate runs; another scored
 15, 15, and 35). This points to noise inherent in the model's confidence estimation, not a
@@ -36,7 +36,7 @@ Out of ~50,000 QC'd lines, roughly 5,000 (10%) are currently flagged — too man
 ## Prompt fixes already applied (real, confirmed improvements)
 
 All three per-model-family QC prompts (`BaseFiles/Qwen38`, `Qwen25`, `Glm4` /
-`Prompts/BaseQualityReviewPrompt.txt`) were updated to fix specific, confirmed false-positive
+`Prompts/BaseQualityControlPrompt.txt`) were updated to fix specific, confirmed false-positive
 patterns:
 
 1. **Short-form floor rule** — short interjections/onomatopoeia/battle shouts/single-line dialogue
@@ -115,7 +115,7 @@ them without an LLM call at all.
 
 To turn this from a discussion into an actionable pipeline:
 
-1. **Extract the flagged set with its DEFECT category.** `QualityReviewWorkflow` currently parses
+1. **Extract the flagged set with its DEFECT category.** `QualityControlWorkflow` currently parses
    `SCORE:`/`CORRECTED:` via `ScoreLineRegex`/`CorrectedLineRegex`; the new `DEFECT:` line (added in
    fix #4 above) is emitted by the model but not currently parsed/persisted anywhere — it needs its
    own regex and a field on the QC result record (alongside `QcQualityScore`, `QcStatus`, etc.) so
@@ -158,7 +158,7 @@ Steps 1-4 above were completed (DEFECT parsing/persistence, flagged-subset backf
 counts, 40-line-per-category sample — see `TestResults/QcTriageSummary.yaml`/
 `QcTriageByDefectCategory.yaml`). Step 5 (hand-validation) was done by reading all ~320 sampled
 lines: for each, comparing `text` (SOURCE) against `qcReviewedText` (the *original*, pre-QC
-translation — confirmed from `QualityReviewWorkflow.cs`'s `anchor.QcReviewedText = effectiveTranslated`
+translation — confirmed from `QualityControlWorkflow.cs`'s `anchor.QcReviewedText = effectiveTranslated`
 assignment, set BEFORE the QC call) and `qcTranslated` (QC's *proposed correction*, set AFTER, from
 `anchor.QcTranslated = correctedResult`) to judge whether a genuine defect existed and was actually
 fixed, not just whether the two texts differ.
@@ -198,21 +198,21 @@ near-zero categories that got blanket auto-accepted — `DroppedStutter` stays i
 queue rather than joining `autoAcceptDefectCategories`; 137 lines is small enough that a full
 hand-review (as done here) is more reliable than sampling.
 
-**Implemented policy** (`Files/Config.yaml`'s `qualityReview.autoAcceptDefectCategories`):
+**Implemented policy** (`Files/Config.yaml`'s `qualityControl.autoAcceptDefectCategories`):
 `[HardToParseSeam, OtherNamedDefect, DroppedContent]` — auto-accepted categories total 3,423 lines
 (52% of the flagged set) cleared without individual review; `GarbledNumber`/`DomainTerm`/
 `UntranslatedPinyin`/`DroppedStutter` (1,125 lines, ~17%) stay in the human-review queue where the
 flags are worth the time; `LostIdiom` (1,069) is intentionally left undecided; `Unknown` (1,138)
 needs its own re-run via `Tests/QualityControlWorkflowTests.cs`'s `"8. Reset Non-Auto-Accepted
-Quality Review State"` + `"2. RunQualityReviewPass"` before it can be categorized at all. The
-mechanism (`QualityReviewConfig.AutoAcceptDefectCategories`, `QualityReviewHelpers
-.PassesQcScoreGate`, `QualityReviewWorkflow.ResetNonAutoAcceptedQcState`) lives in
-`FanslationStudio.LlmKit` — see its `docs/features/translation-pipeline/quality-review-pass.md`'s "DEFECT categories
+Quality Control State"` + `"2. RunQualityControlPass"` before it can be categorized at all. The
+mechanism (`QualityControlConfig.AutoAcceptDefectCategories`, `QualityControlHelpers
+.PassesQcScoreGate`, `QualityControlWorkflow.ResetNonAutoAcceptedQcState`) lives in
+`FanslationStudio.LlmKit` — see its `docs/features/translation-pipeline/quality-control-pass.md`'s "DEFECT categories
 and per-category policy" section.
 
 **Re-running this process**: if `LostIdiom` (or any category) gets re-hand-validated later — a
 prompt tweak, a larger sample, or just revisiting the judgment call — update
-`autoAcceptDefectCategories` in `Config.yaml`, then run `"8. Reset Non-Auto-Accepted Quality Review
+`autoAcceptDefectCategories` in `Config.yaml`, then run `"8. Reset Non-Auto-Accepted Quality Control
 State"` to pull the affected rows back out of their current bucket for a fresh look on the next QC
 pass.
 
@@ -240,9 +240,9 @@ already uses for its own rule-violation retries (`TranslationService.CalulateCor
 translate, validate, and only on failure issue a second, narrowly-scoped correction call rather than
 trusting the first attempt to also self-diagnose and fix).
 
-**Implemented**: `qualityReview.twoStageVerificationEnabled` (`Config.yaml`, off by default). When
+**Implemented**: `qualityControl.twoStageVerificationEnabled` (`Config.yaml`, off by default). When
 on, any column the main QC call flags with a named DEFECT gets a second, narrower call
-(`QualityReviewWorkflow.GetVerificationVerdictAsync` in `FanslationStudio.LlmKit`) shown SOURCE, the
+(`QualityControlWorkflow.GetVerificationVerdictAsync` in `FanslationStudio.LlmKit`) shown SOURCE, the
 *original* TRANSLATION, and the single claimed DEFECT category — not asked to rediscover a defect
 from scratch, only to judge that one specific claim — which responds `CONFIRMED` (keep the category,
 use this call's SCORE/CORRECTED instead), `FALSE_POSITIVE` (clear the defect and raise the score —
@@ -251,7 +251,7 @@ category" section describes), or a different DEFECT token (recategorize). A corr
 accepted from this second, narrowly-scoped call, never from the first call's freehand rewrite — this
 is what should prevent the "Cui Cui Cui" → "Charge!" class of bad fix going forward. Costs one extra
 LLM call, but only for the ~10-15% of lines already flagged, not the whole corpus. Full technical
-reference: `../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "Two-stage
+reference: `../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md`'s "Two-stage
 DEFECT verification" section.
 
 Not yet done (at the time this section was written): turning this on for a full corpus run and
@@ -289,7 +289,7 @@ had `qcTranslated` byte-identical to `qcReviewedText` — the model (or the veri
 a DEFECT category but its own freehand "fix" reproduced the original text verbatim (e.g. `霓裳仙子` →
 "Fairy Nishang" → "Fairy Nishang", unchanged). These got a low score and sat in the human-review queue
 for a translation that was never actually going to change. Fixed in
-`FanslationStudio.LlmKit`'s `QualityReviewWorkflow.ReviewColumnAsync`: a correction identical to the
+`FanslationStudio.LlmKit`'s `QualityControlWorkflow.ReviewColumnAsync`: a correction identical to the
 already-accepted `effectiveTranslated` is now treated as `DEFECT: NONE` (score 100, `QcStatus.Passed`,
 never flagged) regardless of what the model claimed, rather than kept as a "confirmed" low-score
 defect with nothing behind it.
@@ -317,10 +317,10 @@ shipped it on score alone, before `autoAcceptDefectCategories` was ever consulte
 
 Two compounding gaps, not one:
 
-1. **No prompt check for this failure shape.** `BaseQualityReviewVerificationPrompt.txt`'s only two
+1. **No prompt check for this failure shape.** `BaseQualityControlVerificationPrompt.txt`'s only two
    mechanical fidelity checks are placeholder-token preservation and proper-name-exists-in-SOURCE
    (checks 2a/2b) — nothing checks whether a correction preserves *who is doing what to whom*.
-   Detection's `BaseQualityReviewPrompt.txt` has one generic "meaning mismatch" line but no worked
+   Detection's `BaseQualityControlPrompt.txt` has one generic "meaning mismatch" line but no worked
    example for agency/direction reversal, unlike the omitted-subject-inheritance case which got one
    baked into all 5 model families' prompts.
 2. **No safe category even if flagged correctly.** Had this scored low, the only two categories a
@@ -330,7 +330,7 @@ Two compounding gaps, not one:
 **Fix applied**: added `QcDefectCategory.MeaningReversal` (`FanslationStudio.LlmKit`'s
 `Support/QcDefectCategory.cs` + `QcDefectCategoryTokens.cs`), deliberately never added to
 `autoAcceptDefectCategories` regardless of future sample precision (see
-`../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "DEFECT
+`../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md`'s "DEFECT
 categories and per-category policy" section for why this one category is a deliberate exception to
 the usual precision-sampling loop). Prompt files across all 5 model families updated with an
 explicit agency/direction-fidelity check and a worked example using this exact case. Added as a
@@ -339,5 +339,5 @@ gold-set regression case: `Files/Goldset/GoldSet.yaml`'s `correctionSamples[]` e
 so it's retested on every future assessment run.
 
 **Also found in passing**: this doc's own "Two-stage DEFECT verification" section (LlmKit's
-`quality-review-pass.md`) described the feature as gated by a `twoStageVerificationEnabled` flag that
+`quality-control-pass.md`) described the feature as gated by a `twoStageVerificationEnabled` flag that
 no longer exists in code — it's unconditional now. Flagged inline there rather than rewritten here.

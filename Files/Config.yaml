@@ -64,7 +64,7 @@ lineContextEnabled: true
 pronounCheck:
   enabled: true
   skipWhenTranslationNamesSomeone: false
-qualityReview:
+qualityControl:
   enabled: true
   # Single model for every QC role (detection/verification/correction/repair) - see
   # docs/investigations/tests/qc-evaluator-model-selection.md for why, and why a faster/cheaper
@@ -207,7 +207,7 @@ translationAssessment:
     - "若你能在切磋之中胜过师傅我，那为师方能准许你出师！"
     - "我#$PlayerName#初入江湖，似乎并不识得老人家您这般人物。"
     - "若惹得师父他老人家生气，可别怪师姐我没提醒你。"
-qualityEvaluatorAssessment:
+qualityControlAssessment:
   enabled: true
   # See docs/investigations/tests/qc-evaluator-model-selection.md for the full model/quant/prompt
   # comparison history and the fast-corrector-model-swap investigation (correctorModelNames/
@@ -216,4 +216,4 @@ qualityEvaluatorAssessment:
   modelNames:
     - Qwen38Qc-IQ4XS
   goldSetPath: Goldset/GoldSet.yaml
-  outputPath: TestResults/QcEvaluatorAssessment
+  outputPath: TestResults/QcAssessment

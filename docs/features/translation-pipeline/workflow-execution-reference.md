@@ -13,7 +13,7 @@ under this directory.
 - `Verify/` is the persistent harness for isolated reproductions.
 
 The shared `FanslationStudio.LlmKit` project owns the generic translation data model, compound-field
-split/rebuild behavior, translation service, and quality-review implementation. This repository
+split/rebuild behavior, translation service, and quality-control implementation. This repository
 should use its extension points rather than duplicating generic behavior.
 
 ## Numbered facts are operational steps
@@ -25,7 +25,7 @@ only when advancing the actual translation workflow.
 Do not run these steps automatically after code changes, especially:
 
 - raw-copy and export/merge steps that regenerate or overwrite accumulated translation inputs;
-- translation or quality-review steps that call a live model;
+- translation or quality-control steps that call a live model;
 - cleanup or reset steps that change flags and review state.
 
 Pure regression tests that exercise static utilities without touching `Files/` are appropriate for

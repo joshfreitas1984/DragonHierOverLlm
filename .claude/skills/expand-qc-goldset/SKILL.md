@@ -6,7 +6,7 @@ description: Mines a completed TranslationAssessmentWorkflow run (Files/TestResu
 # Expand the QC gold set from a translation assessment run
 
 This skill runs from a downstream game-translation repo such as `DragonHierOverLlm`. It never runs
-a new `TranslationAssessmentWorkflow`/`QualityReviewWorkflow` pass, never calls an LLM, and never
+a new `TranslationAssessmentWorkflow`/`QualityControlWorkflow` pass, never calls an LLM, and never
 edits `Files/Converted`. All labels are the agent's own human-style judgment call against real
 model output already on disk - never fabricate a translation or a defect.
 
@@ -89,8 +89,8 @@ For every candidate model's translation, assign:
   and why, referencing the specific words/tokens involved. This is what makes the label reusable
   later; don't skip it.
 
-Two distinct arms, matching `QualityEvaluatorAssessmentWorkflow`'s `GoldSet` schema
-(`FanslationStudio.LlmKit/Workflow/QualityEvaluatorAssessmentWorkflow.cs`):
+Two distinct arms, matching `QualityControlAssessmentWorkflow`'s `GoldSet` schema
+(`FanslationStudio.LlmKit/Workflow/QualityControlAssessmentWorkflow.cs`):
 
 - `items[]` - multi-model **detection** comparison (`source` + `candidates{model: text}` +
   `labels{model: {label, defectCategories, correctionSafety}}`). Use this for ordinary

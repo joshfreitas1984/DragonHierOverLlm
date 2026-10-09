@@ -26,7 +26,7 @@ You must **not** run, and must not offer to run, anything from step 7 onwards, e
 mid-walkthrough to "just finish it off":
 
 - translation facts (`TranslationWorkflowTests`, any live LLM call),
-- quality-review facts (`QualityControlWorkflowTests`),
+- quality-control facts (`QualityControlWorkflowTests`),
 - packaging (`FileOutputWorkflowTests.PackageFinalTranslation`),
 - release packaging (`FileOutputWorkflowTests.PackageRelease`),
 - any flag/QC reset facts.

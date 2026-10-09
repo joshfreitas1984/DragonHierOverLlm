@@ -113,9 +113,9 @@ Known-bad reconstructed results are corrected by
 `GameFileHandling.DynamicStringResultOverrides` after packaging. Do not hand-edit generated
 `Files/Converted` or `Files/Mod` YAML because later export or packaging regenerates those values.
 
-## Quality review exclusion for function-routed choice entries
+## Quality control exclusion for function-routed choice entries
 
-`dynamicStrings.txt` has `EnableQualityReview = true` (2026-09), so its ordinary template dialogue
+`dynamicStrings.txt` has `EnableQualityControl = true` (2026-09), so its ordinary template dialogue
 lines get reviewed like any other translated text. But a meaningful slice of this file's entries
 (confirmed via decompile: 1,242 of 6,693 raw entries at time of writing) are the same
 `"{choiceText};FunctionName[;params...]"` dialogue-choice/routing shape the packaging section above
@@ -134,5 +134,5 @@ raw dump also contains temp-NPC spawn records (`临时:传令&随机;;-1;3;-1`) 
 dialogue-option fragments (`另选它物;`), all part of the same "machine record, not prose"
 convention; a real corpus sample confirmed every raw entry containing `;` is one of these shapes,
 never ordinary Chinese sentence text (which never contains an ASCII semicolon). See the shared
-library's [`quality-review-pass.md`](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md)
+library's [`quality-control-pass.md`](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md)
 for the general `CustomQcExclusionRule` mechanism and guidance for writing a similar rule elsewhere.

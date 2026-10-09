@@ -48,7 +48,7 @@ and working data used to produce it.
 
 The tooling projects reference the sibling `FanslationStudio.LlmKit` repository by project
 reference. Its own `docs/` tree is the source of truth for shared-library mechanics such as the
-quality-review workflow, packaging behavior, and translation data model.
+quality-control workflow, packaging behavior, and translation data model.
 
 ## Documentation taxonomy
 
@@ -85,6 +85,6 @@ project-local `docs/` folders or project-local issue indexes.
 | Work on extraction, translation, or packaging | [Translation instructions](../.github/instructions/tests-translation-workflow.instructions.md), then `features/translation-pipeline/` |
 | Debug translation-pipeline data loss or crashes | [KNOWN_ISSUES.md](KNOWN_ISSUES.md), then the linked pipeline investigation |
 | Understand the `Files/` layout | [GameFileHandling reference](features/translation-pipeline/gamefilehandling-reference.md) |
-| Work on the QC pass | [KNOWN_ISSUES.md](KNOWN_ISSUES.md), then the sibling repo's [quality-review-pass.md](../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md) |
+| Work on the QC pass | [KNOWN_ISSUES.md](KNOWN_ISSUES.md), then the sibling repo's [quality-control-pass.md](../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md) |
 | Reproduce isolated logic bugs | [`Verify/`](../Verify/) and the repository instructions |
 | Install/play the released patch | [Latest release](#latest-release) at the top of this file |

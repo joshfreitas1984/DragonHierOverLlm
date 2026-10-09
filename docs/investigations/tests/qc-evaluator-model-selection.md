@@ -4,18 +4,18 @@
 > every QC role (detection, verification, correction generation, and repair) - see "Final decision"
 > below. This document is the investigation record; it does not need to be read to operate the
 > pipeline day to day (see the sibling repo's
-> [quality-review-pass.md](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md)
+> [quality-control-pass.md](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md)
 > for that), only to understand why this model and shape were chosen over the alternatives that were
 > tried.
 
 ## Summary
 
 Twenty-five rounds of testing (2026-09-20, one long session) answered three separable questions
-about the post-translation QC pass (`QualityReviewWorkflow`, `FanslationStudio.LlmKit`):
+about the post-translation QC pass (`QualityControlWorkflow`, `FanslationStudio.LlmKit`):
 
 1. **Which model/quant/prompt combination detects genuine translation defects best?**
    `Qwen38Qc-IQ4XS` (`hf.co/unsloth/Qwen3.8-27B-GGUF:UD-IQ4_XS`), after maxing out the shared
-   `BaseQualityReviewPrompt.txt`.
+   `BaseQualityControlPrompt.txt`.
 2. **Do the five-call design's two "doubled" process variants (doubled detection, doubled
    verification) actually earn their extra LLM-call cost?** Doubled detection: yes, keep it (thin but
    real recall lift). Doubled verification: no measurable benefit - a targeted prompt fix did what
@@ -32,7 +32,7 @@ sufficient - see "Gold set growth" below.
 
 ## Method
 
-`QualityEvaluatorAssessmentWorkflow` (`FanslationStudio.LlmKit`) runs each candidate model against
+`QualityControlAssessmentWorkflow` (`FanslationStudio.LlmKit`) runs each candidate model against
 the committed gold set and records parse success, Pass/Defect/Abstain accuracy, per-category
 recall/precision, correction safety, and latency, without ever mutating `Files/Converted`. A fixed
 excluded-methodology (`Scripts/qc_excluded_methodology.py`) drops seam-shaped separator/newline gold
@@ -40,7 +40,7 @@ rows from the recall/precision denominator throughout - see "Separator/newline d
 scope" below.
 
 Two extensions were built specifically to answer question 3, both gated behind
-`qualityEvaluatorAssessment` config keys that default to off/empty and never affect the production
+`qualityControlAssessment` config keys that default to off/empty and never affect the production
 `RunAsync`/`RunBruteForce` path:
 
 - **`correctorModelNames`/`judgeModelName`**: has each named corrector candidate draft a *fresh*
@@ -49,23 +49,23 @@ Two extensions were built specifically to answer question 3, both gated behind
   generation - then scores it for safety with a separate, trusted judge model
   (`GetVerificationVerdictAsync`). A model never grades its own draft.
 - **`enableRepairLoop`**: when a judge rejects a draft, sends it back through the *same* corrector's
-  `GetCorrectionRepairAsync`, then re-verifies, up to `qualityReview.maxScoreRepairIterations` (2)
+  `GetCorrectionRepairAsync`, then re-verifies, up to `qualityControl.maxScoreRepairIterations` (2)
   times - mirroring production's calls 4/5 loop, to measure whether repair actually rescues a weaker
   corrector's higher failure rate rather than assuming it does.
 
-Both write to their own subdirectories under `Files/TestResults/QcEvaluatorAssessment/` so
+Both write to their own subdirectories under `Files/TestResults/QcAssessment/` so
 single-shot and repair-loop numbers are never conflated, and both are always run as full phases (one
 model resident at a time for the *whole* batch) rather than interleaved per row - see "Model-swap
 cost" below for why that matters.
 
 ## Detection: model, quant, and prompt (rounds 1-21, condensed)
 
-- The shared `BaseQualityReviewPrompt.txt` (`Qwen38`/`HyMT2`/`HyMT2Moe` families) was iteratively
+- The shared `BaseQualityControlPrompt.txt` (`Qwen38`/`HyMT2`/`HyMT2Moe` families) was iteratively
   fixed for real, confirmed false-positive/false-negative patterns: placeholder/null-value leaks,
   name-as-gloss mistranslation, an invented-synonym-pair over-translation pattern, and (last)
   cross-entry mechanical consistency within a translation (number/label order, internal
   capitalization) - each verified fresh (cache deleted, re-run, before/after compared) per
-  `QualityEvaluatorAssessmentWorkflow`'s caching trap (see "Gotchas" below).
+  `QualityControlAssessmentWorkflow`'s caching trap (see "Gotchas" below).
 - **Capability ceiling, not a prompt problem:** `HyMT2-30B-A3B` (and its quantized siblings) and
   `QwenQc-14B` (`qwen2.5:14b-instruct`) were each tested as detector candidates. Two independent,
   targeted prompt-tuning rounds each showed `HyMT2-30B-A3B` picking up nothing on hard
@@ -76,9 +76,9 @@ cost" below for why that matters.
   rounds; their `models:` definitions were kept for the correction-generation work in question 3.
 - **Sub-question closed (2026-09-20): the HyMT2 gap is not English-instruction-following.** Both
   prompt-tuning rounds above only ever tested `HyMT2-30B-A3B` against the shared, English-language
-  `BaseQualityReviewPrompt.txt` - never checked against a Chinese-language prompt, despite HyMT2
+  `BaseQualityControlPrompt.txt` - never checked against a Chinese-language prompt, despite HyMT2
   being a Chinese-origin model. Translated the prompt's full instructions/rules into Chinese
-  (`Files/HyMT2ZhPrompts/BaseQualityReviewPrompt.txt`, wired in via `customPromptsPath` as
+  (`Files/HyMT2ZhPrompts/BaseQualityControlPrompt.txt`, wired in via `customPromptsPath` as
   `HyMT2-30B-A3B-ZhPrompt`), keeping every structural/output-format marker unchanged (`SOURCE`,
   `TRANSLATION`, the `DEFECTS:` line, all category constants, and every placeholder/example token),
   and re-ran both a fresh English-prompt `HyMT2-30B-A3B` baseline (the previously-recorded one had a
@@ -103,11 +103,11 @@ cost" below for why that matters.
   never-combine-UNCERTAIN-with-a-named-category rule - a second, independent instruction-following
   miss under the translated prompt, not counted as evidence either way since it was skipped rather
   than scored.) The Chinese prompt file and `HyMT2-30B-A3B-ZhPrompt` model definition are kept in
-  the repo as the investigation record; `qualityEvaluatorAssessment.modelNames` reverts to just
+  the repo as the investigation record; `qualityControlAssessment.modelNames` reverts to just
   `Qwen38Qc-IQ4XS` now that the question is closed.
 - **Sub-question closed (2026-09-20): the ceiling is not a reasoning-budget problem either.** Using
-  the newly-added `qualityEvaluatorAssessment.detectionThinkingEnabled` flag (mirrors the
-  verification-call thinking precedent - see `FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md`'s "Verification-
+  the newly-added `qualityControlAssessment.detectionThinkingEnabled` flag (mirrors the
+  verification-call thinking precedent - see `FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md`'s "Verification-
   call thinking" section) plus headroom raised in `HyMT2Moe`'s preset (`num_ctx`/`num_predict`
   4096/2048 -> 8192/4096, harmless with thinking off), ran `HyMT2-30B-A3B` with detection-time
   thinking enabled against the same 108-entry gold set (English prompt):
@@ -131,7 +131,7 @@ cost" below for why that matters.
   second in-flight `maxConcurrency: 2` worker's retry loop never regenerates the `.tmp` file another
   worker already consumed; re-running the assessment succeeded cleanly. Worth hardening
   `WriteYamlAtomically` against this race specifically if it recurs, but not chased further here
-  since a clean re-run was sufficient to get a valid result.) `qualityEvaluatorAssessment.modelNames`
+  since a clean re-run was sufficient to get a valid result.) `qualityControlAssessment.modelNames`
   reverts to `Qwen38Qc-IQ4XS` and `detectionThinkingEnabled` reverts to `false`, per this sub-test's
   own scoping comment.
 - **Final quant sweep (Twenty-first round), full 108-entry gold set:**
@@ -147,7 +147,7 @@ cost" below for why that matters.
   precision and ~2x the latency - the wrong tradeoff direction for this pipeline's stated priority
   (a missed defect ships silently forever; a false positive costs one bounded correction round-trip).
   **User picked `Qwen38Qc-IQ4XS`** as the balanced option - this is the current
-  `qualityReview.modelName`.
+  `qualityControl.modelName`.
 - Two categories remain weak by design, not by omission: `formatting` (a narrow, diagnosed
   stray-whitespace pattern judged cosmetic) and `terminology` (has a working deterministic
   glossary-resync backstop, `TranslateLinesBruteForce`/`RunBruteForce`, independent of the QC LLM's
@@ -161,7 +161,7 @@ aggregate, which includes the out-of-scope separator rows. They were re-measured
 - the `UNNATURAL_PHRASING` + pinyin-direction change (`45014ec`).
 
 **Method.** Each prompt version was run on the current 214-pair gold set with
-`qualityReview.detectionTemperature: 0`, so every run is deterministic. Two back-to-back identical
+`qualityControl.detectionTemperature: 0`, so every run is deterministic. Two back-to-back identical
 runs gave 0 label changes. Runs were scored with `Scripts/qc_compare_runs.py --heldout-rev 25d1dab`.
 "Held-out" means the 198 pairs whose labels predate these prompt changes, which is the fair
 regression check. "New" means the 16 pairs added alongside the `UNNATURAL_PHRASING` work.
@@ -273,23 +273,23 @@ confirmed-defect subset. Both costs were previously assumed necessary, never mea
   averages 601ms/row vs 1268ms/row doubled (2.11x, not 1.83x - the earlier ratio was quant-specific)
   - roughly **15 hours across the full ~81,000-split corpus** for that same 1/18-row recall lift.
   With speed now the priority, production added a real (non-assessment-only) toggle,
-  `QualityReviewConfig.DoubledDetectionEnabled` (default `true`, mirrors the assessment harness's
+  `QualityControlConfig.DoubledDetectionEnabled` (default `true`, mirrors the assessment harness's
   `doubledDetection` knob but gates `GetLlmVerdictAsync`'s own call 2, not just the evaluator),
-  and set `qualityReview.doubledDetectionEnabled: false` in `Files/Config.yaml`. Revisit if a missed
+  and set `qualityControl.doubledDetectionEnabled: false` in `Files/Config.yaml`. Revisit if a missed
   defect turns out to matter more than the ~15h saved.
 - **Doubled verification: no benefit, root-caused and fixed differently.** Both harmful-correction
   gold examples known at the time scored `Safe` identically whether verification ran once or
   twice - the second independent call made the *exact same mistake*, not a different one. This
   pointed at a concrete gap (nothing in the verification prompt explicitly checked
   placeholder-token-count preservation or flagged fabricated named entities), not call-to-call noise.
-  Adding those two explicit checks to `BaseQualityReviewVerificationPrompt.txt` caught both examples
+  Adding those two explicit checks to `BaseQualityControlVerificationPrompt.txt` caught both examples
   correctly with a single verification call. `doubledVerification` remains a harness knob (kept at
   its production-matching `true` default) for re-testing against a larger harmful-correction sample,
   not because doubling itself is currently believed to help.
 
 ## Fast-corrector-model-swap: tested and rejected (rounds 22-25)
 
-Full detail: `FanslationStudio.LlmKit/docs/investigations/quality-review-postmortems.md` has the
+Full detail: `FanslationStudio.LlmKit/docs/investigations/quality-control-postmortems.md` has the
 generalizable model/hardware findings; this section is the DragonHierOverLlm-specific decision.
 
 **Finding 1 - model-swap cost rules out per-row interleaving on its own.** Measured directly against
@@ -329,20 +329,20 @@ harmful correction is worse than bounded extra latency), **not worth taking**.
 
 **Final decision (2026-09-20, user-confirmed): `Qwen38Qc-IQ4XS` is the single model for every QC
 role** - detection, verification, correction generation, and repair. No cross-model process variant
-is in production. `Files/Config.yaml`'s `qualityReview.modelName: Qwen38Qc-IQ4XS` already reflected
+is in production. `Files/Config.yaml`'s `qualityControl.modelName: Qwen38Qc-IQ4XS` already reflected
 this (production has always used one model for every call in `GetLlmVerdictAsync`) - the
-`qualityEvaluatorAssessment.correctorModelNames`/`judgeModelName`/`enableRepairLoop` keys used to
+`qualityControlAssessment.correctorModelNames`/`judgeModelName`/`enableRepairLoop` keys used to
 answer this question are assessment-only, never read by the production path, and have been removed
 from `Files/Config.yaml` now that the question is closed (this document is the record; re-derive the
 config shape from the git history of this file if the question is ever reopened).
 
 ## Gotchas found along the way
 
-- **Caching trap:** `QualityEvaluatorAssessmentWorkflow` caches each model's `Results.yaml` keyed
+- **Caching trap:** `QualityControlAssessmentWorkflow` caches each model's `Results.yaml` keyed
   only on the gold-set fingerprint, not on prompt/config content. Changing a prompt or a new
   `correctorModelNames`/`judgeModelName`/`enableRepairLoop` combination and re-running without
   deleting the relevant output directory silently returns stale results. Always delete
-  `Files/TestResults/QcEvaluatorAssessment/<model>/` (or the `CorrectionGeneration*` subdirectories)
+  `Files/TestResults/QcAssessment/<model>/` (or the `CorrectionGeneration*` subdirectories)
   before a round meant to test a change.
 - **Repair-loop resumability bug (found and fixed 2026-09-20):** the first implementation tracked
   "which rows still need fixing" in an in-memory dictionary rebuilt fresh on every call. A transient

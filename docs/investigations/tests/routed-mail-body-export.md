@@ -12,7 +12,7 @@ The game routes mail through `PlotGetNewMail;<Sender>-<Body>`, but the runtime m
 
 ## Findings
 
-- The runtime behavior was not the correct place to add a one-off prefix workaround. The alias belongs in the translation/export lifecycle so it can be translated, quality-reviewed, and packaged normally.
+- The runtime behavior was not the correct place to add a one-off prefix workaround. The alias belongs in the translation/export lifecycle so it can be translated, quality-controled, and packaged normally.
 - The dedicated raw source is `Files/Raw/Dumped/DynamicStrings/dynamicStringsRoutedMailBodies.txt`.
 - The structured source `Files/Raw/Dumped/PrefabText/dumpedOtherText.txt` contains 143 `PlotGetNewMail` records.
 - The missing `姜婉-小师妹...` value is not present in that structured dump. It is present in the master `Files/Raw/Dumped/DynamicStrings/dynamicStrings.txt` dump.

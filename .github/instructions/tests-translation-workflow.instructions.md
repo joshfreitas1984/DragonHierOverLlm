@@ -49,11 +49,11 @@ Feature references:
 - [`dynamicstrings-pipeline-architecture.md`](../../docs/features/translation-pipeline/dynamicstrings-pipeline-architecture.md)
 - [`prefabtext-pipeline-architecture.md`](../../docs/features/translation-pipeline/prefabtext-pipeline-architecture.md)
 
-## Quality review
+## Quality control
 
-Quality review is opt-in and stateful. Keep QC separate from ordinary translation, respect
-`qualityReview.enabled` and per-file settings, and use the current numbered QC facts in
+Quality control is opt-in and stateful. Keep QC separate from ordinary translation, respect
+`qualityControl.enabled` and per-file settings, and use the current numbered QC facts in
 `Tests/QualityControlWorkflowTests.cs`. Shared QC mechanics live in the sibling
 `FanslationStudio.LlmKit` document:
-[`quality-review-pass.md`](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-review-pass.md).
+[`quality-control-pass.md`](../../../../FanslationStudio.LlmKit/docs/features/translation-pipeline/quality-control-pass.md).
 The local QC investigation is indexed from [`docs/KNOWN_ISSUES.md`](../../docs/KNOWN_ISSUES.md).

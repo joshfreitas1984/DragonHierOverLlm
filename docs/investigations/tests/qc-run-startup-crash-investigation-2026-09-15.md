@@ -10,11 +10,11 @@ patch wild."
 
 `PrefabTextWorkflow.ReconstructLine` (FanslationStudio.LlmKit repo) fell all the way back to **raw,
 untranslated Chinese text** (`line.Raw`/`split.Text`) whenever a QC-corrected column's score fell
-below `qualityReview.minAcceptableScore` (60) and its `QcDefectCategory` wasn't in
+below `qualityControl.minAcceptableScore` (60) and its `QcDefectCategory` wasn't in
 `autoAcceptDefectCategories` — discarding the column's already-good, pre-QC `Translated` English
 text along with the rejected correction. `DynamicStringWorkflow` had the identical bug pattern.
 
-Confirmed by isolation testing: `qualityReview.enabled: false` + repackage loaded fine;
+Confirmed by isolation testing: `qualityControl.enabled: false` + repackage loaded fine;
 `enabled: true` + repackage broke startup. Diffing the two `Files/Mod` builds
 (`dumpedPrefabText.txt.yaml`) turned up several entries that had reverted to raw Chinese, including
 the **age-rating splash notice** (`检测到您为未成年人...`) — shown on the very first boot screen,
@@ -31,11 +31,11 @@ just the rejected correction.
 
 ## Fix (2026-09-16, FanslationStudio.LlmKit repo)
 
-1. **`qualityReview.enabled` now gates packaging, not just the QC pass.** `QualityReviewHelpers
-   .IsQcReviewFresh` takes a `QualityReviewConfig` and returns `false` immediately when `enabled`
+1. **`qualityControl.enabled` now gates packaging, not just the QC pass.** `QualityControlHelpers
+   .IsQcReviewFresh` takes a `QualityControlConfig` and returns `false` immediately when `enabled`
    is `false`, for every packaging path (Csv/Json/DynamicString/PrefabText). This is what made the
    isolation test above possible — flip the flag and re-run "6. Package to Game Files" (no LLM
-   calls) to compare QC-on vs. QC-off output directly. See `Files/Config.yaml`'s `qualityReview:`
+   calls) to compare QC-on vs. QC-off output directly. See `Files/Config.yaml`'s `qualityControl:`
    comment.
 2. **`PrefabTextWorkflow`/`DynamicStringWorkflow` no longer fall back to raw Chinese, ever.** A
    QC-rejected column (low score, uncovered DEFECT category) now falls back to the column's

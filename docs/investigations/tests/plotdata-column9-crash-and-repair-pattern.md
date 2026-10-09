@@ -142,7 +142,7 @@ either character), with the validator's exact-count comparison kept as a backsto
 change to the repair/decompose logic ever lets a mismatch slip through undetected.
 
 **QC review pass note (2026-09)**: the two hooks above guard the *initial* translation pass, which
-operates per-`choiceText`-fragment via `CompoundFieldSplitter`. The separate QC/quality-review pass
+operates per-`choiceText`-fragment via `CompoundFieldSplitter`. The separate QC/quality-control pass
 does not go through that same fragment-level machinery — it hands the model the whole reconstructed
 cell to propose a correction against, and a model asked to "improve" a multi-choice
 `"text;FunctionName;0|text;FunctionName;1"`-shaped blob reliably flattens it to prose, dropping every
@@ -151,7 +151,7 @@ correction, so this was never a data-corruption risk — but it meant every colu
 delimiter in it was guaranteed to fail forever. `GameFileHandling.ExcludePlotChoiceColumnFromQc`
 (wired via `CustomQcExclusionRule`, same mechanism as
 `ExcludeFunctionRoutedDynamicStringFromQc` for `dynamicStrings.txt`) keeps these out of the QC queue
-entirely instead. See [gamefilehandling-reference.md](gamefilehandling-reference.md#quality-review-hooks).
+entirely instead. See [gamefilehandling-reference.md](gamefilehandling-reference.md#quality-control-hooks).
 
 **Follow-up (2026-09-17): the `{1}` callParam slot of `"{0};RobHeroItemChoose;{1}"` must never be
 translated at all**, not just guarded against delimiter leakage — `PlotController.RobHeroItemChoose(n)`
