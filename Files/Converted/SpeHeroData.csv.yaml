@@ -3353,7 +3353,7 @@
     translated: "Meridian"
   - split: 15
     text: "文逸真人"
-    translated: "Immortal Wen Yi"
+    translated: "Daoist Wen Yi"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -3440,7 +3440,7 @@
     translated: "Sword aura"
   - split: 15
     text: "清虚真人"
-    translated: "Immortal Qingqi"
+    translated: "Daoist Qingqi"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -3853,7 +3853,7 @@
     translated: "Ugly"
   - split: 15
     text: "白眉真人"
-    translated: "True Immortal Bai Mei"
+    translated: "True Daoist Bai Mei"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -3930,7 +3930,7 @@
     translated: "Forest Plant"
   - split: 15
     text: "潇湘真人"
-    translated: "Xiaoxiang Immortal"
+    translated: "Xiaoxiang Daoist"
   templates:
   - split: 10
     template: "{0}/{1}"
