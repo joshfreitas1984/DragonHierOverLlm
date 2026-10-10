@@ -715,3 +715,43 @@
   result: Qingcheng Sect
 - raw: 伏牛派
   result: Funiu Sect
+- raw: 铁矿石
+  rawSimplified: 铁矿石
+  rawTraditional: 鐵礦石
+  result: Iron Ore
+- raw: 黑铁
+  rawSimplified: 黑铁
+  rawTraditional: 黑鐵
+  result: Dark Iron
+- raw: 镔铁
+  rawSimplified: 镔铁
+  rawTraditional: 鑌鐵
+  result: Refined Iron
+- raw: 黑金
+  result: Black Gold
+- raw: 杜康酒
+  result: Dukang Wine
+- raw: 竹叶青
+  rawSimplified: 竹叶青
+  rawTraditional: 竹葉青
+  result: Bamboo Leaf Tea
+- raw: 外门弟子
+  rawSimplified: 外门弟子
+  rawTraditional: 外門弟子
+  result: "Outer Disciple"
+- raw: 内门弟子
+  rawSimplified: 内门弟子
+  rawTraditional: 內門弟子
+  result: "Inner Disciple"
+- raw: 正式弟子
+  rawSimplified: 正式弟子
+  rawTraditional: 正式弟子
+  result: "Formal Disciple"
+- raw: 河图
+  rawSimplified: 河图
+  rawTraditional: 河圖
+  result: River Map
+  allowalt:
+  - Hetu
+  context: Hetu is river map but can be part of Hetu Luoshu
+  badtrans: false
