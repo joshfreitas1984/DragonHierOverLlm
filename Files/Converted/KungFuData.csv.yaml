@@ -389,14 +389,11 @@
   splits:
   - split: 4
     text: "修习者借由巧劲与内功，可在光滑墙壁上踏行数丈远，因而得名"
-    translated: "While correcting, martial practitioners can walk several zhang far on smooth walls through the use of skills and neigong, thus earning their name."
-    qcReviewedText: "While correcting, martial practitioners can walk several zhang far on smooth walls through the use of skills and neigong, thus earning their name."
-    qcTranslated: "By harnessing the finesse of their force and Neigong, martial practitioners can walk several zhang across smooth walls, thus earning their name."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    translated: "Practitioners can travel several dozen feet along smooth walls using their skill and Neigong, hence the name."
+    qcReviewedText: "Practitioners can travel several dozen feet along smooth walls using their skill and Neigong, hence the name."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "40,轻功,1,鲤鱼跃龙门,着重修炼跳跃能力的功法，使用者身形腾空，如同鲤鱼飞跃,,1.1,轻功1;力道1,轻功6;力道3;灵巧3;蓄力0.06,,轻功15;灵巧10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 4
@@ -3454,14 +3451,11 @@
   splits:
   - split: 4
     text: "此掌法擅长久战，招式以守代攻，绵密无比，劲道如春蚕吐丝般缠绕敌人，令其疲敝不堪"
-    translated: "This palm technique excels in prolonged battles. The moves defend while attacking, continuous and unparalleled in density. While correcting, they ensure that the force flows like silk from a silkworm, enveloping enemies in an exhausting embrace."
-    qcReviewedText: "This palm technique excels in prolonged battles. The moves defend while attacking, continuous and unparalleled in density. While correcting, they ensure that the force flows like silk from a silkworm, enveloping enemies in an exhausting embrace."
-    qcTranslated: "This palm technique excels in prolonged battles. The moves use defense as attack, continuous and unparalleled in density. The force flows like silk from a silkworm, entangling enemies until they are exhausted."
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    translated: "This palm technique excels in prolonged battles, with moves that defend while attacking, incredibly dense and relentless, with power like silk from a spring silkworm, entangling the enemy until they are utterly exhausted."
+    qcReviewedText: "This palm technique excels in prolonged battles, with moves that defend while attacking, incredibly dense and relentless, with power like silk from a spring silkworm, entangling the enemy until they are utterly exhausted."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "365,射术,1,芙蓉金针,药王谷独门针灸手法，在数步距离上射出金针，替人远程渡穴疗伤，因有一定风险，需精习医术者方能使用,-6,1.1,射术1;经脉1,,医术0.2;经脉0.1;射术0.1,射术15;经脉5;医术15,\"0,0,2\",\"0,0,0\",疗伤0.08,10,2,1,,,,,skill5_0,4-----0.9,治疗-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 4

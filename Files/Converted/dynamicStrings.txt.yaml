@@ -48472,14 +48472,14 @@
 - raw: "狗贼武艺高强，难以抵挡。\n好汉不吃眼前亏，告辞！"
   splits:
   - text: "狗贼武艺高强，难以抵挡。"
-    translated: "While correcting, they also possess formidable martial arts, making it hard to withstand."
-    qcReviewedText: "While correcting, they also possess formidable martial arts, making it hard to withstand.\nA wise man considers future consequences; goodbye!"
-    qcTranslated: "The scoundrel's martial arts are formidable, making him hard to withstand.\nA wise man does not take a loss before his eyes; goodbye!"
+    translated: "The rogue's martial arts are too powerful to resist."
+    qcReviewedText: "The rogue's martial arts are too powerful to resist.\nA wise man considers future consequences; goodbye!"
+    qcTranslated: "The rogue's martial arts are too powerful to resist.\nA true hero doesn't take a beating he can't win; farewell!"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: LostIdiom
     qcDefectCategories:
-    - OtherNamedDefect
+    - LostIdiom
   - subIndex: 1
     text: "好汉不吃眼前亏，告辞！"
     translated: "A wise man considers future consequences; goodbye!"

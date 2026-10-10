@@ -4477,14 +4477,11 @@
 - raw: "一支镖师队伍在#TargetPlace#遭遇强人袭击，速速前去救援。"
   splits:
   - text: "一支镖师队伍在#TargetPlace#遭遇强人袭击，速速前去救援。"
-    translated: "While correcting, they also verified a team of bodyguards encountered an attack by robbers in #TargetPlace#. Hurry to rescue them."
-    qcReviewedText: "While correcting, they also verified a team of bodyguards encountered an attack by robbers in #TargetPlace#. Hurry to rescue them."
-    qcTranslated: "A team of bodyguards encountered an attack by robbers in #TargetPlace#. Hurry to rescue them."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "A team of escort guards was ambushed by bandits in #TargetPlace#. Hurry to their aid."
+    qcReviewedText: "A team of escort guards was ambushed by bandits in #TargetPlace#. Hurry to their aid."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "一支镖师队伍将要通过#TargetPlace#，此处民风剽悍，盗匪横行，还望侠义之士前往护卫周全。"
   splits:
   - text: "一支镖师队伍将要通过#TargetPlace#，此处民风剽悍，盗匪横行，还望侠义之士前往护卫周全。"
@@ -6150,16 +6147,13 @@
   splits:
   - text: "他奶奶的，在这儿打打闹闹，全然没把老子放在眼里？"
     translated: "Damn it, are you lot just messing around here and completely ignoring me?"
-    qcReviewedText: "Damn it, are you lot just messing around here and completely ignoring me?\\nWhile correcting, I'll test my dao on the two of you first, and then have some fun with that woman!"
-    qcTranslated: "Damn it, are you lot just messing around here and completely ignoring me?\\nAll the better. Today I'll test my dao on the two of you first, and then have some fun with that woman!"
-    qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    qcReviewedText: "Damn it, are you lot just messing around here and completely ignoring me?\\nFine, today I'll start by using the two of you as sacrifices for my knife, and then I'll have some fun with this woman!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "也好，今天老子就先拿你们两个祭刀，然后再和这娘们快活快活！"
-    translated: "While correcting, I'll test my dao on the two of you first, and then have some fun with that woman!"
+    translated: "Fine, today I'll start by using the two of you as sacrifices for my knife, and then I'll have some fun with this woman!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "他的商号遍布神州大陆，影响力甚至沿着丝绸之路远播海外。"
@@ -12741,14 +12735,13 @@
 - raw: "因笑面虎屡立战功，长乐帮副帮主卢玉麟准备破例拔擢其担任长老之职，不日便会在<b>#PosText#</b>内举办升职仪式。"
   splits:
   - text: "因笑面虎屡立战功，长乐帮副帮主卢玉麟准备破例拔擢其担任长老之职，不日便会在"
-    translated: "While correcting, Deputy Leader Lu Yulin of the Changle Gang has decided to make an exception and promote them to the position of Elder due to their repeated military achievements. They are expected to be formally appointed as an Elder in the near future."
-    qcReviewedText: "While correcting, Deputy Leader Lu Yulin of the Changle Gang has decided to make an exception and promote them to the position of Elder due to their repeated military achievements. They are expected to be formally appointed as an Elder in the near future.<b>#PosText#</b>Host a promotion ceremony"
-    qcTranslated: "Because the Smiling Tiger has repeatedly earned military merit, Deputy Leader Lu Yulin of the Changle Gang is preparing to make an exception and promote him to the position of Elder. A promotion ceremony will be held in <b>#PosText#</b> in the near future."
+    translated: "Due to Smiling Leopard's repeated military successes, Deputy Leader Lu Yulin of the Changle Gang is preparing to break precedent and promote him to the position of Elder, and this will happen soon."
+    qcReviewedText: "Due to Smiling Leopard's repeated military successes, Deputy Leader Lu Yulin of the Changle Gang is preparing to break precedent and promote him to the position of Elder, and this will happen soon.<b>#PosText#</b>Host a promotion ceremony"
+    qcTranslated: "Due to Smiling Leopard's repeated military successes, Deputy Leader Lu Yulin of the Changle Gang is preparing to break precedent and promote him to the position of Elder, and a promotion ceremony will be held in <b>#PosText#</b> soon."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: GarbledNumber
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - GarbledNumber
     - HardToParseSeam
   - subIndex: 1
     text: "内举办升职仪式。"
@@ -20119,17 +20112,16 @@
   splits:
   - text: "禀报师傅，在巴陵村北方遇到了一名强盗，似乎对附近地形颇为熟悉。"
     translated: "Reporting to Master, to the north of Baling Village, we encountered a bandit who seems to know the local terrain quite well."
-    qcReviewedText: "Reporting to Master, to the north of Baling Village, we encountered a bandit who seems to know the local terrain quite well.\\nWhile correcting, they also verified that he couldn't catch up with them and got away. Senior Brother Yang was also involved in the correction."
-    qcTranslated: "Reporting to Master, to the north of Baling Village, we encountered a bandit who seems to know the local terrain quite well.\\nI and Senior Brother Yang gave him a beating, but unfortunately we couldn't catch up with him, and he got away."
+    qcReviewedText: "Reporting to Master, to the north of Baling Village, we encountered a bandit who seems to know the local terrain quite well.\\nI and Senior Brother Yang scolded him, but alas, we couldn't catch up to him, so he got away."
+    qcTranslated: "Reporting to Master, we encountered a bandit north of Baling Village who seems quite familiar with the local terrain.\\nSenior Brother Yang and I gave him a beating, but alas, we couldn't catch up to him, so he got away."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: HardToParseSeam
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "我与杨师兄将他教训了一顿，奈何追之不及，让他跑了。"
-    translated: "While correcting, they also verified that he couldn't catch up with them and got away. Senior Brother Yang was also involved in the correction."
+    translated: "I and Senior Brother Yang scolded him, but alas, we couldn't catch up to him, so he got away."
   templates:
   - template: "{0}\\n{1}"
 - raw: "禁军在他的统帅之下，军容整肃，号令如山。"
