@@ -13,7 +13,7 @@
     translated: "Crossbow bolts"
   - split: 4
     text: "中型的弩箭，威力中等"
-    translated: "Medium‑sized crossbow bolts, with moderate power"
+    translated: "Medium-sized crossbow bolts, with moderate power"
 - raw: "1,射术,0,野马脱缰,猛力冲击敌人造成失衡效果,12,0,,,,,\"2,2,4\",\"0,0,0\",失衡0.04,0,16,0,,,,,skill5_2,,打击1-Target-Grid-Happen,弓,Same,TRUE,-1,0"
   splits:
   - split: 3
@@ -53,7 +53,7 @@
     translated: "Earthquake shaking mountains"
   - split: 4
     text: "通过强力冲击引发大范围地震"
-    translated: "Cause a wide‑area earthquake through powerful shockwaves"
+    translated: "Cause a wide-area earthquake through powerful shockwaves"
 - raw: "6,射术,0,小型弩箭,小型的弩箭，威力较弱,10,0,,,,,\"0,1,4\",\"0,0,0\",流血0.04,0,-1,0,,,,,skill5_2,0-----0.5,劈砍-Target-Grid-Happen,弓,Same,FALSE,-1,0"
   splits:
   - split: 3

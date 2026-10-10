@@ -59,7 +59,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 飞檐走壁
-  result: Wall‑Running and Roof‑Leaping
+  result: Wall-Running and Roof-Leaping
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 神出鬼没
@@ -251,7 +251,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 移形换位
-  result: Shape‑Shifting Technique
+  result: Shape-Shifting Technique
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 陆地飞行
@@ -311,7 +311,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 轰天震地
-  result: Earth‑shaking and heaven‑shattering
+  result: Earth-shaking and heaven-shattering
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 十殿阎王
@@ -339,15 +339,15 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 见多识广
-  result: Well‑traveled and Experienced
+  result: Well-traveled and Experienced
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 学富五车
-  result: Well‑versed and erudite
+  result: Well-versed and erudite
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 口齿伶俐
-  result: Quick‑witted and articulate
+  result: Quick-witted and articulate
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 舌灿莲花
@@ -507,7 +507,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 康健
-  result: Well‑being
+  result: Well-being
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 容光焕发
@@ -583,7 +583,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 宅心仁厚
-  result: Benevolent and kind‑hearted
+  result: Benevolent and kind-hearted
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 慈悲为怀
@@ -676,7 +676,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 锐眼
-  result: Sharp‑eyed
+  result: Sharp-eyed
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 目光炯炯
@@ -712,7 +712,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 刚愎
-  result: Stubbornly self‑willed
+  result: Stubbornly self-willed
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 盛气凌人
@@ -884,11 +884,11 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 通才
-  result: Jack‑of‑all‑Trades
+  result: Jack-of-all-Trades
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 博学多才
-  result: Well‑versed and talented
+  result: Well-versed and talented
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 淡泊
@@ -908,7 +908,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 儒生
-  result: Scholar‑official
+  result: Scholar-official
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 鸿儒大学
@@ -956,7 +956,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 相士
-  result: Fortune‑teller
+  result: Fortune-teller
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 未卜先知
@@ -1138,7 +1138,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 面壁功深
-  result: Deep in wall‑gazing meditation
+  result: Deep in wall-gazing meditation
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 舞技
@@ -1320,7 +1320,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 跛足
-  result: Lame‑legged
+  result: Lame-legged
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 目渺
@@ -1460,7 +1460,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 合练心得
-  result: Co‑training Insights
+  result: Co-training Insights
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 少年英雄

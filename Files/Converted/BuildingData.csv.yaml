@@ -20,8 +20,8 @@
   splits:
   - split: 19
     text: "门派中藏经，阅经，以及文案抄写研究之所，从粗浅入门功夫到秘传独门武学，皆分门别类储藏其中，非本门弟子自是严禁入内。"
-    translated: "The sect's library houses scriptures for reading and copying, as well as research into written materials. From basic techniques to secret and unique martial arts, all are categorized and stored here. Non‑sect members are strictly forbidden from entering."
-    qcReviewedText: "The sect's library houses scriptures for reading and copying, as well as research into written materials. From basic techniques to secret and unique martial arts, all are categorized and stored here. Non‑sect members are strictly forbidden from entering."
+    translated: "The sect's library houses scriptures for reading and copying, as well as research into written materials. From basic techniques to secret and unique martial arts, all are categorized and stored here. Non-sect members are strictly forbidden from entering."
+    qcReviewedText: "The sect's library houses scriptures for reading and copying, as well as research into written materials. From basic techniques to secret and unique martial arts, all are categorized and stored here. Non-sect members are strictly forbidden from entering."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -149,8 +149,8 @@
   splits:
   - split: 19
     text: "居于城镇中央，朝廷官员办公判案之所，气势恢宏，守卫森严，亦是一城之中最为重要之建筑。"
-    translated: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent‑making it one of the most crucial structures in the entire city."
-    qcReviewedText: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent‑making it one of the most crucial structures in the entire city."
+    translated: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent-making it one of the most crucial structures in the entire city."
+    qcReviewedText: "Situated at the heart of the town, this grand building serves as the office and courtroom for government officials. Its momentum is impressive, and its defenses are stringent-making it one of the most crucial structures in the entire city."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -158,8 +158,8 @@
   splits:
   - split: 19
     text: "本地商贩云集，民众交易买卖之所，所售商品大多杂而不精，门派中人也可在此进行大宗资源买卖。"
-    translated: "Local vendors gather here, a place for the common folk to trade and sell goods. Most items sold are varied but not of high quality. Members of various sects can also conduct large‑scale resource transactions here."
-    qcReviewedText: "Local vendors gather here, a place for the common folk to trade and sell goods. Most items sold are varied but not of high quality. Members of various sects can also conduct large‑scale resource transactions here."
+    translated: "Local vendors gather here, a place for the common folk to trade and sell goods. Most items sold are varied but not of high quality. Members of various sects can also conduct large-scale resource transactions here."
+    qcReviewedText: "Local vendors gather here, a place for the common folk to trade and sell goods. Most items sold are varied but not of high quality. Members of various sects can also conduct large-scale resource transactions here."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -167,8 +167,8 @@
   splits:
   - split: 19
     text: "供商贾旅人和武林人士打尖住店之所，一楼提供各式家常菜肴，二楼则为住宿客房。"
-    translated: "A place for merchants, travelers, and Wulin individuals to take a break and stay overnight, the first floor offers various home‑style dishes, while the second floor provides lodging rooms."
-    qcReviewedText: "A place for merchants, travelers, and Wulin individuals to take a break and stay overnight, the first floor offers various home‑style dishes, while the second floor provides lodging rooms."
+    translated: "A place for merchants, travelers, and Wulin individuals to take a break and stay overnight, the first floor offers various home-style dishes, while the second floor provides lodging rooms."
+    qcReviewedText: "A place for merchants, travelers, and Wulin individuals to take a break and stay overnight, the first floor offers various home-style dishes, while the second floor provides lodging rooms."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -212,8 +212,8 @@
   splits:
   - split: 19
     text: "朝廷势弱，盗匪横行，大多城镇中皆设有武馆，供民众习武强身，也有不少江湖中人会在此任教演习。"
-    translated: "The court's power was weak, and bandits roamed freely. As a result, most towns had martial arts schools to allow the public to learn martial arts for self‑defense. There were also many practitioners from the Jianghu who taught and practiced there."
-    qcReviewedText: "The court's power was weak, and bandits roamed freely. As a result, most towns had martial arts schools to allow the public to learn martial arts for self‑defense. There were also many practitioners from the Jianghu who taught and practiced there."
+    translated: "The court's power was weak, and bandits roamed freely. As a result, most towns had martial arts schools to allow the public to learn martial arts for self-defense. There were also many practitioners from the Jianghu who taught and practiced there."
+    qcReviewedText: "The court's power was weak, and bandits roamed freely. As a result, most towns had martial arts schools to allow the public to learn martial arts for self-defense. There were also many practitioners from the Jianghu who taught and practiced there."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -293,8 +293,8 @@
   splits:
   - split: 19
     text: "一处小型模仿，可以产出少量粮食。"
-    translated: "A small‑scale mimicry that can produce a modest amount of grain."
-    qcReviewedText: "A small‑scale mimicry that can produce a modest amount of grain."
+    translated: "A small-scale mimicry that can produce a modest amount of grain."
+    qcReviewedText: "A small-scale mimicry that can produce a modest amount of grain."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -477,9 +477,9 @@
   splits:
   - split: 19
     text: "上倚河汉，下临江流，重檐叠翼，巍峨耸峙，传说费祎登仙尝驾黄鹤憩于此，远眺烟波江上，孤帆远影，堪称荆吴景胜之最。名士高人，青年才俊，亦多在此游历交友，切磋技艺。"
-    translated: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance‑truly the finest scenery of Jing and Wu regions. Notable figures, talented young men frequently travel and socialize here, refining their skills."
-    qcReviewedText: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance‑truly the finest scenery of Jing and Wu regions. Notable figures, talented young men frequently travel and socialize here, refining their skills."
-    qcTranslated: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance‑truly the finest scenery of Jing and Wu regions. Notable figures, lofty sages, talented young men frequently travel and socialize here, refining their skills."
+    translated: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance-truly the finest scenery of Jing and Wu regions. Notable figures, talented young men frequently travel and socialize here, refining their skills."
+    qcReviewedText: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance-truly the finest scenery of Jing and Wu regions. Notable figures, talented young men frequently travel and socialize here, refining their skills."
+    qcTranslated: "Reposing above the Milky Way, they overlook the flowing river. Multiple eaves and layered wings, towering and majestic, legend says Fei Yi ascended to immortality and rode a yellow crane to rest here. Gazing afar at the misty and boundless expanse of water, solitary sails fade into the distance-truly the finest scenery of Jing and Wu regions. Notable figures, lofty sages, talented young men frequently travel and socialize here, refining their skills."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -498,8 +498,8 @@
   splits:
   - split: 19
     text: "依山而建，殿宇嵯峨，气势雄伟的寺庙群，金顶与红幡白墙交相辉映，颇为肃穆庄严。传闻其僧众极擅炮制高原珍稀药材，以此制成之藏药更是具有枯骨生肌，返老还童等神奇功效。"
-    translated: "Built upon the mountain, these majestic temples rise in grandeur, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high‑altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
-    qcReviewedText: "Built upon the mountain, these majestic temples rise in grandeur, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high‑altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
+    translated: "Built upon the mountain, these majestic temples rise in grandeur, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high-altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
+    qcReviewedText: "Built upon the mountain, these majestic temples rise in grandeur, their golden roofs and red banners against white walls creating a solemn and dignified appearance. Legend has it that the monks here excel in preparing rare high-altitude herbs, and the Tibetan medicines they craft possess miraculous effects such as reviving the dead and restoring youth."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -507,8 +507,8 @@
   splits:
   - split: 19
     text: "世人皆道烟花柳巷为寻乐之处，却不知此处才是世间极乐之所，其间珍馐美馔罗列星陈，朱颜粉黛婀娜逦迤，朝歌夜弦，纸醉金迷，便是王公贵族也以能在此享乐为荣。"
-    translated: "It is said that the Yanghua Liukuang is a place to seek pleasure. But few realize that this is truly the epitome of bliss in this world. Here, delicacies are laid out like stars, women with rosy cheeks and graceful figures sway gracefully. Daytime songs and night‑time melodies fill the air, all wrapped up in paper dreams and golden illusions. Even nobles and princes consider it an honor to find joy here."
-    qcReviewedText: "It is said that the Yanghua Liukuang is a place to seek pleasure. But few realize that this is truly the epitome of bliss in this world. Here, delicacies are laid out like stars, women with rosy cheeks and graceful figures sway gracefully. Daytime songs and night‑time melodies fill the air, all wrapped up in paper dreams and golden illusions. Even nobles and princes consider it an honor to find joy here."
+    translated: "It is said that the Yanghua Liukuang is a place to seek pleasure. But few realize that this is truly the epitome of bliss in this world. Here, delicacies are laid out like stars, women with rosy cheeks and graceful figures sway gracefully. Daytime songs and night-time melodies fill the air, all wrapped up in paper dreams and golden illusions. Even nobles and princes consider it an honor to find joy here."
+    qcReviewedText: "It is said that the Yanghua Liukuang is a place to seek pleasure. But few realize that this is truly the epitome of bliss in this world. Here, delicacies are laid out like stars, women with rosy cheeks and graceful figures sway gracefully. Daytime songs and night-time melodies fill the air, all wrapped up in paper dreams and golden illusions. Even nobles and princes consider it an honor to find joy here."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -525,8 +525,8 @@
   splits:
   - split: 19
     text: "蜿蜒地势之间一处幽静深谷，其间水草丰茂，灵气汇集，因而生长有奇花异草，灵药仙芝无数，在此处种植药材也是事半功倍，乃是世人修习医术之圣地。"
-    translated: "A tranquil deep valley winding through rugged terrain, where grasses and plants flourish, gathering spiritual energy. As a result, there are countless unusual flowers, strange herbs, and immortals' medicinal fungi here, making it ideal for cultivating medicines‑half the effort for double the result. It is truly a holy land for people to study medical arts."
-    qcReviewedText: "A tranquil deep valley winding through rugged terrain, where grasses and plants flourish, gathering spiritual energy. As a result, there are countless unusual flowers, strange herbs, and immortals' medicinal fungi here, making it ideal for cultivating medicines‑half the effort for double the result. It is truly a holy land for people to study medical arts."
+    translated: "A tranquil deep valley winding through rugged terrain, where grasses and plants flourish, gathering spiritual energy. As a result, there are countless unusual flowers, strange herbs, and immortals' medicinal fungi here, making it ideal for cultivating medicines-half the effort for double the result. It is truly a holy land for people to study medical arts."
+    qcReviewedText: "A tranquil deep valley winding through rugged terrain, where grasses and plants flourish, gathering spiritual energy. As a result, there are countless unusual flowers, strange herbs, and immortals' medicinal fungi here, making it ideal for cultivating medicines-half the effort for double the result. It is truly a holy land for people to study medical arts."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -553,8 +553,8 @@
   - split: 19
     text: "鬼斧神工，灵气氤氲之溶洞，茅山弟子在此配合“存神”，“服气”之法修行，自是妙用无穷，前人有诗赞曰"
     translated: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse:"
-    qcReviewedText: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse:：Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
-    qcTranslated: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse: Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to Mulberry Field, seeking truth in Chicheng and Yudi, and finally arriving at the eighth heaven of Huayang."
+    qcReviewedText: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse:：Tiger-striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
+    qcTranslated: "A cave of divine craftsmanship, where ethereal energy swirls, the disciples of Mao Shan practice meditation and breath control techniques, finding endless benefits; previous generations praised it in verse: Tiger-striped withered snake slinks through purple smoke, seeing the azure sea turn to Mulberry Field, seeking truth in Chicheng and Yudi, and finally arriving at the eighth heaven of Huayang."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: OtherNamedDefect
@@ -564,7 +564,7 @@
   - split: 19
     subIndex: 1
     text: "素虎斑虬蹑紫烟，几看沧海变桑田，赤城玉笥寻真后，又到华阳第八天。"
-    translated: "Tiger‑striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
+    translated: "Tiger-striped withered snake slinks through purple smoke, seeing the azure sea turn to mulberry fields, seeking the true successor in the Red City and Jade Chest, and finally arriving at the eighth day of Huayan."
   templates:
   - split: 19
     template: "{0}：{1}"
@@ -611,9 +611,9 @@
   splits:
   - split: 19
     text: "以熟铜铸造之罗汉像共十八尊，坚不可摧，机巧灵活，可由关节牵引使出诸般少林武学，乃是少林僧人习武练功的无上法门，而能从铜人阵中全身而退，也是武林中人梦寐以求的实力之证。"
-    translated: "Cast from wrought copper, eighteen Buddha statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought‑after testament to one's strength in the Wulin."
-    qcReviewedText: "Cast from wrought copper, eighteen Buddha statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought‑after testament to one's strength in the Wulin."
-    qcTranslated: "Cast from wrought copper, eighteen Arhat statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought‑after testament to one's strength in the Wulin."
+    translated: "Cast from wrought copper, eighteen Buddha statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought-after testament to one's strength in the Wulin."
+    qcReviewedText: "Cast from wrought copper, eighteen Buddha statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought-after testament to one's strength in the Wulin."
+    qcTranslated: "Cast from wrought copper, eighteen Arhat statues are robust and indestructible. Mechanically flexible, they can be manipulated by joints to demonstrate various Shaolin martial arts techniques. These are the ultimate methods for Shaolin monks to practice combat skills. Being able to emerge unscathed from the copper man array is also a sought-after testament to one's strength in the Wulin."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -659,8 +659,8 @@
   splits:
   - split: 19
     text: "崆峒之山，险恶奇绝，传说有山洞七十二处，深不可测，不知所通，经历代穿凿后，更是相互勾连，回环曲折。崆峒弟子借此地势修炼奇门绝技，往往险招百出，防不胜防。"
-    translated: "Kongtong Mountain is perilous and extraordinary, with legends of seventy‑two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in intricate loops. Kongtong disciples use this terrain to practice Qimen Special Techniques, often employing risky maneuvers that are hard to guard against."
-    qcReviewedText: "Kongtong Mountain is perilous and extraordinary, with legends of seventy‑two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in intricate loops. Kongtong disciples use this terrain to practice Qimen Special Techniques, often employing risky maneuvers that are hard to guard against."
+    translated: "Kongtong Mountain is perilous and extraordinary, with legends of seventy-two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in intricate loops. Kongtong disciples use this terrain to practice Qimen Special Techniques, often employing risky maneuvers that are hard to guard against."
+    qcReviewedText: "Kongtong Mountain is perilous and extraordinary, with legends of seventy-two caves, deep and unfathomable, whose connections are unknown. After generations of excavation, these caves interconnect in intricate loops. Kongtong disciples use this terrain to practice Qimen Special Techniques, often employing risky maneuvers that are hard to guard against."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -668,8 +668,8 @@
   splits:
   - split: 19
     text: "墨子所创工坊，号称穷尽天下机巧构造，其间工匠器具，榫卯零件，木牛流马，不可胜数，各式鬼斧神工，世所罕见，神机门弟子需在此修习工匠技艺，其所携机关器械亦大多出于此。"
-    translated: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise‑and‑tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
-    qcReviewedText: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise‑and‑tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
+    translated: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise-and-tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
+    qcReviewedText: "The workshop created by Mozi is renowned for encompassing all conceivable mechanical contrivances. Within its walls, there are countless artisan tools, mortise-and-tenon joints, wooden oxen and flowing horses, each a marvel of craftsmanship unseen in the world. Divine Mechanism Sect disciples must train their artisan skills here, and most of the devices they carry were crafted from these very works."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -677,8 +677,8 @@
   splits:
   - split: 19
     text: "为防爆炸，周遭由密不透风铁壁加固而成，内部因此终年热浪翻滚，火焰滔天，常人只需待上片刻便如遭火焚痛苦难忍。霹雳堂弟子则以此为研究火药配置，或精进灼烧武学的不二场所。"
-    translated: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year‑round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
-    qcReviewedText: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year‑round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
+    translated: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year-round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
+    qcReviewedText: "To prevent explosions, the area is surrounded by a solid iron wall, making it impenetrable. As a result, the interior experiences year-round blazing heat and towering flames. Ordinary people would find such conditions unbearable even after just a short time. The disciples of Thunderclap Hall conduct their studies on explosives here or enhance their burning martial arts techniques in this very place."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -704,8 +704,8 @@
   splits:
   - split: 19
     text: "一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"
-    translated: "A well‑decorated and beautifully landscaped private residence, suitable for rest, storage, or martial arts training; it comes with a rather steep price tag."
-    qcReviewedText: "A well‑decorated and beautifully landscaped private residence, suitable for rest, storage, or martial arts training; it comes with a rather steep price tag."
+    translated: "A well-decorated and beautifully landscaped private residence, suitable for rest, storage, or martial arts training; it comes with a rather steep price tag."
+    qcReviewedText: "A well-decorated and beautifully landscaped private residence, suitable for rest, storage, or martial arts training; it comes with a rather steep price tag."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

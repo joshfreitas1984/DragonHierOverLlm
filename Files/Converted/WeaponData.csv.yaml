@@ -2,7 +2,7 @@
   splits:
   - split: 2
     text: "小类"
-    translated: "Sub‑category"
+    translated: "Sub-category"
   - split: 3
     text: "属性"
     translated: "Attributes"

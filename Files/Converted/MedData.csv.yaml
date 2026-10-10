@@ -35,7 +35,7 @@
     translated: "Value"
   - split: 14
     text: "小类"
-    translated: "Sub‑category"
+    translated: "Sub-category"
 - raw: "0,补血丹,,0,20,0,0,0,0,0,0,0,0,25,0,无"
 - raw: "1,小还丹,,1,40,0,0,0,0,0,0,0,0,50,0,无"
 - raw: "2,大还丹,,2,80,0,0,0,0,0,0,0,0,100,0,无"

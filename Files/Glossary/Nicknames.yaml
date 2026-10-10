@@ -12,7 +12,7 @@
   result: Jade Faced Divine Healer
   allowalt: 
     - Jade-Faced Divine Healer    
-    - Jade‑Faced Divine Healer
+    - Jade-Faced Divine Healer
 - raw: 穿林妙手
   result: Forest Piercing Master Hand
 - raw: 铁碗残拳
@@ -35,7 +35,7 @@
   result: Soul Stealing Bone Eroder
   allowalt: 
     - soul-stealing bone erode
-    - soul‑stealing bone erode
+    - soul-stealing bone erode
 - raw: 毒手琴心
   result: Poison Hand and Qin Heart
 - raw: 黑爪
@@ -84,7 +84,7 @@
 - raw: 紫髯道人
   result: Purple Bearded Daoist
   allowalt:
-    - Purple‑Bearded Daoist
+    - Purple-Bearded Daoist
     - Purple-Bearded Daoist
 - raw: 绝情道人
   result: Heartless Daoist
@@ -198,7 +198,7 @@
 - raw: 玉面判官
   result: Jade Faced Judge
   allowalt: 
-    - Jade‑Faced Judge
+    - Jade-Faced Judge
 - raw: 江湖百晓
   result: Jianghu Oracle
 - raw: 侠盗四奇

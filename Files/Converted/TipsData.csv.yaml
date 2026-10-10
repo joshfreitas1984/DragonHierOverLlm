@@ -197,13 +197,13 @@
   splits:
   - text: "在编纂秘籍时，"
     translated: "When compiling the Secret Manual,"
-    qcReviewedText: "When compiling the Secret Manual,\\nYou can combine two low‑quality Secret Manuals to create a high‑quality one."
+    qcReviewedText: "When compiling the Secret Manual,\\nYou can combine two low-quality Secret Manuals to create a high-quality one."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "你可以将两本低品质秘籍合成一本高品质秘籍。"
-    translated: "You can combine two low‑quality Secret Manuals to create a high‑quality one."
+    translated: "You can combine two low-quality Secret Manuals to create a high-quality one."
   templates:
   - template: "{0}\\n{1}"
 - raw: "与对方的性格越接近，好感提升越快。"
@@ -326,8 +326,8 @@
   splits:
   - text: "在西域灵州的莫高窟中，"
     translated: "In the Mogao Caves of Lingzhou in the Western Regions,"
-    qcReviewedText: "In the Mogao Caves of Lingzhou in the Western Regions,\\nYou can enter seclusion to forget your existing first‑tier martial arts or talents."
-    qcTranslated: "In the Mogao Caves of Lingzhou in the Western Regions,\\nYou can enter seclusion to forget your existing zero‑tier martial arts or talents."
+    qcReviewedText: "In the Mogao Caves of Lingzhou in the Western Regions,\\nYou can enter seclusion to forget your existing first-tier martial arts or talents."
+    qcTranslated: "In the Mogao Caves of Lingzhou in the Western Regions,\\nYou can enter seclusion to forget your existing zero-tier martial arts or talents."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
@@ -335,7 +335,7 @@
     - GarbledNumber
   - subIndex: 1
     text: "可闭关遗忘已有的零级武学或天赋。"
-    translated: "You can enter seclusion to forget your existing first‑tier martial arts or talents."
+    translated: "You can enter seclusion to forget your existing first-tier martial arts or talents."
   templates:
   - template: "{0}\\n{1}"
 - raw: "外功武学的突破效果，\\n只有在使用该武学时才会生效。"

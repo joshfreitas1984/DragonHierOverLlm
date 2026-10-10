@@ -172,7 +172,7 @@
 #   result: The Heart Sutra of Manjushri Bodhisattva
 #   badtrans: true
 - raw: 一字电剑
-  result: One‑Stroke Lightning Sword
+  result: One-Stroke Lightning Sword
   badtrans: true
 - raw: 仙人指路
   result: Immortal Points the Way
@@ -292,7 +292,7 @@
 #   result: Iron Body Armor
 #   badtrans: true
 # - raw: 十段锦长拳
-#   result: Ten‑Form Brocade Long Fist
+#   result: Ten-Form Brocade Long Fist
 #   badtrans: true
 # - raw: 禁军拳术
 #   result: Imperial Guard Combat Technique
@@ -352,7 +352,7 @@
 #   result: Silkworm Belt Technique
 #   badtrans: true
 # - raw: 五指点石功
-#   result: Five‑Finger Stoned‑Skipping Technique
+#   result: Five-Finger Stoned-Skipping Technique
 #   badtrans: true
 # - raw: 排打硬功
 #   result: Hardening fist techniques
@@ -379,7 +379,7 @@
 #   result: Leap over the Dragon Gate
 #   badtrans: true
 # - raw: 一线穿
-#   result: One‑line‑through
+#   result: One-line-through
 #   badtrans: true
 # - raw: 雁回旋
 #   result: Wild Goose Reversal
@@ -388,7 +388,7 @@
 #   result: Cross the hanging cable
 #   badtrans: true
 # - raw: 穿帘步
-#   result: Through‑the‑curtain step
+#   result: Through-the-curtain step
 #   badtrans: true
 # - raw: 缸沿功
 #   result: Kanenaga Ichirou
@@ -415,7 +415,7 @@
 #   result: Soft Body Technique
 #   badtrans: true
 # - raw: 拔钉功
-#   result: Nail‑Pulling Technique
+#   result: Nail-Pulling Technique
 #   badtrans: true
 # - raw: 闪战法
 #   result: Quick Battle Strategy
@@ -520,13 +520,13 @@
 #   result: Monkey Staff Technique
 #   badtrans: true
 # - raw: 五郎棍法
-#   result: Five‑Branch Staff Technique
+#   result: Five-Branch Staff Technique
 #   badtrans: true
 # - raw: 形意枪
-#   result: Shape‑Intent Spear
+#   result: Shape-Intent Spear
 #   badtrans: true
 # - raw: 中平枪法
-#   result: Middle‑Level Spear Technique
+#   result: Middle-Level Spear Technique
 #   badtrans: true
 # - raw: 八母枪术
 #   result: Eight Mothers Staff Technique
@@ -547,13 +547,13 @@
 #   result: Felling Axe
 #   badtrans: true
 # - raw: 黄沙万里鞭
-#   result: Ten‑thousand‑li Whip Through Sands
+#   result: Ten-thousand-li Whip Through Sands
 #   badtrans: true
 # - raw: 碎石铁鞭
 #   result: Cracked Stone Whip
 #   badtrans: true
 # - raw: 九节鞭法
-#   result: Nine‑section whip technique
+#   result: Nine-section whip technique
 #   badtrans: true
 # - raw: 海叟钩法
 #   result: Old Sea Hook Technique
@@ -568,7 +568,7 @@
 #   result: Cool Fan Technique
 #   badtrans: true
 # - raw: 闪电五连鞭
-#   result: Lightning Five‑Strike Whip
+#   result: Lightning Five-Strike Whip
 #   badtrans: true
 # - raw: 掷短斧
 #   result: Throw small axes
@@ -586,7 +586,7 @@
 #   result: Split pin
 #   badtrans: true
 # - raw: 甩袖箭
-#   result: Wielded sleeve‑jar arrows
+#   result: Wielded sleeve-jar arrows
 #   badtrans: true
 # - raw: 棉套索
 #   result: Cotton lasso
@@ -610,7 +610,7 @@
 #   result: Heart Method of Vajra Mind
 #   badtrans: true
 # - raw: 轰天掣地诀
-#   result: Heaven‑Shaking Earth‑Piercing Technique
+#   result: Heaven-Shaking Earth-Piercing Technique
 #   badtrans: true
 # - raw: 灵台清明功
 #   result: Clear Consciousness Cultivation Technique
@@ -670,7 +670,7 @@
 #   result: Rou Gu Ba Liu Gong
 #   badtrans: true
 # - raw: 卧虎功
-#   result: Tiger‑Crouching Fist
+#   result: Tiger-Crouching Fist
 #   badtrans: true
 # - raw: 乱环扑
 #   result: Chaotic Rings Assault
@@ -692,7 +692,7 @@
 #   badtrans: true
 
 # - raw: 伏虎拳
-#   result: Tiger‑Crushing Fist
+#   result: Tiger-Crushing Fist
 #   badtrans: true
 # - raw: 大擒拿手
 #   result: Dragon Entangling Hands
@@ -713,7 +713,7 @@
 #   result: Northern Dipper Sword Technique
 #   badtrans: true
 # - raw: 雨打飞花剑
-#   result: Rain‑Splashed Flying Flower Sword
+#   result: Rain-Splashed Flying Flower Sword
 #   badtrans: true
 # - raw: 浣花流水剑
 #   result: Flowing Lotus Sword
@@ -728,7 +728,7 @@
 #   result: Frost Flower Sword Form
 #   badtrans: true
 # - raw: 八面破身刀
-#   result: Eight‑Faced Piercing Blade
+#   result: Eight-Faced Piercing Blade
 #   badtrans: true
 # - raw: 逐浪刀法
 #   result: Wave Blade Technique
@@ -737,7 +737,7 @@
 #   result: Interlocked Blade Technique
 #   badtrans: true
 # - raw: 五虎断门刀
-#   result: Five Tiger Pierce‑Chest Knife
+#   result: Five Tiger Pierce-Chest Knife
 #   badtrans: true
 # - raw: 八阵盘龙刀
 #   result: Eight Formation Coiled Dragon Sword
@@ -758,10 +758,10 @@
 #   result: Eighteen Cuts of Mount Tai
 #   badtrans: true
 # - raw: 二十四路枪势
-#   result: Twenty‑four Styles of Spear Technique
+#   result: Twenty-four Styles of Spear Technique
 #   badtrans: true
 # - raw: 泼水杖法
-#   result: Water‑Splashing Staff Technique
+#   result: Water-Splashing Staff Technique
 #   badtrans: true
 # - raw: 六合大枪
 #   result: Sixfold Great Spear
@@ -797,7 +797,7 @@
 #   result: Golden Dragon Whip Technique
 #   badtrans: true
 # - raw: 夺命鞭法
-#   result: Fate‑Stealing Whip Technique
+#   result: Fate-Stealing Whip Technique
 #   badtrans: true
 # - raw: 乱披风锤法
 #   result: Chaotic Mauling Technique
@@ -812,7 +812,7 @@
 #   result: Entangled Axes
 #   badtrans: true
 # - raw: 回打软鞭式
-#   result: Return with whip‑like technique
+#   result: Return with whip-like technique
 #   badtrans: true
 # - raw: 呼延鞭法
 #   result: Huayuan Whip Technique
@@ -863,7 +863,7 @@
 #   result: Water Flea
 #   badtrans: true
 # - raw: 七步追魂
-#   result: Seven‑Step Soul Pursuer
+#   result: Seven-Step Soul Pursuer
 #   badtrans: true
 # - raw: 八步赶蝉
 #   result: Eight Steps to Catch a Cicada
@@ -884,7 +884,7 @@
 #   result: Five Directions Perceiver Skill
 #   badtrans: true
 # - raw: 熊形虎相
-#   result: Bear‑like tiger appearance
+#   result: Bear-like tiger appearance
 #   badtrans: true
 # - raw: 雷霆万钧
 #   result: Thunderous Strike
@@ -899,10 +899,10 @@
 #   result: Flower Mist Fist
 #   badtrans: true
 # - raw: 分筋错骨手
-#   result: Bone‑setting hand
+#   result: Bone-setting hand
 #   badtrans: true
 # - raw: 追魂夺命剑
-#   result: Lethal Soul‑Seizing Sword
+#   result: Lethal Soul-Seizing Sword
 #   badtrans: true
 # - raw: 子午十二剑
 #   result: Midnight Twelve Swords
@@ -938,7 +938,7 @@
 #   result: Firespark Hundred Strikes Spear
 #   badtrans: true
 # - raw: 焚天棍影
-#   result: Heaven‑Burning Staff Shadow
+#   result: Heaven-Burning Staff Shadow
 #   badtrans: true
 # - raw: 百鸟朝凤枪
 #   result: Spear of a Hundred Birds Paying Homage to the Phoenix
@@ -947,7 +947,7 @@
 #   result: Vajra Whip Technique
 #   badtrans: true
 # - raw: 子午鸳鸯钺
-#   result: Midday‑Midnight Dual Jade Sabers
+#   result: Midday-Midnight Dual Jade Sabers
 #   badtrans: true
 # - raw: 判官笔法
 #   result: Butterfly Stroke of the Judge
@@ -968,7 +968,7 @@
 #   result: Bonescorning Needle
 #   badtrans: true
 # - raw: 赤链蛇锥
-#   result: Red‑striped Keelback Snake
+#   result: Red-striped Keelback Snake
 #   badtrans: true
 # - raw: 阴冥砂
 #   result: Yinming Sha
@@ -1025,7 +1025,7 @@
 #   result: War in All Directions, Blade Style
 #   badtrans: true
 # - raw: 披风七杀戟
-#   result: Seven‑Cloak Killing Spear
+#   result: Seven-Cloak Killing Spear
 #   badtrans: true
 # - raw: 傲世奇枪
 #   result: Domination Strange Spear
@@ -1037,7 +1037,7 @@
 #   result: Iron Head Decapitation Skill
 #   badtrans: true
 # - raw: 五蟒狂鞭
-#   result: Five‑Mythical‑Beast Crazy Whip
+#   result: Five-Mythical-Beast Crazy Whip
 #   badtrans: true
 # - raw: 阎王帖
 #   result: Order from the King of Hell
@@ -1070,7 +1070,7 @@
 #   result: Staff of Chaos in Heaven
 #   badtrans: true
 # - raw: 碧海潮生曲
-#   result: Tide‑Echoing Melody
+#   result: Tide-Echoing Melody
 #   badtrans: true
 # - raw: 多情飞刀
 #   result: Romantic Blade
@@ -1104,7 +1104,7 @@
 #   result: Brass toad
 #   badtrans: true
 # - raw: 两面三刀法
-#   result: Two‑Faced Blade Technique
+#   result: Two-Faced Blade Technique
 #   badtrans: true
 # - raw: 知足常乐功
 #   result: Contentment Brings Eternal Happiness
@@ -1176,7 +1176,7 @@
 #   result: Embroidery needle
 #   badtrans: true
 # - raw: 三寸钉
-#   result: Three‑inch nail
+#   result: Three-inch nail
 #   badtrans: true
 # - raw: 袖里藏刀
 #   result: Hidden dagger in one's sleeve
@@ -1212,10 +1212,10 @@
 #   result: Microcosm in the palm of your hand
 #   badtrans: true
 # - raw: 银丝网
-#   result: Silver‑webbed net
+#   result: Silver-webbed net
 #   badtrans: true
 # - raw: 断肠针
-#   result: Intestine‑Piercing Needle
+#   result: Intestine-Piercing Needle
 #   badtrans: true
 # - raw: 穿心钉
 #   result: Stabbing dagger
@@ -1251,7 +1251,7 @@
 #   result: Bamboo Spears in a Storm
 #   badtrans: true
 # - raw: 七星透骨钉
-#   result: Seven‑Star Piercing Bone Needle
+#   result: Seven-Star Piercing Bone Needle
 #   badtrans: true
 # - raw: 万化玄机刀
 #   result: Wan Hua Xuan Ji Sword
@@ -1311,7 +1311,7 @@
 #   result: Crushing Heart Palm
 #   badtrans: true
 # - raw: 天王补心针
-#   result: Heavenly King's Heart‑Nourishing Injection
+#   result: Heavenly King's Heart-Nourishing Injection
 #   badtrans: true
 # - raw: 扁鹊回春功
 #   result: Rejuvenation Technique
@@ -1323,7 +1323,7 @@
 #   result: Planting a seed out of season
 #   badtrans: true
 # - raw: 药王毒手
-#   result: Poison‑Finger Medicrowad
+#   result: Poison-Finger Medicrowad
 #   badtrans: true
 # - raw: 扁鹊神针
 #   result: Fatty Acupoint Sage Needle
@@ -1375,7 +1375,7 @@
 #   result: Huagu Opera
 #   badtrans: true
 # - raw: 沾衣十八跌
-#   result: Cloth‑Dampening Eighteen Falls
+#   result: Cloth-Dampening Eighteen Falls
 #   badtrans: true
 # - raw: 拜年棍法
 #   result: New Year Staff Technique
@@ -1415,7 +1415,7 @@
 #   result: Mighty Staff Technique
 #   badtrans: true
 # - raw: 混世天罡
-#   result: World‑Disturbing Celestial Vigor
+#   result: World-Disturbing Celestial Vigor
 #   badtrans: true
 # - raw: 睡梦罗汉拳
 #   result: Dreamless Meditation Fist
@@ -1460,10 +1460,10 @@
 #   result: Iron Barrel Technique
 #   badtrans: true
 # - raw: 回马枪术
-#   result: Riding‑the‑Horseback Gun Technique
+#   result: Riding-the-Horseback Gun Technique
 #   badtrans: true
 # - raw: 泣血戈术
-#   result: Blood‑Curdling Gore Technique
+#   result: Blood-Curdling Gore Technique
 #   badtrans: true
 # - raw: 斩马刀法
 #   result: Blade Technique
@@ -1478,13 +1478,13 @@
 #   result: Dragonflight Long Spear
 #   badtrans: true
 # - raw: 潜龙枪诀
-#   result: Dragon‑Severing Spear Technique
+#   result: Dragon-Severing Spear Technique
 #   badtrans: true
 # - raw: 铁马金戈
 #   result: Iron steeds and golden spears
 #   badtrans: true
 # - raw: 劈天刀法
-#   result: Heaven‑Splitting Blade Technique
+#   result: Heaven-Splitting Blade Technique
 #   badtrans: true
 # - raw: 潜龙心法
 #   result: Heart Method of Hidden Dragon
@@ -1505,7 +1505,7 @@
 #   result: Carve Jade with Sabers
 #   badtrans: true
 # - raw: 百战刀法
-#   result: Hundred‑Fight Blade Technique
+#   result: Hundred-Fight Blade Technique
 #   badtrans: true
 # - raw: 龙城飞将步
 #   result: Dragon City Flying General Steps
@@ -1523,7 +1523,7 @@
 #   result: Defend Against Solar Blades
 #   badtrans: true
 # - raw: 镇魔斩妖刀
-#   result: Demon‑Slaying Monster‑Cutting Blade
+#   result: Demon-Slaying Monster-Cutting Blade
 #   badtrans: true
 # - raw: 惊鸿一点枪
 #   result: Elegant Spear Stroke
@@ -1553,10 +1553,10 @@
 #   result: Cultivating the Vassal Spirit Method
 #   badtrans: true
 # - raw: 御风咒
-#   result: Wind‑Riding Curse
+#   result: Wind-Riding Curse
 #   badtrans: true
 # - raw: 长目飞耳功
-#   result: Long‑Eyed Flying Ears Technique
+#   result: Long-Eyed Flying Ears Technique
 #   badtrans: true
 # - raw: 跌打梅山咒
 #   result: Meridian Healing Mountain Charm
@@ -1571,7 +1571,7 @@
 #   result: Xianmen Taisi Gong
 #   badtrans: true
 # - raw: 服内元气诀
-#   result: In‑game Essence Cultivation Technique
+#   result: In-game Essence Cultivation Technique
 #   badtrans: true
 # - raw: 移形换位
 #   result: Teleportation
@@ -1583,7 +1583,7 @@
 #   result: Lightning Diversion Technique
 #   badtrans: true
 # - raw: 勾魂咒
-#   result: Soul‑stealing curse
+#   result: Soul-stealing curse
 #   badtrans: true
 # - raw: 天罡咒
 #   result: Heavenly Constellation Curse
@@ -1784,13 +1784,13 @@
 #   result: Frog leap
 #   badtrans: true
 # - raw: 迷魂息
-#   result: Mind‑Distorting Silence
+#   result: Mind-Distorting Silence
 #   badtrans: true
 # - raw: 三尸蜈蚣爪
 #   result: Three Corpses Scorpion Claw
 #   badtrans: true
 # - raw: 化骨绵掌
-#   result: Bone‑Dispelling Soft Palm Technique
+#   result: Bone-Dispelling Soft Palm Technique
 #   badtrans: true
 # - raw: 断魂砂
 #   result: Painful Sand
@@ -1859,7 +1859,7 @@
 #   result: Night Blade Technique
 #   badtrans: true
 # - raw: 红眼刀法
-#   result: Blade Technique of the Red‑Eyed One
+#   result: Blade Technique of the Red-Eyed One
 #   badtrans: true
 # - raw: 僵尸拳
 #   result: Zombie Punch
@@ -1910,7 +1910,7 @@
 #   result: Cinnabar Palm Strike
 #   badtrans: true
 # - raw: 混世魔功
-#   result: World‑Destroying Evil Skill
+#   result: World-Destroying Evil Skill
 #   badtrans: true
 # - raw: 百鬼夜行
 #   result: Night Parade of One Thousand Monsters
@@ -1925,7 +1925,7 @@
 #   result: Eighteen Black Dragon Techniques
 #   badtrans: true
 # - raw: 抽髓掌
-#   result: Bone‑Draining Palm
+#   result: Bone-Draining Palm
 #   badtrans: true
 # - raw: 苦海魔功
 #   result: Sea of Suffering Evil Technique
@@ -1946,7 +1946,7 @@
 #   result: Divine Down Demon Fallen Fist
 #   badtrans: true
 # - raw: 九死离魂掌
-#   result: Nine Lives Soul‑Stealing Palm
+#   result: Nine Lives Soul-Stealing Palm
 #   badtrans: true
 # - raw: 万恶魔功
 #   result: Ten Thousand Devils Technique
@@ -2030,7 +2030,7 @@
 #   result: Ingenious penmanship
 #   badtrans: true
 # - raw: 阴阳奇剑
-#   result: Yin‑Yang Mystery Sword
+#   result: Yin-Yang Mystery Sword
 #   badtrans: true
 # - raw: 太阳太玄功
 #   result: Great Yang Mystic Skill
@@ -2039,7 +2039,7 @@
 #   result: Great Yin Mystic Skill
 #   badtrans: true
 # - raw: 螺旋九影
-#   result: Nine‑Division Spiral Shadow
+#   result: Nine-Division Spiral Shadow
 #   badtrans: true
 
 # - raw: 广陵散曲功
@@ -2109,7 +2109,7 @@
 #   result: Plum Blossom Staff Technique
 #   badtrans: true
 # - raw: 伏魔铲法
-#   result: Method of the Devil‑subduing Tongs
+#   result: Method of the Devil-subduing Tongs
 #   badtrans: true
 # - raw: 菩提心法
 #   result: Buddha Heart Method
@@ -2118,7 +2118,7 @@
 #   result: Nine Sitting and Six Seated Figures
 #   badtrans: true
 # - raw: 一指禅
-#   result: One‑Finger Zen
+#   result: One-Finger Zen
 #   badtrans: true
 # - raw: 少林龙爪手
 #   result: Shaolin Dragon Claw Hand
@@ -2172,7 +2172,7 @@
 #   result: Blossom Finger
 #   badtrans: true
 # - raw: 如来千叶手
-#   result: Buddha Thousand‑Petaled Hand
+#   result: Buddha Thousand-Petaled Hand
 #   badtrans: true
 # - raw: 大文殊杖法
 #   result: Great Manjushri Staff Technique
@@ -2226,7 +2226,7 @@
 #   result: Nine Palaces Wandering Palm
 #   badtrans: true
 # - raw: 金针指功
-#   result: Needle‑pricking Skill
+#   result: Needle-pricking Skill
 #   badtrans: true
 # - raw: 柔云剑法
 #   result: Soft Cloud Sword Technique
@@ -2250,10 +2250,10 @@
 #   result: Infinite Mystic Skill Fist
 #   badtrans: true
 # - raw: 绕指柔剑
-#   result: Soft‑Bending Sword
+#   result: Soft-Bending Sword
 #   badtrans: true
 # - raw: 两仪剑法
-#   result: Dual‑Nature Sword Technique
+#   result: Dual-Nature Sword Technique
 #   badtrans: true
 # - raw: 天梯纵云步
 #   result: Heavenly Ladder Leaping Cloud Step
@@ -2280,7 +2280,7 @@
 #   result: Northern Dipper Xinzong
 #   badtrans: true
 # - raw: 阴阳调元法
-#   result: Yin‑Yang Harmonization Technique
+#   result: Yin-Yang Harmonization Technique
 #   badtrans: true
 # - raw: 日月明光掌
 #   result: Glorious Day and Moon Palm
@@ -2310,7 +2310,7 @@
 #   result: Iron Head Technique
 #   badtrans: true
 # - raw: 开山刀法
-#   result: Mountain‑Cleaving Blade Technique
+#   result: Mountain-Cleaving Blade Technique
 #   badtrans: true
 # - raw: 骤雨刀法
 #   result: Thunderstorm Blade Art
@@ -2328,7 +2328,7 @@
 #   result: Copper Skin Iron Bones Skill
 #   badtrans: true
 # - raw: 撼地刀法
-#   result: Earth‑Shaking Blade Technique
+#   result: Earth-Shaking Blade Technique
 #   badtrans: true
 # - raw: 狂风快刀
 #   result: Blazing Gale Blade
@@ -2358,7 +2358,7 @@
 #   result: Peng Jiang Raising Cauldron Technique
 #   badtrans: true
 # - raw: 千里横行
-#   result: Mile‑long March
+#   result: Mile-long March
 #   badtrans: true
 # - raw: 金刀换掌功
 #   result: Golden Blade for Palm Technique
@@ -2451,7 +2451,7 @@
 #   result: Sunrise One Breath Sword
 #   badtrans: true
 # - raw: 冲天渔鼓
-#   result: Heaven‑reaching fish drum
+#   result: Heaven-reaching fish drum
 #   badtrans: true
 # - raw: 紫微星诀
 #   result: Purple Microstar Technique
@@ -2469,7 +2469,7 @@
 #   result: Iron Cane Dragon Transformation
 #   badtrans: true
 # - raw: 五尺混天绫
-#   result: Five‑zhi Huandian Ling
+#   result: Five-zhi Huandian Ling
 #   badtrans: true
 # - raw: 敲爻歌诀
 #   result: Song of Hexagram Divination
@@ -2490,7 +2490,7 @@
 #   result: Peking Duck Fist
 #   badtrans: true
 # - raw: 三十六闭手
-#   result: Thirty‑Six Closed Hands
+#   result: Thirty-Six Closed Hands
 #   badtrans: true
 # - raw: 静心剑法
 #   result: Sword Technique of Calming the Mind
@@ -2535,7 +2535,7 @@
 #   result: Fox Spirit Moon Worship Step
 #   badtrans: true
 # - raw: 七星横链
-#   result: Seven‑star Horizontal Chain
+#   result: Seven-star Horizontal Chain
 #   badtrans: true
 # - raw: 兰花拂穴手
 #   result: Laoran Fuxie Hand
@@ -2580,7 +2580,7 @@
 #   result: Sweep away dust
 #   badtrans: true
 # - raw: 铁脊矛突
-#   result: Iron‑spined pike thrust
+#   result: Iron-spined pike thrust
 #   badtrans: true
 # - raw: 子午流注功
 #   result: Midday and Midnight Skill
@@ -2622,7 +2622,7 @@
 #   result: Upper Clear Qi Gong
 #   badtrans: true
 # - raw: 倒踩三叠云
-#   result: Step on three‑tiered clouds
+#   result: Step on three-tiered clouds
 #   badtrans: true
 # - raw: 龟藏豹隐
 #   result: Turtle Conceals Leopard
@@ -2634,7 +2634,7 @@
 #   result: Great Unifying Harmonizing Bell
 #   badtrans: true
 # - raw: 北风百裂矛
-#   result: Hundred‑Cracking Spear of the Northern Wind
+#   result: Hundred-Cracking Spear of the Northern Wind
 #   badtrans: true
 # - raw: 离合神功
 #   result: Skill of Separation and Union
@@ -2643,7 +2643,7 @@
 #   result: Seven wild geese fall into the vast sky
 #   badtrans: true
 # - raw: 回音搜魂术
-#   result: Echo Soul‑searching Technique
+#   result: Echo Soul-searching Technique
 #   badtrans: true
 # - raw: 生死一线鞭
 #   result: Life and Death Thin Thread Whip
@@ -2655,7 +2655,7 @@
 #   result: Everything goes up in flames
 #   badtrans: true
 # - raw: 非攻法
-#   result: Non‑Assault Technique
+#   result: Non-Assault Technique
 #   badtrans: true
 # - raw: 迷踪步
 #   result: Evasive Steps
@@ -2703,7 +2703,7 @@
 #   result: Jasper qilin
 #   badtrans: true
 # - raw: 六转孔明锁
-#   result: Six‑turning Clever Lock
+#   result: Six-turning Clever Lock
 #   badtrans: true
 # - raw: 神机箭
 #   result: Divine Mechanism Arrow
@@ -2775,7 +2775,7 @@
 #   result: Spear Art of Fiery Sun
 #   badtrans: true
 # - raw: 江翻海沸功
-#   result: Chang‑fan‑hai‑bo Skill
+#   result: Chang-fan-hai-bo Skill
 #   badtrans: true
 # - raw: 雷车动地
 #   result: Thundering wheels shake the earth
@@ -2811,7 +2811,7 @@
 #   result: Black Powder Law
 #   badtrans: true
 # - raw: 连环子母弹
-#   result: Linked mother‑and‑child rockets
+#   result: Linked mother-and-child rockets
 #   badtrans: true
 # - raw: 神火飞鸦
 #   result: Divine Flame Raven
@@ -2850,7 +2850,7 @@
 #   result: Salute respectfully
 #   badtrans: true
 # - raw: 天眼通
-#   result: All‑seeing Eye
+#   result: All-seeing Eye
 #   badtrans: true
 # - raw: 密宗缩骨功
 #   result: Taoist bone compression technique
@@ -2883,7 +2883,7 @@
 #   result: Five Rims Method
 #   badtrans: true
 # - raw: 金刚降魔刀
-#   result: Devil‑Slaying Great Saber
+#   result: Devil-Slaying Great Saber
 #   badtrans: true
 # - raw: 摩揭陀瑜伽功
 #   result: Magadha Yoga Technique
@@ -2964,7 +2964,7 @@
 #   result: Decree to Withstand Frost
 #   badtrans: true
 # - raw: 五罗轻烟掌
-#   result: Five‑robed Light Smoke Palm
+#   result: Five-robed Light Smoke Palm
 #   badtrans: true
 # - raw: 凌云指
 #   result: Heavenward Fingers
@@ -3042,7 +3042,7 @@
 #   result: Immortal Maiden Breaks Branch of Plum
 #   badtrans: true
 # - raw: 白虹贯日掌
-#   result: Sun‑Piercing White Ribbon Palm
+#   result: Sun-Piercing White Ribbon Palm
 #   badtrans: true
 # - raw: 八段锦
 #   result: Eight Section Silk Ribbon Exercise
@@ -3087,7 +3087,7 @@
 #   result: Acupressure pen
 #   badtrans: true
 # - raw: 飞箭要诀
-#   result: Arrow‑Shooting Essentials
+#   result: Arrow-Shooting Essentials
 #   badtrans: true
 # - raw: 飞石要诀
 #   result: Cannonball Technique
@@ -3120,7 +3120,7 @@
 #   result: Furious Snowstorm Blade
 #   badtrans: true
 # - raw: 秦王破阵刀
-#   result: Qin King's Array‑Piercing Blade
+#   result: Qin King's Array-Piercing Blade
 #   badtrans: true
 # - raw: 飞虎提芦枪
 #   result: Tiger Hawk Wields a Reed Gun
@@ -3129,7 +3129,7 @@
 #   result: Eight Staff Technique
 #   badtrans: true
 # - raw: 五火七翎扇
-#   result: Five‑Fire Seven‑feather Fan
+#   result: Five-Fire Seven-feather Fan
 #   badtrans: true
 # - raw: 六道轮回
 #   result: Six realms of rebirth
@@ -3138,16 +3138,16 @@
 #   result: Hand grenade
 #   badtrans: true
 # - raw: 没羽弓术
-#   result: Feather‑Fleeing Arrow Technique
+#   result: Feather-Fleeing Arrow Technique
 #   badtrans: true
 # - raw: 摩诃无量功
 #   result: Great Boundless Skill
 #   badtrans: true
 # - raw: 蚀骨销魂功
-#   result: Bone‑Crushing Soul‑Soothing Skill
+#   result: Bone-Crushing Soul-Soothing Skill
 #   badtrans: true
 # - raw: 驾雾腾云步
-#   result: Mist‑walking cloud‑stepping stance
+#   result: Mist-walking cloud-stepping stance
 #   badtrans: true
 # - raw: 咫尺天涯
 #   result: Near yet far
@@ -3162,7 +3162,7 @@
 #   result: Buddha's Palm Technique
 #   badtrans: true
 # - raw: 万化归一指
-#   result: One‑Finger Meditation Technique
+#   result: One-Finger Meditation Technique
 #   badtrans: true
 # - raw: 剑十三式
 #   result: Thirteenth Sword Technique
@@ -3189,7 +3189,7 @@
 #   result: True Dragon Thunderstaff
 #   badtrans: true
 # - raw: 催命符
-#   result: Life‑threatening spell
+#   result: Life-threatening spell
 #   badtrans: true
 # - raw: 后羿射日
 #   result: Hou Yi Shoots the Sun

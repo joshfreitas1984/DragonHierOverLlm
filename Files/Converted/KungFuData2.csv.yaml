@@ -60,7 +60,7 @@
   splits:
   - split: 3
     text: "十段锦长拳"
-    translated: "Ten‑Form Brocade Long Fist"
+    translated: "Ten-Form Brocade Long Fist"
 - raw: "11,拳掌,0,禁军拳术,军中流传的基础拳法,12,1,经脉1,,拳掌2,拳掌10,\"0,1,1\",\"0,0,0\",,4,-1,0,头16,头4,,,skill0_0,,三连打击-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -170,7 +170,7 @@
   splits:
   - split: 3
     text: "五指点石功"
-    translated: "Five‑Finger Stoned‑Skipping Technique"
+    translated: "Five-Finger Stoned-Skipping Technique"
 - raw: "33,内功,1,排打硬功,用击扑之法，使筋肉坚实，乃是入门必修之硬气功法,,0.9,内功1;体质1,生命上限80;内功6;体质6;护甲3,,内功10;体质10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -215,7 +215,7 @@
   splits:
   - split: 3
     text: "一线穿"
-    translated: "One‑line‑through"
+    translated: "One-line-through"
 - raw: "42,轻功,1,雁回旋,使用此步法者身形飞舞，能够如大雁般在空中回旋，少顷才缓缓落下,,1,轻功1;智力1,轻功6;灵巧3;智力3;飘逸0.06,,轻功10;智力10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -230,7 +230,7 @@
   splits:
   - split: 3
     text: "穿帘步"
-    translated: "Through‑the‑curtain step"
+    translated: "Through-the-curtain step"
 - raw: "45,轻功,1,缸沿功,在错落排列的缸沿之上横移纵跳，日夜苦练方能修炼而成的步法,,1.1,轻功1;灵巧1,轻功6;灵巧3;意志3;命中0.06,,轻功20,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -275,7 +275,7 @@
   splits:
   - split: 3
     text: "拔钉功"
-    translated: "Nail‑Pulling Technique"
+    translated: "Nail-Pulling Technique"
 - raw: "54,绝技,1,闪战法,专供练习闪转腾挪的功法，又练习心眼和拳脚的灵敏度，是武林人士经常练习的一门绝技,,0.9,灵巧1;智力1,绝技4;灵巧4;智力4;命中0.06,,绝技10;灵巧10,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -300,7 +300,7 @@
   splits:
   - split: 3
     text: "通臂拳"
-    translated: "Long‑arm fist"
+    translated: "Long-arm fist"
 - raw: "59,拳掌,1,燕青拳,相传由燕青所创，快慢结合，灵活多变，是一套江湖人士常用的拳法,13,0.8,拳掌1;灵巧1,,力道1;灵巧1;拳掌2,拳掌10;力道10,\"0,1,1\",\"0,0,0\",,10,-1,0,头17,头11,,,skill0_0,,打击2-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -460,17 +460,17 @@
   splits:
   - split: 3
     text: "五郎棍法"
-    translated: "Five‑Branch Staff Technique"
+    translated: "Five-Branch Staff Technique"
 - raw: "91,长兵,1,形意枪,武林人士常用枪法，招式简洁朴实，严密紧凑，资质较低者也能顺利修习,13,1,长兵1;意志1,,意志1;长兵2,长兵10,\"4,0,0\",\"4,2,3\",伤害0.02,10,-1,0,腹16,腹12,,,skill3_0,,爪痕-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 3
     text: "形意枪"
-    translated: "Shape‑Intent Spear"
+    translated: "Shape-Intent Spear"
 - raw: "92,长兵,1,中平枪法,讲求顶平肩平脚平枪平“四平”之枪法，平直穿插，去势如箭，尽管招式简单，却又难以招架,12,0.9,力道1;意志1,,力道2;意志1;长兵1,长兵15,\"4,0,0\",\"4,1,3\",命中0.06,9,-1,0,心17,心11,,,skill3_0,,十字斩-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 3
     text: "中平枪法"
-    translated: "Middle‑Level Spear Technique"
+    translated: "Middle-Level Spear Technique"
 - raw: "93,长兵,1,八母枪术,“封闭提掳拿拦还缠”八式乃一切枪术之基本，其生出的组合又变化万千，因此以八母闻名,12,1.1,长兵1;智力1,,力道1;智力1;长兵2,长兵15;智力10,\"1,1,1\",\"7,0,0\",弱点0.06,11,-1,0,腹16,腹12,,,skill3_2,,劈砍_蓝-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -505,7 +505,7 @@
   splits:
   - split: 3
     text: "黄沙万里鞭"
-    translated: "Ten‑thousand‑li Whip Through Sands"
+    translated: "Ten-thousand-li Whip Through Sands"
 - raw: "100,奇门,1,碎石铁鞭,一门大开大合的进攻性鞭法，功力深厚者可以一鞭击碎岩石，足见其力道之刚猛,13,1,奇门1;力道1,,力道1;奇门2;内力0.1,奇门15;力道10,\"4,0,0\",\"4,1,2\",破甲0.06,12,-1,0,胸19,胸9,,,skill4_4,,劈砍_裂地-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -515,7 +515,7 @@
   splits:
   - split: 3
     text: "九节鞭法"
-    translated: "Nine‑section whip technique"
+    translated: "Nine-section whip technique"
 - raw: "102,奇门,1,海叟钩法,本是海边船夫以铁钩捕鱼之法，化为武学后招式奇特，别出心裁，非聪慧之人难以使用,11,1.1,奇门1;智力1,,智力1;奇门2;内力0.1,奇门15,\"4,0,0\",\"4,1,3\",拉近2,9,-1,0,心18,心10,,,skill4_1,,水滴-Target-Grid-Happen,对刺,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -540,7 +540,7 @@
   splits:
   - split: 3
     text: "闪电五连鞭"
-    translated: "Lightning Five‑Strike Whip"
+    translated: "Lightning Five-Strike Whip"
 - raw: "107,射术,1,掷短斧,将短斧当头掷出，手法极为简单，只需臂力强壮之人便能发挥威力,14,0.9,射术1;力道1,,力道2;射术1,射术10;力道15,\"2,1,2\",\"0,0,0\",,12,-1,0,头22,头4,,,skill5_0,6,圆斩火-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -570,7 +570,7 @@
   splits:
   - split: 3
     text: "甩袖箭"
-    translated: "Wielded sleeve‑jar arrows"
+    translated: "Wielded sleeve-jar arrows"
 - raw: "113,射术,1,棉套索,以极细之棉纱反复编织至拇指粗细而成，可以有效牵制被套住的敌人行动,1,1.2,射术1;经脉1,,经脉1;射术2;内力0.1,射术20;经脉10,\"0,2,4\",\"0,0,1\",手臂点穴0.1;腿足点穴0.1,6,-1,0,手18,手6,,,skill5_0,8-----0.8,网缠-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -615,7 +615,7 @@
   splits:
   - split: 3
     text: "轰天掣地诀"
-    translated: "Heaven‑Shaking Earth‑Piercing Technique"
+    translated: "Heaven-Shaking Earth-Piercing Technique"
 - raw: "122,内功,2,普贤心经,脱胎于普贤心经的佛门内功，缘起非有无，非实亦非虚，可大大增加修习者的内功修为,,1.5,内功2;经脉1,生命上限20;内力上限130;内功10;经脉10,,内功35;经脉25,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -700,7 +700,7 @@
   splits:
   - split: 3
     text: "铜头铁臂功"
-    translated: "Iron‑arm Copper‑head Skill"
+    translated: "Iron-arm Copper-head Skill"
 - raw: "139,绝技,2,隔山打牛,一种独特的运劲技巧，将内力冲击通过实体传导，功力深厚者可以一拳击飞数人,,1,绝技2;意志1,绝技6;意志6;经脉6;内伤0.08,,绝技35;意志15;经脉15,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -730,7 +730,7 @@
   splits:
   - split: 3
     text: "卧虎功"
-    translated: "Tiger‑Crouching Fist"
+    translated: "Tiger-Crouching Fist"
 - raw: "145,绝技,2,乱环扑,以肢端内劲画圆，控制力道循环之法门，一旦敌人陷入此乱环劲道之中，便会被力牵引，左右难支,,1,绝技2;经脉1,绝技9;智力9;动摇0.08,,绝技30;智力20,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -775,7 +775,7 @@
   splits:
   - split: 3
     text: "伏虎拳"
-    translated: "Tiger‑Crushing Fist"
+    translated: "Tiger-Crushing Fist"
 - raw: "154,拳掌,2,大擒拿手,大开大合的擒拿手法，其招式沉稳，出手凌厉，威猛力大，以攻代守,14,1,力道1;经脉1;内功1,,力道2;经脉1;拳掌3,拳掌30;力道20;经脉10,\"0,1,2\",\"0,0,1\",断骨0.08,14,-1,0,手10;足10,手3;足8,,,skill0_2,,蝴蝶斩-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -815,7 +815,7 @@
   splits:
   - split: 3
     text: "雨打飞花剑"
-    translated: "Rain‑Splashed Flying Flower Sword"
+    translated: "Rain-Splashed Flying Flower Sword"
 - raw: "162,剑法,2,浣花流水剑,招法优雅灵动，落花流水般倾泻而下，而剑招中暗含的内力更是能够伤人于无形,15,1,剑法2;灵巧1,,经脉2;剑法2;内力0.2,剑法30;经脉20,\"4,0,0\",\"4,1,3\",内劲0.08,15,-1,0,手8;心12,手6;心4,,,skill1_2,,花散-Target-Grid-Happen;喷水-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -825,7 +825,7 @@
   splits:
   - split: 3
     text: "一字电剑"
-    translated: "One‑Stroke Electric Sword"
+    translated: "One-Stroke Electric Sword"
 - raw: "164,剑法,2,周公剑法,假托周公姬旦之名，剑招四平八稳，不疾不徐，暗含礼乐之道，因此有修心养性，强身健体之功效,12,0.9,剑法1;智力1;体质1,,体质2;剑法2;内力0.2,剑法30;体质20;智力10,\"2,1,3\",\"7,0,0\",活血0.12,12,-1,0,足11;腹8,足8;腹6,,,skill1_1,,十字斩-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -845,7 +845,7 @@
   splits:
   - split: 3
     text: "八面破身刀"
-    translated: "Eight‑Faced Piercing Blade"
+    translated: "Eight-Faced Piercing Blade"
 - raw: "168,刀法,2,逐浪刀法,东南刀客于海边练成的刀法，需挥刀反复劈斩海浪，至刀风可开分海浪数尺，方能功成,16,1,刀法1;力道1;体质1,,力道2;体质2;刀法1,刀法25;力道25;体质15,\"4,0,0\",\"4,1,3\",压制0.08,16,-1,0,腹20,腹11,,,skill2_1,,水旋风-Target-Grid-Happen,刀,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -860,7 +860,7 @@
   splits:
   - split: 3
     text: "五虎断门刀"
-    translated: "Five Tiger Pierce‑Chest Knife"
+    translated: "Five Tiger Pierce-Chest Knife"
 - raw: "171,刀法,2,八阵盘龙刀,蕴含八阵图义理的刀法，以生死八门配合五行生克，经过精确计算使出，方能发挥威力,15,1.2,刀法1;智力1;内功1,,智力2;刀法2;内力0.2,刀法35;智力25;意志15,\"0,1,2\",\"0,0,1\",震脑0.08,16,-1,0,头9;心9,头7;心6,,,skill2_2,,蟠龙-Target-Grid-Happen;八卦光-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -895,12 +895,12 @@
   splits:
   - split: 3
     text: "二十四路枪势"
-    translated: "Twenty‑four Styles of Spear Technique"
+    translated: "Twenty-four Styles of Spear Technique"
 - raw: "178,长兵,2,泼水杖法,此杖法以招式严谨，防守致密见长，修习者需以水桶取水泼之而不能进，方见其功力,15,1.1,长兵1;灵巧1;经脉1,,经脉2;长兵2;内力0.2,长兵35;经脉20;灵巧15,\"4,0,0\",\"5,1,2\",铜皮0.08,15,-1,0,胸16,胸15,,,skill3_2,,水旋风-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 3
     text: "泼水杖法"
-    translated: "Water‑Splashing Staff Technique"
+    translated: "Water-Splashing Staff Technique"
 - raw: "179,长兵,2,六合大枪,以六种基本招式为根基的简练枪法，枪路刚猛直接，只需身强力壮者便能发挥威力,16,1,长兵2;体质1,,体质3;长兵1;内力0.1,长兵30;体质20,\"4,0,0\",\"4,1,3\",伤害0.08,16,-1,0,心12;胸8,心7;胸3,,,skill3_1,,地面打击-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -960,7 +960,7 @@
   splits:
   - split: 3
     text: "夺命鞭法"
-    translated: "Fate‑Stealing Whip Technique"
+    translated: "Fate-Stealing Whip Technique"
 - raw: "191,奇门,2,乱披风锤法,以连续挥击而闻名，短时间内数十次挥出势大力沉之铁锤，即便身强体壮者有时也难以驾驭,15,0.9,奇门1;力道1;体质1,,力道2;体质3;奇门1,奇门15;力道20;体质30,\"0,1,2\",\"0,0,1\",连绵0.08,17,-1,0,头12;胸11,头4;胸4,,,skill2_2,,地震波-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -985,7 +985,7 @@
   splits:
   - split: 3
     text: "回打软鞭式"
-    translated: "Return with whip‑like technique"
+    translated: "Return with whip-like technique"
 - raw: "196,奇门,2,呼延鞭法,本是行伍中短钢鞭路数，被化用在长鞭之上，每一鞭挥出皆是孔武有力，威力不俗,16,1,奇门2;体质1,,体质2;奇门2;内力0.2,奇门30;体质20,\"4,0,0\",\"4,1,2\",伤害0.08,15,-1,0,腹20,腹11,,,skill4_3,,地面打击-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1075,7 +1075,7 @@
   splits:
   - split: 3
     text: "七步追魂"
-    translated: "Seven‑Step Soul Pursuer"
+    translated: "Seven-Step Soul Pursuer"
 - raw: "214,轻功,3,八步赶蝉,极快之轻功，相传功成者在八步之内赶上飞蝉，如同探囊取物,,1,轻功潜力1;轻功1;力道1,轻功15;力道6;体质3;速度0.1,,轻功45;力道30;体质20,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1110,7 +1110,7 @@
   splits:
   - split: 3
     text: "熊形虎相"
-    translated: "Bear‑like tiger appearance"
+    translated: "Bear-like tiger appearance"
 - raw: "221,绝技,3,雷霆万钧,极大加快出手速度的发力技巧，招法快如闪电，兼具万钧之势，常人难挡,,0.9,力道潜力1;绝技1;灵巧1,绝技9;力道6;灵巧9;雷电0.1,,绝技40;灵巧30;力道20,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1140,12 +1140,12 @@
   splits:
   - split: 3
     text: "分筋错骨手"
-    translated: "Bone‑setting hand"
+    translated: "Bone-setting hand"
 - raw: "227,剑法,3,追魂夺命剑,以连续追击而闻名之剑术，一剑比一剑更快，更险，敌人刚挡下一剑，往往数剑又至,17,1.1,剑法潜力1;剑法1;力道1,,力道2;灵巧3;剑法2,剑法50;力道35;灵巧20,\"4,0,0\",\"4,1,5\",连击0.12,21,-1,0,心14;头12,心4;头4,,,skill1_0,,圆斩血-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 3
     text: "追魂夺命剑"
-    translated: "Lethal Soul‑Seizing Sword"
+    translated: "Lethal Soul-Seizing Sword"
 - raw: "228,剑法,3,子午十二剑,所为子午，一阴一阳，一北一南，剑招蕴含天干地支，时辰方位之理，聪慧过人者方能参悟,16,1.2,灵巧潜力1;剑法1;智力1,,智力2;剑法3;内力0.2,剑法55;灵巧30;智力20,\"2,1,3\",\"7,0,0\",弱点0.06;醒脑0.06,18,-1,0,手10;足10,手8;足8,,,skill1_2,,圆斩电-Target-Grid-Happen;八卦光-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1210,7 +1210,7 @@
   splits:
   - split: 3
     text: "焚天棍影"
-    translated: "Heaven‑Burning Staff Shadow"
+    translated: "Heaven-Burning Staff Shadow"
 - raw: "241,长兵,3,百鸟朝凤枪,据说是三国名将所传招式，枪势大开大合，威武沉稳，招法华丽又不失实用性，颇具王者气象,19,1.1,长兵潜力1;长兵1;体质1,,体质3;长兵3;内力0.1,长兵50;体质30,\"4,0,0\",\"5,2,3\",伤害0.05;命中0.05,19,-1,0,心12;头9,心8;头5,,,skill3_0,,血龙卷-Target-Grid-Happen;羽散-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -1225,7 +1225,7 @@
   splits:
   - split: 3
     text: "子午鸳鸯钺"
-    translated: "Midday‑Midnight Dual Jade Sabers"
+    translated: "Midday-Midnight Dual Jade Sabers"
 - raw: "244,奇门,3,判官笔法,书法名家所创，或挥或洒，或点或按，走脉打穴之间颇现笔力，悟性不足者难得其神髓,16,1.2,奇门潜力1;奇门1;智力1,,智力2;奇门3;内力0.2,奇门55;智力30,\"2,1,3\",\"7,0,0\",心胸点穴0.08;腰腹点穴0.04,18,-1,0,胸10;腹10,胸7;腹7,,,skill4_7,,墨圈-Target-Grid-Happen,笔,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -1260,7 +1260,7 @@
   splits:
   - split: 3
     text: "赤链蛇锥"
-    translated: "Red‑striped Keelback Snake"
+    translated: "Red-striped Keelback Snake"
 - raw: "251,射术,3,阴冥砂,阴险剧毒之暗器，中此砂者痛苦万分，如坠黄泉九幽，求生不得，求死不能,10,0.9,智力潜力1;射术1;意志1,,意志2;射术3;内力0.2,射术45;意志25;智力15,\"4,0,0\",\"5,1,3\",毒素0.1;虚弱0.05,17,-1,0,头18;手6,头4;手2,,,skill5_0,11-----1.1,毒雾-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -1360,7 +1360,7 @@
   splits:
   - split: 3
     text: "披风七杀戟"
-    translated: "Seven‑Cloak Killing Spear"
+    translated: "Seven-Cloak Killing Spear"
 - raw: "271,长兵,4,傲世奇枪,兵行险锋，枪出奇招，此枪法招招角度诡谲，出奇制胜，传说熟习之人，必能建功立业，傲视群雄,21,1,长兵潜力1;体质潜力1;长兵2,,力道1;长兵5;内力0.1,长兵60;体质40;力道35,\"4,0,0\",\"6,2,5\",鹰眼0.06;笨拙0.06,25,-1,0,心18;足8,心4;足7,,,skill3_0,,劈砍_红多重-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1385,7 +1385,7 @@
   splits:
   - split: 3
     text: "五蟒狂鞭"
-    translated: "Five‑Mythical‑Beast Crazy Whip"
+    translated: "Five-Mythical-Beast Crazy Whip"
 - raw: "276,射术,4,阎王帖,暗器高手所使铁牌，薄如蝉翼却颇具重量，专攻咽喉小腹等要害部位，见之如见阎王,21,1.1,射术潜力2;射术1;灵巧1,,灵巧3;射术3;内力0.2,射术65;灵巧50,\"2,1,6\",\"0,0,0\",流血0.06;脆弱0.06,24,-1,0,腹16;头10,腹2;头4,,,skill5_0,12-----1,爆血迹-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1440,7 +1440,7 @@
   splits:
   - split: 3
     text: "碧海潮生曲"
-    translated: "Tide‑Echoing Melody"
+    translated: "Tide-Echoing Melody"
 - raw: "287,射术,5,多情飞刀,一名痴情高人所创，旨在伤人而非取人性命之手法，刀刀不伤人要害，却又刀刀避无可避,22,0.9,射术潜力2;智力潜力1;智力2,,智力3;灵巧1;射术3;内力0.2,射术75;智力60,\"4,0,0\",\"4,4,6\",鹰眼0.06;流血0.06;穿甲0.06,28,-1,0,足10;手10;胸6,足7;手4;胸4,,,skill5_0,2-----1.2,劈砍_红连续-Target-Grid-Happen;红花-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -1505,7 +1505,7 @@
   splits:
   - split: 3
     text: "两面三刀法"
-    translated: "Two‑Faced Blade Technique"
+    translated: "Two-Faced Blade Technique"
 - raw: "300,内功,2,知足常乐功,长乐帮正式弟子有时需要迎送贵客，此时摆出知足常乐之笑脸，方为生财之道,,0.9,内功2;体质1,生命上限90;内力上限30;内功9;体质9;虚弱0.08,,内功25;体质20,,,,0,0,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1630,7 +1630,7 @@
   splits:
   - split: 3
     text: "三寸钉"
-    translated: "Three‑inch nail"
+    translated: "Three-inch nail"
 - raw: "325,刀法,0,袖里藏刀,为江湖人士所不齿之刀法，需将兵刀藏于袖中，待敌人近前，突然出手，以偷袭取胜,12,1.1,刀法1,,灵巧2;刀法1;内力0.1,刀法5;灵巧5,\"4,0,0\",\"4,1,1\",笨拙0.02,5,1,0,心16,心7,,,skill2_0,,爆叶-Target-Grid-Happen;穿刺_风电-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1690,12 +1690,12 @@
   splits:
   - split: 3
     text: "银丝网"
-    translated: "Silver‑webbed net"
+    translated: "Silver-webbed net"
 - raw: "337,射术,2,断肠针,敷有剧毒之钢针，其断肠草之毒性令人痛不欲生，若命中心腹部位则会加快毒性发作,14,1,射术1;灵巧1;毒术1,,灵巧2;射术2;内力0.2,射术30;灵巧25,\"0,3,5\",\"0,0,0\",毒素0.1;不愈0.04,11,1,0,腹21,腹8,,,skill5_1,5-----1,毒素-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
     text: "断肠针"
-    translated: "Intestine‑Piercing Needle"
+    translated: "Intestine-Piercing Needle"
 - raw: "338,射术,2,穿心钉,专攻敌人心胸部位之钢钉，较之其他暗器要锋利沉重许多，因此穿透力不俗,16,1.1,射术2;智力1,,智力3;射术1;内力0.1,射术35;智力20,\"0,2,3\",\"0,0,0\",裂膝0.04;穿甲0.04,12,1,0,头22,头7,,,skill5_0,7-----0.9,血圈-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1760,7 +1760,7 @@
   splits:
   - split: 3
     text: "七星透骨钉"
-    translated: "Seven‑Star Piercing Bone Needle"
+    translated: "Seven-Star Piercing Bone Needle"
 - raw: "351,刀法,4,万化玄机刀,唐门机巧工艺之结晶，刀刃可伸缩、弯折、展开、飞射，因其结构复杂难以维护，长老以上方可使用,20,1,灵巧潜力2;刀法1;力道1,,灵巧4;刀法3;内力0.1,刀法60;灵巧45;力道30,\"1,1,1\",\"7,0,0\",破招0.12,21,1,0,足14;心9,足8;心6,,,skill2_0,,劈砍_黑白多重中-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1865,7 +1865,7 @@
   splits:
   - split: 3
     text: "天王补心针"
-    translated: "Heavenly King's Heart‑Nourishing Injection"
+    translated: "Heavenly King's Heart-Nourishing Injection"
 - raw: "372,内功,3,扁鹊回春功,战国名医扁鹊所留之医书，其中妙药灵方无数，更兼锤炼经脉之神奇法门，可大大增加内息潜能,,1,体质潜力1;经脉潜力1;医术潜力1,生命上限80;内力上限80;内功8;经脉8;医术8;毒术4;疗伤0.05;康复0.1;药性0.05,,内功40;经脉20;医术40,,,,0,2,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1890,7 +1890,7 @@
   splits:
   - split: 3
     text: "药王毒手"
-    translated: "Poison‑Finger Medicrowad"
+    translated: "Poison-Finger Medicrowad"
 - raw: "377,射术,3,扁鹊神针,扁鹊所传针灸之法，其手法独到，不拘一格，所取穴位无不精奇巧妙，能令腐骨生肌，假死之人复生,-12,1.1,智力潜力1;射术1;医术潜力1,,医术0.3;射术0.1;内力0.02,射术30;智力25;医术45,\"1,0,2\",\"0,0,0\",恢复0.06;康复0.06,21,2,1,,,,,skill5_0,4-----1.1,治疗-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -1985,7 +1985,7 @@
   splits:
   - split: 3
     text: "沾衣十八跌"
-    translated: "Cloth‑Dampening Eighteen Falls"
+    translated: "Cloth-Dampening Eighteen Falls"
 - raw: "396,拳掌,1,醉拳,丐帮高手醉酒后意外使出的独到拳法，拳路似醉非醉，似醒非醒，左倒右支，难以捉摸,11,1.2,拳掌1;体质1,,体质2;拳掌2;内力0.2,拳掌20;体质10,\"1,1,1\",\"0,0,0\",动摇0.06,8,3,0,腹18,腹10,,,skill0_0,,乱刃-Target-Grid-Start;风轮-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2050,7 +2050,7 @@
   splits:
   - split: 3
     text: "妙手空空"
-    translated: "Empty‑handed Genius"
+    translated: "Empty-handed Genius"
 - raw: "409,拳掌,3,鲲鹏拳法,脱胎自道家典籍庄子之拳法，或水击千里，或扶摇直上，招式大开大合，内劲潇洒浑厚,18,1,拳掌潜力1;拳掌1;经脉1,,经脉2;拳掌4;内力0.1,拳掌45;经脉30,\"4,0,0\",\"4,1,3\",内伤0.05;压制0.05,20,3,0,胸12;腹10,胸6;腹6,,,skill0_0,,升龙斩-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2075,7 +2075,7 @@
   splits:
   - split: 3
     text: "混世天罡"
-    translated: "World‑Disturbing Celestial Vigor"
+    translated: "World-Disturbing Celestial Vigor"
 - raw: "414,绝技,4,虎落平阳,虎落平阳，蛟入浅海，乃是作困兽之斗，集中全身力量博最后一击的丐帮绝学，在生死关头能够发挥出超常的威力,,0.9,力道潜力1;绝技潜力1;绝技2,绝技15;力道15;铜皮0.05;壮骨0.05;拳掌威力0.05,,绝技55;力道45,,,,0,3,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2105,7 +2105,7 @@
   splits:
   - split: 3
     text: "降龙掌法"
-    translated: "Dragon‑Taming Palm Technique"
+    translated: "Dragon-Taming Palm Technique"
 - raw: "420,长兵,5,打狗八绝棍,丐帮祖师对战群邪时所创棍法，以“打狗”称之颇有几分戏谑粗俗之意，却是举重若轻，返璞归真，实用至极，无丝毫多余动作之招式,23,1.1,长兵潜力1;经脉潜力2;力道2,,经脉3;长兵5;内力0.1,长兵80;力道55;经脉55,\"2,2,4\",\"1,0,1\",失衡0.08;迟缓0.06;动摇0.06,28,3,0,手8;足10;头8,手5;足5;头5,,,skill3_2,,墨染-Target-Grid-Start;旋棍-Target-Grid-Happen;墨爆-Target-Grid-Happen,长兵,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -2170,12 +2170,12 @@
   splits:
   - split: 3
     text: "回马枪术"
-    translated: "Riding‑the‑Horseback Gun Technique"
+    translated: "Riding-the-Horseback Gun Technique"
 - raw: "433,长兵,1,泣血戈术,败军之将所创，悲愤凶狠，志在复仇的全力挥戈之法，刺入人体后，鲜血自戈身滴落，宛若泣血呜咽,13,1.1,长兵1;力道1,,力道3;长兵2,长兵10;力道15,\"1,1,2\",\"0,0,0\",流血0.06,6,4,0,头19,头7,,,skill3_0,,喷血-Target-Grid-Happen;劈砍_黄裂地-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 3
     text: "泣血戈术"
-    translated: "Blood‑Curdling Gore Technique"
+    translated: "Blood-Curdling Gore Technique"
 - raw: "434,刀法,1,斩马刀法,源于沙场之上，斩击骑兵马匹的勇猛刀法，讲求以攻代守，以力胜强,12,1,刀法1;力道1,,力道2;刀法2;内力0.1,刀法15;力道10,\"4,0,0\",\"5,1,2\",外伤0.06,5,4,0,手20,手8,,,skill2_1,,劈砍_黄-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2205,7 +2205,7 @@
   splits:
   - split: 3
     text: "潜龙枪诀"
-    translated: "Dragon‑Severing Spear Technique"
+    translated: "Dragon-Severing Spear Technique"
 - raw: "440,长兵,2,铁马金戈,行伍猛士所使的挥戈术，专破敌人防御，凭其惊人力道，可轻易啄开寻常甲盾,17,0.9,长兵1;力道2,,力道4;长兵1,长兵20;力道25,\"2,1,3\",\"0,0,0\",破甲0.04;真伤0.04,6,4,0,胸22,胸9,,,skill3_0,,金刚-Target-Grid-Happen;三连剑影中-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2215,7 +2215,7 @@
   splits:
   - split: 3
     text: "劈天刀法"
-    translated: "Heaven‑Splitting Blade Technique"
+    translated: "Heaven-Splitting Blade Technique"
 - raw: "442,内功,3,潜龙心法,讲求藏锋守拙，蓄势待发之内功心法，其息如龙潜深渊，厚积薄发，一旦出手，便如蛟龙出海，势不可挡,,1,内功潜力1;内功1;体质1,生命上限140;内力上限30;内功8;力道8;体质8;外伤0.06;长兵威力0.06,,内功45;体质30,,,,0,4,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2250,7 +2250,7 @@
   splits:
   - split: 3
     text: "百战刀法"
-    translated: "Hundred‑Fight Blade Technique"
+    translated: "Hundred-Fight Blade Technique"
 - raw: "449,轻功,4,龙城飞将步,西汉名将李广所传之步法，初看沉稳持重，虎步而行，而后逐渐加快，直至大步流星，气势惊人，宛如飞将军再世,,1.3,轻功潜力2;轻功2,坐骑加成0.1;死战0.05;霸体0.05;长兵威力0.05,,轻功50;体质45;力道35,,,,0,4,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2280,7 +2280,7 @@
   splits:
   - split: 3
     text: "镇魔斩妖刀"
-    translated: "Demon‑Slaying Monster‑Cutting Blade"
+    translated: "Demon-Slaying Monster-Cutting Blade"
 - raw: "455,绝技,5,帝王封禅功,飞龙门至高硬功绝学，运功者遍体坚如磐石，身形稳如泰山，如黄帝金身，江山永固，万夫不能撼其分毫,,1,绝技潜力2;体质潜力1;绝技2,绝技12;体质12;力道6;护甲12;横练0.06;霸体0.06;装备负重8,,绝技70;体质65,,,,0,4,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2335,12 +2335,12 @@
   splits:
   - split: 3
     text: "御风咒"
-    translated: "Wind‑Riding Curse"
+    translated: "Wind-Riding Curse"
 - raw: "466,绝技,1,长目飞耳功,茅山派集中神智，使耳聪目明之法，被民间讹传为眼睛伸长，耳朵飞出的仙术,,1,绝技1;智力1,绝技2;智力5;意志5;鹰眼0.06,,绝技15;智力10,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
     text: "长目飞耳功"
-    translated: "Long‑Eyed Flying Ears Technique"
+    translated: "Long-Eyed Flying Ears Technique"
 - raw: "467,奇门,1,跌打梅山咒,以内劲扰乱敌方重心，使之跌倒的奇门咒术，茅山道士有时会用以戏弄功力低微的武林人士,10,0.9,奇门1;智力1,,智力1;奇门3;内力0.1,奇门10;智力10,\"0,1,1\",\"0,0,0\",失衡0.04;动摇0.04,8,5,0,足20,足8,,,skill0_2,,符纸-Target-Grid-Happen;风轮-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2370,7 +2370,7 @@
   splits:
   - split: 3
     text: "服内元气诀"
-    translated: "In‑game Essence Cultivation Technique"
+    translated: "In-game Essence Cultivation Technique"
 - raw: "473,轻功,2,移形换位,依天干地支之理，缩减行动距离，从而加快移速之步法，常人眨眼之间便能变换数个方位,,1,轻功2;智力1,轻功6;智力6;经脉6;速度0.08,,轻功30;智力25,,,,0,5,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2390,7 +2390,7 @@
   splits:
   - split: 3
     text: "勾魂咒"
-    translated: "Soul‑stealing curse"
+    translated: "Soul-stealing curse"
 - raw: "477,奇门,2,天罡咒,念动咒文同时运转内息，能在短时间内使硬功防御突飞猛进的奇门咒术,-4,0.9,奇门1;力道1;体质1,,体质0.2;奇门0.2;内力0.01;医术0.2,奇门25;体质15,\"1,0,1\",\"0,0,0\",铜皮0.24,11,5,1,,,,,skill0_2,,光圈-Target-Hip-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2665,7 +2665,7 @@
   splits:
   - split: 3
     text: "五毒掌"
-    translated: "Five‑Toxic Palm"
+    translated: "Five-Toxic Palm"
 - raw: "532,射术,0,朱蟾砂,将朱蟾之毒附于铁砂之上，临敌掷出，可令人痛痒难当，目不能视,8,0.9,射术1,,智力2;射术2;毒术2,毒术10,\"0,1,1\",\"1,0,1\",目盲0.08,2,7,0,头20,头2,,,skill5_0,11-----0.85,血雾-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -2735,7 +2735,7 @@
   splits:
   - split: 3
     text: "迷魂息"
-    translated: "Mind‑Distorting Silence"
+    translated: "Mind-Distorting Silence"
 - raw: "546,拳掌,2,三尸蜈蚣爪,五指柔韧灵活，如百足蜈蚣在敌人周身攀爬游移，所过之处皆留黑紫印记，不多时便会溃烂化脓，颇为狠毒,15,1.1,拳掌2;意志1,,意志2;拳掌2;毒术2,拳掌30;意志20;毒术20,\"0,1,1\",\"7,0,0\",毒素0.08,17,7,0,手8;心14,手6;心3,,,skill0_0,,毒雾-Target-Grid-Happen;爪痕-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2745,7 +2745,7 @@
   splits:
   - split: 3
     text: "化骨绵掌"
-    translated: "Bone‑Dispelling Soft Palm Technique"
+    translated: "Bone-Dispelling Soft Palm Technique"
 - raw: "548,射术,2,断魂砂,细密的粹毒铁砂，射程较短但范围较大，随手一挥便能形成一片黑色烟雾，不甚沾染或吸入者立感痛痒难当,6,0.9,毒术2;智力1,,智力1;射术1;毒术4,射术20;智力15;毒术30,\"3,1,1\",\"0,0,1\",毒素0.1;目盲0.06,12,7,0,头18;胸6,头2;胸2,,,skill5_0,11-----1.05,黑爆-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -2875,7 +2875,7 @@
   splits:
   - split: 3
     text: "红眼刀法"
-    translated: "Blade Technique of the Red‑Eyed One"
+    translated: "Blade Technique of the Red-Eyed One"
 - raw: "574,拳掌,0,僵尸拳,此拳法直来直去，直上直下，姿势僵硬怪异，却颇有几分力道,12,1.1,力道1,,力道3,力道10,\"2,1,2\",\"0,0,0\",壮骨0.04,6,8,0,胸16,胸7,,,skill0_0,,黑焰-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2960,7 +2960,7 @@
   splits:
   - split: 3
     text: "混世魔功"
-    translated: "World‑Destroying Evil Skill"
+    translated: "World-Destroying Evil Skill"
 - raw: "591,轻功,3,百鬼夜行,此步法气势威猛，一往无前，如阎罗王大开鬼门关，其内力携劲风呼号，化作妖魔鬼怪奔涌而出，常人见之无不恐惧惊慌,,0.9,轻功潜力1;轻功1;经脉1,轻功8;力道8;经脉8;杀机0.06;动摇0.06,,轻功40;经脉30,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -2990,7 +2990,7 @@
   splits:
   - split: 3
     text: "抽髓掌"
-    translated: "Bone‑Draining Palm"
+    translated: "Bone-Draining Palm"
 - raw: "597,内功,4,苦海魔功,相传此魔功竟是一名走火入魔之高僧所创，其劲道凶狠狂暴，逆势而行，能伤人经脉，损人修为，江湖人士无不畏惧三分,,1.2,内功潜力2;内功1;经脉1,生命上限120;内力上限80;内功15;经脉15;内伤0.06;疯魔0.06;削内0.32;负面抗性-0.02,,内功65;经脉50,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3025,7 +3025,7 @@
   splits:
   - split: 3
     text: "九死离魂掌"
-    translated: "Nine Lives Soul‑Stealing Palm"
+    translated: "Nine Lives Soul-Stealing Palm"
 - raw: "604,内功,5,万恶魔功,习武者最珍视苦修而来的内功功力，而此法却专攻任督二脉，损伤主脉消减功力，治疗不及便有伤残之虞，江湖中人不仅恨之入骨，更是畏之如虎,,1,力道潜力2;内功潜力1;内功1;力道1,生命上限140;内力上限100;内功12;力道12;经脉12;内伤0.08;削内0.36;负面抗性-0.04,,内功75;经脉60;力道45,,,,0,8,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3180,7 +3180,7 @@
   splits:
   - split: 3
     text: "阴阳奇剑"
-    translated: "Yin‑Yang Mystery Sword"
+    translated: "Yin-Yang Mystery Sword"
 - raw: "635,内功,4,太阳太玄功,融汇儒道易三家之神妙经典：太玄经上卷，需于正午时分汲取皓日之精华，日积月累方能修得此至阳至刚之磅礴内息,,1.2,内功潜力2;内功1;意志1,生命上限130;内力上限70;内功15;意志15;舒筋0.05;灼烧0.05;削内0.2,,内功70;意志45,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3195,7 +3195,7 @@
   splits:
   - split: 3
     text: "螺旋九影"
-    translated: "Nine‑Division Spiral Shadow"
+    translated: "Nine-Division Spiral Shadow"
 - raw: "638,绝技,4,霓裳羽衣舞,自霓裳羽衣舞姿中演化而来，其身形与力道时而飘然转旋回雪轻，时而嫣然纵送游龙惊，再平凡之招式也能生出无穷变化,,1,绝技潜力1;灵巧潜力2,绝技15;智力15;破招0.04;定身0.04;负面抗性0.08,,绝技55;智力45;灵巧35,,,,0,9,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3320,7 +3320,7 @@
   splits:
   - split: 3
     text: "伏魔铲法"
-    translated: "Method of the Devil‑subduing Tongs"
+    translated: "Method of the Devil-subduing Tongs"
 - raw: "663,内功,2,菩提心法,菩提心乃大乘佛法一切功德修行之基，少林弟子需先发菩提之心，生正信之力，此后方能循大道指引，入圆满境界,,1,内功2;体质1,生命上限70;内力上限50;内功6;体质6;经脉6;疗伤0.04;霸体0.04,,内功30;体质20;经脉10,,,,0,10,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3335,7 +3335,7 @@
   splits:
   - split: 3
     text: "一指禅"
-    translated: "One‑Finger Zen"
+    translated: "One-Finger Zen"
 - raw: "666,拳掌,2,少林龙爪手,古朴易学，力道奇大之少林爪法，拳掌坚硬逾钢，手指开砖如泥，致敌伤残于瞬息间，也因威力过大，戒律规定不得滥用,17,1.1,拳掌1;力道2,,力道4;拳掌2,拳掌25;力道30,\"0,1,2\",\"0,0,0\",壮骨0.08,16,10,0,手12;心8,手6;心4,,,skill0_0,,十字爪-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3435,7 +3435,7 @@
   splits:
   - split: 3
     text: "如来千叶手"
-    translated: "Buddha Thousand‑Petaled Hand"
+    translated: "Buddha Thousand-Petaled Hand"
 - raw: "686,长兵,4,大文殊杖法,少林菩提院秘传棍法，取文殊菩萨之智慧，招式变化无穷，所含佛法禅机亦极为精深，由大智慧之人使出，方显精妙非凡,21,1.1,长兵潜力2;长兵1;智力1,,智力3;长兵4;内力0.1,长兵60;智力55,\"2,1,2\",\"3,0,1\",震脑0.06;慧眼0.06,25,10,0,心15;胸6,心12;胸4,,,skill3_1,,佛散-Target-Grid-Happen;旋风斩-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3530,7 +3530,7 @@
   splits:
   - split: 3
     text: "金针指功"
-    translated: "Needle‑pricking Skill"
+    translated: "Needle-pricking Skill"
 - raw: "705,剑法,1,柔云剑法,此剑招一经发动，便一剑接一剑接踵而至，顺势而来，虽威力稍小，但胜在不僵不滞，连绵不断,10,0.9,剑法1;灵巧1,,灵巧2;剑法2;内力0.2,剑法10;灵巧10,\"2,1,2\",\"7,0,0\",连绵0.08,8,11,0,手17,手13,,,skill1_2,,旋风-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3575,12 +3575,12 @@
   splits:
   - split: 3
     text: "绕指柔剑"
-    translated: "Soft‑Bending Sword"
+    translated: "Soft-Bending Sword"
 - raw: "714,剑法,2,两仪剑法,一阴一阳，一柔一刚两种剑法融合而成，要求配合无间，切换迅速，若运用者思路稍有混乱，便难免错漏百出,15,1.1,剑法1;智力2,,智力3;剑法2;内力0.1,剑法25;智力30,\"2,1,2\",\"7,0,0\",连绵0.04;弱点0.04,14,11,0,头10;足10,头6;足6,,,skill1_1,,劈砍_黑白震-Target-Grid-Happen;八卦升-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 3
     text: "两仪剑法"
-    translated: "Dual‑Nature Sword Technique"
+    translated: "Dual-Nature Sword Technique"
 - raw: "715,内功,3,纯阳无极功,武当上乘内功心法，全篇十二关颇为艰涩，取天地阳气至丹田熔炉中反复精炼，修成后内息炽热无比，纯净清澈,,1.2,内功潜力1;内功1;经脉1,生命上限50;内力上限110;内功12;经脉12;内伤0.05;反弹0.03,,内功50;经脉40,,,,0,11,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3630,7 +3630,7 @@
   splits:
   - split: 3
     text: "阴阳调元法"
-    translated: "Yin‑Yang Harmonization Technique"
+    translated: "Yin-Yang Harmonization Technique"
 - raw: "725,拳掌,4,日月明光掌,汲取日月之精华，以纯阳纯阴内力混元击出的掌法，其气劲破空激射，如日月当空，光芒万丈刺目耀眼,22,1,经脉潜力2;拳掌1;智力1,,智力3;拳掌4;内力0.1,拳掌60;智力45,\"4,0,0\",\"4,1,4\",目盲0.04;内劲0.04,27,11,0,头14;心9,头8;心6,,,skill0_1,,天光-Target-Grid-Happen;八卦光-Target-Grid-Happen,拳,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -3685,7 +3685,7 @@
   splits:
   - split: 3
     text: "开山刀法"
-    translated: "Mountain‑Cleaving Blade Technique"
+    translated: "Mountain-Cleaving Blade Technique"
 - raw: "736,刀法,0,骤雨刀法,如同骤雨袭来，自上而下连续劈砍之轻快刀法,10,1,刀法1,,体质2;刀法2,刀法10,\"4,0,0\",\"4,1,2\",重碾0.04,2,12,0,头16,头9,,,skill2_0,,水滴-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3715,7 +3715,7 @@
   splits:
   - split: 3
     text: "撼地刀法"
-    translated: "Earth‑Shaking Blade Technique"
+    translated: "Earth-Shaking Blade Technique"
 - raw: "742,刀法,1,狂风快刀,攻势灵活迅速，快若狂风，眨眼之间便可连出数刀，乃西北刀客常用之刀法,11,0.9,刀法1;体质1,,体质2;刀法2;内力0.1,刀法15;体质10,\"4,0,0\",\"5,1,2\",连击0.05;急速0.05,5,12,0,胸19,胸8,,,skill2_2,,乱斩-Target-Grid-Happen,刀,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3765,7 +3765,7 @@
   splits:
   - split: 3
     text: "千里横行"
-    translated: "Mile‑long March"
+    translated: "Mile-long March"
 - raw: "752,绝技,3,金刀换掌功,在悬挂半空的刀阵中练习武功的霸刀门绝技，修成后可敏捷闪战，无惧刀兵，对于刀法理解亦更为深刻,,1,绝技潜力1;绝技1;体质1,绝技8;体质8;刀法威力0.1;横练0.03;减伤6,,绝技45;体质30,,,,0,12,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3930,7 +3930,7 @@
   splits:
   - split: 3
     text: "冲天渔鼓"
-    translated: "Heaven‑reaching fish drum"
+    translated: "Heaven-reaching fish drum"
 - raw: "785,内功,4,紫微星诀,紫微斗数推命之术演化而来，将经脉穴位与天空星辰对应，根据每日天象与命盘转化来推算对应的内力运行路径，此后修为自然突飞猛进，如有神助,,1.2,内功潜力2;内功1;经脉1,生命上限30;内力上限170;内功15;经脉15;内伤0.06;剑法威力0.06,,内功65;经脉50,,,,0,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -3965,7 +3965,7 @@
   splits:
   - split: 3
     text: "五尺混天绫"
-    translated: "Five‑zhi Huandian Ling"
+    translated: "Five-zhi Huandian Ling"
 - raw: "792,内功,5,敲爻歌诀,吕洞宾所创长诗，字字蕴含道家修真之无上法门，玄通天地，神游虚空，大成者如得吕祖亲传，正是：附耳低言玄妙旨，提上蓬莱第一峰,,1.2,内功潜力2;经脉潜力1;意志潜力1,生命上限40;内力上限200;内功18;经脉18;内伤0.06;轻灵0.06;通脉0.06,,内功75;经脉65;意志55,,,,22,13,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4000,7 +4000,7 @@
   splits:
   - split: 3
     text: "三十六闭手"
-    translated: "Thirty‑Six Closed Hands"
+    translated: "Thirty-Six Closed Hands"
 - raw: "799,剑法,0,静心剑法,此剑法暗含修道之理，需平心静气方能发挥威力，修习者越是急于求成，越是难以精进,10,0.9,剑法1,,灵巧1;剑法2;内力0.2,剑法5,\"4,0,0\",\"4,1,2\",调息0.04,5,14,0,心14,心11,,,skill1_0,,十字斩-Target-Grid-Happen,剑,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4070,7 +4070,7 @@
   splits:
   - split: 3
     text: "回风拂柳剑"
-    translated: "Breeze‑Brushing Willow Sword"
+    translated: "Breeze-Brushing Willow Sword"
 - raw: "813,内功,3,莲花玄功,峨眉派佛道融合之内功心法，以佛门莲花部密法为根，结合道家修炼与五行玄术，有流通经脉，运转周天之功效,,1.1,内功潜力1;内功1;经脉1,生命上限40;内力上限120;内功12;经脉12;恢复0.05;慧眼0.05,,内功50;经脉30,,,,0,14,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4085,7 +4085,7 @@
   splits:
   - split: 3
     text: "七星横链"
-    translated: "Seven‑star Horizontal Chain"
+    translated: "Seven-star Horizontal Chain"
 - raw: "816,拳掌,3,兰花拂穴手,精巧绝伦的点穴手法，手指似兰花翘起，招式优雅，气度闲逸，看似柔弱无骨，却能于不动声色间制人多处要穴,17,1,拳掌潜力1;灵巧潜力1,,智力2;拳掌3;内力0.3,拳掌50;智力25,\"0,1,3\",\"0,0,0\",手臂点穴0.04;头颈点穴0.04;腰腹点穴0.04,20,14,0,手12;腹10,手4;腹8,,,skill0_2,,红花-Target-Grid-Start;莲花转-Target-Grid-Happen,拳,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4130,7 +4130,7 @@
   splits:
   - split: 3
     text: "灭心绝情剑"
-    translated: "Heart‑Cleansing and Emotion‑Ending Sword"
+    translated: "Heart-Cleansing and Emotion-Ending Sword"
 - raw: "825,内功,5,三洞灵宝经,传说太上老君在峨眉山授于轩辕黄帝之天书，其中万法糅杂，儒道佛兼备，清音霄畅，万真降庭，被奉为道法之宗，群经之首,,1.2,内功潜力1;经脉潜力2;智力潜力1,生命上限80;内力上限160;内功10;经脉10;灵巧10;智力10;通脉0.05;醒脑0.05;慧眼0.05;真伤0.05,,内功75;经脉70;智力60,,,,0,14,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4170,7 +4170,7 @@
   splits:
   - split: 3
     text: "铁脊矛突"
-    translated: "Iron‑spined pike thrust"
+    translated: "Iron-spined pike thrust"
 - raw: "833,内功,1,子午流注功,根据一天十二时辰的不同身体节律，即时调整经脉运行方式的道家养生功法,,1,内功1;体质1,生命上限60;内力上限20;内功6;体质6;疗伤0.04;奇门威力0.02,,内功10;体质15,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4240,7 +4240,7 @@
   splits:
   - split: 3
     text: "倒踩三叠云"
-    translated: "Step on three‑tiered clouds"
+    translated: "Step on three-tiered clouds"
 - raw: "847,绝技,3,龟藏豹隐,崆峒派独门藏锋蓄力之法，将全身力道汇聚于核心一点，择合适时机瞬间爆发，往往能起到一击制敌的奇效,,1.1,绝技潜力1;绝技1;意志1,绝技12;意志10;重碾0.04;不屈0.04;奇门威力0.04,,绝技50;意志30,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4260,7 +4260,7 @@
   splits:
   - split: 3
     text: "北风百裂矛"
-    translated: "Hundred‑Cracking Spear of the Northern Wind"
+    translated: "Hundred-Cracking Spear of the Northern Wind"
 - raw: "851,内功,4,离合神功,崆峒派绝学，将阴阳两股内息彻底分离，再行融合，离合间可产生强悍的真气，偏折来袭攻势，裂石开山，无坚不摧,,1.1,内功潜力2;内功1;体质1,生命上限110;内力上限90;内功15;体质15;斗转0.04;不屈0.04;调息0.04,,内功60;体质50,,,,0,15,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4275,7 +4275,7 @@
   splits:
   - split: 3
     text: "回音搜魂术"
-    translated: "Echo Soul‑searching Technique"
+    translated: "Echo Soul-searching Technique"
 - raw: "854,奇门,4,生死一线鞭,将鞭收于脑后引而不发，全神贯注，将生死悬于身后一线之超绝鞭法，此鞭挥出力道时机方位均是精妙非凡，可谓高下立判，胜负立分,22,1,奇门潜力2;奇门1;灵巧1,,灵巧3;奇门4;内力0.1,奇门60;灵巧45,\"2,1,2\",\"0,0,1\",重碾0.1;蓄力0.04,24,15,0,手8;足16,手4;足8,,,skill4_4,,血雾-Target-Grid-Start;血斩-Target-Grid-Happen,鞭,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4300,7 +4300,7 @@
   splits:
   - split: 3
     text: "非攻法"
-    translated: "Non‑Assault Technique"
+    translated: "Non-Assault Technique"
 - raw: "859,轻功,0,迷踪步,每踏一步之前均需细细思量之步法，迟疑万分，意向难测,,1.1,轻功1,灵巧4;智力4;迟缓0.04,,灵巧5;智力5,,,,0,16,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4380,7 +4380,7 @@
   splits:
   - split: 3
     text: "六转孔明锁"
-    translated: "Six‑turning Clever Lock"
+    translated: "Six-turning Clever Lock"
 - raw: "875,射术,2,神机箭,将尾部绑有火药的箭支装入竹筒，以引线相连而成的机关装置，可瞬间发射大量火箭，一时间火光冲天，声势惊人,16,0.9,射术2;灵巧1,,灵巧2;射术3;内力0.1,射术25;灵巧20,\"0,5,6\",\"0,0,0\",裂膝0.08,14,16,0,头10;足16,头2;足4,,,skill5_2,0-----0.9,火焰-Target-Grid-Happen,弓,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4515,7 +4515,7 @@
   splits:
   - split: 3
     text: "江翻海沸功"
-    translated: "Chang‑fan‑hai‑bo Skill"
+    translated: "Chang-fan-hai-bo Skill"
 - raw: "902,轻功,2,雷车动地,压低身形，以雷车滚地之势快速移动，施展同时向四周抛洒烟火，声势惊人，意志薄弱者难免被其震慑,,0.9,轻功2;灵巧1,轻功9;灵巧9;动摇0.04;震脑0.04,,轻功25;灵巧20,,,,0,17,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4580,7 +4580,7 @@
   splits:
   - split: 3
     text: "连环子母弹"
-    translated: "Linked mother‑and‑child rockets"
+    translated: "Linked mother-and-child rockets"
 - raw: "915,射术,4,神火飞鸦,用细竹芦苇编成的乌鸦形火器，内填火药，可借助下绑火箭之推力飞出数十丈距离，随后引发猛烈爆炸,24,1.1,射术潜力2;射术1;灵巧1,,灵巧2;射术4;锻造2,射术55;灵巧45;锻造45,\"0,4,7\",\"1,0,1\",灼烧0.06;昏沉0.06,22,17,0,腹16;足10,腹4;足6,,,skill5_0,3-----0.45,爆炸火-Target-Grid-Happen,,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -4645,7 +4645,7 @@
   splits:
   - split: 3
     text: "天眼通"
-    translated: "All‑seeing Eye"
+    translated: "All-seeing Eye"
 - raw: "928,绝技,1,密宗缩骨功,传自天竺的瑜伽柔术，可使全身筋骨关节柔软如棉，团缩后身形几乎减小一半,,1.2,绝技1;体质1,绝技6;体质6;坚毅0.06,,绝技20;体质15,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4700,7 +4700,7 @@
   splits:
   - split: 3
     text: "金刚降魔刀"
-    translated: "Devil‑Slaying Great Saber"
+    translated: "Devil-Slaying Great Saber"
 - raw: "939,内功,3,摩揭陀瑜伽功,古国摩揭陀流传而来的瑜伽法，以苦修冥想，体位调息之法增进修为，最终达到心神合一之三摩地境界,,1,内功潜力1;内功1;力道1,生命上限110;内力上限50;内功8;力道8;体质8;外伤0.05;反弹0.03,,内功40;力道35;体质20,,,,0,18,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -4835,7 +4835,7 @@
   splits:
   - split: 3
     text: "五罗轻烟掌"
-    translated: "Five‑robed Light Smoke Palm"
+    translated: "Five-robed Light Smoke Palm"
 - raw: "966,拳掌,1,凌云指,以内力驱动之指法，故每次出招前皆需蓄力，一指既出则飒飒作响，气能凌云，威势不俗,12,1.1,拳掌1;经脉1,,经脉2;拳掌2;内力0.1,拳掌15;经脉15,\"4,0,0\",\"4,1,3\",冰寒0.06,10,19,0,心19,心9,,,skill0_2,,烟圈-Target-Grid-Happen;真气喷-Target-Grid-Happen,拳,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -4965,7 +4965,7 @@
   splits:
   - split: 3
     text: "白虹贯日掌"
-    translated: "Sun‑Piercing White Ribbon Palm"
+    translated: "Sun-Piercing White Ribbon Palm"
 - raw: "992,绝技,5,逆转周天大法,武绝义融合了飞龙门帝王封禅功和崆峒派斗转星移，所创独门绝技，出招方式与内息运行完全逆常理而行，诡异莫测，修习者稍有不慎便会走火入魔,,1.4,力道潜力1;意志潜力1;体质潜力2,绝技9;力道9;意志9;体质15;护甲6;反弹0.05;负面抗性0.05;疯魔0.05,,力道50;意志60;体质80,,,,0,-1,0,,,,,,,,,Same,FALSE,0,1"
   splits:
   - split: 3
@@ -5070,7 +5070,7 @@
   splits:
   - split: 3
     text: "飞箭要诀"
-    translated: "Arrow‑Shooting Essentials"
+    translated: "Arrow-Shooting Essentials"
 - raw: "1013,射术,0,飞石要诀,一门使用石子的基础手法,11,1.2,灵巧1,,体质3;射术1;内力0.1,射术5,\"0,1,3\",\"0,0,0\",昏沉0.04,5,-1,0,头20,头3,,,skill5_0,15-----0.8,打击2-Target-Grid-Happen,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -5135,7 +5135,7 @@
   splits:
   - split: 3
     text: "秦王破阵刀"
-    translated: "Qin King's Array‑Piercing Blade"
+    translated: "Qin King's Array-Piercing Blade"
 - raw: "1026,长兵,4,飞虎提芦枪,传闻武成王黄飞虎所使，一式极为轻灵翔动的枪法，时而如芦花纷飞四散而落，时而如猛虎下山势不可挡,22,1,长兵潜力1;力道潜力1;长兵1;力道1,,力道2;灵巧2;长兵4;内力0.1,长兵70;力道40;灵巧30,\"1,1,2\",\"2,0,1\",舒筋0.06;断骨0.06,24,-1,0,头10;足14,头6;足8,,,skill3_0,,羽毛-Target-Grid-Happen;猛虎-Target-Grid-Happen,长兵,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -5150,7 +5150,7 @@
   splits:
   - split: 3
     text: "五火七翎扇"
-    translated: "Five‑Fire Seven‑feather Fan"
+    translated: "Five-Fire Seven-feather Fan"
 - raw: "1029,奇门,4,六道轮回,此转轮功法共分六层，每层对应佛教六道其一，施展时轮影旋转不休，使对手如坠轮回，永难脱身,22,1.3,体质潜力1;奇门潜力1;绝技1;体质1,,体质3;奇门3;内力0.3,奇门70;体质50,\"2,2,2\",\"1,2,2\",外伤0.04;流血0.04;脆弱0.04,26,-1,0,心15;足8,心8;足7,,,skill4_2,,血轮-Target-Grid-Happen,轮,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -5165,7 +5165,7 @@
   splits:
   - split: 3
     text: "没羽弓术"
-    translated: "Feather‑Fleeing Arrow Technique"
+    translated: "Feather-Fleeing Arrow Technique"
 - raw: "1032,内功,5,摩诃无量功,摩诃者大也，无量者不可计量也。修习此功法者内力如大海无量，且可随心所欲，掌控自如,,1,内功潜力1;力道潜力1;经脉潜力1;力道2,生命上限100;内力上限140;内功16;力道10;经脉10;通脉0.06;雷电0.06;调息0.06,,内功80;力道55;经脉50,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -5175,12 +5175,12 @@
   splits:
   - split: 3
     text: "蚀骨销魂功"
-    translated: "Bone‑Crushing Soul‑Soothing Skill"
+    translated: "Bone-Crushing Soul-Soothing Skill"
 - raw: "1034,轻功,5,驾雾腾云步,以高强内力催动之轻功，可在空中快速行进，周身真气萦绕如同腾云驾雾一般,,1.1,轻功潜力1;意志潜力1;经脉潜力1;经脉2,轻功16;意志10;经脉10;轻灵0.08;神行0.08,,轻功80;意志60;经脉40,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
     text: "驾雾腾云步"
-    translated: "Mist‑walking cloud‑stepping stance"
+    translated: "Mist-walking cloud-stepping stance"
 - raw: "1035,轻功,5,咫尺天涯,此功一步跨出看似只动分毫，实则已越过数丈，对敌者往往产生明明近在咫尺，却又永远难以触及之绝望感,,1.2,轻功潜力1;灵巧潜力1;体质潜力1;灵巧2,轻功12;智力12;体质12;急速0.08;失衡0.08,,轻功70;智力65;体质60,,,,0,-1,0,,,,,,,,,Same,FALSE,0,0"
   splits:
   - split: 3
@@ -5205,7 +5205,7 @@
   splits:
   - split: 3
     text: "万化归一指"
-    translated: "One‑Finger Meditation Technique"
+    translated: "One-Finger Meditation Technique"
 - raw: "1040,剑法,5,剑十三式,传说此剑法本有十五式，但因后两式凶煞无比，杀业过重而被作者毁去，最终仅余十三式,24,1.2,剑法潜力1;力道潜力1;经脉潜力1;经脉2,,力道2;经脉2;剑法4;内力0.3,剑法85;力道55;经脉40,\"4,0,0\",\"4,1,5\",急速0.06;断骨0.06;截脉0.06,36,-1,0,心13;腹13,心8;腹8,,,skill1_1,,瞬杀-Target-Grid-Happen;爆血迹-Target-Grid-Happen,剑,Distance,FALSE,0,0"
   splits:
   - split: 3
@@ -5250,7 +5250,7 @@
   splits:
   - split: 3
     text: "催命符"
-    translated: "Life‑threatening spell"
+    translated: "Life-threatening spell"
 - raw: "1049,射术,5,后羿射日,源自上古之招式，集中全身力道体魄于一点，射出惊天动地，鬼哭神嚎之一箭,26,1,射术潜力1;力道潜力1;体质潜力1;力道2,,力道3;体质2;射术1;内力0.1,射术80;力道65;体质50,\"4,0,0\",\"4,5,8\",破甲0.06;裂膝0.06;击退3,36,-1,0,心14;胸14,心6;胸6,,,skill5_2,0-----1,烈日-Target-Grid-Start;岩浆喷-Target-Grid-Happen,弓,Distance,FALSE,0,0"
   splits:
   - split: 3

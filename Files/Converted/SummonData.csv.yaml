@@ -58,7 +58,7 @@
   splits:
   - split: 1
     text: "分舵"
-    translated: "Sub‑branch office"
+    translated: "Sub-branch office"
 - raw: "7,战鼓,2,200,1,0,8,SpeEffect/士气上升,TRUE"
   splits:
   - split: 1

@@ -62,8 +62,8 @@
   splits:
   - split: 2
     text: "四肢瘦弱，躯干短小的畜类，速度缓慢但刻苦耐劳"
-    translated: "Thin‑limbed and short‑bodied livestock, slow but hardworking and enduring"
-    qcReviewedText: "Thin‑limbed and short‑bodied livestock, slow but hardworking and enduring"
+    translated: "Thin-limbed and short-bodied livestock, slow but hardworking and enduring"
+    qcReviewedText: "Thin-limbed and short-bodied livestock, slow but hardworking and enduring"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -89,8 +89,8 @@
   splits:
   - split: 2
     text: "品质拙劣且难以驾驭的马匹，往往是马贩子的淘汰品"
-    translated: "Poor and difficult‑to‑handle horses are often discarded by horse dealers."
-    qcReviewedText: "Poor and difficult‑to‑handle horses are often discarded by horse dealers."
+    translated: "Poor and difficult-to-handle horses are often discarded by horse dealers."
+    qcReviewedText: "Poor and difficult-to-handle horses are often discarded by horse dealers."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -125,8 +125,8 @@
   splits:
   - split: 2
     text: "体质强健的高头大马，武林人士常用"
-    translated: "A sturdy, well‑built horse with strong constitution, often used by Wulin figures."
-    qcReviewedText: "A sturdy, well‑built horse with strong constitution, often used by Wulin figures."
+    translated: "A sturdy, well-built horse with strong constitution, often used by Wulin figures."
+    qcReviewedText: "A sturdy, well-built horse with strong constitution, often used by Wulin figures."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -215,8 +215,8 @@
   splits:
   - split: 2
     text: "以哈萨克马为基础杂交而成，体格高大，身形匀称，且禀性灵敏"
-    translated: "Based on the Kazakh horse, this breed is tall and well‑proportioned, with a keen disposition."
-    qcReviewedText: "Based on the Kazakh horse, this breed is tall and well‑proportioned, with a keen disposition."
+    translated: "Based on the Kazakh horse, this breed is tall and well-proportioned, with a keen disposition."
+    qcReviewedText: "Based on the Kazakh horse, this breed is tall and well-proportioned, with a keen disposition."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -264,8 +264,8 @@
   splits:
   - split: 2
     text: "青黄色的骏马，传说其先祖曾为周穆王驾车驱使"
-    translated: "A fine steed of greenish‑yellow hue, said to have ancestors who once drove for King Mu of Zhou."
-    qcReviewedText: "A fine steed of greenish‑yellow hue, said to have ancestors who once drove for King Mu of Zhou."
+    translated: "A fine steed of greenish-yellow hue, said to have ancestors who once drove for King Mu of Zhou."
+    qcReviewedText: "A fine steed of greenish-yellow hue, said to have ancestors who once drove for King Mu of Zhou."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -294,8 +294,8 @@
   splits:
   - split: 2
     text: "黄中带红的骏马，其祖先亦是为周穆王驾车的八骏之一"
-    translated: "A horse of red‑golden hue, among its ancestors are also one of the eight fine steeds that drew Zhou Muwang's carriage."
-    qcReviewedText: "A horse of red‑golden hue, among its ancestors are also one of the eight fine steeds that drew Zhou Muwang's carriage."
+    translated: "A horse of red-golden hue, among its ancestors are also one of the eight fine steeds that drew Zhou Muwang's carriage."
+    qcReviewedText: "A horse of red-golden hue, among its ancestors are also one of the eight fine steeds that drew Zhou Muwang's carriage."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -378,8 +378,8 @@
   splits:
   - split: 2
     text: "黄皮黑嘴，身布连环旋毛，世人多以为丑，然而其矫健善走，蹄大快程，不可以貌取之"
-    translated: "Yellow‑skinned with a black beak, its body covered in ringed spiral hairs. Many regard it as ugly, but it is agile and swift, with large hooves that make it quick on its feet‑cannot judge by appearance alone."
-    qcReviewedText: "Yellow‑skinned with a black beak, its body covered in ringed spiral hairs. Many regard it as ugly, but it is agile and swift, with large hooves that make it quick on its feet‑cannot judge by appearance alone."
+    translated: "Yellow-skinned with a black beak, its body covered in ringed spiral hairs. Many regard it as ugly, but it is agile and swift, with large hooves that make it quick on its feet-cannot judge by appearance alone."
+    qcReviewedText: "Yellow-skinned with a black beak, its body covered in ringed spiral hairs. Many regard it as ugly, but it is agile and swift, with large hooves that make it quick on its feet-cannot judge by appearance alone."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -414,8 +414,8 @@
   splits:
   - split: 2
     text: "遍体雪白的骏马，在夜间疾驰时化作一道白练，所过之处好似被照亮一般"
-    translated: "A steed entirely snow‑white gallops through the night, becoming a white streak of light. Everywhere it passes seems illuminated."
-    qcReviewedText: "A steed entirely snow‑white gallops through the night, becoming a white streak of light. Everywhere it passes seems illuminated."
+    translated: "A steed entirely snow-white gallops through the night, becoming a white streak of light. Everywhere it passes seems illuminated."
+    qcReviewedText: "A steed entirely snow-white gallops through the night, becoming a white streak of light. Everywhere it passes seems illuminated."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -432,8 +432,8 @@
   splits:
   - split: 2
     text: "遍体火红，体型庞大之骏马，冲锋时势大力猛，如烈火燎原，堪称马中王者"
-    translated: "A large, fiery‑red horse that charges with immense force, like a prairie fire, truly reigning as the king of horses."
-    qcReviewedText: "A large, fiery‑red horse that charges with immense force, like a prairie fire, truly reigning as the king of horses."
+    translated: "A large, fiery-red horse that charges with immense force, like a prairie fire, truly reigning as the king of horses."
+    qcReviewedText: "A large, fiery-red horse that charges with immense force, like a prairie fire, truly reigning as the king of horses."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -459,9 +459,9 @@
   splits:
   - split: 2
     text: "应策腾空，承声半汉，入险摧敌，乘危济难，其先祖乃突厥名马，作为贡品随唐太宗征战多年"
-    translated: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties‑his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
-    qcReviewedText: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties‑his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
-    qcTranslated: "Soaring skyward with strategy, echoing the heavens' call, plunging into peril to crush foes, riding danger to rescue from crisis‑his ancestors were famed horses of the Turkic people, offered as tribute and accompanying Emperor Taizong of Tang in battle for many years."
+    translated: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties-his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
+    qcReviewedText: "Leaping into the air with strategy, carrying the voice half in Chinese, entering danger to crush enemies, seizing opportunities to overcome difficulties-his ancestors were renowned horses of the Turkic people, serving as gifts and accompanying Emperor Taizong of Tang on many battles for years."
+    qcTranslated: "Soaring skyward with strategy, echoing the heavens' call, plunging into peril to crush foes, riding danger to rescue from crisis-his ancestors were famed horses of the Turkic people, offered as tribute and accompanying Emperor Taizong of Tang in battle for many years."
     qcStatus: Corrected
     qcQualityScore: 82
     qcDefectCategory: LostIdiom

@@ -11,7 +11,7 @@
     translated: "Icon"
   - split: 4
     text: "占领门派（-99表示自动）"
-    translated: "Conquer Sect (‑99 indicates auto)"
+    translated: "Conquer Sect (-99 indicates auto)"
   - split: 5
     text: "临近地点"
     translated: "Neighboring location"

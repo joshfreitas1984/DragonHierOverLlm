@@ -30,9 +30,9 @@
 - raw: "“友善”可以进行赠礼，治疗，交易，索取等交互。\\n其中“赠礼”是提升好感最快的方式，如果能够投其所好，更可以事半功倍。"
   splits:
   - text: "“友善”可以进行赠礼，治疗，交易，索取等交互。"
-    translated: "Amiable can be used for gift‑giving, healing, trading, and demanding."
-    qcReviewedText: "Amiable can be used for gift‑giving, healing, trading, and demanding.\\nThe gift method is the quickest way to increase affection. If you can offer what they desire, it can be even more effective, achieving twice the result with half the effort."
-    qcTranslated: "Amiable can be used for gift‑giving, healing, trading, and demanding.\\nThe gift method is the quickest way to increase affection. If you can offer what they desire, it can be even more effective, achieving Half the effort for double the result."
+    translated: "Amiable can be used for gift-giving, healing, trading, and demanding."
+    qcReviewedText: "Amiable can be used for gift-giving, healing, trading, and demanding.\\nThe gift method is the quickest way to increase affection. If you can offer what they desire, it can be even more effective, achieving twice the result with half the effort."
+    qcTranslated: "Amiable can be used for gift-giving, healing, trading, and demanding.\\nThe gift method is the quickest way to increase affection. If you can offer what they desire, it can be even more effective, achieving Half the effort for double the result."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -109,13 +109,13 @@
   splits:
   - text: "#$PlayerName#也只能放弃了一切希望，"
     translated: "#$PlayerName# had to abandon all hope as well."
-    qcReviewedText: "#$PlayerName# had to abandon all hope as well.\\nWaiting in the pitch‑black dungeon for a lonely death..."
+    qcReviewedText: "#$PlayerName# had to abandon all hope as well.\\nWaiting in the pitch-black dungeon for a lonely death..."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "在暗无天日的大牢中等待孤独的死亡......"
-    translated: "Waiting in the pitch‑black dungeon for a lonely death..."
+    translated: "Waiting in the pitch-black dungeon for a lonely death..."
   templates:
   - template: "{0}\\n{1}"
 - raw: "#$PlayerName#凭借着此番功业，在江湖史册中留下了浓墨重彩的一笔。"
@@ -568,8 +568,8 @@
 - raw: "#PlayerName#虽一片好心，但我们二人此前积怨颇深。\\n况且此人屡屡冒犯，出言不逊，岂能就这么轻易作罢？"
   splits:
   - text: "#PlayerName#虽一片好心，但我们二人此前积怨颇深。"
-    translated: "#PlayerName# had good intentions, but we have a deep‑seated grudge between us."
-    qcReviewedText: "#PlayerName# had good intentions, but we have a deep‑seated grudge between us.\\nMoreover, this person has repeatedly offended and spoken impudently. How can we just let it go so easily?"
+    translated: "#PlayerName# had good intentions, but we have a deep-seated grudge between us."
+    qcReviewedText: "#PlayerName# had good intentions, but we have a deep-seated grudge between us.\\nMoreover, this person has repeatedly offended and spoken impudently. How can we just let it go so easily?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -581,8 +581,8 @@
 - raw: "#PlayerName#虽一片好心，但我们二人此前积怨颇深。\\n要说就此握手言和，我实在咽不下这口恶气！"
   splits:
   - text: "#PlayerName#虽一片好心，但我们二人此前积怨颇深。"
-    translated: "#PlayerName# had good intentions, but we have a deep‑seated grudge between us."
-    qcReviewedText: "#PlayerName# had good intentions, but we have a deep‑seated grudge between us.\\nTo shake hands and call it quits really makes me choke on my bitterness!"
+    translated: "#PlayerName# had good intentions, but we have a deep-seated grudge between us."
+    qcReviewedText: "#PlayerName# had good intentions, but we have a deep-seated grudge between us.\\nTo shake hands and call it quits really makes me choke on my bitterness!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -693,13 +693,13 @@
   splits:
   - text: "#SourceInteractName#与我一见如故，颇为投缘。"
     translated: "#SourceInteractName# hit it off with me immediately and we got along very well."
-    qcReviewedText: "#SourceInteractName# hit it off with me immediately and we got along very well.\\nToday, I'll teach you this #PlotInteractSkillName#. In the future, you can use it when traveling through the Jianghu for self‑defense and emergencies."
+    qcReviewedText: "#SourceInteractName# hit it off with me immediately and we got along very well.\\nToday, I'll teach you this #PlotInteractSkillName#. In the future, you can use it when traveling through the Jianghu for self-defense and emergencies."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "今天我就传你这门#PlotInteractSkillName#，日后行走江湖也好作防身应急之用。"
-    translated: "Today, I'll teach you this #PlotInteractSkillName#. In the future, you can use it when traveling through the Jianghu for self‑defense and emergencies."
+    translated: "Today, I'll teach you this #PlotInteractSkillName#. In the future, you can use it when traveling through the Jianghu for self-defense and emergencies."
   templates:
   - template: "{0}\\n{1}"
 - raw: "#SourceInteractName#几日不见，甚是想念！今天我特地忙里偷闲，前来拜访。"
@@ -911,8 +911,8 @@
 - raw: "#TargetInteractName#真是死要面子活受罪啊......\\n你最近还是好好休息养伤，消停几日吧！"
   splits:
   - text: "#TargetInteractName#真是死要面子活受罪啊......"
-    translated: "#TargetInteractName# really is stubborn about face‑saving..."
-    qcReviewedText: "#TargetInteractName# really is stubborn about face‑saving...\\nYou should rest and recover for a few days. Be quiet and let yourself heal!"
+    translated: "#TargetInteractName# really is stubborn about face-saving..."
+    qcReviewedText: "#TargetInteractName# really is stubborn about face-saving...\\nYou should rest and recover for a few days. Be quiet and let yourself heal!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1236,7 +1236,7 @@
   splits:
   - text: "与对方进行切磋比试"
     translated: "Spar with the opponent"
-    qcReviewedText: "♦Spar with the opponent\\n♦Win +2 favor, lose ‑2 favor+1"
+    qcReviewedText: "♦Spar with the opponent\\n♦Win +2 favor, lose -2 favor+1"
     qcTranslated: "♦Spar with the opponent\\n♦Win +2 favor, lose 2 favor"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -1245,7 +1245,7 @@
     - GarbledNumber
   - subIndex: 1
     text: "获胜好感+2，落败好感"
-    translated: "Win +2 favor, lose ‑2 favor"
+    translated: "Win +2 favor, lose -2 favor"
   templates:
   - template: "♦{0}\\n♦{1}+1"
 - raw: "♦传授对方一门武功，品级不能超过对方身份等级\\n♦结义/结缘后方能传授绝世武功\\n♦根据武功品级提升好感"
@@ -1605,9 +1605,9 @@
 - raw: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
   splits:
   - text: "7月初7传说是牛郎织女鹊桥相会之日，因此也是探访心仪之人的浪漫节日。各大城镇也会举办穿针乞巧，拜祭织女等活动以示庆祝。"
-    translated: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as the Thread‑Piercing Festival and worship ceremonies to honor the Weaver Girl in celebration."
-    qcReviewedText: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as the Thread‑Piercing Festival and worship ceremonies to honor the Weaver Girl in celebration."
-    qcTranslated: "7 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as thread‑piercing and worshipping the Weaver Girl in celebration."
+    translated: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as the Thread-Piercing Festival and worship ceremonies to honor the Weaver Girl in celebration."
+    qcReviewedText: "7 April 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as the Thread-Piercing Festival and worship ceremonies to honor the Weaver Girl in celebration."
+    qcTranslated: "7 7 is traditionally said to be the day when the Cowherd and Weaver Girl meet on the Magpie Bridge, making it also a romantic festival to visit one's beloved. Major towns hold events such as thread-piercing and worshipping the Weaver Girl in celebration."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
@@ -1953,8 +1953,8 @@
   splits:
   - text: "#PlayerName#，我想到个办法，兴许可以治好顾游年师兄断绝的经脉。"
     translated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian."
-    qcReviewedText: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite‑grade treasures</b>, Still please bring it <b>Flying Dragon Gate </b>Borrow from Senior Sis!"
-    qcTranslated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite‑grade treasures</b>, please bring them to <b>Flying Dragon Gate</b> for Senior Sister to borrow!"
+    qcReviewedText: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite-grade treasures</b>, Still please bring it <b>Flying Dragon Gate </b>Borrow from Senior Sis!"
+    qcTranslated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite-grade treasures</b>, please bring them to <b>Flying Dragon Gate</b> for Senior Sister to borrow!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -1966,7 +1966,7 @@
     translated: "If you have access to"
   - subIndex: 2
     text: "精良级以上珍宝"
-    translated: "Exquisite‑grade treasures"
+    translated: "Exquisite-grade treasures"
   - subIndex: 3
     text: "，还请带来"
     translated: ", Still please bring it"
@@ -2328,8 +2328,8 @@
   splits:
   - text: "#PlayerName#，逐鹿盟将于阎罗殿总舵召开大会，传闻恶贼计心狂也于附近现身，不知又在策划什么阴谋诡计。"
     translated: "#PlayerName#, the Swallow Coalition will hold a grand assembly in Yama Hall's main den. Rumor has it that the villainous villain Ji Xinkuang has also appeared nearby. Who knows what sinister plots he might be hatching."
-    qcReviewedText: "#PlayerName#, the Swallow Coalition will hold a grand assembly in Yama Hall's main den. Rumor has it that the villainous villain Ji Xinkuang has also appeared nearby. Who knows what sinister plots he might be hatching.\\nYou, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come.<b>Yama Hall</b>, Help me take down this thief!"
-    qcTranslated: "#PlayerName#, the Swallow Coalition will hold a grand assembly in Yama Hall's main den. Rumor has it that the villainous villain Ji Xinkuang has also appeared nearby. Who knows what sinister plots he might be hatching.\\nYou, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come to <b>Yama Hall</b> to help me take down this thief!"
+    qcReviewedText: "#PlayerName#, the Swallow Coalition will hold a grand assembly in Yama Hall's main den. Rumor has it that the villainous villain Ji Xinkuang has also appeared nearby. Who knows what sinister plots he might be hatching.\\nYou, I, and Ji Xinkuang all share a deep-seated grudge, so I hope you can come.<b>Yama Hall</b>, Help me take down this thief!"
+    qcTranslated: "#PlayerName#, the Swallow Coalition will hold a grand assembly in Yama Hall's main den. Rumor has it that the villainous villain Ji Xinkuang has also appeared nearby. Who knows what sinister plots he might be hatching.\\nYou, I, and Ji Xinkuang all share a deep-seated grudge, so I hope you can come to <b>Yama Hall</b> to help me take down this thief!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -2337,7 +2337,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "你我与计心狂皆有血海深仇，还望你能来"
-    translated: "You, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come."
+    translated: "You, I, and Ji Xinkuang all share a deep-seated grudge, so I hope you can come."
   - subIndex: 2
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -3019,9 +3019,9 @@
 - raw: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。\\n还望你尽快来<b>飞龙门</b>，一同寻找姜婉姑娘的下落！"
   splits:
   - text: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。"
-    translated: "#PlayerName#, indeed one crisis after another! The sudden disappearance of Miss Jiang Wan, who was always well‑protected, is very likely the work of Zhao Polu's inner circle within Flying Dragon Gate."
-    qcReviewedText: "#PlayerName#, indeed one crisis after another! The sudden disappearance of Miss Jiang Wan, who was always well‑protected, is very likely the work of Zhao Polu's inner circle within Flying Dragon Gate.\\nI hope you will come as soon as possible.<b>Flying Dragon Gate</b>, Together, let's find out the whereabouts of Miss Jiang Wan!"
-    qcTranslated: "#PlayerName#, indeed one crisis after another! The sudden disappearance of Miss Jiang Wan, who was always well‑protected, is very likely the work of Zhao Polu's inner circle within Flying Dragon Gate.\\nI hope you will come to <b>Flying Dragon Gate</b> as soon as possible to help find out the whereabouts of Miss Jiang Wan!"
+    translated: "#PlayerName#, indeed one crisis after another! The sudden disappearance of Miss Jiang Wan, who was always well-protected, is very likely the work of Zhao Polu's inner circle within Flying Dragon Gate."
+    qcReviewedText: "#PlayerName#, indeed one crisis after another! The sudden disappearance of Miss Jiang Wan, who was always well-protected, is very likely the work of Zhao Polu's inner circle within Flying Dragon Gate.\\nI hope you will come as soon as possible.<b>Flying Dragon Gate</b>, Together, let's find out the whereabouts of Miss Jiang Wan!"
+    qcTranslated: "#PlayerName#, indeed one crisis after another! The sudden disappearance of Miss Jiang Wan, who was always well-protected, is very likely the work of Zhao Polu's inner circle within Flying Dragon Gate.\\nI hope you will come to <b>Flying Dragon Gate</b> as soon as possible to help find out the whereabouts of Miss Jiang Wan!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -3540,8 +3540,8 @@
   splits:
   - text: "我方联军在"
     translated: "Our allied forces are"
-    qcReviewedText: "Our allied forces are <b>In Leshan Town </b>Ready and well‑rested, we are set to depart for Dali soon, to plan our next move.\\nI hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
-    qcTranslated: "Our allied forces are <b>in Leshan Town</b> ready and well‑rested, we are set to depart for Dali soon, to plan our next move.\\nI hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
+    qcReviewedText: "Our allied forces are <b>In Leshan Town </b>Ready and well-rested, we are set to depart for Dali soon, to plan our next move.\\nI hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
+    qcTranslated: "Our allied forces are <b>in Leshan Town</b> ready and well-rested, we are set to depart for Dali soon, to plan our next move.\\nI hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -3552,7 +3552,7 @@
     translated: "In Leshan Town"
   - subIndex: 2
     text: "已休整完毕，准备不日启程撤回大理，再图后计。"
-    translated: "Ready and well‑rested, we are set to depart for Dali soon, to plan our next move."
+    translated: "Ready and well-rested, we are set to depart for Dali soon, to plan our next move."
   - subIndex: 3
     text: "还望#PlayerName#率#PlayerForceName#精锐前来援护，事成之后，自当重谢！"
     translated: "I hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
@@ -3728,8 +3728,8 @@
   splits:
   - text: "#PlayerName#，我们在"
     translated: "#PlayerName#, we are"
-    qcReviewedText: "#PlayerName#, we are <b>Northern Dangtu Town </b>Following this lead, we found the Silver‑Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
-    qcTranslated: "#PlayerName#, we found the Silver‑Faced Bandit's whereabouts <b>north of Dangtu Town</b>. I hope you can come quickly to intercept him with us. We must clarify his identity!"
+    qcReviewedText: "#PlayerName#, we are <b>Northern Dangtu Town </b>Following this lead, we found the Silver-Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
+    qcTranslated: "#PlayerName#, we found the Silver-Faced Bandit's whereabouts <b>north of Dangtu Town</b>. I hope you can come quickly to intercept him with us. We must clarify his identity!"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -3741,7 +3741,7 @@
     translated: "Northern Dangtu Town"
   - subIndex: 2
     text: "一带，寻得了那笑面虎的踪迹。还望你尽快前来一同堵截此人，定要将他的身份弄个清楚！"
-    translated: "Following this lead, we found the Silver‑Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
+    translated: "Following this lead, we found the Silver-Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我爹在<b>清远乡西方</b>眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
@@ -4001,8 +4001,8 @@
   splits:
   - text: "第三次泰岳大典"
     translated: "The Third Mount Tai Grand Assembly"
-    qcReviewedText: "#PlayerName#，<b>The Third Mount Tai Grand Assembly </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
-    qcTranslated: "#PlayerName#，<b>The Third Mount Tai Grand Assembly</b> will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcReviewedText: "#PlayerName#，<b>The Third Mount Tai Grand Assembly </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top-notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcTranslated: "#PlayerName#，<b>The Third Mount Tai Grand Assembly</b> will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top-notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -4013,7 +4013,7 @@
     translated: "It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down."
   - subIndex: 2
     text: "天下兴亡，武林安危皆在此一战，还望你多带些高手前来助阵，以免不测！"
-    translated: "The rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    translated: "The rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top-notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
   templates:
   - template: "#PlayerName#，<b>{0}</b>{1}\\n{2}"
 - raw: "#PlayerName#，我与犬子已将恶贼凤南飞堵在<b>灵台村</b>内，奈何此人还请了不少血衣盟高手压阵。望你多带些人手前来相助，以免此贼又逃脱法网！"
@@ -4058,9 +4058,9 @@
 - raw: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于<b>板桥镇</b>。\\n表面上为共商第三次泰岳大典事宜，实则是为告知金龙生就是血衣盟大统领之真相，并部署会上抓捕此人之计策。\\n还请你届时定要前来参加，并将此前调查之来龙去脉尽数道明。"
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
-    translated: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at"
-    qcReviewedText: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at <b>Banqiao Town</b>。\\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\\nI still hope you will come and share the full details of your previous investigation."
-    qcTranslated: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at <b>Banqiao Town</b>.\\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal the truth that Jin Longsheng is the Grand Commander of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\\nI still hope you will come and share the full details of your previous investigation."
+    translated: "#PlayerName#, I have invited the leaders of the four major sects-Shaolin, Wudang, Emei, and the Beggars' Sect-to convene at"
+    qcReviewedText: "#PlayerName#, I have invited the leaders of the four major sects-Shaolin, Wudang, Emei, and the Beggars' Sect-to convene at <b>Banqiao Town</b>。\\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\\nI still hope you will come and share the full details of your previous investigation."
+    qcTranslated: "#PlayerName#, I have invited the leaders of the four major sects-Shaolin, Wudang, Emei, and the Beggars' Sect-to convene at <b>Banqiao Town</b>.\\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal the truth that Jin Longsheng is the Grand Commander of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\\nI still hope you will come and share the full details of your previous investigation."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: MeaningReversal
@@ -4432,8 +4432,8 @@
 - raw: "一名趾高气昂，衣着华贵之人站在路旁，\\n似乎是某位富商的管家正在招募人手，不妨过去瞧瞧。"
   splits:
   - text: "一名趾高气昂，衣着华贵之人站在路旁，"
-    translated: "A haughty and well‑dressed individual stands by the roadside."
-    qcReviewedText: "A haughty and well‑dressed individual stands by the roadside.\\nIt seems the manager of a wealthy merchant is recruiting staff. We might as well go take a look."
+    translated: "A haughty and well-dressed individual stands by the roadside."
+    qcReviewedText: "A haughty and well-dressed individual stands by the roadside.\\nIt seems the manager of a wealthy merchant is recruiting staff. We might as well go take a look."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4453,8 +4453,8 @@
 - raw: "一处小巷中，你发现几名凶神恶煞的地痞围住了一名百姓。"
   splits:
   - text: "一处小巷中，你发现几名凶神恶煞的地痞围住了一名百姓。"
-    translated: "In a narrow alleyway, you find several tough‑looking ruffians surrounding a commoner."
-    qcReviewedText: "In a narrow alleyway, you find several tough‑looking ruffians surrounding a commoner."
+    translated: "In a narrow alleyway, you find several tough-looking ruffians surrounding a commoner."
+    qcReviewedText: "In a narrow alleyway, you find several tough-looking ruffians surrounding a commoner."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5012,8 +5012,8 @@
 - raw: "中元鬼市"
   splits:
   - text: "中元鬼市"
-    translated: "Mid‑Summer Ghost Market"
-    qcReviewedText: "Mid‑Summer Ghost Market"
+    translated: "Mid-Summer Ghost Market"
+    qcReviewedText: "Mid-Summer Ghost Market"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5044,16 +5044,16 @@
 - raw: "中秋"
   splits:
   - text: "中秋"
-    translated: "Mid‑Autumn Festival"
-    qcReviewedText: "Mid‑Autumn Festival"
+    translated: "Mid-Autumn Festival"
+    qcReviewedText: "Mid-Autumn Festival"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "中秋月圆之夜，举头望明月，低头思故乡，只可惜像我这种无家可归之人，却连故乡也无从所想。"
   splits:
   - text: "中秋月圆之夜，举头望明月，低头思故乡，只可惜像我这种无家可归之人，却连故乡也无从所想。"
-    translated: "On the Mid‑Autumn night of full moon, lifting my head to gaze at the bright moon, I bow my head in thought for my homeland. Sadly, as someone without a home, I can barely imagine what a homeland might be."
-    qcReviewedText: "On the Mid‑Autumn night of full moon, lifting my head to gaze at the bright moon, I bow my head in thought for my homeland. Sadly, as someone without a home, I can barely imagine what a homeland might be."
+    translated: "On the Mid-Autumn night of full moon, lifting my head to gaze at the bright moon, I bow my head in thought for my homeland. Sadly, as someone without a home, I can barely imagine what a homeland might be."
+    qcReviewedText: "On the Mid-Autumn night of full moon, lifting my head to gaze at the bright moon, I bow my head in thought for my homeland. Sadly, as someone without a home, I can barely imagine what a homeland might be."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5240,16 +5240,16 @@
 - raw: "为师妹林云裳寻找一件优质级别的食材"
   splits:
   - text: "为师妹林云裳寻找一件优质级别的食材"
-    translated: "To find a high‑quality ingredient for junior sister Lin Yunshang."
-    qcReviewedText: "To find a high‑quality ingredient for junior sister Lin Yunshang."
+    translated: "To find a high-quality ingredient for junior sister Lin Yunshang."
+    qcReviewedText: "To find a high-quality ingredient for junior sister Lin Yunshang."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "为师妹林云裳寻找一件普通级别的食材"
   splits:
   - text: "为师妹林云裳寻找一件普通级别的食材"
-    translated: "To find a regular‑level ingredient for junior sister Lin Yunshang."
-    qcReviewedText: "To find a regular‑level ingredient for junior sister Lin Yunshang."
+    translated: "To find a regular-level ingredient for junior sister Lin Yunshang."
+    qcReviewedText: "To find a regular-level ingredient for junior sister Lin Yunshang."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5257,8 +5257,8 @@
   splits:
   - text: "为庆祝上古神兵修复成功，"
     translated: "To celebrate the successful restoration of the ancient divine weapons,"
-    qcReviewedText: "To celebrate the successful restoration of the ancient divine weapons,<b>Swordforging Manor </b>A famous sword conference is about to take place.\\nAt the event, there will be a auction of high‑quality equipment, drawing many heroes eager to see and bid."
-    qcTranslated: "To celebrate the successful restoration of the ancient divine weapons, <b>Swordforging Manor</b> is about to hold a famous sword conference.\\nAt the event, there will be an auction of high‑quality equipment, drawing many heroes eager to see and bid."
+    qcReviewedText: "To celebrate the successful restoration of the ancient divine weapons,<b>Swordforging Manor </b>A famous sword conference is about to take place.\\nAt the event, there will be a auction of high-quality equipment, drawing many heroes eager to see and bid."
+    qcTranslated: "To celebrate the successful restoration of the ancient divine weapons, <b>Swordforging Manor</b> is about to hold a famous sword conference.\\nAt the event, there will be an auction of high-quality equipment, drawing many heroes eager to see and bid."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -5273,7 +5273,7 @@
     translated: "A famous sword conference is about to take place."
   - subIndex: 3
     text: "届时会上将拍卖大量精良装备，各路英豪纷纷前往欲一睹为快。"
-    translated: "At the event, there will be a auction of high‑quality equipment, drawing many heroes eager to see and bid."
+    translated: "At the event, there will be a auction of high-quality equipment, drawing many heroes eager to see and bid."
   templates:
   - template: "{0}<b>{1}</b>{2}\\n{3}"
 - raw: "为应对仙霞派之快速崛起，唐门内部近来异动频频，似乎有大事谋划。"
@@ -5307,32 +5307,32 @@
 - raw: "为祖心炎寻找一件精良级别的装备"
   splits:
   - text: "为祖心炎寻找一件精良级别的装备"
-    translated: "Find a fine‑quality equipment for Zu Xinyan"
-    qcReviewedText: "Find a fine‑quality equipment for Zu Xinyan"
+    translated: "Find a fine-quality equipment for Zu Xinyan"
+    qcReviewedText: "Find a fine-quality equipment for Zu Xinyan"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "为药王谷主皇甫青衫寻找一件优质级别的药引"
   splits:
   - text: "为药王谷主皇甫青衫寻找一件优质级别的药引"
-    translated: "To find a high‑quality medicinal guide for Medicine King Valley's master Huangfu Qingshan."
-    qcReviewedText: "To find a high‑quality medicinal guide for Medicine King Valley's master Huangfu Qingshan."
+    translated: "To find a high-quality medicinal guide for Medicine King Valley's master Huangfu Qingshan."
+    qcReviewedText: "To find a high-quality medicinal guide for Medicine King Valley's master Huangfu Qingshan."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "为药王谷主皇甫青衫寻找一件完美级别的药引"
   splits:
   - text: "为药王谷主皇甫青衫寻找一件完美级别的药引"
-    translated: "To find a perfect‑grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
-    qcReviewedText: "To find a perfect‑grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
+    translated: "To find a perfect-grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
+    qcReviewedText: "To find a perfect-grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "为药王谷主皇甫青衫寻找一件精良级别的药引"
   splits:
   - text: "为药王谷主皇甫青衫寻找一件精良级别的药引"
-    translated: "To find an excellent‑grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
-    qcReviewedText: "To find an excellent‑grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
+    translated: "To find an excellent-grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
+    qcReviewedText: "To find an excellent-grade medicinal guide for Medicine King Valley's Lord Huangfu Qingshan."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5704,9 +5704,9 @@
 - raw: "主管门派赏罚法度事宜\\n\\n提升任职者#EffectSkill#经验#ForceJobExpRate#\\n同时根据任职者<b>#EffectSkill#技能</b>提升全门派<b>#EffectForceSpeAdd#</b>"
   splits:
   - text: "主管门派赏罚法度事宜"
-    translated: "Sect discipline and reward‑punishment matters"
-    qcReviewedText: "Sect discipline and reward‑punishment matters \\n\\nIncrease the experience rate for the job holder #EffectSkill# #ForceJobExpRate#\\nWhile holding the document, they glanced at the name, Li Ming, and then continued reading.<b>#EffectSkill# Skill </b>Boost All Sects<b>#EffectForceSpeAdd#</b>"
-    qcTranslated: "Sect discipline and reward‑punishment matters \\n\\nIncrease the experience rate for the job holder #EffectSkill# #ForceJobExpRate#\\nSimultaneously, based on the job holder's <b>#EffectSkill# Skill</b>, boost all Sects' <b>#EffectForceSpeAdd#</b>"
+    translated: "Sect discipline and reward-punishment matters"
+    qcReviewedText: "Sect discipline and reward-punishment matters \\n\\nIncrease the experience rate for the job holder #EffectSkill# #ForceJobExpRate#\\nWhile holding the document, they glanced at the name, Li Ming, and then continued reading.<b>#EffectSkill# Skill </b>Boost All Sects<b>#EffectForceSpeAdd#</b>"
+    qcTranslated: "Sect discipline and reward-punishment matters \\n\\nIncrease the experience rate for the job holder #EffectSkill# #ForceJobExpRate#\\nSimultaneously, based on the job holder's <b>#EffectSkill# Skill</b>, boost all Sects' <b>#EffectForceSpeAdd#</b>"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -6580,8 +6580,8 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
-    qcReviewedText: "Rumor<b>#PosText#</b>An exceptionally rare thousand‑mile ju is present, and the Wulin colleagues have decided to hold a horse racing festival to determine the final ownership of this magnificent steed."
-    qcTranslated: "Rumor has it that <b>#PosText#</b> is home to an exceptionally rare thousand‑mile steed, and the Wulin colleagues have decided to hold a horse racing festival to determine the final ownership of this magnificent horse."
+    qcReviewedText: "Rumor<b>#PosText#</b>An exceptionally rare thousand-mile ju is present, and the Wulin colleagues have decided to hold a horse racing festival to determine the final ownership of this magnificent steed."
+    qcTranslated: "Rumor has it that <b>#PosText#</b> is home to an exceptionally rare thousand-mile steed, and the Wulin colleagues have decided to hold a horse racing festival to determine the final ownership of this magnificent horse."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -6590,7 +6590,7 @@
     - UntranslatedPinyin
   - subIndex: 1
     text: "出现了一匹世所罕见的千里名驹，武林同道决定举办一场赛马大会来决定此马的最终归属。"
-    translated: "An exceptionally rare thousand‑mile ju is present, and the Wulin colleagues have decided to hold a horse racing festival to determine the final ownership of this magnificent steed."
+    translated: "An exceptionally rare thousand-mile ju is present, and the Wulin colleagues have decided to hold a horse racing festival to determine the final ownership of this magnificent steed."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>发生了一起璞玉劫案，御史张峻正在着手调查此事。"
@@ -6645,8 +6645,8 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
-    qcReviewedText: "Rumor<b>#PosText#</b>A young woman roams the city streets, performing various arts and tricks, particularly the astonishing act of chest‑breaking a large stone."
-    qcTranslated: "Rumor has it that within <b>#PosText#</b> city, a young girl roams the streets and alleys, performing her arts in various places, with her chest‑breaking large stone act being particularly spectacular."
+    qcReviewedText: "Rumor<b>#PosText#</b>A young woman roams the city streets, performing various arts and tricks, particularly the astonishing act of chest-breaking a large stone."
+    qcTranslated: "Rumor has it that within <b>#PosText#</b> city, a young girl roams the streets and alleys, performing her arts in various places, with her chest-breaking large stone act being particularly spectacular."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: DroppedContent
@@ -6654,7 +6654,7 @@
     - DroppedContent
   - subIndex: 1
     text: "城内有一名小姑娘走街串巷，四处卖艺，表演的胸口碎大石颇为精彩。"
-    translated: "A young woman roams the city streets, performing various arts and tricks, particularly the astonishing act of chest‑breaking a large stone."
+    translated: "A young woman roams the city streets, performing various arts and tricks, particularly the astonishing act of chest-breaking a large stone."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>城内有一名小姑娘走街串巷，四处卖艺。"
@@ -6725,8 +6725,8 @@
   splits:
   - text: "传闻"
     translated: "Rumor"
-    qcReviewedText: "Rumor<b>#PosText#</b>There's a fraud pretending to be a world‑class master, causing widespread anger by cheating everywhere."
-    qcTranslated: "Rumor has it that <b>#PosText#</b> there's a fraud pretending to be a world‑class master, causing widespread anger by cheating everywhere."
+    qcReviewedText: "Rumor<b>#PosText#</b>There's a fraud pretending to be a world-class master, causing widespread anger by cheating everywhere."
+    qcTranslated: "Rumor has it that <b>#PosText#</b> there's a fraud pretending to be a world-class master, causing widespread anger by cheating everywhere."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -6734,15 +6734,15 @@
     - HardToParseSeam
   - subIndex: 1
     text: "有个骗子假装绝世高手，四处招摇撞骗，引起了当地众怒。"
-    translated: "There's a fraud pretending to be a world‑class master, causing widespread anger by cheating everywhere."
+    translated: "There's a fraud pretending to be a world-class master, causing widespread anger by cheating everywhere."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>有个骗子假装绝世高手，四处招摇撞骗，被受害者堵在城中暴打一顿。"
   splits:
   - text: "传闻"
     translated: "Rumor"
-    qcReviewedText: "Rumor<b>#PosText#</b>There was a fraud pretending to be a world‑class master, wandering around to cheat people, and was beaten up by the victims in the city."
-    qcTranslated: "Rumor has it that <b>#PosText#</b> a fraud pretended to be a world‑class master, wandering around to cheat people, and was beaten up by the victims in the city."
+    qcReviewedText: "Rumor<b>#PosText#</b>There was a fraud pretending to be a world-class master, wandering around to cheat people, and was beaten up by the victims in the city."
+    qcTranslated: "Rumor has it that <b>#PosText#</b> a fraud pretended to be a world-class master, wandering around to cheat people, and was beaten up by the victims in the city."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -6750,7 +6750,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "有个骗子假装绝世高手，四处招摇撞骗，被受害者堵在城中暴打一顿。"
-    translated: "There was a fraud pretending to be a world‑class master, wandering around to cheat people, and was beaten up by the victims in the city."
+    translated: "There was a fraud pretending to be a world-class master, wandering around to cheat people, and was beaten up by the victims in the city."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻<b>#PosText#</b>有名女子行侠仗义，赢得了不少名声。"
@@ -7218,8 +7218,8 @@
   splits:
   - text: "传闻唐门与青城派在"
     translated: "Rumors suggest that the Tang Clan and Qingcheng Sect are"
-    qcReviewedText: "Rumors suggest that the Tang Clan and Qingcheng Sect are<b>#PosText#</b>A large‑scale manhunt for the fugitives Wang Tianyi and Yue Wuwei is underway; they must be hiding somewhere in this area."
-    qcTranslated: "Rumors suggest that the Tang Clan and Qingcheng Sect are<b>#PosText#</b> conducting a large‑scale manhunt for the fugitives Wang Tianyi and Yue Wuwei; they must be hiding somewhere in this area."
+    qcReviewedText: "Rumors suggest that the Tang Clan and Qingcheng Sect are<b>#PosText#</b>A large-scale manhunt for the fugitives Wang Tianyi and Yue Wuwei is underway; they must be hiding somewhere in this area."
+    qcTranslated: "Rumors suggest that the Tang Clan and Qingcheng Sect are<b>#PosText#</b> conducting a large-scale manhunt for the fugitives Wang Tianyi and Yue Wuwei; they must be hiding somewhere in this area."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7227,7 +7227,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "大举搜捕逃犯王添翼与岳无畏，想必此二人在这一带躲藏。"
-    translated: "A large‑scale manhunt for the fugitives Wang Tianyi and Yue Wuwei is underway; they must be hiding somewhere in this area."
+    translated: "A large-scale manhunt for the fugitives Wang Tianyi and Yue Wuwei is underway; they must be hiding somewhere in this area."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻四大御史之一已亲临<b>#PosText#</b>城，准备对阻止疫病蔓延的几位少侠予以嘉奖。"
@@ -7330,8 +7330,8 @@
   splits:
   - text: "传闻在"
     translated: "Rumors say that"
-    qcReviewedText: "Rumors say that<b>#PosText#</b>One place is frequented by world‑renowned sages"
-    qcTranslated: "Rumors say that <b>#PosText#</b> is frequented by world‑renowned sages."
+    qcReviewedText: "Rumors say that<b>#PosText#</b>One place is frequented by world-renowned sages"
+    qcTranslated: "Rumors say that <b>#PosText#</b> is frequented by world-renowned sages."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7340,7 +7340,7 @@
     - DroppedContent
   - subIndex: 1
     text: "一带有绝世高人出没。"
-    translated: "One place is frequented by world‑renowned sages"
+    translated: "One place is frequented by world-renowned sages"
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻在<b>#PosText#</b>出现了一伙疯疯癫癫的邪道之人，似乎是身中某种奇毒所致。"
@@ -7647,7 +7647,7 @@
   splits:
   - text: "传闻梁山水寨在"
     translated: "Rumors say Liangshan Mashan is in"
-    qcReviewedText: "Rumors say Liangshan Mashan is in<b>#PosText#</b>Recruit soldiers and buy horses, widely attracting all green‑lin hao‑han from the land."
+    qcReviewedText: "Rumors say Liangshan Mashan is in<b>#PosText#</b>Recruit soldiers and buy horses, widely attracting all green-lin hao-han from the land."
     qcTranslated: "Rumors say Liangshan Mashan is recruiting soldiers and horses in<b>#PosText#</b>, widely attracting all heroes of the green forests from across the land."
     qcStatus: Corrected
     qcQualityScore: 92
@@ -7658,7 +7658,7 @@
     - LostIdiom
   - subIndex: 1
     text: "一带招兵买马，广募天下绿林好汉。"
-    translated: "Recruit soldiers and buy horses, widely attracting all green‑lin hao‑han from the land."
+    translated: "Recruit soldiers and buy horses, widely attracting all green-lin hao-han from the land."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "传闻此前在晋阳作案的盗墓贼流窜到了<b>#PosText#</b>一带，又犯下了几桩大案。"
@@ -7789,7 +7789,7 @@
   - text: "传闻武当副掌门张文馨和阎罗殿主武绝义一同出现在"
     translated: "It's rumored that Sect Leader Zhang Wenxin of Wudang and Yama Hall's Master Wu Jueyi appeared together."
     qcReviewedText: "It's rumored that Sect Leader Zhang Wenxin of Wudang and Yama Hall's Master Wu Jueyi appeared together.<b>Jinyang</b>, It seems you are looking for the Abbot of Longquan Temple; there is an important matter you wish to discuss."
-    qcTranslated: "It's rumored that Vice‑Sect Leader Zhang Wenxin of Wudang and Yama Hall's Master Wu Jueyi appeared together in <b>Jinyang</b>, seemingly looking for the Abbot of Longquan Temple to inquire about an important matter."
+    qcTranslated: "It's rumored that Vice-Sect Leader Zhang Wenxin of Wudang and Yama Hall's Master Wu Jueyi appeared together in <b>Jinyang</b>, seemingly looking for the Abbot of Longquan Temple to inquire about an important matter."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -7860,9 +7860,9 @@
 - raw: "传闻玉面判官殷雨霏一路追捕梁山大当家王伦，终于在<b>#PosText#</b>追上其残党。"
   splits:
   - text: "传闻玉面判官殷雨霏一路追捕梁山大当家王伦，终于在"
-    translated: "It is said that Jade‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to"
-    qcReviewedText: "It is said that Jade‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to<b>#PosText#</b>Catch up with its remnants"
-    qcTranslated: "It is said that Jade‑Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to <b>#PosText#</b>, where she finally caught up with his remnants."
+    translated: "It is said that Jade-Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to"
+    qcReviewedText: "It is said that Jade-Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to<b>#PosText#</b>Catch up with its remnants"
+    qcTranslated: "It is said that Jade-Faced Judge Yin Yufei pursued Wang Lun, the leader of Liangshan, all the way to <b>#PosText#</b>, where she finally caught up with his remnants."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7924,8 +7924,8 @@
   splits:
   - text: "传闻药王谷正副掌门突然一同现身"
     translated: "Rumor has it that the Medicine King Valley's Sect Leader and Deputy Sect Leader suddenly appeared together."
-    qcReviewedText: "Rumor has it that the Medicine King Valley's Sect Leader and Deputy Sect Leader suddenly appeared together.<b>Xianxia Sect</b>, It seems there must have been some earth‑shattering event here."
-    qcTranslated: "Rumor has it that the Medicine King Valley's Sect Leader and Deputy Sect Leader suddenly appeared together at <b>Xianxia Sect</b>. It seems there must have been some earth‑shattering event here."
+    qcReviewedText: "Rumor has it that the Medicine King Valley's Sect Leader and Deputy Sect Leader suddenly appeared together.<b>Xianxia Sect</b>, It seems there must have been some earth-shattering event here."
+    qcTranslated: "Rumor has it that the Medicine King Valley's Sect Leader and Deputy Sect Leader suddenly appeared together at <b>Xianxia Sect</b>. It seems there must have been some earth-shattering event here."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -7936,7 +7936,7 @@
     translated: "Xianxia Sect"
   - subIndex: 2
     text: "，看来此地必是有什么惊天大事发生。"
-    translated: ", It seems there must have been some earth‑shattering event here."
+    translated: ", It seems there must have been some earth-shattering event here."
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "传闻近日上官凤与麾下四大杀手一齐现身<b>#PosText#</b>，不知又在谋划什么大计。"
@@ -8448,8 +8448,8 @@
 - raw: "低等级的内功/轻功/绝技可在闭关室修炼，从而快速获取实战经验。\\n眼下不妨进入闭关室一试。"
   splits:
   - text: "低等级的内功"
-    translated: "Low‑level internal skill"
-    qcReviewedText: "Low‑level internal skill/Qinggong/Special Techniques can be practiced in the meditation chamber, thereby quickly gaining practical experience.\\nLet's try entering the seclusion room now"
+    translated: "Low-level internal skill"
+    qcReviewedText: "Low-level internal skill/Qinggong/Special Techniques can be practiced in the meditation chamber, thereby quickly gaining practical experience.\\nLet's try entering the seclusion room now"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -8666,8 +8666,8 @@
 - raw: "你可以向高好感度的角色索取物品。"
   splits:
   - text: "你可以向高好感度的角色索取物品。"
-    translated: "You can ask high‑reputation characters for items"
-    qcReviewedText: "You can ask high‑reputation characters for items"
+    translated: "You can ask high-reputation characters for items"
+    qcReviewedText: "You can ask high-reputation characters for items"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -8811,13 +8811,13 @@
   splits:
   - text: "你有所不知。我前日与一江湖人士争执不休，一时脑热与他相约以武论高下。"
     translated: "You don't know the full story. The day before yesterday, I had a heated argument with a Jianghu figure and impulsively agreed to settle it through martial skill."
-    qcReviewedText: "You don't know the full story. The day before yesterday, I had a heated argument with a Jianghu figure and impulsively agreed to settle it through martial skill.\\nSeeing that they have already attacked the monastery, I hope #SourceInteractName# will lend me a hand out of fellow‑disciple loyalty!"
+    qcReviewedText: "You don't know the full story. The day before yesterday, I had a heated argument with a Jianghu figure and impulsively agreed to settle it through martial skill.\\nSeeing that they have already attacked the monastery, I hope #SourceInteractName# will lend me a hand out of fellow-disciple loyalty!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "眼见人已经打上山门来了，还望#SourceInteractName#看在同门情谊份上，助我一臂之力！"
-    translated: "Seeing that they have already attacked the monastery, I hope #SourceInteractName# will lend me a hand out of fellow‑disciple loyalty!"
+    translated: "Seeing that they have already attacked the monastery, I hope #SourceInteractName# will lend me a hand out of fellow-disciple loyalty!"
   templates:
   - template: "{0}\\n{1}"
 - raw: "你来到闹事地点，\\n只见一群民众手持农具器械，群情激昂，气势汹汹将道路围堵了起来。\\n另外一边则站着数名官差，手持兵刃，严阵以待。"
@@ -9713,8 +9713,8 @@
 - raw: "刚踏进暗巷之中，便听得杀声震天，兵刃交鸣，\\n两帮人马已经摩拳擦掌，跃跃欲试，只等帮手到齐便要开打。"
   splits:
   - text: "刚踏进暗巷之中，便听得杀声震天，兵刃交鸣，"
-    translated: "As soon as I stepped into the dark alley, I heard the sky‑shaking cries of battle and clashing weapons."
-    qcReviewedText: "As soon as I stepped into the dark alley, I heard the sky‑shaking cries of battle and clashing weapons.\\nThe two groups were already itching to fight, eager to begin as soon as all their helpers were in place."
+    translated: "As soon as I stepped into the dark alley, I heard the sky-shaking cries of battle and clashing weapons."
+    qcReviewedText: "As soon as I stepped into the dark alley, I heard the sky-shaking cries of battle and clashing weapons.\\nThe two groups were already itching to fight, eager to begin as soon as all their helpers were in place."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10394,8 +10394,8 @@
 - raw: "勾魂符"
   splits:
   - text: "勾魂符"
-    translated: "Soul‑snaring charm"
-    qcReviewedText: "Soul‑snaring charm"
+    translated: "Soul-snaring charm"
+    qcReviewedText: "Soul-snaring charm"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10410,16 +10410,16 @@
 - raw: "千里名驹"
   splits:
   - text: "千里名驹"
-    translated: "Thousand‑Mile Steed"
-    qcReviewedText: "Thousand‑Mile Steed"
+    translated: "Thousand-Mile Steed"
+    qcReviewedText: "Thousand-Mile Steed"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "千里追缉"
   splits:
   - text: "千里追缉"
-    translated: "Thousand‑mile manhunt"
-    qcReviewedText: "Thousand‑mile manhunt"
+    translated: "Thousand-mile manhunt"
+    qcReviewedText: "Thousand-mile manhunt"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10958,8 +10958,8 @@
 - raw: "只见一名土匪模样的武林人士，拦住一位妙龄女子的去路，似乎正在劫道！"
   splits:
   - text: "只见一名土匪模样的武林人士，拦住一位妙龄女子的去路，似乎正在劫道！"
-    translated: "Only to see a bandit‑like Wulin figure blocking the way of a young woman, seemingly robbing her on the road!"
-    qcReviewedText: "Only to see a bandit‑like Wulin figure blocking the way of a young woman, seemingly robbing her on the road!"
+    translated: "Only to see a bandit-like Wulin figure blocking the way of a young woman, seemingly robbing her on the road!"
+    qcReviewedText: "Only to see a bandit-like Wulin figure blocking the way of a young woman, seemingly robbing her on the road!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10967,7 +10967,7 @@
   splits:
   - text: "只见沿街店铺中，顾客们推杯换盏，高谈阔论，好不热闹！"
     translated: "You can see customers at the shops along the street clinking cups and engaging in lively discussions, quite the bustling scene!"
-    qcReviewedText: "You can see customers at the shops along the street clinking cups and engaging in lively discussions, quite the bustling scene!\\nBut there was a table of Jianghu figures with serious expressions, speaking in hushed tones as if discussing some important matter.\\nYou can only faintly hear it, as if it's related to some little‑known fortune nearby."
+    qcReviewedText: "You can see customers at the shops along the street clinking cups and engaging in lively discussions, quite the bustling scene!\\nBut there was a table of Jianghu figures with serious expressions, speaking in hushed tones as if discussing some important matter.\\nYou can only faintly hear it, as if it's related to some little-known fortune nearby."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10976,7 +10976,7 @@
     translated: "But there was a table of Jianghu figures with serious expressions, speaking in hushed tones as if discussing some important matter."
   - subIndex: 2
     text: "只能隐约听见，好像与附近某桩罕为人知的奇遇有关。"
-    translated: "You can only faintly hear it, as if it's related to some little‑known fortune nearby."
+    translated: "You can only faintly hear it, as if it's related to some little-known fortune nearby."
   templates:
   - template: "{0}\\n{1}\\n{2}"
 - raw: "只需满足以下任一条件，便可进行操控\\n1.入队跟随你的侠士\\n2.地位不高于你的同门\\n3.好感在50以上者"
@@ -11563,8 +11563,8 @@
   splits:
   - text: "听说中原大侠郭淮将在"
     translated: "It's said that Great Hero Guo Huai of the Central Plains will be at"
-    qcReviewedText: "It's said that Great Hero Guo Huai of the Central Plains will be at<b>#PosText#</b>Reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades‑old mass murder case."
-    qcTranslated: "It's said that Great Hero Guo Huai of the Central Plains will be at <b>#PosText#</b> to reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades‑old mass murder case."
+    qcReviewedText: "It's said that Great Hero Guo Huai of the Central Plains will be at<b>#PosText#</b>Reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades-old mass murder case."
+    qcTranslated: "It's said that Great Hero Guo Huai of the Central Plains will be at <b>#PosText#</b> to reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades-old mass murder case."
     qcStatus: Corrected
     qcQualityScore: 90
     qcDefectCategory: HardToParseSeam
@@ -11573,7 +11573,7 @@
     - UnnaturalPhrasing
   - subIndex: 1
     text: "嘉奖抓捕曾镇海之侠士，同时继续追查多年前一桩灭门血案。"
-    translated: "Reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades‑old mass murder case."
+    translated: "Reward the Hero who captured Zeng Zhenhai, and continue to investigate the decades-old mass murder case."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "听说最近飞龙门诸葛掌门又要来<b>仙霞派</b>，准备兑现之前和姜师姐的承诺。#PlayerName#别忘了回来一道迎接。"
@@ -11918,7 +11918,7 @@
   - text: "听闻近来武当副掌门张文馨一直在"
     translated: "Heard that recently, Sect Leader Zhang Wenxin of Wudang has been"
     qcReviewedText: "Heard that recently, Sect Leader Zhang Wenxin of Wudang has been <b>Capital </b>Searching for several elderly individuals, unsure of the reason."
-    qcTranslated: "Heard that recently, Vice‑Sect Leader Zhang Wenxin of Wudang has been searching for several elderly individuals in the <b>Capital</b>, unsure of the reason."
+    qcTranslated: "Heard that recently, Vice-Sect Leader Zhang Wenxin of Wudang has been searching for several elderly individuals in the <b>Capital</b>, unsure of the reason."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -12219,9 +12219,9 @@
 - raw: "咽喉骨鲠符"
   splits:
   - text: "咽喉骨鲠符"
-    translated: "Throat‑Phlegm Sealing Symbol"
-    qcReviewedText: "Throat‑Phlegm Sealing Symbol"
-    qcTranslated: "Bone‑in‑Throat Sealing Talisman"
+    translated: "Throat-Phlegm Sealing Symbol"
+    qcReviewedText: "Throat-Phlegm Sealing Symbol"
+    qcTranslated: "Bone-in-Throat Sealing Talisman"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: LostIdiom
@@ -12283,8 +12283,8 @@
 - raw: "哎，最近天天在门派内练功练功练功，都快无聊疯了！"
   splits:
   - text: "哎，最近天天在门派内练功练功练功，都快无聊疯了！"
-    translated: "Ah, lately I've been training, training, training in the sect non‑stop, I'm almost going crazy from boredom!"
-    qcReviewedText: "Ah, lately I've been training, training, training in the sect non‑stop, I'm almost going crazy from boredom!"
+    translated: "Ah, lately I've been training, training, training in the sect non-stop, I'm almost going crazy from boredom!"
+    qcReviewedText: "Ah, lately I've been training, training, training in the sect non-stop, I'm almost going crazy from boredom!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -12355,8 +12355,8 @@
 - raw: "哪来那么多废话！既然拿不出买命钱，就乖乖等死吧，哇呀呀呀呀！"
   splits:
   - text: "哪来那么多废话！既然拿不出买命钱，就乖乖等死吧，哇呀呀呀呀！"
-    translated: "So many empty words! Since you can't come up with the money to buy your life, just quietly wait to die, wah‑wah‑wah‑wah!"
-    qcReviewedText: "So many empty words! Since you can't come up with the money to buy your life, just quietly wait to die, wah‑wah‑wah‑wah!"
+    translated: "So many empty words! Since you can't come up with the money to buy your life, just quietly wait to die, wah-wah-wah-wah!"
+    qcReviewedText: "So many empty words! Since you can't come up with the money to buy your life, just quietly wait to die, wah-wah-wah-wah!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -12364,7 +12364,7 @@
   splits:
   - text: "哼哼，#SourceForceName#屡次骚扰我#TargetForceName#治下村镇，这笔账还没算呢！"
     translated: "Hmph, #SourceForceName# has been harassing the villages under #TargetForceName#'s rule, and this score hasn't been settled yet!"
-    qcReviewedText: "Hmph, #SourceForceName# has been harassing the villages under #TargetForceName#'s rule, and this score hasn't been settled yet!\\nThis time, you wait for the supplies to arrive as compensation for your recent offense‑ we humbly accept."
+    qcReviewedText: "Hmph, #SourceForceName# has been harassing the villages under #TargetForceName#'s rule, and this score hasn't been settled yet!\\nThis time, you wait for the supplies to arrive as compensation for your recent offense- we humbly accept."
     qcTranslated: "Hmph, #SourceForceName# has been harassing the villages under #TargetForceName#'s rule, and this score hasn't been settled yet!\\nThis time, we will accept the supplies you are transporting as compensation for your recent offense."
     qcStatus: Corrected
     qcQualityScore: 95
@@ -12373,7 +12373,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "这次你等所运之物资，作为日前冒犯之赔偿，我们就笑纳了。"
-    translated: "This time, you wait for the supplies to arrive as compensation for your recent offense‑ we humbly accept."
+    translated: "This time, you wait for the supplies to arrive as compensation for your recent offense- we humbly accept."
   templates:
   - template: "{0}\\n{1}"
 - raw: "哼哼，你#SourceForceName#与我#TargetForceName#素来不和，\\n今天特地来贵派仓库内取些钱财，作为此前冒犯本帮之赔礼！"
@@ -13164,13 +13164,13 @@
   splits:
   - text: "在赛道上，会随机出现两种道路，"
     translated: "On the track, two types of roads will appear randomly."
-    qcReviewedText: "On the track, two types of roads will appear randomly.\\nLight‑colored roads are expressways, moving on them is equivalent to sprinting and accelerating.\\nDark roads are muddy paths, moving on them is like slowing down in water."
+    qcReviewedText: "On the track, two types of roads will appear randomly.\\nLight-colored roads are expressways, moving on them is equivalent to sprinting and accelerating.\\nDark roads are muddy paths, moving on them is like slowing down in water."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "浅色道路为快速路，在上面移动相当于冲刺加速，"
-    translated: "Light‑colored roads are expressways, moving on them is equivalent to sprinting and accelerating."
+    translated: "Light-colored roads are expressways, moving on them is equivalent to sprinting and accelerating."
   - subIndex: 2
     text: "深色道路为泥泞路，在上面移动相当于水中减速。"
     translated: "Dark roads are muddy paths, moving on them is like slowing down in water."
@@ -13791,16 +13791,16 @@
 - raw: "好一处山穷水恶，林深路险之地，也正是情报所示的大盗逃遁之所。"
   splits:
   - text: "好一处山穷水恶，林深路险之地，也正是情报所示的大盗逃遁之所。"
-    translated: "A place where mountains end and waters turn vicious, with deep forests and perilous paths‑exactly where the intelligence points to as the hideout of the notorious bandits."
-    qcReviewedText: "A place where mountains end and waters turn vicious, with deep forests and perilous paths‑exactly where the intelligence points to as the hideout of the notorious bandits."
+    translated: "A place where mountains end and waters turn vicious, with deep forests and perilous paths-exactly where the intelligence points to as the hideout of the notorious bandits."
+    qcReviewedText: "A place where mountains end and waters turn vicious, with deep forests and perilous paths-exactly where the intelligence points to as the hideout of the notorious bandits."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "好一处山穷水恶，林深路险之地，也正是情报所示的强盗盘踞之所。"
   splits:
   - text: "好一处山穷水恶，林深路险之地，也正是情报所示的强盗盘踞之所。"
-    translated: "A place where the mountains end and the waters turn treacherous, where the forest is deep and the roads perilous‑exactly where the intelligence indicates the bandits make their den."
-    qcReviewedText: "A place where the mountains end and the waters turn treacherous, where the forest is deep and the roads perilous‑exactly where the intelligence indicates the bandits make their den."
+    translated: "A place where the mountains end and the waters turn treacherous, where the forest is deep and the roads perilous-exactly where the intelligence indicates the bandits make their den."
+    qcReviewedText: "A place where the mountains end and the waters turn treacherous, where the forest is deep and the roads perilous-exactly where the intelligence indicates the bandits make their den."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -13935,13 +13935,13 @@
   splits:
   - text: "如此金秋九月，天高气爽，不知应当邀何人共游？"
     translated: "In this crisp September autumn, with the sky high and the air refreshing, I wonder whom I should invite to enjoy the scenery together?"
-    qcReviewedText: "In this crisp September autumn, with the sky high and the air refreshing, I wonder whom I should invite to enjoy the scenery together?\\n(can invite same‑sex companions with affection above 50 for the Double Ninth Festival)"
+    qcReviewedText: "In this crisp September autumn, with the sky high and the air refreshing, I wonder whom I should invite to enjoy the scenery together?\\n(can invite same-sex companions with affection above 50 for the Double Ninth Festival)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "（可以邀请好感50以上的同性共度重阳）"
-    translated: "(can invite same‑sex companions with affection above 50 for the Double Ninth Festival)"
+    translated: "(can invite same-sex companions with affection above 50 for the Double Ninth Festival)"
   templates:
   - template: "{0}\\n{1}"
 - raw: "妙手回春"
@@ -14245,24 +14245,24 @@
 - raw: "寻找一件绝世级别的丹药交给五毒掌教龙凤娥，用来医治白云天。"
   splits:
   - text: "寻找一件绝世级别的丹药交给五毒掌教龙凤娥，用来医治白云天。"
-    translated: "Find a legendary‑grade elixir and give it to Master Long Feng'e of the Five Poisons Palm Sect to treat Bai Yuntian."
-    qcReviewedText: "Find a legendary‑grade elixir and give it to Master Long Feng'e of the Five Poisons Palm Sect to treat Bai Yuntian."
+    translated: "Find a legendary-grade elixir and give it to Master Long Feng'e of the Five Poisons Palm Sect to treat Bai Yuntian."
+    qcReviewedText: "Find a legendary-grade elixir and give it to Master Long Feng'e of the Five Poisons Palm Sect to treat Bai Yuntian."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "寻找优质药引"
   splits:
   - text: "寻找优质药引"
-    translated: "Search for high‑quality medicinal aids"
-    qcReviewedText: "Search for high‑quality medicinal aids"
+    translated: "Search for high-quality medicinal aids"
+    qcReviewedText: "Search for high-quality medicinal aids"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "寻找优质食材"
   splits:
   - text: "寻找优质食材"
-    translated: "Search for high‑quality ingredients"
-    qcReviewedText: "Search for high‑quality ingredients"
+    translated: "Search for high-quality ingredients"
+    qcReviewedText: "Search for high-quality ingredients"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14506,8 +14506,8 @@
 - raw: "小伙子你看上去精明强干，是个当家丁的好材料，\\n不知可有兴趣，来干两天试试啊？"
   splits:
   - text: "小伙子你看上去精明强干，是个当家丁的好材料，"
-    translated: "The young fellow, you look astute and capable‑good material for a house steward."
-    qcReviewedText: "The young fellow, you look astute and capable‑good material for a house steward.\\nDon't you want to come and give it a try for two days?"
+    translated: "The young fellow, you look astute and capable-good material for a house steward."
+    qcReviewedText: "The young fellow, you look astute and capable-good material for a house steward.\\nDon't you want to come and give it a try for two days?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14520,13 +14520,13 @@
   splits:
   - text: "小娘子生的好生美貌，不如随兄弟们上山落草，"
     translated: "Young Miss is exceptionally beautiful. Why don't you join the brothers and settle in the mountains?"
-    qcReviewedText: "Young Miss is exceptionally beautiful. Why don't you join the brothers and settle in the mountains?\\nEat and drink to the fullest, revel day and night‑how could that not be carefree and delightful?"
+    qcReviewedText: "Young Miss is exceptionally beautiful. Why don't you join the brothers and settle in the mountains?\\nEat and drink to the fullest, revel day and night-how could that not be carefree and delightful?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "每天吃香喝辣，日夜笙歌，岂不逍遥快活？"
-    translated: "Eat and drink to the fullest, revel day and night‑how could that not be carefree and delightful?"
+    translated: "Eat and drink to the fullest, revel day and night-how could that not be carefree and delightful?"
   templates:
   - template: "{0}\\n{1}"
 - raw: "小贼休走"
@@ -15638,8 +15638,8 @@
 - raw: "恶贼休走！你平日欺男霸女，为祸乡里，早已是臭名远扬。\\n今日我特来替天行道，定要将你捉拿归案！"
   splits:
   - text: "恶贼休走！你平日欺男霸女，为祸乡里，早已是臭名远扬。"
-    translated: "Bandit, do not run! You have long oppressed women and bullied men, bringing misery to your village. Your reputation is well‑deserved."
-    qcReviewedText: "Bandit, do not run! You have long oppressed women and bullied men, bringing misery to your village. Your reputation is well‑deserved.\\nI have come to mete out justice, and I will certainly arrest you!"
+    translated: "Bandit, do not run! You have long oppressed women and bullied men, bringing misery to your village. Your reputation is well-deserved."
+    qcReviewedText: "Bandit, do not run! You have long oppressed women and bullied men, bringing misery to your village. Your reputation is well-deserved.\\nI have come to mete out justice, and I will certainly arrest you!"
     qcTranslated: "Bandit, do not run! You have long oppressed women and bullied men, bringing misery to your village. Your infamy is far and wide.\\nI have come to mete out justice, and I will certainly arrest you!"
     qcStatus: Corrected
     qcQualityScore: 92
@@ -15662,8 +15662,8 @@
 - raw: "惊天剧变"
   splits:
   - text: "惊天剧变"
-    translated: "Earth‑shattering change"
-    qcReviewedText: "Earth‑shattering change"
+    translated: "Earth-shattering change"
+    qcReviewedText: "Earth-shattering change"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -15821,8 +15821,8 @@
 - raw: "我俩寻觅此宝藏良久，实在不能空手而归。\\n若#TargetInteractName#不愿割爱，那我等只能强取了。"
   splits:
   - text: "我俩寻觅此宝藏良久，实在不能空手而归。"
-    translated: "We have sought this treasure for a long time, and we cannot return empty‑handed."
-    qcReviewedText: "We have sought this treasure for a long time, and we cannot return empty‑handed.\\nIf #TargetInteractName# is unwilling to part with it, then we can only take it by force."
+    translated: "We have sought this treasure for a long time, and we cannot return empty-handed."
+    qcReviewedText: "We have sought this treasure for a long time, and we cannot return empty-handed.\\nIf #TargetInteractName# is unwilling to part with it, then we can only take it by force."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -15918,8 +15918,8 @@
   splits:
   - text: "我看是#SourceInteractName#你有问题吧，"
     translated: "I think you're the one with a problem, #SourceInteractName#."
-    qcReviewedText: "I think you're the one with a problem, #SourceInteractName#.\\nHe pretends to be well‑versed here, even though he only has a half‑understanding."
-    qcTranslated: "I think you're the one with a problem, #SourceInteractName#.\\nYou only have a half‑understanding, yet you act like a teacher here."
+    qcReviewedText: "I think you're the one with a problem, #SourceInteractName#.\\nHe pretends to be well-versed here, even though he only has a half-understanding."
+    qcTranslated: "I think you're the one with a problem, #SourceInteractName#.\\nYou only have a half-understanding, yet you act like a teacher here."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: DroppedContent
@@ -15927,7 +15927,7 @@
     - DroppedContent
   - subIndex: 1
     text: "明明也只是一知半解，却在这儿好为人师。"
-    translated: "He pretends to be well‑versed here, even though he only has a half‑understanding."
+    translated: "He pretends to be well-versed here, even though he only has a half-understanding."
   templates:
   - template: "{0}\\n{1}"
 - raw: "我等正押运一批镖银途经此地。\\n敢问阁下尊姓大名，有何贵干？"
@@ -17228,7 +17228,7 @@
   - text: "是#SourceInteractName#啊，哎呀，说来惭愧。"
     translated: "It's #SourceInteractName#, oh, speaking of which, I feel a bit ashamed."
     qcReviewedText: "It's #SourceInteractName#, oh, speaking of which, I feel a bit ashamed.\\nWhile practicing kung fu today, suddenly my stomach was plagued by thirst, making it hard to endure.\\nReady to go on a wild drinking spree at the hotel."
-    qcTranslated: "It's #SourceInteractName#, oh, I'm ashamed to admit it.\\nWhile practicing kung fu today, the wine‑worms in my belly suddenly stirred, and my thirst became unbearable.\\nI was just about to head to the tavern for a hearty drink."
+    qcTranslated: "It's #SourceInteractName#, oh, I'm ashamed to admit it.\\nWhile practicing kung fu today, the wine-worms in my belly suddenly stirred, and my thirst became unbearable.\\nI was just about to head to the tavern for a hearty drink."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: LostIdiom
@@ -17504,8 +17504,8 @@
 - raw: "本事不大口气不小，按照江湖规矩，我们以二对二比试一番，宝藏归胜者所有！"
   splits:
   - text: "本事不大口气不小，按照江湖规矩，我们以二对二比试一番，宝藏归胜者所有！"
-    translated: "Not much skill but big boasts. According to the rules of the Jianghu, we will have a two‑on‑two duel, and the treasure goes to the winner!"
-    qcReviewedText: "Not much skill but big boasts. According to the rules of the Jianghu, we will have a two‑on‑two duel, and the treasure goes to the winner!"
+    translated: "Not much skill but big boasts. According to the rules of the Jianghu, we will have a two-on-two duel, and the treasure goes to the winner!"
+    qcReviewedText: "Not much skill but big boasts. According to the rules of the Jianghu, we will have a two-on-two duel, and the treasure goes to the winner!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -18978,13 +18978,13 @@
   splits:
   - text: "没想到这荒野之中竟有一上古遗迹，似乎是某位无名前辈高人的修炼场所。"
     translated: "Unexpectedly, there turns out to be an ancient site in this wilderness, seeming to be a place of cultivation for some unnamed senior."
-    qcReviewedText: "Unexpectedly, there turns out to be an ancient site in this wilderness, seeming to be a place of cultivation for some unnamed senior.\\nIf one delves in and explores, perhaps one might find left‑behind Heart Methods or Secret Manuals to use for oneself."
+    qcReviewedText: "Unexpectedly, there turns out to be an ancient site in this wilderness, seeming to be a place of cultivation for some unnamed senior.\\nIf one delves in and explores, perhaps one might find left-behind Heart Methods or Secret Manuals to use for oneself."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "若能深入其中探索，或许会找到遗留的心法秘籍以为己用。"
-    translated: "If one delves in and explores, perhaps one might find left‑behind Heart Methods or Secret Manuals to use for oneself."
+    translated: "If one delves in and explores, perhaps one might find left-behind Heart Methods or Secret Manuals to use for oneself."
   templates:
   - template: "{0}\\n{1}"
 - raw: "没缺胳膊断腿的回来就好，这次探查可有什么发现？"
@@ -19901,8 +19901,8 @@
 - raw: "眼前一名疯疯癫癫的乞丐躺在路边，一遍哼唱着不知来由的乡野小调，\\n一遍痛饮着葫芦中的酒水，眉宇间竟颇有几分闲适自在之乐趣。"
   splits:
   - text: "眼前一名疯疯癫癫的乞丐躺在路边，一遍哼唱着不知来由的乡野小调，"
-    translated: "A mad‑looking beggar lay by the roadside, humming an unfamiliar folk tune."
-    qcReviewedText: "A mad‑looking beggar lay by the roadside, humming an unfamiliar folk tune.\\nDraining the wine from the gourd, he found a surprising amount of leisurely enjoyment in the moment."
+    translated: "A mad-looking beggar lay by the roadside, humming an unfamiliar folk tune."
+    qcReviewedText: "A mad-looking beggar lay by the roadside, humming an unfamiliar folk tune.\\nDraining the wine from the gourd, he found a surprising amount of leisurely enjoyment in the moment."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -20565,8 +20565,8 @@
   splits:
   - text: "红色区域表示你的攻击范围，会跟随鼠标旋转。"
     translated: "The red area indicates your attack range and will rotate to follow the mouse."
-    qcReviewedText: "The red area indicates your attack range and will rotate to follow the mouse.\\nLeft‑click to initiate an attack, which can neutralize all projectiles within range. Hit all projectiles in the area with a single left‑click."
-    qcTranslated: "The red area indicates your attack range and will rotate to follow the mouse.\\nLeft‑click to initiate an attack, which can neutralize all projectiles within range."
+    qcReviewedText: "The red area indicates your attack range and will rotate to follow the mouse.\\nLeft-click to initiate an attack, which can neutralize all projectiles within range. Hit all projectiles in the area with a single left-click."
+    qcTranslated: "The red area indicates your attack range and will rotate to follow the mouse.\\nLeft-click to initiate an attack, which can neutralize all projectiles within range."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
@@ -20574,7 +20574,7 @@
     - GarbledNumber
   - subIndex: 1
     text: "左键点击发动攻击，便能将范围内的射击物全部击落。"
-    translated: "Left‑click to initiate an attack, which can neutralize all projectiles within range. Hit all projectiles in the area with a single left‑click."
+    translated: "Left-click to initiate an attack, which can neutralize all projectiles within range. Hit all projectiles in the area with a single left-click."
   templates:
   - template: "{0}\\n{1}"
 - raw: "纰漏"
@@ -21078,8 +21078,8 @@
 - raw: "自相残杀"
   splits:
   - text: "自相残杀"
-    translated: "Self‑destruct"
-    qcReviewedText: "Self‑destruct"
+    translated: "Self-destruct"
+    qcReviewedText: "Self-destruct"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -21700,13 +21700,13 @@
   splits:
   - text: "要经营好一个门派，你需要招募并培养更多人才，"
     translated: "To manage a sect well, you need to recruit and cultivate more talents,"
-    qcReviewedText: "To manage a sect well, you need to recruit and cultivate more talents,\\nYou can recruit members at the sub‑faction, or try to attract those with higher potential who are unaffiliated."
+    qcReviewedText: "To manage a sect well, you need to recruit and cultivate more talents,\\nYou can recruit members at the sub-faction, or try to attract those with higher potential who are unaffiliated."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "你可以在分舵进行招募，或是寻找潜力较高的无门无派之人进行拉拢。"
-    translated: "You can recruit members at the sub‑faction, or try to attract those with higher potential who are unaffiliated."
+    translated: "You can recruit members at the sub-faction, or try to attract those with higher potential who are unaffiliated."
   templates:
   - template: "{0}\\n{1}"
 - raw: "要饭乞丐"
@@ -23138,8 +23138,8 @@
 - raw: "这二派武林人士正在争斗不休，应该如何是好？"
   splits:
   - text: "这二派武林人士正在争斗不休，应该如何是好？"
-    translated: "What should we do with these two factions of Wulin fighting non‑stop?"
-    qcReviewedText: "What should we do with these two factions of Wulin fighting non‑stop?"
+    translated: "What should we do with these two factions of Wulin fighting non-stop?"
+    qcReviewedText: "What should we do with these two factions of Wulin fighting non-stop?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -23417,9 +23417,9 @@
 - raw: "这座金碧辉煌的宅邸，如今已是人去楼空，\\n贪官手下的众多家丁奴仆，也早已作鸟兽散。\\n哎，这狗贼的下落该从何寻起呢？"
   splits:
   - text: "这座金碧辉煌的宅邸，如今已是人去楼空，"
-    translated: "This once‑grand mansion is now deserted"
-    qcReviewedText: "This once‑grand mansion is now deserted \\nWhile the officials' subordinates and servants had also dispersed like birds and beasts.\\nWell, where on earth should I start looking for this dog?"
-    qcTranslated: "This once‑grand mansion is now deserted \\nWhile the corrupt official's subordinates and servants had also dispersed like birds and beasts.\\nWell, where on earth should I start looking for this dog?"
+    translated: "This once-grand mansion is now deserted"
+    qcReviewedText: "This once-grand mansion is now deserted \\nWhile the officials' subordinates and servants had also dispersed like birds and beasts.\\nWell, where on earth should I start looking for this dog?"
+    qcTranslated: "This once-grand mansion is now deserted \\nWhile the corrupt official's subordinates and servants had also dispersed like birds and beasts.\\nWell, where on earth should I start looking for this dog?"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -23563,8 +23563,8 @@
 - raw: "远处有名僧人打扮之人正在化缘，应该如何是好？"
   splits:
   - text: "远处有名僧人打扮之人正在化缘，应该如何是好？"
-    translated: "What should we do about the monk who is going door‑to‑door for alms in the distance?"
-    qcReviewedText: "What should we do about the monk who is going door‑to‑door for alms in the distance?"
+    translated: "What should we do about the monk who is going door-to-door for alms in the distance?"
+    qcReviewedText: "What should we do about the monk who is going door-to-door for alms in the distance?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -23690,8 +23690,8 @@
 - raw: "迷宫的起点总是在地图左下角。"
   splits:
   - text: "迷宫的起点总是在地图左下角。"
-    translated: "The starting point of the maze is always in the bottom‑left corner of the map."
-    qcReviewedText: "The starting point of the maze is always in the bottom‑left corner of the map."
+    translated: "The starting point of the maze is always in the bottom-left corner of the map."
+    qcReviewedText: "The starting point of the maze is always in the bottom-left corner of the map."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -25518,8 +25518,8 @@
 - raw: "落魄之人"
   splits:
   - text: "落魄之人"
-    translated: "Down‑and‑out person"
-    qcReviewedText: "Down‑and‑out person"
+    translated: "Down-and-out person"
+    qcReviewedText: "Down-and-out person"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

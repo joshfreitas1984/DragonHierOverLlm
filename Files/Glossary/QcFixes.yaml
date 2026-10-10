@@ -40,7 +40,7 @@
   allowalt:
     - "70-30"
     - "seventy-thirty"
-    - "seventy‑thirty"
+    - "seventy-thirty"
     - "seventy thirty"
 - raw: 三七二十一
   result: "damn the consequences"

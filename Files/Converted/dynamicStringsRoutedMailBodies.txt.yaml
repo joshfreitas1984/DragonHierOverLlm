@@ -340,8 +340,8 @@
   splits:
   - text: "#PlayerName#，我想到个办法，兴许可以治好顾游年师兄断绝的经脉。"
     translated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian."
-    qcReviewedText: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\nIf you have access to <b>Exquisite‑grade treasures</b>, Still please bring it <b>Flying Dragon Gate </b>Borrow from Senior Sis!"
-    qcTranslated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite‑grade treasures</b>, please bring them to <b>Flying Dragon Gate</b> for Senior Sister to borrow!"
+    qcReviewedText: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\nIf you have access to <b>Exquisite-grade treasures</b>, Still please bring it <b>Flying Dragon Gate </b>Borrow from Senior Sis!"
+    qcTranslated: "#PlayerName#, I've come up with a method that might be able to heal the severed meridians of Senior Brother Gu Younian.\\nIf you have access to <b>Exquisite-grade treasures</b>, please bring them to <b>Flying Dragon Gate</b> for Senior Sister to borrow!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -353,7 +353,7 @@
     translated: "If you have access to"
   - subIndex: 2
     text: "精良级以上珍宝"
-    translated: "Exquisite‑grade treasures"
+    translated: "Exquisite-grade treasures"
   - subIndex: 3
     text: "，还请带来"
     translated: ", Still please bring it"
@@ -714,8 +714,8 @@
   splits:
   - text: "#PlayerName#，逐鹿盟将于阎罗殿总舵召开大会，传闻恶贼计心狂也于附近现身，不知又在策划什么阴谋诡计。"
     translated: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next."
-    qcReviewedText: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next.\nYou, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come.<b>Yama Hall</b>, Help me take down this thief!"
-    qcTranslated: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next.\nYou, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come to <b>Yama Hall</b> to help me take down this thief!"
+    qcReviewedText: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next.\nYou, I, and Ji Xinkuang all share a deep-seated grudge, so I hope you can come.<b>Yama Hall</b>, Help me take down this thief!"
+    qcTranslated: "#PlayerName#, the Chase Deer Alliance will hold a conference at the main headquarters of the Yama Hall. There are rumors that the villain Ji Xinkuang has also appeared nearby, who knows what sinister plots he is planning next.\nYou, I, and Ji Xinkuang all share a deep-seated grudge, so I hope you can come to <b>Yama Hall</b> to help me take down this thief!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -723,7 +723,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "你我与计心狂皆有血海深仇，还望你能来"
-    translated: "You, I, and Ji Xinkuang all share a deep‑seated grudge, so I hope you can come."
+    translated: "You, I, and Ji Xinkuang all share a deep-seated grudge, so I hope you can come."
   - subIndex: 2
     text: "阎罗殿"
     translated: "Yama Hall"
@@ -1404,9 +1404,9 @@
 - raw: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。\n还望你尽快来<b>飞龙门</b>，一同寻找姜婉姑娘的下落！"
   splits:
   - text: "#PlayerName#，当真是一波未平一波又起！一直被妥善保护的姜婉姑娘突然失踪，很可能是赵破虏在飞龙门内的心腹所为。"
-    translated: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well‑protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate."
-    qcReviewedText: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well‑protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate.\nI hope you will come as soon as possible.<b>Flying Dragon Gate</b>, Together, let's find out the whereabouts of Miss Jiang Wan!"
-    qcTranslated: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well‑protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate. I hope you will come to <b>Flying Dragon Gate</b> as soon as possible, so we can find out the whereabouts of Miss Jiang Wan together!"
+    translated: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well-protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate."
+    qcReviewedText: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well-protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate.\nI hope you will come as soon as possible.<b>Flying Dragon Gate</b>, Together, let's find out the whereabouts of Miss Jiang Wan!"
+    qcTranslated: "#PlayerName#, it really is one crisis after another! Jiang Wan, who had been well-protected all along, has suddenly gone missing. It's very likely the work of Zhao Polu's trusted confidant within the Flying Dragon Gate. I hope you will come to <b>Flying Dragon Gate</b> as soon as possible, so we can find out the whereabouts of Miss Jiang Wan together!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -1925,8 +1925,8 @@
   splits:
   - text: "我方联军在"
     translated: "Our allied forces are"
-    qcReviewedText: "Our allied forces are <b>In Leshan Town </b>Ready and well‑rested, we are set to depart for Dali soon, to plan our next move.\nI hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
-    qcTranslated: "Our allied forces, <b>in Leshan Town</b>, are ready and well‑rested; we are set to depart for Dali soon to plan our next move. I hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
+    qcReviewedText: "Our allied forces are <b>In Leshan Town </b>Ready and well-rested, we are set to depart for Dali soon, to plan our next move.\nI hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
+    qcTranslated: "Our allied forces, <b>in Leshan Town</b>, are ready and well-rested; we are set to depart for Dali soon to plan our next move. I hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -1937,7 +1937,7 @@
     translated: "In Leshan Town"
   - subIndex: 2
     text: "已休整完毕，准备不日启程撤回大理，再图后计。"
-    translated: "Ready and well‑rested, we are set to depart for Dali soon, to plan our next move."
+    translated: "Ready and well-rested, we are set to depart for Dali soon, to plan our next move."
   - subIndex: 3
     text: "还望#PlayerName#率#PlayerForceName#精锐前来援护，事成之后，自当重谢！"
     translated: "I hope #PlayerName# can bring the elite troops of #PlayerForceName# to aid us. I promise a great reward upon completion!"
@@ -2112,8 +2112,8 @@
   splits:
   - text: "#PlayerName#，我们在"
     translated: "#PlayerName#, we are"
-    qcReviewedText: "#PlayerName#, we are <b>Northern Dangtu Town </b>Following this lead, we found the Silver‑Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
-    qcTranslated: "#PlayerName#, we found the Silver‑Faced Bandit's whereabouts <b>north of Dangtu Town</b>. I hope you can come quickly to intercept him with us. We must clarify his identity!"
+    qcReviewedText: "#PlayerName#, we are <b>Northern Dangtu Town </b>Following this lead, we found the Silver-Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
+    qcTranslated: "#PlayerName#, we found the Silver-Faced Bandit's whereabouts <b>north of Dangtu Town</b>. I hope you can come quickly to intercept him with us. We must clarify his identity!"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -2125,7 +2125,7 @@
     translated: "Northern Dangtu Town"
   - subIndex: 2
     text: "一带，寻得了那笑面虎的踪迹。还望你尽快前来一同堵截此人，定要将他的身份弄个清楚！"
-    translated: "Following this lead, we found the Silver‑Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
+    translated: "Following this lead, we found the Silver-Faced Bandit's whereabouts. I hope you can come quickly to intercept him with us. We must clarify his identity!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，我爹在<b>清远乡西方</b>眼看就要追上黑道五鬼。还望你前来与我汇合，定要阻止爹爹误伤王添翼兄弟。"
@@ -2385,8 +2385,8 @@
   splits:
   - text: "第三次泰岳大典"
     translated: "The Third Mount Tai Grand Assembly"
-    qcReviewedText: "#PlayerName#，<b>The Third Mount Tai Grand Assembly </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
-    qcTranslated: "#PlayerName#，<b>The Third Mount Tai Grand Assembly</b> will be held soon. We hope you and the various Sect Leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcReviewedText: "#PlayerName#，<b>The Third Mount Tai Grand Assembly </b>It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top-notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    qcTranslated: "#PlayerName#，<b>The Third Mount Tai Grand Assembly</b> will be held soon. We hope you and the various Sect Leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down.\nThe rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top-notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -2397,7 +2397,7 @@
     translated: "It will be held soon. We hope you and the various sect leaders will follow the plan. Once Jin Longsheng makes an appearance, we should strike simultaneously to take him down."
   - subIndex: 2
     text: "天下兴亡，武林安危皆在此一战，还望你多带些高手前来助阵，以免不测！"
-    translated: "The rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top‑notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
+    translated: "The rise and fall of the nation depends on this battle, and the safety of the Wulin is at stake as well. I hope you can bring some top-notch warriors to aid us; it would be wise to prepare for any unforeseen circumstances!"
   templates:
   - template: "#PlayerName#，<b>{0}</b>{1}\n{2}"
 - raw: "#PlayerName#，我与犬子已将恶贼凤南飞堵在<b>灵台村</b>内，奈何此人还请了不少血衣盟高手压阵。望你多带些人手前来相助，以免此贼又逃脱法网！"
@@ -2442,9 +2442,9 @@
 - raw: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于<b>板桥镇</b>。\n表面上为共商第三次泰岳大典事宜，实则是为告知金龙生就是血衣盟大统领之真相，并部署会上抓捕此人之计策。\n还请你届时定要前来参加，并将此前调查之来龙去脉尽数道明。"
   splits:
   - text: "#PlayerName#，我已邀请少林、武当、峨眉、丐帮四大门派掌门会于"
-    translated: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at"
-    qcReviewedText: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at <b>Banqiao Town</b>。\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
-    qcTranslated: "#PlayerName#, I have invited the leaders of the four major sects‑Shaolin, Wudang, Emei, and the Beggars' Sect‑to convene at <b>Banqiao Town</b>.\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal the truth that Jin Longsheng is the Grand Commander of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
+    translated: "#PlayerName#, I have invited the leaders of the four major sects-Shaolin, Wudang, Emei, and the Beggars' Sect-to convene at"
+    qcReviewedText: "#PlayerName#, I have invited the leaders of the four major sects-Shaolin, Wudang, Emei, and the Beggars' Sect-to convene at <b>Banqiao Town</b>。\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal to Jin Longsheng that he is the true leader of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
+    qcTranslated: "#PlayerName#, I have invited the leaders of the four major sects-Shaolin, Wudang, Emei, and the Beggars' Sect-to convene at <b>Banqiao Town</b>.\nOn the surface, it was to discuss the details of the third Mount Tai Grand Assembly, but in reality, it was to reveal the truth that Jin Longsheng is the Grand Commander of the Blood Robe Alliance, and to plan the strategy for capturing him at the assembly.\nI still hope you will come and share the full details of your previous investigation."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: MeaningReversal

@@ -41,8 +41,8 @@
 - raw: "《龙胤立志传》适龄游戏提示"
   splits:
   - text: "《龙胤立志传》适龄游戏提示"
-    translated: "《Dragon Legacy: Age‑Appropriate Game Warning》"
-    qcReviewedText: "《Dragon Legacy: Age‑Appropriate Game Warning》"
+    translated: "《Dragon Legacy: Age-Appropriate Game Warning》"
+    qcReviewedText: "《Dragon Legacy: Age-Appropriate Game Warning》"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -130,22 +130,22 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
-    qcReviewedText: "<b>Poisoned</b>\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
+    qcReviewedText: "<b>Poisoned</b>\\n-0.5% All Attributes\\n-0.25% Max Health\\n-0.25% Max Inner Power\\n-0.25% Max Stamina"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "‑0.5% All Attributes"
+    translated: "-0.5% All Attributes"
   - subIndex: 2
     text: "-0.25%生命上限"
-    translated: "‑0.25% Max Health"
+    translated: "-0.25% Max Health"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "‑0.25% Max Inner Power"
+    translated: "-0.25% Max Inner Power"
   - subIndex: 4
     text: "-0.25%体力上限"
-    translated: "‑0.25% Max Stamina"
+    translated: "-0.25% Max Stamina"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: "<b>体质</b>\\n+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性"
@@ -174,19 +174,19 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
-    qcReviewedText: "<b>Internal Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Max Inner Power\\n‑0.5% Max Stamina"
+    qcReviewedText: "<b>Internal Injury</b>\\n-0.5% All Attributes\\n-0.5% Max Inner Power\\n-0.5% Max Stamina"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "‑0.5% All Attributes"
+    translated: "-0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "‑0.5% Max Inner Power"
+    translated: "-0.5% Max Inner Power"
   - subIndex: 3
     text: "-0.5%体力上限"
-    translated: "‑0.5% Max Stamina"
+    translated: "-0.5% Max Stamina"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}\\n{3}"
 - raw: "<b>内功</b>\\n+1%内力上限"
@@ -295,16 +295,16 @@
   splits:
   - text: "外伤"
     translated: "External Injury"
-    qcReviewedText: "<b>External Injury</b>\\n‑0.5% All Attributes\\n‑0.5% Max Health"
+    qcReviewedText: "<b>External Injury</b>\\n-0.5% All Attributes\\n-0.5% Max Health"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "‑0.5% All Attributes"
+    translated: "-0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%生命上限"
-    translated: "‑0.5% Max Health"
+    translated: "-0.5% Max Health"
   templates:
   - template: "<b>{0}</b>\\n{1}\\n{2}"
 - raw: "<b>奇门</b>\\n提升奇门伤害\\n降低受到的奇门伤害"
@@ -690,13 +690,13 @@
   splits:
   - text: "在物品上下毒，当物品转移至他人身上时，就会使其中毒。"
     translated: "To poison an item, when it is transferred to someone else, they will be poisoned."
-    qcReviewedText: "♦To poison an item, when it is transferred to someone else, they will be poisoned.\\n♦Using poison‑equipped items or reading poison‑contaminated books can cause additional poisoning.\\n♦Taking toxic elixirs and consuming poisonous food will result in double poisoning."
+    qcReviewedText: "♦To poison an item, when it is transferred to someone else, they will be poisoned.\\n♦Using poison-equipped items or reading poison-contaminated books can cause additional poisoning.\\n♦Taking toxic elixirs and consuming poisonous food will result in double poisoning."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "使用带毒装备，阅读带毒书籍等，会导致额外中毒。"
-    translated: "Using poison‑equipped items or reading poison‑contaminated books can cause additional poisoning."
+    translated: "Using poison-equipped items or reading poison-contaminated books can cause additional poisoning."
   - subIndex: 2
     text: "服用带毒的丹药和饮食，会导致中毒加倍。"
     translated: "Taking toxic elixirs and consuming poisonous food will result in double poisoning."
@@ -874,8 +874,8 @@
   splits:
   - text: "正式弟子以上，长老以下者皆可任命为分舵舵主"
     translated: "Elders below and formal disciples above can all be appointed as branch den leaders."
-    qcReviewedText: "♦Elders below and formal disciples above can all be appointed as branch den leaders.\\n♦The vice‑head of a branch will comprehensively enhance the governance effectiveness of the target town based on their attributes."
-    qcTranslated: "♦Those from Formal Disciple rank and above, up to but not including Elders, can all be appointed as branch den leaders.\\n♦The vice‑head of a branch will comprehensively enhance the governance effectiveness of the target town based on their attributes."
+    qcReviewedText: "♦Elders below and formal disciples above can all be appointed as branch den leaders.\\n♦The vice-head of a branch will comprehensively enhance the governance effectiveness of the target town based on their attributes."
+    qcTranslated: "♦Those from Formal Disciple rank and above, up to but not including Elders, can all be appointed as branch den leaders.\\n♦The vice-head of a branch will comprehensively enhance the governance effectiveness of the target town based on their attributes."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -883,7 +883,7 @@
     - DroppedContent
   - subIndex: 1
     text: "分舵舵主会根据其属性，全面提升目标城镇治理效果"
-    translated: "The vice‑head of a branch will comprehensively enhance the governance effectiveness of the target town based on their attributes."
+    translated: "The vice-head of a branch will comprehensively enhance the governance effectiveness of the target town based on their attributes."
   templates:
   - template: "♦{0}\\n♦{1}"
 - raw: "♦武功抵达瓶颈需突破才能升级\\n♦突破为武功增加额外效果，用丹药/饮食/秘籍辅助以获得更强效果\\n♦提升建筑等级和对应武学技能可增加突破效率"
@@ -916,8 +916,8 @@
   splits:
   - text: "每级对"
     translated: "Level up by"
-    qcReviewedText: "♦Level up by AI Sect influence is generated：\\n‑Speed up construction：Monthly production limit+, Construction consumes ‑5% resources, construction speed+5%\\n‑Speed up research and development：Research consumption ‑5%, research speed+5%\\n‑Speed up disciples' advancement：Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level+, Recruitment costs ‑5% consumed, monthly salary costs consumed-2.5%"
-    qcTranslated: "♦Each level affects the AI Sect:\\n‑Accelerate construction: Monthly construction count+, construction cost ‑5%, construction speed +5%\\n‑Accelerate research: Research cost ‑5%, research speed +5%\\n‑Accelerate disciple promotion: Promotion frequency +5%, promotion cost ‑5%, promotion martial arts level+, recruitment cost ‑5%, monthly stipend cost ‑2.5%"
+    qcReviewedText: "♦Level up by AI Sect influence is generated：\\n-Speed up construction：Monthly production limit+, Construction consumes -5% resources, construction speed+5%\\n-Speed up research and development：Research consumption -5%, research speed+5%\\n-Speed up disciples' advancement：Promotion Frequency +5%, Promotion Consumption -5%, Promotion Martial Arts Level+, Recruitment costs -5% consumed, monthly salary costs consumed-2.5%"
+    qcTranslated: "♦Each level affects the AI Sect:\\n-Accelerate construction: Monthly construction count+, construction cost -5%, construction speed +5%\\n-Accelerate research: Research cost -5%, research speed +5%\\n-Accelerate disciple promotion: Promotion frequency +5%, promotion cost -5%, promotion martial arts level+, recruitment cost -5%, monthly stipend cost -2.5%"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: MeaningReversal
@@ -929,28 +929,28 @@
     translated: "Sect influence is generated"
   - subIndex: 2
     text: "—加快建筑建造"
-    translated: "‑Speed up construction"
+    translated: "-Speed up construction"
   - subIndex: 3
     text: "每月建造数量"
     translated: "Monthly production limit"
   - subIndex: 4
     text: "，建造消耗-5%，建造速度"
-    translated: ", Construction consumes ‑5% resources, construction speed"
+    translated: ", Construction consumes -5% resources, construction speed"
   - subIndex: 5
     text: "—加快科研"
-    translated: "‑Speed up research and development"
+    translated: "-Speed up research and development"
   - subIndex: 6
     text: "科研消耗-5%，科研速度"
-    translated: "Research consumption ‑5%, research speed"
+    translated: "Research consumption -5%, research speed"
   - subIndex: 7
     text: "—加快弟子晋升"
-    translated: "‑Speed up disciples' advancement"
+    translated: "-Speed up disciples' advancement"
   - subIndex: 8
     text: "晋升频率+5%，晋升消耗-5%，晋升武学等级"
-    translated: "Promotion Frequency +5%, Promotion Consumption ‑5%, Promotion Martial Arts Level"
+    translated: "Promotion Frequency +5%, Promotion Consumption -5%, Promotion Martial Arts Level"
   - subIndex: 9
     text: "，招募消耗-5%，月俸消耗"
-    translated: ", Recruitment costs ‑5% consumed, monthly salary costs consumed"
+    translated: ", Recruitment costs -5% consumed, monthly salary costs consumed"
   templates:
   - template: "♦{0}AI{1}：\\n{2}：{3}+{4}+5%\\n{5}：{6}+5%\\n{7}：{8}+{9}-2.5%"
 - raw: "♦消毒可以去除物品所带毒性。"
@@ -995,9 +995,9 @@
 - raw: "♦消耗资源制造目标物品，消耗越多产物等级越高\\n♦建筑等级和对应技能(锻造/烹饪/炼药)可以增加制作效率\\n♦不使用材料时消耗翻倍\\n♦产物会继承材料的加成效果(相同词条取较大值)"
   splits:
   - text: "消耗资源制造目标物品，消耗越多产物等级越高"
-    translated: "Consume more resources to produce higher‑grade items"
-    qcReviewedText: "♦Consume more resources to produce higher‑grade items\\n♦Building level and corresponding skills(Forging/Cooking/Alchemy) Can increase production efficiency\\n♦When not using materials, consumption doubles\\n♦The products will inherit the bonuses from the materials.(Take the larger value)"
-    qcTranslated: "♦Consume more resources to produce higher‑grade items\\n♦Building level and corresponding skills (Forging/Cooking/Alchemy) can increase production efficiency\\n♦When not using materials, consumption doubles\\n♦The products will inherit the bonuses from the materials (take the larger value for identical entries)."
+    translated: "Consume more resources to produce higher-grade items"
+    qcReviewedText: "♦Consume more resources to produce higher-grade items\\n♦Building level and corresponding skills(Forging/Cooking/Alchemy) Can increase production efficiency\\n♦When not using materials, consumption doubles\\n♦The products will inherit the bonuses from the materials.(Take the larger value)"
+    qcTranslated: "♦Consume more resources to produce higher-grade items\\n♦Building level and corresponding skills (Forging/Cooking/Alchemy) can increase production efficiency\\n♦When not using materials, consumption doubles\\n♦The products will inherit the bonuses from the materials (take the larger value for identical entries)."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -1329,9 +1329,9 @@
 - raw: "1. 本游戏是一款武侠题材的开放世界游戏，适用于16周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。\\n\\n2. 本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。\\n\\n3. 本游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理：\\n<color=#BC1717>  〇 未满8周岁的用户不能付费购买游戏；8周岁以上的未满16周岁的未成年人用户，不得单次消费超过50元人民币，每月充值消费累计不得超过200元人民币；16周岁以上的未成年人用户，单次消费不得超过100元人民币，每月充值消费累计不得超过400元人民币。\\n  〇 本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不以任何形式向未成年人提供网络游戏服务。</color>\\n\\n4. 本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。\\n"
   splits:
   - text: "本游戏是一款武侠题材的开放世界游戏，适用于16周岁及以上的用户，建议未成年人在家长监护下使用游戏产品。"
-    translated: "This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance."
-    qcReviewedText: "1. This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features a ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real‑name authentication system for users. Minors will be subject to the following management measures.：\\n<color=#BC1717>  〇 Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n  〇 This game is only available for minors to play for up to 1 hours of online gaming service from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies.\\n"
-    qcTranslated: "1. This is a wuxia‑themed open‑world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his Sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real‑name authentication system for users. Minors will be subject to the following management measures:\\n<color=#BC1717>  〇 Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n 〇 This game is only available for minors to play from 1 to 20 on Fridays, Saturdays, Sundays, and public holidays, providing 21 hours of online gaming service per day. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies.\\n"
+    translated: "This is a wuxia-themed open-world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance."
+    qcReviewedText: "1. This is a wuxia-themed open-world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features a ink-wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real-name authentication system for users. Minors will be subject to the following management measures.：\\n<color=#BC1717>  〇 Users under 8 years old cannot make in-game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n  〇 This game is only available for minors to play for up to 1 hours of online gaming service from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real-life work and studies.\\n"
+    qcTranslated: "1. This is a wuxia-themed open-world game suitable for users aged 16 and above. It is recommended that minors play this game with parental guidance.\\n\\n2. The game features ink-wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his Sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations.\\n\\n3. This game has a real-name authentication system for users. Minors will be subject to the following management measures:\\n<color=#BC1717>  〇 Users under 8 years old cannot make in-game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB.\\n 〇 This game is only available for minors to play from 1 to 20 on Fridays, Saturdays, Sundays, and public holidays, providing 21 hours of online gaming service per day. It will not provide any form of online gaming service to minors at other times.</color>\\n\\n4. The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real-life work and studies.\\n"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
@@ -1340,19 +1340,19 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "本游戏画面为水墨风格，清新淡雅，弘扬我国美学文化。讲述了主角行侠仗义，惩奸除恶，帮助自己的门派发扬光大，造福百姓的故事。游戏中的背景皆为架空，不会与现实混淆。游戏中的玩法多为动脑的策略玩法，没有激烈刺激的战斗画面。游戏内所有内容都遵循相关法律法规。"
-    translated: "The game features a ink‑wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations."
+    translated: "The game features a ink-wash style graphics, fresh and elegant, upholding the aesthetic culture of our country. It tells the story of the protagonist practicing chivalry to help the innocent and punish villains, aiming to promote his sect's glory and benefit the people. The background settings in the game are all fictional and will not be confused with reality. The gameplay focuses on strategic thinking rather than intense combat scenes. All content within the game adheres to relevant laws and regulations."
   - subIndex: 2
     text: "本游戏中有用户实名认证系统，认证为未成年人的用户将接受以下管理"
-    translated: "This game has a real‑name authentication system for users. Minors will be subject to the following management measures."
+    translated: "This game has a real-name authentication system for users. Minors will be subject to the following management measures."
   - subIndex: 3
     text: "未满8周岁的用户不能付费购买游戏；8周岁以上的未满16周岁的未成年人用户，不得单次消费超过50元人民币，每月充值消费累计不得超过200元人民币；16周岁以上的未成年人用户，单次消费不得超过100元人民币，每月充值消费累计不得超过400元人民币。"
-    translated: "Users under 8 years old cannot make in‑game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB."
+    translated: "Users under 8 years old cannot make in-game purchases; users aged between 8 and under 16 years old are not allowed to spend more than 50 RMB per transaction, with monthly cumulative spending capped at no more than 200 RMB; users who are 16 years old or older can make single transactions of no more than 100 RMB, with monthly cumulative spending limited to no more than 400 RMB."
   - subIndex: 4
     text: "本游戏仅可在周五、周六、周日和法定节假日每日20时至21时向未成年人提供1小时网络游戏服务，其他时间均不以任何形式向未成年人提供网络游戏服务。"
     translated: "This game is only available for minors to play for up to 1 hours of online gaming service from 20 PM to 21 PM on Fridays, Saturdays, Sundays, and public holidays. It will not provide any form of online gaming service to minors at other times."
   - subIndex: 5
     text: "本游戏以策略玩法为主，玩家可以通过游戏内提供的资源和线索，结合自身长处变得更强，有益于玩家享受游戏乐趣，放松身心。游戏过程中，通过丰富的游戏内容，玩法和剧情等，让玩家身临其境，体会到现实生活中不一样的乐趣。帮助玩家在享受游戏乐趣进行放松与休息后，更好地投入现实中的工作与学习中。"
-    translated: "The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real‑life work and studies."
+    translated: "The game primarily focuses on strategic play. Players can become stronger by utilizing the resources and clues provided within the game, in conjunction with their own strengths, which enhances their enjoyment and relaxation. Throughout the gameplay, rich content, diverse playstyles, and engaging narratives immerse players, offering unique pleasures different from those in real life. After enjoying the game and taking a break, players can better engage in their real-life work and studies."
   templates:
   - template: "1. {0}\\n\\n2. {1}\\n\\n3. {2}：\\n<color=#BC1717>  〇 {3}\\n  〇 {4}</color>\\n\\n4. {5}\\n"
 - raw: "100天"
@@ -1507,8 +1507,8 @@
 - raw: "一命模式"
   splits:
   - text: "一命模式"
-    translated: "One‑life mode"
-    qcReviewedText: "One‑life mode"
+    translated: "One-life mode"
+    qcReviewedText: "One-life mode"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1708,22 +1708,22 @@
   splits:
   - text: "中毒"
     translated: "Poisoned"
-    qcReviewedText: "Poisoned\\n‑0.5% All Attributes\\n‑0.25% Max Health\\n‑0.25% Max Inner Power\\n‑0.25% Max Stamina"
+    qcReviewedText: "Poisoned\\n-0.5% All Attributes\\n-0.25% Max Health\\n-0.25% Max Inner Power\\n-0.25% Max Stamina"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "‑0.5% All Attributes"
+    translated: "-0.5% All Attributes"
   - subIndex: 2
     text: "-0.25%生命上限"
-    translated: "‑0.25% Max Health"
+    translated: "-0.25% Max Health"
   - subIndex: 3
     text: "-0.25%内力上限"
-    translated: "‑0.25% Max Inner Power"
+    translated: "-0.25% Max Inner Power"
   - subIndex: 4
     text: "-0.25%体力上限"
-    translated: "‑0.25% Max Stamina"
+    translated: "-0.25% Max Stamina"
   templates:
   - template: "{0}\\n{1}\\n{2}\\n{3}\\n{4}"
 - raw: "中立"
@@ -1858,8 +1858,8 @@
 - raw: "二十五天"
   splits:
   - text: "二十五天"
-    translated: "Twenty‑five days"
-    qcReviewedText: "Twenty‑five days"
+    translated: "Twenty-five days"
+    qcReviewedText: "Twenty-five days"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1993,8 +1993,8 @@
 - raw: "仅限非剧情信件"
   splits:
   - text: "仅限非剧情信件"
-    translated: "Limited to non‑plot‑related letters"
-    qcReviewedText: "Limited to non‑plot‑related letters"
+    translated: "Limited to non-plot-related letters"
+    qcReviewedText: "Limited to non-plot-related letters"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2135,8 +2135,8 @@
 - raw: "优先级较高的城镇会优先进行建造"
   splits:
   - text: "优先级较高的城镇会优先进行建造"
-    translated: "Higher‑priority towns will be constructed first"
-    qcReviewedText: "Higher‑priority towns will be constructed first"
+    translated: "Higher-priority towns will be constructed first"
+    qcReviewedText: "Higher-priority towns will be constructed first"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2151,8 +2151,8 @@
 - raw: "优质"
   splits:
   - text: "优质"
-    translated: "High‑quality"
-    qcReviewedText: "High‑quality"
+    translated: "High-quality"
+    qcReviewedText: "High-quality"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2236,8 +2236,8 @@
   splits:
   - text: "体力"
     translated: "Stamina"
-    qcReviewedText: "Stamina\\n♦When your stamina is less than 50, every 1 point decrease grants ‑1% chance to combo./Dodge\\n♦Stamina recovery can exceed the limit by up to 1 points, increasing combo rate by +0.5% for each excess point./Hit Rate\\n♦When your stamina exceeds the limit, it decays by 50% each turn.(At least 5 points)。"
-    qcTranslated: "Stamina\\n♦When your stamina is less than 50, every 1 point decrease grants ‑1% Combo/Dodge.\\n♦Stamina recovery can exceed the limit by up to 1 points, increasing Combo/Hit Rate by +0.5% for each excess point.\\n♦When your stamina exceeds the limit, it decays by 50% each turn (at least 5 points)."
+    qcReviewedText: "Stamina\\n♦When your stamina is less than 50, every 1 point decrease grants -1% chance to combo./Dodge\\n♦Stamina recovery can exceed the limit by up to 1 points, increasing combo rate by +0.5% for each excess point./Hit Rate\\n♦When your stamina exceeds the limit, it decays by 50% each turn.(At least 5 points)。"
+    qcTranslated: "Stamina\\n♦When your stamina is less than 50, every 1 point decrease grants -1% Combo/Dodge.\\n♦Stamina recovery can exceed the limit by up to 1 points, increasing Combo/Hit Rate by +0.5% for each excess point.\\n♦When your stamina exceeds the limit, it decays by 50% each turn (at least 5 points)."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -2246,7 +2246,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "体力小于50时，每减少1点-1%连击"
-    translated: "When your stamina is less than 50, every 1 point decrease grants ‑1% chance to combo."
+    translated: "When your stamina is less than 50, every 1 point decrease grants -1% chance to combo."
   - subIndex: 2
     text: "闪避。"
     translated: "Dodge"
@@ -2298,9 +2298,9 @@
 - raw: "作为仙霞派弟子，体验一个小门派在江湖变局之中的恩怨浮沉。\\n<color=green>通过剧情解锁特殊角色的亲密/招募</color>\\n(推荐使用剑法/拳掌角色)"
   splits:
   - text: "作为仙霞派弟子，体验一个小门派在江湖变局之中的恩怨浮沉。"
-    translated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu."
-    qcReviewedText: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu.\\n<color=green>Unlock special intimate interactions with characters through the storyline/Recruit</color>\\n(I recommend using Sword Technique/Unarmed character)"
-    qcTranslated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever‑changing Jianghu.\\n<color=green>Unlock special character intimacy/recruitment through the storyline</color>\\n(I recommend using Sword Technique/Unarmed characters)"
+    translated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever-changing Jianghu."
+    qcReviewedText: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever-changing Jianghu.\\n<color=green>Unlock special intimate interactions with characters through the storyline/Recruit</color>\\n(I recommend using Sword Technique/Unarmed character)"
+    qcTranslated: "As a disciple of the Xianxia Sect, experience the rise and fall of a small sect in the ever-changing Jianghu.\\n<color=green>Unlock special character intimacy/recruitment through the storyline</color>\\n(I recommend using Sword Technique/Unarmed characters)"
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: HardToParseSeam
@@ -2590,7 +2590,7 @@
   splits:
   - text: "全属性"
     translated: "All attributes"
-    qcReviewedText: "All attributes/All skills+2 \\nNon‑disciple experience points+20%\\nDifficulty increase speed++++"
+    qcReviewedText: "All attributes/All skills+2 \\nNon-disciple experience points+20%\\nDifficulty increase speed++++"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2599,7 +2599,7 @@
     translated: "All skills"
   - subIndex: 2
     text: "非本门弟子经验"
-    translated: "Non‑disciple experience points"
+    translated: "Non-disciple experience points"
   - subIndex: 3
     text: "难度提升速度"
     translated: "Difficulty increase speed"
@@ -2609,7 +2609,7 @@
   splits:
   - text: "全属性"
     translated: "All attributes"
-    qcReviewedText: "All attributes/All skills+4 \\nNon‑disciple experience points+10%\\nDifficulty increase speed+++"
+    qcReviewedText: "All attributes/All skills+4 \\nNon-disciple experience points+10%\\nDifficulty increase speed+++"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2618,7 +2618,7 @@
     translated: "All skills"
   - subIndex: 2
     text: "非本门弟子经验"
-    translated: "Non‑disciple experience points"
+    translated: "Non-disciple experience points"
   - subIndex: 3
     text: "难度提升速度"
     translated: "Difficulty increase speed"
@@ -2650,7 +2650,7 @@
   splits:
   - text: "全属性"
     translated: "All attributes"
-    qcReviewedText: "All attributes/All skills+9 \\nPlayer experience/Reputation+40%\\nNon‑disciple experience points-20%\\nDifficulty increase speed+"
+    qcReviewedText: "All attributes/All skills+9 \\nPlayer experience/Reputation+40%\\nNon-disciple experience points-20%\\nDifficulty increase speed+"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2665,7 +2665,7 @@
     translated: "Reputation"
   - subIndex: 4
     text: "非本门弟子经验"
-    translated: "Non‑disciple experience points"
+    translated: "Non-disciple experience points"
   - subIndex: 5
     text: "难度提升速度"
     translated: "Difficulty increase speed"
@@ -2832,19 +2832,19 @@
   splits:
   - text: "内伤"
     translated: "Internal Injury"
-    qcReviewedText: "Internal Injury\\n‑0.5% All Attributes\\n‑0.5% Max Inner Power\\n‑0.25% Max Stamina"
+    qcReviewedText: "Internal Injury\\n-0.5% All Attributes\\n-0.5% Max Inner Power\\n-0.25% Max Stamina"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "‑0.5% All Attributes"
+    translated: "-0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%内力上限"
-    translated: "‑0.5% Max Inner Power"
+    translated: "-0.5% Max Inner Power"
   - subIndex: 3
     text: "-0.25%体力上限"
-    translated: "‑0.25% Max Stamina"
+    translated: "-0.25% Max Stamina"
   templates:
   - template: "{0}\\n{1}\\n{2}\\n{3}"
 - raw: "内力"
@@ -2929,8 +2929,8 @@
 - raw: "决战战斗失败会导致游戏结束，部分重要剧情战和高难度奇遇为决战，请谨慎选择！"
   splits:
   - text: "决战战斗失败会导致游戏结束，部分重要剧情战和高难度奇遇为决战，请谨慎选择！"
-    translated: "Failing in the final battle will end the game. Some crucial plot battles and high‑difficulty random events are considered the final battle; please be cautious!"
-    qcReviewedText: "Failing in the final battle will end the game. Some crucial plot battles and high‑difficulty random events are considered the final battle; please be cautious!"
+    translated: "Failing in the final battle will end the game. Some crucial plot battles and high-difficulty random events are considered the final battle; please be cautious!"
+    qcReviewedText: "Failing in the final battle will end the game. Some crucial plot battles and high-difficulty random events are considered the final battle; please be cautious!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3124,8 +3124,8 @@
 - raw: "分舵"
   splits:
   - text: "分舵"
-    translated: "Sub‑branch office"
-    qcReviewedText: "Sub‑branch office"
+    translated: "Sub-branch office"
+    qcReviewedText: "Sub-branch office"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3586,8 +3586,8 @@
 - raw: "博引"
   splits:
   - text: "博引"
-    translated: "Wide‑ranging"
-    qcReviewedText: "Wide‑ranging"
+    translated: "Wide-ranging"
+    qcReviewedText: "Wide-ranging"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3709,8 +3709,8 @@
 - raw: "右侧弹出消息"
   splits:
   - text: "右侧弹出消息"
-    translated: "Right‑side message pop‑up"
-    qcReviewedText: "Right‑side message pop‑up"
+    translated: "Right-side message pop-up"
+    qcReviewedText: "Right-side message pop-up"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3924,8 +3924,8 @@
   splits:
   - text: "在设置界面开启"
     translated: "Enable in the settings interface"
-    qcReviewedText: "Enable in the settings interface \\nEvery in‑game specific date attempts automatic saving"
-    qcTranslated: "Enable in the settings interface \\nOn each specific in‑game date, the game will attempt to save automatically"
+    qcReviewedText: "Enable in the settings interface \\nEvery in-game specific date attempts automatic saving"
+    qcTranslated: "Enable in the settings interface \\nOn each specific in-game date, the game will attempt to save automatically"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -3933,7 +3933,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "每到游戏内特定日期会尝试自动存档"
-    translated: "Every in‑game specific date attempts automatic saving"
+    translated: "Every in-game specific date attempts automatic saving"
   templates:
   - template: "{0}\\n{1}"
 - raw: "地区日志"
@@ -4095,19 +4095,19 @@
   splits:
   - text: "外伤"
     translated: "External Injury"
-    qcReviewedText: "External Injury\\n‑0.5% All Attributes\\n‑0.5% Max Health\\n‑0.25% Max Stamina"
+    qcReviewedText: "External Injury\\n-0.5% All Attributes\\n-0.5% Max Health\\n-0.25% Max Stamina"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "-0.5%全属性"
-    translated: "‑0.5% All Attributes"
+    translated: "-0.5% All Attributes"
   - subIndex: 2
     text: "-0.5%生命上限"
-    translated: "‑0.5% Max Health"
+    translated: "-0.5% Max Health"
   - subIndex: 3
     text: "-0.25%体力上限"
-    translated: "‑0.25% Max Stamina"
+    translated: "-0.25% Max Stamina"
   templates:
   - template: "{0}\\n{1}\\n{2}\\n{3}"
 - raw: "外功"
@@ -4675,8 +4675,8 @@
 - raw: "将两本相同低品质秘籍，整合成一本高品质的秘籍"
   splits:
   - text: "将两本相同低品质秘籍，整合成一本高品质的秘籍"
-    translated: "Combine two low‑quality Secret Manuals into one high‑quality Secret Manual."
-    qcReviewedText: "Combine two low‑quality Secret Manuals into one high‑quality Secret Manual."
+    translated: "Combine two low-quality Secret Manuals into one high-quality Secret Manual."
+    qcReviewedText: "Combine two low-quality Secret Manuals into one high-quality Secret Manual."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5596,8 +5596,8 @@
   splits:
   - text: "战斗难度极低，仅体验剧情"
     translated: "The battle difficulty is extremely low; it's just for experiencing the story."
-    qcReviewedText: "The battle difficulty is extremely low; it's just for experiencing the story.\\n<color=red>Cannot earn achievement </color>\\nPlayer damage+100%\\nPlayer injured-50%\\nAll attributes/All skills+15 \\nPlayer experience/Reputation+100%\\nNon‑disciple experience points-60%\\nDifficulty increase speed-"
-    qcTranslated: "The battle difficulty is extremely low; it's just for experiencing the story.\\n<color=red>Cannot earn achievement </color>\\nPlayer damage+100%\\nPlayer injured‑50%\\nAll attributes/All skills+15 \\nPlayer experience/Reputation+100%\\nNon‑sect disciple experience‑60%\\nDifficulty increase speed‑"
+    qcReviewedText: "The battle difficulty is extremely low; it's just for experiencing the story.\\n<color=red>Cannot earn achievement </color>\\nPlayer damage+100%\\nPlayer injured-50%\\nAll attributes/All skills+15 \\nPlayer experience/Reputation+100%\\nNon-disciple experience points-60%\\nDifficulty increase speed-"
+    qcTranslated: "The battle difficulty is extremely low; it's just for experiencing the story.\\n<color=red>Cannot earn achievement </color>\\nPlayer damage+100%\\nPlayer injured-50%\\nAll attributes/All skills+15 \\nPlayer experience/Reputation+100%\\nNon-sect disciple experience-60%\\nDifficulty increase speed-"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -5626,7 +5626,7 @@
     translated: "Reputation"
   - subIndex: 8
     text: "非本门弟子经验"
-    translated: "Non‑disciple experience points"
+    translated: "Non-disciple experience points"
   - subIndex: 9
     text: "难度提升速度"
     translated: "Difficulty increase speed"
@@ -6234,7 +6234,7 @@
   splits:
   - text: "新手推荐！"
     translated: "New Player Recommendation!"
-    qcReviewedText: "New Player Recommendation!\\nAll attributes/All skills+12 \\nPlayer experience/Reputation+60%\\nNon‑disciple experience points-40%"
+    qcReviewedText: "New Player Recommendation!\\nAll attributes/All skills+12 \\nPlayer experience/Reputation+60%\\nNon-disciple experience points-40%"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6252,14 +6252,14 @@
     translated: "Reputation"
   - subIndex: 5
     text: "非本门弟子经验"
-    translated: "Non‑disciple experience points"
+    translated: "Non-disciple experience points"
   templates:
   - template: "{0}\\n{1}/{2}+12\\n{3}/{4}+60%\\n{5}-40%"
 - raw: "新手推荐！\\n全属性/全技能+15\\n玩家经验/声望+80%\\n非本门弟子经验-60%\\n难度提升速度-"
   splits:
   - text: "新手推荐！"
     translated: "New Player Recommendation!"
-    qcReviewedText: "New Player Recommendation!\\nAll attributes/All skills+15 \\nPlayer experience/Reputation+80%\\nNon‑disciple experience points-60%\\nDifficulty increase speed-"
+    qcReviewedText: "New Player Recommendation!\\nAll attributes/All skills+15 \\nPlayer experience/Reputation+80%\\nNon-disciple experience points-60%\\nDifficulty increase speed-"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6277,7 +6277,7 @@
     translated: "Reputation"
   - subIndex: 5
     text: "非本门弟子经验"
-    translated: "Non‑disciple experience points"
+    translated: "Non-disciple experience points"
   - subIndex: 6
     text: "难度提升速度"
     translated: "Difficulty increase speed"
@@ -7314,8 +7314,8 @@
 - raw: "消耗低级毒物获取高级毒物"
   splits:
   - text: "消耗低级毒物获取高级毒物"
-    translated: "Consume low‑level toxins to obtain high‑level toxins"
-    qcReviewedText: "Consume low‑level toxins to obtain high‑level toxins"
+    translated: "Consume low-level toxins to obtain high-level toxins"
+    qcReviewedText: "Consume low-level toxins to obtain high-level toxins"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7443,8 +7443,8 @@
   splits:
   - text: "游戏名称"
     translated: "Game Name"
-    qcReviewedText: "Game Name：Dragon's Heir's Resolve Approval Number：Guoxin Chu Shen [2025] No. 100 No Publication Number：ISBN 978-7-498-14483-6 \\nCopyright holder：Tutian County PiPiTang Software Development Studio Publishing House：East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
-    qcTranslated: "Game Name: Dragon's Heir's Chronicle Approval Number: Guoxin Chu Shen [2025] No. 100 Publication Number: ISBN 978‑7‑498‑14483‑6 \\nCopyright holder: Dangtu County PiPiTang Software Development Studio Publishing House: East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
+    qcReviewedText: "Game Name：Dragon's Heir's Resolve Approval Number：Guoxin Chu Shen [2025] No. 100 No Publication Number：ISBN 978-7-498-14483-6 \\nCopyright holder：Tutian County PiPiTang Software Development Studio Publishing House：East China Normal University Electronic Audio-Visual Publishing House Limited Company"
+    qcTranslated: "Game Name: Dragon's Heir's Chronicle Approval Number: Guoxin Chu Shen [2025] No. 100 Publication Number: ISBN 978-7-498-14483-6 \\nCopyright holder: Dangtu County PiPiTang Software Development Studio Publishing House: East China Normal University Electronic Audio-Visual Publishing House Limited Company"
     qcStatus: Corrected
     qcQualityScore: 88
     qcDefectCategory: DroppedContent
@@ -7477,7 +7477,7 @@
     translated: "Publishing House"
   - subIndex: 9
     text: "华东师范大学电子音像出版社有限公司"
-    translated: "East China Normal University Electronic Audio‑Visual Publishing House Limited Company"
+    translated: "East China Normal University Electronic Audio-Visual Publishing House Limited Company"
   templates:
   - template: "{0}：{1} {2}：{3} {4} {5}：ISBN 978-7-498-14483-6\\n{6}：{7} {8}：{9}"
 - raw: "游戏模式"
@@ -8317,7 +8317,7 @@
   - text: "第三章"
     translated: "Chapter Three"
     qcReviewedText: "Chapter Three Jianghu boils; valiant warriors die \\nThe great trend of the world：\\nGlobal Infamy Modifier-20%\\nSects between Can attack resources \\nSects between Can attack towns \\nSects between Cannot attack the main den"
-    qcTranslated: "Chapter Three Jianghu boils; valiant warriors die \\nThe great trend of the world:\\nGlobal Infamy Modifier‑20%\\nSects can attack resources \\nSects can attack towns \\nSects cannot attack the main den"
+    qcTranslated: "Chapter Three Jianghu boils; valiant warriors die \\nThe great trend of the world:\\nGlobal Infamy Modifier-20%\\nSects can attack resources \\nSects can attack towns \\nSects cannot attack the main den"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -8872,8 +8872,8 @@
 - raw: "自动存档"
   splits:
   - text: "自动存档"
-    translated: "Auto‑save"
-    qcReviewedText: "Auto‑save"
+    translated: "Auto-save"
+    qcReviewedText: "Auto-save"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -8888,8 +8888,8 @@
 - raw: "自动战斗"
   splits:
   - text: "自动战斗"
-    translated: "Auto‑battle"
-    qcReviewedText: "Auto‑battle"
+    translated: "Auto-battle"
+    qcReviewedText: "Auto-battle"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -9296,9 +9296,9 @@
 - raw: "角色服装会提供不同的加成效果，需要在游戏内自行解锁/升级。"
   splits:
   - text: "角色服装会提供不同的加成效果，需要在游戏内自行解锁"
-    translated: "Character clothing provides different bonuses, which need to be unlocked in‑game."
-    qcReviewedText: "Character clothing provides different bonuses, which need to be unlocked in‑game./Upgrade"
-    qcTranslated: "Character clothing provides different bonuses, which need to be unlocked/upgraded in‑game."
+    translated: "Character clothing provides different bonuses, which need to be unlocked in-game."
+    qcReviewedText: "Character clothing provides different bonuses, which need to be unlocked in-game./Upgrade"
+    qcTranslated: "Character clothing provides different bonuses, which need to be unlocked/upgraded in-game."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -9482,8 +9482,8 @@
 - raw: "请进行实名认证"
   splits:
   - text: "请进行实名认证"
-    translated: "Please perform real‑name verification"
-    qcReviewedText: "Please perform real‑name verification"
+    translated: "Please perform real-name verification"
+    qcReviewedText: "Please perform real-name verification"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -9892,8 +9892,8 @@
 - raw: "重投"
   splits:
   - text: "重投"
-    translated: "Re‑roll"
-    qcReviewedText: "Re‑roll"
+    translated: "Re-roll"
+    qcReviewedText: "Re-roll"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10238,7 +10238,7 @@
   - text: "门派区域"
     translated: "Sect Area"
     qcReviewedText: "Sect Area\\n♦After reaching the limit, no new areas can be conquered.\\n♦Can upgrade the sect main hall/Research/Build a casino/Capture the Capital/Raise your title in the palace to increase the area limit"
-    qcTranslated: "Sect Area\\n♦After reaching the limit, no new areas can be conquered.\\n♦Can upgrade the sect main hall/Research/Build a Gold‑Sink Cave/Capture the Capital/Raise your title in the palace to increase the area limit"
+    qcTranslated: "Sect Area\\n♦After reaching the limit, no new areas can be conquered.\\n♦Can upgrade the sect main hall/Research/Build a Gold-Sink Cave/Capture the Capital/Raise your title in the palace to increase the area limit"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DomainTerm
@@ -10461,13 +10461,13 @@
   splits:
   - text: "防御"
     translated: "Defense"
-    qcReviewedText: "Defense\\n♦Affects the fort's walls, towers, drums, and sub‑fort durability."
+    qcReviewedText: "Defense\\n♦Affects the fort's walls, towers, drums, and sub-fort durability."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "影响攻城战城墙、箭塔、战鼓、分舵耐久。"
-    translated: "Affects the fort's walls, towers, drums, and sub‑fort durability."
+    translated: "Affects the fort's walls, towers, drums, and sub-fort durability."
   templates:
   - template: "{0}\\n♦{1}"
 - raw: "陌上花开，恰逢君来。\\n承蒙青睐，不胜感激。\\n"
@@ -10675,8 +10675,8 @@
 - raw: "非剧情信件30日后自动删除"
   splits:
   - text: "非剧情信件30日后自动删除"
-    translated: "Non‑plot letters will be automatically deleted 30 days later"
-    qcReviewedText: "Non‑plot letters will be automatically deleted 30 days later"
+    translated: "Non-plot letters will be automatically deleted 30 days later"
+    qcReviewedText: "Non-plot letters will be automatically deleted 30 days later"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10691,8 +10691,8 @@
 - raw: "非本门弟子经验+30%\\n难度提升速度+++++"
   splits:
   - text: "非本门弟子经验"
-    translated: "Non‑disciple experience points"
-    qcReviewedText: "Non‑disciple experience points+30%\\nDifficulty increase speed+++++"
+    translated: "Non-disciple experience points"
+    qcReviewedText: "Non-disciple experience points+30%\\nDifficulty increase speed+++++"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -10744,8 +10744,8 @@
 - raw: "顶级"
   splits:
   - text: "顶级"
-    translated: "Top‑notch"
-    qcReviewedText: "Top‑notch"
+    translated: "Top-notch"
+    qcReviewedText: "Top-notch"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

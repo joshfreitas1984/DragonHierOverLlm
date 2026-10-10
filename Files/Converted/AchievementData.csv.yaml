@@ -167,8 +167,8 @@
   splits:
   - split: 1
     text: "劳苦功高"
-    translated: "Hard‑earned success"
-    qcReviewedText: "Hard‑earned success"
+    translated: "Hard-earned success"
+    qcReviewedText: "Hard-earned success"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -492,8 +492,8 @@
   splits:
   - split: 1
     text: "盖世英雄"
-    translated: "World‑Famous Hero"
-    qcReviewedText: "World‑Famous Hero"
+    translated: "World-Famous Hero"
+    qcReviewedText: "World-Famous Hero"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

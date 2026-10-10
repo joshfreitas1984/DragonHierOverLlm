@@ -366,16 +366,16 @@
 - raw: "中额红包"
   splits:
   - text: "中额红包"
-    translated: "Middle‑sized red envelope"
-    qcReviewedText: "Middle‑sized red envelope"
+    translated: "Middle-sized red envelope"
+    qcReviewedText: "Middle-sized red envelope"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
 - raw: "中额赠礼"
   splits:
   - text: "中额赠礼"
-    translated: "Mid‑tier Gift"
-    qcReviewedText: "Mid‑tier Gift"
+    translated: "Mid-tier Gift"
+    qcReviewedText: "Mid-tier Gift"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -694,7 +694,7 @@
   - text: "好友关系好感获取+10%，好感消耗"
     translated: "Friendship favor gain +10%, favor consumption"
     qcReviewedText: "♦Friendship favor gain +10%, favor consumption-10%\n♦To do evil to a friend, infamy x200%"
-    qcTranslated: "♦Friendship favor gain +10%, favor consumption ‑10%\n♦To do evil to a friend, infamy x200%"
+    qcTranslated: "♦Friendship favor gain +10%, favor consumption -10%\n♦To do evil to a friend, infamy x200%"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -710,7 +710,7 @@
   - text: "亲密关系好感获取+20%，好感消耗"
     translated: "Favor Gain with Intimacy Relationship +20%, Favor Consumption"
     qcReviewedText: "♦Favor Gain with Intimacy Relationship +20%, Favor Consumption-20%\n♦To wrong friends and family, infamy x400%"
-    qcTranslated: "♦Favor Gain with Intimate Relationships +20%, Favor Consumption ‑20%\n♦Wronging friends and family, Infamy x400%"
+    qcTranslated: "♦Favor Gain with Intimate Relationships +20%, Favor Consumption -20%\n♦Wronging friends and family, Infamy x400%"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: UnnaturalPhrasing
@@ -938,8 +938,8 @@
 - raw: "修改非本门弟子折扣"
   splits:
   - text: "修改非本门弟子折扣"
-    translated: "Modify discount for non‑disciples"
-    qcReviewedText: "Modify discount for non‑disciples"
+    translated: "Modify discount for non-disciples"
+    qcReviewedText: "Modify discount for non-disciples"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1133,8 +1133,8 @@
 - raw: "♦与对方结束师徒关系"
   splits:
   - text: "与对方结束师徒关系"
-    translated: "End the master‑apprentice relationship with the other party"
-    qcReviewedText: "♦End the master‑apprentice relationship with the other party"
+    translated: "End the master-apprentice relationship with the other party"
+    qcReviewedText: "♦End the master-apprentice relationship with the other party"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1728,13 +1728,13 @@
   splits:
   - text: "迎战大量守卫"
     translated: "Engage numerous defenders"
-    qcReviewedText: "Engage numerous defenders\nAcquire high‑quality manuals"
+    qcReviewedText: "Engage numerous defenders\nAcquire high-quality manuals"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获取高品质秘籍"
-    translated: "Acquire high‑quality manuals"
+    translated: "Acquire high-quality manuals"
   templates:
   - template: "{0}\n{1}"
 - raw: "大胆表白"
@@ -3518,8 +3518,8 @@
 - raw: "♦赠礼或消耗好感降低对方忠诚\n♦对方忠诚低于好感度20%，便会加入你的门派"
   splits:
   - text: "赠礼或消耗好感降低对方忠诚"
-    translated: "Gift‑giving or expending goodwill to lower their loyalty"
-    qcReviewedText: "♦Gift‑giving or expending goodwill to lower their loyalty\n♦If the other party's loyalty is below 20% of their affinity, they will join your sect."
+    translated: "Gift-giving or expending goodwill to lower their loyalty"
+    qcReviewedText: "♦Gift-giving or expending goodwill to lower their loyalty\n♦If the other party's loyalty is below 20% of their affinity, they will join your sect."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3823,8 +3823,8 @@
 - raw: "自投罗网！"
   splits:
   - text: "自投罗网！"
-    translated: "Self‑inflicted trap!"
-    qcReviewedText: "Self‑inflicted trap!"
+    translated: "Self-inflicted trap!"
+    qcReviewedText: "Self-inflicted trap!"
     qcTranslated: "Walking right into the trap!"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -4311,8 +4311,8 @@
 - raw: "超高价出售({0}两)"
   splits:
   - text: "超高价出售"
-    translated: "High‑priced sale"
-    qcReviewedText: "High‑priced sale({0} Taels)"
+    translated: "High-priced sale"
+    qcReviewedText: "High-priced sale({0} Taels)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4537,13 +4537,13 @@
   splits:
   - text: "迎战守卫"
     translated: "Challenge the Guardians"
-    qcReviewedText: "Challenge the Guardians\nGet a medium‑quality Secret Manual"
+    qcReviewedText: "Challenge the Guardians\nGet a medium-quality Secret Manual"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获取中品质秘籍"
-    translated: "Get a medium‑quality Secret Manual"
+    translated: "Get a medium-quality Secret Manual"
   templates:
   - template: "{0}\n{1}"
 - raw: "遗忘“{0}”"
@@ -4571,13 +4571,13 @@
   splits:
   - text: "避免战斗"
     translated: "Avoid battle"
-    qcReviewedText: "Avoid battle\nAcquire a low‑quality Secret Manual"
+    qcReviewedText: "Avoid battle\nAcquire a low-quality Secret Manual"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "获取低品质秘籍"
-    translated: "Acquire a low‑quality Secret Manual"
+    translated: "Acquire a low-quality Secret Manual"
   templates:
   - template: "{0}\n{1}"
 - raw: "那便来吧"
@@ -4795,8 +4795,8 @@
 - raw: "落魄之人"
   splits:
   - text: "落魄之人"
-    translated: "Down‑and‑out person"
-    qcReviewedText: "Down‑and‑out person"
+    translated: "Down-and-out person"
+    qcReviewedText: "Down-and-out person"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -975,7 +975,7 @@
   - split: 14
     subIndex: 7
     text: "明察秋毫"
-    translated: "Keen‑eyed"
+    translated: "Keen-eyed"
   - split: 15
     text: "九天鬼手"
     translated: "Nine Heaven Ghost Hand"
@@ -1328,7 +1328,7 @@
     translated: "Cooking"
   - split: 13
     text: "降龙掌法"
-    translated: "Dragon‑Taming Palm Technique"
+    translated: "Dragon-Taming Palm Technique"
   - split: 14
     text: "丑陋"
     translated: "Ugly"
@@ -1589,7 +1589,7 @@
   - split: 14
     subIndex: 5
     text: "位极人臣"
-    translated: "Second‑in‑command"
+    translated: "Second-in-command"
   - split: 14
     subIndex: 6
     text: "临危不乱"
@@ -1794,7 +1794,7 @@
     translated: "Dragon Slayer Technique"
   - split: 14
     text: "千锤百炼"
-    translated: "Well‑refined through countless trials"
+    translated: "Well-refined through countless trials"
   - split: 14
     subIndex: 1
     text: "能工巧匠"
@@ -1974,7 +1974,7 @@
   - split: 14
     subIndex: 5
     text: "毒手药王"
-    translated: "Poison‑hand Medicine King"
+    translated: "Poison-hand Medicine King"
   - split: 14
     subIndex: 6
     text: "灭心绝情"
@@ -1985,7 +1985,7 @@
     translated: "Heretical"
   - split: 15
     text: "销魂蚀骨"
-    translated: "Heart‑rending and bone‑chilling"
+    translated: "Heart-rending and bone-chilling"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -2489,7 +2489,7 @@
     translated: "Fists and palms"
   - split: 13
     text: "九死离魂掌"
-    translated: "Nine Lives Soul‑Stealing Palm"
+    translated: "Nine Lives Soul-Stealing Palm"
   - split: 14
     text: "气定神闲"
     translated: "Calm and composed"
@@ -2714,7 +2714,7 @@
   - split: 14
     subIndex: 5
     text: "博学多才"
-    translated: "Well‑learned and versatile"
+    translated: "Well-learned and versatile"
   - split: 14
     subIndex: 6
     text: "炉火纯青"
@@ -2899,7 +2899,7 @@
   - split: 14
     subIndex: 6
     text: "儒生"
-    translated: "Scholar‑official"
+    translated: "Scholar-official"
   - split: 14
     subIndex: 7
     text: "公正不阿"
@@ -2991,7 +2991,7 @@
     translated: "Neither arrogant nor anxious"
   - split: 15
     text: "德高望重"
-    translated: "Well‑respected"
+    translated: "Well-respected"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -3586,7 +3586,7 @@
   - split: 14
     subIndex: 3
     text: "位极人臣"
-    translated: "Second‑in‑command"
+    translated: "Second-in-command"
   - split: 14
     subIndex: 4
     text: "坚若磐石"
@@ -3733,7 +3733,7 @@
   - split: 13
     subIndex: 1
     text: "五尺混天绫"
-    translated: "Five‑zhi Huandian Ling"
+    translated: "Five-zhi Huandian Ling"
   - split: 14
     text: "游山玩水"
     translated: "To sightsee and have fun"
@@ -3900,7 +3900,7 @@
   - split: 13
     subIndex: 1
     text: "灭心绝情剑"
-    translated: "Heart‑Cleansing and Emotion‑Ending Sword"
+    translated: "Heart-Cleansing and Emotion-Ending Sword"
   - split: 14
     text: "淡泊"
     translated: "Tranquil"
@@ -3995,7 +3995,7 @@
   - split: 14
     subIndex: 1
     text: "七窍玲珑"
-    translated: "Seven‑orifices clear‑thinking"
+    translated: "Seven-orifices clear-thinking"
   - split: 14
     subIndex: 2
     text: "聪慧绝伦"
@@ -4370,7 +4370,7 @@
     translated: "Stop pulse"
   - split: 15
     text: "病鲁班"
-    translated: "Ill‑tempered Lu Ban"
+    translated: "Ill-tempered Lu Ban"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -4427,7 +4427,7 @@
   - split: 14
     subIndex: 1
     text: "千锤百炼"
-    translated: "Well‑refined through countless trials"
+    translated: "Well-refined through countless trials"
   - split: 14
     subIndex: 2
     text: "能工巧匠"
@@ -4454,7 +4454,7 @@
     translated: "Ill often"
   - split: 15
     text: "掣地霹雳"
-    translated: "Earth‑Shattering Thunderbolt"
+    translated: "Earth-Shattering Thunderbolt"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -4585,7 +4585,7 @@
   - split: 14
     subIndex: 1
     text: "千锤百炼"
-    translated: "Well‑refined through countless trials"
+    translated: "Well-refined through countless trials"
   - split: 14
     subIndex: 2
     text: "工匠"
@@ -4909,7 +4909,7 @@
   - split: 13
     subIndex: 2
     text: "白虹贯日掌"
-    translated: "Sun‑Piercing White Ribbon Palm"
+    translated: "Sun-Piercing White Ribbon Palm"
   - split: 14
     text: "倾国倾城"
     translated: "Breathtakingly beautiful"
@@ -4995,7 +4995,7 @@
     translated: "Medicine"
   - split: 13
     text: "白虹贯日掌"
-    translated: "Sun‑Piercing White Ribbon Palm"
+    translated: "Sun-Piercing White Ribbon Palm"
   - split: 13
     subIndex: 1
     text: "九霄冲天剑"
@@ -5988,7 +5988,7 @@
   - split: 14
     subIndex: 5
     text: "七窍玲珑"
-    translated: "Seven‑orifices clear‑thinking"
+    translated: "Seven-orifices clear-thinking"
   - split: 14
     subIndex: 6
     text: "避世绝俗"
@@ -6202,7 +6202,7 @@
     translated: "Lucky in gambling"
   - split: 15
     text: "刺骨冰寒"
-    translated: "Bone‑chilling cold"
+    translated: "Bone-chilling cold"
   templates:
   - split: 10
     template: "{0}/{1}"
@@ -6318,7 +6318,7 @@
     translated: "Drunken Dreaming Dance of Fish and Dragon"
   - split: 14
     text: "七窍玲珑"
-    translated: "Seven‑orifices clear‑thinking"
+    translated: "Seven-orifices clear-thinking"
   - split: 14
     subIndex: 1
     text: "神出鬼没"
@@ -7277,7 +7277,7 @@
   - split: 13
     subIndex: 1
     text: "通臂拳"
-    translated: "Long‑arm fist"
+    translated: "Long-arm fist"
   - split: 14
     text: "康健"
     translated: "Healthy"
@@ -8460,7 +8460,7 @@
   - split: 14
     subIndex: 3
     text: "明察秋毫"
-    translated: "Keen‑eyed"
+    translated: "Keen-eyed"
   - split: 14
     subIndex: 4
     text: "公正不阿"
@@ -8844,7 +8844,7 @@
   - split: 14
     subIndex: 5
     text: "见多识广"
-    translated: "Well‑traveled"
+    translated: "Well-traveled"
   - split: 14
     subIndex: 6
     text: "雅士"
@@ -9447,7 +9447,7 @@
   - split: 14
     subIndex: 5
     text: "博学多才"
-    translated: "Well‑learned and versatile"
+    translated: "Well-learned and versatile"
   - split: 14
     subIndex: 6
     text: "不老长生"
@@ -9939,7 +9939,7 @@
   - split: 13
     subIndex: 2
     text: "碧海潮生曲"
-    translated: "Tide‑Echoing Melody"
+    translated: "Tide-Echoing Melody"
   - split: 14
     text: "物我两忘"
     translated: "Forget self and thing"
@@ -10074,7 +10074,7 @@
   - split: 14
     subIndex: 6
     text: "面壁功深"
-    translated: "Wall‑Buddhing Skill Profound"
+    translated: "Wall-Buddhing Skill Profound"
   - split: 14
     subIndex: 7
     text: "浪迹天涯"
@@ -10151,7 +10151,7 @@
   - split: 13
     subIndex: 3
     text: "七星透骨钉"
-    translated: "Seven‑Star Piercing Bone Needle"
+    translated: "Seven-Star Piercing Bone Needle"
   - split: 13
     subIndex: 4
     text: "暴雨梨花针"
@@ -10167,7 +10167,7 @@
   - split: 13
     subIndex: 7
     text: "银丝网"
-    translated: "Silver‑webbed net"
+    translated: "Silver-webbed net"
   - split: 14
     text: "不老长生"
     translated: "Eternal Youth"
@@ -10270,7 +10270,7 @@
     translated: "Bodhidharma's Staff"
   - split: 14
     text: "轰天震地"
-    translated: "Heaven‑shaking earthquake"
+    translated: "Heaven-shaking earthquake"
   - split: 14
     subIndex: 1
     text: "登峰造极"
@@ -10467,7 +10467,7 @@
   - split: 13
     subIndex: 2
     text: "白虹贯日掌"
-    translated: "Sun‑Piercing White Ribbon Palm"
+    translated: "Sun-Piercing White Ribbon Palm"
   - split: 14
     text: "即身成佛"
     translated: "Buddhahood in This Very Existence"
@@ -10672,7 +10672,7 @@
     translated: "Long Yin Guizang Gong"
   - split: 14
     text: "轰天震地"
-    translated: "Heaven‑shaking earthquake"
+    translated: "Heaven-shaking earthquake"
   - split: 14
     subIndex: 1
     text: "登峰造极"
@@ -10720,7 +10720,7 @@
   splits:
   - split: 1
     text: "中年天.残"
-    translated: "Middle‑aged Tian Can"
+    translated: "Middle-aged Tian Can"
   - split: 2
     text: "男"
     translated: "Man"
@@ -10784,7 +10784,7 @@
   splits:
   - split: 1
     text: "中年地.缺"
-    translated: "Middle‑aged Di Que"
+    translated: "Middle-aged Di Que"
   - split: 2
     text: "男"
     translated: "Man"
@@ -10848,7 +10848,7 @@
   splits:
   - split: 1
     text: "中年南.丑"
-    translated: "Middle‑aged Nan Chou"
+    translated: "Middle-aged Nan Chou"
   - split: 2
     text: "男"
     translated: "Man"
@@ -10912,7 +10912,7 @@
   splits:
   - split: 1
     text: "中年北.怪"
-    translated: "Middle‑aged Bei Guai"
+    translated: "Middle-aged Bei Guai"
   - split: 2
     text: "男"
     translated: "Man"
@@ -11147,7 +11147,7 @@
   splits:
   - split: 1
     text: "中年赵.胤宗"
-    translated: "Middle‑aged Zhao Yinzong"
+    translated: "Middle-aged Zhao Yinzong"
   - split: 2
     text: "男"
     translated: "Man"
@@ -11189,7 +11189,7 @@
     translated: "Long Yin Guizang Gong"
   - split: 14
     text: "轰天震地"
-    translated: "Heaven‑shaking earthquake"
+    translated: "Heaven-shaking earthquake"
   - split: 14
     subIndex: 1
     text: "登峰造极"
@@ -11291,7 +11291,7 @@
   - split: 14
     subIndex: 4
     text: "儒生"
-    translated: "Scholar‑official"
+    translated: "Scholar-official"
   - split: 14
     subIndex: 5
     text: "博览群书"
@@ -11537,7 +11537,7 @@
     translated: "Archery"
   - split: 15
     text: "百步穿针"
-    translated: "Hundred‑step needle piercing"
+    translated: "Hundred-step needle piercing"
   templates:
   - split: 10
     template: "{0}/{1}"

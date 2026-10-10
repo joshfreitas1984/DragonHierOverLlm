@@ -896,7 +896,7 @@
     - dynamicStringsPoetry.txt
     - HorseData.csv
 - raw: 自愈
-  result: Self‑healing
+  result: Self-healing
   exclude:
     - PlotData.csv
     - KungFuData.csv

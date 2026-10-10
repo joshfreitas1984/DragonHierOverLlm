@@ -78,8 +78,8 @@
   - split: 15
     text: "痛饮"
     translated: "Drunken revelry"
-    qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
-    qcTranslated: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high‑quality treasures."
+    qcReviewedText: "<b>Drunken revelry</b>：Consume fine wine to gain corresponding long-term benefits. Drinking with others does not require goodwill, but drinking consumes -20% of the internal resource, and drinking increases goodwill.+20%。\\n<b>Bold bet</b>：You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>：Rewards from the Treasure House can be exchanged for high-quality treasures from the Sect."
+    qcTranslated: "<b>Drunken revelry</b>: Consume fine wine to gain corresponding long-term benefits. Drinking with others does not require goodwill, but drinking consumes -20% of the internal resource, and drinking increases goodwill by +20%.\\n<b>Bold bet</b>: You can gamble anytime to gain extra goodwill, with the number of monthly gambling sessions and bet amounts doubling.\\n<b>Gold dust</b>: In the Gold Dust Treasury, you can exchange Sect merit for high-quality treasures."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: OtherNamedDefect
@@ -89,7 +89,7 @@
   - split: 15
     subIndex: 1
     text: "消耗美酒获取对应长效加成。与他人对饮无好感要求，对饮耗内-20%，对饮好感"
-    translated: "Consume fine wine to gain corresponding long‑term benefits. Drinking with others does not require goodwill, but drinking consumes ‑20% of the internal resource, and drinking increases goodwill."
+    translated: "Consume fine wine to gain corresponding long-term benefits. Drinking with others does not require goodwill, but drinking consumes -20% of the internal resource, and drinking increases goodwill."
   - split: 15
     subIndex: 2
     text: "豪赌"
@@ -105,7 +105,7 @@
   - split: 15
     subIndex: 5
     text: "在销金库可用门派功绩兑换高品质珍宝。"
-    translated: "Rewards from the Treasure House can be exchanged for high‑quality treasures from the Sect."
+    translated: "Rewards from the Treasure House can be exchanged for high-quality treasures from the Sect."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}+20%。\\n<b>{2}</b>：{3}\\n<b>{4}</b>：{5}"
@@ -114,8 +114,8 @@
   - split: 15
     text: "暗器"
     translated: "Hidden Weapon"
-    qcReviewedText: "<b>Hidden Weapon</b>：Studying archery weapons in a dark room to increase Archery Power.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
-    qcTranslated: "<b>Hidden Weapon</b>: Studying archery weapons in a dark room to increase Archery Power.\\n<b>Assassin</b>: In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use Qinggong to evade."
+    qcReviewedText: "<b>Hidden Weapon</b>：Studying archery weapons in a dark room to increase Archery Power.\\n<b>Assassin</b>：In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is -60%. If you are caught by the officials, you can use qinggong to evade."
+    qcTranslated: "<b>Hidden Weapon</b>: Studying archery weapons in a dark room to increase Archery Power.\\n<b>Assassin</b>: In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is -60%. If you are caught by the officials, you can use Qinggong to evade."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: UntranslatedPinyin
@@ -132,7 +132,7 @@
   - split: 15
     subIndex: 3
     text: "在暗室可领取杀手订单。袭击他人和痛下狠手的恶名-60%，被官兵抓捕时可轻功躲避。"
-    translated: "In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is ‑60%. If you are caught by the officials, you can use qinggong to evade."
+    translated: "In the dark room, you can accept hitman orders. Your infamy for attacking others and using brutal force is -60%. If you are caught by the officials, you can use qinggong to evade."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -141,8 +141,8 @@
   - split: 15
     text: "行医"
     translated: "Practice medicine"
-    qcReviewedText: "<b>Practice medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>：Alchemy efficiency +20% and multiple choice elixir ingredients to meet all requirements for crafting enhanced pills.-50%。\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
-    qcTranslated: "<b>Practice medicine</b>: Healing others is not limited by affinity or frequency. Monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>: Alchemy efficiency +20%, allows selecting multiple medicinal ingredients, and reduces all requirements for crafting enhanced pills by ‑50%.\\n<b>Spirit Grove</b>: In the Ten Thousand Flowers Valley, Sect contributions can be exchanged for high‑quality medicinal aids."
+    qcReviewedText: "<b>Practice medicine</b>：Healing others is not limited by affinity or frequency. His monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>：Alchemy efficiency +20% and multiple choice elixir ingredients to meet all requirements for crafting enhanced pills.-50%。\\n<b>Spirit Grove</b>：In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high-quality medicinal aids."
+    qcTranslated: "<b>Practice medicine</b>: Healing others is not limited by affinity or frequency. Monthly clinic visits double, and every healing increases affinity by +20% and grants additional reputation.\\n<b>Miracle medicine</b>: Alchemy efficiency +20%, allows selecting multiple medicinal ingredients, and reduces all requirements for crafting enhanced pills by -50%.\\n<b>Spirit Grove</b>: In the Ten Thousand Flowers Valley, Sect contributions can be exchanged for high-quality medicinal aids."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: OtherNamedDefect
@@ -168,7 +168,7 @@
   - split: 15
     subIndex: 5
     text: "在万花谷可用门派功绩兑换高品质药引。"
-    translated: "In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high‑quality medicinal aids."
+    translated: "In the Ten Thousand Flowers Valley, sect contributions can be exchanged for high-quality medicinal aids."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}-50%。\\n<b>{4}</b>：{5}"
@@ -178,7 +178,7 @@
     text: "铁掌"
     translated: "Iron Palm"
     qcReviewedText: "<b>Iron Palm</b>：The conference stage researches unarmed weapons, enhancing unarmed power.\\n<b>Begging</b>：Consume prestige to beg for silver from others. Requesting items from others consumes goodwill.-40%。"
-    qcTranslated: "<b>Iron Palm</b>: The tournament stage researches unarmed weapons, enhancing Unarmed Power.\\n<b>Begging</b>: Consume prestige to beg for silver from others. Requesting items from others consumes ‑40% goodwill."
+    qcTranslated: "<b>Iron Palm</b>: The tournament stage researches unarmed weapons, enhancing Unarmed Power.\\n<b>Begging</b>: Consume prestige to beg for silver from others. Requesting items from others consumes -40% goodwill."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -204,8 +204,8 @@
   - split: 15
     text: "枪术"
     translated: "Gun combat"
-    qcReviewedText: "<b>Gun combat</b>：Study long weapons at the horse racing track to increase long weapon power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
-    qcTranslated: "<b>Spear Mastery</b>: Study Long weapons at the horse racing track to increase Long weapon Power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases all of the horse's stats by 0.2%."
+    qcReviewedText: "<b>Gun combat</b>：Study long weapons at the horse racing track to increase long weapon power.\\n<b>Horsemanship</b>：Horse taming speed +20%, sprint taming cost -20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    qcTranslated: "<b>Spear Mastery</b>: Study Long weapons at the horse racing track to increase Long weapon Power.\\n<b>Horsemanship</b>: Horse taming speed +20%, sprint taming cost -20%. Every 1% taming increases all of the horse's stats by 0.2%."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: DomainTerm
@@ -223,7 +223,7 @@
   - split: 15
     subIndex: 3
     text: "马匹驯服速率+20%，冲刺驯服度消耗-20%。每1%驯服度提升马匹全属性0.2%。"
-    translated: "Horse taming speed +20%, sprint taming cost ‑20%. Every 1% taming increases the horse's stats by 0.2% fully."
+    translated: "Horse taming speed +20%, sprint taming cost -20%. Every 1% taming increases the horse's stats by 0.2% fully."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -232,8 +232,8 @@
   - split: 15
     text: "符法"
     translated: "Spellcasting"
-    qcReviewedText: "<b>Spellcasting</b>：Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle./Weaken the opposing character \\n<b>Heavenly Thunder</b>：For each level‑up in a Lightning martial art, gain an additional 0.5 based on the quality level of the martial art./1/1.5/2/2.5/3 points of Willpower \\n<b>Dan Yin</b>：In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
-    qcTranslated: "<b>Spellcasting</b>: Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities or weaken the opposing character before battle. \\n<b>Heavenly Thunder</b>: For each level‑up in a Lightning martial art, gain an additional 0.5/1/1.5/2/2.5/3 points of Willpower based on the quality level of the martial art. \\n<b>Dan Yin</b>: In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    qcReviewedText: "<b>Spellcasting</b>：Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities before battle./Weaken the opposing character \\n<b>Heavenly Thunder</b>：For each level-up in a Lightning martial art, gain an additional 0.5 based on the quality level of the martial art./1/1.5/2/2.5/3 points of Willpower \\n<b>Dan Yin</b>：In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
+    qcTranslated: "<b>Spellcasting</b>: Mastery of magical arts unlocks corresponding spell techniques, which can be used to enhance your team's abilities or weaken the opposing character before battle. \\n<b>Heavenly Thunder</b>: For each level-up in a Lightning martial art, gain an additional 0.5/1/1.5/2/2.5/3 points of Willpower based on the quality level of the martial art. \\n<b>Dan Yin</b>: In Huayang Cave, you can refine elixirs to obtain corresponding medicinal guides."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
@@ -255,7 +255,7 @@
   - split: 15
     subIndex: 4
     text: "每满级一门雷电武学，根据武学品级额外提升0.5"
-    translated: "For each level‑up in a Lightning martial art, gain an additional 0.5 based on the quality level of the martial art."
+    translated: "For each level-up in a Lightning martial art, gain an additional 0.5 based on the quality level of the martial art."
   - split: 15
     subIndex: 5
     text: "3点意志。"
@@ -301,7 +301,7 @@
     text: "炼蛊"
     translated: "Incubate poison insects"
     qcReviewedText: "<b>Incubate poison insects</b>：Consume the medicinal herb in the Sea of Venom/Acquiring poison from ingredients yields weaker poisons which can then be fused to obtain stronger, more advanced poisons.\\n<b>Poison Technique</b>：Poisons can be selected from multiple options, and the rate of poison application decreases.-25%。"
-    qcTranslated: "<b>Incubate poison insects</b>: Consume medicinal herbs/ingredients in the Sea of Venom to obtain poisons, and fuse low‑level poisons to obtain powerful high‑level poisons.\\n<b>Poison Technique</b>: You can select multiple poisons for use; equipping a poisoned weapon reduces the rate by ‑25%."
+    qcTranslated: "<b>Incubate poison insects</b>: Consume medicinal herbs/ingredients in the Sea of Venom to obtain poisons, and fuse low-level poisons to obtain powerful high-level poisons.\\n<b>Poison Technique</b>: You can select multiple poisons for use; equipping a poisoned weapon reduces the rate by -25%."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: GarbledNumber
@@ -333,7 +333,7 @@
   - split: 15
     text: "试炼"
     translated: "Trial"
-    qcReviewedText: "<b>Trial</b>：Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>：Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
+    qcReviewedText: "<b>Trial</b>：Challenge the increasingly difficult Ghost Gate trials to obtain progressively stronger Talent effects.\\n<b>Domineering</b>：Infamy for stealing from others and shops: -40%. You can use a Special Technique to force your way out when caught by the authorities."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -348,7 +348,7 @@
   - split: 15
     subIndex: 3
     text: "抢夺他人和商店物品的恶名-40%，被官兵抓捕时可以绝技硬闯。"
-    translated: "Infamy for stealing from others and shops: ‑40%. You can use a Special Technique to force your way out when caught by the authorities."
+    translated: "Infamy for stealing from others and shops: -40%. You can use a Special Technique to force your way out when caught by the authorities."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -356,9 +356,9 @@
   splits:
   - split: 15
     text: "博引"
-    translated: "Wide‑ranging"
-    qcReviewedText: "<b>Wide‑ranging</b>：Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial evidence</b>：Discuss the hand card limit +3, discuss obtaining bonus effects and additional affinity upon victory. The skill requirements for compiling the Secret Manual.-10%。"
-    qcTranslated: "<b>Extensive Citations</b>: Collect Secret Manuals from other Sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial Evidence</b>: The hand card limit for debates is +3; winning a debate grants enhanced effects and additional affinity. The skill requirement for compiling Secret Manuals is ‑10%."
+    translated: "Wide-ranging"
+    qcReviewedText: "<b>Wide-ranging</b>：Collect secret manuals from other sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial evidence</b>：Discuss the hand card limit +3, discuss obtaining bonus effects and additional affinity upon victory. The skill requirements for compiling the Secret Manual.-10%。"
+    qcTranslated: "<b>Extensive Citations</b>: Collect Secret Manuals from other Sects and place them in the Celestial Pavilion to gain corresponding martial arts bonuses.\\n<b>Circumstantial Evidence</b>: The hand card limit for debates is +3; winning a debate grants enhanced effects and additional affinity. The skill requirement for compiling Secret Manuals is -10%."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: LostIdiom
@@ -437,8 +437,8 @@
   - split: 15
     text: "试刀"
     translated: "Test blade"
-    qcReviewedText: "<b>Test blade</b>：The Test Blade Platform studies blade techniques and weapons, enhancing blade technique power.\\n<b>Gourmand</b>：Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
-    qcTranslated: "<b>Test Blade</b>: The Test Blade Platform studies Blade Techniques and weapons, enhancing Blade Technique Power.\\n<b>Gourmand</b>: Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
+    qcReviewedText: "<b>Test blade</b>：The Test Blade Platform studies blade techniques and weapons, enhancing blade technique power.\\n<b>Gourmand</b>：Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long-term bonuses."
+    qcTranslated: "<b>Test Blade</b>: The Test Blade Platform studies Blade Techniques and weapons, enhancing Blade Technique Power.\\n<b>Gourmand</b>: Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long-term bonuses."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: OtherNamedDefect
@@ -455,7 +455,7 @@
   - split: 15
     subIndex: 3
     text: "烹饪效率+20%且可以选用多个食材，消耗佳肴时获取对应长效加成。"
-    translated: "Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long‑term bonuses."
+    translated: "Cooking efficiency +20% and can be used with multiple ingredients. Consuming a delicacy grants corresponding long-term bonuses."
   templates:
   - split: 15
     template: "<b>{0}</b>：{1}\\n<b>{2}</b>：{3}"
@@ -523,8 +523,8 @@
   - split: 15
     text: "奇技"
     translated: "Strange Art"
-    qcReviewedText: "<b>Strange Art</b>：Study the seventy‑two holes of Qimen weapons to enhance Qimen Power.\\n<b>Constant problems</b>：For each advanced Qimen martial art mastered at level cap, gain an additional bonus based on the art's quality level.0.5/1/1.5/2/2.5/3 points of Qimen"
-    qcTranslated: "<b>Strange Art</b>: Study the seventy‑two caves' research on Qimen weapons to enhance Qimen Power.\\n<b>Hundred Failures</b>: For each Qimen martial art mastered at max level, gain an additional .0/.5/1/1.5/2/2.5 points of Qimen based on the art's quality level."
+    qcReviewedText: "<b>Strange Art</b>：Study the seventy-two holes of Qimen weapons to enhance Qimen Power.\\n<b>Constant problems</b>：For each advanced Qimen martial art mastered at level cap, gain an additional bonus based on the art's quality level.0.5/1/1.5/2/2.5/3 points of Qimen"
+    qcTranslated: "<b>Strange Art</b>: Study the seventy-two caves' research on Qimen weapons to enhance Qimen Power.\\n<b>Hundred Failures</b>: For each Qimen martial art mastered at max level, gain an additional .0/.5/1/1.5/2/2.5 points of Qimen based on the art's quality level."
     qcStatus: Corrected
     qcQualityScore: 92
     qcDefectCategory: GarbledNumber
@@ -534,7 +534,7 @@
   - split: 15
     subIndex: 1
     text: "七十二洞研究奇门兵器，提升奇门威力。"
-    translated: "Study the seventy‑two holes of Qimen weapons to enhance Qimen Power."
+    translated: "Study the seventy-two holes of Qimen weapons to enhance Qimen Power."
   - split: 15
     subIndex: 2
     text: "百出"
@@ -654,8 +654,8 @@
   - split: 15
     text: "玄冰"
     translated: "Xuanbing"
-    qcReviewedText: "<b>Xuanbing</b>：Enhance Tianshan Sect martial arts and Chill techniques by condensing Mystic Ice.\\n<b>Chill</b>：For each level‑up in a Chill martial art technique, gain an additional 2 based on the quality grade of the technique./4/6/8/10/12 Max Inner Power"
-    qcTranslated: "<b>Xuanbing</b>: Enhance Tianshan Sect martial arts and Chill techniques by condensing Mystic Ice.\\n<b>Chill</b>: For each level‑up in a Chill martial art technique, gain an additional 2/4/6/8/10/12 Max Inner Power based on the quality grade of the technique."
+    qcReviewedText: "<b>Xuanbing</b>：Enhance Tianshan Sect martial arts and Chill techniques by condensing Mystic Ice.\\n<b>Chill</b>：For each level-up in a Chill martial art technique, gain an additional 2 based on the quality grade of the technique./4/6/8/10/12 Max Inner Power"
+    qcTranslated: "<b>Xuanbing</b>: Enhance Tianshan Sect martial arts and Chill techniques by condensing Mystic Ice.\\n<b>Chill</b>: For each level-up in a Chill martial art technique, gain an additional 2/4/6/8/10/12 Max Inner Power based on the quality grade of the technique."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
@@ -672,7 +672,7 @@
   - split: 15
     subIndex: 3
     text: "每满级一门冰寒武学，根据武学品级额外提升2"
-    translated: "For each level‑up in a Chill martial art technique, gain an additional 2 based on the quality grade of the technique."
+    translated: "For each level-up in a Chill martial art technique, gain an additional 2 based on the quality grade of the technique."
   - split: 15
     subIndex: 4
     text: "12点内力上限。"

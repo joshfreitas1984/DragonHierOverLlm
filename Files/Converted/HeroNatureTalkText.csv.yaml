@@ -123,8 +123,8 @@
     qcDefectCategory: None
   - split: 7
     text: "#PlayerName#，我这招式随手使出，可有几分潇洒自如之意啊？"
-    translated: "#PlayerName#, with this move, I've just let it flow naturally‑does it have a bit of grace to it?"
-    qcReviewedText: "#PlayerName#, with this move, I've just let it flow naturally‑does it have a bit of grace to it?"
+    translated: "#PlayerName#, with this move, I've just let it flow naturally-does it have a bit of grace to it?"
+    qcReviewedText: "#PlayerName#, with this move, I've just let it flow naturally-does it have a bit of grace to it?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -698,8 +698,8 @@
     qcDefectCategory: None
   - split: 8
     text: "窈窕淑女，君子好逑，如此风雅之事，又何罪之有？"
-    translated: "A gentleman admires the virtuous and graceful lady‑what crime is there in such refined pursuits?"
-    qcReviewedText: "A gentleman admires the virtuous and graceful lady‑what crime is there in such refined pursuits?"
+    translated: "A gentleman admires the virtuous and graceful lady-what crime is there in such refined pursuits?"
+    qcReviewedText: "A gentleman admires the virtuous and graceful lady-what crime is there in such refined pursuits?"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -712,8 +712,8 @@
     qcDefectCategory: None
   - split: 10
     text: "江湖中所谓知己好友，大多是酒肉之交，相互利用罢了。"
-    translated: "In the Jianghu, so‑called close friends are mostly acquaintances who use each other for their own benefit."
-    qcReviewedText: "In the Jianghu, so‑called close friends are mostly acquaintances who use each other for their own benefit."
+    translated: "In the Jianghu, so-called close friends are mostly acquaintances who use each other for their own benefit."
+    qcReviewedText: "In the Jianghu, so-called close friends are mostly acquaintances who use each other for their own benefit."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -877,8 +877,8 @@
     qcDefectCategory: None
   - split: 10
     text: "时无英雄，使竖子成名，当下江湖所谓名门高手，实则大多酒囊饭袋而已。"
-    translated: "When there are no heroes in the world, it allows upstarts to gain fame. In truth, most of the so‑called high‑ranking experts in today's Jianghu are little more than wine bellies and gluttons."
-    qcReviewedText: "When there are no heroes in the world, it allows upstarts to gain fame. In truth, most of the so‑called high‑ranking experts in today's Jianghu are little more than wine bellies and gluttons."
+    translated: "When there are no heroes in the world, it allows upstarts to gain fame. In truth, most of the so-called high-ranking experts in today's Jianghu are little more than wine bellies and gluttons."
+    qcReviewedText: "When there are no heroes in the world, it allows upstarts to gain fame. In truth, most of the so-called high-ranking experts in today's Jianghu are little more than wine bellies and gluttons."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

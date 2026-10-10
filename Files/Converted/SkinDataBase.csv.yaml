@@ -92,7 +92,7 @@
   splits:
   - split: 1
     text: "避毒服"
-    translated: "Poison‑proof suit"
+    translated: "Poison-proof suit"
 - raw: "8,铁衣,力道2,-1"
   splits:
   - split: 1
@@ -142,7 +142,7 @@
   splits:
   - split: 1
     text: "火浣布"
-    translated: "Fire‑borne cloth"
+    translated: "Fire-borne cloth"
 - raw: "18,羌姆袍,绝技2,-1"
   splits:
   - split: 1
