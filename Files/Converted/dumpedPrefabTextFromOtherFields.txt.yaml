@@ -69,6 +69,10 @@
   splits:
   - text: "（#PlotTargetInteractName0#这家伙，估计是想要赖账不还了，只是不知该如何打发这个债主啊......）"
     translated: "(That #PlotTargetInteractName0# is probably planning to renege on the debt. I just don't know how to deal with this creditor......)"
+    qcReviewedText: "(That #PlotTargetInteractName0# is probably planning to renege on the debt. I just don't know how to deal with this creditor......)"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "（啊这...本门这些院落若全部打扫一遍，非得花上三日不可。\\n只是妄加推辞的话，怕掌门那儿又说不过去。）"
   splits:
   - text: "（啊这...本门这些院落若全部打扫一遍，非得花上三日不可。"
@@ -115,6 +119,10 @@
   splits:
   - text: "#$PlayerName#凭借着此番功业，在江湖史册中留下了浓墨重彩的一笔。"
     translated: "#$PlayerName#, through this feat, left a vivid mark in the annals of Jianghu."
+    qcReviewedText: "#$PlayerName#, through this feat, left a vivid mark in the annals of Jianghu."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#$PlayerName#凭借着此番功业，将姓名篆刻到了凌烟阁之上。"
   splits:
   - text: "#$PlayerName#凭借着此番功业，将姓名篆刻到了凌烟阁之上。"
@@ -272,6 +280,10 @@
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
     translated: "#PlayerForceDescribe# #$PlayerName# has committed heinous crimes; everyone in the Jianghu is justified in killing them."
+    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# has committed heinous crimes; everyone in the Jianghu is justified in killing them."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
@@ -1646,6 +1658,13 @@
   splits:
   - text: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你"
     translated: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will..."
+    qcReviewedText: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will...<b>Hurry back to the sect </b>Confer on important matters!"
+    qcTranslated: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will <b>hurry back to the sect</b> to confer on important matters!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "尽快回门派"
     translated: "Hurry back to the sect"
@@ -1886,6 +1905,14 @@
   splits:
   - text: "我们兄弟三个在"
     translated: "We three brothers are"
+    qcReviewedText: "We three brothers are <b>Jinyang </b>The trail of the thief Gao Shou has been found! #PlayerName#, please come quickly and help catch the thief!"
+    qcTranslated: "We three brothers have found the trail of the thief Gao Shou in <b>Jinyang</b>. Please come quickly, #PlayerName#, and help us catch him!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "晋阳"
     translated: "Jinyang"
@@ -3738,6 +3765,10 @@
   splits:
   - text: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在"
     translated: "#PlayerName#, we have chased the villain Lu Yulin all the way, and now, in the"
+    qcReviewedText: "#PlayerName#, we have chased the villain Lu Yulin all the way, and now, in the <b>Northern Yingtian </b>Area, we have managed to intercept the culprit.\\nI look forward to your help in apprehending this person!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "应天北方"
     translated: "Northern Yingtian"
@@ -7222,6 +7253,10 @@
   splits:
   - text: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
     translated: "It is said that due to #PlayerForceDescribe# #$PlayerName#'s service in protecting the emperor during Xiao Zhuge's rebellion, the current emperor has specially allowed them to investigate within the palace."
+    qcReviewedText: "It is said that due to #PlayerForceDescribe# #$PlayerName#'s service in protecting the emperor during Xiao Zhuge's rebellion, the current emperor has specially allowed them to investigate within the palace."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
   splits:
   - text: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"

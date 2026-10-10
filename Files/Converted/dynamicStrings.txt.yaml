@@ -3406,6 +3406,10 @@
   splits:
   - text: "#PlayerName#需与我切磋取胜，方可证明自己堪当掌门重任。"
     translated: "#PlayerName#, you must defeat me in a sparring match to prove yourself worthy of becoming the Sect Leader."
+    qcReviewedText: "#PlayerName#, you must defeat me in a sparring match to prove yourself worthy of becoming the Sect Leader.\nHow can I, the Sect Leader, face you with my old wounds not fully healed and in poor condition. #PlayerName#, you should wait until I have healed before coming back."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "奈何掌门我近来旧伤未愈，状态不佳，#PlayerName#还是等我养好伤再来吧。"
     translated: "How can I, the Sect Leader, face you with my old wounds not fully healed and in poor condition. #PlayerName#, you should wait until I have healed before coming back."
@@ -5135,6 +5139,10 @@
   splits:
   - text: "#TargetInteractName#适才真气紊乱，在此处狂呼乱舞，"
     translated: "#TargetInteractName# just now had chaotic True Qi and was wildly flailing about here."
+    qcReviewedText: "#TargetInteractName# just now had chaotic True Qi and was wildly flailing about here.\nI happened to witness it and intervened to save you."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我正巧撞见，便出手将你救下了。"
     translated: "I happened to witness it and intervened to save you."
@@ -24277,6 +24285,10 @@
   splits:
   - text: "哎，江湖凶险，世事无常。"
     translated: "Alas, the Jianghu is perilous, and the world is ever-changing."
+    qcReviewedText: "Alas, the Jianghu is perilous, and the world is ever-changing.\n#TargetInteractName# being able to retire from the martial world today and leave unharmed is also a fortunate event.\nI have come today especially to see you off!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "#TargetInteractName#今日能够金盆洗手，全身而退，也不失为一桩喜事。"
     translated: "#TargetInteractName# being able to retire from the martial world today and leave unharmed is also a fortunate event."
@@ -44776,6 +44788,10 @@
   splits:
   - text: "此前一战，#PlayerName#以一己之力，力抗阎罗殿众高手。"
     translated: "In the previous battle, #PlayerName# alone faced off against the many experts of Yama Hall."
+    qcReviewedText: "In the previous battle, #PlayerName# alone faced off against the many experts of Yama Hall.\nIf my fellow brothers could join your sect, they would thrive and fully realize their potential."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "我聚义弟子若能拜入你的门下，定能如鱼得水，大展拳脚。"
     translated: "If my fellow brothers could join your sect, they would thrive and fully realize their potential."
@@ -65830,6 +65846,10 @@
   splits:
   - text: "（无趣）哎，食之无味弃之可惜，"
     translated: "(Bored) Ah, it's tasteless yet hard to discard."
+    qcReviewedText: "(Bored) Ah, it's tasteless yet hard to discard.\nConsidering #SourceInteractName#'s sake, I managed to force a few drinks down."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "看在#SourceInteractName#面子上，还算勉强喝了几杯。"
     translated: "Considering #SourceInteractName#'s sake, I managed to force a few drinks down."

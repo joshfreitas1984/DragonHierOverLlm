@@ -47,6 +47,13 @@
   splits:
   - text: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你"
     translated: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will..."
+    qcReviewedText: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will...<b>Hurry back to the sect </b>Confer on important matters!"
+    qcTranslated: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will <b>hurry back to the sect</b> to confer on important matters!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
   - subIndex: 1
     text: "尽快回门派"
     translated: "Hurry back to the sect"
@@ -288,6 +295,14 @@
   splits:
   - text: "我们兄弟三个在"
     translated: "We three brothers are"
+    qcReviewedText: "We three brothers are <b>Jinyang </b>The trail of the thief Gao Shou has been found! #PlayerName#, please come quickly and help catch the thief!"
+    qcTranslated: "We three brothers have found the trail of the thief Gao Shou in <b>Jinyang</b>. Please come quickly, #PlayerName#, and help us catch him!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "晋阳"
     translated: "Jinyang"
@@ -2138,6 +2153,10 @@
   splits:
   - text: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在"
     translated: "#PlayerName#, we have chased the villain Lu Yulin all the way, and now, in the"
+    qcReviewedText: "#PlayerName#, we have chased the villain Lu Yulin all the way, and now, in the <b>Northern Yingtian </b>Area, we have managed to intercept the culprit.\nI look forward to your help in apprehending this person!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "应天北方"
     translated: "Northern Yingtian"
