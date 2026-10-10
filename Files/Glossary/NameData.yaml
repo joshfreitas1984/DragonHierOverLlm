@@ -2915,7 +2915,7 @@
   only: 
     - NameData.csv 
 - raw: 落
-  result: La
+  result: Luo
   badtrans: false
   only: 
     - NameData.csv 

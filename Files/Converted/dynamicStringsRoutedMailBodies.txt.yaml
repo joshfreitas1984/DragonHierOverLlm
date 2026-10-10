@@ -2009,16 +2009,17 @@
   splits:
   - text: "#PlayerName#，皇天不负苦心人，咱兄弟三终于在"
     translated: "#PlayerName#, heaven does not forsake those who work hard, our three brothers have finally made it in the end."
-    qcReviewedText: "#PlayerName#, heaven does not forsake those who work hard, our three brothers have finally made it in the end.<b>Hanoi Township </b>Found the traces of Murong Xingchen again\nI implore you to come as soon as possible so we can apprehend her together!"
-    qcTranslated: "#PlayerName#, heaven does not forsake those who work hard, our three brothers have finally found the traces of Murong Xingchen again in <b>Hanoi Township</b>. I implore you to come as soon as possible so we can apprehend her together!"
+    qcReviewedText: "#PlayerName#, heaven does not forsake those who work hard, our three brothers have finally made it in the end.<b>Henei Township </b>Found the traces of Murong Xingchen again\nI implore you to come as soon as possible so we can apprehend her together!"
+    qcTranslated: "#PlayerName#, heaven does not forsake those who work hard, our three brothers have finally found the traces of that wretched woman Murong Xingchen again in <b>Henei Township</b>. I implore you to come as soon as possible so we can apprehend her together!"
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "河内乡"
-    translated: "Hanoi Township"
+    translated: "Henei Township"
   - subIndex: 2
     text: "又找着了慕容星辰那贼婆娘的踪迹。"
     translated: "Found the traces of Murong Xingchen again"

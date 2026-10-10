@@ -55,10 +55,8 @@
   result: Meridians
   allowalt: 
     - Meridian
-    - KungFuData.csv
   exclude:
     - PlotData.csv
-    - KungFuData.csv
     - BuildingData.csv
     - dynamicStringsPoetry.txt
     - HorseData.csv
@@ -928,7 +926,7 @@
     - dynamicStringsPoetry.txt
     - HorseData.csv
 - raw: 护腹
-  result: Guard Waist
+  result: Guard Abdomen
   exclude:
     - PlotData.csv
     - KungFuData.csv
@@ -936,7 +934,7 @@
     - dynamicStringsPoetry.txt
     - HorseData.csv
 - raw: 护手
-  result: Guard Wrist
+  result: Guard Hand
   exclude:
     - PlotData.csv
     - KungFuData.csv

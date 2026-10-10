@@ -9,7 +9,7 @@
 - raw: 钱庄
   result: Bank
 - raw: "侠盗四奇"
-  result: "Four Legendary Thieves"
+  result: "Four Extraordinary Chivalrous Thieves"
 - raw: 小翼子
   result: "Little Yizi"
 - raw: 雷大小姐
@@ -140,8 +140,6 @@
 
 - raw: 奇门
   result: Qimen
-  allowalt:
-    - Unorthodox
 - raw: 奇门术士
   result: Qimen Practitioner
 - raw: 奇门遁甲

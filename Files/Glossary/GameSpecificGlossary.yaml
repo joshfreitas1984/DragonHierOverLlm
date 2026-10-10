@@ -69,7 +69,7 @@
 - raw: 陇西县
   result: Longxi County
 - raw: 河内乡
-  result: Hanoi Township
+  result: Henei Township
 - raw: 昌都镇
   result: Qamdo Town
 - raw: 巴陵村
@@ -734,7 +734,7 @@
 - raw: 竹叶青
   rawSimplified: 竹叶青
   rawTraditional: 竹葉青
-  result: Bamboo Leaf Tea
+  result: Zhuyeqing Wine
 - raw: 外门弟子
   rawSimplified: 外门弟子
   rawTraditional: 外門弟子
@@ -747,6 +747,16 @@
   rawSimplified: 正式弟子
   rawTraditional: 正式弟子
   result: "Formal Disciple"
+- raw: 入门弟
+  rawSimplified: 入门弟
+  rawTraditional: 入門弟
+  result: "Initiate Disciple"
+  allowalt:
+  - Novice Disciple
+- raw: 亲传弟子
+  rawSimplified: 亲传弟子
+  rawTraditional: 親傳弟子
+  result: "Direct Disciple"
 - raw: 河图
   rawSimplified: 河图
   rawTraditional: 河圖

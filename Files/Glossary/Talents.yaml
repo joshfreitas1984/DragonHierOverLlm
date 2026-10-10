@@ -207,7 +207,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 焚身烈焰
-  result: Burning Corpse Flame
+  result: Body-Burning Flame
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 内息冰寒
@@ -319,7 +319,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 力降十会
-  result: Reduce Strength by Ten Levels
+  result: Strength Overcomes Ten Skills
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 术精岐黄
@@ -471,7 +471,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 愚钝
-  result: Clumsy
+  result: Dull-witted
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 傻头傻脑
@@ -543,7 +543,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 滞脉
-  result: Obstructed Pulse
+  result: Stagnant Meridians
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 脉络阻塞
@@ -551,7 +551,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 经脉断绝
-  result: Meridian blockage  
+  result: Severed Meridians
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 正直
@@ -876,7 +876,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 位极人臣
-  result: Reaching the pinnacle of human nobility
+  result: Rising to the Highest Ministerial Rank
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 杂学
@@ -920,11 +920,11 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 道士
-  result: Taoist priest
+  result: Daoist priest
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 仙风道骨
-  result: Hermitic grace and Taoist bone structure
+  result: Hermitic grace and Daoist bone structure
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 学佛
@@ -996,7 +996,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 食客
-  result: Customer
+  result: Gourmand
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 大快朵颐
@@ -1118,7 +1118,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 云游
-  result: Wandering Cloud Edge
+  result: Wandering Afar
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 游山玩水
@@ -1336,7 +1336,7 @@
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 机关木臂
-  result: Mechanism Arm
+  result: Mechanism Wooden Arm
   only: 
     - dynamicStringsFromColumns.txt
 - raw: 机关石臂

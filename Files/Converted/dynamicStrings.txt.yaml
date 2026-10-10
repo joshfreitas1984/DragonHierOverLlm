@@ -21737,8 +21737,8 @@
 - raw: "吕天行"
   splits:
   - text: "吕天行"
-    translated: "Lu Tianxiang"
-    qcReviewedText: "Lu Tianxiang"
+    translated: "Lu Tianxing"
+    qcReviewedText: "Lu Tianxing"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -21753,8 +21753,8 @@
 - raw: "吕寻峰"
   splits:
   - text: "吕寻峰"
-    translated: "Lu Xinfeng"
-    qcReviewedText: "Lu Xinfeng"
+    translated: "Lu Xunfeng"
+    qcReviewedText: "Lu Xunfeng"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -33530,8 +33530,8 @@
 - raw: "崔命官"
   splits:
   - text: "崔命官"
-    translated: "Cui Minguan"
-    qcReviewedText: "Cui Minguan"
+    translated: "Cui Mingguan"
+    qcReviewedText: "Cui Mingguan"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -33766,8 +33766,8 @@
 - raw: "已习得千斤坠"
   splits:
   - text: "已习得千斤坠"
-    translated: "Have learned Gravitational Pull"
-    qcReviewedText: "Have learned Gravitational Pull"
+    translated: "Have learned Thousand-Catty Drop"
+    qcReviewedText: "Have learned Thousand-Catty Drop"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -34243,8 +34243,8 @@
 - raw: "常无白"
   splits:
   - text: "常无白"
-    translated: "Cang Wubai"
-    qcReviewedText: "Cang Wubai"
+    translated: "Chang Wubai"
+    qcReviewedText: "Chang Wubai"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -35283,8 +35283,8 @@
 - raw: "徐不平"
   splits:
   - text: "徐不平"
-    translated: "Xu Boping"
-    qcReviewedText: "Xu Boping"
+    translated: "Xu Buping"
+    qcReviewedText: "Xu Buping"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -60053,8 +60053,8 @@
 - raw: "这千斤坠乃绝技筑基之法，还望你好生参悟。\n待功力大成之后，方能修习更高深之武学。"
   splits:
   - text: "这千斤坠乃绝技筑基之法，还望你好生参悟。"
-    translated: "This Gravitational Pull is a Special Technique for Foundation Establishment; I hope you study it diligently."
-    qcReviewedText: "This Gravitational Pull is a Special Technique for Foundation Establishment; I hope you study it diligently.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
+    translated: "This Thousand-Catty Drop is a special technique for Foundation Establishment; I hope you study it well."
+    qcReviewedText: "This Thousand-Catty Drop is a special technique for Foundation Establishment; I hope you study it well.\nOnly after one's cultivation is complete can they practice more advanced martial arts."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

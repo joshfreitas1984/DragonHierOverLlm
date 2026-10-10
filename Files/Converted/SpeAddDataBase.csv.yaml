@@ -4164,8 +4164,8 @@
   splits:
   - split: 3
     text: "护腹"
-    translated: "Guard Waist"
-    qcReviewedText: "Guard Waist"
+    translated: "Guard Abdomen"
+    qcReviewedText: "Guard Abdomen"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4187,8 +4187,8 @@
   splits:
   - split: 3
     text: "护手"
-    translated: "Guard Wrist"
-    qcReviewedText: "Guard Wrist"
+    translated: "Guard Hand"
+    qcReviewedText: "Guard Hand"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

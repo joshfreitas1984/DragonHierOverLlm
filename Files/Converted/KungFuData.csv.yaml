@@ -3240,8 +3240,8 @@
   splits:
   - split: 4
     text: "孔雀翎毛编织而成的羽扇，内藏毒针，发动之时，四射飞散，如孔雀开屏，斑斓炫目"
-    translated: "A feather fan woven from peacock feathers, containing poisonous needles that scatter outward when activated, resembling a peacock spreading its tail, vibrant and eye-catching."
-    qcReviewedText: "A feather fan woven from peacock feathers, containing poisonous needles that scatter outward when activated, resembling a peacock spreading its tail, vibrant and eye-catching."
+    translated: "A feather fan woven from peacock plumes, concealing poison needles that scatter in all directions when activated, spreading like a peacock's tail, dazzling and colorful."
+    qcReviewedText: "A feather fan woven from peacock plumes, concealing poison needles that scatter in all directions when activated, spreading like a peacock's tail, dazzling and colorful."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -7161,8 +7161,8 @@
   splits:
   - split: 4
     text: "仿张果老倒骑驴，倒着向后奔跑纵跃之法，可避开迎面之攻势"
-    translated: "Copy the method of backward running and jumping like Mr. Zhang Guolao riding a donkey backwards, to avoid attacks coming from the front."
-    qcReviewedText: "Copy the method of backward running and jumping like Mr. Zhang Guolao riding a donkey backwards, to avoid attacks coming from the front."
+    translated: "Using Zhang Guolao's method of riding the donkey backwards, run and leap backward to avoid oncoming attacks."
+    qcReviewedText: "Using Zhang Guolao's method of riding the donkey backwards, run and leap backward to avoid oncoming attacks."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

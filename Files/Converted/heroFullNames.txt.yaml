@@ -73,7 +73,7 @@
 - raw: "徐不平"
   splits:
   - text: "徐不平"
-    translated: "Xu Boping"
+    translated: "Xu Buping"
 - raw: "赵破虏"
   splits:
   - text: "赵破虏"
@@ -117,7 +117,7 @@
 - raw: "崔命官"
   splits:
   - text: "崔命官"
-    translated: "Cui Minguan"
+    translated: "Cui Mingguan"
 - raw: "孟婆娑"
   splits:
   - text: "孟婆娑"
@@ -129,7 +129,7 @@
 - raw: "常无白"
   splits:
   - text: "常无白"
-    translated: "Cang Wubai"
+    translated: "Chang Wubai"
 - raw: "牛头"
   splits:
   - text: "牛头"
@@ -185,7 +185,7 @@
 - raw: "吕寻峰"
   splits:
   - text: "吕寻峰"
-    translated: "Lu Xinfeng"
+    translated: "Lu Xunfeng"
 - raw: "庄晓梦"
   splits:
   - text: "庄晓梦"
@@ -481,7 +481,7 @@
 - raw: "吕天行"
   splits:
   - text: "吕天行"
-    translated: "Lu Tianxiang"
+    translated: "Lu Tianxing"
 - raw: "何足道"
   splits:
   - text: "何足道"

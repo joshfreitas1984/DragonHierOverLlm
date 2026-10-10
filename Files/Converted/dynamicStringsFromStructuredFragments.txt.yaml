@@ -3705,13 +3705,13 @@
   splits:
   - text: "绝技"
     translated: "Special Technique"
-    qcReviewedText: "Special Technique Gravitational pull"
+    qcReviewedText: "Special Technique Thousand-Catty Drop"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "千斤坠"
-    translated: "Gravitational pull"
+    translated: "Thousand-Catty Drop"
   templates:
   - template: "{0} {1}"
 - raw: "绝技硬闯"

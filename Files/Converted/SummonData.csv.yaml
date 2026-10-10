@@ -33,27 +33,27 @@
   splits:
   - split: 1
     text: "木流马"
-    translated: "Tree Flow Horse"
+    translated: "Wooden Flowing Horse"
 - raw: "2,青铜奔牛,1,20,1.2,3,6;2,SpeEffect/振波土石,FALSE"
   splits:
   - split: 1
     text: "青铜奔牛"
-    translated: "Bronze Running Bull"
+    translated: "Bronze Charging Bull"
 - raw: "3,玉石麒麟,2,35,1,4,6;3,SpeEffect/振波土石,FALSE"
   splits:
   - split: 1
     text: "玉石麒麟"
-    translated: "Jasper qilin"
+    translated: "Jade Qilin"
 - raw: "4,燎原朱雀,3,60,1,6,0;4,Eagle,FALSE"
   splits:
   - split: 1
     text: "燎原朱雀"
-    translated: "Prickly Heat Phoenix"
+    translated: "Prairie Fire Vermilion Bird"
 - raw: "5,地动青龙,4,75,0.9,5,0;5,SpeEffect/龙吼,FALSE"
   splits:
   - split: 1
     text: "地动青龙"
-    translated: "Earthquake Dragon Qinglong"
+    translated: "Earthquake Azure Dragon"
 - raw: "6,分舵,4,300,1.5,0,7,WoodenSummonAttack,TRUE"
   splits:
   - split: 1
@@ -68,7 +68,7 @@
   splits:
   - split: 1
     text: "公输遗匣"
-    translated: "Cao Shu's Legacy Box"
+    translated: "Gongshu Legacy Box"
 - raw: "9,总舵,5,500,2,0,7;8;10,WoodenSummonAttack,TRUE"
   splits:
   - split: 1
