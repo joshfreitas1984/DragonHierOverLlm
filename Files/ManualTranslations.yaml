@@ -239,4 +239,6 @@
 - raw: "老夫在此打扫战场，随后再打道回府。"
   result: "This old man will clean up the battlefield here, then head back home."
 - raw: "这四枚牵丝蛊，一枚用于研制“神药”，一枚用在了思中澜身上，"
-  result: "Of these four Thread-Pulling Gu, one was used to develop the \"Divine Medicine\", and one was used on Si Zhonglan,"
+  result: "Of these four Thread-Pulling Gu, one was used to develop the 'Divine Medicine', and one was used on Si Zhonglan,"
+- raw: "全他妈是唬人的！也就你们这群猪脑子！"
+  result: "Total bullshit! Only a bunch of pig-brains like you would fall for it!"
