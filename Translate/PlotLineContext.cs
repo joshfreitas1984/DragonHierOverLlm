@@ -24,7 +24,7 @@ namespace Tests
         private const string FemaleHint = "Context: the omitted subject of this stage direction is the speaker, a female character. Refer to her as she/her where a pronoun is needed. A name or pronoun in the text refers to whoever it names.";
         private const string PlayerHint = "Context: the omitted subject of this stage direction is the player, whose gender is unknown. Write \"you\" or leave the subject out; never he or she.";
         private const string UnknownHint = "Context: the gender of the omitted subject of this stage direction is unknown. Use \"they\" or leave the subject out; never he or she.";
-        private const string NarrationHint = "Context: this is narration addressed to the player. Write \"you\" or leave the subject out; never \"I\".";
+        private const string NarrationHint = "Context: this is narration addressed to the player. Write \"you\" or leave the subject out; never \"I\". The gender of anyone not named in the text is unknown, so refer to them as \"they\"/\"their\" or by their role (\"the hero\"), never he, she, his, her or him.";
 
         private const string TokenHint = "Context: the placeholder tokens in this line (such as #PlayerName#) stand for people whose gender is unknown, often the player. Refer to them as \"you\" or \"they\"; never he, she, his, her or him.";
 
@@ -186,7 +186,8 @@ namespace Tests
         /// <summary>Reads 名字 and 性别 from SpeHeroData.csv. Names are stored with a "." between family and given name; plot rows omit it.</summary>
         public static IReadOnlyDictionary<string, string> LoadHeroGenders(string workingDirectory)
         {
-            var genders = new Dictionary<string, string>();
+            // Characters outside SpeHeroData (historical figures the story mentions) listed by hand; the game's own data wins.
+            var genders = CharacterContext.FromYaml(Path.Combine(workingDirectory, "CharacterGenders.yaml")).ToDictionary(c => c.Key, c => c.Value == LineContext.Male ? "男" : "女");
             var path = Path.Combine(workingDirectory, "Raw", "Dumped", "GameData", "SpeHeroData.csv");
             if (!File.Exists(path))
                 return genders;

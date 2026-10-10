@@ -1,0 +1,64 @@
+# Named characters that are not in SpeHeroData.csv. Heroes come from that file (it wins over this one).
+# Temp NPCs (临时:name&gender;...) carry their gender in PlotData's 角色 columns; only individually named ones whose
+# gender is the same in every scene are listed here. Generic roles (村民, 渔夫, 强盗首领...) are deliberately left out.
+- name: 李世民
+  englishName: Li Shimin
+  gender: male
+  aliases:
+  - 唐太宗
+  evidence: Emperor Taizong of Tang, a historical man (confirmed by the project owner).
+- name: 万掌门
+  englishName: Sect Leader Wan
+  gender: male
+  evidence: Title of 万仞山 (SpeHeroData, 男, 聚义门掌门).
+- name: 朱大户
+  englishName: Zhu Dahu
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 张大户
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 牛富户
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 张广儿
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 周进
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 钱捕头
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 赵京娘
+  gender: female
+  evidence: PlotData 临时 NPC &女 (all scenes)
+- name: 金大坚
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 牛二
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 江老大
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 江老三
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 江老七
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 江十二
+  gender: male
+  evidence: PlotData 临时 NPC &男
+- name: 莺莺
+  gender: female
+  evidence: PlotData 临时 NPC &女
+- name: 燕燕
+  gender: female
+  evidence: PlotData 临时 NPC &女
+- name: 宝光大师
+  gender: male
+  aliases:
+  - 宝光方丈
+  evidence: PlotData 临时 NPC &男 (both titles)

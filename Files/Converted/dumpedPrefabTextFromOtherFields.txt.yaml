@@ -68,14 +68,7 @@
 - raw: "（#PlotTargetInteractName0#这家伙，估计是想要赖账不还了，只是不知该如何打发这个债主啊......）"
   splits:
   - text: "（#PlotTargetInteractName0#这家伙，估计是想要赖账不还了，只是不知该如何打发这个债主啊......）"
-    translated: "(#PlotTargetInteractName0# This guy is probably trying to avoid paying his debt, but I wonder how I should deal with this creditor...)"
-    qcReviewedText: "(#PlotTargetInteractName0# This guy is probably trying to avoid paying his debt, but I wonder how I should deal with this creditor...)"
-    qcTranslated: "(#PlotTargetInteractName0# This guy is probably trying to avoid paying his debt, but I wonder how he should deal with this creditor...)"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    translated: "(That #PlotTargetInteractName0# is probably planning to renege on the debt. I just don't know how to deal with this creditor......)"
 - raw: "（啊这...本门这些院落若全部打扫一遍，非得花上三日不可。\\n只是妄加推辞的话，怕掌门那儿又说不过去。）"
   splits:
   - text: "（啊这...本门这些院落若全部打扫一遍，非得花上三日不可。"
@@ -121,11 +114,7 @@
 - raw: "#$PlayerName#凭借着此番功业，在江湖史册中留下了浓墨重彩的一笔。"
   splits:
   - text: "#$PlayerName#凭借着此番功业，在江湖史册中留下了浓墨重彩的一笔。"
-    translated: "#$PlayerName# achieved such feats that he left a vivid chapter in the annals of Jianghu."
-    qcReviewedText: "#$PlayerName# achieved such feats that he left a vivid chapter in the annals of Jianghu."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#$PlayerName#, through this feat, left a vivid mark in the annals of Jianghu."
 - raw: "#$PlayerName#凭借着此番功业，将姓名篆刻到了凌烟阁之上。"
   splits:
   - text: "#$PlayerName#凭借着此番功业，将姓名篆刻到了凌烟阁之上。"
@@ -282,11 +271,7 @@
 - raw: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#犯下了滔天罪行，江湖中人人得而诛之。"
-    translated: "#PlayerForceDescribe# #$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
-    qcReviewedText: "#PlayerForceDescribe# #$PlayerName# committed heinous crimes, and every person in the Jianghu deserves to punish him."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "#PlayerForceDescribe# #$PlayerName# has committed heinous crimes; everyone in the Jianghu is justified in killing them."
 - raw: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
   splits:
   - text: "#PlayerForceDescribe##$PlayerName#自继任#PlayerForceName#掌门之位后，"
@@ -1660,14 +1645,7 @@
 - raw: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你<b>尽快回门派</b>商议大事！"
   splits:
   - text: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你"
-    translated: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will receive him kindly."
-    qcReviewedText: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will receive him kindly.<b>Hurry back to the sect </b>Confer on important matters!"
-    qcTranslated: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will <b>return to the sect as soon as possible</b> to confer on important matters!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will..."
   - subIndex: 1
     text: "尽快回门派"
     translated: "Hurry back to the sect"
@@ -1908,20 +1886,12 @@
   splits:
   - text: "我们兄弟三个在"
     translated: "We three brothers are"
-    qcReviewedText: "We three brothers are <b>Jinyang </b>Found the trail of that thief Gao Shou; I hope #PlayerName# comes quickly to help apprehend him!"
-    qcTranslated: "We three brothers found the trail of that thief Gao Shou in <b>Jinyang</b>; I hope #PlayerName# comes quickly to help apprehend him!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
   - subIndex: 1
     text: "晋阳"
     translated: "Jinyang"
   - subIndex: 2
     text: "寻得了那贼人高首的踪迹，还望#PlayerName#速来一道擒贼！"
-    translated: "Found the trail of that thief Gao Shou; I hope #PlayerName# comes quickly to help apprehend him!"
+    translated: "The trail of the thief Gao Shou has been found! #PlayerName#, please come quickly and help catch the thief!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，听闻师傅死讯，我也不准备独活。\\n我准备于近日自尽，去九泉下陪师傅作伴。\\n还望你能赶来<b>飞龙门</b>，与我见上最后一面。"
@@ -3767,21 +3737,13 @@
 - raw: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在<b>应天北方</b>一带将其截住。\\n望你前来助我们一臂之力，联手将此人捉拿归案！"
   splits:
   - text: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在"
-    translated: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now he is here."
-    qcReviewedText: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now he is here.<b>Northern Yingtian </b>One stopped it \\nI look forward to your help in apprehending this person!"
-    qcTranslated: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now we have intercepted him in the <b>Northern Yingtian</b> area. \\nI look forward to your help in apprehending this person!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
+    translated: "#PlayerName#, we have chased the villain Lu Yulin all the way, and now, in the"
   - subIndex: 1
     text: "应天北方"
     translated: "Northern Yingtian"
   - subIndex: 2
     text: "一带将其截住。"
-    translated: "One stopped it"
+    translated: "Area, we have managed to intercept the culprit."
   - subIndex: 3
     text: "望你前来助我们一臂之力，联手将此人捉拿归案！"
     translated: "I look forward to your help in apprehending this person!"
@@ -7259,11 +7221,7 @@
 - raw: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
   splits:
   - text: "传闻因#PlayerForceDescribe##$PlayerName#于小诸葛叛乱中护驾有功，当今圣上已特许其入宫查案。"
-    translated: "Rumors have it that #PlayerForceDescribe# #$PlayerName# earned special permission from the current emperor to investigate cases in the palace for his heroic protection of the emperor during the Xiao Zhu Ge Rebellion."
-    qcReviewedText: "Rumors have it that #PlayerForceDescribe# #$PlayerName# earned special permission from the current emperor to investigate cases in the palace for his heroic protection of the emperor during the Xiao Zhu Ge Rebellion."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "It is said that due to #PlayerForceDescribe# #$PlayerName#'s service in protecting the emperor during Xiao Zhuge's rebellion, the current emperor has specially allowed them to investigate within the palace."
 - raw: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
   splits:
   - text: "传闻在#PosText#一带有铁掌帮弟子行凶作恶，颇为嚣张。"
@@ -25381,167 +25339,3 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "名士"
-  splits:
-  - text: "名士"
-    translated: "Scholar"
-    qcReviewedText: "Scholar"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "商人"
-  splits:
-  - text: "商人"
-    translated: "Trader"
-    qcReviewedText: "Trader"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "官兵领队"
-  splits:
-  - text: "官兵领队"
-    translated: "Officer led the way"
-    qcReviewedText: "Officer led the way"
-    qcTranslated: "Officer led the troops"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UnnaturalPhrasing
-    qcDefectCategories:
-    - UnnaturalPhrasing
-- raw: "官差"
-  splits:
-  - text: "官差"
-    translated: "Officer"
-    qcReviewedText: "Officer"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "富商"
-  splits:
-  - text: "富商"
-    translated: "Wealthy merchant"
-    qcReviewedText: "Wealthy merchant"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "小二"
-  splits:
-  - text: "小二"
-    translated: "Waiter"
-    qcReviewedText: "Waiter"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "小贼"
-  splits:
-  - text: "小贼"
-    translated: "Rascal thief"
-    qcReviewedText: "Rascal thief"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "强盗头目"
-  splits:
-  - text: "强盗头目"
-    translated: "Bandit leader"
-    qcReviewedText: "Bandit leader"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "恶贼头目"
-  splits:
-  - text: "恶贼头目"
-    translated: "Chief villain"
-    qcReviewedText: "Chief villain"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "恶霸头目"
-  splits:
-  - text: "恶霸头目"
-    translated: "Bullseye Boss"
-    qcReviewedText: "Bullseye Boss"
-    qcTranslated: "Bully Leader"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
-- raw: "拍卖主持"
-  splits:
-  - text: "拍卖主持"
-    translated: "Auctioneer"
-    qcReviewedText: "Auctioneer"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "暴民头领"
-  splits:
-  - text: "暴民头领"
-    translated: "Mob leader"
-    qcReviewedText: "Mob leader"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "百姓"
-  splits:
-  - text: "百姓"
-    translated: "Common people"
-    qcReviewedText: "Common people"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "盗贼"
-  splits:
-  - text: "盗贼"
-    translated: "Thief"
-    qcReviewedText: "Thief"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "管家"
-  splits:
-  - text: "管家"
-    translated: "Butler"
-    qcReviewedText: "Butler"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "落魄之人"
-  splits:
-  - text: "落魄之人"
-    translated: "Down-and-out person"
-    qcReviewedText: "Down-and-out person"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "讲经人"
-  splits:
-  - text: "讲经人"
-    translated: "Preacher"
-    qcReviewedText: "Preacher"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "镖头"
-  splits:
-  - text: "镖头"
-    translated: "Messenger"
-    qcReviewedText: "Messenger"
-    qcTranslated: "Escort Leader"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
-- raw: "飞贼"
-  splits:
-  - text: "飞贼"
-    translated: "Thief in flight"
-    qcReviewedText: "Thief in flight"
-    qcTranslated: "Flying Thief"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UnnaturalPhrasing
-    qcDefectCategories:
-    - UnnaturalPhrasing

@@ -46,14 +46,7 @@
 - raw: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你<b>尽快回门派</b>商议大事！"
   splits:
   - text: "#PlayerName#，武当掌门张青蓬前来拜会山门，还望你"
-    translated: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will receive him kindly."
-    qcReviewedText: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will receive him kindly.<b>Hurry back to the sect </b>Confer on important matters!"
-    qcTranslated: "#PlayerName#, Wudang Sect Master Zhang Qingpeng has come to pay respects to the mountain gate, hoping you will <b>return to the sect as soon as possible</b> to confer on important matters!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
+    translated: "#PlayerName#, Sect Master Zhang Qingpeng of Wudang has come to pay respects at the mountain gate; I hope you will..."
   - subIndex: 1
     text: "尽快回门派"
     translated: "Hurry back to the sect"
@@ -295,20 +288,12 @@
   splits:
   - text: "我们兄弟三个在"
     translated: "We three brothers are"
-    qcReviewedText: "We three brothers are <b>Jinyang </b>Found the trail of that thief Gao Shou; I hope #PlayerName# comes quickly to help apprehend him!"
-    qcTranslated: "We three brothers found the trail of that thief Gao Shou in <b>Jinyang</b>; I hope #PlayerName# comes quickly to help apprehend him!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - OtherNamedDefect
   - subIndex: 1
     text: "晋阳"
     translated: "Jinyang"
   - subIndex: 2
     text: "寻得了那贼人高首的踪迹，还望#PlayerName#速来一道擒贼！"
-    translated: "Found the trail of that thief Gao Shou; I hope #PlayerName# comes quickly to help apprehend him!"
+    translated: "The trail of the thief Gao Shou has been found! #PlayerName#, please come quickly and help catch the thief!"
   templates:
   - template: "{0}<b>{1}</b>{2}"
 - raw: "#PlayerName#，听闻师傅死讯，我也不准备独活。\n我准备于近日自尽，去九泉下陪师傅作伴。\n还望你能赶来<b>飞龙门</b>，与我见上最后一面。"
@@ -2152,21 +2137,13 @@
 - raw: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在<b>应天北方</b>一带将其截住。\n望你前来助我们一臂之力，联手将此人捉拿归案！"
   splits:
   - text: "#PlayerName#，我等一路追捕恶贼卢玉麟，如今已在"
-    translated: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now he is here."
-    qcReviewedText: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now he is here.<b>Northern Yingtian </b>One stopped it\nI look forward to your help in apprehending this person!"
-    qcTranslated: "#PlayerName#, we have been chasing the villain Lu Yulin all the way, and now we have intercepted him in the <b>Northern Yingtian</b> area. I look forward to your help in apprehending this person!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
-    qcDefectCategories:
-    - HardToParseSeam
-    - DroppedContent
+    translated: "#PlayerName#, we have chased the villain Lu Yulin all the way, and now, in the"
   - subIndex: 1
     text: "应天北方"
     translated: "Northern Yingtian"
   - subIndex: 2
     text: "一带将其截住。"
-    translated: "One stopped it"
+    translated: "Area, we have managed to intercept the culprit."
   - subIndex: 3
     text: "望你前来助我们一臂之力，联手将此人捉拿归案！"
     translated: "I look forward to your help in apprehending this person!"
