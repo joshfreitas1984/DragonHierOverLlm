@@ -656,65 +656,6 @@
 - raw: 张青蓬
   result: Zhang Qingpeng
 
-# Factions
-- raw: 长乐帮
-  result: Changle Gang
-- raw: 药王谷
-  result: Medicine King Valley
-# - raw: 丐帮
-#   result: Beggar Gang
-- raw: 飞龙门
-  result: Flying Dragon Gate
-- raw: 茅山派
-  result: Maoshan Sect
-- raw: 铸剑山庄
-  result: Swordforging Manor
-- raw: 五毒教
-  result: Five Poisons Sect
-- raw: 阎罗殿
-  result: Yama Hall
-- raw: 大隐阁
-  result: Great Hidden Pavilion
-- raw: 少林寺
-  result: Shaolin Temple
-- raw: 武当派
-  result: Wudang Sect
-- raw: 霸刀门
-  result: Tyrant Blade Sect
-- raw: 蓬莱派
-  result: Penglai Sect
-- raw: 峨眉派
-  result: Emei Sect
-- raw: 崆峒派
-  result: Kongtong Sect
-- raw: 神机门
-  result: Divine Mechanism Sect
-- raw: 霹雳堂
-  result: Thunderclap Hall
-- raw: 金刚密宗
-  result: Vajrayana Sect
-- raw: 天山派
-  result: Tianshan Sect
-- raw: 聚义门
-  result: Righteous Alliance Gate
-- raw: 黄河帮
-  result: Yellow River Gang
-- raw: 八卦门
-  result: Bagua Sect
-- raw: 海沙帮
-  result: Sea Sand Gang
-- raw: 铁掌帮
-  result: Iron Palm Gang
-- raw: 仙霞派
-  result: Xianxia Sect
-- raw: 巨鲸帮
-  result: Giant Whale Gang
-- raw: 金龙帮
-  result: Golden Dragon Gang
-- raw: 青城派
-  result: Qingcheng Sect
-- raw: 伏牛派
-  result: Funiu Sect
 - raw: 铁矿石
   rawSimplified: 铁矿石
   rawTraditional: 鐵礦石
@@ -764,4 +705,12 @@
   allowalt:
   - Hetu
   context: Hetu is river map but can be part of Hetu Luoshu
+  badtrans: false
+# Yama Hall (阎罗殿) officer titles: PlotData rendered 殿主 as Hall Master x17, Chamberlain x11, Martial Palace Lord, Chamber Master, Palace Master...
+# The title follows a surname (武殿主, 孟副殿主), so these only fix the title wording. badtrans: false (hint only) because enforcing it flagged ~400 existing lines that drop the title word; the longer 副殿主 wins over 殿主.
+- raw: 殿主
+  result: Hall Master
+  badtrans: false
+- raw: 副殿主
+  result: Deputy Hall Master
   badtrans: false
