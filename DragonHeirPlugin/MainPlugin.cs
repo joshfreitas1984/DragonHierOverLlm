@@ -714,14 +714,20 @@ public class MainPlugin : BasePlugin
     // string via "id % length" (no other call sites found in the decompiled codebase - likely
     // rare/decorative, e.g. a looping digit animation). Return the equivalent Arabic digit
     // character instead, mirroring the "id % 10" style of the original.
+    // A game update changed this method's return type from char to string - __result must match
+    // the live method's real return type exactly or HarmonyX's IL patcher throws at PatchAll time
+    // ("Cannot assign method return type System.String to __result type System.Char"), which
+    // aborts loading this entire plugin class (confirmed live: 0 of this plugin's patches bound,
+    // game fell back to untranslated Chinese). Keep __result as string and mirror the original
+    // char-returning behavior by producing a single-character string.
     // [GameCoupled GlobalData.GetChineseNumText replaces] original skipped; mirrors its "id % length" digit pick
     [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.GetChineseNumText))]
     [HarmonyPrefix]
-    public static bool GetChineseNumText_Prefix(int id, ref char __result)
+    public static bool GetChineseNumText_Prefix(int id, ref string __result)
     {
         try
         {
-            __result = (char)('0' + (Math.Abs(id) % 10));
+            __result = ((char)('0' + (Math.Abs(id) % 10))).ToString();
             return false;
         }
         catch (Exception ex)
