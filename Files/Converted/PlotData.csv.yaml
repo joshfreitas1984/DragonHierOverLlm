@@ -103709,13 +103709,14 @@
   - split: 10
     text: "好在人家大人有大量，没跟你一般见识……"
     translated: "Fortunately, his Lord has a large heart and didn't hold it against you..."
-    qcReviewedText: "Fortunately, his Lord has a large heart and didn't hold it against you...\\nOf course, it could also be that someone came to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go.<b>Jiangling</b>!"
-    qcTranslated: "Fortunately, his Lord has a large heart and didn't hold it against you...\\nOf course, it could also be that someone came to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go to <b>Jiangling</b>!"
+    qcReviewedText: "Fortunately, his Lord has a large heart and didn't hold it against you...\\nOf course, it could also be that someone came to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go.<b>Jiangling </b>B-ba!"
+    qcTranslated: "Fortunately, his Lord is magnanimous and didn't hold it against you...\\nOf course, it could also be that he sent someone to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go to <b>Jiangling</b>!"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: HardToParseSeam
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - HardToParseSeam
+    - UnnaturalPhrasing
+    - OtherNamedDefect
   - split: 10
     subIndex: 1
     text: "当然，也可能是叫人来揍我们了！"
@@ -103731,7 +103732,7 @@
   - split: 10
     subIndex: 4
     text: "吧！"
-    translated: "!"
+    translated: "B-ba!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}<b>{3}</b>{4}"
@@ -128739,17 +128740,17 @@
   - split: 10
     text: "为师让你们自行决定，便是想让你们自己领悟这侠义之理。"
     translated: "Master, by letting you decide on your own, I wanted you to understand the essence of chivalry through personal experience."
-    qcReviewedText: "Master, by letting you decide on your own, I wanted you to understand the essence of chivalry through personal experience.\\nYour previous translation contained Chinese characters. The correct translation is:  You have fulfilled my diligent teachings by making the right choices."
-    qcTranslated: "Master, by letting you decide on your own, I wanted you to understand the essence of chivalry through personal experience.\\nYou have fulfilled my diligent teachings by making the right choices."
+    qcReviewedText: "Master, by letting you decide on your own, I wanted you to understand the essence of chivalry through personal experience.\\nYou all have made the right choice, and thus my daily earnest teachings of you haven't been in vain."
+    qcTranslated: "Master, by letting you decide on your own, I wanted you to understand the essence of chivalry through personal experience.\\nYou all have made the right choice, and thus my daily earnest teachings have not been in vain."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - OtherNamedDefect
+    - UnnaturalPhrasing
   - split: 10
     subIndex: 1
     text: "诸位能够做出正确的选择，就不枉为师平日对你们的谆谆教诲。"
-    translated: "Your previous translation contained Chinese characters. The correct translation is:  You have fulfilled my diligent teachings by making the right choices."
+    translated: "You all have made the right choice, and thus my daily earnest teachings of you haven't been in vain."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -185306,11 +185307,14 @@
   splits:
   - split: 10
     text: "唔！！！！！"
-    translated: "!!!!!!"
-    qcReviewedText: "!!!!!!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "W-wum!!!!!!"
+    qcReviewedText: "W-wum!!!!!!"
+    qcTranslated: "Ugh!!!!!!"
+    qcStatus: Corrected
+    qcQualityScore: 90
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
 - raw: ",,,无,,,,,,,剑气在连番阻挡之下，终于力道散尽，\\n最后在阎罗王额头留下一个小口，一滴血泪缓缓滑落。"
   splits:
   - split: 10
@@ -214829,17 +214833,17 @@
   - split: 10
     text: "（避无可避，只得全力一接）"
     translated: "(Avoidance Is Unavoidable, So I Must Give It My All)"
-    qcReviewedText: "(Avoidance Is Unavoidable, So I Must Give It My All)\\n!!!!!!"
-    qcTranslated: "(There's No Way to Dodge, So I Have No Choice But to Meet It Head-On)\\n!!!!!!"
+    qcReviewedText: "(Avoidance Is Unavoidable, So I Must Give It My All) \\nW-wum!!!!!!"
+    qcTranslated: "(There's No Way to Dodge; I Have No Choice But to Take It Head-On) \\nW-wum!!!!!!"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
+    - UnnaturalPhrasing
   - split: 10
     subIndex: 1
     text: "唔！！！！！"
-    translated: "!!!!!!"
+    translated: "W-wum!!!!!!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -291495,12 +291499,12 @@
     text: "金！龙！生！郭某昔日救你，乃是出于侠义，"
     translated: "Gold! Dragon! Born! Guo Mou once saved them out of chivalry."
     qcReviewedText: "Gold! Dragon! Born! Guo Mou once saved them out of chivalry.\\nAnd today, bringing you to justice is also to uphold the righteous path."
-    qcTranslated: "Gold! Dragon! Born! Guo Mou once saved you out of chivalry.\\nAnd today, bringing you to justice is also to uphold the righteous path."
+    qcTranslated: "Gold! Dragon! Born! I, Guo, once saved them out of chivalry.\\nAnd today, bringing you to justice is also to uphold the righteous path."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - DroppedContent
+    - OtherNamedDefect
   - split: 10
     subIndex: 1
     text: "而今日将你绳之以法，亦是为了匡扶正道。"
@@ -371294,12 +371298,13 @@
     text: "呵呵，#PlayerName#如此咄咄逼人，"
     translated: "Haha, #PlayerName# you're really pushing it"
     qcReviewedText: "Haha, #PlayerName# you're really pushing it \\nBut I, Han Mou, am not someone's meat either."
-    qcTranslated: "Haha, #PlayerName# you're really pushing it \\nBut I, Han Mou, am not someone to be carved up at will."
+    qcTranslated: "Haha, #PlayerName# you're really pushing it \\nBut I, Han, am not someone to be carved up at will."
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: LostIdiom
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
     qcDefectCategories:
-    - LostIdiom
+    - DroppedContent
   - split: 10
     subIndex: 1
     text: "我韩某却也非任人宰割之辈。"

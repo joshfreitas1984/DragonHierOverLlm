@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : VariousEffectsScene
-// Token : 0x20003D7
+// Token : 0x20003E4
 // ============================================================
 
 public class VariousEffectsScene
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EC6
+    // Token: 0x4001F58
     public Transform[] m_effects;
 
-    // Token: 0x4001EC7
+    // Token: 0x4001F59
     public GameObject scaleform;
 
-    // Token: 0x4001EC8
+    // Token: 0x4001F5A
     public GameObject[] m_destroyObjects;
 
-    // Token: 0x4001EC9
+    // Token: 0x4001F5B
     public GameObject FriendlyEnemyObject;
 
-    // Token: 0x4001ECA
+    // Token: 0x4001F5C
     private GameObject gm;
 
-    // Token: 0x4001ECB
+    // Token: 0x4001F5D
     public int inputLocation;
 
-    // Token: 0x4001ECC
+    // Token: 0x4001F5E
     public Text m_scalefactor;
 
-    // Token: 0x4001ECD
+    // Token: 0x4001F5F
     public static float m_gaph_scenesizefactor;
 
-    // Token: 0x4001ECE
+    // Token: 0x4001F60
     public Text m_effectName;
 
-    // Token: 0x4001ECF
+    // Token: 0x4001F61
     private int index;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600243E
-    // RVA   : 0xC10660   Offset: 0xC0FA60   Length: 0x99
+    // Token : 0x60024E8
+    // RVA   : 0x969910   Offset: 0x968710   Length: 0x99
     private void Awake()
     {
         long lVar2;
@@ -50,7 +50,7 @@ public class VariousEffectsScene
           if (*(uint32 *)(lVar2 + 24) <= this.index) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           lVar2 = *(int64 *)(lVar2 + 32 + (int64)(int)this.index * 8);
           if (lVar2 != null) {
@@ -67,14 +67,14 @@ public class VariousEffectsScene
         }
     }
 
-    // Token : 0x600243F
-    // RVA   : 0xC10E30   Offset: 0xC10230   Length: 0xC3
+    // Token : 0x60024E9
+    // RVA   : 0x96A0E0   Offset: 0x968EE0   Length: 0xC3
     private void Update()
     {
         long lVar1;
         bool cVar2;
         int iVar3;
-        cVar2 = FUN_1804625b0(122);
+        cVar2 = FUN_181844860(122);
         if (cVar2) {
           iVar3 = this.index;
           if (iVar3 < 1) {
@@ -84,7 +84,7 @@ public class VariousEffectsScene
           this.index = iVar3 + -1;
           VariousEffectsScene.MakeObject(this,0);
         }
-        cVar2 = FUN_1804625b0(120);
+        cVar2 = FUN_181844860(120);
         if (cVar2) {
           if (this.m_effects == null) throw; // [null/range check failed]
           if (this.index < *(int *)(this.m_effects + 24) + -1) {
@@ -96,7 +96,7 @@ public class VariousEffectsScene
           this.index = iVar3;
           VariousEffectsScene.MakeObject(this,0);
         }
-        cVar2 = FUN_1804625b0(99);
+        cVar2 = FUN_181844860(99);
         if (cVar2) {
           VariousEffectsScene.MakeObject(this,0);
         }
@@ -113,13 +113,13 @@ public class VariousEffectsScene
         }
     }
 
-    // Token : 0x6002440
-    // RVA   : 0xC108C0   Offset: 0xC0FCC0   Length: 0x99
+    // Token : 0x60024EA
+    // RVA   : 0x969B70   Offset: 0x968970   Length: 0x99
     private void InputKey()
     {
         bool cVar1;
         int iVar2;
-        cVar1 = FUN_1804625b0(122);
+        cVar1 = FUN_181844860(122);
         if (cVar1) {
           iVar2 = this.index;
           if (iVar2 < 1) {
@@ -130,12 +130,12 @@ public class VariousEffectsScene
               this.index = iVar2 + -1;
               VariousEffectsScene.MakeObject(this,0);
               }
-              cVar1 = FUN_1804625b0(120);
+              cVar1 = FUN_181844860(120);
               if (cVar1) {
               if (this.m_effects == null) {
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           iVar2 = this.index + 1;
           if (*(int *)(this.m_effects + 24) + -1 <= this.index) {
@@ -144,15 +144,15 @@ public class VariousEffectsScene
           this.index = iVar2;
           VariousEffectsScene.MakeObject(this,0);
         }
-        cVar1 = FUN_1804625b0(99);
+        cVar1 = FUN_181844860(99);
         if (cVar1) {
           VariousEffectsScene.MakeObject(this,0);
           return;
         }
     }
 
-    // Token : 0x6002441
-    // RVA   : 0xC10960   Offset: 0xC0FD60   Length: 0x4CA
+    // Token : 0x60024EB
+    // RVA   : 0x969C10   Offset: 0x968A10   Length: 0x4CA
     private void MakeObject()
     {
         long lVar2;
@@ -175,7 +175,7 @@ public class VariousEffectsScene
             if (*(uint32 *)(lVar4 + 24) <= uVar8) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             uVar5 = lVar4[uVar8];
             Object.Destroy(uVar5);
@@ -188,7 +188,7 @@ public class VariousEffectsScene
           if (*(uint32 *)(lVar4 + 24) <= this.index) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           lVar4 = *(int64 *)(lVar4 + 32 + (int64)(int)this.index * 8);
           if ((lVar4 != null) && (lVar2 = Component.get_transform(lVar4,0)) != null) {
@@ -200,7 +200,7 @@ public class VariousEffectsScene
               if (*(uint32 *)(lVar2 + 24) <= this.index) {
                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
+                FUN_1801e02d0(uVar5,0);
               }
               lVar2 = *(int64 *)(lVar2 + 32 + (int64)(int)this.index * 8);
               if ((lVar2 != null) && (lVar2 = Component.get_transform(lVar2,0)) != null) {
@@ -209,7 +209,7 @@ public class VariousEffectsScene
                 uStack_30 = puVar3[1];
                 local_48 = uVar5;
                 local_40 = fVar9;
-                lVar4 = Object.Instantiate(lVar4,&local_48,&local_38,DAT_181d92db0);
+                lVar4 = Object.Instantiate(lVar4,&local_48,&local_38,DAT_181e763f8);
                 if (lVar4 != null) {
                   uVar5 = Component.get_gameObject(lVar4,0);
                   this.gm = uVar5;
@@ -221,7 +221,7 @@ public class VariousEffectsScene
                     if (*(uint32 *)(lVar4 + 24) <= this.index) {
                       uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar5,0);
+                      FUN_1801e02d0(uVar5,0);
                     }
                     lVar4 = *(int64 *)(lVar4 + 32 + (int64)(int)this.index * 8);
                     if ((lVar4 != null) &&
@@ -252,7 +252,7 @@ public class VariousEffectsScene
                                   local_48 = 0x3f8000003f800000;
                                   local_40 = 1.0;
                                   Transform.set_localScale(lVar4,&local_48,0);
-                                  fVar9 = **(float **)(DAT_181db38e0 + 184);
+                                  fVar9 = **(float **)(DAT_181e93db8 + 184);
                                   if (this.index < 70) {
                                     fVar9 = fVar9 * 0.5;
                                   }
@@ -272,12 +272,12 @@ public class VariousEffectsScene
                                          )) {
                                         uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                        FUN_1800d65f0(uVar5,0);
+                                        FUN_1801e02d0(uVar5,0);
                                       }
                                       if (*(uint32 *)(plVar1 + 3) <= uVar8) {
                                         uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                        FUN_1800d65f0(uVar5,0);
+                                        FUN_1801e02d0(uVar5,0);
                                       }
                                       plVar1[(int64)(int)uVar8 + 4] = lVar4;
                                       il2cpp_internal(plVar1 + (int64)(int)uVar8 + 4,lVar4);
@@ -300,8 +300,8 @@ public class VariousEffectsScene
         }
     }
 
-    // Token : 0x6002442
-    // RVA   : 0xC10700   Offset: 0xC0FB00   Length: 0xA6
+    // Token : 0x60024EC
+    // RVA   : 0x9699B0   Offset: 0x9687B0   Length: 0xA6
     private void DestroyGameObject()
     {
         long lVar1;
@@ -313,12 +313,12 @@ public class VariousEffectsScene
             lVar1 = this.m_destroyObjects;
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(uint32 *)(lVar1 + 24) <= uVar3) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             uVar2 = lVar1[uVar3];
             Object.Destroy(uVar2);
@@ -328,8 +328,8 @@ public class VariousEffectsScene
         this.inputLocation = 0;
     }
 
-    // Token : 0x6002443
-    // RVA   : 0xC107B0   Offset: 0xC0FBB0   Length: 0x10B
+    // Token : 0x60024ED
+    // RVA   : 0x969A60   Offset: 0x968860   Length: 0x10B
     public void GetSizeFactor()
     {
         ulong uVar2;
@@ -345,8 +345,8 @@ public class VariousEffectsScene
           if (plVar1 != (int64 *)0) {
             uVar2 = (**(code **)(*plVar1 + 0x168))(plVar1,*(uint64 *)(*plVar1 + 0x170));
             uVar4 = Single.Parse(uVar2,0);
-            **(uint32 **)(DAT_181db38e0 + 184) = uVar4;
-            fVar5 = **(float **)(DAT_181db38e0 + 184);
+            **(uint32 **)(DAT_181e93db8 + 184) = uVar4;
+            fVar5 = **(float **)(DAT_181e93db8 + 184);
             if (this.index < 70) {
               fVar5 = fVar5 * 0.5;
             }
@@ -364,21 +364,21 @@ public class VariousEffectsScene
         }
     }
 
-    // Token : 0x6002444
-    // RVA   : 0xC10F40   Offset: 0xC10340   Length: 0x54
+    // Token : 0x60024EE
+    // RVA   : 0x96A1F0   Offset: 0x968FF0   Length: 0x54
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = FUN_1800d60b0(DAT_181da2a38,30);
+        uVar1 = FUN_1801dfd90(DAT_181e82b00,30);
         this.m_destroyObjects = uVar1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6002445
-    // RVA   : 0xC10F00   Offset: 0xC10300   Length: 0x39
+    // Token : 0x60024EF
+    // RVA   : 0x96A1B0   Offset: 0x968FB0   Length: 0x39
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181db38e0 + 184) = 0x3f800000;
+        **(uint32 **)(DAT_181e93db8 + 184) = 0x3f800000;
     }
 
 }

@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass31_0
-// Token : 0x2000476
+// Token : 0x2000483
 // ============================================================
 
 public class <>c__DisplayClass31_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400212F
+    // Token: 0x40021C2
     public ScrollRect target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002726
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x60027D0
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6002727
-    // RVA   : 0x939A40   Offset: 0x938E40   Length: 0x1D
+    // Token : 0x60027D1
+    // RVA   : 0x67F5C0   Offset: 0x67E3C0   Length: 0x1D
     internal float <DOHorizontalNormalizedPos>b__0()
     {
         if (this.target != null) {
@@ -27,12 +27,12 @@ public class <>c__DisplayClass31_0
         }
     }
 
-    // Token : 0x6002728
-    // RVA   : 0x939A60   Offset: 0x938E60   Length: 0x1E
+    // Token : 0x60027D2
+    // RVA   : 0x67F5E0   Offset: 0x67E3E0   Length: 0x1E
     internal void <DOHorizontalNormalizedPos>b__1(float x)
     {
         if (this.target != null) {
-          FUN_1813bb510(this.target,x,0);
+          FUN_181273960(this.target,x,0);
           return;
         }
     }

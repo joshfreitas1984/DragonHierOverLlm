@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : UIItemStorage
-// Token : 0x2000009
+// Token : 0x2000008
 // ============================================================
 
 public class UIItemStorage
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000035
+    // Token: 0x4000015
     public int maxItemCount;
 
-    // Token: 0x4000036
+    // Token: 0x4000016
     public int maxRows;
 
-    // Token: 0x4000037
+    // Token: 0x4000017
     public int maxColumns;
 
-    // Token: 0x4000038
+    // Token: 0x4000018
     public GameObject template;
 
-    // Token: 0x4000039
+    // Token: 0x4000019
     public UIWidget background;
 
-    // Token: 0x400003A
+    // Token: 0x400001A
     public int spacing;
 
-    // Token: 0x400003B
+    // Token: 0x400001B
     public int padding;
 
-    // Token: 0x400003C
+    // Token: 0x400001C
     private List<InvGameItem> mItems;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000034
-    // RVA   : 0x118CE00   Offset: 0x118C200   Length: 0x77
+    // Token : 0x600001B
+    // RVA   : 0xF8A2C0   Offset: 0xF890C0   Length: 0x77
     public List<InvGameItem> get_items()
     {
         long lVar1;
@@ -42,13 +42,13 @@ public class UIItemStorage
             return lVar1;
           }
           if (lVar1 == null) break;
-          FUN_18181e6b0(lVar1,0,DAT_181d90530);
+          FUN_18175de30(lVar1,0,DAT_181e726f0);
           lVar1 = this.mItems;
         }
     }
 
-    // Token : 0x6000035
-    // RVA   : 0x118C890   Offset: 0x118BC90   Length: 0x87
+    // Token : 0x600001C
+    // RVA   : 0xF89D50   Offset: 0xF88B50   Length: 0x87
     public InvGameItem GetItem(int slot)
     {
         long lVar1;
@@ -67,8 +67,8 @@ public class UIItemStorage
         }
     }
 
-    // Token : 0x6000036
-    // RVA   : 0x118C920   Offset: 0x118BD20   Length: 0x10C
+    // Token : 0x600001D
+    // RVA   : 0xF89DE0   Offset: 0xF88BE0   Length: 0x10C
     public InvGameItem Replace(int slot, InvGameItem item)
     {
         long lVar1;
@@ -80,9 +80,9 @@ public class UIItemStorage
         lVar1 = this.mItems;
         do {
           if (lVar1 == null) {
-        LAB_18118ca27:
+        LAB_180f89ee7:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (this.maxItemCount <= lVar1.Count) {
             lVar3 = lVar1;
@@ -92,19 +92,19 @@ public class UIItemStorage
             }
             uVar2 = lVar1._items[slot];
             if (lVar3 != null) {
-              FUN_18182a2e0(lVar3,slot,item,DAT_181d906b0);
+              FUN_181769c00(lVar3,slot,item,DAT_181e72870);
               return uVar2;
             }
-            goto LAB_18118ca27;
+            goto LAB_180f89ee7;
           }
-          if (lVar1 == null) goto LAB_18118ca27;
-          FUN_18181e6b0(lVar1,0,DAT_181d90530);
+          if (lVar1 == null) goto LAB_180f89ee7;
+          FUN_18175de30(lVar1,0,DAT_181e726f0);
           lVar1 = this.mItems;
         } while( true );
     }
 
-    // Token : 0x6000037
-    // RVA   : 0x118CA30   Offset: 0x118BE30   Length: 0x324
+    // Token : 0x600001E
+    // RVA   : 0xF89EF0   Offset: 0xF88CF0   Length: 0x324
     private void Start()
     {
         ulong uVar1;
@@ -141,19 +141,19 @@ public class UIItemStorage
                   uVar3 = Component.get_gameObject(this,0);
                   uVar1 = this.template;
                   lVar4 = NGUITools.AddChild(uVar3,uVar1,0);
-                  if (lVar4 == null) goto LAB_18118cd4f;
+                  if (lVar4 == null) goto LAB_180f8a20f;
                   lVar5 = GameObject.get_transform(lVar4,0);
-                  if (lVar5 == null) goto LAB_18118cd4f;
+                  if (lVar5 == null) goto LAB_180f8a20f;
                   local_60 = 0;
                   local_68 = ((float)iVar7 + 0.5) * (float)this.spacing +
                              (float)this.padding;
                   local_64 = (float)-this.padding -
                              ((float)iVar8 + 0.5) * (float)this.spacing;
                   Transform.set_localPosition(lVar5,&local_68);
-                  lVar4 = GameObject.GetComponent(lVar4,DAT_181d74ba8);
+                  lVar4 = GameObject.GetComponent(lVar4,DAT_181e57c70);
                   cVar2 = Object.op_Inequality(lVar4,0);
                   if (cVar2) {
-                    if (lVar4 == null) goto LAB_18118cd4f;
+                    if (lVar4 == null) goto LAB_180f8a20f;
                     *(int64 *)(lVar4 + 88) = this;
                     *(int *)(lVar4 + 96) = iVar9;
                   }
@@ -186,15 +186,15 @@ public class UIItemStorage
                 return;
               }
             }
-        LAB_18118cd4f:
+        LAB_180f8a20f:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6000038
-    // RVA   : 0x118CD60   Offset: 0x118C160   Length: 0x99
+    // Token : 0x600001F
+    // RVA   : 0xF8A220   Offset: 0xF89020   Length: 0x99
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -203,10 +203,10 @@ public class UIItemStorage
         this.maxColumns = 4;
         this.spacing = 128;
         this.padding = 10;
-        uVar1 = il2cpp_internal(DAT_181d93fe8);
-        FUN_181330100(uVar1,DAT_181d904b0);
+        uVar1 = il2cpp_internal(DAT_181e73fb8);
+        FUN_1810f3480(uVar1,DAT_181e72670);
         this.mItems = uVar1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

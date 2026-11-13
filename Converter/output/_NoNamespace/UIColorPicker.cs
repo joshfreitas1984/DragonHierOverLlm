@@ -1,56 +1,56 @@
 // ============================================================
 // Type  : UIColorPicker
-// Token : 0x20000F3
+// Token : 0x20000F2
 // ============================================================
 
 public class UIColorPicker
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40005C8
+    // Token: 0x40005A8
     public static UIColorPicker current;
 
-    // Token: 0x40005C9
+    // Token: 0x40005A9
     public Color value;
 
-    // Token: 0x40005CA
+    // Token: 0x40005AA
     public UIWidget selectionWidget;
 
-    // Token: 0x40005CB
+    // Token: 0x40005AB
     public List<EventDelegate> onChange;
 
-    // Token: 0x40005CC
+    // Token: 0x40005AC
     private Transform mTrans;
 
-    // Token: 0x40005CD
+    // Token: 0x40005AD
     private UITexture mUITex;
 
-    // Token: 0x40005CE
+    // Token: 0x40005AE
     private Texture2D mTex;
 
-    // Token: 0x40005CF
+    // Token: 0x40005AF
     private UICamera mCam;
 
-    // Token: 0x40005D0
+    // Token: 0x40005B0
     private Vector2 mPos;
 
-    // Token: 0x40005D1
+    // Token: 0x40005B1
     private int mWidth;
 
-    // Token: 0x40005D2
+    // Token: 0x40005B2
     private int mHeight;
 
-    // Token: 0x40005D3
+    // Token: 0x40005B3
     private static AnimationCurve mRed;
 
-    // Token: 0x40005D4
+    // Token: 0x40005B4
     private static AnimationCurve mGreen;
 
-    // Token: 0x40005D5
+    // Token: 0x40005B5
     private static AnimationCurve mBlue;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000792
-    // RVA   : 0x12B1510   Offset: 0x12B0910   Length: 0x306
+    // Token : 0x6000779
+    // RVA   : 0x11382A0   Offset: 0x11370A0   Length: 0x306
     private void Start()
     {
         uint uVar3;
@@ -65,7 +65,7 @@ public class UIColorPicker
         ulong uStack_40;
         uVar4 = Component.get_transform(this,0);
         this.mTrans = uVar4;
-        uVar4 = Component.GetComponent(this,DAT_181d96f78);
+        uVar4 = Component.GetComponent(this,DAT_181e7a338);
         this.mUITex = uVar4;
         lVar5 = Component.get_gameObject(this,0);
         if (lVar5 != null) {
@@ -78,7 +78,7 @@ public class UIColorPicker
             this.mWidth = iVar9;
             iVar11 = *(int *)(lVar5 + 168);
             *(int *)(this + 100) = iVar11;
-            lVar5 = FUN_1800d60b0(DAT_181da1158,iVar11 * iVar9);
+            lVar5 = FUN_1801dfd90(DAT_181e81228,iVar11 * iVar9);
             iVar9 = *(int *)(this + 100);
             iVar11 = 0;
             if (iVar9 < 1) {
@@ -99,7 +99,7 @@ public class UIColorPicker
                     if (*(uint32 *)(lVar5 + 24) <= uVar8) {
                       uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar4,0);
+                      FUN_1801e02d0(uVar4,0);
                     }
                     uVar4 = puVar6[1];
                     iVar7 = iVar7 + 1;
@@ -139,8 +139,8 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x6000793
-    // RVA   : 0x12AFB80   Offset: 0x12AEF80   Length: 0x72
+    // Token : 0x600077A
+    // RVA   : 0x1136910   Offset: 0x1135710   Length: 0x72
     private void OnDestroy()
     {
         ulong uVar1;
@@ -149,8 +149,8 @@ public class UIColorPicker
         this.mTex = 0;
     }
 
-    // Token : 0x6000794
-    // RVA   : 0x12AFCA0   Offset: 0x12AF0A0   Length: 0x7A
+    // Token : 0x600077B
+    // RVA   : 0x1136A30   Offset: 0x1135830   Length: 0x7A
     private void OnPress(bool pressed)
     {
         int iVar2;
@@ -163,8 +163,8 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x6000795
-    // RVA   : 0x12AFC00   Offset: 0x12AF000   Length: 0x29
+    // Token : 0x600077C
+    // RVA   : 0x1136990   Offset: 0x1135790   Length: 0x29
     private void OnDrag(Vector2 delta)
     {
         bool cVar1;
@@ -175,8 +175,8 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x6000796
-    // RVA   : 0x12AFC30   Offset: 0x12AF030   Length: 0x6D
+    // Token : 0x600077D
+    // RVA   : 0x11369C0   Offset: 0x11357C0   Length: 0x6D
     private void OnPan(Vector2 delta)
     {
         bool cVar1;
@@ -196,8 +196,8 @@ public class UIColorPicker
         }
     }
 
-    // Token : 0x6000797
-    // RVA   : 0x12B0A50   Offset: 0x12AFE50   Length: 0x3A1
+    // Token : 0x600077E
+    // RVA   : 0x11377E0   Offset: 0x11365E0   Length: 0x3A1
     private void Sample()
     {
         long lVar1;
@@ -305,7 +305,7 @@ public class UIColorPicker
         uint64 local_88;
         uint32 local_80;
         if (UIColorPicker.mRed != null) {
-        LAB_1812b074a:
+        LAB_1811374da:
           lVar1 = UIColorPicker.mRed;
           if (lVar1 != null) {
             fVar4 = (float)AnimationCurve.Evaluate(lVar1,param_2,0);
@@ -332,15 +332,15 @@ public class UIColorPicker
                 }
                 *this = 0;
                 this[1] = 0;
-                FUN_1809dcfa0(this,fVar4,fVar5,fVar6,0x3f800000,0);
+                FUN_1807282e0(this,fVar4,fVar5,fVar6,0x3f800000,0);
                 return this;
               }
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        lVar1 = FUN_1800d60b0(DAT_181da3bb8,8);
+        lVar1 = FUN_1801dfd90(DAT_181e83cf8,8);
         local_368 = 0;
         local_360 = 0;
         local_378 = 0;
@@ -350,7 +350,7 @@ public class UIColorPicker
           if (*(int *)(lVar1 + 24) == 0) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 32) = local_378;
           *(uint64 *)(lVar1 + 40) = uStack_370;
@@ -364,7 +364,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 2) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 60) = local_358;
           *(uint64 *)(lVar1 + 68) = uStack_350;
@@ -378,7 +378,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 3) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 88) = local_338;
           *(uint64 *)(lVar1 + 96) = uStack_330;
@@ -392,7 +392,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 4) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 116) = local_318;
           *(uint64 *)(lVar1 + 124) = uStack_310;
@@ -406,7 +406,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 5) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 144) = local_2f8;
           *(uint64 *)(lVar1 + 152) = uStack_2f0;
@@ -420,7 +420,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 6) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 172) = local_2d8;
           *(uint64 *)(lVar1 + 180) = uStack_2d0;
@@ -434,7 +434,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 7) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 200) = local_2b8;
           *(uint64 *)(lVar1 + 208) = uStack_2b0;
@@ -448,7 +448,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 8) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint32 *)(lVar1 + 228) = (uint32)local_298;
           *(uint32 *)(lVar1 + 232) = local_298._4_4_;
@@ -458,7 +458,7 @@ public class UIColorPicker
           *(uint32 *)(lVar1 + 252) = local_280;
           uVar2 = new AnimationCurve(lVar1,0);
           UIColorPicker.mRed = uVar2;
-          lVar1 = FUN_1800d60b0(DAT_181da3bb8,8);
+          lVar1 = FUN_1801dfd90(DAT_181e83cf8,8);
           local_268 = 0;
           local_260 = 0;
           local_278 = 0;
@@ -468,7 +468,7 @@ public class UIColorPicker
             if (*(int *)(lVar1 + 24) == 0) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 32) = local_278;
             *(uint64 *)(lVar1 + 40) = uStack_270;
@@ -482,7 +482,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 2) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 60) = local_258;
             *(uint64 *)(lVar1 + 68) = uStack_250;
@@ -496,7 +496,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 3) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 88) = local_238;
             *(uint64 *)(lVar1 + 96) = uStack_230;
@@ -510,7 +510,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 4) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 116) = local_218;
             *(uint64 *)(lVar1 + 124) = uStack_210;
@@ -524,7 +524,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 5) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 144) = local_1f8;
             *(uint64 *)(lVar1 + 152) = uStack_1f0;
@@ -538,7 +538,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 6) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 172) = local_1d8;
             *(uint64 *)(lVar1 + 180) = uStack_1d0;
@@ -552,7 +552,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 7) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 200) = local_1b8;
             *(uint64 *)(lVar1 + 208) = uStack_1b0;
@@ -566,7 +566,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 8) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint32 *)(lVar1 + 228) = (uint32)local_198;
             *(uint32 *)(lVar1 + 232) = local_198._4_4_;
@@ -576,7 +576,7 @@ public class UIColorPicker
             *(uint32 *)(lVar1 + 252) = local_180;
             uVar2 = new AnimationCurve(lVar1,0);
             UIColorPicker.mGreen = uVar2;
-            lVar1 = FUN_1800d60b0(DAT_181da3bb8,8);
+            lVar1 = FUN_1801dfd90(DAT_181e83cf8,8);
             local_168 = 0;
             local_160 = 0;
             local_178 = 0;
@@ -586,7 +586,7 @@ public class UIColorPicker
               if (*(int *)(lVar1 + 24) == 0) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 32) = local_178;
               *(uint64 *)(lVar1 + 40) = uStack_170;
@@ -600,7 +600,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 2) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 60) = local_158;
               *(uint64 *)(lVar1 + 68) = uStack_150;
@@ -614,7 +614,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 3) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 88) = local_138;
               *(uint64 *)(lVar1 + 96) = uStack_130;
@@ -628,7 +628,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 4) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 116) = local_118;
               *(uint64 *)(lVar1 + 124) = uStack_110;
@@ -642,7 +642,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 5) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 144) = local_f8;
               *(uint64 *)(lVar1 + 152) = uStack_f0;
@@ -656,7 +656,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 6) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 172) = local_d8;
               *(uint64 *)(lVar1 + 180) = uStack_d0;
@@ -670,7 +670,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 7) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 200) = local_b8;
               *(uint64 *)(lVar1 + 208) = uStack_b0;
@@ -684,7 +684,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 8) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint32 *)(lVar1 + 228) = (uint32)local_98;
               *(uint32 *)(lVar1 + 232) = local_98._4_4_;
@@ -694,14 +694,14 @@ public class UIColorPicker
               *(uint32 *)(lVar1 + 252) = local_80;
               uVar2 = new AnimationCurve(lVar1,0);
               UIColorPicker.mBlue = uVar2;
-              goto LAB_1812b074a;
+              goto LAB_1811374da;
             }
           }
         }
     }
 
-    // Token : 0x6000798
-    // RVA   : 0x12B0E00   Offset: 0x12B0200   Length: 0x2C4
+    // Token : 0x600077F
+    // RVA   : 0x1137B90   Offset: 0x1136990   Length: 0x2C4
     public void Select(Vector2 v)
     {
         float fVar1;
@@ -772,45 +772,45 @@ public class UIColorPicker
             if ((plVar2 == (int64 *)0) ||
                (lVar9 = (**(code **)(*plVar2 + 0x1d8))(plVar2,*(uint64 *)(*plVar2 + 0x1e0)),
                lVar9 == null)) {
-        LAB_1812b14bd:
+        LAB_18113824d:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(uint32 *)(lVar9 + 24) == 0) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             if (*(uint32 *)(lVar9 + 24) < 3) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             uVar16 = Mathf.Lerp();
             local_a8 = CONCAT44(local_a8._4_4_,uVar16);
             if (*(uint32 *)(lVar9 + 24) == 0) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             if (*(uint32 *)(lVar9 + 24) < 3) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             uVar16 = Mathf.Lerp();
             local_a8 = CONCAT44(uVar16,(uint32)local_a8);
             uStack_a0 = uStack_a0 & 0xffffffff00000000;
-            if (this.mTrans == null) goto LAB_1812b14bd;
+            if (this.mTrans == null) goto LAB_18113824d;
             local_98 = local_a8;
             uStack_90 = uStack_90 & 0xffffffff00000000;
             puVar10 = (uint64 *)
                       Transform.TransformPoint(&local_a8,this.mTrans,&local_98,0);
             uVar13 = *puVar10;
             uVar16 = *(uint32 *)(puVar10 + 1);
-            if (this.selectionWidget == null) goto LAB_1812b14bd;
+            if (this.selectionWidget == null) goto LAB_18113824d;
             uVar11 = Component.get_transform(this.selectionWidget,0);
-            if (this.mCam == null) goto LAB_1812b14bd;
+            if (this.mCam == null) goto LAB_18113824d;
             uVar12 = UICamera.get_cachedCamera(this.mCam,0);
             uStack_90 = CONCAT44(uStack_90._4_4_,uVar16);
             local_98 = uVar13;
@@ -819,12 +819,12 @@ public class UIColorPicker
           uVar13 = *(uint64 *)(v + 2);
           this.value = *(uint64 *)v;
           *(uint64 *)(this + 32) = uVar13;
-          plVar2 = *(int64 **)(DAT_181daf790 + 184);
+          plVar2 = *(int64 **)(DAT_181e8fbd0 + 184);
           *plVar2 = this;
           il2cpp_internal(plVar2,this);
           uVar13 = this.onChange;
           EventDelegate.Execute(uVar13,0);
-          puVar10 = *(uint64 **)(DAT_181daf790 + 184);
+          puVar10 = *(uint64 **)(DAT_181e8fbd0 + 184);
           *puVar10 = 0;
           il2cpp_internal(puVar10,0);
           uVar13 = this.mPos;
@@ -838,8 +838,8 @@ public class UIColorPicker
         return uVar13;
     }
 
-    // Token : 0x6000799
-    // RVA   : 0x12B10D0   Offset: 0x12B04D0   Length: 0x432
+    // Token : 0x6000780
+    // RVA   : 0x1137E60   Offset: 0x1136C60   Length: 0x432
     public Vector2 Select(Color c)
     {
         float fVar1;
@@ -910,45 +910,45 @@ public class UIColorPicker
             if ((plVar2 == (int64 *)0) ||
                (lVar9 = (**(code **)(*plVar2 + 0x1d8))(plVar2,*(uint64 *)(*plVar2 + 0x1e0)),
                lVar9 == null)) {
-        LAB_1812b14bd:
+        LAB_18113824d:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(uint32 *)(lVar9 + 24) == 0) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             if (*(uint32 *)(lVar9 + 24) < 3) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             uVar16 = Mathf.Lerp();
             local_a8 = CONCAT44(local_a8._4_4_,uVar16);
             if (*(uint32 *)(lVar9 + 24) == 0) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             if (*(uint32 *)(lVar9 + 24) < 3) {
               uVar13 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar13,0);
+              FUN_1801e02d0(uVar13,0);
             }
             uVar16 = Mathf.Lerp();
             local_a8 = CONCAT44(uVar16,(uint32)local_a8);
             uStack_a0 = uStack_a0 & 0xffffffff00000000;
-            if (this.mTrans == null) goto LAB_1812b14bd;
+            if (this.mTrans == null) goto LAB_18113824d;
             local_98 = local_a8;
             uStack_90 = uStack_90 & 0xffffffff00000000;
             puVar10 = (uint64 *)
                       Transform.TransformPoint(&local_a8,this.mTrans,&local_98,0);
             uVar13 = *puVar10;
             uVar16 = *(uint32 *)(puVar10 + 1);
-            if (this.selectionWidget == null) goto LAB_1812b14bd;
+            if (this.selectionWidget == null) goto LAB_18113824d;
             uVar11 = Component.get_transform(this.selectionWidget,0);
-            if (this.mCam == null) goto LAB_1812b14bd;
+            if (this.mCam == null) goto LAB_18113824d;
             uVar12 = UICamera.get_cachedCamera(this.mCam,0);
             uStack_90 = CONCAT44(uStack_90._4_4_,uVar16);
             local_98 = uVar13;
@@ -957,12 +957,12 @@ public class UIColorPicker
           uVar13 = *(uint64 *)(c + 2);
           this.value = *(uint64 *)c;
           *(uint64 *)(this + 32) = uVar13;
-          plVar2 = *(int64 **)(DAT_181daf790 + 184);
+          plVar2 = *(int64 **)(DAT_181e8fbd0 + 184);
           *plVar2 = this;
           il2cpp_internal(plVar2,this);
           uVar13 = this.onChange;
           EventDelegate.Execute(uVar13,0);
-          puVar10 = *(uint64 **)(DAT_181daf790 + 184);
+          puVar10 = *(uint64 **)(DAT_181e8fbd0 + 184);
           *puVar10 = 0;
           il2cpp_internal(puVar10,0);
           uVar13 = this.mPos;
@@ -976,8 +976,8 @@ public class UIColorPicker
         return uVar13;
     }
 
-    // Token : 0x600079A
-    // RVA   : 0x12AFD20   Offset: 0x12AF120   Length: 0xD2C
+    // Token : 0x6000781
+    // RVA   : 0x1136AB0   Offset: 0x11358B0   Length: 0xD2C
     public static Color Sample(float x, float y)
     {
         long lVar1;
@@ -1085,7 +1085,7 @@ public class UIColorPicker
         uint64 local_88;
         uint32 local_80;
         if (UIColorPicker.mRed != null) {
-        LAB_1812b074a:
+        LAB_1811374da:
           lVar1 = UIColorPicker.mRed;
           if (lVar1 != null) {
             fVar4 = (float)AnimationCurve.Evaluate(lVar1,y,0);
@@ -1112,15 +1112,15 @@ public class UIColorPicker
                 }
                 *x = 0;
                 x[1] = 0;
-                FUN_1809dcfa0(x,fVar4,fVar5,fVar6,0x3f800000,0);
+                FUN_1807282e0(x,fVar4,fVar5,fVar6,0x3f800000,0);
                 return x;
               }
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        lVar1 = FUN_1800d60b0(DAT_181da3bb8,8);
+        lVar1 = FUN_1801dfd90(DAT_181e83cf8,8);
         local_368 = 0;
         local_360 = 0;
         local_378 = 0;
@@ -1130,7 +1130,7 @@ public class UIColorPicker
           if (*(int *)(lVar1 + 24) == 0) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 32) = local_378;
           *(uint64 *)(lVar1 + 40) = uStack_370;
@@ -1144,7 +1144,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 2) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 60) = local_358;
           *(uint64 *)(lVar1 + 68) = uStack_350;
@@ -1158,7 +1158,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 3) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 88) = local_338;
           *(uint64 *)(lVar1 + 96) = uStack_330;
@@ -1172,7 +1172,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 4) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 116) = local_318;
           *(uint64 *)(lVar1 + 124) = uStack_310;
@@ -1186,7 +1186,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 5) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 144) = local_2f8;
           *(uint64 *)(lVar1 + 152) = uStack_2f0;
@@ -1200,7 +1200,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 6) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 172) = local_2d8;
           *(uint64 *)(lVar1 + 180) = uStack_2d0;
@@ -1214,7 +1214,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 7) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint64 *)(lVar1 + 200) = local_2b8;
           *(uint64 *)(lVar1 + 208) = uStack_2b0;
@@ -1228,7 +1228,7 @@ public class UIColorPicker
           if (*(uint32 *)(lVar1 + 24) < 8) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           *(uint32 *)(lVar1 + 228) = (uint32)local_298;
           *(uint32 *)(lVar1 + 232) = local_298._4_4_;
@@ -1238,7 +1238,7 @@ public class UIColorPicker
           *(uint32 *)(lVar1 + 252) = local_280;
           uVar2 = new AnimationCurve(lVar1,0);
           UIColorPicker.mRed = uVar2;
-          lVar1 = FUN_1800d60b0(DAT_181da3bb8,8);
+          lVar1 = FUN_1801dfd90(DAT_181e83cf8,8);
           local_268 = 0;
           local_260 = 0;
           local_278 = 0;
@@ -1248,7 +1248,7 @@ public class UIColorPicker
             if (*(int *)(lVar1 + 24) == 0) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 32) = local_278;
             *(uint64 *)(lVar1 + 40) = uStack_270;
@@ -1262,7 +1262,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 2) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 60) = local_258;
             *(uint64 *)(lVar1 + 68) = uStack_250;
@@ -1276,7 +1276,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 3) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 88) = local_238;
             *(uint64 *)(lVar1 + 96) = uStack_230;
@@ -1290,7 +1290,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 4) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 116) = local_218;
             *(uint64 *)(lVar1 + 124) = uStack_210;
@@ -1304,7 +1304,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 5) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 144) = local_1f8;
             *(uint64 *)(lVar1 + 152) = uStack_1f0;
@@ -1318,7 +1318,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 6) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 172) = local_1d8;
             *(uint64 *)(lVar1 + 180) = uStack_1d0;
@@ -1332,7 +1332,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 7) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar1 + 200) = local_1b8;
             *(uint64 *)(lVar1 + 208) = uStack_1b0;
@@ -1346,7 +1346,7 @@ public class UIColorPicker
             if (*(uint32 *)(lVar1 + 24) < 8) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint32 *)(lVar1 + 228) = (uint32)local_198;
             *(uint32 *)(lVar1 + 232) = local_198._4_4_;
@@ -1356,7 +1356,7 @@ public class UIColorPicker
             *(uint32 *)(lVar1 + 252) = local_180;
             uVar2 = new AnimationCurve(lVar1,0);
             UIColorPicker.mGreen = uVar2;
-            lVar1 = FUN_1800d60b0(DAT_181da3bb8,8);
+            lVar1 = FUN_1801dfd90(DAT_181e83cf8,8);
             local_168 = 0;
             local_160 = 0;
             local_178 = 0;
@@ -1366,7 +1366,7 @@ public class UIColorPicker
               if (*(int *)(lVar1 + 24) == 0) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 32) = local_178;
               *(uint64 *)(lVar1 + 40) = uStack_170;
@@ -1380,7 +1380,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 2) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 60) = local_158;
               *(uint64 *)(lVar1 + 68) = uStack_150;
@@ -1394,7 +1394,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 3) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 88) = local_138;
               *(uint64 *)(lVar1 + 96) = uStack_130;
@@ -1408,7 +1408,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 4) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 116) = local_118;
               *(uint64 *)(lVar1 + 124) = uStack_110;
@@ -1422,7 +1422,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 5) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 144) = local_f8;
               *(uint64 *)(lVar1 + 152) = uStack_f0;
@@ -1436,7 +1436,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 6) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 172) = local_d8;
               *(uint64 *)(lVar1 + 180) = uStack_d0;
@@ -1450,7 +1450,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 7) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar1 + 200) = local_b8;
               *(uint64 *)(lVar1 + 208) = uStack_b0;
@@ -1464,7 +1464,7 @@ public class UIColorPicker
               if (*(uint32 *)(lVar1 + 24) < 8) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint32 *)(lVar1 + 228) = (uint32)local_98;
               *(uint32 *)(lVar1 + 232) = local_98._4_4_;
@@ -1474,14 +1474,14 @@ public class UIColorPicker
               *(uint32 *)(lVar1 + 252) = local_80;
               uVar2 = new AnimationCurve(lVar1,0);
               UIColorPicker.mBlue = uVar2;
-              goto LAB_1812b074a;
+              goto LAB_1811374da;
             }
           }
         }
     }
 
-    // Token : 0x600079B
-    // RVA   : 0x12B1820   Offset: 0x12B0C20   Length: 0x89
+    // Token : 0x6000782
+    // RVA   : 0x11385B0   Offset: 0x11373B0   Length: 0x89
     public void /*ctor*/()
     {
         uint uVar1;
@@ -1489,7 +1489,7 @@ public class UIColorPicker
         uint uVar3;
         ulong uVar5;
         byte[] local_18 = new byte[16];
-        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
+        puVar4 = (uint32 *)FUN_180f24d00(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];
@@ -1497,10 +1497,10 @@ public class UIColorPicker
         *(uint32 *)(this + 28) = uVar1;
         *(uint32 *)(this + 32) = uVar2;
         *(uint32 *)(this + 36) = uVar3;
-        uVar5 = il2cpp_internal(DAT_181d92670);
-        FUN_181330100(uVar5,DAT_181d85eb8);
+        uVar5 = il2cpp_internal(DAT_181e72638);
+        FUN_1810f3480(uVar5,DAT_181e680f8);
         this.onChange = uVar5;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

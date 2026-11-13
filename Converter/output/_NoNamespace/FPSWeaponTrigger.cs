@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : FPSWeaponTrigger
-// Token : 0x2000122
+// Token : 0x2000121
 // ============================================================
 
 public class FPSWeaponTrigger
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400072F
+    // Token: 0x400070F
     public Transform ShellEjectionTransform;
 
-    // Token: 0x4000730
+    // Token: 0x4000710
     public float EjectionForce;
 
-    // Token: 0x4000731
+    // Token: 0x4000711
     public Rigidbody Shell;
 
-    // Token: 0x4000732
+    // Token: 0x4000712
     public Transform Muzzle;
 
-    // Token: 0x4000733
+    // Token: 0x4000713
     public GameObject Bullet;
 
-    // Token: 0x4000734
+    // Token: 0x4000714
     public float SmokeAfter;
 
-    // Token: 0x4000735
+    // Token: 0x4000715
     public float SmokeMax;
 
-    // Token: 0x4000736
+    // Token: 0x4000716
     public float SmokeIncrement;
 
-    // Token: 0x4000737
+    // Token: 0x4000717
     public SmokePlume MuzzlePlume;
 
-    // Token: 0x4000738
+    // Token: 0x4000718
     public GameObject MuzzleFlashObject;
 
-    // Token: 0x4000739
+    // Token: 0x4000719
     private float _smoke;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009AD
-    // RVA   : 0xB2A6F0   Offset: 0xB29AF0   Length: 0x6E
+    // Token : 0x6000994
+    // RVA   : 0x8EC0B0   Offset: 0x8EAEB0   Length: 0x6E
     private void Update()
     {
         float fVar1;
@@ -49,7 +49,7 @@ public class FPSWeaponTrigger
         float fVar3;
         if (this.MuzzlePlume == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         *(bool *)(this.MuzzlePlume + 32) =
              this.SmokeAfter <= this._smoke &&
@@ -68,8 +68,8 @@ public class FPSWeaponTrigger
         }
     }
 
-    // Token : 0x60009AE
-    // RVA   : 0xB2A360   Offset: 0xB29760   Length: 0x35E
+    // Token : 0x6000995
+    // RVA   : 0x8EBD20   Offset: 0x8EAB20   Length: 0x35E
     public void Fire()
     {
         ulong uVar1;
@@ -103,9 +103,9 @@ public class FPSWeaponTrigger
                 uStack_40 = puVar6[1];
                 local_88 = uVar1;
                 local_80 = fVar2;
-                lVar7 = Object.Instantiate(uVar5,&local_88,&local_48,DAT_181d92cb0);
+                lVar7 = Object.Instantiate(uVar5,&local_88,&local_48,DAT_181e762f8);
                 if (lVar7 != null) {
-                  lVar7 = GameObject.GetComponent(lVar7,DAT_181d73008);
+                  lVar7 = GameObject.GetComponent(lVar7,DAT_181e560d0);
                   if (this.ShellEjectionTransform != null) {
                     fVar2 = this.EjectionForce;
                     puVar6 = (uint64 *)Transform.get_right(&local_68,this.ShellEjectionTransform,0)
@@ -138,7 +138,7 @@ public class FPSWeaponTrigger
                         lVar7 = Component.get_transform(this.Muzzle,0);
                         if (lVar7 != null) {
                           puVar6 = (uint64 *)Transform.get_position(&local_48,lVar7,0);
-                          uVar4 = DAT_181d92cb0;
+                          uVar4 = DAT_181e762f8;
                           uVar1 = *puVar6;
                           uVar3 = *(uint32 *)(puVar6 + 1);
                           if (this.Muzzle != null) {
@@ -162,8 +162,8 @@ public class FPSWeaponTrigger
         }
     }
 
-    // Token : 0x60009AF
-    // RVA   : 0xB2A6C0   Offset: 0xB29AC0   Length: 0x20
+    // Token : 0x6000996
+    // RVA   : 0x8EC080   Offset: 0x8EAE80   Length: 0x20
     private void LightsOff()
     {
         if (this.MuzzleFlashObject != null) {
@@ -172,11 +172,11 @@ public class FPSWeaponTrigger
         }
     }
 
-    // Token : 0x60009B0
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000997
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

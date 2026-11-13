@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : ExploreTileGroundType
-// Token : 0x2000272
+// Token : 0x2000279
 // ============================================================
 
 public class ExploreTileGroundType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40013AD
+    // Token: 0x40013EB
     public int value__;
 
-    // Token: 0x40013AE
+    // Token: 0x40013EC
     public const ExploreTileGroundType Road;
 
-    // Token: 0x40013AF
+    // Token: 0x40013ED
     public const ExploreTileGroundType Plane;
 
-    // Token: 0x40013B0
+    // Token: 0x40013EE
     public const ExploreTileGroundType Forest;
 
-    // Token: 0x40013B1
+    // Token: 0x40013EF
     public const ExploreTileGroundType Mountain;
 
-    // Token: 0x40013B2
+    // Token: 0x40013F0
     public const ExploreTileGroundType River;
 
 }

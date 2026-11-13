@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : LookAtTarget
-// Token : 0x20003CE
+// Token : 0x20003DB
 // ============================================================
 
 public class LookAtTarget
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E82
+    // Token: 0x4001F14
     public Transform Target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600241B
-    // RVA   : 0xA86DF0   Offset: 0xA861F0   Length: 0x2E
+    // Token : 0x60024C5
+    // RVA   : 0x7CAD50   Offset: 0x7C9B50   Length: 0x2E
     private void Update()
     {
         long lVar1;
@@ -22,11 +22,11 @@ public class LookAtTarget
         }
     }
 
-    // Token : 0x600241C
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60024C6
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

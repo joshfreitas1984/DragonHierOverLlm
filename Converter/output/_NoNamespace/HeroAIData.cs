@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : HeroAIData
-// Token : 0x2000134
+// Token : 0x2000130
 // ============================================================
 
 public class HeroAIData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400078C
+    // Token: 0x4000769
     public AIStuffType aiStuffType;
 
-    // Token: 0x400078D
+    // Token: 0x400076A
     public bool isPassiveTarget;
 
-    // Token: 0x400078E
+    // Token: 0x400076B
     public string aiStuffTarget;
 
-    // Token: 0x400078F
+    // Token: 0x400076C
     public int keepWorkingTimeLeft;
 
-    // Token: 0x4000790
+    // Token: 0x400076D
     public int keepWorkingTimeContine;
 
-    // Token: 0x4000791
+    // Token: 0x400076E
     public float leaveForceTime;
 
-    // Token: 0x4000792
+    // Token: 0x400076F
     public bool needCheckEquipment;
 
-    // Token: 0x4000793
+    // Token: 0x4000770
     public bool needCheckSkill;
 
-    // Token: 0x4000794
+    // Token: 0x4000771
     public bool needCheckSpeMed;
 
-    // Token: 0x4000795
+    // Token: 0x4000772
     public int bigMapTargetID;
 
-    // Token: 0x4000796
+    // Token: 0x4000773
     public BigMapPos bigMapTargetPos;
 
-    // Token: 0x4000797
+    // Token: 0x4000774
     public float bigmapWaitTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009D9
-    // RVA   : 0x8767A0   Offset: 0x875BA0   Length: 0x6C
+    // Token : 0x60009B8
+    // RVA   : 0x5AEBA0   Offset: 0x5AD9A0   Length: 0x6C
     public void /*ctor*/()
     {
                            uint8 param_5)
@@ -58,18 +58,18 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = param_2;
-        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9df8);
+        if (((*(byte *)(DAT_181e89f38 + 0x133) & 4) != 0) && (*(int *)(DAT_181e89f38 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181e89f38);
           param_2 = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
-        if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a9b0(lVar4,param_2,DAT_181d7aea0);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e89f38 + 184) + 16);
+        if (lVar4 == null) goto LAB_1805aee00;
+        cVar1 = FUN_18176a2d0(lVar4,param_2,DAT_181e5cbe8);
         if (cVar1) {
           iVar2 = Int32.Parse(param_3,0);
           this.bigMapTargetID = iVar2;
           if (-1 < iVar2) {
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if ((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) {
               lVar4 = WorldData.GetArea(*(int64 *)(lVar4 + 32),this.bigMapTargetID,0);
               if ((lVar4 != null) && (*(int64 *)(lVar4 + 64) != 0)) {
@@ -80,23 +80,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087691c;
+                goto LAB_1805aed1c;
               }
             }
-        LAB_180876a00:
+        LAB_1805aee00:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087691c:
+        LAB_1805aed1c:
         this.aiStuffTarget = param_3;
         this.isPassiveTarget = param_5;
         this.keepWorkingTimeLeft = param_4;
     }
 
-    // Token : 0x60009DA
-    // RVA   : 0x876510   Offset: 0x875910   Length: 0x8C
+    // Token : 0x60009B9
+    // RVA   : 0x5AE910   Offset: 0x5AD710   Length: 0x8C
     public void /*ctor*/(AIStuffType _aiStuffType, int _keepWorkingTimeLeft)
     {
                            uint8 param_5)
@@ -110,18 +110,18 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9df8);
+        if (((*(byte *)(DAT_181e89f38 + 0x133) & 4) != 0) && (*(int *)(DAT_181e89f38 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181e89f38);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
-        if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a9b0(lVar4,_aiStuffType,DAT_181d7aea0);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e89f38 + 184) + 16);
+        if (lVar4 == null) goto LAB_1805aee00;
+        cVar1 = FUN_18176a2d0(lVar4,_aiStuffType,DAT_181e5cbe8);
         if (cVar1) {
           iVar2 = Int32.Parse(_keepWorkingTimeLeft,0);
           this.bigMapTargetID = iVar2;
           if (-1 < iVar2) {
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if ((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) {
               lVar4 = WorldData.GetArea(*(int64 *)(lVar4 + 32),this.bigMapTargetID,0);
               if ((lVar4 != null) && (*(int64 *)(lVar4 + 64) != 0)) {
@@ -132,23 +132,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087691c;
+                goto LAB_1805aed1c;
               }
             }
-        LAB_180876a00:
+        LAB_1805aee00:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087691c:
+        LAB_1805aed1c:
         this.aiStuffTarget = _keepWorkingTimeLeft;
         this.isPassiveTarget = param_5;
         this.keepWorkingTimeLeft = param_4;
     }
 
-    // Token : 0x60009DB
-    // RVA   : 0x8765A0   Offset: 0x8759A0   Length: 0x1F6
+    // Token : 0x60009BA
+    // RVA   : 0x5AE9A0   Offset: 0x5AD7A0   Length: 0x1F6
     public void /*ctor*/(AIStuffType _aiStuffType, string _aiStuffTarget, int _keepWorkingTimeLeft)
     {
                            uint8 param_5)
@@ -162,18 +162,18 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9df8);
+        if (((*(byte *)(DAT_181e89f38 + 0x133) & 4) != 0) && (*(int *)(DAT_181e89f38 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181e89f38);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
-        if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a9b0(lVar4,_aiStuffType,DAT_181d7aea0);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e89f38 + 184) + 16);
+        if (lVar4 == null) goto LAB_1805aee00;
+        cVar1 = FUN_18176a2d0(lVar4,_aiStuffType,DAT_181e5cbe8);
         if (cVar1) {
           iVar2 = Int32.Parse(_aiStuffTarget,0);
           this.bigMapTargetID = iVar2;
           if (-1 < iVar2) {
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if ((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) {
               lVar4 = WorldData.GetArea(*(int64 *)(lVar4 + 32),this.bigMapTargetID,0);
               if ((lVar4 != null) && (*(int64 *)(lVar4 + 64) != 0)) {
@@ -184,23 +184,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087691c;
+                goto LAB_1805aed1c;
               }
             }
-        LAB_180876a00:
+        LAB_1805aee00:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087691c:
+        LAB_1805aed1c:
         this.aiStuffTarget = _aiStuffTarget;
         this.isPassiveTarget = param_5;
         this.keepWorkingTimeLeft = _keepWorkingTimeLeft;
     }
 
-    // Token : 0x60009DC
-    // RVA   : 0x876810   Offset: 0x875C10   Length: 0x1FE
+    // Token : 0x60009BB
+    // RVA   : 0x5AEC10   Offset: 0x5ADA10   Length: 0x1FE
     public void /*ctor*/(AIStuffType _aiStuffType, string _aiStuffTarget, int _keepWorkingTimeLeft, bool _isPassiveTarget)
     {
                            uint8 _isPassiveTarget)
@@ -214,18 +214,18 @@ public class HeroAIData
         this.bigMapTargetPos = new c.DisplayClass9_0(0);
         ZhSegment.Initialize(this,0);
         this.aiStuffType = _aiStuffType;
-        if (((*(byte *)(DAT_181da9df8 + 0x133) & 4) != 0) && (*(int *)(DAT_181da9df8 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181da9df8);
+        if (((*(byte *)(DAT_181e89f38 + 0x133) & 4) != 0) && (*(int *)(DAT_181e89f38 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181e89f38);
           _aiStuffType = this.aiStuffType;
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 16);
-        if (lVar4 == null) goto LAB_180876a00;
-        cVar1 = FUN_18182a9b0(lVar4,_aiStuffType,DAT_181d7aea0);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e89f38 + 184) + 16);
+        if (lVar4 == null) goto LAB_1805aee00;
+        cVar1 = FUN_18176a2d0(lVar4,_aiStuffType,DAT_181e5cbe8);
         if (cVar1) {
           iVar2 = Int32.Parse(_aiStuffTarget,0);
           this.bigMapTargetID = iVar2;
           if (-1 < iVar2) {
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if ((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) {
               lVar4 = WorldData.GetArea(*(int64 *)(lVar4 + 32),this.bigMapTargetID,0);
               if ((lVar4 != null) && (*(int64 *)(lVar4 + 64) != 0)) {
@@ -236,23 +236,23 @@ public class HeroAIData
                 else {
                   this.bigMapTargetPos = plVar5;
                 }
-                goto LAB_18087691c;
+                goto LAB_1805aed1c;
               }
             }
-        LAB_180876a00:
+        LAB_1805aee00:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           HeroAIData.WandererLoseTarget(this,0);
         }
-        LAB_18087691c:
+        LAB_1805aed1c:
         this.aiStuffTarget = _aiStuffTarget;
         this.isPassiveTarget = _isPassiveTarget;
         this.keepWorkingTimeLeft = _keepWorkingTimeLeft;
     }
 
-    // Token : 0x60009DD
-    // RVA   : 0x8763B0   Offset: 0x8757B0   Length: 0x24
+    // Token : 0x60009BC
+    // RVA   : 0x5AE7B0   Offset: 0x5AD5B0   Length: 0x24
     public void ResetBigmapTarget()
     {
         this.bigMapTargetID = 0xffffffff;
@@ -262,11 +262,11 @@ public class HeroAIData
         }
     }
 
-    // Token : 0x60009DE
-    // RVA   : 0x875FD0   Offset: 0x8753D0   Length: 0x3A0
+    // Token : 0x60009BD
+    // RVA   : 0x5AE3D0   Offset: 0x5AD1D0   Length: 0x3A0
     public string GetDescribe()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
@@ -276,7 +276,7 @@ public class HeroAIData
         uVar5 = this.aiStuffType;
         lVar6 = (int64)(int)uVar5;
         lVar2 = PlotController.attriIndexCache;
-        if (lVar2 == null) goto LAB_180876367;
+        if (lVar2 == null) goto LAB_1805ae767;
         if (*(uint32 *)(lVar2 + 24) <= uVar5) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
           uVar5 = this.aiStuffType;
@@ -290,10 +290,10 @@ public class HeroAIData
             }
             return "休息";
           }
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
              (lVar2 = WorldData.GetArea(*(int64 *)(lVar2 + 32),this.bigMapTargetID,0),
-             lVar2 == null)) goto LAB_180876367;
+             lVar2 == null)) goto LAB_1805ae767;
           uVar3 = AreaData.GetAreaName(lVar2,0);
           break;
         case 2:
@@ -302,21 +302,21 @@ public class HeroAIData
         case 8:
         case 9:
         case 10:
-          goto switchD_1808760dc_caseD_2;
+          goto switchD_1805ae4dc_caseD_2;
         case 6:
-          lVar2 = *(int64 *)(pStatics + 0x4b0);
-          goto LAB_180876197;
+          lVar2 = *(int64 *)(pStatics + 0x4b8);
+          goto LAB_1805ae597;
         case 7:
-          lVar2 = *(int64 *)(pStatics + 0x438);
-        LAB_180876197:
+          lVar2 = *(int64 *)(pStatics + 0x440);
+        LAB_1805ae597:
           uVar1 = Int32.Parse(this.aiStuffTarget,0);
-          if (lVar2 == null) goto LAB_180876367;
-          uVar3 = FUN_180002f80(lVar2,uVar1,DAT_181da4370);
+          if (lVar2 == null) goto LAB_1805ae767;
+          uVar3 = FUN_1800024b0(lVar2,uVar1,DAT_181e86970);
           break;
         case 11:
         case 12:
         case 13:
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           if (lVar2 != null) {
             lVar2 = *(int64 *)(lVar2 + 32);
             uVar1 = Int32.Parse(this.aiStuffTarget,0);
@@ -327,7 +327,7 @@ public class HeroAIData
                 uVar4 = String.Concat("与","他人",uVar4,0);
                 return uVar4;
               }
-              lVar2 = FUN_18046c0a0(0);
+              lVar2 = FUN_1802106e0(0);
               if (lVar2 != null) {
                 lVar2 = *(int64 *)(lVar2 + 32);
                 uVar1 = Int32.Parse(this.aiStuffTarget,0);
@@ -338,28 +338,28 @@ public class HeroAIData
               }
             }
           }
-          goto LAB_180876367;
+          goto LAB_1805ae767;
         default:
           if (uVar5 != 18) {
             return uVar4;
           }
         case 5:
-          lVar2 = FUN_18046c100(0);
+          lVar2 = FUN_180210740(0);
           uVar1 = Int32.Parse(this.aiStuffTarget,0);
           if ((lVar2 == null) || (lVar2 = GameDataController.GetSkillDataBase(lVar2,uVar1,0)) == null) {
-        LAB_180876367:
+        LAB_1805ae767:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar3 = KungfuSkillData.Name(lVar2,1,0);
         }
         uVar4 = String.Concat(uVar4,uVar3,0);
-        switchD_1808760dc_caseD_2:
+        switchD_1805ae4dc_caseD_2:
         return uVar4;
     }
 
-    // Token : 0x60009DF
-    // RVA   : 0x876450   Offset: 0x875850   Length: 0xBF
+    // Token : 0x60009BE
+    // RVA   : 0x5AE850   Offset: 0x5AD650   Length: 0xBF
     public void WandererLoseTarget()
     {
         int iVar1;
@@ -382,8 +382,8 @@ public class HeroAIData
         }
     }
 
-    // Token : 0x60009E0
-    // RVA   : 0x8763E0   Offset: 0x8757E0   Length: 0x69
+    // Token : 0x60009BF
+    // RVA   : 0x5AE7E0   Offset: 0x5AD5E0   Length: 0x69
     public void ResetBigmapWaitTime()
     {
         uint uVar1;
@@ -391,41 +391,42 @@ public class HeroAIData
         this.bigmapWaitTime = uVar1;
     }
 
-    // Token : 0x60009E1
-    // RVA   : 0x875E50   Offset: 0x875250   Length: 0x175
+    // Token : 0x60009C0
+    // RVA   : 0x5AE260   Offset: 0x5AD060   Length: 0x16A
     public virtual object Clone()
     {
-        long lVar2;
-        ulong uVar3;
-        ulong local_38;
-        ulong uStack_30;
-        uint local_28;
-        uint uStack_24;
-        uint uStack_20;
-        uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
-        plVar4 = plVar1;
-        MemoryStream.ctor(plVar1,1000,0);
-        local_38 = 0;
-        uStack_30 = 0;
-        StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
-        local_28 = (uint32)local_38;
-        uStack_24 = local_38._4_4_;
-        uStack_20 = (uint32)uStack_30;
-        uStack_1c = uStack_30._4_4_;
-        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar4);
-        if (lVar2 != null) {
-          BinaryFormatter.Serialize(lVar2,plVar1,this,0);
-          if (plVar1 != (int64 *)0) {
-            (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
-            uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
-            (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
-            return uVar3;
+        long lVar1;
+        ulong uVar2;
+        long lVar3;
+        lVar1 = il2cpp_internal(DAT_181e55950);
+        *(uint32 *)(lVar1 + 48) = 0xffffffff;
+        uVar2 = new c.DisplayClass9_0(0);
+        *(uint64 *)(lVar1 + 56) = uVar2;
+        ZhSegment.Initialize(lVar1,0);
+        *(uint32 *)(lVar1 + 16) = this.aiStuffType;
+        *(uint8 *)(lVar1 + 20) = this.isPassiveTarget;
+        *(uint64 *)(lVar1 + 24) = this.aiStuffTarget;
+        *(uint32 *)(lVar1 + 32) = this.keepWorkingTimeLeft;
+        *(uint32 *)(lVar1 + 36) = this.keepWorkingTimeContine;
+        *(uint32 *)(lVar1 + 40) = this.leaveForceTime;
+        *(uint8 *)(lVar1 + 44) = this.needCheckEquipment;
+        *(uint8 *)(lVar1 + 45) = this.needCheckSkill;
+        *(uint8 *)(lVar1 + 46) = this.needCheckSpeMed;
+        *(uint32 *)(lVar1 + 48) = this.bigMapTargetID;
+        if (this.bigMapTargetPos == null) {
+          lVar3 = 0;
+        LAB_1805ae396:
+          *(int64 *)(lVar1 + 56) = lVar3;
+          *(uint32 *)(lVar1 + 64) = this.bigmapWaitTime;
+          return lVar1;
+        }
+        lVar3 = new c.DisplayClass9_0(0);
+        if ((this.bigMapTargetPos != null) && (lVar3 != null)) {
+          *(uint32 *)(lVar3 + 16) = this.bigMapTargetPos.x;
+          if (this.bigMapTargetPos != null) {
+            *(uint32 *)(lVar3 + 20) = this.bigMapTargetPos.y;
+            goto LAB_1805ae396;
           }
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
         }
     }
 

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : TankTranslator
-// Token : 0x200012B
+// Token : 0x200012A
 // ============================================================
 
 public class TankTranslator
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400075B
+    // Token: 0x400073B
     public float TranslateDistance;
 
-    // Token: 0x400075C
+    // Token: 0x400073C
     public bool TrailTranslationEnabled;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009C8
-    // RVA   : 0xA9D5D0   Offset: 0xA9C9D0   Length: 0x238
+    // Token : 0x60009AF
+    // RVA   : 0x80C820   Offset: 0x80B620   Length: 0x238
     private void Update()
     {
         long lVar1;
@@ -34,12 +34,12 @@ public class TankTranslator
         fVar9 = (float)*puVar3;
         fVar8 = (float)((uint64)*puVar3 >> 32);
         fVar7 = *(float *)(puVar3 + 1);
-        cVar2 = FUN_1804625b0(97);
+        cVar2 = FUN_181844860(97);
         if (!cVar2) {
-          cVar2 = FUN_1804625b0(100);
+          cVar2 = FUN_181844860(100);
           if (cVar2) {
             lVar4 = Component.get_transform(this,0);
-            if (lVar4 == null) goto LAB_180a9d803;
+            if (lVar4 == null) goto LAB_18080ca53;
             puVar3 = (uint64 *)Transform.get_right(local_28,lVar4,0);
             local_48 = *puVar3;
             local_40 = *(float *)(puVar3 + 1);
@@ -53,7 +53,7 @@ public class TankTranslator
         }
         else {
           lVar4 = Component.get_transform(this);
-          if (lVar4 == null) goto LAB_180a9d803;
+          if (lVar4 == null) goto LAB_18080ca53;
           fVar7 = this.TranslateDistance;
           puVar3 = (uint64 *)Transform.get_right(local_28,lVar4,0);
           local_48 = *puVar3;
@@ -73,25 +73,25 @@ public class TankTranslator
         if (cVar2) {
           lVar4 = Component.get_transform(this,0);
           if (lVar4 == null) {
-        LAB_180a9d803:
+        LAB_18080ca53:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           local_38 = CONCAT44(fVar8,fVar9);
           local_30 = fVar7;
           Transform.Translate(lVar4,&local_38,0);
           if (this.TrailTranslationEnabled) {
-            lVar4 = FUN_180967b70(this,DAT_181d988f8);
+            lVar4 = FUN_180772590(this,DAT_181e7bcb8);
             uVar6 = 0;
-            if (lVar4 == null) goto LAB_180a9d803;
+            if (lVar4 == null) goto LAB_18080ca53;
             for (; (int)uVar6 < (int)*(uint32 *)(lVar4 + 24); uVar6 = uVar6 + 1) {
               if (*(uint32 *)(lVar4 + 24) <= uVar6) {
                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
+                FUN_1801e02d0(uVar5,0);
               }
               lVar1 = lVar4[uVar6];
-              if (lVar1 == null) goto LAB_180a9d803;
+              if (lVar1 == null) goto LAB_18080ca53;
               local_38 = CONCAT44(fVar8,fVar9);
               local_30 = fVar7;
               TrailRenderer_Base.Translate(lVar1,&local_38,0);
@@ -100,11 +100,11 @@ public class TankTranslator
         }
     }
 
-    // Token : 0x60009C9
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60009B0
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : DelayActive
-// Token : 0x20003CD
+// Token : 0x20003DA
 // ============================================================
 
 public class DelayActive
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E7F
+    // Token: 0x4001F11
     public GameObject[] m_activeObj;
 
-    // Token: 0x4001E80
+    // Token: 0x4001F12
     public float m_delayTime;
 
-    // Token: 0x4001E81
+    // Token: 0x4001F13
     private float m_time;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002418
-    // RVA   : 0x93B7B0   Offset: 0x93ABB0   Length: 0x1B
+    // Token : 0x60024C2
+    // RVA   : 0x680EB0   Offset: 0x67FCB0   Length: 0x1B
     private void Start()
     {
         uint uVar1;
@@ -25,8 +25,8 @@ public class DelayActive
         this.m_time = uVar1;
     }
 
-    // Token : 0x6002419
-    // RVA   : 0x93B7D0   Offset: 0x93ABD0   Length: 0x125
+    // Token : 0x60024C3
+    // RVA   : 0x680ED0   Offset: 0x67FCD0   Length: 0x125
     private void Update()
     {
         long lVar1;
@@ -48,7 +48,7 @@ public class DelayActive
           if (*(uint32 *)(lVar1 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar3,0);
+            FUN_1801e02d0(uVar3,0);
           }
           uVar3 = lVar1[uVar4];
           cVar2 = Object.op_Inequality(uVar3,0,0);
@@ -58,7 +58,7 @@ public class DelayActive
             if (*(uint32 *)(lVar1 + 24) <= uVar4) {
               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar3,0);
+              FUN_1801e02d0(uVar3,0);
             }
             lVar1 = lVar1[uVar4];
             if (lVar1 == null) break;
@@ -69,11 +69,11 @@ public class DelayActive
         }
     }
 
-    // Token : 0x600241A
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60024C4
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

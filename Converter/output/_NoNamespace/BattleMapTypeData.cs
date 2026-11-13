@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : BattleMapTypeData
-// Token : 0x200015E
+// Token : 0x200015A
 // ============================================================
 
 public class BattleMapTypeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40008CF
+    // Token: 0x40008B0
     public BattleMapType battleMapType;
 
-    // Token: 0x40008D0
+    // Token: 0x40008B1
     public int column;
 
-    // Token: 0x40008D1
+    // Token: 0x40008B2
     public int row;
 
-    // Token: 0x40008D2
+    // Token: 0x40008B3
     public AttackAreaType attackAreaType;
 
-    // Token: 0x40008D3
+    // Token: 0x40008B4
     public AreaData targetArea;
 
-    // Token: 0x40008D4
+    // Token: 0x40008B5
     public int difficulty;
 
-    // Token: 0x40008D5
+    // Token: 0x40008B6
     public float defenceHpRate;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000AFA
-    // RVA   : 0x8CA500   Offset: 0x8C9900   Length: 0x3F6
+    // Token : 0x6000AD9
+    // RVA   : 0x5EA1D0   Offset: 0x5E8FD0   Length: 0x3F6
     public void /*ctor*/(BattleMapType _battleMapType)
     {
         void BattleMapTypeData.ctor
@@ -42,8 +42,8 @@ public class BattleMapTypeData
         this.row = param_4;
     }
 
-    // Token : 0x6000AFB
-    // RVA   : 0x8CA260   Offset: 0x8C9660   Length: 0xEF
+    // Token : 0x6000ADA
+    // RVA   : 0x5E9F30   Offset: 0x5E8D30   Length: 0xEF
     public float GetTimeMapScaleRate()
     {
         long lVar1;
@@ -57,8 +57,8 @@ public class BattleMapTypeData
         }
     }
 
-    // Token : 0x6000AFC
-    // RVA   : 0x8CA350   Offset: 0x8C9750   Length: 0x1AF
+    // Token : 0x6000ADB
+    // RVA   : 0x5EA020   Offset: 0x5E8E20   Length: 0x1AF
     public void /*ctor*/(AttackAreaType _attackAreaType, int _difficulty)
     {
         void BattleMapTypeData.ctor
@@ -71,8 +71,8 @@ public class BattleMapTypeData
         this.row = param_4;
     }
 
-    // Token : 0x6000AFD
-    // RVA   : 0x8CA900   Offset: 0x8C9D00   Length: 0x4B
+    // Token : 0x6000ADC
+    // RVA   : 0x5EA5D0   Offset: 0x5E93D0   Length: 0x4B
     public void /*ctor*/(BattleMapType _battleMapType, int _column, int _row)
     {
         void BattleMapTypeData.ctor

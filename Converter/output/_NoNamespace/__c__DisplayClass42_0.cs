@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : <>c__DisplayClass42_0
-// Token : 0x2000297
+// Token : 0x200029F
 // ============================================================
 
 public class <>c__DisplayClass42_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40014D0
+    // Token: 0x4001513
     public int rerollID;
 
-    // Token: 0x40014D1
+    // Token: 0x4001514
     public GambleUIController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001516
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6001582
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6001517
-    // RVA   : 0x939EC0   Offset: 0x9392C0   Length: 0x37
+    // Token : 0x6001583
+    // RVA   : 0x67FA50   Offset: 0x67E850   Length: 0x37
     internal void <NextButtonClicked>b__6()
     {
         if (this.<>4__this != 0) {
@@ -34,8 +34,8 @@ public class <>c__DisplayClass42_0
         }
     }
 
-    // Token : 0x6001518
-    // RVA   : 0x939F00   Offset: 0x939300   Length: 0x24
+    // Token : 0x6001584
+    // RVA   : 0x67FA90   Offset: 0x67E890   Length: 0x24
     internal void <NextButtonClicked>b__8()
     {
         if (this.<>4__this != 0) {

@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : Direction
-// Token : 0x2000090
+// Token : 0x200008F
 // ============================================================
 
 public class Direction
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400037F
+    // Token: 0x400035F
     public int value__;
 
-    // Token: 0x4000380
+    // Token: 0x4000360
     public const Direction SourceUpdatesTarget;
 
-    // Token: 0x4000381
+    // Token: 0x4000361
     public const Direction TargetUpdatesSource;
 
-    // Token: 0x4000382
+    // Token: 0x4000362
     public const Direction BiDirectional;
 
 }

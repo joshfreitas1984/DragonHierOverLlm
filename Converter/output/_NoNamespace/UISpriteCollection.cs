@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : UISpriteCollection
-// Token : 0x200010E
+// Token : 0x200010D
 // ============================================================
 
 public class UISpriteCollection
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40006C5
+    // Token: 0x40006A5
     private object mAtlas;
 
-    // Token: 0x40006C6
+    // Token: 0x40006A6
     private Dictionary<object, Sprite> mSprites;
 
-    // Token: 0x40006C7
+    // Token: 0x40006A7
     private UISpriteData mSprite;
 
-    // Token: 0x40006C8
+    // Token: 0x40006A8
     public OnHoverCB onHover;
 
-    // Token: 0x40006C9
+    // Token: 0x40006A9
     public OnPressCB onPress;
 
-    // Token: 0x40006CA
+    // Token: 0x40006AA
     public OnClickCB onClick;
 
-    // Token: 0x40006CB
+    // Token: 0x40006AB
     public OnDragCB onDrag;
 
-    // Token: 0x40006CC
+    // Token: 0x40006AC
     public OnTooltipCB onTooltip;
 
-    // Token: 0x40006CD
+    // Token: 0x40006AD
     private object mLastHover;
 
-    // Token: 0x40006CE
+    // Token: 0x40006AE
     private object mLastPress;
 
-    // Token: 0x40006CF
+    // Token: 0x40006AF
     private object mLastTooltip;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600092C
-    // RVA   : 0x1709D60   Offset: 0x1709160   Length: 0xD8
+    // Token : 0x6000913
+    // RVA   : 0x160C090   Offset: 0x160AE90   Length: 0xD8
     public override Texture get_mainTexture()
     {
         bool cVar1;
@@ -49,9 +49,9 @@ public class UISpriteCollection
         long lVar3;
         ulong uVar4;
         lVar3 = 0;
-        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
+        lVar2 = il2cpp_internal(this.mAtlas,DAT_181e5a658);
         if (lVar2 != null) {
-          lVar3 = FUN_180002970(0,DAT_181d7a7a0,lVar2);
+          lVar3 = FUN_180002280(0,DAT_181e5a658,lVar2);
         }
         cVar1 = Object.op_Inequality(lVar3,0,0);
         if (cVar1) {
@@ -60,22 +60,22 @@ public class UISpriteCollection
             return uVar4;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         return 0;
     }
 
-    // Token : 0x600092D
-    // RVA   : 0x11961D0   Offset: 0x11955D0   Length: 0x8
+    // Token : 0x6000914
+    // RVA   : 0xF93690   Offset: 0xF92490   Length: 0x8
     public override void set_mainTexture(Texture value)
     {
-        void FUN_1811961d0(uint64 this,uint64 value)
+        void FUN_180f93690(uint64 this,uint64 value)
         {
         UIWidget.set_mainTexture(this,value,0);
     }
 
-    // Token : 0x600092E
-    // RVA   : 0x1709E40   Offset: 0x1709240   Length: 0xD2
+    // Token : 0x6000915
+    // RVA   : 0x160C170   Offset: 0x160AF70   Length: 0xD2
     public override Material get_material()
     {
         bool cVar1;
@@ -86,32 +86,32 @@ public class UISpriteCollection
         if (cVar1) {
           return uVar3;
         }
-        lVar2 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
+        lVar2 = il2cpp_internal(this.mAtlas,DAT_181e5a658);
         if (lVar2 == null) {
           return 0;
         }
-        uVar3 = FUN_180002970(0,DAT_181d7a7a0,lVar2);
+        uVar3 = FUN_180002280(0,DAT_181e5a658,lVar2);
         return uVar3;
     }
 
-    // Token : 0x600092F
-    // RVA   : 0x11961E0   Offset: 0x11955E0   Length: 0x8
+    // Token : 0x6000916
+    // RVA   : 0xF936A0   Offset: 0xF924A0   Length: 0x8
     public override void set_material(Material value)
     {
-        void FUN_1811961e0(uint64 this,uint64 value)
+        void FUN_180f936a0(uint64 this,uint64 value)
         {
         UIWidget.set_material(this,value,0);
     }
 
-    // Token : 0x6000930
-    // RVA   : 0x1709CA0   Offset: 0x17090A0   Length: 0x3D
+    // Token : 0x6000917
+    // RVA   : 0x160BFD0   Offset: 0x160ADD0   Length: 0x3D
     public INGUIAtlas get_atlas()
     {
-        il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
+        il2cpp_internal(this.mAtlas,DAT_181e5a658);
     }
 
-    // Token : 0x6000931
-    // RVA   : 0x170A0D0   Offset: 0x17094D0   Length: 0x100
+    // Token : 0x6000918
+    // RVA   : 0x160C400   Offset: 0x160B200   Length: 0x100
     public void set_atlas(INGUIAtlas value)
     {
         plVar2 = (int64 *)il2cpp_internal(this[63]);
@@ -127,41 +127,41 @@ public class UISpriteCollection
           il2cpp_internal(this + 63);
           if (this[64] == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          Dictionary_2.Clear(this[64],DAT_181dc68c0);
+          Dictionary_2.Clear(this[64],DAT_181e50980);
           (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
         }
     }
 
-    // Token : 0x6000932
-    // RVA   : 0x1709FD0   Offset: 0x17093D0   Length: 0x80
+    // Token : 0x6000919
+    // RVA   : 0x160C300   Offset: 0x160B100   Length: 0x80
     public override float get_pixelSize()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
+        lVar1 = il2cpp_internal(this.mAtlas,DAT_181e5a658);
         if (lVar1 == null) {
           return 0x3f800000;
         }
-        uVar2 = FUN_180133580(5,DAT_181d7a7a0,lVar1);
+        uVar2 = FUN_18005fee0(5,DAT_181e5a658,lVar1);
         return uVar2;
     }
 
-    // Token : 0x6000933
-    // RVA   : 0x170A050   Offset: 0x1709450   Length: 0x78
+    // Token : 0x600091A
+    // RVA   : 0x160C380   Offset: 0x160B180   Length: 0x78
     public override bool get_premultipliedAlpha()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(this.mAtlas,DAT_181d7a7a0);
+        lVar1 = il2cpp_internal(this.mAtlas,DAT_181e5a658);
         if (lVar1 == null) {
           return;
         }
-        FUN_180002970(7,DAT_181d7a7a0,lVar1);
+        FUN_180002280(7,DAT_181e5a658,lVar1);
     }
 
-    // Token : 0x6000934
-    // RVA   : 0x1709CE0   Offset: 0x17090E0   Length: 0x80
+    // Token : 0x600091B
+    // RVA   : 0x160C010   Offset: 0x160AE10   Length: 0x80
     public override Vector4 get_border()
     {
         uint uVar1;
@@ -179,7 +179,7 @@ public class UISpriteCollection
           iVar4 = *(int *)(lVar5 + 48);
           *this = 0;
           this[1] = 0;
-          FUN_1809dcfa0(0,uVar3,uVar2,uVar1,(float)iVar4,0);
+          FUN_1807282e0(0,uVar3,uVar2,uVar1,(float)iVar4,0);
           return this;
         }
         puVar7 = (uint64 *)UIWidget.get_border(local_18,param_2,0);
@@ -189,15 +189,15 @@ public class UISpriteCollection
         return this;
     }
 
-    // Token : 0x6000935
-    // RVA   : 0x1709F20   Offset: 0x1709320   Length: 0xA9
+    // Token : 0x600091C
+    // RVA   : 0x160C250   Offset: 0x160B050   Length: 0xA9
     protected override Vector4 get_padding()
     {
         this[0] = 0.0;
         this[1] = 0.0;
         this[2] = 0.0;
         this[3] = 0.0;
-        FUN_1809dcfa0(this,0,0,0,0,0);
+        FUN_1807282e0(this,0,0,0,0,0);
         if (*(int64 *)(param_2 + 0x208) == 0) {
           return this;
         }
@@ -214,8 +214,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000936
-    // RVA   : 0x1708940   Offset: 0x1707D40   Length: 0x913
+    // Token : 0x600091D
+    // RVA   : 0x160AC70   Offset: 0x1609A70   Length: 0x913
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         void UISpriteCollection.OnFill
@@ -318,7 +318,7 @@ public class UISpriteCollection
         if (verts != null) {
           uVar2 = *(uint32 *)(verts + 24);
           if (this[64] != 0) {
-            FUN_181758e60(&local_150,this[64],DAT_181dc6a58);
+            FUN_181682af0(&local_150,this[64],DAT_181e50b10);
             local_1c8 = local_150;
             uStack_1c0 = uStack_148;
             local_1b8 = local_140;
@@ -334,9 +334,9 @@ public class UISpriteCollection
               do {
                 do {
                   do {
-                    cVar6 = FUN_1813ed8f0(&local_1c8,DAT_181da0760);
+                    cVar6 = FUN_180fe56f0(&local_1c8,DAT_181e82608);
                     if (!cVar6) {
-                      ZhSegment.Initialize(&local_1c8,DAT_181da06e0);
+                      ZhSegment.Initialize(&local_1c8,DAT_181e82590);
                       this[65] = 0;
                       il2cpp_internal(this + 65,0);
                       if (this[24] == 0) {
@@ -362,13 +362,13 @@ public class UISpriteCollection
               } while (*(float *)((int64)this + 140) == 0.0);
               if (this[65] == 0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar7 = (uint32)((uint64)in_stack_fffffffffffffd28 >> 32);
-              FUN_1809dcfa0(&local_1e8);
+              FUN_1807282e0(&local_1e8);
               lVar4 = this[65];
               if (lVar4 == null) break;
-              FUN_1809dcfa0(&local_1d8,*(int *)(lVar4 + 48),*(uint32 *)(lVar4 + 28),
+              FUN_1807282e0(&local_1d8,*(int *)(lVar4 + 48),*(uint32 *)(lVar4 + 28),
                             *(uint32 *)(lVar4 + 40),
                             CONCAT44(uVar7,(float)((*(int *)(lVar4 + 36) - *(int *)(lVar4 + 48)) -
                                                   *(int *)(lVar4 + 52))),0);
@@ -376,7 +376,7 @@ public class UISpriteCollection
               uVar1 = local_1e8;
               if (plVar9 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar7 = (**(code **)(*plVar9 + 0x178))(plVar9,*(uint64 *)(*plVar9 + 0x180));
               uVar8 = (**(code **)(*plVar9 + 0x198))(plVar9,*(uint64 *)(*plVar9 + 0x1a0));
@@ -459,12 +459,12 @@ public class UISpriteCollection
                   local_208 = CONCAT44(uStack_240._4_4_ + local_168._4_4_,(float)uVar1 + (float)uStack_240
                                       );
                   local_168 = uVar1;
-                  FUN_18181e3a0(verts,uVar12,&local_208,DAT_181dabea8);
+                  FUN_18175db20(verts,uVar12,&local_208,DAT_181e8e4d8);
                 }
               }
               else {
-                fVar13 = (float)FUN_1801e7e70();
-                fVar14 = (float)FUN_1801e7370();
+                fVar13 = (float)FUN_1801e84c0();
+                fVar14 = (float)FUN_1801e7fc0();
                 fVar14 = fVar14 * (fVar13 + fVar13);
                 for (; (int)uVar12 < iVar3; uVar12 = uVar12 + 1) {
                   if (*(uint32 *)(verts + 24) <= uVar12) {
@@ -482,32 +482,32 @@ public class UISpriteCollection
                   local_2a0 = uVar1;
                   local_250 = local_298;
                   local_1f0 = local_298;
-                  FUN_18181e3a0(verts,uVar12,&local_1f8,DAT_181dabea8);
+                  FUN_18175db20(verts,uVar12,&local_1f8,DAT_181e8e4d8);
                 }
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6000937
-    // RVA   : 0x1707AB0   Offset: 0x1706EB0   Length: 0xD3
+    // Token : 0x600091E
+    // RVA   : 0x1609DE0   Offset: 0x1608BE0   Length: 0xD3
     public void Add(object obj, string spriteName, Vector2 pos, float width, float height)
     {
         UISpriteCollection.AddSprite();
     }
 
-    // Token : 0x6000938
-    // RVA   : 0x1707B90   Offset: 0x1706F90   Length: 0x68
+    // Token : 0x600091F
+    // RVA   : 0x1609EC0   Offset: 0x1608CC0   Length: 0x68
     public void Add(object obj, string spriteName, Vector2 pos, float width, float height, Color32 color)
     {
         UISpriteCollection.AddSprite();
     }
 
-    // Token : 0x6000939
-    // RVA   : 0x1707870   Offset: 0x1706C70   Length: 0x235
+    // Token : 0x6000920
+    // RVA   : 0x1609BA0   Offset: 0x16089A0   Length: 0x235
     public void AddSprite(object id, string spriteName, Vector2 pos, float width, float height, Color32 color, Vector2 pivot, float rot, Type type, Flip flip, bool enabled)
     {
         void UISpriteCollection.AddSprite
@@ -544,9 +544,9 @@ public class UISpriteCollection
           uStack_80 = 0;
           local_78 = 0;
           uStack_70 = 0;
-          lVar3 = il2cpp_internal(this[63],DAT_181d7a7a0);
+          lVar3 = il2cpp_internal(this[63],DAT_181e5a658);
           if (lVar3 != null) {
-            local_98 = FUN_180002aa0(10,DAT_181d7a7a0,lVar3,spriteName);
+            local_98 = FUN_180054130(10,DAT_181e5a658,lVar3,spriteName);
             il2cpp_internal(&local_98,local_98);
           }
           if (local_98 != 0) {
@@ -559,7 +559,7 @@ public class UISpriteCollection
             uStack_90 = pos;
             if (this[64] == 0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             local_58 = local_98;
             local_78._0_4_ = (uint32)pivot;
@@ -573,7 +573,7 @@ public class UISpriteCollection
             local_28 = local_68;
             local_78 = uVar1;
             uStack_50 = pos;
-            FUN_18176d3d0(this[64],id,&local_58,DAT_181dc7030);
+            FUN_181697880(this[64],id,&local_58,DAT_181e510e8);
             if ((enabled) && ((char)this[11] == false)) {
               (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
             }
@@ -584,8 +584,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600093A
-    // RVA   : 0x17086E0   Offset: 0x1707AE0   Length: 0x14A
+    // Token : 0x6000921
+    // RVA   : 0x160AA10   Offset: 0x1609810   Length: 0x14A
     public Nullable<Sprite> GetSprite(object id)
     {
         bool cVar1;
@@ -621,7 +621,7 @@ public class UISpriteCollection
         local_a8 = 0;
         uStack_a0 = 0;
         if (*(int64 *)(id + 0x200) != 0) {
-          cVar1 = FUN_181766e70(*(int64 *)(id + 0x200),param_3,&local_c8,DAT_181dc6e10);
+          cVar1 = FUN_1816913e0(*(int64 *)(id + 0x200),param_3,&local_c8,DAT_181e50ec8);
           if (!cVar1) {
             *this = 0;
             this[1] = 0;
@@ -650,7 +650,7 @@ public class UISpriteCollection
             uStack_24 = local_a8._4_4_;
             uStack_20 = (uint32)uStack_a0;
             uStack_1c = uStack_a0._4_4_;
-            FUN_181308c30(&local_88,&local_48,DAT_181dbae20);
+            FUN_180de6bd0(&local_88,&local_48,DAT_181e9dbc8);
             *this = local_88;
             this[1] = uStack_80;
             this[2] = local_78;
@@ -664,13 +664,13 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600093B
-    // RVA   : 0x1709780   Offset: 0x1708B80   Length: 0x81
+    // Token : 0x6000922
+    // RVA   : 0x160BAB0   Offset: 0x160A8B0   Length: 0x81
     public bool RemoveSprite(object id)
     {
         bool cVar1;
         if (this[64] != 0) {
-          cVar1 = FUN_18175e0f0(this[64],id,DAT_181dc6c78);
+          cVar1 = FUN_1816888e0(this[64],id,DAT_181e50d30);
           if (!cVar1) {
             return false;
           }
@@ -681,8 +681,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600093C
-    // RVA   : 0x1709B40   Offset: 0x1708F40   Length: 0xA9
+    // Token : 0x6000923
+    // RVA   : 0x160BE70   Offset: 0x160AC70   Length: 0xA9
     public bool SetSprite(object id, Sprite sp)
     {
         ulong local_48;
@@ -704,7 +704,7 @@ public class UISpriteCollection
           uStack_20 = *(uint32 *)(sp + 5);
           uStack_1c = *(uint32 *)((int64)sp + 44);
           local_18 = sp[6];
-          FUN_18176d3d0(this[64],id,&local_48,DAT_181dc7030);
+          FUN_181697880(this[64],id,&local_48,DAT_181e510e8);
           if ((char)this[11] == false) {
             (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
           }
@@ -712,19 +712,19 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600093D
-    // RVA   : 0x1707C00   Offset: 0x1707000   Length: 0x89
+    // Token : 0x6000924
+    // RVA   : 0x1609F30   Offset: 0x1608D30   Length: 0x89
     public void Clear()
     {
         int iVar1;
         if (this[64] != 0) {
-          iVar1 = Dictionary_2.get_Count(this[64],DAT_181dc6f20);
+          iVar1 = Dictionary_2.get_Count(this[64],DAT_181e50fd8);
           if (iVar1 == 0) {
             return;
           }
           if (this[64] != 0) {
-            Dictionary_2.Clear(this[64],DAT_181dc68c0);
-                          // WARNING: Could not recover jumptable at 0x000181707c77. Too many branches
+            Dictionary_2.Clear(this[64],DAT_181e50980);
+                          // WARNING: Could not recover jumptable at 0x000181609fa7. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
             return;
@@ -732,8 +732,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600093E
-    // RVA   : 0x1708830   Offset: 0x1707C30   Length: 0x84
+    // Token : 0x6000925
+    // RVA   : 0x160AB60   Offset: 0x1609960   Length: 0x84
     public bool IsActive(object id)
     {
         bool cVar1;
@@ -752,7 +752,7 @@ public class UISpriteCollection
         local_28 = 0;
         uStack_20 = 0;
         if (this.mSprites != null) {
-          cVar1 = FUN_181766e70(this.mSprites,id,&local_48,DAT_181dc6e10);
+          cVar1 = FUN_1816913e0(this.mSprites,id,&local_48,DAT_181e50ec8);
           if (!cVar1) {
             local_18._0_1_ = 0;
           }
@@ -760,8 +760,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600093F
-    // RVA   : 0x17098C0   Offset: 0x1708CC0   Length: 0x11B
+    // Token : 0x6000926
+    // RVA   : 0x160BBF0   Offset: 0x160A9F0   Length: 0x11B
     public bool SetActive(object id, bool visible)
     {
         bool cVar1;
@@ -790,7 +790,7 @@ public class UISpriteCollection
         local_68 = 0;
         uStack_60 = 0;
         if (this[64] != 0) {
-          cVar1 = FUN_181766e70(this[64],id,&local_88,DAT_181dc6e10);
+          cVar1 = FUN_1816913e0(this[64],id,&local_88,DAT_181e50ec8);
           uVar2 = 0;
           if (cVar1) {
             if ((char)local_58 != visible) {
@@ -805,7 +805,7 @@ public class UISpriteCollection
               uStack_20 = (uint32)uStack_60;
               uStack_1c = uStack_60._4_4_;
               local_18 = local_58;
-              FUN_18176d3d0(this[64],id,&local_48,DAT_181dc7030);
+              FUN_181697880(this[64],id,&local_48,DAT_181e510e8);
               if ((char)this[11] == false) {
                 (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
               }
@@ -816,8 +816,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000940
-    // RVA   : 0x17099E0   Offset: 0x1708DE0   Length: 0x159
+    // Token : 0x6000927
+    // RVA   : 0x160BD10   Offset: 0x160AB10   Length: 0x159
     public bool SetPosition(object id, Vector2 pos, bool visible)
     {
         uint8
@@ -853,7 +853,7 @@ public class UISpriteCollection
         local_70 = 0;
         uStack_68 = 0;
         if (this[64] != 0) {
-          cVar2 = FUN_181766e70(this[64],id,&local_90,DAT_181dc6e10);
+          cVar2 = FUN_1816913e0(this[64],id,&local_90,DAT_181e50ec8);
           uVar3 = 0;
           if (cVar2) {
             local_98 = (float)pos;
@@ -875,7 +875,7 @@ public class UISpriteCollection
               uStack_30 = (uint32)uStack_68;
               uStack_2c = uStack_68._4_4_;
               local_28 = local_60;
-              FUN_18176d3d0(this[64],id,&local_58,DAT_181dc7030);
+              FUN_181697880(this[64],id,&local_58,DAT_181e510e8);
               if ((char)this[11] == false) {
                 (**(code **)(*this + 0x328))(this,*(uint64 *)(*this + 0x330));
               }
@@ -886,8 +886,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000941
-    // RVA   : 0x1709810   Offset: 0x1708C10   Length: 0xA9
+    // Token : 0x6000928
+    // RVA   : 0x160BB40   Offset: 0x160A940   Length: 0xA9
     private static Vector2 Rotate(Vector2 pos, float rot)
     {
         float fVar1;
@@ -895,8 +895,8 @@ public class UISpriteCollection
         uint local_res20;
         uint uStackX_24;
         fVar2 = rot * 0.017453292 * 0.5;
-        fVar1 = (float)FUN_1801e7e70(fVar2);
-        fVar2 = (float)FUN_1801e7370(fVar2);
+        fVar1 = (float)FUN_1801e84c0(fVar2);
+        fVar2 = (float)FUN_1801e7fc0(fVar2);
         uStackX_24 = (float)((uint64)pos >> 32);
         local_res20 = (float)pos;
         fVar2 = fVar2 * (fVar1 + fVar1);
@@ -905,8 +905,8 @@ public class UISpriteCollection
         ;
     }
 
-    // Token : 0x6000942
-    // RVA   : 0x1708050   Offset: 0x1707450   Length: 0x7C
+    // Token : 0x6000929
+    // RVA   : 0x160A380   Offset: 0x1609180   Length: 0x7C
     public object GetCurrentSpriteID()
     {
         float fVar1;
@@ -974,7 +974,7 @@ public class UISpriteCollection
           local_1a0 = *(uint32 *)(puVar4 + 1);
           local_1a8 = uVar5;
           if (this[64] != 0) {
-            FUN_181758e60(&local_e8,this[64],DAT_181dc6a58);
+            FUN_181682af0(&local_e8,this[64],DAT_181e50b10);
             local_188 = local_e8;
             uStack_180 = uStack_e0;
             local_178 = local_d8;
@@ -993,13 +993,13 @@ public class UISpriteCollection
             local_res8 = (float)uVar5;
             fVar1 = local_res8;
             do {
-              cVar3 = FUN_1813ed8f0(&local_188,DAT_181da0760);
+              cVar3 = FUN_180fe56f0(&local_188,DAT_181e82608);
               if (!cVar3) {
                 aiStack_1bc[1] = 212;
                 iVar8 = aiStack_1bc[3] + 1;
                 aiStack_1bc[3] = iVar8;
-                ZhSegment.Initialize(&local_188,DAT_181da06e0);
-                goto LAB_181707ff0;
+                ZhSegment.Initialize(&local_188,DAT_181e82590);
+                goto LAB_18160a320;
               }
               local_e8 = local_178;
               uStack_e0 = uStack_170;
@@ -1029,9 +1029,9 @@ public class UISpriteCollection
             aiStack_1bc[1] = 214;
             iVar8 = aiStack_1bc[3] + 1;
             aiStack_1bc[3] = iVar8;
-            ZhSegment.Initialize(&local_188,DAT_181da06e0);
+            ZhSegment.Initialize(&local_188,DAT_181e82590);
             uVar7 = uVar5;
-        LAB_181707ff0:
+        LAB_18160a320:
             if ((iVar8 == 0) || (aiStack_1bc[iVar8] != 214)) {
               uVar7 = 0;
             }
@@ -1040,8 +1040,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000943
-    // RVA   : 0x1708620   Offset: 0x1707A20   Length: 0xB1
+    // Token : 0x600092A
+    // RVA   : 0x160A950   Offset: 0x1609750   Length: 0xB1
     public Nullable<Sprite> GetCurrentSprite()
     {
         uint64 *
@@ -1180,7 +1180,7 @@ public class UISpriteCollection
           local_2a0 = *(uint32 *)(puVar4 + 1);
           local_2a8 = uVar5;
           if (param_2[64] != 0) {
-            FUN_181758e60(&local_1e8,param_2[64],DAT_181dc6a58);
+            FUN_181682af0(&local_1e8,param_2[64],DAT_181e50b10);
             local_288 = local_1e8;
             uStack_280 = uStack_1e0;
             local_278 = CONCAT44(fStack_1d4,local_1d8);
@@ -1199,13 +1199,13 @@ public class UISpriteCollection
             local_res10 = (float)uVar5;
             fVar1 = local_res10;
             do {
-              cVar3 = FUN_1813ed8f0(&local_288,DAT_181da0760);
+              cVar3 = FUN_180fe56f0(&local_288,DAT_181e82608);
               if (!cVar3) {
                 aiStack_2bc[1] = 217;
                 iVar7 = aiStack_2bc[3] + 1;
                 aiStack_2bc[3] = iVar7;
-                ZhSegment.Initialize(&local_288,DAT_181da06e0);
-                goto LAB_181708589;
+                ZhSegment.Initialize(&local_288,DAT_181e82590);
+                goto LAB_18160a8b9;
               }
               local_1e8 = local_278;
               uStack_1e0 = uStack_270;
@@ -1256,7 +1256,7 @@ public class UISpriteCollection
             uStack_d0 = (uint32)local_1b8;
             uStack_cc = local_1b8._4_4_;
             local_c8 = uStack_1b0;
-            FUN_181308c30(&local_148,&local_f8,DAT_181dbae20);
+            FUN_180de6bd0(&local_148,&local_f8,DAT_181e9dbc8);
             uVar9 = (uint32)local_148;
             uVar10 = local_148._4_4_;
             uVar11 = (uint32)uStack_140;
@@ -1284,8 +1284,8 @@ public class UISpriteCollection
             aiStack_2bc[1] = 228;
             iVar7 = aiStack_2bc[3] + 1;
             aiStack_2bc[3] = iVar7;
-            ZhSegment.Initialize(&local_288,DAT_181da06e0);
-        LAB_181708589:
+            ZhSegment.Initialize(&local_288,DAT_181e82590);
+        LAB_18160a8b9:
             if ((iVar7 == 0) || (aiStack_2bc[iVar7] != 228)) {
               *this = 0;
               this[1] = 0;
@@ -1319,8 +1319,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000944
-    // RVA   : 0x1707C90   Offset: 0x1707090   Length: 0x3B7
+    // Token : 0x600092B
+    // RVA   : 0x1609FC0   Offset: 0x1608DC0   Length: 0x3B7
     public object GetCurrentSpriteID(Vector3 worldPos)
     {
         float fVar1;
@@ -1388,7 +1388,7 @@ public class UISpriteCollection
           local_1a0 = *(uint32 *)(puVar4 + 1);
           local_1a8 = uVar5;
           if (this[64] != 0) {
-            FUN_181758e60(&local_e8,this[64],DAT_181dc6a58);
+            FUN_181682af0(&local_e8,this[64],DAT_181e50b10);
             local_188 = local_e8;
             uStack_180 = uStack_e0;
             local_178 = local_d8;
@@ -1407,13 +1407,13 @@ public class UISpriteCollection
             local_res8 = (float)uVar5;
             fVar1 = local_res8;
             do {
-              cVar3 = FUN_1813ed8f0(&local_188,DAT_181da0760);
+              cVar3 = FUN_180fe56f0(&local_188,DAT_181e82608);
               if (!cVar3) {
                 aiStack_1bc[1] = 212;
                 iVar8 = aiStack_1bc[3] + 1;
                 aiStack_1bc[3] = iVar8;
-                ZhSegment.Initialize(&local_188,DAT_181da06e0);
-                goto LAB_181707ff0;
+                ZhSegment.Initialize(&local_188,DAT_181e82590);
+                goto LAB_18160a320;
               }
               local_e8 = local_178;
               uStack_e0 = uStack_170;
@@ -1443,9 +1443,9 @@ public class UISpriteCollection
             aiStack_1bc[1] = 214;
             iVar8 = aiStack_1bc[3] + 1;
             aiStack_1bc[3] = iVar8;
-            ZhSegment.Initialize(&local_188,DAT_181da06e0);
+            ZhSegment.Initialize(&local_188,DAT_181e82590);
             uVar7 = uVar5;
-        LAB_181707ff0:
+        LAB_18160a320:
             if ((iVar8 == 0) || (aiStack_1bc[iVar8] != 214)) {
               uVar7 = 0;
             }
@@ -1454,8 +1454,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000945
-    // RVA   : 0x17080D0   Offset: 0x17074D0   Length: 0x54D
+    // Token : 0x600092C
+    // RVA   : 0x160A400   Offset: 0x1609200   Length: 0x54D
     public Nullable<Sprite> GetCurrentSprite(Vector3 worldPos)
     {
         uint64 *
@@ -1594,7 +1594,7 @@ public class UISpriteCollection
           local_2a0 = *(uint32 *)(puVar4 + 1);
           local_2a8 = uVar5;
           if (worldPos[64] != 0) {
-            FUN_181758e60(&local_1e8,worldPos[64],DAT_181dc6a58);
+            FUN_181682af0(&local_1e8,worldPos[64],DAT_181e50b10);
             local_288 = local_1e8;
             uStack_280 = uStack_1e0;
             local_278 = CONCAT44(fStack_1d4,local_1d8);
@@ -1613,13 +1613,13 @@ public class UISpriteCollection
             local_res10 = (float)uVar5;
             fVar1 = local_res10;
             do {
-              cVar3 = FUN_1813ed8f0(&local_288,DAT_181da0760);
+              cVar3 = FUN_180fe56f0(&local_288,DAT_181e82608);
               if (!cVar3) {
                 aiStack_2bc[1] = 217;
                 iVar7 = aiStack_2bc[3] + 1;
                 aiStack_2bc[3] = iVar7;
-                ZhSegment.Initialize(&local_288,DAT_181da06e0);
-                goto LAB_181708589;
+                ZhSegment.Initialize(&local_288,DAT_181e82590);
+                goto LAB_18160a8b9;
               }
               local_1e8 = local_278;
               uStack_1e0 = uStack_270;
@@ -1670,7 +1670,7 @@ public class UISpriteCollection
             uStack_d0 = (uint32)local_1b8;
             uStack_cc = local_1b8._4_4_;
             local_c8 = uStack_1b0;
-            FUN_181308c30(&local_148,&local_f8,DAT_181dbae20);
+            FUN_180de6bd0(&local_148,&local_f8,DAT_181e9dbc8);
             uVar9 = (uint32)local_148;
             uVar10 = local_148._4_4_;
             uVar11 = (uint32)uStack_140;
@@ -1698,8 +1698,8 @@ public class UISpriteCollection
             aiStack_2bc[1] = 228;
             iVar7 = aiStack_2bc[3] + 1;
             aiStack_2bc[3] = iVar7;
-            ZhSegment.Initialize(&local_288,DAT_181da06e0);
-        LAB_181708589:
+            ZhSegment.Initialize(&local_288,DAT_181e82590);
+        LAB_18160a8b9:
             if ((iVar7 == 0) || (aiStack_2bc[iVar7] != 228)) {
               *this = 0;
               this[1] = 0;
@@ -1733,8 +1733,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000946
-    // RVA   : 0x17088C0   Offset: 0x1707CC0   Length: 0x46
+    // Token : 0x600092D
+    // RVA   : 0x160ABF0   Offset: 0x16099F0   Length: 0x46
     protected void OnClick()
     {
         long lVar1;
@@ -1746,13 +1746,13 @@ public class UISpriteCollection
               return;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6000947
-    // RVA   : 0x1709620   Offset: 0x1708A20   Length: 0xA8
+    // Token : 0x600092E
+    // RVA   : 0x160B950   Offset: 0x160A750   Length: 0xA8
     protected void OnPress(bool isPressed)
     {
         long lVar2;
@@ -1773,7 +1773,7 @@ public class UISpriteCollection
             if (this.mLastPress != null) {
               if (this.onPress == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               OnTooltipCB.Invoke(this.onPress,this.mLastPress,1,0);
               return;
@@ -1782,8 +1782,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x6000948
-    // RVA   : 0x1709260   Offset: 0x1708660   Length: 0x2B1
+    // Token : 0x600092F
+    // RVA   : 0x160B590   Offset: 0x160A390   Length: 0x2B1
     protected void OnHover(bool isOver)
     {
         ulong uVar1;
@@ -1794,32 +1794,32 @@ public class UISpriteCollection
         if (this.onHover != null) {
           if (!isOver) {
             uVar1 = UICamera.onMouseMove;
-            uVar4 = new OnTooltipCB(this,DAT_181dc69b0,0);
+            uVar4 = new OnTooltipCB(this,DAT_181e52c68,0);
             plVar5 = (int64 *)Delegate.Remove(uVar1,uVar4,0);
             plVar7 = (int64 *)0;
             if (plVar5 != (int64 *)0) {
-              if (*plVar5 == DAT_181d8d650) {
+              if (*plVar5 == DAT_181e6de10) {
                 plVar7 = plVar5;
               }
               if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6070(plVar5,DAT_181d8d650);
+                FUN_1801dfd50(plVar5,DAT_181e6de10);
               }
             }
             UICamera.onMouseMove = plVar7;
             return;
           }
           uVar1 = UICamera.onMouseMove;
-          uVar4 = new OnTooltipCB(this,DAT_181dc69b0,0);
+          uVar4 = new OnTooltipCB(this,DAT_181e52c68,0);
           plVar5 = (int64 *)Delegate.Combine(uVar1,uVar4,0);
           plVar7 = (int64 *)0;
           if (plVar5 != (int64 *)0) {
-            if (*plVar5 == DAT_181d8d650) {
+            if (*plVar5 == DAT_181e6de10) {
               plVar7 = plVar5;
             }
             if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar5,DAT_181d8d650);
+              FUN_1801dfd50(plVar5,DAT_181e6de10);
             }
           }
           UICamera.onMouseMove = plVar7;
@@ -1839,23 +1839,23 @@ public class UISpriteCollection
           if (lVar2 != null) {
             if (this.onHover != null)
             {
-              OnHoverCB.Invoke(this.onHover,lVar2,0,0);
+              OnTooltipCB.Invoke(this.onHover,lVar2,0,0);
               }
               this.mLastHover = lVar6;
               if (this.mLastHover != null) {
               if (this.onHover != null) {
-              OnHoverCB.Invoke(this.onHover,this.mLastHover,1,0);
+              OnTooltipCB.Invoke(this.onHover,this.mLastHover,1,0);
               return;
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6000949
-    // RVA   : 0x1709520   Offset: 0x1708920   Length: 0xF0
+    // Token : 0x6000930
+    // RVA   : 0x160B850   Offset: 0x160A650   Length: 0xF0
     protected void OnMove(Vector2 delta)
     {
         long lVar1;
@@ -1871,25 +1871,25 @@ public class UISpriteCollection
           if (lVar1 != null) {
             if (this.onHover != null)
             {
-              OnHoverCB.Invoke(this.onHover,lVar1,0,0);
+              OnTooltipCB.Invoke(this.onHover,lVar1,0,0);
               }
               this.mLastHover = lVar3;
               if (this.mLastHover != null) {
               if (this.onHover == null) {
             }
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            OnHoverCB.Invoke(this.onHover,this.mLastHover,1,0);
+            OnTooltipCB.Invoke(this.onHover,this.mLastHover,1,0);
           }
         }
     }
 
-    // Token : 0x600094A
-    // RVA   : 0x1708910   Offset: 0x1707D10   Length: 0x2E
+    // Token : 0x6000931
+    // RVA   : 0x160AC40   Offset: 0x1609A40   Length: 0x2E
     protected void OnDrag(Vector2 delta)
     {
-        void FUN_181708910(int64 this,uint64 delta)
+        void FUN_18160ac40(int64 this,uint64 delta)
         {
         if ((this.onDrag != null) && (this.mLastPress != null)) {
           OnDragCB.Invoke(this.onDrag,this.mLastPress,delta,0);
@@ -1897,8 +1897,8 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600094B
-    // RVA   : 0x17096D0   Offset: 0x1708AD0   Length: 0xA5
+    // Token : 0x6000932
+    // RVA   : 0x160BA00   Offset: 0x160A800   Length: 0xA5
     protected void OnTooltip(bool show)
     {
         long lVar2;
@@ -1921,7 +1921,7 @@ public class UISpriteCollection
             if (*plVar1 != 0) {
               if (this.onTooltip == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               OnTooltipCB.Invoke(this.onTooltip,*plVar1,1,0);
               return;
@@ -1930,13 +1930,13 @@ public class UISpriteCollection
         }
     }
 
-    // Token : 0x600094C
-    // RVA   : 0x1709BF0   Offset: 0x1708FF0   Length: 0xA3
+    // Token : 0x6000933
+    // RVA   : 0x160BF20   Offset: 0x160AD20   Length: 0xA3
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d82180);
-        FUN_1808b1370(uVar1,DAT_181dc6728);
+        uVar1 = il2cpp_internal(DAT_181e61f40);
+        FUN_1806e5bc0(uVar1,DAT_181e507e8);
         this.mSprites = uVar1;
         UIBasicSprite.ctor(this,0);
     }

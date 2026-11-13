@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : GridSetComparer
-// Token : 0x2000184
+// Token : 0x2000186
 // ============================================================
 
 public class GridSetComparer
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000A8B
+    // Token: 0x4000A98
     public static readonly GridSetComparer Instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000C9F
-    // RVA   : 0x92AA30   Offset: 0x929E30   Length: 0x32
+    // Token : 0x6000C9E
+    // RVA   : 0x670310   Offset: 0x66F110   Length: 0x32
     public virtual bool Equals(GridUnitData a, GridUnitData b)
     {
-        uint64 FUN_18092aa30(uint64 this,int64 *a,int64 *b)
+        uint64 FUN_180670310(uint64 this,int64 *a,int64 *b)
         {
         uint64 uVar1;
         if (a == b) {
           return true;
         }
         if ((a != (int64 *)0) && (b != (int64 *)0)) {
-                          // WARNING: Could not recover jumptable at 0x00018092aa55. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180670335. Too many branches
                           // WARNING: Treating indirect jump as call
           uVar1 = (**(code **)(*a + 0x138))(a,b,*(uint64 *)(*a + 0x140));
           return uVar1;
@@ -29,8 +29,8 @@ public class GridSetComparer
         return false;
     }
 
-    // Token : 0x6000CA0
-    // RVA   : 0x92AA70   Offset: 0x929E70   Length: 0x20
+    // Token : 0x6000C9F
+    // RVA   : 0x670350   Offset: 0x66F150   Length: 0x20
     public virtual int GetHashCode(GridUnitData obj)
     {
         if (obj != null) {
@@ -39,20 +39,20 @@ public class GridSetComparer
         }
     }
 
-    // Token : 0x6000CA1
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6000CA0
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6000CA2
-    // RVA   : 0x92AAA0   Offset: 0x929EA0   Length: 0x59
+    // Token : 0x6000CA1
+    // RVA   : 0x670380   Offset: 0x66F180   Length: 0x59
     private static void /*cctor*/()
     {
         ulong uVar2;
         uVar2 = new ZhSegment(0);
-        puVar1 = *(uint64 **)(DAT_181d78d60 + 184);
+        puVar1 = *(uint64 **)(DAT_181e58d90 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

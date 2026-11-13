@@ -1664,17 +1664,18 @@
   splits:
   - text: "#PlayerName#想要学习本门的"
     translated: "#PlayerName# wants to learn this art"
-    qcReviewedText: "#PlayerName# wants to learn this art {0}?\n#PlayerName# is not an official disciple of our sect, yet he is renowned in the Jianghu, and our personal relationship is very close.\nTherefore, if we can establish this for our sect,{1} Click on the achievements; it could be an exception."
-    qcTranslated: "#PlayerName# wants to learn this art {0}?\n#PlayerName# is not an official disciple of our sect, yet he is renowned in the Jianghu, and our personal relationship is very close.\nTherefore, if we can establish {1} points of merit for our sect, it could be an exception."
+    qcReviewedText: "#PlayerName# wants to learn this art {0} Really?\n#PlayerName# is not an official disciple of our sect, yet he is renowned in the Jianghu, and our personal relationship is very close.\nTherefore, if we can establish this for our sect,{1} Click on the achievements; it could be an exception."
+    qcTranslated: "Does #PlayerName# want to learn this sect's {0}?\n#PlayerName# is not an official disciple of our sect, yet they are renowned in the Jianghu, and we have a very close personal relationship.\nTherefore, if you can establish {1} points of merit for our sect, it could be an exception."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
-    - HardToParseSeam
+    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   - subIndex: 2
     text: "#PlayerName#虽非本门弟子，但在江湖中声名显赫，且与本座私交甚笃。"
     translated: "#PlayerName# is not an official disciple of our sect, yet he is renowned in the Jianghu, and our personal relationship is very close."
@@ -11232,16 +11233,17 @@
   splits:
   - text: "的门派地位晋升至"
     translated: "His sect position has risen to"
-    qcReviewedText: "{3} His sect position has risen to {0}?\nThis action requires consumption of {2} {1} Click on Sect Achievements {4}"
-    qcTranslated: "{3} His sect position has risen to {0}?\nThis action requires consumption of {2} {1} points of Sect Merit. {4}"
+    qcReviewedText: "{3} His sect position has risen to {0} Really?\nThis action requires consumption of {2} {1} Click on Sect Achievements {4}"
+    qcTranslated: "{3} Has his sect position been promoted to {0}? This action requires consuming {2} {1} points of Sect Merit. {4}"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
+    - DroppedContent
   - subIndex: 1
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   - subIndex: 2
     text: "此举需消耗"
     translated: "This action requires consumption of"
@@ -14012,16 +14014,18 @@
   splits:
   - text: "乘坐马车前往"
     translated: "Travel by carriage"
-    qcReviewedText: "Travel by carriage {0}?\nTime-consuming {1} Sky, taxi fare {2} Silver taels"
-    qcTranslated: "Travel by carriage to {0}?\nTime required: {1} days, carriage fare: {2} silver taels"
+    qcReviewedText: "Travel by carriage {0} Really?\nTime-consuming {1} Sky, taxi fare {2} Silver taels"
+    qcTranslated: "Travel by carriage to {0}?\nTakes {1} days, carriage fare {2} silver taels"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: GarbledNumber
     qcDefectCategories:
     - GarbledNumber
+    - DomainTerm
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   - subIndex: 2
     text: "耗时"
     translated: "Time-consuming"
@@ -47589,19 +47593,20 @@
   splits:
   - text: "消耗"
     translated: "Consume"
-    qcReviewedText: "Consume {1} Talent point insight“{0}”?{2}"
+    qcReviewedText: "Consume {1} Talent point insight“{0}”Really?{2}"
     qcTranslated: "Consume {1} Talent points to comprehend {0}?{2}"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: HardToParseSeam
     qcDefectCategories:
     - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "天赋点领悟"
     translated: "Talent point insight"
   - subIndex: 2
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   templates:
   - template: "{0}⟦1⟧{1}“⟦0⟧”{2}⟦2⟧"
 - raw: "消耗内力助其调息;SaveCrazyNpcHelp"
@@ -50798,16 +50803,16 @@
   splits:
   - text: "确定要中止"
     translated: "Are you sure you want to cancel?"
-    qcReviewedText: "Are you sure you want to cancel?{0}?"
+    qcReviewedText: "Are you sure you want to cancel?{0} Really?"
     qcTranslated: "Are you sure you want to cancel {0}?"
     qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - OtherNamedDefect
+    - HardToParseSeam
   - subIndex: 1
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "确定要认输吗？"
@@ -50873,16 +50878,17 @@
   splits:
   - text: "确认前往"
     translated: "Confirm travel ahead"
-    qcReviewedText: "Confirm travel ahead {0}?"
-    qcTranslated: "Confirm proceeding to {0}?"
+    qcReviewedText: "Confirm travel ahead {0} Really?"
+    qcTranslated: "Are you sure you want to proceed to {0}?"
     qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcQualityScore: 100
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - OtherNamedDefect
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "确认取出;ItemOutExternalStorageSure"
@@ -56358,13 +56364,17 @@
   splits:
   - text: "要返回"
     translated: "To return"
-    qcReviewedText: "To return {0}?"
-    qcStatus: Passed
+    qcReviewedText: "To return {0} Really?"
+    qcTranslated: "Do you want to return to {0}?"
+    qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: None
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   templates:
   - template: "{0}⟦0⟧{1}"
 - raw: "要进行何种难度的{0}？\n难度越高，便可以获得越多的银钱奖励。\n但如果失败，损失的声望也会越多。"
@@ -62956,11 +62966,14 @@
 - raw: "问号"
   splits:
   - text: "问号"
-    translated: "?"
-    qcReviewedText: "?"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    translated: "W-w-what?"
+    qcReviewedText: "W-w-what?"
+    qcTranslated: "Question mark"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
 - raw: "问各位借点银子花花"
   splits:
   - text: "问各位借点银子花花"
@@ -66021,7 +66034,7 @@
   splits:
   - text: "（面露难色）啊这..."
     translated: "(Faces a difficult expression) Uh, this..."
-    qcReviewedText: "(Faces a difficult expression) Uh, this...\nAll guests are invited in advance, so there are likely no additional seats available. I apologize for the inconvenience.\n(requiring a meeting without hostility, or when renown reaches {0})"
+    qcReviewedText: "(Faces a difficult expression) Uh, this...\nAll guests are invited in advance, so there are likely no additional seats available. I apologize for the inconvenience.\n(requiring a meeting without hostility, or when renown reaches {0} Point)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -66033,7 +66046,7 @@
     translated: "(requiring a meeting without hostility, or when renown reaches"
   - subIndex: 3
     text: "点）"
-    translated: ")"
+    translated: "Point)"
   templates:
   - template: "{0}\n{1}\n{2}⟦0⟧{3}"
 - raw: "，并购买了{0}"
@@ -66054,3 +66067,1381 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "(返回);StartCustomSkillEntry"
+  splits:
+  - text: "返回"
+    translated: "Return"
+  templates:
+  - template: "({0});StartCustomSkillEntry"
+- raw: "<color=grey>(已自创)</color>"
+  splits:
+  - text: "已自创"
+    translated: "Y-y-you have already created it on your own."
+    qcReviewedText: "<color=grey>(Y-y-you have already created it on your own.)</color>"
+    qcTranslated: "<color=grey>(Already self-created.)</color>"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+  templates:
+  - template: "<color=grey>({0})</color>"
+- raw: "<color=grey>(需天下第一)</color>"
+  splits:
+  - text: "需天下第一"
+    translated: "W-want to be the best in the world"
+    qcReviewedText: "<color=grey>(W-want to be the best in the world)</color>"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "<color=grey>({0})</color>"
+- raw: "<i><color=grey>{0}所创</color></i>"
+  splits:
+  - text: "所创"
+    translated: "Created"
+    qcReviewedText: "<i><color=grey>{0} Created</color></i>"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "<i><color=grey>⟦0⟧{0}</color></i>"
+- raw: "BattleData解析错误,门派ID不存在:"
+  splits:
+  - text: "解析错误"
+    translated: "Parse Error"
+    qcReviewedText: "BattleData Parse Error,Sect ID Does not exist:"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "门派"
+    translated: "Sect"
+  - subIndex: 2
+    text: "不存在"
+    translated: "Does not exist"
+  templates:
+  - template: "BattleData{0},{1}ID{2}:"
+- raw: "PartPostureData Error: 数值解析失败“{0}”（完整配置：“{1}”）{2}"
+  splits:
+  - text: "数值解析失败"
+    translated: "W-wrong value parsing"
+    qcReviewedText: "PartPostureData Error: W-wrong value parsing“{0}”(Master, I：“{1}”）{2}"
+    qcTranslated: "PartPostureData Error: Value parsing failed {0} (Full configuration: {1}) {2}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "（完整配置"
+    translated: "(Master, I"
+  templates:
+  - template: "PartPostureData Error: {0}“⟦0⟧”{1}：“⟦1⟧”）⟦2⟧"
+- raw: "PartPostureData Error: 词条部位歧义“{0}”（完整配置：“{1}”）{2}"
+  splits:
+  - text: "词条部位歧义"
+    translated: "Sure, please provide the sentence you would like translated."
+    qcReviewedText: "PartPostureData Error: Sure, please provide the sentence you would like translated.“{0}”(Master, I：“{1}”）{2}"
+    qcTranslated: "PartPostureData Error: Ambiguous part for entry {0} (Full configuration: {1}) {2}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "（完整配置"
+    translated: "(Master, I"
+  templates:
+  - template: "PartPostureData Error: {0}“⟦0⟧”{1}：“⟦1⟧”）⟦2⟧"
+- raw: "PartPostureData Error: 部位名无法识别“{0}”（合法部位：{1}；完整配置：“{2}”）{3}"
+  splits:
+  - text: "部位名无法识别"
+    translated: "W-what part cannot be identified"
+    qcReviewedText: "PartPostureData Error: W-what part cannot be identified“{0}”(Master, I have come to deliver the message as instructed.：{1}; Full Configuration：“{2}”）{3}"
+    qcTranslated: "PartPostureData Error: Part name cannot be identified {0} (Legal parts: {1}; Full Configuration: {2}) {3}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "（合法部位"
+    translated: "(Master, I have come to deliver the message as instructed."
+  - subIndex: 2
+    text: "；完整配置"
+    translated: "; Full Configuration"
+  templates:
+  - template: "PartPostureData Error: {0}“⟦0⟧”{1}：⟦1⟧{2}：“⟦2⟧”）⟦3⟧"
+- raw: "[ItemFixup] 静态字段重算失败 itemID={0} type={1}/{2} lv={3}: {4}"
+  splits:
+  - text: "静态字段重算失败"
+    translated: "Static field recalculation failed"
+    qcReviewedText: "[ItemFixup] Static field recalculation failed itemID={0} type={1}/{2} lv={3}: {4}"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "[ItemFixup] {0} itemID=⟦0⟧ type=⟦1⟧/⟦2⟧ lv=⟦3⟧: ⟦4⟧"
+- raw: "{0}加成 {1}"
+  splits:
+  - text: "加成"
+    translated: "Bonus"
+    qcReviewedText: "{0} Bonus {1}"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "⟦0⟧{0} ⟦1⟧"
+- raw: "{0}所创之{1}{2}"
+  splits:
+  - text: "所创之"
+    translated: "My created-"
+    qcReviewedText: "{0} My created-{1} {2}"
+    qcTranslated: "{0}'s {1} {2}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧⟦2⟧"
+- raw: "{0}武学点数尚未完全分配！</color>"
+  splits:
+  - text: "武学点数尚未完全分配！"
+    translated: "W-wu-xue points have not yet been fully allocated!"
+    qcReviewedText: "{0} W-wu-xue points have not yet been fully allocated!</color>"
+    qcTranslated: "{0} Martial Arts points have not yet been fully allocated!</color>"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+  templates:
+  - template: "⟦0⟧{0}</color>"
+- raw: "《{0}》我虽已练至登峰造极，然{1}一道的造诣尚欠火候——\n须达到{2}（当前{3}），方能融会贯通、推陈出新。"
+  splits:
+  - text: "我虽已练至登峰造极，然"
+    translated: "I-m-I, though I-h-I have practiced to the pinnacle of perfection, y-et"
+    qcReviewedText: "《{0}》I-m-I, though I-h-I have practiced to the pinnacle of perfection, y-et {1} W-with regards to Daoist a-attainment, I am still l-lacking the r-right touch.\nMust reach {2} (current {3} Sure, please provide the sentence you would like translated.)"
+    qcTranslated: "《{0}》I-m-I, though I-h-I have practiced to the pinnacle of perfection, y-et {1} W-with regards to Daoist a-attainment, I am still l-lacking the r-right touch.\nMust reach {2} (current {3}), in order to achieve comprehensive understanding and innovation."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "一道的造诣尚欠火候——"
+    translated: "W-with regards to Daoist a-attainment, I am still l-lacking the r-right touch."
+  - subIndex: 2
+    text: "须达到"
+    translated: "Must reach"
+  - subIndex: 3
+    text: "（当前"
+    translated: "(current"
+  - subIndex: 4
+    text: "），方能融会贯通、推陈出新。"
+    translated: "Sure, please provide the sentence you would like translated.)"
+  templates:
+  - template: "《⟦0⟧》{0}⟦1⟧{1}\n{2}⟦2⟧{3}⟦3⟧{4}"
+- raw: "》进攻"
+  splits:
+  - text: "》进攻"
+    translated: "Offense'"
+    qcReviewedText: "Offense'"
+    qcTranslated: "Offense'"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "》防御"
+  splits:
+  - text: "》防御"
+    translated: "Defense'"
+    qcReviewedText: "Defense'"
+    qcTranslated: "Defense'"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "不强制"
+  splits:
+  - text: "不强制"
+    translated: "B-B-but not mandatory"
+    qcReviewedText: "B-B-but not mandatory"
+    qcTranslated: "Not mandatory"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "不离队"
+  splits:
+  - text: "不离队"
+    translated: "Do not leave the group"
+    qcReviewedText: "Do not leave the group"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "临时"
+  splits:
+  - text: "临时"
+    translated: "Temporary"
+    qcReviewedText: "Temporary"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "乌木"
+  splits:
+  - text: "乌木"
+    translated: "Ebony"
+    qcReviewedText: "Ebony"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "亮银"
+  splits:
+  - text: "亮银"
+    translated: "Bright Silver"
+    qcReviewedText: "Bright Silver"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "以《{0}》为根基，闭关推演{2}日，\n便可在此基础之上，创出独属于我#$PlayerName#的{1}{3}功法！\n{3}造诣越深，所创武学自然越为精妙。（{3}{4}可达上限，当前{5}）"
+  splits:
+  - text: "以"
+    translated: "With"
+    qcReviewedText: "With《{0}》For establishing a foundation, to go into seclusion for deducing and reasoning {2} Damn,\nYou Senior Sister, I, #$PlayerName#, will definitely not let you down.{1} {3} Kung fu!\n{3} The deeper one's attainment, the more exquisite the martial arts they create naturally.（{3} {4} Reach Maximum, current {5}）"
+    qcTranslated: "With《{0}》as the foundation, I will go into seclusion to deduce for {2} days, and on this basis, create the {1} {3} technique that belongs solely to me, #$PlayerName#! The deeper one's attainment in {3}, the more exquisite the martial arts they create naturally. ({3} {4} can reach the Maximum, current {5})"
+    qcStatus: Corrected
+    qcQualityScore: 92
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+    - DroppedContent
+  - subIndex: 1
+    text: "为根基，闭关推演"
+    translated: "For establishing a foundation, to go into seclusion for deducing and reasoning"
+  - subIndex: 2
+    text: "日，"
+    translated: "Damn,"
+  - subIndex: 3
+    text: "便可在此基础之上，创出独属于我#$PlayerName#的"
+    translated: "You Senior Sister, I, #$PlayerName#, will definitely not let you down."
+  - subIndex: 4
+    text: "功法！"
+    translated: "Kung fu!"
+  - subIndex: 5
+    text: "造诣越深，所创武学自然越为精妙。"
+    translated: "The deeper one's attainment, the more exquisite the martial arts they create naturally."
+  - subIndex: 6
+    text: "可达上限，当前"
+    translated: "Reach Maximum, current"
+  templates:
+  - template: "{0}《⟦0⟧》{1}⟦2⟧{2}\n{3}⟦1⟧⟦3⟧{4}\n⟦3⟧{5}（⟦3⟧⟦4⟧{6}⟦5⟧）"
+- raw: "以毕生所学为根基，闭关演练，我或可推陈出新，自创出一门前无古人之武学。\n（每级别至多自创一门武学）"
+  splits:
+  - text: "以毕生所学为根基，闭关演练，我或可推陈出新，自创出一门前无古人之武学。"
+    translated: "With my lifetime of learning as the foundation, if I seclude myself to practice and refine my skills, I might innovate and create a martial art unmatched by anyone in the past."
+    qcReviewedText: "With my lifetime of learning as the foundation, if I seclude myself to practice and refine my skills, I might innovate and create a martial art unmatched by anyone in the past.\n(every level at most self-created one martial art)"
+    qcTranslated: "With my lifetime of learning as the foundation, if I seclude myself to practice and refine my skills, I might break new ground and create a martial art unmatched by anyone in the past.\n(every level at most self-created one martial art)"
+    qcStatus: Corrected
+    qcQualityScore: 90
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "（每级别至多自创一门武学）"
+    translated: "(every level at most self-created one martial art)"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "任重"
+  splits:
+  - text: "任重"
+    translated: "Master, I will go now"
+    qcReviewedText: "Master, I will go now"
+    qcTranslated: "Ren Zhong"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+- raw: "佩"
+  splits:
+  - text: "佩"
+    translated: "Pei"
+    qcReviewedText: "Pei"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "入场"
+  splits:
+  - text: "入场"
+    translated: "Entry"
+    qcReviewedText: "Entry"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "全员Buff"
+  splits:
+  - text: "全员"
+    translated: "Everyone"
+    qcReviewedText: "Everyone Buff"
+    qcTranslated: "All-Party Buff"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  templates:
+  - template: "{0}Buff"
+- raw: "功法点数超出上限"
+  splits:
+  - text: "功法点数超出上限"
+    translated: "Points exceed the maximum limit"
+    qcReviewedText: "Points exceed the maximum limit"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "加Buff"
+  splits:
+  - text: "加"
+    translated: "J-jia"
+    qcReviewedText: "J-jia Buff"
+    qcTranslated: "Add Buff"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+  templates:
+  - template: "{0}Buff"
+- raw: "千里"
+  splits:
+  - text: "千里"
+    translated: "Thousand miles"
+    qcReviewedText: "Thousand miles"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "只好作罢;ExternalStoragePlot"
+  splits:
+  - text: "只好作罢"
+    translated: "Have no choice but to give up"
+  templates:
+  - template: "{0};ExternalStoragePlot"
+- raw: "可复刻所有已习得内功/轻功/绝技的装备效果"
+  splits:
+  - text: "可复刻所有已习得内功"
+    translated: "Can replicate all Neigong that have been learned"
+    qcReviewedText: "Can replicate all Neigong that have been learned/Qinggong/The equipment effect of the Special Technique"
+    qcTranslated: "Can replicate the equipment effects of all learned Neigong, Qinggong, and Special Techniques"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: HardToParseSeam
+    qcDefectCategories:
+    - HardToParseSeam
+  - subIndex: 1
+    text: "轻功"
+    translated: "Qinggong"
+  - subIndex: 2
+    text: "绝技的装备效果"
+    translated: "The equipment effect of the Special Technique"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "可复刻所有已习得外功的使用效果"
+  splits:
+  - text: "可复刻所有已习得外功的使用效果"
+    translated: "Can replicate the effects of all External Skills that have been learned."
+    qcReviewedText: "Can replicate the effects of all External Skills that have been learned."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "可操控"
+  splits:
+  - text: "可操控"
+    translated: "Controllable"
+    qcReviewedText: "Controllable"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "囊"
+  splits:
+  - text: "囊"
+    translated: "N-nang"
+    qcReviewedText: "N-nang"
+    qcTranslated: "N-n-nang"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "围"
+  splits:
+  - text: "围"
+    translated: "Surround"
+    qcReviewedText: "Surround"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "城镇"
+  splits:
+  - text: "城镇"
+    translated: "Town"
+    qcReviewedText: "Town"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "基础伤害 {0}"
+  splits:
+  - text: "基础伤害"
+    translated: "Base damage"
+    qcReviewedText: "Base damage {0}"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0} ⟦0⟧"
+- raw: "奔雷"
+  splits:
+  - text: "奔雷"
+    translated: "Thunderclap"
+    qcReviewedText: "Thunderclap"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "室内"
+  splits:
+  - text: "室内"
+    translated: "Indoors"
+    qcReviewedText: "Indoors"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "已有同名武学，请更换名称"
+  splits:
+  - text: "已有同名武学，请更换名称"
+    translated: "W-w-please c-c-hange t-the n-name"
+    qcReviewedText: "W-w-please c-c-hange t-the n-name"
+    qcTranslated: "A martial art with the same name already exists. Please change the name."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - DroppedContent
+- raw: "建筑等级"
+  splits:
+  - text: "建筑等级"
+    translated: "B-Building level"
+    qcReviewedText: "B-Building level"
+    qcTranslated: "Building Level"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "当前区域"
+  splits:
+  - text: "当前区域"
+    translated: "C-current-area-urrent-area"
+    qcReviewedText: "C-current-area-urrent-area"
+    qcTranslated: "Current Area"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+- raw: "循环"
+  splits:
+  - text: "循环"
+    translated: "W-wecycle"
+    qcReviewedText: "W-wecycle"
+    qcTranslated: "C-cycle"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+- raw: "循环剧情应写 起始:间隔:"
+  splits:
+  - text: "循环剧情应写"
+    translated: "W-what should be written for looped plotlines?"
+    qcReviewedText: "W-what should be written for looped plotlines? Master, I will go now: Interval:"
+    qcTranslated: "W-what should be written for the looped plotline's start: interval:"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+    - DroppedContent
+  - subIndex: 1
+    text: "起始"
+    translated: "Master, I will go now"
+  - subIndex: 2
+    text: "间隔"
+    translated: "Interval"
+  templates:
+  - template: "{0} {1}:{2}:"
+- raw: "我于此级武学已有所创，贪多嚼不烂，\n还是专心打磨己学为妙。"
+  splits:
+  - text: "我于此级武学已有所创，贪多嚼不烂，"
+    translated: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective."
+    qcReviewedText: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective.\nW-worry about p-perfecting what you've l-learned for n-now."
+    qcTranslated: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective. It is best to focus on perfecting what you've learned for now."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+  - subIndex: 1
+    text: "还是专心打磨己学为妙。"
+    translated: "W-worry about p-perfecting what you've l-learned for n-now."
+  templates:
+  - template: "{0}\n{1}"
+- raw: "我眼下并无修至登峰造极的{0}武学，\n还需勤修苦练，打稳根基，方可加以自创。"
+  splits:
+  - text: "我眼下并无修至登峰造极的"
+    translated: "W-without m-myse lf r-reaching t-the p-peake r-right n-now."
+    qcReviewedText: "W-without m-myse lf r-reaching t-the p-peake r-right n-now.{0} W-wu x-xue,\nStill need to practice diligently, lay a solid foundation, and only then can one create on one's own."
+    qcTranslated: "I-I don't currently possess any martial arts of the {0} school that have reached the pinnacle of perfection. I still need to practice diligently and lay a solid foundation before I can add my own creations."
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedContent
+    qcDefectCategories:
+    - DroppedContent
+  - subIndex: 1
+    text: "武学，"
+    translated: "W-wu x-xue,"
+  - subIndex: 2
+    text: "还需勤修苦练，打稳根基，方可加以自创。"
+    translated: "Still need to practice diligently, lay a solid foundation, and only then can one create on one's own."
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "戒"
+  splits:
+  - text: "戒"
+    translated: "Master, I"
+    qcReviewedText: "Master, I"
+    qcTranslated: "Precept"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+- raw: "战斗剧情配置缺字段:"
+  splits:
+  - text: "战斗剧情配置缺字段"
+    translated: "W-what battle s-scenario c-configuratio-n is m-missing f-fields?"
+    qcReviewedText: "W-what battle s-scenario c-configuratio-n is m-missing f-fields?:"
+    qcTranslated: "Battle scenario configuration missing fields:"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+  templates:
+  - template: "{0}:"
+- raw: "战斗配置:丹药ID不存在:"
+  splits:
+  - text: "战斗配置"
+    translated: "B-battle configuration"
+    qcReviewedText: "B-battle configuration: Elixir ID Does not exist:"
+    qcTranslated: "Battle configuration: Elixir ID does not exist:"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "丹药"
+    translated: "Elixir"
+    qcReviewedText: "Elixir"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 2
+    text: "不存在"
+    translated: "Does not exist"
+  templates:
+  - template: "{0}:{1}ID{2}:"
+- raw: "战斗配置:攻城战_当前区域 需要在目标区域内触发,已退化为自动地图"
+  splits:
+  - text: "战斗配置"
+    translated: "B-battle configuration"
+    qcReviewedText: "B-battle configuration: Siege battle_C-current-area-urrent-area Need to trigger in the target area,Master, I, your Senior Sister, will teach you a lesson."
+    qcTranslated: "Battle configuration: Siege battle_Current area Need to trigger in the target area, already degraded to automatic map"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - HardToParseSeam
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "攻城战"
+    translated: "Siege battle"
+  - subIndex: 2
+    text: "当前区域"
+    translated: "C-current-area-urrent-area"
+  - subIndex: 3
+    text: "需要在目标区域内触发"
+    translated: "Need to trigger in the target area"
+  - subIndex: 4
+    text: "已退化为自动地图"
+    translated: "Master, I, your Senior Sister, will teach you a lesson."
+  templates:
+  - template: "{0}:{1}_{2} {3},{4}"
+- raw: "战斗配置:未找到特效"
+  splits:
+  - text: "战斗配置"
+    translated: "B-battle configuration"
+    qcReviewedText: "B-battle configuration: W-what, I couldn't find any special effects"
+    qcTranslated: "Battle configuration: No special effects found"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+  - subIndex: 1
+    text: "未找到特效"
+    translated: "W-what, I couldn't find any special effects"
+  templates:
+  - template: "{0}:{1}"
+- raw: "战斗配置:未知战利品类型:"
+  splits:
+  - text: "战斗配置"
+    translated: "B-battle configuration"
+    qcReviewedText: "B-battle configuration: Unknown loot type:"
+    qcTranslated: "Combat configuration: Unknown loot type:"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "未知战利品类型"
+    translated: "Unknown loot type"
+  templates:
+  - template: "{0}:{1}:"
+- raw: "战斗配置:未知攻城战类型"
+  splits:
+  - text: "战斗配置"
+    translated: "B-battle configuration"
+    qcReviewedText: "B-battle configuration: Unknown siege type warfare"
+    qcTranslated: "Battle configuration: Unknown siege type"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "未知攻城战类型"
+    translated: "Unknown siege type warfare"
+  templates:
+  - template: "{0}:{1}"
+- raw: "战斗配置:饮食ID不存在:"
+  splits:
+  - text: "战斗配置"
+    translated: "B-battle configuration"
+    qcReviewedText: "B-battle configuration: Food and drink ID Does not exist:"
+    qcTranslated: "Battle configuration: Food and drink ID does not exist:"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "饮食"
+    translated: "Food and drink"
+    qcReviewedText: "Food and drink"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 2
+    text: "不存在"
+    translated: "Does not exist"
+  templates:
+  - template: "{0}:{1}ID{2}:"
+- raw: "战斗配置:马匹ID不存在:"
+  splits:
+  - text: "战斗配置"
+    translated: "B-battle configuration"
+    qcReviewedText: "B-battle configuration: Horses ID Does not exist:"
+    qcTranslated: "Battle configuration: Horse ID does not exist:"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "马匹"
+    translated: "Horses"
+    qcReviewedText: "Horses"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 2
+    text: "不存在"
+    translated: "Does not exist"
+  templates:
+  - template: "{0}:{1}ID{2}:"
+- raw: "挟翼"
+  splits:
+  - text: "挟翼"
+    translated: "J-jia y-yi"
+    qcReviewedText: "J-jia y-yi"
+    qcTranslated: "J-jia Yi"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+- raw: "掠影"
+  splits:
+  - text: "掠影"
+    translated: "Shadow"
+    qcReviewedText: "Shadow"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "擂台"
+  splits:
+  - text: "擂台"
+    translated: "Master, I"
+    qcReviewedText: "Master, I"
+    qcTranslated: "Arena"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "攻城战"
+  splits:
+  - text: "攻城战"
+    translated: "Siege battle"
+    qcReviewedText: "Siege battle"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "敏感词检测中，请稍候再确认"
+  splits:
+  - text: "敏感词检测中，请稍候再确认"
+    translated: "W-wait a moment while the sensitive word detection is being c-checked."
+    qcReviewedText: "W-wait a moment while the sensitive word detection is being c-checked."
+    qcTranslated: "W-wait a moment while the sensitive word detection is being checked."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "新增特效 {0}/{1}"
+  splits:
+  - text: "新增特效"
+    translated: "N-n-new special effects"
+    qcReviewedText: "N-n-new special effects {0}/{1}"
+    qcTranslated: "New special effects {0}/{1}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+  templates:
+  - template: "{0} ⟦0⟧/⟦1⟧"
+- raw: "时间"
+  splits:
+  - text: "时间"
+    translated: "Time"
+    qcReviewedText: "Time"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "是"
+  splits:
+  - text: "是"
+    translated: "Yes"
+    qcReviewedText: "Yes"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "未知战斗剧情触发器:"
+  splits:
+  - text: "未知战斗剧情触发器"
+    translated: "Unknown combat scenario trigger"
+    qcReviewedText: "Unknown combat scenario trigger:"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}:"
+- raw: "材料种类"
+  splits:
+  - text: "材料种类"
+    translated: "Material Types"
+    qcReviewedText: "Material Types"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "此乃自创武学之秘籍，凝结一己心血，不可复制入藏宝阁。"
+  splits:
+  - text: "此乃自创武学之秘籍，凝结一己心血，不可复制入藏宝阁。"
+    translated: "This is a Secret Manual of self-created martial arts, distilled from one's own life's work. It cannot be copied or stored in the Treasure Pavilion."
+    qcReviewedText: "This is a Secret Manual of self-created martial arts, distilled from one's own life's work. It cannot be copied or stored in the Treasure Pavilion."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "武学点数 {0:0.#}/{1}"
+  splits:
+  - text: "武学点数"
+    translated: "Martial Arts Points"
+    qcReviewedText: "Martial Arts Points {0:0.#}/{1}"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0} ⟦0:0.#⟧/⟦1⟧"
+- raw: "死亡"
+  splits:
+  - text: "死亡"
+    translated: "Death"
+    qcReviewedText: "Death"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "没有可添加的特效条目"
+  splits:
+  - text: "没有可添加的特效条目"
+    translated: "There are no special effects entries to add."
+    qcReviewedText: "There are no special effects entries to add."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "没有更多可选图标"
+  splits:
+  - text: "没有更多可选图标"
+    translated: "W-what do you mean, there are n-no more icons to choose from?"
+    qcReviewedText: "W-what do you mean, there are n-no more icons to choose from?"
+    qcTranslated: "There are no more selectable icons"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+- raw: "流星"
+  splits:
+  - text: "流星"
+    translated: "Meteor"
+    qcReviewedText: "Meteor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "涉川"
+  splits:
+  - text: "涉川"
+    translated: "Shechuan"
+    qcReviewedText: "Shechuan"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "游戏难度"
+  splits:
+  - text: "游戏难度"
+    translated: "Game difficulty"
+    qcReviewedText: "Game difficulty"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "犀皮"
+  splits:
+  - text: "犀皮"
+    translated: "R-rhinopelt"
+    qcReviewedText: "R-rhinopelt"
+    qcTranslated: "R-r-rhinopelt"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "玄甲"
+  splits:
+  - text: "玄甲"
+    translated: "Black Armor"
+    qcReviewedText: "Black Armor"
+    qcTranslated: "Xuanjia"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "珍宝种类"
+  splits:
+  - text: "珍宝种类"
+    translated: "Treasure types"
+    qcReviewedText: "Treasure types"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "生成"
+  splits:
+  - text: "生成"
+    translated: "G-generate"
+    qcReviewedText: "G-generate"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "破阵"
+  splits:
+  - text: "破阵"
+    translated: "B-break-through-the-array"
+    qcReviewedText: "B-break-through-the-array"
+    qcTranslated: "Break the Formation"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "确定要完成自创武学《{0}》吗？"
+  splits:
+  - text: "确定要完成自创武学"
+    translated: "W-willing to c-create my own martial art style."
+    qcReviewedText: "W-willing to c-create my own martial art style.《{0}》Really?"
+    qcTranslated: "Are you sure you want to complete your self-created martial art style {0}?"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+    - GarbledNumber
+  - subIndex: 1
+    text: "吗？"
+    translated: "Really?"
+  templates:
+  - template: "{0}《⟦0⟧》{1}"
+- raw: "突阵"
+  splits:
+  - text: "突阵"
+    translated: "P-p Pierce the formation"
+    qcReviewedText: "P-p Pierce the formation"
+    qcTranslated: "P-pierce, pierce the formation"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "突骑"
+  splits:
+  - text: "突骑"
+    translated: "T-t-tuqi"
+    qcReviewedText: "T-t-tuqi"
+    qcTranslated: "Shock Cavalry"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+- raw: "紫檀"
+  splits:
+  - text: "紫檀"
+    translated: "P-precious purple sandalwood"
+    qcReviewedText: "P-precious purple sandalwood"
+    qcTranslated: "P-precious red sandalwood"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "绝世功法乃武学之极致，非『天下第一』者不可妄自开创。\n待我泰岳登顶、名动天下之日，再来一试吧。"
+  splits:
+  - text: "绝世功法乃武学之极致，非『天下第一』者不可妄自开创。"
+    translated: "It seems like you're asking for translation rules but didn't provide a specific line of text to translate. Could you please provide the line or context you'd like translated according to these rules?"
+    qcReviewedText: "It seems like you're asking for translation rules but didn't provide a specific line of text to translate. Could you please provide the line or context you'd like translated according to these rules?\nWait until the day I reach the peak of Mount Tai and become famous throughout the land, and then we can try again."
+    qcTranslated: "A peerless technique is the pinnacle of martial arts, and only one who is truly 'the number one under heaven' may dare to create one anew.\nWait until the day I reach the peak of Mount Tai and become famous throughout the land, and then we can try again."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+    - DroppedContent
+  - subIndex: 1
+    text: "待我泰岳登顶、名动天下之日，再来一试吧。"
+    translated: "Wait until the day I reach the peak of Mount Tai and become famous throughout the land, and then we can try again."
+  templates:
+  - template: "{0}\n{1}"
+- raw: "羽"
+  splits:
+  - text: "羽"
+    translated: "Y-y-you"
+    qcReviewedText: "Y-y-you"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "翻羽"
+  splits:
+  - text: "翻羽"
+    translated: "F-Fly Feather"
+    qcReviewedText: "F-Fly Feather"
+    qcTranslated: "F-Fan Feather"
+    qcStatus: Corrected
+    qcQualityScore: 90
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+- raw: "腾骧"
+  splits:
+  - text: "腾骧"
+    translated: "Tengxiang"
+    qcReviewedText: "Tengxiang"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "自创武学"
+  splits:
+  - text: "自创武学"
+    translated: "Self-created martial arts"
+    qcReviewedText: "Self-created martial arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "自定义_"
+  splits:
+  - text: "自定义"
+    translated: "Master, I will go now"
+    qcReviewedText: "Master, I will go now_"
+    qcTranslated: "Custom_"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+  templates:
+  - template: "{0}_"
+- raw: "致远"
+  splits:
+  - text: "致远"
+    translated: "Z-zhiyuan"
+    qcReviewedText: "Z-zhiyuan"
+    qcTranslated: "Zhiyuan"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+- raw: "英雄"
+  splits:
+  - text: "英雄"
+    translated: "H-heroes"
+    qcReviewedText: "H-heroes"
+    qcTranslated: "Hero"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 50
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+- raw: "营地"
+  splits:
+  - text: "营地"
+    translated: "Campsite"
+    qcReviewedText: "Campsite"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "螺钿"
+  splits:
+  - text: "螺钿"
+    translated: "Mother-of-pearl"
+    qcReviewedText: "Mother-of-pearl"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "行动"
+  splits:
+  - text: "行动"
+    translated: "Master, I will go now"
+    qcReviewedText: "Master, I will go now"
+    qcTranslated: "Action"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+- raw: "行战斗ID重复:"
+  splits:
+  - text: "行战斗"
+    translated: "W-walk t-to b-battle"
+    qcReviewedText: "W-walk t-to b-battle ID R-r-repeat:"
+    qcTranslated: "Combat ID duplicate:"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "重复"
+    translated: "R-r-repeat"
+  templates:
+  - template: "{0}ID{1}:"
+- raw: "行战斗类型错误:"
+  splits:
+  - text: "行战斗类型错误"
+    translated: "W-wrong combat type"
+    qcReviewedText: "W-wrong combat type:"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}:"
+- raw: "行解析失败,已跳过该行:"
+  splits:
+  - text: "行解析失败"
+    translated: "Sure, please provide the sentence you would like translated."
+    qcReviewedText: "Sure, please provide the sentence you would like translated.,That line has been skipped:"
+    qcTranslated: "Parsing failed, that line has been skipped:"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  - subIndex: 1
+    text: "已跳过该行"
+    translated: "That line has been skipped"
+  templates:
+  - template: "{0},{1}:"
+- raw: "装备部位"
+  splits:
+  - text: "装备部位"
+    translated: "E-equipment position"
+    qcReviewedText: "E-equipment position"
+    qcTranslated: "Equipment slot"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "词条已达上限"
+  splits:
+  - text: "词条已达上限"
+    translated: "The entry limit has been reached"
+    qcReviewedText: "The entry limit has been reached"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "该武学没有可复制的架势数据"
+  splits:
+  - text: "该武学没有可复制的架势数据"
+    translated: "It seems like you're asking for translation rules but didn't provide a specific line to translate. Could you please give me the line or text you want translated according to these rules?"
+    qcReviewedText: "It seems like you're asking for translation rules but didn't provide a specific line to translate. Could you please give me the line or text you want translated according to these rules?"
+    qcTranslated: "This martial art has no replicable stance data."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "该武学没有可复制的范围数据"
+  splits:
+  - text: "该武学没有可复制的范围数据"
+    translated: "Sure, please provide the sentence you would like translated."
+    qcReviewedText: "Sure, please provide the sentence you would like translated."
+    qcTranslated: "This martial art has no copyable range data."
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "请先输入武学名称"
+  splits:
+  - text: "请先输入武学名称"
+    translated: "Please enter the name of the martial art first."
+    qcReviewedText: "Please enter the name of the martial art first."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "超光"
+  splits:
+  - text: "超光"
+    translated: "Super Light"
+    qcReviewedText: "Super Light"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "蹑风"
+  splits:
+  - text: "蹑风"
+    translated: "Windstep"
+    qcReviewedText: "Windstep"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "载岳"
+  splits:
+  - text: "载岳"
+    translated: "Zai Yue"
+    qcReviewedText: "Zai Yue"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "载驰"
+  splits:
+  - text: "载驰"
+    translated: "W-wearily ride"
+    qcReviewedText: "W-wearily ride"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "还是算了;StartCustomSkillEntry"
+  splits:
+  - text: "还是算了"
+    translated: "Forget it"
+  templates:
+  - template: "{0};StartCustomSkillEntry"
+- raw: "进攻架势\n{0}\n防御架势\n{1}"
+  splits:
+  - text: "进攻架势"
+    translated: "Offensive stance"
+    qcReviewedText: "Offensive stance\n{0}\nDefense stance\n{1}"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "防御架势"
+    translated: "Defense stance"
+    qcReviewedText: "Defense stance"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0}\n⟦0⟧\n{1}\n⟦1⟧"
+- raw: "逐日"
+  splits:
+  - text: "逐日"
+    translated: "Day by Day"
+    qcReviewedText: "Day by Day"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "逐电"
+  splits:
+  - text: "逐电"
+    translated: "Z-zhuduan"
+    qcReviewedText: "Z-zhuduan"
+    qcTranslated: "Z-zhudian"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+- raw: "逾轮"
+  splits:
+  - text: "逾轮"
+    translated: "Master, I will go now"
+    qcReviewedText: "Master, I will go now"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "野外"
+  splits:
+  - text: "野外"
+    translated: "Outdoor"
+    qcReviewedText: "Outdoor"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "错金"
+  splits:
+  - text: "错金"
+    translated: "C-c-corrosion-gold"
+    qcReviewedText: "C-c-corrosion-gold"
+    qcTranslated: "C-c-corrosion gold"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "面"
+  splits:
+  - text: "面"
+    translated: "Mian"
+    qcReviewedText: "Mian"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "鞍"
+  splits:
+  - text: "鞍"
+    translated: "A-a-dan"
+    qcReviewedText: "A-a-dan"
+    qcTranslated: "A-a-a-dan"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "飒沓"
+  splits:
+  - text: "飒沓"
+    translated: "Sada"
+    qcReviewedText: "Sada"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "飞云"
+  splits:
+  - text: "飞云"
+    translated: "F-flying clouds"
+    qcReviewedText: "F-flying clouds"
+    qcTranslated: "Fei Yun"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+- raw: "驱驰"
+  splits:
+  - text: "驱驰"
+    translated: "Drive on"
+    qcReviewedText: "Drive on"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "骁腾"
+  splits:
+  - text: "骁腾"
+    translated: "Xiao Teng"
+    qcReviewedText: "Xiao Teng"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "鱼皮"
+  splits:
+  - text: "鱼皮"
+    translated: "F-fish skin"
+    qcReviewedText: "F-fish skin"
+    qcTranslated: "Fish skin"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+- raw: "（来源：{0}）"
+  splits:
+  - text: "（来源"
+    translated: "(source"
+    qcReviewedText: "(source：{0}）"
+    qcTranslated: "(Source: {0})"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
+  templates:
+  - template: "{0}：⟦0⟧）"

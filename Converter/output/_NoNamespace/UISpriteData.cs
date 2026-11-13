@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : UISpriteData
-// Token : 0x2000115
+// Token : 0x2000114
 // ============================================================
 
 public class UISpriteData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40006DA
+    // Token: 0x40006BA
     public string name;
 
-    // Token: 0x40006DB
+    // Token: 0x40006BB
     public int x;
 
-    // Token: 0x40006DC
+    // Token: 0x40006BC
     public int y;
 
-    // Token: 0x40006DD
+    // Token: 0x40006BD
     public int width;
 
-    // Token: 0x40006DE
+    // Token: 0x40006BE
     public int height;
 
-    // Token: 0x40006DF
+    // Token: 0x40006BF
     public int borderLeft;
 
-    // Token: 0x40006E0
+    // Token: 0x40006C0
     public int borderRight;
 
-    // Token: 0x40006E1
+    // Token: 0x40006C1
     public int borderTop;
 
-    // Token: 0x40006E2
+    // Token: 0x40006C2
     public int borderBottom;
 
-    // Token: 0x40006E3
+    // Token: 0x40006C3
     public int paddingLeft;
 
-    // Token: 0x40006E4
+    // Token: 0x40006C4
     public int paddingRight;
 
-    // Token: 0x40006E5
+    // Token: 0x40006C5
     public int paddingTop;
 
-    // Token: 0x40006E6
+    // Token: 0x40006C6
     public int paddingBottom;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000962
-    // RVA   : 0x170A340   Offset: 0x1709740   Length: 0x10
+    // Token : 0x6000949
+    // RVA   : 0x160C670   Offset: 0x160B470   Length: 0x10
     public bool get_hasBorder()
     {
         uint uVar1;
@@ -56,8 +56,8 @@ public class UISpriteData
         return CONCAT31((int3)(uVar1 >> 8),uVar1 != 0);
     }
 
-    // Token : 0x6000963
-    // RVA   : 0x170A350   Offset: 0x1709750   Length: 0x10
+    // Token : 0x600094A
+    // RVA   : 0x160C680   Offset: 0x160B480   Length: 0x10
     public bool get_hasPadding()
     {
         uint uVar1;
@@ -66,11 +66,11 @@ public class UISpriteData
         return CONCAT31((int3)(uVar1 >> 8),uVar1 != 0);
     }
 
-    // Token : 0x6000964
-    // RVA   : 0x170A2D0   Offset: 0x17096D0   Length: 0x13
+    // Token : 0x600094B
+    // RVA   : 0x160C600   Offset: 0x160B400   Length: 0x13
     public void SetRect(int x, int y, int width, int height)
     {
-        void FUN_18170a2d0(int64 this,uint32 x,uint32 y,uint32 width,
+        void FUN_18160c600(int64 this,uint32 x,uint32 y,uint32 width,
                         uint32 height)
         {
         this.height = height;
@@ -79,11 +79,11 @@ public class UISpriteData
         this.width = width;
     }
 
-    // Token : 0x6000965
-    // RVA   : 0x170A2B0   Offset: 0x17096B0   Length: 0x13
+    // Token : 0x600094C
+    // RVA   : 0x160C5E0   Offset: 0x160B3E0   Length: 0x13
     public void SetPadding(int left, int bottom, int right, int top)
     {
-        void FUN_18170a2b0(int64 this,uint32 left,uint32 bottom,uint32 right,
+        void FUN_18160c5e0(int64 this,uint32 left,uint32 bottom,uint32 right,
                         uint32 top)
         {
         this.paddingTop = top;
@@ -92,11 +92,11 @@ public class UISpriteData
         this.paddingRight = right;
     }
 
-    // Token : 0x6000966
-    // RVA   : 0x170A290   Offset: 0x1709690   Length: 0x13
+    // Token : 0x600094D
+    // RVA   : 0x160C5C0   Offset: 0x160B3C0   Length: 0x13
     public void SetBorder(int left, int bottom, int right, int top)
     {
-        void FUN_18170a290(int64 this,uint32 left,uint32 bottom,uint32 right,
+        void FUN_18160c5c0(int64 this,uint32 left,uint32 bottom,uint32 right,
                         uint32 top)
         {
         this.borderTop = top;
@@ -105,8 +105,8 @@ public class UISpriteData
         this.borderRight = right;
     }
 
-    // Token : 0x6000967
-    // RVA   : 0x170A210   Offset: 0x1709610   Length: 0x7D
+    // Token : 0x600094E
+    // RVA   : 0x160C540   Offset: 0x160B340   Length: 0x7D
     public void CopyFrom(UISpriteData sd)
     {
         if (sd != null) {
@@ -127,8 +127,8 @@ public class UISpriteData
         }
     }
 
-    // Token : 0x6000968
-    // RVA   : 0x170A1E0   Offset: 0x17095E0   Length: 0x2B
+    // Token : 0x600094F
+    // RVA   : 0x160C510   Offset: 0x160B310   Length: 0x2B
     public void CopyBorderFrom(UISpriteData sd)
     {
         if (sd != null) {
@@ -140,8 +140,8 @@ public class UISpriteData
         }
     }
 
-    // Token : 0x6000969
-    // RVA   : 0x170A2F0   Offset: 0x17096F0   Length: 0x47
+    // Token : 0x6000950
+    // RVA   : 0x160C620   Offset: 0x160B420   Length: 0x47
     public void /*ctor*/()
     {
         this.name = "Sprite";

@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : <>c__DisplayClass39_0
-// Token : 0x200047E
+// Token : 0x200048B
 // ============================================================
 
 public class <>c__DisplayClass39_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400213B
+    // Token: 0x40021CE
     public Color to;
 
-    // Token: 0x400213C
+    // Token: 0x40021CF
     public Image target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600273E
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x60027E8
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x600273F
-    // RVA   : 0x424490   Offset: 0x423890   Length: 0xB
+    // Token : 0x60027E9
+    // RVA   : 0x67F840   Offset: 0x67E640   Length: 0xB
     internal Color <DOBlendableColor>b__0()
     {
-        uint64 * FUN_180424490(uint64 *this,int64 param_2)
+        uint64 * FUN_18067f840(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 24);
@@ -33,8 +33,8 @@ public class <>c__DisplayClass39_0
         return this;
     }
 
-    // Token : 0x6002740
-    // RVA   : 0x939CC0   Offset: 0x9390C0   Length: 0xBF
+    // Token : 0x60027EA
+    // RVA   : 0x67F850   Offset: 0x67E650   Length: 0xBF
     internal void <DOBlendableColor>b__1(Color x)
     {
         uint uVar2;
@@ -55,7 +55,7 @@ public class <>c__DisplayClass39_0
         uStack_3c = *(uint32 *)(this + 28);
         local_38 = *x;
         uStack_30 = x[1];
-        puVar7 = (uint64 *)FUN_1810d3f00(local_28,&local_38,&local_48,0);
+        puVar7 = (uint64 *)FUN_180f25080(local_28,&local_38,&local_48,0);
         uVar2 = *(uint32 *)((int64)x + 4);
         uVar3 = *(uint32 *)(x + 1);
         uVar4 = *(uint32 *)((int64)x + 12);
@@ -75,7 +75,7 @@ public class <>c__DisplayClass39_0
           uStack_3c = puVar8[3];
           local_38 = uVar5;
           uStack_30 = uVar6;
-          puVar7 = (uint64 *)FUN_1810d3bc0(local_28,&local_48,&local_38,0);
+          puVar7 = (uint64 *)FUN_180f24d40(local_28,&local_48,&local_38,0);
           local_38 = *puVar7;
           uStack_30 = puVar7[1];
           (**(code **)(*plVar1 + 0x2a8))(plVar1,&local_38,*(uint64 *)(*plVar1 + 0x2b0));

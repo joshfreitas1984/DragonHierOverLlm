@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : UIGeometry
-// Token : 0x20000A6
+// Token : 0x20000A5
 // ============================================================
 
 public class UIGeometry
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40003FC
+    // Token: 0x40003DC
     public List<Vector3> verts;
 
-    // Token: 0x40003FD
+    // Token: 0x40003DD
     public List<Vector2> uvs;
 
-    // Token: 0x40003FE
+    // Token: 0x40003DE
     public List<Color> cols;
 
-    // Token: 0x40003FF
+    // Token: 0x40003DF
     public OnCustomWrite onCustomWrite;
 
-    // Token: 0x4000400
+    // Token: 0x40003E0
     private List<Vector3> mRtpVerts;
 
-    // Token: 0x4000401
+    // Token: 0x40003E1
     private Vector3 mRtpNormal;
 
-    // Token: 0x4000402
+    // Token: 0x40003E2
     private Vector4 mRtpTan;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60004E4
-    // RVA   : 0x12C2DF0   Offset: 0x12C21F0   Length: 0x40
+    // Token : 0x60004CB
+    // RVA   : 0x1149B90   Offset: 0x1148990   Length: 0x40
     public bool get_hasVertices()
     {
         long lVar1;
@@ -39,8 +39,8 @@ public class UIGeometry
         }
     }
 
-    // Token : 0x60004E5
-    // RVA   : 0x12C2D90   Offset: 0x12C2190   Length: 0x57
+    // Token : 0x60004CC
+    // RVA   : 0x1149B30   Offset: 0x1148930   Length: 0x57
     public bool get_hasTransformed()
     {
         ulong uVar1;
@@ -54,24 +54,24 @@ public class UIGeometry
                               uVar1.Count == lVar2.Count);
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
         return uVar1 & 0xffffffffffffff00;
     }
 
-    // Token : 0x60004E6
-    // RVA   : 0x12C26B0   Offset: 0x12C1AB0   Length: 0x9B
+    // Token : 0x60004CD
+    // RVA   : 0x1149450   Offset: 0x1148250   Length: 0x9B
     public void Clear()
     {
         if (this.verts != null) {
-          FUN_1812fa020(this.verts,DAT_181dabd30);
+          FUN_18115d8f0(this.verts,DAT_181e8e358);
           if (this.uvs != null) {
-            FUN_1812fa020(this.uvs,DAT_181dab9b0);
+            FUN_18115d8f0(this.uvs,DAT_181e8dfd8);
             if (this.cols != null) {
-              FUN_1812fa020(this.cols,DAT_181d82eb8);
+              FUN_18115d8f0(this.cols,DAT_181e65078);
               if (this.mRtpVerts != null) {
-                FUN_1812fa020(this.mRtpVerts,DAT_181dabd30);
+                FUN_18115d8f0(this.mRtpVerts,DAT_181e8e358);
                 return;
               }
             }
@@ -79,8 +79,8 @@ public class UIGeometry
         }
     }
 
-    // Token : 0x60004E7
-    // RVA   : 0x12C23F0   Offset: 0x12C17F0   Length: 0x2B5
+    // Token : 0x60004CE
+    // RVA   : 0x1149190   Offset: 0x1147F90   Length: 0x2B5
     public void ApplyTransform(Matrix4x4 widgetToPanel, bool generateNormals)
     {
         long lVar1;
@@ -102,12 +102,12 @@ public class UIGeometry
           lVar5 = this.mRtpVerts;
           if (this.verts.Count < 1) {
             if (lVar5 != null) {
-              FUN_1812fa020(lVar5,DAT_181dabd30);
+              FUN_18115d8f0(lVar5,DAT_181e8e358);
               return;
             }
           }
           else if (lVar5 != null) {
-            FUN_1812fa020(lVar5,DAT_181dabd30);
+            FUN_18115d8f0(lVar5,DAT_181e8e358);
             uVar6 = 0;
             if (this.verts != null) {
               lVar5 = (int64)this.verts.Count;
@@ -128,7 +128,7 @@ public class UIGeometry
                   if (lVar2 == null) throw; // [null/range check failed]
                   local_58 = *puVar3;
                   local_50 = *(uint32 *)(puVar3 + 1);
-                  FUN_181817190(lVar2,&local_58,DAT_181dabc30);
+                  FUN_181756920(lVar2,&local_58,DAT_181e8e258);
                   uVar6 = uVar6 + 1;
                   lVar7 = lVar7 + 1;
                   lVar4 = lVar4 + 12;
@@ -156,7 +156,7 @@ public class UIGeometry
               local_50 = *(uint32 *)(puVar3 + 1);
               local_68 = 0;
               uStack_60 = 0;
-              FUN_1809dcfa0(&local_68,(int)*puVar3,(int)((uint64)*puVar3 >> 32),local_50,0xbf800000,0
+              FUN_1807282e0(&local_68,(int)*puVar3,(int)((uint64)*puVar3 >> 32),local_50,0xbf800000,0
                            );
               this.mRtpTan = local_68;
               *(uint64 *)(this + 76) = uStack_60;
@@ -166,8 +166,8 @@ public class UIGeometry
         }
     }
 
-    // Token : 0x60004E8
-    // RVA   : 0x12C2750   Offset: 0x12C1B50   Length: 0x509
+    // Token : 0x60004CF
+    // RVA   : 0x11494F0   Offset: 0x11482F0   Length: 0x509
     public void WriteToBuffers(List<Vector3> v, List<Vector2> u, List<Color> c, List<Vector3> n, List<Vector4> t, List<Vector4> u2)
     {
         void UIGeometry.WriteToBuffers
@@ -207,35 +207,35 @@ public class UIGeometry
                 lVar11 = 32;
                 do {
                   lVar3 = this.mRtpVerts;
-                  if (lVar3 == null) goto LAB_1812c2c54;
+                  if (lVar3 == null) goto LAB_1811499f4;
                   if (lVar3.Count <= uVar7) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
-                  if (v == null) goto LAB_1812c2c54;
+                  if (v == null) goto LAB_1811499f4;
                   local_88 = *(uint64 *)(lVar3._items + 32 + lVar8);
                   uStack_80 = *(uint32 *)(lVar3._items + 40 + lVar8);
-                  FUN_181817190(v,&local_88,DAT_181dabc30);
+                  FUN_181756920(v,&local_88,DAT_181e8e258);
                   lVar3 = this.uvs;
-                  if (lVar3 == null) goto LAB_1812c2c54;
+                  if (lVar3 == null) goto LAB_1811499f4;
                   if (lVar3.Count <= uVar7) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   local_res8 = CONCAT44(*(uint32 *)(lVar3._items + 4 + lVar11),
                                         *(uint32 *)(lVar3._items + lVar11));
-                  if (u == null) goto LAB_1812c2c54;
-                  FUN_18182a5a0(u,local_res8,DAT_181dab930);
+                  if (u == null) goto LAB_1811499f4;
+                  FUN_181769ec0(u,local_res8,DAT_181e8df58);
                   lVar3 = this.cols;
-                  if (lVar3 == null) goto LAB_1812c2c54;
+                  if (lVar3 == null) goto LAB_1811499f4;
                   if (lVar3.Count <= uVar7) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
-                  if (c == null) goto LAB_1812c2c54;
+                  if (c == null) goto LAB_1811499f4;
                   puVar1 = (uint32 *)(lVar3._items + lVar10);
                   local_78 = *puVar1;
                   uStack_74 = puVar1[1];
                   uStack_70 = puVar1[2];
                   uStack_6c = puVar1[3];
-                  FUN_1817ea0a0(c,&local_78,DAT_181d82e38);
+                  FUN_181660f90(c,&local_78,DAT_181e64ff8);
                   uVar7 = uVar7 + 1;
                   lVar9 = lVar9 + 1;
                   lVar11 = lVar11 + 8;
@@ -251,44 +251,44 @@ public class UIGeometry
               lVar11 = 32;
               do {
                 lVar3 = this.mRtpVerts;
-                if (lVar3 == null) goto LAB_1812c2c54;
+                if (lVar3 == null) goto LAB_1811499f4;
                 if (lVar3.Count <= uVar7) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (v == null) goto LAB_1812c2c54;
+                if (v == null) goto LAB_1811499f4;
                 local_98 = *(uint64 *)(lVar3._items + 32 + lVar8);
                 local_90 = *(uint32 *)(lVar3._items + 40 + lVar8);
-                FUN_181817190(v,&local_98,DAT_181dabc30);
+                FUN_181756920(v,&local_98,DAT_181e8e258);
                 lVar3 = this.uvs;
-                if (lVar3 == null) goto LAB_1812c2c54;
+                if (lVar3 == null) goto LAB_1811499f4;
                 if (lVar3.Count <= uVar7) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 local_res8 = CONCAT44(*(uint32 *)(lVar3._items + 4 + lVar11),
                                       *(uint32 *)(lVar3._items + lVar11));
-                if (u == null) goto LAB_1812c2c54;
-                FUN_18182a5a0(u,local_res8,DAT_181dab930);
+                if (u == null) goto LAB_1811499f4;
+                FUN_181769ec0(u,local_res8,DAT_181e8df58);
                 lVar3 = this.cols;
-                if (lVar3 == null) goto LAB_1812c2c54;
+                if (lVar3 == null) goto LAB_1811499f4;
                 if (lVar3.Count <= uVar7) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
-                if (c == null) goto LAB_1812c2c54;
+                if (c == null) goto LAB_1811499f4;
                 puVar1 = (uint32 *)(lVar3._items + lVar10);
                 local_78 = *puVar1;
                 uStack_74 = puVar1[1];
                 uStack_70 = puVar1[2];
                 uStack_6c = puVar1[3];
-                FUN_1817ea0a0(c,&local_78,DAT_181d82e38);
+                FUN_181660f90(c,&local_78,DAT_181e64ff8);
                 local_88 = this.mRtpNormal;
                 uStack_80 = *(uint32 *)(this + 64);
-                FUN_181817190(n,&local_88,DAT_181dabc30);
-                if (t == null) goto LAB_1812c2c54;
+                FUN_181756920(n,&local_88,DAT_181e8e258);
+                if (t == null) goto LAB_1811499f4;
                 local_78 = this.mRtpTan;
                 uStack_74 = *(uint32 *)(this + 72);
                 uStack_70 = *(uint32 *)(this + 76);
                 uStack_6c = *(uint32 *)(this + 80);
-                FUN_1817ea0a0(t,&local_78,DAT_181dabfa8);
+                FUN_181660f90(t,&local_78,DAT_181e8e5d8);
                 uVar7 = uVar7 + 1;
                 lVar9 = lVar9 + 1;
                 lVar11 = lVar11 + 8;
@@ -305,9 +305,9 @@ public class UIGeometry
               uStack_80 = uVar4;
               uStack_7c = uVar5;
               if (this.verts == null) {
-        LAB_1812c2c54:
+        LAB_1811499f4:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar8 = (int64)this.verts.Count;
               if (0 < lVar8) {
@@ -315,14 +315,14 @@ public class UIGeometry
                 local_res8 = 0;
                 do {
                   lVar10 = this.verts;
-                  if (lVar10 == null) goto LAB_1812c2c54;
+                  if (lVar10 == null) goto LAB_1811499f4;
                   lVar11 = lVar10;
                   if (lVar10.Count <= uVar7) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                     lVar11 = this.verts;
                   }
                   local_88 = *(uint64 *)(lVar10._items + 32 + lVar9);
-                  if (lVar11 == null) goto LAB_1812c2c54;
+                  if (lVar11 == null) goto LAB_1811499f4;
                   if (lVar11.Count <= uVar7) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
@@ -330,7 +330,7 @@ public class UIGeometry
                   local_78 = (uint32)local_88;
                   uStack_70 = uVar4;
                   uStack_6c = uVar5;
-                  FUN_1817ea0a0(u2,&local_78,DAT_181dabfa8);
+                  FUN_181660f90(u2,&local_78,DAT_181e8e5d8);
                   uVar7 = uVar7 + 1;
                   local_res8 = local_res8 + 1;
                   lVar9 = lVar9 + 12;
@@ -345,22 +345,22 @@ public class UIGeometry
         }
     }
 
-    // Token : 0x60004E9
-    // RVA   : 0x12C2C60   Offset: 0x12C2060   Length: 0x12D
+    // Token : 0x60004D0
+    // RVA   : 0x1149A00   Offset: 0x1148800   Length: 0x12D
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98be8);
-        FUN_181330100(uVar1,DAT_181dabbb0);
+        uVar1 = il2cpp_internal(DAT_181e78ba8);
+        FUN_1810f3480(uVar1,DAT_181e8e1d8);
         this.verts = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98b68);
-        FUN_181330100(uVar1,DAT_181dab8b0);
+        uVar1 = il2cpp_internal(DAT_181e78b28);
+        FUN_1810f3480(uVar1,DAT_181e8ded8);
         this.uvs = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d91df0);
-        FUN_181330100(uVar1,DAT_181d82db8);
+        uVar1 = il2cpp_internal(DAT_181e71d38);
+        FUN_1810f3480(uVar1,DAT_181e64f78);
         this.cols = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d98be8);
-        FUN_181330100(uVar1,DAT_181dabbb0);
+        uVar1 = il2cpp_internal(DAT_181e78ba8);
+        FUN_1810f3480(uVar1,DAT_181e8e1d8);
         this.mRtpVerts = uVar1;
         ZhSegment.Initialize(this,0);
     }

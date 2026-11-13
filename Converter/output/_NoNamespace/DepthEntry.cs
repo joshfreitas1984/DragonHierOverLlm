@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : DepthEntry
-// Token : 0x20000EE
+// Token : 0x20000ED
 // ============================================================
 
 public class DepthEntry
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40005BD
+    // Token: 0x400059D
     public int depth;
 
-    // Token: 0x40005BE
+    // Token: 0x400059E
     public RaycastHit hit;
 
-    // Token: 0x40005BF
+    // Token: 0x400059F
     public Vector3 point;
 
-    // Token: 0x40005C0
+    // Token: 0x40005A0
     public GameObject go;
 
 }

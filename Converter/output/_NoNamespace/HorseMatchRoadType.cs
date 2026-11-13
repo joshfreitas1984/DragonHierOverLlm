@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : HorseMatchRoadType
-// Token : 0x20002DE
+// Token : 0x20002E7
 // ============================================================
 
 public class HorseMatchRoadType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400179F
+    // Token: 0x40017F4
     public int value__;
 
-    // Token: 0x40017A0
+    // Token: 0x40017F5
     public const HorseMatchRoadType None;
 
-    // Token: 0x40017A1
+    // Token: 0x40017F6
     public const HorseMatchRoadType FastRoad;
 
-    // Token: 0x40017A2
+    // Token: 0x40017F7
     public const HorseMatchRoadType SlowRoad;
 
 }

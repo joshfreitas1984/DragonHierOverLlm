@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : CFX_Demo_RandomDirectionTranslate
-// Token : 0x20003BD
+// Token : 0x20003CA
 // ============================================================
 
 public class CFX_Demo_RandomDirectionTranslate
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E35
+    // Token: 0x4001EC7
     public float speed;
 
-    // Token: 0x4001E36
+    // Token: 0x4001EC8
     public Vector3 baseDir;
 
-    // Token: 0x4001E37
+    // Token: 0x4001EC9
     public Vector3 axis;
 
-    // Token: 0x4001E38
+    // Token: 0x4001ECA
     public bool gravity;
 
-    // Token: 0x4001E39
+    // Token: 0x4001ECB
     private Vector3 dir;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023DB
-    // RVA   : 0xB7F4E0   Offset: 0xB7E8E0   Length: 0x137
+    // Token : 0x6002485
+    // RVA   : 0x938790   Offset: 0x937590   Length: 0x137
     private void Start()
     {
         uint uVar2;
@@ -50,8 +50,8 @@ public class CFX_Demo_RandomDirectionTranslate
         *(float *)(this + 64) = *(float *)(this + 64) + *(float *)(this + 36);
     }
 
-    // Token : 0x60023DC
-    // RVA   : 0xB7F620   Offset: 0xB7EA20   Length: 0x16E
+    // Token : 0x6002486
+    // RVA   : 0x9388D0   Offset: 0x9376D0   Length: 0x16E
     private void Update()
     {
         ulong uVar1;
@@ -94,8 +94,8 @@ public class CFX_Demo_RandomDirectionTranslate
         }
     }
 
-    // Token : 0x60023DD
-    // RVA   : 0xB7F790   Offset: 0xB7EB90   Length: 0x55
+    // Token : 0x6002487
+    // RVA   : 0x938A40   Offset: 0x937840   Length: 0x55
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];
@@ -106,7 +106,7 @@ public class CFX_Demo_RandomDirectionTranslate
         puVar1 = (uint64 *)Vector3.get_forward(local_18,0);
         this.axis = *puVar1;
         *(uint32 *)(this + 48) = *(uint32 *)(puVar1 + 1);
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : WorldEventDataBase
-// Token : 0x20001D7
+// Token : 0x20001D9
 // ============================================================
 
 public class WorldEventDataBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C89
+    // Token: 0x4000C9C
     public int id;
 
-    // Token: 0x4000C8A
+    // Token: 0x4000C9D
     public string name;
 
-    // Token: 0x4000C8B
+    // Token: 0x4000C9E
     public TimeData startTime;
 
-    // Token: 0x4000C8C
+    // Token: 0x4000C9F
     public List<PlotSignRequirement> plotSignRequirements;
 
-    // Token: 0x4000C8D
+    // Token: 0x4000CA0
     public WorldEventRepeatType repeatType;
 
-    // Token: 0x4000C8E
+    // Token: 0x4000CA1
     public int repeatDay;
 
-    // Token: 0x4000C8F
+    // Token: 0x4000CA2
     public int repeatDayRandomRange;
 
-    // Token: 0x4000C90
+    // Token: 0x4000CA3
     public int lastTime;
 
-    // Token: 0x4000C91
+    // Token: 0x4000CA4
     public bool noRandomDifficulty;
 
-    // Token: 0x4000C92
+    // Token: 0x4000CA5
     public int forceDifficulty;
 
-    // Token: 0x4000C93
+    // Token: 0x4000CA6
     public string startCallPlot;
 
-    // Token: 0x4000C94
+    // Token: 0x4000CA7
     public WorldEventRandomArea eventRandomArea;
 
-    // Token: 0x4000C95
+    // Token: 0x4000CA8
     public EventData eventData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000EC5
-    // RVA   : 0x9D2A10   Offset: 0x9D1E10   Length: 0x175
+    // Token : 0x6000ECB
+    // RVA   : 0x71DD00   Offset: 0x71CB00   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -58,13 +58,13 @@ public class WorldEventDataBase
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -76,16 +76,16 @@ public class WorldEventDataBase
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000EC6
-    // RVA   : 0x9D2B90   Offset: 0x9D1F90   Length: 0xE
+    // Token : 0x6000ECC
+    // RVA   : 0x71DE80   Offset: 0x71CC80   Length: 0xE
     public void /*ctor*/()
     {
         this.forceDifficulty = 0xffffffff;

@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : BattleInfoData
-// Token : 0x200015B
+// Token : 0x2000157
 // ============================================================
 
 public class BattleInfoData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40008C0
+    // Token: 0x40008A1
     public int enemyKilled;
 
-    // Token: 0x40008C1
+    // Token: 0x40008A2
     public float enemyKillScorePercent;
 
-    // Token: 0x40008C2
+    // Token: 0x40008A3
     public float makeDamage;
 
-    // Token: 0x40008C3
+    // Token: 0x40008A4
     public float takeDamage;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000AF9
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6000AD8
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

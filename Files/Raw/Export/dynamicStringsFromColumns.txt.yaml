@@ -37271,9 +37271,6 @@
 - raw: "沼泽"
   splits:
   - text: "沼泽"
-- raw: "营地"
-  splits:
-  - text: "营地"
 - raw: "地图"
   splits:
   - text: "地图"

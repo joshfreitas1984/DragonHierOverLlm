@@ -1,34 +1,34 @@
 // ============================================================
 // Type  : NGUIDebug
-// Token : 0x2000085
+// Token : 0x2000084
 // ============================================================
 
 public class NGUIDebug
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400032C
+    // Token: 0x400030C
     private static bool mRayDebug;
 
-    // Token: 0x400032D
+    // Token: 0x400030D
     private static List<string> mLines;
 
-    // Token: 0x400032E
+    // Token: 0x400030E
     private static NGUIDebug mInstance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000362
-    // RVA   : 0xDF7CD0   Offset: 0xDF70D0   Length: 0x57
+    // Token : 0x6000349
+    // RVA   : 0x854560   Offset: 0x853360   Length: 0x57
     public static bool get_debugRaycast()
     {
-        return **(uint8 **)(DAT_181d8bc28 + 184);
+        return **(uint8 **)(DAT_181e6bfe8 + 184);
     }
 
-    // Token : 0x6000363
-    // RVA   : 0xDF7D30   Offset: 0xDF7130   Length: 0x95
+    // Token : 0x600034A
+    // RVA   : 0x8545C0   Offset: 0x8533C0   Length: 0x95
     public static void set_debugRaycast(bool value)
     {
         bool cVar1;
-        **(char **)(DAT_181d8bc28 + 184) = value;
+        **(char **)(DAT_181e6bfe8 + 184) = value;
         if (value) {
           cVar1 = Application.get_isPlaying(0);
           if (cVar1) {
@@ -38,8 +38,8 @@ public class NGUIDebug
         }
     }
 
-    // Token : 0x6000364
-    // RVA   : 0xDF6950   Offset: 0xDF5D50   Length: 0x171
+    // Token : 0x600034B
+    // RVA   : 0x8531E0   Offset: 0x851FE0   Length: 0x171
     public static void CreateInstance()
     {
         bool cVar1;
@@ -50,18 +50,18 @@ public class NGUIDebug
         if (cVar1) {
           lVar2 = new GameObject("_NGUI Debug",0);
           if (lVar2 != null) {
-            uVar3 = GameObject.AddComponent(lVar2,DAT_181dc5770);
+            uVar3 = GameObject.AddComponent(lVar2,DAT_181e51808);
             NGUIDebug.mInstance = uVar3;
             Object.DontDestroyOnLoad(lVar2,0);
             return;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000365
-    // RVA   : 0xDF6DC0   Offset: 0xDF61C0   Length: 0x15D
+    // Token : 0x600034C
+    // RVA   : 0x853650   Offset: 0x852450   Length: 0x15D
     private static void LogString(string text)
     {
         long lVar1;
@@ -76,33 +76,33 @@ public class NGUIDebug
           if (20 < *(int *)(lVar1 + 24)) {
             lVar1 = NGUIDebug.mLines;
             if (lVar1 == null) throw; // [null/range check failed]
-            FUN_181823ba0(lVar1,0,DAT_181da4170);
+            FUN_181763390(lVar1,0,DAT_181e86770);
           }
           lVar1 = NGUIDebug.mLines;
           if (lVar1 != null) {
-            FUN_18181e6b0(lVar1,text,DAT_181da3d70);
+            FUN_18175de30(lVar1,text,DAT_181e86370);
             NGUIDebug.CreateInstance(0);
             return;
           }
         }
     }
 
-    // Token : 0x6000366
-    // RVA   : 0xDF7040   Offset: 0xDF6440   Length: 0x14D
+    // Token : 0x600034D
+    // RVA   : 0x8538D0   Offset: 0x8526D0   Length: 0x14D
     public static void Log(object[] objs)
     {
         bool cVar1;
         long lVar2;
         ulong uVar3;
         uint uVar4;
-        cVar1 = FUN_180d75bc0(objs,0);
+        cVar1 = FUN_180ad1200(objs,0);
         if (!cVar1) {
-          lVar2 = FUN_1800d60b0(DAT_181da1058,1);
+          lVar2 = FUN_1801dfd90(DAT_181e81128,1);
           if (lVar2 != null) {
             if (*(int *)(lVar2 + 24) == 0) {
               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar3,0);
+              FUN_1801e02d0(uVar3,0);
             }
             *(uint16 *)(lVar2 + 32) = 10;
             if (objs != null) {
@@ -120,31 +120,31 @@ public class NGUIDebug
                 }
                 uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar3,0);
+                FUN_1801e02d0(uVar3,0);
               }
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000367
-    // RVA   : 0xDF6F20   Offset: 0xDF6320   Length: 0x116
+    // Token : 0x600034E
+    // RVA   : 0x8537B0   Offset: 0x8525B0   Length: 0x116
     public static void Log(string s)
     {
         bool cVar1;
         long lVar2;
         ulong uVar3;
         uint uVar4;
-        cVar1 = FUN_180d75bc0(s,0);
+        cVar1 = FUN_180ad1200(s,0);
         if (!cVar1) {
-          lVar2 = FUN_1800d60b0(DAT_181da1058,1);
+          lVar2 = FUN_1801dfd90(DAT_181e81128,1);
           if (lVar2 != null) {
             if (*(int *)(lVar2 + 24) == 0) {
               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar3,0);
+              FUN_1801e02d0(uVar3,0);
             }
             *(uint16 *)(lVar2 + 32) = 10;
             if (s != null) {
@@ -162,29 +162,29 @@ public class NGUIDebug
                 }
                 uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar3,0);
+                FUN_1801e02d0(uVar3,0);
               }
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000368
-    // RVA   : 0xDF68D0   Offset: 0xDF5CD0   Length: 0x79
+    // Token : 0x600034F
+    // RVA   : 0x853160   Offset: 0x851F60   Length: 0x79
     public static void Clear()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d8bc28 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e6bfe8 + 184) + 8);
         if (lVar1 != null) {
-          FUN_1812fa020(lVar1,DAT_181da3df0);
+          FUN_18115d8f0(lVar1,DAT_181e863f0);
           return;
         }
     }
 
-    // Token : 0x6000369
-    // RVA   : 0xDF6AD0   Offset: 0xDF5ED0   Length: 0x2E8
+    // Token : 0x6000350
+    // RVA   : 0x853360   Offset: 0x852160   Length: 0x2E8
     public static void DrawBounds(Bounds b)
     {
         ulong uVar1;
@@ -201,21 +201,21 @@ public class NGUIDebug
         uint local_80;
         ulong local_78;
         ulong uStack_70;
-        puVar3 = (uint64 *)FUN_18045e0a0(&local_88,b,0);
+        puVar3 = (uint64 *)FUN_180af1d30(&local_88,b,0);
         local_a8 = *puVar3;
         local_a0 = *(uint32 *)(puVar3 + 1);
-        puVar3 = (uint64 *)FUN_18045e0a0(&local_88,b,0);
+        puVar3 = (uint64 *)FUN_180af1d30(&local_88,b,0);
         uVar1 = *puVar3;
         local_80 = *(uint32 *)(puVar3 + 1);
-        puVar3 = (uint64 *)FUN_18045e080(&local_98,b,0);
+        puVar3 = (uint64 *)FUN_180af1d10(&local_98,b,0);
         local_88 = *puVar3;
         local_80 = *(uint32 *)(puVar3 + 1);
         fVar6 = (float)uVar1 - (float)local_88;
         fVar4 = (float)((uint64)uVar1 >> 32) - (float)((uint64)local_88 >> 32);
-        puVar3 = (uint64 *)FUN_18045e0a0(&local_88,b,0);
+        puVar3 = (uint64 *)FUN_180af1d30(&local_88,b,0);
         uVar1 = *puVar3;
         local_80 = *(uint32 *)(puVar3 + 1);
-        puVar3 = (uint64 *)FUN_18045e080(&local_98,b,0);
+        puVar3 = (uint64 *)FUN_180af1d10(&local_98,b,0);
         uVar2 = local_a0;
         local_88 = *puVar3;
         local_80 = *(uint32 *)(puVar3 + 1);
@@ -264,8 +264,8 @@ public class NGUIDebug
         Debug.DrawLine(&local_98,&local_88,&local_78,0);
     }
 
-    // Token : 0x600036A
-    // RVA   : 0xDF7190   Offset: 0xDF6590   Length: 0xA84
+    // Token : 0x6000351
+    // RVA   : 0x853A20   Offset: 0x852820   Length: 0xA84
     private void OnGUI()
     {
         int iVar1;
@@ -289,10 +289,10 @@ public class NGUIDebug
         uStack_80 = 0;
         local_res18[0] = 0;
         local_res20[0] = 0;
-        FUN_1809dcfa0(&local_88,0x40a00000,0x40a00000,0x447a0000,0x41b00000,0);
-        if (**(char **)(DAT_181d8bc28 + 184) != false) {
+        FUN_1807282e0(&local_88,0x40a00000,0x40a00000,0x447a0000,0x41b00000,0);
+        if (**(char **)(DAT_181e6bfe8 + 184) != false) {
           local_res18[0] = UICamera.get_currentScheme(0);
-          plVar4 = (int64 *)il2cpp_value_box(DAT_181d8d2d0,local_res18);
+          plVar4 = (int64 *)il2cpp_value_box(DAT_181e6da90,local_res18);
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           uVar5 = (**(code **)(*plVar4 + 0x168))(plVar4,*(uint64 *)(*plVar4 + 0x170));
           puVar6 = (uint32 *)il2cpp_object_unbox(plVar4);
@@ -305,21 +305,21 @@ public class NGUIDebug
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 - 1.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 - 1.0,0);
-          puVar7 = (uint64 *)FUN_1810d3b80(&local_78,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 - 1.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 - 1.0,0);
+          puVar7 = (uint64 *)FUN_180f24d00(&local_78,0);
           local_78 = *puVar7;
           uStack_70 = puVar7[1];
           GUI.set_color(&local_78,0);
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 + 18.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 + 1.0,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 + 18.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 + 1.0,0);
           uVar5 = UICamera.get_hoveredObject(0);
           lVar8 = NGUITools.GetHierarchy(uVar5,0);
           if (lVar8 == null) throw; // [null/range check failed]
@@ -332,21 +332,21 @@ public class NGUIDebug
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 - 1.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 - 1.0,0);
-          puVar7 = (uint64 *)FUN_1810d3b80(&local_78,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 - 1.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 - 1.0,0);
+          puVar7 = (uint64 *)FUN_180f24d00(&local_78,0);
           local_78 = *puVar7;
           uStack_70 = puVar7[1];
           GUI.set_color(&local_78,0);
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 + 18.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 + 1.0,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 + 18.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 + 1.0,0);
           uVar5 = UICamera.get_selectedObject(0);
           lVar8 = NGUITools.GetHierarchy(uVar5,0);
           if (lVar8 == null) throw; // [null/range check failed]
@@ -359,21 +359,21 @@ public class NGUIDebug
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 - 1.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 - 1.0,0);
-          puVar7 = (uint64 *)FUN_1810d3b80(&local_78,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 - 1.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 - 1.0,0);
+          puVar7 = (uint64 *)FUN_180f24d00(&local_78,0);
           local_78 = *puVar7;
           uStack_70 = puVar7[1];
           GUI.set_color(&local_78,0);
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 + 18.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 + 1.0,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 + 18.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 + 1.0,0);
           uVar5 = UICamera.get_controllerNavigationObject(0);
           lVar8 = NGUITools.GetHierarchy(uVar5,0);
           if (lVar8 == null) throw; // [null/range check failed]
@@ -386,21 +386,21 @@ public class NGUIDebug
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 - 1.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 - 1.0,0);
-          puVar7 = (uint64 *)FUN_1810d3b80(&local_78,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 - 1.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 - 1.0,0);
+          puVar7 = (uint64 *)FUN_180f24d00(&local_78,0);
           local_78 = *puVar7;
           uStack_70 = puVar7[1];
           GUI.set_color(&local_78,0);
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 + 18.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 + 1.0,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 + 18.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 + 1.0,0);
           local_res20[0] = UICamera.CountInputSources(0);
           uVar5 = Int32.ToString(local_res20,0);
           uVar5 = String.Concat("Active events: ",uVar5,0);
@@ -408,7 +408,7 @@ public class NGUIDebug
           if (cVar3) {
             uVar5 = String.Concat(uVar5,", disabled controller",0);
           }
-          if (*(char *)(*(int64 *)(DAT_181daf690 + 184) + 90) != false) {
+          if (*(char *)(*(int64 *)(DAT_181e8fad0 + 184) + 90) != false) {
             uVar5 = String.Concat(uVar5,", ignore controller",0);
           }
           cVar3 = UICamera.get_inputHasFocus(0);
@@ -424,21 +424,21 @@ public class NGUIDebug
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 - 1.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 - 1.0,0);
-          puVar7 = (uint64 *)FUN_1810d3b80(&local_78,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 - 1.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 - 1.0,0);
+          puVar7 = (uint64 *)FUN_180f24d00(&local_78,0);
           local_78 = *puVar7;
           uStack_70 = puVar7[1];
           GUI.set_color(&local_78,0);
           local_78 = local_88;
           uStack_70 = uStack_80;
           GUI.Label(&local_78,uVar5,0);
-          fVar11 = (float)FUN_18044df60(&local_88,0);
-          FUN_18044f4b0(&local_88,fVar11 + 18.0,0);
-          fVar11 = (float)FUN_180d995d0(&local_88,0);
-          FUN_18044f4c0(&local_88,fVar11 + 1.0,0);
+          fVar11 = (float)FUN_180af4e80(&local_88,0);
+          FUN_180728510(&local_88,fVar11 + 18.0,0);
+          fVar11 = (float)FUN_180af4e60(&local_88,0);
+          FUN_180728500(&local_88,fVar11 + 1.0,0);
         }
         lVar8 = NGUIDebug.mLines;
         if (lVar8 != null) {
@@ -455,15 +455,15 @@ public class NGUIDebug
               uVar5 = local_88;
               lVar8 = NGUIDebug.mLines;
               if (lVar8 == null) throw; // [null/range check failed]
-              uVar9 = FUN_180002f80(lVar8,iVar10,DAT_181da4370);
+              uVar9 = FUN_1800024b0(lVar8,iVar10,DAT_181e86970);
               local_78 = uVar5;
               uStack_70 = uVar2;
               GUI.Label(&local_78,uVar9,0);
-              fVar11 = (float)FUN_18044df60(&local_88,0);
-              FUN_18044f4b0(&local_88,fVar11 - 1.0,0);
-              fVar11 = (float)FUN_180d995d0(&local_88,0);
-              FUN_18044f4c0(&local_88,fVar11 - 1.0,0);
-              puVar7 = (uint64 *)FUN_1810d3b80(local_58,0);
+              fVar11 = (float)FUN_180af4e80(&local_88,0);
+              FUN_180728510(&local_88,fVar11 - 1.0,0);
+              fVar11 = (float)FUN_180af4e60(&local_88,0);
+              FUN_180728500(&local_88,fVar11 - 1.0,0);
+              puVar7 = (uint64 *)FUN_180f24d00(local_58,0);
               local_78 = *puVar7;
               uStack_70 = puVar7[1];
               GUI.set_color(&local_78,0);
@@ -471,14 +471,14 @@ public class NGUIDebug
               uVar5 = local_88;
               lVar8 = NGUIDebug.mLines;
               if (lVar8 == null) throw; // [null/range check failed]
-              uVar9 = FUN_180002f80(lVar8,iVar10,DAT_181da4370);
+              uVar9 = FUN_1800024b0(lVar8,iVar10,DAT_181e86970);
               local_78 = uVar5;
               uStack_70 = uVar2;
               GUI.Label(&local_78,uVar9,0);
-              fVar11 = (float)FUN_18044df60(&local_88);
-              FUN_18044f4b0(&local_88,fVar11 + 18.0,0);
-              fVar11 = (float)FUN_180d995d0(&local_88);
-              FUN_18044f4c0(&local_88,fVar11 + 1.0,0);
+              fVar11 = (float)FUN_180af4e80(&local_88);
+              FUN_180728510(&local_88,fVar11 + 18.0,0);
+              fVar11 = (float)FUN_180af4e60(&local_88);
+              FUN_180728500(&local_88,fVar11 + 1.0,0);
               iVar10 = iVar10 + 1;
             } while (iVar10 < iVar1);
           }
@@ -486,21 +486,21 @@ public class NGUIDebug
         }
     }
 
-    // Token : 0x600036B
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000352
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x600036C
-    // RVA   : 0xDF7C20   Offset: 0xDF7020   Length: 0xAB
+    // Token : 0x6000353
+    // RVA   : 0x8544B0   Offset: 0x8532B0   Length: 0xAB
     private static void /*cctor*/()
     {
         ulong uVar1;
-        **(uint8 **)(DAT_181d8bc28 + 184) = 0;
-        uVar1 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(uVar1,DAT_181da3bf0);
+        **(uint8 **)(DAT_181e6bfe8 + 184) = 0;
+        uVar1 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(uVar1,DAT_181e861f0);
         NGUIDebug.mLines = uVar1;
         NGUIDebug.mInstance = 0;
     }

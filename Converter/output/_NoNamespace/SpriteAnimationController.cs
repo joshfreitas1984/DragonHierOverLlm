@@ -1,37 +1,37 @@
 // ============================================================
 // Type  : SpriteAnimationController
-// Token : 0x200036C
+// Token : 0x2000379
 // ============================================================
 
 public class SpriteAnimationController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C07
+    // Token: 0x4001C99
     public List<Sprite> spriteSheet;
 
-    // Token: 0x4001C08
+    // Token: 0x4001C9A
     public float framePerSecond;
 
-    // Token: 0x4001C09
+    // Token: 0x4001C9B
     public bool finishAutoDestroy;
 
-    // Token: 0x4001C0A
+    // Token: 0x4001C9C
     public bool useRealTime;
 
-    // Token: 0x4001C0B
+    // Token: 0x4001C9D
     private int nowSpriteID;
 
-    // Token: 0x4001C0C
+    // Token: 0x4001C9E
     private float nextTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60021AF
-    // RVA   : 0xC5F060   Offset: 0xC5E460   Length: 0x84
+    // Token : 0x6002259
+    // RVA   : 0xA08280   Offset: 0xA07080   Length: 0x84
     private void Start()
     {
         long lVar1;
         long lVar2;
-        lVar2 = Component.GetComponent(this,DAT_181d95df8);
+        lVar2 = Component.GetComponent(this,DAT_181e791b8);
         lVar1 = this.spriteSheet;
         if (lVar1 != null) {
           if (lVar1.Count == null) {
@@ -44,8 +44,8 @@ public class SpriteAnimationController
         }
     }
 
-    // Token : 0x60021B0
-    // RVA   : 0xC5F0F0   Offset: 0xC5E4F0   Length: 0x154
+    // Token : 0x600225A
+    // RVA   : 0xA08310   Offset: 0xA07110   Length: 0x154
     private void Update()
     {
         uint uVar1;
@@ -80,7 +80,7 @@ public class SpriteAnimationController
             }
             this.nowSpriteID = 0;
           }
-          lVar4 = Component.GetComponent(this,DAT_181d95df8);
+          lVar4 = Component.GetComponent(this,DAT_181e791b8);
           lVar2 = this.spriteSheet;
           if (lVar2 != null) {
             uVar1 = this.nowSpriteID;
@@ -97,11 +97,11 @@ public class SpriteAnimationController
         }
     }
 
-    // Token : 0x60021B1
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600225B
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

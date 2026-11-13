@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : AISettingTabController
-// Token : 0x200013A
+// Token : 0x2000136
 // ============================================================
 
 public class AISettingTabController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40007AA
+    // Token: 0x4000787
     public HeroAISettingTabController sourceHero;
 
-    // Token: 0x40007AB
+    // Token: 0x4000788
     public GameObject focusButton;
 
-    // Token: 0x40007AC
+    // Token: 0x4000789
     public int AISettingID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000A18
-    // RVA   : 0xA1A5A0   Offset: 0xA199A0   Length: 0x4FA
+    // Token : 0x60009F7
+    // RVA   : 0x781FD0   Offset: 0x780DD0   Length: 0x4FA
     public void Refresh()
     {
         uint uVar1;
@@ -34,29 +34,29 @@ public class AISettingTabController
         uint32 uStack_c;
         lVar5 = Component.get_transform(this,0);
         if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null) {
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.sourceHero != null) &&
              ((((lVar5 = this.sourceHero.targetHero, lVar5 != null &&
                 (lVar5 = *(int64 *)(lVar5 + 80)) != null) &&
                (lVar5 = *(int64 *)(lVar5 + 16)) != null) &&
-              (lVar5 = FUN_1817da060(lVar5,this.AISettingID,DAT_181db29a8)) != null)))
+              (lVar5 = FUN_181707040(lVar5,this.AISettingID,DAT_181e93a30)) != null)))
           {
             uVar7 = Int32.ToString(lVar5 + 16,0);
             LTLocalization.SetText(uVar6,uVar7,0);
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null) {
-              plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-              lVar5 = GameController.lockObj;
+              plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181e79538);
+              lVar5 = GameController.ChangeAllAreaStateIDs;
               if (lVar5 != null) {
                 lVar5 = *(int64 *)(lVar5 + 56);
                 if ((((this.sourceHero != null) &&
                      (lVar9 = this.sourceHero.targetHero) != null) &&
                     (lVar9 = *(int64 *)(lVar9 + 80)) != null) &&
                    ((lVar9 = *(int64 *)(lVar9 + 16), lVar9 != null &&
-                    (lVar9 = FUN_1817da060(lVar9,this.AISettingID,DAT_181db29a8),
+                    (lVar9 = FUN_181707040(lVar9,this.AISettingID,DAT_181e93a30),
                     lVar9 != null)))) {
                   uVar1 = *(uint32 *)(lVar9 + 16);
-                  lVar9 = GameController.lockObj;
+                  lVar9 = GameController.ChangeAllAreaStateIDs;
                   if ((lVar9 != null) && (lVar9 = *(int64 *)(lVar9 + 56)) != null) {
                     uVar4 = Mathf.Clamp(uVar1,0,*(int *)(lVar9 + 24) + -1,0);
                     if (lVar5 != null) {
@@ -71,9 +71,9 @@ public class AISettingTabController
                         uStack_10 = *(uint32 *)(lVar5 + 32);
                         uStack_c = *(uint32 *)(lVar5 + 36);
                         (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_18,*(uint64 *)(*plVar8 + 0x2b0));
-                        lVar5 = *(int64 *)(*(int64 *)(DAT_181da9df8 + 184) + 32);
+                        lVar5 = *(int64 *)(*(int64 *)(DAT_181e89f38 + 184) + 32);
                         if (lVar5 != null) {
-                          cVar3 = FUN_18182a9b0(lVar5,this.AISettingID,DAT_181d7ad20);
+                          cVar3 = FUN_18176a2d0(lVar5,this.AISettingID,DAT_181e5ca50);
                           lVar5 = this.focusButton;
                           if (!cVar3) {
                             if (lVar5 != null) {
@@ -87,15 +87,15 @@ public class AISettingTabController
                                  (lVar5 = this.sourceHero.targetHero) != null
                                  ) && (lVar5 = *(int64 *)(lVar5 + 80)) != null) &&
                                ((lVar5 = *(int64 *)(lVar5 + 16), lVar5 != null &&
-                                (lVar5 = FUN_1817da060(lVar5,this.AISettingID,DAT_181db29a8
+                                (lVar5 = FUN_181707040(lVar5,this.AISettingID,DAT_181e93a30
                                                       ), lVar5 != null)))) {
                               iVar2 = *(int *)(lVar5 + 20);
                               if ((this.focusButton != null) &&
                                  (lVar5 = GameObject.get_transform(this.focusButton,0),
                                  lVar5 != null)) {
-                                plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181d94478);
+                                plVar8 = (int64 *)Component.GetComponent(lVar5,DAT_181e777b8);
                                 if (iVar2 < 0) {
-                                  puVar10 = (uint32 *)FUN_1810d3b80();
+                                  puVar10 = (uint32 *)FUN_180f24d00();
                                 }
                                 else {
                                   puVar10 = (uint32 *)Color.get_yellow(&local_18,0);
@@ -109,7 +109,7 @@ public class AISettingTabController
                                             (plVar8,&local_18,*(uint64 *)(*plVar8 + 0x2b0));
                                   if (this.focusButton != null) {
                                     lVar5 = GameObject.GetComponent
-                                                      (this.focusButton,DAT_181d73448);
+                                                      (this.focusButton,DAT_181e56510);
                                     if (((this.sourceHero != null) &&
                                         (lVar9 = this.sourceHero.targetHero,
                                         lVar9 != null)) &&
@@ -136,8 +136,8 @@ public class AISettingTabController
         }
     }
 
-    // Token : 0x6000A19
-    // RVA   : 0xA1A300   Offset: 0xA19700   Length: 0x158
+    // Token : 0x60009F8
+    // RVA   : 0x781D30   Offset: 0x780B30   Length: 0x158
     public void OnClick()
     {
         bool cVar1;
@@ -147,21 +147,21 @@ public class AISettingTabController
              (lVar3 = this.sourceHero.targetHero) != null) &&
             (lVar3 = *(int64 *)(lVar3 + 80)) != null) &&
            (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
-          lVar3 = FUN_1817da060(lVar3,this.AISettingID,DAT_181db29a8);
-          cVar1 = FUN_1804625f0(0x130,0);
+          lVar3 = FUN_181707040(lVar3,this.AISettingID,DAT_181e93a30);
+          cVar1 = FUN_1818448a0(0x130,0);
           uVar2 = 0;
           if (!cVar1) {
-            cVar1 = FUN_1804625f0(0x132,0);
+            cVar1 = FUN_1818448a0(0x132,0);
             if (lVar3 != null) {
               if ((!cVar1) && (*(int *)(lVar3 + 16) != 5)) {
                 uVar2 = Mathf.Clamp(*(int *)(lVar3 + 16) + 1,0,5);
               }
-        LAB_180a1a3ec:
+        LAB_180781e1c:
               *(uint32 *)(lVar3 + 16) = uVar2;
               AISettingTabController.Refresh(this,0);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
               plVar5 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
                 plVar5 = plVar4;
               }
               NGUITools.PlaySound(plVar5,0);
@@ -170,13 +170,13 @@ public class AISettingTabController
           }
           else if (lVar3 != null) {
             uVar2 = 5;
-            goto LAB_180a1a3ec;
+            goto LAB_180781e1c;
           }
         }
     }
 
-    // Token : 0x6000A1A
-    // RVA   : 0xA1A460   Offset: 0xA19860   Length: 0x133
+    // Token : 0x60009F9
+    // RVA   : 0x781E90   Offset: 0x780C90   Length: 0x133
     public void OnRightClick()
     {
         bool cVar1;
@@ -186,8 +186,8 @@ public class AISettingTabController
              (lVar3 = this.sourceHero.targetHero) != null) &&
             (lVar3 = *(int64 *)(lVar3 + 80)) != null) &&
            (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
-          lVar3 = FUN_1817da060(lVar3,this.AISettingID,DAT_181db29a8);
-          cVar1 = FUN_1804625f0(0x130,0);
+          lVar3 = FUN_181707040(lVar3,this.AISettingID,DAT_181e93a30);
+          cVar1 = FUN_1818448a0(0x130,0);
           if (lVar3 != null) {
             uVar2 = 0;
             if (!cVar1) {
@@ -197,7 +197,7 @@ public class AISettingTabController
             AISettingTabController.Refresh(this,0);
             plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
             plVar5 = (int64 *)0;
-            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
               plVar5 = plVar4;
             }
             NGUITools.PlaySound(plVar5,0);
@@ -206,11 +206,11 @@ public class AISettingTabController
         }
     }
 
-    // Token : 0x6000A1B
-    // RVA   : 0xA19DE0   Offset: 0xA191E0   Length: 0x515
+    // Token : 0x60009FA
+    // RVA   : 0x781810   Offset: 0x780610   Length: 0x515
     public void FocusButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d94018 + 184);
+        var pStatics = *(int64*)(DAT_181e743e8 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -221,7 +221,7 @@ public class AISettingTabController
         uint local_28;
         uint local_24;
         uint[] local_20 = new uint[2];
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar2 != null) {
           plVar6 = (int64 *)(lVar2 + 0x1e0);
           *plVar6 = this;
@@ -230,54 +230,54 @@ public class AISettingTabController
                (lVar2 = this.sourceHero.targetHero) != null) &&
               (lVar2 = *(int64 *)(lVar2 + 80)) != null) &&
              (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
-            lVar2 = FUN_1817da060(lVar2,this.AISettingID,DAT_181db29a8);
+            lVar2 = FUN_181707040(lVar2,this.AISettingID,DAT_181e93a30);
             if (lVar2 != null) {
               *(uint32 *)(lVar2 + 20) = 0xffffffff;
               AISettingTabController.Refresh(this,0);
               iVar1 = this.AISettingID;
               if (iVar1 == 1) {
-                lVar2 = **(int64 **)(DAT_181db7530 + 184);
-                lVar3 = il2cpp_internal(DAT_181d94e68);
-                FUN_181330100(lVar3,DAT_181d957a0);
+                lVar2 = **(int64 **)(DAT_181e977e8 + 184);
+                lVar3 = il2cpp_internal(DAT_181e74e38);
+                FUN_1810f3480(lVar3,DAT_181e77ae0);
                 if ((this.sourceHero != null) &&
                    (lVar5 = this.sourceHero.targetHero) != null) {
                   local_res18[0] = *(uint32 *)(lVar5 + 88);
-                  uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+                  uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
                   if (lVar3 != null) {
-                    FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
-                    FUN_18181e6b0(lVar3,0,DAT_181d958a0);
+                    FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
+                    FUN_18175de30(lVar3,0,DAT_181e77be0);
                     local_res20[0] = 0xffffffff;
-                    uVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
-                    FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+                    uVar4 = il2cpp_value_box(DAT_181e60808,local_res20);
+                    FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
                     local_28 = 0xffffffff;
-                    uVar4 = il2cpp_value_box(DAT_181d80430,&local_28);
-                    FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+                    uVar4 = il2cpp_value_box(DAT_181e60808,&local_28);
+                    FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
                     local_24 = 0xffffffff;
-                    uVar4 = il2cpp_value_box(DAT_181d80430,&local_24);
-                    FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+                    uVar4 = il2cpp_value_box(DAT_181e60808,&local_24);
+                    FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
                     local_20[0] = 9;
-                    uVar4 = il2cpp_value_box(DAT_181d80430,local_20);
-                    FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
-                    lVar5 = FUN_18046c400(0);
+                    uVar4 = il2cpp_value_box(DAT_181e60808,local_20);
+                    FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
+                    lVar5 = FUN_180210a70(0);
                     if (lVar5 != null) {
                       uVar4 = Component.get_gameObject(lVar5,0);
                       if (lVar2 != null) {
                         ChooseController.ShowChoosePanel(lVar2,0,lVar3,uVar4,"AIStudyFightSkillFocusChoosen",0,0,0,0,0);
-                        goto LAB_180a1a288;
+                        goto LAB_180781cb8;
                       }
                     }
                   }
                 }
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (iVar1 == 2) {
-                lVar2 = FUN_18046c400(0);
+                lVar2 = FUN_180210a70(0);
                 if (lVar2 == null) throw; // [null/range check failed]
                 PlotController.AIStudyLivingSkillFocusChoose(lVar2,0);
               }
               else if (iVar1 == 3) {
-                lVar2 = FUN_18046c400(0);
+                lVar2 = FUN_180210a70(0);
                 if (lVar2 == null) throw; // [null/range check failed]
                 PlotController.AICollectResourceFocusChoose(lVar2,0);
               }
@@ -289,10 +289,10 @@ public class AISettingTabController
                 if (*pStatics == 0) throw; // [null/range check failed]
                 QuickTravelUIController.ShowQuickTravelUI(*pStatics,5);
               }
-        LAB_180a1a288:
+        LAB_180781cb8:
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
               plVar7 = (int64 *)0;
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181e8f4a0)) {
                 plVar7 = plVar6;
               }
               NGUITools.PlaySound(plVar7,0);
@@ -302,8 +302,8 @@ public class AISettingTabController
         }
     }
 
-    // Token : 0x6000A1C
-    // RVA   : 0xA1AAA0   Offset: 0xA19EA0   Length: 0x7F
+    // Token : 0x60009FB
+    // RVA   : 0x7824D0   Offset: 0x7812D0   Length: 0x7F
     public void SetFocus(int focusID)
     {
         long lVar1;
@@ -311,7 +311,7 @@ public class AISettingTabController
              (lVar1 = this.sourceHero.targetHero) != null) &&
             (lVar1 = *(int64 *)(lVar1 + 80)) != null) &&
            (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
-          lVar1 = FUN_1817da060(lVar1,this.AISettingID,DAT_181db29a8);
+          lVar1 = FUN_181707040(lVar1,this.AISettingID,DAT_181e93a30);
           if (lVar1 != null) {
             *(uint32 *)(lVar1 + 20) = focusID;
             AISettingTabController.Refresh(this,0);
@@ -320,11 +320,11 @@ public class AISettingTabController
         }
     }
 
-    // Token : 0x6000A1D
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60009FC
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

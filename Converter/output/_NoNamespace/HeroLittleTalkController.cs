@@ -1,54 +1,54 @@
 // ============================================================
 // Type  : HeroLittleTalkController
-// Token : 0x20002D0
+// Token : 0x20002D9
 // ============================================================
 
 public class HeroLittleTalkController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400173D
+    // Token: 0x4001792
     public GameObject heroLittleTalkPrefab;
 
-    // Token: 0x400173E
+    // Token: 0x4001793
     public GameObject heroLittleTalkPanel;
 
-    // Token: 0x400173F
+    // Token: 0x4001794
     public List<LittleTalkData> heroLittleTalkData;
 
-    // Token: 0x4001740
+    // Token: 0x4001795
     private GameObject newObj;
 
-    // Token: 0x4001741
+    // Token: 0x4001796
     private static HeroLittleTalkController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60017E2
-    // RVA   : 0xAF8220   Offset: 0xAF7620   Length: 0x36
+    // Token : 0x600185E
+    // RVA   : 0x89A1C0   Offset: 0x898FC0   Length: 0x36
     public static HeroLittleTalkController get_Instance()
     {
-        return **(uint64 **)(DAT_181d761e8 + 184);
+        return **(uint64 **)(DAT_181e55d90 + 184);
     }
 
-    // Token : 0x60017E3
-    // RVA   : 0xAF71E0   Offset: 0xAF65E0   Length: 0xD7
+    // Token : 0x600185F
+    // RVA   : 0x899180   Offset: 0x897F80   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181d761e8 + 184);
+        uVar3 = **(uint64 **)(DAT_181e55d90 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181d761e8 + 184);
+        puVar1 = *(uint64 **)(DAT_181e55d90 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60017E4
-    // RVA   : 0xAF73F0   Offset: 0xAF67F0   Length: 0x108
+    // Token : 0x6001860
+    // RVA   : 0x899390   Offset: 0x898190   Length: 0x108
     public GameObject HeroTalk(GameObject target, string talkText)
     {
         uint64
@@ -76,7 +76,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = 0.0 < *pfVar4;
-        LAB_180af78ba:
+        LAB_18089985a:
           param_7 = 1;
           if (!bVar10 && fVar1 != 0.0) {
             param_7 = 0;
@@ -88,7 +88,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = fVar1 < 0.0;
-          goto LAB_180af78ba;
+          goto LAB_18089985a;
         }
         cVar2 = Object.op_Equality(param_6,0,0);
         if (cVar2) {
@@ -101,7 +101,7 @@ public class HeroLittleTalkController
              (lVar3 = GameObject.get_transform(this.newObj,0)) == null) ||
             (lVar3 = Transform.Find(lVar3,"Back",0)) == null) ||
            (lVar3 = Transform.Find(lVar3,"Text",0)) == null) throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
+        uVar5 = Component.GetComponent(lVar3,DAT_181e79538);
         uVar6 = GlobalData.ReplaceSpeString(talkText,param_5,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < param_5) {
@@ -116,14 +116,14 @@ public class HeroLittleTalkController
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
         }
         if ((this.newObj != null) &&
-           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null) {
+           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null) {
           lVar3.Count = target;
           if ((this.newObj != null) &&
-             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null)
+             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null)
           {
             *(int *)(lVar3 + 44) = param_7;
             if ((this.newObj != null) &&
-               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
+               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null
                ) {
               lVar3.Areas = param_4;
               if (this.newObj != null) {
@@ -139,8 +139,8 @@ public class HeroLittleTalkController
                     local_50 = *(uint32 *)(puVar8 + 1);
                     local_58 = *puVar8;
                     uVar5 = ShortcutExtensions.DOScale(uVar5,&local_58,0x3e800000,0);
-                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc1128);
-                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
+                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181ea4b88);
+                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea59e0);
                     lVar3 = this.heroLittleTalkData;
                     if (lVar3 != null) {
                       lVar7 = 32;
@@ -148,7 +148,7 @@ public class HeroLittleTalkController
                         if (lVar3.Count <= (int)uVar9) {
                           var uVar5 = new LittleTalkData(target,0);
                           if (lVar3 != null) {
-                            FUN_18181e6b0(lVar3,uVar5,DAT_181d92d28);
+                            FUN_18175de30(lVar3,uVar5,DAT_181e74f70);
                             lVar3 = this.heroLittleTalkData;
                             if (lVar3 != null) {
                               uVar9 = lVar3.Count;
@@ -158,7 +158,7 @@ public class HeroLittleTalkController
                               lVar3 = *(int64 *)
                                        (lVar3._items + 24 + (int64)(int)uVar9 * 8);
                               if ((lVar3 = lVar3?.Count) != null) {
-                                FUN_18181e6b0(lVar3,this.newObj,DAT_181d893b0);
+                                FUN_18175de30(lVar3,this.newObj,DAT_181e6b6f8);
                                 return this.newObj;
                               }
                             }
@@ -176,14 +176,14 @@ public class HeroLittleTalkController
                         lVar3 = this.heroLittleTalkData;
                         if (cVar2) {
                           if (((lVar3 != null) &&
-                              (lVar3 = FUN_180002f80(lVar3,uVar9,DAT_181d92f28)) != null) &&
+                              (lVar3 = FUN_1800024b0(lVar3,uVar9,DAT_181e75170)) != null) &&
                              (lVar3.Count != null)) {
-                            FUN_18181e6b0(lVar3.Count,this.newObj,
-                                          DAT_181d893b0);
+                            FUN_18175de30(lVar3.Count,this.newObj,
+                                          DAT_181e6b6f8);
                             if (this.heroLittleTalkData != null) {
-                              uVar5 = FUN_180002f80(this.heroLittleTalkData,uVar9,DAT_181d92f28);
+                              uVar5 = FUN_1800024b0(this.heroLittleTalkData,uVar9,DAT_181e75170);
                               uVar5 = HeroLittleTalkController.SortHeroLittleTalk(this,uVar5,0);
-                              FUN_180d8c8f0(this,uVar5,0);
+                              FUN_180ae80b0(this,uVar5,0);
                               return this.newObj;
                             }
                           }
@@ -201,8 +201,8 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017E5
-    // RVA   : 0xAF7500   Offset: 0xAF6900   Length: 0x110
+    // Token : 0x6001861
+    // RVA   : 0x8994A0   Offset: 0x8982A0   Length: 0x110
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime)
     {
         uint64
@@ -230,7 +230,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = 0.0 < *pfVar4;
-        LAB_180af78ba:
+        LAB_18089985a:
           param_7 = 1;
           if (!bVar10 && fVar1 != 0.0) {
             param_7 = 0;
@@ -242,7 +242,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = fVar1 < 0.0;
-          goto LAB_180af78ba;
+          goto LAB_18089985a;
         }
         cVar2 = Object.op_Equality(param_6,0,0);
         if (cVar2) {
@@ -255,7 +255,7 @@ public class HeroLittleTalkController
              (lVar3 = GameObject.get_transform(this.newObj,0)) == null) ||
             (lVar3 = Transform.Find(lVar3,"Back",0)) == null) ||
            (lVar3 = Transform.Find(lVar3,"Text",0)) == null) throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
+        uVar5 = Component.GetComponent(lVar3,DAT_181e79538);
         uVar6 = GlobalData.ReplaceSpeString(talkText,param_5,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < param_5) {
@@ -270,14 +270,14 @@ public class HeroLittleTalkController
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
         }
         if ((this.newObj != null) &&
-           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null) {
+           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null) {
           lVar3.Count = target;
           if ((this.newObj != null) &&
-             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null)
+             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null)
           {
             *(int *)(lVar3 + 44) = param_7;
             if ((this.newObj != null) &&
-               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
+               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null
                ) {
               lVar3.Areas = lifeTime;
               if (this.newObj != null) {
@@ -293,8 +293,8 @@ public class HeroLittleTalkController
                     local_50 = *(uint32 *)(puVar8 + 1);
                     local_58 = *puVar8;
                     uVar5 = ShortcutExtensions.DOScale(uVar5,&local_58,0x3e800000,0);
-                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc1128);
-                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
+                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181ea4b88);
+                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea59e0);
                     lVar3 = this.heroLittleTalkData;
                     if (lVar3 != null) {
                       lVar7 = 32;
@@ -302,7 +302,7 @@ public class HeroLittleTalkController
                         if (lVar3.Count <= (int)uVar9) {
                           var uVar5 = new LittleTalkData(target,0);
                           if (lVar3 != null) {
-                            FUN_18181e6b0(lVar3,uVar5,DAT_181d92d28);
+                            FUN_18175de30(lVar3,uVar5,DAT_181e74f70);
                             lVar3 = this.heroLittleTalkData;
                             if (lVar3 != null) {
                               uVar9 = lVar3.Count;
@@ -312,7 +312,7 @@ public class HeroLittleTalkController
                               lVar3 = *(int64 *)
                                        (lVar3._items + 24 + (int64)(int)uVar9 * 8);
                               if ((lVar3 = lVar3?.Count) != null) {
-                                FUN_18181e6b0(lVar3,this.newObj,DAT_181d893b0);
+                                FUN_18175de30(lVar3,this.newObj,DAT_181e6b6f8);
                                 return this.newObj;
                               }
                             }
@@ -330,14 +330,14 @@ public class HeroLittleTalkController
                         lVar3 = this.heroLittleTalkData;
                         if (cVar2) {
                           if (((lVar3 != null) &&
-                              (lVar3 = FUN_180002f80(lVar3,uVar9,DAT_181d92f28)) != null) &&
+                              (lVar3 = FUN_1800024b0(lVar3,uVar9,DAT_181e75170)) != null) &&
                              (lVar3.Count != null)) {
-                            FUN_18181e6b0(lVar3.Count,this.newObj,
-                                          DAT_181d893b0);
+                            FUN_18175de30(lVar3.Count,this.newObj,
+                                          DAT_181e6b6f8);
                             if (this.heroLittleTalkData != null) {
-                              uVar5 = FUN_180002f80(this.heroLittleTalkData,uVar9,DAT_181d92f28);
+                              uVar5 = FUN_1800024b0(this.heroLittleTalkData,uVar9,DAT_181e75170);
                               uVar5 = HeroLittleTalkController.SortHeroLittleTalk(this,uVar5,0);
-                              FUN_180d8c8f0(this,uVar5,0);
+                              FUN_180ae80b0(this,uVar5,0);
                               return this.newObj;
                             }
                           }
@@ -355,8 +355,8 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017E6
-    // RVA   : 0xAF7620   Offset: 0xAF6A20   Length: 0x11D
+    // Token : 0x6001862
+    // RVA   : 0x8995C0   Offset: 0x8983C0   Length: 0x11D
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime, GameObject parentObj, TalkTextPosType talkTextPosType)
     {
         uint64
@@ -384,7 +384,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = 0.0 < *pfVar4;
-        LAB_180af78ba:
+        LAB_18089985a:
           param_7 = 1;
           if (!bVar10 && fVar1 != 0.0) {
             param_7 = 0;
@@ -396,7 +396,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = fVar1 < 0.0;
-          goto LAB_180af78ba;
+          goto LAB_18089985a;
         }
         cVar2 = Object.op_Equality(talkTextPosType,0,0);
         if (cVar2) {
@@ -409,7 +409,7 @@ public class HeroLittleTalkController
              (lVar3 = GameObject.get_transform(this.newObj,0)) == null) ||
             (lVar3 = Transform.Find(lVar3,"Back",0)) == null) ||
            (lVar3 = Transform.Find(lVar3,"Text",0)) == null) throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
+        uVar5 = Component.GetComponent(lVar3,DAT_181e79538);
         uVar6 = GlobalData.ReplaceSpeString(talkText,parentObj,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < parentObj) {
@@ -424,14 +424,14 @@ public class HeroLittleTalkController
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
         }
         if ((this.newObj != null) &&
-           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null) {
+           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null) {
           lVar3.Count = target;
           if ((this.newObj != null) &&
-             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null)
+             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null)
           {
             *(int *)(lVar3 + 44) = param_7;
             if ((this.newObj != null) &&
-               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
+               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null
                ) {
               lVar3.Areas = lifeTime;
               if (this.newObj != null) {
@@ -447,8 +447,8 @@ public class HeroLittleTalkController
                     local_50 = *(uint32 *)(puVar8 + 1);
                     local_58 = *puVar8;
                     uVar5 = ShortcutExtensions.DOScale(uVar5,&local_58,0x3e800000,0);
-                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc1128);
-                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
+                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181ea4b88);
+                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea59e0);
                     lVar3 = this.heroLittleTalkData;
                     if (lVar3 != null) {
                       lVar7 = 32;
@@ -456,7 +456,7 @@ public class HeroLittleTalkController
                         if (lVar3.Count <= (int)uVar9) {
                           var uVar5 = new LittleTalkData(target,0);
                           if (lVar3 != null) {
-                            FUN_18181e6b0(lVar3,uVar5,DAT_181d92d28);
+                            FUN_18175de30(lVar3,uVar5,DAT_181e74f70);
                             lVar3 = this.heroLittleTalkData;
                             if (lVar3 != null) {
                               uVar9 = lVar3.Count;
@@ -466,7 +466,7 @@ public class HeroLittleTalkController
                               lVar3 = *(int64 *)
                                        (lVar3._items + 24 + (int64)(int)uVar9 * 8);
                               if ((lVar3 = lVar3?.Count) != null) {
-                                FUN_18181e6b0(lVar3,this.newObj,DAT_181d893b0);
+                                FUN_18175de30(lVar3,this.newObj,DAT_181e6b6f8);
                                 return this.newObj;
                               }
                             }
@@ -484,14 +484,14 @@ public class HeroLittleTalkController
                         lVar3 = this.heroLittleTalkData;
                         if (cVar2) {
                           if (((lVar3 != null) &&
-                              (lVar3 = FUN_180002f80(lVar3,uVar9,DAT_181d92f28)) != null) &&
+                              (lVar3 = FUN_1800024b0(lVar3,uVar9,DAT_181e75170)) != null) &&
                              (lVar3.Count != null)) {
-                            FUN_18181e6b0(lVar3.Count,this.newObj,
-                                          DAT_181d893b0);
+                            FUN_18175de30(lVar3.Count,this.newObj,
+                                          DAT_181e6b6f8);
                             if (this.heroLittleTalkData != null) {
-                              uVar5 = FUN_180002f80(this.heroLittleTalkData,uVar9,DAT_181d92f28);
+                              uVar5 = FUN_1800024b0(this.heroLittleTalkData,uVar9,DAT_181e75170);
                               uVar5 = HeroLittleTalkController.SortHeroLittleTalk(this,uVar5,0);
-                              FUN_180d8c8f0(this,uVar5,0);
+                              FUN_180ae80b0(this,uVar5,0);
                               return this.newObj;
                             }
                           }
@@ -509,8 +509,8 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017E7
-    // RVA   : 0xAF73C0   Offset: 0xAF67C0   Length: 0x2A
+    // Token : 0x6001863
+    // RVA   : 0x899360   Offset: 0x898160   Length: 0x2A
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime, int sourceHeroID)
     {
         uint64
@@ -538,7 +538,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = 0.0 < *pfVar4;
-        LAB_180af78ba:
+        LAB_18089985a:
           param_7 = 1;
           if (!bVar10 && fVar1 != 0.0) {
             param_7 = 0;
@@ -550,7 +550,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = fVar1 < 0.0;
-          goto LAB_180af78ba;
+          goto LAB_18089985a;
         }
         cVar2 = Object.op_Equality(param_6,0,0);
         if (cVar2) {
@@ -563,7 +563,7 @@ public class HeroLittleTalkController
              (lVar3 = GameObject.get_transform(this.newObj,0)) == null) ||
             (lVar3 = Transform.Find(lVar3,"Back",0)) == null) ||
            (lVar3 = Transform.Find(lVar3,"Text",0)) == null) throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
+        uVar5 = Component.GetComponent(lVar3,DAT_181e79538);
         uVar6 = GlobalData.ReplaceSpeString(talkText,sourceHeroID,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < sourceHeroID) {
@@ -578,14 +578,14 @@ public class HeroLittleTalkController
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
         }
         if ((this.newObj != null) &&
-           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null) {
+           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null) {
           lVar3.Count = target;
           if ((this.newObj != null) &&
-             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null)
+             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null)
           {
             *(int *)(lVar3 + 44) = param_7;
             if ((this.newObj != null) &&
-               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
+               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null
                ) {
               lVar3.Areas = lifeTime;
               if (this.newObj != null) {
@@ -601,8 +601,8 @@ public class HeroLittleTalkController
                     local_50 = *(uint32 *)(puVar8 + 1);
                     local_58 = *puVar8;
                     uVar5 = ShortcutExtensions.DOScale(uVar5,&local_58,0x3e800000,0);
-                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc1128);
-                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
+                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181ea4b88);
+                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea59e0);
                     lVar3 = this.heroLittleTalkData;
                     if (lVar3 != null) {
                       lVar7 = 32;
@@ -610,7 +610,7 @@ public class HeroLittleTalkController
                         if (lVar3.Count <= (int)uVar9) {
                           var uVar5 = new LittleTalkData(target,0);
                           if (lVar3 != null) {
-                            FUN_18181e6b0(lVar3,uVar5,DAT_181d92d28);
+                            FUN_18175de30(lVar3,uVar5,DAT_181e74f70);
                             lVar3 = this.heroLittleTalkData;
                             if (lVar3 != null) {
                               uVar9 = lVar3.Count;
@@ -620,7 +620,7 @@ public class HeroLittleTalkController
                               lVar3 = *(int64 *)
                                        (lVar3._items + 24 + (int64)(int)uVar9 * 8);
                               if ((lVar3 = lVar3?.Count) != null) {
-                                FUN_18181e6b0(lVar3,this.newObj,DAT_181d893b0);
+                                FUN_18175de30(lVar3,this.newObj,DAT_181e6b6f8);
                                 return this.newObj;
                               }
                             }
@@ -638,14 +638,14 @@ public class HeroLittleTalkController
                         lVar3 = this.heroLittleTalkData;
                         if (cVar2) {
                           if (((lVar3 != null) &&
-                              (lVar3 = FUN_180002f80(lVar3,uVar9,DAT_181d92f28)) != null) &&
+                              (lVar3 = FUN_1800024b0(lVar3,uVar9,DAT_181e75170)) != null) &&
                              (lVar3.Count != null)) {
-                            FUN_18181e6b0(lVar3.Count,this.newObj,
-                                          DAT_181d893b0);
+                            FUN_18175de30(lVar3.Count,this.newObj,
+                                          DAT_181e6b6f8);
                             if (this.heroLittleTalkData != null) {
-                              uVar5 = FUN_180002f80(this.heroLittleTalkData,uVar9,DAT_181d92f28);
+                              uVar5 = FUN_1800024b0(this.heroLittleTalkData,uVar9,DAT_181e75170);
                               uVar5 = HeroLittleTalkController.SortHeroLittleTalk(this,uVar5,0);
-                              FUN_180d8c8f0(this,uVar5,0);
+                              FUN_180ae80b0(this,uVar5,0);
                               return this.newObj;
                             }
                           }
@@ -663,8 +663,8 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017E8
-    // RVA   : 0xAF7740   Offset: 0xAF6B40   Length: 0x6E6
+    // Token : 0x6001864
+    // RVA   : 0x8996E0   Offset: 0x8984E0   Length: 0x6E6
     public GameObject HeroTalk(GameObject target, string talkText, float lifeTime, int sourceHeroID, GameObject parentObj, TalkTextPosType talkTextPosType)
     {
         uint64
@@ -692,7 +692,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = 0.0 < *pfVar4;
-        LAB_180af78ba:
+        LAB_18089985a:
           talkTextPosType = 1;
           if (!bVar10 && fVar1 != 0.0) {
             talkTextPosType = 0;
@@ -704,7 +704,7 @@ public class HeroLittleTalkController
           pfVar4 = (float *)Transform.get_position(&local_58,lVar3,0);
           fVar1 = *pfVar4;
           bVar10 = fVar1 < 0.0;
-          goto LAB_180af78ba;
+          goto LAB_18089985a;
         }
         cVar2 = Object.op_Equality(parentObj,0,0);
         if (cVar2) {
@@ -717,7 +717,7 @@ public class HeroLittleTalkController
              (lVar3 = GameObject.get_transform(this.newObj,0)) == null) ||
             (lVar3 = Transform.Find(lVar3,"Back",0)) == null) ||
            (lVar3 = Transform.Find(lVar3,"Text",0)) == null) throw; // [null/range check failed]
-        uVar5 = Component.GetComponent(lVar3,DAT_181d96178);
+        uVar5 = Component.GetComponent(lVar3,DAT_181e79538);
         uVar6 = GlobalData.ReplaceSpeString(talkText,sourceHeroID,0);
         LTLocalization.SetText(uVar5,uVar6,0);
         if (-1 < sourceHeroID) {
@@ -732,14 +732,14 @@ public class HeroLittleTalkController
           HeroData.PlayHeroSound(lVar3,uVar5,0x3f800000,0xbf800000,0);
         }
         if ((this.newObj != null) &&
-           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null) {
+           (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null) {
           lVar3.Count = target;
           if ((this.newObj != null) &&
-             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null)
+             (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null)
           {
             *(int *)(lVar3 + 44) = talkTextPosType;
             if ((this.newObj != null) &&
-               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181d71c60)) != null
+               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e54d28)) != null
                ) {
               lVar3.Areas = lifeTime;
               if (this.newObj != null) {
@@ -755,8 +755,8 @@ public class HeroLittleTalkController
                     local_50 = *(uint32 *)(puVar8 + 1);
                     local_58 = *puVar8;
                     uVar5 = ShortcutExtensions.DOScale(uVar5,&local_58,0x3e800000,0);
-                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181dc1128);
-                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
+                    uVar5 = TweenSettingsExtensions.SetEase(uVar5,8,DAT_181ea4b88);
+                    TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea59e0);
                     lVar3 = this.heroLittleTalkData;
                     if (lVar3 != null) {
                       lVar7 = 32;
@@ -764,7 +764,7 @@ public class HeroLittleTalkController
                         if (lVar3.Count <= (int)uVar9) {
                           var uVar5 = new LittleTalkData(target,0);
                           if (lVar3 != null) {
-                            FUN_18181e6b0(lVar3,uVar5,DAT_181d92d28);
+                            FUN_18175de30(lVar3,uVar5,DAT_181e74f70);
                             lVar3 = this.heroLittleTalkData;
                             if (lVar3 != null) {
                               uVar9 = lVar3.Count;
@@ -774,7 +774,7 @@ public class HeroLittleTalkController
                               lVar3 = *(int64 *)
                                        (lVar3._items + 24 + (int64)(int)uVar9 * 8);
                               if ((lVar3 = lVar3?.Count) != null) {
-                                FUN_18181e6b0(lVar3,this.newObj,DAT_181d893b0);
+                                FUN_18175de30(lVar3,this.newObj,DAT_181e6b6f8);
                                 return this.newObj;
                               }
                             }
@@ -792,14 +792,14 @@ public class HeroLittleTalkController
                         lVar3 = this.heroLittleTalkData;
                         if (cVar2) {
                           if (((lVar3 != null) &&
-                              (lVar3 = FUN_180002f80(lVar3,uVar9,DAT_181d92f28)) != null) &&
+                              (lVar3 = FUN_1800024b0(lVar3,uVar9,DAT_181e75170)) != null) &&
                              (lVar3.Count != null)) {
-                            FUN_18181e6b0(lVar3.Count,this.newObj,
-                                          DAT_181d893b0);
+                            FUN_18175de30(lVar3.Count,this.newObj,
+                                          DAT_181e6b6f8);
                             if (this.heroLittleTalkData != null) {
-                              uVar5 = FUN_180002f80(this.heroLittleTalkData,uVar9,DAT_181d92f28);
+                              uVar5 = FUN_1800024b0(this.heroLittleTalkData,uVar9,DAT_181e75170);
                               uVar5 = HeroLittleTalkController.SortHeroLittleTalk(this,uVar5,0);
-                              FUN_180d8c8f0(this,uVar5,0);
+                              FUN_180ae80b0(this,uVar5,0);
                               return this.newObj;
                             }
                           }
@@ -817,8 +817,8 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017E9
-    // RVA   : 0xAF81A0   Offset: 0xAF75A0   Length: 0x6C
+    // Token : 0x6001865
+    // RVA   : 0x89A140   Offset: 0x898F40   Length: 0x6C
     public IEnumerator SortHeroLittleTalk(LittleTalkData targetTalkData)
     {
         long lVar1;
@@ -829,8 +829,8 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017EA
-    // RVA   : 0xAF72C0   Offset: 0xAF66C0   Length: 0xFD
+    // Token : 0x6001866
+    // RVA   : 0x899260   Offset: 0x898060   Length: 0xFD
     public void ClearAll()
     {
         ulong uVar1;
@@ -843,7 +843,7 @@ public class HeroLittleTalkController
           lVar3 = 32;
           do {
             if (lVar2.Count <= (int)uVar4) {
-              FUN_1812fa020(lVar2,DAT_181d92da8);
+              FUN_18115d8f0(lVar2,DAT_181e74ff0);
               return;
             }
             if (lVar2 == null) break;
@@ -861,17 +861,17 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017EB
-    // RVA   : 0xAF8210   Offset: 0xAF7610   Length: 0x7
+    // Token : 0x6001867
+    // RVA   : 0x89A1B0   Offset: 0x898FB0   Length: 0x7
     private void Update()
     {
-        void FUN_180af8210(uint64 this)
+        void FUN_18089a1b0(uint64 this)
         {
         HeroLittleTalkController.RefreshHeroLittleTalkData(this,0);
     }
 
-    // Token : 0x60017EC
-    // RVA   : 0xAF7E30   Offset: 0xAF7230   Length: 0x36D
+    // Token : 0x6001868
+    // RVA   : 0x899DD0   Offset: 0x898BD0   Length: 0x36D
     public void RefreshHeroLittleTalkData()
     {
         bool cVar2;
@@ -896,52 +896,52 @@ public class HeroLittleTalkController
               cVar2 = Object.op_Equality(uVar4,0,0);
               if (!cVar2) {
                 if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                lVar3 = FUN_180002f80(this.heroLittleTalkData,uVar6,DAT_181d92f28);
+                lVar3 = FUN_1800024b0(this.heroLittleTalkData,uVar6,DAT_181e75170);
                 if ((lVar3 == null) || (lVar3.Count == null)) throw; // [null/range check failed]
-                if (*(int *)(lVar3.Count + 24) == 0) goto LAB_180af8109;
+                if (*(int *)(lVar3.Count + 24) == 0) goto LAB_18089a0a9;
                 bVar1 = false;
                 if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                lVar3 = FUN_180002f80();
+                lVar3 = FUN_1800024b0();
                 if ((lVar3 == null) || (lVar3.Count == null)) throw; // [null/range check failed]
                 iVar5 = *(int *)(lVar3.Count + 24) + -1;
                 if (-1 < iVar5) {
                   do {
                     if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                    lVar3 = FUN_180002f80(this.heroLittleTalkData,uVar6,DAT_181d92f28);
+                    lVar3 = FUN_1800024b0(this.heroLittleTalkData,uVar6,DAT_181e75170);
                     if ((lVar3 == null) || (lVar3.Count == null)) throw; // [null/range check failed]
-                    uVar4 = FUN_180002f80();
+                    uVar4 = FUN_1800024b0();
                     cVar2 = Object.op_Equality(uVar4,0,0);
                     if (cVar2) {
                       bVar1 = true;
                       if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                      lVar3 = FUN_180002f80(this.heroLittleTalkData,uVar6,DAT_181d92f28);
+                      lVar3 = FUN_1800024b0(this.heroLittleTalkData,uVar6,DAT_181e75170);
                       if ((lVar3 == null) || (lVar3.Count == null)) throw; // [null/range check failed]
-                      FUN_181823ba0();
+                      FUN_181763390();
                     }
                     iVar5 = iVar5 + -1;
                   } while (-1 < iVar5);
                   if (bVar1) {
                     if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                    lVar3 = FUN_180002f80();
+                    lVar3 = FUN_1800024b0();
                     if ((lVar3 == null) || (lVar3.Count == null)) throw; // [null/range check failed]
                     if (0 < *(int *)(lVar3.Count + 24)) {
                       if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                      uVar4 = FUN_180002f80(this.heroLittleTalkData,uVar6);
+                      uVar4 = FUN_1800024b0(this.heroLittleTalkData,uVar6);
                       HeroLittleTalkController.SortHeroLittleTalk(this,uVar4);
-                      FUN_180d8c8f0();
+                      FUN_180ae80b0();
                     }
                   }
                 }
               }
               else {
-        LAB_180af8109:
+        LAB_18089a0a9:
                 if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                lVar3 = FUN_180002f80(this.heroLittleTalkData,uVar6,DAT_181d92f28);
+                lVar3 = FUN_1800024b0(this.heroLittleTalkData,uVar6,DAT_181e75170);
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar4 = lVar3.Count;
                 GlobalData.DestroyAll(uVar4,0);
                 if (this.heroLittleTalkData == null) throw; // [null/range check failed]
-                FUN_181823ba0();
+                FUN_181763390();
               }
               lVar7 = lVar7 + -8;
               uVar6 = uVar6 - 1;
@@ -951,11 +951,11 @@ public class HeroLittleTalkController
         }
     }
 
-    // Token : 0x60017ED
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6001869
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

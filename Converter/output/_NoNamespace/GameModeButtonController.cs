@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : GameModeButtonController
-// Token : 0x20002A8
+// Token : 0x20002B1
 // ============================================================
 
 public class GameModeButtonController
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600169D
-    // RVA   : 0xA589F0   Offset: 0xA57DF0   Length: 0x67
+    // Token : 0x6001719
+    // RVA   : 0x6BA740   Offset: 0x6B9540   Length: 0x67
     public virtual void OnPointerEnter(PointerEventData eventData)
     {
         ulong uVar1;
         uVar1 = Component.get_transform(this,0);
         uVar1 = ShortcutExtensions.DOScale(uVar1,0x3f8ccccd,0x40a00000,0);
-        TweenSettingsExtensions.SetLoops(uVar1,0xffffffff,1,DAT_181dc14d8);
+        TweenSettingsExtensions.SetLoops(uVar1,0xffffffff,1,DAT_181ea4f40);
     }
 
-    // Token : 0x600169E
-    // RVA   : 0xA58A60   Offset: 0xA57E60   Length: 0xB0
+    // Token : 0x600171A
+    // RVA   : 0x6BA7B0   Offset: 0x6B95B0   Length: 0xB0
     public virtual void OnPointerExit(PointerEventData eventData)
     {
         ulong uVar1;
@@ -37,11 +37,11 @@ public class GameModeButtonController
         }
     }
 
-    // Token : 0x600169F
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600171B
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

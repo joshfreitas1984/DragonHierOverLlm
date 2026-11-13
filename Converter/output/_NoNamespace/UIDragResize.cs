@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : UIDragResize
-// Token : 0x2000042
+// Token : 0x2000041
 // ============================================================
 
 public class UIDragResize
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000156
+    // Token: 0x4000136
     public UIWidget target;
 
-    // Token: 0x4000157
+    // Token: 0x4000137
     public Pivot pivot;
 
-    // Token: 0x4000158
+    // Token: 0x4000138
     public int minWidth;
 
-    // Token: 0x4000159
+    // Token: 0x4000139
     public int minHeight;
 
-    // Token: 0x400015A
+    // Token: 0x400013A
     public int maxWidth;
 
-    // Token: 0x400015B
+    // Token: 0x400013B
     public int maxHeight;
 
-    // Token: 0x400015C
+    // Token: 0x400013C
     public bool updateAnchors;
 
-    // Token: 0x400015D
+    // Token: 0x400013D
     private Plane mPlane;
 
-    // Token: 0x400015E
+    // Token: 0x400013E
     private Vector3 mRayPos;
 
-    // Token: 0x400015F
+    // Token: 0x400013F
     private Vector3 mLocalPos;
 
-    // Token: 0x4000160
+    // Token: 0x4000140
     private int mWidth;
 
-    // Token: 0x4000161
+    // Token: 0x4000141
     private int mHeight;
 
-    // Token: 0x4000162
+    // Token: 0x4000142
     private bool mDragging;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600013C
-    // RVA   : 0x12B6FA0   Offset: 0x12B63A0   Length: 0x254
+    // Token : 0x6000123
+    // RVA   : 0x113DD30   Offset: 0x113CB30   Length: 0x254
     private void OnDragStart()
     {
         uint uVar1;
@@ -79,13 +79,13 @@ public class UIDragResize
            (lVar4 = (**(code **)(*plVar2 + 0x1e8))(plVar2,*(uint64 *)(*plVar2 + 0x1f0))) == null)
         {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         uVar1 = *(uint32 *)(lVar4 + 24);
         if (uVar1 == 0) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         local_88 = *(uint64 *)(lVar4 + 32);
         uStack_80 = *(uint32 *)(lVar4 + 40);
@@ -95,7 +95,7 @@ public class UIDragResize
           if (uVar1 < 4) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           local_68 = *(uint64 *)(lVar4 + 68);
           local_60 = *(uint32 *)(lVar4 + 76);
@@ -135,13 +135,13 @@ public class UIDragResize
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         uVar6 = il2cpp_internal();
     }
 
-    // Token : 0x600013D
-    // RVA   : 0x12B7200   Offset: 0x12B6600   Length: 0x3E1
+    // Token : 0x6000124
+    // RVA   : 0x113DF90   Offset: 0x113CD90   Length: 0x3E1
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -244,33 +244,33 @@ public class UIDragResize
                 }
               }
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
           }
         }
     }
 
-    // Token : 0x600013E
-    // RVA   : 0x12B6F90   Offset: 0x12B6390   Length: 0x5
+    // Token : 0x6000125
+    // RVA   : 0x113DD20   Offset: 0x113CB20   Length: 0x5
     private void OnDragEnd()
     {
-        void FUN_1812b6f90(int64 this)
+        void FUN_18113dd20(int64 this)
         {
         this.mDragging = 0;
     }
 
-    // Token : 0x600013F
-    // RVA   : 0x12B75F0   Offset: 0x12B69F0   Length: 0x2A
+    // Token : 0x6000126
+    // RVA   : 0x113E380   Offset: 0x113D180   Length: 0x2A
     public void /*ctor*/()
     {
-        void FUN_1812b75f0(int64 this)
+        void FUN_18113e380(int64 this)
         {
         this.pivot = 8;
         this.minWidth = 100;
         this.minHeight = 100;
         this.maxWidth = 100000;
         this.maxHeight = 100000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

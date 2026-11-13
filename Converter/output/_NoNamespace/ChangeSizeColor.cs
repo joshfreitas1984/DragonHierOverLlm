@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : ChangeSizeColor
-// Token : 0x20003CC
+// Token : 0x20003D9
 // ============================================================
 
 public class ChangeSizeColor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E76
+    // Token: 0x4001F08
     public Gradient color;
 
-    // Token: 0x4001E77
+    // Token: 0x4001F09
     public Color m_changeColor;
 
-    // Token: 0x4001E78
+    // Token: 0x4001F0A
     public GameObject m_obj;
 
-    // Token: 0x4001E79
+    // Token: 0x4001F0B
     private Renderer[] m_rnds;
 
-    // Token: 0x4001E7A
+    // Token: 0x4001F0C
     private float color_Value;
 
-    // Token: 0x4001E7B
+    // Token: 0x4001F0D
     private bool isChangeColor;
 
-    // Token: 0x4001E7C
+    // Token: 0x4001F0E
     public Image m_ColorHandler;
 
-    // Token: 0x4001E7D
+    // Token: 0x4001F0F
     public Text m_intensityfactor;
 
-    // Token: 0x4001E7E
+    // Token: 0x4001F10
     private float intensity;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002412
-    // RVA   : 0x993C60   Offset: 0x993060   Length: 0x35A
+    // Token : 0x60024BC
+    // RVA   : 0x6F2530   Offset: 0x6F1330   Length: 0x35A
     private void Update()
     {
         long lVar2;
@@ -80,7 +80,7 @@ public class ChangeSizeColor
               if (cVar7) {
                 if (this.m_obj != null) {
                   uVar9 = GameObject.GetComponentsInChildren
-                                    (this.m_obj,1,DAT_181d75758);
+                                    (this.m_obj,1,DAT_181e58820);
                   this.m_rnds = uVar9;
                   lVar2 = this.m_rnds;
                   uVar13 = 0;
@@ -92,21 +92,21 @@ public class ChangeSizeColor
                       if (*(uint32 *)(lVar2 + 24) <= uVar13) {
                         uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar9,0);
+                        FUN_1801e02d0(uVar9,0);
                       }
                       uVar11 = 0;
                       lVar3 = lVar2[uVar13];
                       while( true ) {
-                        if ((lVar3 == null) || (lVar10 = FUN_180d9dc90(lVar3)) == null)
+                        if ((lVar3 == null) || (lVar10 = FUN_180af9560(lVar3)) == null)
                         throw; // [null/range check failed]
                         if (*(int *)(lVar10 + 24) <= (int)uVar11) break;
-                        lVar10 = FUN_180d9dc90(lVar3,0);
+                        lVar10 = FUN_180af9560(lVar3,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         lVar12 = (int64)(int)uVar11;
                         if (*(uint32 *)(lVar10 + 24) <= uVar11) {
                           uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar9,0);
+                          FUN_1801e02d0(uVar9,0);
                         }
                         local_58 = this.m_changeColor;
                         uStack_54 = *(uint32 *)(this + 36);
@@ -114,19 +114,19 @@ public class ChangeSizeColor
                         uStack_4c = *(uint32 *)(this + 44);
                         lVar10 = *(int64 *)(lVar10 + 32 + lVar12 * 8);
                         puVar8 = (uint32 *)
-                                 FUN_1810d3e90(local_48,&local_58,this.intensity,0);
+                                 FUN_180f25010(local_48,&local_58,this.intensity,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         local_58 = *puVar8;
                         uStack_54 = puVar8[1];
                         uStack_50 = puVar8[2];
                         uStack_4c = puVar8[3];
                         Material.SetColor(lVar10,"_TintColor",&local_58);
-                        lVar10 = FUN_180d9dc90(lVar3,0);
+                        lVar10 = FUN_180af9560(lVar3,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         if (*(uint32 *)(lVar10 + 24) <= uVar11) {
                           uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar9,0);
+                          FUN_1801e02d0(uVar9,0);
                         }
                         local_58 = this.m_changeColor;
                         uStack_54 = *(uint32 *)(this + 36);
@@ -134,19 +134,19 @@ public class ChangeSizeColor
                         uStack_4c = *(uint32 *)(this + 44);
                         lVar10 = *(int64 *)(lVar10 + 32 + lVar12 * 8);
                         puVar8 = (uint32 *)
-                                 FUN_1810d3e90(local_38,&local_58,this.intensity,0);
+                                 FUN_180f25010(local_38,&local_58,this.intensity,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         local_58 = *puVar8;
                         uStack_54 = puVar8[1];
                         uStack_50 = puVar8[2];
                         uStack_4c = puVar8[3];
                         Material.SetColor(lVar10,"_Color",&local_58);
-                        lVar10 = FUN_180d9dc90(lVar3,0);
+                        lVar10 = FUN_180af9560(lVar3,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         if (*(uint32 *)(lVar10 + 24) <= uVar11) {
                           uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar9,0);
+                          FUN_1801e02d0(uVar9,0);
                         }
                         local_58 = this.m_changeColor;
                         uStack_54 = *(uint32 *)(this + 36);
@@ -154,7 +154,7 @@ public class ChangeSizeColor
                         uStack_4c = *(uint32 *)(this + 44);
                         lVar10 = *(int64 *)(lVar10 + 32 + lVar12 * 8);
                         puVar8 = (uint32 *)
-                                 FUN_1810d3e90(local_28,&local_58,this.intensity,0);
+                                 FUN_180f25010(local_28,&local_58,this.intensity,0);
                         if (lVar10 == null) throw; // [null/range check failed]
                         local_58 = *puVar8;
                         uStack_54 = puVar8[1];
@@ -175,33 +175,33 @@ public class ChangeSizeColor
         }
     }
 
-    // Token : 0x6002413
-    // RVA   : 0x993BC0   Offset: 0x992FC0   Length: 0x6
+    // Token : 0x60024BD
+    // RVA   : 0x6F2490   Offset: 0x6F1290   Length: 0x6
     public void ChangeEffectColor(float value)
     {
         this.color_Value = value;
     }
 
-    // Token : 0x6002414
-    // RVA   : 0x993BE0   Offset: 0x992FE0   Length: 0x4
+    // Token : 0x60024BE
+    // RVA   : 0x6F24B0   Offset: 0x6F12B0   Length: 0x4
     public void CheckIsColorChange(bool value)
     {
-        void FUN_180993be0(int64 this,uint8 value)
+        void FUN_1806f24b0(int64 this,uint8 value)
         {
         this.isChangeColor = value;
     }
 
-    // Token : 0x6002415
-    // RVA   : 0x993BD0   Offset: 0x992FD0   Length: 0xD
+    // Token : 0x60024BF
+    // RVA   : 0x6F24A0   Offset: 0x6F12A0   Length: 0xD
     public void CheckColorState()
     {
-        void FUN_180993bd0(int64 this)
+        void FUN_1806f24a0(int64 this)
         {
         this.isChangeColor = !this.isChangeColor;
     }
 
-    // Token : 0x6002416
-    // RVA   : 0x993BF0   Offset: 0x992FF0   Length: 0x6A
+    // Token : 0x60024C0
+    // RVA   : 0x6F24C0   Offset: 0x6F12C0   Length: 0x6A
     public void GetIntensityFactor()
     {
         ulong uVar2;
@@ -222,14 +222,14 @@ public class ChangeSizeColor
         }
     }
 
-    // Token : 0x6002417
-    // RVA   : 0x993FC0   Offset: 0x9933C0   Length: 0xE
+    // Token : 0x60024C1
+    // RVA   : 0x6F2890   Offset: 0x6F1690   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180993fc0(int64 this)
+        void FUN_1806f2890(int64 this)
         {
         this.intensity = 0x40000000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

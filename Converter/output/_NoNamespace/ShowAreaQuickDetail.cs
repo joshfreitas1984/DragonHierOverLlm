@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ShowAreaQuickDetail
-// Token : 0x2000352
+// Token : 0x200035F
 // ============================================================
 
 public class ShowAreaQuickDetail
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B6D
+    // Token: 0x4001BEB
     public AreaData areaData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002101
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60021A9
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

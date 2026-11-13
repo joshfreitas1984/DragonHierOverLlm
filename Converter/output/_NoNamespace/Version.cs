@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : Version
-// Token : 0x20001C5
+// Token : 0x20001C7
 // ============================================================
 
 public class Version
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C4D
+    // Token: 0x4000C5F
     public int value__;
 
-    // Token: 0x4000C4E
+    // Token: 0x4000C60
     public const Version SteamVersion;
 
-    // Token: 0x4000C4F
+    // Token: 0x4000C61
     public const Version WeGameVersion;
 
-    // Token: 0x4000C50
+    // Token: 0x4000C62
     public const Version CheckVersion;
 
-    // Token: 0x4000C51
+    // Token: 0x4000C63
     public const Version StandaloneVersion;
 
-    // Token: 0x4000C52
+    // Token: 0x4000C64
     public const Version SimpleCheckVersion;
 
 }

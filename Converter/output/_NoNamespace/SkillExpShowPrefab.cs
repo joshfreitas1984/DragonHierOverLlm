@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : SkillExpShowPrefab
-// Token : 0x200035A
+// Token : 0x2000367
 // ============================================================
 
 public class SkillExpShowPrefab
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B96
+    // Token: 0x4001C14
     public static float minSpeed;
 
-    // Token: 0x4001B97
+    // Token: 0x4001C15
     public static float maxTime;
 
-    // Token: 0x4001B98
+    // Token: 0x4001C16
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001B99
+    // Token: 0x4001C17
     public int originLv;
 
-    // Token: 0x4001B9A
+    // Token: 0x4001C18
     public int expType;
 
-    // Token: 0x4001B9B
+    // Token: 0x4001C19
     public float totalExp;
 
-    // Token: 0x4001B9C
+    // Token: 0x4001C1A
     public float changeExpSpeed;
 
-    // Token: 0x4001B9D
+    // Token: 0x4001C1B
     private bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002122
-    // RVA   : 0x985310   Offset: 0x984710   Length: 0x27A
+    // Token : 0x60021CA
+    // RVA   : 0x6ACF30   Offset: 0x6ABD30   Length: 0x27A
     private void Update()
     {
         int iVar1;
@@ -50,11 +50,11 @@ public class SkillExpShowPrefab
         if (this.totalExp <= 0.0) {
           return;
         }
-        lVar3 = Component.GetComponent(this,DAT_181d93378);
+        lVar3 = Component.GetComponent(this,DAT_181e766c0);
         if (lVar3 != null) {
           cVar2 = AudioSource.get_isPlaying(lVar3,0);
           if (!cVar2) {
-            lVar3 = Component.GetComponent(this,DAT_181d93378);
+            lVar3 = Component.GetComponent(this,DAT_181e766c0);
             if (lVar3 == null) throw; // [null/range check failed]
             AudioSource.Play(lVar3,0);
           }
@@ -70,14 +70,14 @@ public class SkillExpShowPrefab
           if (this.targetSkill != null) {
             iVar1 = this.targetSkill.lv;
             if (this.expType == null) {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
                  (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null)
               throw; // [null/range check failed]
               HeroData.AddSkillBookExp(lVar3,fVar6,this.targetSkill,0,0);
             }
             else {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
                  (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null)
               throw; // [null/range check failed]
@@ -85,14 +85,14 @@ public class SkillExpShowPrefab
             }
             if (this.targetSkill != null) {
               if (iVar1 < this.targetSkill.lv) {
-                lVar3 = FUN_18046c5c0(0);
+                lVar3 = FUN_180210c30(0);
                 uVar4 = Component.get_gameObject(this,0);
                 if (lVar3 == null) throw; // [null/range check failed]
                 SpeShowController.ShowSkillLevelUpParticle(lVar3,uVar4,this.targetSkill,0)
                 ;
               }
               if (this.totalExp <= 0.0) {
-                lVar3 = Component.GetComponent(this,DAT_181d93378);
+                lVar3 = Component.GetComponent(this,DAT_181e766c0);
                 if (lVar3 == null) throw; // [null/range check failed]
                 AudioSource.Stop(lVar3,0);
               }
@@ -103,8 +103,8 @@ public class SkillExpShowPrefab
         }
     }
 
-    // Token : 0x6002123
-    // RVA   : 0x984BF0   Offset: 0x983FF0   Length: 0x713
+    // Token : 0x60021CB
+    // RVA   : 0x6AC810   Offset: 0x6AB610   Length: 0x713
     private void RefreshUI()
     {
         float fVar1;
@@ -121,7 +121,7 @@ public class SkillExpShowPrefab
         local_res20[0] = 0;
         lVar3 = Component.get_transform(this,0);
         if ((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"Lv",0)) != null) {
-          uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
+          uVar4 = Component.GetComponent(lVar3,DAT_181e79538);
           if (this.targetSkill != null) {
             uVar2 = this.targetSkill.lv;
             uVar5 = GlobalData.GetNumText(uVar2,0);
@@ -132,7 +132,7 @@ public class SkillExpShowPrefab
                 lVar3 = Component.get_transform(this,0);
                 if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"BookExpBar",0)) == null) ||
                    (lVar3 = Transform.Find(lVar3,"Exp",0)) == null) throw; // [null/range check failed]
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
+                uVar4 = Component.GetComponent(lVar3,DAT_181e79538);
                 if (this.targetSkill == null) throw; // [null/range check failed]
                 local_res18[0] = (int)this.targetSkill.bookExp;
                 uVar5 = Int32.ToString(local_res18,0);
@@ -144,7 +144,7 @@ public class SkillExpShowPrefab
                 lVar3 = Component.get_transform(this,0);
                 if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"BookExpBar",0)) == null) ||
                    (lVar3 = Transform.Find(lVar3,"Bar",0)) == null) throw; // [null/range check failed]
-                lVar7 = Component.GetComponent(lVar3,DAT_181d94478);
+                lVar7 = Component.GetComponent(lVar3,DAT_181e777b8);
                 lVar3 = this.targetSkill;
                 if (lVar3 == null) throw; // [null/range check failed]
                 fVar1 = lVar3.bookExp;
@@ -154,7 +154,7 @@ public class SkillExpShowPrefab
                 lVar3 = Component.get_transform(this,0);
                 if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"FightExpBar",0)) == null) ||
                    (lVar3 = Transform.Find(lVar3,"Exp",0)) == null) throw; // [null/range check failed]
-                uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
+                uVar4 = Component.GetComponent(lVar3,DAT_181e79538);
                 if (this.targetSkill == null) throw; // [null/range check failed]
                 local_res18[0] = (int)this.targetSkill.fightExp;
                 uVar5 = Int32.ToString(local_res18,0);
@@ -166,7 +166,7 @@ public class SkillExpShowPrefab
                 lVar3 = Component.get_transform(this,0);
                 if (((lVar3 == null) || (lVar3 = Transform.Find(lVar3,"FightExpBar",0)) == null) ||
                    (lVar3 = Transform.Find(lVar3,"Bar",0)) == null) throw; // [null/range check failed]
-                lVar7 = Component.GetComponent(lVar3,DAT_181d94478);
+                lVar7 = Component.GetComponent(lVar3,DAT_181e777b8);
                 lVar3 = this.targetSkill;
                 if (lVar3 == null) throw; // [null/range check failed]
                 fVar1 = lVar3.fightExp;
@@ -200,12 +200,12 @@ public class SkillExpShowPrefab
                       lVar3 = Component.get_transform(this,0);
                       if ((((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"BookExpBar",0)) != null)
                           && (lVar3 = Transform.Find(lVar3,"OriginBar",0)) != null) &&
-                         (lVar3 = Component.GetComponent(lVar3,DAT_181d94478)) != null) {
+                         (lVar3 = Component.GetComponent(lVar3,DAT_181e777b8)) != null) {
                         Image.set_fillAmount(lVar3,0,0);
                         lVar3 = Component.get_transform(this,0);
                         if (((lVar3 != null) && (lVar3 = Transform.Find(lVar3,"FightExpBar",0)) != null)
                            && ((lVar3 = Transform.Find(lVar3,"OriginBar",0), lVar3 != null &&
-                               (lVar3 = Component.GetComponent(lVar3,DAT_181d94478)) != null))) {
+                               (lVar3 = Component.GetComponent(lVar3,DAT_181e777b8)) != null))) {
                           Image.set_fillAmount(lVar3,0,0);
                           return;
                         }
@@ -227,8 +227,8 @@ public class SkillExpShowPrefab
         }
     }
 
-    // Token : 0x6002124
-    // RVA   : 0x984790   Offset: 0x983B90   Length: 0x451
+    // Token : 0x60021CC
+    // RVA   : 0x6AC3B0   Offset: 0x6AB1B0   Length: 0x451
     public void Init()
     {
         bool cVar1;
@@ -243,7 +243,7 @@ public class SkillExpShowPrefab
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"Name",0);
           if (lVar2 != null) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
+            uVar3 = Component.GetComponent(lVar2,DAT_181e79538);
             if (this.targetSkill != null) {
               uVar4 = KungfuSkillLvData.Name(this.targetSkill,0,0);
               LTLocalization.SetText(uVar3,uVar4,0);
@@ -251,8 +251,8 @@ public class SkillExpShowPrefab
               if (lVar2 != null) {
                 lVar2 = Transform.Find(lVar2,"Icon",0);
                 if (lVar2 != null) {
-                  lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
-                  lVar5 = **(int64 **)(DAT_181dab4a8 + 184);
+                  lVar2 = Component.GetComponent(lVar2,DAT_181e777b8);
+                  lVar5 = **(int64 **)(DAT_181e8b8e8 + 184);
                   if (this.targetSkill != null) {
                     uVar3 = KungfuSkillLvData.GetSkillIcon(this.targetSkill,0);
                     if (lVar5 != null) {
@@ -265,7 +265,7 @@ public class SkillExpShowPrefab
                           if (lVar2 != null) {
                             lVar2 = Transform.Find(lVar2,"OriginBar",0);
                             if (lVar2 != null) {
-                              lVar5 = Component.GetComponent(lVar2,DAT_181d94478);
+                              lVar5 = Component.GetComponent(lVar2,DAT_181e777b8);
                               lVar2 = this.targetSkill;
                               if (lVar2 != null) {
                                 fVar8 = lVar2.bookExp;
@@ -278,30 +278,30 @@ public class SkillExpShowPrefab
                                     if (lVar2 != null) {
                                       lVar2 = Transform.Find(lVar2,"OriginBar",0);
                                       if (lVar2 != null) {
-                                        lVar5 = Component.GetComponent(lVar2,DAT_181d94478);
+                                        lVar5 = Component.GetComponent(lVar2,DAT_181e777b8);
                                         lVar2 = this.targetSkill;
                                         if (lVar2 != null) {
                                           fVar8 = lVar2.fightExp;
                                           fVar6 = (float)KungfuSkillLvData.SkillGetMaxExp(lVar2,1);
                                           if (lVar5 != null) {
                                             Image.set_fillAmount(lVar5,fVar8 / fVar6,0);
-                                            uVar7 = Mathf.Max(**(uint32 **)(DAT_181da30e8 + 184),
+                                            uVar7 = Mathf.Max(**(uint32 **)(DAT_181e83528 + 184),
                                                                this.totalExp /
                                                                (float)(*(uint32 **)
-                                                                        (DAT_181da30e8 + 184))[1],0);
+                                                                        (DAT_181e83528 + 184))[1],0);
                                             this.changeExpSpeed = uVar7;
                                             if (this.targetSkill != null) {
                                               this.originLv =
                                                    this.targetSkill.lv;
-                                              uVar3 = Component.GetComponent(this,DAT_181d93378);
+                                              uVar3 = Component.GetComponent(this,DAT_181e766c0);
                                               cVar1 = Object.op_Inequality(uVar3,0,0);
                                               if (cVar1) {
-                                                lVar2 = Component.GetComponent(this,DAT_181d93378);
+                                                lVar2 = Component.GetComponent(this,DAT_181e766c0);
                                                 if (lVar2 == null) throw; // [null/range check failed]
                                                 fVar8 = (float)AudioSource.get_volume(lVar2,0);
                                                 AudioSource.set_volume
                                                           (lVar2,fVar8 * *(float *)(*(int64 *)
-                                                                                     (DAT_181d72d50 + 184
+                                                                                     (DAT_181e528f8 + 184
                                                                                      ) + 16),0);
                                               }
                                               SkillExpShowPrefab.RefreshUI(this,0);
@@ -327,19 +327,19 @@ public class SkillExpShowPrefab
         }
     }
 
-    // Token : 0x6002125
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60021CD
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6002126
-    // RVA   : 0x985590   Offset: 0x984990   Length: 0x4E
+    // Token : 0x60021CE
+    // RVA   : 0x6AD1B0   Offset: 0x6ABFB0   Length: 0x4E
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181da30e8 + 184) = 0x42480000;
-        *(uint32 *)(*(int64 *)(DAT_181da30e8 + 184) + 4) = 0x40000000;
+        **(uint32 **)(DAT_181e83528 + 184) = 0x42480000;
+        *(uint32 *)(*(int64 *)(DAT_181e83528 + 184) + 4) = 0x40000000;
     }
 
 }

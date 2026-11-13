@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : CISAuthSDKController
-// Token : 0x20001B3
+// Token : 0x20001B5
 // ============================================================
 
 public class CISAuthSDKController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BCD
+    // Token: 0x4000BDE
     public bool loginFinished;
 
-    // Token: 0x4000BCE
+    // Token: 0x4000BDF
     public GameObject FCMSpeInfoTextPrefab;
 
-    // Token: 0x4000BCF
+    // Token: 0x4000BE0
     private static CISAuthSDKController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E63
-    // RVA   : 0xB82CC0   Offset: 0xB820C0   Length: 0x36
+    // Token : 0x6000E67
+    // RVA   : 0x93BF70   Offset: 0x93AD70   Length: 0x36
     public static CISAuthSDKController get_Instance()
     {
-        return **(uint64 **)(DAT_181db51a8 + 184);
+        return **(uint64 **)(DAT_181e95460 + 184);
     }
 
-    // Token : 0x6000E64
-    // RVA   : 0xB81B00   Offset: 0xB80F00   Length: 0x147
+    // Token : 0x6000E68
+    // RVA   : 0x93ADB0   Offset: 0x939BB0   Length: 0x147
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181db51a8 + 184);
+        uVar3 = **(uint64 **)(DAT_181e95460 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (cVar2) {
           cVar2 = GlobalData.IsCheckVersion(1,0);
           if (cVar2) {
-            puVar1 = *(uint64 **)(DAT_181db51a8 + 184);
+            puVar1 = *(uint64 **)(DAT_181e95460 + 184);
             *puVar1 = this;
             il2cpp_internal(puVar1,this);
             uVar3 = Component.get_gameObject(this,0);
@@ -46,11 +46,11 @@ public class CISAuthSDKController
         Object.Destroy(uVar3,0);
     }
 
-    // Token : 0x6000E65
-    // RVA   : 0xB82630   Offset: 0xB81A30   Length: 0x457
+    // Token : 0x6000E69
+    // RVA   : 0x93B8E0   Offset: 0x93A6E0   Length: 0x457
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181dc4d78 + 184);
+        var pStatics = *(int64*)(DAT_181ea5480 + 184);
         int iVar1;
         ulong uVar3;
         long lVar4;
@@ -59,7 +59,7 @@ public class CISAuthSDKController
         ulong uVar7;
         ulong uVar8;
         Debug.Log("CISAuthLite init",0);
-        uVar3 = DAT_181db50f0;
+        uVar3 = DAT_181e94bb0;
         plVar2 = (int64 *)Type.GetTypeFromHandle(uVar3,0);
         if (plVar2 == (int64 *)0) throw; // [null/range check failed]
         plVar2 = (int64 *)(**(code **)(*plVar2 + 0x2b8))(plVar2,*(uint64 *)(*plVar2 + 0x2c0));
@@ -68,57 +68,57 @@ public class CISAuthSDKController
         Debug.Log(uVar3,0);
         lVar4 = *(int64 *)(pStatics + 8);
         if (lVar4 == null) {
-          uVar3 = **(uint64 **)(DAT_181dc4d78 + 184);
-          lVar4 = new OnTooltipCB(uVar3,DAT_181d99650,DAT_181d983c0);
+          uVar3 = **(uint64 **)(DAT_181ea5480 + 184);
+          lVar4 = new OnTooltipCB(uVar3,DAT_181e7cd90,DAT_181e78c80);
           plVar2 = (int64 *)(pStatics + 8);
           *plVar2 = lVar4;
           il2cpp_internal(plVar2,lVar4);
         }
-        plVar2 = (int64 *)(*(int64 *)(DAT_181db5120 + 184) + 56);
+        plVar2 = (int64 *)(*(int64 *)(DAT_181e953d8 + 184) + 56);
         *plVar2 = lVar4;
         il2cpp_internal(plVar2,lVar4);
         iVar1 = Application.get_platform(0);
         if (iVar1 == 8) {
-        LAB_180b828fa:
+        LAB_18093bbaa:
           uVar3 = "1c38be24ce81431ab06699f8c8230dd0";
         }
         else {
           iVar1 = Application.get_platform(0);
           uVar3 = "11561f9df4f3414db4a40eec9258529a";
-          if (iVar1 == 11) goto LAB_180b828fa;
+          if (iVar1 == 11) goto LAB_18093bbaa;
         }
         iVar1 = Application.get_platform(0);
         if (iVar1 == 8) {
-        LAB_180b82920:
+        LAB_18093bbd0:
           uVar8 = "16648d47afc94b20811979495ff21763";
         }
         else {
           iVar1 = Application.get_platform(0);
           uVar8 = "a6e3c67025364481bd9daccd4ceb581b";
-          if (iVar1 == 11) goto LAB_180b82920;
+          if (iVar1 == 11) goto LAB_18093bbd0;
         }
         iVar1 = Application.get_platform(0);
         if (iVar1 == 8) {
-        LAB_180b82946:
+        LAB_18093bbf6:
           uVar7 = "zpp_m_songshen";
         }
         else {
           iVar1 = Application.get_platform(0);
           uVar7 = "zpp_pc_songshen";
-          if (iVar1 == 11) goto LAB_180b82946;
+          if (iVar1 == 11) goto LAB_18093bbf6;
         }
         uVar5 = String.Format("AppInfo: {0} - {1} - {2}",uVar3,uVar8,uVar7,0);
         Debug.Log(uVar5,0);
         CISAuthSDK.Init(uVar3,uVar8,uVar7,0);
-        lVar4 = il2cpp_internal(DAT_181dc4f10);
-        FUN_181004050(lVar4,0);
+        lVar4 = il2cpp_internal(DAT_181ea5618);
+        FUN_180df1e60(lVar4,0);
         if (lVar4 != null) {
           *(uint8 *)(lVar4 + 18) = 1;
           lVar6 = CISFCMAPI.get_Instance(0);
           if (lVar6 != null) {
             CISFCMAPI.Init(lVar6,lVar4,0);
             lVar4 = CISFCMAPI.get_Instance(0);
-            uVar3 = new OnTooltipCB(this,DAT_181d8e108,DAT_181d98940);
+            uVar3 = new OnTooltipCB(this,DAT_181e71448,DAT_181e79200);
             if (lVar4 != null) {
               CISFCMAPI.add_EventOnFCMStateChange(lVar4,uVar3,0);
               return;
@@ -127,16 +127,16 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E66
-    // RVA   : 0xB82B40   Offset: 0xB81F40   Length: 0x176
+    // Token : 0x6000E6A
+    // RVA   : 0x93BDF0   Offset: 0x93ABF0   Length: 0x176
     private void Update()
     {
         bool cVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
-        cVar1 = FUN_1804625f0(0x132,0);
-        if ((!cVar1) || (cVar1 = FUN_1804625b0(116), !cVar1)) {
+        cVar1 = FUN_1818448a0(0x132,0);
+        if ((!cVar1) || (cVar1 = FUN_181844860(116), !cVar1)) {
           return;
         }
         lVar3 = CISFCMAPI.get_Instance(0);
@@ -163,8 +163,8 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E67
-    // RVA   : 0xB81C50   Offset: 0xB81050   Length: 0x81
+    // Token : 0x6000E6B
+    // RVA   : 0x93AF00   Offset: 0x939D00   Length: 0x81
     public FCMStateResponse CheckFCMState(bool firstCheck)
     {
         long lVar1;
@@ -177,8 +177,8 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E68
-    // RVA   : 0xB81E20   Offset: 0xB81220   Length: 0x4A8
+    // Token : 0x6000E6C
+    // RVA   : 0x93B0D0   Offset: 0x939ED0   Length: 0x4A8
     public FCMStateResponse ManageFCMState(FCMStateResponse result, bool firstCheck)
     {
         int iVar1;
@@ -188,7 +188,7 @@ public class CISAuthSDKController
         ulong uVar6;
         lVar4 = CISFCMAPI.get_Instance(0);
         if ((lVar4 != null) && (lVar4 = CISFCMAPI.CheckState(lVar4,0)) != null) {
-          plVar5 = (int64 *)il2cpp_value_box(DAT_181dc0a48,(uint32 *)(lVar4 + 28));
+          plVar5 = (int64 *)il2cpp_value_box(DAT_181ea0f30,(uint32 *)(lVar4 + 28));
           if (plVar5 != (int64 *)0) {
             uVar6 = (**(code **)(*plVar5 + 0x168))(plVar5,*(uint64 *)(*plVar5 + 0x170));
             puVar7 = (uint32 *)il2cpp_object_unbox(plVar5);
@@ -259,7 +259,7 @@ public class CISAuthSDKController
                       if (((lVar4 != null) && (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
                          ((lVar4 = Transform.Find(lVar4,"GameStopBlack",0), lVar4 != null &&
                           ((lVar4 = Transform.Find(lVar4,"Text",0), lVar4 != null &&
-                           (plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d96178),
+                           (plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181e79538),
                            plVar5 != (int64 *)0)))))) {
                         (**(code **)(*plVar5 + 0x5e8))(plVar5,uVar6,*(uint64 *)(*plVar5 + 0x5f0));
                         return result;
@@ -275,8 +275,8 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E69
-    // RVA   : 0xB81CE0   Offset: 0xB810E0   Length: 0x13B
+    // Token : 0x6000E6D
+    // RVA   : 0x93AF90   Offset: 0x939D90   Length: 0x13B
     public GameObject FindFCMSpeInfoRoot()
     {
         bool cVar1;
@@ -291,7 +291,7 @@ public class CISAuthSDKController
         uVar3 = GameObject.FindGameObjectWithTag("UICanvas",0);
         plVar4 = (int64 *)Resources.Load("Prefabs/FCMSpeInfo",0);
         plVar6 = (int64 *)0;
-        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d72e60)) {
+        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e52a08)) {
           plVar6 = plVar4;
         }
         lVar2 = GlobalData.AddChild(uVar3,plVar6,0);
@@ -301,8 +301,8 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E6A
-    // RVA   : 0xB823F0   Offset: 0xB817F0   Length: 0x23A
+    // Token : 0x6000E6E
+    // RVA   : 0x93B6A0   Offset: 0x93A4A0   Length: 0x23A
     public void ShowSpeInfoText(string text)
     {
         ulong uVar1;
@@ -322,13 +322,13 @@ public class CISAuthSDKController
           lVar4 = GlobalData.AddChild(uVar2,uVar1,0);
           if (((lVar4 != null) && (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
              ((lVar4 = Transform.Find(lVar4,"Text",0), lVar4 != null &&
-              (plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d96178),
+              (plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181e79538),
               plVar5 != (int64 *)0)))) {
             (**(code **)(*plVar5 + 0x5e8))(plVar5,text,*(uint64 *)(*plVar5 + 0x5f0));
             lVar4 = CISAuthSDKController.FindFCMSpeInfoRoot(this,0);
             if ((((lVar4 != null) && (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
                 (lVar4 = Transform.Find(lVar4,"SpeInfoRoot",0)) != null) &&
-               (lVar4 = Component.GetComponent(lVar4,DAT_181d96978)) != null) {
+               (lVar4 = Component.GetComponent(lVar4,DAT_181e79d38)) != null) {
               UIGrid.set_repositionNow(lVar4,1,0);
               Debug.Log(text,0);
               return;
@@ -337,8 +337,8 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E6B
-    // RVA   : 0xB822F0   Offset: 0xB816F0   Length: 0x99
+    // Token : 0x6000E6F
+    // RVA   : 0x93B5A0   Offset: 0x93A3A0   Length: 0x99
     private void OnApplicationPause(bool pauseStatus)
     {
         long lVar1;
@@ -358,8 +358,8 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E6C
-    // RVA   : 0xB82390   Offset: 0xB81790   Length: 0x5D
+    // Token : 0x6000E70
+    // RVA   : 0x93B640   Offset: 0x93A440   Length: 0x5D
     private void OnApplicationQuit()
     {
         long lVar1;
@@ -370,15 +370,15 @@ public class CISAuthSDKController
         }
     }
 
-    // Token : 0x6000E6D
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000E71
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6000E6E
-    // RVA   : 0xB82A90   Offset: 0xB81E90   Length: 0xB0
+    // Token : 0x6000E72
+    // RVA   : 0x93BD40   Offset: 0x93AB40   Length: 0xB0
     private void <Start>b__6_1(FCMStateResponse r)
     {
         ulong uVar1;

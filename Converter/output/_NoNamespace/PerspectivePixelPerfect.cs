@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : PerspectivePixelPerfect
-// Token : 0x2000020
+// Token : 0x200001F
 // ============================================================
 
 public class PerspectivePixelPerfect
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000A2
+    // Token: 0x4000082
     public float bias;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000085
-    // RVA   : 0x46C8C0   Offset: 0x46BCC0   Length: 0xF9
+    // Token : 0x600006C
+    // RVA   : 0x210F40   Offset: 0x20FD40   Length: 0xF9
     private void Start()
     {
         long lVar1;
@@ -29,7 +29,7 @@ public class PerspectivePixelPerfect
           uVar4 = Camera.get_farClipPlane(lVar2,0);
           fVar5 = (float)Mathf.Lerp(uVar3,uVar4,this.bias,0);
           fVar6 = (float)Camera.get_fieldOfView(lVar2,0);
-          fVar6 = (float)FUN_1801f9980(fVar6 * 0.017453292 * 0.5);
+          fVar6 = (float)FUN_1801e7700(fVar6 * 0.017453292 * 0.5);
           if (lVar1 != null) {
             local_38 = 0;
             local_30 = fVar5;
@@ -42,14 +42,14 @@ public class PerspectivePixelPerfect
         }
     }
 
-    // Token : 0x6000086
-    // RVA   : 0x46C9C0   Offset: 0x46BDC0   Length: 0xE
+    // Token : 0x600006D
+    // RVA   : 0x211040   Offset: 0x20FE40   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_18046c9c0(int64 this)
+        void FUN_180211040(int64 this)
         {
         this.bias = 0x3a83126f;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

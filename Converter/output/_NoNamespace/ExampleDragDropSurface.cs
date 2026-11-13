@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ExampleDragDropSurface
-// Token : 0x2000019
+// Token : 0x2000018
 // ============================================================
 
 public class ExampleDragDropSurface
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400008C
+    // Token: 0x400006C
     public bool rotatePlacedObject;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600006D
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000054
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

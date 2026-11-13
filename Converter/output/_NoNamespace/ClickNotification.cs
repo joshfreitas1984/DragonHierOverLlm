@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : ClickNotification
-// Token : 0x20000DA
+// Token : 0x20000D9
 // ============================================================
 
 public class ClickNotification
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400059F
+    // Token: 0x400057F
     public int value__;
 
-    // Token: 0x40005A0
+    // Token: 0x4000580
     public const ClickNotification None;
 
-    // Token: 0x40005A1
+    // Token: 0x4000581
     public const ClickNotification Always;
 
-    // Token: 0x40005A2
+    // Token: 0x4000582
     public const ClickNotification BasedOnDelta;
 
 }

@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : UIButtonScale
-// Token : 0x2000037
+// Token : 0x2000036
 // ============================================================
 
 public class UIButtonScale
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000118
+    // Token: 0x40000F8
     public Transform tweenTarget;
 
-    // Token: 0x4000119
+    // Token: 0x40000F9
     public Vector3 hover;
 
-    // Token: 0x400011A
+    // Token: 0x40000FA
     public Vector3 pressed;
 
-    // Token: 0x400011B
+    // Token: 0x40000FB
     public float duration;
 
-    // Token: 0x400011C
+    // Token: 0x40000FC
     private Vector3 mScale;
 
-    // Token: 0x400011D
+    // Token: 0x40000FD
     private bool mStarted;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000F4
-    // RVA   : 0x1532400   Offset: 0x1531800   Length: 0xC4
+    // Token : 0x60000DB
+    // RVA   : 0x141E4C0   Offset: 0x141D2C0   Length: 0xC4
     private void Start()
     {
         bool cVar1;
@@ -42,7 +42,7 @@ public class UIButtonScale
           }
           if (this.tweenTarget == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           puVar3 = (uint64 *)Transform.get_localScale(local_18,this.tweenTarget,0);
           this.mScale = *puVar3;
@@ -50,8 +50,8 @@ public class UIButtonScale
         }
     }
 
-    // Token : 0x60000F5
-    // RVA   : 0x1532030   Offset: 0x1531430   Length: 0x7E
+    // Token : 0x60000DC
+    // RVA   : 0x141E0F0   Offset: 0x141CEF0   Length: 0x7E
     private void OnEnable()
     {
         ulong uVar1;
@@ -63,8 +63,8 @@ public class UIButtonScale
         }
     }
 
-    // Token : 0x60000F6
-    // RVA   : 0x1531F30   Offset: 0x1531330   Length: 0xFE
+    // Token : 0x60000DD
+    // RVA   : 0x141DFF0   Offset: 0x141CDF0   Length: 0xFE
     private void OnDisable()
     {
         ulong uVar1;
@@ -77,14 +77,14 @@ public class UIButtonScale
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (cVar2) {
             if (this.tweenTarget == null) {
-        LAB_181532029:
+        LAB_18141e0e9:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            lVar3 = Component.GetComponent(this.tweenTarget,DAT_181d96578);
+            lVar3 = Component.GetComponent(this.tweenTarget,DAT_181e79938);
             cVar2 = Object.op_Inequality(lVar3,0,0);
             if (cVar2) {
-              if (lVar3 == null) goto LAB_181532029;
+              if (lVar3 == null) goto LAB_18141e0e9;
               local_18 = this.mScale;
               local_10 = *(uint32 *)(this + 68);
               TweenScale.set_scale(lVar3,&local_18,0);
@@ -94,8 +94,8 @@ public class UIButtonScale
         }
     }
 
-    // Token : 0x60000F7
-    // RVA   : 0x15321B0   Offset: 0x15315B0   Length: 0x1BB
+    // Token : 0x60000DE
+    // RVA   : 0x141E270   Offset: 0x141D070   Length: 0x1BB
     private void OnPress(bool isPressed)
     {
         uint uVar1;
@@ -126,7 +126,7 @@ public class UIButtonScale
             uVar4 = this.hover;
             fVar7 = (float)((uint64)uVar6 >> 32) * (float)((uint64)uVar4 >> 32);
             local_30 = *(float *)(this + 68) * *(float *)(this + 40);
-            goto LAB_181532277;
+            goto LAB_18141e337;
           }
           local_38 = this.mScale;
           local_30 = *(float *)(this + 68);
@@ -136,7 +136,7 @@ public class UIButtonScale
           uVar6 = this.mScale;
           fVar7 = (float)((uint64)uVar6 >> 32) * (float)((uint64)uVar4 >> 32);
           local_30 = *(float *)(this + 68) * *(float *)(this + 52);
-        LAB_181532277:
+        LAB_18141e337:
           local_38 = CONCAT44(fVar7,(float)uVar6 * (float)uVar4);
           local_20 = local_30;
         }
@@ -147,8 +147,8 @@ public class UIButtonScale
         }
     }
 
-    // Token : 0x60000F8
-    // RVA   : 0x15320B0   Offset: 0x15314B0   Length: 0xF3
+    // Token : 0x60000DF
+    // RVA   : 0x141E170   Offset: 0x141CF70   Length: 0xF3
     private void OnHover(bool isOver)
     {
         bool cVar1;
@@ -186,8 +186,8 @@ public class UIButtonScale
         }
     }
 
-    // Token : 0x60000F9
-    // RVA   : 0x1532370   Offset: 0x1531770   Length: 0x81
+    // Token : 0x60000E0
+    // RVA   : 0x141E430   Offset: 0x141D230   Length: 0x81
     private void OnSelect(bool isSelected)
     {
         bool cVar1;
@@ -204,8 +204,8 @@ public class UIButtonScale
         }
     }
 
-    // Token : 0x60000FA
-    // RVA   : 0x15324D0   Offset: 0x15318D0   Length: 0x5A
+    // Token : 0x60000E1
+    // RVA   : 0x141E590   Offset: 0x141D390   Length: 0x5A
     public void /*ctor*/()
     {
         this.hover = 0x3f8ccccd3f8ccccd;
@@ -213,7 +213,7 @@ public class UIButtonScale
         this.pressed = 0x3f8666663f866666;
         *(uint32 *)(this + 52) = 0x3f866666;
         this.duration = 0x3e4ccccd;
-        FUN_18044ef50(0x3f866666,0);
+        FUN_180ae8740(0x3f866666,0);
     }
 
 }

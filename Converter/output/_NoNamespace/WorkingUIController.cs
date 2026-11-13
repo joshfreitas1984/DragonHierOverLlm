@@ -1,95 +1,95 @@
 // ============================================================
 // Type  : WorkingUIController
-// Token : 0x20003B6
+// Token : 0x20003C3
 // ============================================================
 
 public class WorkingUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E09
+    // Token: 0x4001E9B
     public GameObject workingUI;
 
-    // Token: 0x4001E0A
+    // Token: 0x4001E9C
     public string workName;
 
-    // Token: 0x4001E0B
+    // Token: 0x4001E9D
     public string workingFuc;
 
-    // Token: 0x4001E0C
+    // Token: 0x4001E9E
     public string workingFucParam;
 
-    // Token: 0x4001E0D
+    // Token: 0x4001E9F
     public string finishFuc;
 
-    // Token: 0x4001E0E
+    // Token: 0x4001EA0
     public string finishFucParam;
 
-    // Token: 0x4001E0F
+    // Token: 0x4001EA1
     public bool working;
 
-    // Token: 0x4001E10
+    // Token: 0x4001EA2
     public int leftWorkingDay;
 
-    // Token: 0x4001E11
+    // Token: 0x4001EA3
     public int totalWorkingDay;
 
-    // Token: 0x4001E12
+    // Token: 0x4001EA4
     public float nextDayTime;
 
-    // Token: 0x4001E13
+    // Token: 0x4001EA5
     public float leftPauseTime;
 
-    // Token: 0x4001E14
+    // Token: 0x4001EA6
     private static float dayTime;
 
-    // Token: 0x4001E15
+    // Token: 0x4001EA7
     private static float pauseTime;
 
-    // Token: 0x4001E16
+    // Token: 0x4001EA8
     public float resourceNum;
 
-    // Token: 0x4001E17
+    // Token: 0x4001EA9
     public bool workFinished;
 
-    // Token: 0x4001E18
+    // Token: 0x4001EAA
     public bool noCancel;
 
-    // Token: 0x4001E19
+    // Token: 0x4001EAB
     public bool skipping;
 
-    // Token: 0x4001E1A
+    // Token: 0x4001EAC
     public GameObject skipButton;
 
-    // Token: 0x4001E1B
+    // Token: 0x4001EAD
     private GameObject newObj;
 
-    // Token: 0x4001E1C
+    // Token: 0x4001EAE
     private static WorkingUIController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023A3
-    // RVA   : 0x9CBAE0   Offset: 0x9CAEE0   Length: 0x58
+    // Token : 0x600244D
+    // RVA   : 0x7165F0   Offset: 0x7153F0   Length: 0x58
     public static WorkingUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181e962e8 + 184) + 8);
     }
 
-    // Token : 0x60023A4
-    // RVA   : 0x9CA3E0   Offset: 0x9C97E0   Length: 0x68
+    // Token : 0x600244E
+    // RVA   : 0x714EF0   Offset: 0x713CF0   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181e962e8 + 184) + 8);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60023A5
-    // RVA   : 0x9CB020   Offset: 0x9CA420   Length: 0xA6E
+    // Token : 0x600244F
+    // RVA   : 0x715B30   Offset: 0x714930   Length: 0xA6E
     private void Update()
     {
-        var pStatics_4468 = *(int64*)(DAT_181da4468 + 184);
-        var pStatics_5e00 = *(int64*)(DAT_181db5e00 + 184);
-        var pStatics_6ea8 = *(int64*)(DAT_181d76ea8 + 184);
+        var pStatics_48a8 = *(int64*)(DAT_181e848a8 + 184);
+        var pStatics_62e8 = *(int64*)(DAT_181e962e8 + 184);
+        var pStatics_69c8 = *(int64*)(DAT_181e569c8 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -107,45 +107,45 @@ public class WorkingUIController
         if (((this.workingUI != null) &&
             (lVar4 = GameObject.get_transform(this.workingUI,0)) != null) &&
            (lVar4 = Transform.Find(lVar4,"TimeLabel",0)) != null) {
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+          uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
           uVar6 = "完";
           if (this.leftWorkingDay != null) {
             local_res8[0] = this.leftWorkingDay;
-            uVar6 = il2cpp_value_box(DAT_181d80430,local_res8);
+            uVar6 = il2cpp_value_box(DAT_181e60808,local_res8);
             uVar6 = String.Format("{0}天",uVar6,0);
           }
           LTLocalization.SetText(uVar5,uVar6,0);
           if (((this.workingUI != null) &&
               (lVar4 = GameObject.get_transform(this.workingUI,0)) != null) &&
              (lVar4 = Transform.Find(lVar4,"WorkLabel",0)) != null) {
-            uVar6 = Component.GetComponent(lVar4,DAT_181d96178);
+            uVar6 = Component.GetComponent(lVar4,DAT_181e79538);
             uVar5 = String.Format("{0}中...",this.workName,0);
             LTLocalization.SetText(uVar6,uVar5,0);
             if (((this.workingUI != null) &&
                 (lVar4 = GameObject.get_transform(this.workingUI,0)) != null) &&
                (lVar4 = Transform.Find(lVar4,"ResourceLabel",0)) != null) {
-              uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+              uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
               uVar6 = "";
               if (0.0 < this.resourceNum) {
                 uVar6 = Single.ToString((float *)(this + 92),"f0",0);
                 uVar6 = String.Format("({0})",uVar6,0);
               }
               LTLocalization.SetText(uVar5,uVar6,0);
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
               if (lVar4 != null) {
                 if (*(char *)(lVar4 + 24) == false) {
-                  if ((*pStatics_4468 == 0) ||
-                     (lVar4 = *(int64 *)(*pStatics_4468 + 40)) == null)
+                  if ((*pStatics_48a8 == 0) ||
+                     (lVar4 = *(int64 *)(*pStatics_48a8 + 40)) == null)
                   throw; // [null/range check failed]
                   cVar2 = GameObject.get_activeSelf(lVar4,0);
                   if (!cVar2) {
-                    if (*pStatics_6ea8 == 0) throw; // [null/range check failed]
-                    cVar2 = HudController.HudPanelActive(*pStatics_6ea8,0);
+                    if (*pStatics_69c8 == 0) throw; // [null/range check failed]
+                    cVar2 = HudController.HudPanelActive(*pStatics_69c8,0);
                     if (!cVar2) {
                       if ((((this.workingUI != null) &&
                            (lVar4 = GameObject.get_transform(this.workingUI,0), lVar4 != null
                            )) && (lVar4 = Transform.Find(lVar4,"TimeAnim",0)) != null) &&
-                         (lVar4 = Component.GetComponent(lVar4,DAT_181d956f8)) != null) {
+                         (lVar4 = Component.GetComponent(lVar4,DAT_181e78a38)) != null) {
                         lVar4 = SkeletonGraphic.get_AnimationState(lVar4,0);
                         fVar12 = 1.0;
                         if (!this.skipping) {
@@ -180,12 +180,12 @@ public class WorkingUIController
                                  (lVar4 = GameObject.get_transform(this.workingUI,0),
                                  lVar4 != null)) &&
                                 (lVar4 = Transform.Find(lVar4,"TimeAnim",0)) != null) &&
-                               ((lVar4 = Component.GetComponent(lVar4,DAT_181d956f8), lVar4 != null &&
+                               ((lVar4 = Component.GetComponent(lVar4,DAT_181e78a38), lVar4 != null &&
                                 (lVar4 = SkeletonGraphic.get_AnimationState(lVar4,0)) != null))) {
                               AnimationState.AddAnimation(lVar4,0,"rotate",0,0,0);
                               plVar7 = (int64 *)Resources.Load("Sound/SoundEffect/打更",0);
                               plVar8 = (int64 *)0;
-                              if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf360)) {
+                              if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181e8f4a0)) {
                                 plVar8 = plVar7;
                               }
                               NGUITools.PlaySound(plVar8,0x3ecccccd,0);
@@ -200,12 +200,12 @@ public class WorkingUIController
                               cVar2 = String.op_Inequality
                                                 (this.finishFucParam,"",0);
                               if (!cVar2) {
-                                lVar4 = FUN_18046c400(0);
+                                lVar4 = FUN_180210a70(0);
                                 if (lVar4 == null) throw; // [null/range check failed]
                                 Component.SendMessage(lVar4,this.finishFuc,0);
                               }
                               else {
-                                lVar4 = FUN_18046c400(0);
+                                lVar4 = FUN_180210a70(0);
                                 if (lVar4 == null) throw; // [null/range check failed]
                                 Component.SendMessage
                                           (lVar4,this.finishFuc,
@@ -223,7 +223,7 @@ public class WorkingUIController
                             fVar10 = (float)RealTime.get_deltaTime(0);
                             fVar10 = fVar10 + fVar11;
                             this.nextDayTime = fVar10;
-                            fVar11 = **(float **)(DAT_181db5e00 + 184);
+                            fVar11 = **(float **)(DAT_181e962e8 + 184);
                             if (this.skipping) {
                               lVar4 = GameController.difficultyExtraPoint;
                               if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 16)) == null)
@@ -247,12 +247,12 @@ public class WorkingUIController
                                  (cVar2 = String.op_Inequality
                                                     (this.workingFucParam,"",0),
                                  !cVar2)) {
-                                lVar4 = FUN_18046c400(0);
+                                lVar4 = FUN_180210a70(0);
                                 if (lVar4 == null) throw; // [null/range check failed]
                                 Component.SendMessage(lVar4,this.workingFuc,0);
                               }
                               else {
-                                lVar4 = FUN_18046c400(0);
+                                lVar4 = FUN_180210a70(0);
                                 if (lVar4 == null) throw; // [null/range check failed]
                                 Component.SendMessage
                                           (lVar4,this.workingFuc,
@@ -265,15 +265,15 @@ public class WorkingUIController
                             this.leftWorkingDay = this.leftWorkingDay + -1;
                             this.totalWorkingDay = this.totalWorkingDay + 1;
                             this.nextDayTime = 0;
-                            lVar4 = FUN_18046c0a0(0);
+                            lVar4 = FUN_1802106e0(0);
                             if (lVar4 != null) {
                               GameController.ChangeHour(lVar4,0x41c00000,0);
                               if (this.leftWorkingDay < 1) {
-                                fVar12 = *(float *)(pStatics_5e00 + 4);
+                                fVar12 = *(float *)(pStatics_62e8 + 4);
                                 fVar12 = fVar12 + fVar12;
                               }
                               else {
-                                fVar12 = *(float *)(pStatics_5e00 + 4);
+                                fVar12 = *(float *)(pStatics_62e8 + 4);
                               }
                               this.leftPauseTime = fVar12;
                               return;
@@ -288,7 +288,7 @@ public class WorkingUIController
                 if ((((this.workingUI != null) &&
                      (lVar4 = GameObject.get_transform(this.workingUI,0)) != null) &&
                     (lVar4 = Transform.Find(lVar4,"TimeAnim",0)) != null) &&
-                   ((lVar4 = Component.GetComponent(lVar4,DAT_181d956f8), lVar4 != null &&
+                   ((lVar4 = Component.GetComponent(lVar4,DAT_181e78a38), lVar4 != null &&
                     (lVar4 = SkeletonGraphic.get_AnimationState(lVar4,0)) != null))) {
                   *(uint32 *)(lVar4 + 108) = 0;
                   return;
@@ -299,8 +299,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023A6
-    // RVA   : 0x9CAEA0   Offset: 0x9CA2A0   Length: 0x176
+    // Token : 0x6002450
+    // RVA   : 0x7159B0   Offset: 0x7147B0   Length: 0x176
     public void TryCancelWorking()
     {
         long lVar1;
@@ -308,13 +308,13 @@ public class WorkingUIController
         long lVar3;
         ulong uVar4;
         if ((0 < this.leftWorkingDay) && (!this.noCancel)) {
-          lVar1 = FUN_18046c400(0);
+          lVar1 = FUN_180210a70(0);
           uVar2 = String.Format("确定要中止{0}吗？",this.workName,0);
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           if (lVar3 != null) {
-            FUN_18181e6b0(lVar3,"中止;MiddleStopWork",DAT_181da3d70);
-            FUN_18181e6b0(lVar3,"取消;HideInteractUI",DAT_181da3d70);
+            FUN_18175de30(lVar3,"中止;MiddleStopWork",DAT_181e86370);
+            FUN_18175de30(lVar3,"取消;HideInteractUI",DAT_181e86370);
             uVar4 = new SinglePlotData(uVar2,lVar3,0);
             if (lVar1 != null) {
               PlotController.ChangePlot(lVar1,uVar4,0);
@@ -322,12 +322,12 @@ public class WorkingUIController
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x60023A7
-    // RVA   : 0x9CA970   Offset: 0x9C9D70   Length: 0x83
+    // Token : 0x6002451
+    // RVA   : 0x715480   Offset: 0x714280   Length: 0x83
     public void StartWorking(int dayNum, string callFuc)
     {
         void WorkingUIController.StartWorking
@@ -341,7 +341,7 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = callFuc;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181db5e00 + 184) + 4);
+          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181e962e8 + 184) + 4);
           this.workingFuc = param_4;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -354,7 +354,7 @@ public class WorkingUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"TimeAnim",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d956f8);
+                lVar1 = Component.GetComponent(lVar1,DAT_181e78a38);
                 if (lVar1 != null) {
                   lVar1 = SkeletonGraphic.get_AnimationState(lVar1,0);
                   if (lVar1 != null) {
@@ -368,8 +368,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023A8
-    // RVA   : 0x9CA8E0   Offset: 0x9C9CE0   Length: 0x87
+    // Token : 0x6002452
+    // RVA   : 0x7153F0   Offset: 0x7141F0   Length: 0x87
     public void StartWorking(int dayNum, string callFuc, string callFucParam, string finishCallFuc, string finishCallFucParam)
     {
         void WorkingUIController.StartWorking
@@ -383,7 +383,7 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = callFuc;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181db5e00 + 184) + 4);
+          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181e962e8 + 184) + 4);
           this.workingFuc = callFucParam;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -396,7 +396,7 @@ public class WorkingUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"TimeAnim",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d956f8);
+                lVar1 = Component.GetComponent(lVar1,DAT_181e78a38);
                 if (lVar1 != null) {
                   lVar1 = SkeletonGraphic.get_AnimationState(lVar1,0);
                   if (lVar1 != null) {
@@ -410,8 +410,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023A9
-    // RVA   : 0x9CAB70   Offset: 0x9C9F70   Length: 0x81
+    // Token : 0x6002453
+    // RVA   : 0x715680   Offset: 0x714480   Length: 0x81
     public void StartWorking(string _workName, int dayNum, string callFuc)
     {
         void WorkingUIController.StartWorking
@@ -425,7 +425,7 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = dayNum;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181db5e00 + 184) + 4);
+          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181e962e8 + 184) + 4);
           this.workingFuc = callFuc;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -438,7 +438,7 @@ public class WorkingUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"TimeAnim",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d956f8);
+                lVar1 = Component.GetComponent(lVar1,DAT_181e78a38);
                 if (lVar1 != null) {
                   lVar1 = SkeletonGraphic.get_AnimationState(lVar1,0);
                   if (lVar1 != null) {
@@ -452,8 +452,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023AA
-    // RVA   : 0x9CAA00   Offset: 0x9C9E00   Length: 0x16F
+    // Token : 0x6002454
+    // RVA   : 0x715510   Offset: 0x714310   Length: 0x16F
     public void StartWorking(List<string> paramList)
     {
         void WorkingUIController.StartWorking
@@ -467,7 +467,7 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = param_3;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181db5e00 + 184) + 4);
+          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181e962e8 + 184) + 4);
           this.workingFuc = param_4;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -480,7 +480,7 @@ public class WorkingUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"TimeAnim",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d956f8);
+                lVar1 = Component.GetComponent(lVar1,DAT_181e78a38);
                 if (lVar1 != null) {
                   lVar1 = SkeletonGraphic.get_AnimationState(lVar1,0);
                   if (lVar1 != null) {
@@ -494,8 +494,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023AB
-    // RVA   : 0x9CA760   Offset: 0x9C9B60   Length: 0x17E
+    // Token : 0x6002455
+    // RVA   : 0x715270   Offset: 0x714070   Length: 0x17E
     public void StartWorking(string _workName, int dayNum, string callFuc, string callFucParam, string finishCallFuc, string finishCallFucParam)
     {
         void WorkingUIController.StartWorking
@@ -509,7 +509,7 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = dayNum;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181db5e00 + 184) + 4);
+          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181e962e8 + 184) + 4);
           this.workingFuc = callFuc;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -522,7 +522,7 @@ public class WorkingUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"TimeAnim",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d956f8);
+                lVar1 = Component.GetComponent(lVar1,DAT_181e78a38);
                 if (lVar1 != null) {
                   lVar1 = SkeletonGraphic.get_AnimationState(lVar1,0);
                   if (lVar1 != null) {
@@ -536,8 +536,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023AC
-    // RVA   : 0x9CAC00   Offset: 0x9CA000   Length: 0x182
+    // Token : 0x6002456
+    // RVA   : 0x715710   Offset: 0x714510   Length: 0x182
     public void StartWorking(string _workName, int dayNum, string callFuc, string callFucParam, string finishCallFuc, string finishCallFucParam, bool _noCancel)
     {
         void WorkingUIController.StartWorking
@@ -551,7 +551,7 @@ public class WorkingUIController
           this.working = 1;
           this.leftWorkingDay = dayNum;
           this.totalWorkingDay = 0;
-          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181db5e00 + 184) + 4);
+          this.leftPauseTime = *(uint32 *)(*(int64 *)(DAT_181e962e8 + 184) + 4);
           this.workingFuc = callFuc;
           this.nextDayTime = 0;
           this.resourceNum = 0;
@@ -564,7 +564,7 @@ public class WorkingUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"TimeAnim",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d956f8);
+                lVar1 = Component.GetComponent(lVar1,DAT_181e78a38);
                 if (lVar1 != null) {
                   lVar1 = SkeletonGraphic.get_AnimationState(lVar1,0);
                   if (lVar1 != null) {
@@ -578,8 +578,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023AD
-    // RVA   : 0x9CAD90   Offset: 0x9CA190   Length: 0x105
+    // Token : 0x6002457
+    // RVA   : 0x7158A0   Offset: 0x7146A0   Length: 0x105
     public void StopWorking(bool finished)
     {
         bool cVar1;
@@ -589,12 +589,12 @@ public class WorkingUIController
         if (cVar1) {
           cVar1 = String.op_Inequality(this.finishFucParam,"",0);
           if (!cVar1) {
-            lVar2 = FUN_18046c400(0);
+            lVar2 = FUN_180210a70(0);
             if (lVar2 == null) throw; // [null/range check failed]
             Component.SendMessage(lVar2,this.finishFuc,0);
           }
           else {
-            lVar2 = FUN_18046c400(0);
+            lVar2 = FUN_180210a70(0);
             if (lVar2 == null) throw; // [null/range check failed]
             Component.SendMessage
                       (lVar2,this.finishFuc,this.finishFucParam,0);
@@ -607,8 +607,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023AE
-    // RVA   : 0x9CA0F0   Offset: 0x9C94F0   Length: 0x2EC
+    // Token : 0x6002458
+    // RVA   : 0x714C00   Offset: 0x713A00   Length: 0x2EC
     public void AddResourceNum(int resourceID, float num, float iconNum, WorkResultType workResultType)
     {
         void WorkingUIController.AddResourceNum
@@ -664,16 +664,16 @@ public class WorkingUIController
                (lVar6 = GameObject.get_transform(this.workingUI,0)) != null) {
               uVar2 = Transform.Find(lVar6,"ResourceLabel",0);
               uVar2 = ShortcutExtensions.DOScale(uVar2,0x3fc00000,0x3e19999a,0);
-              uVar2 = TweenSettingsExtensions.SetEase(uVar2,9,DAT_181dc1128);
-              TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181dc14d8);
+              uVar2 = TweenSettingsExtensions.SetEase(uVar2,9,DAT_181ea4b88);
+              TweenSettingsExtensions.SetLoops(uVar2,2,1,DAT_181ea4f40);
               return;
             }
           }
         }
     }
 
-    // Token : 0x60023AF
-    // RVA   : 0x9CA5D0   Offset: 0x9C99D0   Length: 0x181
+    // Token : 0x6002459
+    // RVA   : 0x7150E0   Offset: 0x713EE0   Length: 0x181
     public void SkipButtonClicked()
     {
         bool cVar1;
@@ -691,7 +691,7 @@ public class WorkingUIController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"Icon",0);
               if (lVar2 != null) {
-                plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
+                plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
                 puVar4 = (uint32 *)Color.get_red(&local_18,0);
                 if (plVar3 != (int64 *)0) {
                   local_18 = *puVar4;
@@ -710,13 +710,13 @@ public class WorkingUIController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"Icon",0);
             if (lVar2 != null) {
-              plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
-              lVar2 = *(int64 *)(DAT_181d73d40 + 184);
+              plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
+              lVar2 = *(int64 *)(DAT_181e538e8 + 184);
               if (plVar3 != (int64 *)0) {
-                local_18 = *(uint32 *)(lVar2 + 0x398);
-                uStack_14 = *(uint32 *)(lVar2 + 0x39c);
-                uStack_10 = *(uint32 *)(lVar2 + 0x3a0);
-                uStack_c = *(uint32 *)(lVar2 + 0x3a4);
+                local_18 = *(uint32 *)(lVar2 + 0x3a0);
+                uStack_14 = *(uint32 *)(lVar2 + 0x3a4);
+                uStack_10 = *(uint32 *)(lVar2 + 0x3a8);
+                uStack_c = *(uint32 *)(lVar2 + 0x3ac);
                 (**(code **)(*plVar3 + 0x2a8))(plVar3,&local_18,*(uint64 *)(*plVar3 + 0x2b0));
                 return;
               }
@@ -725,8 +725,8 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023B0
-    // RVA   : 0x9CA450   Offset: 0x9C9850   Length: 0x179
+    // Token : 0x600245A
+    // RVA   : 0x714F60   Offset: 0x713D60   Length: 0x179
     public void SetSkippingState(bool state)
     {
         long lVar1;
@@ -742,13 +742,13 @@ public class WorkingUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Icon",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
-                lVar1 = *(int64 *)(DAT_181d73d40 + 184);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
+                lVar1 = *(int64 *)(DAT_181e538e8 + 184);
                 if (plVar2 != (int64 *)0) {
-                  local_18 = *(uint32 *)(lVar1 + 0x398);
-                  uStack_14 = *(uint32 *)(lVar1 + 0x39c);
-                  uStack_10 = *(uint32 *)(lVar1 + 0x3a0);
-                  uStack_c = *(uint32 *)(lVar1 + 0x3a4);
+                  local_18 = *(uint32 *)(lVar1 + 0x3a0);
+                  uStack_14 = *(uint32 *)(lVar1 + 0x3a4);
+                  uStack_10 = *(uint32 *)(lVar1 + 0x3a8);
+                  uStack_c = *(uint32 *)(lVar1 + 0x3ac);
                   (**(code **)(*plVar2 + 0x2a8))(plVar2,&local_18,*(uint64 *)(*plVar2 + 0x2b0));
                   return;
                 }
@@ -761,7 +761,7 @@ public class WorkingUIController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"Icon",0);
             if (lVar1 != null) {
-              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
+              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
               puVar3 = (uint32 *)Color.get_red(&local_18,0);
               if (plVar2 != (int64 *)0) {
                 local_18 = *puVar3;
@@ -776,19 +776,19 @@ public class WorkingUIController
         }
     }
 
-    // Token : 0x60023B1
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600245B
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x60023B2
-    // RVA   : 0x9CBA90   Offset: 0x9CAE90   Length: 0x4E
+    // Token : 0x600245C
+    // RVA   : 0x7165A0   Offset: 0x7153A0   Length: 0x4E
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181db5e00 + 184) = 0x3f800000;
-        *(uint32 *)(*(int64 *)(DAT_181db5e00 + 184) + 4) = 0x3e800000;
+        **(uint32 **)(DAT_181e962e8 + 184) = 0x3f800000;
+        *(uint32 *)(*(int64 *)(DAT_181e962e8 + 184) + 4) = 0x3e800000;
     }
 
 }

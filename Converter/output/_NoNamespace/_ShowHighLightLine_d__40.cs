@@ -1,43 +1,43 @@
 // ============================================================
 // Type  : <ShowHighLightLine>d__40
-// Token : 0x2000386
+// Token : 0x2000393
 // ============================================================
 
 public class <ShowHighLightLine>d__40
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CDE
+    // Token: 0x4001D70
     private int <>1__state;
 
-    // Token: 0x4001CDF
+    // Token: 0x4001D71
     private object <>2__current;
 
-    // Token: 0x4001CE0
+    // Token: 0x4001D72
     public StudyInternalPointController <>4__this;
 
-    // Token: 0x4001CE1
+    // Token: 0x4001D73
     private int <i>5__2;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600227F
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6002329
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6002280
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x600232A
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6002281
-    // RVA   : 0x924FA0   Offset: 0x9243A0   Length: 0x5BB
+    // Token : 0x600232B
+    // RVA   : 0x612750   Offset: 0x611550   Length: 0x5BB
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181da8128 + 184);
+        var pStatics = *(int64*)(DAT_181e88568 + 184);
         ulong uVar1;
         float fVar2;
         float fVar3;
@@ -120,7 +120,7 @@ public class <ShowHighLightLine>d__40
                     }
                     if (lVar4 != null) {
                       uVar9 = StudyInternalSkillController.FinishStudyInternalSkill(lVar4,cVar5,0);
-                      FUN_180d8c8f0(lVar8,uVar9,0);
+                      FUN_180ae80b0(lVar8,uVar9,0);
                       return false;
                     }
                   }
@@ -180,27 +180,27 @@ public class <ShowHighLightLine>d__40
         }
     }
 
-    // Token : 0x6002282
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x600232C
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6002283
-    // RVA   : 0x925560   Offset: 0x924960   Length: 0x3E
+    // Token : 0x600232D
+    // RVA   : 0x612D10   Offset: 0x611B10   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4c40);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e989e0);
     }
 
-    // Token : 0x6002284
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x600232E
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

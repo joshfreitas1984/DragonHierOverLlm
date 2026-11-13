@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : SimpleDetailText
-// Token : 0x2000358
+// Token : 0x2000365
 // ============================================================
 
 public class SimpleDetailText
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B90
+    // Token: 0x4001C0E
     public string text;
 
-    // Token: 0x4001B91
+    // Token: 0x4001C0F
     public bool needChangeXPos;
 
-    // Token: 0x4001B92
+    // Token: 0x4001C10
     public int resizeHeightWidth;
 
-    // Token: 0x4001B93
+    // Token: 0x4001C11
     public bool forceUp;
 
-    // Token: 0x4001B94
+    // Token: 0x4001C12
     public bool needAutoTranslate;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600211D
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60021C5
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

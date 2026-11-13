@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : FillDirection
-// Token : 0x2000097
+// Token : 0x2000096
 // ============================================================
 
 public class FillDirection
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40003A7
+    // Token: 0x4000387
     public int value__;
 
-    // Token: 0x40003A8
+    // Token: 0x4000388
     public const FillDirection Horizontal;
 
-    // Token: 0x40003A9
+    // Token: 0x4000389
     public const FillDirection Vertical;
 
-    // Token: 0x40003AA
+    // Token: 0x400038A
     public const FillDirection Radial90;
 
-    // Token: 0x40003AB
+    // Token: 0x400038B
     public const FillDirection Radial180;
 
-    // Token: 0x40003AC
+    // Token: 0x400038C
     public const FillDirection Radial360;
 
 }

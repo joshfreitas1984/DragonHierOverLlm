@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : <AsyncWaitForPosition>d__14
-// Token : 0x2000488
+// Token : 0x2000495
 // ============================================================
 
 public class <AsyncWaitForPosition>d__14
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002155
+    // Token: 0x40021E8
     public int <>1__state;
 
-    // Token: 0x4002156
+    // Token: 0x40021E9
     public AsyncTaskMethodBuilder <>t__builder;
 
-    // Token: 0x4002157
+    // Token: 0x40021EA
     public Tween t;
 
-    // Token: 0x4002158
+    // Token: 0x40021EB
     public float position;
 
-    // Token: 0x4002159
+    // Token: 0x40021EC
     private YieldAwaiter <>u__1;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002765
-    // RVA   : 0x92B950   Offset: 0x92AD50   Length: 0x1E4
+    // Token : 0x600280F
+    // RVA   : 0x671240   Offset: 0x670040   Length: 0x1E4
     private virtual void MoveNext()
     {
         float fVar1;
@@ -40,15 +40,15 @@ public class <AsyncWaitForPosition>d__14
           *this = -1;
           do {
             ZhSegment.Initialize(local_res18,0);
-        LAB_18092b9d7:
+        LAB_1806712c7:
             lVar2 = *(int64 *)(this + 8);
             if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if ((*(char *)(lVar2 + 232) == false) ||
                (fVar1 = *(float *)(lVar2 + 0x104), iVar4 = TweenExtensions.CompletedLoops(),
-               (float)this[10] <= (float)(iVar4 + 1) * fVar1)) goto LAB_18092bad3;
+               (float)this[10] <= (float)(iVar4 + 1) * fVar1)) goto LAB_1806713c3;
             local_res20[0] = CircularBuffer_1__System_Collections_Generic_ICollection_T.get_IsReadOnly(0)
             ;
             local_res18[0] =
@@ -58,28 +58,28 @@ public class <AsyncWaitForPosition>d__14
           } while (cVar3);
           *this = 0;
           *(uint8 *)(this + 11) = local_res18[0];
-          FUN_180962ff0(this + 2,local_res18,this,DAT_181d85f10);
+          FUN_18076da10(this + 2,local_res18,this,DAT_181e69250);
         }
         else {
           if (*(int64 *)(this + 8) == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          if (*(char *)(*(int64 *)(this + 8) + 232) != false) goto LAB_18092b9d7;
-          if (0 < **(int **)(DAT_181dbff88 + 184)) {
+          if (*(char *)(*(int64 *)(this + 8) + 232) != false) goto LAB_1806712c7;
+          if (0 < **(int **)(DAT_181ea0460 + 184)) {
             Debugger.LogInvalidTween(*(uint64 *)(this + 8),0);
           }
-        LAB_18092bad3:
+        LAB_1806713c3:
           *this = -2;
           AsyncTaskMethodBuilder.SetResult(this + 2,0);
         }
     }
 
-    // Token : 0x6002766
-    // RVA   : 0x21C390   Offset: 0x21B790   Length: 0xC
+    // Token : 0x6002810
+    // RVA   : 0x670EC0   Offset: 0x66FCC0   Length: 0xC
     private virtual void SetStateMachine(IAsyncStateMachine stateMachine)
     {
-        void FUN_18021c390(int64 this,uint64 stateMachine)
+        void FUN_180670ec0(int64 this,uint64 stateMachine)
         {
         AsyncTaskMethodBuilder.SetStateMachine(this + 8,stateMachine,0);
     }

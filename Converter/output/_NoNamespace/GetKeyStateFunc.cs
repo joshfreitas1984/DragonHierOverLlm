@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : GetKeyStateFunc
-// Token : 0x20000DD
+// Token : 0x20000DC
 // ============================================================
 
 public class GetKeyStateFunc
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600073E
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000725
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class GetKeyStateFunc
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600073F
-    // RVA   : 0x917B40   Offset: 0x916F40   Length: 0x2E3
+    // Token : 0x6000726
+    // RVA   : 0x604D50   Offset: 0x603B50   Length: 0x2E3
     public virtual bool Invoke(KeyCode key)
     {
         long lVar1;
@@ -64,17 +64,17 @@ public class GetKeyStateFunc
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar5 = FUN_1800d6050(lVar1);
+          cVar5 = FUN_1801dfd30(lVar1);
           if (!cVar5) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0)) {
-              if (*(char *)(lVar1 + 74) != false) goto LAB_180917de2;
+              if (*(char *)(lVar1 + 74) != false) goto LAB_180604ff2;
               uVar6 = (*pcVar2)(&stack0x00000000,lVar1);
             }
             else {
               cVar5 = il2cpp_internal(lVar1);
               if (!cVar5) {
-                cVar5 = FUN_1800d65c0(lVar1);
+                cVar5 = FUN_1801e02a0(lVar1);
                 uVar4 = local_res10;
                 if (!cVar5) {
                   uVar6 = (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
@@ -96,17 +96,17 @@ public class GetKeyStateFunc
                                        *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar7);
                         uVar6 = (*(code *)*puVar8)(plVar3,uVar4,puVar8[1]);
-                        goto LAB_180917dee;
+                        goto LAB_180604ffe;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  puVar8 = (uint64 *)FUN_1800914f0(plVar3,lVar9,*(uint16 *)(lVar1 + 72));
+                  puVar8 = (uint64 *)FUN_18019b1f0(plVar3,lVar9,*(uint16 *)(lVar1 + 72));
                   uVar6 = (*(code *)*puVar8)(plVar3,uVar4,puVar8[1]);
                 }
               }
               else {
-                cVar5 = FUN_1800d65c0(lVar1);
+                cVar5 = FUN_1801e02a0(lVar1);
                 uVar4 = local_res10;
                 if (!cVar5) {
                   puVar8 = (uint64 *)
@@ -127,13 +127,13 @@ public class GetKeyStateFunc
                                 (int)((uint32)*(uint16 *)(lVar1 + 72) +
                                      *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar7;
-                        goto LAB_180917ca6;
+                        goto LAB_180604eb6;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  lVar7 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),*(uint16 *)(lVar1 + 72));
-        LAB_180917ca6:
+                  lVar7 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),*(uint16 *)(lVar1 + 72));
+        LAB_180604eb6:
                   puVar8 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar7 + 8),lVar1);
                   uVar6 = (*(code *)*puVar8)(plVar3,uVar4,puVar8);
                 }
@@ -144,10 +144,10 @@ public class GetKeyStateFunc
             uVar6 = (*pcVar2)(local_res10,lVar1);
           }
           else {
-        LAB_180917de2:
+        LAB_180604ff2:
             uVar6 = (*pcVar2)(plVar3,local_res10,lVar1);
           }
-        LAB_180917dee:
+        LAB_180604ffe:
           uVar11 = uVar11 + 1;
           if (uVar13 <= uVar11) {
             return uVar6;
@@ -155,8 +155,8 @@ public class GetKeyStateFunc
         } while( true );
     }
 
-    // Token : 0x6000740
-    // RVA   : 0x917AC0   Offset: 0x916EC0   Length: 0x7A
+    // Token : 0x6000727
+    // RVA   : 0x604CD0   Offset: 0x603AD0   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(KeyCode key, AsyncCallback callback, object object)
     {
         void GetKeyStateFunc.BeginInvoke
@@ -167,12 +167,12 @@ public class GetKeyStateFunc
         uint64 local_10;
         local_res10[0] = key;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d842b0,local_res10);
+        local_18 = il2cpp_value_box(DAT_181e64670,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x6000741
-    // RVA   : 0x28D420   Offset: 0x28C820   Length: 0x28
+    // Token : 0x6000728
+    // RVA   : 0x604550   Offset: 0x603350   Length: 0x28
     public virtual bool EndInvoke(IAsyncResult result)
     {
         long lVar1;

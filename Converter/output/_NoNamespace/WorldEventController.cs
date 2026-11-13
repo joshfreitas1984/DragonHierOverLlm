@@ -1,51 +1,51 @@
 // ============================================================
 // Type  : WorldEventController
-// Token : 0x20003B7
+// Token : 0x20003C4
 // ============================================================
 
 public class WorldEventController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E1D
+    // Token: 0x4001EAF
     private List<WorldEventDataBase> worldEventDataBase;
 
-    // Token: 0x4001E1E
+    // Token: 0x4001EB0
     private static WorldEventController _instance;
 
-    // Token: 0x4001E1F
+    // Token: 0x4001EB1
     private static readonly List<string> tutorialWorldEventName;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023B3
-    // RVA   : 0x9D29B0   Offset: 0x9D1DB0   Length: 0x57
+    // Token : 0x600245D
+    // RVA   : 0x71DCA0   Offset: 0x71CAA0   Length: 0x57
     public static WorldEventController get_Instance()
     {
-        return **(uint64 **)(DAT_181db5e88 + 184);
+        return **(uint64 **)(DAT_181e96370 + 184);
     }
 
-    // Token : 0x60023B4
-    // RVA   : 0x9D0FA0   Offset: 0x9D03A0   Length: 0x11F
+    // Token : 0x600245E
+    // RVA   : 0x71C1E0   Offset: 0x71AFE0   Length: 0x11F
     private void Awake()
     {
-        var pStatics = *(int64*)(DAT_181d99718 + 184);
+        var pStatics = *(int64*)(DAT_181e79ad8 + 184);
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181db5e88 + 184);
+        uVar1 = **(uint64 **)(DAT_181e96370 + 184);
         cVar3 = Object.op_Equality(uVar1,0,0);
         if (cVar3) {
-          plVar2 = *(int64 **)(DAT_181db5e88 + 184);
+          plVar2 = *(int64 **)(DAT_181e96370 + 184);
           *plVar2 = this;
           il2cpp_internal(plVar2,this);
           if (*pStatics == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           this.worldEventDataBase = *(uint64 *)(*pStatics + 40);
         }
     }
 
-    // Token : 0x60023B5
-    // RVA   : 0x9D2320   Offset: 0x9D1720   Length: 0x56B
+    // Token : 0x600245F
+    // RVA   : 0x71D610   Offset: 0x71C410   Length: 0x56B
     public void ManageWorldEvent()
     {
         int iVar2;
@@ -58,43 +58,43 @@ public class WorldEventController
         uint uVar9;
         float fVar10;
         double dVar11;
-        lVar4 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar4);
+        lVar4 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar4);
         lVar5 = this.worldEventDataBase;
         iVar8 = 0;
         if (lVar5 != null) {
           while (iVar8 < lVar5.Count) {
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
             lVar5 = *(int64 *)(lVar5.villageAreaID + 168);
             if ((this.worldEventDataBase == null) ||
-               ((lVar6 = FUN_180002f80(this.worldEventDataBase,iVar8,DAT_181dac9a0), lVar6 == null ||
+               ((lVar6 = FUN_1800024b0(this.worldEventDataBase,iVar8,DAT_181e8efd8), lVar6 == null ||
                 (lVar5 == null)))) throw; // [null/range check failed]
             iVar2 = TimeData.DeltaDay(lVar5,*(uint64 *)(lVar6 + 32),0);
             if ((this.worldEventDataBase == null) ||
-               (lVar5 = FUN_180002f80(this.worldEventDataBase,iVar8)) == null)
+               (lVar5 = FUN_1800024b0(this.worldEventDataBase,iVar8)) == null)
             throw; // [null/range check failed]
             if (lVar5.Areas == null) {
               if ((this.worldEventDataBase == null) ||
-                 (lVar5 = FUN_180002f80(this.worldEventDataBase,iVar8)) == null)
+                 (lVar5 = FUN_1800024b0(this.worldEventDataBase,iVar8)) == null)
               throw; // [null/range check failed]
               if ((lVar5.Inns == null) && (-1 < iVar2)) {
                 if ((this.worldEventDataBase == null) ||
-                   (lVar5 = FUN_180002f80(this.worldEventDataBase,iVar8)) == null)
+                   (lVar5 = FUN_1800024b0(this.worldEventDataBase,iVar8)) == null)
                 throw; // [null/range check failed]
                 if (iVar2 % *(int *)(lVar5 + 52) == 0) {
                   if (this.worldEventDataBase == null) throw; // [null/range check failed]
-                  uVar7 = FUN_180002f80(this.worldEventDataBase,iVar8);
+                  uVar7 = FUN_1800024b0(this.worldEventDataBase,iVar8);
                   WorldEventController.CreateWorldEvent(this,uVar7);
                 }
               }
             }
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
                (lVar5 = *(int64 *)(lVar5.villageAreaID + 168)) == null)
             throw; // [null/range check failed]
             if (lVar5._items < 2) {
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
                  (lVar5 = *(int64 *)(lVar5.villageAreaID + 168)) == null)
               throw; // [null/range check failed]
@@ -104,11 +104,11 @@ public class WorldEventController
                 else {
               }
               if ((this.worldEventDataBase == null) ||
-                 (lVar5 = FUN_180002f80(this.worldEventDataBase,iVar8)) == null)
+                 (lVar5 = FUN_1800024b0(this.worldEventDataBase,iVar8)) == null)
               throw; // [null/range check failed]
               if ((lVar5.Areas == 1) && (-1 < iVar2)) {
                 if (lVar4 == null) throw; // [null/range check failed]
-                FUN_18182a6c0(lVar4,iVar8);
+                FUN_181769fe0(lVar4,iVar8);
               }
             }
             lVar5 = this.worldEventDataBase;
@@ -118,19 +118,19 @@ public class WorldEventController
           if (lVar4 != null) {
             if (0 < *(int *)(lVar4 + 24)) {
               dVar11 = (double)GlobalData.RandomRangeDouble(0,0);
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if ((lVar5 == null) || (lVar5.villageAreaID == null)) throw; // [null/range check failed]
               iVar8 = *(int *)(lVar5.villageAreaID + 112);
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if ((lVar5 == null) ||
                  ((lVar5.villageAreaID == null ||
                   (lVar5 = *(int64 *)(lVar5.villageAreaID + 168)) == null)))
               throw; // [null/range check failed]
               iVar2 = lVar5._items;
               uVar9 = GameController.GetGameMaxDifficulty(0);
-              fVar10 = (float)FUN_1810e3cd0(((float)iVar2 - 1.0) * 0.5,0,uVar9,0);
+              fVar10 = (float)FUN_180f34e60(((float)iVar2 - 1.0) * 0.5,0,uVar9,0);
               if (dVar11 <= (double)((fVar10 * 0.001 + 0.01) * (float)iVar8)) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if ((lVar5 != null) && (lVar5.villageAreaID != null)) {
                   *(uint32 *)(lVar5.villageAreaID + 112) = 0;
                   lVar5 = this.worldEventDataBase;
@@ -164,8 +164,8 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023B6
-    // RVA   : 0x9D10C0   Offset: 0x9D04C0   Length: 0x27E
+    // Token : 0x6002460
+    // RVA   : 0x71C300   Offset: 0x71B100   Length: 0x27E
     public EventData CreateRandomWorldEvent(bool limitStartTime)
     {
         int iVar1;
@@ -177,8 +177,8 @@ public class WorldEventController
         ulong uVar7;
         long lVar8;
         uVar6 = 0;
-        lVar3 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar3,DAT_181d8f0b0);
+        lVar3 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar3,DAT_181e71270);
         lVar4 = this.worldEventDataBase;
         if (lVar4 != null) {
           lVar8 = 32;
@@ -192,18 +192,18 @@ public class WorldEventController
             if (lVar4 == null) throw; // [null/range check failed]
             if (*(int *)(lVar4 + 48) == 1) {
               if (limitStartTime) {
-                lVar4 = FUN_18046c0a0(0);
+                lVar4 = FUN_1802106e0(0);
                 if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
                 lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 168);
                 if ((this.worldEventDataBase == null) ||
-                   ((lVar5 = FUN_180002f80(this.worldEventDataBase,uVar7), lVar5 == null ||
+                   ((lVar5 = FUN_1800024b0(this.worldEventDataBase,uVar7), lVar5 == null ||
                     (lVar4 == null)))) throw; // [null/range check failed]
                 iVar1 = TimeData.DeltaDay(lVar4,*(uint64 *)(lVar5 + 32));
                 if (iVar1 >= 0)
                 {
                   }
                   if (lVar3 == null) throw; // [null/range check failed]
-                  FUN_18182a6c0(lVar3,uVar7);
+                  FUN_181769fe0(lVar3,uVar7);
                   }
                 }
             lVar4 = this.worldEventDataBase;
@@ -233,8 +233,8 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023B7
-    // RVA   : 0x9D1340   Offset: 0x9D0740   Length: 0x717
+    // Token : 0x6002461
+    // RVA   : 0x71C580   Offset: 0x71B380   Length: 0x7CD
     public EventData CreateWorldEvent(WorldEventDataBase targetWorldEventDataBase)
     {
         int64 *
@@ -265,8 +265,8 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023B8
-    // RVA   : 0x9D1DE0   Offset: 0x9D11E0   Length: 0x317
+    // Token : 0x6002462
+    // RVA   : 0x71D0D0   Offset: 0x71BED0   Length: 0x317
     public float GetWorldEventRandomDifficulty(WorldEventDataBase targetWorldEventDataBase)
     {
         float fVar1;
@@ -293,7 +293,7 @@ public class WorldEventController
               if (*(int64 *)(targetWorldEventDataBase + 88) != 0) {
                 fVar1 = *(float *)(*(int64 *)(targetWorldEventDataBase + 88) + 112);
                 if (*(char *)(targetWorldEventDataBase + 64) == false) {
-                  lVar3 = FUN_18046c0a0(0);
+                  lVar3 = FUN_1802106e0(0);
                   if (lVar3 != null) {
                     fVar4 = (float)GameController.GetTimeRandomDifficulty(lVar3);
                     return fVar1 * fVar4;
@@ -303,7 +303,7 @@ public class WorldEventController
                   if (*(int *)(targetWorldEventDataBase + 68) != -1) {
                     return fVar1 * (float)*(int *)(targetWorldEventDataBase + 68);
                   }
-                  lVar3 = FUN_18046c0a0(0);
+                  lVar3 = FUN_1802106e0(0);
                   if (lVar3 != null) {
                     fVar4 = (float)GameController.GetTimeDifficulty(lVar3,0);
                     return fVar1 * fVar4;
@@ -318,8 +318,8 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023B9
-    // RVA   : 0x9D1C70   Offset: 0x9D1070   Length: 0x16A
+    // Token : 0x6002463
+    // RVA   : 0x71CF60   Offset: 0x71BD60   Length: 0x16A
     public EventData CreateWorldEvent(EventData targetEvent, ResourcePointData targetResourcePoint, int lastTime, float difficulty, int speTargetID)
     {
         int64 *
@@ -350,8 +350,8 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023BA
-    // RVA   : 0x9D1A60   Offset: 0x9D0E60   Length: 0x202
+    // Token : 0x6002464
+    // RVA   : 0x71CD50   Offset: 0x71BB50   Length: 0x202
     public EventData CreateWorldEvent(EventData targetEvent, List<int> targetAreaIDList, int lastTime, float difficulty, int speTargetID, bool isBigMapEvent)
     {
         int64 *
@@ -382,11 +382,11 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023BB
-    // RVA   : 0x9D0D80   Offset: 0x9D0180   Length: 0x212
+    // Token : 0x6002465
+    // RVA   : 0x71BFC0   Offset: 0x71ADC0   Length: 0x212
     public void AddNewWorldEvent(EventData newRandomEvent)
     {
-        var pStatics_aba8 = *(int64*)(DAT_181d8aba8 + 184);
+        var pStatics_af70 = *(int64*)(DAT_181e6af70 + 184);
         long lVar1;
         ulong uVar2;
         ulong local_18;
@@ -394,8 +394,8 @@ public class WorldEventController
         if (((GameController._instance != null) &&
             (lVar1 = GameController._instance.worldData) != null) &&
            (lVar1 = lVar1.WorldEventDatas) != null) {
-          FUN_18181e6b0(lVar1,newRandomEvent,DAT_181d85b38);
-          lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
+          FUN_18175de30(lVar1,newRandomEvent,DAT_181e67d78);
+          lVar1 = **(int64 **)(DAT_181e5fa68 + 184);
           if (newRandomEvent != null) {
             uVar2 = EventData.Name(newRandomEvent,0);
             uVar2 = String.Format("新的江湖传闻：{0}",uVar2,0);
@@ -405,8 +405,8 @@ public class WorldEventController
               InfoController.AddInfoTab
                         (lVar1,uVar2,"UIAtlas","资源_占领地","PencilWriting",0x3f800000,0x40a00000,
                          &local_18,0);
-              if (*pStatics_aba8 != 0) {
-                *(uint8 *)(*pStatics_aba8 + 160) = 1;
+              if (*pStatics_af70 != 0) {
+                *(uint8 *)(*pStatics_af70 + 160) = 1;
                 return;
               }
             }
@@ -414,8 +414,8 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023BC
-    // RVA   : 0x9D2100   Offset: 0x9D1500   Length: 0x211
+    // Token : 0x6002466
+    // RVA   : 0x71D3F0   Offset: 0x71C1F0   Length: 0x211
     public bool HaveTutorialWorldEvent()
     {
         long lVar1;
@@ -430,13 +430,13 @@ public class WorldEventController
           if (lVar1.cityAreaID <= iVar4) {
             return false;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181db5e88 + 184) + 8);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181e96370 + 184) + 8);
           if (((GameController._instance == null) ||
               (lVar3 = GameController._instance.worldData) == null) ||
              (lVar3 = lVar3.WorldEventDatas) == null) break;
-          lVar3 = FUN_180002f80(lVar3,iVar4,DAT_181d85e38);
+          lVar3 = FUN_1800024b0(lVar3,iVar4,DAT_181e68078);
           if ((lVar3 == null) || (lVar1 == null)) break;
-          cVar2 = FUN_18181ea10(lVar1,lVar3.cityAreaID,DAT_181da3e70);
+          cVar2 = FUN_18175e190(lVar1,lVar3.cityAreaID,DAT_181e86470);
           if (cVar2) {
             return true;
           }
@@ -444,26 +444,26 @@ public class WorldEventController
         }
     }
 
-    // Token : 0x60023BD
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002467
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x60023BE
-    // RVA   : 0x9D2890   Offset: 0x9D1C90   Length: 0x118
+    // Token : 0x6002468
+    // RVA   : 0x71DB80   Offset: 0x71C980   Length: 0x118
     private static void /*cctor*/()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar1,DAT_181da3bf0);
+        lVar1 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar1,DAT_181e861f0);
         if (lVar1 != null) {
-          FUN_18181e6b0(lVar1,"异草奇花",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"仙木灵果",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"失落宝藏",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"神兵现世",DAT_181da3d70);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181db5e88 + 184) + 8);
+          FUN_18175de30(lVar1,"异草奇花",DAT_181e86370);
+          FUN_18175de30(lVar1,"仙木灵果",DAT_181e86370);
+          FUN_18175de30(lVar1,"失落宝藏",DAT_181e86370);
+          FUN_18175de30(lVar1,"神兵现世",DAT_181e86370);
+          plVar2 = (int64 *)(*(int64 *)(DAT_181e96370 + 184) + 8);
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           return;

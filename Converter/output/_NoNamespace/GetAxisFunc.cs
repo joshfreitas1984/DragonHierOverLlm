@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : GetAxisFunc
-// Token : 0x20000DE
+// Token : 0x20000DD
 // ============================================================
 
 public class GetAxisFunc
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000742
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000729
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class GetAxisFunc
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000743
-    // RVA   : 0x917670   Offset: 0x916A70   Length: 0x44A
+    // Token : 0x600072A
+    // RVA   : 0x604880   Offset: 0x603680   Length: 0x44A
     public virtual float Invoke(string name)
     {
         long lVar1;
@@ -61,15 +61,15 @@ public class GetAxisFunc
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180917a7e;
+              goto LAB_180604c8e;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   uVar13 = (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                      (plVar3,name,
@@ -89,17 +89,17 @@ public class GetAxisFunc
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
                         uVar13 = (*(code *)*puVar6)(plVar3,name,puVar6[1]);
-                        goto LAB_180917a89;
+                        goto LAB_180604c99;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  puVar6 = (uint64 *)FUN_1800914f0(plVar3,lVar7,*(uint16 *)(lVar1 + 72));
+                  puVar6 = (uint64 *)FUN_18019b1f0(plVar3,lVar7,*(uint16 *)(lVar1 + 72));
                   uVar13 = (*(code *)*puVar6)(plVar3,name,puVar6[1]);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar9 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   puVar6 = (uint64 *)
@@ -118,13 +118,13 @@ public class GetAxisFunc
                                 (int)((uint32)uVar9 +
                                      *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16))
                                 * 16 + 0x138 + lVar5;
-                        goto LAB_180917956;
+                        goto LAB_180604b66;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  lVar5 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar9);
-        LAB_180917956:
+                  lVar5 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),uVar9);
+        LAB_180604b66:
                   puVar6 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar5 + 8),lVar1);
                   uVar13 = (*(code *)*puVar6)(plVar3,name,puVar6);
                 }
@@ -132,10 +132,10 @@ public class GetAxisFunc
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18091770a;
+              goto LAB_18060491a;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   uVar13 = (**(code **)(*name + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                      (name,*(uint64 *)
@@ -155,17 +155,17 @@ public class GetAxisFunc
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
                         uVar13 = (*(code *)*puVar6)(name,puVar6[1]);
-                        goto LAB_180917a89;
+                        goto LAB_180604c99;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  puVar6 = (uint64 *)FUN_1800914f0(name,lVar7,*(uint16 *)(lVar1 + 72));
+                  puVar6 = (uint64 *)FUN_18019b1f0(name,lVar7,*(uint16 *)(lVar1 + 72));
                   uVar13 = (*(code *)*puVar6)(name,puVar6[1]);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar9 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   uVar13 = *(uint64 *)(*name + ((uint64)uVar9 + 20) * 16);
@@ -182,29 +182,29 @@ public class GetAxisFunc
                                    (int)((uint32)uVar9 +
                                         *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16
                                                 )) * 16 + lVar5 + 0x140);
-                        goto LAB_1809177d9;
+                        goto LAB_1806049e9;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  lVar5 = FUN_1800914f0(name,*(int64 *)(lVar1 + 24),uVar9);
+                  lVar5 = FUN_18019b1f0(name,*(int64 *)(lVar1 + 24),uVar9);
                   uVar13 = *(uint64 *)(lVar5 + 8);
                 }
-        LAB_1809177d9:
+        LAB_1806049e9:
                 puVar6 = (uint64 *)il2cpp_internal(uVar13,lVar1);
                 uVar13 = (*(code *)*puVar6)(name,puVar6);
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_18091770a:
+        LAB_18060491a:
             uVar13 = (*pcVar2)(name,lVar1);
           }
           else {
-        LAB_180917a7e:
+        LAB_180604c8e:
             uVar13 = (*pcVar2)(plVar3,name,lVar1);
           }
-        LAB_180917a89:
+        LAB_180604c99:
           uVar12 = uVar12 + 1;
           if (uVar10 <= uVar12) {
             return uVar13;
@@ -212,8 +212,8 @@ public class GetAxisFunc
         } while( true );
     }
 
-    // Token : 0x6000744
-    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
+    // Token : 0x600072B
+    // RVA   : 0x604820   Offset: 0x603620   Length: 0x21
     public virtual IAsyncResult BeginInvoke(string name, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -223,8 +223,8 @@ public class GetAxisFunc
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x6000745
-    // RVA   : 0x3A9D90   Offset: 0x3A9190   Length: 0x29
+    // Token : 0x600072C
+    // RVA   : 0x604850   Offset: 0x603650   Length: 0x29
     public virtual float EndInvoke(IAsyncResult result)
     {
         long lVar1;

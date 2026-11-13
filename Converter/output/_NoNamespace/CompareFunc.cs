@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : CompareFunc
-// Token : 0x200007B
+// Token : 0x200007A
 // ============================================================
 
 public class CompareFunc
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002FC
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x60002E3
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class CompareFunc
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x60002FD
-    // RVA   : 0x1110850   Offset: 0x110FC50   Length: 0x347
+    // Token : 0x60002E4
+    // RVA   : 0xCEAA10   Offset: 0xCE9810   Length: 0x347
     public virtual int Invoke(T left, T right)
     {
         long lVar1;
@@ -72,7 +72,7 @@ public class CompareFunc
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar5 = FUN_1800d6050(lVar1);
+          cVar5 = FUN_1801dfd30(lVar1);
           if (!cVar5) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(local_res8 + 24) == 0))
@@ -86,14 +86,14 @@ public class CompareFunc
                 uVar16 = *(uint32 *)((int64)left + 4);
                 uVar17 = *(uint32 *)(left + 1);
                 uVar18 = *(uint32 *)((int64)left + 12);
-                goto LAB_181110b40;
+                goto LAB_180cead00;
               }
               uVar6 = (*pcVar2)(left + -2,&local_48,lVar1);
             }
             else {
               cVar5 = il2cpp_internal(lVar1);
               if (!cVar5) {
-                cVar5 = FUN_1800d65c0(lVar1);
+                cVar5 = FUN_1801e02a0(lVar1);
                 if (!cVar5) {
                   local_48 = *(uint32 *)right;
                   uStack_44 = *(uint32 *)((int64)right + 4);
@@ -121,13 +121,13 @@ public class CompareFunc
                                   (int)((uint32)*(uint16 *)(lVar1 + 72) +
                                        *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar7);
-                        goto LAB_181110aa6;
+                        goto LAB_180ceac66;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  puVar8 = (uint64 *)FUN_1800914f0(plVar3,lVar9,*(uint16 *)(lVar1 + 72));
-        LAB_181110aa6:
+                  puVar8 = (uint64 *)FUN_18019b1f0(plVar3,lVar9,*(uint16 *)(lVar1 + 72));
+        LAB_180ceac66:
                   local_48 = *(uint32 *)right;
                   uStack_44 = *(uint32 *)((int64)right + 4);
                   uStack_40 = *(uint32 *)(right + 1);
@@ -138,7 +138,7 @@ public class CompareFunc
                 }
               }
               else {
-                cVar5 = FUN_1800d65c0(lVar1);
+                cVar5 = FUN_1801e02a0(lVar1);
                 uVar6 = *left;
                 uVar4 = left[1];
                 if (!cVar5) {
@@ -156,13 +156,13 @@ public class CompareFunc
                                 (int)((uint32)*(uint16 *)(lVar1 + 72) +
                                      *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar7;
-                        goto LAB_1811109d6;
+                        goto LAB_180ceab96;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  lVar7 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),*(uint16 *)(lVar1 + 72));
-        LAB_1811109d6:
+                  lVar7 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),*(uint16 *)(lVar1 + 72));
+        LAB_180ceab96:
                   uVar12 = *(uint64 *)(lVar7 + 8);
                 }
                 puVar8 = (uint64 *)il2cpp_internal(uVar12,lVar1);
@@ -195,7 +195,7 @@ public class CompareFunc
               uVar6 = (*pcVar2)(&local_48,&local_58,lVar1);
             }
             else {
-        LAB_181110b40:
+        LAB_180cead00:
               local_58 = CONCAT44(uVar16,uVar15);
               uStack_50 = CONCAT44(uVar18,uVar17);
               uVar6 = (*pcVar2)(plVar3,&local_58,&local_48,lVar1);
@@ -208,8 +208,8 @@ public class CompareFunc
         } while( true );
     }
 
-    // Token : 0x60002FE
-    // RVA   : 0x110FE60   Offset: 0x110F260   Length: 0x97
+    // Token : 0x60002E5
+    // RVA   : 0xCEA020   Offset: 0xCE8E20   Length: 0x97
     public virtual IAsyncResult BeginInvoke(T left, T right, AsyncCallback callback, object object)
     {
         void CompareFunc.BeginInvoke
@@ -220,13 +220,13 @@ public class CompareFunc
         uint64 local_20;
         uint64 local_18;
         local_18 = 0;
-        local_28 = il2cpp_value_box(DAT_181db8388,left);
-        local_20 = il2cpp_value_box(DAT_181db8388,right);
+        local_28 = il2cpp_value_box(DAT_181e98640,left);
+        local_20 = il2cpp_value_box(DAT_181e98640,right);
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x60002FF
-    // RVA   : 0x219140   Offset: 0x218540   Length: 0x27
+    // Token : 0x60002E6
+    // RVA   : 0x6053D0   Offset: 0x6041D0   Length: 0x27
     public virtual int EndInvoke(IAsyncResult result)
     {
         long lVar1;

@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : Style
-// Token : 0x20002E9
+// Token : 0x20002F2
 // ============================================================
 
 public class Style
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40017FA
+    // Token: 0x400184F
     public int value__;
 
-    // Token: 0x40017FB
+    // Token: 0x4001850
     public const Style Text;
 
-    // Token: 0x40017FC
+    // Token: 0x4001851
     public const Style Chat;
 
 }

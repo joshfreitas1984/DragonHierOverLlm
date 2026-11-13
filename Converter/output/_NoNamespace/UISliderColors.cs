@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : UISliderColors
-// Token : 0x2000026
+// Token : 0x2000025
 // ============================================================
 
 public class UISliderColors
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000B0
+    // Token: 0x4000090
     public UISprite sprite;
 
-    // Token: 0x40000B1
+    // Token: 0x4000091
     public Color[] colors;
 
-    // Token: 0x40000B2
+    // Token: 0x4000092
     private UIProgressBar mBar;
 
-    // Token: 0x40000B3
+    // Token: 0x4000093
     private UIBasicSprite mSprite;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000096
-    // RVA   : 0x1705E70   Offset: 0x1705270   Length: 0x7C
+    // Token : 0x600007D
+    // RVA   : 0x16081A0   Offset: 0x1606FA0   Length: 0x7C
     private void Start()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96c78);
+        uVar1 = Component.GetComponent(this,DAT_181e7a038);
         this.mBar = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d966f8);
+        uVar1 = Component.GetComponent(this,DAT_181e79ab8);
         this.mSprite = uVar1;
         UISliderColors.Update(this,0);
     }
 
-    // Token : 0x6000097
-    // RVA   : 0x1705EF0   Offset: 0x17052F0   Length: 0x292
+    // Token : 0x600007E
+    // RVA   : 0x1608220   Offset: 0x1607020   Length: 0x292
     private void Update()
     {
         int iVar1;
@@ -69,7 +69,7 @@ public class UISliderColors
             if (lVar9 == null) throw; // [null/range check failed]
             fVar10 = *(float *)(lVar9 + 56);
             if (1 < *(int *)(lVar9 + 100)) {
-              fVar10 = (float)FUN_18000d7c0((float)(*(int *)(lVar9 + 100) + -1) * fVar10);
+              fVar10 = (float)FUN_18007dbc0((float)(*(int *)(lVar9 + 100) + -1) * fVar10);
               fVar10 = fVar10 / (float)(*(int *)(lVar9 + 100) + -1);
             }
           }
@@ -83,7 +83,7 @@ public class UISliderColors
               if (uVar2 == 0) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               local_48 = *(uint64 *)(lVar3 + 32);
               uStack_40 = *(uint64 *)(lVar3 + 40);
@@ -93,12 +93,12 @@ public class UISliderColors
                   if (uVar2 <= uVar5) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   if (uVar2 <= uVar6) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   puVar7 = (uint64 *)(lVar3 + (lVar9 + 2) * 16);
                   local_38 = *puVar7;
@@ -117,7 +117,7 @@ public class UISliderColors
                     if (uVar2 <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                   }
                   else {
@@ -125,7 +125,7 @@ public class UISliderColors
                     if (uVar2 <= (uint32)lVar9) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                   }
                   puVar7 = (uint64 *)(lVar3 + (lVar9 + 2) * 16);
@@ -145,8 +145,8 @@ public class UISliderColors
         }
     }
 
-    // Token : 0x6000098
-    // RVA   : 0x1706190   Offset: 0x1705590   Length: 0xE5
+    // Token : 0x600007F
+    // RVA   : 0x16084C0   Offset: 0x16072C0   Length: 0xE5
     public void /*ctor*/()
     {
         uint uVar1;
@@ -155,16 +155,16 @@ public class UISliderColors
         long lVar4;
         ulong uVar6;
         byte[] local_18 = new byte[16];
-        lVar4 = FUN_1800d60b0(DAT_181da1158,3);
+        lVar4 = FUN_1801dfd90(DAT_181e81228,3);
         puVar5 = (uint32 *)Color.get_red(local_18,0);
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (*(int *)(lVar4 + 24) == 0) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         uVar1 = puVar5[1];
         uVar2 = puVar5[2];
@@ -192,12 +192,12 @@ public class UISliderColors
             *(uint32 *)(lVar4 + 72) = uVar2;
             *(uint32 *)(lVar4 + 76) = uVar3;
             this.colors = lVar4;
-            FUN_18044ef50(this,0);
+            FUN_180ae8740(this,0);
             return;
           }
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         uVar6 = il2cpp_internal();
     }

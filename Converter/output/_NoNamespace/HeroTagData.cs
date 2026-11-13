@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : HeroTagData
-// Token : 0x2000237
+// Token : 0x200023A
 // ============================================================
 
 public class HeroTagData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40011BE
+    // Token: 0x40011D8
     public int tagID;
 
-    // Token: 0x40011BF
+    // Token: 0x40011D9
     public float leftTime;
 
-    // Token: 0x40011C0
+    // Token: 0x40011DA
     public string sourceHero;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60012B0
-    // RVA   : 0xAFEF20   Offset: 0xAFE320   Length: 0x51
+    // Token : 0x60012C3
+    // RVA   : 0x8A1090   Offset: 0x89FE90   Length: 0x51
     public void /*ctor*/(int _tagID, float _leftTime, string _sourceHero)
     {
         ZhSegment.Initialize(this,0);
@@ -26,8 +26,8 @@ public class HeroTagData
         this.tagID = _tagID;
     }
 
-    // Token : 0x60012B1
-    // RVA   : 0xAFEE90   Offset: 0xAFE290   Length: 0x69
+    // Token : 0x60012C4
+    // RVA   : 0x8A1000   Offset: 0x89FE00   Length: 0x69
     public bool IsPermanentTag()
     {
         byte uVar1;
@@ -38,17 +38,17 @@ public class HeroTagData
         lVar2 = HeroTagData.DataBase(this,0);
         if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         uVar1 = String.op_Inequality(*(uint64 *)(lVar2 + 80),"特效",0);
         return uVar1;
     }
 
-    // Token : 0x60012B2
-    // RVA   : 0xAFE780   Offset: 0xAFDB80   Length: 0x705
+    // Token : 0x60012C5
+    // RVA   : 0x8A08F0   Offset: 0x89F6F0   Length: 0x705
     public string GetDescribe(bool showEffectTarget, TagIconType tagIconType)
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         bool cVar1;
         ulong uVar2;
         ulong uVar3;
@@ -70,7 +70,7 @@ public class HeroTagData
         uVar3 = "";
         if (0.0 < this.leftTime) {
           local_res8[0] = Mathf.CeilToInt();
-          uVar3 = il2cpp_value_box(DAT_181d80430,local_res8);
+          uVar3 = il2cpp_value_box(DAT_181e60808,local_res8);
           uVar3 = String.Format("[{0}日]\n",uVar3,0);
         }
         lVar4 = HeroTagData.DataBase(this,0);
@@ -116,7 +116,7 @@ public class HeroTagData
           uVar7 = String.Concat(uVar7,uVar2,uVar3,0);
         }
         if (tagIconType == 1) {
-        LAB_180afeaf3:
+        LAB_1808a0c63:
           lVar4 = HeroTagData.DataBase(this,0);
           if ((lVar4 == null) || (*(int64 *)(lVar4 + 64) == 0)) throw; // [null/range check failed]
           if (0 < *(int *)(*(int64 *)(lVar4 + 64) + 24)) {
@@ -125,41 +125,41 @@ public class HeroTagData
             iVar10 = iVar9;
             if (lVar4 != null) {
               while (*(int64 *)(lVar4 + 64) != 0) {
-                if (*(int *)(*(int64 *)(lVar4 + 64) + 24) <= iVar10) goto LAB_180afed91;
+                if (*(int *)(*(int64 *)(lVar4 + 64) + 24) <= iVar10) goto LAB_1808a0f01;
                 uVar2 = "\n";
                 if (iVar10 == 0) {
                   uVar2 = "";
                 }
-                uVar3 = FUN_18046c300(0);
+                uVar3 = FUN_180210970(0);
                 cVar1 = Object.op_Equality(uVar3,0,0);
                 uVar3 = "{0}";
                 if (!cVar1) {
-                  lVar4 = FUN_18046c300(0);
+                  lVar4 = FUN_180210970(0);
                   if (lVar4 == null) break;
                   uVar3 = "{0}";
                   if (*(int64 *)(lVar4 + 32) != 0) {
-                    lVar4 = FUN_18046c300(0);
-                    lVar8 = FUN_18046c300(0);
+                    lVar4 = FUN_180210970(0);
+                    lVar8 = FUN_180210970(0);
                     if (lVar8 == null) break;
                     uVar3 = *(uint64 *)(lVar8 + 32);
                     lVar8 = HeroTagData.DataBase(this,0);
                     if (((lVar8 == null) || (*(int64 *)(lVar8 + 64) == 0)) ||
-                       (uVar5 = FUN_180002f80(*(int64 *)(lVar8 + 64),iVar10,DAT_181da4370),
+                       (uVar5 = FUN_1800024b0(*(int64 *)(lVar8 + 64),iVar10,DAT_181e86970),
                        lVar4 == null)) break;
                     cVar1 = ManageTagController.CheckMeetOneCondition(lVar4,uVar3,uVar5);
                     if (!cVar1) {
-                      uVar3 = String.Concat(*(uint64 *)(pStatics + 0x2d8),
+                      uVar3 = String.Concat(*(uint64 *)(pStatics + 0x2e0),
                                              "{0}</color>",0);
                     }
                     else {
-                      uVar3 = String.Concat(*(uint64 *)(pStatics + 0x270),
+                      uVar3 = String.Concat(*(uint64 *)(pStatics + 0x278),
                                              "{0}</color>",0);
                     }
                   }
                 }
                 lVar4 = HeroTagData.DataBase(this,0);
                 if ((lVar4 == null) || (*(int64 *)(lVar4 + 64) == 0)) break;
-                uVar5 = FUN_180002f80(*(int64 *)(lVar4 + 64),iVar10,DAT_181da4370);
+                uVar5 = FUN_1800024b0(*(int64 *)(lVar4 + 64),iVar10,DAT_181e86970);
                 uVar3 = String.Format(uVar3,uVar5,0);
                 uVar7 = String.Concat(uVar7,uVar2,uVar3,0);
                 iVar10 = iVar10 + 1;
@@ -173,9 +173,9 @@ public class HeroTagData
         else if (tagIconType == 2) {
           lVar4 = HeroTagData.DataBase(this,0);
           if (lVar4 == null) throw; // [null/range check failed]
-          if (*(char *)(lVar4 + 56) == false) goto LAB_180afeaf3;
+          if (*(char *)(lVar4 + 56) == false) goto LAB_1808a0c63;
         }
-        LAB_180afed91:
+        LAB_1808a0f01:
         lVar4 = HeroTagData.DataBase(this,0);
         if ((lVar4 != null) && (*(int64 *)(lVar4 + 72) != 0)) {
           if (*(int *)(*(int64 *)(lVar4 + 72) + 24) < 1) {
@@ -194,7 +194,7 @@ public class HeroTagData
               }
               lVar4 = HeroTagData.DataBase(this,0);
               if ((lVar4 == null) || (*(int64 *)(lVar4 + 72) == 0)) break;
-              uVar3 = FUN_180002f80(*(int64 *)(lVar4 + 72),iVar9,DAT_181da4370);
+              uVar3 = FUN_1800024b0(*(int64 *)(lVar4 + 72),iVar9,DAT_181e86970);
               uVar7 = String.Concat(uVar7,uVar2,uVar3,0);
               iVar9 = iVar9 + 1;
               lVar4 = HeroTagData.DataBase(this,0);
@@ -204,8 +204,8 @@ public class HeroTagData
         }
     }
 
-    // Token : 0x60012B3
-    // RVA   : 0xAFEF00   Offset: 0xAFE300   Length: 0x1E
+    // Token : 0x60012C6
+    // RVA   : 0x8A1070   Offset: 0x89FE70   Length: 0x1E
     public bool StartChooseAble()
     {
         long lVar1;
@@ -215,20 +215,20 @@ public class HeroTagData
         }
     }
 
-    // Token : 0x60012B4
-    // RVA   : 0xAFE6C0   Offset: 0xAFDAC0   Length: 0xB6
+    // Token : 0x60012C7
+    // RVA   : 0x8A0830   Offset: 0x89F630   Length: 0xB6
     public HeroTagDataBase DataBase()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 32);
         if (lVar1 != null) {
           GameDataController.GetTagDataBase(lVar1,this.tagID,0);
           return;
         }
     }
 
-    // Token : 0x60012B5
-    // RVA   : 0xAFE540   Offset: 0xAFD940   Length: 0x175
+    // Token : 0x60012C8
+    // RVA   : 0x8A06B0   Offset: 0x89F4B0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -239,13 +239,13 @@ public class HeroTagData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -257,11 +257,11 @@ public class HeroTagData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ExampleDragDropItem
-// Token : 0x2000018
+// Token : 0x2000017
 // ============================================================
 
 public class ExampleDragDropItem
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400008B
+    // Token: 0x400006B
     public GameObject prefab;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600006B
-    // RVA   : 0x948C40   Offset: 0x948040   Length: 0x337
+    // Token : 0x6000052
+    // RVA   : 0x68EE70   Offset: 0x68DC70   Length: 0x337
     protected override void OnDragDropRelease(GameObject surface)
     {
-        var pStatics = *(int64*)(DAT_181daf690 + 184);
+        var pStatics = *(int64*)(DAT_181e8fad0 + 184);
         bool cVar1;
         long lVar2;
         ulong uVar3;
@@ -31,14 +31,14 @@ public class ExampleDragDropItem
         uint8 local_28 [32];
         cVar1 = Object.op_Inequality(surface,0,0);
         if (!cVar1) {
-        LAB_180948f46:
+        LAB_18068f176:
           UIDragDropItem.OnDragDropRelease(this,surface,0);
           return;
         }
         if (surface != null) {
-          lVar2 = GameObject.GetComponent(surface,DAT_181dc8388);
+          lVar2 = GameObject.GetComponent(surface,DAT_181e545b8);
           cVar1 = Object.op_Inequality(lVar2,0,0);
-          if (!cVar1) goto LAB_180948f46;
+          if (!cVar1) goto LAB_18068f176;
           if (lVar2 != null) {
             uVar3 = Component.get_gameObject(lVar2,0);
             uVar9 = this.prefab;
@@ -59,7 +59,7 @@ public class ExampleDragDropItem
                   Transform.set_position(lVar4,&local_48,0);
                   if (*(char *)(lVar2 + 24) != false) {
                     puVar7 = (uint64 *)
-                             FUN_18045e080(&local_38,pStatics + 136,0);
+                             FUN_180af1d10(&local_38,pStatics + 136,0);
                     local_48 = *puVar7;
                     uStack_40 = CONCAT44(uStack_40._4_4_,*(uint32 *)(puVar7 + 1));
                     puVar7 = (uint64 *)Quaternion.LookRotation(&local_38,&local_48,0);
@@ -89,8 +89,8 @@ public class ExampleDragDropItem
         }
     }
 
-    // Token : 0x600006C
-    // RVA   : 0x948F80   Offset: 0x948380   Length: 0x52
+    // Token : 0x6000053
+    // RVA   : 0x68F1B0   Offset: 0x68DFB0   Length: 0x52
     public void /*ctor*/()
     {
         UIDragDropItem.ctor(this,0);

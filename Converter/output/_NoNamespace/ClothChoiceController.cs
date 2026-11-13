@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : ClothChoiceController
-// Token : 0x2000251
+// Token : 0x2000255
 // ============================================================
 
 public class ClothChoiceController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001295
+    // Token: 0x40012B3
     public int skinID;
 
-    // Token: 0x4001296
+    // Token: 0x40012B4
     public int skinLv;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001326
-    // RVA   : 0x99F310   Offset: 0x99E710   Length: 0x54
+    // Token : 0x600134A
+    // RVA   : 0x6FDC50   Offset: 0x6FCA50   Length: 0x54
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d75f40 + 184);
+        var pStatics = *(int64*)(DAT_181e55ae8 + 184);
         if (*pStatics != 0) {
           HeroDetailController.ClothChoiceButtonClicked
                     (*pStatics,this.skinID,
@@ -26,11 +26,11 @@ public class ClothChoiceController
         }
     }
 
-    // Token : 0x6001327
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600134B
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

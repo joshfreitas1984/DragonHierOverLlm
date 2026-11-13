@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : LegacyEvent
-// Token : 0x2000059
+// Token : 0x2000058
 // ============================================================
 
 public class LegacyEvent
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000210
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x60001F7
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class LegacyEvent
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000211
-    // RVA   : 0x31A640   Offset: 0x319A40   Length: 0x36A
+    // Token : 0x60001F8
+    // RVA   : 0x606C80   Offset: 0x605A80   Length: 0x36A
     public virtual void Invoke(string val)
     {
         long lVar1;
@@ -61,15 +61,15 @@ public class LegacyEvent
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18031a96e;
+              goto LAB_180606fae;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                             (plVar3,val,
@@ -90,17 +90,17 @@ public class LegacyEvent
                                        *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar7);
                         (*(code *)*puVar5)(plVar3,val,puVar5[1]);
-                        goto LAB_18031a979;
+                        goto LAB_180606fb9;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  puVar5 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
+                  puVar5 = (uint64 *)FUN_18019b1f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
                   (*(code *)*puVar5)(plVar3,val,puVar5[1]);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar10 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   puVar5 = (uint64 *)
@@ -119,13 +119,13 @@ public class LegacyEvent
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar7;
-                        goto LAB_18031a846;
+                        goto LAB_180606e86;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar7 + 0x12a));
                   }
-                  lVar7 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_18031a846:
+                  lVar7 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_180606e86:
                   puVar5 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar7 + 8),lVar1);
                   (*(code *)*puVar5)(plVar3,val,puVar5);
                 }
@@ -133,10 +133,10 @@ public class LegacyEvent
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18031a6d8;
+              goto LAB_180606d18;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   (**(code **)(*val + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                             (val,*(uint64 *)
@@ -144,11 +144,11 @@ public class LegacyEvent
                 }
                 else {
                   uVar6 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180002970(*(uint16 *)(lVar1 + 72),uVar6,val);
+                  FUN_180002280(*(uint16 *)(lVar1 + 72),uVar6,val);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   puVar5 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
@@ -158,20 +158,20 @@ public class LegacyEvent
                   (*(code *)*puVar5)(val,puVar5);
                 }
                 else {
-                  FUN_180005c70(lVar1,val);
+                  FUN_1800600c0(lVar1,val);
                 }
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_18031a6d8:
+        LAB_180606d18:
             (*pcVar2)(val,lVar1);
           }
           else {
-        LAB_18031a96e:
+        LAB_180606fae:
             (*pcVar2)(plVar3,val,lVar1);
           }
-        LAB_18031a979:
+        LAB_180606fb9:
           uVar13 = uVar13 + 1;
           if (uVar11 <= uVar13) {
             return;
@@ -179,8 +179,8 @@ public class LegacyEvent
         } while( true );
     }
 
-    // Token : 0x6000212
-    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
+    // Token : 0x60001F9
+    // RVA   : 0x604820   Offset: 0x603620   Length: 0x21
     public virtual IAsyncResult BeginInvoke(string val, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -190,8 +190,8 @@ public class LegacyEvent
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x6000213
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x60001FA
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

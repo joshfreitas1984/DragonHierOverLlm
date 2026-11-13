@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : CFX_SpawnSystem
-// Token : 0x20003C6
+// Token : 0x20003D3
 // ============================================================
 
 public class CFX_SpawnSystem
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E4E
+    // Token: 0x4001EE0
     private static CFX_SpawnSystem instance;
 
-    // Token: 0x4001E4F
+    // Token: 0x4001EE1
     public GameObject[] objectsToPreload;
 
-    // Token: 0x4001E50
+    // Token: 0x4001EE2
     public int[] objectsToPreloadTimes;
 
-    // Token: 0x4001E51
+    // Token: 0x4001EE3
     public bool hideObjectsInHierarchy;
 
-    // Token: 0x4001E52
+    // Token: 0x4001EE4
     private bool allObjectsLoaded;
 
-    // Token: 0x4001E53
+    // Token: 0x4001EE5
     private Dictionary<int, List<GameObject>> instantiatedObjects;
 
-    // Token: 0x4001E54
+    // Token: 0x4001EE6
     private Dictionary<int, int> poolCursors;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023FB
-    // RVA   : 0xB80B50   Offset: 0xB7FF50   Length: 0x532
+    // Token : 0x60024A5
+    // RVA   : 0x939E00   Offset: 0x938C00   Length: 0x532
     public static GameObject GetNextObject(GameObject sourceObj, bool activateObject)
     {
-        var pStatics = *(int64*)(DAT_181db4f88 + 184);
+        var pStatics = *(int64*)(DAT_181e95240 + 184);
         uint uVar1;
         bool cVar2;
         uint uVar3;
@@ -45,22 +45,22 @@ public class CFX_SpawnSystem
           local_res8[0] = Object.GetInstanceID(sourceObj,0);
           if ((*pStatics != 0) &&
              (lVar5 = *(int64 *)(*pStatics + 56)) != null) {
-            cVar2 = FUN_1808ab490(lVar5,local_res8[0],DAT_181dbaa10);
+            cVar2 = FUN_1806da450(lVar5,local_res8[0],DAT_181e9bfe8);
             if (!cVar2) {
-              plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+              plVar6 = (int64 *)FUN_1801dfd90(DAT_181e85e38,5);
               if (plVar6 != (int64 *)0) {
                 if (("[CFX_SpawnSystem.GetNextPoolObject()] Object hasn't been preloaded: " != 0) &&
                    (lVar5 = il2cpp_internal("[CFX_SpawnSystem.GetNextPoolObject()] Object hasn't been preloaded: ",*(uint64 *)(*plVar6 + 64)), lVar5 == null
                    )) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 lVar5 = "[CFX_SpawnSystem.GetNextPoolObject()] Object hasn't been preloaded: ";
                 if ((int)plVar6[3] == 0) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 plVar6[4] = "[CFX_SpawnSystem.GetNextPoolObject()] Object hasn't been preloaded: ";
                 il2cpp_internal(plVar6 + 4,lVar5);
@@ -69,12 +69,12 @@ public class CFX_SpawnSystem
                    (lVar7 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 if (*(uint32 *)(plVar6 + 3) < 2) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 plVar6[5] = lVar5;
                 il2cpp_internal(plVar6 + 5,lVar5);
@@ -83,13 +83,13 @@ public class CFX_SpawnSystem
                    )) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 lVar5 = " (ID:";
                 if (*(uint32 *)(plVar6 + 3) < 3) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 plVar6[6] = " (ID:";
                 il2cpp_internal(plVar6 + 6,lVar5);
@@ -98,12 +98,12 @@ public class CFX_SpawnSystem
                    (lVar7 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 if (*(uint32 *)(plVar6 + 3) < 4) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 plVar6[7] = lVar5;
                 il2cpp_internal(plVar6 + 7,lVar5);
@@ -112,7 +112,7 @@ public class CFX_SpawnSystem
                    )) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 lVar5 = ")";
                 if (4 < *(uint32 *)(plVar6 + 3)) {
@@ -124,32 +124,32 @@ public class CFX_SpawnSystem
                 }
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
             }
             else if ((*pStatics != 0) &&
                     (lVar5 = *(int64 *)(*pStatics + 56)) != null) {
-              uVar3 = FUN_181467b40(lVar5,local_res8[0],DAT_181dbb068);
+              uVar3 = FUN_18171b5b0(lVar5,local_res8[0],DAT_181e9c640);
               uVar1 = local_res8[0];
               if ((*pStatics != 0) &&
                  (lVar5 = *(int64 *)(*pStatics + 56)) != null) {
-                iVar4 = FUN_181467b40(lVar5,local_res8[0],DAT_181dbb068);
-                FUN_1808b2160(lVar5,uVar1,iVar4 + 1,DAT_181dbb178);
+                iVar4 = FUN_18171b5b0(lVar5,local_res8[0],DAT_181e9c640);
+                FUN_1806e7630(lVar5,uVar1,iVar4 + 1,DAT_181e9c750);
                 if ((*pStatics != 0) &&
                    (lVar5 = *(int64 *)(*pStatics + 56)) != null) {
-                  iVar4 = FUN_181467b40(lVar5,local_res8[0],DAT_181dbb068);
+                  iVar4 = FUN_18171b5b0(lVar5,local_res8[0],DAT_181e9c640);
                   if ((*pStatics != 0) &&
                      ((lVar5 = *(int64 *)(*pStatics + 48), lVar5 != null &&
-                      (lVar5 = FUN_1817da420(lVar5,local_res8[0],DAT_181db6fb8)) != null))) {
+                      (lVar5 = FUN_18171b450(lVar5,local_res8[0],DAT_181e98040)) != null))) {
                     if (*(int *)(lVar5 + 24) <= iVar4) {
                       if ((*pStatics == 0) ||
                          (lVar5 = *(int64 *)(*pStatics + 56)) == null
                          ) throw; // [null/range check failed]
-                      FUN_1808b2160(lVar5,local_res8[0],0,DAT_181dbb178);
+                      FUN_1806e7630(lVar5,local_res8[0],0,DAT_181e9c750);
                     }
                     if (((*pStatics != 0) &&
                         (lVar5 = *(int64 *)(*pStatics + 48)) != null)
-                       && (lVar5 = FUN_1817da420(lVar5,local_res8[0],DAT_181db6fb8)) != null) {
+                       && (lVar5 = FUN_18171b450(lVar5,local_res8[0],DAT_181e98040)) != null) {
                       if (*(uint32 *)(lVar5 + 24) <= uVar3) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
                       }
@@ -169,40 +169,40 @@ public class CFX_SpawnSystem
         }
     }
 
-    // Token : 0x60023FC
-    // RVA   : 0xB81090   Offset: 0xB80490   Length: 0x5E
+    // Token : 0x60024A6
+    // RVA   : 0x93A340   Offset: 0x939140   Length: 0x5E
     public static void PreloadObject(GameObject sourceObj, int poolSize)
     {
-        var pStatics = *(int64*)(DAT_181db4f88 + 184);
+        var pStatics = *(int64*)(DAT_181e95240 + 184);
         if (*pStatics != 0) {
           CFX_SpawnSystem.addObjectToPool(*pStatics,sourceObj,poolSize,0);
           return;
         }
     }
 
-    // Token : 0x60023FD
-    // RVA   : 0xB811F0   Offset: 0xB805F0   Length: 0x50
+    // Token : 0x60024A7
+    // RVA   : 0x93A4A0   Offset: 0x9392A0   Length: 0x50
     public static void UnloadObjects(GameObject sourceObj)
     {
-        var pStatics = *(int64*)(DAT_181db4f88 + 184);
+        var pStatics = *(int64*)(DAT_181e95240 + 184);
         if (*pStatics != 0) {
           CFX_SpawnSystem.removeObjectsFromPool(*pStatics,sourceObj,0);
           return;
         }
     }
 
-    // Token : 0x60023FE
-    // RVA   : 0xB81620   Offset: 0xB80A20   Length: 0x44
+    // Token : 0x60024A8
+    // RVA   : 0x93A8D0   Offset: 0x9396D0   Length: 0x44
     public static bool get_AllObjectsLoaded()
     {
-        var pStatics = *(int64*)(DAT_181db4f88 + 184);
+        var pStatics = *(int64*)(DAT_181e95240 + 184);
         if (*pStatics != 0) {
           return *(uint8 *)(*pStatics + 41);
         }
     }
 
-    // Token : 0x60023FF
-    // RVA   : 0xB81360   Offset: 0xB80760   Length: 0x2BA
+    // Token : 0x60024A9
+    // RVA   : 0x93A610   Offset: 0x939410   Length: 0x2BA
     private void addObjectToPool(GameObject sourceObject, int number)
     {
         long lVar1;
@@ -216,16 +216,16 @@ public class CFX_SpawnSystem
         if (sourceObject != null) {
           uVar3 = Object.GetInstanceID(sourceObject,0);
           if (this.instantiatedObjects != null) {
-            cVar2 = FUN_1808ab490(this.instantiatedObjects,uVar3,DAT_181db6ea8);
+            cVar2 = FUN_1806da450(this.instantiatedObjects,uVar3,DAT_181e97f30);
             if (cVar2) {
-        LAB_180b814ad:
+        LAB_18093a75d:
               iVar8 = 0;
               if (0 < number) {
                 do {
-                  lVar5 = Object.Instantiate(sourceObject,DAT_181d928b0);
+                  lVar5 = Object.Instantiate(sourceObject,DAT_181e75ef8);
                   if (lVar5 == null) throw; // [null/range check failed]
                   GameObject.SetActive(lVar5,0,0);
-                  lVar6 = GameObject.GetComponentsInChildren(lVar5,1,DAT_181d75648);
+                  lVar6 = GameObject.GetComponentsInChildren(lVar5,1,DAT_181e58710);
                   uVar7 = 0;
                   while( true ) {
                     if (lVar6 == null) throw; // [null/range check failed]
@@ -233,14 +233,14 @@ public class CFX_SpawnSystem
                     if (*(uint32 *)(lVar6 + 24) <= uVar7) {
                       uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar4,0);
+                      FUN_1801e02d0(uVar4,0);
                     }
                     lVar1 = lVar6[uVar7];
                     if (lVar1 == null) throw; // [null/range check failed]
                     *(uint8 *)(lVar1 + 24) = 1;
                     uVar7 = uVar7 + 1;
                   }
-                  lVar6 = GameObject.GetComponentsInChildren(lVar5,1,DAT_181d756d0);
+                  lVar6 = GameObject.GetComponentsInChildren(lVar5,1,DAT_181e58798);
                   uVar7 = 0;
                   while( true ) {
                     if (lVar6 == null) throw; // [null/range check failed]
@@ -248,7 +248,7 @@ public class CFX_SpawnSystem
                     if (*(uint32 *)(lVar6 + 24) <= uVar7) {
                       uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar4,0);
+                      FUN_1801e02d0(uVar4,0);
                     }
                     lVar1 = lVar6[uVar7];
                     if (lVar1 == null) throw; // [null/range check failed]
@@ -256,9 +256,9 @@ public class CFX_SpawnSystem
                     uVar7 = uVar7 + 1;
                   }
                   if ((this.instantiatedObjects == null) ||
-                     (lVar6 = FUN_1817da420(this.instantiatedObjects,uVar3,DAT_181db6fb8), lVar6 == null
+                     (lVar6 = FUN_18171b450(this.instantiatedObjects,uVar3,DAT_181e98040), lVar6 == null
                      )) throw; // [null/range check failed]
-                  FUN_18181e6b0(lVar6,lVar5);
+                  FUN_18175de30(lVar6,lVar5);
                   if (this.hideObjectsInHierarchy) {
                     Object.set_hideFlags(lVar5,1);
                   }
@@ -268,21 +268,21 @@ public class CFX_SpawnSystem
               return;
             }
             lVar5 = this.instantiatedObjects;
-            uVar4 = il2cpp_internal(DAT_181d92f70);
-            FUN_181330100(uVar4,DAT_181d892b0);
+            uVar4 = il2cpp_internal(DAT_181e72f38);
+            FUN_1810f3480(uVar4,DAT_181e6b5f8);
             if (lVar5 != null) {
-              FUN_1808ab370(lVar5,uVar3,uVar4,DAT_181db6e20);
+              FUN_1806da2f0(lVar5,uVar3,uVar4,DAT_181e97ea8);
               if (this.poolCursors != null) {
-                FUN_1808ab370(this.poolCursors,uVar3,0,DAT_181dba900);
-                goto LAB_180b814ad;
+                FUN_1806da2f0(this.poolCursors,uVar3,0,DAT_181e9bed8);
+                goto LAB_18093a75d;
               }
             }
           }
         }
     }
 
-    // Token : 0x6002400
-    // RVA   : 0xB81670   Offset: 0xB80A70   Length: 0x489
+    // Token : 0x60024AA
+    // RVA   : 0x93A920   Offset: 0x939720   Length: 0x489
     private void removeObjectsFromPool(GameObject sourceObject)
     {
         bool cVar1;
@@ -294,22 +294,22 @@ public class CFX_SpawnSystem
         if (sourceObject != null) {
           local_res10[0] = Object.GetInstanceID(sourceObject,0);
           if (this.instantiatedObjects != null) {
-            cVar1 = FUN_1808ab490(this.instantiatedObjects,local_res10[0],DAT_181db6ea8);
+            cVar1 = FUN_1806da450(this.instantiatedObjects,local_res10[0],DAT_181e97f30);
             if (!cVar1) {
-              plVar4 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+              plVar4 = (int64 *)FUN_1801dfd90(DAT_181e85e38,5);
               if (plVar4 != (int64 *)0) {
                 if (("[CFX_SpawnSystem.removeObjectsFromPool()] There aren't any preloaded object for: " != 0) &&
                    (lVar2 = il2cpp_internal("[CFX_SpawnSystem.removeObjectsFromPool()] There aren't any preloaded object for: ",*(uint64 *)(*plVar4 + 64)), lVar2 == null
                    )) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 lVar2 = "[CFX_SpawnSystem.removeObjectsFromPool()] There aren't any preloaded object for: ";
                 if ((int)plVar4[3] == 0) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 plVar4[4] = "[CFX_SpawnSystem.removeObjectsFromPool()] There aren't any preloaded object for: ";
                 il2cpp_internal(plVar4 + 4,lVar2);
@@ -318,12 +318,12 @@ public class CFX_SpawnSystem
                    (lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar4 + 64))) == null) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 if (*(uint32 *)(plVar4 + 3) < 2) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 plVar4[5] = lVar2;
                 il2cpp_internal(plVar4 + 5,lVar2);
@@ -332,13 +332,13 @@ public class CFX_SpawnSystem
                    )) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 lVar2 = " (ID:";
                 if (*(uint32 *)(plVar4 + 3) < 3) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 plVar4[6] = " (ID:";
                 il2cpp_internal(plVar4 + 6,lVar2);
@@ -347,12 +347,12 @@ public class CFX_SpawnSystem
                    (lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar4 + 64))) == null) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 if (*(uint32 *)(plVar4 + 3) < 4) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 plVar4[7] = lVar2;
                 il2cpp_internal(plVar4 + 7,lVar2);
@@ -361,7 +361,7 @@ public class CFX_SpawnSystem
                    )) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 lVar2 = ")";
                 if (4 < *(uint32 *)(plVar4 + 3)) {
@@ -373,36 +373,36 @@ public class CFX_SpawnSystem
                 }
                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
+                FUN_1801e02d0(uVar5,0);
               }
             }
             else if ((this.instantiatedObjects != null) &&
-                    (lVar2 = FUN_1817da420(this.instantiatedObjects,local_res10[0],DAT_181db6fb8),
+                    (lVar2 = FUN_18171b450(this.instantiatedObjects,local_res10[0],DAT_181e98040),
                     lVar2 != null)) {
               uVar6 = *(int *)(lVar2 + 24) - 1;
               if (-1 < (int)uVar6) {
                 lVar2 = (int64)(int)uVar6 * 8 + 32;
                 do {
                   if ((this.instantiatedObjects == null) ||
-                     (lVar3 = FUN_1817da420(this.instantiatedObjects,local_res10[0],DAT_181db6fb8),
+                     (lVar3 = FUN_18171b450(this.instantiatedObjects,local_res10[0],DAT_181e98040),
                      lVar3 == null)) throw; // [null/range check failed]
                   if (*(uint32 *)(lVar3 + 24) <= uVar6) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                   }
                   uVar5 = *(uint64 *)(lVar2 + *(int64 *)(lVar3 + 16));
                   if ((this.instantiatedObjects == null) ||
-                     (lVar3 = FUN_1817da420(this.instantiatedObjects,local_res10[0],DAT_181db6fb8),
+                     (lVar3 = FUN_18171b450(this.instantiatedObjects,local_res10[0],DAT_181e98040),
                      lVar3 == null)) throw; // [null/range check failed]
-                  FUN_181823ba0(lVar3,uVar6,DAT_181d896b0);
+                  FUN_181763390(lVar3,uVar6,DAT_181e6b9f0);
                   Object.Destroy(uVar5,0);
                   lVar2 = lVar2 + -8;
                   uVar6 = uVar6 - 1;
                 } while (-1 < (int)uVar6);
               }
               if (this.instantiatedObjects != null) {
-                FUN_18175ddb0(this.instantiatedObjects,local_res10[0],DAT_181db6f30);
+                FUN_181687ae0(this.instantiatedObjects,local_res10[0],DAT_181e97fb8);
                 if (this.poolCursors != null) {
-                  FUN_18145e460(this.poolCursors,local_res10[0],DAT_181dbad38);
+                  FUN_181687e20(this.poolCursors,local_res10[0],DAT_181e9c310);
                   return;
                 }
               }
@@ -411,27 +411,27 @@ public class CFX_SpawnSystem
         }
     }
 
-    // Token : 0x6002401
-    // RVA   : 0xB80A70   Offset: 0xB7FE70   Length: 0xDC
+    // Token : 0x60024AB
+    // RVA   : 0x939D20   Offset: 0x938B20   Length: 0xDC
     private void Awake()
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181db4f88 + 184);
+        uVar1 = **(uint64 **)(DAT_181e95240 + 184);
         cVar3 = Object.op_Inequality(uVar1,0,0);
         if (cVar3) {
           Debug.LogWarning("CFX_SpawnSystem: There should only be one instance of CFX_SpawnSystem per Scene!",0);
         }
-        puVar2 = *(uint64 **)(DAT_181db4f88 + 184);
+        puVar2 = *(uint64 **)(DAT_181e95240 + 184);
         *puVar2 = this;
         il2cpp_internal(puVar2,this);
     }
 
-    // Token : 0x6002402
-    // RVA   : 0xB810F0   Offset: 0xB804F0   Length: 0xF8
+    // Token : 0x60024AC
+    // RVA   : 0x93A3A0   Offset: 0x9391A0   Length: 0xF8
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181db4f88 + 184);
+        var pStatics = *(int64*)(DAT_181e95240 + 184);
         uint uVar1;
         long lVar2;
         ulong uVar3;
@@ -448,7 +448,7 @@ public class CFX_SpawnSystem
           if (*(uint32 *)(lVar2 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar3,0);
+            FUN_1801e02d0(uVar3,0);
           }
           uVar3 = lVar2[uVar4];
           lVar2 = this.objectsToPreloadTimes;
@@ -456,7 +456,7 @@ public class CFX_SpawnSystem
           if (*(uint32 *)(lVar2 + 24) <= uVar4) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar3,0);
+            FUN_1801e02d0(uVar3,0);
           }
           uVar1 = lVar2[uVar4];
           if (*pStatics == 0) break;
@@ -466,22 +466,22 @@ public class CFX_SpawnSystem
         }
     }
 
-    // Token : 0x6002403
-    // RVA   : 0xB81250   Offset: 0xB80650   Length: 0x10D
+    // Token : 0x60024AD
+    // RVA   : 0x93A500   Offset: 0x939300   Length: 0x10D
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = FUN_1800d60b0(DAT_181da2a38,0);
+        uVar1 = FUN_1801dfd90(DAT_181e82b00,0);
         this.objectsToPreload = uVar1;
-        uVar1 = FUN_1800d60b0(DAT_181da35b8,0);
+        uVar1 = FUN_1801dfd90(DAT_181e836f8,0);
         this.objectsToPreloadTimes = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d80680);
-        FUN_1808b1370(uVar1,DAT_181db6d98);
+        uVar1 = il2cpp_internal(DAT_181e60360);
+        FUN_1806e5bc0(uVar1,DAT_181e97e20);
         this.instantiatedObjects = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d81000);
-        FUN_1808b1370(uVar1,DAT_181dba768);
+        uVar1 = il2cpp_internal(DAT_181e60dd0);
+        FUN_1806e5bc0(uVar1,DAT_181e9bd40);
         this.poolCursors = uVar1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

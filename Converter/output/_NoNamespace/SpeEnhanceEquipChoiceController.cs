@@ -1,25 +1,25 @@
 // ============================================================
 // Type  : SpeEnhanceEquipChoiceController
-// Token : 0x2000364
+// Token : 0x2000371
 // ============================================================
 
 public class SpeEnhanceEquipChoiceController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BCC
+    // Token: 0x4001C5E
     public HeroSpeAddData speAddData;
 
-    // Token: 0x4001BCD
+    // Token: 0x4001C5F
     public bool isBaseAdd;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002152
-    // RVA   : 0x98EEA0   Offset: 0x98E2A0   Length: 0x66
+    // Token : 0x60021FC
+    // RVA   : 0x6B6610   Offset: 0x6B5410   Length: 0x66
     public void OnClick()
     {
         long lVar1;
         ulong uVar2;
-        lVar1 = **(int64 **)(DAT_181da4268 + 184);
+        lVar1 = **(int64 **)(DAT_181e846a8 + 184);
         uVar2 = Component.get_gameObject(this,0);
         if (lVar1 != null) {
           SpeEnhanceEquipController.SetNowChoice(lVar1,uVar2,0);
@@ -27,11 +27,11 @@ public class SpeEnhanceEquipChoiceController
         }
     }
 
-    // Token : 0x6002153
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60021FD
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

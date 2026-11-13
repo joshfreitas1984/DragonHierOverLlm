@@ -1,37 +1,37 @@
 // ============================================================
 // Type  : QuickTravelBigMapSpriteController
-// Token : 0x200032F
+// Token : 0x2000339
 // ============================================================
 
 public class QuickTravelBigMapSpriteController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A7C
+    // Token: 0x4001AF6
     private static QuickTravelBigMapSpriteController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600201A
-    // RVA   : 0xD002C0   Offset: 0xCFF6C0   Length: 0x36
+    // Token : 0x60020B9
+    // RVA   : 0xA58F20   Offset: 0xA57D20   Length: 0x36
     public static QuickTravelBigMapSpriteController get_Instance()
     {
-        return **(uint64 **)(DAT_181d93f98 + 184);
+        return **(uint64 **)(DAT_181e74368 + 184);
     }
 
-    // Token : 0x600201B
-    // RVA   : 0xCFFDD0   Offset: 0xCFF1D0   Length: 0x43
+    // Token : 0x60020BA
+    // RVA   : 0xA58A30   Offset: 0xA57830   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d93f98 + 184);
+        puVar1 = *(uint64 **)(DAT_181e74368 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x600201C
-    // RVA   : 0xCFFE20   Offset: 0xCFF220   Length: 0x301
+    // Token : 0x60020BB
+    // RVA   : 0xA58A80   Offset: 0xA57880   Length: 0x301
     public virtual void OnDrag(PointerEventData eventData)
     {
         var plVar2 = *(int64*)(lVar2 + 184);
-        var pStatics = *(int64*)(DAT_181d94018 + 184);
+        var pStatics = *(int64*)(DAT_181e743e8 + 184);
         float fVar1;
         long lVar2;
         ulong uVar3;
@@ -103,14 +103,14 @@ public class QuickTravelBigMapSpriteController
         }
     }
 
-    // Token : 0x600201D
-    // RVA   : 0xD00130   Offset: 0xCFF530   Length: 0x186
+    // Token : 0x60020BC
+    // RVA   : 0xA58D90   Offset: 0xA57B90   Length: 0x186
     public virtual void OnScroll(PointerEventData eventData)
     {
         long lVar1;
         float fVar4;
         float fVar5;
-        lVar1 = **(int64 **)(DAT_181d94018 + 184);
+        lVar1 = **(int64 **)(DAT_181e743e8 + 184);
         if ((eventData != null) && (fVar5 = *(float *)(eventData + 0x13c), lVar1 != null)) {
           plVar2 = *(int64 **)(lVar1 + 144);
           if (plVar2 != (int64 *)0) {
@@ -126,7 +126,7 @@ public class QuickTravelBigMapSpriteController
                 if (fVar4 != fVar5) {
                   plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/摩擦",0);
                   plVar3 = (int64 *)0;
-                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
+                  if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181e8f4a0)) {
                     plVar3 = plVar2;
                   }
                   NGUITools.PlaySound(plVar3,0x3d75c28f,0);
@@ -138,11 +138,11 @@ public class QuickTravelBigMapSpriteController
         }
     }
 
-    // Token : 0x600201E
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60020BD
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

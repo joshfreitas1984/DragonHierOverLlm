@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : WindowAutoYaw
-// Token : 0x2000027
+// Token : 0x2000026
 // ============================================================
 
 public class WindowAutoYaw
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000B4
+    // Token: 0x4000094
     public int updateOrder;
 
-    // Token: 0x40000B5
+    // Token: 0x4000095
     public Camera uiCamera;
 
-    // Token: 0x40000B6
+    // Token: 0x4000096
     public float yawAmount;
 
-    // Token: 0x40000B7
+    // Token: 0x4000097
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000099
-    // RVA   : 0x9C9D00   Offset: 0x9C9100   Length: 0x3E
+    // Token : 0x6000080
+    // RVA   : 0x714810   Offset: 0x713610   Length: 0x3E
     private void OnDisable()
     {
         long lVar1;
@@ -40,8 +40,8 @@ public class WindowAutoYaw
         }
     }
 
-    // Token : 0x600009A
-    // RVA   : 0x9C9D40   Offset: 0x9C9140   Length: 0xEC
+    // Token : 0x6000081
+    // RVA   : 0x714850   Offset: 0x713650   Length: 0xEC
     private void OnEnable()
     {
         bool cVar1;
@@ -54,7 +54,7 @@ public class WindowAutoYaw
           lVar3 = Component.get_gameObject(this,0);
           if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar2 = GameObject.get_layer(lVar3,0);
           uVar4 = NGUITools.FindCameraForLayer(uVar2,0);
@@ -64,8 +64,8 @@ public class WindowAutoYaw
         this.mTrans = uVar4;
     }
 
-    // Token : 0x600009B
-    // RVA   : 0x9C9E30   Offset: 0x9C9230   Length: 0x113
+    // Token : 0x6000082
+    // RVA   : 0x714940   Offset: 0x713740   Length: 0x113
     private void Update()
     {
         ulong uVar1;
@@ -104,14 +104,14 @@ public class WindowAutoYaw
         }
     }
 
-    // Token : 0x600009C
-    // RVA   : 0x9C9F50   Offset: 0x9C9350   Length: 0xE
+    // Token : 0x6000083
+    // RVA   : 0x714A60   Offset: 0x713860   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1809c9f50(int64 this)
+        void FUN_180714a60(int64 this)
         {
         this.yawAmount = 0x41a00000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

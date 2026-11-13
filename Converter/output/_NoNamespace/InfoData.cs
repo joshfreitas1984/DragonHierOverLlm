@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : InfoData
-// Token : 0x20001CE
+// Token : 0x20001D0
 // ============================================================
 
 public class InfoData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C69
+    // Token: 0x4000C7C
     public InfoType infoType;
 
-    // Token: 0x4000C6A
+    // Token: 0x4000C7D
     public TimeData infotime;
 
-    // Token: 0x4000C6B
+    // Token: 0x4000C7E
     public string infoText;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000EB2
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6000EB8
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         long lVar1;
@@ -33,8 +33,8 @@ public class InfoData
         }
     }
 
-    // Token : 0x6000EB3
-    // RVA   : 0xC98910   Offset: 0xC97D10   Length: 0xCA
+    // Token : 0x6000EB9
+    // RVA   : 0xA1A570   Offset: 0xA19370   Length: 0xCA
     public void /*ctor*/(InfoType type, TimeData time, string text)
     {
         long lVar1;
@@ -50,8 +50,8 @@ public class InfoData
         }
     }
 
-    // Token : 0x6000EB4
-    // RVA   : 0xC989E0   Offset: 0xC97DE0   Length: 0x151
+    // Token : 0x6000EBA
+    // RVA   : 0xA1A640   Offset: 0xA19440   Length: 0x151
     public void /*ctor*/(InfoType type, string text)
     {
         long lVar1;
@@ -67,8 +67,8 @@ public class InfoData
         }
     }
 
-    // Token : 0x6000EB5
-    // RVA   : 0xC98790   Offset: 0xC97B90   Length: 0x175
+    // Token : 0x6000EBB
+    // RVA   : 0xA1A3F0   Offset: 0xA191F0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -79,13 +79,13 @@ public class InfoData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -97,11 +97,11 @@ public class InfoData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 

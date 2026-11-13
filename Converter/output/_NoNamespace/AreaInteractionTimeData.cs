@@ -1,28 +1,28 @@
 // ============================================================
 // Type  : AreaInteractionTimeData
-// Token : 0x20001F7
+// Token : 0x20001F9
 // ============================================================
 
 public class AreaInteractionTimeData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E02
+    // Token: 0x4000E16
     public int exploreTime;
 
-    // Token: 0x4000E03
+    // Token: 0x4000E17
     public int patrolTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FA6
-    // RVA   : 0x7ECC40   Offset: 0x7EC040   Length: 0xF
+    // Token : 0x6000FAF
+    // RVA   : 0x51EFB0   Offset: 0x51DDB0   Length: 0xF
     public void ResetTime()
     {
         this.exploreTime = 1;
         this.patrolTime = 1;
     }
 
-    // Token : 0x6000FA7
-    // RVA   : 0x7ECC50   Offset: 0x7EC050   Length: 0x24
+    // Token : 0x6000FB0
+    // RVA   : 0x51EFC0   Offset: 0x51DDC0   Length: 0x24
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
@@ -30,8 +30,8 @@ public class AreaInteractionTimeData
         this.patrolTime = 1;
     }
 
-    // Token : 0x6000FA8
-    // RVA   : 0x7ECAC0   Offset: 0x7EBEC0   Length: 0x175
+    // Token : 0x6000FB1
+    // RVA   : 0x51EE30   Offset: 0x51DC30   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -42,13 +42,13 @@ public class AreaInteractionTimeData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -60,11 +60,11 @@ public class AreaInteractionTimeData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 

@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : _ObjectsMakeBase
-// Token : 0x20003D4
+// Token : 0x20003E1
 // ============================================================
 
 public class _ObjectsMakeBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EB4
+    // Token: 0x4001F46
     public GameObject[] m_makeObjs;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002433
-    // RVA   : 0x9D94B0   Offset: 0x9D88B0   Length: 0x12
+    // Token : 0x60024DD
+    // RVA   : 0x7247F0   Offset: 0x7235F0   Length: 0x12
     public float GetRandomValue(float value)
     {
-        void FUN_1809d94b0(uint64 this,uint32 value)
+        void FUN_1807247f0(uint64 this,uint32 value)
         {
         Random.Range(value ^ 0x80000000,value,0);
     }
 
-    // Token : 0x6002434
-    // RVA   : 0x9D94A0   Offset: 0x9D88A0   Length: 0xB
+    // Token : 0x60024DE
+    // RVA   : 0x7247E0   Offset: 0x7235E0   Length: 0xB
     public float GetRandomValue2(float value)
     {
-        void FUN_1809d94a0(uint64 this,uint64 value)
+        void FUN_1807247e0(uint64 this,uint64 value)
         {
         Random.Range(0,value,0);
     }
 
-    // Token : 0x6002435
-    // RVA   : 0x9D9550   Offset: 0x9D8950   Length: 0xF3
+    // Token : 0x60024DF
+    // RVA   : 0x724890   Offset: 0x723690   Length: 0xF3
     public Vector3 GetRandomVector(Vector3 value)
     {
         ulong uVar1;
@@ -50,8 +50,8 @@ public class _ObjectsMakeBase
         return this;
     }
 
-    // Token : 0x6002436
-    // RVA   : 0x9D94D0   Offset: 0x9D88D0   Length: 0x72
+    // Token : 0x60024E0
+    // RVA   : 0x724810   Offset: 0x723610   Length: 0x72
     public Vector3 GetRandomVector2(Vector3 value)
     {
         uint64 *
@@ -72,11 +72,11 @@ public class _ObjectsMakeBase
         return this;
     }
 
-    // Token : 0x6002437
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60024E1
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

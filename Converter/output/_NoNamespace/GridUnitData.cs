@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : GridUnitData
-// Token : 0x200018C
+// Token : 0x200018E
 // ============================================================
 
 public class GridUnitData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000ACA
+    // Token: 0x4000AD7
     public int mapID;
 
-    // Token: 0x4000ACB
+    // Token: 0x4000AD8
     private GridType gridType;
 
-    // Token: 0x4000ACC
+    // Token: 0x4000AD9
     public BattleUnit battleUnit;
 
-    // Token: 0x4000ACD
+    // Token: 0x4000ADA
     public int passes;
 
-    // Token: 0x4000ACE
+    // Token: 0x4000ADB
     public int row;
 
-    // Token: 0x4000ACF
+    // Token: 0x4000ADC
     public int column;
 
-    // Token: 0x4000AD0
+    // Token: 0x4000ADD
     public ObstacleData obstale;
 
-    // Token: 0x4000AD1
+    // Token: 0x4000ADE
     public SpeGridObjData speGridObjData;
 
-    // Token: 0x4000AD2
+    // Token: 0x4000ADF
     public object tempRef;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000CAF
-    // RVA   : 0x873BA0   Offset: 0x872FA0   Length: 0xA0
+    // Token : 0x6000CAE
+    // RVA   : 0x5ABFB0   Offset: 0x5AADB0   Length: 0xA0
     public void /*ctor*/(int mapID, int row, int column)
     {
         ulong uVar1;
@@ -47,15 +47,15 @@ public class GridUnitData
         this.mapID = mapID;
     }
 
-    // Token : 0x6000CB0
-    // RVA   : 0x2A3D60   Offset: 0x2A3160   Length: 0x4
+    // Token : 0x6000CAF
+    // RVA   : 0x528F30   Offset: 0x527D30   Length: 0x4
     public GridType get_GridType()
     {
         return this.gridType;
     }
 
-    // Token : 0x6000CB1
-    // RVA   : 0x873F90   Offset: 0x873390   Length: 0x21
+    // Token : 0x6000CB0
+    // RVA   : 0x5AC3A0   Offset: 0x5AB1A0   Length: 0x21
     public void set_GridType(GridType value)
     {
         this.gridType = value;
@@ -66,22 +66,22 @@ public class GridUnitData
         this.passes = 0;
     }
 
-    // Token : 0x6000CB2
-    // RVA   : 0x873C40   Offset: 0x873040   Length: 0x101
+    // Token : 0x6000CB1
+    // RVA   : 0x5AC050   Offset: 0x5AAE50   Length: 0x101
     public GameObject get_GridObj()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e90420 + 184) + 80);
         if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 0x100)) == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (**(uint32 **)(lVar1 + 16) <= this.column) {
           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar3,0);
+          FUN_1801e02d0(uVar3,0);
         }
         lVar2 = *(int64 *)(*(uint32 **)(lVar1 + 16) + 4);
         if (this.row < (uint32)lVar2) {
@@ -93,39 +93,39 @@ public class GridUnitData
         uVar3 = il2cpp_internal();
     }
 
-    // Token : 0x6000CB3
-    // RVA   : 0x873D50   Offset: 0x873150   Length: 0x119
+    // Token : 0x6000CB2
+    // RVA   : 0x5AC160   Offset: 0x5AAF60   Length: 0x119
     public GridUnitController get_GridUnitController()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e90420 + 184) + 80);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 0x100)) != null) {
           if (**(uint32 **)(lVar1 + 16) <= this.column) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar3,0);
+            FUN_1801e02d0(uVar3,0);
           }
           lVar2 = *(int64 *)(*(uint32 **)(lVar1 + 16) + 4);
           if ((uint32)lVar2 <= this.row) {
             uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar3,0);
+            FUN_1801e02d0(uVar3,0);
           }
           lVar1 = *(int64 *)
                    (lVar1 + 32 +
                    ((int)this.column * lVar2 + (int64)(int)this.row) * 8
                    );
           if (lVar1 != null) {
-            GameObject.GetComponent(lVar1,DAT_181d71820);
+            GameObject.GetComponent(lVar1,DAT_181e548e8);
             return;
           }
         }
     }
 
-    // Token : 0x6000CB4
-    // RVA   : 0x873A10   Offset: 0x872E10   Length: 0x4D
+    // Token : 0x6000CB3
+    // RVA   : 0x5ABE20   Offset: 0x5AAC20   Length: 0x4D
     public int Distance(GridUnitData target)
     {
         int iVar1;
@@ -137,8 +137,8 @@ public class GridUnitData
         }
     }
 
-    // Token : 0x6000CB5
-    // RVA   : 0x873B20   Offset: 0x872F20   Length: 0x39
+    // Token : 0x6000CB4
+    // RVA   : 0x5ABF30   Offset: 0x5AAD30   Length: 0x39
     public void OnEnter(BattleUnit battleUnit)
     {
         long lVar1;
@@ -150,8 +150,8 @@ public class GridUnitData
         }
     }
 
-    // Token : 0x6000CB6
-    // RVA   : 0x873B60   Offset: 0x872F60   Length: 0x3F
+    // Token : 0x6000CB5
+    // RVA   : 0x5ABF70   Offset: 0x5AAD70   Length: 0x3F
     public void OnLeave()
     {
         long lVar1;
@@ -163,8 +163,8 @@ public class GridUnitData
         }
     }
 
-    // Token : 0x6000CB7
-    // RVA   : 0x873E70   Offset: 0x873270   Length: 0x6E
+    // Token : 0x6000CB6
+    // RVA   : 0x5AC280   Offset: 0x5AB080   Length: 0x6E
     public bool isEmpty()
     {
         ulong uVar1;
@@ -180,14 +180,14 @@ public class GridUnitData
               return this.speGridObjData.speGridObjType == null;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
         return false;
     }
 
-    // Token : 0x6000CB8
-    // RVA   : 0x873EE0   Offset: 0x8732E0   Length: 0xAE
+    // Token : 0x6000CB7
+    // RVA   : 0x5AC2F0   Offset: 0x5AB0F0   Length: 0xAE
     public bool isEmpty(bool includeSpeObj)
     {
         ulong uVar1;
@@ -203,14 +203,14 @@ public class GridUnitData
               return this.speGridObjData.speGridObjType == null;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
         return false;
     }
 
-    // Token : 0x6000CB9
-    // RVA   : 0x873A60   Offset: 0x872E60   Length: 0xB4
+    // Token : 0x6000CB8
+    // RVA   : 0x5ABE70   Offset: 0x5AAC70   Length: 0xB4
     public override bool Equals(object obj)
     {
         long lVar1;
@@ -218,9 +218,9 @@ public class GridUnitData
         if (obj != (int64 *)0) {
           lVar1 = *obj;
           in_RAX = 0;
-          if ((*(byte *)(DAT_181d748f0 + 300) <= *(byte *)(lVar1 + 300)) &&
+          if ((*(byte *)(DAT_181e54498 + 300) <= *(byte *)(lVar1 + 300)) &&
              (in_RAX = *(uint64 *)(lVar1 + 200),
-             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(DAT_181d748f0 + 300) * 8) == DAT_181d748f0)
+             *(int64 *)((in_RAX - 8) + (uint64)*(byte *)(DAT_181e54498 + 300) * 8) == DAT_181e54498)
              ) {
             in_RAX = (uint64)this.mapID;
             if ((*(uint32 *)(obj + 2) == this.mapID) &&

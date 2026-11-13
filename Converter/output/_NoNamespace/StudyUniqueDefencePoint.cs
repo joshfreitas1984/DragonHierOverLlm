@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : StudyUniqueDefencePoint
-// Token : 0x2000391
+// Token : 0x200039E
 // ============================================================
 
 public class StudyUniqueDefencePoint
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D34
+    // Token: 0x4001DC6
     public List<GameObject> insideObjs;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60022AD
-    // RVA   : 0xFE5650   Offset: 0xFE4A50   Length: 0x65
+    // Token : 0x6002357
+    // RVA   : 0xDB6710   Offset: 0xDB5510   Length: 0x65
     public void OnTriggerEnter2D(Collider2D other)
     {
         long lVar1;
@@ -20,14 +20,14 @@ public class StudyUniqueDefencePoint
         if (other != null) {
           uVar2 = Component.get_gameObject(other,0);
           if (lVar1 != null) {
-            FUN_18181e6b0(lVar1,uVar2,DAT_181d893b0);
+            FUN_18175de30(lVar1,uVar2,DAT_181e6b6f8);
             return;
           }
         }
     }
 
-    // Token : 0x60022AE
-    // RVA   : 0xFE56C0   Offset: 0xFE4AC0   Length: 0x65
+    // Token : 0x6002358
+    // RVA   : 0xDB6780   Offset: 0xDB5580   Length: 0x65
     public void OnTriggerExit2D(Collider2D other)
     {
         long lVar1;
@@ -36,17 +36,17 @@ public class StudyUniqueDefencePoint
         if (other != null) {
           uVar2 = Component.get_gameObject(other,0);
           if (lVar1 != null) {
-            FUN_1817ef410(lVar1,uVar2,DAT_181d89630);
+            FUN_181665e90(lVar1,uVar2,DAT_181e6b978);
             return;
           }
         }
     }
 
-    // Token : 0x60022AF
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002359
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

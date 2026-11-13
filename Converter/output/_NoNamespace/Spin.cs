@@ -1,37 +1,37 @@
 // ============================================================
 // Type  : Spin
-// Token : 0x2000023
+// Token : 0x2000022
 // ============================================================
 
 public class Spin
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000A9
+    // Token: 0x4000089
     public Vector3 rotationsPerSecond;
 
-    // Token: 0x40000AA
+    // Token: 0x400008A
     public bool ignoreTimeScale;
 
-    // Token: 0x40000AB
+    // Token: 0x400008B
     private Rigidbody mRb;
 
-    // Token: 0x40000AC
+    // Token: 0x400008C
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600008C
-    // RVA   : 0xC5E0A0   Offset: 0xC5D4A0   Length: 0x61
+    // Token : 0x6000073
+    // RVA   : 0xA072C0   Offset: 0xA060C0   Length: 0x61
     private void Start()
     {
         ulong uVar1;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d950f8);
+        uVar1 = Component.GetComponent(this,DAT_181e78438);
         this.mRb = uVar1;
     }
 
-    // Token : 0x600008D
-    // RVA   : 0xC5E110   Offset: 0xC5D510   Length: 0x88
+    // Token : 0x6000074
+    // RVA   : 0xA07330   Offset: 0xA06130   Length: 0x88
     private void Update()
     {
         ulong uVar1;
@@ -50,8 +50,8 @@ public class Spin
         }
     }
 
-    // Token : 0x600008E
-    // RVA   : 0xC5E020   Offset: 0xC5D420   Length: 0x7C
+    // Token : 0x6000075
+    // RVA   : 0xA07240   Offset: 0xA06040   Length: 0x7C
     private void FixedUpdate()
     {
         ulong uVar1;
@@ -65,8 +65,8 @@ public class Spin
         }
     }
 
-    // Token : 0x600008F
-    // RVA   : 0xC5DE80   Offset: 0xC5D280   Length: 0x194
+    // Token : 0x6000076
+    // RVA   : 0xA070A0   Offset: 0xA05EA0   Length: 0x194
     public void ApplyDelta(float delta)
     {
         ulong uVar1;
@@ -93,9 +93,9 @@ public class Spin
         if (!cVar5) {
           lVar2 = this.mRb;
           if (lVar2 == null) {
-        LAB_180c5e00f:
+        LAB_180a0722f:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           local_38 = uVar3;
           uStack_30 = uVar4;
@@ -110,7 +110,7 @@ public class Spin
         }
         else {
           lVar2 = this.mTrans;
-          if (lVar2 == null) goto LAB_180c5e00f;
+          if (lVar2 == null) goto LAB_180a0722f;
           local_38 = uVar3;
           uStack_30 = uVar4;
           puVar6 = (uint64 *)Transform.get_rotation(local_28,lVar2,0);
@@ -124,13 +124,13 @@ public class Spin
         }
     }
 
-    // Token : 0x6000090
-    // RVA   : 0xC5E1A0   Offset: 0xC5D5A0   Length: 0x31
+    // Token : 0x6000077
+    // RVA   : 0xA073C0   Offset: 0xA061C0   Length: 0x31
     public void /*ctor*/()
     {
         this.rotationsPerSecond = 0x3dcccccd00000000;
         *(uint32 *)(this + 32) = 0;
-        FUN_18044ef50(0,0);
+        FUN_180ae8740(0,0);
     }
 
 }

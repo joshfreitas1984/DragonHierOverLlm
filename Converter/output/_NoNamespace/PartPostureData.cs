@@ -1,99 +1,178 @@
 // ============================================================
 // Type  : PartPostureData
-// Token : 0x2000229
+// Token : 0x200022B
 // ============================================================
 
 public class PartPostureData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001163
+    // Token: 0x4001179
     public List<float> partPosture;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001289
-    // RVA   : 0xB96DB0   Offset: 0xB961B0   Length: 0xFC
+    // Token : 0x600129A
+    // RVA   : 0x913C10   Offset: 0x912A10   Length: 0xFC
     public void /*ctor*/()
     {
-        var plVar5 = *(int64*)(lVar5 + 184);
-        long lVar2;
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
+        bool cVar2;
         long lVar3;
-        bool cVar4;
+        long lVar4;
         long lVar5;
-        long lVar6;
-        ulong uVar7;
-        int iVar8;
-        uint uVar9;
+        ulong uVar6;
+        long lVar8;
+        int iVar9;
+        uint uVar10;
+        int iVar11;
+        uint[] local_38 = new uint[4];
+        local_38[0] = 0;
         ZhSegment.Initialize(this,0);
-        lVar5 = il2cpp_internal(DAT_181d96ee8);
-        FUN_181330100(lVar5,DAT_181da0d10);
-        if (lVar5 != null) {
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          this.partPosture = lVar5;
-          lVar5 = FUN_1800d60b0(DAT_181da1058,1);
-          if (lVar5 != null) {
-            if (*(int *)(lVar5 + 24) == 0) {
-              uVar7 = il2cpp_internal();
+        lVar3 = il2cpp_internal(DAT_181e76ea8);
+        FUN_1810f3480(lVar3,DAT_181e83230);
+        if (lVar3 != null) {
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          this.partPosture = lVar3;
+          cVar2 = FUN_180ad1200(param_2,0);
+          if (cVar2) {
+            return;
+          }
+          cVar2 = FUN_180ad1200(param_3,0);
+          lVar3 = "";
+          if (!cVar2) {
+            lVar3 = String.Format("（来源：{0}）",param_3,0);
+          }
+          lVar4 = FUN_1801dfd90(DAT_181e81128,1);
+          if (lVar4 != null) {
+            if (*(int *)(lVar4 + 24) == 0) {
+              uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar6,0);
             }
-            *(uint16 *)(lVar5 + 32) = 59;
+            *(uint16 *)(lVar4 + 32) = 59;
             if (param_2 != 0) {
-              lVar6 = String.Split(param_2,lVar5,0);
-              uVar9 = 0;
-              lVar5 = DAT_181d73d40;
-              if (lVar6 != null) {
+              lVar4 = String.Split(param_2,lVar4,0);
+              uVar10 = 0;
+              if (lVar4 != null) {
+        LAB_180913f60:
                 do {
-                  if (*(int *)(lVar6 + 24) <= (int)uVar9) {
+                  if ((int)*(uint32 *)(lVar4 + 24) <= (int)uVar10) {
                     return;
                   }
-                  iVar8 = 0;
-                  while( true ) {
-                    if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
-                      il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d73d40;
-                    }
-                    lVar2 = *(int64 *)(plVar5 + 0x5f0);
-                    if (lVar2 == null) throw; // [null/range check failed]
-                    if (*(int *)(lVar2 + 24) <= iVar8) break;
-                    if (*(uint32 *)(lVar6 + 24) <= uVar9) {
-                      uVar7 = il2cpp_internal();
+                  if (*(uint32 *)(lVar4 + 24) <= uVar10) {
+                    uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
-                    }
-                    lVar2 = lVar6[uVar9];
-                    if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
-                      il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d73d40;
-                    }
-                    lVar5 = *(int64 *)(plVar5 + 0x5f0);
-                    if ((lVar5 == null) || (uVar7 = FUN_180002f80(lVar5,iVar8,DAT_181da4370), lVar2 == null))
-                    throw; // [null/range check failed]
-                    cVar4 = String.Contains(lVar2,uVar7,0);
-                    if (cVar4) {
-                      lVar5 = *plVar1;
-                      if (*(uint32 *)(lVar6 + 24) <= uVar9) {
-                        uVar7 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
-                      }
-                      lVar2 = lVar6[uVar9];
-                      lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x5f0);
-                      if ((lVar3 == null) || (uVar7 = FUN_180002f80(lVar3,iVar8,DAT_181da4370), lVar2 == null))
-                      throw; // [null/range check failed]
-                      uVar7 = String.Replace(lVar2,uVar7,"",0);
-                      Int32.Parse(uVar7,0);
-                      if (lVar5 == null) throw; // [null/range check failed]
-                      FUN_18182a350(lVar5,iVar8);
-                    }
-                    iVar8 = iVar8 + 1;
-                    lVar5 = DAT_181d73d40;
+                    FUN_1801e02d0(uVar6,0);
                   }
-                  uVar9 = uVar9 + 1;
+                  lVar5 = lVar4[uVar10];
+                  if (lVar5 == null) break;
+                  lVar5 = String.Trim(lVar5,0);
+                  cVar2 = FUN_1816387f0(lVar5,"",0);
+                  if (!cVar2) {
+                    iVar11 = -1;
+                    iVar9 = 0;
+                    while( true ) {
+                      lVar8 = *(int64 *)(pStatics + 0x610);
+                      if (lVar8 == null) throw; // [null/range check failed]
+                      if (*(int *)(lVar8 + 24) <= iVar9) break;
+                      lVar8 = *(int64 *)(pStatics + 0x610);
+                      if ((lVar8 == null) || (uVar6 = FUN_1800024b0(lVar8,iVar9), lVar5 == null))
+                      throw; // [null/range check failed]
+                      cVar2 = String.Contains(lVar5,uVar6);
+                      if ((cVar2) &&
+                         (bVar12 = iVar11 != -1, uVar6 = "PartPostureData Error: 词条部位歧义“{0}”（完整配置：“{1}”）{2}", iVar11 = iVar9, bVar12))
+                      goto LAB_180914274;
+                      iVar9 = iVar9 + 1;
+                    }
+                    uVar6 = "PartPostureData Error: 词条部位歧义“{0}”（完整配置：“{1}”）{2}";
+                    if (iVar11 != -2) {
+                      if (iVar11 == -1) {
+                        plVar7 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
+                        if (plVar7 == (int64 *)0) break;
+                        if ((lVar5 != null) &&
+                           (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64)), lVar8 == null
+                           )) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if ((int)plVar7[3] == 0) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[4] = lVar5;
+                        il2cpp_internal(plVar7 + 4,lVar5);
+                        lVar5 = String.Join("/",
+                                             *(uint64 *)(pStatics + 0x610))
+                        ;
+                        if ((lVar5 != null) &&
+                           (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64)), lVar8 == null
+                           )) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if (*(uint32 *)(plVar7 + 3) < 2) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[5] = lVar5;
+                        il2cpp_internal(plVar7 + 5,lVar5);
+                        lVar5 = il2cpp_internal(param_2,*(uint64 *)(*plVar7 + 64));
+                        if (lVar5 == null) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if (*(uint32 *)(plVar7 + 3) < 3) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[6] = param_2;
+                        il2cpp_internal(plVar7 + 6,param_2);
+                        if ((lVar3 != null) &&
+                           (lVar5 = il2cpp_internal(lVar3,*(uint64 *)(*plVar7 + 64)), lVar5 == null
+                           )) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if (*(uint32 *)(plVar7 + 3) < 4) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[7] = lVar3;
+                        il2cpp_internal(plVar7 + 7,lVar3);
+                        uVar6 = String.Format("PartPostureData Error: 部位名无法识别“{0}”（合法部位：{1}；完整配置：“{2}”）{3}",plVar7);
+                        goto LAB_18091428b;
+                      }
+                      lVar8 = *(int64 *)(pStatics + 0x610);
+                      if ((lVar8 == null) || (uVar6 = FUN_1800024b0(lVar8,iVar11,DAT_181e86970), lVar5 == null))
+                      break;
+                      uVar6 = String.Replace(lVar5,uVar6,"",0);
+                      cVar2 = Int32.TryParse(uVar6,local_38);
+                      uVar6 = "PartPostureData Error: 数值解析失败“{0}”（完整配置：“{1}”）{2}";
+                      if (cVar2) {
+                        if (*plVar1 == 0) break;
+                        FUN_181769c70(*plVar1,iVar11);
+                        uVar10 = uVar10 + 1;
+                        goto LAB_180913f60;
+                      }
+                    }
+        LAB_180914274:
+                    uVar6 = String.Format(uVar6,lVar5,param_2,lVar3,0);
+        LAB_18091428b:
+                    Debug.LogError(uVar6,0);
+                  }
+                  uVar10 = uVar10 + 1;
                 } while( true );
               }
             }
@@ -101,90 +180,169 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x600128A
-    // RVA   : 0xB96EB0   Offset: 0xB962B0   Length: 0x367
-    public void /*ctor*/(string resource)
+    // Token : 0x600129B
+    // RVA   : 0x913D10   Offset: 0x912B10   Length: 0x675
+    public void /*ctor*/(string resource, string debugContext)
     {
-        var plVar5 = *(int64*)(lVar5 + 184);
-        long lVar2;
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
+        bool cVar2;
         long lVar3;
-        bool cVar4;
+        long lVar4;
         long lVar5;
-        long lVar6;
-        ulong uVar7;
-        int iVar8;
-        uint uVar9;
+        ulong uVar6;
+        long lVar8;
+        int iVar9;
+        uint uVar10;
+        int iVar11;
+        uint[] local_38 = new uint[4];
+        local_38[0] = 0;
         ZhSegment.Initialize(this,0);
-        lVar5 = il2cpp_internal(DAT_181d96ee8);
-        FUN_181330100(lVar5,DAT_181da0d10);
-        if (lVar5 != null) {
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          FUN_18181e420(lVar5,0,DAT_181da0e10);
-          this.partPosture = lVar5;
-          lVar5 = FUN_1800d60b0(DAT_181da1058,1);
-          if (lVar5 != null) {
-            if (*(int *)(lVar5 + 24) == 0) {
-              uVar7 = il2cpp_internal();
+        lVar3 = il2cpp_internal(DAT_181e76ea8);
+        FUN_1810f3480(lVar3,DAT_181e83230);
+        if (lVar3 != null) {
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          FUN_18175dba0(lVar3,0,DAT_181e83330);
+          this.partPosture = lVar3;
+          cVar2 = FUN_180ad1200(resource,0);
+          if (cVar2) {
+            return;
+          }
+          cVar2 = FUN_180ad1200(debugContext,0);
+          lVar3 = "";
+          if (!cVar2) {
+            lVar3 = String.Format("（来源：{0}）",debugContext,0);
+          }
+          lVar4 = FUN_1801dfd90(DAT_181e81128,1);
+          if (lVar4 != null) {
+            if (*(int *)(lVar4 + 24) == 0) {
+              uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar6,0);
             }
-            *(uint16 *)(lVar5 + 32) = 59;
+            *(uint16 *)(lVar4 + 32) = 59;
             if (resource != null) {
-              lVar6 = String.Split(resource,lVar5,0);
-              uVar9 = 0;
-              lVar5 = DAT_181d73d40;
-              if (lVar6 != null) {
+              lVar4 = String.Split(resource,lVar4,0);
+              uVar10 = 0;
+              if (lVar4 != null) {
+        LAB_180913f60:
                 do {
-                  if (*(int *)(lVar6 + 24) <= (int)uVar9) {
+                  if ((int)*(uint32 *)(lVar4 + 24) <= (int)uVar10) {
                     return;
                   }
-                  iVar8 = 0;
-                  while( true ) {
-                    if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
-                      il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d73d40;
-                    }
-                    lVar2 = *(int64 *)(plVar5 + 0x5f0);
-                    if (lVar2 == null) throw; // [null/range check failed]
-                    if (*(int *)(lVar2 + 24) <= iVar8) break;
-                    if (*(uint32 *)(lVar6 + 24) <= uVar9) {
-                      uVar7 = il2cpp_internal();
+                  if (*(uint32 *)(lVar4 + 24) <= uVar10) {
+                    uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
-                    }
-                    lVar2 = lVar6[uVar9];
-                    if (((*(byte *)(lVar5 + 0x133) & 4) != 0) && (*(int *)(lVar5 + 224) == 0)) {
-                      il2cpp_runtime_class_init();
-                      lVar5 = DAT_181d73d40;
-                    }
-                    lVar5 = *(int64 *)(plVar5 + 0x5f0);
-                    if ((lVar5 == null) || (uVar7 = FUN_180002f80(lVar5,iVar8,DAT_181da4370), lVar2 == null))
-                    throw; // [null/range check failed]
-                    cVar4 = String.Contains(lVar2,uVar7,0);
-                    if (cVar4) {
-                      lVar5 = *plVar1;
-                      if (*(uint32 *)(lVar6 + 24) <= uVar9) {
-                        uVar7 = il2cpp_internal();
-                          // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
-                      }
-                      lVar2 = lVar6[uVar9];
-                      lVar3 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x5f0);
-                      if ((lVar3 == null) || (uVar7 = FUN_180002f80(lVar3,iVar8,DAT_181da4370), lVar2 == null))
-                      throw; // [null/range check failed]
-                      uVar7 = String.Replace(lVar2,uVar7,"",0);
-                      Int32.Parse(uVar7,0);
-                      if (lVar5 == null) throw; // [null/range check failed]
-                      FUN_18182a350(lVar5,iVar8);
-                    }
-                    iVar8 = iVar8 + 1;
-                    lVar5 = DAT_181d73d40;
+                    FUN_1801e02d0(uVar6,0);
                   }
-                  uVar9 = uVar9 + 1;
+                  lVar5 = lVar4[uVar10];
+                  if (lVar5 == null) break;
+                  lVar5 = String.Trim(lVar5,0);
+                  cVar2 = FUN_1816387f0(lVar5,"",0);
+                  if (!cVar2) {
+                    iVar11 = -1;
+                    iVar9 = 0;
+                    while( true ) {
+                      lVar8 = *(int64 *)(pStatics + 0x610);
+                      if (lVar8 == null) throw; // [null/range check failed]
+                      if (*(int *)(lVar8 + 24) <= iVar9) break;
+                      lVar8 = *(int64 *)(pStatics + 0x610);
+                      if ((lVar8 == null) || (uVar6 = FUN_1800024b0(lVar8,iVar9), lVar5 == null))
+                      throw; // [null/range check failed]
+                      cVar2 = String.Contains(lVar5,uVar6);
+                      if ((cVar2) &&
+                         (bVar12 = iVar11 != -1, uVar6 = "PartPostureData Error: 词条部位歧义“{0}”（完整配置：“{1}”）{2}", iVar11 = iVar9, bVar12))
+                      goto LAB_180914274;
+                      iVar9 = iVar9 + 1;
+                    }
+                    uVar6 = "PartPostureData Error: 词条部位歧义“{0}”（完整配置：“{1}”）{2}";
+                    if (iVar11 != -2) {
+                      if (iVar11 == -1) {
+                        plVar7 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
+                        if (plVar7 == (int64 *)0) break;
+                        if ((lVar5 != null) &&
+                           (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64)), lVar8 == null
+                           )) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if ((int)plVar7[3] == 0) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[4] = lVar5;
+                        il2cpp_internal(plVar7 + 4,lVar5);
+                        lVar5 = String.Join("/",
+                                             *(uint64 *)(pStatics + 0x610))
+                        ;
+                        if ((lVar5 != null) &&
+                           (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64)), lVar8 == null
+                           )) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if (*(uint32 *)(plVar7 + 3) < 2) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[5] = lVar5;
+                        il2cpp_internal(plVar7 + 5,lVar5);
+                        lVar5 = il2cpp_internal(resource,*(uint64 *)(*plVar7 + 64));
+                        if (lVar5 == null) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if (*(uint32 *)(plVar7 + 3) < 3) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[6] = resource;
+                        il2cpp_internal(plVar7 + 6,resource);
+                        if ((lVar3 != null) &&
+                           (lVar5 = il2cpp_internal(lVar3,*(uint64 *)(*plVar7 + 64)), lVar5 == null
+                           )) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        if (*(uint32 *)(plVar7 + 3) < 4) {
+                          uVar6 = il2cpp_internal();
+                          // WARNING: Subroutine does not return
+                          FUN_1801e02d0(uVar6,0);
+                        }
+                        plVar7[7] = lVar3;
+                        il2cpp_internal(plVar7 + 7,lVar3);
+                        uVar6 = String.Format("PartPostureData Error: 部位名无法识别“{0}”（合法部位：{1}；完整配置：“{2}”）{3}",plVar7);
+                        goto LAB_18091428b;
+                      }
+                      lVar8 = *(int64 *)(pStatics + 0x610);
+                      if ((lVar8 == null) || (uVar6 = FUN_1800024b0(lVar8,iVar11,DAT_181e86970), lVar5 == null))
+                      break;
+                      uVar6 = String.Replace(lVar5,uVar6,"",0);
+                      cVar2 = Int32.TryParse(uVar6,local_38);
+                      uVar6 = "PartPostureData Error: 数值解析失败“{0}”（完整配置：“{1}”）{2}";
+                      if (cVar2) {
+                        if (*plVar1 == 0) break;
+                        FUN_181769c70(*plVar1,iVar11);
+                        uVar10 = uVar10 + 1;
+                        goto LAB_180913f60;
+                      }
+                    }
+        LAB_180914274:
+                    uVar6 = String.Format(uVar6,lVar5,resource,lVar3,0);
+        LAB_18091428b:
+                    Debug.LogError(uVar6,0);
+                  }
+                  uVar10 = uVar10 + 1;
                 } while( true );
               }
             }
@@ -192,8 +350,8 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x600128B
-    // RVA   : 0xB96190   Offset: 0xB95590   Length: 0x9E
+    // Token : 0x600129C
+    // RVA   : 0x912FD0   Offset: 0x911DD0   Length: 0x9E
     public void ChangePosture(int id, float num)
     {
         long lVar1;
@@ -203,15 +361,15 @@ public class PartPostureData
           if (lVar1.Count <= id) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
-          uVar2 = FUN_1810e3cd0(*(float *)(lVar1._items + 32 + (int64)(int)id * 4
+          uVar2 = FUN_180f34e60(*(float *)(lVar1._items + 32 + (int64)(int)id * 4
                                           ) + num,0,0x42c80000,0);
-          FUN_18182a350(lVar1,id,uVar2,DAT_181da1110);
+          FUN_181769c70(lVar1,id,uVar2,DAT_181e835b0);
           return;
         }
     }
 
-    // Token : 0x600128C
-    // RVA   : 0xB96110   Offset: 0xB95510   Length: 0x80
+    // Token : 0x600129D
+    // RVA   : 0x912F50   Offset: 0x911D50   Length: 0x80
     public void ChangeMulti(float changeRate)
     {
         ulong uVar1;
@@ -220,27 +378,27 @@ public class PartPostureData
         this.partPosture = uVar1;
     }
 
-    // Token : 0x600128D
-    // RVA   : 0xB96CA0   Offset: 0xB960A0   Length: 0xF2
+    // Token : 0x600129E
+    // RVA   : 0x913B00   Offset: 0x912900   Length: 0xF2
     public void Reset()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d96ee8);
-        FUN_181330100(lVar1,DAT_181da0d10);
+        lVar1 = il2cpp_internal(DAT_181e76ea8);
+        FUN_1810f3480(lVar1,DAT_181e83230);
         if (lVar1 != null) {
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
           this.partPosture = lVar1;
           return;
         }
     }
 
-    // Token : 0x600128E
-    // RVA   : 0xB96BD0   Offset: 0xB95FD0   Length: 0xC1
+    // Token : 0x600129F
+    // RVA   : 0x913A30   Offset: 0x912830   Length: 0xC1
     public bool IsEmpty()
     {
         long lVar1;
@@ -268,8 +426,8 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x600128F
-    // RVA   : 0xB96B10   Offset: 0xB95F10   Length: 0xBF
+    // Token : 0x60012A0
+    // RVA   : 0x913970   Offset: 0x912770   Length: 0xBF
     public bool HavePosture(float minPosture)
     {
         ulong uVar1;
@@ -297,15 +455,15 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x6001290
-    // RVA   : 0xB96DA0   Offset: 0xB961A0   Length: 0xB
+    // Token : 0x60012A1
+    // RVA   : 0x913C00   Offset: 0x912A00   Length: 0xB
     public float TotalNum()
     {
         Enumerable.Sum(this.partPosture,0);
     }
 
-    // Token : 0x6001291
-    // RVA   : 0xB963B0   Offset: 0xB957B0   Length: 0x1BA
+    // Token : 0x60012A2
+    // RVA   : 0x913210   Offset: 0x912010   Length: 0x1BA
     public PartPostureData GetChangePartStateResult(PartPostureData changeData)
     {
         float fVar1;
@@ -332,8 +490,8 @@ public class PartPostureData
             if (*(uint32 *)(lVar2 + 24) <= uVar5) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            uVar7 = FUN_1810e3cd0(*(float *)(lVar6 + *(int64 *)(lVar2 + 16)) + fVar1,0,0x42c80000,0);
-            FUN_18182a350(lVar4,uVar5,uVar7);
+            uVar7 = FUN_180f34e60(*(float *)(lVar6 + *(int64 *)(lVar2 + 16)) + fVar1,0,0x42c80000,0);
+            FUN_181769c70(lVar4,uVar5,uVar7);
             lVar4 = this.partPosture;
             uVar5 = uVar5 + 1;
             lVar6 = lVar6 + 4;
@@ -342,8 +500,8 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x6001292
-    // RVA   : 0xB96570   Offset: 0xB95970   Length: 0x1B3
+    // Token : 0x60012A3
+    // RVA   : 0x9133D0   Offset: 0x9121D0   Length: 0x1B3
     public PartPostureData GetDelta(PartPostureData changeData)
     {
         float fVar1;
@@ -374,8 +532,8 @@ public class PartPostureData
             if (*(uint32 *)(lVar2 + 24) <= uVar5) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
-            uVar7 = FUN_1810e3cd0(fVar1 - *(float *)(lVar6 + *(int64 *)(lVar2 + 16)),0,0x42c80000,0);
-            FUN_18182a350(lVar4,uVar5,uVar7);
+            uVar7 = FUN_180f34e60(fVar1 - *(float *)(lVar6 + *(int64 *)(lVar2 + 16)),0,0x42c80000,0);
+            FUN_181769c70(lVar4,uVar5,uVar7);
             lVar4 = this.partPosture;
             uVar5 = uVar5 + 1;
             lVar6 = lVar6 + 4;
@@ -383,8 +541,8 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x6001293
-    // RVA   : 0xB96930   Offset: 0xB95D30   Length: 0x1D6
+    // Token : 0x60012A4
+    // RVA   : 0x913790   Offset: 0x912590   Length: 0x1D6
     public string GetStateDescribe()
     {
         long lVar1;
@@ -403,16 +561,16 @@ public class PartPostureData
           if (lVar1.Count <= iVar7) {
             return uVar5;
           }
-          cVar2 = FUN_18171eb50(uVar5,"",0);
+          cVar2 = FUN_1816387f0(uVar5,"",0);
           uVar6 = "";
           if ((!cVar2) && (uVar6 = "|", iVar7 == 3)) {
             uVar6 = "\n";
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x5f0);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x610);
           if (lVar1 == null) break;
-          uVar3 = FUN_180002f80(lVar1,iVar7,DAT_181da4370);
+          uVar3 = FUN_1800024b0(lVar1,iVar7,DAT_181e86970);
           if (this.partPosture == null) break;
-          local_res8[0] = (float)FUN_1800d6790(this.partPosture,iVar7,DAT_181da1090);
+          local_res8[0] = (float)FUN_1800024e0(this.partPosture,iVar7,DAT_181e83530);
           local_res8[0] = 100.0 - local_res8[0];
           uVar4 = Single.ToString(local_res8,"f0",0);
           uVar5 = String.Concat(uVar5,uVar6,uVar3,uVar4,0);
@@ -421,8 +579,8 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x6001294
-    // RVA   : 0xB96730   Offset: 0xB95B30   Length: 0x1F2
+    // Token : 0x60012A5
+    // RVA   : 0x913590   Offset: 0x912390   Length: 0x1F2
     public string GetSkillDescribe()
     {
         bool cVar1;
@@ -449,16 +607,16 @@ public class PartPostureData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             if (*(float *)(lVar7 + lVar2._items) != 0.0) {
-              cVar1 = FUN_18171eb50(uVar5,"",0);
+              cVar1 = FUN_1816387f0(uVar5,"",0);
               uVar8 = "|";
               if (cVar1) {
                 uVar8 = "";
               }
-              lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x5f0);
+              lVar2 = *(int64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x610);
               if (lVar2 == null) break;
-              uVar3 = FUN_180002f80(lVar2,uVar6,DAT_181da4370);
+              uVar3 = FUN_1800024b0(lVar2,uVar6,DAT_181e86970);
               if (this.partPosture == null) break;
-              local_res8[0] = FUN_1800d6790(this.partPosture,uVar6,DAT_181da1090);
+              local_res8[0] = FUN_1800024e0(this.partPosture,uVar6,DAT_181e83530);
               uVar4 = Single.ToString(local_res8,"f0",0);
               uVar5 = String.Concat(uVar5,uVar8,uVar3,uVar4,0);
             }
@@ -469,41 +627,34 @@ public class PartPostureData
         }
     }
 
-    // Token : 0x6001295
-    // RVA   : 0xB96230   Offset: 0xB95630   Length: 0x175
+    // Token : 0x60012A6
+    // RVA   : 0x913070   Offset: 0x911E70   Length: 0x196
     public virtual object Clone()
     {
+        long lVar1;
         long lVar2;
         ulong uVar3;
-        ulong local_38;
-        ulong uStack_30;
-        uint local_28;
-        uint uStack_24;
-        uint uStack_20;
-        uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
-        plVar4 = plVar1;
-        MemoryStream.ctor(plVar1,1000,0);
-        local_38 = 0;
-        uStack_30 = 0;
-        StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
-        local_28 = (uint32)local_38;
-        uStack_24 = local_38._4_4_;
-        uStack_20 = (uint32)uStack_30;
-        uStack_1c = uStack_30._4_4_;
-        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar4);
+        lVar1 = new ZhSegment(0);
+        lVar2 = il2cpp_internal(DAT_181e76ea8);
+        FUN_1810f3480(lVar2,DAT_181e83230);
         if (lVar2 != null) {
-          BinaryFormatter.Serialize(lVar2,plVar1,this,0);
-          if (plVar1 != (int64 *)0) {
-            (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
-            uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
-            (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
-            return uVar3;
+          FUN_18175dba0(lVar2,0,DAT_181e83330);
+          FUN_18175dba0(lVar2,0,DAT_181e83330);
+          FUN_18175dba0(lVar2,0,DAT_181e83330);
+          FUN_18175dba0(lVar2,0,DAT_181e83330);
+          FUN_18175dba0(lVar2,0,DAT_181e83330);
+          FUN_18175dba0(lVar2,0,DAT_181e83330);
+          *(int64 *)(lVar1 + 16) = lVar2;
+          lVar2 = this.partPosture;
+          if (lVar2 == null) {
+            uVar3 = 0;
           }
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          else {
+            uVar3 = il2cpp_internal(DAT_181e76ea8);
+            FUN_181768070(uVar3,lVar2,DAT_181e832b0);
+          }
+          *(uint64 *)(lVar1 + 16) = uVar3;
+          return lVar1;
         }
     }
 

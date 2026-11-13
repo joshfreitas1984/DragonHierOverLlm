@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : AreaMapRandomEventController
-// Token : 0x2000147
+// Token : 0x2000143
 // ============================================================
 
 public class AreaMapRandomEventController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400082A
+    // Token: 0x400080C
     public EventData areaMapRandomEventData;
 
-    // Token: 0x400082B
+    // Token: 0x400080D
     public GameObject isNewIcon;
 
-    // Token: 0x400082C
+    // Token: 0x400080E
     public GameObject isMissionTarget;
 
-    // Token: 0x400082D
+    // Token: 0x400080F
     private float refreshTime;
 
-    // Token: 0x400082E
+    // Token: 0x4000810
     private bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000A9D
-    // RVA   : 0x7ECC80   Offset: 0x7EC080   Length: 0xB7
+    // Token : 0x6000A7C
+    // RVA   : 0x51EFF0   Offset: 0x51DDF0   Length: 0xB7
     private void Init()
     {
         long lVar1;
@@ -33,7 +33,7 @@ public class AreaMapRandomEventController
         uint uStack_10;
         uint32 uStack_c;
         this.inited = 1;
-        lVar1 = Component.GetComponent(this,DAT_181d95df8);
+        lVar1 = Component.GetComponent(this,DAT_181e791b8);
         if (this.areaMapRandomEventData != null) {
           uVar3 = EventData.GetEventRareLv(this.areaMapRandomEventData,0);
           puVar2 = (uint32 *)GlobalData.GetEventColor(&local_18,uVar3,0);
@@ -48,8 +48,8 @@ public class AreaMapRandomEventController
         }
     }
 
-    // Token : 0x6000A9E
-    // RVA   : 0x7ED240   Offset: 0x7EC640   Length: 0x2BA
+    // Token : 0x6000A7D
+    // RVA   : 0x51F5B0   Offset: 0x51E3B0   Length: 0x2BA
     private void Update()
     {
         uint uVar1;
@@ -63,7 +63,7 @@ public class AreaMapRandomEventController
         uint32 uStack_1c;
         if (!this.inited) {
           this.inited = 1;
-          lVar2 = Component.GetComponent(this,DAT_181d95df8);
+          lVar2 = Component.GetComponent(this,DAT_181e791b8);
           if (this.areaMapRandomEventData == null) throw; // [null/range check failed]
           uVar1 = EventData.GetEventRareLv(this.areaMapRandomEventData,0);
           puVar3 = (uint32 *)GlobalData.GetEventColor(&local_28,uVar1,0);
@@ -94,7 +94,7 @@ public class AreaMapRandomEventController
               lVar2 = *(int64 *)(lVar2 + 184);
               uVar4 = Component.get_gameObject(this,0);
               if (lVar2 != null) {
-                FUN_1817ef410(lVar2,uVar4,DAT_181d89630);
+                FUN_181665e90(lVar2,uVar4,DAT_181e6b978);
                 lVar2 = Component.get_gameObject(this,0);
                 if (lVar2 != null) {
                   GameObject.SetActive(lVar2,0,0);
@@ -108,11 +108,11 @@ public class AreaMapRandomEventController
         }
     }
 
-    // Token : 0x6000A9F
-    // RVA   : 0x7ECFC0   Offset: 0x7EC3C0   Length: 0x27C
+    // Token : 0x6000A7E
+    // RVA   : 0x51F330   Offset: 0x51E130   Length: 0x27C
     public void RefreshColor()
     {
-        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
+        var pStatics = *(int64*)(DAT_181e8b8e8 + 184);
         long lVar1;
         bool cVar2;
         long lVar3;
@@ -128,16 +128,16 @@ public class AreaMapRandomEventController
             if (this.isMissionTarget == null) throw; // [null/range check failed]
             GameObject.SetActive(this.isMissionTarget,1,0);
             if (this.isMissionTarget == null) throw; // [null/range check failed]
-            lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
+            lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181e56c80);
             if ((*pStatics == 0) ||
                (uVar4 = TextureController.LoadAtlasSprite
                                   (*pStatics,"UIAtlas","任务目标",0),
                lVar3 == null)) throw; // [null/range check failed]
             SpriteRenderer.set_sprite(lVar3,uVar4,0);
             if (this.isMissionTarget == null) throw; // [null/range check failed]
-            lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
-            puVar5 = (uint32 *)FUN_1810d3b80(&local_18,0);
-            goto LAB_1807ed1fd;
+            lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181e56c80);
+            puVar5 = (uint32 *)FUN_180f24d00(&local_18,0);
+            goto LAB_18051f56d;
           }
           lVar1 = this.isNewIcon;
           if (lVar3.hovered == false) {
@@ -161,16 +161,16 @@ public class AreaMapRandomEventController
           if (this.isMissionTarget == null) throw; // [null/range check failed]
           GameObject.SetActive(this.isMissionTarget,1,0);
           if (this.isMissionTarget == null) throw; // [null/range check failed]
-          lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
+          lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181e56c80);
           if ((*pStatics == 0) ||
              (uVar4 = TextureController.LoadAtlasSprite
                                 (*pStatics,"UIAtlas","问号",0),
              lVar3 == null)) throw; // [null/range check failed]
           SpriteRenderer.set_sprite(lVar3,uVar4,0);
           if (this.isMissionTarget == null) throw; // [null/range check failed]
-          lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181d73bb8);
+          lVar3 = GameObject.GetComponent(this.isMissionTarget,DAT_181e56c80);
           puVar5 = (uint32 *)Color.get_yellow(&local_18,0);
-        LAB_1807ed1fd:
+        LAB_18051f56d:
           if (lVar3 == null) throw; // [null/range check failed]
           local_18 = *puVar5;
           uStack_14 = puVar5[1];
@@ -184,26 +184,26 @@ public class AreaMapRandomEventController
         }
     }
 
-    // Token : 0x6000AA0
-    // RVA   : 0x7ECD40   Offset: 0x7EC140   Length: 0x251
+    // Token : 0x6000A7F
+    // RVA   : 0x51F0B0   Offset: 0x51DEB0   Length: 0x251
     public void OnClick()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e8c5b8 + 184) + 16);
         if (lVar1 != null) {
           if (*(char *)(lVar1 + 48) != false) {
             plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
             plVar3 = (int64 *)0;
-            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
+            if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181e8f4a0)) {
               plVar3 = plVar2;
             }
             NGUITools.PlaySound(plVar3,0);
             return;
           }
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
           if (lVar1 != null) {
             PlotController.StartPlotEvent(lVar1,this.areaMapRandomEventData,0);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
             if (lVar1 != null) {
               *(uint8 *)(lVar1 + 225) = 1;
               return;
@@ -212,8 +212,8 @@ public class AreaMapRandomEventController
         }
     }
 
-    // Token : 0x6000AA1
-    // RVA   : 0x7ECFA0   Offset: 0x7EC3A0   Length: 0x1B
+    // Token : 0x6000A80
+    // RVA   : 0x51F310   Offset: 0x51E110   Length: 0x1B
     public void OnHover()
     {
         if (this.areaMapRandomEventData != null) {
@@ -222,14 +222,14 @@ public class AreaMapRandomEventController
         }
     }
 
-    // Token : 0x6000AA2
-    // RVA   : 0x7EAE90   Offset: 0x7EA290   Length: 0xE
+    // Token : 0x6000A81
+    // RVA   : 0x51D200   Offset: 0x51C000   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_1807eae90(int64 this)
+        void FUN_18051d200(int64 this)
         {
         this.refreshTime = 0x3e4ccccd;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

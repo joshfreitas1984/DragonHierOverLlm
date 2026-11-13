@@ -1,33 +1,33 @@
 // ============================================================
 // Type  : BigMapSpriteController
-// Token : 0x2000199
+// Token : 0x200019B
 // ============================================================
 
 public class BigMapSpriteController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B28
+    // Token: 0x4000B39
     private static BigMapSpriteController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D24
-    // RVA   : 0xC7D7D0   Offset: 0xC7CBD0   Length: 0x36
+    // Token : 0x6000D25
+    // RVA   : 0x9E6350   Offset: 0x9E5150   Length: 0x36
     public static BigMapSpriteController get_Instance()
     {
-        return **(uint64 **)(DAT_181db0de0 + 184);
+        return **(uint64 **)(DAT_181e91070 + 184);
     }
 
-    // Token : 0x6000D25
-    // RVA   : 0xC7CC40   Offset: 0xC7C040   Length: 0x43
+    // Token : 0x6000D26
+    // RVA   : 0x9E57C0   Offset: 0x9E45C0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db0de0 + 184);
+        puVar1 = *(uint64 **)(DAT_181e91070 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000D26
-    // RVA   : 0xC7D4A0   Offset: 0xC7C8A0   Length: 0x326
+    // Token : 0x6000D27
+    // RVA   : 0x9E6020   Offset: 0x9E4E20   Length: 0x326
     private void Update()
     {
         bool cVar1;
@@ -44,21 +44,21 @@ public class BigMapSpriteController
         uint32 local_30;
         lVar2 = Component.get_gameObject(this,0);
         if (lVar2 == null) {
-        LAB_180c7d7c1:
+        LAB_1809e6341:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         cVar1 = GameObject.get_activeInHierarchy(lVar2,0);
         if (cVar1) {
-          if (GameController._instance == null) goto LAB_180c7d7c1;
+          if (GameController._instance == null) goto LAB_1809e6341;
           cVar1 = GameController.HaveSpeUI(GameController._instance,1,0);
           if (!cVar1) {
-            lVar2 = FUN_18046bbe0(0);
-            if (lVar2 == null) goto LAB_180c7d7c1;
+            lVar2 = FUN_180210220(0);
+            if (lVar2 == null) goto LAB_1809e6341;
             cVar1 = BigMapController.CanDrag(lVar2,0);
             if (cVar1) {
               uVar3 = Vector2.get_zero(0);
-              cVar1 = FUN_1804625f0(119);
+              cVar1 = FUN_1818448a0(119);
               local_res18 = (float)uVar3;
               fStackX_1c = (float)((uint64)uVar3 >> 32);
               fVar4 = local_res18;
@@ -70,7 +70,7 @@ public class BigMapSpriteController
                 fVar4 = local_res18 + local_res20;
                 fVar6 = fStackX_1c + fStackX_24;
               }
-              cVar1 = FUN_1804625f0(115);
+              cVar1 = FUN_1818448a0(115);
               if (cVar1) {
                 uVar3 = Vector2.get_down(0);
                 local_res18 = (float)uVar3;
@@ -78,7 +78,7 @@ public class BigMapSpriteController
                 fVar4 = local_res18 + fVar4;
                 fVar6 = fStackX_1c + fVar6;
               }
-              cVar1 = FUN_1804625f0(97);
+              cVar1 = FUN_1818448a0(97);
               if (cVar1) {
                 uVar3 = Vector2.get_left(0);
                 local_res18 = (float)uVar3;
@@ -86,7 +86,7 @@ public class BigMapSpriteController
                 fVar4 = local_res18 + fVar4;
                 fVar6 = fStackX_1c + fVar6;
               }
-              cVar1 = FUN_1804625f0(100);
+              cVar1 = FUN_1818448a0(100);
               if (cVar1) {
                 uVar3 = Vector2.get_right(0);
                 local_res18 = (float)uVar3;
@@ -100,9 +100,9 @@ public class BigMapSpriteController
               if (9.9999994e-11 <=
                   (fVar6 - fStackX_1c) * (fVar6 - fStackX_1c) +
                   (fVar4 - local_res18) * (fVar4 - local_res18)) {
-                lVar2 = FUN_18046bbe0(0);
+                lVar2 = FUN_180210220(0);
                 fVar5 = (float)Time.get_deltaTime(0);
-                if (lVar2 == null) goto LAB_180c7d7c1;
+                if (lVar2 == null) goto LAB_1809e6341;
                 local_38 = CONCAT44(fVar6 * fVar5 * -1000.0,fVar4 * fVar5 * -1000.0);
                 local_30 = 0;
                 BigMapController.OnDrag(lVar2,&local_38,0);
@@ -112,8 +112,8 @@ public class BigMapSpriteController
         }
     }
 
-    // Token : 0x6000D27
-    // RVA   : 0xC7CC90   Offset: 0xC7C090   Length: 0x395
+    // Token : 0x6000D28
+    // RVA   : 0x9E5810   Offset: 0x9E4610   Length: 0x395
     public void OnClick()
     {
         ulong uVar1;
@@ -168,14 +168,14 @@ public class BigMapSpriteController
         }
     }
 
-    // Token : 0x6000D28
-    // RVA   : 0xC7D030   Offset: 0xC7C430   Length: 0xED
+    // Token : 0x6000D29
+    // RVA   : 0x9E5BB0   Offset: 0x9E49B0   Length: 0xED
     public void OnDrag(Vector2 delta)
     {
         long lVar1;
         ulong local_18;
         uint local_10;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e90e50 + 184) + 16);
         if (lVar1 != null) {
           local_10 = 0;
           local_18 = delta;
@@ -184,8 +184,8 @@ public class BigMapSpriteController
         }
     }
 
-    // Token : 0x6000D29
-    // RVA   : 0xC7D120   Offset: 0xC7C520   Length: 0x37C
+    // Token : 0x6000D2A
+    // RVA   : 0x9E5CA0   Offset: 0x9E4AA0   Length: 0x37C
     public void OnScroll(float delta)
     {
         float fVar1;
@@ -195,49 +195,49 @@ public class BigMapSpriteController
         ulong uVar5;
         long lVar6;
         uint uVar8;
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e90e50 + 184) + 16);
         if (lVar4 != null) {
           if ((*(char *)(lVar4 + 0x100) != false) || (delta == null.0)) {
             return;
           }
-          lVar4 = FUN_18046bbe0(0);
+          lVar4 = FUN_180210220(0);
           if ((lVar4 != null) && (*(int64 *)(lVar4 + 64) != 0)) {
-            uVar5 = GameObject.GetComponent(*(int64 *)(lVar4 + 64),DAT_181d73b30);
+            uVar5 = GameObject.GetComponent(*(int64 *)(lVar4 + 64),DAT_181e56bf8);
             cVar3 = Object.op_Equality(uVar5,0,0);
             if (!cVar3) {
-              lVar4 = FUN_18046bbe0(0);
+              lVar4 = FUN_180210220(0);
               if (((lVar4 == null) || (*(int64 *)(lVar4 + 64) == 0)) ||
-                 (lVar4 = GameObject.GetComponent(*(int64 *)(lVar4 + 64),DAT_181d73b30)) == null
+                 (lVar4 = GameObject.GetComponent(*(int64 *)(lVar4 + 64),DAT_181e56bf8)) == null
                  ) throw; // [null/range check failed]
               cVar3 = Behaviour.get_isActiveAndEnabled(lVar4,0);
               if (cVar3) {
                 return;
               }
             }
-            lVar4 = FUN_18046bbe0(0);
-            lVar6 = FUN_18046bbe0(0);
+            lVar4 = FUN_180210220(0);
+            lVar6 = FUN_180210220(0);
             if (lVar6 != null) {
               fVar1 = *(float *)(lVar6 + 32);
-              lVar6 = FUN_18046bbe0(0);
+              lVar6 = FUN_180210220(0);
               if (lVar6 != null) {
                 fVar2 = *(float *)(lVar6 + 36);
-                lVar6 = FUN_18046c0a0(0);
+                lVar6 = FUN_1802106e0(0);
                 if ((((lVar6 != null) && (*(int64 *)(lVar6 + 32) != 0)) &&
                     (lVar6 = WorldData.Player(*(int64 *)(lVar6 + 32),0)) != null) &&
                    ((*(int64 *)(lVar6 + 64) != 0 &&
                     (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 64) + 56)) != null))) {
                   if ((*(float *)(lVar6 + 16) == 0.0) && (*(float *)(lVar6 + 20) == 0.0)) {
-                    lVar6 = FUN_18046bbe0(0);
+                    lVar6 = FUN_180210220(0);
                     if (lVar6 == null) throw; // [null/range check failed]
                     puVar7 = (uint32 *)(lVar6 + 28);
                   }
                   else {
-                    puVar7 = *(uint32 **)(DAT_181db0be0 + 184);
+                    puVar7 = *(uint32 **)(DAT_181e90e50 + 184);
                   }
                   uVar8 = *puVar7;
-                  lVar6 = FUN_18046bbe0(0);
+                  lVar6 = FUN_180210220(0);
                   if ((lVar6 != null) &&
-                     (uVar8 = FUN_1810e3cd0(fVar2 * delta + fVar1,uVar8,*(uint32 *)(lVar6 + 24),0)
+                     (uVar8 = FUN_180f34e60(fVar2 * delta + fVar1,uVar8,*(uint32 *)(lVar6 + 24),0)
                      , lVar4 != null)) {
                     *(uint32 *)(lVar4 + 32) = uVar8;
                     return;
@@ -249,11 +249,11 @@ public class BigMapSpriteController
         }
     }
 
-    // Token : 0x6000D2A
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000D2B
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

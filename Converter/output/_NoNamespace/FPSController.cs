@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : FPSController
-// Token : 0x2000121
+// Token : 0x2000120
 // ============================================================
 
 public class FPSController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400072C
+    // Token: 0x400070C
     public Animator CamAnimator;
 
-    // Token: 0x400072D
+    // Token: 0x400070D
     public Animator WeaponAnimator;
 
-    // Token: 0x400072E
+    // Token: 0x400070E
     public float moveSpeed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009AB
-    // RVA   : 0xB2A020   Offset: 0xB29420   Length: 0x1ED
+    // Token : 0x6000992
+    // RVA   : 0x8EB9E0   Offset: 0x8EA7E0   Length: 0x1ED
     private void Update()
     {
         float fVar1;
@@ -38,14 +38,14 @@ public class FPSController
         byte[] local_58 = new byte[16];
         byte[] local_48 = new byte[64];
         lVar7 = this.CamAnimator;
-        uVar5 = FUN_1804625f0(119);
+        uVar5 = FUN_1818448a0(119);
         if (lVar7 != null) {
-          FUN_18044e920(lVar7,"Running",uVar5,0);
+          FUN_18182a0e0(lVar7,"Running",uVar5,0);
           lVar7 = this.WeaponAnimator;
-          uVar5 = FUN_1804625f0(32);
+          uVar5 = FUN_1818448a0(32);
           if (lVar7 != null) {
-            FUN_18044e920(lVar7,"Fire",uVar5,0);
-            cVar6 = FUN_1804625f0(119);
+            FUN_18182a0e0(lVar7,"Fire",uVar5,0);
+            cVar6 = FUN_1818448a0(119);
             if (!cVar6) {
               return;
             }
@@ -80,11 +80,11 @@ public class FPSController
         }
     }
 
-    // Token : 0x60009AC
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000993
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

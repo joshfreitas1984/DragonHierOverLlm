@@ -710,18 +710,30 @@ public class MainPlugin : BasePlugin
         }
     }
 
-    // GlobalData.GetChineseNumText(int id) picks a single Chinese numeral character out of a lookup
-    // string via "id % length" (no other call sites found in the decompiled codebase - likely
-    // rare/decorative, e.g. a looping digit animation). Return the equivalent Arabic digit
-    // character instead, mirroring the "id % 10" style of the original.
-    // [GameCoupled GlobalData.GetChineseNumText replaces] original skipped; mirrors its "id % length" digit pick
+    // GlobalData.GetChineseNumText(int id) returns a string (was char before the 2026-11 update).
+    // With n = id % (len * (len + 1)) over its numeral lookup string (len assumed 10, as the old
+    // patch did): n < len gives one numeral, otherwise two numerals (n - len) / len and
+    // (n - len) % len. Called from PlotController, BattleMapData and BattleConfigExecutor. Return
+    // the equivalent Arabic digits instead, mirroring that one-or-two-digit shape.
+    // [GameCoupled GlobalData.GetChineseNumText replaces] original skipped; mirrors its "n < len ? 1 digit : 2 digits" pick (len 10 assumed, string return)
     [HarmonyPatch(typeof(GlobalData), nameof(GlobalData.GetChineseNumText))]
     [HarmonyPrefix]
-    public static bool GetChineseNumText_Prefix(int id, ref char __result)
+    public static bool GetChineseNumText_Prefix(int id, ref string __result)
     {
         try
         {
-            __result = (char)('0' + (Math.Abs(id) % 10));
+            const int len = 10;
+            var n = id % (len * (len + 1));
+            if (n < 0) n = -n;
+            if (n < len)
+            {
+                __result = ((char)('0' + n)).ToString();
+            }
+            else
+            {
+                n -= len;
+                __result = new string(new[] { (char)('0' + n / len), (char)('0' + n % len) });
+            }
             return false;
         }
         catch (Exception ex)

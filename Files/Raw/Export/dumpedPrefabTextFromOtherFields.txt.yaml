@@ -2325,6 +2325,72 @@
 - raw: "中秋月圆之夜，举头望明月，低头思故乡，只可惜像我这种无家可归之人，却连故乡也无从所想。"
   splits:
   - text: "中秋月圆之夜，举头望明月，低头思故乡，只可惜像我这种无家可归之人，却连故乡也无从所想。"
+- raw: "名士"
+  splits:
+  - text: "名士"
+- raw: "商人"
+  splits:
+  - text: "商人"
+- raw: "官兵领队"
+  splits:
+  - text: "官兵领队"
+- raw: "官差"
+  splits:
+  - text: "官差"
+- raw: "富商"
+  splits:
+  - text: "富商"
+- raw: "小二"
+  splits:
+  - text: "小二"
+- raw: "小贼"
+  splits:
+  - text: "小贼"
+- raw: "强盗头目"
+  splits:
+  - text: "强盗头目"
+- raw: "恶贼头目"
+  splits:
+  - text: "恶贼头目"
+- raw: "恶霸头目"
+  splits:
+  - text: "恶霸头目"
+- raw: "拍卖主持"
+  splits:
+  - text: "拍卖主持"
+- raw: "旅行商人"
+  splits:
+  - text: "旅行商人"
+- raw: "暴民头领"
+  splits:
+  - text: "暴民头领"
+- raw: "疯癫乞丐"
+  splits:
+  - text: "疯癫乞丐"
+- raw: "百姓"
+  splits:
+  - text: "百姓"
+- raw: "盗贼"
+  splits:
+  - text: "盗贼"
+- raw: "管家"
+  splits:
+  - text: "管家"
+- raw: "落魄之人"
+  splits:
+  - text: "落魄之人"
+- raw: "讲经人"
+  splits:
+  - text: "讲经人"
+- raw: "豪商巨贾"
+  splits:
+  - text: "豪商巨贾"
+- raw: "镖头"
+  splits:
+  - text: "镖头"
+- raw: "飞贼"
+  splits:
+  - text: "飞贼"
 - raw: "临时围起的跑道颇具气势，四处彩旗招展，人头攒动，\\n看台上鼓声阵阵，越发急促，已有不少人士带着马匹在起点整备，\\n看来赛马大会即将开始了。"
   splits:
   - text: "临时围起的跑道颇具气势，四处彩旗招展，人头攒动，"
@@ -7634,9 +7700,6 @@
 - raw: "施舍银两"
   splits:
   - text: "施舍银两"
-- raw: "旅行商人"
-  splits:
-  - text: "旅行商人"
 - raw: "无事不登三宝殿，#PlayerName#此次前来有何贵干？"
   splits:
   - text: "无事不登三宝殿，#PlayerName#此次前来有何贵干？"
@@ -8715,9 +8778,6 @@
 - raw: "疫病蔓延"
   splits:
   - text: "疫病蔓延"
-- raw: "疯癫乞丐"
-  splits:
-  - text: "疯癫乞丐"
 - raw: "疯癫邪道(一)"
   splits:
   - text: "疯癫邪道"
@@ -9860,9 +9920,6 @@
 - raw: "谨遵师命"
   splits:
   - text: "谨遵师命"
-- raw: "豪商巨贾"
-  splits:
-  - text: "豪商巨贾"
 - raw: "豪商巨贾为了提振名声，招揽顾客，也在城内举办规模盛大的鉴宝比赛以及拍卖大会。\\n若闲来无事不妨凑个热闹，兴许还会有意外收获！"
   splits:
   - text: "豪商巨贾为了提振名声，招揽顾客，也在城内举办规模盛大的鉴宝比赛以及拍卖大会。"

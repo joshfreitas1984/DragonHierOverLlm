@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : KeyCodeDelegate
-// Token : 0x20000ED
+// Token : 0x20000EC
 // ============================================================
 
 public class KeyCodeDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600077A
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000761
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class KeyCodeDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600077B
-    // RVA   : 0x918650   Offset: 0x917A50   Length: 0x2A2
+    // Token : 0x6000762
+    // RVA   : 0x605AB0   Offset: 0x6048B0   Length: 0x2A2
     public virtual void Invoke(GameObject go, KeyCode key)
     {
         long lVar1;
@@ -57,15 +57,15 @@ public class KeyCodeDelegate
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1809188a9;
+              goto LAB_180605d09;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                             (plVar3,go,key,
@@ -74,11 +74,11 @@ public class KeyCodeDelegate
                 }
                 else {
                   uVar7 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180002810(*(uint16 *)(lVar1 + 72),uVar7,plVar3,go,key);
+                  FUN_18005fc20(*(uint16 *)(lVar1 + 72),uVar7,plVar3,go,key);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   puVar6 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
@@ -88,16 +88,16 @@ public class KeyCodeDelegate
                   (*(code *)*puVar6)(plVar3,go,key,puVar6);
                 }
                 else {
-                  FUN_180132fc0(lVar1,plVar3,go,key);
+                  FUN_18005f4f0(lVar1,plVar3,go,key);
                 }
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1809186f7;
+              goto LAB_180605b57;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   (**(code **)(*go + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                             (go,key,
@@ -106,11 +106,11 @@ public class KeyCodeDelegate
                 }
                 else {
                   uVar7 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180004670(*(uint16 *)(lVar1 + 72),uVar7,go,key);
+                  FUN_180054430(*(uint16 *)(lVar1 + 72),uVar7,go,key);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   puVar6 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
@@ -120,17 +120,17 @@ public class KeyCodeDelegate
                   (*(code *)*puVar6)(go,key,puVar6);
                 }
                 else {
-                  FUN_180008740(lVar1,go,key);
+                  FUN_1800542b0(lVar1,go,key);
                 }
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_1809186f7:
+        LAB_180605b57:
             (*pcVar2)(go,key,lVar1);
           }
           else {
-        LAB_1809188a9:
+        LAB_180605d09:
             (*pcVar2)(plVar3,go,key,lVar1);
           }
           uVar9 = uVar9 + 1;
@@ -140,8 +140,8 @@ public class KeyCodeDelegate
         } while( true );
     }
 
-    // Token : 0x600077C
-    // RVA   : 0x918530   Offset: 0x917930   Length: 0x82
+    // Token : 0x6000763
+    // RVA   : 0x605990   Offset: 0x604790   Length: 0x82
     public virtual IAsyncResult BeginInvoke(GameObject go, KeyCode key, AsyncCallback callback, object object)
     {
         void KeyCodeDelegate.BeginInvoke
@@ -155,12 +155,12 @@ public class KeyCodeDelegate
         local_res18[0] = key;
         local_18 = 0;
         local_28 = go;
-        local_20 = il2cpp_value_box(DAT_181d842b0,local_res18);
+        local_20 = il2cpp_value_box(DAT_181e64670,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x600077D
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x6000764
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : HeroBaseFightDataController
-// Token : 0x20002BF
+// Token : 0x20002C8
 // ============================================================
 
 public class HeroBaseFightDataController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40016E1
+    // Token: 0x4001735
     public HeroBaseFightData heroBaseFightData;
 
-    // Token: 0x40016E2
+    // Token: 0x4001736
     public HeroData targetHero;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600176F
-    // RVA   : 0x8774F0   Offset: 0x8768F0   Length: 0x19DC
+    // Token : 0x60017EB
+    // RVA   : 0x5AF8F0   Offset: 0x5AE6F0   Length: 0x19DC
     public void RefreshData()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         int iVar1;
         long lVar2;
         int iVar3;
@@ -40,346 +40,346 @@ public class HeroBaseFightDataController
         case 0:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,60);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("伤害 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "增加基础伤害";
           break;
         case 1:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
-          if (this.targetHero == null) goto LAB_180878ec0;
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
+          if (this.targetHero == null) goto LAB_1805b12c0;
           uVar7 = Single.ToString(this.targetHero + 0x19c,"0.##",0);
           uVar7 = String.Format("护甲 {0}",uVar7,0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          if (this.targetHero == null) goto LAB_180878ec0;
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          if (this.targetHero == null) goto LAB_1805b12c0;
           uVar10 = this.targetHero.armor;
           fVar11 = (float)GlobalData.CountArmorDamageRate(uVar10,0);
           local_res8[0] = (1.0 - fVar11) * 100.0;
           uVar6 = Single.ToString(local_res8,"f0",0);
           uVar6 = String.Format("减少{0}%所受伤害",uVar6,0);
-          goto LAB_180878b61;
+          goto LAB_1805b0f61;
         case 2:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,63);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("速度 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "战斗行动速度";
           break;
         case 3:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,64);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("命中 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "攻击时与对方<b>闪避</b>比较";
           break;
         case 4:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,65);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("闪避 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
-          if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) goto LAB_180878ec0;
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 8);
+          if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) goto LAB_1805b12c0;
           iVar3 = PlayerPrefDictionary.GetInt(lVar2,"NoEvadeBalance",0);
           uVar6 = "/5体力";
           if (iVar3 != 0) {
             uVar6 = "";
           }
           uVar6 = String.Format("受击时与对方<b>命中</b>比较\n触发闪避则躲过本次攻击\n每次消耗5足部架势{0}",uVar6,0);
-          goto LAB_180878b61;
+          goto LAB_1805b0f61;
         case 5:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,66);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("暴击 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "攻击时与对方<b>卸力</b>比较\n触发暴击则伤害加倍";
           break;
         case 6:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,67);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("卸力 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "受击时与对方<b>暴击</b>比较\n触发卸力则伤害减半";
           break;
         case 7:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,69);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("压制 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "攻击时与对方<b>反击</b>比较\n触发压制对方行动条减半";
           break;
         case 8:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,68);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("反击 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "受击时与对方<b>压制</b>比较\n触发反击自身行动条加倍";
           break;
         case 9:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,70);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("连击 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "攻击时与对方<b>断连</b>比较\n触发连击则会再次进行攻击";
           break;
         case 10:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,71);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("断连 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "受击时减少对方连击率";
           break;
         case 11:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           uVar10 = HeroSpeAddData.Get(lVar5,74);
           local_res8[0] = (float)Mathf.Min(uVar10,0x3f59999a,0);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("伤害抗性 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "减少所受伤害\n(最高85%)";
           break;
         case 12:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
-          if (this.targetHero == null) goto LAB_180878ec0;
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
+          if (this.targetHero == null) goto LAB_1805b12c0;
           local_res8[0] = (float)HeroData.GetWoundResist(this.targetHero,0);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("伤势抗性 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "减少所受伤势\n(最高85%)";
           break;
         case 13:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,75);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("负面加成 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "增加给对方施加负面状态的概率";
           break;
         case 14:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,76);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("负面抗性 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "降低自身被施加负面状态的概率";
           break;
         case 15:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,73);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("恢复效率 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "增加生命/内力/体力恢复效率";
           break;
         case 16:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.totalAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,72);
           local_res8[0] = local_res8[0] * 100.0;
           uVar7 = Single.ToString(local_res8,"0.##",0);
           uVar7 = String.Concat("经验获取 ",uVar7,"%",0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "增加所有经验的获取效率";
           break;
         case 17:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.baseAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,57);
           uVar7 = Single.ToString(local_res8,"f0",0);
           uVar7 = String.Concat("额外生命上限 ",uVar7,0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "角色获取的额外生命上限";
           break;
         case 18:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Text",0)) == null)
-          goto LAB_180878ec0;
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          goto LAB_1805b12c0;
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           if ((this.targetHero == null) ||
              (lVar5 = this.targetHero.baseAddData) == null)
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
           local_res8[0] = (float)HeroSpeAddData.Get(lVar5,59);
           uVar7 = Single.ToString(local_res8,"f0",0);
           uVar7 = String.Concat("额外内力上限 ",uVar7,0);
           LTLocalization.SetText(uVar6,uVar7,0);
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
-          uVar7 = FUN_180004500(DAT_181d8b158);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
           uVar6 = "角色获取的额外内力上限";
           break;
         case 19:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 != null) && (lVar5 = Transform.Find(lVar5,"Text",0)) != null) {
-            uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+            uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
             lVar5 = this.targetHero;
             if (lVar5 != null) {
               if (!lVar5.isSummon) {
                 iVar3 = HeroData.GetBaseMoveRange(lVar5,0);
-                if (lVar5.totalAddData == null) goto LAB_180878ec0;
+                if (lVar5.totalAddData == null) goto LAB_1805b12c0;
                 fVar11 = (float)HeroSpeAddData.Get(lVar5.totalAddData,166,0);
                 fVar13 = 1.0;
-                if (lVar5.heroBuff == null) goto LAB_180878ec0;
+                if (lVar5.heroBuff == null) goto LAB_1805b12c0;
                 fVar12 = (float)HeroSpeAddData.Get(lVar5.heroBuff,167,0);
                 if (0.0 < fVar12) {
                   fVar13 = 1.75;
                 }
-                if (lVar5.heroBuff == null) goto LAB_180878ec0;
+                if (lVar5.heroBuff == null) goto LAB_1805b12c0;
                 fVar12 = (float)HeroSpeAddData.Get(lVar5.heroBuff,168,0);
                 if (0.0 < fVar12) {
                   fVar13 = fVar13 + -0.75;
@@ -392,8 +392,8 @@ public class HeroBaseFightDataController
               uVar7 = Int32.ToString(local_res18,0);
               uVar7 = String.Concat("移动距离 ",uVar7,0);
               LTLocalization.SetText(uVar6,uVar7,0);
-              lVar5 = Component.GetComponent(this,DAT_181d95578);
-              uVar6 = FUN_180004500(DAT_181d8b158);
+              lVar5 = Component.GetComponent(this,DAT_181e788b8);
+              uVar6 = FUN_1800020e0(DAT_181e6dc98);
               uVar6 = String.Format("战斗中的移动距离\n灵巧轻功之和决定基础移距",uVar6,0);
               if (lVar5 != null) {
                 lVar5.summonLv = uVar6;
@@ -401,12 +401,12 @@ public class HeroBaseFightDataController
                   iVar4 = HeroData.GetBaseMoveRange(this.targetHero,0);
                   iVar3 = 0;
                   while( true ) {
-                    lVar5 = *(int64 *)(pStatics + 0x558);
+                    lVar5 = *(int64 *)(pStatics + 0x578);
                     if (lVar5 == null) break;
                     if (lVar5.summonLv + -1 <= iVar3) {
                       return;
                     }
-                    lVar5 = Component.GetComponent(this,DAT_181d95578);
+                    lVar5 = Component.GetComponent(this,DAT_181e788b8);
                     if (lVar5 == null) break;
                     iVar1 = iVar3 + 1;
                     uVar6 = lVar5.summonLv;
@@ -414,15 +414,15 @@ public class HeroBaseFightDataController
                     if (iVar4 == iVar1) {
                       uVar7 = "\n<color=#00B400>{0}</color>";
                     }
-                    lVar2 = *(int64 *)(pStatics + 0x558);
+                    lVar2 = *(int64 *)(pStatics + 0x578);
                     if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
-                    local_res20[0] = FUN_1800d6760(lVar2,iVar3,DAT_181d8fa30);
-                    uVar8 = il2cpp_value_box(DAT_181d80430,local_res20);
+                    local_res20[0] = FUN_180002480(lVar2,iVar3,DAT_181e71bf0);
+                    uVar8 = il2cpp_value_box(DAT_181e60808,local_res20);
                     local_88[0] = iVar1;
-                    uVar9 = il2cpp_value_box(DAT_181d80430,local_88);
+                    uVar9 = il2cpp_value_box(DAT_181e60808,local_88);
                     uVar8 = String.Format(">={0} 基础移距{1}",uVar8,uVar9,0);
                     uVar7 = String.Format(uVar7,uVar8,0);
                     uVar6 = String.Concat(uVar6,uVar7,0);
@@ -433,26 +433,26 @@ public class HeroBaseFightDataController
               }
             }
           }
-          goto LAB_180878ec0;
+          goto LAB_1805b12c0;
         default:
-          goto switchD_18087783d_default;
+          goto switchD_1805afc3d_default;
         }
         uVar6 = String.Format(uVar6,uVar7,0);
-        LAB_180878b61:
+        LAB_1805b0f61:
         if (lVar5 == null) {
-        LAB_180878ec0:
+        LAB_1805b12c0:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         lVar5.summonLv = uVar6;
-        switchD_18087783d_default:
+        switchD_1805afc3d_default:
     }
 
-    // Token : 0x6001770
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60017EC
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

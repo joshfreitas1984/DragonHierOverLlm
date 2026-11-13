@@ -4800,3 +4800,42 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "选择满级{0}作为根基\n对应武学技能需达{2}点"
+  splits:
+  - text: "选择满级"
+    translated: "Choose full level"
+    qcReviewedText: "Choose full level {0} W-was the foundation\nCorresponding martial arts skill level needs to reach {2} Click"
+    qcTranslated: "Choose max level {0} as the foundation\nCorresponding martial arts skill level needs to reach {2}"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - HardToParseSeam
+  - subIndex: 1
+    text: "作为根基"
+    translated: "W-was the foundation"
+  - subIndex: 2
+    text: "对应武学技能需达"
+    translated: "Corresponding martial arts skill level needs to reach"
+  - subIndex: 3
+    text: "点"
+    translated: "Click"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}⟦2⟧{3}"
+- raw: "闭关{0}日"
+  splits:
+  - text: "闭关"
+    translated: "Secluded training"
+    qcReviewedText: "Secluded training {0} Day"
+    qcTranslated: "Secluded training for {0} days"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+  - subIndex: 1
+    text: "日"
+    translated: "Day"
+  templates:
+  - template: "{0}⟦0⟧{1}"

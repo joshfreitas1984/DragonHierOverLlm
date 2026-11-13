@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : TankWeaponController
-// Token : 0x200012C
+// Token : 0x200012B
 // ============================================================
 
 public class TankWeaponController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400075D
+    // Token: 0x400073D
     public TankProjectile ProjectilePrefab;
 
-    // Token: 0x400075E
+    // Token: 0x400073E
     public Transform Nozzle;
 
-    // Token: 0x400075F
+    // Token: 0x400073F
     private Animation _animation;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009CA
-    // RVA   : 0xA9D810   Offset: 0xA9CC10   Length: 0x48
+    // Token : 0x60009B1
+    // RVA   : 0x80CA60   Offset: 0x80B860   Length: 0x48
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d93178);
+        uVar1 = Component.GetComponent(this,DAT_181e764c8);
         this._animation = uVar1;
     }
 
-    // Token : 0x60009CB
-    // RVA   : 0xA9D860   Offset: 0xA9CC60   Length: 0x12B
+    // Token : 0x60009B2
+    // RVA   : 0x80CAB0   Offset: 0x80B8B0   Length: 0x12B
     private void Update()
     {
         ulong uVar1;
@@ -39,7 +39,7 @@ public class TankWeaponController
         ulong uStack_30;
         if (this._animation != null) {
           cVar4 = Animation.get_isPlaying(this._animation,0);
-          if ((cVar4) || (cVar4 = FUN_1804625b0(32), !cVar4)) {
+          if ((cVar4) || (cVar4 = FUN_181844860(32), !cVar4)) {
             return;
           }
           if (this._animation != null) {
@@ -55,7 +55,7 @@ public class TankWeaponController
                 uStack_30 = puVar5[1];
                 local_48 = uVar1;
                 local_40 = uVar2;
-                Object.Instantiate(uVar3,&local_48,&local_38,DAT_181d92d30);
+                Object.Instantiate(uVar3,&local_48,&local_38,DAT_181e76378);
                 return;
               }
             }
@@ -63,11 +63,11 @@ public class TankWeaponController
         }
     }
 
-    // Token : 0x60009CC
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60009B3
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

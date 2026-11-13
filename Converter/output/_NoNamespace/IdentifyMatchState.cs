@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : IdentifyMatchState
-// Token : 0x20002E3
+// Token : 0x20002EC
 // ============================================================
 
 public class IdentifyMatchState
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40017D1
+    // Token: 0x4001826
     public int value__;
 
-    // Token: 0x40017D2
+    // Token: 0x4001827
     public const IdentifyMatchState None;
 
-    // Token: 0x40017D3
+    // Token: 0x4001828
     public const IdentifyMatchState Wait;
 
-    // Token: 0x40017D4
+    // Token: 0x4001829
     public const IdentifyMatchState Choose;
 
 }

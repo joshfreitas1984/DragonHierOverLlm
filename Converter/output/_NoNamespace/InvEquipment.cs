@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : InvEquipment
-// Token : 0x200000F
+// Token : 0x200000E
 // ============================================================
 
 public class InvEquipment
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400005C
+    // Token: 0x400003C
     private InvGameItem[] mItems;
 
-    // Token: 0x400005D
+    // Token: 0x400003D
     private InvAttachmentPoint[] mAttachments;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000049
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6000030
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     public InvGameItem[] get_equippedItems()
     {
         return this.mItems;
     }
 
-    // Token : 0x600004A
-    // RVA   : 0xC9C760   Offset: 0xC9BB60   Length: 0x3E5
+    // Token : 0x6000031
+    // RVA   : 0xA1E3C0   Offset: 0xA1D1C0   Length: 0x3E5
     public InvGameItem Replace(Slot slot, InvGameItem item)
     {
         int iVar1;
@@ -41,17 +41,17 @@ public class InvEquipment
           if (item != null) {
             lVar4 = InvGameItem.get_baseItem(item,0);
             if (lVar4 != null) {
-              plVar5 = (int64 *)il2cpp_value_box(DAT_181d7af40,item + 20);
+              plVar5 = (int64 *)il2cpp_value_box(DAT_181e5b1b0,item + 20);
               if (plVar5 == (int64 *)0) {
-        LAB_180c9cb00:
+        LAB_180a1e760:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar6 = (**(code **)(*plVar5 + 0x168))(plVar5,*(uint64 *)(*plVar5 + 0x170));
               puVar7 = (uint32 *)il2cpp_object_unbox(plVar5);
               *(uint32 *)(item + 20) = *puVar7;
               lVar4 = InvGameItem.get_baseItem(item,0);
-              if (lVar4 == null) goto LAB_180c9cb00;
+              if (lVar4 == null) goto LAB_180a1e760;
               uVar8 = String.Concat(uVar6," ",*(uint64 *)(lVar4 + 24),0);
             }
             uVar6 = String.Concat("Can't equip \"",uVar8,"\" because it doesn't specify an item slot",0);
@@ -61,51 +61,51 @@ public class InvEquipment
         else if ((uVar3 == 0) || (*(int *)(uVar3 + 40) == slot)) {
           plVar5 = this.mItems;
           if (plVar5 == (int64 *)0) {
-            uVar6 = FUN_1800d60b0(DAT_181da38b8,8);
+            uVar6 = FUN_1801dfd90(DAT_181e839f8,8);
             this.mItems = uVar6;
             plVar5 = this.mItems;
-            if (plVar5 == (int64 *)0) goto LAB_180c9cb00;
+            if (plVar5 == (int64 *)0) goto LAB_180a1e760;
           }
           if (*(uint32 *)(plVar5 + 3) <= slot - 1U) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           lVar4 = plVar5[(int64)slot + 3];
           if ((item != null) &&
              (lVar9 = il2cpp_internal(item,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           if (*(uint32 *)(plVar5 + 3) <= slot - 1U) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar5[(int64)slot + 3] = item;
           il2cpp_internal(plVar5 + (int64)slot + 3,item);
           lVar9 = this.mAttachments;
           if (lVar9 == null) {
-            uVar6 = FUN_180967b70(this,DAT_181d98578);
+            uVar6 = FUN_180772590(this,DAT_181e7b938);
             this.mAttachments = uVar6;
             lVar9 = this.mAttachments;
-            if (lVar9 == null) goto LAB_180c9cb00;
+            if (lVar9 == null) goto LAB_180a1e760;
           }
           iVar1 = *(int *)(lVar9 + 24);
           item = lVar4;
           if (0 < iVar1) {
             do {
               lVar4 = this.mAttachments;
-              if (lVar4 == null) goto LAB_180c9cb00;
+              if (lVar4 == null) goto LAB_180a1e760;
               uVar10 = (uint32)uVar8;
               if (*(uint32 *)(lVar4 + 24) <= uVar10) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               lVar4 = lVar4[uVar10];
-              if (lVar4 == null) goto LAB_180c9cb00;
+              if (lVar4 == null) goto LAB_180a1e760;
               if (*(int *)(lVar4 + 24) == slot) {
                 if (uVar3 == 0) {
                   InvAttachmentPoint.Attach(lVar4,0,0);
@@ -114,12 +114,12 @@ public class InvEquipment
                   lVar4 = InvAttachmentPoint.Attach(lVar4,*(uint64 *)(uVar3 + 64),0);
                   cVar2 = Object.op_Inequality(lVar4);
                   if (cVar2) {
-                    if (lVar4 == null) goto LAB_180c9cb00;
+                    if (lVar4 == null) goto LAB_180a1e760;
                     lVar4 = GameObject.GetComponent(lVar4);
                     cVar2 = Object.op_Inequality(lVar4);
                     if (cVar2) {
-                      if ((lVar4 == null) || (lVar4 = FUN_180d9dd10(lVar4,0)) == null)
-                      goto LAB_180c9cb00;
+                      if ((lVar4 == null) || (lVar4 = FUN_180af95e0(lVar4,0)) == null)
+                      goto LAB_180a1e760;
                       Material.set_color(lVar4);
                     }
                   }
@@ -132,8 +132,8 @@ public class InvEquipment
         return item;
     }
 
-    // Token : 0x600004B
-    // RVA   : 0xC9C550   Offset: 0xC9B950   Length: 0xC6
+    // Token : 0x6000032
+    // RVA   : 0xA1E1B0   Offset: 0xA1CFB0   Length: 0xC6
     public InvGameItem Equip(InvGameItem item)
     {
         long lVar1;
@@ -153,26 +153,26 @@ public class InvEquipment
         return item;
     }
 
-    // Token : 0x600004C
-    // RVA   : 0xC9CB50   Offset: 0xC9BF50   Length: 0x4D
+    // Token : 0x6000033
+    // RVA   : 0xA1E7B0   Offset: 0xA1D5B0   Length: 0x4D
     public InvGameItem Unequip(InvGameItem item)
     {
-        void FUN_180c9cba0(uint64 this,uint64 item)
+        void FUN_180a1e800(uint64 this,uint64 item)
         {
         InvEquipment.Replace(this,item,0,0);
     }
 
-    // Token : 0x600004D
-    // RVA   : 0xC9CBA0   Offset: 0xC9BFA0   Length: 0xB
+    // Token : 0x6000034
+    // RVA   : 0xA1E800   Offset: 0xA1D600   Length: 0xB
     public InvGameItem Unequip(Slot slot)
     {
-        void FUN_180c9cba0(uint64 this,uint64 slot)
+        void FUN_180a1e800(uint64 this,uint64 slot)
         {
         InvEquipment.Replace(this,slot,0,0);
     }
 
-    // Token : 0x600004E
-    // RVA   : 0xC9C710   Offset: 0xC9BB10   Length: 0x4B
+    // Token : 0x6000035
+    // RVA   : 0xA1E370   Offset: 0xA1D170   Length: 0x4B
     public bool HasEquipped(InvGameItem item)
     {
         int iVar1;
@@ -186,16 +186,16 @@ public class InvEquipment
             do {
               lVar2 = this.mItems;
               if (lVar2 == null) {
-        LAB_180c9c6ed:
+        LAB_180a1e34d:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (*(uint32 *)(lVar2 + 24) <= uVar4) {
                 uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar3,0);
+                FUN_1801e02d0(uVar3,0);
               }
-              if (lVar2[uVar4] == 0) goto LAB_180c9c6ed;
+              if (lVar2[uVar4] == 0) goto LAB_180a1e34d;
               lVar2 = InvGameItem.get_baseItem();
               if ((lVar2 != null) && (*(int *)(lVar2 + 40) == item)) {
                 return true;
@@ -207,8 +207,8 @@ public class InvEquipment
         return false;
     }
 
-    // Token : 0x600004F
-    // RVA   : 0xC9C670   Offset: 0xC9BA70   Length: 0x92
+    // Token : 0x6000036
+    // RVA   : 0xA1E2D0   Offset: 0xA1D0D0   Length: 0x92
     public bool HasEquipped(Slot slot)
     {
         int iVar1;
@@ -222,16 +222,16 @@ public class InvEquipment
             do {
               lVar2 = this.mItems;
               if (lVar2 == null) {
-        LAB_180c9c6ed:
+        LAB_180a1e34d:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (*(uint32 *)(lVar2 + 24) <= uVar4) {
                 uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar3,0);
+                FUN_1801e02d0(uVar3,0);
               }
-              if (lVar2[uVar4] == 0) goto LAB_180c9c6ed;
+              if (lVar2[uVar4] == 0) goto LAB_180a1e34d;
               lVar2 = InvGameItem.get_baseItem();
               if ((lVar2 != null) && (*(int *)(lVar2 + 40) == slot)) {
                 return true;
@@ -243,8 +243,8 @@ public class InvEquipment
         return false;
     }
 
-    // Token : 0x6000050
-    // RVA   : 0xC9C620   Offset: 0xC9BA20   Length: 0x45
+    // Token : 0x6000037
+    // RVA   : 0xA1E280   Offset: 0xA1D080   Length: 0x45
     public InvGameItem GetItem(Slot slot)
     {
         long lVar1;
@@ -256,17 +256,17 @@ public class InvEquipment
             }
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         return 0;
     }
 
-    // Token : 0x6000051
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000038
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

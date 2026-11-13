@@ -1,75 +1,75 @@
 // ============================================================
 // Type  : StudyAttackPlayer
-// Token : 0x2000376
+// Token : 0x2000383
 // ============================================================
 
 public class StudyAttackPlayer
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C59
+    // Token: 0x4001CEB
     public SkeletonAnimation playerSkeleton;
 
-    // Token: 0x4001C5A
+    // Token: 0x4001CEC
     public GameObject hipPos;
 
-    // Token: 0x4001C5B
+    // Token: 0x4001CED
     public GameObject attackRange;
 
-    // Token: 0x4001C5C
+    // Token: 0x4001CEE
     public float cd;
 
-    // Token: 0x4001C5D
+    // Token: 0x4001CEF
     public float fullCd;
 
-    // Token: 0x4001C5E
+    // Token: 0x4001CF0
     public float shieldTime;
 
-    // Token: 0x4001C5F
+    // Token: 0x4001CF1
     public GameObject shieldSpe;
 
-    // Token: 0x4001C60
+    // Token: 0x4001CF2
     public List<GameObject> bulletInAttackRange;
 
-    // Token: 0x4001C61
+    // Token: 0x4001CF3
     private AudioSource weaponSoundAudioSource;
 
-    // Token: 0x4001C62
+    // Token: 0x4001CF4
     private GameObject newObj;
 
-    // Token: 0x4001C63
+    // Token: 0x4001CF5
     private static StudyAttackPlayer _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600220C
-    // RVA   : 0xFD35E0   Offset: 0xFD29E0   Length: 0x36
+    // Token : 0x60022B6
+    // RVA   : 0xDA46A0   Offset: 0xDA34A0   Length: 0x36
     public static StudyAttackPlayer get_Instance()
     {
-        return **(uint64 **)(DAT_181da7f28 + 184);
+        return **(uint64 **)(DAT_181e88368 + 184);
     }
 
-    // Token : 0x600220D
-    // RVA   : 0xFD1060   Offset: 0xFD0460   Length: 0x43
+    // Token : 0x60022B7
+    // RVA   : 0xDA2120   Offset: 0xDA0F20   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da7f28 + 184);
+        puVar1 = *(uint64 **)(DAT_181e88368 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x600220E
-    // RVA   : 0xFD26E0   Offset: 0xFD1AE0   Length: 0xCF
+    // Token : 0x60022B8
+    // RVA   : 0xDA37A0   Offset: 0xDA25A0   Length: 0xCF
     private void Start()
     {
         ulong uVar1;
         long lVar2;
         if (this.playerSkeleton != null) {
           lVar2 = *(int64 *)(this.playerSkeleton + 224);
-          uVar1 = new OnTooltipCB(this,DAT_181db7020,0);
+          uVar1 = new OnTooltipCB(this,DAT_181e9a978,0);
           if (lVar2 != null) {
             AnimationState.add_Event(lVar2,uVar1,0);
             lVar2 = Component.get_gameObject(this,0);
             if (lVar2 != null) {
-              uVar1 = GameObject.AddComponent(lVar2,DAT_181dc4cd0);
+              uVar1 = GameObject.AddComponent(lVar2,DAT_181e50d68);
               this.weaponSoundAudioSource = uVar1;
               return;
             }
@@ -77,8 +77,8 @@ public class StudyAttackPlayer
         }
     }
 
-    // Token : 0x600220F
-    // RVA   : 0xFD1300   Offset: 0xFD0700   Length: 0xD5
+    // Token : 0x60022B9
+    // RVA   : 0xDA23C0   Offset: 0xDA11C0   Length: 0xD5
     private void OnDestroy()
     {
         long lVar1;
@@ -89,18 +89,18 @@ public class StudyAttackPlayer
         if (cVar2) {
           if (this.playerSkeleton == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar1 = *(int64 *)(this.playerSkeleton + 224);
           if (lVar1 != null) {
-            uVar3 = new OnTooltipCB(this,DAT_181db7020,0);
+            uVar3 = new OnTooltipCB(this,DAT_181e9a978,0);
             AnimationState.remove_Event(lVar1,uVar3,0);
           }
         }
     }
 
-    // Token : 0x6002210
-    // RVA   : 0xFD10B0   Offset: 0xFD04B0   Length: 0x244
+    // Token : 0x60022BA
+    // RVA   : 0xDA2170   Offset: 0xDA0F70   Length: 0x244
     private void HandleEvent(TrackEntry trackEntry, Event e)
     {
         long lVar1;
@@ -108,18 +108,18 @@ public class StudyAttackPlayer
         long lVar3;
         ulong uVar4;
         if ((e != null) && (*(int64 *)(e + 16) != 0)) {
-          cVar2 = FUN_18171eb50(*(uint64 *)(*(int64 *)(e + 16) + 16),"skillshoot",0);
+          cVar2 = FUN_1816387f0(*(uint64 *)(*(int64 *)(e + 16) + 16),"skillshoot",0);
           if (cVar2) {
             return;
           }
           if (*(int64 *)(e + 16) != 0) {
             lVar1 = *(int64 *)(*(int64 *)(e + 16) + 16);
-            lVar3 = FUN_1800d60b0(DAT_181da1058,1);
+            lVar3 = FUN_1801dfd90(DAT_181e81128,1);
             if (lVar3 != null) {
               if (*(int *)(lVar3 + 24) == 0) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
               *(uint16 *)(lVar3 + 32) = 95;
               if (lVar1 != null) {
@@ -130,7 +130,7 @@ public class StudyAttackPlayer
                     if (*(uint32 *)(lVar3 + 24) < 2) {
                       uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar4,0);
+                      FUN_1801e02d0(uVar4,0);
                     }
                     Int32.Parse(*(uint64 *)(lVar3 + 40),0);
                   }
@@ -139,23 +139,23 @@ public class StudyAttackPlayer
                     lVar1 = this.weaponSoundAudioSource;
                     Random.Range(0x3f4ccccd);
                     if (lVar1 != null) {
-                      FUN_180467590(lVar1);
+                      FUN_1818494f0(lVar1);
                       lVar1 = this.weaponSoundAudioSource;
                       if (*(int *)(lVar3 + 24) == 0) {
                         uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar4,0);
+                        FUN_1801e02d0(uVar4,0);
                       }
                       uVar4 = String.Concat("Sound/SoundEffect/Anim/",*(uint64 *)(lVar3 + 32),0);
                       plVar5 = (int64 *)Resources.Load(uVar4,0);
                       if (lVar1 != null) {
                         plVar6 = (int64 *)0;
-                        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181daf360)) {
+                        if ((plVar5 != (int64 *)0) && (*plVar5 == DAT_181e8f4a0)) {
                           plVar6 = plVar5;
                         }
                         AudioSource.PlayOneShot
                                   (lVar1,plVar6,
-                                   *(uint32 *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+                                   *(uint32 *)(*(int64 *)(DAT_181e528f8 + 184) + 16),0);
                         return;
                       }
                     }
@@ -167,12 +167,12 @@ public class StudyAttackPlayer
         }
     }
 
-    // Token : 0x6002211
-    // RVA   : 0xFD27B0   Offset: 0xFD1BB0   Length: 0xE28
+    // Token : 0x60022BB
+    // RVA   : 0xDA3870   Offset: 0xDA2670   Length: 0xE28
     private void Update()
     {
-        var pStatics_7fa8 = *(int64*)(DAT_181da7fa8 + 184);
-        var pStatics_dd10 = *(int64*)(DAT_181dadd10 + 184);
+        var pStatics_83e8 = *(int64*)(DAT_181e883e8 + 184);
+        var pStatics_e150 = *(int64*)(DAT_181e8e150 + 184);
         bool cVar1;
         uint uVar2;
         long lVar3;
@@ -197,12 +197,12 @@ public class StudyAttackPlayer
         byte[] local_a8 = new byte[16];
         byte[] local_98 = new byte[16];
         byte[] local_88 = new byte[96];
-        if (*pStatics_7fa8 != 0) {
-          if (*(char *)(*pStatics_7fa8 + 25) != false) {
+        if (*pStatics_83e8 != 0) {
+          if (*(char *)(*pStatics_83e8 + 25) != false) {
             return;
           }
-          if (*pStatics_dd10 != 0) {
-            if (*(char *)(*pStatics_dd10 + 56) != false) {
+          if (*pStatics_e150 != 0) {
+            if (*(char *)(*pStatics_e150 + 56) != false) {
               return;
             }
             if (this.playerSkeleton != null) {
@@ -251,14 +251,14 @@ public class StudyAttackPlayer
                           Transform.set_up(lVar3,&local_e8,0);
                           if (this.attackRange != null) {
                             lVar3 = GameObject.get_transform(this.attackRange,0);
-                            if ((*pStatics_7fa8 != 0) &&
-                               (uVar7 = Int32.ToString(*pStatics_7fa8 + 44,0),
+                            if ((*pStatics_83e8 != 0) &&
+                               (uVar7 = Int32.ToString(*pStatics_83e8 + 44,0),
                                lVar3 != null)) {
                               lVar3 = Transform.Find(lVar3,uVar7,0);
-                              if (*pStatics_7fa8 != 0) {
-                                lVar4 = *(int64 *)(*pStatics_7fa8 + 112);
-                                if ((*pStatics_7fa8 != 0) && (lVar4 != null)) {
-                                  iVar13 = *(int *)(*pStatics_7fa8 + 44);
+                              if (*pStatics_83e8 != 0) {
+                                lVar4 = *(int64 *)(*pStatics_83e8 + 112);
+                                if ((*pStatics_83e8 != 0) && (lVar4 != null)) {
+                                  iVar13 = *(int *)(*pStatics_83e8 + 44);
                                   if (lVar4.Count <= iVar13 - 3U) {
                                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
                                   }
@@ -316,26 +316,26 @@ public class StudyAttackPlayer
                                     if (!cVar1) {
                                       return;
                                     }
-                                    lVar3 = FUN_18046c620(0);
+                                    lVar3 = FUN_180210ca0(0);
                                     if (lVar3 != null) {
                                       if (*(int64 *)(lVar3 + 40) == 0) {
                                         fVar15 = 0.0;
                                       }
                                       else {
-                                        lVar3 = FUN_18046c620(0);
+                                        lVar3 = FUN_180210ca0(0);
                                         if ((lVar3 == null) || (*(int64 *)(lVar3 + 40) == 0))
                                         throw; // [null/range check failed]
                                         fVar15 = (float)*(int *)(*(int64 *)(lVar3 + 40) + 20) * 0.1
                                         ;
                                       }
-                                      lVar3 = FUN_18046c0a0(0);
+                                      lVar3 = FUN_1802106e0(0);
                                       if (((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
                                          (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0),
                                          lVar3 != null)) {
                                         lVar3 = *(int64 *)(lVar3 + 0x150);
-                                        if ((*pStatics_7fa8 != 0) && (lVar3 != null))
+                                        if ((*pStatics_83e8 != 0) && (lVar3 != null))
                                         {
-                                          uVar12 = *(uint32 *)(*pStatics_7fa8 + 44)
+                                          uVar12 = *(uint32 *)(*pStatics_83e8 + 44)
                                           ;
                                           if (lVar3.Count <= uVar12) {
                                             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -348,9 +348,9 @@ public class StudyAttackPlayer
                                           if (this.playerSkeleton != null) {
                                             lVar3 = SkeletonAnimation.get_AnimationState
                                                               (this.playerSkeleton,0);
-                                            if (((*pStatics_7fa8 != 0) &&
+                                            if (((*pStatics_83e8 != 0) &&
                                                 (lVar4 = *(int64 *)
-                                                          (*pStatics_7fa8 + 56),
+                                                          (*pStatics_83e8 + 56),
                                                 lVar4 != null)) &&
                                                ((lVar4 = KungfuSkillLvData.DataBase(lVar4,0), lVar4 != null
                                                 && (lVar3 != null)))) {
@@ -363,9 +363,9 @@ public class StudyAttackPlayer
                                                            (this.playerSkeleton + 24),
                                                  lVar4 != null)) {
                                                 lVar4 = SkeletonDataAsset.GetSkeletonData(lVar4,1,0);
-                                                if (((((*pStatics_7fa8 != 0) &&
+                                                if (((((*pStatics_83e8 != 0) &&
                                                       (lVar8 = *(int64 *)
-                                                                (*pStatics_7fa8 +
+                                                                (*pStatics_83e8 +
                                                                 56), lVar8 != null)) &&
                                                      (lVar8 = KungfuSkillLvData.DataBase(lVar8,0),
                                                      lVar8 != null)) &&
@@ -386,7 +386,7 @@ public class StudyAttackPlayer
                                                     lVar3 = this.bulletInAttackRange;
                                                     if (lVar3 != null) {
                                                       if (0 < lVar3.Count) {
-                                                        lVar3 = FUN_18046c580(0);
+                                                        lVar3 = FUN_180210bf0(0);
                                                         if (lVar3 == null) throw; // [null/range check failed]
                                                         ShakeCam.StartShake(lVar3,1,0);
                                                         lVar3 = this.bulletInAttackRange;
@@ -408,14 +408,14 @@ public class StudyAttackPlayer
                                                         lVar4 = this.bulletInAttackRange;
                                                         if (!cVar1) {
                                                           if ((lVar4 == null) ||
-                                                             (lVar4 = FUN_180002f80(lVar4,uVar12,
-                                                                                    DAT_181d89930),
+                                                             (lVar4 = FUN_1800024b0(lVar4,uVar12,
+                                                                                    DAT_181e6bc70),
                                                              lVar4 == null)) throw; // [null/range check failed]
                                                           cVar1 = GameObject.CompareTag
                                                                             (lVar4,"StudyAttackBullet",0);
                                                           if (!cVar1) {
                                                             if ((this.bulletInAttackRange == null) ||
-                                                               (lVar4 = FUN_180002f80(*(int64 *)
+                                                               (lVar4 = FUN_1800024b0(*(int64 *)
                                                                                        (this + 72),
                                                                                       uVar12), lVar4 == null)
                                                                ) throw; // [null/range check failed]
@@ -423,37 +423,37 @@ public class StudyAttackPlayer
                                                           }
                                                           else {
                                                             iVar13 = iVar13 + 1;
-                                                            lVar4 = FUN_180fd0f80(0);
+                                                            lVar4 = FUN_180da2040(0);
                                                             if (lVar4 == null) throw; // [null/range check failed]
                                                             fVar15 = lVar4._version;
-                                                            lVar8 = FUN_180fd0f80(0);
+                                                            lVar8 = FUN_180da2040(0);
                                                             if (lVar8 == null) throw; // [null/range check failed]
                                                             fVar14 = (float)(*(int *)(lVar8 + 32) + 1);
                                                             lVar4._version =
                                                                  fVar14 + fVar14 + fVar15;
-                                                            lVar4 = FUN_180fd0f80(0);
+                                                            lVar4 = FUN_180da2040(0);
                                                             if (lVar4 == null) throw; // [null/range check failed]
                                                             StudyAttackSkillController.ChangeCombo
                                                                       (lVar4,1);
-                                                            lVar4 = FUN_180fd0f80(0);
+                                                            lVar4 = FUN_180da2040(0);
                                                             if (lVar4 == null) throw; // [null/range check failed]
                                                             uVar7 = *(uint64 *)(lVar4 + 72);
                                                             if (((this.bulletInAttackRange == null) ||
-                                                                (lVar4 = FUN_180002f80(*(int64 *)
+                                                                (lVar4 = FUN_1800024b0(*(int64 *)
                                                                                         (this + 72),
                                                                                        uVar12,
-                                                        DAT_181d89930), lVar4 == null)) ||
+                                                        DAT_181e6bc70), lVar4 == null)) ||
                                                         (lVar4 = GameObject.GetComponent
-                                                                           (lVar4,DAT_181d73c40),
+                                                                           (lVar4,DAT_181e56d08),
                                                         lVar4 == null)) throw; // [null/range check failed]
                                                         uVar9 = String.Concat("SpeEffect/",
                                                                                *(uint64 *)
                                                                                 (lVar4 + 40),0);
                                                         plVar10 = (int64 *)Resources.Load(uVar9,0);
                                                         if (((this.bulletInAttackRange == null) ||
-                                                            (lVar4 = FUN_180002f80(*(int64 *)
+                                                            (lVar4 = FUN_1800024b0(*(int64 *)
                                                                                     (this + 72),
-                                                                                   uVar12,DAT_181d89930),
+                                                                                   uVar12,DAT_181e6bc70),
                                                             lVar4 == null)) ||
                                                            (lVar4 = GameObject.get_transform(lVar4,0),
                                                            lVar4 == null)) throw; // [null/range check failed]
@@ -473,7 +473,7 @@ public class StudyAttackPlayer
                                                         local_c0 = local_f0;
                                                         plVar11 = (int64 *)0;
                                                         if ((plVar10 != (int64 *)0) &&
-                                                           (*plVar10 == DAT_181d72e60)) {
+                                                           (*plVar10 == DAT_181e52a08)) {
                                                           plVar11 = plVar10;
                                                         }
                                                         local_b8 = uVar9;
@@ -497,14 +497,14 @@ public class StudyAttackPlayer
                                                         }
                                                         else {
                                                           if (lVar4 == null) throw; // [null/range check failed]
-                                                          FUN_180002f80(lVar4,uVar12,DAT_181d89930);
-                                                          FUN_1817ef410();
+                                                          FUN_1800024b0(lVar4,uVar12,DAT_181e6bc70);
+                                                          FUN_181665e90();
                                                         }
                                                         lVar3 = lVar3 + -8;
                                                         uVar12 = uVar12 - 1;
                                                         } while (-1 < (int)uVar12);
                                                         if (1 < iVar13) {
-                                                          lVar3 = FUN_180fd0f80(0);
+                                                          lVar3 = FUN_180da2040(0);
                                                           uVar2 = Mathf.RoundToInt(((float)iVar13 - 1.0)
                                                                                     * (float)iVar13 * 0.5,
                                                                                     0);
@@ -542,8 +542,8 @@ public class StudyAttackPlayer
         }
     }
 
-    // Token : 0x6002212
-    // RVA   : 0xFD23E0   Offset: 0xFD17E0   Length: 0x2F2
+    // Token : 0x60022BC
+    // RVA   : 0xDA34A0   Offset: 0xDA22A0   Length: 0x2F2
     public void SetShieldTime(float targetTime)
     {
         bool cVar2;
@@ -573,29 +573,29 @@ public class StudyAttackPlayer
               local_30 = -0.001;
               local_38 = 0;
               plVar7 = (int64 *)0;
-              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d72e60)) {
+              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181e52a08)) {
                 plVar7 = plVar3;
               }
               lVar4 = GlobalData.AddChild(uVar6,plVar7,&local_38,&local_28,0);
               this.shieldSpe = lVar4;
               il2cpp_internal(plVar1,lVar4);
               if (this.shieldSpe != null) {
-                uVar6 = GameObject.GetComponent(this.shieldSpe,DAT_181dc7310);
+                uVar6 = GameObject.GetComponent(this.shieldSpe,DAT_181e533a8);
                 cVar2 = Object.op_Inequality(uVar6,0,0);
                 if (!cVar2) {
                   return;
                 }
                 if ((this.shieldSpe != null) &&
-                   (lVar4 = GameObject.GetComponent(this.shieldSpe,DAT_181dc7310)) != null) {
+                   (lVar4 = GameObject.GetComponent(this.shieldSpe,DAT_181e533a8)) != null) {
                   fVar8 = (float)AudioSource.get_volume(lVar4,0);
                   AudioSource.set_volume
-                            (lVar4,fVar8 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+                            (lVar4,fVar8 * *(float *)(*(int64 *)(DAT_181e528f8 + 184) + 16),0);
                   return;
                 }
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
         else {
@@ -608,13 +608,13 @@ public class StudyAttackPlayer
         }
     }
 
-    // Token : 0x6002213
-    // RVA   : 0xFD13E0   Offset: 0xFD07E0   Length: 0xFF5
+    // Token : 0x60022BD
+    // RVA   : 0xDA24A0   Offset: 0xDA12A0   Length: 0xFF5
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var pStatics_1bf8 = *(int64*)(DAT_181da1bf8 + 184);
-        var pStatics_7fa8 = *(int64*)(DAT_181da7fa8 + 184);
-        var pStatics_bea0 = *(int64*)(DAT_181dabea0 + 184);
+        var pStatics_2048 = *(int64*)(DAT_181e82048 + 184);
+        var pStatics_83e8 = *(int64*)(DAT_181e883e8 + 184);
+        var pStatics_c2e8 = *(int64*)(DAT_181e8c2e8 + 184);
         int iVar3;
         uint uVar4;
         bool cVar5;
@@ -646,14 +646,14 @@ public class StudyAttackPlayer
                 if (!cVar5) {
                   return;
                 }
-                if ((*plVar1 != 0) && (lVar7 = Component.GetComponent(*plVar1,DAT_181d95f78)) != null
+                if ((*plVar1 != 0) && (lVar7 = Component.GetComponent(*plVar1,DAT_181e79338)) != null
                    ) {
                   iVar3 = *(int *)(lVar7 + 24);
                   if (iVar3 == 0) {
-                    lVar7 = FUN_180fd0f80(0);
+                    lVar7 = FUN_180da2040(0);
                     if (lVar7 != null) {
                       StudyAttackSkillController.ChangeCombo(lVar7,3);
-                      lVar7 = FUN_18046c0a0(0);
+                      lVar7 = FUN_1802106e0(0);
                       puVar9 = (uint64 *)Vector3.get_zero(local_68,0);
                       uVar8 = *puVar9;
                       uVar4 = *(uint32 *)(puVar9 + 1);
@@ -668,7 +668,7 @@ public class StudyAttackPlayer
                         GameController.ShowTextAtPos(lVar7,"连击+3",&local_88,20,&local_58,0);
                         plVar12 = (int64 *)Resources.Load("Sound/SoundEffect/Success",0);
                         plVar11 = (int64 *)0;
-                        if ((plVar12 != (int64 *)0) && (*plVar12 == DAT_181daf360)) {
+                        if ((plVar12 != (int64 *)0) && (*plVar12 == DAT_181e8f4a0)) {
                           plVar11 = plVar12;
                         }
                         NGUITools.PlaySound(plVar11,0);
@@ -676,11 +676,11 @@ public class StudyAttackPlayer
                           uVar8 = Component.get_transform(*plVar1,0);
                           ShortcutExtensions.DOKill(uVar8,0,0);
                           if ((*plVar1 != 0) &&
-                             (lVar7 = Component.GetComponent(*plVar1,DAT_181d93a78)) != null) {
+                             (lVar7 = Component.GetComponent(*plVar1,DAT_181e76db8)) != null) {
                             Behaviour.set_enabled(lVar7,0,0);
                             if (*plVar1 != 0) {
                               uVar8 = Component.get_transform(*plVar1,0);
-                              lVar7 = FUN_18046c620(0);
+                              lVar7 = FUN_180210ca0(0);
                               if (((lVar7 != null) && (*(int64 *)(lVar7 + 88) != 0)) &&
                                  (lVar7 = Component.get_transform(*(int64 *)(lVar7 + 88),0),
                                  lVar7 != null)) {
@@ -688,8 +688,8 @@ public class StudyAttackPlayer
                                 local_88 = *puVar9;
                                 local_80 = *(float *)(puVar9 + 1);
                                 uVar8 = ShortcutExtensions.DOMove(uVar8,&local_88,0x3f000000,0,0);
-                                uVar13 = new OnTooltipCB(lVar6,DAT_181db4910,0);
-                                TweenSettingsExtensions.OnComplete(uVar8,uVar13,DAT_181dc0380);
+                                uVar13 = new OnTooltipCB(lVar6,DAT_181e986b0,0);
+                                TweenSettingsExtensions.OnComplete(uVar8,uVar13,DAT_181ea3dc0);
                                 return;
                               }
                             }
@@ -700,10 +700,10 @@ public class StudyAttackPlayer
                   }
                   else {
                     if (iVar3 == 1) {
-                      lVar6 = FUN_18046c0a0(0);
+                      lVar6 = FUN_1802106e0(0);
                       if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
                       lVar6 = WorldData.Player(lVar6.villageAreaID,0);
-                      lVar7 = FUN_18046c0a0(0);
+                      lVar7 = FUN_1802106e0(0);
                       if ((lVar7 == null) ||
                          (((*(int64 *)(lVar7 + 32) == 0 ||
                            (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) ||
@@ -711,7 +711,7 @@ public class StudyAttackPlayer
                       plVar12 = (int64 *)0;
                       HeroData.ChangeHp(lVar6,*(float *)(lVar7 + 0x17c) * 0.1,1,1,1,
                                          in_stack_ffffffffffffff60 & 0xffffffffffffff00,0);
-                      lVar6 = FUN_18046c0a0(0);
+                      lVar6 = FUN_1802106e0(0);
                       puVar9 = (uint64 *)Vector3.get_zero(local_68,0);
                       uVar8 = *puVar9;
                       uVar4 = *(uint32 *)(puVar9 + 1);
@@ -726,24 +726,24 @@ public class StudyAttackPlayer
                       GameController.ShowTextAtPos(lVar6,"生命+10%",&local_88,20,&local_58,0);
                       plVar11 = (int64 *)Resources.Load("Sound/SoundEffect/Eat",0);
                       plVar14 = plVar12;
-                      if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181daf360)) {
+                      if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181e8f4a0)) {
                         plVar14 = plVar11;
                       }
                       NGUITools.PlaySound(plVar14,0);
                       if (this.playerSkeleton == null) throw; // [null/range check failed]
                       uVar8 = Component.get_gameObject(this.playerSkeleton,0);
                       plVar11 = (int64 *)Resources.Load("SpeEffect/治疗",0);
-                      if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181d72e60)) {
+                      if ((plVar11 != (int64 *)0) && (*plVar11 == DAT_181e52a08)) {
                         plVar12 = plVar11;
                       }
                       uVar8 = GlobalData.AddChild(uVar8,plVar12,0);
                       this.newObj = uVar8;
                       if (this.newObj == null) throw; // [null/range check failed]
-                      uVar8 = GameObject.GetComponent(this.newObj,DAT_181dc7310);
+                      uVar8 = GameObject.GetComponent(this.newObj,DAT_181e533a8);
                       cVar5 = Object.op_Inequality(uVar8,0,0);
                       if (cVar5) {
                         if ((this.newObj == null) ||
-                           (lVar6 = GameObject.GetComponent(this.newObj,DAT_181dc7310),
+                           (lVar6 = GameObject.GetComponent(this.newObj,DAT_181e533a8),
                            lVar6 == null)) throw; // [null/range check failed]
                         fVar15 = (float)AudioSource.get_volume(lVar6,0);
                         AudioSource.set_volume
@@ -771,7 +771,7 @@ public class StudyAttackPlayer
                 StudyAttackPlayer.SetShieldTime(this,0,0);
                 plVar12 = (int64 *)Resources.Load("Sound/SoundEffect/Break",0);
                 plVar11 = (int64 *)0;
-                if ((plVar12 != (int64 *)0) && (plVar11 = (int64 *)0, *plVar12 == DAT_181daf360)
+                if ((plVar12 != (int64 *)0) && (plVar11 = (int64 *)0, *plVar12 == DAT_181e8f4a0)
                    ) {
                   plVar11 = plVar12;
                 }
@@ -786,32 +786,32 @@ public class StudyAttackPlayer
                   local_80 = -0.1;
                   local_88 = 0x3f80000000000000;
                   plVar11 = (int64 *)0;
-                  if ((plVar12 != (int64 *)0) && (*plVar12 == DAT_181d72e60)) {
+                  if ((plVar12 != (int64 *)0) && (*plVar12 == DAT_181e52a08)) {
                     plVar11 = plVar12;
                   }
                   GlobalData.AddChild(uVar8,plVar11,&local_88,0);
                 }
-                lVar6 = FUN_18046c0a0(0);
+                lVar6 = FUN_1802106e0(0);
                 if ((lVar6 == null) || (lVar6.villageAreaID == null)) throw; // [null/range check failed]
                 lVar6 = WorldData.Player(lVar6.villageAreaID,0);
-                if ((*plVar1 == 0) || (lVar7 = Component.GetComponent(*plVar1,DAT_181d95ef8)) == null
+                if ((*plVar1 == 0) || (lVar7 = Component.GetComponent(*plVar1,DAT_181e792b8)) == null
                    ) throw; // [null/range check failed]
                 fVar15 = *(float *)(lVar7 + 24);
-                lVar7 = FUN_18046c0a0(0);
+                lVar7 = FUN_1802106e0(0);
                 if ((((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
                     (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) == null) ||
                    (lVar6 == null)) throw; // [null/range check failed]
                 HeroData.ChangeHp(lVar6,CONCAT44(0x80000000,-fVar15 * *(float *)(lVar7 + 0x17c)),0,0,1,
                                    in_stack_ffffffffffffff60 & 0xffffffffffffff00,0);
-                if (*pStatics_7fa8 == 0) throw; // [null/range check failed]
-                piVar2 = (int *)(*pStatics_7fa8 + 36);
+                if (*pStatics_83e8 == 0) throw; // [null/range check failed]
+                piVar2 = (int *)(*pStatics_83e8 + 36);
                 *piVar2 = *piVar2 + 1;
-                if (*pStatics_7fa8 == 0) throw; // [null/range check failed]
-                StudyAttackSkillController.ResetCombo(*pStatics_7fa8,0);
+                if (*pStatics_83e8 == 0) throw; // [null/range check failed]
+                StudyAttackSkillController.ResetCombo(*pStatics_83e8,0);
               }
-              if (*pStatics_7fa8 != 0) {
-                uVar8 = *(uint64 *)(*pStatics_7fa8 + 72);
-                if ((*plVar1 != 0) && (lVar6 = Component.GetComponent(*plVar1,DAT_181d95ef8)) != null
+              if (*pStatics_83e8 != 0) {
+                uVar8 = *(uint64 *)(*pStatics_83e8 + 72);
+                if ((*plVar1 != 0) && (lVar6 = Component.GetComponent(*plVar1,DAT_181e792b8)) != null
                    ) {
                   uVar13 = String.Concat("SpeEffect/",lVar6.forceAreaID,0);
                   plVar12 = (int64 *)Resources.Load(uVar13,0);
@@ -827,7 +827,7 @@ public class StudyAttackPlayer
                     local_78 = local_88;
                     local_70 = local_80;
                     plVar11 = (int64 *)0;
-                    if ((plVar12 != (int64 *)0) && (*plVar12 == DAT_181d72e60)) {
+                    if ((plVar12 != (int64 *)0) && (*plVar12 == DAT_181e52a08)) {
                       plVar11 = plVar12;
                     }
                     local_88 = uVar13;
@@ -835,22 +835,22 @@ public class StudyAttackPlayer
                     uVar8 = GlobalData.AddChild(uVar8,plVar11,&local_88,&local_78,0);
                     this.newObj = uVar8;
                     if (this.newObj != null) {
-                      uVar8 = GameObject.GetComponent(this.newObj,DAT_181dc7310);
+                      uVar8 = GameObject.GetComponent(this.newObj,DAT_181e533a8);
                       cVar5 = Object.op_Inequality(uVar8,0,0);
                       if (cVar5) {
                         if ((this.newObj == null) ||
-                           (lVar6 = GameObject.GetComponent(this.newObj,DAT_181dc7310),
+                           (lVar6 = GameObject.GetComponent(this.newObj,DAT_181e533a8),
                            lVar6 == null)) throw; // [null/range check failed]
                         fVar15 = (float)AudioSource.get_volume(lVar6,0);
                         AudioSource.set_volume
                                   (lVar6,fVar15 * GameController.CheckShowSpeHero,0
                                   );
                       }
-                      if (*pStatics_bea0 != 0) {
+                      if (*pStatics_c2e8 != 0) {
                         TimeScaleController.SetSlowTime
-                                  (*pStatics_bea0,0x3f000000,0x3e4ccccd,0);
-                        if (*pStatics_1bf8 != 0) {
-                          ShakeCam.StartShake(*pStatics_1bf8,2,0);
+                                  (*pStatics_c2e8,0x3f000000,0x3e4ccccd,0);
+                        if (*pStatics_2048 != 0) {
+                          ShakeCam.StartShake(*pStatics_2048,2,0);
                           if (*plVar1 != 0) {
                             uVar8 = Component.get_gameObject(*plVar1,0);
                             Object.Destroy(uVar8,0);
@@ -862,20 +862,20 @@ public class StudyAttackPlayer
                                 if ((lVar7 != null) &&
                                    (lVar6 = SkeletonAnimation.get_AnimationState(lVar7,0)) != null) {
                                   AnimationState.SetAnimation(lVar6,1,"die",0,0);
-                                  lVar6 = FUN_18046c0a0(0);
+                                  lVar6 = FUN_1802106e0(0);
                                   if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
                                     lVar6 = WorldData.Player(lVar6.villageAreaID,0);
-                                    lVar7 = FUN_18046c0a0(0);
+                                    lVar7 = FUN_1802106e0(0);
                                     if ((lVar7 != null) &&
                                        (((*(int64 *)(lVar7 + 32) != 0 &&
                                          (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0),
                                          lVar7 != null)) &&
                                         (uVar8 = HeroData.GetHeroDieSound(lVar7,0), lVar6 != null)))) {
                                       HeroData.PlayHeroSound(lVar6,uVar8,0x3f000000,0xbf800000,0);
-                                      if (*pStatics_7fa8 != 0) {
+                                      if (*pStatics_83e8 != 0) {
                                         uVar8 = StudyAttackSkillController.FinishStudyFightSkill
-                                                          (*pStatics_7fa8,0,0);
-                                        FUN_180d8c8f0(this,uVar8,0);
+                                                          (*pStatics_83e8,0,0);
+                                        FUN_180ae80b0(this,uVar8,0);
                                         return;
                                       }
                                     }
@@ -890,10 +890,10 @@ public class StudyAttackPlayer
                                    (lVar6 = SkeletonAnimation.get_AnimationState
                                                       (this.playerSkeleton,0), lVar6 != null)) {
                                   AnimationState.AddEmptyAnimation(lVar6,1,0x3dcccccd,0,0);
-                                  lVar6 = FUN_18046c0a0(0);
+                                  lVar6 = FUN_1802106e0(0);
                                   if ((lVar6 != null) && (lVar6.villageAreaID != null)) {
                                     lVar6 = WorldData.Player(lVar6.villageAreaID,0);
-                                    lVar7 = FUN_18046c0a0(0);
+                                    lVar7 = FUN_1802106e0(0);
                                     if ((lVar7 != null) &&
                                        (((*(int64 *)(lVar7 + 32) != 0 &&
                                          (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0),
@@ -918,11 +918,11 @@ public class StudyAttackPlayer
         }
     }
 
-    // Token : 0x6002214
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60022BE
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

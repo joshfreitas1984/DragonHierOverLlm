@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : OnHoverCB
-// Token : 0x2000110
+// Token : 0x200010F
 // ============================================================
 
 public class OnHoverCB
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600094E
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000935
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,51 +25,47 @@ public class OnHoverCB
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600094F
-    // RVA   : 0x91A6E0   Offset: 0x919AE0   Length: 0x39F
+    // Token : 0x6000936
+    // RVA   : 0x603E60   Offset: 0x602C60   Length: 0x2AF
     public virtual void Invoke(object obj, bool isOver)
     {
         long lVar1;
         bool cVar4;
         ulong uVar7;
-        long lVar8;
-        long lVar9;
-        ushort uVar10;
-        ushort uVar11;
-        ulong uVar12;
-        ulong uVar13;
+        ulong uVar8;
+        ulong uVar9;
         long local_res8;
         local_res8 = this;
         lVar1 = *(int64 *)(this + 104);
         if (lVar1 == null) {
           plVar5 = &local_res8;
-          uVar12 = 1;
+          uVar8 = 1;
         }
         else {
-          uVar12 = *(uint64 *)(lVar1 + 24);
+          uVar8 = *(uint64 *)(lVar1 + 24);
           plVar5 = (int64 *)(lVar1 + 32);
-          if (uVar12 == 0) {
+          if (uVar8 == 0) {
             return;
           }
         }
-        uVar13 = 0;
+        uVar9 = 0;
         do {
-          lVar1 = plVar5[uVar13];
+          lVar1 = plVar5[uVar9];
           pcVar2 = *(code **)(lVar1 + 16);
           plVar3 = *(int64 **)(lVar1 + 32);
           lVar1 = *(int64 *)(lVar1 + 40);
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18091aa3a;
+              goto LAB_1806040c5;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                             (plVar3,obj,isOver,
@@ -77,66 +73,31 @@ public class OnHoverCB
                               (*plVar3 + 0x140 + (uint64)*(uint16 *)(lVar1 + 72) * 16));
                 }
                 else {
-                  lVar9 = il2cpp_class_get_namespace(lVar1);
-                  lVar8 = *plVar3;
-                  uVar11 = 0;
-                  if (*(uint16 *)(lVar8 + 0x12a) != 0) {
-                    do {
-                      if (*(int64 *)(*(int64 *)(lVar8 + 176) + (uint64)uVar11 * 16) == lVar9)
-                      {
-                        puVar6 = (uint64 *)
-                                 ((int64)
-                                  (int)((uint32)*(uint16 *)(lVar1 + 72) +
-                                       *(int *)(*(int64 *)(lVar8 + 176) + 8 + (uint64)uVar11 * 16
-                                               )) * 16 + 0x138 + lVar8);
-                        (*(code *)*puVar6)(plVar3,obj,isOver,puVar6[1]);
-                        goto LAB_18091aa4a;
-                      }
-                      uVar11 = uVar11 + 1;
-                    } while (uVar11 < *(uint16 *)(lVar8 + 0x12a));
-                  }
-                  puVar6 = (uint64 *)FUN_1800914f0(plVar3,lVar9,*(uint16 *)(lVar1 + 72));
-                  (*(code *)*puVar6)(plVar3,obj,isOver,puVar6[1]);
+                  uVar7 = il2cpp_class_get_namespace(lVar1);
+                  FUN_18005fe30(*(uint16 *)(lVar1 + 72),uVar7,plVar3,obj,isOver);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
-                uVar11 = *(uint16 *)(lVar1 + 72);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   puVar6 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
-                                                (*plVar3 + ((uint64)uVar11 + 20) * 16),lVar1);
+                                                (*plVar3 +
+                                                ((uint64)*(uint16 *)(lVar1 + 72) + 20) * 16),
+                                               lVar1);
                   (*(code *)*puVar6)(plVar3,obj,isOver,puVar6);
                 }
                 else {
-                  lVar8 = *plVar3;
-                  uVar10 = 0;
-                  if (*(uint16 *)(lVar8 + 0x12a) != 0) {
-                    do {
-                      if (*(int64 *)(*(int64 *)(lVar8 + 176) + (uint64)uVar10 * 16) ==
-                          *(int64 *)(lVar1 + 24)) {
-                        lVar8 = (int64)
-                                (int)((uint32)uVar11 +
-                                     *(int *)(*(int64 *)(lVar8 + 176) + 8 + (uint64)uVar10 * 16))
-                                * 16 + 0x138 + lVar8;
-                        goto LAB_18091a906;
-                      }
-                      uVar10 = uVar10 + 1;
-                    } while (uVar10 < *(uint16 *)(lVar8 + 0x12a));
-                  }
-                  lVar8 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),(uint64)uVar11);
-        LAB_18091a906:
-                  puVar6 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar8 + 8),lVar1);
-                  (*(code *)*puVar6)(plVar3,obj,isOver,puVar6);
+                  FUN_18005f810(lVar1,plVar3,obj,isOver);
                 }
               }
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18091a787;
+              goto LAB_180603f07;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   (**(code **)(*obj + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                             (obj,isOver,
@@ -145,11 +106,11 @@ public class OnHoverCB
                 }
                 else {
                   uVar7 = il2cpp_class_get_namespace(lVar1);
-                  FUN_1800088a0(*(uint16 *)(lVar1 + 72),uVar7,obj,isOver);
+                  FUN_18005fb70(*(uint16 *)(lVar1 + 72),uVar7,obj,isOver);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   puVar6 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
@@ -159,29 +120,28 @@ public class OnHoverCB
                   (*(code *)*puVar6)(obj,isOver,puVar6);
                 }
                 else {
-                  FUN_1800087f0(lVar1,obj,isOver);
+                  FUN_18005f440(lVar1,obj,isOver);
                 }
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_18091a787:
+        LAB_180603f07:
             (*pcVar2)(obj,isOver,lVar1);
           }
           else {
-        LAB_18091aa3a:
+        LAB_1806040c5:
             (*pcVar2)(plVar3,obj,isOver,lVar1);
           }
-        LAB_18091aa4a:
-          uVar13 = uVar13 + 1;
-          if (uVar12 <= uVar13) {
+          uVar9 = uVar9 + 1;
+          if (uVar8 <= uVar9) {
             return;
           }
         } while( true );
     }
 
-    // Token : 0x6000950
-    // RVA   : 0x91A650   Offset: 0x919A50   Length: 0x82
+    // Token : 0x6000937
+    // RVA   : 0x177EB70   Offset: 0x177D970   Length: 0x82
     public virtual IAsyncResult BeginInvoke(object obj, bool isOver, AsyncCallback callback, object object)
     {
         void OnHoverCB.BeginInvoke
@@ -195,12 +155,12 @@ public class OnHoverCB
         local_res18[0] = isOver;
         local_18 = 0;
         local_28 = obj;
-        local_20 = il2cpp_value_box(DAT_181db2ae0,local_res18);
+        local_20 = il2cpp_value_box(DAT_181e92da8,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x6000951
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x6000938
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

@@ -1,43 +1,43 @@
 // ============================================================
 // Type  : <RefreshOfferMoney>d__51
-// Token : 0x200014F
+// Token : 0x200014B
 // ============================================================
 
 public class <RefreshOfferMoney>d__51
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400086D
+    // Token: 0x400084F
     private int <>1__state;
 
-    // Token: 0x400086E
+    // Token: 0x4000850
     private object <>2__current;
 
-    // Token: 0x400086F
+    // Token: 0x4000851
     public AuctionController <>4__this;
 
-    // Token: 0x4000870
+    // Token: 0x4000852
     public HeroData newOfferHero;
 
-    // Token: 0x4000871
+    // Token: 0x4000853
     public float newOfferMoney;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000ADA
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6000AB9
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6000ADB
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x6000ABA
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6000ADC
-    // RVA   : 0x9C5700   Offset: 0x9C4B00   Length: 0x6A5
+    // Token : 0x6000ABB
+    // RVA   : 0x7101F0   Offset: 0x70EFF0   Length: 0x6A5
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -67,11 +67,11 @@ public class <RefreshOfferMoney>d__51
         *(uint32 *)(lVar1 + 72) = 3;
         AuctionController.SetOfferHero(lVar1,this.newOfferHero,0);
         AuctionController.SetOfferMoney(lVar1);
-        *(uint32 *)(lVar1 + 148) = **(uint32 **)(DAT_181daf2e0 + 184);
+        *(uint32 *)(lVar1 + 148) = **(uint32 **)(DAT_181e8f420 + 184);
         if (*(int64 *)(lVar1 + 152) != 0) {
           lVar7 = *(int64 *)(lVar1 + 120);
           if (*(int64 *)(lVar1 + 112) == 0) throw; // [null/range check failed]
-          uVar2 = FUN_1817ebaf0(*(int64 *)(lVar1 + 112),*(int64 *)(lVar1 + 152),DAT_181d8b7b0);
+          uVar2 = FUN_181662a20(*(int64 *)(lVar1 + 112),*(int64 *)(lVar1 + 152),DAT_181e6d9f0);
           if (lVar7 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -80,20 +80,20 @@ public class <RefreshOfferMoney>d__51
           if (lVar7 == null) throw; // [null/range check failed]
           uVar3 = GameObject.get_transform(lVar7,0);
           uVar3 = ShortcutExtensions.DOScale(uVar3);
-          uVar3 = TweenSettingsExtensions.SetEase(uVar3,3,DAT_181dc1128);
-          TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
+          uVar3 = TweenSettingsExtensions.SetEase(uVar3,3,DAT_181ea4b88);
+          TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181ea4f40);
           lVar7 = *(int64 *)(lVar1 + 120);
-          lVar9 = **(int64 **)(DAT_181d761e8 + 184);
+          lVar9 = **(int64 **)(DAT_181e55d90 + 184);
           if (*(int64 *)(lVar1 + 112) == 0) throw; // [null/range check failed]
-          uVar2 = FUN_1817ebaf0(*(int64 *)(lVar1 + 112),*(uint64 *)(lVar1 + 152),DAT_181d8b7b0);
+          uVar2 = FUN_181662a20(*(int64 *)(lVar1 + 112),*(uint64 *)(lVar1 + 152),DAT_181e6d9f0);
           if (lVar7 == null) throw; // [null/range check failed]
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar3 = lVar7[uVar2];
-          lVar7 = *(int64 *)(*(int64 *)(DAT_181daf2e0 + 184) + 8);
+          lVar7 = *(int64 *)(*(int64 *)(DAT_181e8f420 + 184) + 8);
           if (lVar7 == null) throw; // [null/range check failed]
-          uVar2 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
+          uVar2 = FUN_180af1860(0,*(uint32 *)(lVar7 + 24),0);
           if (*(uint32 *)(lVar7 + 24) <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
@@ -113,8 +113,8 @@ public class <RefreshOfferMoney>d__51
           HeroLittleTalkController.HeroTalk
                     (lVar9,uVar3,uVar6,0x40400000,*(uint64 *)(lVar1 + 192),2,0);
         }
-        lVar7 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar7,DAT_181d8f0b0);
+        lVar7 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar7,DAT_181e71270);
         uVar2 = 0;
         lVar9 = 32;
         while (lVar8 = *(int64 *)(lVar1 + 112)) != null {
@@ -128,10 +128,10 @@ public class <RefreshOfferMoney>d__51
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (*(int64 *)(*(int64 *)(lVar9 + 16) + 32) == 0) break;
-              fVar11 = (float)FUN_1810e3cd0();
+              fVar11 = (float)FUN_180f34e60();
               if (fVar11 < fVar10) {
                 lVar9 = *(int64 *)(lVar1 + 112);
-                uVar2 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
+                uVar2 = FUN_180af1860(0,*(uint32 *)(lVar7 + 24),0);
                 if (*(uint32 *)(lVar7 + 24) <= uVar2) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
@@ -144,15 +144,15 @@ public class <RefreshOfferMoney>d__51
                        lVar9[uVar2];
                   il2cpp_internal();
                   fVar10 = (float)Random.Range();
-                  fVar10 = fVar10 * **(float **)(DAT_181daf2e0 + 184);
-                  goto LAB_1809c5cf8;
+                  fVar10 = fVar10 * **(float **)(DAT_181e8f420 + 184);
+                  goto LAB_1807107e8;
                 }
                 break;
               }
             }
             *(uint64 *)(lVar1 + 168) = 0;
             fVar10 = 0.0;
-        LAB_1809c5cf8:
+        LAB_1807107e8:
             *(float *)(lVar1 + 160) = fVar10;
             uVar3 = new WaitForSeconds();
             this.<>2__current = uVar3;
@@ -163,14 +163,14 @@ public class <RefreshOfferMoney>d__51
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (*(int64 *)(lVar9 + *(int64 *)(lVar8 + 16)) != *(int64 *)(lVar1 + 152)) {
-            if ((*(int64 *)(lVar1 + 112) == 0) || (lVar8 = FUN_180002f80()) == null) break;
+            if ((*(int64 *)(lVar1 + 112) == 0) || (lVar8 = FUN_1800024b0()) == null) break;
             if (*(int *)(lVar8 + 88) != 0) {
               fVar10 = this.newOfferMoney;
-              if (((*(int64 *)(lVar1 + 112) == 0) || (lVar8 = FUN_180002f80()) == null) ||
+              if (((*(int64 *)(lVar1 + 112) == 0) || (lVar8 = FUN_1800024b0()) == null) ||
                  (*(int64 *)(lVar8 + 0x220) == 0)) break;
               if (fVar10 <= (float)*(int *)(*(int64 *)(lVar8 + 0x220) + 24)) {
                 if (lVar7 == null) break;
-                FUN_18182a6c0(lVar7);
+                FUN_181769fe0(lVar7);
               }
             }
           }
@@ -179,27 +179,27 @@ public class <RefreshOfferMoney>d__51
         }
     }
 
-    // Token : 0x6000ADD
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6000ABC
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6000ADE
-    // RVA   : 0x9C5DB0   Offset: 0x9C51B0   Length: 0x3E
+    // Token : 0x6000ABD
+    // RVA   : 0x7108A0   Offset: 0x70F6A0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d97150);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e7a810);
     }
 
-    // Token : 0x6000ADF
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6000ABE
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

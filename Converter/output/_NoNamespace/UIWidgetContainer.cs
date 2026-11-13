@@ -1,16 +1,16 @@
 // ============================================================
 // Type  : UIWidgetContainer
-// Token : 0x2000073
+// Token : 0x2000072
 // ============================================================
 
 public class UIWidgetContainer
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002B0
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000297
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

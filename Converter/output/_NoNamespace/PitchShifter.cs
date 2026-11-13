@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : PitchShifter
-// Token : 0x2000126
+// Token : 0x2000125
 // ============================================================
 
 public class PitchShifter
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000743
+    // Token: 0x4000723
     public Range pitchRange;
 
-    // Token: 0x4000744
+    // Token: 0x4000724
     public AudioSource src;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009BA
-    // RVA   : 0x46C9D0   Offset: 0x46BDD0   Length: 0x42
+    // Token : 0x60009A1
+    // RVA   : 0x211050   Offset: 0x20FE50   Length: 0x42
     private void Start()
     {
         long lVar1;
@@ -25,17 +25,17 @@ public class PitchShifter
         if (lVar1 != null) {
           uVar3 = Random.Range(*(uint32 *)(lVar1 + 16),*(uint32 *)(lVar1 + 20),0);
           if (lVar2 != null) {
-            FUN_180467590(lVar2,uVar3,0);
+            FUN_1818494f0(lVar2,uVar3,0);
             return;
           }
         }
     }
 
-    // Token : 0x60009BB
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60009A2
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

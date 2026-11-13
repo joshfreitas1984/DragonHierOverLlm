@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : MoveDelegate
-// Token : 0x20000E7
+// Token : 0x20000E6
 // ============================================================
 
 public class MoveDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000762
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000749
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class MoveDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000763
-    // RVA   : 0x918FF0   Offset: 0x9183F0   Length: 0x1F0
+    // Token : 0x600074A
+    // RVA   : 0x606450   Offset: 0x605250   Length: 0x1F0
     public virtual void Invoke(Vector2 delta)
     {
         long lVar1;
@@ -60,17 +60,17 @@ public class MoveDelegate
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0)) {
-              if (*(char *)(lVar1 + 74) != false) goto LAB_18091919b;
+              if (*(char *)(lVar1 + 74) != false) goto LAB_1806065fb;
               (*pcVar2)(auStack_68,lVar1);
             }
             else {
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                             (plVar3,local_58,
@@ -79,11 +79,11 @@ public class MoveDelegate
                 }
                 else {
                   uVar6 = il2cpp_class_get_namespace(lVar1);
-                  FUN_180133380(*(uint16 *)(lVar1 + 72),uVar6,plVar3,local_58);
+                  FUN_18005fad0(*(uint16 *)(lVar1 + 72),uVar6,plVar3,local_58);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar6 = local_58;
                 if (!cVar4) {
                   puVar5 = (uint64 *)
@@ -94,7 +94,7 @@ public class MoveDelegate
                   (*(code *)*puVar5)(plVar3,uVar6,puVar5);
                 }
                 else {
-                  FUN_180132f10(lVar1,plVar3,local_58);
+                  FUN_18005f390(lVar1,plVar3,local_58);
                 }
               }
             }
@@ -103,7 +103,7 @@ public class MoveDelegate
             (*pcVar2)(local_58,lVar1);
           }
           else {
-        LAB_18091919b:
+        LAB_1806065fb:
             (*pcVar2)(plVar3,local_58,lVar1);
           }
           uVar7 = uVar7 + 1;
@@ -113,8 +113,8 @@ public class MoveDelegate
         } while( true );
     }
 
-    // Token : 0x6000764
-    // RVA   : 0x918F70   Offset: 0x918370   Length: 0x7B
+    // Token : 0x600074B
+    // RVA   : 0x6063D0   Offset: 0x6051D0   Length: 0x7B
     public virtual IAsyncResult BeginInvoke(Vector2 delta, AsyncCallback callback, object object)
     {
         void MoveDelegate.BeginInvoke
@@ -125,12 +125,12 @@ public class MoveDelegate
         uint64 local_18;
         local_28 = delta;
         local_18 = 0;
-        local_20 = il2cpp_value_box(DAT_181db3968,&local_28);
+        local_20 = il2cpp_value_box(DAT_181e93e40,&local_28);
         il2cpp_internal(this,&local_20,callback,object);
     }
 
-    // Token : 0x6000765
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x600074C
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

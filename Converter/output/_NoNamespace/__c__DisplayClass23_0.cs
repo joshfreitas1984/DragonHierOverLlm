@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass23_0
-// Token : 0x200046E
+// Token : 0x200047B
 // ============================================================
 
 public class <>c__DisplayClass23_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002122
+    // Token: 0x40021B5
     public RectTransform target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600270A
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x60027B4
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x600270B
-    // RVA   : 0x938250   Offset: 0x937650   Length: 0x1D
+    // Token : 0x60027B5
+    // RVA   : 0x67EB60   Offset: 0x67D960   Length: 0x1D
     internal Vector2 <DOPivotX>b__0()
     {
         if (this.target != null) {
@@ -27,8 +27,8 @@ public class <>c__DisplayClass23_0
         }
     }
 
-    // Token : 0x600270C
-    // RVA   : 0x938270   Offset: 0x937670   Length: 0x1E
+    // Token : 0x60027B6
+    // RVA   : 0x67EB80   Offset: 0x67D980   Length: 0x1E
     internal void <DOPivotX>b__1(Vector2 x)
     {
         if (this.target != null) {

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : EquipPoisonData
-// Token : 0x200023A
+// Token : 0x200023D
 // ============================================================
 
 public class EquipPoisonData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40011DA
+    // Token: 0x40011F4
     public float poisonNum;
 
-    // Token: 0x40011DB
+    // Token: 0x40011F5
     public HeroSpeAddData poisonBuffData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60012C3
-    // RVA   : 0x945320   Offset: 0x944720   Length: 0x65
+    // Token : 0x60012D6
+    // RVA   : 0x68AA00   Offset: 0x689800   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -22,49 +22,38 @@ public class EquipPoisonData
         this.poisonBuffData = new HeroSpeAddData(0);
     }
 
-    // Token : 0x60012C4
-    // RVA   : 0x945300   Offset: 0x944700   Length: 0x19
+    // Token : 0x60012D7
+    // RVA   : 0x68A9A0   Offset: 0x6897A0   Length: 0x52
     public HeroSpeAddData GetPoisonBuffData()
     {
-        HeroSpeAddData.op_Multiply(this.poisonBuffData,this.poisonNum / 100.0,0);
+        bool cVar1;
+        ulong uVar2;
+        if ((this.poisonNum == null.0) &&
+           ((this.poisonBuffData == null ||
+            (cVar1 = HeroSpeAddData.isEmpty(this.poisonBuffData,0), cVar1)))) {
+          return 0;
+        }
+        uVar2 = HeroSpeAddData.op_Multiply
+                          (this.poisonBuffData,this.poisonNum / 100.0,0);
+        return uVar2;
     }
 
-    // Token : 0x60012C5
-    // RVA   : 0x945180   Offset: 0x944580   Length: 0x175
+    // Token : 0x60012D8
+    // RVA   : 0x68A880   Offset: 0x689680   Length: 0x117
     public virtual object Clone()
     {
-        long lVar2;
-        ulong uVar3;
-        ulong local_38;
-        ulong uStack_30;
-        uint local_28;
-        uint uStack_24;
-        uint uStack_20;
-        uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
-        plVar4 = plVar1;
-        MemoryStream.ctor(plVar1,1000,0);
-        local_38 = 0;
-        uStack_30 = 0;
-        StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
-        local_28 = (uint32)local_38;
-        uStack_24 = local_38._4_4_;
-        uStack_20 = (uint32)uStack_30;
-        uStack_1c = uStack_30._4_4_;
-        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar4);
-        if (lVar2 != null) {
-          BinaryFormatter.Serialize(lVar2,plVar1,this,0);
-          if (plVar1 != (int64 *)0) {
-            (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
-            uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
-            (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
-            return uVar3;
-          }
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
+        long lVar1;
+        ulong uVar2;
+        lVar1 = new ZhSegment(0);
+        uVar2 = new HeroSpeAddData(0);
+        *(uint64 *)(lVar1 + 24) = uVar2;
+        *(uint32 *)(lVar1 + 16) = this.poisonNum;
+        plVar3 = (int64 *)0;
+        if (this.poisonBuffData != null) {
+          plVar3 = (int64 *)HeroSpeAddData.Clone();
         }
+        *(int64 **)(lVar1 + 24) = plVar3;
+        return lVar1;
     }
 
 }

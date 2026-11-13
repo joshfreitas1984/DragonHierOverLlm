@@ -1,67 +1,67 @@
 // ============================================================
 // Type  : UITooltip
-// Token : 0x200011C
+// Token : 0x200011B
 // ============================================================
 
 public class UITooltip
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000715
+    // Token: 0x40006F5
     protected static UITooltip mInstance;
 
-    // Token: 0x4000716
+    // Token: 0x40006F6
     public Camera uiCamera;
 
-    // Token: 0x4000717
+    // Token: 0x40006F7
     public UILabel text;
 
-    // Token: 0x4000718
+    // Token: 0x40006F8
     public GameObject tooltipRoot;
 
-    // Token: 0x4000719
+    // Token: 0x40006F9
     public UISprite background;
 
-    // Token: 0x400071A
+    // Token: 0x40006FA
     public float appearSpeed;
 
-    // Token: 0x400071B
+    // Token: 0x40006FB
     public bool scalingTransitions;
 
-    // Token: 0x400071C
+    // Token: 0x40006FC
     protected GameObject mTooltip;
 
-    // Token: 0x400071D
+    // Token: 0x40006FD
     protected Transform mTrans;
 
-    // Token: 0x400071E
+    // Token: 0x40006FE
     protected float mTarget;
 
-    // Token: 0x400071F
+    // Token: 0x40006FF
     protected float mCurrent;
 
-    // Token: 0x4000720
+    // Token: 0x4000700
     protected Vector3 mPos;
 
-    // Token: 0x4000721
+    // Token: 0x4000701
     protected Vector3 mSize;
 
-    // Token: 0x4000722
+    // Token: 0x4000702
     protected UIWidget[] mWidgets;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000996
-    // RVA   : 0xC09030   Offset: 0xC08430   Length: 0xA9
+    // Token : 0x600097D
+    // RVA   : 0x9622A0   Offset: 0x9610A0   Length: 0xA9
     public static bool get_isVisible()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = **(uint64 **)(DAT_181db0590 + 184);
+        uVar1 = **(uint64 **)(DAT_181e909d0 + 184);
         uVar2 = Object.op_Inequality(uVar1,0,0);
         if ((char)uVar2) {
-          uVar2 = **(uint64 **)(DAT_181db0590 + 184);
+          uVar2 = **(uint64 **)(DAT_181e909d0 + 184);
           if (uVar2 == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(float *)(uVar2 + 80) == 1.0) {
             return CONCAT71((int7)(uVar2 >> 8),1);
@@ -70,26 +70,26 @@ public class UITooltip
         return uVar2 & 0xffffffffffffff00;
     }
 
-    // Token : 0x6000997
-    // RVA   : 0xC080F0   Offset: 0xC074F0   Length: 0x43
+    // Token : 0x600097E
+    // RVA   : 0x961360   Offset: 0x960160   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181db0590 + 184);
+        puVar1 = *(uint64 **)(DAT_181e909d0 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000998
-    // RVA   : 0xC08200   Offset: 0xC07600   Length: 0x40
+    // Token : 0x600097F
+    // RVA   : 0x961470   Offset: 0x960270   Length: 0x40
     private void OnDestroy()
     {
-        puVar1 = *(uint64 **)(DAT_181db0590 + 184);
+        puVar1 = *(uint64 **)(DAT_181e909d0 + 184);
         *puVar1 = 0;
         il2cpp_internal(puVar1,0);
     }
 
-    // Token : 0x6000999
-    // RVA   : 0xC08B10   Offset: 0xC07F10   Length: 0x157
+    // Token : 0x6000980
+    // RVA   : 0x961D80   Offset: 0x960B80   Length: 0x157
     protected virtual void Start()
     {
         bool cVar1;
@@ -99,7 +99,7 @@ public class UITooltip
         lVar3 = Component.get_transform(this,0);
         this[9] = lVar3;
         il2cpp_internal(this + 9,lVar3);
-        lVar3 = FUN_180967b70(this,DAT_181d98a78);
+        lVar3 = FUN_180772590(this,DAT_181e7be38);
         this[14] = lVar3;
         il2cpp_internal(this + 14,lVar3);
         if (this[9] != 0) {
@@ -116,15 +116,15 @@ public class UITooltip
             this[3] = lVar3;
             il2cpp_internal(this + 3,lVar3);
           }
-                          // WARNING: Could not recover jumptable at 0x000180c08c5b. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180961ecb. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x198))(this,0,*(uint64 *)(*this + 0x1a0));
           return;
         }
     }
 
-    // Token : 0x600099A
-    // RVA   : 0xC08C70   Offset: 0xC08070   Length: 0x370
+    // Token : 0x6000981
+    // RVA   : 0x961EE0   Offset: 0x960CE0   Length: 0x370
     protected virtual void Update()
     {
         long lVar1;
@@ -143,7 +143,7 @@ public class UITooltip
         float local_70;
         byte[] local_58 = new byte[80];
         lVar1 = this[8];
-        uVar2 = *(uint64 *)(*(int64 *)(DAT_181daf690 + 184) + 0x1b0);
+        uVar2 = *(uint64 *)(*(int64 *)(DAT_181e8fad0 + 184) + 0x1b0);
         cVar4 = Object.op_Inequality(lVar1,uVar2,0);
         if (!cVar4) {
           fVar8 = *(float *)(this + 10);
@@ -199,13 +199,13 @@ public class UITooltip
             }
             local_78 = lVar1;
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x600099B
-    // RVA   : 0xC08240   Offset: 0xC07640   Length: 0x117
+    // Token : 0x6000982
+    // RVA   : 0x9614B0   Offset: 0x9602B0   Length: 0x117
     protected virtual void SetAlpha(float val)
     {
         int iVar1;
@@ -225,22 +225,22 @@ public class UITooltip
         uint32 uStack_2c;
         uVar8 = 0;
         if (this.mWidgets == null) {
-        LAB_180c08342:
+        LAB_1809615b2:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         iVar1 = *(int *)(this.mWidgets + 24);
         if (0 < iVar1) {
           do {
             lVar2 = this.mWidgets;
-            if (lVar2 == null) goto LAB_180c08342;
+            if (lVar2 == null) goto LAB_1809615b2;
             if (*(uint32 *)(lVar2 + 24) <= uVar8) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             plVar3 = lVar2[uVar8];
-            if (plVar3 == (int64 *)0) goto LAB_180c08342;
+            if (plVar3 == (int64 *)0) goto LAB_1809615b2;
             lVar2 = plVar3[18];
             uVar4 = *(uint32 *)((int64)plVar3 + 148);
             lVar5 = plVar3[19];
@@ -265,8 +265,8 @@ public class UITooltip
         }
     }
 
-    // Token : 0x600099C
-    // RVA   : 0xC08360   Offset: 0xC07760   Length: 0x64C
+    // Token : 0x6000983
+    // RVA   : 0x9615D0   Offset: 0x9603D0   Length: 0x64C
     protected virtual void SetText(string tooltipText)
     {
         float fVar1;
@@ -287,13 +287,13 @@ public class UITooltip
         uint local_40;
         uVar6 = this.text;
         cVar3 = Object.op_Inequality(uVar6,0,0);
-        if ((!cVar3) || (cVar3 = FUN_180d75bc0(tooltipText,0), cVar3)) {
+        if ((!cVar3) || (cVar3 = FUN_180ad1200(tooltipText,0), cVar3)) {
           this.mTooltip = 0;
           this.mTarget = 0;
           return;
         }
         this.mTarget = 0x3f800000;
-        uVar6 = FUN_180c03f30(0);
+        uVar6 = FUN_18095d190(0);
         this.mTooltip = uVar6;
         if (this.text != null) {
           UILabel.set_text(this.text,tooltipText,0);
@@ -371,7 +371,7 @@ public class UITooltip
                 if (this.uiCamera == null) throw; // [null/range check failed]
                 Camera.get_orthographicSize(this.uiCamera,0);
                 if ((this.mTrans == null) ||
-                   (lVar7 = FUN_180daa030(this.mTrans,0)) == null)
+                   (lVar7 = FUN_180b05920(this.mTrans,0)) == null)
                 throw; // [null/range check failed]
                 puVar8 = (uint64 *)Transform.get_lossyScale(&local_48,lVar7,0);
                 uVar6 = *puVar8;
@@ -400,9 +400,9 @@ public class UITooltip
                          Transform.get_localPosition(&local_48,this.mTrans,0);
                 this.mPos = *puVar8;
                 *(uint32 *)(this + 96) = *(uint32 *)(puVar8 + 1);
-                uVar4 = FUN_18000d7c0();
+                uVar4 = FUN_18007dbc0();
                 this.mPos = uVar4;
-                fVar13 = (float)FUN_18000d7c0();
+                fVar13 = (float)FUN_18007dbc0();
               }
               *(float *)(this + 92) = fVar13;
               if (this.mTrans != null) {
@@ -427,50 +427,50 @@ public class UITooltip
         }
     }
 
-    // Token : 0x600099D
-    // RVA   : 0xC089B0   Offset: 0xC07DB0   Length: 0xAE
+    // Token : 0x6000984
+    // RVA   : 0x961C20   Offset: 0x960A20   Length: 0xAE
     public static void ShowText(string text)
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181db0590 + 184);
+        uVar1 = **(uint64 **)(DAT_181e909d0 + 184);
         cVar3 = Object.op_Inequality(uVar1,0,0);
         if (cVar3) {
-          plVar2 = (int64 *)**(int64 **)(DAT_181db0590 + 184);
+          plVar2 = (int64 *)**(int64 **)(DAT_181e909d0 + 184);
           if (plVar2 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           (**(code **)(*plVar2 + 0x1a8))(plVar2,text,*(uint64 *)(*plVar2 + 0x1b0));
         }
     }
 
-    // Token : 0x600099E
-    // RVA   : 0xC08A60   Offset: 0xC07E60   Length: 0xAE
+    // Token : 0x6000985
+    // RVA   : 0x961CD0   Offset: 0x960AD0   Length: 0xAE
     public static void Show(string text)
     {
         ulong uVar1;
         bool cVar3;
-        uVar1 = **(uint64 **)(DAT_181db0590 + 184);
+        uVar1 = **(uint64 **)(DAT_181e909d0 + 184);
         cVar3 = Object.op_Inequality(uVar1,0,0);
         if (cVar3) {
-          plVar2 = (int64 *)**(int64 **)(DAT_181db0590 + 184);
+          plVar2 = (int64 *)**(int64 **)(DAT_181e909d0 + 184);
           if (plVar2 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           (**(code **)(*plVar2 + 0x1a8))(plVar2,text,*(uint64 *)(*plVar2 + 0x1b0));
         }
     }
 
-    // Token : 0x600099F
-    // RVA   : 0xC08140   Offset: 0xC07540   Length: 0xB8
+    // Token : 0x6000986
+    // RVA   : 0x9613B0   Offset: 0x9601B0   Length: 0xB8
     public static void Hide()
     {
-        var pStatics = *(int64*)(DAT_181db0590 + 184);
+        var pStatics = *(int64*)(DAT_181e909d0 + 184);
         ulong uVar1;
         bool cVar2;
-        uVar1 = **(uint64 **)(DAT_181db0590 + 184);
+        uVar1 = **(uint64 **)(DAT_181e909d0 + 184);
         cVar2 = Object.op_Inequality(uVar1,0,0);
         if (!cVar2) {
           return;
@@ -486,8 +486,8 @@ public class UITooltip
         }
     }
 
-    // Token : 0x60009A0
-    // RVA   : 0xC08FF0   Offset: 0xC083F0   Length: 0x3E
+    // Token : 0x6000987
+    // RVA   : 0x962260   Offset: 0x961060   Length: 0x3E
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];
@@ -496,7 +496,7 @@ public class UITooltip
         puVar1 = (uint64 *)Vector3.get_zero(local_18,0);
         *(uint64 *)(this + 100) = *puVar1;
         *(uint32 *)(this + 108) = *(uint32 *)(puVar1 + 1);
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

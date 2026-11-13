@@ -1,71 +1,71 @@
 // ============================================================
 // Type  : ReadBookTextController
-// Token : 0x200033C
+// Token : 0x2000346
 // ============================================================
 
 public class ReadBookTextController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001AEF
+    // Token: 0x4001B69
     public int column;
 
-    // Token: 0x4001AF0
+    // Token: 0x4001B6A
     public int row;
 
-    // Token: 0x4001AF1
+    // Token: 0x4001B6B
     public ReadBookTextTypeData textData;
 
-    // Token: 0x4001AF2
+    // Token: 0x4001B6C
     public bool seen;
 
-    // Token: 0x4001AF3
+    // Token: 0x4001B6D
     public bool finished;
 
-    // Token: 0x4001AF4
+    // Token: 0x4001B6E
     public bool inited;
 
-    // Token: 0x4001AF5
+    // Token: 0x4001B6F
     public Sprite expIconSprite;
 
-    // Token: 0x4001AF6
+    // Token: 0x4001B70
     public Sprite expGoodIconSprite;
 
-    // Token: 0x4001AF7
+    // Token: 0x4001B71
     public Sprite pantientIconSprite;
 
-    // Token: 0x4001AF8
+    // Token: 0x4001B72
     public Sprite expGoodBack;
 
-    // Token: 0x4001AF9
+    // Token: 0x4001B73
     public Sprite expBadBack;
 
-    // Token: 0x4001AFA
+    // Token: 0x4001B74
     public Sprite speGoodBack;
 
-    // Token: 0x4001AFB
+    // Token: 0x4001B75
     public Sprite speBadBack;
 
-    // Token: 0x4001AFC
+    // Token: 0x4001B76
     private static Color TextPositiceColor;
 
-    // Token: 0x4001AFD
+    // Token: 0x4001B77
     private static Color TextNegaticeColor;
 
-    // Token: 0x4001AFE
+    // Token: 0x4001B78
     private Vector3 originIconPos;
 
-    // Token: 0x4001AFF
+    // Token: 0x4001B79
     private GameObject newObj;
 
-    // Token: 0x4001B00
+    // Token: 0x4001B7A
     private static Color textGrayColor;
 
-    // Token: 0x4001B01
+    // Token: 0x4001B7B
     private static Color textRedColor;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002086
-    // RVA   : 0xD113A0   Offset: 0xD107A0   Length: 0x75
+    // Token : 0x6002125
+    // RVA   : 0xA6A000   Offset: 0xA68E00   Length: 0x75
     private void Start()
     {
         long lVar1;
@@ -82,12 +82,12 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x6002087
-    // RVA   : 0xD11420   Offset: 0xD10820   Length: 0x694
+    // Token : 0x6002126
+    // RVA   : 0xA6A080   Offset: 0xA68E80   Length: 0x694
     private void Update()
     {
-        var pStatics_9c98 = *(int64*)(DAT_181d99c98 + 184);
-        var pStatics_9d18 = *(int64*)(DAT_181d99d18 + 184);
+        var pStatics_a058 = *(int64*)(DAT_181e7a058 + 184);
+        var pStatics_a0d8 = *(int64*)(DAT_181e7a0d8 + 184);
         long lVar1;
         bool cVar2;
         int iVar3;
@@ -106,11 +106,11 @@ public class ReadBookTextController
           this.inited = 1;
           ReadBookTextController.Init(this,0);
         }
-        uVar7 = *(uint64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 72);
+        uVar7 = *(uint64 *)(*(int64 *)(DAT_181e6bb68 + 184) + 72);
         uVar4 = Component.get_gameObject(this,0);
         cVar2 = Object.op_Equality(uVar7,uVar4,0);
         if (cVar2) {
-          lVar5 = Component.GetComponent(this,DAT_181d95578);
+          lVar5 = Component.GetComponent(this,DAT_181e788b8);
           uVar7 = "未知";
           if (this.seen) {
             lVar1 = this.textData;
@@ -132,7 +132,7 @@ public class ReadBookTextController
               uVar7 = String.Concat(uVar7,"\n经验 ",uVar4,0);
             }
             if (lVar1.costPatient != null) {
-              cVar2 = FUN_18171eb50(uVar7,"",0);
+              cVar2 = FUN_1816387f0(uVar7,"",0);
               uVar4 = "\n";
               if (cVar2) {
                 uVar4 = "";
@@ -152,7 +152,7 @@ public class ReadBookTextController
           lVar5 = Component.get_transform(this,0);
           if (((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Icon",0)) == null) ||
              (lVar5 = Transform.Find(lVar5,"Text",0)) == null) throw; // [null/range check failed]
-          uVar7 = Component.GetComponent(lVar5,DAT_181d96178);
+          uVar7 = Component.GetComponent(lVar5,DAT_181e79538);
           lVar5 = this.textData;
           if (lVar5 == null) throw; // [null/range check failed]
           if (lVar5.exp == null.0) {
@@ -168,37 +168,37 @@ public class ReadBookTextController
             lVar5 = Component.get_transform(this,0);
             if (((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Icon",0)) == null) ||
                (lVar5 = Transform.Find(lVar5,"Text",0)) == null) throw; // [null/range check failed]
-            lVar5 = Component.GetComponent(lVar5,DAT_181d96178);
+            lVar5 = Component.GetComponent(lVar5,DAT_181e79538);
             if ((this.textData == null) ||
                (iVar3 = Mathf.RoundToInt(ABS(this.textData.exp) * 0.1,0),
                lVar5 == null)) throw; // [null/range check failed]
             Text.set_fontSize(lVar5,iVar3 + 15,0);
           }
         }
-        plVar8 = (int64 *)Component.GetComponent(this,DAT_181d94478);
-        if ((*pStatics_9c98 == 0) ||
-           (lVar5 = *(int64 *)(*pStatics_9c98 + 88)) == null)
+        plVar8 = (int64 *)Component.GetComponent(this,DAT_181e777b8);
+        if ((*pStatics_a058 == 0) ||
+           (lVar5 = *(int64 *)(*pStatics_a058 + 88)) == null)
         throw; // [null/range check failed]
         if ((lVar5.fullName < 1) &&
            ((this.seen && (!this.finished)))) {
           if (this.textData == null) throw; // [null/range check failed]
-          cVar2 = FUN_18171eb50(this.textData.showName,"缺",0);
-          if (cVar2) goto LAB_180d11a44;
+          cVar2 = FUN_1816387f0(this.textData.showName,"缺",0);
+          if (cVar2) goto LAB_180a6a6a4;
           if (this.textData == null) throw; // [null/range check failed]
           if (this.textData.costPatient == null) {
-        LAB_180d11a33:
-            puVar9 = (uint32 *)FUN_1810d3b80(&local_38,0);
+        LAB_180a6a693:
+            puVar9 = (uint32 *)FUN_180f24d00(&local_38,0);
             local_38 = *puVar9;
             uStack_34 = puVar9[1];
             uStack_30 = puVar9[2];
             uStack_2c = puVar9[3];
           }
           else {
-            lVar5 = FUN_18046c540(0);
+            lVar5 = FUN_180210bb0(0);
             if ((lVar5 == null) || (this.textData == null)) throw; // [null/range check failed]
             if (this.textData.costPatient <= *(int *)(lVar5 + 124))
-            goto LAB_180d11a33;
-            lVar5 = pStatics_9d18;
+            goto LAB_180a6a693;
+            lVar5 = pStatics_a0d8;
             local_38 = lVar5.exp;
             uStack_34 = lVar5.expRate;
             uStack_30 = lVar5.patient;
@@ -206,8 +206,8 @@ public class ReadBookTextController
           }
         }
         else {
-        LAB_180d11a44:
-          lVar5 = pStatics_9d18;
+        LAB_180a6a6a4:
+          lVar5 = pStatics_a0d8;
           local_38 = lVar5.describe;
           uStack_34 = *(uint32 *)(lVar5 + 36);
           uStack_30 = lVar5.simpleText;
@@ -219,8 +219,8 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x6002088
-    // RVA   : 0xD11280   Offset: 0xD10680   Length: 0x114
+    // Token : 0x6002127
+    // RVA   : 0xA69EE0   Offset: 0xA68CE0   Length: 0x114
     public void SeeText()
     {
         long lVar1;
@@ -231,30 +231,30 @@ public class ReadBookTextController
           if (lVar1 != null) {
             uVar2 = Transform.Find(lVar1,"Cover",0);
             uVar2 = ShortcutExtensions.DOScale(uVar2,0x40400000,0x3e99999a,0);
-            TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
+            TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181ea59e0);
             lVar1 = Component.get_transform(this,0);
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Cover",0);
               if (lVar1 != null) {
-                uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
+                uVar2 = Component.GetComponent(lVar1,DAT_181e777b8);
                 uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e99999a,0);
-                TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
+                TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181ea5848);
                 return;
               }
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6002089
-    // RVA   : 0xD0F4A0   Offset: 0xD0E8A0   Length: 0x1AA4
+    // Token : 0x6002128
+    // RVA   : 0xA68100   Offset: 0xA66F00   Length: 0x1AA4
     public void ReadText()
     {
-        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        var pStatics_9c98 = *(int64*)(DAT_181d99c98 + 184);
+        var pStatics_2a90 = *(int64*)(DAT_181e52a90 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
+        var pStatics_a058 = *(int64*)(DAT_181e7a058 + 184);
         bool cVar2;
         uint uVar3;
         long lVar5;
@@ -279,7 +279,7 @@ public class ReadBookTextController
         uint32 uStack_5c;
         local_res8[0] = 0.0;
         if (this.textData == null) throw; // [null/range check failed]
-        cVar2 = FUN_18171eb50(this.textData.showName,"缺",0);
+        cVar2 = FUN_1816387f0(this.textData.showName,"缺",0);
         if (cVar2) {
           lVar5 = GameController._instance;
           lVar8 = Component.get_transform(this,0);
@@ -305,7 +305,7 @@ public class ReadBookTextController
         plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick");
         plVar15 = (int64 *)0;
         plVar13 = plVar15;
-        if ((plVar4 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar4 == DAT_181daf360)) {
+        if ((plVar4 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar4 == DAT_181e8f4a0)) {
           plVar13 = plVar4;
         }
         NGUITools.PlaySound(plVar13);
@@ -318,19 +318,19 @@ public class ReadBookTextController
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"NameText",0)) == null)
           throw; // [null/range check failed]
-          uVar7 = Component.GetComponent(lVar5,DAT_181d96178);
+          uVar7 = Component.GetComponent(lVar5,DAT_181e79538);
           DOTweenModuleUI.DOFade(uVar7,0,0x3e99999a,0);
           if (this.textData == null) throw; // [null/range check failed]
           uVar7 = "Fail";
           if (!this.textData.negative) {
-        LAB_180d0f8fa:
+        LAB_180a6855a:
             uVar7 = "Success";
           }
-        LAB_180d0f901:
+        LAB_180a68561:
           uVar7 = String.Concat("Sound/SoundEffect/",uVar7,0);
           plVar4 = (int64 *)Resources.Load(uVar7,0);
           plVar13 = plVar15;
-          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+          if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
             plVar13 = plVar4;
           }
           NGUITools.PlaySound(plVar13,0x3f19999a,0);
@@ -348,8 +348,8 @@ public class ReadBookTextController
           iVar16 = this.textData.patient;
           if (iVar16 != 0) {
             uVar7 = "Fail";
-            if (-1 < iVar16) goto LAB_180d0f8fa;
-            goto LAB_180d0f901;
+            if (-1 < iVar16) goto LAB_180a6855a;
+            goto LAB_180a68561;
           }
         }
         lVar5 = this.textData;
@@ -358,13 +358,13 @@ public class ReadBookTextController
           lVar5 = new c.DisplayClass9_0(0);
           if (this.textData == null) throw; // [null/range check failed]
           local_res8[0] = (float)ReadBookTextTypeData.GetExp(this.textData,0);
-          lVar8 = *pStatics_9c98;
+          lVar8 = *pStatics_a058;
           if (lVar8 == null) throw; // [null/range check failed]
           *(float *)(lVar8 + 120) = local_res8[0] + *(float *)(lVar8 + 120);
-          if (*pStatics_2ee8 == 0) throw; // [null/range check failed]
-          uVar7 = *(uint64 *)(*pStatics_2ee8 + 64);
-          if (*pStatics_9c98 == 0) throw; // [null/range check failed]
-          uVar10 = *(uint64 *)(*pStatics_9c98 + 136);
+          if (*pStatics_2a90 == 0) throw; // [null/range check failed]
+          uVar7 = *(uint64 *)(*pStatics_2a90 + 64);
+          if (*pStatics_a058 == 0) throw; // [null/range check failed]
+          uVar10 = *(uint64 *)(*pStatics_a058 + 136);
           uVar7 = GlobalData.AddChild(uVar7,uVar10,0);
           if (lVar5 == null) throw; // [null/range check failed]
           lVar5.showName = uVar7;
@@ -378,35 +378,35 @@ public class ReadBookTextController
           local_70 = *(uint32 *)(puVar6 + 1);
           Transform.set_position(lVar8,&local_78,0);
           if (lVar5.showName == null) throw; // [null/range check failed]
-          lVar8 = GameObject.GetComponent(lVar5.showName,DAT_181d71e80);
+          lVar8 = GameObject.GetComponent(lVar5.showName,DAT_181e54f48);
           lVar9 = Component.get_transform(this,0);
           if ((((lVar9 == null) || (lVar9 = Transform.Find(lVar9,"Icon",0)) == null) ||
-              (lVar9 = Component.GetComponent(lVar9,DAT_181d94478)) == null) || (lVar8 == null))
+              (lVar9 = Component.GetComponent(lVar9,DAT_181e777b8)) == null) || (lVar8 == null))
           throw; // [null/range check failed]
           Image.set_sprite(lVar8,*(uint64 *)(lVar9 + 216),0);
           if (((lVar5.showName == null) ||
               (lVar8 = GameObject.get_transform(lVar5.showName,0)) == null) ||
              (lVar8 = Transform.Find(lVar8,"Text",0)) == null) throw; // [null/range check failed]
-          uVar7 = Component.GetComponent(lVar8,DAT_181d96178);
+          uVar7 = Component.GetComponent(lVar8,DAT_181e79538);
           uVar10 = Single.ToString(local_res8,"#;-#;0",0);
           LTLocalization.SetText(uVar7,uVar10,0);
           if (((lVar5.showName == null) ||
               (lVar8 = GameObject.get_transform(lVar5.showName,0)) == null) ||
              (lVar8 = Transform.Find(lVar8,"Text",0)) == null) throw; // [null/range check failed]
-          plVar4 = (int64 *)Component.GetComponent(lVar8,DAT_181d96178);
+          plVar4 = (int64 *)Component.GetComponent(lVar8,DAT_181e79538);
           if (local_res8[0] < 0.0) {
-            lVar8 = pStatics_3d40;
-            uVar17 = *(uint32 *)(lVar8 + 0x2f0);
-            uVar19 = *(uint32 *)(lVar8 + 0x2f4);
-            uVar20 = *(uint32 *)(lVar8 + 0x2f8);
-            uVar21 = *(uint32 *)(lVar8 + 0x2fc);
+            lVar8 = pStatics_38e8;
+            uVar17 = *(uint32 *)(lVar8 + 0x2f8);
+            uVar19 = *(uint32 *)(lVar8 + 0x2fc);
+            uVar20 = *(uint32 *)(lVar8 + 0x300);
+            uVar21 = *(uint32 *)(lVar8 + 0x304);
           }
           else {
-            lVar8 = pStatics_3d40;
-            uVar17 = *(uint32 *)(lVar8 + 0x288);
-            uVar19 = *(uint32 *)(lVar8 + 0x28c);
-            uVar20 = *(uint32 *)(lVar8 + 0x290);
-            uVar21 = *(uint32 *)(lVar8 + 0x294);
+            lVar8 = pStatics_38e8;
+            uVar17 = *(uint32 *)(lVar8 + 0x290);
+            uVar19 = *(uint32 *)(lVar8 + 0x294);
+            uVar20 = *(uint32 *)(lVar8 + 0x298);
+            uVar21 = *(uint32 *)(lVar8 + 0x29c);
           }
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           local_68 = uVar17;
@@ -416,8 +416,8 @@ public class ReadBookTextController
           (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_68,*(uint64 *)(*plVar4 + 0x2b0));
           if (lVar5.showName == null) throw; // [null/range check failed]
           uVar7 = GameObject.get_transform(lVar5.showName,0);
-          if ((((*pStatics_9c98 == 0) ||
-               (lVar8 = *(int64 *)(*pStatics_9c98 + 48)) == null) ||
+          if ((((*pStatics_a058 == 0) ||
+               (lVar8 = *(int64 *)(*pStatics_a058 + 48)) == null) ||
               (lVar8 = GameObject.get_transform(lVar8,0)) == null) ||
              (lVar8 = Transform.Find(lVar8,"TotalExp",0)) == null) throw; // [null/range check failed]
           puVar6 = (uint64 *)Transform.get_position(&local_68,lVar8,0);
@@ -427,15 +427,15 @@ public class ReadBookTextController
           if (lVar5.showName == null) throw; // [null/range check failed]
           uVar7 = GameObject.get_transform(lVar5.showName,0);
           uVar7 = ShortcutExtensions.DOScale(uVar7,0,0x3e800000,0);
-          uVar7 = TweenSettingsExtensions.SetDelay(uVar7,0x3f400000,DAT_181dc0e10);
-          uVar10 = new OnTooltipCB(lVar5,DAT_181dab6e0,0);
-          TweenSettingsExtensions.OnComplete(uVar7,uVar10,DAT_181dc0380);
+          uVar7 = TweenSettingsExtensions.SetDelay(uVar7,0x3f400000,DAT_181ea4858);
+          uVar10 = new OnTooltipCB(lVar5,DAT_181e8f088,0);
+          TweenSettingsExtensions.OnComplete(uVar7,uVar10,DAT_181ea3dc0);
           lVar5 = this.textData;
           if (lVar5 == null) throw; // [null/range check failed]
           if (0.0 < lVar5.exp) {
             plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/NoticeLittleLittle",0);
             plVar13 = plVar15;
-            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
               plVar13 = plVar4;
             }
             NGUITools.PlaySound(plVar13,0);
@@ -445,14 +445,14 @@ public class ReadBookTextController
         }
         if (lVar5.patient != null) {
           lVar5 = new c.DisplayClass9_0(0);
-          if ((this.textData == null) || (*pStatics_9c98 == 0))
+          if ((this.textData == null) || (*pStatics_a058 == 0))
           throw; // [null/range check failed]
-          piVar1 = (int *)(*pStatics_9c98 + 124);
+          piVar1 = (int *)(*pStatics_a058 + 124);
           *piVar1 = *piVar1 + this.textData.patient;
-          if (*pStatics_2ee8 == 0) throw; // [null/range check failed]
-          uVar7 = *(uint64 *)(*pStatics_2ee8 + 64);
-          if (*pStatics_9c98 == 0) throw; // [null/range check failed]
-          uVar10 = *(uint64 *)(*pStatics_9c98 + 136);
+          if (*pStatics_2a90 == 0) throw; // [null/range check failed]
+          uVar7 = *(uint64 *)(*pStatics_2a90 + 64);
+          if (*pStatics_a058 == 0) throw; // [null/range check failed]
+          uVar10 = *(uint64 *)(*pStatics_a058 + 136);
           uVar7 = GlobalData.AddChild(uVar7,uVar10,0);
           if (lVar5 == null) throw; // [null/range check failed]
           lVar5.showName = uVar7;
@@ -466,34 +466,34 @@ public class ReadBookTextController
           local_70 = *(uint32 *)(puVar6 + 1);
           Transform.set_position(lVar8,&local_78,0);
           if ((lVar5.showName == null) ||
-             (lVar8 = GameObject.GetComponent(lVar5.showName,DAT_181d71e80)) == null)
+             (lVar8 = GameObject.GetComponent(lVar5.showName,DAT_181e54f48)) == null)
           throw; // [null/range check failed]
           Image.set_sprite(lVar8,this.pantientIconSprite,0);
           if (((lVar5.showName == null) ||
               (lVar8 = GameObject.get_transform(lVar5.showName,0)) == null) ||
              (lVar8 = Transform.Find(lVar8,"Text",0)) == null) throw; // [null/range check failed]
-          uVar7 = Component.GetComponent(lVar8,DAT_181d96178);
+          uVar7 = Component.GetComponent(lVar8,DAT_181e79538);
           if (this.textData == null) throw; // [null/range check failed]
           uVar10 = Int32.ToString(this.textData + 56,"#;-#;0",0);
           LTLocalization.SetText(uVar7,uVar10,0);
           if (((lVar5.showName == null) ||
               (lVar8 = GameObject.get_transform(lVar5.showName,0)) == null) ||
              (lVar8 = Transform.Find(lVar8,"Text",0)) == null) throw; // [null/range check failed]
-          plVar4 = (int64 *)Component.GetComponent(lVar8,DAT_181d96178);
+          plVar4 = (int64 *)Component.GetComponent(lVar8,DAT_181e79538);
           if (this.textData == null) throw; // [null/range check failed]
           if (this.textData.patient < 0) {
-            lVar8 = pStatics_3d40;
-            uVar17 = *(uint32 *)(lVar8 + 0x2f0);
-            uVar19 = *(uint32 *)(lVar8 + 0x2f4);
-            uVar20 = *(uint32 *)(lVar8 + 0x2f8);
-            uVar21 = *(uint32 *)(lVar8 + 0x2fc);
+            lVar8 = pStatics_38e8;
+            uVar17 = *(uint32 *)(lVar8 + 0x2f8);
+            uVar19 = *(uint32 *)(lVar8 + 0x2fc);
+            uVar20 = *(uint32 *)(lVar8 + 0x300);
+            uVar21 = *(uint32 *)(lVar8 + 0x304);
           }
           else {
-            lVar8 = pStatics_3d40;
-            uVar17 = *(uint32 *)(lVar8 + 0x288);
-            uVar19 = *(uint32 *)(lVar8 + 0x28c);
-            uVar20 = *(uint32 *)(lVar8 + 0x290);
-            uVar21 = *(uint32 *)(lVar8 + 0x294);
+            lVar8 = pStatics_38e8;
+            uVar17 = *(uint32 *)(lVar8 + 0x290);
+            uVar19 = *(uint32 *)(lVar8 + 0x294);
+            uVar20 = *(uint32 *)(lVar8 + 0x298);
+            uVar21 = *(uint32 *)(lVar8 + 0x29c);
           }
           if (plVar4 == (int64 *)0) throw; // [null/range check failed]
           local_68 = uVar17;
@@ -503,8 +503,8 @@ public class ReadBookTextController
           (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_68,*(uint64 *)(*plVar4 + 0x2b0));
           if (lVar5.showName == null) throw; // [null/range check failed]
           uVar7 = GameObject.get_transform(lVar5.showName,0);
-          if ((((*pStatics_9c98 == 0) ||
-               (lVar8 = *(int64 *)(*pStatics_9c98 + 48)) == null) ||
+          if ((((*pStatics_a058 == 0) ||
+               (lVar8 = *(int64 *)(*pStatics_a058 + 48)) == null) ||
               (lVar8 = GameObject.get_transform(lVar8,0)) == null) ||
              (lVar8 = Transform.Find(lVar8,"Patient",0)) == null) throw; // [null/range check failed]
           puVar6 = (uint64 *)Transform.get_position(&local_68,lVar8,0);
@@ -514,14 +514,14 @@ public class ReadBookTextController
           if (lVar5.showName == null) throw; // [null/range check failed]
           uVar7 = GameObject.get_transform(lVar5.showName,0);
           uVar7 = ShortcutExtensions.DOScale(uVar7,0,0x3f000000,0);
-          uVar7 = TweenSettingsExtensions.SetDelay(uVar7,0x3f000000,DAT_181dc0e10);
-          uVar10 = new OnTooltipCB(lVar5,DAT_181dab760,0);
-          TweenSettingsExtensions.OnComplete(uVar7,uVar10,DAT_181dc0380);
+          uVar7 = TweenSettingsExtensions.SetDelay(uVar7,0x3f000000,DAT_181ea4858);
+          uVar10 = new OnTooltipCB(lVar5,DAT_181e8f108,0);
+          TweenSettingsExtensions.OnComplete(uVar7,uVar10,DAT_181ea3dc0);
         }
-        if (*pStatics_9c98 != 0) {
-          piVar1 = (int *)(*pStatics_9c98 + 132);
+        if (*pStatics_a058 != 0) {
+          piVar1 = (int *)(*pStatics_a058 + 132);
           *piVar1 = *piVar1 + 1;
-          lVar5 = *pStatics_9c98;
+          lVar5 = *pStatics_a058;
           if (lVar5 != null) {
             iVar16 = -1;
             do {
@@ -532,10 +532,10 @@ public class ReadBookTextController
                   iVar14 = this.row + iVar12;
                   if ((-1 < iVar14) && (iVar14 < *(int *)(lVar5 + 116))) {
                     if ((lVar5.enterAreaChallengeHero == null) ||
-                       ((lVar8 = FUN_180127f90(lVar5.enterAreaChallengeHero,
+                       ((lVar8 = FUN_1800540b0(lVar5.enterAreaChallengeHero,
                                                (int64)(this.column + iVar16),
                                                (int64)iVar14), lVar8 == null ||
-                        (lVar8 = GameObject.GetComponent(lVar8,DAT_181d72ab8)) == null)))
+                        (lVar8 = GameObject.GetComponent(lVar8,DAT_181e55b80)) == null)))
                     throw; // [null/range check failed]
                     ReadBookTextController.SeeText(lVar8,0);
                   }
@@ -546,7 +546,7 @@ public class ReadBookTextController
             } while (iVar16 < 2);
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 != null) &&
-               (plVar4 = (int64 *)Component.GetComponent(lVar5,DAT_181d94478),
+               (plVar4 = (int64 *)Component.GetComponent(lVar5,DAT_181e777b8),
                plVar4 != (int64 *)0)) {
               (**(code **)(*plVar4 + 0x2c8))(plVar4,0,*(uint64 *)(*plVar4 + 0x2d0));
               if (this.textData != null) {
@@ -561,14 +561,14 @@ public class ReadBookTextController
                       if (uVar3 != 0x125b2796) {
                         return;
                       }
-                      cVar2 = FUN_18171eb50(lVar5,"列",0);
+                      cVar2 = FUN_1816387f0(lVar5,"列",0);
                       if (!cVar2) {
                         return;
                       }
                       ReadBookTextController.ReadSameColumn(this,0);
                       return;
                     }
-                    cVar2 = FUN_18171eb50(lVar5,"明",0);
+                    cVar2 = FUN_1816387f0(lVar5,"明",0);
                     if (!cVar2) {
                       return;
                     }
@@ -576,23 +576,23 @@ public class ReadBookTextController
                     do {
                       iVar12 = this.column + iVar16;
                       if (-1 < iVar12) {
-                        lVar5 = FUN_18046c540(0);
+                        lVar5 = FUN_180210bb0(0);
                         if (lVar5 == null) throw; // [null/range check failed]
                         if (iVar12 < *(int *)(lVar5 + 112)) {
                           iVar12 = -3;
                           do {
                             iVar14 = this.row + iVar12;
                             if (-1 < iVar14) {
-                              lVar5 = FUN_18046c540(0);
+                              lVar5 = FUN_180210bb0(0);
                               if (lVar5 == null) throw; // [null/range check failed]
                               if (iVar14 < *(int *)(lVar5 + 116)) {
-                                lVar5 = FUN_18046c540(0);
+                                lVar5 = FUN_180210bb0(0);
                                 if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
-                                    (lVar5 = FUN_180127f90(lVar5.enterAreaChallengeHero,
+                                    (lVar5 = FUN_1800540b0(lVar5.enterAreaChallengeHero,
                                                            (int64)(this.column + iVar16),
                                                            (int64)(this.row + iVar12)),
                                     lVar5 == null)) ||
-                                   (lVar5 = GameObject.GetComponent(lVar5,DAT_181d72ab8)) == null)
+                                   (lVar5 = GameObject.GetComponent(lVar5,DAT_181e55b80)) == null)
                                 throw; // [null/range check failed]
                                 ReadBookTextController.SeeText(lVar5,0);
                               }
@@ -608,58 +608,58 @@ public class ReadBookTextController
                     } while( true );
                   }
                   if (uVar3 == 0x1e29d60d) {
-                    cVar2 = FUN_18171eb50(lVar5,"通",0);
+                    cVar2 = FUN_1816387f0(lVar5,"通",0);
                     if (!cVar2) {
                       return;
                     }
                     ReadBookTextController.ReadSameColumn(this,0);
-        LAB_180d107b9:
+        LAB_180a69419:
                     ReadBookTextController.ReadSameRow(this,0);
                     return;
                   }
                   if (uVar3 != 0x317dfa63) {
                     return;
                   }
-                  cVar2 = FUN_18171eb50(lVar5,"破",0);
+                  cVar2 = FUN_1816387f0(lVar5,"破",0);
                   if (!cVar2) {
                     return;
                   }
                   uVar7 = Component.get_gameObject(this,0);
                   plVar4 = (int64 *)Resources.Load("SpeEffect/InkExplosion",0);
-                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181d72e60)) {
+                  if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e52a08)) {
                     plVar15 = plVar4;
                   }
                   uVar7 = GlobalData.AddChild(uVar7,plVar15,0);
                   this.newObj = uVar7;
                   if ((this.newObj != null) &&
-                     (lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc7310),
+                     (lVar5 = GameObject.GetComponent(this.newObj,DAT_181e533a8),
                      lVar5 != null)) {
                     fVar18 = (float)AudioSource.get_volume(lVar5,0);
                     AudioSource.set_volume
-                              (lVar5,fVar18 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+                              (lVar5,fVar18 * *(float *)(*(int64 *)(DAT_181e528f8 + 184) + 16),0);
                     iVar16 = -1;
                     do {
                       iVar12 = this.column + iVar16;
                       if (-1 < iVar12) {
-                        lVar5 = FUN_18046c540(0);
+                        lVar5 = FUN_180210bb0(0);
                         if (lVar5 == null) break;
                         if (iVar12 < *(int *)(lVar5 + 112)) {
                           iVar12 = -1;
                           do {
                             iVar14 = this.row + iVar12;
                             if (-1 < iVar14) {
-                              lVar5 = FUN_18046c540(0);
+                              lVar5 = FUN_180210bb0(0);
                               if (lVar5 == null) throw; // [null/range check failed]
                               if (iVar14 < *(int *)(lVar5 + 116)) {
-                                lVar5 = FUN_18046c540(0);
-                                lVar8 = FUN_18046c540(0);
+                                lVar5 = FUN_180210bb0(0);
+                                lVar8 = FUN_180210bb0(0);
                                 if (((lVar8 == null) || (*(int64 *)(lVar8 + 72) == 0)) ||
-                                   (uVar7 = FUN_180127f90(*(int64 *)(lVar8 + 72),
+                                   (uVar7 = FUN_1800540b0(*(int64 *)(lVar8 + 72),
                                                           (int64)(this.column + iVar16),
                                                           (int64)(this.row + iVar12)),
                                    lVar5 == null)) throw; // [null/range check failed]
                                 uVar7 = ReadBookController.SeeAndReadText(lVar5,uVar7,0);
-                                FUN_180d8c8f0(this,uVar7,0);
+                                FUN_180ae80b0(this,uVar7,0);
                               }
                             }
                             iVar12 = iVar12 + 1;
@@ -675,7 +675,7 @@ public class ReadBookTextController
                 }
                 else if (uVar3 < 0x7130a4b7) {
                   if (uVar3 == 0x6d8fa9d7) {
-                    cVar2 = FUN_18171eb50(lVar5,"注",0);
+                    cVar2 = FUN_1816387f0(lVar5,"注",0);
                     if (!cVar2) {
                       return;
                     }
@@ -683,23 +683,23 @@ public class ReadBookTextController
                     do {
                       iVar12 = this.column + iVar16;
                       if (-1 < iVar12) {
-                        lVar5 = FUN_18046c540(0);
+                        lVar5 = FUN_180210bb0(0);
                         if (lVar5 == null) throw; // [null/range check failed]
                         if (iVar12 < *(int *)(lVar5 + 112)) {
                           iVar12 = -1;
                           do {
                             iVar14 = this.row + iVar12;
                             if (-1 < iVar14) {
-                              lVar5 = FUN_18046c540(0);
+                              lVar5 = FUN_180210bb0(0);
                               if (lVar5 == null) throw; // [null/range check failed]
                               if (iVar14 < *(int *)(lVar5 + 116)) {
-                                lVar5 = FUN_18046c540(0);
+                                lVar5 = FUN_180210bb0(0);
                                 if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
-                                    (lVar5 = FUN_180127f90(lVar5.enterAreaChallengeHero,
+                                    (lVar5 = FUN_1800540b0(lVar5.enterAreaChallengeHero,
                                                            (int64)(this.column + iVar16),
                                                            (int64)(this.row + iVar12)),
                                     lVar5 == null)) ||
-                                   (lVar5 = GameObject.GetComponent(lVar5,DAT_181d72ab8)) == null)
+                                   (lVar5 = GameObject.GetComponent(lVar5,DAT_181e55b80)) == null)
                                 throw; // [null/range check failed]
                                 ReadBookTextController.ChangeExpRate(lVar5,0x3f800000,1,0);
                               }
@@ -717,11 +717,11 @@ public class ReadBookTextController
                   if (uVar3 != 0x7130a4b6) {
                     return;
                   }
-                  cVar2 = FUN_18171eb50(lVar5,"迷",0);
+                  cVar2 = FUN_1816387f0(lVar5,"迷",0);
                   if (!cVar2) {
                     return;
                   }
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   lVar8 = Component.get_transform(this,0);
                   if (lVar8 != null) {
                     puVar6 = (uint64 *)Transform.get_position(&local_68,lVar8,0);
@@ -738,26 +738,26 @@ public class ReadBookTextController
                       GameController.ShowTextAtPos(lVar5,"<i>全场经验-10%</i>",&local_78,20,&local_68,0);
                       lVar5 = 32;
                       while( true ) {
-                        if ((*pStatics_9c98 == 0) ||
-                           (lVar8 = *(int64 *)(*pStatics_9c98 + 80),
+                        if ((*pStatics_a058 == 0) ||
+                           (lVar8 = *(int64 *)(*pStatics_a058 + 80),
                            lVar8 == null)) break;
                         uVar3 = (uint32)plVar15;
                         if (*(int *)(lVar8 + 24) <= (int)uVar3) {
                           return;
                         }
-                        if ((*pStatics_9c98 == 0) ||
-                           (lVar8 = *(int64 *)(*pStatics_9c98 + 80),
+                        if ((*pStatics_a058 == 0) ||
+                           (lVar8 = *(int64 *)(*pStatics_a058 + 80),
                            lVar8 == null)) break;
                         if (*(uint32 *)(lVar8 + 24) <= uVar3) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         lVar8 = *(int64 *)(lVar5 + *(int64 *)(lVar8 + 16));
                         if ((lVar8 == null) ||
-                           (lVar8 = GameObject.GetComponent(lVar8,DAT_181d72ab8)) == null) break;
+                           (lVar8 = GameObject.GetComponent(lVar8,DAT_181e55b80)) == null) break;
                         lVar8 = *(int64 *)(lVar8 + 32);
                         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                          FUN_1800d6620();
+                          FUN_1801e0300();
                         }
                         uVar17 = Mathf.Max(0,*(float *)(lVar8 + 52) - 0.1,0);
                         *(uint32 *)(lVar8 + 52) = uVar17;
@@ -770,7 +770,7 @@ public class ReadBookTextController
                 else {
                   if (uVar3 != 0xb77a1455) {
                     if (uVar3 == 0xba2612a1) {
-                      cVar2 = FUN_18171eb50(lVar5,"难",0);
+                      cVar2 = FUN_1816387f0(lVar5,"难",0);
                       if (!cVar2) {
                         return;
                       }
@@ -778,24 +778,24 @@ public class ReadBookTextController
                       do {
                         iVar12 = this.column + iVar16;
                         if (-1 < iVar12) {
-                          lVar5 = FUN_18046c540(0);
+                          lVar5 = FUN_180210bb0(0);
                           if (lVar5 == null) throw; // [null/range check failed]
                           if (iVar12 < *(int *)(lVar5 + 112)) {
                             iVar12 = -1;
                             do {
                               iVar14 = this.row + iVar12;
                               if (-1 < iVar14) {
-                                lVar5 = FUN_18046c540(0);
+                                lVar5 = FUN_180210bb0(0);
                                 if (lVar5 == null) throw; // [null/range check failed]
                                 if (iVar14 < *(int *)(lVar5 + 116)) {
-                                  lVar5 = FUN_18046c540(0);
+                                  lVar5 = FUN_180210bb0(0);
                                   if ((((lVar5 == null) || (lVar5.enterAreaChallengeHero == null)) ||
-                                      (lVar5 = FUN_180127f90(lVar5.enterAreaChallengeHero,
+                                      (lVar5 = FUN_1800540b0(lVar5.enterAreaChallengeHero,
                                                              (int64)(this.column + iVar16)
                                                              ,(int64)
                                                               (this.row + iVar12)),
                                       lVar5 == null)) ||
-                                     (lVar5 = GameObject.GetComponent(lVar5,DAT_181d72ab8)) == null)
+                                     (lVar5 = GameObject.GetComponent(lVar5,DAT_181e55b80)) == null)
                                   throw; // [null/range check failed]
                                   ReadBookTextController.ChangeExpRate(lVar5,0xbf000000,1,0);
                                 }
@@ -813,17 +813,17 @@ public class ReadBookTextController
                     if (uVar3 != 0xc835e6ab) {
                       return;
                     }
-                    cVar2 = FUN_18171eb50(lVar5,"行",0);
+                    cVar2 = FUN_1816387f0(lVar5,"行",0);
                     if (!cVar2) {
                       return;
                     }
-                    goto LAB_180d107b9;
+                    goto LAB_180a69419;
                   }
-                  cVar2 = FUN_18171eb50(lVar5,"纲",0);
+                  cVar2 = FUN_1816387f0(lVar5,"纲",0);
                   if (!cVar2) {
                     return;
                   }
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   lVar8 = Component.get_transform(this,0);
                   if (lVar8 != null) {
                     puVar6 = (uint64 *)Transform.get_position(&local_68,lVar8,0);
@@ -840,26 +840,26 @@ public class ReadBookTextController
                       GameController.ShowTextAtPos(lVar5,"<i>全场经验+10%</i>",&local_78,20,&local_68,0);
                       lVar5 = 32;
                       while( true ) {
-                        if ((*pStatics_9c98 == 0) ||
-                           (lVar8 = *(int64 *)(*pStatics_9c98 + 80),
+                        if ((*pStatics_a058 == 0) ||
+                           (lVar8 = *(int64 *)(*pStatics_a058 + 80),
                            lVar8 == null)) break;
                         uVar3 = (uint32)plVar15;
                         if (*(int *)(lVar8 + 24) <= (int)uVar3) {
                           return;
                         }
-                        if ((*pStatics_9c98 == 0) ||
-                           (lVar8 = *(int64 *)(*pStatics_9c98 + 80),
+                        if ((*pStatics_a058 == 0) ||
+                           (lVar8 = *(int64 *)(*pStatics_a058 + 80),
                            lVar8 == null)) break;
                         if (*(uint32 *)(lVar8 + 24) <= uVar3) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         lVar8 = *(int64 *)(lVar5 + *(int64 *)(lVar8 + 16));
                         if ((lVar8 == null) ||
-                           (lVar8 = GameObject.GetComponent(lVar8,DAT_181d72ab8)) == null) break;
+                           (lVar8 = GameObject.GetComponent(lVar8,DAT_181e55b80)) == null) break;
                         lVar8 = *(int64 *)(lVar8 + 32);
                         if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                          FUN_1800d6620();
+                          FUN_1801e0300();
                         }
                         uVar17 = Mathf.Max(0,*(float *)(lVar8 + 52) + 0.1,0);
                         *(uint32 *)(lVar8 + 52) = uVar17;
@@ -875,8 +875,8 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x600208A
-    // RVA   : 0xD0E020   Offset: 0xD0D420   Length: 0x1D3
+    // Token : 0x6002129
+    // RVA   : 0xA66C80   Offset: 0xA65A80   Length: 0x1D3
     public void ChangeExpRate(float changeRate, bool showText)
     {
         ulong uVar1;
@@ -899,7 +899,7 @@ public class ReadBookTextController
              (!this.seen)) {
             return;
           }
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           local_res8[0] = changeRate * 100.0;
           uVar3 = Single.ToString(local_res8,"+0;-0;0",0);
           uVar3 = String.Concat("<i>",uVar3,"%</i>",0);
@@ -928,12 +928,12 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x600208B
-    // RVA   : 0xD0ED80   Offset: 0xD0E180   Length: 0x387
+    // Token : 0x600212A
+    // RVA   : 0xA679E0   Offset: 0xA667E0   Length: 0x387
     public void ReadSameColumn()
     {
-        var pStatics_9c98 = *(int64*)(DAT_181d99c98 + 184);
-        var pStatics_bea0 = *(int64*)(DAT_181dabea0 + 184);
+        var pStatics_a058 = *(int64*)(DAT_181e7a058 + 184);
+        var pStatics_c2e8 = *(int64*)(DAT_181e8c2e8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar4;
@@ -947,7 +947,7 @@ public class ReadBookTextController
         plVar3 = (int64 *)Resources.Load("SpeEffect/InkLine",0);
         plVar8 = (int64 *)0;
         plVar6 = plVar8;
-        if ((plVar3 != (int64 *)0) && (plVar6 = (int64 *)0, *plVar3 == DAT_181d72e60)) {
+        if ((plVar3 != (int64 *)0) && (plVar6 = (int64 *)0, *plVar3 == DAT_181e52a08)) {
           plVar6 = plVar3;
         }
         uVar2 = GlobalData.AddChild(uVar2,plVar6,0);
@@ -959,29 +959,29 @@ public class ReadBookTextController
           local_24 = 0x42480000;
           ShortcutExtensions.DOScale(uVar2,&local_28,0x3f000000,0);
           if (this.newObj != null) {
-            lVar4 = GameObject.GetComponent(this.newObj,DAT_181dc7310);
+            lVar4 = GameObject.GetComponent(this.newObj,DAT_181e533a8);
             if (lVar4 != null) {
               fVar9 = (float)AudioSource.get_volume(lVar4,0);
               AudioSource.set_volume
-                        (lVar4,fVar9 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+                        (lVar4,fVar9 * *(float *)(*(int64 *)(DAT_181e528f8 + 184) + 16),0);
               while( true ) {
-                if (*pStatics_9c98 == 0) throw; // [null/range check failed]
+                if (*pStatics_a058 == 0) throw; // [null/range check failed]
                 uVar7 = (uint32)plVar8;
-                if (*(int *)(*pStatics_9c98 + 116) <= (int)uVar7) break;
-                lVar4 = *pStatics_9c98;
-                if ((*pStatics_9c98 == 0) ||
-                   (lVar5 = *(int64 *)(*pStatics_9c98 + 72)) == null)
+                if (*(int *)(*pStatics_a058 + 116) <= (int)uVar7) break;
+                lVar4 = *pStatics_a058;
+                if ((*pStatics_a058 == 0) ||
+                   (lVar5 = *(int64 *)(*pStatics_a058 + 72)) == null)
                 throw; // [null/range check failed]
                 if (**(uint32 **)(lVar5 + 16) <= this.column) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 lVar1 = *(int64 *)(*(uint32 **)(lVar5 + 16) + 4);
                 if ((uint32)lVar1 <= uVar7) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 uVar2 = *(uint64 *)
                          (lVar5 + 32 +
@@ -991,12 +991,12 @@ public class ReadBookTextController
                 if (lVar5 == null) throw; // [null/range check failed]
                 *(int64 *)(lVar5 + 40) = lVar4;
                 *(uint64 *)(lVar5 + 32) = uVar2;
-                FUN_180d8c8f0(this,lVar5,0);
+                FUN_180ae80b0(this,lVar5,0);
                 plVar8 = (int64 *)(uint64)(uVar7 + 1);
               }
-              if (*pStatics_bea0 != 0) {
+              if (*pStatics_c2e8 != 0) {
                 TimeScaleController.SetSlowTime
-                          (*pStatics_bea0,0x3e4ccccd,0x3e4ccccd,0);
+                          (*pStatics_c2e8,0x3e4ccccd,0x3e4ccccd,0);
                 return;
               }
             }
@@ -1004,12 +1004,12 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x600208C
-    // RVA   : 0xD0F110   Offset: 0xD0E510   Length: 0x387
+    // Token : 0x600212B
+    // RVA   : 0xA67D70   Offset: 0xA66B70   Length: 0x387
     public void ReadSameRow()
     {
-        var pStatics_9c98 = *(int64*)(DAT_181d99c98 + 184);
-        var pStatics_bea0 = *(int64*)(DAT_181dabea0 + 184);
+        var pStatics_a058 = *(int64*)(DAT_181e7a058 + 184);
+        var pStatics_c2e8 = *(int64*)(DAT_181e8c2e8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar4;
@@ -1023,7 +1023,7 @@ public class ReadBookTextController
         plVar3 = (int64 *)Resources.Load("SpeEffect/InkLine",0);
         plVar8 = (int64 *)0;
         plVar6 = plVar8;
-        if ((plVar3 != (int64 *)0) && (plVar6 = (int64 *)0, *plVar3 == DAT_181d72e60)) {
+        if ((plVar3 != (int64 *)0) && (plVar6 = (int64 *)0, *plVar3 == DAT_181e52a08)) {
           plVar6 = plVar3;
         }
         uVar2 = GlobalData.AddChild(uVar2,plVar6,0);
@@ -1035,29 +1035,29 @@ public class ReadBookTextController
           local_24 = 0x3e99999a;
           ShortcutExtensions.DOScale(uVar2,&local_28,0x3f000000,0);
           if (this.newObj != null) {
-            lVar4 = GameObject.GetComponent(this.newObj,DAT_181dc7310);
+            lVar4 = GameObject.GetComponent(this.newObj,DAT_181e533a8);
             if (lVar4 != null) {
               fVar9 = (float)AudioSource.get_volume(lVar4,0);
               AudioSource.set_volume
-                        (lVar4,fVar9 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+                        (lVar4,fVar9 * *(float *)(*(int64 *)(DAT_181e528f8 + 184) + 16),0);
               while( true ) {
-                if (*pStatics_9c98 == 0) throw; // [null/range check failed]
+                if (*pStatics_a058 == 0) throw; // [null/range check failed]
                 uVar7 = (uint32)plVar8;
-                if (*(int *)(*pStatics_9c98 + 112) <= (int)uVar7) break;
-                lVar4 = *pStatics_9c98;
-                if ((*pStatics_9c98 == 0) ||
-                   (lVar5 = *(int64 *)(*pStatics_9c98 + 72)) == null)
+                if (*(int *)(*pStatics_a058 + 112) <= (int)uVar7) break;
+                lVar4 = *pStatics_a058;
+                if ((*pStatics_a058 == 0) ||
+                   (lVar5 = *(int64 *)(*pStatics_a058 + 72)) == null)
                 throw; // [null/range check failed]
                 if (**(uint32 **)(lVar5 + 16) <= uVar7) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 lVar1 = *(int64 *)(*(uint32 **)(lVar5 + 16) + 4);
                 if ((uint32)lVar1 <= this.row) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 uVar2 = *(uint64 *)
                          (lVar5 + 32 +
@@ -1067,12 +1067,12 @@ public class ReadBookTextController
                 if (lVar5 == null) throw; // [null/range check failed]
                 *(int64 *)(lVar5 + 40) = lVar4;
                 *(uint64 *)(lVar5 + 32) = uVar2;
-                FUN_180d8c8f0(this,lVar5,0);
+                FUN_180ae80b0(this,lVar5,0);
                 plVar8 = (int64 *)(uint64)(uVar7 + 1);
               }
-              if (*pStatics_bea0 != 0) {
+              if (*pStatics_c2e8 != 0) {
                 TimeScaleController.SetSlowTime
-                          (*pStatics_bea0,0x3e4ccccd,0x3e4ccccd,0);
+                          (*pStatics_c2e8,0x3e4ccccd,0x3e4ccccd,0);
                 return;
               }
             }
@@ -1080,11 +1080,11 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x600208D
-    // RVA   : 0xD0E3C0   Offset: 0xD0D7C0   Length: 0x768
+    // Token : 0x600212C
+    // RVA   : 0xA67020   Offset: 0xA65E20   Length: 0x768
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181d99d18 + 184);
+        var pStatics = *(int64*)(DAT_181e7a0d8 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -1104,13 +1104,13 @@ public class ReadBookTextController
               GameObject.SetActive(lVar2,0,0);
               lVar2 = Component.get_transform(this,0);
               if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"NameText",0)) != null) {
-                uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
+                uVar3 = Component.GetComponent(lVar2,DAT_181e79538);
                 if (this.textData != null) {
                   uVar1 = this.textData.showName;
                   LTLocalization.SetText(uVar3,uVar1,0);
                   lVar2 = Component.get_transform(this,0);
                   if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"NameText",0)) != null) {
-                    plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
+                    plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181e79538);
                     puVar5 = (uint32 *)Color.get_black(&local_28,0);
                     if (plVar4 != (int64 *)0) {
                       local_28 = *puVar5;
@@ -1118,7 +1118,7 @@ public class ReadBookTextController
                       uStack_20 = puVar5[2];
                       uStack_1c = puVar5[3];
                       (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_28,*(uint64 *)(*plVar4 + 0x2b0));
-                      lVar2 = Component.GetComponent(this,DAT_181d94478);
+                      lVar2 = Component.GetComponent(this,DAT_181e777b8);
                       if (this.textData != null) {
                         if (!this.textData.negative) {
                           uVar3 = this.speGoodBack;
@@ -1147,23 +1147,23 @@ public class ReadBookTextController
                   if (this.textData.exp == null.0) {
                     lVar2 = Component.get_transform(this,0);
                     if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null) ||
-                       (lVar2 = Component.GetComponent(lVar2,DAT_181d94478)) == null)
+                       (lVar2 = Component.GetComponent(lVar2,DAT_181e777b8)) == null)
                     throw; // [null/range check failed]
                     Image.set_sprite(lVar2,this.pantientIconSprite,0);
                     lVar2 = Component.get_transform(this,0);
                     if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null) ||
-                       (plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478),
+                       (plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8),
                        plVar4 == (int64 *)0)) throw; // [null/range check failed]
                     (**(code **)(*plVar4 + 0x408))(plVar4,*(uint64 *)(*plVar4 + 0x410));
                     lVar2 = Component.get_transform(this,0);
                     if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null) ||
-                       (lVar2 = Component.GetComponent(lVar2,DAT_181d94f78)) == null)
+                       (lVar2 = Component.GetComponent(lVar2,DAT_181e782b8)) == null)
                     throw; // [null/range check failed]
                     RectTransform.set_sizeDelta(lVar2,0x41a8000041a00000,0);
                     lVar2 = Component.get_transform(this,0);
                     if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null) ||
                        (lVar2 = Transform.Find(lVar2,"Text",0)) == null) throw; // [null/range check failed]
-                    plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
+                    plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181e79538);
                     if (this.textData == null) throw; // [null/range check failed]
                     if (this.textData.patient < 0) {
                       lVar2 = pStatics;
@@ -1173,7 +1173,7 @@ public class ReadBookTextController
                       uVar9 = *(uint32 *)(lVar2 + 28);
                     }
                     else {
-                      puVar5 = *(uint32 **)(DAT_181d99d18 + 184);
+                      puVar5 = *(uint32 **)(DAT_181e7a0d8 + 184);
                       uVar6 = *puVar5;
                       uVar7 = puVar5[1];
                       uVar8 = puVar5[2];
@@ -1185,7 +1185,7 @@ public class ReadBookTextController
                     uStack_20 = uVar8;
                     uStack_1c = uVar9;
                     (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_28,*(uint64 *)(*plVar4 + 0x2b0));
-                    lVar2 = Component.GetComponent(this,DAT_181d94478);
+                    lVar2 = Component.GetComponent(this,DAT_181e777b8);
                     if (this.textData == null) throw; // [null/range check failed]
                     if (this.textData.patient < 0) {
                       uVar3 = this.speBadBack;
@@ -1198,7 +1198,7 @@ public class ReadBookTextController
                     lVar2 = Component.get_transform(this,0);
                     if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null)
                     throw; // [null/range check failed]
-                    lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
+                    lVar2 = Component.GetComponent(lVar2,DAT_181e777b8);
                     if (this.textData == null) throw; // [null/range check failed]
                     if (this.textData.exp < 20.0) {
                       uVar3 = this.expIconSprite;
@@ -1210,13 +1210,13 @@ public class ReadBookTextController
                     Image.set_sprite(lVar2,uVar3,0);
                     lVar2 = Component.get_transform(this,0);
                     if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null) ||
-                       (plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478),
+                       (plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8),
                        plVar4 == (int64 *)0)) throw; // [null/range check failed]
                     (**(code **)(*plVar4 + 0x408))(plVar4,*(uint64 *)(*plVar4 + 0x410));
                     lVar2 = Component.get_transform(this,0);
                     if (((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null) ||
                        (lVar2 = Transform.Find(lVar2,"Text",0)) == null) throw; // [null/range check failed]
-                    plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
+                    plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181e79538);
                     if (this.textData == null) throw; // [null/range check failed]
                     if (this.textData.exp < 0.0) {
                       lVar2 = pStatics;
@@ -1226,7 +1226,7 @@ public class ReadBookTextController
                       uVar9 = *(uint32 *)(lVar2 + 28);
                     }
                     else {
-                      puVar5 = *(uint32 **)(DAT_181d99d18 + 184);
+                      puVar5 = *(uint32 **)(DAT_181e7a0d8 + 184);
                       uVar6 = *puVar5;
                       uVar7 = puVar5[1];
                       uVar8 = puVar5[2];
@@ -1238,7 +1238,7 @@ public class ReadBookTextController
                     uStack_20 = uVar8;
                     uStack_1c = uVar9;
                     (**(code **)(*plVar4 + 0x2a8))(plVar4,&local_28,*(uint64 *)(*plVar4 + 0x2b0));
-                    lVar2 = Component.GetComponent(this,DAT_181d94478);
+                    lVar2 = Component.GetComponent(this,DAT_181e777b8);
                     if (this.textData == null) throw; // [null/range check failed]
                     if (this.textData.exp < 0.0) {
                       uVar3 = this.expBadBack;
@@ -1251,8 +1251,8 @@ public class ReadBookTextController
                     Image.set_sprite(lVar2,uVar3,0);
                     lVar2 = Component.get_transform(this,0);
                     if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"NameText",0)) != null) {
-                      plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
-                      puVar5 = (uint32 *)FUN_180d995f0(&local_28,0);
+                      plVar4 = (int64 *)Component.GetComponent(lVar2,DAT_181e79538);
+                      puVar5 = (uint32 *)FUN_180af4e90(&local_28,0);
                       if (plVar4 != (int64 *)0) {
                         local_28 = *puVar5;
                         uStack_24 = puVar5[1];
@@ -1270,8 +1270,8 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x600208E
-    // RVA   : 0xD10F50   Offset: 0xD10350   Length: 0x32A
+    // Token : 0x600212D
+    // RVA   : 0xA69BB0   Offset: 0xA689B0   Length: 0x32A
     public void Reset()
     {
         long lVar1;
@@ -1285,7 +1285,7 @@ public class ReadBookTextController
         this.seen = 0;
         lVar1 = Component.get_transform(this,0);
         if (lVar1 != null) {
-          plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
+          plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
           if (plVar2 != (int64 *)0) {
             (**(code **)(*plVar2 + 0x2c8))(plVar2,1,*(uint64 *)(*plVar2 + 0x2d0));
             lVar1 = Component.get_transform(this,0);
@@ -1300,8 +1300,8 @@ public class ReadBookTextController
                 if (lVar1 != null) {
                   lVar1 = Transform.Find(lVar1,"Cover",0);
                   if (lVar1 != null) {
-                    plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
-                    puVar4 = (uint32 *)FUN_1810d3b80(&local_18,0);
+                    plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
+                    puVar4 = (uint32 *)FUN_180f24d00(&local_18,0);
                     if (plVar2 != (int64 *)0) {
                       local_18 = *puVar4;
                       uStack_14 = puVar4[1];
@@ -1322,8 +1322,8 @@ public class ReadBookTextController
                             if (lVar1 != null) {
                               lVar1 = Transform.Find(lVar1,"Text",0);
                               if (lVar1 != null) {
-                                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
-                                puVar4 = (uint32 *)FUN_1810d3b80(&local_18,0);
+                                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e79538);
+                                puVar4 = (uint32 *)FUN_180f24d00(&local_18,0);
                                 if (plVar2 != (int64 *)0) {
                                   local_18 = *puVar4;
                                   uStack_14 = puVar4[1];
@@ -1366,41 +1366,41 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x600208F
-    // RVA   : 0xD0E200   Offset: 0xD0D600   Length: 0x1B2
+    // Token : 0x600212E
+    // RVA   : 0xA66E60   Offset: 0xA65C60   Length: 0x1B2
     public Color GetColor()
     {
-        var pStatics_9c98 = *(int64*)(DAT_181d99c98 + 184);
-        var pStatics_9d18 = *(int64*)(DAT_181d99d18 + 184);
+        var pStatics_a058 = *(int64*)(DAT_181e7a058 + 184);
+        var pStatics_a0d8 = *(int64*)(DAT_181e7a0d8 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
         byte[] local_18 = new byte[16];
-        if ((*pStatics_9c98 != 0) &&
-           (lVar3 = *(int64 *)(*pStatics_9c98 + 88)) != null) {
+        if ((*pStatics_a058 != 0) &&
+           (lVar3 = *(int64 *)(*pStatics_a058 + 88)) != null) {
           if ((0 < *(int *)(lVar3 + 24)) ||
              ((*(char *)(param_2 + 40) == false || (*(char *)(param_2 + 41) != false)))) {
-        LAB_180d0e369:
-            uVar1 = *(uint64 *)(pStatics_9d18 + 40);
+        LAB_180a66fc9:
+            uVar1 = *(uint64 *)(pStatics_a0d8 + 40);
             *this = ReadBookTextController.textGrayColor;
             this[1] = uVar1;
             return this;
           }
           if (*(int64 *)(param_2 + 32) != 0) {
-            cVar2 = FUN_18171eb50(*(uint64 *)(*(int64 *)(param_2 + 32) + 16),"缺",0);
-            if (cVar2) goto LAB_180d0e369;
+            cVar2 = FUN_1816387f0(*(uint64 *)(*(int64 *)(param_2 + 32) + 16),"缺",0);
+            if (cVar2) goto LAB_180a66fc9;
             if (*(int64 *)(param_2 + 32) != 0) {
               if (*(int *)(*(int64 *)(param_2 + 32) + 60) != 0) {
-                lVar3 = FUN_18046c540(0);
+                lVar3 = FUN_180210bb0(0);
                 if ((lVar3 == null) || (*(int64 *)(param_2 + 32) == 0)) throw; // [null/range check failed]
                 if (*(int *)(lVar3 + 124) < *(int *)(*(int64 *)(param_2 + 32) + 60)) {
-                  uVar1 = *(uint64 *)(pStatics_9d18 + 56);
+                  uVar1 = *(uint64 *)(pStatics_a0d8 + 56);
                   *this = ReadBookTextController.textRedColor;
                   this[1] = uVar1;
                   return this;
                 }
               }
-              puVar4 = (uint64 *)FUN_1810d3b80(local_18,0);
+              puVar4 = (uint64 *)FUN_180f24d00(local_18,0);
               uVar1 = puVar4[1];
               *this = *puVar4;
               this[1] = uVar1;
@@ -1410,11 +1410,11 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x6002090
-    // RVA   : 0xD0EB30   Offset: 0xD0DF30   Length: 0x246
+    // Token : 0x600212F
+    // RVA   : 0xA67790   Offset: 0xA66590   Length: 0x246
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d99c98 + 184);
+        var pStatics = *(int64*)(DAT_181e7a058 + 184);
         long lVar2;
         long lVar3;
         if ((*pStatics != 0) &&
@@ -1423,7 +1423,7 @@ public class ReadBookTextController
             return;
           }
           if (!this.seen) {
-            lVar3 = FUN_18046c0a0(0);
+            lVar3 = FUN_1802106e0(0);
             if (lVar3 != null) {
               GameController.ShowTextOnMouse(lVar3,"未解锁",0);
               return;
@@ -1436,16 +1436,16 @@ public class ReadBookTextController
             lVar3 = this.textData;
             if (lVar3 != null) {
               if (lVar3.costPatient != null) {
-                lVar2 = FUN_18046c540(0);
+                lVar2 = FUN_180210bb0(0);
                 if ((lVar2 == null) || (lVar3 = this.textData) == null)
                 throw; // [null/range check failed]
                 if (*(int *)(lVar2 + 124) < lVar3.costPatient) {
-                  lVar3 = FUN_18046c0a0(0);
+                  lVar3 = FUN_1802106e0(0);
                   if (lVar3 != null) {
                     GameController.ShowTextOnMouse(lVar3,"耐心不足",0);
                     plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
                     plVar5 = (int64 *)0;
-                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
                       plVar5 = plVar4;
                     }
                     NGUITools.PlaySound(plVar5,0);
@@ -1454,9 +1454,9 @@ public class ReadBookTextController
                   throw; // [null/range check failed]
                 }
               }
-              if (!DAT_181e8fc5d) {
-                il2cpp_runtime_class_init(&DAT_181d99c98);
-                DAT_181e8fc5d = true;
+              if (!DAT_181ea945d) {
+                il2cpp_runtime_class_init(&DAT_181e7a058);
+                DAT_181ea945d = true;
                 lVar3 = this.textData;
               }
               if ((lVar3 != null) && (*pStatics != 0)) {
@@ -1470,18 +1470,18 @@ public class ReadBookTextController
         }
     }
 
-    // Token : 0x6002091
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002130
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6002092
-    // RVA   : 0xD11AC0   Offset: 0xD10EC0   Length: 0x137
+    // Token : 0x6002131
+    // RVA   : 0xA6A720   Offset: 0xA69520   Length: 0x137
     private static void /*cctor*/()
     {
-        var pStatics = *(int64*)(DAT_181d99d18 + 184);
+        var pStatics = *(int64*)(DAT_181e7a0d8 + 184);
         long lVar2;
         uint uVar3;
         ulong local_48;
@@ -1496,7 +1496,7 @@ public class ReadBookTextController
         uStack_40 = 0;
         Color.ctor(&local_48,0x3e4ccccd,0x3f119192,0x3ea8a8a9,0);
         uVar3 = 0;
-        puVar1 = *(uint32 **)(DAT_181d99d18 + 184);
+        puVar1 = *(uint32 **)(DAT_181e7a0d8 + 184);
         *puVar1 = (uint32)local_48;
         puVar1[1] = local_48._4_4_;
         puVar1[2] = (uint32)uStack_40;
@@ -1511,13 +1511,13 @@ public class ReadBookTextController
         *(uint32 *)(lVar2 + 28) = uStack_30._4_4_;
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dcfa0(&local_28,0x3f000000,0x3f000000,0x3f000000,CONCAT44(uVar3,0x3f000000),0);
+        FUN_1807282e0(&local_28,0x3f000000,0x3f000000,0x3f000000,CONCAT44(uVar3,0x3f000000),0);
         lVar2 = pStatics;
         *(uint64 *)(lVar2 + 32) = local_28;
         *(uint64 *)(lVar2 + 40) = uStack_20;
         local_18 = 0;
         uStack_10 = 0;
-        FUN_1809dcfa0(&local_18,0x3f333333,0x3f333333,0x3f333333,0x3f800000,0);
+        FUN_1807282e0(&local_18,0x3f333333,0x3f333333,0x3f333333,0x3f800000,0);
         lVar2 = pStatics;
         *(uint64 *)(lVar2 + 48) = local_18;
         *(uint64 *)(lVar2 + 56) = uStack_10;

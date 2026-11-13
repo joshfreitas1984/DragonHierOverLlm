@@ -1,54 +1,54 @@
 // ============================================================
 // Type  : SpePoisonController
-// Token : 0x2000366
+// Token : 0x2000373
 // ============================================================
 
 public class SpePoisonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BD6
+    // Token: 0x4001C68
     public GameObject spePoisonUI;
 
-    // Token: 0x4001BD7
+    // Token: 0x4001C69
     public List<GameObject> materialIcon;
 
-    // Token: 0x4001BD8
+    // Token: 0x4001C6A
     public int spePoisonType;
 
-    // Token: 0x4001BD9
+    // Token: 0x4001C6B
     public SpePoisonData targetSpePoisonData;
 
-    // Token: 0x4001BDA
+    // Token: 0x4001C6C
     public bool needRefresh;
 
-    // Token: 0x4001BDB
+    // Token: 0x4001C6D
     private static SpePoisonController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002169
-    // RVA   : 0xC58970   Offset: 0xC57D70   Length: 0x36
+    // Token : 0x6002213
+    // RVA   : 0xA01B90   Offset: 0xA00990   Length: 0x36
     public static SpePoisonController get_Instance()
     {
-        return **(uint64 **)(DAT_181da4368 + 184);
+        return **(uint64 **)(DAT_181e847a8 + 184);
     }
 
-    // Token : 0x600216A
-    // RVA   : 0xC55BF0   Offset: 0xC54FF0   Length: 0x43
+    // Token : 0x6002214
+    // RVA   : 0x9FEE10   Offset: 0x9FDC10   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da4368 + 184);
+        puVar1 = *(uint64 **)(DAT_181e847a8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x600216B
-    // RVA   : 0xC58930   Offset: 0xC57D30   Length: 0x3D
+    // Token : 0x6002215
+    // RVA   : 0xA01B50   Offset: 0xA00950   Length: 0x3D
     private void Update()
     {
         bool cVar1;
         if (this.spePoisonUI == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         cVar1 = GameObject.get_activeSelf(this.spePoisonUI,0);
         if ((cVar1) && (this.needRefresh)) {
@@ -57,8 +57,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600216C
-    // RVA   : 0xC56920   Offset: 0xC55D20   Length: 0x18D4
+    // Token : 0x6002216
+    // RVA   : 0x9FFB40   Offset: 0x9FE940   Length: 0x18D4
     private void RefreshUI()
     {
         byte uVar1;
@@ -104,7 +104,7 @@ public class SpePoisonController
         if (((this.spePoisonUI != null) &&
             (lVar4 = GameObject.get_transform(this.spePoisonUI,0)) != null) &&
            (lVar4 = Transform.Find(lVar4,"Title",0)) != null) {
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+          uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
           uVar6 = "炼蛊";
           if (this.spePoisonType == null) {
             uVar6 = "引毒";
@@ -118,7 +118,7 @@ public class SpePoisonController
             uVar6 = String.Concat("Material",uVar6,0);
             if (((lVar4 == null) || (lVar4 = Transform.Find(lVar4,uVar6)) == null) ||
                (lVar4 = Transform.Find(lVar4,"Label")) == null) throw; // [null/range check failed]
-            uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+            uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
             uVar6 = "药引\n食材";
             if (this.spePoisonType != null) {
               uVar6 = "毒物";
@@ -134,7 +134,7 @@ public class SpePoisonController
                    (lVar4 = GameObject.get_transform(this.spePoisonUI,0)) != null) &&
                   (lVar4 = Transform.Find(lVar4,"RateInfo",0)) != null) &&
                  (lVar4 = Transform.Find(lVar4,"Rate",0)) != null) {
-                uVar6 = Component.GetComponent(lVar4,DAT_181d96178);
+                uVar6 = Component.GetComponent(lVar4,DAT_181e79538);
                 local_78 = SpePoisonController.GetTotalScore(this,0);
                 uVar5 = Single.ToString(&local_78,"f0",0);
                 fVar11 = (float)SpePoisonController.GetTotalScore(this,0);
@@ -146,7 +146,7 @@ public class SpePoisonController
                      (lVar4 = GameObject.get_transform(this.spePoisonUI,0)) != null) &&
                     (lVar4 = Transform.Find(lVar4,"StartButton",0)) != null) &&
                    (lVar4 = Transform.Find(lVar4,"Label",0)) != null) {
-                  uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+                  uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
                   uVar6 = "炼蛊";
                   if (this.spePoisonType == null) {
                     uVar6 = "引毒";
@@ -155,7 +155,7 @@ public class SpePoisonController
                   if (((this.spePoisonUI != null) &&
                       (lVar4 = GameObject.get_transform(this.spePoisonUI,0)) != null) &&
                      (lVar4 = Transform.Find(lVar4,"StartButton",0)) != null) {
-                    lVar4 = Component.GetComponent(lVar4,DAT_181d93778);
+                    lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8);
                     uVar1 = SpePoisonController.CanStart(this,0);
                     if (lVar4 != null) {
                       Selectable.set_interactable(lVar4,uVar1,0);
@@ -163,7 +163,7 @@ public class SpePoisonController
                            (lVar4 = GameObject.get_transform(this.spePoisonUI,0), lVar4 != null
                            )) && (lVar4 = Transform.Find(lVar4,"StartButton",0)) != null) &&
                          (lVar4 = Transform.Find(lVar4,"CostTime",0)) != null) {
-                        uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+                        uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
                         cVar2 = SpePoisonController.CanStart(this,0);
                         uVar6 = "";
                         if (cVar2) {
@@ -180,7 +180,7 @@ public class SpePoisonController
                             uVar6 = Int32.ToString(local_res18,0);
                             uVar6 = String.Concat("Material",uVar6,0);
                             if (((lVar4 == null) || (lVar4 = Transform.Find(lVar4,uVar6,0)) == null) ||
-                               (lVar4 = Component.GetComponent(lVar4,DAT_181d93778)) == null)
+                               (lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8)) == null)
                             throw; // [null/range check failed]
                             Selectable.set_interactable(lVar4,1,0);
                             if (this.spePoisonUI == null) throw; // [null/range check failed]
@@ -202,11 +202,11 @@ public class SpePoisonController
                             if ((lVar7 == null) ||
                                (GameObject.SetActive(lVar7,uVar1,0), this.materialIcon == null))
                             throw; // [null/range check failed]
-                            uVar6 = FUN_180002f80();
+                            uVar6 = FUN_1800024b0();
                             cVar2 = Object.op_Inequality(uVar6);
                             if (cVar2) {
                               if ((((this.materialIcon == null) ||
-                                   (lVar4 = FUN_180002f80(this.materialIcon,local_res18[0]),
+                                   (lVar4 = FUN_1800024b0(this.materialIcon,local_res18[0]),
                                    lVar4 == null)) ||
                                   (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
                                  (lVar4 = Component.GetComponent(lVar4)) == null) throw; // [null/range check failed]
@@ -222,13 +222,13 @@ public class SpePoisonController
                           if (!cVar2) {
                             if (((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null)
                                || (lVar4 = Transform.Find(lVar4,"ResultIcon",0)) == null) {
-        LAB_180c581e9:
+        LAB_180a01409:
                           // WARNING: Subroutine does not return
-                              FUN_1800d6620();
+                              FUN_1801e0300();
                             }
-                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
-                            puVar9 = (uint32 *)FUN_180d995f0(&local_58,0);
-                            if (plVar8 == (int64 *)0) goto LAB_180c581e9;
+                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181e777b8);
+                            puVar9 = (uint32 *)FUN_180af4e90(&local_58,0);
+                            if (plVar8 == (int64 *)0) goto LAB_180a01409;
                             local_58 = *puVar9;
                             uStack_54 = puVar9[1];
                             uStack_50 = puVar9[2];
@@ -239,12 +239,12 @@ public class SpePoisonController
                                 (lVar4 = GameObject.get_transform(this.spePoisonUI,0),
                                 lVar4 == null)) ||
                                (lVar4 = Transform.Find(lVar4,"ResultBack",0)) == null)
-                            goto LAB_180c581e9;
-                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+                            goto LAB_180a01409;
+                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181e777b8);
                             local_70 = 0;
                             uStack_68 = 0;
-                            FUN_1809dcfa0(&local_70,0x3f800000,0x3f800000,0x3f800000,0x3f19999a,0);
-                            if (plVar8 == (int64 *)0) goto LAB_180c581e9;
+                            FUN_1807282e0(&local_70,0x3f800000,0x3f800000,0x3f800000,0x3f19999a,0);
+                            if (plVar8 == (int64 *)0) goto LAB_180a01409;
                             local_58 = (uint32)local_70;
                             uStack_54 = local_70._4_4_;
                             uStack_50 = (uint32)uStack_68;
@@ -253,29 +253,29 @@ public class SpePoisonController
                           else {
                             if (((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null)
                                || (lVar4 = Transform.Find(lVar4,"ResultIcon",0)) == null) {
-        LAB_180c581ef:
+        LAB_180a0140f:
                           // WARNING: Subroutine does not return
-                              FUN_1800d6620();
+                              FUN_1801e0300();
                             }
-                            lVar4 = Component.GetComponent(lVar4,DAT_181d94478);
-                            lVar7 = FUN_18046c680(0);
+                            lVar4 = Component.GetComponent(lVar4,DAT_181e777b8);
+                            lVar7 = FUN_180210d00(0);
                             fVar11 = (float)SpePoisonController.GetScoreLv(this,0);
                             local_res20[0] = Mathf.Clamp((int)fVar11,0,5);
                             uVar6 = Int32.ToString(local_res20,0);
                             uVar6 = String.Concat("毒物_",uVar6,0);
                             if ((lVar7 == null) ||
                                (uVar6 = TextureController.LoadAtlasSprite(lVar7,"IconAtlas",uVar6,0),
-                               lVar4 == null)) goto LAB_180c581ef;
+                               lVar4 == null)) goto LAB_180a0140f;
                             Image.set_sprite(lVar4,uVar6,0);
                             if ((this.spePoisonUI == null) ||
                                ((lVar4 = GameObject.get_transform(this.spePoisonUI,0),
                                 lVar4 == null || (lVar4 = Transform.Find(lVar4,"ResultIcon",0)) == null
-                                ))) goto LAB_180c581ef;
-                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+                                ))) goto LAB_180a0140f;
+                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181e777b8);
                             local_70 = 0;
                             uStack_68 = 0;
-                            FUN_1809dcfa0(&local_70,0,0,0,0x3f19999a,0);
-                            if (plVar8 == (int64 *)0) goto LAB_180c581ef;
+                            FUN_1807282e0(&local_70,0,0,0,0x3f19999a,0);
+                            if (plVar8 == (int64 *)0) goto LAB_180a0140f;
                             local_58 = (uint32)local_70;
                             uStack_54 = local_70._4_4_;
                             uStack_50 = (uint32)uStack_68;
@@ -286,10 +286,10 @@ public class SpePoisonController
                                 (lVar4 = GameObject.get_transform(this.spePoisonUI,0),
                                 lVar4 == null)) ||
                                (lVar4 = Transform.Find(lVar4,"ResultBack",0)) == null)
-                            goto LAB_180c581ef;
-                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
-                            puVar9 = (uint32 *)FUN_1810d3b80(&local_58,0);
-                            if (plVar8 == (int64 *)0) goto LAB_180c581ef;
+                            goto LAB_180a0140f;
+                            plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181e777b8);
+                            puVar9 = (uint32 *)FUN_180f24d00(&local_58,0);
+                            if (plVar8 == (int64 *)0) goto LAB_180a0140f;
                             local_58 = *puVar9;
                             uStack_54 = puVar9[1];
                             uStack_50 = puVar9[2];
@@ -301,13 +301,13 @@ public class SpePoisonController
                                (lVar4 = GameObject.get_transform(this.spePoisonUI,0),
                                lVar4 != null)) &&
                               (lVar4 = Transform.Find(lVar4,"ResultBack",0)) != null) &&
-                             (lVar4 = Component.GetComponent(lVar4,DAT_181d964f8)) != null) {
+                             (lVar4 = Component.GetComponent(lVar4,DAT_181e798b8)) != null) {
                             UITweener.ResetToBeginning(lVar4,0);
                             if (((this.spePoisonUI != null) &&
                                 (lVar4 = GameObject.get_transform(this.spePoisonUI,0),
                                 lVar4 != null)) &&
                                ((lVar4 = Transform.Find(lVar4,"ResultBack",0), lVar4 != null &&
-                                (lVar4 = Component.GetComponent(lVar4,DAT_181d964f8)) != null))) {
+                                (lVar4 = Component.GetComponent(lVar4,DAT_181e798b8)) != null))) {
                               Behaviour.set_enabled(lVar4,0,0);
                               return;
                             }
@@ -323,7 +323,7 @@ public class SpePoisonController
                     (((lVar4 = GameObject.get_transform(this.spePoisonUI,0), lVar4 != null &&
                       (lVar4 = Transform.Find(lVar4,"RateInfo",0)) != null) &&
                      (lVar4 = Transform.Find(lVar4,"Rate",0)) != null))) {
-              uVar6 = Component.GetComponent(lVar4,DAT_181d96178);
+              uVar6 = Component.GetComponent(lVar4,DAT_181e79538);
               if (this.targetSpePoisonData != null) {
                 local_78 = SpePoisonData.GetTotalScore
                                      (this.targetSpePoisonData,this.spePoisonType,0);
@@ -343,7 +343,7 @@ public class SpePoisonController
                          ((lVar4 = Transform.Find(lVar4,"StartButton",0), lVar4 == null ||
                           (lVar4 = Transform.Find(lVar4,"Label",0)) == null)))
                       throw; // [null/range check failed]
-                      uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+                      uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
                       uVar6 = "炼蛊中";
                       if (this.spePoisonType == null) {
                         uVar6 = "引毒中";
@@ -352,7 +352,7 @@ public class SpePoisonController
                       if ((((this.spePoisonUI == null) ||
                            (lVar4 = GameObject.get_transform(this.spePoisonUI,0), lVar4 == null
                            )) || (lVar4 = Transform.Find(lVar4,"StartButton",0)) == null) ||
-                         (lVar4 = Component.GetComponent(lVar4,DAT_181d93778)) == null)
+                         (lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8)) == null)
                       throw; // [null/range check failed]
                       Selectable.set_interactable(lVar4,0,0);
                       if (((this.spePoisonUI == null) ||
@@ -360,7 +360,7 @@ public class SpePoisonController
                           ) || ((lVar4 = Transform.Find(lVar4,"StartButton",0), lVar4 == null ||
                                 (lVar4 = Transform.Find(lVar4,"CostTime",0)) == null)))
                       throw; // [null/range check failed]
-                      uVar6 = Component.GetComponent(lVar4,DAT_181d96178);
+                      uVar6 = Component.GetComponent(lVar4,DAT_181e79538);
                       if (this.targetSpePoisonData == null) throw; // [null/range check failed]
                       uVar5 = Int32.ToString(this.targetSpePoisonData + 24,0);
                       uVar5 = String.Concat("剩余天数 ",uVar5,0);
@@ -368,7 +368,7 @@ public class SpePoisonController
                       if (((this.spePoisonUI == null) ||
                           (lVar4 = GameObject.get_transform(this.spePoisonUI,0)) == null
                           ) || ((lVar4 = Transform.Find(lVar4,"ResultBack",0), lVar4 == null ||
-                                (lVar4 = Component.GetComponent(lVar4,DAT_181d964f8)) == null)))
+                                (lVar4 = Component.GetComponent(lVar4,DAT_181e798b8)) == null)))
                       throw; // [null/range check failed]
                       UITweener.PlayForward(lVar4,0);
                     }
@@ -376,12 +376,12 @@ public class SpePoisonController
                       if ((((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
                           (lVar4 = Transform.Find(lVar4,"StartButton",0)) == null) ||
                          (lVar4 = Transform.Find(lVar4,"Label",0)) == null) throw; // [null/range check failed]
-                      uVar6 = Component.GetComponent(lVar4,DAT_181d96178);
+                      uVar6 = Component.GetComponent(lVar4,DAT_181e79538);
                       LTLocalization.SetText(uVar6,"大功告成",0);
                       if (((this.spePoisonUI == null) ||
                           (lVar4 = GameObject.get_transform(this.spePoisonUI,0)) == null
                           ) || ((lVar4 = Transform.Find(lVar4,"StartButton",0), lVar4 == null ||
-                                (lVar4 = Component.GetComponent(lVar4,DAT_181d93778)) == null)))
+                                (lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8)) == null)))
                       throw; // [null/range check failed]
                       Selectable.set_interactable(lVar4,1,0);
                       if (((this.spePoisonUI == null) ||
@@ -397,18 +397,18 @@ public class SpePoisonController
                           ) || ((lVar4 = Transform.Find(lVar4,"StartButton",0), lVar4 == null ||
                                 (lVar4 = Transform.Find(lVar4,"CostTime",0)) == null)))
                       throw; // [null/range check failed]
-                      uVar6 = Component.GetComponent(lVar4,DAT_181d96178);
+                      uVar6 = Component.GetComponent(lVar4,DAT_181e79538);
                       LTLocalization.SetText(uVar6,"",0);
                       if ((((this.spePoisonUI == null) ||
                            (lVar4 = GameObject.get_transform(this.spePoisonUI,0), lVar4 == null
                            )) || (lVar4 = Transform.Find(lVar4,"ResultBack",0)) == null) ||
-                         (lVar4 = Component.GetComponent(lVar4,DAT_181d964f8)) == null)
+                         (lVar4 = Component.GetComponent(lVar4,DAT_181e798b8)) == null)
                       throw; // [null/range check failed]
                       UITweener.ResetToBeginning(lVar4,0);
                       if ((((this.spePoisonUI == null) ||
                            (lVar4 = GameObject.get_transform(this.spePoisonUI,0), lVar4 == null
                            )) || (lVar4 = Transform.Find(lVar4,"ResultBack",0)) == null) ||
-                         (lVar4 = Component.GetComponent(lVar4,DAT_181d964f8)) == null)
+                         (lVar4 = Component.GetComponent(lVar4,DAT_181e798b8)) == null)
                       throw; // [null/range check failed]
                       Behaviour.set_enabled(lVar4,0,0);
                     }
@@ -419,8 +419,8 @@ public class SpePoisonController
                         if (lVar4.leftTime <= (int)uVar3) {
                           if (((lVar7 != null) && (lVar4 = GameObject.get_transform(lVar7,0)) != null)
                              && (lVar4 = Transform.Find(lVar4,"ResultIcon",0)) != null) {
-                            lVar4 = Component.GetComponent(lVar4,DAT_181d94478);
-                            lVar7 = **(int64 **)(DAT_181dab4a8 + 184);
+                            lVar4 = Component.GetComponent(lVar4,DAT_181e777b8);
+                            lVar7 = **(int64 **)(DAT_181e8b8e8 + 184);
                             if (this.targetSpePoisonData != null) {
                               fVar11 = (float)SpePoisonData.GetTotalScore
                                                         (this.targetSpePoisonData,
@@ -438,10 +438,10 @@ public class SpePoisonController
                                    ((lVar4 = GameObject.get_transform(this.spePoisonUI,0),
                                     lVar4 != null &&
                                     (lVar4 = Transform.Find(lVar4,"ResultIcon",0)) != null))) {
-                                  plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
+                                  plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181e777b8);
                                   local_70 = 0;
                                   uStack_68 = 0;
-                                  FUN_1809dcfa0(&local_70,0,0,0,0x3f19999a,0);
+                                  FUN_1807282e0(&local_70,0,0,0,0x3f19999a,0);
                                   if (plVar8 != (int64 *)0) {
                                     local_58 = (uint32)local_70;
                                     uStack_54 = local_70._4_4_;
@@ -453,8 +453,8 @@ public class SpePoisonController
                                         (lVar4 = GameObject.get_transform
                                                            (this.spePoisonUI,0), lVar4 != null))
                                        && (lVar4 = Transform.Find(lVar4,"ResultBack",0)) != null) {
-                                      plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
-                                      puVar9 = (uint32 *)FUN_1810d3b80(&local_58,0);
+                                      plVar8 = (int64 *)Component.GetComponent(lVar4,DAT_181e777b8);
+                                      puVar9 = (uint32 *)FUN_180f24d00(&local_58,0);
                                       if (plVar8 != (int64 *)0) {
                                         local_58 = *puVar9;
                                         uStack_54 = puVar9[1];
@@ -471,14 +471,14 @@ public class SpePoisonController
                             }
                           }
                           // WARNING: Subroutine does not return
-                          FUN_1800d6620();
+                          FUN_1801e0300();
                         }
                         if (lVar7 == null) break;
                         lVar4 = GameObject.get_transform(lVar7,0);
                         uVar6 = Int32.ToString(local_res8,0);
                         uVar6 = String.Concat("Material",uVar6,0);
                         if (((lVar4 == null) || (lVar4 = Transform.Find(lVar4,uVar6,0)) == null) ||
-                           (lVar4 = Component.GetComponent(lVar4,DAT_181d93778)) == null) break;
+                           (lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8)) == null) break;
                         Selectable.set_interactable(lVar4,0,0);
                         lVar4 = this.materialIcon;
                         lVar7 = (int64)(int)local_res8[0];
@@ -492,13 +492,13 @@ public class SpePoisonController
                           if ((this.targetSpePoisonData == null) ||
                              (lVar4 = this.targetSpePoisonData.material) == null)
                           break;
-                          lVar4 = FUN_180002f80(lVar4,local_res8[0],DAT_181d90f30);
+                          lVar4 = FUN_1800024b0(lVar4,local_res8[0],DAT_181e73170);
                           uVar3 = local_res8[0];
                           if (lVar4 != null) {
                             if ((this.targetSpePoisonData == null) ||
                                (lVar4 = this.targetSpePoisonData.material) == null)
                             break;
-                            uVar6 = FUN_180002f80(lVar4,local_res8[0],DAT_181d90f30);
+                            uVar6 = FUN_1800024b0(lVar4,local_res8[0],DAT_181e73170);
                             SpePoisonController.CreateSpePoisonMaterialItemIcon(this,uVar3,uVar6);
                           }
                         }
@@ -511,12 +511,12 @@ public class SpePoisonController
                            (lVar4 = Component.get_gameObject(lVar4,0)) == null) break;
                         GameObject.SetActive(lVar4,0,0);
                         if (this.materialIcon == null) break;
-                        uVar6 = FUN_180002f80(this.materialIcon,local_res8[0],DAT_181d89930);
+                        uVar6 = FUN_1800024b0(this.materialIcon,local_res8[0],DAT_181e6bc70);
                         cVar2 = Object.op_Inequality(uVar6,0,0);
                         if (cVar2) {
                           if (((this.materialIcon == null) ||
-                              (lVar4 = FUN_180002f80(this.materialIcon,local_res8[0],
-                                                     DAT_181d89930), lVar4 == null)) ||
+                              (lVar4 = FUN_1800024b0(this.materialIcon,local_res8[0],
+                                                     DAT_181e6bc70), lVar4 == null)) ||
                              (lVar4 = GameObject.get_transform(lVar4,0)) == null) break;
                           lVar4 = Component.GetComponent(lVar4);
                           if (this.targetSpePoisonData == null) break;
@@ -543,8 +543,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600216D
-    // RVA   : 0xC55C40   Offset: 0xC55040   Length: 0x109
+    // Token : 0x6002217
+    // RVA   : 0x9FEE60   Offset: 0x9FDC60   Length: 0x109
     public bool CanStart()
     {
         ulong uVar1;
@@ -586,8 +586,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600216E
-    // RVA   : 0xC562B0   Offset: 0xC556B0   Length: 0x144
+    // Token : 0x6002218
+    // RVA   : 0x9FF4D0   Offset: 0x9FE2D0   Length: 0x144
     public int GetCostTime()
     {
         bool cVar1;
@@ -628,8 +628,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600216F
-    // RVA   : 0xC564A0   Offset: 0xC558A0   Length: 0x98
+    // Token : 0x6002219
+    // RVA   : 0x9FF6C0   Offset: 0x9FE4C0   Length: 0x98
     public int GetMaterialTime(GameObject targetItem)
     {
         bool cVar1;
@@ -639,15 +639,15 @@ public class SpePoisonController
           return 0;
         }
         if (targetItem != null) {
-          lVar2 = GameObject.GetComponent(targetItem,DAT_181d720a0);
+          lVar2 = GameObject.GetComponent(targetItem,DAT_181e55168);
           if ((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) {
             return *(uint32 *)(*(int64 *)(lVar2 + 32) + 60);
           }
         }
     }
 
-    // Token : 0x6002170
-    // RVA   : 0xC56580   Offset: 0xC55980   Length: 0x168
+    // Token : 0x600221A
+    // RVA   : 0x9FF7A0   Offset: 0x9FE5A0   Length: 0x168
     public float GetTotalScore()
     {
         bool cVar1;
@@ -694,8 +694,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x6002171
-    // RVA   : 0xC56400   Offset: 0xC55800   Length: 0x9E
+    // Token : 0x600221B
+    // RVA   : 0x9FF620   Offset: 0x9FE420   Length: 0x9E
     public float GetMaterialScore(GameObject targetItem)
     {
         bool cVar1;
@@ -705,15 +705,15 @@ public class SpePoisonController
           return;
         }
         if (targetItem != null) {
-          lVar2 = GameObject.GetComponent(targetItem,DAT_181d720a0);
+          lVar2 = GameObject.GetComponent(targetItem,DAT_181e55168);
           if ((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) {
             return;
           }
         }
     }
 
-    // Token : 0x6002172
-    // RVA   : 0xC56540   Offset: 0xC55940   Length: 0x3A
+    // Token : 0x600221C
+    // RVA   : 0x9FF760   Offset: 0x9FE560   Length: 0x3A
     public float GetScoreLv()
     {
         float fVar1;
@@ -723,8 +723,8 @@ public class SpePoisonController
         Mathf.Log(uVar2,0x40000000,0);
     }
 
-    // Token : 0x6002173
-    // RVA   : 0xC566F0   Offset: 0xC55AF0   Length: 0x2D
+    // Token : 0x600221D
+    // RVA   : 0x9FF910   Offset: 0x9FE710   Length: 0x2D
     public void HideSpePoisonUI()
     {
         SpePoisonController.ClearAllSpePoisonMaterial(this,0);
@@ -734,8 +734,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x6002174
-    // RVA   : 0xC58200   Offset: 0xC57600   Length: 0xAF
+    // Token : 0x600221E
+    // RVA   : 0xA01420   Offset: 0xA00220   Length: 0xAF
     public void ShowSpePoisonUI()
     {
         if (this.spePoisonUI != null) {
@@ -743,7 +743,7 @@ public class SpePoisonController
           SpePoisonController.RefreshUI(this,0);
           plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
           plVar2 = (int64 *)0;
-          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
+          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181e8f4a0)) {
             plVar2 = plVar1;
           }
           NGUITools.PlaySound(plVar2,0);
@@ -751,8 +751,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x6002175
-    // RVA   : 0xC58360   Offset: 0xC57760   Length: 0x123
+    // Token : 0x600221F
+    // RVA   : 0xA01580   Offset: 0xA00380   Length: 0x123
     public void SpePoisonTypeButtonClicked(GameObject buttonClicked)
     {
         int iVar1;
@@ -761,7 +761,7 @@ public class SpePoisonController
         long lVar4;
         ulong uVar5;
         if (buttonClicked != null) {
-          lVar4 = GameObject.GetComponent(buttonClicked,DAT_181d743b0);
+          lVar4 = GameObject.GetComponent(buttonClicked,DAT_181e57478);
           if (lVar4 != null) {
             if (*(char *)(lVar4 + 0x118) != false) {
               iVar1 = this.spePoisonType;
@@ -776,7 +776,7 @@ public class SpePoisonController
               }
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
               plVar7 = (int64 *)0;
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181e8f4a0)) {
                 plVar7 = plVar6;
               }
               NGUITools.PlaySound(plVar7,0);
@@ -786,8 +786,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x6002176
-    // RVA   : 0xC55D50   Offset: 0xC55150   Length: 0x1EE
+    // Token : 0x6002220
+    // RVA   : 0x9FEF70   Offset: 0x9FDD70   Length: 0x1EE
     public void ClearAllSpePoisonMaterial()
     {
         bool cVar1;
@@ -810,12 +810,12 @@ public class SpePoisonController
               }
               break;
             }
-            if (!DAT_181e9e4d8) {
-              il2cpp_runtime_class_init(&DAT_181d89930);
-              il2cpp_runtime_class_init(&DAT_181d89a30);
-              il2cpp_runtime_class_init(&DAT_181d8e228);
+            if (!DAT_181eb7e79) {
+              il2cpp_runtime_class_init(&DAT_181e6bc70);
+              il2cpp_runtime_class_init(&DAT_181e6bd70);
+              il2cpp_runtime_class_init(&DAT_181e6e5e8);
               lVar2 = this.materialIcon;
-              DAT_181e9e4d8 = true;
+              DAT_181eb7e79 = true;
             }
             if (lVar2 == null) break;
             if (lVar2.Count <= uVar4) {
@@ -832,7 +832,7 @@ public class SpePoisonController
               uVar3 = *(uint64 *)(lVar5 + lVar2._items);
               Object.Destroy(uVar3,0);
               if (this.materialIcon == null) break;
-              FUN_18182a2e0();
+              FUN_181769c00();
               this.needRefresh = 1;
             }
             lVar2 = this.materialIcon;
@@ -842,8 +842,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x6002177
-    // RVA   : 0xC561A0   Offset: 0xC555A0   Length: 0x10A
+    // Token : 0x6002221
+    // RVA   : 0x9FF3C0   Offset: 0x9FE1C0   Length: 0x10A
     public void CreateSpePoisonMaterialItemIcon(int id, ItemData targetItemData)
     {
         void SpePoisonController.CreateSpePoisonMaterialItemIcon
@@ -869,7 +869,7 @@ public class SpePoisonController
                 uVar4 = Component.get_gameObject(lVar3,0);
                 uVar4 = SpePoisonController.CreateSpePoisonItemIcon(this,uVar4,targetItemData,0);
                 if (lVar1 != null) {
-                  FUN_18182a2e0(lVar1,uVar2,uVar4,DAT_181d89a30);
+                  FUN_181769c00(lVar1,uVar2,uVar4,DAT_181e6bd70);
                   return;
                 }
               }
@@ -878,11 +878,11 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x6002178
-    // RVA   : 0xC56070   Offset: 0xC55470   Length: 0x12A
+    // Token : 0x6002222
+    // RVA   : 0x9FF290   Offset: 0x9FE090   Length: 0x12A
     public GameObject CreateSpePoisonItemIcon(GameObject parent, ItemData targetItemData)
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         int64 SpePoisonController.CreateSpePoisonItemIcon
                          (uint64 this,uint64 parent,uint64 targetItemData)
         {
@@ -893,13 +893,13 @@ public class SpePoisonController
           uVar1 = *(uint64 *)(*pStatics + 160);
           lVar2 = GlobalData.AddChild(parent,uVar1,0);
           if (lVar2 != null) {
-            lVar3 = GameObject.GetComponent(lVar2,DAT_181d720a0);
+            lVar3 = GameObject.GetComponent(lVar2,DAT_181e55168);
             if (lVar3 != null) {
               *(uint64 *)(lVar3 + 32) = targetItemData;
-              lVar3 = GameObject.GetComponent(lVar2,DAT_181d720a0);
+              lVar3 = GameObject.GetComponent(lVar2,DAT_181e55168);
               if (lVar3 != null) {
                 *(uint32 *)(lVar3 + 40) = 1;
-                lVar3 = GameObject.GetComponent(lVar2,DAT_181d720a0);
+                lVar3 = GameObject.GetComponent(lVar2,DAT_181e55168);
                 if (lVar3 != null) {
                   ItemIconController.AutoSetName(lVar3,1,0);
                   return lVar2;
@@ -910,8 +910,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x6002179
-    // RVA   : 0xC56720   Offset: 0xC55B20   Length: 0x1F7
+    // Token : 0x6002223
+    // RVA   : 0x9FF940   Offset: 0x9FE740   Length: 0x1F7
     public void MaterialButtonClicked(int id)
     {
         long lVar1;
@@ -928,7 +928,7 @@ public class SpePoisonController
         lVar1 = this.materialIcon;
         if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (lVar1.Count <= local_res10[0]) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -938,16 +938,16 @@ public class SpePoisonController
         if (cVar3) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7530 + 184);
-        lVar4 = il2cpp_internal(DAT_181d94e68);
-        FUN_181330100(lVar4,DAT_181d957a0);
+        lVar1 = **(int64 **)(DAT_181e977e8 + 184);
+        lVar4 = il2cpp_internal(DAT_181e74e38);
+        FUN_1810f3480(lVar4,DAT_181e77ae0);
         local_res8[0] = 0;
-        uVar5 = il2cpp_value_box(DAT_181d80430,local_res8);
+        uVar5 = il2cpp_value_box(DAT_181e60808,local_res8);
         if (lVar4 != null) {
-          FUN_18181e6b0(lVar4,uVar5,DAT_181d958a0);
+          FUN_18175de30(lVar4,uVar5,DAT_181e77be0);
           local_res20[0] = 5;
-          uVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
-          FUN_18181e6b0(lVar4,uVar5,DAT_181d958a0);
+          uVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
+          FUN_18175de30(lVar4,uVar5,DAT_181e77be0);
           uVar5 = Component.get_gameObject(this,0);
           uVar6 = Int32.ToString(local_res10,0);
           if (lVar1 != null) {
@@ -957,17 +957,17 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600217A
-    // RVA   : 0xC582B0   Offset: 0xC576B0   Length: 0xA9
+    // Token : 0x6002224
+    // RVA   : 0xA014D0   Offset: 0xA002D0   Length: 0xA9
     public void SpePoisonMaterialChoosen(string id)
     {
-        var pStatics = *(int64*)(DAT_181db7530 + 184);
+        var pStatics = *(int64*)(DAT_181e977e8 + 184);
         uint uVar1;
         long lVar2;
         uVar1 = Int32.Parse(id,0);
         if ((*pStatics != 0) &&
            (lVar2 = *(int64 *)(*pStatics + 72)) != null) {
-          lVar2 = GameObject.GetComponent(lVar2,DAT_181d720a0);
+          lVar2 = GameObject.GetComponent(lVar2,DAT_181e55168);
           if (lVar2 != null) {
             SpePoisonController.CreateSpePoisonMaterialItemIcon
                       (this,uVar1,*(uint64 *)(lVar2 + 32),0);
@@ -977,8 +977,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600217B
-    // RVA   : 0xC55F40   Offset: 0xC55340   Length: 0x123
+    // Token : 0x6002225
+    // RVA   : 0x9FF160   Offset: 0x9FDF60   Length: 0x123
     public void ClearSpePoisonMaterial(int id)
     {
         long lVar1;
@@ -1004,7 +1004,7 @@ public class SpePoisonController
             uVar3 = *(uint64 *)(lVar1 + lVar2._items);
             Object.Destroy(uVar3,0);
             if (this.materialIcon != null) {
-              FUN_18182a2e0(this.materialIcon,id,0,DAT_181d89a30);
+              FUN_181769c00(this.materialIcon,id,0,DAT_181e6bd70);
               this.needRefresh = 1;
               return;
             }
@@ -1012,8 +1012,8 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600217C
-    // RVA   : 0xC58490   Offset: 0xC57890   Length: 0x499
+    // Token : 0x6002226
+    // RVA   : 0xA016B0   Offset: 0xA004B0   Length: 0x499
     public void StartButtonClicked()
     {
         ulong uVar1;
@@ -1035,7 +1035,7 @@ public class SpePoisonController
                   uVar3 = SpePoisonController.GetCostTime(this,0);
                   if (lVar5 != null) {
                     lVar5.leftTime = uVar3;
-                    goto LAB_180c588ba;
+                    goto LAB_180a01ada;
                   }
                   break;
                 }
@@ -1048,22 +1048,22 @@ public class SpePoisonController
                 lVar5 = this.targetSpePoisonData;
                 if (!cVar2) {
                   if ((lVar5 == null) || (lVar5.material == null)) break;
-                  FUN_18182a2e0();
+                  FUN_181769c00();
                 }
                 else {
                   if (lVar5 == null) break;
                   lVar5 = lVar5.material;
                   if ((((this.materialIcon == null) ||
-                       (lVar4 = FUN_180002f80(this.materialIcon,uVar7,DAT_181d89930),
-                       lVar4 == null)) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0)) == null
+                       (lVar4 = FUN_1800024b0(this.materialIcon,uVar7,DAT_181e6bc70),
+                       lVar4 == null)) || (lVar4 = GameObject.GetComponent(lVar4,DAT_181e55168)) == null
                       ) || (lVar5 == null)) break;
-                  FUN_18182a2e0(lVar5,uVar7,*(uint64 *)(lVar4 + 32),DAT_181d90fb0);
-                  lVar5 = FUN_18046c0a0(0);
+                  FUN_181769c00(lVar5,uVar7,*(uint64 *)(lVar4 + 32),DAT_181e731f0);
+                  lVar5 = FUN_1802106e0(0);
                   if ((lVar5 == null) || (lVar5.result == null)) break;
                   lVar5 = WorldData.Player(lVar5.result,0);
                   if ((this.materialIcon == null) ||
-                     (((lVar4 = FUN_180002f80(this.materialIcon,uVar7,DAT_181d89930),
-                       lVar4 == null || (lVar4 = GameObject.GetComponent(lVar4,DAT_181d720a0)) == null)
+                     (((lVar4 = FUN_1800024b0(this.materialIcon,uVar7,DAT_181e6bc70),
+                       lVar4 == null || (lVar4 = GameObject.GetComponent(lVar4,DAT_181e55168)) == null)
                       || (lVar5 == null)))) break;
                   HeroData.LoseItem(lVar5,*(uint64 *)(lVar4 + 32),1,0);
                 }
@@ -1082,21 +1082,21 @@ public class SpePoisonController
                                   0xffffffff,0,0);
                 lVar5 = this.targetSpePoisonData;
                 if (lVar5 != null) {
-                  lVar9 = il2cpp_internal(DAT_181d940e8);
-                  FUN_181330100(lVar9,DAT_181d909b0);
+                  lVar9 = il2cpp_internal(DAT_181e740b8);
+                  FUN_1810f3480(lVar9,DAT_181e72b70);
                   if (lVar9 != null) {
-                    FUN_18181e6b0(lVar9,0,DAT_181d90ab0);
-                    FUN_18181e6b0(lVar9,0,DAT_181d90ab0);
-                    FUN_18181e6b0(lVar9,0,DAT_181d90ab0);
+                    FUN_18175de30(lVar9,0,DAT_181e72cf0);
+                    FUN_18175de30(lVar9,0,DAT_181e72cf0);
+                    FUN_18175de30(lVar9,0,DAT_181e72cf0);
                     lVar5.material = lVar9;
                     lVar5.result = 0;
                     lVar5.leftTime = 0;
                     lVar5.finished = 0;
                     SpePoisonController.ClearAllSpePoisonMaterial(this,0);
-        LAB_180c588ba:
+        LAB_180a01ada:
                     plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/毒气",0);
                     plVar8 = (int64 *)0;
-                    if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
+                    if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181e8f4a0)) {
                       plVar8 = plVar6;
                     }
                     NGUITools.PlaySound(plVar8,0);
@@ -1110,11 +1110,11 @@ public class SpePoisonController
         }
     }
 
-    // Token : 0x600217D
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002227
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

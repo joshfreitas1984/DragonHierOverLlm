@@ -34,8 +34,10 @@ internal static class EquipmentTierNameSpacingPatches
     }
 
     // [GameCoupled GameController.GenerateArmor logic] stores EquipLvName[itemLv] + template name with no separator
-    // [GameCoupled ItemData.Name logic] returns that stored name (optionally wrapped in a rare-level color tag)
+    // [GameCoupled ItemData.Name logic] returns BuildDisplayName (the stored name via RawName unless an equipment affix + single name is built), optionally wrapped in a rare-level color tag
+    // [GameCoupled ItemData.DisplayName logic] identical to Name; QuickDetail.ShowEquipmentQuickDetail's tooltip header calls this one instead of Name
     [HarmonyPatch(typeof(ItemData), nameof(ItemData.Name), new[] { typeof(bool) })]
+    [HarmonyPatch(typeof(ItemData), nameof(ItemData.DisplayName), new[] { typeof(bool) })]
     [HarmonyPostfix]
     private static void Name_Postfix(ref string __result)
     {

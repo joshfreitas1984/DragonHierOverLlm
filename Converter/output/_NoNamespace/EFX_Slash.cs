@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : EFX_Slash
-// Token : 0x2000268
+// Token : 0x200026F
 // ============================================================
 
 public class EFX_Slash
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001364
+    // Token: 0x40013A2
     public Vector3 speed;
 
-    // Token: 0x4001365
+    // Token: 0x40013A3
     public Vector3 baseScale;
 
-    // Token: 0x4001366
+    // Token: 0x40013A4
     public bool randomRotation;
 
-    // Token: 0x4001367
+    // Token: 0x40013A5
     public float onceLifeTime;
 
-    // Token: 0x4001368
+    // Token: 0x40013A6
     private float lifeTime;
 
-    // Token: 0x4001369
+    // Token: 0x40013A7
     public int countTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60013D8
-    // RVA   : 0x941040   Offset: 0x940440   Length: 0x7
+    // Token : 0x6001440
+    // RVA   : 0x686740   Offset: 0x685540   Length: 0x7
     private void Start()
     {
-        void FUN_180941040(uint64 this)
+        void FUN_180686740(uint64 this)
         {
         EFX_Slash.ResetToBeginning(this,0);
     }
 
-    // Token : 0x60013D9
-    // RVA   : 0x941050   Offset: 0x940450   Length: 0x1E3
+    // Token : 0x6001441
+    // RVA   : 0x686750   Offset: 0x685550   Length: 0x1E3
     private void Update()
     {
         uint uVar1;
@@ -53,9 +53,9 @@ public class EFX_Slash
         if (-1 < this.countTime) {
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) {
-        LAB_18094122e:
+        LAB_18068692e:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           puVar4 = (uint64 *)Transform.get_localScale(&local_58,lVar3,0);
           fVar11 = this.speed;
@@ -95,15 +95,15 @@ public class EFX_Slash
                   }
                 }
               }
-              goto LAB_18094122e;
+              goto LAB_18068692e;
             }
             EFX_Slash.ResetToBeginning(this);
           }
         }
     }
 
-    // Token : 0x60013DA
-    // RVA   : 0x940F80   Offset: 0x940380   Length: 0xB4
+    // Token : 0x6001442
+    // RVA   : 0x686680   Offset: 0x685480   Length: 0xB4
     private void ResetToBeginning()
     {
         long lVar1;
@@ -131,8 +131,8 @@ public class EFX_Slash
         }
     }
 
-    // Token : 0x60013DB
-    // RVA   : 0x940F00   Offset: 0x940300   Length: 0x74
+    // Token : 0x6001443
+    // RVA   : 0x686600   Offset: 0x685400   Length: 0x74
     private void RandomRotation()
     {
         long lVar1;
@@ -147,7 +147,7 @@ public class EFX_Slash
           puVar2 = (uint32 *)Quaternion.Euler(&local_18,0,0,uVar3,0);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           local_18 = *puVar2;
           uStack_14 = puVar2[1];
@@ -157,8 +157,8 @@ public class EFX_Slash
         }
     }
 
-    // Token : 0x60013DC
-    // RVA   : 0x941240   Offset: 0x940640   Length: 0x4E
+    // Token : 0x6001444
+    // RVA   : 0x686940   Offset: 0x685740   Length: 0x4E
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];
@@ -168,7 +168,7 @@ public class EFX_Slash
         puVar1 = (uint64 *)Vector3.get_one(local_18,0);
         this.baseScale = *puVar1;
         *(uint32 *)(this + 44) = *(uint32 *)(puVar1 + 1);
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

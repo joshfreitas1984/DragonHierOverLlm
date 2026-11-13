@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : CloudController
-// Token : 0x2000253
+// Token : 0x2000257
 // ============================================================
 
 public class CloudController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400129D
+    // Token: 0x40012BB
     public SkyObjType skyObjType;
 
-    // Token: 0x400129E
+    // Token: 0x40012BC
     public bool moveRight;
 
-    // Token: 0x400129F
+    // Token: 0x40012BD
     public float moveSpeed;
 
-    // Token: 0x40012A0
+    // Token: 0x40012BE
     public float originAlpha;
 
-    // Token: 0x40012A1
+    // Token: 0x40012BF
     public Color nowColor;
 
-    // Token: 0x40012A2
+    // Token: 0x40012C0
     public Color targetColor;
 
-    // Token: 0x40012A3
+    // Token: 0x40012C1
     public bool destroying;
 
-    // Token: 0x40012A4
+    // Token: 0x40012C2
     private float refreshTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600132D
-    // RVA   : 0x9A0090   Offset: 0x99F490   Length: 0x5B
+    // Token : 0x6001351
+    // RVA   : 0x6FE9B0   Offset: 0x6FD7B0   Length: 0x5B
     private void Start()
     {
         ulong uVar1;
         long lVar2;
         byte[] local_18 = new byte[16];
-        lVar2 = Component.GetComponent(this,DAT_181d95df8);
+        lVar2 = Component.GetComponent(this,DAT_181e791b8);
         if (lVar2 != null) {
           puVar3 = (uint64 *)SpriteRenderer.get_color(local_18,lVar2,0);
           uVar1 = puVar3[1];
@@ -48,11 +48,11 @@ public class CloudController
         }
     }
 
-    // Token : 0x600132E
-    // RVA   : 0x9A00F0   Offset: 0x99F4F0   Length: 0x850
+    // Token : 0x6001352
+    // RVA   : 0x6FEA10   Offset: 0x6FD810   Length: 0x850
     private void Update()
     {
-        var pStatics_35e8 = *(int64*)(DAT_181da35e8 + 184);
+        var pStatics_3a28 = *(int64*)(DAT_181e83a28 + 184);
         float fVar1;
         ulong uVar2;
         bool cVar3;
@@ -113,12 +113,12 @@ public class CloudController
             if (0.0 < fVar12) {
               return;
             }
-            bVar10 = !DAT_181e9d714;
+            bVar10 = !DAT_181eb6e24;
             this.refreshTime = 0x3dcccccd;
             if (bVar10) {
-              il2cpp_runtime_class_init(&DAT_181d73d40);
-              il2cpp_runtime_class_init(&DAT_181db4f30);
-              DAT_181e9d714 = true;
+              il2cpp_runtime_class_init(&DAT_181e538e8);
+              il2cpp_runtime_class_init(&DAT_181e95408);
+              DAT_181eb6e24 = true;
             }
             lVar4 = BattleController.AttackAreaTypeStartMovePower;
             if ((lVar4 != null) && (lVar4 = WeatherController.GetNowWeather(lVar4,0)) != null) {
@@ -189,19 +189,19 @@ public class CloudController
                 }
                 local_88 = 0;
                 uStack_80 = 0;
-                FUN_1809dcfa0(&local_88,fVar12,fVar11,fVar14,CONCAT44(uVar16,fVar15),0);
+                FUN_1807282e0(&local_88,fVar12,fVar11,fVar14,CONCAT44(uVar16,fVar15),0);
                 this.nowColor = (float)local_88;
                 *(float *)(this + 44) = local_88._4_4_;
                 *(float *)(this + 48) = (float)uStack_80;
                 *(uint32 *)(this + 52) = uStack_80._4_4_;
               }
-              lVar4 = Component.GetComponent(this,DAT_181d95df8);
+              lVar4 = Component.GetComponent(this,DAT_181e791b8);
               uVar7 = this.nowColor;
               uVar2 = *(uint64 *)(this + 48);
               fVar12 = *(float *)(this + 52);
-              if (*pStatics_35e8 != 0) {
+              if (*pStatics_3a28 != 0) {
                 fVar11 = (float)SkyController.GetScaleAlphaPercent
-                                          (*pStatics_35e8,
+                                          (*pStatics_3a28,
                                            this.skyObjType,0);
                 local_88 = uVar7;
                 uStack_80 = uVar2;
@@ -214,11 +214,11 @@ public class CloudController
                   if (lVar4 != null) {
                     pfVar8 = (float *)Transform.get_localPosition(&local_88,lVar4,0);
                     fVar12 = *pfVar8;
-                    if (*pStatics_35e8 != 0) {
+                    if (*pStatics_3a28 != 0) {
                       fVar11 = (float)SkyController.GetMapSize
-                                                (*pStatics_35e8,
+                                                (*pStatics_3a28,
                                                  this.skyObjType,1,0);
-                      lVar4 = Component.GetComponent(this,DAT_181d95df8);
+                      lVar4 = Component.GetComponent(this,DAT_181e791b8);
                       if ((lVar4 != null) && (lVar4 = SpriteRenderer.get_sprite(lVar4,0)) != null) {
                         puVar9 = (uint32 *)Sprite.get_bounds(&local_88,lVar4,0);
                         local_68 = *puVar9;
@@ -236,11 +236,11 @@ public class CloudController
                             if (lVar4 == null) throw; // [null/range check failed]
                             pfVar8 = (float *)Transform.get_localPosition(&local_88,lVar4,0);
                             fVar12 = *pfVar8;
-                            if (*pStatics_35e8 == 0) throw; // [null/range check failed]
+                            if (*pStatics_3a28 == 0) throw; // [null/range check failed]
                             fVar11 = (float)SkyController.GetMapSize
-                                                      (*pStatics_35e8,
+                                                      (*pStatics_3a28,
                                                        this.skyObjType,1,0);
-                            lVar4 = Component.GetComponent(this,DAT_181d95df8);
+                            lVar4 = Component.GetComponent(this,DAT_181e791b8);
                             if ((lVar4 == null) || (lVar4 = SpriteRenderer.get_sprite(lVar4,0)) == null)
                             throw; // [null/range check failed]
                             puVar9 = (uint32 *)Sprite.get_bounds(&local_88,lVar4,0);
@@ -258,13 +258,13 @@ public class CloudController
                               return;
                             }
                           }
-                          lVar4 = *pStatics_35e8;
+                          lVar4 = *pStatics_3a28;
                           uVar7 = Component.get_gameObject(this,0);
                           if (lVar4 != null) {
                             SkyController.DestroyCloud(lVar4,uVar7,0);
-                            if (*pStatics_35e8 != 0) {
+                            if (*pStatics_3a28 != 0) {
                               SkyController.GenerateCloud
-                                        (*pStatics_35e8,
+                                        (*pStatics_3a28,
                                          this.skyObjType,1,0,0);
                               return;
                             }
@@ -280,8 +280,8 @@ public class CloudController
         }
     }
 
-    // Token : 0x600132F
-    // RVA   : 0x99FF50   Offset: 0x99F350   Length: 0x13E
+    // Token : 0x6001353
+    // RVA   : 0x6FE870   Offset: 0x6FD670   Length: 0x13E
     public Color GetTargetColor()
     {
         ulong uVar1;
@@ -291,7 +291,7 @@ public class CloudController
         ulong local_48;
         ulong uStack_40;
         byte[] local_38 = new byte[48];
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181db4f30 + 184) + 8);
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181e95408 + 184) + 8);
         if (lVar3 != null) {
           lVar3 = WeatherController.GetNowWeather(lVar3,0);
           if (lVar3 != null) {
@@ -314,11 +314,11 @@ public class CloudController
         }
     }
 
-    // Token : 0x6001330
-    // RVA   : 0x99FF20   Offset: 0x99F320   Length: 0x28
+    // Token : 0x6001354
+    // RVA   : 0x6FE840   Offset: 0x6FD640   Length: 0x28
     public float GetChangeColor(float nowColor, float targetColor, float delta)
     {
-        void FUN_18099ff20(uint64 this,float nowColor,float targetColor,float delta)
+        void FUN_1806fe840(uint64 this,float nowColor,float targetColor,float delta)
         {
         if (nowColor == targetColor) {
           return;
@@ -330,11 +330,11 @@ public class CloudController
         Mathf.Min(nowColor + delta);
     }
 
-    // Token : 0x6001331
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6001355
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

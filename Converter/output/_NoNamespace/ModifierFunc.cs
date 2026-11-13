@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : ModifierFunc
-// Token : 0x2000101
+// Token : 0x2000100
 // ============================================================
 
 public class ModifierFunc
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000883
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x600086A
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class ModifierFunc
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000884
-    // RVA   : 0x918980   Offset: 0x917D80   Length: 0x43A
+    // Token : 0x600086B
+    // RVA   : 0x605DE0   Offset: 0x604BE0   Length: 0x43A
     public virtual string Invoke(string s)
     {
         long lVar1;
@@ -61,15 +61,15 @@ public class ModifierFunc
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if (*(char *)(lVar1 + 74) == true) {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180918d7e;
+              goto LAB_1806061de;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   uVar5 = (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                     (plVar3,s,
@@ -90,17 +90,17 @@ public class ModifierFunc
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(plVar3,s,puVar7[1]);
-                        goto LAB_180918d89;
+                        goto LAB_1806061e9;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  puVar7 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
+                  puVar7 = (uint64 *)FUN_18019b1f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
                   uVar5 = (*(code *)*puVar7)(plVar3,s,puVar7[1]);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar10 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   puVar7 = (uint64 *)
@@ -119,13 +119,13 @@ public class ModifierFunc
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_180918c56;
+                        goto LAB_1806060b6;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180918c56:
+                  lVar6 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_1806060b6:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                   uVar5 = (*(code *)*puVar7)(plVar3,s,puVar7);
                 }
@@ -133,10 +133,10 @@ public class ModifierFunc
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180918a19;
+              goto LAB_180605e79;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   uVar5 = (**(code **)(*s + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                     (s,*(uint64 *)
@@ -157,17 +157,17 @@ public class ModifierFunc
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(s,puVar7[1]);
-                        goto LAB_180918d89;
+                        goto LAB_1806061e9;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  puVar7 = (uint64 *)FUN_1800914f0(s,lVar8,*(uint16 *)(lVar1 + 72));
+                  puVar7 = (uint64 *)FUN_18019b1f0(s,lVar8,*(uint16 *)(lVar1 + 72));
                   uVar5 = (*(code *)*puVar7)(s,puVar7[1]);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar10 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   uVar5 = *(uint64 *)(*s + ((uint64)uVar10 + 20) * 16);
@@ -184,29 +184,29 @@ public class ModifierFunc
                                   (int)((uint32)uVar10 +
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + lVar6 + 0x140);
-                        goto LAB_180918adb;
+                        goto LAB_180605f3b;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  lVar6 = FUN_1800914f0(s,*(int64 *)(lVar1 + 24),uVar10);
+                  lVar6 = FUN_18019b1f0(s,*(int64 *)(lVar1 + 24),uVar10);
                   uVar5 = *(uint64 *)(lVar6 + 8);
                 }
-        LAB_180918adb:
+        LAB_180605f3b:
                 puVar7 = (uint64 *)il2cpp_internal(uVar5,lVar1);
                 uVar5 = (*(code *)*puVar7)(s,puVar7);
               }
             }
           }
           else if (*(char *)(lVar1 + 74) == true) {
-        LAB_180918a19:
+        LAB_180605e79:
             uVar5 = (*pcVar2)(s,lVar1);
           }
           else {
-        LAB_180918d7e:
+        LAB_1806061de:
             uVar5 = (*pcVar2)(plVar3,s,lVar1);
           }
-        LAB_180918d89:
+        LAB_1806061e9:
           uVar13 = uVar13 + 1;
           if (uVar11 <= uVar13) {
             return uVar5;
@@ -214,8 +214,8 @@ public class ModifierFunc
         } while( true );
     }
 
-    // Token : 0x6000885
-    // RVA   : 0x216660   Offset: 0x215A60   Length: 0x21
+    // Token : 0x600086C
+    // RVA   : 0x604820   Offset: 0x603620   Length: 0x21
     public virtual IAsyncResult BeginInvoke(string s, AsyncCallback callback, object object)
     {
         ulong local_18;
@@ -225,8 +225,8 @@ public class ModifierFunc
         il2cpp_internal(this,&local_18);
     }
 
-    // Token : 0x6000886
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x600086D
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual string EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

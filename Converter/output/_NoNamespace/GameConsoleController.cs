@@ -1,36 +1,36 @@
 // ============================================================
 // Type  : GameConsoleController
-// Token : 0x200029D
+// Token : 0x20002A5
 // ============================================================
 
 public class GameConsoleController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40014EF
+    // Token: 0x4001532
     private GameObject gameConsole;
 
-    // Token: 0x40014F0
+    // Token: 0x4001533
     private InputField inputField;
 
-    // Token: 0x40014F1
+    // Token: 0x4001534
     private Text ouputText;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001542
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x60015AE
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private void Start()
     {
     }
 
-    // Token : 0x6001543
-    // RVA   : 0x78D0A0   Offset: 0x78C4A0   Length: 0x33B
+    // Token : 0x60015AF
+    // RVA   : 0x1862420   Offset: 0x1861220   Length: 0x33B
     private void Update()
     {
         bool cVar2;
         ulong uVar3;
         long lVar4;
-        cVar2 = FUN_1804625f0(0x132,0);
-        if ((cVar2) && (cVar2 = FUN_1804625b0(96), cVar2)) {
+        cVar2 = FUN_1818448a0(0x132,0);
+        if ((cVar2) && (cVar2 = FUN_181844860(96), cVar2)) {
           lVar4 = this.gameConsole;
           if (lVar4 == null) throw; // [null/range check failed]
           cVar2 = GameObject.get_activeSelf(lVar4,0);
@@ -53,11 +53,11 @@ public class GameConsoleController
           }
           if (this.inputField != null) {
             lVar4 = *(int64 *)(this.inputField + 0x170);
-            cVar2 = FUN_1804625b0(13);
+            cVar2 = FUN_181844860(13);
             if (!cVar2) {
-              cVar2 = FUN_1804625b0(0x111,0);
+              cVar2 = FUN_181844860(0x111,0);
               if (!cVar2) {
-                cVar2 = FUN_1804625b0(0x112,0);
+                cVar2 = FUN_181844860(0x112,0);
                 if (!cVar2) {
                   return;
                 }
@@ -109,8 +109,8 @@ public class GameConsoleController
         }
     }
 
-    // Token : 0x6001544
-    // RVA   : 0x78D070   Offset: 0x78C470   Length: 0x20
+    // Token : 0x60015B0
+    // RVA   : 0x52B140   Offset: 0x529F40   Length: 0x20
     public void CloseButtonClicked()
     {
         if (this.gameConsole != null) {
@@ -119,11 +119,11 @@ public class GameConsoleController
         }
     }
 
-    // Token : 0x6001545
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60015B1
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

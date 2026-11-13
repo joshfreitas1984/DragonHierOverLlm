@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : TalkTextPosType
-// Token : 0x20002CE
+// Token : 0x20002D7
 // ============================================================
 
 public class TalkTextPosType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001736
+    // Token: 0x400178B
     public int value__;
 
-    // Token: 0x4001737
+    // Token: 0x400178C
     public const TalkTextPosType Left;
 
-    // Token: 0x4001738
+    // Token: 0x400178D
     public const TalkTextPosType Right;
 
-    // Token: 0x4001739
+    // Token: 0x400178E
     public const TalkTextPosType Same;
 
-    // Token: 0x400173A
+    // Token: 0x400178F
     public const TalkTextPosType Opposite;
 
 }

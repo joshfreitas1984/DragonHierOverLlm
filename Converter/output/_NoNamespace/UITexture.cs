@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : UITexture
-// Token : 0x200011B
+// Token : 0x200011A
 // ============================================================
 
 public class UITexture
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400070F
+    // Token: 0x40006EF
     private Rect mRect;
 
-    // Token: 0x4000710
+    // Token: 0x40006F0
     private Texture mTexture;
 
-    // Token: 0x4000711
+    // Token: 0x40006F1
     private Shader mShader;
 
-    // Token: 0x4000712
+    // Token: 0x40006F2
     private Vector4 mBorder;
 
-    // Token: 0x4000713
+    // Token: 0x40006F3
     private bool mFixedAspect;
 
-    // Token: 0x4000714
+    // Token: 0x40006F4
     private int mPMA;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000984
-    // RVA   : 0xC05DE0   Offset: 0xC051E0   Length: 0xD6
+    // Token : 0x600096B
+    // RVA   : 0x95F050   Offset: 0x95DE50   Length: 0xD6
     public override Texture get_mainTexture()
     {
         bool cVar1;
@@ -44,13 +44,13 @@ public class UITexture
             return uVar2;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         return this.mTexture;
     }
 
-    // Token : 0x6000985
-    // RVA   : 0xC06210   Offset: 0xC05610   Length: 0x179
+    // Token : 0x600096C
+    // RVA   : 0x95F480   Offset: 0x95E280   Length: 0x179
     public override void set_mainTexture(Texture value)
     {
         long lVar1;
@@ -62,9 +62,9 @@ public class UITexture
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (cVar2) {
             if (this[43] == 0) {
-        LAB_180c06384:
+        LAB_18095f5f4:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(int *)(this[43] + 24) == 1) {
               lVar1 = this[22];
@@ -76,7 +76,7 @@ public class UITexture
                   UIDrawCall.set_mainTexture(this[43],value,0);
                   return;
                 }
-                goto LAB_180c06384;
+                goto LAB_18095f5f4;
               }
             }
           }
@@ -88,15 +88,15 @@ public class UITexture
         }
     }
 
-    // Token : 0x6000986
-    // RVA   : 0x2A5C70   Offset: 0x2A5070   Length: 0x8
+    // Token : 0x600096D
+    // RVA   : 0x845AA0   Offset: 0x8448A0   Length: 0x8
     public override Material get_material()
     {
         return *(uint64 *)(this + 176);
     }
 
-    // Token : 0x6000987
-    // RVA   : 0xC06390   Offset: 0xC05790   Length: 0xD4
+    // Token : 0x600096E
+    // RVA   : 0x95F600   Offset: 0x95E400   Length: 0xD4
     public override void set_material(Material value)
     {
         long lVar1;
@@ -114,8 +114,8 @@ public class UITexture
         }
     }
 
-    // Token : 0x6000988
-    // RVA   : 0xC06000   Offset: 0xC05400   Length: 0xF9
+    // Token : 0x600096F
+    // RVA   : 0x95F270   Offset: 0x95E070   Length: 0xF9
     public override Shader get_shader()
     {
         bool cVar1;
@@ -137,8 +137,8 @@ public class UITexture
         }
     }
 
-    // Token : 0x6000989
-    // RVA   : 0xC06470   Offset: 0xC05870   Length: 0x18E
+    // Token : 0x6000970
+    // RVA   : 0x95F6E0   Offset: 0x95E4E0   Length: 0x18E
     public override void set_shader(Shader value)
     {
         long lVar1;
@@ -150,9 +150,9 @@ public class UITexture
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (cVar2) {
             if (this[43] == 0) {
-        LAB_180c065f9:
+        LAB_18095f869:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(int *)(this[43] + 24) == 1) {
               lVar1 = this[22];
@@ -164,7 +164,7 @@ public class UITexture
                   UIDrawCall.set_shader(this[43],value,0);
                   return;
                 }
-                goto LAB_180c065f9;
+                goto LAB_18095f869;
               }
             }
           }
@@ -178,8 +178,8 @@ public class UITexture
         }
     }
 
-    // Token : 0x600098A
-    // RVA   : 0xC05EC0   Offset: 0xC052C0   Length: 0x136
+    // Token : 0x6000971
+    // RVA   : 0x95F130   Offset: 0x95DF30   Length: 0x136
     public override bool get_premultipliedAlpha()
     {
         bool cVar1;
@@ -187,40 +187,40 @@ public class UITexture
         ulong uVar3;
         ulong uVar4;
         uVar4 = (uint64)*(uint32 *)((int64)this + 0x22c);
-        if (*(uint32 *)((int64)this + 0x22c) != 0xffffffff) goto LAB_180c05fe0;
+        if (*(uint32 *)((int64)this + 0x22c) != 0xffffffff) goto LAB_18095f250;
         lVar2 = (**(code **)(*this + 0x2c8))(this,*(uint64 *)(*this + 0x2d0));
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (!cVar1) {
-        LAB_180c05fd8:
+        LAB_18095f248:
           uVar4 = 0;
         }
         else {
-          if (lVar2 == null) goto LAB_180c05ff1;
+          if (lVar2 == null) goto LAB_18095f261;
           uVar3 = Material.get_shader(lVar2,0);
           cVar1 = Object.op_Inequality(uVar3,0,0);
-          if (!cVar1) goto LAB_180c05fd8;
+          if (!cVar1) goto LAB_18095f248;
           lVar2 = Material.get_shader(lVar2,0);
           if (lVar2 == null) {
-        LAB_180c05ff1:
+        LAB_18095f261:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar2 = Object.get_name(lVar2,0);
-          if (lVar2 == null) goto LAB_180c05ff1;
+          if (lVar2 == null) goto LAB_18095f261;
           cVar1 = String.Contains(lVar2,"Premultiplied",0);
-          if (!cVar1) goto LAB_180c05fd8;
+          if (!cVar1) goto LAB_18095f248;
           uVar4 = 1;
         }
         *(int *)((int64)this + 0x22c) = (int)uVar4;
-        LAB_180c05fe0:
+        LAB_18095f250:
         return CONCAT71((int7)(uVar4 >> 8),(int)uVar4 == 1);
     }
 
-    // Token : 0x600098B
-    // RVA   : 0xC05A80   Offset: 0xC04E80   Length: 0xE
+    // Token : 0x6000972
+    // RVA   : 0x95ECE0   Offset: 0x95DAE0   Length: 0xE
     public override Vector4 get_border()
     {
-        uint64 * FUN_180c05a80(uint64 *this,int64 param_2)
+        uint64 * FUN_18095ece0(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x220);
@@ -229,11 +229,11 @@ public class UITexture
         return this;
     }
 
-    // Token : 0x600098C
-    // RVA   : 0xC06110   Offset: 0xC05510   Length: 0x86
+    // Token : 0x6000973
+    // RVA   : 0x95F380   Offset: 0x95E180   Length: 0x86
     public override void set_border(Vector4 value)
     {
-        void FUN_180c06110(int64 *this,float *value)
+        void FUN_18095f380(int64 *this,float *value)
         {
         float fVar1;
         float fVar2;
@@ -254,18 +254,18 @@ public class UITexture
           *(float *)((int64)this + 0x21c) = fVar4;
           *(float *)(this + 68) = fVar1;
           *(float *)((int64)this + 0x224) = fVar2;
-                          // WARNING: Could not recover jumptable at 0x000180c0618e. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018095f3fe. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x328))(fVar3,*(uint64 *)(*this + 0x330));
           return;
         }
     }
 
-    // Token : 0x600098D
-    // RVA   : 0xC06100   Offset: 0xC05500   Length: 0xE
+    // Token : 0x6000974
+    // RVA   : 0x95F370   Offset: 0x95E170   Length: 0xE
     public Rect get_uvRect()
     {
-        uint64 * FUN_180c06100(uint64 *this,int64 param_2)
+        uint64 * FUN_18095f370(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x200);
@@ -274,8 +274,8 @@ public class UITexture
         return this;
     }
 
-    // Token : 0x600098E
-    // RVA   : 0xC06600   Offset: 0xC05A00   Length: 0x62
+    // Token : 0x6000975
+    // RVA   : 0x95F870   Offset: 0x95E670   Length: 0x62
     public void set_uvRect(Rect value)
     {
         uint uVar1;
@@ -307,8 +307,8 @@ public class UITexture
         }
     }
 
-    // Token : 0x600098F
-    // RVA   : 0xC05A90   Offset: 0xC04E90   Length: 0x347
+    // Token : 0x6000976
+    // RVA   : 0x95ECF0   Offset: 0x95DAF0   Length: 0x347
     public override Vector4 get_drawingDimensions()
     {
         long lVar1;
@@ -324,13 +324,13 @@ public class UITexture
             plVar2 = (int64 *)param_2[65];
             if (plVar2 != (int64 *)0) {
               (**(code **)(*plVar2 + 0x198))(plVar2,*(uint64 *)(*plVar2 + 0x1a0));
-              goto LAB_180c05c73;
+              goto LAB_18095eed3;
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        LAB_180c05c73:
+        LAB_18095eed3:
         if ((char)param_2[69] == false) {
           (**(code **)(*param_2 + 0x378))(local_98,param_2,*(uint64 *)(*param_2 + 0x380));
         }
@@ -340,21 +340,21 @@ public class UITexture
         Mathf.Lerp();
         *this = 0;
         this[1] = 0;
-        FUN_1809dcfa0(this);
+        FUN_1807282e0(this);
         return this;
     }
 
-    // Token : 0x6000990
-    // RVA   : 0x3E7A40   Offset: 0x3E6E40   Length: 0x8
+    // Token : 0x6000977
+    // RVA   : 0x95F040   Offset: 0x95DE40   Length: 0x8
     public bool get_fixedAspect()
     {
-        uint8 FUN_1803e7a40(int64 this)
+        uint8 FUN_18095f040(int64 this)
         {
         return this.mFixedAspect;
     }
 
-    // Token : 0x6000991
-    // RVA   : 0xC061A0   Offset: 0xC055A0   Length: 0x6B
+    // Token : 0x6000978
+    // RVA   : 0x95F410   Offset: 0x95E210   Length: 0x6B
     public void set_fixedAspect(bool value)
     {
         ulong local_18;
@@ -363,7 +363,7 @@ public class UITexture
           *(char *)(this + 69) = value;
           local_18 = 0;
           uStack_10 = 0;
-          FUN_1809dcfa0(&local_18,0,0,0x3f800000,0x3f800000,0);
+          FUN_1807282e0(&local_18,0,0,0x3f800000,0x3f800000,0);
           *(uint32 *)((int64)this + 252) = (uint32)local_18;
           *(uint32 *)(this + 32) = local_18._4_4_;
           *(uint32 *)((int64)this + 0x104) = (uint32)uStack_10;
@@ -372,8 +372,8 @@ public class UITexture
         }
     }
 
-    // Token : 0x6000992
-    // RVA   : 0xC050D0   Offset: 0xC044D0   Length: 0x285
+    // Token : 0x6000979
+    // RVA   : 0x95E330   Offset: 0x95D130   Length: 0x285
     public override void MakePixelPerfect()
     {
         ulong uVar1;
@@ -394,10 +394,10 @@ public class UITexture
           local_30 = *(uint32 *)(puVar6 + 1);
           uVar1 = *puVar6;
           local_38 = uVar1;
-          uVar8 = FUN_18000d7c0(local_30);
-          uVar9 = FUN_18000d7c0(uVar1);
+          uVar8 = FUN_18007dbc0(local_30);
+          uVar9 = FUN_18007dbc0(uVar1);
           local_48._4_4_ = (uint32)((uint64)uVar1 >> 32);
-          uVar10 = FUN_18000d7c0(local_48._4_4_);
+          uVar10 = FUN_18007dbc0(local_48._4_4_);
           local_48 = CONCAT44(uVar10,uVar9);
           lVar5 = UIRect.get_cachedTransform(this,0);
           if (lVar5 != null) {
@@ -451,8 +451,8 @@ public class UITexture
         }
     }
 
-    // Token : 0x6000993
-    // RVA   : 0xC057D0   Offset: 0xC04BD0   Length: 0x1FF
+    // Token : 0x600097A
+    // RVA   : 0x95EA30   Offset: 0x95D830   Length: 0x1FF
     protected override void OnUpdate()
     {
         long lVar1;
@@ -475,7 +475,7 @@ public class UITexture
           if (cVar2) {
             if (plVar5 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             uVar3 = (**(code **)(*plVar5 + 0x178))(plVar5,*(uint64 *)(*plVar5 + 0x180));
             uVar4 = (**(code **)(*plVar5 + 0x198))(plVar5,*(uint64 *)(*plVar5 + 0x1a0));
@@ -495,7 +495,7 @@ public class UITexture
             else {
               fVar6 = 0.0;
             }
-            FUN_1809dcfa0(&local_28,fVar6);
+            FUN_1807282e0(&local_28,fVar6);
             local_18 = local_28;
             uStack_10 = uStack_20;
             UIWidget.set_drawRegion(this,&local_18,0);
@@ -503,8 +503,8 @@ public class UITexture
         }
     }
 
-    // Token : 0x6000994
-    // RVA   : 0xC05360   Offset: 0xC04760   Length: 0x467
+    // Token : 0x600097B
+    // RVA   : 0x95E5C0   Offset: 0x95D3C0   Length: 0x467
     public override void OnFill(List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         bool cVar1;
@@ -536,16 +536,16 @@ public class UITexture
         plVar6 = (int64 *)(**(code **)(*this + 0x2e8))(this,*(uint64 *)(*this + 0x2f0));
         cVar1 = Object.op_Equality(plVar6,0,0);
         if (!cVar1) {
-          fVar8 = (float)FUN_180d995d0(this + 63,0);
+          fVar8 = (float)FUN_180af4e60(this + 63,0);
           if (plVar6 != (int64 *)0) {
             iVar2 = (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
-            fVar9 = (float)FUN_18044df60(this + 63,0);
+            fVar9 = (float)FUN_180af4e80(this + 63,0);
             iVar3 = (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
             iVar4 = (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
-            fVar10 = (float)FUN_180d995b0(this + 63,0);
+            fVar10 = (float)FUN_180af4e40(this + 63,0);
             iVar5 = (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
-            fVar11 = (float)FUN_18044e2b0(this + 63,0);
-            FUN_1809dcfa0(&local_98,(float)iVar2 * fVar8,(float)iVar3 * fVar9,(float)iVar4 * fVar10,
+            fVar11 = (float)FUN_180af4db0(this + 63,0);
+            FUN_1807282e0(&local_98,(float)iVar2 * fVar8,(float)iVar3 * fVar9,(float)iVar4 * fVar10,
                           CONCAT44(uVar15,(float)iVar5 * fVar11),0);
             local_a8 = local_98;
             uStack_a0 = uStack_90;
@@ -554,10 +554,10 @@ public class UITexture
             ;
             auVar12 = *pauVar7;
             fVar8 = auVar12._4_4_;
-            fVar9 = (float)FUN_180d995d0(&local_a8,0);
+            fVar9 = (float)FUN_180af4e60(&local_a8,0);
             auVar12._0_4_ = auVar12._0_4_ + fVar9;
             Rect.set_xMin(&local_a8,auVar12._0_8_,0);
-            fVar9 = (float)FUN_18044df60(&local_a8,0);
+            fVar9 = (float)FUN_180af4e80(&local_a8,0);
             auVar13._4_4_ = fVar8;
             auVar13._0_4_ = fVar8;
             auVar13._8_4_ = fVar8;
@@ -571,19 +571,19 @@ public class UITexture
             Rect.set_yMax(&local_a8);
             (**(code **)(*plVar6 + 0x178))(plVar6,*(uint64 *)(*plVar6 + 0x180));
             (**(code **)(*plVar6 + 0x198))(plVar6,*(uint64 *)(*plVar6 + 0x1a0));
-            FUN_180d995d0(&local_98,0);
+            FUN_180af4e60(&local_98,0);
             Rect.set_xMin(&local_98);
             Rect.get_xMax(&local_98,0);
             Rect.set_xMax(&local_98);
-            FUN_18044df60(&local_98,0);
+            FUN_180af4e80(&local_98,0);
             Rect.set_yMin(&local_98);
             Rect.get_yMax(&local_98,0);
             Rect.set_yMax(&local_98);
-            FUN_180d995d0(&local_a8,0);
+            FUN_180af4e60(&local_a8,0);
             Rect.set_xMin(&local_a8);
             Rect.get_xMax(&local_a8,0);
             Rect.set_xMax(&local_a8);
-            FUN_18044df60(&local_a8,0);
+            FUN_180af4e80(&local_a8,0);
             Rect.set_yMin(&local_a8);
             Rect.get_yMax(&local_a8,0);
             Rect.set_yMax(&local_a8);
@@ -602,12 +602,12 @@ public class UITexture
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000995
-    // RVA   : 0xC059D0   Offset: 0xC04DD0   Length: 0xAE
+    // Token : 0x600097C
+    // RVA   : 0x95EC30   Offset: 0x95DA30   Length: 0xAE
     public void /*ctor*/()
     {
         uint uVar1;
@@ -619,7 +619,7 @@ public class UITexture
         byte[] local_18 = new byte[16];
         local_28 = 0;
         uStack_20 = 0;
-        FUN_1809dcfa0(&local_28,0,0,0x3f800000,0x3f800000,0);
+        FUN_1807282e0(&local_28,0,0,0x3f800000,0x3f800000,0);
         this.mRect = (uint32)local_28;
         *(uint32 *)(this + 0x1fc) = local_28._4_4_;
         *(uint32 *)(this + 0x200) = (uint32)uStack_20;

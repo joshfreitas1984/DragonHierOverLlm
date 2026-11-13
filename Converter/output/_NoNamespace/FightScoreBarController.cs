@@ -1,54 +1,54 @@
 // ============================================================
 // Type  : FightScoreBarController
-// Token : 0x2000002
+// Token : 0x200028D
 // ============================================================
 
 public class FightScoreBarController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000001
+    // Token: 0x400148E
     public GameObject greenBar;
 
-    // Token: 0x4000002
+    // Token: 0x400148F
     public GameObject icon;
 
-    // Token: 0x4000003
+    // Token: 0x4001490
     private float barWidth;
 
-    // Token: 0x4000004
+    // Token: 0x4001491
     private List<float> teamScore;
 
-    // Token: 0x4000005
+    // Token: 0x4001492
     private static FightScoreBarController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000001
-    // RVA   : 0xB2F2D0   Offset: 0xB2E6D0   Length: 0x36
+    // Token : 0x60014F8
+    // RVA   : 0x8F0C90   Offset: 0x8EFA90   Length: 0x36
     public static FightScoreBarController get_Instance()
     {
-        return **(uint64 **)(DAT_181dc6fd0 + 184);
+        return **(uint64 **)(DAT_181ea74b0 + 184);
     }
 
-    // Token : 0x6000002
-    // RVA   : 0xB2E9C0   Offset: 0xB2DDC0   Length: 0x11D
+    // Token : 0x60014F9
+    // RVA   : 0x8F0380   Offset: 0x8EF180   Length: 0x11D
     private void Awake()
     {
         bool cVar2;
         uint uVar3;
         ulong uVar4;
         long lVar5;
-        uVar4 = **(uint64 **)(DAT_181dc6fd0 + 184);
+        uVar4 = **(uint64 **)(DAT_181ea74b0 + 184);
         cVar2 = Object.op_Equality(uVar4,0,0);
         if (!cVar2) {
           uVar4 = Component.get_gameObject(this,0);
           Object.Destroy(uVar4,0);
           return;
         }
-        plVar1 = *(int64 **)(DAT_181dc6fd0 + 184);
+        plVar1 = *(int64 **)(DAT_181ea74b0 + 184);
         *plVar1 = this;
         il2cpp_internal(plVar1,this);
         if (this.greenBar != null) {
-          lVar5 = GameObject.GetComponent(this.greenBar,DAT_181d72bc8);
+          lVar5 = GameObject.GetComponent(this.greenBar,DAT_181e55c90);
           if (lVar5 != null) {
             uVar3 = RectTransform.get_sizeDelta(lVar5,0);
             this.barWidth = uVar3;
@@ -57,8 +57,8 @@ public class FightScoreBarController
         }
     }
 
-    // Token : 0x6000003
-    // RVA   : 0xB2EAE0   Offset: 0xB2DEE0   Length: 0x7ED
+    // Token : 0x60014FA
+    // RVA   : 0x8F04A0   Offset: 0x8EF2A0   Length: 0x7ED
     public void RefreshFightScoreBar(bool skipAnim)
     {
         float fVar1;
@@ -78,53 +78,53 @@ public class FightScoreBarController
         uint32 local_80;
         uint64 local_78;
         uint32 local_70;
-        lVar4 = il2cpp_internal(DAT_181d96ee8);
-        FUN_181330100(lVar4,DAT_181da0d10);
+        lVar4 = il2cpp_internal(DAT_181e76ea8);
+        FUN_1810f3480(lVar4,DAT_181e83230);
         if (lVar4 != null) {
-          FUN_18181e420(lVar4,0,DAT_181da0e10);
-          FUN_18181e420(lVar4,0,DAT_181da0e10);
+          FUN_18175dba0(lVar4,0,DAT_181e83330);
+          FUN_18175dba0(lVar4,0,DAT_181e83330);
           this.teamScore = lVar4;
           iVar9 = 0;
           do {
             iVar8 = 0;
             while( true ) {
-              lVar4 = FUN_18046bb80(0);
+              lVar4 = FUN_1802101c0(0);
               if ((((lVar4 == null) || (*(int64 *)(lVar4 + 112) == 0)) ||
-                  (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 112),iVar9,DAT_181d7f848)) == null) ||
+                  (lVar4 = FUN_1800024b0(*(int64 *)(lVar4 + 112),iVar9,DAT_181e61878)) == null) ||
                  (lVar4.Count == null)) throw; // [null/range check failed]
               if (*(int *)(lVar4.Count + 24) <= iVar8) break;
-              lVar4 = FUN_18046bb80(0);
+              lVar4 = FUN_1802101c0(0);
               if ((((lVar4 == null) || (*(int64 *)(lVar4 + 112) == 0)) ||
-                  (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 112),iVar9,DAT_181d7f848)) == null) ||
+                  (lVar4 = FUN_1800024b0(*(int64 *)(lVar4 + 112),iVar9,DAT_181e61878)) == null) ||
                  ((lVar4.Count == null ||
-                  (lVar4 = FUN_180002f80(lVar4.Count,iVar8,DAT_181d7fc38)) == null)))
+                  (lVar4 = FUN_1800024b0(lVar4.Count,iVar8,DAT_181e61c78)) == null)))
               throw; // [null/range check failed]
               cVar3 = BattleUnit.get_IsAlive(lVar4,0);
               if (cVar3) {
                 lVar4 = this.teamScore;
                 if (lVar4 == null) throw; // [null/range check failed]
-                fVar10 = (float)FUN_1800d6790(lVar4,iVar9,DAT_181da1090);
-                lVar5 = FUN_18046bb80(0);
+                fVar10 = (float)FUN_1800024e0(lVar4,iVar9,DAT_181e83530);
+                lVar5 = FUN_1802101c0(0);
                 if ((((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
-                    (lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d7f848)) == null)
+                    (lVar5 = FUN_1800024b0(*(int64 *)(lVar5 + 112),iVar9,DAT_181e61878)) == null)
                    || (((lVar5.Count == null ||
-                        (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d7fc38),
+                        (lVar5 = FUN_1800024b0(lVar5.Count,iVar8,DAT_181e61c78),
                         lVar5 == null)) || (*(int64 *)(lVar5 + 64) == 0)))) throw; // [null/range check failed]
-                fVar1 = *(float *)(*(int64 *)(lVar5 + 64) + 0x3d4);
-                lVar5 = FUN_18046bb80(0);
+                fVar1 = *(float *)(*(int64 *)(lVar5 + 64) + 0x388);
+                lVar5 = FUN_1802101c0(0);
                 if (((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
-                   ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d7f848), lVar5 == null ||
+                   ((lVar5 = FUN_1800024b0(*(int64 *)(lVar5 + 112),iVar9,DAT_181e61878), lVar5 == null ||
                     (((lVar5.Count == null ||
-                      (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d7fc38)) == null
+                      (lVar5 = FUN_1800024b0(lVar5.Count,iVar8,DAT_181e61c78)) == null
                       ) || (*(int64 *)(lVar5 + 64) == 0)))))) throw; // [null/range check failed]
                 fVar2 = *(float *)(*(int64 *)(lVar5 + 64) + 0x178);
-                lVar5 = FUN_18046bb80(0);
+                lVar5 = FUN_1802101c0(0);
                 if (((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
-                   ((lVar5 = FUN_180002f80(*(int64 *)(lVar5 + 112),iVar9,DAT_181d7f848), lVar5 == null ||
+                   ((lVar5 = FUN_1800024b0(*(int64 *)(lVar5 + 112),iVar9,DAT_181e61878), lVar5 == null ||
                     (((lVar5.Count == null ||
-                      (lVar5 = FUN_180002f80(lVar5.Count,iVar8,DAT_181d7fc38)) == null
+                      (lVar5 = FUN_1800024b0(lVar5.Count,iVar8,DAT_181e61c78)) == null
                       ) || (*(int64 *)(lVar5 + 64) == 0)))))) throw; // [null/range check failed]
-                FUN_18182a350(lVar4,iVar9,
+                FUN_181769c70(lVar4,iVar9,
                               (fVar2 * fVar1) / *(float *)(*(int64 *)(lVar5 + 64) + 0x180) + fVar10);
               }
               iVar8 = iVar8 + 1;
@@ -158,10 +158,10 @@ public class FightScoreBarController
               lVar4 = this.greenBar;
               if (!skipAnim) {
                 if (lVar4 != null) {
-                  uVar6 = GameObject.GetComponent(lVar4,DAT_181d72bc8);
+                  uVar6 = GameObject.GetComponent(lVar4,DAT_181e55c90);
                   fVar1 = this.barWidth;
                   if ((this.greenBar != null) &&
-                     (lVar4 = GameObject.GetComponent(this.greenBar,DAT_181d72bc8),
+                     (lVar4 = GameObject.GetComponent(this.greenBar,DAT_181e55c90),
                      lVar4 != null)) {
                     RectTransform.get_sizeDelta(lVar4,0);
                     DOTweenModuleUI.DOSizeDelta
@@ -183,7 +183,7 @@ public class FightScoreBarController
                             if (this.icon != null) {
                               uVar6 = GameObject.get_transform(this.icon,0);
                               uVar6 = ShortcutExtensions.DOScale(uVar6,0x3fc00000,0x3dcccccd,0);
-                              TweenSettingsExtensions.SetLoops(uVar6,2,1,DAT_181dc14d8);
+                              TweenSettingsExtensions.SetLoops(uVar6,2,1,DAT_181ea4f40);
                               return;
                             }
                           }
@@ -194,10 +194,10 @@ public class FightScoreBarController
                 }
               }
               else if (lVar4 != null) {
-                lVar4 = GameObject.GetComponent(lVar4,DAT_181d72bc8);
+                lVar4 = GameObject.GetComponent(lVar4,DAT_181e55c90);
                 fVar1 = this.barWidth;
                 if ((this.greenBar != null) &&
-                   (lVar5 = GameObject.GetComponent(this.greenBar,DAT_181d72bc8),
+                   (lVar5 = GameObject.GetComponent(this.greenBar,DAT_181e55c90),
                    lVar5 != null)) {
                   local_98 = RectTransform.get_sizeDelta(lVar5,0);
                   if (lVar4 != null) {
@@ -244,11 +244,11 @@ public class FightScoreBarController
         }
     }
 
-    // Token : 0x6000004
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60014FB
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

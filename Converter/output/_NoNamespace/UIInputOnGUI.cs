@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : UIInputOnGUI
-// Token : 0x20000FB
+// Token : 0x20000FA
 // ============================================================
 
 public class UIInputOnGUI
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000628
+    // Token: 0x4000608
     private UIInput mInput;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000801
-    // RVA   : 0x118B880   Offset: 0x118AC80   Length: 0x48
+    // Token : 0x60007E8
+    // RVA   : 0xF88D40   Offset: 0xF87B40   Length: 0x48
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d969f8);
+        uVar1 = Component.GetComponent(this,DAT_181e79db8);
         this.mInput = uVar1;
     }
 
-    // Token : 0x6000802
-    // RVA   : 0x118B8D0   Offset: 0x118ACD0   Length: 0x5B
+    // Token : 0x60007E9
+    // RVA   : 0xF88D90   Offset: 0xF87B90   Length: 0x5B
     private void OnGUI()
     {
         ulong uVar2;
@@ -35,7 +35,7 @@ public class UIInputOnGUI
           plVar1 = this.mInput;
           uVar2 = Event.get_current(0);
           if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x00018118b919. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180f88dd9. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*plVar1 + 0x198))(plVar1,uVar2,*(uint64 *)(*plVar1 + 0x1a0));
             return;
@@ -43,11 +43,11 @@ public class UIInputOnGUI
         }
     }
 
-    // Token : 0x6000803
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60007EA
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

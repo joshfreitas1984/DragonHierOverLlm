@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass7_0
-// Token : 0x200045E
+// Token : 0x200046B
 // ============================================================
 
 public class <>c__DisplayClass7_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002112
+    // Token: 0x40021A5
     public LayoutElement target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026DA
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6002784
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60026DB
-    // RVA   : 0x93A4D0   Offset: 0x9398D0   Length: 0x5E
+    // Token : 0x6002785
+    // RVA   : 0x67FFD0   Offset: 0x67EDD0   Length: 0x5E
     internal Vector2 <DOFlexibleSize>b__0()
     {
         uint uVar2;
@@ -34,8 +34,8 @@ public class <>c__DisplayClass7_0
         }
     }
 
-    // Token : 0x60026DC
-    // RVA   : 0x93A530   Offset: 0x939930   Length: 0x57
+    // Token : 0x6002786
+    // RVA   : 0x680030   Offset: 0x67EE30   Length: 0x57
     internal void <DOFlexibleSize>b__1(Vector2 x)
     {
         uint local_res8;
@@ -47,7 +47,7 @@ public class <>c__DisplayClass7_0
           plVar1 = this.target;
           if (plVar1 != (int64 *)0) {
             uStackX_c = (uint32)((uint64)x >> 32);
-                          // WARNING: Could not recover jumptable at 0x00018093a57b. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018068007b. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*plVar1 + 0x3d8))(plVar1,uStackX_c,*(uint64 *)(*plVar1 + 0x3e0));
             return;

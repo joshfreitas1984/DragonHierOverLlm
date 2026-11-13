@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : FightResultContributionHeroController
-// Token : 0x2000285
+// Token : 0x200028C
 // ============================================================
 
 public class FightResultContributionHeroController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400144F
+    // Token: 0x400148D
     public HeroData targetHero;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600148E
-    // RVA   : 0xB2E780   Offset: 0xB2DB80   Length: 0x234
+    // Token : 0x60014F6
+    // RVA   : 0x8F0140   Offset: 0x8EEF40   Length: 0x234
     public void Init(string extraAddText)
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         long lVar1;
         ulong uVar2;
         long lVar3;
@@ -29,17 +29,17 @@ public class FightResultContributionHeroController
               uVar4 = *(uint64 *)(*pStatics + 144);
               lVar1 = GlobalData.AddChild(uVar2,uVar4,0);
               if (lVar1 != null) {
-                lVar3 = GameObject.GetComponent(lVar1,DAT_181d71b50);
+                lVar3 = GameObject.GetComponent(lVar1,DAT_181e54c18);
                 if (lVar3 != null) {
                   *(uint64 *)(lVar3 + 32) = this.targetHero;
-                  lVar1 = GameObject.GetComponent(lVar1,DAT_181d71b50);
+                  lVar1 = GameObject.GetComponent(lVar1,DAT_181e54c18);
                   if (lVar1 != null) {
                     *(uint32 *)(lVar1 + 24) = 0;
                     lVar1 = Component.get_transform(this,0);
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"Text",0);
                       if (lVar1 != null) {
-                        uVar2 = Component.GetComponent(lVar1,DAT_181d96178);
+                        uVar2 = Component.GetComponent(lVar1,DAT_181e79538);
                         if (this.targetHero != null) {
                           local_res20[0] = (int)this.targetHero.lastFightContribution;
                           uVar4 = Int32.ToString(local_res20,0);
@@ -57,11 +57,11 @@ public class FightResultContributionHeroController
         }
     }
 
-    // Token : 0x600148F
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60014F7
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

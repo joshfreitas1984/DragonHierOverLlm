@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : RenderQueue
-// Token : 0x2000105
+// Token : 0x2000104
 // ============================================================
 
 public class RenderQueue
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400069E
+    // Token: 0x400067E
     public int value__;
 
-    // Token: 0x400069F
+    // Token: 0x400067F
     public const RenderQueue Automatic;
 
-    // Token: 0x40006A0
+    // Token: 0x4000680
     public const RenderQueue StartAt;
 
-    // Token: 0x40006A1
+    // Token: 0x4000681
     public const RenderQueue Explicit;
 
 }

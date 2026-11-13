@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : SpinWithMouse
-// Token : 0x2000024
+// Token : 0x2000023
 // ============================================================
 
 public class SpinWithMouse
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000AD
+    // Token: 0x400008D
     public Transform target;
 
-    // Token: 0x40000AE
+    // Token: 0x400008E
     public float speed;
 
-    // Token: 0x40000AF
+    // Token: 0x400008F
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000091
-    // RVA   : 0xA7FC50   Offset: 0xA7F050   Length: 0x24
+    // Token : 0x6000078
+    // RVA   : 0x7C3BB0   Offset: 0x7C29B0   Length: 0x24
     private void Start()
     {
         ulong uVar1;
@@ -25,8 +25,8 @@ public class SpinWithMouse
         this.mTrans = uVar1;
     }
 
-    // Token : 0x6000092
-    // RVA   : 0xC5DCC0   Offset: 0xC5D0C0   Length: 0x1AA
+    // Token : 0x6000079
+    // RVA   : 0xA06EE0   Offset: 0xA05CE0   Length: 0x1AA
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -39,7 +39,7 @@ public class SpinWithMouse
         ulong local_38;
         ulong uStack_30;
         byte[] local_28 = new byte[32];
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181daf690 + 184) + 224);
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181e8fad0 + 184) + 224);
         if (lVar7 != null) {
           *(uint32 *)(lVar7 + 112) = 0;
           uVar1 = this.target;
@@ -84,14 +84,14 @@ public class SpinWithMouse
         }
     }
 
-    // Token : 0x6000093
-    // RVA   : 0xC5DE70   Offset: 0xC5D270   Length: 0xE
+    // Token : 0x600007A
+    // RVA   : 0xA07090   Offset: 0xA05E90   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180c5de70(int64 this)
+        void FUN_180a07090(int64 this)
         {
         this.speed = 0x3f800000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : TankProjectile
-// Token : 0x200012A
+// Token : 0x2000129
 // ============================================================
 
 public class TankProjectile
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000759
+    // Token: 0x4000739
     public float Speed;
 
-    // Token: 0x400075A
+    // Token: 0x400073A
     public float Lifetime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009C4
-    // RVA   : 0xA9D420   Offset: 0xA9C820   Length: 0x41
+    // Token : 0x60009AB
+    // RVA   : 0x80C670   Offset: 0x80B470   Length: 0x41
     private void Start()
     {
         MonoBehaviour.Invoke(this,"DestroySelf",this.Lifetime,0);
     }
 
-    // Token : 0x60009C5
-    // RVA   : 0xA9D3C0   Offset: 0xA9C7C0   Length: 0x5F
+    // Token : 0x60009AC
+    // RVA   : 0x80C610   Offset: 0x80B410   Length: 0x5F
     private void DestroySelf()
     {
         ulong uVar1;
@@ -29,8 +29,8 @@ public class TankProjectile
         Object.Destroy(uVar1,0);
     }
 
-    // Token : 0x60009C6
-    // RVA   : 0xA9D470   Offset: 0xA9C870   Length: 0x156
+    // Token : 0x60009AD
+    // RVA   : 0x80C6C0   Offset: 0x80B4C0   Length: 0x156
     private void Update()
     {
         float fVar1;
@@ -77,11 +77,11 @@ public class TankProjectile
         }
     }
 
-    // Token : 0x60009C7
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60009AE
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

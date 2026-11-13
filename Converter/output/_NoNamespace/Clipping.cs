@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : Clipping
-// Token : 0x200009B
+// Token : 0x200009A
 // ============================================================
 
 public class Clipping
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40003E2
+    // Token: 0x40003C2
     public int value__;
 
-    // Token: 0x40003E3
+    // Token: 0x40003C3
     public const Clipping None;
 
-    // Token: 0x40003E4
+    // Token: 0x40003C4
     public const Clipping TextureMask;
 
-    // Token: 0x40003E5
+    // Token: 0x40003C5
     public const Clipping SoftClip;
 
-    // Token: 0x40003E6
+    // Token: 0x40003C6
     public const Clipping ConstrainButDontClip;
 
 }

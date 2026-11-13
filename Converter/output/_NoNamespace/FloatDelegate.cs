@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : FloatDelegate
-// Token : 0x20000EA
+// Token : 0x20000E9
 // ============================================================
 
 public class FloatDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600076E
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000755
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class FloatDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600076F
-    // RVA   : 0x917120   Offset: 0x916520   Length: 0x2A6
+    // Token : 0x6000756
+    // RVA   : 0x604270   Offset: 0x603070   Length: 0x2A6
     public virtual void Invoke(GameObject go, float delta)
     {
         long lVar1;
@@ -58,15 +58,15 @@ public class FloatDelegate
           if (*(short *)(lVar2 + 72) == -1) {
             il2cpp_internal(lVar2);
           }
-          cVar5 = FUN_1800d6050(lVar2);
+          cVar5 = FUN_1801dfd30(lVar2);
           if (!cVar5) {
             if (*(char *)(lVar2 + 74) == '\x02') {
               if ((((plVar4 == (int64 *)0) || (*(short *)(lVar2 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar4 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_18091737c;
+              goto LAB_1806044cc;
               cVar5 = il2cpp_internal(lVar2);
               if (!cVar5) {
-                cVar5 = FUN_1800d65c0(lVar2);
+                cVar5 = FUN_1801e02a0(lVar2);
                 if (!cVar5) {
                   (**(code **)(*plVar4 + 0x138 + (uint64)*(uint16 *)(lVar2 + 72) * 16))
                             (plVar4,go,delta,
@@ -75,11 +75,11 @@ public class FloatDelegate
                 }
                 else {
                   uVar7 = il2cpp_class_get_namespace(lVar2);
-                  FUN_180133420(*(uint16 *)(lVar2 + 72),uVar7,plVar4,go,delta);
+                  FUN_18005fcd0(*(uint16 *)(lVar2 + 72),uVar7,plVar4,go,delta);
                 }
               }
               else {
-                cVar5 = FUN_1800d65c0(lVar2);
+                cVar5 = FUN_1801e02a0(lVar2);
                 if (!cVar5) {
                   puVar6 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
@@ -89,16 +89,16 @@ public class FloatDelegate
                   (*(code *)*puVar6)(plVar4,go,delta,puVar6);
                 }
                 else {
-                  FUN_180133090(lVar2,plVar4,go,delta);
+                  FUN_18005f5c0(lVar2,plVar4,go,delta);
                 }
               }
             }
             else {
               if ((*(short *)(lVar2 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1809171c8;
+              goto LAB_180604318;
               cVar5 = il2cpp_internal(lVar2);
               if (!cVar5) {
-                cVar5 = FUN_1800d65c0(lVar2);
+                cVar5 = FUN_1801e02a0(lVar2);
                 if (!cVar5) {
                   (**(code **)(*go + 0x138 + (uint64)*(uint16 *)(lVar2 + 72) * 16))
                             (go,delta,
@@ -107,11 +107,11 @@ public class FloatDelegate
                 }
                 else {
                   uVar7 = il2cpp_class_get_namespace(lVar2);
-                  FUN_1801332e0(*(uint16 *)(lVar2 + 72),uVar7,go,delta);
+                  FUN_18005f980(*(uint16 *)(lVar2 + 72),uVar7,go,delta);
                 }
               }
               else {
-                cVar5 = FUN_1800d65c0(lVar2);
+                cVar5 = FUN_1801e02a0(lVar2);
                 if (!cVar5) {
                   puVar6 = (uint64 *)
                            il2cpp_internal(*(uint64 *)
@@ -121,17 +121,17 @@ public class FloatDelegate
                   (*(code *)*puVar6)(go,delta,puVar6);
                 }
                 else {
-                  FUN_180132e60(lVar2,go,delta);
+                  FUN_18005f230(lVar2,go,delta);
                 }
               }
             }
           }
           else if (*(char *)(lVar2 + 74) == '\x02') {
-        LAB_1809171c8:
+        LAB_180604318:
             (*pcVar3)(go,delta,lVar2);
           }
           else {
-        LAB_18091737c:
+        LAB_1806044cc:
             (*pcVar3)(plVar4,go,delta,lVar2);
           }
           uVar10 = uVar10 + 1;
@@ -141,8 +141,8 @@ public class FloatDelegate
         } while( true );
     }
 
-    // Token : 0x6000770
-    // RVA   : 0x917000   Offset: 0x916400   Length: 0x83
+    // Token : 0x6000757
+    // RVA   : 0x604150   Offset: 0x602F50   Length: 0x83
     public virtual IAsyncResult BeginInvoke(GameObject go, float delta, AsyncCallback callback, object object)
     {
         void FloatDelegate.BeginInvoke
@@ -156,12 +156,12 @@ public class FloatDelegate
         local_res18[0] = delta;
         local_18 = 0;
         local_28 = go;
-        local_20 = il2cpp_value_box(DAT_181da22f0,local_res18);
+        local_20 = il2cpp_value_box(DAT_181e82730,local_res18);
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x6000771
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x6000758
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

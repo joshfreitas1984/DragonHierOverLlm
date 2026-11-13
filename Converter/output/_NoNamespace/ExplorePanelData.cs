@@ -1,75 +1,75 @@
 // ============================================================
 // Type  : ExplorePanelData
-// Token : 0x200026E
+// Token : 0x2000275
 // ============================================================
 
 public class ExplorePanelData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001380
+    // Token: 0x40013BE
     public ExploreType exploreType;
 
-    // Token: 0x4001381
+    // Token: 0x40013BF
     public int exploreMapType;
 
-    // Token: 0x4001382
+    // Token: 0x40013C0
     public int mapWidth;
 
-    // Token: 0x4001383
+    // Token: 0x40013C1
     public int mapHeight;
 
-    // Token: 0x4001384
+    // Token: 0x40013C2
     public List<ExploreTileData> exploreTiles;
 
-    // Token: 0x4001385
+    // Token: 0x40013C3
     public ExploreTileData[] exploreTileMap;
 
-    // Token: 0x4001386
+    // Token: 0x40013C4
     public int maxPower;
 
-    // Token: 0x4001387
+    // Token: 0x40013C5
     public ExploreTileData startTile;
 
-    // Token: 0x4001388
+    // Token: 0x40013C6
     public string finishFuc;
 
-    // Token: 0x4001389
+    // Token: 0x40013C7
     public string finishParam;
 
-    // Token: 0x400138A
+    // Token: 0x40013C8
     public int keyNum;
 
-    // Token: 0x400138B
+    // Token: 0x40013C9
     public bool showFinal;
 
-    // Token: 0x400138C
+    // Token: 0x40013CA
     public int[] startDistance;
 
-    // Token: 0x400138D
+    // Token: 0x40013CB
     public int[] endDistance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60013FF
-    // RVA   : 0xB27690   Offset: 0xB26A90   Length: 0x7D
+    // Token : 0x6001467
+    // RVA   : 0x8E9040   Offset: 0x8E7E40   Length: 0x7D
     public void /*ctor*/()
     {
         ulong uVar1;
         this.exploreMapType = 0xffffffff;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d92970);
-        FUN_181330100(uVar1,DAT_181d86fb8);
+        uVar1 = il2cpp_internal(DAT_181e72938);
+        FUN_1810f3480(uVar1,DAT_181e692f8);
         this.exploreTiles = uVar1;
     }
 
-    // Token : 0x6001400
-    // RVA   : 0xB271F0   Offset: 0xB265F0   Length: 0xA
+    // Token : 0x6001468
+    // RVA   : 0x8E8BA0   Offset: 0x8E79A0   Length: 0xA
     public int GetTileID(int c, int r)
     {
         return c + r * this.mapWidth;
     }
 
-    // Token : 0x6001401
-    // RVA   : 0xB265D0   Offset: 0xB259D0   Length: 0x865
+    // Token : 0x6001469
+    // RVA   : 0x8E7F80   Offset: 0x8E6D80   Length: 0x865
     public void GenerateWildGround(int roadNum, float difficulty)
     {
         uint uVar2;
@@ -85,9 +85,9 @@ public class ExplorePanelData
         long lVar12;
         float fVar13;
         int local_res8;
-        lVar7 = il2cpp_internal(DAT_181d92970);
-        FUN_181330100(lVar7,DAT_181d86fb8);
-        lVar8 = il2cpp_internal(DAT_181dc5fe0);
+        lVar7 = il2cpp_internal(DAT_181e72938);
+        FUN_1810f3480(lVar7,DAT_181e692f8);
+        lVar8 = il2cpp_internal(DAT_181ea64c0);
         *(uint32 *)(lVar8 + 68) = 0xffffffff;
         ZhSegment.Initialize(lVar8,0);
         uVar11 = 1;
@@ -98,15 +98,15 @@ public class ExplorePanelData
             if (*lVar8._items == null) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             if ((uint32)(lVar8._items)[4] <= uVar11) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             if (lVar7 == null) throw; // [null/range check failed]
-            FUN_18181e6b0(lVar7,lVar8[uVar11],DAT_181d87038);
+            FUN_18175de30(lVar7,lVar8[uVar11],DAT_181e69378);
             uVar11 = uVar11 + 1;
           } while ((int)uVar11 < this.mapHeight + -1);
         }
@@ -118,16 +118,16 @@ public class ExplorePanelData
             if (*lVar8._items <= uVar11) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             lVar9 = *(int64 *)(lVar8._items + 4);
             if ((int)lVar9 == null) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             if (lVar7 == null) throw; // [null/range check failed]
-            FUN_18181e6b0(lVar7,*(uint64 *)(lVar8 + 32 + (int)uVar11 * lVar9 * 8),DAT_181d87038);
+            FUN_18175de30(lVar7,*(uint64 *)(lVar8 + 32 + (int)uVar11 * lVar9 * 8),DAT_181e69378);
             uVar11 = uVar11 + 1;
           } while ((int)uVar11 < this.mapWidth + -1);
         }
@@ -136,7 +136,7 @@ public class ExplorePanelData
         if (0 < roadNum) {
           do {
             if (lVar7 == null) throw; // [null/range check failed]
-            uVar2 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
+            uVar2 = FUN_180af1860(0,*(uint32 *)(lVar7 + 24),0);
             if (*(uint32 *)(lVar7 + 24) <= uVar2) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -146,7 +146,7 @@ public class ExplorePanelData
               this.startTile = lVar8;
               il2cpp_internal(plVar1,lVar8);
             }
-            FUN_1817ef410(lVar7,lVar8);
+            FUN_181665e90(lVar7,lVar8);
             if (lVar8 == null) throw; // [null/range check failed]
             if (*(int *)(lVar8 + 36) == 0) {
               while( true ) {
@@ -161,17 +161,17 @@ public class ExplorePanelData
                   iVar5 = *(int *)(lVar8 + 36) + 1;
                 }
                 else {
-                  lVar12 = il2cpp_internal(DAT_181d93ce8);
-                  FUN_181330100(lVar12,DAT_181d8f0b0);
+                  lVar12 = il2cpp_internal(DAT_181e73cb8);
+                  FUN_1810f3480(lVar12,DAT_181e71270);
                   iVar5 = *(int *)(lVar8 + 32);
                   if (0 < iVar5) {
                     if (lVar12 == null) throw; // [null/range check failed]
-                    FUN_18182a6c0(lVar12,0xffffffff,DAT_181d8f230);
+                    FUN_181769fe0(lVar12,0xffffffff,DAT_181e713f0);
                     iVar5 = *(int *)(lVar8 + 32);
                   }
                   if (iVar5 < this.mapHeight + -1) {
                     if (lVar12 == null) throw; // [null/range check failed]
-                    FUN_18182a6c0(lVar12,1,DAT_181d8f230);
+                    FUN_181769fe0(lVar12,1,DAT_181e713f0);
                     lVar9 = this.exploreTileMap;
                     iVar5 = *(int *)(lVar8 + 36);
                   }
@@ -180,11 +180,11 @@ public class ExplorePanelData
                     iVar5 = *(int *)(lVar8 + 36);
                     if (lVar12 == null) throw; // [null/range check failed]
                   }
-                  uVar3 = FUN_180d96040(0,*(uint32 *)(lVar12 + 24),0);
-                  FUN_1800d6760(lVar12,uVar3,DAT_181d8fa30);
+                  uVar3 = FUN_180af1860(0,*(uint32 *)(lVar12 + 24),0);
+                  FUN_180002480(lVar12,uVar3,DAT_181e71bf0);
                   if (lVar9 == null) throw; // [null/range check failed]
                 }
-                lVar8 = FUN_180127f90(lVar9,(int64)iVar5);
+                lVar8 = FUN_1800540b0(lVar9,(int64)iVar5);
               }
             }
             else if (*(int *)(lVar8 + 32) == 0) {
@@ -196,20 +196,20 @@ public class ExplorePanelData
                 fVar13 = (float)Random.get_value(0);
                 if (fVar13 < 0.75) {
                   if (this.exploreTileMap == null) throw; // [null/range check failed]
-                  lVar8 = FUN_180127f90(this.exploreTileMap,(int64)*(int *)(lVar8 + 36));
+                  lVar8 = FUN_1800540b0(this.exploreTileMap,(int64)*(int *)(lVar8 + 36));
                 }
                 else {
-                  lVar9 = il2cpp_internal(DAT_181d93ce8);
-                  FUN_181330100(lVar9,DAT_181d8f0b0);
+                  lVar9 = il2cpp_internal(DAT_181e73cb8);
+                  FUN_1810f3480(lVar9,DAT_181e71270);
                   iVar5 = *(int *)(lVar8 + 36);
                   if (0 < iVar5) {
                     if (lVar9 == null) throw; // [null/range check failed]
-                    FUN_18182a6c0(lVar9,0xffffffff,DAT_181d8f230);
+                    FUN_181769fe0(lVar9,0xffffffff,DAT_181e713f0);
                     iVar5 = *(int *)(lVar8 + 36);
                   }
                   if (iVar5 < this.mapWidth + -1) {
                     if (lVar9 == null) throw; // [null/range check failed]
-                    FUN_18182a6c0(lVar9,1,DAT_181d8f230);
+                    FUN_181769fe0(lVar9,1,DAT_181e713f0);
                     lVar12 = this.exploreTileMap;
                     iVar5 = *(int *)(lVar8 + 36);
                   }
@@ -217,29 +217,29 @@ public class ExplorePanelData
                     lVar12 = this.exploreTileMap;
                     if (lVar9 == null) throw; // [null/range check failed]
                   }
-                  uVar3 = FUN_180d96040(0,*(uint32 *)(lVar9 + 24),0);
-                  iVar4 = FUN_1800d6760(lVar9,uVar3,DAT_181d8fa30);
+                  uVar3 = FUN_180af1860(0,*(uint32 *)(lVar9 + 24),0);
+                  iVar4 = FUN_180002480(lVar9,uVar3,DAT_181e71bf0);
                   if (lVar12 == null) throw; // [null/range check failed]
-                  lVar8 = FUN_180127f90(lVar12,(int64)(iVar4 + iVar5));
+                  lVar8 = FUN_1800540b0(lVar12,(int64)(iVar4 + iVar5));
                 }
               }
             }
             local_res8 = local_res8 + 1;
           } while (local_res8 < roadNum);
         }
-        lVar7 = il2cpp_internal(DAT_181d929f0);
-        FUN_181330100(lVar7,DAT_181d874b8);
+        lVar7 = il2cpp_internal(DAT_181e729b8);
+        FUN_1810f3480(lVar7,DAT_181e697f8);
         if (lVar7 != null) {
-          FUN_18182a6c0(lVar7,1,DAT_181d87538);
-          FUN_18182a6c0(lVar7,1,DAT_181d87538);
-          FUN_18182a6c0(lVar7,1,DAT_181d87538);
-          FUN_18182a6c0(lVar7,1,DAT_181d87538);
-          FUN_18182a6c0(lVar7,2,DAT_181d87538);
-          FUN_18182a6c0(lVar7,2,DAT_181d87538);
-          FUN_18182a6c0(lVar7,2,DAT_181d87538);
-          FUN_18182a6c0(lVar7,3,DAT_181d87538);
-          FUN_18182a6c0(lVar7,3,DAT_181d87538);
-          FUN_18182a6c0(lVar7,4,DAT_181d87538);
+          FUN_181769fe0(lVar7,1,DAT_181e69878);
+          FUN_181769fe0(lVar7,1,DAT_181e69878);
+          FUN_181769fe0(lVar7,1,DAT_181e69878);
+          FUN_181769fe0(lVar7,1,DAT_181e69878);
+          FUN_181769fe0(lVar7,2,DAT_181e69878);
+          FUN_181769fe0(lVar7,2,DAT_181e69878);
+          FUN_181769fe0(lVar7,2,DAT_181e69878);
+          FUN_181769fe0(lVar7,3,DAT_181e69878);
+          FUN_181769fe0(lVar7,3,DAT_181e69878);
+          FUN_181769fe0(lVar7,4,DAT_181e69878);
           lVar8 = this.exploreTiles;
           if (lVar8 != null) {
             lVar12 = 32;
@@ -247,7 +247,7 @@ public class ExplorePanelData
             uVar2 = uVar11;
             do {
               if (lVar8.Count <= (int)uVar2) {
-                if (lVar8 != null) goto LAB_180b26cc7;
+                if (lVar8 != null) goto LAB_1808e8677;
                 break;
               }
               if (lVar8 == null) break;
@@ -258,9 +258,9 @@ public class ExplorePanelData
               if (lVar8 == null) break;
               if (*(int *)(lVar8 + 72) == 1) {
                 if (this.exploreTiles == null) break;
-                lVar8 = FUN_180002f80(this.exploreTiles,uVar2,DAT_181d872b8);
-                uVar3 = FUN_180d96040(0,*(uint32 *)(lVar7 + 24),0);
-                uVar3 = FUN_1800d6760(lVar7,uVar3,DAT_181d87638);
+                lVar8 = FUN_1800024b0(this.exploreTiles,uVar2,DAT_181e695f8);
+                uVar3 = FUN_180af1860(0,*(uint32 *)(lVar7 + 24),0);
+                uVar3 = FUN_180002480(lVar7,uVar3,DAT_181e69978);
                 if (lVar8 == null) break;
                 *(uint32 *)(lVar8 + 72) = uVar3;
               }
@@ -279,8 +279,8 @@ public class ExplorePanelData
           if (lVar7 == null) break;
           if ((*(int *)(lVar7 + 72) != 0) && (fVar13 = (float)Random.get_value(), fVar13 < 0.05)) {
             if (this.exploreTiles == null) break;
-            lVar7 = FUN_180002f80(this.exploreTiles,uVar11,DAT_181d872b8);
-            uVar3 = FUN_180d96040(0,3);
+            lVar7 = FUN_1800024b0(this.exploreTiles,uVar11,DAT_181e695f8);
+            uVar3 = FUN_180af1860(0,3);
             fVar13 = (float)Random.Range(0x41200000,0x41a00000,0);
             uVar6 = Mathf.RoundToInt(difficulty * 10.0 + fVar13,0);
             lVar8 = new ZhSegment(0);
@@ -293,7 +293,7 @@ public class ExplorePanelData
           uVar11 = uVar11 + 1;
           lVar12 = lVar12 + 8;
           if (lVar8 == null) break;
-        LAB_180b26cc7:
+        LAB_1808e8677:
           if (lVar8.Count <= (int)uVar11) {
             return;
           }
@@ -301,8 +301,8 @@ public class ExplorePanelData
         }
     }
 
-    // Token : 0x6001402
-    // RVA   : 0xB25A60   Offset: 0xB24E60   Length: 0xB61
+    // Token : 0x600146A
+    // RVA   : 0x8E7410   Offset: 0x8E6210   Length: 0xB61
     public void GenerateMazeGround(int obstacleCount, int gap, float difficulty)
     {
         void ExplorePanelData.GenerateMazeGround
@@ -351,22 +351,22 @@ public class ExplorePanelData
         uint32 uStack_78;
         uint32 uStack_74;
         int64 local_70;
-        lVar9 = il2cpp_internal(DAT_181d92970);
-        FUN_181330100(lVar9,DAT_181d86fb8);
+        lVar9 = il2cpp_internal(DAT_181e72938);
+        FUN_1810f3480(lVar9,DAT_181e692f8);
         local_e0 = lVar9;
-        lVar10 = il2cpp_internal(DAT_181d92970);
-        FUN_181330100(lVar10,DAT_181d86fb8);
+        lVar10 = il2cpp_internal(DAT_181e72938);
+        FUN_1810f3480(lVar10,DAT_181e692f8);
         local_d8 = lVar10;
-        lVar11 = il2cpp_internal(DAT_181d92970);
-        FUN_181330100(lVar11,DAT_181d86fb8);
+        lVar11 = il2cpp_internal(DAT_181e72938);
+        FUN_1810f3480(lVar11,DAT_181e692f8);
         local_b0 = (int64)this.mapWidth;
         local_a8 = (int64)this.mapHeight;
         local_d0 = lVar11;
-        uVar12 = FUN_1800d6020(DAT_181da9af8,&local_b0);
+        uVar12 = FUN_1801dfd00(DAT_181e89c38,&local_b0);
         this.startDistance = uVar12;
         local_a0 = (int64)this.mapWidth;
         local_98 = (int64)this.mapHeight;
-        uVar12 = FUN_1800d6020(DAT_181da9af8,&local_a0);
+        uVar12 = FUN_1801dfd00(DAT_181e89c38,&local_a0);
         this.endDistance = uVar12;
         lVar13 = this.exploreTiles;
         if (lVar13 != null) {
@@ -375,48 +375,48 @@ public class ExplorePanelData
           }
           this.startTile = *(uint64 *)(lVar13._items + 32);
           if (this.exploreTiles != null) {
-            FUN_1817eba30(&local_c8,this.exploreTiles,DAT_181d87138);
+            FUN_1816629a0(&local_c8,this.exploreTiles,DAT_181e69478);
             local_100 = (uint32)local_c8;
             uStack_fc = local_c8._4_4_;
             uStack_f8 = (uint32)uStack_c0;
             uStack_f4 = uStack_c0._4_4_;
             local_f0 = local_b8;
-            while (cVar1 = FUN_180c75510(&local_100,DAT_181d8c300), lVar13 = local_f0, cVar1) {
+            while (cVar1 = FUN_1807b3f30(&local_100,DAT_181e6ddc0), lVar13 = local_f0, cVar1) {
               if (local_f0 == 0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if ((-1 < *(int *)(local_f0 + 56)) && (this.startTile != local_f0)) {
                 if (lVar9 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                FUN_18181e6b0(lVar9,local_f0,DAT_181d87038);
+                FUN_18175de30(lVar9,local_f0,DAT_181e69378);
                 if (lVar11 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                FUN_18181e6b0(lVar11,lVar13);
+                FUN_18175de30(lVar11,lVar13);
               }
             }
-            ZhSegment.Initialize(&local_100,DAT_181d8c280);
+            ZhSegment.Initialize(&local_100,DAT_181e6dd40);
             local_138 = obstacleCount;
             while (uVar17 = 0, 0 < local_138) {
-              if (lVar9 == null) goto LAB_180b265b6;
+              if (lVar9 == null) goto LAB_1808e7f66;
               if (*(int *)(lVar9 + 24) < 1) break;
-              uVar2 = FUN_180d96040(0,*(int *)(lVar9 + 24),0);
+              uVar2 = FUN_180af1860(0,*(int *)(lVar9 + 24),0);
               if (*(uint32 *)(lVar9 + 24) <= uVar2) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               local_e8 = lVar9[uVar2];
               if ((local_e8 == 0) || (*(uint32 *)(local_e8 + 48) = 1, lVar11 == null)) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
-              FUN_1817ef410(lVar11,local_e8,DAT_181d871b8);
+              FUN_181665e90(lVar11,local_e8,DAT_181e694f8);
               local_c8 = (int64)this.mapWidth;
               uStack_c0 = (int64)this.mapHeight;
-              lVar13 = FUN_1800d6020(DAT_181da9878,&local_c8);
+              lVar13 = FUN_1801dfd00(DAT_181e899b8,&local_c8);
               if (*(int *)(lVar11 + 24) == 0) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -425,17 +425,17 @@ public class ExplorePanelData
               bVar19 = true;
               iVar16 = this.mapWidth;
               if (iVar16 < 1) {
-        LAB_180b25eeb:
+        LAB_1808e789b:
                 iVar18 = 0;
                 if (0 < iVar16) {
                   do {
                     iVar16 = 0;
                     if (0 < this.mapHeight) {
                       do {
-                        if (this.startDistance == null) goto LAB_180b265b6;
-                        FUN_18014ad60(this.startDistance,(int64)iVar18,(int64)iVar16,0);
-                        if (this.endDistance == null) goto LAB_180b265b6;
-                        FUN_18014ad60(this.endDistance,(int64)iVar18,(int64)iVar16,0);
+                        if (this.startDistance == null) goto LAB_1808e7f66;
+                        FUN_18008f790(this.startDistance,(int64)iVar18,(int64)iVar16,0);
+                        if (this.endDistance == null) goto LAB_1808e7f66;
+                        FUN_18008f790(this.endDistance,(int64)iVar18,(int64)iVar16,0);
                         iVar16 = iVar16 + 1;
                       } while (iVar16 < this.mapHeight);
                     }
@@ -444,35 +444,35 @@ public class ExplorePanelData
                 }
                 uVar12 = this.endDistance;
                 lVar13 = this.exploreTiles;
-                if (lVar13 == null) goto LAB_180b265b6;
-                uVar15 = FUN_180002f80(lVar13,lVar13.Count + -1,DAT_181d872b8);
+                if (lVar13 == null) goto LAB_1808e7f66;
+                uVar15 = FUN_1800024b0(lVar13,lVar13.Count + -1,DAT_181e695f8);
                 ExplorePanelData.FindConnectedGridDistance(this,uVar12,1,uVar15,0);
                 lVar13 = this.endDistance;
-                if (lVar13 == null) goto LAB_180b265b6;
+                if (lVar13 == null) goto LAB_1808e7f66;
                 iVar18 = Array.GetUpperBound(lVar13,0,0);
                 iVar3 = Array.GetUpperBound(lVar13,1);
                 for (iVar16 = Array.GetLowerBound(lVar13,0,0); iVar16 <= iVar18; iVar16 = iVar16 + 1) {
                   iVar4 = Array.GetLowerBound(lVar13,1);
                   if (iVar4 <= iVar3) {
                     do {
-                      iVar5 = FUN_18014ad10(lVar13,(int64)iVar16);
-                      if (this.endDistance == null) goto LAB_180b265b6;
-                      iVar6 = FUN_18014ad10(this.endDistance,0);
-                      if (iVar6 < iVar5) goto LAB_180b2612b;
+                      iVar5 = FUN_18008f740(lVar13,(int64)iVar16);
+                      if (this.endDistance == null) goto LAB_1808e7f66;
+                      iVar6 = FUN_18008f740(this.endDistance,0);
+                      if (iVar6 < iVar5) goto LAB_1808e7adb;
                       iVar4 = iVar4 + 1;
                     } while (iVar4 <= iVar3);
                   }
                 }
                 uVar12 = this.startDistance;
                 lVar13 = this.exploreTiles;
-                if (lVar13 == null) goto LAB_180b265b6;
+                if (lVar13 == null) goto LAB_1808e7f66;
                 if (lVar13.Count == null) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 ExplorePanelData.FindConnectedGridDistance
                           (this,uVar12,1,*(uint64 *)(lVar13._items + 32),0);
                 lVar13 = this.startDistance;
-                if (lVar13 == null) goto LAB_180b265b6;
+                if (lVar13 == null) goto LAB_1808e7f66;
                 iVar3 = Array.GetUpperBound(lVar13,0,0);
                 iVar4 = Array.GetUpperBound(lVar13,1);
                 iVar18 = Array.GetLowerBound(lVar13,0,0);
@@ -482,11 +482,11 @@ public class ExplorePanelData
                   iVar16 = Array.GetLowerBound(lVar13,1);
                   if (iVar16 <= iVar4) {
                     do {
-                      iVar5 = FUN_18014ad10(lVar13,(int64)iVar18,(int64)iVar16);
-                      if (this.startDistance == null) goto LAB_180b265b6;
-                      iVar6 = FUN_18014ad10(this.startDistance,
+                      iVar5 = FUN_18008f740(lVar13,(int64)iVar18,(int64)iVar16);
+                      if (this.startDistance == null) goto LAB_1808e7f66;
+                      iVar6 = FUN_18008f740(this.startDistance,
                                             (int64)(this.mapWidth + -1));
-                      if (iVar6 < iVar5) goto LAB_180b2612b;
+                      if (iVar6 < iVar5) goto LAB_1808e7adb;
                       iVar16 = iVar16 + 1;
                     } while (iVar16 <= iVar4);
                   }
@@ -497,18 +497,18 @@ public class ExplorePanelData
                 ExplorePanelData.GetRangeGrids
                           (this,*(uint32 *)(local_e8 + 32),*(uint32 *)(local_e8 + 36),0,
                            gap,1,lVar10,0);
-                if (lVar10 == null) goto LAB_180b265b6;
+                if (lVar10 == null) goto LAB_1808e7f66;
                 if (0 < *(int *)(lVar10 + 24)) {
-                  FUN_1817eba30(&local_80,lVar10);
+                  FUN_1816629a0(&local_80,lVar10);
                   local_100 = local_80;
                   uStack_fc = uStack_7c;
                   uStack_f8 = uStack_78;
                   uStack_f4 = uStack_74;
                   local_f0 = local_70;
-                  while (cVar1 = FUN_180c75510(&local_100,DAT_181d8c300), cVar1) {
-                    FUN_1817ef410(lVar9,local_f0);
+                  while (cVar1 = FUN_1807b3f30(&local_100,DAT_181e6ddc0), cVar1) {
+                    FUN_181665e90(lVar9,local_f0);
                   }
-                  ZhSegment.Initialize(&local_100,DAT_181d8c280);
+                  ZhSegment.Initialize(&local_100,DAT_181e6dd40);
                 }
                 local_138 = local_138 + -1;
               }
@@ -517,13 +517,13 @@ public class ExplorePanelData
                   iVar16 = 0;
                   if (0 < this.mapHeight) {
                     do {
-                      if (this.exploreTileMap == null) goto LAB_180b265b6;
-                      lVar14 = FUN_180127f90(this.exploreTileMap,(int64)(int)uVar17,
+                      if (this.exploreTileMap == null) goto LAB_1808e7f66;
+                      lVar14 = FUN_1800540b0(this.exploreTileMap,(int64)(int)uVar17,
                                              (int64)iVar16);
-                      if (lVar14 == null) goto LAB_180b265b6;
+                      if (lVar14 == null) goto LAB_1808e7f66;
                       if (*(int *)(lVar14 + 48) == 0) {
-                        if (lVar13 == null) goto LAB_180b265b6;
-                        cVar1 = FUN_180132d10(lVar13,(int64)(int)uVar17,(int64)iVar16);
+                        if (lVar13 == null) goto LAB_1808e7f66;
+                        cVar1 = FUN_18005f030(lVar13,(int64)(int)uVar17,(int64)iVar16);
                         if (!cVar1) {
                           bVar19 = false;
                           break;
@@ -535,12 +535,12 @@ public class ExplorePanelData
                   uVar17 = uVar17 + 1;
                   iVar16 = this.mapWidth;
                 } while ((int)uVar17 < iVar16);
-                if (bVar19) goto LAB_180b25eeb;
-        LAB_180b2612b:
+                if (bVar19) goto LAB_1808e789b;
+        LAB_1808e7adb:
                 lVar13 = local_e8;
                 *(uint32 *)(local_e8 + 48) = 0;
-                FUN_18181e6b0(lVar11,local_e8,DAT_181d87038);
-                FUN_1817ef410(lVar9,lVar13);
+                FUN_18175de30(lVar11,local_e8,DAT_181e69378);
+                FUN_181665e90(lVar9,lVar13);
               }
             }
             lVar13 = this.exploreTiles;
@@ -550,7 +550,7 @@ public class ExplorePanelData
               do {
                 uVar2 = 0;
                 if (lVar13.Count <= (int)uVar17) {
-                  if (lVar13 != null) goto LAB_180b264b0;
+                  if (lVar13 != null) goto LAB_1808e7e60;
                   break;
                 }
                 if (lVar13 == null) break;
@@ -561,10 +561,10 @@ public class ExplorePanelData
                 if (lVar13 == null) break;
                 if (*(int *)(lVar13 + 48) == 1) {
                   if (this.exploreTiles == null) break;
-                  lVar13 = FUN_180002f80(this.exploreTiles,uVar17,DAT_181d872b8);
+                  lVar13 = FUN_1800024b0(this.exploreTiles,uVar17,DAT_181e695f8);
                   iVar16 = 0;
                   do {
-                    if (lVar13 == null) goto LAB_180b265b6;
+                    if (lVar13 == null) goto LAB_1808e7f66;
                     lVar10 = ExplorePanelData.GetGridDataByDir
                                        (this,*(uint32 *)(lVar13 + 32),
                                         *(uint32 *)(lVar13 + 36),iVar16,0);
@@ -575,12 +575,12 @@ public class ExplorePanelData
                   } while (iVar16 < 4);
                   if ((1 < (int)uVar2) && (fVar20 = (float)Random.get_value(0), fVar20 < 0.05)) {
                     if ((this.exploreTiles == null) ||
-                       (lVar13 = FUN_180002f80(this.exploreTiles,uVar17,DAT_181d872b8),
+                       (lVar13 = FUN_1800024b0(this.exploreTiles,uVar17,DAT_181e695f8),
                        lVar13 == null)) break;
                     *(uint32 *)(lVar13 + 48) = 0;
                     if (this.exploreTiles == null) break;
-                    lVar13 = FUN_180002f80(this.exploreTiles,uVar17,DAT_181d872b8);
-                    uVar7 = FUN_180d96040(0,3);
+                    lVar13 = FUN_1800024b0(this.exploreTiles,uVar17,DAT_181e695f8);
+                    uVar7 = FUN_180af1860(0,3);
                     fVar20 = (float)Random.Range(0x41200000,0x41a00000,0);
                     uVar8 = Mathf.RoundToInt(difficulty * 10.0 + fVar20,0);
                     var lVar10 = new ZhSegment(0);
@@ -595,43 +595,43 @@ public class ExplorePanelData
                 lVar13 = this.exploreTiles;
               } while (lVar13 != null);
             }
-        LAB_180b265b6:
+        LAB_1808e7f66:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
                           // WARNING: Subroutine does not return
-        FUN_1800d6620();
-        LAB_180b264b0:
+        FUN_1801e0300();
+        LAB_1808e7e60:
         if (lVar13.Count <= (int)uVar2) {
           return;
         }
-        if (lVar13 == null) goto LAB_180b265b6;
+        if (lVar13 == null) goto LAB_1808e7f66;
         if (lVar13.Count <= uVar2) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar13 = *(int64 *)(lVar9 + lVar13._items);
-        if (lVar13 == null) goto LAB_180b265b6;
+        if (lVar13 == null) goto LAB_1808e7f66;
         if (*(int *)(lVar13 + 48) == 1) {
-          if (this.exploreTiles == null) goto LAB_180b265b6;
-          uVar12 = FUN_180002f80(this.exploreTiles,uVar2,DAT_181d872b8);
+          if (this.exploreTiles == null) goto LAB_1808e7f66;
+          uVar12 = FUN_1800024b0(this.exploreTiles,uVar2,DAT_181e695f8);
           cVar1 = ExplorePanelData.TileCanBecomeDoor(this,uVar12,0);
           if ((cVar1) && (fVar20 = (float)Random.get_value(), fVar20 < 0.4)) {
             if ((this.exploreTiles == null) ||
-               (lVar13 = FUN_180002f80(this.exploreTiles,uVar2,DAT_181d872b8)) == null)
-            goto LAB_180b265b6;
+               (lVar13 = FUN_1800024b0(this.exploreTiles,uVar2,DAT_181e695f8)) == null)
+            goto LAB_1808e7f66;
             *(uint32 *)(lVar13 + 48) = 2;
           }
         }
         uVar2 = uVar2 + 1;
         lVar9 = lVar9 + 8;
         lVar13 = this.exploreTiles;
-        if (lVar13 == null) goto LAB_180b265b6;
-        goto LAB_180b264b0;
+        if (lVar13 == null) goto LAB_1808e7f66;
+        goto LAB_1808e7e60;
     }
 
-    // Token : 0x6001403
-    // RVA   : 0xB27600   Offset: 0xB26A00   Length: 0x86
+    // Token : 0x600146B
+    // RVA   : 0x8E8FB0   Offset: 0x8E7DB0   Length: 0x86
     public bool TileCanBecomeObstacle(ExploreTileData targetTile)
     {
         long lVar1;
@@ -642,7 +642,7 @@ public class ExplorePanelData
         do {
           if (targetTile == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar1 = ExplorePanelData.GetGridDataByDir
                             (this,*(uint32 *)(targetTile + 32),*(uint32 *)(targetTile + 36),iVar2
@@ -655,8 +655,8 @@ public class ExplorePanelData
         return 1 < iVar3;
     }
 
-    // Token : 0x6001404
-    // RVA   : 0xB27200   Offset: 0xB26600   Length: 0x3FA
+    // Token : 0x600146C
+    // RVA   : 0x8E8BB0   Offset: 0x8E79B0   Length: 0x3FA
     public bool TileCanBecomeDoor(ExploreTileData targetTile)
     {
         int iVar1;
@@ -669,30 +669,30 @@ public class ExplorePanelData
         int iVar8;
         ulong uVar9;
         int iVar10;
-        lVar2 = il2cpp_internal(DAT_181d917f0);
-        FUN_181330100(lVar2,DAT_181d804b8);
+        lVar2 = il2cpp_internal(DAT_181e71638);
+        FUN_1810f3480(lVar2,DAT_181e624f8);
         if (lVar2 == null) {
-        LAB_180b275f5:
+        LAB_1808e8fa5:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        FUN_1817e9ef0(lVar2,0,DAT_181d80538);
-        FUN_1817e9ef0(lVar2,0,DAT_181d80538);
-        FUN_1817e9ef0(lVar2,0,DAT_181d80538);
-        FUN_1817e9ef0(lVar2,0,DAT_181d80538);
+        FUN_181660e60(lVar2,0,DAT_181e625f8);
+        FUN_181660e60(lVar2,0,DAT_181e625f8);
+        FUN_181660e60(lVar2,0,DAT_181e625f8);
+        FUN_181660e60(lVar2,0,DAT_181e625f8);
         uVar6 = 0;
         uVar4 = uVar6;
         do {
-          if (targetTile == null) goto LAB_180b275f5;
+          if (targetTile == null) goto LAB_1808e8fa5;
           lVar3 = ExplorePanelData.GetGridDataByDir
                             (this,*(uint32 *)(targetTile + 32),*(uint32 *)(targetTile + 36),uVar4
                              ,0);
           if (lVar3 != null) {
             uVar7 = *(uint32 *)(lVar3 + 48);
             uVar5 = (uint64)uVar7;
-            if (uVar7 == 2) goto LAB_180b273a9;
+            if (uVar7 == 2) goto LAB_1808e8d59;
             if (uVar7 == 0) {
-              FUN_1817f4900(lVar2,uVar4,1,DAT_181d80738);
+              FUN_18166b1c0(lVar2,uVar4,1,DAT_181e627f8);
             }
           }
           uVar7 = (int)uVar4 + 1;
@@ -714,8 +714,8 @@ public class ExplorePanelData
             uVar4 = uVar6;
             if ((((-1 < iVar8) && (iVar8 < this.mapHeight)) && (-1 < iVar1)) &&
                (iVar1 < this.mapWidth)) {
-              if (this.exploreTileMap == null) goto LAB_180b275f5;
-              uVar4 = FUN_180127f90(this.exploreTileMap,(int64)iVar1,(int64)iVar8);
+              if (this.exploreTileMap == null) goto LAB_1808e8fa5;
+              uVar4 = FUN_1800540b0(this.exploreTileMap,(int64)iVar1,(int64)iVar8);
               iVar10 = *(int *)(targetTile + 32);
               iVar1 = *(int *)(targetTile + 36);
             }
@@ -723,12 +723,12 @@ public class ExplorePanelData
             uVar5 = uVar6;
             if (((-1 < iVar10) && (iVar10 < this.mapHeight)) &&
                ((-1 < iVar1 && (iVar1 < this.mapWidth)))) {
-              if (this.exploreTileMap == null) goto LAB_180b275f5;
-              uVar5 = FUN_180127f90(this.exploreTileMap,(int64)iVar1,(int64)iVar10);
+              if (this.exploreTileMap == null) goto LAB_1808e8fa5;
+              uVar5 = FUN_1800540b0(this.exploreTileMap,(int64)iVar1,(int64)iVar10);
             }
             bVar11 = 0;
             if ((uVar4 == 0) || (uVar9 = uVar6, *(int *)(uVar4 + 48) != 0)) {
-        LAB_180b27450:
+        LAB_1808e8e00:
               bVar11 = 1;
             }
             else {
@@ -736,14 +736,14 @@ public class ExplorePanelData
                 lVar2 = ExplorePanelData.GetGridDataByDir
                                   (this,*(uint32 *)(uVar4 + 32),*(uint32 *)(uVar4 + 36),
                                    uVar9,0);
-                if (lVar2 == null) goto LAB_180b275f5;
-                if (*(int *)(lVar2 + 48) != 0) goto LAB_180b27450;
+                if (lVar2 == null) goto LAB_1808e8fa5;
+                if (*(int *)(lVar2 + 48) != 0) goto LAB_1808e8e00;
                 uVar7 = (int)uVar9 + 1;
                 uVar9 = (uint64)uVar7;
               } while ((int)uVar7 < 2);
             }
             if ((uVar5 == 0) || (*(int *)(uVar5 + 48) != 0)) {
-        LAB_180b2749a:
+        LAB_1808e8e4a:
               return (uint64)bVar11;
             }
             while( true ) {
@@ -751,14 +751,14 @@ public class ExplorePanelData
                                 (this,*(uint32 *)(uVar5 + 32),*(uint32 *)(uVar5 + 36),uVar6
                                  ,0);
               if (lVar2 == null) break;
-              if (*(int *)(lVar2 + 48) != 0) goto LAB_180b2749a;
+              if (*(int *)(lVar2 + 48) != 0) goto LAB_1808e8e4a;
               uVar7 = (int)uVar6 + 1;
               uVar6 = (uint64)uVar7;
               if (1 < (int)uVar7) {
                 return false;
               }
             }
-            goto LAB_180b275f5;
+            goto LAB_1808e8fa5;
           }
         }
         if (*(uint32 *)(lVar2 + 24) < 3) {
@@ -777,21 +777,21 @@ public class ExplorePanelData
             uVar4 = uVar6;
             if ((((-1 < iVar1) && (iVar1 < this.mapHeight)) && (-1 < iVar8)) &&
                (iVar8 < this.mapWidth)) {
-              if (this.exploreTileMap == null) goto LAB_180b275f5;
-              uVar4 = FUN_180127f90(this.exploreTileMap,(int64)iVar8,(int64)iVar1);
+              if (this.exploreTileMap == null) goto LAB_1808e8fa5;
+              uVar4 = FUN_1800540b0(this.exploreTileMap,(int64)iVar8,(int64)iVar1);
               iVar10 = *(int *)(targetTile + 36);
               iVar1 = *(int *)(targetTile + 32);
             }
             iVar10 = iVar10 + 1;
             if (((-1 < iVar1) && (iVar1 < this.mapHeight)) &&
                ((-1 < iVar10 && (iVar10 < this.mapWidth)))) {
-              if (this.exploreTileMap == null) goto LAB_180b275f5;
-              uVar6 = FUN_180127f90(this.exploreTileMap,(int64)iVar10,(int64)iVar1);
+              if (this.exploreTileMap == null) goto LAB_1808e8fa5;
+              uVar6 = FUN_1800540b0(this.exploreTileMap,(int64)iVar10,(int64)iVar1);
             }
             bVar11 = 0;
             iVar8 = 2;
             if ((uVar4 == 0) || (*(int *)(uVar4 + 48) != 0)) {
-        LAB_180b2759c:
+        LAB_1808e8f4c:
               bVar11 = 1;
             }
             else {
@@ -800,33 +800,33 @@ public class ExplorePanelData
                 lVar2 = ExplorePanelData.GetGridDataByDir
                                   (this,*(uint32 *)(uVar4 + 32),*(uint32 *)(uVar4 + 36),
                                    iVar10,0);
-                if (lVar2 == null) goto LAB_180b275f5;
-                if (*(int *)(lVar2 + 48) != 0) goto LAB_180b2759c;
+                if (lVar2 == null) goto LAB_1808e8fa5;
+                if (*(int *)(lVar2 + 48) != 0) goto LAB_1808e8f4c;
                 iVar10 = iVar10 + 1;
               } while (iVar10 < 4);
             }
             if ((uVar6 == 0) || (*(int *)(uVar6 + 48) != 0)) {
-        LAB_180b275e6:
+        LAB_1808e8f96:
               return (uint64)bVar11;
             }
             while (lVar2 = ExplorePanelData.GetGridDataByDir
                                      (this,*(uint32 *)(uVar6 + 32),*(uint32 *)(uVar6 + 36),
                                       iVar8,0), lVar2 != null) {
-              if (*(int *)(lVar2 + 48) != 0) goto LAB_180b275e6;
+              if (*(int *)(lVar2 + 48) != 0) goto LAB_1808e8f96;
               iVar8 = iVar8 + 1;
               if (3 < iVar8) {
                 return false;
               }
             }
-            goto LAB_180b275f5;
+            goto LAB_1808e8fa5;
           }
         }
-        LAB_180b273a9:
+        LAB_1808e8d59:
         return uVar5 & 0xffffffffffffff00;
     }
 
-    // Token : 0x6001405
-    // RVA   : 0xB26F50   Offset: 0xB26350   Length: 0x29C
+    // Token : 0x600146D
+    // RVA   : 0x8E8900   Offset: 0x8E7700   Length: 0x29C
     public void GetRangeGrids(int centerRow, int centerColumn, int innerRange, int outerRange, bool containCenter, List<ExploreTileData> grids)
     {
         void ExplorePanelData.GetRangeGrids
@@ -843,7 +843,7 @@ public class ExplorePanelData
         int iVar8;
         int iVar9;
         if ((grids != null) && (-1 < outerRange)) {
-          FUN_1812fa020(grids,DAT_181d870b8);
+          FUN_18115d8f0(grids,DAT_181e693f8);
           iVar9 = 0;
           do {
             iVar2 = Mathf.Clamp((iVar9 - outerRange) + centerColumn,0,this.mapWidth + -1,0);
@@ -861,13 +861,13 @@ public class ExplorePanelData
                      ((iVar7 = Mathf.Abs(iVar2), innerRange <= iVar7 &&
                       (iVar7 = Mathf.Abs(iVar2), iVar7 <= outerRange)))) {
                     if (this.exploreTileMap == null) {
-        LAB_180b271e7:
+        LAB_1808e8b97:
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
-                    uVar6 = FUN_180127f90(this.exploreTileMap,(int64)(iVar2 + centerColumn),
+                    uVar6 = FUN_1800540b0(this.exploreTileMap,(int64)(iVar2 + centerColumn),
                                           (int64)centerRow);
-                    FUN_18181e6b0(grids,uVar6,DAT_181d87038);
+                    FUN_18175de30(grids,uVar6,DAT_181e69378);
                   }
                 }
                 else {
@@ -879,10 +879,10 @@ public class ExplorePanelData
                       iVar4 = Mathf.Abs(iVar2);
                       iVar5 = Mathf.Abs(iVar8);
                       if (iVar5 + iVar4 <= outerRange) {
-                        if (this.exploreTileMap == null) goto LAB_180b271e7;
-                        uVar6 = FUN_180127f90(this.exploreTileMap,(int64)(iVar2 + centerColumn),
+                        if (this.exploreTileMap == null) goto LAB_1808e8b97;
+                        uVar6 = FUN_1800540b0(this.exploreTileMap,(int64)(iVar2 + centerColumn),
                                               (int64)iVar7);
-                        FUN_18181e6b0(grids,uVar6,DAT_181d87038);
+                        FUN_18175de30(grids,uVar6,DAT_181e69378);
                       }
                     }
                   }
@@ -894,10 +894,10 @@ public class ExplorePanelData
                       iVar4 = Mathf.Abs(iVar2);
                       iVar5 = Mathf.Abs(iVar9);
                       if (iVar5 + iVar4 <= outerRange) {
-                        if (this.exploreTileMap == null) goto LAB_180b271e7;
-                        uVar6 = FUN_180127f90(this.exploreTileMap,(int64)(iVar2 + centerColumn),
+                        if (this.exploreTileMap == null) goto LAB_1808e8b97;
+                        uVar6 = FUN_1800540b0(this.exploreTileMap,(int64)(iVar2 + centerColumn),
                                               (int64)iVar7);
-                        FUN_18181e6b0(grids,uVar6,DAT_181d87038);
+                        FUN_18175de30(grids,uVar6,DAT_181e69378);
                       }
                     }
                   }
@@ -910,8 +910,8 @@ public class ExplorePanelData
         }
     }
 
-    // Token : 0x6001406
-    // RVA   : 0xB25960   Offset: 0xB24D60   Length: 0xFE
+    // Token : 0x600146E
+    // RVA   : 0x8E7310   Offset: 0x8E6110   Length: 0xFE
     private void FindConnectedGrid(bool[] vis, ExploreTileData targetGrid)
     {
         bool cVar1;
@@ -920,18 +920,18 @@ public class ExplorePanelData
         int iVar4;
         if ((targetGrid == null) || (vis == null)) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (**(uint32 **)(vis + 16) <= *(uint32 *)(targetGrid + 36)) {
           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar3,0);
+          FUN_1801e02d0(uVar3,0);
         }
         lVar2 = *(int64 *)(*(uint32 **)(vis + 16) + 4);
         if ((uint32)lVar2 <= *(uint32 *)(targetGrid + 32)) {
           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar3,0);
+          FUN_1801e02d0(uVar3,0);
         }
         *(uint8 *)
          ((int64)(int)*(uint32 *)(targetGrid + 32) + 32 +
@@ -943,7 +943,7 @@ public class ExplorePanelData
                               (this,*(uint32 *)(targetGrid + 32),*(uint32 *)(targetGrid + 36),
                                iVar4,0);
             if (((lVar2 != null) && (*(int *)(lVar2 + 48) == 0)) &&
-               (cVar1 = FUN_180132d10(vis,(int64)*(int *)(lVar2 + 36),
+               (cVar1 = FUN_18005f030(vis,(int64)*(int *)(lVar2 + 36),
                                       (int64)*(int *)(lVar2 + 32)), !cVar1)) {
               ExplorePanelData.FindConnectedGrid(this,vis,lVar2,0);
             }
@@ -952,8 +952,8 @@ public class ExplorePanelData
         }
     }
 
-    // Token : 0x6001407
-    // RVA   : 0xB25830   Offset: 0xB24C30   Length: 0x123
+    // Token : 0x600146F
+    // RVA   : 0x8E71E0   Offset: 0x8E5FE0   Length: 0x123
     private void FindConnectedGridDistance(int[] distance, int targetDistance, ExploreTileData targetGrid)
     {
         void ExplorePanelData.FindConnectedGridDistance
@@ -965,18 +965,18 @@ public class ExplorePanelData
         int iVar4;
         if ((targetGrid == null) || (distance == null)) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (**(uint32 **)(distance + 16) <= *(uint32 *)(targetGrid + 36)) {
           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar3,0);
+          FUN_1801e02d0(uVar3,0);
         }
         lVar2 = *(int64 *)(*(uint32 **)(distance + 16) + 4);
         if ((uint32)lVar2 <= *(uint32 *)(targetGrid + 32)) {
           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar3,0);
+          FUN_1801e02d0(uVar3,0);
         }
         iVar4 = 0;
         *(int *)(distance + 32 +
@@ -987,10 +987,10 @@ public class ExplorePanelData
                             (this,*(uint32 *)(targetGrid + 32),*(uint32 *)(targetGrid + 36),iVar4
                              ,0);
           if ((lVar2 != null) && (*(int *)(lVar2 + 48) == 0)) {
-            iVar1 = FUN_18014ad10(distance,(int64)*(int *)(lVar2 + 36),
+            iVar1 = FUN_18008f740(distance,(int64)*(int *)(lVar2 + 36),
                                   (int64)*(int *)(lVar2 + 32));
             if (iVar1 != 0) {
-              iVar1 = FUN_18014ad10(distance,(int64)*(int *)(lVar2 + 36),
+              iVar1 = FUN_18008f740(distance,(int64)*(int *)(lVar2 + 36),
                                     (int64)*(int *)(lVar2 + 32));
               if (iVar1 > targetDistance + 1)
               {
@@ -1005,8 +1005,8 @@ public class ExplorePanelData
         } while( true );
     }
 
-    // Token : 0x6001408
-    // RVA   : 0xB26E40   Offset: 0xB26240   Length: 0xCE
+    // Token : 0x6001470
+    // RVA   : 0x8E87F0   Offset: 0x8E75F0   Length: 0xCE
     public ExploreTileData GetGridDataByDir(int row, int column, int dir)
     {
         ulong uVar1;
@@ -1025,7 +1025,7 @@ public class ExplorePanelData
             return 0;
           }
           if (this.exploreTileMap != null) {
-            uVar1 = FUN_180127f90(this.exploreTileMap,(int64)column,(int64)row);
+            uVar1 = FUN_1800540b0(this.exploreTileMap,(int64)column,(int64)row);
             return uVar1;
           }
         }
@@ -1044,7 +1044,7 @@ public class ExplorePanelData
             return 0;
           }
           if (this.exploreTileMap != null) {
-            uVar1 = FUN_180127f90(this.exploreTileMap,(int64)column,(int64)row);
+            uVar1 = FUN_1800540b0(this.exploreTileMap,(int64)column,(int64)row);
             return uVar1;
           }
         }
@@ -1063,31 +1063,31 @@ public class ExplorePanelData
             return 0;
           }
           if (this.exploreTileMap != null) {
-            uVar1 = FUN_180127f90(this.exploreTileMap,(int64)column,(int64)row);
+            uVar1 = FUN_1800540b0(this.exploreTileMap,(int64)column,(int64)row);
             return uVar1;
           }
         }
     }
 
-    // Token : 0x6001409
-    // RVA   : 0xB26F10   Offset: 0xB26310   Length: 0x3E
+    // Token : 0x6001471
+    // RVA   : 0x8E88C0   Offset: 0x8E76C0   Length: 0x3E
     public ExploreTileData GetGridData(int row, int column)
     {
         ulong uVar1;
         if ((((-1 < row) && (row < this.mapHeight)) && (-1 < column)) &&
            (column < this.mapWidth)) {
           if (this.exploreTileMap != null) {
-            uVar1 = FUN_180127f90(this.exploreTileMap,(int64)column,(int64)row);
+            uVar1 = FUN_1800540b0(this.exploreTileMap,(int64)column,(int64)row);
             return uVar1;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         return 0;
     }
 
-    // Token : 0x600140A
-    // RVA   : 0xB256B0   Offset: 0xB24AB0   Length: 0x175
+    // Token : 0x6001472
+    // RVA   : 0x8E7060   Offset: 0x8E5E60   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -1098,13 +1098,13 @@ public class ExplorePanelData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -1116,11 +1116,11 @@ public class ExplorePanelData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 

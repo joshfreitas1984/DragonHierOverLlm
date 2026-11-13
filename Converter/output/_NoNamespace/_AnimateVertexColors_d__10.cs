@@ -1,49 +1,49 @@
 // ============================================================
 // Type  : <AnimateVertexColors>d__10
-// Token : 0x200041B
+// Token : 0x2000428
 // ============================================================
 
 public class <AnimateVertexColors>d__10
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002036
+    // Token: 0x40020C8
     private int <>1__state;
 
-    // Token: 0x4002037
+    // Token: 0x40020C9
     private object <>2__current;
 
-    // Token: 0x4002038
+    // Token: 0x40020CA
     public VertexZoom <>4__this;
 
-    // Token: 0x4002039
+    // Token: 0x40020CB
     private <>c__DisplayClass10_0 <>8__1;
 
-    // Token: 0x400203A
+    // Token: 0x40020CC
     private TMP_TextInfo <textInfo>5__2;
 
-    // Token: 0x400203B
+    // Token: 0x40020CD
     private TMP_MeshInfo[] <cachedMeshInfoVertexData>5__3;
 
-    // Token: 0x400203C
+    // Token: 0x40020CE
     private List<int> <scaleSortingOrder>5__4;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002559
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6002603
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x600255A
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x6002604
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x600255B
-    // RVA   : 0x183FD30   Offset: 0x183F130   Length: 0x131B
+    // Token : 0x6002605
+    // RVA   : 0x1781190   Offset: 0x177FF90   Length: 0x131B
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -149,14 +149,14 @@ public class <AnimateVertexColors>d__10
           uVar8 = TMP_TextInfo.CopyMeshInfoVertexData(this.<textInfo>5__2,0);
           this.<cachedMeshInfoVertexData>5__3 = uVar8;
           lVar14 = this.<>8__1;
-          uVar8 = il2cpp_internal(DAT_181d96ee8);
-          FUN_181330100(uVar8,DAT_181da0d10);
+          uVar8 = il2cpp_internal(DAT_181e76ea8);
+          FUN_1810f3480(uVar8,DAT_181e83230);
           if (lVar14 == null) throw; // [null/range check failed]
           puVar10 = (uint64 *)(lVar14 + 16);
           *puVar10 = uVar8;
           il2cpp_internal(puVar10,uVar8);
-          uVar8 = il2cpp_internal(DAT_181d93ce8);
-          FUN_181330100(uVar8,DAT_181d8f0b0);
+          uVar8 = il2cpp_internal(DAT_181e73cb8);
+          FUN_1810f3480(uVar8,DAT_181e71270);
           this.<scaleSortingOrder>5__4 = uVar8;
           *(uint8 *)(lVar15 + 48) = 1;
         }
@@ -184,16 +184,16 @@ public class <AnimateVertexColors>d__10
           }
           if ((this.<>8__1 != 0) &&
              (lVar14 = *(int64 *)(this.<>8__1 + 16)) != null) {
-            FUN_1812fa020(lVar14,DAT_181da0e90);
+            FUN_18115d8f0(lVar14,DAT_181e833b0);
             if (this.<scaleSortingOrder>5__4 != 0) {
-              FUN_1812fa020(this.<scaleSortingOrder>5__4,DAT_181d8f330);
+              FUN_18115d8f0(this.<scaleSortingOrder>5__4,DAT_181e714f0);
               local_res18 = 0;
               if (0 < iVar4) {
                 do {
                   if ((this.<textInfo>5__2 == 0) ||
                      (lVar15 = *(int64 *)(this.<textInfo>5__2 + 56)) == null)
                   throw; // [null/range check failed]
-                  FUN_1801721e0(lVar15,local_238,(int64)(int)local_res18);
+                  FUN_18009f220(lVar15,local_238,(int64)(int)local_res18);
                   if (local_c4) {
                     lVar15 = this.<textInfo>5__2;
                     if ((lVar15 == null) || (lVar14 = *(int64 *)(lVar15 + 56)) == null)
@@ -201,7 +201,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar14 + 24) <= local_res18) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar11 = this.<cachedMeshInfoVertexData>5__3;
                     lVar9 = (int64)(int)local_res18 * 0x178;
@@ -212,7 +212,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar13) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_378 = (int64)(int)uVar13 * 80;
                     lVar11 = *(int64 *)(local_378 + 48 + lVar11);
@@ -220,14 +220,14 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar9 = lVar14 + 2;
                     uVar12 = (uint32)lVar9;
                     if (*(uint32 *)(lVar11 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     uVar8 = *(uint64 *)(lVar11 + 32 + lVar14 * 12);
                     fVar18 = (float)((uint64)uVar8 >> 32);
@@ -241,7 +241,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar13) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_458 = *(float *)(lVar11 + 40 + lVar14 * 12);
                     lVar15 = *(int64 *)(local_378 + 48 + lVar15);
@@ -254,7 +254,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar9 = lVar14 + 1;
                     *(uint64 *)(lVar15 + 32 + lVar14 * 12) = CONCAT44(fStack_4ac,local_4b0);
@@ -263,7 +263,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_4d8 = *(uint64 *)(lVar11 + 32 + lVar9 * 12);
                     local_448 = *(float *)(lVar11 + 40 + lVar9 * 12);
@@ -274,7 +274,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar1 = lVar14 + 2;
                     *(uint64 *)(lVar15 + 32 + lVar9 * 12) = CONCAT44(fStack_49c,local_4a0);
@@ -282,7 +282,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_4d8 = *(uint64 *)(lVar11 + 32 + lVar1 * 12);
                     local_438 = *(float *)(lVar11 + 40 + lVar1 * 12);
@@ -293,7 +293,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar2 = lVar14 + 3;
                     *(uint64 *)(lVar15 + 32 + lVar1 * 12) = CONCAT44(fStack_48c,local_490);
@@ -302,7 +302,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_4d8 = *(uint64 *)(lVar11 + 32 + lVar2 * 12);
                     local_428 = *(float *)(lVar11 + 40 + lVar2 * 12);
@@ -313,7 +313,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint64 *)(lVar15 + 32 + lVar2 * 12) = CONCAT44(fStack_4bc,local_4c0);
                     *(float *)(lVar15 + 40 + lVar2 * 12) = local_4b8;
@@ -321,11 +321,11 @@ public class <AnimateVertexColors>d__10
                     if ((this.<>8__1 == 0) ||
                        (lVar11 = *(int64 *)(this.<>8__1 + 16)) == null)
                     throw; // [null/range check failed]
-                    FUN_18181e420(lVar11,fVar18,DAT_181da0e10);
+                    FUN_18175dba0(lVar11,fVar18,DAT_181e83330);
                     if ((this.<>8__1 == 0) ||
                        ((lVar11 = *(int64 *)(this.<>8__1 + 16), lVar11 == null ||
                         (this.<scaleSortingOrder>5__4 == 0)))) throw; // [null/range check failed]
-                    FUN_18182a6c0(this.<scaleSortingOrder>5__4,*(int *)(lVar11 + 24) + -1,DAT_181d8f230
+                    FUN_181769fe0(this.<scaleSortingOrder>5__4,*(int *)(lVar11 + 24) + -1,DAT_181e713f0
                                  );
                     puVar10 = (uint64 *)Quaternion.get_identity(local_288,0);
                     uVar8 = *puVar10;
@@ -352,7 +352,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_3f8 = *(uint64 *)(lVar15 + 32 + lVar14 * 12);
                     local_3f0 = *(uint32 *)(lVar15 + 40 + lVar14 * 12);
@@ -361,14 +361,14 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint64 *)(lVar15 + 32 + lVar14 * 12) = *puVar10;
                     *(uint32 *)(lVar15 + 40 + lVar14 * 12) = *(uint32 *)(puVar10 + 1);
                     if (*(uint32 *)(lVar15 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_3e8 = *(uint64 *)(lVar15 + 32 + lVar9 * 12);
                     local_3e0 = *(uint32 *)(lVar15 + 40 + lVar9 * 12);
@@ -377,7 +377,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint64 *)(lVar15 + 32 + lVar9 * 12) = *puVar10;
                     *(uint32 *)(lVar15 + 40 + lVar9 * 12) = *(uint32 *)(puVar10 + 1);
@@ -385,7 +385,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar17) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_3d8 = *(uint64 *)(lVar15 + 32 + lVar1 * 12);
                     local_3d0 = *(uint32 *)(lVar15 + 40 + lVar1 * 12);
@@ -394,14 +394,14 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar17) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint64 *)(lVar15 + 32 + lVar1 * 12) = *puVar10;
                     *(uint32 *)(lVar15 + 40 + lVar1 * 12) = *(uint32 *)(puVar10 + 1);
                     if (*(uint32 *)(lVar15 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_3c8 = *(uint64 *)(lVar15 + 32 + lVar2 * 12);
                     local_3c0 = *(uint32 *)(lVar15 + 40 + lVar2 * 12);
@@ -410,14 +410,14 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint64 *)(lVar15 + 32 + lVar2 * 12) = *puVar10;
                     *(uint32 *)(lVar15 + 40 + lVar2 * 12) = *(uint32 *)(puVar10 + 1);
                     if (*(uint32 *)(lVar15 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_3b0 = *(float *)(lVar15 + 40 + lVar14 * 12);
                     local_4d8 = *(uint64 *)(lVar15 + 32 + lVar14 * 12);
@@ -431,7 +431,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_3a0 = *(float *)(lVar15 + 40 + lVar9 * 12);
                     local_4d8 = *(uint64 *)(lVar15 + 32 + lVar9 * 12);
@@ -444,7 +444,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar17) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_390 = *(float *)(lVar15 + 40 + lVar1 * 12);
                     local_4d8 = *(uint64 *)(lVar15 + 32 + lVar1 * 12);
@@ -457,7 +457,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     local_380 = *(float *)(lVar15 + 40 + lVar2 * 12);
                     local_4d8 = *(uint64 *)(lVar15 + 32 + lVar2 * 12);
@@ -472,7 +472,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar13) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if ((this.<textInfo>5__2 == 0) ||
                        (lVar11 = *(int64 *)(this.<textInfo>5__2 + 96)) == null)
@@ -480,14 +480,14 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar13) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar15 = *(int64 *)(local_378 + 72 + lVar15);
                     if (lVar15 == null) throw; // [null/range check failed]
                     if (*(uint32 *)(lVar15 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar11 = *(int64 *)(local_378 + 72 + lVar11);
                     uVar3 = *(uint32 *)(lVar15 + 36 + lVar14 * 8);
@@ -495,7 +495,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar14 * 8) =
                          *(uint32 *)(lVar15 + 32 + lVar14 * 8);
@@ -503,13 +503,13 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     uVar3 = *(uint32 *)(lVar15 + 36 + lVar9 * 8);
                     if (*(uint32 *)(lVar11 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar9 * 8) =
                          *(uint32 *)(lVar15 + 32 + lVar9 * 8);
@@ -517,13 +517,13 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar17) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     uVar3 = *(uint32 *)(lVar15 + 36 + lVar1 * 8);
                     if (*(uint32 *)(lVar11 + 24) <= uVar17) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar1 * 8) =
                          *(uint32 *)(lVar15 + 32 + lVar1 * 8);
@@ -531,13 +531,13 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     uVar3 = *(uint32 *)(lVar15 + 36 + lVar2 * 8);
                     if (*(uint32 *)(lVar11 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar2 * 8) =
                          *(uint32 *)(lVar15 + 32 + lVar2 * 8);
@@ -547,7 +547,7 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar15 + 24) <= uVar13) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if ((this.<textInfo>5__2 == 0) ||
                        (lVar11 = *(int64 *)(this.<textInfo>5__2 + 96)) == null)
@@ -555,57 +555,57 @@ public class <AnimateVertexColors>d__10
                     if (*(uint32 *)(lVar11 + 24) <= uVar13) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar15 = *(int64 *)(local_378 + 88 + lVar15);
                     if (lVar15 == null) throw; // [null/range check failed]
                     if (*(uint32 *)(lVar15 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     lVar11 = *(int64 *)(local_378 + 88 + lVar11);
                     if (lVar11 == null) throw; // [null/range check failed]
                     if (*(uint32 *)(lVar11 + 24) <= uVar5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar14 * 4) =
                          *(uint32 *)(lVar15 + 32 + lVar14 * 4);
                     if (*(uint32 *)(lVar15 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(lVar11 + 24) <= uVar16) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar9 * 4) =
                          *(uint32 *)(lVar15 + 32 + lVar9 * 4);
                     if (*(uint32 *)(lVar15 + 24) <= uVar17) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(lVar11 + 24) <= uVar17) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar1 * 4) =
                          *(uint32 *)(lVar15 + 32 + lVar1 * 4);
                     if (*(uint32 *)(lVar15 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(lVar11 + 24) <= uVar12) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     *(uint32 *)(lVar11 + 32 + lVar2 * 4) =
                          *(uint32 *)(lVar15 + 32 + lVar2 * 4);
@@ -629,17 +629,17 @@ public class <AnimateVertexColors>d__10
                   if (lVar14 == null) break;
                   lVar9 = *(int64 *)(lVar14 + 24);
                   if (lVar9 == null) {
-                    lVar9 = new OnTooltipCB(lVar14,DAT_181db8610,DAT_181dab3d0);
+                    lVar9 = new OnTooltipCB(lVar14,DAT_181e9c3a8,DAT_181e8bd90);
                     *(int64 *)(lVar14 + 24) = lVar9;
                   }
                   if (lVar11 == null) break;
-                  List_1.Sort(lVar11,lVar9,DAT_181d8f830);
+                  List_1.Sort(lVar11,lVar9,DAT_181e719f0);
                   if ((this.<textInfo>5__2 == 0) ||
                      (lVar14 = *(int64 *)(this.<textInfo>5__2 + 96)) == null) break;
                   if (*(uint32 *)(lVar14 + 24) <= uVar13) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   lVar11 = (int64)(int)uVar13 * 80;
                   TMP_MeshInfo.SortGeometry(lVar14 + 32 + lVar11,this.<scaleSortingOrder>5__4,0);
@@ -648,7 +648,7 @@ public class <AnimateVertexColors>d__10
                   if (*(uint32 *)(lVar14 + 24) <= uVar13) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   lVar9 = *(int64 *)(lVar11 + 32 + lVar14);
                   if (lVar9 == null) break;
@@ -658,7 +658,7 @@ public class <AnimateVertexColors>d__10
                   if (*(uint32 *)(lVar14 + 24) <= uVar13) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   lVar9 = *(int64 *)(lVar11 + 32 + lVar14);
                   if (lVar9 == null) break;
@@ -668,7 +668,7 @@ public class <AnimateVertexColors>d__10
                   if (*(uint32 *)(lVar14 + 24) <= uVar13) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   lVar9 = *(int64 *)(lVar11 + 32 + lVar14);
                   if (lVar9 == null) break;
@@ -678,7 +678,7 @@ public class <AnimateVertexColors>d__10
                   if (*(uint32 *)(lVar14 + 24) <= uVar13) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   plVar6 = *(int64 **)(lVar15 + 40);
                   if (plVar6 == (int64 *)0) break;
@@ -695,27 +695,27 @@ public class <AnimateVertexColors>d__10
         }
     }
 
-    // Token : 0x600255C
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002606
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x600255D
-    // RVA   : 0x1841090   Offset: 0x1840490   Length: 0x3E
+    // Token : 0x6002607
+    // RVA   : 0x17824F0   Offset: 0x17812F0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db8698);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e9c430);
     }
 
-    // Token : 0x600255E
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002608
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

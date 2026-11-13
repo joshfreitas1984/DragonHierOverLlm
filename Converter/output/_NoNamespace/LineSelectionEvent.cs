@@ -1,16 +1,16 @@
 // ============================================================
 // Type  : LineSelectionEvent
-// Token : 0x20003E7
+// Token : 0x20003F4
 // ============================================================
 
 public class LineSelectionEvent
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002481
-    // RVA   : 0x918900   Offset: 0x917D00   Length: 0x39
+    // Token : 0x600252B
+    // RVA   : 0x605D60   Offset: 0x604B60   Length: 0x39
     public void /*ctor*/()
     {
-        FUN_180fecd30(this,DAT_181d7d4a0);
+        FUN_180c901c0(this,DAT_181e5ff48);
     }
 
 }

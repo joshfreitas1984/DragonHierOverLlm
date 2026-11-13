@@ -1,39 +1,39 @@
 // ============================================================
 // Type  : Pivot
-// Token : 0x20000AD
+// Token : 0x20000AC
 // ============================================================
 
 public class Pivot
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000445
+    // Token: 0x4000425
     public int value__;
 
-    // Token: 0x4000446
+    // Token: 0x4000426
     public const Pivot TopLeft;
 
-    // Token: 0x4000447
+    // Token: 0x4000427
     public const Pivot Top;
 
-    // Token: 0x4000448
+    // Token: 0x4000428
     public const Pivot TopRight;
 
-    // Token: 0x4000449
+    // Token: 0x4000429
     public const Pivot Left;
 
-    // Token: 0x400044A
+    // Token: 0x400042A
     public const Pivot Center;
 
-    // Token: 0x400044B
+    // Token: 0x400042B
     public const Pivot Right;
 
-    // Token: 0x400044C
+    // Token: 0x400042C
     public const Pivot BottomLeft;
 
-    // Token: 0x400044D
+    // Token: 0x400042D
     public const Pivot Bottom;
 
-    // Token: 0x400044E
+    // Token: 0x400042E
     public const Pivot BottomRight;
 
 }

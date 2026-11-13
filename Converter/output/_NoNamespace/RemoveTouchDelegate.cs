@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : RemoveTouchDelegate
-// Token : 0x20000E2
+// Token : 0x20000E1
 // ============================================================
 
 public class RemoveTouchDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000752
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000739
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class RemoveTouchDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000753
-    // RVA   : 0x91B080   Offset: 0x91A480   Length: 0x1AE
+    // Token : 0x600073A
+    // RVA   : 0x6086D0   Offset: 0x6074D0   Length: 0x1AE
     public virtual void Invoke(int id)
     {
         long lVar1;
@@ -57,14 +57,14 @@ public class RemoveTouchDelegate
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_18091b1f2;
+            goto LAB_180608842;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
-              cVar4 = FUN_1800d65c0(lVar1);
+              cVar4 = FUN_1801e02a0(lVar1);
               if (!cVar4) {
                 (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                           (plVar3,id,
@@ -73,11 +73,11 @@ public class RemoveTouchDelegate
               }
               else {
                 uVar6 = il2cpp_class_get_namespace(lVar1);
-                FUN_180004670(*(uint16 *)(lVar1 + 72),uVar6,plVar3,id);
+                FUN_180054430(*(uint16 *)(lVar1 + 72),uVar6,plVar3,id);
               }
             }
             else {
-              cVar4 = FUN_1800d65c0(lVar1);
+              cVar4 = FUN_1801e02a0(lVar1);
               if (!cVar4) {
                 puVar5 = (uint64 *)
                          il2cpp_internal(*(uint64 *)
@@ -87,7 +87,7 @@ public class RemoveTouchDelegate
                 (*(code *)*puVar5)(plVar3,id,puVar5);
               }
               else {
-                FUN_180008740(lVar1,plVar3,id);
+                FUN_1800542b0(lVar1,plVar3,id);
               }
             }
           }
@@ -95,7 +95,7 @@ public class RemoveTouchDelegate
             (*pcVar2)(id,lVar1);
           }
           else {
-        LAB_18091b1f2:
+        LAB_180608842:
             (*pcVar2)(plVar3,id,lVar1);
           }
           uVar7 = uVar7 + 1;
@@ -105,8 +105,8 @@ public class RemoveTouchDelegate
         } while( true );
     }
 
-    // Token : 0x6000754
-    // RVA   : 0x91B000   Offset: 0x91A400   Length: 0x7A
+    // Token : 0x600073B
+    // RVA   : 0x608650   Offset: 0x607450   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(int id, AsyncCallback callback, object object)
     {
         void RemoveTouchDelegate.BeginInvoke
@@ -117,12 +117,12 @@ public class RemoveTouchDelegate
         uint64 local_10;
         local_res10[0] = id;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d80430,local_res10);
+        local_18 = il2cpp_value_box(DAT_181e60808,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x6000755
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x600073C
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

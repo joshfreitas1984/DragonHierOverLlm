@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : DlcSprite
-// Token : 0x20002AF
+// Token : 0x20002B8
 // ============================================================
 
 public class DlcSprite
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40015A4
+    // Token: 0x40015F4
     public List<Sprite> sprite;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60016CE
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x600174A
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

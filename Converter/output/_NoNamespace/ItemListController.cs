@@ -1,119 +1,119 @@
 // ============================================================
 // Type  : ItemListController
-// Token : 0x20002F2
+// Token : 0x20002FB
 // ============================================================
 
 public class ItemListController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400185E
+    // Token: 0x40018B4
     public GameObject itemGrid;
 
-    // Token: 0x400185F
+    // Token: 0x40018B5
     public ItemListInteractType itemListInteractType;
 
-    // Token: 0x4001860
+    // Token: 0x40018B6
     public ItemListType forceItemListType;
 
-    // Token: 0x4001861
+    // Token: 0x40018B7
     public ItemListType nowItemListType;
 
-    // Token: 0x4001862
+    // Token: 0x40018B8
     public ItemListData targetItemList;
 
-    // Token: 0x4001863
+    // Token: 0x40018B9
     public GameObject showAllButton;
 
-    // Token: 0x4001864
+    // Token: 0x40018BA
     public bool noEquipedItem;
 
-    // Token: 0x4001865
+    // Token: 0x40018BB
     public bool recordSortType;
 
-    // Token: 0x4001866
+    // Token: 0x40018BC
     public Dropdown sortTypeDropDown;
 
-    // Token: 0x4001867
+    // Token: 0x40018BD
     public ItemSortType itemSortType;
 
-    // Token: 0x4001868
+    // Token: 0x40018BE
     public bool reverseOrder;
 
-    // Token: 0x4001869
+    // Token: 0x40018BF
     private bool isRefreshing;
 
-    // Token: 0x400186A
+    // Token: 0x40018C0
     private ScrollRect scrollRect;
 
-    // Token: 0x400186B
+    // Token: 0x40018C1
     private RectTransform contentRect;
 
-    // Token: 0x400186C
+    // Token: 0x40018C2
     private RectTransform viewportRect;
 
-    // Token: 0x400186D
+    // Token: 0x40018C3
     private readonly List<ItemData> currentDataList;
 
-    // Token: 0x400186E
+    // Token: 0x40018C4
     private readonly Dictionary<int, GameObject> activeItemMap;
 
-    // Token: 0x400186F
+    // Token: 0x40018C5
     private float cellWidth;
 
-    // Token: 0x4001870
+    // Token: 0x40018C6
     private float cellHeight;
 
-    // Token: 0x4001871
+    // Token: 0x40018C7
     private float spacingX;
 
-    // Token: 0x4001872
+    // Token: 0x40018C8
     private float spacingY;
 
-    // Token: 0x4001873
+    // Token: 0x40018C9
     private int paddingLeft;
 
-    // Token: 0x4001874
+    // Token: 0x40018CA
     private int paddingRight;
 
-    // Token: 0x4001875
+    // Token: 0x40018CB
     private int paddingTop;
 
-    // Token: 0x4001876
+    // Token: 0x40018CC
     private int paddingBottom;
 
-    // Token: 0x4001877
+    // Token: 0x40018CD
     private int columnCount;
 
-    // Token: 0x4001878
+    // Token: 0x40018CE
     private Constraint gridConstraint;
 
-    // Token: 0x4001879
+    // Token: 0x40018CF
     private int gridConstraintCount;
 
-    // Token: 0x400187A
+    // Token: 0x40018D0
     private TextAnchor gridChildAlignment;
 
-    // Token: 0x400187B
+    // Token: 0x40018D1
     private static readonly Queue<GameObject> sharedItemIconPool;
 
-    // Token: 0x400187C
+    // Token: 0x40018D2
     private const int MaxSharedPoolSize;
 
-    // Token: 0x400187D
+    // Token: 0x40018D3
     private static Transform poolRoot;
 
-    // Token: 0x400187E
+    // Token: 0x40018D4
     private readonly List<int> toRemoveCache;
 
-    // Token: 0x400187F
+    // Token: 0x40018D5
     private int lastMinIndex;
 
-    // Token: 0x4001880
+    // Token: 0x40018D6
     private int lastMaxIndex;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001889
-    // RVA   : 0xCA71E0   Offset: 0xCA65E0   Length: 0x18E
+    // Token : 0x6001905
+    // RVA   : 0xA2ACB0   Offset: 0xA29AB0   Length: 0x18E
     private static Transform GetPoolRoot()
     {
         bool cVar1;
@@ -125,7 +125,7 @@ public class ItemListController
           lVar2 = new GameObject("[SharedItemIconPool]",0);
           if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar3 = GameObject.get_transform(lVar2,0);
           ItemListController.poolRoot = uVar3;
@@ -134,8 +134,8 @@ public class ItemListController
         return ItemListController.poolRoot;
     }
 
-    // Token : 0x600188A
-    // RVA   : 0xCA5EC0   Offset: 0xCA52C0   Length: 0x502
+    // Token : 0x6001906
+    // RVA   : 0xA29990   Offset: 0xA28790   Length: 0x502
     private void Awake()
     {
         bool cVar1;
@@ -143,9 +143,9 @@ public class ItemListController
         ulong uVar3;
         long lVar4;
         if (this.itemGrid == null) throw; // [null/range check failed]
-        uVar3 = GameObject.GetComponent(this.itemGrid,DAT_181d72bc8);
+        uVar3 = GameObject.GetComponent(this.itemGrid,DAT_181e55c90);
         this.contentRect = uVar3;
-        uVar3 = Component.GetComponentInParent(this,DAT_181d97b78);
+        uVar3 = Component.GetComponentInParent(this,DAT_181e7af38);
         this.scrollRect = uVar3;
         uVar3 = this.scrollRect;
         cVar1 = Object.op_Equality(uVar3,0,0);
@@ -153,25 +153,25 @@ public class ItemListController
           if (this.itemGrid == null) throw; // [null/range check failed]
           lVar4 = GameObject.get_transform();
           if (lVar4 == null) throw; // [null/range check failed]
-          uVar3 = FUN_180daa030(lVar4);
+          uVar3 = FUN_180b05920(lVar4);
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (cVar1) {
             if (this.itemGrid == null) throw; // [null/range check failed]
             lVar4 = GameObject.get_transform();
             if (lVar4 == null) throw; // [null/range check failed]
-            lVar4 = FUN_180daa030(lVar4);
+            lVar4 = FUN_180b05920(lVar4);
             if (lVar4 == null) throw; // [null/range check failed]
-            uVar3 = FUN_180daa030(lVar4);
+            uVar3 = FUN_180b05920(lVar4);
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
               if (this.itemGrid == null) throw; // [null/range check failed]
               lVar4 = GameObject.get_transform(this.itemGrid,0);
               if (lVar4 == null) throw; // [null/range check failed]
-              lVar4 = FUN_180daa030(lVar4,0);
+              lVar4 = FUN_180b05920(lVar4,0);
               if (lVar4 == null) throw; // [null/range check failed]
-              lVar4 = FUN_180daa030(lVar4,0);
+              lVar4 = FUN_180b05920(lVar4,0);
               if (lVar4 == null) throw; // [null/range check failed]
-              uVar3 = Component.GetComponent(lVar4,DAT_181d951f8);
+              uVar3 = Component.GetComponent(lVar4,DAT_181e78538);
               this.scrollRect = uVar3;
             }
           }
@@ -188,12 +188,12 @@ public class ItemListController
             plVar5 = (int64 *)Component.get_transform();
             plVar6 = (int64 *)0;
             if (plVar5 != (int64 *)0) {
-              if (*plVar5 == DAT_181d9a598) {
+              if (*plVar5 == DAT_181e7a958) {
                 plVar6 = plVar5;
               }
               if (plVar6 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6070(plVar5,DAT_181d9a598);
+                FUN_1801dfd50(plVar5,DAT_181e7a958);
               }
             }
           }
@@ -204,12 +204,12 @@ public class ItemListController
           this.viewportRect = plVar6;
           if (this.scrollRect == null) throw; // [null/range check failed]
           lVar4 = *(int64 *)(this.scrollRect + 96);
-          uVar3 = new OnTooltipCB(this,DAT_181d7d300,DAT_181d7c0b0);
+          uVar3 = new OnTooltipCB(this,DAT_181e60918,DAT_181e5ea40);
           if (lVar4 == null) throw; // [null/range check failed]
-          FUN_180feb130(lVar4,uVar3,DAT_181d7d020);
+          FUN_180c8e5c0(lVar4,uVar3,DAT_181e5faa0);
         }
         if (this.itemGrid == null) throw; // [null/range check failed]
-        lVar4 = GameObject.GetComponent(this.itemGrid,DAT_181d71798);
+        lVar4 = GameObject.GetComponent(this.itemGrid,DAT_181e54860);
         cVar1 = Object.op_Inequality(lVar4,0,0);
         if (cVar1) {
           if (lVar4 == null) throw; // [null/range check failed]
@@ -235,7 +235,7 @@ public class ItemListController
           Behaviour.set_enabled(lVar4,0,0);
         }
         if (this.itemGrid != null) {
-          lVar4 = GameObject.GetComponent(this.itemGrid,DAT_181dc81f0);
+          lVar4 = GameObject.GetComponent(this.itemGrid,DAT_181e54288);
           cVar1 = Object.op_Inequality(lVar4,0,0);
           if (cVar1) {
             if (lVar4 == null) throw; // [null/range check failed]
@@ -245,8 +245,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x600188B
-    // RVA   : 0xCA7370   Offset: 0xCA6770   Length: 0xF2
+    // Token : 0x6001907
+    // RVA   : 0xA2AE40   Offset: 0xA29C40   Length: 0xF2
     private void OnDestroy()
     {
         long lVar1;
@@ -259,16 +259,16 @@ public class ItemListController
         }
         if (this.scrollRect != null) {
           lVar1 = *(int64 *)(this.scrollRect + 96);
-          uVar3 = new OnTooltipCB(this,DAT_181d7d300,DAT_181d7c0b0);
+          uVar3 = new OnTooltipCB(this,DAT_181e60918,DAT_181e5ea40);
           if (lVar1 != null) {
-            FUN_180fecce0(lVar1,uVar3,DAT_181d7d120);
+            FUN_180c90170(lVar1,uVar3,DAT_181e5fba8);
             return;
           }
         }
     }
 
-    // Token : 0x600188C
-    // RVA   : 0xCA6670   Offset: 0xCA5A70   Length: 0x139
+    // Token : 0x6001908
+    // RVA   : 0xA2A140   Offset: 0xA28F40   Length: 0x139
     public void ChangeListType(GameObject ButtonClicked)
     {
         int iVar1;
@@ -277,9 +277,9 @@ public class ItemListController
         long lVar4;
         ulong uVar5;
         if (!this.isRefreshing) {
-          if ((ButtonClicked == null) || (lVar4 = GameObject.GetComponent(ButtonClicked,DAT_181d743b0)) == null) {
+          if ((ButtonClicked == null) || (lVar4 = GameObject.GetComponent(ButtonClicked,DAT_181e57478)) == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(char *)(lVar4 + 0x118) != false) {
             iVar1 = this.nowItemListType;
@@ -293,7 +293,7 @@ public class ItemListController
                         (this,this.targetItemList,this.itemListInteractType,1,0);
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/Button/TabButton",0);
               plVar7 = (int64 *)0;
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181e8f4a0)) {
                 plVar7 = plVar6;
               }
               NGUITools.PlaySound(plVar7,0);
@@ -302,8 +302,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x600188D
-    // RVA   : 0xCA8640   Offset: 0xCA7A40   Length: 0xCD
+    // Token : 0x6001909
+    // RVA   : 0xA2C120   Offset: 0xA2AF20   Length: 0xCD
     public void ResetListType()
     {
         ulong uVar1;
@@ -316,10 +316,10 @@ public class ItemListController
           return;
         }
         if ((this.showAllButton != null) &&
-           (lVar3 = GameObject.GetComponent(this.showAllButton,DAT_181d743b0)) != null) {
+           (lVar3 = GameObject.GetComponent(this.showAllButton,DAT_181e57478)) != null) {
           Selectable.set_interactable(lVar3,1,0);
           if ((this.showAllButton != null) &&
-             (lVar3 = GameObject.GetComponent(this.showAllButton,DAT_181d743b0)) != null)
+             (lVar3 = GameObject.GetComponent(this.showAllButton,DAT_181e57478)) != null)
           {
             Toggle.set_isOn(lVar3,1,0);
             return;
@@ -327,8 +327,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x600188E
-    // RVA   : 0xCA6D50   Offset: 0xCA6150   Length: 0x39B
+    // Token : 0x600190A
+    // RVA   : 0xA2A820   Offset: 0xA29620   Length: 0x39B
     public void ClearAllItem()
     {
         bool cVar1;
@@ -356,16 +356,16 @@ public class ItemListController
           cVar1 = Transform.IsChildOf(lVar2,uVar3,0);
           if (cVar1) {
             MouseController.hoveredUI = 0;
-            uVar3 = FUN_180c960b0(0);
+            uVar3 = FUN_180a17d10(0);
             cVar1 = Object.op_Inequality(uVar3,0,0);
             if (cVar1) {
-              lVar2 = FUN_180c960b0(0);
+              lVar2 = FUN_180a17d10(0);
               if (lVar2 == null) throw; // [null/range check failed]
               lVar2 = Component.get_gameObject(lVar2,0);
               if (lVar2 == null) throw; // [null/range check failed]
               cVar1 = GameObject.get_activeSelf(lVar2,0);
               if (cVar1) {
-                lVar2 = FUN_180c960b0(0);
+                lVar2 = FUN_180a17d10(0);
                 if (lVar2 == null) throw; // [null/range check failed]
                 lVar2 = Component.get_gameObject(lVar2,0);
                 if (lVar2 == null) throw; // [null/range check failed]
@@ -375,30 +375,30 @@ public class ItemListController
           }
         }
         if (this.activeItemMap != null) {
-          FUN_1808abff0(&local_38,this.activeItemMap,DAT_181db9dd8);
+          FUN_1806db990(&local_38,this.activeItemMap,DAT_181e9b3b0);
           local_60 = local_38;
           uStack_58 = uStack_30;
           local_50 = local_28;
           uStack_48 = uStack_20;
           local_40 = local_18;
           while( true ) {
-            cVar1 = FUN_1811c6100(&local_60,DAT_181d985f0);
+            cVar1 = FUN_180dd7700(&local_60,DAT_181e7a3b0);
             if (!cVar1) break;
             ItemListController.RecycleIcon(this,uStack_48,0);
           }
-          ZhSegment.Initialize(&local_60,DAT_181d98570);
+          ZhSegment.Initialize(&local_60,DAT_181e7a330);
           if (this.activeItemMap != null) {
-            Dictionary_2.Clear(this.activeItemMap,DAT_181db9cc8);
+            Dictionary_2.Clear(this.activeItemMap,DAT_181e9b2a0);
             if (this.currentDataList != null) {
-              FUN_1812fa020(this.currentDataList,DAT_181d90b30);
+              FUN_18115d8f0(this.currentDataList,DAT_181e72d70);
               return;
             }
           }
         }
     }
 
-    // Token : 0x600188F
-    // RVA   : 0xCA7920   Offset: 0xCA6D20   Length: 0x485
+    // Token : 0x600190B
+    // RVA   : 0xA2B3F0   Offset: 0xA2A1F0   Length: 0x493
     private void RecycleIcon(GameObject iconGo)
     {
         bool cVar1;
@@ -419,7 +419,7 @@ public class ItemListController
         if (cVar1) {
           MouseController.hoveredUI = 0;
         }
-        lVar2 = GameObject.GetComponent(iconGo,DAT_181d720a0);
+        lVar2 = GameObject.GetComponent(iconGo,DAT_181e55168);
         cVar1 = Object.op_Inequality(lVar2,0,0);
         if (cVar1) {
           if (lVar2 == null) throw; // [null/range check failed]
@@ -430,10 +430,11 @@ public class ItemListController
           local_28 = *puVar5;
           Transform.set_localScale(lVar3,&local_28,0);
           *(uint64 *)(lVar2 + 32) = 0;
-          *(uint64 *)(lVar2 + 56) = 0;
+          *(uint64 *)(lVar2 + 72) = 0;
           *(uint32 *)(lVar2 + 24) = 0xffffffff;
           *(uint64 *)(lVar2 + 40) = 1;
-          *(uint32 *)(lVar2 + 52) = 0x1000000;
+          *(uint32 *)(lVar2 + 64) = 0x1000000;
+          *(uint64 *)(lVar2 + 56) = 0;
           *(uint32 *)(lVar2 + 48) = 0;
         }
         if (ItemListController.sharedItemIconPool != null) {
@@ -454,18 +455,18 @@ public class ItemListController
           if (lVar2 != null) {
             Transform.SetParent(lVar2,ItemListController.poolRoot,0,0);
             if (ItemListController.sharedItemIconPool != null) {
-              FUN_1816625a0(ItemListController.sharedItemIconPool,iconGo,DAT_181dc0838);
+              FUN_1810206d0(ItemListController.sharedItemIconPool,iconGo,DAT_181ea35c0);
               return;
             }
           }
         }
     }
 
-    // Token : 0x6001890
-    // RVA   : 0xCA8420   Offset: 0xCA7820   Length: 0x21B
+    // Token : 0x600190C
+    // RVA   : 0xA2BF00   Offset: 0xA2AD00   Length: 0x21B
     private GameObject RentIcon()
     {
-        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_2a90 = *(int64*)(DAT_181e52a90 + 184);
         ulong uVar1;
         bool cVar2;
         long lVar3;
@@ -476,14 +477,14 @@ public class ItemListController
           lVar3 = 0;
           if (ItemListController.sharedItemIconPool.itemListInteractType < 1) break;
           if (ItemListController.sharedItemIconPool == null) throw; // [null/range check failed]
-          lVar3 = FUN_1816621f0(ItemListController.sharedItemIconPool,DAT_181dc07b8);
+          lVar3 = FUN_181020320(ItemListController.sharedItemIconPool,DAT_181ea3540);
           cVar2 = Object.op_Inequality(lVar3,0,0);
         } while (!cVar2);
         cVar2 = Object.op_Inequality(lVar3,0,0);
         if (!cVar2) {
           uVar5 = this.itemGrid;
-          if (*pStatics_2ee8 != 0) {
-            uVar1 = *(uint64 *)(*pStatics_2ee8 + 160);
+          if (*pStatics_2a90 != 0) {
+            uVar1 = *(uint64 *)(*pStatics_2a90 + 160);
             lVar3 = GlobalData.AddChild(uVar5,uVar1,0);
             return lVar3;
           }
@@ -499,8 +500,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001891
-    // RVA   : 0xCA7DE0   Offset: 0xCA71E0   Length: 0x23
+    // Token : 0x600190D
+    // RVA   : 0xA2B8C0   Offset: 0xA2A6C0   Length: 0x23
     public void RefreshItemList(bool resetPos)
     {
         void ItemListController.RefreshItemList
@@ -532,43 +533,43 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = Component.GetComponent(lVar4,DAT_181d962f8);
+                lVar4 = Component.GetComponent(lVar4,DAT_181e796b8);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 Selectable.set_interactable(lVar4);
                 uVar9 = uVar9 + 1;
@@ -579,53 +580,53 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = Component.TryGetComponent(lVar4);
                 if (cVar1) {
                   uVar5 = Object.get_name(lVar4,0);
                   local_48[0] = this.forceItemListType;
                   uVar6 = Int32.ToString(local_48,0);
-                  uVar2 = FUN_18171eb50(uVar5,uVar6);
+                  uVar2 = FUN_1816387f0(uVar5,uVar6);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Toggle.set_isOn(local_40,uVar2);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Selectable.set_interactable();
                 }
@@ -648,7 +649,7 @@ public class ItemListController
               lVar4 = lVar4.itemTypeList;
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (lVar4.money <= uVar9) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -657,13 +658,13 @@ public class ItemListController
             }
             if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            FUN_1812fa020(this.currentDataList,DAT_181d90b30);
+            FUN_18115d8f0(this.currentDataList,DAT_181e72d70);
             while( true ) {
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if ((int)lVar4.money <= (int)uVar10) break;
               if (lVar4.money <= uVar10) {
@@ -671,44 +672,44 @@ public class ItemListController
               }
               lVar8 = lVar4.heroID[uVar10];
               if (!this.noEquipedItem) {
-        LAB_180ca81a9:
+        LAB_180a2bc89:
                 if (param_3 < 2 || 5 < param_3) {
-        LAB_180ca8229:
+        LAB_180a2bd09:
                   if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
-                  FUN_18181e6b0();
+                  FUN_18175de30();
                 }
                 else {
                   if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   iVar3 = *(int *)(lVar8 + 60);
-                  lVar7 = FUN_18046c6c0();
+                  lVar7 = FUN_180210d40();
                   if (lVar7 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (*(int *)(lVar7 + 168) <= iVar3) {
                     iVar3 = *(int *)(lVar8 + 60);
-                    lVar8 = FUN_18046c6c0();
+                    lVar8 = FUN_180210d40();
                     if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
-                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180ca8229;
+                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180a2bd09;
                   }
                 }
               }
               else {
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = ItemData.Equiped();
-                if (!cVar1) goto LAB_180ca81a9;
+                if (!cVar1) goto LAB_180a2bc89;
               }
               uVar10 = uVar10 + 1;
             }
@@ -720,19 +721,19 @@ public class ItemListController
               if (cVar1) {
                 if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 uVar5 = *(uint64 *)(this.scrollRect + 72);
                 cVar1 = Object.op_Inequality(uVar5,0,0);
                 if (cVar1) {
                   if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   lVar4 = *(int64 *)(this.scrollRect + 72);
                   if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Scrollbar.set_value(lVar4,0x3f800000,0);
                 }
@@ -744,8 +745,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001892
-    // RVA   : 0xCA8400   Offset: 0xCA7800   Length: 0x1F
+    // Token : 0x600190E
+    // RVA   : 0xA2BEE0   Offset: 0xA2ACE0   Length: 0x1F
     public void RefreshItemList(ItemListData _targetItemList, bool resetPos)
     {
         void ItemListController.RefreshItemList
@@ -777,43 +778,43 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = Component.GetComponent(lVar4,DAT_181d962f8);
+                lVar4 = Component.GetComponent(lVar4,DAT_181e796b8);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 Selectable.set_interactable(lVar4);
                 uVar9 = uVar9 + 1;
@@ -824,53 +825,53 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = Component.TryGetComponent(lVar4);
                 if (cVar1) {
                   uVar5 = Object.get_name(lVar4,0);
                   local_48[0] = this.forceItemListType;
                   uVar6 = Int32.ToString(local_48,0);
-                  uVar2 = FUN_18171eb50(uVar5,uVar6);
+                  uVar2 = FUN_1816387f0(uVar5,uVar6);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Toggle.set_isOn(local_40,uVar2);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Selectable.set_interactable();
                 }
@@ -893,7 +894,7 @@ public class ItemListController
               lVar4 = lVar4.itemTypeList;
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (lVar4.money <= uVar9) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -902,13 +903,13 @@ public class ItemListController
             }
             if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            FUN_1812fa020(this.currentDataList,DAT_181d90b30);
+            FUN_18115d8f0(this.currentDataList,DAT_181e72d70);
             while( true ) {
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if ((int)lVar4.money <= (int)uVar10) break;
               if (lVar4.money <= uVar10) {
@@ -916,44 +917,44 @@ public class ItemListController
               }
               lVar8 = lVar4.heroID[uVar10];
               if (!this.noEquipedItem) {
-        LAB_180ca81a9:
+        LAB_180a2bc89:
                 if (resetPos < 2 || 5 < resetPos) {
-        LAB_180ca8229:
+        LAB_180a2bd09:
                   if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
-                  FUN_18181e6b0();
+                  FUN_18175de30();
                 }
                 else {
                   if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   iVar3 = *(int *)(lVar8 + 60);
-                  lVar7 = FUN_18046c6c0();
+                  lVar7 = FUN_180210d40();
                   if (lVar7 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (*(int *)(lVar7 + 168) <= iVar3) {
                     iVar3 = *(int *)(lVar8 + 60);
-                    lVar8 = FUN_18046c6c0();
+                    lVar8 = FUN_180210d40();
                     if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
-                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180ca8229;
+                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180a2bd09;
                   }
                 }
               }
               else {
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = ItemData.Equiped();
-                if (!cVar1) goto LAB_180ca81a9;
+                if (!cVar1) goto LAB_180a2bc89;
               }
               uVar10 = uVar10 + 1;
             }
@@ -965,19 +966,19 @@ public class ItemListController
               if (cVar1) {
                 if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 uVar5 = *(uint64 *)(this.scrollRect + 72);
                 cVar1 = Object.op_Inequality(uVar5,0,0);
                 if (cVar1) {
                   if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   lVar4 = *(int64 *)(this.scrollRect + 72);
                   if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Scrollbar.set_value(lVar4,0x3f800000,0);
                 }
@@ -989,8 +990,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001893
-    // RVA   : 0xCA7DB0   Offset: 0xCA71B0   Length: 0x22
+    // Token : 0x600190F
+    // RVA   : 0xA2B890   Offset: 0xA2A690   Length: 0x22
     public void RefreshItemList(ItemListInteractType _itemListInteractType, bool resetPos)
     {
         void ItemListController.RefreshItemList
@@ -1022,43 +1023,43 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = Component.GetComponent(lVar4,DAT_181d962f8);
+                lVar4 = Component.GetComponent(lVar4,DAT_181e796b8);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 Selectable.set_interactable(lVar4);
                 uVar9 = uVar9 + 1;
@@ -1069,53 +1070,53 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = Component.TryGetComponent(lVar4);
                 if (cVar1) {
                   uVar5 = Object.get_name(lVar4,0);
                   local_48[0] = this.forceItemListType;
                   uVar6 = Int32.ToString(local_48,0);
-                  uVar2 = FUN_18171eb50(uVar5,uVar6);
+                  uVar2 = FUN_1816387f0(uVar5,uVar6);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Toggle.set_isOn(local_40,uVar2);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Selectable.set_interactable();
                 }
@@ -1138,7 +1139,7 @@ public class ItemListController
               lVar4 = lVar4.itemTypeList;
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (lVar4.money <= uVar9) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1147,13 +1148,13 @@ public class ItemListController
             }
             if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            FUN_1812fa020(this.currentDataList,DAT_181d90b30);
+            FUN_18115d8f0(this.currentDataList,DAT_181e72d70);
             while( true ) {
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if ((int)lVar4.money <= (int)uVar10) break;
               if (lVar4.money <= uVar10) {
@@ -1161,44 +1162,44 @@ public class ItemListController
               }
               lVar8 = lVar4.heroID[uVar10];
               if (!this.noEquipedItem) {
-        LAB_180ca81a9:
+        LAB_180a2bc89:
                 if (resetPos < 2 || 5 < resetPos) {
-        LAB_180ca8229:
+        LAB_180a2bd09:
                   if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
-                  FUN_18181e6b0();
+                  FUN_18175de30();
                 }
                 else {
                   if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   iVar3 = *(int *)(lVar8 + 60);
-                  lVar7 = FUN_18046c6c0();
+                  lVar7 = FUN_180210d40();
                   if (lVar7 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (*(int *)(lVar7 + 168) <= iVar3) {
                     iVar3 = *(int *)(lVar8 + 60);
-                    lVar8 = FUN_18046c6c0();
+                    lVar8 = FUN_180210d40();
                     if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
-                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180ca8229;
+                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180a2bd09;
                   }
                 }
               }
               else {
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = ItemData.Equiped();
-                if (!cVar1) goto LAB_180ca81a9;
+                if (!cVar1) goto LAB_180a2bc89;
               }
               uVar10 = uVar10 + 1;
             }
@@ -1210,19 +1211,19 @@ public class ItemListController
               if (cVar1) {
                 if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 uVar5 = *(uint64 *)(this.scrollRect + 72);
                 cVar1 = Object.op_Inequality(uVar5,0,0);
                 if (cVar1) {
                   if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   lVar4 = *(int64 *)(this.scrollRect + 72);
                   if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Scrollbar.set_value(lVar4,0x3f800000,0);
                 }
@@ -1234,8 +1235,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001894
-    // RVA   : 0xCA7E10   Offset: 0xCA7210   Length: 0x5E3
+    // Token : 0x6001910
+    // RVA   : 0xA2B8F0   Offset: 0xA2A6F0   Length: 0x5E3
     public void RefreshItemList(ItemListData _targetItemList, ItemListInteractType _itemListInteractType, bool resetPos)
     {
         void ItemListController.RefreshItemList
@@ -1267,43 +1268,43 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = Component.GetComponent(lVar4,DAT_181d962f8);
+                lVar4 = Component.GetComponent(lVar4,DAT_181e796b8);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 Selectable.set_interactable(lVar4);
                 uVar9 = uVar9 + 1;
@@ -1314,53 +1315,53 @@ public class ItemListController
               while( true ) {
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 iVar3 = Transform.get_childCount(lVar4,0);
                 if (iVar3 <= (int)uVar9) break;
                 if (this.showAllButton == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = GameObject.get_transform(this.showAllButton,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                lVar4 = FUN_180daa030(lVar4,0);
+                lVar4 = FUN_180b05920(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Transform.GetChild(lVar4,uVar9,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = Component.TryGetComponent(lVar4);
                 if (cVar1) {
                   uVar5 = Object.get_name(lVar4,0);
                   local_48[0] = this.forceItemListType;
                   uVar6 = Int32.ToString(local_48,0);
-                  uVar2 = FUN_18171eb50(uVar5,uVar6);
+                  uVar2 = FUN_1816387f0(uVar5,uVar6);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Toggle.set_isOn(local_40,uVar2);
                   if (local_40 == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Selectable.set_interactable();
                 }
@@ -1383,7 +1384,7 @@ public class ItemListController
               lVar4 = lVar4.itemTypeList;
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (lVar4.money <= uVar9) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1392,13 +1393,13 @@ public class ItemListController
             }
             if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            FUN_1812fa020(this.currentDataList,DAT_181d90b30);
+            FUN_18115d8f0(this.currentDataList,DAT_181e72d70);
             while( true ) {
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if ((int)lVar4.money <= (int)uVar10) break;
               if (lVar4.money <= uVar10) {
@@ -1406,44 +1407,44 @@ public class ItemListController
               }
               lVar8 = lVar4.heroID[uVar10];
               if (!this.noEquipedItem) {
-        LAB_180ca81a9:
+        LAB_180a2bc89:
                 if (_itemListInteractType < 2 || 5 < _itemListInteractType) {
-        LAB_180ca8229:
+        LAB_180a2bd09:
                   if (this.currentDataList == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
-                  FUN_18181e6b0();
+                  FUN_18175de30();
                 }
                 else {
                   if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   iVar3 = *(int *)(lVar8 + 60);
-                  lVar7 = FUN_18046c6c0();
+                  lVar7 = FUN_180210d40();
                   if (lVar7 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (*(int *)(lVar7 + 168) <= iVar3) {
                     iVar3 = *(int *)(lVar8 + 60);
-                    lVar8 = FUN_18046c6c0();
+                    lVar8 = FUN_180210d40();
                     if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
-                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180ca8229;
+                    if (iVar3 <= *(int *)(lVar8 + 172)) goto LAB_180a2bd09;
                   }
                 }
               }
               else {
                 if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = ItemData.Equiped();
-                if (!cVar1) goto LAB_180ca81a9;
+                if (!cVar1) goto LAB_180a2bc89;
               }
               uVar10 = uVar10 + 1;
             }
@@ -1455,19 +1456,19 @@ public class ItemListController
               if (cVar1) {
                 if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 uVar5 = *(uint64 *)(this.scrollRect + 72);
                 cVar1 = Object.op_Inequality(uVar5,0,0);
                 if (cVar1) {
                   if (this.scrollRect == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   lVar4 = *(int64 *)(this.scrollRect + 72);
                   if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   Scrollbar.set_value(lVar4,0x3f800000,0);
                 }
@@ -1479,8 +1480,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001895
-    // RVA   : 0xCA63D0   Offset: 0xCA57D0   Length: 0x295
+    // Token : 0x6001911
+    // RVA   : 0xA29EA0   Offset: 0xA28CA0   Length: 0x295
     private void CalculateLayout()
     {
         ulong uVar1;
@@ -1517,7 +1518,7 @@ public class ItemListController
           puVar6 = (uint64 *)RectTransform.get_rect(local_38,lVar7,0);
           local_48 = *puVar6;
           uStack_40 = puVar6[1];
-          fVar8 = (float)FUN_180d995b0(&local_48,0);
+          fVar8 = (float)FUN_180af4e40(&local_48,0);
           uVar3 = Mathf.FloorToInt((this.spacingX +
                                     ((fVar8 - (float)this.paddingLeft) -
                                     (float)this.paddingRight)) /
@@ -1535,7 +1536,7 @@ public class ItemListController
             puVar6 = (uint64 *)RectTransform.get_rect(local_38,this.viewportRect,0);
             local_48 = *puVar6;
             uStack_40 = puVar6[1];
-            FUN_18044e2b0(&local_48,0);
+            FUN_180af4db0(&local_48,0);
           }
           uVar3 = Mathf.Max();
           lVar7 = this.contentRect;
@@ -1547,11 +1548,11 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001896
-    // RVA   : 0xCA7470   Offset: 0xCA6870   Length: 0x11
+    // Token : 0x6001912
+    // RVA   : 0xA2AF40   Offset: 0xA29D40   Length: 0x11
     private void OnScroll(Vector2 pos)
     {
-        void FUN_180ca7470(int64 this)
+        void FUN_180a2af40(int64 this)
         {
         if (!this.isRefreshing) {
           ItemListController.UpdateVisibleCells(this,0,0);
@@ -1559,8 +1560,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001897
-    // RVA   : 0xCA8B20   Offset: 0xCA7F20   Length: 0x77E
+    // Token : 0x6001913
+    // RVA   : 0xA2C600   Offset: 0xA2B400   Length: 0x77E
     private void UpdateVisibleCells(bool forceRebind)
     {
         int iVar1;
@@ -1599,18 +1600,18 @@ public class ItemListController
         if (this.currentDataList != null) {
           if (this.currentDataList.Count == null) {
             if (this.activeItemMap != null) {
-              FUN_1808abff0(&local_98,this.activeItemMap,DAT_181db9dd8);
+              FUN_1806db990(&local_98,this.activeItemMap,DAT_181e9b3b0);
               local_c0 = local_98;
               uStack_b8 = uStack_90;
               local_b0 = local_88;
               uStack_a8 = uStack_80;
               local_a0 = local_78;
-              while (cVar3 = FUN_1811c6100(&local_c0,DAT_181d985f0), cVar3) {
+              while (cVar3 = FUN_180dd7700(&local_c0,DAT_181e7a3b0), cVar3) {
                 ItemListController.RecycleIcon(this,uStack_a8,0);
               }
-              ZhSegment.Initialize(&local_c0,DAT_181d98570);
+              ZhSegment.Initialize(&local_c0,DAT_181e7a330);
               if (this.activeItemMap != null) {
-                Dictionary_2.Clear(this.activeItemMap,DAT_181db9cc8);
+                Dictionary_2.Clear(this.activeItemMap,DAT_181e9b2a0);
                 return;
               }
             }
@@ -1623,11 +1624,11 @@ public class ItemListController
               fVar13 = 600.0;
             }
             else {
-              if (this.viewportRect == null) goto LAB_180ca9288;
+              if (this.viewportRect == null) goto LAB_180a2cd68;
               puVar6 = (uint64 *)RectTransform.get_rect(&local_d8,this.viewportRect,0);
               local_70 = *puVar6;
               uStack_68 = puVar6[1];
-              fVar13 = (float)FUN_18044e2b0(&local_70,0);
+              fVar13 = (float)FUN_180af4db0(&local_70,0);
             }
             fVar14 = this.spacingY + this.cellHeight;
             iVar4 = Mathf.FloorToInt((extraout_var - (float)this.paddingTop) / fVar14,0);
@@ -1648,15 +1649,15 @@ public class ItemListController
                 this.lastMaxIndex = iVar5;
                 local_c8 = iVar5;
                 if (this.toRemoveCache != null) {
-                  FUN_1812fa020(this.toRemoveCache,DAT_181d8f330);
+                  FUN_18115d8f0(this.toRemoveCache,DAT_181e714f0);
                   if (this.activeItemMap != null) {
-                    FUN_1808abff0(&local_98,this.activeItemMap,DAT_181db9dd8);
+                    FUN_1806db990(&local_98,this.activeItemMap,DAT_181e9b3b0);
                     local_c0 = local_98;
                     uStack_b8 = uStack_90;
                     local_b0 = local_88;
                     uStack_a8 = uStack_80;
                     local_a0 = local_78;
-                    while (cVar3 = FUN_1811c6100(&local_c0,DAT_181d985f0), cVar3) {
+                    while (cVar3 = FUN_180dd7700(&local_c0,DAT_181e7a3b0), cVar3) {
                       uStack_d0 = (uint32)uStack_a8;
                       uStack_cc = uStack_a8._4_4_;
                       local_d8 = local_b0;
@@ -1664,12 +1665,12 @@ public class ItemListController
                         ItemListController.RecycleIcon(this,uStack_a8,0);
                         if (this.toRemoveCache == null) {
                           // WARNING: Subroutine does not return
-                          FUN_1800d6620();
+                          FUN_1801e0300();
                         }
-                        FUN_18182a6c0(this.toRemoveCache,local_d8 & 0xffffffff);
+                        FUN_181769fe0(this.toRemoveCache,local_d8 & 0xffffffff);
                       }
                     }
-                    ZhSegment.Initialize(&local_c0,DAT_181d98570);
+                    ZhSegment.Initialize(&local_c0,DAT_181e7a330);
                     uVar12 = 0;
                     lVar7 = this.toRemoveCache;
                     if (lVar7 != null) {
@@ -1677,7 +1678,7 @@ public class ItemListController
                       do {
                         if (lVar7.Count <= (int)uVar12) {
                           iVar1 = this.itemListInteractType;
-                          goto LAB_180ca8fb9;
+                          goto LAB_180a2ca99;
                         }
                         lVar2 = this.activeItemMap;
                         if (lVar7 == null) break;
@@ -1685,8 +1686,8 @@ public class ItemListController
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         if (lVar2 == null) break;
-                        FUN_18175ddb0(lVar2,*(uint32 *)(lVar7._items + lVar11),
-                                      DAT_181db9e60);
+                        FUN_181687ae0(lVar2,*(uint32 *)(lVar7._items + lVar11),
+                                      DAT_181e9b438);
                         uVar12 = uVar12 + 1;
                         lVar11 = lVar11 + 4;
                         lVar7 = this.toRemoveCache;
@@ -1698,24 +1699,24 @@ public class ItemListController
             }
           }
         }
-        LAB_180ca9288:
+        LAB_180a2cd68:
                           // WARNING: Subroutine does not return
-        FUN_1800d6620();
-        LAB_180ca8fb9:
+        FUN_1801e0300();
+        LAB_180a2ca99:
         if (iVar5 < iVar4) {
           return;
         }
-        if (this.activeItemMap == null) goto LAB_180ca9288;
-        cVar3 = FUN_1808ab490(this.activeItemMap,iVar4,DAT_181db9d50);
+        if (this.activeItemMap == null) goto LAB_180a2cd68;
+        cVar3 = FUN_1806da450(this.activeItemMap,iVar4,DAT_181e9b328);
         if (!cVar3) {
           lVar7 = ItemListController.RentIcon(this,0);
-          if (lVar7 == null) goto LAB_180ca9288;
-          uVar8 = GameObject.GetComponent(lVar7,DAT_181d72bc8);
+          if (lVar7 == null) goto LAB_180a2cd68;
+          uVar8 = GameObject.GetComponent(lVar7,DAT_181e55c90);
           ItemListController.PositionItem(this,uVar8,iVar4,0);
-          lVar11 = GameObject.GetComponent(lVar7,DAT_181d720a0);
+          lVar11 = GameObject.GetComponent(lVar7,DAT_181e55168);
           if ((this.currentDataList == null) ||
-             (uVar8 = FUN_180002f80(this.currentDataList,iVar4,DAT_181d90f30), lVar11 == null))
-          goto LAB_180ca9288;
+             (uVar8 = FUN_1800024b0(this.currentDataList,iVar4,DAT_181e73170), lVar11 == null))
+          goto LAB_180a2cd68;
           *(uint64 *)(lVar11 + 32) = uVar8;
           *(int *)(lVar11 + 24) = iVar4;
           if (iVar1 < 2 || 5 < iVar1) {
@@ -1723,34 +1724,34 @@ public class ItemListController
           }
           else {
             *(uint32 *)(lVar11 + 40) = 2;
-            uVar8 = DAT_181dc3538;
+            uVar8 = DAT_181ea3018;
             local_d8 = Type.GetTypeFromHandle(uVar8,0);
-            plVar9 = (int64 *)il2cpp_value_box(DAT_181d822b0,this + 32);
-            if (plVar9 == (int64 *)0) goto LAB_180ca9288;
+            plVar9 = (int64 *)il2cpp_value_box(DAT_181e62670,this + 32);
+            if (plVar9 == (int64 *)0) goto LAB_180a2cd68;
             uVar8 = (**(code **)(*plVar9 + 0x168))(plVar9,*(uint64 *)(*plVar9 + 0x170));
             puVar10 = (uint32 *)il2cpp_object_unbox(plVar9);
             this.itemListInteractType = *puVar10;
             plVar9 = (int64 *)Enum.Parse(local_d8,uVar8,0);
-            if (plVar9 == (int64 *)0) goto LAB_180ca9288;
-            if (*(int64 *)(*plVar9 + 64) != *(int64 *)(DAT_181dad310 + 64)) {
+            if (plVar9 == (int64 *)0) goto LAB_180a2cd68;
+            if (*(int64 *)(*plVar9 + 64) != *(int64 *)(DAT_181e8d758 + 64)) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6070(plVar9,DAT_181dad310);
+              FUN_1801dfd50(plVar9,DAT_181e8d758);
             }
             puVar10 = (uint32 *)il2cpp_object_unbox();
             *(uint32 *)(lVar11 + 44) = *puVar10;
-            *(uint8 *)(lVar11 + 55) = 1;
+            *(uint8 *)(lVar11 + 67) = 1;
           }
           ItemIconController.AutoSetName
                     (lVar11,this.itemSortType,this.reverseOrder,0);
-          if (this.activeItemMap == null) goto LAB_180ca9288;
-          FUN_1808ab370(this.activeItemMap,iVar4,lVar7);
+          if (this.activeItemMap == null) goto LAB_180a2cd68;
+          FUN_1806da2f0(this.activeItemMap,iVar4,lVar7);
         }
         iVar4 = iVar4 + 1;
-        goto LAB_180ca8fb9;
+        goto LAB_180a2ca99;
     }
 
-    // Token : 0x6001898
-    // RVA   : 0xCA7490   Offset: 0xCA6890   Length: 0x482
+    // Token : 0x6001914
+    // RVA   : 0xA2AF60   Offset: 0xA29D60   Length: 0x482
     private void PositionItem(RectTransform rt, int index)
     {
         int iVar1;
@@ -1777,12 +1778,12 @@ public class ItemListController
           puVar3 = (uint64 *)RectTransform.get_rect(&local_c0,this.contentRect,0);
           local_b0 = *puVar3;
           uStack_a8 = puVar3[1];
-          fVar7 = (float)FUN_180d995b0(&local_b0,0);
+          fVar7 = (float)FUN_180af4e40(&local_b0,0);
           if (this.contentRect != null) {
             puVar3 = (uint64 *)RectTransform.get_rect(&local_c0,this.contentRect,0);
             local_b0 = *puVar3;
             uStack_a8 = puVar3[1];
-            fVar8 = (float)FUN_18044e2b0(&local_b0,0);
+            fVar8 = (float)FUN_180af4db0(&local_b0,0);
             if (this.contentRect != null) {
               uVar4 = RectTransform.get_pivot(this.contentRect,0);
               fStackX_c = (float)((uint64)uVar4 >> 32);
@@ -1847,8 +1848,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x6001899
-    // RVA   : 0xCA70F0   Offset: 0xCA64F0   Length: 0xEC
+    // Token : 0x6001915
+    // RVA   : 0xA2ABC0   Offset: 0xA299C0   Length: 0xEC
     public void FreshList(bool resetPos)
     {
         ulong uVar1;
@@ -1860,16 +1861,16 @@ public class ItemListController
           cVar3 = Object.op_Inequality(uVar1,0,0);
           if (cVar3) {
             if (this.scrollRect == null) {
-        LAB_180ca71d7:
+        LAB_180a2aca7:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             uVar1 = *(uint64 *)(this.scrollRect + 72);
             cVar3 = Object.op_Inequality(uVar1,0,0);
             if (cVar3) {
               if ((this.scrollRect == null) ||
                  (lVar2 = *(int64 *)(this.scrollRect + 72)) == null)
-              goto LAB_180ca71d7;
+              goto LAB_180a2aca7;
               Scrollbar.set_value(lVar2,0x3f800000,0);
             }
           }
@@ -1877,27 +1878,27 @@ public class ItemListController
         ItemListController.UpdateVisibleCells(this,1,0);
     }
 
-    // Token : 0x600189A
-    // RVA   : 0xCA6AF0   Offset: 0xCA5EF0   Length: 0x256
+    // Token : 0x6001916
+    // RVA   : 0xA2A5C0   Offset: 0xA293C0   Length: 0x256
     public void ChangeSortType()
     {
         ulong uVar1;
         bool cVar2;
         long lVar3;
-        if (this.sortTypeDropDown == null) goto LAB_180ca6d41;
+        if (this.sortTypeDropDown == null) goto LAB_180a2a811;
         this.itemSortType = *(uint32 *)(this.sortTypeDropDown + 0x120);
         if (this.recordSortType) {
-          uVar1 = **(uint64 **)(DAT_181d72cc8 + 184);
+          uVar1 = **(uint64 **)(DAT_181e52870 + 184);
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (cVar2) {
             if (GameController._instance == null) {
-        LAB_180ca6d41:
+        LAB_180a2a811:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (GameController._instance.worldData != null) {
-              lVar3 = FUN_18046c0a0(0);
-              if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) goto LAB_180ca6d41;
+              lVar3 = FUN_1802106e0(0);
+              if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) goto LAB_180a2a811;
               *(uint32 *)(*(int64 *)(lVar3 + 32) + 0x250) = this.itemSortType;
             }
           }
@@ -1906,14 +1907,14 @@ public class ItemListController
         ItemListController.UpdateVisibleCells(this,1,0);
         plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
         plVar5 = (int64 *)0;
-        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+        if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
           plVar5 = plVar4;
         }
         NGUITools.PlaySound(plVar5,0x3f19999a,0);
     }
 
-    // Token : 0x600189B
-    // RVA   : 0xCA67B0   Offset: 0xCA5BB0   Length: 0x336
+    // Token : 0x6001917
+    // RVA   : 0xA2A280   Offset: 0xA29080   Length: 0x336
     public void ChangeReverseType(GameObject ButtonClicked)
     {
         bool cVar1;
@@ -1925,12 +1926,12 @@ public class ItemListController
         uint local_10;
         this.reverseOrder = !this.reverseOrder;
         if (this.recordSortType) {
-          uVar3 = **(uint64 **)(DAT_181d72cc8 + 184);
+          uVar3 = **(uint64 **)(DAT_181e52870 + 184);
           cVar1 = Object.op_Inequality(uVar3,0,0);
           if (cVar1) {
             if (GameController._instance == null) throw; // [null/range check failed]
             if (GameController._instance.worldData != null) {
-              lVar2 = FUN_18046c0a0(0);
+              lVar2 = FUN_1802106e0(0);
               if ((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) throw; // [null/range check failed]
               *(uint8 *)(*(int64 *)(lVar2 + 32) + 0x254) = this.reverseOrder;
             }
@@ -1948,7 +1949,7 @@ public class ItemListController
             local_10 = 0x3f800000;
             local_14 = (float)iVar5;
             ShortcutExtensions.DOScale(uVar3,&local_18,0x3e4ccccd,0);
-            lVar2 = GameObject.GetComponent(ButtonClicked,DAT_181d73448);
+            lVar2 = GameObject.GetComponent(ButtonClicked,DAT_181e56510);
             uVar3 = "升序";
             if (this.reverseOrder) {
               uVar3 = "降序";
@@ -1959,7 +1960,7 @@ public class ItemListController
               ItemListController.UpdateVisibleCells(this,1,0);
               plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
               plVar6 = (int64 *)0;
-              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+              if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
                 plVar6 = plVar4;
               }
               NGUITools.PlaySound(plVar6,0x3f19999a,0);
@@ -1969,8 +1970,8 @@ public class ItemListController
         }
     }
 
-    // Token : 0x600189C
-    // RVA   : 0xCA8710   Offset: 0xCA7B10   Length: 0x403
+    // Token : 0x6001918
+    // RVA   : 0xA2C1F0   Offset: 0xA2AFF0   Length: 0x403
     public void ResetSortType()
     {
         byte uVar2;
@@ -1998,8 +1999,8 @@ public class ItemListController
           if (this.targetItemList != null) {
             lVar13 = this.targetItemList.allItem;
           }
-          lVar8 = il2cpp_internal(DAT_181d81e00);
-          FUN_1808b1490(lVar8,iVar3,DAT_181dc21a0);
+          lVar8 = il2cpp_internal(DAT_181e61bc0);
+          FUN_1806e5e00(lVar8,iVar3,DAT_181ea3a28);
           lVar12 = 32;
           local_res20 = 32;
           if (lVar13 != null) {
@@ -2008,11 +2009,11 @@ public class ItemListController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               if (lVar8 == null) throw; // [null/range check failed]
-              cVar6 = FUN_1808ab490(lVar8,*(uint64 *)(lVar12 + *(int64 *)(lVar13 + 16)),
-                                    DAT_181dc22b0);
+              cVar6 = FUN_1806da450(lVar8,*(uint64 *)(lVar12 + *(int64 *)(lVar13 + 16)),
+                                    DAT_181ea3b38);
               if (!cVar6) {
-                uVar9 = FUN_180002f80(lVar13,uVar11,DAT_181d90f30);
-                FUN_1808ab370(lVar8,uVar9,uVar11,DAT_181dc2228);
+                uVar9 = FUN_1800024b0(lVar13,uVar11,DAT_181e73170);
+                FUN_1806da2f0(lVar8,uVar9,uVar11,DAT_181ea3ab0);
               }
               lVar12 = lVar12 + 8;
             }
@@ -2020,8 +2021,8 @@ public class ItemListController
           lVar13 = 32;
           if (this.currentDataList != null) {
             uVar4 = this.currentDataList.Count;
-            lVar12 = il2cpp_internal(DAT_181d81e80);
-            FUN_1808b1490(lVar12,uVar4,DAT_181dc23c0);
+            lVar12 = il2cpp_internal(DAT_181e61c40);
+            FUN_1806e5e00(lVar12,uVar4,DAT_181ea3c48);
             if (lVar7 != null) {
               plVar1 = (int64 *)(lVar7 + 16);
               *plVar1 = lVar12;
@@ -2030,9 +2031,9 @@ public class ItemListController
               lVar12 = this.currentDataList;
               while (lVar12 != null) {
                 if (lVar12.Count <= (int)uVar11) {
-                  uVar9 = new OnTooltipCB(lVar7,DAT_181da62e0,DAT_181dab4d0);
+                  uVar9 = new OnTooltipCB(lVar7,DAT_181e89ca0,DAT_181e8be90);
                   if (lVar12 != null) {
-                    List_1.Sort(lVar12,uVar9,DAT_181d90e30);
+                    List_1.Sort(lVar12,uVar9,DAT_181e73070);
                     return;
                   }
                   break;
@@ -2042,22 +2043,22 @@ public class ItemListController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 if (lVar8 == null) break;
-                cVar6 = FUN_1817c0aa0(lVar8,*(uint64 *)(lVar13 + lVar12._items),
-                                      local_res18,DAT_181dc2338);
+                cVar6 = FUN_1817014b0(lVar8,*(uint64 *)(lVar13 + lVar12._items),
+                                      local_res18,DAT_181ea3bc0);
                 if (!cVar6) {
                   local_res18[0] = uVar11;
                 }
                 lVar13 = *plVar1;
                 if (this.currentDataList == null) break;
-                uVar9 = FUN_180002f80(this.currentDataList,uVar11,DAT_181d90f30);
+                uVar9 = FUN_1800024b0(this.currentDataList,uVar11,DAT_181e73170);
                 if (this.currentDataList == null) break;
-                uVar10 = FUN_180002f80(this.currentDataList,uVar11,DAT_181d90f30);
+                uVar10 = FUN_1800024b0(this.currentDataList,uVar11,DAT_181e73170);
                 uVar5 = local_res18[0];
                 uVar2 = this.reverseOrder;
                 uVar4 = this.itemSortType;
                 uVar10 = ItemIconController.BuildSortKey(uVar10,uVar5,uVar4,uVar2,0);
                 if (lVar13 == null) break;
-                FUN_1808b2160(lVar13,uVar9,uVar10,DAT_181dc24d0);
+                FUN_1806e7630(lVar13,uVar9,uVar10,DAT_181ea3d58);
                 uVar11 = uVar11 + 1;
                 lVar13 = local_res20 + 8;
                 local_res20 = lVar13;
@@ -2068,16 +2069,16 @@ public class ItemListController
         }
     }
 
-    // Token : 0x600189D
-    // RVA   : 0xCA9320   Offset: 0xCA8720   Length: 0x17B
+    // Token : 0x6001919
+    // RVA   : 0xA2CE00   Offset: 0xA2BC00   Length: 0x17B
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d940e8);
-        FUN_181330100(uVar1,DAT_181d909b0);
+        uVar1 = il2cpp_internal(DAT_181e740b8);
+        FUN_1810f3480(uVar1,DAT_181e72b70);
         this.currentDataList = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d80e00);
-        FUN_1808b1370(uVar1,DAT_181db9bb8);
+        uVar1 = il2cpp_internal(DAT_181e60bd0);
+        FUN_1806e5bc0(uVar1,DAT_181e9b190);
         this.activeItemMap = uVar1;
         this.cellWidth = 0x42a00000;
         this.cellHeight = 0x42a00000;
@@ -2089,22 +2090,22 @@ public class ItemListController
         this.paddingBottom = 10;
         this.columnCount = 5;
         this.gridConstraintCount = 2;
-        uVar1 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(uVar1,DAT_181d8f0b0);
+        uVar1 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(uVar1,DAT_181e71270);
         this.toRemoveCache = uVar1;
         this.lastMinIndex = 0x80000000;
         this.lastMaxIndex = 0x80000000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x600189E
-    // RVA   : 0xCA92A0   Offset: 0xCA86A0   Length: 0x76
+    // Token : 0x600191A
+    // RVA   : 0xA2CD80   Offset: 0xA2BB80   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d9c9e8);
-        FUN_1814b34a0(uVar2,DAT_181dc0730);
-        puVar1 = *(uint64 **)(DAT_181d821b0 + 184);
+        uVar2 = il2cpp_internal(DAT_181e7caa8);
+        FUN_181021e90(uVar2,DAT_181ea34b8);
+        puVar1 = *(uint64 **)(DAT_181e62570 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

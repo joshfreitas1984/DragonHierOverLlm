@@ -1,52 +1,52 @@
 // ============================================================
 // Type  : SpePoisonData
-// Token : 0x20001DD
+// Token : 0x20001DF
 // ============================================================
 
 public class SpePoisonData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000CA6
+    // Token: 0x4000CB9
     public List<ItemData> material;
 
-    // Token: 0x4000CA7
+    // Token: 0x4000CBA
     public int leftTime;
 
-    // Token: 0x4000CA8
+    // Token: 0x4000CBB
     public bool finished;
 
-    // Token: 0x4000CA9
+    // Token: 0x4000CBC
     public ItemData result;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000ED0
-    // RVA   : 0xC58BD0   Offset: 0xC57FD0   Length: 0xBF
+    // Token : 0x6000ED6
+    // RVA   : 0xA01DF0   Offset: 0xA00BF0   Length: 0xBF
     public void /*ctor*/()
     {
         long lVar1;
         ZhSegment.Initialize(this,0);
-        lVar1 = il2cpp_internal(DAT_181d940e8);
-        FUN_181330100(lVar1,DAT_181d909b0);
+        lVar1 = il2cpp_internal(DAT_181e740b8);
+        FUN_1810f3480(lVar1,DAT_181e72b70);
         if (lVar1 != null) {
-          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
-          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
-          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18175de30(lVar1,0,DAT_181e72cf0);
+          FUN_18175de30(lVar1,0,DAT_181e72cf0);
+          FUN_18175de30(lVar1,0,DAT_181e72cf0);
           this.material = lVar1;
           return;
         }
     }
 
-    // Token : 0x6000ED1
-    // RVA   : 0xC58B00   Offset: 0xC57F00   Length: 0xCB
+    // Token : 0x6000ED7
+    // RVA   : 0xA01D20   Offset: 0xA00B20   Length: 0xCB
     public void Reset()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d940e8);
-        FUN_181330100(lVar1,DAT_181d909b0);
+        lVar1 = il2cpp_internal(DAT_181e740b8);
+        FUN_1810f3480(lVar1,DAT_181e72b70);
         if (lVar1 != null) {
-          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
-          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
-          FUN_18181e6b0(lVar1,0,DAT_181d90ab0);
+          FUN_18175de30(lVar1,0,DAT_181e72cf0);
+          FUN_18175de30(lVar1,0,DAT_181e72cf0);
+          FUN_18175de30(lVar1,0,DAT_181e72cf0);
           this.material = lVar1;
           this.leftTime = 0;
           this.finished = 0;
@@ -55,8 +55,8 @@ public class SpePoisonData
         }
     }
 
-    // Token : 0x6000ED2
-    // RVA   : 0xC589F0   Offset: 0xC57DF0   Length: 0x10E
+    // Token : 0x6000ED8
+    // RVA   : 0xA01C10   Offset: 0xA00A10   Length: 0x10E
     public float GetTotalScore(int spePoisonType)
     {
         long lVar1;
@@ -84,7 +84,7 @@ public class SpePoisonData
             }
             if (*(int64 *)(lVar2 + lVar1._items) != 0) {
               if ((this.material == null) ||
-                 (lVar1 = FUN_180002f80(this.material,uVar3,DAT_181d90f30)) == null)
+                 (lVar1 = FUN_1800024b0(this.material,uVar3,DAT_181e73170)) == null)
               break;
               fVar4 = fVar4 + (float)*(int *)(lVar1 + 56);
             }
@@ -95,8 +95,8 @@ public class SpePoisonData
         }
     }
 
-    // Token : 0x6000ED3
-    // RVA   : 0xC589B0   Offset: 0xC57DB0   Length: 0x3B
+    // Token : 0x6000ED9
+    // RVA   : 0xA01BD0   Offset: 0xA009D0   Length: 0x3B
     public float GetScoreLv(int spePoisonType)
     {
         float fVar1;

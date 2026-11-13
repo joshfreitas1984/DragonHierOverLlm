@@ -1,84 +1,84 @@
 // ============================================================
 // Type  : AIStuffType
-// Token : 0x2000130
+// Token : 0x200012C
 // ============================================================
 
 public class AIStuffType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000763
+    // Token: 0x4000740
     public int value__;
 
-    // Token: 0x4000764
+    // Token: 0x4000741
     public const AIStuffType None;
 
-    // Token: 0x4000765
+    // Token: 0x4000742
     public const AIStuffType MoveOnBigMap;
 
-    // Token: 0x4000766
+    // Token: 0x4000743
     public const AIStuffType Free;
 
-    // Token: 0x4000767
+    // Token: 0x4000744
     public const AIStuffType Rest;
 
-    // Token: 0x4000768
+    // Token: 0x4000745
     public const AIStuffType CureSelf;
 
-    // Token: 0x4000769
+    // Token: 0x4000746
     public const AIStuffType StudyFightSkill;
 
-    // Token: 0x400076A
+    // Token: 0x4000747
     public const AIStuffType StudyLivingSkill;
 
-    // Token: 0x400076B
+    // Token: 0x4000748
     public const AIStuffType CollectResource;
 
-    // Token: 0x400076C
+    // Token: 0x4000749
     public const AIStuffType MakeMoney;
 
-    // Token: 0x400076D
+    // Token: 0x400074A
     public const AIStuffType Trade;
 
-    // Token: 0x400076E
+    // Token: 0x400074B
     public const AIStuffType Explore;
 
-    // Token: 0x400076F
+    // Token: 0x400074C
     public const AIStuffType MakeFriend;
 
-    // Token: 0x4000770
+    // Token: 0x400074D
     public const AIStuffType StudyFight;
 
-    // Token: 0x4000771
+    // Token: 0x400074E
     public const AIStuffType AttackEnemy;
 
-    // Token: 0x4000772
+    // Token: 0x400074F
     public const AIStuffType FinishMission;
 
-    // Token: 0x4000773
+    // Token: 0x4000750
     public const AIStuffType RandomSpeEvent;
 
-    // Token: 0x4000774
+    // Token: 0x4000751
     public const AIStuffType Prison;
 
-    // Token: 0x4000775
+    // Token: 0x4000752
     public const AIStuffType ReduceBadFame;
 
-    // Token: 0x4000776
+    // Token: 0x4000753
     public const AIStuffType StudyNewFightSkill;
 
-    // Token: 0x4000777
+    // Token: 0x4000754
     public const AIStuffType AddAreaState;
 
-    // Token: 0x4000778
+    // Token: 0x4000755
     public const AIStuffType ReduceAreaState;
 
-    // Token: 0x4000779
+    // Token: 0x4000756
     public const AIStuffType CraftFood;
 
-    // Token: 0x400077A
+    // Token: 0x4000757
     public const AIStuffType CraftMed;
 
-    // Token: 0x400077B
+    // Token: 0x4000758
     public const AIStuffType CraftEquip;
 
 }

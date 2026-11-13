@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : Scaling
-// Token : 0x200010A
+// Token : 0x2000109
 // ============================================================
 
 public class Scaling
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40006AD
+    // Token: 0x400068D
     public int value__;
 
-    // Token: 0x40006AE
+    // Token: 0x400068E
     public const Scaling Flexible;
 
-    // Token: 0x40006AF
+    // Token: 0x400068F
     public const Scaling Constrained;
 
-    // Token: 0x40006B0
+    // Token: 0x4000690
     public const Scaling ConstrainedOnMobiles;
 
 }

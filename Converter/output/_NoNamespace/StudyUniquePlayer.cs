@@ -1,56 +1,56 @@
 // ============================================================
 // Type  : StudyUniquePlayer
-// Token : 0x2000392
+// Token : 0x200039F
 // ============================================================
 
 public class StudyUniquePlayer
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D35
+    // Token: 0x4001DC7
     public SkeletonAnimation playerSkeleton;
 
-    // Token: 0x4001D36
+    // Token: 0x4001DC8
     public GameObject hipPos;
 
-    // Token: 0x4001D37
+    // Token: 0x4001DC9
     public float shieldTime;
 
-    // Token: 0x4001D38
+    // Token: 0x4001DCA
     public GameObject shieldSpe;
 
-    // Token: 0x4001D39
+    // Token: 0x4001DCB
     private GameObject newObj;
 
-    // Token: 0x4001D3A
+    // Token: 0x4001DCC
     private static StudyUniquePlayer _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60022B0
-    // RVA   : 0xFE6D50   Offset: 0xFE6150   Length: 0x36
+    // Token : 0x600235A
+    // RVA   : 0xDB7E10   Offset: 0xDB6C10   Length: 0x36
     public static StudyUniquePlayer get_Instance()
     {
-        return **(uint64 **)(DAT_181da8228 + 184);
+        return **(uint64 **)(DAT_181e88668 + 184);
     }
 
-    // Token : 0x60022B1
-    // RVA   : 0xFE5730   Offset: 0xFE4B30   Length: 0x43
+    // Token : 0x600235B
+    // RVA   : 0xDB67F0   Offset: 0xDB55F0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da8228 + 184);
+        puVar1 = *(uint64 **)(DAT_181e88668 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60022B2
-    // RVA   : 0xFE6CB0   Offset: 0xFE60B0   Length: 0x90
+    // Token : 0x600235C
+    // RVA   : 0xDB7D70   Offset: 0xDB6B70   Length: 0x90
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181da82a8 + 184);
+        var pStatics = *(int64*)(DAT_181e886e8 + 184);
         float fVar1;
         float fVar2;
         if (*pStatics == 0) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if ((*(char *)(*pStatics + 25) == false) &&
            (fVar2 = this.shieldTime, 0.0 < fVar2)) {
@@ -63,8 +63,8 @@ public class StudyUniquePlayer
         }
     }
 
-    // Token : 0x60022B3
-    // RVA   : 0xFE69B0   Offset: 0xFE5DB0   Length: 0x2F2
+    // Token : 0x600235D
+    // RVA   : 0xDB7A70   Offset: 0xDB6870   Length: 0x2F2
     public void SetShieldTime(float targetTime)
     {
         bool cVar2;
@@ -94,29 +94,29 @@ public class StudyUniquePlayer
               local_30 = -0.001;
               local_38 = 0;
               plVar7 = (int64 *)0;
-              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181d72e60)) {
+              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181e52a08)) {
                 plVar7 = plVar3;
               }
               lVar4 = GlobalData.AddChild(uVar6,plVar7,&local_38,&local_28,0);
               this.shieldSpe = lVar4;
               il2cpp_internal(plVar1,lVar4);
               if (this.shieldSpe != null) {
-                uVar6 = GameObject.GetComponent(this.shieldSpe,DAT_181dc7310);
+                uVar6 = GameObject.GetComponent(this.shieldSpe,DAT_181e533a8);
                 cVar2 = Object.op_Inequality(uVar6,0,0);
                 if (!cVar2) {
                   return;
                 }
                 if ((this.shieldSpe != null) &&
-                   (lVar4 = GameObject.GetComponent(this.shieldSpe,DAT_181dc7310)) != null) {
+                   (lVar4 = GameObject.GetComponent(this.shieldSpe,DAT_181e533a8)) != null) {
                   fVar8 = (float)AudioSource.get_volume(lVar4,0);
                   AudioSource.set_volume
-                            (lVar4,fVar8 * *(float *)(*(int64 *)(DAT_181d72d50 + 184) + 16),0);
+                            (lVar4,fVar8 * *(float *)(*(int64 *)(DAT_181e528f8 + 184) + 16),0);
                   return;
                 }
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
         else {
@@ -129,14 +129,14 @@ public class StudyUniquePlayer
         }
     }
 
-    // Token : 0x60022B4
-    // RVA   : 0xFE5780   Offset: 0xFE4B80   Length: 0xE36
+    // Token : 0x600235E
+    // RVA   : 0xDB6840   Offset: 0xDB5640   Length: 0xE36
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var pStatics_1bf8 = *(int64*)(DAT_181da1bf8 + 184);
-        var pStatics_2d50 = *(int64*)(DAT_181d72d50 + 184);
-        var pStatics_82a8 = *(int64*)(DAT_181da82a8 + 184);
-        var pStatics_bea0 = *(int64*)(DAT_181dabea0 + 184);
+        var pStatics_2048 = *(int64*)(DAT_181e82048 + 184);
+        var pStatics_28f8 = *(int64*)(DAT_181e528f8 + 184);
+        var pStatics_86e8 = *(int64*)(DAT_181e886e8 + 184);
+        var pStatics_c2e8 = *(int64*)(DAT_181e8c2e8 + 184);
         float fVar3;
         float fVar4;
         int iVar5;
@@ -173,14 +173,14 @@ public class StudyUniquePlayer
                 if (!cVar7) {
                   return;
                 }
-                if ((*plVar1 != 0) && (lVar9 = Component.GetComponent(*plVar1,DAT_181d95f78)) != null
+                if ((*plVar1 != 0) && (lVar9 = Component.GetComponent(*plVar1,DAT_181e79338)) != null
                    ) {
                   iVar5 = *(int *)(lVar9 + 24);
                   if (iVar5 == 0) {
-                    lVar9 = FUN_180fd1020(0);
+                    lVar9 = FUN_180da20e0(0);
                     if (lVar9 != null) {
                       StudyUniqueSkillController.ChangeCombo(lVar9,3);
-                      lVar9 = FUN_18046c0a0(0);
+                      lVar9 = FUN_1802106e0(0);
                       puVar11 = (uint64 *)Vector3.get_zero(local_88,0);
                       uVar10 = *puVar11;
                       uVar6 = *(uint32 *)(puVar11 + 1);
@@ -195,7 +195,7 @@ public class StudyUniquePlayer
                         GameController.ShowTextAtPos(lVar9,"连击+3",&local_a8,20,&local_78,0);
                         plVar14 = (int64 *)Resources.Load("Sound/SoundEffect/Success",0);
                         plVar13 = (int64 *)0;
-                        if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181daf360)) {
+                        if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181e8f4a0)) {
                           plVar13 = plVar14;
                         }
                         NGUITools.PlaySound(plVar13,0);
@@ -203,11 +203,11 @@ public class StudyUniquePlayer
                           uVar10 = Component.get_transform(*plVar1,0);
                           ShortcutExtensions.DOKill(uVar10,0,0);
                           if ((*plVar1 != 0) &&
-                             (lVar9 = Component.GetComponent(*plVar1,DAT_181d93a78)) != null) {
+                             (lVar9 = Component.GetComponent(*plVar1,DAT_181e76db8)) != null) {
                             Behaviour.set_enabled(lVar9,0,0);
                             if (*plVar1 != 0) {
                               uVar10 = Component.get_transform(*plVar1,0);
-                              lVar9 = FUN_18046c620(0);
+                              lVar9 = FUN_180210ca0(0);
                               if (((lVar9 != null) && (*(int64 *)(lVar9 + 88) != 0)) &&
                                  (lVar9 = Component.get_transform(*(int64 *)(lVar9 + 88),0),
                                  lVar9 != null)) {
@@ -215,8 +215,8 @@ public class StudyUniquePlayer
                                 local_a8 = *puVar11;
                                 local_a0 = *(float *)(puVar11 + 1);
                                 uVar10 = ShortcutExtensions.DOMove(uVar10,&local_a8,0x3f000000,0,0);
-                                uVar15 = new OnTooltipCB(lVar8,DAT_181db4e60,0);
-                                TweenSettingsExtensions.OnComplete(uVar10,uVar15,DAT_181dc0380);
+                                uVar15 = new OnTooltipCB(lVar8,DAT_181e98c00,0);
+                                TweenSettingsExtensions.OnComplete(uVar10,uVar15,DAT_181ea3dc0);
                                 return;
                               }
                             }
@@ -227,10 +227,10 @@ public class StudyUniquePlayer
                   }
                   else {
                     if (iVar5 == 1) {
-                      lVar8 = FUN_18046c0a0(0);
+                      lVar8 = FUN_1802106e0(0);
                       if ((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) throw; // [null/range check failed]
                       lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0);
-                      lVar9 = FUN_18046c0a0(0);
+                      lVar9 = FUN_1802106e0(0);
                       if ((lVar9 == null) ||
                          (((*(int64 *)(lVar9 + 32) == 0 ||
                            (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) == null) ||
@@ -238,7 +238,7 @@ public class StudyUniquePlayer
                       plVar14 = (int64 *)0;
                       HeroData.ChangeHp(lVar8,*(float *)(lVar9 + 0x17c) * 0.1,1,1,1,
                                          in_stack_ffffffffffffff40 & 0xffffffffffffff00,0);
-                      lVar8 = FUN_18046c0a0(0);
+                      lVar8 = FUN_1802106e0(0);
                       puVar11 = (uint64 *)Vector3.get_zero(local_88,0);
                       uVar10 = *puVar11;
                       uVar6 = *(uint32 *)(puVar11 + 1);
@@ -253,24 +253,24 @@ public class StudyUniquePlayer
                       GameController.ShowTextAtPos(lVar8,"生命+10%",&local_a8,20,&local_78,0);
                       plVar13 = (int64 *)Resources.Load("Sound/SoundEffect/Eat",0);
                       plVar16 = plVar14;
-                      if ((plVar13 != (int64 *)0) && (*plVar13 == DAT_181daf360)) {
+                      if ((plVar13 != (int64 *)0) && (*plVar13 == DAT_181e8f4a0)) {
                         plVar16 = plVar13;
                       }
                       NGUITools.PlaySound(plVar16,0);
                       if (this.playerSkeleton == null) throw; // [null/range check failed]
                       uVar10 = Component.get_gameObject(this.playerSkeleton,0);
                       plVar13 = (int64 *)Resources.Load("SpeEffect/治疗",0);
-                      if ((plVar13 != (int64 *)0) && (*plVar13 == DAT_181d72e60)) {
+                      if ((plVar13 != (int64 *)0) && (*plVar13 == DAT_181e52a08)) {
                         plVar14 = plVar13;
                       }
                       uVar10 = GlobalData.AddChild(uVar10,plVar14,0);
                       this.newObj = uVar10;
                       if (this.newObj == null) throw; // [null/range check failed]
-                      uVar10 = GameObject.GetComponent(this.newObj,DAT_181dc7310);
+                      uVar10 = GameObject.GetComponent(this.newObj,DAT_181e533a8);
                       cVar7 = Object.op_Inequality(uVar10,0,0);
                       if (cVar7) {
                         if ((this.newObj == null) ||
-                           (lVar8 = GameObject.GetComponent(this.newObj,DAT_181dc7310),
+                           (lVar8 = GameObject.GetComponent(this.newObj,DAT_181e533a8),
                            lVar8 == null)) throw; // [null/range check failed]
                         fVar17 = (float)AudioSource.get_volume(lVar8,0);
                         AudioSource.set_volume
@@ -298,7 +298,7 @@ public class StudyUniquePlayer
                 StudyUniquePlayer.SetShieldTime(this,0,0);
                 plVar14 = (int64 *)Resources.Load("Sound/SoundEffect/Break",0);
                 plVar13 = (int64 *)0;
-                if ((plVar14 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar14 == DAT_181daf360)
+                if ((plVar14 != (int64 *)0) && (plVar13 = (int64 *)0, *plVar14 == DAT_181e8f4a0)
                    ) {
                   plVar13 = plVar14;
                 }
@@ -313,31 +313,31 @@ public class StudyUniquePlayer
                   local_a0 = -0.1;
                   local_a8 = 0x3f80000000000000;
                   plVar13 = (int64 *)0;
-                  if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181d72e60)) {
+                  if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181e52a08)) {
                     plVar13 = plVar14;
                   }
                   GlobalData.AddChild(uVar10,plVar13,&local_a8,0);
                 }
-                if ((*plVar1 == 0) || (lVar8 = Component.GetComponent(*plVar1,DAT_181d95ef8)) == null
+                if ((*plVar1 == 0) || (lVar8 = Component.GetComponent(*plVar1,DAT_181e792b8)) == null
                    ) throw; // [null/range check failed]
                 fVar3 = *(float *)(lVar8 + 24);
-                if (*pStatics_82a8 == 0) throw; // [null/range check failed]
-                fVar4 = *(float *)(*pStatics_82a8 + 48);
-                lVar8 = FUN_18046c620(0);
+                if (*pStatics_86e8 == 0) throw; // [null/range check failed]
+                fVar4 = *(float *)(*pStatics_86e8 + 48);
+                lVar8 = FUN_180210ca0(0);
                 if (lVar8 == null) throw; // [null/range check failed]
                 if (*(int64 *)(lVar8 + 40) != 0) {
-                  lVar8 = FUN_18046c620(0);
+                  lVar8 = FUN_180210ca0(0);
                   if ((lVar8 == null) || (*(int64 *)(lVar8 + 40) == 0)) throw; // [null/range check failed]
                   fVar17 = (float)*(int *)(*(int64 *)(lVar8 + 40) + 20) * 0.02;
                 }
                 local_res10[0] = fVar4 * fVar3 * -20.0 * (1.0 - fVar17);
-                lVar8 = FUN_18046c0a0(0);
+                lVar8 = FUN_1802106e0(0);
                 if (((lVar8 == null) || (*(int64 *)(lVar8 + 32) == 0)) ||
                    (lVar8 = WorldData.Player(*(int64 *)(lVar8 + 32),0)) == null)
                 throw; // [null/range check failed]
                 HeroData.ChangeHp(lVar8,local_res10[0],0,0,1,
                                    in_stack_ffffffffffffff40 & 0xffffffffffffff00,0);
-                lVar8 = FUN_18046c0a0(0);
+                lVar8 = FUN_1802106e0(0);
                 uVar10 = Single.ToString(local_res10,"f0",0);
                 if ((*plVar1 == 0) || (lVar9 = Component.get_transform(*plVar1,0)) == null)
                 throw; // [null/range check failed]
@@ -353,21 +353,21 @@ public class StudyUniquePlayer
                 local_a8 = uVar15;
                 local_a0 = (float)uVar6;
                 GameController.ShowTextAtPos(lVar8,uVar10,&local_a8,22,&local_78,0);
-                if (*pStatics_82a8 == 0) throw; // [null/range check failed]
-                piVar2 = (int *)(*pStatics_82a8 + 36);
+                if (*pStatics_86e8 == 0) throw; // [null/range check failed]
+                piVar2 = (int *)(*pStatics_86e8 + 36);
                 *piVar2 = *piVar2 + 1;
-                if (*pStatics_82a8 == 0) throw; // [null/range check failed]
-                StudyUniqueSkillController.ResetCombo(*pStatics_82a8,0);
+                if (*pStatics_86e8 == 0) throw; // [null/range check failed]
+                StudyUniqueSkillController.ResetCombo(*pStatics_86e8,0);
               }
-              if (*pStatics_bea0 != 0) {
+              if (*pStatics_c2e8 != 0) {
                 TimeScaleController.SetSlowTime
-                          (*pStatics_bea0,0x3f000000,0x3e4ccccd,0);
-                if (*pStatics_1bf8 != 0) {
-                  ShakeCam.StartShake(*pStatics_1bf8,2,0);
+                          (*pStatics_c2e8,0x3f000000,0x3e4ccccd,0);
+                if (*pStatics_2048 != 0) {
+                  ShakeCam.StartShake(*pStatics_2048,2,0);
                   if (this.playerSkeleton != null) {
                     uVar10 = Component.get_gameObject(this.playerSkeleton,0);
                     if ((*plVar1 != 0) &&
-                       (lVar8 = Component.GetComponent(*plVar1,DAT_181d95ef8)) != null) {
+                       (lVar8 = Component.GetComponent(*plVar1,DAT_181e792b8)) != null) {
                       uVar15 = String.Concat("SpeEffect/",*(uint64 *)(lVar8 + 40),0);
                       plVar14 = (int64 *)Resources.Load(uVar15,0);
                       if ((*plVar1 != 0) && (lVar8 = Component.get_transform(*plVar1,0)) != null) {
@@ -383,7 +383,7 @@ public class StudyUniquePlayer
                         local_98 = local_a8;
                         local_90 = local_a0;
                         plVar13 = (int64 *)0;
-                        if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181d72e60)) {
+                        if ((plVar14 != (int64 *)0) && (*plVar14 == DAT_181e52a08)) {
                           plVar13 = plVar14;
                         }
                         local_a8 = uVar15;
@@ -391,16 +391,16 @@ public class StudyUniquePlayer
                         uVar10 = GlobalData.AddChild(uVar10,plVar13,&local_a8,&local_98,0);
                         this.newObj = uVar10;
                         if (this.newObj != null) {
-                          uVar10 = GameObject.GetComponent(this.newObj,DAT_181dc7310);
+                          uVar10 = GameObject.GetComponent(this.newObj,DAT_181e533a8);
                           cVar7 = Object.op_Inequality(uVar10,0,0);
                           if (cVar7) {
                             if ((this.newObj == null) ||
                                (lVar8 = GameObject.GetComponent
-                                                  (this.newObj,DAT_181dc7310),
+                                                  (this.newObj,DAT_181e533a8),
                                lVar8 == null)) throw; // [null/range check failed]
                             fVar17 = (float)AudioSource.get_volume(lVar8,0);
                             AudioSource.set_volume
-                                      (lVar8,fVar17 * *(float *)(pStatics_2d50 +
+                                      (lVar8,fVar17 * *(float *)(pStatics_28f8 +
                                                                 16),0);
                           }
                           if (*plVar1 != 0) {
@@ -420,11 +420,11 @@ public class StudyUniquePlayer
         }
     }
 
-    // Token : 0x60022B5
-    // RVA   : 0xFE65C0   Offset: 0xFE59C0   Length: 0x3EB
+    // Token : 0x600235F
+    // RVA   : 0xDB7680   Offset: 0xDB6480   Length: 0x3EB
     public void PlayerOnHit(bool hit)
     {
-        var pStatics_82a8 = *(int64*)(DAT_181da82a8 + 184);
+        var pStatics_86e8 = *(int64*)(DAT_181e886e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -444,10 +444,10 @@ public class StudyUniquePlayer
                     (lVar2 = WorldData.Player(lVar2,0)) != null) &&
                    (uVar3 = HeroData.GetHeroDieSound(lVar2,0), lVar1 != null)) {
                   HeroData.PlayHeroSound(lVar1,uVar3,0x3f000000,0xbf800000,0);
-                  if (*pStatics_82a8 != 0) {
+                  if (*pStatics_86e8 != 0) {
                     uVar3 = StudyUniqueSkillController.FinishStudyUniqueSkill
-                                      (*pStatics_82a8,0,0);
-                    FUN_180d8c8f0(this,uVar3,0);
+                                      (*pStatics_86e8,0,0);
+                    FUN_180ae80b0(this,uVar3,0);
                     return;
                   }
                 }
@@ -466,10 +466,10 @@ public class StudyUniquePlayer
                  (lVar1 = SkeletonAnimation.get_AnimationState(this.playerSkeleton,0),
                  lVar1 != null)) {
                 AnimationState.AddEmptyAnimation(lVar1,1,0x3dcccccd,0,0);
-                lVar1 = FUN_18046c0a0(0);
+                lVar1 = FUN_1802106e0(0);
                 if ((lVar1 != null) && (lVar1.villageAreaID != null)) {
                   lVar1 = WorldData.Player(lVar1.villageAreaID,0);
-                  lVar2 = FUN_18046c0a0(0);
+                  lVar2 = FUN_1802106e0(0);
                   if ((lVar2 != null) &&
                      (((lVar2.villageAreaID != null &&
                        (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) &&
@@ -484,11 +484,11 @@ public class StudyUniquePlayer
         }
     }
 
-    // Token : 0x60022B6
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002360
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

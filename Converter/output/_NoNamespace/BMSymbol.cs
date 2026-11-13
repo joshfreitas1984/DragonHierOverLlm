@@ -1,104 +1,104 @@
 // ============================================================
 // Type  : BMSymbol
-// Token : 0x2000079
+// Token : 0x2000078
 // ============================================================
 
 public class BMSymbol
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40002FA
+    // Token: 0x40002DA
     public string sequence;
 
-    // Token: 0x40002FB
+    // Token: 0x40002DB
     public string spriteName;
 
-    // Token: 0x40002FC
+    // Token: 0x40002DC
     private UISpriteData mSprite;
 
-    // Token: 0x40002FD
+    // Token: 0x40002DD
     private bool mIsValid;
 
-    // Token: 0x40002FE
+    // Token: 0x40002DE
     private int mLength;
 
-    // Token: 0x40002FF
+    // Token: 0x40002DF
     private int mOffsetX;
 
-    // Token: 0x4000300
+    // Token: 0x40002E0
     private int mOffsetY;
 
-    // Token: 0x4000301
+    // Token: 0x40002E1
     private int mWidth;
 
-    // Token: 0x4000302
+    // Token: 0x40002E2
     private int mHeight;
 
-    // Token: 0x4000303
+    // Token: 0x40002E3
     private int mAdvance;
 
-    // Token: 0x4000304
+    // Token: 0x40002E4
     private Rect mUV;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002E1
-    // RVA   : 0x7F7230   Offset: 0x7F6630   Length: 0x24
+    // Token : 0x60002C8
+    // RVA   : 0x5296A0   Offset: 0x5284A0   Length: 0x24
     public int get_length()
     {
         if (this.mLength == null) {
           if (this.sequence == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           this.mLength = *(uint32 *)(this.sequence + 16);
         }
     }
 
-    // Token : 0x60002E2
-    // RVA   : 0x20F160   Offset: 0x20E560   Length: 0x4
+    // Token : 0x60002C9
+    // RVA   : 0x5296D0   Offset: 0x5284D0   Length: 0x4
     public int get_offsetX()
     {
         return this.mOffsetX;
     }
 
-    // Token : 0x60002E3
-    // RVA   : 0x2BCA70   Offset: 0x2BBE70   Length: 0x4
+    // Token : 0x60002CA
+    // RVA   : 0x5296E0   Offset: 0x5284E0   Length: 0x4
     public int get_offsetY()
     {
         return this.mOffsetY;
     }
 
-    // Token : 0x60002E4
-    // RVA   : 0x20F040   Offset: 0x20E440   Length: 0x4
+    // Token : 0x60002CB
+    // RVA   : 0x529700   Offset: 0x528500   Length: 0x4
     public int get_width()
     {
-        uint32 FUN_18020f040(int64 this)
+        uint32 FUN_180529700(int64 this)
         {
         return this.mWidth;
     }
 
-    // Token : 0x60002E5
-    // RVA   : 0x362670   Offset: 0x361A70   Length: 0x4
+    // Token : 0x60002CC
+    // RVA   : 0x529690   Offset: 0x528490   Length: 0x4
     public int get_height()
     {
-        uint32 FUN_180362670(int64 this)
+        uint32 FUN_180529690(int64 this)
         {
         return this.mHeight;
     }
 
-    // Token : 0x60002E6
-    // RVA   : 0x362680   Offset: 0x361A80   Length: 0x4
+    // Token : 0x60002CD
+    // RVA   : 0x529680   Offset: 0x528480   Length: 0x4
     public int get_advance()
     {
-        uint32 FUN_180362680(int64 this)
+        uint32 FUN_180529680(int64 this)
         {
         return this.mAdvance;
     }
 
-    // Token : 0x60002E7
-    // RVA   : 0x7F7260   Offset: 0x7F6660   Length: 0xB
+    // Token : 0x60002CE
+    // RVA   : 0x5296F0   Offset: 0x5284F0   Length: 0xB
     public Rect get_uvRect()
     {
-        uint64 * FUN_1807f7260(uint64 *this,int64 param_2)
+        uint64 * FUN_1805296f0(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 76);
@@ -107,15 +107,15 @@ public class BMSymbol
         return this;
     }
 
-    // Token : 0x60002E8
-    // RVA   : 0x7F6F20   Offset: 0x7F6320   Length: 0x5
+    // Token : 0x60002CF
+    // RVA   : 0x529370   Offset: 0x528170   Length: 0x5
     public void MarkAsChanged()
     {
         this.mIsValid = 0;
     }
 
-    // Token : 0x60002E9
-    // RVA   : 0x7F6F30   Offset: 0x7F6330   Length: 0x2F6
+    // Token : 0x60002D0
+    // RVA   : 0x529380   Offset: 0x528180   Length: 0x2F6
     public bool Validate(INGUIAtlas atlas)
     {
         long lVar1;
@@ -134,48 +134,48 @@ public class BMSymbol
         ulong uStack_30;
         byte[] local_28 = new byte[32];
         if (atlas == (int64 *)0) {
-        LAB_1807f71f4:
+        LAB_180529644:
           bVar13 = false;
         }
         else {
           if (!this.mIsValid) {
-            cVar4 = FUN_180d75bc0(this.spriteName,0);
-            if (cVar4) goto LAB_1807f71f4;
+            cVar4 = FUN_180ad1200(this.spriteName,0);
+            if (cVar4) goto LAB_180529644;
             lVar1 = *atlas;
             uVar8 = this.spriteName;
             uVar12 = 0;
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               uVar11 = uVar12;
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar11 * 16) == DAT_181d7a7a0
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar11 * 16) == DAT_181e5a658
                    ) {
                   puVar7 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar11 * 16)
                             * 16 + 0x1d8 + lVar1);
-                  goto LAB_1807f6fff;
+                  goto LAB_18052944f;
                 }
                 uVar11 = uVar11 + 1;
               } while (uVar11 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar7 = (uint64 *)FUN_1800914f0(atlas,DAT_181d7a7a0,10);
-        LAB_1807f6fff:
+            puVar7 = (uint64 *)FUN_18019b1f0(atlas,DAT_181e5a658,10);
+        LAB_18052944f:
             uVar8 = (*(code *)*puVar7)(atlas,uVar8,puVar7[1]);
             this.mSprite = uVar8;
             lVar1 = *atlas;
             if (*(uint16 *)(lVar1 + 0x12a) != 0) {
               do {
-                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar12 * 16) == DAT_181d7a7a0
+                if (*(int64 *)(*(int64 *)(lVar1 + 176) + (uint64)uVar12 * 16) == DAT_181e5a658
                    ) {
                   puVar7 = (uint64 *)
                            ((int64)*(int *)(*(int64 *)(lVar1 + 176) + 8 + (uint64)uVar12 * 16)
                             * 16 + 0x178 + lVar1);
-                  goto LAB_1807f706c;
+                  goto LAB_1805294bc;
                 }
                 uVar12 = uVar12 + 1;
               } while (uVar12 < *(uint16 *)(lVar1 + 0x12a));
             }
-            puVar7 = (uint64 *)FUN_1800914f0(atlas,DAT_181d7a7a0,4);
-        LAB_1807f706c:
+            puVar7 = (uint64 *)FUN_18019b1f0(atlas,DAT_181e5a658,4);
+        LAB_1805294bc:
             plVar9 = (int64 *)(*(code *)*puVar7)(atlas,puVar7[1]);
             if (this.mSprite != null) {
               cVar4 = Object.op_Equality(plVar9,0,0);
@@ -184,7 +184,7 @@ public class BMSymbol
                   uVar14 = 0;
                   local_48 = 0;
                   uStack_40 = 0;
-                  FUN_1809dcfa0(&local_48);
+                  FUN_1807282e0(&local_48);
                   uVar3 = uStack_40;
                   uVar8 = local_48;
                   this.mUV = local_48;
@@ -217,7 +217,7 @@ public class BMSymbol
                   }
                 }
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               this.mSprite = 0;
             }
@@ -227,8 +227,8 @@ public class BMSymbol
         return bVar13;
     }
 
-    // Token : 0x60002EA
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x60002D1
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

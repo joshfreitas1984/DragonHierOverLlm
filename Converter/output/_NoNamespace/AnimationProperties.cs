@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : AnimationProperties
-// Token : 0x20000BF
+// Token : 0x20000BE
 // ============================================================
 
 public class AnimationProperties
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000496
+    // Token: 0x4000476
     public AnimationLetterOrder animationOrder;
 
-    // Token: 0x4000497
+    // Token: 0x4000477
     public float overlap;
 
-    // Token: 0x4000498
+    // Token: 0x4000478
     public bool randomDurations;
 
-    // Token: 0x4000499
+    // Token: 0x4000479
     public Vector2 randomness;
 
-    // Token: 0x400049A
+    // Token: 0x400047A
     public Vector2 offsetRange;
 
-    // Token: 0x400049B
+    // Token: 0x400047B
     public Vector3 pos;
 
-    // Token: 0x400049C
+    // Token: 0x400047C
     public Vector3 rot;
 
-    // Token: 0x400049D
+    // Token: 0x400047D
     public Vector3 scale;
 
-    // Token: 0x400049E
+    // Token: 0x400047E
     public float alpha;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60005D1
-    // RVA   : 0x916B40   Offset: 0x915F40   Length: 0xAE
+    // Token : 0x60005B8
+    // RVA   : 0x603C90   Offset: 0x602A90   Length: 0xAE
     public void /*ctor*/()
     {
         ulong uVar1;

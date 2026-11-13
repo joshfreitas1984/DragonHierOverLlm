@@ -1,36 +1,36 @@
 // ============================================================
 // Type  : CheckVersionReplaceSprite
-// Token : 0x20001B8
+// Token : 0x20001BA
 // ============================================================
 
 public class CheckVersionReplaceSprite
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BDE
+    // Token: 0x4000BEF
     public Sprite replaceSprite;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E83
-    // RVA   : 0x996890   Offset: 0x995C90   Length: 0xC6
+    // Token : 0x6000E87
+    // RVA   : 0x6F5160   Offset: 0x6F3F60   Length: 0xC6
     private void Start()
     {
         long lVar1;
-        if (**(int **)(DAT_181d73d40 + 184) == 2) {
-          lVar1 = Component.GetComponent(this,DAT_181d94478);
+        if (**(int **)(DAT_181e538e8 + 184) == 2) {
+          lVar1 = Component.GetComponent(this,DAT_181e777b8);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           Image.set_sprite(lVar1,this.replaceSprite,0);
         }
         Object.Destroy(this,0);
     }
 
-    // Token : 0x6000E84
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000E88
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

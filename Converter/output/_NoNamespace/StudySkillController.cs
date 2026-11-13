@@ -1,87 +1,87 @@
 // ============================================================
 // Type  : StudySkillController
-// Token : 0x200038E
+// Token : 0x200039B
 // ============================================================
 
 public class StudySkillController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D1C
+    // Token: 0x4001DAE
     public bool inStudy;
 
-    // Token: 0x4001D1D
+    // Token: 0x4001DAF
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001D1E
+    // Token: 0x4001DB0
     public AreaBuildingData targetBuilding;
 
-    // Token: 0x4001D1F
+    // Token: 0x4001DB1
     public int studySkillType;
 
-    // Token: 0x4001D20
+    // Token: 0x4001DB2
     public GameObject studySkillRoot;
 
-    // Token: 0x4001D21
+    // Token: 0x4001DB3
     public GameObject studySkillUIPanel;
 
-    // Token: 0x4001D22
+    // Token: 0x4001DB4
     public bool useMoney;
 
-    // Token: 0x4001D23
+    // Token: 0x4001DB5
     public Text expText;
 
-    // Token: 0x4001D24
+    // Token: 0x4001DB6
     public Text comboText;
 
-    // Token: 0x4001D25
+    // Token: 0x4001DB7
     public GameObject hpBarRoot;
 
-    // Token: 0x4001D26
+    // Token: 0x4001DB8
     public GameObject studySkillStarPrefab;
 
-    // Token: 0x4001D27
+    // Token: 0x4001DB9
     public GameObject studySkillFoodPrefab;
 
-    // Token: 0x4001D28
+    // Token: 0x4001DBA
     public GameObject studySkillShieldPrefab;
 
-    // Token: 0x4001D29
+    // Token: 0x4001DBB
     public string finishCallFuc;
 
-    // Token: 0x4001D2A
+    // Token: 0x4001DBC
     public List<GameObject> checkDisableObj;
 
-    // Token: 0x4001D2B
+    // Token: 0x4001DBD
     public List<GameObject> checkEnableObj;
 
-    // Token: 0x4001D2C
+    // Token: 0x4001DBE
     private SkillMaxPracticeExpData targetPracticeExpData;
 
-    // Token: 0x4001D2D
+    // Token: 0x4001DBF
     private static StudySkillController _instance;
 
-    // Token: 0x4001D2E
+    // Token: 0x4001DC0
     public static List<float> OverMaxLvMinusExpRate;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600229E
-    // RVA   : 0xFE55F0   Offset: 0xFE49F0   Length: 0x57
+    // Token : 0x6002348
+    // RVA   : 0xDB66B0   Offset: 0xDB54B0   Length: 0x57
     public static StudySkillController get_Instance()
     {
-        return **(uint64 **)(DAT_181da81a8 + 184);
+        return **(uint64 **)(DAT_181e885e8 + 184);
     }
 
-    // Token : 0x600229F
-    // RVA   : 0xFE32D0   Offset: 0xFE26D0   Length: 0x61
+    // Token : 0x6002349
+    // RVA   : 0xDB4390   Offset: 0xDB3190   Length: 0x61
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da81a8 + 184);
+        puVar1 = *(uint64 **)(DAT_181e885e8 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60022A0
-    // RVA   : 0xFE3B10   Offset: 0xFE2F10   Length: 0xF6
+    // Token : 0x600234A
+    // RVA   : 0xDB4BD0   Offset: 0xDB39D0   Length: 0xF6
     public static float GetPracticeExpRate(KungfuSkillLvData targetSkill)
     {
         float fVar1;
@@ -90,7 +90,7 @@ public class StudySkillController
         long lVar4;
         int iVar5;
         long lVar6;
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181da81a8 + 184) + 8);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e885e8 + 184) + 8);
         if (targetSkill != null) {
           lVar6 = KungfuSkillLvData.DataBase(targetSkill,0);
           if ((lVar6 != null) && (lVar4 != null)) {
@@ -101,29 +101,29 @@ public class StudySkillController
             iVar3 = *(int *)(targetSkill + 20);
             fVar1 = lVar4[uVar2];
             iVar5 = StudySkillController.GetMaxSkillSelfStudyLv(targetSkill,0);
-            FUN_1810e3cd0(1.0 - (float)(iVar3 - iVar5) * fVar1);
+            FUN_180f34e60(1.0 - (float)(iVar3 - iVar5) * fVar1);
             return;
           }
         }
     }
 
-    // Token : 0x60022A1
-    // RVA   : 0xFE3A60   Offset: 0xFE2E60   Length: 0xAD
+    // Token : 0x600234B
+    // RVA   : 0xDB4B20   Offset: 0xDB3920   Length: 0xAD
     public static int GetMaxSkillSelfStudyLv(KungfuSkillLvData targetSkill)
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         int iVar1;
         if (targetSkill != null) {
           iVar1 = KungfuSkillLvData.Type(targetSkill,0);
           if (iVar1 < 3) {
-            return *(uint32 *)(pStatics + 0x164);
+            return *(uint32 *)(pStatics + 0x16c);
           }
-          return *(uint32 *)(pStatics + 0x168);
+          return *(uint32 *)(pStatics + 0x170);
         }
     }
 
-    // Token : 0x60022A2
-    // RVA   : 0xFE48C0   Offset: 0xFE3CC0   Length: 0x8AE
+    // Token : 0x600234C
+    // RVA   : 0xDB5980   Offset: 0xDB4780   Length: 0x8AE
     public void StartStudySkill(StudySkillType studySkillType, KungfuSkillLvData target, string _finishCallFuc, AreaBuildingData _targetBuilding, bool _useMoney)
     {
         void StudySkillController.StartStudySkill
@@ -166,8 +166,8 @@ public class StudySkillController
             }
             uVar6 = this.targetSkill;
             iVar3 = StudySkillController.GetMaxSkillSelfStudyLv(uVar6,0);
-            lVar5 = **(int64 **)(DAT_181da8728 + 184);
-            plVar7 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
+            lVar5 = **(int64 **)(DAT_181e88b68 + 184);
+            plVar7 = (int64 *)FUN_1801dfd90(DAT_181e84278,5);
             if ((this.targetSkill != null) &&
                (lVar8 = KungfuSkillLvData.Name(this.targetSkill,1,0),
                plVar7 != (int64 *)0)) {
@@ -175,28 +175,28 @@ public class StudySkillController
                  (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar7 + 64))) == null) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               if ((int)plVar7[3] == 0) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               plVar7[4] = lVar8;
               il2cpp_internal(plVar7 + 4,lVar8);
               if (this.targetSkill != null) {
                 local_res18[0] = KungfuSkillLvData.StudyDayCost(this.targetSkill,0);
-                lVar8 = il2cpp_value_box(DAT_181d80430,local_res18);
+                lVar8 = il2cpp_value_box(DAT_181e60808,local_res18);
                 if ((lVar8 != null) &&
                    (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar7 + 64))) == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 if (*(uint32 *)(plVar7 + 3) < 2) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar7[5] = lVar8;
                 il2cpp_internal(plVar7 + 5,lVar8);
@@ -209,13 +209,13 @@ public class StudySkillController
                   lVar8 = "";
                   if (iVar3 < this.targetSkill.lv) {
                     local_58[0] = iVar3;
-                    uVar6 = il2cpp_value_box(DAT_181d80430,local_58);
+                    uVar6 = il2cpp_value_box(DAT_181e60808,local_58);
                     lVar8 = this.targetSkill;
-                    lVar9 = *(int64 *)(*(int64 *)(DAT_181da81a8 + 184) + 8);
+                    lVar9 = *(int64 *)(*(int64 *)(DAT_181e885e8 + 184) + 8);
                     if (((lVar8 == null) || (lVar10 = KungfuSkillLvData.DataBase(lVar8,0)) == null) ||
                        (lVar9 == null)) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
                     uVar1 = *(uint32 *)(lVar10 + 52);
                     if (*(uint32 *)(lVar9 + 24) <= uVar1) {
@@ -225,11 +225,11 @@ public class StudySkillController
                     fVar12 = lVar9[uVar1];
                     iVar4 = StudySkillController.GetMaxSkillSelfStudyLv(lVar8,0);
                     local_res8[0] =
-                         (float)FUN_1810e3cd0(1.0 - (float)(iVar3 - iVar4) * fVar12,0,0x3f800000,0);
+                         (float)FUN_180f34e60(1.0 - (float)(iVar3 - iVar4) * fVar12,0,0x3f800000,0);
                     local_res8[0] = local_res8[0] * 100.0;
                     uVar11 = Single.ToString(local_res8,"f0",0);
                     lVar8 = String.Format("\n<i>{2}(因超过{0}级，练习只获取{1}%经验！)</color></i>",uVar6,uVar11,
-                                           *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d8),0)
+                                           *(uint64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x2e0),0)
                     ;
                     uVar6 = local_50;
                   }
@@ -252,19 +252,19 @@ public class StudySkillController
                    (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar7 + 64))) == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 if (*(uint32 *)(plVar7 + 3) < 3) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar7[6] = lVar8;
                 il2cpp_internal(plVar7 + 6,lVar8);
                 if (this.targetSkill != null) {
                   iVar3 = KungfuSkillLvData.Type(this.targetSkill,0);
                   if (iVar3 == 0) {
-                    lVar8 = FUN_18046c0a0(0);
+                    lVar8 = FUN_1802106e0(0);
                     if (((lVar8 == null) || (lVar8.equiped == null)) ||
                        (lVar8 = WorldData.Player(lVar8.equiped,0)) == null)
                     throw; // [null/range check failed]
@@ -275,7 +275,7 @@ public class StudySkillController
                     }
                   }
                   else {
-                    lVar8 = FUN_18046c0a0(0);
+                    lVar8 = FUN_1802106e0(0);
                     if (((lVar8 == null) || (lVar8.equiped == null)) ||
                        (lVar8 = WorldData.Player(lVar8.equiped,0)) == null)
                     throw; // [null/range check failed]
@@ -289,12 +289,12 @@ public class StudySkillController
                      (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar7 + 64))) == null) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   if (*(uint32 *)(plVar7 + 3) < 4) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   plVar7[7] = lVar8;
                   il2cpp_internal(plVar7 + 7,lVar8);
@@ -302,22 +302,22 @@ public class StudySkillController
                   if (this.useMoney) {
                     if (this.targetSkill == null) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
                     local_58[0] = KungfuSkillLvData.StudyMoneyCost(this.targetSkill,0);
-                    uVar11 = il2cpp_value_box(DAT_181d80430,local_58);
+                    uVar11 = il2cpp_value_box(DAT_181e60808,local_58);
                     lVar8 = String.Format("和{0}银两",uVar11,0);
                   }
                   if ((lVar8 != null) &&
                      (lVar9 = il2cpp_internal(lVar8,*(uint64 *)(*plVar7 + 64))) == null) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   if (*(uint32 *)(plVar7 + 3) < 5) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   plVar7[8] = lVar8;
                   il2cpp_internal(plVar7 + 8,lVar8);
@@ -331,13 +331,13 @@ public class StudySkillController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x60022A3
-    // RVA   : 0xFE5170   Offset: 0xFE4570   Length: 0x35E
+    // Token : 0x600234D
+    // RVA   : 0xDB6230   Offset: 0xDB5030   Length: 0x35E
     public void SureStartStudySkill()
     {
         int iVar1;
@@ -355,12 +355,12 @@ public class StudySkillController
           if (this.targetSkill == null) throw; // [null/range check failed]
           iVar1 = KungfuSkillLvData.StudyMoneyCost(this.targetSkill,0);
           if (iVar2 < iVar1) {
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if (lVar4 != null) {
               GameController.ShowTextOnMouse(lVar4,"银钱不足！",0);
               plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/WrongClick",0);
               plVar7 = (int64 *)0;
-              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
+              if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181e8f4a0)) {
                 plVar7 = plVar6;
               }
               NGUITools.PlaySound(plVar7,0);
@@ -368,7 +368,7 @@ public class StudySkillController
             }
             throw; // [null/range check failed]
           }
-          lVar4 = FUN_18046c0a0(0);
+          lVar4 = FUN_1802106e0(0);
           if ((lVar4 == null) || (lVar4.villageAreaID == null)) throw; // [null/range check failed]
           lVar4 = WorldData.Player(lVar4.villageAreaID,0);
           if (this.targetSkill == null) throw; // [null/range check failed]
@@ -376,7 +376,7 @@ public class StudySkillController
           if (lVar4 == null) throw; // [null/range check failed]
           HeroData.ChangeMoney(lVar4,-iVar2,1,0);
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e962e8 + 184) + 8);
         if (this.targetSkill != null) {
           uVar5 = KungfuSkillLvData.Name(this.targetSkill,1,0);
           uVar5 = String.Format("练习{0}",uVar5,0);
@@ -390,11 +390,11 @@ public class StudySkillController
         }
     }
 
-    // Token : 0x60022A4
-    // RVA   : 0xFE4380   Offset: 0xFE3780   Length: 0x536
+    // Token : 0x600234E
+    // RVA   : 0xDB5440   Offset: 0xDB4240   Length: 0x536
     public void RealStartStudySkill()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         ulong uVar2;
         long lVar4;
@@ -404,17 +404,17 @@ public class StudySkillController
         float[] local_res18 = new float[2];
         float[] local_res20 = new float[2];
         uint[] local_28 = new uint[4];
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e962e8 + 184) + 8);
         if (lVar1 == null) {
-        LAB_180fe480b:
+        LAB_180db58cb:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (*(char *)(lVar1 + 96) != false) {
           if ((this.targetPracticeExpData != null) &&
              (0.0 < this.targetPracticeExpData.maxPracticeExp)) {
-            lVar1 = **(int64 **)(DAT_181da8728 + 184);
-            plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
+            lVar1 = **(int64 **)(DAT_181e88b68 + 184);
+            plVar3 = (int64 *)FUN_1801dfd90(DAT_181e84278,5);
             if ((this.targetSkill != null) &&
                (lVar4 = KungfuSkillLvData.Name(this.targetSkill,1,0),
                plVar3 != (int64 *)0)) {
@@ -422,12 +422,12 @@ public class StudySkillController
                  (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               if ((int)plVar3[3] == 0) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               plVar3[4] = lVar4;
               il2cpp_internal(plVar3 + 4,lVar4);
@@ -437,45 +437,45 @@ public class StudySkillController
                    (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 if (*(uint32 *)(plVar3 + 3) < 2) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar3[5] = lVar4;
                 il2cpp_internal(plVar3 + 5,lVar4);
-                local_res18[0] = *(float *)(pStatics + 0x160) * 100.0;
-                lVar4 = il2cpp_value_box(DAT_181da22f0,local_res18);
+                local_res18[0] = *(float *)(pStatics + 0x168) * 100.0;
+                lVar4 = il2cpp_value_box(DAT_181e82730,local_res18);
                 if ((lVar4 != null) &&
                    (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 if (*(uint32 *)(plVar3 + 3) < 3) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar3[6] = lVar4;
                 il2cpp_internal(plVar3 + 6,lVar4);
                 if (this.targetPracticeExpData != null) {
                   local_res20[0] =
-                       *(float *)(pStatics + 0x160) *
+                       *(float *)(pStatics + 0x168) *
                        this.targetPracticeExpData.maxPracticeExp;
                   lVar4 = Single.ToString(local_res20,"f0",0);
                   if ((lVar4 != null) &&
                      (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   if (*(uint32 *)(plVar3 + 3) < 4) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   plVar3[7] = lVar4;
                   il2cpp_internal(plVar3 + 7,lVar4);
@@ -493,12 +493,12 @@ public class StudySkillController
                        (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
                       uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar6,0);
+                      FUN_1801e02d0(uVar6,0);
                     }
                     if (*(uint32 *)(plVar3 + 3) < 5) {
                       uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar6,0);
+                      FUN_1801e02d0(uVar6,0);
                     }
                     plVar3[8] = lVar4;
                     il2cpp_internal(plVar3 + 8,lVar4);
@@ -508,20 +508,20 @@ public class StudySkillController
                                 (lVar1,uVar6,"AutoStudySkill",0,"StudySkillController",1,0,"PlayerStudySkill",0,0);
                       return;
                     }
-                    goto LAB_180fe480b;
+                    goto LAB_180db58cb;
                   }
                 }
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           StudySkillController.PlayerStudySkill(this,0);
         }
     }
 
-    // Token : 0x60022A5
-    // RVA   : 0xFE39B0   Offset: 0xFE2DB0   Length: 0xA0
+    // Token : 0x600234F
+    // RVA   : 0xDB4A70   Offset: 0xDB3870   Length: 0xA0
     public int GetAutoPracticeCost()
     {
         long lVar1;
@@ -543,8 +543,8 @@ public class StudySkillController
         }
     }
 
-    // Token : 0x60022A6
-    // RVA   : 0xFE2F40   Offset: 0xFE2340   Length: 0x381
+    // Token : 0x6002350
+    // RVA   : 0xDB4000   Offset: 0xDB2E00   Length: 0x381
     public void AutoStudySkill()
     {
         float fVar1;
@@ -578,24 +578,24 @@ public class StudySkillController
             if (this.finishCallFuc != null) {
               cVar3 = String.op_Inequality(this.finishCallFuc,"",0);
               if (cVar3) {
-                lVar4 = FUN_18046c400(0);
+                lVar4 = FUN_180210a70(0);
                 uVar2 = this.finishCallFuc;
                 if (this.targetPracticeExpData != null) {
                   fVar1 = this.targetPracticeExpData.maxPracticeExp;
-                  local_res8[0] = fVar1 * *(float *)(*(int64 *)(DAT_181d73d40 + 184) + 0x160);
+                  local_res8[0] = fVar1 * *(float *)(*(int64 *)(DAT_181e538e8 + 184) + 0x168);
                   uVar5 = Single.ToString(local_res8,0);
                   if (lVar4 != null) {
                     Component.SendMessage(lVar4,uVar2,uVar5,0);
-                    goto LAB_180fe325b;
+                    goto LAB_180db431b;
                   }
                 }
                 throw; // [null/range check failed]
               }
             }
-        LAB_180fe325b:
+        LAB_180db431b:
             plVar6 = (int64 *)Resources.Load("Sound/SoundEffect/SpeEffect/加速旋转",0);
             plVar7 = (int64 *)0;
-            if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181daf360)) {
+            if ((plVar6 != (int64 *)0) && (*plVar6 == DAT_181e8f4a0)) {
               plVar7 = plVar6;
             }
             NGUITools.PlaySound(plVar7,0);
@@ -604,13 +604,13 @@ public class StudySkillController
         }
     }
 
-    // Token : 0x60022A7
-    // RVA   : 0xFE3C60   Offset: 0xFE3060   Length: 0x713
+    // Token : 0x6002351
+    // RVA   : 0xDB4D20   Offset: 0xDB3B20   Length: 0x713
     public void PlayerStudySkill()
     {
-        var pStatics_7fa8 = *(int64*)(DAT_181da7fa8 + 184);
-        var pStatics_8128 = *(int64*)(DAT_181da8128 + 184);
-        var pStatics_82a8 = *(int64*)(DAT_181da82a8 + 184);
+        var pStatics_83e8 = *(int64*)(DAT_181e883e8 + 184);
+        var pStatics_8568 = *(int64*)(DAT_181e88568 + 184);
+        var pStatics_86e8 = *(int64*)(DAT_181e886e8 + 184);
         bool cVar1;
         int iVar2;
         long lVar3;
@@ -632,14 +632,14 @@ public class StudySkillController
             cVar1 = GameObject.get_activeSelf(lVar3,0);
             if (cVar1) {
               if ((this.checkDisableObj == null) ||
-                 (lVar3 = FUN_180002f80(this.checkDisableObj,plVar4,DAT_181d89930)) == null)
+                 (lVar3 = FUN_1800024b0(this.checkDisableObj,plVar4,DAT_181e6bc70)) == null)
               throw; // [null/range check failed]
               GameObject.SetActive(lVar3,0,0);
               lVar3 = this.checkEnableObj;
               if ((this.checkDisableObj == null) ||
-                 (FUN_180002f80(this.checkDisableObj,plVar4,DAT_181d89930), lVar3 == null))
+                 (FUN_1800024b0(this.checkDisableObj,plVar4,DAT_181e6bc70), lVar3 == null))
               throw; // [null/range check failed]
-              FUN_18181e6b0(lVar3);
+              FUN_18175de30(lVar3);
             }
             lVar3 = this.checkDisableObj;
             plVar4 = (int64 *)(uint64)(uVar6 + 1);
@@ -654,7 +654,7 @@ public class StudySkillController
               if (CloudAnimController._instance != null) {
                 CloudAnimController.PlayerCloudAnim(CloudAnimController._instance,0);
                 plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/紧张",0);
-                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+                if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
                   plVar7 = plVar4;
                 }
                 NGUITools.PlaySound(plVar7,0);
@@ -665,22 +665,22 @@ public class StudySkillController
                     uVar5 = Component.get_gameObject(this,0);
                     if (lVar3 != null) {
                       WeatherController.SetWeatherSpeActive(lVar3,0,uVar5,0);
-                      if (*pStatics_8128 != 0) {
+                      if (*pStatics_8568 != 0) {
                         StudyInternalSkillController.StartStudyInternalSkill
-                                  (*pStatics_8128,this.targetSkill,0
+                                  (*pStatics_8568,this.targetSkill,0
                                   );
                         if ((((this.comboText == null) ||
                              (lVar3 = Component.get_transform(this.comboText,0),
-                             lVar3 == null)) || (lVar3 = FUN_180daa030(lVar3,0)) == null) ||
+                             lVar3 == null)) || (lVar3 = FUN_180b05920(lVar3,0)) == null) ||
                            (lVar3 = Component.get_gameObject(lVar3,0)) == null) throw; // [null/range check failed]
                         GameObject.SetActive(lVar3,0,0);
                         if (((this.expText == null) ||
                             (lVar3 = Component.get_transform(this.expText,0), lVar3 == null
-                            )) || ((lVar3 = FUN_180daa030(lVar3,0), lVar3 == null ||
+                            )) || ((lVar3 = FUN_180b05920(lVar3,0), lVar3 == null ||
                                    (lVar3 = Component.get_gameObject(lVar3,0)) == null)))
                         throw; // [null/range check failed]
                         uVar5 = 0;
-        LAB_180fe41f4:
+        LAB_180db52b4:
                         GameObject.SetActive(lVar3,uVar5,0);
                         return;
                       }
@@ -692,7 +692,7 @@ public class StudySkillController
                       uVar5 = Component.get_gameObject(this,0);
                       if (lVar3 == null) throw; // [null/range check failed]
                       WeatherController.SetWeatherSpeActive(lVar3,0,uVar5,0);
-                      lVar3 = *(int64 *)(*(int64 *)(DAT_181da80a8 + 184) + 8);
+                      lVar3 = *(int64 *)(*(int64 *)(DAT_181e884e8 + 184) + 8);
                       if (lVar3 == null) throw; // [null/range check failed]
                       StudyDodgeSkillController.StartStudyDodgeSkill
                                 (lVar3,this.targetSkill,0);
@@ -702,28 +702,28 @@ public class StudySkillController
                       uVar5 = Component.get_gameObject(this,0);
                       if (lVar3 == null) throw; // [null/range check failed]
                       WeatherController.SetWeatherSpeActive(lVar3,0,uVar5,0);
-                      if (*pStatics_82a8 == 0) throw; // [null/range check failed]
+                      if (*pStatics_86e8 == 0) throw; // [null/range check failed]
                       StudyUniqueSkillController.StartStudyUniqueSkill
-                                (*pStatics_82a8,this.targetSkill,0);
+                                (*pStatics_86e8,this.targetSkill,0);
                     }
                     else {
-                      if (*pStatics_7fa8 == 0) throw; // [null/range check failed]
+                      if (*pStatics_83e8 == 0) throw; // [null/range check failed]
                       StudyAttackSkillController.StartStudyFightSkill
-                                (*pStatics_7fa8,this.targetSkill,0);
+                                (*pStatics_83e8,this.targetSkill,0);
                     }
                     if (((this.comboText != null) &&
                         (lVar3 = Component.get_transform(this.comboText,0)) != null)
-                       && (lVar3 = FUN_180daa030(lVar3,0)) != null) {
+                       && (lVar3 = FUN_180b05920(lVar3,0)) != null) {
                       lVar3 = Component.get_gameObject(lVar3,0);
                       if (lVar3 != null) {
                         GameObject.SetActive(lVar3,1,0);
                         if (((this.expText != null) &&
                             (lVar3 = Component.get_transform(this.expText,0), lVar3 != null
-                            )) && (lVar3 = FUN_180daa030(lVar3,0)) != null) {
+                            )) && (lVar3 = FUN_180b05920(lVar3,0)) != null) {
                           lVar3 = Component.get_gameObject(lVar3,0);
                           if (lVar3 != null) {
                             uVar5 = 1;
-                            goto LAB_180fe41f4;
+                            goto LAB_180db52b4;
                           }
                         }
                       }
@@ -736,8 +736,8 @@ public class StudySkillController
         }
     }
 
-    // Token : 0x60022A8
-    // RVA   : 0xFE3340   Offset: 0xFE2740   Length: 0x667
+    // Token : 0x6002352
+    // RVA   : 0xDB4400   Offset: 0xDB3200   Length: 0x667
     public void FinishStudySkill(float expNum)
     {
         bool cVar1;
@@ -757,8 +757,8 @@ public class StudySkillController
           lVar6 = 32;
           do {
             if (lVar3.maxReadExp <= (int)uVar5) {
-              FUN_1812fa020(lVar3,DAT_181d89430);
-              lVar3 = *(int64 *)(*(int64 *)(DAT_181db4f30 + 184) + 8);
+              FUN_18115d8f0(lVar3,DAT_181e6b778);
+              lVar3 = *(int64 *)(*(int64 *)(DAT_181e95408 + 184) + 8);
               uVar2 = Component.get_gameObject(this,0);
               if (lVar3 == null) break;
               WeatherController.SetWeatherSpeActive(lVar3,1,uVar2,0);
@@ -789,8 +789,8 @@ public class StudySkillController
                     (lVar3 = GameController._instance.worldData) == null) ||
                    (lVar3 = WorldData.Player(lVar3,0)) == null) break;
                 HeroData.AddSkillMaxPracticeExp(lVar3,this.targetPracticeExpData,0);
-        LAB_180fe37e4:
-                lVar3 = **(int64 **)(DAT_181d7f6c0 + 184);
+        LAB_180db48a4:
+                lVar3 = **(int64 **)(DAT_181e5fa68 + 184);
                 if (this.targetSkill == null) break;
                 uVar2 = KungfuSkillLvData.Name(this.targetSkill,1,0);
                 uVar4 = Single.ToString(local_res10,"f0",0);
@@ -805,13 +805,13 @@ public class StudySkillController
               else if (lVar3.maxPracticeExp <= local_res10[0] &&
                        local_res10[0] != lVar3.maxPracticeExp) {
                 lVar3.maxPracticeExp = local_res10[0];
-                goto LAB_180fe37e4;
+                goto LAB_180db48a4;
               }
               if ((this.finishCallFuc != null) &&
                  (cVar1 = String.op_Inequality(this.finishCallFuc,"",0),
                  cVar1)) {
                 uVar2 = this.finishCallFuc;
-                lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+                lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
                 uVar4 = Single.ToString(local_res10,0);
                 if (lVar3 == null) break;
                 Component.SendMessage(lVar3,uVar2,uVar4,0);
@@ -832,8 +832,8 @@ public class StudySkillController
         }
     }
 
-    // Token : 0x60022A9
-    // RVA   : 0xFE3C10   Offset: 0xFE3010   Length: 0x48
+    // Token : 0x6002353
+    // RVA   : 0xDB4CD0   Offset: 0xDB3AD0   Length: 0x48
     public GameObject GetRandomStarPrefab()
     {
         float fVar1;
@@ -847,28 +847,28 @@ public class StudySkillController
         return this.studySkillFoodPrefab;
     }
 
-    // Token : 0x60022AA
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002354
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x60022AB
-    // RVA   : 0xFE54D0   Offset: 0xFE48D0   Length: 0x11E
+    // Token : 0x6002355
+    // RVA   : 0xDB6590   Offset: 0xDB5390   Length: 0x11E
     private static void /*cctor*/()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d96ee8);
-        FUN_181330100(lVar1,DAT_181da0d10);
+        lVar1 = il2cpp_internal(DAT_181e76ea8);
+        FUN_1810f3480(lVar1,DAT_181e83230);
         if (lVar1 != null) {
-          FUN_18181e420(lVar1,0x3d4ccccd,DAT_181da0e10);
-          FUN_18181e420(lVar1,0x3dcccccd,DAT_181da0e10);
-          FUN_18181e420(lVar1,0x3e4ccccd,DAT_181da0e10);
-          FUN_18181e420(lVar1,0x3e99999a,DAT_181da0e10);
-          FUN_18181e420(lVar1,0x3ecccccd,DAT_181da0e10);
-          FUN_18181e420(lVar1,0x3f000000,DAT_181da0e10);
-          plVar2 = (int64 *)(*(int64 *)(DAT_181da81a8 + 184) + 8);
+          FUN_18175dba0(lVar1,0x3d4ccccd,DAT_181e83330);
+          FUN_18175dba0(lVar1,0x3dcccccd,DAT_181e83330);
+          FUN_18175dba0(lVar1,0x3e4ccccd,DAT_181e83330);
+          FUN_18175dba0(lVar1,0x3e99999a,DAT_181e83330);
+          FUN_18175dba0(lVar1,0x3ecccccd,DAT_181e83330);
+          FUN_18175dba0(lVar1,0x3f000000,DAT_181e83330);
+          plVar2 = (int64 *)(*(int64 *)(DAT_181e885e8 + 184) + 8);
           *plVar2 = lVar1;
           il2cpp_internal(plVar2,lVar1);
           return;

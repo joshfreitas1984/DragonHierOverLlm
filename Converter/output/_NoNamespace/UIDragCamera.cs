@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : UIDragCamera
-// Token : 0x200003B
+// Token : 0x200003A
 // ============================================================
 
 public class UIDragCamera
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000124
+    // Token: 0x4000104
     public UIDraggableCamera draggableCamera;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600010B
-    // RVA   : 0x12B2120   Offset: 0x12B1520   Length: 0xD4
+    // Token : 0x60000F2
+    // RVA   : 0x1138EB0   Offset: 0x1137CB0   Length: 0xD4
     private void Awake()
     {
         bool cVar2;
@@ -20,14 +20,14 @@ public class UIDragCamera
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (cVar2) {
           uVar3 = Component.get_gameObject(this,0);
-          uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f338);
+          uVar3 = NGUITools.FindInParents(uVar3,DAT_181e72978);
           *puVar1 = uVar3;
           il2cpp_internal(puVar1,uVar3);
         }
     }
 
-    // Token : 0x600010C
-    // RVA   : 0x12B2300   Offset: 0x12B1700   Length: 0x232
+    // Token : 0x60000F3
+    // RVA   : 0x1139090   Offset: 0x1137E90   Length: 0x232
     private void OnPress(bool isPressed)
     {
         long lVar1;
@@ -48,14 +48,14 @@ public class UIDragCamera
             cVar5 = Object.op_Inequality(uVar7,0,0);
             if (cVar5) {
               if (this.draggableCamera == null) {
-        LAB_1812b252d:
+        LAB_1811392bd:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               cVar5 = Behaviour.get_enabled(this.draggableCamera,0);
               if (cVar5) {
                 lVar1 = this.draggableCamera;
-                if (lVar1 == null) goto LAB_1812b252d;
+                if (lVar1 == null) goto LAB_1811392bd;
                 if (isPressed) {
                   lVar1.mDragStarted = 0;
                 }
@@ -86,14 +86,14 @@ public class UIDragCamera
                     lVar1.mMomentum = local_res20;
                     *(uint32 *)(lVar1 + 80) = uStackX_24;
                     lVar1.mScroll = 0;
-                    lVar1 = Component.GetComponent(lVar1,DAT_181d95d78);
+                    lVar1 = Component.GetComponent(lVar1,DAT_181e79138);
                     cVar5 = Object.op_Inequality(lVar1,0,0);
                     if (cVar5) {
                       if (lVar1 != null) {
                         Behaviour.set_enabled(lVar1,0,0);
                         return;
                       }
-                      goto LAB_1812b252d;
+                      goto LAB_1811392bd;
                     }
                   }
                 }
@@ -103,8 +103,8 @@ public class UIDragCamera
         }
     }
 
-    // Token : 0x600010D
-    // RVA   : 0x12B2200   Offset: 0x12B1600   Length: 0xFD
+    // Token : 0x60000F4
+    // RVA   : 0x1138F90   Offset: 0x1137D90   Length: 0xFD
     private void OnDrag(Vector2 delta)
     {
         ulong uVar1;
@@ -118,13 +118,13 @@ public class UIDragCamera
             cVar2 = Object.op_Inequality(uVar1,0,0);
             if (cVar2) {
               if (this.draggableCamera == null) {
-        LAB_1812b22f8:
+        LAB_181139088:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               cVar2 = Behaviour.get_enabled(this.draggableCamera,0);
               if (cVar2) {
-                if (this.draggableCamera == null) goto LAB_1812b22f8;
+                if (this.draggableCamera == null) goto LAB_181139088;
                 UIDraggableCamera.Drag(this.draggableCamera,delta,0);
               }
             }
@@ -132,8 +132,8 @@ public class UIDragCamera
         }
     }
 
-    // Token : 0x600010E
-    // RVA   : 0x12B2540   Offset: 0x12B1940   Length: 0x1A7
+    // Token : 0x60000F5
+    // RVA   : 0x11392D0   Offset: 0x11380D0   Length: 0x1A7
     private void OnScroll(float delta)
     {
         long lVar1;
@@ -150,14 +150,14 @@ public class UIDragCamera
             cVar3 = Object.op_Inequality(uVar2,0,0);
             if (cVar3) {
               if (this.draggableCamera == null) {
-        LAB_1812b26e2:
+        LAB_181139472:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               cVar3 = Behaviour.get_enabled(this.draggableCamera,0);
               if (cVar3) {
                 lVar1 = this.draggableCamera;
-                if (lVar1 == null) goto LAB_1812b26e2;
+                if (lVar1 == null) goto LAB_181139472;
                 cVar3 = Behaviour.get_enabled(lVar1,0);
                 if (cVar3) {
                   uVar2 = Component.get_gameObject(lVar1,0);
@@ -180,11 +180,11 @@ public class UIDragCamera
         }
     }
 
-    // Token : 0x600010F
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60000F6
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

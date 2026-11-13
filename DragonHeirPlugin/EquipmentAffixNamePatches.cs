@@ -38,7 +38,7 @@ internal static class EquipmentAffixNamePatches
     }
 
     // [GameCoupled EquipmentData.GetExtraAddName logic] result is up to two positiveName/negativeName affixes concatenated with no separator
-    // [GameCoupled QuickDetail.ShowEquipmentQuickDetail logic] concatenates GetExtraAddName() directly onto ItemData.Name, its only caller
+    // [GameCoupled ItemData.BuildDisplayName logic] concatenates GetExtraAddName() directly onto GetEquipmentSingleName() (its only caller since the 2026-11 update; QuickDetail no longer calls it)
     [HarmonyPatch(typeof(EquipmentData), nameof(EquipmentData.GetExtraAddName))]
     [HarmonyPostfix]
     private static void GetExtraAddName_Postfix(ref string __result)

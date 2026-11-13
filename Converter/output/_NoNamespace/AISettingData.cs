@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : AISettingData
-// Token : 0x2000132
+// Token : 0x200012E
 // ============================================================
 
 public class AISettingData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000789
+    // Token: 0x4000766
     public int priorityLv;
 
-    // Token: 0x400078A
+    // Token: 0x4000767
     public int speFocusID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009D5
-    // RVA   : 0xA19DA0   Offset: 0xA191A0   Length: 0x39
+    // Token : 0x60009B4
+    // RVA   : 0x7817D0   Offset: 0x7805D0   Length: 0x39
     public void /*ctor*/(int _priorityLv)
     {
         this.priorityLv = 1;

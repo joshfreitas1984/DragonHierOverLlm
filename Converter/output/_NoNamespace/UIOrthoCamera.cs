@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : UIOrthoCamera
-// Token : 0x2000103
+// Token : 0x2000102
 // ============================================================
 
 public class UIOrthoCamera
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400066E
+    // Token: 0x400064E
     private Camera mCam;
 
-    // Token: 0x400066F
+    // Token: 0x400064F
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600088C
-    // RVA   : 0x1196B00   Offset: 0x1195F00   Length: 0x83
+    // Token : 0x6000873
+    // RVA   : 0xF93FC0   Offset: 0xF92DC0   Length: 0x83
     private void Start()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d937f8);
+        uVar1 = Component.GetComponent(this,DAT_181e76b38);
         this.mCam = uVar1;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
@@ -28,8 +28,8 @@ public class UIOrthoCamera
         }
     }
 
-    // Token : 0x600088D
-    // RVA   : 0x1196B90   Offset: 0x1195F90   Length: 0x132
+    // Token : 0x6000874
+    // RVA   : 0xF94050   Offset: 0xF92E50   Length: 0x132
     private void Update()
     {
         long lVar2;
@@ -46,7 +46,7 @@ public class UIOrthoCamera
           puVar1 = (uint64 *)Camera.get_rect(local_58,this.mCam,0);
           local_48 = *puVar1;
           uStack_40 = puVar1[1];
-          fVar6 = (float)FUN_18044df60(&local_48,0);
+          fVar6 = (float)FUN_180af4e80(&local_48,0);
           iVar4 = Screen.get_height(0);
           if (this.mCam != null) {
             puVar1 = (uint64 *)Camera.get_rect(local_58,this.mCam,0);
@@ -71,11 +71,11 @@ public class UIOrthoCamera
         }
     }
 
-    // Token : 0x600088E
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000875
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

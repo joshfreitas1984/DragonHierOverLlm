@@ -1,62 +1,62 @@
 // ============================================================
 // Type  : AreaBuildingData
-// Token : 0x20001EF
+// Token : 0x20001F1
 // ============================================================
 
 public class AreaBuildingData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000DC6
+    // Token: 0x4000DDA
     public int buildingID;
 
-    // Token: 0x4000DC7
+    // Token: 0x4000DDB
     public int lv;
 
-    // Token: 0x4000DC8
+    // Token: 0x4000DDC
     public int buildTimeLeft;
 
-    // Token: 0x4000DC9
+    // Token: 0x4000DDD
     public int upgradeTimeLeft;
 
-    // Token: 0x4000DCA
+    // Token: 0x4000DDE
     public int destroyTimeLeft;
 
-    // Token: 0x4000DCB
+    // Token: 0x4000DDF
     public bool noCancel;
 
-    // Token: 0x4000DCC
+    // Token: 0x4000DE0
     public ItemListData shopItemList;
 
-    // Token: 0x4000DCD
+    // Token: 0x4000DE1
     public List<MissionData> missionDatas;
 
-    // Token: 0x4000DCE
+    // Token: 0x4000DE2
     public float produceRate;
 
-    // Token: 0x4000DCF
+    // Token: 0x4000DE3
     public float resourceStoreRate;
 
-    // Token: 0x4000DD0
+    // Token: 0x4000DE4
     public int areaID;
 
-    // Token: 0x4000DD1
+    // Token: 0x4000DE5
     public int belongHeroID;
 
-    // Token: 0x4000DD2
+    // Token: 0x4000DE6
     public int missionNumCount;
 
-    // Token: 0x4000DD3
+    // Token: 0x4000DE7
     public int plotNumCount;
 
-    // Token: 0x4000DD4
+    // Token: 0x4000DE8
     public int enemyMonth;
 
-    // Token: 0x4000DD5
+    // Token: 0x4000DE9
     public static float SelfHouseTotalAddPerLv;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F5D
-    // RVA   : 0xA2AE30   Offset: 0xA2A230   Length: 0x1C
+    // Token : 0x6000F66
+    // RVA   : 0x792860   Offset: 0x791660   Length: 0x1C
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -66,14 +66,14 @@ public class AreaBuildingData
         ZhSegment.Initialize(this,0);
         this.areaID = param_2;
         this.shopItemList = new ItemListData(0);
-        uVar1 = il2cpp_internal(DAT_181d94b68);
-        FUN_181330100(uVar1,DAT_181d948a0);
+        uVar1 = il2cpp_internal(DAT_181e74b38);
+        FUN_1810f3480(uVar1,DAT_181e76ae0);
         this.missionDatas = uVar1;
         this.resourceStoreRate = (float)this.lv * 0.2 + 1.0;
     }
 
-    // Token : 0x6000F5E
-    // RVA   : 0xA2AE50   Offset: 0xA2A250   Length: 0x102
+    // Token : 0x6000F67
+    // RVA   : 0x792880   Offset: 0x791680   Length: 0x102
     public void /*ctor*/(int _buildingID, int _lv, int _areaID)
     {
         ulong uVar1;
@@ -83,14 +83,14 @@ public class AreaBuildingData
         ZhSegment.Initialize(this,0);
         this.areaID = _buildingID;
         this.shopItemList = new ItemListData(0);
-        uVar1 = il2cpp_internal(DAT_181d94b68);
-        FUN_181330100(uVar1,DAT_181d948a0);
+        uVar1 = il2cpp_internal(DAT_181e74b38);
+        FUN_1810f3480(uVar1,DAT_181e76ae0);
         this.missionDatas = uVar1;
         this.resourceStoreRate = (float)this.lv * 0.2 + 1.0;
     }
 
-    // Token : 0x6000F5F
-    // RVA   : 0xA2AF60   Offset: 0xA2A360   Length: 0xE2
+    // Token : 0x6000F68
+    // RVA   : 0x792990   Offset: 0x791790   Length: 0xE2
     public void /*ctor*/(int _areaID)
     {
         ulong uVar1;
@@ -100,21 +100,21 @@ public class AreaBuildingData
         ZhSegment.Initialize(this,0);
         this.areaID = _areaID;
         this.shopItemList = new ItemListData(0);
-        uVar1 = il2cpp_internal(DAT_181d94b68);
-        FUN_181330100(uVar1,DAT_181d948a0);
+        uVar1 = il2cpp_internal(DAT_181e74b38);
+        FUN_1810f3480(uVar1,DAT_181e76ae0);
         this.missionDatas = uVar1;
         this.resourceStoreRate = (float)this.lv * 0.2 + 1.0;
     }
 
-    // Token : 0x6000F60
-    // RVA   : 0xA29CA0   Offset: 0xA290A0   Length: 0x20
+    // Token : 0x6000F69
+    // RVA   : 0x7916D0   Offset: 0x7904D0   Length: 0x20
     public int GetStealItemMaxLv()
     {
         Mathf.Max(0,~(int)((float)this.lv * -0.5),0);
     }
 
-    // Token : 0x6000F61
-    // RVA   : 0xA287B0   Offset: 0xA27BB0   Length: 0x16E
+    // Token : 0x6000F6A
+    // RVA   : 0x7901E0   Offset: 0x78EFE0   Length: 0x16E
     public void ChangeEnemyMonth(int num)
     {
         long lVar1;
@@ -125,7 +125,7 @@ public class AreaBuildingData
             lVar1 = PlotController.SpringFestivelRewardLvTalkText;
             if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 88)) == null) throw; // [null/range check failed]
             if (*(int *)(lVar1 + 16) == this.areaID) {
-              lVar1 = FUN_18046bac0(0);
+              lVar1 = FUN_180210060(0);
               if (lVar1 == null) throw; // [null/range check failed]
               *(uint8 *)(lVar1 + 224) = 1;
             }
@@ -134,15 +134,15 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F62
-    // RVA   : 0xA29970   Offset: 0xA28D70   Length: 0x50
+    // Token : 0x6000F6B
+    // RVA   : 0x7913A0   Offset: 0x7901A0   Length: 0x50
     public float GetExtraPartyScore()
     {
         long lVar1;
         lVar1 = AreaBuildingData.DataBase(this,0);
         if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (*(int *)(lVar1 + 48) == 6) {
           return (float)(this.lv * 100) + 500.0;
@@ -150,15 +150,15 @@ public class AreaBuildingData
         return (float)this.lv * 50.0;
     }
 
-    // Token : 0x6000F63
-    // RVA   : 0xA29920   Offset: 0xA28D20   Length: 0x4C
+    // Token : 0x6000F6C
+    // RVA   : 0x791350   Offset: 0x790150   Length: 0x4C
     public float GetExtraPartyRate()
     {
         long lVar1;
         lVar1 = AreaBuildingData.DataBase(this,0);
         if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (*(int *)(lVar1 + 48) == 6) {
           return (float)this.lv * 0.1 + 0.5;
@@ -166,26 +166,26 @@ public class AreaBuildingData
         return (float)this.lv * 0.05;
     }
 
-    // Token : 0x6000F64
-    // RVA   : 0xA29C20   Offset: 0xA29020   Length: 0x6
+    // Token : 0x6000F6D
+    // RVA   : 0x791650   Offset: 0x790450   Length: 0x6
     public float GetResourceProduceRate()
     {
-        uint32 FUN_180a29c20(int64 this)
+        uint32 FUN_180791650(int64 this)
         {
         return this.resourceStoreRate;
     }
 
-    // Token : 0x6000F65
-    // RVA   : 0xA299D0   Offset: 0xA28DD0   Length: 0x19
+    // Token : 0x6000F6E
+    // RVA   : 0x791400   Offset: 0x790200   Length: 0x19
     public float GetMaxResourceRate()
     {
-        float FUN_180a299d0(int64 this)
+        float FUN_180791400(int64 this)
         {
         return (float)this.lv * 0.2 + 1.0;
     }
 
-    // Token : 0x6000F66
-    // RVA   : 0xA27E80   Offset: 0xA27280   Length: 0xDE
+    // Token : 0x6000F6F
+    // RVA   : 0x78F8B0   Offset: 0x78E6B0   Length: 0xDE
     public void AutoManageResourceRate()
     {
         uint uVar1;
@@ -200,22 +200,22 @@ public class AreaBuildingData
             return;
           }
           fVar2 = (float)Mathf.Max(0x3dcccccd,fVar2,0);
-          uVar1 = FUN_1810e3cd0(this.resourceStoreRate + fVar2);
+          uVar1 = FUN_180f34e60(this.resourceStoreRate + fVar2);
           this.resourceStoreRate = uVar1;
         }
     }
 
-    // Token : 0x6000F67
-    // RVA   : 0xA2ADD0   Offset: 0xA2A1D0   Length: 0x1E
+    // Token : 0x6000F70
+    // RVA   : 0x792800   Offset: 0x791600   Length: 0x1E
     public void ResetResourceStoreRate()
     {
-        void FUN_180a2add0(int64 this)
+        void FUN_180792800(int64 this)
         {
         this.resourceStoreRate = (float)this.lv * 0.2 + 1.0;
     }
 
-    // Token : 0x6000F68
-    // RVA   : 0xA2AD10   Offset: 0xA2A110   Length: 0xBE
+    // Token : 0x6000F71
+    // RVA   : 0x792740   Offset: 0x791540   Length: 0xBE
     public string Name(bool withLv)
     {
         uint uVar1;
@@ -230,13 +230,13 @@ public class AreaBuildingData
         lVar3 = AreaBuildingData.DataBase(this,0);
         if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         String.Concat(uVar2,*(uint64 *)(lVar3 + 24),0);
     }
 
-    // Token : 0x6000F69
-    // RVA   : 0xA28C80   Offset: 0xA28080   Length: 0xE4
+    // Token : 0x6000F72
+    // RVA   : 0x7906B0   Offset: 0x78F4B0   Length: 0xE4
     public AreaBuildingDataBase DataBase()
     {
         long lVar1;
@@ -244,22 +244,22 @@ public class AreaBuildingData
         if (this.buildingID < 0) {
           return 0;
         }
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 32);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 224)) != null) {
-          uVar2 = FUN_1817da420(lVar1,this.buildingID,DAT_181db7bf0);
+          uVar2 = FUN_18171b450(lVar1,this.buildingID,DAT_181e98c78);
           return uVar2;
         }
     }
 
-    // Token : 0x6000F6A
-    // RVA   : 0xA27F60   Offset: 0xA27360   Length: 0x8
+    // Token : 0x6000F73
+    // RVA   : 0x78F990   Offset: 0x78E790   Length: 0x8
     public bool BuildingAvailable()
     {
         return this.enemyMonth < 1;
     }
 
-    // Token : 0x6000F6B
-    // RVA   : 0xA296A0   Offset: 0xA28AA0   Length: 0x98
+    // Token : 0x6000F74
+    // RVA   : 0x7910D0   Offset: 0x78FED0   Length: 0x98
     public int GetBuyMoney()
     {
         int iVar1;
@@ -276,15 +276,15 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F6C
-    // RVA   : 0xA29C30   Offset: 0xA29030   Length: 0x6E
+    // Token : 0x6000F75
+    // RVA   : 0x791660   Offset: 0x790460   Length: 0x6E
     public float GetSelfHouseTotalAdd()
     {
-        return (float)this.lv * **(float **)(DAT_181dac570 + 184) + 1.0;
+        return (float)this.lv * **(float **)(DAT_181e8c6b8 + 184) + 1.0;
     }
 
-    // Token : 0x6000F6D
-    // RVA   : 0xA28920   Offset: 0xA27D20   Length: 0x1DE
+    // Token : 0x6000F76
+    // RVA   : 0x790350   Offset: 0x78F150   Length: 0x1DE
     public void ChangeResourceRate(float result, bool showInfo)
     {
         float fVar1;
@@ -305,7 +305,7 @@ public class AreaBuildingData
         if (!showInfo) {
           return;
         }
-        lVar2 = **(int64 **)(DAT_181d7f6c0 + 184);
+        lVar2 = **(int64 **)(DAT_181e5fa68 + 184);
         lVar3 = AreaBuildingData.DataBase(this,0);
         if (lVar3 != null) {
           uVar5 = *(uint64 *)(lVar3 + 24);
@@ -324,8 +324,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F6E
-    // RVA   : 0xA28D70   Offset: 0xA28170   Length: 0x2D
+    // Token : 0x6000F77
+    // RVA   : 0x7907A0   Offset: 0x78F5A0   Length: 0x2D
     public List<AreaBuildingRateChange> GetAreaBuildingRateChange()
     {
         long lVar1;
@@ -336,8 +336,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F6F
-    // RVA   : 0xA292A0   Offset: 0xA286A0   Length: 0x2D
+    // Token : 0x6000F78
+    // RVA   : 0x790CD0   Offset: 0x78FAD0   Length: 0x2D
     public ForceSpeAddData GetBuildingSpeAddData()
     {
         long lVar1;
@@ -348,8 +348,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F70
-    // RVA   : 0xA297E0   Offset: 0xA28BE0   Length: 0x31
+    // Token : 0x6000F79
+    // RVA   : 0x791210   Offset: 0x790010   Length: 0x31
     public float GetChangeMaxPeople()
     {
         long lVar1;
@@ -359,8 +359,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F71
-    // RVA   : 0xA29790   Offset: 0xA28B90   Length: 0x47
+    // Token : 0x6000F7A
+    // RVA   : 0x7911C0   Offset: 0x78FFC0   Length: 0x47
     public float GetChangeAreaState(AreaStateType areaStateType)
     {
         long lVar1;
@@ -372,8 +372,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F72
-    // RVA   : 0xA29740   Offset: 0xA28B40   Length: 0x47
+    // Token : 0x6000F7B
+    // RVA   : 0x791170   Offset: 0x78FF70   Length: 0x47
     public float GetChangeAllAreaState(AreaStateType areaStateType)
     {
         long lVar1;
@@ -385,8 +385,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F73
-    // RVA   : 0xA29CC0   Offset: 0xA290C0   Length: 0x32
+    // Token : 0x6000F7C
+    // RVA   : 0x7916F0   Offset: 0x7904F0   Length: 0x32
     public List<float> GetTotalChangeResource()
     {
         long lVar1;
@@ -398,8 +398,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F74
-    // RVA   : 0xA29D00   Offset: 0xA29100   Length: 0xEA
+    // Token : 0x6000F7D
+    // RVA   : 0x791730   Offset: 0x790530   Length: 0xEA
     public List<float> GetUpgradeCostResource(float rate)
     {
         long lVar1;
@@ -413,43 +413,43 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F75
-    // RVA   : 0xA29AE0   Offset: 0xA28EE0   Length: 0x13B
+    // Token : 0x6000F7E
+    // RVA   : 0x791510   Offset: 0x790310   Length: 0x13B
     public List<float> GetObstacleRemoveCostResource(float rate)
     {
         long lVar1;
         float fVar2;
-        lVar1 = il2cpp_internal(DAT_181d96ee8);
-        FUN_181330100(lVar1,DAT_181da0d10);
+        lVar1 = il2cpp_internal(DAT_181e76ea8);
+        FUN_1810f3480(lVar1,DAT_181e83230);
         if (lVar1 != null) {
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
-          FUN_18181e420(lVar1,0,DAT_181da0e10);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
+          FUN_18175dba0(lVar1,0,DAT_181e83330);
           fVar2 = (float)Mathf.Max();
-          FUN_18182a350(lVar1,1,fVar2 * 500.0 * rate,DAT_181da1110);
+          FUN_181769c70(lVar1,1,fVar2 * 500.0 * rate,DAT_181e835b0);
           return lVar1;
         }
     }
 
-    // Token : 0x6000F76
-    // RVA   : 0xA29290   Offset: 0xA28690   Length: 0xA
+    // Token : 0x6000F7F
+    // RVA   : 0x790CC0   Offset: 0x78FAC0   Length: 0xA
     public int GetBuildingCureSkill()
     {
         return (this.lv + 5) * 5;
     }
 
-    // Token : 0x6000F77
-    // RVA   : 0xA29280   Offset: 0xA28680   Length: 0xC
+    // Token : 0x6000F80
+    // RVA   : 0x790CB0   Offset: 0x78FAB0   Length: 0xC
     public int GetBuildingCureCost()
     {
         return (this.lv + 5) * 10;
     }
 
-    // Token : 0x6000F78
-    // RVA   : 0xA2ACA0   Offset: 0xA2A0A0   Length: 0x6E
+    // Token : 0x6000F81
+    // RVA   : 0x7926D0   Offset: 0x7914D0   Length: 0x6E
     public int GetUpgradeTime()
     {
         float fVar1;
@@ -468,8 +468,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F79
-    // RVA   : 0xA29890   Offset: 0xA28C90   Length: 0x88
+    // Token : 0x6000F82
+    // RVA   : 0x7912C0   Offset: 0x7900C0   Length: 0x88
     public int GetDestroyTime()
     {
         int iVar1;
@@ -485,7 +485,7 @@ public class AreaBuildingData
           lVar3 = AreaBuildingData.DataBase(this,0);
           if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           fVar5 = *(float *)(lVar3 + 88);
         }
@@ -494,8 +494,8 @@ public class AreaBuildingData
         Mathf.Max(1,uVar2);
     }
 
-    // Token : 0x6000F7A
-    // RVA   : 0xA29220   Offset: 0xA28620   Length: 0x54
+    // Token : 0x6000F83
+    // RVA   : 0x790C50   Offset: 0x78FA50   Length: 0x54
     public int GetBuildTime()
     {
         float fVar1;
@@ -512,8 +512,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F7B
-    // RVA   : 0xA29A60   Offset: 0xA28E60   Length: 0x76
+    // Token : 0x6000F84
+    // RVA   : 0x791490   Offset: 0x790290   Length: 0x76
     public int GetMoveTime()
     {
         float fVar1;
@@ -532,8 +532,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F7C
-    // RVA   : 0xA29030   Offset: 0xA28430   Length: 0x1E0
+    // Token : 0x6000F85
+    // RVA   : 0x790A60   Offset: 0x78F860   Length: 0x1E0
     public float GetBuildSpeedRate()
     {
         int iVar1;
@@ -562,7 +562,7 @@ public class AreaBuildingData
                 lVar3 = AreaBuildingData.GetArea(this,0);
                 if (lVar3 != null) {
                   if (iVar1 != lVar3.lastRandomWorldEventDay) {
-                    lVar3 = FUN_18046c0a0(0);
+                    lVar3 = FUN_1802106e0(0);
                     if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
                     fVar4 = (float)WorldData.GetAIForceDevelopSpeed(lVar3.villageAreaID,0);
                     fVar5 = fVar5 + fVar4 * 0.05;
@@ -575,8 +575,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F7D
-    // RVA   : 0xA28DA0   Offset: 0xA281A0   Length: 0xBE
+    // Token : 0x6000F86
+    // RVA   : 0x7907D0   Offset: 0x78F5D0   Length: 0xBE
     public AreaData GetArea()
     {
         long lVar1;
@@ -587,11 +587,11 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F7E
-    // RVA   : 0xA27F70   Offset: 0xA27370   Length: 0x837
+    // Token : 0x6000F87
+    // RVA   : 0x78F9A0   Offset: 0x78E7A0   Length: 0x837
     public bool CanUpgrade()
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         float fVar1;
         uint uVar2;
         int iVar3;
@@ -606,14 +606,14 @@ public class AreaBuildingData
 
           if ((lVar4 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
           if (lVar4.Forces != null) {
-            lVar4 = FUN_18046bac0(0);
+            lVar4 = FUN_180210060(0);
             if ((lVar4 == null) || (lVar4.TempHeros == null)) throw; // [null/range check failed]
-            if (*(int *)(lVar4.TempHeros + 72) != 1) goto LAB_180a282a8;
+            if (*(int *)(lVar4.TempHeros + 72) != 1) goto LAB_18078fcd8;
           }
 
           if ((lVar4 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
           fVar1 = lVar4.Heros;
-          lVar4 = *(int64 *)(pStatics_3d40 + 0x670);
+          lVar4 = *(int64 *)(pStatics_38e8 + 0x690);
           lVar5 = PlotController.SpringFestivelRewardLvTalkText;
           if ((((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) ||
               (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) || (lVar4 == null))
@@ -623,9 +623,9 @@ public class AreaBuildingData
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           uVar6 = lVar4.chapter;
-          if (fVar1 < uVar6[uVar2]) goto LAB_180a2879e;
+          if (fVar1 < uVar6[uVar2]) goto LAB_1807901ce;
         }
-        LAB_180a282a8:
+        LAB_18078fcd8:
 
         if ((lVar4 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
         lVar4 = AreaData.GetCenterBuilding(lVar4,0);
@@ -633,12 +633,12 @@ public class AreaBuildingData
 
           if ((lVar4 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
           if (lVar4.Forces == 2) {
-            lVar4 = FUN_18046bac0(0);
+            lVar4 = FUN_180210060(0);
             if (((lVar4 == null) || (lVar4.TempHeros == null)) ||
                (lVar4 = AreaData.GetForce(lVar4.TempHeros,0)) == null)
             throw; // [null/range check failed]
             iVar3 = *(int *)(lVar4 + 132);
-            lVar4 = *(int64 *)(pStatics_3d40 + 0x678);
+            lVar4 = *(int64 *)(pStatics_38e8 + 0x698);
             lVar5 = PlotController.SpringFestivelRewardLvTalkText;
             if ((((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 88)) == null) ||
                 (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) || (lVar4 == null))
@@ -648,7 +648,7 @@ public class AreaBuildingData
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar6 = lVar4.chapter;
-            if ((float)iVar3 < uVar6[uVar2]) goto LAB_180a2879e;
+            if ((float)iVar3 < uVar6[uVar2]) goto LAB_1807901ce;
           }
         }
 
@@ -659,7 +659,7 @@ public class AreaBuildingData
 
             if (((lVar4 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) ||
                (uVar6 = AreaData.GetCenterBuilding(lVar4,0)) == null) throw; // [null/range check failed]
-            if (*(int *)(uVar6 + 20) <= iVar3) goto LAB_180a2879e;
+            if (*(int *)(uVar6 + 20) <= iVar3) goto LAB_1807901ce;
           }
           if ((GameController._instance != null) &&
              (lVar4 = GameController._instance.worldData) != null) {
@@ -668,28 +668,28 @@ public class AreaBuildingData
             if (lVar4 != null) {
               uVar6 = ForceData.HaveResource(lVar4,uVar7,0);
               if ((char)uVar6) {
-                lVar4 = FUN_18046c0a0(0);
+                lVar4 = FUN_1802106e0(0);
                 if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
                    (lVar4 = WorldData.Player(lVar4.villageAreaID,0)) == null)
                 throw; // [null/range check failed]
                 iVar3 = lVar4.forceMeetingStarted;
-                uVar6 = *(uint64 *)(DAT_181dac470 + 184);
+                uVar6 = *(uint64 *)(DAT_181e8c5b8 + 184);
                 if (*(int *)(uVar6 + 24) <= iVar3) {
                   return CONCAT71((int7)(uVar6 >> 8),1);
                 }
               }
-        LAB_180a2879e:
+        LAB_1807901ce:
               return uVar6 & 0xffffffffffffff00;
             }
           }
         }
     }
 
-    // Token : 0x6000F7F
-    // RVA   : 0xA29F10   Offset: 0xA29310   Length: 0xD8B
+    // Token : 0x6000F88
+    // RVA   : 0x791940   Offset: 0x790740   Length: 0xD8B
     public string GetUpgradeDescribe()
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         float fVar1;
         uint uVar2;
         int iVar3;
@@ -713,14 +713,14 @@ public class AreaBuildingData
 
           if ((lVar5 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
           if (lVar5.Forces != null) {
-            lVar5 = FUN_18046bac0(0);
+            lVar5 = FUN_180210060(0);
             if ((lVar5 == null) || (lVar5.TempHeros == null)) throw; // [null/range check failed]
-            if (*(int *)(lVar5.TempHeros + 72) != 1) goto LAB_180a2a3d8;
+            if (*(int *)(lVar5.TempHeros + 72) != 1) goto LAB_180791e08;
           }
 
           if ((lVar5 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
           fVar1 = lVar5.Heros;
-          lVar5 = *(int64 *)(pStatics_3d40 + 0x670);
+          lVar5 = *(int64 *)(pStatics_38e8 + 0x690);
           lVar6 = PlotController.SpringFestivelRewardLvTalkText;
           if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
               (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null))
@@ -730,28 +730,28 @@ public class AreaBuildingData
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (lVar5.chapter[uVar2] <= fVar1)
-          goto LAB_180a2a3d8;
-          uVar8 = *(uint64 *)(pStatics_3d40 + 0x2d0);
-          lVar5 = *(int64 *)(pStatics_3d40 + 0x670);
+          goto LAB_180791e08;
+          uVar8 = *(uint64 *)(pStatics_38e8 + 0x2d8);
+          lVar5 = *(int64 *)(pStatics_38e8 + 0x690);
           lVar6 = PlotController.SpringFestivelRewardLvTalkText;
           if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
               (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null)) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar2 = *(uint32 *)(lVar6 + 20);
           if (lVar5.cityAreaID <= uVar2) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           local_res18[0] = lVar5.chapter[uVar2];
-          uVar7 = il2cpp_value_box(DAT_181da22f0,local_res18);
+          uVar7 = il2cpp_value_box(DAT_181e82730,local_res18);
           uVar10 = "需要\n{0}人口 {1}</color>\n\n";
-        LAB_180a2a9ad:
+        LAB_1807923dd:
           uVar8 = String.Format(uVar10,uVar8,uVar7,0);
           uVar9 = String.Concat(uVar9,uVar8,0);
         }
         else {
-        LAB_180a2a3d8:
+        LAB_180791e08:
 
           if ((lVar5 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
           lVar5 = AreaData.GetCenterBuilding(lVar5,0);
@@ -759,12 +759,12 @@ public class AreaBuildingData
 
             if ((lVar5 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
             if (lVar5.Forces == 2) {
-              lVar5 = FUN_18046bac0(0);
+              lVar5 = FUN_180210060(0);
               if (((lVar5 == null) || (lVar5.TempHeros == null)) ||
                  (lVar5 = AreaData.GetForce(lVar5.TempHeros,0)) == null)
               throw; // [null/range check failed]
               iVar3 = *(int *)(lVar5 + 132);
-              lVar5 = *(int64 *)(pStatics_3d40 + 0x678);
+              lVar5 = *(int64 *)(pStatics_38e8 + 0x698);
               lVar6 = PlotController.SpringFestivelRewardLvTalkText;
               if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
                   (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null))
@@ -775,13 +775,13 @@ public class AreaBuildingData
               }
               if ((float)iVar3 < lVar5.chapter[uVar2]
                  ) {
-                uVar8 = *(uint64 *)(pStatics_3d40 + 0x2d0);
-                lVar5 = *(int64 *)(pStatics_3d40 + 0x678);
+                uVar8 = *(uint64 *)(pStatics_38e8 + 0x2d8);
+                lVar5 = *(int64 *)(pStatics_38e8 + 0x698);
                 lVar6 = PlotController.SpringFestivelRewardLvTalkText;
                 if ((((lVar6 == null) || (lVar6 = *(int64 *)(lVar6 + 88)) == null) ||
                     (lVar6 = AreaData.GetCenterBuilding(lVar6,0)) == null) || (lVar5 == null)) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 uVar2 = *(uint32 *)(lVar6 + 20);
                 if (lVar5.cityAreaID <= uVar2) {
@@ -789,9 +789,9 @@ public class AreaBuildingData
                 }
                 local_res20[0] =
                      lVar5.chapter[uVar2];
-                uVar7 = il2cpp_value_box(DAT_181da22f0,local_res20);
+                uVar7 = il2cpp_value_box(DAT_181e82730,local_res20);
                 uVar10 = "需要\n{0}弟子 {1}</color>\n\n";
-                goto LAB_180a2a9ad;
+                goto LAB_1807923dd;
               }
             }
           }
@@ -804,19 +804,19 @@ public class AreaBuildingData
             if (((lVar5 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) ||
                (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) throw; // [null/range check failed]
             if (*(int *)(lVar5 + 20) <= iVar3) {
-              uVar8 = *(uint64 *)(pStatics_3d40 + 0x2d0);
+              uVar8 = *(uint64 *)(pStatics_38e8 + 0x2d8);
 
               if ((((lVar5 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) ||
                   (lVar5 = AreaData.GetCenterBuilding(lVar5,0)) == null) ||
                  (lVar5 = AreaBuildingData.DataBase(lVar5,0)) == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar8 = String.Concat(uVar8,lVar5.cityAreaID,0);
               local_38 = this.lv + 1;
-              uVar7 = il2cpp_value_box(DAT_181d80430,&local_38);
+              uVar7 = il2cpp_value_box(DAT_181e60808,&local_38);
               uVar10 = "需要\n{0} {1}级</color>\n\n";
-              goto LAB_180a2a9ad;
+              goto LAB_1807923dd;
             }
           }
         }
@@ -825,7 +825,7 @@ public class AreaBuildingData
            (lVar5 = WorldData.Player(lVar5,0)) != null) {
           iVar3 = lVar5.forceMeetingStarted;
           if (iVar3 < AreaBuildController.UpgradeBuildNeedForceLv) {
-            lVar5 = *(int64 *)(pStatics_3d40 + 0x3d8);
+            lVar5 = *(int64 *)(pStatics_38e8 + 0x3e0);
             uVar2 = AreaBuildController.UpgradeBuildNeedForceLv;
             if (lVar5 == null) throw; // [null/range check failed]
             if (lVar5.cityAreaID <= uVar2) {
@@ -842,13 +842,13 @@ public class AreaBuildingData
           lVar5 = AreaBuildingData.DataBase(this,0);
           if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           fVar1 = lVar5.TempHeros;
           fVar11 = (float)AreaBuildingData.GetBuildSpeedRate(this,0);
           uVar4 = Mathf.RoundToInt(((float)(iVar3 + 1) * fVar1) / fVar11,0);
           local_34[0] = Mathf.Max(1,uVar4);
-          uVar8 = il2cpp_value_box(DAT_181d80430,local_34);
+          uVar8 = il2cpp_value_box(DAT_181e60808,local_34);
           uVar10 = AreaBuildingData.GetUpgradeCostResource(this);
           uVar10 = GlobalData.GetResourceDescribe(uVar10,0);
           uVar8 = String.Format("消耗 ({0}天)\n{1}",uVar8,uVar10,0);
@@ -857,19 +857,19 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F80
-    // RVA   : 0xA29820   Offset: 0xA28C20   Length: 0x68
+    // Token : 0x6000F89
+    // RVA   : 0x791250   Offset: 0x790050   Length: 0x68
     public string GetDestroyCostText()
     {
         ulong uVar1;
         uint[] local_res18 = new uint[4];
         local_res18[0] = AreaBuildingData.GetDestroyTime(this,0);
-        uVar1 = il2cpp_value_box(DAT_181d80430,local_res18);
+        uVar1 = il2cpp_value_box(DAT_181e60808,local_res18);
         String.Format("消耗 ({0}天)",uVar1,0);
     }
 
-    // Token : 0x6000F81
-    // RVA   : 0xA29DF0   Offset: 0xA291F0   Length: 0x115
+    // Token : 0x6000F8A
+    // RVA   : 0x791820   Offset: 0x790620   Length: 0x115
     public string GetUpgradeCostText()
     {
         float fVar1;
@@ -887,7 +887,7 @@ public class AreaBuildingData
           fVar7 = (float)AreaBuildingData.GetBuildSpeedRate(this,0);
           uVar3 = Mathf.RoundToInt(((float)(iVar2 + 1) * fVar1) / fVar7,0);
           local_res8[0] = Mathf.Max(1,uVar3);
-          uVar5 = il2cpp_value_box(DAT_181d80430,local_res8);
+          uVar5 = il2cpp_value_box(DAT_181e60808,local_res8);
           uVar6 = AreaBuildingData.GetUpgradeCostResource(this);
           uVar6 = GlobalData.GetResourceDescribe(uVar6,0);
           String.Format("消耗 ({0}天)\n{1}",uVar5,uVar6,0);
@@ -895,19 +895,19 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F82
-    // RVA   : 0xA299F0   Offset: 0xA28DF0   Length: 0x68
+    // Token : 0x6000F8B
+    // RVA   : 0x791420   Offset: 0x790220   Length: 0x68
     public string GetMoveCostText()
     {
         ulong uVar1;
         uint[] local_res18 = new uint[4];
         local_res18[0] = AreaBuildingData.GetMoveTime(this,0);
-        uVar1 = il2cpp_value_box(DAT_181d80430,local_res18);
+        uVar1 = il2cpp_value_box(DAT_181e60808,local_res18);
         String.Format("消耗 ({0}天)",uVar1,0);
     }
 
-    // Token : 0x6000F83
-    // RVA   : 0xA292D0   Offset: 0xA286D0   Length: 0x3C6
+    // Token : 0x6000F8C
+    // RVA   : 0x790D00   Offset: 0x78FB00   Length: 0x3C6
     public string GetBuildingText(bool showBuildingName, bool detail, bool showBuildTime)
     {
         uint64
@@ -946,17 +946,17 @@ public class AreaBuildingData
                 uVar6 = String.Format("\n\n资源储量\n{0}%/{1}%",uVar6,uVar7,0);
                 uVar5 = String.Concat(uVar5,uVar6,0);
               }
-              goto LAB_180a295c8;
+              goto LAB_180790ff8;
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 8);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e8c5b8 + 184) + 8);
         uVar3 = Mathf.CeilToInt((float)this.lv * 0.5,0);
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (*(uint32 *)(lVar4 + 24) <= uVar3) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -965,7 +965,7 @@ public class AreaBuildingData
         uVar8 = this.lv;
         uVar6 = GlobalData.GetNumText(uVar8,0);
         uVar5 = String.Format("<color=grey><size=17>{0} {1}级</size></color>",uVar5,uVar6,0);
-        LAB_180a295c8:
+        LAB_180790ff8:
         if (showBuildTime) {
           if (0 < this.buildTimeLeft) {
             uVar6 = Int32.ToString(this + 24,0);
@@ -983,8 +983,8 @@ public class AreaBuildingData
         return uVar5;
     }
 
-    // Token : 0x6000F84
-    // RVA   : 0xA28E60   Offset: 0xA28260   Length: 0x1CA
+    // Token : 0x6000F8D
+    // RVA   : 0x790890   Offset: 0x78F690   Length: 0x1CA
     public string GetBuidlingDetailText(bool showBuildingName, bool detail)
     {
         uint64
@@ -1025,8 +1025,8 @@ public class AreaBuildingData
         }
     }
 
-    // Token : 0x6000F85
-    // RVA   : 0xA28B00   Offset: 0xA27F00   Length: 0x175
+    // Token : 0x6000F8E
+    // RVA   : 0x790530   Offset: 0x78F330   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -1037,13 +1037,13 @@ public class AreaBuildingData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -1055,19 +1055,19 @@ public class AreaBuildingData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000F86
-    // RVA   : 0xA2ADF0   Offset: 0xA2A1F0   Length: 0x39
+    // Token : 0x6000F8F
+    // RVA   : 0x792820   Offset: 0x791620   Length: 0x39
     private static void /*cctor*/()
     {
-        **(uint32 **)(DAT_181dac570 + 184) = 0x3dcccccd;
+        **(uint32 **)(DAT_181e8c6b8 + 184) = 0x3dcccccd;
     }
 
 }

@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : OnCreateDrawCall
-// Token : 0x200009D
+// Token : 0x200009C
 // ============================================================
 
 public class OnCreateDrawCall
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60004B5
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x600049C
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class OnCreateDrawCall
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x60004B6
-    // RVA   : 0x2BD600   Offset: 0x2BCA00   Length: 0x49A
+    // Token : 0x600049D
+    // RVA   : 0x607030   Offset: 0x605E30   Length: 0x49A
     public virtual void Invoke(UIDrawCall dc, MeshFilter filter, MeshRenderer ren)
     {
         void OnCreateDrawCall.Invoke
@@ -68,15 +68,15 @@ public class OnCreateDrawCall
           if (*(short *)(lVar11 + 72) == -1) {
             il2cpp_internal(lVar11);
           }
-          cVar3 = FUN_1800d6050(lVar11);
+          cVar3 = FUN_1801dfd30(lVar11);
           if (!cVar3) {
             if (*(char *)(lVar11 + 74) == '\x03') {
               if ((((plVar2 == (int64 *)0) || (*(short *)(lVar11 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar2 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1802bda49;
+              goto LAB_180607479;
               cVar3 = il2cpp_internal(lVar11);
               if (!cVar3) {
-                cVar3 = FUN_1800d65c0(lVar11);
+                cVar3 = FUN_1801e02a0(lVar11);
                 if (!cVar3) {
                   lVar11 = (uint64)*(uint16 *)(lVar11 + 72) * 16 + *plVar2;
                   (**(code **)(lVar11 + 0x138))
@@ -94,18 +94,18 @@ public class OnCreateDrawCall
                                   (int)((uint32)*(uint16 *)(lVar11 + 72) +
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
-                        goto LAB_1802bd9e8;
+                        goto LAB_180607418;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  puVar6 = (uint64 *)FUN_1800914f0(plVar2,lVar7,*(uint16 *)(lVar11 + 72));
-        LAB_1802bd9e8:
+                  puVar6 = (uint64 *)FUN_18019b1f0(plVar2,lVar7,*(uint16 *)(lVar11 + 72));
+        LAB_180607418:
                   (*(code *)*puVar6)(plVar2,dc,filter,ren,puVar6[1]);
                 }
               }
               else {
-                cVar3 = FUN_1800d65c0(lVar11);
+                cVar3 = FUN_1801e02a0(lVar11);
                 uVar9 = *(uint16 *)(lVar11 + 72);
                 if (!cVar3) {
                   uVar10 = *(uint64 *)(*plVar2 + ((uint64)uVar9 + 20) * 16);
@@ -121,13 +121,13 @@ public class OnCreateDrawCall
                                 (int)((uint32)uVar9 +
                                      *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16))
                                 * 16 + 0x138 + lVar5;
-                        goto LAB_1802bd936;
+                        goto LAB_180607366;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  lVar5 = FUN_1800914f0(plVar2,*(int64 *)(lVar11 + 24),uVar9);
-        LAB_1802bd936:
+                  lVar5 = FUN_18019b1f0(plVar2,*(int64 *)(lVar11 + 24),uVar9);
+        LAB_180607366:
                   uVar10 = *(uint64 *)(lVar5 + 8);
                 }
                 puVar6 = (uint64 *)il2cpp_internal(uVar10,lVar11);
@@ -136,10 +136,10 @@ public class OnCreateDrawCall
             }
             else {
               if ((*(short *)(lVar11 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_1802bd6b7;
+              goto LAB_1806070e7;
               cVar3 = il2cpp_internal(lVar11);
               if (!cVar3) {
-                cVar3 = FUN_1800d65c0(lVar11);
+                cVar3 = FUN_1801e02a0(lVar11);
                 if (!cVar3) {
                   (**(code **)(*dc + 0x138 + (uint64)*(uint16 *)(lVar11 + 72) * 16))
                             (dc,filter,ren,
@@ -159,17 +159,17 @@ public class OnCreateDrawCall
                                        *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar9 * 16)
                                        ) * 16 + 0x138 + lVar5);
                         (*(code *)*puVar6)(dc,filter,ren,puVar6[1]);
-                        goto LAB_1802bda5c;
+                        goto LAB_18060748c;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  puVar6 = (uint64 *)FUN_1800914f0(dc,lVar7,*(uint16 *)(lVar11 + 72));
+                  puVar6 = (uint64 *)FUN_18019b1f0(dc,lVar7,*(uint16 *)(lVar11 + 72));
                   (*(code *)*puVar6)(dc,filter,ren,puVar6[1]);
                 }
               }
               else {
-                cVar3 = FUN_1800d65c0(lVar11);
+                cVar3 = FUN_1801e02a0(lVar11);
                 uVar9 = *(uint16 *)(lVar11 + 72);
                 if (!cVar3) {
                   puVar6 = (uint64 *)
@@ -188,13 +188,13 @@ public class OnCreateDrawCall
                                 (int)((uint32)uVar9 +
                                      *(int *)(*(int64 *)(lVar5 + 176) + 8 + (uint64)uVar8 * 16))
                                 * 16 + 0x138 + lVar5;
-                        goto LAB_1802bd756;
+                        goto LAB_180607186;
                       }
                       uVar8 = uVar8 + 1;
                     } while (uVar8 < *(uint16 *)(lVar5 + 0x12a));
                   }
-                  lVar5 = FUN_1800914f0(dc,*(int64 *)(lVar11 + 24),uVar9);
-        LAB_1802bd756:
+                  lVar5 = FUN_18019b1f0(dc,*(int64 *)(lVar11 + 24),uVar9);
+        LAB_180607186:
                   puVar6 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar5 + 8),lVar11);
                   (*(code *)*puVar6)(dc,filter,ren,puVar6);
                 }
@@ -202,14 +202,14 @@ public class OnCreateDrawCall
             }
           }
           else if (*(char *)(lVar11 + 74) == '\x03') {
-        LAB_1802bd6b7:
+        LAB_1806070e7:
             (*pcVar1)(dc,filter,ren,lVar11);
           }
           else {
-        LAB_1802bda49:
+        LAB_180607479:
             (*pcVar1)(plVar2,dc,filter,ren,lVar11);
           }
-        LAB_1802bda5c:
+        LAB_18060748c:
           uVar12 = uVar12 + 1;
           if (local_38 <= uVar12) {
             return;
@@ -217,8 +217,8 @@ public class OnCreateDrawCall
         } while( true );
     }
 
-    // Token : 0x60004B7
-    // RVA   : 0x2BD5C0   Offset: 0x2BC9C0   Length: 0x35
+    // Token : 0x600049E
+    // RVA   : 0x606FF0   Offset: 0x605DF0   Length: 0x35
     public virtual IAsyncResult BeginInvoke(UIDrawCall dc, MeshFilter filter, MeshRenderer ren, AsyncCallback callback, object object)
     {
         void OnCreateDrawCall.BeginInvoke
@@ -236,8 +236,8 @@ public class OnCreateDrawCall
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x60004B8
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x600049F
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual void EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

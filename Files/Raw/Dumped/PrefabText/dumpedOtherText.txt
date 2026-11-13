@@ -3103,6 +3103,12 @@
 - raw: 内力
   field: text
   path: SimpleDetailText.Base.text
+- raw: 内力999
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 内力消耗 99
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 内功
   field: m_Text
   path: Text.Base.m_Text
@@ -3604,6 +3610,9 @@
 - raw: 力道
   field: m_Text
   path: Text.Base.m_Text
+- raw: 力道 精
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 力道+5
   field: text
   path: SimpleDetailText.Base.text
@@ -3620,6 +3629,21 @@
   field: choiceText
   path: RandomEventController.Base.RandomEventDataBase.Array.data.plotData.plotDatas.Array.data.choices.Array.data.choiceText
 - raw: 功成名就
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 功法名称
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 功法图标
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 功法描述
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 功法效果
+  field: m_Text
+  path: Text.Base.m_Text
+- raw: 功法点数 99/99
   field: m_Text
   path: Text.Base.m_Text
 - raw: 功绩
@@ -4756,6 +4780,9 @@
 - raw: 基础
   field: m_Text
   path: Text.Base.m_Text
+- raw: 基础伤害 99
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 基础信息
   field: m_Text
   path: Text.Base.m_Text
@@ -4784,6 +4811,12 @@
   field: text
   path: SimpleDetailText.Base.text
 - raw: 声望越高，能同时接受越多委托
+  field: text
+  path: SimpleDetailText.Base.text
+- raw: 复刻同类武学攻击范围
+  field: text
+  path: SimpleDetailText.Base.text
+- raw: 复刻同类武学攻防架势
   field: text
   path: SimpleDetailText.Base.text
 - raw: 外交关系
@@ -6208,7 +6241,7 @@
 - raw: 成功击败了黑风寨劫匪，回#TargetPlace#向师傅复命。
   field: describe
   path: MissionDataController.Base.MainMissionDataBase.Array.data.missionTargetDatas.Array.data.describe
-- raw: 成品命名...
+- raw: 成品命名
   field: m_Text
   path: Text.Base.m_Text
 - raw: 成就
@@ -7126,6 +7159,9 @@
 - raw: 新人求见
   field: eventName
   path: RandomEventController.Base.RandomEventDataBase.Array.data.eventName
+- raw: 新增特效 0/3
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 新学武功
   field: name
   path: MissionDataController.Base.BranchMissionDataBase.Array.data.name
@@ -9025,6 +9061,9 @@
 - raw: 生命
   field: text
   path: SimpleDetailText.Base.text
+- raw: 生命999
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 生平_关系未加入
   field: data
   path: SpriteAtlas.Base.m_PackedSpriteNamesToIndex.Array.data
@@ -10012,6 +10051,9 @@
 - raw: 自上次铁掌帮挑衅以来，师傅对其动向担忧不已，与师兄顾游年一同去#TargetPlace#探查情报。
   field: describe
   path: MissionDataController.Base.MainMissionDataBase.Array.data.missionTargetDatas.Array.data.describe
+- raw: 自创武学
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 自动
   field: m_Text
   path: Text.Base.m_Text
@@ -11077,6 +11119,9 @@
 - raw: 轻松休闲
   field: m_Text
   path: Text.Base.m_Text
+- raw: 轻灵 +99%
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 轻甲
   field: m_Text
   path: Text.Base.m_Text
@@ -11497,9 +11542,15 @@
 - raw: 选择完全恢复，\n就会自动休息直到满状态为止。
   field: tutorialText
   path: TutorialController.Base.tutorialDatas.Array.data.tutorialPlotDatas.Array.data.tutorialText
+- raw: 选择架势
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 选择突破目标“太祖长拳”，正式开始突破。
   field: tutorialText
   path: TutorialController.Base.tutorialDatas.Array.data.tutorialPlotDatas.Array.data.tutorialText
+- raw: 选择范围
+  field: m_Text
+  path: Text.Base.m_Text
 - raw: 选用的辅助品越珍贵，突破效率越高。\n提升建筑等级和对应武学技能，也可以增加突破效率。
   field: tutorialText
   path: TutorialController.Base.tutorialDatas.Array.data.tutorialPlotDatas.Array.data.tutorialText

@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : HeroAISettingData
-// Token : 0x2000133
+// Token : 0x200012F
 // ============================================================
 
 public class HeroAISettingData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400078B
+    // Token: 0x4000768
     public Dictionary<AISettingType, AISettingData> heroAISettingDatas;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009D6
-    // RVA   : 0x876E50   Offset: 0x876250   Length: 0x199
+    // Token : 0x60009B5
+    // RVA   : 0x5AF250   Offset: 0x5AE050   Length: 0x199
     public void /*ctor*/()
     {
         long lVar2;
@@ -19,12 +19,12 @@ public class HeroAISettingData
         bool cVar4;
         int iVar5;
         ZhSegment.Initialize(this,0);
-        lVar2 = il2cpp_internal(DAT_181d7f890);
-        FUN_1808b1370(lVar2,DAT_181db2810);
+        lVar2 = il2cpp_internal(DAT_181e5f4f0);
+        FUN_1806e5bc0(lVar2,DAT_181e93898);
         this.heroAISettingDatas = lVar2;
         iVar5 = 0;
         while( true ) {
-          uVar3 = DAT_181db3000;
+          uVar3 = DAT_181e92ad0;
           uVar3 = Type.GetTypeFromHandle(uVar3,0);
           lVar2 = Enum.GetNames(uVar3,0);
           if (lVar2 == null) break;
@@ -40,13 +40,13 @@ public class HeroAISettingData
           }
           uVar3 = new AISettingData(cVar4,0);
           if (lVar2 == null) break;
-          FUN_1808ab370(lVar2,iVar5,uVar3,DAT_181db2898);
+          FUN_1806da2f0(lVar2,iVar5,uVar3,DAT_181e93920);
           iVar5 = iVar5 + 1;
         }
     }
 
-    // Token : 0x60009D7
-    // RVA   : 0x876D00   Offset: 0x876100   Length: 0x14A
+    // Token : 0x60009B6
+    // RVA   : 0x5AF100   Offset: 0x5ADF00   Length: 0x14A
     public void Reset()
     {
         ulong uVar1;
@@ -55,7 +55,7 @@ public class HeroAISettingData
         int iVar4;
         iVar4 = 0;
         while( true ) {
-          uVar1 = DAT_181db3000;
+          uVar1 = DAT_181e92ad0;
           uVar1 = Type.GetTypeFromHandle(uVar1,0);
           lVar2 = Enum.GetNames(uVar1,0);
           if (lVar2 == null) break;
@@ -71,29 +71,29 @@ public class HeroAISettingData
           }
           uVar1 = new AISettingData(cVar3,0);
           if (lVar2 == null) break;
-          FUN_1808b2160(lVar2,iVar4,uVar1,DAT_181db2a30);
+          FUN_1806e7630(lVar2,iVar4,uVar1,DAT_181e93ab8);
           iVar4 = iVar4 + 1;
         }
     }
 
-    // Token : 0x60009D8
-    // RVA   : 0x876A10   Offset: 0x875E10   Length: 0x2E8
+    // Token : 0x60009B7
+    // RVA   : 0x5AEE10   Offset: 0x5ADC10   Length: 0x2E8
     public string GetFocusText(int AISettingID)
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         long lVar4;
         if ((this.heroAISettingDatas != null) &&
-           (lVar1 = FUN_1817da060(this.heroAISettingDatas,AISettingID,DAT_181db29a8)) != null) {
+           (lVar1 = FUN_181707040(this.heroAISettingDatas,AISettingID,DAT_181e93a30)) != null) {
           if (*(int *)(lVar1 + 20) < 0) {
             return "";
           }
           if (AISettingID == 1) {
-            lVar1 = FUN_18046c100(0);
+            lVar1 = FUN_180210740(0);
             if (((this.heroAISettingDatas != null) &&
-                (lVar2 = FUN_1817da060(this.heroAISettingDatas,1,DAT_181db29a8)) != null) &&
+                (lVar2 = FUN_181707040(this.heroAISettingDatas,1,DAT_181e93a30)) != null) &&
                (lVar1 != null)) {
               lVar1 = GameDataController.GetSkillDataBase(lVar1,*(uint32 *)(lVar2 + 20),0);
               if (lVar1 != null) {
@@ -103,39 +103,39 @@ public class HeroAISettingData
             }
           }
           else if (AISettingID == 2) {
-            lVar1 = *(int64 *)(pStatics + 0x4b0);
+            lVar1 = *(int64 *)(pStatics + 0x4b8);
             if (((this.heroAISettingDatas != null) &&
-                (lVar2 = FUN_1817da060(this.heroAISettingDatas,2,DAT_181db29a8)) != null) &&
+                (lVar2 = FUN_181707040(this.heroAISettingDatas,2,DAT_181e93a30)) != null) &&
                (lVar1 != null)) {
               lVar4 = (int64)(int)*(uint32 *)(lVar2 + 20);
               if (*(uint32 *)(lVar1 + 24) <= *(uint32 *)(lVar2 + 20)) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-        LAB_180876be6:
+        LAB_1805aefe6:
               return *(uint64 *)(*(int64 *)(lVar1 + 16) + 32 + lVar4 * 8);
             }
           }
           else if (AISettingID == 3) {
-            lVar1 = *(int64 *)(pStatics + 0x438);
+            lVar1 = *(int64 *)(pStatics + 0x440);
             if (((this.heroAISettingDatas != null) &&
-                (lVar2 = FUN_1817da060(this.heroAISettingDatas,3,DAT_181db29a8)) != null) &&
+                (lVar2 = FUN_181707040(this.heroAISettingDatas,3,DAT_181e93a30)) != null) &&
                (lVar1 != null)) {
               lVar4 = (int64)(int)*(uint32 *)(lVar2 + 20);
               if (*(uint32 *)(lVar1 + 24) <= *(uint32 *)(lVar2 + 20)) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
-              goto LAB_180876be6;
+              goto LAB_1805aefe6;
             }
           }
           else {
             if ((AISettingID != 4) && (AISettingID != 5)) {
               return "";
             }
-            lVar1 = FUN_18046c0a0(0);
+            lVar1 = FUN_1802106e0(0);
             if (lVar1 != null) {
               lVar1 = *(int64 *)(lVar1 + 32);
               if ((((this.heroAISettingDatas != null) &&
-                   (lVar2 = FUN_1817da060(this.heroAISettingDatas,AISettingID,DAT_181db29a8), lVar2 != null
+                   (lVar2 = FUN_181707040(this.heroAISettingDatas,AISettingID,DAT_181e93a30), lVar2 != null
                    )) && (lVar1 != null)) &&
                  (lVar1 = WorldData.GetArea(lVar1,*(uint32 *)(lVar2 + 20),0)) != null) {
                 uVar3 = AreaData.GetAreaName(lVar1,0);

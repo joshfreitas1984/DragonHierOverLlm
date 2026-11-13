@@ -1,102 +1,102 @@
 // ============================================================
 // Type  : BGMController
-// Token : 0x2000151
+// Token : 0x200014D
 // ============================================================
 
 public class BGMController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400087A
+    // Token: 0x400085C
     public AudioSource gameBGM;
 
-    // Token: 0x400087B
+    // Token: 0x400085D
     public AudioSource environmentSound;
 
-    // Token: 0x400087C
+    // Token: 0x400085E
     public List<AudioClipPrefab> AllBGM;
 
-    // Token: 0x400087D
+    // Token: 0x400085F
     public List<AudioClipPrefab> bigMapBGM;
 
-    // Token: 0x400087E
+    // Token: 0x4000860
     public List<AudioClipPrefab> areaBGM;
 
-    // Token: 0x400087F
+    // Token: 0x4000861
     public List<AudioClipPrefab> fightBGM;
 
-    // Token: 0x4000880
+    // Token: 0x4000862
     public List<AudioClipPrefab> bossBGM;
 
-    // Token: 0x4000881
+    // Token: 0x4000863
     private bool fightBGMStarted;
 
-    // Token: 0x4000882
+    // Token: 0x4000864
     public AudioClipPrefab nowBgm;
 
-    // Token: 0x4000883
+    // Token: 0x4000865
     public AudioClipPrefab plotBgm;
 
-    // Token: 0x4000884
+    // Token: 0x4000866
     public bool noBgm;
 
-    // Token: 0x4000885
+    // Token: 0x4000867
     public AudioClip bigMapEnvironmentSoundClip;
 
-    // Token: 0x4000886
+    // Token: 0x4000868
     public AudioClip[] environmentSoundClips;
 
-    // Token: 0x4000887
+    // Token: 0x4000869
     private string MusicPath;
 
-    // Token: 0x4000888
+    // Token: 0x400086A
     public float quietTime;
 
-    // Token: 0x4000889
+    // Token: 0x400086B
     private bool inited;
 
-    // Token: 0x400088A
+    // Token: 0x400086C
     private static Dictionary<string, AudioClip> audioCache;
 
-    // Token: 0x400088B
+    // Token: 0x400086D
     private static BGMController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000AE1
-    // RVA   : 0x7F4FF0   Offset: 0x7F43F0   Length: 0x155
+    // Token : 0x6000AC0
+    // RVA   : 0x5273A0   Offset: 0x5261A0   Length: 0x155
     public static AudioClip LoadAudio(string path)
     {
         bool cVar1;
         ulong uVar2;
         if (BGMController.audioCache != null) {
-          cVar1 = FUN_1808ab490(BGMController.audioCache,path,DAT_181d728e8);
+          cVar1 = FUN_1806da450(BGMController.audioCache,path,DAT_181e53838);
           if (!cVar1) {
-            uVar2 = Resources.Load(path,DAT_181d9fe18);
+            uVar2 = Resources.Load(path,DAT_181e83438);
             if (BGMController.audioCache == null) throw; // [null/range check failed]
-            FUN_1808b2160(BGMController.audioCache,path,uVar2,DAT_181d729f8);
+            FUN_1806e7630(BGMController.audioCache,path,uVar2,DAT_181e53948);
           }
           if (BGMController.audioCache != null) {
-            FUN_1817c69b0(BGMController.audioCache,path,DAT_181d72970);
+            FUN_1817072e0(BGMController.audioCache,path,DAT_181e538c0);
             return;
           }
         }
     }
 
-    // Token : 0x6000AE2
-    // RVA   : 0x7F66A0   Offset: 0x7F5AA0   Length: 0x58
+    // Token : 0x6000AC1
+    // RVA   : 0x528A50   Offset: 0x527850   Length: 0x58
     public static BGMController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181dafae0 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181e8fc20 + 184) + 8);
     }
 
-    // Token : 0x6000AE3
-    // RVA   : 0x7F4670   Offset: 0x7F3A70   Length: 0x26E
+    // Token : 0x6000AC2
+    // RVA   : 0x526A20   Offset: 0x525820   Length: 0x26E
     private void Awake()
     {
         ulong uVar1;
         long lVar2;
         uint uVar4;
         long lVar5;
-        plVar3 = (int64 *)(*(int64 *)(DAT_181dafae0 + 184) + 8);
+        plVar3 = (int64 *)(*(int64 *)(DAT_181e8fc20 + 184) + 8);
         *plVar3 = this;
         il2cpp_internal(plVar3,this);
         lVar2 = this.AllBGM;
@@ -116,39 +116,39 @@ public class BGMController
             if (lVar2._version) {
               lVar2 = this.bigMapBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
+                 (uVar1 = FUN_1800024b0(this.AllBGM,uVar4,DAT_181e5fd98), lVar2 == null))
               break;
-              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
+              FUN_18175de30(lVar2,uVar1,DAT_181e5fc00);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68)) == null)
+               (lVar2 = FUN_1800024b0(this.AllBGM,uVar4,DAT_181e5fd98)) == null)
             break;
             if (*(char *)(lVar2 + 29) != false) {
               lVar2 = this.areaBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
+                 (uVar1 = FUN_1800024b0(this.AllBGM,uVar4,DAT_181e5fd98), lVar2 == null))
               break;
-              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
+              FUN_18175de30(lVar2,uVar1,DAT_181e5fc00);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68)) == null)
+               (lVar2 = FUN_1800024b0(this.AllBGM,uVar4,DAT_181e5fd98)) == null)
             break;
             if (*(char *)(lVar2 + 40) != false) {
               lVar2 = this.fightBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
+                 (uVar1 = FUN_1800024b0(this.AllBGM,uVar4,DAT_181e5fd98), lVar2 == null))
               break;
-              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
+              FUN_18175de30(lVar2,uVar1,DAT_181e5fc00);
             }
             if ((this.AllBGM == null) ||
-               (lVar2 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68)) == null)
+               (lVar2 = FUN_1800024b0(this.AllBGM,uVar4,DAT_181e5fd98)) == null)
             break;
             if (*(char *)(lVar2 + 41) != false) {
               lVar2 = this.bossBGM;
               if ((this.AllBGM == null) ||
-                 (uVar1 = FUN_180002f80(this.AllBGM,uVar4,DAT_181d7dd68), lVar2 == null))
+                 (uVar1 = FUN_1800024b0(this.AllBGM,uVar4,DAT_181e5fd98), lVar2 == null))
               break;
-              FUN_18181e6b0(lVar2,uVar1,DAT_181d7dbf0);
+              FUN_18175de30(lVar2,uVar1,DAT_181e5fc00);
             }
             lVar2 = this.AllBGM;
             uVar4 = uVar4 + 1;
@@ -158,15 +158,15 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AE4
-    // RVA   : 0x7F4E00   Offset: 0x7F4200   Length: 0x1EF
+    // Token : 0x6000AC3
+    // RVA   : 0x5271B0   Offset: 0x525FB0   Length: 0x1EF
     private void Init()
     {
         bool cVar1;
         long lVar2;
         ulong uVar3;
         if (this.plotBgm == null) {
-        LAB_1807f4e56:
+        LAB_180527206:
           this.plotBgm = 0;
           if ((GameController._instance == null) ||
              (lVar2 = GameController._instance.worldData) == null)
@@ -193,8 +193,8 @@ public class BGMController
           AudioSource.Play(this.gameBGM,0);
         }
         else {
-          cVar1 = FUN_180d75bc0(this.plotBgm.audioClip,0);
-          if (cVar1) goto LAB_1807f4e56;
+          cVar1 = FUN_180ad1200(this.plotBgm.audioClip,0);
+          if (cVar1) goto LAB_180527206;
         }
         lVar2 = this.environmentSound;
         uVar3 = BGMController.GetEnvironmentSoundClip(this,0);
@@ -207,8 +207,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AE5
-    // RVA   : 0x7F48E0   Offset: 0x7F3CE0   Length: 0x309
+    // Token : 0x6000AC4
+    // RVA   : 0x526C90   Offset: 0x525A90   Length: 0x309
     private AudioClip GetEnvironmentSoundClip()
     {
         uint uVar1;
@@ -223,16 +223,16 @@ public class BGMController
           if (!cVar2) {
             return this.bigMapEnvironmentSoundClip;
           }
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 8);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181e942d8 + 184) + 8);
           if (lVar3 == null) throw; // [null/range check failed]
           if (lVar3.cityAreaID != null) {
-            lVar3 = FUN_18046bca0(0);
+            lVar3 = FUN_1802102e0(0);
             if (((lVar3 == null) || (lVar3.cityAreaID == null)) ||
                (lVar3 = AreaBuildingData.DataBase(lVar3.cityAreaID,0)) == null)
             throw; // [null/range check failed]
             if (lVar3.MailDatas != -1) {
               lVar3 = this.environmentSoundClips;
-              lVar4 = FUN_18046bca0(0);
+              lVar4 = FUN_1802102e0(0);
               if (((lVar4 == null) || (lVar4.cityAreaID == null)) ||
                  ((lVar4 = AreaBuildingData.DataBase(lVar4.cityAreaID,0), lVar4 == null ||
                   (lVar3 == null)))) throw; // [null/range check failed]
@@ -240,9 +240,9 @@ public class BGMController
               if (lVar3.cityAreaID <= uVar1) {
                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
+                FUN_1801e02d0(uVar5,0);
               }
-              goto LAB_1807f4af9;
+              goto LAB_180526ea9;
             }
           }
           lVar3 = this.environmentSoundClips;
@@ -254,16 +254,16 @@ public class BGMController
             if (lVar3.cityAreaID <= uVar1) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
-        LAB_1807f4af9:
+        LAB_180526ea9:
             return lVar3[uVar1];
           }
         }
     }
 
-    // Token : 0x6000AE6
-    // RVA   : 0x7F5220   Offset: 0x7F4620   Length: 0x4A
+    // Token : 0x6000AC5
+    // RVA   : 0x5275D0   Offset: 0x5263D0   Length: 0x4A
     private void ResetEnvironmentSound()
     {
         long lVar1;
@@ -279,8 +279,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AE7
-    // RVA   : 0x7F5610   Offset: 0x7F4A10   Length: 0xFB1
+    // Token : 0x6000AC6
+    // RVA   : 0x5279C0   Offset: 0x5267C0   Length: 0xFB1
     private void Update()
     {
         bool cVar1;
@@ -313,12 +313,12 @@ public class BGMController
         lVar2 = WorldData.Player(lVar5,0);
         lVar5 = this.environmentSound;
         if (lVar2 == null) {
-        LAB_1807f589e:
+        LAB_180527c4e:
           if (lVar5 == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
           fVar9 = fVar9 - fVar10 * 0.5;
-        LAB_1807f5b0b:
+        LAB_180527ebb:
           AudioSource.set_volume(lVar5,fVar9,0);
         }
         else {
@@ -327,19 +327,19 @@ public class BGMController
           uVar3 = BGMController.GetEnvironmentSoundClip(this,0);
           cVar1 = Object.op_Equality(uVar4,uVar3,0);
           if (cVar1) {
-            lVar5 = FUN_18046bca0(0);
+            lVar5 = FUN_1802102e0(0);
             if (lVar5 == null) throw; // [null/range check failed]
             if (lVar5.Count == null) {
-        LAB_1807f5a42:
+        LAB_180527df2:
               fVar9 = 1.0;
             }
             else {
-              lVar5 = FUN_18046bca0(0);
+              lVar5 = FUN_1802102e0(0);
               if (((lVar5 == null) || (lVar5.Count == null)) ||
                  (lVar5 = AreaBuildingData.DataBase(lVar5.Count,0)) == null)
               throw; // [null/range check failed]
-              if (lVar5.MailDatas != -1) goto LAB_1807f5a42;
-              fVar9 = **(float **)(DAT_181db4020 + 184);
+              if (lVar5.MailDatas != -1) goto LAB_180527df2;
+              fVar9 = **(float **)(DAT_181e942d8 + 184);
             }
             fVar9 = fVar9 * GameController.CheckShowSpeHero;
             if (this.environmentSound == null) throw; // [null/range check failed]
@@ -355,10 +355,10 @@ public class BGMController
               if (lVar5 == null) throw; // [null/range check failed]
               fVar10 = (float)AudioSource.get_volume(lVar5,0);
               lVar5 = this.environmentSound;
-              if (fVar9 + 0.05 < fVar10) goto LAB_1807f589e;
+              if (fVar9 + 0.05 < fVar10) goto LAB_180527c4e;
               if (lVar5 == null) throw; // [null/range check failed]
             }
-            goto LAB_1807f5b0b;
+            goto LAB_180527ebb;
           }
           if (this.environmentSound == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(this.environmentSound,0);
@@ -368,7 +368,7 @@ public class BGMController
             fVar9 = (float)AudioSource.get_volume(lVar5,0);
             fVar10 = (float)RealTime.get_deltaTime(0);
             fVar9 = fVar9 - fVar10 * 0.5;
-            goto LAB_1807f5b0b;
+            goto LAB_180527ebb;
           }
           BGMController.ResetEnvironmentSound(this,0);
         }
@@ -383,10 +383,10 @@ public class BGMController
           fVar9 = (float)AudioSource.get_volume(lVar5,0);
           fVar10 = (float)RealTime.get_deltaTime(0);
           fVar10 = fVar10 * 0.15;
-          goto LAB_1807f65a5;
+          goto LAB_180528955;
         }
         if ((this.plotBgm != null) &&
-           (cVar1 = FUN_180d75bc0(this.plotBgm.audioClip,0), !cVar1)
+           (cVar1 = FUN_180ad1200(this.plotBgm.audioClip,0), !cVar1)
            ) {
           lVar5 = this.gameBGM;
           if (this.nowBgm == this.plotBgm) {
@@ -433,7 +433,7 @@ public class BGMController
               lVar5 = this.gameBGM;
               if (lVar5 == null) throw; // [null/range check failed]
               uVar4 = 1;
-              goto LAB_1807f5d7e;
+              goto LAB_18052812e;
             }
           }
           lVar5 = this.gameBGM;
@@ -441,7 +441,7 @@ public class BGMController
             fVar9 = (float)AudioSource.get_volume(lVar5,0);
             fVar10 = (float)RealTime.get_deltaTime(0);
             fVar10 = fVar10 * 0.2;
-        LAB_1807f65a5:
+        LAB_180528955:
             AudioSource.set_volume(lVar5,fVar9 - fVar10,0);
             return;
           }
@@ -450,12 +450,12 @@ public class BGMController
         lVar5 = this.fightBGM;
         if (!bVar8) {
           if (lVar5 == null) throw; // [null/range check failed]
-          cVar1 = FUN_18181ea10(lVar5,this.nowBgm,DAT_181d7dc68);
+          cVar1 = FUN_18175e190(lVar5,this.nowBgm,DAT_181e5fc88);
           if (!cVar1) {
             if (this.bossBGM == null) throw; // [null/range check failed]
-            cVar1 = FUN_18181ea10(this.bossBGM,this.nowBgm,
-                                  DAT_181d7dc68);
-            if (!cVar1) goto LAB_1807f5f58;
+            cVar1 = FUN_18175e190(this.bossBGM,this.nowBgm,
+                                  DAT_181e5fc88);
+            if (!cVar1) goto LAB_180528308;
           }
           if (this.gameBGM == null) throw; // [null/range check failed]
           fVar9 = (float)AudioSource.get_volume(this.gameBGM,0);
@@ -465,9 +465,9 @@ public class BGMController
             fVar9 = (float)AudioSource.get_volume(lVar5,0);
             fVar10 = (float)RealTime.get_deltaTime(0);
             fVar10 = fVar10 * 0.1;
-            goto LAB_1807f65a5;
+            goto LAB_180528955;
           }
-          lVar5 = FUN_18046c0a0(0);
+          lVar5 = FUN_1802106e0(0);
           if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
              (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) throw; // [null/range check failed]
           cVar1 = HeroData.HaveArea(lVar5,0);
@@ -477,7 +477,7 @@ public class BGMController
           else {
             uVar4 = this.areaBGM;
           }
-        LAB_1807f5e4c:
+        LAB_1805281fc:
           plVar6 = &this.nowBgm;
           lVar5 = BGMController.GetRandomBGM(this,uVar4,0);
           *plVar6 = lVar5;
@@ -491,7 +491,7 @@ public class BGMController
           lVar5 = this.gameBGM;
           if (lVar5 == null) throw; // [null/range check failed]
           uVar4 = 0;
-        LAB_1807f5d7e:
+        LAB_18052812e:
           AudioSource.set_loop(lVar5,uVar4,0);
           if (this.gameBGM != null) {
             AudioSource.set_time(this.gameBGM,0,0);
@@ -503,11 +503,11 @@ public class BGMController
           throw; // [null/range check failed]
         }
         if (lVar5 == null) throw; // [null/range check failed]
-        cVar1 = FUN_18181ea10(lVar5,this.nowBgm,DAT_181d7dc68);
+        cVar1 = FUN_18175e190(lVar5,this.nowBgm,DAT_181e5fc88);
         if (!cVar1) {
           if (this.bossBGM == null) throw; // [null/range check failed]
-          cVar1 = FUN_18181ea10(this.bossBGM,this.nowBgm,
-                                DAT_181d7dc68);
+          cVar1 = FUN_18175e190(this.bossBGM,this.nowBgm,
+                                DAT_181e5fc88);
           if (!cVar1) {
             if (this.gameBGM == null) throw; // [null/range check failed]
             fVar9 = (float)AudioSource.get_volume(this.gameBGM,0);
@@ -517,15 +517,15 @@ public class BGMController
                 fVar9 = (float)AudioSource.get_volume(lVar5,0);
                 fVar10 = (float)RealTime.get_deltaTime(0);
                 fVar10 = fVar10 * 0.3;
-                goto LAB_1807f65a5;
+                goto LAB_180528955;
               }
               throw; // [null/range check failed]
             }
             uVar4 = this.fightBGM;
-            goto LAB_1807f5e4c;
+            goto LAB_1805281fc;
           }
         }
-        LAB_1807f5f58:
+        LAB_180528308:
         plVar6 = &this.nowBgm;
         if (this.gameBGM == null) throw; // [null/range check failed]
         fVar9 = (float)AudioSource.get_volume(this.gameBGM,0);
@@ -553,7 +553,7 @@ public class BGMController
           fVar11 = fVar11 * fVar10;
           bVar8 = fVar9 == fVar11;
           bVar7 = fVar9 < fVar11;
-        LAB_1807f6326:
+        LAB_1805286d6:
           if (bVar7 || bVar8) {
             return;
           }
@@ -595,7 +595,7 @@ public class BGMController
           fVar11 = fVar11 * fVar10;
           bVar8 = fVar11 == fVar9;
           bVar7 = fVar11 < fVar9;
-          goto LAB_1807f6326;
+          goto LAB_1805286d6;
         }
         if (lVar5 == null) throw; // [null/range check failed]
         cVar1 = AudioSource.get_isPlaying(lVar5,0);
@@ -608,8 +608,8 @@ public class BGMController
         }
         fVar9 = this.quietTime;
         if (fVar9 <= 0.0) {
-          if (bVar8) goto LAB_1807f6140;
-          lVar5 = FUN_18046c0a0(0);
+          if (bVar8) goto LAB_1805284f0;
+          lVar5 = FUN_1802106e0(0);
           if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
              (lVar5 = WorldData.Player(lVar5.villageAreaID,0)) == null) throw; // [null/range check failed]
           cVar1 = HeroData.HaveArea(lVar5,0);
@@ -626,7 +626,7 @@ public class BGMController
             this.quietTime = fVar9 - fVar10;
             return;
           }
-        LAB_1807f6140:
+        LAB_1805284f0:
           uVar4 = this.fightBGM;
         }
         lVar5 = BGMController.GetRandomBGM(this,uVar4,0);
@@ -654,8 +654,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AE8
-    // RVA   : 0x7F5290   Offset: 0x7F4690   Length: 0x1D
+    // Token : 0x6000AC7
+    // RVA   : 0x527640   Offset: 0x526440   Length: 0x1D
     public void SetBgm(int id)
     {
         long lVar1;
@@ -693,8 +693,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AE9
-    // RVA   : 0x7F5270   Offset: 0x7F4670   Length: 0x1A
+    // Token : 0x6000AC8
+    // RVA   : 0x527620   Offset: 0x526420   Length: 0x1A
     public void SetBgm(int id, float startTime)
     {
         long lVar1;
@@ -732,8 +732,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AEA
-    // RVA   : 0x7F52B0   Offset: 0x7F46B0   Length: 0x147
+    // Token : 0x6000AC9
+    // RVA   : 0x527660   Offset: 0x526460   Length: 0x147
     public void SetBgm(int id, float startTime, float startVolume)
     {
         long lVar1;
@@ -771,8 +771,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AEB
-    // RVA   : 0x7F54B0   Offset: 0x7F48B0   Length: 0x137
+    // Token : 0x6000ACA
+    // RVA   : 0x527860   Offset: 0x526660   Length: 0x137
     public void SetPlotBgm(string name)
     {
         long lVar1;
@@ -797,8 +797,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AEC
-    // RVA   : 0x7F5400   Offset: 0x7F4800   Length: 0xA8
+    // Token : 0x6000ACB
+    // RVA   : 0x5277B0   Offset: 0x5265B0   Length: 0xA8
     public void SetPlotBgm(int id)
     {
         long lVar1;
@@ -823,8 +823,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AED
-    // RVA   : 0x7F55F0   Offset: 0x7F49F0   Length: 0x1D
+    // Token : 0x6000ACC
+    // RVA   : 0x5279A0   Offset: 0x5267A0   Length: 0x1D
     public void StopNowBgm()
     {
         if (this.gameBGM != null) {
@@ -833,8 +833,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AEE
-    // RVA   : 0x7F5150   Offset: 0x7F4550   Length: 0xC8
+    // Token : 0x6000ACD
+    // RVA   : 0x527500   Offset: 0x526300   Length: 0xC8
     public void RefreshNowBgmVolumn()
     {
         float fVar1;
@@ -844,7 +844,7 @@ public class BGMController
         lVar2 = this.gameBGM;
         if (this.nowBgm != null) {
           fVar1 = this.nowBgm.volume;
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 8);
           if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 16)) != null) {
             fVar4 = (float)PlayerPrefDictionary.GetFloat(lVar3,"BgmVolume",0);
             if (lVar2 != null) {
@@ -855,8 +855,8 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AEF
-    // RVA   : 0x7F4BF0   Offset: 0x7F3FF0   Length: 0x209
+    // Token : 0x6000ACE
+    // RVA   : 0x526FA0   Offset: 0x525DA0   Length: 0x209
     public AudioClipPrefab GetRandomBGM(List<AudioClipPrefab> BGMList)
     {
         uint uVar1;
@@ -865,19 +865,19 @@ public class BGMController
         int iVar4;
         int iVar5;
         int iVar6;
-        lVar2 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar2,DAT_181d8f0b0);
+        lVar2 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar2,DAT_181e71270);
         iVar5 = 0;
         if (BGMList != null) {
           for (; iVar5 < *(int *)(BGMList + 24); iVar5 = iVar5 + 1) {
             if (BGMList == this.areaBGM) {
-              lVar3 = FUN_180002f80(BGMList,iVar5,DAT_181d7dd68);
+              lVar3 = FUN_1800024b0(BGMList,iVar5,DAT_181e5fd98);
               if (lVar3 == null) throw; // [null/range check failed]
-              if (*(int *)(lVar3 + 32) == -1) goto LAB_1807f4d6f;
-              lVar3 = FUN_180002f80(BGMList,iVar5);
+              if (*(int *)(lVar3 + 32) == -1) goto LAB_18052711f;
+              lVar3 = FUN_1800024b0(BGMList,iVar5);
               if (lVar3 == null) throw; // [null/range check failed]
               iVar6 = *(int *)(lVar3 + 32);
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
               lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
               if (lVar3 == null) throw; // [null/range check failed]
@@ -885,23 +885,23 @@ public class BGMController
               if (lVar3 == null) throw; // [null/range check failed]
               if (iVar6 == *(int *)(lVar3 + 72)) {
                 iVar6 = 3;
-                goto LAB_1807f4d74;
+                goto LAB_180527124;
               }
             }
             else {
-        LAB_1807f4d6f:
+        LAB_18052711f:
               iVar6 = 1;
-        LAB_1807f4d74:
+        LAB_180527124:
               iVar4 = 0;
               do {
                 if (lVar2 == null) throw; // [null/range check failed]
-                FUN_18182a6c0(lVar2,iVar5);
+                FUN_181769fe0(lVar2,iVar5);
                 iVar4 = iVar4 + 1;
               } while (iVar4 < iVar6);
             }
           }
           if (lVar2 != null) {
-            uVar1 = FUN_180d96040(0,*(uint32 *)(lVar2 + 24),0);
+            uVar1 = FUN_180af1860(0,*(uint32 *)(lVar2 + 24),0);
             if (*(uint32 *)(lVar2 + 24) <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -914,22 +914,22 @@ public class BGMController
         }
     }
 
-    // Token : 0x6000AF0
-    // RVA   : 0x7F6650   Offset: 0x7F5A50   Length: 0x4A
+    // Token : 0x6000ACF
+    // RVA   : 0x528A00   Offset: 0x527800   Length: 0x4A
     public void /*ctor*/()
     {
         this.MusicPath = "Sound/Music/";
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6000AF1
-    // RVA   : 0x7F65D0   Offset: 0x7F59D0   Length: 0x76
+    // Token : 0x6000AD0
+    // RVA   : 0x528980   Offset: 0x527780   Length: 0x76
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = il2cpp_internal(DAT_181d82a80);
-        FUN_1808b1370(uVar2,DAT_181d72860);
-        puVar1 = *(uint64 **)(DAT_181dafae0 + 184);
+        uVar2 = il2cpp_internal(DAT_181e62840);
+        FUN_1806e5bc0(uVar2,DAT_181e537b0);
+        puVar1 = *(uint64 **)(DAT_181e8fc20 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

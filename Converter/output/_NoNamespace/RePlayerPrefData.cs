@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : RePlayerPrefData
-// Token : 0x20001CB
+// Token : 0x20001CD
 // ============================================================
 
 public class RePlayerPrefData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C61
+    // Token: 0x4000C74
     public PlayerPrefDictionary playerPrefData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000EA7
-    // RVA   : 0xD097F0   Offset: 0xD08BF0   Length: 0x65
+    // Token : 0x6000EAD
+    // RVA   : 0xA62450   Offset: 0xA61250   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;

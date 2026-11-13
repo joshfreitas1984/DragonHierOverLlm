@@ -1,30 +1,30 @@
 // ============================================================
 // Type  : AreaLimit
-// Token : 0x2000200
+// Token : 0x2000202
 // ============================================================
 
 public class AreaLimit
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E78
+    // Token: 0x4000E8C
     public int value__;
 
-    // Token: 0x4000E79
+    // Token: 0x4000E8D
     public const AreaLimit None;
 
-    // Token: 0x4000E7A
+    // Token: 0x4000E8E
     public const AreaLimit SameWithPlayer;
 
-    // Token: 0x4000E7B
+    // Token: 0x4000E8F
     public const AreaLimit SameWithOrNearPlayer;
 
-    // Token: 0x4000E7C
+    // Token: 0x4000E90
     public const AreaLimit AreaID;
 
-    // Token: 0x4000E7D
+    // Token: 0x4000E91
     public const AreaLimit SameWithEvent;
 
-    // Token: 0x4000E7E
+    // Token: 0x4000E92
     public const AreaLimit SameWithOrNearEvent;
 
 }

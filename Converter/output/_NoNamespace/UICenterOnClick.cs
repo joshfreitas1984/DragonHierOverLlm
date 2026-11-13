@@ -1,13 +1,13 @@
 // ============================================================
 // Type  : UICenterOnClick
-// Token : 0x200003A
+// Token : 0x2000039
 // ============================================================
 
 public class UICenterOnClick
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000109
-    // RVA   : 0x12AF650   Offset: 0x12AEA50   Length: 0x47C
+    // Token : 0x60000F0
+    // RVA   : 0x11363E0   Offset: 0x11351E0   Length: 0x47C
     private void OnClick()
     {
         ulong uVar1;
@@ -24,9 +24,9 @@ public class UICenterOnClick
         byte[] local_18 = new byte[8];
         float local_10;
         uVar4 = Component.get_gameObject(this,0);
-        lVar5 = NGUITools.FindInParents(uVar4,DAT_181d8f238);
+        lVar5 = NGUITools.FindInParents(uVar4,DAT_181e72878);
         uVar4 = Component.get_gameObject(this,0);
-        lVar6 = NGUITools.FindInParents(uVar4,DAT_181d8f4b8);
+        lVar6 = NGUITools.FindInParents(uVar4,DAT_181e72af8);
         cVar3 = Object.op_Inequality(lVar5,0,0);
         if (!cVar3) {
           cVar3 = Object.op_Inequality(lVar6,0,0);
@@ -37,7 +37,7 @@ public class UICenterOnClick
             if (*(int *)(lVar6 + 0x134) == 0) {
               return;
             }
-            lVar5 = Component.GetComponent(lVar6,DAT_181d96df8);
+            lVar5 = Component.GetComponent(lVar6,DAT_181e7a1b8);
             lVar7 = UIRect.get_cachedTransform(lVar6,0);
             lVar8 = Component.get_transform(this,0);
             if ((lVar8 != null) &&
@@ -96,7 +96,7 @@ public class UICenterOnClick
                   if (*(uint32 *)(lVar6 + 24) < 3) {
                     uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar4,0);
+                    FUN_1801e02d0(uVar4,0);
                   }
                   local_30 = *(float *)(lVar6 + 40);
                   local_20 = (*(float *)(lVar6 + 64) + local_30) * 0.5;
@@ -116,11 +116,11 @@ public class UICenterOnClick
         }
     }
 
-    // Token : 0x600010A
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60000F1
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

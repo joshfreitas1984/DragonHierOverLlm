@@ -5047,6 +5047,198 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "名士"
+  splits:
+  - text: "名士"
+    translated: "Scholar"
+    qcReviewedText: "Scholar"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "商人"
+  splits:
+  - text: "商人"
+    translated: "Trader"
+    qcReviewedText: "Trader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "官兵领队"
+  splits:
+  - text: "官兵领队"
+    translated: "Officer led the way"
+    qcReviewedText: "Officer led the way"
+    qcTranslated: "Officer led the troops"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategories:
+    - UnnaturalPhrasing
+- raw: "官差"
+  splits:
+  - text: "官差"
+    translated: "Officer"
+    qcReviewedText: "Officer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "富商"
+  splits:
+  - text: "富商"
+    translated: "Wealthy merchant"
+    qcReviewedText: "Wealthy merchant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "小二"
+  splits:
+  - text: "小二"
+    translated: "Waiter"
+    qcReviewedText: "Waiter"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "小贼"
+  splits:
+  - text: "小贼"
+    translated: "Little thief"
+    qcReviewedText: "Little thief"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "强盗头目"
+  splits:
+  - text: "强盗头目"
+    translated: "Bandit leader"
+    qcReviewedText: "Bandit leader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "恶贼头目"
+  splits:
+  - text: "恶贼头目"
+    translated: "Chief villain"
+    qcReviewedText: "Chief villain"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "恶霸头目"
+  splits:
+  - text: "恶霸头目"
+    translated: "Bullseye Boss"
+    qcReviewedText: "Bullseye Boss"
+    qcTranslated: "Tyrant Leader"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
+- raw: "拍卖主持"
+  splits:
+  - text: "拍卖主持"
+    translated: "Auctioneer"
+    qcReviewedText: "Auctioneer"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "旅行商人"
+  splits:
+  - text: "旅行商人"
+    translated: "Traveling merchant"
+    qcReviewedText: "Traveling merchant"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "暴民头领"
+  splits:
+  - text: "暴民头领"
+    translated: "Mob leader"
+    qcReviewedText: "Mob leader"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "疯癫乞丐"
+  splits:
+  - text: "疯癫乞丐"
+    translated: "Mad Beggar"
+    qcReviewedText: "Mad Beggar"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "百姓"
+  splits:
+  - text: "百姓"
+    translated: "Common people"
+    qcReviewedText: "Common people"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "盗贼"
+  splits:
+  - text: "盗贼"
+    translated: "Thief"
+    qcReviewedText: "Thief"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "管家"
+  splits:
+  - text: "管家"
+    translated: "Butler"
+    qcReviewedText: "Butler"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "落魄之人"
+  splits:
+  - text: "落魄之人"
+    translated: "Down-and-out person"
+    qcReviewedText: "Down-and-out person"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "讲经人"
+  splits:
+  - text: "讲经人"
+    translated: "Master, I have come to report matters to you."
+    qcReviewedText: "Master, I have come to report matters to you."
+    qcTranslated: "Preacher"
+    qcStatus: Corrected
+    flaggedForQcReview: true
+    qcQualityScore: 0
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
+- raw: "豪商巨贾"
+  splits:
+  - text: "豪商巨贾"
+    translated: "Rich merchants and industrialists"
+    qcReviewedText: "Rich merchants and industrialists"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "镖头"
+  splits:
+  - text: "镖头"
+    translated: "Messenger"
+    qcReviewedText: "Messenger"
+    qcTranslated: "Escort Leader"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
+- raw: "飞贼"
+  splits:
+  - text: "飞贼"
+    translated: "F-fly thief"
+    qcReviewedText: "F-fly thief"
+    qcTranslated: "Flying thief"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
 - raw: "临时围起的跑道颇具气势，四处彩旗招展，人头攒动，\\n看台上鼓声阵阵，越发急促，已有不少人士带着马匹在起点整备，\\n看来赛马大会即将开始了。"
   splits:
   - text: "临时围起的跑道颇具气势，四处彩旗招展，人头攒动，"
@@ -17057,14 +17249,6 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "旅行商人"
-  splits:
-  - text: "旅行商人"
-    translated: "Traveling merchant"
-    qcReviewedText: "Traveling merchant"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
 - raw: "无事不登三宝殿，#PlayerName#此次前来有何贵干？"
   splits:
   - text: "无事不登三宝殿，#PlayerName#此次前来有何贵干？"
@@ -18721,17 +18905,16 @@
   splits:
   - text: "江湖传闻，得高人传功的砍柴少年躲藏在"
     translated: "Jianghu rumor has it that the felling boy who received martial teachings hid in"
-    qcReviewedText: "Jianghu rumor has it that the felling boy who received martial teachings hid in<b>#PosText#</b>, A mage expert has gone to steal the divine technique."
-    qcTranslated: "Jianghu rumor has it that the woodcutting boy who received martial teachings hid in <b>#PosText#</b>, and a demonic expert has gone to steal the divine technique."
+    qcReviewedText: "Jianghu rumor has it that the felling boy who received martial teachings hid in<b>#PosText#</b>, A magic arts expert has gone to seize the divine technique."
+    qcTranslated: "Jianghu rumor has it that the woodcutting boy who received martial teachings hid in <b>#PosText#</b>, and a demonic arts expert has gone to seize the divine technique."
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - DroppedContent
-    - HardToParseSeam
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "，有一名魔道高手已前去抢夺神功。"
-    translated: ", A mage expert has gone to steal the divine technique."
+    translated: ", A magic arts expert has gone to seize the divine technique."
   templates:
   - template: "{0}<b>#PosText#</b>{1}"
 - raw: "江湖传闻在<b>#PosText#</b>有匹名驹出没，爱马之人纷纷前往欲寻得其踪迹。"
@@ -19503,14 +19686,6 @@
   - text: "疫病蔓延"
     translated: "Pandemic spreads"
     qcReviewedText: "Pandemic spreads"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "疯癫乞丐"
-  splits:
-  - text: "疯癫乞丐"
-    translated: "Mad Beggar"
-    qcReviewedText: "Mad Beggar"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -22139,14 +22314,6 @@
   - text: "谨遵师命"
     translated: "Follow the master's orders"
     qcReviewedText: "Follow the master's orders"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
-- raw: "豪商巨贾"
-  splits:
-  - text: "豪商巨贾"
-    translated: "Rich merchants and industrialists"
-    qcReviewedText: "Rich merchants and industrialists"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

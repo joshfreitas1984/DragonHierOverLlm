@@ -1,48 +1,48 @@
 // ============================================================
 // Type  : EnvelopContent
-// Token : 0x2000029
+// Token : 0x2000028
 // ============================================================
 
 public class EnvelopContent
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000BD
+    // Token: 0x400009D
     public Transform targetRoot;
 
-    // Token: 0x40000BE
+    // Token: 0x400009E
     public int padLeft;
 
-    // Token: 0x40000BF
+    // Token: 0x400009F
     public int padRight;
 
-    // Token: 0x40000C0
+    // Token: 0x40000A0
     public int padBottom;
 
-    // Token: 0x40000C1
+    // Token: 0x40000A1
     public int padTop;
 
-    // Token: 0x40000C2
+    // Token: 0x40000A2
     public bool ignoreDisabled;
 
-    // Token: 0x40000C3
+    // Token: 0x40000A3
     private bool mStarted;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000A0
-    // RVA   : 0x944EA0   Offset: 0x9442A0   Length: 0xB
+    // Token : 0x6000087
+    // RVA   : 0x68A5A0   Offset: 0x6893A0   Length: 0xB
     private void Start()
     {
-        void FUN_180944ea0(int64 this)
+        void FUN_18068a5a0(int64 this)
         {
         this.mStarted = 1;
         EnvelopContent.Execute(this,0);
     }
 
-    // Token : 0x60000A1
-    // RVA   : 0x944E90   Offset: 0x944290   Length: 0xE
+    // Token : 0x6000088
+    // RVA   : 0x68A590   Offset: 0x689390   Length: 0xE
     private void OnEnable()
     {
-        void FUN_180944e90(int64 this)
+        void FUN_18068a590(int64 this)
         {
         if (this.mStarted) {
           EnvelopContent.Execute(this,0);
@@ -50,8 +50,8 @@ public class EnvelopContent
         }
     }
 
-    // Token : 0x60000A2
-    // RVA   : 0x944B50   Offset: 0x943F50   Length: 0x339
+    // Token : 0x6000089
+    // RVA   : 0x68A250   Offset: 0x689050   Length: 0x339
     public void Execute()
     {
         float fVar1;
@@ -79,7 +79,7 @@ public class EnvelopContent
           if (!cVar4) {
             lVar6 = Component.get_transform(this,0);
             if (lVar6 != null) {
-              uVar7 = FUN_180daa030(lVar6,0);
+              uVar7 = FUN_180b05920(lVar6,0);
               puVar8 = (uint64 *)
                        NGUIMath.CalculateRelativeWidgetBounds
                                  (local_68,uVar7,this.targetRoot,
@@ -99,7 +99,7 @@ public class EnvelopContent
               puVar8 = (uint64 *)Bounds.get_max(local_68,&local_50,0);
               iVar3 = this.padTop;
               local_78 = *puVar8;
-              plVar10 = (int64 *)Component.GetComponent(this,DAT_181d97078);
+              plVar10 = (int64 *)Component.GetComponent(this,DAT_181e7a438);
               if (plVar10 != (int64 *)0) {
                 (**(code **)(*plVar10 + 0x268))
                           (plVar10,fVar11,fVar12,((float)iVar2 + fVar1) - fVar11,
@@ -111,7 +111,7 @@ public class EnvelopContent
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           Debug.LogError("Target Root object should not be a parent of Envelop Content. Make it a sibling instead.",this,0);
         }
@@ -120,14 +120,14 @@ public class EnvelopContent
         }
     }
 
-    // Token : 0x60000A3
-    // RVA   : 0x944EB0   Offset: 0x9442B0   Length: 0xB
+    // Token : 0x600008A
+    // RVA   : 0x68A5B0   Offset: 0x6893B0   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_180944eb0(int64 this)
+        void FUN_18068a5b0(int64 this)
         {
         this.ignoreDisabled = 1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

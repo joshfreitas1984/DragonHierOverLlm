@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : BranchLeaderSettingTabController
-// Token : 0x20001A4
+// Token : 0x20001A6
 // ============================================================
 
 public class BranchLeaderSettingTabController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B7B
+    // Token: 0x4000B8C
     public bool controlable;
 
-    // Token: 0x4000B7C
+    // Token: 0x4000B8D
     public AreaData targetArea;
 
-    // Token: 0x4000B7D
+    // Token: 0x4000B8E
     public ForceData targetForce;
 
-    // Token: 0x4000B7E
+    // Token: 0x4000B8F
     private bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D7F
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x6000D82
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private void Start()
     {
     }
 
-    // Token : 0x6000D80
-    // RVA   : 0xC8E7D0   Offset: 0xC8DBD0   Length: 0xE
+    // Token : 0x6000D83
+    // RVA   : 0x9F7440   Offset: 0x9F6240   Length: 0xE
     private void Update()
     {
-        void FUN_180c8e7d0(int64 this)
+        void FUN_1809f7440(int64 this)
         {
         if (!this.inited) {
           BranchLeaderSettingTabController.Init(this,0);
@@ -37,11 +37,11 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D81
-    // RVA   : 0xC8D420   Offset: 0xC8C820   Length: 0x3C2
+    // Token : 0x6000D84
+    // RVA   : 0x9F6090   Offset: 0x9F4E90   Length: 0x3C2
     public void Init()
     {
-        var pStatics = *(int64*)(DAT_181dab4a8 + 184);
+        var pStatics = *(int64*)(DAT_181e8b8e8 + 184);
         float fVar1;
         long lVar2;
         ulong uVar3;
@@ -53,7 +53,7 @@ public class BranchLeaderSettingTabController
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"AreaName",0);
           if (lVar2 != null) {
-            uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
+            uVar3 = Component.GetComponent(lVar2,DAT_181e79538);
             if (this.targetArea != null) {
               uVar4 = AreaData.GetAreaName(this.targetArea,0);
               uVar4 = String.Concat(uVar4,"分舵",0);
@@ -62,7 +62,7 @@ public class BranchLeaderSettingTabController
               if (lVar2 != null) {
                 lVar2 = Transform.Find(lVar2,"AreaIcon",0);
                 if (lVar2 != null) {
-                  lVar2 = Component.GetComponent(lVar2,DAT_181d94478);
+                  lVar2 = Component.GetComponent(lVar2,DAT_181e777b8);
                   if ((this.targetArea != null) && (*pStatics != 0)
                      ) {
                     uVar3 = TextureController.LoadAtlasSprite
@@ -74,26 +74,26 @@ public class BranchLeaderSettingTabController
                       if (lVar2 != null) {
                         lVar2 = Transform.Find(lVar2,"AreaIcon",0);
                         if (lVar2 != null) {
-                          plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
+                          plVar5 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
                           if (plVar5 != (int64 *)0) {
                             (**(code **)(*plVar5 + 0x408))(plVar5,*(uint64 *)(*plVar5 + 0x410));
                             lVar2 = Component.get_transform(this,0);
                             if (lVar2 != null) {
                               lVar2 = Transform.Find(lVar2,"AreaIcon",0);
                               if (lVar2 != null) {
-                                lVar2 = Component.GetComponent(lVar2,DAT_181d94f78);
+                                lVar2 = Component.GetComponent(lVar2,DAT_181e782b8);
                                 lVar6 = Component.get_transform(this,0);
                                 if (lVar6 != null) {
                                   lVar6 = Transform.Find(lVar6,"AreaIcon",0);
                                   if (lVar6 != null) {
-                                    lVar6 = Component.GetComponent(lVar6,DAT_181d94f78);
+                                    lVar6 = Component.GetComponent(lVar6,DAT_181e782b8);
                                     if (lVar6 != null) {
                                       RectTransform.get_sizeDelta(lVar6,0);
                                       lVar6 = Component.get_transform(this,0);
                                       if (lVar6 != null) {
                                         lVar6 = Transform.Find(lVar6,"AreaIcon",0);
                                         if (lVar6 != null) {
-                                          lVar6 = Component.GetComponent(lVar6,DAT_181d94f78);
+                                          lVar6 = Component.GetComponent(lVar6,DAT_181e782b8);
                                           if (lVar6 != null) {
                                             fVar1 = (float)RectTransform.get_sizeDelta(lVar6,0);
                                             if (lVar2 != null) {
@@ -104,7 +104,7 @@ public class BranchLeaderSettingTabController
                                               if (lVar2 != null) {
                                                 lVar2 = Transform.Find(lVar2,"AreaIcon",0);
                                                 if (lVar2 != null) {
-                                                  lVar2 = Component.GetComponent(lVar2,DAT_181d953f8);
+                                                  lVar2 = Component.GetComponent(lVar2,DAT_181e78738);
                                                   if (lVar2 != null) {
                                                     *(uint64 *)(lVar2 + 24) =
                                                          this.targetArea;
@@ -138,8 +138,8 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D82
-    // RVA   : 0xC8D280   Offset: 0xC8C680   Length: 0x194
+    // Token : 0x6000D85
+    // RVA   : 0x9F5EF0   Offset: 0x9F4CF0   Length: 0x194
     public void InitBuildSetting()
     {
         long lVar1;
@@ -147,14 +147,14 @@ public class BranchLeaderSettingTabController
         if (lVar1 != null) {
           lVar1 = Transform.Find(lVar1,"AutoBuildToggle",0);
           if (lVar1 != null) {
-            lVar1 = Component.GetComponent(lVar1,DAT_181d962f8);
+            lVar1 = Component.GetComponent(lVar1,DAT_181e796b8);
             if ((this.targetArea != null) && (lVar1 != null)) {
               Toggle.set_isOn(lVar1,this.targetArea.autoBuild,0);
               lVar1 = Component.get_transform(this,0);
               if (lVar1 != null) {
                 lVar1 = Transform.Find(lVar1,"ResourceLimitDropdown",0);
                 if (lVar1 != null) {
-                  lVar1 = Component.GetComponent(lVar1,DAT_181d93d78);
+                  lVar1 = Component.GetComponent(lVar1,DAT_181e770b8);
                   if ((this.targetArea != null) && (lVar1 != null)) {
                     Dropdown.set_value(lVar1,(int)(this.targetArea.autoBuildResourceRateLimit /
                                                    0.2),0);
@@ -162,7 +162,7 @@ public class BranchLeaderSettingTabController
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"UpgradePriorityDropdown",0);
                       if (lVar1 != null) {
-                        lVar1 = Component.GetComponent(lVar1,DAT_181d93d78);
+                        lVar1 = Component.GetComponent(lVar1,DAT_181e770b8);
                         if ((this.targetArea != null) && (lVar1 != null)) {
                           Dropdown.set_value(lVar1,this.targetArea.autoBuildPriority
                                               ,0);
@@ -179,8 +179,8 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D83
-    // RVA   : 0xC8CEA0   Offset: 0xC8C2A0   Length: 0x9E
+    // Token : 0x6000D86
+    // RVA   : 0x9F5B10   Offset: 0x9F4910   Length: 0x9E
     public void AutoBuildToggleClicked()
     {
         long lVar1;
@@ -190,7 +190,7 @@ public class BranchLeaderSettingTabController
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"AutoBuildToggle",0);
           if (lVar2 != null) {
-            lVar2 = Component.GetComponent(lVar2,DAT_181d962f8);
+            lVar2 = Component.GetComponent(lVar2,DAT_181e796b8);
             if ((lVar2 != null) && (lVar1 != null)) {
               lVar1.autoBuild = *(uint8 *)(lVar2 + 0x118);
               BranchLeaderSettingTabController.RefreshBuildSetting(this,0);
@@ -200,8 +200,8 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D84
-    // RVA   : 0xC8E720   Offset: 0xC8DB20   Length: 0xA3
+    // Token : 0x6000D87
+    // RVA   : 0x9F7390   Offset: 0x9F6190   Length: 0xA3
     public void ResourceLimitDropdownClicked()
     {
         long lVar1;
@@ -211,7 +211,7 @@ public class BranchLeaderSettingTabController
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"ResourceLimitDropdown",0);
           if (lVar2 != null) {
-            lVar2 = Component.GetComponent(lVar2,DAT_181d93d78);
+            lVar2 = Component.GetComponent(lVar2,DAT_181e770b8);
             if ((lVar2 != null) && (lVar1 != null)) {
               lVar1.autoBuildResourceRateLimit = (float)*(int *)(lVar2 + 0x120) * 0.2;
               return;
@@ -220,8 +220,8 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D85
-    // RVA   : 0xC8E7E0   Offset: 0xC8DBE0   Length: 0x94
+    // Token : 0x6000D88
+    // RVA   : 0x9F7450   Offset: 0x9F6250   Length: 0x94
     public void UpgradePriorityDropdownClicked()
     {
         long lVar1;
@@ -231,7 +231,7 @@ public class BranchLeaderSettingTabController
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"UpgradePriorityDropdown",0);
           if (lVar2 != null) {
-            lVar2 = Component.GetComponent(lVar2,DAT_181d93d78);
+            lVar2 = Component.GetComponent(lVar2,DAT_181e770b8);
             if ((lVar2 != null) && (lVar1 != null)) {
               lVar1.autoBuildPriority = *(uint32 *)(lVar2 + 0x120);
               return;
@@ -240,8 +240,8 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D86
-    // RVA   : 0xC8D7F0   Offset: 0xC8CBF0   Length: 0x193
+    // Token : 0x6000D89
+    // RVA   : 0x9F6460   Offset: 0x9F5260   Length: 0x193
     public void RefreshBuildSetting()
     {
         long lVar1;
@@ -251,14 +251,14 @@ public class BranchLeaderSettingTabController
         if (lVar1 != null) {
           lVar1 = Transform.Find(lVar1,"AutoBuildToggle",0);
           if (lVar1 != null) {
-            lVar1 = Component.GetComponent(lVar1,DAT_181d962f8);
+            lVar1 = Component.GetComponent(lVar1,DAT_181e796b8);
             if (lVar1 != null) {
               Selectable.set_interactable(lVar1,this.controlable,0);
               lVar1 = Component.get_transform(this,0);
               if (lVar1 != null) {
                 lVar1 = Transform.Find(lVar1,"ResourceLimitDropdown",0);
                 if (lVar1 != null) {
-                  lVar1 = Component.GetComponent(lVar1,DAT_181d93d78);
+                  lVar1 = Component.GetComponent(lVar1,DAT_181e770b8);
                   cVar3 = false;
                   if (!this.controlable) {
                     cVar2 = false;
@@ -273,7 +273,7 @@ public class BranchLeaderSettingTabController
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"UpgradePriorityDropdown",0);
                       if (lVar1 != null) {
-                        lVar1 = Component.GetComponent(lVar1,DAT_181d93d78);
+                        lVar1 = Component.GetComponent(lVar1,DAT_181e770b8);
                         if (this.controlable) {
                           if (this.targetArea == null) throw; // [null/range check failed]
                           cVar3 = this.targetArea.autoBuild;
@@ -292,12 +292,12 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D87
-    // RVA   : 0xC8D990   Offset: 0xC8CD90   Length: 0xD86
+    // Token : 0x6000D8A
+    // RVA   : 0x9F6600   Offset: 0x9F5400   Length: 0xD86
     public void RefreshHeroIcon()
     {
-        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_2a90 = *(int64*)(DAT_181e52a90 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
@@ -320,7 +320,7 @@ public class BranchLeaderSettingTabController
             if (this.targetArea.branchLeaderID < 0) {
               lVar2 = Component.get_transform(this);
               if (((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"HeroBack",0)) != null) &&
-                 (lVar2 = Component.GetComponent(lVar2,DAT_181d93778)) != null) {
+                 (lVar2 = Component.GetComponent(lVar2,DAT_181e76ab8)) != null) {
                 Selectable.set_interactable(lVar2,this.controlable,0);
                 lVar2 = Component.get_transform(this,0);
                 if (lVar2 != null) {
@@ -348,18 +348,18 @@ public class BranchLeaderSettingTabController
             else {
               lVar2 = Component.get_transform(this);
               if (((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"HeroBack",0)) != null) &&
-                 (lVar2 = Component.GetComponent(lVar2,DAT_181d93778)) != null) {
+                 (lVar2 = Component.GetComponent(lVar2,DAT_181e76ab8)) != null) {
                 Selectable.set_interactable(lVar2,0,0);
                 lVar2 = Component.get_transform(this,0);
                 if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"HeroIcon",0)) != null) {
                   uVar3 = Component.get_gameObject(lVar2,0);
-                  if (*pStatics_2ee8 != 0) {
-                    uVar1 = *(uint64 *)(*pStatics_2ee8 + 144);
+                  if (*pStatics_2a90 != 0) {
+                    uVar1 = *(uint64 *)(*pStatics_2a90 + 144);
                     lVar2 = GlobalData.AddChild(uVar3,uVar1,0);
                     if ((lVar2 != null) &&
-                       (lVar4 = GameObject.GetComponent(lVar2,DAT_181d71b50)) != null) {
+                       (lVar4 = GameObject.GetComponent(lVar2,DAT_181e54c18)) != null) {
                       *(uint8 *)(lVar4 + 88) = 1;
-                      lVar4 = GameObject.GetComponent(lVar2,DAT_181d71b50);
+                      lVar4 = GameObject.GetComponent(lVar2,DAT_181e54c18);
                       if ((((GameController._instance != null) &&
                            (this.targetArea != null)) &&
                           (lVar7 = GameController._instance.worldData, lVar7 != null
@@ -379,7 +379,7 @@ public class BranchLeaderSettingTabController
                                 local_40 = *(uint32 *)(puVar5 + 1);
                                 local_48 = *puVar5;
                                 Transform.set_localScale(lVar4,&local_48,0);
-        LAB_180c8dfc6:
+        LAB_1809f6c36:
                                 lVar4 = Component.get_transform(this,0);
                                 if (lVar4 != null) {
                                   lVar4 = Transform.Find(lVar4,"Up",0);
@@ -391,13 +391,13 @@ public class BranchLeaderSettingTabController
                                     lVar4 = Component.get_transform(this,0);
                                     if ((lVar4 != null) &&
                                        (lVar4 = Transform.Find(lVar4,"Up",0)) != null) {
-                                      lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
-                                      plVar6 = (int64 *)FUN_1800d60b0(DAT_181da4138,7);
-                                      lVar7 = GameObject.GetComponent(lVar2,DAT_181d71b50);
+                                      lVar4 = Component.GetComponent(lVar4,DAT_181e788b8);
+                                      plVar6 = (int64 *)FUN_1801dfd90(DAT_181e84278,7);
+                                      lVar7 = GameObject.GetComponent(lVar2,DAT_181e54c18);
                                       if ((lVar7 != null) && (lVar7.villageAreaID != null)) {
                                         fVar9 = (float)HeroData.GetTotalAttir
                                                                  (lVar7.villageAreaID,0);
-                                        lVar7 = *(int64 *)(pStatics_3d40 + 0x498)
+                                        lVar7 = *(int64 *)(pStatics_38e8 + 0x4a0)
                                         ;
                                         if (lVar7 != null) {
                                           local_res18[0] =
@@ -410,21 +410,21 @@ public class BranchLeaderSettingTabController
                                                lVar8 == null)) {
                                               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                              FUN_1800d65f0(uVar3,0);
+                                              FUN_1801e02d0(uVar3,0);
                                             }
                                             if ((int)plVar6[3] == 0) {
                                               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                              FUN_1800d65f0(uVar3,0);
+                                              FUN_1801e02d0(uVar3,0);
                                             }
                                             plVar6[4] = lVar7;
                                             il2cpp_internal(plVar6 + 4,lVar7);
-                                            lVar7 = GameObject.GetComponent(lVar2,DAT_181d71b50);
+                                            lVar7 = GameObject.GetComponent(lVar2,DAT_181e54c18);
                                             if ((lVar7 != null) && (lVar7.villageAreaID != null)) {
                                               fVar9 = (float)HeroData.GetTotalAttir
                                                                        (lVar7.villageAreaID,0);
                                               lVar7 = *(int64 *)
-                                                       (pStatics_3d40 + 0x498);
+                                                       (pStatics_38e8 + 0x4a0);
                                               if (lVar7 != null) {
                                                 local_res18[0] =
                                                      fVar9 / ((float)lVar7.cityAreaID * 10.0);
@@ -435,22 +435,22 @@ public class BranchLeaderSettingTabController
                                                    lVar8 == null)) {
                                                   uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d65f0(uVar3,0);
+                                                  FUN_1801e02d0(uVar3,0);
                                                 }
                                                 if (*(uint32 *)(plVar6 + 3) < 2) {
                                                   uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d65f0(uVar3,0);
+                                                  FUN_1801e02d0(uVar3,0);
                                                 }
                                                 plVar6[5] = lVar7;
                                                 il2cpp_internal(plVar6 + 5,lVar7);
-                                                lVar7 = GameObject.GetComponent(lVar2,DAT_181d71b50);
+                                                lVar7 = GameObject.GetComponent(lVar2,DAT_181e54c18);
                                                 if ((lVar7 != null) && (lVar7.villageAreaID != null)) {
                                                   fVar9 = (float)HeroData.GetTotalFightSkill
                                                                            (lVar7.villageAreaID,0)
                                                   ;
                                                   lVar7 = *(int64 *)
-                                                           (pStatics_3d40 + 0x4a0);
+                                                           (pStatics_38e8 + 0x4a8);
                                                   if (lVar7 != null) {
                                                     local_res18[0] =
                                                          fVar9 / ((float)lVar7.cityAreaID * 10.0);
@@ -462,24 +462,24 @@ public class BranchLeaderSettingTabController
                                                        ) {
                                                       uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d65f0(uVar3,0);
+                                                      FUN_1801e02d0(uVar3,0);
                                                     }
                                                     if (*(uint32 *)(plVar6 + 3) < 3) {
                                                       uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                      FUN_1800d65f0(uVar3,0);
+                                                      FUN_1801e02d0(uVar3,0);
                                                     }
                                                     plVar6[6] = lVar7;
                                                     il2cpp_internal(plVar6 + 6,lVar7);
-                                                    lVar7 = GameObject.GetComponent(lVar2,DAT_181d71b50);
+                                                    lVar7 = GameObject.GetComponent(lVar2,DAT_181e54c18);
                                                     if ((lVar7 != null) && (lVar7.villageAreaID != null)
                                                        ) {
                                                       fVar9 = (float)HeroData.GetTotalLivingSkill
                                                                                (*(int64 *)
                                                                                  (lVar7 + 32),0);
                                                       lVar7 = *(int64 *)
-                                                               (pStatics_3d40 +
-                                                               0x4b0);
+                                                               (pStatics_38e8 +
+                                                               0x4b8);
                                                       if (lVar7 != null) {
                                                         local_res18[0] =
                                                              (fVar9 * 0.25) /
@@ -493,81 +493,81 @@ public class BranchLeaderSettingTabController
                                                            , lVar8 == null)) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         if (*(uint32 *)(plVar6 + 3) < 4) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         plVar6[7] = lVar7;
                                                         il2cpp_internal(plVar6 + 7,lVar7);
                                                         lVar7 = GameObject.GetComponent
-                                                                          (lVar2,DAT_181d71b50);
+                                                                          (lVar2,DAT_181e54c18);
                                                         if ((lVar7 != null) &&
                                                            (lVar7.villageAreaID != null)) {
                                                           local_res20[0] =
                                                                HeroData.GetTotalAttir
                                                                          (lVar7.villageAreaID,0);
-                                                          lVar7 = il2cpp_value_box(DAT_181da22f0,
+                                                          lVar7 = il2cpp_value_box(DAT_181e82730,
                                                                                    local_res20);
                                                           if ((lVar7 != null) &&
                                                              (lVar8 = il2cpp_internal(lVar7,*(
                                                         uint64 *)(*plVar6 + 64)), lVar8 == null)) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         if (*(uint32 *)(plVar6 + 3) < 5) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         plVar6[8] = lVar7;
                                                         il2cpp_internal(plVar6 + 8,lVar7);
                                                         lVar7 = GameObject.GetComponent
-                                                                          (lVar2,DAT_181d71b50);
+                                                                          (lVar2,DAT_181e54c18);
                                                         if ((lVar7 != null) &&
                                                            (lVar7.villageAreaID != null)) {
                                                           local_58 = HeroData.GetTotalFightSkill
                                                                                (*(int64 *)
                                                                                  (lVar7 + 32),0);
-                                                          lVar7 = il2cpp_value_box(DAT_181da22f0,&local_58
+                                                          lVar7 = il2cpp_value_box(DAT_181e82730,&local_58
                                                                                   );
                                                           if ((lVar7 != null) &&
                                                              (lVar8 = il2cpp_internal(lVar7,*(
                                                         uint64 *)(*plVar6 + 64)), lVar8 == null)) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         if (*(uint32 *)(plVar6 + 3) < 6) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         plVar6[9] = lVar7;
                                                         il2cpp_internal(plVar6 + 9,lVar7);
                                                         lVar2 = GameObject.GetComponent
-                                                                          (lVar2,DAT_181d71b50);
+                                                                          (lVar2,DAT_181e54c18);
                                                         if ((lVar2 != null) &&
                                                            (*(int64 *)(lVar2 + 32) != 0)) {
                                                           local_54[0] = HeroData.GetTotalLivingSkill
                                                                                   (*(int64 *)
                                                                                     (lVar2 + 32),0);
-                                                          lVar2 = il2cpp_value_box(DAT_181da22f0,local_54)
+                                                          lVar2 = il2cpp_value_box(DAT_181e82730,local_54)
                                                           ;
                                                           if ((lVar2 != null) &&
                                                              (lVar7 = il2cpp_internal(lVar2,*(
                                                         uint64 *)(*plVar6 + 64)), lVar7 == null)) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         if (*(uint32 *)(plVar6 + 3) < 7) {
                                                           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                          FUN_1800d65f0(uVar3,0);
+                                                          FUN_1801e02d0(uVar3,0);
                                                         }
                                                         plVar6[10] = lVar2;
                                                         il2cpp_internal(plVar6 + 10,lVar2);
@@ -594,7 +594,7 @@ public class BranchLeaderSettingTabController
                                   }
                                 }
                           // WARNING: Subroutine does not return
-                                FUN_1800d6620();
+                                FUN_1801e0300();
                               }
                             }
                           }
@@ -610,8 +610,8 @@ public class BranchLeaderSettingTabController
                                 lVar4 = Component.get_transform(this,0);
                                 if ((lVar4 != null) &&
                                    (lVar4 = Transform.Find(lVar4,"ClearButton",0)) != null) {
-                                  lVar4 = Component.GetComponent(lVar4,DAT_181d93778);
-                                  lVar7 = FUN_18046c0a0(0);
+                                  lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8);
+                                  lVar7 = FUN_1802106e0(0);
                                   if (((lVar7 != null) && (this.targetArea != null)) &&
                                      ((lVar7.villageAreaID != null &&
                                       ((lVar7 = WorldData.GetHero(lVar7.villageAreaID,
@@ -623,8 +623,8 @@ public class BranchLeaderSettingTabController
                                     lVar4 = Component.get_transform(this,0);
                                     if ((lVar4 != null) &&
                                        (lVar4 = Transform.Find(lVar4,"ClearButton",0)) != null) {
-                                      lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
-                                      lVar7 = FUN_18046c0a0(0);
+                                      lVar4 = Component.GetComponent(lVar4,DAT_181e788b8);
+                                      lVar7 = FUN_1802106e0(0);
                                       if ((((lVar7 != null) && (this.targetArea != null)) &&
                                           (lVar7.villageAreaID != null)) &&
                                          (lVar7 = WorldData.GetHero(lVar7.villageAreaID,
@@ -633,7 +633,7 @@ public class BranchLeaderSettingTabController
                                                                       0x118),0), lVar7 != null)) {
                                         uVar3 = "撤除职位";
                                         if (0 < lVar7.cheating) {
-                                          lVar7 = FUN_18046c0a0(0);
+                                          lVar7 = FUN_1802106e0(0);
                                           if (((lVar7 == null) || (this.targetArea == null)) ||
                                              ((lVar7.villageAreaID == null ||
                                               (lVar7 = WorldData.GetHero(lVar7.villageAreaID,
@@ -641,15 +641,15 @@ public class BranchLeaderSettingTabController
                                                                            (this.targetArea
                                                                            + 0x118),0), lVar7 == null)))) {
                           // WARNING: Subroutine does not return
-                                            FUN_1800d6620();
+                                            FUN_1801e0300();
                                           }
                                           local_res20[0] = lVar7.cheating;
-                                          uVar3 = il2cpp_value_box(DAT_181d80430,local_res20);
+                                          uVar3 = il2cpp_value_box(DAT_181e60808,local_res20);
                                           uVar3 = String.Format("撤除职位\n冷却{0}天",uVar3,0);
                                         }
                                         if (lVar4 != null) {
                                           *(uint64 *)(lVar4 + 24) = uVar3;
-                                          goto LAB_180c8dfc6;
+                                          goto LAB_1809f6c36;
                                         }
                                       }
                                     }
@@ -669,8 +669,8 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D88
-    // RVA   : 0xC8D060   Offset: 0xC8C460   Length: 0x163
+    // Token : 0x6000D8B
+    // RVA   : 0x9F5CD0   Offset: 0x9F4AD0   Length: 0x163
     public void ChooseButtonClicked()
     {
         long lVar1;
@@ -678,7 +678,7 @@ public class BranchLeaderSettingTabController
         ulong uVar3;
         uint in_stack_ffffffffffffffd8;
         ulong in_stack_ffffffffffffffe0;
-        lVar1 = **(int64 **)(DAT_181db7530 + 184);
+        lVar1 = **(int64 **)(DAT_181e977e8 + 184);
         if (this.targetForce != null) {
           uVar2 = ForceData.FindAllHero
                             (this.targetForce,2,4,1,1,1,
@@ -689,7 +689,7 @@ public class BranchLeaderSettingTabController
             ChooseController.ShowChoosePanel(lVar1,2,uVar2,uVar3,"BranchLeaderChoosen",0,0,0,0);
             plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
             plVar5 = (int64 *)0;
-            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181daf360)) {
+            if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
               plVar5 = plVar4;
             }
             NGUITools.PlaySound(plVar5,0);
@@ -698,23 +698,23 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D89
-    // RVA   : 0xC8CF40   Offset: 0xC8C340   Length: 0x11D
+    // Token : 0x6000D8C
+    // RVA   : 0x9F5BB0   Offset: 0x9F49B0   Length: 0x11D
     public void BranchLeaderChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7530 + 184);
+        var pStatics = *(int64*)(DAT_181e977e8 + 184);
         long lVar1;
         long lVar2;
         lVar1 = this.targetArea;
         if ((*pStatics != 0) &&
            (lVar2 = *(int64 *)(*pStatics + 72)) != null) {
-          lVar2 = GameObject.GetComponent(lVar2,DAT_181d71b50);
+          lVar2 = GameObject.GetComponent(lVar2,DAT_181e54c18);
           if ((lVar2 != null) && (lVar1 != null)) {
             AreaData.SetBranchLeader(lVar1,*(uint64 *)(lVar2 + 32),0);
             BranchLeaderSettingTabController.RefreshHeroIcon(this,0);
             plVar3 = (int64 *)Resources.Load("Sound/SoundEffect/Armor",0);
             plVar4 = (int64 *)0;
-            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
+            if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181e8f4a0)) {
               plVar4 = plVar3;
             }
             NGUITools.PlaySound(plVar4,0);
@@ -723,8 +723,8 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D8A
-    // RVA   : 0xC8D1D0   Offset: 0xC8C5D0   Length: 0xAF
+    // Token : 0x6000D8D
+    // RVA   : 0x9F5E40   Offset: 0x9F4C40   Length: 0xAF
     public void ClearButtonClicked()
     {
         if (this.targetArea != null) {
@@ -732,7 +732,7 @@ public class BranchLeaderSettingTabController
           BranchLeaderSettingTabController.RefreshHeroIcon(this,0);
           plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Woosh",0);
           plVar2 = (int64 *)0;
-          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
+          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181e8f4a0)) {
             plVar2 = plVar1;
           }
           NGUITools.PlaySound(plVar2,0);
@@ -740,11 +740,11 @@ public class BranchLeaderSettingTabController
         }
     }
 
-    // Token : 0x6000D8B
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000D8E
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

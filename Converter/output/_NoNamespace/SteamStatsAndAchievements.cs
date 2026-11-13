@@ -1,69 +1,69 @@
 // ============================================================
 // Type  : SteamStatsAndAchievements
-// Token : 0x2000374
+// Token : 0x2000381
 // ============================================================
 
 public class SteamStatsAndAchievements
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C48
+    // Token: 0x4001CDA
     public static SteamStatsAndAchievements s_instance;
 
-    // Token: 0x4001C49
+    // Token: 0x4001CDB
     public float UpdateTime;
 
-    // Token: 0x4001C4A
+    // Token: 0x4001CDC
     private bool gameSetuped;
 
-    // Token: 0x4001C4B
+    // Token: 0x4001CDD
     public ulong userID;
 
-    // Token: 0x4001C4C
+    // Token: 0x4001CDE
     private CGameID m_GameID;
 
-    // Token: 0x4001C4D
+    // Token: 0x4001CDF
     private bool m_bRequestedStats;
 
-    // Token: 0x4001C4E
+    // Token: 0x4001CE0
     public bool m_bStatsValid;
 
-    // Token: 0x4001C4F
+    // Token: 0x4001CE1
     private bool m_bStoreStats;
 
-    // Token: 0x4001C50
+    // Token: 0x4001CE2
     private float lastStoreTimeCount;
 
-    // Token: 0x4001C51
+    // Token: 0x4001CE3
     protected Callback<UserStatsReceived_t> m_UserStatsReceived;
 
-    // Token: 0x4001C52
+    // Token: 0x4001CE4
     protected Callback<UserStatsStored_t> m_UserStatsStored;
 
-    // Token: 0x4001C53
+    // Token: 0x4001CE5
     protected Callback<UserAchievementStored_t> m_UserAchievementStored;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002201
-    // RVA   : 0xC6EA00   Offset: 0xC6DE00   Length: 0xE8
+    // Token : 0x60022AB
+    // RVA   : 0xA17C20   Offset: 0xA16A20   Length: 0x147
     public static SteamStatsAndAchievements get_Instance()
     {
         bool cVar1;
         long lVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181da7028 + 184);
+        uVar3 = **(uint64 **)(DAT_181e87468 + 184);
         cVar1 = Object.op_Inequality(uVar3,0,0);
         if (cVar1) {
-          return **(uint64 **)(DAT_181da7028 + 184);
+          return **(uint64 **)(DAT_181e87468 + 184);
         }
         lVar2 = new GameObject("SteamStatsAndAchievements",0);
         if (lVar2 != null) {
-          uVar3 = GameObject.AddComponent(lVar2,DAT_181dc63a8);
+          uVar3 = GameObject.AddComponent(lVar2,DAT_181e52440);
           return uVar3;
         }
     }
 
-    // Token : 0x6002202
-    // RVA   : 0xC6E110   Offset: 0xC6D510   Length: 0x374
+    // Token : 0x60022AC
+    // RVA   : 0xA17330   Offset: 0xA16130   Length: 0x374
     private void Start()
     {
         bool cVar2;
@@ -71,20 +71,20 @@ public class SteamStatsAndAchievements
         ulong uVar4;
         long lVar5;
         ulong[] local_res18 = new ulong[2];
-        if (**(int **)(DAT_181d73d40 + 184) == 0) {
-          uVar4 = **(uint64 **)(DAT_181da7028 + 184);
+        if (**(int **)(DAT_181e538e8 + 184) == 0) {
+          uVar4 = **(uint64 **)(DAT_181e87468 + 184);
           cVar2 = Object.op_Inequality(uVar4,0,0);
           if (!cVar2) {
-            plVar1 = *(int64 **)(DAT_181da7028 + 184);
+            plVar1 = *(int64 **)(DAT_181e87468 + 184);
             *plVar1 = this;
             il2cpp_internal(plVar1,this);
             uVar4 = Component.get_gameObject(this,0);
             Object.DontDestroyOnLoad(uVar4,0);
             this.lastStoreTimeCount = 0x40a00000;
-            lVar5 = FUN_18046c100(0);
+            lVar5 = FUN_180210740(0);
             if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             GameDataController.ResetDlcState(lVar5,0);
             cVar2 = SteamManager.get_Initialized(0);
@@ -95,14 +95,14 @@ public class SteamStatsAndAchievements
             local_res18[0] = 0;
             CGameID.ctor(local_res18,uVar3,0);
             this.m_GameID = local_res18[0];
-            uVar4 = new OnTooltipCB(this,DAT_181db38f0,DAT_181d80088);
-            uVar4 = Callback_1.Create(uVar4,DAT_181da9050);
+            uVar4 = new OnTooltipCB(this,DAT_181e97250,DAT_181e61a48);
+            uVar4 = Callback_1.Create(uVar4,DAT_181e89a10);
             this.m_UserStatsReceived = uVar4;
-            uVar4 = new OnTooltipCB(this,DAT_181db3978,DAT_181d80108);
-            uVar4 = Callback_1.Create(uVar4,DAT_181da9150);
+            uVar4 = new OnTooltipCB(this,DAT_181e972d8,DAT_181e61ac8);
+            uVar4 = Callback_1.Create(uVar4,DAT_181e89b10);
             this.m_UserStatsStored = uVar4;
-            uVar4 = new OnTooltipCB(this,DAT_181db3868,DAT_181d80008);
-            uVar4 = Callback_1.Create(uVar4,DAT_181da8f50);
+            uVar4 = new OnTooltipCB(this,DAT_181e971c8,DAT_181e619c8);
+            uVar4 = Callback_1.Create(uVar4,DAT_181e89910);
             this.m_UserAchievementStored = uVar4;
             this.m_bRequestedStats = 0;
             return;
@@ -112,8 +112,8 @@ public class SteamStatsAndAchievements
         Object.Destroy(uVar4,0);
     }
 
-    // Token : 0x6002203
-    // RVA   : 0xC6E490   Offset: 0xC6D890   Length: 0x5E
+    // Token : 0x60022AD
+    // RVA   : 0xA176B0   Offset: 0xA164B0   Length: 0x5E
     public bool SteamStatsReady()
     {
         ulong uVar1;
@@ -124,8 +124,8 @@ public class SteamStatsAndAchievements
         return (uint64)this.m_bStatsValid;
     }
 
-    // Token : 0x6002204
-    // RVA   : 0xC6E600   Offset: 0xC6DA00   Length: 0x3F2
+    // Token : 0x60022AE
+    // RVA   : 0xA17820   Offset: 0xA16620   Length: 0x3F2
     private void Update()
     {
         bool cVar1;
@@ -166,8 +166,8 @@ public class SteamStatsAndAchievements
             iVar6 = 0;
             while( true ) {
               local_res18[0] = iVar6;
-              lVar4 = GameController.lockObj;
-              if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x1c0)) == null) break;
+              lVar4 = GameController.ChangeAllAreaStateIDs;
+              if ((lVar4 == null) || (lVar4 = *(int64 *)(lVar4 + 0x1d0)) == null) break;
               if (*(int *)(lVar4 + 24) <= iVar6) {
                 cVar1 = SteamUserStats.StoreStats(0);
                 this.m_bStoreStats = !cVar1;
@@ -181,13 +181,13 @@ public class SteamStatsAndAchievements
               if (lVar4 == null) break;
               cVar1 = PlayerPrefDictionary.ContainsKey(lVar4);
               if (!cVar1) {
-        LAB_180c6e9c3:
+        LAB_180a17be3:
                 iVar6 = local_res18[0] + 1;
               }
               else {
-                lVar4 = FUN_18046c100(0);
-                if (((lVar4 == null) || (*(int64 *)(lVar4 + 0x1c0) == 0)) ||
-                   (lVar4 = FUN_180002f80()) == null) break;
+                lVar4 = FUN_180210740(0);
+                if (((lVar4 == null) || (*(int64 *)(lVar4 + 0x1d0) == 0)) ||
+                   (lVar4 = FUN_1800024b0()) == null) break;
                 if (*(int *)(lVar4 + 32) == 0) {
                   uVar3 = Int32.ToString(local_res18);
                   uVar3 = String.Concat("AchData",uVar3,0);
@@ -199,7 +199,7 @@ public class SteamStatsAndAchievements
                     if (lVar4 != null) {
                       uVar8 = PlayerPrefDictionary.GetFloat(lVar4);
                       SteamUserStats.SetStat(uVar3,uVar8);
-                      goto LAB_180c6e9c3;
+                      goto LAB_180a17be3;
                     }
                   }
                   break;
@@ -218,13 +218,13 @@ public class SteamStatsAndAchievements
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6002205
-    // RVA   : 0xC6D110   Offset: 0xC6C510   Length: 0x2E7
+    // Token : 0x60022AF
+    // RVA   : 0xA16330   Offset: 0xA15130   Length: 0x2E7
     private void CheckDLCState()
     {
         bool cVar1;
@@ -244,8 +244,8 @@ public class SteamStatsAndAchievements
           }
           lVar5 = PlotController.LaBaFestivelScoreLvTalkText;
           if (lVar5 == null) break;
-          uVar2 = FUN_180002f80(lVar5,local_res18[0],DAT_181dab830);
-          uVar2 = FUN_1808256f0(uVar2,0);
+          uVar2 = FUN_1800024b0(lVar5,local_res18[0],DAT_181e8de58);
+          uVar2 = FUN_18055d730(uVar2,0);
           cVar1 = SteamApps.BIsDlcInstalled(uVar2,0);
           if (!cVar1) {
             uVar3 = Int32.ToString(local_res18,0);
@@ -276,15 +276,15 @@ public class SteamStatsAndAchievements
         }
     }
 
-    // Token : 0x6002206
-    // RVA   : 0xC6E4F0   Offset: 0xC6D8F0   Length: 0x101
+    // Token : 0x60022B0
+    // RVA   : 0xA17710   Offset: 0xA16510   Length: 0x101
     public void UnlockAchievement(int achID)
     {
         long lVar1;
         ulong uVar2;
         uint[] local_res10 = new uint[6];
         local_res10[0] = achID;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 8);
         if (lVar1 != null) {
           lVar1 = *(int64 *)(lVar1 + 16);
           uVar2 = Int32.ToString(local_res10,0);
@@ -300,8 +300,8 @@ public class SteamStatsAndAchievements
         }
     }
 
-    // Token : 0x6002207
-    // RVA   : 0xC6D820   Offset: 0xC6CC20   Length: 0x74D
+    // Token : 0x60022B1
+    // RVA   : 0xA16A40   Offset: 0xA15840   Length: 0x74D
     private void OnUserStatsReceived(UserStatsReceived_t pCallback)
     {
         float fVar1;
@@ -324,7 +324,7 @@ public class SteamStatsAndAchievements
           return;
         }
         if ((int)pCallback[1] != 1) {
-          plVar4 = (int64 *)il2cpp_value_box(DAT_181dc2b58,pCallback + 1);
+          plVar4 = (int64 *)il2cpp_value_box(DAT_181ea3048,pCallback + 1);
           if (plVar4 != (int64 *)0) {
             uVar5 = (**(code **)(*plVar4 + 0x168))(plVar4,*(uint64 *)(*plVar4 + 0x170));
             puVar6 = (uint32 *)il2cpp_object_unbox(plVar4);
@@ -333,9 +333,9 @@ public class SteamStatsAndAchievements
             Debug.Log(uVar5,0);
             return;
           }
-        LAB_180c6df68:
+        LAB_180a17188:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         Debug.Log("Received stats and achievements from Steam\n",0);
         this.m_bStatsValid = 1;
@@ -344,8 +344,8 @@ public class SteamStatsAndAchievements
         local_54 = 0;
         while( true ) {
           iVar3 = local_54;
-          lVar7 = GameController.lockObj;
-          if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1c0)) == null) goto LAB_180c6df68;
+          lVar7 = GameController.ChangeAllAreaStateIDs;
+          if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1d0)) == null) goto LAB_180a17188;
           if (*(int *)(lVar7 + 24) <= iVar3) break;
           uVar5 = Int32.ToString(&local_54,0);
           uVar5 = String.Concat("Ach",uVar5,0);
@@ -357,42 +357,42 @@ public class SteamStatsAndAchievements
           }
           local_54 = local_54 + 1;
         }
-        LAB_180c6dbe4:
+        LAB_180a16e04:
         do {
-          lVar7 = GameController.lockObj;
-          if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1c0)) == null) goto LAB_180c6df68;
+          lVar7 = GameController.ChangeAllAreaStateIDs;
+          if ((lVar7 == null) || (lVar7 = *(int64 *)(lVar7 + 0x1d0)) == null) goto LAB_180a17188;
           if (*(int *)(lVar7 + 24) <= iVar8) {
-            lVar7 = FUN_18046c100(0);
+            lVar7 = FUN_180210740(0);
             if (lVar7 != null) {
               GameDataController.CheckAllAch(lVar7,0);
               SteamStatsAndAchievements.CheckDLCState(this,0);
               return;
             }
-            goto LAB_180c6df68;
+            goto LAB_180a17188;
           }
-          lVar7 = FUN_18046c100(0);
-          if (((lVar7 == null) || (*(int64 *)(lVar7 + 0x1c0) == 0)) ||
-             (lVar7 = FUN_180002f80(*(int64 *)(lVar7 + 0x1c0),local_58,DAT_181d7b1a0)) == null)
-          goto LAB_180c6df68;
+          lVar7 = FUN_180210740(0);
+          if (((lVar7 == null) || (*(int64 *)(lVar7 + 0x1d0) == 0)) ||
+             (lVar7 = FUN_1800024b0(*(int64 *)(lVar7 + 0x1d0),local_58,DAT_181e5cf18)) == null)
+          goto LAB_180a17188;
           if (*(int *)(lVar7 + 32) == 0) {
             uVar5 = Int32.ToString(&local_58);
             uVar5 = String.Concat("AchData",uVar5,0);
             SteamUserStats.GetStat(uVar5,local_4c,0);
             fVar1 = local_4c[0];
             lVar7 = GameController.difficultyExtraPoint;
-            if (lVar7 == null) goto LAB_180c6df68;
+            if (lVar7 == null) goto LAB_180a17188;
             lVar7 = *(int64 *)(lVar7 + 16);
             uVar5 = Int32.ToString(&local_58,0);
             uVar5 = String.Concat("AchData",uVar5,0);
-            if (lVar7 == null) goto LAB_180c6df68;
+            if (lVar7 == null) goto LAB_180a17188;
             fVar9 = (float)PlayerPrefDictionary.GetFloat(lVar7,uVar5,0);
             if (fVar9 < fVar1) {
               lVar7 = GameController.difficultyExtraPoint;
-              if (lVar7 == null) goto LAB_180c6df68;
+              if (lVar7 == null) goto LAB_180a17188;
               lVar7 = *(int64 *)(lVar7 + 16);
               uVar5 = Int32.ToString(&local_58,0);
               uVar5 = String.Concat("AchData",uVar5,0);
-              if (lVar7 == null) goto LAB_180c6df68;
+              if (lVar7 == null) goto LAB_180a17188;
               PlayerPrefDictionary.SetKey(lVar7,uVar5,local_4c[0],0);
             }
           }
@@ -402,23 +402,23 @@ public class SteamStatsAndAchievements
             SteamUserStats.GetStat(uVar5,&local_50,0);
             iVar8 = local_50;
             lVar7 = GameController.difficultyExtraPoint;
-            if (lVar7 == null) goto LAB_180c6df68;
+            if (lVar7 == null) goto LAB_180a17188;
             lVar7 = *(int64 *)(lVar7 + 16);
             uVar5 = Int32.ToString(&local_58,0);
             uVar5 = String.Concat("AchData",uVar5,0);
-            if (lVar7 == null) goto LAB_180c6df68;
+            if (lVar7 == null) goto LAB_180a17188;
             iVar3 = PlayerPrefDictionary.GetInt(lVar7,uVar5,0);
             if (iVar3 < iVar8) {
               lVar7 = GameController.difficultyExtraPoint;
-              if (lVar7 == null) goto LAB_180c6df68;
+              if (lVar7 == null) goto LAB_180a17188;
               lVar7 = *(int64 *)(lVar7 + 16);
               uVar5 = Int32.ToString(&local_58,0);
               uVar5 = String.Concat("AchData",uVar5,0);
-              if (lVar7 == null) goto LAB_180c6df68;
+              if (lVar7 == null) goto LAB_180a17188;
               PlayerPrefDictionary.SetKey(lVar7,uVar5,local_50);
               iVar8 = local_58 + 1;
               local_58 = iVar8;
-              goto LAB_180c6dbe4;
+              goto LAB_180a16e04;
             }
           }
           iVar8 = local_58 + 1;
@@ -426,8 +426,8 @@ public class SteamStatsAndAchievements
         } while( true );
     }
 
-    // Token : 0x6002208
-    // RVA   : 0xC6DF70   Offset: 0xC6D370   Length: 0x199
+    // Token : 0x60022B2
+    // RVA   : 0xA17190   Offset: 0xA15F90   Length: 0x199
     private void OnUserStatsStored(UserStatsStored_t pCallback)
     {
         ulong uVar2;
@@ -443,10 +443,10 @@ public class SteamStatsAndAchievements
             SteamStatsAndAchievements.OnUserStatsReceived(this,&local_28,0);
             return;
           }
-          plVar1 = (int64 *)il2cpp_value_box(DAT_181dc2b58,pCallback + 1);
+          plVar1 = (int64 *)il2cpp_value_box(DAT_181ea3048,pCallback + 1);
           if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar2 = (**(code **)(*plVar1 + 0x168))(plVar1,*(uint64 *)(*plVar1 + 0x170));
           puVar3 = (uint32 *)il2cpp_object_unbox(plVar1);
@@ -456,8 +456,8 @@ public class SteamStatsAndAchievements
         }
     }
 
-    // Token : 0x6002209
-    // RVA   : 0xC6D400   Offset: 0xC6C800   Length: 0x41B
+    // Token : 0x60022B3
+    // RVA   : 0xA16620   Offset: 0xA15420   Length: 0x41B
     private void OnAchievementStored(UserAchievementStored_t pCallback)
     {
         long lVar2;
@@ -465,41 +465,41 @@ public class SteamStatsAndAchievements
         ulong uVar4;
         if (this.m_GameID == *pCallback) {
           if (SUB164(*(uint8 (*) [16])(pCallback + 2),12) == 0) {
-            uVar4 = FUN_180bf6cd0(pCallback,0);
+            uVar4 = FUN_1809b03c0(pCallback,0);
             uVar4 = String.Concat("Achievement '",uVar4,"' unlocked!",0);
             Debug.Log(uVar4,0);
             return;
           }
-          plVar1 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,7);
+          plVar1 = (int64 *)FUN_1801dfd90(DAT_181e85e38,7);
           if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (("Achievement '" != 0) &&
              (lVar2 = il2cpp_internal("Achievement '",*(uint64 *)(*plVar1 + 64))) == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           lVar2 = "Achievement '";
           if ((int)plVar1[3] == 0) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar1[4] = "Achievement '";
           il2cpp_internal(plVar1 + 4,lVar2);
-          lVar2 = FUN_180bf6cd0(pCallback,0);
+          lVar2 = FUN_1809b03c0(pCallback,0);
           if ((lVar2 != null) &&
              (lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar1 + 64))) == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           if (*(uint32 *)(plVar1 + 3) < 2) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar1[5] = lVar2;
           il2cpp_internal(plVar1 + 5,lVar2);
@@ -507,13 +507,13 @@ public class SteamStatsAndAchievements
              (lVar2 = il2cpp_internal("' progress callback, (",*(uint64 *)(*plVar1 + 64))) == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           lVar2 = "' progress callback, (";
           if (*(uint32 *)(plVar1 + 3) < 3) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar1[6] = "' progress callback, (";
           il2cpp_internal(plVar1 + 6,lVar2);
@@ -522,12 +522,12 @@ public class SteamStatsAndAchievements
              (lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar1 + 64))) == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           if (*(uint32 *)(plVar1 + 3) < 4) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar1[7] = lVar2;
           il2cpp_internal(plVar1 + 7,lVar2);
@@ -535,13 +535,13 @@ public class SteamStatsAndAchievements
              (lVar2 = il2cpp_internal(",",*(uint64 *)(*plVar1 + 64))) == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           lVar2 = ",";
           if (*(uint32 *)(plVar1 + 3) < 5) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar1[8] = ",";
           il2cpp_internal(plVar1 + 8,lVar2);
@@ -550,12 +550,12 @@ public class SteamStatsAndAchievements
              (lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar1 + 64))) == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           if (*(uint32 *)(plVar1 + 3) < 6) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar1[9] = lVar2;
           il2cpp_internal(plVar1 + 9,lVar2);
@@ -563,13 +563,13 @@ public class SteamStatsAndAchievements
              (lVar2 = il2cpp_internal(")",*(uint64 *)(*plVar1 + 64))) == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           lVar2 = ")";
           if (*(uint32 *)(plVar1 + 3) < 7) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar1[10] = ")";
           il2cpp_internal(plVar1 + 10,lVar2);
@@ -578,11 +578,11 @@ public class SteamStatsAndAchievements
         }
     }
 
-    // Token : 0x600220A
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60022B4
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

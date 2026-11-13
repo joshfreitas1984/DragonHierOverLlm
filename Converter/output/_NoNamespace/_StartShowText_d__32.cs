@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <StartShowText>d__32
-// Token : 0x200033A
+// Token : 0x2000344
 // ============================================================
 
 public class <StartShowText>d__32
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001AE8
+    // Token: 0x4001B62
     private int <>1__state;
 
-    // Token: 0x4001AE9
+    // Token: 0x4001B63
     private object <>2__current;
 
-    // Token: 0x4001AEA
+    // Token: 0x4001B64
     public ReadBookController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600207A
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6002119
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x600207B
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x600211A
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x600207C
-    // RVA   : 0x9271F0   Offset: 0x9265F0   Length: 0x611
+    // Token : 0x600211B
+    // RVA   : 0x614BD0   Offset: 0x6139D0   Length: 0x611
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181dadd10 + 184);
+        var pStatics = *(int64*)(DAT_181e8e150 + 184);
         int iVar1;
         int iVar2;
         ulong uVar3;
@@ -59,32 +59,32 @@ public class <StartShowText>d__32
         }
         this.<>1__state = 0xffffffff;
         if (lVar6 == null) throw; // [null/range check failed]
-        iVar1 = FUN_180d96040(0,(int)((float)*(int *)(lVar6 + 112) * 0.5),0);
+        iVar1 = FUN_180af1860(0,(int)((float)*(int *)(lVar6 + 112) * 0.5),0);
         lVar7 = (int64)iVar1;
-        iVar2 = FUN_180d96040(0,(int)((float)*(int *)(lVar6 + 116) * 0.5),0);
+        iVar2 = FUN_180af1860(0,(int)((float)*(int *)(lVar6 + 116) * 0.5),0);
         lVar8 = (int64)iVar2;
         fVar9 = (float)Random.get_value(0);
         lVar4 = *(int64 *)(lVar6 + 72);
         if (fVar9 <= 0.2) {
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = FUN_180127f90(lVar4,lVar7,(int64)(int)((float)*(int *)(lVar6 + 116) * 0.5));
+          lVar4 = FUN_1800540b0(lVar4,lVar7,(int64)(int)((float)*(int *)(lVar6 + 116) * 0.5));
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181d72ab8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181e55b80);
           if (lVar4 == null) throw; // [null/range check failed]
           ReadBookTextController.SeeText(lVar4,0);
           if (*(int64 *)(lVar6 + 72) == 0) throw; // [null/range check failed]
-          lVar4 = FUN_180127f90(*(int64 *)(lVar6 + 72),
+          lVar4 = FUN_1800540b0(*(int64 *)(lVar6 + 72),
                                 (int64)((*(int *)(lVar6 + 112) - iVar1) + -1),
                                 (int64)(int)((float)*(int *)(lVar6 + 116) * 0.5));
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181d72ab8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181e55b80);
           if (lVar4 == null) throw; // [null/range check failed]
           ReadBookTextController.SeeText(lVar4,0);
           if (*(int64 *)(lVar6 + 72) == 0) throw; // [null/range check failed]
-          lVar4 = FUN_180127f90(*(int64 *)(lVar6 + 72),
+          lVar4 = FUN_1800540b0(*(int64 *)(lVar6 + 72),
                                 (int64)(int)((float)*(int *)(lVar6 + 112) * 0.5),lVar8);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181d72ab8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181e55b80);
           if (lVar4 == null) throw; // [null/range check failed]
           ReadBookTextController.SeeText(lVar4,0);
           lVar4 = *(int64 *)(lVar6 + 72);
@@ -94,23 +94,23 @@ public class <StartShowText>d__32
         }
         else {
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = FUN_180127f90(lVar4,lVar7,lVar8);
+          lVar4 = FUN_1800540b0(lVar4,lVar7,lVar8);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181d72ab8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181e55b80);
           if (lVar4 == null) throw; // [null/range check failed]
           ReadBookTextController.SeeText(lVar4,0);
           if (*(int64 *)(lVar6 + 72) == 0) throw; // [null/range check failed]
-          lVar4 = FUN_180127f90(*(int64 *)(lVar6 + 72),lVar7,
+          lVar4 = FUN_1800540b0(*(int64 *)(lVar6 + 72),lVar7,
                                 (int64)((*(int *)(lVar6 + 116) - iVar2) + -1));
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181d72ab8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181e55b80);
           if (lVar4 == null) throw; // [null/range check failed]
           ReadBookTextController.SeeText(lVar4,0);
           if (*(int64 *)(lVar6 + 72) == 0) throw; // [null/range check failed]
-          lVar4 = FUN_180127f90(*(int64 *)(lVar6 + 72),
+          lVar4 = FUN_1800540b0(*(int64 *)(lVar6 + 72),
                                 (int64)((*(int *)(lVar6 + 112) - iVar1) + -1),lVar8);
           if (lVar4 == null) throw; // [null/range check failed]
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181d72ab8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181e55b80);
           if (lVar4 == null) throw; // [null/range check failed]
           ReadBookTextController.SeeText(lVar4,0);
           lVar4 = *(int64 *)(lVar6 + 72);
@@ -118,9 +118,9 @@ public class <StartShowText>d__32
           iVar2 = *(int *)(lVar6 + 116) - iVar2;
           iVar1 = (*(int *)(lVar6 + 112) - iVar1) + -1;
         }
-        lVar4 = FUN_180127f90(lVar4,(int64)iVar1,(int64)(iVar2 + -1));
+        lVar4 = FUN_1800540b0(lVar4,(int64)iVar1,(int64)(iVar2 + -1));
         if (lVar4 != null) {
-          lVar4 = GameObject.GetComponent(lVar4,DAT_181d72ab8);
+          lVar4 = GameObject.GetComponent(lVar4,DAT_181e55b80);
           if (lVar4 != null) {
             ReadBookTextController.SeeText(lVar4,0);
             if (*(int64 *)(lVar6 + 48) != 0) {
@@ -131,7 +131,7 @@ public class <StartShowText>d__32
                 local_40 = *(uint32 *)(puVar5 + 1);
                 local_48 = *puVar5;
                 uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
+                TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181ea59e0);
                 if (*(int64 *)(lVar6 + 48) != 0) {
                   lVar4 = GameObject.get_transform(*(int64 *)(lVar6 + 48),0);
                   if (lVar4 != null) {
@@ -140,7 +140,7 @@ public class <StartShowText>d__32
                     local_40 = *(uint32 *)(puVar5 + 1);
                     local_48 = *puVar5;
                     uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                    TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
+                    TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181ea59e0);
                     if (*(int64 *)(lVar6 + 48) != 0) {
                       lVar4 = GameObject.get_transform(*(int64 *)(lVar6 + 48),0);
                       if (lVar4 != null) {
@@ -149,7 +149,7 @@ public class <StartShowText>d__32
                         local_40 = *(uint32 *)(puVar5 + 1);
                         local_48 = *puVar5;
                         uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                        TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
+                        TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181ea59e0);
                         if (*(int64 *)(lVar6 + 48) != 0) {
                           lVar6 = GameObject.get_transform(*(int64 *)(lVar6 + 48),0);
                           if (lVar6 != null) {
@@ -158,7 +158,7 @@ public class <StartShowText>d__32
                             local_40 = *(uint32 *)(puVar5 + 1);
                             local_48 = *puVar5;
                             uVar3 = ShortcutExtensions.DOScale(uVar3,&local_48,0x3e4ccccd,0);
-                            TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
+                            TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181ea59e0);
                             if (*pStatics != 0) {
                               TutorialController.StartTutorial
                                         (*pStatics,"读书系统",0);
@@ -176,27 +176,27 @@ public class <StartShowText>d__32
         }
     }
 
-    // Token : 0x600207D
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x600211C
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x600207E
-    // RVA   : 0x927810   Offset: 0x926C10   Length: 0x3E
+    // Token : 0x600211D
+    // RVA   : 0x6151F0   Offset: 0x613FF0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181dab660);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e8f008);
     }
 
-    // Token : 0x600207F
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x600211E
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

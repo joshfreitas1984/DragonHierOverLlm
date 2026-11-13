@@ -1,37 +1,37 @@
 // ============================================================
 // Type  : <RandomSpawnsCoroutine>d__15
-// Token : 0x20003BB
+// Token : 0x20003C8
 // ============================================================
 
 public class <RandomSpawnsCoroutine>d__15
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E30
+    // Token: 0x4001EC2
     private int <>1__state;
 
-    // Token: 0x4001E31
+    // Token: 0x4001EC3
     private object <>2__current;
 
-    // Token: 0x4001E32
+    // Token: 0x4001EC4
     public CFX_Demo <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023D3
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x600247D
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x60023D4
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x600247E
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x60023D5
-    // RVA   : 0x9331C0   Offset: 0x9325C0   Length: 0x31B
+    // Token : 0x600247F
+    // RVA   : 0x678AB0   Offset: 0x6778B0   Length: 0x31B
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -78,7 +78,7 @@ public class <RandomSpawnsCoroutine>d__15
                   local_68 = local_78;
                   local_60 = local_70;
                   Transform.set_position(lVar3,&local_68,0);
-        LAB_180933451:
+        LAB_180678d41:
                   uVar9 = Single.Parse(*(uint64 *)(lVar1 + 80),0);
                   uVar6 = new WaitForSeconds(uVar9,0);
                   this.<>2__current = uVar6;
@@ -110,7 +110,7 @@ public class <RandomSpawnsCoroutine>d__15
                   if (fVar7 < -*(float *)(lVar1 + 32)) {
                     *(float *)(lVar1 + 36) = *(float *)(lVar1 + 32);
                   }
-                  goto LAB_180933451;
+                  goto LAB_180678d41;
                 }
               }
             }
@@ -118,27 +118,27 @@ public class <RandomSpawnsCoroutine>d__15
         }
     }
 
-    // Token : 0x60023D6
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002480
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x60023D7
-    // RVA   : 0x9334E0   Offset: 0x9328E0   Length: 0x3E
+    // Token : 0x6002481
+    // RVA   : 0x678DD0   Offset: 0x677BD0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d98dd0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e7c510);
     }
 
-    // Token : 0x60023D8
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002482
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

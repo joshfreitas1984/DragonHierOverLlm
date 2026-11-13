@@ -1,44 +1,44 @@
 // ============================================================
 // Type  : Sprite
-// Token : 0x200010F
+// Token : 0x200010E
 // ============================================================
 
 public class Sprite
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40006D0
+    // Token: 0x40006B0
     public UISpriteData sprite;
 
-    // Token: 0x40006D1
+    // Token: 0x40006B1
     public Vector2 pos;
 
-    // Token: 0x40006D2
+    // Token: 0x40006B2
     public float rot;
 
-    // Token: 0x40006D3
+    // Token: 0x40006B3
     public float width;
 
-    // Token: 0x40006D4
+    // Token: 0x40006B4
     public float height;
 
-    // Token: 0x40006D5
+    // Token: 0x40006B5
     public Color32 color;
 
-    // Token: 0x40006D6
+    // Token: 0x40006B6
     public Vector2 pivot;
 
-    // Token: 0x40006D7
+    // Token: 0x40006B7
     public Type type;
 
-    // Token: 0x40006D8
+    // Token: 0x40006B8
     public Flip flip;
 
-    // Token: 0x40006D9
+    // Token: 0x40006B9
     public bool enabled;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600094D
-    // RVA   : 0x183DF20   Offset: 0x183D320   Length: 0x25C
+    // Token : 0x6000934
+    // RVA   : 0x177F380   Offset: 0x177E180   Length: 0x25C
     public Vector4 GetDrawingDimensions(float pixelSize)
     {
         int iVar1;
@@ -57,13 +57,13 @@ public class Sprite
             Mathf.RoundToInt((float)iVar3 * param_3,0);
             if (*pixelSize == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
           }
         }
         *this = 0;
         this[1] = 0;
-        FUN_1809dcfa0(this);
+        FUN_1807282e0(this);
         return this;
     }
 

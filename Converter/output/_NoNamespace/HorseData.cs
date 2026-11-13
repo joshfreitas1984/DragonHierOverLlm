@@ -1,56 +1,56 @@
 // ============================================================
 // Type  : HorseData
-// Token : 0x2000243
+// Token : 0x2000247
 // ============================================================
 
 public class HorseData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001213
+    // Token: 0x4001231
     public bool equiped;
 
-    // Token: 0x4001214
+    // Token: 0x4001232
     public float speed;
 
-    // Token: 0x4001215
+    // Token: 0x4001233
     public float power;
 
-    // Token: 0x4001216
+    // Token: 0x4001234
     public float sprint;
 
-    // Token: 0x4001217
+    // Token: 0x4001235
     public float resist;
 
-    // Token: 0x4001218
+    // Token: 0x4001236
     public float speedAdd;
 
-    // Token: 0x4001219
+    // Token: 0x4001237
     public float powerAdd;
 
-    // Token: 0x400121A
+    // Token: 0x4001238
     public float sprintAdd;
 
-    // Token: 0x400121B
+    // Token: 0x4001239
     public float resistAdd;
 
-    // Token: 0x400121C
+    // Token: 0x400123A
     public float maxWeightAdd;
 
-    // Token: 0x400121D
+    // Token: 0x400123B
     public float nowPower;
 
-    // Token: 0x400121E
+    // Token: 0x400123C
     public float favorRate;
 
-    // Token: 0x400121F
+    // Token: 0x400123D
     public float sprintTimeLeft;
 
-    // Token: 0x4001220
+    // Token: 0x400123E
     public float sprintTimeCd;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60012F3
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6001316
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         uint uVar1;
@@ -59,16 +59,16 @@ public class HorseData
         long lVar4;
         int iVar5;
         ZhSegment.Initialize(this,0);
-        lVar3 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar3,DAT_181d8f0b0);
+        lVar3 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar3,DAT_181e71270);
         iVar5 = 0;
         while( true ) {
           uVar1 = GlobalData.RandomRange(0,param_2 + 1,0,0);
           if (lVar3 == null) break;
-          FUN_18182a6c0(lVar3,uVar1);
+          FUN_181769fe0(lVar3,uVar1);
           iVar5 = iVar5 + 1;
           if (2 < iVar5) {
-            List_1.Sort(lVar3,DAT_181d8f7b0);
+            List_1.Sort(lVar3,DAT_181e71970);
             if (*(int *)(lVar3 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -106,8 +106,8 @@ public class HorseData
         }
     }
 
-    // Token : 0x60012F4
-    // RVA   : 0xB019B0   Offset: 0xB00DB0   Length: 0x1DB
+    // Token : 0x6001317
+    // RVA   : 0x8A3BD0   Offset: 0x8A29D0   Length: 0x1DB
     public void /*ctor*/(int totalNum)
     {
         uint uVar1;
@@ -116,16 +116,16 @@ public class HorseData
         long lVar4;
         int iVar5;
         ZhSegment.Initialize(this,0);
-        lVar3 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar3,DAT_181d8f0b0);
+        lVar3 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar3,DAT_181e71270);
         iVar5 = 0;
         while( true ) {
           uVar1 = GlobalData.RandomRange(0,totalNum + 1,0,0);
           if (lVar3 == null) break;
-          FUN_18182a6c0(lVar3,uVar1);
+          FUN_181769fe0(lVar3,uVar1);
           iVar5 = iVar5 + 1;
           if (2 < iVar5) {
-            List_1.Sort(lVar3,DAT_181d8f7b0);
+            List_1.Sort(lVar3,DAT_181e71970);
             if (*(int *)(lVar3 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -163,26 +163,26 @@ public class HorseData
         }
     }
 
-    // Token : 0x60012F5
-    // RVA   : 0xB01930   Offset: 0xB00D30   Length: 0x7A
+    // Token : 0x6001318
+    // RVA   : 0x8A3B50   Offset: 0x8A2950   Length: 0x7A
     public void StartSprint()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
-        this.sprintTimeLeft = *(uint32 *)(pStatics + 0x220);
-        this.sprintTimeCd = *(uint32 *)(pStatics + 0x224);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
+        this.sprintTimeLeft = *(uint32 *)(pStatics + 0x228);
+        this.sprintTimeCd = *(uint32 *)(pStatics + 0x22c);
     }
 
-    // Token : 0x60012F6
-    // RVA   : 0xB00BB0   Offset: 0xAFFFB0   Length: 0x30
+    // Token : 0x6001319
+    // RVA   : 0x8A2D20   Offset: 0x8A1B20   Length: 0x30
     public void ChangeFavorRate(float delta)
     {
         uint uVar1;
-        uVar1 = FUN_1810e3cd0(this.favorRate + delta,0,0x3f800000,0);
+        uVar1 = FUN_180f34e60(this.favorRate + delta,0,0x3f800000,0);
         this.favorRate = uVar1;
     }
 
-    // Token : 0x60012F7
-    // RVA   : 0xB01850   Offset: 0xB00C50   Length: 0x63
+    // Token : 0x600131A
+    // RVA   : 0x8A3A70   Offset: 0x8A2870   Length: 0x63
     public float Speed()
     {
         float fVar1;
@@ -194,8 +194,8 @@ public class HorseData
         return (fVar2 + fVar1 + (float)iVar3) * (this.favorRate * 0.5 + 0.5);
     }
 
-    // Token : 0x60012F8
-    // RVA   : 0xB016A0   Offset: 0xB00AA0   Length: 0x63
+    // Token : 0x600131B
+    // RVA   : 0x8A38C0   Offset: 0x8A26C0   Length: 0x63
     public float Power()
     {
         float fVar1;
@@ -207,8 +207,8 @@ public class HorseData
         return (fVar2 + fVar1 + (float)iVar3) * (this.favorRate * 0.5 + 0.5);
     }
 
-    // Token : 0x60012F9
-    // RVA   : 0xB018C0   Offset: 0xB00CC0   Length: 0x63
+    // Token : 0x600131C
+    // RVA   : 0x8A3AE0   Offset: 0x8A28E0   Length: 0x63
     public float Sprint()
     {
         float fVar1;
@@ -220,8 +220,8 @@ public class HorseData
         return (fVar2 + fVar1 + (float)iVar3) * (this.favorRate * 0.5 + 0.5);
     }
 
-    // Token : 0x60012FA
-    // RVA   : 0xB017E0   Offset: 0xB00BE0   Length: 0x63
+    // Token : 0x600131D
+    // RVA   : 0x8A3A00   Offset: 0x8A2800   Length: 0x63
     public float Resist()
     {
         float fVar1;
@@ -233,8 +233,8 @@ public class HorseData
         return (fVar2 + fVar1 + (float)iVar3) * (this.favorRate * 0.5 + 0.5);
     }
 
-    // Token : 0x60012FB
-    // RVA   : 0xB01630   Offset: 0xB00A30   Length: 0x6B
+    // Token : 0x600131E
+    // RVA   : 0x8A3850   Offset: 0x8A2650   Length: 0x6B
     public float MaxPower()
     {
         float fVar1;
@@ -246,8 +246,8 @@ public class HorseData
         return (fVar2 + fVar1 + (float)iVar3) * (this.favorRate * 0.5 + 0.5) + 50.0;
     }
 
-    // Token : 0x60012FC
-    // RVA   : 0xB00C90   Offset: 0xB00090   Length: 0x6D
+    // Token : 0x600131F
+    // RVA   : 0x8A2EB0   Offset: 0x8A1CB0   Length: 0x6D
     public void FullFillPower()
     {
         float fVar1;
@@ -260,8 +260,8 @@ public class HorseData
              (fVar2 + fVar1 + (float)iVar3) * (this.favorRate * 0.5 + 0.5) + 50.0;
     }
 
-    // Token : 0x60012FD
-    // RVA   : 0xB01710   Offset: 0xB00B10   Length: 0x73
+    // Token : 0x6001320
+    // RVA   : 0x8A3930   Offset: 0x8A2730   Length: 0x73
     public void RefreshState()
     {
         float fVar1;
@@ -275,18 +275,18 @@ public class HorseData
              (fVar2 + fVar1 + (float)iVar3) * (this.favorRate * 0.5 + 0.5) + 50.0;
     }
 
-    // Token : 0x60012FE
-    // RVA   : 0xB00BE0   Offset: 0xAFFFE0   Length: 0xA6
+    // Token : 0x6001321
+    // RVA   : 0x8A2D50   Offset: 0x8A1B50   Length: 0xA6
     public void ChangeNowPower(float delta)
     {
         uint uVar1;
         HorseData.GetHorseStateSpeAdd(this,this.power,0);
-        uVar1 = FUN_1810e3cd0();
+        uVar1 = FUN_180f34e60();
         this.nowPower = uVar1;
     }
 
-    // Token : 0x60012FF
-    // RVA   : 0xB00B60   Offset: 0xAFFF60   Length: 0x4F
+    // Token : 0x6001322
+    // RVA   : 0x8A2CD0   Offset: 0x8A1AD0   Length: 0x4F
     public void Add(HorseData target)
     {
         if (target != null) {
@@ -298,8 +298,8 @@ public class HorseData
         }
     }
 
-    // Token : 0x6001300
-    // RVA   : 0xB00B10   Offset: 0xAFFF10   Length: 0x4F
+    // Token : 0x6001323
+    // RVA   : 0x8A2C80   Offset: 0x8A1A80   Length: 0x4F
     public void AddHorseArmor(HorseData target)
     {
         if (target != null) {
@@ -311,8 +311,8 @@ public class HorseData
         }
     }
 
-    // Token : 0x6001301
-    // RVA   : 0xB01790   Offset: 0xB00B90   Length: 0x4F
+    // Token : 0x6001324
+    // RVA   : 0x8A39B0   Offset: 0x8A27B0   Length: 0x4F
     public void RemoveHorseArmor(HorseData target)
     {
         if (target != null) {
@@ -324,8 +324,8 @@ public class HorseData
         }
     }
 
-    // Token : 0x6001302
-    // RVA   : 0xB01460   Offset: 0xB00860   Length: 0x1C9
+    // Token : 0x6001325
+    // RVA   : 0x8A3680   Offset: 0x8A2480   Length: 0x1C9
     public int GetHorseStateSpeAdd(float originState)
     {
         bool cVar1;
@@ -339,14 +339,14 @@ public class HorseData
           if (lVar2.getSpePoisonData == null) {
             return 0;
           }
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           if (((lVar2 != null) && (lVar2.villageAreaID != null)) &&
              ((lVar2 = WorldData.Player(lVar2.villageAreaID,0), lVar2 != null &&
               (lVar2.getSpePoisonData != null)))) {
             if (*(int64 *)(lVar2.getSpePoisonData + 136) != this) {
               return 0;
             }
-            lVar2 = FUN_18046c0a0(0);
+            lVar2 = FUN_1802106e0(0);
             if (((lVar2 != null) && (lVar2.villageAreaID != null)) &&
                (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) {
               cVar1 = HeroData.HaveForceFunction(lVar2,4);
@@ -359,8 +359,8 @@ public class HorseData
         }
     }
 
-    // Token : 0x6001303
-    // RVA   : 0xB00D00   Offset: 0xB00100   Length: 0x75E
+    // Token : 0x6001326
+    // RVA   : 0x8A2F20   Offset: 0x8A1D20   Length: 0x75E
     public string GetDescribe()
     {
         float fVar1;
@@ -368,22 +368,22 @@ public class HorseData
         long lVar4;
         long lVar5;
         ulong uVar6;
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,12);
+        plVar3 = (int64 *)FUN_1801dfd90(DAT_181e85e38,12);
         if (plVar3 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (("速度 " != 0) &&
            (lVar4 = il2cpp_internal("速度 ",*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar4 = "速度 ";
         if ((int)plVar3[3] == 0) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[4] = "速度 ";
         il2cpp_internal(plVar3 + 4,lVar4);
@@ -392,12 +392,12 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar3 + 3) < 2) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[5] = lVar4;
         il2cpp_internal(plVar3 + 5,lVar4);
@@ -413,12 +413,12 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar3 + 3) < 3) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[6] = lVar4;
         il2cpp_internal(plVar3 + 6,lVar4);
@@ -426,13 +426,13 @@ public class HorseData
            (lVar4 = il2cpp_internal("\n冲刺 ",*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar4 = "\n冲刺 ";
         if (*(uint32 *)(plVar3 + 3) < 4) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[7] = "\n冲刺 ";
         il2cpp_internal(plVar3 + 7,lVar4);
@@ -441,12 +441,12 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar3 + 3) < 5) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[8] = lVar4;
         il2cpp_internal(plVar3 + 8,lVar4);
@@ -462,12 +462,12 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar3 + 3) < 6) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[9] = lVar4;
         il2cpp_internal(plVar3 + 9,lVar4);
@@ -475,13 +475,13 @@ public class HorseData
            (lVar4 = il2cpp_internal("\n耐力 ",*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar4 = "\n耐力 ";
         if (*(uint32 *)(plVar3 + 3) < 7) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[10] = "\n耐力 ";
         il2cpp_internal(plVar3 + 10,lVar4);
@@ -490,12 +490,12 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar3 + 3) < 8) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[11] = lVar4;
         il2cpp_internal(plVar3 + 11,lVar4);
@@ -511,12 +511,12 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar3 + 3) < 9) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[12] = lVar4;
         il2cpp_internal(plVar3 + 12,lVar4);
@@ -524,13 +524,13 @@ public class HorseData
            (lVar4 = il2cpp_internal("\n坚韧 ",*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar4 = "\n坚韧 ";
         if (*(uint32 *)(plVar3 + 3) < 10) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[13] = "\n坚韧 ";
         il2cpp_internal(plVar3 + 13,lVar4);
@@ -539,12 +539,12 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar3 + 3) < 11) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar3[14] = lVar4;
         il2cpp_internal(plVar3 + 14,lVar4);
@@ -560,7 +560,7 @@ public class HorseData
            (lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (11 < *(uint32 *)(plVar3 + 3)) {
           plVar3[15] = lVar4;
@@ -569,6 +569,31 @@ public class HorseData
           return;
         }
         uVar6 = il2cpp_internal();
+    }
+
+    // Token : 0x6001327
+    // RVA   : 0x8A2E00   Offset: 0x8A1C00   Length: 0xAF
+    public virtual object Clone()
+    {
+        long lVar1;
+        lVar1 = new ZhSegment(0);
+        if (lVar1 != null) {
+          *(uint8 *)(lVar1 + 16) = this.equiped;
+          *(uint32 *)(lVar1 + 20) = this.speed;
+          *(uint32 *)(lVar1 + 24) = this.power;
+          *(uint32 *)(lVar1 + 28) = this.sprint;
+          *(uint32 *)(lVar1 + 32) = this.resist;
+          *(uint32 *)(lVar1 + 36) = this.speedAdd;
+          *(uint32 *)(lVar1 + 40) = this.powerAdd;
+          *(uint32 *)(lVar1 + 44) = this.sprintAdd;
+          *(uint32 *)(lVar1 + 48) = this.resistAdd;
+          *(uint32 *)(lVar1 + 52) = this.maxWeightAdd;
+          *(uint32 *)(lVar1 + 56) = this.nowPower;
+          *(uint32 *)(lVar1 + 60) = this.favorRate;
+          *(uint32 *)(lVar1 + 64) = this.sprintTimeLeft;
+          *(uint32 *)(lVar1 + 68) = this.sprintTimeCd;
+          return lVar1;
+        }
     }
 
 }

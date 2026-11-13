@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : GetTouchCountCallback
-// Token : 0x20000F0
+// Token : 0x20000EF
 // ============================================================
 
 public class GetTouchCountCallback
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600077F
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000766
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class GetTouchCountCallback
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x6000780
-    // RVA   : 0x2F7040   Offset: 0x2F6440   Length: 0x217
+    // Token : 0x6000767
+    // RVA   : 0x605400   Offset: 0x604200   Length: 0x217
     public virtual int Invoke()
     {
         ushort uVar1;
@@ -60,14 +60,14 @@ public class GetTouchCountCallback
           if (*(short *)(lVar2 + 72) == -1) {
             il2cpp_internal(lVar2);
           }
-          cVar5 = FUN_1800d6050(lVar2);
+          cVar5 = FUN_1801dfd30(lVar2);
           if (!cVar5) {
             if ((((plVar4 == (int64 *)0) || (*(short *)(lVar2 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar4 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_1802f721d;
+            goto LAB_1806055dd;
             cVar5 = il2cpp_internal(lVar2);
             if (!cVar5) {
-              cVar5 = FUN_1800d65c0(lVar2);
+              cVar5 = FUN_1801e02a0(lVar2);
               if (!cVar5) {
                 uVar6 = (**(code **)(*plVar4 + 0x138 + (uint64)*(uint16 *)(lVar2 + 72) * 16))
                                   (plVar4,*(uint64 *)
@@ -76,11 +76,11 @@ public class GetTouchCountCallback
               }
               else {
                 uVar6 = il2cpp_class_get_namespace(lVar2);
-                uVar6 = FUN_180002970(*(uint16 *)(lVar2 + 72),uVar6,plVar4);
+                uVar6 = FUN_180002280(*(uint16 *)(lVar2 + 72),uVar6,plVar4);
               }
             }
             else {
-              cVar5 = FUN_1800d65c0(lVar2);
+              cVar5 = FUN_1801e02a0(lVar2);
               uVar1 = *(uint16 *)(lVar2 + 72);
               if (!cVar5) {
                 uVar6 = *(uint64 *)(*plVar4 + ((uint64)uVar1 + 20) * 16);
@@ -96,13 +96,13 @@ public class GetTouchCountCallback
                               (int)((uint32)uVar1 +
                                    *(int *)(*(int64 *)(lVar7 + 176) + 8 + (uint64)uVar9 * 16)) *
                               16 + 0x138 + lVar7;
-                      goto LAB_1802f7196;
+                      goto LAB_180605556;
                     }
                     uVar9 = uVar9 + 1;
                   } while (uVar9 < *(uint16 *)(lVar7 + 0x12a));
                 }
-                lVar7 = FUN_1800914f0(plVar4,*(int64 *)(lVar2 + 24),uVar1);
-        LAB_1802f7196:
+                lVar7 = FUN_18019b1f0(plVar4,*(int64 *)(lVar2 + 24),uVar1);
+        LAB_180605556:
                 uVar6 = *(uint64 *)(lVar7 + 8);
               }
               puVar8 = (uint64 *)il2cpp_internal(uVar6,lVar2);
@@ -113,7 +113,7 @@ public class GetTouchCountCallback
             uVar6 = (*pcVar3)(lVar2);
           }
           else {
-        LAB_1802f721d:
+        LAB_1806055dd:
             uVar6 = (*pcVar3)(plVar4,lVar2);
           }
           uVar10 = uVar10 + 1;
@@ -123,8 +123,8 @@ public class GetTouchCountCallback
         } while( true );
     }
 
-    // Token : 0x6000781
-    // RVA   : 0x2F7010   Offset: 0x2F6410   Length: 0x22
+    // Token : 0x6000768
+    // RVA   : 0x604520   Offset: 0x603320   Length: 0x22
     public virtual IAsyncResult BeginInvoke(AsyncCallback callback, object object)
     {
         ulong[] local_18 = new ulong[3];
@@ -132,8 +132,8 @@ public class GetTouchCountCallback
         il2cpp_internal(this,local_18,callback,object);
     }
 
-    // Token : 0x6000782
-    // RVA   : 0x219140   Offset: 0x218540   Length: 0x27
+    // Token : 0x6000769
+    // RVA   : 0x6053D0   Offset: 0x6041D0   Length: 0x27
     public virtual int EndInvoke(IAsyncResult result)
     {
         long lVar1;

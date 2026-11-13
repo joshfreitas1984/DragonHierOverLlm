@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : WorldEventRandomArea
-// Token : 0x20001D4
+// Token : 0x20001D6
 // ============================================================
 
 public class WorldEventRandomArea
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C7D
+    // Token: 0x4000C90
     public int value__;
 
-    // Token: 0x4000C7E
+    // Token: 0x4000C91
     public const WorldEventRandomArea RandomCity;
 
-    // Token: 0x4000C7F
+    // Token: 0x4000C92
     public const WorldEventRandomArea AllCity;
 
-    // Token: 0x4000C80
+    // Token: 0x4000C93
     public const WorldEventRandomArea SelfForce;
 
-    // Token: 0x4000C81
+    // Token: 0x4000C94
     public const WorldEventRandomArea BigMap;
 
 }

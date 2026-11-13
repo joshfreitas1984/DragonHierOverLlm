@@ -1,22 +1,22 @@
 // ============================================================
 // Type  : Tutorial5
-// Token : 0x2000025
+// Token : 0x2000024
 // ============================================================
 
 public class Tutorial5
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000094
-    // RVA   : 0xAE0550   Offset: 0xADF950   Length: 0xF3
+    // Token : 0x600007B
+    // RVA   : 0x8352D0   Offset: 0x8340D0   Length: 0xF3
     public void SetDurationToCurrentProgress()
     {
-        var pStatics = *(int64*)(DAT_181db0090 + 184);
+        var pStatics = *(int64*)(DAT_181e904d0 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         uint uVar4;
         uint uVar5;
-        lVar2 = FUN_180967b70(this,DAT_181d989f8);
+        lVar2 = FUN_180772590(this,DAT_181e7bdb8);
         uVar4 = 0;
         if (lVar2 != null) {
           while( true ) {
@@ -26,7 +26,7 @@ public class Tutorial5
             if (*(uint32 *)(lVar2 + 24) <= uVar4) {
               uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar3,0);
+              FUN_1801e02d0(uVar3,0);
             }
             lVar1 = lVar2[uVar4];
             if (*pStatics == 0) break;
@@ -39,11 +39,11 @@ public class Tutorial5
         }
     }
 
-    // Token : 0x6000095
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600007C
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

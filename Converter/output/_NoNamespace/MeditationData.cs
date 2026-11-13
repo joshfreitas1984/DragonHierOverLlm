@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : MeditationData
-// Token : 0x20001E0
+// Token : 0x20001E2
 // ============================================================
 
 public class MeditationData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000CB4
+    // Token: 0x4000CC7
     public int lv;
 
-    // Token: 0x4000CB5
+    // Token: 0x4000CC8
     public float exp;
 
-    // Token: 0x4000CB6
+    // Token: 0x4000CC9
     public int monthMeditationDay;
 
-    // Token: 0x4000CB7
+    // Token: 0x4000CCA
     public ItemData meditationTreasure;
 
-    // Token: 0x4000CB8
+    // Token: 0x4000CCB
     public HeroSpeAddData treasureAddData;
 
-    // Token: 0x4000CB9
+    // Token: 0x4000CCC
     public int treasureLeftTime;
 
-    // Token: 0x4000CBA
+    // Token: 0x4000CCD
     public ItemData meditationFood;
 
-    // Token: 0x4000CBB
+    // Token: 0x4000CCE
     public HeroSpeAddData foodAddData;
 
-    // Token: 0x4000CBC
+    // Token: 0x4000CCF
     public int foodLeftTime;
 
-    // Token: 0x4000CBD
+    // Token: 0x4000CD0
     public ItemData meditationMed;
 
-    // Token: 0x4000CBE
+    // Token: 0x4000CD1
     public HeroSpeAddData medAddData;
 
-    // Token: 0x4000CBF
+    // Token: 0x4000CD2
     public int medLeftTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000EDB
-    // RVA   : 0xA8EB00   Offset: 0xA8DF00   Length: 0xB5
+    // Token : 0x6000EE1
+    // RVA   : 0x7D2D60   Offset: 0x7D1B60   Length: 0xB5
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -54,8 +54,8 @@ public class MeditationData
         this.medAddData = new HeroSpeAddData(0);
     }
 
-    // Token : 0x6000EDC
-    // RVA   : 0xA8EA00   Offset: 0xA8DE00   Length: 0xF1
+    // Token : 0x6000EE2
+    // RVA   : 0x7D2C60   Offset: 0x7D1A60   Length: 0xF1
     public void Reset()
     {
         ulong uVar1;
@@ -72,17 +72,15 @@ public class MeditationData
         this.medAddData = new HeroSpeAddData(0);
     }
 
-    // Token : 0x6000EDD
-    // RVA   : 0xA8E760   Offset: 0xA8DB60   Length: 0x1B
+    // Token : 0x6000EE3
+    // RVA   : 0x7D29C0   Offset: 0x7D17C0   Length: 0x1B
     public float GetMaxExp()
     {
-        float FUN_180a8e760(int64 this)
-        {
         return (float)((this.lv + 2) * (this.lv + 1)) * 50.0;
     }
 
-    // Token : 0x6000EDE
-    // RVA   : 0xA8E780   Offset: 0xA8DB80   Length: 0xEB
+    // Token : 0x6000EE4
+    // RVA   : 0x7D29E0   Offset: 0x7D17E0   Length: 0xEB
     public float MeditationExpNum()
     {
         float fVar1;
@@ -116,8 +114,8 @@ public class MeditationData
         return fVar1 + fVar3 + fVar2;
     }
 
-    // Token : 0x6000EDF
-    // RVA   : 0xA8E870   Offset: 0xA8DC70   Length: 0x181
+    // Token : 0x6000EE5
+    // RVA   : 0x7D2AD0   Offset: 0x7D18D0   Length: 0x181
     public float MeditationExpRate()
     {
         float fVar1;
@@ -139,13 +137,11 @@ public class MeditationData
         Mathf.Max();
     }
 
-    // Token : 0x6000EE0
-    // RVA   : 0xA8E6D0   Offset: 0xA8DAD0   Length: 0x29
+    // Token : 0x6000EE6
+    // RVA   : 0x7D2930   Offset: 0x7D1730   Length: 0x29
     public float GetItemExpNum(ItemData targetItem)
     {
-        uint64 FUN_180a8e6d0(uint64 this,int64 targetItem)
-        {
-        uint64 uVar1;
+        ulong uVar1;
         if (targetItem == null) {
           return 0;
         }
@@ -153,8 +149,8 @@ public class MeditationData
         return uVar1;
     }
 
-    // Token : 0x6000EE1
-    // RVA   : 0xA8E700   Offset: 0xA8DB00   Length: 0x54
+    // Token : 0x6000EE7
+    // RVA   : 0x7D2960   Offset: 0x7D1760   Length: 0x54
     public float GetItemExpRate(ItemData targetItem)
     {
         if (targetItem == null) {
@@ -165,11 +161,11 @@ public class MeditationData
         Mathf.Max();
     }
 
-    // Token : 0x6000EE2
-    // RVA   : 0xA8E1C0   Offset: 0xA8D5C0   Length: 0x50C
+    // Token : 0x6000EE8
+    // RVA   : 0x7D2420   Offset: 0x7D1220   Length: 0x50C
     public void ChangeExp(float _exp, bool showInfo)
     {
-        var pStatics_f6c0 = *(int64*)(DAT_181d7f6c0 + 184);
+        var pStatics_fa68 = *(int64*)(DAT_181e5fa68 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -184,29 +180,29 @@ public class MeditationData
         fVar6 = local_res10[0] + this.exp;
         this.exp = fVar6;
         if (!showInfo) {
-        LAB_180a8e472:
+        LAB_1807d26d2:
           iVar1 = this.lv;
           if ((float)((iVar1 + 2) * (iVar1 + 1)) * 50.0 <= fVar6) {
             do {
               this.lv = iVar1 + 1;
               this.exp = fVar6 - (float)((iVar1 + 2) * (iVar1 + 1)) * 50.0;
-              lVar2 = *pStatics_f6c0;
+              lVar2 = *pStatics_fa68;
               if (((GameController._instance == null) ||
                   (lVar3 = GameController._instance.worldData) == null) ||
                  (lVar3 = WorldData.Player(lVar3,0)) == null) {
-        LAB_180a8e6c1:
+        LAB_1807d2921:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar4 = HeroData.GetMeditationTopic(lVar3,0);
               local_res18[0] = this.lv;
-              uVar5 = il2cpp_value_box(DAT_181d80430,local_res18);
+              uVar5 = il2cpp_value_box(DAT_181e60808,local_res18);
               uVar4 = String.Format("{0}修行达到{1}级",uVar4,uVar5,0);
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                  ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 == null ||
                   ((lVar3 = HeroData.GetForce(lVar3,0,0), lVar3 == null ||
-                   (uVar5 = ForceData.GetForceIconName(lVar3,0), lVar2 == null)))))) goto LAB_180a8e6c1;
+                   (uVar5 = ForceData.GetForceIconName(lVar3,0), lVar2 == null)))))) goto LAB_1807d2921;
               local_58 = 0;
               uStack_50 = 0;
               InfoController.AddInfoTab
@@ -217,7 +213,7 @@ public class MeditationData
           }
           return;
         }
-        lVar2 = *pStatics_f6c0;
+        lVar2 = *pStatics_fa68;
         if (((GameController._instance != null) &&
             (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.Player(lVar3,0)) != null) {
@@ -234,7 +230,7 @@ public class MeditationData
             InfoController.AddInfoTab
                       (lVar2,uVar4,"UIAtlas",uVar5,"NoticeLittleLittle",0x3f800000,0x40a00000,&local_58,0);
             fVar6 = this.exp;
-            goto LAB_180a8e472;
+            goto LAB_1807d26d2;
           }
         }
     }

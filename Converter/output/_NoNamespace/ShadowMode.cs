@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : ShadowMode
-// Token : 0x200009E
+// Token : 0x200009D
 // ============================================================
 
 public class ShadowMode
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40003E7
+    // Token: 0x40003C7
     public int value__;
 
-    // Token: 0x40003E8
+    // Token: 0x40003C8
     public const ShadowMode None;
 
-    // Token: 0x40003E9
+    // Token: 0x40003C9
     public const ShadowMode Receive;
 
-    // Token: 0x40003EA
+    // Token: 0x40003CA
     public const ShadowMode CastAndReceive;
 
 }

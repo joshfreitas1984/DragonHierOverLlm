@@ -1,38 +1,38 @@
 // ============================================================
 // Type  : LagRotation
-// Token : 0x200001B
+// Token : 0x200001A
 // ============================================================
 
 public class LagRotation
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000093
+    // Token: 0x4000073
     public float speed;
 
-    // Token: 0x4000094
+    // Token: 0x4000074
     public bool ignoreTimeScale;
 
-    // Token: 0x4000095
+    // Token: 0x4000075
     private Transform mTrans;
 
-    // Token: 0x4000096
+    // Token: 0x4000076
     private Quaternion mRelative;
 
-    // Token: 0x4000097
+    // Token: 0x4000077
     private Quaternion mAbsolute;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000076
-    // RVA   : 0xA80210   Offset: 0xA7F610   Length: 0x10
+    // Token : 0x600005D
+    // RVA   : 0x7C4170   Offset: 0x7C2F70   Length: 0x10
     public void OnRepositionEnd()
     {
-        void FUN_180a80210(uint64 this)
+        void FUN_1807c4170(uint64 this)
         {
         LagRotation.Interpolate(this,0x447a0000,0);
     }
 
-    // Token : 0x6000077
-    // RVA   : 0xA80080   Offset: 0xA7F480   Length: 0x18F
+    // Token : 0x600005E
+    // RVA   : 0x7C3FE0   Offset: 0x7C2DE0   Length: 0x18F
     private void Interpolate(float delta)
     {
         float fVar1;
@@ -54,7 +54,7 @@ public class LagRotation
         cVar8 = Object.op_Inequality(uVar2,0,0);
         if (cVar8) {
           if (this.mTrans != null) {
-            lVar3 = FUN_180daa030(this.mTrans,0);
+            lVar3 = FUN_180b05920(this.mTrans,0);
             cVar8 = Object.op_Inequality(lVar3,0,0);
             if (!cVar8) {
               return;
@@ -96,12 +96,12 @@ public class LagRotation
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000078
-    // RVA   : 0xA80220   Offset: 0xA7F620   Length: 0x6E
+    // Token : 0x600005F
+    // RVA   : 0x7C4180   Offset: 0x7C2F80   Length: 0x6E
     private void Start()
     {
         uint uVar1;
@@ -130,8 +130,8 @@ public class LagRotation
         }
     }
 
-    // Token : 0x6000079
-    // RVA   : 0xA80290   Offset: 0xA7F690   Length: 0x32
+    // Token : 0x6000060
+    // RVA   : 0x7C41F0   Offset: 0x7C2FF0   Length: 0x32
     private void Update()
     {
         uint uVar1;
@@ -144,14 +144,14 @@ public class LagRotation
         LagRotation.Interpolate(this,uVar1,0);
     }
 
-    // Token : 0x600007A
-    // RVA   : 0xA802D0   Offset: 0xA7F6D0   Length: 0xE
+    // Token : 0x6000061
+    // RVA   : 0x7C4230   Offset: 0x7C3030   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180a802d0(int64 this)
+        void FUN_1807c4230(int64 this)
         {
         this.speed = 0x41200000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

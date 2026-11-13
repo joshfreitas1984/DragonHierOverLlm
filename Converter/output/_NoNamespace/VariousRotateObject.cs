@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : VariousRotateObject
-// Token : 0x20003D9
+// Token : 0x20003E6
 // ============================================================
 
 public class VariousRotateObject
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EDB
+    // Token: 0x4001F6D
     public Vector3 RotateOffset;
 
-    // Token: 0x4001EDC
+    // Token: 0x4001F6E
     private Vector3 RotateMulti;
 
-    // Token: 0x4001EDD
+    // Token: 0x4001F6F
     public float m_delay;
 
-    // Token: 0x4001EDE
+    // Token: 0x4001F70
     private float m_Time;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600244A
-    // RVA   : 0xC114B0   Offset: 0xC108B0   Length: 0x1B
+    // Token : 0x60024F4
+    // RVA   : 0x96A760   Offset: 0x969560   Length: 0x1B
     private void Awake()
     {
         uint uVar1;
@@ -28,8 +28,8 @@ public class VariousRotateObject
         this.m_Time = uVar1;
     }
 
-    // Token : 0x600244B
-    // RVA   : 0xC114D0   Offset: 0xC108D0   Length: 0x162
+    // Token : 0x60024F5
+    // RVA   : 0x96A780   Offset: 0x969580   Length: 0x162
     private void Update()
     {
         ulong uVar1;
@@ -62,7 +62,7 @@ public class VariousRotateObject
           lVar3 = Component.get_transform(this,0);
           if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           puVar4 = (uint64 *)Transform.get_rotation(&local_48,lVar3,0);
           local_48 = this.RotateMulti;
@@ -83,11 +83,11 @@ public class VariousRotateObject
         }
     }
 
-    // Token : 0x600244C
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60024F6
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

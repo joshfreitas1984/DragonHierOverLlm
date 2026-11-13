@@ -1,53 +1,53 @@
 // ============================================================
 // Type  : NewMaterialChange
-// Token : 0x20003D5
+// Token : 0x20003E2
 // ============================================================
 
 public class NewMaterialChange
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001EB5
+    // Token: 0x4001F47
     public bool isParticleSystem;
 
-    // Token: 0x4001EB6
+    // Token: 0x4001F48
     public Material m_inputMaterial;
 
-    // Token: 0x4001EB7
+    // Token: 0x4001F49
     private Material m_objectMaterial;
 
-    // Token: 0x4001EB8
+    // Token: 0x4001F4A
     private MeshRenderer m_meshRenderer;
 
-    // Token: 0x4001EB9
+    // Token: 0x4001F4B
     private ParticleSystemRenderer m_particleRenderer;
 
-    // Token: 0x4001EBA
+    // Token: 0x4001F4C
     public float m_timeToReduce;
 
-    // Token: 0x4001EBB
+    // Token: 0x4001F4D
     public float m_reduceFactor;
 
-    // Token: 0x4001EBC
+    // Token: 0x4001F4E
     private float m_time;
 
-    // Token: 0x4001EBD
+    // Token: 0x4001F4F
     private float m_submitReduceFactor;
 
-    // Token: 0x4001EBE
+    // Token: 0x4001F50
     private float m_cutOutFactor;
 
-    // Token: 0x4001EBF
+    // Token: 0x4001F51
     public float m_upFactor;
 
-    // Token: 0x4001EC0
+    // Token: 0x4001F52
     private float upFactor;
 
-    // Token: 0x4001EC1
+    // Token: 0x4001F53
     private bool isupfactor;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002438
-    // RVA   : 0xB8F1D0   Offset: 0xB8E5D0   Length: 0x107
+    // Token : 0x60024E2
+    // RVA   : 0x90C0C0   Offset: 0x90AEC0   Length: 0x107
     private void Awake()
     {
         long lVar1;
@@ -55,23 +55,23 @@ public class NewMaterialChange
         if (!this.isParticleSystem) {
           lVar1 = Component.get_gameObject(this);
           if (lVar1 == null) throw; // [null/range check failed]
-          uVar2 = GameObject.GetComponent(lVar1,DAT_181d724e0);
+          uVar2 = GameObject.GetComponent(lVar1,DAT_181e555a8);
           this.m_meshRenderer = uVar2;
           if (this.m_meshRenderer == null) throw; // [null/range check failed]
-          FUN_180d9e0e0(this.m_meshRenderer,this.m_inputMaterial,0);
+          FUN_180af99b0(this.m_meshRenderer,this.m_inputMaterial,0);
           lVar1 = this.m_meshRenderer;
         }
         else {
           lVar1 = Component.get_gameObject(this);
           if (lVar1 == null) throw; // [null/range check failed]
-          uVar2 = GameObject.GetComponent(lVar1,DAT_181d72788);
+          uVar2 = GameObject.GetComponent(lVar1,DAT_181e55850);
           this.m_particleRenderer = uVar2;
           if (this.m_particleRenderer == null) throw; // [null/range check failed]
-          FUN_180d9e0e0(this.m_particleRenderer,this.m_inputMaterial,0);
+          FUN_180af99b0(this.m_particleRenderer,this.m_inputMaterial,0);
           lVar1 = this.m_particleRenderer;
         }
         if (lVar1 != null) {
-          uVar2 = FUN_180d9dd10(lVar1,0);
+          uVar2 = FUN_180af95e0(lVar1,0);
           this.m_objectMaterial = uVar2;
           this.m_submitReduceFactor = 0;
           this.m_cutOutFactor = 0x3f800000;
@@ -79,8 +79,8 @@ public class NewMaterialChange
         }
     }
 
-    // Token : 0x6002439
-    // RVA   : 0xB8F2E0   Offset: 0xB8E6E0   Length: 0x190
+    // Token : 0x60024E3
+    // RVA   : 0x90C1D0   Offset: 0x90AFD0   Length: 0x190
     private void LateUpdate()
     {
         ulong uVar1;
@@ -109,9 +109,9 @@ public class NewMaterialChange
           Object.Destroy(uVar1,0);
         }
         if (this.m_objectMaterial == null) {
-        LAB_180b8f46b:
+        LAB_18090c35b:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         Material.SetFloat(this.m_objectMaterial,"_MaskCutOut",this.m_cutOutFactor,0);
         fVar4 = this.m_upFactor;
@@ -122,7 +122,7 @@ public class NewMaterialChange
           this.upFactor = fVar2;
           uVar3 = Mathf.Clamp01(fVar2,0);
           this.upFactor = uVar3;
-          if (this.m_objectMaterial == null) goto LAB_180b8f46b;
+          if (this.m_objectMaterial == null) goto LAB_18090c35b;
           Material.SetFloat(this.m_objectMaterial,"_MaskCutOut",uVar3,0);
           if (1.0 <= this.upFactor) {
             this.isupfactor = 0;
@@ -130,14 +130,14 @@ public class NewMaterialChange
         }
     }
 
-    // Token : 0x600243A
-    // RVA   : 0xB8F480   Offset: 0xB8E880   Length: 0xB
+    // Token : 0x60024E4
+    // RVA   : 0x90C370   Offset: 0x90B170   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_180b8f480(int64 this)
+        void FUN_18090c370(int64 this)
         {
         this.isupfactor = 1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

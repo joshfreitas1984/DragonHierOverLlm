@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : BetterList`1
-// Token : 0x200007A
+// Token : 0x2000079
 // ============================================================
 
 public class BetterList`1
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000305
+    // Token: 0x40002E5
     public T[] buffer;
 
-    // Token: 0x4000306
+    // Token: 0x40002E6
     public int size;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002EB
-    // RVA   : 0xC73B20   Offset: 0xC72F20   Length: 0x85
+    // Token : 0x60002D2
+    // RVA   : 0x7B28C0   Offset: 0x7B16C0   Length: 0x85
     public IEnumerator<T> GetEnumerator()
     {
         long lVar2;
         lVar2 = **(int64 **)(*(int64 *)(param_2 + 24) + 192);
         if ((*(byte *)(lVar2 + 0x132) & 1) == 0) {
-          FUN_18009a510(lVar2);
+          FUN_1801a41f0(lVar2);
         }
         lVar2 = il2cpp_internal(lVar2);
         puVar1 = *(uint64 **)(*(int64 *)(*(int64 *)(param_2 + 24) + 192) + 8);
@@ -31,8 +31,8 @@ public class BetterList`1
         }
     }
 
-    // Token : 0x60002EC
-    // RVA   : 0x1587C30   Offset: 0x1587030   Length: 0x42
+    // Token : 0x60002D3
+    // RVA   : 0x1626C50   Offset: 0x1625A50   Length: 0x42
     public T get_Item(int i)
     {
         long lVar2;
@@ -40,7 +40,7 @@ public class BetterList`1
         lVar2 = *(int64 *)(i + 16);
         if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (param_3 < *(uint32 *)(lVar2 + 24)) {
           puVar1 = (uint64 *)(lVar2 + ((int64)(int)param_3 + 2) * 16);
@@ -52,8 +52,8 @@ public class BetterList`1
         uVar3 = il2cpp_internal();
     }
 
-    // Token : 0x60002ED
-    // RVA   : 0x1587D20   Offset: 0x1587120   Length: 0x40
+    // Token : 0x60002D4
+    // RVA   : 0x1626D40   Offset: 0x1625B40   Length: 0x40
     public void set_Item(int i, T value)
     {
         long lVar2;
@@ -61,7 +61,7 @@ public class BetterList`1
         lVar2 = *(int64 *)(this + 16);
         if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (i < *(uint32 *)(lVar2 + 24)) {
           uVar3 = value[1];
@@ -73,8 +73,8 @@ public class BetterList`1
         uVar3 = il2cpp_internal();
     }
 
-    // Token : 0x60002EE
-    // RVA   : 0x1584530   Offset: 0x1583930   Length: 0xCB
+    // Token : 0x60002D5
+    // RVA   : 0x1623550   Offset: 0x1622350   Length: 0xCB
     private void AllocateMore()
     {
         uint uVar1;
@@ -83,7 +83,7 @@ public class BetterList`1
         if (*(int64 *)(this + 16) == 0) {
           lVar3 = *(int64 *)(*(int64 *)(*(int64 *)(param_2 + 24) + 192) + 16);
           if ((*(byte *)(lVar3 + 0x132) & 1) == 0) {
-            FUN_18009a510(lVar3);
+            FUN_1801a41f0(lVar3);
           }
           uVar1 = 32;
         }
@@ -91,18 +91,18 @@ public class BetterList`1
           uVar1 = Mathf.Max(*(int *)(*(int64 *)(this + 16) + 24) * 2,32);
           lVar3 = *(int64 *)(*(int64 *)(*(int64 *)(param_2 + 24) + 192) + 16);
           if ((*(byte *)(lVar3 + 0x132) & 1) == 0) {
-            FUN_18009a510(lVar3);
+            FUN_1801a41f0(lVar3);
           }
         }
-        uVar2 = FUN_1800d60b0(lVar3,uVar1);
+        uVar2 = FUN_1801dfd90(lVar3,uVar1);
         if ((*(int64 *)(this + 16) != 0) && (0 < *(int *)(this + 24))) {
           Array.CopyTo(*(int64 *)(this + 16),uVar2,0,0);
         }
         *(uint64 *)(this + 16) = uVar2;
     }
 
-    // Token : 0x60002EF
-    // RVA   : 0x1587720   Offset: 0x1586B20   Length: 0xF8
+    // Token : 0x60002D6
+    // RVA   : 0x1626740   Offset: 0x1625540   Length: 0xF8
     private void Trim()
     {
         int iVar3;
@@ -121,34 +121,34 @@ public class BetterList`1
         }
         else {
           if (*(int64 *)(this + 16) == 0) {
-        LAB_1815877f3:
+        LAB_181626813:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int *)(*(int64 *)(this + 16) + 24) <= iVar3) {
             return;
           }
           lVar9 = *(int64 *)(*(int64 *)(*(int64 *)(param_2 + 24) + 192) + 16);
           if ((*(byte *)(lVar9 + 0x132) & 1) == 0) {
-            FUN_18009a510(lVar9);
+            FUN_1801a41f0(lVar9);
           }
-          lVar9 = FUN_1800d60b0(lVar9,iVar3);
+          lVar9 = FUN_1801dfd90(lVar9,iVar3);
           uVar8 = 0;
           if (0 < *(int *)(this + 24)) {
             do {
               lVar4 = *(int64 *)(this + 16);
-              if (lVar4 == null) goto LAB_1815877f3;
+              if (lVar4 == null) goto LAB_181626813;
               lVar11 = (int64)(int)uVar8;
               if (*(uint32 *)(lVar4 + 24) <= uVar8) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
-              if (lVar9 == null) goto LAB_1815877f3;
+              if (lVar9 == null) goto LAB_181626813;
               if (*(uint32 *)(lVar9 + 24) <= uVar8) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               puVar1 = (uint32 *)(lVar4 + (lVar11 + 2) * 16);
               uVar5 = puVar1[1];
@@ -167,25 +167,25 @@ public class BetterList`1
         il2cpp_internal(this + 16,lVar9);
     }
 
-    // Token : 0x60002F0
-    // RVA   : 0x101B520   Offset: 0x101A920   Length: 0x8
+    // Token : 0x60002D7
+    // RVA   : 0xE09360   Offset: 0xE08160   Length: 0x8
     public void Clear()
     {
         *(uint32 *)(this + 24) = 0;
     }
 
-    // Token : 0x60002F1
-    // RVA   : 0x1585C60   Offset: 0x1585060   Length: 0x13
+    // Token : 0x60002D8
+    // RVA   : 0x1624C80   Offset: 0x1623A80   Length: 0x13
     public void Release()
     {
-        void FUN_181585c60(int64 this)
+        void FUN_181624c80(int64 this)
         {
         *(uint32 *)(this + 24) = 0;
         *(uint64 *)(this + 16) = 0;
     }
 
-    // Token : 0x60002F2
-    // RVA   : 0x1584310   Offset: 0x1583710   Length: 0x91
+    // Token : 0x60002D9
+    // RVA   : 0x1623330   Offset: 0x1622130   Length: 0x91
     public void Add(T item)
     {
         ulong uVar3;
@@ -210,12 +210,12 @@ public class BetterList`1
           }
           uVar3 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar3,0);
+          FUN_1801e02d0(uVar3,0);
         }
     }
 
-    // Token : 0x60002F3
-    // RVA   : 0x1585400   Offset: 0x1584800   Length: 0x12D
+    // Token : 0x60002DA
+    // RVA   : 0x1624420   Offset: 0x1623220   Length: 0x12D
     public void Insert(int index, T item)
     {
         long lVar4;
@@ -245,17 +245,17 @@ public class BetterList`1
         else {
           do {
             lVar4 = *(int64 *)(this + 16);
-            if (lVar4 == null) goto LAB_181585528;
+            if (lVar4 == null) goto LAB_181624548;
             lVar10 = (int64)(int)uVar9;
             if (*(uint32 *)(lVar4 + 24) <= uVar9 - 1) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar8,0);
+              FUN_1801e02d0(uVar8,0);
             }
             if (*(uint32 *)(lVar4 + 24) <= uVar9) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar8,0);
+              FUN_1801e02d0(uVar8,0);
             }
             puVar1 = (uint32 *)(lVar4 + (lVar10 + 1) * 16);
             uVar5 = puVar1[1];
@@ -270,14 +270,14 @@ public class BetterList`1
           } while ((int)index < (int)uVar9);
           lVar4 = *(int64 *)(this + 16);
           if (lVar4 == null) {
-        LAB_181585528:
+        LAB_181624548:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(uint32 *)(lVar4 + 24) <= index) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           uVar8 = item[1];
           puVar3 = (uint64 *)(lVar4 + ((int64)(int)index + 2) * 16);
@@ -287,8 +287,8 @@ public class BetterList`1
         }
     }
 
-    // Token : 0x60002F4
-    // RVA   : 0x1584A10   Offset: 0x1583E10   Length: 0xCC
+    // Token : 0x60002DB
+    // RVA   : 0x1623A30   Offset: 0x1622830   Length: 0xCC
     public bool Contains(T item)
     {
         long lVar1;
@@ -305,7 +305,7 @@ public class BetterList`1
             lVar1 = *(int64 *)(this + 16);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             local_28 = *item;
             uStack_24 = item[1];
@@ -313,13 +313,13 @@ public class BetterList`1
             uStack_1c = item[3];
             lVar2 = *(int64 *)(*(int64 *)(*(int64 *)(param_3 + 24) + 192) + 40);
             if ((*(byte *)(lVar2 + 0x132) & 1) == 0) {
-              FUN_18009a510(lVar2);
+              FUN_1801a41f0(lVar2);
             }
             uVar4 = il2cpp_value_box(lVar2,&local_28);
             if (*(uint32 *)(lVar1 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             cVar3 = Color.Equals(((int64)(int)uVar5 + 2) * 16 + lVar1,uVar4,0);
             if (cVar3) {
@@ -331,8 +331,8 @@ public class BetterList`1
         return false;
     }
 
-    // Token : 0x60002F5
-    // RVA   : 0x15851E0   Offset: 0x15845E0   Length: 0xD3
+    // Token : 0x60002DC
+    // RVA   : 0x1624200   Offset: 0x1623000   Length: 0xD3
     public int IndexOf(T item)
     {
         long lVar1;
@@ -349,7 +349,7 @@ public class BetterList`1
             lVar1 = *(int64 *)(this + 16);
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             local_28 = *item;
             uStack_24 = item[1];
@@ -357,13 +357,13 @@ public class BetterList`1
             uStack_1c = item[3];
             lVar2 = *(int64 *)(*(int64 *)(*(int64 *)(param_3 + 24) + 192) + 40);
             if ((*(byte *)(lVar2 + 0x132) & 1) == 0) {
-              FUN_18009a510(lVar2);
+              FUN_1801a41f0(lVar2);
             }
             uVar4 = il2cpp_value_box(lVar2,&local_28);
             if (*(uint32 *)(lVar1 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             cVar3 = Color.Equals(((int64)(int)uVar5 + 2) * 16 + lVar1,uVar4,0);
             if (cVar3) {
@@ -375,8 +375,8 @@ public class BetterList`1
         return 0xffffffff;
     }
 
-    // Token : 0x60002F6
-    // RVA   : 0x1586410   Offset: 0x1585810   Length: 0x1B2
+    // Token : 0x60002DD
+    // RVA   : 0x1625430   Offset: 0x1624230   Length: 0x1B2
     public bool Remove(T item)
     {
         long lVar4;
@@ -407,7 +407,7 @@ public class BetterList`1
               if (*(uint32 *)(lVar4 + 24) <= uVar11) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               if (plVar9 == (int64 *)0) throw; // [null/range check failed]
               puVar1 = (uint32 *)(lVar4 + ((int64)(int)uVar11 + 2) * 16);
@@ -429,21 +429,21 @@ public class BetterList`1
                 if (*(uint32 *)(lVar4 + 24) <= uVar11) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 puVar3 = (uint64 *)(lVar4 + ((int64)(int)uVar11 + 2) * 16);
                 *puVar3 = 0;
                 puVar3[1] = 0;
                 uVar8 = *(uint32 *)(this + 24);
-                if ((int)uVar8 <= (int)uVar11) goto LAB_18158654b;
-                goto LAB_181586510;
+                if ((int)uVar8 <= (int)uVar11) goto LAB_18162556b;
+                goto LAB_181625530;
               }
               uVar11 = uVar11 + 1;
             } while ((int)uVar11 < *(int *)(this + 24));
           }
         }
         return (uint64)in_RAX & 0xffffffffffffff00;
-        LAB_181586510:
+        LAB_181625530:
         do {
           lVar4 = *(int64 *)(this + 16);
           if (lVar4 == null) throw; // [null/range check failed]
@@ -451,12 +451,12 @@ public class BetterList`1
           if (*(uint32 *)(lVar4 + 24) <= uVar11 + 1) {
             uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar10,0);
+            FUN_1801e02d0(uVar10,0);
           }
           if (*(uint32 *)(lVar4 + 24) <= uVar11) {
             uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar10,0);
+            FUN_1801e02d0(uVar10,0);
           }
           puVar1 = (uint32 *)(lVar4 + (lVar12 + 3) * 16);
           uVar5 = puVar1[1];
@@ -470,7 +470,7 @@ public class BetterList`1
           puVar2[3] = uVar7;
           uVar8 = *(uint32 *)(this + 24);
         } while ((int)uVar11 < (int)uVar8);
-        LAB_18158654b:
+        LAB_18162556b:
         lVar4 = *(int64 *)(this + 16);
         if (lVar4 != null) {
           if (uVar8 < *(uint32 *)(lVar4 + 24)) {
@@ -481,12 +481,12 @@ public class BetterList`1
           }
           uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar10,0);
+          FUN_1801e02d0(uVar10,0);
         }
     }
 
-    // Token : 0x60002F7
-    // RVA   : 0x1585FE0   Offset: 0x15853E0   Length: 0xF9
+    // Token : 0x60002DE
+    // RVA   : 0x1625000   Offset: 0x1623E00   Length: 0xF9
     public void RemoveAt(int index)
     {
         long lVar4;
@@ -502,7 +502,7 @@ public class BetterList`1
           if (*(uint32 *)(lVar4 + 24) <= index) {
             uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar9,0);
+            FUN_1801e02d0(uVar9,0);
           }
           puVar1 = (uint64 *)(lVar4 + ((int64)(int)index + 2) * 16);
           *puVar1 = 0;
@@ -511,17 +511,17 @@ public class BetterList`1
           if ((int)index < (int)uVar8) {
             do {
               lVar4 = *(int64 *)(this + 16);
-              if (lVar4 == null) goto LAB_181586094;
+              if (lVar4 == null) goto LAB_1816250b4;
               lVar10 = (int64)(int)index;
               if (*(uint32 *)(lVar4 + 24) <= index + 1) {
                 uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar9,0);
+                FUN_1801e02d0(uVar9,0);
               }
               if (*(uint32 *)(lVar4 + 24) <= index) {
                 uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar9,0);
+                FUN_1801e02d0(uVar9,0);
               }
               puVar2 = (uint32 *)(lVar4 + (lVar10 + 3) * 16);
               uVar5 = puVar2[1];
@@ -538,14 +538,14 @@ public class BetterList`1
           }
           lVar4 = *(int64 *)(this + 16);
           if (lVar4 == null) {
-        LAB_181586094:
+        LAB_1816250b4:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(uint32 *)(lVar4 + 24) <= uVar8) {
             uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar9,0);
+            FUN_1801e02d0(uVar9,0);
           }
           puVar1 = (uint64 *)(lVar4 + ((int64)(int)uVar8 + 2) * 16);
           *puVar1 = 0;
@@ -553,8 +553,8 @@ public class BetterList`1
         }
     }
 
-    // Token : 0x60002F8
-    // RVA   : 0x1585B90   Offset: 0x1584F90   Length: 0x6A
+    // Token : 0x60002DF
+    // RVA   : 0x1624BB0   Offset: 0x16239B0   Length: 0x6A
     public T Pop()
     {
         int iVar2;
@@ -577,7 +577,7 @@ public class BetterList`1
             }
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
         }
         *this = 0;
@@ -585,8 +585,8 @@ public class BetterList`1
         return this;
     }
 
-    // Token : 0x60002F9
-    // RVA   : 0x15875E0   Offset: 0x15869E0   Length: 0x31
+    // Token : 0x60002E0
+    // RVA   : 0x1626600   Offset: 0x1625400   Length: 0x31
     public T[] ToArray()
     {
         if (this != 0) {
@@ -596,8 +596,8 @@ public class BetterList`1
         }
     }
 
-    // Token : 0x60002FA
-    // RVA   : 0x1587220   Offset: 0x1586620   Length: 0x196
+    // Token : 0x60002E1
+    // RVA   : 0x1626240   Offset: 0x1625040   Length: 0x196
     public void Sort(CompareFunc<T> comparer)
     {
         long lVar1;
@@ -635,24 +635,24 @@ public class BetterList`1
           do {
             lVar4 = *(int64 *)(this + 16);
             if (lVar4 == null) {
-        LAB_181587361:
+        LAB_181626381:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar19 = (int64)(int)uVar16;
             if (*(uint32 *)(lVar4 + 24) <= uVar16) {
               uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar15,0);
+              FUN_1801e02d0(uVar15,0);
             }
             lVar1 = lVar19 + 2;
             uVar18 = uVar16 + 1;
             if (*(uint32 *)(lVar4 + 24) <= uVar18) {
               uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar15,0);
+              FUN_1801e02d0(uVar15,0);
             }
-            if (comparer == null) goto LAB_181587361;
+            if (comparer == null) goto LAB_181626381;
             puVar2 = (uint32 *)(lVar4 + (lVar19 + 3) * 16);
             local_48 = *puVar2;
             uStack_44 = puVar2[1];
@@ -675,11 +675,11 @@ public class BetterList`1
             }
             else {
               lVar4 = *(int64 *)(this + 16);
-              if (lVar4 == null) goto LAB_181587361;
+              if (lVar4 == null) goto LAB_181626381;
               if (*(uint32 *)(lVar4 + 24) <= uVar16) {
                 uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar15,0);
+                FUN_1801e02d0(uVar15,0);
               }
               puVar2 = (uint32 *)(lVar4 + lVar1 * 16);
               uVar6 = *puVar2;
@@ -689,7 +689,7 @@ public class BetterList`1
               if (*(uint32 *)(lVar4 + 24) <= uVar18) {
                 uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar15,0);
+                FUN_1801e02d0(uVar15,0);
               }
               puVar2 = (uint32 *)(lVar4 + (lVar19 + 3) * 16);
               uVar10 = puVar2[1];
@@ -701,11 +701,11 @@ public class BetterList`1
               puVar3[2] = uVar11;
               puVar3[3] = uVar12;
               lVar4 = *(int64 *)(this + 16);
-              if (lVar4 == null) goto LAB_181587361;
+              if (lVar4 == null) goto LAB_181626381;
               if (*(uint32 *)(lVar4 + 24) <= uVar18) {
                 uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar15,0);
+                FUN_1801e02d0(uVar15,0);
               }
               puVar2 = (uint32 *)(lVar4 + (lVar19 + 3) * 16);
               *puVar2 = uVar6;
@@ -722,8 +722,8 @@ public class BetterList`1
         } while( true );
     }
 
-    // Token : 0x60002FB
-    // RVA   : 0x8B4920   Offset: 0x8B3D20   Length: 0x19
+    // Token : 0x60002E2
+    // RVA   : 0x6E9DF0   Offset: 0x6E8BF0   Length: 0x19
     public void /*ctor*/()
     {
         if (this != 0) {

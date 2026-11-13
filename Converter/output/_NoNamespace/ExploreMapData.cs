@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : ExploreMapData
-// Token : 0x200026C
+// Token : 0x2000273
 // ============================================================
 
 public class ExploreMapData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001378
+    // Token: 0x40013B6
     public string exploreName;
 
-    // Token: 0x4001379
+    // Token: 0x40013B7
     public string spriteName;
 
-    // Token: 0x400137A
+    // Token: 0x40013B8
     public BigMapPos bigMapPos;
 
-    // Token: 0x400137B
+    // Token: 0x40013B9
     public float exploreDifficulty;
 
-    // Token: 0x400137C
+    // Token: 0x40013BA
     public List<ExplorePanelData> exploreMapData;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60013FD
-    // RVA   : 0xB25330   Offset: 0xB24730   Length: 0x76
+    // Token : 0x6001465
+    // RVA   : 0x8E6CE0   Offset: 0x8E5AE0   Length: 0x76
     public void /*ctor*/()
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
-        uVar1 = il2cpp_internal(DAT_181d928f0);
-        FUN_181330100(uVar1,DAT_181d86e38);
+        uVar1 = il2cpp_internal(DAT_181e728b8);
+        FUN_1810f3480(uVar1,DAT_181e69178);
         this.exploreMapData = uVar1;
     }
 
-    // Token : 0x60013FE
-    // RVA   : 0xB251B0   Offset: 0xB245B0   Length: 0x175
+    // Token : 0x6001466
+    // RVA   : 0x8E6B60   Offset: 0x8E5960   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -45,13 +45,13 @@ public class ExploreMapData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -63,11 +63,11 @@ public class ExploreMapData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 

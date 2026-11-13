@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : OnCreateMaterial
-// Token : 0x2000108
+// Token : 0x2000107
 // ============================================================
 
 public class OnCreateMaterial
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60008E6
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x60008CD
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class OnCreateMaterial
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x60008E7
-    // RVA   : 0x9197E0   Offset: 0x918BE0   Length: 0x49B
+    // Token : 0x60008CE
+    // RVA   : 0x6074D0   Offset: 0x6062D0   Length: 0x49B
     public virtual Material Invoke(UIWidget widget, Material mat)
     {
         long lVar1;
@@ -61,15 +61,15 @@ public class OnCreateMaterial
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if (*(char *)(lVar1 + 74) == '\x02') {
               if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                   ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180919c37;
+              goto LAB_180607927;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   uVar5 = (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                     (plVar3,widget,mat,
@@ -90,17 +90,17 @@ public class OnCreateMaterial
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(plVar3,widget,mat,puVar7[1]);
-                        goto LAB_180919c45;
+                        goto LAB_180607935;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  puVar7 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
+                  puVar7 = (uint64 *)FUN_18019b1f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
                   uVar5 = (*(code *)*puVar7)(plVar3,widget,mat,puVar7[1]);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar10 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   puVar7 = (uint64 *)
@@ -119,13 +119,13 @@ public class OnCreateMaterial
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_180919b06;
+                        goto LAB_1806077f6;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180919b06:
+                  lVar6 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_1806077f6:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                   uVar5 = (*(code *)*puVar7)(plVar3,widget,mat,puVar7);
                 }
@@ -133,10 +133,10 @@ public class OnCreateMaterial
             }
             else {
               if ((*(short *)(lVar1 + 72) == -1) || (*(int64 *)(this + 24) == 0))
-              goto LAB_180919887;
+              goto LAB_180607577;
               cVar4 = il2cpp_internal(lVar1);
               if (!cVar4) {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 if (!cVar4) {
                   uVar5 = (**(code **)(*widget + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                     (widget,mat,
@@ -157,17 +157,17 @@ public class OnCreateMaterial
                                        *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16
                                                )) * 16 + 0x138 + lVar6);
                         uVar5 = (*(code *)*puVar7)(widget,mat,puVar7[1]);
-                        goto LAB_180919c45;
+                        goto LAB_180607935;
                       }
                       uVar10 = uVar10 + 1;
                     } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  puVar7 = (uint64 *)FUN_1800914f0(widget,lVar8,*(uint16 *)(lVar1 + 72));
+                  puVar7 = (uint64 *)FUN_18019b1f0(widget,lVar8,*(uint16 *)(lVar1 + 72));
                   uVar5 = (*(code *)*puVar7)(widget,mat,puVar7[1]);
                 }
               }
               else {
-                cVar4 = FUN_1800d65c0(lVar1);
+                cVar4 = FUN_1801e02a0(lVar1);
                 uVar10 = *(uint16 *)(lVar1 + 72);
                 if (!cVar4) {
                   puVar7 = (uint64 *)
@@ -186,13 +186,13 @@ public class OnCreateMaterial
                                 (int)((uint32)uVar10 +
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16))
                                 * 16 + 0x138 + lVar6;
-                        goto LAB_180919926;
+                        goto LAB_180607616;
                       }
                       uVar9 = uVar9 + 1;
                     } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                   }
-                  lVar6 = FUN_1800914f0(widget,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180919926:
+                  lVar6 = FUN_18019b1f0(widget,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_180607616:
                   puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                   uVar5 = (*(code *)*puVar7)(widget,mat,puVar7);
                 }
@@ -200,14 +200,14 @@ public class OnCreateMaterial
             }
           }
           else if (*(char *)(lVar1 + 74) == '\x02') {
-        LAB_180919887:
+        LAB_180607577:
             uVar5 = (*pcVar2)(widget,mat,lVar1);
           }
           else {
-        LAB_180919c37:
+        LAB_180607927:
             uVar5 = (*pcVar2)(plVar3,widget,mat,lVar1);
           }
-        LAB_180919c45:
+        LAB_180607935:
           uVar13 = uVar13 + 1;
           if (uVar12 <= uVar13) {
             return uVar5;
@@ -215,8 +215,8 @@ public class OnCreateMaterial
         } while( true );
     }
 
-    // Token : 0x60008E8
-    // RVA   : 0x28D3E0   Offset: 0x28C7E0   Length: 0x31
+    // Token : 0x60008CF
+    // RVA   : 0x606720   Offset: 0x605520   Length: 0x31
     public virtual IAsyncResult BeginInvoke(UIWidget widget, Material mat, AsyncCallback callback, object object)
     {
         void OnCreateMaterial.BeginInvoke
@@ -232,8 +232,8 @@ public class OnCreateMaterial
         il2cpp_internal(this,&local_28,callback,object);
     }
 
-    // Token : 0x60008E9
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x60008D0
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual Material EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

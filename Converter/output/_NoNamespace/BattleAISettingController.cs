@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : BattleAISettingController
-// Token : 0x200018F
+// Token : 0x2000191
 // ============================================================
 
 public class BattleAISettingController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000ADC
+    // Token: 0x4000AE9
     public BattleUnit targetBattleUnit;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000CC2
-    // RVA   : 0x7F7730   Offset: 0x7F6B30   Length: 0xA20
+    // Token : 0x6000CC1
+    // RVA   : 0x529BD0   Offset: 0x5289D0   Length: 0xA20
     public void Init()
     {
-        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_2a90 = *(int64*)(DAT_181e52a90 + 184);
         uint uVar1;
         ulong uVar2;
         long lVar3;
@@ -36,14 +36,14 @@ public class BattleAISettingController
         if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"HeroIcon",0)) == null)
         throw; // [null/range check failed]
         uVar7 = Component.get_gameObject(lVar6,0);
-        if (*pStatics_2ee8 == 0) throw; // [null/range check failed]
-        uVar2 = *(uint64 *)(*pStatics_2ee8 + 144);
+        if (*pStatics_2a90 == 0) throw; // [null/range check failed]
+        uVar2 = *(uint64 *)(*pStatics_2a90 + 144);
         lVar6 = GlobalData.AddChild(uVar7,uVar2,0);
         if (lVar6 == null) throw; // [null/range check failed]
-        lVar8 = GameObject.GetComponent(lVar6,DAT_181d71b50);
+        lVar8 = GameObject.GetComponent(lVar6,DAT_181e54c18);
         if ((this.targetBattleUnit == null) || (lVar8 == null)) throw; // [null/range check failed]
         lVar8.hipPos = this.targetBattleUnit.heroData;
-        lVar6 = GameObject.GetComponent(lVar6,DAT_181d71b50);
+        lVar6 = GameObject.GetComponent(lVar6,DAT_181e54c18);
         if (lVar6 == null) throw; // [null/range check failed]
         lVar6.skeleton = 0;
         lVar6 = Component.get_transform(this,0);
@@ -55,7 +55,7 @@ public class BattleAISettingController
         if (((uVar10 == 0) || (lVar8 == null)) || (lVar3 = lVar8.heroData) == null)
         throw; // [null/range check failed]
         if ((*(int *)(lVar3 + 88) == 0) || (*(char *)(lVar3 + 0x246) != false)) {
-        LAB_1807f79f8:
+        LAB_180529e98:
           uVar10 = CONCAT71((int7)(uVar10 >> 8),1);
         }
         else {
@@ -63,7 +63,7 @@ public class BattleAISettingController
           uVar10 = (uint64)uVar1;
           if (-1 < (int)uVar1) {
             if (lVar8.battleTeam == null) throw; // [null/range check failed]
-            if (uVar1 == *(uint32 *)(lVar8.battleTeam + 16)) goto LAB_1807f79f8;
+            if (uVar1 == *(uint32 *)(lVar8.battleTeam + 16)) goto LAB_180529e98;
           }
           uVar10 = 0;
           cVar4 = HeroData.BattleControlable(lVar3,0);
@@ -87,7 +87,7 @@ public class BattleAISettingController
         if (((uVar10 == 0) || (lVar8 == null)) || (lVar3 = lVar8.heroData) == null)
         throw; // [null/range check failed]
         if ((*(int *)(lVar3 + 88) == 0) || (*(char *)(lVar3 + 0x246) != false)) {
-        LAB_1807f7b19:
+        LAB_180529fb9:
           uVar10 = CONCAT71((int7)(uVar10 >> 8),1);
         }
         else {
@@ -95,7 +95,7 @@ public class BattleAISettingController
           uVar10 = (uint64)uVar1;
           if (-1 < (int)uVar1) {
             if (lVar8.battleTeam == null) throw; // [null/range check failed]
-            if (uVar1 == *(uint32 *)(lVar8.battleTeam + 16)) goto LAB_1807f7b19;
+            if (uVar1 == *(uint32 *)(lVar8.battleTeam + 16)) goto LAB_180529fb9;
           }
           uVar10 = 0;
           cVar4 = HeroData.BattleControlable(lVar3,0);
@@ -112,7 +112,7 @@ public class BattleAISettingController
         lVar6 = Component.get_transform(this,0);
         if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,"Auto",0)) == null)
         throw; // [null/range check failed]
-        lVar6 = Component.GetComponent(lVar6,DAT_181d962f8);
+        lVar6 = Component.GetComponent(lVar6,DAT_181e796b8);
         if ((this.targetBattleUnit == null) || (lVar6 == null)) throw; // [null/range check failed]
         Toggle.set_isOn(lVar6,this.targetBattleUnit.autoFight,0);
         lVar6 = Component.get_transform(this,0);
@@ -127,19 +127,19 @@ public class BattleAISettingController
         local_res18[0] = *(uint32 *)(*(int64 *)(lVar8 + 16) + 32);
         uVar7 = Int32.ToString(local_res18,0);
         if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-           (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) throw; // [null/range check failed]
+           (lVar6 = Component.GetComponent(lVar6,DAT_181e796b8)) == null) throw; // [null/range check failed]
         Toggle.set_isOn(lVar6,1,0);
         if ((this.targetBattleUnit == null) ||
            (lVar6 = this.targetBattleUnit.heroData) == null) throw; // [null/range check failed]
         if (lVar6.battleTeam == null) {
-        LAB_1807f7d00:
+        LAB_18052a1a0:
           lVar6 = Component.get_transform(this,0);
           if (lVar6 == null) throw; // [null/range check failed]
           lVar6 = Transform.Find(lVar6,"MoveTabGrid",0);
           local_res18[0] = 3;
           uVar7 = Int32.ToString(local_res18,0);
           if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-             (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) throw; // [null/range check failed]
+             (lVar6 = Component.GetComponent(lVar6,DAT_181e796b8)) == null) throw; // [null/range check failed]
           Selectable.set_interactable(lVar6,0,0);
           lVar6 = Component.get_transform(this,0);
           if (lVar6 == null) throw; // [null/range check failed]
@@ -147,14 +147,14 @@ public class BattleAISettingController
           local_res18[0] = 4;
           uVar7 = Int32.ToString(local_res18,0);
           if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-             (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) throw; // [null/range check failed]
+             (lVar6 = Component.GetComponent(lVar6,DAT_181e796b8)) == null) throw; // [null/range check failed]
           Selectable.set_interactable(lVar6,0,0);
         }
         else {
           lVar6 = PlotController.LaBaFestivelResultTalkText;
           if (lVar6 == null) throw; // [null/range check failed]
           cVar4 = BattleController.HavePlayerUnit(lVar6,0);
-          if (!cVar4) goto LAB_1807f7d00;
+          if (!cVar4) goto LAB_18052a1a0;
         }
         lVar6 = Component.get_transform(this,0);
         if (lVar6 != null) {
@@ -168,7 +168,7 @@ public class BattleAISettingController
             local_res18[0] = *(uint32 *)(*(int64 *)(lVar8 + 16) + 36);
             uVar7 = Int32.ToString(local_res18,0);
             if (((lVar6 != null) && (lVar6 = Transform.Find(lVar6,uVar7,0)) != null) &&
-               (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) != null) {
+               (lVar6 = Component.GetComponent(lVar6,DAT_181e796b8)) != null) {
               Toggle.set_isOn(lVar6,1,0);
               lVar6 = this.targetBattleUnit;
               local_res20[0] = 2;
@@ -179,9 +179,9 @@ public class BattleAISettingController
                     return;
                   }
                   if (local_res20[0] == 3) {
-                    lVar6 = FUN_18046bb80(0);
+                    lVar6 = FUN_1802101c0(0);
                     if (lVar6 == null) break;
-                    if (lVar6.hipPos != null) goto LAB_1807f7f8e;
+                    if (lVar6.hipPos != null) goto LAB_18052a42e;
                     lVar6 = Component.get_transform(this,0);
                     uVar7 = Int32.ToString(local_res20,0);
                     if (lVar6 == null) break;
@@ -193,7 +193,7 @@ public class BattleAISettingController
                     local_50 = *(uint32 *)(puVar9 + 1);
                   }
                   else {
-        LAB_1807f7f8e:
+        LAB_18052a42e:
                     lVar6 = Component.get_transform(this,0);
                     uVar7 = Int32.ToString(local_res20,0);
                     if (lVar6 == null) break;
@@ -208,21 +208,21 @@ public class BattleAISettingController
                   lVar6 = Component.get_transform(this,0);
                   uVar7 = Int32.ToString(local_res20,0);
                   if (((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) ||
-                     (lVar6 = Component.GetComponent(lVar6,DAT_181d962f8)) == null) break;
+                     (lVar6 = Component.GetComponent(lVar6,DAT_181e796b8)) == null) break;
                   cVar4 = *(char *)(lVar6 + 0x118);
                   if (((this.targetBattleUnit == null) ||
                       (lVar6 = this.targetBattleUnit.heroData) == null) ||
                      (lVar6 = *(int64 *)(lVar6 + 0x2d0)) == null) break;
-                  iVar5 = FUN_1800d6760(lVar6,local_res20[0]);
+                  iVar5 = FUN_180002480(lVar6,local_res20[0]);
                   if ((bool)cVar4 != (iVar5 == 1)) {
                     lVar6 = Component.get_transform(this,0);
                     uVar7 = Int32.ToString(local_res20,0);
                     if ((lVar6 == null) || (lVar6 = Transform.Find(lVar6,uVar7,0)) == null) break;
-                    lVar6 = Component.GetComponent(lVar6,DAT_181d962f8);
+                    lVar6 = Component.GetComponent(lVar6,DAT_181e796b8);
                     if ((this.targetBattleUnit == null) ||
                        ((lVar8 = this.targetBattleUnit.heroData, lVar8 == null ||
                         (lVar8 = *(int64 *)(lVar8 + 0x2d0)) == null))) break;
-                    iVar5 = FUN_1800d6760(lVar8,local_res20[0]);
+                    iVar5 = FUN_180002480(lVar8,local_res20[0]);
                     if (lVar6 == null) break;
                     Toggle.set_isOn(lVar6,iVar5 == 1);
                   }
@@ -236,8 +236,8 @@ public class BattleAISettingController
         }
     }
 
-    // Token : 0x6000CC3
-    // RVA   : 0x7F7450   Offset: 0x7F6850   Length: 0x99
+    // Token : 0x6000CC2
+    // RVA   : 0x5298F0   Offset: 0x5286F0   Length: 0x99
     public void AutoButtonClicked()
     {
         long lVar1;
@@ -247,7 +247,7 @@ public class BattleAISettingController
         if (lVar2 != null) {
           lVar2 = Transform.Find(lVar2,"Auto",0);
           if (lVar2 != null) {
-            lVar2 = Component.GetComponent(lVar2,DAT_181d962f8);
+            lVar2 = Component.GetComponent(lVar2,DAT_181e796b8);
             if ((lVar2 != null) && (lVar1 != null)) {
               BattleUnit.ChangeAutoType(lVar1,*(uint8 *)(lVar2 + 0x118),0);
               return;
@@ -256,8 +256,8 @@ public class BattleAISettingController
         }
     }
 
-    // Token : 0x6000CC4
-    // RVA   : 0x7F8160   Offset: 0x7F7560   Length: 0x1D2
+    // Token : 0x6000CC3
+    // RVA   : 0x52A600   Offset: 0x529400   Length: 0x1D2
     public void MoveTabGridChanged(GameObject buttonChanged)
     {
         ulong uVar1;
@@ -265,7 +265,7 @@ public class BattleAISettingController
         uint uVar3;
         long lVar4;
         ulong uVar5;
-        if ((buttonChanged != null) && (lVar4 = GameObject.GetComponent(buttonChanged,DAT_181d743b0)) != null) {
+        if ((buttonChanged != null) && (lVar4 = GameObject.GetComponent(buttonChanged,DAT_181e57478)) != null) {
           if (*(char *)(lVar4 + 0x118) == false) {
             return;
           }
@@ -275,14 +275,51 @@ public class BattleAISettingController
             uVar5 = Object.get_name(buttonChanged,0);
             uVar3 = Int32.Parse(uVar5,0);
             if (lVar4 != null) {
-              FUN_181834350(lVar4,0,uVar3,DAT_181d8fb30);
+              FUN_181774110(lVar4,0,uVar3,DAT_181e71cf0);
               uVar5 = this.targetBattleUnit;
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181e90420 + 184) + 80);
               if (lVar4 != null) {
                 uVar1 = *(uint64 *)(lVar4 + 0x110);
                 cVar2 = Object.op_Equality(uVar5,uVar1,0);
                 if (cVar2) {
-                  lVar4 = FUN_18046bb80(0);
+                  lVar4 = FUN_1802101c0(0);
+                  if (lVar4 == null) throw; // [null/range check failed]
+                  *(uint8 *)(lVar4 + 0x290) = 1;
+                }
+                return;
+              }
+            }
+          }
+        }
+    }
+
+    // Token : 0x6000CC4
+    // RVA   : 0x529710   Offset: 0x528510   Length: 0x1D5
+    public void AttackTabGridChanged(GameObject buttonChanged)
+    {
+        ulong uVar1;
+        bool cVar2;
+        uint uVar3;
+        long lVar4;
+        ulong uVar5;
+        if ((buttonChanged != null) && (lVar4 = GameObject.GetComponent(buttonChanged,DAT_181e57478)) != null) {
+          if (*(char *)(lVar4 + 0x118) == false) {
+            return;
+          }
+          if ((this.targetBattleUnit != null) &&
+             (lVar4 = this.targetBattleUnit.heroData) != null) {
+            lVar4 = *(int64 *)(lVar4 + 0x2d0);
+            uVar5 = Object.get_name(buttonChanged,0);
+            uVar3 = Int32.Parse(uVar5,0);
+            if (lVar4 != null) {
+              FUN_181774110(lVar4,1,uVar3,DAT_181e71cf0);
+              uVar5 = this.targetBattleUnit;
+              lVar4 = *(int64 *)(*(int64 *)(DAT_181e90420 + 184) + 80);
+              if (lVar4 != null) {
+                uVar1 = *(uint64 *)(lVar4 + 0x110);
+                cVar2 = Object.op_Equality(uVar5,uVar1,0);
+                if (cVar2) {
+                  lVar4 = FUN_1802101c0(0);
                   if (lVar4 == null) throw; // [null/range check failed]
                   *(uint8 *)(lVar4 + 0x290) = 1;
                 }
@@ -294,44 +331,7 @@ public class BattleAISettingController
     }
 
     // Token : 0x6000CC5
-    // RVA   : 0x7F7270   Offset: 0x7F6670   Length: 0x1D5
-    public void AttackTabGridChanged(GameObject buttonChanged)
-    {
-        ulong uVar1;
-        bool cVar2;
-        uint uVar3;
-        long lVar4;
-        ulong uVar5;
-        if ((buttonChanged != null) && (lVar4 = GameObject.GetComponent(buttonChanged,DAT_181d743b0)) != null) {
-          if (*(char *)(lVar4 + 0x118) == false) {
-            return;
-          }
-          if ((this.targetBattleUnit != null) &&
-             (lVar4 = this.targetBattleUnit.heroData) != null) {
-            lVar4 = *(int64 *)(lVar4 + 0x2d0);
-            uVar5 = Object.get_name(buttonChanged,0);
-            uVar3 = Int32.Parse(uVar5,0);
-            if (lVar4 != null) {
-              FUN_181834350(lVar4,1,uVar3,DAT_181d8fb30);
-              uVar5 = this.targetBattleUnit;
-              lVar4 = *(int64 *)(*(int64 *)(DAT_181db0260 + 184) + 80);
-              if (lVar4 != null) {
-                uVar1 = *(uint64 *)(lVar4 + 0x110);
-                cVar2 = Object.op_Equality(uVar5,uVar1,0);
-                if (cVar2) {
-                  lVar4 = FUN_18046bb80(0);
-                  if (lVar4 == null) throw; // [null/range check failed]
-                  *(uint8 *)(lVar4 + 0x290) = 1;
-                }
-                return;
-              }
-            }
-          }
-        }
-    }
-
-    // Token : 0x6000CC6
-    // RVA   : 0x7F74F0   Offset: 0x7F68F0   Length: 0x236
+    // RVA   : 0x529990   Offset: 0x528790   Length: 0x236
     public void AutoSettingButtonClicked(GameObject buttonClicked)
     {
         long lVar1;
@@ -345,9 +345,9 @@ public class BattleAISettingController
            (lVar1 = *(int64 *)(lVar1 + 0x2d0), buttonClicked != null)) {
           uVar5 = Object.get_name(buttonClicked,0);
           uVar4 = Int32.Parse(uVar5,0);
-          lVar6 = GameObject.GetComponent(buttonClicked,DAT_181d743b0);
+          lVar6 = GameObject.GetComponent(buttonClicked,DAT_181e57478);
           if ((lVar6 != null) && (lVar1 != null)) {
-            FUN_181834350(lVar1,uVar4,*(char *)(lVar6 + 0x118) != false,DAT_181d8fb30);
+            FUN_181774110(lVar1,uVar4,*(char *)(lVar6 + 0x118) != false,DAT_181e71cf0);
             uVar5 = this.targetBattleUnit;
             lVar1 = PlotController.LaBaFestivelResultTalkText;
             if (lVar1 != null) {
@@ -364,11 +364,11 @@ public class BattleAISettingController
         }
     }
 
-    // Token : 0x6000CC7
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000CC6
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

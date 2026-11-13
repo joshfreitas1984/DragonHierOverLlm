@@ -1363,6 +1363,14 @@
 - raw: "内力"
   splits:
   - text: "内力"
+- raw: "内力999"
+  splits:
+  - text: "内力999"
+- raw: "内力消耗 99"
+  splits:
+  - text: "内力消耗"
+  templates:
+  - template: "{0} 99"
 - raw: "内功"
   splits:
   - text: "内功"
@@ -1569,6 +1577,13 @@
 - raw: "力道"
   splits:
   - text: "力道"
+- raw: "力道 精"
+  splits:
+  - text: "力道"
+  - subIndex: 1
+    text: "精"
+  templates:
+  - template: "{0} {1}"
 - raw: "力道+5"
   splits:
   - text: "力道"
@@ -1596,6 +1611,23 @@
 - raw: "功成名就"
   splits:
   - text: "功成名就"
+- raw: "功法名称"
+  splits:
+  - text: "功法名称"
+- raw: "功法图标"
+  splits:
+  - text: "功法图标"
+- raw: "功法描述"
+  splits:
+  - text: "功法描述"
+- raw: "功法效果"
+  splits:
+  - text: "功法效果"
+- raw: "功法点数 99/99"
+  splits:
+  - text: "功法点数"
+  templates:
+  - template: "{0} 99/99"
 - raw: "功绩 100"
   splits:
   - text: "功绩"
@@ -1841,6 +1873,11 @@
 - raw: "基础"
   splits:
   - text: "基础"
+- raw: "基础伤害 99"
+  splits:
+  - text: "基础伤害"
+  templates:
+  - template: "{0} 99"
 - raw: "基础信息"
   splits:
   - text: "基础信息"
@@ -1883,6 +1920,12 @@
 - raw: "声望越高，能同时接受越多委托"
   splits:
   - text: "声望越高，能同时接受越多委托"
+- raw: "复刻同类武学攻击范围"
+  splits:
+  - text: "复刻同类武学攻击范围"
+- raw: "复刻同类武学攻防架势"
+  splits:
+  - text: "复刻同类武学攻防架势"
 - raw: "外交关系"
   splits:
   - text: "外交关系"
@@ -2474,9 +2517,9 @@
 - raw: "成交"
   splits:
   - text: "成交"
-- raw: "成品命名..."
+- raw: "成品命名"
   splits:
-  - text: "成品命名..."
+  - text: "成品命名"
 - raw: "成就"
   splits:
   - text: "成就"
@@ -2822,6 +2865,11 @@
 - raw: "斗笠"
   splits:
   - text: "斗笠"
+- raw: "新增特效 0/3"
+  splits:
+  - text: "新增特效"
+  templates:
+  - template: "{0} 0/3"
 - raw: "新建"
   splits:
   - text: "新建"
@@ -3543,6 +3591,9 @@
 - raw: "生命"
   splits:
   - text: "生命"
+- raw: "生命999"
+  splits:
+  - text: "生命999"
 - raw: "生活技艺"
   splits:
   - text: "生活技艺"
@@ -3975,6 +4026,9 @@
 - raw: "腥风血雨"
   splits:
   - text: "腥风血雨"
+- raw: "自创武学"
+  splits:
+  - text: "自创武学"
 - raw: "自动"
   splits:
   - text: "自动"
@@ -4347,6 +4401,11 @@
 - raw: "轻松休闲"
   splits:
   - text: "轻松休闲"
+- raw: "轻灵 +99%"
+  splits:
+  - text: "轻灵"
+  templates:
+  - template: "{0} +99%"
 - raw: "轻甲"
   splits:
   - text: "轻甲"
@@ -4387,6 +4446,12 @@
 - raw: "选择基础成品"
   splits:
   - text: "选择基础成品"
+- raw: "选择架势"
+  splits:
+  - text: "选择架势"
+- raw: "选择范围"
+  splits:
+  - text: "选择范围"
 - raw: "速度100%"
   splits:
   - text: "速度100%"

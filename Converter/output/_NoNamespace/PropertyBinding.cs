@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : PropertyBinding
-// Token : 0x200008E
+// Token : 0x200008D
 // ============================================================
 
 public class PropertyBinding
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000374
+    // Token: 0x4000354
     public PropertyReference source;
 
-    // Token: 0x4000375
+    // Token: 0x4000355
     public PropertyReference target;
 
-    // Token: 0x4000376
+    // Token: 0x4000356
     public Direction direction;
 
-    // Token: 0x4000377
+    // Token: 0x4000357
     public UpdateCondition update;
 
-    // Token: 0x4000378
+    // Token: 0x4000358
     public bool editMode;
 
-    // Token: 0x4000379
+    // Token: 0x4000359
     private object mLastValue;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600043B
-    // RVA   : 0xB12360   Offset: 0xB11760   Length: 0x2E
+    // Token : 0x6000422
+    // RVA   : 0x8B4770   Offset: 0x8B3570   Length: 0x2E
     private void Start()
     {
         PropertyBinding.UpdateTarget(this,0);
@@ -36,11 +36,11 @@ public class PropertyBinding
         }
     }
 
-    // Token : 0x600043C
-    // RVA   : 0xB12580   Offset: 0xB11980   Length: 0xE
+    // Token : 0x6000423
+    // RVA   : 0x8B4990   Offset: 0x8B3790   Length: 0xE
     private void Update()
     {
-        void FUN_180b12580(int64 this)
+        void FUN_1808b4990(int64 this)
         {
         if (this.update == 1) {
           PropertyBinding.UpdateTarget(this,0);
@@ -48,11 +48,11 @@ public class PropertyBinding
         }
     }
 
-    // Token : 0x600043D
-    // RVA   : 0xB122E0   Offset: 0xB116E0   Length: 0xE
+    // Token : 0x6000424
+    // RVA   : 0x8B46F0   Offset: 0x8B34F0   Length: 0xE
     private void LateUpdate()
     {
-        void FUN_180b122e0(int64 this)
+        void FUN_1808b46f0(int64 this)
         {
         if (this.update == 2) {
           PropertyBinding.UpdateTarget(this,0);
@@ -60,11 +60,11 @@ public class PropertyBinding
         }
     }
 
-    // Token : 0x600043E
-    // RVA   : 0xB122D0   Offset: 0xB116D0   Length: 0xE
+    // Token : 0x6000425
+    // RVA   : 0x8B46E0   Offset: 0x8B34E0   Length: 0xE
     private void FixedUpdate()
     {
-        void FUN_180b122d0(int64 this)
+        void FUN_1808b46e0(int64 this)
         {
         if (this.update == 3) {
           PropertyBinding.UpdateTarget(this,0);
@@ -72,8 +72,8 @@ public class PropertyBinding
         }
     }
 
-    // Token : 0x600043F
-    // RVA   : 0xB122F0   Offset: 0xB116F0   Length: 0x6E
+    // Token : 0x6000426
+    // RVA   : 0x8B4700   Offset: 0x8B3500   Length: 0x6E
     private void OnValidate()
     {
         long lVar1;
@@ -89,8 +89,8 @@ public class PropertyBinding
         }
     }
 
-    // Token : 0x6000440
-    // RVA   : 0xB12390   Offset: 0xB11790   Length: 0x1EF
+    // Token : 0x6000427
+    // RVA   : 0x8B47A0   Offset: 0x8B35A0   Length: 0x1EF
     public void UpdateTarget()
     {
         long lVar1;
@@ -100,7 +100,7 @@ public class PropertyBinding
         ulong uVar6;
         if (((this.source != null) && (this.target != null)) &&
            (cVar4 = PropertyReference.get_isValid(this.source,0), cVar4)) {
-          if (this.target == null) goto LAB_180b1257a;
+          if (this.target == null) goto LAB_1808b498a;
           cVar4 = PropertyReference.get_isValid(this.target,0);
           if (!cVar4) {
             return;
@@ -108,24 +108,24 @@ public class PropertyBinding
           lVar1 = this.source;
           if (this.direction == null) {
             lVar3 = this.target;
-            if (lVar1 == null) goto LAB_180b1257a;
+            if (lVar1 == null) goto LAB_1808b498a;
             uVar5 = PropertyReference.Get(lVar1,0);
             lVar1 = lVar3;
           }
           else if (this.direction == 1) {
-            if (this.target == null) goto LAB_180b1257a;
+            if (this.target == null) goto LAB_1808b498a;
             uVar5 = PropertyReference.Get(this.target,0);
           }
           else {
-            if (lVar1 == null) goto LAB_180b1257a;
+            if (lVar1 == null) goto LAB_1808b498a;
             uVar5 = PropertyReference.GetPropertyType(lVar1,0);
-            if (this.target == null) goto LAB_180b1257a;
+            if (this.target == null) goto LAB_1808b498a;
             uVar6 = PropertyReference.GetPropertyType(this.target,0);
-            cVar4 = FUN_180295d70(uVar5,uVar6,0);
+            cVar4 = FUN_18055dd80(uVar5,uVar6,0);
             if (!cVar4) {
               return;
             }
-            if (this.source == null) goto LAB_180b1257a;
+            if (this.source == null) goto LAB_1808b498a;
             uVar5 = PropertyReference.Get(this.source,0);
             plVar2 = this.mLastValue;
             if ((plVar2 == (int64 *)0) ||
@@ -135,10 +135,10 @@ public class PropertyBinding
               lVar1 = this.target;
             }
             else {
-              if (this.target == null) goto LAB_180b1257a;
+              if (this.target == null) goto LAB_1808b498a;
               uVar5 = PropertyReference.Get(this.target,0);
               plVar2 = this.mLastValue;
-              if (plVar2 == (int64 *)0) goto LAB_180b1257a;
+              if (plVar2 == (int64 *)0) goto LAB_1808b498a;
               cVar4 = (**(code **)(*plVar2 + 0x138))(plVar2,uVar5,*(uint64 *)(*plVar2 + 0x140));
               if (cVar4) {
                 return;
@@ -148,23 +148,23 @@ public class PropertyBinding
             }
           }
           if (lVar1 == null) {
-        LAB_180b1257a:
+        LAB_1808b498a:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           PropertyReference.Set(lVar1,uVar5,0);
         }
     }
 
-    // Token : 0x6000441
-    // RVA   : 0xB12590   Offset: 0xB11990   Length: 0x12
+    // Token : 0x6000428
+    // RVA   : 0x8B49A0   Offset: 0x8B37A0   Length: 0x12
     public void /*ctor*/()
     {
-        void FUN_180b12590(int64 this)
+        void FUN_1808b49a0(int64 this)
         {
         this.update = 1;
         this.editMode = 1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

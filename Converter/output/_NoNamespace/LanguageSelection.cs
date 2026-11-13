@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : LanguageSelection
-// Token : 0x200002A
+// Token : 0x2000029
 // ============================================================
 
 public class LanguageSelection
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000C4
+    // Token: 0x40000A4
     private UIPopupList mList;
 
-    // Token: 0x40000C5
+    // Token: 0x40000A5
     private bool mStarted;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000A4
-    // RVA   : 0xA802E0   Offset: 0xA7F6E0   Length: 0x48
+    // Token : 0x600008B
+    // RVA   : 0x7C4240   Offset: 0x7C3040   Length: 0x48
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96bf8);
+        uVar1 = Component.GetComponent(this,DAT_181e79fb8);
         this.mList = uVar1;
     }
 
-    // Token : 0x60000A5
-    // RVA   : 0xA80530   Offset: 0xA7F930   Length: 0x152
+    // Token : 0x600008C
+    // RVA   : 0x7C4490   Offset: 0x7C3290   Length: 0x152
     private void Start()
     {
-        var pStatics = *(int64*)(DAT_181d7bb38 + 184);
+        var pStatics = *(int64*)(DAT_181e5bed0 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -36,8 +36,8 @@ public class LanguageSelection
           uVar1 = this.mList.onChange;
           lVar3 = *(int64 *)(pStatics + 8);
           if (lVar3 == null) {
-            uVar2 = **(uint64 **)(DAT_181d7bb38 + 184);
-            lVar3 = new OnTooltipCB(uVar2,DAT_181da6ce0,0);
+            uVar2 = **(uint64 **)(DAT_181e5bed0 + 184);
+            lVar3 = new OnTooltipCB(uVar2,DAT_181e8a6a0,0);
             plVar4 = (int64 *)(pStatics + 8);
             *plVar4 = lVar3;
             il2cpp_internal(plVar4,lVar3);
@@ -47,11 +47,11 @@ public class LanguageSelection
         }
     }
 
-    // Token : 0x60000A6
-    // RVA   : 0xA80330   Offset: 0xA7F730   Length: 0xE
+    // Token : 0x600008D
+    // RVA   : 0x7C4290   Offset: 0x7C3090   Length: 0xE
     private void OnEnable()
     {
-        void FUN_180a80330(int64 this)
+        void FUN_1807c4290(int64 this)
         {
         if (this.mStarted) {
           LanguageSelection.Refresh(this,0);
@@ -59,8 +59,8 @@ public class LanguageSelection
         }
     }
 
-    // Token : 0x60000A7
-    // RVA   : 0xA80350   Offset: 0xA7F750   Length: 0x1DC
+    // Token : 0x600008E
+    // RVA   : 0x7C42B0   Offset: 0x7C30B0   Length: 0x1DC
     public void Refresh()
     {
         int iVar1;
@@ -83,18 +83,18 @@ public class LanguageSelection
                 iVar1 = *(int *)(lVar4 + 24);
                 if (0 < iVar1) {
                   do {
-                    if (this.mList == null) goto LAB_180a80517;
+                    if (this.mList == null) goto LAB_1807c4477;
                     lVar4 = this.mList.items;
                     lVar5 = Localization.get_knownLanguages(0);
-                    if (lVar5 == null) goto LAB_180a80517;
+                    if (lVar5 == null) goto LAB_1807c4477;
                     if (*(uint32 *)(lVar5 + 24) <= uVar7) {
                       uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar6,0);
+                      FUN_1801e02d0(uVar6,0);
                     }
-                    if (lVar4 == null) goto LAB_180a80517;
-                    FUN_18181e6b0(lVar4,lVar5[uVar7],
-                                  DAT_181da3d70);
+                    if (lVar4 == null) goto LAB_1807c4477;
+                    FUN_18175de30(lVar4,lVar5[uVar7],
+                                  DAT_181e86370);
                     uVar7 = uVar7 + 1;
                   } while ((int)uVar7 < iVar1);
                 }
@@ -106,27 +106,27 @@ public class LanguageSelection
                 }
               }
             }
-        LAB_180a80517:
+        LAB_1807c4477:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x60000A8
-    // RVA   : 0xA80340   Offset: 0xA7F740   Length: 0x7
+    // Token : 0x600008F
+    // RVA   : 0x7C42A0   Offset: 0x7C30A0   Length: 0x7
     private void OnLocalize()
     {
-        void FUN_180a80340(uint64 this)
+        void FUN_1807c42a0(uint64 this)
         {
         LanguageSelection.Refresh(this,0);
     }
 
-    // Token : 0x60000A9
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000090
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

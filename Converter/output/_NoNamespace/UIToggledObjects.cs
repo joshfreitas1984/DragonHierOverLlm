@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : UIToggledObjects
-// Token : 0x2000072
+// Token : 0x2000071
 // ============================================================
 
 public class UIToggledObjects
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40002CF
+    // Token: 0x40002AF
     public List<GameObject> activate;
 
-    // Token: 0x40002D0
+    // Token: 0x40002B0
     public List<GameObject> deactivate;
 
-    // Token: 0x40002D1
+    // Token: 0x40002B1
     private GameObject target;
 
-    // Token: 0x40002D2
+    // Token: 0x40002B2
     private bool inverse;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002AC
-    // RVA   : 0xC07C10   Offset: 0xC07010   Length: 0x180
+    // Token : 0x6000293
+    // RVA   : 0x960E80   Offset: 0x95FC80   Length: 0x180
     private void Awake()
     {
         ulong uVar1;
@@ -38,28 +38,28 @@ public class UIToggledObjects
             if (lVar2 == null) throw; // [null/range check failed]
             if (lVar2.Count == null) {
               if (!this.inverse) {
-                FUN_18181e6b0(lVar4,this.target,DAT_181d893b0);
+                FUN_18175de30(lVar4,this.target,DAT_181e6b6f8);
               }
               else {
-                FUN_18181e6b0(lVar2,this.target,DAT_181d893b0);
+                FUN_18175de30(lVar2,this.target,DAT_181e6b6f8);
               }
-              goto LAB_180c07d14;
+              goto LAB_180960f84;
             }
           }
           this.target = 0;
         }
-        LAB_180c07d14:
-        lVar4 = Component.GetComponent(this,DAT_181d96ff8);
+        LAB_180960f84:
+        lVar4 = Component.GetComponent(this,DAT_181e7a3b8);
         if (lVar4 != null) {
           uVar1 = *(uint64 *)(lVar4 + 80);
-          uVar5 = new OnTooltipCB(this,DAT_181dc6bd0,0);
+          uVar5 = new OnTooltipCB(this,DAT_181e52e88,0);
           EventDelegate.Add(uVar1,uVar5,0);
           return;
         }
     }
 
-    // Token : 0x60002AD
-    // RVA   : 0xC07E40   Offset: 0xC07240   Length: 0x2AA
+    // Token : 0x6000294
+    // RVA   : 0x9610B0   Offset: 0x95FEB0   Length: 0x2AA
     public void Toggle()
     {
         ulong uVar1;
@@ -69,7 +69,7 @@ public class UIToggledObjects
         uint uVar5;
         long lVar6;
         long lVar7;
-        if (*(int64 *)(*(int64 *)(DAT_181db0510 + 184) + 8) != 0) {
+        if (*(int64 *)(*(int64 *)(DAT_181e90950 + 184) + 8) != 0) {
           cVar2 = Behaviour.get_enabled(this,0);
           if (!cVar2) {
             return;
@@ -83,7 +83,7 @@ public class UIToggledObjects
             do {
               if (lVar3.Count <= (int)uVar5) {
                 lVar3 = this.deactivate;
-                if (lVar3 != null) goto LAB_180c07ff7;
+                if (lVar3 != null) goto LAB_180961267;
                 break;
               }
               if (lVar3 == null) break;
@@ -115,7 +115,7 @@ public class UIToggledObjects
           uVar4 = uVar4 + 1;
           lVar7 = lVar7 + 8;
           if (lVar3 == null) break;
-        LAB_180c07ff7:
+        LAB_180961267:
           if (lVar3.Count <= (int)uVar4) {
             return;
           }
@@ -123,8 +123,8 @@ public class UIToggledObjects
         }
     }
 
-    // Token : 0x60002AE
-    // RVA   : 0xC07DA0   Offset: 0xC071A0   Length: 0xA0
+    // Token : 0x6000295
+    // RVA   : 0x961010   Offset: 0x95FE10   Length: 0xA0
     private void Set(GameObject go, bool state)
     {
         bool cVar1;
@@ -134,11 +134,11 @@ public class UIToggledObjects
         }
     }
 
-    // Token : 0x60002AF
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000296
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

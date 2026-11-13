@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : MoveWithMouse
-// Token : 0x200030E
+// Token : 0x2000318
 // ============================================================
 
 public class MoveWithMouse
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001936
+    // Token: 0x40019AF
     public float range;
 
-    // Token: 0x4001937
+    // Token: 0x40019B0
     private Vector2 mRot;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600196A
-    // RVA   : 0xDF46D0   Offset: 0xDF3AD0   Length: 0x1F8
+    // Token : 0x6001A00
+    // RVA   : 0x850F60   Offset: 0x84FD60   Length: 0x1F8
     private void Update()
     {
         float fVar1;
@@ -40,12 +40,12 @@ public class MoveWithMouse
         fVar13 = (float)iVar4 * 0.5;
         iVar4 = Screen.get_height(0);
         Screen.get_width(0);
-        fVar7 = (float)FUN_1810e3cd0(uVar3,0);
-        fVar8 = (float)FUN_1810e3cd0((fVar7 - fVar13) / fVar13,0xbf800000);
+        fVar7 = (float)FUN_180f34e60(uVar3,0);
+        fVar8 = (float)FUN_180f34e60((fVar7 - fVar13) / fVar13,0xbf800000);
         Screen.get_height(0);
         local_88 = uVar3;
-        fVar7 = (float)FUN_1810e3cd0(CONCAT44(uVar12,uVar12),0);
-        fVar9 = (float)FUN_1810e3cd0((fVar7 - (float)iVar4 * 0.5) / fVar13,0xbf800000);
+        fVar7 = (float)FUN_180f34e60(CONCAT44(uVar12,uVar12),0);
+        fVar9 = (float)FUN_180f34e60((fVar7 - (float)iVar4 * 0.5) / fVar13,0xbf800000);
         fVar7 = this.range;
         fVar13 = this.mRot;
         fVar1 = *(float *)(this + 32);
@@ -62,8 +62,8 @@ public class MoveWithMouse
         }
     }
 
-    // Token : 0x600196B
-    // RVA   : 0xDF48D0   Offset: 0xDF3CD0   Length: 0x41
+    // Token : 0x6001A01
+    // RVA   : 0x851160   Offset: 0x84FF60   Length: 0x41
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -75,7 +75,7 @@ public class MoveWithMouse
         uStackX_c = (uint32)((uint64)uVar1 >> 32);
         this.mRot = local_res8;
         *(uint32 *)(this + 32) = uStackX_c;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

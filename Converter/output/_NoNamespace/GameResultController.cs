@@ -1,80 +1,79 @@
 // ============================================================
 // Type  : GameResultController
-// Token : 0x20002AA
+// Token : 0x20002B3
 // ============================================================
 
 public class GameResultController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001584
+    // Token: 0x40015D4
     public int nowResultID;
 
-    // Token: 0x4001585
+    // Token: 0x40015D5
     public int nowTextID;
 
-    // Token: 0x4001586
+    // Token: 0x40015D6
     public GameObject gameEndPanel;
 
-    // Token: 0x4001587
+    // Token: 0x40015D7
     public GameObject gameResultCreditPanel;
 
-    // Token: 0x4001588
+    // Token: 0x40015D8
     public string extraInfo;
 
-    // Token: 0x4001589
+    // Token: 0x40015D9
     public static List<string> gameResultName;
 
-    // Token: 0x400158A
+    // Token: 0x40015DA
     public List<GameEndPlotData> gameEndPlotDatas;
 
-    // Token: 0x400158B
+    // Token: 0x40015DB
     private static GameResultController _instance;
 
-    // Token: 0x400158C
+    // Token: 0x40015DC
     private bool textShowing;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60016A3
-    // RVA   : 0xA5D1C0   Offset: 0xA5C5C0   Length: 0x58
+    // Token : 0x600171F
+    // RVA   : 0x6BEF60   Offset: 0x6BDD60   Length: 0x58
     public static GameResultController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181d72f70 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181e52b18 + 184) + 8);
     }
 
-    // Token : 0x60016A4
-    // RVA   : 0xA58C40   Offset: 0xA58040   Length: 0x68
+    // Token : 0x6001720
+    // RVA   : 0x6BA990   Offset: 0x6B9790   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181d72f70 + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181e52b18 + 184) + 8);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60016A5
-    // RVA   : 0xA58EF0   Offset: 0xA582F0   Length: 0x7
+    // Token : 0x6001721
+    // RVA   : 0x6BAC40   Offset: 0x6B9A40   Length: 0x7
     public void ContinueButtonClicked()
     {
-        void FUN_180a58ef0(uint64 this)
+        void FUN_1806bac40(uint64 this)
         {
         GameResultController.HideResultCredit(this,0);
     }
 
-    // Token : 0x60016A6
-    // RVA   : 0xA592F0   Offset: 0xA586F0   Length: 0x46
+    // Token : 0x6001722
+    // RVA   : 0x6BB040   Offset: 0x6B9E40   Length: 0x91
     public void QuitButtonClicked()
     {
-        var pStatics = *(int64*)(DAT_181d72dd8 + 184);
-        if (*pStatics != 0) {
-          GameMenuController.SureQuitGame(*pStatics,0);
+        if (**(int64 **)(DAT_181e52980 + 184) != 0) {
+          SceneManager.LoadScene("TitleScene",0);
           return;
         }
     }
 
-    // Token : 0x60016A7
-    // RVA   : 0xA58F00   Offset: 0xA58300   Length: 0x217
+    // Token : 0x6001723
+    // RVA   : 0x6BAC50   Offset: 0x6B9A50   Length: 0x217
     public void HideResultCredit()
     {
-        var pStatics = *(int64*)(DAT_181d8aba8 + 184);
+        var pStatics = *(int64*)(DAT_181e6af70 + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -86,7 +85,7 @@ public class GameResultController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Continue",0);
               if (lVar1 != null) {
-                lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
+                lVar1 = Component.GetComponent(lVar1,DAT_181e76ab8);
                 if (lVar1 != null) {
                   Selectable.set_interactable(lVar1,0,0);
                   if (this.gameResultCreditPanel != null) {
@@ -94,15 +93,15 @@ public class GameResultController
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"Quit",0);
                       if (lVar1 != null) {
-                        lVar1 = Component.GetComponent(lVar1,DAT_181d93778);
+                        lVar1 = Component.GetComponent(lVar1,DAT_181e76ab8);
                         if (lVar1 != null) {
                           Selectable.set_interactable(lVar1,0,0);
                           if (this.gameResultCreditPanel != null) {
-                            uVar2 = GameObject.GetComponent(this.gameResultCreditPanel,DAT_181dc7e38);
+                            uVar2 = GameObject.GetComponent(this.gameResultCreditPanel,DAT_181e53ed0);
                             uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3f800000,0);
-                            uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1e50);
-                            uVar3 = new OnTooltipCB(this,DAT_181d75b10,0);
-                            TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc01e8);
+                            uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181ea58d0);
+                            uVar3 = new OnTooltipCB(this,DAT_181e58bd8,0);
+                            TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181ea3c28);
                             return;
                           }
                         }
@@ -116,8 +115,8 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016A8
-    // RVA   : 0xA59340   Offset: 0xA58740   Length: 0x1C32
+    // Token : 0x6001724
+    // RVA   : 0x6BB0E0   Offset: 0x6B9EE0   Length: 0x1C32
     public void ShowResultCredit()
     {
         int iVar1;
@@ -146,37 +145,37 @@ public class GameResultController
         uint64 uStack_70;
         uint64 local_68;
         uint64 uStack_60;
-        lVar4 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar4,DAT_181da3bf0);
+        lVar4 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar4,DAT_181e861f0);
         if (lVar4 != null) {
-          FUN_18181e6b0(lVar4,"至圣",DAT_181da3d70);
-          FUN_18181e6b0(lVar4,"大侠",DAT_181da3d70);
-          FUN_18181e6b0(lVar4,"义士",DAT_181da3d70);
-          FUN_18181e6b0(lVar4,"中庸",DAT_181da3d70);
-          FUN_18181e6b0(lVar4,"叛逆",DAT_181da3d70);
-          FUN_18181e6b0(lVar4,"枭雄",DAT_181da3d70);
-          FUN_18181e6b0(lVar4,"魔首",DAT_181da3d70);
+          FUN_18175de30(lVar4,"至圣",DAT_181e86370);
+          FUN_18175de30(lVar4,"大侠",DAT_181e86370);
+          FUN_18175de30(lVar4,"义士",DAT_181e86370);
+          FUN_18175de30(lVar4,"中庸",DAT_181e86370);
+          FUN_18175de30(lVar4,"叛逆",DAT_181e86370);
+          FUN_18175de30(lVar4,"枭雄",DAT_181e86370);
+          FUN_18175de30(lVar4,"魔首",DAT_181e86370);
           if ((((this.gameResultCreditPanel != null) &&
                (lVar5 = GameObject.get_transform(this.gameResultCreditPanel,0)) != null) &&
               (lVar5 = Transform.Find(lVar5,"Continue",0)) != null) &&
-             (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) != null) {
+             (lVar5 = Component.GetComponent(lVar5,DAT_181e76ab8)) != null) {
             Selectable.set_interactable(lVar5,1,0);
             if (((this.gameResultCreditPanel != null) &&
                 (lVar5 = GameObject.get_transform(this.gameResultCreditPanel,0)) != null) &&
                ((lVar5 = Transform.Find(lVar5,"Quit",0), lVar5 != null &&
-                (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) != null))) {
+                (lVar5 = Component.GetComponent(lVar5,DAT_181e76ab8)) != null))) {
               Selectable.set_interactable(lVar5,1,0);
               if (this.gameResultCreditPanel != null) {
                 GameObject.SetActive(this.gameResultCreditPanel,1,0);
                 if ((this.gameResultCreditPanel != null) &&
-                   (lVar5 = GameObject.GetComponent(this.gameResultCreditPanel,DAT_181dc7e38),
+                   (lVar5 = GameObject.GetComponent(this.gameResultCreditPanel,DAT_181e53ed0),
                    lVar5 != null)) {
                   CanvasGroup.set_alpha(lVar5);
                   if ((this.gameResultCreditPanel != null) &&
                      ((lVar5 = GameObject.get_transform(this.gameResultCreditPanel,0), lVar5 != null &&
                       (lVar5 = Transform.Find(lVar5,"Count",0)) != null))) {
-                    uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
-                    plVar7 = (int64 *)FUN_1800d60b0(DAT_181da4138,12);
+                    uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
+                    plVar7 = (int64 *)FUN_1801dfd90(DAT_181e84278,12);
                     lVar5 = PlotController.attriIndexCache;
                     if (lVar5 != null) {
                       uVar3 = this.nowResultID;
@@ -193,12 +192,12 @@ public class GameResultController
                            )) {
                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar6,0);
+                          FUN_1801e02d0(uVar6,0);
                         }
                         if ((int)plVar7[3] == 0) {
                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar6,0);
+                          FUN_1801e02d0(uVar6,0);
                         }
                         plVar7[4] = lVar5;
                         il2cpp_internal(plVar7 + 4,lVar5);
@@ -211,12 +210,12 @@ public class GameResultController
                              lVar8 == null)) {
                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar6,0);
+                            FUN_1801e02d0(uVar6,0);
                           }
                           if (*(uint32 *)(plVar7 + 3) < 2) {
                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar6,0);
+                            FUN_1801e02d0(uVar6,0);
                           }
                           plVar7[5] = lVar5;
                           il2cpp_internal(plVar7 + 5,lVar5);
@@ -224,18 +223,18 @@ public class GameResultController
                              (lVar5 = GameController._instance.worldData,
                              lVar5 != null)) {
                             local_res18[0] = lVar5.totalFightCount;
-                            lVar5 = il2cpp_value_box(DAT_181d80430,local_res18);
+                            lVar5 = il2cpp_value_box(DAT_181e60808,local_res18);
                             if ((lVar5 != null) &&
                                (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64)),
                                lVar8 == null)) {
                               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar6,0);
+                              FUN_1801e02d0(uVar6,0);
                             }
                             if (*(uint32 *)(plVar7 + 3) < 3) {
                               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar6,0);
+                              FUN_1801e02d0(uVar6,0);
                             }
                             plVar7[6] = lVar5;
                             il2cpp_internal(plVar7 + 6,lVar5);
@@ -243,18 +242,18 @@ public class GameResultController
                                (lVar5 = GameController._instance.worldData,
                                lVar5 != null)) {
                               local_res20[0] = lVar5.totalWinFightCount;
-                              lVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
+                              lVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
                               if ((lVar5 != null) &&
                                  (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64)),
                                  lVar8 == null)) {
                                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar6,0);
+                                FUN_1801e02d0(uVar6,0);
                               }
                               if (*(uint32 *)(plVar7 + 3) < 4) {
                                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar6,0);
+                                FUN_1801e02d0(uVar6,0);
                               }
                               plVar7[7] = lVar5;
                               il2cpp_internal(plVar7 + 7,lVar5);
@@ -264,19 +263,19 @@ public class GameResultController
                                  lVar5 != null)) {
                                 local_a8 = 0;
                                 if (lVar5.totalFightCount == null) {
-        LAB_180a59c2f:
-                                  lVar5 = il2cpp_value_box(DAT_181d80430,&local_a8);
+        LAB_1806bb9cf:
+                                  lVar5 = il2cpp_value_box(DAT_181e60808,&local_a8);
                                   if ((lVar5 != null) &&
                                      (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64)),
                                      lVar8 == null)) {
                                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                    FUN_1800d65f0(uVar6,0);
+                                    FUN_1801e02d0(uVar6,0);
                                   }
                                   if (*(uint32 *)(plVar7 + 3) < 5) {
                                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                    FUN_1800d65f0(uVar6,0);
+                                    FUN_1801e02d0(uVar6,0);
                                   }
                                   plVar7[8] = lVar5;
                                   il2cpp_internal(plVar7 + 8,lVar5);
@@ -284,18 +283,18 @@ public class GameResultController
                                      (lVar5 = GameController._instance.worldData,
                                      lVar5 != null)) {
                                     local_a4 = lVar5.totalEnemyKilled;
-                                    lVar5 = il2cpp_value_box(DAT_181d80430,&local_a4);
+                                    lVar5 = il2cpp_value_box(DAT_181e60808,&local_a4);
                                     if ((lVar5 != null) &&
                                        (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))
                                        , lVar8 == null)) {
                                       uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                      FUN_1800d65f0(uVar6,0);
+                                      FUN_1801e02d0(uVar6,0);
                                     }
                                     if (*(uint32 *)(plVar7 + 3) < 6) {
                                       uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                      FUN_1800d65f0(uVar6,0);
+                                      FUN_1801e02d0(uVar6,0);
                                     }
                                     plVar7[9] = lVar5;
                                     il2cpp_internal(plVar7 + 9,lVar5);
@@ -304,19 +303,19 @@ public class GameResultController
                                                  (GameController._instance + 32),
                                        lVar5 != null)) {
                                       local_a0 = lVar5.totalHeroMeet;
-                                      lVar5 = il2cpp_value_box(DAT_181d80430,&local_a0);
+                                      lVar5 = il2cpp_value_box(DAT_181e60808,&local_a0);
                                       if ((lVar5 != null) &&
                                          (lVar8 = il2cpp_internal(lVar5,*(uint64 *)
                                                                              (*plVar7 + 64)), lVar8 == null
                                          )) {
                                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                        FUN_1800d65f0(uVar6,0);
+                                        FUN_1801e02d0(uVar6,0);
                                       }
                                       if (*(uint32 *)(plVar7 + 3) < 7) {
                                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                        FUN_1800d65f0(uVar6,0);
+                                        FUN_1801e02d0(uVar6,0);
                                       }
                                       plVar7[10] = lVar5;
                                       il2cpp_internal(plVar7 + 10,lVar5);
@@ -331,12 +330,12 @@ public class GameResultController
                                            lVar8 == null)) {
                                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                          FUN_1800d65f0(uVar6,0);
+                                          FUN_1801e02d0(uVar6,0);
                                         }
                                         if (*(uint32 *)(plVar7 + 3) < 8) {
                                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                          FUN_1800d65f0(uVar6,0);
+                                          FUN_1801e02d0(uVar6,0);
                                         }
                                         plVar7[11] = lVar5;
                                         il2cpp_internal(plVar7 + 11,lVar5);
@@ -347,19 +346,19 @@ public class GameResultController
                                             (lVar5 = WorldData.Player(lVar5,0)) != null) &&
                                            (lVar5.speBookStorageSpeAdd != null)) {
                                           local_9c = *(uint32 *)(lVar5.speBookStorageSpeAdd + 24);
-                                          lVar5 = il2cpp_value_box(DAT_181d80430,&local_9c);
+                                          lVar5 = il2cpp_value_box(DAT_181e60808,&local_9c);
                                           if ((lVar5 != null) &&
                                              (lVar8 = il2cpp_internal(lVar5,*(uint64 *)
                                                                                  (*plVar7 + 64)),
                                              lVar8 == null)) {
                                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                            FUN_1800d65f0(uVar6,0);
+                                            FUN_1801e02d0(uVar6,0);
                                           }
                                           if (*(uint32 *)(plVar7 + 3) < 9) {
                                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                            FUN_1800d65f0(uVar6,0);
+                                            FUN_1801e02d0(uVar6,0);
                                           }
                                           plVar7[12] = lVar5;
                                           il2cpp_internal(plVar7 + 12,lVar5);
@@ -375,12 +374,12 @@ public class GameResultController
                                                lVar8 == null)) {
                                               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                              FUN_1800d65f0(uVar6,0);
+                                              FUN_1801e02d0(uVar6,0);
                                             }
                                             if (*(uint32 *)(plVar7 + 3) < 10) {
                                               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                              FUN_1800d65f0(uVar6,0);
+                                              FUN_1801e02d0(uVar6,0);
                                             }
                                             plVar7[13] = lVar5;
                                             il2cpp_internal(plVar7 + 13,lVar5);
@@ -403,17 +402,17 @@ public class GameResultController
                                                  lVar5 == null)) {
                                                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                FUN_1800d65f0(uVar6,0);
+                                                FUN_1801e02d0(uVar6,0);
                                               }
                                               if (*(uint32 *)(plVar7 + 3) < 11) {
                                                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                FUN_1800d65f0(uVar6,0);
+                                                FUN_1801e02d0(uVar6,0);
                                               }
                                               plVar7[14] = lVar4;
                                               il2cpp_internal(plVar7 + 14,lVar4);
                                               lVar4 = *(int64 *)
-                                                       (*(int64 *)(DAT_181d73d40 + 184) + 184);
+                                                       (*(int64 *)(DAT_181e538e8 + 184) + 184);
                                               if (((GameController._instance != null) &&
                                                   (lVar5 = *(int64 *)
                                                             (GameController._instance + 32)
@@ -431,12 +430,12 @@ public class GameResultController
                                                    lVar5 == null)) {
                                                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d65f0(uVar6,0);
+                                                  FUN_1801e02d0(uVar6,0);
                                                 }
                                                 if (*(uint32 *)(plVar7 + 3) < 12) {
                                                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                  FUN_1800d65f0(uVar6,0);
+                                                  FUN_1801e02d0(uVar6,0);
                                                 }
                                                 plVar7[15] = lVar4;
                                                 il2cpp_internal(plVar7 + 15,lVar4);
@@ -449,8 +448,8 @@ public class GameResultController
                                                    (lVar4 = Transform.Find(lVar4,"Back",0),
                                                    lVar4 != null)) {
                                                   plVar7 = (int64 *)
-                                                           Component.GetComponent(lVar4,DAT_181d94478);
-                                                  puVar10 = (uint64 *)FUN_180d995f0(&local_c8,0);
+                                                           Component.GetComponent(lVar4,DAT_181e777b8);
+                                                  puVar10 = (uint64 *)FUN_180af4e90(&local_c8,0);
                                                   if (plVar7 != (int64 *)0) {
                                                     local_c8 = *puVar10;
                                                     uStack_c0 = puVar10[1];
@@ -463,14 +462,14 @@ public class GameResultController
                                                                             0), lVar4 != null)) &&
                                                        (lVar4 = Transform.Find(lVar4,"Back",0),
                                                        lVar4 != null)) {
-                                                      uVar6 = Component.GetComponent(lVar4,DAT_181d94478)
+                                                      uVar6 = Component.GetComponent(lVar4,DAT_181e777b8)
                                                       ;
                                                       uVar6 = DOTweenModuleUI.DOFade(uVar6);
                                                       uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                        (uVar6,1,DAT_181dc1dc8);
-                                                      uVar9 = new OnTooltipCB(this,DAT_181d75b98,0);
+                                                                        (uVar6,1,DAT_181ea5848);
+                                                      uVar9 = new OnTooltipCB(this,DAT_181e58c60,0);
                                                       TweenSettingsExtensions.OnComplete
-                                                                (uVar6,uVar9,DAT_181dc0160);
+                                                                (uVar6,uVar9,DAT_181ea3ba0);
                                                       if (((this.gameResultCreditPanel != null) &&
                                                           (lVar4 = GameObject.get_transform
                                                                              (*(int64 *)
@@ -480,11 +479,11 @@ public class GameResultController
                                                          lVar4 != null)) {
                                                         plVar7 = (int64 *)
                                                                  Component.GetComponent
-                                                                           (lVar4,DAT_181d96178);
+                                                                           (lVar4,DAT_181e79538);
                                                         if (((GameController._instance != null)
                                                             && (lVar4 = *(int64 *)
                                                                          (**(int64 **)
-                                                                            (DAT_181d72cc8 + 184) + 32)
+                                                                            (DAT_181e52870 + 184) + 32)
                                                                , lVar4 != null)) &&
                                                            (lVar4 = *(int64 *)(lVar4 + 0x260),
                                                            lVar4 != null)) {
@@ -515,7 +514,7 @@ public class GameResultController
                                                                                       0);
                                                               uVar6 = ShortcutExtensions.DOScaleY(uVar6);
                                                               uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                                (uVar6,1,DAT_181dc1f60);
+                                                                                (uVar6,1,DAT_181ea59e0);
                                                               TweenSettingsExtensions.SetDelay(uVar6);
                                                               if ((this.gameResultCreditPanel != null) &&
                                                                  ((lVar4 = GameObject.get_transform
@@ -526,12 +525,12 @@ public class GameResultController
                                                         "TitleBack",0), lVar4 != null)))) {
                                                           plVar7 = (int64 *)
                                                                    Component.GetComponent
-                                                                             (lVar4,DAT_181d94478);
+                                                                             (lVar4,DAT_181e777b8);
                                                           uVar6 = 0;
                                                           uVar2 = 0;
                                                           local_88 = 0;
                                                           uStack_80 = 0;
-                                                          FUN_1809dcfa0(&local_88);
+                                                          FUN_1807282e0(&local_88);
                                                           if (plVar7 != (int64 *)0) {
                                                             lVar4 = *plVar7;
                                                             local_c8 = local_88;
@@ -548,10 +547,10 @@ public class GameResultController
                                                                (lVar4 = Transform.Find(lVar4,
                                                         "TitleBack",0), lVar4 != null)) {
                                                           uVar6 = Component.GetComponent
-                                                                            (lVar4,DAT_181d94478);
+                                                                            (lVar4,DAT_181e777b8);
                                                           uVar6 = DOTweenModuleUI.DOFade(uVar6);
                                                           uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                            (uVar6,1,DAT_181dc1dc8);
+                                                                            (uVar6,1,DAT_181ea5848);
                                                           TweenSettingsExtensions.SetDelay(uVar6);
                                                           if (((this.gameResultCreditPanel != null) &&
                                                               (lVar4 = GameObject.get_transform
@@ -562,12 +561,12 @@ public class GameResultController
                                                                                       0), lVar4 != null)) {
                                                             plVar7 = (int64 *)
                                                                      Component.GetComponent
-                                                                               (lVar4,DAT_181d94478);
+                                                                               (lVar4,DAT_181e777b8);
                                                             uVar6 = 0;
                                                             uVar2 = 0;
                                                             local_78 = 0;
                                                             uStack_70 = 0;
-                                                            FUN_1809dcfa0(&local_78);
+                                                            FUN_1807282e0(&local_78);
                                                             if (plVar7 != (int64 *)0) {
                                                               lVar4 = *plVar7;
                                                               local_c8 = local_78;
@@ -584,10 +583,10 @@ public class GameResultController
                                                                  (lVar4 = Transform.Find(lVar4,
                                                         "Title",0), lVar4 != null)) {
                                                           uVar6 = Component.GetComponent
-                                                                            (lVar4,DAT_181d94478);
+                                                                            (lVar4,DAT_181e777b8);
                                                           uVar6 = DOTweenModuleUI.DOFade(uVar6);
                                                           uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                            (uVar6,1,DAT_181dc1dc8);
+                                                                            (uVar6,1,DAT_181ea5848);
                                                           TweenSettingsExtensions.SetDelay(uVar6);
                                                           if (((this.gameResultCreditPanel != null) &&
                                                               (lVar4 = GameObject.get_transform
@@ -598,12 +597,12 @@ public class GameResultController
                                                                                       0), lVar4 != null)) {
                                                             plVar7 = (int64 *)
                                                                      Component.GetComponent
-                                                                               (lVar4,DAT_181d96178);
+                                                                               (lVar4,DAT_181e79538);
                                                             uVar6 = 0;
                                                             local_68 = 0;
                                                             uStack_60 = 0;
                                                             uVar2 = 0;
-                                                            FUN_1809dcfa0(&local_68);
+                                                            FUN_1807282e0(&local_68);
                                                             if (plVar7 != (int64 *)0) {
                                                               lVar4 = *plVar7;
                                                               local_c8 = local_68;
@@ -620,10 +619,10 @@ public class GameResultController
                                                                  (lVar4 = Transform.Find(lVar4,
                                                         "Count",0), lVar4 != null)) {
                                                           uVar6 = Component.GetComponent
-                                                                            (lVar4,DAT_181d96178);
+                                                                            (lVar4,DAT_181e79538);
                                                           uVar6 = DOTweenModuleUI.DOFade(uVar6);
                                                           uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                            (uVar6,1,DAT_181dc1dc8);
+                                                                            (uVar6,1,DAT_181ea5848);
                                                           TweenSettingsExtensions.SetDelay(uVar6);
                                                           if (((this.gameResultCreditPanel != null) &&
                                                               (lVar4 = GameObject.get_transform
@@ -634,12 +633,12 @@ public class GameResultController
                                                                                       0), lVar4 != null)) {
                                                             plVar7 = (int64 *)
                                                                      Component.GetComponent
-                                                                               (lVar4,DAT_181d96178);
+                                                                               (lVar4,DAT_181e79538);
                                                             uVar6 = 0;
                                                             uVar2 = 0;
                                                             local_98 = 0;
                                                             uStack_90 = 0;
-                                                            FUN_1809dcfa0(&local_98);
+                                                            FUN_1807282e0(&local_98);
                                                             if (plVar7 != (int64 *)0) {
                                                               lVar4 = *plVar7;
                                                               local_c8 = local_98;
@@ -656,10 +655,10 @@ public class GameResultController
                                                                  (lVar4 = Transform.Find(lVar4,
                                                         "Credit",0), lVar4 != null)) {
                                                           uVar6 = Component.GetComponent
-                                                                            (lVar4,DAT_181d96178);
+                                                                            (lVar4,DAT_181e79538);
                                                           uVar6 = DOTweenModuleUI.DOFade(uVar6);
                                                           uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                            (uVar6,1,DAT_181dc1dc8);
+                                                                            (uVar6,1,DAT_181ea5848);
                                                           TweenSettingsExtensions.SetDelay(uVar6);
                                                           if ((this.gameResultCreditPanel != null) &&
                                                              (lVar4 = GameObject.get_transform
@@ -684,7 +683,7 @@ public class GameResultController
                                                         "Continue",0);
                                                         uVar6 = ShortcutExtensions.DOScale(uVar6);
                                                         uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                          (uVar6,1,DAT_181dc1f60);
+                                                                          (uVar6,1,DAT_181ea59e0);
                                                         TweenSettingsExtensions.SetDelay(uVar6);
                                                         if ((this.gameResultCreditPanel != null) &&
                                                            (lVar4 = GameObject.get_transform
@@ -707,7 +706,7 @@ public class GameResultController
                                                                                       0);
                                                               uVar6 = ShortcutExtensions.DOScale(uVar6);
                                                               uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                                (uVar6,1,DAT_181dc1f60);
+                                                                                (uVar6,1,DAT_181ea59e0);
                                                               TweenSettingsExtensions.SetDelay(uVar6);
                                                               if ((this.gameResultCreditPanel != null) &&
                                                                  ((lVar4 = GameObject.get_transform
@@ -717,11 +716,11 @@ public class GameResultController
                                                                   (lVar4 = Transform.Find(lVar4,
                                                         "Unlock",0), lVar4 != null)))) {
                                                           uVar6 = Component.GetComponent
-                                                                            (lVar4,DAT_181d96178);
+                                                                            (lVar4,DAT_181e79538);
                                                           if (((GameController._instance != null
                                                                ) && (lVar4 = *(int64 *)
                                                                               (**(int64 **)
-                                                                                 (DAT_181d72cc8 + 184) +
+                                                                                 (DAT_181e52870 + 184) +
                                                                               32), lVar4 != null)) &&
                                                              (lVar4 = WorldData.GetHero(lVar4,
                                                         "金龙生",0), lVar4 != null)) {
@@ -740,12 +739,12 @@ public class GameResultController
                                                                                       0), lVar4 != null)) {
                                                             plVar7 = (int64 *)
                                                                      Component.GetComponent
-                                                                               (lVar4,DAT_181d96178);
+                                                                               (lVar4,DAT_181e79538);
                                                             uVar6 = 0;
                                                             uVar2 = 0;
                                                             local_c8 = 0;
                                                             uStack_c0 = 0;
-                                                            FUN_1809dcfa0(&local_c8);
+                                                            FUN_1807282e0(&local_c8);
                                                             if (plVar7 != (int64 *)0) {
                                                               lVar4 = *plVar7;
                                                               local_98 = local_c8;
@@ -762,17 +761,17 @@ public class GameResultController
                                                                  (lVar4 = Transform.Find(lVar4,
                                                         "Unlock",0), lVar4 != null)) {
                                                           uVar6 = Component.GetComponent
-                                                                            (lVar4,DAT_181d96178);
+                                                                            (lVar4,DAT_181e79538);
                                                           uVar6 = DOTweenModuleUI.DOFade(uVar6);
                                                           uVar6 = TweenSettingsExtensions.SetUpdate
-                                                                            (uVar6,1,DAT_181dc1dc8);
+                                                                            (uVar6,1,DAT_181ea5848);
                                                           TweenSettingsExtensions.SetDelay(uVar6);
                                                           return;
                                                         }
                                                         }
                                                         }
                           // WARNING: Subroutine does not return
-                                                        FUN_1800d6620();
+                                                        FUN_1801e0300();
                                                         }
                                                         }
                                                         }
@@ -809,7 +808,7 @@ public class GameResultController
                                     }
                                   }
                           // WARNING: Subroutine does not return
-                                  FUN_1800d6620();
+                                  FUN_1801e0300();
                                 }
                                 if ((GameController._instance != null) &&
                                    (lVar5 = GameController._instance.worldData,
@@ -820,11 +819,11 @@ public class GameResultController
                                      lVar5 != null)) {
                                     local_a8 = Mathf.RoundToInt(((float)iVar1 * 100.0) /
                                                                  (float)lVar5.totalFightCount,0);
-                                    goto LAB_180a59c2f;
+                                    goto LAB_1806bb9cf;
                                   }
                                 }
                           // WARNING: Subroutine does not return
-                                FUN_1800d6620();
+                                FUN_1801e0300();
                               }
                             }
                           }
@@ -839,8 +838,8 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016A9
-    // RVA   : 0xA59120   Offset: 0xA58520   Length: 0x1C6
+    // Token : 0x6001725
+    // RVA   : 0x6BAE70   Offset: 0x6B9C70   Length: 0x1C6
     public void HideText()
     {
         long lVar1;
@@ -857,10 +856,10 @@ public class GameResultController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"NextButton",0);
             if (lVar1 != null) {
-              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
+              plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
               local_58 = 0;
               uStack_50 = 0;
-              FUN_1809dcfa0(&local_58,0x3f800000,0x3f800000,0x3f800000,0,0);
+              FUN_1807282e0(&local_58,0x3f800000,0x3f800000,0x3f800000,0,0);
               if (plVar2 != (int64 *)0) {
                 local_38 = (uint32)local_58;
                 uStack_34 = local_58._4_4_;
@@ -872,10 +871,10 @@ public class GameResultController
                   if (lVar1 != null) {
                     lVar1 = Transform.Find(lVar1,"Text",0);
                     if (lVar1 != null) {
-                      plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
+                      plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e79538);
                       local_48 = 0;
                       uStack_40 = 0;
-                      FUN_1809dcfa0(&local_48,0x3f800000,0x3f800000,0x3f800000,0,0);
+                      FUN_1807282e0(&local_48,0x3f800000,0x3f800000,0x3f800000,0,0);
                       if (plVar2 != (int64 *)0) {
                         local_38 = (uint32)local_48;
                         uStack_34 = local_48._4_4_;
@@ -893,8 +892,8 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016AA
-    // RVA   : 0xA5AF80   Offset: 0xA5A380   Length: 0x223
+    // Token : 0x6001726
+    // RVA   : 0x6BCD20   Offset: 0x6BBB20   Length: 0x223
     public void ShowText(string text)
     {
         long lVar2;
@@ -902,7 +901,7 @@ public class GameResultController
         ulong uVar4;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
         plVar5 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181e8f4a0)) {
           plVar5 = plVar1;
         }
         NGUITools.PlaySound(plVar5,0);
@@ -913,18 +912,18 @@ public class GameResultController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"Text",0);
             if (lVar2 != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
+              uVar3 = Component.GetComponent(lVar2,DAT_181e79538);
               LTLocalization.SetText(uVar3,text,0);
               if (this.gameEndPanel != null) {
                 lVar2 = GameObject.get_transform(this.gameEndPanel,0);
                 if (lVar2 != null) {
                   lVar2 = Transform.Find(lVar2,"Text",0);
                   if (lVar2 != null) {
-                    uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
+                    uVar3 = Component.GetComponent(lVar2,DAT_181e79538);
                     uVar3 = DOTweenModuleUI.DOFade(uVar3,0x3f800000,0x3f800000,0);
-                    uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1dc8);
-                    uVar4 = new OnTooltipCB(this,DAT_181d75c20,0);
-                    TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc0160);
+                    uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181ea5848);
+                    uVar4 = new OnTooltipCB(this,DAT_181e58ce8,0);
+                    TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181ea3ba0);
                     return;
                   }
                 }
@@ -934,8 +933,8 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016AB
-    // RVA   : 0xA58CB0   Offset: 0xA580B0   Length: 0x235
+    // Token : 0x6001727
+    // RVA   : 0x6BAA00   Offset: 0x6B9800   Length: 0x235
     public void BackgroundClicked()
     {
         uint uVar1;
@@ -960,7 +959,7 @@ public class GameResultController
             }
             lVar3 = lVar3._items[uVar1];
             if (lVar3 != null) {
-              cVar4 = FUN_180d75bc0(lVar3.Count,0);
+              cVar4 = FUN_180ad1200(lVar3.Count,0);
               lVar3 = this.gameEndPlotDatas;
               uVar1 = this.nowResultID;
               if (!cVar4) {
@@ -1026,8 +1025,8 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016AC
-    // RVA   : 0xA5C260   Offset: 0xA5B660   Length: 0x98B
+    // Token : 0x6001728
+    // RVA   : 0x6BE000   Offset: 0x6BCE00   Length: 0x98B
     public void StartSpeFinalPlot()
     {
         long lVar1;
@@ -1054,27 +1053,27 @@ public class GameResultController
               uVar7 = 2;
             }
             else {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if ((lVar3 == null) || (lVar3.villageAreaID == null)) throw; // [null/range check failed]
               if (*(float *)(lVar3.villageAreaID + 0x198) <= 400.0) {
                 uVar7 = 1;
               }
             }
           }
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           if (lVar3 != null) {
-            FUN_18181e6b0(lVar3,"五十年，\n后人认为这段时期，已不输贞观之治和开元盛世。",DAT_181da3d70);
-            FUN_18181e6b0(lVar3,"一百年，\n后人认为这段时期，已远在贞观之治和开元盛世之上。",DAT_181da3d70);
-            FUN_18181e6b0(lVar3,"三百年，\n后人认为这段时期，便是秦皇汉武之统治也难以望其项背。",DAT_181da3d70);
-            FUN_18181e6b0(lVar3,"五百年，\n后人认为其文治武功与得国之正，堪称古今第一帝王。",DAT_181da3d70);
-            lVar4 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar4,DAT_181da3bf0);
+            FUN_18175de30(lVar3,"五十年，\n后人认为这段时期，已不输贞观之治和开元盛世。",DAT_181e86370);
+            FUN_18175de30(lVar3,"一百年，\n后人认为这段时期，已远在贞观之治和开元盛世之上。",DAT_181e86370);
+            FUN_18175de30(lVar3,"三百年，\n后人认为这段时期，便是秦皇汉武之统治也难以望其项背。",DAT_181e86370);
+            FUN_18175de30(lVar3,"五百年，\n后人认为其文治武功与得国之正，堪称古今第一帝王。",DAT_181e86370);
+            lVar4 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar4,DAT_181e861f0);
             if (lVar4 != null) {
-              FUN_18181e6b0(lVar4,"·盛世五十年",DAT_181da3d70);
-              FUN_18181e6b0(lVar4,"·盛世一百年",DAT_181da3d70);
-              FUN_18181e6b0(lVar4,"·盛世三百年",DAT_181da3d70);
-              FUN_18181e6b0(lVar4,"·盛世五百年",DAT_181da3d70);
+              FUN_18175de30(lVar4,"·盛世五十年",DAT_181e86370);
+              FUN_18175de30(lVar4,"·盛世一百年",DAT_181e86370);
+              FUN_18175de30(lVar4,"·盛世三百年",DAT_181e86370);
+              FUN_18175de30(lVar4,"·盛世五百年",DAT_181e86370);
               if (lVar4.cityAreaID <= uVar7) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
@@ -1102,49 +1101,49 @@ public class GameResultController
                   uVar5 = String.Format("这一盛世在#$PlayerName#故去之后仍持续了{0}\n而此后历朝历代，百姓万民，也无不称颂怀念#$PlayerName#所开创的这一黄金时代。",
                                          *(uint64 *)(lVar3.chapter + 32 + uVar8 * 8),0
                                         );
-                  uVar6 = il2cpp_internal(DAT_181da24f0);
+                  uVar6 = il2cpp_internal(DAT_181e82930);
                   SinglePlotData.ctor
                             (uVar6,uVar5,0,1,0,1,0,3,"ScreenBlack",
                              in_stack_ffffffffffffffb0 & 0xffffffffffffff00,0,0,0,0,0);
                   if (lVar1 == null) throw; // [null/range check failed]
-                  FUN_18181e6b0(lVar1,uVar6,DAT_181da1408);
+                  FUN_18175de30(lVar1,uVar6,DAT_181e839b0);
                   lVar3 = *(int64 *)(lVar2 + 64);
-                  uVar5 = FUN_180004500(DAT_181d8b158);
+                  uVar5 = FUN_1800020e0(DAT_181e6dc98);
                   uVar5 = String.Format("多年以后一个炎热的下午，你正坐在大殿中思考国策。\n突然一阵强烈的眩晕袭来，使你天旋地转，如坠云里雾里。",uVar5,0);
                   uVar6 = new SinglePlotData(uVar5,0,1,0,1,0,3,0,0);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  FUN_18181e6b0(lVar3,uVar6,DAT_181da1408);
+                  FUN_18175de30(lVar3,uVar6,DAT_181e839b0);
                   lVar3 = *(int64 *)(lVar2 + 64);
-                  uVar5 = FUN_180004500(DAT_181d8b158);
+                  uVar5 = FUN_1800020e0(DAT_181e6dc98);
                   uVar5 = String.Format("在宫女的惊叫和师兄妹们的呼唤声中，\n你又仿佛回到了许多年前的那个清晨。\n仙霞山上的虫鸣鸟语，开始在宫殿之中回响。",uVar5,0);
                   uVar6 = new SinglePlotData(uVar5,0,1,0,1,0,3,0,0);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  FUN_18181e6b0(lVar3,uVar6,DAT_181da1408);
+                  FUN_18175de30(lVar3,uVar6,DAT_181e839b0);
                   lVar3 = *(int64 *)(lVar2 + 64);
-                  uVar5 = FUN_180004500(DAT_181d8b158);
+                  uVar5 = FUN_1800020e0(DAT_181e6dc98);
                   uVar5 = String.Format("#PlayerName#！#PlayerName#！都日上三竿了，怎么还在睡大觉呢！\n嘴里还一直念叨着什么“看招”，“承让”，\n怕不是又在梦里行侠仗义了。",uVar5,0);
                   uVar6 = new SinglePlotData(uVar5,0,5,"杨思迟",3,"0",0,0,0);
                   if (lVar3 == null) throw; // [null/range check failed]
-                  FUN_18181e6b0(lVar3,uVar6,DAT_181da1408);
+                  FUN_18175de30(lVar3,uVar6,DAT_181e839b0);
                   lVar1 = *(int64 *)(lVar2 + 64);
-                  uVar5 = FUN_180004500(DAT_181d8b158);
+                  uVar5 = FUN_1800020e0(DAT_181e6dc98);
                   uVar6 = String.Format("别吵吵，我正在泰岳大典施展拳脚，大杀四方，\n眼看就要将各大门派打个落花流水......没想到被你搅了好事！",uVar5,0);
-                  uVar5 = il2cpp_internal(DAT_181da24f0);
+                  uVar5 = il2cpp_internal(DAT_181e82930);
                   in_stack_ffffffffffffffb0 = 0;
                   SinglePlotData.ctor(uVar5,uVar6,0,5,"杨思迟",3,"0",1,0,0);
                 }
                 if (lVar1 != null) {
-                  FUN_18181e6b0(lVar1,uVar5,DAT_181da1408);
+                  FUN_18175de30(lVar1,uVar5,DAT_181e839b0);
                   lVar3 = *(int64 *)(lVar2 + 64);
-                  uVar5 = FUN_180004500(DAT_181d8b158);
+                  uVar5 = FUN_1800020e0(DAT_181e6dc98);
                   uVar5 = String.Format("后人将此段历史整理成册，抄写影印，使之流传千古直至现在。\n这一故事，便被称作————————",uVar5,0);
-                  uVar6 = il2cpp_internal(DAT_181da24f0);
+                  uVar6 = il2cpp_internal(DAT_181e82930);
                   SinglePlotData.ctor
                             (uVar6,uVar5,0,1,0,1,0,3,"ShowResultCredit",
                              in_stack_ffffffffffffffb0 & 0xffffffffffffff00,0,0,0,0,0);
                   if (lVar3 != null) {
-                    FUN_18181e6b0(lVar3,uVar6,DAT_181da1408);
-                    lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+                    FUN_18175de30(lVar3,uVar6,DAT_181e839b0);
+                    lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
                     if (lVar3 != null) {
                       PlotController.ChangePlot(lVar3,lVar2,0);
                       return;
@@ -1157,11 +1156,11 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016AD
-    // RVA   : 0xA5B1B0   Offset: 0xA5A5B0   Length: 0x10A3
+    // Token : 0x6001729
+    // RVA   : 0x6BCF50   Offset: 0x6BBD50   Length: 0x10A3
     public void StartGameResult(int _resultID)
     {
-        var pStatics_aba8 = *(int64*)(DAT_181d8aba8 + 184);
+        var pStatics_af70 = *(int64*)(DAT_181e6af70 + 184);
         uint uVar2;
         bool cVar3;
         int iVar4;
@@ -1174,11 +1173,11 @@ public class GameResultController
         uint[] local_res20 = new uint[2];
         ulong local_48;
         ulong uStack_40;
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar7 == null) throw; // [null/range check failed]
         PlotController.HideInteractUI(lVar7,0);
-        if ((*pStatics_aba8 == 0) ||
-           (lVar7 = *(int64 *)(*pStatics_aba8 + 32)) == null)
+        if ((*pStatics_af70 == 0) ||
+           (lVar7 = *(int64 *)(*pStatics_af70 + 32)) == null)
         throw; // [null/range check failed]
         GameObject.SetActive(lVar7,0,0);
         this.extraInfo = "";
@@ -1189,7 +1188,7 @@ public class GameResultController
            (lVar7 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
         WorldData.AddGameResultTriggered(lVar7,this.nowResultID,0);
-        lVar7 = **(int64 **)(DAT_181d7f6c0 + 184);
+        lVar7 = **(int64 **)(DAT_181e5fa68 + 184);
         lVar9 = PlotController.attriIndexCache;
         if (lVar9 == null) throw; // [null/range check failed]
         uVar2 = this.nowResultID;
@@ -1209,20 +1208,20 @@ public class GameResultController
            (lVar7 = GameController._instance.worldData) == null)
         throw; // [null/range check failed]
         iVar4 = lVar7.gameDifficulty;
-        lVar7 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 192);
+        lVar7 = *(int64 *)(*(int64 *)(DAT_181e538e8 + 184) + 192);
         if (lVar7 == null) throw; // [null/range check failed]
         if (iVar4 == lVar7.Count + -1) {
-          lVar7 = GameController.lockObj;
+          lVar7 = GameController.ChangeAllAreaStateIDs;
           if (lVar7 == null) throw; // [null/range check failed]
           GameDataController.ChangeAchStats(lVar7,39,0x3f800000);
           if ((this.nowResultID == null) || (this.nowResultID == 7)) {
-            lVar7 = GameController.lockObj;
+            lVar7 = GameController.ChangeAllAreaStateIDs;
             if (lVar7 == null) throw; // [null/range check failed]
             GameDataController.ChangeAchStats(lVar7,49,0x3f800000);
           }
         }
         lVar7 = this.gameEndPlotDatas;
-        lVar9 = GameController.lockObj;
+        lVar9 = GameController.ChangeAllAreaStateIDs;
         if (lVar7 == null) throw; // [null/range check failed]
         uVar2 = this.nowResultID;
         if (lVar7.Count <= uVar2) {
@@ -1246,38 +1245,38 @@ public class GameResultController
           lVar7 = HeroData.GetForce(lVar7,0,0);
           if (lVar7 == null) throw; // [null/range check failed]
           if ((lVar7.totalWinFightCount != false) && (this.nowResultID - 6U < 2)) {
-            lVar7 = FUN_18046c100(0);
+            lVar7 = FUN_180210740(0);
             if (lVar7 == null) throw; // [null/range check failed]
             GameDataController.ChangeAchStats(lVar7,44,0x3f800000);
           }
         }
         if (this.gameEndPanel == null) {
-        LAB_180a5c24e:
+        LAB_1806bdfee:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         GameObject.SetActive(this.gameEndPanel,1,0);
-        if (this.gameEndPanel == null) goto LAB_180a5c24e;
-        lVar7 = GameObject.GetComponent(this.gameEndPanel,DAT_181dc7e38);
-        if (lVar7 == null) goto LAB_180a5c24e;
+        if (this.gameEndPanel == null) goto LAB_1806bdfee;
+        lVar7 = GameObject.GetComponent(this.gameEndPanel,DAT_181e53ed0);
+        if (lVar7 == null) goto LAB_1806bdfee;
         CanvasGroup.set_alpha(lVar7,0,0);
-        if (this.gameEndPanel == null) goto LAB_180a5c24e;
-        uVar6 = GameObject.GetComponent(this.gameEndPanel,DAT_181dc7e38);
+        if (this.gameEndPanel == null) goto LAB_1806bdfee;
+        uVar6 = GameObject.GetComponent(this.gameEndPanel,DAT_181e53ed0);
         uVar6 = DOTweenModuleUI.DOFade(uVar6,0x3f800000,0x40800000,0);
-        uVar6 = TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181dc1e50);
-        uVar8 = new OnTooltipCB(this,DAT_181d75ca8,0);
-        TweenSettingsExtensions.OnComplete(uVar6,uVar8,DAT_181dc01e8);
-        if (this.gameEndPanel == null) goto LAB_180a5c24e;
+        uVar6 = TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181ea58d0);
+        uVar8 = new OnTooltipCB(this,DAT_181e58d70,0);
+        TweenSettingsExtensions.OnComplete(uVar6,uVar8,DAT_181ea3c28);
+        if (this.gameEndPanel == null) goto LAB_1806bdfee;
         lVar7 = GameObject.get_transform(this.gameEndPanel,0);
-        if (lVar7 == null) goto LAB_180a5c24e;
+        if (lVar7 == null) goto LAB_1806bdfee;
         lVar7 = Transform.Find(lVar7,"BackgroundImage",0);
-        if (lVar7 == null) goto LAB_180a5c24e;
-        lVar7 = Component.GetComponent(lVar7,DAT_181d94478);
+        if (lVar7 == null) goto LAB_1806bdfee;
+        lVar7 = Component.GetComponent(lVar7,DAT_181e777b8);
         local_res20[0] = this.nowResultID;
-        uVar8 = il2cpp_value_box(DAT_181d80430,local_res20);
+        uVar8 = il2cpp_value_box(DAT_181e60808,local_res20);
         uVar6 = "Textures/Ending/{0}{1}";
         if (this.nowResultID == 1) {
-        LAB_180a5bc4b:
+        LAB_1806bd9eb:
           uVar13 = "";
         }
         else {
@@ -1287,15 +1286,15 @@ public class GameResultController
           lVar9 = WorldData.Player(lVar9,0);
           if (lVar9 == null) throw; // [null/range check failed]
           uVar13 = "f";
-          if (!lVar9.WorldEventDatas) goto LAB_180a5bc4b;
+          if (!lVar9.WorldEventDatas) goto LAB_1806bd9eb;
         }
         uVar8 = String.Format(uVar6,uVar8,uVar13,0);
-        uVar6 = DAT_181dc1928;
+        uVar6 = DAT_181ea1420;
         uVar6 = Type.GetTypeFromHandle(uVar6,0);
         plVar10 = (int64 *)Resources.Load(uVar8,uVar6,0);
         if (lVar7 != null) {
           plVar11 = plVar12;
-          if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181da4be8)) {
+          if ((plVar10 != (int64 *)0) && (*plVar10 == DAT_181e85028)) {
             plVar11 = plVar10;
           }
           Image.set_sprite(lVar7,plVar11,0);
@@ -1308,10 +1307,10 @@ public class GameResultController
               lVar7 = WorldData.Player(lVar7,0);
               if (lVar7 != null) {
                 if (0 < *(int *)(lVar7 + 0x328)) {
-                  lVar7 = FUN_18046c0a0(0);
+                  lVar7 = FUN_1802106e0(0);
                   if (lVar7 == null) throw; // [null/range check failed]
                   lVar7 = lVar7.villageAreaID;
-                  lVar9 = FUN_18046c0a0(0);
+                  lVar9 = FUN_1802106e0(0);
                   if ((lVar9 == null) || (lVar9.villageAreaID == null)) throw; // [null/range check failed]
                   lVar9 = WorldData.Player(lVar9.villageAreaID,0);
                   if ((lVar9 == null) || (lVar7 == null)) throw; // [null/range check failed]
@@ -1327,20 +1326,20 @@ public class GameResultController
                   lVar7 = WorldData.Player(lVar7,0);
                   if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x330) == 0)) throw; // [null/range check failed]
                   if (*(int *)(*(int64 *)(lVar7 + 0x330) + 24) <= (int)plVar12) break;
-                  lVar7 = FUN_18046c0a0(0);
+                  lVar7 = FUN_1802106e0(0);
                   if ((lVar7 == null) || (lVar7.villageAreaID == null)) throw; // [null/range check failed]
                   lVar7 = WorldData.Player(lVar7.villageAreaID,0);
                   if ((lVar7 == null) || (*(int64 *)(lVar7 + 0x330) == 0)) throw; // [null/range check failed]
-                  iVar4 = FUN_1800d6760();
+                  iVar4 = FUN_180002480();
                   if (0 < iVar4) {
-                    lVar7 = FUN_18046c0a0(0);
+                    lVar7 = FUN_1802106e0(0);
                     if (lVar7 == null) throw; // [null/range check failed]
                     lVar7 = lVar7.villageAreaID;
-                    lVar9 = FUN_18046c0a0(0);
+                    lVar9 = FUN_1802106e0(0);
                     if ((lVar9 == null) || (lVar9.villageAreaID == null)) throw; // [null/range check failed]
                     lVar9 = WorldData.Player(lVar9.villageAreaID,0);
                     if ((lVar9 == null) || (*(int64 *)(lVar9 + 0x330) == 0)) throw; // [null/range check failed]
-                    uVar5 = FUN_1800d6760(*(int64 *)(lVar9 + 0x330),plVar12,DAT_181d8fa30);
+                    uVar5 = FUN_180002480(*(int64 *)(lVar9 + 0x330),plVar12,DAT_181e71bf0);
                     if (lVar7 == null) throw; // [null/range check failed]
                     lVar7 = WorldData.GetHero(lVar7,uVar5,0);
                     if (lVar7 == null) throw; // [null/range check failed]
@@ -1349,8 +1348,8 @@ public class GameResultController
                   }
                   plVar12 = (int64 *)(uint64)((int)plVar12 + 1);
                 }
-                cVar3 = FUN_180d75bc0(uVar6,0);
-                if (cVar3) goto LAB_180a5c121;
+                cVar3 = FUN_180ad1200(uVar6,0);
+                if (cVar3) goto LAB_1806bdec1;
                 lVar7 = this.gameEndPlotDatas;
                 if (lVar7 != null) {
                   uVar2 = this.nowResultID;
@@ -1383,7 +1382,7 @@ public class GameResultController
                           uVar6 = String.Concat(lVar9._items,"\n",uVar6,0);
                           if (lVar7 != null) {
                             lVar7._items = uVar6;
-                            goto LAB_180a5c121;
+                            goto LAB_1806bdec1;
                           }
                         }
                       }
@@ -1394,7 +1393,7 @@ public class GameResultController
             }
           }
           else {
-        LAB_180a5c121:
+        LAB_1806bdec1:
             if (this.gameEndPanel != null) {
               lVar7 = GameObject.get_transform(this.gameEndPanel,0);
               if (lVar7 != null) {
@@ -1408,10 +1407,10 @@ public class GameResultController
                     if (lVar7 != null) {
                       uVar6 = Transform.Find(lVar7,"TextBack",0);
                       uVar6 = ShortcutExtensions.DOScale(uVar6,0x3f800000,0x3f800000,0);
-                      uVar6 = TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181dc1f60);
-                      uVar6 = TweenSettingsExtensions.SetDelay(uVar6,0x40a00000,DAT_181dc0e10);
-                      uVar8 = new OnTooltipCB(this,DAT_181d75d30,0);
-                      TweenSettingsExtensions.OnComplete(uVar6,uVar8,DAT_181dc0380);
+                      uVar6 = TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181ea59e0);
+                      uVar6 = TweenSettingsExtensions.SetDelay(uVar6,0x40a00000,DAT_181ea4858);
+                      uVar8 = new OnTooltipCB(this,DAT_181e58df8,0);
+                      TweenSettingsExtensions.OnComplete(uVar6,uVar8,DAT_181ea3dc0);
                       return;
                     }
                   }
@@ -1422,41 +1421,41 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016AE
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600172A
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x60016AF
-    // RVA   : 0xA5CFB0   Offset: 0xA5C3B0   Length: 0x20A
+    // Token : 0x600172B
+    // RVA   : 0x6BED50   Offset: 0x6BDB50   Length: 0x20A
     private static void /*cctor*/()
     {
         long lVar2;
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,"天下第一",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"归隐田园",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"豪商巨贾",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"功成名就",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"禁军统领",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"权势滔天",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"名门大派",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"武林盟主",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"终归一统",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"鸾凤和鸣",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"终生监禁",DAT_181da3d70);
-          plVar1 = *(int64 **)(DAT_181d72f70 + 184);
+          FUN_18175de30(lVar2,"天下第一",DAT_181e86370);
+          FUN_18175de30(lVar2,"归隐田园",DAT_181e86370);
+          FUN_18175de30(lVar2,"豪商巨贾",DAT_181e86370);
+          FUN_18175de30(lVar2,"功成名就",DAT_181e86370);
+          FUN_18175de30(lVar2,"禁军统领",DAT_181e86370);
+          FUN_18175de30(lVar2,"权势滔天",DAT_181e86370);
+          FUN_18175de30(lVar2,"名门大派",DAT_181e86370);
+          FUN_18175de30(lVar2,"武林盟主",DAT_181e86370);
+          FUN_18175de30(lVar2,"终归一统",DAT_181e86370);
+          FUN_18175de30(lVar2,"鸾凤和鸣",DAT_181e86370);
+          FUN_18175de30(lVar2,"终生监禁",DAT_181e86370);
+          plVar1 = *(int64 **)(DAT_181e52b18 + 184);
           *plVar1 = lVar2;
           il2cpp_internal(plVar1,lVar2);
           return;
         }
     }
 
-    // Token : 0x60016B0
-    // RVA   : 0xA5CBF0   Offset: 0xA5BFF0   Length: 0x20
+    // Token : 0x600172C
+    // RVA   : 0x6BE990   Offset: 0x6BD790   Length: 0x20
     private void <HideResultCredit>b__13_0()
     {
         if (this.gameResultCreditPanel != null) {
@@ -1465,12 +1464,12 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016B1
-    // RVA   : 0xA5CC20   Offset: 0xA5C020   Length: 0xC5
+    // Token : 0x600172D
+    // RVA   : 0x6BE9C0   Offset: 0x6BD7C0   Length: 0xC5
     private void <ShowResultCredit>b__14_0()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.HideInteractUI(lVar1,0);
           if (this.gameEndPanel != null) {
@@ -1480,8 +1479,8 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016B2
-    // RVA   : 0xA5CCF0   Offset: 0xA5C0F0   Length: 0xB2
+    // Token : 0x600172E
+    // RVA   : 0x6BEA90   Offset: 0x6BD890   Length: 0xB2
     private void <ShowText>b__17_0()
     {
         long lVar1;
@@ -1492,24 +1491,24 @@ public class GameResultController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"NextButton",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
+              uVar2 = Component.GetComponent(lVar1,DAT_181e777b8);
               uVar2 = DOTweenModuleUI.DOFade(uVar2,0x3f800000,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
+              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181ea5848);
               return;
             }
           }
         }
     }
 
-    // Token : 0x60016B3
-    // RVA   : 0xA5CDB0   Offset: 0xA5C1B0   Length: 0x100
+    // Token : 0x600172F
+    // RVA   : 0x6BEB50   Offset: 0x6BD950   Length: 0x100
     private void <StartGameResult>b__20_0()
     {
         uint uVar1;
         long lVar2;
         long lVar3;
         lVar2 = this.gameEndPlotDatas;
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181dafae0 + 184) + 8);
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181e8fc20 + 184) + 8);
         if (lVar2 != null) {
           uVar1 = this.nowResultID;
           if (lVar2.Count <= uVar1) {
@@ -1523,8 +1522,8 @@ public class GameResultController
         }
     }
 
-    // Token : 0x60016B4
-    // RVA   : 0xA5CEC0   Offset: 0xA5C2C0   Length: 0xE9
+    // Token : 0x6001730
+    // RVA   : 0x6BEC60   Offset: 0x6BDA60   Length: 0xE9
     private void <StartGameResult>b__20_1()
     {
         uint uVar1;

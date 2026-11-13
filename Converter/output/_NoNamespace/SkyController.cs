@@ -1,57 +1,57 @@
 // ============================================================
 // Type  : SkyController
-// Token : 0x2000361
+// Token : 0x200036E
 // ============================================================
 
 public class SkyController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001BBC
+    // Token: 0x4001C4E
     public List<Sprite> cloudSprites;
 
-    // Token: 0x4001BBD
+    // Token: 0x4001C4F
     public GameObject cloudPrefab;
 
-    // Token: 0x4001BBE
+    // Token: 0x4001C50
     public GameObject birdPrefab;
 
-    // Token: 0x4001BBF
+    // Token: 0x4001C51
     public List<GameObject> clouds;
 
-    // Token: 0x4001BC0
+    // Token: 0x4001C52
     public List<GameObject> birds;
 
-    // Token: 0x4001BC1
+    // Token: 0x4001C53
     public List<GameObject> areaClouds;
 
-    // Token: 0x4001BC2
+    // Token: 0x4001C54
     public List<GameObject> areaBirds;
 
-    // Token: 0x4001BC3
+    // Token: 0x4001C55
     private GameObject newObj;
 
-    // Token: 0x4001BC4
+    // Token: 0x4001C56
     private static SkyController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002135
-    // RVA   : 0x98B530   Offset: 0x98A930   Length: 0x36
+    // Token : 0x60021DF
+    // RVA   : 0x6B2C80   Offset: 0x6B1A80   Length: 0x36
     public static SkyController get_Instance()
     {
-        return **(uint64 **)(DAT_181da35e8 + 184);
+        return **(uint64 **)(DAT_181e83a28 + 184);
     }
 
-    // Token : 0x6002136
-    // RVA   : 0x989AF0   Offset: 0x988EF0   Length: 0x43
+    // Token : 0x60021E0
+    // RVA   : 0x6B1240   Offset: 0x6B0040   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da35e8 + 184);
+        puVar1 = *(uint64 **)(DAT_181e83a28 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6002137
-    // RVA   : 0x98B4C0   Offset: 0x98A8C0   Length: 0x63
+    // Token : 0x60021E1
+    // RVA   : 0x6B2C10   Offset: 0x6B1A10   Length: 0x63
     private void Start()
     {
         long lVar1;
@@ -68,8 +68,8 @@ public class SkyController
         } while (lVar1 != null);
     }
 
-    // Token : 0x6002138
-    // RVA   : 0x98B140   Offset: 0x98A540   Length: 0x336
+    // Token : 0x60021E2
+    // RVA   : 0x6B2890   Offset: 0x6B1690   Length: 0x336
     public void RefreshCloud(bool fromStart)
     {
         int iVar1;
@@ -87,12 +87,12 @@ public class SkyController
                 SkyController.GenerateCloud(this,0,0,fromStart,0);
               }
               else {
-                uVar2 = FUN_180d96040(0,lVar3.Count,0);
-                lVar3 = FUN_180002f80(lVar3,uVar2,DAT_181d89930);
-                if (((lVar3 == null) || (lVar3 = GameObject.GetComponent(lVar3,DAT_181dc8058)) == null)
+                uVar2 = FUN_180af1860(0,lVar3.Count,0);
+                lVar3 = FUN_1800024b0(lVar3,uVar2,DAT_181e6bc70);
+                if (((lVar3 == null) || (lVar3 = GameObject.GetComponent(lVar3,DAT_181e540f0)) == null)
                    || (*(uint8 *)(lVar3 + 72) = 1, this.clouds == null))
                 throw; // [null/range check failed]
-                FUN_1817ef410();
+                FUN_181665e90();
               }
               lVar3 = this.clouds;
               if (lVar3 == null) throw; // [null/range check failed]
@@ -101,7 +101,7 @@ public class SkyController
             if ((lVar3 != null) && (lVar3 = WeatherController.GetNowWeather(lVar3,0)) != null) {
               iVar1 = Mathf.RoundToInt(*(float *)(lVar3 + 88) * 20.0,0);
               lVar3 = this.areaClouds;
-              if (lVar3 != null) goto LAB_18098b3c0;
+              if (lVar3 != null) goto LAB_1806b2b10;
             }
           }
         }
@@ -111,17 +111,17 @@ public class SkyController
             SkyController.GenerateCloud(this,1,0,fromStart,0);
           }
           else {
-            uVar2 = FUN_180d96040(0,lVar3.Count,0);
-            lVar3 = FUN_180002f80(lVar3,uVar2,DAT_181d89930);
-            if ((lVar3 == null) || (lVar4 = GameObject.GetComponent(lVar3,DAT_181dc8058)) == null)
+            uVar2 = FUN_180af1860(0,lVar3.Count,0);
+            lVar3 = FUN_1800024b0(lVar3,uVar2,DAT_181e6bc70);
+            if ((lVar3 == null) || (lVar4 = GameObject.GetComponent(lVar3,DAT_181e540f0)) == null)
             break;
             *(uint8 *)(lVar4 + 72) = 1;
             if (this.areaClouds == null) break;
-            FUN_1817ef410(this.areaClouds,lVar3);
+            FUN_181665e90(this.areaClouds,lVar3);
           }
           lVar3 = this.areaClouds;
           if (lVar3 == null) break;
-        LAB_18098b3c0:
+        LAB_1806b2b10:
           if (lVar3.Count == iVar1) {
             return;
           }
@@ -129,11 +129,11 @@ public class SkyController
         }
     }
 
-    // Token : 0x6002139
-    // RVA   : 0x98A2B0   Offset: 0x9896B0   Length: 0x8EA
+    // Token : 0x60021E3
+    // RVA   : 0x6B1A00   Offset: 0x6B0800   Length: 0x8EA
     public GameObject GenerateCloud(SkyObjType skyObjType, bool fromBorder, bool fromStart)
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         uint uVar1;
         ulong uVar2;
         ulong uVar3;
@@ -162,21 +162,21 @@ public class SkyController
         this.newObj = uVar3;
         fVar11 = local_c0;
         if (this.newObj != null) {
-          lVar4 = GameObject.GetComponent(this.newObj,DAT_181d73bb8);
+          lVar4 = GameObject.GetComponent(this.newObj,DAT_181e56c80);
           lVar5 = this.cloudSprites;
           fVar11 = local_c0;
-          if (lVar5 == null) goto LAB_18098ab95;
-          uVar1 = FUN_180d96040(0,lVar5.Count,0);
+          if (lVar5 == null) goto LAB_1806b22e5;
+          uVar1 = FUN_180af1860(0,lVar5.Count,0);
           if (lVar5.Count <= uVar1) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           fVar11 = local_c0;
-          if (lVar4 == null) goto LAB_18098ab95;
+          if (lVar4 == null) goto LAB_1806b22e5;
           SpriteRenderer.set_sprite
                     (lVar4,lVar5._items[uVar1],
                      0);
           fVar11 = local_c0;
-          if (this.newObj == null) goto LAB_18098ab95;
+          if (this.newObj == null) goto LAB_1806b22e5;
           lVar5 = GameObject.get_transform(this.newObj,0);
           fVar10 = 1.0;
           if (skyObjType == null) {
@@ -194,34 +194,34 @@ public class SkyController
           local_d8 = CONCAT44((float)((uint64)local_b8 >> 32) * fVar8,(float)local_b8 * fVar8);
           local_c8 = local_b8;
           fVar11 = local_b0;
-          if (lVar5 == null) goto LAB_18098ab95;
+          if (lVar5 == null) goto LAB_1806b22e5;
           local_c8 = local_d8;
           Transform.set_localScale(lVar5,&local_c8,0);
           fVar11 = local_c0;
           if ((this.newObj == null) ||
-             (lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc8058),
-             fVar11 = local_c0, lVar5 == null)) goto LAB_18098ab95;
+             (lVar5 = GameObject.GetComponent(this.newObj,DAT_181e540f0),
+             fVar11 = local_c0, lVar5 == null)) goto LAB_1806b22e5;
           lVar5.Count = skyObjType;
-          if (this.newObj == null) goto LAB_18098ab95;
-          lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc8058);
+          if (this.newObj == null) goto LAB_1806b22e5;
+          lVar5 = GameObject.GetComponent(this.newObj,DAT_181e540f0);
           uVar9 = Random.Range(0x3f333333,0x3f666666,0);
           fVar11 = local_c0;
-          if (lVar5 == null) goto LAB_18098ab95;
+          if (lVar5 == null) goto LAB_1806b22e5;
           *(uint32 *)(lVar5 + 36) = uVar9;
-          if (this.newObj == null) goto LAB_18098ab95;
-          lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc8058);
+          if (this.newObj == null) goto LAB_1806b22e5;
+          lVar5 = GameObject.GetComponent(this.newObj,DAT_181e540f0);
           fVar8 = (float)Random.get_value(0);
           fVar11 = local_c0;
-          if (lVar5 == null) goto LAB_18098ab95;
+          if (lVar5 == null) goto LAB_1806b22e5;
           lVar5._version = fVar8 < 0.5;
-          if (this.newObj == null) goto LAB_18098ab95;
-          lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc8058);
+          if (this.newObj == null) goto LAB_1806b22e5;
+          lVar5 = GameObject.GetComponent(this.newObj,DAT_181e540f0);
           if (skyObjType != null) {
             fVar10 = 1.5;
           }
           fVar8 = (float)Random.Range(0x3dcccccd,0x3f4ccccd,0);
           fVar11 = local_c0;
-          if (lVar5 == null) goto LAB_18098ab95;
+          if (lVar5 == null) goto LAB_1806b22e5;
           *(float *)(lVar5 + 32) = fVar8 * fVar10;
           if (!fromBorder) {
             fVar11 = (float)SkyController.GetMapSize(this,skyObjType,1,0);
@@ -230,16 +230,16 @@ public class SkyController
           }
           else {
             if ((this.newObj == null) ||
-               (lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc8058),
-               fVar11 = local_c0, lVar5 == null)) goto LAB_18098ab95;
+               (lVar5 = GameObject.GetComponent(this.newObj,DAT_181e540f0),
+               fVar11 = local_c0, lVar5 == null)) goto LAB_1806b22e5;
             if (!lVar5._version) {
               fVar10 = (float)SkyController.GetMapSize(this,skyObjType,1);
               fVar11 = local_c0;
               if (((this.newObj == null) ||
-                  (lVar5 = GameObject.GetComponent(this.newObj,DAT_181d73bb8),
+                  (lVar5 = GameObject.GetComponent(this.newObj,DAT_181e56c80),
                   fVar11 = local_c0, lVar5 == null)) ||
                  (lVar5 = SpriteRenderer.get_sprite(lVar5,0), fVar11 = local_c0) == null)
-              goto LAB_18098ab95;
+              goto LAB_1806b22e5;
               puVar6 = (uint64 *)Sprite.get_bounds(&local_a8,lVar5,0);
               local_88 = *puVar6;
               uStack_80 = puVar6[1];
@@ -249,7 +249,7 @@ public class SkyController
               fVar11 = local_c0;
               if ((this.newObj == null) ||
                  (lVar5 = GameObject.get_transform(this.newObj,0), fVar11 = local_c0,
-                 lVar5 == null)) goto LAB_18098ab95;
+                 lVar5 == null)) goto LAB_1806b22e5;
               pfVar7 = (float *)Transform.get_localScale(&local_a8,lVar5,0);
               fVar10 = fVar8 * 0.5 * *pfVar7 + fVar10 * 0.5;
             }
@@ -257,10 +257,10 @@ public class SkyController
               fVar10 = (float)SkyController.GetMapSize(this,skyObjType);
               fVar11 = local_c0;
               if (((this.newObj == null) ||
-                  (lVar5 = GameObject.GetComponent(this.newObj,DAT_181d73bb8),
+                  (lVar5 = GameObject.GetComponent(this.newObj,DAT_181e56c80),
                   fVar11 = local_c0, lVar5 == null)) ||
                  (lVar5 = SpriteRenderer.get_sprite(lVar5,0), fVar11 = local_c0) == null)
-              goto LAB_18098ab95;
+              goto LAB_1806b22e5;
               puVar6 = (uint64 *)Sprite.get_bounds(&local_a8,lVar5,0);
               local_88 = *puVar6;
               uStack_80 = puVar6[1];
@@ -270,18 +270,18 @@ public class SkyController
               fVar11 = local_c0;
               if ((this.newObj == null) ||
                  (lVar5 = GameObject.get_transform(this.newObj,0), fVar11 = local_c0,
-                 lVar5 == null)) goto LAB_18098ab95;
+                 lVar5 == null)) goto LAB_1806b22e5;
               pfVar7 = (float *)Transform.get_localScale(&local_a8,lVar5,0);
               fVar10 = fVar10 * -0.5 - fVar8 * 0.5 * *pfVar7;
             }
           }
           fVar11 = local_c0;
-          if (this.newObj == null) goto LAB_18098ab95;
+          if (this.newObj == null) goto LAB_1806b22e5;
           lVar5 = GameObject.get_transform(this.newObj,0);
           if (skyObjType == null) {
-            lVar4 = FUN_18046bbe0(0);
+            lVar4 = FUN_180210220(0);
             fVar11 = local_c0;
-            if (lVar4 == null) goto LAB_18098ab95;
+            if (lVar4 == null) goto LAB_1806b22e5;
             fVar8 = *(float *)(lVar4 + 52);
           }
           else if (skyObjType == 1) {
@@ -292,9 +292,9 @@ public class SkyController
             fVar8 = 0.0;
           }
           if (skyObjType == null) {
-            lVar4 = FUN_18046bbe0(0);
+            lVar4 = FUN_180210220(0);
             fVar11 = local_c0;
-            if (lVar4 == null) goto LAB_18098ab95;
+            if (lVar4 == null) goto LAB_1806b22e5;
             fVar11 = *(float *)(lVar4 + 52);
           }
           else if (skyObjType == 1) {
@@ -307,47 +307,47 @@ public class SkyController
           uVar9 = Random.Range(fVar8 * -0.5,fVar11 * 0.5,0);
           local_d8 = CONCAT44(uVar9,fVar10);
           fVar11 = local_c0;
-          if (lVar5 == null) goto LAB_18098ab95;
+          if (lVar5 == null) goto LAB_1806b22e5;
           local_c8 = local_d8;
           local_c0 = 0.0;
           Transform.set_localPosition(lVar5,&local_c8,0);
           fVar11 = local_c0;
-          if (this.newObj == null) goto LAB_18098ab95;
+          if (this.newObj == null) goto LAB_1806b22e5;
           lVar5 = GameObject.get_transform(this.newObj,0);
           fVar11 = local_c0;
           if ((this.newObj == null) ||
              (lVar4 = GameObject.get_transform(this.newObj,0), fVar11 = local_c0,
-             lVar4 == null)) goto LAB_18098ab95;
+             lVar4 == null)) goto LAB_1806b22e5;
           puVar6 = (uint64 *)Transform.get_localPosition(&local_a8,lVar4,0);
           local_b8 = *puVar6;
           local_b0 = *(float *)(puVar6 + 1);
           fVar11 = local_c0;
-          if (lVar5 == null) goto LAB_18098ab95;
+          if (lVar5 == null) goto LAB_1806b22e5;
           local_c8 = local_b8;
           local_c0 = (float)((uint64)local_b8 >> 32) * 0.001 - 10.0;
           Transform.set_localPosition(lVar5,&local_c8,0);
           fVar11 = local_c0;
-          if (this.newObj == null) goto LAB_18098ab95;
-          lVar4 = GameObject.GetComponent(this.newObj,DAT_181d73bb8);
+          if (this.newObj == null) goto LAB_1806b22e5;
+          lVar4 = GameObject.GetComponent(this.newObj,DAT_181e56c80);
           lVar5 = this.newObj;
           fVar11 = local_c0;
           if (!fromStart) {
             if ((lVar5 == null) ||
-               (lVar5 = GameObject.GetComponent(lVar5,DAT_181dc8058), fVar11 = local_c0) == null)
-            goto LAB_18098ab95;
+               (lVar5 = GameObject.GetComponent(lVar5,DAT_181e540f0), fVar11 = local_c0) == null)
+            goto LAB_1806b22e5;
             puVar6 = (uint64 *)CloudController.GetTargetColor(&local_a8,lVar5,0);
           }
           else {
             if ((lVar5 == null) ||
-               (lVar5 = GameObject.GetComponent(lVar5,DAT_181dc8058), fVar11 = local_c0) == null)
-            goto LAB_18098ab95;
+               (lVar5 = GameObject.GetComponent(lVar5,DAT_181e540f0), fVar11 = local_c0) == null)
+            goto LAB_1806b22e5;
             puVar6 = (uint64 *)CloudController.GetTargetColor(&local_a8,lVar5,0);
             local_a8 = *puVar6;
             uStack_a0 = puVar6[1];
             puVar6 = (uint64 *)GlobalData.SetColorAlpha(&local_b8,&local_a8,0,0);
           }
           fVar11 = local_c0;
-          if (lVar4 == null) goto LAB_18098ab95;
+          if (lVar4 == null) goto LAB_1806b22e5;
           local_a8 = *puVar6;
           uStack_a0 = puVar6[1];
           SpriteRenderer.set_color(lVar4,&local_a8,0);
@@ -361,31 +361,31 @@ public class SkyController
               }
               fVar11 = local_c0;
               if (lVar5 != null) {
-              FUN_18181e6b0(lVar5,this.newObj,DAT_181d893b0);
+              FUN_18175de30(lVar5,this.newObj,DAT_181e6b6f8);
             }
             return this.newObj;
           }
         }
-        LAB_18098ab95:
+        LAB_1806b22e5:
         local_c0 = fVar11;
     }
 
-    // Token : 0x600213A
-    // RVA   : 0x989BE0   Offset: 0x988FE0   Length: 0x9F
+    // Token : 0x60021E4
+    // RVA   : 0x6B1330   Offset: 0x6B0130   Length: 0x9F
     public void DestroyCloud(GameObject target)
     {
         if (this.clouds != null) {
-          FUN_1817ef410(this.clouds,target,DAT_181d89630);
+          FUN_181665e90(this.clouds,target,DAT_181e6b978);
           if (this.areaClouds != null) {
-            FUN_1817ef410(this.areaClouds,target,DAT_181d89630);
+            FUN_181665e90(this.areaClouds,target,DAT_181e6b978);
             Object.Destroy(target,0);
             return;
           }
         }
     }
 
-    // Token : 0x600213B
-    // RVA   : 0x98B480   Offset: 0x98A880   Length: 0x3B
+    // Token : 0x60021E5
+    // RVA   : 0x6B2BD0   Offset: 0x6B19D0   Length: 0x3B
     public Vector3 SetSkyZPos(Vector3 originPos)
     {
         float fVar1;
@@ -396,11 +396,11 @@ public class SkyController
         return this;
     }
 
-    // Token : 0x600213C
-    // RVA   : 0x989C80   Offset: 0x989080   Length: 0x627
+    // Token : 0x60021E6
+    // RVA   : 0x6B13D0   Offset: 0x6B01D0   Length: 0x627
     public void GenerateBird(SkyObjType skyObjType, bool fromBorder)
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         ulong uVar1;
         ulong uVar2;
         long lVar3;
@@ -440,25 +440,25 @@ public class SkyController
             Transform.set_localScale(lVar3,&local_98,0);
             fVar9 = local_90;
             if ((this.newObj != null) &&
-               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181dc7750),
+               (lVar3 = GameObject.GetComponent(this.newObj,DAT_181e537e8),
                fVar9 = local_90, lVar3 != null)) {
               lVar3.Count = skyObjType;
               if (this.newObj != null) {
-                lVar3 = GameObject.GetComponent(this.newObj,DAT_181dc7750);
+                lVar3 = GameObject.GetComponent(this.newObj,DAT_181e537e8);
                 fVar6 = (float)Random.get_value(0);
                 fVar9 = local_90;
                 if (lVar3 != null) {
                   lVar3._version = fVar6 < 0.5;
                   if (this.newObj != null) {
-                    lVar3 = GameObject.GetComponent(this.newObj,DAT_181d73bb8);
+                    lVar3 = GameObject.GetComponent(this.newObj,DAT_181e56c80);
                     fVar9 = local_90;
                     if (((this.newObj != null) &&
-                        (lVar5 = GameObject.GetComponent(this.newObj,DAT_181dc7750),
+                        (lVar5 = GameObject.GetComponent(this.newObj,DAT_181e537e8),
                         fVar9 = local_90, lVar5 != null)) && (lVar3 != null)) {
                       SpriteRenderer.set_flipX(lVar3,*(char *)(lVar5 + 28) != false,0);
                       fVar9 = local_90;
                       if (this.newObj != null) {
-                        lVar3 = GameObject.GetComponent(this.newObj,DAT_181dc7750);
+                        lVar3 = GameObject.GetComponent(this.newObj,DAT_181e537e8);
                         if (skyObjType != null) {
                           fVar8 = 1.5;
                         }
@@ -474,8 +474,8 @@ public class SkyController
                           else {
                             if ((this.newObj == null) ||
                                (lVar3 = GameObject.GetComponent
-                                                  (this.newObj,DAT_181dc7750),
-                               fVar9 = local_90, lVar3 == null)) goto LAB_18098a2a2;
+                                                  (this.newObj,DAT_181e537e8),
+                               fVar9 = local_90, lVar3 == null)) goto LAB_1806b19f2;
                             if (!lVar3._version) {
                               fVar9 = (float)SkyController.GetMapSize(this,skyObjType,1);
                               fVar8 = fVar9 * 0.5 + 0.2;
@@ -490,9 +490,9 @@ public class SkyController
                             lVar3 = GameObject.get_transform(this.newObj,0);
                             fVar6 = 0.0;
                             if (skyObjType == null) {
-                              lVar5 = FUN_18046bbe0(0);
+                              lVar5 = FUN_180210220(0);
                               fVar9 = local_90;
-                              if (lVar5 == null) goto LAB_18098a2a2;
+                              if (lVar5 == null) goto LAB_1806b19f2;
                               fVar10 = *(float *)(lVar5 + 52);
                             }
                             else if (skyObjType == 1) {
@@ -503,9 +503,9 @@ public class SkyController
                               fVar10 = 0.0;
                             }
                             if (skyObjType == null) {
-                              lVar5 = FUN_18046bbe0(0);
+                              lVar5 = FUN_180210220(0);
                               fVar9 = local_90;
-                              if (lVar5 == null) goto LAB_18098a2a2;
+                              if (lVar5 == null) goto LAB_1806b19f2;
                               fVar6 = *(float *)(lVar5 + 52);
                             }
                             else if (skyObjType == 1) {
@@ -543,7 +543,7 @@ public class SkyController
                                     }
                                     fVar9 = local_90;
                                     if (lVar3 != null) {
-                                      FUN_18181e6b0(lVar3,this.newObj,DAT_181d893b0);
+                                      FUN_18175de30(lVar3,this.newObj,DAT_181e6b6f8);
                                       return;
                                     }
                                   }
@@ -560,32 +560,32 @@ public class SkyController
             }
           }
         }
-        LAB_18098a2a2:
+        LAB_1806b19f2:
         local_90 = fVar9;
     }
 
-    // Token : 0x600213D
-    // RVA   : 0x989B40   Offset: 0x988F40   Length: 0x9F
+    // Token : 0x60021E7
+    // RVA   : 0x6B1290   Offset: 0x6B0090   Length: 0x9F
     public void DestroyBird(GameObject target)
     {
         if (this.birds != null) {
-          FUN_1817ef410(this.birds,target,DAT_181d89630);
+          FUN_181665e90(this.birds,target,DAT_181e6b978);
           if (this.areaBirds != null) {
-            FUN_1817ef410(this.areaBirds,target,DAT_181d89630);
+            FUN_181665e90(this.areaBirds,target,DAT_181e6b978);
             Object.Destroy(target,0);
             return;
           }
         }
     }
 
-    // Token : 0x600213E
-    // RVA   : 0x98AFD0   Offset: 0x98A3D0   Length: 0x16D
+    // Token : 0x60021E8
+    // RVA   : 0x6B2720   Offset: 0x6B1520   Length: 0x16D
     public GameObject GetSkyObjRoot(SkyObjType skyObjType, bool isCloud)
     {
         long lVar1;
         ulong uVar2;
         if (skyObjType == null) {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181db0be0 + 184) + 16);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181e90e50 + 184) + 16);
           if (lVar1 == null) throw; // [null/range check failed]
           lVar1 = *(int64 *)(lVar1 + 64);
         }
@@ -593,7 +593,7 @@ public class SkyController
           if (skyObjType != 1) {
             return false;
           }
-          lVar1 = FUN_18046bac0(0);
+          lVar1 = FUN_180210060(0);
           if (lVar1 == null) throw; // [null/range check failed]
           lVar1 = *(int64 *)(lVar1 + 80);
         }
@@ -613,28 +613,28 @@ public class SkyController
         }
     }
 
-    // Token : 0x600213F
-    // RVA   : 0x98ABA0   Offset: 0x989FA0   Length: 0x159
+    // Token : 0x60021E9
+    // RVA   : 0x6B22F0   Offset: 0x6B10F0   Length: 0x159
     public float GetMapSize(SkyObjType skyObjType, bool mapWidth)
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         float fVar1;
         long lVar2;
         if (skyObjType == null) {
           if (!mapWidth) {
-            lVar2 = FUN_18046bbe0(0);
+            lVar2 = FUN_180210220(0);
             if (lVar2 != null) {
               return *(float *)(lVar2 + 52);
             }
           }
           else {
-            lVar2 = FUN_18046bbe0(0);
+            lVar2 = FUN_180210220(0);
             if (lVar2 != null) {
               return *(float *)(lVar2 + 48);
             }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (skyObjType != 1) {
           return 0.0;
@@ -647,23 +647,23 @@ public class SkyController
         return fVar1 + fVar1;
     }
 
-    // Token : 0x6002140
-    // RVA   : 0x98AD00   Offset: 0x98A100   Length: 0x2CC
+    // Token : 0x60021EA
+    // RVA   : 0x6B2450   Offset: 0x6B1250   Length: 0x2CC
     public float GetScaleAlphaPercent(SkyObjType skyObjType)
     {
-        var pStatics_c770 = *(int64*)(DAT_181dac770 + 184);
+        var pStatics_c8b0 = *(int64*)(DAT_181e8c8b0 + 184);
         float fVar1;
         long lVar2;
         float fVar3;
         float fVar4;
         if (skyObjType != null) {
           if (skyObjType == 1) {
-            fVar4 = *(float *)(pStatics_c770 + 20);
+            fVar4 = *(float *)(pStatics_c8b0 + 20);
             lVar2 = PlotController.SpringFestivelRewardLvTalkText;
             if (lVar2 == null) throw; // [null/range check failed]
             fVar3 = (float)AreaController.AreaMapNowScale(lVar2,0);
             fVar4 = (fVar4 - fVar3) /
-                    (*(float *)(pStatics_c770 + 20) -
+                    (*(float *)(pStatics_c8b0 + 20) -
                     PlotController.livingSkillIndexCache);
           }
           else {
@@ -689,11 +689,11 @@ public class SkyController
         }
     }
 
-    // Token : 0x6002141
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60021EB
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

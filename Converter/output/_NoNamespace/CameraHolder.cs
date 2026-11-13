@@ -1,71 +1,71 @@
 // ============================================================
 // Type  : CameraHolder
-// Token : 0x20003CA
+// Token : 0x20003D7
 // ============================================================
 
 public class CameraHolder
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E60
+    // Token: 0x4001EF2
     public Transform Holder;
 
-    // Token: 0x4001E61
+    // Token: 0x4001EF3
     public float currDistance;
 
-    // Token: 0x4001E62
+    // Token: 0x4001EF4
     public float xRotate;
 
-    // Token: 0x4001E63
+    // Token: 0x4001EF5
     public float yRotate;
 
-    // Token: 0x4001E64
+    // Token: 0x4001EF6
     public float yMinLimit;
 
-    // Token: 0x4001E65
+    // Token: 0x4001EF7
     public float yMaxLimit;
 
-    // Token: 0x4001E66
+    // Token: 0x4001EF8
     public float prevDistance;
 
-    // Token: 0x4001E67
+    // Token: 0x4001EF9
     private float x;
 
-    // Token: 0x4001E68
+    // Token: 0x4001EFA
     private float y;
 
-    // Token: 0x4001E69
+    // Token: 0x4001EFB
     private float windowDpi;
 
-    // Token: 0x4001E6A
+    // Token: 0x4001EFC
     public GameObject[] Prefabs;
 
-    // Token: 0x4001E6B
+    // Token: 0x4001EFD
     private int Prefab;
 
-    // Token: 0x4001E6C
+    // Token: 0x4001EFE
     private GameObject Instance;
 
-    // Token: 0x4001E6D
+    // Token: 0x4001EFF
     private float StartColor;
 
-    // Token: 0x4001E6E
+    // Token: 0x4001F00
     private float HueColor;
 
-    // Token: 0x4001E6F
+    // Token: 0x4001F01
     public Texture HueTexture;
 
-    // Token: 0x4001E70
+    // Token: 0x4001F02
     private ParticleSystem[] particleSystems;
 
-    // Token: 0x4001E71
+    // Token: 0x4001F03
     private List<SVA> svList;
 
-    // Token: 0x4001E72
+    // Token: 0x4001F04
     private float H;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600240C
-    // RVA   : 0x992C50   Offset: 0x992050   Length: 0xAA
+    // Token : 0x60024B6
+    // RVA   : 0x6F1500   Offset: 0x6F0300   Length: 0xAA
     private void Start()
     {
         ulong uVar1;
@@ -95,8 +95,8 @@ public class CameraHolder
         }
     }
 
-    // Token : 0x600240D
-    // RVA   : 0x9926C0   Offset: 0x991AC0   Length: 0x58B
+    // Token : 0x60024B7
+    // RVA   : 0x6F0F70   Offset: 0x6EFD70   Length: 0x58B
     private void OnGUI()
     {
         float fVar1;
@@ -138,7 +138,7 @@ public class CameraHolder
         uStack_130 = 0;
         local_res8 = 0;
         uVar8 = CONCAT44(uVar13,fVar1 * 35.0);
-        FUN_1809dcfa0(&local_138,fVar1 * 5.0,fVar1 * 5.0,fVar1 * 110.0,uVar8,0);
+        FUN_1807282e0(&local_138,fVar1 * 5.0,fVar1 * 5.0,fVar1 * 110.0,uVar8,0);
         uVar13 = (uint32)((uint64)uVar8 >> 32);
         local_128 = local_138;
         uStack_120 = uStack_130;
@@ -150,7 +150,7 @@ public class CameraHolder
         uVar8 = CONCAT44(uVar13,fVar1 * 35.0);
         local_138 = 0;
         uStack_130 = 0;
-        FUN_1809dcfa0(&local_138,fVar1 * 120.0,fVar1 * 5.0,fVar1 * 110.0,uVar8,0);
+        FUN_1807282e0(&local_138,fVar1 * 120.0,fVar1 * 5.0,fVar1 * 110.0,uVar8,0);
         uVar13 = (uint32)((uint64)uVar8 >> 32);
         local_128 = local_138;
         uStack_120 = uStack_130;
@@ -162,7 +162,7 @@ public class CameraHolder
         uVar8 = CONCAT44(uVar13,fVar1 * 35.0);
         local_138 = 0;
         uStack_130 = 0;
-        FUN_1809dcfa0(&local_138,fVar1 * 235.0,fVar1 * 5.0,fVar1 * 110.0,uVar8,0);
+        FUN_1807282e0(&local_138,fVar1 * 235.0,fVar1 * 5.0,fVar1 * 110.0,uVar8,0);
         uVar13 = (uint32)((uint64)uVar8 >> 32);
         local_128 = local_138;
         uStack_120 = uStack_130;
@@ -175,7 +175,7 @@ public class CameraHolder
         local_138._0_4_ = 0;
         local_138._4_4_ = 0;
         uStack_130 = 0;
-        FUN_1809dcfa0(&local_138,fVar1 * 5.0,fVar1 * 45.0,fVar1 * 340.0,CONCAT44(uVar13,fVar1 * 35.0),0);
+        FUN_1807282e0(&local_138,fVar1 * 5.0,fVar1 * 45.0,fVar1 * 340.0,CONCAT44(uVar13,fVar1 * 35.0),0);
         uVar13 = *(uint32 *)(this + 100);
         uVar14 = 0;
         local_128 = CONCAT44(local_138._4_4_,(uint32)local_138);
@@ -186,7 +186,7 @@ public class CameraHolder
         uStack_110 = 0;
         fVar1 = this.windowDpi;
         uVar12 = CONCAT44(uVar14,fVar1 * 15.0);
-        FUN_1809dcfa0(&local_118,fVar1 * 5.0,fVar1 * 65.0,fVar1 * 340.0,uVar12,0);
+        FUN_1807282e0(&local_118,fVar1 * 5.0,fVar1 * 65.0,fVar1 * 340.0,uVar12,0);
         local_128 = local_118;
         uStack_120 = uStack_110;
         GUI.DrawTexture(&local_128,this.HueTexture,0,0,uVar12 & 0xffffffff00000000,0);
@@ -195,7 +195,7 @@ public class CameraHolder
           uVar12 = uVar10;
           if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           while( true ) {
             uVar9 = (uint32)uVar10;
@@ -203,26 +203,26 @@ public class CameraHolder
             if (*(uint32 *)(lVar3 + 24) <= uVar9) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar8,0);
+              FUN_1801e02d0(uVar8,0);
             }
             lVar4 = lVar3[uVar9];
             if (lVar4 == null) {
-        LAB_180992c30:
+        LAB_1806f14e0:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            local_res8 = FUN_1804651e0(lVar4,0);
+            local_res8 = FUN_181040f40(lVar4,0);
             lVar4 = this.svList;
             fVar1 = *(float *)(this + 100);
             fVar2 = this.H;
-            if (lVar4 == null) goto LAB_180992c30;
+            if (lVar4 == null) goto LAB_1806f14e0;
             lVar11 = lVar4;
             if (lVar4.Count <= uVar9) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
               lVar11 = this.svList;
             }
             local_108 = *(uint64 *)(lVar4._items + 32 + uVar12);
-            if (lVar11 == null) goto LAB_180992c30;
+            if (lVar11 == null) goto LAB_1806f14e0;
             if (lVar11.Count <= uVar9) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -237,7 +237,7 @@ public class CameraHolder
             local_138._0_4_ = *puVar6;
             local_138._4_4_ = puVar6[1];
             uStack_130 = *(uint64 *)(puVar6 + 2);
-            if (lVar4 == null) goto LAB_180992c30;
+            if (lVar4 == null) goto LAB_1806f14e0;
             if (lVar4.Count <= uVar9) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
@@ -245,7 +245,7 @@ public class CameraHolder
             uStack_110 = CONCAT44(uStack_110._4_4_,uVar14);
             local_128 = 0;
             uStack_120 = 0;
-            FUN_1809dcfa0(&local_128,(uint32)local_138,local_138._4_4_,(uint32)uStack_130,
+            FUN_1807282e0(&local_128,(uint32)local_138,local_138._4_4_,(uint32)uStack_130,
                           CONCAT44(uVar13,uVar14),0);
             local_138._0_4_ = (uint32)local_128;
             local_138._4_4_ = local_128._4_4_;
@@ -267,8 +267,8 @@ public class CameraHolder
         }
     }
 
-    // Token : 0x600240E
-    // RVA   : 0x991F10   Offset: 0x991310   Length: 0x309
+    // Token : 0x60024B8
+    // RVA   : 0x6F07C0   Offset: 0x6EF5C0   Length: 0x309
     private void Counter(int count)
     {
         long lVar1;
@@ -328,16 +328,16 @@ public class CameraHolder
             if (*(uint32 *)(lVar1 + 24) <= this.Prefab) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             uVar6 = *(uint64 *)(lVar1 + 32 + (int64)(int)this.Prefab * 8);
-            uVar6 = Object.Instantiate(uVar6,DAT_181d928b0);
+            uVar6 = Object.Instantiate(uVar6,DAT_181e75ef8);
             this.Instance = uVar6;
             if (this.Instance != null) {
-              uVar6 = FUN_180967b70(this.Instance,DAT_181d75290);
+              uVar6 = FUN_180772590(this.Instance,DAT_181e58358);
               this.particleSystems = uVar6;
               if (this.svList != null) {
-                FUN_1812fa020(this.svList,DAT_181dae898);
+                FUN_18115d8f0(this.svList,DAT_181e91350);
                 lVar1 = this.particleSystems;
                 if (lVar1 != null) {
                   while( true ) {
@@ -347,11 +347,11 @@ public class CameraHolder
                     if (*(uint32 *)(lVar1 + 24) <= uVar9) {
                       uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar6,0);
+                      FUN_1801e02d0(uVar6,0);
                     }
                     lVar2 = lVar1[uVar9];
                     if (lVar2 == null) break;
-                    local_res8 = FUN_1804651e0(lVar2,0);
+                    local_res8 = FUN_181040f40(lVar2,0);
                     puVar7 = (uint64 *)MainModule.get_startColor(local_68,&local_res8,0);
                     local_c8 = *puVar7;
                     uStack_c0 = puVar7[1];
@@ -360,7 +360,7 @@ public class CameraHolder
                     local_a8 = puVar7[4];
                     uStack_a0 = puVar7[5];
                     local_98 = puVar7[6];
-                    puVar8 = (uint32 *)FUN_180464b40(local_78,&local_c8,0);
+                    puVar8 = (uint32 *)FUN_181741880(local_78,&local_c8,0);
                     local_88 = *puVar8;
                     uStack_84 = puVar8[1];
                     uStack_80 = puVar8[2];
@@ -373,7 +373,7 @@ public class CameraHolder
                     if (this.svList == null) break;
                     local_d8 = local_e8;
                     local_d0 = uVar3;
-                    FUN_181817190();
+                    FUN_181756920();
                     uVar9 = uVar9 + 1;
                   }
                 }
@@ -383,8 +383,8 @@ public class CameraHolder
         }
     }
 
-    // Token : 0x600240F
-    // RVA   : 0x992220   Offset: 0x991620   Length: 0x49D
+    // Token : 0x60024B9
+    // RVA   : 0x6F0AD0   Offset: 0x6EF8D0   Length: 0x49D
     private void LateUpdate()
     {
         ulong uVar1;
@@ -447,7 +447,7 @@ public class CameraHolder
           this.x = fVar9 * this.xRotate * 0.02 + fVar8;
           fVar8 = (float)Input.GetAxis("Mouse Y",0);
           this.y = fVar7 - fVar8 * this.yRotate * 0.02;
-          uVar10 = FUN_1810e3cd0();
+          uVar10 = FUN_180f34e60();
           this.y = (int)uVar10;
           puVar5 = (uint64 *)Quaternion.Euler(&local_38,uVar10,this.x,0,0);
           local_60 = -this.currDistance;
@@ -520,11 +520,11 @@ public class CameraHolder
         }
     }
 
-    // Token : 0x6002410
-    // RVA   : 0x991EE0   Offset: 0x9912E0   Length: 0x2A
+    // Token : 0x60024BA
+    // RVA   : 0x6F0790   Offset: 0x6EF590   Length: 0x2A
     private static float ClampAngle(float angle, float min, float max)
     {
-        void FUN_180991ee0(float angle,uint64 min,uint64 max)
+        void FUN_1806f0790(float angle,uint64 min,uint64 max)
         {
         if (angle < -360.0) {
           angle = angle + 360.0;
@@ -532,11 +532,11 @@ public class CameraHolder
         if (360.0 < angle) {
           angle = angle + -360.0;
         }
-        FUN_1810e3cd0(angle,min,max,0);
+        FUN_180f34e60(angle,min,max,0);
     }
 
-    // Token : 0x6002411
-    // RVA   : 0x992D00   Offset: 0x992100   Length: 0xC2
+    // Token : 0x60024BB
+    // RVA   : 0x6F15B0   Offset: 0x6F03B0   Length: 0xC2
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -545,12 +545,12 @@ public class CameraHolder
         this.yRotate = 0x42f00000;
         this.yMinLimit = 0xc1a00000;
         this.yMaxLimit = 0x42a00000;
-        uVar1 = FUN_1800d60b0(DAT_181da44b8,0);
+        uVar1 = FUN_1801dfd90(DAT_181e845f8,0);
         this.particleSystems = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d99368);
-        FUN_181330100(uVar1,DAT_181dae798);
+        uVar1 = il2cpp_internal(DAT_181e79428);
+        FUN_1810f3480(uVar1,DAT_181e91240);
         this.svList = uVar1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : WaitUIController
-// Token : 0x20003AF
+// Token : 0x20003BC
 // ============================================================
 
 public class WaitUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DD7
+    // Token: 0x4001E69
     public GameObject waitUIPanel;
 
-    // Token: 0x4001DD8
+    // Token: 0x4001E6A
     public Text waitTimeText;
 
-    // Token: 0x4001DD9
+    // Token: 0x4001E6B
     public Slider waitTimeSlider;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600236A
-    // RVA   : 0xC12D60   Offset: 0xC12160   Length: 0x1F3
+    // Token : 0x6002414
+    // RVA   : 0x96C010   Offset: 0x96AE10   Length: 0x1F3
     public void ShowWaitUI()
     {
         long lVar1;
@@ -33,8 +33,8 @@ public class WaitUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"BlackBack",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
-                puVar3 = (uint32 *)FUN_180d995f0(&local_18,0);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
+                puVar3 = (uint32 *)FUN_180af4e90(&local_18,0);
                 if (plVar2 != (int64 *)0) {
                   local_18 = *puVar3;
                   uStack_14 = puVar3[1];
@@ -46,7 +46,7 @@ public class WaitUIController
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"BlackBack",0);
                       if (lVar1 != null) {
-                        uVar4 = Component.GetComponent(lVar1,DAT_181d94478);
+                        uVar4 = Component.GetComponent(lVar1,DAT_181e777b8);
                         DOTweenModuleUI.DOFade(uVar4,0x3f000000,0x3e800000,0);
                         if (this.waitUIPanel != null) {
                           lVar1 = GameObject.get_transform(this.waitUIPanel,0);
@@ -79,8 +79,8 @@ public class WaitUIController
         }
     }
 
-    // Token : 0x600236B
-    // RVA   : 0xC13340   Offset: 0xC12740   Length: 0x174
+    // Token : 0x6002415
+    // RVA   : 0x96C5F0   Offset: 0x96B3F0   Length: 0x174
     public void UnshowWaitUI()
     {
         long lVar1;
@@ -94,7 +94,7 @@ public class WaitUIController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"BlackBack",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
+              uVar2 = Component.GetComponent(lVar1,DAT_181e777b8);
               DOTweenModuleUI.DOFade(uVar2,0,0x3e800000,0);
               if (this.waitUIPanel != null) {
                 lVar1 = GameObject.get_transform(this.waitUIPanel,0);
@@ -104,8 +104,8 @@ public class WaitUIController
                   local_14 = 0x3f800000;
                   local_10 = 0x3f800000;
                   uVar2 = ShortcutExtensions.DOScale(uVar2,&local_18,0x3e800000,0);
-                  uVar3 = new OnTooltipCB(this,DAT_181d77700,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0380);
+                  uVar3 = new OnTooltipCB(this,DAT_181e5a8b8,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181ea3dc0);
                   return;
                 }
               }
@@ -114,23 +114,23 @@ public class WaitUIController
         }
     }
 
-    // Token : 0x600236C
-    // RVA   : 0xC12F60   Offset: 0xC12360   Length: 0xF9
+    // Token : 0x6002416
+    // RVA   : 0x96C210   Offset: 0x96B010   Length: 0xF9
     public void SliderValueChanged()
     {
         long lVar1;
         ulong uVar2;
         WaitUIController.RefreshWaitUI(this,0);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 32);
         if (lVar1 != null) {
-          uVar2 = *(uint64 *)(lVar1 + 0x1f0);
+          uVar2 = *(uint64 *)(lVar1 + 0x208);
           NGUITools.PlaySound(uVar2,0x3e4ccccd,0);
           return;
         }
     }
 
-    // Token : 0x600236D
-    // RVA   : 0xC12C70   Offset: 0xC12070   Length: 0xE8
+    // Token : 0x6002417
+    // RVA   : 0x96BF20   Offset: 0x96AD20   Length: 0xE8
     public void RefreshWaitUI()
     {
         ulong uVar2;
@@ -147,8 +147,8 @@ public class WaitUIController
         }
     }
 
-    // Token : 0x600236E
-    // RVA   : 0xC13060   Offset: 0xC12460   Length: 0x2DD
+    // Token : 0x6002418
+    // RVA   : 0x96C310   Offset: 0x96B110   Length: 0x2DD
     public void SureButtonClicked()
     {
         long lVar2;
@@ -166,7 +166,7 @@ public class WaitUIController
           if (lVar5 != null) {
             lVar5 = Transform.Find(lVar5,"BlackBack",0);
             if (lVar5 != null) {
-              uVar6 = Component.GetComponent(lVar5,DAT_181d94478);
+              uVar6 = Component.GetComponent(lVar5,DAT_181e777b8);
               DOTweenModuleUI.DOFade(uVar6,0,0x3e800000,0);
               if (this.waitUIPanel != null) {
                 lVar5 = GameObject.get_transform(this.waitUIPanel,0);
@@ -176,14 +176,14 @@ public class WaitUIController
                   local_24 = 0x3f800000;
                   local_20 = 0x3f800000;
                   uVar6 = ShortcutExtensions.DOScale(uVar6,&local_28,0x3e800000,0);
-                  uVar7 = new OnTooltipCB(this,DAT_181d77700,0);
-                  TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181dc0380);
+                  uVar7 = new OnTooltipCB(this,DAT_181e5a8b8,0);
+                  TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181ea3dc0);
                   plVar1 = this.waitTimeSlider;
-                  lVar5 = *(int64 *)(*(int64 *)(DAT_181db5e00 + 184) + 8);
+                  lVar5 = *(int64 *)(*(int64 *)(DAT_181e962e8 + 184) + 8);
                   if (plVar1 != (int64 *)0) {
                     fVar8 = (float)(**(code **)(*plVar1 + 0x418))(plVar1,*(uint64 *)(*plVar1 + 0x420))
                     ;
-                    lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
+                    lVar2 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 8);
                     if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 16)) != null) {
                       iVar3 = PlayerPrefDictionary.GetInt(lVar2,"TestMode",0);
                       iVar4 = 100;
@@ -203,15 +203,15 @@ public class WaitUIController
         }
     }
 
-    // Token : 0x600236F
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002419
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6002370
-    // RVA   : 0x78D070   Offset: 0x78C470   Length: 0x20
+    // Token : 0x600241A
+    // RVA   : 0x52B140   Offset: 0x529F40   Length: 0x20
     private void <UnshowWaitUI>b__4_0()
     {
         if (this.waitUIPanel != null) {

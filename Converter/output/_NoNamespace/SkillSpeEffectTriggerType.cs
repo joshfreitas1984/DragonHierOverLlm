@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : SkillSpeEffectTriggerType
-// Token : 0x200022B
+// Token : 0x200022D
 // ============================================================
 
 public class SkillSpeEffectTriggerType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001168
+    // Token: 0x400117E
     public int value__;
 
-    // Token: 0x4001169
+    // Token: 0x400117F
     public const SkillSpeEffectTriggerType Start;
 
-    // Token: 0x400116A
+    // Token: 0x4001180
     public const SkillSpeEffectTriggerType Happen;
 
 }

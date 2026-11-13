@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : InvAttachmentPoint
-// Token : 0x200000B
+// Token : 0x200000A
 // ============================================================
 
 public class InvAttachmentPoint
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400003F
+    // Token: 0x400001F
     public Slot slot;
 
-    // Token: 0x4000040
+    // Token: 0x4000020
     private GameObject mPrefab;
 
-    // Token: 0x4000041
+    // Token: 0x4000021
     private GameObject mChild;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600003C
-    // RVA   : 0xC9B8D0   Offset: 0xC9ACD0   Length: 0x2A6
+    // Token : 0x6000023
+    // RVA   : 0xA1D530   Offset: 0xA1C330   Length: 0x2A6
     public GameObject Attach(GameObject prefab)
     {
         ulong uVar1;
@@ -54,7 +54,7 @@ public class InvAttachmentPoint
               uStack_30 = puVar5[1];
               local_48 = uVar1;
               local_40 = uVar2;
-              uVar6 = Object.Instantiate(uVar6,&local_48,&local_38,DAT_181d92cb0);
+              uVar6 = Object.Instantiate(uVar6,&local_48,&local_38,DAT_181e762f8);
               this.mChild = uVar6;
               if (this.mChild != null) {
                 lVar7 = GameObject.get_transform(this.mChild,0);
@@ -72,23 +72,23 @@ public class InvAttachmentPoint
                   local_48 = *puVar5;
                   local_40 = *(uint32 *)(puVar5 + 1);
                   Transform.set_localScale(lVar7,&local_48,0);
-                  goto LAB_180c9bb57;
+                  goto LAB_180a1d7b7;
                 }
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
-        LAB_180c9bb57:
+        LAB_180a1d7b7:
         return this.mChild;
     }
 
-    // Token : 0x600003D
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000024
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

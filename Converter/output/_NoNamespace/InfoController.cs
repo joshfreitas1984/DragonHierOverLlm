@@ -1,60 +1,60 @@
 // ============================================================
 // Type  : InfoController
-// Token : 0x20002E6
+// Token : 0x20002EF
 // ============================================================
 
 public class InfoController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40017E6
+    // Token: 0x400183B
     public GameObject infoText;
 
-    // Token: 0x40017E7
+    // Token: 0x400183C
     public GameObject popInfoTabPrefab;
 
-    // Token: 0x40017E8
+    // Token: 0x400183D
     public GameObject rightPopInfoTabPrefab;
 
-    // Token: 0x40017E9
+    // Token: 0x400183E
     public GameObject popInfoList;
 
-    // Token: 0x40017EA
+    // Token: 0x400183F
     public GameObject rightPopInfoList;
 
-    // Token: 0x40017EB
+    // Token: 0x4001840
     private bool inited;
 
-    // Token: 0x40017EC
+    // Token: 0x4001841
     public List<MailData> newMailDatas;
 
-    // Token: 0x40017ED
+    // Token: 0x4001842
     public List<InfoData> newInfoDatas;
 
-    // Token: 0x40017EE
+    // Token: 0x4001843
     public List<InfoTabData> newInfoTabDatas;
 
-    // Token: 0x40017EF
+    // Token: 0x4001844
     private static InfoController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001855
-    // RVA   : 0xC98750   Offset: 0xC97B50   Length: 0x36
+    // Token : 0x60018D1
+    // RVA   : 0xA1A3B0   Offset: 0xA191B0   Length: 0x36
     public static InfoController get_Instance()
     {
-        return **(uint64 **)(DAT_181d7f6c0 + 184);
+        return **(uint64 **)(DAT_181e5fa68 + 184);
     }
 
-    // Token : 0x6001856
-    // RVA   : 0xC97600   Offset: 0xC96A00   Length: 0x43
+    // Token : 0x60018D2
+    // RVA   : 0xA19260   Offset: 0xA18060   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d7f6c0 + 184);
+        puVar1 = *(uint64 **)(DAT_181e5fa68 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6001857
-    // RVA   : 0xC983E0   Offset: 0xC977E0   Length: 0x262
+    // Token : 0x60018D3
+    // RVA   : 0xA1A040   Offset: 0xA18E40   Length: 0x262
     private void Update()
     {
         long lVar1;
@@ -72,12 +72,12 @@ public class InfoController
         if (lVar1 != null) {
           uVar5 = 0;
           if (lVar1.Count < 1) {
-        LAB_180c98546:
+        LAB_180a1a1a6:
             lVar1 = this.newInfoDatas;
             if (lVar1 != null) {
               lVar6 = 32;
               if (lVar1.Count < 1) {
-        LAB_180c985bd:
+        LAB_180a1a21d:
                 lVar1 = this.newInfoTabDatas;
                 if (lVar1 != null) {
                   if (lVar1.Count < 1) {
@@ -85,7 +85,7 @@ public class InfoController
                   }
                   do {
                     if (lVar1.Count <= (int)uVar5) {
-                      FUN_1812fa020(lVar1,DAT_181d8e930);
+                      FUN_18115d8f0(lVar1,DAT_181e70af0);
                       return;
                     }
                     if (lVar1 == null) break;
@@ -105,8 +105,8 @@ public class InfoController
                 lVar7 = 32;
                 do {
                   if (lVar1.Count <= (int)uVar4) {
-                    FUN_1812fa020(lVar1,DAT_181d8e630);
-                    goto LAB_180c985bd;
+                    FUN_18115d8f0(lVar1,DAT_181e707f0);
+                    goto LAB_180a1a21d;
                   }
                   if (lVar1 == null) break;
                   if (lVar1.Count <= uVar4) {
@@ -125,12 +125,12 @@ public class InfoController
             iVar3 = 0;
             do {
               if (lVar1.Count <= iVar3) {
-                FUN_1812fa020(lVar1,DAT_181d935a0);
-                goto LAB_180c98546;
+                FUN_18115d8f0(lVar1,DAT_181e757f0);
+                goto LAB_180a1a1a6;
               }
-              lVar1 = FUN_18046c0a0(0);
+              lVar1 = FUN_1802106e0(0);
               if ((this.newMailDatas == null) ||
-                 (uVar2 = FUN_180002f80(this.newMailDatas,iVar3,DAT_181d93820), lVar1 == null))
+                 (uVar2 = FUN_1800024b0(this.newMailDatas,iVar3,DAT_181e75a70), lVar1 == null))
               break;
               GameController.GetNewMail(lVar1,uVar2,0,0);
               lVar1 = this.newMailDatas;
@@ -140,8 +140,8 @@ public class InfoController
         }
     }
 
-    // Token : 0x6001858
-    // RVA   : 0xC97170   Offset: 0xC96570   Length: 0x1BF
+    // Token : 0x60018D4
+    // RVA   : 0xA18DD0   Offset: 0xA17BD0   Length: 0x1BF
     public void AddInfoTab(string infoText, string atlasName, string infoPic, string soundName, float volumn, float lastTime, Color picColor)
     {
         void InfoController.AddInfoTab
@@ -164,7 +164,7 @@ public class InfoController
         uint32 uStack_20;
         uint32 uStack_1c;
         lVar1 = this.newInfoTabDatas;
-        lVar2 = il2cpp_internal(DAT_181d7f7c0);
+        lVar2 = il2cpp_internal(DAT_181e5fb70);
         *(uint64 *)(lVar2 + 24) = "UIAtlas";
         *(uint64 *)(lVar2 + 56) = "Woosh";
         *(uint32 *)(lVar2 + 64) = 0x3f800000;
@@ -184,7 +184,7 @@ public class InfoController
         *(uint32 *)(lVar2 + 48) = uVar5;
         *(uint32 *)(lVar2 + 52) = uVar6;
         if (infoPic != null) {
-          puVar3 = (uint32 *)FUN_180d995f0(&local_28,0);
+          puVar3 = (uint32 *)FUN_180af4e90(&local_28,0);
           local_28 = *picColor;
           uStack_24 = picColor[1];
           uStack_20 = picColor[2];
@@ -195,7 +195,7 @@ public class InfoController
           uStack_2c = puVar3[3];
           cVar7 = Color.op_Equality(&local_28,&local_38,0);
           if (cVar7) {
-            puVar3 = (uint32 *)FUN_1810d3b80(&local_28,0);
+            puVar3 = (uint32 *)FUN_180f24d00(&local_28,0);
             uVar4 = puVar3[1];
             uVar5 = puVar3[2];
             uVar6 = puVar3[3];
@@ -206,16 +206,16 @@ public class InfoController
           }
         }
         if (lVar1 != null) {
-          FUN_18181e6b0(lVar1,lVar2,DAT_181d8e8b0);
+          FUN_18175de30(lVar1,lVar2,DAT_181e70a70);
           return;
         }
     }
 
-    // Token : 0x6001859
-    // RVA   : 0xC97890   Offset: 0xC96C90   Length: 0x7AF
+    // Token : 0x60018D5
+    // RVA   : 0xA194F0   Offset: 0xA182F0   Length: 0x7AF
     public void RealAddInfoTab(InfoTabData newInfoTab)
     {
-        var pStatics_b4a8 = *(int64*)(DAT_181dab4a8 + 184);
+        var pStatics_b8e8 = *(int64*)(DAT_181e8b8e8 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -259,7 +259,7 @@ public class InfoController
                 if (lVar3 != null) {
                   lVar3 = Transform.Find(lVar3,"Text",0);
                   if (lVar3 != null) {
-                    uVar4 = Component.GetComponent(lVar3,DAT_181d96178);
+                    uVar4 = Component.GetComponent(lVar3,DAT_181e79538);
                     if (newInfoTab != null) {
                       uVar5 = *(uint64 *)(newInfoTab + 16);
                       uVar5 = GlobalData.ReplaceSpeString(uVar5,0xffffffff);
@@ -289,7 +289,7 @@ public class InfoController
                               local_48 = (uint32)*puVar6;
                               uStack_44 = (uint32)((uint64)*puVar6 >> 32);
                               uVar4 = ShortcutExtensions.DOLocalMove(uVar4,&local_48,0x3e800000,0,0);
-                              TweenSettingsExtensions.SetEase(uVar4,15,DAT_181dc1128);
+                              TweenSettingsExtensions.SetEase(uVar4,15,DAT_181ea4b88);
                               if (*(int64 *)(newInfoTab + 32) != 0) {
                                 lVar3 = GameObject.get_transform(lVar2,0);
                                 if (lVar3 == null) throw; // [null/range check failed]
@@ -306,10 +306,10 @@ public class InfoController
                                 if (lVar3 == null) throw; // [null/range check failed]
                                 lVar3 = Transform.Find(lVar3,"Pic",0);
                                 if (lVar3 == null) throw; // [null/range check failed]
-                                lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
-                                if (*pStatics_b4a8 == 0) throw; // [null/range check failed]
+                                lVar3 = Component.GetComponent(lVar3,DAT_181e777b8);
+                                if (*pStatics_b8e8 == 0) throw; // [null/range check failed]
                                 uVar4 = TextureController.LoadAtlasSprite
-                                                  (*pStatics_b4a8,
+                                                  (*pStatics_b8e8,
                                                    *(uint64 *)(newInfoTab + 24),
                                                    *(uint64 *)(newInfoTab + 32),0);
                                 if (lVar3 == null) throw; // [null/range check failed]
@@ -320,7 +320,7 @@ public class InfoController
                                 if (lVar3 == null) throw; // [null/range check failed]
                                 lVar3 = Transform.Find(lVar3,"Pic",0);
                                 if (lVar3 == null) throw; // [null/range check failed]
-                                plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+                                plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181e777b8);
                                 if (plVar7 == (int64 *)0) throw; // [null/range check failed]
                                 (**(code **)(*plVar7 + 0x408))(plVar7,*(uint64 *)(*plVar7 + 0x410));
                                 lVar3 = GameObject.get_transform(lVar2,0);
@@ -329,7 +329,7 @@ public class InfoController
                                 if (lVar3 == null) throw; // [null/range check failed]
                                 lVar3 = Transform.Find(lVar3,"Pic",0);
                                 if (lVar3 == null) throw; // [null/range check failed]
-                                lVar3 = Component.GetComponent(lVar3,DAT_181d94f78);
+                                lVar3 = Component.GetComponent(lVar3,DAT_181e782b8);
                                 if (lVar3 == null) throw; // [null/range check failed]
                                 uVar4 = RectTransform.get_sizeDelta(lVar3,0);
                                 lVar8 = GameObject.get_transform(lVar2,0);
@@ -338,12 +338,12 @@ public class InfoController
                                 if (lVar8 == null) throw; // [null/range check failed]
                                 lVar8 = Transform.Find(lVar8,"Pic",0);
                                 if (lVar8 == null) throw; // [null/range check failed]
-                                lVar8 = Component.GetComponent(lVar8,DAT_181d94f78);
+                                lVar8 = Component.GetComponent(lVar8,DAT_181e782b8);
                                 if (lVar8 == null) throw; // [null/range check failed]
                                 puVar6 = (uint64 *)RectTransform.get_rect(&local_38,lVar8,0);
                                 local_28 = *puVar6;
                                 uStack_20 = puVar6[1];
-                                fVar11 = (float)FUN_18044e2b0(&local_28,0);
+                                fVar11 = (float)FUN_180af4db0(&local_28,0);
                                 fStackX_24 = (float)((uint64)uVar4 >> 32);
                                 local_res20 = (float)uVar4;
                                 RectTransform.set_sizeDelta
@@ -355,7 +355,7 @@ public class InfoController
                                 if (lVar3 == null) throw; // [null/range check failed]
                                 lVar3 = Transform.Find(lVar3,"Pic",0);
                                 if (lVar3 == null) throw; // [null/range check failed]
-                                plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+                                plVar7 = (int64 *)Component.GetComponent(lVar3,DAT_181e777b8);
                                 if (plVar7 == (int64 *)0) throw; // [null/range check failed]
                                 local_38 = *(uint32 *)(newInfoTab + 40);
                                 uStack_34 = *(uint32 *)(newInfoTab + 44);
@@ -364,14 +364,14 @@ public class InfoController
                                 (**(code **)(*plVar7 + 0x2a8))
                                           (plVar7,&local_38,*(uint64 *)(*plVar7 + 0x2b0));
                               }
-                              lVar2 = GameObject.GetComponent(lVar2,DAT_181d73228);
+                              lVar2 = GameObject.GetComponent(lVar2,DAT_181e562f0);
                               if (lVar2 != null) {
                                 *(uint32 *)(lVar2 + 24) = *(uint32 *)(newInfoTab + 68);
                                 uVar4 = String.Concat("Sound/SoundEffect/",*(uint64 *)(newInfoTab + 56),0);
                                 plVar7 = (int64 *)Resources.Load(uVar4,0);
                                 uVar10 = *(uint32 *)(newInfoTab + 64);
                                 plVar9 = (int64 *)0;
-                                if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181daf360)) {
+                                if ((plVar7 != (int64 *)0) && (*plVar7 == DAT_181e8f4a0)) {
                                   plVar9 = plVar7;
                                 }
                                 NGUITools.PlaySound(plVar9,uVar10,0);
@@ -390,28 +390,28 @@ public class InfoController
         }
     }
 
-    // Token : 0x600185A
-    // RVA   : 0xC97390   Offset: 0xC96790   Length: 0x202
+    // Token : 0x60018D6
+    // RVA   : 0xA18FF0   Offset: 0xA17DF0   Length: 0x202
     public void AddInfo(InfoType type, string text)
     {
         if (this.newInfoDatas != null) {
-          FUN_18181e6b0(this.newInfoDatas,type,DAT_181d8e5b0);
+          FUN_18175de30(this.newInfoDatas,type,DAT_181e70770);
           return;
         }
     }
 
-    // Token : 0x600185B
-    // RVA   : 0xC97330   Offset: 0xC96730   Length: 0x53
+    // Token : 0x60018D7
+    // RVA   : 0xA18F90   Offset: 0xA17D90   Length: 0x53
     public void AddInfo(InfoData newInfo)
     {
         if (this.newInfoDatas != null) {
-          FUN_18181e6b0(this.newInfoDatas,newInfo,DAT_181d8e5b0);
+          FUN_18175de30(this.newInfoDatas,newInfo,DAT_181e70770);
           return;
         }
     }
 
-    // Token : 0x600185C
-    // RVA   : 0xC98040   Offset: 0xC97440   Length: 0x397
+    // Token : 0x60018D8
+    // RVA   : 0xA19CA0   Offset: 0xA18AA0   Length: 0x397
     public void RealAddInfo(InfoData newInfo)
     {
         int iVar1;
@@ -423,18 +423,18 @@ public class InfoController
               (lVar4 = GameController._instance.worldData) == null) ||
              (lVar4 = lVar4.infos) == null) throw; // [null/range check failed]
           iVar1 = lVar4.cityAreaID;
-          if (iVar1 < **(int **)(DAT_181d7f840 + 184)) break;
-          lVar4 = FUN_18046c0a0(0);
+          if (iVar1 < **(int **)(DAT_181e5fbf8 + 184)) break;
+          lVar4 = FUN_1802106e0(0);
           if (((lVar4 == null) || (lVar4.villageAreaID == null)) ||
              (lVar4 = *(int64 *)(lVar4.villageAreaID + 208)) == null) throw; // [null/range check failed]
-          FUN_181823ba0(lVar4,0,DAT_181d8e6b0);
+          FUN_181763390(lVar4,0,DAT_181e70870);
         }
         if (((GameController._instance != null) &&
             (lVar4 = GameController._instance.worldData) != null) &&
            (lVar4 = lVar4.infos) != null) {
-          FUN_18181e6b0(lVar4,newInfo,DAT_181d8e5b0);
+          FUN_18175de30(lVar4,newInfo,DAT_181e70770);
           if (this.infoText != null) {
-            lVar4 = GameObject.GetComponent(this.infoText,DAT_181d71f08);
+            lVar4 = GameObject.GetComponent(this.infoText,DAT_181e54fd0);
             if ((GameController._instance != null) &&
                (lVar2 = GameController._instance.worldData) != null) {
               lVar2 = lVar2.infos;
@@ -458,29 +458,29 @@ public class InfoController
         }
     }
 
-    // Token : 0x600185D
-    // RVA   : 0xC975A0   Offset: 0xC969A0   Length: 0x53
+    // Token : 0x60018D9
+    // RVA   : 0xA19200   Offset: 0xA18000   Length: 0x53
     public void AddMail(MailData newMail)
     {
         if (this.newMailDatas != null) {
-          FUN_18181e6b0(this.newMailDatas,newMail,DAT_181d93520);
+          FUN_18175de30(this.newMailDatas,newMail,DAT_181e75770);
           return;
         }
     }
 
-    // Token : 0x600185E
-    // RVA   : 0xC97650   Offset: 0xC96A50   Length: 0x237
+    // Token : 0x60018DA
+    // RVA   : 0xA192B0   Offset: 0xA180B0   Length: 0x237
     public void BuildInfoList()
     {
         long lVar1;
         long lVar2;
         int iVar3;
         if (this.infoText != null) {
-          lVar1 = GameObject.GetComponent(this.infoText,DAT_181d71f08);
+          lVar1 = GameObject.GetComponent(this.infoText,DAT_181e54fd0);
           if (lVar1 != null) {
             lVar1 = InfoTextList.get_paragraphs(lVar1,0);
             if (lVar1 != null) {
-              BetterList_1.Clear(lVar1,DAT_181da76d0);
+              BetterList_1.Clear(lVar1,DAT_181e88090);
               iVar3 = 0;
               while( true ) {
                 if (((GameController._instance == null) ||
@@ -489,19 +489,19 @@ public class InfoController
                 lVar2 = this.infoText;
                 if (lVar1.cityAreaID <= iVar3) break;
                 if (lVar2 == null) throw; // [null/range check failed]
-                lVar1 = GameObject.GetComponent(lVar2,DAT_181d71f08);
-                lVar2 = FUN_18046c0a0(0);
+                lVar1 = GameObject.GetComponent(lVar2,DAT_181e54fd0);
+                lVar2 = FUN_1802106e0(0);
                 if (((lVar2 == null) || (*(int64 *)(lVar2 + 32) == 0)) ||
                    (lVar2 = *(int64 *)(*(int64 *)(lVar2 + 32) + 208)) == null)
                 throw; // [null/range check failed]
-                lVar2 = FUN_180002f80(lVar2,iVar3,DAT_181d8e7b0);
+                lVar2 = FUN_1800024b0(lVar2,iVar3,DAT_181e70970);
                 if ((lVar1 == null) || (lVar2 == null)) throw; // [null/range check failed]
                 InfoTextList.Add(lVar1,*(uint32 *)(lVar2 + 16),*(uint64 *)(lVar2 + 24),
                                   *(uint64 *)(lVar2 + 32),1,0);
                 iVar3 = iVar3 + 1;
               }
               if (lVar2 != null) {
-                lVar1 = GameObject.GetComponent(lVar2,DAT_181d71f08);
+                lVar1 = GameObject.GetComponent(lVar2,DAT_181e54fd0);
                 if (lVar1 != null) {
                   lVar1.Forces = 1;
                   return;
@@ -512,21 +512,21 @@ public class InfoController
         }
     }
 
-    // Token : 0x600185F
-    // RVA   : 0xC98650   Offset: 0xC97A50   Length: 0x100
+    // Token : 0x60018DB
+    // RVA   : 0xA1A2B0   Offset: 0xA190B0   Length: 0x100
     public void /*ctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d94868);
-        FUN_181330100(uVar1,DAT_181d934a0);
+        uVar1 = il2cpp_internal(DAT_181e74838);
+        FUN_1810f3480(uVar1,DAT_181e756f0);
         this.newMailDatas = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93ae8);
-        FUN_181330100(uVar1,DAT_181d8e530);
+        uVar1 = il2cpp_internal(DAT_181e73ab8);
+        FUN_1810f3480(uVar1,DAT_181e706f0);
         this.newInfoDatas = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93b68);
-        FUN_181330100(uVar1,DAT_181d8e830);
+        uVar1 = il2cpp_internal(DAT_181e73b38);
+        FUN_1810f3480(uVar1,DAT_181e709f0);
         this.newInfoTabDatas = uVar1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

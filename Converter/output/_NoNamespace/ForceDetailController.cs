@@ -1,78 +1,78 @@
 // ============================================================
 // Type  : ForceDetailController
-// Token : 0x2000289
+// Token : 0x2000291
 // ============================================================
 
 public class ForceDetailController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001466
+    // Token: 0x40014A9
     public GameObject forceDetailPanel;
 
-    // Token: 0x4001467
+    // Token: 0x40014AA
     public GameObject forceDetailTabGrid;
 
-    // Token: 0x4001468
+    // Token: 0x40014AB
     public GameObject forceDetailTabPrefab;
 
-    // Token: 0x4001469
+    // Token: 0x40014AC
     public GameObject forceDetail;
 
-    // Token: 0x400146A
+    // Token: 0x40014AD
     public GameObject forceSkillGrid;
 
-    // Token: 0x400146B
+    // Token: 0x40014AE
     public GameObject forceHeroGrid;
 
-    // Token: 0x400146C
+    // Token: 0x40014AF
     public int nowShowForceID;
 
-    // Token: 0x400146D
+    // Token: 0x40014B0
     public Text baseDetailText;
 
-    // Token: 0x400146E
+    // Token: 0x40014B1
     public Text areaText;
 
-    // Token: 0x400146F
+    // Token: 0x40014B2
     public Text detailText;
 
-    // Token: 0x4001470
+    // Token: 0x40014B3
     public Text favorText;
 
-    // Token: 0x4001471
+    // Token: 0x40014B4
     public bool inited;
 
-    // Token: 0x4001472
+    // Token: 0x40014B5
     private static ForceDetailController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60014A4
-    // RVA   : 0xB3C980   Offset: 0xB3BD80   Length: 0x36
+    // Token : 0x6001510
+    // RVA   : 0x8FE360   Offset: 0x8FD160   Length: 0x36
     public static ForceDetailController get_Instance()
     {
-        return **(uint64 **)(DAT_181dc7d18 + 184);
+        return **(uint64 **)(DAT_181e50a28 + 184);
     }
 
-    // Token : 0x60014A5
-    // RVA   : 0xB392F0   Offset: 0xB386F0   Length: 0xD7
+    // Token : 0x6001511
+    // RVA   : 0x8FACD0   Offset: 0x8F9AD0   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181dc7d18 + 184);
+        uVar3 = **(uint64 **)(DAT_181e50a28 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181dc7d18 + 184);
+        puVar1 = *(uint64 **)(DAT_181e50a28 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60014A6
-    // RVA   : 0xB39570   Offset: 0xB38970   Length: 0x434
+    // Token : 0x6001512
+    // RVA   : 0x8FAF50   Offset: 0x8F9D50   Length: 0x434
     public void InitForceDetailTab()
     {
         ulong uVar1;
@@ -99,9 +99,9 @@ public class ForceDetailController
             (lVar6 = GameController._instance.worldData) == null) ||
            (lVar6 = lVar6.Forces) == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        FUN_1817eba30(&local_38,lVar6,DAT_181d88038);
+        FUN_1816629a0(&local_38,lVar6,DAT_181e6a378);
         local_20 = local_38;
         uStack_1c = uStack_34;
         uStack_18 = uStack_30;
@@ -110,10 +110,10 @@ public class ForceDetailController
         while( true ) {
           do {
             do {
-              cVar2 = FUN_180c75510(&local_20,DAT_181d8c600);
+              cVar2 = FUN_1807b3f30(&local_20,DAT_181e6e0c0);
               lVar6 = local_10;
               if (!cVar2) {
-                ZhSegment.Initialize(&local_20,DAT_181d8c580);
+                ZhSegment.Initialize(&local_20,DAT_181e6e040);
                 return;
               }
               uVar4 = this.forceDetailTabGrid;
@@ -121,58 +121,58 @@ public class ForceDetailController
               lVar3 = GlobalData.AddChild(uVar4,uVar1,0);
               if (lVar6 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar4 = Int32.ToString(lVar6 + 16,0);
               if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               Object.set_name(lVar3,uVar4);
-              lVar5 = GameObject.GetComponent(lVar3,DAT_181d71710);
+              lVar5 = GameObject.GetComponent(lVar3,DAT_181e547d8);
               if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               *(uint32 *)(lVar5 + 24) = lVar6.chapter;
             } while (PlotController.fightSkillIndexCache != 1);
             lVar5 = PlotController.LeftFaceHideOffset;
             if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            cVar2 = FUN_18182a9b0(lVar5,lVar6.chapter);
+            cVar2 = FUN_18176a2d0(lVar5,lVar6.chapter);
           } while (cVar2);
-          lVar6 = GameObject.GetComponent(lVar3,DAT_181dc7c18);
+          lVar6 = GameObject.GetComponent(lVar3,DAT_181e53cb0);
           if (lVar6 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           Selectable.set_interactable(lVar6,0,0);
           lVar6 = GameObject.get_transform(lVar3,0);
           if (lVar6 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar6 = Transform.Find(lVar6,"Name",0);
           if (lVar6 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          uVar4 = Component.GetComponent(lVar6,DAT_181d96178);
+          uVar4 = Component.GetComponent(lVar6,DAT_181e79538);
           LTLocalization.SetText(uVar4,"???",0);
           lVar6 = GameObject.get_transform(lVar3,0);
           if (lVar6 == null) break;
           lVar6 = Transform.Find(lVar6,"Icon",0);
           if (lVar6 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          plVar7 = (int64 *)Component.GetComponent(lVar6,DAT_181d94478);
+          plVar7 = (int64 *)Component.GetComponent(lVar6,DAT_181e777b8);
           puVar8 = (uint32 *)Color.get_black(&local_38,0);
           if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           local_48 = *puVar8;
           uStack_44 = puVar8[1];
@@ -182,8 +182,8 @@ public class ForceDetailController
         }
     }
 
-    // Token : 0x60014A7
-    // RVA   : 0xB39CD0   Offset: 0xB390D0   Length: 0xBF7
+    // Token : 0x6001513
+    // RVA   : 0x8FB6B0   Offset: 0x8FA4B0   Length: 0xBF7
     public void RefreshForceDetailTab()
     {
         bool cVar1;
@@ -213,53 +213,53 @@ public class ForceDetailController
             (lVar8 = GameController._instance.worldData) == null) ||
            (lVar8 = lVar8.Forces) == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        FUN_1817eba30(&local_68,lVar8,DAT_181d88038);
+        FUN_1816629a0(&local_68,lVar8,DAT_181e6a378);
         local_50 = local_68;
         uStack_4c = uStack_64;
         uStack_48 = uStack_60;
         uStack_44 = uStack_5c;
         local_40 = local_58;
-        LAB_180b39e80:
+        LAB_1808fb860:
         do {
-          cVar1 = FUN_180c75510(&local_50,DAT_181d8c600);
+          cVar1 = FUN_1807b3f30(&local_50,DAT_181e6e0c0);
           lVar8 = local_40;
           if (!cVar1) {
-            ZhSegment.Initialize(&local_50,DAT_181d8c580);
+            ZhSegment.Initialize(&local_50,DAT_181e6e040);
             return;
           }
           if (this.forceDetailTabGrid == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar2 = GameObject.get_transform(this.forceDetailTabGrid,0);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar3 = Int32.ToString(lVar8 + 16,0);
           if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar2 = Transform.Find(lVar2,uVar3,0);
           if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = Component.get_transform(lVar2,0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = Transform.Find(lVar4,"Name",0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          uVar3 = Component.GetComponent(lVar4,DAT_181d96178);
-          cVar1 = FUN_180d75bc0(lVar8.totalBadFame,0);
+          uVar3 = Component.GetComponent(lVar4,DAT_181e79538);
+          cVar1 = FUN_180ad1200(lVar8.totalBadFame,0);
           if (!cVar1) {
             uVar7 = lVar8.totalBadFame;
           }
@@ -270,201 +270,201 @@ public class ForceDetailController
           lVar4 = Component.get_transform(lVar2,0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = Transform.Find(lVar4,"Icon",0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          lVar4 = Component.GetComponent(lVar4,DAT_181d94478);
+          lVar4 = Component.GetComponent(lVar4,DAT_181e777b8);
           uVar3 = ForceData.GetForceIcon(lVar8,0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           Image.set_sprite(lVar4,uVar3);
-          lVar4 = FUN_18046c0a0(0);
+          lVar4 = FUN_1802106e0(0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int *)(lVar4 + 132) == lVar8.chapter) {
             lVar4 = Transform.Find(lVar2,"SelfForce",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = Component.get_gameObject(lVar4,0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             cVar1 = GameObject.get_activeSelf(lVar4,0);
             if (!cVar1) {
               lVar4 = Transform.Find(lVar2,"SelfForce",0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar4 = Component.get_gameObject(lVar4,0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar3 = 1;
-              goto LAB_180b3a0a2;
+              goto LAB_1808fba82;
             }
           }
           else {
             lVar4 = Transform.Find(lVar2,"SelfForce",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = Component.get_gameObject(lVar4,0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             cVar1 = GameObject.get_activeSelf(lVar4,0);
             if (cVar1) {
               lVar4 = Transform.Find(lVar2,"SelfForce",0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar4 = Component.get_gameObject(lVar4,0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar3 = 0;
-        LAB_180b3a0a2:
+        LAB_1808fba82:
               GameObject.SetActive(lVar4,uVar3);
             }
           }
-          lVar4 = FUN_18046c0a0(0);
+          lVar4 = FUN_1802106e0(0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           cVar1 = HeroData.HaveForce(lVar4,0);
           if (!cVar1) {
-        LAB_180b3a626:
+        LAB_1808fc006:
             lVar4 = Transform.Find(lVar2,"Favor",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = Component.get_gameObject(lVar4,0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             cVar1 = GameObject.get_activeSelf(lVar4,0);
             if (cVar1) {
               lVar4 = Transform.Find(lVar2,"Favor",0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar4 = Component.get_gameObject(lVar4,0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               GameObject.SetActive(lVar4,0);
             }
           }
           else {
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            if (*(int *)(lVar4 + 132) == lVar8.chapter) goto LAB_180b3a626;
+            if (*(int *)(lVar4 + 132) == lVar8.chapter) goto LAB_1808fc006;
             lVar4 = Transform.Find(lVar2,"Favor",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = Component.get_gameObject(lVar4,0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             cVar1 = GameObject.get_activeSelf(lVar4,0);
             if (!cVar1) {
               lVar4 = Transform.Find(lVar2,"Favor",0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar4 = Component.get_gameObject(lVar4,0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               GameObject.SetActive(lVar4,1,0);
             }
             lVar4 = Transform.Find(lVar2,"Favor",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = Transform.Find(lVar4,"Icon",0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181d94478);
-            lVar4 = FUN_18046c0a0(0);
+            plVar5 = (int64 *)Component.GetComponent(lVar4,DAT_181e777b8);
+            lVar4 = FUN_1802106e0(0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             ForceData.GetForceFavor(lVar8,*(uint32 *)(lVar4 + 132),0);
             puVar6 = (uint32 *)GlobalData.GetForceFavorLvColor(&local_68);
             if (plVar5 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             local_78 = *puVar6;
             uStack_74 = puVar6[1];
@@ -474,149 +474,149 @@ public class ForceDetailController
             lVar4 = Transform.Find(lVar2,"Favor");
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = Transform.Find(lVar4,"Text");
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            uVar3 = Component.GetComponent(lVar4,DAT_181d96178);
-            lVar4 = FUN_18046c0a0(0);
+            uVar3 = Component.GetComponent(lVar4,DAT_181e79538);
+            lVar4 = FUN_1802106e0(0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             fVar9 = (float)ForceData.GetForceFavor(lVar8,*(uint32 *)(lVar4 + 132));
             local_res18[0] = (int)fVar9;
             uVar7 = Int32.ToString(local_res18,0);
             LTLocalization.SetText(uVar3,uVar7);
           }
-          lVar4 = FUN_18046c0a0(0);
+          lVar4 = FUN_1802106e0(0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
           if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           cVar1 = HeroData.HaveForce(lVar4,0);
           if (cVar1) {
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
             if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if (*(int *)(lVar4 + 132) != lVar8.chapter) {
-              lVar4 = FUN_18046c0a0(0);
+              lVar4 = FUN_1802106e0(0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (*(int64 *)(lVar4 + 32) == 0) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar4 = HeroData.GetForce(lVar4,0,0);
               if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               lVar8 = ForceData.GetForceRelationshipText(lVar4,lVar8.chapter,1,0);
               if (lVar8 != null) {
                 lVar4 = Transform.Find(lVar2,"Relation");
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 lVar4 = Component.get_gameObject(lVar4,0);
                 if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 cVar1 = GameObject.get_activeSelf(lVar4,0);
                 if (!cVar1) {
                   lVar4 = Transform.Find(lVar2,"Relation");
                   if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   lVar4 = Component.get_gameObject(lVar4,0);
                   if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   GameObject.SetActive(lVar4,1);
                 }
                 lVar2 = Transform.Find(lVar2,"Relation");
                 if (lVar2 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
-                uVar3 = Component.GetComponent(lVar2,DAT_181d96178);
+                uVar3 = Component.GetComponent(lVar2,DAT_181e79538);
                 LTLocalization.SetText(uVar3,lVar8);
-                goto LAB_180b39e80;
+                goto LAB_1808fb860;
               }
             }
           }
           lVar8 = Transform.Find(lVar2,"Relation");
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar8 = Component.get_gameObject(lVar8,0);
           if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           cVar1 = GameObject.get_activeSelf(lVar8,0);
           if (cVar1) {
             lVar8 = Transform.Find(lVar2,"Relation");
             if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar8 = Component.get_gameObject(lVar8,0);
             if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             GameObject.SetActive(lVar8,0);
           }
         } while( true );
     }
 
-    // Token : 0x60014A8
-    // RVA   : 0xB399B0   Offset: 0xB38DB0   Length: 0x315
+    // Token : 0x6001514
+    // RVA   : 0x8FB390   Offset: 0x8FA190   Length: 0x315
     public void OpenForceDetail()
     {
         long lVar1;
@@ -636,13 +636,13 @@ public class ForceDetailController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
+                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
                 if (this.forceDetailPanel != null) {
                   lVar1 = GameObject.get_transform(this.forceDetailPanel,0);
                   if (lVar1 != null) {
                     lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                     if (lVar1 != null) {
-                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181d94478);
+                      plVar3 = (int64 *)Component.GetComponent(lVar1,DAT_181e777b8);
                       if (plVar3 != (int64 *)0) {
                         puVar4 = (uint64 *)
                                  (**(code **)(*plVar3 + 0x298))
@@ -660,9 +660,9 @@ public class ForceDetailController
                             if (lVar1 != null) {
                               lVar1 = Transform.Find(lVar1,"BlackBackground",0);
                               if (lVar1 != null) {
-                                uVar5 = Component.GetComponent(lVar1,DAT_181d94478);
+                                uVar5 = Component.GetComponent(lVar1,DAT_181e777b8);
                                 uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f000000,0x3e800000,0);
-                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1dc8);
+                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea5848);
                                 if (this.forceDetailPanel != null) {
                                   lVar1 = GameObject.get_transform(this.forceDetailPanel,0);
                                   if (lVar1 != null) {
@@ -678,7 +678,7 @@ public class ForceDetailController
                                           uVar5 = Transform.Find(lVar1,"ForceDetailRoot",0);
                                           uVar5 = ShortcutExtensions.DOScaleX
                                                             (uVar5,0x3f800000,0x3e800000,0);
-                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
+                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea59e0);
                                           if (this.forceDetail != null) {
                                             GameObject.SetActive(this.forceDetail,0,0);
                                             this.nowShowForceID = 0xffffffff;
@@ -704,8 +704,8 @@ public class ForceDetailController
         }
     }
 
-    // Token : 0x60014A9
-    // RVA   : 0xB393D0   Offset: 0xB387D0   Length: 0x194
+    // Token : 0x6001515
+    // RVA   : 0x8FADB0   Offset: 0x8F9BB0   Length: 0x194
     public void HideForceDetail()
     {
         long lVar1;
@@ -716,17 +716,17 @@ public class ForceDetailController
           if (lVar1 != null) {
             lVar1 = Transform.Find(lVar1,"BlackBackground",0);
             if (lVar1 != null) {
-              uVar2 = Component.GetComponent(lVar1,DAT_181d94478);
+              uVar2 = Component.GetComponent(lVar1,DAT_181e777b8);
               uVar2 = DOTweenModuleUI.DOFade(uVar2,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1dc8);
+              TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181ea5848);
               if (this.forceDetailPanel != null) {
                 lVar1 = GameObject.get_transform(this.forceDetailPanel,0);
                 if (lVar1 != null) {
                   uVar2 = Transform.Find(lVar1,"ForceDetailRoot",0);
                   uVar2 = ShortcutExtensions.DOScaleX(uVar2,0,0x3e4ccccd,0);
-                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181dc1f60);
-                  uVar3 = new OnTooltipCB(this,DAT_181dc1180,0);
-                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181dc0380);
+                  uVar2 = TweenSettingsExtensions.SetUpdate(uVar2,1,DAT_181ea59e0);
+                  uVar3 = new OnTooltipCB(this,DAT_181ea4938,0);
+                  TweenSettingsExtensions.OnComplete(uVar2,uVar3,DAT_181ea3dc0);
                   return;
                 }
               }
@@ -735,8 +735,8 @@ public class ForceDetailController
         }
     }
 
-    // Token : 0x60014AA
-    // RVA   : 0xB3AAF0   Offset: 0xB39EF0   Length: 0x37
+    // Token : 0x6001516
+    // RVA   : 0x8FC4D0   Offset: 0x8FB2D0   Length: 0x37
     public void ResetForceDetail()
     {
         if (this.forceDetail != null) {
@@ -747,8 +747,8 @@ public class ForceDetailController
         }
     }
 
-    // Token : 0x60014AB
-    // RVA   : 0xB3A8D0   Offset: 0xB39CD0   Length: 0x21B
+    // Token : 0x6001517
+    // RVA   : 0x8FC2B0   Offset: 0x8FB0B0   Length: 0x21B
     public void RefreshForceTab()
     {
         long lVar1;
@@ -767,20 +767,20 @@ public class ForceDetailController
             if ((((this.forceDetailTabGrid == null) ||
                  (lVar3 = GameObject.get_transform(this.forceDetailTabGrid,0)) == null) ||
                 (lVar3 = Transform.GetChild(lVar3,iVar5,0)) == null) ||
-               (lVar3 = Component.GetComponent(lVar3,DAT_181d93ef8)) == null) break;
+               (lVar3 = Component.GetComponent(lVar3,DAT_181e77238)) == null) break;
             lVar1 = this.forceDetailTabGrid;
             if (*(int *)(lVar3 + 24) == this.nowShowForceID) {
               if (((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
                  (lVar3 = Transform.GetChild(lVar3,iVar5,0)) == null) break;
-              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181e777b8);
               if (plVar4 == (int64 *)0) break;
               (**(code **)(*plVar4 + 0x2a8))(plVar4);
             }
             else {
               if (((lVar1 == null) || (lVar3 = GameObject.get_transform(lVar1,0)) == null) ||
                  (lVar3 = Transform.GetChild(lVar3,iVar5,0)) == null) break;
-              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
-              FUN_1810d3b80(local_18,0);
+              plVar4 = (int64 *)Component.GetComponent(lVar3,DAT_181e777b8);
+              FUN_180f24d00(local_18,0);
               if (plVar4 == (int64 *)0) break;
               (**(code **)(*plVar4 + 0x2a8))(plVar4);
             }
@@ -791,13 +791,13 @@ public class ForceDetailController
         }
     }
 
-    // Token : 0x60014AC
-    // RVA   : 0xB3AB30   Offset: 0xB39F30   Length: 0x1E49
+    // Token : 0x6001518
+    // RVA   : 0x8FC510   Offset: 0x8FB310   Length: 0x1E49
     public void ShowForceDetail(int targetForceID)
     {
         var plVar4 = lVar4.forceMeetingStarted;
-        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_2a90 = *(int64*)(DAT_181e52a90 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         bool cVar2;
         uint uVar3;
@@ -844,8 +844,8 @@ public class ForceDetailController
             if ((this.forceDetail != null) &&
                (((lVar5 = GameObject.get_transform(this.forceDetail,0), lVar5 != null &&
                  (lVar5 = Transform.Find(lVar5,"ForceName")) != null) &&
-                (uVar6 = Component.GetComponent(lVar5,DAT_181d96178), lVar4 != null)))) {
-              cVar2 = FUN_180d75bc0(lVar4.totalBadFame,0);
+                (uVar6 = Component.GetComponent(lVar5,DAT_181e79538), lVar4 != null)))) {
+              cVar2 = FUN_180ad1200(lVar4.totalBadFame,0);
               if (!cVar2) {
                 uVar9 = lVar4.totalBadFame;
               }
@@ -854,20 +854,20 @@ public class ForceDetailController
               }
               LTLocalization.SetText(uVar6,uVar9);
               uVar6 = this.baseDetailText;
-              plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,5);
+              plVar7 = (int64 *)FUN_1801dfd90(DAT_181e85e38,5);
               if (plVar7 != (int64 *)0) {
                 if (("等级 " != 0) &&
                    (lVar5 = il2cpp_internal("等级 ",*(uint64 *)(*plVar7 + 64)), lVar5 == null
                    )) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 lVar5 = "等级 ";
                 if ((int)plVar7[3] == 0) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar7[4] = "等级 ";
                 il2cpp_internal(plVar7 + 4,lVar5);
@@ -877,12 +877,12 @@ public class ForceDetailController
                    (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 if (*(uint32 *)(plVar7 + 3) < 2) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar7[5] = lVar5;
                 il2cpp_internal(plVar7 + 5,lVar5);
@@ -891,13 +891,13 @@ public class ForceDetailController
                    )) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 lVar5 = "\n风格 ";
                 if (*(uint32 *)(plVar7 + 3) < 3) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar7[6] = "\n风格 ";
                 il2cpp_internal(plVar7 + 6,lVar5);
@@ -906,12 +906,12 @@ public class ForceDetailController
                    (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 if (*(uint32 *)(plVar7 + 3) < 4) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar7[7] = lVar5;
                 il2cpp_internal(plVar7 + 7,lVar5);
@@ -920,13 +920,13 @@ public class ForceDetailController
                    )) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 lVar5 = "\n专长 ";
                 if (*(uint32 *)(plVar7 + 3) < 5) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar7[8] = "\n专长 ";
                 il2cpp_internal(plVar7 + 8,lVar5);
@@ -941,21 +941,21 @@ public class ForceDetailController
                     LTLocalization.AddText(uVar6,lVar8,0);
                     uVar16 = 0;
                     uVar15 = uVar16;
-                    goto LAB_180b3b210;
+                    goto LAB_1808fcbf0;
                   }
                   lVar12 = "/";
                   if (iVar14 == 0) {
                     lVar12 = "";
                   }
-                  if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) &&
-                     (*(int *)(DAT_181d73d40 + 224) == 0)) {
-                    il2cpp_runtime_class_init(DAT_181d73d40);
+                  if (((*(byte *)(DAT_181e538e8 + 0x133) & 4) != 0) &&
+                     (*(int *)(DAT_181e538e8 + 224) == 0)) {
+                    il2cpp_runtime_class_init(DAT_181e538e8);
                     lVar5 = lVar4.worldPlotEventStartData;
                   }
-                  lVar1 = *(int64 *)(pStatics_3d40 + 0x4a0);
-                  if ((lVar5 == null) || (uVar3 = FUN_1800d6760(lVar5,iVar14,DAT_181d8fa30), lVar1 == null))
+                  lVar1 = *(int64 *)(pStatics_38e8 + 0x4a8);
+                  if ((lVar5 == null) || (uVar3 = FUN_180002480(lVar5,iVar14,DAT_181e71bf0), lVar1 == null))
                   break;
-                  uVar9 = FUN_180002f80(lVar1,uVar3,DAT_181da4370);
+                  uVar9 = FUN_1800024b0(lVar1,uVar3,DAT_181e86970);
                   lVar8 = String.Concat(lVar8,lVar12,uVar9);
                   iVar14 = iVar14 + 1;
                   lVar5 = lVar4.worldPlotEventStartData;
@@ -965,12 +965,12 @@ public class ForceDetailController
           }
         }
         throw; // [null/range check failed]
-        LAB_180b3b210:
+        LAB_1808fcbf0:
         lVar5 = lVar4.worldPlotEventStartTime;
         if (lVar5 == null) throw; // [null/range check failed]
         uVar6 = this.baseDetailText;
         if (*(int *)(lVar5 + 24) <= (int)uVar15) {
-          lVar5 = *(int64 *)(pStatics_3d40 + 0x4d0);
+          lVar5 = *(int64 *)(pStatics_38e8 + 0x4d8);
           lVar8 = lVar4.tutorialFinished;
           if (lVar8 == null) throw; // [null/range check failed]
           if (*(int *)(lVar8 + 24) == 0) {
@@ -987,20 +987,20 @@ public class ForceDetailController
           LTLocalization.AddText(uVar6,uVar9,0);
           if (0 < *(int *)(lVar4 + 0x17c)) {
             uVar6 = this.baseDetailText;
-            lVar5 = FUN_18046c100(0);
+            lVar5 = FUN_180210740(0);
             if (((lVar5 == null) || (*(int64 *)(lVar5 + 224) == 0)) ||
-               (lVar5 = FUN_1817da420(*(int64 *)(lVar5 + 224),*(uint32 *)(lVar4 + 0x17c),
-                                      DAT_181db7bf0), lVar5 == null)) throw; // [null/range check failed]
+               (lVar5 = FUN_18171b450(*(int64 *)(lVar5 + 224),*(uint32 *)(lVar4 + 0x17c),
+                                      DAT_181e98c78), lVar5 == null)) throw; // [null/range check failed]
             uVar9 = *(uint64 *)(lVar5 + 24);
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 0x180)) == null)
             throw; // [null/range check failed]
-            cVar2 = FUN_18182a9b0(lVar5,*(uint32 *)(lVar4 + 0x17c),DAT_181d8f3b0);
+            cVar2 = FUN_18176a2d0(lVar5,*(uint32 *)(lVar4 + 0x17c),DAT_181e71570);
             uVar11 = "\n特殊建筑 {0}({1}</color>)";
             uVar10 = "<color=grey>未解锁";
             if (cVar2) {
-              uVar10 = String.Concat(*(uint64 *)(pStatics_3d40 + 0x268),
+              uVar10 = String.Concat(*(uint64 *)(pStatics_38e8 + 0x270),
                                       "已解锁",0);
             }
             uVar9 = String.Format(uVar11,uVar9,uVar10,0);
@@ -1023,80 +1023,80 @@ public class ForceDetailController
                 uVar9 = String.Concat("\n弟子 ",uVar9,"/",uVar11,0);
                 LTLocalization.AddText(uVar6,uVar9,0);
                 uVar15 = uVar16;
-                goto LAB_180b3b630;
+                goto LAB_1808fd010;
               }
             }
           }
           throw; // [null/range check failed]
         }
-        if (((*(byte *)(DAT_181d73d40 + 0x133) & 4) != 0) && (*(int *)(DAT_181d73d40 + 224) == 0)) {
-          il2cpp_runtime_class_init(DAT_181d73d40);
+        if (((*(byte *)(DAT_181e538e8 + 0x133) & 4) != 0) && (*(int *)(DAT_181e538e8 + 224) == 0)) {
+          il2cpp_runtime_class_init(DAT_181e538e8);
           lVar5 = lVar4.worldPlotEventStartTime;
         }
-        lVar8 = *(int64 *)(pStatics_3d40 + 0x4b0);
-        if ((lVar5 == null) || (uVar3 = FUN_1800d6760(lVar5,uVar15,DAT_181d8fa30), lVar8 == null))
+        lVar8 = *(int64 *)(pStatics_38e8 + 0x4b8);
+        if ((lVar5 == null) || (uVar3 = FUN_180002480(lVar5,uVar15,DAT_181e71bf0), lVar8 == null))
         throw; // [null/range check failed]
-        uVar9 = FUN_180002f80(lVar8,uVar3);
+        uVar9 = FUN_1800024b0(lVar8,uVar3);
         String.Concat("/",uVar9);
         LTLocalization.AddText(uVar6);
         uVar15 = uVar15 + 1;
-        goto LAB_180b3b210;
-        LAB_180b3b630:
+        goto LAB_1808fcbf0;
+        LAB_1808fd010:
         if (lVar4.WorldNewsDatas == null) throw; // [null/range check failed]
         if (*(int *)(lVar4.WorldNewsDatas + 24) <= (int)uVar15) {
-          lVar5 = FUN_18046c0a0(0);
+          lVar5 = FUN_1802106e0(0);
           if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
           if (*(int *)(*(int64 *)(lVar5 + 32) + 156) == 1) {
-            lVar5 = *(int64 *)(pStatics_3d40 + 0x3a8);
+            lVar5 = *(int64 *)(pStatics_38e8 + 0x3b0);
             if (lVar5 == null) throw; // [null/range check failed]
-            cVar2 = FUN_18182a9b0(lVar5,targetForceID,DAT_181d8f3b0);
+            cVar2 = FUN_18176a2d0(lVar5,targetForceID,DAT_181e71570);
             if (!cVar2) {
               uVar6 = this.baseDetailText;
-              lVar5 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
+              lVar5 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 32);
               if (((lVar5 == null) || (lVar5 = *(int64 *)(lVar5 + 208)) == null) ||
-                 (lVar5 = FUN_1817da420(lVar5,lVar4.chapter,DAT_181db9778)) == null)
+                 (lVar5 = FUN_18171b450(lVar5,lVar4.chapter,DAT_181e9ad50)) == null)
               throw; // [null/range check failed]
               uVar9 = *(uint64 *)(lVar5 + 0x180);
               uVar9 = String.Format("\n\n<b>门派特性</b>\n{1}{0}</color>",uVar9,
-                                     *(uint64 *)(pStatics_3d40 + 600),0);
+                                     *(uint64 *)(pStatics_38e8 + 0x260),0);
               LTLocalization.AddText(uVar6,uVar9,0);
             }
           }
           uVar6 = this.areaText;
           LTLocalization.SetText(uVar6,"",0);
           lVar5 = 32;
-          goto LAB_180b3bc30;
+          goto LAB_1808fd610;
         }
         uVar6 = this.baseDetailText;
-        plVar7 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,9);
+        plVar7 = (int64 *)FUN_1801dfd90(DAT_181e85e38,9);
         if (plVar7 == (int64 *)0) throw; // [null/range check failed]
         if (("\n" != 0) &&
            (lVar5 = il2cpp_internal("\n",*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar5 = "\n";
         if ((int)plVar7[3] == 0) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[4] = "\n";
         il2cpp_internal(plVar7 + 4,lVar5);
-        lVar5 = *(int64 *)(pStatics_3d40 + 0x438);
+        lVar5 = *(int64 *)(pStatics_38e8 + 0x440);
         if (lVar5 == null) throw; // [null/range check failed]
-        lVar5 = FUN_180002f80(lVar5,uVar15,DAT_181da4370);
+        lVar5 = FUN_1800024b0(lVar5,uVar15,DAT_181e86970);
         if ((lVar5 != null) &&
            (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar7 + 3) < 2) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[5] = lVar5;
         il2cpp_internal(plVar7 + 5,lVar5);
@@ -1104,29 +1104,29 @@ public class ForceDetailController
            (lVar5 = il2cpp_internal(" ",*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar5 = " ";
         if (*(uint32 *)(plVar7 + 3) < 3) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[6] = " ";
         il2cpp_internal(plVar7 + 6,lVar5);
         if (lVar4.WorldNewsDatas == null) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6790(lVar4.WorldNewsDatas,uVar15,DAT_181da1090);
+        local_res20[0] = FUN_1800024e0(lVar4.WorldNewsDatas,uVar15,DAT_181e83530);
         lVar5 = Single.ToString(local_res20,"f0",0);
         if ((lVar5 != null) &&
            (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar7 + 3) < 4) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[7] = lVar5;
         il2cpp_internal(plVar7 + 7,lVar5);
@@ -1134,29 +1134,29 @@ public class ForceDetailController
            (lVar5 = il2cpp_internal("/",*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar5 = "/";
         if (*(uint32 *)(plVar7 + 3) < 5) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[8] = "/";
         il2cpp_internal(plVar7 + 8,lVar5);
         if (lVar4.MailDatas == null) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6790(lVar4.MailDatas,uVar15,DAT_181da1090);
+        local_res20[0] = FUN_1800024e0(lVar4.MailDatas,uVar15,DAT_181e83530);
         lVar5 = Single.ToString(local_res20,"f0",0);
         if ((lVar5 != null) &&
            (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar7 + 3) < 6) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[9] = lVar5;
         il2cpp_internal(plVar7 + 9,lVar5);
@@ -1164,29 +1164,29 @@ public class ForceDetailController
            (lVar5 = il2cpp_internal(" (",*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar5 = " (";
         if (*(uint32 *)(plVar7 + 3) < 7) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[10] = " (";
         il2cpp_internal(plVar7 + 10,lVar5);
         if (lVar4.cheating == null) throw; // [null/range check failed]
-        local_res20[0] = FUN_1800d6790(lVar4.cheating,uVar15);
+        local_res20[0] = FUN_1800024e0(lVar4.cheating,uVar15);
         lVar5 = Single.ToString(local_res20,"+0;-0;0");
         if ((lVar5 != null) &&
            (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         if (*(uint32 *)(plVar7 + 3) < 8) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[11] = lVar5;
         il2cpp_internal(plVar7 + 11,lVar5);
@@ -1194,26 +1194,26 @@ public class ForceDetailController
            (lVar5 = il2cpp_internal(")",*(uint64 *)(*plVar7 + 64))) == null) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         lVar5 = ")";
         if (*(uint32 *)(plVar7 + 3) < 9) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         plVar7[12] = ")";
         il2cpp_internal(plVar7 + 12,lVar5);
         uVar9 = String.Concat(plVar7,0);
         LTLocalization.AddText(uVar6,uVar9);
         uVar15 = uVar15 + 1;
-        goto LAB_180b3b630;
-        LAB_180b3bc30:
+        goto LAB_1808fd010;
+        LAB_1808fd610:
         lVar8 = lVar4.BigMapRandomEventDatas;
         if (lVar8 == null) throw; // [null/range check failed]
         if ((int)*(uint32 *)(lVar8 + 24) <= (int)uVar16) {
           iVar14 = 0;
-          goto LAB_180b3bd70;
+          goto LAB_1808fd750;
         }
         if (*(uint32 *)(lVar8 + 24) <= uVar16) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -1222,16 +1222,16 @@ public class ForceDetailController
           plVar7 = this.areaText;
           if (plVar7 == (int64 *)0) throw; // [null/range check failed]
           uVar6 = (**(code **)(*plVar7 + 0x5d8))(plVar7,*(uint64 *)(*plVar7 + 0x5e0));
-          cVar2 = FUN_18171eb50(uVar6,"",0);
+          cVar2 = FUN_1816387f0(uVar6,"",0);
           lVar8 = "\n";
           if (cVar2) {
             lVar8 = "";
           }
-          lVar12 = FUN_18046c0a0(0);
+          lVar12 = FUN_1802106e0(0);
           if (lVar12 == null) throw; // [null/range check failed]
           lVar12 = *(int64 *)(lVar12 + 32);
           if (((lVar4.BigMapRandomEventDatas == null) ||
-              (uVar3 = FUN_1800d6760(lVar4.BigMapRandomEventDatas,uVar16), lVar12 == null)) ||
+              (uVar3 = FUN_180002480(lVar4.BigMapRandomEventDatas,uVar16), lVar12 == null)) ||
              (lVar12 = WorldData.GetArea(lVar12,uVar3)) == null) throw; // [null/range check failed]
           uVar6 = AreaData.GetAreaName(lVar12,0);
           uVar6 = String.Concat(lVar8,uVar6);
@@ -1239,43 +1239,43 @@ public class ForceDetailController
         }
         uVar16 = uVar16 + 1;
         lVar5 = lVar5 + 4;
-        goto LAB_180b3bc30;
-        LAB_180b3bd70:
+        goto LAB_1808fd610;
+        LAB_1808fd750:
         if (lVar4.AreaMapRandomEventDatas == null) throw; // [null/range check failed]
         if (*(int *)(lVar4.AreaMapRandomEventDatas + 24) <= iVar14) {
           uVar6 = this.favorText;
           LTLocalization.SetText(uVar6,"",0);
-          lVar5 = FUN_18046c0a0(0);
+          lVar5 = FUN_1802106e0(0);
           if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
              (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 72)) != null) {
-            FUN_1817eba30(&local_68,lVar5,DAT_181d88038);
+            FUN_1816629a0(&local_68,lVar5,DAT_181e6a378);
             local_a0 = CONCAT44(uStack_64,local_68);
             uStack_98 = CONCAT44(uStack_5c,uStack_60);
             local_90 = local_58;
-            goto LAB_180b3bf30;
+            goto LAB_1808fd910;
           }
           throw; // [null/range check failed]
         }
         plVar7 = this.areaText;
         if (plVar7 == (int64 *)0) throw; // [null/range check failed]
         uVar6 = (**(code **)(*plVar7 + 0x5d8))(plVar7,*(uint64 *)(*plVar7 + 0x5e0));
-        cVar2 = FUN_18171eb50(uVar6,"",0);
+        cVar2 = FUN_1816387f0(uVar6,"",0);
         lVar5 = "\n";
         if (cVar2) {
           lVar5 = "";
         }
-        lVar8 = FUN_18046c0a0(0);
+        lVar8 = FUN_1802106e0(0);
         if (lVar8 == null) throw; // [null/range check failed]
         lVar8 = *(int64 *)(lVar8 + 32);
         if (((lVar4.AreaMapRandomEventDatas == null) ||
-            (uVar3 = FUN_1800d6760(lVar4.AreaMapRandomEventDatas,iVar14), lVar8 == null)) ||
+            (uVar3 = FUN_180002480(lVar4.AreaMapRandomEventDatas,iVar14), lVar8 == null)) ||
            (lVar8 = WorldData.GetResourcePoint(lVar8,uVar3)) == null) throw; // [null/range check failed]
         uVar6 = ResourcePointData.GetResourcePointFullName(lVar8,0);
         uVar6 = String.Concat(lVar5,uVar6);
         LTLocalization.AddText(plVar7,uVar6);
         iVar14 = iVar14 + 1;
-        goto LAB_180b3bd70;
-        joined_r0x000180b3c538:
+        goto LAB_1808fd750;
+        joined_r0x0001808fdf18:
         iVar14 = iVar14 + -1;
         if (iVar14 < 0) {
           uVar6 = this.forceSkillGrid;
@@ -1283,66 +1283,66 @@ public class ForceDetailController
           return;
         }
         uVar6 = this.forceSkillGrid;
-        if (*pStatics_2ee8 == 0) throw; // [null/range check failed]
-        uVar9 = *(uint64 *)(*pStatics_2ee8 + 160);
+        if (*pStatics_2a90 == 0) throw; // [null/range check failed]
+        uVar9 = *(uint64 *)(*pStatics_2a90 + 160);
         lVar5 = GlobalData.AddChild(uVar6,uVar9,0);
         if (lVar5 == null) throw; // [null/range check failed]
-        lVar8 = GameObject.GetComponent(lVar5,DAT_181d720a0);
+        lVar8 = GameObject.GetComponent(lVar5,DAT_181e55168);
         if ((plVar4 == 0) ||
            (lVar12 = *(int64 *)(plVar4 + 48)) == null) throw; // [null/range check failed]
         if (*(uint32 *)(lVar12 + 24) < 4) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         lVar12 = *(int64 *)(*(int64 *)(lVar12 + 16) + 56);
-        if ((lVar12 == null) || (uVar6 = FUN_180002f80(lVar12,iVar14), lVar8 == null)) throw; // [null/range check failed]
+        if ((lVar12 == null) || (uVar6 = FUN_1800024b0(lVar12,iVar14), lVar8 == null)) throw; // [null/range check failed]
         *(uint64 *)(lVar8 + 32) = uVar6;
-        lVar8 = GameObject.GetComponent(lVar5,DAT_181d720a0);
+        lVar8 = GameObject.GetComponent(lVar5,DAT_181e55168);
         if (lVar8 == null) throw; // [null/range check failed]
         *(uint32 *)(lVar8 + 40) = 1;
-        lVar5 = GameObject.GetComponent(lVar5,DAT_181d720a0);
+        lVar5 = GameObject.GetComponent(lVar5,DAT_181e55168);
         if (lVar5 == null) throw; // [null/range check failed]
         ItemIconController.AutoSetName(lVar5,1);
-        goto joined_r0x000180b3c538;
-        LAB_180b3bf30:
-        cVar2 = FUN_180c75510(&local_a0,DAT_181d8c600);
+        goto joined_r0x0001808fdf18;
+        LAB_1808fd910:
+        cVar2 = FUN_1807b3f30(&local_a0,DAT_181e6e0c0);
         lVar5 = local_90;
         if (cVar2) {
           if (local_90 != lVar4) {
             uVar6 = this.favorText;
-            plVar13 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,8);
+            plVar13 = (int64 *)FUN_1801dfd90(DAT_181e85e38,8);
             plVar7 = this.favorText;
             if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             uVar9 = (**(code **)(*plVar7 + 0x5d8))(plVar7,*(uint64 *)(*plVar7 + 0x5e0));
-            cVar2 = FUN_18171eb50(uVar9,"",0);
+            cVar2 = FUN_1816387f0(uVar9,"",0);
             lVar8 = "\n";
             if (cVar2) {
               lVar8 = "";
             }
             if (plVar13 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if ((lVar8 != null) &&
                (lVar12 = il2cpp_internal(lVar8,*(uint64 *)(*plVar13 + 64))) == null) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
-            FUN_180002fd0(plVar13,0,lVar8);
+            FUN_1800025b0(plVar13,0,lVar8);
             if (PlotController.fightSkillIndexCache == 1) {
               lVar8 = PlotController.LeftFaceHideOffset;
               if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if (lVar8 == null) {
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
-              cVar2 = FUN_18182a9b0(lVar8,*(uint32 *)(lVar5 + 16),DAT_181d8f3b0);
+              cVar2 = FUN_18176a2d0(lVar8,*(uint32 *)(lVar5 + 16),DAT_181e71570);
               lVar8 = "???";
               if (!(cVar2))
               {
@@ -1350,10 +1350,10 @@ public class ForceDetailController
                 else {
                 if (lVar5 == null) {
                 // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
                 }
               }
-              cVar2 = FUN_180d75bc0(*(uint64 *)(lVar5 + 0x198),0);
+              cVar2 = FUN_180ad1200(*(uint64 *)(lVar5 + 0x198),0);
               if (!cVar2) {
                 lVar8 = *(int64 *)(lVar5 + 0x198);
               }
@@ -1365,21 +1365,21 @@ public class ForceDetailController
                (lVar12 = il2cpp_internal(lVar8,*(uint64 *)(*plVar13 + 64))) == null) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
-            FUN_180002fd0(plVar13,1,lVar8);
+            FUN_1800025b0(plVar13,1,lVar8);
             if ((" " != 0) &&
                (lVar8 = il2cpp_internal(" ",*(uint64 *)(*plVar13 + 64))) == null)
             {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             lVar8 = " ";
             if (*(uint32 *)(plVar13 + 3) < 3) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar13[6] = " ";
             il2cpp_internal(plVar13 + 6,lVar8);
@@ -1389,12 +1389,12 @@ public class ForceDetailController
                (lVar12 = il2cpp_internal(lVar8,*(uint64 *)(*plVar13 + 64))) == null) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             if (*(uint32 *)(plVar13 + 3) < 4) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar13[7] = lVar8;
             il2cpp_internal(plVar13 + 7,lVar8);
@@ -1403,13 +1403,13 @@ public class ForceDetailController
             {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             lVar8 = "(";
             if (*(uint32 *)(plVar13 + 3) < 5) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar13[8] = "(";
             il2cpp_internal(plVar13 + 8,lVar8);
@@ -1419,12 +1419,12 @@ public class ForceDetailController
                (lVar12 = il2cpp_internal(lVar8,*(uint64 *)(*plVar13 + 64))) == null) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             if (*(uint32 *)(plVar13 + 3) < 6) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar13[9] = lVar8;
             il2cpp_internal(plVar13 + 9,lVar8);
@@ -1433,13 +1433,13 @@ public class ForceDetailController
             {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             lVar8 = ") ";
             if (*(uint32 *)(plVar13 + 3) < 7) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar13[10] = ") ";
             il2cpp_internal(plVar13 + 10,lVar8);
@@ -1448,21 +1448,21 @@ public class ForceDetailController
                (lVar8 = il2cpp_internal(lVar5,*(uint64 *)(*plVar13 + 64))) == null) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             if (*(uint32 *)(plVar13 + 3) < 8) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar13[11] = lVar5;
             il2cpp_internal(plVar13 + 11,lVar5);
             uVar9 = String.Concat(plVar13,0);
             LTLocalization.AddText(uVar6,uVar9);
           }
-          goto LAB_180b3bf30;
+          goto LAB_1808fd910;
         }
-        ZhSegment.Initialize(&local_a0,DAT_181d8c580);
+        ZhSegment.Initialize(&local_a0,DAT_181e6e040);
         uVar6 = this.detailText;
         if (lVar4.monthBreakEquipTime != null) {
           uVar9 = ForceSpeAddData.GetDescribe(lVar4.monthBreakEquipTime,1,0);
@@ -1484,20 +1484,20 @@ public class ForceDetailController
                 lVar5 = *(int64 *)(*(int64 *)(lVar5 + 16) + 56);
                 if (lVar5 != null) {
                   iVar14 = *(int *)(lVar5 + 24);
-                  goto joined_r0x000180b3c538;
+                  goto joined_r0x0001808fdf18;
                 }
               }
               break;
             }
-            if (*pStatics_2ee8 == 0) break;
-            uVar9 = *(uint64 *)(*pStatics_2ee8 + 144);
+            if (*pStatics_2a90 == 0) break;
+            uVar9 = *(uint64 *)(*pStatics_2a90 + 144);
             lVar8 = GlobalData.AddChild(uVar6,uVar9,0);
             if (lVar8 == null) break;
-            lVar12 = GameObject.GetComponent(lVar8,DAT_181d71b50);
+            lVar12 = GameObject.GetComponent(lVar8,DAT_181e54c18);
             uVar6 = ForceData.GetOwnHero(lVar4,iVar14);
             if (lVar12 == null) break;
             *(uint64 *)(lVar12 + 32) = uVar6;
-            lVar12 = GameObject.GetComponent(lVar8,DAT_181d71b50);
+            lVar12 = GameObject.GetComponent(lVar8,DAT_181e54c18);
             if (lVar12 == null) break;
             *(uint32 *)(lVar12 + 24) = 0;
             lVar8 = GameObject.GetComponent(lVar8);
@@ -1508,15 +1508,15 @@ public class ForceDetailController
         }
     }
 
-    // Token : 0x60014AD
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6001519
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x60014AE
-    // RVA   : 0x78D070   Offset: 0x78C470   Length: 0x20
+    // Token : 0x600151A
+    // RVA   : 0x52B140   Offset: 0x529F40   Length: 0x20
     private void <HideForceDetail>b__19_0()
     {
         if (this.forceDetailPanel != null) {

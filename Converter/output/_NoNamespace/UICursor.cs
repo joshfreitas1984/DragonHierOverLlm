@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : UICursor
-// Token : 0x2000006
+// Token : 0x2000005
 // ============================================================
 
 public class UICursor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000024
+    // Token: 0x4000004
     public static UICursor instance;
 
-    // Token: 0x4000025
+    // Token: 0x4000005
     public Camera uiCamera;
 
-    // Token: 0x4000026
+    // Token: 0x4000006
     private Transform mTrans;
 
-    // Token: 0x4000027
+    // Token: 0x4000007
     private UISprite mSprite;
 
-    // Token: 0x4000028
+    // Token: 0x4000008
     private INGUIAtlas mAtlas;
 
-    // Token: 0x4000029
+    // Token: 0x4000009
     private string mSpriteName;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000021
-    // RVA   : 0x12B18B0   Offset: 0x12B0CB0   Length: 0x43
+    // Token : 0x6000008
+    // RVA   : 0x1138640   Offset: 0x1137440   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181daf810 + 184);
+        puVar1 = *(uint64 **)(DAT_181e8fc50 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000022
-    // RVA   : 0x12B1B70   Offset: 0x12B0F70   Length: 0x40
+    // Token : 0x6000009
+    // RVA   : 0x1138900   Offset: 0x1137700   Length: 0x40
     private void OnDestroy()
     {
-        puVar1 = *(uint64 **)(DAT_181daf810 + 184);
+        puVar1 = *(uint64 **)(DAT_181e8fc50 + 184);
         *puVar1 = 0;
         il2cpp_internal(puVar1,0);
     }
 
-    // Token : 0x6000023
-    // RVA   : 0x12B1D40   Offset: 0x12B1140   Length: 0x1B2
+    // Token : 0x600000A
+    // RVA   : 0x1138AD0   Offset: 0x11378D0   Length: 0x1B2
     private void Start()
     {
         bool cVar1;
@@ -53,7 +53,7 @@ public class UICursor
         long lVar4;
         uVar3 = Component.get_transform(this,0);
         this.mTrans = uVar3;
-        uVar3 = Component.GetComponentInChildren(this,DAT_181d97778);
+        uVar3 = Component.GetComponentInChildren(this,DAT_181e7ab38);
         this.mSprite = uVar3;
         uVar3 = this.uiCamera;
         cVar1 = Object.op_Equality(uVar3,0,0);
@@ -86,8 +86,8 @@ public class UICursor
         }
     }
 
-    // Token : 0x6000024
-    // RVA   : 0x12B1F00   Offset: 0x12B1300   Length: 0x21D
+    // Token : 0x600000B
+    // RVA   : 0x1138C90   Offset: 0x1137A90   Length: 0x21D
     private void Update()
     {
         ulong uVar1;
@@ -111,9 +111,9 @@ public class UICursor
           fVar9 = (float)local_48 - (float)iVar4 * 0.5;
           iVar4 = Screen.get_height(0);
           fVar8 = local_48._4_4_ - (float)iVar4 * 0.5;
-          uVar7 = FUN_18000d7c0(fVar9);
+          uVar7 = FUN_18007dbc0(fVar9);
           local_48 = CONCAT44(local_48._4_4_,uVar7);
-          uVar7 = FUN_18000d7c0(fVar8);
+          uVar7 = FUN_18007dbc0(fVar8);
         }
         else {
           iVar4 = Screen.get_width(0);
@@ -140,9 +140,9 @@ public class UICursor
           puVar5 = (uint64 *)Transform.get_localPosition(local_38,this.mTrans,0);
           local_48 = *puVar5;
           uVar6 = *(uint32 *)(puVar5 + 1);
-          uVar7 = FUN_18000d7c0(local_48);
+          uVar7 = FUN_18007dbc0(local_48);
           local_48 = CONCAT44(local_48._4_4_,uVar7);
-          uVar7 = FUN_18000d7c0(local_48._4_4_);
+          uVar7 = FUN_18007dbc0(local_48._4_4_);
         }
         local_48 = CONCAT44(uVar7,(float)local_48);
         if (this.mTrans != null) {
@@ -152,17 +152,17 @@ public class UICursor
         }
     }
 
-    // Token : 0x6000025
-    // RVA   : 0x12B1900   Offset: 0x12B0D00   Length: 0x266
+    // Token : 0x600000C
+    // RVA   : 0x1138690   Offset: 0x1137490   Length: 0x266
     public static void Clear()
     {
-        var pStatics = *(int64*)(DAT_181daf810 + 184);
+        var pStatics = *(int64*)(DAT_181e8fc50 + 184);
         ulong uVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         bool cVar6;
-        uVar1 = **(uint64 **)(DAT_181daf810 + 184);
+        uVar1 = **(uint64 **)(DAT_181e8fc50 + 184);
         cVar6 = Object.op_Inequality(uVar1,0,0);
         if (!cVar6) {
           return;
@@ -177,7 +177,7 @@ public class UICursor
           if (lVar2 != null) {
             uVar1 = *(uint64 *)(lVar2 + 48);
             uVar3 = *(uint64 *)(lVar2 + 56);
-            uVar4 = **(uint64 **)(DAT_181daf810 + 184);
+            uVar4 = **(uint64 **)(DAT_181e8fc50 + 184);
             cVar6 = Object.op_Inequality(uVar4,0,0);
             if (!cVar6) {
               return;
@@ -210,15 +210,15 @@ public class UICursor
         }
     }
 
-    // Token : 0x6000026
-    // RVA   : 0x12B1BB0   Offset: 0x12B0FB0   Length: 0x18C
+    // Token : 0x600000D
+    // RVA   : 0x1138940   Offset: 0x1137740   Length: 0x18C
     public static void Set(INGUIAtlas atlas, string sprite)
     {
-        var pStatics = *(int64*)(DAT_181daf810 + 184);
+        var pStatics = *(int64*)(DAT_181e8fc50 + 184);
         ulong uVar1;
         long lVar2;
         bool cVar4;
-        uVar1 = **(uint64 **)(DAT_181daf810 + 184);
+        uVar1 = **(uint64 **)(DAT_181e8fc50 + 184);
         cVar4 = Object.op_Inequality(uVar1,0,0);
         if (!cVar4) {
           return;
@@ -249,11 +249,11 @@ public class UICursor
         }
     }
 
-    // Token : 0x6000027
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600000E
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

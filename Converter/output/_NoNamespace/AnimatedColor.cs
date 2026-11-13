@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : AnimatedColor
-// Token : 0x20000B3
+// Token : 0x20000B2
 // ============================================================
 
 public class AnimatedColor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000456
+    // Token: 0x4000436
     public Color color;
 
-    // Token: 0x4000457
+    // Token: 0x4000437
     private UIWidget mWidget;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600057F
-    // RVA   : 0xA1F0C0   Offset: 0xA1E4C0   Length: 0x77
+    // Token : 0x6000566
+    // RVA   : 0x786AF0   Offset: 0x7858F0   Length: 0x77
     private void OnEnable()
     {
         ulong uVar1;
@@ -22,7 +22,7 @@ public class AnimatedColor
         uint uStack_14;
         uint uStack_10;
         uint32 uStack_c;
-        uVar1 = Component.GetComponent(this,DAT_181d97078);
+        uVar1 = Component.GetComponent(this,DAT_181e7a438);
         this.mWidget = uVar1;
         if (this.mWidget != null) {
           local_18 = this.color;
@@ -34,8 +34,8 @@ public class AnimatedColor
         }
     }
 
-    // Token : 0x6000580
-    // RVA   : 0xA1F080   Offset: 0xA1E480   Length: 0x30
+    // Token : 0x6000567
+    // RVA   : 0x786AB0   Offset: 0x7858B0   Length: 0x30
     private void LateUpdate()
     {
         uint local_18;
@@ -52,15 +52,15 @@ public class AnimatedColor
         }
     }
 
-    // Token : 0x6000581
-    // RVA   : 0xA1F140   Offset: 0xA1E540   Length: 0x2B
+    // Token : 0x6000568
+    // RVA   : 0x786B70   Offset: 0x785970   Length: 0x2B
     public void /*ctor*/()
     {
         uint uVar1;
         uint uVar2;
         uint uVar3;
         byte[] local_18 = new byte[16];
-        puVar4 = (uint32 *)FUN_1810d3b80(local_18,0);
+        puVar4 = (uint32 *)FUN_180f24d00(local_18,0);
         uVar1 = puVar4[1];
         uVar2 = puVar4[2];
         uVar3 = puVar4[3];
@@ -68,7 +68,7 @@ public class AnimatedColor
         *(uint32 *)(this + 28) = uVar1;
         *(uint32 *)(this + 32) = uVar2;
         *(uint32 *)(this + 36) = uVar3;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

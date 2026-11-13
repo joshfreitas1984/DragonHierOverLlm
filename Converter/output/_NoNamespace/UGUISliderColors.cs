@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : UGUISliderColors
-// Token : 0x20003AA
+// Token : 0x20003B7
 // ============================================================
 
 public class UGUISliderColors
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DCE
+    // Token: 0x4001E60
     public Image image;
 
-    // Token: 0x4001DCF
+    // Token: 0x4001E61
     public Color[] colors;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600235F
-    // RVA   : 0xAEF2A0   Offset: 0xAEE6A0   Length: 0xE6
+    // Token : 0x6002409
+    // RVA   : 0x844020   Offset: 0x842E20   Length: 0xE6
     private void Start()
     {
         bool cVar1;
@@ -22,18 +22,18 @@ public class UGUISliderColors
         uVar2 = this.image;
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (cVar1) {
-          uVar2 = Component.GetComponent(this,DAT_181d94478);
+          uVar2 = Component.GetComponent(this,DAT_181e777b8);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            uVar2 = Component.GetComponent(this,DAT_181d94478);
+            uVar2 = Component.GetComponent(this,DAT_181e777b8);
             this.image = uVar2;
           }
         }
         UGUISliderColors.Update(this,0);
     }
 
-    // Token : 0x6002360
-    // RVA   : 0xAEF390   Offset: 0xAEE790   Length: 0x22E
+    // Token : 0x600240A
+    // RVA   : 0x844110   Offset: 0x842F10   Length: 0x22E
     private void Update()
     {
         float fVar1;
@@ -71,7 +71,7 @@ public class UGUISliderColors
               if (uVar2 == 0) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               local_48 = *(uint64 *)(lVar3 + 32);
               uStack_40 = *(uint64 *)(lVar3 + 40);
@@ -81,12 +81,12 @@ public class UGUISliderColors
                   if (uVar2 <= uVar6) {
                     uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar10,0);
+                    FUN_1801e02d0(uVar10,0);
                   }
                   if (uVar2 <= uVar7) {
                     uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar10,0);
+                    FUN_1801e02d0(uVar10,0);
                   }
                   puVar8 = (uint64 *)(lVar3 + (lVar11 + 2) * 16);
                   local_38 = *puVar8;
@@ -105,7 +105,7 @@ public class UGUISliderColors
                     if (uVar2 <= uVar6) {
                       uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar10,0);
+                      FUN_1801e02d0(uVar10,0);
                     }
                   }
                   else {
@@ -113,7 +113,7 @@ public class UGUISliderColors
                     if (uVar2 <= (uint32)lVar11) {
                       uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar10,0);
+                      FUN_1801e02d0(uVar10,0);
                     }
                   }
                   puVar8 = (uint64 *)(lVar3 + (lVar11 + 2) * 16);
@@ -138,8 +138,8 @@ public class UGUISliderColors
         }
     }
 
-    // Token : 0x6002361
-    // RVA   : 0xAEF5C0   Offset: 0xAEE9C0   Length: 0xE5
+    // Token : 0x600240B
+    // RVA   : 0x844340   Offset: 0x843140   Length: 0xE5
     public void /*ctor*/()
     {
         uint uVar1;
@@ -148,16 +148,16 @@ public class UGUISliderColors
         long lVar4;
         ulong uVar6;
         byte[] local_18 = new byte[16];
-        lVar4 = FUN_1800d60b0(DAT_181da1158,3);
+        lVar4 = FUN_1801dfd90(DAT_181e81228,3);
         puVar5 = (uint32 *)Color.get_red(local_18,0);
         if (lVar4 == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (*(int *)(lVar4 + 24) == 0) {
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         uVar1 = puVar5[1];
         uVar2 = puVar5[2];
@@ -185,12 +185,12 @@ public class UGUISliderColors
             *(uint32 *)(lVar4 + 72) = uVar2;
             *(uint32 *)(lVar4 + 76) = uVar3;
             this.colors = lVar4;
-            FUN_18044ef50(this,0);
+            FUN_180ae8740(this,0);
             return;
           }
           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar6,0);
+          FUN_1801e02d0(uVar6,0);
         }
         uVar6 = il2cpp_internal();
     }

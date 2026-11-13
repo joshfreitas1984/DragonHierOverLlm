@@ -1,65 +1,65 @@
 // ============================================================
 // Type  : TweenAlpha
-// Token : 0x20000B7
+// Token : 0x20000B6
 // ============================================================
 
 public class TweenAlpha
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000468
+    // Token: 0x4000448
     public float from;
 
-    // Token: 0x4000469
+    // Token: 0x4000449
     public float to;
 
-    // Token: 0x400046A
+    // Token: 0x400044A
     public bool autoCleanup;
 
-    // Token: 0x400046B
+    // Token: 0x400044B
     public string colorProperty;
 
-    // Token: 0x400046C
+    // Token: 0x400044C
     private bool mCached;
 
-    // Token: 0x400046D
+    // Token: 0x400044D
     private UIRect mRect;
 
-    // Token: 0x400046E
+    // Token: 0x400044E
     private Material mShared;
 
-    // Token: 0x400046F
+    // Token: 0x400044F
     private Material mMat;
 
-    // Token: 0x4000470
+    // Token: 0x4000450
     private Light mLight;
 
-    // Token: 0x4000471
+    // Token: 0x4000451
     private SpriteRenderer mSr;
 
-    // Token: 0x4000472
+    // Token: 0x4000452
     private float mBaseIntensity;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600058E
-    // RVA   : 0xAE90F0   Offset: 0xAE84F0   Length: 0x7
+    // Token : 0x6000575
+    // RVA   : 0x83DE70   Offset: 0x83CC70   Length: 0x7
     public float get_alpha()
     {
-        void FUN_180ae90f0(uint64 this)
+        void FUN_18083de70(uint64 this)
         {
         TweenAlpha.get_value(this,0);
     }
 
-    // Token : 0x600058F
-    // RVA   : 0xAE92D0   Offset: 0xAE86D0   Length: 0x8
+    // Token : 0x6000576
+    // RVA   : 0x83E050   Offset: 0x83CE50   Length: 0x8
     public void set_alpha(float value)
     {
-        void FUN_180ae92d0(uint64 this,uint64 value)
+        void FUN_18083e050(uint64 this,uint64 value)
         {
         TweenAlpha.set_value(this,value,0);
     }
 
-    // Token : 0x6000590
-    // RVA   : 0xAE8F50   Offset: 0xAE8350   Length: 0xFB
+    // Token : 0x6000577
+    // RVA   : 0x83DCD0   Offset: 0x83CAD0   Length: 0xFB
     private void OnDestroy()
     {
         ulong uVar2;
@@ -82,8 +82,8 @@ public class TweenAlpha
         }
     }
 
-    // Token : 0x6000591
-    // RVA   : 0xAE8CA0   Offset: 0xAE80A0   Length: 0x2AA
+    // Token : 0x6000578
+    // RVA   : 0x83DA20   Offset: 0x83C820   Length: 0x2AA
     private void Cache()
     {
         long lVar1;
@@ -91,9 +91,9 @@ public class TweenAlpha
         ulong uVar3;
         uint uVar4;
         this.mCached = 1;
-        uVar3 = Component.GetComponent(this,DAT_181d96cf8);
+        uVar3 = Component.GetComponent(this,DAT_181e7a0b8);
         this.mRect = uVar3;
-        uVar3 = Component.GetComponent(this,DAT_181d95df8);
+        uVar3 = Component.GetComponent(this,DAT_181e791b8);
         this.mSr = uVar3;
         uVar3 = this.mRect;
         cVar2 = Object.op_Equality(uVar3,0,0);
@@ -101,33 +101,33 @@ public class TweenAlpha
           uVar3 = this.mSr;
           cVar2 = Object.op_Equality(uVar3,0,0);
           if (cVar2) {
-            uVar3 = Component.GetComponent(this,DAT_181d947f8);
+            uVar3 = Component.GetComponent(this,DAT_181e77b38);
             this.mLight = uVar3;
             uVar3 = this.mLight;
             cVar2 = Object.op_Equality(uVar3,0,0);
             if (!cVar2) {
               if (this.mLight == null) {
-        LAB_180ae8f45:
+        LAB_18083dcc5:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar4 = Light.get_intensity(this.mLight,0);
               this.mBaseIntensity = uVar4;
             }
             else {
-              lVar1 = Component.GetComponent(this,DAT_181d94ff8);
+              lVar1 = Component.GetComponent(this,DAT_181e78338);
               cVar2 = Object.op_Inequality(lVar1,0,0);
               if (cVar2) {
-                if (lVar1 == null) goto LAB_180ae8f45;
-                uVar3 = FUN_180d9de40(lVar1,0);
+                if (lVar1 == null) goto LAB_18083dcc5;
+                uVar3 = FUN_180af9710(lVar1,0);
                 this.mShared = uVar3;
-                uVar3 = FUN_180d9dd10(lVar1,0);
+                uVar3 = FUN_180af95e0(lVar1,0);
                 this.mMat = uVar3;
               }
               uVar3 = this.mMat;
               cVar2 = Object.op_Equality(uVar3,0,0);
               if (cVar2) {
-                uVar3 = Component.GetComponentInChildren(this,DAT_181d976f8);
+                uVar3 = Component.GetComponentInChildren(this,DAT_181e7aab8);
                 this.mRect = uVar3;
               }
             }
@@ -135,8 +135,8 @@ public class TweenAlpha
         }
     }
 
-    // Token : 0x6000592
-    // RVA   : 0xAE9100   Offset: 0xAE8500   Length: 0x1C0
+    // Token : 0x6000579
+    // RVA   : 0x83DE80   Offset: 0x83CC80   Length: 0x1C0
     public float get_value()
     {
         bool cVar2;
@@ -157,7 +157,7 @@ public class TweenAlpha
             if (cVar2) {
               return 0x3f800000;
             }
-            cVar2 = FUN_180d75bc0(this.colorProperty,0);
+            cVar2 = FUN_180ad1200(this.colorProperty,0);
             lVar3 = this.mMat;
             if (!cVar2) {
               if (lVar3 != null) {
@@ -178,7 +178,7 @@ public class TweenAlpha
         else {
           plVar1 = this.mRect;
           if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180ae92b4. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018083e034. Too many branches
                           // WARNING: Treating indirect jump as call
             uVar4 = (**(code **)(*plVar1 + 0x1a8))(plVar1,*(uint64 *)(*plVar1 + 0x1b0));
             return uVar4;
@@ -186,8 +186,8 @@ public class TweenAlpha
         }
     }
 
-    // Token : 0x6000593
-    // RVA   : 0xAE92E0   Offset: 0xAE86E0   Length: 0x2C5
+    // Token : 0x600057A
+    // RVA   : 0x83E060   Offset: 0x83CE60   Length: 0x2C5
     public void set_value(float value)
     {
         ulong uVar1;
@@ -218,7 +218,7 @@ public class TweenAlpha
               }
               return;
             }
-            cVar4 = FUN_180d75bc0(this.colorProperty,0);
+            cVar4 = FUN_180ad1200(this.colorProperty,0);
             lVar2 = this.mMat;
             if (!cVar4) {
               if (lVar2 != null) {
@@ -262,7 +262,7 @@ public class TweenAlpha
         else {
           plVar3 = this.mRect;
           if (plVar3 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180ae9599. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018083e319. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*plVar3 + 0x1b8))(plVar3,value,*(uint64 *)(*plVar3 + 0x1c0));
             return;
@@ -270,8 +270,8 @@ public class TweenAlpha
         }
     }
 
-    // Token : 0x6000594
-    // RVA   : 0xAE9050   Offset: 0xAE8450   Length: 0x31
+    // Token : 0x600057B
+    // RVA   : 0x83DDD0   Offset: 0x83CBD0   Length: 0x31
     protected override void OnUpdate(float factor, bool isFinished)
     {
         uint uVar1;
@@ -279,13 +279,13 @@ public class TweenAlpha
         TweenAlpha.set_value(this,uVar1,0);
     }
 
-    // Token : 0x6000595
-    // RVA   : 0xAE8BE0   Offset: 0xAE7FE0   Length: 0xBA
+    // Token : 0x600057C
+    // RVA   : 0x83D960   Offset: 0x83C760   Length: 0xBA
     public static TweenAlpha Begin(GameObject go, float duration, float alpha, float delay)
     {
         long lVar1;
         uint uVar2;
-        lVar1 = UITweener.Begin(go,duration,delay,DAT_181dc6c58);
+        lVar1 = UITweener.Begin(go,duration,delay,DAT_181e52f10);
         if (lVar1 != null) {
           uVar2 = TweenAlpha.get_value(lVar1,0);
           *(uint32 *)(lVar1 + 120) = uVar2;
@@ -298,8 +298,8 @@ public class TweenAlpha
         }
     }
 
-    // Token : 0x6000596
-    // RVA   : 0xAE90B0   Offset: 0xAE84B0   Length: 0x1B
+    // Token : 0x600057D
+    // RVA   : 0x83DE30   Offset: 0x83CC30   Length: 0x1B
     public override void SetStartToCurrentValue()
     {
         uint uVar1;
@@ -307,8 +307,8 @@ public class TweenAlpha
         this.from = uVar1;
     }
 
-    // Token : 0x6000597
-    // RVA   : 0xAE9090   Offset: 0xAE8490   Length: 0x1B
+    // Token : 0x600057E
+    // RVA   : 0x83DE10   Offset: 0x83CC10   Length: 0x1B
     public override void SetEndToCurrentValue()
     {
         uint uVar1;
@@ -316,11 +316,11 @@ public class TweenAlpha
         this.to = uVar1;
     }
 
-    // Token : 0x6000598
-    // RVA   : 0xAE90D0   Offset: 0xAE84D0   Length: 0x1F
+    // Token : 0x600057F
+    // RVA   : 0x83DE50   Offset: 0x83CC50   Length: 0x1F
     public void /*ctor*/()
     {
-        void FUN_180ae90d0(int64 this)
+        void FUN_18083de50(int64 this)
         {
         this.from = 0x3f800000;
         this.to = 0x3f800000;

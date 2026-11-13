@@ -1,61 +1,61 @@
 // ============================================================
 // Type  : ForceJobSettingData
-// Token : 0x2000212
+// Token : 0x2000214
 // ============================================================
 
 public class ForceJobSettingData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000EEE
+    // Token: 0x4000F02
     public int emptyNum;
 
-    // Token: 0x4000EEF
+    // Token: 0x4000F03
     public List<List<int>> ForceJobs;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001008
-    // RVA   : 0x77B250   Offset: 0x77A650   Length: 0x2E9
+    // Token : 0x6001011
+    // RVA   : 0x1850730   Offset: 0x184F530   Length: 0x2E9
     public void /*ctor*/()
     {
         long lVar1;
         long lVar2;
         ZhSegment.Initialize(this,0);
         this.emptyNum = 16;
-        lVar1 = il2cpp_internal(DAT_181d90178);
-        FUN_181330100(lVar1,DAT_181d787c0);
-        lVar2 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar2,DAT_181d8f0b0);
+        lVar1 = il2cpp_internal(DAT_181e6ffb8);
+        FUN_1810f3480(lVar1,DAT_181e5a220);
+        lVar2 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar2,DAT_181e71270);
         if (lVar2 != null) {
-          FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-          FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
+          FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+          FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
           if (lVar1 != null) {
-            FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
-            lVar2 = il2cpp_internal(DAT_181d93ce8);
-            FUN_181330100(lVar2,DAT_181d8f0b0);
+            FUN_18175de30(lVar1,lVar2,DAT_181e5a330);
+            lVar2 = il2cpp_internal(DAT_181e73cb8);
+            FUN_1810f3480(lVar2,DAT_181e71270);
             if (lVar2 != null) {
-              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-              FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-              FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
-              lVar2 = il2cpp_internal(DAT_181d93ce8);
-              FUN_181330100(lVar2,DAT_181d8f0b0);
+              FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+              FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+              FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+              FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+              FUN_18175de30(lVar1,lVar2,DAT_181e5a330);
+              lVar2 = il2cpp_internal(DAT_181e73cb8);
+              FUN_1810f3480(lVar2,DAT_181e71270);
               if (lVar2 != null) {
-                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
-                lVar2 = il2cpp_internal(DAT_181d93ce8);
-                FUN_181330100(lVar2,DAT_181d8f0b0);
+                FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                FUN_18175de30(lVar1,lVar2,DAT_181e5a330);
+                lVar2 = il2cpp_internal(DAT_181e73cb8);
+                FUN_1810f3480(lVar2,DAT_181e71270);
                 if (lVar2 != null) {
-                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                  FUN_18182a6c0(lVar2,0xffffffff,DAT_181d8f230);
-                  FUN_18181e6b0(lVar1,lVar2,DAT_181d78840);
+                  FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                  FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                  FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                  FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                  FUN_181769fe0(lVar2,0xffffffff,DAT_181e713f0);
+                  FUN_18175de30(lVar1,lVar2,DAT_181e5a330);
                   this.ForceJobs = lVar1;
                   return;
                 }
@@ -65,8 +65,8 @@ public class ForceJobSettingData
         }
     }
 
-    // Token : 0x6001009
-    // RVA   : 0x77B170   Offset: 0x77A570   Length: 0xDE
+    // Token : 0x6001012
+    // RVA   : 0x1850650   Offset: 0x184F450   Length: 0xDE
     public bool HaveHero(HeroData targetHero)
     {
         bool cVar1;
@@ -87,7 +87,7 @@ public class ForceJobSettingData
             }
             if ((targetHero == null) || (lVar2 = *(int64 *)(lVar3 + lVar2._items)) == null
                ) break;
-            cVar1 = FUN_18182a9b0(lVar2,*(uint32 *)(targetHero + 88),DAT_181d8f3b0);
+            cVar1 = FUN_18176a2d0(lVar2,*(uint32 *)(targetHero + 88),DAT_181e71570);
             if (cVar1) {
               return true;
             }

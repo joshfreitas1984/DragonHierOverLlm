@@ -2000,3 +2000,21 @@
 - raw: "落魄之人"
   splits:
   - text: "落魄之人"
+- raw: "选择满级{0}作为根基\n对应武学技能需达{2}点"
+  splits:
+  - text: "选择满级"
+  - subIndex: 1
+    text: "作为根基"
+  - subIndex: 2
+    text: "对应武学技能需达"
+  - subIndex: 3
+    text: "点"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}⟦2⟧{3}"
+- raw: "闭关{0}日"
+  splits:
+  - text: "闭关"
+  - subIndex: 1
+    text: "日"
+  templates:
+  - template: "{0}⟦0⟧{1}"

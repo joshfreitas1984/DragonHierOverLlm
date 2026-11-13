@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ResourceData
-// Token : 0x20001D0
+// Token : 0x20001D2
 // ============================================================
 
 public class ResourceData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C73
+    // Token: 0x4000C86
     public int resourceType;
 
-    // Token: 0x4000C74
+    // Token: 0x4000C87
     public float resourceNum;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000EB8
-    // RVA   : 0x46E160   Offset: 0x46D560   Length: 0x36
+    // Token : 0x6000EBE
+    // RVA   : 0x212850   Offset: 0x211650   Length: 0x36
     public void /*ctor*/(int type, float num)
     {
         ZhSegment.Initialize(this,0);
@@ -22,15 +22,15 @@ public class ResourceData
         this.resourceType = type;
     }
 
-    // Token : 0x6000EB9
-    // RVA   : 0xD15FB0   Offset: 0xD153B0   Length: 0xCF
+    // Token : 0x6000EBF
+    // RVA   : 0xA6EB00   Offset: 0xA6D900   Length: 0xCF
     public string GetDescribe()
     {
         uint uVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x438);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x440);
         if (lVar2 != null) {
           uVar1 = this.resourceType;
           if (*(uint32 *)(lVar2 + 24) <= uVar1) {
@@ -43,8 +43,8 @@ public class ResourceData
         }
     }
 
-    // Token : 0x6000EBA
-    // RVA   : 0xD16080   Offset: 0xD15480   Length: 0x8B
+    // Token : 0x6000EC0
+    // RVA   : 0xA6EBD0   Offset: 0xA6D9D0   Length: 0x8B
     public static ResourceData op_Multiply(ResourceData a, int b)
     {
         float fVar1;
@@ -60,42 +60,19 @@ public class ResourceData
         }
     }
 
-    // Token : 0x6000EBB
-    // RVA   : 0xD15E30   Offset: 0xD15230   Length: 0x175
+    // Token : 0x6000EC1
+    // RVA   : 0xA6EA90   Offset: 0xA6D890   Length: 0x6A
     public virtual object Clone()
     {
-        long lVar2;
-        ulong uVar3;
-        ulong local_38;
-        ulong uStack_30;
-        uint local_28;
-        uint uStack_24;
-        uint uStack_20;
-        uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
-        plVar4 = plVar1;
-        MemoryStream.ctor(plVar1,1000,0);
-        local_38 = 0;
-        uStack_30 = 0;
-        StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
-        local_28 = (uint32)local_38;
-        uStack_24 = local_38._4_4_;
-        uStack_20 = (uint32)uStack_30;
-        uStack_1c = uStack_30._4_4_;
-        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar4);
-        if (lVar2 != null) {
-          BinaryFormatter.Serialize(lVar2,plVar1,this,0);
-          if (plVar1 != (int64 *)0) {
-            (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
-            uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
-            (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
-            return uVar3;
-          }
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
+        uint uVar1;
+        uint uVar2;
+        long lVar3;
+        uVar2 = this.resourceType;
+        uVar1 = this.resourceNum;
+        lVar3 = new ZhSegment(0);
+        *(uint32 *)(lVar3 + 20) = uVar1;
+        *(uint32 *)(lVar3 + 16) = uVar2;
+        return lVar3;
     }
 
 }

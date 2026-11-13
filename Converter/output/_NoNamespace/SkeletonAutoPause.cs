@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : SkeletonAutoPause
-// Token : 0x2000359
+// Token : 0x2000366
 // ============================================================
 
 public class SkeletonAutoPause
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B95
+    // Token: 0x4001C13
     public SkeletonAnimation skeletonAnimation;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600211E
-    // RVA   : 0x983DA0   Offset: 0x9831A0   Length: 0x4B
+    // Token : 0x60021C6
+    // RVA   : 0x6AB9C0   Offset: 0x6AA7C0   Length: 0x4B
     private void Start()
     {
         long lVar1;
@@ -27,8 +27,8 @@ public class SkeletonAutoPause
         }
     }
 
-    // Token : 0x600211F
-    // RVA   : 0x983DF0   Offset: 0x9831F0   Length: 0x20
+    // Token : 0x60021C7
+    // RVA   : 0x6ABA10   Offset: 0x6AA810   Length: 0x20
     private void OnBecameVisible()
     {
         if (this.skeletonAnimation != null) {
@@ -37,8 +37,8 @@ public class SkeletonAutoPause
         }
     }
 
-    // Token : 0x6002120
-    // RVA   : 0x983DA0   Offset: 0x9831A0   Length: 0x4B
+    // Token : 0x60021C8
+    // RVA   : 0x6AB9C0   Offset: 0x6AA7C0   Length: 0x4B
     private void OnBecameInvisible()
     {
         long lVar1;
@@ -54,11 +54,11 @@ public class SkeletonAutoPause
         }
     }
 
-    // Token : 0x6002121
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60021C9
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

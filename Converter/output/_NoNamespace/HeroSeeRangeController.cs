@@ -1,28 +1,28 @@
 // ============================================================
 // Type  : HeroSeeRangeController
-// Token : 0x20002D4
+// Token : 0x20002DD
 // ============================================================
 
 public class HeroSeeRangeController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001755
+    // Token: 0x40017AA
     public BigmapNpcController targetHero;
 
-    // Token: 0x4001756
+    // Token: 0x40017AB
     public SpriteRenderer seeSprite;
 
-    // Token: 0x4001757
+    // Token: 0x40017AC
     public SpriteRenderer seeRangeSprite;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600180A
-    // RVA   : 0xAFAE10   Offset: 0xAFA210   Length: 0x166
+    // Token : 0x6001886
+    // RVA   : 0x89CDB0   Offset: 0x89BBB0   Length: 0x166
     private void Update()
     {
         bool cVar1;
         long lVar2;
-        cVar1 = FUN_1804625f0(0x130,0);
+        cVar1 = FUN_1818448a0(0x130,0);
         lVar2 = this.seeSprite;
         if (!cVar1) {
           if ((lVar2 != null) && (lVar2 = Component.get_gameObject(lVar2,0)) != null) {
@@ -72,8 +72,8 @@ public class HeroSeeRangeController
         }
     }
 
-    // Token : 0x600180B
-    // RVA   : 0xAFADD0   Offset: 0xAFA1D0   Length: 0x39
+    // Token : 0x6001887
+    // RVA   : 0x89CD70   Offset: 0x89BB70   Length: 0x39
     public void OnTriggerStay(Collider other)
     {
         long lVar1;
@@ -88,11 +88,11 @@ public class HeroSeeRangeController
         }
     }
 
-    // Token : 0x600180C
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6001888
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

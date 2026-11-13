@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : AlwaysForward
-// Token : 0x200011E
+// Token : 0x200011D
 // ============================================================
 
 public class AlwaysForward
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000728
+    // Token: 0x4000708
     public float Speed;
 
-    // Token: 0x4000729
+    // Token: 0x4000709
     public float yRotation;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009A4
-    // RVA   : 0xA1ECD0   Offset: 0xA1E0D0   Length: 0x152
+    // Token : 0x600098B
+    // RVA   : 0x786700   Offset: 0x785500   Length: 0x152
     private void Update()
     {
         long lVar1;
@@ -60,11 +60,11 @@ public class AlwaysForward
         }
     }
 
-    // Token : 0x60009A5
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600098C
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

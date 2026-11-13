@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : UIToggledComponents
-// Token : 0x2000071
+// Token : 0x2000070
 // ============================================================
 
 public class UIToggledComponents
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40002CB
+    // Token: 0x40002AB
     public List<MonoBehaviour> activate;
 
-    // Token: 0x40002CC
+    // Token: 0x40002AC
     public List<MonoBehaviour> deactivate;
 
-    // Token: 0x40002CD
+    // Token: 0x40002AD
     private MonoBehaviour target;
 
-    // Token: 0x40002CE
+    // Token: 0x40002AE
     private bool inverse;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002A9
-    // RVA   : 0xC07870   Offset: 0xC06C70   Length: 0x180
+    // Token : 0x6000290
+    // RVA   : 0x960AE0   Offset: 0x95F8E0   Length: 0x180
     private void Awake()
     {
         ulong uVar1;
@@ -38,31 +38,31 @@ public class UIToggledComponents
             if (lVar2 == null) throw; // [null/range check failed]
             if (lVar2.Count == null) {
               if (!this.inverse) {
-                FUN_18181e6b0(lVar4,this.target,DAT_181d95620);
+                FUN_18175de30(lVar4,this.target,DAT_181e77960);
               }
               else {
-                FUN_18181e6b0(lVar2,this.target,DAT_181d95620);
+                FUN_18175de30(lVar2,this.target,DAT_181e77960);
               }
-              goto LAB_180c07974;
+              goto LAB_180960be4;
             }
           }
           this.target = 0;
         }
-        LAB_180c07974:
-        lVar4 = Component.GetComponent(this,DAT_181d96ff8);
+        LAB_180960be4:
+        lVar4 = Component.GetComponent(this,DAT_181e7a3b8);
         if (lVar4 != null) {
           uVar1 = *(uint64 *)(lVar4 + 80);
-          uVar5 = new OnTooltipCB(this,DAT_181dc6b48,0);
+          uVar5 = new OnTooltipCB(this,DAT_181e52e00,0);
           EventDelegate.Add(uVar1,uVar5,0);
           return;
         }
     }
 
-    // Token : 0x60002AA
-    // RVA   : 0xC07A00   Offset: 0xC06E00   Length: 0x207
+    // Token : 0x6000291
+    // RVA   : 0x960C70   Offset: 0x95FA70   Length: 0x207
     public void Toggle()
     {
-        var pStatics = *(int64*)(DAT_181db0510 + 184);
+        var pStatics = *(int64*)(DAT_181e90950 + 184);
         byte uVar1;
         long lVar2;
         bool cVar3;
@@ -84,7 +84,7 @@ public class UIToggledComponents
           do {
             if (lVar4.Count <= (int)uVar5) {
               lVar4 = this.deactivate;
-              if (lVar4 != null) goto LAB_180c07b41;
+              if (lVar4 != null) goto LAB_180960db1;
               break;
             }
             if (lVar4 == null) break;
@@ -127,7 +127,7 @@ public class UIToggledComponents
           uVar6 = uVar6 + 1;
           lVar8 = lVar8 + 8;
           if (lVar4 == null) break;
-        LAB_180c07b41:
+        LAB_180960db1:
           if (lVar4.Count <= (int)uVar6) {
             return;
           }
@@ -135,11 +135,11 @@ public class UIToggledComponents
         }
     }
 
-    // Token : 0x60002AB
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000292
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : CFX_Demo_RandomDir
-// Token : 0x20003BC
+// Token : 0x20003C9
 // ============================================================
 
 public class CFX_Demo_RandomDir
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E33
+    // Token: 0x4001EC5
     public Vector3 min;
 
-    // Token: 0x4001E34
+    // Token: 0x4001EC6
     public Vector3 max;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023D9
-    // RVA   : 0xB7F3E0   Offset: 0xB7E7E0   Length: 0xA5
+    // Token : 0x6002483
+    // RVA   : 0x938690   Offset: 0x937490   Length: 0xA5
     private void Awake()
     {
         void CFX_Demo_RandomDir.Awake
@@ -37,15 +37,15 @@ public class CFX_Demo_RandomDir
         }
     }
 
-    // Token : 0x60023DA
-    // RVA   : 0xB7F490   Offset: 0xB7E890   Length: 0x4E
+    // Token : 0x6002484
+    // RVA   : 0x938740   Offset: 0x937540   Length: 0x4E
     public void /*ctor*/()
     {
         this.min = 0;
         *(uint32 *)(this + 32) = 0;
         this.max = 0x43b4000000000000;
         *(uint32 *)(this + 44) = 0;
-        FUN_18044ef50(0,0);
+        FUN_180ae8740(0,0);
     }
 
 }

@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : UIButtonOffset
-// Token : 0x2000035
+// Token : 0x2000034
 // ============================================================
 
 public class UIButtonOffset
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400010B
+    // Token: 0x40000EB
     public Transform tweenTarget;
 
-    // Token: 0x400010C
+    // Token: 0x40000EC
     public Vector3 hover;
 
-    // Token: 0x400010D
+    // Token: 0x40000ED
     public Vector3 pressed;
 
-    // Token: 0x400010E
+    // Token: 0x40000EE
     public float duration;
 
-    // Token: 0x400010F
+    // Token: 0x40000EF
     private Vector3 mPos;
 
-    // Token: 0x4000110
+    // Token: 0x40000F0
     private bool mStarted;
 
-    // Token: 0x4000111
+    // Token: 0x40000F1
     private bool mPressed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000E4
-    // RVA   : 0x1531800   Offset: 0x1530C00   Length: 0xC4
+    // Token : 0x60000CB
+    // RVA   : 0x141D8C0   Offset: 0x141C6C0   Length: 0xC4
     private void Start()
     {
         bool cVar1;
@@ -45,7 +45,7 @@ public class UIButtonOffset
           }
           if (this.tweenTarget == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           puVar3 = (uint64 *)Transform.get_localPosition(local_18,this.tweenTarget,0);
           this.mPos = *puVar3;
@@ -53,8 +53,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000E5
-    // RVA   : 0x1531430   Offset: 0x1530830   Length: 0x7E
+    // Token : 0x60000CC
+    // RVA   : 0x141D4F0   Offset: 0x141C2F0   Length: 0x7E
     private void OnEnable()
     {
         ulong uVar1;
@@ -66,8 +66,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000E6
-    // RVA   : 0x1531200   Offset: 0x1530600   Length: 0xFE
+    // Token : 0x60000CD
+    // RVA   : 0x141D2C0   Offset: 0x141C0C0   Length: 0xFE
     private void OnDisable()
     {
         ulong uVar1;
@@ -80,14 +80,14 @@ public class UIButtonOffset
           cVar2 = Object.op_Inequality(uVar1,0,0);
           if (cVar2) {
             if (this.tweenTarget == null) {
-        LAB_1815312f9:
+        LAB_18141d3b9:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            lVar3 = Component.GetComponent(this.tweenTarget,DAT_181d96478);
+            lVar3 = Component.GetComponent(this.tweenTarget,DAT_181e79838);
             cVar2 = Object.op_Inequality(lVar3,0,0);
             if (cVar2) {
-              if (lVar3 == null) goto LAB_1815312f9;
+              if (lVar3 == null) goto LAB_18141d3b9;
               local_18 = this.mPos;
               local_10 = *(uint32 *)(this + 68);
               TweenPosition.set_value(lVar3,&local_18,0);
@@ -97,8 +97,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000E7
-    // RVA   : 0x15315B0   Offset: 0x15309B0   Length: 0x1BF
+    // Token : 0x60000CE
+    // RVA   : 0x141D670   Offset: 0x141C470   Length: 0x1BF
     private void OnPress(bool isPressed)
     {
         uint uVar1;
@@ -130,7 +130,7 @@ public class UIButtonOffset
             uVar4 = this.hover;
             fVar7 = (float)((uint64)uVar6 >> 32) + (float)((uint64)uVar4 >> 32);
             local_30 = *(float *)(this + 68) + *(float *)(this + 40);
-            goto LAB_18153167b;
+            goto LAB_18141d73b;
           }
           local_38 = this.mPos;
           local_30 = *(float *)(this + 68);
@@ -140,7 +140,7 @@ public class UIButtonOffset
           uVar6 = this.mPos;
           fVar7 = (float)((uint64)uVar6 >> 32) + (float)((uint64)uVar4 >> 32);
           local_30 = *(float *)(this + 68) + *(float *)(this + 52);
-        LAB_18153167b:
+        LAB_18141d73b:
           local_38 = CONCAT44(fVar7,(float)uVar6 + (float)uVar4);
           local_20 = local_30;
         }
@@ -151,8 +151,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000E8
-    // RVA   : 0x15314B0   Offset: 0x15308B0   Length: 0xF3
+    // Token : 0x60000CF
+    // RVA   : 0x141D570   Offset: 0x141C370   Length: 0xF3
     private void OnHover(bool isOver)
     {
         bool cVar1;
@@ -190,8 +190,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000E9
-    // RVA   : 0x1531360   Offset: 0x1530760   Length: 0xC6
+    // Token : 0x60000D0
+    // RVA   : 0x141D420   Offset: 0x141C220   Length: 0xC6
     private void OnDragOver()
     {
         ulong uVar1;
@@ -218,8 +218,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000EA
-    // RVA   : 0x1531300   Offset: 0x1530700   Length: 0x5D
+    // Token : 0x60000D1
+    // RVA   : 0x141D3C0   Offset: 0x141C1C0   Length: 0x5D
     private void OnDragOut()
     {
         ulong uVar1;
@@ -241,8 +241,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000EB
-    // RVA   : 0x1531770   Offset: 0x1530B70   Length: 0x81
+    // Token : 0x60000D2
+    // RVA   : 0x141D830   Offset: 0x141C630   Length: 0x81
     private void OnSelect(bool isSelected)
     {
         bool cVar1;
@@ -259,8 +259,8 @@ public class UIButtonOffset
         }
     }
 
-    // Token : 0x60000EC
-    // RVA   : 0x15318D0   Offset: 0x1530CD0   Length: 0x62
+    // Token : 0x60000D3
+    // RVA   : 0x141D990   Offset: 0x141C790   Length: 0x62
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[8];
@@ -272,7 +272,7 @@ public class UIButtonOffset
         this.pressed = 0xc000000040000000;
         *(uint32 *)(this + 52) = 0;
         this.duration = 0x3e4ccccd;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

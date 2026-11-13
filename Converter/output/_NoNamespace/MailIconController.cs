@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : MailIconController
-// Token : 0x2000300
+// Token : 0x2000309
 // ============================================================
 
 public class MailIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018B9
+    // Token: 0x400190F
     public MailData mailData;
 
-    // Token: 0x40018BA
+    // Token: 0x4001910
     public bool inited;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60018E2
-    // RVA   : 0xA874E0   Offset: 0xA868E0   Length: 0x512
+    // Token : 0x600195E
+    // RVA   : 0x7CB440   Offset: 0x7CA240   Length: 0x512
     private void Update()
     {
         long lVar1;
@@ -30,13 +30,13 @@ public class MailIconController
         MailIconController.RefreshNoticeText(this,0);
         lVar1 = Component.get_transform(this,0);
         if ((lVar1 != null) && (lVar1 = Transform.Find(lVar1,"Title",0)) != null) {
-          lVar1 = Component.GetComponent(lVar1,DAT_181d94078);
+          lVar1 = Component.GetComponent(lVar1,DAT_181e773b8);
           if ((this.mailData != null) && (lVar1 != null)) {
             lVar1.mailText = this.mailData.mailTitle;
             lVar1 = Component.get_transform(this,0);
             if (((lVar1 != null) && (lVar1 = Transform.Find(lVar1,"Title",0)) != null) &&
                (lVar1 = Transform.Find(lVar1,"Important",0)) != null) {
-              lVar2 = Component.GetComponent(lVar1,DAT_181d95578);
+              lVar2 = Component.GetComponent(lVar1,DAT_181e788b8);
               lVar1 = this.mailData;
               if (lVar1 != null) {
                 uVar5 = "";
@@ -73,7 +73,7 @@ public class MailIconController
                               puVar3 = (uint64 *)Color.get_yellow(&local_18);
                             }
                             else {
-                              puVar3 = (uint64 *)FUN_1810d3b80();
+                              puVar3 = (uint64 *)FUN_180f24d00();
                             }
                             if (plVar4 == (int64 *)0) throw; // [null/range check failed]
                             local_18 = *puVar3;
@@ -85,7 +85,7 @@ public class MailIconController
                           lVar1 = Component.get_transform(this,0);
                           if ((lVar1 != null) && (lVar1 = Transform.Find(lVar1,"Text",0)) != null
                              ) {
-                            plVar4 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
+                            plVar4 = (int64 *)Component.GetComponent(lVar1,DAT_181e79538);
                             if (this.mailData != null) {
                               uVar5 = this.mailData.mailText;
                               uVar5 = LTLocalization.GetText(uVar5,0,1,0);
@@ -96,7 +96,7 @@ public class MailIconController
                                 lVar1 = Component.get_transform(this,0);
                                 if ((lVar1 != null) &&
                                    (lVar1 = Transform.Find(lVar1,"Time",0)) != null) {
-                                  plVar4 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
+                                  plVar4 = (int64 *)Component.GetComponent(lVar1,DAT_181e79538);
                                   if ((this.mailData != null) &&
                                      (lVar1 = this.mailData.mailTime,
                                      lVar1 != null)) {
@@ -125,27 +125,27 @@ public class MailIconController
         }
     }
 
-    // Token : 0x60018E3
-    // RVA   : 0xA87130   Offset: 0xA86530   Length: 0x214
+    // Token : 0x600195F
+    // RVA   : 0x7CB090   Offset: 0x7C9E90   Length: 0x214
     public void OnClick()
     {
-        var pStatics_aba8 = *(int64*)(DAT_181d8aba8 + 184);
+        var pStatics_af70 = *(int64*)(DAT_181e6af70 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar4;
-        cVar2 = FUN_1804625f0(0x130,0);
+        cVar2 = FUN_1818448a0(0x130,0);
         if (!cVar2) {
           lVar1 = this.mailData;
           if (lVar1 != null) {
             lVar1.noticed = !lVar1.noticed;
             MailIconController.RefreshNoticeText(this,0);
-            if (*pStatics_aba8 != 0) {
-              MissionUIController.RefreshMailNewIcon(*pStatics_aba8,0);
+            if (*pStatics_af70 != 0) {
+              MissionUIController.RefreshMailNewIcon(*pStatics_af70,0);
               uVar4 = "Sound/SoundEffect/Paper";
-        LAB_180a872f6:
+        LAB_1807cb256:
               plVar3 = (int64 *)Resources.Load(uVar4,0);
               plVar5 = (int64 *)0;
-              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181daf360)) {
+              if ((plVar3 != (int64 *)0) && (*plVar3 == DAT_181e8f4a0)) {
                 plVar5 = plVar3;
               }
               NGUITools.PlaySound(plVar5,0);
@@ -157,18 +157,18 @@ public class MailIconController
           if (((GameController._instance != null) &&
               (lVar1 = GameController._instance.worldData) != null) &&
              (lVar1 = lVar1.MailDatas) != null) {
-            FUN_1817ef410(lVar1,this.mailData,DAT_181d936a0);
-            if (*pStatics_aba8 != 0) {
-              MissionUIController.RefreshMailTable(*pStatics_aba8,0);
+            FUN_181665e90(lVar1,this.mailData,DAT_181e758f0);
+            if (*pStatics_af70 != 0) {
+              MissionUIController.RefreshMailTable(*pStatics_af70,0);
               uVar4 = "Sound/SoundEffect/PaperQuick";
-              goto LAB_180a872f6;
+              goto LAB_1807cb256;
             }
           }
         }
     }
 
-    // Token : 0x60018E4
-    // RVA   : 0xA87350   Offset: 0xA86750   Length: 0x181
+    // Token : 0x6001960
+    // RVA   : 0x7CB2B0   Offset: 0x7CA0B0   Length: 0x181
     public void RefreshNoticeText()
     {
         long lVar1;
@@ -177,7 +177,7 @@ public class MailIconController
         if (lVar1 != null) {
           lVar1 = Transform.Find(lVar1,"Title",0);
           if (lVar1 != null) {
-            plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
+            plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181e79538);
             lVar1 = this.mailData;
             if (lVar1 != null) {
               uVar3 = " <color=grey>(已读)</color>";
@@ -196,11 +196,11 @@ public class MailIconController
         }
     }
 
-    // Token : 0x60018E5
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6001961
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

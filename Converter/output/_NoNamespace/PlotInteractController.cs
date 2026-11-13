@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : PlotInteractController
-// Token : 0x2000328
+// Token : 0x2000332
 // ============================================================
 
 public class PlotInteractController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001A3F
+    // Token: 0x4001AB9
     public SinglePlotChoiceData choiceData;
 
-    // Token: 0x4001A40
+    // Token: 0x4001ABA
     private bool meetRequire;
 
-    // Token: 0x4001A41
+    // Token: 0x4001ABB
     private bool meetCost;
 
-    // Token: 0x4001A42
+    // Token: 0x4001ABC
     private float refreshTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001FD9
-    // RVA   : 0xB0D6D0   Offset: 0xB0CAD0   Length: 0x7AD
+    // Token : 0x6002078
+    // RVA   : 0x8AFB50   Offset: 0x8AE950   Length: 0x7AD
     public void Update()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         uint uVar1;
         long lVar2;
         bool cVar3;
@@ -51,11 +51,11 @@ public class PlotInteractController
         if (this.choiceData == null) throw; // [null/range check failed]
         lVar5 = this.choiceData.requirements;
         if ((lVar5 == null) || (*(int *)(lVar5 + 24) < 1)) {
-        LAB_180b0da4a:
+        LAB_1808afeca:
           this.meetRequire = 1;
         }
         else {
-          lVar5 = FUN_18046c400(0);
+          lVar5 = FUN_180210a70(0);
           if ((this.choiceData == null) || (lVar5 == null)) throw; // [null/range check failed]
           cVar3 = PlotController.CheckChoiceMeetRequire
                             (lVar5,this.choiceData.requirements,0,0);
@@ -63,18 +63,18 @@ public class PlotInteractController
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
             throw; // [null/range check failed]
-            lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
+            lVar5 = Component.GetComponent(lVar5,DAT_181e77e38);
             lVar2 = pStatics;
             if (lVar5 == null) throw; // [null/range check failed]
-            local_28 = *(uint32 *)(lVar2 + 0x2b8);
-            uStack_24 = *(uint32 *)(lVar2 + 700);
-            uStack_20 = *(uint32 *)(lVar2 + 0x2c0);
-            uStack_1c = *(uint32 *)(lVar2 + 0x2c4);
-        LAB_180b0da35:
+            local_28 = *(uint32 *)(lVar2 + 0x2c0);
+            uStack_24 = *(uint32 *)(lVar2 + 0x2c4);
+            uStack_20 = *(uint32 *)(lVar2 + 0x2c8);
+            uStack_1c = *(uint32 *)(lVar2 + 0x2cc);
+        LAB_1808afeb5:
             Shadow.set_effectColor(lVar5,&local_28,0);
-            goto LAB_180b0da4a;
+            goto LAB_1808afeca;
           }
-          lVar5 = FUN_18046c400(0);
+          lVar5 = FUN_180210a70(0);
           if ((this.choiceData == null) || (lVar5 == null)) throw; // [null/range check failed]
           cVar3 = PlotController.CheckChoiceMeetRequire
                             (lVar5,this.choiceData.requirements,1,0);
@@ -82,25 +82,25 @@ public class PlotInteractController
             lVar5 = Component.get_transform(this,0);
             if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
             throw; // [null/range check failed]
-            lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
+            lVar5 = Component.GetComponent(lVar5,DAT_181e77e38);
             lVar2 = pStatics;
             if (lVar5 == null) throw; // [null/range check failed]
-            local_28 = *(uint32 *)(lVar2 + 0x330);
-            uStack_24 = *(uint32 *)(lVar2 + 0x334);
-            uStack_20 = *(uint32 *)(lVar2 + 0x338);
-            uStack_1c = *(uint32 *)(lVar2 + 0x33c);
-            goto LAB_180b0da35;
+            local_28 = *(uint32 *)(lVar2 + 0x338);
+            uStack_24 = *(uint32 *)(lVar2 + 0x33c);
+            uStack_20 = *(uint32 *)(lVar2 + 0x340);
+            uStack_1c = *(uint32 *)(lVar2 + 0x344);
+            goto LAB_1808afeb5;
           }
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Require",0)) == null)
           throw; // [null/range check failed]
-          lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
+          lVar5 = Component.GetComponent(lVar5,DAT_181e77e38);
           lVar2 = pStatics;
           if (lVar5 == null) throw; // [null/range check failed]
-          local_28 = *(uint32 *)(lVar2 + 0x310);
-          uStack_24 = *(uint32 *)(lVar2 + 0x314);
-          uStack_20 = *(uint32 *)(lVar2 + 0x318);
-          uStack_1c = *(uint32 *)(lVar2 + 0x31c);
+          local_28 = *(uint32 *)(lVar2 + 0x318);
+          uStack_24 = *(uint32 *)(lVar2 + 0x31c);
+          uStack_20 = *(uint32 *)(lVar2 + 800);
+          uStack_1c = *(uint32 *)(lVar2 + 0x324);
           Shadow.set_effectColor(lVar5,&local_28,0);
           this.meetRequire = 0;
         }
@@ -110,7 +110,7 @@ public class PlotInteractController
           this.meetCost = 1;
         }
         else {
-          lVar5 = FUN_18046c0a0(0);
+          lVar5 = FUN_1802106e0(0);
           if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
           lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0);
           if ((this.choiceData == null) || (lVar5 == null)) throw; // [null/range check failed]
@@ -119,20 +119,20 @@ public class PlotInteractController
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"Cost",0)) == null)
           throw; // [null/range check failed]
-          lVar5 = Component.GetComponent(lVar5,DAT_181d94af8);
+          lVar5 = Component.GetComponent(lVar5,DAT_181e77e38);
           if (!this.meetCost) {
             lVar2 = pStatics;
-            uVar8 = *(uint32 *)(lVar2 + 0x310);
-            uVar9 = *(uint32 *)(lVar2 + 0x314);
-            uVar10 = *(uint32 *)(lVar2 + 0x318);
-            uVar11 = *(uint32 *)(lVar2 + 0x31c);
+            uVar8 = *(uint32 *)(lVar2 + 0x318);
+            uVar9 = *(uint32 *)(lVar2 + 0x31c);
+            uVar10 = *(uint32 *)(lVar2 + 800);
+            uVar11 = *(uint32 *)(lVar2 + 0x324);
           }
           else {
             lVar2 = pStatics;
-            uVar8 = *(uint32 *)(lVar2 + 0x2b8);
-            uVar9 = *(uint32 *)(lVar2 + 700);
-            uVar10 = *(uint32 *)(lVar2 + 0x2c0);
-            uVar11 = *(uint32 *)(lVar2 + 0x2c4);
+            uVar8 = *(uint32 *)(lVar2 + 0x2c0);
+            uVar9 = *(uint32 *)(lVar2 + 0x2c4);
+            uVar10 = *(uint32 *)(lVar2 + 0x2c8);
+            uVar11 = *(uint32 *)(lVar2 + 0x2cc);
           }
           if (lVar5 == null) throw; // [null/range check failed]
           local_28 = uVar8;
@@ -141,21 +141,21 @@ public class PlotInteractController
           uStack_1c = uVar11;
           Shadow.set_effectColor(lVar5,&local_28,0);
         }
-        lVar5 = Component.GetComponent(this,DAT_181d93778);
+        lVar5 = Component.GetComponent(this,DAT_181e76ab8);
         if (lVar5 == null) throw; // [null/range check failed]
         Selectable.set_interactable(lVar5,1,0);
         if (this.choiceData == null) throw; // [null/range check failed]
         if (this.choiceData.playerInteractionTimeNeed == null) {
-        LAB_180b0dd25:
+        LAB_1808b01a5:
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"InteractTime",0)) == null)
           throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           LTLocalization.SetText(uVar6,"",0);
-          lVar5 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+          lVar5 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
           if (lVar5 == null) throw; // [null/range check failed]
           if (*(char *)(lVar5 + 208) == false) {
-            lVar5 = FUN_18046c400(0);
+            lVar5 = FUN_180210a70(0);
             if (lVar5 == null) throw; // [null/range check failed]
             if (((*(char *)(lVar5 + 209) == false) && (this.meetRequire)) &&
                (this.meetCost)) {
@@ -164,10 +164,10 @@ public class PlotInteractController
           }
         }
         else {
-          lVar5 = FUN_18046c400(0);
+          lVar5 = FUN_180210a70(0);
           if (lVar5 == null) throw; // [null/range check failed]
-          if (*(int64 *)(lVar5 + 112) == 0) goto LAB_180b0dd25;
-          lVar5 = FUN_18046c400(0);
+          if (*(int64 *)(lVar5 + 112) == 0) goto LAB_1808b01a5;
+          lVar5 = FUN_180210a70(0);
           if ((((lVar5 == null) || (*(int64 *)(lVar5 + 112) == 0)) ||
               (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 112) + 0x308)) == null) ||
              ((this.choiceData == null || (lVar5 = *(int64 *)(lVar5 + 16)) == null)))
@@ -177,22 +177,22 @@ public class PlotInteractController
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           if (0 < lVar5[uVar1])
-          goto LAB_180b0dd25;
+          goto LAB_1808b01a5;
           lVar5 = Component.get_transform(this,0);
           if ((lVar5 == null) || (lVar5 = Transform.Find(lVar5,"InteractTime",0)) == null)
           throw; // [null/range check failed]
-          uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+          uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
           LTLocalization.SetText(uVar6,"本月已用",0);
         }
-        lVar5 = Component.GetComponent(this,DAT_181d93778);
+        lVar5 = Component.GetComponent(this,DAT_181e76ab8);
         if (lVar5 != null) {
           Selectable.set_interactable(lVar5,0,0);
           return;
         }
     }
 
-    // Token : 0x6001FDA
-    // RVA   : 0xB0D300   Offset: 0xB0C700   Length: 0x3C7
+    // Token : 0x6002079
+    // RVA   : 0x8AF780   Offset: 0x8AE580   Length: 0x3C7
     public void OnClick()
     {
         long lVar1;
@@ -208,8 +208,8 @@ public class PlotInteractController
             if (*(char *)(lVar1 + 209) != false) {
               return;
             }
-            lVar1 = FUN_18046c400(0);
-            lVar2 = FUN_18046c0a0(0);
+            lVar1 = FUN_180210a70(0);
+            lVar2 = FUN_1802106e0(0);
             if (((lVar2 != null) && (*(int64 *)(lVar2 + 32) != 0)) &&
                (lVar2 = WorldData.Player(*(int64 *)(lVar2 + 32),0)) != null) {
               uVar3 = HeroData.HeroName(lVar2,0,0);
@@ -218,13 +218,13 @@ public class PlotInteractController
                                          this.choiceData.choiceText,0),
                  lVar1 != null)) {
                 PlotController.AddPlotRecordText(lVar1,uVar3,0);
-                lVar1 = FUN_18046c400(0);
+                lVar1 = FUN_180210a70(0);
                 if (lVar1 != null) {
                   *(uint64 *)(lVar1 + 176) = this.choiceData;
                   lVar1 = this.choiceData;
                   if ((lVar1 != null) && (lVar1.costResource != null)) {
                     if (0 < *(int *)(lVar1.costResource + 24)) {
-                      lVar1 = FUN_18046c0a0(0);
+                      lVar1 = FUN_1802106e0(0);
                       if ((lVar1 == null) || (lVar1.callParam == null)) throw; // [null/range check failed]
                       lVar1 = WorldData.Player(lVar1.callParam,0);
                       if ((this.choiceData == null) || (lVar1 == null)) throw; // [null/range check failed]
@@ -234,15 +234,15 @@ public class PlotInteractController
                       if (lVar1 == null) throw; // [null/range check failed]
                     }
                     if (lVar1.destroyEvent) {
-                      lVar1 = FUN_18046c400(0);
-                      lVar2 = FUN_18046c400(0);
+                      lVar1 = FUN_180210a70(0);
+                      lVar2 = FUN_180210a70(0);
                       if ((lVar2 == null) || (lVar1 == null)) throw; // [null/range check failed]
                       PlotController.RemoveEvent(lVar1,*(uint64 *)(lVar2 + 152),0);
                       lVar1 = this.choiceData;
                       if (lVar1 == null) throw; // [null/range check failed]
                     }
                     if (lVar1.callParam == null) {
-                      lVar1 = FUN_18046c400(0);
+                      lVar1 = FUN_180210a70(0);
                       if ((this.choiceData != null) && (lVar1 != null)) {
                         Component.SendMessage
                                   (lVar1,this.choiceData.callFuc,0);
@@ -250,7 +250,7 @@ public class PlotInteractController
                       }
                     }
                     else {
-                      lVar2 = FUN_18046c400(0);
+                      lVar2 = FUN_180210a70(0);
                       lVar1 = this.choiceData;
                       if ((lVar1 != null) && (lVar2 != null)) {
                         Component.SendMessage
@@ -266,11 +266,11 @@ public class PlotInteractController
         }
     }
 
-    // Token : 0x6001FDB
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600207A
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

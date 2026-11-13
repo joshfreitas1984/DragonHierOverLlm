@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : ButtonClick
-// Token : 0x20001B2
+// Token : 0x20001B4
 // ============================================================
 
 public class ButtonClick
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BCA
+    // Token: 0x4000BDB
     public UnityEvent leftClick;
 
-    // Token: 0x4000BCB
+    // Token: 0x4000BDC
     public UnityEvent middleClick;
 
-    // Token: 0x4000BCC
+    // Token: 0x4000BDD
     public UnityEvent rightClick;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E61
-    // RVA   : 0xB7DBD0   Offset: 0xB7CFD0   Length: 0x47
+    // Token : 0x6000E65
+    // RVA   : 0x936E80   Offset: 0x935C80   Length: 0x47
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         int iVar1;
@@ -43,11 +43,11 @@ public class ButtonClick
         }
     }
 
-    // Token : 0x6000E62
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000E66
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

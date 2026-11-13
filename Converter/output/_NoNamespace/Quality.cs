@@ -1,51 +1,51 @@
 // ============================================================
 // Type  : Quality
-// Token : 0x2000011
+// Token : 0x2000010
 // ============================================================
 
 public class Quality
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000062
+    // Token: 0x4000042
     public int value__;
 
-    // Token: 0x4000063
+    // Token: 0x4000043
     public const Quality Broken;
 
-    // Token: 0x4000064
+    // Token: 0x4000044
     public const Quality Cursed;
 
-    // Token: 0x4000065
+    // Token: 0x4000045
     public const Quality Damaged;
 
-    // Token: 0x4000066
+    // Token: 0x4000046
     public const Quality Worn;
 
-    // Token: 0x4000067
+    // Token: 0x4000047
     public const Quality Sturdy;
 
-    // Token: 0x4000068
+    // Token: 0x4000048
     public const Quality Polished;
 
-    // Token: 0x4000069
+    // Token: 0x4000049
     public const Quality Improved;
 
-    // Token: 0x400006A
+    // Token: 0x400004A
     public const Quality Crafted;
 
-    // Token: 0x400006B
+    // Token: 0x400004B
     public const Quality Superior;
 
-    // Token: 0x400006C
+    // Token: 0x400004C
     public const Quality Enchanted;
 
-    // Token: 0x400006D
+    // Token: 0x400004D
     public const Quality Epic;
 
-    // Token: 0x400006E
+    // Token: 0x400004E
     public const Quality Legendary;
 
-    // Token: 0x400006F
+    // Token: 0x400004F
     public const Quality _LastDoNotUse;
 
 }

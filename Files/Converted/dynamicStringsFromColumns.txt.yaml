@@ -60657,14 +60657,6 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "营地"
-  splits:
-  - text: "营地"
-    translated: "Campgrounds"
-    qcReviewedText: "Campgrounds"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
 - raw: "地图"
   splits:
   - text: "地图"

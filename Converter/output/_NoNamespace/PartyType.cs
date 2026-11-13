@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : PartyType
-// Token : 0x2000312
+// Token : 0x200031C
 // ============================================================
 
 public class PartyType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001948
+    // Token: 0x40019C1
     public int value__;
 
-    // Token: 0x4001949
+    // Token: 0x40019C2
     public const PartyType Normal;
 
-    // Token: 0x400194A
+    // Token: 0x40019C3
     public const PartyType Force;
 
-    // Token: 0x400194B
+    // Token: 0x40019C4
     public const PartyType Wedding;
 
 }

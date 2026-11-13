@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : ForceTechDataBase
-// Token : 0x20001E7
+// Token : 0x20001E9
 // ============================================================
 
 public class ForceTechDataBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000D52
+    // Token: 0x4000D66
     public int id;
 
-    // Token: 0x4000D53
+    // Token: 0x4000D67
     public string name;
 
-    // Token: 0x4000D54
+    // Token: 0x4000D68
     public string describe;
 
-    // Token: 0x4000D55
+    // Token: 0x4000D69
     public int belongTab;
 
-    // Token: 0x4000D56
+    // Token: 0x4000D6A
     public ForceSpeAddDataType speAddDataType;
 
-    // Token: 0x4000D57
+    // Token: 0x4000D6B
     public float speAddDataNum;
 
-    // Token: 0x4000D58
+    // Token: 0x4000D6C
     public bool staticSpeAddNum;
 
-    // Token: 0x4000D59
+    // Token: 0x4000D6D
     public float researchDifficulty;
 
-    // Token: 0x4000D5A
+    // Token: 0x4000D6E
     public int costResourceID;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000F2B
-    // RVA   : 0x7833D0   Offset: 0x7827D0   Length: 0x175
+    // Token : 0x6000F34
+    // RVA   : 0x18587C0   Offset: 0x18575C0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -46,13 +46,13 @@ public class ForceTechDataBase
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -64,16 +64,16 @@ public class ForceTechDataBase
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6000F2C
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6000F35
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

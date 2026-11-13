@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : WatchFightType
-// Token : 0x200027E
+// Token : 0x2000285
 // ============================================================
 
 public class WatchFightType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400141B
+    // Token: 0x4001459
     public int value__;
 
-    // Token: 0x400141C
+    // Token: 0x400145A
     public const WatchFightType NoWatchFight;
 
-    // Token: 0x400141D
+    // Token: 0x400145B
     public const WatchFightType AskWatchFight;
 
 }

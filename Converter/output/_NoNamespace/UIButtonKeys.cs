@@ -1,37 +1,37 @@
 // ============================================================
 // Type  : UIButtonKeys
-// Token : 0x2000032
+// Token : 0x2000031
 // ============================================================
 
 public class UIButtonKeys
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000FA
+    // Token: 0x40000DA
     public UIButtonKeys selectOnClick;
 
-    // Token: 0x40000FB
+    // Token: 0x40000DB
     public UIButtonKeys selectOnUp;
 
-    // Token: 0x40000FC
+    // Token: 0x40000DC
     public UIButtonKeys selectOnDown;
 
-    // Token: 0x40000FD
+    // Token: 0x40000DD
     public UIButtonKeys selectOnLeft;
 
-    // Token: 0x40000FE
+    // Token: 0x40000DE
     public UIButtonKeys selectOnRight;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000D8
-    // RVA   : 0x15308E0   Offset: 0x152FCE0   Length: 0x1F
+    // Token : 0x60000BF
+    // RVA   : 0x141C9A0   Offset: 0x141B7A0   Length: 0x1F
     protected override void OnEnable()
     {
         UIButtonKeys.Upgrade(this,0);
         UIKeyNavigation.OnEnable(this,0);
     }
 
-    // Token : 0x60000D9
-    // RVA   : 0x1530900   Offset: 0x152FD00   Length: 0x471
+    // Token : 0x60000C0
+    // RVA   : 0x141C9C0   Offset: 0x141B7C0   Length: 0x471
     public void Upgrade()
     {
         bool cVar1;
@@ -42,7 +42,7 @@ public class UIButtonKeys
           uVar2 = this.selectOnClick;
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (this.selectOnClick == null) goto LAB_181530d6c;
+            if (this.selectOnClick == null) goto LAB_18141ce2c;
             uVar2 = Component.get_gameObject(this.selectOnClick,0);
             *(uint64 *)(this + 64) = uVar2;
             this.selectOnClick = 0;
@@ -55,7 +55,7 @@ public class UIButtonKeys
           uVar2 = this.selectOnLeft;
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (this.selectOnLeft == null) goto LAB_181530d6c;
+            if (this.selectOnLeft == null) goto LAB_18141ce2c;
             uVar2 = Component.get_gameObject(this.selectOnLeft,0);
             *(uint64 *)(this + 48) = uVar2;
             this.selectOnLeft = 0;
@@ -68,7 +68,7 @@ public class UIButtonKeys
           uVar2 = this.selectOnRight;
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (this.selectOnRight == null) goto LAB_181530d6c;
+            if (this.selectOnRight == null) goto LAB_18141ce2c;
             uVar2 = Component.get_gameObject(this.selectOnRight,0);
             *(uint64 *)(this + 56) = uVar2;
             this.selectOnRight = 0;
@@ -81,7 +81,7 @@ public class UIButtonKeys
           uVar2 = this.selectOnUp;
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
-            if (this.selectOnUp == null) goto LAB_181530d6c;
+            if (this.selectOnUp == null) goto LAB_18141ce2c;
             uVar2 = Component.get_gameObject(this.selectOnUp,0);
             *(uint64 *)(this + 32) = uVar2;
             this.selectOnUp = 0;
@@ -95,9 +95,9 @@ public class UIButtonKeys
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (cVar1) {
             if (this.selectOnDown == null) {
-        LAB_181530d6c:
+        LAB_18141ce2c:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             uVar2 = Component.get_gameObject(this.selectOnDown,0);
             *(uint64 *)(this + 40) = uVar2;
@@ -107,8 +107,8 @@ public class UIButtonKeys
         }
     }
 
-    // Token : 0x60000DA
-    // RVA   : 0x1530D80   Offset: 0x1530180   Length: 0x52
+    // Token : 0x60000C1
+    // RVA   : 0x141CE40   Offset: 0x141BC40   Length: 0x52
     public void /*ctor*/()
     {
         TrailRenderer_Base.ctor(this,0);

@@ -1,116 +1,116 @@
 // ============================================================
 // Type  : EventData
-// Token : 0x20001FB
+// Token : 0x20001FD
 // ============================================================
 
 public class EventData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000E45
+    // Token: 0x4000E59
     public int id;
 
-    // Token: 0x4000E46
+    // Token: 0x4000E5A
     public string eventName;
 
-    // Token: 0x4000E47
+    // Token: 0x4000E5B
     public string eventDescribe;
 
-    // Token: 0x4000E48
+    // Token: 0x4000E5C
     public List<EventAvailableAreaType> eventAvailableAreaType;
 
-    // Token: 0x4000E49
+    // Token: 0x4000E5D
     public string spriteName;
 
-    // Token: 0x4000E4A
+    // Token: 0x4000E5E
     public bool isAreaEvent;
 
-    // Token: 0x4000E4B
+    // Token: 0x4000E5F
     public int resourcePointID;
 
-    // Token: 0x4000E4C
+    // Token: 0x4000E60
     public List<int> areaID;
 
-    // Token: 0x4000E4D
+    // Token: 0x4000E61
     public List<int> areaMapTileID;
 
-    // Token: 0x4000E4E
+    // Token: 0x4000E62
     public BigMapPos bigMapPos;
 
-    // Token: 0x4000E4F
+    // Token: 0x4000E63
     public int nearAreaID;
 
-    // Token: 0x4000E50
+    // Token: 0x4000E64
     public int nearAreaDirection;
 
-    // Token: 0x4000E51
+    // Token: 0x4000E65
     public bool seen;
 
-    // Token: 0x4000E52
+    // Token: 0x4000E66
     public bool happened;
 
-    // Token: 0x4000E53
+    // Token: 0x4000E67
     public bool noticed;
 
-    // Token: 0x4000E54
+    // Token: 0x4000E68
     public bool hovered;
 
-    // Token: 0x4000E55
+    // Token: 0x4000E69
     public bool plotTargetEvent;
 
-    // Token: 0x4000E56
+    // Token: 0x4000E6A
     public bool missionTargetEvent;
 
-    // Token: 0x4000E57
+    // Token: 0x4000E6B
     public bool autoDestroy;
 
-    // Token: 0x4000E58
+    // Token: 0x4000E6C
     public int leftTime;
 
-    // Token: 0x4000E59
+    // Token: 0x4000E6D
     public float difficulty;
 
-    // Token: 0x4000E5A
+    // Token: 0x4000E6E
     public float difficultyRate;
 
-    // Token: 0x4000E5B
+    // Token: 0x4000E6F
     public int speTargetID;
 
-    // Token: 0x4000E5C
+    // Token: 0x4000E70
     public PlotData plotData;
 
-    // Token: 0x4000E5D
+    // Token: 0x4000E71
     public ItemListData eventItemList;
 
-    // Token: 0x4000E5E
+    // Token: 0x4000E72
     public LeaderLimit leaderLimit;
 
-    // Token: 0x4000E5F
+    // Token: 0x4000E73
     public string eventOutTimeCallFuc;
 
-    // Token: 0x4000E60
+    // Token: 0x4000E74
     public float seeRange;
 
-    // Token: 0x4000E61
+    // Token: 0x4000E75
     public int randomSeed;
 
-    // Token: 0x4000E62
+    // Token: 0x4000E76
     public bool inaccuracyPosText;
 
-    // Token: 0x4000E63
+    // Token: 0x4000E77
     public bool notImportant;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FE2
-    // RVA   : 0x946690   Offset: 0x945A90   Length: 0xF4
+    // Token : 0x6000FEB
+    // RVA   : 0x68C8B0   Offset: 0x68B6B0   Length: 0xF4
     public void /*ctor*/()
     {
         ulong uVar1;
         this.resourcePointID = 0xffffffff;
-        uVar1 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(uVar1,DAT_181d8f0b0);
+        uVar1 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(uVar1,DAT_181e71270);
         this.areaID = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(uVar1,DAT_181d8f0b0);
+        uVar1 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(uVar1,DAT_181e71270);
         this.areaMapTileID = uVar1;
         this.nearAreaID = 0xffffffffffffffff;
         this.difficultyRate = 0x3f800000;
@@ -119,17 +119,17 @@ public class EventData
         this.bigMapPos = new c.DisplayClass9_0(0);
     }
 
-    // Token : 0x6000FE3
-    // RVA   : 0x2A5CA0   Offset: 0x2A50A0   Length: 0xC
+    // Token : 0x6000FEC
+    // RVA   : 0x68C8A0   Offset: 0x68B6A0   Length: 0xC
     public void SetPlotData(PlotData _plotData)
     {
-        void FUN_1802a5ca0(int64 this,uint64 _plotData)
+        void FUN_18068c8a0(int64 this,uint64 _plotData)
         {
         this.plotData = _plotData;
     }
 
-    // Token : 0x6000FE4
-    // RVA   : 0x9460A0   Offset: 0x9454A0   Length: 0x28
+    // Token : 0x6000FED
+    // RVA   : 0x68C2B0   Offset: 0x68B0B0   Length: 0x28
     public int GetEventRareLv()
     {
         int iVar1;
@@ -137,8 +137,8 @@ public class EventData
         return (int)((float)iVar1 * 0.5);
     }
 
-    // Token : 0x6000FE5
-    // RVA   : 0x946600   Offset: 0x945A00   Length: 0x81
+    // Token : 0x6000FEE
+    // RVA   : 0x68C810   Offset: 0x68B610   Length: 0x81
     public string Name()
     {
         ulong uVar1;
@@ -148,11 +148,11 @@ public class EventData
         GlobalData.GenerateRareLvColorText(uVar1,(int)((float)iVar2 * 0.5),0);
     }
 
-    // Token : 0x6000FE6
-    // RVA   : 0x945B20   Offset: 0x944F20   Length: 0x576
+    // Token : 0x6000FEF
+    // RVA   : 0x68BD30   Offset: 0x68AB30   Length: 0x576
     public string GetDescribe(bool showDifficulty)
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         int iVar2;
         long lVar3;
@@ -182,7 +182,7 @@ public class EventData
               lVar5 = AreaData.GetForce(lVar5,0);
               uVar6 = "";
               if (lVar5 != null) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (lVar5 == null) throw; // [null/range check failed]
                 lVar1 = this.areaID;
                 lVar5 = lVar5.villageAreaID;
@@ -212,8 +212,8 @@ public class EventData
               }
               if (lVar3 != null) {
                 lVar3 = String.Replace(lVar3,uVar4,uVar6,0);
-                lVar5 = *(int64 *)(pStatics_3d40 + 0x408);
-                iVar2 = Mathf.RoundToInt(pStatics_3d40,0);
+                lVar5 = *(int64 *)(pStatics_38e8 + 0x410);
+                iVar2 = Mathf.RoundToInt(pStatics_38e8,0);
                 uVar7 = (uint32)((float)iVar2 * 0.5);
                 if (lVar5 != null) {
                   if (lVar5.Count <= uVar7) {
@@ -224,8 +224,8 @@ public class EventData
                   uVar4 = GlobalData.GenerateRareLvColorText(uVar4,(int)((float)iVar2 * 0.5),0);
                   if (lVar3 != null) {
                     lVar5 = String.Replace(lVar3,"#DifficultyRateText#",uVar4,0);
-                    lVar3 = *(int64 *)(pStatics_3d40 + 0x508);
-                    iVar2 = Mathf.RoundToInt(DAT_181d73d40,0);
+                    lVar3 = *(int64 *)(pStatics_38e8 + 0x528);
+                    iVar2 = Mathf.RoundToInt(DAT_181e538e8,0);
                     uVar7 = (uint32)((float)iVar2 * 0.5);
                     if (lVar3 != null) {
                       if (*(uint32 *)(lVar3 + 24) <= uVar7) {
@@ -252,8 +252,8 @@ public class EventData
         }
     }
 
-    // Token : 0x6000FE7
-    // RVA   : 0x9460D0   Offset: 0x9454D0   Length: 0x527
+    // Token : 0x6000FF0
+    // RVA   : 0x68C2E0   Offset: 0x68B0E0   Length: 0x527
     public string GetPosText()
     {
         uint uVar1;
@@ -269,7 +269,7 @@ public class EventData
             lVar5 = this.areaID;
             if (lVar5 != null) {
               if (lVar5.Count == 1) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (lVar5 != null) {
                   lVar4 = this.areaID;
                   lVar5 = lVar5.villageAreaID;
@@ -288,7 +288,7 @@ public class EventData
                 }
               }
               else {
-                lVar4 = FUN_18046c0a0(0);
+                lVar4 = FUN_1802106e0(0);
                 if ((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) {
                   uVar7 = *(uint64 *)(*(int64 *)(lVar4 + 32) + 24);
                   cVar2 = GlobalData.ListEqual(lVar5,uVar7,0);
@@ -296,7 +296,7 @@ public class EventData
                     return "所有城市";
                   }
                   uVar7 = this.areaID;
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   if ((lVar5 != null) && (lVar5.villageAreaID != null)) {
                     uVar6 = *(uint64 *)(lVar5.villageAreaID + 32);
                     cVar2 = GlobalData.ListEqual(uVar7,uVar6,0);
@@ -304,7 +304,7 @@ public class EventData
                       return "所有村镇";
                     }
                     uVar7 = this.areaID;
-                    lVar5 = FUN_18046c0a0(0);
+                    lVar5 = FUN_1802106e0(0);
                     if ((lVar5 != null) && (lVar5.villageAreaID != null)) {
                       uVar6 = *(uint64 *)(lVar5.villageAreaID + 40);
                       cVar2 = GlobalData.ListEqual(uVar7,uVar6,0);
@@ -319,11 +319,11 @@ public class EventData
                           if (lVar5.Count <= iVar8) {
                             return uVar7;
                           }
-                          lVar5 = FUN_18046c0a0(0);
+                          lVar5 = FUN_1802106e0(0);
                           if (lVar5 == null) break;
                           lVar5 = lVar5.villageAreaID;
                           if (((this.areaID == null) ||
-                              (uVar3 = FUN_1800d6760(this.areaID,iVar8,DAT_181d8fa30),
+                              (uVar3 = FUN_180002480(this.areaID,iVar8,DAT_181e71bf0),
                               lVar5 == null)) || (lVar5 = WorldData.GetArea(lVar5,uVar3,0)) == null)
                           break;
                           uVar6 = AreaData.GetAreaName(lVar5,0);
@@ -344,12 +344,12 @@ public class EventData
             if (this.inaccuracyPosText) {
               uVar7 = "{0}周边";
             }
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if (((lVar5 != null) && (lVar5.villageAreaID != null)) &&
                (lVar5 = WorldData.GetArea(lVar5.villageAreaID,this.nearAreaID,0),
                lVar5 != null)) {
               uVar6 = AreaData.GetAreaName(lVar5,0);
-              lVar5 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x3c8);
+              lVar5 = *(int64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x3d0);
               if (lVar5 != null) {
                 uVar1 = this.nearAreaDirection;
                 if (lVar5.Count <= uVar1) {
@@ -374,42 +374,103 @@ public class EventData
         }
     }
 
-    // Token : 0x6000FE8
-    // RVA   : 0x9459A0   Offset: 0x944DA0   Length: 0x175
+    // Token : 0x6000FF1
+    // RVA   : 0x68B8A0   Offset: 0x68A6A0   Length: 0x480
     public virtual object Clone()
     {
+        long lVar1;
         long lVar2;
         ulong uVar3;
-        ulong local_38;
-        ulong uStack_30;
-        uint local_28;
-        uint uStack_24;
-        uint uStack_20;
-        uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
-        plVar4 = plVar1;
-        MemoryStream.ctor(plVar1,1000,0);
-        local_38 = 0;
-        uStack_30 = 0;
-        StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
-        local_28 = (uint32)local_38;
-        uStack_24 = local_38._4_4_;
-        uStack_20 = (uint32)uStack_30;
-        uStack_1c = uStack_30._4_4_;
-        BinaryFormatter.ctor(lVar2,0,&local_28,0,plVar4);
-        if (lVar2 != null) {
-          BinaryFormatter.Serialize(lVar2,plVar1,this,0);
-          if (plVar1 != (int64 *)0) {
-            (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
-            uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
-            (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
-            return uVar3;
+        lVar2 = il2cpp_internal(DAT_181ea4ce0);
+        *(uint32 *)(lVar2 + 60) = 0xffffffff;
+        uVar3 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(uVar3,DAT_181e71270);
+        *(uint64 *)(lVar2 + 64) = uVar3;
+        uVar3 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(uVar3,DAT_181e71270);
+        *(uint64 *)(lVar2 + 72) = uVar3;
+        *(uint64 *)(lVar2 + 88) = 0xffffffffffffffff;
+        *(uint32 *)(lVar2 + 112) = 0x3f800000;
+        *(uint32 *)(lVar2 + 116) = 0xffffffff;
+        ZhSegment.Initialize(lVar2,0);
+        uVar3 = new c.DisplayClass9_0(0);
+        *(uint64 *)(lVar2 + 80) = uVar3;
+        *(uint32 *)(lVar2 + 16) = this.id;
+        *(uint64 *)(lVar2 + 24) = this.eventName;
+        *(uint64 *)(lVar2 + 32) = this.eventDescribe;
+        lVar1 = this.eventAvailableAreaType;
+        plVar6 = (int64 *)0;
+        plVar5 = plVar6;
+        if (lVar1 != null) {
+          plVar5 = (int64 *)il2cpp_internal(DAT_181e72538);
+          FUN_181779b60(plVar5,lVar1,DAT_181e67b78);
+        }
+        *(uint64 *)(lVar2 + 40) = plVar5;
+        *(uint64 *)(lVar2 + 48) = this.spriteName;
+        *(uint8 *)(lVar2 + 56) = this.isAreaEvent;
+        *(uint32 *)(lVar2 + 60) = this.resourcePointID;
+        lVar1 = this.areaID;
+        plVar5 = plVar6;
+        if (lVar1 != null) {
+          plVar5 = (int64 *)il2cpp_internal(DAT_181e73cb8);
+          FUN_18177a7d0(plVar5,lVar1,DAT_181e712f0);
+        }
+        *(int64 **)(lVar2 + 64) = plVar5;
+        lVar1 = this.areaMapTileID;
+        plVar5 = plVar6;
+        if (lVar1 != null) {
+          plVar5 = (int64 *)il2cpp_internal(DAT_181e73cb8);
+          FUN_18177a7d0(plVar5,lVar1,DAT_181e712f0);
+        }
+        *(int64 **)(lVar2 + 72) = plVar5;
+        plVar5 = plVar6;
+        if (this.bigMapPos != null) {
+          plVar5 = (int64 *)il2cpp_internal(DAT_181e90f60);
+          c__DisplayClass9_0.ctor(plVar5,0);
+          if ((this.bigMapPos != null) && (plVar5 != (int64 *)0)) {
+            *(uint32 *)(plVar5 + 2) = this.bigMapPos.x;
+            if (this.bigMapPos != null) {
+              *(uint32 *)((int64)plVar5 + 20) =
+                   this.bigMapPos.y;
+              goto LAB_18068bb71;
+            }
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
+        LAB_18068bb71:
+        *(int64 **)(lVar2 + 80) = plVar5;
+        *(uint32 *)(lVar2 + 88) = this.nearAreaID;
+        *(uint32 *)(lVar2 + 92) = this.nearAreaDirection;
+        *(uint8 *)(lVar2 + 96) = this.seen;
+        *(uint8 *)(lVar2 + 97) = this.happened;
+        *(uint8 *)(lVar2 + 98) = this.noticed;
+        *(uint8 *)(lVar2 + 99) = *(uint8 *)(this + 99);
+        *(uint8 *)(lVar2 + 100) = *(uint8 *)(this + 100);
+        *(uint8 *)(lVar2 + 101) = this.missionTargetEvent;
+        *(uint8 *)(lVar2 + 102) = this.autoDestroy;
+        *(uint32 *)(lVar2 + 104) = this.leftTime;
+        *(uint32 *)(lVar2 + 108) = this.difficulty;
+        *(uint32 *)(lVar2 + 112) = this.difficultyRate;
+        *(uint32 *)(lVar2 + 116) = this.speTargetID;
+        plVar5 = plVar6;
+        if ((this.plotData != null) &&
+           (plVar4 = (int64 *)PlotData.Clone(this.plotData,0),
+           plVar4 != (int64 *)0)) {
+        }
+        *(int64 **)(lVar2 + 120) = plVar5;
+        if ((this.eventItemList != null) &&
+           (plVar5 = (int64 *)ItemListData.Clone(this.eventItemList,0),
+           plVar5 != (int64 *)0)) {
+        }
+        *(uint64 *)(lVar2 + 128) = plVar6;
+        *(uint32 *)(lVar2 + 136) = this.leaderLimit;
+        *(uint64 *)(lVar2 + 144) = this.eventOutTimeCallFuc;
+        *(uint32 *)(lVar2 + 152) = this.seeRange;
+        *(uint32 *)(lVar2 + 156) = this.randomSeed;
+        *(uint8 *)(lVar2 + 160) = this.inaccuracyPosText;
+        *(uint8 *)(lVar2 + 161) = this.notImportant;
+        return lVar2;
     }
 
 }

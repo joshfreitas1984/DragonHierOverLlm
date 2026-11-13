@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : InfoType
-// Token : 0x20001CD
+// Token : 0x20001CF
 // ============================================================
 
 public class InfoType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C63
+    // Token: 0x4000C76
     public int value__;
 
-    // Token: 0x4000C64
+    // Token: 0x4000C77
     public const InfoType WorldInfo;
 
-    // Token: 0x4000C65
+    // Token: 0x4000C78
     public const InfoType ForceInfo;
 
-    // Token: 0x4000C66
+    // Token: 0x4000C79
     public const InfoType PersonalInfo;
 
-    // Token: 0x4000C67
+    // Token: 0x4000C7A
     public const InfoType OtherPersonInfo;
 
-    // Token: 0x4000C68
+    // Token: 0x4000C7B
     public const InfoType OtherForceInfo;
 
 }

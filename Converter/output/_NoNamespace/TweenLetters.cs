@@ -1,35 +1,35 @@
 // ============================================================
 // Type  : TweenLetters
-// Token : 0x20000BC
+// Token : 0x20000BB
 // ============================================================
 
 public class TweenLetters
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000488
+    // Token: 0x4000468
     public AnimationProperties hoverOver;
 
-    // Token: 0x4000489
+    // Token: 0x4000469
     public AnimationProperties hoverOut;
 
-    // Token: 0x400048A
+    // Token: 0x400046A
     private UILabel mLabel;
 
-    // Token: 0x400048B
+    // Token: 0x400046B
     private int mVertexCount;
 
-    // Token: 0x400048C
+    // Token: 0x400046C
     private int[] mLetterOrder;
 
-    // Token: 0x400048D
+    // Token: 0x400046D
     private LetterProperties[] mLetter;
 
-    // Token: 0x400048E
+    // Token: 0x400046E
     private AnimationProperties mCurrent;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60005C5
-    // RVA   : 0xAEB030   Offset: 0xAEA430   Length: 0xE0
+    // Token : 0x60005AC
+    // RVA   : 0x83FDB0   Offset: 0x83EBB0   Length: 0xE0
     private void OnEnable()
     {
         ulong uVar2;
@@ -37,66 +37,66 @@ public class TweenLetters
         this.mVertexCount = 0xffffffff;
         if (this.mLabel == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         puVar1 = (uint64 *)(this.mLabel + 192);
         uVar2 = *puVar1;
-        uVar3 = new OnTooltipCB(this,DAT_181dc00d8,0);
+        uVar3 = new OnTooltipCB(this,DAT_181ea3b18,0);
         plVar4 = (int64 *)Delegate.Combine(uVar2,uVar3,0);
         plVar5 = (int64 *)0;
         if (plVar4 != (int64 *)0) {
-          if (*plVar4 == DAT_181d8ded0) {
+          if (*plVar4 == DAT_181e6e690) {
             plVar5 = plVar4;
           }
           if (plVar5 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar4,DAT_181d8ded0);
+            FUN_1801dfd50(plVar4,DAT_181e6e690);
           }
         }
         *puVar1 = plVar5;
         il2cpp_internal(puVar1);
     }
 
-    // Token : 0x60005C6
-    // RVA   : 0xAEAF50   Offset: 0xAEA350   Length: 0xD6
+    // Token : 0x60005AD
+    // RVA   : 0x83FCD0   Offset: 0x83EAD0   Length: 0xD6
     private void OnDisable()
     {
         ulong uVar2;
         ulong uVar3;
         if (this.mLabel == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         puVar1 = (uint64 *)(this.mLabel + 192);
         uVar2 = *puVar1;
-        uVar3 = new OnTooltipCB(this,DAT_181dc00d8,0);
+        uVar3 = new OnTooltipCB(this,DAT_181ea3b18,0);
         plVar4 = (int64 *)Delegate.Remove(uVar2,uVar3,0);
         plVar5 = (int64 *)0;
         if (plVar4 != (int64 *)0) {
-          if (*plVar4 == DAT_181d8ded0) {
+          if (*plVar4 == DAT_181e6e690) {
             plVar5 = plVar4;
           }
           if (plVar5 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6070(plVar4,DAT_181d8ded0);
+            FUN_1801dfd50(plVar4,DAT_181e6e690);
           }
         }
         *puVar1 = plVar5;
         il2cpp_internal(puVar1);
     }
 
-    // Token : 0x60005C7
-    // RVA   : 0xAEAB00   Offset: 0xAE9F00   Length: 0x5E
+    // Token : 0x60005AE
+    // RVA   : 0x83F880   Offset: 0x83E680   Length: 0x5E
     private void Awake()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96af8);
+        uVar1 = Component.GetComponent(this,DAT_181e79eb8);
         this.mLabel = uVar1;
         this.mCurrent = this.hoverOver;
     }
 
-    // Token : 0x60005C8
-    // RVA   : 0xAEBA40   Offset: 0xAEAE40   Length: 0x49
+    // Token : 0x60005AF
+    // RVA   : 0x8407C0   Offset: 0x83F5C0   Length: 0x49
     public override void Play(bool forward)
     {
         ulong uVar1;
@@ -110,8 +110,8 @@ public class TweenLetters
         UITweener.Play(this,forward,0);
     }
 
-    // Token : 0x60005C9
-    // RVA   : 0xAEB120   Offset: 0xAEA520   Length: 0x8E3
+    // Token : 0x60005B0
+    // RVA   : 0x83FEA0   Offset: 0x83ECA0   Length: 0x8E3
     private void OnPostFill(UIWidget widget, int bufferOffset, List<Vector3> verts, List<Vector2> uvs, List<Color> cols)
     {
         void TweenLetters.OnPostFill
@@ -202,7 +202,7 @@ public class TweenLetters
           if (!cVar6) {
             if (this.mLabel == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             iVar7 = UILabel.get_quadsPerCharacter(this.mLabel,0);
             iVar15 = (int)((iVar10 / iVar7 >> 31 & 3U) + iVar10 / iVar7) >> 2;
@@ -210,7 +210,7 @@ public class TweenLetters
             local_290 = iVar7;
             if (this.mLabel == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             UILabel.get_printedText(this.mLabel,0);
             if (this.mVertexCount != iVar10) {
@@ -234,7 +234,7 @@ public class TweenLetters
             lVar12 = this.mCurrent;
             if (lVar12 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             local_2b8 = lVar12.rot;
             local_2b0 = *(float *)(lVar12 + 64);
@@ -242,7 +242,7 @@ public class TweenLetters
             uVar9 = *puVar8;
             uVar4 = puVar8[1];
             Vector3.get_zero(local_288);
-            FUN_180d995f0(&local_2a8);
+            FUN_180af4e90(&local_2a8);
             fVar1 = *(float *)(this + 48);
             fVar2 = *(float *)(this + 108);
             for (iVar10 = 0; iVar10 < iVar7; iVar10 = iVar10 + 1) {
@@ -250,12 +250,12 @@ public class TweenLetters
                 lVar12 = this.mLetterOrder;
                 if (lVar12 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 if (lVar12.randomDurations <= uVar14) {
                   uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar9,0);
+                  FUN_1801e02d0(uVar9,0);
                 }
                 uVar11 = lVar12[uVar14];
                 lVar12 = (int64)(int)uVar11;
@@ -264,38 +264,38 @@ public class TweenLetters
                   lVar3 = this.mLetter;
                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (lVar3.randomDurations <= uVar11) {
                     uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar9,0);
+                    FUN_1801e02d0(uVar9,0);
                   }
                   lVar3 = *(int64 *)(lVar3 + 32 + lVar12 * 8);
                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
-                  fVar16 = (float)FUN_1810e3cd0(fVar1 * fVar2 - lVar3.animationOrder,0,
+                  fVar16 = (float)FUN_180f34e60(fVar1 * fVar2 - lVar3.animationOrder,0,
                                                 lVar3.overlap,0);
                   lVar3 = this.mLetter;
                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (lVar3.randomDurations <= uVar11) {
                     uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar9,0);
+                    FUN_1801e02d0(uVar9,0);
                   }
                   lVar3 = *(int64 *)(lVar3 + 32 + lVar12 * 8);
                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (*(int64 *)(this + 32) == 0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   uVar17 = AnimationCurve.Evaluate
                                      (*(int64 *)(this + 32),fVar16 / lVar3.overlap,0);
@@ -306,22 +306,22 @@ public class TweenLetters
                   lVar3 = this.mLetter;
                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   if (lVar3.randomDurations <= uVar11) {
                     uVar9 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar9,0);
+                    FUN_1801e02d0(uVar9,0);
                   }
                   lVar12 = *(int64 *)(lVar3 + 32 + lVar12 * 8);
                   if (lVar12 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   lVar3 = this.mCurrent;
                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   local_2c8 = lVar3.pos;
                   fStack_2c0 = *(float *)(lVar3 + 52);
@@ -349,7 +349,7 @@ public class TweenLetters
                   lVar12 = this.mCurrent;
                   if (lVar12 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   local_278 = lVar12.scale;
                   local_270 = *(float *)(lVar12 + 76);
@@ -363,7 +363,7 @@ public class TweenLetters
                   local_218 = fStack_2c0;
                   if (this.mCurrent == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   fVar20 = (float)Mathf.LerpUnclamped
                                             (this.mCurrent.alpha,
@@ -399,10 +399,10 @@ public class TweenLetters
                                          (float)local_2c8 + fVar16);
                     local_1c0 = fStack_2c0;
                     local_1b0 = local_280;
-                    FUN_18181e3a0(verts,uVar11,&local_1b8,DAT_181dabea8);
+                    FUN_18175db20(verts,uVar11,&local_1b8,DAT_181e8e4d8);
                     if (cols == null) {
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
                     if (*(uint32 *)(cols + 24) <= uVar11) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -413,7 +413,7 @@ public class TweenLetters
                     fStack_2c0 = *(float *)(puVar8 + 1);
                     fStack_2bc = *(float *)((int64)puVar8 + 12) * fVar20;
                     uStack_2a0 = CONCAT44(fStack_2bc,fStack_2c0);
-                    FUN_1817f4b40(cols,uVar11);
+                    FUN_18166b410(cols,uVar11);
                   }
                 }
               }
@@ -423,21 +423,21 @@ public class TweenLetters
         }
     }
 
-    // Token : 0x60005CA
-    // RVA   : 0xAEBA10   Offset: 0xAEAE10   Length: 0x2A
+    // Token : 0x60005B1
+    // RVA   : 0x840790   Offset: 0x83F590   Length: 0x2A
     protected override void OnUpdate(float factor, bool isFinished)
     {
         plVar1 = this.mLabel;
         if (plVar1 != (int64 *)0) {
-                          // WARNING: Could not recover jumptable at 0x000180aeba2e. Too many branches
+                          // WARNING: Could not recover jumptable at 0x0001808407ae. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*plVar1 + 0x328))(plVar1,*(uint64 *)(*plVar1 + 0x330));
           return;
         }
     }
 
-    // Token : 0x60005CB
-    // RVA   : 0xAEBAA0   Offset: 0xAEAEA0   Length: 0x38F
+    // Token : 0x60005B2
+    // RVA   : 0x840820   Offset: 0x83F620   Length: 0x38F
     private void SetLetterOrder(int letterCount)
     {
         ulong uVar3;
@@ -458,10 +458,10 @@ public class TweenLetters
           il2cpp_internal(plVar2,0);
           return;
         }
-        lVar4 = FUN_1800d60b0(DAT_181da35b8,(uint64)letterCount);
+        lVar4 = FUN_1801dfd90(DAT_181e836f8,(uint64)letterCount);
         this.mLetterOrder = lVar4;
         il2cpp_internal(plVar2,lVar4);
-        uVar5 = FUN_1800d60b0(DAT_181da8878,letterCount);
+        uVar5 = FUN_1801dfd90(DAT_181e889b8,letterCount);
         this.mLetter = uVar5;
         il2cpp_internal(puVar1,uVar5);
         uVar10 = 0;
@@ -470,89 +470,89 @@ public class TweenLetters
           do {
             uVar8 = uVar8 - 1;
             lVar4 = this.mLetterOrder;
-            if (this.mCurrent == null) goto LAB_180aebe2a;
+            if (this.mCurrent == null) goto LAB_180840baa;
             uVar9 = uVar8;
             if (this.mCurrent.animationOrder != 1) {
               uVar9 = uVar10;
             }
-            if (lVar4 == null) goto LAB_180aebe2a;
+            if (lVar4 == null) goto LAB_180840baa;
             if (*(uint32 *)(lVar4 + 24) <= uVar10) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             lVar4[uVar10] = uVar9;
             lVar4 = this.mLetterOrder;
-            if (lVar4 == null) goto LAB_180aebe2a;
+            if (lVar4 == null) goto LAB_180840baa;
             if (*(uint32 *)(lVar4 + 24) <= uVar10) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             uVar9 = lVar4[uVar10];
             plVar7 = this.mLetter;
             lVar4 = new c.DisplayClass9_0(0);
-            if (plVar7 == (int64 *)0) goto LAB_180aebe2a;
+            if (plVar7 == (int64 *)0) goto LAB_180840baa;
             if ((lVar4 != null) &&
                (lVar6 = il2cpp_internal(lVar4,*(uint64 *)(*plVar7 + 64))) == null) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
-            FUN_180002fd0(plVar7,(int64)(int)uVar9,lVar4);
+            FUN_1800025b0(plVar7,(int64)(int)uVar9,lVar4);
             lVar4 = this.mLetter;
-            if (lVar4 == null) goto LAB_180aebe2a;
+            if (lVar4 == null) goto LAB_180840baa;
             if (*(uint32 *)(lVar4 + 24) <= uVar9) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             lVar4 = lVar4[uVar9];
-            if (this.mCurrent == null) goto LAB_180aebe2a;
+            if (this.mCurrent == null) goto LAB_180840baa;
             uVar9 = this.mCurrent.offsetRange;
             uVar11 = Random.Range(uVar9 ^ 0x80000000,uVar9,0);
             if ((this.mCurrent == null) ||
                (uVar9 = *(uint32 *)(this.mCurrent + 40),
-               uVar12 = Random.Range(uVar9 ^ 0x80000000,uVar9,0), lVar4 == null)) goto LAB_180aebe2a;
+               uVar12 = Random.Range(uVar9 ^ 0x80000000,uVar9,0), lVar4 == null)) goto LAB_180840baa;
             uVar10 = uVar10 + 1;
             *(uint32 *)(lVar4 + 24) = uVar11;
             *(uint32 *)(lVar4 + 28) = uVar12;
           } while ((int)uVar10 < (int)letterCount);
         }
         if (this.mCurrent == null) {
-        LAB_180aebe2a:
+        LAB_180840baa:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (this.mCurrent.animationOrder == 2) {
-          plVar7 = (int64 *)il2cpp_internal(DAT_181d99698);
+          plVar7 = (int64 *)il2cpp_internal(DAT_181e79a58);
           Random.ctor(plVar7,0);
           uVar3 = (uint64)letterCount;
           while (1 < (int)letterCount) {
             letterCount = (int)uVar3 - 1;
-            if (plVar7 == (int64 *)0) goto LAB_180aebe2a;
+            if (plVar7 == (int64 *)0) goto LAB_180840baa;
             uVar8 = (**(code **)(*plVar7 + 0x198))(plVar7,uVar3,*(uint64 *)(*plVar7 + 0x1a0));
             lVar4 = this.mLetterOrder;
-            if (lVar4 == null) goto LAB_180aebe2a;
+            if (lVar4 == null) goto LAB_180840baa;
             if (*(uint32 *)(lVar4 + 24) <= uVar8) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             uVar11 = lVar4[uVar8];
             if (*(uint32 *)(lVar4 + 24) <= letterCount) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             lVar4[uVar8] =
                  *(uint32 *)(lVar4 + 28 + uVar3 * 4);
             lVar4 = this.mLetterOrder;
-            if (lVar4 == null) goto LAB_180aebe2a;
+            if (lVar4 == null) goto LAB_180840baa;
             if (*(uint32 *)(lVar4 + 24) <= letterCount) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             *(uint32 *)(lVar4 + 28 + uVar3 * 4) = uVar11;
             uVar3 = (uint64)letterCount;
@@ -560,8 +560,8 @@ public class TweenLetters
         }
     }
 
-    // Token : 0x60005CC
-    // RVA   : 0xAEACC0   Offset: 0xAEA0C0   Length: 0x28C
+    // Token : 0x60005B3
+    // RVA   : 0x83FA40   Offset: 0x83E840   Length: 0x28C
     private void GetLetterDuration(int letterCount)
     {
         float fVar1;
@@ -595,7 +595,7 @@ public class TweenLetters
                 if (*(uint32 *)(lVar5 + 24) <= uVar6) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 uVar2 = lVar5[uVar6];
                 lVar5 = (int64)(int)uVar2;
@@ -603,7 +603,7 @@ public class TweenLetters
                 if (lVar3.randomDurations <= uVar2) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 lVar3 = *(int64 *)(lVar3 + 32 + lVar5 * 8);
                 if (lVar3 == null) break;
@@ -613,7 +613,7 @@ public class TweenLetters
                 if (lVar3.randomDurations <= uVar2) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 lVar3 = *(int64 *)(lVar3 + 32 + lVar5 * 8);
                 if (lVar3 == null) break;
@@ -624,7 +624,7 @@ public class TweenLetters
                 if (lVar3.randomDurations <= uVar2) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 lVar5 = *(int64 *)(lVar3 + 32 + lVar5 * 8);
                 if (lVar5 == null) break;
@@ -644,7 +644,7 @@ public class TweenLetters
                 if (lVar3.randomDurations <= uVar6) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 lVar3 = lVar3[uVar6];
                 if ((this.mCurrent == null) ||
@@ -661,7 +661,7 @@ public class TweenLetters
                 if (lVar3.randomDurations <= uVar6) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 lVar3 = lVar3[uVar6];
                 if (lVar3 == null) break;
@@ -675,17 +675,17 @@ public class TweenLetters
         }
     }
 
-    // Token : 0x60005CD
-    // RVA   : 0xAEBA90   Offset: 0xAEAE90   Length: 0xC
+    // Token : 0x60005B4
+    // RVA   : 0x840810   Offset: 0x83F610   Length: 0xC
     private float ScaleRange(float value, float baseMax, float limitMax)
     {
-        float FUN_180aeba90(uint64 this,float value,float baseMax,float limitMax)
+        float FUN_180840810(uint64 this,float value,float baseMax,float limitMax)
         {
         return (value * limitMax) / baseMax;
     }
 
-    // Token : 0x60005CE
-    // RVA   : 0xAEAB60   Offset: 0xAE9F60   Length: 0x15E
+    // Token : 0x60005B5
+    // RVA   : 0x83F8E0   Offset: 0x83E6E0   Length: 0x15E
     private static Vector3 GetCenter(List<Vector3> verts, int firstVert, int length)
     {
         ulong uVar1;
@@ -725,11 +725,11 @@ public class TweenLetters
         }
     }
 
-    // Token : 0x60005CF
-    // RVA   : 0xAEBE30   Offset: 0xAEB230   Length: 0x11
+    // Token : 0x60005B6
+    // RVA   : 0x840BB0   Offset: 0x83F9B0   Length: 0x11
     public void /*ctor*/()
     {
-        void FUN_180aebe30(int64 this)
+        void FUN_180840bb0(int64 this)
         {
         this.mVertexCount = 0xffffffff;
         UITweener.ctor(this,0);

@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : Effect
-// Token : 0x20000FD
+// Token : 0x20000FC
 // ============================================================
 
 public class Effect
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000659
+    // Token: 0x4000639
     public int value__;
 
-    // Token: 0x400065A
+    // Token: 0x400063A
     public const Effect None;
 
-    // Token: 0x400065B
+    // Token: 0x400063B
     public const Effect Shadow;
 
-    // Token: 0x400065C
+    // Token: 0x400063C
     public const Effect Outline;
 
-    // Token: 0x400065D
+    // Token: 0x400063D
     public const Effect Outline8;
 
 }

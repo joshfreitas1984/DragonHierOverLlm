@@ -1,48 +1,48 @@
 // ============================================================
 // Type  : ItemUseMenuController
-// Token : 0x20002F5
+// Token : 0x20002FE
 // ============================================================
 
 public class ItemUseMenuController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001883
+    // Token: 0x40018D9
     public GameObject itemUseMenuPanel;
 
-    // Token: 0x4001884
+    // Token: 0x40018DA
     public GameObject itemUseChoiceButtonPrefab;
 
-    // Token: 0x4001885
+    // Token: 0x40018DB
     public HeroData sourceHero;
 
-    // Token: 0x4001886
+    // Token: 0x40018DC
     public ItemData targetItem;
 
-    // Token: 0x4001887
+    // Token: 0x40018DD
     private GameObject temp;
 
-    // Token: 0x4001888
+    // Token: 0x40018DE
     private static ItemUseMenuController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60018A3
-    // RVA   : 0xCAB640   Offset: 0xCAAA40   Length: 0x36
+    // Token : 0x600191F
+    // RVA   : 0x7B9EA0   Offset: 0x7B8CA0   Length: 0x36
     public static ItemUseMenuController get_Instance()
     {
-        return **(uint64 **)(DAT_181d823b0 + 184);
+        return **(uint64 **)(DAT_181e62770 + 184);
     }
 
-    // Token : 0x60018A4
-    // RVA   : 0xCAB170   Offset: 0xCAA570   Length: 0x43
+    // Token : 0x6001920
+    // RVA   : 0x7B99D0   Offset: 0x7B87D0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d823b0 + 184);
+        puVar1 = *(uint64 **)(DAT_181e62770 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60018A5
-    // RVA   : 0xCAB270   Offset: 0xCAA670   Length: 0x3C6
+    // Token : 0x6001921
+    // RVA   : 0x7B9AD0   Offset: 0x7B88D0   Length: 0x3C6
     public void Show(HeroData _sourceHero, GameObject _targetItemIcon)
     {
         uint uVar1;
@@ -59,7 +59,7 @@ public class ItemUseMenuController
         if (this.itemUseMenuPanel != null) {
           GameObject.SetActive(this.itemUseMenuPanel,1,0);
           this.sourceHero = _sourceHero;
-          if ((_targetItemIcon != null) && (lVar2 = GameObject.GetComponent(_targetItemIcon,DAT_181d720a0)) != null) {
+          if ((_targetItemIcon != null) && (lVar2 = GameObject.GetComponent(_targetItemIcon,DAT_181e55168)) != null) {
             this.targetItem = lVar2.summonControlable;
             if ((this.itemUseMenuPanel != null) &&
                (lVar2 = GameObject.get_transform(this.itemUseMenuPanel,0)) != null) {
@@ -85,8 +85,8 @@ public class ItemUseMenuController
                       if ((this.itemUseMenuPanel != null) &&
                          ((lVar2 = GameObject.get_transform(this.itemUseMenuPanel,0), lVar2 != null
                           && (lVar2 = Transform.Find(lVar2,"Back",0)) != null))) {
-                        plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
-                        puVar7 = (uint32 *)FUN_180d995f0(&local_18,0);
+                        plVar6 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
+                        puVar7 = (uint32 *)FUN_180af4e90(&local_18,0);
                         if (plVar6 != (int64 *)0) {
                           local_18 = *puVar7;
                           uStack_14 = puVar7[1];
@@ -98,7 +98,7 @@ public class ItemUseMenuController
                               (lVar2 = GameObject.get_transform(this.itemUseMenuPanel,0),
                               lVar2 != null)) && (lVar2 = Transform.Find(lVar2,"Back",0)) != null
                              ) {
-                            uVar5 = Component.GetComponent(lVar2,DAT_181d94478);
+                            uVar5 = Component.GetComponent(lVar2,DAT_181e777b8);
                             DOTweenModuleUI.DOFade(uVar5,0x3e800000,0x3e19999a,0);
                             ItemUseMenuController.AddChoiceButton
                                       (this,this.sourceHero,0);
@@ -109,13 +109,13 @@ public class ItemUseMenuController
                                 if (*(int *)(lVar2.teamMates + 24) <= iVar8) {
                                   return;
                                 }
-                                lVar2 = FUN_18046c0a0(0);
+                                lVar2 = FUN_1802106e0(0);
                                 if (lVar2 == null) break;
                                 lVar2 = lVar2.summonControlable;
                                 if (((this.sourceHero == null) ||
                                     (lVar3 = this.sourceHero.teamMates,
                                     lVar3 == null)) ||
-                                   (uVar1 = FUN_1800d6760(lVar3,iVar8,DAT_181d8fa30), lVar2 == null)) break;
+                                   (uVar1 = FUN_180002480(lVar3,iVar8,DAT_181e71bf0), lVar2 == null)) break;
                                 uVar5 = WorldData.GetHero(lVar2,uVar1,0);
                                 ItemUseMenuController.AddChoiceButton(this,uVar5,0);
                                 lVar2 = this.sourceHero;
@@ -135,8 +135,8 @@ public class ItemUseMenuController
         }
     }
 
-    // Token : 0x60018A6
-    // RVA   : 0xCAAF80   Offset: 0xCAA380   Length: 0x1E6
+    // Token : 0x6001922
+    // RVA   : 0x7B9770   Offset: 0x7B8570   Length: 0x257
     public void AddChoiceButton(HeroData buttonTargetHero)
     {
         long lVar1;
@@ -152,7 +152,7 @@ public class ItemUseMenuController
               uVar3 = GlobalData.AddChild(uVar2,uVar3,0);
               this.temp = uVar3;
               if (this.temp != null) {
-                lVar1 = GameObject.GetComponent(this.temp,DAT_181d72128);
+                lVar1 = GameObject.GetComponent(this.temp,DAT_181e551f0);
                 if (lVar1 != null) {
                   *(int64 *)(lVar1 + 24) = buttonTargetHero;
                   if (this.temp != null) {
@@ -160,12 +160,16 @@ public class ItemUseMenuController
                     if (lVar1 != null) {
                       lVar1 = Transform.Find(lVar1,"Text",0);
                       if (lVar1 != null) {
-                        uVar3 = Component.GetComponent(lVar1,DAT_181d96178);
+                        plVar4 = (int64 *)Component.GetComponent(lVar1,DAT_181e79538);
                         if (buttonTargetHero != null) {
-                          uVar2 = HeroData.Name(buttonTargetHero,0,0);
-                          uVar2 = String.Format("{0}使用",uVar2,0);
-                          LTLocalization.SetText(uVar3,uVar2,0);
-                          return;
+                          uVar3 = HeroData.Name(buttonTargetHero,0,0);
+                          uVar3 = String.Format("{0}使用",uVar3,0);
+                          uVar3 = LTLocalization.GetText(uVar3,0,1,0);
+                          if (plVar4 != (int64 *)0) {
+                            (**(code **)(*plVar4 + 0x5e8))(plVar4,uVar3,*(uint64 *)(*plVar4 + 0x5f0));
+                            LTLocalization.CheckTextFont(plVar4,0);
+                            return;
+                          }
                         }
                       }
                     }
@@ -177,8 +181,8 @@ public class ItemUseMenuController
         }
     }
 
-    // Token : 0x60018A7
-    // RVA   : 0xCAB1C0   Offset: 0xCAA5C0   Length: 0xAF
+    // Token : 0x6001923
+    // RVA   : 0x7B9A20   Offset: 0x7B8820   Length: 0xAF
     public void Hide()
     {
         long lVar1;
@@ -199,11 +203,11 @@ public class ItemUseMenuController
         }
     }
 
-    // Token : 0x60018A8
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6001924
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

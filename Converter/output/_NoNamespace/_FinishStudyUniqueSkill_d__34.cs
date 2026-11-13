@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <FinishStudyUniqueSkill>d__34
-// Token : 0x2000396
+// Token : 0x20003A3
 // ============================================================
 
 public class <FinishStudyUniqueSkill>d__34
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001D5A
+    // Token: 0x4001DEC
     private int <>1__state;
 
-    // Token: 0x4001D5B
+    // Token: 0x4001DED
     private object <>2__current;
 
-    // Token: 0x4001D5C
+    // Token: 0x4001DEE
     public StudyUniqueSkillController <>4__this;
 
-    // Token: 0x4001D5D
+    // Token: 0x4001DEF
     public StudySkillResult studyUniqueResult;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60022C6
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6002370
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x60022C7
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x6002371
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x60022C8
-    // RVA   : 0x920050   Offset: 0x91F450   Length: 0x692
+    // Token : 0x6002372
+    // RVA   : 0x60D6E0   Offset: 0x60C4E0   Length: 0x692
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -59,7 +59,7 @@ public class <FinishStudyUniqueSkill>d__34
             *(uint8 *)(lVar8 + 25) = 1;
             iVar1 = this.studyUniqueResult;
             if (iVar1 == 0) {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               puVar4 = (uint64 *)Vector3.get_zero(&local_38,0);
               uVar7 = *puVar4;
               uVar2 = *(uint32 *)(puVar4 + 1);
@@ -73,7 +73,7 @@ public class <FinishStudyUniqueSkill>d__34
               local_38 = uVar7;
               local_30 = uVar2;
               GameController.ShowTextAtPos(lVar3,"生命耗尽！",&local_38,25,puVar5,0);
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
               lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
               if ((*(int64 *)(lVar8 + 64) == 0) ||
@@ -84,7 +84,7 @@ public class <FinishStudyUniqueSkill>d__34
                          (uint64)puVar5 & 0xffffffffffffff00,0);
             }
             else if (iVar1 == 1) {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               puVar4 = (uint64 *)Vector3.get_zero(&local_38,0);
               uVar7 = *puVar4;
               uVar2 = *(uint32 *)(puVar4 + 1);
@@ -101,7 +101,7 @@ public class <FinishStudyUniqueSkill>d__34
             else if (iVar1 == 2) {
               iVar1 = *(int *)(lVar8 + 36);
               if (iVar1 < 1) {
-                lVar3 = FUN_18046c0a0(0);
+                lVar3 = FUN_1802106e0(0);
                 puVar4 = (uint64 *)Vector3.get_zero(&local_38,0);
                 uVar7 = *puVar4;
                 uVar2 = *(uint32 *)(puVar4 + 1);
@@ -116,7 +116,7 @@ public class <FinishStudyUniqueSkill>d__34
                 GameController.ShowTextAtPos(lVar3,"表现完美！",&local_38,27,&local_28,0);
               }
               else if (iVar1 < 3) {
-                lVar3 = FUN_18046c0a0(0);
+                lVar3 = FUN_1802106e0(0);
                 puVar4 = (uint64 *)Vector3.get_zero(&local_38,0);
                 uVar7 = *puVar4;
                 uVar2 = *(uint32 *)(puVar4 + 1);
@@ -131,7 +131,7 @@ public class <FinishStudyUniqueSkill>d__34
                 GameController.ShowTextAtPos(lVar3,"表现优秀！",&local_38,26,&local_28,0);
               }
               else if (iVar1 < 5) {
-                lVar3 = FUN_18046c0a0(0);
+                lVar3 = FUN_1802106e0(0);
                 puVar4 = (uint64 *)Vector3.get_zero(&local_38,0);
                 uVar7 = *puVar4;
                 uVar2 = *(uint32 *)(puVar4 + 1);
@@ -146,7 +146,7 @@ public class <FinishStudyUniqueSkill>d__34
                 GameController.ShowTextAtPos(lVar3,"表现尚可！",&local_38,25,&local_28,0);
               }
               else if (iVar1 < 7) {
-                lVar3 = FUN_18046c0a0(0);
+                lVar3 = FUN_1802106e0(0);
                 puVar4 = (uint64 *)Vector3.get_zero(&local_38,0);
                 uVar7 = *puVar4;
                 uVar2 = *(uint32 *)(puVar4 + 1);
@@ -161,7 +161,7 @@ public class <FinishStudyUniqueSkill>d__34
                 GameController.ShowTextAtPos(lVar3,"表现平平！",&local_38,25,&local_28,0);
               }
               else {
-                lVar3 = FUN_18046c0a0(0);
+                lVar3 = FUN_1802106e0(0);
                 puVar4 = (uint64 *)Vector3.get_zero(&local_38,0);
                 uVar7 = *puVar4;
                 uVar2 = *(uint32 *)(puVar4 + 1);
@@ -178,7 +178,7 @@ public class <FinishStudyUniqueSkill>d__34
             }
             uVar7 = *(uint64 *)(lVar8 + 96);
             GlobalData.DeleteAllChild(uVar7,0);
-            if (**(int64 **)(DAT_181da8228 + 184) != 0) {
+            if (**(int64 **)(DAT_181e88668 + 184) != 0) {
               StudyUniquePlayer.SetShieldTime();
               uVar7 = new WaitForSecondsRealtime();
               this.<>2__current = uVar7;
@@ -198,7 +198,7 @@ public class <FinishStudyUniqueSkill>d__34
               GameObject.SetActive(*(int64 *)(lVar8 + 72),0,0);
               if (*(int64 *)(lVar8 + 80) != 0) {
                 GameObject.SetActive(*(int64 *)(lVar8 + 80),0,0);
-                lVar8 = FUN_18046c620(0);
+                lVar8 = FUN_180210ca0(0);
                 if (lVar8 != null) {
                   StudySkillController.FinishStudySkill(lVar8);
                   return false;
@@ -209,27 +209,27 @@ public class <FinishStudyUniqueSkill>d__34
         }
     }
 
-    // Token : 0x60022C9
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002373
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x60022CA
-    // RVA   : 0x9206F0   Offset: 0x91FAF0   Length: 0x3E
+    // Token : 0x6002374
+    // RVA   : 0x60DD80   Offset: 0x60CB80   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4ee8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e98c88);
     }
 
-    // Token : 0x60022CB
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002375
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

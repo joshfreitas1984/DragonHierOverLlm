@@ -1,74 +1,74 @@
 // ============================================================
 // Type  : UIRect
-// Token : 0x20000A8
+// Token : 0x20000A7
 // ============================================================
 
 public class UIRect
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000403
+    // Token: 0x40003E3
     public AnchorPoint leftAnchor;
 
-    // Token: 0x4000404
+    // Token: 0x40003E4
     public AnchorPoint rightAnchor;
 
-    // Token: 0x4000405
+    // Token: 0x40003E5
     public AnchorPoint bottomAnchor;
 
-    // Token: 0x4000406
+    // Token: 0x40003E6
     public AnchorPoint topAnchor;
 
-    // Token: 0x4000407
+    // Token: 0x40003E7
     public AnchorUpdate updateAnchors;
 
-    // Token: 0x4000408
+    // Token: 0x40003E8
     protected GameObject mGo;
 
-    // Token: 0x4000409
+    // Token: 0x40003E9
     protected Transform mTrans;
 
-    // Token: 0x400040A
+    // Token: 0x40003EA
     protected BetterList<UIRect> mChildren;
 
-    // Token: 0x400040B
+    // Token: 0x40003EB
     protected bool mChanged;
 
-    // Token: 0x400040C
+    // Token: 0x40003EC
     protected bool mParentFound;
 
-    // Token: 0x400040D
+    // Token: 0x40003ED
     private bool mUpdateAnchors;
 
-    // Token: 0x400040E
+    // Token: 0x40003EE
     private int mUpdateFrame;
 
-    // Token: 0x400040F
+    // Token: 0x40003EF
     private bool mAnchorsCached;
 
-    // Token: 0x4000410
+    // Token: 0x40003F0
     private UIRoot mRoot;
 
-    // Token: 0x4000411
+    // Token: 0x40003F1
     private UIRect mParent;
 
-    // Token: 0x4000412
+    // Token: 0x40003F2
     private bool mRootSet;
 
-    // Token: 0x4000413
+    // Token: 0x40003F3
     protected Camera mCam;
 
-    // Token: 0x4000414
+    // Token: 0x40003F4
     protected bool mStarted;
 
-    // Token: 0x4000415
+    // Token: 0x40003F5
     public float finalAlpha;
 
-    // Token: 0x4000416
+    // Token: 0x40003F6
     protected static Vector3[] mSides;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60004EE
-    // RVA   : 0x16FF270   Offset: 0x16FE670   Length: 0x8F
+    // Token : 0x60004D5
+    // RVA   : 0x16015A0   Offset: 0x16003A0   Length: 0x8F
     public GameObject get_cachedGameObject()
     {
         bool cVar1;
@@ -82,8 +82,8 @@ public class UIRect
         return this.mGo;
     }
 
-    // Token : 0x60004EF
-    // RVA   : 0x16FF300   Offset: 0x16FE700   Length: 0x8F
+    // Token : 0x60004D6
+    // RVA   : 0x1601630   Offset: 0x1600430   Length: 0x8F
     public Transform get_cachedTransform()
     {
         bool cVar1;
@@ -97,8 +97,8 @@ public class UIRect
         return this.mTrans;
     }
 
-    // Token : 0x60004F0
-    // RVA   : 0x16FF1F0   Offset: 0x16FE5F0   Length: 0x7E
+    // Token : 0x60004D7
+    // RVA   : 0x1601520   Offset: 0x1600320   Length: 0x7E
     public Camera get_anchorCamera()
     {
         ulong uVar1;
@@ -111,8 +111,8 @@ public class UIRect
         return this.mCam;
     }
 
-    // Token : 0x60004F1
-    // RVA   : 0x16FF910   Offset: 0x16FED10   Length: 0x132
+    // Token : 0x60004D8
+    // RVA   : 0x1601C40   Offset: 0x1600A40   Length: 0x132
     public bool get_isFullyAnchored()
     {
         ulong uVar1;
@@ -121,17 +121,17 @@ public class UIRect
           uVar1 = this.leftAnchor.target;
           uVar2 = Object.op_Implicit(uVar1,0);
           if ((char)!uVar2) {
-        LAB_1816ffa30:
+        LAB_181601d60:
             return uVar2 & 0xffffffffffffff00;
           }
           if (this.rightAnchor != null) {
             uVar1 = this.rightAnchor.target;
             uVar2 = Object.op_Implicit(uVar1,0);
-            if ((char)!uVar2) goto LAB_1816ffa30;
+            if ((char)!uVar2) goto LAB_181601d60;
             if (this.topAnchor != null) {
               uVar1 = this.topAnchor.target;
               uVar2 = Object.op_Implicit(uVar1,0);
-              if ((char)!uVar2) goto LAB_1816ffa30;
+              if ((char)!uVar2) goto LAB_181601d60;
               if (this.bottomAnchor != null) {
                 uVar1 = this.bottomAnchor.target;
                 uVar2 = Object.op_Implicit(uVar1,0);
@@ -142,8 +142,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x60004F2
-    // RVA   : 0x16FF650   Offset: 0x16FEA50   Length: 0xAF
+    // Token : 0x60004D9
+    // RVA   : 0x1601980   Offset: 0x1600780   Length: 0xAF
     public virtual bool get_isAnchoredHorizontally()
     {
         bool cVar1;
@@ -162,8 +162,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x60004F3
-    // RVA   : 0x16FF700   Offset: 0x16FEB00   Length: 0xAF
+    // Token : 0x60004DA
+    // RVA   : 0x1601A30   Offset: 0x1600830   Length: 0xAF
     public virtual bool get_isAnchoredVertically()
     {
         bool cVar1;
@@ -182,15 +182,15 @@ public class UIRect
         }
     }
 
-    // Token : 0x60004F4
-    // RVA   : 0x216180   Offset: 0x215580   Length: 0x3
+    // Token : 0x60004DB
+    // RVA   : 0x240F90   Offset: 0x23FD90   Length: 0x3
     public virtual bool get_canBeAnchored()
     {
         return true;
     }
 
-    // Token : 0x60004F5
-    // RVA   : 0x16FFA50   Offset: 0x16FEE50   Length: 0xAC
+    // Token : 0x60004DC
+    // RVA   : 0x1601D80   Offset: 0x1600B80   Length: 0xAC
     public UIRect get_parent()
     {
         long lVar1;
@@ -200,17 +200,17 @@ public class UIRect
           lVar1 = UIRect.get_cachedTransform(this,0);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          uVar2 = FUN_180daa030(lVar1,0);
-          uVar2 = NGUITools.FindInParents(uVar2,DAT_181d8f638);
+          uVar2 = FUN_180b05920(lVar1,0);
+          uVar2 = NGUITools.FindInParents(uVar2,DAT_181e72c78);
           this.mParent = uVar2;
         }
         return this.mParent;
     }
 
-    // Token : 0x60004F6
-    // RVA   : 0x16FFB00   Offset: 0x16FEF00   Length: 0xFD
+    // Token : 0x60004DD
+    // RVA   : 0x1601E30   Offset: 0x1600C30   Length: 0xFD
     public UIRoot get_root()
     {
         uint64
@@ -226,20 +226,20 @@ public class UIRect
           this = this.mParent;
           if (this == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
         if (!this.mRootSet) {
           this.mRootSet = 1;
           uVar2 = UIRect.get_cachedTransform(this,0);
-          uVar2 = NGUITools.FindInParents(uVar2,DAT_181d8f738);
+          uVar2 = NGUITools.FindInParents(uVar2,DAT_181e72d78);
           this.mRoot = uVar2;
         }
         return this.mRoot;
     }
 
-    // Token : 0x60004F7
-    // RVA   : 0x16FF7B0   Offset: 0x16FEBB0   Length: 0x150
+    // Token : 0x60004DE
+    // RVA   : 0x1601AE0   Offset: 0x16008E0   Length: 0x150
     public bool get_isAnchored()
     {
         ulong uVar1;
@@ -265,45 +265,45 @@ public class UIRect
               }
             }
           }
-                          // WARNING: Could not recover jumptable at 0x0001816ff8f4. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181601c24. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x198))(this,*(uint64 *)(*this + 0x1a0));
           return;
         }
     }
 
-    // Token : 0x60004F8
+    // Token : 0x60004DF
     // (no native address)
     public virtual float get_alpha()
     {
     }
 
-    // Token : 0x60004F9
+    // Token : 0x60004E0
     // (no native address)
     public virtual void set_alpha(float value)
     {
     }
 
-    // Token : 0x60004FA
+    // Token : 0x60004E1
     // (no native address)
     public virtual float CalculateFinalAlpha(int frameID)
     {
     }
 
-    // Token : 0x60004FB
+    // Token : 0x60004E2
     // (no native address)
     public virtual Vector3[] get_localCorners()
     {
     }
 
-    // Token : 0x60004FC
+    // Token : 0x60004E3
     // (no native address)
     public virtual Vector3[] get_worldCorners()
     {
     }
 
-    // Token : 0x60004FD
-    // RVA   : 0x16FF390   Offset: 0x16FE790   Length: 0x2B8
+    // Token : 0x60004E4
+    // RVA   : 0x16016C0   Offset: 0x16004C0   Length: 0x2B8
     protected float get_cameraRayDistance()
     {
         ulong uVar1;
@@ -399,8 +399,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x60004FE
-    // RVA   : 0x16FD940   Offset: 0x16FCD40   Length: 0x92
+    // Token : 0x60004E5
+    // RVA   : 0x15FFC70   Offset: 0x15FEA70   Length: 0x92
     public virtual void Invalidate(bool includeChildren)
     {
         long lVar1;
@@ -421,7 +421,7 @@ public class UIRect
           if (*(uint32 *)(lVar2 + 24) <= uVar5) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           plVar3 = lVar2[uVar5];
           if (plVar3 == (int64 *)0) break;
@@ -432,11 +432,11 @@ public class UIRect
         }
     }
 
-    // Token : 0x60004FF
-    // RVA   : 0x16FD670   Offset: 0x16FCA70   Length: 0x2C3
+    // Token : 0x60004E6
+    // RVA   : 0x15FF9A0   Offset: 0x15FE7A0   Length: 0x2C3
     public virtual Vector3[] GetSides(Transform relativeTo)
     {
-        var pStatics = *(int64*)(DAT_181db0110 + 184);
+        var pStatics = *(int64*)(DAT_181e90550 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -452,9 +452,9 @@ public class UIRect
         if (!cVar1) {
           lVar3 = UIRect.get_cachedTransform();
           if (lVar3 == null) {
-        LAB_1816fd92e:
+        LAB_1815ffc5e:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           puVar4 = (uint64 *)Transform.get_position(&local_38,lVar3,0);
           uVar7 = 0;
@@ -463,11 +463,11 @@ public class UIRect
           uVar8 = *(uint32 *)(puVar4 + 1);
           do {
             lVar3 = *pStatics;
-            if (lVar3 == null) goto LAB_1816fd92e;
+            if (lVar3 == null) goto LAB_1815ffc5e;
             if (*(uint32 *)(lVar3 + 24) <= uVar6) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             lVar5 = (int64)(int)uVar6;
             uVar6 = uVar6 + 1;
@@ -478,28 +478,28 @@ public class UIRect
           if (cVar1) {
             do {
               lVar3 = *pStatics;
-              if (lVar3 == null) goto LAB_1816fd92e;
+              if (lVar3 == null) goto LAB_1815ffc5e;
               lVar5 = (int64)(int)uVar7;
               if (*(uint32 *)(lVar3 + 24) <= uVar7) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
-              if (relativeTo == null) goto LAB_1816fd92e;
+              if (relativeTo == null) goto LAB_1815ffc5e;
               local_38 = *(uint64 *)(lVar3 + 32 + lVar5 * 12);
               local_30 = *(uint32 *)(lVar3 + 40 + lVar5 * 12);
               puVar4 = (uint64 *)Transform.InverseTransformPoint(local_28,relativeTo,&local_38,0);
               if (*(uint32 *)(lVar3 + 24) <= uVar7) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               uVar7 = uVar7 + 1;
               *(uint64 *)(lVar3 + 32 + lVar5 * 12) = *puVar4;
               *(uint32 *)(lVar3 + 40 + lVar5 * 12) = *(uint32 *)(puVar4 + 1);
             } while ((int)uVar7 < 4);
           }
-          uVar2 = **(uint64 **)(DAT_181db0110 + 184);
+          uVar2 = **(uint64 **)(DAT_181e90550 + 184);
         }
         else {
           uVar2 = this.mCam;
@@ -509,8 +509,8 @@ public class UIRect
         return uVar2;
     }
 
-    // Token : 0x6000500
-    // RVA   : 0x16FD320   Offset: 0x16FC720   Length: 0x348
+    // Token : 0x60004E7
+    // RVA   : 0x15FF650   Offset: 0x15FE450   Length: 0x348
     protected Vector3 GetLocalPos(AnchorPoint ac, Transform trans)
     {
         uint64 *
@@ -562,11 +562,11 @@ public class UIRect
                 puVar4 = (uint64 *)Camera.WorldToViewportPoint(&local_88,lVar5,&local_98,0);
                 uVar2 = *puVar4;
                 local_80 = *(uint32 *)(puVar4 + 1);
-                fVar7 = (float)FUN_180d995b0(&local_68,0);
-                fVar8 = (float)FUN_180d995d0(&local_68,0);
-                fVar9 = (float)FUN_18044e2b0(&local_68,0);
+                fVar7 = (float)FUN_180af4e40(&local_68,0);
+                fVar8 = (float)FUN_180af4e60(&local_68,0);
+                fVar9 = (float)FUN_180af4db0(&local_68,0);
                 local_98 = CONCAT44(local_98._4_4_,(float)uVar2 * fVar7 + fVar8);
-                fVar7 = (float)FUN_18044df60(&local_68,0);
+                fVar7 = (float)FUN_180af4e80(&local_68,0);
                 local_98 = CONCAT44(fVar7 + (float)((uint64)uVar2 >> 32) * fVar9,(float)local_98);
                 local_90 = local_80;
                 local_88 = uVar2;
@@ -608,8 +608,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000501
-    // RVA   : 0x16FDAB0   Offset: 0x16FCEB0   Length: 0x51
+    // Token : 0x60004E8
+    // RVA   : 0x15FFDE0   Offset: 0x15FEBE0   Length: 0x51
     protected virtual void OnEnable()
     {
         *(uint32 *)((int64)this + 92) = 0xffffffff;
@@ -625,8 +625,8 @@ public class UIRect
         *(uint32 *)((int64)this + 92) = 0xffffffff;
     }
 
-    // Token : 0x6000502
-    // RVA   : 0x16FDB10   Offset: 0x16FCF10   Length: 0xAC
+    // Token : 0x60004E9
+    // RVA   : 0x15FFE40   Offset: 0x15FEC40   Length: 0xAC
     protected virtual void OnInit()
     {
         long lVar1;
@@ -640,14 +640,14 @@ public class UIRect
           if ((this.mParent == null) ||
              (lVar1 = this.mParent.mChildren) == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          FUN_181584270(lVar1,this,DAT_181da6fd0);
+          FUN_181623290(lVar1,this,DAT_181e87990);
         }
     }
 
-    // Token : 0x6000503
-    // RVA   : 0x16FD9E0   Offset: 0x16FCDE0   Length: 0xC7
+    // Token : 0x60004EA
+    // RVA   : 0x15FFD10   Offset: 0x15FEB10   Length: 0xC7
     protected virtual void OnDisable()
     {
         ulong uVar1;
@@ -659,9 +659,9 @@ public class UIRect
           if ((this.mParent == null) ||
              (lVar2 = this.mParent.mChildren) == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          FUN_181586280(lVar2,this,DAT_181da7050);
+          FUN_1816252a0(lVar2,this,DAT_181e87a10);
         }
         this.mParent = 0;
         this.mRoot = 0;
@@ -669,8 +669,8 @@ public class UIRect
         this.mParentFound = 0;
     }
 
-    // Token : 0x6000504
-    // RVA   : 0x16FD140   Offset: 0x16FC540   Length: 0xA1
+    // Token : 0x60004EB
+    // RVA   : 0x15FF470   Offset: 0x15FE270   Length: 0xA1
     protected virtual void Awake()
     {
         ulong uVar1;
@@ -683,19 +683,19 @@ public class UIRect
         this.mTrans = uVar1;
     }
 
-    // Token : 0x6000505
-    // RVA   : 0x16FEAA0   Offset: 0x16FDEA0   Length: 0x39
+    // Token : 0x60004EC
+    // RVA   : 0x1600DD0   Offset: 0x15FFBD0   Length: 0x39
     protected void Start()
     {
         *(uint8 *)(this + 17) = 1;
         (**(code **)(*this + 0x228))(this,*(uint64 *)(*this + 0x230));
-                          // WARNING: Could not recover jumptable at 0x0001816fead2. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000181600e02. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x288))(this,*(uint64 *)(*this + 0x290));
     }
 
-    // Token : 0x6000506
-    // RVA   : 0x16FEF60   Offset: 0x16FE360   Length: 0xCC
+    // Token : 0x60004ED
+    // RVA   : 0x1601290   Offset: 0x1600090   Length: 0xCC
     public void Update()
     {
         long lVar1;
@@ -720,8 +720,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000507
-    // RVA   : 0x16FEAE0   Offset: 0x16FDEE0   Length: 0x300
+    // Token : 0x60004EE
+    // RVA   : 0x1600E10   Offset: 0x15FFC10   Length: 0x300
     protected void UpdateAnchorsInternal(int frame)
     {
         ulong uVar1;
@@ -806,8 +806,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000508
-    // RVA   : 0x16FEDF0   Offset: 0x16FE1F0   Length: 0x164
+    // Token : 0x60004EF
+    // RVA   : 0x1601120   Offset: 0x15FFF20   Length: 0x164
     public void UpdateAnchors()
     {
         ulong uVar1;
@@ -845,14 +845,14 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000509
+    // Token : 0x60004F0
     // (no native address)
     protected virtual void OnAnchor()
     {
     }
 
-    // Token : 0x600050A
-    // RVA   : 0x16FE710   Offset: 0x16FDB10   Length: 0x90
+    // Token : 0x60004F1
+    // RVA   : 0x1600A40   Offset: 0x15FF840   Length: 0x90
     public void SetAnchor(Transform t)
     {
                             uint32 param_5,uint32 param_6,uint32 param_7,uint32 param_8,
@@ -863,7 +863,7 @@ public class UIRect
         uint64 *puVar3;
         lVar1 = UIRect.get_cachedTransform(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180daa030(lVar1,0);
+          uVar2 = FUN_180b05920(lVar1,0);
           if (this.leftAnchor != null) {
             this.leftAnchor.target = uVar2;
             if (this.rightAnchor != null) {
@@ -906,8 +906,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x600050B
-    // RVA   : 0x16FE0F0   Offset: 0x16FD4F0   Length: 0xF8
+    // Token : 0x60004F2
+    // RVA   : 0x1600420   Offset: 0x15FF220   Length: 0xF8
     public void SetAnchor(GameObject go)
     {
                             uint32 param_5,uint32 param_6,uint32 param_7,uint32 param_8,
@@ -918,7 +918,7 @@ public class UIRect
         uint64 *puVar3;
         lVar1 = UIRect.get_cachedTransform(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180daa030(lVar1,0);
+          uVar2 = FUN_180b05920(lVar1,0);
           if (this.leftAnchor != null) {
             this.leftAnchor.target = uVar2;
             if (this.rightAnchor != null) {
@@ -961,8 +961,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x600050C
-    // RVA   : 0x16FE1F0   Offset: 0x16FD5F0   Length: 0x1A2
+    // Token : 0x60004F3
+    // RVA   : 0x1600520   Offset: 0x15FF320   Length: 0x1A2
     public void SetAnchor(GameObject go, int left, int bottom, int right, int top)
     {
                             uint32 right,uint32 top,uint32 param_7,uint32 param_8,
@@ -973,7 +973,7 @@ public class UIRect
         uint64 *puVar3;
         lVar1 = UIRect.get_cachedTransform(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180daa030(lVar1,0);
+          uVar2 = FUN_180b05920(lVar1,0);
           if (this.leftAnchor != null) {
             this.leftAnchor.target = uVar2;
             if (this.rightAnchor != null) {
@@ -1016,8 +1016,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x600050D
-    // RVA   : 0x16FE560   Offset: 0x16FD960   Length: 0x1AB
+    // Token : 0x60004F4
+    // RVA   : 0x1600890   Offset: 0x15FF690   Length: 0x1AB
     public void SetAnchor(GameObject go, float left, float bottom, float right, float top)
     {
                             uint32 right,uint32 top,uint32 param_7,uint32 param_8,
@@ -1028,7 +1028,7 @@ public class UIRect
         uint64 *puVar3;
         lVar1 = UIRect.get_cachedTransform(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180daa030(lVar1,0);
+          uVar2 = FUN_180b05920(lVar1,0);
           if (this.leftAnchor != null) {
             this.leftAnchor.target = uVar2;
             if (this.rightAnchor != null) {
@@ -1071,8 +1071,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x600050E
-    // RVA   : 0x16FE3A0   Offset: 0x16FD7A0   Length: 0x1BA
+    // Token : 0x60004F5
+    // RVA   : 0x16006D0   Offset: 0x15FF4D0   Length: 0x1BA
     public void SetAnchor(GameObject go, float left, int leftOffset, float bottom, int bottomOffset, float right, int rightOffset, float top, int topOffset)
     {
                             uint32 bottom,uint32 bottomOffset,uint32 right,uint32 rightOffset,
@@ -1083,7 +1083,7 @@ public class UIRect
         uint64 *puVar3;
         lVar1 = UIRect.get_cachedTransform(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180daa030(lVar1,0);
+          uVar2 = FUN_180b05920(lVar1,0);
           if (this.leftAnchor != null) {
             this.leftAnchor.target = uVar2;
             if (this.rightAnchor != null) {
@@ -1126,8 +1126,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x600050F
-    // RVA   : 0x16FE7B0   Offset: 0x16FDBB0   Length: 0x179
+    // Token : 0x60004F6
+    // RVA   : 0x1600AE0   Offset: 0x15FF8E0   Length: 0x179
     public void SetAnchor(float left, int leftOffset, float bottom, int bottomOffset, float right, int rightOffset, float top, int topOffset)
     {
                             uint32 bottomOffset,uint32 right,uint32 rightOffset,uint32 top,
@@ -1138,7 +1138,7 @@ public class UIRect
         uint64 *puVar3;
         lVar1 = UIRect.get_cachedTransform(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180daa030(lVar1,0);
+          uVar2 = FUN_180b05920(lVar1,0);
           if (this.leftAnchor != null) {
             this.leftAnchor.target = uVar2;
             if (this.rightAnchor != null) {
@@ -1181,15 +1181,15 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000510
-    // RVA   : 0x16FE930   Offset: 0x16FDD30   Length: 0x16B
+    // Token : 0x60004F7
+    // RVA   : 0x1600C60   Offset: 0x15FFA60   Length: 0x16B
     public void SetScreenRect(int left, int top, int width, int height)
     {
         long lVar1;
         ulong uVar2;
         lVar1 = UIRect.get_cachedTransform(this,0);
         if (lVar1 != null) {
-          uVar2 = FUN_180daa030(lVar1,0);
+          uVar2 = FUN_180b05920(lVar1,0);
           if (this.leftAnchor != null) {
             this.leftAnchor.target = uVar2;
             if (this.rightAnchor != null) {
@@ -1232,8 +1232,8 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000511
-    // RVA   : 0x16FDD90   Offset: 0x16FD190   Length: 0x33A
+    // Token : 0x60004F8
+    // RVA   : 0x16000C0   Offset: 0x15FEEC0   Length: 0x33A
     public void ResetAnchors()
     {
         long lVar1;
@@ -1253,7 +1253,7 @@ public class UIRect
             if ((this.leftAnchor == null) ||
                (lVar2 = this.leftAnchor.target) == null)
             throw; // [null/range check failed]
-            uVar5 = Component.GetComponent(lVar2,DAT_181d96cf8);
+            uVar5 = Component.GetComponent(lVar2,DAT_181e7a0b8);
           }
           lVar1.rect = uVar5;
           lVar1 = this.bottomAnchor;
@@ -1265,7 +1265,7 @@ public class UIRect
               if ((this.bottomAnchor == null) ||
                  (lVar2 = this.bottomAnchor.target) == null)
               throw; // [null/range check failed]
-              uVar5 = Component.GetComponent(lVar2,DAT_181d96cf8);
+              uVar5 = Component.GetComponent(lVar2,DAT_181e7a0b8);
             }
             lVar1.rect = uVar5;
             lVar1 = this.rightAnchor;
@@ -1277,7 +1277,7 @@ public class UIRect
                 if ((this.rightAnchor == null) ||
                    (lVar2 = this.rightAnchor.target) == null)
                 throw; // [null/range check failed]
-                uVar5 = Component.GetComponent(lVar2,DAT_181d96cf8);
+                uVar5 = Component.GetComponent(lVar2,DAT_181e7a0b8);
               }
               lVar1.rect = uVar5;
               lVar1 = this.topAnchor;
@@ -1288,7 +1288,7 @@ public class UIRect
                   if ((this.topAnchor == null) ||
                      (lVar2 = this.topAnchor.target) == null)
                   throw; // [null/range check failed]
-                  uVar6 = Component.GetComponent(lVar2,DAT_181d96cf8);
+                  uVar6 = Component.GetComponent(lVar2,DAT_181e7a0b8);
                 }
                 lVar1.rect = uVar6;
                 uVar5 = this.mGo;
@@ -1314,22 +1314,22 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000512
-    // RVA   : 0x16FE0D0   Offset: 0x16FD4D0   Length: 0x1F
+    // Token : 0x60004F9
+    // RVA   : 0x1600400   Offset: 0x15FF200   Length: 0x1F
     public void ResetAndUpdateAnchors()
     {
         UIRect.ResetAnchors(this,0);
         UIRect.UpdateAnchors(this,0);
     }
 
-    // Token : 0x6000513
+    // Token : 0x60004FA
     // (no native address)
     public virtual void SetRect(float x, float y, float width, float height)
     {
     }
 
-    // Token : 0x6000514
-    // RVA   : 0x16FD1F0   Offset: 0x16FC5F0   Length: 0x12B
+    // Token : 0x60004FB
+    // RVA   : 0x15FF520   Offset: 0x15FE320   Length: 0x12B
     private void FindCameraFor(AnchorPoint ap)
     {
         bool cVar1;
@@ -1337,9 +1337,9 @@ public class UIRect
         long lVar3;
         ulong uVar4;
         if (ap == null) {
-        LAB_1816fd316:
+        LAB_1815ff646:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         uVar4 = *(uint64 *)(ap + 16);
         cVar1 = Object.op_Equality(uVar4,0,0);
@@ -1356,14 +1356,14 @@ public class UIRect
                 return;
               }
             }
-            goto LAB_1816fd316;
+            goto LAB_1815ff646;
           }
         }
         *(uint64 *)(ap + 40) = 0;
     }
 
-    // Token : 0x6000515
-    // RVA   : 0x16FDBC0   Offset: 0x16FCFC0   Length: 0x1C8
+    // Token : 0x60004FC
+    // RVA   : 0x15FFEF0   Offset: 0x15FECF0   Length: 0x1C8
     public virtual void ParentHasChanged()
     {
         bool cVar1;
@@ -1373,8 +1373,8 @@ public class UIRect
         this.mParentFound = 0;
         lVar2 = UIRect.get_cachedTransform(this,0);
         if (lVar2 != null) {
-          uVar3 = FUN_180daa030(lVar2,0);
-          uVar4 = NGUITools.FindInParents(uVar3,DAT_181d8f638);
+          uVar3 = FUN_180b05920(lVar2,0);
+          uVar4 = NGUITools.FindInParents(uVar3,DAT_181e72c78);
           uVar3 = this.mParent;
           cVar1 = Object.op_Inequality(uVar3,uVar4,0);
           if (cVar1) {
@@ -1384,7 +1384,7 @@ public class UIRect
               if ((this.mParent == null) ||
                  (lVar2 = this.mParent.mChildren) == null)
               throw; // [null/range check failed]
-              FUN_181586280(lVar2,this,DAT_181da7050);
+              FUN_1816252a0(lVar2,this,DAT_181e87a10);
             }
             this.mParent = uVar4;
             uVar3 = this.mParent;
@@ -1393,7 +1393,7 @@ public class UIRect
               if ((this.mParent == null) ||
                  (lVar2 = this.mParent.mChildren) == null)
               throw; // [null/range check failed]
-              FUN_181584270(lVar2,this,DAT_181da6fd0);
+              FUN_181623290(lVar2,this,DAT_181e87990);
             }
             this.mRootSet = 0;
           }
@@ -1401,20 +1401,20 @@ public class UIRect
         }
     }
 
-    // Token : 0x6000516
+    // Token : 0x60004FD
     // (no native address)
     protected virtual void OnStart()
     {
     }
 
-    // Token : 0x6000517
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x60004FE
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     protected virtual void OnUpdate()
     {
     }
 
-    // Token : 0x6000518
-    // RVA   : 0x16FF090   Offset: 0x16FE490   Length: 0x154
+    // Token : 0x60004FF
+    // RVA   : 0x16013C0   Offset: 0x16001C0   Length: 0x154
     protected void /*ctor*/()
     {
         ulong uVar1;
@@ -1423,21 +1423,21 @@ public class UIRect
         this.bottomAnchor = new c.DisplayClass9_0(0);
         this.topAnchor = new AnchorPoint(0x3f800000,0);
         this.updateAnchors = 1;
-        this.mChildren = new BetterList_1(DAT_181da6f50);
+        this.mChildren = new BetterList_1(DAT_181e87910);
         this.mChanged = 1;
         this.mUpdateAnchors = 1;
         this.mUpdateFrame = 0xffffffff;
         this.finalAlpha = 0x3f800000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6000519
-    // RVA   : 0x16FF030   Offset: 0x16FE430   Length: 0x5A
+    // Token : 0x6000500
+    // RVA   : 0x1601360   Offset: 0x1600160   Length: 0x5A
     private static void /*cctor*/()
     {
         ulong uVar2;
-        uVar2 = FUN_1800d60b0(DAT_181da6d78,4);
-        puVar1 = *(uint64 **)(DAT_181db0110 + 184);
+        uVar2 = FUN_1801dfd90(DAT_181e86eb8,4);
+        puVar1 = *(uint64 **)(DAT_181e90550 + 184);
         *puVar1 = uVar2;
         il2cpp_internal(puVar1,uVar2);
     }

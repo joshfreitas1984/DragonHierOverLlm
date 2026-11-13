@@ -1,59 +1,59 @@
 // ============================================================
 // Type  : TankController
-// Token : 0x2000128
+// Token : 0x2000127
 // ============================================================
 
 public class TankController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000748
+    // Token: 0x4000728
     public float TrailMaterialOffsetSpeed;
 
-    // Token: 0x4000749
+    // Token: 0x4000729
     public float MoveSpeed;
 
-    // Token: 0x400074A
+    // Token: 0x400072A
     public float MoveFriction;
 
-    // Token: 0x400074B
+    // Token: 0x400072B
     public float MoveAcceleration;
 
-    // Token: 0x400074C
+    // Token: 0x400072C
     public float RotateSpeed;
 
-    // Token: 0x400074D
+    // Token: 0x400072D
     public float RotateFriction;
 
-    // Token: 0x400074E
+    // Token: 0x400072E
     public float RotateAcceleration;
 
-    // Token: 0x400074F
+    // Token: 0x400072F
     public Material TrailMaterial;
 
-    // Token: 0x4000750
+    // Token: 0x4000730
     public Animator Animator;
 
-    // Token: 0x4000751
+    // Token: 0x4000731
     public List<Trail> TankTrackTrails;
 
-    // Token: 0x4000752
+    // Token: 0x4000732
     public TankWeaponController WeaponController;
 
-    // Token: 0x4000753
+    // Token: 0x4000733
     private float _moveSpeed;
 
-    // Token: 0x4000754
+    // Token: 0x4000734
     private float _rotateSpeed;
 
-    // Token: 0x4000755
+    // Token: 0x4000735
     public bool InControl;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009BE
-    // RVA   : 0xA9CCB0   Offset: 0xA9C0B0   Length: 0x709
+    // Token : 0x60009A5
+    // RVA   : 0x80BF00   Offset: 0x80AD00   Length: 0x709
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d8b150 + 184);
+        var pStatics = *(int64*)(DAT_181e6b898 + 184);
         ulong uVar1;
         ulong uVar2;
         bool cVar3;
@@ -74,7 +74,7 @@ public class TankController
         float local_70;
         uint8 local_68 [80];
         if (this.Animator == null) throw; // [null/range check failed]
-        FUN_18044e920(this.Animator,"InControl",this.InControl,0);
+        FUN_18182a0e0(this.Animator,"InControl",this.InControl,0);
         lVar6 = this.WeaponController;
         if (!this.InControl) {
           if (lVar6 == null) throw; // [null/range check failed]
@@ -83,21 +83,21 @@ public class TankController
         else {
           if (lVar6 == null) throw; // [null/range check failed]
           Behaviour.set_enabled(lVar6,1,0);
-          cVar3 = FUN_1804625f0(119);
+          cVar3 = FUN_1818448a0(119);
           if (!cVar3) {
-            cVar3 = FUN_1804625f0(115);
+            cVar3 = FUN_1818448a0(115);
             lVar6 = this.Animator;
             if (!cVar3) {
               if (lVar6 == null) throw; // [null/range check failed]
-              FUN_18044e920(lVar6,"Backward",0,0);
+              FUN_18182a0e0(lVar6,"Backward",0,0);
               if (this.Animator == null) throw; // [null/range check failed]
-              FUN_18044e920(this.Animator,"Forward",0,0);
+              FUN_18182a0e0(this.Animator,"Forward",0,0);
             }
             else {
               if (lVar6 == null) throw; // [null/range check failed]
-              FUN_18044e920(lVar6,"Backward",1,0);
+              FUN_18182a0e0(lVar6,"Backward",1,0);
               if (this.Animator == null) throw; // [null/range check failed]
-              FUN_18044e920(this.Animator,"Forward",0,0);
+              FUN_18182a0e0(this.Animator,"Forward",0,0);
               fVar4 = this._moveSpeed;
               fVar9 = this.MoveAcceleration;
               fVar10 = (float)Time.get_deltaTime(0);
@@ -111,9 +111,9 @@ public class TankController
           }
           else {
             if (this.Animator == null) throw; // [null/range check failed]
-            FUN_18044e920(this.Animator,"Forward",1,0);
+            FUN_18182a0e0(this.Animator,"Forward",1,0);
             if (this.Animator == null) throw; // [null/range check failed]
-            FUN_18044e920(this.Animator,"Backward",0,0);
+            FUN_18182a0e0(this.Animator,"Backward",0,0);
             fVar4 = this._moveSpeed;
             fVar9 = this.MoveAcceleration;
             fVar10 = (float)Time.get_deltaTime(0);
@@ -124,9 +124,9 @@ public class TankController
               this._moveSpeed = this.MoveSpeed;
             }
           }
-          cVar3 = FUN_1804625f0(100);
+          cVar3 = FUN_1818448a0(100);
           if (!cVar3) {
-            cVar3 = FUN_1804625f0(97);
+            cVar3 = FUN_1818448a0(97);
             if (cVar3) {
               fVar4 = this._rotateSpeed;
               fVar9 = this.RotateAcceleration;
@@ -155,25 +155,25 @@ public class TankController
         if (0.0 < ABS(this._moveSpeed)) {
           lVar5 = *(int64 *)(pStatics + 8);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(DAT_181d8b150 + 184);
-            lVar5 = new OnTooltipCB(uVar1,DAT_181db5c28,DAT_181d986c0);
+            uVar1 = **(uint64 **)(DAT_181e6b898 + 184);
+            lVar5 = new OnTooltipCB(uVar1,DAT_181e999c8,DAT_181e78f80);
             plVar8 = (int64 *)(pStatics + 8);
-            goto LAB_180a9d0e7;
+            goto LAB_18080c337;
           }
         }
         else {
           lVar5 = *(int64 *)(pStatics + 16);
           if (lVar5 == null) {
-            uVar1 = **(uint64 **)(DAT_181d8b150 + 184);
-            lVar5 = new OnTooltipCB(uVar1,DAT_181db5cb0,DAT_181d986c0);
+            uVar1 = **(uint64 **)(DAT_181e6b898 + 184);
+            lVar5 = new OnTooltipCB(uVar1,DAT_181e99a50,DAT_181e78f80);
             plVar8 = (int64 *)(pStatics + 16);
-        LAB_180a9d0e7:
+        LAB_18080c337:
             *plVar8 = lVar5;
             il2cpp_internal(plVar8,lVar5);
           }
         }
         if (lVar6 != null) {
-          FUN_18181f760(lVar6,lVar5,DAT_181da7b30);
+          FUN_18175eee0(lVar6,lVar5,DAT_181e8a170);
           lVar6 = Component.get_transform(this,0);
           if (lVar6 != null) {
             puVar7 = (uint64 *)Transform.get_position(local_78,lVar6,0);
@@ -243,11 +243,11 @@ public class TankController
         }
     }
 
-    // Token : 0x60009BF
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60009A6
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -2855,6 +2855,24 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "内力999"
+  splits:
+  - text: "内力999"
+    translated: "Inner Power999"
+    qcReviewedText: "Inner Power999"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "内力消耗 99"
+  splits:
+  - text: "内力消耗"
+    translated: "Inner Power Cost"
+    qcReviewedText: "Inner Power Cost 99"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0} 99"
 - raw: "内功"
   splits:
   - text: "内功"
@@ -3357,6 +3375,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "力道 精"
+  splits:
+  - text: "力道"
+    translated: "Strength"
+    qcReviewedText: "Strength J-jing"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "精"
+    translated: "J-jing"
+  templates:
+  - template: "{0} {1}"
 - raw: "力道+5"
   splits:
   - text: "力道"
@@ -3411,6 +3442,59 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "功法名称"
+  splits:
+  - text: "功法名称"
+    translated: "Technique Name"
+    qcReviewedText: "Technique Name"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "功法图标"
+  splits:
+  - text: "功法图标"
+    translated: "You-young Fengfa icon"
+    qcReviewedText: "You-young Fengfa icon"
+    qcTranslated: "Cultivation technique icon"
+    qcStatus: Corrected
+    qcQualityScore: 100
+    qcDefectCategory: GarbledNumber
+    qcDefectCategories:
+    - GarbledNumber
+    - UntranslatedPinyin
+- raw: "功法描述"
+  splits:
+  - text: "功法描述"
+    translated: "Technique Description"
+    qcReviewedText: "Technique Description"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "功法效果"
+  splits:
+  - text: "功法效果"
+    translated: "W-wonderful effect of the cultivation method"
+    qcReviewedText: "W-wonderful effect of the cultivation method"
+    qcTranslated: "W-wonderful effect of the cultivation technique"
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+    - UnnaturalPhrasing
+- raw: "功法点数 99/99"
+  splits:
+  - text: "功法点数"
+    translated: "Gong-fa dian-shu"
+    qcReviewedText: "Gong-fa dian-shu 99/99"
+    qcTranslated: "Technique Points 99/99"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
+  templates:
+  - template: "{0} 99/99"
 - raw: "功绩 100"
   splits:
   - text: "功绩"
@@ -3997,6 +4081,16 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "基础伤害 99"
+  splits:
+  - text: "基础伤害"
+    translated: "Base damage"
+    qcReviewedText: "Base damage 99"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0} 99"
 - raw: "基础信息"
   splits:
   - text: "基础信息"
@@ -4080,6 +4174,26 @@
   - text: "声望越高，能同时接受越多委托"
     translated: "Reputation higher, the more commissions one can simultaneously accept."
     qcReviewedText: "Reputation higher, the more commissions one can simultaneously accept."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "复刻同类武学攻击范围"
+  splits:
+  - text: "复刻同类武学攻击范围"
+    translated: "R-r-range of replications of similar martial arts attacks"
+    qcReviewedText: "R-r-range of replications of similar martial arts attacks"
+    qcTranslated: "R-r-range of the replicated similar martial arts attacks"
+    qcStatus: Corrected
+    qcQualityScore: 85
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+    - UnnaturalPhrasing
+- raw: "复刻同类武学攻防架势"
+  splits:
+  - text: "复刻同类武学攻防架势"
+    translated: "R-e-repeat the g-g-guard and a-attack p-patterns of s-similar martial s-skills"
+    qcReviewedText: "R-e-repeat the g-g-guard and a-attack p-patterns of s-similar martial s-skills"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5449,14 +5563,17 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "成品命名..."
+- raw: "成品命名"
   splits:
-  - text: "成品命名..."
-    translated: "Product Naming..."
-    qcReviewedText: "Product Naming..."
-    qcStatus: Passed
+  - text: "成品命名"
+    translated: "Master, I will go now"
+    qcReviewedText: "Master, I will go now"
+    qcTranslated: "Naming the finished product"
+    qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: None
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
 - raw: "成就"
   splits:
   - text: "成就"
@@ -6214,6 +6331,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "新增特效 0/3"
+  splits:
+  - text: "新增特效"
+    translated: "N-n-new special effects"
+    qcReviewedText: "N-n-new special effects 0/3"
+    qcTranslated: "New special effects 0/3"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: DroppedStutter
+    qcDefectCategories:
+    - DroppedStutter
+  templates:
+  - template: "{0} 0/3"
 - raw: "新建"
   splits:
   - text: "新建"
@@ -7852,6 +7982,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "生命999"
+  splits:
+  - text: "生命999"
+    translated: "Health 999"
+    qcReviewedText: "Health 999"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "生活技艺"
   splits:
   - text: "生活技艺"
@@ -8861,6 +8999,14 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "自创武学"
+  splits:
+  - text: "自创武学"
+    translated: "Self-created martial arts"
+    qcReviewedText: "Self-created martial arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "自动"
   splits:
   - text: "自动"
@@ -9740,6 +9886,16 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "轻灵 +99%"
+  splits:
+  - text: "轻灵"
+    translated: "Nimble"
+    qcReviewedText: "Nimble +99%"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  templates:
+  - template: "{0} +99%"
 - raw: "轻甲"
   splits:
   - text: "轻甲"
@@ -9833,6 +9989,22 @@
   - text: "选择基础成品"
     translated: "Choose basic finished product"
     qcReviewedText: "Choose basic finished product"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "选择架势"
+  splits:
+  - text: "选择架势"
+    translated: "Choose stance"
+    qcReviewedText: "Choose stance"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+- raw: "选择范围"
+  splits:
+  - text: "选择范围"
+    translated: "Select Range"
+    qcReviewedText: "Select Range"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : ItemUseChoiceButtonController
-// Token : 0x20002F4
+// Token : 0x20002FD
 // ============================================================
 
 public class ItemUseChoiceButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001882
+    // Token: 0x40018D8
     public HeroData targetHero;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60018A1
-    // RVA   : 0xCAADF0   Offset: 0xCAA1F0   Length: 0x18B
+    // Token : 0x600191D
+    // RVA   : 0x7B95E0   Offset: 0x7B83E0   Length: 0x18B
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d823b0 + 184);
+        var pStatics = *(int64*)(DAT_181e62770 + 184);
         long lVar1;
         ulong uVar2;
         lVar1 = this.targetHero;
@@ -44,11 +44,11 @@ public class ItemUseChoiceButtonController
         }
     }
 
-    // Token : 0x60018A2
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600191E
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <EndParty>d__59
-// Token : 0x2000318
+// Token : 0x2000322
 // ============================================================
 
 public class <EndParty>d__59
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400197C
+    // Token: 0x40019F5
     private int <>1__state;
 
-    // Token: 0x400197D
+    // Token: 0x40019F6
     private object <>2__current;
 
-    // Token: 0x400197E
+    // Token: 0x40019F7
     public PartyController <>4__this;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60019B2
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6001A48
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x60019B3
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x6001A49
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x60019B4
-    // RVA   : 0x91CF60   Offset: 0x91C360   Length: 0x5E9
+    // Token : 0x6001A4A
+    // RVA   : 0x60A5F0   Offset: 0x6093F0   Length: 0x5E9
     private virtual bool MoveNext()
     {
-        var pStatics = *(int64*)(DAT_181d902a8 + 184);
+        var pStatics = *(int64*)(DAT_181e70668 + 184);
         long lVar1;
         long lVar2;
         uint uVar3;
@@ -115,7 +115,7 @@ public class <EndParty>d__59
                 if (lVar5 == null) throw; // [null/range check failed]
                 HeroData.ChangeFame(lVar5);
               }
-              if (*(int *)(lVar1 + 24) != 2) goto LAB_18091d4b5;
+              if (*(int *)(lVar1 + 24) != 2) goto LAB_18060ab45;
               if ((*(int64 *)(lVar1 + 176) != 0) && (*(int64 *)(lVar1 + 168) != 0)) {
                 HeroData.SetLover(*(int64 *)(lVar1 + 168),
                                    *(uint32 *)(*(int64 *)(lVar1 + 176) + 88),1,0);
@@ -125,25 +125,25 @@ public class <EndParty>d__59
                     if (*(int64 *)(lVar5 + 0x330) == 0) throw; // [null/range check failed]
                     iVar4 = *(int *)(*(int64 *)(lVar5 + 0x330) + 24);
                     while (iVar4 = iVar4 + -1, -1 < iVar4) {
-                      lVar5 = FUN_18046c0a0(0);
+                      lVar5 = FUN_1802106e0(0);
                       if (lVar5 == null) throw; // [null/range check failed]
                       lVar5 = *(int64 *)(lVar5 + 32);
                       if ((((*(int64 *)(lVar1 + 168) == 0) ||
                            (lVar2 = *(int64 *)(*(int64 *)(lVar1 + 168) + 0x330)) == null) ||
-                          (uVar3 = FUN_1800d6760(lVar2,iVar4,DAT_181d8fa30), lVar5 == null)) ||
+                          (uVar3 = FUN_180002480(lVar2,iVar4,DAT_181e71bf0), lVar5 == null)) ||
                          (lVar5 = WorldData.GetHero(lVar5,uVar3,0)) == null) throw; // [null/range check failed]
                       HeroData.ChangeFavor(lVar5);
-                      lVar5 = FUN_18046c0a0(0);
+                      lVar5 = FUN_1802106e0(0);
                       if (lVar5 == null) throw; // [null/range check failed]
                       lVar5 = *(int64 *)(lVar5 + 32);
                       if (((*(int64 *)(lVar1 + 168) == 0) ||
                           (lVar2 = *(int64 *)(*(int64 *)(lVar1 + 168) + 0x330)) == null) ||
-                         ((uVar3 = FUN_1800d6760(lVar2,iVar4,DAT_181d8fa30), lVar5 == null ||
+                         ((uVar3 = FUN_180002480(lVar2,iVar4,DAT_181e71bf0), lVar5 == null ||
                           (lVar5 = WorldData.GetHero(lVar5,uVar3,0)) == null))) throw; // [null/range check failed]
                       HeroData.CheckPlayerMakeLoverUnhappy(lVar5,0);
                     }
                   }
-        LAB_18091d4b5:
+        LAB_18060ab45:
                   uVar6 = new WaitForSeconds();
                   this.<>2__current = uVar6;
                   this.<>1__state = 1;
@@ -155,27 +155,27 @@ public class <EndParty>d__59
         }
     }
 
-    // Token : 0x60019B5
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6001A4B
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x60019B6
-    // RVA   : 0x91D550   Offset: 0x91C950   Length: 0x3E
+    // Token : 0x6001A4C
+    // RVA   : 0x60ABE0   Offset: 0x6099E0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da9a60);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e8d410);
     }
 
-    // Token : 0x60019B7
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6001A4D
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

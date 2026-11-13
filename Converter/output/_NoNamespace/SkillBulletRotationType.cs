@@ -1,21 +1,21 @@
 // ============================================================
 // Type  : SkillBulletRotationType
-// Token : 0x200022E
+// Token : 0x2000230
 // ============================================================
 
 public class SkillBulletRotationType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001174
+    // Token: 0x400118A
     public int value__;
 
-    // Token: 0x4001175
+    // Token: 0x400118B
     public const SkillBulletRotationType None;
 
-    // Token: 0x4001176
+    // Token: 0x400118C
     public const SkillBulletRotationType FaceTarget;
 
-    // Token: 0x4001177
+    // Token: 0x400118D
     public const SkillBulletRotationType AutoRotate;
 
 }

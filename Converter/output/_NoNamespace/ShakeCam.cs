@@ -1,48 +1,48 @@
 // ============================================================
 // Type  : ShakeCam
-// Token : 0x2000350
+// Token : 0x200035D
 // ============================================================
 
 public class ShakeCam
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B66
+    // Token: 0x4001BE4
     public Camera[] cam;
 
-    // Token: 0x4001B67
+    // Token: 0x4001BE5
     public Tweener[] camTweener;
 
-    // Token: 0x4001B68
+    // Token: 0x4001BE6
     public ShakeStrengthType shakeStrengthType;
 
-    // Token: 0x4001B69
+    // Token: 0x4001BE7
     private float shakeDelta;
 
-    // Token: 0x4001B6A
+    // Token: 0x4001BE8
     private float shakeTime;
 
-    // Token: 0x4001B6B
+    // Token: 0x4001BE9
     private static ShakeCam _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60020FA
-    // RVA   : 0x97E3F0   Offset: 0x97D7F0   Length: 0x36
+    // Token : 0x60021A2
+    // RVA   : 0x6A59F0   Offset: 0x6A47F0   Length: 0x36
     public static ShakeCam get_Instance()
     {
-        return **(uint64 **)(DAT_181da1bf8 + 184);
+        return **(uint64 **)(DAT_181e82048 + 184);
     }
 
-    // Token : 0x60020FB
-    // RVA   : 0x97DFA0   Offset: 0x97D3A0   Length: 0x43
+    // Token : 0x60021A3
+    // RVA   : 0x6A55A0   Offset: 0x6A43A0   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181da1bf8 + 184);
+        puVar1 = *(uint64 **)(DAT_181e82048 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60020FC
-    // RVA   : 0x97DFF0   Offset: 0x97D3F0   Length: 0x3C2
+    // Token : 0x60021A4
+    // RVA   : 0x6A55F0   Offset: 0x6A43F0   Length: 0x3C2
     public void StartShake(ShakeStrengthType targetShakeStrength, bool shakeUI)
     {
         long lVar1;
@@ -50,7 +50,7 @@ public class ShakeCam
         ulong uVar3;
         ulong uVar4;
         uint uVar5;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 8);
         if ((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 16)) != null) {
           iVar2 = PlayerPrefDictionary.GetInt(lVar1,"noShake",0);
           if ((iVar2 == 1) || (targetShakeStrength < this.shakeStrengthType)) {
@@ -86,13 +86,13 @@ public class ShakeCam
                   if (*(int *)(lVar1 + 24) == 0) {
                     uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar4,0);
+                    FUN_1801e02d0(uVar4,0);
                   }
                   uVar4 = ShortcutExtensions.DOShakePosition
                                     (*(uint64 *)(lVar1 + 32),this.shakeTime,
                                      this.shakeDelta,30,0x42b40000,1,0);
-                  uVar3 = new OnTooltipCB(this,DAT_181da7d38,0);
-                  TweenSettingsExtensions.OnComplete(uVar4,uVar3,DAT_181dc0490);
+                  uVar3 = new OnTooltipCB(this,DAT_181e8b2f8,0);
+                  TweenSettingsExtensions.OnComplete(uVar4,uVar3,DAT_181ea3ed0);
                   if (!shakeUI) {
                     return;
                   }
@@ -112,7 +112,7 @@ public class ShakeCam
             if (*(uint32 *)(lVar1 + 24) <= uVar5) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             ShortcutExtensions.DOComplete(lVar1[uVar5],0,0);
             uVar5 = uVar5 + 1;
@@ -121,22 +121,22 @@ public class ShakeCam
         }
     }
 
-    // Token : 0x60020FD
-    // RVA   : 0x97E3D0   Offset: 0x97D7D0   Length: 0x15
+    // Token : 0x60021A5
+    // RVA   : 0x6A59D0   Offset: 0x6A47D0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_18097e3d0(int64 this)
+        void FUN_1806a59d0(int64 this)
         {
         this.shakeDelta = 0x3e19999a;
         this.shakeTime = 0x3dcccccd;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x60020FE
-    // RVA   : 0x97E3C0   Offset: 0x97D7C0   Length: 0x8
+    // Token : 0x60021A6
+    // RVA   : 0x6A59C0   Offset: 0x6A47C0   Length: 0x8
     private void <StartShake>b__9_0()
     {
-        void FUN_18097e3c0(int64 this)
+        void FUN_1806a59c0(int64 this)
         {
         this.shakeStrengthType = 0;
     }

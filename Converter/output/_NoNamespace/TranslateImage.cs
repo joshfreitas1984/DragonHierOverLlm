@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : TranslateImage
-// Token : 0x20003A5
+// Token : 0x20003B2
 // ============================================================
 
 public class TranslateImage
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DAF
+    // Token: 0x4001E41
     public List<Sprite> targetSprite;
 
-    // Token: 0x4001DB0
+    // Token: 0x4001E42
     private bool inited;
 
-    // Token: 0x4001DB1
+    // Token: 0x4001E43
     private int nowLanguageVersion;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002311
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x60023BB
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private void Start()
     {
     }
 
-    // Token : 0x6002312
-    // RVA   : 0xADF7B0   Offset: 0xADEBB0   Length: 0x1A5
+    // Token : 0x60023BC
+    // RVA   : 0x834230   Offset: 0x833030   Length: 0x1A5
     private void Update()
     {
         int iVar1;
@@ -47,20 +47,20 @@ public class TranslateImage
         }
     }
 
-    // Token : 0x6002313
-    // RVA   : 0xADF690   Offset: 0xADEA90   Length: 0x116
+    // Token : 0x60023BD
+    // RVA   : 0x834110   Offset: 0x832F10   Length: 0x116
     private void AutoTranslateImage()
     {
         long lVar1;
         bool cVar2;
         ulong uVar3;
         long lVar4;
-        uVar3 = Component.GetComponent(this,DAT_181d94478);
+        uVar3 = Component.GetComponent(this,DAT_181e777b8);
         cVar2 = Object.op_Inequality(uVar3,0,0);
         if (!cVar2) {
           return;
         }
-        lVar4 = Component.GetComponent(this,DAT_181d94478);
+        lVar4 = Component.GetComponent(this,DAT_181e777b8);
         lVar1 = this.targetSprite;
         cVar2 = LTLocalization.get_IsChinese(0);
         if (lVar1 != null) {
@@ -76,14 +76,14 @@ public class TranslateImage
         }
     }
 
-    // Token : 0x6002314
-    // RVA   : 0xADF960   Offset: 0xADED60   Length: 0xE
+    // Token : 0x60023BE
+    // RVA   : 0x8343E0   Offset: 0x8331E0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180adf960(int64 this)
+        void FUN_1808343e0(int64 this)
         {
         this.nowLanguageVersion = 0xffffffff;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,46 +1,46 @@
 // ============================================================
 // Type  : <WarpText>d__7
-// Token : 0x20003FA
+// Token : 0x2000407
 // ============================================================
 
 public class <WarpText>d__7
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001F7C
+    // Token: 0x400200E
     private int <>1__state;
 
-    // Token: 0x4001F7D
+    // Token: 0x400200F
     private object <>2__current;
 
-    // Token: 0x4001F7E
+    // Token: 0x4002010
     public SkewTextExample <>4__this;
 
-    // Token: 0x4001F7F
+    // Token: 0x4002011
     private float <old_CurveScale>5__2;
 
-    // Token: 0x4001F80
+    // Token: 0x4002012
     private float <old_ShearValue>5__3;
 
-    // Token: 0x4001F81
+    // Token: 0x4002013
     private AnimationCurve <old_curve>5__4;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60024BF
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6002569
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x60024C0
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x600256A
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x60024C1
-    // RVA   : 0x929630   Offset: 0x928A30   Length: 0xF5E
+    // Token : 0x600256B
+    // RVA   : 0x617EE0   Offset: 0x616CE0   Length: 0xF5E
     private virtual bool MoveNext()
     {
         long lVar1;
@@ -181,21 +181,21 @@ public class <WarpText>d__7
           if ((*(char *)(*(int64 *)(lVar5 + 24) + 0x370) == false) &&
              (this.<old_CurveScale>5__2 == *(float *)(lVar5 + 40))) {
             if ((this.<old_curve>5__4 == 0) ||
-               (lVar9 = FUN_1810cd240(this.<old_curve>5__4,0)) == null) throw; // [null/range check failed]
+               (lVar9 = FUN_180f1e360(this.<old_curve>5__4,0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar9 + 24) < 2) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
-            fVar21 = (float)FUN_18044df60(lVar9 + 60,0);
+            fVar21 = (float)FUN_180af4e80(lVar9 + 60,0);
             if ((*(int64 *)(lVar5 + 32) == 0) ||
-               (lVar9 = FUN_1810cd240(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
+               (lVar9 = FUN_180f1e360(*(int64 *)(lVar5 + 32),0)) == null) throw; // [null/range check failed]
             if (*(uint32 *)(lVar9 + 24) < 2) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
-            fVar22 = (float)FUN_18044df60(lVar9 + 60,0);
+            fVar22 = (float)FUN_180af4e80(lVar9 + 60,0);
             if ((fVar21 == fVar22) && (this.<old_ShearValue>5__3 == *(float *)(lVar5 + 44))) {
               this.<>2__current = 0;
               this.<>1__state = 1;
@@ -236,7 +236,7 @@ public class <WarpText>d__7
               if (*(uint32 *)(lVar9 + 24) <= local_res18) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               lVar15 = (int64)(int)local_res18 * 0x178;
               if (*(char *)(lVar15 + 0x194 + lVar9) != false) {
@@ -248,20 +248,20 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 lVar13 = *(int64 *)(lVar13 + 48 + (int64)(int)uVar17 * 80);
                 if (lVar13 == null) throw; // [null/range check failed]
                 if (*(uint32 *)(lVar13 + 24) <= uVar4) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 uVar17 = (uint32)(lVar16 + 2);
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 fVar3 = *(float *)(lVar15 + 0x14c + lVar9);
                 fVar27 = (*(float *)(lVar13 + 32 + (lVar16 + 2) * 12) +
@@ -281,7 +281,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar20) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar1 * 12);
                 local_2c0 = *(float *)(lVar13 + 40 + lVar1 * 12);
@@ -294,7 +294,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar2 * 12);
                 local_408 = *(float *)(lVar13 + 40 + lVar2 * 12);
@@ -308,7 +308,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar19 * 12);
                 local_3f8 = *(float *)(lVar13 + 40 + lVar19 * 12);
@@ -322,7 +322,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar7 + 24) <= local_res18) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 fVar23 = *(float *)(lVar15 + 0x14c + lVar7);
                 fVar24 = *(float *)(lVar5 + 44) * 0.01;
@@ -330,7 +330,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar4) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 fVar23 = -((fVar23 - *(float *)(lVar15 + 0x138 + lVar7)) * fVar24);
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar16 * 12);
@@ -343,7 +343,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar20) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar1 * 12);
                 local_3d8 = *(float *)(lVar13 + 40 + lVar1 * 12);
@@ -356,7 +356,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar18) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar2 * 12);
                 local_3c8 = *(float *)(lVar13 + 40 + lVar2 * 12);
@@ -368,7 +368,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar19 * 12);
                 local_3b8 = *(float *)(lVar13 + 40 + lVar19 * 12);
@@ -392,7 +392,7 @@ public class <WarpText>d__7
                 local_3a8 = *(float *)(puVar11 + 1);
                 local_478 = *puVar11;
                 uStack_470 = CONCAT44((int)((uint64)uStack_470 >> 32),local_3a8);
-                uVar10 = FUN_1801fa0a0((float)((uint64)local_478 >> 32) * 0.0 + (float)local_478 +
+                uVar10 = FUN_1801e8c64((float)((uint64)local_478 >> 32) * 0.0 + (float)local_478 +
                                        local_3a8 * 0.0);
                 uVar26 = (uint32)((uint64)uVar10 >> 32);
                 local_390 = local_460;
@@ -429,7 +429,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar4) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_358 = *(uint64 *)(lVar13 + 32 + lVar16 * 12);
                 local_350 = *(uint32 *)(lVar13 + 40 + lVar16 * 12);
@@ -437,14 +437,14 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar4) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 *(uint64 *)(lVar13 + 32 + lVar16 * 12) = *puVar11;
                 *(uint32 *)(lVar13 + 40 + lVar16 * 12) = *(uint32 *)(puVar11 + 1);
                 if (*(uint32 *)(lVar13 + 24) <= uVar20) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_348 = *(uint64 *)(lVar13 + 32 + lVar1 * 12);
                 local_340 = *(uint32 *)(lVar13 + 40 + lVar1 * 12);
@@ -452,14 +452,14 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar20) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 *(uint64 *)(lVar13 + 32 + lVar1 * 12) = *puVar11;
                 *(uint32 *)(lVar13 + 40 + lVar1 * 12) = *(uint32 *)(puVar11 + 1);
                 if (*(uint32 *)(lVar13 + 24) <= uVar18) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_2e8 = *(uint64 *)(lVar13 + 32 + lVar2 * 12);
                 local_2e0 = *(uint32 *)(lVar13 + 40 + lVar2 * 12);
@@ -467,14 +467,14 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar18) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 *(uint64 *)(lVar13 + 32 + lVar2 * 12) = *puVar11;
                 *(uint32 *)(lVar13 + 40 + lVar2 * 12) = *(uint32 *)(puVar11 + 1);
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_338 = *(uint64 *)(lVar13 + 32 + lVar19 * 12);
                 local_330 = *(uint32 *)(lVar13 + 40 + lVar19 * 12);
@@ -482,14 +482,14 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 *(uint64 *)(lVar13 + 32 + lVar19 * 12) = *puVar11;
                 *(uint32 *)(lVar13 + 40 + lVar19 * 12) = *(uint32 *)(puVar11 + 1);
                 if (*(uint32 *)(lVar13 + 24) <= uVar4) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_320 = *(float *)(lVar13 + 40 + lVar16 * 12);
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar16 * 12);
@@ -502,7 +502,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar20) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_310 = *(float *)(lVar13 + 40 + lVar1 * 12);
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar1 * 12);
@@ -514,7 +514,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar18) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_300 = *(float *)(lVar13 + 40 + lVar2 * 12);
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar2 * 12);
@@ -526,7 +526,7 @@ public class <WarpText>d__7
                 if (*(uint32 *)(lVar13 + 24) <= uVar17) {
                   uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar10,0);
+                  FUN_1801e02d0(uVar10,0);
                 }
                 local_2f0 = *(float *)(lVar13 + 40 + lVar19 * 12);
                 local_478 = *(uint64 *)(lVar13 + 32 + lVar19 * 12);
@@ -551,27 +551,27 @@ public class <WarpText>d__7
         }
     }
 
-    // Token : 0x60024C2
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x600256C
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x60024C3
-    // RVA   : 0x92A590   Offset: 0x929990   Length: 0x3E
+    // Token : 0x600256D
+    // RVA   : 0x618E40   Offset: 0x617C40   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db2688);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e96438);
     }
 
-    // Token : 0x60024C4
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x600256E
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

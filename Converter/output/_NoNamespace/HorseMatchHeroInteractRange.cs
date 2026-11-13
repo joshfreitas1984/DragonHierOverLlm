@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : HorseMatchHeroInteractRange
-// Token : 0x20002E0
+// Token : 0x20002E9
 // ============================================================
 
 public class HorseMatchHeroInteractRange
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40017AE
+    // Token: 0x4001803
     public HorseMatchHeroController targetHorseHero;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001837
-    // RVA   : 0xB07FA0   Offset: 0xB073A0   Length: 0x39
+    // Token : 0x60018B3
+    // RVA   : 0x8AA1C0   Offset: 0x8A8FC0   Length: 0x39
     public void OnTriggerStay(Collider other)
     {
         long lVar1;
@@ -26,11 +26,11 @@ public class HorseMatchHeroInteractRange
         }
     }
 
-    // Token : 0x6001838
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60018B4
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

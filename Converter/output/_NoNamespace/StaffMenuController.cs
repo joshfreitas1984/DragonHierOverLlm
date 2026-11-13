@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : StaffMenuController
-// Token : 0x200036E
+// Token : 0x200037B
 // ============================================================
 
 public class StaffMenuController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C0E
+    // Token: 0x4001CA0
     public GameObject staffMenu;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60021B5
-    // RVA   : 0xC5F260   Offset: 0xC5E660   Length: 0x342
+    // Token : 0x600225F
+    // RVA   : 0xA08480   Offset: 0xA07280   Length: 0x342
     public void ShowStaffMenu()
     {
         long lVar2;
@@ -23,7 +23,7 @@ public class StaffMenuController
           GameObject.SetActive(this.staffMenu,1,0);
           plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
           plVar3 = (int64 *)0;
-          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
+          if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181e8f4a0)) {
             plVar3 = plVar1;
           }
           NGUITools.PlaySound(plVar3,0);
@@ -32,13 +32,13 @@ public class StaffMenuController
             if (lVar2 != null) {
               lVar2 = Transform.Find(lVar2,"BlackBackground",0);
               if (lVar2 != null) {
-                plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
+                plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
                 if (this.staffMenu != null) {
                   lVar2 = GameObject.get_transform(this.staffMenu,0);
                   if (lVar2 != null) {
                     lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                     if (lVar2 != null) {
-                      plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
+                      plVar3 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
                       if (plVar3 != (int64 *)0) {
                         puVar4 = (uint64 *)
                                  (**(code **)(*plVar3 + 0x298))
@@ -56,9 +56,9 @@ public class StaffMenuController
                             if (lVar2 != null) {
                               lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                               if (lVar2 != null) {
-                                uVar5 = Component.GetComponent(lVar2,DAT_181d94478);
+                                uVar5 = Component.GetComponent(lVar2,DAT_181e777b8);
                                 uVar5 = DOTweenModuleUI.DOFade(uVar5,0x3f000000,0x3e800000,0);
-                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1dc8);
+                                TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea5848);
                                 if (this.staffMenu != null) {
                                   lVar2 = GameObject.get_transform(this.staffMenu,0);
                                   if (lVar2 != null) {
@@ -74,7 +74,7 @@ public class StaffMenuController
                                           uVar5 = Transform.Find(lVar2,"StaffRoot",0);
                                           uVar5 = ShortcutExtensions.DOScale
                                                             (uVar5,0x3f800000,0x3e800000,0);
-                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181dc1f60);
+                                          TweenSettingsExtensions.SetUpdate(uVar5,1,DAT_181ea59e0);
                                           return;
                                         }
                                       }
@@ -95,8 +95,8 @@ public class StaffMenuController
         }
     }
 
-    // Token : 0x60021B6
-    // RVA   : 0xC5F5B0   Offset: 0xC5E9B0   Length: 0x220
+    // Token : 0x6002260
+    // RVA   : 0xA087D0   Offset: 0xA075D0   Length: 0x220
     public void UnshowStaffMenu()
     {
         long lVar2;
@@ -107,7 +107,7 @@ public class StaffMenuController
         uint local_10;
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/PaperQuick",0);
         plVar5 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181e8f4a0)) {
           plVar5 = plVar1;
         }
         NGUITools.PlaySound(plVar5,0);
@@ -116,9 +116,9 @@ public class StaffMenuController
           if (lVar2 != null) {
             lVar2 = Transform.Find(lVar2,"BlackBackground",0);
             if (lVar2 != null) {
-              uVar3 = Component.GetComponent(lVar2,DAT_181d94478);
+              uVar3 = Component.GetComponent(lVar2,DAT_181e777b8);
               uVar3 = DOTweenModuleUI.DOFade(uVar3,0,0x3e4ccccd,0);
-              TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1dc8);
+              TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181ea5848);
               if (this.staffMenu != null) {
                 lVar2 = GameObject.get_transform(this.staffMenu,0);
                 if (lVar2 != null) {
@@ -127,9 +127,9 @@ public class StaffMenuController
                   local_14 = 0x3f800000;
                   local_10 = 0x3f800000;
                   uVar3 = ShortcutExtensions.DOScale(uVar3,&local_18,0x3e4ccccd,0);
-                  uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181dc1f60);
-                  uVar4 = new OnTooltipCB(this,DAT_181db1ab8,0);
-                  TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181dc0380);
+                  uVar3 = TweenSettingsExtensions.SetUpdate(uVar3,1,DAT_181ea59e0);
+                  uVar4 = new OnTooltipCB(this,DAT_181e95418,0);
+                  TweenSettingsExtensions.OnComplete(uVar3,uVar4,DAT_181ea3dc0);
                   return;
                 }
               }
@@ -138,15 +138,15 @@ public class StaffMenuController
         }
     }
 
-    // Token : 0x60021B7
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002261
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x60021B8
-    // RVA   : 0x78D070   Offset: 0x78C470   Length: 0x20
+    // Token : 0x6002262
+    // RVA   : 0x52B140   Offset: 0x529F40   Length: 0x20
     private void <UnshowStaffMenu>b__2_0()
     {
         if (this.staffMenu != null) {

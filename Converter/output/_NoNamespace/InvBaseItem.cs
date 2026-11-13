@@ -1,47 +1,47 @@
 // ============================================================
 // Type  : InvBaseItem
-// Token : 0x200000C
+// Token : 0x200000B
 // ============================================================
 
 public class InvBaseItem
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000042
+    // Token: 0x4000022
     public int id16;
 
-    // Token: 0x4000043
+    // Token: 0x4000023
     public string name;
 
-    // Token: 0x4000044
+    // Token: 0x4000024
     public string description;
 
-    // Token: 0x4000045
+    // Token: 0x4000025
     public Slot slot;
 
-    // Token: 0x4000046
+    // Token: 0x4000026
     public int minItemLevel;
 
-    // Token: 0x4000047
+    // Token: 0x4000027
     public int maxItemLevel;
 
-    // Token: 0x4000048
+    // Token: 0x4000028
     public List<InvStat> stats;
 
-    // Token: 0x4000049
+    // Token: 0x4000029
     public GameObject attachment;
 
-    // Token: 0x400004A
+    // Token: 0x400002A
     public Color color;
 
-    // Token: 0x400004B
+    // Token: 0x400002B
     public object iconAtlas;
 
-    // Token: 0x400004C
+    // Token: 0x400002C
     public string iconName;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600003E
-    // RVA   : 0xC9BB80   Offset: 0xC9AF80   Length: 0xB6
+    // Token : 0x6000025
+    // RVA   : 0xA1D7E0   Offset: 0xA1C5E0   Length: 0xB6
     public void /*ctor*/()
     {
         uint uVar1;
@@ -51,10 +51,10 @@ public class InvBaseItem
         byte[] local_18 = new byte[16];
         this.minItemLevel = 1;
         this.maxItemLevel = 50;
-        uVar4 = il2cpp_internal(DAT_181d94068);
-        FUN_181330100(uVar4,DAT_181d90730);
+        uVar4 = il2cpp_internal(DAT_181e74038);
+        FUN_1810f3480(uVar4,DAT_181e728f0);
         this.stats = uVar4;
-        puVar5 = (uint32 *)FUN_1810d3b80(local_18,0);
+        puVar5 = (uint32 *)FUN_180f24d00(local_18,0);
         uVar1 = puVar5[1];
         uVar2 = puVar5[2];
         uVar3 = puVar5[3];

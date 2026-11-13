@@ -1,32 +1,32 @@
 // ============================================================
 // Type  : UISnapshotPoint
-// Token : 0x20000AB
+// Token : 0x20000AA
 // ============================================================
 
 public class UISnapshotPoint
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000420
+    // Token: 0x4000400
     public bool isOrthographic;
 
-    // Token: 0x4000421
+    // Token: 0x4000401
     public float nearClip;
 
-    // Token: 0x4000422
+    // Token: 0x4000402
     public float farClip;
 
-    // Token: 0x4000423
+    // Token: 0x4000403
     public int fieldOfView;
 
-    // Token: 0x4000424
+    // Token: 0x4000404
     public float orthoSize;
 
-    // Token: 0x4000425
+    // Token: 0x4000405
     public Texture2D thumbnail;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000523
-    // RVA   : 0x1706FB0   Offset: 0x17063B0   Length: 0x58
+    // Token : 0x600050A
+    // RVA   : 0x16092E0   Offset: 0x16080E0   Length: 0x58
     private void Start()
     {
         bool cVar1;
@@ -37,18 +37,18 @@ public class UISnapshotPoint
         }
     }
 
-    // Token : 0x6000524
-    // RVA   : 0x1707010   Offset: 0x1706410   Length: 0x27
+    // Token : 0x600050B
+    // RVA   : 0x1609340   Offset: 0x1608140   Length: 0x27
     public void /*ctor*/()
     {
-        void FUN_181707010(int64 this)
+        void FUN_181609340(int64 this)
         {
         this.isOrthographic = 1;
         this.nearClip = 0xc2c80000;
         this.farClip = 0x42c80000;
         this.fieldOfView = 35;
         this.orthoSize = 0x41f00000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

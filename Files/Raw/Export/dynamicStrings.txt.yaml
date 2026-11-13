@@ -31335,3 +31335,533 @@
 - raw: "，由#$PlayerName#大侠委托出售"
   splits:
   - text: "，由#$PlayerName#大侠委托出售"
+- raw: "(返回);StartCustomSkillEntry"
+  splits:
+  - text: "返回"
+  templates:
+  - template: "({0});StartCustomSkillEntry"
+- raw: "<color=grey>(已自创)</color>"
+  splits:
+  - text: "已自创"
+  templates:
+  - template: "<color=grey>({0})</color>"
+- raw: "<color=grey>(需天下第一)</color>"
+  splits:
+  - text: "需天下第一"
+  templates:
+  - template: "<color=grey>({0})</color>"
+- raw: "<i><color=grey>{0}所创</color></i>"
+  splits:
+  - text: "所创"
+  templates:
+  - template: "<i><color=grey>⟦0⟧{0}</color></i>"
+- raw: "BattleData解析错误,门派ID不存在:"
+  splits:
+  - text: "解析错误"
+  - subIndex: 1
+    text: "门派"
+  - subIndex: 2
+    text: "不存在"
+  templates:
+  - template: "BattleData{0},{1}ID{2}:"
+- raw: "PartPostureData Error: 数值解析失败“{0}”（完整配置：“{1}”）{2}"
+  splits:
+  - text: "数值解析失败"
+  - subIndex: 1
+    text: "（完整配置"
+  templates:
+  - template: "PartPostureData Error: {0}“⟦0⟧”{1}：“⟦1⟧”）⟦2⟧"
+- raw: "PartPostureData Error: 词条部位歧义“{0}”（完整配置：“{1}”）{2}"
+  splits:
+  - text: "词条部位歧义"
+  - subIndex: 1
+    text: "（完整配置"
+  templates:
+  - template: "PartPostureData Error: {0}“⟦0⟧”{1}：“⟦1⟧”）⟦2⟧"
+- raw: "PartPostureData Error: 部位名无法识别“{0}”（合法部位：{1}；完整配置：“{2}”）{3}"
+  splits:
+  - text: "部位名无法识别"
+  - subIndex: 1
+    text: "（合法部位"
+  - subIndex: 2
+    text: "；完整配置"
+  templates:
+  - template: "PartPostureData Error: {0}“⟦0⟧”{1}：⟦1⟧{2}：“⟦2⟧”）⟦3⟧"
+- raw: "[ItemFixup] 静态字段重算失败 itemID={0} type={1}/{2} lv={3}: {4}"
+  splits:
+  - text: "静态字段重算失败"
+  templates:
+  - template: "[ItemFixup] {0} itemID=⟦0⟧ type=⟦1⟧/⟦2⟧ lv=⟦3⟧: ⟦4⟧"
+- raw: "{0}加成 {1}"
+  splits:
+  - text: "加成"
+  templates:
+  - template: "⟦0⟧{0} ⟦1⟧"
+- raw: "{0}所创之{1}{2}"
+  splits:
+  - text: "所创之"
+  templates:
+  - template: "⟦0⟧{0}⟦1⟧⟦2⟧"
+- raw: "{0}武学点数尚未完全分配！</color>"
+  splits:
+  - text: "武学点数尚未完全分配！"
+  templates:
+  - template: "⟦0⟧{0}</color>"
+- raw: "《{0}》我虽已练至登峰造极，然{1}一道的造诣尚欠火候——\n须达到{2}（当前{3}），方能融会贯通、推陈出新。"
+  splits:
+  - text: "我虽已练至登峰造极，然"
+  - subIndex: 1
+    text: "一道的造诣尚欠火候——"
+  - subIndex: 2
+    text: "须达到"
+  - subIndex: 3
+    text: "（当前"
+  - subIndex: 4
+    text: "），方能融会贯通、推陈出新。"
+  templates:
+  - template: "《⟦0⟧》{0}⟦1⟧{1}\n{2}⟦2⟧{3}⟦3⟧{4}"
+- raw: "》进攻"
+  splits:
+  - text: "》进攻"
+- raw: "》防御"
+  splits:
+  - text: "》防御"
+- raw: "不强制"
+  splits:
+  - text: "不强制"
+- raw: "不离队"
+  splits:
+  - text: "不离队"
+- raw: "临时"
+  splits:
+  - text: "临时"
+- raw: "乌木"
+  splits:
+  - text: "乌木"
+- raw: "亮银"
+  splits:
+  - text: "亮银"
+- raw: "以《{0}》为根基，闭关推演{2}日，\n便可在此基础之上，创出独属于我#$PlayerName#的{1}{3}功法！\n{3}造诣越深，所创武学自然越为精妙。（{3}{4}可达上限，当前{5}）"
+  splits:
+  - text: "以"
+  - subIndex: 1
+    text: "为根基，闭关推演"
+  - subIndex: 2
+    text: "日，"
+  - subIndex: 3
+    text: "便可在此基础之上，创出独属于我#$PlayerName#的"
+  - subIndex: 4
+    text: "功法！"
+  - subIndex: 5
+    text: "造诣越深，所创武学自然越为精妙。"
+  - subIndex: 6
+    text: "可达上限，当前"
+  templates:
+  - template: "{0}《⟦0⟧》{1}⟦2⟧{2}\n{3}⟦1⟧⟦3⟧{4}\n⟦3⟧{5}（⟦3⟧⟦4⟧{6}⟦5⟧）"
+- raw: "以毕生所学为根基，闭关演练，我或可推陈出新，自创出一门前无古人之武学。\n（每级别至多自创一门武学）"
+  splits:
+  - text: "以毕生所学为根基，闭关演练，我或可推陈出新，自创出一门前无古人之武学。"
+  - subIndex: 1
+    text: "（每级别至多自创一门武学）"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "任重"
+  splits:
+  - text: "任重"
+- raw: "佩"
+  splits:
+  - text: "佩"
+- raw: "入场"
+  splits:
+  - text: "入场"
+- raw: "全员Buff"
+  splits:
+  - text: "全员"
+  templates:
+  - template: "{0}Buff"
+- raw: "功法点数超出上限"
+  splits:
+  - text: "功法点数超出上限"
+- raw: "加Buff"
+  splits:
+  - text: "加"
+  templates:
+  - template: "{0}Buff"
+- raw: "千里"
+  splits:
+  - text: "千里"
+- raw: "只好作罢;ExternalStoragePlot"
+  splits:
+  - text: "只好作罢"
+  templates:
+  - template: "{0};ExternalStoragePlot"
+- raw: "可复刻所有已习得内功/轻功/绝技的装备效果"
+  splits:
+  - text: "可复刻所有已习得内功"
+  - subIndex: 1
+    text: "轻功"
+  - subIndex: 2
+    text: "绝技的装备效果"
+  templates:
+  - template: "{0}/{1}/{2}"
+- raw: "可复刻所有已习得外功的使用效果"
+  splits:
+  - text: "可复刻所有已习得外功的使用效果"
+- raw: "可操控"
+  splits:
+  - text: "可操控"
+- raw: "囊"
+  splits:
+  - text: "囊"
+- raw: "围"
+  splits:
+  - text: "围"
+- raw: "城镇"
+  splits:
+  - text: "城镇"
+- raw: "基础伤害 {0}"
+  splits:
+  - text: "基础伤害"
+  templates:
+  - template: "{0} ⟦0⟧"
+- raw: "奔雷"
+  splits:
+  - text: "奔雷"
+- raw: "室内"
+  splits:
+  - text: "室内"
+- raw: "已有同名武学，请更换名称"
+  splits:
+  - text: "已有同名武学，请更换名称"
+- raw: "建筑等级"
+  splits:
+  - text: "建筑等级"
+- raw: "当前区域"
+  splits:
+  - text: "当前区域"
+- raw: "循环"
+  splits:
+  - text: "循环"
+- raw: "循环剧情应写 起始:间隔:"
+  splits:
+  - text: "循环剧情应写"
+  - subIndex: 1
+    text: "起始"
+  - subIndex: 2
+    text: "间隔"
+  templates:
+  - template: "{0} {1}:{2}:"
+- raw: "我于此级武学已有所创，贪多嚼不烂，\n还是专心打磨己学为妙。"
+  splits:
+  - text: "我于此级武学已有所创，贪多嚼不烂，"
+  - subIndex: 1
+    text: "还是专心打磨己学为妙。"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "我眼下并无修至登峰造极的{0}武学，\n还需勤修苦练，打稳根基，方可加以自创。"
+  splits:
+  - text: "我眼下并无修至登峰造极的"
+  - subIndex: 1
+    text: "武学，"
+  - subIndex: 2
+    text: "还需勤修苦练，打稳根基，方可加以自创。"
+  templates:
+  - template: "{0}⟦0⟧{1}\n{2}"
+- raw: "戒"
+  splits:
+  - text: "戒"
+- raw: "战斗剧情配置缺字段:"
+  splits:
+  - text: "战斗剧情配置缺字段"
+  templates:
+  - template: "{0}:"
+- raw: "战斗配置:丹药ID不存在:"
+  splits:
+  - text: "战斗配置"
+  - subIndex: 1
+    text: "丹药"
+  - subIndex: 2
+    text: "不存在"
+  templates:
+  - template: "{0}:{1}ID{2}:"
+- raw: "战斗配置:攻城战_当前区域 需要在目标区域内触发,已退化为自动地图"
+  splits:
+  - text: "战斗配置"
+  - subIndex: 1
+    text: "攻城战"
+  - subIndex: 2
+    text: "当前区域"
+  - subIndex: 3
+    text: "需要在目标区域内触发"
+  - subIndex: 4
+    text: "已退化为自动地图"
+  templates:
+  - template: "{0}:{1}_{2} {3},{4}"
+- raw: "战斗配置:未找到特效"
+  splits:
+  - text: "战斗配置"
+  - subIndex: 1
+    text: "未找到特效"
+  templates:
+  - template: "{0}:{1}"
+- raw: "战斗配置:未知战利品类型:"
+  splits:
+  - text: "战斗配置"
+  - subIndex: 1
+    text: "未知战利品类型"
+  templates:
+  - template: "{0}:{1}:"
+- raw: "战斗配置:未知攻城战类型"
+  splits:
+  - text: "战斗配置"
+  - subIndex: 1
+    text: "未知攻城战类型"
+  templates:
+  - template: "{0}:{1}"
+- raw: "战斗配置:饮食ID不存在:"
+  splits:
+  - text: "战斗配置"
+  - subIndex: 1
+    text: "饮食"
+  - subIndex: 2
+    text: "不存在"
+  templates:
+  - template: "{0}:{1}ID{2}:"
+- raw: "战斗配置:马匹ID不存在:"
+  splits:
+  - text: "战斗配置"
+  - subIndex: 1
+    text: "马匹"
+  - subIndex: 2
+    text: "不存在"
+  templates:
+  - template: "{0}:{1}ID{2}:"
+- raw: "挟翼"
+  splits:
+  - text: "挟翼"
+- raw: "掠影"
+  splits:
+  - text: "掠影"
+- raw: "擂台"
+  splits:
+  - text: "擂台"
+- raw: "攻城战"
+  splits:
+  - text: "攻城战"
+- raw: "敏感词检测中，请稍候再确认"
+  splits:
+  - text: "敏感词检测中，请稍候再确认"
+- raw: "新增特效 {0}/{1}"
+  splits:
+  - text: "新增特效"
+  templates:
+  - template: "{0} ⟦0⟧/⟦1⟧"
+- raw: "时间"
+  splits:
+  - text: "时间"
+- raw: "是"
+  splits:
+  - text: "是"
+- raw: "未知战斗剧情触发器:"
+  splits:
+  - text: "未知战斗剧情触发器"
+  templates:
+  - template: "{0}:"
+- raw: "材料种类"
+  splits:
+  - text: "材料种类"
+- raw: "此乃自创武学之秘籍，凝结一己心血，不可复制入藏宝阁。"
+  splits:
+  - text: "此乃自创武学之秘籍，凝结一己心血，不可复制入藏宝阁。"
+- raw: "武学点数 {0:0.#}/{1}"
+  splits:
+  - text: "武学点数"
+  templates:
+  - template: "{0} ⟦0:0.#⟧/⟦1⟧"
+- raw: "死亡"
+  splits:
+  - text: "死亡"
+- raw: "没有可添加的特效条目"
+  splits:
+  - text: "没有可添加的特效条目"
+- raw: "没有更多可选图标"
+  splits:
+  - text: "没有更多可选图标"
+- raw: "流星"
+  splits:
+  - text: "流星"
+- raw: "涉川"
+  splits:
+  - text: "涉川"
+- raw: "游戏难度"
+  splits:
+  - text: "游戏难度"
+- raw: "犀皮"
+  splits:
+  - text: "犀皮"
+- raw: "玄甲"
+  splits:
+  - text: "玄甲"
+- raw: "珍宝种类"
+  splits:
+  - text: "珍宝种类"
+- raw: "生成"
+  splits:
+  - text: "生成"
+- raw: "破阵"
+  splits:
+  - text: "破阵"
+- raw: "确定要完成自创武学《{0}》吗？"
+  splits:
+  - text: "确定要完成自创武学"
+  - subIndex: 1
+    text: "吗？"
+  templates:
+  - template: "{0}《⟦0⟧》{1}"
+- raw: "突阵"
+  splits:
+  - text: "突阵"
+- raw: "突骑"
+  splits:
+  - text: "突骑"
+- raw: "紫檀"
+  splits:
+  - text: "紫檀"
+- raw: "绝世功法乃武学之极致，非『天下第一』者不可妄自开创。\n待我泰岳登顶、名动天下之日，再来一试吧。"
+  splits:
+  - text: "绝世功法乃武学之极致，非『天下第一』者不可妄自开创。"
+  - subIndex: 1
+    text: "待我泰岳登顶、名动天下之日，再来一试吧。"
+  templates:
+  - template: "{0}\n{1}"
+- raw: "羽"
+  splits:
+  - text: "羽"
+- raw: "翻羽"
+  splits:
+  - text: "翻羽"
+- raw: "腾骧"
+  splits:
+  - text: "腾骧"
+- raw: "自创武学"
+  splits:
+  - text: "自创武学"
+- raw: "自定义_"
+  splits:
+  - text: "自定义"
+  templates:
+  - template: "{0}_"
+- raw: "致远"
+  splits:
+  - text: "致远"
+- raw: "英雄"
+  splits:
+  - text: "英雄"
+- raw: "营地"
+  splits:
+  - text: "营地"
+- raw: "螺钿"
+  splits:
+  - text: "螺钿"
+- raw: "行动"
+  splits:
+  - text: "行动"
+- raw: "行战斗ID重复:"
+  splits:
+  - text: "行战斗"
+  - subIndex: 1
+    text: "重复"
+  templates:
+  - template: "{0}ID{1}:"
+- raw: "行战斗类型错误:"
+  splits:
+  - text: "行战斗类型错误"
+  templates:
+  - template: "{0}:"
+- raw: "行解析失败,已跳过该行:"
+  splits:
+  - text: "行解析失败"
+  - subIndex: 1
+    text: "已跳过该行"
+  templates:
+  - template: "{0},{1}:"
+- raw: "装备部位"
+  splits:
+  - text: "装备部位"
+- raw: "词条已达上限"
+  splits:
+  - text: "词条已达上限"
+- raw: "该武学没有可复制的架势数据"
+  splits:
+  - text: "该武学没有可复制的架势数据"
+- raw: "该武学没有可复制的范围数据"
+  splits:
+  - text: "该武学没有可复制的范围数据"
+- raw: "请先输入武学名称"
+  splits:
+  - text: "请先输入武学名称"
+- raw: "超光"
+  splits:
+  - text: "超光"
+- raw: "蹑风"
+  splits:
+  - text: "蹑风"
+- raw: "载岳"
+  splits:
+  - text: "载岳"
+- raw: "载驰"
+  splits:
+  - text: "载驰"
+- raw: "还是算了;StartCustomSkillEntry"
+  splits:
+  - text: "还是算了"
+  templates:
+  - template: "{0};StartCustomSkillEntry"
+- raw: "进攻架势\n{0}\n防御架势\n{1}"
+  splits:
+  - text: "进攻架势"
+  - subIndex: 1
+    text: "防御架势"
+  templates:
+  - template: "{0}\n⟦0⟧\n{1}\n⟦1⟧"
+- raw: "逐日"
+  splits:
+  - text: "逐日"
+- raw: "逐电"
+  splits:
+  - text: "逐电"
+- raw: "逾轮"
+  splits:
+  - text: "逾轮"
+- raw: "野外"
+  splits:
+  - text: "野外"
+- raw: "错金"
+  splits:
+  - text: "错金"
+- raw: "面"
+  splits:
+  - text: "面"
+- raw: "鞍"
+  splits:
+  - text: "鞍"
+- raw: "飒沓"
+  splits:
+  - text: "飒沓"
+- raw: "飞云"
+  splits:
+  - text: "飞云"
+- raw: "驱驰"
+  splits:
+  - text: "驱驰"
+- raw: "骁腾"
+  splits:
+  - text: "骁腾"
+- raw: "鱼皮"
+  splits:
+  - text: "鱼皮"
+- raw: "（来源：{0}）"
+  splits:
+  - text: "（来源"
+  templates:
+  - template: "{0}：⟦0⟧）"

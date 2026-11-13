@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : Alignment
-// Token : 0x2000088
+// Token : 0x2000087
 // ============================================================
 
 public class Alignment
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000354
+    // Token: 0x4000334
     public int value__;
 
-    // Token: 0x4000355
+    // Token: 0x4000335
     public const Alignment Automatic;
 
-    // Token: 0x4000356
+    // Token: 0x4000336
     public const Alignment Left;
 
-    // Token: 0x4000357
+    // Token: 0x4000337
     public const Alignment Center;
 
-    // Token: 0x4000358
+    // Token: 0x4000338
     public const Alignment Right;
 
-    // Token: 0x4000359
+    // Token: 0x4000339
     public const Alignment Justified;
 
 }

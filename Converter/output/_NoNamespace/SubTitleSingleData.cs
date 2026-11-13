@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : SubTitleSingleData
-// Token : 0x20002FB
+// Token : 0x2000304
 // ============================================================
 
 public class SubTitleSingleData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018A3
+    // Token: 0x40018F9
     public float time;
 
-    // Token: 0x40018A4
+    // Token: 0x40018FA
     public string text;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60018D4
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6001950
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

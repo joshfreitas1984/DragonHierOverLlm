@@ -1,61 +1,61 @@
 // ============================================================
 // Type  : MultipleObjectsMake
-// Token : 0x20003CF
+// Token : 0x20003DC
 // ============================================================
 
 public class MultipleObjectsMake
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E83
+    // Token: 0x4001F15
     public float m_startDelay;
 
-    // Token: 0x4001E84
+    // Token: 0x4001F16
     public int m_makeCount;
 
-    // Token: 0x4001E85
+    // Token: 0x4001F17
     public float m_makeDelay;
 
-    // Token: 0x4001E86
+    // Token: 0x4001F18
     public Vector3 m_randomPos;
 
-    // Token: 0x4001E87
+    // Token: 0x4001F19
     public Vector3 m_randomRot;
 
-    // Token: 0x4001E88
+    // Token: 0x4001F1A
     public Vector3 m_randomScale;
 
-    // Token: 0x4001E89
+    // Token: 0x4001F1B
     private float m_Time;
 
-    // Token: 0x4001E8A
+    // Token: 0x4001F1C
     private float m_Time2;
 
-    // Token: 0x4001E8B
+    // Token: 0x4001F1D
     private float m_delayTime;
 
-    // Token: 0x4001E8C
+    // Token: 0x4001F1E
     private float m_count;
 
-    // Token: 0x4001E8D
+    // Token: 0x4001F1F
     private float m_scalefactor;
 
-    // Token: 0x4001E8E
+    // Token: 0x4001F20
     public float setObjVolumn;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600241D
-    // RVA   : 0xDF4920   Offset: 0xDF3D20   Length: 0x70
+    // Token : 0x60024C7
+    // RVA   : 0x8511B0   Offset: 0x84FFB0   Length: 0x70
     private void Start()
     {
         uint uVar1;
         uVar1 = Time.get_time(0);
         this.m_Time2 = uVar1;
         this.m_Time = uVar1;
-        this.m_scalefactor = **(uint32 **)(DAT_181db38e0 + 184);
+        this.m_scalefactor = **(uint32 **)(DAT_181e93db8 + 184);
     }
 
-    // Token : 0x600241E
-    // RVA   : 0xDF4990   Offset: 0xDF3D90   Length: 0x4D0
+    // Token : 0x60024C8
+    // RVA   : 0x851220   Offset: 0x850020   Length: 0x4D0
     private void Update()
     {
         ulong uVar1;
@@ -143,20 +143,20 @@ public class MultipleObjectsMake
                 if (*(uint32 *)(lVar4 + 24) <= uVar9) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 uVar7 = lVar4[uVar9];
                 local_d8 = uVar2;
                 local_d0 = fVar10;
                 local_c8 = uVar8;
                 uStack_c0 = uVar1;
-                lVar6 = Object.Instantiate(uVar7,&local_d8,&local_c8,DAT_181d92cb0);
+                lVar6 = Object.Instantiate(uVar7,&local_d8,&local_c8,DAT_181e762f8);
                 lVar4 = *(int64 *)(this + 24);
                 if (lVar4 == null) break;
                 if (*(uint32 *)(lVar4 + 24) <= uVar9) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 lVar4 = lVar4[uVar9];
                 if ((lVar4 == null) || (lVar4 = GameObject.get_transform(lVar4,0)) == null) break;
@@ -182,10 +182,10 @@ public class MultipleObjectsMake
                 local_b0 = local_e0;
                 local_b8 = local_e8;
                 Transform.set_localScale(lVar4,&local_b8,0);
-                uVar7 = GameObject.GetComponent(lVar6,DAT_181dc7310);
+                uVar7 = GameObject.GetComponent(lVar6,DAT_181e533a8);
                 cVar3 = Object.op_Inequality(uVar7,0,0);
                 if ((cVar3) && (*(float *)(this + 100) != -1.0)) {
-                  lVar4 = GameObject.GetComponent(lVar6,DAT_181dc7310);
+                  lVar4 = GameObject.GetComponent(lVar6,DAT_181e533a8);
                   if (lVar4 == null) break;
                   AudioSource.set_volume(lVar4,*(uint32 *)(this + 100),0);
                 }
@@ -198,11 +198,11 @@ public class MultipleObjectsMake
         }
     }
 
-    // Token : 0x600241F
-    // RVA   : 0xDF4E70   Offset: 0xDF4270   Length: 0xE
+    // Token : 0x60024C9
+    // RVA   : 0x851700   Offset: 0x850500   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180df4e70(int64 this)
+        void FUN_180851700(int64 this)
         {
         *(uint32 *)(this + 100) = 0xbf800000;
         TrailRenderer_Base.ctor(this,0);

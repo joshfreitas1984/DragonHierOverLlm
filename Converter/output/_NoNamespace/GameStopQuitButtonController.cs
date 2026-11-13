@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : GameStopQuitButtonController
-// Token : 0x20002AB
+// Token : 0x20002B4
 // ============================================================
 
 public class GameStopQuitButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400158D
+    // Token: 0x40015DD
     public bool clickCloseMenu;
 
-    // Token: 0x400158E
+    // Token: 0x40015DE
     public float autoClickTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60016B5
-    // RVA   : 0xA5D300   Offset: 0xA5C700   Length: 0xA0
+    // Token : 0x6001731
+    // RVA   : 0x6BF0A0   Offset: 0x6BDEA0   Length: 0xA0
     public void Update()
     {
         long lVar1;
@@ -29,7 +29,7 @@ public class GameStopQuitButtonController
             if (this.clickCloseMenu) {
               lVar1 = Component.get_transform(this,0);
               if (lVar1 != null) {
-                lVar1 = FUN_180daa030(lVar1,0);
+                lVar1 = FUN_180b05920(lVar1,0);
                 if (lVar1 != null) {
                   lVar1 = Component.get_gameObject(lVar1,0);
                   if (lVar1 != null) {
@@ -39,15 +39,15 @@ public class GameStopQuitButtonController
                 }
               }
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             Application.Quit(0);
           }
         }
     }
 
-    // Token : 0x60016B6
-    // RVA   : 0xA5D2A0   Offset: 0xA5C6A0   Length: 0x55
+    // Token : 0x6001732
+    // RVA   : 0x6BF040   Offset: 0x6BDE40   Length: 0x55
     public void OnClick()
     {
         long lVar1;
@@ -57,7 +57,7 @@ public class GameStopQuitButtonController
         }
         lVar1 = Component.get_transform(this,0);
         if (lVar1 != null) {
-          lVar1 = FUN_180daa030(lVar1,0);
+          lVar1 = FUN_180b05920(lVar1,0);
           if (lVar1 != null) {
             lVar1 = Component.get_gameObject(lVar1,0);
             if (lVar1 != null) {
@@ -68,11 +68,11 @@ public class GameStopQuitButtonController
         }
     }
 
-    // Token : 0x60016B7
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6001733
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

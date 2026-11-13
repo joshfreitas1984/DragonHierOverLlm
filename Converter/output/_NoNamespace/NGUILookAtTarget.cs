@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : NGUILookAtTarget
-// Token : 0x200001D
+// Token : 0x200001C
 // ============================================================
 
 public class NGUILookAtTarget
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000099
+    // Token: 0x4000079
     public int level;
 
-    // Token: 0x400009A
+    // Token: 0x400007A
     public Transform target;
 
-    // Token: 0x400009B
+    // Token: 0x400007B
     public float speed;
 
-    // Token: 0x400009C
+    // Token: 0x400007C
     private Transform mTrans;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600007D
-    // RVA   : 0xDFB1D0   Offset: 0xDFA5D0   Length: 0x24
+    // Token : 0x6000064
+    // RVA   : 0x857A60   Offset: 0x856860   Length: 0x24
     private void Start()
     {
         ulong uVar1;
@@ -28,8 +28,8 @@ public class NGUILookAtTarget
         this.mTrans = uVar1;
     }
 
-    // Token : 0x600007E
-    // RVA   : 0xDFAFC0   Offset: 0xDFA3C0   Length: 0x202
+    // Token : 0x6000065
+    // RVA   : 0x857850   Offset: 0x856650   Length: 0x202
     private void LateUpdate()
     {
         ulong uVar1;
@@ -96,14 +96,14 @@ public class NGUILookAtTarget
         }
     }
 
-    // Token : 0x600007F
-    // RVA   : 0xDFB200   Offset: 0xDFA600   Length: 0xE
+    // Token : 0x6000066
+    // RVA   : 0x857A90   Offset: 0x856890   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180dfb200(int64 this)
+        void FUN_180857a90(int64 this)
         {
         this.speed = 0x41000000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

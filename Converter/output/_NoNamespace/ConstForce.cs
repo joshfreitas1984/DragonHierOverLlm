@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : ConstForce
-// Token : 0x200011F
+// Token : 0x200011E
 // ============================================================
 
 public class ConstForce
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400072A
+    // Token: 0x400070A
     public float speed;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009A6
-    // RVA   : 0xA3BCD0   Offset: 0xA3B0D0   Length: 0x12D
+    // Token : 0x600098D
+    // RVA   : 0x64B920   Offset: 0x64A720   Length: 0x12D
     private void Update()
     {
         float fVar1;
@@ -22,7 +22,7 @@ public class ConstForce
         ulong uVar7;
         uint uVar8;
         byte[] local_28 = new byte[32];
-        lVar4 = Component.GetComponents(this,DAT_181d98078);
+        lVar4 = Component.GetComponents(this,DAT_181e7b438);
         uVar8 = 0;
         if (lVar4 != null) {
           while( true ) {
@@ -32,7 +32,7 @@ public class ConstForce
             if (*(uint32 *)(lVar4 + 24) <= uVar8) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             lVar3 = lVar4[uVar8];
             lVar5 = Component.get_transform(this,0);
@@ -49,11 +49,11 @@ public class ConstForce
         }
     }
 
-    // Token : 0x60009A7
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600098E
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

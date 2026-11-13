@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : UIClickSound
-// Token : 0x20003AB
+// Token : 0x20003B8
 // ============================================================
 
 public class UIClickSound
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001DD0
+    // Token: 0x4001E62
     public AudioClip audioClip;
 
-    // Token: 0x4001DD1
+    // Token: 0x4001E63
     public float volume;
 
-    // Token: 0x4001DD2
+    // Token: 0x4001E64
     public float pitch;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002362
-    // RVA   : 0x12AFAD0   Offset: 0x12AEED0   Length: 0x84
+    // Token : 0x600240C
+    // RVA   : 0x1136860   Offset: 0x1135660   Length: 0x84
     public virtual void OnPointerClick(PointerEventData eventData)
     {
         uint uVar1;
@@ -29,15 +29,15 @@ public class UIClickSound
         NGUITools.PlaySound(uVar3,uVar1,uVar2,0);
     }
 
-    // Token : 0x6002363
-    // RVA   : 0x12AFB60   Offset: 0x12AEF60   Length: 0x15
+    // Token : 0x600240D
+    // RVA   : 0x11368F0   Offset: 0x11356F0   Length: 0x15
     public void /*ctor*/()
     {
-        void FUN_1812afb60(int64 this)
+        void FUN_1811368f0(int64 this)
         {
         this.volume = 0x3f800000;
         this.pitch = 0x3f800000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

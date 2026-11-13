@@ -1,41 +1,41 @@
 // ============================================================
 // Type  : AIBattlePlan
-// Token : 0x2000245
+// Token : 0x2000249
 // ============================================================
 
 public class AIBattlePlan
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001227
+    // Token: 0x4001245
     public AIBattlePlanType battlePlanType;
 
-    // Token: 0x4001228
+    // Token: 0x4001246
     public float bestPlanValue;
 
-    // Token: 0x4001229
+    // Token: 0x4001247
     public GridUnitData moveTarget;
 
-    // Token: 0x400122A
+    // Token: 0x4001248
     public ItemData useItem;
 
-    // Token: 0x400122B
+    // Token: 0x4001249
     public List<AIBattleAttackPlan> battleAttackPlan;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001304
-    // RVA   : 0x13DA820   Offset: 0x13D9C20   Length: 0x7B
+    // Token : 0x6001328
+    // RVA   : 0x11A4660   Offset: 0x11A3460   Length: 0x7B
     public void /*ctor*/(AIBattlePlanType _battlePlanType)
     {
         ulong uVar1;
         ZhSegment.Initialize(this,0);
         this.battlePlanType = _battlePlanType;
-        uVar1 = il2cpp_internal(DAT_181d907f8);
-        FUN_181330100(uVar1,DAT_181d7a728);
+        uVar1 = il2cpp_internal(DAT_181e70638);
+        FUN_1810f3480(uVar1,DAT_181e5c3f0);
         this.battleAttackPlan = uVar1;
     }
 
-    // Token : 0x6001305
-    // RVA   : 0x13DA6A0   Offset: 0x13D9AA0   Length: 0x175
+    // Token : 0x6001329
+    // RVA   : 0x11A44E0   Offset: 0x11A32E0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -46,13 +46,13 @@ public class AIBattlePlan
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -64,11 +64,11 @@ public class AIBattlePlan
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 

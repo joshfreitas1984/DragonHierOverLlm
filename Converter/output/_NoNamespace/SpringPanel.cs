@@ -1,62 +1,62 @@
 // ============================================================
 // Type  : SpringPanel
-// Token : 0x2000093
+// Token : 0x2000092
 // ============================================================
 
 public class SpringPanel
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000388
+    // Token: 0x4000368
     public static SpringPanel current;
 
-    // Token: 0x4000389
+    // Token: 0x4000369
     public Vector3 target;
 
-    // Token: 0x400038A
+    // Token: 0x400036A
     public float strength;
 
-    // Token: 0x400038B
+    // Token: 0x400036B
     public OnFinished onFinished;
 
-    // Token: 0x400038C
+    // Token: 0x400036C
     private UIPanel mPanel;
 
-    // Token: 0x400038D
+    // Token: 0x400036D
     private Transform mTrans;
 
-    // Token: 0x400038E
+    // Token: 0x400036E
     private UIScrollView mDrag;
 
-    // Token: 0x400038F
+    // Token: 0x400036F
     private float mDelta;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600045D
-    // RVA   : 0xC5E680   Offset: 0xC5DA80   Length: 0x8B
+    // Token : 0x6000444
+    // RVA   : 0xA078A0   Offset: 0xA066A0   Length: 0x8B
     private void Start()
     {
         ulong uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96b78);
+        uVar1 = Component.GetComponent(this,DAT_181e79f38);
         this.mPanel = uVar1;
-        uVar1 = Component.GetComponent(this,DAT_181d96df8);
+        uVar1 = Component.GetComponent(this,DAT_181e7a1b8);
         this.mDrag = uVar1;
         uVar1 = Component.get_transform(this,0);
         this.mTrans = uVar1;
     }
 
-    // Token : 0x600045E
-    // RVA   : 0xC5E7D0   Offset: 0xC5DBD0   Length: 0x11
+    // Token : 0x6000445
+    // RVA   : 0xA079F0   Offset: 0xA067F0   Length: 0x11
     private void Update()
     {
-        void FUN_180c5e7d0(int64 *this)
+        void FUN_180a079f0(int64 *this)
         {
-                          // WARNING: Could not recover jumptable at 0x000180c5e7da. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180a079fa. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
     }
 
-    // Token : 0x600045F
-    // RVA   : 0xC5E1E0   Offset: 0xC5D5E0   Length: 0x38E
+    // Token : 0x6000446
+    // RVA   : 0xA07400   Offset: 0xA06200   Length: 0x38E
     protected virtual void AdvanceTowardsPosition()
     {
         float fVar1;
@@ -121,11 +121,11 @@ public class SpringPanel
             local_b8 = uVar2;
           }
           else {
-            fVar10 = (float)FUN_18000d7c0((uint32)local_b8);
+            fVar10 = (float)FUN_18007dbc0((uint32)local_b8);
             local_b8 = CONCAT44(local_b8._4_4_,fVar10);
-            fVar11 = (float)FUN_18000d7c0(local_b8._4_4_);
+            fVar11 = (float)FUN_18007dbc0(local_b8._4_4_);
             local_b8 = CONCAT44(fVar11,(uint32)local_b8);
-            local_b0 = (float)FUN_18000d7c0(local_b0);
+            local_b0 = (float)FUN_18007dbc0(local_b0);
             local_a0 = local_b0 - fVar8;
             local_a8 = CONCAT44(fVar11 - fVar1,fVar10 - fVar13);
             local_70 = local_a0;
@@ -155,12 +155,12 @@ public class SpringPanel
                 (**(code **)(*plVar4 + 0x1b8))(plVar4,0,*(uint64 *)(*plVar4 + 0x1c0));
               }
               if ((bVar5) && (this.onFinished != null)) {
-                plVar4 = *(int64 **)(DAT_181da4ae8 + 184);
+                plVar4 = *(int64 **)(DAT_181e84f28 + 184);
                 *plVar4 = this;
                 il2cpp_internal(plVar4,this);
                 if (this.onFinished == null) throw; // [null/range check failed]
                 OnGeometryUpdated.Invoke(this.onFinished,0);
-                puVar7 = *(uint64 **)(DAT_181da4ae8 + 184);
+                puVar7 = *(uint64 **)(DAT_181e84f28 + 184);
                 *puVar7 = 0;
                 il2cpp_internal(puVar7,0);
               }
@@ -170,18 +170,18 @@ public class SpringPanel
         }
     }
 
-    // Token : 0x6000460
-    // RVA   : 0xC5E570   Offset: 0xC5D970   Length: 0x102
+    // Token : 0x6000447
+    // RVA   : 0xA07790   Offset: 0xA06590   Length: 0x102
     public static SpringPanel Begin(GameObject go, Vector3 pos, float strength)
     {
         uint uVar1;
         bool cVar2;
         long lVar3;
         if (go != null) {
-          lVar3 = GameObject.GetComponent(go,DAT_181d73aa8);
+          lVar3 = GameObject.GetComponent(go,DAT_181e56b70);
           cVar2 = Object.op_Equality(lVar3,0,0);
           if (cVar2) {
-            lVar3 = GameObject.AddComponent(go,DAT_181dc6188);
+            lVar3 = GameObject.AddComponent(go,DAT_181e52220);
           }
           if (lVar3 != null) {
             uVar1 = *(uint32 *)(pos + 1);
@@ -195,14 +195,14 @@ public class SpringPanel
         }
     }
 
-    // Token : 0x6000461
-    // RVA   : 0xC5E710   Offset: 0xC5DB10   Length: 0xB5
+    // Token : 0x6000448
+    // RVA   : 0xA07930   Offset: 0xA06730   Length: 0xB5
     public static SpringPanel Stop(GameObject go)
     {
         bool cVar1;
         long lVar2;
         if (go != null) {
-          lVar2 = GameObject.GetComponent(go,DAT_181d73aa8);
+          lVar2 = GameObject.GetComponent(go,DAT_181e56b70);
           cVar1 = Object.op_Inequality(lVar2,0,0);
           if (cVar1) {
             if (lVar2 == null) throw; // [null/range check failed]
@@ -218,8 +218,8 @@ public class SpringPanel
         }
     }
 
-    // Token : 0x6000462
-    // RVA   : 0xC5E7F0   Offset: 0xC5DBF0   Length: 0x3A
+    // Token : 0x6000449
+    // RVA   : 0xA07A10   Offset: 0xA06810   Length: 0x3A
     public void /*ctor*/()
     {
         byte[] local_18 = new byte[16];
@@ -227,7 +227,7 @@ public class SpringPanel
         this.target = *puVar1;
         *(uint32 *)(this + 32) = *(uint32 *)(puVar1 + 1);
         this.strength = 0x41200000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

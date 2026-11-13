@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <PartyContinue>d__56
-// Token : 0x2000316
+// Token : 0x2000320
 // ============================================================
 
 public class <PartyContinue>d__56
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001975
+    // Token: 0x40019EE
     private int <>1__state;
 
-    // Token: 0x4001976
+    // Token: 0x40019EF
     private object <>2__current;
 
-    // Token: 0x4001977
+    // Token: 0x40019F0
     public PartyController <>4__this;
 
-    // Token: 0x4001978
+    // Token: 0x40019F1
     private int <i>5__2;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60019A6
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6001A3C
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x60019A7
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x6001A3D
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x60019A8
-    // RVA   : 0x923710   Offset: 0x922B10   Length: 0xA9C
+    // Token : 0x6001A3E
+    // RVA   : 0x610DA0   Offset: 0x60FBA0   Length: 0xA9C
     private virtual bool MoveNext()
     {
         var plVar2 = *(int64*)(lVar2 + 184);
@@ -76,7 +76,7 @@ public class <PartyContinue>d__56
                (lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0)) == null) ||
               (lVar4 = Transform.Find(lVar4,"ProgressBar",0)) == null) ||
              ((lVar4 = Transform.Find(lVar4,"Bar",0), lVar4 == null ||
-              (lVar4 = Component.GetComponent(lVar4,DAT_181d94478)) == null))) throw; // [null/range check failed]
+              (lVar4 = Component.GetComponent(lVar4,DAT_181e777b8)) == null))) throw; // [null/range check failed]
           Image.set_fillAmount(lVar4);
           if (((*(int64 *)(lVar2 + 32) == 0) ||
               ((lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0), lVar4 == null ||
@@ -92,10 +92,10 @@ public class <PartyContinue>d__56
               return false;
             }
             this.<>1__state = 0xffffffff;
-            lVar4 = FUN_18046c400(0);
-            lVar5 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar5,DAT_181da3bf0);
-            if (((lVar5 != null) && (FUN_18181e6b0(lVar5,"客人离席;FinishParty",DAT_181da3d70), lVar2 != null)) &&
+            lVar4 = FUN_180210a70(0);
+            lVar5 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar5,DAT_181e861f0);
+            if (((lVar5 != null) && (FUN_18175de30(lVar5,"客人离席;FinishParty",DAT_181e86370), lVar2 != null)) &&
                (*(int64 *)(lVar2 + 168) != 0)) {
               uVar6 = Int32.ToString(*(int64 *)(lVar2 + 168) + 88,0);
               uVar7 = new SinglePlotData("宴会持续良久，肴核既尽，杯盘狼籍。相与枕藉，不觉天色昏沉。",lVar5,1,0,CONCAT44(uVar15,3),uVar6,3,0,0);
@@ -111,7 +111,7 @@ public class <PartyContinue>d__56
              ((lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0), lVar4 == null ||
               ((lVar4 = Transform.Find(lVar4,"ProgressBar",0), lVar4 == null ||
                (lVar4 = Transform.Find(lVar4,"Bar",0)) == null))))) throw; // [null/range check failed]
-          lVar4 = Component.GetComponent(lVar4,DAT_181d94478);
+          lVar4 = Component.GetComponent(lVar4,DAT_181e777b8);
           if ((*(int64 *)(lVar2 + 192) == 0) || (lVar4 == null)) throw; // [null/range check failed]
           Image.set_fillAmount
                     (lVar4,((float)this.<i>5__2 + 1.0) /
@@ -169,7 +169,7 @@ public class <PartyContinue>d__56
           auVar14._0_4_ = ((float)uVar6 * 0.05 + 1.0) * fVar12 * 0.05 * fVar11;
           local_res8[0] = auVar14._0_4_;
           PartyController.ChangeBaseScore(lVar2,auVar14._0_8_,0);
-          lVar5 = FUN_18046c0a0(0);
+          lVar5 = FUN_1802106e0(0);
           uVar6 = Single.ToString(local_res8,"+0;-0;0",0);
           uVar6 = String.Concat("宴会评分",uVar6,0);
           lVar4 = *(int64 *)(lVar2 + 192);
@@ -192,9 +192,9 @@ public class <PartyContinue>d__56
           local_98 = uVar7;
           local_90 = uVar3;
           GameController.ShowTextAtPos(lVar5,uVar6,&local_98,20,&local_88,0);
-          if (**(int **)(DAT_181d73d40 + 184) != 2) {
+          if (**(int **)(DAT_181e538e8 + 184) != 2) {
             lVar4 = *(int64 *)(lVar2 + 192);
-            lVar5 = **(int64 **)(DAT_181d761e8 + 184);
+            lVar5 = **(int64 **)(DAT_181e55d90 + 184);
             if (lVar4 == null) throw; // [null/range check failed]
             uVar1 = this.<i>5__2;
             if (*(uint32 *)(lVar4 + 24) <= uVar1) {
@@ -205,16 +205,16 @@ public class <PartyContinue>d__56
             if (0.5 <= fVar12) {
               lVar4 = DrinkUIController.DrinkPoemText;
               if (lVar4 == null) throw; // [null/range check failed]
-              uVar3 = FUN_180d96040(0,*(uint32 *)(lVar4 + 24),0);
-              lVar4 = FUN_180002f80(lVar4,uVar3,DAT_181da4370);
+              uVar3 = FUN_180af1860(0,*(uint32 *)(lVar4 + 24),0);
+              lVar4 = FUN_1800024b0(lVar4,uVar3,DAT_181e86970);
               if (lVar4 == null) throw; // [null/range check failed]
               uVar7 = String.Replace(lVar4,"，","\n",0);
             }
             else {
               lVar4 = DrinkUIController.DrinkTalkText;
               if (lVar4 == null) throw; // [null/range check failed]
-              uVar3 = FUN_180d96040(0,*(uint32 *)(lVar4 + 24),0);
-              uVar7 = FUN_180002f80(lVar4,uVar3,DAT_181da4370);
+              uVar3 = FUN_180af1860(0,*(uint32 *)(lVar4 + 24),0);
+              uVar7 = FUN_1800024b0(lVar4,uVar3,DAT_181e86970);
             }
             if ((((*(int64 *)(lVar2 + 32) == 0) ||
                  (lVar4 = GameObject.get_transform(*(int64 *)(lVar2 + 32),0)) == null) ||
@@ -233,8 +233,8 @@ public class <PartyContinue>d__56
           }
           else {
             uVar6 = DOTweenModuleAudio.DOFade(*(uint64 *)(lVar2 + 48));
-            uVar7 = new OnTooltipCB(lVar2,DAT_181d95f28,0);
-            TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181dc01e8);
+            uVar7 = new OnTooltipCB(lVar2,DAT_181e79568,0);
+            TweenSettingsExtensions.OnComplete(uVar6,uVar7,DAT_181ea3c28);
             uVar6 = new WaitForSeconds();
             this.<>2__current = uVar6;
             this.<>1__state = 2;
@@ -243,27 +243,27 @@ public class <PartyContinue>d__56
         }
     }
 
-    // Token : 0x60019A9
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6001A3F
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x60019AA
-    // RVA   : 0x9241B0   Offset: 0x9235B0   Length: 0x3E
+    // Token : 0x6001A40
+    // RVA   : 0x611840   Offset: 0x610640   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181da9be0);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e8d590);
     }
 
-    // Token : 0x60019AB
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6001A41
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

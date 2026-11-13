@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : Destroy
-// Token : 0x20003C9
+// Token : 0x20003D6
 // ============================================================
 
 public class Destroy
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E5F
+    // Token: 0x4001EF1
     public float lifetime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600240A
-    // RVA   : 0x93B9B0   Offset: 0x93ADB0   Length: 0x7B
+    // Token : 0x60024B4
+    // RVA   : 0x6810B0   Offset: 0x67FEB0   Length: 0x7B
     private void Awake()
     {
         uint uVar1;
@@ -21,14 +21,14 @@ public class Destroy
         Object.Destroy(uVar2,uVar1,0);
     }
 
-    // Token : 0x600240B
-    // RVA   : 0x93BA30   Offset: 0x93AE30   Length: 0xE
+    // Token : 0x60024B5
+    // RVA   : 0x681130   Offset: 0x67FF30   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_18093ba30(int64 this)
+        void FUN_180681130(int64 this)
         {
         this.lifetime = 0x40000000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

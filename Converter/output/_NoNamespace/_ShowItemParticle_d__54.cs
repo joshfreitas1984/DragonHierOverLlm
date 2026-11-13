@@ -1,49 +1,49 @@
 // ============================================================
 // Type  : <ShowItemParticle>d__54
-// Token : 0x20001AB
+// Token : 0x20001AD
 // ============================================================
 
 public class <ShowItemParticle>d__54
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BAD
+    // Token: 0x4000BBE
     private int <>1__state;
 
-    // Token: 0x4000BAE
+    // Token: 0x4000BBF
     private object <>2__current;
 
-    // Token: 0x4000BAF
+    // Token: 0x4000BC0
     public float delayTime;
 
-    // Token: 0x4000BB0
+    // Token: 0x4000BC1
     public GameObject targetItemIcon;
 
-    // Token: 0x4000BB1
+    // Token: 0x4000BC2
     public GameObject targetParticle;
 
-    // Token: 0x4000BB2
+    // Token: 0x4000BC3
     public float scale;
 
-    // Token: 0x4000BB3
+    // Token: 0x4000BC4
     public int rareLv;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000DBE
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x6000DC1
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6000DBF
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x6000DC2
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6000DC0
-    // RVA   : 0x933640   Offset: 0x932A40   Length: 0x2CE
+    // Token : 0x6000DC3
+    // RVA   : 0x6795D0   Offset: 0x6783D0   Length: 0x2CE
     private virtual bool MoveNext()
     {
         uint uVar1;
@@ -91,13 +91,13 @@ public class <ShowItemParticle>d__54
             local_48 = local_58;
             local_40 = local_50;
             Transform.set_localScale(lVar7,&local_48,0);
-            lVar7 = FUN_18046c100(0);
+            lVar7 = FUN_180210740(0);
             if (lVar7 != null) {
               uVar9 = this.rareLv;
               lVar7 = *(int64 *)(lVar7 + 56);
               if ((int)uVar9 < 0) {
                 if (this.targetItemIcon == null) throw; // [null/range check failed]
-                lVar8 = GameObject.GetComponent(this.targetItemIcon,DAT_181dc79f8);
+                lVar8 = GameObject.GetComponent(this.targetItemIcon,DAT_181e53a90);
                 if (lVar8 == null) throw; // [null/range check failed]
                 uVar9 = *(uint32 *)(lVar8 + 32);
               }
@@ -120,27 +120,27 @@ public class <ShowItemParticle>d__54
         }
     }
 
-    // Token : 0x6000DC1
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6000DC4
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6000DC2
-    // RVA   : 0x933910   Offset: 0x932D10   Length: 0x3E
+    // Token : 0x6000DC5
+    // RVA   : 0x6798A0   Offset: 0x6786A0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181d98a50);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e7c190);
     }
 
-    // Token : 0x6000DC3
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6000DC6
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

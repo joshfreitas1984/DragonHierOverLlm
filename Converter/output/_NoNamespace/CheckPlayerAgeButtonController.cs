@@ -1,17 +1,17 @@
 // ============================================================
 // Type  : CheckPlayerAgeButtonController
-// Token : 0x20001B7
+// Token : 0x20001B9
 // ============================================================
 
 public class CheckPlayerAgeButtonController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BDD
+    // Token: 0x4000BEE
     public GameObject CheckPlayerAgeInfo;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000E81
-    // RVA   : 0x996850   Offset: 0x995C50   Length: 0x33
+    // Token : 0x6000E85
+    // RVA   : 0x6F5120   Offset: 0x6F3F20   Length: 0x33
     public void OnClick()
     {
         long lVar1;
@@ -24,11 +24,11 @@ public class CheckPlayerAgeButtonController
         }
     }
 
-    // Token : 0x6000E82
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000E86
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass36_0
-// Token : 0x200047B
+// Token : 0x2000488
 // ============================================================
 
 public class <>c__DisplayClass36_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4002137
+    // Token: 0x40021CA
     public Text target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002735
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x60027DF
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6002736
-    // RVA   : 0x9380F0   Offset: 0x9374F0   Length: 0x3B
+    // Token : 0x60027E0
+    // RVA   : 0x67E960   Offset: 0x67D760   Length: 0x3B
     internal Color <DOFade>b__0()
     {
         ulong uVar2;
@@ -34,8 +34,8 @@ public class <>c__DisplayClass36_0
         }
     }
 
-    // Token : 0x6002737
-    // RVA   : 0x938130   Offset: 0x937530   Length: 0x34
+    // Token : 0x60027E1
+    // RVA   : 0x67E9A0   Offset: 0x67D7A0   Length: 0x34
     internal void <DOFade>b__1(Color x)
     {
         uint local_18;

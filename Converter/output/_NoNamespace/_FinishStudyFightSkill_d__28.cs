@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <FinishStudyFightSkill>d__28
-// Token : 0x200037A
+// Token : 0x2000387
 // ============================================================
 
 public class <FinishStudyFightSkill>d__28
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C78
+    // Token: 0x4001D0A
     private int <>1__state;
 
-    // Token: 0x4001C79
+    // Token: 0x4001D0B
     private object <>2__current;
 
-    // Token: 0x4001C7A
+    // Token: 0x4001D0C
     public StudyAttackSkillController <>4__this;
 
-    // Token: 0x4001C7B
+    // Token: 0x4001D0D
     public StudySkillResult studyDodgeResult;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002224
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x60022CE
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6002225
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x60022CF
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6002226
-    // RVA   : 0x91EEA0   Offset: 0x91E2A0   Length: 0x5D7
+    // Token : 0x60022D0
+    // RVA   : 0x60C530   Offset: 0x60B330   Length: 0x5D7
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -62,7 +62,7 @@ public class <FinishStudyFightSkill>d__28
             *(uint16 *)(lVar6 + 24) = 0;
             if (*(int64 *)(lVar6 + 64) != 0) {
               GameObject.SetActive(*(int64 *)(lVar6 + 64),0,0);
-              lVar2 = FUN_18046c620(0);
+              lVar2 = FUN_180210ca0(0);
               if (lVar2 != null) {
                 StudySkillController.FinishStudySkill(lVar2,*(uint32 *)(lVar6 + 28),0);
                 return false;
@@ -79,7 +79,7 @@ public class <FinishStudyFightSkill>d__28
         *(uint8 *)(lVar6 + 25) = 1;
         iVar1 = this.studyDodgeResult;
         if (iVar1 == 0) {
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           if ((*(int64 *)(lVar6 + 80) == 0) ||
              (lVar3 = GameObject.get_transform(*(int64 *)(lVar6 + 80),0)) == null)
           throw; // [null/range check failed]
@@ -89,10 +89,10 @@ public class <FinishStudyFightSkill>d__28
           uVar9 = *(uint32 *)(puVar4 + 1);
           puVar5 = (uint32 *)Color.get_red(&local_28,0);
           uVar7 = "生命耗尽！";
-        joined_r0x00018091f312:
+        joined_r0x00018060c9a2:
           if (lVar2 == null) throw; // [null/range check failed]
           uVar8 = 25;
-        LAB_18091f325:
+        LAB_18060c9b5:
           local_28 = *puVar5;
           uStack_24 = puVar5[1];
           uStack_20 = puVar5[2];
@@ -103,7 +103,7 @@ public class <FinishStudyFightSkill>d__28
         }
         else {
           if (iVar1 == 1) {
-            lVar2 = FUN_18046c0a0(0);
+            lVar2 = FUN_1802106e0(0);
             if ((*(int64 *)(lVar6 + 80) == 0) ||
                (lVar3 = GameObject.get_transform(*(int64 *)(lVar6 + 80),0)) == null)
             throw; // [null/range check failed]
@@ -113,12 +113,12 @@ public class <FinishStudyFightSkill>d__28
             uVar9 = *(uint32 *)(puVar4 + 1);
             puVar5 = (uint32 *)Color.get_yellow(&local_28,0);
             uVar7 = "修炼终止！";
-            goto joined_r0x00018091f312;
+            goto joined_r0x00018060c9a2;
           }
           if (iVar1 == 2) {
             iVar1 = *(int *)(lVar6 + 36);
             if (iVar1 < 1) {
-              lVar2 = FUN_18046c0a0(0);
+              lVar2 = FUN_1802106e0(0);
               if ((*(int64 *)(lVar6 + 80) == 0) ||
                  (lVar3 = GameObject.get_transform(*(int64 *)(lVar6 + 80),0)) == null)
               throw; // [null/range check failed]
@@ -134,7 +134,7 @@ public class <FinishStudyFightSkill>d__28
             else {
               if (2 < iVar1) {
                 if (iVar1 < 5) {
-                  lVar2 = FUN_18046c0a0(0);
+                  lVar2 = FUN_1802106e0(0);
                   if ((*(int64 *)(lVar6 + 80) == 0) ||
                      (lVar3 = GameObject.get_transform(*(int64 *)(lVar6 + 80),0)) == null)
                   throw; // [null/range check failed]
@@ -146,7 +146,7 @@ public class <FinishStudyFightSkill>d__28
                   uVar7 = "表现尚可！";
                 }
                 else if (iVar1 < 7) {
-                  lVar2 = FUN_18046c0a0(0);
+                  lVar2 = FUN_1802106e0(0);
                   if ((*(int64 *)(lVar6 + 80) == 0) ||
                      (lVar3 = GameObject.get_transform(*(int64 *)(lVar6 + 80),0)) == null)
                   throw; // [null/range check failed]
@@ -158,7 +158,7 @@ public class <FinishStudyFightSkill>d__28
                   uVar7 = "表现平平！";
                 }
                 else {
-                  lVar2 = FUN_18046c0a0(0);
+                  lVar2 = FUN_1802106e0(0);
                   if ((*(int64 *)(lVar6 + 80) == 0) ||
                      (lVar3 = GameObject.get_transform(*(int64 *)(lVar6 + 80),0)) == null)
                   throw; // [null/range check failed]
@@ -169,9 +169,9 @@ public class <FinishStudyFightSkill>d__28
                   puVar5 = (uint32 *)Color.get_green(&local_28,0);
                   uVar7 = "表现不佳！";
                 }
-                goto joined_r0x00018091f312;
+                goto joined_r0x00018060c9a2;
               }
-              lVar2 = FUN_18046c0a0(0);
+              lVar2 = FUN_1802106e0(0);
               if ((*(int64 *)(lVar6 + 80) == 0) ||
                  (lVar3 = GameObject.get_transform(*(int64 *)(lVar6 + 80),0)) == null)
               throw; // [null/range check failed]
@@ -184,13 +184,13 @@ public class <FinishStudyFightSkill>d__28
               uVar8 = 26;
               uVar7 = "表现优秀！";
             }
-            goto LAB_18091f325;
+            goto LAB_18060c9b5;
           }
         }
         uVar7 = *(uint64 *)(lVar6 + 72);
         GlobalData.DeleteAllChild(uVar7,0);
         if ((*(int64 *)(lVar6 + 80) != 0) &&
-           (lVar6 = GameObject.GetComponent(*(int64 *)(lVar6 + 80),DAT_181d73cc8)) != null) {
+           (lVar6 = GameObject.GetComponent(*(int64 *)(lVar6 + 80),DAT_181e56d90)) != null) {
           StudyAttackPlayer.SetShieldTime(lVar6,0,0);
           uVar7 = new WaitForSecondsRealtime(0x40400000,0);
           this.<>2__current = uVar7;
@@ -199,27 +199,27 @@ public class <FinishStudyFightSkill>d__28
         }
     }
 
-    // Token : 0x6002227
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x60022D1
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6002228
-    // RVA   : 0x91F480   Offset: 0x91E880   Length: 0x3E
+    // Token : 0x60022D2
+    // RVA   : 0x60CB10   Offset: 0x60B910   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4998);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e98738);
     }
 
-    // Token : 0x6002229
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x60022D3
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

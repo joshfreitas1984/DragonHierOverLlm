@@ -1,33 +1,33 @@
 // ============================================================
 // Type  : MeetingStep
-// Token : 0x2000303
+// Token : 0x200030D
 // ============================================================
 
 public class MeetingStep
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018C9
+    // Token: 0x400193B
     public int value__;
 
-    // Token: 0x40018CA
+    // Token: 0x400193C
     public const MeetingStep None;
 
-    // Token: 0x40018CB
+    // Token: 0x400193D
     public const MeetingStep Start;
 
-    // Token: 0x40018CC
+    // Token: 0x400193E
     public const MeetingStep LastMonthPrice;
 
-    // Token: 0x40018CD
+    // Token: 0x400193F
     public const MeetingStep LookAtMap;
 
-    // Token: 0x40018CE
+    // Token: 0x4001940
     public const MeetingStep ThisMonthAdvise;
 
-    // Token: 0x40018CF
+    // Token: 0x4001941
     public const MeetingStep ThisMonthMission;
 
-    // Token: 0x40018D0
+    // Token: 0x4001942
     public const MeetingStep End;
 
 }

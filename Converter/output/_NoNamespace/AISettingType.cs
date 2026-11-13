@@ -1,48 +1,48 @@
 // ============================================================
 // Type  : AISettingType
-// Token : 0x2000131
+// Token : 0x200012D
 // ============================================================
 
 public class AISettingType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400077C
+    // Token: 0x4000759
     public int value__;
 
-    // Token: 0x400077D
+    // Token: 0x400075A
     public const AISettingType CureSelf;
 
-    // Token: 0x400077E
+    // Token: 0x400075B
     public const AISettingType StudyFightSkill;
 
-    // Token: 0x400077F
+    // Token: 0x400075C
     public const AISettingType StudyLivingSkill;
 
-    // Token: 0x4000780
+    // Token: 0x400075D
     public const AISettingType CollectResource;
 
-    // Token: 0x4000781
+    // Token: 0x400075E
     public const AISettingType AddAreaState;
 
-    // Token: 0x4000782
+    // Token: 0x400075F
     public const AISettingType ReduceAreaState;
 
-    // Token: 0x4000783
+    // Token: 0x4000760
     public const AISettingType MakeMoneyAndExplore;
 
-    // Token: 0x4000784
+    // Token: 0x4000761
     public const AISettingType MakeFriendAndStudyFight;
 
-    // Token: 0x4000785
+    // Token: 0x4000762
     public const AISettingType FinishMissionAndRandomSpeEvent;
 
-    // Token: 0x4000786
+    // Token: 0x4000763
     public const AISettingType CraftFood;
 
-    // Token: 0x4000787
+    // Token: 0x4000764
     public const AISettingType CraftMed;
 
-    // Token: 0x4000788
+    // Token: 0x4000765
     public const AISettingType CraftEquip;
 
 }

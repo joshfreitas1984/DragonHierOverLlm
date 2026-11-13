@@ -1,161 +1,161 @@
 // ============================================================
 // Type  : UIPanel
-// Token : 0x2000104
+// Token : 0x2000103
 // ============================================================
 
 public class UIPanel
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000670
+    // Token: 0x4000650
     public static List<UIPanel> list;
 
-    // Token: 0x4000671
+    // Token: 0x4000651
     public OnGeometryUpdated onGeometryUpdated;
 
-    // Token: 0x4000672
+    // Token: 0x4000652
     public bool showInPanelTool;
 
-    // Token: 0x4000673
+    // Token: 0x4000653
     public bool generateNormals;
 
-    // Token: 0x4000674
+    // Token: 0x4000654
     public bool generateUV2;
 
-    // Token: 0x4000675
+    // Token: 0x4000655
     public ShadowMode shadowMode;
 
-    // Token: 0x4000676
+    // Token: 0x4000656
     public bool widgetsAreStatic;
 
-    // Token: 0x4000677
+    // Token: 0x4000657
     public bool cullWhileDragging;
 
-    // Token: 0x4000678
+    // Token: 0x4000658
     public bool alwaysOnScreen;
 
-    // Token: 0x4000679
+    // Token: 0x4000659
     public bool anchorOffset;
 
-    // Token: 0x400067A
+    // Token: 0x400065A
     public bool softBorderPadding;
 
-    // Token: 0x400067B
+    // Token: 0x400065B
     public RenderQueue renderQueue;
 
-    // Token: 0x400067C
+    // Token: 0x400065C
     public int startingRenderQueue;
 
-    // Token: 0x400067D
+    // Token: 0x400065D
     public List<UIWidget> widgets;
 
-    // Token: 0x400067E
+    // Token: 0x400065E
     public List<UIDrawCall> drawCalls;
 
-    // Token: 0x400067F
+    // Token: 0x400065F
     public Matrix4x4 worldToLocal;
 
-    // Token: 0x4000680
+    // Token: 0x4000660
     public Vector4 drawCallClipRange;
 
-    // Token: 0x4000681
+    // Token: 0x4000661
     public OnClippingMoved onClipMove;
 
-    // Token: 0x4000682
+    // Token: 0x4000662
     public OnCreateMaterial onCreateMaterial;
 
-    // Token: 0x4000683
+    // Token: 0x4000663
     public OnCreateDrawCall onCreateDrawCall;
 
-    // Token: 0x4000684
+    // Token: 0x4000664
     private Texture2D mClipTexture;
 
-    // Token: 0x4000685
+    // Token: 0x4000665
     private float mAlpha;
 
-    // Token: 0x4000686
+    // Token: 0x4000666
     private Clipping mClipping;
 
-    // Token: 0x4000687
+    // Token: 0x4000667
     private Vector4 mClipRange;
 
-    // Token: 0x4000688
+    // Token: 0x4000668
     private Vector2 mClipSoftness;
 
-    // Token: 0x4000689
+    // Token: 0x4000669
     private int mDepth;
 
-    // Token: 0x400068A
+    // Token: 0x400066A
     private int mSortingOrder;
 
-    // Token: 0x400068B
+    // Token: 0x400066B
     private string mSortingLayerName;
 
-    // Token: 0x400068C
+    // Token: 0x400066C
     private bool mRebuild;
 
-    // Token: 0x400068D
+    // Token: 0x400066D
     private bool mResized;
 
-    // Token: 0x400068E
+    // Token: 0x400066E
     private Vector2 mClipOffset;
 
-    // Token: 0x400068F
+    // Token: 0x400066F
     private int mMatrixFrame;
 
-    // Token: 0x4000690
+    // Token: 0x4000670
     private int mAlphaFrameID;
 
-    // Token: 0x4000691
+    // Token: 0x4000671
     private int mLayer;
 
-    // Token: 0x4000692
+    // Token: 0x4000672
     private static float[] mTemp;
 
-    // Token: 0x4000693
+    // Token: 0x4000673
     private Vector2 mMin;
 
-    // Token: 0x4000694
+    // Token: 0x4000674
     private Vector2 mMax;
 
-    // Token: 0x4000695
+    // Token: 0x4000675
     private bool mSortWidgets;
 
-    // Token: 0x4000696
+    // Token: 0x4000676
     private bool mUpdateScroll;
 
-    // Token: 0x4000697
+    // Token: 0x4000677
     public bool useSortingOrder;
 
-    // Token: 0x4000698
+    // Token: 0x4000678
     private UIPanel mParentPanel;
 
-    // Token: 0x4000699
+    // Token: 0x4000679
     private static Vector3[] mCorners;
 
-    // Token: 0x400069A
+    // Token: 0x400067A
     private static int mUpdateFrame;
 
-    // Token: 0x400069B
+    // Token: 0x400067B
     private bool mHasMoved;
 
-    // Token: 0x400069C
+    // Token: 0x400067C
     private OnRenderCallback mOnRender;
 
-    // Token: 0x400069D
+    // Token: 0x400067D
     private bool mForced;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600088F
-    // RVA   : 0xF08A80   Offset: 0xF07E80   Length: 0x8
+    // Token : 0x6000876
+    // RVA   : 0xC7BCB0   Offset: 0xC7AAB0   Length: 0x8
     public string get_sortingLayerName()
     {
-        uint64 FUN_180f08a80(int64 this)
+        uint64 FUN_180c7bcb0(int64 this)
         {
         return this.mSortingLayerName;
     }
 
-    // Token : 0x6000890
-    // RVA   : 0x119E080   Offset: 0x119D480   Length: 0xD1
+    // Token : 0x6000877
+    // RVA   : 0xF9B540   Offset: 0xF9A340   Length: 0xD1
     public void set_sortingLayerName(string value)
     {
         bool cVar1;
@@ -165,15 +165,15 @@ public class UIPanel
           this.mSortingLayerName = value;
           if (UIPanel.list == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          uVar2 = FUN_1817ebaf0(UIPanel.list,this,DAT_181daa130);
+          uVar2 = FUN_181662a20(UIPanel.list,this,DAT_181e8c770);
           UIPanel.UpdateDrawCalls(this,uVar2,0);
         }
     }
 
-    // Token : 0x6000891
-    // RVA   : 0x119D240   Offset: 0x119C640   Length: 0x121
+    // Token : 0x6000878
+    // RVA   : 0xF9A700   Offset: 0xF99500   Length: 0x121
     public static int get_nextUnusedDepth()
     {
         int iVar1;
@@ -183,16 +183,16 @@ public class UIPanel
         iVar4 = 0;
         iVar2 = -0x80000000;
         if (UIPanel.list == null) {
-        LAB_18119d35c:
+        LAB_180f9a81c:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         iVar1 = *(int *)(UIPanel.list + 24);
         if (0 < iVar1) {
           do {
             if ((UIPanel.list == null) ||
-               (lVar3 = FUN_180002f80(UIPanel.list,iVar4,DAT_181daa330),
-               lVar3 == null)) goto LAB_18119d35c;
+               (lVar3 = FUN_1800024b0(UIPanel.list,iVar4,DAT_181e8c968),
+               lVar3 == null)) goto LAB_180f9a81c;
             iVar2 = Mathf.Max(iVar2,*(uint32 *)(lVar3 + 0x150),0);
             iVar4 = iVar4 + 1;
           } while (iVar4 < iVar1);
@@ -203,26 +203,26 @@ public class UIPanel
         return 0;
     }
 
-    // Token : 0x6000892
-    // RVA   : 0x119C890   Offset: 0x119BC90   Length: 0xB
+    // Token : 0x6000879
+    // RVA   : 0xF99D50   Offset: 0xF98B50   Length: 0xB
     public override bool get_canBeAnchored()
     {
-        bool FUN_18119c890(int64 this)
+        bool FUN_180f99d50(int64 this)
         {
         return this.mClipping != null;
     }
 
-    // Token : 0x6000893
-    // RVA   : 0x119C870   Offset: 0x119BC70   Length: 0x9
+    // Token : 0x600087A
+    // RVA   : 0xF99D30   Offset: 0xF98B30   Length: 0x9
     public override float get_alpha()
     {
-        uint32 FUN_18119c870(int64 this)
+        uint32 FUN_180f99d30(int64 this)
         {
         return this.mAlpha;
     }
 
-    // Token : 0x6000894
-    // RVA   : 0x119DB40   Offset: 0x119CF40   Length: 0x16C
+    // Token : 0x600087B
+    // RVA   : 0xF9B000   Offset: 0xF99E00   Length: 0x16C
     public override void set_alpha(float value)
     {
         float fVar1;
@@ -241,9 +241,9 @@ public class UIPanel
           *(float *)(this + 38) = fVar8;
           uVar7 = 0;
           if (this[23] == 0) {
-        LAB_18119dca7:
+        LAB_180f9b167:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar5 = (int64)*(int *)(this[23] + 24);
           if (0 < lVar5) {
@@ -252,12 +252,12 @@ public class UIPanel
             uVar4 = uVar7;
             do {
               lVar2 = this[23];
-              if (lVar2 == null) goto LAB_18119dca7;
+              if (lVar2 == null) goto LAB_180f9b167;
               if (*(uint32 *)(lVar2 + 24) <= (uint32)uVar4) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               lVar2 = *(int64 *)(lVar6 + *(int64 *)(lVar2 + 16));
-              if (lVar2 == null) goto LAB_18119dca7;
+              if (lVar2 == null) goto LAB_180f9b167;
               uVar4 = (uint64)((uint32)uVar4 + 1);
               *(uint8 *)(lVar2 + 216) = 1;
               uVar3 = uVar3 + 1;
@@ -271,17 +271,17 @@ public class UIPanel
         }
     }
 
-    // Token : 0x6000895
-    // RVA   : 0x119C9A0   Offset: 0x119BDA0   Length: 0x7
+    // Token : 0x600087C
+    // RVA   : 0xF99E60   Offset: 0xF98C60   Length: 0x7
     public int get_depth()
     {
-        uint32 FUN_18119c9a0(int64 this)
+        uint32 FUN_180f99e60(int64 this)
         {
         return this.mDepth;
     }
 
-    // Token : 0x6000896
-    // RVA   : 0x119DF90   Offset: 0x119D390   Length: 0xE9
+    // Token : 0x600087D
+    // RVA   : 0xF9B450   Offset: 0xF9A250   Length: 0xE9
     public void set_depth(int value)
     {
         long lVar1;
@@ -289,26 +289,26 @@ public class UIPanel
         if (this.mDepth != value) {
           this.mDepth = value;
           lVar1 = UIPanel.list;
-          uVar2 = new OnTooltipCB(0,DAT_181dc6130,DAT_181dab8d0);
+          uVar2 = new OnTooltipCB(0,DAT_181e523e8,DAT_181e8c290);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          List_1.Sort(lVar1,uVar2,DAT_181daa230);
+          List_1.Sort(lVar1,uVar2,DAT_181e8c868);
         }
     }
 
-    // Token : 0x6000897
-    // RVA   : 0x119D370   Offset: 0x119C770   Length: 0x7
+    // Token : 0x600087E
+    // RVA   : 0xF9A830   Offset: 0xF99630   Length: 0x7
     public int get_sortingOrder()
     {
-        uint32 FUN_18119d370(int64 this)
+        uint32 FUN_180f9a830(int64 this)
         {
         return this.mSortingOrder;
     }
 
-    // Token : 0x6000898
-    // RVA   : 0x119E160   Offset: 0x119D560   Length: 0xA8
+    // Token : 0x600087F
+    // RVA   : 0xF9B620   Offset: 0xF9A420   Length: 0xA8
     public void set_sortingOrder(int value)
     {
         uint uVar1;
@@ -316,15 +316,15 @@ public class UIPanel
           this.mSortingOrder = value;
           if (UIPanel.list == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          uVar1 = FUN_1817ebaf0(UIPanel.list,this,DAT_181daa130);
+          uVar1 = FUN_181662a20(UIPanel.list,this,DAT_181e8c770);
           UIPanel.UpdateDrawCalls(this,uVar1,0);
         }
     }
 
-    // Token : 0x6000899
-    // RVA   : 0x1197240   Offset: 0x1196640   Length: 0x128
+    // Token : 0x6000880
+    // RVA   : 0xF94700   Offset: 0xF93500   Length: 0x128
     public static int CompareFunc(UIPanel a, UIPanel b)
     {
         bool cVar1;
@@ -350,15 +350,15 @@ public class UIPanel
                 return 1;
               }
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
           }
         }
         return 0;
     }
 
-    // Token : 0x600089A
-    // RVA   : 0x119D420   Offset: 0x119C820   Length: 0x1B
+    // Token : 0x6000881
+    // RVA   : 0xF9A8E0   Offset: 0xF996E0   Length: 0x1B
     public float get_width()
     {
         uint uVar1;
@@ -366,8 +366,8 @@ public class UIPanel
         return uVar1;
     }
 
-    // Token : 0x600089B
-    // RVA   : 0x119CED0   Offset: 0x119C2D0   Length: 0x1B
+    // Token : 0x6000882
+    // RVA   : 0xF9A390   Offset: 0xF99190   Length: 0x1B
     public float get_height()
     {
         uint32 extraout_var;
@@ -375,15 +375,15 @@ public class UIPanel
         return extraout_var;
     }
 
-    // Token : 0x600089C
-    // RVA   : 0x215A90   Offset: 0x214E90   Length: 0x3
+    // Token : 0x6000883
+    // RVA   : 0x6E0510   Offset: 0x6DF310   Length: 0x3
     public bool get_halfPixelOffset()
     {
         return false;
     }
 
-    // Token : 0x600089D
-    // RVA   : 0x119D380   Offset: 0x119C780   Length: 0x92
+    // Token : 0x6000884
+    // RVA   : 0xF9A840   Offset: 0xF99640   Length: 0x92
     public bool get_usedForUI()
     {
         ulong uVar1;
@@ -399,8 +399,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x600089E
-    // RVA   : 0x119C9B0   Offset: 0x119BDB0   Length: 0x292
+    // Token : 0x6000885
+    // RVA   : 0xF99E70   Offset: 0xF98C70   Length: 0x292
     public Vector3 get_drawCallOffset()
     {
         bool cVar1;
@@ -417,7 +417,7 @@ public class UIPanel
         uVar5 = UIRect.get_anchorCamera(param_2,0);
         cVar1 = Object.op_Inequality(uVar5,0,0);
         if (!cVar1) {
-        LAB_18119cbfd:
+        LAB_180f9a0bd:
           puVar7 = (uint64 *)Vector3.get_zero(local_48,0);
           fVar8 = *(float *)(puVar7 + 1);
           *(uint64 *)this = *puVar7;
@@ -426,7 +426,7 @@ public class UIPanel
         }
         if (*(int64 *)(param_2 + 128) != 0) {
           cVar1 = Camera.get_orthographic(*(int64 *)(param_2 + 128),0);
-          if (!cVar1) goto LAB_18119cbfd;
+          if (!cVar1) goto LAB_180f9a0bd;
           lVar6 = UIRect.get_root(param_2,0);
           uVar5 = NGUITools.get_screenSize(0);
           cVar1 = Object.op_Inequality(lVar6,0,0);
@@ -471,17 +471,17 @@ public class UIPanel
         }
     }
 
-    // Token : 0x600089F
-    // RVA   : 0x119C980   Offset: 0x119BD80   Length: 0x7
+    // Token : 0x6000886
+    // RVA   : 0xF99E40   Offset: 0xF98C40   Length: 0x7
     public Clipping get_clipping()
     {
-        uint32 FUN_18119c980(int64 this)
+        uint32 FUN_180f99e40(int64 this)
         {
         return this.mClipping;
     }
 
-    // Token : 0x60008A0
-    // RVA   : 0x119DF70   Offset: 0x119D370   Length: 0x20
+    // Token : 0x6000887
+    // RVA   : 0xF9B430   Offset: 0xF9A230   Length: 0x20
     public void set_clipping(Clipping value)
     {
         if (this.mClipping != value) {
@@ -491,17 +491,17 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008A1
-    // RVA   : 0xF08A20   Offset: 0xF07E20   Length: 0x8
+    // Token : 0x6000888
+    // RVA   : 0xC7BC50   Offset: 0xC7AA50   Length: 0x8
     public UIPanel get_parentPanel()
     {
-        uint64 FUN_180f08a20(int64 this)
+        uint64 FUN_180c7bc50(int64 this)
         {
         return *(uint64 *)(this + 400);
     }
 
-    // Token : 0x60008A2
-    // RVA   : 0x119C8A0   Offset: 0x119BCA0   Length: 0x90
+    // Token : 0x6000889
+    // RVA   : 0xF99D60   Offset: 0xF98B60   Length: 0x90
     public int get_clipCount()
     {
         bool cVar1;
@@ -512,7 +512,7 @@ public class UIPanel
           if (!cVar1) break;
           if (this == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if ((this.mClipping - 1U & 0xfffffffd) == 0) {
             iVar2 = iVar2 + 1;
@@ -522,8 +522,8 @@ public class UIPanel
         return iVar2;
     }
 
-    // Token : 0x60008A3
-    // RVA   : 0x119CE10   Offset: 0x119C210   Length: 0x15
+    // Token : 0x600088A
+    // RVA   : 0xF9A2D0   Offset: 0xF990D0   Length: 0x15
     public bool get_hasClipping()
     {
         int iVar1;
@@ -534,8 +534,8 @@ public class UIPanel
         return CONCAT31((int3)((uint32)iVar1 >> 8),iVar1 == 1);
     }
 
-    // Token : 0x60008A4
-    // RVA   : 0x119CE30   Offset: 0x119C230   Length: 0x93
+    // Token : 0x600088B
+    // RVA   : 0xF9A2F0   Offset: 0xF990F0   Length: 0x93
     public bool get_hasCumulativeClipping()
     {
         bool cVar1;
@@ -546,7 +546,7 @@ public class UIPanel
           if (!cVar1) break;
           if (this == 0) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if ((this.mClipping - 1U & 0xfffffffd) == 0) {
             iVar2 = iVar2 + 1;
@@ -556,26 +556,26 @@ public class UIPanel
         return iVar2 != 0;
     }
 
-    // Token : 0x60008A5
-    // RVA   : 0x119C990   Offset: 0x119BD90   Length: 0x7
+    // Token : 0x600088C
+    // RVA   : 0xF99E50   Offset: 0xF98C50   Length: 0x7
     public bool get_clipsChildren()
     {
-        void FUN_18119c990(uint64 this)
+        void FUN_180f99e50(uint64 this)
         {
         UIPanel.get_hasCumulativeClipping(this,0);
     }
 
-    // Token : 0x60008A6
-    // RVA   : 0x119C940   Offset: 0x119BD40   Length: 0x19
+    // Token : 0x600088D
+    // RVA   : 0xF99E00   Offset: 0xF98C00   Length: 0x19
     public Vector2 get_clipOffset()
     {
-        uint64 FUN_18119c940(int64 this)
+        uint64 FUN_180f99e00(int64 this)
         {
         return this.mClipOffset;
     }
 
-    // Token : 0x60008A7
-    // RVA   : 0x119DDF0   Offset: 0x119D1F0   Length: 0x7F
+    // Token : 0x600088E
+    // RVA   : 0xF9B2B0   Offset: 0xF9A0B0   Length: 0x7F
     public void set_clipOffset(Vector2 value)
     {
         float fVar1;
@@ -593,8 +593,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008A8
-    // RVA   : 0x1199320   Offset: 0x1198720   Length: 0x19D
+    // Token : 0x600088F
+    // RVA   : 0xF967E0   Offset: 0xF955E0   Length: 0x19D
     private void InvalidateClipping()
     {
         int iVar1;
@@ -606,18 +606,18 @@ public class UIPanel
         iVar5 = 0;
         this.mMatrixFrame = 0xffffffff;
         if (UIPanel.list == null) {
-        LAB_1811994b8:
+        LAB_180f96978:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         iVar1 = *(int *)(UIPanel.list + 24);
         if (0 < iVar1) {
           do {
-            if (UIPanel.list == null) goto LAB_1811994b8;
-            lVar4 = FUN_180002f80(UIPanel.list,iVar5,DAT_181daa330);
+            if (UIPanel.list == null) goto LAB_180f96978;
+            lVar4 = FUN_1800024b0(UIPanel.list,iVar5,DAT_181e8c968);
             cVar3 = Object.op_Inequality(lVar4,this,0);
             if (cVar3) {
-              if (lVar4 == null) goto LAB_1811994b8;
+              if (lVar4 == null) goto LAB_180f96978;
               uVar2 = *(uint64 *)(lVar4 + 400);
               cVar3 = Object.op_Equality(uVar2,this,0);
               if (cVar3) {
@@ -629,17 +629,17 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008A9
-    // RVA   : 0xD70CC0   Offset: 0xD700C0   Length: 0x8
+    // Token : 0x6000890
+    // RVA   : 0xACC2D0   Offset: 0xACB0D0   Length: 0x8
     public Texture2D get_clipTexture()
     {
-        uint64 FUN_180d70cc0(int64 this)
+        uint64 FUN_180acc2d0(int64 this)
         {
         return this.mClipTexture;
     }
 
-    // Token : 0x60008AA
-    // RVA   : 0x119DEE0   Offset: 0x119D2E0   Length: 0x8E
+    // Token : 0x6000891
+    // RVA   : 0xF9B3A0   Offset: 0xF9A1A0   Length: 0x8E
     public void set_clipTexture(Texture2D value)
     {
         ulong uVar1;
@@ -651,11 +651,11 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008AB
-    // RVA   : 0x119C880   Offset: 0x119BC80   Length: 0xE
+    // Token : 0x6000892
+    // RVA   : 0xF99D40   Offset: 0xF98B40   Length: 0xE
     public Vector4 get_clipRange()
     {
-        uint64 * FUN_18119c880(uint64 *this,int64 param_2)
+        uint64 * FUN_180f99d40(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x140);
@@ -664,8 +664,8 @@ public class UIPanel
         return this;
     }
 
-    // Token : 0x60008AC
-    // RVA   : 0x119DE70   Offset: 0x119D270   Length: 0x1E
+    // Token : 0x6000893
+    // RVA   : 0xF9B330   Offset: 0xF9A130   Length: 0x1E
     public void set_clipRange(Vector4 value)
     {
         uint local_18;
@@ -679,11 +679,11 @@ public class UIPanel
         UIPanel.set_baseClipRegion(local_18,&local_18,0);
     }
 
-    // Token : 0x60008AD
-    // RVA   : 0x119C880   Offset: 0x119BC80   Length: 0xE
+    // Token : 0x6000894
+    // RVA   : 0xF99D40   Offset: 0xF98B40   Length: 0xE
     public Vector4 get_baseClipRegion()
     {
-        uint64 * FUN_18119c880(uint64 *this,int64 param_2)
+        uint64 * FUN_180f99d40(uint64 *this,int64 param_2)
         {
         uint64 uVar1;
         uVar1 = *(uint64 *)(param_2 + 0x140);
@@ -692,8 +692,8 @@ public class UIPanel
         return this;
     }
 
-    // Token : 0x60008AE
-    // RVA   : 0x119DCB0   Offset: 0x119D0B0   Length: 0x131
+    // Token : 0x6000895
+    // RVA   : 0xF9B170   Offset: 0xF99F70   Length: 0x131
     public void set_baseClipRegion(Vector4 value)
     {
         long lVar1;
@@ -716,12 +716,12 @@ public class UIPanel
           *(float *)(this + 0x13c) = fVar3;
           *(float *)(this + 0x140) = fVar4;
           *(float *)(this + 0x144) = fVar5;
-          lVar1 = Component.GetComponent(this,DAT_181d96df8);
+          lVar1 = Component.GetComponent(this,DAT_181e7a1b8);
           cVar6 = Object.op_Inequality(lVar1,0,0);
           if (cVar6) {
             if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             UIScrollView.UpdatePosition(lVar1,0);
           }
@@ -731,8 +731,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008AF
-    // RVA   : 0x119CC50   Offset: 0x119C050   Length: 0x1BD
+    // Token : 0x6000896
+    // RVA   : 0xF9A110   Offset: 0xF98F10   Length: 0x1BD
     public Vector4 get_finalClipRegion()
     {
         float fVar1;
@@ -755,13 +755,13 @@ public class UIPanel
         if (*(int *)(param_2 + 0x134) != 0) {
           local_48 = 0;
           uStack_40 = 0;
-          FUN_1809dcfa0(&local_48,*(float *)(param_2 + 0x164) + *(float *)(param_2 + 0x138),
+          FUN_1807282e0(&local_48,*(float *)(param_2 + 0x164) + *(float *)(param_2 + 0x138),
                         *(float *)(param_2 + 0x168) + *(float *)(param_2 + 0x13c),local_res8,fStackX_c,0);
           *(uint64 *)this = local_48;
           *(uint64 *)(this + 2) = uStack_40;
           return this;
         }
-        FUN_1809dcfa0(&local_38,0,0,local_res8,fStackX_c,0);
+        FUN_1807282e0(&local_38,0,0,local_res8,fStackX_c,0);
         lVar3 = UIRect.get_anchorCamera(param_2,0);
         lVar4 = UIRect.get_cachedTransform(param_2,0);
         if (lVar4 != null) {
@@ -780,20 +780,20 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008B0
-    // RVA   : 0x119C960   Offset: 0x119BD60   Length: 0x19
+    // Token : 0x6000897
+    // RVA   : 0xF99E20   Offset: 0xF98C20   Length: 0x19
     public Vector2 get_clipSoftness()
     {
-        uint64 FUN_18119c960(int64 this)
+        uint64 FUN_180f99e20(int64 this)
         {
         return this.mClipSoftness;
     }
 
-    // Token : 0x60008B1
-    // RVA   : 0x119DE90   Offset: 0x119D290   Length: 0x46
+    // Token : 0x6000898
+    // RVA   : 0xF9B350   Offset: 0xF9A150   Length: 0x46
     public void set_clipSoftness(Vector2 value)
     {
-        void FUN_18119de90(int64 this,uint64 value)
+        void FUN_180f9b350(int64 this,uint64 value)
         {
         float fVar1;
         float fVar2;
@@ -804,8 +804,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008B2
-    // RVA   : 0x119CEF0   Offset: 0x119C2F0   Length: 0x349
+    // Token : 0x6000899
+    // RVA   : 0xF9A3B0   Offset: 0xF991B0   Length: 0x349
     public override Vector3[] get_localCorners()
     {
         long lVar1;
@@ -829,7 +829,7 @@ public class UIPanel
             if (*(uint32 *)(lVar1 + 24) <= uVar6) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (lVar2 == null) break;
             local_68 = *(uint64 *)(lVar1 + 32 + lVar5 * 12);
@@ -838,7 +838,7 @@ public class UIPanel
             if (*(uint32 *)(lVar1 + 24) <= uVar6) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             uVar6 = uVar6 + 1;
             *(uint64 *)(lVar1 + 32 + lVar5 * 12) = *puVar3;
@@ -862,7 +862,7 @@ public class UIPanel
             if (*(int *)(lVar1 + 24) == 0) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             *(uint64 *)(lVar1 + 32) = local_68;
             *(uint32 *)(lVar1 + 40) = 0;
@@ -873,7 +873,7 @@ public class UIPanel
               if (*(uint32 *)(lVar1 + 24) < 2) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
               *(uint64 *)(lVar1 + 44) = local_68;
               *(uint32 *)(lVar1 + 52) = 0;
@@ -884,7 +884,7 @@ public class UIPanel
                 if (*(uint32 *)(lVar1 + 24) < 3) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 *(uint64 *)(lVar1 + 56) = local_68;
                 *(uint32 *)(lVar1 + 64) = 0;
@@ -899,7 +899,7 @@ public class UIPanel
                   }
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
               }
             }
@@ -907,8 +907,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008B3
-    // RVA   : 0x119D440   Offset: 0x119C840   Length: 0x6FC
+    // Token : 0x600089A
+    // RVA   : 0xF9A900   Offset: 0xF99700   Length: 0x6FC
     public override Vector3[] get_worldCorners()
     {
         bool cVar1;
@@ -946,7 +946,7 @@ public class UIPanel
             if (*(int *)(lVar3 + 24) == 0) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar3 + 32) = local_78;
             *(uint32 *)(lVar3 + 40) = 0;
@@ -956,7 +956,7 @@ public class UIPanel
               if (*(uint32 *)(lVar3 + 24) < 2) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar3 + 44) = local_78;
               *(uint32 *)(lVar3 + 52) = 0;
@@ -966,7 +966,7 @@ public class UIPanel
                 if (*(uint32 *)(lVar3 + 24) < 3) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 *(uint64 *)(lVar3 + 56) = local_78;
                 *(uint32 *)(lVar3 + 64) = 0;
@@ -976,7 +976,7 @@ public class UIPanel
                   if (*(uint32 *)(lVar3 + 24) < 4) {
                     uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar2,0);
+                    FUN_1801e02d0(uVar2,0);
                   }
                   *(uint64 *)(lVar3 + 68) = local_78;
                   *(uint32 *)(lVar3 + 76) = 0;
@@ -987,10 +987,10 @@ public class UIPanel
                       if ((*(int64 *)(this + 128) == 0) ||
                          (lVar3 = Component.get_transform(*(int64 *)(this + 128),0)) == null)
                       throw; // [null/range check failed]
-                      uVar2 = FUN_180daa030(lVar3,0);
+                      uVar2 = FUN_180b05920(lVar3,0);
                       uVar4 = UIRect.get_cachedTransform(this,0);
                       cVar1 = Object.op_Inequality(uVar2,uVar4,0);
-                      if (!cVar1) goto LAB_18119da6f;
+                      if (!cVar1) goto LAB_180f9af2f;
                     }
                     lVar3 = UIRect.get_cachedTransform(this,0);
                     if (lVar3 == null) throw; // [null/range check failed]
@@ -1005,7 +1005,7 @@ public class UIPanel
                       if (*(uint32 *)(lVar3 + 24) <= uVar7) {
                         uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar2,0);
+                        FUN_1801e02d0(uVar2,0);
                       }
                       lVar6 = (int64)(int)uVar7;
                       uVar2 = *(uint64 *)(lVar3 + 32 + lVar6 * 12);
@@ -1017,7 +1017,7 @@ public class UIPanel
                            fVar9 + *(float *)(lVar3 + 40 + lVar6 * 12);
                     } while ((int)uVar7 < 4);
                   }
-        LAB_18119da6f:
+        LAB_180f9af2f:
                   return UIPanel.mCorners;
                 }
               }
@@ -1039,7 +1039,7 @@ public class UIPanel
             if (*(int *)(lVar6 + 24) == 0) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar6 + 32) = *puVar5;
             *(uint32 *)(lVar6 + 40) = *(uint32 *)(puVar5 + 1);
@@ -1049,7 +1049,7 @@ public class UIPanel
               if (*(uint32 *)(lVar6 + 24) < 2) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar6 + 44) = *puVar5;
               *(uint32 *)(lVar6 + 52) = *(uint32 *)(puVar5 + 1);
@@ -1059,7 +1059,7 @@ public class UIPanel
                 if (*(uint32 *)(lVar6 + 24) < 3) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 *(uint64 *)(lVar6 + 56) = *puVar5;
                 *(uint32 *)(lVar6 + 64) = *(uint32 *)(puVar5 + 1);
@@ -1069,11 +1069,11 @@ public class UIPanel
                   if (*(uint32 *)(lVar6 + 24) < 4) {
                     uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar2,0);
+                    FUN_1801e02d0(uVar2,0);
                   }
                   *(uint64 *)(lVar6 + 68) = *puVar5;
                   *(uint32 *)(lVar6 + 76) = *(uint32 *)(puVar5 + 1);
-                  goto LAB_18119da6f;
+                  goto LAB_180f9af2f;
                 }
               }
             }
@@ -1081,11 +1081,11 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008B4
-    // RVA   : 0x1198B10   Offset: 0x1197F10   Length: 0x67A
+    // Token : 0x600089B
+    // RVA   : 0xF95FD0   Offset: 0xF94DD0   Length: 0x67A
     public override Vector3[] GetSides(Transform relativeTo)
     {
-        var pStatics = *(int64*)(DAT_181db0110 + 184);
+        var pStatics = *(int64*)(DAT_181e90550 + 184);
         bool cVar1;
         ulong uVar2;
         long lVar3;
@@ -1131,7 +1131,7 @@ public class UIPanel
               if (*(uint32 *)(lVar3 + 24) <= uVar6) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               lVar4 = (int64)(int)uVar6;
               local_98 = *(uint64 *)(lVar3 + 32 + lVar4 * 12);
@@ -1150,7 +1150,7 @@ public class UIPanel
                 if (*(uint32 *)(lVar3 + 24) <= uVar7) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 if (relativeTo == null) throw; // [null/range check failed]
                 local_98 = *(uint64 *)(lVar3 + 32 + lVar4 * 12);
@@ -1159,7 +1159,7 @@ public class UIPanel
                 if (*(uint32 *)(lVar3 + 24) <= uVar7) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 uVar7 = uVar7 + 1;
                 *(uint64 *)(lVar3 + 32 + lVar4 * 12) = *puVar5;
@@ -1186,7 +1186,7 @@ public class UIPanel
             if (*(int *)(lVar4 + 24) == 0) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             *(uint64 *)(lVar4 + 32) = *puVar5;
             *(uint32 *)(lVar4 + 40) = *(uint32 *)(puVar5 + 1);
@@ -1196,7 +1196,7 @@ public class UIPanel
               if (*(uint32 *)(lVar4 + 24) < 2) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               *(uint64 *)(lVar4 + 44) = *puVar5;
               *(uint32 *)(lVar4 + 52) = *(uint32 *)(puVar5 + 1);
@@ -1206,7 +1206,7 @@ public class UIPanel
                 if (*(uint32 *)(lVar4 + 24) < 3) {
                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar2,0);
+                  FUN_1801e02d0(uVar2,0);
                 }
                 *(uint64 *)(lVar4 + 56) = *puVar5;
                 *(uint32 *)(lVar4 + 64) = *(uint32 *)(puVar5 + 1);
@@ -1216,7 +1216,7 @@ public class UIPanel
                   if (*(uint32 *)(lVar4 + 24) < 4) {
                     uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar2,0);
+                    FUN_1801e02d0(uVar2,0);
                   }
                   *(uint64 *)(lVar4 + 68) = *puVar5;
                   *(uint32 *)(lVar4 + 76) = *(uint32 *)(puVar5 + 1);
@@ -1229,7 +1229,7 @@ public class UIPanel
                       if (*(uint32 *)(lVar3 + 24) <= uVar6) {
                         uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar2,0);
+                        FUN_1801e02d0(uVar2,0);
                       }
                       if (relativeTo == null) throw; // [null/range check failed]
                       local_98 = *(uint64 *)(lVar3 + 32 + lVar4 * 12);
@@ -1239,7 +1239,7 @@ public class UIPanel
                       if (*(uint32 *)(lVar3 + 24) <= uVar6) {
                         uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar2,0);
+                        FUN_1801e02d0(uVar2,0);
                       }
                       uVar6 = uVar6 + 1;
                       *(uint64 *)(lVar3 + 32 + lVar4 * 12) = *puVar5;
@@ -1254,18 +1254,18 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008B5
-    // RVA   : 0x11994C0   Offset: 0x11988C0   Length: 0x12
+    // Token : 0x600089C
+    // RVA   : 0xF96980   Offset: 0xF95780   Length: 0x12
     public override void Invalidate(bool includeChildren)
     {
-        void FUN_1811994c0(int64 this,uint64 includeChildren)
+        void FUN_180f96980(int64 this,uint64 includeChildren)
         {
         this.mAlphaFrameID = 0xffffffff;
         UIRect.Invalidate(this,includeChildren,0);
     }
 
-    // Token : 0x60008B6
-    // RVA   : 0x1197150   Offset: 0x1196550   Length: 0xE6
+    // Token : 0x600089D
+    // RVA   : 0xF94610   Offset: 0xF93410   Length: 0xE6
     public override float CalculateFinalAlpha(int frameID)
     {
         bool cVar1;
@@ -1282,7 +1282,7 @@ public class UIPanel
           else {
             if (plVar2 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             fVar4 = (float)(**(code **)(*plVar2 + 0x1c8))(plVar2,frameID,*(uint64 *)(*plVar2 + 0x1d0))
             ;
@@ -1293,8 +1293,8 @@ public class UIPanel
         return *(uint32 *)(this + 140);
     }
 
-    // Token : 0x60008B7
-    // RVA   : 0x119B1E0   Offset: 0x119A5E0   Length: 0x2F9
+    // Token : 0x600089E
+    // RVA   : 0xF986A0   Offset: 0xF974A0   Length: 0x2F9
     public override void SetRect(float x, float y, float width, float height)
     {
         ulong uVar1;
@@ -1320,7 +1320,7 @@ public class UIPanel
           fVar6 = floorf(y + 0.5);
           local_78 = 0;
           uStack_70 = 0;
-          FUN_1809dcfa0(&local_78,fVar5,fVar6);
+          FUN_1807282e0(&local_78,fVar5,fVar6);
           local_68 = local_78;
           uStack_60 = uStack_70;
           UIPanel.set_baseClipRegion(this,&local_68,0);
@@ -1328,7 +1328,7 @@ public class UIPanel
           if (!cVar2) {
             return;
           }
-          uVar4 = FUN_180daa030(lVar3,0);
+          uVar4 = FUN_180b05920(lVar3,0);
           if (*(int64 *)(this + 24) != 0) {
             uVar1 = *(uint64 *)(*(int64 *)(this + 24) + 16);
             cVar2 = Object.op_Implicit(uVar1,0);
@@ -1365,8 +1365,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008B8
-    // RVA   : 0x1199780   Offset: 0x1198B80   Length: 0x44E
+    // Token : 0x600089F
+    // RVA   : 0xF96C40   Offset: 0xF95A40   Length: 0x44E
     public bool IsVisible(Vector3 a, Vector3 b, Vector3 c, Vector3 d)
     {
         uint uVar1;
@@ -1388,37 +1388,37 @@ public class UIPanel
             if (!cVar2) {
               return true;
             }
-            if (this == 0) goto LAB_1811996af;
+            if (this == 0) goto LAB_180f96b6f;
             if ((this.mClipping & 0xfffffffb) == 0) break;
-        LAB_181199582:
+        LAB_180f96a42:
             if ((lVar3 == null) &&
                ((a == (int64 *)0 ||
                 (lVar3 = (**(code **)(*a + 0x1e8))(a,*(uint64 *)(*a + 0x1f0)),
                 lVar3 == null)))) {
-        LAB_1811996af:
+        LAB_180f96b6f:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             uVar1 = *(uint32 *)(lVar3 + 24);
             if (uVar1 == 0) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 2) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 3) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 4) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             local_40 = *(uint32 *)(lVar3 + 76);
             local_48 = *(uint64 *)(lVar3 + 68);
@@ -1434,14 +1434,14 @@ public class UIPanel
             }
             this = *(int64 *)(this + 400);
           }
-          if (a == (int64 *)0) goto LAB_1811996af;
-          if (*(char *)((int64)a + 209) != false) goto LAB_181199582;
+          if (a == (int64 *)0) goto LAB_180f96b6f;
+          if (*(char *)((int64)a + 209) != false) goto LAB_180f96a42;
           this = *(int64 *)(this + 400);
         } while( true );
     }
 
-    // Token : 0x60008B9
-    // RVA   : 0x11996C0   Offset: 0x1198AC0   Length: 0xBA
+    // Token : 0x60008A0
+    // RVA   : 0xF96B80   Offset: 0xF95980   Length: 0xBA
     public bool IsVisible(Vector3 worldPos)
     {
         uint uVar1;
@@ -1463,37 +1463,37 @@ public class UIPanel
             if (!cVar2) {
               return true;
             }
-            if (this == 0) goto LAB_1811996af;
+            if (this == 0) goto LAB_180f96b6f;
             if ((this.mClipping & 0xfffffffb) == 0) break;
-        LAB_181199582:
+        LAB_180f96a42:
             if ((lVar3 == null) &&
                ((worldPos == (int64 *)0 ||
                 (lVar3 = (**(code **)(*worldPos + 0x1e8))(worldPos,*(uint64 *)(*worldPos + 0x1f0)),
                 lVar3 == null)))) {
-        LAB_1811996af:
+        LAB_180f96b6f:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             uVar1 = *(uint32 *)(lVar3 + 24);
             if (uVar1 == 0) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 2) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 3) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 4) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             local_40 = *(uint32 *)(lVar3 + 76);
             local_48 = *(uint64 *)(lVar3 + 68);
@@ -1509,14 +1509,14 @@ public class UIPanel
             }
             this = *(int64 *)(this + 400);
           }
-          if (worldPos == (int64 *)0) goto LAB_1811996af;
-          if (*(char *)((int64)worldPos + 209) != false) goto LAB_181199582;
+          if (worldPos == (int64 *)0) goto LAB_180f96b6f;
+          if (*(char *)((int64)worldPos + 209) != false) goto LAB_180f96a42;
           this = *(int64 *)(this + 400);
         } while( true );
     }
 
-    // Token : 0x60008BA
-    // RVA   : 0x11994E0   Offset: 0x11988E0   Length: 0x1D4
+    // Token : 0x60008A1
+    // RVA   : 0xF969A0   Offset: 0xF957A0   Length: 0x1D4
     public bool IsVisible(UIWidget w)
     {
         uint uVar1;
@@ -1538,37 +1538,37 @@ public class UIPanel
             if (!cVar2) {
               return true;
             }
-            if (this == 0) goto LAB_1811996af;
+            if (this == 0) goto LAB_180f96b6f;
             if ((this.mClipping & 0xfffffffb) == 0) break;
-        LAB_181199582:
+        LAB_180f96a42:
             if ((lVar3 == null) &&
                ((w == (int64 *)0 ||
                 (lVar3 = (**(code **)(*w + 0x1e8))(w,*(uint64 *)(*w + 0x1f0)),
                 lVar3 == null)))) {
-        LAB_1811996af:
+        LAB_180f96b6f:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             uVar1 = *(uint32 *)(lVar3 + 24);
             if (uVar1 == 0) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 2) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 3) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             if (uVar1 < 4) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             local_40 = *(uint32 *)(lVar3 + 76);
             local_48 = *(uint64 *)(lVar3 + 68);
@@ -1584,14 +1584,14 @@ public class UIPanel
             }
             this = *(int64 *)(this + 400);
           }
-          if (w == (int64 *)0) goto LAB_1811996af;
-          if (*(char *)((int64)w + 209) != false) goto LAB_181199582;
+          if (w == (int64 *)0) goto LAB_180f96b6f;
+          if (*(char *)((int64)w + 209) != false) goto LAB_180f96a42;
           this = *(int64 *)(this + 400);
         } while( true );
     }
 
-    // Token : 0x60008BB
-    // RVA   : 0x1196E80   Offset: 0x1196280   Length: 0x14A
+    // Token : 0x60008A2
+    // RVA   : 0xF94340   Offset: 0xF93140   Length: 0x14A
     public bool Affects(UIWidget w)
     {
         ulong uVar1;
@@ -1599,9 +1599,9 @@ public class UIPanel
         cVar2 = Object.op_Equality(w,0,0);
         if (!cVar2) {
           if (w == null) {
-        LAB_181196fc5:
+        LAB_180f94485:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar1 = *(uint64 *)(w + 232);
           cVar2 = Object.op_Equality(uVar1,0,0);
@@ -1613,7 +1613,7 @@ public class UIPanel
               if (cVar2) {
                 return true;
               }
-              if (this == 0) goto LAB_181196fc5;
+              if (this == 0) goto LAB_180f94485;
               cVar2 = UIPanel.get_hasCumulativeClipping(this);
               if (!cVar2) {
                 return false;
@@ -1625,15 +1625,15 @@ public class UIPanel
         return false;
     }
 
-    // Token : 0x60008BC
-    // RVA   : 0x119AED0   Offset: 0x119A2D0   Length: 0x8
+    // Token : 0x60008A3
+    // RVA   : 0xF98390   Offset: 0xF97190   Length: 0x8
     public void RebuildAllDrawCalls()
     {
         this.mRebuild = 1;
     }
 
-    // Token : 0x60008BD
-    // RVA   : 0x119B100   Offset: 0x119A500   Length: 0xD4
+    // Token : 0x60008A4
+    // RVA   : 0xF985C0   Offset: 0xF973C0   Length: 0xD4
     public void SetDirty()
     {
         long lVar1;
@@ -1661,24 +1661,24 @@ public class UIPanel
               lVar5 = lVar5 + 8;
             } while ((int64)uVar3 < lVar2);
           }
-                          // WARNING: Could not recover jumptable at 0x00018119b1c8. Too many branches
+                          // WARNING: Could not recover jumptable at 0x000180f98688. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x1f8))(this,1,*(uint64 *)(*this + 0x200));
           return;
         }
     }
 
-    // Token : 0x60008BE
-    // RVA   : 0x1196FD0   Offset: 0x11963D0   Length: 0x7
+    // Token : 0x60008A5
+    // RVA   : 0xF94490   Offset: 0xF93290   Length: 0x7
     protected override void Awake()
     {
-        void FUN_181196fd0(uint64 this)
+        void FUN_180f94490(uint64 this)
         {
         UIRect.Awake(this,0);
     }
 
-    // Token : 0x60008BF
-    // RVA   : 0x11986E0   Offset: 0x1197AE0   Length: 0xFA
+    // Token : 0x60008A6
+    // RVA   : 0xF95BA0   Offset: 0xF949A0   Length: 0xFA
     private void FindParent()
     {
         bool cVar1;
@@ -1686,7 +1686,7 @@ public class UIPanel
         ulong uVar3;
         lVar2 = UIRect.get_cachedTransform(this,0);
         if (lVar2 != null) {
-          lVar2 = FUN_180daa030(lVar2,0);
+          lVar2 = FUN_180b05920(lVar2,0);
           cVar1 = Object.op_Inequality(lVar2,0,0);
           if (!cVar1) {
             uVar3 = 0;
@@ -1694,7 +1694,7 @@ public class UIPanel
           else {
             if (lVar2 == null) throw; // [null/range check failed]
             uVar3 = Component.get_gameObject(lVar2,0);
-            uVar3 = NGUITools.FindInParents(uVar3,DAT_181d8f4b8);
+            uVar3 = NGUITools.FindInParents(uVar3,DAT_181e72af8);
           }
           if (this != 0) {
             *(uint64 *)(this + 400) = uVar3;
@@ -1703,16 +1703,16 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008C0
-    // RVA   : 0x119AEB0   Offset: 0x119A2B0   Length: 0x1F
+    // Token : 0x60008A7
+    // RVA   : 0xF98370   Offset: 0xF97170   Length: 0x1F
     public override void ParentHasChanged()
     {
         UIRect.ParentHasChanged(this,0);
         UIPanel.FindParent(this,0);
     }
 
-    // Token : 0x60008C1
-    // RVA   : 0x119AE70   Offset: 0x119A270   Length: 0x30
+    // Token : 0x60008A8
+    // RVA   : 0xF98330   Offset: 0xF97130   Length: 0x30
     protected override void OnStart()
     {
         uint uVar1;
@@ -1725,8 +1725,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008C2
-    // RVA   : 0x119AAF0   Offset: 0x1199EF0   Length: 0x45
+    // Token : 0x60008A9
+    // RVA   : 0xF97FB0   Offset: 0xF96DB0   Length: 0x45
     protected override void OnEnable()
     {
         *(uint8 *)(this + 44) = 1;
@@ -1736,21 +1736,21 @@ public class UIPanel
         *(uint32 *)((int64)this + 0x16c) = 0xffffffff;
     }
 
-    // Token : 0x60008C3
-    // RVA   : 0x119AB40   Offset: 0x1199F40   Length: 0x327
+    // Token : 0x60008AA
+    // RVA   : 0xF98000   Offset: 0xF96E00   Length: 0x327
     protected override void OnInit()
     {
         bool cVar1;
         ulong uVar2;
         long lVar3;
         if (UIPanel.list == null) throw; // [null/range check failed]
-        cVar1 = FUN_18181ea10(UIPanel.list,this,DAT_181daa0b0);
+        cVar1 = FUN_18175e190(UIPanel.list,this,DAT_181e8c6f0);
         if (cVar1) {
           return;
         }
         UIRect.OnInit(this,0);
         UIPanel.FindParent(this,0);
-        uVar2 = Component.GetComponent(this,DAT_181d950f8);
+        uVar2 = Component.GetComponent(this,DAT_181e78438);
         cVar1 = Object.op_Equality(uVar2,0,0);
         if (cVar1) {
           uVar2 = *(uint64 *)(this + 400);
@@ -1763,14 +1763,14 @@ public class UIPanel
             }
             else {
               if (*(int64 *)(this + 128) == 0) throw; // [null/range check failed]
-              lVar3 = Component.GetComponent(*(int64 *)(this + 128),DAT_181d96878);
+              lVar3 = Component.GetComponent(*(int64 *)(this + 128),DAT_181e79c38);
             }
             cVar1 = Object.op_Inequality(lVar3,0,0);
             if (cVar1) {
               if (lVar3 == null) throw; // [null/range check failed]
               if (*(uint32 *)(lVar3 + 24) < 2) {
                 lVar3 = Component.get_gameObject(this,0);
-                if ((lVar3 == null) || (lVar3 = GameObject.AddComponent(lVar3,DAT_181dc5b28)) == null)
+                if ((lVar3 == null) || (lVar3 = GameObject.AddComponent(lVar3,DAT_181e51bc0)) == null)
                 throw; // [null/range check failed]
                 Rigidbody.set_isKinematic(lVar3,1,0);
                 Rigidbody.set_useGravity(lVar3,0,0);
@@ -1781,18 +1781,18 @@ public class UIPanel
         this.mRebuild = 1;
         this.mMatrixFrame = 0xffffffffffffffff;
         if (UIPanel.list != null) {
-          FUN_18181e6b0(UIPanel.list,this,DAT_181daa030);
+          FUN_18175de30(UIPanel.list,this,DAT_181e8c670);
           lVar3 = UIPanel.list;
-          uVar2 = new OnTooltipCB(0,DAT_181dc6130,DAT_181dab8d0);
+          uVar2 = new OnTooltipCB(0,DAT_181e523e8,DAT_181e8c290);
           if (lVar3 != null) {
-            List_1.Sort(lVar3,uVar2,DAT_181daa230);
+            List_1.Sort(lVar3,uVar2,DAT_181e8c868);
             return;
           }
         }
     }
 
-    // Token : 0x60008C4
-    // RVA   : 0x119A880   Offset: 0x1199C80   Length: 0x262
+    // Token : 0x60008AB
+    // RVA   : 0xF97D40   Offset: 0xF96B40   Length: 0x262
     protected override void OnDisable()
     {
         int iVar1;
@@ -1827,9 +1827,9 @@ public class UIPanel
             lVar7 = this.drawCalls;
             if (lVar7 == null) throw; // [null/range check failed]
           }
-          FUN_1812fa020(lVar7,DAT_181da97b0);
+          FUN_18115d8f0(lVar7,DAT_181e8bdf0);
           if (UIPanel.list != null) {
-            FUN_1817ef410(UIPanel.list,this,DAT_181daa1b0);
+            FUN_181665e90(UIPanel.list,this,DAT_181e8c7f0);
             this.mMatrixFrame = 0xffffffffffffffff;
             if (UIPanel.list != null) {
               if (*(int *)(UIPanel.list + 24) == 0) {
@@ -1843,8 +1843,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008C5
-    // RVA   : 0x119BFD0   Offset: 0x119B3D0   Length: 0x105
+    // Token : 0x60008AC
+    // RVA   : 0xF99490   Offset: 0xF98290   Length: 0x105
     private void UpdateTransformMatrix()
     {
         uint uVar1;
@@ -1864,7 +1864,7 @@ public class UIPanel
           lVar5 = UIRect.get_cachedTransform(this,0);
           if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           puVar6 = (uint64 *)Transform.get_worldToLocalMatrix(local_48,lVar5,0);
           uVar7 = puVar6[1];
@@ -1899,8 +1899,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008C6
-    // RVA   : 0x1199E70   Offset: 0x1199270   Length: 0xA0C
+    // Token : 0x60008AD
+    // RVA   : 0xF97330   Offset: 0xF96130   Length: 0xA0C
     protected override void OnAnchor()
     {
         ulong uVar1;
@@ -1935,23 +1935,23 @@ public class UIPanel
         }
         lVar3 = UIRect.get_cachedTransform(this,0);
         uVar8 = local_d8;
-        if (lVar3 == null) goto LAB_18119a7b7;
-        uVar4 = FUN_180daa030(lVar3,0);
+        if (lVar3 == null) goto LAB_180f97c77;
+        uVar4 = FUN_180b05920(lVar3,0);
         uVar5 = UIPanel.GetViewSize(this,0);
         puVar6 = (uint64 *)Transform.get_localPosition(&local_d8,lVar3,0);
         local_c8 = *puVar6;
         uStack_b0 = *(uint32 *)(puVar6 + 1);
         uVar8 = local_d8;
         local_b8 = local_c8;
-        if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+        if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
         uVar1 = *(uint64 *)(*(int64 *)(this + 24) + 16);
-        if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+        if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
         uVar8 = *(uint64 *)(*(int64 *)(this + 40) + 16);
         cVar2 = Object.op_Equality(uVar1,uVar8,0);
         if (!cVar2) {
-        LAB_18119a247:
+        LAB_180f97707:
           uVar8 = local_d8;
-          if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
           uVar8 = *(uint64 *)(*(int64 *)(this + 24) + 16);
           cVar2 = Object.op_Implicit(uVar8,0);
           local_res8 = (float)uVar5;
@@ -1960,38 +1960,38 @@ public class UIPanel
           }
           else {
             uVar8 = local_d8;
-            if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+            if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
             lVar3 = AnchorPoint.GetSides(*(int64 *)(this + 24),uVar4,0);
             if (lVar3 == null) {
               uVar17 = 0;
               pfVar7 = (float *)UIRect.GetLocalPos(&local_a8,this,*(uint64 *)(this + 24),
                                                     uVar4,0);
               uVar8 = local_d8;
-              if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
               fVar16 = (float)*(int *)(*(int64 *)(this + 24) + 28) + *pfVar7;
             }
             else {
               if (*(uint32 *)(lVar3 + 24) == 0) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               if (*(uint32 *)(lVar3 + 24) < 3) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               uVar8 = local_d8;
-              if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
               fVar16 = (float)NGUIMath.Lerp(*(uint32 *)(lVar3 + 32),*(uint32 *)(lVar3 + 56),
                                              *(uint32 *)(*(int64 *)(this + 24) + 24),0);
               uVar8 = local_d8;
-              if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
               fVar16 = (float)*(int *)(*(int64 *)(this + 24) + 28) + fVar16;
             }
           }
           uVar8 = local_d8;
-          if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
           uVar8 = *(uint64 *)(*(int64 *)(this + 32) + 16);
           cVar2 = Object.op_Implicit(uVar8,0);
           if (!cVar2) {
@@ -1999,38 +1999,38 @@ public class UIPanel
           }
           else {
             uVar8 = local_d8;
-            if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+            if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
             lVar3 = AnchorPoint.GetSides(*(int64 *)(this + 32),uVar4,0);
             if (lVar3 == null) {
               uVar17 = 0;
               pfVar7 = (float *)UIRect.GetLocalPos(&local_a8,this,*(uint64 *)(this + 32),
                                                     uVar4,0);
               uVar8 = local_d8;
-              if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
               local_e8 = (float)*(int *)(*(int64 *)(this + 32) + 28) + *pfVar7;
             }
             else {
               if (*(uint32 *)(lVar3 + 24) == 0) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               if (*(uint32 *)(lVar3 + 24) < 3) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               uVar8 = local_d8;
-              if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
               local_e8 = (float)NGUIMath.Lerp(*(uint32 *)(lVar3 + 32),*(uint32 *)(lVar3 + 56)
                                                ,*(uint32 *)(*(int64 *)(this + 32) + 24),0);
               uVar8 = local_d8;
-              if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
               local_e8 = (float)*(int *)(*(int64 *)(this + 32) + 28) + local_e8;
             }
           }
           uVar8 = local_d8;
-          if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
           uVar8 = *(uint64 *)(*(int64 *)(this + 40) + 16);
           cVar2 = Object.op_Implicit(uVar8,0);
           fStackX_c = (float)((uint64)uVar5 >> 32);
@@ -2039,14 +2039,14 @@ public class UIPanel
           }
           else {
             uVar8 = local_d8;
-            if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+            if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
             lVar3 = AnchorPoint.GetSides(*(int64 *)(this + 40),uVar4,0);
             if (lVar3 == null) {
               uVar17 = 0;
               puVar6 = (uint64 *)
                        UIRect.GetLocalPos(&local_a8,this,*(uint64 *)(this + 40),uVar4,0);
               uVar8 = *puVar6;
-              if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
               local_d8._4_4_ = (float)((uint64)uVar8 >> 32);
               fVar15 = (float)*(int *)(*(int64 *)(this + 40) + 28) + local_d8._4_4_;
               local_d8 = uVar8;
@@ -2055,27 +2055,27 @@ public class UIPanel
               if (*(uint32 *)(lVar3 + 24) < 4) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               uVar8 = local_d8;
-              if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
               fVar15 = (float)NGUIMath.Lerp(*(uint32 *)(lVar3 + 72),*(uint32 *)(lVar3 + 48),
                                              *(uint32 *)(*(int64 *)(this + 40) + 24),0);
               uVar8 = local_d8;
-              if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+              if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
               fVar15 = (float)*(int *)(*(int64 *)(this + 40) + 28) + fVar15;
             }
           }
           uVar8 = local_d8;
-          if (*(int64 *)(this + 48) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 48) == 0) goto LAB_180f97c77;
           uVar8 = *(uint64 *)(*(int64 *)(this + 48) + 16);
           cVar2 = Object.op_Implicit(uVar8,0);
           if (!cVar2) {
             fVar14 = fStackX_c * 0.5 + *(float *)(this + 0x13c);
-            goto LAB_18119a647;
+            goto LAB_180f97b07;
           }
           uVar8 = local_d8;
-          if (*(int64 *)(this + 48) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 48) == 0) goto LAB_180f97c77;
           lVar3 = AnchorPoint.GetSides(*(int64 *)(this + 48),uVar4,0);
           if (lVar3 == null) {
             uVar17 = 0;
@@ -2086,107 +2086,107 @@ public class UIPanel
               local_d8._4_4_ = (float)((uint64)uVar8 >> 32);
               fVar14 = (float)*(int *)(*(int64 *)(this + 48) + 28) + local_d8._4_4_;
               local_d8 = uVar8;
-              goto LAB_18119a647;
+              goto LAB_180f97b07;
             }
-            goto LAB_18119a7b7;
+            goto LAB_180f97c77;
           }
           if (*(uint32 *)(lVar3 + 24) < 4) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           uVar8 = local_d8;
-          if (*(int64 *)(this + 48) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 48) == 0) goto LAB_180f97c77;
           uVar11 = *(uint32 *)(*(int64 *)(this + 48) + 24);
           uVar12 = *(uint32 *)(lVar3 + 48);
           uVar9 = *(uint32 *)(lVar3 + 72);
         }
         else {
           uVar8 = local_d8;
-          if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
           uVar1 = *(uint64 *)(*(int64 *)(this + 24) + 16);
-          if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
           uVar8 = *(uint64 *)(*(int64 *)(this + 32) + 16);
           cVar2 = Object.op_Equality(uVar1,uVar8,0);
-          if (!cVar2) goto LAB_18119a247;
+          if (!cVar2) goto LAB_180f97707;
           uVar8 = local_d8;
-          if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
           uVar1 = *(uint64 *)(*(int64 *)(this + 24) + 16);
-          if (*(int64 *)(this + 48) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 48) == 0) goto LAB_180f97c77;
           uVar8 = *(uint64 *)(*(int64 *)(this + 48) + 16);
           cVar2 = Object.op_Equality(uVar1,uVar8,0);
-          if (!cVar2) goto LAB_18119a247;
+          if (!cVar2) goto LAB_180f97707;
           uVar8 = local_d8;
-          if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
           lVar3 = AnchorPoint.GetSides(*(int64 *)(this + 24),uVar4,0);
           if (lVar3 == null) {
             uVar17 = 0;
             puVar6 = (uint64 *)
                      UIRect.GetLocalPos(&local_a8,this,*(uint64 *)(this + 24),uVar4,0);
             uVar8 = *puVar6;
-            if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+            if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
             local_e8 = (float)uVar8;
             fVar16 = (float)*(int *)(*(int64 *)(this + 24) + 28) + local_e8;
-            if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+            if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
             local_d8._4_4_ = (float)((uint64)uVar8 >> 32);
             fVar15 = (float)*(int *)(*(int64 *)(this + 40) + 28) + local_d8._4_4_;
-            if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+            if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
             local_e8 = (float)*(int *)(*(int64 *)(this + 32) + 28) + local_e8;
-            if (*(int64 *)(this + 48) == 0) goto LAB_18119a7b7;
+            if (*(int64 *)(this + 48) == 0) goto LAB_180f97c77;
             fVar14 = (float)*(int *)(*(int64 *)(this + 48) + 28) + local_d8._4_4_;
             local_d8 = uVar8;
-            goto LAB_18119a647;
+            goto LAB_180f97b07;
           }
           if (*(uint32 *)(lVar3 + 24) == 0) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           if (*(uint32 *)(lVar3 + 24) < 3) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           uVar8 = local_d8;
-          if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
           fVar16 = (float)NGUIMath.Lerp(*(uint32 *)(lVar3 + 32),*(uint32 *)(lVar3 + 56),
                                          *(uint32 *)(*(int64 *)(this + 24) + 24),0);
           uVar8 = local_d8;
-          if (*(int64 *)(this + 24) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 24) == 0) goto LAB_180f97c77;
           fVar16 = (float)*(int *)(*(int64 *)(this + 24) + 28) + fVar16;
           if (*(uint32 *)(lVar3 + 24) == 0) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           if (*(uint32 *)(lVar3 + 24) < 3) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
-          if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
           local_e8 = (float)NGUIMath.Lerp(*(uint32 *)(lVar3 + 32),*(uint32 *)(lVar3 + 56),
                                            *(uint32 *)(*(int64 *)(this + 32) + 24),0);
           uVar8 = local_d8;
-          if (*(int64 *)(this + 32) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 32) == 0) goto LAB_180f97c77;
           local_e8 = (float)*(int *)(*(int64 *)(this + 32) + 28) + local_e8;
           if (*(uint32 *)(lVar3 + 24) < 4) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
-          if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
           fVar15 = (float)NGUIMath.Lerp(*(uint32 *)(lVar3 + 72),*(uint32 *)(lVar3 + 48),
                                          *(uint32 *)(*(int64 *)(this + 40) + 24),0);
           uVar8 = local_d8;
-          if (*(int64 *)(this + 40) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 40) == 0) goto LAB_180f97c77;
           fVar15 = (float)*(int *)(*(int64 *)(this + 40) + 28) + fVar15;
           if (*(uint32 *)(lVar3 + 24) < 4) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
-          if (*(int64 *)(this + 48) == 0) goto LAB_18119a7b7;
+          if (*(int64 *)(this + 48) == 0) goto LAB_180f97c77;
           uVar11 = *(uint32 *)(*(int64 *)(this + 48) + 24);
           uVar12 = *(uint32 *)(lVar3 + 48);
           uVar9 = *(uint32 *)(lVar3 + 72);
@@ -2194,13 +2194,13 @@ public class UIPanel
         fVar14 = (float)NGUIMath.Lerp(uVar9,uVar12,uVar11,0);
         uVar8 = local_d8;
         if (*(int64 *)(this + 48) == 0) {
-        LAB_18119a7b7:
+        LAB_180f97c77:
           local_d8 = uVar8;
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         fVar14 = (float)*(int *)(*(int64 *)(this + 48) + 28) + fVar14;
-        LAB_18119a647:
+        LAB_180f97b07:
         fVar13 = local_b8._4_4_ + *(float *)(this + 0x168);
         fVar10 = (float)local_c8 + this.mClipOffset;
         fVar15 = fVar15 - fVar13;
@@ -2221,15 +2221,15 @@ public class UIPanel
         if (fVar10 <= fVar14) {
           fVar10 = fVar14;
         }
-        FUN_1809dcfa0(&local_a8,uVar11,uVar12,fVar13,CONCAT44(uVar17,fVar10),0);
+        FUN_1807282e0(&local_a8,uVar11,uVar12,fVar13,CONCAT44(uVar17,fVar10),0);
         local_b8 = local_a8;
         uStack_b0 = (uint32)uStack_a0;
         uStack_ac = uStack_a0._4_4_;
         UIPanel.set_baseClipRegion(this,&local_b8,0);
     }
 
-    // Token : 0x60008C7
-    // RVA   : 0x1199BD0   Offset: 0x1198FD0   Length: 0x298
+    // Token : 0x60008AE
+    // RVA   : 0xF97090   Offset: 0xF95E90   Length: 0x298
     private void LateUpdate()
     {
         var plVar5 = *(int64*)(lVar5 + 184);
@@ -2253,7 +2253,7 @@ public class UIPanel
           if (0 < iVar1) {
             do {
               if ((UIPanel.list == null) ||
-                 (lVar5 = FUN_180002f80(UIPanel.list,iVar6,DAT_181daa330),
+                 (lVar5 = FUN_1800024b0(UIPanel.list,iVar6,DAT_181e8c968),
                  lVar5 == null)) throw; // [null/range check failed]
               UIPanel.UpdateSelf(lVar5,0);
               iVar6 = iVar6 + 1;
@@ -2267,7 +2267,7 @@ public class UIPanel
             }
             while( true ) {
               if ((UIPanel.list == null) ||
-                 (lVar5 = FUN_180002f80(UIPanel.list,iVar3,DAT_181daa330),
+                 (lVar5 = FUN_1800024b0(UIPanel.list,iVar3,DAT_181e8c968),
                  lVar5 == null)) break;
               if (*(int *)(lVar5 + 168) == 0) {
                 *(int *)(lVar5 + 172) = iVar6;
@@ -2299,8 +2299,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008C8
-    // RVA   : 0x119BD30   Offset: 0x119B130   Length: 0x29C
+    // Token : 0x60008AF
+    // RVA   : 0xF991F0   Offset: 0xF97FF0   Length: 0x29C
     private void UpdateSelf()
     {
         ulong uVar1;
@@ -2319,10 +2319,10 @@ public class UIPanel
           if (this.mRebuild) {
             this.mRebuild = 0;
             UIPanel.FillAllDrawCalls(this,0);
-        LAB_18119bf2a:
+        LAB_180f993ea:
             if (this.mUpdateScroll) {
               this.mUpdateScroll = 0;
-              lVar4 = Component.GetComponent(this,DAT_181d96df8);
+              lVar4 = Component.GetComponent(this,DAT_181e7a1b8);
               cVar3 = Object.op_Inequality(lVar4,0,0);
               if (cVar3) {
                 if (lVar4 == null) throw; // [null/range check failed]
@@ -2350,7 +2350,7 @@ public class UIPanel
           if (lVar4 != null) {
             lVar6 = 32;
             do {
-              if (lVar4.Count <= (int)uVar5) goto LAB_18119bf2a;
+              if (lVar4.Count <= (int)uVar5) goto LAB_180f993ea;
               if (lVar4 == null) break;
               if (lVar4.Count <= uVar5) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -2365,7 +2365,7 @@ public class UIPanel
               else {
                 UIDrawCall.Destroy(lVar4,0);
                 if (this.drawCalls == null) break;
-                FUN_181823ba0(this.drawCalls,uVar5);
+                FUN_181763390(this.drawCalls,uVar5);
               }
               lVar4 = this.drawCalls;
             } while (lVar4 != null);
@@ -2373,23 +2373,23 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008C9
-    // RVA   : 0x119B4E0   Offset: 0x119A8E0   Length: 0xA8
+    // Token : 0x60008B0
+    // RVA   : 0xF989A0   Offset: 0xF977A0   Length: 0xA8
     public void SortWidgets()
     {
         long lVar1;
         ulong uVar2;
         this.mSortWidgets = 0;
         lVar1 = this.widgets;
-        uVar2 = new OnTooltipCB(0,DAT_181dc7340,DAT_181dab9d0);
+        uVar2 = new OnTooltipCB(0,DAT_181e535f8,DAT_181e8c390);
         if (lVar1 != null) {
-          List_1.Sort(lVar1,uVar2,DAT_181dab030);
+          List_1.Sort(lVar1,uVar2,DAT_181e8d660);
           return;
         }
     }
 
-    // Token : 0x60008CA
-    // RVA   : 0x1197820   Offset: 0x1196C20   Length: 0x7DE
+    // Token : 0x60008B1
+    // RVA   : 0xF94CE0   Offset: 0xF93AE0   Length: 0x7DE
     private void FillAllDrawCalls()
     {
         int iVar1;
@@ -2416,7 +2416,7 @@ public class UIPanel
           lVar10 = 32;
           do {
             if (lVar7.Count <= (int)uVar11) {
-              FUN_1812fa020(lVar7);
+              FUN_18115d8f0(lVar7);
               uVar12 = 0;
               uVar4 = *(uint64 *)(this + 128);
               iVar13 = 0;
@@ -2437,7 +2437,7 @@ public class UIPanel
               }
               lVar10 = this.widgets;
               local_res20 = 0;
-              if (lVar10 != null) goto LAB_181197a20;
+              if (lVar10 != null) goto LAB_180f94ee0;
               break;
             }
             if (lVar7 == null) break;
@@ -2451,17 +2451,17 @@ public class UIPanel
             lVar10 = lVar10 + 8;
           } while (lVar7 != null);
         }
-        LAB_181197fed:
+        LAB_180f954ad:
                           // WARNING: Subroutine does not return
-        FUN_1800d6620();
-        LAB_181197a20:
+        FUN_1801e0300();
+        LAB_180f94ee0:
         if (lVar10.Count <= (int)local_res20) {
           cVar3 = Object.op_Inequality(lVar7,0,0);
           if (cVar3) {
-            if ((lVar7 == null) || (*(int64 *)(lVar7 + 72) == 0)) goto LAB_181197fed;
+            if ((lVar7 == null) || (*(int64 *)(lVar7 + 72) == 0)) goto LAB_180f954ad;
             if (*(int *)(*(int64 *)(lVar7 + 72) + 24) != 0) {
-              if (this.drawCalls == null) goto LAB_181197fed;
-              FUN_18181e6b0(this.drawCalls,lVar7,DAT_181da9730);
+              if (this.drawCalls == null) goto LAB_180f954ad;
+              FUN_18175de30(this.drawCalls,lVar7,DAT_181e8bd70);
               UIDrawCall.UpdateGeometry(lVar7,iVar13,local_res8,0);
               *(uint64 *)(lVar7 + 224) = this.mOnRender;
               this.mOnRender = 0;
@@ -2469,12 +2469,12 @@ public class UIPanel
           }
           return;
         }
-        if (lVar10 == null) goto LAB_181197fed;
+        if (lVar10 == null) goto LAB_180f954ad;
         if (lVar10.Count <= local_res20) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         plVar9 = *(int64 **)(local_48 + lVar10._items);
-        if (plVar9 == (int64 *)0) goto LAB_181197fed;
+        if (plVar9 == (int64 *)0) goto LAB_180f954ad;
         cVar3 = UIWidget.get_isVisible(plVar9,0);
         if ((!cVar3) || (cVar3 = UIWidget.get_hasVertices(plVar9,0), !cVar3)) {
           plVar9[43] = 0;
@@ -2490,21 +2490,21 @@ public class UIPanel
           cVar3 = Object.op_Inequality(uVar12,uVar4,0);
           if (!cVar3) {
             cVar3 = Object.op_Inequality(local_58,uVar5,0);
-            if (cVar3) goto LAB_181197b6b;
+            if (cVar3) goto LAB_180f9502b;
             cVar3 = Object.op_Inequality(local_50,uVar6,0);
-            if (cVar3) goto LAB_181197b6b;
+            if (cVar3) goto LAB_180f9502b;
           }
           else {
-        LAB_181197b6b:
+        LAB_180f9502b:
             cVar3 = Object.op_Inequality(lVar7,0,0);
             uVar12 = uVar4;
             local_58 = uVar5;
             local_50 = uVar6;
             if (cVar3) {
-              if ((lVar7 == null) || (*(int64 *)(lVar7 + 72) == 0)) goto LAB_181197fed;
+              if ((lVar7 == null) || (*(int64 *)(lVar7 + 72) == 0)) goto LAB_180f954ad;
               if (*(int *)(*(int64 *)(lVar7 + 72) + 24) != 0) {
-                if (this.drawCalls == null) goto LAB_181197fed;
-                FUN_18181e6b0(this.drawCalls,lVar7,DAT_181da9730);
+                if (this.drawCalls == null) goto LAB_180f954ad;
+                FUN_18175de30(this.drawCalls,lVar7,DAT_181e8bd70);
                 UIDrawCall.UpdateGeometry(lVar7,local_res18,local_res8,0);
                 *(uint64 *)(lVar7 + 224) = this.mOnRender;
                 this.mOnRender = 0;
@@ -2519,13 +2519,13 @@ public class UIPanel
             cVar3 = Object.op_Inequality(local_50,0,0);
             if (!cVar3) {
               cVar3 = Object.op_Inequality(local_58,0,0);
-              if (!cVar3) goto LAB_181197ed6;
+              if (!cVar3) goto LAB_180f95396;
             }
           }
           cVar3 = Object.op_Equality(lVar7,0);
           if (!cVar3) {
             iVar1 = *(int *)((int64)plVar9 + 172);
-            if (lVar7 == null) goto LAB_181197fed;
+            if (lVar7 == null) goto LAB_180f954ad;
             if (iVar1 < lVar7._version) {
               lVar7._version = iVar1;
             }
@@ -2535,7 +2535,7 @@ public class UIPanel
           }
           else {
             lVar7 = UIDrawCall.Create(this,uVar12,local_58,local_50,0);
-            if (lVar7 == null) goto LAB_181197fed;
+            if (lVar7 == null) goto LAB_180f954ad;
             uVar2 = *(uint32 *)((int64)plVar9 + 172);
             lVar7._version = uVar2;
             *(uint32 *)(lVar7 + 32) = uVar2;
@@ -2579,12 +2579,12 @@ public class UIPanel
                 plVar8 = (int64 *)Delegate.Combine();
                 plVar9 = (int64 *)0;
                 if (plVar8 != (int64 *)0) {
-                  if (*plVar8 == DAT_181d8d8d0) {
+                  if (*plVar8 == DAT_181e6e090) {
                     plVar9 = plVar8;
                   }
                   if (plVar9 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6070(plVar8,DAT_181d8d8d0);
+                    FUN_1801dfd50(plVar8,DAT_181e6e090);
                   }
                 }
               }
@@ -2592,16 +2592,16 @@ public class UIPanel
             }
           }
         }
-        LAB_181197ed6:
+        LAB_180f95396:
         lVar10 = this.widgets;
         local_res20 = local_res20 + 1;
         local_48 = local_48 + 8;
-        if (lVar10 == null) goto LAB_181197fed;
-        goto LAB_181197a20;
+        if (lVar10 == null) goto LAB_180f954ad;
+        goto LAB_180f94ee0;
     }
 
-    // Token : 0x60008CB
-    // RVA   : 0x1198000   Offset: 0x1197400   Length: 0xA4
+    // Token : 0x60008B2
+    // RVA   : 0xF954C0   Offset: 0xF942C0   Length: 0xA4
     public bool FillDrawCall(UIDrawCall dc)
     {
         bool cVar1;
@@ -2684,19 +2684,19 @@ public class UIPanel
                         plVar4 = (int64 *)Delegate.Combine();
                         plVar7 = (int64 *)0;
                         if (plVar4 != (int64 *)0) {
-                          if (*plVar4 == DAT_181d8d8d0) {
+                          if (*plVar4 == DAT_181e6e090) {
                             plVar7 = plVar4;
                           }
                           if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                            FUN_1800d6070(plVar4,DAT_181d8d8d0);
+                            FUN_1801dfd50(plVar4,DAT_181e6e090);
                           }
                         }
                       }
                       this.mOnRender = plVar7;
                       uVar10 = uVar10 + 1;
                       lVar8 = lVar8 + 8;
-                      goto LAB_181198369;
+                      goto LAB_180f95829;
                     }
                   }
                 }
@@ -2705,17 +2705,17 @@ public class UIPanel
               }
               else {
                 if (this.widgets == null) break;
-                FUN_181823ba0();
+                FUN_181763390();
               }
-        LAB_181198369:
+        LAB_180f95829:
               lVar2 = this.widgets;
             } while (lVar2 != null);
           }
         }
     }
 
-    // Token : 0x60008CC
-    // RVA   : 0x11980B0   Offset: 0x11974B0   Length: 0x368
+    // Token : 0x60008B3
+    // RVA   : 0xF95570   Offset: 0xF94370   Length: 0x368
     public bool FillDrawCall(UIDrawCall dc, bool needsCulling)
     {
         bool cVar1;
@@ -2798,19 +2798,19 @@ public class UIPanel
                         plVar4 = (int64 *)Delegate.Combine();
                         plVar7 = (int64 *)0;
                         if (plVar4 != (int64 *)0) {
-                          if (*plVar4 == DAT_181d8d8d0) {
+                          if (*plVar4 == DAT_181e6e090) {
                             plVar7 = plVar4;
                           }
                           if (plVar7 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-                            FUN_1800d6070(plVar4,DAT_181d8d8d0);
+                            FUN_1801dfd50(plVar4,DAT_181e6e090);
                           }
                         }
                       }
                       this.mOnRender = plVar7;
                       uVar10 = uVar10 + 1;
                       lVar8 = lVar8 + 8;
-                      goto LAB_181198369;
+                      goto LAB_180f95829;
                     }
                   }
                 }
@@ -2819,17 +2819,17 @@ public class UIPanel
               }
               else {
                 if (this.widgets == null) break;
-                FUN_181823ba0();
+                FUN_181763390();
               }
-        LAB_181198369:
+        LAB_180f95829:
               lVar2 = this.widgets;
             } while (lVar2 != null);
           }
         }
     }
 
-    // Token : 0x60008CD
-    // RVA   : 0x119B590   Offset: 0x119A990   Length: 0x52D
+    // Token : 0x60008B4
+    // RVA   : 0xF98A50   Offset: 0xF97850   Length: 0x52D
     private void UpdateDrawCalls(int sortOrder)
     {
         ulong uVar1;
@@ -2894,7 +2894,7 @@ public class UIPanel
         else {
           lVar14 = UIRect.get_cachedTransform(this,0);
           if (lVar14 == null) throw; // [null/range check failed]
-          lVar14 = FUN_180daa030(lVar14,0);
+          lVar14 = FUN_180b05920(lVar14,0);
           lVar11 = UIRect.get_cachedTransform(this,0);
           if (lVar11 == null) throw; // [null/range check failed]
           puVar10 = (uint64 *)Transform.get_localPosition(local_78,lVar11,0);
@@ -2997,8 +2997,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008CE
-    // RVA   : 0x119BAC0   Offset: 0x119AEC0   Length: 0x263
+    // Token : 0x60008B5
+    // RVA   : 0xF98F80   Offset: 0xF97D80   Length: 0x263
     private void UpdateLayers()
     {
         int iVar1;
@@ -3079,11 +3079,11 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008CF
-    // RVA   : 0x119C0E0   Offset: 0x119B4E0   Length: 0x3F2
+    // Token : 0x60008B6
+    // RVA   : 0xF995A0   Offset: 0xF983A0   Length: 0x3F2
     private void UpdateWidgets()
     {
-        var pStatics = *(int64*)(DAT_181db0290 + 184);
+        var pStatics = *(int64*)(DAT_181e906d0 + 184);
         long lVar1;
         bool cVar3;
         bool cVar4;
@@ -3107,13 +3107,13 @@ public class UIPanel
           while( true ) {
             if (*pStatics == 0) break;
             uVar9 = (uint32)uVar10;
-            if (*(int *)(*pStatics + 24) <= (int)uVar9) goto LAB_18119c26b;
+            if (*(int *)(*pStatics + 24) <= (int)uVar9) goto LAB_180f9972b;
             if ((*pStatics == 0) ||
                (lVar7 = *(int64 *)(*pStatics + 16)) == null) break;
             if (*(uint32 *)(lVar7 + 24) <= uVar9) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar8,0);
+              FUN_1801e02d0(uVar8,0);
             }
             lVar7 = lVar7[uVar9];
             if (lVar7 == null) break;
@@ -3126,7 +3126,7 @@ public class UIPanel
           }
         }
         else {
-        LAB_18119c26b:
+        LAB_180f9972b:
           if (this.mForced != cVar14) {
             this.mForced = cVar14;
             this.mResized = 1;
@@ -3199,8 +3199,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008D0
-    // RVA   : 0x1198420   Offset: 0x1197820   Length: 0x2BD
+    // Token : 0x60008B7
+    // RVA   : 0xF958E0   Offset: 0xF946E0   Length: 0x2BD
     public UIDrawCall FindDrawCall(UIWidget w)
     {
         int iVar1;
@@ -3226,7 +3226,7 @@ public class UIPanel
             lVar12 = 32;
             do {
               if (lVar9.Count <= (int)uVar10) {
-        LAB_1811986cd:
+        LAB_180f95b8d:
                 this.mRebuild = 1;
                 return 0;
               }
@@ -3240,7 +3240,7 @@ public class UIPanel
               }
               else {
                 if ((this.drawCalls == null) ||
-                   (lVar8 = FUN_180002f80(this.drawCalls,uVar10 - 1,DAT_181da9930),
+                   (lVar8 = FUN_1800024b0(this.drawCalls,uVar10 - 1,DAT_181e8bf70),
                    lVar8 == null)) break;
                 iVar11 = *(int *)(lVar8 + 32) + 1;
               }
@@ -3251,7 +3251,7 @@ public class UIPanel
                 iVar4 = 0x7fffffff;
               }
               else {
-                lVar8 = FUN_180002f80(lVar8,uVar10,DAT_181da9930);
+                lVar8 = FUN_1800024b0(lVar8,uVar10,DAT_181e8bf70);
                 if (lVar8 == null) break;
                 iVar4 = lVar8._version + -1;
               }
@@ -3281,7 +3281,7 @@ public class UIPanel
                       }
                     }
                   }
-                  goto LAB_1811986cd;
+                  goto LAB_180f95b8d;
                 }
                 break;
               }
@@ -3292,8 +3292,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008D1
-    // RVA   : 0x1196CD0   Offset: 0x11960D0   Length: 0x1AC
+    // Token : 0x60008B8
+    // RVA   : 0xF94190   Offset: 0xF92F90   Length: 0x1AC
     public void AddWidget(UIWidget w)
     {
         long lVar1;
@@ -3304,9 +3304,9 @@ public class UIPanel
         ulong uVar6;
         lVar1 = this.widgets;
         this.mUpdateScroll = 1;
-        if (lVar1 == null) goto LAB_181196e77;
+        if (lVar1 == null) goto LAB_180f94337;
         if (lVar1.Count == null) {
-          FUN_18181e6b0(lVar1,w,DAT_181daae30);
+          FUN_18175de30(lVar1,w,DAT_181e8d460);
         }
         else {
           if (!this.mSortWidgets) {
@@ -3318,8 +3318,8 @@ public class UIPanel
             lVar1 = this.widgets;
             if (iVar2 == -1) {
               if (lVar1 != null) {
-                FUN_181822b30(lVar1,0,w,DAT_181daaeb0);
-                goto LAB_181196e52;
+                FUN_181762320(lVar1,0,w,DAT_181e8d4e0);
+                goto LAB_180f94312;
               }
             }
             else if (lVar1 != null) {
@@ -3327,12 +3327,12 @@ public class UIPanel
               uVar5 = uVar4;
               do {
                 uVar6 = uVar4 & 0xffffffff;
-                if ((int64)uVar5 < 1) goto LAB_181196e52;
+                if ((int64)uVar5 < 1) goto LAB_180f94312;
                 lVar1 = this.widgets;
                 uVar3 = (int)uVar4 - 1;
                 uVar4 = (uint64)uVar3;
                 uVar5 = uVar5 - 1;
-                if (lVar1 == null) goto LAB_181196e77;
+                if (lVar1 == null) goto LAB_180f94337;
                 if (lVar1.Count <= uVar3) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
@@ -3341,30 +3341,30 @@ public class UIPanel
                                    ,0);
               } while (iVar2 == -1);
               if (this.widgets != null) {
-                FUN_181822b30(this.widgets,uVar6,w,DAT_181daaeb0);
-                goto LAB_181196e52;
+                FUN_181762320(this.widgets,uVar6,w,DAT_181e8d4e0);
+                goto LAB_180f94312;
               }
             }
-        LAB_181196e77:
+        LAB_180f94337:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          FUN_18181e6b0(lVar1,w,DAT_181daae30);
+          FUN_18175de30(lVar1,w,DAT_181e8d460);
           UIPanel.SortWidgets(this,0);
         }
-        LAB_181196e52:
+        LAB_180f94312:
         UIPanel.FindDrawCall(this,w,0);
     }
 
-    // Token : 0x60008D2
-    // RVA   : 0x119AFE0   Offset: 0x119A3E0   Length: 0x111
+    // Token : 0x60008B9
+    // RVA   : 0xF984A0   Offset: 0xF972A0   Length: 0x111
     public void RemoveWidget(UIWidget w)
     {
         ulong uVar1;
         bool cVar2;
         long lVar3;
         if (this.widgets != null) {
-          cVar2 = FUN_1817ef410(this.widgets,w,DAT_181daaf30);
+          cVar2 = FUN_181665e90(this.widgets,w,DAT_181e8d560);
           if (!cVar2) {
             return;
           }
@@ -3391,8 +3391,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008D3
-    // RVA   : 0x119AEE0   Offset: 0x119A2E0   Length: 0xF4
+    // Token : 0x60008BA
+    // RVA   : 0xF983A0   Offset: 0xF971A0   Length: 0xF4
     public void Refresh()
     {
         long lVar1;
@@ -3416,8 +3416,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008D4
-    // RVA   : 0x1196FE0   Offset: 0x11963E0   Length: 0x168
+    // Token : 0x60008BB
+    // RVA   : 0xF944A0   Offset: 0xF932A0   Length: 0x168
     public virtual Vector3 CalculateConstrainOffset(Vector2 min, Vector2 max)
     {
         uint64 *
@@ -3455,8 +3455,8 @@ public class UIPanel
         return this;
     }
 
-    // Token : 0x60008D5
-    // RVA   : 0x1197370   Offset: 0x1196770   Length: 0x420
+    // Token : 0x60008BC
+    // RVA   : 0xF94830   Offset: 0xF93630   Length: 0x420
     public bool ConstrainTargetToBounds(Transform target, ref Bounds targetBounds, bool immediate)
     {
         ulong uVar1;
@@ -3476,8 +3476,8 @@ public class UIPanel
         UIPanel.ConstrainTargetToBounds(this,target,&local_38,targetBounds,0);
     }
 
-    // Token : 0x60008D6
-    // RVA   : 0x11977A0   Offset: 0x1196BA0   Length: 0x73
+    // Token : 0x60008BD
+    // RVA   : 0xF94C60   Offset: 0xF93A60   Length: 0x73
     public bool ConstrainTargetToBounds(Transform target, bool immediate)
     {
         ulong uVar1;
@@ -3497,19 +3497,19 @@ public class UIPanel
         UIPanel.ConstrainTargetToBounds(this,target,&local_38,immediate,0);
     }
 
-    // Token : 0x60008D7
-    // RVA   : 0x11987E0   Offset: 0x1197BE0   Length: 0x14C
+    // Token : 0x60008BE
+    // RVA   : 0xF95CA0   Offset: 0xF94AA0   Length: 0x14C
     public static UIPanel Find(Transform trans)
     {
         bool cVar1;
         ulong uVar2;
-        uVar2 = NGUITools.FindInParents(trans,DAT_181d8f538);
+        uVar2 = NGUITools.FindInParents(trans,DAT_181e72b78);
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           return uVar2;
         }
-        for (; trans != null; trans = FUN_180daa030(trans)) {
-          uVar2 = FUN_180daa030(trans,0);
+        for (; trans != null; trans = FUN_180b05920(trans)) {
+          uVar2 = FUN_180b05920(trans,0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (!cVar1) {
             if (param_2) {
@@ -3522,19 +3522,19 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008D8
-    // RVA   : 0x1198930   Offset: 0x1197D30   Length: 0x66
+    // Token : 0x60008BF
+    // RVA   : 0xF95DF0   Offset: 0xF94BF0   Length: 0x66
     public static UIPanel Find(Transform trans, bool createIfMissing)
     {
         bool cVar1;
         ulong uVar2;
-        uVar2 = NGUITools.FindInParents(trans,DAT_181d8f538);
+        uVar2 = NGUITools.FindInParents(trans,DAT_181e72b78);
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           return uVar2;
         }
-        for (; trans != null; trans = FUN_180daa030(trans)) {
-          uVar2 = FUN_180daa030(trans,0);
+        for (; trans != null; trans = FUN_180b05920(trans)) {
+          uVar2 = FUN_180b05920(trans,0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (!cVar1) {
             if (createIfMissing) {
@@ -3547,19 +3547,19 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008D9
-    // RVA   : 0x11989A0   Offset: 0x1197DA0   Length: 0x16B
+    // Token : 0x60008C0
+    // RVA   : 0xF95E60   Offset: 0xF94C60   Length: 0x16B
     public static UIPanel Find(Transform trans, bool createIfMissing, int layer)
     {
         bool cVar1;
         ulong uVar2;
-        uVar2 = NGUITools.FindInParents(trans,DAT_181d8f538);
+        uVar2 = NGUITools.FindInParents(trans,DAT_181e72b78);
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           return uVar2;
         }
-        for (; trans != null; trans = FUN_180daa030(trans)) {
-          uVar2 = FUN_180daa030(trans,0);
+        for (; trans != null; trans = FUN_180b05920(trans)) {
+          uVar2 = FUN_180b05920(trans,0);
           cVar1 = Object.op_Inequality(uVar2,0,0);
           if (!cVar1) {
             if (createIfMissing) {
@@ -3572,8 +3572,8 @@ public class UIPanel
         }
     }
 
-    // Token : 0x60008DA
-    // RVA   : 0x1199210   Offset: 0x1198610   Length: 0x107
+    // Token : 0x60008C1
+    // RVA   : 0xF966D0   Offset: 0xF954D0   Length: 0x107
     public Vector2 GetWindowSize()
     {
         bool cVar1;
@@ -3591,7 +3591,7 @@ public class UIPanel
           uVar2 = Mathf.RoundToInt(fStackX_24,0);
           if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           fVar5 = (float)UIRoot.GetPixelSizeAdjustment(lVar3,uVar2,0);
           local_res20 = (float)uVar4;
@@ -3600,8 +3600,8 @@ public class UIPanel
         return uVar4;
     }
 
-    // Token : 0x60008DB
-    // RVA   : 0x1199190   Offset: 0x1198590   Length: 0x76
+    // Token : 0x60008C2
+    // RVA   : 0xF96650   Offset: 0xF95450   Length: 0x76
     public Vector2 GetViewSize()
     {
         ulong uVar1;
@@ -3612,8 +3612,8 @@ public class UIPanel
         return *(uint64 *)(this + 0x140);
     }
 
-    // Token : 0x60008DC
-    // RVA   : 0x119C5E0   Offset: 0x119B9E0   Length: 0x284
+    // Token : 0x60008C3
+    // RVA   : 0xF99AA0   Offset: 0xF988A0   Length: 0x284
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -3628,11 +3628,11 @@ public class UIPanel
         this.cullWhileDragging = 1;
         this.softBorderPadding = 1;
         this.startingRenderQueue = 3000;
-        uVar1 = il2cpp_internal(DAT_181d989e8);
-        FUN_181330100(uVar1,DAT_181daadb0);
+        uVar1 = il2cpp_internal(DAT_181e789a8);
+        FUN_1810f3480(uVar1,DAT_181e8d3e0);
         this.widgets = uVar1;
-        uVar1 = il2cpp_internal(DAT_181d985e8);
-        FUN_181330100(uVar1,DAT_181da96b0);
+        uVar1 = il2cpp_internal(DAT_181e785a8);
+        FUN_1810f3480(uVar1,DAT_181e8bcf0);
         this.drawCalls = uVar1;
         puVar2 = (uint64 *)Matrix4x4.get_identity(local_48,0);
         uVar1 = puVar2[1];
@@ -3649,13 +3649,13 @@ public class UIPanel
         *(uint64 *)(this + 248) = uVar1;
         local_68 = 0;
         uStack_60 = 0;
-        FUN_1809dcfa0(&local_68,0,0,0x3f800000,0x3f800000,0);
+        FUN_1807282e0(&local_68,0,0,0x3f800000,0x3f800000,0);
         this.drawCallClipRange = local_68;
         *(uint64 *)(this + 0x108) = uStack_60;
         this.mAlpha = 0x3f800000;
         local_58 = 0;
         uStack_50 = 0;
-        FUN_1809dcfa0(&local_58,0,0,0x43960000,0x43480000,0);
+        FUN_1807282e0(&local_58,0,0,0x43960000,0x43480000,0);
         this.mClipSoftness = 0x40800000;
         *(uint32 *)(this + 0x14c) = 0x40800000;
         this.mClipRange = (uint32)local_58;
@@ -3682,19 +3682,19 @@ public class UIPanel
         UIRect.ctor(this,0);
     }
 
-    // Token : 0x60008DD
-    // RVA   : 0x119C4E0   Offset: 0x119B8E0   Length: 0x100
+    // Token : 0x60008C4
+    // RVA   : 0xF999A0   Offset: 0xF987A0   Length: 0x100
     private static void /*cctor*/()
     {
         ulong uVar1;
-        uVar1 = il2cpp_internal(DAT_181d987e8);
-        FUN_181330100(uVar1,DAT_181da9fb0);
-        puVar2 = *(uint64 **)(DAT_181dafe90 + 184);
+        uVar1 = il2cpp_internal(DAT_181e787a8);
+        FUN_1810f3480(uVar1,DAT_181e8c5f0);
+        puVar2 = *(uint64 **)(DAT_181e902d0 + 184);
         *puVar2 = uVar1;
         il2cpp_internal(puVar2,uVar1);
-        uVar1 = FUN_1800d60b0(DAT_181da5378,4);
+        uVar1 = FUN_1801dfd90(DAT_181e854f8,4);
         UIPanel.mTemp = uVar1;
-        uVar1 = FUN_1800d60b0(DAT_181da6d78,4);
+        uVar1 = FUN_1801dfd90(DAT_181e86eb8,4);
         UIPanel.mCorners = uVar1;
         UIPanel.mUpdateFrame = 0xffffffff;
     }

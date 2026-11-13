@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : CFX_AutoRotate
-// Token : 0x20003C1
+// Token : 0x20003CE
 // ============================================================
 
 public class CFX_AutoRotate
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E41
+    // Token: 0x4001ED3
     public Vector3 rotation;
 
-    // Token: 0x4001E42
+    // Token: 0x4001ED4
     public Space space;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023EA
-    // RVA   : 0xB7E750   Offset: 0xB7DB50   Length: 0xA5
+    // Token : 0x6002494
+    // RVA   : 0x937A00   Offset: 0x936800   Length: 0xA5
     private void Update()
     {
         ulong uVar1;
@@ -35,14 +35,14 @@ public class CFX_AutoRotate
         local_28 = uVar1;
     }
 
-    // Token : 0x60023EB
-    // RVA   : 0xB7E800   Offset: 0xB7DC00   Length: 0xE
+    // Token : 0x6002495
+    // RVA   : 0x937AB0   Offset: 0x9368B0   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180b7e800(int64 this)
+        void FUN_180937ab0(int64 this)
         {
         this.space = 1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

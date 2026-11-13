@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : UIButtonActivate
-// Token : 0x200002F
+// Token : 0x200002E
 // ============================================================
 
 public class UIButtonActivate
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000E8
+    // Token: 0x40000C8
     public GameObject target;
 
-    // Token: 0x40000E9
+    // Token: 0x40000C9
     public bool state;
 
-    // Token: 0x40000EA
+    // Token: 0x40000CA
     public bool pingPong;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000C3
-    // RVA   : 0x152F810   Offset: 0x152EC10   Length: 0xC3
+    // Token : 0x60000AA
+    // RVA   : 0x141B8D0   Offset: 0x141A6D0   Length: 0xC3
     public void OnClick()
     {
         byte uVar1;
@@ -35,14 +35,14 @@ public class UIButtonActivate
         }
     }
 
-    // Token : 0x60000C4
-    // RVA   : 0x152F8E0   Offset: 0x152ECE0   Length: 0xB
+    // Token : 0x60000AB
+    // RVA   : 0x141B9A0   Offset: 0x141A7A0   Length: 0xB
     public void /*ctor*/()
     {
-        void FUN_18152f8e0(int64 this)
+        void FUN_18141b9a0(int64 this)
         {
         this.state = 1;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

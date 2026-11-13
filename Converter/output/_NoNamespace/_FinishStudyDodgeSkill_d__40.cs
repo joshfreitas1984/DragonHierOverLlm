@@ -1,40 +1,40 @@
 // ============================================================
 // Type  : <FinishStudyDodgeSkill>d__40
-// Token : 0x2000381
+// Token : 0x200038E
 // ============================================================
 
 public class <FinishStudyDodgeSkill>d__40
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001CB2
+    // Token: 0x4001D44
     private int <>1__state;
 
-    // Token: 0x4001CB3
+    // Token: 0x4001D45
     private object <>2__current;
 
-    // Token: 0x4001CB4
+    // Token: 0x4001D46
     public StudyDodgeSkillController <>4__this;
 
-    // Token: 0x4001CB5
+    // Token: 0x4001D47
     public StudySkillResult studyDodgeResult;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002253
-    // RVA   : 0x219070   Offset: 0x218470   Length: 0x24
+    // Token : 0x60022FD
+    // RVA   : 0x608BA0   Offset: 0x6079A0   Length: 0x24
     public void /*ctor*/(int <>1__state)
     {
         ZhSegment.Initialize(this,0);
         this.<>1__state = <>1__state;
     }
 
-    // Token : 0x6002254
-    // RVA   : 0x245810   Offset: 0x244C10   Length: 0x3
+    // Token : 0x60022FE
+    // RVA   : 0x51CF50   Offset: 0x51BD50   Length: 0x3
     private virtual void System.IDisposable.Dispose()
     {
     }
 
-    // Token : 0x6002255
-    // RVA   : 0x91E490   Offset: 0x91D890   Length: 0x9CA
+    // Token : 0x60022FF
+    // RVA   : 0x60BB20   Offset: 0x60A920   Length: 0x9CA
     private virtual bool MoveNext()
     {
         int iVar1;
@@ -62,8 +62,8 @@ public class <FinishStudyDodgeSkill>d__40
             uVar9 = 0;
             iVar1 = this.studyDodgeResult;
             if (iVar1 == 0) {
-              lVar4 = FUN_18046c0a0(0);
-              lVar5 = FUN_1809163e0(0);
+              lVar4 = FUN_1802106e0(0);
+              lVar5 = FUN_180603b70(0);
               if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
               throw; // [null/range check failed]
               puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -79,7 +79,7 @@ public class <FinishStudyDodgeSkill>d__40
               local_48 = uVar8;
               local_40 = uVar2;
               GameController.ShowTextAtPos(lVar4,"生命耗尽！",&local_48,25,puVar7,0);
-              lVar4 = FUN_18046c0a0(0);
+              lVar4 = FUN_1802106e0(0);
               if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
               lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
               if ((*(int64 *)(lVar3 + 56) == 0) ||
@@ -88,7 +88,7 @@ public class <FinishStudyDodgeSkill>d__40
               uVar10 = (uint64)puVar7 & 0xffffffffffffff00;
               HeroData.ChangeExternalInjury(lVar4,(float)*(int *)(lVar5 + 52) * 2.5 + 2.5,1,0,uVar10,0)
               ;
-              lVar4 = FUN_18046c0a0(0);
+              lVar4 = FUN_1802106e0(0);
               if ((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) throw; // [null/range check failed]
               lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0);
               if (((*(int64 *)(lVar3 + 56) == 0) ||
@@ -99,8 +99,8 @@ public class <FinishStudyDodgeSkill>d__40
                         );
             }
             else if (iVar1 == 1) {
-              lVar4 = FUN_18046c0a0(0);
-              lVar5 = FUN_1809163e0(0);
+              lVar4 = FUN_1802106e0(0);
+              lVar5 = FUN_180603b70(0);
               if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
               throw; // [null/range check failed]
               puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -119,8 +119,8 @@ public class <FinishStudyDodgeSkill>d__40
             else if (iVar1 == 2) {
               iVar1 = *(int *)(lVar3 + 84);
               if (iVar1 < 1) {
-                lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_1809163e0(0);
+                lVar4 = FUN_1802106e0(0);
+                lVar5 = FUN_180603b70(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -137,8 +137,8 @@ public class <FinishStudyDodgeSkill>d__40
                 GameController.ShowTextAtPos(lVar4,"表现完美！",&local_48,27,&local_38,0);
               }
               else if (iVar1 < 3) {
-                lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_1809163e0(0);
+                lVar4 = FUN_1802106e0(0);
+                lVar5 = FUN_180603b70(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -155,8 +155,8 @@ public class <FinishStudyDodgeSkill>d__40
                 GameController.ShowTextAtPos(lVar4,"表现优秀！",&local_48,26,&local_38,0);
               }
               else if (iVar1 < 5) {
-                lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_1809163e0(0);
+                lVar4 = FUN_1802106e0(0);
+                lVar5 = FUN_180603b70(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -173,8 +173,8 @@ public class <FinishStudyDodgeSkill>d__40
                 GameController.ShowTextAtPos(lVar4,"表现尚可！",&local_48,25,&local_38,0);
               }
               else if (iVar1 < 7) {
-                lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_1809163e0(0);
+                lVar4 = FUN_1802106e0(0);
+                lVar5 = FUN_180603b70(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -191,8 +191,8 @@ public class <FinishStudyDodgeSkill>d__40
                 GameController.ShowTextAtPos(lVar4,"表现平平！",&local_48,25,&local_38,0);
               }
               else {
-                lVar4 = FUN_18046c0a0(0);
-                lVar5 = FUN_1809163e0(0);
+                lVar4 = FUN_1802106e0(0);
+                lVar5 = FUN_180603b70(0);
                 if ((lVar5 == null) || (lVar5 = Component.get_transform(lVar5,0)) == null)
                 throw; // [null/range check failed]
                 puVar6 = (uint64 *)Transform.get_position(&local_48,lVar5,0);
@@ -211,7 +211,7 @@ public class <FinishStudyDodgeSkill>d__40
             }
             uVar8 = *(uint64 *)(lVar3 + 112);
             GlobalData.DestroyAll(uVar8,0);
-            if (**(int64 **)(DAT_181da8028 + 184) != 0) {
+            if (**(int64 **)(DAT_181e88468 + 184) != 0) {
               StudyDodgePlayer.SetShieldTime();
               lVar4 = 32;
               while (lVar5 = *(int64 *)(lVar3 + 104)) != null {
@@ -225,7 +225,7 @@ public class <FinishStudyDodgeSkill>d__40
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar5 = *(int64 *)(lVar4 + *(int64 *)(lVar5 + 16));
-                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73dd8)) == null)
+                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181e56ea0)) == null)
                 break;
                 *(uint8 *)(lVar5 + 32) = 0;
                 lVar5 = *(int64 *)(lVar3 + 104);
@@ -234,7 +234,7 @@ public class <FinishStudyDodgeSkill>d__40
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar5 = *(int64 *)(lVar4 + *(int64 *)(lVar5 + 16));
-                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181d73dd8)) == null)
+                if ((lVar5 == null) || (lVar5 = GameObject.GetComponent(lVar5,DAT_181e56ea0)) == null)
                 break;
                 uVar9 = uVar9 + 1;
                 *(uint8 *)(lVar5 + 44) = 0;
@@ -258,7 +258,7 @@ public class <FinishStudyDodgeSkill>d__40
                 lVar4 = 32;
                 while (lVar5 = *(int64 *)(lVar3 + 152)) != null {
                   if ((int)*(uint32 *)(lVar5 + 24) <= (int)uVar9) {
-                    FUN_1812fa020(lVar5,DAT_181d89430);
+                    FUN_18115d8f0(lVar5,DAT_181e6b778);
                     if (StudySkillController._instance != null) {
                       StudySkillController.FinishStudySkill();
                       return false;
@@ -280,27 +280,27 @@ public class <FinishStudyDodgeSkill>d__40
         }
     }
 
-    // Token : 0x6002256
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002300
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.Generic.IEnumerator<System.object>.get_Current()
     {
         return this.<>2__current;
     }
 
-    // Token : 0x6002257
-    // RVA   : 0x91EE60   Offset: 0x91E260   Length: 0x3E
+    // Token : 0x6002301
+    // RVA   : 0x60C4F0   Offset: 0x60B2F0   Length: 0x3E
     private virtual void System.Collections.IEnumerator.Reset()
     {
         ulong uVar1;
         ulong uVar2;
-        uVar1 = il2cpp_runtime_class_init(&DAT_181d8d528);
+        uVar1 = il2cpp_runtime_class_init(&DAT_181e6d8e8);
         uVar1 = il2cpp_internal(uVar1);
         NotSupportedException.ctor(uVar1,0);
-        uVar2 = il2cpp_runtime_class_init(&DAT_181db4bb8);
+        uVar2 = il2cpp_runtime_class_init(&DAT_181e98958);
     }
 
-    // Token : 0x6002258
-    // RVA   : 0x20F140   Offset: 0x20E540   Length: 0x5
+    // Token : 0x6002302
+    // RVA   : 0x608B50   Offset: 0x607950   Length: 0x5
     private virtual object System.Collections.IEnumerator.get_Current()
     {
         return this.<>2__current;

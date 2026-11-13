@@ -1,45 +1,45 @@
 // ============================================================
 // Type  : WorldPlotEventController
-// Token : 0x20003B9
+// Token : 0x20003C6
 // ============================================================
 
 public class WorldPlotEventController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E22
+    // Token: 0x4001EB4
     public List<WorldPlotEventData> WorldPlotEventDataBase;
 
-    // Token: 0x4001E23
+    // Token: 0x4001EB5
     private static WorldPlotEventController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023C2
-    // RVA   : 0x9D6060   Offset: 0x9D5460   Length: 0x36
+    // Token : 0x600246C
+    // RVA   : 0x7213A0   Offset: 0x7201A0   Length: 0x36
     public static WorldPlotEventController get_Instance()
     {
-        return **(uint64 **)(DAT_181db5f98 + 184);
+        return **(uint64 **)(DAT_181e96480 + 184);
     }
 
-    // Token : 0x60023C3
-    // RVA   : 0x9D3600   Offset: 0x9D2A00   Length: 0xD7
+    // Token : 0x600246D
+    // RVA   : 0x71E940   Offset: 0x71D740   Length: 0xD7
     private void Awake()
     {
         bool cVar2;
         ulong uVar3;
-        uVar3 = **(uint64 **)(DAT_181db5f98 + 184);
+        uVar3 = **(uint64 **)(DAT_181e96480 + 184);
         cVar2 = Object.op_Equality(uVar3,0,0);
         if (!cVar2) {
           uVar3 = Component.get_gameObject(this,0);
           Object.Destroy(uVar3,0);
           return;
         }
-        puVar1 = *(uint64 **)(DAT_181db5f98 + 184);
+        puVar1 = *(uint64 **)(DAT_181e96480 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60023C4
-    // RVA   : 0x9D57A0   Offset: 0x9D4BA0   Length: 0x8BE
+    // Token : 0x600246E
+    // RVA   : 0x720AE0   Offset: 0x71F8E0   Length: 0x8BE
     public void StartNewWorldPlotEvent(WorldPlotEventStartData targetWorldPlotEventStartData)
     {
         bool cVar2;
@@ -60,7 +60,7 @@ public class WorldPlotEventController
         if (((GameController._instance != null) &&
             (lVar7 = GameController._instance.worldData) != null) &&
            (lVar7 = lVar7.worldPlotEventStartData) != null) {
-          FUN_18181e6b0(lVar7,targetWorldPlotEventStartData,DAT_181dace20);
+          FUN_18175de30(lVar7,targetWorldPlotEventStartData,DAT_181e8f458);
           if ((GameController._instance != null) &&
              (GameController.ChangePlotTargetNumCount(GameController._instance,targetWorldPlotEventStartData,1,0),
              targetWorldPlotEventStartData != null)) {
@@ -89,21 +89,21 @@ public class WorldPlotEventController
               *plVar1 = lVar7;
               il2cpp_internal(plVar1,lVar7);
               lVar7 = *plVar1;
-              lVar8 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 32);
-              if ((((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 0x178)) != null) &&
-                  (lVar8 = FUN_1817da420(lVar8,*(uint32 *)(targetWorldPlotEventStartData + 28),DAT_181dbcf98)) != null
+              lVar8 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 32);
+              if ((((lVar8 != null) && (lVar8 = *(int64 *)(lVar8 + 0x188)) != null) &&
+                  (lVar8 = FUN_18171b450(lVar8,*(uint32 *)(targetWorldPlotEventStartData + 28),DAT_181e9e680)) != null
                   ) && (plVar9 = (int64 *)PlotData.Clone(lVar8,0), lVar7 != null)) {
                 uVar13 = 0;
                 lVar7.WorldEventDatasSaveRecord = plVar9;
                 iVar6 = *(int *)(targetWorldPlotEventStartData + 32);
                 if (iVar6 == 1) {
                   lVar7 = *(int64 *)(targetWorldPlotEventStartData + 40);
-                  lVar8 = FUN_1800d60b0(DAT_181da1058,1);
+                  lVar8 = FUN_1801dfd90(DAT_181e81128,1);
                   if (lVar8 != null) {
                     if (*(int *)(lVar8 + 24) == 0) {
                       uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar10,0);
+                      FUN_1801e02d0(uVar10,0);
                     }
                     *(uint16 *)(lVar8 + 32) = 58;
                     if (lVar7 != null) {
@@ -116,7 +116,7 @@ public class WorldPlotEventController
                         if (lVar7.cityAreaID == null) {
                           uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar10,0);
+                          FUN_1801e02d0(uVar10,0);
                         }
                         uVar5 = Int32.Parse(lVar7.villageAreaID,0);
                         if (lVar12 != null) {
@@ -128,7 +128,7 @@ public class WorldPlotEventController
                             if (lVar7.cityAreaID < 2) {
                               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar10,0);
+                              FUN_1801e02d0(uVar10,0);
                             }
                             uVar5 = Int32.Parse(lVar7.forceAreaID,0);
                           }
@@ -143,12 +143,12 @@ public class WorldPlotEventController
                   }
                 }
                 else if (iVar6 == 2) {
-                  lVar8 = FUN_18046c0a0(0);
+                  lVar8 = FUN_1802106e0(0);
                   lVar7 = *plVar1;
-                  lVar11 = il2cpp_internal(DAT_181d93ce8);
-                  FUN_181330100(lVar11,DAT_181d8f0b0);
+                  lVar11 = il2cpp_internal(DAT_181e73cb8);
+                  FUN_1810f3480(lVar11,DAT_181e71270);
                   uVar5 = Int32.Parse(*(uint64 *)(targetWorldPlotEventStartData + 40),0);
-                  if ((lVar11 != null) && (FUN_18182a6c0(lVar11,uVar5,DAT_181d8f230), lVar8 != null)) {
+                  if ((lVar11 != null) && (FUN_181769fe0(lVar11,uVar5,DAT_181e713f0), lVar8 != null)) {
                     GameController.CreateAreaMapRandomEvent(lVar8,lVar7,lVar11,0);
                     return;
                   }
@@ -159,25 +159,25 @@ public class WorldPlotEventController
                   }
                   if (*plVar1 != 0) {
                     *(uint8 *)(*plVar1 + 96) = 1;
-                    lVar8 = FUN_18046c0a0(0);
+                    lVar8 = FUN_1802106e0(0);
                     lVar7 = *plVar1;
-                    lVar11 = FUN_18046c0a0(0);
+                    lVar11 = FUN_1802106e0(0);
                     if (lVar11 != null) {
                       lVar11 = lVar11.worldData;
                       iVar6 = Int32.Parse(*(uint64 *)(targetWorldPlotEventStartData + 40),0);
                       if (lVar11 != null) {
-                        if (*(int64 *)(lVar11 + 0x298) == 0) {
-                          uVar10 = il2cpp_internal(DAT_181d81500);
-                          FUN_1808b1370(uVar10,DAT_181dbd790);
-                          *(uint64 *)(lVar11 + 0x298) = uVar10;
+                        if (*(int64 *)(lVar11 + 0x2a0) == 0) {
+                          uVar10 = il2cpp_internal(DAT_181e612c8);
+                          FUN_1806e5bc0(uVar10,DAT_181e9ee78);
+                          *(uint64 *)(lVar11 + 0x2a0) = uVar10;
                           lVar12 = lVar11.enterAreaEnemyForceAttackHero;
                           if (lVar12 != null) {
                             lVar16 = 32;
                             uVar15 = uVar13;
                             do {
                               uVar14 = (uint32)uVar15;
-                              if (lVar12.cityAreaID <= (int)uVar14) goto LAB_1809d5fe4;
-                              lVar3 = *(int64 *)(lVar11 + 0x298);
+                              if (lVar12.cityAreaID <= (int)uVar14) goto LAB_180721324;
+                              lVar3 = *(int64 *)(lVar11 + 0x2a0);
                               if (lVar12 == null) break;
                               if (lVar12.cityAreaID <= uVar14) {
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -191,7 +191,7 @@ public class WorldPlotEventController
                                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
                               }
                               if (lVar3 == null) break;
-                              FUN_1808ab370(lVar3,uVar5,
+                              FUN_1806da2f0(lVar3,uVar5,
                                             *(uint64 *)(*(int64 *)(lVar4 + 16) + lVar16));
                               lVar12 = lVar11.enterAreaEnemyForceAttackHero;
                               uVar15 = (uint64)(uVar14 + 1);
@@ -200,10 +200,10 @@ public class WorldPlotEventController
                           }
                         }
                         else {
-        LAB_1809d5fe4:
+        LAB_180721324:
                           if (-1 < iVar6) {
-                            if (*(int64 *)(lVar11 + 0x298) == 0) throw; // [null/range check failed]
-                            uVar13 = FUN_1817da420(*(int64 *)(lVar11 + 0x298),iVar6,DAT_181dbd8a0);
+                            if (*(int64 *)(lVar11 + 0x2a0) == 0) throw; // [null/range check failed]
+                            uVar13 = FUN_18171b450(*(int64 *)(lVar11 + 0x2a0),iVar6,DAT_181e9ef88);
                           }
                           if (lVar8 != null) {
                             GameController.CreateBigMapRandomEvent(lVar8,lVar7,uVar13,0);
@@ -220,8 +220,8 @@ public class WorldPlotEventController
         }
     }
 
-    // Token : 0x60023C5
-    // RVA   : 0x9D49A0   Offset: 0x9D3DA0   Length: 0x31D
+    // Token : 0x600246F
+    // RVA   : 0x71FCE0   Offset: 0x71EAE0   Length: 0x31D
     public void RemoveWorldPlotEvent(string plotEventName)
     {
         int iVar1;
@@ -240,41 +240,41 @@ public class WorldPlotEventController
                 if (iVar1 < 0) {
                   return;
                 }
-                lVar3 = FUN_18046c0a0(0);
+                lVar3 = FUN_1802106e0(0);
                 if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                    ((lVar3 = *(int64 *)(lVar3.villageAreaID + 240), lVar3 == null ||
-                    (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181dacfa0)) == null))) throw; // [null/range check failed]
-                cVar2 = FUN_18171eb50(lVar3.chapter,plotEventName,0);
+                    (lVar3 = FUN_1800024b0(lVar3,iVar1,DAT_181e8f5d8)) == null))) throw; // [null/range check failed]
+                cVar2 = FUN_1816387f0(lVar3.chapter,plotEventName,0);
               } while (!cVar2);
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if ((((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                   (lVar3 = *(int64 *)(lVar3.villageAreaID + 240)) == null) ||
-                 (lVar3 = FUN_180002f80(lVar3,iVar1,DAT_181dacfa0)) == null) throw; // [null/range check failed]
+                 (lVar3 = FUN_1800024b0(lVar3,iVar1,DAT_181e8f5d8)) == null) throw; // [null/range check failed]
               if (lVar3.Inns == null) break;
-              lVar3 = FUN_18046c0a0(0);
-              lVar4 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
+              lVar4 = FUN_1802106e0(0);
               if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
                  ((lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 240), lVar4 == null ||
-                  ((lVar4 = FUN_180002f80(lVar4,iVar1,DAT_181dacfa0), lVar4 == null || (lVar3 == null))))))
+                  ((lVar4 = FUN_1800024b0(lVar4,iVar1,DAT_181e8f5d8), lVar4 == null || (lVar3 == null))))))
               throw; // [null/range check failed]
               GameController.RemoveEvent(lVar3,*(uint64 *)(lVar4 + 56),0);
             }
-            lVar3 = FUN_18046c0a0(0);
-            lVar4 = FUN_18046c0a0(0);
+            lVar3 = FUN_1802106e0(0);
+            lVar4 = FUN_1802106e0(0);
             if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
                 (lVar4 = *(int64 *)(*(int64 *)(lVar4 + 32) + 240)) == null) ||
-               (uVar5 = FUN_180002f80(lVar4,iVar1,DAT_181dacfa0), lVar3 == null)) break;
+               (uVar5 = FUN_1800024b0(lVar4,iVar1,DAT_181e8f5d8), lVar3 == null)) break;
             GameController.ChangePlotTargetNumCount(lVar3,uVar5,0,0);
-            lVar3 = FUN_18046c0a0(0);
+            lVar3 = FUN_1802106e0(0);
             if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                (lVar3 = *(int64 *)(lVar3.villageAreaID + 240)) == null) break;
-            FUN_181823ba0(lVar3,iVar1,DAT_181dacea0);
+            FUN_181763390(lVar3,iVar1,DAT_181e8f4d8);
           }
         }
     }
 
-    // Token : 0x60023C6
-    // RVA   : 0x9D4100   Offset: 0x9D3500   Length: 0x898
+    // Token : 0x6002470
+    // RVA   : 0x71F440   Offset: 0x71E240   Length: 0x898
     public void CheckWorldPlotEventDataBase()
     {
         uint uVar1;
@@ -301,126 +301,126 @@ public class WorldPlotEventController
             lVar5 = *(int64 *)(lVar5._items + 32 + lVar10 * 8);
             if (lVar5 == null) break;
             if (lVar5.Count == 2) {
-        LAB_1809d4249:
-              lVar5 = FUN_18046c0a0(0);
+        LAB_18071f589:
+              lVar5 = FUN_1802106e0(0);
               if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) break;
               lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168);
               if ((this.WorldPlotEventDataBase == null) ||
-                 ((lVar6 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0), lVar6 == null ||
+                 ((lVar6 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8), lVar6 == null ||
                   (lVar5 == null)))) break;
               iVar3 = TimeData.DeltaDay(lVar5,*(uint64 *)(lVar6 + 56),0);
               if (-1 < iVar3) {
                 if (((this.WorldPlotEventDataBase == null) ||
-                    (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0)) == null
+                    (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8)) == null
                     ) || (*(int64 *)(lVar5 + 80) == 0)) break;
                 if (*(int *)(*(int64 *)(lVar5 + 80) + 16) != 0) {
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) break;
                   lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168);
                   if ((this.WorldPlotEventDataBase == null) ||
-                     ((lVar6 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0),
+                     ((lVar6 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8),
                       lVar6 == null || (lVar5 == null)))) break;
                   iVar3 = TimeData.DeltaDay(lVar5,*(uint64 *)(lVar6 + 80),0);
-                  if (0 < iVar3) goto LAB_1809d494d;
+                  if (0 < iVar3) goto LAB_18071fc8d;
                 }
                 if ((this.WorldPlotEventDataBase == null) ||
-                   (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0)) == null)
+                   (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8)) == null)
                 break;
                 if (*(int *)(lVar5 + 64) != 0) {
                   if ((((this.WorldPlotEventDataBase == null) ||
-                       (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0),
+                       (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8),
                        lVar5 == null)) || (*(int64 *)(lVar5 + 56) == 0)) ||
                      (plVar7 = (int64 *)TimeData.Clone(*(int64 *)(lVar5 + 56),0),
                      plVar7 == (int64 *)0)) break;
                   lVar5 = plVar7[3];
-                  lVar6 = FUN_18046c0a0(0);
+                  lVar6 = FUN_1802106e0(0);
                   if (((lVar6 == null) || (*(int64 *)(lVar6 + 32) == 0)) ||
                      (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 168)) == null) break;
                   uVar4 = TimeData.DeltaDay(lVar6,plVar7,0);
                   if ((this.WorldPlotEventDataBase == null) ||
-                     (lVar6 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0), lVar6 == null
+                     (lVar6 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8), lVar6 == null
                      )) break;
                   uVar4 = Mathf.Clamp(uVar4,0,*(uint32 *)(lVar6 + 64),0);
                   if ((this.WorldPlotEventDataBase == null) ||
-                     (lVar6 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0), lVar6 == null
+                     (lVar6 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8), lVar6 == null
                      )) break;
                   uVar1 = *(uint32 *)(lVar6 + 64);
                   iVar3 = GlobalData.RandomRange(uVar4,uVar1,0);
                   *(int *)(plVar7 + 3) = iVar3 + (int)lVar5;
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                      (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168)) == null) break;
                   iVar3 = TimeData.DeltaDay(lVar5,plVar7,0);
-                  if (iVar3 < 0) goto LAB_1809d494d;
+                  if (iVar3 < 0) goto LAB_18071fc8d;
                 }
                 if ((this.WorldPlotEventDataBase == null) ||
-                   (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0)) == null)
+                   (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8)) == null)
                 break;
                 if (*(int *)(lVar5 + 72) == 0) {
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                      (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 248)) == null) break;
-                  cVar2 = FUN_1808ab490(lVar5,uVar9,DAT_181dbf7f0);
-                  if (cVar2) goto LAB_1809d494d;
+                  cVar2 = FUN_1806da450(lVar5,uVar9,DAT_181ea1070);
+                  if (cVar2) goto LAB_18071fc8d;
                 }
                 if ((this.WorldPlotEventDataBase == null) ||
-                   (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0)) == null)
+                   (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8)) == null)
                 break;
                 if (*(int *)(lVar5 + 72) == 1) {
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) break;
                   lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 216);
                   if ((this.WorldPlotEventDataBase == null) ||
-                     ((lVar6 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0),
+                     ((lVar6 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8),
                       lVar6 == null || (lVar5 == null)))) break;
-                  cVar2 = FUN_1808ab490(lVar5,*(uint32 *)(lVar6 + 32),DAT_181dbf7f0);
-                  if (cVar2) goto LAB_1809d494d;
-                  lVar5 = FUN_18046c0a0(0);
+                  cVar2 = FUN_1806da450(lVar5,*(uint32 *)(lVar6 + 32),DAT_181ea1070);
+                  if (cVar2) goto LAB_18071fc8d;
+                  lVar5 = FUN_1802106e0(0);
                   if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                      (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 248)) == null) break;
-                  cVar2 = FUN_1808ab490(lVar5,uVar9,DAT_181dbf7f0);
+                  cVar2 = FUN_1806da450(lVar5,uVar9,DAT_181ea1070);
                   if (cVar2) {
-                    lVar5 = FUN_18046c0a0(0);
+                    lVar5 = FUN_1802106e0(0);
                     if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) break;
                     lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168);
-                    lVar6 = FUN_18046c0a0(0);
+                    lVar6 = FUN_1802106e0(0);
                     if ((lVar6 == null) ||
                        (((*(int64 *)(lVar6 + 32) == 0 ||
                          (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 248)) == null) ||
-                        (uVar8 = FUN_1817da420(lVar6,uVar9,DAT_181dbf878), lVar5 == null)))) break;
+                        (uVar8 = FUN_18171b450(lVar6,uVar9,DAT_181ea10f8), lVar5 == null)))) break;
                     iVar3 = TimeData.DeltaDay(lVar5,uVar8,0);
                     if ((this.WorldPlotEventDataBase == null) ||
-                       (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0),
+                       (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8),
                        lVar5 == null)) break;
-                    if (iVar3 < *(int *)(lVar5 + 76)) goto LAB_1809d494d;
+                    if (iVar3 < *(int *)(lVar5 + 76)) goto LAB_18071fc8d;
                   }
                 }
                 if ((this.WorldPlotEventDataBase == null) ||
-                   (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0)) == null)
+                   (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8)) == null)
                 break;
                 if (*(int *)(lVar5 + 72) == 2) {
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                      (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 248)) == null) break;
-                  cVar2 = FUN_1808ab490(lVar5,uVar9,DAT_181dbf7f0);
+                  cVar2 = FUN_1806da450(lVar5,uVar9,DAT_181ea1070);
                   if (cVar2) {
-                    lVar5 = FUN_18046c0a0(0);
+                    lVar5 = FUN_1802106e0(0);
                     if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) break;
                     lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168);
-                    lVar6 = FUN_18046c0a0(0);
+                    lVar6 = FUN_1802106e0(0);
                     if ((lVar6 == null) ||
                        (((*(int64 *)(lVar6 + 32) == 0 ||
                          (lVar6 = *(int64 *)(*(int64 *)(lVar6 + 32) + 248)) == null) ||
-                        (uVar8 = FUN_1817da420(lVar6,uVar9,DAT_181dbf878), lVar5 == null)))) break;
+                        (uVar8 = FUN_18171b450(lVar6,uVar9,DAT_181ea10f8), lVar5 == null)))) break;
                     iVar3 = TimeData.DeltaDay(lVar5,uVar8,0);
                     if ((this.WorldPlotEventDataBase == null) ||
-                       (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0),
+                       (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8),
                        lVar5 == null)) break;
-                    if (iVar3 < *(int *)(lVar5 + 76)) goto LAB_1809d494d;
+                    if (iVar3 < *(int *)(lVar5 + 76)) goto LAB_18071fc8d;
                   }
                 }
                 if ((this.WorldPlotEventDataBase == null) ||
-                   (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0)) == null)
+                   (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8)) == null)
                 break;
                 cVar2 = WorldPlotEventController.CheckMeetWorldEventNeed
                                   (this,*(uint64 *)(lVar5 + 48),0);
@@ -431,14 +431,14 @@ public class WorldPlotEventController
             }
             else {
               if ((this.WorldPlotEventDataBase == null) ||
-                 (lVar5 = FUN_180002f80(this.WorldPlotEventDataBase,uVar9,DAT_181dacca0)) == null)
+                 (lVar5 = FUN_1800024b0(this.WorldPlotEventDataBase,uVar9,DAT_181e8f2d8)) == null)
               break;
               iVar3 = lVar5.Count;
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) break;
-              if (iVar3 == *(int *)(*(int64 *)(lVar5 + 32) + 156)) goto LAB_1809d4249;
+              if (iVar3 == *(int *)(*(int64 *)(lVar5 + 32) + 156)) goto LAB_18071f589;
             }
-        LAB_1809d494d:
+        LAB_18071fc8d:
             lVar5 = this.WorldPlotEventDataBase;
             uVar9 = uVar9 + 1;
             lVar10 = lVar10 + 1;
@@ -446,8 +446,8 @@ public class WorldPlotEventController
         }
     }
 
-    // Token : 0x60023C7
-    // RVA   : 0x9D4CC0   Offset: 0x9D40C0   Length: 0xAD5
+    // Token : 0x6002471
+    // RVA   : 0x720000   Offset: 0x71EE00   Length: 0xAD5
     public void StartNewWorldPlotEventFromDataBase(int i)
     {
         byte uVar1;
@@ -509,7 +509,7 @@ public class WorldPlotEventController
                 if (((GameController._instance != null) &&
                     (lVar10 = GameController._instance.worldData) != null)
                    && (lVar10 = lVar10.worldPlotEventStartTime) != null) {
-                  cVar5 = FUN_1808ab490(lVar10,i,DAT_181dbf7f0);
+                  cVar5 = FUN_1806da450(lVar10,i,DAT_181ea1070);
                   if (!cVar5) {
                     if ((GameController._instance == null) ||
                        (lVar10 = GameController._instance.worldData) == null
@@ -519,7 +519,7 @@ public class WorldPlotEventController
                          (lVar3 = GameController._instance.worldData) == null
                          ) || (lVar3 = lVar3.worldTime) == null) ||
                        (plVar8 = (int64 *)TimeData.Clone(lVar3,0), lVar10 == null)) throw; // [null/range check failed]
-                    FUN_1808ab370(lVar10,i,plVar8,DAT_181dbf768);
+                    FUN_1806da2f0(lVar10,i,plVar8,DAT_181ea0fe8);
                   }
                   else {
                     if ((GameController._instance == null) ||
@@ -530,7 +530,7 @@ public class WorldPlotEventController
                          (lVar3 = GameController._instance.worldData) == null
                          ) || (lVar3 = lVar3.worldTime) == null) ||
                        (plVar8 = (int64 *)TimeData.Clone(lVar3,0), lVar10 == null)) throw; // [null/range check failed]
-                    FUN_1808b2160(lVar10,i,plVar8,DAT_181dbf900);
+                    FUN_1806e7630(lVar10,i,plVar8,DAT_181ea1180);
                   }
                   lVar10 = this.WorldPlotEventDataBase;
                   if (lVar10 != null) {
@@ -542,7 +542,7 @@ public class WorldPlotEventController
                       iVar2 = lVar10.TempHeros;
                       if (iVar2 == 1) {
                         lVar10 = this.WorldPlotEventDataBase;
-                        lVar7 = **(int64 **)(DAT_181d7f6c0 + 184);
+                        lVar7 = **(int64 **)(DAT_181e5fa68 + 184);
                         if (lVar10 == null) throw; // [null/range check failed]
                         if (lVar10.Count <= i) {
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -616,7 +616,7 @@ public class WorldPlotEventController
                                 {
                                   cVar5 = String.Contains(lVar10,";",0);
                                   if (!cVar5) {
-                                    lVar7 = FUN_18046c400(0);
+                                    lVar7 = FUN_180210a70(0);
                                     lVar10 = this.WorldPlotEventDataBase;
                                     if (lVar10 != null) {
                                       if (lVar10.Count <= i) {
@@ -640,27 +640,27 @@ public class WorldPlotEventController
                                                 (lVar10._items + 32 + lVar12 * 8);
                                       if (lVar12 != null) {
                                         lVar12 = *(int64 *)(lVar12 + 112);
-                                        lVar10 = FUN_1800d60b0(DAT_181da1058,1);
+                                        lVar10 = FUN_1801dfd90(DAT_181e81128,1);
                                         if (lVar10 != null) {
                                           if (lVar10.Count == null) {
                                             uVar11 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                            FUN_1800d65f0(uVar11,0);
+                                            FUN_1801e02d0(uVar11,0);
                                           }
                                           lVar10.villageAreaID = 59;
                                           if (lVar12 != null) {
                                             lVar12 = String.Split(lVar12,lVar10,0);
-                                            lVar10 = FUN_18046c400(0);
+                                            lVar10 = FUN_180210a70(0);
                                             if (lVar12 != null) {
                                               if (*(uint32 *)(lVar12 + 24) == 0) {
                                                 uVar11 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                FUN_1800d65f0(uVar11,0);
+                                                FUN_1801e02d0(uVar11,0);
                                               }
                                               if (*(uint32 *)(lVar12 + 24) < 2) {
                                                 uVar11 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                FUN_1800d65f0(uVar11,0);
+                                                FUN_1801e02d0(uVar11,0);
                                               }
                                               if (lVar10 != null) {
                                                 Component.SendMessage
@@ -689,8 +689,8 @@ public class WorldPlotEventController
         }
     }
 
-    // Token : 0x60023C8
-    // RVA   : 0x9D36E0   Offset: 0x9D2AE0   Length: 0xA3
+    // Token : 0x6002472
+    // RVA   : 0x71EA20   Offset: 0x71D820   Length: 0xA3
     public bool CheckMeetWorldEventNeed(List<WorldPlotEventNeedData> needDatas)
     {
         bool cVar1;
@@ -708,7 +708,7 @@ public class WorldPlotEventController
         iVar4 = *(int *)(needDatas + 16);
         if (iVar4 != 0) {
           if (iVar4 == 1) {
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 232)) != null) {
               fVar11 = (float)PlotEventLogData.GetFloat(lVar5,*(uint64 *)(needDatas + 24),0);
@@ -745,9 +745,9 @@ public class WorldPlotEventController
           if (iVar4 == 2) {
             lVar5 = *(int64 *)(needDatas + 32);
             if (lVar5 != null) {
-              cVar1 = FUN_18171eb50(lVar5,"alive",0);
+              cVar1 = FUN_1816387f0(lVar5,"alive",0);
               if (cVar1) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                    (lVar5 = WorldData.GetHero(*(int64 *)(lVar5 + 32),*(uint64 *)(needDatas + 24)
                                                ,0), lVar5 != null)) {
@@ -755,9 +755,9 @@ public class WorldPlotEventController
                 }
                 throw; // [null/range check failed]
               }
-              cVar1 = FUN_18171eb50(lVar5,"dead",0);
+              cVar1 = FUN_1816387f0(lVar5,"dead",0);
               if (cVar1) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                    (lVar5 = WorldData.GetHero(*(int64 *)(lVar5 + 32),*(uint64 *)(needDatas + 24)
                                                ,0), lVar5 != null)) {
@@ -765,9 +765,9 @@ public class WorldPlotEventController
                 }
                 throw; // [null/range check failed]
               }
-              cVar1 = FUN_18171eb50(lVar5,"sameforce",0);
+              cVar1 = FUN_1816387f0(lVar5,"sameforce",0);
               if (cVar1) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                    (lVar5 = WorldData.GetHero(*(int64 *)(lVar5 + 32),*(uint64 *)(needDatas + 24)
                                                ,0), lVar5 != null)) {
@@ -779,28 +779,28 @@ public class WorldPlotEventController
             }
           }
           else if (iVar4 == 3) {
-            cVar1 = FUN_18171eb50(*(uint64 *)(needDatas + 32),"0",0);
+            cVar1 = FUN_1816387f0(*(uint64 *)(needDatas + 32),"0",0);
             if (cVar1) {
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
               lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 224);
               uVar3 = Int32.Parse(*(uint64 *)(needDatas + 24),0);
               if (lVar5 == null) throw; // [null/range check failed]
-              cVar1 = FUN_18182a9b0(lVar5,uVar3,DAT_181d8f3b0);
+              cVar1 = FUN_18176a2d0(lVar5,uVar3,DAT_181e71570);
               if (cVar1) {
                 return false;
               }
             }
-            cVar1 = FUN_18171eb50(*(uint64 *)(needDatas + 32),"1",0);
+            cVar1 = FUN_1816387f0(*(uint64 *)(needDatas + 32),"1",0);
             if (!cVar1) {
               return true;
             }
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
               lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 224);
               uVar3 = Int32.Parse(*(uint64 *)(needDatas + 24),0);
               if (lVar5 != null) {
-                cVar1 = FUN_18182a9b0(lVar5,uVar3,DAT_181d8f3b0);
+                cVar1 = FUN_18176a2d0(lVar5,uVar3,DAT_181e71570);
                 if (!cVar1) {
                   return false;
                 }
@@ -809,23 +809,23 @@ public class WorldPlotEventController
             }
             throw; // [null/range check failed]
           }
-          plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
+          plVar6 = (int64 *)FUN_1801dfd90(DAT_181e85e38,6);
           if (plVar6 != (int64 *)0) {
             if (("Unknown WorldEventNeedData! " != 0) &&
                (lVar5 = il2cpp_internal("Unknown WorldEventNeedData! ",*(uint64 *)(*plVar6 + 64))) == null) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             lVar5 = "Unknown WorldEventNeedData! ";
             if ((int)plVar6[3] == 0) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             plVar6[4] = "Unknown WorldEventNeedData! ";
             il2cpp_internal(plVar6 + 4,lVar5);
-            plVar7 = (int64 *)il2cpp_value_box(DAT_181db6020,needDatas + 16);
+            plVar7 = (int64 *)il2cpp_value_box(DAT_181e96508,needDatas + 16);
             if (plVar7 != (int64 *)0) {
               lVar5 = (**(code **)(*plVar7 + 0x168))(plVar7,*(uint64 *)(*plVar7 + 0x170));
               puVar8 = (uint32 *)il2cpp_object_unbox(plVar7);
@@ -834,12 +834,12 @@ public class WorldPlotEventController
                  (lVar9 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               if (*(uint32 *)(plVar6 + 3) < 2) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[5] = lVar5;
               il2cpp_internal(plVar6 + 5,lVar5);
@@ -848,13 +848,13 @@ public class WorldPlotEventController
               {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               lVar5 = ":";
               if (*(uint32 *)(plVar6 + 3) < 3) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[6] = ":";
               il2cpp_internal(plVar6 + 6,lVar5);
@@ -863,12 +863,12 @@ public class WorldPlotEventController
                  (lVar9 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               if (*(uint32 *)(plVar6 + 3) < 4) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[7] = lVar5;
               il2cpp_internal(plVar6 + 7,lVar5);
@@ -877,13 +877,13 @@ public class WorldPlotEventController
               {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               lVar5 = ":";
               if (*(uint32 *)(plVar6 + 3) < 5) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[8] = ":";
               il2cpp_internal(plVar6 + 8,lVar5);
@@ -892,12 +892,12 @@ public class WorldPlotEventController
                  (lVar9 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               if (*(uint32 *)(plVar6 + 3) < 6) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[9] = lVar5;
               il2cpp_internal(plVar6 + 9,lVar5);
@@ -908,39 +908,39 @@ public class WorldPlotEventController
           }
           throw; // [null/range check failed]
         }
-        cVar1 = FUN_18171eb50(*(uint64 *)(needDatas + 32),"0",0);
+        cVar1 = FUN_1816387f0(*(uint64 *)(needDatas + 32),"0",0);
         if (cVar1) {
-          lVar5 = FUN_18046c0a0(0);
+          lVar5 = FUN_1802106e0(0);
           if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
           lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 216);
           uVar3 = Int32.Parse(*(uint64 *)(needDatas + 24),0);
           if (lVar5 == null) throw; // [null/range check failed]
-          cVar1 = FUN_1808ab490(lVar5,uVar3,DAT_181dbf7f0);
+          cVar1 = FUN_1806da450(lVar5,uVar3,DAT_181ea1070);
           if (cVar1) {
             return false;
           }
         }
-        cVar1 = FUN_18171eb50(*(uint64 *)(needDatas + 32),"1",0);
+        cVar1 = FUN_1816387f0(*(uint64 *)(needDatas + 32),"1",0);
         if (!cVar1) {
           return true;
         }
-        lVar5 = FUN_18046c0a0(0);
+        lVar5 = FUN_1802106e0(0);
         if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
           lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 216);
           uVar3 = Int32.Parse(*(uint64 *)(needDatas + 24),0);
           if (lVar5 != null) {
-            cVar1 = FUN_1808ab490(lVar5,uVar3,DAT_181dbf7f0);
+            cVar1 = FUN_1806da450(lVar5,uVar3,DAT_181ea1070);
             if (!cVar1) {
               return false;
             }
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
               lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168);
-              lVar9 = FUN_18046c0a0(0);
+              lVar9 = FUN_1802106e0(0);
               if ((lVar9 != null) && (*(int64 *)(lVar9 + 32) != 0)) {
                 lVar9 = *(int64 *)(*(int64 *)(lVar9 + 32) + 216);
                 uVar3 = Int32.Parse(*(uint64 *)(needDatas + 24),0);
-                if ((lVar9 != null) && (uVar10 = FUN_1817da420(lVar9,uVar3,DAT_181dbf878), lVar5 != null)) {
+                if ((lVar9 != null) && (uVar10 = FUN_18171b450(lVar9,uVar3,DAT_181ea10f8), lVar5 != null)) {
                   iVar4 = TimeData.DeltaDay(lVar5,uVar10,0);
                   if (iVar4 < 10) {
                     return false;
@@ -953,8 +953,8 @@ public class WorldPlotEventController
         }
     }
 
-    // Token : 0x60023C9
-    // RVA   : 0x9D3790   Offset: 0x9D2B90   Length: 0x966
+    // Token : 0x6002473
+    // RVA   : 0x71EAD0   Offset: 0x71D8D0   Length: 0x966
     public bool CheckMeetWorldEventNeed(WorldPlotEventNeedData needData)
     {
         bool cVar1;
@@ -972,7 +972,7 @@ public class WorldPlotEventController
         iVar4 = *(int *)(needData + 16);
         if (iVar4 != 0) {
           if (iVar4 == 1) {
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 232)) != null) {
               fVar11 = (float)PlotEventLogData.GetFloat(lVar5,*(uint64 *)(needData + 24),0);
@@ -1009,9 +1009,9 @@ public class WorldPlotEventController
           if (iVar4 == 2) {
             lVar5 = *(int64 *)(needData + 32);
             if (lVar5 != null) {
-              cVar1 = FUN_18171eb50(lVar5,"alive",0);
+              cVar1 = FUN_1816387f0(lVar5,"alive",0);
               if (cVar1) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                    (lVar5 = WorldData.GetHero(*(int64 *)(lVar5 + 32),*(uint64 *)(needData + 24)
                                                ,0), lVar5 != null)) {
@@ -1019,9 +1019,9 @@ public class WorldPlotEventController
                 }
                 throw; // [null/range check failed]
               }
-              cVar1 = FUN_18171eb50(lVar5,"dead",0);
+              cVar1 = FUN_1816387f0(lVar5,"dead",0);
               if (cVar1) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                    (lVar5 = WorldData.GetHero(*(int64 *)(lVar5 + 32),*(uint64 *)(needData + 24)
                                                ,0), lVar5 != null)) {
@@ -1029,9 +1029,9 @@ public class WorldPlotEventController
                 }
                 throw; // [null/range check failed]
               }
-              cVar1 = FUN_18171eb50(lVar5,"sameforce",0);
+              cVar1 = FUN_1816387f0(lVar5,"sameforce",0);
               if (cVar1) {
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                    (lVar5 = WorldData.GetHero(*(int64 *)(lVar5 + 32),*(uint64 *)(needData + 24)
                                                ,0), lVar5 != null)) {
@@ -1043,28 +1043,28 @@ public class WorldPlotEventController
             }
           }
           else if (iVar4 == 3) {
-            cVar1 = FUN_18171eb50(*(uint64 *)(needData + 32),"0",0);
+            cVar1 = FUN_1816387f0(*(uint64 *)(needData + 32),"0",0);
             if (cVar1) {
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
               lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 224);
               uVar3 = Int32.Parse(*(uint64 *)(needData + 24),0);
               if (lVar5 == null) throw; // [null/range check failed]
-              cVar1 = FUN_18182a9b0(lVar5,uVar3,DAT_181d8f3b0);
+              cVar1 = FUN_18176a2d0(lVar5,uVar3,DAT_181e71570);
               if (cVar1) {
                 return false;
               }
             }
-            cVar1 = FUN_18171eb50(*(uint64 *)(needData + 32),"1",0);
+            cVar1 = FUN_1816387f0(*(uint64 *)(needData + 32),"1",0);
             if (!cVar1) {
               return true;
             }
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
               lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 224);
               uVar3 = Int32.Parse(*(uint64 *)(needData + 24),0);
               if (lVar5 != null) {
-                cVar1 = FUN_18182a9b0(lVar5,uVar3,DAT_181d8f3b0);
+                cVar1 = FUN_18176a2d0(lVar5,uVar3,DAT_181e71570);
                 if (!cVar1) {
                   return false;
                 }
@@ -1073,23 +1073,23 @@ public class WorldPlotEventController
             }
             throw; // [null/range check failed]
           }
-          plVar6 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,6);
+          plVar6 = (int64 *)FUN_1801dfd90(DAT_181e85e38,6);
           if (plVar6 != (int64 *)0) {
             if (("Unknown WorldEventNeedData! " != 0) &&
                (lVar5 = il2cpp_internal("Unknown WorldEventNeedData! ",*(uint64 *)(*plVar6 + 64))) == null) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             lVar5 = "Unknown WorldEventNeedData! ";
             if ((int)plVar6[3] == 0) {
               uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar10,0);
+              FUN_1801e02d0(uVar10,0);
             }
             plVar6[4] = "Unknown WorldEventNeedData! ";
             il2cpp_internal(plVar6 + 4,lVar5);
-            plVar7 = (int64 *)il2cpp_value_box(DAT_181db6020,needData + 16);
+            plVar7 = (int64 *)il2cpp_value_box(DAT_181e96508,needData + 16);
             if (plVar7 != (int64 *)0) {
               lVar5 = (**(code **)(*plVar7 + 0x168))(plVar7,*(uint64 *)(*plVar7 + 0x170));
               puVar8 = (uint32 *)il2cpp_object_unbox(plVar7);
@@ -1098,12 +1098,12 @@ public class WorldPlotEventController
                  (lVar9 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               if (*(uint32 *)(plVar6 + 3) < 2) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[5] = lVar5;
               il2cpp_internal(plVar6 + 5,lVar5);
@@ -1112,13 +1112,13 @@ public class WorldPlotEventController
               {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               lVar5 = ":";
               if (*(uint32 *)(plVar6 + 3) < 3) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[6] = ":";
               il2cpp_internal(plVar6 + 6,lVar5);
@@ -1127,12 +1127,12 @@ public class WorldPlotEventController
                  (lVar9 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               if (*(uint32 *)(plVar6 + 3) < 4) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[7] = lVar5;
               il2cpp_internal(plVar6 + 7,lVar5);
@@ -1141,13 +1141,13 @@ public class WorldPlotEventController
               {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               lVar5 = ":";
               if (*(uint32 *)(plVar6 + 3) < 5) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[8] = ":";
               il2cpp_internal(plVar6 + 8,lVar5);
@@ -1156,12 +1156,12 @@ public class WorldPlotEventController
                  (lVar9 = il2cpp_internal(lVar5,*(uint64 *)(*plVar6 + 64))) == null) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               if (*(uint32 *)(plVar6 + 3) < 6) {
                 uVar10 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar10,0);
+                FUN_1801e02d0(uVar10,0);
               }
               plVar6[9] = lVar5;
               il2cpp_internal(plVar6 + 9,lVar5);
@@ -1172,39 +1172,39 @@ public class WorldPlotEventController
           }
           throw; // [null/range check failed]
         }
-        cVar1 = FUN_18171eb50(*(uint64 *)(needData + 32),"0",0);
+        cVar1 = FUN_1816387f0(*(uint64 *)(needData + 32),"0",0);
         if (cVar1) {
-          lVar5 = FUN_18046c0a0(0);
+          lVar5 = FUN_1802106e0(0);
           if ((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) throw; // [null/range check failed]
           lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 216);
           uVar3 = Int32.Parse(*(uint64 *)(needData + 24),0);
           if (lVar5 == null) throw; // [null/range check failed]
-          cVar1 = FUN_1808ab490(lVar5,uVar3,DAT_181dbf7f0);
+          cVar1 = FUN_1806da450(lVar5,uVar3,DAT_181ea1070);
           if (cVar1) {
             return false;
           }
         }
-        cVar1 = FUN_18171eb50(*(uint64 *)(needData + 32),"1",0);
+        cVar1 = FUN_1816387f0(*(uint64 *)(needData + 32),"1",0);
         if (!cVar1) {
           return true;
         }
-        lVar5 = FUN_18046c0a0(0);
+        lVar5 = FUN_1802106e0(0);
         if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
           lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 216);
           uVar3 = Int32.Parse(*(uint64 *)(needData + 24),0);
           if (lVar5 != null) {
-            cVar1 = FUN_1808ab490(lVar5,uVar3,DAT_181dbf7f0);
+            cVar1 = FUN_1806da450(lVar5,uVar3,DAT_181ea1070);
             if (!cVar1) {
               return false;
             }
-            lVar5 = FUN_18046c0a0(0);
+            lVar5 = FUN_1802106e0(0);
             if ((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) {
               lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 168);
-              lVar9 = FUN_18046c0a0(0);
+              lVar9 = FUN_1802106e0(0);
               if ((lVar9 != null) && (*(int64 *)(lVar9 + 32) != 0)) {
                 lVar9 = *(int64 *)(*(int64 *)(lVar9 + 32) + 216);
                 uVar3 = Int32.Parse(*(uint64 *)(needData + 24),0);
-                if ((lVar9 != null) && (uVar10 = FUN_1817da420(lVar9,uVar3,DAT_181dbf878), lVar5 != null)) {
+                if ((lVar9 != null) && (uVar10 = FUN_18171b450(lVar9,uVar3,DAT_181ea10f8), lVar5 != null)) {
                   iVar4 = TimeData.DeltaDay(lVar5,uVar10,0);
                   if (iVar4 < 10) {
                     return false;
@@ -1217,11 +1217,11 @@ public class WorldPlotEventController
         }
     }
 
-    // Token : 0x60023CA
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6002474
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

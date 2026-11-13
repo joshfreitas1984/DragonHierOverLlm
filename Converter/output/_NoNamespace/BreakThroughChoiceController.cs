@@ -1,46 +1,46 @@
 // ============================================================
 // Type  : BreakThroughChoiceController
-// Token : 0x20001A7
+// Token : 0x20001A9
 // ============================================================
 
 public class BreakThroughChoiceController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B8C
+    // Token: 0x4000B9D
     public List<Sprite> iconSprites;
 
-    // Token: 0x4000B8D
+    // Token: 0x4000B9E
     public int rareLv;
 
-    // Token: 0x4000B8E
+    // Token: 0x4000B9F
     public HeroSpeAddData extraAddData;
 
-    // Token: 0x4000B8F
+    // Token: 0x4000BA0
     public int injuryType;
 
-    // Token: 0x4000B90
+    // Token: 0x4000BA1
     public int injuryCost;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000D95
-    // RVA   : 0xC90510   Offset: 0xC8F910   Length: 0xB6
+    // Token : 0x6000D98
+    // RVA   : 0x9F9180   Offset: 0x9F7F80   Length: 0xB6
     public void OnClick()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db34f8 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e937b0 + 184) + 8);
         if (lVar1 != null) {
           BreakThroughController.BreakThroughChoiceClicked(lVar1,this,0);
           return;
         }
     }
 
-    // Token : 0x6000D96
-    // RVA   : 0xC905D0   Offset: 0xC8F9D0   Length: 0x65
+    // Token : 0x6000D99
+    // RVA   : 0x9F9240   Offset: 0x9F8040   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;
         this.extraAddData = new HeroSpeAddData(0);
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

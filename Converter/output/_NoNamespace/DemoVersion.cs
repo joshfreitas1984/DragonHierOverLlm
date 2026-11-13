@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : DemoVersion
-// Token : 0x20001C6
+// Token : 0x20001C8
 // ============================================================
 
 public class DemoVersion
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000C53
+    // Token: 0x4000C65
     public int value__;
 
-    // Token: 0x4000C54
+    // Token: 0x4000C66
     public const DemoVersion OfficialVersion;
 
-    // Token: 0x4000C55
+    // Token: 0x4000C67
     public const DemoVersion PlayTestVersion;
 
-    // Token: 0x4000C56
+    // Token: 0x4000C68
     public const DemoVersion DemoVersion;
 
-    // Token: 0x4000C57
+    // Token: 0x4000C69
     public const DemoVersion ShowVersion;
 
 }

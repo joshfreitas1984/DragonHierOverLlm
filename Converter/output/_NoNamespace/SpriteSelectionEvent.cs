@@ -1,16 +1,16 @@
 // ============================================================
 // Type  : SpriteSelectionEvent
-// Token : 0x20003E5
+// Token : 0x20003F2
 // ============================================================
 
 public class SpriteSelectionEvent
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600247F
-    // RVA   : 0x91B230   Offset: 0x91A630   Length: 0x39
+    // Token : 0x6002529
+    // RVA   : 0x608880   Offset: 0x607680   Length: 0x39
     public void /*ctor*/()
     {
-        FUN_180fecd30(this,DAT_181d7d2a0);
+        FUN_180c901c0(this,DAT_181e5fd40);
     }
 
 }

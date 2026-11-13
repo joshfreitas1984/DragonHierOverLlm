@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : GetMouseDelegate
-// Token : 0x20000E0
+// Token : 0x20000DF
 // ============================================================
 
 public class GetMouseDelegate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600074A
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x6000731
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class GetMouseDelegate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x600074B
-    // RVA   : 0x917EB0   Offset: 0x9172B0   Length: 0x286
+    // Token : 0x6000732
+    // RVA   : 0x6050C0   Offset: 0x603EC0   Length: 0x286
     public virtual MouseOrTouch Invoke(int button)
     {
         long lVar1;
@@ -61,14 +61,14 @@ public class GetMouseDelegate
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_1809180fb;
+            goto LAB_18060530b;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
-              cVar4 = FUN_1800d65c0(lVar1);
+              cVar4 = FUN_1801e02a0(lVar1);
               if (!cVar4) {
                 uVar5 = (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                   (plVar3,button,
@@ -88,17 +88,17 @@ public class GetMouseDelegate
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar6);
                       uVar5 = (*(code *)*puVar7)(plVar3,button,puVar7[1]);
-                      goto LAB_180918105;
+                      goto LAB_180605315;
                     }
                     uVar10 = uVar10 + 1;
                   } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                 }
-                puVar7 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
+                puVar7 = (uint64 *)FUN_18019b1f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
                 uVar5 = (*(code *)*puVar7)(plVar3,button,puVar7[1]);
               }
             }
             else {
-              cVar4 = FUN_1800d65c0(lVar1);
+              cVar4 = FUN_1801e02a0(lVar1);
               uVar10 = *(uint16 *)(lVar1 + 72);
               if (!cVar4) {
                 uVar5 = *(uint64 *)(*plVar3 + ((uint64)uVar10 + 20) * 16);
@@ -114,13 +114,13 @@ public class GetMouseDelegate
                               (int)((uint32)uVar10 +
                                    *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)) *
                               16 + 0x138 + lVar6;
-                      goto LAB_180917ff6;
+                      goto LAB_180605206;
                     }
                     uVar9 = uVar9 + 1;
                   } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
-                lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180917ff6:
+                lVar6 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_180605206:
                 uVar5 = *(uint64 *)(lVar6 + 8);
               }
               puVar7 = (uint64 *)il2cpp_internal(uVar5,lVar1);
@@ -131,10 +131,10 @@ public class GetMouseDelegate
             uVar5 = (*pcVar2)(button,lVar1);
           }
           else {
-        LAB_1809180fb:
+        LAB_18060530b:
             uVar5 = (*pcVar2)(plVar3,button,lVar1);
           }
-        LAB_180918105:
+        LAB_180605315:
           uVar12 = uVar12 + 1;
           if (uVar13 <= uVar12) {
             return uVar5;
@@ -142,8 +142,8 @@ public class GetMouseDelegate
         } while( true );
     }
 
-    // Token : 0x600074C
-    // RVA   : 0x917E30   Offset: 0x917230   Length: 0x7A
+    // Token : 0x6000733
+    // RVA   : 0x605040   Offset: 0x603E40   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(int button, AsyncCallback callback, object object)
     {
         void GetMouseDelegate.BeginInvoke
@@ -154,12 +154,12 @@ public class GetMouseDelegate
         uint64 local_10;
         local_res10[0] = button;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181d80430,local_res10);
+        local_18 = il2cpp_value_box(DAT_181e60808,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x600074D
-    // RVA   : 0x210040   Offset: 0x20F440   Length: 0xA
+    // Token : 0x6000734
+    // RVA   : 0x562C40   Offset: 0x561A40   Length: 0xA
     public virtual MouseOrTouch EndInvoke(IAsyncResult result)
     {
         il2cpp_internal(result,0);

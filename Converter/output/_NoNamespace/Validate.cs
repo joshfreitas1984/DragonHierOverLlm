@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : Validate
-// Token : 0x2000070
+// Token : 0x200006F
 // ============================================================
 
 public class Validate
 {
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60002A5
-    // RVA   : 0x210320   Offset: 0x20F720   Length: 0x6A
+    // Token : 0x600028C
+    // RVA   : 0x562E40   Offset: 0x561C40   Length: 0x6A
     public void /*ctor*/(object object, IntPtr method)
     {
         bool cVar1;
         ulong uVar2;
         if (object == null) {
-          cVar1 = FUN_1800d6050(method);
+          cVar1 = FUN_1801dfd30(method);
           if (!cVar1) {
             uVar2 = il2cpp_internal(0,"Delegate to an instance method cannot have null \'this\'.");
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
         }
         *(uint64 *)(this + 16) = *method;
@@ -25,8 +25,8 @@ public class Validate
         *(uint64 **)(this + 40) = method;
     }
 
-    // Token : 0x60002A6
-    // RVA   : 0xFB34D0   Offset: 0xFB28D0   Length: 0x2BE
+    // Token : 0x600028D
+    // RVA   : 0x1016490   Offset: 0x1015290   Length: 0x2BE
     public virtual bool Invoke(bool choice)
     {
         long lVar1;
@@ -62,14 +62,14 @@ public class Validate
           if (*(short *)(lVar1 + 72) == -1) {
             il2cpp_internal(lVar1);
           }
-          cVar4 = FUN_1800d6050(lVar1);
+          cVar4 = FUN_1801dfd30(lVar1);
           if (!cVar4) {
             if ((((plVar3 == (int64 *)0) || (*(short *)(lVar1 + 72) == -1)) ||
                 ((*(uint32 *)(*plVar3 + 0x114) >> 8 & 1) != 0)) || (*(int64 *)(this + 24) == 0))
-            goto LAB_180fb3751;
+            goto LAB_181016711;
             cVar4 = il2cpp_internal(lVar1);
             if (!cVar4) {
-              cVar4 = FUN_1800d65c0(lVar1);
+              cVar4 = FUN_1801e02a0(lVar1);
               if (!cVar4) {
                 uVar5 = (**(code **)(*plVar3 + 0x138 + (uint64)*(uint16 *)(lVar1 + 72) * 16))
                                   (plVar3,choice,
@@ -89,17 +89,17 @@ public class Validate
                                      *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar10 * 16))
                                 * 16 + 0x138 + lVar6);
                       uVar5 = (*(code *)*puVar7)(plVar3,choice,puVar7[1]);
-                      goto LAB_180fb375d;
+                      goto LAB_18101671d;
                     }
                     uVar10 = uVar10 + 1;
                   } while (uVar10 < *(uint16 *)(lVar6 + 0x12a));
                 }
-                puVar7 = (uint64 *)FUN_1800914f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
+                puVar7 = (uint64 *)FUN_18019b1f0(plVar3,lVar8,*(uint16 *)(lVar1 + 72));
                 uVar5 = (*(code *)*puVar7)(plVar3,choice,puVar7[1]);
               }
             }
             else {
-              cVar4 = FUN_1800d65c0(lVar1);
+              cVar4 = FUN_1801e02a0(lVar1);
               uVar10 = *(uint16 *)(lVar1 + 72);
               if (!cVar4) {
                 puVar7 = (uint64 *)
@@ -118,13 +118,13 @@ public class Validate
                               (int)((uint32)uVar10 +
                                    *(int *)(*(int64 *)(lVar6 + 176) + 8 + (uint64)uVar9 * 16)) *
                               16 + 0x138 + lVar6;
-                      goto LAB_180fb3626;
+                      goto LAB_1810165e6;
                     }
                     uVar9 = uVar9 + 1;
                   } while (uVar9 < *(uint16 *)(lVar6 + 0x12a));
                 }
-                lVar6 = FUN_1800914f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
-        LAB_180fb3626:
+                lVar6 = FUN_18019b1f0(plVar3,*(int64 *)(lVar1 + 24),uVar10);
+        LAB_1810165e6:
                 puVar7 = (uint64 *)il2cpp_internal(*(uint64 *)(lVar6 + 8),lVar1);
                 uVar5 = (*(code *)*puVar7)(plVar3,choice,puVar7);
               }
@@ -134,10 +134,10 @@ public class Validate
             uVar5 = (*pcVar2)(choice,lVar1);
           }
           else {
-        LAB_180fb3751:
+        LAB_181016711:
             uVar5 = (*pcVar2)(plVar3,choice,lVar1);
           }
-        LAB_180fb375d:
+        LAB_18101671d:
           uVar12 = uVar12 + 1;
           if (uVar13 <= uVar12) {
             return uVar5;
@@ -145,8 +145,8 @@ public class Validate
         } while( true );
     }
 
-    // Token : 0x60002A7
-    // RVA   : 0x18448F0   Offset: 0x1843CF0   Length: 0x7A
+    // Token : 0x600028E
+    // RVA   : 0x1785D50   Offset: 0x1784B50   Length: 0x7A
     public virtual IAsyncResult BeginInvoke(bool choice, AsyncCallback callback, object object)
     {
         void Validate.BeginInvoke
@@ -157,12 +157,12 @@ public class Validate
         uint64 local_10;
         local_res10[0] = choice;
         local_10 = 0;
-        local_18 = il2cpp_value_box(DAT_181db2ae0,local_res10);
+        local_18 = il2cpp_value_box(DAT_181e92da8,local_res10);
         il2cpp_internal(this,&local_18,callback,object);
     }
 
-    // Token : 0x60002A8
-    // RVA   : 0x28D420   Offset: 0x28C820   Length: 0x28
+    // Token : 0x600028F
+    // RVA   : 0x604550   Offset: 0x603350   Length: 0x28
     public virtual bool EndInvoke(IAsyncResult result)
     {
         long lVar1;

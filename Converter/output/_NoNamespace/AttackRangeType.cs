@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : AttackRangeType
-// Token : 0x2000235
+// Token : 0x2000238
 // ============================================================
 
 public class AttackRangeType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40011AE
+    // Token: 0x40011C8
     public int value__;
 
-    // Token: 0x40011AF
+    // Token: 0x40011C9
     public const AttackRangeType CircleRange;
 
-    // Token: 0x40011B0
+    // Token: 0x40011CA
     public const AttackRangeType SquareRange;
 
-    // Token: 0x40011B1
+    // Token: 0x40011CB
     public const AttackRangeType StraightLine;
 
-    // Token: 0x40011B2
+    // Token: 0x40011CC
     public const AttackRangeType ObliqueLine;
 
-    // Token: 0x40011B3
+    // Token: 0x40011CD
     public const AttackRangeType Direction;
 
 }

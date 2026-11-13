@@ -1,20 +1,23 @@
 // ============================================================
 // Type  : HeroHandBookIconController
-// Token : 0x20002CA
+// Token : 0x20002D3
 // ============================================================
 
 public class HeroHandBookIconController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001722
+    // Token: 0x4001776
     public HeroData heroData;
 
-    // Token: 0x4001723
+    // Token: 0x4001777
     public SkeletonGraphic skeletonGraphic;
 
+    // Token: 0x4001778
+    private bool handBookUnlocked;
+
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60017D0
-    // RVA   : 0xAF4A30   Offset: 0xAF3E30   Length: 0x39D
+    // Token : 0x600184C
+    // RVA   : 0x896A40   Offset: 0x895840   Length: 0x3A2
     public void Init()
     {
         uint uVar3;
@@ -33,7 +36,7 @@ public class HeroHandBookIconController
           if (lVar5 != null) {
             lVar5 = Transform.Find(lVar5,"Text",0);
             if (lVar5 != null) {
-              uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+              uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
               if (this.heroData != null) {
                 uVar7 = HeroData.HeroName(this.heroData,0,0);
                 LTLocalization.SetText(uVar6,uVar7,0);
@@ -43,7 +46,7 @@ public class HeroHandBookIconController
                   if (lVar5 != null) {
                     lVar5 = Transform.Find(lVar5,"Text",0);
                     if (lVar5 != null) {
-                      uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+                      uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
                       if (this.heroData != null) {
                         uVar7 = HeroData.GetHeroForceLvDescribe(this.heroData,1,0);
                         LTLocalization.SetText(uVar6,uVar7,0);
@@ -64,39 +67,38 @@ public class HeroHandBookIconController
                                 if (lVar5 != null) {
                                   lVar5 = HeroData.GetSkeletonGraphic(lVar5,uVar6,0);
                                   this.skeletonGraphic = lVar5;
-                                  lVar5 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
-                                  if (lVar5 != null) {
-                                    lVar5 = lVar5.isSummon;
-                                    if (this.heroData != null) {
-                                      uVar6 = Int32.ToString(this.heroData + 88,0);
-                                      uVar6 = String.Concat("HandBookHero_",uVar6,0);
-                                      if (lVar5 != null) {
-                                        iVar4 = PlayerPrefDictionary.GetInt(lVar5,uVar6,0);
-                                        if (iVar4 == 0) {
-                                          plVar2 = (int64 *)*plVar1;
-                                          puVar9 = (uint32 *)Color.get_black(&local_18,0);
-                                          if (plVar2 == (int64 *)0) throw; // [null/range check failed]
-                                          local_18 = *puVar9;
-                                          uStack_14 = puVar9[1];
-                                          uStack_10 = puVar9[2];
-                                          uStack_c = puVar9[3];
-                                          (**(code **)(*plVar2 + 0x2a8))
-                                                    (plVar2,&local_18,*(uint64 *)(*plVar2 + 0x2b0));
-                                          if (*plVar1 == 0) throw; // [null/range check failed]
-                                          lVar5 = SkeletonGraphic.get_AnimationState(*plVar1,0);
-                                          if (lVar5 == null) throw; // [null/range check failed]
+                                  if (this.heroData != null) {
+                                    uVar6 = Int32.ToString(this.heroData + 88,0);
+                                    uVar6 = String.Concat("HandBookHero_",uVar6,0);
+
+                                    if ((lVar5 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 8)?.isSummon) != null)
+                                    {
+                                      iVar4 = PlayerPrefDictionary.GetInt(lVar5,uVar6,0);
+                                      this.handBookUnlocked = iVar4 != 0;
+                                      if (iVar4 == 0) {
+                                        plVar2 = (int64 *)*plVar1;
+                                        puVar9 = (uint32 *)Color.get_black(&local_18,0);
+                                        if (plVar2 == (int64 *)0) throw; // [null/range check failed]
+                                        local_18 = *puVar9;
+                                        uStack_14 = puVar9[1];
+                                        uStack_10 = puVar9[2];
+                                        uStack_c = puVar9[3];
+                                        (**(code **)(*plVar2 + 0x2a8))
+                                                  (plVar2,&local_18,*(uint64 *)(*plVar2 + 0x2b0));
+                                        if (*plVar1 == 0) throw; // [null/range check failed]
+                                        lVar5 = SkeletonGraphic.get_AnimationState(*plVar1,0);
+                                        if (lVar5 == null) throw; // [null/range check failed]
+                                        lVar5 = AnimationState.GetCurrent(lVar5,0,0);
+                                        if (lVar5 == null) throw; // [null/range check failed]
+                                        lVar5.thisMonthContribution = 0;
+                                      }
+                                      if (*plVar1 != 0) {
+                                        lVar5 = SkeletonGraphic.get_AnimationState(*plVar1,0);
+                                        if (lVar5 != null) {
                                           lVar5 = AnimationState.GetCurrent(lVar5,0,0);
-                                          if (lVar5 == null) throw; // [null/range check failed]
-                                          lVar5.thisMonthContribution = 0;
-                                        }
-                                        if (*plVar1 != 0) {
-                                          lVar5 = SkeletonGraphic.get_AnimationState(*plVar1,0);
                                           if (lVar5 != null) {
-                                            lVar5 = AnimationState.GetCurrent(lVar5,0,0);
-                                            if (lVar5 != null) {
-                                              lVar5.forceJobType = 0;
-                                              return;
-                                            }
+                                            lVar5.forceJobType = 0;
+                                            return;
                                           }
                                         }
                                       }
@@ -117,45 +119,35 @@ public class HeroHandBookIconController
         }
     }
 
-    // Token : 0x60017D1
-    // RVA   : 0xAF4DD0   Offset: 0xAF41D0   Length: 0x171
+    // Token : 0x600184D
+    // RVA   : 0x896DF0   Offset: 0x895BF0   Length: 0xE7
     public void Update()
     {
         long lVar1;
-        long lVar2;
+        ulong uVar2;
         bool cVar3;
-        int iVar4;
-        ulong uVar5;
-        ulong uVar6;
+        ulong uVar4;
         lVar1 = this.skeletonGraphic;
-        uVar6 = *(uint64 *)(*(int64 *)(DAT_181d8b7a8 + 184) + 72);
-        uVar5 = Component.get_gameObject(this,0);
-        cVar3 = Object.op_Inequality(uVar6,uVar5,0);
+        uVar2 = *(uint64 *)(*(int64 *)(DAT_181e6bb68 + 184) + 72);
+        uVar4 = Component.get_gameObject(this,0);
+        cVar3 = Object.op_Inequality(uVar2,uVar4,0);
         if (!cVar3) {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
-          if (lVar2 == null) throw; // [null/range check failed]
-          lVar2 = *(int64 *)(lVar2 + 16);
-          if (this.heroData == null) throw; // [null/range check failed]
-          uVar6 = Int32.ToString(this.heroData + 88,0);
-          uVar6 = String.Concat("HandBookHero_",uVar6,0);
-          if (lVar2 == null) throw; // [null/range check failed]
-          iVar4 = PlayerPrefDictionary.GetInt(lVar2,uVar6,0);
-          bVar7 = iVar4 == 0;
+          bVar5 = !this.handBookUnlocked;
         }
         else {
-          bVar7 = true;
+          bVar5 = true;
         }
         if (lVar1 != null) {
-          *(bool *)(lVar1 + 0x118) = bVar7;
+          *(bool *)(lVar1 + 0x118) = bVar5;
           return;
         }
     }
 
-    // Token : 0x60017D2
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600184E
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

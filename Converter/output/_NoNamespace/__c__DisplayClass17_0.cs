@@ -1,24 +1,24 @@
 // ============================================================
 // Type  : <>c__DisplayClass17_0
-// Token : 0x2000468
+// Token : 0x2000475
 // ============================================================
 
 public class <>c__DisplayClass17_0
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400211C
+    // Token: 0x40021AF
     public RectTransform target;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60026F8
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x60027A2
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x60026F9
-    // RVA   : 0x937FB0   Offset: 0x9373B0   Length: 0x3B
+    // Token : 0x60027A3
+    // RVA   : 0x67E8E0   Offset: 0x67D6E0   Length: 0x3B
     internal Vector3 <DOAnchorPos3DX>b__0()
     {
         uint uVar1;
@@ -33,8 +33,8 @@ public class <>c__DisplayClass17_0
         }
     }
 
-    // Token : 0x60026FA
-    // RVA   : 0x937FF0   Offset: 0x9373F0   Length: 0x35
+    // Token : 0x60027A4
+    // RVA   : 0x67E920   Offset: 0x67D720   Length: 0x35
     internal void <DOAnchorPos3DX>b__1(Vector3 x)
     {
         ulong local_18;

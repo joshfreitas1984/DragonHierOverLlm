@@ -1,59 +1,59 @@
 // ============================================================
 // Type  : ObjectMove
-// Token : 0x20003D0
+// Token : 0x20003DD
 // ============================================================
 
 public class ObjectMove
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E8F
+    // Token: 0x4001F21
     public float time;
 
-    // Token: 0x4001E90
+    // Token: 0x4001F22
     private float m_time;
 
-    // Token: 0x4001E91
+    // Token: 0x4001F23
     private float m_time2;
 
-    // Token: 0x4001E92
+    // Token: 0x4001F24
     public float MoveSpeed;
 
-    // Token: 0x4001E93
+    // Token: 0x4001F25
     public bool AbleHit;
 
-    // Token: 0x4001E94
+    // Token: 0x4001F26
     public float HitDelay;
 
-    // Token: 0x4001E95
+    // Token: 0x4001F27
     public GameObject m_hitObject;
 
-    // Token: 0x4001E96
+    // Token: 0x4001F28
     private GameObject m_makedObject;
 
-    // Token: 0x4001E97
+    // Token: 0x4001F29
     public float MaxLength;
 
-    // Token: 0x4001E98
+    // Token: 0x4001F2A
     public float DestroyTime2;
 
-    // Token: 0x4001E99
+    // Token: 0x4001F2B
     private float m_scalefactor;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002420
-    // RVA   : 0xB906D0   Offset: 0xB8FAD0   Length: 0x77
+    // Token : 0x60024CA
+    // RVA   : 0x90D5C0   Offset: 0x90C3C0   Length: 0x77
     private void Start()
     {
         uint uVar1;
-        this.m_scalefactor = **(uint32 **)(DAT_181db38e0 + 184);
+        this.m_scalefactor = **(uint32 **)(DAT_181e93db8 + 184);
         uVar1 = Time.get_time(0);
         this.m_time = uVar1;
         uVar1 = Time.get_time(0);
         this.m_time2 = uVar1;
     }
 
-    // Token : 0x6002421
-    // RVA   : 0xB90380   Offset: 0xB8F780   Length: 0x340
+    // Token : 0x60024CB
+    // RVA   : 0x90D270   Offset: 0x90C070   Length: 0x340
     private void LateUpdate()
     {
         float fVar1;
@@ -138,7 +138,7 @@ public class ObjectMove
                 return;
               }
               uVar14 = Time.get_time(0);
-              bVar10 = !DAT_181e9df63;
+              bVar10 = !DAT_181eb77e0;
               this.m_time2 = uVar14;
               local_30 = local_60;
               local_58 = local_88;
@@ -149,15 +149,15 @@ public class ObjectMove
               uStack_40 = (uint32)uStack_70;
               uStack_3c = uStack_70._4_4_;
               if (bVar10) {
-                il2cpp_runtime_class_init(&DAT_181d92cb0);
-                il2cpp_runtime_class_init(&DAT_181d8e228);
-                DAT_181e9df63 = true;
+                il2cpp_runtime_class_init(&DAT_181e762f8);
+                il2cpp_runtime_class_init(&DAT_181e6e5e8);
+                DAT_181eb77e0 = true;
               }
               uVar3 = this.m_hitObject;
-              puVar9 = (uint64 *)FUN_18045e0a0(&local_a8,&local_58,0);
+              puVar9 = (uint64 *)FUN_180af1d30(&local_a8,&local_58,0);
               uVar7 = *puVar9;
               fVar11 = *(float *)(puVar9 + 1);
-              puVar9 = (uint64 *)FUN_18045e080(&local_98,&local_58,0);
+              puVar9 = (uint64 *)FUN_180af1d10(&local_98,&local_58,0);
               local_a8 = *puVar9;
               local_a0 = *(float *)(puVar9 + 1);
               puVar9 = (uint64 *)Quaternion.LookRotation(&local_98,&local_a8,0);
@@ -167,9 +167,9 @@ public class ObjectMove
               local_a0 = fVar11;
               local_98 = uVar4;
               uStack_90 = uVar5;
-              lVar8 = Object.Instantiate(uVar3,&local_a8,&local_98,DAT_181d92cb0);
+              lVar8 = Object.Instantiate(uVar3,&local_a8,&local_98,DAT_181e762f8);
               if (lVar8 != null) {
-                uVar7 = FUN_180f93010(lVar8,0);
+                uVar7 = FUN_180d94340(lVar8,0);
                 this.m_makedObject = uVar7;
                 Object.Destroy(this.m_makedObject,this.DestroyTime2,0);
                 return;
@@ -179,8 +179,8 @@ public class ObjectMove
         }
     }
 
-    // Token : 0x6002422
-    // RVA   : 0xB90240   Offset: 0xB8F640   Length: 0x13B
+    // Token : 0x60024CC
+    // RVA   : 0x90D130   Offset: 0x90BF30   Length: 0x13B
     private void HitObj(RaycastHit hit)
     {
         uint uVar1;
@@ -192,10 +192,10 @@ public class ObjectMove
         ulong local_38;
         ulong uStack_30;
         uVar2 = this.m_hitObject;
-        puVar3 = (uint64 *)FUN_18045e0a0(&local_48,hit,0);
+        puVar3 = (uint64 *)FUN_180af1d30(&local_48,hit,0);
         uVar5 = *puVar3;
         uVar1 = *(uint32 *)(puVar3 + 1);
-        puVar3 = (uint64 *)FUN_18045e080(&local_38,hit,0);
+        puVar3 = (uint64 *)FUN_180af1d10(&local_38,hit,0);
         local_48 = *puVar3;
         local_40 = *(uint32 *)(puVar3 + 1);
         puVar3 = (uint64 *)Quaternion.LookRotation(&local_38,&local_48,0);
@@ -203,23 +203,23 @@ public class ObjectMove
         uStack_30 = puVar3[1];
         local_48 = uVar5;
         local_40 = uVar1;
-        lVar4 = Object.Instantiate(uVar2,&local_48,&local_38,DAT_181d92cb0);
+        lVar4 = Object.Instantiate(uVar2,&local_48,&local_38,DAT_181e762f8);
         if (lVar4 != null) {
-          uVar5 = FUN_180f93010(lVar4,0);
+          uVar5 = FUN_180d94340(lVar4,0);
           this.m_makedObject = uVar5;
           Object.Destroy(this.m_makedObject,this.DestroyTime2,0);
           return;
         }
     }
 
-    // Token : 0x6002423
-    // RVA   : 0xB90750   Offset: 0xB8FB50   Length: 0xE
+    // Token : 0x60024CD
+    // RVA   : 0x90D640   Offset: 0x90C440   Length: 0xE
     public void /*ctor*/()
     {
-        void FUN_180b90750(int64 this)
+        void FUN_18090d640(int64 this)
         {
         this.MoveSpeed = 0x41200000;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

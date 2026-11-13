@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : FPSText
-// Token : 0x200027B
+// Token : 0x2000282
 // ============================================================
 
 public class FPSText
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001410
+    // Token: 0x400144E
     public Text FPS_Text;
 
-    // Token: 0x4001411
+    // Token: 0x400144F
     private float m_UpdateShowDeltaTime;
 
-    // Token: 0x4001412
+    // Token: 0x4001450
     private int m_FrameUpdate;
 
-    // Token: 0x4001413
+    // Token: 0x4001451
     private float m_FPS;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001459
-    // RVA   : 0xB2A210   Offset: 0xB29610   Length: 0x142
+    // Token : 0x60014C1
+    // RVA   : 0x8EBBD0   Offset: 0x8EA9D0   Length: 0x142
     private void Update()
     {
         float fVar1;
@@ -66,11 +66,11 @@ public class FPSText
         }
     }
 
-    // Token : 0x600145A
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60014C2
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

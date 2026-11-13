@@ -1,81 +1,81 @@
 // ============================================================
 // Type  : WorldPlotEventData
-// Token : 0x200020A
+// Token : 0x200020C
 // ============================================================
 
 public class WorldPlotEventData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000EB6
+    // Token: 0x4000ECA
     public string name;
 
-    // Token: 0x4000EB7
+    // Token: 0x4000ECB
     public AvailableGameMode availableMode;
 
-    // Token: 0x4000EB8
+    // Token: 0x4000ECC
     public float difficulty;
 
-    // Token: 0x4000EB9
+    // Token: 0x4000ECD
     public int plotID;
 
-    // Token: 0x4000EBA
+    // Token: 0x4000ECE
     public PlotTriggerType triggerType;
 
-    // Token: 0x4000EBB
+    // Token: 0x4000ECF
     public string triggerTargetID;
 
-    // Token: 0x4000EBC
+    // Token: 0x4000ED0
     public List<WorldPlotEventNeedData> needDatas;
 
-    // Token: 0x4000EBD
+    // Token: 0x4000ED1
     public TimeData startTime;
 
-    // Token: 0x4000EBE
+    // Token: 0x4000ED2
     public int startTimeRandomDayRange;
 
-    // Token: 0x4000EBF
+    // Token: 0x4000ED3
     public int startContinueTime;
 
-    // Token: 0x4000EC0
+    // Token: 0x4000ED4
     public WorldPlotEventRepeatType repeatType;
 
-    // Token: 0x4000EC1
+    // Token: 0x4000ED5
     public int repeatTime;
 
-    // Token: 0x4000EC2
+    // Token: 0x4000ED6
     public TimeData endTime;
 
-    // Token: 0x4000EC3
+    // Token: 0x4000ED7
     public WorldPlotEventStartRemindType startRemindType;
 
-    // Token: 0x4000EC4
+    // Token: 0x4000ED8
     public string startRemindSouce;
 
-    // Token: 0x4000EC5
+    // Token: 0x4000ED9
     public string startRemindText;
 
-    // Token: 0x4000EC6
+    // Token: 0x4000EDA
     public string startCallSpeFuc;
 
-    // Token: 0x4000EC7
+    // Token: 0x4000EDB
     public string outtimeCallSpeFuc;
 
-    // Token: 0x4000EC8
+    // Token: 0x4000EDC
     public bool noAutoDestroy;
 
-    // Token: 0x4000EC9
+    // Token: 0x4000EDD
     public bool notImportant;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000FEF
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6000FF8
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);
     }
 
-    // Token : 0x6000FF0
-    // RVA   : 0x9D60A0   Offset: 0x9D54A0   Length: 0x175
+    // Token : 0x6000FF9
+    // RVA   : 0x7213E0   Offset: 0x7201E0   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -86,13 +86,13 @@ public class WorldPlotEventData
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -104,11 +104,11 @@ public class WorldPlotEventData
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 

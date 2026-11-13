@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : AIBattleAttackPlan
-// Token : 0x2000246
+// Token : 0x200024A
 // ============================================================
 
 public class AIBattleAttackPlan
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400122C
+    // Token: 0x400124A
     public float planValue;
 
-    // Token: 0x400122D
+    // Token: 0x400124B
     public int activeSkill;
 
-    // Token: 0x400122E
+    // Token: 0x400124C
     public List<GridUnitData> attackTargetGridUnits;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6001306
-    // RVA   : 0x13DA520   Offset: 0x13D9920   Length: 0x175
+    // Token : 0x600132A
+    // RVA   : 0x11A4360   Offset: 0x11A3160   Length: 0x175
     public virtual object Clone()
     {
         long lVar2;
@@ -28,13 +28,13 @@ public class AIBattleAttackPlan
         uint uStack_24;
         uint uStack_20;
         uint32 uStack_1c;
-        plVar1 = (int64 *)il2cpp_internal(DAT_181d89228);
+        plVar1 = (int64 *)il2cpp_internal(DAT_181e695f0);
         plVar4 = plVar1;
         MemoryStream.ctor(plVar1,1000,0);
         local_38 = 0;
         uStack_30 = 0;
         StreamingContext.ctor(&local_38,64,0);
-        lVar2 = il2cpp_internal(DAT_181db1748);
+        lVar2 = il2cpp_internal(DAT_181e91a00);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
@@ -46,16 +46,16 @@ public class AIBattleAttackPlan
             (**(code **)(*plVar1 + 0x2c8))(plVar1,0,0,*(uint64 *)(*plVar1 + 0x2d0));
             uVar3 = BinaryFormatter.Deserialize(lVar2,plVar1,0);
             (**(code **)(*plVar1 + 0x238))(plVar1,*(uint64 *)(*plVar1 + 0x240));
-            FUN_180002970(0,DAT_181d78db8,plVar1);
+            FUN_180002280(0,DAT_181e58ab8,plVar1);
             return uVar3;
           }
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
     }
 
-    // Token : 0x6001307
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x600132B
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

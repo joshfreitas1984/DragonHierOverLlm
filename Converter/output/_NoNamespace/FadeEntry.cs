@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : FadeEntry
-// Token : 0x200002D
+// Token : 0x200002C
 // ============================================================
 
 public class FadeEntry
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000D7
+    // Token: 0x40000B7
     public int index;
 
-    // Token: 0x40000D8
+    // Token: 0x40000B8
     public string text;
 
-    // Token: 0x40000D9
+    // Token: 0x40000B9
     public float alpha;
 
 }

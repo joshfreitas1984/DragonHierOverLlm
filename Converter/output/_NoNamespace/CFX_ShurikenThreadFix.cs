@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : CFX_ShurikenThreadFix
-// Token : 0x20003C4
+// Token : 0x20003D1
 // ============================================================
 
 public class CFX_ShurikenThreadFix
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E4A
+    // Token: 0x4001EDC
     private ParticleSystem[] systems;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023F2
-    // RVA   : 0xB80930   Offset: 0xB7FD30   Length: 0xC4
+    // Token : 0x600249C
+    // RVA   : 0x939BE0   Offset: 0x9389E0   Length: 0xC4
     private void OnEnable()
     {
         long lVar1;
         ulong uVar2;
         uint uVar3;
-        uVar2 = FUN_180967b70(this,DAT_181d98678);
+        uVar2 = FUN_180772590(this,DAT_181e7ba38);
         this.systems = uVar2;
         lVar1 = this.systems;
         uVar3 = 0;
@@ -30,7 +30,7 @@ public class CFX_ShurikenThreadFix
             if (*(uint32 *)(lVar1 + 24) <= uVar3) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             if (lVar1[uVar3] == 0) break;
             ParticleSystem.set_enableEmission();
@@ -39,8 +39,8 @@ public class CFX_ShurikenThreadFix
         }
     }
 
-    // Token : 0x60023F3
-    // RVA   : 0xB80A00   Offset: 0xB7FE00   Length: 0x6C
+    // Token : 0x600249D
+    // RVA   : 0x939CB0   Offset: 0x938AB0   Length: 0x6C
     private IEnumerator WaitFrame()
     {
         long lVar1;
@@ -51,11 +51,11 @@ public class CFX_ShurikenThreadFix
         }
     }
 
-    // Token : 0x60023F4
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600249E
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

@@ -1,23 +1,23 @@
 // ============================================================
 // Type  : HeroDetailTabController
-// Token : 0x20002C7
+// Token : 0x20002D0
 // ============================================================
 
 public class HeroDetailTabController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001712
+    // Token: 0x4001766
     public HeroData heroData;
 
-    // Token: 0x4001713
+    // Token: 0x4001767
     private bool isOn;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60017BC
-    // RVA   : 0xE21530   Offset: 0xE20930   Length: 0x39D
+    // Token : 0x6001838
+    // RVA   : 0xB20800   Offset: 0xB1F600   Length: 0x39D
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d75f40 + 184);
+        var pStatics = *(int64*)(DAT_181e55ae8 + 184);
         long lVar2;
         ulong local_28;
         ulong uStack_20;
@@ -30,14 +30,14 @@ public class HeroDetailTabController
           if (*(int64 *)(*pStatics + 96) != this.heroData
              ) {
             this.isOn = 0;
-            plVar1 = (int64 *)Component.GetComponent(this,DAT_181d94478);
+            plVar1 = (int64 *)Component.GetComponent(this,DAT_181e777b8);
             local_28 = 0;
             uStack_20 = 0;
-            FUN_1809dcfa0(&local_28,0,0,0,0x3ea0a0a1,0);
+            FUN_1807282e0(&local_28,0,0,0,0x3ea0a0a1,0);
             if (plVar1 == (int64 *)0) {
-        LAB_180e218c8:
+        LAB_180b20b98:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             local_18 = (uint32)local_28;
             uStack_14 = local_28._4_4_;
@@ -46,10 +46,10 @@ public class HeroDetailTabController
             (**(code **)(*plVar1 + 0x2a8))(plVar1,&local_18,*(uint64 *)(*plVar1 + 0x2b0));
             lVar2 = Component.get_transform(this,0);
             if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Label",0)) == null)
-            goto LAB_180e218c8;
-            plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
+            goto LAB_180b20b98;
+            plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181e79538);
             puVar3 = (uint32 *)Color.get_black(&local_18,0);
-            if (plVar1 == (int64 *)0) goto LAB_180e218c8;
+            if (plVar1 == (int64 *)0) goto LAB_180b20b98;
             local_18 = *puVar3;
             uStack_14 = puVar3[1];
             uStack_10 = puVar3[2];
@@ -57,11 +57,11 @@ public class HeroDetailTabController
             (**(code **)(*plVar1 + 0x2a8))(plVar1,&local_18,*(uint64 *)(*plVar1 + 0x2b0));
             lVar2 = Component.get_transform(this,0);
             if ((lVar2 == null) || (lVar2 = Transform.Find(lVar2,"Icon",0)) == null)
-            goto LAB_180e218c8;
-            plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
-            puVar3 = (uint32 *)FUN_180d995f0(&local_18,0);
-            if (plVar1 == (int64 *)0) goto LAB_180e218c8;
-            goto LAB_180e21896;
+            goto LAB_180b20b98;
+            plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
+            puVar3 = (uint32 *)FUN_180af4e90(&local_18,0);
+            if (plVar1 == (int64 *)0) goto LAB_180b20b98;
+            goto LAB_180b20b66;
           }
           if (this.isOn) {
             return;
@@ -73,8 +73,8 @@ public class HeroDetailTabController
             return;
           }
           this.isOn = 1;
-          plVar1 = (int64 *)Component.GetComponent(this,DAT_181d94478);
-          puVar3 = (uint32 *)FUN_1810d3b80(&local_18,0);
+          plVar1 = (int64 *)Component.GetComponent(this,DAT_181e777b8);
+          puVar3 = (uint32 *)FUN_180f24d00(&local_18,0);
           if (plVar1 != (int64 *)0) {
             local_18 = *puVar3;
             uStack_14 = puVar3[1];
@@ -83,20 +83,20 @@ public class HeroDetailTabController
             (**(code **)(*plVar1 + 0x2a8))(plVar1,&local_18,*(uint64 *)(*plVar1 + 0x2b0));
             lVar2 = Component.get_transform(this,0);
             if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Label",0)) != null) {
-              plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d96178);
-              lVar2 = *(int64 *)(DAT_181d73d40 + 184);
+              plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181e79538);
+              lVar2 = *(int64 *)(DAT_181e538e8 + 184);
               if (plVar1 != (int64 *)0) {
-                local_18 = *(uint32 *)(lVar2 + 0x378);
-                uStack_14 = *(uint32 *)(lVar2 + 0x37c);
-                uStack_10 = *(uint32 *)(lVar2 + 0x380);
-                uStack_c = *(uint32 *)(lVar2 + 900);
+                local_18 = *(uint32 *)(lVar2 + 0x380);
+                uStack_14 = *(uint32 *)(lVar2 + 900);
+                uStack_10 = *(uint32 *)(lVar2 + 0x388);
+                uStack_c = *(uint32 *)(lVar2 + 0x38c);
                 (**(code **)(*plVar1 + 0x2a8))(plVar1,&local_18,*(uint64 *)(*plVar1 + 0x2b0));
                 lVar2 = Component.get_transform(this,0);
                 if ((lVar2 != null) && (lVar2 = Transform.Find(lVar2,"Icon",0)) != null) {
-                  plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181d94478);
-                  puVar3 = (uint32 *)FUN_1810d3b80(&local_18,0);
+                  plVar1 = (int64 *)Component.GetComponent(lVar2,DAT_181e777b8);
+                  puVar3 = (uint32 *)FUN_180f24d00(&local_18,0);
                   if (plVar1 != (int64 *)0) {
-        LAB_180e21896:
+        LAB_180b20b66:
                     local_18 = *puVar3;
                     uStack_14 = puVar3[1];
                     uStack_10 = puVar3[2];
@@ -111,14 +111,14 @@ public class HeroDetailTabController
         }
     }
 
-    // Token : 0x60017BD
-    // RVA   : 0xE21410   Offset: 0xE20810   Length: 0x117
+    // Token : 0x6001839
+    // RVA   : 0xB206E0   Offset: 0xB1F4E0   Length: 0x117
     public void OnClick()
     {
-        var pStatics = *(int64*)(DAT_181d75f40 + 184);
+        var pStatics = *(int64*)(DAT_181e55ae8 + 184);
         plVar1 = (int64 *)Resources.Load("Sound/SoundEffect/Paper",0);
         plVar2 = (int64 *)0;
-        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181daf360)) {
+        if ((plVar1 != (int64 *)0) && (*plVar1 == DAT_181e8f4a0)) {
           plVar2 = plVar1;
         }
         NGUITools.PlaySound(plVar2,0);
@@ -133,11 +133,11 @@ public class HeroDetailTabController
         }
     }
 
-    // Token : 0x60017BE
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600183A
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

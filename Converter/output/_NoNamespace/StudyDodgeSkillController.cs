@@ -1,117 +1,117 @@
 // ============================================================
 // Type  : StudyDodgeSkillController
-// Token : 0x200037F
+// Token : 0x200038C
 // ============================================================
 
 public class StudyDodgeSkillController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001C94
+    // Token: 0x4001D26
     public bool inStudy;
 
-    // Token: 0x4001C95
+    // Token: 0x4001D27
     public bool finishing;
 
-    // Token: 0x4001C96
+    // Token: 0x4001D28
     public GameObject studyDodgeSkillRoot;
 
-    // Token: 0x4001C97
+    // Token: 0x4001D29
     public GameObject studyDodgeSkillUIRoot;
 
-    // Token: 0x4001C98
+    // Token: 0x4001D2A
     public Button finishButton;
 
-    // Token: 0x4001C99
+    // Token: 0x4001D2B
     public KungfuSkillLvData targetSkill;
 
-    // Token: 0x4001C9A
+    // Token: 0x4001D2C
     public int mapWidth;
 
-    // Token: 0x4001C9B
+    // Token: 0x4001D2D
     public int mapHeight;
 
-    // Token: 0x4001C9C
+    // Token: 0x4001D2E
     public float totalExp;
 
-    // Token: 0x4001C9D
+    // Token: 0x4001D2F
     public int combo;
 
-    // Token: 0x4001C9E
+    // Token: 0x4001D30
     public float comboTime;
 
-    // Token: 0x4001C9F
+    // Token: 0x4001D31
     public int hit;
 
-    // Token: 0x4001CA0
+    // Token: 0x4001D32
     public bool skillUsed;
 
-    // Token: 0x4001CA1
+    // Token: 0x4001D33
     public float leftTime;
 
-    // Token: 0x4001CA2
+    // Token: 0x4001D34
     public List<GameObject> availableGrids;
 
-    // Token: 0x4001CA3
+    // Token: 0x4001D35
     public List<GameObject> attackingGrids;
 
-    // Token: 0x4001CA4
+    // Token: 0x4001D36
     public List<GameObject> movingArrows;
 
-    // Token: 0x4001CA5
+    // Token: 0x4001D37
     public GameObject studyDodgeGridRoot;
 
-    // Token: 0x4001CA6
+    // Token: 0x4001D38
     public GameObject studyDodgeTilePrefab;
 
-    // Token: 0x4001CA7
+    // Token: 0x4001D39
     public GameObject studyDodgeArrowPrefab;
 
-    // Token: 0x4001CA8
+    // Token: 0x4001D3A
     public GameObject[] gridUnits;
 
-    // Token: 0x4001CA9
+    // Token: 0x4001D3B
     private List<GameObject> gridPool;
 
-    // Token: 0x4001CAA
+    // Token: 0x4001D3C
     private GameObject newObj;
 
-    // Token: 0x4001CAB
+    // Token: 0x4001D3D
     private bool inited;
 
-    // Token: 0x4001CAC
+    // Token: 0x4001D3E
     public static List<List<int>> SkillLvMapSize;
 
-    // Token: 0x4001CAD
+    // Token: 0x4001D3F
     private static StudyDodgeSkillController _instance;
 
-    // Token: 0x4001CAE
+    // Token: 0x4001D40
     private float generateSpikeTime;
 
-    // Token: 0x4001CAF
+    // Token: 0x4001D41
     private float generateArrowTime;
 
-    // Token: 0x4001CB0
+    // Token: 0x4001D42
     private float generateStarTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6002242
-    // RVA   : 0xFDAE90   Offset: 0xFDA290   Length: 0x58
+    // Token : 0x60022EC
+    // RVA   : 0xDABF50   Offset: 0xDAAD50   Length: 0x58
     public static StudyDodgeSkillController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181da80a8 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181e884e8 + 184) + 8);
     }
 
-    // Token : 0x6002243
-    // RVA   : 0xFD7FC0   Offset: 0xFD73C0   Length: 0x68
+    // Token : 0x60022ED
+    // RVA   : 0xDA9080   Offset: 0xDA7E80   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181da80a8 + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181e884e8 + 184) + 8);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6002244
-    // RVA   : 0xFDA660   Offset: 0xFD9A60   Length: 0x3DA
+    // Token : 0x60022EE
+    // RVA   : 0xDAB720   Offset: 0xDAA520   Length: 0x3DD
     private void Update()
     {
         ulong uVar1;
@@ -137,7 +137,7 @@ public class StudyDodgeSkillController
           throw; // [null/range check failed]
           lVar2 = WorldData.Player(lVar2,0);
           if ((StudySkillController._instance == null) || (lVar2 == null)) throw; // [null/range check failed]
-          HeroData.SetHpBar(lVar2,StudySkillController._instance.hpBarRoot,0);
+          HeroData.SetHpBar(lVar2,StudySkillController._instance.hpBarRoot,0,0);
           lVar2 = this.finishButton;
           if (!this.finishing) {
             if (lVar2 != null) {
@@ -169,7 +169,7 @@ public class StudyDodgeSkillController
                     return;
                   }
                   uVar3 = StudyDodgeSkillController.FinishStudyDodgeSkill(this,2);
-                  FUN_180d8c8f0(this,uVar3,0);
+                  FUN_180ae80b0(this,uVar3,0);
                   return;
                 }
               }
@@ -183,11 +183,11 @@ public class StudyDodgeSkillController
         }
     }
 
-    // Token : 0x6002245
-    // RVA   : 0xFD8FA0   Offset: 0xFD83A0   Length: 0x11B1
+    // Token : 0x60022EF
+    // RVA   : 0xDAA060   Offset: 0xDA8E60   Length: 0x11B1
     public void ManageAttackGenerate()
     {
-        var pStatics = *(int64*)(DAT_181da8028 + 184);
+        var pStatics = *(int64*)(DAT_181e88468 + 184);
         bool cVar2;
         int iVar3;
         int iVar4;
@@ -253,14 +253,14 @@ public class StudyDodgeSkillController
           uVar15 = Random.Range(fVar16 * 0.01,fVar16 * 0.02,0);
           uVar14 = Mathf.RoundToInt(uVar15,0);
           iVar3 = Mathf.Max(1,uVar14);
-          lVar5 = il2cpp_internal(DAT_181d92f70);
-          FUN_181330100(lVar5);
+          lVar5 = il2cpp_internal(DAT_181e72f38);
+          FUN_1810f3480(lVar5);
           lVar8 = this.gridPool;
           uVar11 = 0;
           if (lVar8 != null) {
             lVar12 = 32;
             while( true ) {
-              if (lVar8.Count <= (int)uVar11) goto joined_r0x000180fd92ac;
+              if (lVar8.Count <= (int)uVar11) goto joined_r0x000180daa36c;
               if (lVar8 == null) break;
               if (lVar8.Count <= uVar11) {
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -271,9 +271,9 @@ public class StudyDodgeSkillController
               cVar2 = Object.op_Inequality(uVar15,uVar7);
               if (cVar2) {
                 if ((this.gridPool == null) ||
-                   (uVar15 = FUN_180002f80(this.gridPool,uVar11,DAT_181d89930), lVar5 == null
+                   (uVar15 = FUN_1800024b0(this.gridPool,uVar11,DAT_181e6bc70), lVar5 == null
                    )) break;
-                FUN_18181e6b0(lVar5,uVar15);
+                FUN_18175de30(lVar5,uVar15);
               }
               lVar8 = this.gridPool;
               uVar11 = uVar11 + 1;
@@ -283,8 +283,8 @@ public class StudyDodgeSkillController
           }
         }
         else {
-        LAB_180fd95ad:
-          if (this.availableGrids == null) goto LAB_180fda0cc;
+        LAB_180daa66d:
+          if (this.availableGrids == null) goto LAB_180dab18c;
           if (0 < this.availableGrids.Count) {
             fVar16 = this.generateSpikeTime;
             fVar13 = (float)Time.get_deltaTime(0);
@@ -293,11 +293,11 @@ public class StudyDodgeSkillController
             if (fVar16 <= 0.0) {
               if ((this.targetSkill == null) ||
                  (lVar8 = KungfuSkillLvData.DataBase(this.targetSkill,0)) == null)
-              goto LAB_180fda0cc;
+              goto LAB_180dab18c;
               iVar3 = *(int *)(lVar8 + 52);
               if ((this.targetSkill == null) ||
                  (lVar8 = KungfuSkillLvData.DataBase(this.targetSkill,0)) == null)
-              goto LAB_180fda0cc;
+              goto LAB_180dab18c;
               fVar16 = (float)Random.Range(0.5 - (float)iVar3 * 0.05);
               fVar13 = (float)Mathf.Max();
               this.generateSpikeTime = fVar13 * fVar16;
@@ -306,23 +306,23 @@ public class StudyDodgeSkillController
               uVar14 = Mathf.RoundToInt(uVar15,0);
               for (iVar3 = Mathf.Max(1,uVar14); 0 < iVar3; iVar3 = iVar3 + -1) {
                 lVar8 = this.availableGrids;
-                if (lVar8 == null) goto LAB_180fda0cc;
+                if (lVar8 == null) goto LAB_180dab18c;
                 if (lVar8.Count < 1) break;
-                uVar11 = FUN_180d96040(0,lVar8.Count,0);
+                uVar11 = FUN_180af1860(0,lVar8.Count,0);
                 if (lVar8.Count <= uVar11) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 lVar8 = lVar8._items[uVar11];
-                if ((lVar8 == null) || (lVar5 = GameObject.GetComponent(lVar8,DAT_181d73dd8)) == null)
-                goto LAB_180fda0cc;
+                if ((lVar8 == null) || (lVar5 = GameObject.GetComponent(lVar8,DAT_181e56ea0)) == null)
+                goto LAB_180dab18c;
                 *(uint8 *)(lVar5 + 32) = 1;
-                lVar5 = GameObject.GetComponent(lVar8,DAT_181d73dd8);
-                if (lVar5 == null) goto LAB_180fda0cc;
+                lVar5 = GameObject.GetComponent(lVar8,DAT_181e56ea0);
+                if (lVar5 == null) goto LAB_180dab18c;
                 *(uint32 *)(lVar5 + 36) = 0x3f800000;
-                if (this.availableGrids == null) goto LAB_180fda0cc;
-                FUN_1817ef410(this.availableGrids,lVar8,DAT_181d89630);
-                if (this.attackingGrids == null) goto LAB_180fda0cc;
-                FUN_18181e6b0(this.attackingGrids,lVar8);
+                if (this.availableGrids == null) goto LAB_180dab18c;
+                FUN_181665e90(this.availableGrids,lVar8,DAT_181e6b978);
+                if (this.attackingGrids == null) goto LAB_180dab18c;
+                FUN_18175de30(this.attackingGrids,lVar8);
               }
             }
           }
@@ -338,11 +338,11 @@ public class StudyDodgeSkillController
           fVar16 = (float)Random.Range();
           if ((this.targetSkill == null) ||
              (lVar8 = KungfuSkillLvData.DataBase(this.targetSkill,0)) == null)
-          goto LAB_180fda0cc;
+          goto LAB_180dab18c;
           iVar3 = Mathf.RoundToInt((float)*(int *)(lVar8 + 52) * 0.5 + fVar16,0);
-          iVar4 = FUN_180d96040(0,4);
-          lVar8 = il2cpp_internal(DAT_181d92f70);
-          FUN_181330100(lVar8,DAT_181d892b0);
+          iVar4 = FUN_180af1860(0,4);
+          lVar8 = il2cpp_internal(DAT_181e72f38);
+          FUN_1810f3480(lVar8,DAT_181e6b5f8);
           puVar9 = (uint64 *)Vector3.get_zero(&local_228,0);
           local_230 = *(uint32 *)(puVar9 + 1);
           local_238 = (uint32)*puVar9;
@@ -355,23 +355,23 @@ public class StudyDodgeSkillController
             if (0 < this.mapHeight) {
               do {
                 lVar5 = this.gridUnits;
-                if (lVar5 == null) goto LAB_180fda0cc;
+                if (lVar5 == null) goto LAB_180dab18c;
                 if (**(int **)(lVar5 + 16) == 0) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
                 if ((uint32)(*(int **)(lVar5 + 16))[4] <= uVar11) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
-                if (lVar8 == null) goto LAB_180fda0cc;
-                FUN_18181e6b0(lVar8,lVar5[uVar11],
-                              DAT_181d893b0);
+                if (lVar8 == null) goto LAB_180dab18c;
+                FUN_18175de30(lVar8,lVar5[uVar11],
+                              DAT_181e6b6f8);
                 uVar11 = uVar11 + 1;
               } while ((int)uVar11 < this.mapHeight);
-              goto LAB_180fd9b00;
+              goto LAB_180daabc0;
             }
           }
           else if (iVar4 == 1) {
@@ -382,26 +382,26 @@ public class StudyDodgeSkillController
             if (0 < this.mapHeight) {
               do {
                 lVar5 = this.gridUnits;
-                if (lVar5 == null) goto LAB_180fda0cc;
+                if (lVar5 == null) goto LAB_180dab18c;
                 lVar12 = (int64)this.mapWidth + -1;
                 if (**(uint32 **)(lVar5 + 16) <= (uint32)lVar12) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
                 lVar6 = *(int64 *)(*(uint32 **)(lVar5 + 16) + 4);
                 if ((uint32)lVar6 <= uVar11) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
-                if (lVar8 == null) goto LAB_180fda0cc;
-                FUN_18181e6b0(lVar8,*(uint64 *)
+                if (lVar8 == null) goto LAB_180dab18c;
+                FUN_18175de30(lVar8,*(uint64 *)
                                      (lVar5 + 32 + (lVar6 * lVar12 + (int64)(int)uVar11) * 8),
-                              DAT_181d893b0);
+                              DAT_181e6b6f8);
                 uVar11 = uVar11 + 1;
               } while ((int)uVar11 < this.mapHeight);
-              goto LAB_180fd9b00;
+              goto LAB_180daabc0;
             }
           }
           else if (iVar4 == 2) {
@@ -412,24 +412,24 @@ public class StudyDodgeSkillController
             if (0 < this.mapWidth) {
               do {
                 lVar5 = this.gridUnits;
-                if (lVar5 == null) goto LAB_180fda0cc;
+                if (lVar5 == null) goto LAB_180dab18c;
                 if (**(uint32 **)(lVar5 + 16) <= uVar11) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
                 lVar12 = *(int64 *)(*(uint32 **)(lVar5 + 16) + 4);
                 if ((int)lVar12 == null) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
-                if (lVar8 == null) goto LAB_180fda0cc;
-                FUN_18181e6b0(lVar8,*(uint64 *)(lVar5 + 32 + (int)uVar11 * lVar12 * 8),DAT_181d893b0
+                if (lVar8 == null) goto LAB_180dab18c;
+                FUN_18175de30(lVar8,*(uint64 *)(lVar5 + 32 + (int)uVar11 * lVar12 * 8),DAT_181e6b6f8
                              );
                 uVar11 = uVar11 + 1;
               } while ((int)uVar11 < this.mapWidth);
-              goto LAB_180fd9b00;
+              goto LAB_180daabc0;
             }
           }
           else if (iVar4 == 3) {
@@ -440,29 +440,29 @@ public class StudyDodgeSkillController
             if (0 < this.mapWidth) {
               do {
                 lVar5 = this.gridUnits;
-                if (lVar5 == null) goto LAB_180fda0cc;
+                if (lVar5 == null) goto LAB_180dab18c;
                 lVar12 = (int64)this.mapHeight + -1;
                 if (**(uint32 **)(lVar5 + 16) <= uVar11) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
                 lVar6 = *(int64 *)(*(uint32 **)(lVar5 + 16) + 4);
                 if ((uint32)lVar6 <= (uint32)lVar12) {
                   uVar15 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar15,0);
+                  FUN_1801e02d0(uVar15,0);
                 }
-                if (lVar8 == null) goto LAB_180fda0cc;
-                FUN_18181e6b0(lVar8,*(uint64 *)(lVar5 + 32 + ((int)uVar11 * lVar6 + lVar12) * 8),
-                              DAT_181d893b0);
+                if (lVar8 == null) goto LAB_180dab18c;
+                FUN_18175de30(lVar8,*(uint64 *)(lVar5 + 32 + ((int)uVar11 * lVar6 + lVar12) * 8),
+                              DAT_181e6b6f8);
                 uVar11 = uVar11 + 1;
               } while ((int)uVar11 < this.mapWidth);
-              goto LAB_180fd9b00;
+              goto LAB_180daabc0;
             }
           }
           if (lVar8 != null) {
-        LAB_180fd9b00:
+        LAB_180daabc0:
             do {
               if ((lVar8.Count < 1) || (iVar3 < 1)) {
                 return;
@@ -472,9 +472,9 @@ public class StudyDodgeSkillController
               uVar7 = this.studyDodgeArrowPrefab;
               lVar5 = GlobalData.AddChild(uVar15,uVar7,0);
               this.newObj = lVar5;
-              uVar14 = FUN_180d96040(0,lVar8.Count,0);
-              lVar5 = FUN_180002f80(lVar8,uVar14,DAT_181d89930);
-              FUN_1817ef410(lVar8,lVar5,DAT_181d89630);
+              uVar14 = FUN_180af1860(0,lVar8.Count,0);
+              lVar5 = FUN_1800024b0(lVar8,uVar14,DAT_181e6bc70);
+              FUN_181665e90(lVar8,lVar5,DAT_181e6b978);
               if (iVar4 == 0) {
                 if (((*plVar1 == 0) || (lVar12 = GameObject.get_transform(*plVar1,0), lVar5 == null)) ||
                    (lVar5 = GameObject.get_transform(lVar5,0)) == null) break;
@@ -491,7 +491,7 @@ public class StudyDodgeSkillController
                 if (*plVar1 == 0) break;
                 lVar5 = GameObject.get_transform(*plVar1,0);
                 puVar10 = local_a8;
-        LAB_180fd9f1b:
+        LAB_180daafdb:
                 puVar9 = (uint64 *)Quaternion.Euler(puVar10);
                 if (lVar5 == null) break;
                 local_228 = *puVar9;
@@ -516,7 +516,7 @@ public class StudyDodgeSkillController
                       if (*plVar1 != 0) {
                         lVar5 = GameObject.get_transform(*plVar1,0);
                         puVar10 = local_b8;
-                        goto LAB_180fd9f1b;
+                        goto LAB_180daafdb;
                       }
                     }
                   }
@@ -539,7 +539,7 @@ public class StudyDodgeSkillController
                       if (*plVar1 != 0) {
                         lVar5 = GameObject.get_transform(*plVar1,0);
                         puVar10 = local_c8;
-                        goto LAB_180fd9f1b;
+                        goto LAB_180daafdb;
                       }
                     }
                   }
@@ -562,7 +562,7 @@ public class StudyDodgeSkillController
                       if (*plVar1 != 0) {
                         lVar5 = GameObject.get_transform(*plVar1,0);
                         puVar10 = local_d8;
-                        goto LAB_180fd9f1b;
+                        goto LAB_180daafdb;
                       }
                     }
                   }
@@ -582,79 +582,79 @@ public class StudyDodgeSkillController
               local_1d8 = *puVar9;
               local_1d0 = *(float *)(puVar9 + 1);
               Transform.set_localPosition(lVar5,&local_1d8,0);
-              if ((*plVar1 == 0) || (lVar5 = GameObject.GetComponent(*plVar1,DAT_181d73d50)) == null)
+              if ((*plVar1 == 0) || (lVar5 = GameObject.GetComponent(*plVar1,DAT_181e56e18)) == null)
               break;
               *(uint64 *)(lVar5 + 40) = CONCAT44(uStack_234,local_238);
               *(uint32 *)(lVar5 + 48) = local_230;
               if (this.movingArrows == null) break;
-              FUN_18181e6b0(this.movingArrows,*plVar1);
+              FUN_18175de30(this.movingArrows,*plVar1);
             } while( true );
           }
         }
-        LAB_180fda0cc:
+        LAB_180dab18c:
                           // WARNING: Subroutine does not return
-        FUN_1800d6620();
-        joined_r0x000180fd92ac:
-        if (iVar3 < 1) goto LAB_180fd95ad;
-        if (lVar5 == null) goto LAB_180fda0cc;
-        if (*(int *)(lVar5 + 24) < 1) goto LAB_180fd95ad;
+        FUN_1801e0300();
+        joined_r0x000180daa36c:
+        if (iVar3 < 1) goto LAB_180daa66d;
+        if (lVar5 == null) goto LAB_180dab18c;
+        if (*(int *)(lVar5 + 24) < 1) goto LAB_180daa66d;
         lVar12 = new c.DisplayClass9_0(0);
         lVar8 = this.availableGrids;
         iVar3 = iVar3 + -1;
-        if (lVar8 == null) goto LAB_180fda0cc;
-        uVar11 = FUN_180d96040(0,lVar8.Count,0);
+        if (lVar8 == null) goto LAB_180dab18c;
+        uVar11 = FUN_180af1860(0,lVar8.Count,0);
         if (lVar8.Count <= uVar11) {
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
-        if (this.availableGrids == null) goto LAB_180fda0cc;
+        if (this.availableGrids == null) goto LAB_180dab18c;
         lVar8 = lVar8._items[uVar11];
-        FUN_1817ef410(this.availableGrids,lVar8,DAT_181d89630);
+        FUN_181665e90(this.availableGrids,lVar8,DAT_181e6b978);
         uVar15 = this.studyDodgeGridRoot;
-        lVar6 = FUN_18046c620(0);
-        if (lVar6 == null) goto LAB_180fda0cc;
+        lVar6 = FUN_180210ca0(0);
+        if (lVar6 == null) goto LAB_180dab18c;
         uVar7 = StudySkillController.GetRandomStarPrefab(lVar6,0);
         uVar15 = GlobalData.AddChild(uVar15,uVar7,0);
-        if (lVar12 == null) goto LAB_180fda0cc;
+        if (lVar12 == null) goto LAB_180dab18c;
         *(uint64 *)(lVar12 + 16) = uVar15;
         if (((*(int64 *)(lVar12 + 16) == 0) ||
             (lVar6 = GameObject.get_transform(*(int64 *)(lVar12 + 16),0), lVar8 == null)) ||
-           (lVar8 = GameObject.get_transform(lVar8,0)) == null) goto LAB_180fda0cc;
+           (lVar8 = GameObject.get_transform(lVar8,0)) == null) goto LAB_180dab18c;
         puVar9 = (uint64 *)Transform.get_localPosition(&local_228,lVar8,0);
         local_1e8 = *puVar9;
         local_1e0 = *(float *)(puVar9 + 1);
         local_1d8 = local_1e8;
         local_1d0 = local_1e0;
-        if (lVar6 == null) goto LAB_180fda0cc;
+        if (lVar6 == null) goto LAB_180dab18c;
         local_1f8 = CONCAT44((float)((uint64)local_1e8 >> 32) + 0.0,(float)local_1e8 + 0.0);
         local_1f0 = local_1e0 - 0.01;
         Transform.set_localPosition(lVar6,&local_1f8,0);
-        if (*(int64 *)(lVar12 + 16) == 0) goto LAB_180fda0cc;
+        if (*(int64 *)(lVar12 + 16) == 0) goto LAB_180dab18c;
         lVar8 = GameObject.get_transform(*(int64 *)(lVar12 + 16),0);
         puVar9 = (uint64 *)Vector3.get_zero(&local_198,0);
-        if (lVar8 == null) goto LAB_180fda0cc;
+        if (lVar8 == null) goto LAB_180dab18c;
         local_200 = *(float *)(puVar9 + 1);
         local_208 = *puVar9;
         Transform.set_localScale(lVar8,&local_208,0);
-        if (*(int64 *)(lVar12 + 16) == 0) goto LAB_180fda0cc;
+        if (*(int64 *)(lVar12 + 16) == 0) goto LAB_180dab18c;
         uVar15 = GameObject.get_transform(*(int64 *)(lVar12 + 16),0);
         puVar9 = (uint64 *)Vector3.get_one(&local_1a8,0);
         local_210 = *(float *)(puVar9 + 1);
         local_218 = *puVar9;
         ShortcutExtensions.DOScale(uVar15,&local_218,0x3e4ccccd,0);
-        if (*(int64 *)(lVar12 + 16) == 0) goto LAB_180fda0cc;
+        if (*(int64 *)(lVar12 + 16) == 0) goto LAB_180dab18c;
         uVar15 = GameObject.get_transform(*(int64 *)(lVar12 + 16),0);
         puVar9 = (uint64 *)Vector3.get_zero(local_1b8,0);
         local_1c0 = *(float *)(puVar9 + 1);
         local_1c8 = *puVar9;
         uVar15 = ShortcutExtensions.DOScale(uVar15,&local_1c8,0x3e4ccccd,0);
         uVar15 = TweenSettingsExtensions.SetDelay(uVar15);
-        uVar7 = new OnTooltipCB(lVar12,DAT_181db4b30);
+        uVar7 = new OnTooltipCB(lVar12,DAT_181e988d0);
         TweenSettingsExtensions.OnComplete(uVar15);
-        goto joined_r0x000180fd92ac;
+        goto joined_r0x000180daa36c;
     }
 
-    // Token : 0x6002246
-    // RVA   : 0xFD8A40   Offset: 0xFD7E40   Length: 0x55E
+    // Token : 0x60022F0
+    // RVA   : 0xDA9B00   Offset: 0xDA8900   Length: 0x55E
     private void InitStudyDodgeGround()
     {
         var plVar2 = *(int64*)(lVar2 + 184);
@@ -697,29 +697,29 @@ public class StudyDodgeSkillController
                 }
                 local_40 = (int64)*(int *)(*(int64 *)(lVar2 + 16) + 36);
                 local_48 = (int64)iVar9;
-                lVar2 = FUN_1800d6020(DAT_181da99f8,&local_48);
+                lVar2 = FUN_1801dfd00(DAT_181e89b38,&local_48);
                 this.gridUnits = lVar2;
-                uVar3 = il2cpp_internal(DAT_181d92f70);
-                FUN_181330100(uVar3,DAT_181d892b0);
+                uVar3 = il2cpp_internal(DAT_181e72f38);
+                FUN_1810f3480(uVar3,DAT_181e6b5f8);
                 this.gridPool = uVar3;
                 iVar9 = 0;
-                lVar2 = DAT_181da80a8;
+                lVar2 = DAT_181e884e8;
                 while( true ) {
                   if (((*(byte *)(lVar2 + 0x133) & 4) != 0) && (*(int *)(lVar2 + 224) == 0)) {
                     il2cpp_runtime_class_init();
-                    lVar2 = DAT_181da80a8;
+                    lVar2 = DAT_181e884e8;
                   }
                   lVar7 = *plVar2;
                   if (lVar7 == null) break;
                   if (*(uint32 *)(lVar7 + 24) < 6) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
-                    lVar2 = DAT_181da80a8;
+                    lVar2 = DAT_181e884e8;
                   }
                   lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 72);
                   if (lVar7 == null) break;
                   if (*(uint32 *)(lVar7 + 24) < 2) {
                     ThrowHelper.ThrowArgumentOutOfRangeException(0);
-                    lVar2 = DAT_181da80a8;
+                    lVar2 = DAT_181e884e8;
                   }
                   if (*(int *)(*(int64 *)(lVar7 + 16) + 36) <= iVar9) {
                     return;
@@ -728,19 +728,19 @@ public class StudyDodgeSkillController
                   while( true ) {
                     if (((*(byte *)(lVar2 + 0x133) & 4) != 0) && (*(int *)(lVar2 + 224) == 0)) {
                       il2cpp_runtime_class_init();
-                      lVar2 = DAT_181da80a8;
+                      lVar2 = DAT_181e884e8;
                     }
                     lVar7 = *plVar2;
-                    if (lVar7 == null) goto LAB_180fd8f93;
+                    if (lVar7 == null) goto LAB_180daa053;
                     if (*(uint32 *)(lVar7 + 24) < 6) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
-                      lVar2 = DAT_181da80a8;
+                      lVar2 = DAT_181e884e8;
                     }
                     lVar7 = *(int64 *)(*(int64 *)(lVar7 + 16) + 72);
-                    if (lVar7 == null) goto LAB_180fd8f93;
+                    if (lVar7 == null) goto LAB_180daa053;
                     if (*(int *)(lVar7 + 24) == 0) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
-                      lVar2 = DAT_181da80a8;
+                      lVar2 = DAT_181e884e8;
                     }
                     if (*(int *)(*(int64 *)(lVar7 + 16) + 32) <= iVar6) break;
                     lVar2 = *plVar1;
@@ -748,72 +748,72 @@ public class StudyDodgeSkillController
                     uVar5 = this.studyDodgeTilePrefab;
                     uVar3 = GlobalData.AddChild(uVar3,uVar5,0);
                     if (lVar2 == null) {
-        LAB_180fd8f8d:
+        LAB_180daa04d:
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
                     lVar8 = (int64)iVar9;
                     lVar7 = (int64)iVar6;
-                    FUN_180128020(lVar2,lVar7,lVar8,uVar3);
-                    if (*plVar1 == 0) goto LAB_180fd8f8d;
-                    lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    FUN_180054210(lVar2,lVar7,lVar8,uVar3);
+                    if (*plVar1 == 0) goto LAB_180daa04d;
+                    lVar2 = FUN_1800540b0(*plVar1,lVar7,lVar8);
+                    if (lVar2 == null) goto LAB_180daa04d;
                     lVar2 = GameObject.get_transform(lVar2,0);
                     puVar4 = (uint64 *)Vector3.get_one(&local_48,0);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    if (lVar2 == null) goto LAB_180daa04d;
                     local_50 = *(uint32 *)(puVar4 + 1);
                     local_58 = *puVar4;
                     Transform.set_localScale(lVar2,&local_58,0);
-                    if (*plVar1 == 0) goto LAB_180fd8f8d;
-                    lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    if (*plVar1 == 0) goto LAB_180daa04d;
+                    lVar2 = FUN_1800540b0(*plVar1,lVar7,lVar8);
+                    if (lVar2 == null) goto LAB_180daa04d;
                     lVar2 = GameObject.get_transform(lVar2,0);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    if (lVar2 == null) goto LAB_180daa04d;
                     local_60 = 0;
                     local_68 = (float)iVar6;
                     local_64 = (float)iVar9;
                     Transform.set_localPosition(lVar2,&local_68,0);
-                    if (*plVar1 == 0) goto LAB_180fd8f8d;
-                    lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
+                    if (*plVar1 == 0) goto LAB_180daa04d;
+                    lVar2 = FUN_1800540b0(*plVar1,lVar7,lVar8);
                     local_res18[0] = iVar9;
-                    uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+                    uVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
                     local_res20[0] = iVar6;
-                    uVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
+                    uVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
                     uVar3 = String.Format("{0}_{1}",uVar3,uVar5,0);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    if (lVar2 == null) goto LAB_180daa04d;
                     Object.set_name(lVar2,uVar3,0);
-                    if (*plVar1 == 0) goto LAB_180fd8f8d;
-                    lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    if (*plVar1 == 0) goto LAB_180daa04d;
+                    lVar2 = FUN_1800540b0(*plVar1,lVar7,lVar8);
+                    if (lVar2 == null) goto LAB_180daa04d;
                     GameObject.SetActive(lVar2,0,0);
-                    if (*plVar1 == 0) goto LAB_180fd8f8d;
-                    lVar2 = FUN_180127f90(*plVar1,lVar7,lVar8);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
-                    lVar2 = GameObject.GetComponent(lVar2,DAT_181d73dd8);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    if (*plVar1 == 0) goto LAB_180daa04d;
+                    lVar2 = FUN_1800540b0(*plVar1,lVar7,lVar8);
+                    if (lVar2 == null) goto LAB_180daa04d;
+                    lVar2 = GameObject.GetComponent(lVar2,DAT_181e56ea0);
+                    if (lVar2 == null) goto LAB_180daa04d;
                     *(int *)(lVar2 + 24) = iVar6;
-                    if (*plVar1 == 0) goto LAB_180fd8f8d;
-                    lVar2 = FUN_180127f90(*plVar1,lVar7);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
-                    lVar2 = GameObject.GetComponent(lVar2,DAT_181d73dd8);
-                    if (lVar2 == null) goto LAB_180fd8f8d;
+                    if (*plVar1 == 0) goto LAB_180daa04d;
+                    lVar2 = FUN_1800540b0(*plVar1,lVar7);
+                    if (lVar2 == null) goto LAB_180daa04d;
+                    lVar2 = GameObject.GetComponent(lVar2,DAT_181e56ea0);
+                    if (lVar2 == null) goto LAB_180daa04d;
                     *(int *)(lVar2 + 28) = iVar9;
                     iVar6 = iVar6 + 1;
-                    lVar2 = DAT_181da80a8;
+                    lVar2 = DAT_181e884e8;
                   }
                   iVar9 = iVar9 + 1;
                 }
-        LAB_180fd8f93:
+        LAB_180daa053:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
             }
           }
         }
     }
 
-    // Token : 0x6002247
-    // RVA   : 0xFDA2E0   Offset: 0xFD96E0   Length: 0x379
+    // Token : 0x60022F1
+    // RVA   : 0xDAB3A0   Offset: 0xDAA1A0   Length: 0x379
     public void StartStudyDodgeSkill(KungfuSkillLvData target)
     {
         uint uVar1;
@@ -828,7 +828,7 @@ public class StudyDodgeSkillController
           if (this.studyDodgeSkillUIRoot != null) {
             GameObject.SetActive(this.studyDodgeSkillUIRoot,1,0);
             this.finishing = 0;
-            lVar2 = **(int64 **)(DAT_181da8028 + 184);
+            lVar2 = **(int64 **)(DAT_181e88468 + 184);
             if (lVar2 != null) {
               if (*(int64 *)(lVar2 + 80) != 0) {
                 TweenExtensions.Kill(*(int64 *)(lVar2 + 80),0,0);
@@ -900,22 +900,22 @@ public class StudyDodgeSkillController
         }
     }
 
-    // Token : 0x6002248
-    // RVA   : 0xFDA270   Offset: 0xFD9670   Length: 0x6A
+    // Token : 0x60022F2
+    // RVA   : 0xDAB330   Offset: 0xDAA130   Length: 0x6A
     public void StartDodgeTutorial()
     {
-        var pStatics = *(int64*)(DAT_181dadd10 + 184);
+        var pStatics = *(int64*)(DAT_181e8e150 + 184);
         if (*pStatics != 0) {
           TutorialController.StartTutorial(*pStatics,"修炼轻功",0);
           return;
         }
     }
 
-    // Token : 0x6002249
-    // RVA   : 0xFD82C0   Offset: 0xFD76C0   Length: 0x77B
+    // Token : 0x60022F3
+    // RVA   : 0xDA9380   Offset: 0xDA8180   Length: 0x77B
     public void GenerateStudyDodgePanel()
     {
-        var pStatics_8028 = *(int64*)(DAT_181da8028 + 184);
+        var pStatics_8468 = *(int64*)(DAT_181e88468 + 184);
         float fVar1;
         bool cVar2;
         long lVar3;
@@ -930,11 +930,11 @@ public class StudyDodgeSkillController
         byte[] local_48 = new byte[16];
         byte[] local_38 = new byte[48];
         if (this.availableGrids != null) {
-          FUN_1812fa020(this.availableGrids,DAT_181d89430);
+          FUN_18115d8f0(this.availableGrids,DAT_181e6b778);
           if (this.attackingGrids != null) {
-            FUN_1812fa020(this.attackingGrids,DAT_181d89430);
+            FUN_18115d8f0(this.attackingGrids,DAT_181e6b778);
             if (this.movingArrows != null) {
-              FUN_1812fa020(this.movingArrows,DAT_181d89430);
+              FUN_18115d8f0(this.movingArrows,DAT_181e6b778);
               if (this.studyDodgeGridRoot != null) {
                 lVar3 = GameObject.get_transform(this.studyDodgeGridRoot,0);
                 iVar9 = this.mapWidth;
@@ -957,40 +957,40 @@ public class StudyDodgeSkillController
                         if (0 < this.mapWidth) {
                           do {
                             if (this.gridUnits == null) throw; // [null/range check failed]
-                            lVar3 = FUN_180127f90(this.gridUnits,(int64)iVar8,
+                            lVar3 = FUN_1800540b0(this.gridUnits,(int64)iVar8,
                                                   (int64)iVar9);
                             if (lVar3 == null) throw; // [null/range check failed]
                             GameObject.SetActive(lVar3,1,0);
                             if (this.gridPool == null) throw; // [null/range check failed]
-                            FUN_18181e6b0(this.gridPool,lVar3,DAT_181d893b0);
+                            FUN_18175de30(this.gridPool,lVar3,DAT_181e6b6f8);
                             if (this.availableGrids == null) throw; // [null/range check failed]
-                            FUN_18181e6b0(this.availableGrids,lVar3,DAT_181d893b0);
+                            FUN_18175de30(this.availableGrids,lVar3,DAT_181e6b6f8);
                             iVar8 = iVar8 + 1;
                           } while (iVar8 < this.mapWidth);
                         }
                         iVar9 = iVar9 + 1;
                       } while (iVar9 < this.mapHeight);
                     }
-                    if (*pStatics_8028 != 0) {
-                      uVar6 = *(uint64 *)(*pStatics_8028 + 32);
+                    if (*pStatics_8468 != 0) {
+                      uVar6 = *(uint64 *)(*pStatics_8468 + 32);
                       cVar2 = Object.op_Equality(uVar6,0,0);
                       if (!cVar2) {
-                        lVar3 = FUN_18046c0a0(0);
+                        lVar3 = FUN_1802106e0(0);
                         if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
                         lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0);
-                        if ((*pStatics_8028 == 0) || (lVar3 == null))
+                        if ((*pStatics_8468 == 0) || (lVar3 == null))
                         throw; // [null/range check failed]
                         HeroData.RefreshHeroSkeleton
-                                  (lVar3,*(uint64 *)(*pStatics_8028 + 32),0);
+                                  (lVar3,*(uint64 *)(*pStatics_8468 + 32),0);
                       }
                       else {
-                        lVar3 = *pStatics_8028;
+                        lVar3 = *pStatics_8468;
                         if ((GameController._instance == null) ||
                            (lVar4 = GameController._instance.worldData,
                            lVar4 == null)) throw; // [null/range check failed]
                         lVar4 = WorldData.Player(lVar4,0);
-                        if (*pStatics_8028 == 0) throw; // [null/range check failed]
-                        uVar6 = Component.get_gameObject(*pStatics_8028,0);
+                        if (*pStatics_8468 == 0) throw; // [null/range check failed]
+                        uVar6 = Component.get_gameObject(*pStatics_8468,0);
                         puVar7 = (uint64 *)Vector3.get_one(local_38,0);
                         local_58 = *puVar7;
                         local_50 = *(float *)(puVar7 + 1);
@@ -1005,12 +1005,12 @@ public class StudyDodgeSkillController
                         puVar7 = (uint64 *)(lVar3 + 32);
                         *puVar7 = uVar6;
                         il2cpp_internal(puVar7,uVar6);
-                        if (*pStatics_8028 == 0) throw; // [null/range check failed]
-                        uVar6 = *(uint64 *)(*pStatics_8028 + 32);
+                        if (*pStatics_8468 == 0) throw; // [null/range check failed]
+                        uVar6 = *(uint64 *)(*pStatics_8468 + 32);
                         cVar2 = Object.op_Inequality(uVar6,0,0);
                         if (cVar2) {
-                          if (((*pStatics_8028 == 0) ||
-                              (lVar3 = *(int64 *)(*pStatics_8028 + 32),
+                          if (((*pStatics_8468 == 0) ||
+                              (lVar3 = *(int64 *)(*pStatics_8468 + 32),
                               lVar3 == null)) || (lVar3 = Component.get_transform(lVar3,0)) == null)
                           throw; // [null/range check failed]
                           local_60 = -0.1;
@@ -1018,26 +1018,26 @@ public class StudyDodgeSkillController
                           Transform.set_localPosition(lVar3,&local_68,0);
                         }
                       }
-                      if (*pStatics_8028 != 0) {
-                        uVar6 = *(uint64 *)(*pStatics_8028 + 32);
+                      if (*pStatics_8468 != 0) {
+                        uVar6 = *(uint64 *)(*pStatics_8468 + 32);
                         cVar2 = Object.op_Inequality(uVar6,0,0);
                         if (cVar2) {
-                          if ((*pStatics_8028 == 0) ||
-                             (lVar3 = *(int64 *)(*pStatics_8028 + 32),
+                          if ((*pStatics_8468 == 0) ||
+                             (lVar3 = *(int64 *)(*pStatics_8468 + 32),
                              lVar3 == null)) throw; // [null/range check failed]
                           lVar3 = SkeletonAnimation.get_AnimationState(lVar3,0);
                           if (lVar3 != null) {
-                            if (((*pStatics_8028 == 0) ||
-                                (lVar3 = *(int64 *)(*pStatics_8028 + 32),
+                            if (((*pStatics_8468 == 0) ||
+                                (lVar3 = *(int64 *)(*pStatics_8468 + 32),
                                 lVar3 == null)) ||
                                (lVar3 = SkeletonAnimation.get_AnimationState(lVar3,0)) == null)
                             throw; // [null/range check failed]
                             AnimationState.SetAnimation(lVar3,0,"idle",1,0);
                           }
                         }
-                        if (*pStatics_8028 != 0) {
+                        if (*pStatics_8468 != 0) {
                           StudyDodgePlayer.PlayerEnterGrid
-                                    (*pStatics_8028,
+                                    (*pStatics_8468,
                                      (int)((float)(this.mapWidth + -1) * 0.5),
                                      (int)((float)(this.mapHeight + -1) * 0.5),0);
                           return;
@@ -1052,14 +1052,14 @@ public class StudyDodgeSkillController
         }
     }
 
-    // Token : 0x600224A
-    // RVA   : 0xFDAA40   Offset: 0xFD9E40   Length: 0x14F
+    // Token : 0x60022F4
+    // RVA   : 0xDABB00   Offset: 0xDAA900   Length: 0x14F
     public void UseSlowTimeSkill()
     {
         long lVar1;
         long lVar2;
         this.skillUsed = 1;
-        lVar1 = **(int64 **)(DAT_181dabea0 + 184);
+        lVar1 = **(int64 **)(DAT_181e8c2e8 + 184);
         if ((GameController._instance != null) &&
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
@@ -1076,17 +1076,17 @@ public class StudyDodgeSkillController
         }
     }
 
-    // Token : 0x600224B
-    // RVA   : 0xFD8210   Offset: 0xFD7610   Length: 0x28
+    // Token : 0x60022F5
+    // RVA   : 0xDA92D0   Offset: 0xDA80D0   Length: 0x28
     public void FinishButtonClicked()
     {
         ulong uVar1;
         uVar1 = StudyDodgeSkillController.FinishStudyDodgeSkill(this,1);
-        FUN_180d8c8f0(this,uVar1,0);
+        FUN_180ae80b0(this,uVar1,0);
     }
 
-    // Token : 0x600224C
-    // RVA   : 0xFD8240   Offset: 0xFD7640   Length: 0x7B
+    // Token : 0x60022F6
+    // RVA   : 0xDA9300   Offset: 0xDA8100   Length: 0x7B
     public IEnumerator FinishStudyDodgeSkill(StudySkillResult studyDodgeResult)
     {
         long lVar1;
@@ -1098,8 +1098,8 @@ public class StudyDodgeSkillController
         }
     }
 
-    // Token : 0x600224D
-    // RVA   : 0xFD8030   Offset: 0xFD7430   Length: 0x1DB
+    // Token : 0x60022F7
+    // RVA   : 0xDA90F0   Offset: 0xDA7EF0   Length: 0x1DB
     public void ChangeCombo(int num)
     {
         long lVar1;
@@ -1113,7 +1113,7 @@ public class StudyDodgeSkillController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180daa030(lVar1,0);
+            lVar1 = FUN_180b05920(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_one(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -1123,7 +1123,7 @@ public class StudyDodgeSkillController
                  (lVar1 = StudySkillController._instance.comboText) != null) {
                 lVar1 = Component.get_transform(lVar1,0);
                 if (lVar1 != null) {
-                  uVar3 = FUN_180daa030(lVar1,0);
+                  uVar3 = FUN_180b05920(lVar1,0);
                   if (num < 1) {
                     uVar4 = 0x3f333333;
                   }
@@ -1131,7 +1131,7 @@ public class StudyDodgeSkillController
                     uVar4 = 0x3fa66666;
                   }
                   uVar3 = ShortcutExtensions.DOScale(uVar3,uVar4,0x3dcccccd,0);
-                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181dc14d8);
+                  TweenSettingsExtensions.SetLoops(uVar3,2,1,DAT_181ea4f40);
                   return;
                 }
               }
@@ -1140,8 +1140,8 @@ public class StudyDodgeSkillController
         }
     }
 
-    // Token : 0x600224E
-    // RVA   : 0xFDA160   Offset: 0xFD9560   Length: 0x106
+    // Token : 0x60022F8
+    // RVA   : 0xDAB220   Offset: 0xDAA020   Length: 0x106
     public void ResetCombo()
     {
         long lVar1;
@@ -1153,7 +1153,7 @@ public class StudyDodgeSkillController
            (lVar1 = StudySkillController._instance.comboText) != null) {
           lVar1 = Component.get_transform(lVar1,0);
           if (lVar1 != null) {
-            lVar1 = FUN_180daa030(lVar1,0);
+            lVar1 = FUN_180b05920(lVar1,0);
             puVar2 = (uint64 *)Vector3.get_zero(local_18,0);
             if (lVar1 != null) {
               local_20 = *(uint32 *)(puVar2 + 1);
@@ -1165,59 +1165,59 @@ public class StudyDodgeSkillController
         }
     }
 
-    // Token : 0x600224F
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x60022F9
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
-    // Token : 0x6002250
-    // RVA   : 0xFDAB90   Offset: 0xFD9F90   Length: 0x2FF
+    // Token : 0x60022FA
+    // RVA   : 0xDABC50   Offset: 0xDAAA50   Length: 0x2FF
     private static void /*cctor*/()
     {
         long lVar2;
         long lVar3;
-        lVar2 = il2cpp_internal(DAT_181d90178);
-        FUN_181330100(lVar2,DAT_181d787c0);
-        lVar3 = il2cpp_internal(DAT_181d93ce8);
-        FUN_181330100(lVar3,DAT_181d8f0b0);
+        lVar2 = il2cpp_internal(DAT_181e6ffb8);
+        FUN_1810f3480(lVar2,DAT_181e5a220);
+        lVar3 = il2cpp_internal(DAT_181e73cb8);
+        FUN_1810f3480(lVar3,DAT_181e71270);
         if (lVar3 != null) {
-          FUN_18182a6c0(lVar3,5,DAT_181d8f230);
-          FUN_18182a6c0(lVar3,5,DAT_181d8f230);
+          FUN_181769fe0(lVar3,5,DAT_181e713f0);
+          FUN_181769fe0(lVar3,5,DAT_181e713f0);
           if (lVar2 != null) {
-            FUN_18181e6b0(lVar2,lVar3,DAT_181d78840);
-            lVar3 = il2cpp_internal(DAT_181d93ce8);
-            FUN_181330100(lVar3,DAT_181d8f0b0);
+            FUN_18175de30(lVar2,lVar3,DAT_181e5a330);
+            lVar3 = il2cpp_internal(DAT_181e73cb8);
+            FUN_1810f3480(lVar3,DAT_181e71270);
             if (lVar3 != null) {
-              FUN_18182a6c0(lVar3,7,DAT_181d8f230);
-              FUN_18182a6c0(lVar3,5,DAT_181d8f230);
-              FUN_18181e6b0(lVar2,lVar3,DAT_181d78840);
-              lVar3 = il2cpp_internal(DAT_181d93ce8);
-              FUN_181330100(lVar3,DAT_181d8f0b0);
+              FUN_181769fe0(lVar3,7,DAT_181e713f0);
+              FUN_181769fe0(lVar3,5,DAT_181e713f0);
+              FUN_18175de30(lVar2,lVar3,DAT_181e5a330);
+              lVar3 = il2cpp_internal(DAT_181e73cb8);
+              FUN_1810f3480(lVar3,DAT_181e71270);
               if (lVar3 != null) {
-                FUN_18182a6c0(lVar3,7,DAT_181d8f230);
-                FUN_18182a6c0(lVar3,7,DAT_181d8f230);
-                FUN_18181e6b0(lVar2,lVar3,DAT_181d78840);
-                lVar3 = il2cpp_internal(DAT_181d93ce8);
-                FUN_181330100(lVar3,DAT_181d8f0b0);
+                FUN_181769fe0(lVar3,7,DAT_181e713f0);
+                FUN_181769fe0(lVar3,7,DAT_181e713f0);
+                FUN_18175de30(lVar2,lVar3,DAT_181e5a330);
+                lVar3 = il2cpp_internal(DAT_181e73cb8);
+                FUN_1810f3480(lVar3,DAT_181e71270);
                 if (lVar3 != null) {
-                  FUN_18182a6c0(lVar3,9,DAT_181d8f230);
-                  FUN_18182a6c0(lVar3,7,DAT_181d8f230);
-                  FUN_18181e6b0(lVar2,lVar3,DAT_181d78840);
-                  lVar3 = il2cpp_internal(DAT_181d93ce8);
-                  FUN_181330100(lVar3,DAT_181d8f0b0);
+                  FUN_181769fe0(lVar3,9,DAT_181e713f0);
+                  FUN_181769fe0(lVar3,7,DAT_181e713f0);
+                  FUN_18175de30(lVar2,lVar3,DAT_181e5a330);
+                  lVar3 = il2cpp_internal(DAT_181e73cb8);
+                  FUN_1810f3480(lVar3,DAT_181e71270);
                   if (lVar3 != null) {
-                    FUN_18182a6c0(lVar3,9,DAT_181d8f230);
-                    FUN_18182a6c0(lVar3,9,DAT_181d8f230);
-                    FUN_18181e6b0(lVar2,lVar3,DAT_181d78840);
-                    lVar3 = il2cpp_internal(DAT_181d93ce8);
-                    FUN_181330100(lVar3,DAT_181d8f0b0);
+                    FUN_181769fe0(lVar3,9,DAT_181e713f0);
+                    FUN_181769fe0(lVar3,9,DAT_181e713f0);
+                    FUN_18175de30(lVar2,lVar3,DAT_181e5a330);
+                    lVar3 = il2cpp_internal(DAT_181e73cb8);
+                    FUN_1810f3480(lVar3,DAT_181e71270);
                     if (lVar3 != null) {
-                      FUN_18182a6c0(lVar3,11,DAT_181d8f230);
-                      FUN_18182a6c0(lVar3,9,DAT_181d8f230);
-                      FUN_18181e6b0(lVar2,lVar3,DAT_181d78840);
-                      plVar1 = *(int64 **)(DAT_181da80a8 + 184);
+                      FUN_181769fe0(lVar3,11,DAT_181e713f0);
+                      FUN_181769fe0(lVar3,9,DAT_181e713f0);
+                      FUN_18175de30(lVar2,lVar3,DAT_181e5a330);
+                      plVar1 = *(int64 **)(DAT_181e884e8 + 184);
                       *plVar1 = lVar2;
                       il2cpp_internal(plVar1,lVar2);
                       return;

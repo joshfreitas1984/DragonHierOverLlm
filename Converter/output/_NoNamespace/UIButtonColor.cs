@@ -1,64 +1,64 @@
 // ============================================================
 // Type  : UIButtonColor
-// Token : 0x2000030
+// Token : 0x200002F
 // ============================================================
 
 public class UIButtonColor
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40000EB
+    // Token: 0x40000CB
     public GameObject tweenTarget;
 
-    // Token: 0x40000EC
+    // Token: 0x40000CC
     public Color hover;
 
-    // Token: 0x40000ED
+    // Token: 0x40000CD
     public Color pressed;
 
-    // Token: 0x40000EE
+    // Token: 0x40000CE
     public Color disabledColor;
 
-    // Token: 0x40000EF
+    // Token: 0x40000CF
     public float duration;
 
-    // Token: 0x40000F0
+    // Token: 0x40000D0
     protected Color mStartingColor;
 
-    // Token: 0x40000F1
+    // Token: 0x40000D1
     protected Color mDefaultColor;
 
-    // Token: 0x40000F2
+    // Token: 0x40000D2
     protected bool mInitDone;
 
-    // Token: 0x40000F3
+    // Token: 0x40000D3
     protected UIWidget mWidget;
 
-    // Token: 0x40000F4
+    // Token: 0x40000D4
     protected State mState;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60000C5
-    // RVA   : 0xF4BE60   Offset: 0xF4B260   Length: 0x7
+    // Token : 0x60000AC
+    // RVA   : 0xD0FF80   Offset: 0xD0ED80   Length: 0x7
     public State get_state()
     {
-        uint32 FUN_180f4be60(int64 this)
+        uint32 FUN_180d0ff80(int64 this)
         {
         return this.mState;
     }
 
-    // Token : 0x60000C6
-    // RVA   : 0x15308C0   Offset: 0x152FCC0   Length: 0x14
+    // Token : 0x60000AD
+    // RVA   : 0x141C980   Offset: 0x141B780   Length: 0x14
     public void set_state(State value)
     {
-        void FUN_1815308c0(int64 *this,uint64 value)
+        void FUN_18141c980(int64 *this,uint64 value)
         {
-                          // WARNING: Could not recover jumptable at 0x0001815308cd. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141c98d. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x208))(this,value,0,*(uint64 *)(*this + 0x210));
     }
 
-    // Token : 0x60000C7
-    // RVA   : 0x1530810   Offset: 0x152FC10   Length: 0x3E
+    // Token : 0x60000AE
+    // RVA   : 0x141C8D0   Offset: 0x141B6D0   Length: 0x3E
     public Color get_defaultColor()
     {
         ulong uVar1;
@@ -71,8 +71,8 @@ public class UIButtonColor
         return this;
     }
 
-    // Token : 0x60000C8
-    // RVA   : 0x1530850   Offset: 0x152FC50   Length: 0x5E
+    // Token : 0x60000AF
+    // RVA   : 0x141C910   Offset: 0x141B710   Length: 0x5E
     public void set_defaultColor(Color value)
     {
         uint uVar1;
@@ -91,31 +91,31 @@ public class UIButtonColor
         *(uint32 *)((int64)this + 108) = uVar2;
         *(uint32 *)(this + 14) = uVar3;
         *(uint32 *)(this + 16) = 3;
-                          // WARNING: Could not recover jumptable at 0x0001815308a7. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141c967. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x208))(this,(int)lVar4,0,*(uint64 *)(*this + 0x210));
     }
 
-    // Token : 0x60000C9
-    // RVA   : 0xAEFB20   Offset: 0xAEEF20   Length: 0x7
+    // Token : 0x60000B0
+    // RVA   : 0x8448A0   Offset: 0x8436A0   Length: 0x7
     public virtual bool get_isEnabled()
     {
-        void FUN_180aefb20(uint64 this)
+        void FUN_1808448a0(uint64 this)
         {
         Behaviour.get_enabled(this,0);
     }
 
-    // Token : 0x60000CA
-    // RVA   : 0x15308B0   Offset: 0x152FCB0   Length: 0x8
+    // Token : 0x60000B1
+    // RVA   : 0x141C970   Offset: 0x141B770   Length: 0x8
     public virtual void set_isEnabled(bool value)
     {
-        void FUN_1815308b0(uint64 this,uint64 value)
+        void FUN_18141c970(uint64 this,uint64 value)
         {
         Behaviour.set_enabled(this,value,0);
     }
 
-    // Token : 0x60000CB
-    // RVA   : 0x15303D0   Offset: 0x152F7D0   Length: 0x5D
+    // Token : 0x60000B2
+    // RVA   : 0x141C490   Offset: 0x141B290   Length: 0x5D
     public void ResetDefaultColor()
     {
         uint uVar1;
@@ -136,27 +136,27 @@ public class UIButtonColor
         *(uint32 *)((int64)this + 108) = uVar2;
         *(int *)(this + 14) = (int)lVar4;
         *(uint32 *)(this + 16) = 3;
-                          // WARNING: Could not recover jumptable at 0x000181530426. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141c4e6. Too many branches
                           // WARNING: Treating indirect jump as call
         (**(code **)(*this + 0x208))(this,(int)lVar5,0,*(uint64 *)(*this + 0x210));
     }
 
-    // Token : 0x60000CC
-    // RVA   : 0x152F8F0   Offset: 0x152ECF0   Length: 0x18
+    // Token : 0x60000B3
+    // RVA   : 0x141B9B0   Offset: 0x141A7B0   Length: 0x18
     public void CacheDefaultColor()
     {
-        void FUN_18152f8f0(int64 *this)
+        void FUN_18141b9b0(int64 *this)
         {
         if (*(char *)((int64)this + 116) == false) {
-                          // WARNING: Could not recover jumptable at 0x00018152f900. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141b9c0. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x198))(this,*(uint64 *)(*this + 0x1a0));
           return;
         }
     }
 
-    // Token : 0x60000CD
-    // RVA   : 0x15305A0   Offset: 0x152F9A0   Length: 0x5D
+    // Token : 0x60000B4
+    // RVA   : 0x141C660   Offset: 0x141B460   Length: 0x5D
     private void Start()
     {
         bool cVar1;
@@ -165,15 +165,15 @@ public class UIButtonColor
         }
         cVar1 = (**(code **)(*this + 0x178))(this,*(uint64 *)(*this + 0x180));
         if (!cVar1) {
-                          // WARNING: Could not recover jumptable at 0x0001815305f0. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141c6b0. Too many branches
                           // WARNING: Treating indirect jump as call
           (**(code **)(*this + 0x208))(this,3,1,*(uint64 *)(*this + 0x210));
           return;
         }
     }
 
-    // Token : 0x60000CE
-    // RVA   : 0x152FE90   Offset: 0x152F290   Length: 0x2D0
+    // Token : 0x60000B5
+    // RVA   : 0x141BF50   Offset: 0x141AD50   Length: 0x2D0
     protected virtual void OnInit()
     {
         bool cVar1;
@@ -195,7 +195,7 @@ public class UIButtonColor
         cVar1 = Object.op_Inequality(uVar2,0,0);
         if (cVar1) {
           if (this.tweenTarget == null) throw; // [null/range check failed]
-          uVar2 = GameObject.GetComponent(this.tweenTarget,DAT_181d74c30);
+          uVar2 = GameObject.GetComponent(this.tweenTarget,DAT_181e57cf8);
           this.mWidget = uVar2;
         }
         uVar2 = this.mWidget;
@@ -207,11 +207,11 @@ public class UIButtonColor
             return;
           }
           if (this.tweenTarget != null) {
-            lVar3 = GameObject.GetComponent(this.tweenTarget,DAT_181d72c50);
+            lVar3 = GameObject.GetComponent(this.tweenTarget,DAT_181e55d18);
             cVar1 = Object.op_Inequality(lVar3,0,0);
             if (!cVar1) {
               if (this.tweenTarget != null) {
-                lVar3 = GameObject.GetComponent(this.tweenTarget,DAT_181d721b0);
+                lVar3 = GameObject.GetComponent(this.tweenTarget,DAT_181e55278);
                 cVar1 = Object.op_Inequality(lVar3,0,0);
                 if (!cVar1) {
                   this.tweenTarget = 0;
@@ -227,7 +227,7 @@ public class UIButtonColor
                   uVar7 = *(uint32 *)((int64)puVar4 + 4);
                   uVar8 = *(uint32 *)(puVar4 + 1);
                   uVar9 = *(uint32 *)((int64)puVar4 + 12);
-        LAB_1815300eb:
+        LAB_18141c1ab:
                   this.mStartingColor = uVar6;
                   *(uint32 *)(this + 88) = uVar7;
                   *(uint32 *)(this + 92) = uVar8;
@@ -240,10 +240,10 @@ public class UIButtonColor
               cVar1 = Application.get_isPlaying(0);
               if (lVar3 != null) {
                 if (!cVar1) {
-                  lVar3 = FUN_180d9de40(lVar3,0);
+                  lVar3 = FUN_180af9710(lVar3,0);
                 }
                 else {
-                  lVar3 = FUN_180d9dd10();
+                  lVar3 = FUN_180af95e0();
                 }
                 if (lVar3 != null) {
                   puVar5 = (uint32 *)Material.get_color(local_18,lVar3,0);
@@ -255,7 +255,7 @@ public class UIButtonColor
                   *(uint32 *)(this + 104) = uVar7;
                   *(uint32 *)(this + 108) = uVar8;
                   *(uint32 *)(this + 112) = uVar9;
-                  goto LAB_1815300eb;
+                  goto LAB_18141c1ab;
                 }
               }
             }
@@ -271,13 +271,13 @@ public class UIButtonColor
             uVar7 = *(uint32 *)(lVar3 + 148);
             uVar8 = *(uint32 *)(lVar3 + 152);
             uVar9 = *(uint32 *)(lVar3 + 156);
-            goto LAB_1815300eb;
+            goto LAB_18141c1ab;
           }
         }
     }
 
-    // Token : 0x60000CF
-    // RVA   : 0x152FBB0   Offset: 0x152EFB0   Length: 0x210
+    // Token : 0x60000B6
+    // RVA   : 0x141BC70   Offset: 0x141AA70   Length: 0x210
     protected virtual void OnEnable()
     {
         long lVar1;
@@ -299,7 +299,7 @@ public class UIButtonColor
           uVar5 = Component.get_gameObject(this,0);
           cVar3 = Object.op_Equality(uVar4,uVar5,0);
           if (cVar3) {
-                          // WARNING: Could not recover jumptable at 0x00018152fdb4. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141be74. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x1d8))(this,1,*(uint64 *)(*this + 0x1e0));
             return;
@@ -318,8 +318,8 @@ public class UIButtonColor
         }
     }
 
-    // Token : 0x60000D0
-    // RVA   : 0x152F910   Offset: 0x152ED10   Length: 0x11A
+    // Token : 0x60000B7
+    // RVA   : 0x141B9D0   Offset: 0x141A7D0   Length: 0x11A
     protected virtual void OnDisable()
     {
         bool cVar1;
@@ -334,14 +334,14 @@ public class UIButtonColor
           cVar1 = Object.op_Inequality(lVar2,0,0);
           if (cVar1) {
             if (this[3] == 0) {
-        LAB_18152fa25:
+        LAB_18141bae5:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            lVar2 = GameObject.GetComponent(this[3],DAT_181d74438);
+            lVar2 = GameObject.GetComponent(this[3],DAT_181e57500);
             cVar1 = Object.op_Inequality(lVar2,0,0);
             if (cVar1) {
-              if (lVar2 == null) goto LAB_18152fa25;
+              if (lVar2 == null) goto LAB_18141bae5;
               local_18 = *(uint32 *)((int64)this + 100);
               uStack_14 = (uint32)this[13];
               uStack_10 = *(uint32 *)((int64)this + 108);
@@ -353,8 +353,8 @@ public class UIButtonColor
         }
     }
 
-    // Token : 0x60000D1
-    // RVA   : 0x152FDD0   Offset: 0x152F1D0   Length: 0xBC
+    // Token : 0x60000B8
+    // RVA   : 0x141BE90   Offset: 0x141AC90   Length: 0xBC
     protected virtual void OnHover(bool isOver)
     {
         long lVar1;
@@ -372,8 +372,8 @@ public class UIButtonColor
         }
     }
 
-    // Token : 0x60000D2
-    // RVA   : 0x1530170   Offset: 0x152F570   Length: 0x25B
+    // Token : 0x60000B9
+    // RVA   : 0x141C230   Offset: 0x141B030   Length: 0x25B
     protected virtual void OnPress(bool isPressed)
     {
         long lVar1;
@@ -395,13 +395,13 @@ public class UIButtonColor
         }
         if (isPressed) {
           uVar5 = 2;
-          goto LAB_1815303a0;
+          goto LAB_18141c460;
         }
         if (UICamera.currentTouch != null) {
           lVar1 = UICamera.currentTouch;
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           uVar5 = lVar1.current;
           uVar4 = Component.get_gameObject(this,0);
@@ -409,26 +409,26 @@ public class UIButtonColor
           if (cVar2) {
             iVar3 = UICamera.get_currentScheme(0);
             if (iVar3 == 2) {
-        LAB_181530390:
+        LAB_18141c450:
               uVar5 = 1;
-              goto LAB_1815303a0;
+              goto LAB_18141c460;
             }
             iVar3 = UICamera.get_currentScheme(0);
             if (iVar3 == 0) {
               uVar5 = UICamera.get_hoveredObject(0);
               uVar4 = Component.get_gameObject(this,0);
               cVar2 = Object.op_Equality(uVar5,uVar4,0);
-              if (cVar2) goto LAB_181530390;
+              if (cVar2) goto LAB_18141c450;
             }
           }
         }
         uVar5 = 0;
-        LAB_1815303a0:
+        LAB_18141c460:
         (**(code **)(*this + 0x208))(this,uVar5,0,*(uint64 *)(*this + 0x210));
     }
 
-    // Token : 0x60000D3
-    // RVA   : 0x152FAF0   Offset: 0x152EEF0   Length: 0xB8
+    // Token : 0x60000BA
+    // RVA   : 0x141BBB0   Offset: 0x141A9B0   Length: 0xB8
     protected virtual void OnDragOver()
     {
         long lVar1;
@@ -441,7 +441,7 @@ public class UIButtonColor
           lVar1 = this[3];
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (cVar2) {
-                          // WARNING: Could not recover jumptable at 0x00018152fb9b. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141bc5b. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x208))(this,2,0,*(uint64 *)(*this + 0x210));
             return;
@@ -449,8 +449,8 @@ public class UIButtonColor
         }
     }
 
-    // Token : 0x60000D4
-    // RVA   : 0x152FA30   Offset: 0x152EE30   Length: 0xB6
+    // Token : 0x60000BB
+    // RVA   : 0x141BAF0   Offset: 0x141A8F0   Length: 0xB6
     protected virtual void OnDragOut()
     {
         long lVar1;
@@ -463,7 +463,7 @@ public class UIButtonColor
           lVar1 = this[3];
           cVar2 = Object.op_Inequality(lVar1,0,0);
           if (cVar2) {
-                          // WARNING: Could not recover jumptable at 0x00018152fad9. Too many branches
+                          // WARNING: Could not recover jumptable at 0x00018141bb99. Too many branches
                           // WARNING: Treating indirect jump as call
             (**(code **)(*this + 0x208))(this,0,0,*(uint64 *)(*this + 0x210));
             return;
@@ -471,8 +471,8 @@ public class UIButtonColor
         }
     }
 
-    // Token : 0x60000D5
-    // RVA   : 0x1530430   Offset: 0x152F830   Length: 0x169
+    // Token : 0x60000BC
+    // RVA   : 0x141C4F0   Offset: 0x141B2F0   Length: 0x169
     public virtual void SetState(State state, bool instant)
     {
         int iVar1;
@@ -487,11 +487,11 @@ public class UIButtonColor
           (**(code **)(*this + 0x198))(this,*(uint64 *)(*this + 0x1a0));
         }
         if ((int)this[16] != state) {
-          bVar4 = !DAT_181ea34a6;
+          bVar4 = !DAT_181ebd8af;
           *(int *)(this + 16) = state;
           if (bVar4) {
-            il2cpp_runtime_class_init(&DAT_181d8e228);
-            DAT_181ea34a6 = true;
+            il2cpp_runtime_class_init(&DAT_181e6e5e8);
+            DAT_181ebd8af = true;
           }
           if (*(char *)((int64)this + 116) != false) {
             lVar3 = this[3];
@@ -528,7 +528,7 @@ public class UIButtonColor
                 if (cVar2) {
                   if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                   local_18 = *(uint32 *)(lVar3 + 136);
                   uStack_14 = *(uint32 *)(lVar3 + 140);
@@ -543,8 +543,8 @@ public class UIButtonColor
         }
     }
 
-    // Token : 0x60000D6
-    // RVA   : 0x1530600   Offset: 0x152FA00   Length: 0x13A
+    // Token : 0x60000BD
+    // RVA   : 0x141C6C0   Offset: 0x141B4C0   Length: 0x13A
     public void UpdateColor(bool instant)
     {
         int iVar1;
@@ -591,7 +591,7 @@ public class UIButtonColor
               if (cVar4) {
                 if (lVar3 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 local_18 = *(uint32 *)(lVar3 + 136);
                 uStack_14 = *(uint32 *)(lVar3 + 140);
@@ -605,8 +605,8 @@ public class UIButtonColor
         }
     }
 
-    // Token : 0x60000D7
-    // RVA   : 0x1530740   Offset: 0x152FB40   Length: 0xC9
+    // Token : 0x60000BE
+    // RVA   : 0x141C800   Offset: 0x141B600   Length: 0xC9
     public void /*ctor*/()
     {
         uint uVar1;
@@ -620,19 +620,19 @@ public class UIButtonColor
         byte[] local_28 = new byte[32];
         local_48 = 0;
         uStack_40 = 0;
-        FUN_1809dcfa0(&local_48,0x3f61e1e2,0x3f48c8c9,0x3f169697,0x3f800000,0);
+        FUN_1807282e0(&local_48,0x3f61e1e2,0x3f48c8c9,0x3f169697,0x3f800000,0);
         local_38 = 0;
         uStack_30 = 0;
         this.hover = (uint32)local_48;
         *(uint32 *)(this + 36) = local_48._4_4_;
         *(uint32 *)(this + 40) = (uint32)uStack_40;
         *(uint32 *)(this + 44) = uStack_40._4_4_;
-        FUN_1809dcfa0(&local_38,0x3f37b7b8,0x3f23a3a4,0x3ef6f6f7,0x3f800000,0);
+        FUN_1807282e0(&local_38,0x3f37b7b8,0x3f23a3a4,0x3ef6f6f7,0x3f800000,0);
         this.pressed = (uint32)local_38;
         *(uint32 *)(this + 52) = local_38._4_4_;
         *(uint32 *)(this + 56) = (uint32)uStack_30;
         *(uint32 *)(this + 60) = uStack_30._4_4_;
-        puVar5 = (uint32 *)FUN_1810d3a00(local_28,0);
+        puVar5 = (uint32 *)FUN_180f24b80(local_28,0);
         uVar1 = *puVar5;
         uVar2 = puVar5[1];
         uVar3 = puVar5[2];

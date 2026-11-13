@@ -1,20 +1,20 @@
 // ============================================================
 // Type  : MouseFollower
-// Token : 0x2000123
+// Token : 0x2000122
 // ============================================================
 
 public class MouseFollower
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x400073A
+    // Token: 0x400071A
     public List<TrailRenderer_Base> Trails;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60009B1
-    // RVA   : 0xDF40B0   Offset: 0xDF34B0   Length: 0x2F0
+    // Token : 0x6000998
+    // RVA   : 0x850940   Offset: 0x84F740   Length: 0x2F0
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d7de08 + 184);
+        var pStatics = *(int64*)(DAT_181e5e3d8 + 184);
         uint uVar1;
         ulong uVar2;
         bool cVar3;
@@ -31,28 +31,28 @@ public class MouseFollower
         if (!cVar3) {
           lVar4 = *(int64 *)(pStatics + 16);
           if (lVar4 == null) {
-            uVar2 = **(uint64 **)(DAT_181d7de08 + 184);
-            lVar4 = new OnTooltipCB(uVar2,DAT_181da8460,DAT_181d98740);
+            uVar2 = **(uint64 **)(DAT_181e5e3d8 + 184);
+            lVar4 = new OnTooltipCB(uVar2,DAT_181e8be20,DAT_181e79000);
             plVar9 = (int64 *)(pStatics + 16);
             *plVar9 = lVar4;
             il2cpp_internal(plVar9,lVar4);
           }
           if (lVar5 != null) {
-            FUN_18181f760(lVar5,lVar4,DAT_181da7bb0);
+            FUN_18175eee0(lVar5,lVar4,DAT_181e8a1f0);
             return;
           }
         }
         else {
           lVar4 = *(int64 *)(pStatics + 8);
           if (lVar4 == null) {
-            uVar2 = **(uint64 **)(DAT_181d7de08 + 184);
-            lVar4 = new OnTooltipCB(uVar2,DAT_181da83e0,DAT_181d98740);
+            uVar2 = **(uint64 **)(DAT_181e5e3d8 + 184);
+            lVar4 = new OnTooltipCB(uVar2,DAT_181e8bda0,DAT_181e79000);
             plVar9 = (int64 *)(pStatics + 8);
             *plVar9 = lVar4;
             il2cpp_internal(plVar9,lVar4);
           }
           if (lVar5 != null) {
-            FUN_18181f760(lVar5,lVar4,DAT_181da7bb0);
+            FUN_18175eee0(lVar5,lVar4,DAT_181e8a1f0);
             lVar5 = Component.get_transform(this,0);
             lVar4 = Camera.get_main(0);
             puVar6 = (uint32 *)Input.get_mousePosition(&local_28,0);
@@ -82,11 +82,11 @@ public class MouseFollower
         }
     }
 
-    // Token : 0x60009B2
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x6000999
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

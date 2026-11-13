@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : WeaponResearchData
-// Token : 0x20001DF
+// Token : 0x20001E1
 // ============================================================
 
 public class WeaponResearchData
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000CAF
+    // Token: 0x4000CC2
     public int lv;
 
-    // Token: 0x4000CB0
+    // Token: 0x4000CC3
     public float exp;
 
-    // Token: 0x4000CB1
+    // Token: 0x4000CC4
     public ItemData researchTarget;
 
-    // Token: 0x4000CB2
+    // Token: 0x4000CC5
     public HeroSpeAddData researchTargetBuff;
 
-    // Token: 0x4000CB3
+    // Token: 0x4000CC6
     public int leftTime;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000ED7
-    // RVA   : 0xC14420   Offset: 0xC13820   Length: 0x65
+    // Token : 0x6000EDD
+    // RVA   : 0x96D6D0   Offset: 0x96C4D0   Length: 0x65
     public void /*ctor*/()
     {
         ulong uVar1;
@@ -31,8 +31,8 @@ public class WeaponResearchData
         this.researchTargetBuff = new HeroSpeAddData(0);
     }
 
-    // Token : 0x6000ED8
-    // RVA   : 0xC143A0   Offset: 0xC137A0   Length: 0x7D
+    // Token : 0x6000EDE
+    // RVA   : 0x96D650   Offset: 0x96C450   Length: 0x7D
     public void Reset()
     {
         ulong uVar1;
@@ -42,20 +42,20 @@ public class WeaponResearchData
         this.leftTime = 0;
     }
 
-    // Token : 0x6000ED9
-    // RVA   : 0xC14380   Offset: 0xC13780   Length: 0x1B
+    // Token : 0x6000EDF
+    // RVA   : 0x96D630   Offset: 0x96C430   Length: 0x1B
     public float GetMaxExp()
     {
-        float FUN_180c14380(int64 this)
+        float FUN_18096d630(int64 this)
         {
         return (float)((this.lv + 2) * (this.lv + 1)) * 0.5;
     }
 
-    // Token : 0x6000EDA
-    // RVA   : 0xC13FA0   Offset: 0xC133A0   Length: 0x3DA
+    // Token : 0x6000EE0
+    // RVA   : 0x96D250   Offset: 0x96C050   Length: 0x3DA
     public void ChangeExp(float _exp)
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         int iVar3;
@@ -72,27 +72,27 @@ public class WeaponResearchData
           do {
             this.lv = iVar3 + 1;
             this.exp = _exp - (float)((iVar3 + 2) * (iVar3 + 1)) * 0.5;
-            lVar1 = **(int64 **)(DAT_181d7f6c0 + 184);
-            lVar2 = *(int64 *)(pStatics_3d40 + 0x4a0);
+            lVar1 = **(int64 **)(DAT_181e5fa68 + 184);
+            lVar2 = *(int64 *)(pStatics_38e8 + 0x4a8);
             if ((((GameController._instance == null) ||
                  (lVar4 = GameController._instance.worldData) == null) ||
                 (lVar4 = WorldData.Player(lVar4,0)) == null) ||
                (iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 == null)) {
-        LAB_180c14375:
+        LAB_18096d625:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            uVar5 = FUN_180002f80(lVar2,iVar3 + 3,DAT_181da4370);
+            uVar5 = FUN_1800024b0(lVar2,iVar3 + 3,DAT_181e86970);
             local_res10[0] = this.lv;
-            uVar6 = il2cpp_value_box(DAT_181d80430,local_res10);
+            uVar6 = il2cpp_value_box(DAT_181e60808,local_res10);
             uVar5 = String.Format("{0}兵器研究达到{1}级",uVar5,uVar6,0);
-            lVar2 = *(int64 *)(pStatics_3d40 + 0x4a0);
+            lVar2 = *(int64 *)(pStatics_38e8 + 0x4a8);
             if (((GameController._instance == null) ||
                 (lVar4 = GameController._instance.worldData) == null) ||
                ((lVar4 = WorldData.Player(lVar4,0), lVar4 == null ||
                 ((iVar3 = HeroData.GetWeaponResearchWeaponType(lVar4,0), lVar2 == null ||
-                 (uVar6 = FUN_180002f80(lVar2,iVar3 + 3,DAT_181da4370), lVar1 == null))))))
-            goto LAB_180c14375;
+                 (uVar6 = FUN_1800024b0(lVar2,iVar3 + 3,DAT_181e86970), lVar1 == null))))))
+            goto LAB_18096d625;
             local_68 = 0;
             uStack_60 = 0;
             InfoController.AddInfoTab

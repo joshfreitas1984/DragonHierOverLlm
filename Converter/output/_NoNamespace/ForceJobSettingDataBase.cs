@@ -1,26 +1,26 @@
 // ============================================================
 // Type  : ForceJobSettingDataBase
-// Token : 0x2000213
+// Token : 0x2000215
 // ============================================================
 
 public class ForceJobSettingDataBase
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000EF0
+    // Token: 0x4000F04
     public int minForceLv;
 
-    // Token: 0x4000EF1
+    // Token: 0x4000F05
     public int maxForceLv;
 
-    // Token: 0x4000EF2
+    // Token: 0x4000F06
     public List<ForceJobSettingIDDataBase> jobIDSetting;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600100A
-    // RVA   : 0x77B160   Offset: 0x77A560   Length: 0xF
+    // Token : 0x6001013
+    // RVA   : 0x1850640   Offset: 0x184F440   Length: 0xF
     public void /*ctor*/()
     {
-        void FUN_18077b160(int64 this)
+        void FUN_181850640(int64 this)
         {
         this.minForceLv = 0xffffffffffffffff;
         ZhSegment.Initialize(this,0);

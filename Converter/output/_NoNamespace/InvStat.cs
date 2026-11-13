@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : InvStat
-// Token : 0x2000012
+// Token : 0x2000011
 // ============================================================
 
 public class InvStat
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000070
+    // Token: 0x4000050
     public Identifier id;
 
-    // Token: 0x4000071
+    // Token: 0x4000051
     public Modifier modifier;
 
-    // Token: 0x4000072
+    // Token: 0x4000052
     public int amount;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x600005A
-    // RVA   : 0xC9D6A0   Offset: 0xC9CAA0   Length: 0x75
+    // Token : 0x6000041
+    // RVA   : 0xA1F300   Offset: 0xA1E100   Length: 0x75
     public static string GetName(Identifier i)
     {
         ulong uVar2;
         uint[] local_res8 = new uint[2];
         local_res8[0] = i;
-        plVar1 = (int64 *)il2cpp_value_box(DAT_181d7afc0,local_res8);
+        plVar1 = (int64 *)il2cpp_value_box(DAT_181e5b238,local_res8);
         if (plVar1 != (int64 *)0) {
           uVar2 = (**(code **)(*plVar1 + 0x168))(plVar1,*(uint64 *)(*plVar1 + 0x170));
           il2cpp_object_unbox(plVar1);
@@ -31,8 +31,8 @@ public class InvStat
         }
     }
 
-    // Token : 0x600005B
-    // RVA   : 0xC9D550   Offset: 0xC9C950   Length: 0x98
+    // Token : 0x6000042
+    // RVA   : 0xA1F1B0   Offset: 0xA1DFB0   Length: 0x98
     public static string GetDescription(Identifier i)
     {
         switch(i) {
@@ -59,8 +59,8 @@ public class InvStat
         }
     }
 
-    // Token : 0x600005C
-    // RVA   : 0xC9D3D0   Offset: 0xC9C7D0   Length: 0xB1
+    // Token : 0x6000043
+    // RVA   : 0xA1F030   Offset: 0xA1DE30   Length: 0xB1
     public static int CompareArmor(InvStat a, InvStat b)
     {
         int iVar1;
@@ -106,8 +106,8 @@ public class InvStat
         }
     }
 
-    // Token : 0x600005D
-    // RVA   : 0xC9D490   Offset: 0xC9C890   Length: 0xB1
+    // Token : 0x6000044
+    // RVA   : 0xA1F0F0   Offset: 0xA1DEF0   Length: 0xB1
     public static int CompareWeapon(InvStat a, InvStat b)
     {
         int iVar1;
@@ -153,8 +153,8 @@ public class InvStat
         }
     }
 
-    // Token : 0x600005E
-    // RVA   : 0x210B70   Offset: 0x20FF70   Length: 0x7
+    // Token : 0x6000045
+    // RVA   : 0x42F150   Offset: 0x42DF50   Length: 0x7
     public void /*ctor*/()
     {
         ZhSegment.Initialize(this,0);

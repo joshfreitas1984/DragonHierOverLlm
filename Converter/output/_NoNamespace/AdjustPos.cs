@@ -1,29 +1,29 @@
 // ============================================================
 // Type  : AdjustPos
-// Token : 0x200013E
+// Token : 0x200013A
 // ============================================================
 
 public class AdjustPos
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40007B8
+    // Token: 0x4000795
     public bool stopped;
 
-    // Token: 0x40007B9
+    // Token: 0x4000796
     public Vector3 speed;
 
-    // Token: 0x40007BA
+    // Token: 0x4000797
     public GameObject followTarget;
 
-    // Token: 0x40007BB
+    // Token: 0x4000798
     public float delay;
 
-    // Token: 0x40007BC
+    // Token: 0x4000799
     private Vector3 xOffset;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000A2D
-    // RVA   : 0xA1E850   Offset: 0xA1DC50   Length: 0x40C
+    // Token : 0x6000A0C
+    // RVA   : 0x786280   Offset: 0x785080   Length: 0x40C
     private void Update()
     {
         ulong uVar1;
@@ -56,13 +56,13 @@ public class AdjustPos
           cVar3 = Vector3.op_Equality(&local_78,&local_68,0);
           if (cVar3) {
             lVar5 = Component.get_transform(this,0);
-            if (lVar5 == null) goto LAB_180a1ec57;
+            if (lVar5 == null) goto LAB_180786687;
             puVar4 = (uint64 *)Transform.get_position(local_48,lVar5,0);
             local_78 = *puVar4;
             local_70 = *(float *)(puVar4 + 1);
             if ((this.followTarget == null) ||
                (lVar5 = GameObject.get_transform(this.followTarget,0)) == null)
-            goto LAB_180a1ec57;
+            goto LAB_180786687;
             puVar4 = (uint64 *)Transform.get_position(local_48,lVar5,0);
             local_68 = *puVar4;
             local_60 = *(float *)(puVar4 + 1);
@@ -129,17 +129,17 @@ public class AdjustPos
                 }
               }
             }
-        LAB_180a1ec57:
+        LAB_180786687:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           fVar8 = (float)Time.get_deltaTime(0);
           this.delay = fVar7 - fVar8;
         }
     }
 
-    // Token : 0x6000A2E
-    // RVA   : 0xA1EC60   Offset: 0xA1E060   Length: 0x70
+    // Token : 0x6000A0D
+    // RVA   : 0x786690   Offset: 0x785490   Length: 0x70
     public void /*ctor*/()
     {
         float fVar1;
@@ -149,7 +149,7 @@ public class AdjustPos
         this.xOffset =
              CONCAT44((float)((uint64)*puVar2 >> 32) * -9999.0,(float)*puVar2 * -9999.0);
         *(float *)(this + 60) = fVar1 * -9999.0;
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

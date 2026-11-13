@@ -1,27 +1,27 @@
 // ============================================================
 // Type  : AreaBranchDefenceType
-// Token : 0x20001A5
+// Token : 0x20001A7
 // ============================================================
 
 public class AreaBranchDefenceType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000B7F
+    // Token: 0x4000B90
     public int value__;
 
-    // Token: 0x4000B80
+    // Token: 0x4000B91
     public const AreaBranchDefenceType Guard;
 
-    // Token: 0x4000B81
+    // Token: 0x4000B92
     public const AreaBranchDefenceType Trap;
 
-    // Token: 0x4000B82
+    // Token: 0x4000B93
     public const AreaBranchDefenceType Tower;
 
-    // Token: 0x4000B83
+    // Token: 0x4000B94
     public const AreaBranchDefenceType Wall;
 
-    // Token: 0x4000B84
+    // Token: 0x4000B95
     public const AreaBranchDefenceType Flag;
 
 }

@@ -1,54 +1,54 @@
 // ============================================================
 // Type  : MeditationUIController
-// Token : 0x2000302
+// Token : 0x200030C
 // ============================================================
 
 public class MeditationUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x40018C3
+    // Token: 0x4001935
     public GameObject meditationUI;
 
-    // Token: 0x40018C4
+    // Token: 0x4001936
     public GameObject treasureIcon;
 
-    // Token: 0x40018C5
+    // Token: 0x4001937
     public GameObject medIcon;
 
-    // Token: 0x40018C6
+    // Token: 0x4001938
     public GameObject foodIcon;
 
-    // Token: 0x40018C7
+    // Token: 0x4001939
     public bool needRefresh;
 
-    // Token: 0x40018C8
+    // Token: 0x400193A
     private static MeditationUIController _instance;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60018F2
-    // RVA   : 0xA93ED0   Offset: 0xA932D0   Length: 0x36
+    // Token : 0x6001986
+    // RVA   : 0xE87440   Offset: 0xE86240   Length: 0x36
     public static MeditationUIController get_Instance()
     {
-        return **(uint64 **)(DAT_181d889a8 + 184);
+        return **(uint64 **)(DAT_181e68d70 + 184);
     }
 
-    // Token : 0x60018F3
-    // RVA   : 0xA8EBC0   Offset: 0xA8DFC0   Length: 0x43
+    // Token : 0x6001987
+    // RVA   : 0xE82970   Offset: 0xE81770   Length: 0x43
     private void Awake()
     {
-        puVar1 = *(uint64 **)(DAT_181d889a8 + 184);
+        puVar1 = *(uint64 **)(DAT_181e68d70 + 184);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x60018F4
-    // RVA   : 0xA93E90   Offset: 0xA93290   Length: 0x3D
+    // Token : 0x6001988
+    // RVA   : 0xE87400   Offset: 0xE86200   Length: 0x3D
     private void Update()
     {
         bool cVar1;
         if (this.meditationUI == null) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         cVar1 = GameObject.get_activeSelf(this.meditationUI,0);
         if ((cVar1) && (this.needRefresh)) {
@@ -57,8 +57,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018F5
-    // RVA   : 0xA8F720   Offset: 0xA8EB20   Length: 0x1EF
+    // Token : 0x6001989
+    // RVA   : 0xE83460   Offset: 0xE82260   Length: 0x1EF
     public void HideMeditationUI()
     {
         ulong uVar1;
@@ -93,11 +93,12 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018F6
-    // RVA   : 0xA92B80   Offset: 0xA91F80   Length: 0x2A1
+    // Token : 0x600198A
+    // RVA   : 0xE861E0   Offset: 0xE84FE0   Length: 0x234
     public void ShowMeditationUI()
     {
         long lVar1;
+        ulong uVar2;
         ulong uVar3;
         if (this.meditationUI != null) {
           GameObject.SetActive(this.meditationUI,1,0);
@@ -106,549 +107,21 @@ public class MeditationUIController
             if (lVar1 != null) {
               lVar1 = Transform.Find(lVar1,"Title",0);
               if (lVar1 != null) {
-                plVar2 = (int64 *)Component.GetComponent(lVar1,DAT_181d96178);
+                uVar2 = Component.GetComponent(lVar1,DAT_181e79538);
                 if ((GameController._instance != null) &&
                    (lVar1 = GameController._instance.worldData) != null) {
                   lVar1 = WorldData.Player(lVar1,0);
                   if (lVar1 != null) {
                     uVar3 = HeroData.GetMeditationTopic(lVar1,0);
                     uVar3 = String.Concat(uVar3,"修行",0);
-                    uVar3 = LTLocalization.GetText(uVar3,0,1,0);
-                    if (plVar2 != (int64 *)0) {
-                      (**(code **)(*plVar2 + 0x5e8))(plVar2,uVar3,*(uint64 *)(*plVar2 + 0x5f0));
-                      LTLocalization.CheckTextFont(plVar2,0);
-                      MeditationUIController.RefreshUI(this,0);
-                      plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
-                      plVar4 = (int64 *)0;
-                      if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
-                        plVar4 = plVar2;
-                      }
-                      NGUITools.PlaySound(plVar4,0);
-                      return;
+                    LTLocalization.SetText(uVar2,uVar3,0);
+                    MeditationUIController.RefreshUI(this,0);
+                    plVar4 = (int64 *)Resources.Load("Sound/SoundEffect/OpenBook",0);
+                    plVar5 = (int64 *)0;
+                    if ((plVar4 != (int64 *)0) && (*plVar4 == DAT_181e8f4a0)) {
+                      plVar5 = plVar4;
                     }
-                  }
-                }
-              }
-            }
-          }
-        }
-    }
-
-    // Token : 0x60018F7
-    // RVA   : 0xA900D0   Offset: 0xA8F4D0   Length: 0x2AA3
-    public void RefreshUI()
-    {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
-        int iVar1;
-        long lVar2;
-        bool cVar3;
-        byte uVar4;
-        long lVar5;
-        ulong uVar7;
-        ulong uVar8;
-        float fVar10;
-        float fVar11;
-        float fVar12;
-        float[] local_res8 = new float[4];
-        int[] local_res18 = new int[2];
-        float[] local_res20 = new float[2];
-        uint[] local_88 = new uint[4];
-        ulong local_78;
-        ulong uStack_70;
-        this.needRefresh = 0;
-        if (((this.meditationUI == null) ||
-            (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-           (lVar5 = Transform.Find(lVar5,"MeditationLv",0)) == null) {
-        LAB_180a92b62:
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
-        plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180a92b62;
-        uVar7 = HeroData.GetMeditationTopic(lVar5,0);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b62;
-        uVar8 = Int32.ToString(lVar5 + 16,0);
-        uVar7 = String.Concat(uVar7,"等级",uVar8,0);
-        uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-        if (plVar6 == (int64 *)0) goto LAB_180a92b62;
-        (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-        LTLocalization.CheckTextFont(plVar6,0);
-        if (((this.meditationUI == null) ||
-            (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-           (lVar5 = Transform.Find(lVar5,"MeditationLvAdd",0)) == null) goto LAB_180a92b62;
-        plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = WorldData.Player(lVar5,0)) == null) goto LAB_180a92b62;
-        lVar5 = HeroData.GetForce(lVar5,0,0);
-        if (lVar5 == null) goto LAB_180a92b62;
-        uVar7 = ForceData.GetForceName(lVar5,1,0);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b62;
-        local_res18[0] = lVar5.chapter * 2;
-        uVar8 = il2cpp_value_box(DAT_181d80430,local_res18);
-        uVar7 = String.Format("等级加成\n{0}武学威力+{1}%",uVar7,uVar8,0);
-        uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-        if (plVar6 == (int64 *)0) goto LAB_180a92b62;
-        (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-        LTLocalization.CheckTextFont(plVar6,0);
-        if (((this.meditationUI == null) ||
-            (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-           ((lVar5 = Transform.Find(lVar5,"ExpBarBack",0), lVar5 == null ||
-            (lVar5 = Transform.Find(lVar5,"ExpText",0)) == null))) goto LAB_180a92b62;
-        plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b62;
-        uVar7 = Single.ToString(lVar5 + 20,"f0",0);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b62;
-        iVar1 = lVar5.chapter;
-        local_res20[0] = (float)((iVar1 + 2) * (iVar1 + 1)) * 50.0;
-        uVar8 = il2cpp_value_box(DAT_181da22f0,local_res20);
-        uVar7 = String.Format("{0}/{1}",uVar7,uVar8,0);
-        uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-        if (plVar6 == (int64 *)0) goto LAB_180a92b62;
-        (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-        LTLocalization.CheckTextFont(plVar6,0);
-        if ((((this.meditationUI == null) ||
-             (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-            (lVar5 = Transform.Find(lVar5,"ExpBarBack",0)) == null) ||
-           (lVar5 = Transform.Find(lVar5,"ExpBar",0)) == null) goto LAB_180a92b62;
-        lVar5 = Component.GetComponent(lVar5,DAT_181d94478);
-        if (((GameController._instance == null) ||
-            (lVar2 = GameController._instance.worldData) == null) ||
-           (lVar2.meditationData == null)) goto LAB_180a92b62;
-        if ((((GameController._instance == null) ||
-             (lVar2 = GameController._instance.worldData) == null) ||
-            (lVar2.meditationData == null)) || (lVar5 == null)) goto LAB_180a92b62;
-        Image.set_fillAmount(lVar5);
-        if (((this.meditationUI == null) ||
-            (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-           (lVar5 = Transform.Find(lVar5,"MeditationText",0)) == null) goto LAB_180a92b62;
-        plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b62;
-        local_res8[0] = (float)MeditationData.MeditationExpRate(lVar5,0);
-        local_res8[0] = local_res8[0] * 100.0;
-        uVar7 = Single.ToString(local_res8,"f0",0);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b62;
-        fVar10 = 0.0;
-        if (lVar5.Areas < 1) {
-          fVar12 = 0.0;
-        }
-        else if (lVar5.villageAreaID == null) {
-          fVar12 = 0.0;
-        }
-        else {
-          fVar12 = (float)Mathf.Max();
-        }
-        if (lVar5.Forces < 1) {
-          fVar11 = 0.0;
-        }
-        else if (lVar5.Inns == null) {
-          fVar11 = 0.0;
-        }
-        else {
-          fVar11 = (float)Mathf.Max();
-        }
-        if ((0 < lVar5.BigMapRandomEventDatas) && (lVar5.Heros != null)) {
-          fVar10 = (float)Mathf.Max();
-        }
-        local_res8[0] = fVar11 + fVar12 + fVar10;
-        uVar8 = Single.ToString(local_res8,"f0",0);
-        uVar7 = String.Format("每日经验 <b>{1}</b>\n修行效率 <b>{0}%</b>",uVar7,uVar8,0);
-        uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-        if (plVar6 == (int64 *)0) goto LAB_180a92b62;
-        (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-        LTLocalization.CheckTextFont(plVar6,0);
-        if (((this.meditationUI == null) ||
-            (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-           (lVar5 = Transform.Find(lVar5,"StartMeditationButton",0)) == null) goto LAB_180a92b62;
-        lVar5 = Component.GetComponent(lVar5,DAT_181d95578);
-        if (((GameController._instance == null) ||
-            (lVar2 = GameController._instance.worldData) == null) ||
-           (lVar2 = lVar2.meditationData) == null) goto LAB_180a92b62;
-        local_88[0] = lVar2.cityAreaID;
-        uVar7 = il2cpp_value_box(DAT_181d80430,local_88);
-        uVar7 = String.Format("本月已修行{0}日\n每修行一日，本月修行效率都会下降20%",uVar7,0);
-        if (lVar5 == null) goto LAB_180a92b62;
-        lVar5.cityAreaID = uVar7;
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b62;
-        if (lVar5.Areas < 1) {
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"TreasureSureButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Component.GetComponent(lVar5,DAT_181d93778);
-          uVar7 = this.treasureIcon;
-          uVar4 = Object.op_Inequality(uVar7,0,0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          Selectable.set_interactable(lVar5,uVar4,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"TreasureSureButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Transform.Find(lVar5,"Text",0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          uVar7 = "供奉";
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-          LTLocalization.CheckTextFont(plVar6,0);
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"TreasureSureButton",0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"Text",0)) == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          puVar9 = (uint64 *)Color.get_black(&local_78,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          local_78 = *puVar9;
-          uStack_70 = puVar9[1];
-          (**(code **)(*plVar6 + 0x2a8))(plVar6,&local_78,*(uint64 *)(*plVar6 + 0x2b0));
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"ClearTreasureButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Component.get_gameObject(lVar5,0);
-          uVar4 = Object.op_Inequality(this.treasureIcon,0,0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          GameObject.SetActive(lVar5,uVar4,0);
-          if ((this.meditationUI == null) ||
-             (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null)
-          goto LAB_180a92b6e;
-          lVar5 = Transform.Find(lVar5,"TreasureAddText",0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          uVar7 = "";
-        }
-        else {
-          uVar7 = this.treasureIcon;
-          cVar3 = Object.op_Equality(uVar7,0,0);
-          if (cVar3) {
-            if (((this.meditationUI == null) ||
-                (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-               (lVar5 = Transform.Find(lVar5,"Treasure",0)) == null) goto LAB_180a92b6e;
-            uVar7 = Component.get_gameObject(lVar5,0);
-            lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
-               (lVar5 = *(int64 *)(lVar5.villageAreaID + 0x1f0)) == null)
-            goto LAB_180a92b6e;
-            uVar7 = MeditationUIController.CreateMeditationItemIcon
-                              (this,uVar7,lVar5.villageAreaID,0);
-            *puVar9 = uVar7;
-            il2cpp_internal(puVar9,uVar7);
-          }
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"TreasureSureButton",0)) == null) ||
-             (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) == null) goto LAB_180a92b6e;
-          Selectable.set_interactable(lVar5,0,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             ((lVar5 = Transform.Find(lVar5,"TreasureSureButton",0), lVar5 == null ||
-              (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (((GameController._instance == null) ||
-              (lVar5 = GameController._instance.worldData) == null) ||
-             (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b6e;
-          uVar7 = Int32.ToString(lVar5 + 48,0);
-          uVar7 = String.Concat(uVar7,"日",0);
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-          LTLocalization.CheckTextFont(plVar6,0);
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"TreasureSureButton",0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"Text",0)) == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          local_78 = *(uint64 *)(pStatics_3d40 + 0x378);
-          uStack_70 = *(uint64 *)(pStatics_3d40 + 0x380);
-          (**(code **)(*plVar6 + 0x2a8))(plVar6,&local_78,*(uint64 *)(*plVar6 + 0x2b0));
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             ((lVar5 = Transform.Find(lVar5,"ClearTreasureButton",0), lVar5 == null ||
-              (lVar5 = Component.get_gameObject(lVar5,0)) == null))) goto LAB_180a92b6e;
-          GameObject.SetActive(lVar5,0,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"TreasureAddText",0)) == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (((GameController._instance == null) ||
-              (lVar5 = GameController._instance.worldData) == null) ||
-             ((lVar5 = lVar5.meditationData, lVar5 == null ||
-              (lVar5 = lVar5.forceAreaID) == null))) goto LAB_180a92b6e;
-          uVar7 = HeroSpeAddData.GetDescribe(lVar5,1,1,1,0,0);
-        }
-        uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-        if (plVar6 == (int64 *)0) {
-        LAB_180a92b6e:
-                          // WARNING: Subroutine does not return
-          FUN_1800d6620();
-        }
-        (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-        LTLocalization.CheckTextFont(plVar6,0);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b6e;
-        if (lVar5.Forces < 1) {
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Component.GetComponent(lVar5,DAT_181d93778);
-          uVar7 = this.foodIcon;
-          uVar4 = Object.op_Inequality(uVar7,0,0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          Selectable.set_interactable(lVar5,uVar4,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Transform.Find(lVar5,"Text",0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          uVar7 = "供奉";
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-          LTLocalization.CheckTextFont(plVar6,0);
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"Text",0)) == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          puVar9 = (uint64 *)Color.get_black(&local_78,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          local_78 = *puVar9;
-          uStack_70 = puVar9[1];
-          (**(code **)(*plVar6 + 0x2a8))(plVar6,&local_78,*(uint64 *)(*plVar6 + 0x2b0));
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"ClearFoodButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Component.get_gameObject(lVar5,0);
-          uVar4 = Object.op_Inequality(this.foodIcon,0,0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          GameObject.SetActive(lVar5,uVar4,0);
-          if ((this.meditationUI == null) ||
-             (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null)
-          goto LAB_180a92b6e;
-          lVar5 = Transform.Find(lVar5,"FoodAddText",0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          uVar7 = "";
-        }
-        else {
-          uVar7 = this.foodIcon;
-          cVar3 = Object.op_Equality(uVar7,0,0);
-          if (cVar3) {
-            if (((this.meditationUI == null) ||
-                (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-               (lVar5 = Transform.Find(lVar5,"Food",0)) == null) goto LAB_180a92b6e;
-            uVar7 = Component.get_gameObject(lVar5,0);
-            lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
-               (lVar5 = *(int64 *)(lVar5.villageAreaID + 0x1f0)) == null)
-            goto LAB_180a92b6e;
-            uVar7 = MeditationUIController.CreateMeditationItemIcon
-                              (this,uVar7,lVar5.Inns,0);
-            *puVar9 = uVar7;
-            il2cpp_internal(puVar9,uVar7);
-          }
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) == null) ||
-             (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) == null) goto LAB_180a92b6e;
-          Selectable.set_interactable(lVar5,0,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             ((lVar5 = Transform.Find(lVar5,"FoodSureButton",0), lVar5 == null ||
-              (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (((GameController._instance == null) ||
-              (lVar5 = GameController._instance.worldData) == null) ||
-             (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b6e;
-          uVar7 = Int32.ToString(lVar5 + 72,0);
-          uVar7 = String.Concat(uVar7,"日",0);
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-          LTLocalization.CheckTextFont(plVar6,0);
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"Text",0)) == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          local_78 = *(uint64 *)(pStatics_3d40 + 0x378);
-          uStack_70 = *(uint64 *)(pStatics_3d40 + 0x380);
-          (**(code **)(*plVar6 + 0x2a8))(plVar6,&local_78,*(uint64 *)(*plVar6 + 0x2b0));
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             ((lVar5 = Transform.Find(lVar5,"ClearFoodButton",0), lVar5 == null ||
-              (lVar5 = Component.get_gameObject(lVar5,0)) == null))) goto LAB_180a92b6e;
-          GameObject.SetActive(lVar5,0,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"FoodAddText",0)) == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (((GameController._instance == null) ||
-              (lVar5 = GameController._instance.worldData) == null) ||
-             ((lVar5 = lVar5.meditationData, lVar5 == null ||
-              (lVar5 = lVar5.ResourcePoints) == null))) goto LAB_180a92b6e;
-          uVar7 = HeroSpeAddData.GetDescribe(lVar5,1,1,1,0,0);
-        }
-        uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-        if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-        (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-        LTLocalization.CheckTextFont(plVar6,0);
-        if (((GameController._instance == null) ||
-            (lVar5 = GameController._instance.worldData) == null) ||
-           (lVar5 = lVar5.meditationData) == null) goto LAB_180a92b6e;
-        if (lVar5.BigMapRandomEventDatas < 1) {
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Component.GetComponent(lVar5,DAT_181d93778);
-          uVar7 = this.medIcon;
-          uVar4 = Object.op_Inequality(uVar7,0,0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          Selectable.set_interactable(lVar5,uVar4,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Transform.Find(lVar5,"Text",0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          uVar7 = "供奉";
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-          LTLocalization.CheckTextFont(plVar6,0);
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"Text",0)) == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          puVar9 = (uint64 *)Color.get_black(&local_78,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-          local_78 = *puVar9;
-          uStack_70 = puVar9[1];
-          (**(code **)(*plVar6 + 0x2a8))(plVar6,&local_78,*(uint64 *)(*plVar6 + 0x2b0));
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"ClearMedButton",0)) == null) goto LAB_180a92b6e;
-          lVar5 = Component.get_gameObject(lVar5,0);
-          uVar4 = Object.op_Inequality(this.medIcon,0,0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          GameObject.SetActive(lVar5,uVar4,0);
-          if ((this.meditationUI == null) ||
-             (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null)
-          goto LAB_180a92b6e;
-          lVar5 = Transform.Find(lVar5,"MedAddText",0);
-          if (lVar5 == null) goto LAB_180a92b6e;
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          uVar7 = "";
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) goto LAB_180a92b6e;
-        }
-        else {
-          uVar7 = this.medIcon;
-          cVar3 = Object.op_Equality(uVar7,0,0);
-          if (cVar3) {
-            if (((this.meditationUI == null) ||
-                (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-               (lVar5 = Transform.Find(lVar5,"Med",0)) == null) goto LAB_180a92b6e;
-            uVar7 = Component.get_gameObject(lVar5,0);
-            lVar5 = FUN_18046c0a0(0);
-            if (((lVar5 == null) || (lVar5.villageAreaID == null)) ||
-               (lVar5 = *(int64 *)(lVar5.villageAreaID + 0x1f0)) == null)
-            goto LAB_180a92b6e;
-            uVar7 = MeditationUIController.CreateMeditationItemIcon
-                              (this,uVar7,lVar5.Heros,0);
-            *puVar9 = uVar7;
-            il2cpp_internal(puVar9,uVar7);
-          }
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) == null) ||
-             (lVar5 = Component.GetComponent(lVar5,DAT_181d93778)) == null) throw; // [null/range check failed]
-          Selectable.set_interactable(lVar5,0,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             ((lVar5 = Transform.Find(lVar5,"MedSureButton",0), lVar5 == null ||
-              (lVar5 = Transform.Find(lVar5,"Text",0)) == null))) throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (((GameController._instance == null) ||
-              (lVar5 = GameController._instance.worldData) == null) ||
-             (lVar5 = lVar5.meditationData) == null) throw; // [null/range check failed]
-          uVar7 = Int32.ToString(lVar5 + 96,0);
-          uVar7 = String.Concat(uVar7,"日",0);
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-          LTLocalization.CheckTextFont(plVar6,0);
-          if ((((this.meditationUI == null) ||
-               (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-              (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"Text",0)) == null) throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-          local_78 = *(uint64 *)(pStatics_3d40 + 0x378);
-          uStack_70 = *(uint64 *)(pStatics_3d40 + 0x380);
-          (**(code **)(*plVar6 + 0x2a8))(plVar6,&local_78,*(uint64 *)(*plVar6 + 0x2b0));
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             ((lVar5 = Transform.Find(lVar5,"ClearMedButton",0), lVar5 == null ||
-              (lVar5 = Component.get_gameObject(lVar5,0)) == null))) throw; // [null/range check failed]
-          GameObject.SetActive(lVar5,0,0);
-          if (((this.meditationUI == null) ||
-              (lVar5 = GameObject.get_transform(this.meditationUI,0)) == null) ||
-             (lVar5 = Transform.Find(lVar5,"MedAddText",0)) == null) throw; // [null/range check failed]
-          plVar6 = (int64 *)Component.GetComponent(lVar5,DAT_181d96178);
-          if (((GameController._instance == null) ||
-              (lVar5 = GameController._instance.worldData) == null) ||
-             ((lVar5 = lVar5.meditationData, lVar5 == null ||
-              (lVar5 = lVar5.TempHeros) == null))) throw; // [null/range check failed]
-          uVar7 = HeroSpeAddData.GetDescribe(lVar5,1,1,1,0,0);
-          uVar7 = LTLocalization.GetText(uVar7,0,1,0);
-          if (plVar6 == (int64 *)0) throw; // [null/range check failed]
-        }
-        (**(code **)(*plVar6 + 0x5e8))(plVar6,uVar7,*(uint64 *)(*plVar6 + 0x5f0));
-        LTLocalization.CheckTextFont(plVar6,0);
-        if (((this.meditationUI != null) &&
-            (lVar5 = GameObject.get_transform(this.meditationUI,0)) != null) &&
-           (lVar5 = Transform.Find(lVar5,"TreasureSureButton",0)) != null) {
-          lVar5 = Component.GetComponent(lVar5,DAT_181d95578);
-          uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
-                            (this,this.treasureIcon,0);
-          if (lVar5 != null) {
-            lVar5.cityAreaID = uVar7;
-            if (((this.meditationUI != null) &&
-                (lVar5 = GameObject.get_transform(this.meditationUI,0)) != null) &&
-               (lVar5 = Transform.Find(lVar5,"FoodSureButton",0)) != null) {
-              lVar5 = Component.GetComponent(lVar5,DAT_181d95578);
-              uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
-                                (this,this.foodIcon,0);
-              if (lVar5 != null) {
-                lVar5.cityAreaID = uVar7;
-                if (((this.meditationUI != null) &&
-                    (lVar5 = GameObject.get_transform(this.meditationUI,0)) != null) &&
-                   (lVar5 = Transform.Find(lVar5,"MedSureButton",0)) != null) {
-                  lVar5 = Component.GetComponent(lVar5,DAT_181d95578);
-                  uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
-                                    (this,this.medIcon,0);
-                  if (lVar5 != null) {
-                    lVar5.cityAreaID = uVar7;
+                    NGUITools.PlaySound(plVar5,0);
                     return;
                   }
                 }
@@ -658,8 +131,620 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018F8
-    // RVA   : 0xA8F440   Offset: 0xA8E840   Length: 0x2D7
+    // Token : 0x600198B
+    // RVA   : 0xE83E10   Offset: 0xE82C10   Length: 0x23CC
+    public void RefreshUI()
+    {
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
+        float fVar2;
+        long lVar3;
+        bool cVar4;
+        byte uVar5;
+        long lVar6;
+        ulong uVar7;
+        ulong uVar8;
+        ulong uVar9;
+        float fVar12;
+        float[] local_res8 = new float[4];
+        int[] local_res18 = new int[2];
+        uint[] local_res20 = new uint[2];
+        uint[] local_68 = new uint[4];
+        uint local_58;
+        uint uStack_54;
+        uint uStack_50;
+        uint32 uStack_4c;
+        this.needRefresh = 0;
+        if (this.meditationUI == null) {
+        LAB_180e861cb:
+                          // WARNING: Subroutine does not return
+          FUN_1801e0300();
+        }
+        lVar6 = GameObject.get_transform(this.meditationUI,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"MeditationLv",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+        if ((GameController._instance == null) ||
+           (lVar6 = GameController._instance.worldData) == null)
+        goto LAB_180e861cb;
+        lVar6 = WorldData.Player(lVar6,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        uVar8 = HeroData.GetMeditationTopic(lVar6,0);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) goto LAB_180e861cb;
+        uVar9 = Int32.ToString(lVar6 + 16,0);
+        uVar8 = String.Concat(uVar8,"等级",uVar9,0);
+        LTLocalization.SetText(uVar7,uVar8,0);
+        if (this.meditationUI == null) goto LAB_180e861cb;
+        lVar6 = GameObject.get_transform(this.meditationUI,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"MeditationLvAdd",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+        if ((GameController._instance == null) ||
+           (lVar6 = GameController._instance.worldData) == null)
+        goto LAB_180e861cb;
+        lVar6 = WorldData.Player(lVar6,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = HeroData.GetForce(lVar6,0,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        uVar8 = ForceData.GetForceName(lVar6,1,0);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) goto LAB_180e861cb;
+        local_res18[0] = lVar6.chapter * 2;
+        uVar9 = il2cpp_value_box(DAT_181e60808,local_res18);
+        uVar8 = String.Format("等级加成\n{0}武学威力+{1}%",uVar8,uVar9,0);
+        LTLocalization.SetText(uVar7,uVar8,0);
+        if (this.meditationUI == null) goto LAB_180e861cb;
+        lVar6 = GameObject.get_transform(this.meditationUI,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"ExpBarBack",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"ExpText",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) goto LAB_180e861cb;
+        uVar8 = Single.ToString(lVar6 + 20,"f0",0);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) goto LAB_180e861cb;
+        local_res20[0] = MeditationData.GetMaxExp(lVar6,0);
+        uVar9 = il2cpp_value_box(DAT_181e82730,local_res20);
+        uVar8 = String.Format("{0}/{1}",uVar8,uVar9,0);
+        LTLocalization.SetText(uVar7,uVar8,0);
+        if (this.meditationUI == null) goto LAB_180e861cb;
+        lVar6 = GameObject.get_transform(this.meditationUI,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"ExpBarBack",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"ExpBar",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Component.GetComponent(lVar6,DAT_181e777b8);
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.meditationData) == null) goto LAB_180e861cb;
+        fVar2 = *(float *)(lVar3 + 20);
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.meditationData) == null) goto LAB_180e861cb;
+        fVar12 = (float)MeditationData.GetMaxExp(lVar3,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        Image.set_fillAmount(lVar6,fVar2 / fVar12,0);
+        if (this.meditationUI == null) goto LAB_180e861cb;
+        lVar6 = GameObject.get_transform(this.meditationUI,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"MeditationText",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) goto LAB_180e861cb;
+        local_res8[0] = (float)MeditationData.MeditationExpRate(lVar6,0);
+        local_res8[0] = local_res8[0] * 100.0;
+        uVar8 = Single.ToString(local_res8,"f0",0);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) goto LAB_180e861cb;
+        local_res8[0] = (float)MeditationData.MeditationExpNum(lVar6,0);
+        uVar9 = Single.ToString(local_res8,"f0",0);
+        uVar8 = String.Format("每日经验 <b>{1}</b>\n修行效率 <b>{0}%</b>",uVar8,uVar9,0);
+        LTLocalization.SetText(uVar7,uVar8,0);
+        if (this.meditationUI == null) goto LAB_180e861cb;
+        lVar6 = GameObject.get_transform(this.meditationUI,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Transform.Find(lVar6,"StartMeditationButton",0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6 = Component.GetComponent(lVar6,DAT_181e788b8);
+        if (((GameController._instance == null) ||
+            (lVar3 = GameController._instance.worldData) == null) ||
+           (lVar3 = lVar3.meditationData) == null) goto LAB_180e861cb;
+        local_68[0] = lVar3.cityAreaID;
+        uVar7 = il2cpp_value_box(DAT_181e60808,local_68);
+        uVar7 = String.Format("本月已修行{0}日\n每修行一日，本月修行效率都会下降20%",uVar7,0);
+        if (lVar6 == null) goto LAB_180e861cb;
+        lVar6.cityAreaID = uVar7;
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) goto LAB_180e861cb;
+        if (lVar6.Areas < 1) {
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.GetComponent(lVar6,DAT_181e76ab8);
+          uVar7 = this.treasureIcon;
+          uVar5 = Object.op_Inequality(uVar7,0,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          Selectable.set_interactable(lVar6,uVar5,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+          LTLocalization.SetText(uVar7,"供奉",0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181e79538);
+          puVar11 = (uint32 *)Color.get_black(&local_58,0);
+          if (plVar10 == (int64 *)0) throw; // [null/range check failed]
+          local_58 = *puVar11;
+          uStack_54 = puVar11[1];
+          uStack_50 = puVar11[2];
+          uStack_4c = puVar11[3];
+          (**(code **)(*plVar10 + 0x2a8))(plVar10,&local_58,*(uint64 *)(*plVar10 + 0x2b0));
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"ClearTreasureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.get_gameObject(lVar6,0);
+          uVar5 = Object.op_Inequality(this.treasureIcon,0,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          GameObject.SetActive(lVar6,uVar5,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureAddText",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar8 = Component.GetComponent(lVar6,DAT_181e79538);
+          uVar7 = "";
+        }
+        else {
+          uVar7 = this.treasureIcon;
+          cVar4 = Object.op_Equality(uVar7,0,0);
+          if (cVar4) {
+            if (this.meditationUI == null) throw; // [null/range check failed]
+            lVar6 = GameObject.get_transform(this.meditationUI,0);
+            if (lVar6 == null) throw; // [null/range check failed]
+            lVar6 = Transform.Find(lVar6,"Treasure",0);
+            if (lVar6 == null) throw; // [null/range check failed]
+            uVar7 = Component.get_gameObject(lVar6,0);
+            lVar6 = FUN_1802106e0(0);
+            if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+               (lVar6 = *(int64 *)(lVar6.villageAreaID + 0x1f0)) == null)
+            throw; // [null/range check failed]
+            uVar7 = MeditationUIController.CreateMeditationItemIcon
+                              (this,uVar7,lVar6.villageAreaID,0);
+            *puVar1 = uVar7;
+            il2cpp_internal(puVar1,uVar7);
+          }
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.GetComponent(lVar6,DAT_181e76ab8);
+          if (lVar6 == null) throw; // [null/range check failed]
+          Selectable.set_interactable(lVar6,0,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+          if (((GameController._instance == null) ||
+              (lVar6 = GameController._instance.worldData) == null) ||
+             (lVar6 = lVar6.meditationData) == null) throw; // [null/range check failed]
+          uVar8 = Int32.ToString(lVar6 + 48,0);
+          uVar8 = String.Concat(uVar8,"日",0);
+          LTLocalization.SetText(uVar7,uVar8,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181e79538);
+          lVar6 = pStatics_38e8;
+          if (plVar10 == (int64 *)0) throw; // [null/range check failed]
+          local_58 = *(uint32 *)(lVar6 + 0x380);
+          uStack_54 = *(uint32 *)(lVar6 + 900);
+          uStack_50 = *(uint32 *)(lVar6 + 0x388);
+          uStack_4c = *(uint32 *)(lVar6 + 0x38c);
+          (**(code **)(*plVar10 + 0x2a8))(plVar10,&local_58,*(uint64 *)(*plVar10 + 0x2b0));
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"ClearTreasureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.get_gameObject(lVar6,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          GameObject.SetActive(lVar6,0,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"TreasureAddText",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar8 = Component.GetComponent(lVar6,DAT_181e79538);
+          if ((((GameController._instance == null) ||
+               (lVar6 = GameController._instance.worldData) == null) ||
+              (lVar6 = lVar6.meditationData) == null) ||
+             (lVar6 = lVar6.forceAreaID) == null) throw; // [null/range check failed]
+          uVar7 = HeroSpeAddData.GetDescribe(lVar6,1,1,1,0,0);
+        }
+        LTLocalization.SetText(uVar8,uVar7,0);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) throw; // [null/range check failed]
+        if (lVar6.Forces < 1) {
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.GetComponent(lVar6,DAT_181e76ab8);
+          uVar7 = this.foodIcon;
+          uVar5 = Object.op_Inequality(uVar7,0,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          Selectable.set_interactable(lVar6,uVar5,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+          LTLocalization.SetText(uVar7,"供奉",0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181e79538);
+          puVar11 = (uint32 *)Color.get_black(&local_58,0);
+          if (plVar10 == (int64 *)0) throw; // [null/range check failed]
+          local_58 = *puVar11;
+          uStack_54 = puVar11[1];
+          uStack_50 = puVar11[2];
+          uStack_4c = puVar11[3];
+          (**(code **)(*plVar10 + 0x2a8))(plVar10,&local_58,*(uint64 *)(*plVar10 + 0x2b0));
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"ClearFoodButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.get_gameObject(lVar6,0);
+          uVar5 = Object.op_Inequality(this.foodIcon,0,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          GameObject.SetActive(lVar6,uVar5,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodAddText",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar8 = Component.GetComponent(lVar6,DAT_181e79538);
+          uVar7 = "";
+        }
+        else {
+          uVar7 = this.foodIcon;
+          cVar4 = Object.op_Equality(uVar7,0,0);
+          if (cVar4) {
+            if (this.meditationUI == null) throw; // [null/range check failed]
+            lVar6 = GameObject.get_transform(this.meditationUI,0);
+            if (lVar6 == null) throw; // [null/range check failed]
+            lVar6 = Transform.Find(lVar6,"Food",0);
+            if (lVar6 == null) throw; // [null/range check failed]
+            uVar7 = Component.get_gameObject(lVar6,0);
+            lVar6 = FUN_1802106e0(0);
+            if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+               (lVar6 = *(int64 *)(lVar6.villageAreaID + 0x1f0)) == null)
+            throw; // [null/range check failed]
+            uVar7 = MeditationUIController.CreateMeditationItemIcon
+                              (this,uVar7,lVar6.Inns,0);
+            *puVar1 = uVar7;
+            il2cpp_internal(puVar1,uVar7);
+          }
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.GetComponent(lVar6,DAT_181e76ab8);
+          if (lVar6 == null) throw; // [null/range check failed]
+          Selectable.set_interactable(lVar6,0,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+          if (((GameController._instance == null) ||
+              (lVar6 = GameController._instance.worldData) == null) ||
+             (lVar6 = lVar6.meditationData) == null) throw; // [null/range check failed]
+          uVar8 = Int32.ToString(lVar6 + 72,0);
+          uVar8 = String.Concat(uVar8,"日",0);
+          LTLocalization.SetText(uVar7,uVar8,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodSureButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"Text",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181e79538);
+          lVar6 = pStatics_38e8;
+          if (plVar10 == (int64 *)0) throw; // [null/range check failed]
+          local_58 = *(uint32 *)(lVar6 + 0x380);
+          uStack_54 = *(uint32 *)(lVar6 + 900);
+          uStack_50 = *(uint32 *)(lVar6 + 0x388);
+          uStack_4c = *(uint32 *)(lVar6 + 0x38c);
+          (**(code **)(*plVar10 + 0x2a8))(plVar10,&local_58,*(uint64 *)(*plVar10 + 0x2b0));
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"ClearFoodButton",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Component.get_gameObject(lVar6,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          GameObject.SetActive(lVar6,0,0);
+          if (this.meditationUI == null) throw; // [null/range check failed]
+          lVar6 = GameObject.get_transform(this.meditationUI,0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          lVar6 = Transform.Find(lVar6,"FoodAddText",0);
+          if (lVar6 == null) throw; // [null/range check failed]
+          uVar8 = Component.GetComponent(lVar6,DAT_181e79538);
+          if ((((GameController._instance == null) ||
+               (lVar6 = GameController._instance.worldData) == null) ||
+              (lVar6 = lVar6.meditationData) == null) ||
+             (lVar6 = lVar6.ResourcePoints) == null) throw; // [null/range check failed]
+          uVar7 = HeroSpeAddData.GetDescribe(lVar6,1,1,1,0,0);
+        }
+        LTLocalization.SetText(uVar8,uVar7,0);
+        if (((GameController._instance == null) ||
+            (lVar6 = GameController._instance.worldData) == null) ||
+           (lVar6 = lVar6.meditationData) == null) throw; // [null/range check failed]
+        if (lVar6.BigMapRandomEventDatas < 1) {
+          if (this.meditationUI != null) {
+            lVar6 = GameObject.get_transform(this.meditationUI,0);
+            if (lVar6 != null) {
+              lVar6 = Transform.Find(lVar6,"MedSureButton",0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Component.GetComponent(lVar6,DAT_181e76ab8);
+              uVar7 = this.medIcon;
+              uVar5 = Object.op_Inequality(uVar7,0,0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              Selectable.set_interactable(lVar6,uVar5,0);
+              if (this.meditationUI == null) throw; // [null/range check failed]
+              lVar6 = GameObject.get_transform(this.meditationUI,0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Transform.Find(lVar6,"MedSureButton",0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Transform.Find(lVar6,"Text",0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+              LTLocalization.SetText(uVar7,"供奉",0);
+              if (this.meditationUI == null) throw; // [null/range check failed]
+              lVar6 = GameObject.get_transform(this.meditationUI,0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Transform.Find(lVar6,"MedSureButton",0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Transform.Find(lVar6,"Text",0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181e79538);
+              puVar11 = (uint32 *)Color.get_black(&local_58,0);
+              if (plVar10 == (int64 *)0) throw; // [null/range check failed]
+              local_58 = *puVar11;
+              uStack_54 = puVar11[1];
+              uStack_50 = puVar11[2];
+              uStack_4c = puVar11[3];
+              (**(code **)(*plVar10 + 0x2a8))(plVar10,&local_58,*(uint64 *)(*plVar10 + 0x2b0));
+              if (this.meditationUI == null) throw; // [null/range check failed]
+              lVar6 = GameObject.get_transform(this.meditationUI,0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Transform.Find(lVar6,"ClearMedButton",0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Component.get_gameObject(lVar6,0);
+              uVar5 = Object.op_Inequality(this.medIcon,0,0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              GameObject.SetActive(lVar6,uVar5,0);
+              if (this.meditationUI == null) throw; // [null/range check failed]
+              lVar6 = GameObject.get_transform(this.meditationUI,0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              lVar6 = Transform.Find(lVar6,"MedAddText",0);
+              if (lVar6 == null) throw; // [null/range check failed]
+              uVar8 = Component.GetComponent(lVar6,DAT_181e79538);
+              uVar7 = "";
+        LAB_180e86053:
+              LTLocalization.SetText(uVar8,uVar7,0);
+              if (this.meditationUI != null) {
+                lVar6 = GameObject.get_transform(this.meditationUI,0);
+                if (lVar6 != null) {
+                  lVar6 = Transform.Find(lVar6,"TreasureSureButton",0);
+                  if (lVar6 != null) {
+                    lVar6 = Component.GetComponent(lVar6,DAT_181e788b8);
+                    uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
+                                      (this,this.treasureIcon,0);
+                    if (lVar6 != null) {
+                      lVar6.cityAreaID = uVar7;
+                      if (this.meditationUI != null) {
+                        lVar6 = GameObject.get_transform(this.meditationUI,0);
+                        if (lVar6 != null) {
+                          lVar6 = Transform.Find(lVar6,"FoodSureButton",0);
+                          if (lVar6 != null) {
+                            lVar6 = Component.GetComponent(lVar6,DAT_181e788b8);
+                            uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
+                                              (this,this.foodIcon,0);
+                            if (lVar6 != null) {
+                              lVar6.cityAreaID = uVar7;
+                              if (this.meditationUI != null) {
+                                lVar6 = GameObject.get_transform(this.meditationUI,0);
+                                if (lVar6 != null) {
+                                  lVar6 = Transform.Find(lVar6,"MedSureButton",0);
+                                  if (lVar6 != null) {
+                                    lVar6 = Component.GetComponent(lVar6,DAT_181e788b8);
+                                    uVar7 = MeditationUIController.GetItemMeditationEffectDescribe
+                                                      (this,this.medIcon,0);
+                                    if (lVar6 != null) {
+                                      lVar6.cityAreaID = uVar7;
+                                      return;
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+                          // WARNING: Subroutine does not return
+              FUN_1801e0300();
+            }
+          }
+        }
+        else {
+          uVar7 = this.medIcon;
+          cVar4 = Object.op_Equality(uVar7,0,0);
+          if (cVar4) {
+            if (this.meditationUI == null) throw; // [null/range check failed]
+            lVar6 = GameObject.get_transform(this.meditationUI,0);
+            if (lVar6 == null) throw; // [null/range check failed]
+            lVar6 = Transform.Find(lVar6,"Med",0);
+            if (lVar6 == null) throw; // [null/range check failed]
+            uVar7 = Component.get_gameObject(lVar6,0);
+            lVar6 = FUN_1802106e0(0);
+            if (((lVar6 == null) || (lVar6.villageAreaID == null)) ||
+               (lVar6 = *(int64 *)(lVar6.villageAreaID + 0x1f0)) == null)
+            throw; // [null/range check failed]
+            uVar7 = MeditationUIController.CreateMeditationItemIcon
+                              (this,uVar7,lVar6.Heros,0);
+            *puVar1 = uVar7;
+            il2cpp_internal(puVar1,uVar7);
+          }
+          if (this.meditationUI != null) {
+            lVar6 = GameObject.get_transform(this.meditationUI,0);
+            if (lVar6 != null) {
+              lVar6 = Transform.Find(lVar6,"MedSureButton",0);
+              if (lVar6 != null) {
+                lVar6 = Component.GetComponent(lVar6,DAT_181e76ab8);
+                if (lVar6 != null) {
+                  Selectable.set_interactable(lVar6,0,0);
+                  if (this.meditationUI != null) {
+                    lVar6 = GameObject.get_transform(this.meditationUI,0);
+                    if (lVar6 != null) {
+                      lVar6 = Transform.Find(lVar6,"MedSureButton",0);
+                      if (lVar6 != null) {
+                        lVar6 = Transform.Find(lVar6,"Text",0);
+                        if (lVar6 != null) {
+                          uVar7 = Component.GetComponent(lVar6,DAT_181e79538);
+                          if (((GameController._instance != null) &&
+                              (lVar6 = GameController._instance.worldData,
+                              lVar6 != null)) && (lVar6 = lVar6.meditationData) != null) {
+                            uVar8 = Int32.ToString(lVar6 + 96,0);
+                            uVar8 = String.Concat(uVar8,"日",0);
+                            LTLocalization.SetText(uVar7,uVar8,0);
+                            if (this.meditationUI != null) {
+                              lVar6 = GameObject.get_transform(this.meditationUI,0);
+                              if (lVar6 != null) {
+                                lVar6 = Transform.Find(lVar6,"MedSureButton",0);
+                                if (lVar6 != null) {
+                                  lVar6 = Transform.Find(lVar6,"Text",0);
+                                  if (lVar6 != null) {
+                                    plVar10 = (int64 *)Component.GetComponent(lVar6,DAT_181e79538);
+                                    lVar6 = pStatics_38e8;
+                                    if (plVar10 != (int64 *)0) {
+                                      local_58 = *(uint32 *)(lVar6 + 0x380);
+                                      uStack_54 = *(uint32 *)(lVar6 + 900);
+                                      uStack_50 = *(uint32 *)(lVar6 + 0x388);
+                                      uStack_4c = *(uint32 *)(lVar6 + 0x38c);
+                                      (**(code **)(*plVar10 + 0x2a8))
+                                                (plVar10,&local_58,*(uint64 *)(*plVar10 + 0x2b0));
+                                      if (this.meditationUI != null) {
+                                        lVar6 = GameObject.get_transform(this.meditationUI,0)
+                                        ;
+                                        if (lVar6 != null) {
+                                          lVar6 = Transform.Find(lVar6,"ClearMedButton",0);
+                                          if (lVar6 != null) {
+                                            lVar6 = Component.get_gameObject(lVar6,0);
+                                            if (lVar6 != null) {
+                                              GameObject.SetActive(lVar6,0,0);
+                                              if (this.meditationUI != null) {
+                                                lVar6 = GameObject.get_transform
+                                                                  (this.meditationUI,0);
+                                                if (lVar6 != null) {
+                                                  lVar6 = Transform.Find(lVar6,"MedAddText",0);
+                                                  if (lVar6 != null) {
+                                                    uVar8 = Component.GetComponent(lVar6,DAT_181e79538);
+                                                    if ((((GameController._instance != null) &&
+                                                         (lVar6 = *(int64 *)
+                                                                   (GameController._instance
+                                                                   + 32), lVar6 != null)) &&
+                                                        (lVar6 = lVar6.meditationData) != null
+                                                        ) && (lVar6 = lVar6.TempHeros,
+                                                             lVar6 != null)) {
+                                                      uVar7 = HeroSpeAddData.GetDescribe(lVar6,1,1,1,0,0)
+                                                      ;
+                                                      goto LAB_180e86053;
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+    }
+
+    // Token : 0x600198C
+    // RVA   : 0xE831F0   Offset: 0xE81FF0   Length: 0x267
     public string GetItemMeditationEffectDescribe(GameObject itemIcon)
     {
         uint64
@@ -670,8 +755,6 @@ public class MeditationUIController
         int64 lVar3;
         uint64 uVar4;
         uint64 uVar5;
-        float fVar6;
-        float fVar7;
         float local_res10 [2];
         cVar2 = Object.op_Equality(itemIcon,0,0);
         if (cVar2) {
@@ -680,28 +763,18 @@ public class MeditationUIController
         if (((GameController._instance != null) &&
             (lVar1 = GameController._instance.worldData) != null) &&
            (lVar1 = lVar1.meditationData, itemIcon != null)) {
-          lVar3 = GameObject.GetComponent(itemIcon,DAT_181d720a0);
+          lVar3 = GameObject.GetComponent(itemIcon,DAT_181e55168);
           if ((lVar3 != null) && (lVar1 != null)) {
-            fVar7 = 0.0;
-            if (*(int64 *)(lVar3 + 32) == 0) {
-              local_res10[0] = 0.0;
-            }
-            else {
-              fVar6 = (float)*(int *)(*(int64 *)(lVar3 + 32) + 56);
-              Mathf.Log((fVar6 + fVar6) * 0.01);
-              local_res10[0] = (float)Mathf.Max();
-            }
+            local_res10[0] = (float)MeditationData.GetItemExpRate(lVar1,*(uint64 *)(lVar3 + 32),0);
             local_res10[0] = local_res10[0] * 100.0;
             uVar4 = Single.ToString(local_res10,"f0",0);
             if ((GameController._instance != null) &&
                (lVar1 = GameController._instance.worldData) != null) {
               lVar1 = lVar1.meditationData;
-              lVar3 = GameObject.GetComponent(itemIcon,DAT_181d720a0);
+              lVar3 = GameObject.GetComponent(itemIcon,DAT_181e55168);
               if ((lVar3 != null) && (lVar1 != null)) {
-                if (*(int64 *)(lVar3 + 32) != 0) {
-                  fVar7 = (float)Mathf.Max();
-                }
-                local_res10[0] = fVar7;
+                local_res10[0] =
+                     (float)MeditationData.GetItemExpNum(lVar1,*(uint64 *)(lVar3 + 32),0);
                 uVar5 = Single.ToString(local_res10,"f0",0);
                 uVar4 = String.Format("每日经验+{1}\n修行效率+{0}%",uVar4,uVar5,0);
                 return uVar4;
@@ -711,11 +784,11 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018F9
-    // RVA   : 0xA8EE50   Offset: 0xA8E250   Length: 0x12A
+    // Token : 0x600198D
+    // RVA   : 0xE82C00   Offset: 0xE81A00   Length: 0x12A
     public GameObject CreateMeditationItemIcon(GameObject parent, ItemData targetItemData)
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         int64 MeditationUIController.CreateMeditationItemIcon
                          (uint64 this,uint64 parent,uint64 targetItemData)
         {
@@ -726,13 +799,13 @@ public class MeditationUIController
           uVar1 = *(uint64 *)(*pStatics + 160);
           lVar2 = GlobalData.AddChild(parent,uVar1,0);
           if (lVar2 != null) {
-            lVar3 = GameObject.GetComponent(lVar2,DAT_181d720a0);
+            lVar3 = GameObject.GetComponent(lVar2,DAT_181e55168);
             if (lVar3 != null) {
               *(uint64 *)(lVar3 + 32) = targetItemData;
-              lVar3 = GameObject.GetComponent(lVar2,DAT_181d720a0);
+              lVar3 = GameObject.GetComponent(lVar2,DAT_181e55168);
               if (lVar3 != null) {
                 *(uint32 *)(lVar3 + 40) = 1;
-                lVar3 = GameObject.GetComponent(lVar2,DAT_181d720a0);
+                lVar3 = GameObject.GetComponent(lVar2,DAT_181e55168);
                 if (lVar3 != null) {
                   ItemIconController.AutoSetName(lVar3,1,0);
                   return lVar2;
@@ -743,8 +816,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018FA
-    // RVA   : 0xA939D0   Offset: 0xA92DD0   Length: 0x1AA
+    // Token : 0x600198E
+    // RVA   : 0xE86F40   Offset: 0xE85D40   Length: 0x1AA
     public void TreasureIconButtonClicked()
     {
         long lVar1;
@@ -758,16 +831,16 @@ public class MeditationUIController
         if (cVar2) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7530 + 184);
-        lVar3 = il2cpp_internal(DAT_181d94e68);
-        FUN_181330100(lVar3,DAT_181d957a0);
+        lVar1 = **(int64 **)(DAT_181e977e8 + 184);
+        lVar3 = il2cpp_internal(DAT_181e74e38);
+        FUN_1810f3480(lVar3,DAT_181e77ae0);
         local_res8[0] = 0;
-        uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
+        uVar4 = il2cpp_value_box(DAT_181e60808,local_res8);
         if (lVar3 != null) {
-          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+          FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
           local_res18[0] = 4;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
-          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
+          FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
           uVar4 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar3,uVar4,"MeditationTreasureChoosen",0,0,0,0,0);
@@ -776,11 +849,11 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018FB
-    // RVA   : 0xA8FFD0   Offset: 0xA8F3D0   Length: 0xFC
+    // Token : 0x600198F
+    // RVA   : 0xE83D10   Offset: 0xE82B10   Length: 0xFC
     public void MeditationTreasureChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7530 + 184);
+        var pStatics = *(int64*)(DAT_181e977e8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.meditationUI != null) {
@@ -791,7 +864,7 @@ public class MeditationUIController
               uVar2 = Component.get_gameObject(lVar1,0);
               if ((*pStatics != 0) &&
                  (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
-                lVar1 = GameObject.GetComponent(lVar1,DAT_181d720a0);
+                lVar1 = GameObject.GetComponent(lVar1,DAT_181e55168);
                 if (lVar1 != null) {
                   uVar2 = MeditationUIController.CreateMeditationItemIcon
                                     (this,uVar2,*(uint64 *)(lVar1 + 32),0);
@@ -805,8 +878,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018FC
-    // RVA   : 0xA8ED90   Offset: 0xA8E190   Length: 0xB4
+    // Token : 0x6001990
+    // RVA   : 0xE82B40   Offset: 0xE81940   Length: 0xB4
     public void ClearTreasureIcon()
     {
         ulong uVar1;
@@ -821,8 +894,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018FD
-    // RVA   : 0xA8EF80   Offset: 0xA8E380   Length: 0x1AA
+    // Token : 0x6001991
+    // RVA   : 0xE82D30   Offset: 0xE81B30   Length: 0x1AA
     public void FoodIconButtonClicked()
     {
         long lVar1;
@@ -836,16 +909,16 @@ public class MeditationUIController
         if (cVar2) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7530 + 184);
-        lVar3 = il2cpp_internal(DAT_181d94e68);
-        FUN_181330100(lVar3,DAT_181d957a0);
+        lVar1 = **(int64 **)(DAT_181e977e8 + 184);
+        lVar3 = il2cpp_internal(DAT_181e74e38);
+        FUN_1810f3480(lVar3,DAT_181e77ae0);
         local_res8[0] = 0;
-        uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
+        uVar4 = il2cpp_value_box(DAT_181e60808,local_res8);
         if (lVar3 != null) {
-          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+          FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
           local_res18[0] = 2;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
-          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
+          FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
           uVar4 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar3,uVar4,"MeditationFoodChoosen",0,0,0,0,0);
@@ -854,11 +927,11 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018FE
-    // RVA   : 0xA8FDD0   Offset: 0xA8F1D0   Length: 0xFC
+    // Token : 0x6001992
+    // RVA   : 0xE83B10   Offset: 0xE82910   Length: 0xFC
     public void MeditationFoodChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7530 + 184);
+        var pStatics = *(int64*)(DAT_181e977e8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.meditationUI != null) {
@@ -869,7 +942,7 @@ public class MeditationUIController
               uVar2 = Component.get_gameObject(lVar1,0);
               if ((*pStatics != 0) &&
                  (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
-                lVar1 = GameObject.GetComponent(lVar1,DAT_181d720a0);
+                lVar1 = GameObject.GetComponent(lVar1,DAT_181e55168);
                 if (lVar1 != null) {
                   uVar2 = MeditationUIController.CreateMeditationItemIcon
                                     (this,uVar2,*(uint64 *)(lVar1 + 32),0);
@@ -883,8 +956,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x60018FF
-    // RVA   : 0xA8EC10   Offset: 0xA8E010   Length: 0xB4
+    // Token : 0x6001993
+    // RVA   : 0xE829C0   Offset: 0xE817C0   Length: 0xB4
     public void ClearFoodIcon()
     {
         ulong uVar1;
@@ -899,8 +972,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001900
-    // RVA   : 0xA8F910   Offset: 0xA8ED10   Length: 0x1AA
+    // Token : 0x6001994
+    // RVA   : 0xE83650   Offset: 0xE82450   Length: 0x1AA
     public void MedIconButtonClicked()
     {
         long lVar1;
@@ -914,16 +987,16 @@ public class MeditationUIController
         if (cVar2) {
           return;
         }
-        lVar1 = **(int64 **)(DAT_181db7530 + 184);
-        lVar3 = il2cpp_internal(DAT_181d94e68);
-        FUN_181330100(lVar3,DAT_181d957a0);
+        lVar1 = **(int64 **)(DAT_181e977e8 + 184);
+        lVar3 = il2cpp_internal(DAT_181e74e38);
+        FUN_1810f3480(lVar3,DAT_181e77ae0);
         local_res8[0] = 0;
-        uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
+        uVar4 = il2cpp_value_box(DAT_181e60808,local_res8);
         if (lVar3 != null) {
-          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+          FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
           local_res18[0] = 1;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
-          FUN_18181e6b0(lVar3,uVar4,DAT_181d958a0);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
+          FUN_18175de30(lVar3,uVar4,DAT_181e77be0);
           uVar4 = Component.get_gameObject(this,0);
           if (lVar1 != null) {
             ChooseController.ShowChoosePanel(lVar1,1,lVar3,uVar4,"MeditationMedChoosen",0,0,0,0,0);
@@ -932,11 +1005,11 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001901
-    // RVA   : 0xA8FED0   Offset: 0xA8F2D0   Length: 0xFC
+    // Token : 0x6001995
+    // RVA   : 0xE83C10   Offset: 0xE82A10   Length: 0xFC
     public void MeditationMedChoosen()
     {
-        var pStatics = *(int64*)(DAT_181db7530 + 184);
+        var pStatics = *(int64*)(DAT_181e977e8 + 184);
         long lVar1;
         ulong uVar2;
         if (this.meditationUI != null) {
@@ -947,7 +1020,7 @@ public class MeditationUIController
               uVar2 = Component.get_gameObject(lVar1,0);
               if ((*pStatics != 0) &&
                  (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
-                lVar1 = GameObject.GetComponent(lVar1,DAT_181d720a0);
+                lVar1 = GameObject.GetComponent(lVar1,DAT_181e55168);
                 if (lVar1 != null) {
                   uVar2 = MeditationUIController.CreateMeditationItemIcon
                                     (this,uVar2,*(uint64 *)(lVar1 + 32),0);
@@ -961,8 +1034,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001902
-    // RVA   : 0xA8ECD0   Offset: 0xA8E0D0   Length: 0xB4
+    // Token : 0x6001996
+    // RVA   : 0xE82A80   Offset: 0xE81880   Length: 0xB4
     public void ClearMedIcon()
     {
         ulong uVar1;
@@ -977,8 +1050,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001903
-    // RVA   : 0xA93B80   Offset: 0xA92F80   Length: 0x306
+    // Token : 0x6001997
+    // RVA   : 0xE870F0   Offset: 0xE85EF0   Length: 0x306
     public void TreasureSureButtonClicked()
     {
         long lVar1;
@@ -987,7 +1060,7 @@ public class MeditationUIController
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = lVar2.meditationData;
           if (this.treasureIcon != null) {
-            lVar1 = GameObject.GetComponent(this.treasureIcon,DAT_181d720a0);
+            lVar1 = GameObject.GetComponent(this.treasureIcon,DAT_181e55168);
             if ((lVar1 != null) && (lVar2 != null)) {
               lVar2.villageAreaID = lVar1.villageAreaID;
               if (((GameController._instance != null) &&
@@ -1017,8 +1090,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001904
-    // RVA   : 0xA8F130   Offset: 0xA8E530   Length: 0x306
+    // Token : 0x6001998
+    // RVA   : 0xE82EE0   Offset: 0xE81CE0   Length: 0x306
     public void FoodSureButtonClicked()
     {
         long lVar1;
@@ -1027,7 +1100,7 @@ public class MeditationUIController
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = lVar2.meditationData;
           if (this.foodIcon != null) {
-            lVar1 = GameObject.GetComponent(this.foodIcon,DAT_181d720a0);
+            lVar1 = GameObject.GetComponent(this.foodIcon,DAT_181e55168);
             if ((lVar1 != null) && (lVar2 != null)) {
               lVar2.Inns = lVar1.villageAreaID;
               if (((GameController._instance != null) &&
@@ -1057,8 +1130,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001905
-    // RVA   : 0xA8FAC0   Offset: 0xA8EEC0   Length: 0x306
+    // Token : 0x6001999
+    // RVA   : 0xE83800   Offset: 0xE82600   Length: 0x306
     public void MedSureButtonClicked()
     {
         long lVar1;
@@ -1067,7 +1140,7 @@ public class MeditationUIController
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = lVar2.meditationData;
           if (this.medIcon != null) {
-            lVar1 = GameObject.GetComponent(this.medIcon,DAT_181d720a0);
+            lVar1 = GameObject.GetComponent(this.medIcon,DAT_181e55168);
             if ((lVar1 != null) && (lVar2 != null)) {
               lVar2.Heros = lVar1.villageAreaID;
               if (((GameController._instance != null) &&
@@ -1097,8 +1170,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001906
-    // RVA   : 0xA932C0   Offset: 0xA926C0   Length: 0x705
+    // Token : 0x600199A
+    // RVA   : 0xE868B0   Offset: 0xE856B0   Length: 0x689
     public void StartMeditationItemPlot(ItemData targetItem)
     {
         uint uVar1;
@@ -1117,56 +1190,56 @@ public class MeditationUIController
         if (lVar2 != null) {
           PlotController.SetPlotItem(lVar2,targetItem,1,0);
           lVar2 = new HeroSpeAddData(0);
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           iVar9 = 0;
           do {
             if (lVar2 == null) {
-        LAB_180a939c0:
+        LAB_180e86f34:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             HeroSpeAddData.Reset(lVar2,0);
-            lVar4 = FUN_18046c0a0(0);
-            if ((targetItem == null) || (lVar4 == null)) goto LAB_180a939c0;
+            lVar4 = FUN_1802106e0(0);
+            if ((targetItem == null) || (lVar4 == null)) goto LAB_180e86f34;
             in_stack_ffffffffffffff98 = in_stack_ffffffffffffff98 & 0xffffffff00000000;
             GameController.GenerateSpeAddByValue
                       (lVar4,*(int *)(targetItem + 60) + 1,lVar2,1,in_stack_ffffffffffffff98,0);
             lVar4 = HeroSpeAddData.GetKeys(lVar2,0);
-            if (lVar4 == null) goto LAB_180a939c0;
+            if (lVar4 == null) goto LAB_180e86f34;
             if (*(int *)(lVar4 + 24) == 0) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             uVar1 = *(uint32 *)(*(int64 *)(lVar4 + 16) + 32);
-            plVar5 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
+            plVar5 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
             local_res10[0] = uVar1;
-            lVar4 = il2cpp_value_box(DAT_181d80430,local_res10);
-            if (plVar5 == (int64 *)0) goto LAB_180a939c0;
+            lVar4 = il2cpp_value_box(DAT_181e60808,local_res10);
+            if (plVar5 == (int64 *)0) goto LAB_180e86f34;
             if ((lVar4 != null) &&
                (lVar6 = il2cpp_internal(lVar4,*(uint64 *)(*plVar5 + 64))) == null) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             if ((int)plVar5[3] == 0) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             plVar5[4] = lVar4;
             il2cpp_internal(plVar5 + 4,lVar4);
             local_res20[0] = HeroSpeAddData.Get(lVar2,uVar1,0);
-            lVar4 = il2cpp_value_box(DAT_181da22f0,local_res20);
+            lVar4 = il2cpp_value_box(DAT_181e82730,local_res20);
             if ((lVar4 != null) &&
                (lVar6 = il2cpp_internal(lVar4,*(uint64 *)(*plVar5 + 64))) == null) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             if (*(uint32 *)(plVar5 + 3) < 2) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             plVar5[5] = lVar4;
             il2cpp_internal(plVar5 + 5,lVar4);
@@ -1177,24 +1250,24 @@ public class MeditationUIController
                (lVar6 = il2cpp_internal(lVar4,*(uint64 *)(*plVar5 + 64))) == null) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             if (*(uint32 *)(plVar5 + 3) < 3) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
             plVar5[6] = lVar4;
             il2cpp_internal(plVar5 + 6,lVar4);
-            lVar4 = FUN_18046c100(0);
+            lVar4 = FUN_180210740(0);
             if (((lVar4 == null) || (*(int64 *)(lVar4 + 144) == 0)) ||
-               (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1,DAT_181d8c030),
-               uVar7 = "{2};ChooseMeditationItemSpeAdd;{0}-{1};;{3}", lVar4 == null)) goto LAB_180a939c0;
+               (lVar4 = FUN_1800024b0(*(int64 *)(lVar4 + 144),uVar1,DAT_181e6e1f0),
+               uVar7 = "{2};ChooseMeditationItemSpeAdd;{0}-{1};;{3}", lVar4 == null)) goto LAB_180e86f34;
             lVar6 = "";
             if (*(char *)(lVar4 + 89) != false) {
-              lVar4 = FUN_18046c100(0);
+              lVar4 = FUN_180210740(0);
               if (((lVar4 == null) || (*(int64 *)(lVar4 + 144) == 0)) ||
-                 (lVar4 = FUN_180002f80(*(int64 *)(lVar4 + 144),uVar1,DAT_181d8c030)) == null)
+                 (lVar4 = FUN_1800024b0(*(int64 *)(lVar4 + 144),uVar1,DAT_181e6e1f0)) == null)
               throw; // [null/range check failed]
               lVar6 = HeroSpeAddDataBase.GetDescribe(lVar4,0);
             }
@@ -1202,41 +1275,17 @@ public class MeditationUIController
                (lVar4 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
               uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar7,0);
+              FUN_1801e02d0(uVar7,0);
             }
-            FUN_180002fd0(plVar5,3,lVar6);
+            FUN_1800025b0(plVar5,3,lVar6);
             uVar7 = String.Format(uVar7,plVar5,0);
             if (lVar3 == null) throw; // [null/range check failed]
-            FUN_18181e6b0(lVar3,uVar7,DAT_181da3d70);
+            FUN_18175de30(lVar3,uVar7,DAT_181e86370);
             iVar9 = iVar9 + 1;
           } while (iVar9 < 5);
-          lVar6 = DAT_181d8b158;
           lVar2 = BuildingUIController.PartyLvName;
-          plVar5 = *(int64 **)(DAT_181d8b158 + 48);
-          lVar4 = *plVar5;
-          if ((*(byte *)(lVar4 + 0x132) & 1) == 0) {
-            FUN_18009a510(lVar4);
-            plVar5 = *(int64 **)(lVar6 + 48);
-          }
-          if ((*(byte *)(lVar4 + 0x133) & 4) != 0) {
-            lVar4 = *plVar5;
-            if ((*(byte *)(lVar4 + 0x132) & 1) == 0) {
-              FUN_18009a510(lVar4);
-              plVar5 = *(int64 **)(lVar6 + 48);
-            }
-            if (*(int *)(lVar4 + 224) == 0) {
-              lVar4 = *plVar5;
-              if ((*(byte *)(lVar4 + 0x132) & 1) == 0) {
-                FUN_18009a510(lVar4);
-              }
-              il2cpp_runtime_class_init(lVar4);
-            }
-          }
-          lVar4 = **(int64 **)(lVar6 + 48);
-          if ((*(byte *)(lVar4 + 0x132) & 1) == 0) {
-            FUN_18009a510(lVar4);
-          }
-          uVar7 = String.Format("在供奉这#PlotInteractItemName#之时，\n忽觉一阵灵光乍现，恍然间似乎有所领悟......",**(uint64 **)(lVar4 + 184),0);
+          uVar7 = FUN_1800020e0(DAT_181e6dc98);
+          uVar7 = String.Format("在供奉这#PlotInteractItemName#之时，\n忽觉一阵灵光乍现，恍然间似乎有所领悟......",uVar7,0);
           uVar8 = new SinglePlotData(uVar7,lVar3,1,0,CONCAT44(uVar10,3),"0",1,0,0);
           if (lVar2 != null) {
             PlotController.ChangePlot(lVar2,uVar8,0);
@@ -1245,8 +1294,8 @@ public class MeditationUIController
         }
     }
 
-    // Token : 0x6001907
-    // RVA   : 0xA92E30   Offset: 0xA92230   Length: 0x480
+    // Token : 0x600199B
+    // RVA   : 0xE86420   Offset: 0xE85220   Length: 0x480
     public void StartMeditationButtonClicked()
     {
         long lVar1;
@@ -1259,20 +1308,20 @@ public class MeditationUIController
         float[] local_res18 = new float[2];
         int[] local_res20 = new int[2];
         local_res18[0] = 0.0;
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         iVar7 = 1;
         while( true ) {
           uVar3 = GlobalData.GetNumText(iVar7,0);
           local_res20[0] = iVar7;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res20);
           uVar3 = String.Format("{0}日;StartMeditationWork;{1}",uVar3,uVar4,0);
           if (lVar2 == null) break;
-          FUN_18181e6b0(lVar2,uVar3,DAT_181da3d70);
+          FUN_18175de30(lVar2,uVar3,DAT_181e86370);
           iVar7 = iVar7 + 1;
           if (5 < iVar7) {
-            FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+            FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
             if ((GameController._instance != null) &&
                (lVar5 = GameController._instance.worldData) != null) {
               lVar5 = WorldData.Player(lVar5,0);
@@ -1282,7 +1331,7 @@ public class MeditationUIController
                     (lVar5 = GameController._instance.worldData) != null) &&
                    (lVar5 = lVar5.meditationData) != null) {
                   local_res20[0] = lVar5.cityAreaID;
-                  uVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
+                  uVar4 = il2cpp_value_box(DAT_181e60808,local_res20);
                   if (((GameController._instance != null) &&
                       (lVar5 = GameController._instance.worldData) != null)
                      && (lVar5 = lVar5.meditationData) != null) {
@@ -1300,16 +1349,16 @@ public class MeditationUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6001908
-    // RVA   : 0x3A17B0   Offset: 0x3A0BB0   Length: 0x7
+    // Token : 0x600199C
+    // RVA   : 0x2110A0   Offset: 0x20FEA0   Length: 0x7
     public void /*ctor*/()
     {
-        FUN_18044ef50(this,0);
+        FUN_180ae8740(this,0);
     }
 
 }

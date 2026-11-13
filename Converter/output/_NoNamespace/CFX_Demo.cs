@@ -1,50 +1,50 @@
 // ============================================================
 // Type  : CFX_Demo
-// Token : 0x20003BA
+// Token : 0x20003C7
 // ============================================================
 
 public class CFX_Demo
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001E24
+    // Token: 0x4001EB6
     public bool orderedSpawns;
 
-    // Token: 0x4001E25
+    // Token: 0x4001EB7
     public float step;
 
-    // Token: 0x4001E26
+    // Token: 0x4001EB8
     public float range;
 
-    // Token: 0x4001E27
+    // Token: 0x4001EB9
     private float order;
 
-    // Token: 0x4001E28
+    // Token: 0x4001EBA
     public Material groundMat;
 
-    // Token: 0x4001E29
+    // Token: 0x4001EBB
     public Material waterMat;
 
-    // Token: 0x4001E2A
+    // Token: 0x4001EBC
     public GameObject[] ParticleExamples;
 
-    // Token: 0x4001E2B
+    // Token: 0x4001EBD
     private Dictionary<string, float> ParticlesYOffsetD;
 
-    // Token: 0x4001E2C
+    // Token: 0x4001EBE
     private int exampleIndex;
 
-    // Token: 0x4001E2D
+    // Token: 0x4001EBF
     private string randomSpawnsDelay;
 
-    // Token: 0x4001E2E
+    // Token: 0x4001EC0
     private bool randomSpawns;
 
-    // Token: 0x4001E2F
+    // Token: 0x4001EC1
     private bool slowMo;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x60023CB
-    // RVA   : 0xB7F200   Offset: 0xB7E600   Length: 0x1D0
+    // Token : 0x6002475
+    // RVA   : 0x9384B0   Offset: 0x9372B0   Length: 0x1D0
     private void OnMouseDown()
     {
         bool cVar1;
@@ -74,7 +74,7 @@ public class CFX_Demo
         local_28 = 0;
         uStack_20 = 0;
         local_10 = 0;
-        lVar2 = Component.GetComponent(this,DAT_181d93b78);
+        lVar2 = Component.GetComponent(this,DAT_181e76eb8);
         lVar3 = Camera.get_main(0);
         puVar4 = (uint64 *)Input.get_mousePosition(local_78,0);
         if (lVar3 != null) {
@@ -94,7 +94,7 @@ public class CFX_Demo
             lVar2 = CFX_Demo.spawnParticle(this,0);
             if (lVar2 != null) {
               lVar3 = GameObject.get_transform(lVar2,0);
-              puVar4 = (uint64 *)FUN_18045e0a0(local_78,&local_38,0);
+              puVar4 = (uint64 *)FUN_180af1d30(local_78,&local_38,0);
               local_80 = *(float *)(puVar4 + 1);
               local_88 = *puVar4;
               lVar2 = GameObject.get_transform(lVar2,0);
@@ -117,8 +117,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x60023CC
-    // RVA   : 0xB80290   Offset: 0xB7F690   Length: 0x309
+    // Token : 0x6002476
+    // RVA   : 0x939540   Offset: 0x938340   Length: 0x309
     private GameObject spawnParticle()
     {
         uint uVar1;
@@ -152,10 +152,10 @@ public class CFX_Demo
           if (*(uint32 *)(lVar4 + 24) <= this.exampleIndex) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           uVar6 = *(uint64 *)(lVar4 + 32 + (int64)(int)this.exampleIndex * 8);
-          lVar4 = Object.Instantiate(uVar6,DAT_181d928b0);
+          lVar4 = Object.Instantiate(uVar6,DAT_181e75ef8);
           if (lVar4 != null) {
             GameObject.SetActive(lVar4,1,0);
             iVar7 = 0;
@@ -166,13 +166,13 @@ public class CFX_Demo
               if (iVar3 <= iVar7) {
                 uVar8 = 0;
                 if (this.ParticlesYOffsetD != null) {
-                  FUN_1808abff0(&local_58,this.ParticlesYOffsetD,DAT_181d75588);
+                  FUN_1806db990(&local_58,this.ParticlesYOffsetD,DAT_181e56808);
                   local_88 = local_58;
                   uStack_80 = uStack_50;
                   local_78 = local_48;
                   uStack_70 = uStack_40;
                   local_68 = local_38;
-                  goto LAB_180b80460;
+                  goto LAB_180939710;
                 }
                 break;
               }
@@ -195,21 +195,21 @@ public class CFX_Demo
           lVar5 = Object.get_name(lVar4,0);
           if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           cVar2 = String.StartsWith(lVar5,local_98,0);
           uVar1 = uStack_90;
           if (cVar2) break;
-        LAB_180b80460:
-          cVar2 = FUN_1811c4670(&local_88,DAT_181da18d0);
+        LAB_180939710:
+          cVar2 = FUN_180fe6a80(&local_88,DAT_181e83780);
           if (!cVar2) {
-            ZhSegment.Initialize(&local_88,DAT_181da1858);
-            goto LAB_180b8050e;
+            ZhSegment.Initialize(&local_88,DAT_181e83700);
+            goto LAB_1809397be;
           }
         }
-        ZhSegment.Initialize(&local_88,DAT_181da1858);
+        ZhSegment.Initialize(&local_88,DAT_181e83700);
         uVar8 = uVar1;
-        LAB_180b8050e:
+        LAB_1809397be:
         lVar5 = GameObject.get_transform(lVar4,0);
         if (lVar5 != null) {
           local_98 = (uint64)uVar8 << 32;
@@ -219,8 +219,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x60023CD
-    // RVA   : 0xB7E8A0   Offset: 0xB7DCA0   Length: 0x95F
+    // Token : 0x6002477
+    // RVA   : 0x937B50   Offset: 0x936950   Length: 0x95F
     private void OnGUI()
     {
         bool cVar1;
@@ -237,15 +237,15 @@ public class CFX_Demo
         Screen.get_width(0);
         local_38 = 0;
         uStack_30 = 0;
-        FUN_1809dcfa0(&local_38,0x40a00000,0x41a00000);
+        FUN_1807282e0(&local_38,0x40a00000,0x41a00000);
         local_28 = (uint32)local_38;
         uStack_24 = local_38._4_4_;
         uStack_20 = (uint32)uStack_30;
         uStack_1c = uStack_30._4_4_;
         GUILayout.BeginArea(&local_28,0);
-        uVar2 = FUN_180228420(DAT_181d8af58);
+        uVar2 = FUN_1802100c0(DAT_181e6da98);
         GUILayout.BeginHorizontal(uVar2,0);
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+        plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
         lVar4 = GUILayout.Width(0x42480000,0);
         if (plVar3 != (int64 *)0) {
           if (lVar4 != null) {
@@ -253,18 +253,18 @@ public class CFX_Demo
             if (lVar5 == null) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
           }
           if ((int)plVar3[3] == 0) {
             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar2,0);
+            FUN_1801e02d0(uVar2,0);
           }
           plVar3[4] = lVar4;
           il2cpp_internal(plVar3 + 4,lVar4);
           GUILayout.Label("Effect",plVar3,0);
-          plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+          plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
           lVar4 = GUILayout.Width(0x41a00000,0);
           if (plVar3 != (int64 *)0) {
             if (lVar4 != null) {
@@ -272,13 +272,13 @@ public class CFX_Demo
               if (lVar5 == null) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
             }
             if ((int)plVar3[3] == 0) {
               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar2,0);
+              FUN_1801e02d0(uVar2,0);
             }
             plVar3[4] = lVar4;
             il2cpp_internal(plVar3 + 4,lVar4);
@@ -291,12 +291,12 @@ public class CFX_Demo
               if (*(uint32 *)(lVar4 + 24) <= this.exampleIndex) {
                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar2,0);
+                FUN_1801e02d0(uVar2,0);
               }
               lVar4 = *(int64 *)(lVar4 + 32 + (int64)(int)this.exampleIndex * 8);
               if (lVar4 != null) {
                 uVar2 = Object.get_name(lVar4,0);
-                plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+                plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
                 lVar4 = GUILayout.Width(0x433e0000,0);
                 if (plVar3 != (int64 *)0) {
                   if (lVar4 != null) {
@@ -304,18 +304,18 @@ public class CFX_Demo
                     if (lVar5 == null) {
                       uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar2,0);
+                      FUN_1801e02d0(uVar2,0);
                     }
                   }
                   if ((int)plVar3[3] == 0) {
                     uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar2,0);
+                    FUN_1801e02d0(uVar2,0);
                   }
                   plVar3[4] = lVar4;
                   il2cpp_internal(plVar3 + 4,lVar4);
                   GUILayout.Label(uVar2,plVar3,0);
-                  plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+                  plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
                   lVar4 = GUILayout.Width(0x41a00000,0);
                   if (plVar3 != (int64 *)0) {
                     if (lVar4 != null) {
@@ -323,13 +323,13 @@ public class CFX_Demo
                       if (lVar5 == null) {
                         uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar2,0);
+                        FUN_1801e02d0(uVar2,0);
                       }
                     }
                     if ((int)plVar3[3] == 0) {
                       uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar2,0);
+                      FUN_1801e02d0(uVar2,0);
                     }
                     plVar3[4] = lVar4;
                     il2cpp_internal(plVar3 + 4,lVar4);
@@ -337,13 +337,13 @@ public class CFX_Demo
                     if (cVar1) {
                       CFX_Demo.nextParticle(this,0);
                     }
-                    uVar2 = FUN_180228420(DAT_181d8af58);
+                    uVar2 = FUN_1802100c0(DAT_181e6da98);
                     GUILayout.Label("Click on the ground to spawn selected particles",uVar2,0);
                     uVar2 = "Rotate Camera";
-                    if (**(char **)(DAT_181db4f00 + 184) != false) {
+                    if (**(char **)(DAT_181e951b8 + 184) != false) {
                       uVar2 = "Pause Camera";
                     }
-                    plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+                    plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
                     lVar4 = GUILayout.Width(0x430c0000,0);
                     if (plVar3 != (int64 *)0) {
                       if (lVar4 != null) {
@@ -351,25 +351,25 @@ public class CFX_Demo
                         if (lVar5 == null) {
                           uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar2,0);
+                          FUN_1801e02d0(uVar2,0);
                         }
                       }
                       if ((int)plVar3[3] == 0) {
                         uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar2,0);
+                        FUN_1801e02d0(uVar2,0);
                       }
                       plVar3[4] = lVar4;
                       il2cpp_internal(plVar3 + 4,lVar4);
                       cVar1 = GUILayout.Button(uVar2,plVar3,0);
                       if (cVar1) {
-                        **(char **)(DAT_181db4f00 + 184) = **(char **)(DAT_181db4f00 + 184) == false;
+                        **(char **)(DAT_181e951b8 + 184) = **(char **)(DAT_181e951b8 + 184) == false;
                       }
                       uVar2 = "Start Random Spawns";
                       if (this.randomSpawns) {
                         uVar2 = "Stop Random Spawns";
                       }
-                      plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+                      plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
                       lVar4 = GUILayout.Width(0x430c0000,0);
                       if (plVar3 != (int64 *)0) {
                         if (lVar4 != null) {
@@ -377,13 +377,13 @@ public class CFX_Demo
                           if (lVar5 == null) {
                             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar2,0);
+                            FUN_1801e02d0(uVar2,0);
                           }
                         }
                         if ((int)plVar3[3] == 0) {
                           uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar2,0);
+                          FUN_1801e02d0(uVar2,0);
                         }
                         plVar3[4] = lVar4;
                         il2cpp_internal(plVar3 + 4,lVar4);
@@ -399,7 +399,7 @@ public class CFX_Demo
                           }
                         }
                         uVar2 = this.randomSpawnsDelay;
-                        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+                        plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
                         lVar4 = GUILayout.Width(0x42280000,0);
                         if (plVar3 != (int64 *)0) {
                           if (lVar4 != null) {
@@ -407,13 +407,13 @@ public class CFX_Demo
                             if (lVar5 == null) {
                               uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar2,0);
+                              FUN_1801e02d0(uVar2,0);
                             }
                           }
                           if ((int)plVar3[3] == 0) {
                             uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar2,0);
+                            FUN_1801e02d0(uVar2,0);
                           }
                           plVar3[4] = lVar4;
                           il2cpp_internal(plVar3 + 4,lVar4);
@@ -422,14 +422,14 @@ public class CFX_Demo
                           uVar2 = this.randomSpawnsDelay;
                           uVar2 = Regex.Replace(uVar2,"[^0-9.]","",0);
                           this.randomSpawnsDelay = uVar2;
-                          lVar4 = Component.GetComponent(this,DAT_181d94ff8);
+                          lVar4 = Component.GetComponent(this,DAT_181e78338);
                           if (lVar4 != null) {
                             cVar1 = Renderer.get_enabled(lVar4,0);
                             uVar2 = "Show Ground";
                             if (cVar1) {
                               uVar2 = "Hide Ground";
                             }
-                            plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+                            plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
                             lVar4 = GUILayout.Width(0x42b40000,0);
                             if (plVar3 != (int64 *)0) {
                               if (lVar4 != null) {
@@ -437,30 +437,30 @@ public class CFX_Demo
                                 if (lVar5 == null) {
                                   uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                  FUN_1800d65f0(uVar2,0);
+                                  FUN_1801e02d0(uVar2,0);
                                 }
                               }
                               if ((int)plVar3[3] == 0) {
                                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar2,0);
+                                FUN_1801e02d0(uVar2,0);
                               }
                               plVar3[4] = lVar4;
                               il2cpp_internal(plVar3 + 4,lVar4);
                               cVar1 = GUILayout.Button(uVar2,plVar3,0);
                               if (cVar1) {
-                                lVar4 = Component.GetComponent(this,DAT_181d94ff8);
-                                lVar5 = Component.GetComponent(this,DAT_181d94ff8);
-                                if (lVar5 == null) goto LAB_180b7f1fa;
+                                lVar4 = Component.GetComponent(this,DAT_181e78338);
+                                lVar5 = Component.GetComponent(this,DAT_181e78338);
+                                if (lVar5 == null) goto LAB_1809384aa;
                                 cVar1 = Renderer.get_enabled(lVar5,0);
-                                if (lVar4 == null) goto LAB_180b7f1fa;
+                                if (lVar4 == null) goto LAB_1809384aa;
                                 Renderer.set_enabled(lVar4,!cVar1,0);
                               }
                               uVar2 = "Slow Motion";
                               if (this.slowMo) {
                                 uVar2 = "Normal Speed";
                               }
-                              plVar3 = (int64 *)FUN_1800d60b0(DAT_181da2938,1);
+                              plVar3 = (int64 *)FUN_1801dfd90(DAT_181e82a00,1);
                               lVar4 = GUILayout.Width(0x42c80000,0);
                               if (plVar3 != (int64 *)0) {
                                 if (lVar4 != null) {
@@ -468,7 +468,7 @@ public class CFX_Demo
                                   if (lVar5 == null) {
                                     uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                    FUN_1800d65f0(uVar2,0);
+                                    FUN_1801e02d0(uVar2,0);
                                   }
                                 }
                                 if ((int)plVar3[3] != 0) {
@@ -492,7 +492,7 @@ public class CFX_Demo
                                 }
                                 uVar2 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar2,0);
+                                FUN_1801e02d0(uVar2,0);
                               }
                             }
                           }
@@ -503,15 +503,15 @@ public class CFX_Demo
                 }
               }
             }
-        LAB_180b7f1fa:
+        LAB_1809384aa:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x60023CE
-    // RVA   : 0xB7F7F0   Offset: 0xB7EBF0   Length: 0x6C
+    // Token : 0x6002478
+    // RVA   : 0x938AA0   Offset: 0x9378A0   Length: 0x6C
     private IEnumerator RandomSpawnsCoroutine()
     {
         long lVar1;
@@ -522,25 +522,25 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x60023CF
-    // RVA   : 0xB7FA00   Offset: 0xB7EE00   Length: 0x4B
+    // Token : 0x6002479
+    // RVA   : 0x938CB0   Offset: 0x937AB0   Length: 0x4B
     private void Update()
     {
         bool cVar1;
-        cVar1 = FUN_1804625b0(0x114,0);
+        cVar1 = FUN_181844860(0x114,0);
         if (cVar1) {
           CFX_Demo.prevParticle(this,0);
           return;
         }
-        cVar1 = FUN_1804625b0(0x113);
+        cVar1 = FUN_181844860(0x113);
         if (cVar1) {
           CFX_Demo.nextParticle(this,0);
           return;
         }
     }
 
-    // Token : 0x60023D0
-    // RVA   : 0xB800C0   Offset: 0xB7F4C0   Length: 0x1C4
+    // Token : 0x600247A
+    // RVA   : 0x939370   Offset: 0x938170   Length: 0x1C4
     private void prevParticle()
     {
         bool cVar1;
@@ -559,7 +559,7 @@ public class CFX_Demo
           if (*(uint32 *)(lVar3 + 24) <= uVar2) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           lVar3 = lVar3[uVar2];
           if (lVar3 != null) {
@@ -572,37 +572,37 @@ public class CFX_Demo
                 if (*(uint32 *)(lVar3 + 24) <= this.exampleIndex) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar4 = Object.get_name(lVar3,0);
-                cVar1 = FUN_18171eb50(uVar4,"CFX_Ripple",0);
+                cVar1 = FUN_1816387f0(uVar4,"CFX_Ripple",0);
                 if (!cVar1) {
                   lVar3 = this.ParticleExamples;
                   if (lVar3 == null) throw; // [null/range check failed]
                   if (*(uint32 *)(lVar3 + 24) <= this.exampleIndex) {
                     uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar4,0);
+                    FUN_1801e02d0(uVar4,0);
                   }
                   lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar4 = Object.get_name(lVar3,0);
-                  cVar1 = FUN_18171eb50(uVar4,"CFX_Fountain",0);
+                  cVar1 = FUN_1816387f0(uVar4,"CFX_Fountain",0);
                   if (!cVar1) {
-                    lVar3 = Component.GetComponent(this,DAT_181d94ff8);
+                    lVar3 = Component.GetComponent(this,DAT_181e78338);
                     if (lVar3 != null) {
-                      FUN_180d9e0e0(lVar3,this.groundMat,0);
+                      FUN_180af99b0(lVar3,this.groundMat,0);
                       return;
                     }
                     throw; // [null/range check failed]
                   }
                 }
               }
-              lVar3 = Component.GetComponent(this,DAT_181d94ff8);
+              lVar3 = Component.GetComponent(this,DAT_181e78338);
               if (lVar3 != null) {
-                FUN_180d9e0e0(lVar3,this.waterMat,0);
+                FUN_180af99b0(lVar3,this.waterMat,0);
                 return;
               }
             }
@@ -610,8 +610,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x60023D1
-    // RVA   : 0xB7FF00   Offset: 0xB7F300   Length: 0x1B6
+    // Token : 0x600247B
+    // RVA   : 0x9391B0   Offset: 0x937FB0   Length: 0x1B6
     private void nextParticle()
     {
         bool cVar1;
@@ -631,7 +631,7 @@ public class CFX_Demo
           if (!bVar5) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
           lVar3 = lVar3[uVar2];
           if (lVar3 != null) {
@@ -644,37 +644,37 @@ public class CFX_Demo
                 if (*(uint32 *)(lVar3 + 24) <= this.exampleIndex) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                 if (lVar3 == null) throw; // [null/range check failed]
                 uVar4 = Object.get_name(lVar3,0);
-                cVar1 = FUN_18171eb50(uVar4,"CFX_Ripple",0);
+                cVar1 = FUN_1816387f0(uVar4,"CFX_Ripple",0);
                 if (!cVar1) {
                   lVar3 = this.ParticleExamples;
                   if (lVar3 == null) throw; // [null/range check failed]
                   if (*(uint32 *)(lVar3 + 24) <= this.exampleIndex) {
                     uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar4,0);
+                    FUN_1801e02d0(uVar4,0);
                   }
                   lVar3 = *(int64 *)(lVar3 + 32 + (int64)(int)this.exampleIndex * 8);
                   if (lVar3 == null) throw; // [null/range check failed]
                   uVar4 = Object.get_name(lVar3,0);
-                  cVar1 = FUN_18171eb50(uVar4,"CFX_Fountain",0);
+                  cVar1 = FUN_1816387f0(uVar4,"CFX_Fountain",0);
                   if (!cVar1) {
-                    lVar3 = Component.GetComponent(this,DAT_181d94ff8);
+                    lVar3 = Component.GetComponent(this,DAT_181e78338);
                     if (lVar3 != null) {
-                      FUN_180d9e0e0(lVar3,this.groundMat,0);
+                      FUN_180af99b0(lVar3,this.groundMat,0);
                       return;
                     }
                     throw; // [null/range check failed]
                   }
                 }
               }
-              lVar3 = Component.GetComponent(this,DAT_181d94ff8);
+              lVar3 = Component.GetComponent(this,DAT_181e78338);
               if (lVar3 != null) {
-                FUN_180d9e0e0(lVar3,this.waterMat,0);
+                FUN_180af99b0(lVar3,this.waterMat,0);
                 return;
               }
             }
@@ -682,8 +682,8 @@ public class CFX_Demo
         }
     }
 
-    // Token : 0x60023D2
-    // RVA   : 0xB7FA50   Offset: 0xB7EE50   Length: 0x4A6
+    // Token : 0x600247C
+    // RVA   : 0x938D00   Offset: 0x937B00   Length: 0x4A6
     public void /*ctor*/()
     {
         long lVar1;
@@ -691,36 +691,36 @@ public class CFX_Demo
         this.step = 0x3f800000;
         this.range = 0x40a00000;
         this.order = 0xc0a00000;
-        lVar1 = il2cpp_internal(DAT_181d83280);
-        FUN_1808b1370(lVar1,DAT_181d75478);
+        lVar1 = il2cpp_internal(DAT_181e630c0);
+        FUN_1806e5bc0(lVar1,DAT_181e566f8);
         if (lVar1 != null) {
-          FUN_1817afb00(lVar1,"CFX_ElectricGround",0x3e19999a,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_ElectricityBall",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_ElectricityBolt",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Explosion",0x40000000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_SmallExplosion",0x3fc00000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_SmokeExplosion",0x40200000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Flame",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_DoubleFlame",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Hit",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_CircularLightWall",0x3d4ccccd,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_LightWall",0x3d4ccccd,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Flash",0x40000000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Poof",0x3fc00000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Virus",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_SmokePuffs",0x40000000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Slash",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Splash",0x3d4ccccd,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Fountain",0x3d4ccccd,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Ripple",0x3d4ccccd,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Magic",0x40000000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_SoftStar",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_SpikyAura_Sphere",0x3f800000,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_Firework",0x4019999a,DAT_181d75500);
-          FUN_1817afb00(lVar1,"CFX_GroundA",0x3d4ccccd,DAT_181d75500);
+          FUN_1816f1570(lVar1,"CFX_ElectricGround",0x3e19999a,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_ElectricityBall",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_ElectricityBolt",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Explosion",0x40000000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_SmallExplosion",0x3fc00000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_SmokeExplosion",0x40200000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Flame",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_DoubleFlame",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Hit",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_CircularLightWall",0x3d4ccccd,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_LightWall",0x3d4ccccd,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Flash",0x40000000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Poof",0x3fc00000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Virus",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_SmokePuffs",0x40000000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Slash",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Splash",0x3d4ccccd,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Fountain",0x3d4ccccd,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Ripple",0x3d4ccccd,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Magic",0x40000000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_SoftStar",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_SpikyAura_Sphere",0x3f800000,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_Firework",0x4019999a,DAT_181e56780);
+          FUN_1816f1570(lVar1,"CFX_GroundA",0x3d4ccccd,DAT_181e56780);
           this.ParticlesYOffsetD = lVar1;
           this.randomSpawnsDelay = "0.5";
-          FUN_18044ef50(this,0);
+          FUN_180ae8740(this,0);
           return;
         }
     }

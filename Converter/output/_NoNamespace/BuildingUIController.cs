@@ -1,81 +1,81 @@
 // ============================================================
 // Type  : BuildingUIController
-// Token : 0x20001B0
+// Token : 0x20001B2
 // ============================================================
 
 public class BuildingUIController
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4000BBB
+    // Token: 0x4000BCC
     public AreaBuildingData buildingData;
 
-    // Token: 0x4000BBC
+    // Token: 0x4000BCD
     public GameObject buildingButtonGrid;
 
-    // Token: 0x4000BBD
+    // Token: 0x4000BCE
     public GameObject buildingButtonPrefab;
 
-    // Token: 0x4000BBE
+    // Token: 0x4000BCF
     public AreaBuildingChoice buildingChoiceSelected;
 
-    // Token: 0x4000BBF
+    // Token: 0x4000BD0
     private GameObject newButton;
 
-    // Token: 0x4000BC0
+    // Token: 0x4000BD1
     public static float InsideBuildingVolumn;
 
-    // Token: 0x4000BC1
+    // Token: 0x4000BD2
     private float refreshTime;
 
-    // Token: 0x4000BC2
+    // Token: 0x4000BD3
     private static BuildingUIController _instance;
 
-    // Token: 0x4000BC3
+    // Token: 0x4000BD4
     private AreaBuildingData targetBuildingData;
 
-    // Token: 0x4000BC4
+    // Token: 0x4000BD5
     private Vector3 showPosition;
 
-    // Token: 0x4000BC5
+    // Token: 0x4000BD6
     public static List<string> CheckHideBuildingChoice;
 
-    // Token: 0x4000BC6
+    // Token: 0x4000BD7
     public static List<string> PartyLvName;
 
-    // Token: 0x4000BC7
+    // Token: 0x4000BD8
     private List<string> ProduceBuildingWorkText;
 
     // ── Methods ──────────────────────────────────────────────────
-    // Token : 0x6000DD1
-    // RVA   : 0xB7DB70   Offset: 0xB7CF70   Length: 0x58
+    // Token : 0x6000DD4
+    // RVA   : 0x936E20   Offset: 0x935C20   Length: 0x58
     public static BuildingUIController get_Instance()
     {
-        return *(uint64 *)(*(int64 *)(DAT_181db4020 + 184) + 8);
+        return *(uint64 *)(*(int64 *)(DAT_181e942d8 + 184) + 8);
     }
 
-    // Token : 0x6000DD2
-    // RVA   : 0xB61480   Offset: 0xB60880   Length: 0x68
+    // Token : 0x6000DD5
+    // RVA   : 0x91A6A0   Offset: 0x9194A0   Length: 0x68
     private void Awake()
     {
-        puVar1 = (uint64 *)(*(int64 *)(DAT_181db4020 + 184) + 8);
+        puVar1 = (uint64 *)(*(int64 *)(DAT_181e942d8 + 184) + 8);
         *puVar1 = this;
         il2cpp_internal(puVar1,this);
     }
 
-    // Token : 0x6000DD3
-    // RVA   : 0xB78490   Offset: 0xB77890   Length: 0x12
+    // Token : 0x6000DD6
+    // RVA   : 0x2120A0   Offset: 0x210EA0   Length: 0x12
     private void Start()
     {
-        void FUN_180b78490(int64 this)
+        void FUN_1802120a0(int64 this)
         {
         this.buildingData = 0;
     }
 
-    // Token : 0x6000DD4
-    // RVA   : 0xB7D030   Offset: 0xB7C430   Length: 0x97
+    // Token : 0x6000DD7
+    // RVA   : 0x9362E0   Offset: 0x9350E0   Length: 0x97
     private void Update()
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         long lVar1;
         bool cVar2;
         float fVar3;
@@ -84,7 +84,7 @@ public class BuildingUIController
           if ((*pStatics == 0) ||
              (lVar1 = *(int64 *)(*pStatics + 72)) == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           cVar2 = GameObject.get_activeInHierarchy(lVar1,0);
           if (cVar2) {
@@ -100,8 +100,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DD5
-    // RVA   : 0xB642D0   Offset: 0xB636D0   Length: 0x2AE
+    // Token : 0x6000DD8
+    // RVA   : 0x91D5A0   Offset: 0x91C3A0   Length: 0x2AE
     public void EnterBuilding(AreaBuildingData _targetBuildingData, Vector3 _showPosition)
     {
         uint uVar1;
@@ -117,7 +117,7 @@ public class BuildingUIController
         *(uint32 *)(this + 88) = uVar1;
         if (this.targetBuildingData != null) {
           if (this.targetBuildingData.buildingID != 15) {
-        LAB_180b64551:
+        LAB_18091d821:
             local_18 = this.showPosition;
             local_10 = *(uint32 *)(this + 88);
             BuildingUIController.ShowBuildingUI(this,this.targetBuildingData,&local_18,0);
@@ -127,13 +127,13 @@ public class BuildingUIController
               (lVar3 = GameController._instance.worldData) != null) &&
              (lVar3 = WorldData.Player(lVar3,0)) != null) {
             iVar2 = HeroData.GetBountyPirce(lVar3,0);
-            if (iVar2 < 1) goto LAB_180b64551;
-            lVar3 = FUN_18046c400(0);
-            lVar4 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar4,DAT_181da3bf0);
+            if (iVar2 < 1) goto LAB_18091d821;
+            lVar3 = FUN_180210a70(0);
+            lVar4 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar4,DAT_181e861f0);
             if (lVar4 != null) {
-              FUN_18181e6b0(lVar4,"冒险一试;PlotSureEnterBuilding",DAT_181da3d70);
-              FUN_18181e6b0(lVar4,"还是算了;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar4,"冒险一试;PlotSureEnterBuilding",DAT_181e86370);
+              FUN_18175de30(lVar4,"还是算了;HideInteractUI",DAT_181e86370);
               uVar5 = new SinglePlotData("眼下正被官差通缉，若是贸然进入官府重地，很可能会被抓捕。\n还需三思而后行才是......",lVar4,1,0,3,"0",1,0,0);
               if (lVar3 != null) {
                 PlotController.AddPlot(lVar3,uVar5,0);
@@ -144,8 +144,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DD6
-    // RVA   : 0xB7CEC0   Offset: 0xB7C2C0   Length: 0x2C
+    // Token : 0x6000DD9
+    // RVA   : 0x936170   Offset: 0x934F70   Length: 0x2C
     public void SureEnterBuilding()
     {
         ulong local_18;
@@ -155,11 +155,11 @@ public class BuildingUIController
         BuildingUIController.ShowBuildingUI(local_18,this.targetBuildingData,&local_18,0);
     }
 
-    // Token : 0x6000DD7
-    // RVA   : 0xB6E200   Offset: 0xB6D600   Length: 0x1353
+    // Token : 0x6000DDA
+    // RVA   : 0x9274D0   Offset: 0x9262D0   Length: 0x1353
     public void ShowBuildingUI(AreaBuildingData targetBuildingData, Vector3 showPosition)
     {
-        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics_2a90 = *(int64*)(DAT_181e52a90 + 184);
         bool cVar1;
         uint uVar2;
         long lVar3;
@@ -178,27 +178,27 @@ public class BuildingUIController
         this.buildingData = targetBuildingData;
         local_res8[0] = 0;
         il2cpp_internal(this + 24,targetBuildingData);
-        if ((*pStatics_2ee8 == 0) ||
-           (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null)
+        if ((*pStatics_2a90 == 0) ||
+           (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null)
         throw; // [null/range check failed]
         GameObject.SetActive(lVar3,1,0);
-        if (((((*pStatics_2ee8 == 0) ||
-              (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if (((((*pStatics_2a90 == 0) ||
+              (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
              (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
             ((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 == null ||
              (lVar3 = Transform.Find(lVar3,"BuildingButtonScrollView",0)) == null))) ||
-           (lVar3 = Component.GetComponent(lVar3,DAT_181d951f8)) == null) throw; // [null/range check failed]
+           (lVar3 = Component.GetComponent(lVar3,DAT_181e78538)) == null) throw; // [null/range check failed]
         Behaviour.set_enabled(lVar3,0,0);
-        if (((*pStatics_2ee8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if (((*pStatics_2a90 == 0) ||
+            (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
            (lVar3 = GameObject.get_transform(lVar3,0)) == null) throw; // [null/range check failed]
         lVar3 = Transform.Find(lVar3,"BuildingUI",0);
-        if (((((*pStatics_2ee8 == 0) ||
-              (lVar4 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if (((((*pStatics_2a90 == 0) ||
+              (lVar4 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
              (lVar4 = GameObject.get_transform(lVar4,0)) == null) ||
             ((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 == null ||
              (lVar4 = Component.get_transform(lVar4,0)) == null))) ||
-           (lVar4 = FUN_180daa030(lVar4,0)) == null) throw; // [null/range check failed]
+           (lVar4 = FUN_180b05920(lVar4,0)) == null) throw; // [null/range check failed]
         uStack_60 = *(uint32 *)(showPosition + 1);
         local_68 = *showPosition;
         puVar5 = (uint64 *)Transform.InverseTransformPoint(&local_58,lVar4,&local_68,0);
@@ -206,8 +206,8 @@ public class BuildingUIController
         local_68 = *puVar5;
         uStack_60 = *(uint32 *)(puVar5 + 1);
         Transform.set_localPosition(lVar3,&local_68,0);
-        if (((*pStatics_2ee8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if (((*pStatics_2a90 == 0) ||
+            (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
            (lVar3 = GameObject.get_transform(lVar3,0)) == null) throw; // [null/range check failed]
         uVar6 = Transform.Find(lVar3,"BuildingUI",0);
         puVar5 = (uint64 *)Vector3.get_zero(&local_58,0);
@@ -215,155 +215,155 @@ public class BuildingUIController
         uStack_60 = *(uint32 *)(puVar5 + 1);
         local_68 = *puVar5;
         uVar6 = ShortcutExtensions.DOMove(uVar6,&local_68,0x3e4ccccd,0,0);
-        uVar6 = TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181dc1f60);
+        uVar6 = TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181ea59e0);
         lVar3 = BuildingUIController._instance;
         if (lVar3 == null) {
-          uVar7 = **(uint64 **)(DAT_181dc4148 + 184);
-          lVar3 = new OnTooltipCB(uVar7,DAT_181d98ad0,0);
+          uVar7 = **(uint64 **)(DAT_181ea4848 + 184);
+          lVar3 = new OnTooltipCB(uVar7,DAT_181e7c210,0);
           BuildingUIController._instance = lVar3;
         }
-        TweenSettingsExtensions.OnComplete(uVar6,lVar3,DAT_181dc0380);
-        if ((((*pStatics_2ee8 == 0) ||
-             (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        TweenSettingsExtensions.OnComplete(uVar6,lVar3,DAT_181ea3dc0);
+        if ((((*pStatics_2a90 == 0) ||
+             (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
             (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
            (lVar3 = Transform.Find(lVar3,"BuildingUI",0)) == null) throw; // [null/range check failed]
         local_68 = 0;
         uStack_60 = 0x3f800000;
         Transform.set_localScale(lVar3,&local_68,0);
-        if (((*pStatics_2ee8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if (((*pStatics_2a90 == 0) ||
+            (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
            (lVar3 = GameObject.get_transform(lVar3,0)) == null) throw; // [null/range check failed]
         uVar6 = Transform.Find(lVar3,"BuildingUI",0);
         puVar5 = (uint64 *)Vector3.get_one(&local_58,0);
         uStack_60 = *(uint32 *)(puVar5 + 1);
         local_68 = *puVar5;
         uVar6 = ShortcutExtensions.DOScale(uVar6,&local_68,0x3e4ccccd,0);
-        TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181dc1f60);
-        if (((*pStatics_2ee8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181ea59e0);
+        if (((*pStatics_2a90 == 0) ||
+            (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
            ((lVar3 = GameObject.get_transform(lVar3,0), lVar3 == null ||
             (lVar3 = Transform.Find(lVar3,"BlackBackground",0)) == null))) throw; // [null/range check failed]
-        uVar6 = Component.GetComponent(lVar3,DAT_181d94478);
+        uVar6 = Component.GetComponent(lVar3,DAT_181e777b8);
         uVar6 = DOTweenModuleUI.DOFade(uVar6,0x3f333333,0x3e4ccccd,0);
-        TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181dc1dc8);
+        TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181ea5848);
         if ((this.buildingData == null) ||
            (lVar3 = AreaBuildingData.DataBase(this.buildingData,0)) == null)
         throw; // [null/range check failed]
         lVar3 = *(int64 *)(lVar3 + 152);
         if (lVar3 != null) {
-          cVar1 = FUN_18171eb50(lVar3,"door",0);
+          cVar1 = FUN_1816387f0(lVar3,"door",0);
           if (!cVar1) {
-            cVar1 = FUN_18171eb50(lVar3,"bigdoor");
+            cVar1 = FUN_1816387f0(lVar3,"bigdoor");
             if (!cVar1) {
-              cVar1 = FUN_18171eb50(lVar3,"footstep");
+              cVar1 = FUN_1816387f0(lVar3,"footstep");
               uVar6 = "Sound/SoundEffect/FootStepContinue";
-              if (!cVar1) goto LAB_180b6eab5;
+              if (!cVar1) goto LAB_180927d85;
             }
             else {
-              local_res8[0] = FUN_180d96040(1);
+              local_res8[0] = FUN_180af1860(1);
               uVar6 = Int32.ToString(local_res8,0);
               uVar6 = String.Concat("Sound/SoundEffect/Door/BigDoor",uVar6,0);
             }
           }
           else {
-            local_res8[0] = FUN_180d96040(0,7);
+            local_res8[0] = FUN_180af1860(0,7);
             uVar6 = Int32.ToString(local_res8,0);
             uVar6 = String.Concat("Sound/SoundEffect/Door/Door",uVar6,0);
           }
           plVar9 = (int64 *)Resources.Load(uVar6,0);
           plVar10 = plVar8;
-          if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181daf360)) {
+          if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181e8f4a0)) {
             plVar10 = plVar9;
           }
           NGUITools.PlaySound(plVar10,0);
         }
-        LAB_180b6eab5:
-        if ((((*pStatics_2ee8 == 0) ||
-             (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        LAB_180927d85:
+        if ((((*pStatics_2a90 == 0) ||
+             (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
             (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
            ((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 == null ||
             (lVar3 = Transform.Find(lVar3,"Pic",0)) == null))) {
-        LAB_180b6f54e:
+        LAB_18092881e:
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
-        lVar3 = Component.GetComponent(lVar3,DAT_181d94478);
+        lVar3 = Component.GetComponent(lVar3,DAT_181e777b8);
         if ((this.buildingData == null) ||
            (lVar4 = AreaBuildingData.DataBase(this.buildingData,0)) == null)
-        goto LAB_180b6f54e;
+        goto LAB_18092881e;
         uVar7 = String.Concat("Textures/Background/",*(uint64 *)(lVar4 + 24),0);
-        uVar6 = DAT_181dc1928;
+        uVar6 = DAT_181ea1420;
         uVar6 = Type.GetTypeFromHandle(uVar6,0);
         plVar9 = (int64 *)Resources.Load(uVar7,uVar6,0);
-        if (lVar3 == null) goto LAB_180b6f54e;
-        if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181da4be8)) {
+        if (lVar3 == null) goto LAB_18092881e;
+        if ((plVar9 != (int64 *)0) && (*plVar9 == DAT_181e85028)) {
           plVar8 = plVar9;
         }
         Image.set_sprite(lVar3,plVar8,0);
-        if ((((*pStatics_2ee8 == 0) ||
-             (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if ((((*pStatics_2a90 == 0) ||
+             (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
             (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
            ((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 == null ||
-            (lVar3 = Transform.Find(lVar3,"Pic",0)) == null))) goto LAB_180b6f54e;
-        plVar8 = (int64 *)Component.GetComponent(lVar3,DAT_181d94478);
+            (lVar3 = Transform.Find(lVar3,"Pic",0)) == null))) goto LAB_18092881e;
+        plVar8 = (int64 *)Component.GetComponent(lVar3,DAT_181e777b8);
         local_58 = 0;
         uStack_50 = 0;
-        FUN_1809dcfa0(&local_58,0x3f800000,0x3f800000,0x3f800000,uVar11 & 0xffffffff00000000,0);
-        if (plVar8 == (int64 *)0) goto LAB_180b6f54e;
+        FUN_1807282e0(&local_58,0x3f800000,0x3f800000,0x3f800000,uVar11 & 0xffffffff00000000,0);
+        if (plVar8 == (int64 *)0) goto LAB_18092881e;
         local_68 = local_58;
         uStack_60 = (uint32)uStack_50;
         uStack_5c = uStack_50._4_4_;
         (**(code **)(*plVar8 + 0x2a8))(plVar8,&local_68,*(uint64 *)(*plVar8 + 0x2b0));
-        if (((*pStatics_2ee8 == 0) ||
-            (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if (((*pStatics_2a90 == 0) ||
+            (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
            ((lVar3 = GameObject.get_transform(lVar3,0), lVar3 == null ||
             ((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 == null ||
-             (lVar3 = Transform.Find(lVar3,"Pic",0)) == null))))) goto LAB_180b6f54e;
-        uVar6 = Component.GetComponent(lVar3,DAT_181d94478);
+             (lVar3 = Transform.Find(lVar3,"Pic",0)) == null))))) goto LAB_18092881e;
+        uVar6 = Component.GetComponent(lVar3,DAT_181e777b8);
         uVar6 = DOTweenModuleUI.DOFade(uVar6,0x3f800000,0x3ecccccd,0);
-        TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181dc1dc8);
-        if (((((*pStatics_2ee8 == 0) ||
-              (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        TweenSettingsExtensions.SetUpdate(uVar6,1,DAT_181ea5848);
+        if (((((*pStatics_2a90 == 0) ||
+              (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
              (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
             ((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 == null ||
              (lVar3 = Transform.Find(lVar3,"ExtraButtonGrid",0)) == null))) ||
-           (lVar3 = Transform.Find(lVar3,"StealButton",0)) == null) goto LAB_180b6f54e;
+           (lVar3 = Transform.Find(lVar3,"StealButton",0)) == null) goto LAB_18092881e;
         lVar3 = Component.get_gameObject(lVar3,0);
         if (((this.buildingData == null) ||
             (lVar4 = AreaBuildingData.DataBase(this.buildingData,0)) == null) ||
-           (lVar3 == null)) goto LAB_180b6f54e;
+           (lVar3 == null)) goto LAB_18092881e;
         GameObject.SetActive(lVar3,*(uint8 *)(lVar4 + 160),0);
-        if (((((*pStatics_2ee8 == 0) ||
-              (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if (((((*pStatics_2a90 == 0) ||
+              (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
              (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
             ((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 == null ||
              (lVar3 = Transform.Find(lVar3,"ExtraButtonGrid",0)) == null))) ||
-           (lVar3 = Transform.Find(lVar3,"StealButton",0)) == null) goto LAB_180b6f54e;
-        lVar3 = Component.GetComponent(lVar3,DAT_181d95578);
-        if (this.buildingData == null) goto LAB_180b6f54e;
+           (lVar3 = Transform.Find(lVar3,"StealButton",0)) == null) goto LAB_18092881e;
+        lVar3 = Component.GetComponent(lVar3,DAT_181e788b8);
+        if (this.buildingData == null) goto LAB_18092881e;
         local_res10[0] = AreaBuildingData.GetStealItemMaxLv(this.buildingData,0);
-        uVar6 = il2cpp_value_box(DAT_181d80430,local_res10);
+        uVar6 = il2cpp_value_box(DAT_181e60808,local_res10);
         uVar6 = String.Format("等级{0}",uVar6,0);
-        if (this.buildingData == null) goto LAB_180b6f54e;
+        if (this.buildingData == null) goto LAB_18092881e;
         uVar2 = AreaBuildingData.GetStealItemMaxLv(this.buildingData,0);
         uVar6 = GlobalData.GenerateRareLvColorText(uVar6,uVar2,0);
         uVar6 = String.Format("穿越迷宫后，可以窃取商店内一件<b>{0}</b>以下物品",uVar6,0);
-        if (lVar3 == null) goto LAB_180b6f54e;
+        if (lVar3 == null) goto LAB_18092881e;
         lVar3.TestBuildPlayer = uVar6;
-        if ((((*pStatics_2ee8 == 0) ||
-             (lVar3 = *(int64 *)(*pStatics_2ee8 + 72)) == null) ||
+        if ((((*pStatics_2a90 == 0) ||
+             (lVar3 = *(int64 *)(*pStatics_2a90 + 72)) == null) ||
             (lVar3 = GameObject.get_transform(lVar3,0)) == null) ||
            (((lVar3 = Transform.Find(lVar3,"BuildingUI",0), lVar3 == null ||
              (lVar3 = Transform.Find(lVar3,"ExtraButtonGrid",0)) == null) ||
-            (lVar3 = Transform.Find(lVar3,"RobButton",0)) == null))) goto LAB_180b6f54e;
+            (lVar3 = Transform.Find(lVar3,"RobButton",0)) == null))) goto LAB_18092881e;
         lVar3 = Component.get_gameObject(lVar3,0);
         if (((this.buildingData == null) ||
             (lVar4 = AreaBuildingData.DataBase(this.buildingData,0)) == null) ||
-           (lVar3 == null)) goto LAB_180b6f54e;
+           (lVar3 == null)) goto LAB_18092881e;
         GameObject.SetActive(lVar3,*(uint8 *)(lVar4 + 161),0);
         BuildingUIController.RefreshBuildingUI(this,0);
         BuildingUIController.GenerateBuildingButton(this,0);
-        if (this.buildingData == null) goto LAB_180b6f54e;
+        if (this.buildingData == null) goto LAB_18092881e;
         if (this.buildingData.belongHeroID == null) {
           if (GameController._instance == null) throw; // [null/range check failed]
           cVar1 = GameController.CheckGameResultTrigger(GameController._instance,0);
@@ -372,7 +372,7 @@ public class BuildingUIController
           }
         }
         lVar3 = GameController._instance;
-        lVar4 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar4 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if ((lVar4 != null) && (lVar4 = *(int64 *)(lVar4 + 88)) != null) {
           uVar6 = Int32.ToString(lVar4 + 16,0);
           if (this.buildingData != null) {
@@ -398,11 +398,11 @@ public class BuildingUIController
                     if (cVar1) {
                       if (this.buildingData == null) throw; // [null/range check failed]
                       if (this.buildingData.buildingID == 15) {
-                        lVar3 = FUN_18046c0a0(0);
+                        lVar3 = FUN_1802106e0(0);
                         if (lVar3 == null) throw; // [null/range check failed]
                         cVar1 = GameController.CheckCatchBadFamePlayerEventHappen(lVar3,0x40000000,0);
                         if (cVar1) {
-                          lVar3 = FUN_18046c0a0(0);
+                          lVar3 = FUN_1802106e0(0);
                           if (lVar3 == null) throw; // [null/range check failed]
                           GameController.CatchBadFamePlayerEventHappen(lVar3,0);
                         }
@@ -417,8 +417,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DD8
-    // RVA   : 0xB626A0   Offset: 0xB61AA0   Length: 0x602
+    // Token : 0x6000DDB
+    // RVA   : 0x91B8C0   Offset: 0x91A6C0   Length: 0x602
     public void CheckEnterBuildingSpePlot()
     {
         bool cVar1;
@@ -428,23 +428,23 @@ public class BuildingUIController
         long lVar5;
         ulong uVar6;
         if (this.buildingData == null) throw; // [null/range check failed]
-        if (this.buildingData.buildingID != null) goto LAB_180b62a14;
+        if (this.buildingData.buildingID != null) goto LAB_18091bc34;
         if (((GameController._instance == null) ||
             (lVar2 = GameController._instance.worldData) == null) ||
            (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
         if (!lVar2.hour) {
           cVar1 = GameController.MeetCondition("我",0,0);
-          if (!cVar1) goto LAB_180b62a14;
-          lVar2 = FUN_18046c0a0(0);
+          if (!cVar1) goto LAB_18091bc34;
+          lVar2 = FUN_1802106e0(0);
           if ((lVar2 == null) || (lVar2.villageAreaID == null)) throw; // [null/range check failed]
           if (*(char *)(lVar2.villageAreaID + 184) == false) {
-            lVar2 = FUN_18046c0a0(0);
+            lVar2 = FUN_1802106e0(0);
             if (((lVar2 != null) && (lVar2.villageAreaID != null)) &&
                (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) != null) {
               if (*(int64 *)(lVar2 + 0x2e0) == 0) {
                 return;
               }
-              lVar2 = FUN_18046c400(0);
+              lVar2 = FUN_180210a70(0);
               if (lVar2 != null) {
                 PlotController.AddAskForceMissionPlot(lVar2,0);
                 return;
@@ -452,15 +452,15 @@ public class BuildingUIController
             }
             throw; // [null/range check failed]
           }
-          lVar2 = FUN_18046c400(0);
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar2 = FUN_180210a70(0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           if (lVar3 == null) throw; // [null/range check failed]
-          FUN_18181e6b0(lVar3,"参加会议;EnterMeeting",DAT_181da3d70);
+          FUN_18175de30(lVar3,"参加会议;EnterMeeting",DAT_181e86370);
           uVar4 = new SinglePlotData("哎呀，会议好像已经开始了，得赶快入座才行。",lVar3,1,0,3,"0",1,0,0);
         }
         else {
-        LAB_180b62a14:
+        LAB_18091bc34:
           if (this.buildingData == null) throw; // [null/range check failed]
           if (this.buildingData.buildingID != 4) {
             return;
@@ -475,20 +475,20 @@ public class BuildingUIController
           if (!cVar1) {
             return;
           }
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           if ((lVar2 == null) || (lVar2.villageAreaID == null)) throw; // [null/range check failed]
           if (*(char *)(lVar2.villageAreaID + 185) == false) {
             return;
           }
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           if ((lVar2 == null) || (lVar2.villageAreaID == null)) throw; // [null/range check failed]
           *(uint8 *)(lVar2.villageAreaID + 185) = 0;
-          lVar2 = FUN_18046c400(0);
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar2 = FUN_180210a70(0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           if (lVar3 == null) throw; // [null/range check failed]
-          FUN_18181e6b0(lVar3,"参加宴会;JoinForceParty",DAT_181da3d70);
-          lVar5 = FUN_18046c0a0(0);
+          FUN_18175de30(lVar3,"参加宴会;JoinForceParty",DAT_181e86370);
+          lVar5 = FUN_1802106e0(0);
           if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
               (lVar5 = WorldData.Player()) == null) ||
              (lVar5 = HeroData.GetForceLeader(lVar5)) == null) throw; // [null/range check failed]
@@ -501,8 +501,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DD9
-    // RVA   : 0xB62240   Offset: 0xB61640   Length: 0x45B
+    // Token : 0x6000DDC
+    // RVA   : 0x91B460   Offset: 0x91A260   Length: 0x45B
     public void CheckEnterBuildingMission()
     {
         int iVar1;
@@ -515,62 +515,62 @@ public class BuildingUIController
           if ((((GameController._instance == null) ||
                (lVar2 = GameController._instance.worldData) == null) ||
               (lVar2 = WorldData.Player(lVar2,0)) == null) || (*(int64 *)(lVar2 + 0x2e8) == 0))
-          goto LAB_180b62676;
+          goto LAB_18091b896;
           if (*(int *)(*(int64 *)(lVar2 + 0x2e8) + 24) <= iVar5) {
             return;
           }
-          lVar2 = FUN_18046c0a0(0);
+          lVar2 = FUN_1802106e0(0);
           if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
              ((lVar2 = WorldData.Player(lVar2.villageAreaID,0), lVar2 == null ||
               (((*(int64 *)(lVar2 + 0x2e8) == 0 ||
-                (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x2e8),iVar5,DAT_181d94ca0)) == null) ||
-               (lVar2 = lVar2.WorldEventDatasSaveRecord) == null))))) goto LAB_180b62676;
+                (lVar2 = FUN_1800024b0(*(int64 *)(lVar2 + 0x2e8),iVar5,DAT_181e76ee0)) == null) ||
+               (lVar2 = lVar2.WorldEventDatasSaveRecord) == null))))) goto LAB_18091b896;
           if (lVar2.cityAreaID == null) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
           }
           lVar2 = *(int64 *)(lVar2.chapter + 32);
-          if (lVar2 == null) goto LAB_180b62676;
+          if (lVar2 == null) goto LAB_18091b896;
           if (lVar2.forceAreaID == 4) {
-            lVar2 = FUN_18046c0a0(0);
+            lVar2 = FUN_1802106e0(0);
             if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                ((lVar2 = WorldData.Player(lVar2.villageAreaID,0), lVar2 == null ||
                 (((*(int64 *)(lVar2 + 0x2e8) == 0 ||
-                  (lVar2 = FUN_180002f80(*(int64 *)(lVar2 + 0x2e8),iVar5,DAT_181d94ca0)) == null)
-                 || (lVar2 = lVar2.WorldEventDatasSaveRecord) == null))))) goto LAB_180b62676;
+                  (lVar2 = FUN_1800024b0(*(int64 *)(lVar2 + 0x2e8),iVar5,DAT_181e76ee0)) == null)
+                 || (lVar2 = lVar2.WorldEventDatasSaveRecord) == null))))) goto LAB_18091b896;
             if (lVar2.cityAreaID == null) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
             }
             lVar2 = *(int64 *)(lVar2.chapter + 32);
-            if (lVar2 == null) goto LAB_180b62676;
+            if (lVar2 == null) goto LAB_18091b896;
             lVar2 = lVar2.Areas;
-            lVar3 = FUN_1800d60b0(DAT_181da1058,1);
-            if (lVar3 == null) goto LAB_180b62676;
+            lVar3 = FUN_1801dfd90(DAT_181e81128,1);
+            if (lVar3 == null) goto LAB_18091b896;
             if (*(int *)(lVar3 + 24) == 0) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             *(uint16 *)(lVar3 + 32) = 58;
-            if ((lVar2 == null) || (lVar2 = String.Split(lVar2,lVar3,0)) == null) goto LAB_180b62676;
+            if ((lVar2 == null) || (lVar2 = String.Split(lVar2,lVar3,0)) == null) goto LAB_18091b896;
             if (lVar2.cityAreaID == 2) {
               iVar1 = Int32.Parse(lVar2.villageAreaID);
-              lVar3 = FUN_18046bac0(0);
-              if ((lVar3 == null) || (*(int64 *)(lVar3 + 88) == 0)) goto LAB_180b62676;
+              lVar3 = FUN_180210060(0);
+              if ((lVar3 == null) || (*(int64 *)(lVar3 + 88) == 0)) goto LAB_18091b896;
               if (iVar1 == *(int *)(*(int64 *)(lVar3 + 88) + 16)) {
                 if (lVar2.cityAreaID < 2) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
                 iVar1 = Int32.Parse(lVar2.forceAreaID);
-                if (this.buildingData == null) goto LAB_180b62676;
+                if (this.buildingData == null) goto LAB_18091b896;
                 if (iVar1 == this.buildingData.buildingID) {
-                  lVar2 = FUN_18046c400(0);
-                  lVar3 = FUN_18046c0a0(0);
+                  lVar2 = FUN_180210a70(0);
+                  lVar3 = FUN_1802106e0(0);
                   if (((((lVar3 != null) && (*(int64 *)(lVar3 + 32) != 0)) &&
                        (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) != null) &&
                       ((*(int64 *)(lVar3 + 0x2e8) != 0 &&
-                       (lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x2e8),iVar5,DAT_181d94ca0),
+                       (lVar3 = FUN_1800024b0(*(int64 *)(lVar3 + 0x2e8),iVar5,DAT_181e76ee0),
                        lVar3 != null)))) && (lVar3 = *(int64 *)(lVar3 + 120)) != null) {
                     if (*(int *)(lVar3 + 24) == 0) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -581,9 +581,9 @@ public class BuildingUIController
                       return;
                     }
                   }
-        LAB_180b62676:
+        LAB_18091b896:
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
               }
             }
@@ -592,11 +592,11 @@ public class BuildingUIController
         } while( true );
     }
 
-    // Token : 0x6000DDA
-    // RVA   : 0xB6CA90   Offset: 0xB6BE90   Length: 0x7B0
+    // Token : 0x6000DDD
+    // RVA   : 0x925D60   Offset: 0x924B60   Length: 0x7B0
     public void RefreshBuildingUI()
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         uint uVar1;
         bool cVar2;
         byte uVar3;
@@ -612,7 +612,7 @@ public class BuildingUIController
             (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
            ((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 != null &&
             (lVar4 = Transform.Find(lVar4,"Name",0)) != null))) {
-          uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+          uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
           if ((this.buildingData != null) &&
              (lVar4 = AreaBuildingData.DataBase(this.buildingData,0)) != null) {
             uVar6 = *(uint64 *)(lVar4 + 24);
@@ -622,7 +622,7 @@ public class BuildingUIController
                 (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
                ((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 != null &&
                 (lVar4 = Transform.Find(lVar4,"Level",0)) != null))) {
-              uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+              uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
               if (this.buildingData != null) {
                 uVar1 = this.buildingData.lv;
                 uVar6 = GlobalData.GetNumText(uVar1,0);
@@ -633,7 +633,7 @@ public class BuildingUIController
                     (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
                    ((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 != null &&
                     (lVar4 = Transform.Find(lVar4,"Produce",0)) != null))) {
-                  uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+                  uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
                   if (this.buildingData != null) {
                     uVar6 = AreaBuildingData.GetBuildingText(this.buildingData,0,0,0,0);
                     LTLocalization.SetText(uVar5,uVar6,0);
@@ -642,7 +642,7 @@ public class BuildingUIController
                        && ((lVar4 = GameObject.get_transform(lVar4,0), lVar4 != null &&
                            ((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 != null &&
                             (lVar4 = Transform.Find(lVar4,"Describe",0)) != null))))) {
-                      uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+                      uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
                       if ((this.buildingData != null) &&
                          (lVar4 = AreaBuildingData.DataBase(this.buildingData,0)) != null
                          ) {
@@ -651,13 +651,13 @@ public class BuildingUIController
                           cVar2 = AreaBuildingData.BuildingAvailable(this.buildingData,0);
                           uVar8 = "";
                           if (!cVar2) {
-                            uVar8 = *(uint64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x2d0);
+                            uVar8 = *(uint64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x2d8);
                             if (this.buildingData == null) {
                           // WARNING: Subroutine does not return
-                              FUN_1800d6620();
+                              FUN_1801e0300();
                             }
                             local_res8[0] = this.buildingData.enemyMonth;
-                            uVar7 = il2cpp_value_box(DAT_181d80430,local_res8);
+                            uVar7 = il2cpp_value_box(DAT_181e60808,local_res8);
                             uVar8 = String.Format("\n{0}<b>作恶导致禁用{1}个月</b></color>",uVar8,uVar7,0);
                           }
                           uVar6 = String.Concat(uVar6,uVar8,0);
@@ -668,7 +668,7 @@ public class BuildingUIController
                              && (((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 != null &&
                                   (lVar4 = Transform.Find(lVar4,"ExtraButtonGrid",0)) != null) &&
                                  (lVar4 = Transform.Find(lVar4,"StealButton",0)) != null))) {
-                            lVar4 = Component.GetComponent(lVar4,DAT_181d93778);
+                            lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8);
                             if ((this.buildingData != null) &&
                                (uVar3 = AreaBuildingData.BuildingAvailable
                                                   (this.buildingData,0), lVar4 != null)) {
@@ -680,7 +680,7 @@ public class BuildingUIController
                                   ((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 != null &&
                                    (lVar4 = Transform.Find(lVar4,"ExtraButtonGrid",0)) != null))) &&
                                  (lVar4 = Transform.Find(lVar4,"RobButton",0)) != null) {
-                                lVar4 = Component.GetComponent(lVar4,DAT_181d93778);
+                                lVar4 = Component.GetComponent(lVar4,DAT_181e76ab8);
                                 if ((this.buildingData != null) &&
                                    (uVar3 = AreaBuildingData.BuildingAvailable
                                                       (this.buildingData,0), lVar4 != null)) {
@@ -693,7 +693,7 @@ public class BuildingUIController
                                       (lVar4 = GameObject.get_transform(lVar4,0)) != null) &&
                                      (((lVar4 = Transform.Find(lVar4,"BuildingUI",0), lVar4 != null &&
                                        (lVar4 = Transform.Find(lVar4,"ExtraButtonGrid",0)) != null) &&
-                                      (lVar4 = Component.GetComponent(lVar4,DAT_181d96978)) != null))
+                                      (lVar4 = Component.GetComponent(lVar4,DAT_181e79d38)) != null))
                                      ) {
                                     UIGrid.set_repositionNow(lVar4,1,0);
                                     return;
@@ -713,11 +713,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DDB
-    // RVA   : 0xB6D250   Offset: 0xB6C650   Length: 0x680
+    // Token : 0x6000DDE
+    // RVA   : 0x926520   Offset: 0x925320   Length: 0x680
     public void RefreshUpgradeButton()
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         int iVar1;
         bool cVar2;
         byte uVar3;
@@ -748,7 +748,7 @@ public class BuildingUIController
                    (lVar5 = AreaBuildingData.GetArea(this.buildingData,0)) == null)
                 throw; // [null/range check failed]
                 iVar1 = *(int *)(lVar5 + 112);
-                lVar5 = FUN_18046c0a0(0);
+                lVar5 = FUN_1802106e0(0);
                 if (((lVar5 == null) || (lVar5.destroyTimeLeft == null)) ||
                    (lVar5 = WorldData.Player(lVar5.destroyTimeLeft,0)) == null)
                 throw; // [null/range check failed]
@@ -768,28 +768,28 @@ public class BuildingUIController
                       if (9 < lVar5.lv) {
                         lVar5 = Transform.Find(lVar4,"Text");
                         if (lVar5 == null) throw; // [null/range check failed]
-                        uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+                        uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
                         LTLocalization.SetText(uVar6,"登峰造极",0);
-                        lVar5 = Component.GetComponent(lVar4,DAT_181d93778);
+                        lVar5 = Component.GetComponent(lVar4,DAT_181e76ab8);
                         if (lVar5 == null) throw; // [null/range check failed]
                         Selectable.set_interactable(lVar5,0,0);
-                        lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
+                        lVar4 = Component.GetComponent(lVar4,DAT_181e788b8);
                         uVar6 = "";
                         if (lVar4 == null) throw; // [null/range check failed]
                         puVar7 = (uint64 *)(lVar4 + 24);
                         *puVar7 = "";
-                        goto LAB_180b6d625;
+                        goto LAB_1809268f5;
                       }
                       lVar5 = Transform.Find(lVar4,"Text");
                       if (lVar5 == null) throw; // [null/range check failed]
-                      uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+                      uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
                       LTLocalization.SetText(uVar6,"升级",0);
-                      lVar5 = Component.GetComponent(lVar4,DAT_181d93778);
+                      lVar5 = Component.GetComponent(lVar4,DAT_181e76ab8);
                       if ((this.buildingData == null) ||
                          (uVar3 = AreaBuildingData.CanUpgrade(this.buildingData,0),
                          lVar5 == null)) throw; // [null/range check failed]
                       Selectable.set_interactable(lVar5,uVar3,0);
-                      lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
+                      lVar4 = Component.GetComponent(lVar4,DAT_181e788b8);
                       if ((this.buildingData == null) ||
                          (uVar6 = AreaBuildingData.GetUpgradeDescribe(this.buildingData,0),
                          lVar4 == null)) throw; // [null/range check failed]
@@ -797,45 +797,45 @@ public class BuildingUIController
                     else {
                       lVar5 = Transform.Find(lVar4,"Text");
                       if (lVar5 == null) {
-        LAB_180b6d8c5:
+        LAB_180926b95:
                           // WARNING: Subroutine does not return
-                        FUN_1800d6620();
+                        FUN_1801e0300();
                       }
-                      uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+                      uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
                       LTLocalization.SetText(uVar6,"升级中",0);
-                      lVar5 = Component.GetComponent(lVar4,DAT_181d93778);
-                      if (lVar5 == null) goto LAB_180b6d8c5;
+                      lVar5 = Component.GetComponent(lVar4,DAT_181e76ab8);
+                      if (lVar5 == null) goto LAB_180926b95;
                       Selectable.set_interactable(lVar5,0,0);
-                      lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
-                      if (this.buildingData == null) goto LAB_180b6d8c5;
+                      lVar4 = Component.GetComponent(lVar4,DAT_181e788b8);
+                      if (this.buildingData == null) goto LAB_180926b95;
                       local_res18[0] = this.buildingData.upgradeTimeLeft;
-                      uVar6 = il2cpp_value_box(DAT_181d80430,local_res18);
+                      uVar6 = il2cpp_value_box(DAT_181e60808,local_res18);
                       uVar6 = String.Format("剩余{0}天",uVar6,0);
-                      if (lVar4 == null) goto LAB_180b6d8c5;
+                      if (lVar4 == null) goto LAB_180926b95;
                     }
                   }
                   else {
                     lVar5 = Transform.Find(lVar4,"Text");
                     if (lVar5 == null) {
-        LAB_180b6d8cb:
+        LAB_180926b9b:
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
-                    uVar6 = Component.GetComponent(lVar5,DAT_181d96178);
+                    uVar6 = Component.GetComponent(lVar5,DAT_181e79538);
                     LTLocalization.SetText(uVar6,"建造中",0);
-                    lVar5 = Component.GetComponent(lVar4,DAT_181d93778);
-                    if (lVar5 == null) goto LAB_180b6d8cb;
+                    lVar5 = Component.GetComponent(lVar4,DAT_181e76ab8);
+                    if (lVar5 == null) goto LAB_180926b9b;
                     Selectable.set_interactable(lVar5,0,0);
-                    lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
-                    if (this.buildingData == null) goto LAB_180b6d8cb;
+                    lVar4 = Component.GetComponent(lVar4,DAT_181e788b8);
+                    if (this.buildingData == null) goto LAB_180926b9b;
                     local_res18[0] = this.buildingData.buildTimeLeft;
-                    uVar6 = il2cpp_value_box(DAT_181d80430,local_res18);
+                    uVar6 = il2cpp_value_box(DAT_181e60808,local_res18);
                     uVar6 = String.Format("剩余{0}天",uVar6,0);
-                    if (lVar4 == null) goto LAB_180b6d8cb;
+                    if (lVar4 == null) goto LAB_180926b9b;
                   }
                   puVar7 = (uint64 *)(lVar4 + 24);
                   *puVar7 = uVar6;
-        LAB_180b6d625:
+        LAB_1809268f5:
                   il2cpp_internal(puVar7,uVar6);
                   return;
                 }
@@ -856,8 +856,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DDC
-    // RVA   : 0xB7D0D0   Offset: 0xB7C4D0   Length: 0x16B
+    // Token : 0x6000DDF
+    // RVA   : 0x936380   Offset: 0x935180   Length: 0x16B
     public void UpgradeButtonClicked()
     {
         int iVar1;
@@ -866,7 +866,7 @@ public class BuildingUIController
         ulong uVar4;
         ulong uVar5;
         uint[] local_res8 = new uint[2];
-        lVar2 = **(int64 **)(DAT_181da8728 + 184);
+        lVar2 = **(int64 **)(DAT_181e88b68 + 184);
         if (this.buildingData != null) {
           uVar3 = AreaBuildingData.Name(this.buildingData,0,0);
           if (this.buildingData != null) {
@@ -874,7 +874,7 @@ public class BuildingUIController
             uVar4 = GlobalData.GetNumText(iVar1 + 1,0);
             if (this.buildingData != null) {
               local_res8[0] = AreaBuildingData.GetUpgradeTime(this.buildingData,0);
-              uVar5 = il2cpp_value_box(DAT_181d80430,local_res8);
+              uVar5 = il2cpp_value_box(DAT_181e60808,local_res8);
               uVar3 = String.Format("确认要将{0}提升至{1}级吗？\n大约需要{2}天时间。",uVar3,uVar4,uVar5,0);
               if (lVar2 != null) {
                 SureMenu.CallSureMenu(lVar2,uVar3,"SureUpgradeBuliding",0,"UIController",0);
@@ -885,18 +885,18 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DDD
-    // RVA   : 0xB7CEF0   Offset: 0xB7C2F0   Length: 0x130
+    // Token : 0x6000DE0
+    // RVA   : 0x9361A0   Offset: 0x934FA0   Length: 0x130
     public void SureUpgradeBuliding()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac470 + 184) + 16);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e8c5b8 + 184) + 16);
         if (lVar1 != null) {
           AreaBuildController.PlayerUpgradeBuilding(lVar1,this.buildingData,0);
           BuildingUIController.RefreshUpgradeButton(this,0);
           plVar2 = (int64 *)Resources.Load("Sound/SoundEffect/WoodWork",0);
           plVar3 = (int64 *)0;
-          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181daf360)) {
+          if ((plVar2 != (int64 *)0) && (*plVar2 == DAT_181e8f4a0)) {
             plVar3 = plVar2;
           }
           NGUITools.PlaySound(plVar3,0);
@@ -904,12 +904,12 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DDE
-    // RVA   : 0xB66330   Offset: 0xB65730   Length: 0x459
+    // Token : 0x6000DE1
+    // RVA   : 0x91F600   Offset: 0x91E400   Length: 0x459
     public void HideBuildingUI()
     {
-        var pStatics_2ee8 = *(int64*)(DAT_181d72ee8 + 184);
-        var pStatics_dd10 = *(int64*)(DAT_181dadd10 + 184);
+        var pStatics_2a90 = *(int64*)(DAT_181e52a90 + 184);
+        var pStatics_e150 = *(int64*)(DAT_181e8e150 + 184);
         int iVar1;
         long lVar2;
         long lVar3;
@@ -918,17 +918,17 @@ public class BuildingUIController
         uint local_18;
         uint local_14;
         uint local_10;
-        if (*pStatics_dd10 == 0) throw; // [null/range check failed]
-        if (*(char *)(*pStatics_dd10 + 89) != false) {
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d72d50 + 184) + 8);
+        if (*pStatics_e150 == 0) throw; // [null/range check failed]
+        if (*(char *)(*pStatics_e150 + 89) != false) {
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181e528f8 + 184) + 8);
           if ((lVar2 == null) || (lVar2 = *(int64 *)(lVar2 + 16)) == null) throw; // [null/range check failed]
           iVar1 = PlayerPrefDictionary.GetInt(lVar2,"SkipTutorial",0);
           if (iVar1 != 1) {
-            lVar2 = FUN_18046c400(0);
-            lVar3 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar3,DAT_181da3bf0);
+            lVar2 = FUN_180210a70(0);
+            lVar3 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar3,DAT_181e861f0);
             if (lVar3 != null) {
-              FUN_18181e6b0(lVar3,"不敢不敢;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar3,"不敢不敢;HideInteractUI",DAT_181e86370);
               uVar4 = new SinglePlotData("#PlayerName#你要去哪儿？此处的修炼尚未完成呢。\n你若敢偷奸耍滑，趁机开溜，可别怪我翻脸不认人！",lVar3,5,"顾游年",3,"0",0,0,0);
               if (lVar2 != null) {
                 PlotController.AddPlot(lVar2,uVar4,0);
@@ -941,8 +941,8 @@ public class BuildingUIController
         this.buildingData = 0;
         uVar4 = this.buildingButtonGrid;
         GlobalData.DeleteAllChild(uVar4,0);
-        if ((*pStatics_2ee8 != 0) &&
-           (lVar2 = *(int64 *)(*pStatics_2ee8 + 72)) != null) {
+        if ((*pStatics_2a90 != 0) &&
+           (lVar2 = *(int64 *)(*pStatics_2a90 + 72)) != null) {
           lVar2 = GameObject.get_transform(lVar2,0);
           if (lVar2 != null) {
             uVar4 = Transform.Find(lVar2,"BuildingUI",0);
@@ -950,18 +950,18 @@ public class BuildingUIController
             local_14 = 0x3f800000;
             local_10 = 0x3f800000;
             uVar4 = ShortcutExtensions.DOScale(uVar4,&local_18,0x3e4ccccd,0);
-            uVar5 = new OnTooltipCB(this,DAT_181d8d708,0);
-            uVar4 = TweenSettingsExtensions.OnComplete(uVar4,uVar5,DAT_181dc0380);
-            TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1f60);
-            if ((*pStatics_2ee8 != 0) &&
-               (lVar2 = *(int64 *)(*pStatics_2ee8 + 72)) != null) {
+            uVar5 = new OnTooltipCB(this,DAT_181e70a48,0);
+            uVar4 = TweenSettingsExtensions.OnComplete(uVar4,uVar5,DAT_181ea3dc0);
+            TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181ea59e0);
+            if ((*pStatics_2a90 != 0) &&
+               (lVar2 = *(int64 *)(*pStatics_2a90 + 72)) != null) {
               lVar2 = GameObject.get_transform(lVar2,0);
               if (lVar2 != null) {
                 lVar2 = Transform.Find(lVar2,"BlackBackground",0);
                 if (lVar2 != null) {
-                  uVar4 = Component.GetComponent(lVar2,DAT_181d94478);
+                  uVar4 = Component.GetComponent(lVar2,DAT_181e777b8);
                   uVar4 = DOTweenModuleUI.DOFade(uVar4,0,0x3e4ccccd,0);
-                  TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181dc1dc8);
+                  TweenSettingsExtensions.SetUpdate(uVar4,1,DAT_181ea5848);
                   return;
                 }
               }
@@ -970,11 +970,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DDF
-    // RVA   : 0xB63BD0   Offset: 0xB62FD0   Length: 0x151
+    // Token : 0x6000DE2
+    // RVA   : 0x91CEA0   Offset: 0x91BCA0   Length: 0x151
     public void DisactiveBuildingPanel()
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         long lVar1;
         if ((*pStatics != 0) &&
            (lVar1 = *(int64 *)(*pStatics + 72)) != null) {
@@ -989,7 +989,7 @@ public class BuildingUIController
                 if (lVar1 != null) {
                   lVar1 = Transform.Find(lVar1,"Scrollbar Vertical",0);
                   if (lVar1 != null) {
-                    lVar1 = Component.GetComponent(lVar1,DAT_181d95278);
+                    lVar1 = Component.GetComponent(lVar1,DAT_181e785b8);
                     if (lVar1 != null) {
                       Scrollbar.set_value(lVar1,0x3f800000,0);
                       return;
@@ -1002,11 +1002,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DE0
-    // RVA   : 0xB66110   Offset: 0xB65510   Length: 0x21D
+    // Token : 0x6000DE3
+    // RVA   : 0x91F3E0   Offset: 0x91E1E0   Length: 0x21D
     public void HideBuildingFinished()
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         long lVar1;
         byte[] local_18 = new byte[24];
         if ((((*pStatics != 0) &&
@@ -1027,7 +1027,7 @@ public class BuildingUIController
                 ((lVar1 = Transform.Find(lVar1,"BuildingUI",0), lVar1 != null &&
                  (lVar1 = Transform.Find(lVar1,"BuildingButtonScrollView",0)) != null))) &&
                ((lVar1 = Transform.Find(lVar1,"Scrollbar Vertical",0), lVar1 != null &&
-                (lVar1 = Component.GetComponent(lVar1,DAT_181d95278)) != null))) {
+                (lVar1 = Component.GetComponent(lVar1,DAT_181e785b8)) != null))) {
               Scrollbar.set_value(lVar1,0x3f800000,0);
               return;
             }
@@ -1035,11 +1035,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DE1
-    // RVA   : 0xB64940   Offset: 0xB63D40   Length: 0x1E3
+    // Token : 0x6000DE4
+    // RVA   : 0x91DC10   Offset: 0x91CA10   Length: 0x1E3
     public void GenerateBuildingButton()
     {
-        var pStatics = *(int64*)(DAT_181d72ee8 + 184);
+        var pStatics = *(int64*)(DAT_181e52a90 + 184);
         long lVar1;
         uint uVar2;
         lVar1 = this.buildingData;
@@ -1066,15 +1066,15 @@ public class BuildingUIController
               ((lVar1 = Transform.Find(lVar1,"BuildingUI",0), lVar1 != null &&
                (lVar1 = Transform.Find(lVar1,"BuildingButtonScrollView",0)) != null))) &&
              ((lVar1 = Transform.Find(lVar1,"Scrollbar Vertical",0), lVar1 != null &&
-              (lVar1 = Component.GetComponent(lVar1,DAT_181d95278)) != null))) {
+              (lVar1 = Component.GetComponent(lVar1,DAT_181e785b8)) != null))) {
             Scrollbar.set_value(lVar1,0x3f800000,0);
             return;
           }
         }
     }
 
-    // Token : 0x6000DE2
-    // RVA   : 0xB63830   Offset: 0xB62C30   Length: 0x397
+    // Token : 0x6000DE5
+    // RVA   : 0x91CA50   Offset: 0x91B850   Length: 0x397
     public void CreateBuildingButton(AreaBuildingChoice buildingChoice)
     {
         bool cVar1;
@@ -1082,10 +1082,10 @@ public class BuildingUIController
         ulong uVar3;
         long lVar4;
         ulong uVar5;
-        if (**(int **)(DAT_181d73d40 + 184) == 2) {
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 16);
+        if (**(int **)(DAT_181e538e8 + 184) == 2) {
+          lVar4 = *(int64 *)(*(int64 *)(DAT_181e942d8 + 184) + 16);
           if ((buildingChoice == null) || (lVar4 == null)) throw; // [null/range check failed]
-          cVar1 = FUN_18181ea10(lVar4,*(uint64 *)(buildingChoice + 16),DAT_181da3e70);
+          cVar1 = FUN_18175e190(lVar4,*(uint64 *)(buildingChoice + 16),DAT_181e86470);
           if (cVar1) {
             return;
           }
@@ -1103,13 +1103,13 @@ public class BuildingUIController
           uVar3 = GlobalData.AddChild(uVar3,uVar5,0);
           this.newButton = uVar3;
           if ((this.newButton != null) &&
-             (lVar4 = GameObject.GetComponent(this.newButton,DAT_181dc7b90)) != null)
+             (lVar4 = GameObject.GetComponent(this.newButton,DAT_181e53c28)) != null)
           {
             *(int64 *)(lVar4 + 24) = buildingChoice;
             if ((this.newButton != null) &&
                ((lVar4 = GameObject.get_transform(this.newButton,0), lVar4 != null &&
                 (lVar4 = Transform.Find(lVar4,"Text",0)) != null))) {
-              uVar5 = Component.GetComponent(lVar4,DAT_181d96178);
+              uVar5 = Component.GetComponent(lVar4,DAT_181e79538);
               uVar3 = *(uint64 *)(buildingChoice + 16);
               LTLocalization.SetText(uVar5,uVar3,0);
               uVar3 = *(uint64 *)(buildingChoice + 48);
@@ -1117,7 +1117,7 @@ public class BuildingUIController
               uVar5 = this.buildingData;
               cVar1 = GameController.MeetCondition(uVar3,uVar2,uVar5,0);
               if (this.newButton != null) {
-                lVar4 = GameObject.GetComponent(this.newButton,DAT_181dc7c18);
+                lVar4 = GameObject.GetComponent(this.newButton,DAT_181e53cb0);
                 if (!cVar1) {
                   uVar2 = 0;
                 }
@@ -1129,7 +1129,7 @@ public class BuildingUIController
                   Selectable.set_interactable(lVar4,uVar2,0);
                   if ((this.newButton != null) &&
                      (lVar4 = GameObject.get_transform(this.newButton,0)) != null) {
-                    lVar4 = Component.GetComponent(lVar4,DAT_181d95578);
+                    lVar4 = Component.GetComponent(lVar4,DAT_181e788b8);
                     if (!cVar1) {
                       uVar3 = *(uint64 *)(buildingChoice + 48);
                       uVar3 = GameController.GetConditionDescribe(uVar3,0);
@@ -1149,32 +1149,32 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DE3
-    // RVA   : 0xB67DA0   Offset: 0xB671A0   Length: 0xAC
+    // Token : 0x6000DE6
+    // RVA   : 0x921070   Offset: 0x91FE70   Length: 0xAC
     public void InteractOtherForce()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.StartInteractOtherForce(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000DE4
-    // RVA   : 0xB67E50   Offset: 0xB67250   Length: 0xAC
+    // Token : 0x6000DE7
+    // RVA   : 0x921120   Offset: 0x91FF20   Length: 0xAC
     public void LeaderInteractOtherForce()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.StartLeaderInteractOtherForce(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000DE5
-    // RVA   : 0xB64EC0   Offset: 0xB642C0   Length: 0x371
+    // Token : 0x6000DE8
+    // RVA   : 0x91E190   Offset: 0x91CF90   Length: 0x371
     public string GenerateForceNPCString(string name)
     {
         long lVar1;
@@ -1183,20 +1183,20 @@ public class BuildingUIController
         lVar1 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar1 == null) throw; // [null/range check failed]
         if (*(int64 *)(lVar1 + 88) == 0) {
-        LAB_180b650ae:
+        LAB_18091e37e:
           uVar2 = 0xffffffff;
         }
         else {
           lVar1 = PlotController.SpringFestivelRewardLvTalkText;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 88)) == null) throw; // [null/range check failed]
           lVar1 = AreaData.GetForce(lVar1,0);
-          if (lVar1 == null) goto LAB_180b650ae;
-          lVar1 = FUN_18046bac0(0);
+          if (lVar1 == null) goto LAB_18091e37e;
+          lVar1 = FUN_180210060(0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 88) == 0)) throw; // [null/range check failed]
           lVar1 = AreaData.GetForce(*(int64 *)(lVar1 + 88),0);
           if (lVar1 == null) throw; // [null/range check failed]
-          if (*(int *)(lVar1 + 32) == -99) goto LAB_180b650ae;
-          lVar1 = FUN_18046bac0(0);
+          if (*(int *)(lVar1 + 32) == -99) goto LAB_18091e37e;
+          lVar1 = FUN_180210060(0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 88) == 0)) throw; // [null/range check failed]
           lVar1 = AreaData.GetForce(*(int64 *)(lVar1 + 88),0);
           if (lVar1 == null) throw; // [null/range check failed]
@@ -1205,15 +1205,15 @@ public class BuildingUIController
         lVar1 = PlotController.SpringFestivelRewardLvTalkText;
         if (lVar1 == null) throw; // [null/range check failed]
         if (*(int64 *)(lVar1 + 88) == 0) {
-        LAB_180b651f2:
+        LAB_18091e4c2:
           uVar3 = 0xffffffff;
         }
         else {
           lVar1 = PlotController.SpringFestivelRewardLvTalkText;
           if ((lVar1 == null) || (lVar1 = *(int64 *)(lVar1 + 88)) == null) throw; // [null/range check failed]
           lVar1 = AreaData.GetForce(lVar1,0);
-          if (lVar1 == null) goto LAB_180b651f2;
-          lVar1 = FUN_18046bac0(0);
+          if (lVar1 == null) goto LAB_18091e4c2;
+          lVar1 = FUN_180210060(0);
           if ((lVar1 == null) || (*(int64 *)(lVar1 + 88) == 0)) throw; // [null/range check failed]
           uVar3 = *(uint32 *)(*(int64 *)(lVar1 + 88) + 112);
         }
@@ -1223,8 +1223,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DE6
-    // RVA   : 0xB64B30   Offset: 0xB63F30   Length: 0x38F
+    // Token : 0x6000DE9
+    // RVA   : 0x91DE00   Offset: 0x91CC00   Length: 0x38F
     public string GenerateBuildingNPCString(string name, int skinID, int forceID, int forceLv)
     {
         void BuildingUIController.GenerateBuildingNPCString
@@ -1238,23 +1238,23 @@ public class BuildingUIController
         float local_res10 [2];
         int local_28;
         uint32 local_24 [3];
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da4138,6);
+        plVar1 = (int64 *)FUN_1801dfd90(DAT_181e84278,6);
         if (plVar1 == (int64 *)0) {
                           // WARNING: Subroutine does not return
-          FUN_1800d6620();
+          FUN_1801e0300();
         }
         if (name != null) {
           lVar2 = il2cpp_internal(name,*(uint64 *)(*plVar1 + 64));
           if (lVar2 == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
         }
         if ((int)plVar1[3] == 0) {
           uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar4,0);
+          FUN_1801e02d0(uVar4,0);
         }
         plVar1[4] = name;
         il2cpp_internal(plVar1 + 4,name);
@@ -1272,30 +1272,30 @@ public class BuildingUIController
           if (lVar3 == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
         }
         if (*(uint32 *)(plVar1 + 3) < 2) {
           uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar4,0);
+          FUN_1801e02d0(uVar4,0);
         }
         plVar1[5] = lVar2;
         il2cpp_internal(plVar1 + 5,lVar2);
-        local_res10[0] = (float)FUN_180d96040(20);
-        lVar2 = il2cpp_value_box(DAT_181d80430,local_res10);
+        local_res10[0] = (float)FUN_180af1860(20);
+        lVar2 = il2cpp_value_box(DAT_181e60808,local_res10);
         if (lVar2 != null) {
           lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar1 + 64));
           if (lVar3 == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
         }
         if (*(uint32 *)(plVar1 + 3) < 3) {
           uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar4,0);
+          FUN_1801e02d0(uVar4,0);
         }
         plVar1[6] = lVar2;
         il2cpp_internal(plVar1 + 6,lVar2);
@@ -1310,43 +1310,43 @@ public class BuildingUIController
         else {
           local_res10[0] = (float)forceLv;
         }
-        lVar2 = il2cpp_value_box(DAT_181da22f0,local_res10);
+        lVar2 = il2cpp_value_box(DAT_181e82730,local_res10);
         if (lVar2 != null) {
           lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar1 + 64));
           if (lVar3 == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
         }
         if (*(uint32 *)(plVar1 + 3) < 4) {
           uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar4,0);
+          FUN_1801e02d0(uVar4,0);
         }
         plVar1[7] = lVar2;
         il2cpp_internal(plVar1 + 7,lVar2);
         local_28 = skinID;
-        lVar2 = il2cpp_value_box(DAT_181d80430,&local_28);
+        lVar2 = il2cpp_value_box(DAT_181e60808,&local_28);
         if (lVar2 != null) {
           lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar1 + 64));
           if (lVar3 == null) {
             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar4,0);
+            FUN_1801e02d0(uVar4,0);
           }
         }
         if (4 < *(uint32 *)(plVar1 + 3)) {
           plVar1[8] = lVar2;
           il2cpp_internal(plVar1 + 8,lVar2);
           local_24[0] = forceID;
-          lVar2 = il2cpp_value_box(DAT_181d80430,local_24);
+          lVar2 = il2cpp_value_box(DAT_181e60808,local_24);
           if (lVar2 != null) {
             lVar3 = il2cpp_internal(lVar2,*(uint64 *)(*plVar1 + 64));
             if (lVar3 == null) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
           }
           if (5 < *(uint32 *)(plVar1 + 3)) {
@@ -1357,26 +1357,31 @@ public class BuildingUIController
           }
           uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-          FUN_1800d65f0(uVar4,0);
+          FUN_1801e02d0(uVar4,0);
         }
         uVar4 = il2cpp_internal();
     }
 
-    // Token : 0x6000DE7
-    // RVA   : 0xB652B0   Offset: 0xB646B0   Length: 0xDA
+    // Token : 0x6000DEA
+    // RVA   : 0x91E580   Offset: 0x91D380   Length: 0xDE
     public float GetBuildingHeroLv()
     {
-        float fVar1;
+        int iVar1;
+        float fVar2;
         if (GameController._instance != null) {
-          fVar1 = (float)GameController.GetTimeDifficulty(GameController._instance,0);
-          if (this.buildingData != null) {
-            return ((float)this.buildingData.lv + fVar1) * 0.5 * 0.5;
+          fVar2 = (float)GameController.GetTimeDifficulty(GameController._instance,0);
+          if (this.buildingData == null) {
+            iVar1 = 0;
           }
+          else {
+            iVar1 = this.buildingData.lv;
+          }
+          return ((float)iVar1 + fVar2) * 0.5 * 0.5;
         }
     }
 
-    // Token : 0x6000DE8
-    // RVA   : 0xB61C80   Offset: 0xB61080   Length: 0x5B0
+    // Token : 0x6000DEB
+    // RVA   : 0x91AEA0   Offset: 0x919CA0   Length: 0x5B0
     public void BuyCityHouse()
     {
         long lVar2;
@@ -1404,44 +1409,44 @@ public class BuildingUIController
             lVar2 = BuildingUIController.PartyLvName;
             if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x108)) != null) {
               lVar2 = *(int64 *)(lVar2 + 64);
-              uVar3 = FUN_180228420(DAT_181d8b158);
+              uVar3 = FUN_1802100c0(DAT_181e6dc98);
               uVar3 = String.Format("少侠真是好眼光！这栋房产位于#AreaName#城内，\n交通便利，闹中取静，景观优雅，装饰奢华。\n日后孩子要去城中有名的学堂上课，也是方便得很呐！",uVar3,0);
               uVar9 = 0;
               uVar4 = BuildingUIController.GenerateBuildingNPCString
                                 (this,"地产商人",0xfffffffd,0xffffffff,CONCAT44(uVar7,0xffffffff),0)
               ;
-              uVar5 = il2cpp_internal(DAT_181da24f0);
+              uVar5 = il2cpp_internal(DAT_181e82930);
               uVar8 = CONCAT44(uVar9,3);
               SinglePlotData.ctor(uVar5,uVar3,0,5,uVar4,uVar8,"0",0,0,0);
               uVar7 = (uint32)((uint64)uVar8 >> 32);
               if (lVar2 != null) {
-                FUN_18181e6b0(lVar2,uVar5,DAT_181da1408);
+                FUN_18175de30(lVar2,uVar5,DAT_181e839b0);
                 lVar2 = BuildingUIController.PartyLvName;
                 if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x108)) != null) {
                   lVar2 = *(int64 *)(lVar2 + 64);
                   local_res18[0] = local_res8[0];
-                  uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+                  uVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
                   if (this.buildingData != null) {
                     local_res20[0] =
                          (float)AreaBuildingData.GetSelfHouseTotalAdd(this.buildingData,0);
                     local_res20[0] = local_res20[0] * 100.0;
-                    uVar4 = il2cpp_value_box(DAT_181da22f0,local_res20);
+                    uVar4 = il2cpp_value_box(DAT_181e82730,local_res20);
                     if (this.buildingData != null) {
                       local_38[0] = (float)AreaBuildingData.GetSelfHouseTotalAdd
                                                      (this.buildingData,0);
                       local_38[0] = local_38[0] * 5.0;
-                      uVar5 = il2cpp_value_box(DAT_181da22f0,local_38);
+                      uVar5 = il2cpp_value_box(DAT_181e82730,local_38);
                       uVar3 = String.Format("眼下这处房产正在打折，只需要{0}两银子便可。\n买下这处房产后，少侠便可在此休憩，读书或存储物品了。\n此外还可以增加少侠{1}点的仓库容量以及{2}%的声望获取速度。",uVar3,uVar4,uVar5,0);
-                      lVar6 = il2cpp_internal(DAT_181d97768);
-                      FUN_181330100(lVar6,DAT_181da3bf0);
+                      lVar6 = il2cpp_internal(DAT_181e77728);
+                      FUN_1810f3480(lVar6,DAT_181e861f0);
                       uVar4 = Int32.ToString(local_res8,0);
                       uVar4 = String.Concat("把地契拿来吧;BuyCityHouse;;0/",uVar4,0);
                       if (lVar6 != null) {
-                        FUN_18181e6b0(lVar6,uVar4,DAT_181da3d70);
-                        FUN_18181e6b0(lVar6,"我就随便看看;HideInteractUI",DAT_181da3d70);
+                        FUN_18175de30(lVar6,uVar4,DAT_181e86370);
+                        FUN_18175de30(lVar6,"我就随便看看;HideInteractUI",DAT_181e86370);
                         uVar4 = new SinglePlotData(uVar3,lVar6,0,0,CONCAT44(uVar7,3),"0",0,0,0);
                         if (lVar2 != null) {
-                          FUN_18181e6b0(lVar2,uVar4,DAT_181da1408);
+                          FUN_18175de30(lVar2,uVar4,DAT_181e839b0);
                           lVar2 = BuildingUIController.PartyLvName;
                           lVar6 = BuildingUIController.PartyLvName;
                           if ((lVar6 != null) && (lVar2 != null)) {
@@ -1459,8 +1464,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DE9
-    // RVA   : 0xB7D240   Offset: 0xB7C640   Length: 0x484
+    // Token : 0x6000DEC
+    // RVA   : 0x9364F0   Offset: 0x9352F0   Length: 0x484
     public void UpgradeCityHouse()
     {
         long lVar1;
@@ -1487,20 +1492,20 @@ public class BuildingUIController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 local_res8[0] = (int)*(float *)(lVar1.buildingID + 32);
-                lVar1 = FUN_18046c400(0);
+                lVar1 = FUN_180210a70(0);
                 local_res18[0] = local_res8[0];
-                uVar2 = il2cpp_value_box(DAT_181d80430,local_res18);
+                uVar2 = il2cpp_value_box(DAT_181e60808,local_res18);
                 if (this.buildingData != null) {
                   local_res20[0] = AreaBuildingData.GetUpgradeTime(this.buildingData,0);
-                  uVar3 = il2cpp_value_box(DAT_181d80430,local_res20);
+                  uVar3 = il2cpp_value_box(DAT_181e60808,local_res20);
                   uVar2 = String.Format("要修缮升级这处房产需要{0}两银子以及{1}天时间，\n这可以增加少侠您10点的仓库容量以及0.5%的声望获取速度。",uVar2,uVar3,0);
-                  lVar4 = il2cpp_internal(DAT_181d97768);
-                  FUN_181330100(lVar4,DAT_181da3bf0);
+                  lVar4 = il2cpp_internal(DAT_181e77728);
+                  FUN_1810f3480(lVar4,DAT_181e861f0);
                   uVar3 = Int32.ToString(local_res8,0);
                   uVar3 = String.Concat("开始动工吧;UpgradeCityHouse;;0/",uVar3,0);
                   if (lVar4 != null) {
-                    FUN_18181e6b0(lVar4,uVar3,DAT_181da3d70);
-                    FUN_18181e6b0(lVar4,"还是算了;HideInteractUI",DAT_181da3d70);
+                    FUN_18175de30(lVar4,uVar3,DAT_181e86370);
+                    FUN_18175de30(lVar4,"还是算了;HideInteractUI",DAT_181e86370);
                     uVar7 = 0;
                     uVar3 = BuildingUIController.GenerateBuildingNPCString
                                       (this,"工匠",0xfffffffc,0xffffffff,
@@ -1514,18 +1519,18 @@ public class BuildingUIController
                 }
               }
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
-            lVar1 = FUN_18046c400(0);
-            uVar2 = FUN_180228420(DAT_181d8b158);
+            lVar1 = FUN_180210a70(0);
+            uVar2 = FUN_1802100c0(DAT_181e6dc98);
             uVar2 = String.Format("此住宅已修缮至最高等级，若再加扩建只怕有违礼制了。",uVar2,0);
-            uVar3 = il2cpp_internal(DAT_181da24f0);
+            uVar3 = il2cpp_internal(DAT_181e82930);
           }
           else {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-            uVar2 = FUN_180228420(DAT_181d8b158);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+            uVar2 = FUN_1802100c0(DAT_181e6dc98);
             uVar2 = String.Format("此住宅正在修缮中，还请稍安勿躁，静候些时日。",uVar2,0);
-            uVar3 = il2cpp_internal(DAT_181da24f0);
+            uVar3 = il2cpp_internal(DAT_181e82930);
           }
           SinglePlotData.ctor(uVar3,uVar2,0,1,0,CONCAT44(uVar7,3),"0",1,0,0);
           if (lVar1 != null) {
@@ -1535,20 +1540,20 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DEA
-    // RVA   : 0xB631A0   Offset: 0xB625A0   Length: 0x1F0
+    // Token : 0x6000DED
+    // RVA   : 0x91C3C0   Offset: 0x91B1C0   Length: 0x1F0
     public void CityHouseBookRoom()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,"阅读秘籍;ChooseReadBook;false",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"编纂秘籍;ShowBookWriterSelf",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"离开;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,"阅读秘籍;ChooseReadBook;false",DAT_181e86370);
+          FUN_18175de30(lVar2,"编纂秘籍;ShowBookWriterSelf",DAT_181e86370);
+          FUN_18175de30(lVar2,"离开;HideInteractUI",DAT_181e86370);
           uVar3 = new SinglePlotData("书山有路勤为径，学海无涯苦作舟。",lVar2,1,0,3,"0",1,0,0);
           if (lVar1 != null) {
             PlotController.ChangePlot(lVar1,uVar3,0);
@@ -1557,21 +1562,21 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DEB
-    // RVA   : 0xB633A0   Offset: 0xB627A0   Length: 0x216
+    // Token : 0x6000DEE
+    // RVA   : 0x91C5C0   Offset: 0x91B3C0   Length: 0x216
     public void CityHousePracticeRoom()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,"自行练习;StartPracticeCityHousePlot",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"突破;BreakThroughSkill",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"天赋;ChooseManageTagTargetSelfHouse",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"离开;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,"自行练习;StartPracticeCityHousePlot",DAT_181e86370);
+          FUN_18175de30(lVar2,"突破;BreakThroughSkill",DAT_181e86370);
+          FUN_18175de30(lVar2,"天赋;ChooseManageTagTargetSelfHouse",DAT_181e86370);
+          FUN_18175de30(lVar2,"离开;HideInteractUI",DAT_181e86370);
           uVar3 = new SinglePlotData("冬练三九，夏练三伏。\n便是在自己家中，这练功之事亦不能落下。",lVar2,1,0,3,"0",1,0,0);
           if (lVar1 != null) {
             PlotController.ChangePlot(lVar1,uVar3,0);
@@ -1580,20 +1585,20 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DEC
-    // RVA   : 0xB62FA0   Offset: 0xB623A0   Length: 0x1F0
+    // Token : 0x6000DEF
+    // RVA   : 0x91C1C0   Offset: 0x91AFC0   Length: 0x1F0
     public void CityHouseBedRoom()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,"休息;HomeRest",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"私人仓库;OpenSelfStorage",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"离开;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,"休息;HomeRest",DAT_181e86370);
+          FUN_18175de30(lVar2,"私人仓库;OpenSelfStorage",DAT_181e86370);
+          FUN_18175de30(lVar2,"离开;HideInteractUI",DAT_181e86370);
           uVar3 = new SinglePlotData("江湖之中惊涛骇浪，波云诡谲。\n能有这样一方温馨的小天地以供休憩，也算是桩幸事。",lVar2,1,0,3,"0",1,0,0);
           if (lVar1 != null) {
             PlotController.ChangePlot(lVar1,uVar3,0);
@@ -1602,8 +1607,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DED
-    // RVA   : 0xB64580   Offset: 0xB63980   Length: 0x3B1
+    // Token : 0x6000DF0
+    // RVA   : 0x91D850   Offset: 0x91C650   Length: 0x3B1
     public void ExploreArea()
     {
         long lVar1;
@@ -1616,7 +1621,7 @@ public class BuildingUIController
         uint uVar6;
         uVar5 = (uint32)((uint64)in_stack_ffffffffffffffc8 >> 32);
         uVar6 = (uint32)((uint64)in_stack_ffffffffffffffd0 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 88)) != null) &&
            (lVar1 = *(int64 *)(lVar1 + 0x100)) != null) {
           if (*(int *)(lVar1 + 16) < 1) {
@@ -1625,11 +1630,11 @@ public class BuildingUIController
           }
           else {
             lVar1 = BuildingUIController.PartyLvName;
-            lVar2 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar2,DAT_181da3bf0);
+            lVar2 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar2,DAT_181e861f0);
             if (lVar2 == null) throw; // [null/range check failed]
-            FUN_18181e6b0(lVar2,"开始探索;ExploreAreaStart",DAT_181da3d70);
-            FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
+            FUN_18175de30(lVar2,"开始探索;ExploreAreaStart",DAT_181e86370);
+            FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
             uVar6 = 0;
             uVar3 = BuildingUIController.GenerateBuildingNPCString
                               (this,"马夫",0xfffffffc,0xffffffff,CONCAT44(uVar5,0xffffffff),0);
@@ -1642,8 +1647,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DEE
-    // RVA   : 0xB6A830   Offset: 0xB69C30   Length: 0x3B1
+    // Token : 0x6000DF1
+    // RVA   : 0x923B00   Offset: 0x922900   Length: 0x3B1
     public void PatrolArea()
     {
         long lVar1;
@@ -1656,7 +1661,7 @@ public class BuildingUIController
         uint uVar6;
         uVar5 = (uint32)((uint64)in_stack_ffffffffffffffc8 >> 32);
         uVar6 = (uint32)((uint64)in_stack_ffffffffffffffd0 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if (((lVar1 != null) && (lVar1 = *(int64 *)(lVar1 + 88)) != null) &&
            (lVar1 = *(int64 *)(lVar1 + 0x100)) != null) {
           if (*(int *)(lVar1 + 20) < 1) {
@@ -1665,11 +1670,11 @@ public class BuildingUIController
           }
           else {
             lVar1 = BuildingUIController.PartyLvName;
-            lVar2 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar2,DAT_181da3bf0);
+            lVar2 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar2,DAT_181e861f0);
             if (lVar2 == null) throw; // [null/range check failed]
-            FUN_18181e6b0(lVar2,"开始巡查;PatrolAreaStart",DAT_181da3d70);
-            FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
+            FUN_18175de30(lVar2,"开始巡查;PatrolAreaStart",DAT_181e86370);
+            FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
             uVar6 = 0;
             uVar3 = BuildingUIController.GenerateBuildingNPCString
                               (this,"官差",0xfffffffb,0xffffffff,CONCAT44(uVar5,0xffffffff),0);
@@ -1682,25 +1687,25 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DEF
-    // RVA   : 0xB68EA0   Offset: 0xB682A0   Length: 0xE9
+    // Token : 0x6000DF2
+    // RVA   : 0x922170   Offset: 0x920F70   Length: 0xE9
     public void ManageBranch()
     {
         long lVar1;
         long lVar2;
-        lVar1 = **(int64 **)(DAT_181db3470 + 184);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar1 = **(int64 **)(DAT_181e93728 + 184);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if ((lVar2 != null) && (lVar1 != null)) {
           BranchUIController.ShowBranchUI(lVar1,*(uint64 *)(lVar2 + 88),0);
           return;
         }
     }
 
-    // Token : 0x6000DF0
-    // RVA   : 0xB67F00   Offset: 0xB67300   Length: 0xD63
+    // Token : 0x6000DF3
+    // RVA   : 0x9211D0   Offset: 0x91FFD0   Length: 0xD63
     public void LeaderManageForceAttack()
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         int iVar1;
         int iVar2;
         long lVar3;
@@ -1725,7 +1730,7 @@ public class BuildingUIController
              (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           if (!lVar3.openForceAttackArea) {
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+            lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
             uVar8 = new SinglePlotData("目前各大门派间，尚且风平浪静。\n若此时贸然进攻其他门派领地，怕是会引起众怒，再等待时机吧！",0,1,0,3,"0",1,0,0);
           }
           else {
@@ -1733,30 +1738,30 @@ public class BuildingUIController
                 (lVar3 = GameController._instance.worldData) == null) ||
                (lVar3 = WorldData.Player(lVar3,0)) == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar3 + 0x2e0) == 0) {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                  ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 == null ||
                   (lVar3 = HeroData.GetForce(lVar3,0)) == null))) throw; // [null/range check failed]
               local_res20[0] = iVar1;
               if (lVar3.monthPartyTime < iVar2) {
-                lVar3 = FUN_18046c400(0);
-                plVar4 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
-                lVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
+                lVar3 = FUN_180210a70(0);
+                plVar4 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
+                lVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
                 if (plVar4 != (int64 *)0) {
                   if ((lVar5 != null) &&
                      (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   if ((int)plVar4[3] == 0) {
                     uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar8,0);
+                    FUN_1801e02d0(uVar8,0);
                   }
                   plVar4[4] = lVar5;
                   il2cpp_internal(plVar4 + 4,lVar5);
-                  lVar5 = FUN_18046c0a0(0);
+                  lVar5 = FUN_1802106e0(0);
                   if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                      (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 48)) != null) {
                     local_res18[0] = ((float)iVar1 * 100.0) / (float)*(int *)(lVar5 + 24);
@@ -1765,164 +1770,164 @@ public class BuildingUIController
                        (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(plVar4 + 3) < 2) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     plVar4[5] = lVar5;
                     il2cpp_internal(plVar4 + 5,lVar5);
-                    lVar5 = FUN_18046c0a0(0);
+                    lVar5 = FUN_1802106e0(0);
                     if (((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                        ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 != null &&
                         (lVar5 = HeroData.GetForce(lVar5,0,0)) != null))) {
                       local_38 = iVar2 - *(int *)(lVar5 + 0x118);
-                      lVar5 = il2cpp_value_box(DAT_181d80430,&local_38);
+                      lVar5 = il2cpp_value_box(DAT_181e60808,&local_38);
                       if ((lVar5 != null) &&
                          (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null)
                       {
                         uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar8,0);
+                        FUN_1801e02d0(uVar8,0);
                       }
                       if (*(uint32 *)(plVar4 + 3) < 3) {
                         uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar8,0);
+                        FUN_1801e02d0(uVar8,0);
                       }
                       plVar4[6] = lVar5;
                       il2cpp_internal(plVar4 + 6,lVar5);
                       local_34 = iVar2;
-                      lVar5 = il2cpp_value_box(DAT_181d80430,&local_34);
+                      lVar5 = il2cpp_value_box(DAT_181e60808,&local_34);
                       if ((lVar5 != null) &&
                          (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null)
                       {
                         uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar8,0);
+                        FUN_1801e02d0(uVar8,0);
                       }
                       if (*(uint32 *)(plVar4 + 3) < 4) {
                         uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar8,0);
+                        FUN_1801e02d0(uVar8,0);
                       }
                       plVar4[7] = lVar5;
                       il2cpp_internal(plVar4 + 7,lVar5);
                       uVar7 = String.Format("如今本门占领/附庸/同盟区域共计{0}处，已占天下江山之{1}%。\n剩余每月出征次数{2}/{3}，是否要向周边区域发起进攻？",plVar4,0);
-                      lVar5 = il2cpp_internal(DAT_181d97768);
-                      FUN_181330100(lVar5,DAT_181da3bf0);
+                      lVar5 = il2cpp_internal(DAT_181e77728);
+                      FUN_1810f3480(lVar5,DAT_181e861f0);
                       if (lVar5 != null) {
-                        FUN_18181e6b0(lVar5,"选择目标;ChooseForceAttackArea",DAT_181da3d70);
-                        FUN_18181e6b0(lVar5,"还是算了;HideInteractUI");
+                        FUN_18175de30(lVar5,"选择目标;ChooseForceAttackArea",DAT_181e86370);
+                        FUN_18175de30(lVar5,"还是算了;HideInteractUI");
                         uVar8 = new SinglePlotData(uVar7,lVar5,1,0,3,"0",1,0,0);
-                        if (lVar3 != null) goto LAB_180b685c6;
+                        if (lVar3 != null) goto LAB_180921896;
                       }
                     }
                   }
                 }
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
-              lVar3 = FUN_18046c400(0);
-              plVar4 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
-              lVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
+              lVar3 = FUN_180210a70(0);
+              plVar4 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
+              lVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
               if (plVar4 == (int64 *)0) {
-        LAB_180b68c5e:
+        LAB_180921f2e:
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               if ((lVar5 != null) &&
                  (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               if ((int)plVar4[3] == 0) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               plVar4[4] = lVar5;
               il2cpp_internal(plVar4 + 4,lVar5);
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                  (lVar5 = *(int64 *)(*(int64 *)(lVar5 + 32) + 48)) == null)
-              goto LAB_180b68c5e;
+              goto LAB_180921f2e;
               local_res18[0] = ((float)iVar1 * 100.0) / (float)*(int *)(lVar5 + 24);
               lVar5 = Single.ToString(local_res18,"f0");
               if ((lVar5 != null) &&
                  (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               if (*(uint32 *)(plVar4 + 3) < 2) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               plVar4[5] = lVar5;
               il2cpp_internal(plVar4 + 5,lVar5);
-              lVar5 = FUN_18046c0a0(0);
+              lVar5 = FUN_1802106e0(0);
               if (((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                  ((lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0), lVar5 == null ||
-                  (lVar5 = HeroData.GetForce(lVar5,0)) == null))) goto LAB_180b68c5e;
+                  (lVar5 = HeroData.GetForce(lVar5,0)) == null))) goto LAB_180921f2e;
               local_34 = *(int *)(lVar5 + 0x118);
-              lVar5 = il2cpp_value_box(DAT_181d80430,&local_34);
+              lVar5 = il2cpp_value_box(DAT_181e60808,&local_34);
               if ((lVar5 != null) &&
                  (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               if (*(uint32 *)(plVar4 + 3) < 3) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               plVar4[6] = lVar5;
               il2cpp_internal(plVar4 + 6,lVar5);
               uVar8 = "如今本门占领/附庸/同盟区域共计{0}处，已占天下江山之{1}%。\n本月已达出征次数上限({2}次)，弟子们还需再休养整备一段时间。{3}";
-              lVar5 = *(int64 *)(pStatics_3d40 + 0x148);
-              if (lVar5 == null) goto LAB_180b68c5e;
+              lVar5 = *(int64 *)(pStatics_38e8 + 0x150);
+              if (lVar5 == null) goto LAB_180921f2e;
               lVar6 = "";
               if (iVar2 < *(int *)(lVar5 + 24) + 1) {
-                lVar5 = *(int64 *)(pStatics_3d40 + 0x148);
+                lVar5 = *(int64 *)(pStatics_38e8 + 0x150);
                 if (lVar5 == null) {
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 if (*(uint32 *)(lVar5 + 24) <= iVar2 - 1U) {
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 local_38 = *(int *)(*(int64 *)(lVar5 + 16) + 32 + (int64)(int)(iVar2 - 1U) * 4);
-                uVar7 = il2cpp_value_box(DAT_181d80430,&local_38);
+                uVar7 = il2cpp_value_box(DAT_181e60808,&local_38);
                 local_30[0] = iVar2 + 1;
-                uVar9 = il2cpp_value_box(DAT_181d80430,local_30);
+                uVar9 = il2cpp_value_box(DAT_181e60808,local_30);
                 lVar6 = String.Format("\n(控制{0}处区域后，可提升每月出征上限至{1}次)",uVar7,uVar9,0);
               }
               if ((lVar6 != null) &&
                  (lVar5 = il2cpp_internal(lVar6,*(uint64 *)(*plVar4 + 64))) == null) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               if (*(uint32 *)(plVar4 + 3) < 4) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               plVar4[7] = lVar6;
               il2cpp_internal(plVar4 + 7,lVar6);
               uVar7 = String.Format(uVar8,plVar4);
               uVar8 = new SinglePlotData(uVar7,0,1,0,3,"0",1,0,0);
               if (lVar3 == null) throw; // [null/range check failed]
-              goto LAB_180b685c6;
+              goto LAB_180921896;
             }
-            lVar3 = FUN_18046c400(0);
-            lVar5 = FUN_18046c0a0(0);
+            lVar3 = FUN_180210a70(0);
+            lVar5 = FUN_1802106e0(0);
             if ((((lVar5 == null) || (*(int64 *)(lVar5 + 32) == 0)) ||
                 (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) == null) ||
                (*(int64 *)(lVar5 + 0x2e0) == 0)) throw; // [null/range check failed]
@@ -1930,22 +1935,22 @@ public class BuildingUIController
             uVar8 = new SinglePlotData(uVar7,0,1,0,3,"0",1,0,0);
           }
           if (lVar3 != null) {
-        LAB_180b685c6:
+        LAB_180921896:
             PlotController.ChangePlot(lVar3,uVar8,0);
             return;
           }
         }
     }
 
-    // Token : 0x6000DF1
-    // RVA   : 0xB69140   Offset: 0xB68540   Length: 0xF8
+    // Token : 0x6000DF4
+    // RVA   : 0x922410   Offset: 0x921210   Length: 0xF8
     public void ManageForceSetting()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = **(int64 **)(DAT_181dc80d0 + 184);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar1 = **(int64 **)(DAT_181e50de0 + 184);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 88)) != null) {
           uVar3 = AreaData.GetForce(lVar2,0);
           if (lVar1 != null) {
@@ -1955,15 +1960,15 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DF2
-    // RVA   : 0xB68F90   Offset: 0xB68390   Length: 0xF8
+    // Token : 0x6000DF5
+    // RVA   : 0x922260   Offset: 0x921060   Length: 0xF8
     public void ManageForceHeroSetting()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = **(int64 **)(DAT_181dc7eb0 + 184);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar1 = **(int64 **)(DAT_181e50bc0 + 184);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 88)) != null) {
           uVar3 = AreaData.GetForce(lVar2,0);
           if (lVar1 != null) {
@@ -1973,15 +1978,15 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DF3
-    // RVA   : 0xB6FCF0   Offset: 0xB6F0F0   Length: 0x197
+    // Token : 0x6000DF6
+    // RVA   : 0x928FC0   Offset: 0x927DC0   Length: 0x197
     public void ShowForceHero()
     {
         long lVar1;
         long lVar2;
         bool cVar3;
         ulong uVar4;
-        lVar1 = **(int64 **)(DAT_181dc7f38 + 184);
+        lVar1 = **(int64 **)(DAT_181e50c48 + 184);
         cVar3 = GameController.MeetCondition("我",0,0);
         if (!cVar3) {
           cVar3 = false;
@@ -1990,7 +1995,7 @@ public class BuildingUIController
           cVar3 = GameController.MeetCondition("掌门",0,0);
           cVar3 = (cVar3) + true;
         }
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 88)) != null) {
           uVar4 = AreaData.GetForce(lVar2,0);
           if (lVar1 != null) {
@@ -2000,8 +2005,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DF4
-    // RVA   : 0xB715C0   Offset: 0xB709C0   Length: 0x34F
+    // Token : 0x6000DF7
+    // RVA   : 0x92A890   Offset: 0x929690   Length: 0x34F
     public void ShowResearch()
     {
         int iVar1;
@@ -2009,12 +2014,12 @@ public class BuildingUIController
         long lVar3;
         ulong uVar4;
         ulong uVar5;
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181d9c598 + 184) + 8);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e7c958 + 184) + 8);
         if (((GameController._instance == null) ||
             (lVar3 = GameController._instance.worldData) == null) ||
            (lVar3 = WorldData.Player(lVar3,0)) == null) throw; // [null/range check failed]
-        if (lVar3.forceMeetingStarted < **(int **)(DAT_181d9c598 + 184)) {
-        LAB_180b7186a:
+        if (lVar3.forceMeetingStarted < **(int **)(DAT_181e7c958 + 184)) {
+        LAB_18092ab3a:
           uVar5 = 0;
         }
         else {
@@ -2024,7 +2029,7 @@ public class BuildingUIController
           iVar1 = *(int *)(lVar3 + 132);
 
           if ((lVar3 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
-          if (iVar1 != lVar3.lastRandomWorldEventDay) goto LAB_180b7186a;
+          if (iVar1 != lVar3.lastRandomWorldEventDay) goto LAB_18092ab3a;
           uVar5 = 1;
         }
 
@@ -2035,42 +2040,42 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DF5
-    // RVA   : 0xB71A70   Offset: 0xB70E70   Length: 0x46
+    // Token : 0x6000DF8
+    // RVA   : 0x92AD40   Offset: 0x929B40   Length: 0x46
     public void ShowWeaponResearch()
     {
-        var pStatics = *(int64*)(DAT_181db4ea8 + 184);
+        var pStatics = *(int64*)(DAT_181e95380 + 184);
         if (*pStatics != 0) {
           WeaponResearchUIController.ShowWeaponResearchUI(*pStatics,0);
           return;
         }
     }
 
-    // Token : 0x6000DF6
-    // RVA   : 0xB704C0   Offset: 0xB6F8C0   Length: 0x46
+    // Token : 0x6000DF9
+    // RVA   : 0x929790   Offset: 0x928590   Length: 0x46
     public void ShowMeditation()
     {
-        var pStatics = *(int64*)(DAT_181d889a8 + 184);
+        var pStatics = *(int64*)(DAT_181e68d70 + 184);
         if (*pStatics != 0) {
           MeditationUIController.ShowMeditationUI(*pStatics,0);
           return;
         }
     }
 
-    // Token : 0x6000DF7
-    // RVA   : 0xB69090   Offset: 0xB68490   Length: 0xAC
+    // Token : 0x6000DFA
+    // RVA   : 0x922360   Offset: 0x921160   Length: 0xAC
     public void ManageForceMoney()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ManageForceMoneyPlotStart(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000DF8
-    // RVA   : 0xB695D0   Offset: 0xB689D0   Length: 0x11A6
+    // Token : 0x6000DFB
+    // RVA   : 0x9228A0   Offset: 0x9216A0   Length: 0x11A6
     public void OpenForceStorage()
     {
         int iVar1;
@@ -2097,17 +2102,17 @@ public class BuildingUIController
 
         if ((lVar3 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
         if (iVar1 == lVar3.lastRandomWorldEventDay) {
-        LAB_180b6a457:
+        LAB_180923727:
           if (((GameController._instance != null) &&
               (GameController._instance.worldData != null)) &&
              (lVar3 = WorldData.Player()) != null) {
             if (!lVar3.hour) {
-              lVar3 = FUN_18046c6c0(0);
-              lVar4 = FUN_18046c0a0(0);
+              lVar3 = FUN_180210d40(0);
+              lVar4 = FUN_1802106e0(0);
               if (((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
                  (lVar4 = WorldData.Player()) != null) {
                 uVar5 = *(uint64 *)(lVar4 + 0x220);
-                lVar4 = FUN_18046bac0(0);
+                lVar4 = FUN_180210060(0);
                 if (((lVar4 != null) && (*(int64 *)(lVar4 + 88) != 0)) &&
                    ((lVar4 = AreaData.GetForce(), lVar4 != null && (lVar3 != null)))) {
                   TradeUIController.ShowTradeUI
@@ -2118,12 +2123,12 @@ public class BuildingUIController
               }
             }
             else {
-              lVar3 = FUN_18046c6c0(0);
-              lVar4 = FUN_18046c0a0(0);
+              lVar3 = FUN_180210d40(0);
+              lVar4 = FUN_1802106e0(0);
               if (((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
                  (lVar4 = WorldData.Player()) != null) {
                 uVar5 = *(uint64 *)(lVar4 + 0x220);
-                lVar4 = FUN_18046bac0(0);
+                lVar4 = FUN_180210060(0);
                 if (((lVar4 != null) && (*(int64 *)(lVar4 + 88) != 0)) &&
                    ((lVar4 = AreaData.GetForce(), lVar4 != null && (lVar3 != null)))) {
                   TradeUIController.ShowTradeUI
@@ -2140,36 +2145,36 @@ public class BuildingUIController
           if (((lVar3 == null) || (lVar3.TempHeros == null)) ||
              (lVar3 = AreaData.GetForce()) == null) throw; // [null/range check failed]
           if (*(int *)(lVar3 + 60) != -1) {
-            lVar3 = FUN_18046bac0(0);
+            lVar3 = FUN_180210060(0);
             if (((lVar3 == null) || (lVar3.TempHeros == null)) ||
                (lVar3 = AreaData.GetForce()) == null) throw; // [null/range check failed]
             iVar1 = *(int *)(lVar3 + 60);
-            lVar3 = FUN_18046c0a0(0);
+            lVar3 = FUN_1802106e0(0);
             if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                (lVar3 = WorldData.Player()) == null) throw; // [null/range check failed]
-            if (iVar1 == *(int *)(lVar3 + 132)) goto LAB_180b6a457;
+            if (iVar1 == *(int *)(lVar3 + 132)) goto LAB_180923727;
           }
           if (((GameController._instance == null) ||
               (lVar3 = GameController._instance.worldData) == null) ||
              (lVar3 = WorldData.Player(lVar3,0)) == null) throw; // [null/range check failed]
           cVar2 = HeroData.HaveForce(lVar3,0);
           if (cVar2) {
-            lVar3 = FUN_18046bac0(0);
+            lVar3 = FUN_180210060(0);
             if ((lVar3 == null) || (lVar3.TempHeros == null)) throw; // [null/range check failed]
             lVar3 = AreaData.GetForce(lVar3.TempHeros,0);
-            lVar4 = FUN_18046c0a0(0);
+            lVar4 = FUN_1802106e0(0);
             if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
                 (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) || (lVar3 == null))
             throw; // [null/range check failed]
             fVar12 = (float)ForceData.GetForceFavor(lVar3,*(uint32 *)(lVar4 + 132),0);
             if (fVar12 <= 40.0) {
-              lVar4 = FUN_18046c400(0);
-              lVar3 = FUN_18046bac0(0);
+              lVar4 = FUN_180210a70(0);
+              lVar3 = FUN_180210060(0);
               if (((lVar3 == null) || (lVar3.TempHeros == null)) ||
                  (lVar3 = AreaData.GetForce(lVar3.TempHeros,0)) == null)
               throw; // [null/range check failed]
               uVar5 = ForceData.GetForceName(lVar3,1,0);
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                  ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 == null ||
                   (lVar3 = HeroData.GetForce(lVar3,0,0)) == null))) throw; // [null/range check failed]
@@ -2177,58 +2182,58 @@ public class BuildingUIController
               uVar5 = String.Format("这{0}素来与我{1}关系不和，\n想必不会将库存物品售卖与我。\n(需要门派好感40以上)",uVar5,uVar6,0);
               uVar6 = new SinglePlotData(uVar5,0,1,0,CONCAT44(uVar13,3),"0",1,0,0);
               if (lVar4 == null) throw; // [null/range check failed]
-              goto LAB_180b69c48;
+              goto LAB_180922f18;
             }
           }
-          lVar3 = FUN_18046c0a0(0);
+          lVar3 = FUN_1802106e0(0);
           if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
              (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) {
             cVar2 = HeroData.HaveForce(lVar3,0);
             if (!cVar2) {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                  (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null)
               throw; // [null/range check failed]
               local_res18[0] = lVar3.forceMeetingStarted;
             }
             else {
-              lVar3 = FUN_18046bac0(0);
+              lVar3 = FUN_180210060(0);
               if ((lVar3 == null) || (lVar3.TempHeros == null)) throw; // [null/range check failed]
               lVar3 = AreaData.GetForce(lVar3.TempHeros,0);
-              lVar4 = FUN_18046c0a0(0);
+              lVar4 = FUN_1802106e0(0);
               if ((((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
                   (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null) || (lVar3 == null))
               throw; // [null/range check failed]
               fVar12 = (float)ForceData.GetForceFavor(lVar3,*(uint32 *)(lVar4 + 132),0);
               local_res18[0] = (uint32)((fVar12 - 50.0) * 0.1);
             }
-            lVar3 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar3,DAT_181da3bf0);
+            lVar3 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar3,DAT_181e861f0);
             uVar5 = Int32.ToString(local_res18,0);
             uVar5 = String.Concat("购买库存;OpenOtherForceStorage;",uVar5,0);
             if (lVar3 != null) {
-              FUN_18181e6b0(lVar3,uVar5,DAT_181da3d70);
-              FUN_18181e6b0(lVar3,"告辞;HideInteractUI",DAT_181da3d70);
-              lVar4 = FUN_18046c0a0(0);
+              FUN_18175de30(lVar3,uVar5,DAT_181e86370);
+              FUN_18175de30(lVar3,"告辞;HideInteractUI",DAT_181e86370);
+              lVar4 = FUN_1802106e0(0);
               if (((lVar4 != null) && (*(int64 *)(lVar4 + 32) != 0)) &&
                  (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) != null) {
                 cVar2 = HeroData.HaveServantForce(lVar4,0);
                 if (cVar2) {
-                  lVar4 = FUN_18046c0a0(0);
+                  lVar4 = FUN_1802106e0(0);
                   if (((lVar4 == null) || (*(int64 *)(lVar4 + 32) == 0)) ||
                      (lVar4 = WorldData.Player(*(int64 *)(lVar4 + 32),0)) == null)
                   throw; // [null/range check failed]
                   iVar1 = *(int *)(lVar4 + 0x380);
-                  lVar4 = FUN_18046bac0(0);
+                  lVar4 = FUN_180210060(0);
                   if ((lVar4 == null) || (*(int64 *)(lVar4 + 88) == 0)) throw; // [null/range check failed]
                   if (iVar1 == *(int *)(*(int64 *)(lVar4 + 88) + 112)) {
                     uVar5 = Int32.ToString(local_res18,0);
                     uVar5 = String.Concat("功绩兑换;OpenServantForceStorage;",uVar5,0);
-                    FUN_181822b30(lVar3,1,uVar5,DAT_181da4070);
+                    FUN_181762320(lVar3,1,uVar5,DAT_181e86670);
                   }
                 }
-                lVar4 = FUN_18046c400(0);
-                lVar7 = FUN_18046c0a0(0);
+                lVar4 = FUN_180210a70(0);
+                lVar7 = FUN_1802106e0(0);
                 if (((lVar7 != null) && (*(int64 *)(lVar7 + 32) != 0)) &&
                    (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) != null) {
                   cVar2 = HeroData.HaveForce(lVar7,0);
@@ -2236,8 +2241,8 @@ public class BuildingUIController
                   if (cVar2) {
                     uVar5 = "这{0}与我{1}的关系为{2}，\n因此愿意将最高等级为{3}的库存物品售卖给我。";
                   }
-                  plVar8 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
-                  lVar7 = FUN_18046bac0(0);
+                  plVar8 = (int64 *)FUN_1801dfd90(DAT_181e84278,5);
+                  lVar7 = FUN_180210060(0);
                   if (((lVar7 != null) && (*(int64 *)(lVar7 + 88) != 0)) &&
                      ((lVar7 = AreaData.GetForce(*(int64 *)(lVar7 + 88),0), lVar7 != null &&
                       (lVar7 = ForceData.GetForceName(lVar7,1,0), plVar8 != (int64 *)0)))) {
@@ -2245,22 +2250,22 @@ public class BuildingUIController
                        (lVar9 = il2cpp_internal(lVar7,*(uint64 *)(*plVar8 + 64))) == null) {
                       uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar5,0);
+                      FUN_1801e02d0(uVar5,0);
                     }
                     if ((int)plVar8[3] == 0) {
                       uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar5,0);
+                      FUN_1801e02d0(uVar5,0);
                     }
                     plVar8[4] = lVar7;
                     il2cpp_internal(plVar8 + 4,lVar7);
-                    lVar7 = FUN_18046c0a0(0);
+                    lVar7 = FUN_1802106e0(0);
                     if (((lVar7 != null) && (*(int64 *)(lVar7 + 32) != 0)) &&
                        (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) != null) {
                       lVar9 = HeroData.GetForce(lVar7,0,0);
                       lVar7 = "";
                       if (lVar9 != null) {
-                        lVar7 = FUN_18046c0a0(0);
+                        lVar7 = FUN_1802106e0(0);
                         if (((lVar7 == null) || (*(int64 *)(lVar7 + 32) == 0)) ||
                            ((lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0), lVar7 == null ||
                             (lVar7 = HeroData.GetForce(lVar7,0,0)) == null))) throw; // [null/range check failed]
@@ -2271,41 +2276,41 @@ public class BuildingUIController
                       {
                         uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar5,0);
+                        FUN_1801e02d0(uVar5,0);
                       }
                       if (*(uint32 *)(plVar8 + 3) < 2) {
                         uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar5,0);
+                        FUN_1801e02d0(uVar5,0);
                       }
                       plVar8[5] = lVar7;
                       il2cpp_internal(plVar8 + 5,lVar7);
-                      lVar7 = FUN_18046bac0(0);
+                      lVar7 = FUN_180210060(0);
                       if ((lVar7 != null) && (*(int64 *)(lVar7 + 88) != 0)) {
                         lVar7 = AreaData.GetForce(*(int64 *)(lVar7 + 88),0);
-                        lVar9 = FUN_18046c0a0(0);
+                        lVar9 = FUN_1802106e0(0);
                         if ((((lVar9 != null) && (*(int64 *)(lVar9 + 32) != 0)) &&
                             (lVar9 = WorldData.Player(*(int64 *)(lVar9 + 32),0)) != null) &&
                            (lVar7 != null)) {
                           local_res20[0] = ForceData.GetForceFavor(lVar7,*(uint32 *)(lVar9 + 132),0)
                           ;
-                          lVar7 = il2cpp_value_box(DAT_181da22f0,local_res20);
+                          lVar7 = il2cpp_value_box(DAT_181e82730,local_res20);
                           if ((lVar7 != null) &&
                              (lVar9 = il2cpp_internal(lVar7,*(uint64 *)(*plVar8 + 64)),
                              lVar9 == null)) {
                             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar5,0);
+                            FUN_1801e02d0(uVar5,0);
                           }
                           if (*(uint32 *)(plVar8 + 3) < 3) {
                             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar5,0);
+                            FUN_1801e02d0(uVar5,0);
                           }
                           plVar8[6] = lVar7;
                           il2cpp_internal(plVar8 + 6,lVar7);
                           uVar10 = (uint64)(int)local_res18[0];
-                          lVar7 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x4f0);
+                          lVar7 = *(int64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x510);
                           if (lVar7 != null) {
                             uVar11 = uVar10;
                             if (*(uint32 *)(lVar7 + 24) <= local_res18[0]) {
@@ -2321,16 +2326,16 @@ public class BuildingUIController
                                lVar9 == null)) {
                               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar5,0);
+                              FUN_1801e02d0(uVar5,0);
                             }
                             if (*(uint32 *)(plVar8 + 3) < 4) {
                               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar5,0);
+                              FUN_1801e02d0(uVar5,0);
                             }
                             plVar8[7] = lVar7;
                             il2cpp_internal(plVar8 + 7,lVar7);
-                            lVar7 = FUN_18046c0a0(0);
+                            lVar7 = FUN_1802106e0(0);
                             if (((lVar7 != null) && (*(int64 *)(lVar7 + 32) != 0)) &&
                                (lVar7 = WorldData.Player(*(int64 *)(lVar7 + 32),0)) != null) {
                               lVar7 = HeroData.GetHeroForceLvDescribe(lVar7,0,0);
@@ -2339,21 +2344,21 @@ public class BuildingUIController
                                  lVar9 == null)) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar5,0);
+                                FUN_1801e02d0(uVar5,0);
                               }
                               if (*(uint32 *)(plVar8 + 3) < 5) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar5,0);
+                                FUN_1801e02d0(uVar5,0);
                               }
                               plVar8[8] = lVar7;
                               il2cpp_internal(plVar8 + 8,lVar7);
                               uVar5 = String.Format(uVar5,plVar8,0);
-                              uVar6 = il2cpp_internal(DAT_181da24f0);
+                              uVar6 = il2cpp_internal(DAT_181e82930);
                               SinglePlotData.ctor
                                         (uVar6,uVar5,lVar3,1,0,CONCAT44(uVar13,3),"0",1,0,0);
                               if (lVar4 != null) {
-        LAB_180b69c48:
+        LAB_180922f18:
                                 PlotController.ChangePlot(lVar4,uVar6,0);
                                 return;
                               }
@@ -2362,7 +2367,7 @@ public class BuildingUIController
                         }
                       }
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
                   }
                 }
@@ -2372,23 +2377,23 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DF9
-    // RVA   : 0xB69240   Offset: 0xB68640   Length: 0xAC
+    // Token : 0x6000DFC
+    // RVA   : 0x922510   Offset: 0x921310   Length: 0xAC
     public void ManageForceStorage()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.StartSetForceStorageDiscount(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000DFA
-    // RVA   : 0xB786D0   Offset: 0xB77AD0   Length: 0x5E5
+    // Token : 0x6000DFD
+    // RVA   : 0x931980   Offset: 0x930780   Length: 0x5E5
     public void StealForceResource()
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -2400,7 +2405,7 @@ public class BuildingUIController
             if (*(int *)(*(int64 *)(lVar1 + 0x168) + 24) < 1) {
               lVar1 = BuildingUIController.PartyLvName;
               uVar4 = "本月已窃取过{0}之仓库。\n此时守备森严，已然无从下手，还需另待良机才是。";
-              if (*(char *)(pStatics_3d40 + 4) != false) {
+              if (*(char *)(pStatics_38e8 + 4) != false) {
                 uVar4 = "本月已挑战过{0}之仓库。\n还需另待良机才是。";
               }
               lVar2 = PlotController.SpringFestivelRewardLvTalkText;
@@ -2409,13 +2414,13 @@ public class BuildingUIController
               if (lVar2 == null) throw; // [null/range check failed]
               uVar3 = ForceData.GetForceName(lVar2,1);
               uVar4 = String.Format(uVar4,uVar3);
-              uVar3 = il2cpp_internal(DAT_181da24f0);
+              uVar3 = il2cpp_internal(DAT_181e82930);
               lVar2 = 0;
             }
             else {
               lVar1 = BuildingUIController.PartyLvName;
               uVar4 = "此地乃是{0}储藏资源宝物之所，若能花费五日时间，\n想必可打探出一条潜入道路，从中窃取资源或宝物以为己用。";
-              if (*(char *)(pStatics_3d40 + 4) != false) {
+              if (*(char *)(pStatics_38e8 + 4) != false) {
                 uVar4 = "此地乃是{0}储藏资源宝物之所，若能花费五日时间准备进行江湖挑战。\n如果挑战成功，就可以赢取仓库内资源或物品。";
               }
               lVar2 = PlotController.SpringFestivelRewardLvTalkText;
@@ -2424,17 +2429,17 @@ public class BuildingUIController
               if (lVar2 == null) throw; // [null/range check failed]
               uVar3 = ForceData.GetForceName(lVar2,1,0);
               uVar4 = String.Format(uVar4,uVar3,0);
-              lVar2 = il2cpp_internal(DAT_181d97768);
-              FUN_181330100(lVar2,DAT_181da3bf0);
+              lVar2 = il2cpp_internal(DAT_181e77728);
+              FUN_1810f3480(lVar2,DAT_181e861f0);
               uVar3 = "开始准备";
-              if (*(char *)(pStatics_3d40 + 4) == false) {
+              if (*(char *)(pStatics_38e8 + 4) == false) {
                 uVar3 = "开始潜入";
               }
               uVar3 = String.Format("{0};StealForceResourceStart",uVar3,0);
               if (lVar2 == null) throw; // [null/range check failed]
-              FUN_18181e6b0(lVar2,uVar3,DAT_181da3d70);
-              FUN_18181e6b0(lVar2,"还是算了;HideInteractUI");
-              uVar3 = il2cpp_internal(DAT_181da24f0);
+              FUN_18175de30(lVar2,uVar3,DAT_181e86370);
+              FUN_18175de30(lVar2,"还是算了;HideInteractUI");
+              uVar3 = il2cpp_internal(DAT_181e82930);
             }
             SinglePlotData.ctor(uVar3,uVar4,lVar2,1,0,3,"0",1,0,0);
             if (lVar1 != null) {
@@ -2445,11 +2450,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DFB
-    // RVA   : 0xB78CC0   Offset: 0xB780C0   Length: 0x5A1
+    // Token : 0x6000DFE
+    // RVA   : 0x931F70   Offset: 0x930D70   Length: 0x5A1
     public void StealForceSkill()
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         ulong uVar2;
         ulong uVar3;
@@ -2460,7 +2465,7 @@ public class BuildingUIController
           if (0 < this.buildingData.enemyMonth) {
             lVar5 = BuildingUIController.PartyLvName;
             uVar3 = "不久前刚偷师过{0}之武学，此刻守备森严，已然无从下手。\n至少要等{1}个月后风平浪静，方可另择良机。";
-            if (*(char *)(pStatics_3d40 + 4) != false) {
+            if (*(char *)(pStatics_38e8 + 4) != false) {
               uVar3 = "不久前刚挑战过{0}之藏经阁。\n至少要等{1}个月后风平浪静，方可另择良机。";
             }
             lVar1 = PlotController.SpringFestivelRewardLvTalkText;
@@ -2470,19 +2475,19 @@ public class BuildingUIController
                 uVar2 = ForceData.GetForceName(lVar1,1,0);
                 if (this.buildingData != null) {
                   local_res8[0] = this.buildingData.enemyMonth;
-                  uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
+                  uVar4 = il2cpp_value_box(DAT_181e60808,local_res8);
                   uVar3 = String.Format(uVar3,uVar2,uVar4,0);
                   uVar2 = new SinglePlotData(uVar3,0,1,0,3,"0",1,0,0);
-                  if (lVar5 != null) goto LAB_180b79045;
+                  if (lVar5 != null) goto LAB_1809322f5;
                 }
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar5 = BuildingUIController.PartyLvName;
           uVar3 = "此地乃是{0}藏经习武之所，若想打探出一条潜入道路，非得花费十日时间不可。\n只是此处亦是门派守卫最为森严之处，若无万全准备，切不可贸然行动。";
-          if (*(char *)(pStatics_3d40 + 4) != false) {
+          if (*(char *)(pStatics_38e8 + 4) != false) {
             uVar3 = "此地乃是{0}藏经习武之所，可以花费十日时间准备进行江湖挑战。\n如果挑战成功，就可以赢取藏经阁内一本秘籍。";
           }
           lVar1 = PlotController.SpringFestivelRewardLvTalkText;
@@ -2491,19 +2496,19 @@ public class BuildingUIController
             if (lVar1 != null) {
               uVar2 = ForceData.GetForceName(lVar1,1,0);
               uVar3 = String.Format(uVar3,uVar2,0);
-              lVar1 = il2cpp_internal(DAT_181d97768);
-              FUN_181330100(lVar1,DAT_181da3bf0);
+              lVar1 = il2cpp_internal(DAT_181e77728);
+              FUN_1810f3480(lVar1,DAT_181e861f0);
               uVar2 = "开始准备";
-              if (*(char *)(pStatics_3d40 + 4) == false) {
+              if (*(char *)(pStatics_38e8 + 4) == false) {
                 uVar2 = "开始潜入";
               }
               uVar2 = String.Format("{0};StealForceSkillStart",uVar2,0);
               if (lVar1 != null) {
-                FUN_18181e6b0(lVar1,uVar2,DAT_181da3d70);
-                FUN_18181e6b0(lVar1,"还是算了;HideInteractUI");
+                FUN_18175de30(lVar1,uVar2,DAT_181e86370);
+                FUN_18175de30(lVar1,"还是算了;HideInteractUI");
                 uVar2 = new SinglePlotData(uVar3,lVar1,1,0,3,"0",1,0,0);
                 if (lVar5 != null) {
-        LAB_180b79045:
+        LAB_1809322f5:
                   PlotController.ChangePlot(lVar5,uVar2,0);
                   return;
                 }
@@ -2513,33 +2518,33 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DFC
-    // RVA   : 0xB6A780   Offset: 0xB69B80   Length: 0xAC
+    // Token : 0x6000DFF
+    // RVA   : 0x923A50   Offset: 0x922850   Length: 0xAC
     public void OpenSelfStorage()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.OpenSelfStorage(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000DFD
-    // RVA   : 0xB68C70   Offset: 0xB68070   Length: 0x228
+    // Token : 0x6000E00
+    // RVA   : 0x921F40   Offset: 0x920D40   Length: 0x228
     public void ManageBookStore()
     {
         long lVar1;
         ulong uVar2;
         long lVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dad390 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e8d7d8 + 184) + 8);
         if ((GameController._instance != null) &&
            (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.Player(lVar3,0);
           if (lVar3 != null) {
             uVar2 = lVar3.speBookStorageSpeAdd;
 
-            if ((lVar3 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56)?.TempHeros) != null) {
+            if ((lVar3 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56)?.TempHeros) != null) {
               lVar3 = AreaData.GetForce(lVar3,0);
               if ((lVar3 != null) && (lVar1 != null)) {
                 TradeUIController.ShowTradeUI(lVar1,1,3,uVar2,lVar3.forceMeetingStarted,0);
@@ -2550,15 +2555,15 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DFE
-    // RVA   : 0xB6DB00   Offset: 0xB6CF00   Length: 0xFA
+    // Token : 0x6000E01
+    // RVA   : 0x926DD0   Offset: 0x925BD0   Length: 0xFA
     public void ShowBookStore()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = **(int64 **)(DAT_181db2838 + 184);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar1 = **(int64 **)(DAT_181e92b00 + 184);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 88)) != null) {
           uVar3 = AreaData.GetForce(lVar2,0);
           if (lVar1 != null) {
@@ -2568,23 +2573,23 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000DFF
-    // RVA   : 0xB62ED0   Offset: 0xB622D0   Length: 0xC0
+    // Token : 0x6000E02
+    // RVA   : 0x91C0F0   Offset: 0x91AEF0   Length: 0xC0
     public void ChooseReadBook()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ChooseReadBook(lVar1,"false",0);
           return;
         }
     }
 
-    // Token : 0x6000E00
-    // RVA   : 0xB79270   Offset: 0xB78670   Length: 0x350
+    // Token : 0x6000E03
+    // RVA   : 0x932520   Offset: 0x931320   Length: 0x350
     public void StudyFightMoney()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -2595,22 +2600,22 @@ public class BuildingUIController
         ulong in_stack_ffffffffffffffb8;
         uint uVar7;
         uint uVar8;
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         iVar6 = 0;
         do {
           uVar7 = (uint32)((uint64)in_stack_ffffffffffffffb8 >> 32);
-          lVar1 = *(int64 *)(pStatics + 0x4a0);
+          lVar1 = *(int64 *)(pStatics + 0x4a8);
           if (lVar1 == null) {
-        LAB_180b795b5:
+        LAB_180932865:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int *)(lVar1 + 24) <= iVar6) {
             if (lVar2 != null) {
-              FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
-              lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-              uVar3 = FUN_180228420(DAT_181d8b158);
+              FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
+              lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+              uVar3 = FUN_1802100c0(DAT_181e6dc98);
               uVar3 = String.Format("咱们武馆乃是这#AreaName#城中最佳的习武场地，设备齐全，经验丰富。\n少侠只许付上少许租金，便可在此精进武艺。",uVar3,0);
               uVar8 = 0;
               uVar4 = BuildingUIController.GenerateBuildingNPCString
@@ -2622,29 +2627,29 @@ public class BuildingUIController
                 return;
               }
             }
-            goto LAB_180b795b5;
+            goto LAB_180932865;
           }
-          lVar1 = *(int64 *)(pStatics + 0x4a0);
+          lVar1 = *(int64 *)(pStatics + 0x4a8);
           if (lVar1 == null) {
-        LAB_180b795bb:
+        LAB_18093286b:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          uVar3 = FUN_180002f80(lVar1,iVar6,DAT_181da4370);
+          uVar3 = FUN_1800024b0(lVar1,iVar6,DAT_181e86970);
           local_res18[0] = iVar6;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
           uVar3 = String.Format("修炼{0};StudyFightSelfChooseMoney;{1}",uVar3,uVar4,0);
-          if (lVar2 == null) goto LAB_180b795bb;
-          FUN_18181e6b0(lVar2,uVar3,DAT_181da3d70);
+          if (lVar2 == null) goto LAB_18093286b;
+          FUN_18175de30(lVar2,uVar3,DAT_181e86370);
           iVar6 = iVar6 + 1;
         } while( true );
     }
 
-    // Token : 0x6000E01
-    // RVA   : 0xB795D0   Offset: 0xB789D0   Length: 0x391
+    // Token : 0x6000E04
+    // RVA   : 0x932880   Offset: 0x931680   Length: 0x391
     public void StudyFightOtherMoney()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -2656,26 +2661,26 @@ public class BuildingUIController
         ulong in_stack_ffffffffffffff88;
         uint uVar7;
         uint uVar8;
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         iVar6 = 0;
         do {
           uVar7 = (uint32)((uint64)in_stack_ffffffffffffff88 >> 32);
-          lVar1 = *(int64 *)(pStatics + 0x418);
+          lVar1 = *(int64 *)(pStatics + 0x420);
           if (lVar1 == null) {
-        LAB_180b79956:
+        LAB_180932c06:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int *)(lVar1 + 24) <= iVar6) {
             if (lVar2 != null) {
-              FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
               uVar8 = 0;
-              lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+              lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
               uVar3 = BuildingUIController.GenerateBuildingNPCString
                                 (this,"武师",0xffffffff,0xffffffff,CONCAT44(uVar7,0xffffffff),0)
               ;
-              uVar4 = il2cpp_internal(DAT_181da24f0);
+              uVar4 = il2cpp_internal(DAT_181e82930);
               SinglePlotData.ctor
                         (uVar4,"不知大侠想雇佣何种级别的武师进行陪练？\n须知武师级别越高，出场费自然也越贵。",lVar2,5,uVar3,CONCAT44(uVar8,3),"0",0,0,0);
               if (lVar1 != null) {
@@ -2683,30 +2688,30 @@ public class BuildingUIController
                 return;
               }
             }
-            goto LAB_180b79956;
+            goto LAB_180932c06;
           }
-          lVar1 = *(int64 *)(pStatics + 0x418);
+          lVar1 = *(int64 *)(pStatics + 0x420);
           if (lVar1 == null) {
-        LAB_180b7995c:
+        LAB_180932c0c:
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          uVar3 = FUN_180002f80(lVar1,iVar6,DAT_181da4370);
+          uVar3 = FUN_1800024b0(lVar1,iVar6,DAT_181e86970);
           local_res18[0] = iVar6;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
-          local_res20[0] = (float)FUN_1801f8ab0(0x40000000);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
+          local_res20[0] = (float)FUN_1801e6830(0x40000000);
           local_res20[0] = local_res20[0] * 10.0;
-          uVar5 = il2cpp_value_box(DAT_181da22f0,local_res20);
+          uVar5 = il2cpp_value_box(DAT_181e82730,local_res20);
           in_stack_ffffffffffffff88 = 0;
           uVar3 = String.Format("{0};StudyFightOtherMoneyChoose;{1};0/{2}",uVar3,uVar4,uVar5,0);
-          if (lVar2 == null) goto LAB_180b7995c;
-          FUN_18181e6b0(lVar2,uVar3,DAT_181da3d70);
+          if (lVar2 == null) goto LAB_180932c0c;
+          FUN_18175de30(lVar2,uVar3,DAT_181e86370);
           iVar6 = iVar6 + 1;
         } while( true );
     }
 
-    // Token : 0x6000E02
-    // RVA   : 0xB62CB0   Offset: 0xB620B0   Length: 0x217
+    // Token : 0x6000E05
+    // RVA   : 0x91BED0   Offset: 0x91ACD0   Length: 0x217
     public void ChooseReadBookMoney()
     {
         long lVar1;
@@ -2717,12 +2722,12 @@ public class BuildingUIController
         uint uVar5;
         uint uVar6;
         uVar5 = (uint32)((uint64)in_stack_ffffffffffffffc8 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,"选择秘籍;ChooseReadBook;true",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,"选择秘籍;ChooseReadBook;true",DAT_181e86370);
+          FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
           uVar6 = 0;
           uVar3 = BuildingUIController.GenerateBuildingNPCString
                             (this,"武师",0xffffffff,0xffffffff,CONCAT44(uVar5,0xffffffff),0);
@@ -2734,8 +2739,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E03
-    // RVA   : 0xB60FD0   Offset: 0xB603D0   Length: 0x4A9
+    // Token : 0x6000E06
+    // RVA   : 0x91A1F0   Offset: 0x918FF0   Length: 0x4A9
     public void AttackMartialClub()
     {
         long lVar1;
@@ -2762,51 +2767,51 @@ public class BuildingUIController
           lVar1 = *(int64 *)(lVar1.chapter + 56);
           if (lVar1 == null) throw; // [null/range check failed]
           if (lVar1.cityAreaID != null) {
-            lVar1 = FUN_18046c400(0);
+            lVar1 = FUN_180210a70(0);
             if ((this.buildingData == null) ||
                (lVar2 = AreaBuildingData.DataBase(this.buildingData,0)) == null)
             throw; // [null/range check failed]
             uVar3 = String.Format("大侠目露凶光，气势逼人，莫不是来踢馆的？\n武林中人向来以和为贵，还望大侠三思啊！",*(uint64 *)(lVar2 + 24),0);
-            lVar2 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar2,DAT_181da3bf0);
+            lVar2 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar2,DAT_181e861f0);
             if (lVar2 == null) throw; // [null/range check failed]
-            FUN_18181e6b0(lVar2,"没错！;AttackMartialClubStart",DAT_181da3d70);
-            FUN_18181e6b0(lVar2,"开个玩笑;HideInteractUI",DAT_181da3d70);
+            FUN_18175de30(lVar2,"没错！;AttackMartialClubStart",DAT_181e86370);
+            FUN_18175de30(lVar2,"开个玩笑;HideInteractUI",DAT_181e86370);
             uVar7 = 0;
             uVar4 = BuildingUIController.GenerateBuildingNPCString
                               (this,"武师",0xffffffff,0xffffffff,CONCAT44(uVar6,0xffffffff),0);
             uVar5 = new SinglePlotData(uVar3,lVar2,5,uVar4,CONCAT44(uVar7,3),"0",0,0,0);
             if (lVar1 == null) throw; // [null/range check failed]
-            goto LAB_180b6144b;
+            goto LAB_18091a66b;
           }
-          lVar1 = FUN_18046c400(0);
-          uVar3 = FUN_180228420(DAT_181d8b158);
+          lVar1 = FUN_180210a70(0);
+          uVar3 = FUN_1802100c0(DAT_181e6dc98);
           uVar3 = String.Format("这破武馆中似乎已无秘籍藏品了，又有何踢馆的必要呢？",uVar3,0);
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
         }
         else {
-          lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-          uVar3 = FUN_180228420(DAT_181d8b158);
+          lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+          uVar3 = FUN_1802100c0(DAT_181e6dc98);
           uVar3 = String.Format("这个月已在此武馆大闹过一场，\n还需低调些时日避避风头，免得引起武林公愤。",uVar3,0);
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
         }
         SinglePlotData.ctor(uVar5,uVar3,0,1,0,CONCAT44(uVar7,3),"0",1,0,0);
         if (lVar1 != null) {
-        LAB_180b6144b:
+        LAB_18091a66b:
           PlotController.ChangePlot(lVar1,uVar5,0);
           return;
         }
     }
 
-    // Token : 0x6000E04
-    // RVA   : 0xB6DCB0   Offset: 0xB6D0B0   Length: 0x1D7
+    // Token : 0x6000E07
+    // RVA   : 0x926F80   Offset: 0x925D80   Length: 0x1D7
     public void ShowBookWriter()
     {
         long lVar1;
         ulong uVar2;
         long lVar3;
         ulong uVar4;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181db29d0 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e92c98 + 184) + 8);
         lVar3 = PlotController.SpringFestivelRewardLvTalkText;
         if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 88)) != null) {
           lVar3 = AreaData.GetForce(lVar3,0);
@@ -2824,25 +2829,25 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E05
-    // RVA   : 0xB6DC00   Offset: 0xB6D000   Length: 0xAC
+    // Token : 0x6000E08
+    // RVA   : 0x926ED0   Offset: 0x925CD0   Length: 0xAC
     public void ShowBookWriterSelf()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ShowBookWriterSelf(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E06
-    // RVA   : 0xB6E080   Offset: 0xB6D480   Length: 0x17D
+    // Token : 0x6000E09
+    // RVA   : 0x927350   Offset: 0x926150   Length: 0x17D
     public void ShowBuildingShop()
     {
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dad390 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e8d7d8 + 184) + 8);
         if ((GameController._instance != null) &&
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
@@ -2855,13 +2860,13 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E07
-    // RVA   : 0xB6DEF0   Offset: 0xB6D2F0   Length: 0x180
+    // Token : 0x6000E0A
+    // RVA   : 0x9271C0   Offset: 0x925FC0   Length: 0x180
     public void ShowBuildingShopForceStorage()
     {
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dad390 + 184) + 8);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e8d7d8 + 184) + 8);
         if ((GameController._instance != null) &&
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
@@ -2874,8 +2879,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E08
-    // RVA   : 0xB784B0   Offset: 0xB778B0   Length: 0x211
+    // Token : 0x6000E0B
+    // RVA   : 0x931760   Offset: 0x930560   Length: 0x211
     public void StealBuildingShop()
     {
         long lVar1;
@@ -2883,16 +2888,16 @@ public class BuildingUIController
         ulong uVar3;
         float fVar4;
         uint[] local_res18 = new uint[4];
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         fVar4 = (float)BuildingUIController.GetBuildingHeroLv(this,0);
         local_res18[0] = Mathf.RoundToInt((fVar4 + 1.0) * 25.0,0);
         uVar3 = Int32.ToString(local_res18,0);
         uVar3 = String.Concat("潜入库房;StealBuildingShopStart;;;;Dodge/",uVar3,0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,uVar3,DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,uVar3,DAT_181e86370);
+          FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
           uVar3 = new SinglePlotData("嘿嘿，眼下趁着店家不备，可以潜入库房中去。\n虽说库房内堆放的商品大多不是精品，但能免费顺走也是美事一桩啊！",lVar2,1,0,3,"0",1,0,0);
           if (lVar1 != null) {
             PlotController.ChangePlot(lVar1,uVar3,0);
@@ -2901,8 +2906,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E09
-    // RVA   : 0xB6D8E0   Offset: 0xB6CCE0   Length: 0x216
+    // Token : 0x6000E0C
+    // RVA   : 0x926BB0   Offset: 0x9259B0   Length: 0x216
     public void RobBuildingShop()
     {
         long lVar1;
@@ -2913,12 +2918,12 @@ public class BuildingUIController
         uint uVar5;
         uint uVar6;
         uVar5 = (uint32)((uint64)in_stack_ffffffffffffffc8 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,"我要打劫！;RobBuildingShopStart",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"没事没事;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,"我要打劫！;RobBuildingShopStart",DAT_181e86370);
+          FUN_18175de30(lVar2,"没事没事;HideInteractUI",DAT_181e86370);
           uVar6 = 0;
           uVar3 = BuildingUIController.GenerateBuildingNPCString
                             (this,"店铺商人",0xfffffffd,0xffffffff,CONCAT44(uVar5,0xffffffff),0);
@@ -2930,11 +2935,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E0A
-    // RVA   : 0xB6DE90   Offset: 0xB6D290   Length: 0x5E
+    // Token : 0x6000E0D
+    // RVA   : 0x927160   Offset: 0x925F60   Length: 0x5E
     public void ShowBuildingMission()
     {
-        var pStatics = *(int64*)(DAT_181db30b8 + 184);
+        var pStatics = *(int64*)(DAT_181e93370 + 184);
         if ((this.buildingChoiceSelected != null) && (*pStatics != 0)) {
           BountyUIController.ShowBountyUI
                     (*pStatics,this.buildingData,
@@ -2943,11 +2948,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E0B
-    // RVA   : 0xB70510   Offset: 0xB6F910   Length: 0x6AA
+    // Token : 0x6000E0E
+    // RVA   : 0x9297E0   Offset: 0x9285E0   Length: 0x6AA
     public void ShowOtherForceMission()
     {
-        var pStatics_30b8 = *(int64*)(DAT_181db30b8 + 184);
+        var pStatics_3370 = *(int64*)(DAT_181e93370 + 184);
         int iVar1;
         long lVar2;
         ulong uVar3;
@@ -2960,7 +2965,7 @@ public class BuildingUIController
             (lVar2 = GameController._instance.worldData) == null) ||
            (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
         if (100.0 < *(float *)(lVar2 + 0x1c4) || *(float *)(lVar2 + 0x1c4) == 100.0) {
-        LAB_180b70916:
+        LAB_180929be6:
           if (((GameController._instance == null) ||
               (lVar2 = GameController._instance.worldData) == null) ||
              (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
@@ -2975,15 +2980,15 @@ public class BuildingUIController
             throw; // [null/range check failed]
             fVar8 = (float)ForceData.GetForceFavor(lVar2,*(uint32 *)(lVar5 + 112),0);
             if (fVar8 < 40.0) {
-              lVar2 = FUN_18046c400(0);
-              uVar3 = FUN_180228420(DAT_181d8b158);
+              lVar2 = FUN_180210a70(0);
+              uVar3 = FUN_1802100c0(DAT_181e6dc98);
               uVar4 = "#PlayerForceName#与本门不甚和睦，恐怕还不能将本门任务委托于你。\n(需要至少40点门派好感。)";
-              goto LAB_180b707f5;
+              goto LAB_180929ac5;
             }
           }
-          if ((this.buildingChoiceSelected != null) && (*pStatics_30b8 != 0)) {
+          if ((this.buildingChoiceSelected != null) && (*pStatics_3370 != 0)) {
             BountyUIController.ShowBountyUI
-                      (*pStatics_30b8,this.buildingData,
+                      (*pStatics_3370,this.buildingData,
                        this.buildingChoiceSelected.text,0);
             return;
           }
@@ -2995,17 +3000,17 @@ public class BuildingUIController
           iVar1 = *(int *)(lVar2 + 0x380);
 
           if ((lVar2 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
-          if (iVar1 == lVar2.lastRandomWorldEventDay) goto LAB_180b70916;
-          lVar2 = FUN_18046c400(0);
-          uVar3 = FUN_180228420(DAT_181d8b158);
+          if (iVar1 == lVar2.lastRandomWorldEventDay) goto LAB_180929be6;
+          lVar2 = FUN_180210a70(0);
+          uVar3 = FUN_1802100c0(DAT_181e6dc98);
           uVar4 = "#PlayerName#的江湖声望太低，若将本门任务委托于你，只怕难以服众。\n(需要至少100点声望。)";
-        LAB_180b707f5:
+        LAB_180929ac5:
           uVar4 = String.Format(uVar4,uVar3,0);
-          lVar5 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar5,DAT_181da3bf0);
+          lVar5 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar5,DAT_181e861f0);
           if (lVar5 != null) {
-            FUN_18181e6b0(lVar5,"是我唐突了;HideInteractUI",DAT_181da3d70);
-            lVar6 = FUN_18046bac0(0);
+            FUN_18175de30(lVar5,"是我唐突了;HideInteractUI",DAT_181e86370);
+            lVar6 = FUN_180210060(0);
             if (((lVar6 != null) && (*(int64 *)(lVar6 + 88) != 0)) &&
                (lVar6 = AreaData.GetForce(*(int64 *)(lVar6 + 88),0)) != null) {
               uVar3 = Int32.ToString(lVar6 + 88,0);
@@ -3020,8 +3025,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E0C
-    // RVA   : 0xB6F560   Offset: 0xB6E960   Length: 0x785
+    // Token : 0x6000E0F
+    // RVA   : 0x928830   Offset: 0x927630   Length: 0x785
     public void ShowContributionExchange()
     {
         int iVar1;
@@ -3036,7 +3041,7 @@ public class BuildingUIController
             (lVar2 = GameController._instance.worldData) == null) ||
            (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
         if (100.0 < *(float *)(lVar2 + 0x1c4) || *(float *)(lVar2 + 0x1c4) == 100.0) {
-        LAB_180b6f976:
+        LAB_180928c46:
           if (((GameController._instance == null) ||
               (lVar2 = GameController._instance.worldData) == null) ||
              (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
@@ -3051,13 +3056,13 @@ public class BuildingUIController
             throw; // [null/range check failed]
             fVar8 = (float)ForceData.GetForceFavor(lVar2,*(uint32 *)(lVar5 + 112),0);
             if (fVar8 < 40.0) {
-              lVar2 = FUN_18046c400(0);
-              uVar3 = FUN_180228420(DAT_181d8b158);
+              lVar2 = FUN_180210a70(0);
+              uVar3 = FUN_1802100c0(DAT_181e6dc98);
               uVar4 = "#PlayerForceName#与本门不甚和睦，恐怕还不能将本门秘藏兑换于你。\n(需要至少40点门派好感。)";
-              goto LAB_180b6f851;
+              goto LAB_180928b21;
             }
           }
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d8f4a8 + 184) + 16);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181e6f868 + 184) + 16);
           lVar5 = PlotController.SpringFestivelRewardLvTalkText;
           if (((lVar5 != null) && (lVar5 = *(int64 *)(lVar5 + 88)) != null) &&
              (uVar4 = AreaData.GetForce(lVar5,0), lVar2 != null)) {
@@ -3072,17 +3077,17 @@ public class BuildingUIController
           iVar1 = *(int *)(lVar2 + 0x380);
 
           if ((lVar2 = PlotController.SpringFestivelRewardLvTalkText?.TempHeros) == null) throw; // [null/range check failed]
-          if (iVar1 == lVar2.lastRandomWorldEventDay) goto LAB_180b6f976;
-          lVar2 = FUN_18046c400(0);
-          uVar3 = FUN_180228420(DAT_181d8b158);
+          if (iVar1 == lVar2.lastRandomWorldEventDay) goto LAB_180928c46;
+          lVar2 = FUN_180210a70(0);
+          uVar3 = FUN_1802100c0(DAT_181e6dc98);
           uVar4 = "#PlayerName#的江湖声望太低，若将本门秘藏兑换于你，只怕难以服众。\n(需要至少100点声望。)";
-        LAB_180b6f851:
+        LAB_180928b21:
           uVar4 = String.Format(uVar4,uVar3,0);
-          lVar5 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar5,DAT_181da3bf0);
+          lVar5 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar5,DAT_181e861f0);
           if (lVar5 != null) {
-            FUN_18181e6b0(lVar5,"是我唐突了;HideInteractUI",DAT_181da3d70);
-            lVar6 = FUN_18046bac0(0);
+            FUN_18175de30(lVar5,"是我唐突了;HideInteractUI",DAT_181e86370);
+            lVar6 = FUN_180210060(0);
             if (((lVar6 != null) && (*(int64 *)(lVar6 + 88) != 0)) &&
                (lVar6 = AreaData.GetForce(*(int64 *)(lVar6 + 88),0)) != null) {
               uVar3 = Int32.ToString(lVar6 + 88,0);
@@ -3097,8 +3102,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E0D
-    // RVA   : 0xB70BC0   Offset: 0xB6FFC0   Length: 0x9FC
+    // Token : 0x6000E10
+    // RVA   : 0x929E90   Offset: 0x928C90   Length: 0x9FC
     public void ShowReplaceOtherForce()
     {
         float fVar1;
@@ -3118,7 +3123,7 @@ public class BuildingUIController
              (uVar4 = WorldData.Player(lVar6,0), lVar3 == null)) throw; // [null/range check failed]
           cVar2 = ForceData.MeetForceSexLimit(lVar3,uVar4);
           if (!cVar2) {
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+            lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
             if (((GameController._instance == null) ||
                 (lVar6 = GameController._instance.worldData) == null) ||
                (lVar6 = WorldData.Player(lVar6,0), uVar4 = "身为{0}性，恐怕无法在{1}自立门户啊......") == null)
@@ -3140,89 +3145,89 @@ public class BuildingUIController
                 (lVar3 = AreaData.GetForce(lVar3,0)) == null) || (*(int64 *)(lVar3 + 96) == 0))
             throw; // [null/range check failed]
             if (*(int *)(*(int64 *)(lVar3 + 96) + 24) < 5) {
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if ((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) throw; // [null/range check failed]
               if (0 < *(int *)(*(int64 *)(lVar3 + 32) + 204)) {
-                lVar3 = FUN_18046c400(0);
-                lVar6 = FUN_18046c0a0(0);
+                lVar3 = FUN_180210a70(0);
+                lVar6 = FUN_1802106e0(0);
                 if ((lVar6 == null) || (lVar6.villageAreaID == null)) {
-        LAB_180b715b7:
+        LAB_18092a887:
                           // WARNING: Subroutine does not return
-                  FUN_1800d6620();
+                  FUN_1801e0300();
                 }
                 local_res18[0] = *(uint32 *)(lVar6.villageAreaID + 204);
-                uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+                uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
                 uVar5 = String.Format("此前不久才刚刚挑战过门派。\n还需等待{0}天后风平浪静，方能避免引起武林公愤。",uVar4);
                 uVar4 = new SinglePlotData(uVar5,0,1,0,3,"0",1,0,0);
-                if (lVar3 == null) goto LAB_180b715b7;
-                goto LAB_180b710eb;
+                if (lVar3 == null) goto LAB_18092a887;
+                goto LAB_18092a3bb;
               }
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
                  (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null)
               throw; // [null/range check failed]
               fVar1 = *(float *)(lVar3 + 0x1c4);
-              lVar3 = FUN_18046bac0(0);
+              lVar3 = FUN_180210060(0);
               if (((lVar3 == null) || (*(int64 *)(lVar3 + 88) == 0)) ||
                  (lVar3 = AreaData.GetCenterBuilding(*(int64 *)(lVar3 + 88),0)) == null)
               throw; // [null/range check failed]
               fVar8 = (float)Mathf.Max(0x42c80000,(float)*(int *)(lVar3 + 20) * 200.0);
               if (fVar1 < fVar8) {
-                lVar3 = FUN_18046c400(0);
-                lVar6 = FUN_18046bac0(0);
+                lVar3 = FUN_180210a70(0);
+                lVar6 = FUN_180210060(0);
                 if (((lVar6 != null) && (lVar6.TempHeros != null)) &&
                    (lVar6 = AreaData.GetCenterBuilding(lVar6.TempHeros,0)) != null) {
                   local_res18[0] = Mathf.Max(0x42c80000,(float)*(int *)(lVar6 + 20) * 200.0);
-                  uVar4 = il2cpp_value_box(DAT_181da22f0,local_res18);
+                  uVar4 = il2cpp_value_box(DAT_181e82730,local_res18);
                   uVar5 = String.Format("我在江湖中尚未积累足够的声望，若想在此开宗立派，恐怕还难以服众。\n(在此总舵开宗立派需至少{0}点声望)",uVar4);
                   uVar4 = new SinglePlotData(uVar5,0,1,0,3,"0",1,0,0);
-                  if (lVar3 != null) goto LAB_180b710eb;
+                  if (lVar3 != null) goto LAB_18092a3bb;
                 }
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 == null) || (*(int64 *)(lVar3 + 32) == 0)) ||
                  (lVar3 = WorldData.Player(*(int64 *)(lVar3 + 32),0)) == null)
               throw; // [null/range check failed]
               cVar2 = HeroData.HaveServantForce(lVar3,0);
               if (!cVar2) {
-                lVar3 = FUN_18046c400(0);
+                lVar3 = FUN_180210a70(0);
                 if (lVar3 != null) {
                   PlotController.StartReplaceOtherForcePlot(lVar3,0);
                   return;
                 }
                 throw; // [null/range check failed]
               }
-              lVar3 = FUN_18046c400(0);
-              uVar5 = FUN_180228420(DAT_181d8b158);
+              lVar3 = FUN_180210a70(0);
+              uVar5 = FUN_1802100c0(DAT_181e6dc98);
               uVar4 = "我眼下已是#PlayerForceDescribe#。\n需要先结束门客关系，方可自立门户。";
             }
             else {
-              lVar3 = FUN_18046c400(0);
-              uVar5 = FUN_180228420(DAT_181d8b158);
+              lVar3 = FUN_180210a70(0);
+              uVar5 = FUN_1802100c0(DAT_181e6dc98);
               uVar4 = "对方门派占据区域已超过四处，称得上是名门大派。\n我这种江湖人士上门挑战，对方想必不会应允，而且还可能引起武林公愤。\n(对方门派占领区域不可超过4处)";
             }
             uVar5 = String.Format(uVar4,uVar5);
             uVar4 = new SinglePlotData(uVar5,0,1,0,3,"0",1,0,0);
           }
           if (lVar3 != null) {
-        LAB_180b710eb:
+        LAB_18092a3bb:
             PlotController.ChangePlot(lVar3,uVar4,0);
             return;
           }
         }
     }
 
-    // Token : 0x6000E0E
-    // RVA   : 0xB700A0   Offset: 0xB6F4A0   Length: 0x1AD
+    // Token : 0x6000E11
+    // RVA   : 0x929370   Offset: 0x928170   Length: 0x1AD
     public void ShowFreeTrade()
     {
         bool cVar1;
         long lVar2;
         long lVar3;
         ulong uVar4;
-        lVar2 = **(int64 **)(DAT_181d71ab8 + 184);
+        lVar2 = **(int64 **)(DAT_181e51660 + 184);
         if ((GameController._instance != null) &&
            (lVar3 = GameController._instance.worldData) != null) {
           lVar3 = WorldData.Player(lVar3,0);
@@ -3240,47 +3245,47 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E0F
-    // RVA   : 0xB70320   Offset: 0xB6F720   Length: 0xC0
+    // Token : 0x6000E12
+    // RVA   : 0x9295F0   Offset: 0x9283F0   Length: 0xC0
     public void ShowGovernLv()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.GovernPlotStart(lVar1,"0",0);
           return;
         }
     }
 
-    // Token : 0x6000E10
-    // RVA   : 0xB703F0   Offset: 0xB6F7F0   Length: 0xC0
+    // Token : 0x6000E13
+    // RVA   : 0x9296C0   Offset: 0x9284C0   Length: 0xC0
     public void ShowHornorPlot()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.HornorPlotStart(lVar1,"0",0);
           return;
         }
     }
 
-    // Token : 0x6000E11
-    // RVA   : 0xB70250   Offset: 0xB6F650   Length: 0xC0
+    // Token : 0x6000E14
+    // RVA   : 0x929520   Offset: 0x928320   Length: 0xC0
     public void ShowGovernContribution()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ShowGovernShop(lVar1,"0",0);
           return;
         }
     }
 
-    // Token : 0x6000E12
-    // RVA   : 0xB65B70   Offset: 0xB64F70   Length: 0x596
+    // Token : 0x6000E15
+    // RVA   : 0x91EE40   Offset: 0x91DC40   Length: 0x596
     public void GovernmentClearBadFame()
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
@@ -3302,7 +3307,7 @@ public class BuildingUIController
         else {
           lVar1 = BuildingUIController.PartyLvName;
           uVar4 = "少侠目前在江湖中恶名为{0}，是否要洗心革面，重归正道呢？";
-          if (*(char *)(pStatics_3d40 + 4) != false) {
+          if (*(char *)(pStatics_38e8 + 4) != false) {
             uVar4 = "少侠目前在江湖中威慑为{0}，是否要降低威慑呢？";
           }
           if (((GameController._instance == null) ||
@@ -3310,18 +3315,18 @@ public class BuildingUIController
              (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
           uVar3 = Single.ToString(lVar2 + 0x1c8,"f0",0);
           uVar3 = String.Format(uVar4,uVar3,0);
-          lVar2 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar2,DAT_181da3bf0);
+          lVar2 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar2,DAT_181e861f0);
           if (lVar2 == null) throw; // [null/range check failed]
-          FUN_18181e6b0(lVar2,"缴纳罚金;GovernmentClearBadFame;0",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"牺牲声望;GovernmentClearBadFame;1",DAT_181da3d70);
+          FUN_18175de30(lVar2,"缴纳罚金;GovernmentClearBadFame;0",DAT_181e86370);
+          FUN_18175de30(lVar2,"牺牲声望;GovernmentClearBadFame;1",DAT_181e86370);
           uVar4 = "自愿思过";
-          if (*(char *)(pStatics_3d40 + 4) == false) {
+          if (*(char *)(pStatics_38e8 + 4) == false) {
             uVar4 = "自首入狱";
           }
           uVar4 = String.Format("{0};GovernmentClearBadFame;2",uVar4,0);
-          FUN_18181e6b0(lVar2,uVar4,DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,uVar4,DAT_181e86370);
+          FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
           uVar7 = 0;
           uVar5 = BuildingUIController.GenerateBuildingNPCString
                             (this,"官差",0xfffffffb,0xffffffff,CONCAT44(uVar6,0xffffffff),0);
@@ -3333,8 +3338,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E13
-    // RVA   : 0xB694F0   Offset: 0xB688F0   Length: 0xD8
+    // Token : 0x6000E16
+    // RVA   : 0x9227C0   Offset: 0x9215C0   Length: 0xD8
     public int MaxGambleTime()
     {
         bool cVar1;
@@ -3354,8 +3359,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E14
-    // RVA   : 0xB76810   Offset: 0xB75C10   Length: 0x2D2
+    // Token : 0x6000E17
+    // RVA   : 0x92FAE0   Offset: 0x92E8E0   Length: 0x2D2
     public void StartGamble()
     {
         int iVar1;
@@ -3389,8 +3394,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E15
-    // RVA   : 0xB653D0   Offset: 0xB647D0   Length: 0x4B6
+    // Token : 0x6000E18
+    // RVA   : 0x91E6A0   Offset: 0x91D4A0   Length: 0x4B6
     public string GetPartyChoiceString(int type, int lv)
     {
         long lVar2;
@@ -3403,8 +3408,8 @@ public class BuildingUIController
         float local_34;
         float local_30;
         float local_2c [5];
-        plVar1 = (int64 *)FUN_1800d60b0(DAT_181da4138,7);
-        lVar3 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 24);
+        plVar1 = (int64 *)FUN_1801dfd90(DAT_181e84278,7);
+        lVar3 = *(int64 *)(*(int64 *)(DAT_181e942d8 + 184) + 24);
         if (lVar3 != null) {
           if (*(uint32 *)(lVar3 + 24) <= lv) {
             ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -3416,13 +3421,13 @@ public class BuildingUIController
               if (lVar2 == null) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
             }
             if ((int)plVar1[3] == 0) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             plVar1[4] = lVar3;
             il2cpp_internal(plVar1 + 4,lVar3);
@@ -3432,65 +3437,65 @@ public class BuildingUIController
               if (lVar2 == null) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
             }
             if (*(uint32 *)(plVar1 + 3) < 2) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             plVar1[5] = lVar3;
             il2cpp_internal(plVar1 + 5,lVar3);
             local_res18[0] = type;
-            lVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+            lVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
             if (lVar3 != null) {
               lVar2 = il2cpp_internal(lVar3,*(uint64 *)(*plVar1 + 64));
               if (lVar2 == null) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
             }
             if (*(uint32 *)(plVar1 + 3) < 3) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             plVar1[6] = lVar3;
             il2cpp_internal(plVar1 + 6,lVar3);
             local_38 = lv;
-            lVar3 = il2cpp_value_box(DAT_181d80430,&local_38);
+            lVar3 = il2cpp_value_box(DAT_181e60808,&local_38);
             if (lVar3 != null) {
               lVar2 = il2cpp_internal(lVar3,*(uint64 *)(*plVar1 + 64));
               if (lVar2 == null) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
             }
             if (*(uint32 *)(plVar1 + 3) < 4) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             plVar1[7] = lVar3;
             il2cpp_internal(plVar1 + 7,lVar3);
-            local_34 = (float)FUN_1801f8ab0(0x40000000);
+            local_34 = (float)FUN_1801e6830(0x40000000);
             local_34 = local_34 * 100.0;
-            lVar3 = il2cpp_value_box(DAT_181da22f0,&local_34);
+            lVar3 = il2cpp_value_box(DAT_181e82730,&local_34);
             if (lVar3 != null) {
               lVar2 = il2cpp_internal(lVar3,*(uint64 *)(*plVar1 + 64));
               if (lVar2 == null) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
             }
             if (*(uint32 *)(plVar1 + 3) < 5) {
               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar4,0);
+              FUN_1801e02d0(uVar4,0);
             }
             plVar1[8] = lVar3;
             il2cpp_internal(plVar1 + 8,lVar3);
@@ -3498,19 +3503,19 @@ public class BuildingUIController
             if (this.buildingData != null) {
               local_30 = (float)AreaBuildingData.GetExtraPartyScore(this.buildingData,0);
               local_30 = local_30 + fVar5;
-              lVar3 = il2cpp_value_box(DAT_181da22f0,&local_30);
+              lVar3 = il2cpp_value_box(DAT_181e82730,&local_30);
               if (lVar3 != null) {
                 lVar2 = il2cpp_internal(lVar3,*(uint64 *)(*plVar1 + 64));
                 if (lVar2 == null) {
                   uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar4,0);
+                  FUN_1801e02d0(uVar4,0);
                 }
               }
               if (*(uint32 *)(plVar1 + 3) < 6) {
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
               plVar1[9] = lVar3;
               il2cpp_internal(plVar1 + 9,lVar3);
@@ -3518,13 +3523,13 @@ public class BuildingUIController
               if (this.buildingData != null) {
                 fVar6 = (float)AreaBuildingData.GetExtraPartyRate(this.buildingData,0);
                 local_2c[0] = (fVar6 + fVar5) * 100.0;
-                lVar3 = il2cpp_value_box(DAT_181da22f0,local_2c);
+                lVar3 = il2cpp_value_box(DAT_181e82730,local_2c);
                 if (lVar3 != null) {
                   lVar2 = il2cpp_internal(lVar3,*(uint64 *)(*plVar1 + 64));
                   if (lVar2 == null) {
                     uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar4,0);
+                    FUN_1801e02d0(uVar4,0);
                   }
                 }
                 if (6 < *(uint32 *)(plVar1 + 3)) {
@@ -3535,15 +3540,15 @@ public class BuildingUIController
                 }
                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar4,0);
+                FUN_1801e02d0(uVar4,0);
               }
             }
           }
         }
     }
 
-    // Token : 0x6000E16
-    // RVA   : 0xB778C0   Offset: 0xB76CC0   Length: 0xAC5
+    // Token : 0x6000E19
+    // RVA   : 0x930B90   Offset: 0x92F990   Length: 0xAC5
     public void StartParty()
     {
         long lVar2;
@@ -3566,7 +3571,7 @@ public class BuildingUIController
            (lVar3 = WorldData.Player(lVar3,0)) == null) throw; // [null/range check failed]
         if (*(float *)(lVar3 + 0x1c4) <= 100.0 && *(float *)(lVar3 + 0x1c4) != 100.0) {
           lVar3 = BuildingUIController.PartyLvName;
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
           uVar4 = "若是连100点声望都没有就贸然举办宴会，怕是没人会赏脸参加呀。";
         }
         else {
@@ -3574,21 +3579,21 @@ public class BuildingUIController
              (lVar3 = GameController._instance.worldData) == null)
           throw; // [null/range check failed]
           if (lVar3.monthPartyTime < 3) {
-            lVar3 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar3,DAT_181da3bf0);
+            lVar3 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar3,DAT_181e861f0);
             iVar9 = 0;
             while( true ) {
               uVar12 = (uint32)((uint64)in_stack_ffffffffffffff98 >> 32);
-              lVar2 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 24);
+              lVar2 = *(int64 *)(*(int64 *)(DAT_181e942d8 + 184) + 24);
               if (lVar2 == null) throw; // [null/range check failed]
               if (*(int *)(lVar2 + 24) <= iVar9) break;
               uVar4 = BuildingUIController.GetPartyChoiceString(this,0,iVar9,0);
               if (lVar3 == null) throw; // [null/range check failed]
-              FUN_18181e6b0(lVar3,uVar4,DAT_181da3d70);
+              FUN_18175de30(lVar3,uVar4,DAT_181e86370);
               iVar9 = iVar9 + 1;
             }
             if (lVar3 != null) {
-              FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar3,"还是算了;HideInteractUI",DAT_181e86370);
               lVar2 = BuildingUIController.PartyLvName;
               uVar4 = new PlotData(0);
               if (lVar2 != null) {
@@ -3602,19 +3607,19 @@ public class BuildingUIController
                   uVar4 = BuildingUIController.GenerateBuildingNPCString
                                     (this,"掌柜",0xfffffffd,0xffffffff,
                                      CONCAT44(uVar12,0xffffffff),0);
-                  uVar5 = il2cpp_internal(DAT_181da24f0);
+                  uVar5 = il2cpp_internal(DAT_181e82930);
                   uVar10 = CONCAT44(uVar11,3);
                   SinglePlotData.ctor(uVar5,"啊呀呀，少侠想要在本店举办宴会？那可真是欢迎之至！\n举办宴会可以吸引周遭声望相近的武林人士前来参与，一道把酒言欢。\n宴会评分越高，客人的身份也会越尊贵，增进的好感自然也越多。",0,5,uVar4,uVar10,"0",0,0,0);
                   uVar12 = (uint32)((uint64)uVar10 >> 32);
                   if (lVar2 != null) {
-                    FUN_18181e6b0(lVar2,uVar5,DAT_181da1408);
+                    FUN_18175de30(lVar2,uVar5,DAT_181e839b0);
                     lVar2 = BuildingUIController.PartyLvName;
                     if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 0x108)) != null) {
                       lVar2 = *(int64 *)(lVar2 + 64);
-                      plVar6 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
+                      plVar6 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
                       uVar4 = "不知，少侠此回想要筹备何种档次的宴会呢？\n(当前{0}为等级{1}，可提升宴会{2}点基础评分和{3}%的评分加成)";
                       lVar8 = "建筑";
-                      if (**(int **)(DAT_181d73d40 + 184) != 2) {
+                      if (**(int **)(DAT_181e538e8 + 184) != 2) {
                         if (this.buildingData == null) throw; // [null/range check failed]
                         lVar8 = AreaBuildingData.Name(this.buildingData,0,0);
                       }
@@ -3624,12 +3629,12 @@ public class BuildingUIController
                            )) {
                           uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar4,0);
+                          FUN_1801e02d0(uVar4,0);
                         }
                         if ((int)plVar6[3] == 0) {
                           uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar4,0);
+                          FUN_1801e02d0(uVar4,0);
                         }
                         plVar6[4] = lVar8;
                         il2cpp_internal(plVar6 + 4,lVar8);
@@ -3641,30 +3646,30 @@ public class BuildingUIController
                              lVar7 == null)) {
                             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar4,0);
+                            FUN_1801e02d0(uVar4,0);
                           }
                           if (*(uint32 *)(plVar6 + 3) < 2) {
                             uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar4,0);
+                            FUN_1801e02d0(uVar4,0);
                           }
                           plVar6[5] = lVar8;
                           il2cpp_internal(plVar6 + 5,lVar8);
                           if (this.buildingData != null) {
                             local_res18[0] =
                                  AreaBuildingData.GetExtraPartyScore(this.buildingData,0);
-                            lVar8 = il2cpp_value_box(DAT_181da22f0,local_res18);
+                            lVar8 = il2cpp_value_box(DAT_181e82730,local_res18);
                             if ((lVar8 != null) &&
                                (lVar7 = il2cpp_internal(lVar8,*(uint64 *)(*plVar6 + 64)),
                                lVar7 == null)) {
                               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar4,0);
+                              FUN_1801e02d0(uVar4,0);
                             }
                             if (*(uint32 *)(plVar6 + 3) < 3) {
                               uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar4,0);
+                              FUN_1801e02d0(uVar4,0);
                             }
                             plVar6[6] = lVar8;
                             il2cpp_internal(plVar6 + 6,lVar8);
@@ -3673,27 +3678,27 @@ public class BuildingUIController
                                    (float)AreaBuildingData.GetExtraPartyRate
                                                     (this.buildingData,0);
                               local_res20[0] = local_res20[0] * 100.0;
-                              lVar8 = il2cpp_value_box(DAT_181da22f0,local_res20);
+                              lVar8 = il2cpp_value_box(DAT_181e82730,local_res20);
                               if ((lVar8 != null) &&
                                  (lVar7 = il2cpp_internal(lVar8,*(uint64 *)(*plVar6 + 64)),
                                  lVar7 == null)) {
                                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar4,0);
+                                FUN_1801e02d0(uVar4,0);
                               }
                               if (*(uint32 *)(plVar6 + 3) < 4) {
                                 uVar4 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar4,0);
+                                FUN_1801e02d0(uVar4,0);
                               }
                               plVar6[7] = lVar8;
                               il2cpp_internal(plVar6 + 7,lVar8);
                               uVar4 = String.Format(uVar4,plVar6,0);
-                              uVar5 = il2cpp_internal(DAT_181da24f0);
+                              uVar5 = il2cpp_internal(DAT_181e82930);
                               SinglePlotData.ctor
                                         (uVar5,uVar4,lVar3,0,0,CONCAT44(uVar12,3),"0",0,0,0);
                               if (lVar2 != null) {
-                                FUN_18181e6b0(lVar2,uVar5,DAT_181da1408);
+                                FUN_18175de30(lVar2,uVar5,DAT_181e839b0);
                                 lVar3 = BuildingUIController.PartyLvName;
                                 lVar2 = BuildingUIController.PartyLvName;
                                 if ((lVar2 != null) && (lVar3 != null)) {
@@ -3706,7 +3711,7 @@ public class BuildingUIController
                         }
                       }
                           // WARNING: Subroutine does not return
-                      FUN_1800d6620();
+                      FUN_1801e0300();
                     }
                   }
                 }
@@ -3714,8 +3719,8 @@ public class BuildingUIController
             }
             throw; // [null/range check failed]
           }
-          lVar3 = FUN_18046c400(0);
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          lVar3 = FUN_180210a70(0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
           uVar4 = "这个月已经宴饮三日，若是天天饮酒作乐，只怕为江湖中人耻笑。";
         }
         SinglePlotData.ctor(uVar5,uVar4,0,1,0,CONCAT44(uVar12,3),"0",1,0,0);
@@ -3725,8 +3730,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E17
-    // RVA   : 0xB75F20   Offset: 0xB75320   Length: 0x8E2
+    // Token : 0x6000E1A
+    // RVA   : 0x92F1F0   Offset: 0x92DFF0   Length: 0x8E2
     public void StartForceParty()
     {
         uint uVar2;
@@ -3742,15 +3747,15 @@ public class BuildingUIController
         if ((GameController._instance != null) &&
            (lVar4 = GameController._instance.worldData) != null) {
           if (lVar4.monthForcePartyTime < 1) {
-            lVar4 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar4,DAT_181da3bf0);
+            lVar4 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar4,DAT_181e861f0);
             iVar10 = 0;
             while( true ) {
-              lVar3 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 24);
+              lVar3 = *(int64 *)(*(int64 *)(DAT_181e942d8 + 184) + 24);
               if (lVar3 == null) break;
               if (*(int *)(lVar3 + 24) <= iVar10) {
                 if (lVar4 != null) {
-                  FUN_18181e6b0(lVar4,"还是算了;HideInteractUI",DAT_181da3d70);
+                  FUN_18175de30(lVar4,"还是算了;HideInteractUI",DAT_181e86370);
                   lVar3 = BuildingUIController.PartyLvName;
                   uVar5 = new PlotData(0);
                   if (lVar3 != null) {
@@ -3762,11 +3767,11 @@ public class BuildingUIController
                       lVar3 = *(int64 *)(lVar3 + 64);
                       uVar5 = new SinglePlotData("在此举办宴会，可召唤本门弟子前来参与，增进好感与忠诚。\n宴会评分越高，增加好感与忠诚自然也越多。",0,1,0,3,"0",1,0,0);
                       if (lVar3 != null) {
-                        FUN_18181e6b0(lVar3,uVar5,DAT_181da1408);
+                        FUN_18175de30(lVar3,uVar5,DAT_181e839b0);
                         lVar3 = BuildingUIController.PartyLvName;
                         if ((lVar3 != null) && (lVar3 = *(int64 *)(lVar3 + 0x108)) != null) {
                           lVar3 = *(int64 *)(lVar3 + 64);
-                          plVar6 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
+                          plVar6 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
                           if ((this.buildingData != null) &&
                              (lVar7 = AreaBuildingData.Name(this.buildingData,0,0),
                              plVar6 != (int64 *)0)) {
@@ -3775,12 +3780,12 @@ public class BuildingUIController
                                lVar8 == null)) {
                               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar5,0);
+                              FUN_1801e02d0(uVar5,0);
                             }
                             if ((int)plVar6[3] == 0) {
                               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                              FUN_1800d65f0(uVar5,0);
+                              FUN_1801e02d0(uVar5,0);
                             }
                             plVar6[4] = lVar7;
                             il2cpp_internal(plVar6 + 4,lVar7);
@@ -3792,12 +3797,12 @@ public class BuildingUIController
                                  lVar8 == null)) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar5,0);
+                                FUN_1801e02d0(uVar5,0);
                               }
                               if (*(uint32 *)(plVar6 + 3) < 2) {
                                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                FUN_1800d65f0(uVar5,0);
+                                FUN_1801e02d0(uVar5,0);
                               }
                               plVar6[5] = lVar7;
                               il2cpp_internal(plVar6 + 5,lVar7);
@@ -3805,18 +3810,18 @@ public class BuildingUIController
                                 local_res18[0] =
                                      AreaBuildingData.GetExtraPartyScore(this.buildingData,0)
                                 ;
-                                lVar7 = il2cpp_value_box(DAT_181da22f0,local_res18);
+                                lVar7 = il2cpp_value_box(DAT_181e82730,local_res18);
                                 if ((lVar7 != null) &&
                                    (lVar8 = il2cpp_internal(lVar7,*(uint64 *)(*plVar6 + 64)),
                                    lVar8 == null)) {
                                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                  FUN_1800d65f0(uVar5,0);
+                                  FUN_1801e02d0(uVar5,0);
                                 }
                                 if (*(uint32 *)(plVar6 + 3) < 3) {
                                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                  FUN_1800d65f0(uVar5,0);
+                                  FUN_1801e02d0(uVar5,0);
                                 }
                                 plVar6[6] = lVar7;
                                 il2cpp_internal(plVar6 + 6,lVar7);
@@ -3825,25 +3830,25 @@ public class BuildingUIController
                                        (float)AreaBuildingData.GetExtraPartyRate
                                                         (this.buildingData,0);
                                   local_res20[0] = local_res20[0] * 100.0;
-                                  lVar7 = il2cpp_value_box(DAT_181da22f0,local_res20);
+                                  lVar7 = il2cpp_value_box(DAT_181e82730,local_res20);
                                   if ((lVar7 != null) &&
                                      (lVar8 = il2cpp_internal(lVar7,*(uint64 *)(*plVar6 + 64)),
                                      lVar8 == null)) {
                                     uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                    FUN_1800d65f0(uVar5,0);
+                                    FUN_1801e02d0(uVar5,0);
                                   }
                                   if (*(uint32 *)(plVar6 + 3) < 4) {
                                     uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                    FUN_1800d65f0(uVar5,0);
+                                    FUN_1801e02d0(uVar5,0);
                                   }
                                   plVar6[7] = lVar7;
                                   il2cpp_internal(plVar6 + 7,lVar7);
                                   uVar5 = String.Format("此回应当筹备何种档次的宴会呢？\n(当前{0}为等级{1}，可提升宴会{2}点基础评分和{3}%的评分加成)",plVar6,0);
                                   uVar9 = new SinglePlotData(uVar5,lVar4,1,0,3,"0",1,0,0);
                                   if (lVar3 != null) {
-                                    FUN_18181e6b0(lVar3,uVar9,DAT_181da1408);
+                                    FUN_18175de30(lVar3,uVar9,DAT_181e839b0);
                                     lVar4 = BuildingUIController.PartyLvName;
                                     lVar3 = BuildingUIController.PartyLvName;
                                     if ((lVar3 != null) && (lVar4 != null)) {
@@ -3861,11 +3866,11 @@ public class BuildingUIController
                   }
                 }
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
               uVar5 = BuildingUIController.GetPartyChoiceString(this,1,iVar10);
               if (lVar4 == null) break;
-              FUN_18181e6b0(lVar4,uVar5,DAT_181da3d70);
+              FUN_18175de30(lVar4,uVar5,DAT_181e86370);
               iVar10 = iVar10 + 1;
             }
           }
@@ -3880,8 +3885,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E18
-    // RVA   : 0xB76AF0   Offset: 0xB75EF0   Length: 0x652
+    // Token : 0x6000E1B
+    // RVA   : 0x92FDC0   Offset: 0x92EBC0   Length: 0x652
     public void StartHireBodyGuard()
     {
         int iVar1;
@@ -3914,56 +3919,56 @@ public class BuildingUIController
               if (this.buildingData != null) {
                 iVar2 = this.buildingData.lv;
               }
-              lVar3 = FUN_18046c400(0);
-              lVar4 = il2cpp_internal(DAT_181d97768);
-              FUN_181330100(lVar4,DAT_181da3bf0);
+              lVar3 = FUN_180210a70(0);
+              lVar4 = il2cpp_internal(DAT_181e77728);
+              FUN_1810f3480(lVar4,DAT_181e861f0);
               if (lVar4 == null) throw; // [null/range check failed]
-              FUN_18181e6b0(lVar4,"物色普通人手;StartRecruitHero;1-Hire-0",DAT_181da3d70);
+              FUN_18175de30(lVar4,"物色普通人手;StartRecruitHero;1-Hire-0",DAT_181e86370);
               local_res18[0] = (float)(iVar2 + 1) * 50.0;
               uVar5 = Single.ToString(local_res18,0);
               uVar5 = String.Concat("物色优良人手;StartRecruitHero;1-Hire-1;0/",uVar5,0);
-              FUN_18181e6b0(lVar4,uVar5,DAT_181da3d70);
+              FUN_18175de30(lVar4,uVar5,DAT_181e86370);
               local_res18[0] = (float)(iVar2 + 1) * 100.0;
               uVar5 = Single.ToString(local_res18,0);
               uVar5 = String.Concat("物色顶尖人手;StartRecruitHero;1-Hire-2;0/",uVar5,0);
-              FUN_18181e6b0(lVar4,uVar5,DAT_181da3d70);
-              FUN_18181e6b0(lVar4,"取消;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar4,uVar5,DAT_181e86370);
+              FUN_18175de30(lVar4,"取消;HideInteractUI",DAT_181e86370);
               uVar9 = 0;
               uVar5 = BuildingUIController.GenerateBuildingNPCString
                                 (this,"掌柜",0xfffffffd,0xffffffff,CONCAT44(uVar8,0xffffffff),0)
               ;
-              uVar6 = il2cpp_internal(DAT_181da24f0);
+              uVar6 = il2cpp_internal(DAT_181e82930);
               SinglePlotData.ctor
                         (uVar6,"别看咱们这不起眼，却也是人才济济，卧虎藏龙。\n少侠行走江湖若遇到什么不便之处，掌柜的可以为您介绍一名江湖人士作为保镖。\n不仅价钱实惠，而且定能竭智尽忠，替您分忧解难！",lVar4,5,uVar5,CONCAT44(uVar9,3),"0",0,0,0);
               if (lVar3 == null) throw; // [null/range check failed]
-              goto LAB_180b77027;
+              goto LAB_1809302f7;
             }
-            lVar3 = FUN_18046c400(0);
+            lVar3 = FUN_180210a70(0);
             uVar9 = 0;
             uVar7 = BuildingUIController.GenerateBuildingNPCString
                               (this,"掌柜",0xfffffffd,0xffffffff,CONCAT44(uVar8,0xffffffff),0);
-            uVar6 = il2cpp_internal(DAT_181da24f0);
+            uVar6 = il2cpp_internal(DAT_181e82930);
             uVar5 = "少侠已雇佣过保镖护卫了，可惜可惜。";
           }
           else {
             uVar9 = 0;
-            lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+            lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
             uVar7 = BuildingUIController.GenerateBuildingNPCString
                               (this,"掌柜",0xfffffffd,0xffffffff,CONCAT44(uVar8,0xffffffff),0);
-            uVar6 = il2cpp_internal(DAT_181da24f0);
+            uVar6 = il2cpp_internal(DAT_181e82930);
             uVar5 = "少侠的队伍已经满员，还是改日再说吧。";
           }
           SinglePlotData.ctor(uVar6,uVar5,0,5,uVar7,CONCAT44(uVar9,3),"0",0,0,0);
           if (lVar3 != null) {
-        LAB_180b77027:
+        LAB_1809302f7:
             PlotController.ChangePlot(lVar3,uVar6,0);
             return;
           }
         }
     }
 
-    // Token : 0x6000E19
-    // RVA   : 0xB77150   Offset: 0xB76550   Length: 0x763
+    // Token : 0x6000E1C
+    // RVA   : 0x930420   Offset: 0x92F220   Length: 0x763
     public void StartHireFollower()
     {
         bool cVar1;
@@ -3984,12 +3989,12 @@ public class BuildingUIController
            (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
         cVar1 = HeroData.HaveForce(lVar2,0);
         if (!cVar1) {
-        LAB_180b777c5:
+        LAB_180930a95:
           uVar10 = 0;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
           uVar6 = BuildingUIController.GenerateBuildingNPCString
                             (this,"杂役",0xfffffffc,0xffffffff,CONCAT44(uVar9,0xffffffff),0);
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
           uVar4 = "抱歉少侠，只有掌门本人或是奉掌门之命者才能在此进行弟子招募。";
         }
         else {
@@ -3997,11 +4002,11 @@ public class BuildingUIController
               (lVar2 = GameController._instance.worldData) == null) ||
              (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
           if (!lVar2.hour) {
-            lVar2 = FUN_18046c0a0(0);
+            lVar2 = FUN_1802106e0(0);
             if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar2 + 0x2e0) != 0) {
-              lVar2 = FUN_18046c0a0(0);
+              lVar2 = FUN_1802106e0(0);
               if ((((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                   (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null) ||
                  ((*(int64 *)(lVar2 + 0x2e0) == 0 ||
@@ -4017,12 +4022,12 @@ public class BuildingUIController
               }
               lVar2 = *(int64 *)(lVar2.chapter + 32);
               if (lVar2 == null) throw; // [null/range check failed]
-              if (lVar2.chapter == 6) goto LAB_180b774c3;
+              if (lVar2.chapter == 6) goto LAB_180930793;
             }
-            goto LAB_180b777c5;
+            goto LAB_180930a95;
           }
-        LAB_180b774c3:
-          lVar2 = FUN_18046c0a0(0);
+        LAB_180930793:
+          lVar2 = FUN_1802106e0(0);
           if ((((lVar2 == null) || (lVar2.villageAreaID == null)) ||
               (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null) ||
              (lVar2 = HeroData.GetForce(lVar2,0,0)) == null) throw; // [null/range check failed]
@@ -4033,49 +4038,49 @@ public class BuildingUIController
               iVar7 = this.buildingData.lv;
             }
             fVar8 = (float)iVar7 * 0.5 + 1.0;
-            lVar2 = FUN_18046c400(0);
-            lVar3 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar3,DAT_181da3bf0);
+            lVar2 = FUN_180210a70(0);
+            lVar3 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar3,DAT_181e861f0);
             if (lVar3 != null) {
-              FUN_18181e6b0(lVar3,"物色普通人选;StartRecruitHero;5-Normal-0",DAT_181da3d70);
+              FUN_18175de30(lVar3,"物色普通人选;StartRecruitHero;5-Normal-0",DAT_181e86370);
               local_res18[0] = fVar8 * 500.0;
               uVar4 = Single.ToString(local_res18,0);
               uVar4 = String.Concat("物色优良人选;StartRecruitHero;5-Normal-1;0/",uVar4,0);
-              FUN_18181e6b0(lVar3,uVar4,DAT_181da3d70);
+              FUN_18175de30(lVar3,uVar4,DAT_181e86370);
               local_res18[0] = fVar8 * 1000.0;
               uVar4 = Single.ToString(local_res18,0);
               uVar4 = String.Concat("物色顶尖人选;StartRecruitHero;5-Normal-2;0/",uVar4,0);
-              FUN_18181e6b0(lVar3,uVar4,DAT_181da3d70);
-              FUN_18181e6b0(lVar3,"取消;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar3,uVar4,DAT_181e86370);
+              FUN_18175de30(lVar3,"取消;HideInteractUI",DAT_181e86370);
               uVar10 = 0;
               uVar4 = BuildingUIController.GenerateBuildingNPCString
                                 (this,"杂役",0xfffffffc,0xffffffff,CONCAT44(uVar9,0xffffffff),0)
               ;
-              uVar5 = il2cpp_internal(DAT_181da24f0);
+              uVar5 = il2cpp_internal(DAT_181e82930);
               SinglePlotData.ctor
                         (uVar5,"这分舵中人来人往，不乏一些意欲拜入本门的武林人士。\n若是少侠有心，可在此物色一名新弟子人选，估摸着花上五天时间就够了。",lVar3,5,uVar4,CONCAT44(uVar10,3),"0",0,0,0);
               if (lVar2 == null) throw; // [null/range check failed]
-              goto LAB_180b77795;
+              goto LAB_180930a65;
             }
             throw; // [null/range check failed]
           }
-          lVar2 = FUN_18046c400(0);
+          lVar2 = FUN_180210a70(0);
           uVar10 = 0;
           uVar6 = BuildingUIController.GenerateBuildingNPCString
                             (this,"杂役",0xfffffffc,0xffffffff,CONCAT44(uVar9,0xffffffff),0);
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
           uVar4 = "抱歉少侠，本门的弟子容量已满，无法进行招募。";
         }
         SinglePlotData.ctor(uVar5,uVar4,0,5,uVar6,CONCAT44(uVar10,3),"0",0,0,0);
         if (lVar2 != null) {
-        LAB_180b77795:
+        LAB_180930a65:
           PlotController.ChangePlot(lVar2,uVar5,0);
           return;
         }
     }
 
-    // Token : 0x6000E1A
-    // RVA   : 0xB72630   Offset: 0xB71A30   Length: 0x6F2
+    // Token : 0x6000E1D
+    // RVA   : 0x92B900   Offset: 0x92A700   Length: 0x6F2
     public void SpeHireFollower()
     {
         bool cVar1;
@@ -4095,12 +4100,12 @@ public class BuildingUIController
            (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
         cVar1 = HeroData.HaveForce(lVar2,0);
         if (!cVar1) {
-        LAB_180b72c34:
+        LAB_18092bf04:
           uVar9 = 0;
-          lVar2 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+          lVar2 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
           uVar6 = BuildingUIController.GenerateBuildingNPCString
                             (this,"名士",0xfffffffa,0xffffffff,CONCAT44(uVar8,0xffffffff),0);
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
           uVar4 = "抱歉少侠，只有掌门本人或是奉掌门之命者才能在此进行弟子招募。";
         }
         else {
@@ -4108,11 +4113,11 @@ public class BuildingUIController
               (lVar2 = GameController._instance.worldData) == null) ||
              (lVar2 = WorldData.Player(lVar2,0)) == null) throw; // [null/range check failed]
           if (!lVar2.hour) {
-            lVar2 = FUN_18046c0a0(0);
+            lVar2 = FUN_1802106e0(0);
             if (((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null) throw; // [null/range check failed]
             if (*(int64 *)(lVar2 + 0x2e0) != 0) {
-              lVar2 = FUN_18046c0a0(0);
+              lVar2 = FUN_1802106e0(0);
               if ((((lVar2 == null) || (lVar2.villageAreaID == null)) ||
                   (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null) ||
                  ((*(int64 *)(lVar2 + 0x2e0) == 0 ||
@@ -4128,12 +4133,12 @@ public class BuildingUIController
               }
               lVar2 = *(int64 *)(lVar2.chapter + 32);
               if (lVar2 == null) throw; // [null/range check failed]
-              if (lVar2.chapter == 6) goto LAB_180b72986;
+              if (lVar2.chapter == 6) goto LAB_18092bc56;
             }
-            goto LAB_180b72c34;
+            goto LAB_18092bf04;
           }
-        LAB_180b72986:
-          lVar2 = FUN_18046c0a0(0);
+        LAB_18092bc56:
+          lVar2 = FUN_1802106e0(0);
           if ((((lVar2 == null) || (lVar2.villageAreaID == null)) ||
               (lVar2 = WorldData.Player(lVar2.villageAreaID,0)) == null) ||
              (lVar2 = HeroData.GetForce(lVar2,0,0)) == null) throw; // [null/range check failed]
@@ -4143,44 +4148,44 @@ public class BuildingUIController
             if (this.buildingData != null) {
               iVar7 = this.buildingData.lv;
             }
-            lVar2 = FUN_18046c400(0);
-            lVar3 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar3,DAT_181da3bf0);
+            lVar2 = FUN_180210a70(0);
+            lVar3 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar3,DAT_181e861f0);
             local_res18[0] = ((float)iVar7 * 0.5 + 1.0) * 2000.0;
             uVar4 = Single.ToString(local_res18,0);
             uVar4 = String.Concat("选贤举能;StartRecruitHero;5-Normal-3;0/",uVar4,0);
             if (lVar3 != null) {
-              FUN_18181e6b0(lVar3,uVar4,DAT_181da3d70);
-              FUN_18181e6b0(lVar3,"取消;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar3,uVar4,DAT_181e86370);
+              FUN_18175de30(lVar3,"取消;HideInteractUI",DAT_181e86370);
               uVar9 = 0;
               uVar4 = BuildingUIController.GenerateBuildingNPCString
                                 (this,"名士",0xfffffffa,0xffffffff,CONCAT44(uVar8,0xffffffff),0)
               ;
-              uVar5 = il2cpp_internal(DAT_181da24f0);
+              uVar5 = il2cpp_internal(DAT_181e82930);
               SinglePlotData.ctor
                         (uVar5,"这黄鹤楼乃是江南胜景，来往之人不乏小有名气的意气游侠，青年才俊，\n少侠若是愿意花上五日时间在此处寻访，必能拔擢一批可造之材。",lVar3,5,uVar4,CONCAT44(uVar9,3),"0",0,0,0);
               if (lVar2 == null) throw; // [null/range check failed]
-              goto LAB_180b72c0b;
+              goto LAB_18092bedb;
             }
             throw; // [null/range check failed]
           }
-          lVar2 = FUN_18046c400(0);
+          lVar2 = FUN_180210a70(0);
           uVar9 = 0;
           uVar6 = BuildingUIController.GenerateBuildingNPCString
                             (this,"名士",0xfffffffa,0xffffffff,CONCAT44(uVar8,0xffffffff),0);
-          uVar5 = il2cpp_internal(DAT_181da24f0);
+          uVar5 = il2cpp_internal(DAT_181e82930);
           uVar4 = "抱歉少侠，本门的弟子容量已满，无法进行招募。";
         }
         SinglePlotData.ctor(uVar5,uVar4,0,5,uVar6,CONCAT44(uVar9,3),"0",0,0,0);
         if (lVar2 != null) {
-        LAB_180b72c0b:
+        LAB_18092bedb:
           PlotController.ChangePlot(lVar2,uVar5,0);
           return;
         }
     }
 
-    // Token : 0x6000E1B
-    // RVA   : 0xB61960   Offset: 0xB60D60   Length: 0x310
+    // Token : 0x6000E1E
+    // RVA   : 0x91AB80   Offset: 0x919980   Length: 0x310
     public float BuildingStudySkillCostRate(AreaBuildingData targetBuilding)
     {
         int iVar1;
@@ -4206,22 +4211,22 @@ public class BuildingUIController
             lVar3 = AreaBuildingData.GetArea(targetBuilding,0);
             if ((lVar3 == null) || (lVar3 = AreaData.GetForce(lVar3,0)) == null) throw; // [null/range check failed]
             iVar1 = *(int *)(lVar3 + 60);
-            lVar3 = FUN_18046c0a0(0);
+            lVar3 = FUN_1802106e0(0);
             if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
                (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) throw; // [null/range check failed]
-            if (iVar1 == *(int *)(lVar3 + 132)) goto LAB_180b61b8b;
+            if (iVar1 == *(int *)(lVar3 + 132)) goto LAB_18091adab;
           }
           lVar3 = AreaBuildingData.GetArea(targetBuilding,0);
           if (lVar3 == null) throw; // [null/range check failed]
           iVar1 = lVar3.lastRandomWorldEventDay;
-          lVar3 = FUN_18046c0a0(0);
+          lVar3 = FUN_1802106e0(0);
           if (((lVar3 == null) || (lVar3.villageAreaID == null)) ||
              (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) == null) throw; // [null/range check failed]
           if (iVar1 != *(int *)(lVar3 + 0x380)) {
             return 1.0;
           }
         }
-        LAB_180b61b8b:
+        LAB_18091adab:
         if (((GameController._instance != null) &&
             (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.Player(lVar3,0)) != null) {
@@ -4230,11 +4235,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E1C
-    // RVA   : 0xB7A080   Offset: 0xB79480   Length: 0xC7C
+    // Token : 0x6000E1F
+    // RVA   : 0x933330   Offset: 0x932130   Length: 0xC7C
     public void StudyLivingSkill(string param)
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -4266,9 +4271,9 @@ public class BuildingUIController
           ThrowHelper.ThrowArgumentOutOfRangeException(0);
         }
         fVar14 = *(float *)(lVar3.chapter + 32 + lVar11 * 4);
-        if ((float)*(int *)(pStatics_3d40 + 0x108) <= fVar14) {
-          lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-          lVar5 = *(int64 *)(pStatics_3d40 + 0x4b0);
+        if ((float)*(int *)(pStatics_38e8 + 0x108) <= fVar14) {
+          lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+          lVar5 = *(int64 *)(pStatics_38e8 + 0x4b8);
           if (lVar5 == null) throw; // [null/range check failed]
           uVar7 = "少侠的{0}已然登峰造极，无需再进行修炼了吧。";
           if (*(uint32 *)(lVar5 + 24) <= uVar1) {
@@ -4292,7 +4297,7 @@ public class BuildingUIController
           if (fVar14 < fVar13) {
             fVar14 = (float)BuildingUIController.BuildingStudySkillCostRate
                                       (this,this.buildingData,0);
-            lVar3 = FUN_18046c0a0(0);
+            lVar3 = FUN_1802106e0(0);
             if ((((lVar3 != null) && (lVar3.villageAreaID != null)) &&
                 (lVar3 = WorldData.Player(lVar3.villageAreaID,0)) != null) &&
                (lVar3 = lVar3.monthLeaderInteractOtherForceTime) != null) {
@@ -4300,7 +4305,7 @@ public class BuildingUIController
                 ThrowHelper.ThrowArgumentOutOfRangeException(0);
               }
               iVar12 = 1 - (int)(*(float *)(lVar3.chapter + 32 + lVar11 * 4) * -0.05);
-              lVar3 = FUN_18046c0a0(0);
+              lVar3 = FUN_1802106e0(0);
               if (((lVar3 != null) && (lVar3.villageAreaID != null)) &&
                  ((lVar3 = WorldData.Player(lVar3.villageAreaID,0), lVar3 != null &&
                   (lVar3 = lVar3.monthLeaderInteractOtherForceTime) != null))) {
@@ -4311,8 +4316,8 @@ public class BuildingUIController
                                                                       + lVar11 * 4) * -0.1)) *
                                           fVar14 * 250.0,0);
                 local_58 = uVar2;
-                lVar3 = FUN_18046c400(0);
-                plVar4 = (int64 *)FUN_1800d60b0(DAT_181da4138,7);
+                lVar3 = FUN_180210a70(0);
+                plVar4 = (int64 *)FUN_1801dfd90(DAT_181e84278,7);
                 if ((this.buildingData != null) &&
                    (lVar5 = AreaBuildingData.Name(this.buildingData,0,0),
                    plVar4 != (int64 *)0)) {
@@ -4320,12 +4325,12 @@ public class BuildingUIController
                      (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                     uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar7,0);
+                    FUN_1801e02d0(uVar7,0);
                   }
                   if ((int)plVar4[3] == 0) {
                     uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar7,0);
+                    FUN_1801e02d0(uVar7,0);
                   }
                   plVar4[4] = lVar5;
                   il2cpp_internal(plVar4 + 4,lVar5);
@@ -4337,16 +4342,16 @@ public class BuildingUIController
                        (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                       uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
+                      FUN_1801e02d0(uVar7,0);
                     }
                     if (*(uint32 *)(plVar4 + 3) < 2) {
                       uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
+                      FUN_1801e02d0(uVar7,0);
                     }
                     plVar4[5] = lVar5;
                     il2cpp_internal(plVar4 + 5,lVar5);
-                    lVar5 = *(int64 *)(pStatics_3d40 + 0x4b0);
+                    lVar5 = *(int64 *)(pStatics_38e8 + 0x4b8);
                     if (lVar5 != null) {
                       if (*(uint32 *)(lVar5 + 24) <= uVar1) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4357,16 +4362,16 @@ public class BuildingUIController
                       {
                         uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
+                        FUN_1801e02d0(uVar7,0);
                       }
                       if (*(uint32 *)(plVar4 + 3) < 3) {
                         uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
+                        FUN_1801e02d0(uVar7,0);
                       }
                       plVar4[6] = lVar5;
                       il2cpp_internal(plVar4 + 6,lVar5);
-                      lVar5 = FUN_18046c0a0(0);
+                      lVar5 = FUN_1802106e0(0);
                       if ((((lVar5 != null) && (*(int64 *)(lVar5 + 32) != 0)) &&
                           (lVar5 = WorldData.Player(*(int64 *)(lVar5 + 32),0)) != null) &&
                          (lVar5 = *(int64 *)(lVar5 + 0x158)) != null) {
@@ -4374,50 +4379,50 @@ public class BuildingUIController
                           ThrowHelper.ThrowArgumentOutOfRangeException(0);
                         }
                         local_res10[0] = *(uint32 *)(*(int64 *)(lVar5 + 16) + 32 + lVar11 * 4);
-                        lVar11 = il2cpp_value_box(DAT_181da22f0,local_res10);
+                        lVar11 = il2cpp_value_box(DAT_181e82730,local_res10);
                         if ((lVar11 != null) &&
                            (lVar5 = il2cpp_internal(lVar11,*(uint64 *)(*plVar4 + 64)),
                            lVar5 == null)) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 4) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[7] = lVar11;
                         il2cpp_internal(plVar4 + 7,lVar11);
                         local_res20[0] = iVar12;
-                        lVar11 = il2cpp_value_box(DAT_181d80430,local_res20);
+                        lVar11 = il2cpp_value_box(DAT_181e60808,local_res20);
                         if ((lVar11 != null) &&
                            (lVar5 = il2cpp_internal(lVar11,*(uint64 *)(*plVar4 + 64)),
                            lVar5 == null)) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 5) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[8] = lVar11;
                         il2cpp_internal(plVar4 + 8,lVar11);
                         local_68 = uVar2;
-                        lVar11 = il2cpp_value_box(DAT_181d80430,&local_68);
+                        lVar11 = il2cpp_value_box(DAT_181e60808,&local_68);
                         if ((lVar11 != null) &&
                            (lVar5 = il2cpp_internal(lVar11,*(uint64 *)(*plVar4 + 64)),
                            lVar5 == null)) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 6) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[9] = lVar11;
                         il2cpp_internal(plVar4 + 9,lVar11);
@@ -4425,7 +4430,7 @@ public class BuildingUIController
                         lVar11 = "";
                         if (fVar14 != 1.0) {
                           local_64 = Mathf.RoundToInt((1.0 - fVar14) * 100.0,0);
-                          uVar8 = il2cpp_value_box(DAT_181d80430,&local_64);
+                          uVar8 = il2cpp_value_box(DAT_181e60808,&local_64);
                           lVar11 = String.Format("\n(建筑属于本门派，门派地位可使银两消耗-{0}%)",uVar8,0);
                         }
                         if ((lVar11 != null) &&
@@ -4433,28 +4438,28 @@ public class BuildingUIController
                            lVar5 == null)) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 7) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[10] = lVar11;
                         il2cpp_internal(plVar4 + 10,lVar11);
                         uVar7 = String.Format(uVar7,plVar4,0);
-                        lVar11 = il2cpp_internal(DAT_181d97768);
-                        FUN_181330100(lVar11,DAT_181da3bf0);
+                        lVar11 = il2cpp_internal(DAT_181e77728);
+                        FUN_1810f3480(lVar11,DAT_181e861f0);
                         local_60 = uVar1;
-                        uVar8 = il2cpp_value_box(DAT_181d80430,&local_60);
+                        uVar8 = il2cpp_value_box(DAT_181e60808,&local_60);
                         local_5c = iVar12;
-                        uVar9 = il2cpp_value_box(DAT_181d80430,&local_5c);
+                        uVar9 = il2cpp_value_box(DAT_181e60808,&local_5c);
                         local_54[0] = local_58;
-                        uVar10 = il2cpp_value_box(DAT_181d80430,local_54);
+                        uVar10 = il2cpp_value_box(DAT_181e60808,local_54);
                         uVar8 = String.Format("开始修炼;StudyLivingSkillStart;{0}-{1};0/{2}",uVar8,uVar9,uVar10,0);
                         if (lVar11 != null) {
-                          FUN_18181e6b0(lVar11,uVar8,DAT_181da3d70);
-                          FUN_18181e6b0(lVar11,"还是算了;HideInteractUI",DAT_181da3d70);
+                          FUN_18175de30(lVar11,uVar8,DAT_181e86370);
+                          FUN_18175de30(lVar11,"还是算了;HideInteractUI",DAT_181e86370);
                           uVar8 = BuildingUIController.GenerateForceNPCString(this,"弟子",0);
                           uVar9 = new SinglePlotData(uVar7,lVar11,5,uVar8,3,"0",0,0,0);
                           if (lVar3 != null) {
@@ -4463,7 +4468,7 @@ public class BuildingUIController
                           }
                         }
                           // WARNING: Subroutine does not return
-                        FUN_1800d6620();
+                        FUN_1801e0300();
                       }
                     }
                   }
@@ -4471,10 +4476,10 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          lVar3 = FUN_18046c400(0);
-          lVar5 = *(int64 *)(pStatics_3d40 + 0x4b0);
+          lVar3 = FUN_180210a70(0);
+          lVar5 = *(int64 *)(pStatics_38e8 + 0x4b8);
           if (lVar5 == null) throw; // [null/range check failed]
           uVar7 = "少侠的{0}已抵达潜力之上限，无法再继续修炼了。";
           if (*(uint32 *)(lVar5 + 24) <= uVar1) {
@@ -4491,11 +4496,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E1D
-    // RVA   : 0xB7B930   Offset: 0xB7AD30   Length: 0xB66
+    // Token : 0x6000E20
+    // RVA   : 0x934BE0   Offset: 0x9339E0   Length: 0xB66
     public void StudyMaxLivingSkill(string param)
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -4521,7 +4526,7 @@ public class BuildingUIController
             (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.Player(lVar3,0)) != null) {
           fVar12 = (float)HeroData.GetMaxLivingSkill(lVar3,uVar1,0);
-          if (fVar12 < (float)*(int *)(pStatics_3d40 + 0x108)) {
+          if (fVar12 < (float)*(int *)(pStatics_38e8 + 0x108)) {
             fVar12 = (float)BuildingUIController.BuildingStudySkillCostRate
                                       (this,this.buildingData,0);
             if (((GameController._instance != null) &&
@@ -4536,7 +4541,7 @@ public class BuildingUIController
                 uVar2 = Mathf.RoundToInt((float)(1 - (int)(fVar13 * -0.1)) * fVar12 * 500.0,0);
                 local_58 = uVar2;
                 lVar3 = BuildingUIController.PartyLvName;
-                plVar4 = (int64 *)FUN_1800d60b0(DAT_181da4138,7);
+                plVar4 = (int64 *)FUN_1801dfd90(DAT_181e84278,7);
                 if ((this.buildingData != null) &&
                    (lVar5 = AreaBuildingData.Name(this.buildingData,0,0),
                    plVar4 != (int64 *)0)) {
@@ -4544,12 +4549,12 @@ public class BuildingUIController
                      (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                     uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar7,0);
+                    FUN_1801e02d0(uVar7,0);
                   }
                   if ((int)plVar4[3] == 0) {
                     uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar7,0);
+                    FUN_1801e02d0(uVar7,0);
                   }
                   plVar4[4] = lVar5;
                   il2cpp_internal(plVar4 + 4,lVar5);
@@ -4561,16 +4566,16 @@ public class BuildingUIController
                        (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                       uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
+                      FUN_1801e02d0(uVar7,0);
                     }
                     if (*(uint32 *)(plVar4 + 3) < 2) {
                       uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
+                      FUN_1801e02d0(uVar7,0);
                     }
                     plVar4[5] = lVar5;
                     il2cpp_internal(plVar4 + 5,lVar5);
-                    lVar5 = *(int64 *)(pStatics_3d40 + 0x4b0);
+                    lVar5 = *(int64 *)(pStatics_38e8 + 0x4b8);
                     if (lVar5 != null) {
                       if (lVar5.cityAreaID <= uVar1) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4582,12 +4587,12 @@ public class BuildingUIController
                       {
                         uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
+                        FUN_1801e02d0(uVar7,0);
                       }
                       if (*(uint32 *)(plVar4 + 3) < 3) {
                         uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
+                        FUN_1801e02d0(uVar7,0);
                       }
                       plVar4[6] = lVar5;
                       il2cpp_internal(plVar4 + 6,lVar5);
@@ -4595,50 +4600,50 @@ public class BuildingUIController
                           (lVar5 = GameController._instance.worldData, lVar5 != null
                           )) && (lVar5 = WorldData.Player(lVar5,0)) != null) {
                         local_res10[0] = HeroData.GetMaxLivingSkill(lVar5,uVar1,0);
-                        lVar5 = il2cpp_value_box(DAT_181da22f0,local_res10);
+                        lVar5 = il2cpp_value_box(DAT_181e82730,local_res10);
                         if ((lVar5 != null) &&
                            (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64)), lVar6 == null
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 4) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[7] = lVar5;
                         il2cpp_internal(plVar4 + 7,lVar5);
                         local_res20[0] = iVar11;
-                        lVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
+                        lVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
                         if ((lVar5 != null) &&
                            (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64)), lVar6 == null
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 5) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[8] = lVar5;
                         il2cpp_internal(plVar4 + 8,lVar5);
                         local_68 = uVar2;
-                        lVar5 = il2cpp_value_box(DAT_181d80430,&local_68);
+                        lVar5 = il2cpp_value_box(DAT_181e60808,&local_68);
                         if ((lVar5 != null) &&
                            (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64)), lVar6 == null
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 6) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[9] = lVar5;
                         il2cpp_internal(plVar4 + 9,lVar5);
@@ -4646,7 +4651,7 @@ public class BuildingUIController
                         lVar5 = "";
                         if (fVar12 != 1.0) {
                           local_64 = Mathf.RoundToInt((1.0 - fVar12) * 100.0,0);
-                          uVar8 = il2cpp_value_box(DAT_181d80430,&local_64);
+                          uVar8 = il2cpp_value_box(DAT_181e60808,&local_64);
                           lVar5 = String.Format("\n(建筑属于本门派，门派地位可使银两消耗-{0}%)",uVar8,0);
                         }
                         if ((lVar5 != null) &&
@@ -4654,28 +4659,28 @@ public class BuildingUIController
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 7) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[10] = lVar5;
                         il2cpp_internal(plVar4 + 10,lVar5);
                         uVar7 = String.Format(uVar7,plVar4,0);
-                        lVar5 = il2cpp_internal(DAT_181d97768);
-                        FUN_181330100(lVar5,DAT_181da3bf0);
+                        lVar5 = il2cpp_internal(DAT_181e77728);
+                        FUN_1810f3480(lVar5,DAT_181e861f0);
                         local_60 = uVar1;
-                        uVar8 = il2cpp_value_box(DAT_181d80430,&local_60);
+                        uVar8 = il2cpp_value_box(DAT_181e60808,&local_60);
                         local_5c = iVar11;
-                        uVar9 = il2cpp_value_box(DAT_181d80430,&local_5c);
+                        uVar9 = il2cpp_value_box(DAT_181e60808,&local_5c);
                         local_54[0] = local_58;
-                        uVar10 = il2cpp_value_box(DAT_181d80430,local_54);
+                        uVar10 = il2cpp_value_box(DAT_181e60808,local_54);
                         uVar8 = String.Format("开始修炼;StudyMaxLivingSkillStart;{0}-{1};0/{2}",uVar8,uVar9,uVar10,0);
                         if (lVar5 != null) {
-                          FUN_18181e6b0(lVar5,uVar8,DAT_181da3d70);
-                          FUN_18181e6b0(lVar5,"还是算了;HideInteractUI",DAT_181da3d70);
+                          FUN_18175de30(lVar5,uVar8,DAT_181e86370);
+                          FUN_18175de30(lVar5,"还是算了;HideInteractUI",DAT_181e86370);
                           uVar8 = BuildingUIController.GenerateForceNPCString(this,"弟子",0);
                           uVar9 = new SinglePlotData(uVar7,lVar5,5,uVar8,3,"0",0,0,0);
                           if (lVar3 != null) {
@@ -4684,7 +4689,7 @@ public class BuildingUIController
                           }
                         }
                           // WARNING: Subroutine does not return
-                        FUN_1800d6620();
+                        FUN_1801e0300();
                       }
                     }
                   }
@@ -4692,10 +4697,10 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar3 = BuildingUIController.PartyLvName;
-          lVar5 = *(int64 *)(pStatics_3d40 + 0x4b0);
+          lVar5 = *(int64 *)(pStatics_38e8 + 0x4b8);
           if (lVar5 != null) {
             if (lVar5.cityAreaID <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4713,11 +4718,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E1E
-    // RVA   : 0xB7ADB0   Offset: 0xB7A1B0   Length: 0xB76
+    // Token : 0x6000E21
+    // RVA   : 0x934060   Offset: 0x932E60   Length: 0xB76
     public void StudyMaxFightSkill(string param)
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -4743,7 +4748,7 @@ public class BuildingUIController
             (lVar3 = GameController._instance.worldData) != null) &&
            (lVar3 = WorldData.Player(lVar3,0)) != null) {
           fVar12 = (float)HeroData.GetMaxFightSkill(lVar3,uVar1,0);
-          if (fVar12 < (float)*(int *)(pStatics_3d40 + 0x104)) {
+          if (fVar12 < (float)*(int *)(pStatics_38e8 + 0x104)) {
             fVar12 = (float)BuildingUIController.BuildingStudySkillCostRate
                                       (this,this.buildingData,0);
             if (((GameController._instance != null) &&
@@ -4758,7 +4763,7 @@ public class BuildingUIController
                 uVar2 = Mathf.RoundToInt((float)(1 - (int)(fVar13 * -0.1)) * fVar12 * 1000.0,0);
                 local_68 = uVar2;
                 lVar3 = BuildingUIController.PartyLvName;
-                plVar4 = (int64 *)FUN_1800d60b0(DAT_181da4138,7);
+                plVar4 = (int64 *)FUN_1801dfd90(DAT_181e84278,7);
                 if ((this.buildingData != null) &&
                    (lVar5 = AreaBuildingData.Name(this.buildingData,0,0),
                    plVar4 != (int64 *)0)) {
@@ -4766,12 +4771,12 @@ public class BuildingUIController
                      (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                     uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar7,0);
+                    FUN_1801e02d0(uVar7,0);
                   }
                   if ((int)plVar4[3] == 0) {
                     uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar7,0);
+                    FUN_1801e02d0(uVar7,0);
                   }
                   plVar4[4] = lVar5;
                   il2cpp_internal(plVar4 + 4,lVar5);
@@ -4783,16 +4788,16 @@ public class BuildingUIController
                        (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64))) == null) {
                       uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
+                      FUN_1801e02d0(uVar7,0);
                     }
                     if (*(uint32 *)(plVar4 + 3) < 2) {
                       uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar7,0);
+                      FUN_1801e02d0(uVar7,0);
                     }
                     plVar4[5] = lVar5;
                     il2cpp_internal(plVar4 + 5,lVar5);
-                    lVar5 = *(int64 *)(pStatics_3d40 + 0x4a0);
+                    lVar5 = *(int64 *)(pStatics_38e8 + 0x4a8);
                     if (lVar5 != null) {
                       if (lVar5.cityAreaID <= uVar1) {
                         ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4804,12 +4809,12 @@ public class BuildingUIController
                       {
                         uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
+                        FUN_1801e02d0(uVar7,0);
                       }
                       if (*(uint32 *)(plVar4 + 3) < 3) {
                         uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar7,0);
+                        FUN_1801e02d0(uVar7,0);
                       }
                       plVar4[6] = lVar5;
                       il2cpp_internal(plVar4 + 6,lVar5);
@@ -4817,50 +4822,50 @@ public class BuildingUIController
                           (lVar5 = GameController._instance.worldData, lVar5 != null
                           )) && (lVar5 = WorldData.Player(lVar5,0)) != null) {
                         local_res10[0] = HeroData.GetMaxFightSkill(lVar5,uVar1,0);
-                        lVar5 = il2cpp_value_box(DAT_181da22f0,local_res10);
+                        lVar5 = il2cpp_value_box(DAT_181e82730,local_res10);
                         if ((lVar5 != null) &&
                            (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64)), lVar6 == null
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 4) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[7] = lVar5;
                         il2cpp_internal(plVar4 + 7,lVar5);
                         local_res20[0] = iVar11;
-                        lVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
+                        lVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
                         if ((lVar5 != null) &&
                            (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64)), lVar6 == null
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 5) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[8] = lVar5;
                         il2cpp_internal(plVar4 + 8,lVar5);
                         local_78 = uVar2;
-                        lVar5 = il2cpp_value_box(DAT_181d80430,&local_78);
+                        lVar5 = il2cpp_value_box(DAT_181e60808,&local_78);
                         if ((lVar5 != null) &&
                            (lVar6 = il2cpp_internal(lVar5,*(uint64 *)(*plVar4 + 64)), lVar6 == null
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 6) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[9] = lVar5;
                         il2cpp_internal(plVar4 + 9,lVar5);
@@ -4868,7 +4873,7 @@ public class BuildingUIController
                         lVar5 = "";
                         if (fVar12 != 1.0) {
                           local_74 = Mathf.RoundToInt((1.0 - fVar12) * 100.0,0);
-                          uVar8 = il2cpp_value_box(DAT_181d80430,&local_74);
+                          uVar8 = il2cpp_value_box(DAT_181e60808,&local_74);
                           lVar5 = String.Format("\n(建筑属于本门派，门派地位可使银两消耗-{0}%)",uVar8,0);
                         }
                         if ((lVar5 != null) &&
@@ -4876,28 +4881,28 @@ public class BuildingUIController
                            )) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         if (*(uint32 *)(plVar4 + 3) < 7) {
                           uVar7 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar7,0);
+                          FUN_1801e02d0(uVar7,0);
                         }
                         plVar4[10] = lVar5;
                         il2cpp_internal(plVar4 + 10,lVar5);
                         uVar7 = String.Format(uVar7,plVar4,0);
-                        lVar5 = il2cpp_internal(DAT_181d97768);
-                        FUN_181330100(lVar5,DAT_181da3bf0);
+                        lVar5 = il2cpp_internal(DAT_181e77728);
+                        FUN_1810f3480(lVar5,DAT_181e861f0);
                         local_70 = uVar1;
-                        uVar8 = il2cpp_value_box(DAT_181d80430,&local_70);
+                        uVar8 = il2cpp_value_box(DAT_181e60808,&local_70);
                         local_6c = iVar11;
-                        uVar9 = il2cpp_value_box(DAT_181d80430,&local_6c);
+                        uVar9 = il2cpp_value_box(DAT_181e60808,&local_6c);
                         local_64[0] = local_68;
-                        uVar10 = il2cpp_value_box(DAT_181d80430,local_64);
+                        uVar10 = il2cpp_value_box(DAT_181e60808,local_64);
                         uVar8 = String.Format("开始修炼;StudyMaxFightSkillStart;{0}-{1};0/{2}",uVar8,uVar9,uVar10,0);
                         if (lVar5 != null) {
-                          FUN_18181e6b0(lVar5,uVar8,DAT_181da3d70);
-                          FUN_18181e6b0(lVar5,"还是算了;HideInteractUI",DAT_181da3d70);
+                          FUN_18175de30(lVar5,uVar8,DAT_181e86370);
+                          FUN_18175de30(lVar5,"还是算了;HideInteractUI",DAT_181e86370);
                           uVar8 = BuildingUIController.GenerateForceNPCString(this,"弟子",0);
                           uVar9 = new SinglePlotData(uVar7,lVar5,5,uVar8,3,"0",0,0,0);
                           if (lVar3 != null) {
@@ -4906,7 +4911,7 @@ public class BuildingUIController
                           }
                         }
                           // WARNING: Subroutine does not return
-                        FUN_1800d6620();
+                        FUN_1801e0300();
                       }
                     }
                   }
@@ -4914,10 +4919,10 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar3 = BuildingUIController.PartyLvName;
-          lVar5 = *(int64 *)(pStatics_3d40 + 0x4a0);
+          lVar5 = *(int64 *)(pStatics_38e8 + 0x4a8);
           if (lVar5 != null) {
             if (lVar5.cityAreaID <= uVar1) {
               ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -4935,8 +4940,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E1F
-    // RVA   : 0xB7C4A0   Offset: 0xB7B8A0   Length: 0xA19
+    // Token : 0x6000E22
+    // RVA   : 0x935750   Offset: 0x934550   Length: 0xA19
     public void StudyMaxState(string param)
     {
         uint uVar1;
@@ -4959,11 +4964,11 @@ public class BuildingUIController
         fVar13 = (float)BuildingUIController.BuildingStudySkillCostRate
                                   (this,this.buildingData,0);
         uVar1 = Int32.Parse(param,0);
-        lVar3 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar3,DAT_181da3bf0);
+        lVar3 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar3,DAT_181e861f0);
         if (lVar3 != null) {
-          FUN_18181e6b0(lVar3,"生命上限",DAT_181da3d70);
-          FUN_18181e6b0(lVar3,"内力上限",DAT_181da3d70);
+          FUN_18175de30(lVar3,"生命上限",DAT_181e86370);
+          FUN_18175de30(lVar3,"内力上限",DAT_181e86370);
           if (uVar1 == 0) {
             if (((GameController._instance == null) ||
                 (lVar4 = GameController._instance.worldData) == null) ||
@@ -4980,8 +4985,8 @@ public class BuildingUIController
           }
           uVar12 = (int)fVar14 + 2;
           uVar2 = Mathf.RoundToInt(fVar13 * 750.0 * (float)(int)uVar12,0);
-          lVar4 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da4138,7);
+          lVar4 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+          plVar5 = (int64 *)FUN_1801dfd90(DAT_181e84278,7);
           if ((this.buildingData != null) &&
              (lVar6 = AreaBuildingData.Name(this.buildingData,0,0), plVar5 != (int64 *)0
              )) {
@@ -4989,12 +4994,12 @@ public class BuildingUIController
                (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar8,0);
+              FUN_1801e02d0(uVar8,0);
             }
             if ((int)plVar5[3] == 0) {
               uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar8,0);
+              FUN_1801e02d0(uVar8,0);
             }
             plVar5[4] = lVar6;
             il2cpp_internal(plVar5 + 4,lVar6);
@@ -5007,12 +5012,12 @@ public class BuildingUIController
                    (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 if (*(uint32 *)(plVar5 + 3) < 2) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 plVar5[5] = lVar6;
                 il2cpp_internal(plVar5 + 5,lVar6);
@@ -5024,12 +5029,12 @@ public class BuildingUIController
                    (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 if (*(uint32 *)(plVar5 + 3) < 3) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 plVar5[6] = lVar3;
                 il2cpp_internal(plVar5 + 6,lVar3);
@@ -5039,83 +5044,83 @@ public class BuildingUIController
                       (lVar3 = GameController._instance.worldData) != null)
                      && (lVar3 = WorldData.Player(lVar3,0)) != null) {
                     local_res8[0] = HeroData.GetExtraMaxHp(lVar3,0);
-        LAB_180b7cacb:
-                    lVar3 = il2cpp_value_box(DAT_181da22f0,local_res8);
+        LAB_180935d7b:
+                    lVar3 = il2cpp_value_box(DAT_181e82730,local_res8);
                     if ((lVar3 != null) &&
                        (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(plVar5 + 3) < 4) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     plVar5[7] = lVar3;
                     il2cpp_internal(plVar5 + 7,lVar3);
                     local_res10[0] = uVar12;
-                    lVar3 = il2cpp_value_box(DAT_181d80430,local_res10);
+                    lVar3 = il2cpp_value_box(DAT_181e60808,local_res10);
                     if ((lVar3 != null) &&
                        (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(plVar5 + 3) < 5) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     plVar5[8] = lVar3;
                     il2cpp_internal(plVar5 + 8,lVar3);
                     local_res20[0] = uVar2;
-                    lVar3 = il2cpp_value_box(DAT_181d80430,local_res20);
+                    lVar3 = il2cpp_value_box(DAT_181e60808,local_res20);
                     if ((lVar3 != null) &&
                        (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(plVar5 + 3) < 6) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     plVar5[9] = lVar3;
                     il2cpp_internal(plVar5 + 9,lVar3);
                     lVar3 = "";
                     if (fVar13 != 1.0) {
                       local_res8[0] = Mathf.RoundToInt((1.0 - fVar13) * 100.0,0);
-                      uVar9 = il2cpp_value_box(DAT_181d80430,local_res8);
+                      uVar9 = il2cpp_value_box(DAT_181e60808,local_res8);
                       lVar3 = String.Format("\n(建筑属于本门派，门派地位可使银两消耗-{0}%)",uVar9,0);
                     }
                     if ((lVar3 != null) &&
                        (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(plVar5 + 3) < 7) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     plVar5[10] = lVar3;
                     il2cpp_internal(plVar5 + 10,lVar3);
                     uVar8 = String.Format(uVar8,plVar5,0);
-                    lVar3 = il2cpp_internal(DAT_181d97768);
-                    FUN_181330100(lVar3,DAT_181da3bf0);
+                    lVar3 = il2cpp_internal(DAT_181e77728);
+                    FUN_1810f3480(lVar3,DAT_181e861f0);
                     local_res10[0] = uVar1;
-                    uVar9 = il2cpp_value_box(DAT_181d80430,local_res10);
+                    uVar9 = il2cpp_value_box(DAT_181e60808,local_res10);
                     local_res20[0] = uVar12;
-                    uVar10 = il2cpp_value_box(DAT_181d80430,local_res20);
+                    uVar10 = il2cpp_value_box(DAT_181e60808,local_res20);
                     local_54[0] = uVar2;
-                    uVar11 = il2cpp_value_box(DAT_181d80430,local_54);
+                    uVar11 = il2cpp_value_box(DAT_181e60808,local_54);
                     uVar9 = String.Format("开始修炼;StudyMaxStateStart;{0}-{1};0/{2}",uVar9,uVar10,uVar11,0);
                     if (lVar3 != null) {
-                      FUN_18181e6b0(lVar3,uVar9,DAT_181da3d70);
-                      FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
+                      FUN_18175de30(lVar3,uVar9,DAT_181e86370);
+                      FUN_18175de30(lVar3,"还是算了;HideInteractUI",DAT_181e86370);
                       uVar9 = BuildingUIController.GenerateForceNPCString(this,"弟子",0);
                       uVar10 = new SinglePlotData(uVar8,lVar3,5,uVar9,3,"0",0,0,0);
                       if (lVar4 != null) {
@@ -5124,7 +5129,7 @@ public class BuildingUIController
                       }
                     }
                           // WARNING: Subroutine does not return
-                    FUN_1800d6620();
+                    FUN_1801e0300();
                   }
                 }
                 else {
@@ -5132,7 +5137,7 @@ public class BuildingUIController
                       (lVar3 = GameController._instance.worldData) != null)
                      && (lVar3 = WorldData.Player(lVar3,0)) != null) {
                     local_res8[0] = HeroData.GetExtraMaxMana(lVar3,0);
-                    goto LAB_180b7cacb;
+                    goto LAB_180935d7b;
                   }
                 }
               }
@@ -5141,11 +5146,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E20
-    // RVA   : 0xB6BA70   Offset: 0xB6AE70   Length: 0xCF7
+    // Token : 0x6000E23
+    // RVA   : 0x924D40   Offset: 0x923B40   Length: 0xCF7
     public void ProduceBuildingWork(string param)
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         bool cVar1;
         uint uVar2;
         uint uVar3;
@@ -5168,13 +5173,13 @@ public class BuildingUIController
         local_60 = 0.0;
         local_64 = 0;
         lVar4 = String.Format("WorkInProductionBuilding/{0}_1/FinishWorkInProductionBuilding/{0}_0",param,0);
-        cVar1 = FUN_18171eb50(param,"5",0);
+        cVar1 = FUN_1816387f0(param,"5",0);
         local_68 = -1;
         if (cVar1) {
           local_68 = 2;
         }
-        lVar5 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar5,DAT_181da3bf0);
+        lVar5 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar5,DAT_181e861f0);
         iVar13 = iVar12;
         do {
           local_res20[0] = Mathf.Max(1,iVar12);
@@ -5185,19 +5190,19 @@ public class BuildingUIController
             uVar7 = Int32.ToString(&local_64,0);
             lVar8 = String.Concat(";",uVar6,"/",uVar7,0);
           }
-          plVar9 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,8);
+          plVar9 = (int64 *)FUN_1801dfd90(DAT_181e85e38,8);
           lVar10 = Int32.ToString(local_res20,0);
           if (plVar9 == (int64 *)0) throw; // [null/range check failed]
           if ((lVar10 != null) &&
              (lVar11 = il2cpp_internal(lVar10,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           if ((int)plVar9[3] == 0) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[4] = lVar10;
           il2cpp_internal(plVar9 + 4,lVar10);
@@ -5205,13 +5210,13 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal("天;SureBuildingWork;",*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           lVar10 = "天;SureBuildingWork;";
           if (*(uint32 *)(plVar9 + 3) < 2) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[5] = "天;SureBuildingWork;";
           il2cpp_internal(plVar9 + 5,lVar10);
@@ -5221,12 +5226,12 @@ public class BuildingUIController
              (lVar11 = il2cpp_internal(lVar10,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 3) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[6] = lVar10;
           il2cpp_internal(plVar9 + 6,lVar10);
@@ -5234,13 +5239,13 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal("/",*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           lVar10 = "/";
           if (*(uint32 *)(plVar9 + 3) < 4) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[7] = "/";
           il2cpp_internal(plVar9 + 7,lVar10);
@@ -5249,12 +5254,12 @@ public class BuildingUIController
              (lVar11 = il2cpp_internal(lVar10,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 5) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[8] = lVar10;
           il2cpp_internal(plVar9 + 8,lVar10);
@@ -5262,13 +5267,13 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal("/",*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           lVar10 = "/";
           if (*(uint32 *)(plVar9 + 3) < 6) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[9] = "/";
           il2cpp_internal(plVar9 + 9,lVar10);
@@ -5276,12 +5281,12 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal(lVar4,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 7) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[10] = lVar4;
           il2cpp_internal(plVar9 + 10,lVar4);
@@ -5289,24 +5294,24 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 8) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[11] = lVar8;
           il2cpp_internal(plVar9 + 11,lVar8);
           uVar6 = String.Concat(plVar9,0);
           if (lVar5 == null) throw; // [null/range check failed]
-          FUN_18181e6b0(lVar5,uVar6);
+          FUN_18175de30(lVar5,uVar6);
           iVar13 = iVar13 + 1;
           iVar12 = iVar12 + 5;
         } while (iVar12 < 15);
-        FUN_18181e6b0(lVar5,"取消;HideInteractUI",DAT_181da3d70);
+        FUN_18175de30(lVar5,"取消;HideInteractUI",DAT_181e86370);
         lVar4 = BuildingUIController.PartyLvName;
-        plVar9 = (int64 *)FUN_1800d60b0(DAT_181da4138,6);
+        plVar9 = (int64 *)FUN_1801dfd90(DAT_181e84278,6);
         if ((this.buildingData != null) &&
            (lVar8 = AreaBuildingData.Name(this.buildingData,0,0), plVar9 != (int64 *)0))
         {
@@ -5314,12 +5319,12 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           if ((int)plVar9[3] == 0) {
             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar6,0);
+            FUN_1801e02d0(uVar6,0);
           }
           plVar9[4] = lVar8;
           il2cpp_internal(plVar9 + 4,lVar8);
@@ -5329,12 +5334,12 @@ public class BuildingUIController
                (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             if (*(uint32 *)(plVar9 + 3) < 2) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar9[5] = lVar8;
             il2cpp_internal(plVar9 + 5,lVar8);
@@ -5351,16 +5356,16 @@ public class BuildingUIController
                (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             if (*(uint32 *)(plVar9 + 3) < 3) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar9[6] = lVar8;
             il2cpp_internal(plVar9 + 6,lVar8);
-            lVar8 = *(int64 *)(pStatics_3d40 + 0x438);
+            lVar8 = *(int64 *)(pStatics_38e8 + 0x440);
             uVar2 = Int32.Parse(param,0);
             if (lVar8 != null) {
               if (lVar8.Count <= uVar2) {
@@ -5371,12 +5376,12 @@ public class BuildingUIController
                  (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               if (*(uint32 *)(plVar9 + 3) < 4) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               plVar9[7] = lVar8;
               il2cpp_internal(plVar9 + 7,lVar8);
@@ -5385,17 +5390,17 @@ public class BuildingUIController
               if (lVar8 != null) {
                 uVar3 = PlotController.GetResourceProduceNum(lVar8,uVar3,0x3f800000,0);
                 local_5c[0] = Mathf.CeilToInt(uVar3,0);
-                lVar8 = il2cpp_value_box(DAT_181d80430,local_5c);
+                lVar8 = il2cpp_value_box(DAT_181e60808,local_5c);
                 if ((lVar8 != null) &&
                    (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 if (*(uint32 *)(plVar9 + 3) < 5) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
                 plVar9[8] = lVar8;
                 il2cpp_internal(plVar9 + 8,lVar8);
@@ -5405,12 +5410,12 @@ public class BuildingUIController
                   lVar8 = HeroData.GetForce(lVar8,0,0);
                   if (lVar8 == null) {
 
-                    if ((lVar8 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56)?.TempHeros) == null)
+                    if ((lVar8 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56)?.TempHeros) == null)
                     throw; // [null/range check failed]
                     lVar8 = AreaData.GetForce(lVar8,0);
                     if (lVar8 == null) throw; // [null/range check failed]
                     uVar7 = ForceData.GetForceName(lVar8,1,0);
-                    lVar8 = *(int64 *)(pStatics_3d40 + 0x438);
+                    lVar8 = *(int64 *)(pStatics_38e8 + 0x440);
                     uVar2 = Int32.Parse(param,0);
                     if (lVar8 == null) throw; // [null/range check failed]
                     if (lVar8.Count <= uVar2) {
@@ -5434,12 +5439,12 @@ public class BuildingUIController
                      (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   if (*(uint32 *)(plVar9 + 3) < 6) {
                     uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                    FUN_1800d65f0(uVar6,0);
+                    FUN_1801e02d0(uVar6,0);
                   }
                   plVar9[9] = lVar8;
                   il2cpp_internal(plVar9 + 9,lVar8);
@@ -5454,16 +5459,16 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6000E21
-    // RVA   : 0xB6B000   Offset: 0xB6A400   Length: 0xA62
+    // Token : 0x6000E24
+    // RVA   : 0x9242D0   Offset: 0x9230D0   Length: 0xA62
     public void ProduceBuildingSteal(string param)
     {
-        var pStatics_3d40 = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics_38e8 = *(int64*)(DAT_181e538e8 + 184);
         uint uVar1;
         uint uVar2;
         long lVar3;
@@ -5479,24 +5484,24 @@ public class BuildingUIController
         local_res20[0] = 0.0;
         local_res10[0] = 0;
         lVar3 = String.Format("WorkInProductionBuilding/{0}_0.5/FinishWorkInProductionBuilding/{0}_1",param,0);
-        lVar4 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar4,DAT_181da3bf0);
+        lVar4 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar4,DAT_181e861f0);
         iVar10 = 0;
         while( true ) {
           local_res10[0] = Mathf.Max(1,iVar10);
-          plVar5 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,7);
+          plVar5 = (int64 *)FUN_1801dfd90(DAT_181e85e38,7);
           lVar6 = Int32.ToString(local_res10,0);
           if (plVar5 == (int64 *)0) break;
           if ((lVar6 != null) &&
              (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           if ((int)plVar5[3] == 0) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           plVar5[4] = lVar6;
           il2cpp_internal(plVar5 + 4,lVar6);
@@ -5504,13 +5509,13 @@ public class BuildingUIController
              (lVar6 = il2cpp_internal("天;SureBuildingWork;",*(uint64 *)(*plVar5 + 64))) == null) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           lVar6 = "天;SureBuildingWork;";
           if (*(uint32 *)(plVar5 + 3) < 2) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           plVar5[5] = "天;SureBuildingWork;";
           il2cpp_internal(plVar5 + 5,lVar6);
@@ -5520,12 +5525,12 @@ public class BuildingUIController
              (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           if (*(uint32 *)(plVar5 + 3) < 3) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           plVar5[6] = lVar6;
           il2cpp_internal(plVar5 + 6,lVar6);
@@ -5533,13 +5538,13 @@ public class BuildingUIController
              (lVar6 = il2cpp_internal("/",*(uint64 *)(*plVar5 + 64))) == null) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           lVar6 = "/";
           if (*(uint32 *)(plVar5 + 3) < 4) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           plVar5[7] = "/";
           il2cpp_internal(plVar5 + 7,lVar6);
@@ -5548,12 +5553,12 @@ public class BuildingUIController
              (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           if (*(uint32 *)(plVar5 + 3) < 5) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           plVar5[8] = lVar6;
           il2cpp_internal(plVar5 + 8,lVar6);
@@ -5561,13 +5566,13 @@ public class BuildingUIController
              (lVar6 = il2cpp_internal("/",*(uint64 *)(*plVar5 + 64))) == null) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           lVar6 = "/";
           if (*(uint32 *)(plVar5 + 3) < 6) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           plVar5[9] = "/";
           il2cpp_internal(plVar5 + 9,lVar6);
@@ -5575,27 +5580,27 @@ public class BuildingUIController
              (lVar6 = il2cpp_internal(lVar3,*(uint64 *)(*plVar5 + 64))) == null) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           if (*(uint32 *)(plVar5 + 3) < 7) {
             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar8,0);
+            FUN_1801e02d0(uVar8,0);
           }
           plVar5[10] = lVar3;
           il2cpp_internal(plVar5 + 10,lVar3);
           uVar8 = String.Concat(plVar5,0);
           if (lVar4 == null) break;
-          FUN_18181e6b0(lVar4,uVar8);
+          FUN_18175de30(lVar4,uVar8);
           iVar10 = iVar10 + 5;
           if (14 < iVar10) {
-            FUN_18181e6b0(lVar4,"取消;HideInteractUI",DAT_181da3d70);
+            FUN_18175de30(lVar4,"取消;HideInteractUI",DAT_181e86370);
             lVar3 = BuildingUIController.PartyLvName;
             uVar8 = "趁{2}不备，何不在此偷偷收取{3}，以贴补本门所用。在{0}{1}几天？\n({5}预计每日可获取{4}{3})\n(非本门资源效率减半)";
-            if (*(char *)(pStatics_3d40 + 4) != false) {
+            if (*(char *)(pStatics_38e8 + 4) != false) {
               uVar8 = "在此处回收{2}多余的{3}，以贴补本门所用。在{0}{1}几天？\n({5}预计每日可获取{4}{3})\n(非本门资源效率减半)";
             }
-            plVar5 = (int64 *)FUN_1800d60b0(DAT_181da4138,6);
+            plVar5 = (int64 *)FUN_1801dfd90(DAT_181e84278,6);
             if ((this.buildingData != null) &&
                (lVar6 = AreaBuildingData.Name(this.buildingData,0,0),
                plVar5 != (int64 *)0)) {
@@ -5603,12 +5608,12 @@ public class BuildingUIController
                  (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               if ((int)plVar5[3] == 0) {
                 uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar8,0);
+                FUN_1801e02d0(uVar8,0);
               }
               plVar5[4] = lVar6;
               il2cpp_internal(plVar5 + 4,lVar6);
@@ -5618,16 +5623,16 @@ public class BuildingUIController
                    (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 if (*(uint32 *)(plVar5 + 3) < 2) {
                   uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar8,0);
+                  FUN_1801e02d0(uVar8,0);
                 }
                 plVar5[5] = lVar6;
                 il2cpp_internal(plVar5 + 5,lVar6);
-                lVar6 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+                lVar6 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
                 if ((lVar6 != null) && (lVar6 = *(int64 *)(lVar6 + 88)) != null) {
                   lVar6 = AreaData.GetForce(lVar6,0);
                   if (lVar6 != null) {
@@ -5636,16 +5641,16 @@ public class BuildingUIController
                        (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64))) == null) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     if (*(uint32 *)(plVar5 + 3) < 3) {
                       uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar8,0);
+                      FUN_1801e02d0(uVar8,0);
                     }
                     plVar5[6] = lVar6;
                     il2cpp_internal(plVar5 + 6,lVar6);
-                    lVar6 = *(int64 *)(pStatics_3d40 + 0x438);
+                    lVar6 = *(int64 *)(pStatics_38e8 + 0x440);
                     uVar1 = Int32.Parse(param,0);
                     if (lVar6 != null) {
                       if (*(uint32 *)(lVar6 + 24) <= uVar1) {
@@ -5658,12 +5663,12 @@ public class BuildingUIController
                       {
                         uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar8,0);
+                        FUN_1801e02d0(uVar8,0);
                       }
                       if (*(uint32 *)(plVar5 + 3) < 4) {
                         uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar8,0);
+                        FUN_1801e02d0(uVar8,0);
                       }
                       plVar5[7] = lVar6;
                       il2cpp_internal(plVar5 + 7,lVar6);
@@ -5672,18 +5677,18 @@ public class BuildingUIController
                       if (lVar6 != null) {
                         uVar2 = PlotController.GetResourceProduceNum(lVar6,uVar2,0x3f000000,0);
                         local_48[0] = Mathf.CeilToInt(uVar2,0);
-                        lVar6 = il2cpp_value_box(DAT_181d80430,local_48);
+                        lVar6 = il2cpp_value_box(DAT_181e60808,local_48);
                         if ((lVar6 != null) &&
                            (lVar7 = il2cpp_internal(lVar6,*(uint64 *)(*plVar5 + 64)), lVar7 == null
                            )) {
                           uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar8,0);
+                          FUN_1801e02d0(uVar8,0);
                         }
                         if (*(uint32 *)(plVar5 + 3) < 5) {
                           uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar8,0);
+                          FUN_1801e02d0(uVar8,0);
                         }
                         plVar5[8] = lVar6;
                         il2cpp_internal(plVar5 + 8,lVar6);
@@ -5696,12 +5701,12 @@ public class BuildingUIController
                              lVar7 == null)) {
                             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar8,0);
+                            FUN_1801e02d0(uVar8,0);
                           }
                           if (*(uint32 *)(plVar5 + 3) < 6) {
                             uVar8 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar8,0);
+                            FUN_1801e02d0(uVar8,0);
                           }
                           plVar5[9] = lVar6;
                           il2cpp_internal(plVar5 + 9,lVar6);
@@ -5719,13 +5724,13 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6000E22
-    // RVA   : 0xB60150   Offset: 0xB5F550   Length: 0xC5C
+    // Token : 0x6000E25
+    // RVA   : 0x919370   Offset: 0x918170   Length: 0xC5C
     public void AreaBuildingWork(string param)
     {
         uint uVar1;
@@ -5758,56 +5763,56 @@ public class BuildingUIController
         if (uVar3 < 0x370cabd6) {
           if (uVar3 < 0x340ca71d) {
             if (uVar3 == 0x310ca263) {
-              cVar2 = FUN_18171eb50(param,"4",0);
+              cVar2 = FUN_1816387f0(param,"4",0);
               if (cVar2) {
                 local_res10[0] = 5;
                 lVar12 = "在此处分发药物，免费问诊，可使民众身体康健，百病不侵。";
               }
             }
             else if (uVar3 == 0x340ca71c) {
-              cVar2 = FUN_18171eb50(param,"1",0);
+              cVar2 = FUN_1816387f0(param,"1",0);
               lVar6 = "打磨武器，整备军械，方能将敌对细作一网打尽！";
-              goto joined_r0x000180b60552;
+              goto joined_r0x000180919772;
             }
           }
           else if (uVar3 == 0x360caa42) {
-            cVar2 = FUN_18171eb50(param,"3",0);
+            cVar2 = FUN_1816387f0(param,"3",0);
             if (cVar2) {
               local_res10[0] = 3;
               lVar12 = "在此处修缮防御工事，营造壁垒，以防敌袭。";
             }
           }
           else if ((uVar3 == 0x370cabd5) &&
-                  (cVar2 = FUN_18171eb50(param,"2",0), cVar2)) {
+                  (cVar2 = FUN_1816387f0(param,"2",0), cVar2)) {
             local_res10[0] = 2;
             lVar12 = "不妨给老弱病残者分发一些饮食，他们必定对#AreaForceName#感恩戴德";
           }
         }
         else if (uVar3 < 0xc03eb115) {
           if (uVar3 == 0xbe3eadee) {
-            cVar2 = FUN_18171eb50(param,"负4",0);
+            cVar2 = FUN_1816387f0(param,"负4",0);
             if (cVar2) {
               local_res10[0] = 5;
               lVar12 = "在此地投下使人恶心呕吐，腹泻不止的疫病之物，可使人心惶惶，民众离散。";
             }
           }
           else if ((uVar3 == 0xc03eb114) &&
-                  (cVar2 = FUN_18171eb50(param,"负2",0), cVar2)) {
+                  (cVar2 = FUN_1816387f0(param,"负2",0), cVar2)) {
             local_res10[0] = 2;
             lVar12 = "贫苦乡亲们，收下这些食物吧！#AreaForceName#不管你们死活，我#PlayerForceName#断不会如此！";
           }
         }
         else if (uVar3 == 0xc13eb2a7) {
-          cVar2 = FUN_18171eb50(param,"负3",0);
+          cVar2 = FUN_1816387f0(param,"负3",0);
           if (cVar2) {
             local_res10[0] = 3;
             lVar12 = "哼哼，只需在这些城墙工事上动些手脚......";
           }
         }
         else if (uVar3 == 0xc33eb5cd) {
-          cVar2 = FUN_18171eb50(param,"负1",0);
+          cVar2 = FUN_1816387f0(param,"负1",0);
           lVar6 = "将此处的武器军械破坏殆尽，#AreaForceName#便更难在此处维持治安。";
-        joined_r0x000180b60552:
+        joined_r0x000180919772:
           if (cVar2) {
             local_res10[0] = 4;
             lVar12 = lVar6;
@@ -5815,8 +5820,8 @@ public class BuildingUIController
         }
         uVar5 = String.Replace(param,"负","-",0);
         local_60 = Int32.Parse(uVar5,0);
-        lVar6 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar6,DAT_181da3bf0);
+        lVar6 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar6,DAT_181e861f0);
         iVar14 = iVar13;
         do {
           local_res20[0] = Mathf.Max(1,iVar13);
@@ -5827,19 +5832,19 @@ public class BuildingUIController
             uVar7 = Int32.ToString(&local_68,0);
             lVar8 = String.Concat(";",uVar5,"/",uVar7,0);
           }
-          plVar9 = (int64 *)FUN_1800d60b0(DAT_181da5cf8,8);
+          plVar9 = (int64 *)FUN_1801dfd90(DAT_181e85e38,8);
           lVar10 = Int32.ToString(local_res20,0);
           if (plVar9 == (int64 *)0) throw; // [null/range check failed]
           if ((lVar10 != null) &&
              (lVar11 = il2cpp_internal(lVar10,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           if ((int)plVar9[3] == 0) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[4] = lVar10;
           il2cpp_internal(plVar9 + 4,lVar10);
@@ -5847,13 +5852,13 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal("天;SureBuildingWork;",*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           lVar10 = "天;SureBuildingWork;";
           if (*(uint32 *)(plVar9 + 3) < 2) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[5] = "天;SureBuildingWork;";
           il2cpp_internal(plVar9 + 5,lVar10);
@@ -5863,12 +5868,12 @@ public class BuildingUIController
              (lVar11 = il2cpp_internal(lVar10,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 3) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[6] = lVar10;
           il2cpp_internal(plVar9 + 6,lVar10);
@@ -5876,13 +5881,13 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal("/",*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           lVar10 = "/";
           if (*(uint32 *)(plVar9 + 3) < 4) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[7] = "/";
           il2cpp_internal(plVar9 + 7,lVar10);
@@ -5891,12 +5896,12 @@ public class BuildingUIController
              (lVar11 = il2cpp_internal(lVar10,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 5) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[8] = lVar10;
           il2cpp_internal(plVar9 + 8,lVar10);
@@ -5904,13 +5909,13 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal("/",*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           lVar10 = "/";
           if (*(uint32 *)(plVar9 + 3) < 6) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[9] = "/";
           il2cpp_internal(plVar9 + 9,lVar10);
@@ -5918,12 +5923,12 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal(lVar4,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 7) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[10] = lVar4;
           il2cpp_internal(plVar9 + 10,lVar4);
@@ -5931,25 +5936,25 @@ public class BuildingUIController
              (lVar10 = il2cpp_internal(lVar8,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           if (*(uint32 *)(plVar9 + 3) < 8) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[11] = lVar8;
           il2cpp_internal(plVar9 + 11,lVar8);
           uVar5 = String.Concat(plVar9,0);
           if (lVar6 == null) throw; // [null/range check failed]
-          FUN_18181e6b0(lVar6,uVar5);
+          FUN_18175de30(lVar6,uVar5);
           iVar14 = iVar14 + 1;
           iVar13 = iVar13 + 5;
         } while (iVar13 < 15);
-        FUN_18181e6b0(lVar6,"取消;HideInteractUI",DAT_181da3d70);
+        FUN_18175de30(lVar6,"取消;HideInteractUI",DAT_181e86370);
         lVar4 = BuildingUIController.PartyLvName;
         uVar5 = String.Concat(lVar12,"在{0}{1}几天？\n(预计每日可使该地{2}{3})",0);
-        plVar9 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
+        plVar9 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
         if ((this.buildingData != null) &&
            (lVar12 = AreaBuildingData.Name(this.buildingData,0,0), plVar9 != (int64 *)0)
            ) {
@@ -5957,12 +5962,12 @@ public class BuildingUIController
              (lVar8 = il2cpp_internal(lVar12,*(uint64 *)(*plVar9 + 64))) == null) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           if ((int)plVar9[3] == 0) {
             uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-            FUN_1800d65f0(uVar5,0);
+            FUN_1801e02d0(uVar5,0);
           }
           plVar9[4] = lVar12;
           il2cpp_internal(plVar9 + 4,lVar12);
@@ -5972,17 +5977,17 @@ public class BuildingUIController
                (lVar8 = il2cpp_internal(lVar12,*(uint64 *)(*plVar9 + 64))) == null) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             if (*(uint32 *)(plVar9 + 3) < 2) {
               uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar5,0);
+              FUN_1801e02d0(uVar5,0);
             }
             plVar9[5] = lVar12;
             il2cpp_internal(plVar9 + 5,lVar12);
             uVar1 = local_60;
-            lVar12 = *(int64 *)(*(int64 *)(DAT_181d73d40 + 184) + 0x608);
+            lVar12 = *(int64 *)(*(int64 *)(DAT_181e538e8 + 184) + 0x628);
             iVar13 = Mathf.Abs(local_60,0);
             if (lVar12 != null) {
               if (*(uint32 *)(lVar12 + 24) <= iVar13 - 1U) {
@@ -5994,12 +5999,12 @@ public class BuildingUIController
                  (lVar8 = il2cpp_internal(lVar12,*(uint64 *)(*plVar9 + 64))) == null) {
                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
+                FUN_1801e02d0(uVar5,0);
               }
               if (*(uint32 *)(plVar9 + 3) < 3) {
                 uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar5,0);
+                FUN_1801e02d0(uVar5,0);
               }
               plVar9[6] = lVar12;
               il2cpp_internal(plVar9 + 6,lVar12);
@@ -6011,12 +6016,12 @@ public class BuildingUIController
                    (lVar8 = il2cpp_internal(lVar12,*(uint64 *)(*plVar9 + 64))) == null) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 if (*(uint32 *)(plVar9 + 3) < 4) {
                   uVar5 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar5,0);
+                  FUN_1801e02d0(uVar5,0);
                 }
                 plVar9[7] = lVar12;
                 il2cpp_internal(plVar9 + 7,lVar12);
@@ -6032,8 +6037,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E23
-    // RVA   : 0xB6C770   Offset: 0xB6BB70   Length: 0x31B
+    // Token : 0x6000E26
+    // RVA   : 0x925A40   Offset: 0x924840   Length: 0x31B
     public void RecoverBuildingResourceRate()
     {
         long lVar1;
@@ -6055,13 +6060,13 @@ public class BuildingUIController
                 local_res8[0] = local_res8[0] * 100.0;
                 uVar3 = Single.ToString(local_res8,"f0",0);
                 uVar4 = String.Format("在{0}{1}几天？\n(预计每日可提升资源储量{2}%)",uVar4,uVar5,uVar3,0);
-                lVar2 = il2cpp_internal(DAT_181d97768);
-                FUN_181330100(lVar2,DAT_181da3bf0);
+                lVar2 = il2cpp_internal(DAT_181e77728);
+                FUN_1810f3480(lVar2,DAT_181e861f0);
                 if (lVar2 != null) {
-                  FUN_18181e6b0(lVar2,"5天;RecoverBuildingResourceRate;5",DAT_181da3d70);
-                  FUN_18181e6b0(lVar2,"10天;RecoverBuildingResourceRate;10",DAT_181da3d70);
-                  FUN_18181e6b0(lVar2,"15天;RecoverBuildingResourceRate;15",DAT_181da3d70);
-                  FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
+                  FUN_18175de30(lVar2,"5天;RecoverBuildingResourceRate;5",DAT_181e86370);
+                  FUN_18175de30(lVar2,"10天;RecoverBuildingResourceRate;10",DAT_181e86370);
+                  FUN_18175de30(lVar2,"15天;RecoverBuildingResourceRate;15",DAT_181e86370);
+                  FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
                   uVar5 = new SinglePlotData(uVar4,lVar2,1,"",3,"0",1,0,0);
                   if (lVar1 != null) {
                     PlotController.ChangePlot(lVar1,uVar5,0);
@@ -6074,8 +6079,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E24
-    // RVA   : 0xB60DB0   Offset: 0xB601B0   Length: 0x216
+    // Token : 0x6000E27
+    // RVA   : 0x919FD0   Offset: 0x918DD0   Length: 0x216
     public void AskNearRandomEvent()
     {
         long lVar1;
@@ -6086,12 +6091,12 @@ public class BuildingUIController
         uint uVar5;
         uint uVar6;
         uVar5 = (uint32)((uint64)in_stack_ffffffffffffffc8 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         if (lVar2 != null) {
-          FUN_18181e6b0(lVar2,"开始探听;StartAskNearRandomEvent;;0/50",DAT_181da3d70);
-          FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar2,"开始探听;StartAskNearRandomEvent;;0/50",DAT_181e86370);
+          FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
           uVar6 = 0;
           uVar3 = BuildingUIController.GenerateBuildingNPCString
                             (this,"小二",0xfffffffc,0xffffffff,CONCAT44(uVar5,0xffffffff),0);
@@ -6103,44 +6108,44 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E25
-    // RVA   : 0xB79970   Offset: 0xB78D70   Length: 0xAC
+    // Token : 0x6000E28
+    // RVA   : 0x932C20   Offset: 0x931A20   Length: 0xAC
     public void StudyFightOther()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ChooseStudyFightOtherTarget(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E26
-    // RVA   : 0xB79A20   Offset: 0xB78E20   Length: 0x34F
+    // Token : 0x6000E29
+    // RVA   : 0x932CD0   Offset: 0x931AD0   Length: 0x34F
     public void StudyFightSelf()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         int iVar5;
         int[] local_res18 = new int[2];
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         iVar5 = 3;
         while( true ) {
-          lVar1 = *(int64 *)(pStatics + 0x4a0);
+          lVar1 = *(int64 *)(pStatics + 0x4a8);
           if (lVar1 == null) {
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           if (*(int *)(lVar1 + 24) <= iVar5) {
             if (lVar2 != null) {
-              FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
-              lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-              local_res18[0] = *(int *)(pStatics + 0x168);
-              uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+              FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
+              lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+              local_res18[0] = *(int *)(pStatics + 0x170);
+              uVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
               uVar3 = String.Format("学而时习之，不亦乐乎。接下来该练习哪门外功呢？\n(练习可增加外功的实战经验，{0}级内效果最佳)",uVar3,0);
               uVar4 = new SinglePlotData(uVar3,lVar2,1,"",3,"0",1,0,0);
               if (lVar1 != null) {
@@ -6149,49 +6154,49 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          lVar1 = *(int64 *)(pStatics + 0x4a0);
+          lVar1 = *(int64 *)(pStatics + 0x4a8);
           if (lVar1 == null) break;
-          uVar3 = FUN_180002f80(lVar1,iVar5,DAT_181da4370);
+          uVar3 = FUN_1800024b0(lVar1,iVar5,DAT_181e86970);
           local_res18[0] = iVar5;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
           uVar3 = String.Format("修炼{0};StudyFightSelfChoose;{1}",uVar3,uVar4,0);
           if (lVar2 == null) break;
-          FUN_18181e6b0(lVar2,uVar3,DAT_181da3d70);
+          FUN_18175de30(lVar2,uVar3,DAT_181e86370);
           iVar5 = iVar5 + 1;
         }
     }
 
-    // Token : 0x6000E27
-    // RVA   : 0xB79D70   Offset: 0xB79170   Length: 0x301
+    // Token : 0x6000E2A
+    // RVA   : 0x933020   Offset: 0x931E20   Length: 0x301
     public void StudyInternalSelf()
     {
-        var pStatics = *(int64*)(DAT_181d73d40 + 184);
+        var pStatics = *(int64*)(DAT_181e538e8 + 184);
         long lVar1;
         long lVar2;
         ulong uVar3;
         ulong uVar4;
         int iVar5;
         int[] local_res18 = new int[2];
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         iVar5 = 0;
         while( true ) {
-          lVar1 = *(int64 *)(pStatics + 0x4a0);
+          lVar1 = *(int64 *)(pStatics + 0x4a8);
           if (lVar1 == null) break;
-          uVar3 = FUN_180002f80(lVar1,iVar5,DAT_181da4370);
+          uVar3 = FUN_1800024b0(lVar1,iVar5,DAT_181e86970);
           local_res18[0] = iVar5;
-          uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+          uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
           uVar3 = String.Format("修炼{0};StudyFightSelfChoose;{1}",uVar3,uVar4,0);
           if (lVar2 == null) break;
-          FUN_18181e6b0(lVar2,uVar3,DAT_181da3d70);
+          FUN_18175de30(lVar2,uVar3,DAT_181e86370);
           iVar5 = iVar5 + 1;
           if (2 < iVar5) {
-            FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-            local_res18[0] = *(int *)(pStatics + 0x164);
-            uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+            FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+            local_res18[0] = *(int *)(pStatics + 0x16c);
+            uVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
             uVar3 = String.Format("千里之行，始于足下。接下来该修炼哪门武功呢？\n(修炼可增加内功/轻功/绝技的实战经验，{0}级内效果最佳)",uVar3,0);
             uVar4 = new SinglePlotData(uVar3,lVar2,1,"",3,"0",1,0,0);
             if (lVar1 != null) {
@@ -6199,20 +6204,20 @@ public class BuildingUIController
               return;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
         }
     }
 
-    // Token : 0x6000E28
-    // RVA   : 0xB6FE90   Offset: 0xB6F290   Length: 0x150
+    // Token : 0x6000E2B
+    // RVA   : 0x929160   Offset: 0x927F60   Length: 0x150
     public void ShowForceShowRoom()
     {
         long lVar1;
         long lVar2;
         ulong uVar3;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da2070 + 184) + 32);
-        lVar2 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e824b8 + 184) + 32);
+        lVar2 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56);
         if ((lVar2 != null) && (lVar2 = *(int64 *)(lVar2 + 88)) != null) {
           uVar3 = AreaData.GetForce(lVar2,0);
           if (lVar1 != null) {
@@ -6222,20 +6227,20 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E29
-    // RVA   : 0xB71910   Offset: 0xB70D10   Length: 0xB4
+    // Token : 0x6000E2C
+    // RVA   : 0x92ABE0   Offset: 0x9299E0   Length: 0xB4
     public void ShowSelfShowRoom()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181da2070 + 184) + 32);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e824b8 + 184) + 32);
         if (lVar1 != null) {
           ShowRoomController.ShowShowRoomUI(lVar1,1,0);
           return;
         }
     }
 
-    // Token : 0x6000E2A
-    // RVA   : 0xB65240   Offset: 0xB64640   Length: 0x6D
+    // Token : 0x6000E2D
+    // RVA   : 0x91E510   Offset: 0x91D310   Length: 0x6D
     public int GetBuildingExtraKnowledge(bool useMoney)
     {
         byte[] auVar1 = new byte[16];
@@ -6264,8 +6269,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E2B
-    // RVA   : 0xB65390   Offset: 0xB64790   Length: 0x3D
+    // Token : 0x6000E2E
+    // RVA   : 0x91E660   Offset: 0x91D460   Length: 0x3D
     public int GetBuildingIdentifyMoney()
     {
         byte[] auVar1 = new byte[16];
@@ -6281,8 +6286,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E2C
-    // RVA   : 0xB679F0   Offset: 0xB66DF0   Length: 0x3A0
+    // Token : 0x6000E2F
+    // RVA   : 0x920CC0   Offset: 0x91FAC0   Length: 0x3A0
     public void IdentifyItem()
     {
         long lVar1;
@@ -6300,7 +6305,7 @@ public class BuildingUIController
         float[] local_res18 = new float[2];
         uint64 extraout_XMM0_Qb;
         uint64 extraout_XMM0_Qb_00;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (this.buildingData != null) {
           uVar3 = AreaBuildingData.Name(this.buildingData,1,0);
           if (this.buildingData != null) {
@@ -6309,7 +6314,7 @@ public class BuildingUIController
             auVar9._4_12_ = auVar8._4_12_;
             auVar9._0_4_ = (float)auVar8._0_8_ + (float)auVar8._0_8_;
             local_res8[0] = Mathf.RoundToInt(auVar9._0_8_,0);
-            uVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
+            uVar4 = il2cpp_value_box(DAT_181e60808,local_res8);
             if ((GameController._instance != null) &&
                (lVar5 = GameController._instance.worldData) != null) {
               lVar5 = WorldData.Player(lVar5,0);
@@ -6322,13 +6327,13 @@ public class BuildingUIController
                   auVar11._0_4_ = (float)auVar10._0_8_ + (float)auVar10._0_8_;
                   iVar2 = Mathf.RoundToInt(auVar11._0_8_,0);
                   local_res18[0] = (float)iVar2 + fVar7;
-                  uVar6 = il2cpp_value_box(DAT_181da22f0,local_res18);
+                  uVar6 = il2cpp_value_box(DAT_181e82730,local_res18);
                   uVar3 = String.Format("世间奇珍异宝可谓浩如繁星，若想一一准确鉴定，非有渊博之学识不可。\n({0}提升{1}点学识效果，当前可鉴定学识要求{2}以下的珍宝)",uVar3,uVar4,uVar6,0);
-                  lVar5 = il2cpp_internal(DAT_181d97768);
-                  FUN_181330100(lVar5,DAT_181da3bf0);
+                  lVar5 = il2cpp_internal(DAT_181e77728);
+                  FUN_1810f3480(lVar5,DAT_181e861f0);
                   if (lVar5 != null) {
-                    FUN_18181e6b0(lVar5,"鉴定物品;ChooseIdentifyItem;false",DAT_181da3d70);
-                    FUN_18181e6b0(lVar5,"取消;HideInteractUI",DAT_181da3d70);
+                    FUN_18175de30(lVar5,"鉴定物品;ChooseIdentifyItem;false",DAT_181e86370);
+                    FUN_18175de30(lVar5,"取消;HideInteractUI",DAT_181e86370);
                     uVar4 = new SinglePlotData(uVar3,lVar5,1,0,3,"0",1,0,0);
                     if (lVar1 != null) {
                       PlotController.ChangePlot(lVar1,uVar4,0);
@@ -6342,8 +6347,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E2D
-    // RVA   : 0xB67440   Offset: 0xB66840   Length: 0x5A4
+    // Token : 0x6000E30
+    // RVA   : 0x920710   Offset: 0x91F510   Length: 0x5A4
     public void IdentifyItemMoney()
     {
         long lVar1;
@@ -6370,8 +6375,8 @@ public class BuildingUIController
         uint64 extraout_XMM0_Qb_00;
         uint64 extraout_XMM0_Qb_01;
         uVar16 = (uint32)((uint64)in_stack_ffffffffffffff98 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4138,4);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        plVar3 = (int64 *)FUN_1801dfd90(DAT_181e84278,4);
         if (this.buildingData != null) {
           lVar4 = AreaBuildingData.Name(this.buildingData,1,0);
           if (plVar3 != (int64 *)0) {
@@ -6380,13 +6385,13 @@ public class BuildingUIController
               if (lVar5 == null) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
             }
             if ((int)plVar3[3] == 0) {
               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-              FUN_1800d65f0(uVar6,0);
+              FUN_1801e02d0(uVar6,0);
             }
             plVar3[4] = lVar4;
             il2cpp_internal(plVar3 + 4,lVar4);
@@ -6396,19 +6401,19 @@ public class BuildingUIController
               auVar11._4_12_ = auVar10._4_12_;
               auVar11._0_4_ = (float)auVar10._0_8_ * 4.0;
               local_res8[0] = Mathf.RoundToInt(auVar11._0_8_,0);
-              lVar4 = il2cpp_value_box(DAT_181d80430,local_res8);
+              lVar4 = il2cpp_value_box(DAT_181e60808,local_res8);
               if (lVar4 != null) {
                 lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64));
                 if (lVar5 == null) {
                   uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                  FUN_1800d65f0(uVar6,0);
+                  FUN_1801e02d0(uVar6,0);
                 }
               }
               if (*(uint32 *)(plVar3 + 3) < 2) {
                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                FUN_1800d65f0(uVar6,0);
+                FUN_1801e02d0(uVar6,0);
               }
               plVar3[5] = lVar4;
               il2cpp_internal(plVar3 + 5,lVar4);
@@ -6424,19 +6429,19 @@ public class BuildingUIController
                     auVar13._0_4_ = (float)auVar12._0_8_ * 4.0;
                     iVar2 = Mathf.RoundToInt(auVar13._0_8_,0);
                     local_res18[0] = (float)iVar2 + fVar9;
-                    lVar4 = il2cpp_value_box(DAT_181da22f0,local_res18);
+                    lVar4 = il2cpp_value_box(DAT_181e82730,local_res18);
                     if (lVar4 != null) {
                       lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64));
                       if (lVar5 == null) {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                     }
                     if (*(uint32 *)(plVar3 + 3) < 3) {
                       uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                      FUN_1800d65f0(uVar6,0);
+                      FUN_1801e02d0(uVar6,0);
                     }
                     plVar3[6] = lVar4;
                     il2cpp_internal(plVar3 + 6,lVar4);
@@ -6446,33 +6451,33 @@ public class BuildingUIController
                       auVar15._4_12_ = auVar14._4_12_;
                       auVar15._0_4_ = (float)auVar14._0_8_ * 20.0;
                       local_res20[0] = Mathf.RoundToInt(auVar15._0_8_,0);
-                      lVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
+                      lVar4 = il2cpp_value_box(DAT_181e60808,local_res20);
                       if (lVar4 != null) {
                         lVar5 = il2cpp_internal(lVar4,*(uint64 *)(*plVar3 + 64));
                         if (lVar5 == null) {
                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar6,0);
+                          FUN_1801e02d0(uVar6,0);
                         }
                       }
                       if (*(uint32 *)(plVar3 + 3) < 4) {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       plVar3[7] = lVar4;
                       il2cpp_internal(plVar3 + 7,lVar4);
                       uVar6 = String.Format("少侠若有无法辨识的珍宝，只消花上{3}银两，便可让小店帮忙鉴别一二。\n({0}提升{1}点学识效果，当前可鉴定学识要求{2}以下的珍宝)",plVar3,0);
-                      lVar4 = il2cpp_internal(DAT_181d97768);
-                      FUN_181330100(lVar4,DAT_181da3bf0);
+                      lVar4 = il2cpp_internal(DAT_181e77728);
+                      FUN_1810f3480(lVar4,DAT_181e861f0);
                       if (lVar4 != null) {
-                        FUN_18181e6b0(lVar4,"鉴定物品;ChooseIdentifyItem;true",DAT_181da3d70);
-                        FUN_18181e6b0(lVar4,"取消;HideInteractUI",DAT_181da3d70);
+                        FUN_18175de30(lVar4,"鉴定物品;ChooseIdentifyItem;true",DAT_181e86370);
+                        FUN_18175de30(lVar4,"取消;HideInteractUI",DAT_181e86370);
                         uVar17 = 0;
                         uVar7 = BuildingUIController.GenerateBuildingNPCString
                                           (this,"店铺商人",0xfffffffd,0xffffffff,
                                            CONCAT44(uVar16,0xffffffff),0);
-                        uVar8 = il2cpp_internal(DAT_181da24f0);
+                        uVar8 = il2cpp_internal(DAT_181e82930);
                         SinglePlotData.ctor
                                   (uVar8,uVar6,lVar4,5,uVar7,CONCAT44(uVar17,3),"0",0,0,0);
                         if (lVar1 != null) {
@@ -6489,22 +6494,22 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E2E
-    // RVA   : 0xB61740   Offset: 0xB60B40   Length: 0x218
+    // Token : 0x6000E31
+    // RVA   : 0x91A960   Offset: 0x919760   Length: 0x218
     public void BreakThroughSkill()
     {
         long lVar1;
         ulong uVar2;
         long lVar3;
         ulong uVar4;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        uVar2 = FUN_180228420(DAT_181d8b158);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        uVar2 = FUN_1802100c0(DAT_181e6dc98);
         uVar2 = String.Format("博观约取，厚积薄发，突破抵达瓶颈的武功，方能更进一步。",uVar2,0);
-        lVar3 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar3,DAT_181da3bf0);
+        lVar3 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar3,DAT_181e861f0);
         if (lVar3 != null) {
-          FUN_18181e6b0(lVar3,"选择功法;BreakThroughSkill",DAT_181da3d70);
-          FUN_18181e6b0(lVar3,"取消;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar3,"选择功法;BreakThroughSkill",DAT_181e86370);
+          FUN_18175de30(lVar3,"取消;HideInteractUI",DAT_181e86370);
           uVar4 = new SinglePlotData(uVar2,lVar3,1,"",3,"0",1,0,0);
           if (lVar1 != null) {
             PlotController.ChangePlot(lVar1,uVar4,0);
@@ -6513,8 +6518,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E2F
-    // RVA   : 0xB614F0   Offset: 0xB608F0   Length: 0x243
+    // Token : 0x6000E32
+    // RVA   : 0x91A710   Offset: 0x919510   Length: 0x243
     public void BreakThroughSkillMoney()
     {
         long lVar1;
@@ -6526,14 +6531,14 @@ public class BuildingUIController
         uint uVar6;
         uint uVar7;
         uVar6 = (uint32)((uint64)in_stack_ffffffffffffffb8 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-        uVar2 = FUN_180228420(DAT_181d8b158);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+        uVar2 = FUN_1802100c0(DAT_181e6dc98);
         uVar2 = String.Format("这位少侠想租用本武馆的闭关室，用于突破瓶颈吗？\n保证安静舒适，价钱实惠~",uVar2,0);
-        lVar3 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar3,DAT_181da3bf0);
+        lVar3 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar3,DAT_181e861f0);
         if (lVar3 != null) {
-          FUN_18181e6b0(lVar3,"选择功法;BreakThroughSkillMoney",DAT_181da3d70);
-          FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar3,"选择功法;BreakThroughSkillMoney",DAT_181e86370);
+          FUN_18175de30(lVar3,"还是算了;HideInteractUI",DAT_181e86370);
           uVar7 = 0;
           uVar4 = BuildingUIController.GenerateBuildingNPCString
                             (this,"武师",0xffffffff,0xffffffff,CONCAT44(uVar6,0xffffffff),0);
@@ -6545,20 +6550,20 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E30
-    // RVA   : 0xB69440   Offset: 0xB68840   Length: 0xAC
+    // Token : 0x6000E33
+    // RVA   : 0x922710   Offset: 0x921510   Length: 0xAC
     public void ManageTag()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.ChooseManageTagTarget(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E31
-    // RVA   : 0xB692F0   Offset: 0xB686F0   Length: 0x14F
+    // Token : 0x6000E34
+    // RVA   : 0x9225C0   Offset: 0x9213C0   Length: 0x14F
     public void ManageTagMoney()
     {
         long lVar1;
@@ -6575,25 +6580,25 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E32
-    // RVA   : 0xB66790   Offset: 0xB65B90   Length: 0xAC
+    // Token : 0x6000E35
+    // RVA   : 0x91FA60   Offset: 0x91E860   Length: 0xAC
     public void HomeRest()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.HomeRest(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E33
-    // RVA   : 0xB67360   Offset: 0xB66760   Length: 0xD8
+    // Token : 0x6000E36
+    // RVA   : 0x920630   Offset: 0x91F430   Length: 0xD8
     public void HotelRest()
     {
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (this.buildingData != null) {
           lVar2 = AreaBuildingData.DataBase(this.buildingData,0);
           if ((lVar2 != null) && (lVar1 != null)) {
@@ -6603,13 +6608,13 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E34
-    // RVA   : 0xB71AC0   Offset: 0xB70EC0   Length: 0xD8
+    // Token : 0x6000E37
+    // RVA   : 0x92AD90   Offset: 0x929B90   Length: 0xD8
     public void SimpleWork()
     {
         long lVar1;
         long lVar2;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (this.buildingData != null) {
           lVar2 = AreaBuildingData.DataBase(this.buildingData,0);
           if ((lVar2 != null) && (lVar1 != null)) {
@@ -6619,8 +6624,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E35
-    // RVA   : 0xB6ABF0   Offset: 0xB69FF0   Length: 0x405
+    // Token : 0x6000E38
+    // RVA   : 0x923EC0   Offset: 0x922CC0   Length: 0x405
     public void PerformForMoney()
     {
         long lVar1;
@@ -6637,19 +6642,19 @@ public class BuildingUIController
           lVar1 = AreaBuildingData.DataBase(this.buildingData,0);
           if (lVar1 == null) throw; // [null/range check failed]
           uVar2 = String.Format("此{0}之处人来人往，热闹非凡。\n何不找个显眼之处吆喝卖艺，好赚些盘缠？",*(uint64 *)(lVar1 + 24),0);
-          lVar1 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar1,DAT_181da3bf0);
+          lVar1 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar1,DAT_181e861f0);
           if (lVar1 == null) throw; // [null/range check failed]
-          FUN_18181e6b0(lVar1,"武艺表演;StartCoachPlot",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"讲经说书;ChoosePerformForMoney;2",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"珍宝鉴定;ChoosePerformForMoney;3",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"还是算了;HideInteractUI",DAT_181da3d70);
+          FUN_18175de30(lVar1,"武艺表演;StartCoachPlot",DAT_181e86370);
+          FUN_18175de30(lVar1,"讲经说书;ChoosePerformForMoney;2",DAT_181e86370);
+          FUN_18175de30(lVar1,"珍宝鉴定;ChoosePerformForMoney;3",DAT_181e86370);
+          FUN_18175de30(lVar1,"还是算了;HideInteractUI",DAT_181e86370);
           uVar3 = il2cpp_internal();
           uVar4 = "";
         }
         else {
           lVar5 = BuildingUIController.PartyLvName;
-          uVar4 = FUN_180228420(DAT_181d8b158);
+          uVar4 = FUN_1802100c0(DAT_181e6dc98);
           uVar2 = String.Format("这个月已经卖艺三日，若是天天不务正业，只怕为江湖中人耻笑。",uVar4,0);
           uVar3 = il2cpp_internal();
           lVar1 = 0;
@@ -6662,8 +6667,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E36
-    // RVA   : 0xB63D30   Offset: 0xB63130   Length: 0x590
+    // Token : 0x6000E39
+    // RVA   : 0x91D000   Offset: 0x91BE00   Length: 0x590
     public void DoctorWork()
     {
         int iVar1;
@@ -6691,42 +6696,42 @@ public class BuildingUIController
                   ThrowHelper.ThrowArgumentOutOfRangeException(0);
                 }
                 local_res18[0] = *(uint32 *)(lVar3.chapter + 32);
-                uVar4 = il2cpp_value_box(DAT_181da22f0,local_res18);
+                uVar4 = il2cpp_value_box(DAT_181e82730,local_res18);
                 local_res20[0] = iVar1;
-                uVar6 = il2cpp_value_box(DAT_181d80430,local_res20);
+                uVar6 = il2cpp_value_box(DAT_181e60808,local_res20);
                 uVar4 = String.Format("这个月已经坐诊{0}日，还是应当再去多加磨炼医术，免得误人性命。\n(当前医术{1}点，每月最多可坐诊{2}次。)",uVar5,uVar4,uVar6,0);
                 uVar5 = new SinglePlotData(uVar4,0,1,0,3,"0",1,0,0);
                 if (lVar2 != null) {
-        LAB_180b64081:
+        LAB_18091d351:
                   PlotController.ChangePlot(lVar2,uVar5,0);
                   return;
                 }
               }
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar2 = BuildingUIController.PartyLvName;
             if ((this.buildingData != null) &&
                (lVar3 = AreaBuildingData.DataBase(this.buildingData,0)) != null) {
               uVar4 = String.Format("要在此处{0}坐诊吗？附近若有武林人士遭伤病困扰，便会来寻医问药。\n若能悬壶济世，救死扶伤，自是再好不过。",lVar3.cityAreaID,0);
-              lVar3 = il2cpp_internal(DAT_181d97768);
-              FUN_181330100(lVar3,DAT_181da3bf0);
+              lVar3 = il2cpp_internal(DAT_181e77728);
+              FUN_1810f3480(lVar3,DAT_181e861f0);
               if (lVar3 != null) {
-                FUN_18181e6b0(lVar3,"开诊;SureDoctorWork;;;;Med/20",DAT_181da3d70);
-                FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
+                FUN_18175de30(lVar3,"开诊;SureDoctorWork;;;;Med/20",DAT_181e86370);
+                FUN_18175de30(lVar3,"还是算了;HideInteractUI",DAT_181e86370);
                 uVar5 = new SinglePlotData(uVar4,lVar3,1,0,3,"0",1,0,0);
-                if (lVar2 != null) goto LAB_180b64081;
+                if (lVar2 != null) goto LAB_18091d351;
               }
             }
           }
         }
     }
 
-    // Token : 0x6000E37
-    // RVA   : 0xB635C0   Offset: 0xB629C0   Length: 0x263
+    // Token : 0x6000E3A
+    // RVA   : 0x91C7E0   Offset: 0x91B5E0   Length: 0x263
     public void CityQuickTravel()
     {
-        var pStatics_4018 = *(int64*)(DAT_181d94018 + 184);
+        var pStatics_43e8 = *(int64*)(DAT_181e743e8 + 184);
         long lVar1;
         bool cVar2;
         ulong uVar3;
@@ -6735,8 +6740,8 @@ public class BuildingUIController
            (lVar1 = GameController._instance.worldData) != null) {
           cVar2 = WorldData.CanQuickTravel(lVar1,0);
           if (!cVar2) {
-            lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
-            uVar3 = FUN_180228420(DAT_181d8b158);
+            lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
+            uVar3 = FUN_1802100c0(DAT_181e6dc98);
             uVar3 = String.Format("眼下身上有些重要任务，不便乘坐马车，还是改日吧。",uVar3,0);
             uVar4 = new SinglePlotData(uVar3,0,1,0,3,"0",1,0,0);
             if (lVar1 != null) {
@@ -6745,16 +6750,16 @@ public class BuildingUIController
             }
           }
           else {
-            if (*pStatics_4018 != 0) {
-              QuickTravelUIController.ShowQuickTravelUI(*pStatics_4018,1);
+            if (*pStatics_43e8 != 0) {
+              QuickTravelUIController.ShowQuickTravelUI(*pStatics_43e8,1);
               return;
             }
           }
         }
     }
 
-    // Token : 0x6000E38
-    // RVA   : 0xB66EC0   Offset: 0xB662C0   Length: 0x49B
+    // Token : 0x6000E3B
+    // RVA   : 0x920190   Offset: 0x91EF90   Length: 0x49B
     public void HospitalCureInjury()
     {
         long lVar1;
@@ -6767,38 +6772,38 @@ public class BuildingUIController
         uint uVar6;
         uint uVar7;
         uint[] local_38 = new uint[4];
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if ((GameController._instance != null) &&
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
           if (lVar2 != null) {
             local_res18[0] = Mathf.FloorToInt(lVar2.studyFightWithGreatHeroMultiWinNum,0);
-            uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+            uVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
             if ((GameController._instance != null) &&
                (lVar2 = GameController._instance.worldData) != null) {
               lVar2 = WorldData.Player(lVar2,0);
               if (lVar2 != null) {
                 local_res20[0] = Mathf.FloorToInt(lVar2.studyFightWithGreatHeroFinalWinNum,0);
-                uVar4 = il2cpp_value_box(DAT_181d80430,local_res20);
+                uVar4 = il2cpp_value_box(DAT_181e60808,local_res20);
                 if ((GameController._instance != null) &&
                    (lVar2 = GameController._instance.worldData) != null) {
                   lVar2 = WorldData.Player(lVar2,0);
                   if (lVar2 != null) {
                     local_38[0] = Mathf.FloorToInt(lVar2.totalHeroMeet,0);
-                    uVar5 = il2cpp_value_box(DAT_181d80430,local_38);
+                    uVar5 = il2cpp_value_box(DAT_181e60808,local_38);
                     uVar6 = 0;
                     uVar3 = String.Format("本馆医术精湛，深受周遭武林人士及百姓信赖。\n阁下身上若有什么疑难杂症，旧病沉疴，只管交给在下便是。\n（当前伤势：外伤{0}/内伤{1}/中毒{2}）",uVar3,uVar4,uVar5,0);
-                    lVar2 = il2cpp_internal(DAT_181d97768);
-                    FUN_181330100(lVar2,DAT_181da3bf0);
+                    lVar2 = il2cpp_internal(DAT_181e77728);
+                    FUN_1810f3480(lVar2,DAT_181e861f0);
                     if (lVar2 != null) {
-                      FUN_18181e6b0(lVar2,"包扎;HospitalCureExternalInjury;;;技能影响:医术",DAT_181da3d70);
-                      FUN_18181e6b0(lVar2,"调息;HospitalCureInternalInjury;;;技能影响:医术 内功",DAT_181da3d70);
-                      FUN_18181e6b0(lVar2,"解毒;HospitalCurePoison;;;技能影响:毒术",DAT_181da3d70);
-                      FUN_18181e6b0(lVar2,"取消;HideInteractUI",DAT_181da3d70);
+                      FUN_18175de30(lVar2,"包扎;HospitalCureExternalInjury;;;技能影响:医术",DAT_181e86370);
+                      FUN_18175de30(lVar2,"调息;HospitalCureInternalInjury;;;技能影响:医术 内功",DAT_181e86370);
+                      FUN_18175de30(lVar2,"解毒;HospitalCurePoison;;;技能影响:毒术",DAT_181e86370);
+                      FUN_18175de30(lVar2,"取消;HideInteractUI",DAT_181e86370);
                       uVar7 = 0;
                       uVar4 = BuildingUIController.GenerateBuildingNPCString
                                         (this,"医师",2,0xffffffff,CONCAT44(uVar6,0xffffffff),0);
-                      uVar5 = il2cpp_internal(DAT_181da24f0);
+                      uVar5 = il2cpp_internal(DAT_181e82930);
                       SinglePlotData.ctor
                                 (uVar5,uVar3,lVar2,5,uVar4,CONCAT44(uVar7,3),"0",0,0,0);
                       if (lVar1 != null) {
@@ -6814,8 +6819,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E39
-    // RVA   : 0xB66840   Offset: 0xB65C40   Length: 0x67A
+    // Token : 0x6000E3C
+    // RVA   : 0x91FB10   Offset: 0x91E910   Length: 0x67A
     public void HospitalCureInjuryForce()
     {
         int iVar1;
@@ -6834,35 +6839,35 @@ public class BuildingUIController
           if (lVar3 != null) {
             cVar2 = HeroData.HaveServantForce(lVar3,0);
             if (!cVar2) {
-        LAB_180b66b06:
-              lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        LAB_18091fdd6:
+              lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
               if ((GameController._instance != null) &&
                  (lVar4 = GameController._instance.worldData) != null) {
                 lVar4 = WorldData.Player(lVar4,0);
                 if (lVar4 != null) {
                   local_res18[0] = Mathf.FloorToInt(lVar4.studyFightWithGreatHeroMultiWinNum,0);
-                  uVar5 = il2cpp_value_box(DAT_181d80430,local_res18);
+                  uVar5 = il2cpp_value_box(DAT_181e60808,local_res18);
                   if ((GameController._instance != null) &&
                      (lVar4 = GameController._instance.worldData) != null) {
                     lVar4 = WorldData.Player(lVar4,0);
                     if (lVar4 != null) {
                       local_res20[0] = Mathf.FloorToInt(lVar4.studyFightWithGreatHeroFinalWinNum,0);
-                      uVar6 = il2cpp_value_box(DAT_181d80430,local_res20);
+                      uVar6 = il2cpp_value_box(DAT_181e60808,local_res20);
                       if ((GameController._instance != null) &&
                          (lVar4 = GameController._instance.worldData) != null
                          ) {
                         lVar4 = WorldData.Player(lVar4,0);
                         if (lVar4 != null) {
                           local_28[0] = Mathf.FloorToInt(lVar4.totalHeroMeet,0);
-                          uVar7 = il2cpp_value_box(DAT_181d80430,local_28);
+                          uVar7 = il2cpp_value_box(DAT_181e60808,local_28);
                           uVar5 = String.Format("在疗伤室中，只需消耗门派药材便可治疗自身伤势。\n（当前伤势：外伤{0}/内伤{1}/中毒{2}）",uVar5,uVar6,uVar7,0);
-                          lVar4 = il2cpp_internal(DAT_181d97768);
-                          FUN_181330100(lVar4,DAT_181da3bf0);
+                          lVar4 = il2cpp_internal(DAT_181e77728);
+                          FUN_1810f3480(lVar4,DAT_181e861f0);
                           if (lVar4 != null) {
-                            FUN_18181e6b0(lVar4,"包扎;HospitalCureExternalInjuryForce;;;技能影响:医术",DAT_181da3d70);
-                            FUN_18181e6b0(lVar4,"调息;HospitalCureInternalInjuryForce;;;技能影响:医术 内功",DAT_181da3d70);
-                            FUN_18181e6b0(lVar4,"解毒;HospitalCurePoisonForce;;;技能影响:毒术",DAT_181da3d70);
-                            FUN_18181e6b0(lVar4,"取消;HideInteractUI",DAT_181da3d70);
+                            FUN_18175de30(lVar4,"包扎;HospitalCureExternalInjuryForce;;;技能影响:医术",DAT_181e86370);
+                            FUN_18175de30(lVar4,"调息;HospitalCureInternalInjuryForce;;;技能影响:医术 内功",DAT_181e86370);
+                            FUN_18175de30(lVar4,"解毒;HospitalCurePoisonForce;;;技能影响:毒术",DAT_181e86370);
+                            FUN_18175de30(lVar4,"取消;HideInteractUI",DAT_181e86370);
                             uVar6 = new SinglePlotData(uVar5,lVar4,1,0,3,"0",1,0,0);
                             if (lVar3 != null) {
                               PlotController.ChangePlot(lVar3,uVar6,0);
@@ -6876,7 +6881,7 @@ public class BuildingUIController
                 }
               }
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             if ((GameController._instance != null) &&
                (lVar3 = GameController._instance.worldData) != null) {
@@ -6884,12 +6889,12 @@ public class BuildingUIController
               if (lVar3 != null) {
                 iVar1 = *(int *)(lVar3 + 0x380);
 
-                if ((lVar3 = *(int64 *)(*(int64 *)(DAT_181dac770 + 184) + 56)?.TempHeros) != null) {
+                if ((lVar3 = *(int64 *)(*(int64 *)(DAT_181e8c8b0 + 184) + 56)?.TempHeros) != null) {
                   if (iVar1 == lVar3.lastRandomWorldEventDay) {
                     BuildingUIController.HospitalCureInjury(this,0);
                     return;
                   }
-                  goto LAB_180b66b06;
+                  goto LAB_18091fdd6;
                 }
               }
             }
@@ -6897,8 +6902,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E3A
-    // RVA   : 0xB74840   Offset: 0xB73C40   Length: 0x45A
+    // Token : 0x6000E3D
+    // RVA   : 0x92DB10   Offset: 0x92C910   Length: 0x45A
     public void StartBreakEquipment()
     {
         ulong uVar1;
@@ -6913,25 +6918,25 @@ public class BuildingUIController
             if ((GameController._instance != null) &&
                (lVar3 = GameController._instance.worldData) != null) {
               local_res18[0] = lVar3.monthBreakEquipTime;
-              uVar1 = il2cpp_value_box(DAT_181d80430,local_res18);
+              uVar1 = il2cpp_value_box(DAT_181e60808,local_res18);
               uVar2 = String.Format("本月已拆解过{0}件装备，还需等待弟子将废料清理完毕。",uVar1);
               uVar1 = new SinglePlotData(uVar2,0,1,0,3,"0",1,0,0);
-              if (lVar4 != null) goto LAB_180b74ade;
+              if (lVar4 != null) goto LAB_18092ddae;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = BuildingUIController.PartyLvName;
-          uVar1 = FUN_180228420(DAT_181d8b158);
+          uVar1 = FUN_1802100c0(DAT_181e6dc98);
           uVar2 = String.Format("凭借我#PlayerForceName#秘法，可拆解成品装备，将其熔炼成锻造材料。\n所得材料会保留装备上的最多三个加成效果。",uVar1,0);
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           if (lVar3 != null) {
-            FUN_18181e6b0(lVar3,"选择装备;ChooseBreakEquipment",DAT_181da3d70);
-            FUN_18181e6b0(lVar3,"取消;HideInteractUI");
+            FUN_18175de30(lVar3,"选择装备;ChooseBreakEquipment",DAT_181e86370);
+            FUN_18175de30(lVar3,"取消;HideInteractUI");
             uVar1 = new SinglePlotData(uVar2,lVar3,1,0,3,"0",1,0,0);
             if (lVar4 != null) {
-        LAB_180b74ade:
+        LAB_18092ddae:
               PlotController.ChangePlot(lVar4,uVar1,0);
               return;
             }
@@ -6939,8 +6944,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E3B
-    // RVA   : 0xB75100   Offset: 0xB74500   Length: 0x45A
+    // Token : 0x6000E3E
+    // RVA   : 0x92E3D0   Offset: 0x92D1D0   Length: 0x45A
     public void StartBreakMed()
     {
         ulong uVar1;
@@ -6955,25 +6960,25 @@ public class BuildingUIController
             if ((GameController._instance != null) &&
                (lVar3 = GameController._instance.worldData) != null) {
               local_res18[0] = lVar3.monthBreakEquipTime;
-              uVar1 = il2cpp_value_box(DAT_181d80430,local_res18);
+              uVar1 = il2cpp_value_box(DAT_181e60808,local_res18);
               uVar2 = String.Format("本月已炼化过{0}件丹药，还需等待弟子将废料清理完毕。",uVar1);
               uVar1 = new SinglePlotData(uVar2,0,1,0,3,"0",1,0,0);
-              if (lVar4 != null) goto LAB_180b7539e;
+              if (lVar4 != null) goto LAB_18092e66e;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = BuildingUIController.PartyLvName;
-          uVar1 = FUN_180228420(DAT_181d8b158);
+          uVar1 = FUN_1802100c0(DAT_181e6dc98);
           uVar2 = String.Format("凭借我#PlayerForceName#秘法，可将成品丹药炼化为药引。\n所得材料会保留丹药上的最多两个加成效果。",uVar1,0);
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           if (lVar3 != null) {
-            FUN_18181e6b0(lVar3,"选择丹药;ChooseBreakMed",DAT_181da3d70);
-            FUN_18181e6b0(lVar3,"取消;HideInteractUI");
+            FUN_18175de30(lVar3,"选择丹药;ChooseBreakMed",DAT_181e86370);
+            FUN_18175de30(lVar3,"取消;HideInteractUI");
             uVar1 = new SinglePlotData(uVar2,lVar3,1,0,3,"0",1,0,0);
             if (lVar4 != null) {
-        LAB_180b7539e:
+        LAB_18092e66e:
               PlotController.ChangePlot(lVar4,uVar1,0);
               return;
             }
@@ -6981,8 +6986,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E3C
-    // RVA   : 0xB74CA0   Offset: 0xB740A0   Length: 0x45A
+    // Token : 0x6000E3F
+    // RVA   : 0x92DF70   Offset: 0x92CD70   Length: 0x45A
     public void StartBreakFood()
     {
         ulong uVar1;
@@ -6997,25 +7002,25 @@ public class BuildingUIController
             if ((GameController._instance != null) &&
                (lVar3 = GameController._instance.worldData) != null) {
               local_res18[0] = lVar3.monthBreakEquipTime;
-              uVar1 = il2cpp_value_box(DAT_181d80430,local_res18);
+              uVar1 = il2cpp_value_box(DAT_181e60808,local_res18);
               uVar2 = String.Format("本月已重烩过{0}件饮食，还需等待弟子将废料清理完毕。",uVar1);
               uVar1 = new SinglePlotData(uVar2,0,1,0,3,"0",1,0,0);
-              if (lVar4 != null) goto LAB_180b74f3e;
+              if (lVar4 != null) goto LAB_18092e20e;
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar4 = BuildingUIController.PartyLvName;
-          uVar1 = FUN_180228420(DAT_181d8b158);
+          uVar1 = FUN_1802100c0(DAT_181e6dc98);
           uVar2 = String.Format("凭借我#PlayerForceName#秘法，可将成品饮食重烩为食材。\n所得材料会保留饮食上的最多两个加成效果。",uVar1,0);
-          lVar3 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar3,DAT_181da3bf0);
+          lVar3 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar3,DAT_181e861f0);
           if (lVar3 != null) {
-            FUN_18181e6b0(lVar3,"选择饮食;ChooseBreakFood",DAT_181da3d70);
-            FUN_18181e6b0(lVar3,"取消;HideInteractUI");
+            FUN_18175de30(lVar3,"选择饮食;ChooseBreakFood",DAT_181e86370);
+            FUN_18175de30(lVar3,"取消;HideInteractUI");
             uVar1 = new SinglePlotData(uVar2,lVar3,1,0,3,"0",1,0,0);
             if (lVar4 != null) {
-        LAB_180b74f3e:
+        LAB_18092e20e:
               PlotController.ChangePlot(lVar4,uVar1,0);
               return;
             }
@@ -7023,59 +7028,59 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E3D
-    // RVA   : 0xB75A00   Offset: 0xB74E00   Length: 0x5D
+    // Token : 0x6000E40
+    // RVA   : 0x92ECD0   Offset: 0x92DAD0   Length: 0x5D
     public void StartCraftEquipment()
     {
-        var pStatics = *(int64*)(DAT_181dba818 + 184);
+        var pStatics = *(int64*)(DAT_181e9aad0 + 184);
         if (*pStatics != 0) {
           CraftUIController.OpenCraftUI
                     (*pStatics,0,this.buildingData,0,0);
-          return;
-        }
-    }
-
-    // Token : 0x6000E3E
-    // RVA   : 0xB75D20   Offset: 0xB75120   Length: 0x5D
-    public void StartEnhanceEquipment()
-    {
-        var pStatics = *(int64*)(DAT_181dc3788 + 184);
-        if (*pStatics != 0) {
-          EnhanceUIController.OpenEnhanceUI
-                    (*pStatics,0,this.buildingData,0,0);
-          return;
-        }
-    }
-
-    // Token : 0x6000E3F
-    // RVA   : 0xB75BA0   Offset: 0xB74FA0   Length: 0x5F
-    public void StartCraftMed()
-    {
-        var pStatics = *(int64*)(DAT_181dba818 + 184);
-        if (*pStatics != 0) {
-          CraftUIController.OpenCraftUI
-                    (*pStatics,1,this.buildingData,0,0);
-          return;
-        }
-    }
-
-    // Token : 0x6000E40
-    // RVA   : 0xB75EC0   Offset: 0xB752C0   Length: 0x5F
-    public void StartEnhanceMed()
-    {
-        var pStatics = *(int64*)(DAT_181dc3788 + 184);
-        if (*pStatics != 0) {
-          EnhanceUIController.OpenEnhanceUI
-                    (*pStatics,1,this.buildingData,0,0);
           return;
         }
     }
 
     // Token : 0x6000E41
-    // RVA   : 0xB75AD0   Offset: 0xB74ED0   Length: 0x5F
+    // RVA   : 0x92EFF0   Offset: 0x92DDF0   Length: 0x5D
+    public void StartEnhanceEquipment()
+    {
+        var pStatics = *(int64*)(DAT_181ea3c70 + 184);
+        if (*pStatics != 0) {
+          EnhanceUIController.OpenEnhanceUI
+                    (*pStatics,0,this.buildingData,0,0);
+          return;
+        }
+    }
+
+    // Token : 0x6000E42
+    // RVA   : 0x92EE70   Offset: 0x92DC70   Length: 0x5F
+    public void StartCraftMed()
+    {
+        var pStatics = *(int64*)(DAT_181e9aad0 + 184);
+        if (*pStatics != 0) {
+          CraftUIController.OpenCraftUI
+                    (*pStatics,1,this.buildingData,0,0);
+          return;
+        }
+    }
+
+    // Token : 0x6000E43
+    // RVA   : 0x92F190   Offset: 0x92DF90   Length: 0x5F
+    public void StartEnhanceMed()
+    {
+        var pStatics = *(int64*)(DAT_181ea3c70 + 184);
+        if (*pStatics != 0) {
+          EnhanceUIController.OpenEnhanceUI
+                    (*pStatics,1,this.buildingData,0,0);
+          return;
+        }
+    }
+
+    // Token : 0x6000E44
+    // RVA   : 0x92EDA0   Offset: 0x92DBA0   Length: 0x5F
     public void StartCraftFood()
     {
-        var pStatics = *(int64*)(DAT_181dba818 + 184);
+        var pStatics = *(int64*)(DAT_181e9aad0 + 184);
         if (*pStatics != 0) {
           CraftUIController.OpenCraftUI
                     (*pStatics,2,this.buildingData,0,0);
@@ -7083,11 +7088,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E42
-    // RVA   : 0xB75DF0   Offset: 0xB751F0   Length: 0x5F
+    // Token : 0x6000E45
+    // RVA   : 0x92F0C0   Offset: 0x92DEC0   Length: 0x5F
     public void StartEnhanceFood()
     {
-        var pStatics = *(int64*)(DAT_181dc3788 + 184);
+        var pStatics = *(int64*)(DAT_181ea3c70 + 184);
         if (*pStatics != 0) {
           EnhanceUIController.OpenEnhanceUI
                     (*pStatics,2,this.buildingData,0,0);
@@ -7095,11 +7100,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E43
-    // RVA   : 0xB75C60   Offset: 0xB75060   Length: 0x54
+    // Token : 0x6000E46
+    // RVA   : 0x92EF30   Offset: 0x92DD30   Length: 0x54
     public void StartCraftPoison()
     {
-        var pStatics = *(int64*)(DAT_181dba790 + 184);
+        var pStatics = *(int64*)(DAT_181e9aa48 + 184);
         if (*pStatics != 0) {
           CraftPoisonUIController.OpenCraftPoisonUI
                     (*pStatics,this.buildingData,0,0);
@@ -7107,59 +7112,59 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E44
-    // RVA   : 0xB759A0   Offset: 0xB74DA0   Length: 0x5D
+    // Token : 0x6000E47
+    // RVA   : 0x92EC70   Offset: 0x92DA70   Length: 0x5D
     public void StartCraftEquipmentMoney()
     {
-        var pStatics = *(int64*)(DAT_181dba818 + 184);
+        var pStatics = *(int64*)(DAT_181e9aad0 + 184);
         if (*pStatics != 0) {
           CraftUIController.OpenCraftUI
                     (*pStatics,0,this.buildingData,1,0);
-          return;
-        }
-    }
-
-    // Token : 0x6000E45
-    // RVA   : 0xB75CC0   Offset: 0xB750C0   Length: 0x5D
-    public void StartEnhanceEquipmentMoney()
-    {
-        var pStatics = *(int64*)(DAT_181dc3788 + 184);
-        if (*pStatics != 0) {
-          EnhanceUIController.OpenEnhanceUI
-                    (*pStatics,0,this.buildingData,1,0);
-          return;
-        }
-    }
-
-    // Token : 0x6000E46
-    // RVA   : 0xB75B30   Offset: 0xB74F30   Length: 0x60
-    public void StartCraftMedMoney()
-    {
-        var pStatics = *(int64*)(DAT_181dba818 + 184);
-        if (*pStatics != 0) {
-          CraftUIController.OpenCraftUI
-                    (*pStatics,1,this.buildingData,1,0);
-          return;
-        }
-    }
-
-    // Token : 0x6000E47
-    // RVA   : 0xB75E50   Offset: 0xB75250   Length: 0x60
-    public void StartEnhanceMedMoney()
-    {
-        var pStatics = *(int64*)(DAT_181dc3788 + 184);
-        if (*pStatics != 0) {
-          EnhanceUIController.OpenEnhanceUI
-                    (*pStatics,1,this.buildingData,1,0);
           return;
         }
     }
 
     // Token : 0x6000E48
-    // RVA   : 0xB75A60   Offset: 0xB74E60   Length: 0x60
+    // RVA   : 0x92EF90   Offset: 0x92DD90   Length: 0x5D
+    public void StartEnhanceEquipmentMoney()
+    {
+        var pStatics = *(int64*)(DAT_181ea3c70 + 184);
+        if (*pStatics != 0) {
+          EnhanceUIController.OpenEnhanceUI
+                    (*pStatics,0,this.buildingData,1,0);
+          return;
+        }
+    }
+
+    // Token : 0x6000E49
+    // RVA   : 0x92EE00   Offset: 0x92DC00   Length: 0x60
+    public void StartCraftMedMoney()
+    {
+        var pStatics = *(int64*)(DAT_181e9aad0 + 184);
+        if (*pStatics != 0) {
+          CraftUIController.OpenCraftUI
+                    (*pStatics,1,this.buildingData,1,0);
+          return;
+        }
+    }
+
+    // Token : 0x6000E4A
+    // RVA   : 0x92F120   Offset: 0x92DF20   Length: 0x60
+    public void StartEnhanceMedMoney()
+    {
+        var pStatics = *(int64*)(DAT_181ea3c70 + 184);
+        if (*pStatics != 0) {
+          EnhanceUIController.OpenEnhanceUI
+                    (*pStatics,1,this.buildingData,1,0);
+          return;
+        }
+    }
+
+    // Token : 0x6000E4B
+    // RVA   : 0x92ED30   Offset: 0x92DB30   Length: 0x60
     public void StartCraftFoodMoney()
     {
-        var pStatics = *(int64*)(DAT_181dba818 + 184);
+        var pStatics = *(int64*)(DAT_181e9aad0 + 184);
         if (*pStatics != 0) {
           CraftUIController.OpenCraftUI
                     (*pStatics,2,this.buildingData,1,0);
@@ -7167,11 +7172,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E49
-    // RVA   : 0xB75D80   Offset: 0xB75180   Length: 0x60
+    // Token : 0x6000E4C
+    // RVA   : 0x92F050   Offset: 0x92DE50   Length: 0x60
     public void StartEnhanceFoodMoney()
     {
-        var pStatics = *(int64*)(DAT_181dc3788 + 184);
+        var pStatics = *(int64*)(DAT_181ea3c70 + 184);
         if (*pStatics != 0) {
           EnhanceUIController.OpenEnhanceUI
                     (*pStatics,2,this.buildingData,1,0);
@@ -7179,11 +7184,11 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E4A
-    // RVA   : 0xB75C00   Offset: 0xB75000   Length: 0x54
+    // Token : 0x6000E4D
+    // RVA   : 0x92EED0   Offset: 0x92DCD0   Length: 0x54
     public void StartCraftPoisonMoney()
     {
-        var pStatics = *(int64*)(DAT_181dba790 + 184);
+        var pStatics = *(int64*)(DAT_181e9aa48 + 184);
         if (*pStatics != 0) {
           CraftPoisonUIController.OpenCraftPoisonUI
                     (*pStatics,this.buildingData,1,0);
@@ -7191,20 +7196,20 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E4B
-    // RVA   : 0xB65AC0   Offset: 0xB64EC0   Length: 0xAC
+    // Token : 0x6000E4E
+    // RVA   : 0x91ED90   Offset: 0x91DB90   Length: 0xAC
     public void GiveTreasureToGovern()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.GiveTreasureToGovern(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E4C
-    // RVA   : 0xB71BA0   Offset: 0xB70FA0   Length: 0x536
+    // Token : 0x6000E4F
+    // RVA   : 0x92AE70   Offset: 0x929C70   Length: 0x536
     public void SpeCure()
     {
         long lVar1;
@@ -7233,15 +7238,15 @@ public class BuildingUIController
               local_res18[0] = Mathf.RoundToInt((fVar6 * 0.02 + 1.0) * 1000.0,0);
               lVar1 = BuildingUIController.PartyLvName;
               local_res20[0] = local_res18[0];
-              uVar2 = il2cpp_value_box(DAT_181d80430,local_res20);
+              uVar2 = il2cpp_value_box(DAT_181e60808,local_res20);
               uVar2 = String.Format("本寺以医术闻名于世，无论大侠伤重几何，只需在此疗养三日便可痊愈。\n以大侠当前的伤势，在此处治愈需消耗{0}两银钱。",uVar2,0);
-              lVar4 = il2cpp_internal(DAT_181d97768);
-              FUN_181330100(lVar4,DAT_181da3bf0);
+              lVar4 = il2cpp_internal(DAT_181e77728);
+              FUN_1810f3480(lVar4,DAT_181e861f0);
               uVar3 = Int32.ToString(local_res18,0);
               uVar3 = String.Concat("治愈;SpeCureStart;;0/",uVar3,0);
               if (lVar4 != null) {
-                FUN_18181e6b0(lVar4,uVar3,DAT_181da3d70);
-                FUN_18181e6b0(lVar4,"还是算了;HideInteractUI",DAT_181da3d70);
+                FUN_18175de30(lVar4,uVar3,DAT_181e86370);
+                FUN_18175de30(lVar4,"还是算了;HideInteractUI",DAT_181e86370);
                 uVar8 = 0;
                 uVar3 = BuildingUIController.GenerateBuildingNPCString
                                   (this,"僧众",10,0xffffffff,CONCAT44(uVar7,0xffffffff),0);
@@ -7253,10 +7258,10 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar1 = BuildingUIController.PartyLvName;
-          uVar2 = FUN_180228420(DAT_181d8b158);
+          uVar2 = FUN_1802100c0(DAT_181e6dc98);
           uVar2 = String.Format("我目前并无伤势在身，何必庸人自扰。",uVar2,0);
           uVar3 = new SinglePlotData(uVar2,0,1,0,CONCAT44(uVar8,3),"0",1,0,0);
           if (lVar1 != null) {
@@ -7266,8 +7271,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E4D
-    // RVA   : 0xB72D30   Offset: 0xB72130   Length: 0x486
+    // Token : 0x6000E50
+    // RVA   : 0x92C000   Offset: 0x92AE00   Length: 0x486
     public void SpeReduceBadFame()
     {
         long lVar1;
@@ -7292,15 +7297,15 @@ public class BuildingUIController
                                      500.0,0);
               lVar1 = BuildingUIController.PartyLvName;
               local_res20[0] = local_res18[0];
-              uVar2 = il2cpp_value_box(DAT_181d80430,local_res20);
+              uVar2 = il2cpp_value_box(DAT_181e60808,local_res20);
               uVar2 = String.Format("少侠若在此处捐赠银两，修缮祠堂或是分发给穷苦百姓，便能削减在江湖中留下的恶名。\n以少侠当前的名望，在此处布施三日，需消耗{0}两银钱。",uVar2,0);
-              lVar3 = il2cpp_internal(DAT_181d97768);
-              FUN_181330100(lVar3,DAT_181da3bf0);
+              lVar3 = il2cpp_internal(DAT_181e77728);
+              FUN_1810f3480(lVar3,DAT_181e861f0);
               uVar4 = Int32.ToString(local_res18,0);
               uVar4 = String.Concat("布施;SpeReduceBadFameStart;;0/",uVar4,0);
               if (lVar3 != null) {
-                FUN_18181e6b0(lVar3,uVar4,DAT_181da3d70);
-                FUN_18181e6b0(lVar3,"还是算了;HideInteractUI",DAT_181da3d70);
+                FUN_18175de30(lVar3,uVar4,DAT_181e86370);
+                FUN_18175de30(lVar3,"还是算了;HideInteractUI",DAT_181e86370);
                 uVar7 = 0;
                 uVar4 = BuildingUIController.GenerateBuildingNPCString
                                   (this,"名士",0xfffffffa,0xffffffff,CONCAT44(uVar6,0xffffffff),
@@ -7313,10 +7318,10 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar1 = BuildingUIController.PartyLvName;
-          uVar2 = FUN_180228420(DAT_181d8b158);
+          uVar2 = FUN_1802100c0(DAT_181e6dc98);
           uVar2 = String.Format("这个月已经捐出许多银两，\n若是再大肆布施，只怕落得个虚仁假义的名声。",uVar2,0);
           uVar4 = new SinglePlotData(uVar2,0,1,0,CONCAT44(uVar7,3),"0",1,0,0);
           if (lVar1 != null) {
@@ -7326,8 +7331,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E4E
-    // RVA   : 0xB73B00   Offset: 0xB72F00   Length: 0xD3B
+    // Token : 0x6000E51
+    // RVA   : 0x92CDD0   Offset: 0x92BBD0   Length: 0xD3B
     public void SpeStartParty()
     {
         uint uVar1;
@@ -7358,7 +7363,7 @@ public class BuildingUIController
             (lVar2 = GameController._instance.worldData) != null) &&
            (lVar2 = WorldData.Player(lVar2,0)) != null) {
           if (*(float *)(lVar2 + 0x1c4) <= 200.0 && *(float *)(lVar2 + 0x1c4) != 200.0) {
-            lVar2 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+            lVar2 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
             uVar6 = new SinglePlotData("需要至少200点声望才能在此举办宴会",0,1,0,CONCAT44(uVar1,3),"0",1,0,0);
             if (lVar2 != null) {
               PlotController.ChangePlot(lVar2,uVar6,0);
@@ -7372,10 +7377,10 @@ public class BuildingUIController
                 if (this.buildingData != null) {
                   uVar1 = Mathf.RoundToInt(((float)this.buildingData.lv * 0.5 +
                                             1.0) * 800.0,0);
-                  lVar2 = il2cpp_internal(DAT_181d97768);
-                  FUN_181330100(lVar2,DAT_181da3bf0);
-                  plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4138,7);
-                  lVar5 = *(int64 *)(*(int64 *)(DAT_181db4020 + 184) + 24);
+                  lVar2 = il2cpp_internal(DAT_181e77728);
+                  FUN_1810f3480(lVar2,DAT_181e861f0);
+                  plVar3 = (int64 *)FUN_1801dfd90(DAT_181e84278,7);
+                  lVar5 = *(int64 *)(*(int64 *)(DAT_181e942d8 + 184) + 24);
                   if (lVar5 != null) {
                     if (*(uint32 *)(lVar5 + 24) < 5) {
                       ThrowHelper.ThrowArgumentOutOfRangeException(0);
@@ -7387,12 +7392,12 @@ public class BuildingUIController
                       {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       if ((int)plVar3[3] == 0) {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       plVar3[4] = lVar5;
                       il2cpp_internal(plVar3 + 4,lVar5);
@@ -7402,60 +7407,60 @@ public class BuildingUIController
                       {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       if (*(uint32 *)(plVar3 + 3) < 2) {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       plVar3[5] = lVar5;
                       il2cpp_internal(plVar3 + 5,lVar5);
                       local_res18[0] = 0;
-                      lVar5 = il2cpp_value_box(DAT_181d80430,local_res18);
+                      lVar5 = il2cpp_value_box(DAT_181e60808,local_res18);
                       if ((lVar5 != null) &&
                          (lVar4 = il2cpp_internal(lVar5,*(uint64 *)(*plVar3 + 64))) == null)
                       {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       if (*(uint32 *)(plVar3 + 3) < 3) {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       plVar3[6] = lVar5;
                       il2cpp_internal(plVar3 + 6,lVar5);
                       local_res20[0] = 4;
-                      lVar5 = il2cpp_value_box(DAT_181d80430,local_res20);
+                      lVar5 = il2cpp_value_box(DAT_181e60808,local_res20);
                       if ((lVar5 != null) &&
                          (lVar4 = il2cpp_internal(lVar5,*(uint64 *)(*plVar3 + 64))) == null)
                       {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       if (*(uint32 *)(plVar3 + 3) < 4) {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       plVar3[7] = lVar5;
                       il2cpp_internal(plVar3 + 7,lVar5);
                       local_58 = uVar1;
-                      lVar5 = il2cpp_value_box(DAT_181d80430,&local_58);
+                      lVar5 = il2cpp_value_box(DAT_181e60808,&local_58);
                       if ((lVar5 != null) &&
                          (lVar4 = il2cpp_internal(lVar5,*(uint64 *)(*plVar3 + 64))) == null)
                       {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       if (*(uint32 *)(plVar3 + 3) < 5) {
                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                        FUN_1800d65f0(uVar6,0);
+                        FUN_1801e02d0(uVar6,0);
                       }
                       plVar3[8] = lVar5;
                       il2cpp_internal(plVar3 + 8,lVar5);
@@ -7464,18 +7469,18 @@ public class BuildingUIController
                         local_54 = (float)AreaBuildingData.GetExtraPartyScore
                                                     (this.buildingData,0);
                         local_54 = local_54 + fVar9;
-                        lVar5 = il2cpp_value_box(DAT_181da22f0,&local_54);
+                        lVar5 = il2cpp_value_box(DAT_181e82730,&local_54);
                         if ((lVar5 != null) &&
                            (lVar4 = il2cpp_internal(lVar5,*(uint64 *)(*plVar3 + 64)), lVar4 == null
                            )) {
                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar6,0);
+                          FUN_1801e02d0(uVar6,0);
                         }
                         if (*(uint32 *)(plVar3 + 3) < 6) {
                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                          FUN_1800d65f0(uVar6,0);
+                          FUN_1801e02d0(uVar6,0);
                         }
                         plVar3[9] = lVar5;
                         il2cpp_internal(plVar3 + 9,lVar5);
@@ -7484,49 +7489,49 @@ public class BuildingUIController
                           fVar10 = (float)AreaBuildingData.GetExtraPartyRate
                                                     (this.buildingData,0);
                           local_50 = (fVar10 + fVar9) * 100.0;
-                          lVar5 = il2cpp_value_box(DAT_181da22f0,&local_50);
+                          lVar5 = il2cpp_value_box(DAT_181e82730,&local_50);
                           if ((lVar5 != null) &&
                              (lVar4 = il2cpp_internal(lVar5,*(uint64 *)(*plVar3 + 64)),
                              lVar4 == null)) {
                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar6,0);
+                            FUN_1801e02d0(uVar6,0);
                           }
                           if (*(uint32 *)(plVar3 + 3) < 7) {
                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                            FUN_1800d65f0(uVar6,0);
+                            FUN_1801e02d0(uVar6,0);
                           }
                           plVar3[10] = lVar5;
                           il2cpp_internal(plVar3 + 10,lVar5);
                           uVar6 = String.Format("{0}宴会({1}日);SpeStartPartySure;{2}-{3};0/{4};基础评分{5}\n基础加成{6}%",plVar3,0);
                           if (lVar2 != null) {
-                            FUN_18181e6b0(lVar2,uVar6,DAT_181da3d70);
-                            FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
-                            lVar5 = FUN_18046c400(0);
+                            FUN_18175de30(lVar2,uVar6,DAT_181e86370);
+                            FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
+                            lVar5 = FUN_180210a70(0);
                             uVar6 = new PlotData(0);
                             if (lVar5 != null) {
                               *(uint64 *)(lVar5 + 0x108) = uVar6;
-                              lVar5 = FUN_18046c400(0);
+                              lVar5 = FUN_180210a70(0);
                               if ((lVar5 != null) && (*(int64 *)(lVar5 + 0x108) != 0)) {
                                 lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x108) + 64);
                                 uVar13 = 0;
                                 uVar6 = BuildingUIController.GenerateBuildingNPCString
                                                   (this,"豪商",0xfffffffd,0xffffffff,
                                                    CONCAT44(uVar11,0xffffffff),0);
-                                uVar7 = il2cpp_internal(DAT_181da24f0);
+                                uVar7 = il2cpp_internal(DAT_181e82930);
                                 uVar12 = CONCAT44(uVar13,3);
                                 SinglePlotData.ctor
                                           (uVar7,"落魄江湖载酒行，楚腰纤细掌中轻。十年一觉扬州梦，赢得青楼薄幸名。\n这烟花柳巷，自古以来便是名人雅士宴饮会客的不二场所。",0,5,uVar6,uVar12,"0",0,0,0);
                                 uVar11 = (uint32)((uint64)uVar12 >> 32);
                                 if (lVar5 != null) {
-                                  FUN_18181e6b0(lVar5,uVar7,DAT_181da1408);
-                                  lVar5 = FUN_18046c400(0);
+                                  FUN_18175de30(lVar5,uVar7,DAT_181e839b0);
+                                  lVar5 = FUN_180210a70(0);
                                   if ((lVar5 != null) && (*(int64 *)(lVar5 + 0x108) != 0)) {
                                     lVar5 = *(int64 *)(*(int64 *)(lVar5 + 0x108) + 64);
-                                    plVar3 = (int64 *)FUN_1800d60b0(DAT_181da4138,5);
+                                    plVar3 = (int64 *)FUN_1801dfd90(DAT_181e84278,5);
                                     local_4c = uVar1;
-                                    lVar4 = il2cpp_value_box(DAT_181d80430,&local_4c);
+                                    lVar4 = il2cpp_value_box(DAT_181e60808,&local_4c);
                                     if (plVar3 != (int64 *)0) {
                                       if ((lVar4 != null) &&
                                          (lVar8 = il2cpp_internal(lVar4,*(uint64 *)
@@ -7534,12 +7539,12 @@ public class BuildingUIController
                                          )) {
                                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                        FUN_1800d65f0(uVar6,0);
+                                        FUN_1801e02d0(uVar6,0);
                                       }
                                       if ((int)plVar3[3] == 0) {
                                         uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                        FUN_1800d65f0(uVar6,0);
+                                        FUN_1801e02d0(uVar6,0);
                                       }
                                       plVar3[4] = lVar4;
                                       il2cpp_internal(plVar3 + 4,lVar4);
@@ -7551,12 +7556,12 @@ public class BuildingUIController
                                            lVar8 == null)) {
                                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                          FUN_1800d65f0(uVar6,0);
+                                          FUN_1801e02d0(uVar6,0);
                                         }
                                         if (*(uint32 *)(plVar3 + 3) < 2) {
                                           uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                          FUN_1800d65f0(uVar6,0);
+                                          FUN_1801e02d0(uVar6,0);
                                         }
                                         plVar3[5] = lVar4;
                                         il2cpp_internal(plVar3 + 5,lVar4);
@@ -7570,31 +7575,31 @@ public class BuildingUIController
                                              lVar8 == null)) {
                                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                            FUN_1800d65f0(uVar6,0);
+                                            FUN_1801e02d0(uVar6,0);
                                           }
                                           if (*(uint32 *)(plVar3 + 3) < 3) {
                                             uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                            FUN_1800d65f0(uVar6,0);
+                                            FUN_1801e02d0(uVar6,0);
                                           }
                                           plVar3[6] = lVar4;
                                           il2cpp_internal(plVar3 + 6,lVar4);
                                           if (this.buildingData != null) {
                                             local_48 = AreaBuildingData.GetExtraPartyScore
                                                                  (this.buildingData,0);
-                                            lVar4 = il2cpp_value_box(DAT_181da22f0,&local_48);
+                                            lVar4 = il2cpp_value_box(DAT_181e82730,&local_48);
                                             if ((lVar4 != null) &&
                                                (lVar8 = il2cpp_internal(lVar4,*(uint64 *)
                                                                                    (*plVar3 + 64)),
                                                lVar8 == null)) {
                                               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                              FUN_1800d65f0(uVar6,0);
+                                              FUN_1801e02d0(uVar6,0);
                                             }
                                             if (*(uint32 *)(plVar3 + 3) < 4) {
                                               uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                              FUN_1800d65f0(uVar6,0);
+                                              FUN_1801e02d0(uVar6,0);
                                             }
                                             plVar3[7] = lVar4;
                                             il2cpp_internal(plVar3 + 7,lVar4);
@@ -7610,24 +7615,24 @@ public class BuildingUIController
                                                  lVar8 == null)) {
                                                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                FUN_1800d65f0(uVar6,0);
+                                                FUN_1801e02d0(uVar6,0);
                                               }
                                               if (*(uint32 *)(plVar3 + 3) < 5) {
                                                 uVar6 = il2cpp_internal();
                           // WARNING: Subroutine does not return
-                                                FUN_1800d65f0(uVar6,0);
+                                                FUN_1801e02d0(uVar6,0);
                                               }
                                               plVar3[8] = lVar4;
                                               il2cpp_internal(plVar3 + 8,lVar4);
                                               uVar6 = String.Format("少侠若想在此举办一场奢华宴会，纵情享乐，会见贵客，非得花上{0}两银钱不可。\n(当前{1}为等级{2}，可提升宴会{3}点基础评分和{4}%的评分加成)",plVar3,0);
-                                              uVar7 = il2cpp_internal(DAT_181da24f0);
+                                              uVar7 = il2cpp_internal(DAT_181e82930);
                                               SinglePlotData.ctor
                                                         (uVar7,uVar6,lVar2,0,0,CONCAT44(uVar11,3),
                                                          "0",0,0,0);
                                               if (lVar5 != null) {
-                                                FUN_18181e6b0(lVar5,uVar7,DAT_181da1408);
-                                                lVar2 = FUN_18046c400(0);
-                                                lVar5 = FUN_18046c400(0);
+                                                FUN_18175de30(lVar5,uVar7,DAT_181e839b0);
+                                                lVar2 = FUN_180210a70(0);
+                                                lVar5 = FUN_180210a70(0);
                                                 if ((lVar5 != null) && (lVar2 != null)) {
                                                   PlotController.ChangePlot
                                                             (lVar2,*(uint64 *)(lVar5 + 0x108),0);
@@ -7650,9 +7655,9 @@ public class BuildingUIController
                   }
                 }
                           // WARNING: Subroutine does not return
-                FUN_1800d6620();
+                FUN_1801e0300();
               }
-              lVar2 = FUN_18046c400(0);
+              lVar2 = FUN_180210a70(0);
               uVar6 = new SinglePlotData("这个月已经大肆宴饮一番，若是天天在这烟花柳巷中流连，只怕为江湖中人耻笑。",0,1,0,CONCAT44(uVar1,3),"0",1,0,0);
               if (lVar2 != null) {
                 PlotController.ChangePlot(lVar2,uVar6,0);
@@ -7663,8 +7668,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E4F
-    // RVA   : 0xB65A80   Offset: 0xB64E80   Length: 0x36
+    // Token : 0x6000E52
+    // RVA   : 0x91ED50   Offset: 0x91DB50   Length: 0x36
     public int GetSpeTalentPoint()
     {
         if (this.buildingData == null) {
@@ -7673,8 +7678,8 @@ public class BuildingUIController
         return (int)((float)this.buildingData.lv * 0.5 + 1.0);
     }
 
-    // Token : 0x6000E50
-    // RVA   : 0xB720E0   Offset: 0xB714E0   Length: 0x54F
+    // Token : 0x6000E53
+    // RVA   : 0x92B3B0   Offset: 0x92A1B0   Length: 0x54F
     public void SpeGetTalentPoint()
     {
         long lVar1;
@@ -7708,7 +7713,7 @@ public class BuildingUIController
               local_res18[0] = Mathf.RoundToInt(auVar8._0_8_,0);
               lVar1 = BuildingUIController.PartyLvName;
               local_res20[0] = local_res18[0];
-              uVar2 = il2cpp_value_box(DAT_181d80430,local_res20);
+              uVar2 = il2cpp_value_box(DAT_181e60808,local_res20);
               if (this.buildingData == null) {
                 fVar6 = 0.0;
               }
@@ -7716,15 +7721,15 @@ public class BuildingUIController
                 fVar6 = (float)this.buildingData.lv * 0.5;
               }
               local_38[0] = (int)(fVar6 + 1.0);
-              uVar3 = il2cpp_value_box(DAT_181d80430,local_38);
+              uVar3 = il2cpp_value_box(DAT_181e60808,local_38);
               uVar2 = String.Format("这莫高窟虽地处幽僻，却藏有经书典籍无数。\n悬崖壁上的石窟亦是潜心闭关，修炼天赋的不二之选。\n以少侠当前之天赋，在此处闭关十五日需消耗{0}两银钱，预计可获得{1}点天赋。",uVar2,uVar3,0);
-              lVar4 = il2cpp_internal(DAT_181d97768);
-              FUN_181330100(lVar4,DAT_181da3bf0);
+              lVar4 = il2cpp_internal(DAT_181e77728);
+              FUN_1810f3480(lVar4,DAT_181e861f0);
               uVar3 = Int32.ToString(local_res18,0);
               uVar3 = String.Concat("闭关;SpeGetTalentPointStart;;0/",uVar3,0);
               if (lVar4 != null) {
-                FUN_18181e6b0(lVar4,uVar3,DAT_181da3d70);
-                FUN_18181e6b0(lVar4,"还是算了;HideInteractUI",DAT_181da3d70);
+                FUN_18175de30(lVar4,uVar3,DAT_181e86370);
+                FUN_18175de30(lVar4,"还是算了;HideInteractUI",DAT_181e86370);
                 uVar10 = 0;
                 uVar3 = BuildingUIController.GenerateBuildingNPCString
                                   (this,"高僧",10,0xffffffff,CONCAT44(uVar9,0xffffffff),0);
@@ -7736,10 +7741,10 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar1 = BuildingUIController.PartyLvName;
-          uVar2 = FUN_180228420(DAT_181d8b158);
+          uVar2 = FUN_1802100c0(DAT_181e6dc98);
           uVar2 = String.Format("这个月已经潜心闭关过，还需要再积累些实践感悟才是。",uVar2,0);
           uVar3 = new SinglePlotData(uVar2,0,1,0,CONCAT44(uVar10,3),"0",1,0,0);
           if (lVar1 != null) {
@@ -7749,8 +7754,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E51
-    // RVA   : 0xB65890   Offset: 0xB64C90   Length: 0xF8
+    // Token : 0x6000E54
+    // RVA   : 0x91EB60   Offset: 0x91D960   Length: 0xF8
     public int GetSpeRemoveSkillCost()
     {
         long lVar1;
@@ -7765,8 +7770,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E52
-    // RVA   : 0xB731C0   Offset: 0xB725C0   Length: 0x357
+    // Token : 0x6000E55
+    // RVA   : 0x92C490   Offset: 0x92B290   Length: 0x357
     public void SpeRemoveSkill()
     {
         long lVar1;
@@ -7779,7 +7784,7 @@ public class BuildingUIController
         uint uVar6;
         uint uVar7;
         uVar6 = (uint32)((uint64)in_stack_ffffffffffffffb8 >> 32);
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if ((GameController._instance != null) &&
            (lVar2 = GameController._instance.worldData) != null) {
           lVar2 = WorldData.Player(lVar2,0);
@@ -7787,13 +7792,13 @@ public class BuildingUIController
             local_res18[0] =
                  Mathf.RoundToInt(((float)*(int *)(lVar2.customDifficultyData + 24) * 0.1 + 1.0) *
                                    500.0,0);
-            uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+            uVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
             uVar3 = String.Format("在这石窟之中与世隔绝，酣然入梦，足以明心见性，忘却前尘旧事。\n少侠只需耗费{0}银两在此闭关十日，便可遗忘一门<b>零重修为</b>的武学。",uVar3,0);
-            lVar2 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar2,DAT_181da3bf0);
+            lVar2 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar2,DAT_181e861f0);
             if (lVar2 != null) {
-              FUN_18181e6b0(lVar2,"选择武学;SpeRemoveSkillChoose",DAT_181da3d70);
-              FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
+              FUN_18175de30(lVar2,"选择武学;SpeRemoveSkillChoose",DAT_181e86370);
+              FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
               uVar7 = 0;
               uVar4 = BuildingUIController.GenerateBuildingNPCString
                                 (this,"高僧",10,0xffffffff,CONCAT44(uVar6,0xffffffff),0);
@@ -7807,8 +7812,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E53
-    // RVA   : 0xB65990   Offset: 0xB64D90   Length: 0xE2
+    // Token : 0x6000E56
+    // RVA   : 0x91EC60   Offset: 0x91DA60   Length: 0xE2
     public int GetSpeRemoveTagCost()
     {
         long lVar1;
@@ -7824,8 +7829,8 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E54
-    // RVA   : 0xB73520   Offset: 0xB72920   Length: 0x5D4
+    // Token : 0x6000E57
+    // RVA   : 0x92C7F0   Offset: 0x92B5F0   Length: 0x5D4
     public void SpeRemoveTag()
     {
         bool cVar1;
@@ -7841,8 +7846,8 @@ public class BuildingUIController
         ulong in_stack_ffffffffffffffb8;
         uint uVar10;
         uint uVar11;
-        lVar2 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar2,DAT_181da3bf0);
+        lVar2 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar2,DAT_181e861f0);
         iVar8 = 0;
         while( true ) {
           if ((GameController._instance == null) ||
@@ -7852,15 +7857,15 @@ public class BuildingUIController
           if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x368) == 0)) break;
           if (*(int *)(*(int64 *)(lVar3 + 0x368) + 24) <= iVar8) {
             if (lVar2 != null) {
-              FUN_18181e6b0(lVar2,"还是算了;HideInteractUI",DAT_181da3d70);
-              lVar3 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+              FUN_18175de30(lVar2,"还是算了;HideInteractUI",DAT_181e86370);
+              lVar3 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
               if ((GameController._instance != null) &&
                  (lVar6 = GameController._instance.worldData) != null) {
                 lVar6 = WorldData.Player(lVar6,0);
                 if (lVar6 != null) {
                   fVar9 = (float)HeroData.GetTotalTagPoint(lVar6,0);
                   local_res18[0] = Mathf.RoundToInt((fVar9 * 0.05 + 1.0) * 2000.0,0);
-                  uVar4 = il2cpp_value_box(DAT_181d80430,local_res18);
+                  uVar4 = il2cpp_value_box(DAT_181e60808,local_res18);
                   uVar4 = String.Format("在这石窟之中与世隔绝，酣然入梦，足以明心见性，忘却前尘旧事。\n少侠只需耗费{0}银两在此闭关三十日，便可遗忘一个天赋。",uVar4,0);
                   uVar11 = 0;
                   uVar5 = BuildingUIController.GenerateBuildingNPCString
@@ -7874,47 +7879,47 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
-          lVar3 = FUN_18046c0a0(0);
+          lVar3 = FUN_1802106e0(0);
           if ((lVar3 == null) || (lVar3.villageAreaID == null)) break;
           lVar3 = WorldData.Player(lVar3.villageAreaID,0);
           if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x368) == 0)) break;
-          lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x368),iVar8,DAT_181d8c730);
+          lVar3 = FUN_1800024b0(*(int64 *)(lVar3 + 0x368),iVar8,DAT_181e6e8f0);
           if (lVar3 == null) break;
           cVar1 = HeroTagData.IsPermanentTag(lVar3);
           if (cVar1) {
-            lVar3 = FUN_18046c0a0(0);
+            lVar3 = FUN_1802106e0(0);
             if ((lVar3 == null) || (lVar3.villageAreaID == null)) {
-        LAB_180b73ae9:
+        LAB_18092cdb9:
                           // WARNING: Subroutine does not return
-              FUN_1800d6620();
+              FUN_1801e0300();
             }
             lVar3 = WorldData.Player(lVar3.villageAreaID,0);
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x368) == 0)) goto LAB_180b73ae9;
-            lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x368),iVar8,DAT_181d8c730);
-            if (lVar3 == null) goto LAB_180b73ae9;
+            if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x368) == 0)) goto LAB_18092cdb9;
+            lVar3 = FUN_1800024b0(*(int64 *)(lVar3 + 0x368),iVar8,DAT_181e6e8f0);
+            if (lVar3 == null) goto LAB_18092cdb9;
             lVar3 = HeroTagData.DataBase(lVar3,0);
-            if (lVar3 == null) goto LAB_180b73ae9;
+            if (lVar3 == null) goto LAB_18092cdb9;
             uVar4 = HeroTagDataBase.Name(lVar3,0);
-            lVar3 = FUN_18046c0a0(0);
-            if ((lVar3 == null) || (lVar3.villageAreaID == null)) goto LAB_180b73ae9;
+            lVar3 = FUN_1802106e0(0);
+            if ((lVar3 == null) || (lVar3.villageAreaID == null)) goto LAB_18092cdb9;
             lVar3 = WorldData.Player(lVar3.villageAreaID,0);
-            if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x368) == 0)) goto LAB_180b73ae9;
-            lVar3 = FUN_180002f80(*(int64 *)(lVar3 + 0x368),iVar8,DAT_181d8c730);
-            if (lVar3 == null) goto LAB_180b73ae9;
+            if ((lVar3 == null) || (*(int64 *)(lVar3 + 0x368) == 0)) goto LAB_18092cdb9;
+            lVar3 = FUN_1800024b0(*(int64 *)(lVar3 + 0x368),iVar8,DAT_181e6e8f0);
+            if (lVar3 == null) goto LAB_18092cdb9;
             local_res18[0] = lVar3.chapter;
-            uVar5 = il2cpp_value_box(DAT_181d80430,local_res18);
+            uVar5 = il2cpp_value_box(DAT_181e60808,local_res18);
             uVar4 = String.Format("遗忘“{0}”;SpeRemoveTagChoose;{1}",uVar4,uVar5,0);
-            if (lVar2 == null) goto LAB_180b73ae9;
-            FUN_18181e6b0(lVar2,uVar4,DAT_181da3d70);
+            if (lVar2 == null) goto LAB_18092cdb9;
+            FUN_18175de30(lVar2,uVar4,DAT_181e86370);
           }
           iVar8 = iVar8 + 1;
         }
     }
 
-    // Token : 0x6000E55
-    // RVA   : 0xB75560   Offset: 0xB74960   Length: 0x43F
+    // Token : 0x6000E58
+    // RVA   : 0x92E830   Offset: 0x92D630   Length: 0x43F
     public void StartChallengeGhostGatePlot()
     {
         long lVar1;
@@ -7934,15 +7939,15 @@ public class BuildingUIController
             }
             lVar1 = BuildingUIController.PartyLvName;
             local_res18[0] = iVar2;
-            uVar3 = il2cpp_value_box(DAT_181d80430,local_res18);
+            uVar3 = il2cpp_value_box(DAT_181e60808,local_res18);
             uVar4 = String.Format(uVar4,uVar3,0);
-            lVar5 = il2cpp_internal(DAT_181d97768);
-            FUN_181330100(lVar5,DAT_181da3bf0);
-            uVar3 = FUN_180228420(DAT_181d8b158);
+            lVar5 = il2cpp_internal(DAT_181e77728);
+            FUN_1810f3480(lVar5,DAT_181e861f0);
+            uVar3 = FUN_1802100c0(DAT_181e6dc98);
             uVar3 = String.Format("开始试炼;StartChallengeGhostGateFight",uVar3,0);
             if (lVar5 != null) {
-              FUN_18181e6b0(lVar5,uVar3,DAT_181da3d70);
-              FUN_18181e6b0(lVar5,"还是算了;HideInteractUI");
+              FUN_18175de30(lVar5,uVar3,DAT_181e86370);
+              FUN_18175de30(lVar5,"还是算了;HideInteractUI");
               uVar3 = new SinglePlotData(uVar4,lVar5,1,0,3,"0",1,0,0);
               if (lVar1 != null) {
                 PlotController.ChangePlot(lVar1,uVar3,0);
@@ -7950,10 +7955,10 @@ public class BuildingUIController
               }
             }
                           // WARNING: Subroutine does not return
-            FUN_1800d6620();
+            FUN_1801e0300();
           }
           lVar1 = BuildingUIController.PartyLvName;
-          uVar4 = FUN_180228420(DAT_181d8b158);
+          uVar4 = FUN_1802100c0(DAT_181e6dc98);
           uVar4 = String.Format("我已闯过阎罗殿最后一层，无需再继续试炼了。",uVar4);
           uVar3 = new SinglePlotData(uVar4,0,1,0,3,"0",1,0,0);
           if (lVar1 != null) {
@@ -7963,31 +7968,31 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E56
-    // RVA   : 0xB6FFF0   Offset: 0xB6F3F0   Length: 0xAC
+    // Token : 0x6000E59
+    // RVA   : 0x9292C0   Offset: 0x9280C0   Length: 0xAC
     public void ShowForceSpeResearch()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181dc8378 + 184) + 56);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e51088 + 184) + 56);
         if (lVar1 != null) {
           ForceSpeResearchUIController.ShowForceSpeResearchUI(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E57
-    // RVA   : 0xB719D0   Offset: 0xB70DD0   Length: 0x46
+    // Token : 0x6000E5A
+    // RVA   : 0x92ACA0   Offset: 0x929AA0   Length: 0x46
     public void ShowSpePoison()
     {
-        var pStatics = *(int64*)(DAT_181da4368 + 184);
+        var pStatics = *(int64*)(DAT_181e847a8 + 184);
         if (*pStatics != 0) {
           SpePoisonController.ShowSpePoisonUI(*pStatics,0);
           return;
         }
     }
 
-    // Token : 0x6000E58
-    // RVA   : 0xB78390   Offset: 0xB77790   Length: 0xAB
+    // Token : 0x6000E5B
+    // RVA   : 0x931660   Offset: 0x930460   Length: 0xAB
     public void StartSpeBookStorage()
     {
         if (SpeBookStorageController._instance != null) {
@@ -7996,90 +8001,102 @@ public class BuildingUIController
         }
     }
 
-    // Token : 0x6000E59
-    // RVA   : 0xB71A20   Offset: 0xB70E20   Length: 0x46
+    // Token : 0x6000E5C
+    // RVA   : 0x92ACF0   Offset: 0x929AF0   Length: 0x46
     public void ShowSpeSummonResearch()
     {
-        var pStatics = *(int64*)(DAT_181da44e8 + 184);
+        var pStatics = *(int64*)(DAT_181e84928 + 184);
         if (*pStatics != 0) {
           SpeSummonResearchController.ShowSpeSummonResearchUI(*pStatics,0);
           return;
         }
     }
 
-    // Token : 0x6000E5A
-    // RVA   : 0xB78440   Offset: 0xB77840   Length: 0x46
+    // Token : 0x6000E5D
+    // RVA   : 0x931710   Offset: 0x930510   Length: 0x46
     public void StartSpeEnhanceEquip()
     {
-        var pStatics = *(int64*)(DAT_181da4268 + 184);
+        var pStatics = *(int64*)(DAT_181e846a8 + 184);
         if (*pStatics != 0) {
           SpeEnhanceEquipController.ShowSpeEnhanceEquipUI(*pStatics,0);
           return;
         }
     }
 
-    // Token : 0x6000E5B
-    // RVA   : 0xB7AD00   Offset: 0xB7A100   Length: 0xAC
+    // Token : 0x6000E5E
+    // RVA   : 0x933FB0   Offset: 0x932DB0   Length: 0xAC
     public void StudyMartialClubSkill()
     {
         long lVar1;
-        lVar1 = *(int64 *)(*(int64 *)(DAT_181d91ba0 + 184) + 24);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
           PlotController.StudyMartialClubSkillStart(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E5C
-    // RVA   : 0xB7DA10   Offset: 0xB7CE10   Length: 0x15C
-    public void /*ctor*/()
+    // Token : 0x6000E5F
+    // RVA   : 0x91CDF0   Offset: 0x91BBF0   Length: 0xAC
+    public void CustomSkillEntry()
     {
         long lVar1;
-        lVar1 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar1,DAT_181da3bf0);
+        lVar1 = *(int64 *)(*(int64 *)(DAT_181e71f68 + 184) + 24);
         if (lVar1 != null) {
-          FUN_18181e6b0(lVar1,"天下熙熙皆为利来，这次一定要大赚特赚一笔！",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"春种一粒粟，秋收万颗子。",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"此地的树木苍翠葱郁，想必能制成优良的木材。",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"活动活动筋骨，准备大干一场吧。",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"得好好参照医书，辨认出各种药材才行。",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"必须把#AreaForceName#的声威向全武林传扬开来！",DAT_181da3d70);
-          this.ProduceBuildingWorkText = lVar1;
-          FUN_18044ef50(this,0);
+          PlotController.StartCustomSkillEntry(lVar1,0);
           return;
         }
     }
 
-    // Token : 0x6000E5D
-    // RVA   : 0xB7D6D0   Offset: 0xB7CAD0   Length: 0x332
+    // Token : 0x6000E60
+    // RVA   : 0x936CC0   Offset: 0x935AC0   Length: 0x15C
+    public void /*ctor*/()
+    {
+        long lVar1;
+        lVar1 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar1,DAT_181e861f0);
+        if (lVar1 != null) {
+          FUN_18175de30(lVar1,"天下熙熙皆为利来，这次一定要大赚特赚一笔！",DAT_181e86370);
+          FUN_18175de30(lVar1,"春种一粒粟，秋收万颗子。",DAT_181e86370);
+          FUN_18175de30(lVar1,"此地的树木苍翠葱郁，想必能制成优良的木材。",DAT_181e86370);
+          FUN_18175de30(lVar1,"活动活动筋骨，准备大干一场吧。",DAT_181e86370);
+          FUN_18175de30(lVar1,"得好好参照医书，辨认出各种药材才行。",DAT_181e86370);
+          FUN_18175de30(lVar1,"必须把#AreaForceName#的声威向全武林传扬开来！",DAT_181e86370);
+          this.ProduceBuildingWorkText = lVar1;
+          FUN_180ae8740(this,0);
+          return;
+        }
+    }
+
+    // Token : 0x6000E61
+    // RVA   : 0x936980   Offset: 0x935780   Length: 0x332
     private static void /*cctor*/()
     {
         long lVar1;
-        **(uint32 **)(DAT_181db4020 + 184) = 0x3e99999a;
-        lVar1 = il2cpp_internal(DAT_181d97768);
-        FUN_181330100(lVar1,DAT_181da3bf0);
+        **(uint32 **)(DAT_181e942d8 + 184) = 0x3e99999a;
+        lVar1 = il2cpp_internal(DAT_181e77728);
+        FUN_1810f3480(lVar1,DAT_181e861f0);
         if (lVar1 != null) {
-          FUN_18181e6b0(lVar1,"盗窃",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"抢劫",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"用毒",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"投药",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"博骰",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"恶名",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"宴会",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"宴饮",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"分舵管理",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"任教",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"踢馆",DAT_181da3d70);
-          FUN_18181e6b0(lVar1,"布施",DAT_181da3d70);
+          FUN_18175de30(lVar1,"盗窃",DAT_181e86370);
+          FUN_18175de30(lVar1,"抢劫",DAT_181e86370);
+          FUN_18175de30(lVar1,"用毒",DAT_181e86370);
+          FUN_18175de30(lVar1,"投药",DAT_181e86370);
+          FUN_18175de30(lVar1,"博骰",DAT_181e86370);
+          FUN_18175de30(lVar1,"恶名",DAT_181e86370);
+          FUN_18175de30(lVar1,"宴会",DAT_181e86370);
+          FUN_18175de30(lVar1,"宴饮",DAT_181e86370);
+          FUN_18175de30(lVar1,"分舵管理",DAT_181e86370);
+          FUN_18175de30(lVar1,"任教",DAT_181e86370);
+          FUN_18175de30(lVar1,"踢馆",DAT_181e86370);
+          FUN_18175de30(lVar1,"布施",DAT_181e86370);
           PlotController.livingSkillIndexCache = lVar1;
-          lVar1 = il2cpp_internal(DAT_181d97768);
-          FUN_181330100(lVar1,DAT_181da3bf0);
+          lVar1 = il2cpp_internal(DAT_181e77728);
+          FUN_1810f3480(lVar1,DAT_181e861f0);
           if (lVar1 != null) {
-            FUN_18181e6b0(lVar1,"简陋",DAT_181da3d70);
-            FUN_18181e6b0(lVar1,"朴素",DAT_181da3d70);
-            FUN_18181e6b0(lVar1,"普通",DAT_181da3d70);
-            FUN_18181e6b0(lVar1,"精美",DAT_181da3d70);
-            FUN_18181e6b0(lVar1,"奢华",DAT_181da3d70);
+            FUN_18175de30(lVar1,"简陋",DAT_181e86370);
+            FUN_18175de30(lVar1,"朴素",DAT_181e86370);
+            FUN_18175de30(lVar1,"普通",DAT_181e86370);
+            FUN_18175de30(lVar1,"精美",DAT_181e86370);
+            FUN_18175de30(lVar1,"奢华",DAT_181e86370);
             PlotController._instance = lVar1;
             return;
           }

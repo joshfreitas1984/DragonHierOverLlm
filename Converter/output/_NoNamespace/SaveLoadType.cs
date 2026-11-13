@@ -1,18 +1,18 @@
 // ============================================================
 // Type  : SaveLoadType
-// Token : 0x200034A
+// Token : 0x2000357
 // ============================================================
 
 public class SaveLoadType
 {
     // ── Fields ───────────────────────────────────────────────────
-    // Token: 0x4001B3F
+    // Token: 0x4001BBD
     public int value__;
 
-    // Token: 0x4001B40
+    // Token: 0x4001BBE
     public const SaveLoadType Save;
 
-    // Token: 0x4001B41
+    // Token: 0x4001BBF
     public const SaveLoadType Load;
 
 }
