@@ -4804,17 +4804,16 @@
   splits:
   - text: "选择满级"
     translated: "Choose max level"
-    qcReviewedText: "Choose max level {0} as the foundation\nCorresponding martial arts skill level needs to reach {2}"
+    qcReviewedText: "Choose max level {0} As the foundation\nCorresponding martial arts skill level needs to reach {2} Click"
     qcTranslated: "Choose max level {0} as the foundation\nCorresponding martial arts skill level needs to reach {2}"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - GarbledNumber
-    - HardToParseSeam
+    - OtherNamedDefect
   - subIndex: 1
     text: "作为根基"
-    translated: "as the foundation"
+    translated: "As the foundation"
   - subIndex: 2
     text: "对应武学技能需达"
     translated: "Corresponding martial arts skill level needs to reach"

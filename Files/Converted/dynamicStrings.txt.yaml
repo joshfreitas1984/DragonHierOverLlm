@@ -66077,13 +66077,10 @@
   splits:
   - text: "已自创"
     translated: "Already self-created"
-    qcReviewedText: "<color=grey>(Already self-created.)</color>"
-    qcTranslated: "<color=grey>(Already self-created.)</color>"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedStutter
-    qcDefectCategories:
-    - DroppedStutter
+    qcReviewedText: "<color=grey>(Already self-created)</color>"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "<color=grey>({0})</color>"
 - raw: "<color=grey>(需天下第一)</color>"
@@ -66126,13 +66123,12 @@
   splits:
   - text: "数值解析失败"
     translated: "Value parsing failed"
-    qcReviewedText: "PartPostureData Error: Value parsing failed {0} (Full configuration: {1}) {2}"
+    qcReviewedText: "PartPostureData Error: Value parsing failed“{0}”(Full configuration：“{1}”）{2}"
     qcTranslated: "PartPostureData Error: Value parsing failed {0} (Full configuration: {1}) {2}"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - GarbledNumber
     - OtherNamedDefect
   - subIndex: 1
     text: "（完整配置"
@@ -66143,7 +66139,7 @@
   splits:
   - text: "词条部位歧义"
     translated: "Ambiguous part for entry"
-    qcReviewedText: "PartPostureData Error: Ambiguous part for entry {0} (Full configuration: {1}) {2}"
+    qcReviewedText: "PartPostureData Error: Ambiguous part for entry“{0}”(Full configuration：“{1}”）{2}"
     qcTranslated: "PartPostureData Error: Ambiguous part for entry {0} (Full configuration: {1}) {2}"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -66159,14 +66155,13 @@
   splits:
   - text: "部位名无法识别"
     translated: "Part name cannot be identified"
-    qcReviewedText: "PartPostureData Error: Part name cannot be identified {0} (Legal parts: {1}; Full Configuration: {2}) {3}"
-    qcTranslated: "PartPostureData Error: Part name cannot be identified {0} (Legal parts: {1}; Full Configuration: {2}) {3}"
+    qcReviewedText: "PartPostureData Error: Part name cannot be identified“{0}”(Legal parts：{1}; Full Configuration：“{2}”）{3}"
+    qcTranslated: "PartPostureData Error: Unable to recognize part name {0} (Valid parts: {1}; Full configuration: {2}) {3}"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - GarbledNumber
-    - OtherNamedDefect
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "（合法部位"
     translated: "(Legal parts"
@@ -66225,16 +66220,17 @@
   splits:
   - text: "我虽已练至登峰造极，然"
     translated: "Although I have reached the pinnacle of perfection,"
-    qcReviewedText: "《{0}》Although I have reached the pinnacle of perfection, my attainment in the {1} path still lacks refinement—\nI must reach {2} (currently {3}) before I can fully grasp it and innovate."
-    qcTranslated: "《{0}》Although I have reached the pinnacle of perfection, my attainment in the {1} path still lacks refinement—\nI must reach {2} (currently {3}) before I can fully grasp it and innovate."
+    qcReviewedText: "《{0}》Although I have reached the pinnacle of perfection,{1} My attainment in the path of\nMust reach {2} (current {3}), before I can fully grasp it and innovate."
+    qcTranslated: "《{0}》Although I have reached the pinnacle of perfection, my attainment in the path of {1} is still lacking in refinement-\nI must reach {2} (current {3}) before I can fully integrate it and innovate."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - OtherNamedDefect
+    - HardToParseSeam
+    - DroppedContent
   - subIndex: 1
     text: "一道的造诣尚欠火候——"
-    translated: "my attainment in the path of"
+    translated: "My attainment in the path of"
   - subIndex: 2
     text: "须达到"
     translated: "Must reach"
@@ -66571,14 +66567,10 @@
   splits:
   - text: "循环剧情应写"
     translated: "What should be written for looped plotlines?"
-    qcReviewedText: "What should be written for the looped plotline's start: interval:"
-    qcTranslated: "What should be written for the looped plotline's start: interval:"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: MeaningReversal
-    qcDefectCategories:
-    - MeaningReversal
-    - DroppedContent
+    qcReviewedText: "What should be written for looped plotlines? Start: Interval:"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "起始"
     translated: "Start"
@@ -66591,14 +66583,13 @@
   splits:
   - text: "我于此级武学已有所创，贪多嚼不烂，"
     translated: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective."
-    qcReviewedText: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective. It is best to focus on perfecting what you've learned for now."
-    qcTranslated: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective. It is best to focus on perfecting what you've learned for now."
+    qcReviewedText: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective.\nIt is best to focus on perfecting what you have already learned."
+    qcTranslated: "I have already made some innovations in this level of martial arts, but trying to take on too much will not be effective. It is best to focus on perfecting what I have already learned."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedStutter
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedStutter
+    - MeaningReversal
   - subIndex: 1
     text: "还是专心打磨己学为妙。"
     translated: "It is best to focus on perfecting what you have already learned."
@@ -66608,17 +66599,16 @@
   splits:
   - text: "我眼下并无修至登峰造极的"
     translated: "I have not currently cultivated to the pinnacle of perfection any"
-    qcReviewedText: "I have not currently cultivated any {0} martial arts to the pinnacle of perfection.\nI still need to practice diligently and lay a solid foundation before I can create my own."
-    qcTranslated: "I have not currently cultivated any {0} martial arts to the pinnacle of perfection.\nI still need to practice diligently and lay a solid foundation before I can create my own."
+    qcReviewedText: "I have not currently cultivated to the pinnacle of perfection any {0} Martial arts,\nStill need to practice diligently, lay a solid foundation, and only then can one create on one's own."
+    qcTranslated: "I have not yet cultivated any {0} martial arts to the pinnacle of perfection; I must still practice diligently and lay a solid foundation before I can develop my own techniques."
     qcStatus: Corrected
-    flaggedForQcReview: true
-    qcQualityScore: 0
-    qcDefectCategory: DroppedContent
+    qcQualityScore: 95
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - DroppedContent
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "武学，"
-    translated: "martial arts,"
+    translated: "Martial arts,"
   - subIndex: 2
     text: "还需勤修苦练，打稳根基，方可加以自创。"
     translated: "Still need to practice diligently, lay a solid foundation, and only then can one create on one's own."
@@ -66653,13 +66643,13 @@
   splits:
   - text: "战斗配置"
     translated: "Battle configuration"
-    qcReviewedText: "Battle configuration: Elixir ID does not exist:"
+    qcReviewedText: "Battle configuration: Elixir ID Does not exist:"
     qcTranslated: "Battle configuration: Elixir ID does not exist:"
     qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - OtherNamedDefect
+    - UnnaturalPhrasing
   - subIndex: 1
     text: "丹药"
     translated: "Elixir"
@@ -66676,15 +66666,10 @@
   splits:
   - text: "战斗配置"
     translated: "Battle configuration"
-    qcReviewedText: "Battle configuration: Siege battle_Current area Need to trigger in the target area, already degraded to automatic map"
-    qcTranslated: "Battle configuration: Siege battle_Current area Need to trigger in the target area, already degraded to automatic map"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - HardToParseSeam
-    - OtherNamedDefect
+    qcReviewedText: "Battle configuration: Siege battle_Current area Need to trigger in the target area,Already degraded to automatic map"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "攻城战"
     translated: "Siege battle"
@@ -66696,7 +66681,7 @@
     translated: "Need to trigger in the target area"
   - subIndex: 4
     text: "已退化为自动地图"
-    translated: "already degraded to automatic map"
+    translated: "Already degraded to automatic map"
   templates:
   - template: "{0}:{1}_{2} {3},{4}"
 - raw: "战斗配置:未找到特效"
@@ -66719,13 +66704,10 @@
   splits:
   - text: "战斗配置"
     translated: "Battle configuration"
-    qcReviewedText: "Combat configuration: Unknown loot type:"
-    qcTranslated: "Combat configuration: Unknown loot type:"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    qcReviewedText: "Battle configuration: Unknown loot type:"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "未知战利品类型"
     translated: "Unknown loot type"
@@ -66735,13 +66717,10 @@
   splits:
   - text: "战斗配置"
     translated: "Battle configuration"
-    qcReviewedText: "Battle configuration: Unknown siege type"
-    qcTranslated: "Battle configuration: Unknown siege type"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    qcReviewedText: "Battle configuration: Unknown siege type warfare"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "未知攻城战类型"
     translated: "Unknown siege type warfare"
@@ -66751,13 +66730,12 @@
   splits:
   - text: "战斗配置"
     translated: "Battle configuration"
-    qcReviewedText: "Battle configuration: Food and drink ID does not exist:"
+    qcReviewedText: "Battle configuration: Food and drink ID Does not exist:"
     qcTranslated: "Battle configuration: Food and drink ID does not exist:"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - GarbledNumber
     - UnnaturalPhrasing
   - subIndex: 1
     text: "饮食"
@@ -66775,13 +66753,12 @@
   splits:
   - text: "战斗配置"
     translated: "Battle configuration"
-    qcReviewedText: "Battle configuration: Horse ID does not exist:"
+    qcReviewedText: "Battle configuration: Horses ID Does not exist:"
     qcTranslated: "Battle configuration: Horse ID does not exist:"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - GarbledNumber
     - UnnaturalPhrasing
   - subIndex: 1
     text: "马匹"
@@ -67013,17 +66990,16 @@
   splits:
   - text: "确定要完成自创武学"
     translated: "Are you sure you want to complete your self-created martial art style"
-    qcReviewedText: "Are you sure you want to complete your self-created martial art style {0}?"
+    qcReviewedText: "Are you sure you want to complete your self-created martial art style《{0}》Really?"
     qcTranslated: "Are you sure you want to complete your self-created martial art style {0}?"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: MeaningReversal
+    qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
-    - MeaningReversal
-    - GarbledNumber
+    - OtherNamedDefect
   - subIndex: 1
     text: "吗？"
-    translated: "?"
+    translated: "Really?"
   templates:
   - template: "{0}《⟦0⟧》{1}"
 - raw: "突阵"
@@ -67178,17 +67154,13 @@
   splits:
   - text: "行战斗"
     translated: "Combat"
-    qcReviewedText: "Combat ID duplicate:"
-    qcTranslated: "Combat ID duplicate:"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
-    - OtherNamedDefect
+    qcReviewedText: "Combat ID Duplicate:"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - subIndex: 1
     text: "重复"
-    translated: "duplicate"
+    translated: "Duplicate"
   templates:
   - template: "{0}ID{1}:"
 - raw: "行战斗类型错误:"
@@ -67205,7 +67177,7 @@
   splits:
   - text: "行解析失败"
     translated: "Parsing failed"
-    qcReviewedText: "Parsing failed, that line has been skipped:"
+    qcReviewedText: "Parsing failed,That line has been skipped:"
     qcTranslated: "Parsing failed, that line has been skipped:"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -67214,7 +67186,7 @@
     - OtherNamedDefect
   - subIndex: 1
     text: "已跳过该行"
-    translated: "that line has been skipped"
+    translated: "That line has been skipped"
   templates:
   - template: "{0},{1}:"
 - raw: "装备部位"

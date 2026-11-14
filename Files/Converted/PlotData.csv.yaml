@@ -103704,13 +103704,13 @@
   - split: 10
     text: "好在人家大人有大量，没跟你一般见识……"
     translated: "Fortunately, his Lord has a large heart and didn't hold it against you..."
-    qcReviewedText: "Fortunately, his Lord has a large heart and didn't hold it against you...\\nOf course, it could also be that someone came to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go.<b>Jiangling </b>B-ba!"
-    qcTranslated: "Fortunately, his Lord is magnanimous and didn't hold it against you...\\nOf course, it could also be that he sent someone to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go to <b>Jiangling</b>!"
+    qcReviewedText: "Fortunately, his Lord has a large heart and didn't hold it against you...\\nOf course, it could also be that someone came to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go.<b>Jiangling </b>Yes!"
+    qcTranslated: "Fortunately, his Lord has a large heart and didn't hold it against you...\\nOf course, it could also be that someone came to beat us up!\\nThis place is not suitable for us to linger; let's hurry up and go to <b>Jiangling</b>!"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: UnnaturalPhrasing
+    qcDefectCategory: HardToParseSeam
     qcDefectCategories:
-    - UnnaturalPhrasing
+    - HardToParseSeam
     - OtherNamedDefect
   - split: 10
     subIndex: 1
@@ -103727,7 +103727,7 @@
   - split: 10
     subIndex: 4
     text: "吧！"
-    translated: "B-ba!"
+    translated: "Yes!"
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}<b>{3}</b>{4}"
@@ -185294,14 +185294,11 @@
   splits:
   - split: 10
     text: "唔！！！！！"
-    translated: "W-wum!!!!!!"
-    qcReviewedText: "W-wum!!!!!!"
-    qcTranslated: "Ugh!!!!!!"
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
+    translated: "Ugh!!!!"
+    qcReviewedText: "Ugh!!!!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: ",,,无,,,,,,,剑气在连番阻挡之下，终于力道散尽，\\n最后在阎罗王额头留下一个小口，一滴血泪缓缓滑落。"
   splits:
   - split: 10
@@ -214820,8 +214817,8 @@
   - split: 10
     text: "（避无可避，只得全力一接）"
     translated: "(Avoidance Is Unavoidable, So I Must Give It My All)"
-    qcReviewedText: "(Avoidance Is Unavoidable, So I Must Give It My All) \\nW-wum!!!!!!"
-    qcTranslated: "(There's No Way to Dodge; I Have No Choice But to Take It Head-On) \\nW-wum!!!!!!"
+    qcReviewedText: "(Avoidance Is Unavoidable, So I Must Give It My All) \\nUgh!!!!"
+    qcTranslated: "(There's No Way to Avoid It, So He Must Block with All His Might) \\nUgh!!!!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: UnnaturalPhrasing
@@ -214830,7 +214827,7 @@
   - split: 10
     subIndex: 1
     text: "唔！！！！！"
-    translated: "W-wum!!!!!!"
+    translated: "Ugh!!!!"
   templates:
   - split: 10
     template: "{0}\\n{1}"

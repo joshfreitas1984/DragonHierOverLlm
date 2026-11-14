@@ -67037,3 +67037,69 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
+- raw: "内力上限16;绝技6;意志6;经脉6"
+  splits:
+  - text: "内力上限16"
+    translated: "Max Inner Power 16"
+  - subIndex: 1
+    text: "绝技6"
+    translated: "Special Technique 6"
+  - subIndex: 2
+    text: "意志6"
+    translated: "Willpower6"
+  - subIndex: 3
+    text: "经脉6"
+    translated: "Meridian 6"
+  templates:
+  - template: "{0};{1};{2};{3}"
+- raw: "胸8;足8"
+  splits:
+  - text: "胸8"
+    translated: "8 chest"
+  - subIndex: 1
+    text: "足8"
+    translated: "8 feet"
+  templates:
+  - template: "{0};{1}"
+- raw: "胸8;足6"
+  splits:
+  - text: "胸8"
+    translated: "8 chest"
+  - subIndex: 1
+    text: "足6"
+    translated: "6 feet"
+  templates:
+  - template: "{0};{1}"
+- raw: "腹3;足6"
+  splits:
+  - text: "腹3"
+    translated: "3's stomach"
+    qcReviewedText: "3's stomach"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
+  - subIndex: 1
+    text: "足6"
+    translated: "6 feet"
+  templates:
+  - template: "{0};{1}"
+- raw: "绝技70;意志70;体质45"
+  splits:
+  - text: "绝技70"
+    translated: "Special Technique 70"
+  - subIndex: 1
+    text: "意志70"
+    translated: "Willpower70"
+  - subIndex: 2
+    text: "体质45"
+    translated: "Constitution 45"
+  templates:
+  - template: "{0};{1};{2}"
+- raw: "以满级武学为根基，闭关推演自创新武学"
+  splits:
+  - text: "以满级武学为根基，闭关推演自创新武学"
+    translated: "Grounded in max-level martial arts, seclude yourself to deduce and create new techniques"
+    qcReviewedText: "Grounded in max-level martial arts, seclude yourself to deduce and create new techniques"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None

@@ -5231,14 +5231,11 @@
 - raw: "飞贼"
   splits:
   - text: "飞贼"
-    translated: "F-fly thief"
-    qcReviewedText: "F-fly thief"
-    qcTranslated: "Flying thief"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: GarbledNumber
-    qcDefectCategories:
-    - GarbledNumber
+    translated: "Thief"
+    qcReviewedText: "Thief"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "临时围起的跑道颇具气势，四处彩旗招展，人头攒动，\\n看台上鼓声阵阵，越发急促，已有不少人士带着马匹在起点整备，\\n看来赛马大会即将开始了。"
   splits:
   - text: "临时围起的跑道颇具气势，四处彩旗招展，人头攒动，"

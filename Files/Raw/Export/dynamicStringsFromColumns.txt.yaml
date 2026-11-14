@@ -40043,3 +40043,47 @@
 - raw: "医术80"
   splits:
   - text: "医术80"
+- raw: "内力上限16;绝技6;意志6;经脉6"
+  splits:
+  - text: "内力上限16"
+  - subIndex: 1
+    text: "绝技6"
+  - subIndex: 2
+    text: "意志6"
+  - subIndex: 3
+    text: "经脉6"
+  templates:
+  - template: "{0};{1};{2};{3}"
+- raw: "胸8;足8"
+  splits:
+  - text: "胸8"
+  - subIndex: 1
+    text: "足8"
+  templates:
+  - template: "{0};{1}"
+- raw: "胸8;足6"
+  splits:
+  - text: "胸8"
+  - subIndex: 1
+    text: "足6"
+  templates:
+  - template: "{0};{1}"
+- raw: "腹3;足6"
+  splits:
+  - text: "腹3"
+  - subIndex: 1
+    text: "足6"
+  templates:
+  - template: "{0};{1}"
+- raw: "绝技70;意志70;体质45"
+  splits:
+  - text: "绝技70"
+  - subIndex: 1
+    text: "意志70"
+  - subIndex: 2
+    text: "体质45"
+  templates:
+  - template: "{0};{1};{2}"
+- raw: "以满级武学为根基，闭关推演自创新武学"
+  splits:
+  - text: "以满级武学为根基，闭关推演自创新武学"

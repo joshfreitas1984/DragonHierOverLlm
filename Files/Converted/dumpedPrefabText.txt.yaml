@@ -3379,13 +3379,13 @@
   splits:
   - text: "力道"
     translated: "Strength"
-    qcReviewedText: "Strength J-jing"
+    qcReviewedText: "Strength Essence"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - subIndex: 1
     text: "精"
-    translated: "J-jing"
+    translated: "Essence"
   templates:
   - template: "{0} {1}"
 - raw: "力道+5"
@@ -3473,15 +3473,11 @@
 - raw: "功法效果"
   splits:
   - text: "功法效果"
-    translated: "W-wonderful effect of the cultivation method"
-    qcReviewedText: "W-wonderful effect of the cultivation method"
-    qcTranslated: "W-wonderful effect of the cultivation technique"
-    qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: DroppedStutter
-    qcDefectCategories:
-    - DroppedStutter
-    - UnnaturalPhrasing
+    translated: "Technique Effect"
+    qcReviewedText: "Technique Effect"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "功法点数 99/99"
   splits:
   - text: "功法点数"
@@ -4180,20 +4176,16 @@
 - raw: "复刻同类武学攻击范围"
   splits:
   - text: "复刻同类武学攻击范围"
-    translated: "R-r-range of replications of similar martial arts attacks"
-    qcReviewedText: "R-r-range of replications of similar martial arts attacks"
-    qcTranslated: "R-r-range of the replicated similar martial arts attacks"
-    qcStatus: Corrected
-    qcQualityScore: 85
-    qcDefectCategory: DroppedStutter
-    qcDefectCategories:
-    - DroppedStutter
-    - UnnaturalPhrasing
+    translated: "Replicate the attack range of similar martial arts"
+    qcReviewedText: "Replicate the attack range of similar martial arts"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
 - raw: "复刻同类武学攻防架势"
   splits:
   - text: "复刻同类武学攻防架势"
-    translated: "R-e-repeat the g-g-guard and a-attack p-patterns of s-similar martial s-skills"
-    qcReviewedText: "R-e-repeat the g-g-guard and a-attack p-patterns of s-similar martial s-skills"
+    translated: "Replicate the offensive and defensive stances of similar martial arts"
+    qcReviewedText: "Replicate the offensive and defensive stances of similar martial arts"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -6334,14 +6326,11 @@
 - raw: "新增特效 0/3"
   splits:
   - text: "新增特效"
-    translated: "N-n-new special effects"
-    qcReviewedText: "N-n-new special effects 0/3"
-    qcTranslated: "New special effects 0/3"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedStutter
-    qcDefectCategories:
-    - DroppedStutter
+    translated: "New special effects"
+    qcReviewedText: "New special effects 0/3"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   templates:
   - template: "{0} 0/3"
 - raw: "新建"
