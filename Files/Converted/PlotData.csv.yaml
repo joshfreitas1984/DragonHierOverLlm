@@ -1174,19 +1174,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,右,,,,,,,外功等级在三重以下时，威力极弱。\\n需要先在自行练习，方能快速获取实战经验。"
+- raw: ",,,右,,,,,,,外功等级在三重以下时，威力极弱。\\n需要先自行练习，方能快速获取实战经验。"
   splits:
   - split: 10
     text: "外功等级在三重以下时，威力极弱。"
     translated: "When the External Skill rank is below Third Rank, its power is extremely weak."
-    qcReviewedText: "When the External Skill rank is below Third Rank, its power is extremely weak.\\nYou need to practice on your own first to quickly gain practical experience."
+    qcReviewedText: "When the External Skill rank is below Third Rank, its power is extremely weak.\\nYou must practice on your own first to quickly gain practical combat experience."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "需要先在自行练习，方能快速获取实战经验。"
-    translated: "You need to practice on your own first to quickly gain practical experience."
+    text: "需要先自行练习，方能快速获取实战经验。"
+    translated: "You must practice on your own first to quickly gain practical combat experience."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -2481,12 +2481,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: "12,玩家,魏胥华,右,,,,,,,哟，今天难得没睡懒睡懒觉嘛，#PlayerName#。"
+- raw: "12,玩家,魏胥华,右,,,,,,,哟，今天难得没睡懒觉嘛，#PlayerName#。"
   splits:
   - split: 10
-    text: "哟，今天难得没睡懒睡懒觉嘛，#PlayerName#。"
-    translated: "Hey, today you managed to wake up without sleeping in, #PlayerName#."
-    qcReviewedText: "Hey, today you managed to wake up without sleeping in, #PlayerName#."
+    text: "哟，今天难得没睡懒觉嘛，#PlayerName#。"
+    translated: "Oh, you actually didn't sleep in today, #PlayerName#."
+    qcReviewedText: "Oh, you actually didn't sleep in today, #PlayerName#."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4188,19 +4188,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "24,,,无,,BigMap3,SpeEffect/剑雨,,,,只见那女道身影轻晃，电光火石数招间，\\n铁掌帮三人便被打的左右支拙，东倒西歪。"
+- raw: "24,,,无,,BigMap3,SpeEffect/剑雨,,,,只见那女道身影轻晃，电光火石数招间，\\n铁掌帮三人便被打的左右支绌，东倒西歪。"
   splits:
   - split: 10
     text: "只见那女道身影轻晃，电光火石数招间，"
     translated: "Only to see the female Daoist's figure flicker, dispatching several moves in the blink of an eye."
-    qcReviewedText: "Only to see the female Daoist's figure flicker, dispatching several moves in the blink of an eye.\\nThe three members of the Iron Palm Gang were beaten to the point where they struggled to move, falling in all directions."
+    qcReviewedText: "Only to see the female Daoist's figure flicker, dispatching several moves in the blink of an eye.\\nThe three members of the Iron Palm Gang were beaten into a chaotic scramble, staggering and falling in all directions."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "铁掌帮三人便被打的左右支拙，东倒西歪。"
-    translated: "The three members of the Iron Palm Gang were beaten to the point where they struggled to move, falling in all directions."
+    text: "铁掌帮三人便被打的左右支绌，东倒西歪。"
+    translated: "The three members of the Iron Palm Gang were beaten into a chaotic scramble, staggering and falling in all directions."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -10148,19 +10148,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,杨师兄快去放出派内飞鸽，联络师傅和几位师兄，\\n他们定能即时赶来支援！"
+- raw: ",,,左,,,,,,,杨师兄快去放出派内飞鸽，联络师傅和几位师兄，\\n他们定能及时赶来支援！"
   splits:
   - split: 10
     text: "杨师兄快去放出派内飞鸽，联络师傅和几位师兄，"
     translated: "Senior Brother Yang, hurry and release the homing pigeon to contact Master and the other senior brothers."
-    qcReviewedText: "Senior Brother Yang, hurry and release the homing pigeon to contact Master and the other senior brothers.\\nThey will certainly come to support us immediately!"
+    qcReviewedText: "Senior Brother Yang, hurry and release the homing pigeon to contact Master and the other senior brothers.\\nThey will surely arrive in time to reinforce us!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "他们定能即时赶来支援！"
-    translated: "They will certainly come to support us immediately!"
+    text: "他们定能及时赶来支援！"
+    translated: "They will surely arrive in time to reinforce us!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -12162,12 +12162,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",玩家,杨思迟,右,,,,,ChangeHeroFavor;杨思迟-5,,咳咳咳咳，还好#PlayerName#即时赶来，\\n否则我只怕是凶多吉少了。"
+- raw: ",玩家,杨思迟,右,,,,,ChangeHeroFavor;杨思迟-5,,咳咳咳咳，还好#PlayerName#及时赶来，\\n否则我只怕是凶多吉少了。"
   splits:
   - split: 10
-    text: "咳咳咳咳，还好#PlayerName#即时赶来，"
-    translated: "Cough cough cough, fortunately #PlayerName# arrived just in time,"
-    qcReviewedText: "Cough cough cough, fortunately #PlayerName# arrived just in time,\\nOtherwise, I fear that I am in great danger."
+    text: "咳咳咳咳，还好#PlayerName#及时赶来，"
+    translated: "Cough, cough, cough... Thank goodness you arrived in time, #PlayerName#."
+    qcReviewedText: "Cough, cough, cough... Thank goodness you arrived in time, #PlayerName#.\\nOtherwise, I fear that I am in great danger."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -14577,19 +14577,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: ",,,右,,,,,,,嗯~小翼子你想的到挺周全的嘛，不错不错！"
+- raw: ",,,右,,,,,,,嗯~小翼子你想得倒挺周全的嘛，不错不错！"
   splits:
   - split: 10
     text: "嗯"
     translated: "Uh-huh"
-    qcReviewedText: "Uh-huh~Little Yizi, you've thought through this quite thoroughly. Not bad at all!"
+    qcReviewedText: "Uh-huh~Little Yizi, you've thought of everything, haven't you? Not bad, not bad!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "小翼子你想的到挺周全的嘛，不错不错！"
-    translated: "Little Yizi, you've thought through this quite thoroughly. Not bad at all!"
+    text: "小翼子你想得倒挺周全的嘛，不错不错！"
+    translated: "Little Yizi, you've thought of everything, haven't you? Not bad, not bad!"
   templates:
   - split: 10
     template: "{0}~{1}"
@@ -17762,19 +17762,19 @@
     qcDefectCategory: UntranslatedPinyin
     qcDefectCategories:
     - UntranslatedPinyin
-- raw: ",李云鹤,,左,,,,,,,这些是谷里的疗伤秘药，郭伯伯你赶快服上，\\n早晚各一副，连服七日便可，忌荤腥酒饮……\\n诶诶，阮芷你等等我啊！郭伯伯再会！"
+- raw: ",李云鹤,,左,,,,,,,这些是谷里的疗伤秘药，郭伯伯你赶快服上，\\n早晚各一服，连服七日便可，忌荤腥酒饮……\\n诶诶，阮芷你等等我啊！郭伯伯再会！"
   splits:
   - split: 10
     text: "这些是谷里的疗伤秘药，郭伯伯你赶快服上，"
     translated: "These are the healing herbs from the valley, Uncle Guo. You should take them quickly."
-    qcReviewedText: "These are the healing herbs from the valley, Uncle Guo. You should take them quickly.\\nTake one dose in the morning and one in the evening for seven days, and avoid spicy, fatty, and alcoholic foods......\\nOh oh, Ruan Zhi, wait for me! Uncle Guo, see you later!"
+    qcReviewedText: "These are the healing herbs from the valley, Uncle Guo. You should take them quickly.\\nOne dose each morning and evening for seven consecutive days. Avoid meat, fish, and alcohol...\\nOh oh, Ruan Zhi, wait for me! Uncle Guo, see you later!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "早晚各一副，连服七日便可，忌荤腥酒饮……"
-    translated: "Take one dose in the morning and one in the evening for seven days, and avoid spicy, fatty, and alcoholic foods......"
+    text: "早晚各一服，连服七日便可，忌荤腥酒饮……"
+    translated: "One dose each morning and evening for seven consecutive days. Avoid meat, fish, and alcohol..."
   - split: 10
     subIndex: 2
     text: "诶诶，阮芷你等等我啊！郭伯伯再会！"
@@ -22635,19 +22635,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,无,,,,,,,你与林云裳慌忙从后车跳下，抽出兵刃。\\n只见姜婉拉着杨思迟，还算即时从前车跳下，避免了落入坑中。"
+- raw: ",,,无,,,,,,,你与林云裳慌忙从后车跳下，抽出兵刃。\\n只见姜婉拉着杨思迟，还算及时从前车跳下，避免了落入坑中。"
   splits:
   - split: 10
     text: "你与林云裳慌忙从后车跳下，抽出兵刃。"
     translated: "You and Lin Yunshang hurriedly jumped out of the back of the vehicle, drawing weapons."
-    qcReviewedText: "You and Lin Yunshang hurriedly jumped out of the back of the vehicle, drawing weapons.\\nJiang Wan pulled Yang Sichi down from the car just in time, avoiding falling into the pit."
+    qcReviewedText: "You and Lin Yunshang hurriedly jumped out of the back of the vehicle, drawing weapons.\\nJiang Wan grabbed Yang Sichi and managed to jump off the carriage in time, avoiding falling into the pit."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "只见姜婉拉着杨思迟，还算即时从前车跳下，避免了落入坑中。"
-    translated: "Jiang Wan pulled Yang Sichi down from the car just in time, avoiding falling into the pit."
+    text: "只见姜婉拉着杨思迟，还算及时从前车跳下，避免了落入坑中。"
+    translated: "Jiang Wan grabbed Yang Sichi and managed to jump off the carriage in time, avoiding falling into the pit."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -23283,22 +23283,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,无,,,,,,,你装作四处摸索的样子向车下探身过去，\\n竟发现一个纤痩的身影，竟弓身撑着沉重的车板，不让它彻底翻倒。"
+- raw: ",,,无,,,,,,,你装作四处摸索的样子向车下探身过去，\\n竟发现一个纤瘦的身影，竟弓身撑着沉重的车板，不让它彻底翻倒。"
   splits:
   - split: 10
     text: "你装作四处摸索的样子向车下探身过去，"
     translated: "You pretend to search around as you lean down toward the car."
-    qcReviewedText: "You pretend to search around as you lean down toward the car.\\nI discovered a slender figure hunched over, supporting the heavy cart board to prevent it from tipping completely."
-    qcTranslated: "You pretend to search around as you lean down toward the car.\\nYou discovered a slender figure hunched over, supporting the heavy cart board to prevent it from tipping completely."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    qcReviewedText: "You pretend to search around as you lean down toward the car.\\nA slender figure was found bent over, bracing the heavy carriage panel to prevent it from tipping completely."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "竟发现一个纤痩的身影，竟弓身撑着沉重的车板，不让它彻底翻倒。"
-    translated: "I discovered a slender figure hunched over, supporting the heavy cart board to prevent it from tipping completely."
+    text: "竟发现一个纤瘦的身影，竟弓身撑着沉重的车板，不让它彻底翻倒。"
+    translated: "A slender figure was found bent over, bracing the heavy carriage panel to prevent it from tipping completely."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -24084,19 +24081,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,左,,,,,,,弟子也没想到贼人竟使出陷坑这招，\\n还好云裳即时救出顾师兄和余师姐，否则弟子们只怕是凶多吉少了。"
+- raw: ",,,左,,,,,,,弟子也没想到贼人竟使出陷坑这招，\\n还好云裳及时救出顾师兄和余师姐，否则弟子们只怕是凶多吉少了。"
   splits:
   - split: 10
     text: "弟子也没想到贼人竟使出陷坑这招，"
     translated: "The disciple did not expect the bandits to use this pit trap tactic."
-    qcReviewedText: "The disciple did not expect the bandits to use this pit trap tactic.\\nFortunately, Yunshang rescued Senior Brother Gu and Senior Sister Yu in time; otherwise, the disciples likely would have met with great danger."
+    qcReviewedText: "The disciple did not expect the bandits to use this pit trap tactic.\\nThankfully, Yunshang rescued Senior Brother Gu and Senior Sister Yu in time. Otherwise, the disciples would likely have met a grim fate."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "还好云裳即时救出顾师兄和余师姐，否则弟子们只怕是凶多吉少了。"
-    translated: "Fortunately, Yunshang rescued Senior Brother Gu and Senior Sister Yu in time; otherwise, the disciples likely would have met with great danger."
+    text: "还好云裳及时救出顾师兄和余师姐，否则弟子们只怕是凶多吉少了。"
+    translated: "Thankfully, Yunshang rescued Senior Brother Gu and Senior Sister Yu in time. Otherwise, the disciples would likely have met a grim fate."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -24516,12 +24513,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",顾游年,,左,,,,,,,这次贼人老巢已被找到，跑的了和尚跑不了庙。\\n林师妹虽报仇心切，也不必操之过急。"
+- raw: ",顾游年,,左,,,,,,,这次贼人老巢已被找到，跑得了和尚跑不了庙。\\n林师妹虽报仇心切，也不必操之过急。"
   splits:
   - split: 10
-    text: "这次贼人老巢已被找到，跑的了和尚跑不了庙。"
-    translated: "Now that the den of the bandits has been located, you can run away but you can't hide."
-    qcReviewedText: "Now that the den of the bandits has been located, you can run away but you can't hide.\\nJunior Sister Lin, although you are eager for revenge, there's no need to rush."
+    text: "这次贼人老巢已被找到，跑得了和尚跑不了庙。"
+    translated: "The bandits' hideout has been found this time. The monk may flee, but the temple cannot."
+    qcReviewedText: "The bandits' hideout has been found this time. The monk may flee, but the temple cannot.\\nJunior Sister Lin, although you are eager for revenge, there's no need to rush."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -26032,19 +26029,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,无,,,GroupFight,,,,只见师妹手指之处，一大群强盗冲出正门，向你们埋伏的林中奔逃而来。\\n那三当家在在后面追着砍翻了几个，却还是阻挡不住。"
+- raw: ",,,无,,,GroupFight,,,,只见师妹手指之处，一大群强盗冲出正门，向你们埋伏的林中奔逃而来。\\n那三当家在后面追着砍翻了几个，却还是阻挡不住。"
   splits:
   - split: 10
     text: "只见师妹手指之处，一大群强盗冲出正门，向你们埋伏的林中奔逃而来。"
     translated: "Just as the junior sister pointed out, a large group of bandits rushed out through the main gate and fled towards the forest where you were ambushing them."
-    qcReviewedText: "Just as the junior sister pointed out, a large group of bandits rushed out through the main gate and fled towards the forest where you were ambushing them.\\nThe third household leader slashed down several from behind but was still unable to stop them."
+    qcReviewedText: "Just as the junior sister pointed out, a large group of bandits rushed out through the main gate and fled towards the forest where you were ambushing them.\\nThe Third Steward chased after them and cut down several, but still could not stop them."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "那三当家在在后面追着砍翻了几个，却还是阻挡不住。"
-    translated: "The third household leader slashed down several from behind but was still unable to stop them."
+    text: "那三当家在后面追着砍翻了几个，却还是阻挡不住。"
+    translated: "The Third Steward chased after them and cut down several, but still could not stop them."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -26328,19 +26325,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,严达开,右,,,,,SpeHeroDeath;严达开,,啊哟！二当家！\\n（在剑光中左右支拙，顿时中了数剑倒在地上）"
+- raw: ",,严达开,右,,,,,SpeHeroDeath;严达开,,啊哟！二当家！\\n（在剑光中左摇右摆，顿时中了数剑倒在地上）"
   splits:
   - split: 10
     text: "啊哟！二当家！"
     translated: "Ooh! Second Boss!"
-    qcReviewedText: "Ooh! Second Boss!\\n(Struggling to dodge the sword lights, he was pierced by several swords and fell to the ground immediately.)"
+    qcReviewedText: "Ooh! Second Boss!\\n(Swaying left and right within the sword light, he is struck by several blows and falls to the ground)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "（在剑光中左右支拙，顿时中了数剑倒在地上）"
-    translated: "(Struggling to dodge the sword lights, he was pierced by several swords and fell to the ground immediately.)"
+    text: "（在剑光中左摇右摆，顿时中了数剑倒在地上）"
+    translated: "(Swaying left and right within the sword light, he is struck by several blows and falls to the ground)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -29739,12 +29736,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",姜婉,,左,,,,,,,你你你，看着文文弱弱的，性子却倔得跟头驴子似得。\\n（扶着师妹躺好）来来来，该吃药了。"
+- raw: ",姜婉,,左,,,,,,,你你你，看着文文弱弱的，性子却倔得跟头驴子似的。\\n（扶着师妹躺好）来来来，该吃药了。"
   splits:
   - split: 10
-    text: "你你你，看着文文弱弱的，性子却倔得跟头驴子似得。"
-    translated: "You, you, you! You look so gentle and frail, yet your temperament is as stubborn as a mule."
-    qcReviewedText: "You, you, you! You look so gentle and frail, yet your temperament is as stubborn as a mule.\\n(Helping Junior Sister lie down) Come, come, it's time to take your medicine."
+    text: "你你你，看着文文弱弱的，性子却倔得跟头驴子似的。"
+    translated: "Y-y-you... You look so frail and delicate, but you're stubborn as a mule."
+    qcReviewedText: "Y-y-you... You look so frail and delicate, but you're stubborn as a mule.\\n(Helping Junior Sister lie down) Come, come, it's time to take your medicine."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -36065,12 +36062,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,无,,,,,,,（身后突然传了一阵尴尬的大笑声，\\n只见那中原小侠已不知何时挣脱了捆绑，醉醺醺的走了过来。）"
+- raw: ",,,无,,,,,,,（身后突然传来一阵尴尬大笑声，\\n只见那中原小侠已不知何时挣脱了捆绑，醉醺醺的走了过来。）"
   splits:
   - split: 10
-    text: "（身后突然传了一阵尴尬的大笑声，"
-    translated: "(Suddenly, there came a burst of awkward laughter from behind."
-    qcReviewedText: "(Suddenly, there came a burst of awkward laughter from behind.\\nYou saw the young hero from Central Plains had somehow freed themselves and stumbled over, drunk.)"
+    text: "（身后突然传来一阵尴尬大笑声，"
+    translated: "(A sudden awkward burst of laughter comes from behind you,"
+    qcReviewedText: "(A sudden awkward burst of laughter comes from behind you,\\nYou saw the young hero from Central Plains had somehow freed themselves and stumbled over, drunk.)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -36646,22 +36643,22 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,右,,,,,,,呵呵，我本以为，能看到他这爱子行侠仗义，大展拳脚，\\n没想到看到的，却是个烂醉如泥，到处惹事生非的小混混。"
+- raw: ",,,右,,,,,,,呵呵，我本以为，能看到他这爱子行侠仗义，大展拳脚，\\n没想到看到的，却是个烂醉如泥，到处惹是生非的小混混。"
   splits:
   - split: 10
     text: "呵呵，我本以为，能看到他这爱子行侠仗义，大展拳脚，"
     translated: "Haha, I thought I would see him, as his beloved son, gallantly taking action and showcasing his skills."
-    qcReviewedText: "Haha, I thought I would see him, as his beloved son, gallantly taking action and showcasing his skills.\\nUnexpectedly, what I saw was a drunkard causing trouble everywhere."
-    qcTranslated: "Haha, I thought I would see him, as his beloved son, gallantly taking action and showcasing his skills.\\nUnexpectedly, what I saw was a drunkard, drunk as a sod, causing trouble everywhere."
+    qcReviewedText: "Haha, I thought I would see him, as his beloved son, gallantly taking action and showcasing his skills.\\nI never expected to find a drunkard causing trouble everywhere."
+    qcTranslated: "Haha, I thought I would see him, as his beloved son, gallantly taking action and showcasing his skills.\\nI never expected to find a drunkard, a petty thug causing trouble everywhere."
     qcStatus: Corrected
-    qcQualityScore: 85
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
   - split: 10
     subIndex: 1
-    text: "没想到看到的，却是个烂醉如泥，到处惹事生非的小混混。"
-    translated: "Unexpectedly, what I saw was a drunkard causing trouble everywhere."
+    text: "没想到看到的，却是个烂醉如泥，到处惹是生非的小混混。"
+    translated: "I never expected to find a drunkard causing trouble everywhere."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -38542,23 +38539,22 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",迟百城,,左,,,,,,,说到底，武绝义武统领，凭借一手逆转周天大法，\\n荡平了了四寨十六山头，方才令黑道兄弟们心服口服，听从号令。\\n如今想再推选七大恶人之首，光凭嘴皮子可不行。"
+- raw: ",迟百城,,左,,,,,,,说到底，武绝义武统领，凭借一手逆转周天大法，\\n荡平了四寨十六山头，方才令黑道兄弟们心服口服，听从号令。\\n如今想再推选七大恶人之首，光凭嘴皮子可不行。"
   splits:
   - split: 10
     text: "说到底，武绝义武统领，凭借一手逆转周天大法，"
     translated: "In the end, Wu Jueyi, the Martial Commander, relies on his mastery of the Heavenly Cycle Reversal Technique,"
-    qcReviewedText: "In the end, Wu Jueyi, the Martial Commander, relies on his mastery of the Heavenly Cycle Reversal Technique,\\nAfter leveling the four forts and sixteen mountain strongholds, the Underworld brothers finally submitted and followed our orders.\\nNow, to elect a new leader among the Seven Great Villains, it's not just about empty talk."
-    qcTranslated: "In the end, Commander Wu Jueyi, relying on his mastery of the Heavenly Cycle Reversal Technique,\\nleveling the four forts and sixteen mountain strongholds, is what finally made the Underworld Brothers submit and follow our orders.\\nNow, to elect a new leader among the Seven Great Villains, it's not just about empty talk."
+    qcReviewedText: "In the end, Wu Jueyi, the Martial Commander, relies on his mastery of the Heavenly Cycle Reversal Technique,\\nOnly by sweeping away the four strongholds and sixteen mountain peaks did the Underworld brothers truly submit to our authority and obey our commands.\\nNow, to elect a new leader among the Seven Great Villains, it's not just about empty talk."
+    qcTranslated: "In the end, Wu Jueyi, the Martial Commander, relies on his mastery of the Heavenly Cycle Reversal Technique,\\nOnly by sweeping away the four strongholds and sixteen mountain peaks did the Underworld brothers truly submit to his authority and obey his commands.\\nNow, to elect a new leader among the Seven Great Villains, it's not just about empty talk."
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
-    - HardToParseSeam
   - split: 10
     subIndex: 1
-    text: "荡平了了四寨十六山头，方才令黑道兄弟们心服口服，听从号令。"
-    translated: "After leveling the four forts and sixteen mountain strongholds, the Underworld brothers finally submitted and followed our orders."
+    text: "荡平了四寨十六山头，方才令黑道兄弟们心服口服，听从号令。"
+    translated: "Only by sweeping away the four strongholds and sixteen mountain peaks did the Underworld brothers truly submit to our authority and obey our commands."
   - split: 10
     subIndex: 2
     text: "如今想再推选七大恶人之首，光凭嘴皮子可不行。"
@@ -38862,19 +38858,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,右,,,,,,,互帮互助，怎能说无利可图呢？\\n若是凤兄山寨的生意遇到问题，我计谋定会出手相助，绝无保留！"
+- raw: ",,,右,,,,,,,互帮互助，怎能说无利可图呢？\\n若是凤兄山寨的生意遇到问题，我计某定会出手相助，绝无保留！"
   splits:
   - split: 10
     text: "互帮互助，怎能说无利可图呢？"
     translated: "How can mutual assistance be without benefit?"
-    qcReviewedText: "How can mutual assistance be without benefit?\\nIf Brother Feng's mountain stronghold business encounters problems, my schemes will certainly lend a hand without reservation!"
+    qcReviewedText: "How can mutual assistance be without benefit?\\nIf Brother Feng's stronghold encounters any business troubles, I, Ji, will surely lend a hand without hesitation!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "若是凤兄山寨的生意遇到问题，我计谋定会出手相助，绝无保留！"
-    translated: "If Brother Feng's mountain stronghold business encounters problems, my schemes will certainly lend a hand without reservation!"
+    text: "若是凤兄山寨的生意遇到问题，我计某定会出手相助，绝无保留！"
+    translated: "If Brother Feng's stronghold encounters any business troubles, I, Ji, will surely lend a hand without hesitation!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -40390,19 +40386,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,右,,,,,SpePlotFuc;12,,记住，要和郭淮爱子结交，\\n这身行头必须光鲜亮丽，出手也应当果断大方，莫要扣扣索索的。"
+- raw: ",,,右,,,,,SpePlotFuc;12,,记住，要和郭淮爱子结交，\\n这身行头必须光鲜亮丽，出手也应当果断大方，莫要抠抠索索的。"
   splits:
   - split: 10
     text: "记住，要和郭淮爱子结交，"
     translated: "Remember, you need to befriend Guo Huai's son."
-    qcReviewedText: "Remember, you need to befriend Guo Huai's son.\\nThis outfit must be flashy and elegant, and your actions should be decisive and generous. Don't be fumbling about."
+    qcReviewedText: "Remember, you need to befriend Guo Huai's son.\\nThis outfit must be dazzling and stylish, and your spending should be decisive and generous-don't be so stingy."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "这身行头必须光鲜亮丽，出手也应当果断大方，莫要扣扣索索的。"
-    translated: "This outfit must be flashy and elegant, and your actions should be decisive and generous. Don't be fumbling about."
+    text: "这身行头必须光鲜亮丽，出手也应当果断大方，莫要抠抠索索的。"
+    translated: "This outfit must be dazzling and stylish, and your spending should be decisive and generous-don't be so stingy."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -42281,19 +42277,18 @@
     qcDefectCategory: DroppedContent
     qcDefectCategories:
     - DroppedContent
-- raw: ",,,左,,,,,,,就连一群邪魔外道之辈，都能在黑道大会上拼弃前嫌，订下盟约。\\n你们这群名门正派，平日里自诩大局为重，\\n待到立盟之时，怎的连邪魔外道都不如？"
+- raw: ",,,左,,,,,,,就连一群邪魔外道之辈，都能在黑道大会上摒弃前嫌，订下盟约。\\n你们这群名门正派，平日里自诩大局为重，\\n待到立盟之时，怎的连邪魔外道都不如？"
   splits:
   - split: 10
-    text: "就连一群邪魔外道之辈，都能在黑道大会上拼弃前嫌，订下盟约。"
-    translated: "Even a group of villains can put aside their differences at the Underworld Conference and form an alliance."
-    qcReviewedText: "Even a group of villains can put aside their differences at the Underworld Conference and form an alliance.\\nYou folks from the prestigious clans, who always consider the bigger picture in your daily lives,\\nHow can I be inferior to heretics and sects when it comes to forming the alliance?"
-    qcTranslated: "Even a group of villains can put aside their differences at the Underworld Conference and form an alliance.\\nYou folks from the prestigious clans, who always consider the bigger picture in your daily lives,\\nHow is it that you are even inferior to heretics and sects when it comes to forming the alliance?"
+    text: "就连一群邪魔外道之辈，都能在黑道大会上摒弃前嫌，订下盟约。"
+    translated: "Even a group of heretical outsiders can set aside their past grievances and forge an alliance at the Underworld Assembly."
+    qcReviewedText: "Even a group of heretical outsiders can set aside their past grievances and forge an alliance at the Underworld Assembly.\\nYou folks from the prestigious clans, who always consider the bigger picture in your daily lives,\\nHow can I be inferior to heretics and sects when it comes to forming the alliance?"
+    qcTranslated: "Even a group of heretical outsiders can set aside their past grievances and forge an alliance at the Underworld Assembly.\\nYou folks from the prestigious clans, who always consider the bigger picture in your daily lives,\\nHow is it that you are inferior to heretics and sects when it comes to forming the alliance?"
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: DroppedContent
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
+    - MeaningReversal
   - split: 10
     subIndex: 1
     text: "你们这群名门正派，平日里自诩大局为重，"
@@ -47363,15 +47358,18 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,右,,,,,,,扣扣索索的是吧！\\n不必废话了，拿来吧你。"
+- raw: ",,,右,,,,,,,抠抠索索的是吧！\\n不必废话了，拿来吧你。"
   splits:
   - split: 10
-    text: "扣扣索索的是吧！"
-    translated: "You're hesitating, right!"
-    qcReviewedText: "You're hesitating, right!\\nNo need for empty talk, here you go."
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    text: "抠抠索索的是吧！"
+    translated: "So you're stingy, are you!"
+    qcReviewedText: "So you're stingy, are you!\\nNo need for empty talk, here you go."
+    qcTranslated: "So you're stingy, are you!\\nNo need for empty talk, hand it over."
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - split: 10
     subIndex: 1
     text: "不必废话了，拿来吧你。"
@@ -47775,19 +47773,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,右,,,,,,,不知道哪来的贼人袭击了村子，\\n还好有顾师兄提前在此戒备，才能即时给我们通风报信。"
+- raw: ",,,右,,,,,,,不知道哪来的贼人袭击了村子，\\n还好有顾师兄提前在此戒备，才能及时给我们通风报信。"
   splits:
   - split: 10
     text: "不知道哪来的贼人袭击了村子，"
     translated: "Some unknown bandits attacked the village,"
-    qcReviewedText: "Some unknown bandits attacked the village,\\nFortunately, thanks to Senior Brother Gu's advance vigilance here, we were able to receive timely warnings."
+    qcReviewedText: "Some unknown bandits attacked the village,\\nIt is fortunate that Senior Brother Gu was already on guard here, allowing him to warn us in time."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "还好有顾师兄提前在此戒备，才能即时给我们通风报信。"
-    translated: "Fortunately, thanks to Senior Brother Gu's advance vigilance here, we were able to receive timely warnings."
+    text: "还好有顾师兄提前在此戒备，才能及时给我们通风报信。"
+    translated: "It is fortunate that Senior Brother Gu was already on guard here, allowing him to warn us in time."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -53878,22 +53876,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",顾游年,皇甫斌,右,,,,,,,臭秃驴，平时自称什么慈悲为怀，普度众生。\\n一到关键时刻就扣扣索索的，搁这儿打发叫花子呢。"
+- raw: ",顾游年,皇甫斌,右,,,,,,,臭秃驴，平时自称什么慈悲为怀，普度众生。\\n一到关键时刻就抠抠索索的，搁这儿打发叫花子呢。"
   splits:
   - split: 10
     text: "臭秃驴，平时自称什么慈悲为怀，普度众生。"
     translated: "Foul bald donkey, claiming to be full of compassion and intent on saving all beings in your spare time."
-    qcReviewedText: "Foul bald donkey, claiming to be full of compassion and intent on saving all beings in your spare time.\\nHe's just fumbling around at crucial moments, trying to fool beggars."
-    qcTranslated: "Foul bald donkey, claiming to be full of compassion and intent on saving all beings in your spare time.\\nHe's just fumbling around at crucial moments, trying to brush off beggars."
-    qcStatus: Corrected
-    qcQualityScore: 90
-    qcDefectCategory: LostIdiom
-    qcDefectCategories:
-    - LostIdiom
+    qcReviewedText: "Foul bald donkey, claiming to be full of compassion and intent on saving all beings in your spare time.\\nYou're always stingy when it matters most. Are you trying to throw a beggar off with this?"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "一到关键时刻就扣扣索索的，搁这儿打发叫花子呢。"
-    translated: "He's just fumbling around at crucial moments, trying to fool beggars."
+    text: "一到关键时刻就抠抠索索的，搁这儿打发叫花子呢。"
+    translated: "You're always stingy when it matters most. Are you trying to throw a beggar off with this?"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -69073,19 +69068,19 @@
   - split: 10
     template: "{0}\\n{1}"
 - raw: ",,,右,,,,,,,……………………"
-- raw: ",,,左,,,,,,,说话呀？怎么，不威风了啦？\\n那天英雄救美，把小爷俊脸划伤时的大气凛然呢？\\n啊哈哈哈啊哈哈哈！"
+- raw: ",,,左,,,,,,,说话呀？怎么，不威风了啦？\\n那天英雄救美，把小爷俊脸划伤时的大义凛然呢？\\n啊哈哈哈啊哈哈哈！"
   splits:
   - split: 10
     text: "说话呀？怎么，不威风了啦？"
     translated: "Speak up? Or is something wrong with your bravado now?"
-    qcReviewedText: "Speak up? Or is something wrong with your bravado now?\\nThat heroic gallantry when you left my handsome face scarred saving a beauty-where is it now?\\nHaha, haha, haha, haha!"
+    qcReviewedText: "Speak up? Or is something wrong with your bravado now?\\nWhere was that noble righteousness when you saved the beauty and scratched my handsome face that day?\\nHaha, haha, haha, haha!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "那天英雄救美，把小爷俊脸划伤时的大气凛然呢？"
-    translated: "That heroic gallantry when you left my handsome face scarred saving a beauty-where is it now?"
+    text: "那天英雄救美，把小爷俊脸划伤时的大义凛然呢？"
+    translated: "Where was that noble righteousness when you saved the beauty and scratched my handsome face that day?"
   - split: 10
     subIndex: 2
     text: "啊哈哈哈啊哈哈哈！"
@@ -81604,12 +81599,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: "405,无,无,无,,Fight0,,,ChangeMaxAttri;魏胥华-1-5,,（魏胥华一路且战且走，来到巴林村旁一处山崖之上，\\n身后是万丈悬崖，已然退无可退。）"
+- raw: "405,无,无,无,,Fight0,,,ChangeMaxAttri;魏胥华-1-5,,（魏胥华一路且战且走，来到巴陵村旁一处山崖之上，\\n身后是万丈悬崖，已然退无可退。）"
   splits:
   - split: 10
-    text: "（魏胥华一路且战且走，来到巴林村旁一处山崖之上，"
-    translated: "(Wei Xuhua fought his way along, arriving at a cliff near Balin Village,"
-    qcReviewedText: "(Wei Xuhua fought his way along, arriving at a cliff near Balin Village,\\nBehind you is a sheer cliff, with no room to retreat.)"
+    text: "（魏胥华一路且战且走，来到巴陵村旁一处山崖之上，"
+    translated: "(Wei Xuhua fought his way through, arriving at a cliff overlooking Baling Village,"
+    qcReviewedText: "(Wei Xuhua fought his way through, arriving at a cliff overlooking Baling Village,\\nBehind you is a sheer cliff, with no room to retreat.)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -81675,12 +81670,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: "406,无,无,无,,Fight0,,,ChangeMaxAttri;魏胥华-1-3,,（魏胥华一路且战且走，来到巴林村旁一处山崖之上，\\n身后是万丈悬崖，已然退无可退。）"
+- raw: "406,无,无,无,,Fight0,,,ChangeMaxAttri;魏胥华-1-3,,（魏胥华一路且战且走，来到巴陵村旁一处山崖之上，\\n身后是万丈悬崖，已然退无可退。）"
   splits:
   - split: 10
-    text: "（魏胥华一路且战且走，来到巴林村旁一处山崖之上，"
-    translated: "(Wei Xuhua fought his way along, arriving at a cliff near Balin Village,"
-    qcReviewedText: "(Wei Xuhua fought his way along, arriving at a cliff near Balin Village,\\nBehind you is a sheer cliff, with no room to retreat.)"
+    text: "（魏胥华一路且战且走，来到巴陵村旁一处山崖之上，"
+    translated: "(Wei Xuhua fought his way through, arriving at a cliff overlooking Baling Village,"
+    qcReviewedText: "(Wei Xuhua fought his way through, arriving at a cliff overlooking Baling Village,\\nBehind you is a sheer cliff, with no room to retreat.)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -92465,12 +92460,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,无,,,,,,,（二人疾步走到村中央，只见一个黑洞洞的地窖入口赫然，\\n铁掌帮另一名长老叶一鸣，已站在一旁恭候多时。）"
+- raw: ",,,无,,,,,,,（二人疾步走到村中央，一个黑洞洞的地窖入口赫然出现在眼前，\\n铁掌帮另一名长老叶一鸣，已站在一旁恭候多时。）"
   splits:
   - split: 10
-    text: "（二人疾步走到村中央，只见一个黑洞洞的地窖入口赫然，"
-    translated: "(The two quickly walked to the village center, where they found a stark entrance to a dark underground cellar."
-    qcReviewedText: "(The two quickly walked to the village center, where they found a stark entrance to a dark underground cellar.\\nAnother Elder of the Iron Palm Gang, Ye Yiming, has been standing by to greet them for some time.)"
+    text: "（二人疾步走到村中央，一个黑洞洞的地窖入口赫然出现在眼前，"
+    translated: "(The two hurry to the center of the village, where a pitch-black cellar entrance suddenly comes into view,"
+    qcReviewedText: "(The two hurry to the center of the village, where a pitch-black cellar entrance suddenly comes into view,\\nAnother Elder of the Iron Palm Gang, Ye Yiming, has been standing by to greet them for some time.)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -100156,19 +100151,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",杨思迟,,左,,,,,,,是啊是啊，若姜师姐走了，\\n咱仙霞派不就像鱼离了水，草没了根似得，丢了主心骨啊！"
+- raw: ",杨思迟,,左,,,,,,,是啊是啊，若姜师姐走了，\\n咱仙霞派不就像鱼离了水，草没了根似的，丢了主心骨啊！"
   splits:
   - split: 10
     text: "是啊是啊，若姜师姐走了，"
     translated: "Yes, yes, if Senior Sister Jiang leaves,"
-    qcReviewedText: "Yes, yes, if Senior Sister Jiang leaves,\\nOur Xianxia Sect is like a fish out of water or grass without its root; we've lost our main support!"
+    qcReviewedText: "Yes, yes, if Senior Sister Jiang leaves,\\nWithout our leader, the Xianxia Sect is like fish out of water or grass without roots!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "咱仙霞派不就像鱼离了水，草没了根似得，丢了主心骨啊！"
-    translated: "Our Xianxia Sect is like a fish out of water or grass without its root; we've lost our main support!"
+    text: "咱仙霞派不就像鱼离了水，草没了根似的，丢了主心骨啊！"
+    translated: "Without our leader, the Xianxia Sect is like fish out of water or grass without roots!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -117499,22 +117494,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,右,,,,,StartSpeFight;105,,你仙霞派与我铁掌帮师出同源，\\n不知这些日子来姜掌门功力可有进步？待我我试上一试！"
+- raw: ",,,右,,,,,StartSpeFight;105,,你仙霞派与我铁掌帮师出同源，\\n不知这些日子来姜掌门功力可有进步？待我试上一试！"
   splits:
   - split: 10
     text: "你仙霞派与我铁掌帮师出同源，"
     translated: "Your Xianxia Sect and my Iron Palm Gang share the same origin."
-    qcReviewedText: "Your Xianxia Sect and my Iron Palm Gang share the same origin.\\nI wonder if Sect Leader Jiang has made any progress in his cultivation these days? Let me give it a try!"
-    qcTranslated: "Your Xianxia Sect and my Iron Palm Gang share the same origin.\\nI wonder if Sect Leader Jiang has made any progress in his cultivation these days? Let me, let me give it a try!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedStutter
-    qcDefectCategories:
-    - DroppedStutter
+    qcReviewedText: "Your Xianxia Sect and my Iron Palm Gang share the same origin.\\nHas Sect Leader Jiang's cultivation improved over these past days? Allow me to test it!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "不知这些日子来姜掌门功力可有进步？待我我试上一试！"
-    translated: "I wonder if Sect Leader Jiang has made any progress in his cultivation these days? Let me give it a try!"
+    text: "不知这些日子来姜掌门功力可有进步？待我试上一试！"
+    translated: "Has Sect Leader Jiang's cultivation improved over these past days? Allow me to test it!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -120082,18 +120074,19 @@
     qcDefectCategory: OtherNamedDefect
     qcDefectCategories:
     - OtherNamedDefect
-- raw: ",,,左,,,,,,,果真神奇，不亏是师祖真传！\\n也难怪凭借此内功，她老人家可以独步武林，一时名震天下。"
+- raw: ",,,左,,,,,,,果真神奇，不愧是师祖真传！\\n也难怪凭借此内功，她老人家可以独步武林，一时名震天下。"
   splits:
   - split: 10
-    text: "果真神奇，不亏是师祖真传！"
-    translated: "Truly amazing, no wonder it's a true transmission from the Senior Ancestor!"
-    qcReviewedText: "Truly amazing, no wonder it's a true transmission from the Senior Ancestor!\\nIt's no wonder that with this neigong, she can walk alone in the Wulin and temporarily shake the world with her fame."
-    qcTranslated: "Truly amazing, no wonder it's a true transmission from the Senior Ancestor!\\nIt's no wonder that with this Neigong, she can dominate the Wulin and shake the world with her fame."
+    text: "果真神奇，不愧是师祖真传！"
+    translated: "Truly miraculous. No wonder you are the true heir of our Grandmaster!"
+    qcReviewedText: "Truly miraculous. No wonder you are the true heir of our Grandmaster!\\nIt's no wonder that with this neigong, she can walk alone in the Wulin and temporarily shake the world with her fame."
+    qcTranslated: "Truly miraculous. No wonder it is the true transmission of our Grandmaster!\\nIt's no wonder that with this Neigong, she can walk alone in the Wulin and shake the world with her fame for a time."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - LostIdiom
+    - MeaningReversal
+    - UnnaturalPhrasing
   - split: 10
     subIndex: 1
     text: "也难怪凭借此内功，她老人家可以独步武林，一时名震天下。"
@@ -123727,19 +123720,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: ",,,右,,,,,,,姜掌门，原来你也破解了其中奥秘。\\n不亏是能与我夏天雄相争多年，不分胜负之人。"
+- raw: ",,,右,,,,,,,姜掌门，原来你也破解了其中奥秘。\\n不愧是能与我夏天雄相争多年，不分胜负之人。"
   splits:
   - split: 10
     text: "姜掌门，原来你也破解了其中奥秘。"
     translated: "Sect Leader Jiang, I see you've also figured out the mysteries involved."
-    qcReviewedText: "Sect Leader Jiang, I see you've also figured out the mysteries involved.\\nNo wonder you're someone who could compete with Xia Tianxiong for so many years without a clear winner."
+    qcReviewedText: "Sect Leader Jiang, I see you've also figured out the mysteries involved.\\nNo wonder you have been my equal for so many years, Xia Tianxiong."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "不亏是能与我夏天雄相争多年，不分胜负之人。"
-    translated: "No wonder you're someone who could compete with Xia Tianxiong for so many years without a clear winner."
+    text: "不愧是能与我夏天雄相争多年，不分胜负之人。"
+    translated: "No wonder you have been my equal for so many years, Xia Tianxiong."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -124079,22 +124072,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",姜映泉,,左,,,,,ChangeAttri;姜映泉-all-2,,#PlayerName#竟能凭一己之力胜过夏天雄？\\n好好好，不亏是为师最得意的弟子。"
+- raw: ",姜映泉,,左,,,,,ChangeAttri;姜映泉-all-2,,#PlayerName#竟能凭一己之力胜过夏天雄？\\n好好好，不愧是为师最得意的弟子。"
   splits:
   - split: 10
     text: "#PlayerName#竟能凭一己之力胜过夏天雄？"
     translated: "#PlayerName#, you could defeat Xia Tianxiong on your own?"
-    qcReviewedText: "#PlayerName#, you could defeat Xia Tianxiong on your own?\\nFine, fine, not to mention you are the most favored disciple of your master."
-    qcTranslated: "#PlayerName#, you could defeat Xia Tianxiong on your own?\\nFine, fine, fine. You are truly the proudest disciple of your master."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UnnaturalPhrasing
-    qcDefectCategories:
-    - UnnaturalPhrasing
+    qcReviewedText: "#PlayerName#, you could defeat Xia Tianxiong on your own?\\nVery well, very well. You truly are my proudest disciple."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "好好好，不亏是为师最得意的弟子。"
-    translated: "Fine, fine, not to mention you are the most favored disciple of your master."
+    text: "好好好，不愧是为师最得意的弟子。"
+    translated: "Very well, very well. You truly are my proudest disciple."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -141268,22 +141258,22 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: ",,,左,,,,,,,（这老东西平时和师傅称兄道弟，到了危难关头连青城派一个人影都见不到。\\n等到师傅仙逝了，却又跳出来见假惺惺哭丧，真是恬不知耻！）"
+- raw: ",,,左,,,,,,,（这老东西平时和师傅称兄道弟，到了危难关头连青城派一个人影都见不到。\\n等到师傅仙逝了，却又跳出来假惺惺哭丧，真是恬不知耻！）"
   splits:
   - split: 10
     text: "（这老东西平时和师傅称兄道弟，到了危难关头连青城派一个人影都见不到。"
     translated: "(This old thing calls his master brother and sister all day long, but during a crisis not even a shadow of the Qingcheng Sect can be seen."
-    qcReviewedText: "(This old thing calls his master brother and sister all day long, but during a crisis not even a shadow of the Qingcheng Sect can be seen.\\nOnly to have fake mourners jump out and cry when the Master has passed away. Truly shameless! )"
-    qcTranslated: "(This old thing swears brotherhood with Master day in and day out, yet when the hour of crisis strikes, not a single soul from the Qingcheng Sect can be found.\\nOnly after Master's passing does he emerge to put on a sham display of grief. Truly shameless! )"
+    qcReviewedText: "(This old thing calls his master brother and sister all day long, but during a crisis not even a shadow of the Qingcheng Sect can be seen.\\nOnly after Master passed away did they show up, feigning grief and wailing-truly shameless!)"
+    qcTranslated: "(This old thing calls Master brother all day long, but during a crisis not even a shadow of the Qingcheng Sect can be seen.\\nOnly after Master passed away did they show up, feigning grief and wailing-truly shameless!)"
     qcStatus: Corrected
-    qcQualityScore: 92
-    qcDefectCategory: LostIdiom
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - LostIdiom
+    - MeaningReversal
   - split: 10
     subIndex: 1
-    text: "等到师傅仙逝了，却又跳出来见假惺惺哭丧，真是恬不知耻！）"
-    translated: "Only to have fake mourners jump out and cry when the Master has passed away. Truly shameless! )"
+    text: "等到师傅仙逝了，却又跳出来假惺惺哭丧，真是恬不知耻！）"
+    translated: "Only after Master passed away did they show up, feigning grief and wailing-truly shameless!)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -143088,19 +143078,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,（若到时候那些名门大派不愿出力，反倒要我们这些小门派来和什么阎罗殿拼死拼活，\\n那我可就只能阳奉阴违，学一回了周莫知周掌门了。）"
+- raw: ",,,左,,,,,,,（若到时候那些名门大派不愿出力，反倒要我们这些小门派来和什么阎罗殿拼死拼活，\\n那我可就只能阳奉阴违，学一回那周莫知掌门了。）"
   splits:
   - split: 10
     text: "（若到时候那些名门大派不愿出力，反倒要我们这些小门派来和什么阎罗殿拼死拼活，"
     translated: "(If by then the major sects are unwilling to exert themselves, instead wanting us smaller sects to fight to the death against Yama Hall,"
-    qcReviewedText: "(If by then the major sects are unwilling to exert themselves, instead wanting us smaller sects to fight to the death against Yama Hall,\\nThen I can only pay lip service while secretly doing the opposite, and learn from Zhou Mozhi, Sect Leader Zhou. )"
+    qcReviewedText: "(If by then the major sects are unwilling to exert themselves, instead wanting us smaller sects to fight to the death against Yama Hall,\\nThen I'll have no choice but to pay lip service while acting against it, and learn a lesson from Sect Leader Zhou Mozhi.)"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "那我可就只能阳奉阴违，学一回了周莫知周掌门了。）"
-    translated: "Then I can only pay lip service while secretly doing the opposite, and learn from Zhou Mozhi, Sect Leader Zhou. )"
+    text: "那我可就只能阳奉阴违，学一回那周莫知掌门了。）"
+    translated: "Then I'll have no choice but to pay lip service while acting against it, and learn a lesson from Sect Leader Zhou Mozhi.)"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -149533,22 +149523,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,UpgradeHeroSkill;白云天-690-3-1,,哎，不论如何，希望听过大师讲经之后，白云子能收敛性子乖乖回峨眉山上去。\\n也省的我整日提心吊胆，担心她又闯下什么祸来......"
+- raw: ",,,左,,,,,UpgradeHeroSkill;白云天-690-3-1,,哎，不论如何，希望听过大师讲经之后，白云子能收敛性子乖乖回峨眉山上去。\\n也省得我整日提心吊胆，担心她又闯下什么祸来......"
   splits:
   - split: 10
     text: "哎，不论如何，希望听过大师讲经之后，白云子能收敛性子乖乖回峨眉山上去。"
     translated: "Well, I hope that after listening to the master's lecture, Baiyunzi can calm down and obediently return to Emei Mountain."
-    qcReviewedText: "Well, I hope that after listening to the master's lecture, Baiyunzi can calm down and obediently return to Emei Mountain.\\nAlso spared me from worrying about what new trouble she might get into..."
-    qcTranslated: "Well, I hope that after listening to the master's lecture, Baiyunzi can calm down and obediently return to Emei Mountain.\\nIt would also spare me from worrying day and night about what new trouble she might get into..."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    qcReviewedText: "Well, I hope that after listening to the master's lecture, Baiyunzi can calm down and obediently return to Emei Mountain.\\nIt also spares me the worry of constantly fearing she might get into trouble again..."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "也省的我整日提心吊胆，担心她又闯下什么祸来......"
-    translated: "Also spared me from worrying about what new trouble she might get into..."
+    text: "也省得我整日提心吊胆，担心她又闯下什么祸来......"
+    translated: "It also spares me the worry of constantly fearing she might get into trouble again..."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -149751,22 +149738,22 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,右,,,,,,,额，我师傅只传过我一些粗浅掌法，这么厉害的掌法怕是没学过。\\n不过要说装模做样的话，或许还能演个三四分。"
+- raw: ",,,右,,,,,,,额，我师傅只传过我一些粗浅掌法，这么厉害的掌法怕是没学过。\\n不过要说装模作样的话，或许还能演个三四分。"
   splits:
   - split: 10
     text: "额，我师傅只传过我一些粗浅掌法，这么厉害的掌法怕是没学过。"
     translated: "Ah, my master only taught me some basic palm techniques. I don't think he ever learned anything this powerful."
-    qcReviewedText: "Ah, my master only taught me some basic palm techniques. I don't think he ever learned anything this powerful.\\nBut if it comes to putting on an act, maybe I could pull off three or four minutes."
-    qcTranslated: "Ah, my master only taught me some basic palm techniques. I don't think I've ever learned anything this powerful.\\nBut if it comes to putting on an act, maybe I could pull off three or four minutes."
+    qcReviewedText: "Ah, my master only taught me some basic palm techniques. I don't think he ever learned anything this powerful.\\nBut if we're talking about putting on an act, I could probably pull off three or four parts of the performance."
+    qcTranslated: "Ah, my master only taught me some basic palm techniques. I don't think I ever learned anything this powerful.\\nBut if we're talking about putting on an act, I could probably pull off three or four parts of the performance."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
+    qcDefectCategory: MeaningReversal
     qcDefectCategories:
-    - OtherNamedDefect
+    - MeaningReversal
   - split: 10
     subIndex: 1
-    text: "不过要说装模做样的话，或许还能演个三四分。"
-    translated: "But if it comes to putting on an act, maybe I could pull off three or four minutes."
+    text: "不过要说装模作样的话，或许还能演个三四分。"
+    translated: "But if we're talking about putting on an act, I could probably pull off three or four parts of the performance."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -176610,19 +176597,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",万仞山,,左,,,,,,,#PlayerName#说的不错。\\n我此前已观察过，就算有霹雳堂威力最强的的火药，\\n恐怕也破不开这座关隘的大门。"
+- raw: ",万仞山,,左,,,,,,,#PlayerName#说的不错。\\n我此前已观察过，就算有霹雳堂威力最强的火药，\\n恐怕也破不开这座关隘的大门。"
   splits:
   - split: 10
     text: "#PlayerName#说的不错。"
     translated: "#PlayerName# said that well"
-    qcReviewedText: "#PlayerName# said that well \\nI had observed before that even with the Thunderclap Hall's most powerful explosives,\\nIt probably wouldn't be able to break through the gate of this fortress."
+    qcReviewedText: "#PlayerName# said that well \\nI have observed this before. Even with the most powerful gunpowder from Thunderclap Hall,\\nIt probably wouldn't be able to break through the gate of this fortress."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "我此前已观察过，就算有霹雳堂威力最强的的火药，"
-    translated: "I had observed before that even with the Thunderclap Hall's most powerful explosives,"
+    text: "我此前已观察过，就算有霹雳堂威力最强的火药，"
+    translated: "I have observed this before. Even with the most powerful gunpowder from Thunderclap Hall,"
   - split: 10
     subIndex: 2
     text: "恐怕也破不开这座关隘的大门。"
@@ -184627,19 +184614,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,你每当内力不足时服用一副，便可支撑一段时间。\\n只是别一下子服多了，小心内息过盛，爆体而亡！"
+- raw: ",,,左,,,,,,,你每当内力不足时服用一次，便可支撑一段时间。\\n只是别一下子服食过多，小心内息过盛，爆体而亡！"
   splits:
   - split: 10
-    text: "你每当内力不足时服用一副，便可支撑一段时间。"
-    translated: "You can take a dose whenever your Inner Power runs low to sustain yourself for a while."
-    qcReviewedText: "You can take a dose whenever your Inner Power runs low to sustain yourself for a while.\\nJust don't take too much at once; be careful not to overburden your inner qi and explode from within!"
+    text: "你每当内力不足时服用一次，便可支撑一段时间。"
+    translated: "Take one dose whenever your inner energy runs low, and it will sustain you for a while."
+    qcReviewedText: "Take one dose whenever your inner energy runs low, and it will sustain you for a while.\\nJust don't consume too much at once. Be careful that your Inner Qi doesn't become too intense, or you'll burst from the strain and die!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "只是别一下子服多了，小心内息过盛，爆体而亡！"
-    translated: "Just don't take too much at once; be careful not to overburden your inner qi and explode from within!"
+    text: "只是别一下子服食过多，小心内息过盛，爆体而亡！"
+    translated: "Just don't consume too much at once. Be careful that your Inner Qi doesn't become too intense, or you'll burst from the strain and die!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -184737,12 +184724,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,ChangeInjury;白云天-2-50,,这是我峨眉派的益气神药，紫霄玄关散，只需一副便可补满内力。\\n大叔你赶快投降吧，免得我......"
+- raw: ",,,左,,,,,ChangeInjury;白云天-2-50,,这是我峨眉派的益气神药，紫霄玄关散，只需一服便可补满内力。\\n大叔你赶快投降吧，免得我......"
   splits:
   - split: 10
-    text: "这是我峨眉派的益气神药，紫霄玄关散，只需一副便可补满内力。"
-    translated: "This is the Emei Sect's Qi-Nourishing Spirit Pill, Zixiao Xuanshuan Powder. Just one dose can replenish your Inner Power completely."
-    qcReviewedText: "This is the Emei Sect's Qi-Nourishing Spirit Pill, Zixiao Xuanshuan Powder. Just one dose can replenish your Inner Power completely.\\nUncle, quickly surrender before I..."
+    text: "这是我峨眉派的益气神药，紫霄玄关散，只需一服便可补满内力。"
+    translated: "This is the Emei Sect's Qi-Boosting Divine Medicine, Zixiao Xuanguan Powder. A single dose will fully restore your internal energy."
+    qcReviewedText: "This is the Emei Sect's Qi-Boosting Divine Medicine, Zixiao Xuanguan Powder. A single dose will fully restore your internal energy.\\nUncle, quickly surrender before I..."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -188918,19 +188905,19 @@
   templates:
   - split: 10
     template: "{0}：{1}\\n{2}"
-- raw: ",,,左,,,,,,,道阁主遍体漆黑，显然是中毒而死。\\n形容枯槁，好像一截干枯的的树木一般。\\n整个尸身散发着轻微的臭味，但腐烂程度还算不严重。"
+- raw: ",,,左,,,,,,,道阁主遍体漆黑，显然是中毒而死。\\n形容枯槁，好像一截干枯树木一般。\\n整个尸身散发着轻微的臭味，但腐烂程度还算不严重。"
   splits:
   - split: 10
     text: "道阁主遍体漆黑，显然是中毒而死。"
     translated: "The Hall Master was entirely black, clearly having died from poisoning."
-    qcReviewedText: "The Hall Master was entirely black, clearly having died from poisoning.\\nHe looked withered and gaunt, like a dried-up piece of wood.\\nThe body gives off a faint odor of decay, but the level of decomposition is not severe."
+    qcReviewedText: "The Hall Master was entirely black, clearly having died from poisoning.\\nEmaciated and haggard, like a withered, dried-up tree.\\nThe body gives off a faint odor of decay, but the level of decomposition is not severe."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "形容枯槁，好像一截干枯的的树木一般。"
-    translated: "He looked withered and gaunt, like a dried-up piece of wood."
+    text: "形容枯槁，好像一截干枯树木一般。"
+    translated: "Emaciated and haggard, like a withered, dried-up tree."
   - split: 10
     subIndex: 2
     text: "整个尸身散发着轻微的臭味，但腐烂程度还算不严重。"
@@ -190034,12 +190021,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: ",,,右,,,,,,,没错，我感觉有些奇怪，就驻足听了一会了。\\n之后就听到了一些悉悉索索，像是老鼠啃木头的声音。"
+- raw: ",,,右,,,,,,,没错，我感觉有些奇怪，就驻足听了一会。\\n之后就听到了一些悉悉索索，像是老鼠啃木头的声音。"
   splits:
   - split: 10
-    text: "没错，我感觉有些奇怪，就驻足听了一会了。"
-    translated: "Right, I felt something strange and just stopped to listen for a moment."
-    qcReviewedText: "Right, I felt something strange and just stopped to listen for a moment.\\nThen I heard some rustling sounds, like mice gnawing on wood."
+    text: "没错，我感觉有些奇怪，就驻足听了一会。"
+    translated: "That's right. I felt something was off, so I stopped to listen for a while."
+    qcReviewedText: "That's right. I felt something was off, so I stopped to listen for a while.\\nThen I heard some rustling sounds, like mice gnawing on wood."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -228755,12 +228742,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,这也是我最不想看得的结果......空闻方丈，张真人，\\n不论如何，此战我丐帮必当精锐尽出，全力以赴，\\n决不会再让逐鹿盟兴风作浪，侵扰中原百姓！"
+- raw: ",,,左,,,,,,,这也是我最不想看到的结果......空闻方丈，张真人，\\n不论如何，此战我丐帮必当精锐尽出，全力以赴，\\n决不会再让逐鹿盟兴风作浪，侵扰中原百姓！"
   splits:
   - split: 10
-    text: "这也是我最不想看得的结果......空闻方丈，张真人，"
-    translated: "...This is also the last thing I want to see... Konwen Abbot, Zhang Daoist,..."
-    qcReviewedText: "...This is also the last thing I want to see... Konwen Abbot, Zhang Daoist,...\\nNo matter what, the Beggar Sect will deploy all our finest warriors and give it our best.\\nWe will no longer let the Zhuolu Alliance stir up trouble and harass the people of Central China!"
+    text: "这也是我最不想看到的结果......空闻方丈，张真人，"
+    translated: "This is the outcome I least wish to see... Abbot Kongwen, Daoist Zhang,"
+    qcReviewedText: "This is the outcome I least wish to see... Abbot Kongwen, Daoist Zhang,\\nNo matter what, the Beggar Sect will deploy all our finest warriors and give it our best.\\nWe will no longer let the Zhuolu Alliance stir up trouble and harass the people of Central China!"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -231224,19 +231211,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}：{3}"
-- raw: ",,,无,,,紧密鼓点,,,,原本静谧和谐，香火缭绕的武当派，本应响起晨练的钟声，\\n此时却锣鼓大躁，一片嘈杂，往来弟子俱是神情紧张，行色匆匆。"
+- raw: ",,,无,,,紧密鼓点,,,,原本静谧和谐，香火缭绕的武当派，本应响起晨练的钟声，\\n此时却锣鼓大噪，一片嘈杂，往来弟子俱是神情紧张，行色匆匆。"
   splits:
   - split: 10
     text: "原本静谧和谐，香火缭绕的武当派，本应响起晨练的钟声，"
     translated: "Originally peaceful and harmonious, with incense constantly burning, the Wudang Sect should have echoed with the sound of morning exercises."
-    qcReviewedText: "Originally peaceful and harmonious, with incense constantly burning, the Wudang Sect should have echoed with the sound of morning exercises.\\nAt this moment, the drums and gongs were booming loudly, creating a chaotic din. Disciples coming and going all looked tense and rushed."
+    qcReviewedText: "Originally peaceful and harmonious, with incense constantly burning, the Wudang Sect should have echoed with the sound of morning exercises.\\nYet suddenly, gongs and drums erupted in a clamor, the air thick with commotion. The disciples passing by all wore tense expressions, hurrying along in haste."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "此时却锣鼓大躁，一片嘈杂，往来弟子俱是神情紧张，行色匆匆。"
-    translated: "At this moment, the drums and gongs were booming loudly, creating a chaotic din. Disciples coming and going all looked tense and rushed."
+    text: "此时却锣鼓大噪，一片嘈杂，往来弟子俱是神情紧张，行色匆匆。"
+    translated: "Yet suddenly, gongs and drums erupted in a clamor, the air thick with commotion. The disciples passing by all wore tense expressions, hurrying along in haste."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -240345,13 +240332,13 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,不过，姑娘若是不愿将这牵丝蛊的解毒之法如实相告，\\n小生可就要换上另外一幅面孔了！"
+- raw: ",,,左,,,,,,,不过，姑娘若是不愿将这牵丝蛊的解毒之法如实相告，\\n小生可就要换上另外一副面孔了！"
   splits:
   - split: 10
     text: "不过，姑娘若是不愿将这牵丝蛊的解毒之法如实相告，"
     translated: "However, if you are unwilling to truthfully reveal the method to counter the Thread-Pulling Gu,"
-    qcReviewedText: "However, if you are unwilling to truthfully reveal the method to counter the Thread-Pulling Gu,\\nI shall don another face now!"
-    qcTranslated: "However, if you, Miss, are unwilling to truthfully reveal the method to counter the Thread-Pulling Gu,\\nI shall don another face now!"
+    qcReviewedText: "However, if you are unwilling to truthfully reveal the method to counter the Thread-Pulling Gu,\\nI shall be putting on a different face!"
+    qcTranslated: "However, if Miss is unwilling to truthfully reveal the method to counter the Thread-Pulling Gu,\\nI shall be putting on a different face!"
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -240359,8 +240346,8 @@
     - DroppedContent
   - split: 10
     subIndex: 1
-    text: "小生可就要换上另外一幅面孔了！"
-    translated: "I shall don another face now!"
+    text: "小生可就要换上另外一副面孔了！"
+    translated: "I shall be putting on a different face!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -253136,19 +253123,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,无,,,FireContinue,,,,正思量间，远处似乎传来骚乱之声。\\n只见寺内四面火起，锣鼓大躁。"
+- raw: ",,,无,,,FireContinue,,,,正思量间，远处似乎传来骚乱之声。\\n只见寺内四面火起，锣鼓大噪。"
   splits:
   - split: 10
     text: "正思量间，远处似乎传来骚乱之声。"
     translated: "As you were pondering, sounds of commotion seemed to come from the distance."
-    qcReviewedText: "As you were pondering, sounds of commotion seemed to come from the distance.\\nOnly to see fires break out on all sides within the temple, and drums and gongs sounding loudly."
+    qcReviewedText: "As you were pondering, sounds of commotion seemed to come from the distance.\\nSuddenly, fires erupted on all four sides within the temple, and drums and gongs sounded loudly."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "只见寺内四面火起，锣鼓大躁。"
-    translated: "Only to see fires break out on all sides within the temple, and drums and gongs sounding loudly."
+    text: "只见寺内四面火起，锣鼓大噪。"
+    translated: "Suddenly, fires erupted on all four sides within the temple, and drums and gongs sounded loudly."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -256000,18 +255987,18 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",玩家,张文馨,右,,,,,,,计心狂终于按耐不住，\\n露出狐狸尾巴来了。"
+- raw: ",玩家,张文馨,右,,,,,,,计心狂终于按捺不住，\\n露出狐狸尾巴来了。"
   splits:
   - split: 10
-    text: "计心狂终于按耐不住，"
-    translated: "Finally, Ji Xinkuang could no longer hold back."
-    qcReviewedText: "Finally, Ji Xinkuang could no longer hold back.\\nThe fox has finally shown its tail"
-    qcTranslated: "Finally, Ji Xinkuang could no longer hold back.\\nHe has finally shown his true colors."
+    text: "计心狂终于按捺不住，"
+    translated: "Ji Xinkuang could no longer hold back,"
+    qcReviewedText: "Ji Xinkuang could no longer hold back,\\nThe fox has finally shown its tail"
+    qcTranslated: "Ji Xinkuang could no longer hold back,\\nand finally showed his true colors."
     qcStatus: Corrected
     qcQualityScore: 95
-    qcDefectCategory: LostIdiom
+    qcDefectCategory: UnnaturalPhrasing
     qcDefectCategories:
-    - LostIdiom
+    - UnnaturalPhrasing
   - split: 10
     subIndex: 1
     text: "露出狐狸尾巴来了。"
@@ -258962,23 +258949,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,TRUE,,,识相的，就快让他滚出来乖乖受死！\\n省的老子费事。"
+- raw: ",,,左,,,,TRUE,,,识相的，就快让他滚出来乖乖受死！\\n省得老子费事。"
   splits:
   - split: 10
     text: "识相的，就快让他滚出来乖乖受死！"
     translated: "If you know what's good for you, make him come out and die quietly!"
-    qcReviewedText: "If you know what's good for you, make him come out and die quietly!\\nOld man, I trouble you a lot"
-    qcTranslated: "If you know what's good for you, make him come out and die quietly!\\nSave me the trouble."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
-    - OtherNamedDefect
+    qcReviewedText: "If you know what's good for you, make him come out and die quietly!\\nSaves me the trouble"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "省的老子费事。"
-    translated: "Old man, I trouble you a lot"
+    text: "省得老子费事。"
+    translated: "Saves me the trouble"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -260508,22 +260491,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",武绝义,,左,,,SpeEffect/风呼啸,,ChangeInjury;武绝义-1-200,,（运起全身功力，强行顶着狂风飞身而上）\\n哼，什么人装设弄鬼，吃老子一枪！"
+- raw: ",武绝义,,左,,,SpeEffect/风呼啸,,ChangeInjury;武绝义-1-200,,（运起全身功力，强行顶着狂风飞身而上）\\n哼，什么人装神弄鬼，吃老子一枪！"
   splits:
   - split: 10
     text: "（运起全身功力，强行顶着狂风飞身而上）"
     translated: "(Empowering my entire cultivation, I forcibly resisted the fierce wind and leaped upward)"
-    qcReviewedText: "(Empowering my entire cultivation, I forcibly resisted the fierce wind and leaped upward) \\nHmph, who's setting up a prank? I'll shoot you with a bullet!"
-    qcTranslated: "(Empowering my entire cultivation, I forcibly resisted the fierce wind and leaped upward) \\nHmph, who's setting up a prank? Take this spear thrust!"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DomainTerm
-    qcDefectCategories:
-    - DomainTerm
+    qcReviewedText: "(Empowering my entire cultivation, I forcibly resisted the fierce wind and leaped upward) \\nHmph! Who's there, playing tricks? Take this spear!"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "哼，什么人装设弄鬼，吃老子一枪！"
-    translated: "Hmph, who's setting up a prank? I'll shoot you with a bullet!"
+    text: "哼，什么人装神弄鬼，吃老子一枪！"
+    translated: "Hmph! Who's there, playing tricks? Take this spear!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -271690,26 +271670,23 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: ",,,无,,,Door/BigDoor2,,ScreenBlack,,家丁取了拜帖，前去传话。\\n你们在门口默默守候，各自心中皆是忐忑不安，\\n不知这赵京娘究竟适合样貌，如今又景况如何......"
+- raw: ",,,无,,,Door/BigDoor2,,ScreenBlack,,家丁取了拜帖，前去传话。\\n你们在门口默默守候，各自心中皆是忐忑不安，\\n不知这赵京娘究竟是何样貌，如今又景况如何......"
   splits:
   - split: 10
     text: "家丁取了拜帖，前去传话。"
     translated: "The attendant took the business card and went to deliver the message."
-    qcReviewedText: "The attendant took the business card and went to deliver the message.\\nYou waited in silence by the door, each with a mix of anxiety in your hearts.\\nI wonder about Zhao Jingmang's appearance now and how she fares..."
-    qcTranslated: "The attendant took the business card and went to deliver the message.\\nYou waited in silence by the door, each with a mix of anxiety in your hearts.\\nI wonder what Zhao Jingmang's appearance is like now and how she fares..."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    qcReviewedText: "The attendant took the business card and went to deliver the message.\\nYou waited in silence by the door, each with a mix of anxiety in your hearts.\\nOne wonders what Zhao Jingniang truly looks like, and how she fares now..."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "你们在门口默默守候，各自心中皆是忐忑不安，"
     translated: "You waited in silence by the door, each with a mix of anxiety in your hearts."
   - split: 10
     subIndex: 2
-    text: "不知这赵京娘究竟适合样貌，如今又景况如何......"
-    translated: "I wonder about Zhao Jingmang's appearance now and how she fares..."
+    text: "不知这赵京娘究竟是何样貌，如今又景况如何......"
+    translated: "One wonders what Zhao Jingniang truly looks like, and how she fares now..."
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
@@ -282695,19 +282672,22 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,他自称不是思中澜那种软骨头，被种了牵丝蛊就任凭摆布。\\n而是宁可宁可挥刀自刎，也不会成为血衣盟的傀儡！"
+- raw: ",,,左,,,,,,,他自称不是思中澜那种软骨头，被种了牵丝蛊就任凭摆布。\\n而是宁可挥刀自刎，也不会成为血衣盟的傀儡！"
   splits:
   - split: 10
     text: "他自称不是思中澜那种软骨头，被种了牵丝蛊就任凭摆布。"
     translated: "He claims he's not like Si Zhonglan, a weakling who would just submit if he were infected with a Thread-Pulling Gu."
-    qcReviewedText: "He claims he's not like Si Zhonglan, a weakling who would just submit if he were infected with a Thread-Pulling Gu.\\nInstead, he'd rather cut his own throat with his sword than become a puppet of the Blood Robe Alliance!"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    qcReviewedText: "He claims he's not like Si Zhonglan, a weakling who would just submit if he were infected with a Thread-Pulling Gu.\\nRather than become a puppet of the Blood Robe Alliance, I would sooner take my own life with a blade!"
+    qcTranslated: "He claims he's not like Si Zhonglan, a weakling who would just submit if he were infected with a Thread-Pulling Gu.\\nRather than become a puppet of the Blood Robe Alliance, he would sooner take his own life with a blade!"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: MeaningReversal
+    qcDefectCategories:
+    - MeaningReversal
   - split: 10
     subIndex: 1
-    text: "而是宁可宁可挥刀自刎，也不会成为血衣盟的傀儡！"
-    translated: "Instead, he'd rather cut his own throat with his sword than become a puppet of the Blood Robe Alliance!"
+    text: "而是宁可挥刀自刎，也不会成为血衣盟的傀儡！"
+    translated: "Rather than become a puppet of the Blood Robe Alliance, I would sooner take my own life with a blade!"
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -283803,23 +283783,22 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,郭淮,右,,,,TRUE,,,二位！一路追查下来，\\n得到了了赵点检与柴世宗的诸多线索，本就已是大有收获。\\n何必在此唉声叹气，妄自菲薄？"
+- raw: ",,郭淮,右,,,,TRUE,,,二位！一路追查下来，\\n得到了赵点检与柴世宗的诸多线索，本就已是大有收获。\\n何必在此唉声叹气，妄自菲薄？"
   splits:
   - split: 10
     text: "二位！一路追查下来，"
     translated: "Two! Track them down,"
-    qcReviewedText: "Two! Track them down,\\nGaining so many clues about Marshal Zhao and Chai Shizong was already a significant achievement.\\nWhy dwell here in self-pity and underrate yourself?"
-    qcTranslated: "The two of you! Having tracked them down all the way, \\nand gained so many clues about Marshal Zhao and Chai Shizong, this was already a significant achievement.\\nWhy dwell here in self-pity and underrate yourself?"
+    qcReviewedText: "Two! Track them down,\\nGathering numerous clues about Marshal Zhao and Chai Shizong was already a significant gain.\\nWhy dwell here in self-pity and underrate yourself?"
+    qcTranslated: "The two of you! Tracking them down, \\nGathering numerous clues about Marshal Zhao and Chai Shizong was already a significant gain.\\nWhy dwell here in self-pity and underrate yourself?"
     qcStatus: Corrected
-    qcQualityScore: 92
+    qcQualityScore: 95
     qcDefectCategory: MeaningReversal
     qcDefectCategories:
     - MeaningReversal
-    - UnnaturalPhrasing
   - split: 10
     subIndex: 1
-    text: "得到了了赵点检与柴世宗的诸多线索，本就已是大有收获。"
-    translated: "Gaining so many clues about Marshal Zhao and Chai Shizong was already a significant achievement."
+    text: "得到了赵点检与柴世宗的诸多线索，本就已是大有收获。"
+    translated: "Gathering numerous clues about Marshal Zhao and Chai Shizong was already a significant gain."
   - split: 10
     subIndex: 2
     text: "何必在此唉声叹气，妄自菲薄？"
@@ -287283,18 +287262,15 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,赵点检和柴荣身为为结拜兄弟，又承蒙其知遇之恩。\\n何况柴荣乃是舍生取义，方才死于血衣盟阴谋。"
+- raw: ",,,左,,,,,,,赵点检和柴荣身为结拜兄弟，又承蒙其知遇之恩。\\n何况柴荣乃是舍生取义，方才死于血衣盟阴谋。"
   splits:
   - split: 10
-    text: "赵点检和柴荣身为为结拜兄弟，又承蒙其知遇之恩。"
-    translated: "Marshal Zhao and Chai Rong are sworn brothers, and he has also been grateful for their patronage."
-    qcReviewedText: "Marshal Zhao and Chai Rong are sworn brothers, and he has also been grateful for their patronage.\\nMoreover, Chai Rong died for the sake of righteousness, falling victim to the Blood Robe Alliance's conspiracy."
-    qcTranslated: "Marshal Zhao and Chai Rong are sworn brothers, and he has also been grateful for his patronage.\\nMoreover, Chai Rong died for the sake of righteousness, falling victim to the Blood Robe Alliance's conspiracy."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: MeaningReversal
-    qcDefectCategories:
-    - MeaningReversal
+    text: "赵点检和柴荣身为结拜兄弟，又承蒙其知遇之恩。"
+    translated: "Marshal Zhao and Chai Rong were sworn brothers, and he was deeply grateful for their recognition and patronage."
+    qcReviewedText: "Marshal Zhao and Chai Rong were sworn brothers, and he was deeply grateful for their recognition and patronage.\\nMoreover, Chai Rong died for the sake of righteousness, falling victim to the Blood Robe Alliance's conspiracy."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
     text: "何况柴荣乃是舍生取义，方才死于血衣盟阴谋。"
@@ -297835,22 +297811,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",无,无,无,,,FootStepContinue,,,,唐门大堂两旁，早已整整齐齐挂着两排大红灯笼。\\n一副巨大的囍字张贴在正对大门的墙壁上，颇为刺眼。"
+- raw: ",无,无,无,,,FootStepContinue,,,,唐门大堂两旁，早已整整齐齐挂着两排大红灯笼。\\n一幅巨大的囍字张贴在正对大门的墙壁上，颇为刺眼。"
   splits:
   - split: 10
     text: "唐门大堂两旁，早已整整齐齐挂着两排大红灯笼。"
     translated: "On both sides of the main hall of the Tang Clan, two rows of large red lanterns were already neatly hung."
-    qcReviewedText: "On both sides of the main hall of the Tang Clan, two rows of large red lanterns were already neatly hung.\\nA huge huaizi poster is prominently pinned on the wall directly facing the entrance, quite eye-catching."
-    qcTranslated: "On both sides of the main hall of the Tang Clan, two rows of large red lanterns were already neatly hung.\\nA huge double-happiness character is prominently pinned on the wall directly facing the entrance, quite eye-catching."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: UntranslatedPinyin
-    qcDefectCategories:
-    - UntranslatedPinyin
+    qcReviewedText: "On both sides of the main hall of the Tang Clan, two rows of large red lanterns were already neatly hung.\\nA massive double-happiness character is pasted on the wall directly opposite the main gate, glaringly conspicuous."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "一副巨大的囍字张贴在正对大门的墙壁上，颇为刺眼。"
-    translated: "A huge huaizi poster is prominently pinned on the wall directly facing the entrance, quite eye-catching."
+    text: "一幅巨大的囍字张贴在正对大门的墙壁上，颇为刺眼。"
+    translated: "A massive double-happiness character is pasted on the wall directly opposite the main gate, glaringly conspicuous."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -299172,33 +299145,26 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,TRUE,,,唐门主！我早就听说‌令郎行事荒诞不经。\\n但想到他毕竟出身名门，应该不至于如此不堪，\\n或许是江湖谣传罢了。"
+- raw: ",,,左,,,,TRUE,,,唐门主！我早就听说令郎行事荒诞不经。\\n但想到他毕竟出身名门，应该不至于如此不堪，\\n或许是江湖谣传罢了。"
   splits:
   - split: 10
-    text: "唐门主！我早就听说"
-    translated: "Tang Clan Head! I've heard about you for a long time."
-    qcReviewedText: "Tang Clan Head! I've heard about you for a long time.‌Your son behaves rather recklessly \\nBut thinking of his noble origin, he shouldn't be this utterly disgraceful.\\nPerhaps it's just a rumor from the Jianghu."
-    qcTranslated: "Tang Clan Head! I've long heard that your son's actions are absurd and reckless.\\nBut thinking of his noble origin, he shouldn't be this utterly disgraceful.\\nPerhaps it's just a rumor from the Jianghu."
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: DroppedContent
-    qcDefectCategories:
-    - DroppedContent
+    text: "唐门主！我早就听说令郎行事荒诞不经。"
+    translated: "Master of the Tang Clan! I have long heard that your son behaves in an utterly reckless and absurd manner."
+    qcReviewedText: "Master of the Tang Clan! I have long heard that your son behaves in an utterly reckless and absurd manner.\\nBut thinking of his noble origin, he shouldn't be this utterly disgraceful.\\nPerhaps it's just a rumor from the Jianghu."
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "令郎行事荒诞不经。"
-    translated: "Your son behaves rather recklessly"
-  - split: 10
-    subIndex: 2
     text: "但想到他毕竟出身名门，应该不至于如此不堪，"
     translated: "But thinking of his noble origin, he shouldn't be this utterly disgraceful."
   - split: 10
-    subIndex: 3
+    subIndex: 2
     text: "或许是江湖谣传罢了。"
     translated: "Perhaps it's just a rumor from the Jianghu."
   templates:
   - split: 10
-    template: "{0}‌{1}\\n{2}\\n{3}"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,ChangeForceResource;唐逸影-5-负500|ChangeForceResource;雷震天-5-负250,,没想到堂堂两派联姻的大婚庆典之上，\\n令郎竟然......竟然也能做出这等丑事来！"
   splits:
   - split: 10
@@ -345673,13 +345639,13 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,右,,,SpeEffect/剑鸣,,,,只见小姑娘努力仰头，将宝剑一寸一寸吞口口中，\\n神情痛苦，动作僵硬，仿佛随时都会再出什么岔子."
+- raw: ",,,右,,,SpeEffect/剑鸣,,,,只见小姑娘努力仰头，将宝剑一寸一寸吞入口中，\\n神情痛苦，动作僵硬，仿佛随时都会再出什么岔子."
   splits:
   - split: 10
-    text: "只见小姑娘努力仰头，将宝剑一寸一寸吞口口中，"
-    translated: "Only to see the little girl strain to tilt her head back, swallowing the sword inch by inch."
-    qcReviewedText: "Only to see the little girl strain to tilt her head back, swallowing the sword inch by inch.\\nHe looked pained, his movements stiff, as if something else could go wrong at any moment."
-    qcTranslated: "Only to see the little girl strain to tilt her head back, swallowing the sword inch by inch.\\nHer expression was pained, her movements stiff, as if something else could go wrong at any moment."
+    text: "只见小姑娘努力仰头，将宝剑一寸一寸吞入口中，"
+    translated: "The little girl strained to tilt her head back, swallowing the sword inch by inch into her mouth,"
+    qcReviewedText: "The little girl strained to tilt her head back, swallowing the sword inch by inch into her mouth,\\nHe looked pained, his movements stiff, as if something else could go wrong at any moment."
+    qcTranslated: "The little girl strained to tilt her head back, swallowing the sword inch by inch into her mouth,\\nShe looked pained, her movements stiff, as if something else could go wrong at any moment."
     qcStatus: Corrected
     qcQualityScore: 95
     qcDefectCategory: DroppedContent
@@ -356513,12 +356479,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,左,,,,,,,阁主放心，我余采薇可不是什么弱不经风之辈。"
+- raw: ",,,左,,,,,,,阁主放心，我余采薇可不是什么弱不禁风之辈。"
   splits:
   - split: 10
-    text: "阁主放心，我余采薇可不是什么弱不经风之辈。"
-    translated: "Master of the Pavilion, rest assured. I, Yu Caiwei, am no weakling."
-    qcReviewedText: "Master of the Pavilion, rest assured. I, Yu Caiwei, am no weakling."
+    text: "阁主放心，我余采薇可不是什么弱不禁风之辈。"
+    translated: "Rest assured, Pavilion Master. I, Yu Caiwei, am no fragile creature."
+    qcReviewedText: "Rest assured, Pavilion Master. I, Yu Caiwei, am no fragile creature."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -387704,12 +387670,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,无,,,人群交谈,,,,此言一出，堂下武当弟子议论纷纷，\\n有支持结盟者，也有反对结盟者，\\n一时众说纷纭，莫衷一是‌。"
+- raw: ",,,无,,,人群交谈,,,,此言一出，堂下武当弟子议论纷纷，\\n有支持结盟者，也有反对结盟者，\\n一时众说纷纭，莫衷一是。"
   splits:
   - split: 10
     text: "此言一出，堂下武当弟子议论纷纷，"
     translated: "Upon these words, the Wudang disciples below the hall spoke in various voices."
-    qcReviewedText: "Upon these words, the Wudang disciples below the hall spoke in various voices.\\nThere are supporters of the alliance as well as those who oppose it.\\nFor a while, opinions varied widely and no one could agree.‌。"
+    qcReviewedText: "Upon these words, the Wudang disciples below the hall spoke in various voices.\\nThere are supporters of the alliance as well as those who oppose it.\\nOpinions were divided, and no consensus could be reached."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -387719,11 +387685,11 @@
     translated: "There are supporters of the alliance as well as those who oppose it."
   - split: 10
     subIndex: 2
-    text: "一时众说纷纭，莫衷一是"
-    translated: "For a while, opinions varied widely and no one could agree."
+    text: "一时众说纷纭，莫衷一是。"
+    translated: "Opinions were divided, and no consensus could be reached."
   templates:
   - split: 10
-    template: "{0}\\n{1}\\n{2}‌。"
+    template: "{0}\\n{1}\\n{2}"
 - raw: ",,,左,,,,,,,所以张真人的意思是，\\n这结盟之事，还需暂缓商议？"
   splits:
   - split: 10
@@ -405085,19 +405051,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,无,,,,,,,直至今日末路穷途，\\n飞龙门将士纷纷痛苦流涕，不能自已。"
+- raw: ",,,无,,,,,,,直至今日末路穷途，\\n飞龙门将士纷纷痛哭流涕，不能自已。"
   splits:
   - split: 10
     text: "直至今日末路穷途，"
     translated: "Until today, at the end of the road,"
-    qcReviewedText: "Until today, at the end of the road,\\nSoldiers of the Flying Dragon Gate wept bitterly and could not control themselves."
+    qcReviewedText: "Until today, at the end of the road,\\nThe soldiers of the Flying Dragon Gate wept bitterly, unable to control their grief."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 10
     subIndex: 1
-    text: "飞龙门将士纷纷痛苦流涕，不能自已。"
-    translated: "Soldiers of the Flying Dragon Gate wept bitterly and could not control themselves."
+    text: "飞龙门将士纷纷痛哭流涕，不能自已。"
+    translated: "The soldiers of the Flying Dragon Gate wept bitterly, unable to control their grief."
   templates:
   - split: 10
     template: "{0}\\n{1}"
@@ -419025,12 +418991,12 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: ",,,右,,,,,,,说打底，这些年来历经世间悲欢，\\n我感念周世宗和都点检之宏愿，方才立志平定乱世。"
+- raw: ",,,右,,,,,,,说到底，这些年来历经世间悲欢，\\n我感念周世宗和都点检之宏愿，方才立志平定乱世。"
   splits:
   - split: 10
-    text: "说打底，这些年来历经世间悲欢，"
-    translated: "To be precise, these past years have seen me experience the joys and sorrows of the world."
-    qcReviewedText: "To be precise, these past years have seen me experience the joys and sorrows of the world.\\nI am grateful for Emperor Shizong and Grand Marshal's great aspirations; it was then that I resolved to bring peace to the chaotic world."
+    text: "说到底，这些年来历经世间悲欢，"
+    translated: "In the end, after experiencing the joys and sorrows of the world over these years,"
+    qcReviewedText: "In the end, after experiencing the joys and sorrows of the world over these years,\\nI am grateful for Emperor Shizong and Grand Marshal's great aspirations; it was then that I resolved to bring peace to the chaotic world."
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

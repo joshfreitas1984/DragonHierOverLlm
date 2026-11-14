@@ -1,4 +1,4 @@
-- raw: "id,名字,小类,属性,动画"
+- raw: "id,名字,小类,属性,动画,单字"
   splits:
   - split: 2
     text: "小类"
@@ -9,39 +9,186 @@
   - split: 4
     text: "动画"
     translated: "Animation"
-- raw: "0,手甲,0,0,skill0_0"
-- raw: "1,指刺,0,1,skill0_2"
-- raw: "2,钩爪,0,2,skill0_0"
-- raw: "3,指虎,0,3,skill0_2"
-- raw: "4,拳套,0,4,skill0_0"
-- raw: "5,指环,0,5,skill0_2"
-- raw: "6,重剑,1,0,skill1_2"
-- raw: "7,短剑,1,1,skill1_1"
-- raw: "8,细剑,1,2,skill1_1"
-- raw: "9,长剑,1,3,skill1_2"
-- raw: "10,大剑,1,4,skill1_2"
-- raw: "11,软剑,1,5,skill1_1"
-- raw: "12,重刀,2,0,skill2_1"
-- raw: "13,短刀,2,1,skill2_0"
-- raw: "14,唐刀,2,2,skill2_0"
-- raw: "15,朴刀,2,3,skill2_1"
-- raw: "16,大刀,2,4,skill2_1"
-- raw: "17,弯刀,2,5,skill2_0"
-- raw: "18,长戟,3,0,skill3_1"
-- raw: "19,长枪,3,1,skill3_1"
-- raw: "20,长叉,3,2,skill3_1"
-- raw: "21,长戈,3,3,skill3_2"
-- raw: "22,长矛,3,4,skill3_2"
-- raw: "23,长棍,3,5,skill3_2"
-- raw: "24,飞轮,4,0,skill4_1"
-- raw: "25,对刺,4,1,skill4_0"
-- raw: "26,判笔,4,2,skill4_4"
-- raw: "27,软鞭,4,3,skill4_3"
-- raw: "28,铁扇,4,4,skill4_6"
-- raw: "29,瑶琴,4,5,skill4_8"
-- raw: "30,长弓,5,0,skill5_2"
-- raw: "31,短弓,5,1,skill5_0"
-- raw: "32,曲弓,5,2,skill5_2"
-- raw: "33,直弓,5,3,skill5_0"
-- raw: "34,硬弓,5,4,skill5_2"
-- raw: "35,软弓,5,5,skill5_0"
+  - split: 5
+    text: "单字"
+    translated: "Single Character"
+- raw: "0,手甲,0,0,skill0_0,手"
+  splits:
+  - split: 5
+    text: "手"
+    translated: "Gauntlet"
+- raw: "1,指刺,0,1,skill0_2,锥"
+  splits:
+  - split: 5
+    text: "锥"
+    translated: "Spike"
+- raw: "2,钩爪,0,2,skill0_0,爪"
+  splits:
+  - split: 5
+    text: "爪"
+    translated: "Claw"
+- raw: "3,指虎,0,3,skill0_2,指"
+  splits:
+  - split: 5
+    text: "指"
+    translated: "Knuckles"
+- raw: "4,拳套,0,4,skill0_0,拳"
+  splits:
+  - split: 5
+    text: "拳"
+    translated: "Fist"
+- raw: "5,指环,0,5,skill0_2,环"
+  splits:
+  - split: 5
+    text: "环"
+    translated: "Ring"
+- raw: "6,重剑,1,0,skill1_2,锏"
+  splits:
+  - split: 5
+    text: "锏"
+    translated: "Mace"
+- raw: "7,短剑,1,1,skill1_1,匕"
+  splits:
+  - split: 5
+    text: "匕"
+    translated: "Dagger"
+- raw: "8,细剑,1,2,skill1_1,针"
+  splits:
+  - split: 5
+    text: "针"
+    translated: "Rapier"
+- raw: "9,长剑,1,3,skill1_2,剑"
+  splits:
+  - split: 5
+    text: "剑"
+    translated: "Sword"
+- raw: "10,大剑,1,4,skill1_2,阙"
+  splits:
+  - split: 5
+    text: "阙"
+    translated: "Greatsword"
+- raw: "11,软剑,1,5,skill1_1,缠"
+  splits:
+  - split: 5
+    text: "缠"
+    translated: "Whipsword"
+- raw: "12,重刀,2,0,skill2_1,斩"
+  splits:
+  - split: 5
+    text: "斩"
+    translated: "Cleaver"
+- raw: "13,短刀,2,1,skill2_0,翎"
+  splits:
+  - split: 5
+    text: "翎"
+    translated: "Knife"
+- raw: "14,唐刀,2,2,skill2_0,刃"
+  splits:
+  - split: 5
+    text: "刃"
+    translated: "Blade"
+- raw: "15,朴刀,2,3,skill2_1,横"
+  splits:
+  - split: 5
+    text: "横"
+    translated: "Pudao"
+- raw: "16,大刀,2,4,skill2_1,刀"
+  splits:
+  - split: 5
+    text: "刀"
+    translated: "Saber"
+- raw: "17,弯刀,2,5,skill2_0,钩"
+  splits:
+  - split: 5
+    text: "钩"
+    translated: "Scimitar"
+- raw: "18,长戟,3,0,skill3_1,戟"
+  splits:
+  - split: 5
+    text: "戟"
+    translated: "Halberd"
+- raw: "19,长枪,3,1,skill3_1,枪"
+  splits:
+  - split: 5
+    text: "枪"
+    translated: "Spear"
+- raw: "20,长叉,3,2,skill3_1,叉"
+  splits:
+  - split: 5
+    text: "叉"
+    translated: "Fork"
+- raw: "21,长戈,3,3,skill3_2,戈"
+  splits:
+  - split: 5
+    text: "戈"
+    translated: "Glaive"
+- raw: "22,长矛,3,4,skill3_2,矛"
+  splits:
+  - split: 5
+    text: "矛"
+    translated: "Pike"
+- raw: "23,长棍,3,5,skill3_2,棍"
+  splits:
+  - split: 5
+    text: "棍"
+    translated: "Staff"
+- raw: "24,飞轮,4,0,skill4_1,轮"
+  splits:
+  - split: 5
+    text: "轮"
+    translated: "Chakram"
+- raw: "25,对刺,4,1,skill4_0,刺"
+  splits:
+  - split: 5
+    text: "刺"
+    translated: "Piercers"
+- raw: "26,判笔,4,2,skill4_4,笔"
+  splits:
+  - split: 5
+    text: "笔"
+    translated: "Brush"
+- raw: "27,软鞭,4,3,skill4_3,鞭"
+  splits:
+  - split: 5
+    text: "鞭"
+    translated: "Whip"
+- raw: "28,铁扇,4,4,skill4_6,扇"
+  splits:
+  - split: 5
+    text: "扇"
+    translated: "Fan"
+- raw: "29,瑶琴,4,5,skill4_8,琴"
+  splits:
+  - split: 5
+    text: "琴"
+    translated: "Qin"
+- raw: "30,长弓,5,0,skill5_2,弓"
+  splits:
+  - split: 5
+    text: "弓"
+    translated: "Bow"
+- raw: "31,短弓,5,1,skill5_0,猎"
+  splits:
+  - split: 5
+    text: "猎"
+    translated: "Hunter"
+- raw: "32,曲弓,5,2,skill5_2,弧"
+  splits:
+  - split: 5
+    text: "弧"
+    translated: "Recurve"
+- raw: "33,直弓,5,3,skill5_0,矢"
+  splits:
+  - split: 5
+    text: "矢"
+    translated: "Arrow"
+- raw: "34,硬弓,5,4,skill5_2,角"
+  splits:
+  - split: 5
+    text: "角"
+    translated: "Warbow"
+- raw: "35,软弓,5,5,skill5_0,弦"
+  splits:
+  - split: 5
+    text: "弦"
+    translated: "String"

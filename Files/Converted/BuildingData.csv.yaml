@@ -700,7 +700,7 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "73,私宅,73,2,1,0,3,购买-未购买-BuyCityHouse;书房?♦阅读秘籍\\n♦编纂秘籍-已购买-CityHouseBookRoom;练功房?♦自行练习\\n♦突破\\n♦天赋-已购买-CityHousePracticeRoom;休息?休养恢复状态-已购买-HomeRest;私人仓库?存放物品-已购买-OpenSelfStorage;个人展厅?管理个人展厅-已购买-ShowSelfShowRoom;修缮升级?提升私宅等级-已购买-UpgradeCityHouse,,,,,银钱1000,10,1,,1,door,0;0,一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"
+- raw: "73,私宅,73,2,1,0,3,购买-未购买-BuyCityHouse;书房?♦阅读秘籍\\n♦编纂秘籍-已购买-CityHouseBookRoom;练功房?♦自行练习\\n♦突破\\n♦天赋-已购买-CityHousePracticeRoom;休息?休养恢复状态-已购买-HomeRest;私人仓库?存放物品-已购买-OpenSelfStorage;个人展厅?管理个人展厅-已购买-ShowSelfShowRoom;自创武学?以满级武学为根基，闭关推演自创新武学-已购买-CustomSkillEntry;修缮升级?提升私宅等级-已购买-UpgradeCityHouse,,,,,银钱1000,10,1,,1,door,0;0,一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"
   splits:
   - split: 19
     text: "一处装饰精良，环境优美，售价也颇为不菲的私人住宅，可供人休息，储藏或是习武使用。"

@@ -76,7 +76,10 @@ namespace Tests
             // force-weapon name dictionary); see docs/gamefilehandling-reference.md.
             new() {Path = "TechDataBase.csv", PackageOutput = true, SkipColumns = [4, 8], EnableQualityControl = false },
             new() {Path = "TipsData.csv", PackageOutput = true },
-            //new() {Path = "WeaponData.csv", PackageOutput = true, SkipColumns = [1] },
+            // Column 1 (名字) stays Chinese here and is translated at runtime via DynamicStringSources;
+            // column 5 (单字) is the single-character name appended to equipment affixes
+            // (GameDataController.GetEquipmentSingleName), so it must ship translated.
+            new() {Path = "WeaponData.csv", PackageOutput = true, SkipColumns = [1], EnableQualityControl = false },
 
             // Main dialogue table. Columns 1-8 are non-narrative asset/routing keys (speaker
             // name/temp-NPC spawn record, highlight side, background image/music/sfx, reflection-

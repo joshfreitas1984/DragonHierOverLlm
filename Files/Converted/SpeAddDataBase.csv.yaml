@@ -107,19 +107,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "0,力道,1,巨力,无力,0,0,0,0,0,+0.5%暴击\\n+0.5%断连\\n+1装备负重,伤害,0,0,0,0,0"
+- raw: "0,力道,1,撼岳,蚍蜉,0,0,0,0,0,+0.5%暴击\\n+0.5%断连\\n+1装备负重,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "巨力"
-    translated: "Great force"
-    qcReviewedText: "Great force"
+    text: "撼岳"
+    translated: "Mountain-Shaker"
+    qcReviewedText: "Mountain-Shaker"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "无力"
-    translated: "Powerless"
-    qcReviewedText: "Powerless"
+    text: "蚍蜉"
+    translated: "Ant"
+    qcReviewedText: "Ant"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -141,19 +141,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: "1,灵巧,1,巧捷,笨拙,0,0,0,0,0,+0.5%速度\\n+0.5%闪避\\n+0.5体力上限,伤害,0,0,0,0,0"
+- raw: "1,灵巧,1,拂柳,滞涩,0,0,0,0,0,+0.5%速度\\n+0.5%闪避\\n+0.5体力上限,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "巧捷"
-    translated: "Nimble"
-    qcReviewedText: "Nimble"
+    text: "拂柳"
+    translated: "Brushing the Willow"
+    qcReviewedText: "Brushing the Willow"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "笨拙"
-    translated: "Clumsy"
-    qcReviewedText: "Clumsy"
+    text: "滞涩"
+    translated: "Stiff"
+    qcReviewedText: "Stiff"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -175,19 +175,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: "2,智力,1,慧根,愚钝,0,0,0,0,0,+0.5%命中\\n+0.5%卸力\\n+0.5%负面加成,伤害,0,0,0,0,0"
+- raw: "2,智力,1,通玄,蒙尘,0,0,0,0,0,+0.5%命中\\n+0.5%卸力\\n+0.5%负面加成,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "慧根"
-    translated: "Buddha nature"
-    qcReviewedText: "Buddha nature"
+    text: "通玄"
+    translated: "Tongxuan"
+    qcReviewedText: "Tongxuan"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "愚钝"
-    translated: "Stupid"
-    qcReviewedText: "Stupid"
+    text: "蒙尘"
+    translated: "Dust"
+    qcReviewedText: "Dust"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -209,19 +209,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: "3,意志,1,勇毅,萎靡,0,0,0,0,0,+0.5%反击\\n+0.5%护甲\\n+0.5%负面抗性,伤害,0,0,0,0,0"
+- raw: "3,意志,1,抱朴,转蓬,0,0,0,0,0,+0.5%反击\\n+0.5%护甲\\n+0.5%负面抗性,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "勇毅"
-    translated: "Bravery"
-    qcReviewedText: "Bravery"
+    text: "抱朴"
+    translated: "Baopu"
+    qcReviewedText: "Baopu"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "萎靡"
-    translated: "Languid"
-    qcReviewedText: "Languid"
+    text: "转蓬"
+    translated: "Tumbleweed"
+    qcReviewedText: "Tumbleweed"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -243,22 +243,25 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: "4,体质,1,壮硕,瘦弱,0,0,0,0,0,+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性,伤害,0,0,0,0,0"
+- raw: "4,体质,1,苍松,寒蝉,0,0,0,0,0,+1生命上限\\n+0.5%压制\\n+0.5%伤势抗性,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "壮硕"
-    translated: "Robust"
-    qcReviewedText: "Robust"
+    text: "苍松"
+    translated: "Cang Song"
+    qcReviewedText: "Cang Song"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "瘦弱"
-    translated: "Weak"
-    qcReviewedText: "Weak"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    text: "寒蝉"
+    translated: "Cicada"
+    qcReviewedText: "Cicada"
+    qcTranslated: "Cold Cicada"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 10
     text: "+1生命上限"
     translated: "+1Max Health"
@@ -280,19 +283,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: "5,经脉,1,贯通,断绝,0,0,0,0,0,+2内力上限\\n+0.5%连击\\n+0.5%恢复效率,伤害,0,0,0,0,0"
+- raw: "5,经脉,1,周天,浊流,0,0,0,0,0,+2内力上限\\n+0.5%连击\\n+0.5%恢复效率,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "贯通"
-    translated: "Penetrate"
-    qcReviewedText: "Penetrate"
+    text: "周天"
+    translated: "Zhou Tian"
+    qcReviewedText: "Zhou Tian"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "断绝"
-    translated: "Cut off"
-    qcReviewedText: "Cut off"
+    text: "浊流"
+    translated: "Muddy Current"
+    qcReviewedText: "Muddy Current"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -314,19 +317,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}\\n{2}"
-- raw: "6,内功,1,内家,空乏,0,0,0,0,0,+1%内力上限,伤害,0,0,0,0,0"
+- raw: "6,内功,1,玄息,空虚,0,0,0,0,0,+1%内力上限,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "内家"
-    translated: "Neigong"
-    qcReviewedText: "Neigong"
+    text: "玄息"
+    translated: "Xuanxi"
+    qcReviewedText: "Xuanxi"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "空乏"
-    translated: "Deprive"
-    qcReviewedText: "Deprive"
+    text: "空虚"
+    translated: "Emptiness"
+    qcReviewedText: "Emptiness"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -337,19 +340,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "7,轻功,1,迅疾,迟慢,0,0,0,0,0,+1%速度,伤害,0,0,0,0,0"
+- raw: "7,轻功,1,踏雪,蹒跚,0,0,0,0,0,+1%速度,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "迅疾"
-    translated: "Swift"
-    qcReviewedText: "Swift"
+    text: "踏雪"
+    translated: "Treading the Snow"
+    qcReviewedText: "Treading the Snow"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "迟慢"
-    translated: "Slow"
-    qcReviewedText: "Slow"
+    text: "蹒跚"
+    translated: "Staggering"
+    qcReviewedText: "Staggering"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -360,19 +363,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "8,绝技,1,独门,庸凡,0,0,0,0,0,+1%生命上限,伤害,0,0,0,0,0"
+- raw: "8,绝技,1,绝尘,凡庸,0,0,0,0,0,+1%生命上限,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "独门"
-    translated: "Family-secret"
-    qcReviewedText: "Family-secret"
+    text: "绝尘"
+    translated: "Juechen"
+    qcReviewedText: "Juechen"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "庸凡"
-    translated: "Ordinary Mortal"
-    qcReviewedText: "Ordinary Mortal"
+    text: "凡庸"
+    translated: "Ordinary"
+    qcReviewedText: "Ordinary"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -383,19 +386,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "9,拳掌,1,钢拳,残拳,0,0,0,0,0,提升拳掌伤害\\n降低受到的拳掌伤害,伤害,0,0,0,0,0"
+- raw: "9,拳掌,1,崩山,游丝,0,0,0,0,0,提升拳掌伤害\\n降低受到的拳掌伤害,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "钢拳"
-    translated: "Iron Fist"
-    qcReviewedText: "Iron Fist"
+    text: "崩山"
+    translated: "Mountain Collapse"
+    qcReviewedText: "Mountain Collapse"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "残拳"
-    translated: "Fistfight"
-    qcReviewedText: "Fistfight"
+    text: "游丝"
+    translated: "Gossamer"
+    qcReviewedText: "Gossamer"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -413,19 +416,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: "10,剑法,1,利剑,锈剑,0,0,0,0,0,提升剑法伤害\\n降低受到的剑法伤害,伤害,0,0,0,0,0"
+- raw: "10,剑法,1,青锋,锈迹,0,0,0,0,0,提升剑法伤害\\n降低受到的剑法伤害,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "利剑"
-    translated: "Sharp Sword"
-    qcReviewedText: "Sharp Sword"
+    text: "青锋"
+    translated: "Qingfeng"
+    qcReviewedText: "Qingfeng"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "锈剑"
-    translated: "Rusty Sword"
-    qcReviewedText: "Rusty Sword"
+    text: "锈迹"
+    translated: "Rust"
+    qcReviewedText: "Rust"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -443,19 +446,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: "11,刀法,1,宝刀,钝刀,0,0,0,0,0,提升刀法伤害\\n降低受到的刀法伤害,伤害,0,0,0,0,0"
+- raw: "11,刀法,1,霜刃,卷刃,0,0,0,0,0,提升刀法伤害\\n降低受到的刀法伤害,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "宝刀"
-    translated: "Sharp Blade"
-    qcReviewedText: "Sharp Blade"
+    text: "霜刃"
+    translated: "Frost Blade"
+    qcReviewedText: "Frost Blade"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "钝刀"
-    translated: "Clumsy Blade"
-    qcReviewedText: "Clumsy Blade"
+    text: "卷刃"
+    translated: "Blunted"
+    qcReviewedText: "Blunted"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -473,19 +476,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: "12,长兵,1,银枪,断枪,0,0,0,0,0,提升长兵伤害\\n降低受到的长兵伤害,伤害,0,0,0,0,0"
+- raw: "12,长兵,1,贯日,折戟,0,0,0,0,0,提升长兵伤害\\n降低受到的长兵伤害,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "银枪"
-    translated: "Silver Spear"
-    qcReviewedText: "Silver Spear"
+    text: "贯日"
+    translated: "Piercing the Sun"
+    qcReviewedText: "Piercing the Sun"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "断枪"
-    translated: "Broken Spear"
-    qcReviewedText: "Broken Spear"
+    text: "折戟"
+    translated: "Broken Halberd"
+    qcReviewedText: "Broken Halberd"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -503,19 +506,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: "13,奇门,1,奇异,无奇,0,0,0,0,0,提升奇门伤害\\n降低受到的奇门伤害,伤害,0,0,0,0,0"
+- raw: "13,奇门,1,机变,质朴,0,0,0,0,0,提升奇门伤害\\n降低受到的奇门伤害,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "奇异"
-    translated: "Strange"
-    qcReviewedText: "Strange"
+    text: "机变"
+    translated: "Adaptability"
+    qcReviewedText: "Adaptability"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "无奇"
-    translated: "Oddball"
-    qcReviewedText: "Oddball"
+    text: "质朴"
+    translated: "Simple"
+    qcReviewedText: "Simple"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -533,19 +536,19 @@
   templates:
   - split: 10
     template: "{0}\\n{1}"
-- raw: "14,射术,1,远射,咫尺,0,0,0,0,0,提升射术伤害\\n降低受到的射术伤害,伤害,0,0,0,0,0"
+- raw: "14,射术,1,穿云,残翼,0,0,0,0,0,提升射术伤害\\n降低受到的射术伤害,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "远射"
-    translated: "Long shot"
-    qcReviewedText: "Long shot"
+    text: "穿云"
+    translated: "Chuan Yun"
+    qcReviewedText: "Chuan Yun"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "咫尺"
-    translated: "Within arm's reach"
-    qcReviewedText: "Within arm's reach"
+    text: "残翼"
+    translated: "Broken Wings"
+    qcReviewedText: "Broken Wings"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1608,7 +1611,7 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "57,生命上限,2,长生,短命,0,0,0,0,0,生命上限,伤害,0,0,1,0,0"
+- raw: "57,生命上限,2,长生,风烛,0,0,0,0,0,生命上限,伤害,0,0,1,0,0"
   splits:
   - split: 3
     text: "长生"
@@ -1618,9 +1621,9 @@
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "短命"
-    translated: "Short-lived"
-    qcReviewedText: "Short-lived"
+    text: "风烛"
+    translated: "Candle in the Wind"
+    qcReviewedText: "Candle in the Wind"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1631,19 +1634,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "58,体力上限,5,焕发,疲敝,0,0,0,0,0,体力上限,伤害,0,0,1,0,0"
+- raw: "58,体力上限,5,沛然,夕照,0,0,0,0,0,体力上限,伤害,0,0,1,0,0"
   splits:
   - split: 3
-    text: "焕发"
-    translated: "Revive"
-    qcReviewedText: "Revive"
+    text: "沛然"
+    translated: "Peiran"
+    qcReviewedText: "Peiran"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "疲敝"
-    translated: "Weakened"
-    qcReviewedText: "Weakened"
+    text: "夕照"
+    translated: "Sunset"
+    qcReviewedText: "Sunset"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1654,19 +1657,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "59,内力上限,4,充盈,空虚,0,0,0,0,0,内力上限,伤害,0,0,1,0,0"
+- raw: "59,内力上限,4,归元,薄暮,0,0,0,0,0,内力上限,伤害,0,0,1,0,0"
   splits:
   - split: 3
-    text: "充盈"
-    translated: "Overflowing"
-    qcReviewedText: "Overflowing"
+    text: "归元"
+    translated: "Return to Origin"
+    qcReviewedText: "Return to Origin"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "空虚"
-    translated: "Emptiness"
-    qcReviewedText: "Emptiness"
+    text: "薄暮"
+    translated: "Dusk"
+    qcReviewedText: "Dusk"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1677,19 +1680,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "60,伤害,0.01,强攻,羸弱,1,0,0,0,0,造成伤害,伤害,0,1,1,0,0"
+- raw: "60,伤害,0.01,封喉,铅钝,1,0,0,0,0,造成伤害,伤害,0,1,1,0,0"
   splits:
   - split: 3
-    text: "强攻"
-    translated: "Storm attack"
-    qcReviewedText: "Storm attack"
+    text: "封喉"
+    translated: "Sever the Throat"
+    qcReviewedText: "Sever the Throat"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "羸弱"
-    translated: "Weak"
-    qcReviewedText: "Weak"
+    text: "铅钝"
+    translated: "Dull Lead"
+    qcReviewedText: "Dull Lead"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1700,19 +1703,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "61,护甲,0.5,铁壁,摧折,0,0,0,0,0,降低所受伤害,伤害,0,2,1,0,0"
+- raw: "61,护甲,0.5,金钟,败絮,0,0,0,0,0,降低所受伤害,伤害,0,2,1,0,0"
   splits:
   - split: 3
-    text: "铁壁"
-    translated: "Iron Wall"
-    qcReviewedText: "Iron Wall"
+    text: "金钟"
+    translated: "Golden Bell"
+    qcReviewedText: "Golden Bell"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "摧折"
-    translated: "Breaking"
-    qcReviewedText: "Breaking"
+    text: "败絮"
+    translated: "Rotten Cotton"
+    qcReviewedText: "Rotten Cotton"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1723,19 +1726,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "62,护甲率,0.01,重甲,弱甲,1,0,0,0,0,百分比提升护甲,伤害,0,2,1,0,0"
+- raw: "62,护甲率,0.01,铁垣,薄衫,1,0,0,0,0,百分比提升护甲,伤害,0,2,1,0,0"
   splits:
   - split: 3
-    text: "重甲"
-    translated: "Heavy Armor"
-    qcReviewedText: "Heavy Armor"
+    text: "铁垣"
+    translated: "Iron Wall"
+    qcReviewedText: "Iron Wall"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "弱甲"
-    translated: "Weak Plating"
-    qcReviewedText: "Weak Plating"
+    text: "薄衫"
+    translated: "Thin Garment"
+    qcReviewedText: "Thin Garment"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1746,19 +1749,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "63,速度,0.01,轻快,笨重,1,0,0,0,0,行动速度,伤害,0,0,1,0,0"
+- raw: "63,速度,0.01,风驰,蜗行,1,0,0,0,0,行动速度,伤害,0,0,1,0,0"
   splits:
   - split: 3
-    text: "轻快"
-    translated: "Lively"
-    qcReviewedText: "Lively"
+    text: "风驰"
+    translated: "Wind Rush"
+    qcReviewedText: "Wind Rush"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "笨重"
-    translated: "Clumsy"
-    qcReviewedText: "Clumsy"
+    text: "蜗行"
+    translated: "Slow as a Snail"
+    qcReviewedText: "Slow as a Snail"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1769,19 +1772,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "64,命中,0.01,精准,模糊,1,0,0,0,0,命中概率,伤害,0,1,1,0,0"
+- raw: "64,命中,0.01,凝神,雾障,1,0,0,0,0,命中概率,伤害,0,1,1,0,0"
   splits:
   - split: 3
-    text: "精准"
-    translated: "Precise"
-    qcReviewedText: "Precise"
+    text: "凝神"
+    translated: "Focus"
+    qcReviewedText: "Focus"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "模糊"
-    translated: "Blur"
-    qcReviewedText: "Blur"
+    text: "雾障"
+    translated: "Mist Barrier"
+    qcReviewedText: "Mist Barrier"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1792,19 +1795,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "65,闪避,0.01,闪转,支拙,1,0,0,0,0,躲闪攻击,伤害,0,2,1,0,0"
+- raw: "65,闪避,0.01,惊鸿,泥足,1,0,0,0,0,躲闪攻击,伤害,0,2,1,0,0"
   splits:
   - split: 3
-    text: "闪转"
-    translated: "Dodge"
-    qcReviewedText: "Dodge"
+    text: "惊鸿"
+    translated: "Jinghong"
+    qcReviewedText: "Jinghong"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "支拙"
-    translated: "Clumsy"
-    qcReviewedText: "Clumsy"
+    text: "泥足"
+    translated: "Clay Feet"
+    qcReviewedText: "Clay Feet"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1815,19 +1818,22 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "66,暴击,0.01,凶暴,优柔,1,0,0,0,0,伤害加倍,伤害,0,1,1,1,0"
+- raw: "66,暴击,0.01,破军,余烬,1,0,0,0,0,伤害加倍,伤害,0,1,1,1,0"
   splits:
   - split: 3
-    text: "凶暴"
-    translated: "Violent"
-    qcReviewedText: "Violent"
-    qcStatus: Passed
-    qcQualityScore: 100
-    qcDefectCategory: None
+    text: "破军"
+    translated: "Po Jun"
+    qcReviewedText: "Po Jun"
+    qcTranslated: "Breaker"
+    qcStatus: Corrected
+    qcQualityScore: 95
+    qcDefectCategory: UntranslatedPinyin
+    qcDefectCategories:
+    - UntranslatedPinyin
   - split: 4
-    text: "优柔"
-    translated: "Cautious"
-    qcReviewedText: "Cautious"
+    text: "余烬"
+    translated: "Embers"
+    qcReviewedText: "Embers"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1838,19 +1844,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "67,卸力,0.01,卸力,受力,1,0,0,0,0,伤害减半,伤害,0,2,1,1,0"
+- raw: "67,卸力,0.01,化劲,拙劣,1,0,0,0,0,伤害减半,伤害,0,2,1,1,0"
   splits:
   - split: 3
-    text: "卸力"
-    translated: "Force Deflection"
-    qcReviewedText: "Force Deflection"
+    text: "化劲"
+    translated: "Deflecting Force"
+    qcReviewedText: "Deflecting Force"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "受力"
-    translated: "Force applied"
-    qcReviewedText: "Force applied"
+    text: "拙劣"
+    translated: "Poorly done"
+    qcReviewedText: "Poorly done"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1861,19 +1867,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "68,反击,0.01,藏锋,尽出,1,0,0,0,0,行动条加倍,伤害,0,2,1,1,0"
+- raw: "68,反击,0.01,含光,乏术,1,0,0,0,0,行动条加倍,伤害,0,2,1,1,0"
   splits:
   - split: 3
-    text: "藏锋"
-    translated: "Hide Sharpness"
-    qcReviewedText: "Hide Sharpness"
+    text: "含光"
+    translated: "Hanguang"
+    qcReviewedText: "Hanguang"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "尽出"
-    translated: "Exhaust"
-    qcReviewedText: "Exhaust"
+    text: "乏术"
+    translated: "I'm out of options"
+    qcReviewedText: "I'm out of options"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1907,19 +1913,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "70,连击,0.01,追击,磕绊,1,0,0,0,0,再次攻击,伤害,0,1,1,1,0"
+- raw: "70,连击,0.01,行云,顿挫,1,0,0,0,0,再次攻击,伤害,0,1,1,1,0"
   splits:
   - split: 3
-    text: "追击"
-    translated: "Chase"
-    qcReviewedText: "Chase"
+    text: "行云"
+    translated: "Xingyun"
+    qcReviewedText: "Xingyun"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "磕绊"
-    translated: "Bumps and obstacles"
-    qcReviewedText: "Bumps and obstacles"
+    text: "顿挫"
+    translated: "Stutter"
+    qcReviewedText: "Stutter"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1930,19 +1936,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "71,断连,0.01,断腕,顺受,1,0,0,0,0,打断连击,伤害,0,2,1,1,0"
+- raw: "71,断连,0.01,截江,崩坏,1,0,0,0,0,打断连击,伤害,0,2,1,1,0"
   splits:
   - split: 3
-    text: "断腕"
-    translated: "Severed Wrist"
-    qcReviewedText: "Severed Wrist"
+    text: "截江"
+    translated: "Cutting the River"
+    qcReviewedText: "Cutting the River"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "顺受"
-    translated: "Submit willingly"
-    qcReviewedText: "Submit willingly"
+    text: "崩坏"
+    translated: "Collapse"
+    qcReviewedText: "Collapse"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1953,19 +1959,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "72,经验获取,0.01,广博,浅陋,1,0,0,0,0,增加获取的经验,伤害,0,0,0,0,0"
+- raw: "72,经验获取,0.01,博闻,蹉跎,1,0,0,0,0,增加获取的经验,伤害,0,0,0,0,0"
   splits:
   - split: 3
-    text: "广博"
-    translated: "Broad"
-    qcReviewedText: "Broad"
+    text: "博闻"
+    translated: "Erudite"
+    qcReviewedText: "Erudite"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "浅陋"
-    translated: "Naive"
-    qcReviewedText: "Naive"
+    text: "蹉跎"
+    translated: "Wasted"
+    qcReviewedText: "Wasted"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -1976,19 +1982,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "73,恢复效率,0.01,丰沛,枯竭,1,0,0,0,0,增强恢复的效果,伤害,0,0,1,0,0"
+- raw: "73,恢复效率,0.01,泉涌,衰朽,1,0,0,0,0,增强恢复的效果,伤害,0,0,1,0,0"
   splits:
   - split: 3
-    text: "丰沛"
-    translated: "Abundant"
-    qcReviewedText: "Abundant"
+    text: "泉涌"
+    translated: "Gushing Spring"
+    qcReviewedText: "Gushing Spring"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "枯竭"
-    translated: "Depletion"
-    qcReviewedText: "Depletion"
+    text: "衰朽"
+    translated: "Decay"
+    qcReviewedText: "Decay"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2022,19 +2028,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "75,负面加成,0.01,险恶,平坦,1,0,0,0,0,增加施加负面效果的概率,我方,0,1,1,1,0"
+- raw: "75,负面加成,0.01,魅影,枯陈,1,0,0,0,0,增加施加负面效果的概率,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "险恶"
-    translated: "Treacherous"
-    qcReviewedText: "Treacherous"
+    text: "魅影"
+    translated: "Phantom"
+    qcReviewedText: "Phantom"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "平坦"
-    translated: "Flat"
-    qcReviewedText: "Flat"
+    text: "枯陈"
+    translated: "Ku Chen"
+    qcReviewedText: "Ku Chen"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2045,19 +2051,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "76,负面抗性,0.01,坚定,动摇,1,0,0,0,0,降低受到负面效果的概率,我方,0,2,1,1,0"
+- raw: "76,负面抗性,0.01,磐石,浮萍,1,0,0,0,0,降低受到负面效果的概率,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "坚定"
-    translated: "Resolute"
-    qcReviewedText: "Resolute"
+    text: "磐石"
+    translated: "Bedrock"
+    qcReviewedText: "Bedrock"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "动摇"
-    translated: "Shaken"
-    qcReviewedText: "Shaken"
+    text: "浮萍"
+    translated: "Duckweed"
+    qcReviewedText: "Duckweed"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2068,19 +2074,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "77,伤势抗性,0.01,乌皮,薄皮,1,0,0,0,0,减少所受伤势,我方,0,2,1,0,0"
+- raw: "77,伤势抗性,0.01,百炼,暗伤,1,0,0,0,0,减少所受伤势,我方,0,2,1,0,0"
   splits:
   - split: 3
-    text: "乌皮"
-    translated: "Black Leather"
-    qcReviewedText: "Black Leather"
+    text: "百炼"
+    translated: "Hundred Refinements"
+    qcReviewedText: "Hundred Refinements"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "薄皮"
-    translated: "Thin skin"
-    qcReviewedText: "Thin skin"
+    text: "暗伤"
+    translated: "Hidden Injury"
+    qcReviewedText: "Hidden Injury"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2091,12 +2097,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "78,失衡,0.01,颠簸,无,1,0,1,0,0,行动条-30%;体力-20,敌方,0,1,1,1,0"
+- raw: "78,失衡,0.01,倾山,无,1,0,1,0,0,行动条-30%;体力-20,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "颠簸"
-    translated: "Jolt"
-    qcReviewedText: "Jolt"
+    text: "倾山"
+    translated: "Qingshan"
+    qcReviewedText: "Qingshan"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2121,18 +2127,15 @@
   templates:
   - split: 10
     template: "{0}-30%;{1}-20"
-- raw: "79,急速,0.01,白驹,无,1,0,1,0,0,行动条+30%;体力+20,我方,0,1,1,1,0"
+- raw: "79,急速,0.01,冲霄,无,1,0,1,0,0,行动条+30%;体力+20,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "白驹"
-    translated: "Swift horse"
-    qcReviewedText: "Swift horse"
-    qcTranslated: "White Steed"
-    qcStatus: Corrected
-    qcQualityScore: 95
-    qcDefectCategory: OtherNamedDefect
-    qcDefectCategories:
-    - OtherNamedDefect
+    text: "冲霄"
+    translated: "Chongxiao"
+    qcReviewedText: "Chongxiao"
+    qcStatus: Passed
+    qcQualityScore: 100
+    qcDefectCategory: None
   - split: 4
     text: "无"
     translated: "None"
@@ -2292,12 +2295,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "86,恢复,0.01,滋养,无,1,0,1,2,1,每回合+5%生命/内力,我方,0,1,1,1,1"
+- raw: "86,恢复,0.01,培元,无,1,0,1,2,1,每回合+5%生命/内力,我方,0,1,1,1,1"
   splits:
   - split: 3
-    text: "滋养"
-    translated: "Nourish"
-    qcReviewedText: "Nourish"
+    text: "培元"
+    translated: "Cultivation"
+    qcReviewedText: "Cultivation"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2375,12 +2378,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "89,流血,0.01,重创,无,1,0,1,3,0,每回合-5%生命,敌方,0,1,1,1,1"
+- raw: "89,流血,0.01,裂帛,无,1,0,1,3,0,每回合-5%生命,敌方,0,1,1,1,1"
   splits:
   - split: 3
-    text: "重创"
-    translated: "Severe damage"
-    qcReviewedText: "Severe damage"
+    text: "裂帛"
+    translated: "Rip the Silk"
+    qcReviewedText: "Rip the Silk"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2421,12 +2424,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "91,雷电,0.01,掣电,无,1,0,1,3,0,每回合-10%内力,敌方,0,1,1,1,1"
+- raw: "91,雷电,0.01,霹雳,无,1,0,1,3,0,每回合-10%内力,敌方,0,1,1,1,1"
   splits:
   - split: 3
-    text: "掣电"
-    translated: "Thunderstrike"
-    qcReviewedText: "Thunderstrike"
+    text: "霹雳"
+    translated: "Thunderbolt"
+    qcReviewedText: "Thunderbolt"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2467,12 +2470,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "93,疲劳,0.01,力竭,无,1,0,1,2,0,每回合-15%体力,敌方,0,1,1,1,1"
+- raw: "93,疲劳,0.01,迷途,无,1,0,1,2,0,每回合-15%体力,敌方,0,1,1,1,1"
   splits:
   - split: 3
-    text: "力竭"
-    translated: "Exhausted"
-    qcReviewedText: "Exhausted"
+    text: "迷途"
+    translated: "Lost"
+    qcReviewedText: "Lost"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2490,12 +2493,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "94,冰寒,0.01,阴寒,无,1,0,1,-1,0,速度/恢复效率-30%,敌方,0,1,1,1,0"
+- raw: "94,冰寒,0.01,凝霜,无,1,0,1,-1,0,速度/恢复效率-30%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "阴寒"
-    translated: "Yin Cold"
-    qcReviewedText: "Yin Cold"
+    text: "凝霜"
+    translated: "Ningshuang"
+    qcReviewedText: "Ningshuang"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2724,12 +2727,12 @@
   templates:
   - split: 10
     template: "{0}/{1}/{2}-30%"
-- raw: "102,虚弱,0.01,虚弱,无,1,0,1,3,0,伤害-50%,敌方,0,1,1,1,0"
+- raw: "102,虚弱,0.01,夺魄,无,1,0,1,3,0,伤害-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "虚弱"
-    translated: "Weakness"
-    qcReviewedText: "Weakness"
+    text: "夺魄"
+    translated: "Soul Snatch"
+    qcReviewedText: "Soul Snatch"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2750,12 +2753,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "103,横练,0.01,横练,无,1,0,1,2,1,护甲+50%,我方,0,2,1,1,0"
+- raw: "103,横练,0.01,铁杉,无,1,0,1,2,1,护甲+50%,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "横练"
-    translated: "Body Conditioning"
-    qcReviewedText: "Body Conditioning"
+    text: "铁杉"
+    translated: "Iron Fir"
+    qcReviewedText: "Iron Fir"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2776,12 +2779,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "104,破甲,0.01,破甲,无,1,0,1,3,0,护甲-50%,敌方,0,1,1,1,0"
+- raw: "104,破甲,0.01,陷阵,无,1,0,1,3,0,护甲-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "破甲"
-    translated: "Armor Break"
-    qcReviewedText: "Armor Break"
+    text: "陷阵"
+    translated: "Charge"
+    qcReviewedText: "Charge"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2802,12 +2805,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "105,轻灵,0.01,轻灵,无,1,0,1,2,1,速度+50%,我方,0,1,1,1,0"
+- raw: "105,轻灵,0.01,纵云,无,1,0,1,2,1,速度+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "轻灵"
-    translated: "Nimble"
-    qcReviewedText: "Nimble"
+    text: "纵云"
+    translated: "Zong Yun"
+    qcReviewedText: "Zong Yun"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2828,12 +2831,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "106,迟缓,0.01,迟缓,无,1,0,1,2,0,速度-50%,敌方,0,1,1,1,0"
+- raw: "106,迟缓,0.01,缚龙,无,1,0,1,2,0,速度-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "迟缓"
-    translated: "Slowed"
-    qcReviewedText: "Slowed"
+    text: "缚龙"
+    translated: "Dragon Binding"
+    qcReviewedText: "Dragon Binding"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2854,12 +2857,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "107,鹰眼,0.01,鹰视,无,1,0,1,3,1,命中+50%,我方,0,1,1,1,0"
+- raw: "107,鹰眼,0.01,百步,无,1,0,1,3,1,命中+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "鹰视"
-    translated: "Eagle Eye"
-    qcReviewedText: "Eagle Eye"
+    text: "百步"
+    translated: "A Hundred Paces"
+    qcReviewedText: "A Hundred Paces"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2880,12 +2883,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "108,目盲,0.01,刺目,无,1,0,1,3,0,命中-50%,敌方,0,1,1,1,0"
+- raw: "108,目盲,0.01,飞沙,无,1,0,1,3,0,命中-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "刺目"
-    translated: "Blinding"
-    qcReviewedText: "Blinding"
+    text: "飞沙"
+    translated: "Flying Sand"
+    qcReviewedText: "Flying Sand"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2906,12 +2909,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "109,飘逸,0.01,飘逸,无,1,0,1,2,1,闪避+50%,我方,0,1,1,1,0"
+- raw: "109,飘逸,0.01,凌波,无,1,0,1,2,1,闪避+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "飘逸"
-    translated: "Graceful"
-    qcReviewedText: "Graceful"
+    text: "凌波"
+    translated: "Lingbo"
+    qcReviewedText: "Lingbo"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2932,12 +2935,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "110,笨拙,0.01,笨拙,无,1,0,1,2,0,闪避-50%,敌方,0,1,1,1,0"
+- raw: "110,笨拙,0.01,牵丝,无,1,0,1,2,0,闪避-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "笨拙"
-    translated: "Clumsy"
-    qcReviewedText: "Clumsy"
+    text: "牵丝"
+    translated: "String Puppet"
+    qcReviewedText: "String Puppet"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2958,12 +2961,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "111,霸体,0.01,霸体,无,1,0,1,1,1,受伤-50%,我方,0,2,1,1,0"
+- raw: "111,霸体,0.01,金刚,无,1,0,1,1,1,受伤-50%,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "霸体"
-    translated: "Super Armor"
-    qcReviewedText: "Super Armor"
+    text: "金刚"
+    translated: "Jingang"
+    qcReviewedText: "Jingang"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -2984,12 +2987,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "112,弱点,0.01,弱点,无,1,0,1,2,0,受伤+50%,敌方,0,1,1,1,0"
+- raw: "112,弱点,0.01,透骨,无,1,0,1,2,0,受伤+50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "弱点"
-    translated: "Weak Point"
-    qcReviewedText: "Weak Point"
+    text: "透骨"
+    translated: "Bone-Piercing"
+    qcReviewedText: "Bone-Piercing"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3044,12 +3047,12 @@
   templates:
   - split: 10
     template: "{0}/{1}+30%;{2}"
-- raw: "114,混乱,0.01,混乱,无,1,0,1,2,0,敌我不分,敌方,0,1,1,1,0"
+- raw: "114,混乱,0.01,迷魂,无,1,0,1,2,0,敌我不分,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "混乱"
-    translated: "Confusion"
-    qcReviewedText: "Confusion"
+    text: "迷魂"
+    translated: "Hypnosis"
+    qcReviewedText: "Hypnosis"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3067,12 +3070,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "115,死战,0.01,背水,无,1,0,1,0,0,双方生命越少伤害越高,伤害,0,1,1,1,0"
+- raw: "115,死战,0.01,浴血,无,1,0,1,0,0,双方生命越少伤害越高,伤害,0,1,1,1,0"
   splits:
   - split: 3
-    text: "背水"
-    translated: "On the banks of the river"
-    qcReviewedText: "On the banks of the river"
+    text: "浴血"
+    translated: "Bloodbath"
+    qcReviewedText: "Bloodbath"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3090,12 +3093,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "116,穿甲,0.01,锐利,无,1,0,1,0,0,无视护甲,敌方,0,1,1,1,0"
+- raw: "116,穿甲,0.01,破竹,无,1,0,1,0,0,无视护甲,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "锐利"
-    translated: "Sharp"
-    qcReviewedText: "Sharp"
+    text: "破竹"
+    translated: "Splitting Bamboo"
+    qcReviewedText: "Splitting Bamboo"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3113,12 +3116,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "117,壮骨,0.01,壮骨,无,1,0,1,3,1,力道+50%,我方,0,1,1,1,0"
+- raw: "117,壮骨,0.01,龙象,无,1,0,1,3,1,力道+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "壮骨"
-    translated: "Strengthen Bones"
-    qcReviewedText: "Strengthen Bones"
+    text: "龙象"
+    translated: "Dragon Elephant"
+    qcReviewedText: "Dragon Elephant"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3139,12 +3142,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "118,断骨,0.01,断骨,无,1,0,1,2,0,力道-50%,敌方,0,1,1,1,0"
+- raw: "118,断骨,0.01,错骨,无,1,0,1,2,0,力道-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "断骨"
-    translated: "Broken bones"
-    qcReviewedText: "Broken bones"
+    text: "错骨"
+    translated: "Bone-Breaking"
+    qcReviewedText: "Bone-Breaking"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3165,12 +3168,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "119,舒筋,0.01,舒筋,无,1,0,1,3,1,灵巧+50%,我方,0,1,1,1,0"
+- raw: "119,舒筋,0.01,鹤舞,无,1,0,1,3,1,灵巧+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "舒筋"
-    translated: "Muscle Relaxation"
-    qcReviewedText: "Muscle Relaxation"
+    text: "鹤舞"
+    translated: "Crane Dance"
+    qcReviewedText: "Crane Dance"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3191,12 +3194,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "120,伤筋,0.01,伤筋,无,1,0,1,2,0,灵巧-50%,敌方,0,1,1,1,0"
+- raw: "120,伤筋,0.01,分筋,无,1,0,1,2,0,灵巧-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "伤筋"
-    translated: "Muscle Injury"
-    qcReviewedText: "Muscle Injury"
+    text: "分筋"
+    translated: "Severing the Meridians"
+    qcReviewedText: "Severing the Meridians"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3217,12 +3220,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "121,醒脑,0.01,醒脑,无,1,0,1,3,1,智力+50%,我方,0,1,1,1,0"
+- raw: "121,醒脑,0.01,清心,无,1,0,1,3,1,智力+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "醒脑"
-    translated: "Mind Clearing"
-    qcReviewedText: "Mind Clearing"
+    text: "清心"
+    translated: "Clear Heart"
+    qcReviewedText: "Clear Heart"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3243,12 +3246,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "122,震脑,0.01,震脑,无,1,0,1,2,0,智力-50%,敌方,0,1,1,1,0"
+- raw: "122,震脑,0.01,摧心,无,1,0,1,2,0,智力-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "震脑"
-    translated: "Mind Shock"
-    qcReviewedText: "Mind Shock"
+    text: "摧心"
+    translated: "Heartbreaking"
+    qcReviewedText: "Heartbreaking"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3269,12 +3272,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "123,定神,0.01,定神,无,1,0,1,3,1,意志+50%,我方,0,1,1,1,0"
+- raw: "123,定神,0.01,守一,无,1,0,1,3,1,意志+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "定神"
-    translated: "Mind Calming"
-    qcReviewedText: "Mind Calming"
+    text: "守一"
+    translated: "Shou Yi"
+    qcReviewedText: "Shou Yi"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3295,12 +3298,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "124,乱神,0.01,乱神,无,1,0,1,2,0,意志-50%,敌方,0,1,1,1,0"
+- raw: "124,乱神,0.01,追魂,无,1,0,1,2,0,意志-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "乱神"
-    translated: "Mind Disruption"
-    qcReviewedText: "Mind Disruption"
+    text: "追魂"
+    translated: "Soul Chaser"
+    qcReviewedText: "Soul Chaser"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3321,12 +3324,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "125,活血,0.01,活血,无,1,0,1,3,1,体质+50%,我方,0,1,1,1,0"
+- raw: "125,活血,0.01,养荣,无,1,0,1,3,1,体质+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "活血"
-    translated: "Promote blood circulation"
-    qcReviewedText: "Promote blood circulation"
+    text: "养荣"
+    translated: "Yang Rong"
+    qcReviewedText: "Yang Rong"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3347,12 +3350,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "126,凝血,0.01,凝血,无,1,0,1,2,0,体质-50%,敌方,0,1,1,1,0"
+- raw: "126,凝血,0.01,凋零,无,1,0,1,2,0,体质-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "凝血"
-    translated: "Blood Coagulation"
-    qcReviewedText: "Blood Coagulation"
+    text: "凋零"
+    translated: "Wither"
+    qcReviewedText: "Wither"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3373,12 +3376,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "127,通脉,0.01,通脉,无,1,0,1,3,1,经脉+50%,我方,0,1,1,1,0"
+- raw: "127,通脉,0.01,周流,无,1,0,1,3,1,经脉+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "通脉"
-    translated: "Unblock Meridians"
-    qcReviewedText: "Unblock Meridians"
+    text: "周流"
+    translated: "Zhou Liu"
+    qcReviewedText: "Zhou Liu"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3399,15 +3402,18 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "128,截脉,0.01,截脉,无,1,0,1,2,0,经脉-50%,敌方,0,1,1,1,0"
+- raw: "128,截脉,0.01,残阳,无,1,0,1,2,0,经脉-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "截脉"
-    translated: "Seal Meridians"
-    qcReviewedText: "Seal Meridians"
-    qcStatus: Passed
+    text: "残阳"
+    translated: "Setting sun"
+    qcReviewedText: "Setting sun"
+    qcTranslated: "Canyang"
+    qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: None
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 4
     text: "无"
     translated: "None"
@@ -3448,12 +3454,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "130,反伤,0.01,软猬,无,1,0,1,0,0,受伤时反馈伤害,伤害,0,2,1,1,0"
+- raw: "130,反伤,0.01,荆棘,无,1,0,1,0,0,受伤时反馈伤害,伤害,0,2,1,1,0"
   splits:
   - split: 3
-    text: "软猬"
-    translated: "Soft Hedgehog"
-    qcReviewedText: "Soft Hedgehog"
+    text: "荆棘"
+    translated: "Thorns"
+    qcReviewedText: "Thorns"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3563,15 +3569,18 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "135,慧眼,0.01,慧眼,无,1,0,1,3,1,暴击+50%,我方,0,1,1,1,0"
+- raw: "135,慧眼,0.01,秋毫,无,1,0,1,3,1,暴击+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "慧眼"
-    translated: "Keen Eye"
-    qcReviewedText: "Keen Eye"
-    qcStatus: Passed
+    text: "秋毫"
+    translated: "Autumn Hair"
+    qcReviewedText: "Autumn Hair"
+    qcTranslated: "Qiu Hao"
+    qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: None
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 4
     text: "无"
     translated: "None"
@@ -3589,12 +3598,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "136,昏沉,0.01,昏沉,无,1,0,1,3,0,暴击-50%,敌方,0,1,1,1,0"
+- raw: "136,昏沉,0.01,遮天,无,1,0,1,3,0,暴击-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "昏沉"
-    translated: "Drowsiness"
-    qcReviewedText: "Drowsiness"
+    text: "遮天"
+    translated: "Covering the Sky"
+    qcReviewedText: "Covering the Sky"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3615,12 +3624,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "137,铜皮,0.01,铜皮,无,1,0,1,2,1,卸力+50%,我方,0,2,1,1,0"
+- raw: "137,铜皮,0.01,铜身,无,1,0,1,2,1,卸力+50%,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "铜皮"
-    translated: "Copper skin"
-    qcReviewedText: "Copper skin"
+    text: "铜身"
+    translated: "Copper Body"
+    qcReviewedText: "Copper Body"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3641,12 +3650,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "138,脆弱,0.01,脆弱,无,1,0,1,2,0,卸力-50%,敌方,0,1,1,1,0"
+- raw: "138,脆弱,0.01,碎玉,无,1,0,1,2,0,卸力-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "脆弱"
-    translated: "Vulnerable"
-    qcReviewedText: "Vulnerable"
+    text: "碎玉"
+    translated: "Shattered Jade"
+    qcReviewedText: "Shattered Jade"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3667,12 +3676,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "139,不屈,0.01,不屈,无,1,0,1,2,1,反击+50%,我方,0,2,1,1,0"
+- raw: "139,不屈,0.01,寒梅,无,1,0,1,2,1,反击+50%,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "不屈"
-    translated: "Unyielding"
-    qcReviewedText: "Unyielding"
+    text: "寒梅"
+    translated: "Han Mei"
+    qcReviewedText: "Han Mei"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3693,12 +3702,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "140,重碾,0.01,重碾,无,1,0,1,3,1,压制+50%,我方,0,1,1,1,0"
+- raw: "140,重碾,0.01,镇岳,无,1,0,1,3,1,压制+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "重碾"
-    translated: "Crushing Blow"
-    qcReviewedText: "Crushing Blow"
+    text: "镇岳"
+    translated: "Zhenyue"
+    qcReviewedText: "Zhenyue"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3719,12 +3728,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "141,连绵,0.01,连绵,无,1,0,1,3,1,连击+50%,我方,0,1,1,1,0"
+- raw: "141,连绵,0.01,流水,无,1,0,1,3,1,连击+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "连绵"
-    translated: "Flurry"
-    qcReviewedText: "Flurry"
+    text: "流水"
+    translated: "Flowing Water"
+    qcReviewedText: "Flowing Water"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3745,12 +3754,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "142,断腕,0.01,断腕,无,1,0,1,3,0,连击-50%,敌方,0,1,1,1,0"
+- raw: "142,断腕,0.01,断水,无,1,0,1,3,0,连击-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "断腕"
-    translated: "Severed Wrist"
-    qcReviewedText: "Severed Wrist"
+    text: "断水"
+    translated: "Cutting the Water"
+    qcReviewedText: "Cutting the Water"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3771,12 +3780,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "143,断招,0.01,断招,无,1,0,1,2,1,断连+50%,我方,0,2,1,1,0"
+- raw: "143,断招,0.01,截招,无,1,0,1,2,1,断连+50%,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "断招"
-    translated: "Interrupt"
-    qcReviewedText: "Interrupt"
+    text: "截招"
+    translated: "Intercept"
+    qcReviewedText: "Intercept"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3797,12 +3806,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "144,阻滞,0.01,阻滞,无,1,0,1,2,0,断连-50%,敌方,0,1,1,1,0"
+- raw: "144,阻滞,0.01,缠枝,无,1,0,1,2,0,断连-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "阻滞"
-    translated: "Impede"
-    qcReviewedText: "Impede"
+    text: "缠枝"
+    translated: "Interlocking Branches"
+    qcReviewedText: "Interlocking Branches"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3849,12 +3858,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "146,康复,0.01,康复,无,1,0,1,3,1,恢复效率+50%,我方,0,1,1,1,0"
+- raw: "146,康复,0.01,仙霖,无,1,0,1,3,1,恢复效率+50%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "康复"
-    translated: "Recuperation"
-    qcReviewedText: "Recuperation"
+    text: "仙霖"
+    translated: "Xianlin"
+    qcReviewedText: "Xianlin"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3875,12 +3884,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "147,不愈,0.01,不愈,无,1,0,1,3,0,恢复效率-50%,敌方,0,1,1,1,0"
+- raw: "147,不愈,0.01,噬元,无,1,0,1,3,0,恢复效率-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "不愈"
-    translated: "Suppressed Healing"
-    qcReviewedText: "Suppressed Healing"
+    text: "噬元"
+    translated: "Devouring Essence"
+    qcReviewedText: "Devouring Essence"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3901,12 +3910,12 @@
   templates:
   - split: 10
     template: "{0}-50%"
-- raw: "148,坚毅,0.01,坚毅,无,1,0,1,2,1,负面抗性+50%,我方,0,2,1,1,0"
+- raw: "148,坚毅,0.01,明台,无,1,0,1,2,1,负面抗性+50%,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "坚毅"
-    translated: "Resolve"
-    qcReviewedText: "Resolve"
+    text: "明台"
+    translated: "Mingtai"
+    qcReviewedText: "Mingtai"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3927,12 +3936,12 @@
   templates:
   - split: 10
     template: "{0}+50%"
-- raw: "149,动摇,0.01,动摇,无,1,0,1,2,0,负面抗性-50%,敌方,0,1,1,1,0"
+- raw: "149,动摇,0.01,丧魂,无,1,0,1,2,0,负面抗性-50%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "动摇"
-    translated: "Shaken"
-    qcReviewedText: "Shaken"
+    text: "丧魂"
+    translated: "Lost Soul"
+    qcReviewedText: "Lost Soul"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -3999,12 +4008,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "152,回血,0.001,回血,无,1,0,1,0,0,每回合百分比恢复生命,我方,0,0,1,1,0"
+- raw: "152,回血,0.001,延年,无,1,0,1,0,0,每回合百分比恢复生命,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "回血"
-    translated: "Restore health"
-    qcReviewedText: "Restore health"
+    text: "延年"
+    translated: "Yannian"
+    qcReviewedText: "Yannian"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4022,12 +4031,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "153,回内,0.0015,回内,无,1,0,1,0,0,每回合百分比恢复内力,我方,0,0,1,1,0"
+- raw: "153,回内,0.0015,固气,无,1,0,1,0,0,每回合百分比恢复内力,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "回内"
-    translated: "Return Inner Power"
-    qcReviewedText: "Return Inner Power"
+    text: "固气"
+    translated: "Stabilize Qi"
+    qcReviewedText: "Stabilize Qi"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4045,12 +4054,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "154,回体,0.2,回体,无,0,0,1,0,0,每回合恢复体力,我方,0,0,1,1,0"
+- raw: "154,回体,0.2,久战,无,0,0,1,0,0,每回合恢复体力,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "回体"
-    translated: "Restore Stamina"
-    qcReviewedText: "Restore Stamina"
+    text: "久战"
+    translated: "Prolonged Battle"
+    qcReviewedText: "Prolonged Battle"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4068,12 +4077,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "155,自愈,0.5,无,无,0,1,1,0,0,每回合消耗内力治疗伤势,我方,0,0,1,1,0"
+- raw: "155,自愈,0.5,生肌,无,0,1,1,0,0,每回合消耗内力治疗伤势,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "无"
-    translated: "None"
-    qcReviewedText: "None"
+    text: "生肌"
+    translated: "Regenerate Flesh"
+    qcReviewedText: "Regenerate Flesh"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4091,12 +4100,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "156,护头,1,护头,无,0,0,1,0,0,每回合提升头部架势,我方,0,0,1,1,0"
+- raw: "156,护头,1,昆仑,无,0,0,1,0,0,每回合提升头部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "护头"
-    translated: "Guard Head"
-    qcReviewedText: "Guard Head"
+    text: "昆仑"
+    translated: "Kunlun"
+    qcReviewedText: "Kunlun"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4114,12 +4123,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "157,护心,1,护心,无,0,0,1,0,0,每回合提升心部架势,我方,0,0,1,1,0"
+- raw: "157,护心,1,中宫,无,0,0,1,0,0,每回合提升心部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "护心"
-    translated: "Guard Heart"
-    qcReviewedText: "Guard Heart"
+    text: "中宫"
+    translated: "Empress"
+    qcReviewedText: "Empress"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4137,15 +4146,18 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "158,护胸,1,护胸,无,0,0,1,0,0,每回合提升胸部架势,我方,0,0,1,1,0"
+- raw: "158,护胸,1,华盖,无,0,0,1,0,0,每回合提升胸部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "护胸"
-    translated: "Guard Chest"
-    qcReviewedText: "Guard Chest"
-    qcStatus: Passed
+    text: "华盖"
+    translated: "Canopy"
+    qcReviewedText: "Canopy"
+    qcTranslated: "Huagai"
+    qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: None
+    qcDefectCategory: OtherNamedDefect
+    qcDefectCategories:
+    - OtherNamedDefect
   - split: 4
     text: "无"
     translated: "None"
@@ -4160,15 +4172,18 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "159,护腹,1,护腹,无,0,0,1,0,0,每回合提升腹部架势,我方,0,0,1,1,0"
+- raw: "159,护腹,1,天枢,无,0,0,1,0,0,每回合提升腹部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "护腹"
-    translated: "Guard Abdomen"
-    qcReviewedText: "Guard Abdomen"
-    qcStatus: Passed
+    text: "天枢"
+    translated: "Tianzhu"
+    qcReviewedText: "Tianzhu"
+    qcTranslated: "Tianshu"
+    qcStatus: Corrected
     qcQualityScore: 100
-    qcDefectCategory: None
+    qcDefectCategory: DomainTerm
+    qcDefectCategories:
+    - DomainTerm
   - split: 4
     text: "无"
     translated: "None"
@@ -4183,12 +4198,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "160,护手,1,护手,无,0,0,1,0,0,每回合提升手部架势,我方,0,0,1,1,0"
+- raw: "160,护手,1,少商,无,0,0,1,0,0,每回合提升手部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "护手"
-    translated: "Guard Hand"
-    qcReviewedText: "Guard Hand"
+    text: "少商"
+    translated: "Shao Shang"
+    qcReviewedText: "Shao Shang"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4206,12 +4221,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "161,护足,1,护足,无,0,0,1,0,0,每回合提升足部架势,我方,0,0,1,1,0"
+- raw: "161,护足,1,太溪,无,0,0,1,0,0,每回合提升足部架势,我方,0,0,1,1,0"
   splits:
   - split: 3
-    text: "护足"
-    translated: "Guard Foot"
-    qcReviewedText: "Guard Foot"
+    text: "太溪"
+    translated: "Tai Xi"
+    qcReviewedText: "Tai Xi"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4275,12 +4290,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "164,减伤,0.5,减伤,无,0,0,1,0,0,固定减少伤害,我方,0,2,1,1,0"
+- raw: "164,减伤,0.5,不坏,无,0,0,1,0,0,固定减少伤害,我方,0,2,1,1,0"
   splits:
   - split: 3
-    text: "减伤"
-    translated: "Damage Reduction"
-    qcReviewedText: "Damage Reduction"
+    text: "不坏"
+    translated: "Not bad"
+    qcReviewedText: "Not bad"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4344,12 +4359,12 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "167,神行,0.01,遁地,无,1,0,1,3,1,移动距离+75%,我方,0,1,1,1,0"
+- raw: "167,神行,0.01,冯虚,无,1,0,1,3,1,移动距离+75%,我方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "遁地"
-    translated: "Burrow through the earth"
-    qcReviewedText: "Burrow through the earth"
+    text: "冯虚"
+    translated: "Feng Xu"
+    qcReviewedText: "Feng Xu"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -4370,12 +4385,12 @@
   templates:
   - split: 10
     template: "{0}+75%"
-- raw: "168,裂膝,0.01,裂膝,无,1,0,1,2,0,移动距离-75%,敌方,0,1,1,1,0"
+- raw: "168,裂膝,0.01,陷地,无,1,0,1,2,0,移动距离-75%,敌方,0,1,1,1,0"
   splits:
   - split: 3
-    text: "裂膝"
-    translated: "Knee Injury"
-    qcReviewedText: "Knee Injury"
+    text: "陷地"
+    translated: "Quicksand"
+    qcReviewedText: "Quicksand"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -5239,7 +5254,7 @@
   templates:
   - split: 10
     template: "{0}/{1}/{2}/{3}"
-- raw: "205,装备强化,0.002,无,无,1,1,1,0,0,提升装备基础效果,我方,0,0,0,1,0"
+- raw: "205,装备强化,0.005,无,无,1,1,1,0,0,提升装备基础效果,我方,0,0,0,1,0"
   splits:
   - split: 3
     text: "无"
@@ -5285,19 +5300,19 @@
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
-- raw: "207,装备负重,1,重装,简装,0,1,0,0,0,提升装备负重,我方,0,0,0,0,0"
+- raw: "207,装备负重,1,无,无,0,1,0,0,0,提升装备负重,我方,0,0,0,0,0"
   splits:
   - split: 3
-    text: "重装"
-    translated: "Rearmed"
-    qcReviewedText: "Rearmed"
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
   - split: 4
-    text: "简装"
-    translated: "Stripped down"
-    qcReviewedText: "Stripped down"
+    text: "无"
+    translated: "None"
+    qcReviewedText: "None"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None

@@ -1,4 +1,4 @@
-- raw: "id,名字,类别,护甲,轻功,重量级"
+- raw: "id,名字,类别,护甲,轻功,重量级,单字"
   splits:
   - split: 1
     text: "名字"
@@ -15,93 +15,150 @@
   - split: 5
     text: "重量级"
     translated: "Heavyweight"
-- raw: "0,布甲,1,3,1,0"
+  - split: 6
+    text: "单字"
+    translated: "Single Character"
+- raw: "0,布甲,1,3,1,0,袍"
   splits:
   - split: 1
     text: "布甲"
     translated: "Leather armor"
-- raw: "1,轻甲,1,4,0,1"
+  - split: 6
+    text: "袍"
+    translated: "Robe"
+- raw: "1,轻甲,1,4,0,1,衣"
   splits:
   - split: 1
     text: "轻甲"
     translated: "Light armor"
-- raw: "2,链甲,1,5,-1,2"
+  - split: 6
+    text: "衣"
+    translated: "Garb"
+- raw: "2,链甲,1,5,-1,2,链"
   splits:
   - split: 1
     text: "链甲"
     translated: "Chain Mail"
-- raw: "3,鳞甲,1,6,-2,3"
+  - split: 6
+    text: "链"
+    translated: "Chain"
+- raw: "3,鳞甲,1,6,-2,3,鳞"
   splits:
   - split: 1
     text: "鳞甲"
     translated: "Scale armor"
-- raw: "4,铠甲,1,7,-3,4"
+  - split: 6
+    text: "鳞"
+    translated: "Scale"
+- raw: "4,铠甲,1,7,-3,4,铠"
   splits:
   - split: 1
     text: "铠甲"
     translated: "Armor"
-- raw: "5,重甲,1,8,-4,5"
+  - split: 6
+    text: "铠"
+    translated: "Armor"
+- raw: "5,重甲,1,8,-4,5,甲"
   splits:
   - split: 1
     text: "重甲"
     translated: "Heavy Armor"
-- raw: "0,发带,2,1,2,0"
+  - split: 6
+    text: "甲"
+    translated: "Armor"
+- raw: "0,发带,2,1,2,0,带"
   splits:
   - split: 1
     text: "发带"
     translated: "Headband"
-- raw: "1,头冠,2,2,1,1"
+  - split: 6
+    text: "带"
+    translated: "Band"
+- raw: "1,头冠,2,2,1,1,冠"
   splits:
   - split: 1
     text: "头冠"
     translated: "Tiara"
-- raw: "2,斗笠,2,3,0,2"
+  - split: 6
+    text: "冠"
+    translated: "Crown"
+- raw: "2,斗笠,2,3,0,2,笠"
   splits:
   - split: 1
     text: "斗笠"
     translated: "Hood"
-- raw: "3,半盔,2,4,-1,3"
+  - split: 6
+    text: "笠"
+    translated: "Hat"
+- raw: "3,半盔,2,4,-1,3,盔"
   splits:
   - split: 1
     text: "半盔"
     translated: "Half helmet"
-- raw: "4,全盔,2,5,-2,4"
+  - split: 6
+    text: "盔"
+    translated: "Helmet"
+- raw: "4,全盔,2,5,-2,4,兜"
   splits:
   - split: 1
     text: "全盔"
     translated: "Full helmet"
-- raw: "5,重盔,2,6,-3,5"
+  - split: 6
+    text: "兜"
+    translated: "Helm"
+- raw: "5,重盔,2,6,-3,5,胄"
   splits:
   - split: 1
     text: "重盔"
     translated: "Heavy helmet"
-- raw: "0,布鞋,3,-1,4,0"
+  - split: 6
+    text: "胄"
+    translated: "Helmet"
+- raw: "0,布鞋,3,-1,4,0,鞋"
   splits:
   - split: 1
     text: "布鞋"
     translated: "Sneakers"
-- raw: "1,鞋履,3,0,3,1"
+  - split: 6
+    text: "鞋"
+    translated: "Shoes"
+- raw: "1,鞋履,3,0,3,1,履"
   splits:
   - split: 1
     text: "鞋履"
     translated: "Footwear"
-- raw: "2,短靴,3,1,2,2"
+  - split: 6
+    text: "履"
+    translated: "Footwear"
+- raw: "2,短靴,3,1,2,2,靴"
   splits:
   - split: 1
     text: "短靴"
     translated: "Short boots"
-- raw: "3,长靴,3,2,1,3"
+  - split: 6
+    text: "靴"
+    translated: "Boots"
+- raw: "3,长靴,3,2,1,3,筒"
   splits:
   - split: 1
     text: "长靴"
     translated: "Long boots"
-- raw: "4,胫甲,3,3,0,4"
+  - split: 6
+    text: "筒"
+    translated: "Boots"
+- raw: "4,胫甲,3,3,0,4,胫"
   splits:
   - split: 1
     text: "胫甲"
     translated: "Greaves"
-- raw: "5,重靴,3,4,-1,5"
+  - split: 6
+    text: "胫"
+    translated: "Greaves"
+- raw: "5,重靴,3,4,-1,5,踏"
   splits:
   - split: 1
     text: "重靴"
     translated: "Heavy boots"
+  - split: 6
+    text: "踏"
+    translated: "Boots"

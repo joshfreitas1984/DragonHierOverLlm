@@ -1,4 +1,4 @@
-- raw: "id,名字,类别,护甲,轻功,重量级"
+- raw: "id,名字,类别,护甲,轻功,重量级,单字"
   splits:
   - split: 1
     text: "名字"
@@ -10,75 +10,113 @@
     text: "轻功"
   - split: 5
     text: "重量级"
-- raw: "0,布甲,1,3,1,0"
+  - split: 6
+    text: "单字"
+- raw: "0,布甲,1,3,1,0,袍"
   splits:
   - split: 1
     text: "布甲"
-- raw: "1,轻甲,1,4,0,1"
+  - split: 6
+    text: "袍"
+- raw: "1,轻甲,1,4,0,1,衣"
   splits:
   - split: 1
     text: "轻甲"
-- raw: "2,链甲,1,5,-1,2"
+  - split: 6
+    text: "衣"
+- raw: "2,链甲,1,5,-1,2,链"
   splits:
   - split: 1
     text: "链甲"
-- raw: "3,鳞甲,1,6,-2,3"
+  - split: 6
+    text: "链"
+- raw: "3,鳞甲,1,6,-2,3,鳞"
   splits:
   - split: 1
     text: "鳞甲"
-- raw: "4,铠甲,1,7,-3,4"
+  - split: 6
+    text: "鳞"
+- raw: "4,铠甲,1,7,-3,4,铠"
   splits:
   - split: 1
     text: "铠甲"
-- raw: "5,重甲,1,8,-4,5"
+  - split: 6
+    text: "铠"
+- raw: "5,重甲,1,8,-4,5,甲"
   splits:
   - split: 1
     text: "重甲"
-- raw: "0,发带,2,1,2,0"
+  - split: 6
+    text: "甲"
+- raw: "0,发带,2,1,2,0,带"
   splits:
   - split: 1
     text: "发带"
-- raw: "1,头冠,2,2,1,1"
+  - split: 6
+    text: "带"
+- raw: "1,头冠,2,2,1,1,冠"
   splits:
   - split: 1
     text: "头冠"
-- raw: "2,斗笠,2,3,0,2"
+  - split: 6
+    text: "冠"
+- raw: "2,斗笠,2,3,0,2,笠"
   splits:
   - split: 1
     text: "斗笠"
-- raw: "3,半盔,2,4,-1,3"
+  - split: 6
+    text: "笠"
+- raw: "3,半盔,2,4,-1,3,盔"
   splits:
   - split: 1
     text: "半盔"
-- raw: "4,全盔,2,5,-2,4"
+  - split: 6
+    text: "盔"
+- raw: "4,全盔,2,5,-2,4,兜"
   splits:
   - split: 1
     text: "全盔"
-- raw: "5,重盔,2,6,-3,5"
+  - split: 6
+    text: "兜"
+- raw: "5,重盔,2,6,-3,5,胄"
   splits:
   - split: 1
     text: "重盔"
-- raw: "0,布鞋,3,-1,4,0"
+  - split: 6
+    text: "胄"
+- raw: "0,布鞋,3,-1,4,0,鞋"
   splits:
   - split: 1
     text: "布鞋"
-- raw: "1,鞋履,3,0,3,1"
+  - split: 6
+    text: "鞋"
+- raw: "1,鞋履,3,0,3,1,履"
   splits:
   - split: 1
     text: "鞋履"
-- raw: "2,短靴,3,1,2,2"
+  - split: 6
+    text: "履"
+- raw: "2,短靴,3,1,2,2,靴"
   splits:
   - split: 1
     text: "短靴"
-- raw: "3,长靴,3,2,1,3"
+  - split: 6
+    text: "靴"
+- raw: "3,长靴,3,2,1,3,筒"
   splits:
   - split: 1
     text: "长靴"
-- raw: "4,胫甲,3,3,0,4"
+  - split: 6
+    text: "筒"
+- raw: "4,胫甲,3,3,0,4,胫"
   splits:
   - split: 1
     text: "胫甲"
-- raw: "5,重靴,3,4,-1,5"
+  - split: 6
+    text: "胫"
+- raw: "5,重靴,3,4,-1,5,踏"
   splits:
   - split: 1
     text: "重靴"
+  - split: 6
+    text: "踏"
