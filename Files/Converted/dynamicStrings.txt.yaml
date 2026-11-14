@@ -66373,8 +66373,8 @@
 - raw: "佩"
   splits:
   - text: "佩"
-    translated: "Pei"
-    qcReviewedText: "Pei"
+    translated: "Jade"
+    qcReviewedText: "Jade"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -66483,8 +66483,8 @@
 - raw: "围"
   splits:
   - text: "围"
-    translated: "Surround"
-    qcReviewedText: "Surround"
+    translated: "Belt"
+    qcReviewedText: "Belt"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
@@ -66627,9 +66627,9 @@
 - raw: "戒"
   splits:
   - text: "戒"
-    translated: "Precept"
-    qcReviewedText: "Precept"
-    qcTranslated: "Precept"
+    translated: "Band"
+    qcReviewedText: "Band"
+    qcTranslated: "Band"
     qcStatus: Corrected
     qcQualityScore: 100
     qcDefectCategory: GarbledNumber
@@ -67158,8 +67158,8 @@
 - raw: "螺钿"
   splits:
   - text: "螺钿"
-    translated: "Mother-of-pearl"
-    qcReviewedText: "Mother-of-pearl"
+    translated: "Mother of pearl"
+    qcReviewedText: "Mother of pearl"
     qcStatus: Passed
     qcQualityScore: 100
     qcDefectCategory: None
