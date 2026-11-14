@@ -1,0 +1,14 @@
+- path: Canvas/CustomSkillCreateUI/CustomSkillCreateRoot/ChooseUI/ChoosePanelRoot/ChooseList/Viewport/Content/CustomSkillSpeAddChooseButtonPrefab(Clone)/Text
+  sampleText: Inner Power
+  idealFontSize: 14.0
+- path: Canvas/CustomSkillCreateUI/CustomSkillCreateRoot/SpeAddDataUI/ChooseNewSpeAddDataButton/Text
+  sampleText: New special effects 3/4
+  idealFontSize: 12.0
+- path: Canvas/CustomSkillCreateUI/CustomSkillCreateRoot/SpeAddDataUI/SpeAddDataGrid/CustomSkillSpeAddDataPrefab(Clone)/Text
+  sampleText: <color=#00B400>Keen Eye+1%</color>
+  idealFontSize: 12.0
+- path: Canvas/CustomSkillCreateUI/CustomSkillCreateRoot/Title
+  sampleText: Self-created martial arts
+  idealFontSize: 40.0
+  allowWordWrap: false
+  adjustX: 120.0

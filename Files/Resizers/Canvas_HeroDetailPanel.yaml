@@ -34,6 +34,10 @@
   adjustY: -25.0
   adjustWidth: 80.0
   adjustHeight: 25.0
+- path: Canvas/HeroDetailPanel/Item/EquipSlot*/NowEquipment/Name
+  sampleText: Brushing the Willow Golden Bell Precept
+  idealFontSize: 11.0
+  allowWordWrap: true
 - path: Canvas/HeroDetailPanel/Item/EquipmentWeight/Lv
   sampleText: Light
   idealFontSize: 14.0

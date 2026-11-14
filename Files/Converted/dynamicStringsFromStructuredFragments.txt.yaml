@@ -4803,8 +4803,8 @@
 - raw: "选择满级{0}作为根基\n对应武学技能需达{2}点"
   splits:
   - text: "选择满级"
-    translated: "Choose full level"
-    qcReviewedText: "Choose full level {0} W-was the foundation\nCorresponding martial arts skill level needs to reach {2} Click"
+    translated: "Choose max level"
+    qcReviewedText: "Choose max level {0} as the foundation\nCorresponding martial arts skill level needs to reach {2}"
     qcTranslated: "Choose max level {0} as the foundation\nCorresponding martial arts skill level needs to reach {2}"
     qcStatus: Corrected
     qcQualityScore: 95
@@ -4814,7 +4814,7 @@
     - HardToParseSeam
   - subIndex: 1
     text: "作为根基"
-    translated: "W-was the foundation"
+    translated: "as the foundation"
   - subIndex: 2
     text: "对应武学技能需达"
     translated: "Corresponding martial arts skill level needs to reach"
